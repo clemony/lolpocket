@@ -1,9 +1,9 @@
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
-export { default as ButtonGroup } from "./ButtonGroup.vue";
-export { default as ButtonGroupSeparator } from "./ButtonGroupSeparator.vue";
-export { default as ButtonGroupText } from "./ButtonGroupText.vue";
+export { default as ButtonGroup } from './ButtonGroup.vue'
+export { default as ButtonGroupSeparator } from './ButtonGroupSeparator.vue'
+export { default as ButtonGroupText } from './ButtonGroupText.vue'
 
 export const buttonGroupVariants = cva(
   `
@@ -16,17 +16,17 @@ export const buttonGroupVariants = cva(
   `,
   {
     defaultVariants: {
-      orientation: "horizontal",
+      orientation: 'horizontal',
     },
     variants: {
       orientation: {
         horizontal:
-          "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
+          '[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none',
         vertical:
-          "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
+          'flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none',
       },
     },
   },
-);
+)
 
-export type ButtonGroupVariants = VariantProps<typeof buttonGroupVariants>;
+export type ButtonGroupVariants = VariantProps<typeof buttonGroupVariants>

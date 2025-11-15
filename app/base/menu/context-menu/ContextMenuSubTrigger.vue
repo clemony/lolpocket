@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { ContextMenuSubTriggerProps } from "reka-ui";
-import { ContextMenuSubTrigger, useForwardProps } from "reka-ui";
+import type { ContextMenuSubTriggerProps } from 'reka-ui'
+import { ContextMenuSubTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   ContextMenuSubTriggerProps & {
-    class?: HTMLAttributes["class"];
-    inset?: boolean;
+    class?: HTMLAttributes['class']
+    inset?: boolean
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -30,10 +30,11 @@ const forwarded = useForwardProps(delegatedProps);
         inset && 'pl-8',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
 
-    <icon name="right" class="ml-auto h-4 w-4" />
+    <icon
+      name="right"
+      class="ml-auto h-4 w-4" />
   </ContextMenuSubTrigger>
 </template>

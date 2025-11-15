@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { ZoomableEvent } from "vue-zoomable";
-import VueZoomable from "vue-zoomable";
-import "vue-zoomable/dist/style.css";
+import type { ZoomableEvent } from 'vue-zoomable'
+import VueZoomable from 'vue-zoomable'
+import 'vue-zoomable/dist/style.css'
 
 const { card } = defineProps<{
-  card: any;
-}>();
+  card: any
+}>()
 
 definePageMeta({
-  name: "card",
-  title: "Card Builder",
-  icon: "lucide:square-pen",
-  path: "/tools/card",
-});
+  name: 'card',
+  title: 'Card Builder',
+  icon: 'lucide:square-pen',
+  path: '/tools/card',
+})
 
 // @todo nuxt bg here
 
@@ -27,30 +27,31 @@ const fontClass2 = computed (() => {
   a.cardClass ? a.cardClass : ''
 })
  */
-const zoom = ref<number>(1);
-const pan = ref<Record<string, number>>({ x: 0, y: 0 });
+const zoom = ref<number>(1)
+const pan = ref<Record<string, number>>({ x: 0, y: 0 })
 
-const isMenuOpen = ref<boolean>(true);
-const isSettingsOpen = ref<boolean>(true);
+const isMenuOpen = ref<boolean>(true)
+const isSettingsOpen = ref<boolean>(true)
 
-const pocketCardRef = ref<HTMLDivElement>(null);
+const pocketCardRef = ref<HTMLDivElement>(null)
 
 onMounted(() => {
-  ps().pocketCardRef = pocketCardRef.value;
-});
+  ps().pocketCardRef = pocketCardRef.value
+})
 // getSplash(card.splash) ||
-const img = useImage();
+const img = useImage()
 const splash = computed(
   () =>
-    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg",
-);
-console.log("💠 - card.splash:", card.splash);
+    'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg',
+)
+console.log('💠 - card.splash:', card.splash)
 </script>
 
 <template>
   <div
-    class="relative grid h-full w-full items-center justify-center overflow-hidden"
-  >
+    class="
+      relative grid h-full w-full items-center justify-center overflow-hidden
+    ">
     <!--
 
       <div class="px-1 dst">
@@ -89,34 +90,42 @@ console.log("💠 - card.splash:", card.splash);
       :min-zoom="0.5"
       :max-zoom="2"
       :wheel-zoom-step="0.01"
-      class="relative grid h-screen w-full place-items-center overflow-hidden"
-    >
+      class="relative grid h-screen w-full place-items-center overflow-hidden">
       <div
         id="pocket-card"
         ref="pocketCardRef"
-        class="relative aspect-square h-300 w-300 rounded-box border border-b3/70 object-contain shadow-smooth inset-shadow-sm"
+        class="
+          relative aspect-square h-300 w-300 rounded-box border border-b3/70
+          object-contain shadow-smooth inset-shadow-sm
+        "
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
-        }"
-      >
+        }">
         <div
-          class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
-          :class="{ grayscale: card.filter === 'grayscale' }"
-        >
+          class="
+            mask-right-100 size-full overflow-hidden rounded-2xl transition-all
+            duration-500
+          "
+          :class="{ grayscale: card.filter === 'grayscale' }">
           <div
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
               backgroundPositionX: `${card.align}%`,
             }"
-            class="size-full bg-cover mask-top"
-          />
+            class="size-full bg-cover mask-top" />
         </div>
 
         <div
-          class="absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr] px-16 pt-28"
-        >
-          <div class="flex flex-col **:select-none">
+          class="
+            absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr]
+            px-16 pt-28
+          ">
+          <div
+            class="
+              flex flex-col
+              **:select-none
+            ">
             <!--         <div class="">
               <h3
                 class="text-9 dst tracking-tight pl-3"
@@ -134,17 +143,18 @@ console.log("💠 - card.splash:", card.splash);
             </div> -->
 
             <div class="mt-20 h-auto space-y-12">
-              <template v-for="(set, i) in card.items" :key="i">
+              <template
+                v-for="(set, i) in card.items"
+                :key="i">
                 <template
                   v-if="
-                    set &&
-                    set !== undefined &&
-                    card.items.length &&
-                    set !== null &&
-                    card.items[0] !== undefined &&
-                    card.items[0] !== null
-                  "
-                >
+                    set
+                      && set !== undefined
+                      && card.items.length
+                      && set !== null
+                      && card.items[0] !== undefined
+                      && card.items[0] !== null
+                  ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"
                     :pocket="pocket" /> -->

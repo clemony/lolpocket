@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  icon: "book",
+  icon: 'book',
   order: 8,
-  search: "children",
-});
+  search: 'children',
+})
 </script>
 
 <template>

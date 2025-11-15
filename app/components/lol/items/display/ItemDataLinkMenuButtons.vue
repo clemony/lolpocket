@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { id, name } = defineProps<{
-  name: string;
-  id: number;
-}>();
+  name: string
+  id: number
+}>()
 </script>
 
 <template>
@@ -22,12 +22,17 @@ const { id, name } = defineProps<{
   </label> -->
     <a
       v-tippy="'Official Wiki'"
-      class="hover:bgneutral btn btn-square size-7 btn-ghost btn-sm hover:*:text-nc"
+      class="
+        hover:bgneutral
+        btn btn-square size-7 btn-ghost btn-sm
+        hover:*:text-nc
+      "
       :href="getWikiLink(name)"
       target="_blank"
-      alt="link to league wiki"
-    >
-      <icon name="link-lg" class="size-4 dst" />
+      alt="link to league wiki">
+      <icon
+        name="link-lg"
+        class="size-4 dst" />
     </a>
   </div>
 </template>

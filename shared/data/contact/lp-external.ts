@@ -1,20 +1,20 @@
 export const contactLinks = [
   {
-    name: "Github",
+    name: 'Github',
     external: true,
     icon: {
-      name: "prime:github",
-      class: "size-9",
+      name: 'prime:github',
+      class: 'size-9',
     },
-    link: "https://github.com/clemony/lolpocket",
+    link: 'https://github.com/clemony/lolpocket',
   },
   {
-    name: "Discord",
+    name: 'Discord',
     external: true,
     icon: {
-      name: "prime:discord",
-      class: "size-8",
+      name: 'prime:discord',
+      class: 'size-8',
     },
-    link: "https://discord.gg/Jzuu7bYTZY",
+    link: 'https://discord.gg/Jzuu7bYTZY',
   },
-];
+]

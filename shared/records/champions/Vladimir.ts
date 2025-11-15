@@ -2,63 +2,63 @@
 
 const champion: Champion = {
   id: 8,
-  key: "Vladimir",
-  name: "Vladimir",
-  title: "the Crimson Reaper",
+  key: 'Vladimir',
+  name: 'Vladimir',
+  title: 'the Crimson Reaper',
   abilities: [
     {
-      key: "P",
-      name: "Crimson Pact",
-      affects: "Self",
+      key: 'P',
+      name: 'Crimson Pact',
+      affects: 'Self',
       blurb:
-        "Innate:  Vladimir gains  ability power based on his bonus health, and  bonus health based on his ability power.",
+        'Innate:  Vladimir gains  ability power based on his bonus health, and  bonus health based on his ability power.',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p',
       notes:
-        "Crimson Pact only affects Vladimir's maximum health and will not increase Vladimir's current health to prevent Vladimir from restoring health whenever his AP fluctuates.\nVladimir's current health can decrease to match his maximum health if Crimson Pact's bonus health is lost.\nCrimson Pact's bonus ability power  stacks multiplicatively with other sources of % ability power but its bonus health  stacks additively with other sources of bonus health. With  Rabadon's Deathcap's Magical Opus, the total is (35% AP + 4.49955% bonus health) bonus ability power and (216% AP + 1.86648% bonus health) bonus health.",
-      targeting: "Passive",
+        'Crimson Pact only affects Vladimir\'s maximum health and will not increase Vladimir\'s current health to prevent Vladimir from restoring health whenever his AP fluctuates.\nVladimir\'s current health can decrease to match his maximum health if Crimson Pact\'s bonus health is lost.\nCrimson Pact\'s bonus ability power  stacks multiplicatively with other sources of % ability power but its bonus health  stacks additively with other sources of bonus health. With  Rabadon\'s Deathcap\'s Magical Opus, the total is (35% AP + 4.49955% bonus health) bonus ability power and (216% AP + 1.86648% bonus health) bonus health.',
+      targeting: 'Passive',
     },
     {
-      key: "Q",
-      name: "Transfusion",
-      affects: "Self, Enemies",
+      key: 'Q',
+      name: 'Transfusion',
+      affects: 'Self, Enemies',
       blurb:
-        "Active:  Vladimir drains blood from the target enemy, dealing magic damage and  healing himself. He then generates 1 point of  Crimson Rush over the  cooldown.",
-      castTime: "0.25",
-      cooldown: "9 / 7.9 / 6.8 / 5.7 / 4.6",
-      cost: "0",
-      damageType: "Magic damage",
+        'Active:  Vladimir drains blood from the target enemy, dealing magic damage and  healing himself. He then generates 1 point of  Crimson Rush over the  cooldown.',
+      castTime: '0.25',
+      cooldown: '9 / 7.9 / 6.8 / 5.7 / 4.6',
+      cost: '0',
+      damageType: 'Magic damage',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.</p>',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "80 / 100 / 120 / 140 / 160",
+                  values: '80 / 100 / 120 / 140 / 160',
                 },
                 {
-                  unit: "% AP",
-                  values: "60",
+                  unit: '% AP',
+                  values: '60',
                 },
               ],
             },
             {
-              attribute: "Heal",
+              attribute: 'Heal',
               modifiers: [
                 {
-                  values: "20 / 25 / 30 / 35 / 40",
+                  values: '20 / 25 / 30 / 35 / 40',
                 },
                 {
-                  unit: "% AP",
-                  values: "35",
+                  unit: '% AP',
+                  values: '35',
                 },
               ],
             },
@@ -66,48 +66,48 @@ const champion: Champion = {
         },
         {
           description:
-            "At 2 points of Crimson Rush, Vladimir surges, gaining 10% / 20% / 30% / 40% (based on level) bonus movement speed decaying over 0.5 seconds while the Crimson Rush depletes over 2.5 seconds. Crimson Rush depletes 75% slower during Sanguine Pool, Tides of Blood, or stasis.",
+            'At 2 points of Crimson Rush, Vladimir surges, gaining 10% / 20% / 30% / 40% (based on level) bonus movement speed decaying over 0.5 seconds while the Crimson Rush depletes over 2.5 seconds. Crimson Rush depletes 75% slower during Sanguine Pool, Tides of Blood, or stasis.',
         },
         {
           description:
-            "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The bonus healing is reduced to[ 35% ][ 10.5 - 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
+            'Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The bonus healing is reduced to[ 35% ][ 10.5 - 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.',
           leveling: [
             {
-              attribute: "Increased Damage",
+              attribute: 'Increased Damage',
               modifiers: [
                 {
-                  values: "148 / 185 / 222 / 259 / 296",
+                  values: '148 / 185 / 222 / 259 / 296',
                 },
                 {
-                  unit: "% AP",
-                  values: "111",
+                  unit: '% AP',
+                  values: '111',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/q",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/q',
       maxCharges: -1,
       notes:
-        "Even though the healing effect is visualized as a projectile, the healing itself triggers instantly.\nVladimir's resource bar indicates his current  Crimson Rush and changes colors depending on the charge-up stage of his surge.\nWhite while generating the first stack and while at 1 stack (there is no time-out period).\nOrange while generating the second stack.\nRed while he is surging (Crimson Rush will deplete over 2.5 seconds once triggered).\nEach stack generates over-time (Transfusion's cooldown).\nVladimir can cast  Sanguine Pool and  Hemoplague during Transfusion's cast time.\nThe  Crimson Rush depletes normally while under  resurrection effects.",
-      projectile: "FALSE",
-      spellEffects: "Single target",
-      spellshieldable: "True",
-      targeting: "Unit",
-      targetRange: "600",
+        'Even though the healing effect is visualized as a projectile, the healing itself triggers instantly.\nVladimir\'s resource bar indicates his current  Crimson Rush and changes colors depending on the charge-up stage of his surge.\nWhite while generating the first stack and while at 1 stack (there is no time-out period).\nOrange while generating the second stack.\nRed while he is surging (Crimson Rush will deplete over 2.5 seconds once triggered).\nEach stack generates over-time (Transfusion\'s cooldown).\nVladimir can cast  Sanguine Pool and  Hemoplague during Transfusion\'s cast time.\nThe  Crimson Rush depletes normally while under  resurrection effects.',
+      projectile: 'FALSE',
+      spellEffects: 'Single target',
+      spellshieldable: 'True',
+      targeting: 'Unit',
+      targetRange: '600',
     },
     {
-      key: "W",
-      name: "Sanguine Pool",
-      affects: "Self, Enemies",
+      key: 'W',
+      name: 'Sanguine Pool',
+      affects: 'Self, Enemies',
       blurb:
-        "Active:  Vladimir sinks into a pool of blood for a short time, becoming  untargetable,  ghosted, and gaining  bonus movement speed that decays over a shorter duration. He cannot use basic attacks and abilities, but can still move.",
-      castTime: "none",
-      cooldown: "28 / 25 / 22 / 19 / 16",
-      cost: "0",
-      damageType: "Magic damage",
-      effectRadius: "350",
+        'Active:  Vladimir sinks into a pool of blood for a short time, becoming  untargetable,  ghosted, and gaining  bonus movement speed that decays over a shorter duration. He cannot use basic attacks and abilities, but can still move.',
+      castTime: 'none',
+      cooldown: '28 / 25 / 22 / 19 / 16',
+      cost: '0',
+      damageType: 'Magic damage',
+      effectRadius: '350',
       effects: [
         {
           description:
@@ -115,29 +115,29 @@ const champion: Champion = {
         },
         {
           description:
-            "Enemies within the pool are dealt magic damage every 0.5 seconds over the duration and are slowed by 40%. Vladimir heals himself for 30% of the pre-mitigation damage dealt, reduced to 18% against minions.",
+            'Enemies within the pool are dealt magic damage every 0.5 seconds over the duration and are slowed by 40%. Vladimir heals himself for 30% of the pre-mitigation damage dealt, reduced to 18% against minions.',
           leveling: [
             {
-              attribute: "Magic Damage Per Tick",
+              attribute: 'Magic Damage Per Tick',
               modifiers: [
                 {
-                  values: "20 / 33.75 / 47.5 / 61.25 / 75",
+                  values: '20 / 33.75 / 47.5 / 61.25 / 75',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "3.75",
+                  unit: '% bonus health',
+                  values: '3.75',
                 },
               ],
             },
             {
-              attribute: "Total Magic Damage",
+              attribute: 'Total Magic Damage',
               modifiers: [
                 {
-                  values: "80 / 135 / 190 / 245 / 300",
+                  values: '80 / 135 / 190 / 245 / 300',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "15",
+                  unit: '% bonus health',
+                  values: '15',
                 },
               ],
             },
@@ -145,27 +145,27 @@ const champion: Champion = {
         },
         {
           description:
-            "Vladimir cannot use basic attacks nor abilities during Sanguine Pool, but he can still move. If Tides of Blood is charging at the time of Sanguine Pool's activation, that ability may still be recast.",
+            'Vladimir cannot use basic attacks nor abilities during Sanguine Pool, but he can still move. If Tides of Blood is charging at the time of Sanguine Pool\'s activation, that ability may still be recast.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/w",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/w',
       maxCharges: -1,
       notes:
-        "The first tick damages immediately so the final one occurs 0.5 seconds before Vladimir becomes targetable again.\nThere is an extra damage tick for 0 damage when Vladimir becomes targetable again, triggering the same spell effects as the normal ticks (except those which require damage greater than 0 being dealt).\nThis will trigger turret aggro onto Vladimir if an enemy champion is still within the effect radius when Sanguine Pool ends.\nThe  slow ends immediately once affected enemies get out of range.\nVladimir can still use summoner spells and item actives during Sanguine Pool.\nWhile unable to attack, Vladimir can still input attack commands - causing him to follow his attack target.\nVladimir's  attack range is reduced[ to 0 ][ by 450 ]while pooled - causing him to attempt to move right up to his attack target.",
-      resource: "Current health",
-      spellEffects: "aoedot",
-      targeting: "Auto",
+        'The first tick damages immediately so the final one occurs 0.5 seconds before Vladimir becomes targetable again.\nThere is an extra damage tick for 0 damage when Vladimir becomes targetable again, triggering the same spell effects as the normal ticks (except those which require damage greater than 0 being dealt).\nThis will trigger turret aggro onto Vladimir if an enemy champion is still within the effect radius when Sanguine Pool ends.\nThe  slow ends immediately once affected enemies get out of range.\nVladimir can still use summoner spells and item actives during Sanguine Pool.\nWhile unable to attack, Vladimir can still input attack commands - causing him to follow his attack target.\nVladimir\'s  attack range is reduced[ to 0 ][ by 450 ]while pooled - causing him to attempt to move right up to his attack target.',
+      resource: 'Current health',
+      spellEffects: 'aoedot',
+      targeting: 'Auto',
     },
     {
-      key: "E",
-      name: "Tides of Blood",
-      width: "120",
-      affects: "Self, Enemies",
-      castTime: "none",
-      cooldown: "13 / 11 / 9 / 7 / 5",
-      cost: "0",
-      damageType: "Magic damage",
-      effectRadius: "600",
+      key: 'E',
+      name: 'Tides of Blood',
+      width: '120',
+      affects: 'Self, Enemies',
+      castTime: 'none',
+      cooldown: '13 / 11 / 9 / 7 / 5',
+      cost: '0',
+      damageType: 'Magic damage',
+      effectRadius: '600',
       effects: [
         {
           description:
@@ -176,34 +176,34 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Recast:</span> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.</p>',
           leveling: [
             {
-              attribute: "Minimum Magic Damage",
+              attribute: 'Minimum Magic Damage',
               modifiers: [
                 {
-                  values: "30 / 45 / 60 / 75 / 90",
+                  values: '30 / 45 / 60 / 75 / 90',
                 },
                 {
-                  unit: "% maximum health",
-                  values: "1.5",
+                  unit: '% maximum health',
+                  values: '1.5',
                 },
                 {
-                  unit: "% AP",
-                  values: "35",
+                  unit: '% AP',
+                  values: '35',
                 },
               ],
             },
             {
-              attribute: "Maximum Magic Damage",
+              attribute: 'Maximum Magic Damage',
               modifiers: [
                 {
-                  values: "60 / 90 / 120 / 150 / 180",
+                  values: '60 / 90 / 120 / 150 / 180',
                 },
                 {
-                  unit: "% maximum health",
-                  values: "6",
+                  unit: '% maximum health',
+                  values: '6',
                 },
                 {
-                  unit: "% AP",
-                  values: "80",
+                  unit: '% AP',
+                  values: '80',
                 },
               ],
             },
@@ -211,14 +211,14 @@ const champion: Champion = {
         },
         {
           description:
-            "If Tides of Blood was charged for at least 1 second, enemies hit are also slowed for 0.5 seconds.",
+            'If Tides of Blood was charged for at least 1 second, enemies hit are also slowed for 0.5 seconds.',
           leveling: [
             {
-              attribute: "Slow",
+              attribute: 'Slow',
               modifiers: [
                 {
-                  unit: "%",
-                  values: "40 / 45 / 50 / 55 / 60",
+                  unit: '%',
+                  values: '40 / 45 / 50 / 55 / 60',
                 },
               ],
             },
@@ -226,35 +226,35 @@ const champion: Champion = {
         },
         {
           description:
-            "Enemies can intercept multiple bolts, but can be damaged only once.",
+            'Enemies can intercept multiple bolts, but can be damaged only once.',
         },
         {
           description:
-            "If Vladimir is below 12% of his maximum health, Tides of Blood will not cost any health.",
+            'If Vladimir is below 12% of his maximum health, Tides of Blood will not cost any health.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/e",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/e',
       maxCharges: -1,
       notes:
-        "The spell indicator shows 11 equally spaced missile indicators when hovering the ability in the HUD, however the spell actually casts 15 equally spaced missiles.\nThe health cost may still drop Vladimir below the specified amount if he is above it. This is verified for every tick of health cost, i.e if the first tick drops him below it, the next ones will stop affecting him if he remains below it.\nThe following table refers for interactions while Vladimir is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Sanguine Pool is usable.  Transfusion and  Hemoplague both interrupt after 0.25 seconds.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
-      projectile: "TRUE",
-      resource: "Maximum health",
-      speed: "4000",
-      spellEffects: "spellaoe",
-      spellshieldable: "True",
-      targeting: "Auto",
+        'The spell indicator shows 11 equally spaced missile indicators when hovering the ability in the HUD, however the spell actually casts 15 equally spaced missiles.\nThe health cost may still drop Vladimir below the specified amount if he is above it. This is verified for every tick of health cost, i.e if the first tick drops him below it, the next ones will stop affecting him if he remains below it.\nThe following table refers for interactions while Vladimir is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Sanguine Pool is usable.  Transfusion and  Hemoplague both interrupt after 0.25 seconds.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects',
+      projectile: 'TRUE',
+      resource: 'Maximum health',
+      speed: '4000',
+      spellEffects: 'spellaoe',
+      spellshieldable: 'True',
+      targeting: 'Auto',
     },
     {
-      key: "R",
-      name: "Hemoplague",
-      affects: "Self, Enemies",
+      key: 'R',
+      name: 'Hemoplague',
+      affects: 'Self, Enemies',
       blurb:
-        "Active:  Vladimir unleashes a plague at the target location that infects nearby enemies hit for a few seconds, increasing the damage they take from all sources.",
-      castTime: "none",
-      cooldown: "120",
-      cost: "0",
-      damageType: "Magic damage",
-      effectRadius: "375",
+        'Active:  Vladimir unleashes a plague at the target location that infects nearby enemies hit for a few seconds, increasing the damage they take from all sources.',
+      castTime: 'none',
+      cooldown: '120',
+      cost: '0',
+      damageType: 'Magic damage',
+      effectRadius: '375',
       effects: [
         {
           description:
@@ -262,72 +262,72 @@ const champion: Champion = {
         },
         {
           description:
-            "After the duration, the infection bursts to deal magic damage to all affected targets and, after a 0.4-second delay, heal Vladimir for each infected champion, reduced by 40% for champions beyond the first.",
+            'After the duration, the infection bursts to deal magic damage to all affected targets and, after a 0.4-second delay, heal Vladimir for each infected champion, reduced by 40% for champions beyond the first.',
           leveling: [
             {
-              attribute: "Magic damage",
+              attribute: 'Magic damage',
               modifiers: [
                 {
-                  values: "150 / 250 / 350",
+                  values: '150 / 250 / 350',
                 },
                 {
-                  unit: "% AP",
-                  values: "70",
+                  unit: '% AP',
+                  values: '70',
                 },
               ],
             },
             {
-              attribute: "Heal",
+              attribute: 'Heal',
               modifiers: [
                 {
-                  values: "150 / 250 / 350",
+                  values: '150 / 250 / 350',
                 },
                 {
-                  unit: "% AP",
-                  values: "70",
+                  unit: '% AP',
+                  values: '70',
                 },
               ],
             },
             {
-              attribute: "Reduced Heal",
+              attribute: 'Reduced Heal',
               modifiers: [
                 {
-                  values: "60 / 100 / 140",
+                  values: '60 / 100 / 140',
                 },
                 {
-                  unit: "% AP",
-                  values: "28",
+                  unit: '% AP',
+                  values: '28',
                 },
               ],
             },
             {
-              attribute: "Maximum Total Heal",
+              attribute: 'Maximum Total Heal',
               modifiers: [
                 {
-                  values: "390 / 650 / 910",
+                  values: '390 / 650 / 910',
                 },
                 {
-                  unit: "% AP",
-                  values: "182",
+                  unit: '% AP',
+                  values: '182',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r',
       maxCharges: -1,
       notes:
-        "Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague's effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague's modifier to incoming damage stacks additively with  Alistar's  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(note)\n Spell shield does not negate the detonation.",
-      projectile: "FALSE",
-      spellEffects: "Area of effect",
-      spellshieldable: "special",
-      targeting: "Location",
-      targetRange: "625",
+        'Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague\'s effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague\'s modifier to incoming damage stacks additively with  Alistar\'s  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(note)\n Spell shield does not negate the detonation.',
+      projectile: 'FALSE',
+      spellEffects: 'Area of effect',
+      spellshieldable: 'special',
+      targeting: 'Location',
+      targetRange: '625',
     },
   ],
-  adaptiveType: "Magic damage",
-  attackType: "Ranged",
+  adaptiveType: 'Magic damage',
+  attackType: 'Ranged',
   attributeRatings: {
     abilityReliance: 100,
     control: 1,
@@ -337,17 +337,17 @@ const champion: Champion = {
     toughness: 2,
     utility: 1,
   },
-  faction: "noxus",
-  lore: "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.",
-  patchLastChanged: "25.11",
-  positions: ["Middle", "Top"],
+  faction: 'noxus',
+  lore: 'A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire\'s earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.',
+  patchLastChanged: '25.11',
+  positions: ['Middle', 'Top'],
   price: {
     blueEssence: 1575,
     rp: 790,
   },
-  releaseDate: "2010-07-27",
-  resource: "Crimson rush",
-  roles: ["Battlemage", "Fighter", "Mage"],
+  releaseDate: '2010-07-27',
+  resource: 'Crimson rush',
+  roles: ['Battlemage', 'Fighter', 'Mage'],
   stats: {
     acquisitionRadius: {
       flat: 600,
@@ -416,5 +416,5 @@ const champion: Champion = {
       flat: 120,
     },
   },
-};
-export default champion;
+}
+export default champion

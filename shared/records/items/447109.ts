@@ -1,18 +1,18 @@
 const item: Item = {
   id: 447109,
-  name: "Cruelty",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6035_fighter_t3_silvermeredawn.png",
+  name: 'Cruelty',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6035_fighter_t3_silvermeredawn.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Watch Them Fall",
+      name: 'Watch Them Fall',
       effects:
         '<img src="/img/icons/immobilize.webp" class="tip-icon" />Immobilizing or <img src="/img/icons/ground.webp" class="tip-icon" />grounding an enemy champion summons a comet above them that lands at their current location after 1 second, dealing 50 – 150 (based on level) magic damage (+40% AP) (+4% of your <b>maximum</b> health) magic damage to enemies within the area (6 second cooldown per target per cast instance).',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -20,7 +20,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["MAGE"],
+    tags: ['MAGE'],
   },
   specialRecipe: 220007,
   stats: {
@@ -28,5 +28,5 @@ const item: Item = {
     armor: 30,
     magicResistance: 30,
   },
-};
-export default item;
+}
+export default item

@@ -1,44 +1,44 @@
 const item: Item = {
   id: 2019,
-  name: "Steel Sigil",
+  name: 'Steel Sigil',
   buildsFrom: [
     {
       id: 1029,
-      name: "Cloth Armor",
+      name: 'Cloth Armor',
       gold: 300,
     },
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
     {
       id: 1029,
-      name: "Cloth Armor",
+      name: 'Cloth Armor',
       gold: 300,
     },
   ],
   buildsInto: [
     {
       id: 3026,
-      name: "Guardian Angel",
+      name: 'Guardian Angel',
       gold: 3200,
     },
     {
       id: 6333,
-      name: "Death's Dance",
+      name: 'Death\'s Dance',
       gold: 3300,
     },
     {
       id: 6700,
-      name: "Shield of the Rakkor",
+      name: 'Shield of the Rakkor',
       gold: 2675,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2019_steel_sigil.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2019_steel_sigil.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -46,12 +46,12 @@ const item: Item = {
       sell: 440,
       total: 1100,
     },
-    tags: ["FIGHTER"],
+    tags: ['FIGHTER'],
   },
   specialRecipe: 0,
   stats: {
     armor: 30,
     attackDamage: 15,
   },
-};
-export default item;
+}
+export default item

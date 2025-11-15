@@ -1,39 +1,41 @@
 <script lang="ts" setup>
 const { runes, selected } = defineProps<{
-  runes: Rune[];
-  selected: number | null;
-}>();
+  runes: Rune[]
+  selected: number | null
+}>()
 
-const emit = defineEmits(["update:rune"]);
-const selectedRune = ref<number>(null);
+const emit = defineEmits(['update:rune'])
+const selectedRune = ref<number>(null)
 
 watch(
   () => selectedRune.value,
   (newVal) => {
-    console.log("💠 - watch - newVal:", newVal);
+    console.log('💠 - watch - newVal:', newVal)
   },
-);
+)
 
 watch(
   () => selected,
   (newVal) => {
-    if (newVal && newVal !== selectedRune.value) selectedRune.value = selected;
+    if (newVal && newVal !== selectedRune.value)
+      selectedRune.value = selected
   },
-);
+)
 </script>
 
 <template>
   <Field
     title="Keystone"
-    class="relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm"
-  >
+    class="
+      relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm
+    ">
     <div
-      class="absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26"
-    >
+      class="
+        absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26
+      ">
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"
-        :data-path="runes[0].path"
-      />
+        :data-path="runes[0].path" />
     </div>
 
     <RadioGroup
@@ -49,8 +51,7 @@ watch(
           `,
         )
       "
-      @update:model-value="emit('update:rune', selectedRune)"
-    >
+      @update:model-value="emit('update:rune', selectedRune)">
       <!--   <Label
         v-for="rune in runes"
         :key="rune.id"

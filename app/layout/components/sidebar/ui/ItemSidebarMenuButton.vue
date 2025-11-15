@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 const {
   class: className,
@@ -8,16 +8,18 @@ const {
   size,
   text,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  item: RouteRecordRaw;
-  size: "12" | "icon";
-  text?: boolean;
-  full?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  item: RouteRecordRaw
+  size: '12' | 'icon'
+  text?: boolean
+  full?: boolean
+}>()
 </script>
 
 <template>
-  <Button :size="size" :class="cn('', className)">
+  <Button
+    :size="size"
+    :class="cn('', className)">
     <hicon
       v-if="item.meta?.icon && (!text || full)"
       :name="String(item.meta?.icon)"
@@ -26,8 +28,7 @@ const {
           '**:!stroke-[2.1] !size-4.5': item.name === 'live',
           '!text-bc/60': item.name === 'mastery',
         })
-      "
-    />
+      " />
     <span class="capitalize">{{ item.meta.title ?? item.name }}</span>
   </Button>
 </template>

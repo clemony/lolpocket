@@ -1,26 +1,29 @@
 <script lang="ts" setup>
 const { params } = defineProps<{
-  params: any;
-}>();
+  params: any
+}>()
 const patch = computed(() => {
-  return useArrayUnique(params.valueFormatted.split(", "));
-});
-console.log("💠 - patch - patch:", patch);
+  return useArrayUnique(params.valueFormatted.split(', '))
+})
+console.log('💠 - patch - patch:', patch)
 </script>
 
 <template>
   <div class="flex size-full items-center gap-2 p-2">
-    <template v-for="(p, i) in patch.value" :key="i">
+    <template
+      v-for="(p, i) in patch.value"
+      :key="i">
       <div
         v-if="i <= 2"
-        class="badge border badge-ghost border-b3/60! badge-sm"
-      >
+        class="badge border badge-ghost border-b3/60! badge-sm">
         {{ p }}
       </div>
     </template>
 
     <Popover v-if="patch.value.length > 3">
-      <PopoverTrigger class="btn btn-ghost btn-xs"> ... </PopoverTrigger>
+      <PopoverTrigger class="btn btn-ghost btn-xs">
+        ...
+      </PopoverTrigger>
 
       <ScrollPopperContent class="w-41">
         <div class="mb-2 font-semibold tracking-tight opacity-50">
@@ -28,7 +31,10 @@ console.log("💠 - patch - patch:", patch);
         </div>
 
         <ul class="space-y-2">
-          <li v-for="p in patch.value" :key="p as string" class="pl-3">
+          <li
+            v-for="p in patch.value"
+            :key="p as string"
+            class="pl-3">
             {{ p }}
           </li>
         </ul>

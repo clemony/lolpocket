@@ -1,36 +1,37 @@
 <script setup lang="ts">
-import type { ListboxGroupProps } from "reka-ui";
-import { ListboxGroup, ListboxGroupLabel, useId } from "reka-ui";
-import { computed, onMounted, onUnmounted } from "vue";
-import { provideCommandGroupContext, useCommand } from "./index.command";
+import type { ListboxGroupProps } from 'reka-ui'
+import { ListboxGroup, ListboxGroupLabel, useId } from 'reka-ui'
+import { computed, onMounted, onUnmounted } from 'vue'
+import { provideCommandGroupContext, useCommand } from './index.command'
 
 const props = defineProps<
   ListboxGroupProps & {
-    class?: HTMLAttributes["class"];
-    heading?: string;
+    class?: HTMLAttributes['class']
+    heading?: string
   }
->();
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const { allGroups, filterState } = useCommand();
-const id = useId();
+const { allGroups, filterState } = useCommand()
+const id = useId()
 
 const isRender = computed(() =>
   !filterState.search ? true : filterState.filtered.groups.has(id),
-);
+)
 
-provideCommandGroupContext({ id });
+provideCommandGroupContext({ id })
 onMounted(() => {
-  if (!allGroups.value.has(id)) allGroups.value.set(id, new Set());
-});
+  if (!allGroups.value.has(id))
+    allGroups.value.set(id, new Set())
+})
 onUnmounted(() => {
-  allGroups.value.delete(id);
-});
+  allGroups.value.delete(id)
+})
 </script>
 
 <template>
@@ -48,12 +49,10 @@ onUnmounted(() => {
         props.class,
       )
     "
-    :hidden="isRender ? undefined : true"
-  >
+    :hidden="isRender ? undefined : true">
     <ListboxGroupLabel
       v-if="heading"
-      class="px-2 py-1.5 text-2 font-medium text-bc/50"
-    >
+      class="px-2 py-1.5 text-2 font-medium text-bc/50">
       {{ heading }}
     </ListboxGroupLabel>
 

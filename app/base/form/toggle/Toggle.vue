@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import type { ToggleEmits, ToggleProps } from "reka-ui";
-import { Toggle, useForwardPropsEmits } from "reka-ui";
+import type { ToggleEmits, ToggleProps } from 'reka-ui'
+import { Toggle, useForwardPropsEmits } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<
     ToggleProps & {
-      class?: HTMLAttributes["class"];
-      variant?: ToggleVariants["variant"];
-      size?: ToggleVariants["size"];
-      base?: ToggleVariants["base"];
-      hover?: ToggleVariants["hover"];
-      on?: ToggleVariants["on"];
+      class?: HTMLAttributes['class']
+      variant?: ToggleVariants['variant']
+      size?: ToggleVariants['size']
+      base?: ToggleVariants['base']
+      hover?: ToggleVariants['hover']
+      on?: ToggleVariants['on']
     }
   >(),
   {
     disabled: false,
-    size: "sq-10",
-    variant: "outline",
+    size: 'sq-10',
+    variant: 'outline',
   },
-);
+)
 
-const emits = defineEmits<ToggleEmits>();
+const emits = defineEmits<ToggleEmits>()
 
 const delegatedProps = computed(() => {
-  const { base, class: _, size, variant, ...delegated } = props;
+  const { base, class: _, size, variant, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -41,8 +41,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         toggleVariants({ variant, size, base, hover, on }),
         props.class,
       )
-    "
-  >
+    ">
     <slot :model-value />
   </Toggle>
 </template>

@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from "~~/shared/schema";
+import type { Pocket, RuneSet } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket: Pocket;
-  set?: RuneSet;
-}>();
+  pocket: Pocket
+  set?: RuneSet
+}>()
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
 function handleDelete() {
-  rs().selectedRuneSet = 0;
-  deleteRuneSet(props.pocket, props.set);
+  rs().selectedRuneSet = 0
+  deleteRuneSet(props.pocket, props.set)
 }
 
 /* function handleNewSet() {
@@ -37,10 +37,15 @@ function handleDelete() {
 
     <button
       v-tippy="'Delete Current Set'"
-      class="b3/4 btn rounded-lg btn-ghost btn-sm *:dst hover:border hover:bg-b3/5"
-      @click="handleDelete()"
-    >
-      <icon name="trash" class="size-5 shrink-0 text-nc opacity-70" />
+      class="
+        b3/4 btn rounded-lg btn-ghost btn-sm
+        *:dst
+        hover:border hover:bg-b3/5
+      "
+      @click="handleDelete()">
+      <icon
+        name="trash"
+        class="size-5 shrink-0 text-nc opacity-70" />
     </button>
   </div>
 </template>

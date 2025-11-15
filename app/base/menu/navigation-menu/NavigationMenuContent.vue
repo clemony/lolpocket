@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import "assets/css/components/navigation-menu.css";
+import 'assets/css/components/navigation-menu.css'
 import type {
   NavigationMenuContentEmits,
   NavigationMenuContentProps,
-} from "reka-ui";
-import { NavigationMenuContent, useForwardPropsEmits } from "reka-ui";
+} from 'reka-ui'
+import { NavigationMenuContent, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
-  NavigationMenuContentProps & { class?: HTMLAttributes["class"] }
->();
+  NavigationMenuContentProps & { class?: HTMLAttributes['class'] }
+>()
 
-const emits = defineEmits<NavigationMenuContentEmits>();
-const delegatedProps = reactiveOmit(props, "class");
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const emits = defineEmits<NavigationMenuContentEmits>()
+const delegatedProps = reactiveOmit(props, 'class')
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -26,8 +26,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </NavigationMenuContent>
 </template>

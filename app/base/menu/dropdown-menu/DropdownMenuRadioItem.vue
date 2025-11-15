@@ -2,22 +2,22 @@
 import type {
   DropdownMenuRadioItemEmits,
   DropdownMenuRadioItemProps,
-} from "reka-ui";
+} from 'reka-ui'
 import {
   DropdownMenuItemIndicator,
   DropdownMenuRadioItem,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  DropdownMenuRadioItemProps & { class?: HTMLAttributes["class"] }
->();
+  DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }
+>()
 
-const emits = defineEmits<DropdownMenuRadioItemEmits>();
+const emits = defineEmits<DropdownMenuRadioItemEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -34,11 +34,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon name="radix-icons:radiobutton" class="size-4 fill-current" />
+        <icon
+          name="radix-icons:radiobutton"
+          class="size-4 fill-current" />
       </DropdownMenuItemIndicator>
     </span>
 

@@ -1,12 +1,14 @@
 export interface ChampionMasteryResponse {
-  puuid: string;
-  mastery: ChampionMastery[];
-  totalLevels: number;
-  totalPoints: number;
+  puuid: string
+  mastery: ChampionMastery[]
+  totalLevels: number
+  totalPoints: number
+  // @fixme
 }
 export async function fetchSummonerMastery(puuid: string) {
-  if (!puuid) throw new Error("Missing puuid for mastery fetch");
-
+  if (!puuid)
+    throw new Error('Missing puuid for mastery fetch')
+  /*
   const summoner = ss().getSummoner(puuid);
   const TWO_HOURS = 1000 * 60 * 60 * 2;
 
@@ -16,10 +18,10 @@ export async function fetchSummonerMastery(puuid: string) {
   const needsUpdate =
     !summoner?.mastery?.champions?.length ||
     !summoner?.mastery?.totalPoints ||
-    isStale(summoner.mastery.updated);
-
+    isStale(my().summonerMastery.updated);
+ */
   // If nothing is stale or missing, return existing data
-  if (!needsUpdate) return summoner.mastery;
+  /*  if (!needsUpdate) return summoner.mastery;
 
   try {
     const result = await $fetch<ChampionMasteryResponse>(
@@ -48,5 +50,5 @@ export async function fetchSummonerMastery(puuid: string) {
   } catch (e) {
     console.error("❌ fetchSummonerMastery failed:", e);
     throw e;
-  }
+  } */
 }

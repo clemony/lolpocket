@@ -1,30 +1,38 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
-import { championPositions } from "#shared/references";
-import { VueDraggable } from "vue-draggable-plus";
+import type { Pocket } from '~~/shared/schema'
+import { championPositions } from '#shared/references'
+import { VueDraggable } from 'vue-draggable-plus'
 
 const { class: className, pocket: p } = defineProps<{
-  pocket: Pocket;
-  class?: HTMLAttributes["class"];
-}>();
+  pocket: Pocket
+  class?: HTMLAttributes['class']
+}>()
 
-const pocket = computed(() => p);
+const pocket = computed(() => p)
 </script>
 
 <template>
-  <Collapsible v-if="pocket" class="field-box w-full">
+  <Collapsible
+    v-if="pocket"
+    class="field-box w-full">
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
-      class="group flex w-full items-center justify-start gap-1 px-3 py-3 text-start text-3 capitalize"
-    >
-      <h3 class="grow dst">Roles</h3>
+      class="
+        group flex w-full items-center justify-start gap-1 px-3 py-3 text-start
+        text-3 capitalize
+      ">
+      <h3 class="grow dst">
+        Roles
+      </h3>
 
       <CaretRotate />
     </CollapsibleTrigger>
 
     <CollapsibleContent
-      class="CollapsibleContent flex w-full flex-col justify-start gap-4 overflow-hidden px-4 pt-1 pb-4"
-    >
+      class="
+        CollapsibleContent flex w-full flex-col justify-start gap-4
+        overflow-hidden px-4 pt-1 pb-4
+      ">
       <VueDraggable
         :model-value="pocket.roles"
         ghost-class="role-ghost"
@@ -33,31 +41,29 @@ const pocket = computed(() => p);
         chosen-class="role-chosen"
         drag-class="role-drag"
         selected-class="role-select"
-        class="relative flex h-fit w-full flex-wrap items-center gap-3"
-      >
+        class="relative flex h-fit w-full flex-wrap items-center gap-3">
         <RoleBadge
           v-for="role in pocket.roles"
           :key="role"
           :pocket="pocket"
-          :role="role"
-        />
+          :role="role" />
 
         <Grow />
       </VueDraggable>
       <transition-slide
         :offset="{ enter: [10, 0], leave: [-10, 0] }"
         group
-        class="relative flex h-fit w-full flex-wrap gap-3"
-      >
-        <template v-for="role in championPositions" :key="role">
+        class="relative flex h-fit w-full flex-wrap gap-3">
+        <template
+          v-for="role in championPositions"
+          :key="role">
           <Label
             v-if="role"
             variant="outline"
             size="8"
             class="order-3 rounded-lg border-b3/80 bg-b1"
             :class="cn({ 'hidden ': pocket.roles.includes(role.name) })"
-            @click.stop
-          >
+            @click.stop>
             <input
               v-model="pocket.roles"
               class="peer absolute hidden"
@@ -65,14 +71,15 @@ const pocket = computed(() => p);
               :disabled="!role"
               :value="role.name"
               name="item-types"
-              @change="handleRoles(pocket, role.name)"
-            />
+              @change="handleRoles(pocket, role.name)" />
 
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
-              class="h-3.75 w-auto shrink-0 text-bc/70 dst peer-checked:text-nc"
-              :class="{ 'text-bc/80!': role.name.toLowerCase() === 'all' }"
-            />
+              class="
+                h-3.75 w-auto shrink-0 text-bc/70 dst
+                peer-checked:text-nc
+              "
+              :class="{ 'text-bc/80!': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>
         </template>

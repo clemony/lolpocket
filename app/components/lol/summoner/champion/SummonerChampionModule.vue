@@ -4,13 +4,13 @@ const {
   class: className,
   summoner,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  summoner?: Summoner;
-  championName: string;
-}>();
-console.log("💠 - summoner?:", summoner);
-const state = inject<SummonerData>(SummonerKey);
-const champKey = computed(() => String(ix().champKeyByName(championName)));
+  class?: HTMLAttributes['class']
+  summoner?: Summoner
+  championName: string
+}>()
+console.log('💠 - summoner?:', summoner)
+const state = inject<SummonerData>(SummonerKey)
+const champKey = computed(() => String(ix().champKeyByName(championName)))
 </script>
 
 <template>
@@ -19,14 +19,17 @@ const champKey = computed(() => String(ix().champKeyByName(championName)));
       <Champion
         translate="0%, 6%"
         class="aspect-square size-54 max-h-54 max-w-54 rounded-xl"
-        :img="getSplash(champKey, 'tile')"
-      >
+        :img="getSplash(champKey, 'tile')">
         <div
-          class="absolute inset-0 bottom-0 left-0 z-1 grid items-end justify-start bg-radial-[at_70%_30%] from-transparent from-50% to-black/90 bg-size-[120%] p-2"
-        >
+          class="
+            absolute inset-0 bottom-0 left-0 z-1 grid items-end justify-start
+            bg-radial-[at_70%_30%] from-transparent from-50% to-black/90
+            bg-size-[120%] p-2
+          ">
           <h2
-            class="text-11 text-start font-black text-white/90 dst text-shadow-sm"
-          >
+            class="
+              text-11 text-start font-black text-white/90 dst text-shadow-sm
+            ">
             {{ hyphenateChampionName(championName) }}
           </h2>
         </div>
@@ -35,8 +38,7 @@ const champKey = computed(() => String(ix().champKeyByName(championName)));
         <SummonerChampionLineChart
           :summoner
           :matches="state.matches"
-          :champion-name
-        />
+          :champion-name />
       </div>
     </CollapsibleTrigger>
     <CollapsibleContent class="CollapsibleContent"></CollapsibleContent>

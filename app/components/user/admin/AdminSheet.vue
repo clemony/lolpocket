@@ -1,22 +1,24 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 
-const { clearMatches } = useIndexedDB();
+const { clearMatches } = useIndexedDB()
 
-const keys = useMagicKeys();
+const keys = useMagicKeys()
 
-const isOpen = ref(false);
+const isOpen = ref(false)
 whenever(keys.shift_a, () => {
-  isOpen.value = true;
-});
+  isOpen.value = true
+})
 
-const user = useSupabaseUser();
+const user = useSupabaseUser()
 </script>
 
 <template>
-  <Sheet v-if="user.role === 'admin'" v-model:open="isOpen">
+  <Sheet
+    v-if="user.role === 'admin'"
+    v-model:open="isOpen">
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden">
       <SheetHeader>
         <NestedSheetTitle>Admin</NestedSheetTitle>
@@ -24,8 +26,14 @@ const user = useSupabaseUser();
         <SheetDescription>Take care of business okay.</SheetDescription>
       </SheetHeader>
 
-      <div class="grid h-fit w-full grid-cols-1 pt-10 *:w-full">
-        <button class="btn w-full" @click="ss().clearAll()">
+      <div
+        class="
+          grid h-fit w-full grid-cols-1 pt-10
+          *:w-full
+        ">
+        <button
+          class="btn w-full"
+          @click="ss().clearAll()">
           clear summoner store
         </button>
 
@@ -33,7 +41,9 @@ const user = useSupabaseUser();
 
         <LogMatchesButton />
 
-        <Btn class="" @click="clearMatches()">
+        <Btn
+          class=""
+          @click="clearMatches()">
           <icon name="refresh" />
           Force Reload User Summoner
         </Btn>

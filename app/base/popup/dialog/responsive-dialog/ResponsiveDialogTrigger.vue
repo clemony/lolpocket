@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { DialogTrigger } from "#components";
-import { DrawerTrigger } from "~/base/popup/drawer/drawer-index";
+import { DialogTrigger } from '#components'
+import { DrawerTrigger } from '~/base/popup/drawer/drawer-index'
 
-const isDesktop = useMediaQuery("(min-width: 768px)");
+const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>

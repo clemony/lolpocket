@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const { class: className, kbd } = defineProps<{
-  class?: HTMLAttributes["class"];
-  kbd?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  kbd?: boolean
+}>()
 
-const emit = defineEmits(["update:search"]);
+const emit = defineEmits(['update:search'])
 
-const query = ref("");
+const query = ref('')
 </script>
 
 <template>
@@ -25,11 +25,12 @@ const query = ref("");
             `,
             className,
           )
-        "
-      >
+        ">
         <slot />
       </ComboboxTrigger>
     </ComboboxAnchor>
-    <LazySearchContent class="w-[var(--reka-combobox-trigger-width)]" :query />
+    <LazySearchContent
+      class="w-[var(--reka-combobox-trigger-width)]"
+      :query />
   </Combobox>
 </template>

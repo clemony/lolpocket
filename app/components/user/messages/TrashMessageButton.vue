@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { InboxMessage } from "~~/shared/schema";
-import { trashMsg } from "./inbox-management";
+import type { InboxMessage } from '~~/shared/schema'
+import { trashMsg } from './inbox-management'
 
 const { class: className, message } = defineProps<{
-  class?: HTMLAttributes["class"];
-  message: InboxMessage;
-}>();
+  class?: HTMLAttributes['class']
+  message: InboxMessage
+}>()
 </script>
 
 <template>
@@ -13,8 +13,9 @@ const { class: className, message } = defineProps<{
     v-tippy="'Send to Trash'"
     :variant="!message.read ? 'neutral' : 'ghost'"
     size="6"
-    @click.stop="trashMsg(message.id)"
-  >
-    <icon name="ph:trash-bold" class="pointer-events-none size-3.5" />
+    @click.stop="trashMsg(message.id)">
+    <icon
+      name="ph:trash-bold"
+      class="pointer-events-none size-3.5" />
   </Button>
 </template>

@@ -1,7 +1,7 @@
 const item: Item = {
   id: 4638,
-  name: "Watchful Wardstone",
-  nicknames: ["Support", "Ward"],
+  name: 'Watchful Wardstone',
+  nicknames: ['Support', 'Ward'],
   active: [
     {
       effects:
@@ -12,22 +12,22 @@ const item: Item = {
   buildsInto: [
     {
       id: 4643,
-      name: "Vigilant Wardstone",
+      name: 'Vigilant Wardstone',
       gold: 2300,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4638_enchanter_t3_watchfulsightstone.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4638_enchanter_t3_watchfulsightstone.png',
   maps: [11],
   noEffects: false,
   passives: [
     {
-      name: "Arcane Cache",
+      name: 'Arcane Cache',
       effects:
         'Purchasing a <img src="/img/icons/control-ward.webp" class="tip-icon" />Control Ward stocks it as a charge, up to maximum of 3.',
       unique: true,
     },
   ],
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -35,7 +35,7 @@ const item: Item = {
       sell: 440,
       total: 1100,
     },
-    tags: ["SUPPORT"],
+    tags: ['SUPPORT'],
   },
   specialRecipe: 0,
   stats: {
@@ -44,5 +44,5 @@ const item: Item = {
     health: 150,
     magicResistance: 15,
   },
-};
-export default item;
+}
+export default item

@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import { ListboxItem, ListboxItemIndicator } from "reka-ui";
+import { ListboxItem, ListboxItemIndicator } from 'reka-ui'
 
 const {
   activeTheme,
   class: className,
   theme,
 } = defineProps<{
-  theme: any;
-  activeTheme: string;
-  class?: HTMLAttributes["class"];
-}>();
+  theme: any
+  activeTheme: string
+  class?: HTMLAttributes['class']
+}>()
 
-const colorChip =
-  "aspect-square inset-shadow-sm drop-shadow-xs size-9 flex items-center justify-center rounded-md shadow-sm";
+const colorChip
+  = 'aspect-square inset-shadow-sm drop-shadow-xs size-9 flex items-center justify-center rounded-md shadow-sm'
 </script>
 
 <template>
@@ -36,29 +36,44 @@ const colorChip =
         },
         className,
       )
-    "
-  >
+    ">
     <Button
       v-if="as().settings.theme === theme.name"
       size="sm"
       class="relative grid aspect-square place-items-center rounded-full"
-      variant="neutral"
-    >
-      <icon name="tick" class="absolute size-6 **:stroke-3" />
+      variant="neutral">
+      <icon
+        name="tick"
+        class="
+          absolute size-6
+          **:stroke-3
+        " />
     </Button>
-    <div v-else class="" />
-    <div class="hidden h-32 w-full pt-3 pr-2 pl-1 -indent-1 md:block">
+    <div
+      v-else
+      class="" />
+    <div
+      class="
+        hidden h-32 w-full pt-3 pr-2 pl-1 -indent-1
+        md:block
+      ">
       <h4 class="leading-8 font-bold capitalize">
         {{ theme.name }}
       </h4>
-      <p class="h-9 leading-5 text-pretty italic">'{{ theme.quote }}'</p>
+      <p class="h-9 leading-5 text-pretty italic">
+        '{{ theme.quote }}'
+      </p>
       <p class="pr-4 text-end text-2 leading-4 text-pretty italic opacity-80">
         —{{ theme.champion }}
       </p>
     </div>
 
     <div class="grid">
-      <div class="flex items-center gap-2 *:rounded-full">
+      <div
+        class="
+          flex items-center gap-2
+          *:rounded-full
+        ">
         <div :class="cn('bg-b2 text-bc', colorChip)"></div>
 
         <div :class="cn('bg-b3 text-bc', colorChip)"></div>
@@ -68,8 +83,14 @@ const colorChip =
         <div :class="cn('bgneutral text-nc', colorChip)"></div>
       </div>
     </div>
-    <div class="mt-3 tracking-wide text-bc opacity-90 *:leading-3.5">
-      <p class="text-[8px] font-semibold uppercase">lolpocket theme</p>
+    <div
+      class="
+        mt-3 tracking-wide text-bc opacity-90
+        *:leading-3.5
+      ">
+      <p class="text-[8px] font-semibold uppercase">
+        lolpocket theme
+      </p>
     </div>
   </Card>
 </template>

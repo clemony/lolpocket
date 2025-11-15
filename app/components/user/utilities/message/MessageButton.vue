@@ -1,20 +1,25 @@
 <script setup lang="ts">
 const {
   class: className,
-  size = "md",
+  size = 'md',
   summoner,
-  variant = "shadow",
+  variant = 'shadow',
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  summoner: Summoner | Partial<Summoner>;
-  variant?: any;
-  size?: any;
-}>();
+  class?: HTMLAttributes['class']
+  summoner: Summoner | Partial<Summoner>
+  variant?: any
+  size?: any
+}>()
 </script>
 
 <template>
-  <Button :class="cn('', className)" :variant="variant" :size="size">
-    <icon name="lucide:send" class="" />
+  <Button
+    :class="cn('', className)"
+    :variant="variant"
+    :size="size">
+    <icon
+      name="lucide:send"
+      class="" />
     <span class="**:capitalize">
       <slot />
     </span>

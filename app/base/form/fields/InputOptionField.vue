@@ -1,24 +1,25 @@
 <script setup lang="ts">
-import { FormField } from "~/base/form/index.form";
-import type { FieldOption } from "../types.forms";
+import { FormField } from '~/base/form/index.form'
+import type { FieldOption } from '../types.forms'
 
 const {
-  name = "options",
+  name = 'options',
   class: className,
   option,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  name?: string;
-  option: FieldOption;
-}>();
-console.log("🌱 - option:", option);
-const modelValue = ref<string>("");
-const checked = shallowRef<boolean>(false);
+  class?: HTMLAttributes['class']
+  name?: string
+  option: FieldOption
+}>()
+console.log('🌱 - option:', option)
+const modelValue = ref<string>('')
+const checked = shallowRef<boolean>(false)
 
-const inputRef = useTemplateRef("inputRef");
+const inputRef = useTemplateRef('inputRef')
 
 function handleCheck(e) {
-  if (e === true) inputRef.value.focusInput();
+  if (e === true)
+    inputRef.value.focusInput()
 }
 function onBlur() {}
 </script>
@@ -28,15 +29,16 @@ function onBlur() {}
   <FormField
     v-slot="{ validate, value, errorMessage, componentField }"
     :name="modelValue"
-    as-child
-  >
+    as-child>
     <Element
       base="btn"
       size="auto"
       hover="outline"
       variant="ghost"
-      class="w-full border border-transparent py-2 hover:border-b3/50! hover:bg-b2/40 hover:fx-1"
-    >
+      class="
+        w-full border border-transparent py-2
+        hover:border-b3/50! hover:bg-b2/40 hover:fx-1
+      ">
       <FormItem class="w-full">
         <FormLabel class="flex w-full cursor-pointer items-center gap-2">
           <!-- Checkbox -->
@@ -50,8 +52,7 @@ function onBlur() {}
                       errorMessage,
                   })
                 "
-                @update:model-value="handleCheck($event)"
-              />
+                @update:model-value="handleCheck($event)" />
             </FormControl>
 
             <span class="font-semibold text-bc">
@@ -61,11 +62,8 @@ function onBlur() {}
 
           <InputGroup
             :class="
-              cn(`
-              relative flex h-11 grow items-center gap-4 self-center bg-b1!
-            `)
-            "
-          >
+              cn(`relative flex h-11 grow items-center gap-4 self-center bg-b1!`)
+            ">
             <FormControl as-child>
               <InputGroupInput
                 ref="inputRef"
@@ -74,20 +72,17 @@ function onBlur() {}
                 :value="value"
                 class="grow"
                 placeholder="Please describe briefly..."
-                @blur="checked ? validate() : null"
-              />
+                @blur="checked ? validate() : null" />
             </FormControl>
 
             <!--  /*  {
                     @input="e => handleChange({ ...value, reason: e.target.value })" 'ring ring-domination': reasonError } */     -->
             <FormMessage
               v-if="errorMessage"
-              class="absolute z-10 text-domination"
-            />
+              class="absolute z-10 text-domination" />
             <InputGroupClear
               type="button"
-              @clear:input="componentField.modelValue = null"
-            />
+              @clear:input="componentField.modelValue = null" />
 
             <InputGroupAddon
               v-tippy="{
@@ -100,14 +95,12 @@ function onBlur() {}
                 placement: 'right',
               }"
               align="inline-end"
-              class="pointer-events-auto! z-2! cursor-help!"
-            >
+              class="pointer-events-auto! z-2! cursor-help!">
               <icon
                 name="error"
                 :class="
                   cn('size-5 text-bc/30', { 'text-domination': errorMessage })
-                "
-              />
+                " />
             </InputGroupAddon>
           </InputGroup>
         </FormLabel>

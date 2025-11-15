@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import type { PaginationEllipsisProps } from "reka-ui";
-import { PaginationEllipsis } from "reka-ui";
-import { computed } from "vue";
+import type { PaginationEllipsisProps } from 'reka-ui'
+import { PaginationEllipsis } from 'reka-ui'
+import { computed } from 'vue'
 
 const props = defineProps<
-  PaginationEllipsisProps & { class?: HTMLAttributes["class"] }
->();
+  PaginationEllipsisProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
   <PaginationEllipsis
     v-bind="delegatedProps"
-    :class="cn('flex h-9 w-9 items-center justify-center', props.class)"
-  >
+    :class="cn('flex h-9 w-9 items-center justify-center', props.class)">
     <slot>
-      <icon name="more" class="dst" />
+      <icon
+        name="more"
+        class="dst" />
     </slot>
   </PaginationEllipsis>
 </template>

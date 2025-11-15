@@ -40,7 +40,7 @@ export const RuneSetSchema = v.object({
 export type RuneSet = v.InferOutput<typeof RuneSetSchema>
 
 // --- Pocket Schema ---
-export const PocketSchema = v.object({
+export const pocketSchema = v.object({
   key: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
   name: v.optional(v.string()),
   ouuid: v.fallback(
@@ -92,4 +92,4 @@ export type ItemSet = v.InferOutput<typeof ItemSetSchema>
 export type SpellSet = v.InferOutput<typeof SpellSetSchema>
 export type RunesPrimary = v.InferOutput<typeof RunesPrimarySchema>
 export type RunesSecondary = v.InferOutput<typeof RunesSecondarySchema>
-export type Pocket = v.InferOutput<typeof PocketSchema>
+export type Pocket = v.InferOutput<typeof pocketSchema>

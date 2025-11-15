@@ -1,20 +1,20 @@
 // dexie/matchDB.ts
-import type { Table } from "dexie";
-import Dexie from "dexie";
+import type { Table } from 'dexie'
+import Dexie from 'dexie'
 
 export class MatchDexie extends Dexie {
-  matchData!: Table<MatchData, string>; // full match
+  matchData!: Table<MatchData, string> // full match
 
   constructor() {
-    super("MatchDB");
+    super('MatchDB')
     this.version(1).stores({
       matchData: `
     matchId,
     *participantIds,
     creation
   `,
-    });
+    })
   }
 }
 
-export const matchDB = new MatchDexie();
+export const matchDB = new MatchDexie()

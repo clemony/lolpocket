@@ -1,10 +1,10 @@
 const item: Item = {
   id: 2150,
-  name: "Elixir of Skill",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2048_ichorofillumination.png",
+  name: 'Elixir of Skill',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2048_ichorofillumination.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
-  rank: "Consumable",
+  rank: 'Consumable',
   removed: false,
   shop: {
     prices: {
@@ -16,5 +16,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 const { summoner } = defineProps<{
-  summoner: Summoner;
-}>();
+  summoner: Summoner
+}>()
 
 definePageMeta({
-  name: "analysis",
-  title: "analysis",
-  icon: "chart",
-});
+  name: 'analysis',
+  title: 'analysis',
+  icon: 'chart',
+})
 </script>
 
 <template>

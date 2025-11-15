@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const riotDisclaimer =
-  "Lolpocket isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.";
+const riotDisclaimer
+  = 'Lolpocket isn\'t endorsed by Riot Games and doesn\'t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.'
 
-const classes = "text-balanced pl-3 text-2 leading-6";
+const classes = 'text-balanced pl-3 text-2 leading-6'
 </script>
 
 <template>
@@ -19,9 +19,10 @@ const classes = "text-balanced pl-3 text-2 leading-6";
         placement: 'right',
         offset: [0, 24],
       }"
-      class="cursor-help font-medium text-bc underline decoration-dotted opacity-60 hover:decoration-solid hover:opacity-100"
-      >Riot Games</strong
-    >
+      class="
+        cursor-help font-medium text-bc underline decoration-dotted opacity-60
+        hover:decoration-solid hover:opacity-100
+      ">Riot Games</strong>
     or <strong class="font-medium">lolpocket</strong>.
   </li>
   <li :class="classes">

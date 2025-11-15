@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { class: className, summoner } = defineProps<{
-  class?: HTMLAttributes["class"];
-  summoner: Summoner;
-}>();
+  class?: HTMLAttributes['class']
+  summoner: Summoner
+}>()
 </script>
 
 <template>
@@ -13,12 +13,10 @@ const { class: className, summoner } = defineProps<{
       </slot>
       <div class="relative -mt-3 flex size-full flex-col gap-0.5">
         <div
-          class="flex flex-nowrap items-center justify-between pr-3 text-nowrap"
-        >
+          class="flex flex-nowrap items-center justify-between pr-3 text-nowrap">
           <SummonerName
             as="h1"
-            class="center truncate font-serif leading-snug font-black"
-          />
+            class="center truncate font-serif leading-snug font-black" />
 
           <SummonerLevel class="mt-1" />
         </div>

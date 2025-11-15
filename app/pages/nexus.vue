@@ -2,7 +2,7 @@
 import type { description } from 'valibot'
 import { motion, useDomRef } from 'motion-v'
 import { heyGoodJob } from '~~/shared/data/good-job'
-import { toast, } from '~/base/notification/toast/use-toast'
+import { toast, } from '~/base/popup/toast/use-toast'
 
 const container = useDomRef()
 function toasty() {
@@ -74,7 +74,7 @@ const text = ref<string>()
     </div> -->
     </div>
     <div class="mt-12 flex w-full justify-center pb-54">
-      <CommentsThread :thread-id="String(useRoute().meta?.id) as UUID" />
+      <!--  <CommentsThread :thread-id="String(useRoute().meta?.id) as UUID" /> -->
     </div>
 
     <SiteFooter />

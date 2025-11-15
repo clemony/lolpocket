@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { navigationMenuTriggerStyle } from "~/base/menu/navigation-menu/navmenuvariantindex";
+import { navigationMenuTriggerStyle } from '~/base/menu/navigation-menu/navmenuvariantindex'
 
 const {
   class: className,
@@ -7,11 +7,11 @@ const {
   size,
   variant,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  shape?: Shape;
-  variant?: any;
-  size?: ButtonVariants["size"];
-}>();
+  class?: HTMLAttributes['class']
+  shape?: Shape
+  variant?: any
+  size?: ButtonVariants['size']
+}>()
 </script>
 
 <template>
@@ -25,8 +25,7 @@ const {
         'flex size-full flex-col items-start justify-center py-2',
         className,
       )
-    "
-  >
+    ">
     <slot />
   </Button>
 </template>

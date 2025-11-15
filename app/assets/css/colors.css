@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./theme";
+@import 'tailwindcss';
+@import './theme';
 
 @theme {
   --color-discord: oklch(58% 52 274);
@@ -143,27 +143,27 @@
   --white-70: var(--color-white-70);
 }
 
-[data-role="support"] {
+[data-role='support'] {
   &.role-bg {
     @apply bg-inspiration;
   }
 }
 
-[data-role="middle"] {
+[data-role='middle'] {
   &.role-bg {
     @apply bg-sorcery;
   }
 }
 
-[data-role="bottom"] {
+[data-role='bottom'] {
   @apply !bg-precision;
 }
-[data-role="top"] {
+[data-role='top'] {
   &.role-bg {
     @apply bg-domination;
   }
 }
-[data-role="jungle"] {
+[data-role='jungle'] {
   &.role-bg {
     @apply bg-resolve;
   }
@@ -199,22 +199,22 @@
   transition: all 0.5s ease-in-out;
 }
 
-.gradient[data-path="Precision"] {
+.gradient[data-path='Precision'] {
   background-position: 0%;
 }
 
-.gradient[data-path="Domination"] {
+.gradient[data-path='Domination'] {
   background-position: 20%;
 }
 
-.gradient[data-path="Sorcery"] {
+.gradient[data-path='Sorcery'] {
   background-position: 44%;
 }
 
-.gradient[data-path="Resolve"] {
+.gradient[data-path='Resolve'] {
   background-position: 80%;
 }
 
-.gradient[data-path="Inspiration"] {
+.gradient[data-path='Inspiration'] {
   background-position: 100%;
 }

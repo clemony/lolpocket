@@ -1,1 +1,1 @@
-export const is = () => useItemStore();
+export const is = () => useItemStore()

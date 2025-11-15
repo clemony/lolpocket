@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { NavigationMenuIndicatorProps } from "reka-ui";
-import { motion } from "motion-v";
-import { NavigationMenuIndicator, useForwardProps } from "reka-ui";
+import type { NavigationMenuIndicatorProps } from 'reka-ui'
+import { motion } from 'motion-v'
+import { NavigationMenuIndicator, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   NavigationMenuIndicatorProps & {
-    class?: HTMLAttributes["class"];
-    sideOffset?: number;
-    alignOffset?: number;
-    iconClass?: HTMLAttributes["class"];
-    orientation?: "vertical" | "horizontal";
+    class?: HTMLAttributes['class']
+    sideOffset?: number
+    alignOffset?: number
+    iconClass?: HTMLAttributes['class']
+    orientation?: 'vertical' | 'horizontal'
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -43,8 +43,7 @@ const forwarded = useForwardProps(delegatedProps);
         props.class,
       )
     "
-    as-child
-  >
+    as-child>
     <motion.div
       :initial="{
         opacity: 0,
@@ -61,11 +60,12 @@ const forwarded = useForwardProps(delegatedProps);
       :transition="{
         type: 'spring',
         bounce: 0.25,
-      }"
-    >
+      }">
       <div
-        class="relative top-[70%] h-[12px] w-[12px] rotate-[45deg] border border-b4/70 bg-b1/94"
-      />
+        class="
+          relative top-[70%] h-[12px] w-[12px] rotate-[45deg] border
+          border-b4/70 bg-b1/94
+        " />
     </motion.div>
   </NavigationMenuIndicator>
 </template>

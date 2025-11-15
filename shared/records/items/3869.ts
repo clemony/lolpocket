@@ -1,9 +1,9 @@
 const item: Item = {
   id: 3869,
-  name: "Celestial Opposition",
+  name: 'Celestial Opposition',
   active: [
     {
-      name: "Ward",
+      name: 'Ward',
       effects:
         'Consumes a charge to place a <img src="/img/icons/stealth-ward.webp" class="tip-icon" />Stealth Ward at the target location, which grants <img src="/img/icons/sight.webp" class="tip-icon" />sight of the surrounding area. Charges refill upon visiting the shop.',
       range: 600,
@@ -13,26 +13,26 @@ const item: Item = {
   buildsFrom: [
     {
       id: 3867,
-      name: "Bounty of Worlds",
+      name: 'Bounty of Worlds',
       gold: 400,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3869_celestialopposition.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3869_celestialopposition.png',
   maps: [11],
   noEffects: false,
   passives: [
     {
-      name: "Blessing of the Mountain",
+      name: 'Blessing of the Mountain',
       effects:
         'Become <i>Blessed</i> to reduce incoming champion damage by (<img src="/img/icons/melee.webp" class="inline-icon" />35% /<img src="/img/icons/ranged.webp" class="inline-icon" />25%), lingering for 2 seconds after taking damage from a champion. After the linger ends, you lose <i>Blessed</i> to unleash a shockwave around you that <img src="/img/icons/slow.webp" class="tip-icon" />slows enemies within 500 units by 50% for 1.5 seconds (18 second cooldown, timer restarts upon taking damage from champions).',
       unique: true,
     },
     {
-      effects: "Receives diminishing gold from excessive minion kills.",
+      effects: 'Receives diminishing gold from excessive minion kills.',
       unique: true,
     },
   ],
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -40,7 +40,7 @@ const item: Item = {
       sell: 160,
       total: 400,
     },
-    tags: ["SUPPORT"],
+    tags: ['SUPPORT'],
   },
   specialRecipe: 0,
   stats: {
@@ -49,5 +49,5 @@ const item: Item = {
     healthRegen: 75,
     manaRegen: 75,
   },
-};
-export default item;
+}
+export default item

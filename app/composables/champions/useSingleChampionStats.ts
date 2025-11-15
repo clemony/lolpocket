@@ -3,6 +3,6 @@ export function useSingleChampionStats(
   championName: string,
   puuid: string,
 ) {
-  const allStats = getChampionStatsMap(matches, puuid);
-  return allStats.get(championName) ?? null;
+  const allStats = getChampionStatsMap(matches, puuid)
+  return allStats.get(championName) ?? null
 }

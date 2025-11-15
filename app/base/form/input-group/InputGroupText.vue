@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -11,14 +11,13 @@ const props = defineProps<{
     :class="
       cn(
         `
-        flex items-center gap-2 text-bc/60
-        [&_svg]:pointer-events-none
-        [&_svg:not([class*=\'size-\'])]:size-4
-      `,
+          flex items-center gap-2 text-bc/60
+          [&_svg]:pointer-events-none
+          [&_svg:not([class*=\'size-\'])]:size-4
+        `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </span>
 </template>

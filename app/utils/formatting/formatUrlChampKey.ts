@@ -1,3 +1,3 @@
 export function formatUrlChampKey(key: string): string {
-  return key.toLowerCase().replace("'", "").replace(". ", "");
+  return key.toLowerCase().replace('\'', '').replace('. ', '')
 }

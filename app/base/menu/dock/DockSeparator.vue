@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ORIENTATION_INJECTION_KEY } from "./dockInjectionKeys";
+import { ORIENTATION_INJECTION_KEY } from './dockInjectionKeys'
 
-const orientation = inject(ORIENTATION_INJECTION_KEY, "vertical");
+const orientation = inject(ORIENTATION_INJECTION_KEY, 'vertical')
 </script>
 
 <template>
@@ -11,6 +11,5 @@ const orientation = inject(ORIENTATION_INJECTION_KEY, "vertical");
         'relative block bg-b3',
         orientation === 'vertical' ? 'w-4/5 h-0.5' : 'h-4/5 w-0.5',
       )
-    "
-  ></div>
+    "></div>
 </template>

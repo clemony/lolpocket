@@ -1,48 +1,48 @@
 const item: Item = {
   id: 3147,
-  name: "Haunting Guise",
-  nicknames: ["mask"],
+  name: 'Haunting Guise',
+  nicknames: ['mask'],
   buildsFrom: [
     {
       id: 1052,
-      name: "Amplifying Tome",
+      name: 'Amplifying Tome',
       gold: 400,
     },
     {
       id: 1028,
-      name: "Ruby Crystal",
+      name: 'Ruby Crystal',
       gold: 400,
     },
   ],
   buildsInto: [
     {
       id: 6653,
-      name: "Liandry's Torment",
+      name: 'Liandry\'s Torment',
       gold: 3000,
     },
     {
       id: 4633,
-      name: "Riftmaker",
+      name: 'Riftmaker',
       gold: 3100,
     },
     {
       id: 8010,
-      name: "Bloodletter's Curse",
+      name: 'Bloodletter\'s Curse',
       gold: 2900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3147_hauntingguise.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3147_hauntingguise.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: "Madness",
+      name: 'Madness',
       effects:
-        "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%.",
+        'For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%.',
       unique: false,
     },
   ],
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -50,13 +50,13 @@ const item: Item = {
       sell: 520,
       total: 1300,
     },
-    tags: ["MAGE"],
+    tags: ['MAGE'],
   },
-  simpleDescription: "Deals additional physical damage when ambushing enemies",
+  simpleDescription: 'Deals additional physical damage when ambushing enemies',
   specialRecipe: 0,
   stats: {
     abilityPower: 30,
     health: 200,
   },
-};
-export default item;
+}
+export default item

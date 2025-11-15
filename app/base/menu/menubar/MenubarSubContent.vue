@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import type { MenubarSubContentEmits, MenubarSubContentProps } from "reka-ui";
+import type { MenubarSubContentEmits, MenubarSubContentProps } from 'reka-ui'
 import {
   MenubarPortal,
   MenubarSubContent,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  MenubarSubContentProps & { class?: HTMLAttributes["class"] }
->();
+  MenubarSubContentProps & { class?: HTMLAttributes['class'] }
+>()
 
-const emits = defineEmits<MenubarSubContentEmits>();
+const emits = defineEmits<MenubarSubContentEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -38,8 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
           `,
           props.class,
         )
-      "
-    >
+      ">
       <slot />
     </MenubarSubContent>
   </MenubarPortal>

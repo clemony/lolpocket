@@ -67,7 +67,7 @@ const pocket = computed(() =>
         <div class="text-4 font-medium italic"></div>
       </div>
       <div class="grid grid-cols-3 gap-8">
-        <Card>
+        <!--        <Card>
           <CardContent class="p-6">
             <CardTitle>Games Played</CardTitle>
             <CardDescription></CardDescription>
@@ -86,7 +86,7 @@ const pocket = computed(() =>
             <CardTitle></CardTitle>
             <CardDescription></CardDescription>
           </CardContent>
-        </Card>
+        </Card> -->
       </div>
     </div>
   </div>

@@ -1,37 +1,37 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  champion: Champion;
-  pocket: Pocket;
-  alignOffset?: number;
-  sideOffset?: number;
-}>();
+  champion: Champion
+  pocket: Pocket
+  alignOffset?: number
+  sideOffset?: number
+}>()
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
-const images = ref([]);
+const images = ref([])
 
 const splashFilter = computed(() => {
-  const championName = props.champion.id;
-  const regex = new RegExp(`(^|/|_)${championName}(_|\\.|$)`, "i"); // Match whole word
+  const championName = props.champion.id
+  const regex = new RegExp(`(^|/|_)${championName}(_|\\.|$)`, 'i') // Match whole word
 
-  return images.value.filter((img) => regex.test(img));
-});
+  return images.value.filter(img => regex.test(img))
+})
 
-const splashResults = ref([]);
+const splashResults = ref([])
 
 watchEffect(() => {
-  splashResults.value = splashFilter.value;
-});
+  splashResults.value = splashFilter.value
+})
 
 onMounted(async () => {
-  const champImages = import.meta.glob("/public/img/champion-centered/*");
-  images.value = Object.keys(champImages).map((path) =>
-    path.replace("/public", ""),
-  );
-  await images.value;
-});
+  const champImages = import.meta.glob('/public/img/champion-centered/*')
+  images.value = Object.keys(champImages).map(path =>
+    path.replace('/public', ''),
+  )
+  await images.value
+})
 
 // @todo nuxt bg here
 </script>
@@ -41,8 +41,7 @@ onMounted(async () => {
     align="start"
     :align-offset="props.alignOffset"
     :side-offset="props.sideOffset"
-    class="grid w-fit grid-cols-4 gap-2"
-  >
+    class="grid w-fit grid-cols-4 gap-2">
     <PopoverClose as-child>
       <!--       <LazyPocketIcon v-for="(splash, i) in splashResults" :key="props.champion.id + i" :alt="`${props.champion.id}-splash-${i}`" :image="splash" class="size-18 rounded-xl **:rounded-xl" :class="{ 'ring-1 ring-offset-2 ring-offset-b1 ringneutral': splash===pocket.card.splash }">
         <input v-model="pocket.card.splash" type="radio" class="peer hidden" :value="splash" @change="pocket.champions.default = champion" />

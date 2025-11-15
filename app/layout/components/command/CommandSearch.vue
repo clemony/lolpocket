@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { getDeviceKey } from "~/utils/config/handleDevice";
+import { getDeviceKey } from '~/utils/config/handleDevice'
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 
-const { ControlLeft, ControlRight, K, MetaLeft, MetaRight } = useMagicKeys();
+const { ControlLeft, ControlRight, K, MetaLeft, MetaRight } = useMagicKeys()
 
 watchEffect(() => {
   if (
-    (ControlLeft.value ||
-      ControlRight.value ||
-      MetaRight.value ||
-      MetaLeft.value) &&
-    K.value
+    (ControlLeft.value
+      || ControlRight.value
+      || MetaRight.value
+      || MetaLeft.value)
+    && K.value
   ) {
-    console.log("Shift + A have been pressed");
+    console.log('Shift + A have been pressed')
   }
-});
+})
 </script>
 
 <template>
@@ -37,18 +37,17 @@ watchEffect(() => {
       )
     "
     class=""
-    @click.stop="ui().commandOpen = true"
-  >
+    @click.stop="ui().commandOpen = true">
     <span class="relative -left-0.25 grid size-5 place-items-center">
       <icon
         name="weui:search-filled"
-        class="size-4.75 shrink-0 opacity-60 dst"
-      />
+        class="size-4.75 shrink-0 opacity-60 dst" />
     </span>
 
     <span
-      class="mt-px grow truncate text-left font-medium tracking-tight text-bc/60"
-    >
+      class="
+        mt-px grow truncate text-left font-medium tracking-tight text-bc/60
+      ">
       <slot />
     </span>
 

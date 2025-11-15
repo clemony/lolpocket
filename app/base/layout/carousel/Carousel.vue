@@ -3,14 +3,14 @@ import type {
   CarouselEmits,
   CarouselProps,
   WithClassAsProps,
-} from "./interface";
-import { useProvideCarousel } from "./useCarousel";
+} from './interface'
+import { useProvideCarousel } from './useCarousel'
 
 const props = withDefaults(defineProps<CarouselProps & WithClassAsProps>(), {
-  orientation: "horizontal",
-});
+  orientation: 'horizontal',
+})
 
-const emits = defineEmits<CarouselEmits>();
+const emits = defineEmits<CarouselEmits>()
 
 const {
   canScrollNext,
@@ -20,7 +20,7 @@ const {
   orientation,
   scrollNext,
   scrollPrev,
-} = useProvideCarousel(props, emits);
+} = useProvideCarousel(props, emits)
 
 defineExpose({
   canScrollNext,
@@ -30,22 +30,22 @@ defineExpose({
   orientation,
   scrollNext,
   scrollPrev,
-});
+})
 
 function onKeyDown(event: KeyboardEvent) {
-  const prevKey = props.orientation === "vertical" ? "ArrowUp" : "ArrowLeft";
-  const nextKey = props.orientation === "vertical" ? "ArrowDown" : "ArrowRight";
+  const prevKey = props.orientation === 'vertical' ? 'ArrowUp' : 'ArrowLeft'
+  const nextKey = props.orientation === 'vertical' ? 'ArrowDown' : 'ArrowRight'
 
   if (event.key === prevKey) {
-    event.preventDefault();
-    scrollPrev();
+    event.preventDefault()
+    scrollPrev()
 
-    return;
+    return
   }
 
   if (event.key === nextKey) {
-    event.preventDefault();
-    scrollNext();
+    event.preventDefault()
+    scrollNext()
   }
 }
 </script>
@@ -56,8 +56,7 @@ function onKeyDown(event: KeyboardEvent) {
     role="button"
     aria-roledescription="carousel"
     tabindex="0"
-    @keydown="onKeyDown"
-  >
+    @keydown="onKeyDown">
     <slot
       :can-scroll-next
       :can-scroll-prev
@@ -65,7 +64,6 @@ function onKeyDown(event: KeyboardEvent) {
       :carousel-ref
       :orientation
       :scroll-next
-      :scroll-prev
-    />
+      :scroll-prev />
   </div>
 </template>

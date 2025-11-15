@@ -1,38 +1,38 @@
 const item: Item = {
   id: 3013,
-  name: "Synchronized Souls",
-  nicknames: ["boots"],
+  name: 'Synchronized Souls',
+  nicknames: ['boots'],
   buildsFrom: [
     {
       id: 3010,
-      name: "Symbiotic Soles",
+      name: 'Symbiotic Soles',
       gold: 900,
     },
   ],
   buildsInto: [
     {
       id: 3176,
-      name: "Forever Forward",
+      name: 'Forever Forward',
       gold: 1400,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png',
   maps: [11, 21],
   noEffects: false,
   passives: [
     {
-      name: "Voidborn",
+      name: 'Voidborn',
       effects:
         'Gain <img src="/img/icons/empowered-recall.webp" class="tip-icon" />Empowered Recall.',
       unique: true,
     },
     {
-      name: "Synchrony",
-      effects: "Gain 45 <b>bonus</b> movement speed while out-of-combat.",
+      name: 'Synchrony',
+      effects: 'Gain 45 <b>bonus</b> movement speed while out-of-combat.',
       unique: true,
     },
   ],
-  rank: "Boots",
+  rank: 'Boots',
   removed: false,
   shop: {
     prices: {
@@ -46,5 +46,5 @@ const item: Item = {
   stats: {
     flatMovespeed: 45,
   },
-};
-export default item;
+}
+export default item

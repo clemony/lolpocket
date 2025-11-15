@@ -1,28 +1,32 @@
 <script setup lang="ts">
-import type { DialogContentEmits, DialogContentProps } from "reka-ui";
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
   DialogClose,
   DialogContent,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  DialogContentProps & { class?: HTMLAttributes["class"] }
->();
-const emits = defineEmits<DialogContentEmits>();
+  DialogContentProps & { class?: HTMLAttributes['class'] }
+>()
+const emits = defineEmits<DialogContentEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-black/80"
-    >
+      class="
+        data-[state=open]:animate-in
+        data-[state=closed]:animate-out data-[state=closed]:fade-out-0
+        data-[state=open]:fade-in-0
+        fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-black/80
+      ">
       <DialogContent
         :class="
           cn(
@@ -41,20 +45,23 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
             const originalEvent = event.detail.originalEvent;
             const target = originalEvent.target as HTMLElement;
             if (
-              originalEvent.offsetX > target.clientWidth ||
-              originalEvent.offsetY > target.clientHeight
+              originalEvent.offsetX > target.clientWidth
+              || originalEvent.offsetY > target.clientHeight
             ) {
               event.preventDefault();
             }
           }
-        "
-      >
+        ">
         <slot />
 
         <DialogClose
-          class="absolute top-4 right-4 rounded-md p-0.5 transition-colors hover:bg-b3"
-        >
-          <icon name="x-sm" class="h-4 w-4" />
+          class="
+            absolute top-4 right-4 rounded-md p-0.5 transition-colors
+            hover:bg-b3
+          ">
+          <icon
+            name="x-sm"
+            class="h-4 w-4" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

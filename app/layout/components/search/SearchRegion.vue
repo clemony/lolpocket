@@ -1,37 +1,52 @@
 <script setup lang="ts">
-import type { regionIndex } from "~~/shared/references";
-import { Presence } from "reka-ui";
+import type { regionIndex } from '~~/shared/references'
+import { Presence } from 'reka-ui'
 
 const {
   class: className,
   present,
   region: r,
 } = defineProps<{
-  region: keyof typeof regionIndex;
-  class?: HTMLAttributes["class"];
-  present?: boolean;
-}>();
-const emit = defineEmits(["update:region"]);
-const region = ref("");
+  region: keyof typeof regionIndex
+  class?: HTMLAttributes['class']
+  present?: boolean
+}>()
+const emit = defineEmits(['update:region'])
+const region = ref('')
 
-onMounted(() => (region.value = r));
+onMounted(() => (region.value = r))
 watch(
   () => r,
-  (newVal) => (region.value = newVal),
-);
+  newVal => (region.value = newVal),
+)
 </script>
 
 <template>
-  <Presence :present class="opacity-0 data-[present=true]:opacity-100">
-    <LazyPopover @close-auto-focus.prevent @click.stop>
-      <PopoverTrigger no-arrow as-child class="grid items-center">
+  <Presence
+    :present
+    class="
+      opacity-0
+      data-[present=true]:opacity-100
+    ">
+    <LazyPopover
+      @close-auto-focus.prevent
+      @click.stop>
+      <PopoverTrigger
+        no-arrow
+        as-child
+        class="grid items-center">
         <Button
           variant="ghost"
           size="sm"
-          class="z-1 flex w-14 flex-nowrap items-center text-2! tracking-[0.5px] text-nowrap text-bc/60 lowercase *:first:text-bc/60"
-        >
+          class="
+            z-1 flex w-14 flex-nowrap items-center text-2! tracking-[0.5px]
+            text-nowrap text-bc/60 lowercase
+            *:first:text-bc/60
+          ">
           <span class="relative -mr-1 grid place-items-center">
-            <icon name="at" class="mt-px size-3.25!" />
+            <icon
+              name="at"
+              class="mt-px size-3.25!" />
           </span>
           {{ region || "" }}
         </Button>

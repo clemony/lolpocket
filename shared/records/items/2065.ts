@@ -1,31 +1,31 @@
 const item: Item = {
   id: 2065,
-  name: "Shurelya's Battlesong",
-  nicknames: ["shurelya", "reverie"],
+  name: 'Shurelya\'s Battlesong',
+  nicknames: ['shurelya', 'reverie'],
   active: [
     {
-      name: "Inspiring Speech",
+      name: 'Inspiring Speech',
       effects:
-        "Grants you and all allies within 1000 units 30% <b>bonus</b> movement speed for 4 seconds.",
+        'Grants you and all allies within 1000 units 30% <b>bonus</b> movement speed for 4 seconds.',
       unique: true,
     },
   ],
   buildsFrom: [
     {
       id: 3113,
-      name: "Aether Wisp",
+      name: 'Aether Wisp',
       gold: 900,
     },
     {
       id: 4642,
-      name: "Bandleglass Mirror",
+      name: 'Bandleglass Mirror',
       gold: 900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2065_tank_t4_shurelyasbattlesong.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2065_tank_t4_shurelyasbattlesong.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -33,9 +33,9 @@ const item: Item = {
       sell: 880,
       total: 2200,
     },
-    tags: ["SUPPORT", "MOVEMENT"],
+    tags: ['SUPPORT', 'MOVEMENT'],
   },
-  simpleDescription: "Activate to speed up nearby allies.",
+  simpleDescription: 'Activate to speed up nearby allies.',
   specialRecipe: 0,
   stats: {
     abilityHaste: 15,
@@ -43,5 +43,5 @@ const item: Item = {
     manaRegen: 125,
     percentMovespeed: 4,
   },
-};
-export default item;
+}
+export default item

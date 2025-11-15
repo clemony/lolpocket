@@ -1,18 +1,18 @@
 const item: Item = {
   id: 1503,
-  name: "Warden's Eye",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/096_eye_of_the_observer.png",
+  name: 'Warden\'s Eye',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/096_eye_of_the_observer.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
   passives: [
     {
-      name: "True Sight",
+      name: 'True Sight',
       effects:
         'Can see <img src="/img/icons/camouflage.webp" class="tip-icon" />camouflaged and <img src="/img/icons/invisible.webp" class="tip-icon" />invisible units within 1100 units.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -24,5 +24,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

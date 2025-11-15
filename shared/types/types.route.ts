@@ -1,4 +1,4 @@
-import type { RouteMeta, RouteRecord } from "vue-router"
+import type { RouteMeta, RouteRecord } from 'vue-router'
 
 export interface PageRecord extends RouteRecord {
   altName: string

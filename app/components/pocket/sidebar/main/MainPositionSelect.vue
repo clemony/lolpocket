@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 import { championPositions } from '~~/shared/references'
-import type { Pocket } from '~~/shared/schema'
 
 const {
   side = 'bottom',

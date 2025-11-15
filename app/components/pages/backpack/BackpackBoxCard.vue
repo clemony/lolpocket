@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
-import { championPositions } from "#shared/references";
+import type { Pocket } from '~~/shared/schema'
+import { championPositions } from '#shared/references'
 
 const {
   class: className,
   pocket,
   selected,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  pocket: Pocket;
-  selected?: Pocket;
-}>();
-console.log("🌱 - pocket:");
+  class?: HTMLAttributes['class']
+  pocket: Pocket
+  selected?: Pocket
+}>()
+console.log('🌱 - pocket:')
 </script>
 
 <template>
@@ -27,15 +27,17 @@ console.log("🌱 - pocket:");
         selected?.key === pocket?.key && 'bg-b2/30',
       )
     "
-    @dblclick="navigateTo(`/pocket/${pocket.key}`)"
-  >
+    @dblclick="navigateTo(`/pocket/${pocket.key}`)">
     <div class="flex h-14 w-full items-center justify-between gap-2">
       <div class="flex cursor-pointer items-center gap-3 text-start">
         <!-- icon -->
-        <PocketIcon :img="pocket.icon" class="size-11 rounded-full" />
+        <PocketIcon
+          :img="pocket.icon"
+          class="size-11 rounded-full" />
         <div
-          class="flex flex-col items-start justify-center gap-1 text-start leading-4"
-        >
+          class="
+            flex flex-col items-start justify-center gap-1 text-start leading-4
+          ">
           <!-- name -->
           <div class="flex items-center gap-2 font-semibold">
             {{ pocket.name }}
@@ -43,14 +45,17 @@ console.log("🌱 - pocket:");
           <PocketChampions
             list
             class="text-2 text-bc/70!"
-            :champions="pocket.champions"
-          />
+            :champions="pocket.champions" />
         </div>
       </div>
       <div
-        class="relative flex h-full max-h-14 w-max flex-nowrap items-center justify-items-end gap-1"
-      >
-        <PocketChampions class="ml-auto" :champions="pocket.champions" />
+        class="
+          relative flex h-full max-h-14 w-max flex-nowrap items-center
+          justify-items-end gap-1
+        ">
+        <PocketChampions
+          class="ml-auto"
+          :champions="pocket.champions" />
       </div>
     </div>
     <div class="w-full">
@@ -69,26 +74,26 @@ console.log("🌱 - pocket:");
           :style="
             championPositions.map((p) => p.name).includes(tag)
               ? {
-                  backgroundColor: championPositions.find((p) => p.name === tag)
-                    .color,
-                  borderColor: championPositions.find((p) => p.name === tag)
-                    .color,
-                }
+                backgroundColor: championPositions.find((p) => p.name === tag)
+                  .color,
+                borderColor: championPositions.find((p) => p.name === tag)
+                  .color,
+              }
               : ''
           "
-          class="gap-0"
-        >
+          class="gap-0">
           <template v-if="championPositions.map((p) => p.name).includes(tag)">
             <component
               :is="`i-roles-${tag}`"
-              :class="cn('mr-1.25 size-3.5 text-white dst')"
-            />
+              :class="cn('mr-1.25 size-3.5 text-white dst')" />
             <span class="font-medium text-white lowercase">
               {{ tag }}
             </span>
           </template>
           <template v-else>
-            <icon name="hash" class="size-3" />
+            <icon
+              name="hash"
+              class="size-3" />
             {{ tag }}
           </template>
         </Badge>

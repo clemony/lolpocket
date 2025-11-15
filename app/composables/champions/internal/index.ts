@@ -1,1 +1,1 @@
-export * from "./getChampionStatsMap";
+export * from './getChampionStatsMap'

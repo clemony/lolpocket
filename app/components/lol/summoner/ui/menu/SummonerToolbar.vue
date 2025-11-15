@@ -2,31 +2,33 @@
 const {
   class: className,
   summoner,
-  tooltipPlacement = "bottom",
+  tooltipPlacement = 'bottom',
   update,
   warning,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  summoner: Summoner;
-  sidebar?: boolean;
-  warning?: boolean;
-  update?: boolean;
-  tooltipPlacement?: Side;
-}>();
+  class?: HTMLAttributes['class']
+  summoner: Summoner
+  sidebar?: boolean
+  warning?: boolean
+  update?: boolean
+  tooltipPlacement?: Side
+}>()
 
 const tippy = {
-  contentClass: "font-medium capitalize",
+  contentClass: 'font-medium capitalize',
   delay: [0, 0],
   offset: [0, 16],
   placement: tooltipPlacement,
-  theme: "base",
-};
+  theme: 'base',
+}
 
 // @todo finish scripts block and report
 </script>
 
 <template>
-  <div class="items-center" :class="cn('', className)">
+  <div
+    class="items-center"
+    :class="cn('', className)">
     <UpdateSummoner
       v-if="update"
       :placement="tooltipPlacement"
@@ -35,8 +37,7 @@ const tippy = {
       variant="neutral"
       :show-icon="true"
       size="md"
-      :summoner
-    />
+      :summoner />
 
     <Button
       v-if="warning"
@@ -44,22 +45,24 @@ const tippy = {
       size="md"
       tabindex="-1"
       variant="neutral"
-      :summoner
-    >
-      <icon name="warning" class="size-5.5" />
+      :summoner>
+      <icon
+        name="warning"
+        class="size-5.5" />
     </Button>
-    <BlockButton v-tippy="{ ...tippy, content: 'Block' }" size="md" :summoner />
+    <BlockButton
+      v-tippy="{ ...tippy, content: 'Block' }"
+      size="md"
+      :summoner />
     <MessageButton
       v-tippy="{ ...tippy, content: 'Message' }"
       size="md"
-      :summoner
-    />
+      :summoner />
 
     <FollowButton
       class="w-full"
       :placement="tooltipPlacement"
       size="md"
-      :summoner
-    />
+      :summoner />
   </div>
 </template>

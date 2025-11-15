@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { DialogOverlayProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { DialogOverlay } from "reka-ui";
+import type { DialogOverlayProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { DialogOverlay } from 'reka-ui'
 
 const props = defineProps<
-  DialogOverlayProps & { class?: HTMLAttributes["class"] }
->();
+  DialogOverlayProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
@@ -24,8 +24,7 @@ const delegatedProps = reactiveOmit(props, "class");
         props.class,
       )
     "
-    v-bind="delegatedProps"
-  >
+    v-bind="delegatedProps">
     <slot />
   </DialogOverlay>
 </template>

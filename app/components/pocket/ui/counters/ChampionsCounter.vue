@@ -1,17 +1,18 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket?: Pocket;
-  class?: HTMLAttributes["class"];
-}>();
+  pocket?: Pocket
+  class?: HTMLAttributes['class']
+}>()
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
 const championsLength = computed(() => {
-  if (!pocket.value.champions.length) return 0;
-  return pocket.value.champions.length;
-});
+  if (!pocket.value.champions.length)
+    return 0
+  return pocket.value.champions.length
+})
 </script>
 
 <template>
@@ -19,8 +20,7 @@ const championsLength = computed(() => {
     v-tippy="
       `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
     "
-    :class="cn('flex items-center gap-1.5', props.class)"
-  >
+    :class="cn('flex items-center gap-1.5', props.class)">
     <span class="font-mono text-1 dst">{{ championsLength }}</span>
   </span>
 </template>

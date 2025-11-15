@@ -1,41 +1,40 @@
 <script setup lang="ts">
-import type { Component } from "vue";
-import { reactiveOmit } from "@vueuse/core";
-import type { SidebarMenuButtonProps } from "./SidebarMenuButtonChild.vue";
-import { useSidebar } from "./sidebar-utils";
-import SidebarMenuButtonChild from "./SidebarMenuButtonChild.vue";
+import type { Component } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
+import type { SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue'
+import { useSidebar } from './sidebar-utils'
+import SidebarMenuButtonChild from './SidebarMenuButtonChild.vue'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const props = withDefaults(
   defineProps<
     SidebarMenuButtonProps & {
-      tooltip?: string | Component;
-      as?: string;
-      side?: Side;
-      size?: ButtonVariants["size"];
+      tooltip?: string | Component
+      as?: string
+      side?: Side
+      size?: ButtonVariants['size']
     }
   >(),
   {
-    side: "right",
-    as: "button",
-    size: "12",
-    variant: "default",
+    side: 'right',
+    as: 'button',
+    size: '12',
+    variant: 'default',
   },
-);
+)
 
-const { isMobile, state } = useSidebar();
+const { isMobile, state } = useSidebar()
 
-const delegatedProps = reactiveOmit(props, "tooltip");
+const delegatedProps = reactiveOmit(props, 'tooltip')
 </script>
 
 <template>
   <SidebarMenuButtonChild
     v-if="!tooltip"
-    v-bind="{ ...delegatedProps, ...$attrs }"
-  >
+    v-bind="{ ...delegatedProps, ...$attrs }">
     <slot />
   </SidebarMenuButtonChild>
 
@@ -49,12 +48,13 @@ const delegatedProps = reactiveOmit(props, "tooltip");
       :side
       align="center"
       class="bg-neutral text-nc capitalize"
-      :hidden="state !== 'collapsed' || isMobile"
-    >
+      :hidden="state !== 'collapsed' || isMobile">
       <template v-if="typeof tooltip === 'string'">
         {{ tooltip }}
       </template>
-      <component :is="tooltip" v-else />
+      <component
+        :is="tooltip"
+        v-else />
     </TooltipContent>
   </Tooltip>
 </template>

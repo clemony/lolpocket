@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <DropdownMenuItem class="cursor-pointer text-2 text-nc/80! hover:bg-b3/15!">
+  <DropdownMenuItem
+    class="
+      cursor-pointer text-2 text-nc/80!
+      hover:bg-b3/15!
+    ">
     <slot />
   </DropdownMenuItem>
 </template>

@@ -2,21 +2,21 @@
 import type {
   DropdownMenuCheckboxItemEmits,
   DropdownMenuCheckboxItemProps,
-} from "reka-ui";
+} from 'reka-ui'
 import {
   DropdownMenuCheckboxItem,
   DropdownMenuItemIndicator,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  DropdownMenuCheckboxItemProps & { class?: HTMLAttributes["class"] }
->();
-const emits = defineEmits<DropdownMenuCheckboxItemEmits>();
+  DropdownMenuCheckboxItemProps & { class?: HTMLAttributes['class'] }
+>()
+const emits = defineEmits<DropdownMenuCheckboxItemEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -33,11 +33,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon name="tick-sm" class="h-4 w-4" />
+        <icon
+          name="tick-sm"
+          class="h-4 w-4" />
       </DropdownMenuItemIndicator>
     </span>
 

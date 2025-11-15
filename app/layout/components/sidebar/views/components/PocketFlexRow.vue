@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { Pocket } from "~~/shared/schema";
-import { closeAndNav } from "~/layout";
+import type { Pocket } from '~~/shared/schema'
+import { closeAndNav } from '~/layout'
 
 const { class: className, row } = defineProps<{
-  class?: HTMLAttributes["class"];
-  row?: Pocket[];
-}>();
-const route = useRoute();
+  class?: HTMLAttributes['class']
+  row?: Pocket[]
+}>()
+const route = useRoute()
 </script>
 
 <template>
@@ -34,21 +34,26 @@ const route = useRoute();
         { 'btn-active': route.params?.pocket_key === pocket.key },
       )
     "
-    @click="closeAndNav(`/pocket/${pocket.key}`)"
-  >
+    @click="closeAndNav(`/pocket/${pocket.key}`)">
     <AspectRatio
       :ratio="1 / 1"
-      class="relative flex grow items-center justify-center overflow-hidden object-cover"
-    >
+      class="
+        relative flex grow items-center justify-center overflow-hidden
+        object-cover
+      ">
       <PocketIcon
         :img="pocket.icon"
-        class="absolute h-full grow object-cover"
-      />
+        class="absolute h-full grow object-cover" />
     </AspectRatio>
     <div
-      class="absolute z-1 flex size-full items-end justify-start bg-neutral/70 p-1 text-start font-bold text-nc opacity-0 transition-opacity duration-300 group-hover/p:opacity-100"
-    >
-      <icon name="open" class="absolute top-1.5 right-1.5 text-nc" />
+      class="
+        absolute z-1 flex size-full items-end justify-start bg-neutral/70 p-1
+        text-start font-bold text-nc opacity-0 transition-opacity duration-300
+        group-hover/p:opacity-100
+      ">
+      <icon
+        name="open"
+        class="absolute top-1.5 right-1.5 text-nc" />
       <span class="absolute w-full truncate px-1">
         {{ pocket.name }}
       </span>

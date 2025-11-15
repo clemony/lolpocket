@@ -1,19 +1,19 @@
 const item: Item = {
   id: 443060,
-  name: "Sword of the Divine",
-  nicknames: ["sotd"],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3131_fighter_t3_swordofthedivine.png",
+  name: 'Sword of the Divine',
+  nicknames: ['sotd'],
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3131_fighter_t3_swordofthedivine.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Excoriate",
+      name: 'Excoriate',
       effects:
         '<img src="/img/icons/critical-strike.webp" class="tip-icon" />Critical strikes gain random <b>bonus</b> critical strike damage that scales up to 50% of critical strike chance.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -21,11 +21,11 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["ASSASSIN"],
+    tags: ['ASSASSIN'],
   },
   specialRecipe: 220007,
   stats: {
     criticalStrikeChance: 50,
   },
-};
-export default item;
+}
+export default item

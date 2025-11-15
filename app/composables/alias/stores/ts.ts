@@ -1,1 +1,1 @@
-export const ts = () => useThreadStore();
+export const ts = () => useThreadStore()

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { RangeCalendarCellProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { RangeCalendarCell, useForwardProps } from "reka-ui";
+import type { RangeCalendarCellProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { RangeCalendarCell, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  RangeCalendarCellProps & { class?: HTMLAttributes["class"] }
->();
+  RangeCalendarCellProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -17,20 +17,19 @@ const forwardedProps = useForwardProps(delegatedProps);
     :class="
       cn(
         `
-      relative h-9 w-9 p-0 text-center text-3
-      focus-within:relative focus-within:z-20
-      [&:has([data-selected])]:bg-b2
-      first:[&:has([data-selected])]:rounded-l-md
-      last:[&:has([data-selected])]:rounded-r-md
-      [&:has([data-selected][data-outside-view])]:bg-b2
-      [&:has([data-selected][data-selection-end])]:rounded-r-md
-      [&:has([data-selected][data-selection-start])]:rounded-l-md
-    `,
+          relative h-9 w-9 p-0 text-center text-3
+          focus-within:relative focus-within:z-20
+          [&:has([data-selected])]:bg-b2
+          first:[&:has([data-selected])]:rounded-l-md
+          last:[&:has([data-selected])]:rounded-r-md
+          [&:has([data-selected][data-outside-view])]:bg-b2
+          [&:has([data-selected][data-selection-end])]:rounded-r-md
+          [&:has([data-selected][data-selection-start])]:rounded-l-md
+        `,
         props.class,
       )
     "
-    v-bind="forwardedProps"
-  >
+    v-bind="forwardedProps">
     <slot />
   </RangeCalendarCell>
 </template>

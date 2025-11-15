@@ -1,30 +1,30 @@
 const item: Item = {
   id: 3111,
-  name: "Mercury's Treads",
-  nicknames: ["boots", "mercs"],
+  name: 'Mercury\'s Treads',
+  nicknames: ['boots', 'mercs'],
   buildsFrom: [
     {
       id: 1001,
-      name: "Boots",
+      name: 'Boots',
       gold: 300,
     },
     {
       id: 1033,
-      name: "Null-Magic Mantle",
+      name: 'Null-Magic Mantle',
       gold: 400,
     },
   ],
   buildsInto: [
     {
       id: 3173,
-      name: "Chainlaced Crushers",
+      name: 'Chainlaced Crushers',
       gold: 1750,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3111_class_t2_mercurystreads.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3111_class_t2_mercurystreads.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Boots",
+  rank: 'Boots',
   removed: false,
   shop: {
     prices: {
@@ -34,12 +34,12 @@ const item: Item = {
     },
   },
   simpleDescription:
-    "Increases Move Speed and reduces duration of disabling effects",
+    'Increases Move Speed and reduces duration of disabling effects',
   specialRecipe: 0,
   stats: {
     flatMovespeed: 45,
     magicResistance: 20,
     tenacity: 30,
   },
-};
-export default item;
+}
+export default item

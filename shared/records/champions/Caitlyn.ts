@@ -2,17 +2,17 @@
 
 const champion: Champion = {
   id: 51,
-  key: "Caitlyn",
-  name: "Caitlyn",
-  title: "the Sheriff of Piltover",
+  key: 'Caitlyn',
+  name: 'Caitlyn',
+  title: 'the Sheriff of Piltover',
   abilities: [
     {
-      key: "P",
-      name: "Headshot",
-      affects: "Self",
+      key: 'P',
+      name: 'Headshot',
+      affects: 'Self',
       blurb:
-        "Innate:  Caitlyn's basic attacks generate  stacks of Count. At maximum stacks, her next  basic attack will fire a Headshot dealing bonus physical damage that scales with her  critical strike chance.",
-      damageType: "Physical damage",
+        'Innate:  Caitlyn\'s basic attacks generate  stacks of Count. At maximum stacks, her next  basic attack will fire a Headshot dealing bonus physical damage that scales with her  critical strike chance.',
+      damageType: 'Physical damage',
       effects: [
         {
           description:
@@ -24,57 +24,57 @@ const champion: Champion = {
         },
         {
           description:
-            "Enemies that step over a Yordle Snap Trap or are hit by 90 Caliber Net can grant an additional Headshot against them at 1300 range within 1.8 seconds, without consuming stacks. Each method grants only one Headshot at a time.",
+            'Enemies that step over a Yordle Snap Trap or are hit by 90 Caliber Net can grant an additional Headshot against them at 1300 range within 1.8 seconds, without consuming stacks. Each method grants only one Headshot at a time.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p',
       notes:
-        "If Caitlyn's current target becomes trapped by  Yordle Snap Trap or  90 Caliber Net while her attack is on cooldown, this ongoing cooldown will be refunded partially so that her next attack on them can begin earlier.\nSwapping the target to an enemy trapped by  Yordle Snap Trap or  90 Caliber Net also reduces her ongoing attack cooldown.\nPENDING FOR TEST:: The exact attack cooldown refund appears to be 50% of the attack cooldown at current attack speed, but at a minimum amount it lets Caitlyn start the attack against the trapped target within 0.5 seconds of her previous attack windup completing.\nThe bonus range from  Rapid Firecannon will not have any effect during  trap and  net extended Headshot attacks.\nOnly the ordinary 100% attack damage portion of the attack can critically strike. The bonus from Headshot is added after the critical strike is rolled.\nThe full damage of Headshot applies  life steal.\nHeadshot is a single instance of damage, thus does not trigger  Amumu's  Tantrum's or  Warden's Mail passives twice.\nThe basic attack triggering Headshot can  critically strike, but Headshot's damage remains unchanged if it does.\nSince Caitlyn's Art and Sustainability Update, Ability-granted Headshots are the same as the original Headshot override attack, though what lets them cast at high range is still relatively special. They trigger  on-attack effects (including stacking Headshot).\nPENDING FOR TEST:  Runaan's Hurricane's Wind's Fury, is special cased to search targets with the increased range as well.\nBecause Headshot stacks are generated  on-attack,  Runaan's Hurricane's Wind's Fury's bolts will not generate any.\nThe empowered attack will not trigger against  wards.\nStacks will still be generated towards Headshot when attacking them.",
-      projectile: "TRUE",
-      speed: "3000",
-      spellEffects: "Basic",
-      spellshieldable: "False",
-      targeting: "Passive",
+        'If Caitlyn\'s current target becomes trapped by  Yordle Snap Trap or  90 Caliber Net while her attack is on cooldown, this ongoing cooldown will be refunded partially so that her next attack on them can begin earlier.\nSwapping the target to an enemy trapped by  Yordle Snap Trap or  90 Caliber Net also reduces her ongoing attack cooldown.\nPENDING FOR TEST:: The exact attack cooldown refund appears to be 50% of the attack cooldown at current attack speed, but at a minimum amount it lets Caitlyn start the attack against the trapped target within 0.5 seconds of her previous attack windup completing.\nThe bonus range from  Rapid Firecannon will not have any effect during  trap and  net extended Headshot attacks.\nOnly the ordinary 100% attack damage portion of the attack can critically strike. The bonus from Headshot is added after the critical strike is rolled.\nThe full damage of Headshot applies  life steal.\nHeadshot is a single instance of damage, thus does not trigger  Amumu\'s  Tantrum\'s or  Warden\'s Mail passives twice.\nThe basic attack triggering Headshot can  critically strike, but Headshot\'s damage remains unchanged if it does.\nSince Caitlyn\'s Art and Sustainability Update, Ability-granted Headshots are the same as the original Headshot override attack, though what lets them cast at high range is still relatively special. They trigger  on-attack effects (including stacking Headshot).\nPENDING FOR TEST:  Runaan\'s Hurricane\'s Wind\'s Fury, is special cased to search targets with the increased range as well.\nBecause Headshot stacks are generated  on-attack,  Runaan\'s Hurricane\'s Wind\'s Fury\'s bolts will not generate any.\nThe empowered attack will not trigger against  wards.\nStacks will still be generated towards Headshot when attacking them.',
+      projectile: 'TRUE',
+      speed: '3000',
+      spellEffects: 'Basic',
+      spellshieldable: 'False',
+      targeting: 'Passive',
     },
     {
-      key: "Q",
-      name: "Piltover Peacemaker",
-      width: "120 / 180",
-      affects: "Enemies",
+      key: 'Q',
+      name: 'Piltover Peacemaker',
+      width: '120 / 180',
+      affects: 'Enemies',
       blurb:
-        "Active:  Caitlyn revs up her rifle to unleash a penetrating shot that deals physical damage to enemies hit.",
-      castTime: "0.625",
-      cooldown: "10 / 9 / 8 / 7 / 6",
-      cost: "55 / 60 / 65 / 70 / 75",
-      damageType: "Physical damage",
+        'Active:  Caitlyn revs up her rifle to unleash a penetrating shot that deals physical damage to enemies hit.',
+      castTime: '0.625',
+      cooldown: '10 / 9 / 8 / 7 / 6',
+      cost: '55 / 60 / 65 / 70 / 75',
+      damageType: 'Physical damage',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.</p>',
           leveling: [
             {
-              attribute: "Physical Damage",
+              attribute: 'Physical Damage',
               modifiers: [
                 {
-                  values: "50 / 90 / 130 / 170 / 210",
+                  values: '50 / 90 / 130 / 170 / 210',
                 },
                 {
-                  tooltip: "Scaling per rank:\n125 / 145 / 165 / 185 / 205% AD",
-                  unit: "% AD",
-                  values: "125 - 205",
+                  tooltip: 'Scaling per rank:\n125 / 145 / 165 / 185 / 205% AD',
+                  unit: '% AD',
+                  values: '125 - 205',
                 },
               ],
             },
             {
-              attribute: "Reduced Damage",
+              attribute: 'Reduced Damage',
               modifiers: [
                 {
-                  values: "30 / 54 / 78 / 102 / 126",
+                  values: '30 / 54 / 78 / 102 / 126',
                 },
                 {
-                  tooltip: "Scaling per rank:\n75 / 87 / 99 / 111 / 123% AD",
-                  unit: "% AD",
-                  values: "75 - 123",
+                  tooltip: 'Scaling per rank:\n75 / 87 / 99 / 111 / 123% AD',
+                  unit: '% AD',
+                  values: '75 - 123',
                 },
               ],
             },
@@ -82,41 +82,41 @@ const champion: Champion = {
         },
         {
           description:
-            "Enemies revealed by Yordle Snap Trap always take full damage from Piltover Peacemaker.",
+            'Enemies revealed by Yordle Snap Trap always take full damage from Piltover Peacemaker.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q',
       maxCharges: -1,
       notes:
-        "Upon Piltover Peacemaker dealing damage to an enemy, Caitlyn's attack timer is forcibly  reset.(bug)\nEnemies hit while protected by a  spell shield will still be considered a target for calculating damage for subsequent hits.\nThis ability will cast from wherever the caster is at the start of the cast time.",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "2200",
-      spellEffects: "Area of effect",
-      spellshieldable: "True",
-      targeting: "Direction",
+        'Upon Piltover Peacemaker dealing damage to an enemy, Caitlyn\'s attack timer is forcibly  reset.(bug)\nEnemies hit while protected by a  spell shield will still be considered a target for calculating damage for subsequent hits.\nThis ability will cast from wherever the caster is at the start of the cast time.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '2200',
+      spellEffects: 'Area of effect',
+      spellshieldable: 'True',
+      targeting: 'Direction',
     },
     {
-      key: "W",
-      name: "Yordle Snap Trap",
-      affects: "Enemies",
+      key: 'W',
+      name: 'Yordle Snap Trap',
+      affects: 'Enemies',
       blurb:
-        "Active:  Caitlyn sets a trap at the target location that lasts for a while. The trap springs when an enemy champion steps on it,  revealing and  rooting them.",
-      castTime: "0.25",
-      collisionRadius: "15",
-      cooldown: "0.5",
-      cost: "20",
+        'Active:  Caitlyn sets a trap at the target location that lasts for a while. The trap springs when an enemy champion steps on it,  revealing and  rooting them.',
+      castTime: '0.25',
+      collisionRadius: '15',
+      cooldown: '0.5',
+      cost: '20',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>',
           leveling: [
             {
-              attribute: "Trap Duration",
+              attribute: 'Trap Duration',
               modifiers: [
                 {
-                  unit: " seconds",
-                  values: "30 / 35 / 40 / 45 / 50",
+                  unit: ' seconds',
+                  values: '30 / 35 / 40 / 45 / 50',
                 },
               ],
             },
@@ -124,13 +124,13 @@ const champion: Champion = {
         },
         {
           description:
-            "Caitlyn periodically stocks a Yordle Snap Trap charge, up to a maximum amount. Deploying traps beyond the maximum destroys the oldest one.",
+            'Caitlyn periodically stocks a Yordle Snap Trap charge, up to a maximum amount. Deploying traps beyond the maximum destroys the oldest one.',
           leveling: [
             {
-              attribute: "Maximum Number of Traps",
+              attribute: 'Maximum Number of Traps',
               modifiers: [
                 {
-                  values: "3 / 3 / 4 / 4 / 5",
+                  values: '3 / 3 / 4 / 4 / 5',
                 },
               ],
             },
@@ -138,58 +138,58 @@ const champion: Champion = {
         },
         {
           description:
-            "The next enemy champion that springs the trap is rooted for 1.5 seconds and revealed for 3 seconds, as well as takes additional damage from the Headshot granted by this ability. Trapped targets become immune to further Yordle Snap Traps for 3 seconds, preventing them from springing subsequent traps for the duration.",
+            'The next enemy champion that springs the trap is rooted for 1.5 seconds and revealed for 3 seconds, as well as takes additional damage from the Headshot granted by this ability. Trapped targets become immune to further Yordle Snap Traps for 3 seconds, preventing them from springing subsequent traps for the duration.',
           leveling: [
             {
-              attribute: "Headshot Damage Increase",
+              attribute: 'Headshot Damage Increase',
               modifiers: [
                 {
-                  values: "35 / 80 / 125 / 170 / 215",
+                  values: '35 / 80 / 125 / 170 / 215',
                 },
                 {
-                  unit: "% bonus AD",
-                  values: "30",
+                  unit: '% bonus AD',
+                  values: '30',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w',
       maxCharges: 2,
       notes:
-        "Multiple armed traps on the same location will spring all at once if an enemy steps on one of them.",
-      rechargeRate: "26 / 22 / 18 / 14 / 10",
-      resource: "Mana",
-      spellshieldable: "True",
-      targeting: "Location",
-      targetRange: "800",
+        'Multiple armed traps on the same location will spring all at once if an enemy steps on one of them.',
+      rechargeRate: '26 / 22 / 18 / 14 / 10',
+      resource: 'Mana',
+      spellshieldable: 'True',
+      targeting: 'Location',
+      targetRange: '800',
     },
     {
-      key: "E",
-      name: "90 Caliber Net",
-      affects: "Self, Enemies",
+      key: 'E',
+      name: '90 Caliber Net',
+      affects: 'Self, Enemies',
       blurb:
-        "Active:  Caitlyn fires a heavy net that  slows the first target hit and deals magic damage to them.",
-      castTime: "0.15",
-      cooldown: "16 / 14 / 12 / 10 / 8",
-      cost: "75",
-      damageType: "Magic damage",
-      effectRadius: "140",
+        'Active:  Caitlyn fires a heavy net that  slows the first target hit and deals magic damage to them.',
+      castTime: '0.15',
+      cooldown: '16 / 14 / 12 / 10 / 8',
+      cost: '75',
+      damageType: 'Magic damage',
+      effectRadius: '140',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.</p>',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "80 / 130 / 180 / 230 / 280",
+                  values: '80 / 130 / 180 / 230 / 280',
                 },
                 {
-                  unit: "% AP",
-                  values: "80",
+                  unit: '% AP',
+                  values: '80',
                 },
               ],
             },
@@ -197,29 +197,29 @@ const champion: Champion = {
         },
         {
           description:
-            "Caitlyn will not dash backwards if she is immobilized or grounded during the cast time. She can cast any of her abilities during the dash.",
+            'Caitlyn will not dash backwards if she is immobilized or grounded during the cast time. She can cast any of her abilities during the dash.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e',
       maxCharges: -1,
       notes:
-        "This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net's cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability's cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net's missile will fail to fire if Caitlyn is  suppressed during the cast time.(note)",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "1600",
-      spellEffects: "Single target",
-      spellshieldable: "True",
-      targeting: "Direction",
+        'This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net\'s cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability\'s cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net\'s missile will fail to fire if Caitlyn is  suppressed during the cast time.(note)',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1600',
+      spellEffects: 'Single target',
+      spellshieldable: 'True',
+      targeting: 'Direction',
     },
     {
-      key: "R",
-      name: "Ace in the Hole",
-      width: "80",
-      affects: "Enemies",
-      castTime: "0.375",
-      cooldown: "90",
-      cost: "100",
-      damageType: "Physical damage",
+      key: 'R',
+      name: 'Ace in the Hole',
+      width: '80',
+      affects: 'Enemies',
+      castTime: '0.375',
+      cooldown: '90',
+      cost: '100',
+      damageType: 'Physical damage',
       effects: [
         {
           description:
@@ -227,42 +227,42 @@ const champion: Champion = {
         },
         {
           description:
-            "Ace in the Hole is placed on a 5-second cooldown if canceled.",
+            'Ace in the Hole is placed on a 5-second cooldown if canceled.',
         },
         {
           description:
-            "Once Caitlyn completes the channel, she fires a homing bullet toward the target that deals physical damage to the first enemy champion it hits, increased by 0% - 50% (based on critical strike chance).",
+            'Once Caitlyn completes the channel, she fires a homing bullet toward the target that deals physical damage to the first enemy champion it hits, increased by 0% - 50% (based on critical strike chance).',
           leveling: [
             {
-              attribute: "Physical damage",
+              attribute: 'Physical damage',
               modifiers: [
                 {
-                  values: "300 / 475 / 650",
+                  values: '300 / 475 / 650',
                 },
                 {
-                  unit: "% bonus AD",
-                  values: "100",
+                  unit: '% bonus AD',
+                  values: '100',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r',
       maxCharges: -1,
       notes:
-        "The following will cancel Ace in the Hole's channel (mana expenditure is not compensated):\nCaitlyn is  interrupted.\nThe target becomes  untargetable.\nCaitlyn or her target  dies.\nAce in the Hole reveals the target and Caitlyn through a buff that lasts for up to 4 seconds.\nThe buff is applied to the target from the start of the cast time.\nThe buff ends prematurely when the channel is canceled or the bullet hits an enemy.\nThe target is revealed for 1 second if the buff is ended prematurely.\nIt is not removed if the cast time is cancelled or the bullet missile is destroyed.(note)\nThe bullet missile will fail to hit the primary target if they are  untargetable upon arrival, dealing no damage.\nThe ability also goes on a 5-second  cooldown if Caitlyn enters  resurrection during the cast time.\nThe cast time does not end prematurely but the channel will be immediately canceled the moment the cast time completes.\nIf the target dies after the bullet has been fired, the shot will continue towards their corpse and may still hit other enemy champions.\nThe bullet has a  sight radius of 1500 attached to it.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis excludes losing sight of the target.\nThe following table refers for interactions while Caitlyn is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "3200",
-      spellEffects: "spell",
-      spellshieldable: "True",
-      targeting: "Unit",
-      targetRange: "3500",
+        'The following will cancel Ace in the Hole\'s channel (mana expenditure is not compensated):\nCaitlyn is  interrupted.\nThe target becomes  untargetable.\nCaitlyn or her target  dies.\nAce in the Hole reveals the target and Caitlyn through a buff that lasts for up to 4 seconds.\nThe buff is applied to the target from the start of the cast time.\nThe buff ends prematurely when the channel is canceled or the bullet hits an enemy.\nThe target is revealed for 1 second if the buff is ended prematurely.\nIt is not removed if the cast time is cancelled or the bullet missile is destroyed.(note)\nThe bullet missile will fail to hit the primary target if they are  untargetable upon arrival, dealing no damage.\nThe ability also goes on a 5-second  cooldown if Caitlyn enters  resurrection during the cast time.\nThe cast time does not end prematurely but the channel will be immediately canceled the moment the cast time completes.\nIf the target dies after the bullet has been fired, the shot will continue towards their corpse and may still hit other enemy champions.\nThe bullet has a  sight radius of 1500 attached to it.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis excludes losing sight of the target.\nThe following table refers for interactions while Caitlyn is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '3200',
+      spellEffects: 'spell',
+      spellshieldable: 'True',
+      targeting: 'Unit',
+      targetRange: '3500',
     },
   ],
-  adaptiveType: "Physical damage",
-  attackType: "Ranged",
+  adaptiveType: 'Physical damage',
+  attackType: 'Ranged',
   attributeRatings: {
     abilityReliance: 10,
     control: 2,
@@ -272,18 +272,18 @@ const champion: Champion = {
     toughness: 1,
     utility: 1,
   },
-  faction: "piltover",
-  fullName: "Caitlyn Kiramman",
-  lore: "Renowned as its finest peacekeeper, Caitlyn Kiramman is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
-  patchLastChanged: "25.06",
-  positions: ["Bottom"],
+  faction: 'piltover',
+  fullName: 'Caitlyn Kiramman',
+  lore: 'Renowned as its finest peacekeeper, Caitlyn Kiramman is also Piltover\'s best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner\'s more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn\'s most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.',
+  patchLastChanged: '25.06',
+  positions: ['Bottom'],
   price: {
     blueEssence: 225,
     rp: 260,
   },
-  releaseDate: "2011-01-04",
-  resource: "Mana",
-  roles: ["Marksman"],
+  releaseDate: '2011-01-04',
+  resource: 'Mana',
+  roles: ['Marksman'],
   stats: {
     acquisitionRadius: {
       flat: 800,
@@ -354,5 +354,5 @@ const champion: Champion = {
       flat: 120,
     },
   },
-};
-export default champion;
+}
+export default champion

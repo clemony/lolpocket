@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import type { abilityVariants, AbilityVariants } from "@variants/manual";
+import type { abilityVariants, AbilityVariants } from '@variants/manual'
 
 const { class: className, effect } = defineProps<{
-  effect: AbilityEffect;
-  damageType?: string;
-  class?: HTMLAttributes["class"];
-}>();
+  effect: AbilityEffect
+  damageType?: string
+  class?: HTMLAttributes['class']
+}>()
 
-const { attributeBadge, attributeContent, attributeWrapper, description } =
-  inject<Record<string, typeof abilityVariants>>("ability-variants");
+const { attributeBadge, attributeContent, attributeWrapper, description }
+  = inject<Record<string, typeof abilityVariants>>('ability-variants')
 </script>
 
 <template>
@@ -22,22 +22,23 @@ const { attributeBadge, attributeContent, attributeWrapper, description } =
         },
         className,
       )
-    "
-  >
-    <div :class="description()" v-html="effect.description" />
+    ">
+    <div
+      :class="description()"
+      v-html="effect.description" />
 
     <div
       v-if="effect.leveling?.[0] && effect.leveling?.[0].attribute"
-      class="flex w-full flex-col gap-3"
-    >
+      class="flex w-full flex-col gap-3">
       <div
         v-for="attribute in effect.leveling"
         :key="attribute.attribute"
-        :class="attributeWrapper()"
-      >
+        :class="attributeWrapper()">
         <div :class="attributeContent()">
-          <p class="text-2! text-wrap">{{ attribute.attribute }}:</p>
-          <p class="overflow-hidden text-wrap whitespace-pre">
+          <p class="text-2! text-wrap">
+            {{ attribute.attribute }}:
+          </p>
+          <p class="overflow-hidden text-wrap">
             <template v-if="attribute.modifiers?.[0]">
               {{
                 `${attribute.modifiers?.[0].values}${attribute.modifiers?.[0]?.unit ?? ""}`
@@ -60,16 +61,13 @@ const { attributeBadge, attributeContent, attributeWrapper, description } =
                   },
                   attributeBadge(),
                 )
-              "
-              >+&thinsp;
+              ">+&thinsp;
               <span
                 :class="{
                   'underline decoration-bc/40 decoration-dotted underline-offset-2':
                     attribute.modifiers?.[1].tooltip,
-                }"
-              >
-                {{ attribute.modifiers?.[1].values }} </span
-              >{{ attribute.modifiers?.[1].unit }}
+                }">
+                {{ attribute.modifiers?.[1].values }} </span>{{ attribute.modifiers?.[1].unit }}
             </span>
           </p>
         </div>

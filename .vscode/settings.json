@@ -23,8 +23,7 @@
     "/app/utils",
     "/app/layouts/components",
     "/shared/indexes",
-    "/shared/schema",
-    "/app/components/tiptap"
+    "/shared/schema"
   ],
   "exportall.config.relExclusion": [
     "/app/utils/config",
@@ -32,7 +31,8 @@
     "/shared/data/records/champions",
     "/shared/data/records/items",
     "/shared/data/records/runes",
-    "/shared/records"
+    "/shared/records",
+    "/app/utils/tiptap"
   ],
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

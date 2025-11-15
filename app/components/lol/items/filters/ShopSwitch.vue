@@ -1,16 +1,20 @@
 <script setup lang="ts">
 const { class: className, label = true } = defineProps<{
-  class?: HTMLAttributes["class"];
-  label?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  label?: boolean
+}>()
 </script>
 
 <template>
   <label :class="cn('flex cursor-pointer items-center gap-3', className)">
-    <span v-if="label === true" class="font-semibold text-bc/90">
+    <span
+      v-if="label === true"
+      class="font-semibold text-bc/90">
       {{ is().filters.purchasable ? "Purchasable" : "All Items" }}
     </span>
 
-    <Switch v-model:model-value="is().filters.purchasable" class="dst"></Switch>
+    <Switch
+      v-model:model-value="is().filters.purchasable"
+      class="dst"></Switch>
   </label>
 </template>

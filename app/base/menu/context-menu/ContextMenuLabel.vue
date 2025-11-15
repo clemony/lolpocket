@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { ContextMenuLabelProps } from "reka-ui";
-import { ContextMenuLabel } from "reka-ui";
+import type { ContextMenuLabelProps } from 'reka-ui'
+import { ContextMenuLabel } from 'reka-ui'
 
 const props = defineProps<
-  ContextMenuLabelProps & { class?: HTMLAttributes["class"]; inset?: boolean }
->();
+  ContextMenuLabelProps & { class?: HTMLAttributes['class'], inset?: boolean }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
@@ -22,8 +22,7 @@ const delegatedProps = computed(() => {
         inset && 'pl-8',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ContextMenuLabel>
 </template>

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { class: className, fill } = defineProps<{
-  class?: HTMLAttributes["class"];
-  fill?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  fill?: boolean
+}>()
 </script>
 
 <template>
@@ -17,8 +17,7 @@ const { class: className, fill } = defineProps<{
         `,
         className,
       )
-    "
-  />
+    " />
   <icon
     v-else
     name="up"
@@ -31,6 +30,5 @@ const { class: className, fill } = defineProps<{
         `,
         className,
       )
-    "
-  />
+    " />
 </template>

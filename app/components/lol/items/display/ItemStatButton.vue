@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import { statIndex } from "#shared/references";
+import { statIndex } from '#shared/references'
 
 const {
   active,
   class: className,
   clear,
-  size = "8",
+  size = '8',
   stat,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  stat: StatIndex | string;
-  active?: boolean;
-  size?: ButtonVariants["size"];
-  clear?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  stat: StatIndex | string
+  active?: boolean
+  size?: ButtonVariants['size']
+  clear?: boolean
+}>()
 
 const statValue = computed<StatIndex>(() => {
-  console.log("🌱 - stat:", stat);
-  if (typeof stat !== "string") return stat;
+  console.log('🌱 - stat:', stat)
+  if (typeof stat !== 'string')
+    return stat
 
-  return statIndex[stat];
-});
+  return statIndex[stat]
+})
 </script>
 
 <template>
@@ -38,9 +39,14 @@ const statValue = computed<StatIndex>(() => {
         { '  order-first text-white': active, 'pr-2': active && clear },
         className,
       )
-    "
-  >
+    ">
     {{ statValue.name }}
-    <icon v-if="clear" name="x" class="size-4 text-white **:stroke-[2.6]" />
+    <icon
+      v-if="clear"
+      name="x"
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

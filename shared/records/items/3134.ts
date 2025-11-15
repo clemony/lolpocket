@@ -1,84 +1,84 @@
 const item: Item = {
   id: 3134,
-  name: "Serrated Dirk",
+  name: 'Serrated Dirk',
   buildsFrom: [
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
   ],
   buildsInto: [
     {
       id: 3142,
-      name: "Youmuu's Ghostblade",
+      name: 'Youmuu\'s Ghostblade',
       gold: 2800,
     },
     {
       id: 126697,
-      name: "Hubris",
+      name: 'Hubris',
       gold: 2950,
     },
     {
       id: 6693,
-      name: "Prowler's Claw",
+      name: 'Prowler\'s Claw',
       gold: 2850,
     },
     {
       id: 6691,
-      name: "Duskblade of Draktharr",
+      name: 'Duskblade of Draktharr',
       gold: 2950,
     },
     {
       id: 3814,
-      name: "Edge of Night",
+      name: 'Edge of Night',
       gold: 3000,
     },
     {
       id: 4004,
-      name: "Spectral Cutlass",
+      name: 'Spectral Cutlass',
       gold: 2800,
     },
     {
       id: 6676,
-      name: "The Collector",
+      name: 'The Collector',
       gold: 3000,
     },
     {
       id: 6697,
-      name: "Hubris",
+      name: 'Hubris',
       gold: 3000,
     },
     {
       id: 3131,
-      name: "Sword of the Divine",
+      name: 'Sword of the Divine',
       gold: 2300,
     },
     {
       id: 3179,
-      name: "Umbral Glaive",
+      name: 'Umbral Glaive',
       gold: 2500,
     },
     {
       id: 6695,
-      name: "Serpent's Fang",
+      name: 'Serpent\'s Fang',
       gold: 2500,
     },
     {
       id: 6701,
-      name: "Opportunity",
+      name: 'Opportunity',
       gold: 2700,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -86,13 +86,13 @@ const item: Item = {
       sell: 400,
       total: 1000,
     },
-    tags: ["ASSASSIN", "ARMOR_PEN"],
+    tags: ['ASSASSIN', 'ARMOR_PEN'],
   },
-  simpleDescription: "Increases Attack Damage and Lethality",
+  simpleDescription: 'Increases Attack Damage and Lethality',
   specialRecipe: 0,
   stats: {
     attackDamage: 20,
     lethality: 10,
   },
-};
-export default item;
+}
+export default item

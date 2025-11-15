@@ -5,13 +5,13 @@ const {
   size,
   transparent,
 } = defineProps<{
-  img?: string;
-  class?: HTMLAttributes["class"];
-  imgClass?: HTMLAttributes["class"];
-  size?: string | number;
-  transparent?: boolean;
-}>();
-const loaded = ref(false);
+  img?: string
+  class?: HTMLAttributes['class']
+  imgClass?: HTMLAttributes['class']
+  size?: string | number
+  transparent?: boolean
+}>()
+const loaded = ref(false)
 </script>
 
 <template>
@@ -28,8 +28,7 @@ const loaded = ref(false);
         },
         className,
       )
-    "
-  >
+    ">
     <Img
       v-if="img"
       :img="img"
@@ -44,14 +43,12 @@ const loaded = ref(false);
           imgClass,
         )
       "
-      @load="loaded = true"
-    />
+      @load="loaded = true" />
 
     <icon
       v-if="!loaded && img"
       name="svg-spinners:bars-scale-middle"
-      class="absolute text-nc opacity-80"
-    />
+      class="absolute text-nc opacity-80" />
 
     <span
       v-else
@@ -63,8 +60,7 @@ const loaded = ref(false);
           `,
           { '!text-[0.74rem] mt-px font-semibold': size && size === 'sm' },
         )
-      "
-    >
+      ">
       LP
     </span>
     <slot />

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { class: className, summoner } = defineProps<{
-  class?: HTMLAttributes["class"];
-  summoner: Summoner;
-}>();
+  class?: HTMLAttributes['class']
+  summoner: Summoner
+}>()
 
 /* const champions = computed (() => {
 if (!summoner || !championStats.value)

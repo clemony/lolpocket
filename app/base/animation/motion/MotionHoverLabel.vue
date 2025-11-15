@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
+import { motion } from 'motion-v'
 
 const wrapperVariants = {
   hidden: {},
   visible: {},
-};
+}
 </script>
 
 <template>
@@ -13,8 +13,7 @@ const wrapperVariants = {
     class="group flex cursor-pointer items-center gap-4"
     while-hover="visible"
     initial="hidden"
-    exit="hidden"
-  >
+    exit="hidden">
     <slot />
   </motion.label>
 </template>

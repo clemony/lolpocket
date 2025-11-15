@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { StepperTriggerProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { StepperTrigger, useForwardProps } from "reka-ui";
+import type { StepperTriggerProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { StepperTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  StepperTriggerProps & { class?: HTMLAttributes["class"] }
->();
+  StepperTriggerProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -20,8 +20,7 @@ const forwarded = useForwardProps(delegatedProps);
         'flex flex-col items-center gap-2 rounded-md p-2 text-center',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </StepperTrigger>
 </template>

@@ -1,30 +1,30 @@
 const item: Item = {
   id: 447114,
-  name: "Reverberation",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447114_reverberation.png",
+  name: 'Reverberation',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447114_reverberation.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Reverberate",
+      name: 'Reverberate',
       effects:
-        "After 2 seconds from the start of the combat phase in each round, gain 5 <b>bonus</b> health per 1% <b>bonus</b> attack speed.",
+        'After 2 seconds from the start of the combat phase in each round, gain 5 <b>bonus</b> health per 1% <b>bonus</b> attack speed.',
       unique: true,
     },
     {
-      name: "Resonate",
+      name: 'Resonate',
       effects:
         'Basic attacks <img src="/img/icons/on-hit.webp" class="tip-icon" />on-hit deal 10 magic damage (+2% of your <b>bonus</b> health) <b>bonus</b> magic damage.',
       unique: true,
     },
     {
-      name: "Rumble",
+      name: 'Rumble',
       effects:
         '<img src="/img/icons/immobilize.webp" class="tip-icon" />Immobilizing an enemy champion generates 25 stacks of <i>Reverberation</i> for 10 seconds, stacking up to 100 times and refreshing <img src="/img/icons/on-hit.webp" class="tip-icon" />on-hit as well as on subsequent immobilizations. At <b>maximum</b> stacks and upon <img src="/img/icons/immobilize.webp" class="tip-icon" />immobilizing an enemy, your on-hit effects are applied to them 3 times.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -32,7 +32,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["TANK"],
+    tags: ['TANK'],
   },
   specialRecipe: 220007,
   stats: {
@@ -40,5 +40,5 @@ const item: Item = {
     attackSpeed: 40,
     magicResistance: 35,
   },
-};
-export default item;
+}
+export default item

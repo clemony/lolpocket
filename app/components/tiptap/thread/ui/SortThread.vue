@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import { parseAbsoluteToLocal } from '@internationalized/date'
 
+const { thread } = defineProps<{
+  thread: CommentData[] | null
+}>()
 useScrollToHash('#app')
 const sort = shallowRef<string>('best')
-const sortedComments = ref<CommentSchema[]>(null)
+const sortedComments = ref<CommentData[]>(null)
 function sortComments() {
-  const comments = [...as().comments] // make a shallow copy to avoid mutating original
+  if (!thread)
+    return
+
+  const comments = [...thread]
 
   if (sort.value === 'best') {
     comments.sort(
@@ -35,7 +41,7 @@ defineExpose({
 <template>
   <Select
     v-model:model-value="sort"
-    :disabled="!as().comments.length"
+    :disabled="!thread.length"
     @update:model-value="sortComments()">
     <VarSelectTrigger
       variant="ghost"

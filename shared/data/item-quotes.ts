@@ -1,7 +1,7 @@
 export const itemQuotes = [
   '"That is not the pounding of the rain"',
   '"The Medallion shines with the glory of a thousand voices when exposed to the Sun"',
-  "\"There's only one way you'll get this armor from me...\"",
+  '"There\'s only one way you\'ll get this armor from me..."',
   '"This item is dedicated in honor of Ionia\'s victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE."',
   '"Gold dust rises from the desert and clings to the coin."',
   '"Praise the Sun."',
@@ -21,7 +21,7 @@ export const itemQuotes = [
   '"Nothin\' more glorious than the single advance of a thousand soldiers. - Captain Farron"',
   '"The Empire of Noxus shall endure... Perfected."',
   '"A little hemomancy always clears the mind... - Ophelia"',
-  "Those that hear the bell ring are struck by the purity of its tone.",
-  "This humble hat can help you make, or unmake, the world itself.",
-  "Perfect peace and calm for the holder - and all who face it.",
-];
+  'Those that hear the bell ring are struck by the purity of its tone.',
+  'This humble hat can help you make, or unmake, the world itself.',
+  'Perfect peace and calm for the holder - and all who face it.',
+]

@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 defineOptions({
   meta: {
-    name: "Search",
-    class: "size-5.5 ", // '!size-5.5  **:!stroke-[2]',
-    icon: "heart", // 'mage:search',
+    name: 'Search',
+    class: 'size-5.5 ', // '!size-5.5  **:!stroke-[2]',
+    icon: 'heart', // 'mage:search',
   },
-});
-const searchType = shallowRef("summoner");
+})
+const searchType = shallowRef('summoner')
 </script>
 
 <template>
@@ -22,7 +22,9 @@ const searchType = shallowRef("summoner");
   </Tabs> -->
 
   <div class="">
-    <SidebarHeaderWrapper title="Search" class="border-b-transparent">
+    <SidebarHeaderWrapper
+      title="Search"
+      class="border-b-transparent">
       <template #subheader>
         <!--         <Search
           v-if="searchType === 'summoner'"

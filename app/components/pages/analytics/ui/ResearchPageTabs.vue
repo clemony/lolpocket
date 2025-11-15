@@ -1,13 +1,21 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Tabs default-value="account" class="w-[400px]">
+  <Tabs
+    default-value="account"
+    class="w-[400px]">
     <TabsList>
-      <TabsTrigger value="account"> Champions </TabsTrigger>
+      <TabsTrigger value="account">
+        Champions
+      </TabsTrigger>
 
-      <TabsTrigger value="password"> Items </TabsTrigger>
+      <TabsTrigger value="password">
+        Items
+      </TabsTrigger>
 
-      <TabsTrigger value="password"> Pockets </TabsTrigger>
+      <TabsTrigger value="password">
+        Pockets
+      </TabsTrigger>
     </TabsList>
   </Tabs>
 

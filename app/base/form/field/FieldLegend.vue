@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
+import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  variant?: "legend" | "label";
-}>();
+  class?: HTMLAttributes['class']
+  variant?: 'legend' | 'label'
+}>()
 </script>
 
 <template>
@@ -18,8 +18,7 @@ const props = defineProps<{
         'data-[variant=label]:',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </legend>
 </template>

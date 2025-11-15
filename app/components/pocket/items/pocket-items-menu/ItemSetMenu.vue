@@ -1,22 +1,26 @@
 <script lang="ts" setup>
-import type { ItemSet, Pocket } from "~~/shared/schema";
+import type { ItemSet, Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  set?: ItemSet;
-  pocket?: Pocket;
-}>();
+  set?: ItemSet
+  pocket?: Pocket
+}>()
 
-const pocket = computed(() => props.pocket);
+const pocket = computed(() => props.pocket)
 </script>
 
 <template>
-  <PopoverItem class="" @click="duplicateItemSet(props.set, props.pocket.key)">
+  <PopoverItem
+    class=""
+    @click="duplicateItemSet(props.set, props.pocket.key)">
     <icon name="copy" />
     Duplicate
   </PopoverItem>
 
   <HoverCard>
-    <HoverCardTrigger as-child class="w-full">
+    <HoverCardTrigger
+      as-child
+      class="w-full">
       <PopoverItem class="relative w-full">
         <!--         <span class="size-4.5 relative grid place-items-center">
           <icon
@@ -26,24 +30,30 @@ const pocket = computed(() => props.pocket);
         <icon name="arrow-curve-right" />
         Copy to Pocket
 
-        <icon name="right" class="absolute right-1 size-4 opacity-50" />
+        <icon
+          name="right"
+          class="absolute right-1 size-4 opacity-50" />
       </PopoverItem>
     </HoverCardTrigger>
 
     <LazyHoverCardContent
       side="right"
-      class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
-      align="start"
-    >
+      class="
+        grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1
+        py-1.5
+      "
+      align="start">
       <PopoverItem
         v-for="friendlyPocket in ps().pockets.filter(
           (p) => p.key !== pocket.key,
         )"
         :key="friendlyPocket.key"
         class="w-full"
-        @click="copyItemSetToPocket(friendlyPocket, props.set)"
-      >
-        <PocketIcon :pocket size="sm" class="size-6 rounded-full" />
+        @click="copyItemSetToPocket(friendlyPocket, props.set)">
+        <PocketIcon
+          :pocket
+          size="sm"
+          class="size-6 rounded-full" />
         <span class="truncate">
           {{ friendlyPocket.name }}
         </span>

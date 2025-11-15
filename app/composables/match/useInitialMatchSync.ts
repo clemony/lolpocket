@@ -1,36 +1,39 @@
 export function useInitialMatchSync(puuid: string) {
-  const ready = ref(false);
-  const loading = ref(false);
-  const matchData = ref<MatchData[]>([]);
+  const ready = ref(false)
+  const loading = ref(false)
+  const matchData = ref<MatchData[]>([])
 
-  const { getAllMatches } = useIndexedDB();
+  const { getAllMatches } = useIndexedDB()
 
   const fetchInitialMatches = async () => {
-    if (!puuid) return;
-    loading.value = true;
+    if (!puuid)
+      return
+    loading.value = true
     try {
-      const matches = await getAllMatches();
-      if (matches.length === 0) return;
+      const matches = await getAllMatches()
+      if (matches.length === 0)
+        return
 
       matchData.value = matches.sort(
         (a, b) => b.gameEndTimestamp - a.gameEndTimestamp,
-      );
-    } finally {
-      loading.value = false;
-      ready.value = true;
+      )
     }
-  };
+    finally {
+      loading.value = false
+      ready.value = true
+    }
+  }
 
   watchEffect(() => {
     if (puuid) {
-      fetchInitialMatches();
+      fetchInitialMatches()
     }
-  });
+  })
 
   return {
     fetchInitialMatches,
     loading,
     matchData,
     ready,
-  };
+  }
 }

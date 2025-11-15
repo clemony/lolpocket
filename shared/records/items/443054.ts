@@ -1,18 +1,18 @@
 const item: Item = {
   id: 443054,
-  name: "Darksteel Talons",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3054_silversteeltalons.png",
+  name: 'Darksteel Talons',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3054_silversteeltalons.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Gash",
+      name: 'Gash',
       effects:
         'Basic attacks on-hit deal (<img src="/img/icons/melee.webp" class="inline-icon" />20 – 40 /<img src="/img/icons/ranged.webp" class="inline-icon" />10 – 20) true damage (+(<img src="/img/icons/melee.webp" class="inline-icon" />25% /<img src="/img/icons/ranged.webp" class="inline-icon" />20%) <b>bonus</b> armor) <b>bonus</b> true damage.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -20,7 +20,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["TANK"],
+    tags: ['TANK'],
   },
   specialRecipe: 220007,
   stats: {
@@ -28,5 +28,5 @@ const item: Item = {
     attackSpeed: 50,
     percentMovespeed: 10,
   },
-};
-export default item;
+}
+export default item

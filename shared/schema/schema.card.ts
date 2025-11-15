@@ -1,4 +1,4 @@
-import * as v from "valibot";
+import * as v from 'valibot'
 // Card
 export const CardSchema = v.nullable(
   v.object({
@@ -9,18 +9,18 @@ export const CardSchema = v.nullable(
 
     // Style
     align: v.nullable(v.string()),
-    color: v.fallback(v.string(), "#FFFFFF"),
+    color: v.fallback(v.string(), '#FFFFFF'),
     filter: v.fallback(
-      v.union([v.literal("color"), v.literal("grayscale")]),
-      "grayscale",
+      v.union([v.literal('color'), v.literal('grayscale')]),
+      'grayscale',
     ),
     font: v.strictTuple([
-      v.fallback(v.string(), "var(--font-serif)"),
-      v.fallback(v.string(), "var(--font-sans)"),
+      v.fallback(v.string(), 'var(--font-serif)'),
+      v.fallback(v.string(), 'var(--font-sans)'),
     ]),
     splash: v.nullable(v.string()),
   }),
-);
+)
 
 // --- Type ---
-export type Card = v.InferOutput<typeof CardSchema>;
+export type Card = v.InferOutput<typeof CardSchema>

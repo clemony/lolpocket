@@ -1,36 +1,40 @@
 <script lang="ts" setup>
-import { toast } from "~/base/notification/toast/use-toast";
+import { toast } from '~/base/popup/toast/use-toast'
 
 definePageMeta({
-  title: "profile settings",
+  title: 'profile settings',
   description:
-    "Set your public profile display settings and hide your annoyances.",
-  icon: "user-cog",
-  path: "/settings/profile",
-  search: "user",
+    'Set your public profile display settings and hide your annoyances.',
+  icon: 'user-cog',
+  path: '/settings/profile',
+  search: 'user',
   /* middleware: 'confirm-auth', */
-});
+})
 
-const labelClass =
-  "w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70";
+const labelClass
+  = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
 
 async function onSubmit(values: any) {
   toast({
-    title: "Account Updated!",
+    title: 'Account Updated!',
     description: h(
-      "pre",
-      { class: "mt-2 w-[340px] rounded-md bg-slate-950 p-4" },
-      h("code", { class: "text-white" }, JSON.stringify(values, null, 2)),
+      'pre',
+      { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' },
+      h('code', { class: 'text-white' }, JSON.stringify(values, null, 2)),
     ),
-  });
+  })
 }
 </script>
 
 <template>
-  <form class="w-full space-y-12" @submit="onSubmit">
+  <form
+    class="w-full space-y-12"
+    @submit="onSubmit">
     <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
-        <Label as="legend" class="text-5font-semibold mb-2">
+        <Label
+          as="legend"
+          class="text-5font-semibold mb-2">
           Summoner Splash
         </Label>
 
@@ -44,14 +48,20 @@ async function onSubmit(values: any) {
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label as="legend" class="mb-2 text-5 font-semibold">Title</Label>
-        <p class="label text-wrap">Display a title from an earned Badge.</p>
+        <Label
+          as="legend"
+          class="mb-2 text-5 font-semibold">Title</Label>
+        <p class="label text-wrap">
+          Display a title from an earned Badge.
+        </p>
       </div>
     </fieldset>
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label as="legend" class="mb-2 text-5 font-semibold">
+        <Label
+          as="legend"
+          class="mb-2 text-5 font-semibold">
           Hide Profile Elements
         </Label>
 
@@ -70,8 +80,7 @@ async function onSubmit(values: any) {
             lies
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="pointer-events-auto! hover-ring"
-            />
+              class="pointer-events-auto! hover-ring" />
           </p>
         </label>
         <h5>Ranked Solo/Duo</h5>
@@ -81,8 +90,7 @@ async function onSubmit(values: any) {
             {{ as().settings.show_solo ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="pointer-events-auto! hover-ring"
-            />
+              class="pointer-events-auto! hover-ring" />
           </p>
         </label>
 
@@ -93,8 +101,7 @@ async function onSubmit(values: any) {
             {{ as().settings.show_flex ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_flex"
-              class="pointer-events-auto! hover-ring"
-            />
+              class="pointer-events-auto! hover-ring" />
           </p>
         </label>
 
@@ -105,15 +112,16 @@ async function onSubmit(values: any) {
             {{ as().settings.show_allies ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_allies"
-              class="pointer-events-auto! hover-ring"
-            />
+              class="pointer-events-auto! hover-ring" />
           </p>
         </label>
       </div>
     </fieldset>
 
     <div class="flex justify-start">
-      <Button variant="neutral"> Update account </Button>
+      <Button variant="neutral">
+        Update account
+      </Button>
     </div>
   </form>
 </template>

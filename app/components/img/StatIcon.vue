@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { statIndex } from "~~/shared/references";
+import { statIndex } from '~~/shared/references'
 
 const { class: className, stat: s } = defineProps<{
-  class?: HTMLAttributes["class"];
-  stat: StatIndex | string;
-}>();
+  class?: HTMLAttributes['class']
+  stat: StatIndex | string
+}>()
 
 const stat = computed<StatIndex>(() =>
-  typeof s !== "string" ? s : statIndex[s],
-);
+  typeof s !== 'string' ? s : statIndex[s],
+)
 </script>
 
 <template>
@@ -27,6 +27,5 @@ const stat = computed<StatIndex>(() =>
         },
         className,
       )
-    "
-  />
+    " />
 </template>

@@ -1,38 +1,38 @@
 // duplicate
 
-import type { ItemSet, Pocket, RuneSet } from "~~/shared/schema";
+import type { ItemSet, Pocket, RuneSet } from '~~/shared/schema'
 
 export function deepCopy<T>(obj: T): T {
-  return JSON.parse(JSON.stringify(obj));
+  return JSON.parse(JSON.stringify(obj))
 }
 
 export function duplicatePocket(original: Pocket): Pocket {
-  const newPocket = deepCopy(original);
+  const newPocket = deepCopy(original)
 
-  newPocket.key = crypto.randomUUID();
-  newPocket.name = `${original.name} (copy)`;
+  newPocket.key = crypto.randomUUID()
+  newPocket.name = `${original.name} (copy)`
 
-  newPocket.ouuid = as().account.uuid;
+  newPocket.ouuid = as().account.uuid
 
-  ps().pockets.push(newPocket);
-  return newPocket;
+  ps().pockets.push(newPocket)
+  return newPocket
 }
 
 export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
-  const newSet = deepCopy(original);
-  const pocket = <Pocket>ps().getPocket(target);
+  const newSet = deepCopy(original)
+  const pocket = <Pocket>ps().getPocket(target)
 
-  newSet.id = crypto.randomUUID();
-  pocket.runes.push(newSet);
-  return newSet;
+  newSet.id = crypto.randomUUID()
+  pocket.runes.push(newSet)
+  return newSet
 }
 
 export function duplicateItemSet(original: ItemSet, target: string): ItemSet {
-  const newSet = deepCopy(original);
-  const pocket = <Pocket>ps().getPocket(target);
+  const newSet = deepCopy(original)
+  const pocket = <Pocket>ps().getPocket(target)
 
-  newSet.name = `${original.name} (copy)`;
-  newSet.id = crypto.randomUUID();
-  pocket.items.push(newSet);
-  return newSet;
+  newSet.name = `${original.name} (copy)`
+  newSet.id = crypto.randomUUID()
+  pocket.items.push(newSet)
+  return newSet
 }

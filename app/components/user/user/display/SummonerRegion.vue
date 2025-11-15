@@ -1,41 +1,47 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui";
-import { Primitive } from "reka-ui";
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
 const {
-  as: el = "span",
+  as: el = 'span',
   class: className,
   noIcon,
   summoner,
 } = defineProps<
   PrimitiveProps & {
-    class?: HTMLAttributes["class"];
-    summoner?: Summoner | Partial<Summoner>;
-    noIcon?: boolean;
-    as?: string;
+    class?: HTMLAttributes['class']
+    summoner?: Summoner | Partial<Summoner>
+    noIcon?: boolean
+    as?: string
   }
->();
+>()
 
 const region = computed(() => {
-  if (!summoner && !as()?.account) return null;
+  if (!summoner && !as()?.account)
+    return null
 
   if (summoner?.region) {
-    return summoner.region;
-  } else {
-    return as()?.account?.region ?? null;
+    return summoner.region
   }
-});
+  else {
+    return as()?.account?.region ?? null
+  }
+})
 </script>
 
 <template>
   <Primitive
     v-if="region"
     :as="el"
-    :class="cn('inline leading-none lowercase antialiased', className)"
-  >
-    <icon v-show="!noIcon" name="at" class="inline size-3.25 dst" />
+    :class="cn('inline leading-none lowercase antialiased', className)">
+    <icon
+      v-show="!noIcon"
+      name="at"
+      class="inline size-3.25 dst" />
     {{ region }}
   </Primitive>
 
-  <span v-else :class="cn('', className)">Runeterra</span>
+  <span
+    v-else
+    :class="cn('', className)">Runeterra</span>
 </template>

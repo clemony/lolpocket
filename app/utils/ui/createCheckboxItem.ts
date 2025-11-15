@@ -1,19 +1,19 @@
 // factories/menubarItem.ts
-import type { Ref } from "vue";
-import type { MenubarRadioGroup } from "~/base/menu/menubar/menubar.types";
+import type { Ref } from 'vue'
+import type { MenubarRadioGroup } from '~/base/menu/menubar/menubar.types'
 
 export interface CheckboxItemFactory {
-  name: () => string;
-  checkboxType?: "tick" | "tick-end" | "switch" | "checkbox";
-  get: () => boolean;
-  icon: () => string;
-  iconClass?: string;
-  set: (v: boolean) => void;
+  name: () => string
+  checkboxType?: 'tick' | 'tick-end' | 'switch' | 'checkbox'
+  get: () => boolean
+  icon: () => string
+  iconClass?: string
+  set: (v: boolean) => void
 }
 
 export function createCheckboxItem({
   name,
-  checkboxType = "tick-end",
+  checkboxType = 'tick-end',
   get,
   icon,
   iconClass,
@@ -27,25 +27,25 @@ export function createCheckboxItem({
       get,
       set,
       valueOf() {
-        return get();
+        return get()
       },
     },
-    type: "checkbox" as const,
-  };
+    type: 'checkbox' as const,
+  }
 }
 
 export function createRadioGroupItem<T extends string | number>(config: {
-  name: string | (() => string);
-  get: () => T;
-  set: (v: T) => void;
-  options: T[];
-  optionName?: (option: T) => string;
-  optionIcon?: (option: T) => Component;
-  inset?: boolean;
+  name: string | (() => string)
+  get: () => T
+  set: (v: T) => void
+  options: T[]
+  optionName?: (option: T) => string
+  optionIcon?: (option: T) => Component
+  inset?: boolean
 }) {
   return {
     name: computed(() =>
-      typeof config.name === "function" ? config.name() : config.name,
+      typeof config.name === 'function' ? config.name() : config.name,
     ),
     inset: config.inset,
     model: {
@@ -56,6 +56,6 @@ export function createRadioGroupItem<T extends string | number>(config: {
     optionIcon: config.optionIcon,
     optionName: config.optionName,
     options: config.options,
-    type: "radio",
-  } as MenubarRadioGroup;
+    type: 'radio',
+  } as MenubarRadioGroup
 }

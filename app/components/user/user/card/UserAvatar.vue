@@ -2,18 +2,22 @@
 const {
   class: className,
   comment,
-  size = "c-9",
+  hydratedSummoner,
+  size = 'c-9',
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  comment: CommentData;
-  size?: ElementVariants["size"];
-}>();
+  class?: HTMLAttributes['class']
+  comment: CommentData
+  hydratedSummoner?: Summoner | null
+  size?: ElementVariants['size']
+}>()
+
 const icon = computed(() => {
-  if (comment.author.icon && comment.author_id === "defnotclem")
-    return comment.author.icon;
-  else if (comment.author.icon) return getSummonerIcon(comment.author.icon);
-  else return "i-ui-oh-no";
-});
+  if (comment.author_id === 'defnotclem')
+    return comment.author_id
+  else if (hydratedSummoner?.icon)
+    return getSummonerIcon(hydratedSummoner?.icon)
+  else return 'lp-ui:oh-no'
+})
 </script>
 
 <template>
@@ -29,23 +33,21 @@ const icon = computed(() => {
         `,
         className,
       )
-    "
-  >
+    ">
     <hicon
       :name="String(icon)"
       alt="summoner icon"
       :class="
         cn(
           `
-          pointer-events-none size-full
-          [&_img]:scale-115
-        `,
+            pointer-events-none size-full
+            [&_img]:scale-115
+          `,
           {
             '!size-9 place-self-center **:text-nc ': icon === 'i-ui-oh-no',
           },
         )
-      "
-    />
+      " />
 
     <slot />
   </Element>

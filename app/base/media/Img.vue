@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const {
   alt,
@@ -10,14 +10,14 @@ const {
   preload = false,
   sizes,
 } = defineProps<{
-  alt: string;
-  sizes?: string[];
-  preload?: boolean;
-  img: string | null;
-  class?: HTMLAttributes["class"];
-}>();
+  alt: string
+  sizes?: string[]
+  preload?: boolean
+  img: string | null
+  class?: HTMLAttributes['class']
+}>()
 
-const loaded = ref(false);
+const loaded = ref(false)
 </script>
 
 <template>
@@ -41,6 +41,5 @@ const loaded = ref(false);
         loaded ? className : '',
       )
     "
-    @load="loaded = true"
-  ></NuxtImg>
+    @load="loaded = true"></NuxtImg>
 </template>

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { EmojiItem } from "@tiptap/extension-emoji";
+import type { EmojiItem } from '@tiptap/extension-emoji'
 
 const {
   class: className,
   index,
   item,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  item: EmojiItem;
-  index: number;
-}>();
+  class?: HTMLAttributes['class']
+  item: EmojiItem
+  index: number
+}>()
 </script>
 
 <template>
@@ -23,19 +23,22 @@ const {
       cn(
         'text-8',
         `
-      index-${index}
-    `,
+          index-${index}
+        `,
       )
-    "
-  >
-    <span v-if="item.emoji" class="dst drop-shadow-black/10">
+    ">
+    <span
+      v-if="item.emoji"
+      class="dst drop-shadow-black/10">
       {{ item.emoji }}
     </span>
     <span
       v-else-if="item.fallbackImage"
-      class="size-6 dss drop-shadow-black/10"
-    >
-      <img :alt="item.name" :src="item.fallbackImage" class="object-contain" />
+      class="size-6 dss drop-shadow-black/10">
+      <img
+        :alt="item.name"
+        :src="item.fallbackImage"
+        class="object-contain" />
     </span>
   </Button>
 </template>

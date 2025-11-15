@@ -1,1 +1,1 @@
-export const ix = () => useIndexStore();
+export const ix = () => useIndexStore()

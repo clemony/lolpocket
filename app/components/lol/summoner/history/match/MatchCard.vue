@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import { queueIndex } from "~~/shared/references";
+import { queueIndex } from '~~/shared/references'
 
 const { puuid, match } = defineProps<{
-  match: MatchData;
-  puuid: string;
-}>();
+  match: MatchData
+  puuid: string
+}>()
 
 const player = computed(() => {
-  return match?.participants.find((p) => p.puuid === puuid);
-});
+  return match?.participants.find(p => p.puuid === puuid)
+})
 
-const isOpen = ref(false);
+const isOpen = ref(false)
 
 const queue = computed(() => {
-  const foundQueue = queueIndex.find((q) => q.queueId === match.queueId);
-  if (!foundQueue) return null;
-  return foundQueue;
-});
+  const foundQueue = queueIndex.find(q => q.queueId === match.queueId)
+  if (!foundQueue)
+    return null
+  return foundQueue
+})
 </script>
 
 <template>
@@ -31,8 +32,7 @@ const queue = computed(() => {
           **:select-none
         `,
       )
-    "
-  >
+    ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
@@ -57,27 +57,36 @@ const queue = computed(() => {
             : 'before:border-domination',
           isOpen === true ? 'max-h-240' : 'h-40',
         )
-      "
-    >
+      ">
       <div
-        class="flex h-fit w-30 flex-col justify-start gap-1 self-center py-1 **:antialiased **:select-none"
-      >
+        class="
+          flex h-fit w-30 flex-col justify-start gap-1 self-center py-1
+          **:antialiased **:select-none
+        ">
         <h3
-          class="text-start text-5 font-bold text-nowrap text-white/86 uppercase dst"
-        >
+          class="
+            text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
+          ">
           {{ player.win ? "Win" : "Loss" }}
         </h3>
 
-        <div class="flex w-full flex-col font-semibold opacity-76 *:text-left">
+        <div
+          class="
+            flex w-full flex-col font-semibold opacity-76
+            *:text-left
+          ">
           <p
-            class="flex items-center gap-1.5 text-left text-4 font-bold text-nowrap"
-          >
+            class="
+              flex items-center gap-1.5 text-left text-4 font-bold text-nowrap
+            ">
             {{ queue?.description || queue?.map?.name || "" }}
           </p>
 
           <p
-            class="mt-1 flex flex-col justify-center py-1 text-start text-[0.92rem]! leading-4"
-          >
+            class="
+              mt-1 flex flex-col justify-center py-1 text-start text-[0.92rem]!
+              leading-4
+            ">
             <span>
               {{ queue?.map?.name }}
             </span>
@@ -103,14 +112,21 @@ const queue = computed(() => {
               placement: 'top',
             }"
             alt="champion-icon"
-            class="size-17 rounded-xl transition-all duration-300 hover:scale-105"
-          />
+            class="
+              size-17 rounded-xl transition-all duration-300
+              hover:scale-105
+            " />
 
           <!--  spells -->
-          <PlayerSpells :match :player class="mr-2 ml-2 shrink-0" />
+          <PlayerSpells
+            :match
+            :player
+            class="mr-2 ml-2 shrink-0" />
 
           <!-- runes -->
-          <PlayerRunes :match :player />
+          <PlayerRunes
+            :match
+            :player />
 
           <!--   kda -->
           <KDA :player />
@@ -133,11 +149,13 @@ const queue = computed(() => {
             cn('transition-rotate mx-4 size-5 dst duration-200', {
               '-rotate-180': isOpen,
             })
-          "
-        />
+          " />
       </div>
     </CollapsibleTrigger>
 
-    <LazyMatchContent :is-open :match :player />
+    <LazyMatchContent
+      :is-open
+      :match
+      :player />
   </Collapsible>
 </template>

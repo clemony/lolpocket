@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui";
-import { Primitive } from "reka-ui";
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
 const props = defineProps<
   PrimitiveProps & {
-    class?: HTMLAttributes["class"];
-    trigger?: boolean;
+    class?: HTMLAttributes['class']
+    trigger?: boolean
   }
->();
+>()
 </script>
 
 <template>
@@ -22,8 +22,7 @@ const props = defineProps<
         },
         props.class,
       )
-    "
-  >
+    ">
     <div class="grow">
       <slot />
     </div>

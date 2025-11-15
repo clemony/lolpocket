@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { StepperItemProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { StepperItem, useForwardProps } from "reka-ui";
+import type { StepperItemProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { StepperItem, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  StepperItemProps & { class?: HTMLAttributes["class"] }
->();
+  StepperItemProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -24,8 +24,7 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot v-bind="slotProps" />
   </StepperItem>
 </template>

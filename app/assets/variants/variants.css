@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @reference '~/assets/css/tailwind.css';
 
 @custom-variant on,

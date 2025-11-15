@@ -1,50 +1,52 @@
 <script lang="ts" setup>
 const { title, currentPath } = defineProps<{
-  currentPath: string | null;
-  title?: string;
-}>();
+  currentPath: string | null
+  title?: string
+}>()
 
 const pathDescriptions = [
   {
-    name: "Precision",
-    description: "Improved attacks and sustained damage",
-    tag: "Become a Legend",
+    name: 'Precision',
+    description: 'Improved attacks and sustained damage',
+    tag: 'Become a Legend',
   },
   {
-    name: "Domination",
-    description: "Burst damage and target access",
-    tag: "Hunt and Eliminate Prey",
+    name: 'Domination',
+    description: 'Burst damage and target access',
+    tag: 'Hunt and Eliminate Prey',
   },
   {
-    name: "Sorcery",
-    description: "Empowered abilities and resource manipulation",
-    tag: "Unleash Destruction",
+    name: 'Sorcery',
+    description: 'Empowered abilities and resource manipulation',
+    tag: 'Unleash Destruction',
   },
   {
-    name: "Resolve",
-    description: "Durability and crowd control",
-    tag: "Live Forever",
+    name: 'Resolve',
+    description: 'Durability and crowd control',
+    tag: 'Live Forever',
   },
   {
-    name: "Inspiration",
-    description: "Creative tools and rule bending",
-    tag: "Outwit Mere Mortals",
+    name: 'Inspiration',
+    description: 'Creative tools and rule bending',
+    tag: 'Outwit Mere Mortals',
   },
 
   {
-    name: "",
-    description: "Precision, Domination, Sorcery, Resolve, Inspiration",
-    tag: "Select a Path",
+    name: '',
+    description: 'Precision, Domination, Sorcery, Resolve, Inspiration',
+    tag: 'Select a Path',
   },
-];
+]
 
 const a = computed(() => {
-  return pathDescriptions.find((path) => path.name === currentPath);
-});
+  return pathDescriptions.find(path => path.name === currentPath)
+})
 </script>
 
 <template>
-  <transition-fade v-if="currentPath === currentPath" group>
+  <transition-fade
+    v-if="currentPath === currentPath"
+    group>
     <div class="flex items-center gap-6 leading-none">
       <h1 class="text-8 dst transition-all duration-300">
         {{ currentPath === "" ? "Runes" : (currentPath ?? title) }}

@@ -1,19 +1,19 @@
 const item: Item = {
   id: 446656,
-  name: "Everfrost",
-  nicknames: ["GLP", "hose", "supersoaker"],
+  name: 'Everfrost',
+  nicknames: ['GLP', 'hose', 'supersoaker'],
   active: [
     {
-      name: "Glaciate",
+      name: 'Glaciate',
       effects:
         'Unleash a fan of icy shards in a cone in the target direction, dealing 250 magic damage (+85% AP) magic damage to enemies struck within and <img src="/img/icons/slow.webp" class="tip-icon" />slowing them by 70% for 1.5 seconds. Enemies hit in the center of the cone are <img src="/img/icons/root.webp" class="tip-icon" />rooted for the same duration instead.',
       unique: true,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6656_mage_t4_everfrost.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6656_mage_t4_everfrost.png',
   maps: [30],
   noEffects: false,
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -21,7 +21,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["MAGE"],
+    tags: ['MAGE'],
   },
   specialRecipe: 220007,
   stats: {
@@ -30,5 +30,5 @@ const item: Item = {
     health: 250,
     mana: 600,
   },
-};
-export default item;
+}
+export default item

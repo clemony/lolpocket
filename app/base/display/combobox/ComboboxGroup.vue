@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { ComboboxGroupProps } from "reka-ui";
-import { ComboboxGroup, ComboboxLabel } from "reka-ui";
+import type { ComboboxGroupProps } from 'reka-ui'
+import { ComboboxGroup, ComboboxLabel } from 'reka-ui'
 
 const props = defineProps<
   ComboboxGroupProps & {
-    class?: HTMLAttributes["class"];
-    heading?: string;
-    icon?: string;
+    class?: HTMLAttributes['class']
+    heading?: string
+    icon?: string
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
@@ -19,19 +19,20 @@ const delegatedProps = reactiveOmit(props, "class");
     :class="
       cn(
         `
-      overflow-hidden p-1 text-bc
-      [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5
-      [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium
-      [&_[cmdk-group-heading]]:text-bc/50
-    `,
+          overflow-hidden p-1 text-bc
+          [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5
+          [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium
+          [&_[cmdk-group-heading]]:text-bc/50
+        `,
         props.class,
       )
-    "
-  >
+    ">
     <ComboboxLabel
       v-if="heading"
-      class="flex items-center gap-2 px-2 py-1.5 text-2 font-medium text-bc/50 capitalize"
-    >
+      class="
+        flex items-center gap-2 px-2 py-1.5 text-2 font-medium text-bc/50
+        capitalize
+      ">
       <slot name="icon" />{{ heading }}
     </ComboboxLabel>
     <slot />

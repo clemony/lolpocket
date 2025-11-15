@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { PocketSchema } from '~~/shared/schema'
-
 definePageMeta({
   name: 'pocket_key',
   props: true,
@@ -40,9 +38,7 @@ const selectedSet = computed(() => {
 </script>
 
 <template>
-  <TabLayout
-    v-if="pocket && route.name !== 'pocket-core'"
-    size="12">
+  <TabLayout v-if="pocket && route.name !== 'pocket-core'">
     <template #crumb>
       <PocketMenubar />
     </template>
@@ -50,14 +46,14 @@ const selectedSet = computed(() => {
     <!-- splash -->
 
     <template #background>
-      <BackgroundSplashFixed
+      <BgSplash
         v-memo="[pocket.icon]"
         size="header"
         :img="pocket?.icon" />
     </template>
 
     <template #background-slice>
-      <BackgroundSplashFixed
+      <BgSplash
         v-memo="[pocket.icon]"
         size="header"
         slice

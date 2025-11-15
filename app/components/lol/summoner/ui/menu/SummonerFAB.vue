@@ -1,62 +1,67 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
+import { motion } from 'motion-v'
 
-const { summoner } = useSummonerInject();
+const { summoner } = useSummonerInject()
 
-const { scrollTop, scrollYProgress } = useScrollInject();
+const { scrollTop, scrollYProgress } = useScrollInject()
 
-const classes = "size-18! cursor-pointer! shadow-sm backdrop-blur";
+const classes = 'size-18! cursor-pointer! shadow-sm backdrop-blur'
 
-const x = useTransform(scrollYProgress, [0, 0.08], ["160px", "110px"]);
-useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  console.log("🌱 - latest:", latest);
-  console.log("🌱 - x:", x);
-});
-const open = ref<boolean>(false);
+const x = useTransform(scrollYProgress, [0, 0.08], ['160px', '110px'])
+useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+  console.log('🌱 - latest:', latest)
+  console.log('🌱 - x:', x)
+})
+const open = ref<boolean>(false)
 
-const target = useTemplateRef<HTMLElement>("target");
+const target = useTemplateRef<HTMLElement>('target')
 
-onClickOutside(target, (event) => (open.value = false));
+onClickOutside(target, event => (open.value = false))
 
 const buttons = [
   {
-    name: "Block",
+    name: 'Block',
     click: () => (ui().blockDialog = true),
-    icon: "ban",
+    icon: 'ban',
   },
   {
-    name: "Message",
-    click: () => console.log("🌱 - Message:"),
-    icon: "lucide:message-square-more",
+    name: 'Message',
+    click: () => console.log('🌱 - Message:'),
+    icon: 'lucide:message-square-more',
   },
   {
-    name: "Top",
+    name: 'Top',
     click: () => scrollTop(),
-    icon: "arrow-up",
+    icon: 'arrow-up',
   },
-];
+]
 </script>
 
 <template>
-  <Collapsible v-model:open="open" as-child>
+  <Collapsible
+    v-model:open="open"
+    as-child>
     <motion.div
-      class="pointer-events-none fixed top-34 z-20 flex-col! items-start [&_button]:pointer-events-auto"
+      class="
+        pointer-events-none fixed top-34 z-20 flex-col! items-start
+        [&_button]:pointer-events-auto
+      "
       :style="{
         left: useSpring(x, {
           mass: 1,
           damping: 20,
           stiffness: 101,
         }),
-      }"
-    >
+      }">
       <CollapsibleTrigger as-child>
         <Button
           as="button"
           shape="circle"
           variant="base"
-          :class="cn('border-0 shadow-black/30!', classes)"
-        >
-          <SummonerIcon :summoner class="size-18" />
+          :class="cn('border-0 shadow-black/30!', classes)">
+          <SummonerIcon
+            :summoner
+            class="size-18" />
           <!--
           <div class="space-y-2 ">
             <div class="flex items-center">
@@ -73,7 +78,9 @@ const buttons = [
           </div> -->
         </Button>
       </CollapsibleTrigger>
-      <CollapsibleContent ref="target" class="space-y-3 py-3">
+      <CollapsibleContent
+        ref="target"
+        class="space-y-3 py-3">
         <!-- buttons that show up when FAB is open -->
 
         <div class="flex items-center gap-3">
@@ -84,11 +91,12 @@ const buttons = [
             circle
             shape="circle"
             variant="neutral"
-            :class="cn('', classes)"
-          />
+            :class="cn('', classes)" />
           <p
-            class="rounded-lg border border-b2 bg-b1/70 p-2 text-3! leading-4 italic backdrop-blur"
-          >
+            class="
+              rounded-lg border border-b2 bg-b1/70 p-2 text-3! leading-4 italic
+              backdrop-blur
+            ">
             Last Updated<br />
             {{ formatTimeAgo(summoner.updatedMatch, "short") || "Never" }}
           </p>
@@ -99,8 +107,7 @@ const buttons = [
           shape="circle"
           :summoner
           variant="base"
-          :class="cn('', classes)"
-        />
+          :class="cn('', classes)" />
 
         <Button
           v-for="button in buttons"
@@ -116,9 +123,10 @@ const buttons = [
           :summoner
           variant="base"
           :class="cn('', classes)"
-          @click="button.click()"
-        >
-          <icon :name="button.icon" class="opacity-70" />
+          @click="button.click()">
+          <icon
+            :name="button.icon"
+            class="opacity-70" />
         </Button>
       </CollapsibleContent>
     </motion.div>

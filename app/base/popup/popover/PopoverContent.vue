@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import type { PopoverContentEmits, PopoverContentProps } from "reka-ui";
-import { PopoverContent, PopoverPortal, useForwardPropsEmits } from "reka-ui";
+import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<
     PopoverContentProps & {
-      class?: HTMLAttributes["class"];
-      id?: string;
-      to?: string;
-      variant?: PopoverContentVariants["variant"];
-      dataTheme?: string;
+      class?: HTMLAttributes['class']
+      id?: string
+      to?: string
+      variant?: PopoverContentVariants['variant']
+      dataTheme?: string
     }
   >(),
   {
     sideOffset: 8,
-    align: "center",
+    align: 'center',
   },
-);
+)
 
-const emits = defineEmits<PopoverContentEmits>();
-const delegatedProps = reactiveOmit(props, "class", "dataTheme");
+const emits = defineEmits<PopoverContentEmits>()
+const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
-const { base } = popoverContentVariants({ variant: props.variant || "base" });
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const { base } = popoverContentVariants({ variant: props.variant || 'base' })
 
-provide("popoverVariant", props.variant);
+provide('popoverVariant', props.variant)
 </script>
 
 <template>
@@ -36,8 +36,7 @@ provide("popoverVariant", props.variant);
       :side-offset
       v-bind="{ forwarded }"
       :class="cn(base(), props.class)"
-      @close-auto-focus.prevent
-    >
+      @close-auto-focus.prevent>
       <slot />
     </PopoverContent>
   </PopoverPortal>

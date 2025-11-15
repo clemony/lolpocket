@@ -1,33 +1,33 @@
 export interface InboxTemplate {
-  title: string;
+  title: string
   action?: {
-    type: string;
-    function: any;
-    text?: string;
-    icon?: IconObject;
-  };
-  badge?: BadgeObject;
+    type: string
+    function: any
+    text?: string
+    icon?: IconObject
+  }
+  badge?: BadgeObject
 }
 
-type InboxTemplateFactory = (vars: Record<string, string>) => InboxTemplate;
+type InboxTemplateFactory = (vars: Record<string, string>) => InboxTemplate
 
 const inboxTemplateRegistry: Record<string, InboxTemplateFactory> = {
   deletePocket: createInboxTemplateDeletePocket,
   newPocket: createInboxTemplateNewPocket,
   // more...
-};
+}
 
 export function getInboxTemplate(item: InboxItem): InboxTemplate {
-  const factory = inboxTemplateRegistry[item.template];
+  const factory = inboxTemplateRegistry[item.template]
 
   if (!factory) {
-    console.warn(`Unknown inbox template: ${item.template}`);
+    console.warn(`Unknown inbox template: ${item.template}`)
     return {
-      title: item.template ?? "Notification",
-    };
+      title: item.template ?? 'Notification',
+    }
   }
 
-  return factory(item.vars);
+  return factory(item.vars)
 }
 
 function createInboxTemplateNewPocket(vars): InboxTemplate {
@@ -36,21 +36,21 @@ function createInboxTemplateNewPocket(vars): InboxTemplate {
     action: {
       function: `pocket/${vars.pocketKey}`,
       icon: {
-        name: "chain",
-        class: "size-3.5  mb-0.5",
+        name: 'chain',
+        class: 'size-3.5  mb-0.5',
       },
-      text: "Open Pocket",
-      type: "navigate",
+      text: 'Open Pocket',
+      type: 'navigate',
     },
     badge: {
-      class: "",
+      class: '',
       icon: {
-        name: "add-sm",
-        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
+        name: 'add-sm',
+        class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
       },
-      text: "Add Pocket",
+      text: 'Add Pocket',
     },
-  };
+  }
 }
 
 function createInboxTemplateDeletePocket(vars): InboxTemplate {
@@ -59,19 +59,19 @@ function createInboxTemplateDeletePocket(vars): InboxTemplate {
     action: {
       function: `backpack/trash`,
       icon: {
-        name: "open",
-        class: "size-3.5  mb-0.5 dst mr-1 ",
+        name: 'open',
+        class: 'size-3.5  mb-0.5 dst mr-1 ',
       },
-      text: "Go to trash",
-      type: "navigate",
+      text: 'Go to trash',
+      type: 'navigate',
     },
     badge: {
-      class: "",
+      class: '',
       icon: {
-        name: "minus-sm",
-        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
+        name: 'minus-sm',
+        class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
       },
-      text: "Delete Pocket",
+      text: 'Delete Pocket',
     },
-  };
+  }
 }

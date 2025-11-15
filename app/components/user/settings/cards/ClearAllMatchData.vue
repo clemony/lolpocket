@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 async function clear() {
-  const { clearMatches } = useIndexedDB();
-  await clearMatches();
+  const { clearMatches } = useIndexedDB()
+  await clearMatches()
 }
 </script>
 
@@ -10,17 +10,25 @@ async function clear() {
     as="div"
     button="Clear Matches"
     class="h-60 cursor-default"
-    @click="clear()"
-  >
-    <template #title> Clear Local Match Data </template>
+    @click="clear()">
+    <template #title>
+      Clear Local Match Data
+    </template>
     <template #text>
       Remove
       <tippy
-        class="underline-dotted cursor-help rounded-tiny underline transition-colors duration-200 hover:bg-neutral/96 hover:text-nc"
-      >
+        class="
+          underline-dotted cursor-help rounded-tiny underline transition-colors
+          duration-200
+          hover:bg-neutral/96 hover:text-nc
+        ">
         stored data
         <template #content>
-          <ul class="list-disc p-3 not-first:mt-2">
+          <ul
+            class="
+              list-disc p-3
+              not-first:mt-2
+            ">
             <li>
               Match data is cached in your browser's internal database to limit
               strain on Riot's API servers.
@@ -37,11 +45,16 @@ async function clear() {
       this button ↘︎ or
       <ResponsiveDialog>
         <ResponsiveDialogTrigger
-          class="relative inline-flex h-4! w-24 origin-center items-center justify-center self-center overflow-visible! align-baseline"
-        >
+          class="
+            relative inline-flex h-4! w-24 origin-center items-center
+            justify-center self-center overflow-visible! align-baseline
+          ">
           <span
-            class="absolute mt-0.5 h-6! w-24 text-center font-medium underline transition-all duration-200 hover:font-bold"
-          >
+            class="
+              absolute mt-0.5 h-6! w-24 text-center font-medium underline
+              transition-all duration-200
+              hover:font-bold
+            ">
             contact me.
           </span>
         </ResponsiveDialogTrigger>

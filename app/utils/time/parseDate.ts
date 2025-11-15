@@ -6,6 +6,7 @@
 export function parseDate(
   input: Date | string | null | undefined,
 ): Date | null {
-  if (!input) return null;
-  return typeof input === "string" ? new Date(input) : input;
+  if (!input)
+    return null
+  return typeof input === 'string' ? new Date(input) : input
 }

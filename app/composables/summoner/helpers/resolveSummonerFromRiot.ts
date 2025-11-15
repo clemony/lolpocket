@@ -3,8 +3,8 @@ export async function resolveSummonerFromRiot(
   name: string,
   tag: string,
 ): Promise<Summoner> {
-  const result = await $fetch<Summoner>("/api/resolve-summoner", {
+  const result = await $fetch<Summoner>('/api/resolve-summoner', {
     params: { name, region, tag },
-  });
-  return result;
+  })
+  return result
 }

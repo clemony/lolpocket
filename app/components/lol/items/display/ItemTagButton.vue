@@ -1,29 +1,30 @@
 <script setup lang="ts">
-import type { ItemTag } from "#shared/references";
-import type { AsTag } from "reka-ui";
-import { itemTags } from "#shared/references";
+import type { ItemTag } from '#shared/references'
+import type { AsTag } from 'reka-ui'
+import { itemTags } from '#shared/references'
 
 const {
   active,
   as,
   class: className,
   clear,
-  size = "8",
+  size = '8',
   tag,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  tag: ItemTag | string;
-  as?: AsTag | string;
-  active?: boolean;
-  size?: ButtonVariants["size"];
-  clear?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  tag: ItemTag | string
+  as?: AsTag | string
+  active?: boolean
+  size?: ButtonVariants['size']
+  clear?: boolean
+}>()
 
 const tagValue = computed<ItemTag>(() => {
-  if (typeof tag !== "string") return tag;
+  if (typeof tag !== 'string')
+    return tag
 
-  return itemTags.find((t) => t.id === tag);
-});
+  return itemTags.find(t => t.id === tag)
+})
 </script>
 
 <template>
@@ -45,9 +46,14 @@ const tagValue = computed<ItemTag>(() => {
     "
     :style="{
       backgroundColor: `${(is().filters.tags.length && is().filters.tags.includes(tagValue.id)) || active ? tagValue.color : 'transparent'}`,
-    }"
-  >
+    }">
     {{ tagValue.name }}
-    <icon v-if="clear" name="x" class="size-4 text-white **:stroke-[2.6]" />
+    <icon
+      v-if="clear"
+      name="x"
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

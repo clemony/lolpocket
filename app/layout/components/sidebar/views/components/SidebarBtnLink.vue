@@ -1,24 +1,22 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 const { to } = defineProps<{
-  to?: RouteRecordRaw;
-}>();
+  to?: RouteRecordRaw
+}>()
 
-const route = useRoute();
+const route = useRoute()
 </script>
 
 <template>
   <BtnLink
     v-if="to && to"
     :disabled="route?.path.match(to.path)"
-    :to="{ name: to?.name }"
-  >
+    :to="{ name: to?.name }">
     <slot>
-      <Icons
+      <Icon
         :name="String(to.meta?.icon)"
-        :class="cn('size-5', to?.meta?.listClass)"
-      />
+        :class="cn('size-5', to?.meta?.listClass)" />
       {{ to.meta?.title || to.name }}
     </slot>
   </BtnLink>

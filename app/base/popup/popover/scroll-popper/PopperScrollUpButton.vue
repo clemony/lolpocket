@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -14,10 +14,11 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon name="up" class="ml-5.25 size-6" />
+      <icon
+        name="up"
+        class="ml-5.25 size-6" />
     </slot>
   </button>
 </template>

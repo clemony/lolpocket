@@ -1,35 +1,35 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
-const listClass =
-  "flex flex-col gap-3 w-80 h-full  [&_li]:px-1 [&_li]:drop-shadow-sm";
+  class?: HTMLAttributes['class']
+}>()
+const listClass
+  = 'flex flex-col gap-3 w-80 h-full  [&_li]:px-1 [&_li]:drop-shadow-sm'
 
-const itemClass =
-  "flex items-center font-medium gap-2 hover:underline-offset-2 hover:underline";
+const itemClass
+  = 'flex items-center font-medium gap-2 hover:underline-offset-2 hover:underline'
 
-const router = useRouter();
-const route = useRoute();
-const pages = router.getRoutes();
+const router = useRouter()
+const route = useRoute()
+const pages = router.getRoutes()
 
 const items = computed(() =>
-  pages.filter((r) => !r.meta?.search && r.path.split("/").length === 2),
-);
+  pages.filter(r => !r.meta?.search && r.path.split('/').length === 2),
+)
 const groups = computed(() => {
-  const g = shallowRef([]);
+  const g = shallowRef([])
   pages
-    .filter((r) => r.meta?.search === "children")
+    .filter(r => r.meta?.search === 'children')
     .forEach((parent) => {
       g.value.push({
         name: parent.meta?.title || parent.name,
         items: parent.children as RouteRecordRaw[],
         order: parent.meta?.order,
-      });
-    });
-  return g.value.sort((a, b) => b.order - a.order);
-});
+      })
+    })
+  return g.value.sort((a, b) => b.order - a.order)
+})
 </script>
 
 <template>
@@ -43,21 +43,25 @@ const groups = computed(() => {
         `,
         className,
       )
-    "
-  >
+    ">
     <div
       v-if="groups.length"
-      class="z-1 grid h-full auto-cols-max grid-flow-col items-start gap-x-10 gap-y-16 px-12 pt-30 pb-40 [&_h1]:dss"
-    >
-      <ul v-for="group in groups" :key="group?.name" :class="listClass">
+      class="
+        z-1 grid h-full auto-cols-max grid-flow-col items-start gap-x-10
+        gap-y-16 px-12 pt-30 pb-40
+        [&_h1]:dss
+      ">
+      <ul
+        v-for="group in groups"
+        :key="group?.name"
+        :class="listClass">
         <h1 class="capitalize">
           {{ group.meta?.title || group?.name }}
         </h1>
         <li
           v-for="item in group.items"
           :key="item?.name"
-          :class="cn('capitalize', itemClass)"
-        >
+          :class="cn('capitalize', itemClass)">
           {{ item?.meta?.title || item?.name }}
         </li>
       </ul>

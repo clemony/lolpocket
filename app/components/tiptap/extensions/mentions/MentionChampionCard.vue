@@ -32,8 +32,8 @@ const position = computed(() =>
   <div
     v-if="item"
     class="
-      flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center
-      overflow-hidden pt-4 pb-3
+      flex max-h-[304px] w-[258px] flex-col justify-self-center overflow-hidden
+      pt-4 pb-3
       **:select-text
     ">
     <div class="flex h-fit w-full gap-4 px-4">
@@ -50,13 +50,14 @@ const position = computed(() =>
           :style="{ '--position-color': position.color }"
           class="flex w-full items-center justify-between gap-1">
           <!-- NAME / LINK -->
-          <h5 class="leading-4 font-semibold">
-            {{ item.name }}
-          </h5>
-
-          <!--        <a
+          <a
             v-if="item.name"
-            :href="`/champions/${item.key}`" -->
+            :href="`/champions/${item.key}`">
+            <h5
+              class="leading-4 font-semibold">
+              {{ item.name }}
+            </h5>
+          </a>
 
           <a
             v-if="item.name"
@@ -86,7 +87,7 @@ const position = computed(() =>
         </div>
 
         <span class="grow text-2 font-normal text-nc/60 italic">
-          {{ ix().getChampionTitle(item?.key) }}
+          {{ championTitleIndex[item?.key] }}
         </span>
       </div>
     </div>

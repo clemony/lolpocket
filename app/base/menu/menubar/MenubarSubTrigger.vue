@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { MenubarSubTriggerProps } from "reka-ui";
-import { MenubarSubTrigger, useForwardProps } from "reka-ui";
+import type { MenubarSubTriggerProps } from 'reka-ui'
+import { MenubarSubTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  MenubarSubTriggerProps & { class?: HTMLAttributes["class"]; inset?: boolean }
->();
+  MenubarSubTriggerProps & { class?: HTMLAttributes['class'], inset?: boolean }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -26,13 +26,14 @@ const forwarded = useForwardProps(delegatedProps);
         inset && 'in-[.menu-group]:pl-8.5 pl-10',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
 
     <icon
       name="right"
-      class="ml-auto size-4 opacity-50 group-data-disabled:hidden"
-    />
+      class="
+        ml-auto size-4 opacity-50
+        group-data-disabled:hidden
+      " />
   </MenubarSubTrigger>
 </template>

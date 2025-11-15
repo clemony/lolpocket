@@ -1,42 +1,46 @@
 export async function useFetchMatches(puuid: string) {
-  if (!puuid) throw new Error("puuid is null");
+  if (!puuid)
+    throw new Error('puuid is null')
 
-  const { getAllMatchIdsForPuuid, addMatches, getMatchesForSummoner } =
-    useIndexedDB();
+  const { getAllMatchIdsForPuuid, addMatches, getMatchesForSummoner }
+    = useIndexedDB()
 
   // Get all matches already stored for this summoner
-  const existingIds = await getAllMatchIdsForPuuid(puuid);
+  const existingIds = await getAllMatchIdsForPuuid(puuid)
 
   // Ask server for new matches
-  const { matchData: newMatches } = await $fetch("/api/matches/fetch", {
+  const { matchData: newMatches } = await $fetch('/api/matches/fetch', {
     params: { puuid, existingIds },
-  });
+  })
 
   // Store new matches
   if (newMatches.length) {
-    await addMatches({ matchData: newMatches });
+    await addMatches({ matchData: newMatches })
 
     // Fire-and-forget ranked update if new ranked matches are present
     const hasRanked = newMatches.some(
-      (m) => m.queueId === 420 || m.queueId === 440,
-    );
+      m => m.queueId === 420 || m.queueId === 440
+    )
     if (hasRanked) {
-      (async () => {
+      ;(async () => {
         try {
-          const summoner = ss().getSummoner(puuid);
+          const summoner = await ss().resolveSummoner({
+            puuid: as().account?.puuid,
+          })
           if (summoner) {
-            const ranked = await $fetch("/api/riot/fetchRankedData", {
+            const ranked = await $fetch('/api/riot/fetchRankedData', {
               params: { puuid: summoner.puuid, region: summoner.region },
-            });
-            ss().mergeSummonerData(puuid, ranked);
+            })
+            ss().mergeSummonerData(puuid, ranked)
           }
-        } catch (err) {
-          console.error("🔥 Failed ranked refresh", err);
         }
-      })();
+        catch (err) {
+          console.error('🔥 Failed ranked refresh', err)
+        }
+      })()
     }
   }
 
   // Return all matches for this summoner
-  return await getMatchesForSummoner(puuid);
+  return await getMatchesForSummoner(puuid)
 }

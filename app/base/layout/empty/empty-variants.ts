@@ -1,5 +1,5 @@
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
 export const emptyMediaVariants = cva(
   `
@@ -8,15 +8,15 @@ export const emptyMediaVariants = cva(
   `,
   {
     defaultVariants: {
-      variant: "default",
+      variant: 'default',
     },
     variants: {
       variant: {
-        default: "bg-transparent",
-        icon: "bg-b2 text-bc flex size-10 shrink-0 items-center justify-center rounded-lg [&_svg:not([class*='size-'])]:size-6",
+        default: 'bg-transparent',
+        icon: 'bg-b2 text-bc flex size-10 shrink-0 items-center justify-center rounded-lg [&_svg:not([class*=\'size-\'])]:size-6',
       },
     },
   },
-);
+)
 
-export type EmptyMediaVariants = VariantProps<typeof emptyMediaVariants>;
+export type EmptyMediaVariants = VariantProps<typeof emptyMediaVariants>

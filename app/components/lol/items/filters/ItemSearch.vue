@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes["class"];
-    placeholder?: string;
-    inputClass?: HTMLAttributes["class"];
-    setFocus?: boolean;
+    class?: HTMLAttributes['class']
+    placeholder?: string
+    inputClass?: HTMLAttributes['class']
+    setFocus?: boolean
   }>(),
   {
-    placeholder: "Search Items...",
+    placeholder: 'Search Items...',
   },
-);
-const emit = defineEmits(["update:query"]);
+)
+const emit = defineEmits(['update:query'])
 
-const searchQuery = ref("");
+const searchQuery = ref('')
 </script>
 
 <template>
@@ -22,9 +22,10 @@ const searchQuery = ref("");
         'flex h-12 items-center gap-4 border border-b3 bg-b1! px-3 py-2 text-3',
         props.class,
       )
-    "
-  >
-    <icon name="search" class="pointer-events-none size-5 opacity-70" />
+    ">
+    <icon
+      name="search"
+      class="pointer-events-none size-5 opacity-70" />
 
     <input
       v-model="searchQuery"
@@ -37,16 +38,16 @@ const searchQuery = ref("");
           `,
           props.inputClass,
         )
-      "
-    />
+      " />
 
     <slot />
 
     <button
       class="btn absolute right-2 btn-square btn-ghost btn-sm"
-      @click="searchQuery = null"
-    >
-      <icon name="x-sm" class="shrink-0" />
+      @click="searchQuery = null">
+      <icon
+        name="x-sm"
+        class="shrink-0" />
     </button>
   </div>
 </template>

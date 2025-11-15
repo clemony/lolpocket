@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { CollapsibleTriggerProps } from "reka-ui";
-import { CollapsibleTrigger } from "reka-ui";
+import type { CollapsibleTriggerProps } from 'reka-ui'
+import { CollapsibleTrigger } from 'reka-ui'
 
 const props = defineProps<
   CollapsibleTriggerProps & {
-    on?: CollapsibleTriggerVariants["on"];
-    base?: CollapsibleTriggerVariants["base"];
-    class?: HTMLAttributes["class"];
-    hover?: CollapsibleTriggerVariants["hover"];
-    size?: CollapsibleTriggerVariants["size"];
-    variant?: CollapsibleTriggerVariants["variant"];
+    on?: CollapsibleTriggerVariants['on']
+    base?: CollapsibleTriggerVariants['base']
+    class?: HTMLAttributes['class']
+    hover?: CollapsibleTriggerVariants['hover']
+    size?: CollapsibleTriggerVariants['size']
+    variant?: CollapsibleTriggerVariants['variant']
   }
->();
+>()
 </script>
 
 <template>
@@ -23,8 +23,7 @@ const props = defineProps<
         collapsibleTriggerVariants({ hover, on, size, base, variant }),
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </CollapsibleTrigger>
 </template>

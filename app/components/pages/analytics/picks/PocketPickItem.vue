@@ -1,32 +1,34 @@
 <script lang="ts" setup>
 const { title, itemNum } = defineProps<{
-  itemNum: number;
-  title?: string;
-}>();
+  itemNum: number
+  title?: string
+}>()
 
-const state = inject<SummonerData>(SummonerKey);
+const state = inject<SummonerData>(SummonerKey)
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches);
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 
 const itemColor = computedAsync(() => {
-  if (!bayesianItems[itemNum] && !itemColor.value) return;
-  return getGradeColor(bayesianItems[itemNum].bayesianWinrate);
-});
-console.log("💠 - itemColor - itemColor:", itemColor);
+  if (!bayesianItems[itemNum] && !itemColor.value)
+    return
+  return getGradeColor(bayesianItems[itemNum].bayesianWinrate)
+})
+console.log('💠 - itemColor - itemColor:', itemColor)
 </script>
 
 <template>
   <Field
     v-if="bayesianItems[itemNum]"
-    class="border-shadow flex w-full items-center gap-5 bg-b1 px-0 pt-0 pb-6 inset-shadow-xxs"
-    :title="title"
-  >
+    class="
+      border-shadow flex w-full items-center gap-5 bg-b1 px-0 pt-0 pb-6
+      inset-shadow-xxs
+    "
+    :title="title">
     <div class="relative flex w-full items-center gap-5 px-5 pt-8 dst">
       <div class="size-16 rounded-full shadow-sm drop-shadow-sm">
         <ItemPopover
           :id="bayesianItems[itemNum]"
-          class="size-16 overflow-hidden rounded-full"
-        />
+          class="size-16 overflow-hidden rounded-full" />
       </div>
 
       <div class="grow text-bc">
@@ -44,15 +46,19 @@ console.log("💠 - itemColor - itemColor:", itemColor);
       </div>
 
       <div
-        class="flex self-start justify-self-end rounded-xl border border-black/10 badge-xl font-semibold shadow-xs inset-shadow-sm drop-shadow-xs"
+        class="
+          flex self-start justify-self-end rounded-xl border border-black/10
+          badge-xl font-semibold shadow-xs inset-shadow-sm drop-shadow-xs
+        "
         :style="{
-          backgroundColor: `color-mix(in oklab, var(--color-${itemColor}) 70%, transparent)`,
+          'backgroundColor': `color-mix(in oklab, var(--color-${itemColor}) 70%, transparent)`,
           'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${itemColor}-b100) 40%, transparent),1px 1px 1px var(--color-${itemColor}-w600) inset`,
-        }"
-      >
+        }">
         <span
-          class="font-mono text-4 text-[#FFF] tracking-wide dst text-shadow-black/5 text-shadow-xs"
-        >
+          class="
+            font-mono text-4 tracking-wide text-[#FFF] dst text-shadow-black/5
+            text-shadow-xs
+          ">
           {{ getGrade(bayesianItems[itemNum].bayesianWinrate) }}
         </span>
       </div>
@@ -68,7 +74,9 @@ console.log("💠 - itemColor - itemColor:", itemColor);
           {{ ms().filter.patch }}
         </p>
 
-        <p class="-mb-px">Winrate</p>
+        <p class="-mb-px">
+          Winrate
+        </p>
       </div>
 
       <p class="flex flex-col gap-1">
@@ -76,7 +84,9 @@ console.log("💠 - itemColor - itemColor:", itemColor);
 
         <span class="flex text-7 font-bold text-bc dst">
           {{ bayesianItems[itemNum].winrate.toFixed(2) }}
-          <icon name="ph:percent-bold" class="size-5" />
+          <icon
+            name="ph:percent-bold"
+            class="size-5" />
         </span>
       </p>
 
@@ -85,7 +95,9 @@ console.log("💠 - itemColor - itemColor:", itemColor);
 
         <span class="flex text-7 font-bold text-bc dst">
           {{ bayesianItems[itemNum].bayesianWinrate.toFixed(2) }}
-          <icon name="ph:percent-bold" class="size-5" />
+          <icon
+            name="ph:percent-bold"
+            class="size-5" />
         </span>
       </p>
     </div>

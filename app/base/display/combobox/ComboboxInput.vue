@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { ComboboxInputEmits, ComboboxInputProps } from "reka-ui";
-import { ComboboxInput, useForwardPropsEmits } from "reka-ui";
+import type { ComboboxInputEmits, ComboboxInputProps } from 'reka-ui'
+import { ComboboxInput, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   ComboboxInputProps & {
-    class?: HTMLAttributes["class"];
-    styled?: boolean;
+    class?: HTMLAttributes['class']
+    styled?: boolean
   }
->();
+>()
 
-const emits = defineEmits<ComboboxInputEmits>();
+const emits = defineEmits<ComboboxInputEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -27,8 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         },
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ComboboxInput>
 </template>

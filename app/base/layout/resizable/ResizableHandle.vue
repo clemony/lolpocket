@@ -2,24 +2,24 @@
 import type {
   SplitterResizeHandleEmits,
   SplitterResizeHandleProps,
-} from "reka-ui";
-import { SplitterResizeHandle, useForwardPropsEmits } from "reka-ui";
+} from 'reka-ui'
+import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   SplitterResizeHandleProps & {
-    class?: HTMLAttributes["class"];
-    withHandle?: boolean;
-    customHandle?: boolean;
+    class?: HTMLAttributes['class']
+    withHandle?: boolean
+    customHandle?: boolean
   }
->();
-const emits = defineEmits<SplitterResizeHandleEmits>();
+>()
+const emits = defineEmits<SplitterResizeHandleEmits>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-  return delegated;
-});
+  const { class: _, ...delegated } = props
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -46,13 +46,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <template v-if="props.withHandle">
       <div
-        class="z-10 flex h-6 w-5 items-center justify-center rounded-sm border border-b3 bg-b1 dst"
-      >
-        <icon name="radix-icons:drag-handle-dots-2" class="size-4 opacity-50" />
+        class="
+          z-10 flex h-6 w-5 items-center justify-center rounded-sm border
+          border-b3 bg-b1 dst
+        ">
+        <icon
+          name="radix-icons:drag-handle-dots-2"
+          class="size-4 opacity-50" />
       </div>
     </template>
 

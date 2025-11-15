@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { DialogContentEmits, DialogContentProps } from "reka-ui";
-import { useForwardPropsEmits } from "reka-ui";
-import { DrawerContent, DrawerPortal } from "./drawer-index";
-import DrawerOverlay from "./DrawerOverlay.vue";
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import { useForwardPropsEmits } from 'reka-ui'
+import { DrawerContent, DrawerPortal } from './drawer-index'
+import DrawerOverlay from './DrawerOverlay.vue'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 const props = defineProps<
-  DialogContentProps & { class?: HTMLAttributes["class"]; side?: Side }
->();
-const emits = defineEmits<DialogContentEmits>();
-const forwarded = useForwardPropsEmits(props, emits);
+  DialogContentProps & { class?: HTMLAttributes['class'], side?: Side }
+>()
+const emits = defineEmits<DialogContentEmits>()
+const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
@@ -35,18 +35,17 @@ const forwarded = useForwardPropsEmits(props, emits);
           },
           props.class,
         )
-      "
-    >
+      ">
       <div
         v-if="side === 'top' || side === 'bottom'"
-        class="mx-auto mt-4 h-2 w-[100px] rounded-full bg-b2"
-      />
+        class="mx-auto mt-4 h-2 w-[100px] rounded-full bg-b2" />
 
-      <div v-else class="grid h-full items-center">
+      <div
+        v-else
+        class="grid h-full items-center">
         <div
           class="my-auto h-[100px] w-2 rounded-full bg-b3/60"
-          :class="{ 'ml-4': side === 'right' }"
-        />
+          :class="{ 'ml-4': side === 'right' }" />
       </div>
 
       <slot />

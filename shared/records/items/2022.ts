@@ -1,62 +1,62 @@
 const item: Item = {
   id: 2022,
-  name: "Glowing Mote",
+  name: 'Glowing Mote',
   buildsInto: [
     {
       id: 3158,
-      name: "Ionian Boots of Lucidity",
+      name: 'Ionian Boots of Lucidity',
       gold: 900,
     },
     {
       id: 3133,
-      name: "Caulfield's Warhammer",
+      name: 'Caulfield\'s Warhammer',
       gold: 1050,
     },
     {
       id: 2020,
-      name: "The Brutalizer",
+      name: 'The Brutalizer',
       gold: 1337,
     },
     {
       id: 3108,
-      name: "Fiendish Codex",
+      name: 'Fiendish Codex',
       gold: 850,
     },
     {
       id: 6660,
-      name: "Bami's Cinder",
+      name: 'Bami\'s Cinder',
       gold: 900,
     },
     {
       id: 3024,
-      name: "Glacial Buckler",
+      name: 'Glacial Buckler',
       gold: 900,
     },
     {
       id: 3057,
-      name: "Sheen",
+      name: 'Sheen',
       gold: 900,
     },
     {
       id: 3067,
-      name: "Kindlegem",
+      name: 'Kindlegem',
       gold: 800,
     },
     {
       id: 3802,
-      name: "Lost Chapter",
+      name: 'Lost Chapter',
       gold: 1200,
     },
     {
       id: 4642,
-      name: "Bandleglass Mirror",
+      name: 'Bandleglass Mirror',
       gold: 900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2022_glowingmote.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2022_glowingmote.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Basic",
+  rank: 'Basic',
   removed: false,
   shop: {
     prices: {
@@ -64,11 +64,11 @@ const item: Item = {
       sell: 100,
       total: 250,
     },
-    tags: ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"],
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
   specialRecipe: 0,
   stats: {
     abilityHaste: 5,
   },
-};
-export default item;
+}
+export default item

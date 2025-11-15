@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { privacyPolicy } from "~~/shared/data/policies/privacy-policy";
+import { privacyPolicy } from '~~/shared/data/policies/privacy-policy'
 
 definePageMeta({
-  title: "Privacy Policy",
-  description: "Information regarding how your data is used.",
-  icon: "lucide:shield-check",
-  listClass: "scale-105",
-  path: "/support/privacy",
-});
+  title: 'Privacy Policy',
+  description: 'Information regarding how your data is used.',
+  icon: 'lucide:shield-check',
+  listClass: 'scale-105',
+  path: '/support/privacy',
+})
 </script>
 
 <template>
@@ -24,13 +24,14 @@ definePageMeta({
       <div
         v-for="(policy, a) in privacyPolicy.filter((p) => p !== p[0])"
         :key="a"
-        class="grid auto-rows-max gap-4"
-      >
+        class="grid auto-rows-max gap-4">
         <h3>
           {{ policy?.title }}
         </h3>
         <template v-if="policy.description">
-          <p v-for="(item, b) in policy.description" :key="b">
+          <p
+            v-for="(item, b) in policy.description"
+            :key="b">
             {{ item }}
           </p>
         </template>
@@ -38,16 +39,19 @@ definePageMeta({
           <div
             v-for="(section, b) in policy.sections"
             :key="b"
-            class="grid auto-rows-max gap-4"
-          >
+            class="grid auto-rows-max gap-4">
             <span
               class="align-middle text-3 leading-7"
-              v-html="section.title"
-            />
+              v-html="section.title" />
             <ol
-              class="grid list-outside list-[upper-roman] gap-6 pl-6 leading-5 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start"
-            >
-              <li v-for="(item, c) in section.description" :key="c">
+              class="
+                grid list-outside list-[upper-roman] gap-6 pl-6 leading-5
+                text-pretty
+                marker:w-12 marker:justify-start marker:pr-6 marker:text-start
+              ">
+              <li
+                v-for="(item, c) in section.description"
+                :key="c">
                 {{ item }}
               </li>
             </ol>

@@ -1,5 +1,5 @@
-import fs from "node:fs"
-import path from "node:path"
+import fs from 'node:fs'
+import path from 'node:path'
 /* import { runeIndex } from "shared/rune-index"; */
 
 const imagesDir = path.resolve /* ("./public/img/runes/grayscale");
@@ -17,4 +17,4 @@ for (const rune of runeIndex) {
   }
 }
  */
-console.log("🎉 Rune images renamed by ID!")
+console.log('🎉 Rune images renamed by ID!')

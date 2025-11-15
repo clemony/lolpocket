@@ -3,9 +3,9 @@
 export const championsLite: ChampionLite[] = [
   {
     id: 266,
-    key: "Aatrox",
-    name: "Aatrox",
-    attackType: "Melee",
+    key: 'Aatrox',
+    name: 'Aatrox',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -15,9 +15,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Blood well",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Blood well',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 475,
@@ -80,9 +80,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 103,
-    key: "Ahri",
-    name: "Ahri",
-    attackType: "Ranged",
+    key: 'Ahri',
+    name: 'Ahri',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -92,9 +92,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Burst", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -168,9 +168,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 84,
-    key: "Akali",
-    name: "Akali",
-    attackType: "Melee",
+    key: 'Akali',
+    name: 'Akali',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -180,9 +180,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Energy",
-    roles: ["Assassin"],
+    positions: ['Middle', 'Top'],
+    resource: 'Energy',
+    roles: ['Assassin'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -254,9 +254,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 166,
-    key: "Akshan",
-    name: "Akshan",
-    attackType: "Ranged",
+    key: 'Akshan',
+    name: 'Akshan',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 1,
       control: 1,
@@ -266,9 +266,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 750,
@@ -342,9 +342,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 12,
-    key: "Alistar",
-    name: "Alistar",
-    attackType: "Melee",
+    key: 'Alistar',
+    name: 'Alistar',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -354,9 +354,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -427,9 +427,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 799,
-    key: "Ambessa",
-    name: "Ambessa",
-    attackType: "Melee",
+    key: 'Ambessa',
+    name: 'Ambessa',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -439,9 +439,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Energy",
-    roles: ["Assassin", "Diver", "Fighter", "Skirmisher"],
+    positions: ['Top'],
+    resource: 'Energy',
+    roles: ['Assassin', 'Diver', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -510,9 +510,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 32,
-    key: "Amumu",
-    name: "Amumu",
-    attackType: "Melee",
+    key: 'Amumu',
+    name: 'Amumu',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -522,9 +522,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Jungle', 'Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -598,9 +598,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 34,
-    key: "Anivia",
-    name: "Anivia",
-    attackType: "Ranged",
+    key: 'Anivia',
+    name: 'Anivia',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -610,9 +610,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage", "Support"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -686,9 +686,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 1,
-    key: "Annie",
-    name: "Annie",
-    attackType: "Ranged",
+    key: 'Annie',
+    name: 'Annie',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -698,9 +698,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage", "Support"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 625,
@@ -774,9 +774,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 523,
-    key: "Aphelios",
-    name: "Aphelios",
-    attackType: "Ranged",
+    key: 'Aphelios',
+    name: 'Aphelios',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -786,9 +786,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -859,9 +859,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 22,
-    key: "Ashe",
-    name: "Ashe",
-    attackType: "Ranged",
+    key: 'Ashe',
+    name: 'Ashe',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 3,
@@ -871,9 +871,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom", "Support"],
-    resource: "Mana",
-    roles: ["Marksman", "Support"],
+    positions: ['Bottom', 'Support'],
+    resource: 'Mana',
+    roles: ['Marksman', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -947,9 +947,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 136,
-    key: "AurelionSol",
-    name: "Aurelion Sol",
-    attackType: "Ranged",
+    key: 'AurelionSol',
+    name: 'Aurelion Sol',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -959,9 +959,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -1035,9 +1035,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 893,
-    key: "Aurora",
-    name: "Aurora",
-    attackType: "Ranged",
+    key: 'Aurora',
+    name: 'Aurora',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -1047,9 +1047,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Burst", "Mage"],
+    positions: ['Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -1123,9 +1123,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 268,
-    key: "Azir",
-    name: "Azir",
-    attackType: "Ranged",
+    key: 'Azir',
+    name: 'Azir',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -1135,9 +1135,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman", "Specialist"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 700,
@@ -1211,9 +1211,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 432,
-    key: "Bard",
-    name: "Bard",
-    attackType: "Ranged",
+    key: 'Bard',
+    name: 'Bard',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -1223,9 +1223,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -1299,9 +1299,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 200,
-    key: "Belveth",
-    name: "Bel'Veth",
-    attackType: "Melee",
+    key: 'Belveth',
+    name: 'Bel\'Veth',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 0,
       control: 2,
@@ -1311,9 +1311,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "None",
-    roles: ["Fighter", "Skirmisher"],
+    positions: ['Jungle'],
+    resource: 'None',
+    roles: ['Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -1378,9 +1378,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 53,
-    key: "Blitzcrank",
-    name: "Blitzcrank",
-    attackType: "Melee",
+    key: 'Blitzcrank',
+    name: 'Blitzcrank',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -1390,9 +1390,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Support", "Tank"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Support', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -1466,9 +1466,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 63,
-    key: "Brand",
-    name: "Brand",
-    attackType: "Ranged",
+    key: 'Brand',
+    name: 'Brand',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -1478,9 +1478,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle", "Middle", "Support"],
-    resource: "Mana",
-    roles: ["Burst", "Mage", "Support"],
+    positions: ['Jungle', 'Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -1554,9 +1554,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 201,
-    key: "Braum",
-    name: "Braum",
-    attackType: "Melee",
+    key: 'Braum',
+    name: 'Braum',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -1566,9 +1566,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Warden"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -1642,9 +1642,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 233,
-    key: "Briar",
-    name: "Briar",
-    attackType: "Melee",
+    key: 'Briar',
+    name: 'Briar',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 10,
       control: 3,
@@ -1654,9 +1654,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Frenzy",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle'],
+    resource: 'Frenzy',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -1715,9 +1715,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 51,
-    key: "Caitlyn",
-    name: "Caitlyn",
-    attackType: "Ranged",
+    key: 'Caitlyn',
+    name: 'Caitlyn',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -1727,9 +1727,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -1803,9 +1803,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 164,
-    key: "Camille",
-    name: "Camille",
-    attackType: "Melee",
+    key: 'Camille',
+    name: 'Camille',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 40,
       control: 2,
@@ -1815,9 +1815,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Support", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -1888,9 +1888,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 69,
-    key: "Cassiopeia",
-    name: "Cassiopeia",
-    attackType: "Ranged",
+    key: 'Cassiopeia',
+    name: 'Cassiopeia',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -1900,9 +1900,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -1976,9 +1976,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 31,
-    key: "Chogath",
-    name: "Cho'Gath",
-    attackType: "Melee",
+    key: 'Chogath',
+    name: 'Cho\'Gath',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -1988,9 +1988,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Mage", "Specialist", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Specialist', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 500,
@@ -2064,9 +2064,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 42,
-    key: "Corki",
-    name: "Corki",
-    attackType: "Ranged",
+    key: 'Corki',
+    name: 'Corki',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -2076,9 +2076,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -2152,9 +2152,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 122,
-    key: "Darius",
-    name: "Darius",
-    attackType: "Melee",
+    key: 'Darius',
+    name: 'Darius',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -2164,9 +2164,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -2240,9 +2240,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 131,
-    key: "Diana",
-    name: "Diana",
-    attackType: "Melee",
+    key: 'Diana',
+    name: 'Diana',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -2252,9 +2252,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle', 'Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -2328,9 +2328,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 36,
-    key: "DrMundo",
-    name: "Dr. Mundo",
-    attackType: "Melee",
+    key: 'DrMundo',
+    name: 'Dr. Mundo',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -2340,9 +2340,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Health",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Health',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -2408,9 +2408,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 119,
-    key: "Draven",
-    name: "Draven",
-    attackType: "Ranged",
+    key: 'Draven',
+    name: 'Draven',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -2420,9 +2420,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -2496,9 +2496,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 245,
-    key: "Ekko",
-    name: "Ekko",
-    attackType: "Melee",
+    key: 'Ekko',
+    name: 'Ekko',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -2508,9 +2508,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Mage"],
+    positions: ['Jungle', 'Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -2581,9 +2581,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 60,
-    key: "Elise",
-    name: "Elise",
-    attackType: "Ranged",
+    key: 'Elise',
+    name: 'Elise',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -2593,9 +2593,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Mage"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -2669,9 +2669,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 28,
-    key: "Evelynn",
-    name: "Evelynn",
-    attackType: "Melee",
+    key: 'Evelynn',
+    name: 'Evelynn',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -2681,9 +2681,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Mage"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -2754,9 +2754,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 81,
-    key: "Ezreal",
-    name: "Ezreal",
-    attackType: "Ranged",
+    key: 'Ezreal',
+    name: 'Ezreal',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -2766,9 +2766,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -2842,9 +2842,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 9,
-    key: "Fiddlesticks",
-    name: "Fiddlesticks",
-    attackType: "Ranged",
+    key: 'Fiddlesticks',
+    name: 'Fiddlesticks',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -2854,9 +2854,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Mage", "Specialist", "Support"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Mage', 'Specialist', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 520,
@@ -2927,9 +2927,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 114,
-    key: "Fiora",
-    name: "Fiora",
-    attackType: "Melee",
+    key: 'Fiora',
+    name: 'Fiora',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -2939,9 +2939,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3012,9 +3012,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 105,
-    key: "Fizz",
-    name: "Fizz",
-    attackType: "Melee",
+    key: 'Fizz',
+    name: 'Fizz',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -3024,9 +3024,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -3100,9 +3100,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 3,
-    key: "Galio",
-    name: "Galio",
-    attackType: "Melee",
+    key: 'Galio',
+    name: 'Galio',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -3112,9 +3112,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Mage", "Tank", "Warden"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Mage', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3185,9 +3185,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 41,
-    key: "Gangplank",
-    name: "Gangplank",
-    attackType: "Melee",
+    key: 'Gangplank',
+    name: 'Gangplank',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -3197,9 +3197,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Specialist"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -3270,9 +3270,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 86,
-    key: "Garen",
-    name: "Garen",
-    attackType: "Melee",
+    key: 'Garen',
+    name: 'Garen',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -3282,9 +3282,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "None",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'None',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3350,9 +3350,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 150,
-    key: "Gnar",
-    name: "Gnar",
-    attackType: "Ranged",
+    key: 'Gnar',
+    name: 'Gnar',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -3362,9 +3362,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Rage",
-    roles: ["Fighter", "Specialist", "Tank"],
+    positions: ['Top'],
+    resource: 'Rage',
+    roles: ['Fighter', 'Specialist', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3434,9 +3434,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 79,
-    key: "Gragas",
-    name: "Gragas",
-    attackType: "Melee",
+    key: 'Gragas',
+    name: 'Gragas',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -3446,9 +3446,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Middle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Mage", "Vanguard"],
+    positions: ['Jungle', 'Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Mage', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3522,9 +3522,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 104,
-    key: "Graves",
-    name: "Graves",
-    attackType: "Ranged",
+    key: 'Graves',
+    name: 'Graves',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -3534,9 +3534,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Marksman", "Specialist"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -3610,9 +3610,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 887,
-    key: "Gwen",
-    name: "Gwen",
-    attackType: "Melee",
+    key: 'Gwen',
+    name: 'Gwen',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 50,
       control: 1,
@@ -3622,9 +3622,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3695,9 +3695,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 120,
-    key: "Hecarim",
-    name: "Hecarim",
-    attackType: "Melee",
+    key: 'Hecarim',
+    name: 'Hecarim',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -3707,9 +3707,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -3783,9 +3783,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 74,
-    key: "Heimerdinger",
-    name: "Heimerdinger",
-    attackType: "Ranged",
+    key: 'Heimerdinger',
+    name: 'Heimerdinger',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3795,9 +3795,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle", "Support", "Top"],
-    resource: "Mana",
-    roles: ["Mage", "Specialist", "Support"],
+    positions: ['Middle', 'Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Specialist', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -3871,9 +3871,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 910,
-    key: "Hwei",
-    name: "Hwei",
-    attackType: "Ranged",
+    key: 'Hwei',
+    name: 'Hwei',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -3883,9 +3883,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -3956,9 +3956,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 420,
-    key: "Illaoi",
-    name: "Illaoi",
-    attackType: "Melee",
+    key: 'Illaoi',
+    name: 'Illaoi',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -3968,9 +3968,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -4041,9 +4041,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 39,
-    key: "Irelia",
-    name: "Irelia",
-    attackType: "Melee",
+    key: 'Irelia',
+    name: 'Irelia',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -4053,9 +4053,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Middle", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -4126,9 +4126,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 427,
-    key: "Ivern",
-    name: "Ivern",
-    attackType: "Ranged",
+    key: 'Ivern',
+    name: 'Ivern',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 3,
@@ -4138,9 +4138,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Catcher", "Mage", "Support"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -4214,9 +4214,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 40,
-    key: "Janna",
-    name: "Janna",
-    attackType: "Ranged",
+    key: 'Janna',
+    name: 'Janna',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -4226,9 +4226,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -4302,9 +4302,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 59,
-    key: "JarvanIV",
-    name: "Jarvan IV",
-    attackType: "Melee",
+    key: 'JarvanIV',
+    name: 'Jarvan IV',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -4314,9 +4314,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -4390,9 +4390,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 24,
-    key: "Jax",
-    name: "Jax",
-    attackType: "Melee",
+    key: 'Jax',
+    name: 'Jax',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -4402,9 +4402,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -4478,9 +4478,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 126,
-    key: "Jayce",
-    name: "Jayce",
-    attackType: "Ranged",
+    key: 'Jayce',
+    name: 'Jayce',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -4490,9 +4490,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle", "Top"],
-    resource: "Mana",
-    roles: ["Artillery", "Fighter", "Marksman"],
+    positions: ['Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Fighter', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 200,
@@ -4566,9 +4566,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 202,
-    key: "Jhin",
-    name: "Jhin",
-    attackType: "Ranged",
+    key: 'Jhin',
+    name: 'Jhin',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -4578,9 +4578,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Catcher", "Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -4648,9 +4648,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 222,
-    key: "Jinx",
-    name: "Jinx",
-    attackType: "Ranged",
+    key: 'Jinx',
+    name: 'Jinx',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -4660,9 +4660,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -4733,9 +4733,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 897,
-    key: "KSante",
-    name: "K'Sante",
-    attackType: "Melee",
+    key: 'KSante',
+    name: 'K\'Sante',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 3,
@@ -4745,9 +4745,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Skirmisher", "Tank", "Warden"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Skirmisher', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -4821,9 +4821,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 145,
-    key: "Kaisa",
-    name: "Kai'Sa",
-    attackType: "Ranged",
+    key: 'Kaisa',
+    name: 'Kai\'Sa',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -4833,9 +4833,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -4906,9 +4906,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 429,
-    key: "Kalista",
-    name: "Kalista",
-    attackType: "Ranged",
+    key: 'Kalista',
+    name: 'Kalista',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -4918,9 +4918,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 900,
@@ -4994,9 +4994,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 43,
-    key: "Karma",
-    name: "Karma",
-    attackType: "Ranged",
+    key: 'Karma',
+    name: 'Karma',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -5006,9 +5006,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle", "Support", "Top"],
-    resource: "Mana",
-    roles: ["Burst", "Enchanter", "Mage", "Support"],
+    positions: ['Middle', 'Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Burst', 'Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -5082,9 +5082,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 30,
-    key: "Karthus",
-    name: "Karthus",
-    attackType: "Ranged",
+    key: 'Karthus',
+    name: 'Karthus',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -5094,9 +5094,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 450,
@@ -5170,9 +5170,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 38,
-    key: "Kassadin",
-    name: "Kassadin",
-    attackType: "Melee",
+    key: 'Kassadin',
+    name: 'Kassadin',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 1,
@@ -5182,9 +5182,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -5258,9 +5258,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 55,
-    key: "Katarina",
-    name: "Katarina",
-    attackType: "Melee",
+    key: 'Katarina',
+    name: 'Katarina',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -5270,9 +5270,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "None",
-    roles: ["Assassin", "Mage"],
+    positions: ['Middle'],
+    resource: 'None',
+    roles: ['Assassin', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -5338,9 +5338,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 10,
-    key: "Kayle",
-    name: "Kayle",
-    attackType: "Melee",
+    key: 'Kayle',
+    name: 'Kayle',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -5350,9 +5350,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman", "Specialist"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -5423,9 +5423,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 141,
-    key: "Kayn",
-    name: "Kayn",
-    attackType: "Melee",
+    key: 'Kayn',
+    name: 'Kayn',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -5435,9 +5435,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -5511,9 +5511,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 85,
-    key: "Kennen",
-    name: "Kennen",
-    attackType: "Ranged",
+    key: 'Kennen',
+    name: 'Kennen',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -5523,9 +5523,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Energy",
-    roles: ["Mage", "Marksman", "Specialist"],
+    positions: ['Top'],
+    resource: 'Energy',
+    roles: ['Mage', 'Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -5597,9 +5597,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 121,
-    key: "Khazix",
-    name: "Kha'Zix",
-    attackType: "Melee",
+    key: 'Khazix',
+    name: 'Kha\'Zix',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -5609,9 +5609,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -5685,9 +5685,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 203,
-    key: "Kindred",
-    name: "Kindred",
-    attackType: "Ranged",
+    key: 'Kindred',
+    name: 'Kindred',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -5697,9 +5697,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -5773,9 +5773,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 240,
-    key: "Kled",
-    name: "Kled",
-    attackType: "Melee",
+    key: 'Kled',
+    name: 'Kled',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -5785,9 +5785,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Courage",
-    roles: ["Fighter", "Skirmisher", "Tank"],
+    positions: ['Top'],
+    resource: 'Courage',
+    roles: ['Fighter', 'Skirmisher', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -5853,9 +5853,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 96,
-    key: "KogMaw",
-    name: "Kog'Maw",
-    attackType: "Ranged",
+    key: 'KogMaw',
+    name: 'Kog\'Maw',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -5865,9 +5865,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 900,
@@ -5941,9 +5941,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 7,
-    key: "Leblanc",
-    name: "LeBlanc",
-    attackType: "Ranged",
+    key: 'Leblanc',
+    name: 'LeBlanc',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -5953,9 +5953,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Burst", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -6029,9 +6029,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 64,
-    key: "LeeSin",
-    name: "Lee Sin",
-    attackType: "Melee",
+    key: 'LeeSin',
+    name: 'Lee Sin',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -6041,9 +6041,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Energy",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle'],
+    resource: 'Energy',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -6115,9 +6115,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 89,
-    key: "Leona",
-    name: "Leona",
-    attackType: "Melee",
+    key: 'Leona',
+    name: 'Leona',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -6127,9 +6127,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -6203,9 +6203,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 876,
-    key: "Lillia",
-    name: "Lillia",
-    attackType: "Melee",
+    key: 'Lillia',
+    name: 'Lillia',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -6215,9 +6215,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Fighter", "Mage", "Skirmisher"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Mage', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -6291,9 +6291,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 127,
-    key: "Lissandra",
-    name: "Lissandra",
-    attackType: "Ranged",
+    key: 'Lissandra',
+    name: 'Lissandra',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -6303,9 +6303,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -6379,9 +6379,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 236,
-    key: "Lucian",
-    name: "Lucian",
-    attackType: "Ranged",
+    key: 'Lucian',
+    name: 'Lucian',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -6391,9 +6391,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -6467,9 +6467,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 117,
-    key: "Lulu",
-    name: "Lulu",
-    attackType: "Ranged",
+    key: 'Lulu',
+    name: 'Lulu',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -6479,9 +6479,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 625,
@@ -6555,9 +6555,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 99,
-    key: "Lux",
-    name: "Lux",
-    attackType: "Ranged",
+    key: 'Lux',
+    name: 'Lux',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -6567,9 +6567,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Artillery", "Burst", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Burst', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 625,
@@ -6643,9 +6643,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 54,
-    key: "Malphite",
-    name: "Malphite",
-    attackType: "Melee",
+    key: 'Malphite',
+    name: 'Malphite',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -6655,9 +6655,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Middle", "Support", "Top"],
-    resource: "Mana",
-    roles: ["Mage", "Tank", "Vanguard"],
+    positions: ['Middle', 'Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -6731,9 +6731,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 90,
-    key: "Malzahar",
-    name: "Malzahar",
-    attackType: "Ranged",
+    key: 'Malzahar',
+    name: 'Malzahar',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -6743,9 +6743,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Battlemage", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Battlemage', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -6819,9 +6819,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 57,
-    key: "Maokai",
-    name: "Maokai",
-    attackType: "Melee",
+    key: 'Maokai',
+    name: 'Maokai',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -6831,9 +6831,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Jungle", "Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Jungle', 'Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -6904,9 +6904,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 11,
-    key: "MasterYi",
-    name: "Master Yi",
-    attackType: "Melee",
+    key: 'MasterYi',
+    name: 'Master Yi',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -6916,9 +6916,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -6992,9 +6992,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 800,
-    key: "Mel",
-    name: "Mel",
-    attackType: "Ranged",
+    key: 'Mel',
+    name: 'Mel',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -7004,9 +7004,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 625,
@@ -7080,9 +7080,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 902,
-    key: "Milio",
-    name: "Milio",
-    attackType: "Ranged",
+    key: 'Milio',
+    name: 'Milio',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -7092,9 +7092,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -7165,9 +7165,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 21,
-    key: "MissFortune",
-    name: "Miss Fortune",
-    attackType: "Ranged",
+    key: 'MissFortune',
+    name: 'Miss Fortune',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -7177,9 +7177,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -7253,9 +7253,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 82,
-    key: "Mordekaiser",
-    name: "Mordekaiser",
-    attackType: "Melee",
+    key: 'Mordekaiser',
+    name: 'Mordekaiser',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 80,
       control: 1,
@@ -7265,9 +7265,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Shield",
-    roles: ["Fighter", "Juggernaut", "Mage"],
+    positions: ['Top'],
+    resource: 'Shield',
+    roles: ['Fighter', 'Juggernaut', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -7333,9 +7333,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 25,
-    key: "Morgana",
-    name: "Morgana",
-    attackType: "Ranged",
+    key: 'Morgana',
+    name: 'Morgana',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -7345,9 +7345,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -7421,9 +7421,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 950,
-    key: "Naafiri",
-    name: "Naafiri",
-    attackType: "Melee",
+    key: 'Naafiri',
+    name: 'Naafiri',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 70,
       control: 1,
@@ -7433,9 +7433,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -7509,9 +7509,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 267,
-    key: "Nami",
-    name: "Nami",
-    attackType: "Ranged",
+    key: 'Nami',
+    name: 'Nami',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -7521,9 +7521,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -7597,9 +7597,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 75,
-    key: "Nasus",
-    name: "Nasus",
-    attackType: "Melee",
+    key: 'Nasus',
+    name: 'Nasus',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -7609,9 +7609,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 350,
@@ -7685,9 +7685,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 111,
-    key: "Nautilus",
-    name: "Nautilus",
-    attackType: "Melee",
+    key: 'Nautilus',
+    name: 'Nautilus',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -7697,9 +7697,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -7773,9 +7773,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 518,
-    key: "Neeko",
-    name: "Neeko",
-    attackType: "Ranged",
+    key: 'Neeko',
+    name: 'Neeko',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -7785,9 +7785,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Burst", "Catcher", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Burst', 'Catcher', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -7858,9 +7858,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 76,
-    key: "Nidalee",
-    name: "Nidalee",
-    attackType: "Ranged",
+    key: 'Nidalee',
+    name: 'Nidalee',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -7870,9 +7870,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Mage", "Specialist"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Mage', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -7946,9 +7946,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 895,
-    key: "Nilah",
-    name: "Nilah",
-    attackType: "Melee",
+    key: 'Nilah',
+    name: 'Nilah',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 25,
       control: 1,
@@ -7958,9 +7958,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -8034,9 +8034,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 56,
-    key: "Nocturne",
-    name: "Nocturne",
-    attackType: "Melee",
+    key: 'Nocturne',
+    name: 'Nocturne',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -8046,9 +8046,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -8122,9 +8122,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 20,
-    key: "Nunu",
-    name: "Nunu & Willump",
-    attackType: "Melee",
+    key: 'Nunu',
+    name: 'Nunu & Willump',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -8134,9 +8134,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Mage", "Tank", "Vanguard"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Mage', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -8210,9 +8210,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 2,
-    key: "Olaf",
-    name: "Olaf",
-    attackType: "Melee",
+    key: 'Olaf',
+    name: 'Olaf',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -8222,9 +8222,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -8298,9 +8298,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 61,
-    key: "Orianna",
-    name: "Orianna",
-    attackType: "Ranged",
+    key: 'Orianna',
+    name: 'Orianna',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -8310,9 +8310,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage", "Support"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -8386,9 +8386,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 516,
-    key: "Ornn",
-    name: "Ornn",
-    attackType: "Melee",
+    key: 'Ornn',
+    name: 'Ornn',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 60,
       control: 3,
@@ -8398,9 +8398,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Tank", "Vanguard"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -8471,9 +8471,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 80,
-    key: "Pantheon",
-    name: "Pantheon",
-    attackType: "Melee",
+    key: 'Pantheon',
+    name: 'Pantheon',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -8483,9 +8483,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Middle", "Support", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle', 'Middle', 'Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -8559,9 +8559,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 78,
-    key: "Poppy",
-    name: "Poppy",
-    attackType: "Melee",
+    key: 'Poppy',
+    name: 'Poppy',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -8571,9 +8571,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Tank", "Warden"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -8644,9 +8644,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 555,
-    key: "Pyke",
-    name: "Pyke",
-    attackType: "Melee",
+    key: 'Pyke',
+    name: 'Pyke',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 50,
       control: 3,
@@ -8656,9 +8656,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Assassin", "Catcher", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Catcher', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -8729,9 +8729,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 246,
-    key: "Qiyana",
-    name: "Qiyana",
-    attackType: "Melee",
+    key: 'Qiyana',
+    name: 'Qiyana',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 70,
       control: 2,
@@ -8741,9 +8741,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Fighter"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -8814,9 +8814,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 133,
-    key: "Quinn",
-    name: "Quinn",
-    attackType: "Ranged",
+    key: 'Quinn',
+    name: 'Quinn',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -8826,9 +8826,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman", "Specialist"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -8902,9 +8902,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 497,
-    key: "Rakan",
-    name: "Rakan",
-    attackType: "Melee",
+    key: 'Rakan',
+    name: 'Rakan',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -8914,9 +8914,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 475,
@@ -8987,9 +8987,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 33,
-    key: "Rammus",
-    name: "Rammus",
-    attackType: "Melee",
+    key: 'Rammus',
+    name: 'Rammus',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -8999,9 +8999,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Fighter", "Tank", "Vanguard"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9075,9 +9075,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 421,
-    key: "RekSai",
-    name: "Rek'Sai",
-    attackType: "Melee",
+    key: 'RekSai',
+    name: 'Rek\'Sai',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -9087,9 +9087,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Jungle"],
-    resource: "Rage",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle'],
+    resource: 'Rage',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9158,9 +9158,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 526,
-    key: "Rell",
-    name: "Rell",
-    attackType: "Melee",
+    key: 'Rell',
+    name: 'Rell',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 85,
       control: 3,
@@ -9170,9 +9170,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Vanguard"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -9243,9 +9243,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 888,
-    key: "Renata",
-    name: "Renata Glasc",
-    attackType: "Ranged",
+    key: 'Renata',
+    name: 'Renata Glasc',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -9255,9 +9255,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -9331,9 +9331,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 58,
-    key: "Renekton",
-    name: "Renekton",
-    attackType: "Melee",
+    key: 'Renekton',
+    name: 'Renekton',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -9343,9 +9343,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Fury",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Top'],
+    resource: 'Fury',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9414,9 +9414,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 107,
-    key: "Rengar",
-    name: "Rengar",
-    attackType: "Melee",
+    key: 'Rengar',
+    name: 'Rengar',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -9426,9 +9426,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Ferocity",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Ferocity',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9494,9 +9494,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 92,
-    key: "Riven",
-    name: "Riven",
-    attackType: "Melee",
+    key: 'Riven',
+    name: 'Riven',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -9506,9 +9506,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "None",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Top'],
+    resource: 'None',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9574,9 +9574,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 68,
-    key: "Rumble",
-    name: "Rumble",
-    attackType: "Melee",
+    key: 'Rumble',
+    name: 'Rumble',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -9586,9 +9586,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Heat",
-    roles: ["Battlemage", "Fighter", "Mage"],
+    positions: ['Middle', 'Top'],
+    resource: 'Heat',
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -9657,9 +9657,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 13,
-    key: "Ryze",
-    name: "Ryze",
-    attackType: "Ranged",
+    key: 'Ryze',
+    name: 'Ryze',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -9669,9 +9669,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Fighter", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -9745,9 +9745,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 360,
-    key: "Samira",
-    name: "Samira",
-    attackType: "Ranged",
+    key: 'Samira',
+    name: 'Samira',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -9757,9 +9757,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -9833,9 +9833,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 113,
-    key: "Sejuani",
-    name: "Sejuani",
-    attackType: "Melee",
+    key: 'Sejuani',
+    name: 'Sejuani',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -9845,9 +9845,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Fighter", "Tank", "Vanguard"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -9918,9 +9918,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 235,
-    key: "Senna",
-    name: "Senna",
-    attackType: "Ranged",
+    key: 'Senna',
+    name: 'Senna',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -9930,9 +9930,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Bottom", "Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Marksman", "Support"],
+    positions: ['Bottom', 'Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Marksman', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -10002,9 +10002,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 147,
-    key: "Seraphine",
-    name: "Seraphine",
-    attackType: "Ranged",
+    key: 'Seraphine',
+    name: 'Seraphine',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -10014,9 +10014,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom", "Support"],
-    resource: "Mana",
-    roles: ["Burst", "Enchanter", "Mage", "Support"],
+    positions: ['Bottom', 'Support'],
+    resource: 'Mana',
+    roles: ['Burst', 'Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -10090,9 +10090,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 875,
-    key: "Sett",
-    name: "Sett",
-    attackType: "Melee",
+    key: 'Sett',
+    name: 'Sett',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 40,
       control: 2,
@@ -10102,9 +10102,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Grit",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Grit',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -10170,9 +10170,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 35,
-    key: "Shaco",
-    name: "Shaco",
-    attackType: "Melee",
+    key: 'Shaco',
+    name: 'Shaco',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -10182,9 +10182,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle", "Support"],
-    resource: "Mana",
-    roles: ["Assassin"],
+    positions: ['Jungle', 'Support'],
+    resource: 'Mana',
+    roles: ['Assassin'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -10258,9 +10258,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 98,
-    key: "Shen",
-    name: "Shen",
-    attackType: "Melee",
+    key: 'Shen',
+    name: 'Shen',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -10270,9 +10270,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 3,
     },
-    positions: ["Support", "Top"],
-    resource: "Energy",
-    roles: ["Tank", "Warden"],
+    positions: ['Support', 'Top'],
+    resource: 'Energy',
+    roles: ['Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -10341,9 +10341,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 102,
-    key: "Shyvana",
-    name: "Shyvana",
-    attackType: "Melee",
+    key: 'Shyvana',
+    name: 'Shyvana',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -10353,9 +10353,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Fury",
-    roles: ["Fighter", "Juggernaut", "Mage"],
+    positions: ['Jungle'],
+    resource: 'Fury',
+    roles: ['Fighter', 'Juggernaut', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -10424,9 +10424,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 27,
-    key: "Singed",
-    name: "Singed",
-    attackType: "Melee",
+    key: 'Singed',
+    name: 'Singed',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -10436,9 +10436,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Mage", "Specialist", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Specialist', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 300,
@@ -10512,9 +10512,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 14,
-    key: "Sion",
-    name: "Sion",
-    attackType: "Melee",
+    key: 'Sion',
+    name: 'Sion',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -10524,9 +10524,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Tank", "Vanguard"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -10600,9 +10600,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 15,
-    key: "Sivir",
-    name: "Sivir",
-    attackType: "Ranged",
+    key: 'Sivir',
+    name: 'Sivir',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -10612,9 +10612,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 500,
@@ -10688,9 +10688,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 72,
-    key: "Skarner",
-    name: "Skarner",
-    attackType: "Melee",
+    key: 'Skarner',
+    name: 'Skarner',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 45,
       control: 3,
@@ -10700,9 +10700,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank", "Vanguard"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -10773,9 +10773,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 901,
-    key: "Smolder",
-    name: "Smolder",
-    attackType: "Ranged",
+    key: 'Smolder',
+    name: 'Smolder',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -10785,9 +10785,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom", "Middle", "Top"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman"],
+    positions: ['Bottom', 'Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 900,
@@ -10861,9 +10861,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 37,
-    key: "Sona",
-    name: "Sona",
-    attackType: "Ranged",
+    key: 'Sona',
+    name: 'Sona',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -10873,9 +10873,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -10949,9 +10949,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 16,
-    key: "Soraka",
-    name: "Soraka",
-    attackType: "Ranged",
+    key: 'Soraka',
+    name: 'Soraka',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -10961,9 +10961,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -11037,9 +11037,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 50,
-    key: "Swain",
-    name: "Swain",
-    attackType: "Ranged",
+    key: 'Swain',
+    name: 'Swain',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -11049,9 +11049,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Bottom", "Middle", "Support"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage", "Support"],
+    positions: ['Bottom', 'Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -11125,9 +11125,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 517,
-    key: "Sylas",
-    name: "Sylas",
-    attackType: "Melee",
+    key: 'Sylas',
+    name: 'Sylas',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 70,
       control: 1,
@@ -11137,9 +11137,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Burst", "Mage", "Skirmisher"],
+    positions: ['Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Burst', 'Mage', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -11213,9 +11213,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 134,
-    key: "Syndra",
-    name: "Syndra",
-    attackType: "Ranged",
+    key: 'Syndra',
+    name: 'Syndra',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -11225,9 +11225,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -11301,9 +11301,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 223,
-    key: "TahmKench",
-    name: "Tahm Kench",
-    attackType: "Melee",
+    key: 'TahmKench',
+    name: 'Tahm Kench',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -11313,9 +11313,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 3,
     },
-    positions: ["Support", "Top"],
-    resource: "Mana",
-    roles: ["Support", "Tank", "Warden"],
+    positions: ['Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Support', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -11386,9 +11386,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 163,
-    key: "Taliyah",
-    name: "Taliyah",
-    attackType: "Ranged",
+    key: 'Taliyah',
+    name: 'Taliyah',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -11398,9 +11398,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Jungle", "Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage", "Support"],
+    positions: ['Jungle', 'Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -11474,9 +11474,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 91,
-    key: "Talon",
-    name: "Talon",
-    attackType: "Melee",
+    key: 'Talon',
+    name: 'Talon',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -11486,9 +11486,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -11559,9 +11559,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 44,
-    key: "Taric",
-    name: "Taric",
-    attackType: "Melee",
+    key: 'Taric',
+    name: 'Taric',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -11571,9 +11571,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 3,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Support", "Tank", "Warden"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Support', 'Tank', 'Warden'],
     stats: {
       acquisitionRadius: {
         flat: 350,
@@ -11647,9 +11647,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 17,
-    key: "Teemo",
-    name: "Teemo",
-    attackType: "Ranged",
+    key: 'Teemo',
+    name: 'Teemo',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -11659,9 +11659,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Jungle", "Support", "Top"],
-    resource: "Mana",
-    roles: ["Mage", "Marksman", "Specialist"],
+    positions: ['Jungle', 'Support', 'Top'],
+    resource: 'Mana',
+    roles: ['Mage', 'Marksman', 'Specialist'],
     stats: {
       acquisitionRadius: {
         flat: 500,
@@ -11735,9 +11735,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 412,
-    key: "Thresh",
-    name: "Thresh",
-    attackType: "Ranged",
+    key: 'Thresh',
+    name: 'Thresh',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -11747,9 +11747,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Support", "Tank"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Support', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 475,
@@ -11822,9 +11822,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 18,
-    key: "Tristana",
-    name: "Tristana",
-    attackType: "Ranged",
+    key: 'Tristana',
+    name: 'Tristana',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -11834,9 +11834,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom", "Middle"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Bottom', 'Middle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -11910,9 +11910,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 48,
-    key: "Trundle",
-    name: "Trundle",
-    attackType: "Melee",
+    key: 'Trundle',
+    name: 'Trundle',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -11922,9 +11922,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 2,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -11998,9 +11998,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 23,
-    key: "Tryndamere",
-    name: "Tryndamere",
-    attackType: "Melee",
+    key: 'Tryndamere',
+    name: 'Tryndamere',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -12010,9 +12010,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Fury",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Top'],
+    resource: 'Fury',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -12081,9 +12081,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 4,
-    key: "TwistedFate",
-    name: "Twisted Fate",
-    attackType: "Ranged",
+    key: 'TwistedFate',
+    name: 'Twisted Fate',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -12093,9 +12093,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom", "Middle", "Top"],
-    resource: "Mana",
-    roles: ["Burst", "Mage", "Marksman"],
+    positions: ['Bottom', 'Middle', 'Top'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -12169,9 +12169,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 29,
-    key: "Twitch",
-    name: "Twitch",
-    attackType: "Ranged",
+    key: 'Twitch',
+    name: 'Twitch',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -12181,9 +12181,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom", "Support"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Bottom', 'Support'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -12257,9 +12257,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 77,
-    key: "Udyr",
-    name: "Udyr",
-    attackType: "Melee",
+    key: 'Udyr',
+    name: 'Udyr',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -12269,9 +12269,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -12345,9 +12345,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 6,
-    key: "Urgot",
-    name: "Urgot",
-    attackType: "Ranged",
+    key: 'Urgot',
+    name: 'Urgot',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -12357,9 +12357,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -12433,9 +12433,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 110,
-    key: "Varus",
-    name: "Varus",
-    attackType: "Ranged",
+    key: 'Varus',
+    name: 'Varus',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -12445,9 +12445,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage", "Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -12521,9 +12521,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 67,
-    key: "Vayne",
-    name: "Vayne",
-    attackType: "Ranged",
+    key: 'Vayne',
+    name: 'Vayne',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 0,
       control: 2,
@@ -12533,9 +12533,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom", "Top"],
-    resource: "Mana",
-    roles: ["Assassin", "Marksman"],
+    positions: ['Bottom', 'Top'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -12609,9 +12609,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 45,
-    key: "Veigar",
-    name: "Veigar",
-    attackType: "Ranged",
+    key: 'Veigar',
+    name: 'Veigar',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -12621,9 +12621,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Burst", "Mage"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -12697,9 +12697,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 161,
-    key: "Velkoz",
-    name: "Vel'Koz",
-    attackType: "Ranged",
+    key: 'Velkoz',
+    name: 'Vel\'Koz',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -12709,9 +12709,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -12785,9 +12785,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 711,
-    key: "Vex",
-    name: "Vex",
-    attackType: "Ranged",
+    key: 'Vex',
+    name: 'Vex',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -12797,9 +12797,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 750,
@@ -12873,9 +12873,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 254,
-    key: "Vi",
-    name: "Vi",
-    attackType: "Melee",
+    key: 'Vi',
+    name: 'Vi',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 3,
@@ -12885,9 +12885,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Assassin", "Diver", "Fighter"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Assassin', 'Diver', 'Fighter'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -12958,9 +12958,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 234,
-    key: "Viego",
-    name: "Viego",
-    attackType: "Melee",
+    key: 'Viego',
+    name: 'Viego',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -12970,9 +12970,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "None",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Jungle'],
+    resource: 'None',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 775,
@@ -13038,9 +13038,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 112,
-    key: "Viktor",
-    name: "Viktor",
-    attackType: "Ranged",
+    key: 'Viktor',
+    name: 'Viktor',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -13050,9 +13050,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Battlemage", "Mage"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Battlemage', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 525,
@@ -13126,9 +13126,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 8,
-    key: "Vladimir",
-    name: "Vladimir",
-    attackType: "Ranged",
+    key: 'Vladimir',
+    name: 'Vladimir',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -13138,9 +13138,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Crimson rush",
-    roles: ["Battlemage", "Fighter", "Mage"],
+    positions: ['Middle', 'Top'],
+    resource: 'Crimson rush',
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -13209,9 +13209,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 106,
-    key: "Volibear",
-    name: "Volibear",
-    attackType: "Melee",
+    key: 'Volibear',
+    name: 'Volibear',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -13221,9 +13221,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -13294,9 +13294,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 19,
-    key: "Warwick",
-    name: "Warwick",
-    attackType: "Melee",
+    key: 'Warwick',
+    name: 'Warwick',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -13306,9 +13306,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -13382,9 +13382,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 62,
-    key: "MonkeyKing",
-    name: "Wukong",
-    attackType: "Melee",
+    key: 'MonkeyKing',
+    name: 'Wukong',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -13394,9 +13394,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle", "Top"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle', 'Top'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -13470,9 +13470,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 498,
-    key: "Xayah",
-    name: "Xayah",
-    attackType: "Ranged",
+    key: 'Xayah',
+    name: 'Xayah',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 30,
       control: 3,
@@ -13482,9 +13482,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -13555,9 +13555,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 101,
-    key: "Xerath",
-    name: "Xerath",
-    attackType: "Ranged",
+    key: 'Xerath',
+    name: 'Xerath',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -13567,9 +13567,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Support"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage", "Support"],
+    positions: ['Middle', 'Support'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 600,
@@ -13643,9 +13643,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 5,
-    key: "XinZhao",
-    name: "Xin Zhao",
-    attackType: "Melee",
+    key: 'XinZhao',
+    name: 'Xin Zhao',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -13655,9 +13655,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 1,
     },
-    positions: ["Jungle"],
-    resource: "Mana",
-    roles: ["Diver", "Fighter", "Tank"],
+    positions: ['Jungle'],
+    resource: 'Mana',
+    roles: ['Diver', 'Fighter', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -13728,9 +13728,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 157,
-    key: "Yasuo",
-    name: "Yasuo",
-    attackType: "Melee",
+    key: 'Yasuo',
+    name: 'Yasuo',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -13740,9 +13740,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 2,
     },
-    positions: ["Bottom", "Middle", "Top"],
-    resource: "Flow",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Bottom', 'Middle', 'Top'],
+    resource: 'Flow',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -13811,9 +13811,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 777,
-    key: "Yone",
-    name: "Yone",
-    attackType: "Melee",
+    key: 'Yone',
+    name: 'Yone',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -13823,9 +13823,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle", "Top"],
-    resource: "Flow",
-    roles: ["Assassin", "Fighter", "Skirmisher"],
+    positions: ['Middle', 'Top'],
+    resource: 'Flow',
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -13894,9 +13894,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 83,
-    key: "Yorick",
-    name: "Yorick",
-    attackType: "Melee",
+    key: 'Yorick',
+    name: 'Yorick',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -13906,9 +13906,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 2,
       utility: 2,
     },
-    positions: ["Top"],
-    resource: "Mana",
-    roles: ["Fighter", "Juggernaut", "Tank"],
+    positions: ['Top'],
+    resource: 'Mana',
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -13979,9 +13979,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 804,
-    key: "Yunara",
-    name: "Yunara",
-    attackType: "Ranged",
+    key: 'Yunara',
+    name: 'Yunara',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 35,
       control: 1,
@@ -13991,9 +13991,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 0,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -14064,9 +14064,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 350,
-    key: "Yuumi",
-    name: "Yuumi",
-    attackType: "Ranged",
+    key: 'Yuumi',
+    name: 'Yuumi',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -14076,9 +14076,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Enchanter", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Enchanter', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 475,
@@ -14149,9 +14149,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 154,
-    key: "Zac",
-    name: "Zac",
-    attackType: "Melee",
+    key: 'Zac',
+    name: 'Zac',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -14161,9 +14161,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 3,
       utility: 1,
     },
-    positions: ["Jungle", "Support", "Top"],
-    resource: "Health",
-    roles: ["Fighter", "Tank", "Vanguard"],
+    positions: ['Jungle', 'Support', 'Top'],
+    resource: 'Health',
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -14226,9 +14226,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 238,
-    key: "Zed",
-    name: "Zed",
-    attackType: "Melee",
+    key: 'Zed',
+    name: 'Zed',
+    attackType: 'Melee',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -14238,9 +14238,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Jungle", "Middle"],
-    resource: "Energy",
-    roles: ["Assassin"],
+    positions: ['Jungle', 'Middle'],
+    resource: 'Energy',
+    roles: ['Assassin'],
     stats: {
       acquisitionRadius: {
         flat: 400,
@@ -14312,9 +14312,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 221,
-    key: "Zeri",
-    name: "Zeri",
-    attackType: "Ranged",
+    key: 'Zeri',
+    name: 'Zeri',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -14324,9 +14324,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 0,
     },
-    positions: ["Bottom"],
-    resource: "Mana",
-    roles: ["Marksman"],
+    positions: ['Bottom'],
+    resource: 'Mana',
+    roles: ['Marksman'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -14400,9 +14400,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 115,
-    key: "Ziggs",
-    name: "Ziggs",
-    attackType: "Ranged",
+    key: 'Ziggs',
+    name: 'Ziggs',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -14412,9 +14412,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Bottom", "Middle"],
-    resource: "Mana",
-    roles: ["Artillery", "Mage"],
+    positions: ['Bottom', 'Middle'],
+    resource: 'Mana',
+    roles: ['Artillery', 'Mage'],
     stats: {
       acquisitionRadius: {
         flat: 800,
@@ -14488,9 +14488,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 26,
-    key: "Zilean",
-    name: "Zilean",
-    attackType: "Ranged",
+    key: 'Zilean',
+    name: 'Zilean',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -14500,9 +14500,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 3,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Mage", "Specialist", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Mage', 'Specialist', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -14576,9 +14576,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 142,
-    key: "Zoe",
-    name: "Zoe",
-    attackType: "Ranged",
+    key: 'Zoe',
+    name: 'Zoe',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -14588,9 +14588,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Middle"],
-    resource: "Mana",
-    roles: ["Burst", "Mage", "Support"],
+    positions: ['Middle'],
+    resource: 'Mana',
+    roles: ['Burst', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 550,
@@ -14664,9 +14664,9 @@ export const championsLite: ChampionLite[] = [
   },
   {
     id: 143,
-    key: "Zyra",
-    name: "Zyra",
-    attackType: "Ranged",
+    key: 'Zyra',
+    name: 'Zyra',
+    attackType: 'Ranged',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -14676,9 +14676,9 @@ export const championsLite: ChampionLite[] = [
       toughness: 1,
       utility: 1,
     },
-    positions: ["Support"],
-    resource: "Mana",
-    roles: ["Catcher", "Mage", "Support"],
+    positions: ['Support'],
+    resource: 'Mana',
+    roles: ['Catcher', 'Mage', 'Support'],
     stats: {
       acquisitionRadius: {
         flat: 575,
@@ -14750,4 +14750,4 @@ export const championsLite: ChampionLite[] = [
       },
     },
   },
-];
+]

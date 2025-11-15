@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { itemTags } from "#shared/references";
+import { itemTags } from '#shared/references'
 </script>
 
 <template>
-  <Select v-model:model-value="is().filters.tags" :multiple="true">
+  <Select
+    v-model:model-value="is().filters.tags"
+    :multiple="true">
     <VarSelectTrigger
       :variant="is().filters.tags.length ? 'neutral' : 'outline'"
       size="12"
-      class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-b2/40!"
-      shape="square"
-    >
+      class="
+        indicator relative
+        open:inset-shadow-sm open:not-on:bg-tint-b2/40!
+      "
+      shape="square">
       <StatusIndicator
         v-if="is().filters.tags.length"
         color="master"
@@ -18,13 +22,14 @@ import { itemTags } from "#shared/references";
             'animate-in fade-in zoom-in': is().filters.tags.length,
             'animate-out zoom-out fade-out': !is().filters.tags.length,
           })
-        "
-      />
+        " />
       <icon name="filter" />
     </VarSelectTrigger>
     <SelectContent
-      class="top-[calc(var(--reka-select-trigger-height)+2px)] w-64 -translate-x-52 *:space-y-1"
-    >
+      class="
+        top-[calc(var(--reka-select-trigger-height)+2px)] w-64 -translate-x-52
+        *:space-y-1
+      ">
       <SelectGroup>
         <SelectLabel> Item Tier </SelectLabel>
         <SelectSeparator />
@@ -38,9 +43,11 @@ import { itemTags } from "#shared/references";
         <SelectItem
           v-for="tag in itemTags"
           :key="tag.id"
-          class="py-1.5 font-medium capitalize *:flex *:items-center *:gap-3"
-          :value="tag.id"
-        >
+          class="
+            py-1.5 font-medium capitalize
+            *:flex *:items-center *:gap-3
+          "
+          :value="tag.id">
           <ItemTagIcon :tag />
           {{ tag.name }}
         </SelectItem>

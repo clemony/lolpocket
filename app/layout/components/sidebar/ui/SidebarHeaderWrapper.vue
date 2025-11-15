@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { title, class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-  title?: string;
-}>();
+  class?: HTMLAttributes['class']
+  title?: string
+}>()
 </script>
 
 <template>

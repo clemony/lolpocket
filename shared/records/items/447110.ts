@@ -1,18 +1,18 @@
 const item: Item = {
   id: 447110,
-  name: "Moonflair Spellblade",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7110_moonflairspellblade.png",
+  name: 'Moonflair Spellblade',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7110_moonflairspellblade.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Relentless",
+      name: 'Relentless',
       effects:
         'Casting an ability <img src="/img/icons/basic-attack-reset.webp" class="tip-icon" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5 seconds.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -20,7 +20,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["MAGE"],
+    tags: ['MAGE'],
   },
   specialRecipe: 220007,
   stats: {
@@ -28,5 +28,5 @@ const item: Item = {
     health: 400,
     tenacity: 30,
   },
-};
-export default item;
+}
+export default item

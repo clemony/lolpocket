@@ -8,26 +8,26 @@ const {
   k,
   params,
 } = defineProps<{
-  id?: number;
-  k?: string;
-  params?: any;
-  alt?: string;
-  as?: string;
-  class?: HTMLAttributes["class"];
-  title?: string;
-}>();
+  id?: number
+  k?: string
+  params?: any
+  alt?: string
+  as?: string
+  class?: HTMLAttributes['class']
+  title?: string
+}>()
 
-const emit = defineEmits(["loaded"]);
+const emit = defineEmits(['loaded'])
 
 const champId = computed(() =>
   params ? params.value : k ? ix().champIdByKey(k) : id,
-);
+)
 
-const loaded = ref(false);
+const loaded = ref(false)
 
 function onLoad() {
-  loaded.value = true;
-  emit("loaded");
+  loaded.value = true
+  emit('loaded')
 }
 </script>
 
@@ -37,17 +37,15 @@ function onLoad() {
     :class="
       cn(
         `
-      grid aspect-square shrink-0 place-items-center overflow-hidden rounded-lg
-      shadow-sm drop-shadow-sm
-    `,
+          grid aspect-square shrink-0 place-items-center overflow-hidden
+          rounded-lg shadow-sm drop-shadow-sm
+        `,
         className,
       )
-    "
-  >
+    ">
     <StaticImg
       :img="`/img/champions/${champId}.webp`"
       :alt="title || alt || `Champion ${champId} icon`"
-      @loaded="onLoad"
-    />
+      @loaded="onLoad" />
   </Element>
 </template>

@@ -1,13 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "./theme.css";
+@import './theme.css';
 
 @layer components {
   .icon-grid-style {
     @apply hover:ring-neutral hover:bg-neutral rounded-lg !size-full cursor-pointer  hover:ring;
   }
   .rune-hover:hover label,
-  .rune-hover[aria-expanded="true"] label {
+  .rune-hover[aria-expanded='true'] label {
     @apply !grayscale-0 ring-neutral opacity-100 ring;
   }
 
@@ -72,17 +72,11 @@
     /* the radius */
     --s: 40px;
     /* the size of the cut */
-    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
-      radial-gradient(#000 70%, #0000 72%) no-repeat;
+    --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
     mask:
       calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
-        no-repeat,
-      conic-gradient(
-        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
-        #000 75%,
-        #0000 0
-      );
+      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
+      conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);
   }
 }

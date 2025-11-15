@@ -1,33 +1,33 @@
-import fs from "node:fs";
-import path from "node:path";
-import type { Skin } from "../../types/types.import";
-import { resolvePath } from "../resolvePath";
-import { cleanImageLink, cleanImageNum, handleImageId } from "../utils";
-import { markUpdate } from "../utils/markUpdate";
+import fs from 'node:fs'
+import path from 'node:path'
+import type { Skin } from '../../types/types.import'
+import { resolvePath } from '../resolvePath'
+import { cleanImageLink, cleanImageNum, handleImageId } from '../utils'
+import { markUpdate } from '../utils/markUpdate'
 
-const championsPath = resolvePath("./champions/raw/champions-raw-meraki.json");
-const outputFull = path.resolve("./shared/indexes/skin-index.ts");
-const outputTile = path.resolve("./shared/indexes/champion-key-to-tile.ts");
-const outputBase = path.resolve("./shared/indexes/skins-base.ts");
+const championsPath = resolvePath('./champions/raw/champions-raw-meraki.json')
+const outputFull = path.resolve('./shared/indexes/skin-index.ts')
+const outputTile = path.resolve('./shared/indexes/champion-key-to-tile.ts')
+const outputBase = path.resolve('./shared/indexes/skins-base.ts')
 
 export interface RawSkin {
-  name?: string;
-  loadScreenPath: string;
-  splashPath: string;
-  tilePath: string;
-  uncenteredSplashPath: string;
+  name?: string
+  loadScreenPath: string
+  splashPath: string
+  tilePath: string
+  uncenteredSplashPath: string
 }
 
-const championsRaw = fs.readFileSync(championsPath, "utf-8");
-const champions = JSON.parse(championsRaw);
+const championsRaw = fs.readFileSync(championsPath, 'utf-8')
+const champions = JSON.parse(championsRaw)
 
-const fullSkins: Record<string, Skin[]> = {};
-const primarySkins: Record<string, Skin> = {};
-const tileSkins: Record<string, string> = {};
+const fullSkins: Record<string, Skin[]> = {}
+const primarySkins: Record<string, Skin> = {}
+const tileSkins: Record<string, string> = {}
 
 for (const key in champions) {
-  const champ = champions[key];
-  const skins: RawSkin[] = champ.skins || [];
+  const champ = champions[key]
+  const skins: RawSkin[] = champ.skins || []
   /*
   const baseSkins = (skins: RawSkin[]): Skin => {
     const s = skins.filter(skin =>
@@ -54,43 +54,43 @@ for (const key in champions) {
   }
  */
   const allSkins = skins
-    .filter((skin) => skin.splashPath && skin.loadScreenPath)
+    .filter(skin => skin.splashPath && skin.loadScreenPath)
     .map((skin) => {
       return {
         id: String(cleanImageNum(skin.tilePath)),
         key: String(cleanImageLink(skin.splashPath)),
         name: String(skin.name),
         load: String(cleanImageLink(skin.loadScreenPath)),
-      };
-    });
+      }
+    })
 
   const allTile = skins
-    .filter((skin) => skin.tilePath)
-    .map((skin) => String(cleanImageLink(skin.tilePath)));
+    .filter(skin => skin.tilePath)
+    .map(skin => String(cleanImageLink(skin.tilePath)))
 
   if (allSkins.length > 0) {
-    fullSkins[key] = allSkins;
+    fullSkins[key] = allSkins
   }
   if (allTile.length > 0) {
-    tileSkins[key] = allTile[0];
+    tileSkins[key] = allTile[0]
   }
 }
 
 // 🟢 Write new files after comparison
 const fullSkinsTs = `// ${markUpdate()}
- export const skinIndex: Record<string, Skin[]> = ${JSON.stringify(fullSkins, null, 2)}`;
+ export const skinIndex: Record<string, Skin[]> = ${JSON.stringify(fullSkins, null, 2)}`
 
-fs.writeFileSync(outputFull, fullSkinsTs);
+fs.writeFileSync(outputFull, fullSkinsTs)
 
 const tileSkinsTs = `// ${markUpdate()}
- export const championKeyToTile: Record<string, string> = ${JSON.stringify(tileSkins, null, 2)}`;
+ export const championKeyToTile: Record<string, string> = ${JSON.stringify(tileSkins, null, 2)}`
 
-fs.writeFileSync(outputTile, tileSkinsTs);
+fs.writeFileSync(outputTile, tileSkinsTs)
 
 //
 const primarySkinsTs = `// ${markUpdate()}
 
-export const baseSkin: Record<string, Skin> = ${JSON.stringify(primarySkins, null, 2)}`;
+export const baseSkin: Record<string, Skin> = ${JSON.stringify(primarySkins, null, 2)}`
 // fs.writeFileSync(outputBase, primarySkinsTs)
 
-console.log(`✅ skins-full.ts and skins-base.ts written as modules`);
+console.log(`✅ skins-full.ts and skins-base.ts written as modules`)

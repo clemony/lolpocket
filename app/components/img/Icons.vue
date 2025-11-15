@@ -8,8 +8,8 @@ const props = withDefaults(defineProps<{
   wrapperClass?: HTMLAttributes['class']
   size?: ElementVariants['size']
 }>(), {
-
   size: 'sq-4',
+
 })
 
 const delegated = reactiveOmit(props, 'class', 'name')

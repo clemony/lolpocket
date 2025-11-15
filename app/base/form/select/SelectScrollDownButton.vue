@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { SelectScrollDownButtonProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { SelectScrollDownButton, useForwardProps } from "reka-ui";
+import type { SelectScrollDownButtonProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { SelectScrollDownButton, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  SelectScrollDownButtonProps & { class?: HTMLAttributes["class"] }
->();
+  SelectScrollDownButtonProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -17,10 +17,11 @@ const forwarded = useForwardProps(delegatedProps);
     v-bind="forwarded"
     :class="
       cn('flex cursor-default items-center justify-center py-1', props.class)
-    "
-  >
+    ">
     <slot>
-      <icon name="down" class="size-4" />
+      <icon
+        name="down"
+        class="size-4" />
     </slot>
   </SelectScrollDownButton>
 </template>

@@ -1,10 +1,10 @@
 const item: Item = {
   id: 2144,
-  name: "Juice of Haste",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/icons_souljuice_yellow.png",
+  name: 'Juice of Haste',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/icons_souljuice_yellow.png',
   maps: [30],
   noEffects: false,
-  rank: "Consumable",
+  rank: 'Consumable',
   removed: false,
   shop: {
     prices: {
@@ -15,5 +15,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

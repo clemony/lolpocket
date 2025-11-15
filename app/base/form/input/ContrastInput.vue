@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  inputClass?: HTMLAttributes["class"];
-  search?: boolean;
-  placeholder?: string;
-}>();
+  class?: HTMLAttributes['class']
+  inputClass?: HTMLAttributes['class']
+  search?: boolean
+  placeholder?: string
+}>()
 </script>
 
 <template>
@@ -23,13 +23,11 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <icon
       v-if="props.search"
       name="search"
-      class="pointer-events-none size-5 opacity-80"
-    />
+      class="pointer-events-none size-5 opacity-80" />
 
     <input
       v-bind="$attrs"
@@ -42,8 +40,7 @@ const props = defineProps<{
           `,
           props.inputClass,
         )
-      "
-    />
+      " />
 
     <slot />
   </div>

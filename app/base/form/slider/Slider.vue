@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import type { SliderRootEmits, SliderRootProps } from "reka-ui";
+import type { SliderRootEmits, SliderRootProps } from 'reka-ui'
 import {
   SliderRange,
   SliderRoot,
   SliderThumb,
   SliderTrack,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
   SliderRootProps & {
-    class?: HTMLAttributes["class"];
-    thumbClass?: HTMLAttributes["class"];
+    class?: HTMLAttributes['class']
+    thumbClass?: HTMLAttributes['class']
   }
->();
-const emits = defineEmits<SliderRootEmits>();
+>()
+const emits = defineEmits<SliderRootEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -33,14 +33,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         props.class,
       )
     "
-    v-bind="forwarded"
-  >
+    v-bind="forwarded">
     <SliderTrack
-      class="relative h-1.5 w-full grow overflow-hidden rounded-full bg-tint-b3/20 data-[orientation=vertical]:w-1.5"
-    >
+      class="
+        relative h-1.5 w-full grow overflow-hidden rounded-full bg-tint-b3/20
+        data-[orientation=vertical]:w-1.5
+      ">
       <SliderRange
-        class="absolute h-full bg-neutral data-[orientation=vertical]:w-full"
-      />
+        class="
+          absolute h-full bg-neutral
+          data-[orientation=vertical]:w-full
+        " />
     </SliderTrack>
 
     <SliderThumb
@@ -58,8 +61,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
           `,
           props.thumbClass,
         )
-      "
-    >
+      ">
       <slot />
     </SliderThumb>
   </SliderRoot>

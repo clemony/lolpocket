@@ -1,1 +1,1 @@
-export const ms = () => useMatchStore();
+export const ms = () => useMatchStore()

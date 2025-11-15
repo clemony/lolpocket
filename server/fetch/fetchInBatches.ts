@@ -1,5 +1,5 @@
-import type { MatchData } from "./../../shared/types/types.match";
-import { getMatchById } from "../api/riotClient";
+import type { MatchData } from './../../shared/types/types.match'
+import { getMatchById } from '../api/riotClient'
 
 /**
  * Fetches match details in batches with limited concurrency.
@@ -24,21 +24,20 @@ import { getMatchById } from "../api/riotClient";
  * const matches = await fetchInBatches(matchIds)
  */
 export async function fetchInBatches(ids: string[]) {
-  const concurrency = 10;
-  const results: MatchData[] = [];
+  const concurrency = 10
+  const results: MatchData[] = []
 
   await Promise.all(
     Array.from({ length: Math.ceil(ids.length / concurrency) }, (_, i) =>
       Promise.all(
-        ids.slice(i * concurrency, (i + 1) * concurrency).map((id) =>
+        ids.slice(i * concurrency, (i + 1) * concurrency).map(id =>
           getMatchById(id).catch((error) => {
-            console.error(`Error fetching match ${id}:`, error);
-            return null;
+            console.error(`Error fetching match ${id}:`, error)
+            return null
           }),
         ),
-      ).then((batch) => results.push(...batch.filter(Boolean))),
-    ),
-  );
+      ).then(batch => results.push(...batch.filter(Boolean))),),
+  )
 
-  return results;
+  return results
 }

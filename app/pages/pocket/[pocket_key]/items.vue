@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import type { Pocket } from "#shared/schema";
+import type { Pocket } from '#shared/schema'
 
 const props = defineProps<{
-  pocket: Pocket;
-}>();
+  pocket: Pocket
+}>()
 
 definePageMeta({
-  name: "pocket-items",
-  title: "items",
+  name: 'pocket-items',
+  title: 'items',
   order: 2,
-  path: "/pocket/:pocket_key/items",
-  search: "hidden",
-});
+  path: '/pocket/:pocket_key/items',
+  search: 'hidden',
+})
 
-const route = useRoute();
+const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key)),
-).value;
+).value
 
-const tabs = ref("items");
+const tabs = ref('items')
 
 const tabValues = [
   {
-    name: "items",
-    icon: "bow",
-    value: "items",
+    name: 'items',
+    icon: 'bow',
+    value: 'items',
   },
 
   {
-    name: "calculator",
-    icon: "calc",
-    value: "calculator",
+    name: 'calculator',
+    icon: 'calc',
+    value: 'calculator',
   },
-];
+]
 </script>
 
 <template>
@@ -42,8 +42,10 @@ const tabValues = [
         <ItemsHeader />
         <div class="sticky -top-44 z-2 w-full self-start">
           <div
-            class="scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible overflow-y-auto pr-2"
-          >
+            class="
+              scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible
+              overflow-y-auto pr-2
+            ">
             <ItemSets :pocket="pocket" />
           </div>
         </div>

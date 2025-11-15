@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import Fuse from "fuse.js";
-import { motion } from "motion-v";
+import Fuse from 'fuse.js'
+import { motion } from 'motion-v'
 
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes["class"];
-    placeholder?: string;
-    inputClass?: HTMLAttributes["class"];
-    setFocus?: boolean;
-    dark?: boolean;
+    class?: HTMLAttributes['class']
+    placeholder?: string
+    inputClass?: HTMLAttributes['class']
+    setFocus?: boolean
+    dark?: boolean
   }>(),
   {
-    placeholder: "Search Items...",
+    placeholder: 'Search Items...',
   },
-);
+)
 
-const emit = defineEmits(["update:query"]);
+const emit = defineEmits(['update:query'])
 
-const route = useRoute();
+const route = useRoute()
 
-const searchQuery = ref("");
+const searchQuery = ref('')
 /*
 watchEffect(() => {
   emit('update:query', searchQuery.value)
@@ -72,17 +72,17 @@ function handleReset() {
  */
 const variants = {
   collapsed: {
-    borderRadius: "100%",
+    borderRadius: '100%',
     gap: 0,
     padding: 0,
   },
   expanded: {
-    width: "220px",
-    borderRadius: "1.2rem",
-    gap: "10px",
-    padding: "10px",
+    width: '220px',
+    borderRadius: '1.2rem',
+    gap: '10px',
+    padding: '10px',
   },
-};
+}
 
 const inputVariants = {
   collapsed: {
@@ -90,17 +90,17 @@ const inputVariants = {
     opacity: 0,
   },
   expanded: {
-    width: "200px",
+    width: '200px',
     opacity: 100,
   },
-};
+}
 
-const { clearFilters, filters, setFilter } = useItemFilter();
+const { clearFilters, filters, setFilter } = useItemFilter()
 
 watchEffect(() => {
-  if (searchQuery.value === "" || searchQuery.value === undefined)
-    searchQuery.value = null;
-});
+  if (searchQuery.value === '' || searchQuery.value === undefined)
+    searchQuery.value = null
+})
 </script>
 
 <template>
@@ -121,8 +121,7 @@ watchEffect(() => {
       ease: 'easeOut',
     }"
     while-hover="expanded"
-    :animate="searchQuery !== null ? 'expanded' : 'collapsed'"
-  >
+    :animate="searchQuery !== null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
         <Input
@@ -130,27 +129,27 @@ watchEffect(() => {
           type="text"
           class="m-0 size-full border-0 py-0 pl-5 shadow-none"
           :placeholder="props.placeholder"
-          @clear:input="searchQuery = ''"
-        />
+          @clear:input="searchQuery = ''" />
       </slot>
     </motion.div>
 
     <button
       :disabled="searchQuery === null"
-      class="btn pointer-events-auto absolute top-1.5 left-1.5 z-2 btn-circle btn-ghost btn-xs hover:bg-b3/40"
-      @click="clearFilters"
-    >
+      class="
+        btn pointer-events-auto absolute top-1.5 left-1.5 z-2 btn-circle
+        btn-ghost btn-xs
+        hover:bg-b3/40
+      "
+      @click="clearFilters">
       <icon
         v-if="searchQuery"
         name="x-sm"
-        class="absolute size-5.5 shrink-0 text-bc/70 dst"
-      />
+        class="absolute size-5.5 shrink-0 text-bc/70 dst" />
 
       <icon
         v-else
         name="search"
-        class="absolute size-4.75 shrink-0 text-bc/70 dst"
-      />
+        class="absolute size-4.75 shrink-0 text-bc/70 dst" />
     </button>
   </motion.div>
 </template>

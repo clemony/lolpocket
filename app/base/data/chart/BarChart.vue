@@ -6,29 +6,29 @@ import {
   LinearScale,
   Title,
   Tooltip,
-} from "chart.js";
-import { Bar } from "vue-chartjs";
+} from 'chart.js'
+import { Bar } from 'vue-chartjs'
 
 const props = defineProps<{
-  data: any;
-  chartId?: string;
-}>();
+  data: any
+  chartId?: string
+}>()
 
-const styles = getComputedStyle(document.documentElement);
+const styles = getComputedStyle(document.documentElement)
 
-Chart.register(Title, Tooltip, BarElement, CategoryScale, LinearScale);
-Chart.defaults.color = styles.getPropertyValue("--colorneutral");
-Chart.defaults.font.family = styles.getPropertyValue("--font-sans");
-Chart.defaults.font.weight = 400;
-Chart.defaults.font.size = 16;
+Chart.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
+Chart.defaults.color = styles.getPropertyValue('--colorneutral')
+Chart.defaults.font.family = styles.getPropertyValue('--font-sans')
+Chart.defaults.font.weight = 400
+Chart.defaults.font.size = 16
 
 const data = computed(() => {
-  return props.data;
-});
+  return props.data
+})
 const options = {
-  backgroundColor: styles.getPropertyValue("--colorneutral"),
+  backgroundColor: styles.getPropertyValue('--colorneutral'),
   barThickness: 32,
-  color: styles.getPropertyValue("--colorneutral"),
+  color: styles.getPropertyValue('--colorneutral'),
   elements: {
     bar: {
       borderRadius: 4,
@@ -44,8 +44,8 @@ const options = {
       titleMarginBottom: 0,
       callbacks: {
         label: (context) => {
-          const dataPoint = context.raw;
-          return `${dataPoint.toFixed(2)}% winrate`;
+          const dataPoint = context.raw
+          return `${dataPoint.toFixed(2)}% winrate`
         },
       },
       caretPadding: 20,
@@ -64,7 +64,7 @@ const options = {
         display: false,
       },
       border: {
-        color: `${styles.getPropertyValue("--color-b2")}`,
+        color: `${styles.getPropertyValue('--color-b2')}`,
       },
       ticks: {
         display: false,
@@ -73,18 +73,18 @@ const options = {
     y: {
       grid: {
         // display: false,
-        color: `${styles.getPropertyValue("--color-b2")}`,
+        color: `${styles.getPropertyValue('--color-b2')}`,
         drawTicks: false,
       },
       beginAtZero: true,
       border: {
-        color: `${styles.getPropertyValue("--color-b2")}`,
+        color: `${styles.getPropertyValue('--color-b2')}`,
       },
       max: 100,
       min: 0,
       ticks: {
         callback(value, index, ticks) {
-          return `${value}%`;
+          return `${value}%`
         },
         display: true,
         font: {
@@ -96,9 +96,12 @@ const options = {
     },
   },
   skipNull: false,
-};
+}
 </script>
 
 <template>
-  <Bar :id="props.chartId" :options="options" :data="data" />
+  <Bar
+    :id="props.chartId"
+    :options="options"
+    :data="data" />
 </template>

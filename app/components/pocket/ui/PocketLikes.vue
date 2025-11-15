@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const { class: className, pocket: p } = defineProps<{
-  class?: HTMLAttributes["class"];
-  pocket: Pocket;
-}>();
+  class?: HTMLAttributes['class']
+  pocket: Pocket
+}>()
 
 // @todo numbers go up ^^^^
 // store in supabase maybe use realtime? not sure if worth look into that ok
 // @todo be not dumb
 
-const pocket = computed(() => p).value;
+const pocket = computed(() => p).value
 function handleLike() {
   as().settings.favorite_pockets.includes(pocket.key)
     ? pocket.likes + 1
-    : pocket.likes - 1;
-  console.log("🌱 - handleLike - pocket.likes:", pocket.likes);
+    : pocket.likes - 1
+  console.log('🌱 - handleLike - pocket.likes:', pocket.likes)
   console.log(
-    "🌱 - handleLike - as().settings.favorite_pockets.includes(pocket.key):",
+    '🌱 - handleLike - as().settings.favorite_pockets.includes(pocket.key):',
     as().settings.favorite_pockets.includes(pocket.key),
-  );
+  )
 }
 </script>
 
@@ -28,31 +28,34 @@ function handleLike() {
     :class="
       cn(
         `
-      has-checked:
-      group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs ring-bc/50
-      ring-offset-b2 duration-0
-      hover:ring hover:ring-offset-1
-      has-not-checked:*:opacity-40
-      has-checked:*:opacity-100
-    `,
+          has-checked:
+          group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs
+          ring-bc/50 ring-offset-b2 duration-0
+          hover:ring hover:ring-offset-1
+          has-not-checked:*:opacity-40
+          has-checked:*:opacity-100
+        `,
         className,
       )
     "
-    variant="outline"
-  >
+    variant="outline">
     <input
       v-model="as().settings.favorite_pockets"
       :disabled="pocket.uuid === as().account.puuid"
       type="checkbox"
       :value="pocket.key"
       class="peer hidden"
-      @change="handleLike()"
-    />
+      @change="handleLike()" />
     <span class="relative grid size-4 place-items-center overflow-hidden">
       <icon
         name="heart-sm"
-        class="absolute size-6.5! -translate-y-[0.5px] dst transition-colors duration-200 group-hover/x:text-tint-domination/20! group-has-not-checked/x:text-bc/30 group-has-checked/x:text-tint-domination/20"
-      />
+        class="
+          absolute size-6.5! -translate-y-[0.5px] dst transition-colors
+          duration-200
+          group-hover/x:text-tint-domination/20!
+          group-has-not-checked/x:text-bc/30
+          group-has-checked/x:text-tint-domination/20
+        " />
     </span>
     <span class="text-1! font-semibold">
       {{ pocket.likes }}

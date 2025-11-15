@@ -1,1 +1,1 @@
-export * from "./useGridFocusTrap";
+export * from './useGridFocusTrap'

@@ -1,18 +1,18 @@
 const item: Item = {
   id: 447101,
-  name: "Gambler's Blade",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7101_gamblers_blade.png",
+  name: 'Gambler\'s Blade',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7101_gamblers_blade.png',
   maps: [30],
   noEffects: false,
   passives: [
     {
-      name: "Money In The Bank",
+      name: 'Money In The Bank',
       effects:
         'Basic attacks on-hit and ability hits have a 12% chance to store between <img src="/img/icons/gold-coin.webp" class="inline-icon" />30 and 240 gold (2.5-second cooldown per attack/ability). If you win the round, gain <img src="/img/icons/gold-coin.webp" class="inline-icon" />gold equal to the stored amount, otherwise lose 25% of it.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -27,5 +27,5 @@ const item: Item = {
     attackSpeed: 70,
     percentMovespeed: 8,
   },
-};
-export default item;
+}
+export default item

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { MenubarItem } from "../menubar.types";
+import type { MenubarItem } from '../menubar.types'
 
 const { item } = defineProps<{
-  item: MenubarItem;
-}>();
+  item: MenubarItem
+}>()
 </script>
 
 <template>
@@ -13,7 +13,6 @@ const { item } = defineProps<{
     <AutoMenuContent
       v-for="(subitem, i) in item.items"
       :key="i"
-      :item="subitem"
-    />
+      :item="subitem" />
   </MenubarGroup>
 </template>

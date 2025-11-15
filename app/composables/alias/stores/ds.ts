@@ -1,1 +1,1 @@
-export const ds = () => useDataStore();
+export const ds = () => useDataStore()

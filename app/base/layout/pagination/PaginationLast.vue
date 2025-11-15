@@ -1,27 +1,29 @@
 <script setup lang="ts">
-import type { PaginationLastProps } from "reka-ui";
-import { PaginationLast } from "reka-ui";
-import { computed } from "vue";
+import type { PaginationLastProps } from 'reka-ui'
+import { PaginationLast } from 'reka-ui'
+import { computed } from 'vue'
 
 const props = withDefaults(
-  defineProps<PaginationLastProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(),
   {
     asChild: true,
   },
-);
+)
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
   <PaginationLast v-bind="delegatedProps">
     <button :class="cn('btn btn-square btn-ghost btn-sm', props.class)">
       <slot>
-        <icon name="right-pipe" class="size-4" />
+        <icon
+          name="right-pipe"
+          class="size-4" />
       </slot>
     </button>
   </PaginationLast>

@@ -1,21 +1,21 @@
-import type { RouteRecordRaw } from "vue-router";
-import { useRoute, useRouter } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 export function useRouteNavigation() {
-  const route = useRoute();
-  const router = useRouter();
+  const route = useRoute()
+  const router = useRouter()
 
-  const parent = ref<RouteRecordRaw | null>(null);
-  const childRoutes = ref<any[]>([]);
-  const targetRoutes = ref<Record<string, string>>({});
-  const orderedKeys = ref<string[]>([]);
-  const activeIndex = ref<number>(0);
+  const parent = ref<RouteRecordRaw | null>(null)
+  const childRoutes = ref<any[]>([])
+  const targetRoutes = ref<Record<string, string>>({})
+  const orderedKeys = ref<string[]>([])
+  const activeIndex = ref<number>(0)
 
   const buildTargets = () => {
-    parent.value = route.matched.at(-2) || null;
-    childRoutes.value = parent.value?.children ?? [];
+    parent.value = route.matched.at(-2) || null
+    childRoutes.value = parent.value?.children ?? []
 
-    targetRoutes.value = {};
+    targetRoutes.value = {}
 
     for (const r of childRoutes.value) {
       if (r.name) {
@@ -24,24 +24,24 @@ export function useRouteNavigation() {
           name: r.name,
           params: route.params,
           query: route.query,
-        });
+        })
 
-        targetRoutes.value[r.name.toLowerCase()] = resolved.fullPath;
+        targetRoutes.value[r.name.toLowerCase()] = resolved.fullPath
       }
     }
 
     // sync active index
     const currentKey = orderedKeys.value.findIndex(
-      (k) => targetRoutes.value[k] === route.fullPath,
-    );
-    activeIndex.value = currentKey >= 0 ? currentKey : 0;
-  };
+      k => targetRoutes.value[k] === route.fullPath,
+    )
+    activeIndex.value = currentKey >= 0 ? currentKey : 0
+  }
 
   const update = () => {
-    buildTargets();
-  };
+    buildTargets()
+  }
 
-  watch(() => route.fullPath, update, { immediate: true });
+  watch(() => route.fullPath, update, { immediate: true })
 
   return {
     activeIndex,
@@ -49,5 +49,5 @@ export function useRouteNavigation() {
     orderedKeys,
     parent,
     targetRoutes,
-  };
+  }
 }

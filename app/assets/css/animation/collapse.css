@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @keyframes collapsible-down {
   from {
@@ -6,13 +6,13 @@
   }
 
   to {
-    height: "var(--radix-collapsible-content-height)";
+    height: 'var(--radix-collapsible-content-height)';
   }
 }
 
 @keyframes collapsible-up {
   from {
-    height: "var(--radix-collapsible-content-height)";
+    height: 'var(--radix-collapsible-content-height)';
   }
 
   to {
@@ -32,11 +32,11 @@
   overflow: hidden;
 }
 
-.CollapsibleContent[data-state="open"] {
+.CollapsibleContent[data-state='open'] {
   animation: slideDown 200ms ease-out;
 }
 
-.CollapsibleContent[data-state="closed"] {
+.CollapsibleContent[data-state='closed'] {
   animation: slideUp 200ms ease-out;
 }
 
@@ -64,11 +64,11 @@
   overflow: hidden;
 }
 
-.CollapsibleContent.slide[data-state="open"] {
+.CollapsibleContent.slide[data-state='open'] {
   animation: slideLeft 300ms ease-out;
 }
 
-.CollapsibleContent.slide[data-state="closed"] {
+.CollapsibleContent.slide[data-state='closed'] {
   animation: slideRight 300ms ease-out;
 }
 
@@ -96,11 +96,11 @@
   overflow: hidden;
 }
 
-.PopoverContent.slide[data-state="open"] {
+.PopoverContent.slide[data-state='open'] {
   animation: slideLeft 200ms;
 }
 
-.PopoverContent.slide[data-state="closed"] {
+.PopoverContent.slide[data-state='closed'] {
   animation: slideRight 200ms;
 }
 
@@ -127,10 +127,10 @@
 .AccordionContent {
   overflow: hidden;
 }
-.AccordionContent[data-state="open"] {
+.AccordionContent[data-state='open'] {
   animation: accordionSlideDown 200ms ease-out;
 }
-.AccordionContent[data-state="closed"] {
+.AccordionContent[data-state='closed'] {
   animation: accordionSlideUp 200ms ease-out;
 }
 

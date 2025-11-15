@@ -2,21 +2,22 @@
 const {
   id,
   class: className,
-  variant = "btn",
+  variant = 'btn',
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  id: number | undefined;
-  variant?: LabelVariants["variant"];
-}>();
+  class?: HTMLAttributes['class']
+  id: number | undefined
+  variant?: LabelVariants['variant']
+}>()
 
-const loaded = ref(false);
+const loaded = ref(false)
 
 watch(
   () => id,
   (newVal) => {
-    if (newVal) loaded.value = false;
+    if (newVal)
+      loaded.value = false
   },
-);
+)
 </script>
 
 <template>
@@ -33,16 +34,14 @@ watch(
         { ' shadow-sm drop-shadow-sm border border-b4 ': id },
         className,
       )
-    "
-  >
+    ">
     <img
       v-if="id"
       :title="spellbook[id].name"
       :alt="spellbook[id].name"
       :src="`/img/spells/${id}.webp`"
       class="absolute size-full"
-      @load="loaded = true"
-    />
+      @load="loaded = true" />
     <!--
     <icon
       id="tabler:flame"

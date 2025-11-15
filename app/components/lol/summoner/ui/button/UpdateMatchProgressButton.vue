@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
-import { ProgressIndicator } from "reka-ui";
+import { motion } from 'motion-v'
+import { ProgressIndicator } from 'reka-ui'
 
 const {
   class: className,
-  placement = "top",
+  placement = 'top',
   shape,
   showIcon,
-  size = "md",
+  size = 'md',
   tip,
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  text?: boolean | string | null;
-  size?: any;
-  showIcon?: boolean;
-  shape?: "circle" | "square" | null;
-  placement?: Side;
-  tip?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  text?: boolean | string | null
+  size?: any
+  showIcon?: boolean
+  shape?: 'circle' | 'square' | null
+  placement?: Side
+  tip?: boolean
+}>()
 
-const state = useSummonerInject();
+const state = useSummonerInject()
 
 const {
   cooldown,
@@ -29,16 +29,16 @@ const {
   () => state.fetchNewMatches(),
   120_000,
   state.summoner.value.puuid,
-  "match-refresh",
-);
+  'match-refresh',
+)
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
     ? state.summoner.value.updatedMatch
       ? `last updated ${state.summoner.value.updatedMatch}`
-      : "not updated yet"
+      : 'not updated yet'
     : `${cooldown.value?.seconds} cd`,
-);
+)
 </script>
 
 <template>
@@ -55,8 +55,7 @@ const tippy = computed(() =>
         className,
       )
     "
-    @click="update()"
-  >
+    @click="update()">
     <TransitionScalePop class="relative grid size-full overflow-hidden">
       <span
         v-if="!cooldown"
@@ -69,9 +68,11 @@ const tippy = computed(() =>
             `,
             { 'text-1': size === 'xs' },
           )
-        "
-      >
-        <icon v-if="showIcon" name="reset" class="mr-3 -ml-2 size-5" />
+        ">
+        <icon
+          v-if="showIcon"
+          name="reset"
+          class="mr-3 -ml-2 size-5" />
         <span class="text-2">
           {{
             typeof text === "string"
@@ -93,12 +94,14 @@ const tippy = computed(() =>
             `,
             { 'gap-0': size === 'xs' },
           )
-        "
-      >
+        ">
         <div
           v-if="size !== 'xs'"
-          class="grid inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-1 font-semibold text-nowrap dst"
-        >
+          class="
+            grid inline w-full grid-flow-col grid-cols-2 items-center
+            justify-between pr-0.25 text-end align-bottom text-1 font-semibold
+            text-nowrap dst
+          ">
           <span :class="cn('text-2 font-bold')">
             {{ cooldown?.formatted }}
           </span>
@@ -118,11 +121,17 @@ const tippy = computed(() =>
             )
           "
           :value="cooldown?.percent"
-          :max="100"
-        >
-          <ProgressIndicator class="bg-transparent!" :value="cooldown?.percent">
+          :max="100">
+          <ProgressIndicator
+            class="bg-transparent!"
+            :value="cooldown?.percent">
             <motion.div
-              class="relative h-full origin-right after:absolute after:inset-0 after:top-0 after:right-0 after:size-full after:bg-red-500 after:from-neutral after:via-neutral/80 after:to-neutral"
+              class="
+                relative h-full origin-right
+                after:absolute after:inset-0 after:top-0 after:right-0
+                after:size-full after:bg-red-500 after:from-neutral
+                after:via-neutral/80 after:to-neutral
+              "
               :initial="{
                 scaleX: 1,
                 width: '100%',
@@ -132,8 +141,7 @@ const tippy = computed(() =>
               }"
               :transition="{
                 ease: 'linear',
-              }"
-            ></motion.div>
+              }"></motion.div>
           </ProgressIndicator>
         </Progress>
       </div>

@@ -1,3 +1,3 @@
-export type { UnwrapRefCarouselApi as CarouselApi } from "./interface";
+export type { UnwrapRefCarouselApi as CarouselApi } from './interface'
 
-export { useCarousel } from "./useCarousel";
+export { useCarousel } from './useCarousel'

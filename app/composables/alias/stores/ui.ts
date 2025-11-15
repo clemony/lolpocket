@@ -1,1 +1,1 @@
-export const ui = () => useUiStore();
+export const ui = () => useUiStore()

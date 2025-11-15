@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { CalendarHeadCellProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
-import { CalendarHeadCell, useForwardProps } from "reka-ui";
+import type { CalendarHeadCellProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { CalendarHeadCell, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  CalendarHeadCellProps & { class?: HTMLAttributes["class"] }
->();
+  CalendarHeadCellProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -17,8 +17,7 @@ const forwardedProps = useForwardProps(delegatedProps);
     :class="
       cn('w-9 rounded-md text-[0.8rem] font-normal text-bc/50', props.class)
     "
-    v-bind="forwardedProps"
-  >
+    v-bind="forwardedProps">
     <slot />
   </CalendarHeadCell>
 </template>

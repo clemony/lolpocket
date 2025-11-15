@@ -1,45 +1,45 @@
 const item: Item = {
   id: 3211,
-  name: "Spectre's Cowl",
-  nicknames: ["hat", "ghost"],
+  name: 'Spectre\'s Cowl',
+  nicknames: ['hat', 'ghost'],
   buildsFrom: [
     {
       id: 1028,
-      name: "Ruby Crystal",
+      name: 'Ruby Crystal',
       gold: 400,
     },
     {
       id: 1033,
-      name: "Null-Magic Mantle",
+      name: 'Null-Magic Mantle',
       gold: 400,
     },
     {
       id: 1006,
-      name: "Rejuvenation Bead",
+      name: 'Rejuvenation Bead',
       gold: 300,
     },
   ],
   buildsInto: [
     {
       id: 2504,
-      name: "Kaenic Rookern",
+      name: 'Kaenic Rookern',
       gold: 2900,
     },
     {
       id: 3065,
-      name: "Spirit Visage",
+      name: 'Spirit Visage',
       gold: 2700,
     },
     {
       id: 6664,
-      name: "Hollow Radiance",
+      name: 'Hollow Radiance',
       gold: 2800,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3211_tank_t2_spectrescowl.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3211_tank_t2_spectrescowl.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -47,15 +47,15 @@ const item: Item = {
       sell: 500,
       total: 1250,
     },
-    tags: ["TANK"],
+    tags: ['TANK'],
   },
   simpleDescription:
-    "Improves defense and grants regeneration upon being damaged",
+    'Improves defense and grants regeneration upon being damaged',
   specialRecipe: 0,
   stats: {
     health: 200,
     healthRegen: 100,
     magicResistance: 35,
   },
-};
-export default item;
+}
+export default item

@@ -1,15 +1,14 @@
 <script setup lang="ts">
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
   <Separator
     data-slot="sidebar-separator"
     data-sidebar="separator"
-    :class="cn('mx-2 w-auto bg-b3/60', props.class)"
-  >
+    :class="cn('mx-2 w-auto bg-b3/60', props.class)">
     <slot />
   </Separator>
 </template>

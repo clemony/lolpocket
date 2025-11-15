@@ -1,41 +1,49 @@
 <script setup lang="ts">
 const props = defineProps<{
   rune?: {
-    name?: string;
-    tier?: string;
-    wiki?: string;
-    path?: string;
-    img?: string;
-    stats?: string;
-  };
-}>();
+    name?: string
+    tier?: string
+    wiki?: string
+    path?: string
+    img?: string
+    stats?: string
+  }
+}>()
 
-const isCollapsed = ref("");
+const isCollapsed = ref('')
 
 // Create a computed property for the rune
 const rune = computed(() => {
-  return props.rune || rs().selectedRune; // Fallback to rs().selectedRune if no prop is passed
-});
+  return props.rune || rs().selectedRune // Fallback to rs().selectedRune if no prop is passed
+})
 </script>
 
 <template>
   <div
     v-if="rune"
-    class="relative h-fit max-h-full max-w-64 overflow-y-auto pb-6 shadow-[inset_0px_0px_40px_#00000009,_rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] transition-all duration-500"
-  >
-    <div :key="rune.name" :rune="rune" class="h-full">
+    class="
+      relative h-fit max-h-full max-w-64 overflow-y-auto pb-6
+      shadow-[inset_0px_0px_40px_#00000009,_rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]
+      transition-all duration-500
+    ">
+    <div
+      :key="rune.name"
+      :rune="rune"
+      class="h-full">
       <label
         :key="`${rune.name}1`"
-        class="frost sticky top-0 left-0 z-50 flex h-fit! w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b border-b-b3 px-4 py-1"
-      >
+        class="
+          frost sticky top-0 left-0 z-50 flex h-fit! w-full flex-wrap
+          items-center justify-end gap-4 rounded-t-xl border-b border-b-b3 px-4
+          py-1
+        ">
         <h2 class="sub-text flex grow items-center justify-start gap-3">
           <span class="grow">{{ rune.name || "Rune Detail" }}</span>
 
           <div v-if="rune">
             <img
               :src="`/img/runes/${rune.path}.webp`"
-              class="h-5 object-contain"
-            />
+              class="h-5 object-contain" />
           </div>
         </h2>
       </label>
@@ -44,25 +52,27 @@ const rune = computed(() => {
         id="wrap"
         :key="`${rune.name}2`"
         :data-tier="rune.tier"
-        class="relative px-4 pt-3"
-      >
+        class="relative px-4 pt-3">
         <div
           :key="`${rune.name}img`"
-          class="img-wrapper group relative z-0 before:absolute"
+          class="
+            img-wrapper group relative z-0
+            before:absolute
+          "
           :href="rune.wiki"
           target="_blank"
           :title="rune.wiki"
-          :alt="rune.wiki"
-        >
+          :alt="rune.wiki">
           <div class="link-set">
             <img
               id="runeImg"
               :src="rune.img"
-              class="float-right mt-1 ml-2.5 rounded-full"
-            />
+              class="float-right mt-1 ml-2.5 rounded-full" />
 
             <div class="link-icon flex items-center justify-center">
-              <Icon name="teenyicons:link-outline" class="size-3 text-bc" />
+              <Icon
+                name="teenyicons:link-outline"
+                class="size-3 text-bc" />
             </div>
           </div>
         </div>
@@ -70,8 +80,13 @@ const rune = computed(() => {
         <div
           id="runeStats"
           :key="`${rune.name}3`"
-          class="mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line first-letter:float-left first-letter:mr-1.5 first-letter:text-8 first-letter:font-[700] first-line:font-[700] first-line:tracking-widest first-line:uppercase"
-        >
+          class="
+            mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line
+            first-letter:float-left first-letter:mr-1.5 first-letter:text-8
+            first-letter:font-[700]
+            first-line:font-[700] first-line:tracking-widest
+            first-line:uppercase
+          ">
           {{ rune.stats }}
         </div>
       </div>

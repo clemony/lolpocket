@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-const { class: className, direction = "left" } = defineProps<{
-  class?: HTMLAttributes["class"];
-  direction?: Direction;
-}>();
+const { class: className, direction = 'left' } = defineProps<{
+  class?: HTMLAttributes['class']
+  direction?: Direction
+}>()
 
 const directionClass = computed(() =>
-  direction === "left"
-    ? " group-data-[state=open]/collapse:-rotate-90 "
-    : direction === "right"
-      ? " group-data-[state=open]/collapse:rotate-90 "
-      : "",
-);
+  direction === 'left'
+    ? ' group-data-[state=open]/collapse:-rotate-90 '
+    : direction === 'right'
+      ? ' group-data-[state=open]/collapse:rotate-90 '
+      : '',
+)
 </script>
 
 <template>
@@ -25,6 +25,5 @@ const directionClass = computed(() =>
         directionClass,
         className,
       )
-    "
-  />
+    " />
 </template>

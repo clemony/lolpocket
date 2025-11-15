@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -14,11 +14,9 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <video-background
       src="/video/prismatic-shine.webm"
-      class="pointer-events-none aspect-square size-full scale-110 object-cover"
-    ></video-background>
+      class="pointer-events-none aspect-square size-full scale-110 object-cover"></video-background>
   </TransitionFade>
 </template>

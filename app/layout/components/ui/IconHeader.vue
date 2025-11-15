@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { motion } from "motion-v";
+import { motion } from 'motion-v'
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 
-const { scrollY } = useScrollInject();
-const y = useTransform(scrollY, [0, 198], ["0", "-200%"]);
-const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0]);
+const { scrollY } = useScrollInject()
+const y = useTransform(scrollY, [0, 198], ['0', '-200%'])
+const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0])
 </script>
 
 <template>
@@ -24,8 +24,7 @@ const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0]);
     :style="{
       y,
       opacity,
-    }"
-  >
+    }">
     <!-- icon -->
 
     <div class="relative grid size-20 place-items-center">
@@ -39,8 +38,10 @@ const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0]);
 
       <!-- header sub-text -->
       <div
-        class="inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst **:text-3"
-      >
+        class="
+          inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst
+          **:text-3
+        ">
         <slot name="subheader" />
       </div>
     </div>

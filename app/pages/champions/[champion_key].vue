@@ -25,7 +25,7 @@ onMounted(() => {
     <!-- splash -->
 
     <template #background-slice>
-      <BackgroundSplashFixed
+      <BgSplash
         v-once
         size="header"
         slice
@@ -33,7 +33,7 @@ onMounted(() => {
     </template>
 
     <template #background>
-      <BackgroundSplashFixed
+      <BgSplash
         v-once
         size="header"
         :img="getSplash(champion.key, 'centered')" />
@@ -47,7 +47,7 @@ onMounted(() => {
     </template>
     <template #header>
       <header class="grid h-20 justify-center">
-        <h1 class="pt-1 text-[2.1]! leading-10 font-bold tracking-tight dst">
+        <h1 class="pt-1 leading-10 font-bold tracking-tight text-[2.1]! dst">
           {{ champion.name }}
         </h1>
         <p class="-mt-1 px-1 text-3 leading-5 font-medium text-bc italic">

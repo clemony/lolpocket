@@ -2,14 +2,14 @@
 
 const rune: Rune = {
   id: 8352,
-  name: "Time Warp Tonic",
+  name: 'Time Warp Tonic',
   description:
-    "Consuming a potion grants 40% of its health restoration immediately.",
-  path: "Inspiration",
+    'Consuming a potion grants 40% of its health restoration immediately.',
+  path: 'Inspiration',
   pathId: 8300,
   tier: 2,
-  tierLabel: "Tomorrow",
+  tierLabel: 'Tomorrow',
   tierSlot: 1,
-};
+}
 
-export default rune;
+export default rune

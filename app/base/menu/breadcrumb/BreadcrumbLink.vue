@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { PrimitiveProps } from "reka-ui";
-import { Primitive } from "reka-ui";
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
 const props = withDefaults(
-  defineProps<PrimitiveProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<PrimitiveProps & { class?: HTMLAttributes['class'] }>(),
   {
-    as: "a",
+    as: 'a',
   },
-);
+)
 </script>
 
 <template>
@@ -17,13 +17,12 @@ const props = withDefaults(
     :class="
       cn(
         `
-      transition-colors
-      hover:text-bc
-    `,
+          transition-colors
+          hover:text-bc
+        `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </Primitive>
 </template>

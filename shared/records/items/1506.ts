@@ -1,7 +1,7 @@
 const item: Item = {
   id: 1506,
-  name: "Base Turret Reinforced Armor (Turret Item)",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_netherrift_armor.png",
+  name: 'Base Turret Reinforced Armor (Turret Item)',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_netherrift_armor.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
   passives: [
@@ -12,11 +12,11 @@ const item: Item = {
     },
     {
       effects:
-        "Base turrets have health regeneration, but cannot regenerate past their current segment. They are segmented at 33% health, 66% health and 100% health.",
+        'Base turrets have health regeneration, but cannot regenerate past their current segment. They are segmented at 33% health, 66% health and 100% health.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -28,5 +28,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

@@ -1,43 +1,45 @@
 <script lang="ts" setup>
-import type { TabsIndicatorProps } from "reka-ui";
-import { motion } from "motion-v";
-import { TabsIndicator } from "reka-ui";
+import type { TabsIndicatorProps } from 'reka-ui'
+import { motion } from 'motion-v'
+import { TabsIndicator } from 'reka-ui'
 
-defineOptions({ inheritAttrs: false });
+defineOptions({ inheritAttrs: false })
 
-const props = defineProps<
+const props = withDefaults(defineProps<
   TabsIndicatorProps & {
-    class?: HTMLAttributes["class"];
-    indicatorClass?: HTMLAttributes["class"];
-    orientation?: "horizontal" | "vertical";
-    contrast?: boolean;
-    round?: boolean;
-    roundDisabled?: boolean;
-    on?: ButtonVariants["on"];
-    base?: ButtonVariants["base"];
-    hover?: ButtonVariants["hover"];
-    size?: ButtonVariants["size"];
-    variant?: ButtonVariants["variant"];
+    class?: HTMLAttributes['class']
+    indicatorClass?: HTMLAttributes['class']
+    orientation?: 'horizontal' | 'vertical'
+    contrast?: boolean
+    round?: boolean
+    roundDisabled?: boolean
+    on?: ButtonVariants['on']
+    base?: ButtonVariants['base']
+    hover?: ButtonVariants['hover']
+    size?: ButtonVariants['size']
+    variant?: ButtonVariants['variant']
   }
->();
-const forwarded = reactiveOmit(props, "class");
+>(), {
+  variant: 'base'
+})
+const forwarded = reactiveOmit(props, 'class')
 
 const variants = {
   horizontal: {
-    width: "calc(var(--reka-tabs-indicator-size))",
-    transform: "translateX(calc(var(--reka-tabs-indicator-position)))",
+    width: 'calc(var(--reka-tabs-indicator-size))',
+    transform: 'translateX(calc(var(--reka-tabs-indicator-position)))',
     transition: {
       duration: 0.3,
     },
   },
   vertical: {
-    height: "calc(var(--reka-tabs-indicator-size))",
-    transform: "translateY(calc(var(--reka-tabs-indicator-position)))",
+    height: 'calc(var(--reka-tabs-indicator-size))',
+    transform: 'translateY(calc(var(--reka-tabs-indicator-position)))',
     transition: {
       duration: 0.3,
     },
   },
-};
+}
 </script>
 
 <template>
@@ -48,8 +50,7 @@ const variants = {
     :class="{
       'h-[81%]': props.orientation !== 'vertical',
       'w-[81%]': props.orientation === 'vertical',
-    }"
-  >
+    }">
     <motion.div
       :variants="variants"
       :initial="props.orientation === 'vertical' ? 'vertical' : 'horizontal'"
@@ -66,8 +67,7 @@ const variants = {
           { '!top-0 left-1': props.orientation === 'vertical' },
           props.class,
         )
-      "
-    >
+      ">
       <motion.div
         class="h-full w-full min-w-0! rounded-lg text-bc shadow"
         :class="
@@ -86,11 +86,10 @@ const variants = {
                 props.roundDisabled,
             },
 
-            buttonVariants({ base, variant, size, hover, on }),
+            buttonVariants({ base, variant, size, hover, on }), 'fx-0',
             indicatorClass,
           )
-        "
-      />
+        " />
     </motion.div>
   </TabsIndicator>
 </template>

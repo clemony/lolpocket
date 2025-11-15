@@ -2,17 +2,17 @@
 
 const champion: Champion = {
   id: 37,
-  key: "Sona",
-  name: "Sona",
-  title: "Maven of the Strings",
+  key: 'Sona',
+  name: 'Sona',
+  title: 'Maven of the Strings',
   abilities: [
     {
-      key: "P",
-      name: "Power Chord",
-      affects: "Self",
+      key: 'P',
+      name: 'Power Chord',
+      affects: 'Self',
       blurb:
-        "Innate - Accelerando:  Sona gains a permanent  stack of Accelerando each time she hits an enemy champion with  Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with  Aria of Perseverance. If she has max stacks, she instead  reduces the cooldown of  Crescendo each time.",
-      damageType: "Magic damage",
+        'Innate - Accelerando:  Sona gains a permanent  stack of Accelerando each time she hits an enemy champion with  Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with  Aria of Perseverance. If she has max stacks, she instead  reduces the cooldown of  Crescendo each time.',
+      damageType: 'Magic damage',
       effects: [
         {
           description:
@@ -28,41 +28,41 @@ const champion: Champion = {
         },
         {
           description:
-            "Gaining Power Chord's empowered attack resets Sona's basic attack timer.",
+            'Gaining Power Chord\'s empowered attack resets Sona\'s basic attack timer.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/p",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/p',
       notes:
-        "Power Chord stacks are represented by a counter under Sona's health bar, visible to the player only. It will light up when the empowered effect is available.\nWhen Power Chord is ready, Sona gains a ring around her. This ring will have a different color depending on the last ability used ( blue,  green or  purple).\nThe effect does not change if abilities are used while the projectile is in motion.\nThe triggering attack will apply other  on-hit effects and can  critically strike as normal.\nSona retains Power Chord's stacks when entering  resurrection.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards and jungle plants.",
-      spellEffects: "proc",
-      spellshieldable: "True",
-      targeting: "Passive",
+        'Power Chord stacks are represented by a counter under Sona\'s health bar, visible to the player only. It will light up when the empowered effect is available.\nWhen Power Chord is ready, Sona gains a ring around her. This ring will have a different color depending on the last ability used ( blue,  green or  purple).\nThe effect does not change if abilities are used while the projectile is in motion.\nThe triggering attack will apply other  on-hit effects and can  critically strike as normal.\nSona retains Power Chord\'s stacks when entering  resurrection.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards and jungle plants.',
+      spellEffects: 'proc',
+      spellshieldable: 'True',
+      targeting: 'Passive',
     },
     {
-      key: "Q",
-      name: "Hymn of Valor",
-      affects: "Enemies",
+      key: 'Q',
+      name: 'Hymn of Valor',
+      affects: 'Enemies',
       blurb:
-        "Active:  Sona projects sound bolts to the two nearest enemies that each deal magic damage, and she gains a stack of  Accelerando for each bolt that damages an enemy  champion.",
-      castTime: "none",
-      cooldown: "8",
-      cost: "50 / 55 / 60 / 65 / 70",
-      damageType: "Magic damage",
-      effectRadius: "825 /  400",
+        'Active:  Sona projects sound bolts to the two nearest enemies that each deal magic damage, and she gains a stack of  Accelerando for each bolt that damages an enemy  champion.',
+      castTime: 'none',
+      cooldown: '8',
+      cost: '50 / 55 / 60 / 65 / 70',
+      damageType: 'Magic damage',
+      effectRadius: '825 /  400',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.</p>',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "50 / 85 / 120 / 155 / 190",
+                  values: '50 / 85 / 120 / 155 / 190',
                 },
                 {
-                  unit: "% AP",
-                  values: "40",
+                  unit: '% AP',
+                  values: '40',
                 },
               ],
             },
@@ -73,55 +73,55 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Melody Bonus:</span> Sona and tagged allied champions deal bonus magic damage on their next basic attack within 5 seconds.</p>',
           leveling: [
             {
-              attribute: "Bonus Magic Damage",
+              attribute: 'Bonus Magic Damage',
               modifiers: [
                 {
-                  values: "10 / 15 / 20 / 25 / 30",
+                  values: '10 / 15 / 20 / 25 / 30',
                 },
                 {
-                  unit: "% of Sona's AP",
-                  values: "10",
+                  unit: '% of Sona\'s AP',
+                  values: '10',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/q",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/q',
       maxCharges: -1,
       notes:
-        "Sight of the targets' area is granted on-cast.\nThe Melody empowerment given to tagged allies respects  enchantment redirection.\nThe empowered attack will trigger but not be consumed against wards.",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "1300",
-      spellEffects: "aoe",
-      spellshieldable: "True",
-      targeting: "Auto",
+        'Sight of the targets\' area is granted on-cast.\nThe Melody empowerment given to tagged allies respects  enchantment redirection.\nThe empowered attack will trigger but not be consumed against wards.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1300',
+      spellEffects: 'aoe',
+      spellshieldable: 'True',
+      targeting: 'Auto',
     },
     {
-      key: "W",
-      name: "Aria of Perseverance",
-      affects: "Self, Allies",
+      key: 'W',
+      name: 'Aria of Perseverance',
+      affects: 'Self, Allies',
       blurb:
-        "Active:  Sona  heals herself and projects a sound bolt that heals the most wounded allied champion nearby.",
-      castTime: "none",
-      cooldown: "10",
-      cost: "80 / 85 / 90 / 95 / 100",
-      effectRadius: "1000 /  400",
+        'Active:  Sona  heals herself and projects a sound bolt that heals the most wounded allied champion nearby.',
+      castTime: 'none',
+      cooldown: '10',
+      cost: '80 / 85 / 90 / 95 / 100',
+      effectRadius: '1000 /  400',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.</p>',
           leveling: [
             {
-              attribute: "Heal",
+              attribute: 'Heal',
               modifiers: [
                 {
-                  values: "30 / 45 / 60 / 75 / 90",
+                  values: '30 / 45 / 60 / 75 / 90',
                 },
                 {
-                  unit: "% AP",
-                  values: "30",
+                  unit: '% AP',
+                  values: '30',
                 },
               ],
             },
@@ -132,14 +132,14 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Melody Bonus:</span> Sona and tagged allied champions are granted a shield for 1.5 seconds.</p>',
           leveling: [
             {
-              attribute: "Shield Strength",
+              attribute: 'Shield Strength',
               modifiers: [
                 {
-                  values: "25 / 45 / 65 / 85 / 105",
+                  values: '25 / 45 / 65 / 85 / 105',
                 },
                 {
-                  unit: "% of Sona's AP",
-                  values: "25",
+                  unit: '% of Sona\'s AP',
+                  values: '25',
                 },
               ],
             },
@@ -147,38 +147,38 @@ const champion: Champion = {
         },
         {
           description:
-            "Sona gains a stack of Accelerando whenever she heals a wounded ally or shields a minimum amount of damage for an ally with Aria of Perseverance.",
+            'Sona gains a stack of Accelerando whenever she heals a wounded ally or shields a minimum amount of damage for an ally with Aria of Perseverance.',
           leveling: [
             {
-              attribute: "Minimum Damage Mitigated",
+              attribute: 'Minimum Damage Mitigated',
               modifiers: [
                 {
-                  values: "25 / 45 / 65 / 85 / 105",
+                  values: '25 / 45 / 65 / 85 / 105',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/w",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/w',
       maxCharges: -1,
       notes:
-        "If no one is injured, Aria of Perseverance will target the closest allied champion.\nThe projectile of Aria of Perseverance will follow an ally in stealth but will not reveal them.",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "1300",
-      targeting: "Auto",
+        'If no one is injured, Aria of Perseverance will target the closest allied champion.\nThe projectile of Aria of Perseverance will follow an ally in stealth but will not reveal them.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1300',
+      targeting: 'Auto',
     },
     {
-      key: "E",
-      name: "Song of Celerity",
-      affects: "Self, Allies",
+      key: 'E',
+      name: 'Song of Celerity',
+      affects: 'Self, Allies',
       blurb:
-        "Active:  Sona gains  bonus movement speed for a short time, which is extended to a few seconds if she does not take damage during this time.",
-      castTime: "none",
-      cooldown: "14",
-      cost: "65",
-      effectRadius: "400",
+        'Active:  Sona gains  bonus movement speed for a short time, which is extended to a few seconds if she does not take damage during this time.',
+      castTime: 'none',
+      cooldown: '14',
+      cost: '65',
+      effectRadius: '400',
       effects: [
         {
           description:
@@ -189,73 +189,73 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Melody Bonus:</span> Tagged allied champions gain bonus movement speed for 3 seconds.</p>',
           leveling: [
             {
-              attribute: "Bonus Movement Speed",
+              attribute: 'Bonus Movement Speed',
               modifiers: [
                 {
-                  unit: "%",
-                  values: "10 / 12 / 14 / 16 / 18",
+                  unit: '%',
+                  values: '10 / 12 / 14 / 16 / 18',
                 },
                 {
-                  unit: "% per 100 of Sona's AP",
-                  values: "2",
+                  unit: '% per 100 of Sona\'s AP',
+                  values: '2',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/e",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/e',
       maxCharges: -1,
       notes:
-        "To achieve a 99%  slow with the empowered attack via  Power Chord, it would require at least 1475 AP.",
-      resource: "Mana",
-      targeting: "Auto",
+        'To achieve a 99%  slow with the empowered attack via  Power Chord, it would require at least 1475 AP.',
+      resource: 'Mana',
+      targeting: 'Auto',
     },
     {
-      key: "R",
-      name: "Crescendo",
-      width: "280",
-      affects: "Enemies",
+      key: 'R',
+      name: 'Crescendo',
+      width: '280',
+      affects: 'Enemies',
       blurb:
-        "Active:  Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and briefly  stuns them.",
-      castTime: "0.25",
-      cooldown: "140 / 120 / 100",
-      cost: "100",
-      damageType: "Magic damage",
+        'Active:  Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and briefly  stuns them.',
+      castTime: '0.25',
+      cooldown: '140 / 120 / 100',
+      cost: '100',
+      damageType: 'Magic damage',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.</p>',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "150 / 250 / 350",
+                  values: '150 / 250 / 350',
                 },
                 {
-                  unit: "% AP",
-                  values: "50",
+                  unit: '% AP',
+                  values: '50',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/r",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/r',
       maxCharges: -1,
       notes:
-        "This ability will cast from wherever the caster is at the start of the cast time.\nWhile stunned by Crescendo, enemies will perform their Dance emote.",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "2400",
-      spellEffects: "spellaoe",
-      spellshieldable: "True",
-      targeting: "Direction",
+        'This ability will cast from wherever the caster is at the start of the cast time.\nWhile stunned by Crescendo, enemies will perform their Dance emote.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '2400',
+      spellEffects: 'spellaoe',
+      spellshieldable: 'True',
+      targeting: 'Direction',
     },
   ],
-  adaptiveType: "Magic damage",
-  attackType: "Ranged",
+  adaptiveType: 'Magic damage',
+  attackType: 'Ranged',
   attributeRatings: {
     abilityReliance: 90,
     control: 2,
@@ -265,18 +265,18 @@ const champion: Champion = {
     toughness: 1,
     utility: 2,
   },
-  faction: "demacia",
-  fullName: "Sona Buvelle",
-  lore: "Sona is Demacia's foremost virtuoso of the stringed etwahl, speaking only through her graceful chords and vibrant arias. This genteel manner has endeared her to the highborn, though others suspect her spellbinding melodies to actually emanate magic—a Demacian taboo. Silent to outsiders but somehow understood by close companions, Sona plucks her harmonies not only to soothe injured allies, but also to strike down unsuspecting enemies.",
-  patchLastChanged: "25.08",
-  positions: ["Support"],
+  faction: 'demacia',
+  fullName: 'Sona Buvelle',
+  lore: 'Sona is Demacia\'s foremost virtuoso of the stringed etwahl, speaking only through her graceful chords and vibrant arias. This genteel manner has endeared her to the highborn, though others suspect her spellbinding melodies to actually emanate magic—a Demacian taboo. Silent to outsiders but somehow understood by close companions, Sona plucks her harmonies not only to soothe injured allies, but also to strike down unsuspecting enemies.',
+  patchLastChanged: '25.08',
+  positions: ['Support'],
   price: {
     blueEssence: 225,
     rp: 260,
   },
-  releaseDate: "2010-09-21",
-  resource: "Mana",
-  roles: ["Enchanter", "Mage", "Support"],
+  releaseDate: '2010-09-21',
+  resource: 'Mana',
+  roles: ['Enchanter', 'Mage', 'Support'],
   stats: {
     acquisitionRadius: {
       flat: 800,
@@ -347,5 +347,5 @@ const champion: Champion = {
       flat: 110,
     },
   },
-};
-export default champion;
+}
+export default champion

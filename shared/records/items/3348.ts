@@ -1,6 +1,6 @@
 const item: Item = {
   id: 3348,
-  name: "Arcane Sweeper (Trinket)",
+  name: 'Arcane Sweeper (Trinket)',
   active: [
     {
       effects:
@@ -9,10 +9,10 @@ const item: Item = {
       unique: false,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3348_arcanesweeper.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3348_arcanesweeper.png',
   maps: [30],
   noEffects: false,
-  rank: "Consumable",
+  rank: 'Consumable',
   removed: false,
   shop: {
     prices: {
@@ -22,8 +22,8 @@ const item: Item = {
     },
     purchasable: false,
   },
-  simpleDescription: "Activate to reveal a nearby area of the map",
+  simpleDescription: 'Activate to reveal a nearby area of the map',
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

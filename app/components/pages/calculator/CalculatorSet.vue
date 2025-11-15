@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { DraggableEvent } from "vue-draggable-plus";
-import { vDraggable } from "vue-draggable-plus";
+import type { DraggableEvent } from 'vue-draggable-plus'
+import { vDraggable } from 'vue-draggable-plus'
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  num?: number;
-  split?: boolean;
-  set?: CalculatorSet;
-}>();
+  class?: HTMLAttributes['class']
+  num?: number
+  split?: boolean
+  set?: CalculatorSet
+}>()
 
-const emit = defineEmits(["update:set"]);
+const emit = defineEmits(['update:set'])
 </script>
 
 <template>
@@ -17,20 +17,20 @@ const emit = defineEmits(["update:set"]);
     v-draggable="[
       set,
       {
-        group: {
+        'group': {
           name: 'items',
           pull: true,
           put: 'items',
         },
-        bubbleScroll: false,
-        scroll: false,
-        delay: 0,
-        animation: 300,
+        'bubbleScroll': false,
+        'scroll': false,
+        'delay': 0,
+        'animation': 300,
         'force-fallback': true,
 
-        removeOnSpill: true,
-        fallbackTolerance: 0,
-        fallbackOnBody: true,
+        'removeOnSpill': true,
+        'fallbackTolerance': 0,
+        'fallbackOnBody': true,
       },
     ]"
     ghost-class="item-set-item-ghost"
@@ -45,8 +45,7 @@ const emit = defineEmits(["update:set"]);
         { '': props.split, '': !props.split },
         props.class,
       )
-    "
-  >
+    ">
     <ItemCommand
       v-for="(itemId, i) in set"
       :key="itemId"
@@ -54,7 +53,6 @@ const emit = defineEmits(["update:set"]);
       :set-index="i"
       :item-id="itemId"
       type="image"
-      @update:set="(e) => emit('update:set', e)"
-    />
+      @update:set="(e) => emit('update:set', e)" />
   </div>
 </template>

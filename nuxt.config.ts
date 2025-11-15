@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     "@variants": fileURLToPath(
       new URL("./app/assets/variants", import.meta.url)
     ),
-    tiptap: fileURLToPath(new URL("./app/components/tiptap", import.meta.url)),
+    tiptap: fileURLToPath(new URL("./app/composables/tiptap", import.meta.url)),
   },
   components: [
     {
@@ -51,21 +51,21 @@ export default defineNuxtConfig({
   icon: {
     provider: "server",
     componentName: "icon",
+    customCollections: [
+      {
+        dir: fileURLToPath(new URL("./app/assets/icons/lol", import.meta.url)),
+        normalizeIconName: false,
+        prefix: "lp",
+      },
+      {
+        dir: fileURLToPath(new URL("./app/assets/icons/ui", import.meta.url)),
+        normalizeIconName: false,
+        prefix: "lp-ui",
+      },
+    ],
     serverBundle: {
       collections: ["lucide", "lp", "lp-ui"],
     },
-    customCollections: [
-      {
-        prefix: "lp",
-        dir: fileURLToPath(new URL("./app/assets/icons/lol", import.meta.url)),
-        normalizeIconName: false,
-      },
-      {
-        prefix: "lp-ui",
-        dir: fileURLToPath(new URL("./app/assets/icons/ui", import.meta.url)),
-        normalizeIconName: false,
-      },
-    ],
   },
   image: {
     provider: "ipx",
@@ -97,7 +97,30 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@morev/vue-transitions/nuxt",
     "@nuxt/icon",
+    "@nuxt/fonts",
   ],
+  fonts: {
+    families: [
+      {
+        name: "Inter",
+        provider: "fontsource",
+        styles: ["italic", "normal"],
+        weights: [300, 400, 500, 600, 700, 800],
+      },
+      {
+        name: "Noto Serif KR",
+        provider: "fontsource",
+        styles: ["italic", "normal"],
+        weights: [300, 400, 600, 700],
+      },
+      {
+        name: "Tabular",
+        provider: "fontshare",
+        styles: ["italic", "normal"],
+        weights: [400, 500, 600],
+      },
+    ],
+  },
   nitro: {
     routeRules: {
       "/api/**": {

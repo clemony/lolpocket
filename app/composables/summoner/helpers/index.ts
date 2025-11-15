@@ -1,2 +1,2 @@
-export * from "./fetchSummonerMastery";
-export * from "./resolveSummonerFromRiot";
+export * from './fetchSummonerMastery'
+export * from './resolveSummonerFromRiot'

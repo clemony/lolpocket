@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { class: className, team } = defineProps<{
-  team: MatchTeam;
-  class?: HTMLAttributes["class"];
-}>();
+  team: MatchTeam
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -16,36 +16,41 @@ const { class: className, team } = defineProps<{
         `,
         className,
       )
-    "
-  >
+    ">
     <h3
-      class="text-start text-5 font-bold text-nowrap text-white/86 uppercase dst"
-    >
+      class="
+        text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
+      ">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
-      class="flex w-24 justify-start pl-2 font-bold tracking-wide! brightness-70"
+      class="
+        flex w-24 justify-start pl-2 font-bold tracking-wide! brightness-70
+      "
       :class="
         cn('', {
           'text-inspiration': team.teamId === 100,
           'text-domination': team.teamId === 200,
         })
-      "
-    >
+      ">
       {{ team.teamId === 100 ? "Blue" : "Red" }}
     </div>
 
     <TeamKDA :team="team" />
 
-    <TeamObjectives :team="team" :team-object="team" />
+    <TeamObjectives
+      :team="team"
+      :team-object="team" />
 
     <p class="flex justify-end gap-2">
-      <i-lol-gold class="size-4 text-[#C2A76E]" />
+      <Icon
+        name="gold class="
+        size-4
+        text-[#C2A76E]"" />
 
       <span
         v-if="team.gold"
-        class="flex items-center font-semibold tracking-wide"
-      >
+        class="flex items-center font-semibold tracking-wide">
         {{ team.gold.toLocaleString() }}
       </span>
     </p>

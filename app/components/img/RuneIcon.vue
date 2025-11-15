@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { keystoneIndex } from "#shared/indexes";
+import { keystoneIndex } from '#shared/indexes'
 
 const {
   id,
-  as = "div",
+  as = 'div',
   class: className,
-  size = "sq",
+  size = 'sq',
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  id?: number;
-  as?: string;
-  size?: ElementVariants["size"];
-}>();
+  class?: HTMLAttributes['class']
+  id?: number
+  as?: string
+  size?: ElementVariants['size']
+}>()
 </script>
 
 <template>
@@ -23,8 +23,7 @@ const {
         elementVariants({ size }),
         className,
       )
-    "
-  >
+    ">
     <img
       :src="`/img/runes/${id}.webp`"
       :alt="ix().runeNameById(id)"
@@ -34,8 +33,7 @@ const {
           ' rounded-full inset-ring inset-ring-black/80':
             !keystoneIndex.includes(id),
         })
-      "
-    />
+      " />
     <slot />
   </Element>
 </template>

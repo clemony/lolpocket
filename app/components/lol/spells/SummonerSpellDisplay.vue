@@ -1,36 +1,35 @@
 <script setup lang="ts">
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket?: Pocket;
-  isOpen?: boolean;
-}>();
+  pocket?: Pocket
+  isOpen?: boolean
+}>()
 
-const emit = defineEmits(["update:selected"]);
+const emit = defineEmits(['update:selected'])
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
 function update(event, i) {
-  console.log(event);
-  pocket.value.spells[i] = event;
+  console.log(event)
+  pocket.value.spells[i] = event
 }
 
 const imgArr = [
-  "/img/spells/heal.webp",
-  "/img/spells/ignite.webp",
-  "/img/spells/barrier.webp",
-  "/img/spells/ghost.webp",
-  "/img/spells/exhaust.webp",
-  "/img/spells/smite.webp",
-  "/img/spells/flash.webp",
-  "/img/spells/teleport.webp",
-];
+  '/img/spells/heal.webp',
+  '/img/spells/ignite.webp',
+  '/img/spells/barrier.webp',
+  '/img/spells/ghost.webp',
+  '/img/spells/exhaust.webp',
+  '/img/spells/smite.webp',
+  '/img/spells/flash.webp',
+  '/img/spells/teleport.webp',
+]
 </script>
 
 <template>
   <div
-    class="l flex h-auto items-center gap-2 border-b3 bg-b2 px-2 py-2 shadow-sm"
-  >
+    class="l flex h-auto items-center gap-2 border-b3 bg-b2 px-2 py-2 shadow-sm">
     <Popover>
       <PopoverTrigger class="">
         <!--       <img
@@ -51,8 +50,7 @@ const imgArr = [
         :model="0"
         :pocket="pocket"
         :is-menu-open="isOpen"
-        @update:model="update($event, 0)"
-      />
+        @update:model="update($event, 0)" />
     </Popover>
 
     <Popover>
@@ -75,8 +73,7 @@ const imgArr = [
         :model="1"
         :pocket="pocket"
         :is-menu-open="isOpen"
-        @update:model="update($event, 1)"
-      />
+        @update:model="update($event, 1)" />
     </Popover>
   </div>
 </template>

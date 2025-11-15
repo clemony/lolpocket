@@ -1,9 +1,9 @@
-.NavigationMenuIndicator[data-state="visible"][data-orientation="vertical"] {
+.NavigationMenuIndicator[data-state='visible'][data-orientation='vertical'] {
   top: var(--reka-navigation-menu-indicator-position);
   left: 0;
 }
 
-.NavigationMenuIndicator[data-state="visible"][data-orientation="horizontal"] {
+.NavigationMenuIndicator[data-state='visible'][data-orientation='horizontal'] {
   left: var(--reka-navigation-menu-indicator-position);
   top: 0;
 }
@@ -15,7 +15,7 @@
     opacity 500ms 200ms ease,
     transform 500ms 200ms ease;
 
-  &[data-state="hidden"] {
+  &[data-state='hidden'] {
     opacity: 0;
     scale: 0.6;
   }
@@ -29,16 +29,16 @@
   animation-timing-function: ease;
 }
 
-.NavigationMenuContent[data-motion="from-start"][data-orientation="horizontal"] {
+.NavigationMenuContent[data-motion='from-start'][data-orientation='horizontal'] {
   animation-name: enterFromLeft;
 }
-.NavigationMenuContent[data-motion="from-end"][data-orientation="horizontal"] {
+.NavigationMenuContent[data-motion='from-end'][data-orientation='horizontal'] {
   animation-name: enterFromRight;
 }
-.NavigationMenuContent[data-motion="to-start"][data-orientation="horizontal"] {
+.NavigationMenuContent[data-motion='to-start'][data-orientation='horizontal'] {
   animation-name: exitToLeft;
 }
-.NavigationMenuContent[data-motion="to-end"][data-orientation="horizontal"] {
+.NavigationMenuContent[data-motion='to-end'][data-orientation='horizontal'] {
   animation-name: exitToRight;
 }
 
@@ -86,16 +86,16 @@
   }
 }
 
-.NavigationMenuContent[data-motion="from-start"][data-orientation="vertical"] {
+.NavigationMenuContent[data-motion='from-start'][data-orientation='vertical'] {
   animation-name: enterFromTop;
 }
-.NavigationMenuContent[data-motion="from-end"][data-orientation="vertical"] {
+.NavigationMenuContent[data-motion='from-end'][data-orientation='vertical'] {
   animation-name: enterFromBottom;
 }
-.NavigationMenuContent[data-motion="to-start"][data-orientation="vertical"] {
+.NavigationMenuContent[data-motion='to-start'][data-orientation='vertical'] {
   animation-name: exitToTop;
 }
-.NavigationMenuContent[data-motion="to-end"][data-orientation="vertical"] {
+.NavigationMenuContent[data-motion='to-end'][data-orientation='vertical'] {
   animation-name: exitToBottom;
 }
 

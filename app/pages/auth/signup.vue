@@ -1,22 +1,22 @@
 <script lang="ts" setup>
-import { authProviders } from "#shared/references";
+import { authProviders } from '#shared/references'
 
 definePageMeta({
-  name: "Sign up",
-  description: "Login with your Riot, Google, or Discord account.",
-  icon: "gear",
-  layout: "basic",
-  search: "!user",
-});
+  name: 'Sign up',
+  description: 'Login with your Riot, Google, or Discord account.',
+  icon: 'gear',
+  layout: 'basic',
+  search: '!user',
+})
 
-const client = useSupabaseClient();
-const email = ref("");
-const password = ref("");
+const client = useSupabaseClient()
+const email = ref('')
+const password = ref('')
 
 onBeforeRouteLeave(() => {
-  email.value = "";
-  password.value = "";
-});
+  email.value = ''
+  password.value = ''
+})
 </script>
 
 <template>
@@ -30,15 +30,22 @@ onBeforeRouteLeave(() => {
             size="12"
             variant="link"
             hover="outline"
-            class="grid h-14 w-full place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
-            @click="useSignIn(provider)"
-          >
-            <icon :name="provider" :class="cn('size-5.5')" />
+            class="
+              grid h-14 w-full place-items-center border border-b4/60 shadow-xs
+              [&_svg]:opacity-80
+            "
+            @click="useSignIn(provider)">
+            <icon
+              :name="provider"
+              :class="cn('size-5.5')" />
           </Button>
         </div>
         <div
-          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4"
-        >
+          class="
+            relative text-center text-3
+            after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex
+            after:items-center after:border-t after:border-b4
+          ">
           <span class="relative z-10 bg-b1 px-2 text-bc/60">
             Or continue with
           </span>
@@ -53,8 +60,7 @@ onBeforeRouteLeave(() => {
               class="h-12"
               placeholder="mail@example.com"
               required
-              @clear:input="email = ''"
-            />
+              @clear:input="email = ''" />
           </div>
           <div class="grid gap-2">
             <div class="flex items-center">
@@ -66,30 +72,32 @@ onBeforeRouteLeave(() => {
               class="h-12"
               type="password"
               required
-              @clear:input="password = ''"
-            />
+              @clear:input="password = ''" />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
               variant="neutral"
               size="12"
               type="submit"
-              class="col-span-full w-full font-medium"
-            >
+              class="col-span-full w-full font-medium">
               Sign up with Email
             </Button>
 
             <div
-              class="flex size-full items-center justify-center gap-3 *:align-baseline"
-            >
+              class="
+                flex size-full items-center justify-center gap-3
+                *:align-baseline
+              ">
               <Button
                 as="a"
                 variant="link"
                 size="12"
                 hover="link"
-                class="underline-offset-1.5 max-w-fit justify-center justify-self-start"
-                @click="navigateTo('/login')"
-              >
+                class="
+                  underline-offset-1.5 max-w-fit justify-center
+                  justify-self-start
+                "
+                @click="navigateTo('/login')">
                 Logging in?
               </Button>
 
@@ -99,9 +107,10 @@ onBeforeRouteLeave(() => {
                 variant="link"
                 size="12"
                 hover="link"
-                class="underline-offset-1.5 max-w-fit justify-center justify-self-end"
-                @click="navigateTo('/password-reset')"
-              >
+                class="
+                  underline-offset-1.5 max-w-fit justify-center justify-self-end
+                "
+                @click="navigateTo('/password-reset')">
                 Forgot Password?
               </Button>
             </div>

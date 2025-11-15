@@ -1,31 +1,31 @@
 const item: Item = {
   id: 6617,
-  name: "Moonstone Renewer",
-  nicknames: ["yuumi"],
+  name: 'Moonstone Renewer',
+  nicknames: ['yuumi'],
   buildsFrom: [
     {
       id: 3067,
-      name: "Kindlegem",
+      name: 'Kindlegem',
       gold: 800,
     },
     {
       id: 4642,
-      name: "Bandleglass Mirror",
+      name: 'Bandleglass Mirror',
       gold: 900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: "Starlit Grace",
+      name: 'Starlit Grace',
       effects:
         '<img src="/img/icons/heal.webp" class="tip-icon" />Healing or <img src="/img/icons/shield.webp" class="tip-icon" />shielding an allied champion chains the effect to the other nearest allied champion within 800 units of them (<i>excluding yourself</i>), granting them 30% of the heal or 35% of the shield\'s initial strength. If no other allied champions are in the radius, grant the same target an additional 30% of the heal or 35% of the shield.',
       unique: true,
     },
   ],
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -33,10 +33,10 @@ const item: Item = {
       sell: 880,
       total: 2200,
     },
-    tags: ["SUPPORT"],
+    tags: ['SUPPORT'],
   },
   simpleDescription:
-    "Your heals and shields cool down faster and have greater effect on low health allies",
+    'Your heals and shields cool down faster and have greater effect on low health allies',
   specialRecipe: 0,
   stats: {
     abilityHaste: 20,
@@ -44,5 +44,5 @@ const item: Item = {
     health: 200,
     manaRegen: 125,
   },
-};
-export default item;
+}
+export default item

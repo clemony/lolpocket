@@ -1,1 +1,1 @@
-export * from "../pocket/newRandomPocket"
+export * from '../pocket/newRandomPocket'

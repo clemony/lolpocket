@@ -1,4 +1,4 @@
-import * as v from "valibot";
+import * as v from 'valibot'
 /*
 function hash(obj: any) {
   return crypto.subtle.digest('SHA-256', obj ?? {})

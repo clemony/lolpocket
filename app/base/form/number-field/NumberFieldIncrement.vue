@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { NumberFieldIncrementProps } from "reka-ui";
-import { NumberFieldIncrement, useForwardProps } from "reka-ui";
+import type { NumberFieldIncrementProps } from 'reka-ui'
+import { NumberFieldIncrement, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  NumberFieldIncrementProps & { class?: HTMLAttributes["class"] }
->();
+  NumberFieldIncrementProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -27,10 +27,11 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon name="add" class="h-4 w-4" />
+      <icon
+        name="add"
+        class="h-4 w-4" />
     </slot>
   </NumberFieldIncrement>
 </template>

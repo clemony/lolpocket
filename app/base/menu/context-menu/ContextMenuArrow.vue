@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import type { ContextMenuArrowProps } from "reka-ui";
-import { ContextMenuArrow, useForwardProps } from "reka-ui";
+import type { ContextMenuArrowProps } from 'reka-ui'
+import { ContextMenuArrow, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   ContextMenuArrowProps & {
-    class?: HTMLAttributes["class"];
-    sideOffset?: number;
-    alignOffset?: number;
-    iconClass?: HTMLAttributes["class"];
-    orientation?: "vertical" | "horizontal";
+    class?: HTMLAttributes['class']
+    sideOffset?: number
+    alignOffset?: number
+    iconClass?: HTMLAttributes['class']
+    orientation?: 'vertical' | 'horizontal'
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -28,8 +28,7 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <div
       :class="
         cn(
@@ -39,8 +38,7 @@ const forwarded = useForwardProps(delegatedProps);
           `,
           props.iconClass,
         )
-      "
-    >
+      ">
       <icon
         name="ion:caret-up-sharp"
         :class="
@@ -51,8 +49,7 @@ const forwarded = useForwardProps(delegatedProps);
               *:stroke-b4
             `,
           )
-        "
-      />
+        " />
     </div>
   </ContextMenuArrow>
 </template>

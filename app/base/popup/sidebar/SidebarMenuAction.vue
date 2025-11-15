@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui";
-import { Primitive } from "reka-ui";
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<
     PrimitiveProps & {
-      showOnHover?: boolean;
-      class?: HTMLAttributes["class"];
+      showOnHover?: boolean
+      class?: HTMLAttributes['class']
     }
   >(),
   {
-    as: "button",
+    as: 'button',
   },
-);
+)
 </script>
 
 <template>
@@ -38,14 +38,13 @@ const props = withDefaults(
         'peer-data-[size=default]/menu-button:top-1.5',
         'peer-data-[size=lg]/menu-button:top-2.5',
         'group-data-[collapsible=icon]:hidden',
-        showOnHover &&
-          'peer-data-[active=true]/menu-button:text-sidebar-bc group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0',
+        showOnHover
+          && 'peer-data-[active=true]/menu-button:text-sidebar-bc group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0',
         props.class,
       )
     "
     :as="as"
-    :as-child="asChild"
-  >
+    :as-child="asChild">
     <slot />
   </Primitive>
 </template>

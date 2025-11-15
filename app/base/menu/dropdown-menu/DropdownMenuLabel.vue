@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { DropdownMenuLabelProps } from "reka-ui";
-import { DropdownMenuLabel, useForwardProps } from "reka-ui";
+import type { DropdownMenuLabelProps } from 'reka-ui'
+import { DropdownMenuLabel, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  DropdownMenuLabelProps & { class?: HTMLAttributes["class"]; inset?: boolean }
->();
+  DropdownMenuLabelProps & { class?: HTMLAttributes['class'], inset?: boolean }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -23,8 +23,7 @@ const forwarded = useForwardProps(delegatedProps);
         inset && 'pl-9',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </DropdownMenuLabel>
 </template>

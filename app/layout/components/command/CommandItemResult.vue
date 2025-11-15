@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 const { activeItem: mv, item } = defineProps<{
-  item: ItemIndex;
-  activeItem: number | null;
-}>();
+  item: ItemIndex
+  activeItem: number | null
+}>()
 
-const emit = defineEmits(["update:modelValue"]);
-const modelValue = ref(mv);
+const emit = defineEmits(['update:modelValue'])
+const modelValue = ref(mv)
 onMounted(() => {
-  modelValue.value = mv;
-});
+  modelValue.value = mv
+})
 </script>
 
 <template>
@@ -19,15 +19,13 @@ onMounted(() => {
       class="peer hidden"
       name="item-popover"
       :value="item.id"
-      @change="emit('update:modelValue', modelValue)"
-    />
+      @change="emit('update:modelValue', modelValue)" />
 
     <Item
       :id="item.id"
       :item="item"
       :alt="item.id"
-      class="size-7 rounded-full"
-    />
+      class="size-7 rounded-full" />
     {{ item.name }}
   </CommandResult>
 </template>

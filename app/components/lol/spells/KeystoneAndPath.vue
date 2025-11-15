@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { RuneSet } from "~~/shared/schema";
+import type { RuneSet } from '~~/shared/schema'
 
 const { set } = defineProps<{
-  set: RuneSet;
-  kClass?: HTMLAttributes["class"];
-  pClass?: HTMLAttributes["class"];
-  xClass?: HTMLAttributes["class"];
-}>();
+  set: RuneSet
+  kClass?: HTMLAttributes['class']
+  pClass?: HTMLAttributes['class']
+  xClass?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -23,29 +23,25 @@ const { set } = defineProps<{
             'absolute -right-2 w-14! shrink-0 justify-self-end! drop-shadow-sm',
             kClass,
           )
-        "
-      />
+        " />
 
       <Placeholder
         v-else
         :class="
           cn('size-11 shrink-0 justify-end rounded-full bg-b2/80', xClass)
         "
-        class=""
-      />
+        class="" />
     </span>
     <img
       v-if="set?.secondary?.path"
       :title="set?.secondary?.path"
       :alt="set?.secondary?.path"
       :src="`/img/paths/${set?.secondary?.path}.webp`"
-      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)"
-    />
+      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
     <Placeholder
       v-else
       :class="
         cn('size-11 shrink-0 justify-start rounded-full bg-b2/80', xClass)
-      "
-    />
+      " />
   </div>
 </template>

@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import type { NuxtLinkProps } from "#app";
-import { useForwardProps } from "reka-ui";
+import type { NuxtLinkProps } from '#app'
+import { useForwardProps } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<
     NuxtLinkProps & {
-      base?: ButtonVariants["base"];
-      class?: HTMLAttributes["class"];
-      hover?: ButtonVariants["hover"];
-      on?: ButtonVariants["on"];
-      size?: ButtonVariants["size"];
-      variant?: ButtonVariants["variant"];
+      base?: ButtonVariants['base']
+      class?: HTMLAttributes['class']
+      hover?: ButtonVariants['hover']
+      on?: ButtonVariants['on']
+      size?: ButtonVariants['size']
+      variant?: ButtonVariants['variant']
     }
   >(),
   {
-    base: "btn",
-    hover: "link",
-    on: "btn",
-    size: "12",
-    variant: "link",
+    base: 'btn',
+    hover: 'link',
+    on: 'btn',
+    size: '12',
+    variant: 'link',
   },
-);
+)
 
-const delegated = omitUIProps(props);
-const forwarded = useForwardProps(delegated);
+const delegated = omitUIProps(props)
+const forwarded = useForwardProps(delegated)
 </script>
 
 <template>
@@ -38,8 +38,7 @@ const forwarded = useForwardProps(delegated);
         props.class,
       )
     "
-    v-bind="forwarded"
-  >
+    v-bind="forwarded">
     <slot />
   </NuxtLink>
 </template>

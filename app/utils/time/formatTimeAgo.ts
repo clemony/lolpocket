@@ -1,16 +1,18 @@
 export function formatTimeAgo(
   date: string | number,
-  format?: "letter" | "short"
+  format?: 'letter' | 'short'
 ) {
-  if (!date) return
+  if (!date)
+    return
 
   const timeAgo = useTimeAgo(date)
-  if (format === "short") {
-    return timeAgo.value.replace(" minutes", " min").replace(" seconds", " sec")
-  } else {
+  if (format === 'short') {
+    return timeAgo.value.replace(' minutes', ' min').replace(' seconds', ' sec')
+  }
+  else {
     return timeAgo.value
-      .replace(" minutes", "m")
-      .replace(" hours", "h")
-      .replace(" seconds", "s")
+      .replace(' minutes', 'm')
+      .replace(' hours', 'h')
+      .replace(' seconds', 's')
   }
 }

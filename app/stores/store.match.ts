@@ -1,17 +1,17 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 export interface MatchFilter {
-  ally?: string | null;
-  champion?: string | null;
-  ignoreRole?: boolean;
-  patch?: number | null;
-  queue?: number | null;
-  role?: string | null;
+  ally?: string | null
+  champion?: string | null
+  ignoreRole?: boolean
+  patch?: number | null
+  queue?: number | null
+  role?: string | null
 }
-export const useMatchStore = defineStore("matchStore", () => {
-  const summonerSearch = ref(null);
+export const useMatchStore = defineStore('matchStore', () => {
+  const summonerSearch = ref(null)
 
-  const championTabsQueue = ref<number>(0);
+  const championTabsQueue = ref<number>(0)
 
   // match filters
   const filter = ref<MatchFilter>({
@@ -19,8 +19,8 @@ export const useMatchStore = defineStore("matchStore", () => {
     champion: null,
     patch: null,
     queue: 0,
-    role: "ALL",
-  });
+    role: 'ALL',
+  })
 
   function clearFilter() {
     filter.value = Object.assign(filter, {
@@ -28,14 +28,14 @@ export const useMatchStore = defineStore("matchStore", () => {
       champion: null,
       patch: null,
       queue: 0,
-      role: "ALL",
-    });
+      role: 'ALL',
+    })
   }
 
-  const seasonTotals = ref();
+  const seasonTotals = ref()
 
-  const analysisPatchSelect = computedAsync(() => ds().currentPatch);
-  const analysisQueueSelect = ref<number>(0);
+  const analysisPatchSelect = computedAsync(() => ds().currentPatch)
+  const analysisQueueSelect = ref<number>(0)
 
   return {
     analysisPatchSelect,
@@ -45,5 +45,5 @@ export const useMatchStore = defineStore("matchStore", () => {
     filter,
     seasonTotals,
     summonerSearch,
-  };
-});
+  }
+})

@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { SidebarProps } from "./sidebar-index";
-import { SIDEBAR_WIDTH_MOBILE, useSidebar } from "./sidebar-utils";
+import type { SidebarProps } from './sidebar-index'
+import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './sidebar-utils'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const props = withDefaults(defineProps<SidebarProps>(), {
-  side: "left",
-  collapsible: "offcanvas",
-  variant: "sidebar",
-});
+  side: 'left',
+  collapsible: 'offcanvas',
+  variant: 'sidebar',
+})
 
-const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
+const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
 </script>
 
 <template>
@@ -25,8 +25,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
         props.class,
       )
     "
-    v-bind="$attrs"
-  >
+    v-bind="$attrs">
     <slot />
   </div>
 
@@ -34,18 +33,19 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
     v-else-if="isMobile"
     :open="openMobile"
     v-bind="$attrs"
-    @update:open="setOpenMobile"
-  >
+    @update:open="setOpenMobile">
     <SheetContent
       data-sidebar="sidebar"
       data-slot="sidebar"
       data-mobile="true"
       :side="side"
-      class="bg-sidebar w-(--sidebar-width) p-0 text-bc [&>button]:hidden"
+      class="
+        bg-sidebar w-(--sidebar-width) p-0 text-bc
+        [&>button]:hidden
+      "
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
-      }"
-    >
+      }">
       <SheetHeader class="sr-only">
         <SheetTitle>Sidebar</SheetTitle>
         <SheetDescription>Displays the mobile sidebar.</SheetDescription>
@@ -58,13 +58,15 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
 
   <div
     v-else
-    class="group peer hidden text-bc md:block"
+    class="
+      group peer hidden text-bc
+      md:block
+    "
     data-slot="sidebar"
     :data-state="state"
     :data-collapsible="state === 'collapsed' ? collapsible : ''"
     :data-variant="variant"
-    :data-side="side"
-  >
+    :data-side="side">
     <!-- This is what handles the sidebar gap on desktop  -->
     <div
       :class="
@@ -79,8 +81,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
             ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]'
             : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)',
         )
-      "
-    />
+      " />
     <div
       :class="
         cn(
@@ -99,12 +100,15 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar();
           props.class,
         )
       "
-      v-bind="$attrs"
-    >
+      v-bind="$attrs">
       <div
         data-sidebar="sidebar"
-        class="bg-sidebar/90 flex h-full w-full flex-col border-b3 backdrop-blur-lg group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
-      >
+        class="
+          bg-sidebar/90 flex h-full w-full flex-col border-b3 backdrop-blur-lg
+          group-data-[variant=floating]:rounded-xl
+          group-data-[variant=floating]:border
+          group-data-[variant=floating]:shadow-sm
+        ">
         <slot />
       </div>
     </div>

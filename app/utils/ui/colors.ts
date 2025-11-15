@@ -1,54 +1,54 @@
 export function getColorFromVariable(variable) {
-  return getComputedStyle(document.documentElement).getPropertyValue(variable);
+  return getComputedStyle(document.documentElement).getPropertyValue(variable)
 }
 export function getGrade(value) {
   return value >= 53
-    ? "S+"
+    ? 'S+'
     : value < 53 && value >= 52.5
-      ? "S"
+      ? 'S'
       : value < 52.5 && value >= 52
-        ? "S-"
+        ? 'S-'
         : value < 52 && value >= 51.5
-          ? "A+"
+          ? 'A+'
           : value < 51.5 && value >= 51
-            ? "A"
+            ? 'A'
             : value < 51 && value >= 50
-              ? "A-"
+              ? 'A-'
               : value < 50
-                ? "F"
-                : null;
+                ? 'F'
+                : null
 }
 
 export function getGradeColor(value) {
   return value >= 53
-    ? "precision"
+    ? 'precision'
     : value < 53 && value >= 52.5
-      ? "resolve"
+      ? 'resolve'
       : value < 52.5 && value >= 52
-        ? "inspiration"
+        ? 'inspiration'
         : value < 52 && value >= 51.5
-          ? "sorcery"
+          ? 'sorcery'
           : value < 51.5 && value >= 51
-            ? "onhit"
+            ? 'onhit'
             : value < 51 && value >= 50
-              ? "fighter"
+              ? 'fighter'
               : value < 50
-                ? "domination"
-                : "b2";
+                ? 'domination'
+                : 'b2'
 }
 
 export function getAbsoluteColor(value) {
   return value >= 55
-    ? "challenger"
+    ? 'challenger'
     : value < 55 && value >= 54
-      ? "grandmaster"
+      ? 'grandmaster'
       : value < 54 && value >= 53
-        ? "master"
+        ? 'master'
         : value < 53 && value >= 52
-          ? "diamond"
+          ? 'diamond'
           : value < 52 && value >= 51
-            ? "emerald"
+            ? 'emerald'
             : value < 51 && value >= 50
-              ? "platinum"
-              : "silver";
+              ? 'platinum'
+              : 'silver'
 }

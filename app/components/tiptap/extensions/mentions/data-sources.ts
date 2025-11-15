@@ -1,7 +1,7 @@
-import { ChampionIcon, Item, RuneIcon } from "#components";
+import { ChampionIcon, Item, RuneIcon } from '#components'
 
 export interface IndexGroup {
-  name: string;
-  component: Component;
-  items: Index[];
+  name: string
+  component: Component
+  items: Index[]
 }

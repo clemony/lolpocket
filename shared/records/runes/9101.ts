@@ -2,13 +2,13 @@
 
 const rune: Rune = {
   id: 9101,
-  name: "Absorb Life",
-  description: "Killing a target restores 1 - 23 Health based on level.",
-  path: "Precision",
+  name: 'Absorb Life',
+  description: 'Killing a target restores 1 - 23 Health based on level.',
+  path: 'Precision',
   pathId: 8000,
   tier: 1,
-  tierLabel: "Heroism",
+  tierLabel: 'Heroism',
   tierSlot: 0,
-};
+}
 
-export default rune;
+export default rune

@@ -1,24 +1,24 @@
 const item: Item = {
   id: 3042,
-  name: "Muramana",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_marksman_t3_muramana.png",
+  name: 'Muramana',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_marksman_t3_muramana.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: "Awe",
+      name: 'Awe',
       effects:
-        "Grants <b>bonus</b> attack damage equal to 2% <b>maximum</b> mana.",
+        'Grants <b>bonus</b> attack damage equal to 2% <b>maximum</b> mana.',
       unique: true,
     },
     {
-      name: "Shock",
+      name: 'Shock',
       effects:
         'Basic attacks on-hit against champions deal 1.2% <b>maximum</b> mana <b>bonus</b> physical damage. Dealing ability damage to champions deals (<img src="/img/icons/melee.webp" class="inline-icon" />4% /<img src="/img/icons/ranged.webp" class="inline-icon" />3%) <b>maximum</b> mana <b>bonus</b> physical damage. Can only be triggered on the same target once every 6.5 seconds from the same attack or cast.',
       unique: true,
     },
   ],
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -27,7 +27,7 @@ const item: Item = {
       total: 2900,
     },
     purchasable: false,
-    tags: ["FIGHTER", "MARKSMAN", "ASSASSIN", "ONHIT_EFFECTS"],
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'ONHIT_EFFECTS'],
   },
   specialRecipe: 3004,
   stats: {
@@ -35,5 +35,5 @@ const item: Item = {
     attackDamage: 35,
     mana: 860,
   },
-};
-export default item;
+}
+export default item

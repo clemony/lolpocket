@@ -1,17 +1,17 @@
 const item: Item = {
   id: 1512,
-  name: "Super Mech Power Field",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1512_supermechpowerfield.png",
+  name: 'Super Mech Power Field',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1512_supermechpowerfield.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
   passives: [
     {
       effects:
-        "Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance.",
+        'Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance.',
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -23,5 +23,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

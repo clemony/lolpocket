@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { SliderTrackProps } from "reka-ui";
-import { SliderRange, SliderTrack, useForwardProps } from "reka-ui";
+import type { SliderTrackProps } from 'reka-ui'
+import { SliderRange, SliderTrack, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   SliderTrackProps & {
-    class?: HTMLAttributes["class"];
-    variant?: TabListVariants["variant"];
-    orientation?: TabListVariants["orientation"];
-    base?: TabListVariants["base"];
-    size?: TabListVariants["size"];
+    class?: HTMLAttributes['class']
+    variant?: TabListVariants['variant']
+    orientation?: TabListVariants['orientation']
+    base?: TabListVariants['base']
+    size?: TabListVariants['size']
   }
->();
+>()
 const delegatedProps = reactiveOmit(
   props,
-  "class" /* 'variant', 'base', 'size' */,
-);
-const forwarded = useForwardProps(delegatedProps);
+  'class' /* 'variant', 'base', 'size' */,
+)
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -23,11 +23,12 @@ const forwarded = useForwardProps(delegatedProps);
     :class="
       cn(tabListVariants({ variant, orientation, base, size }), props.class)
     "
-    v-bind="forwarded"
-  >
+    v-bind="forwarded">
     <SliderRange
-      class="absolute h-full bg-neutral data-[orientation=vertical]:w-full"
-    />
+      class="
+        absolute h-full bg-neutral
+        data-[orientation=vertical]:w-full
+      " />
     <slot />
   </SliderTrack>
 </template>

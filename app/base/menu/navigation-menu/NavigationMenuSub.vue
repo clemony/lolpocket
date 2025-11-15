@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { NavigationMenuSub } from "reka-ui";
+import { NavigationMenuSub } from 'reka-ui'
 
 const { defaultValue } = defineProps<{
-  defaultValue?: string;
-}>();
+  defaultValue?: string
+}>()
 </script>
 
 <template>

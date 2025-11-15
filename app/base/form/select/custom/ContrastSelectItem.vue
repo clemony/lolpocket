@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { AcceptableValue } from "reka-ui";
-import { SelectItemIndicator } from "reka-ui";
+import type { AcceptableValue } from 'reka-ui'
+import { SelectItemIndicator } from 'reka-ui'
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  value: AcceptableValue;
-}>();
+  class?: HTMLAttributes['class']
+  value: AcceptableValue
+}>()
 </script>
 
 <template>
@@ -21,8 +21,7 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </SelectItem>
 </template>

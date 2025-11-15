@@ -1,57 +1,65 @@
 <script lang="ts" setup>
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const { isOpen, match } = defineProps<{
-  match: MatchData;
-  player: Player;
-  isOpen: boolean;
-}>();
+  match: MatchData
+  player: Player
+  isOpen: boolean
+}>()
 
-const modelValue = ref<string | number>("Scoreboard");
+const modelValue = ref<string | number>('Scoreboard')
 </script>
 
 <template>
   <AnimatePresence>
     <LazyCollapsibleContent
       v-if="isOpen"
-      class="'CollapsibleContent group relative h-200 w-220 max-w-220 translate-x-0 p-0 text-2 transition duration-0 **:select-none"
-    >
-      <Tabs v-model:model-value="modelValue" class="relative">
+      class="
+        'CollapsibleContent group relative h-200 w-220 max-w-220 translate-x-0
+        p-0 text-2 transition duration-0
+        **:select-none
+      ">
+      <Tabs
+        v-model:model-value="modelValue"
+        class="relative">
         <TabsList
           base="indicator"
-          class="mb-0! w-full auto-cols-min grid-flow-col justify-start rounded-none border border-b3 bg-b3/36"
-        >
+          class="
+            mb-0! w-full auto-cols-min grid-flow-col justify-start rounded-none
+            border border-b3 bg-b3/36
+          ">
           <TabsTrigger
             v-for="tab in ['Scoreboard', 'Data', 'Badges']"
             :key="tab"
             :value="tab"
-            class="cursor-pointer"
-          >
+            class="cursor-pointer">
             {{ tab }}
           </TabsTrigger>
 
           <TabIndicator />
         </TabsList>
 
-        <TabsContent value="Scoreboard" class="m-0! p-0">
+        <TabsContent
+          value="Scoreboard"
+          class="m-0! p-0">
           <LazyMatchScoreboard :match="match" />
         </TabsContent>
 
         <TabsContent value="Badges">
           <LazyMatchBadgesEarned
             v-if="modelValue === 'Badges'"
-            :match="match"
-          />
+            :match="match" />
         </TabsContent>
 
-        <TabsContent value="Data" class="">
+        <TabsContent
+          value="Data"
+          class="">
           <LazyMatchDataTable
             v-if="modelValue === 'Data'"
             :player
-            :match="match"
-          />
+            :match="match" />
         </TabsContent>
       </Tabs>
     </LazyCollapsibleContent>

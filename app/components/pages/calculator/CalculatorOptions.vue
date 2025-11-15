@@ -7,8 +7,10 @@
         type="text"
         aria-label="save item set as..."
         placeholder="Save set as..."
-        class="size-full dst placeholder:font-mono"
-      />
+        class="
+          size-full dst
+          placeholder:font-mono
+        " />
     </div>
 
     <div class="">

@@ -6,8 +6,9 @@ export function formatNumberPosition(num: number, returnNum?: boolean) {
         ? `${num}nd`
         : num === 3
           ? `${num}rd`
-          : `${num}th`;
-  } else {
-    return num === 1 ? `st` : num === 2 ? `nd` : num === 3 ? `rd` : `th`;
+          : `${num}th`
+  }
+  else {
+    return num === 1 ? `st` : num === 2 ? `nd` : num === 3 ? `rd` : `th`
   }
 }

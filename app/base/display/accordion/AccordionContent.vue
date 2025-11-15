@@ -1,25 +1,28 @@
 <script setup lang="ts">
-import type { AccordionContentProps } from "reka-ui";
-import { AccordionContent } from "reka-ui";
-import { computed } from "vue";
+import type { AccordionContentProps } from 'reka-ui'
+import { AccordionContent } from 'reka-ui'
+import { computed } from 'vue'
 
 const props = defineProps<
-  AccordionContentProps & { class?: HTMLAttributes["class"] }
->();
+  AccordionContentProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
   <AccordionContent
     data-slot="accordion-content"
     v-bind="delegatedProps"
-    class="AccordionContent overflow-hidden text-2 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up"
-  >
+    class="
+      AccordionContent overflow-hidden text-2
+      data-[state=open]:animate-accordion-down
+      data-[state=closed]:animate-accordion-up
+    ">
     <div :class="cn('pt-0 pb-4', props.class)">
       <slot />
     </div>

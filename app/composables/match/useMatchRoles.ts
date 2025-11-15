@@ -2,12 +2,12 @@
 const roleStats = useRoles(filteredMatches)
  */
 export interface RoleStats {
-  name: string;
-  bayesianWinrate: number;
-  games: number;
-  role: string;
-  winrate: number;
-  wins: number;
+  name: string
+  bayesianWinrate: number
+  games: number
+  role: string
+  winrate: number
+  wins: number
 }
 
 export function useMatchRoles(
@@ -15,52 +15,55 @@ export function useMatchRoles(
   matches: Ref<MatchData[]>,
 ): ComputedRef<RoleStats[]> {
   return computed(() => {
-    const roles = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"];
-    const roleStatsMap = new Map<string, { games: number; wins: number }>();
+    const roles = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']
+    const roleStatsMap = new Map<string, { games: number, wins: number }>()
 
-    let allGames = 0;
-    let allWins = 0;
+    let allGames = 0
+    let allWins = 0
 
     for (const match of matches.value) {
-      const player = match.participants.find((p) => p.puuid === puuid);
-      const role = player.teamPosition.toUpperCase();
-      if (!roles.includes(role)) continue;
+      const player = match.participants.find(p => p.puuid === puuid)
+      const role = player.teamPosition.toUpperCase()
+      if (!roles.includes(role))
+        continue
 
-      allGames++;
-      if (player.win) allWins++;
+      allGames++
+      if (player.win)
+        allWins++
 
       if (!roleStatsMap.has(role)) {
-        roleStatsMap.set(role, { games: 0, wins: 0 });
+        roleStatsMap.set(role, { games: 0, wins: 0 })
       }
 
-      const stats = roleStatsMap.get(role)!;
-      stats.games++;
-      if (player.win) stats.wins++;
+      const stats = roleStatsMap.get(role)!
+      stats.games++
+      if (player.win)
+        stats.wins++
     }
 
-    roleStatsMap.set("ALL", { games: allGames, wins: allWins });
+    roleStatsMap.set('ALL', { games: allGames, wins: allWins })
 
-    const globalWinrate = allGames === 0 ? 0 : allWins / allGames;
-    const m = 500;
+    const globalWinrate = allGames === 0 ? 0 : allWins / allGames
+    const m = 500
 
     const formatDisplay = (role: string) => {
       switch (role) {
-        case "UTILITY":
-          return "Support";
-        case "MIDDLE":
-          return "Mid";
-        case "BOTTOM":
-          return "Bot";
-        case "ALL":
-          return "All";
+        case 'UTILITY':
+          return 'Support'
+        case 'MIDDLE':
+          return 'Mid'
+        case 'BOTTOM':
+          return 'Bot'
+        case 'ALL':
+          return 'All'
         default:
-          return role.charAt(0) + role.slice(1).toLowerCase();
+          return role.charAt(0) + role.slice(1).toLowerCase()
       }
-    };
+    }
 
-    return ["ALL", ...roles].map((role) => {
-      const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {};
-      const name = formatDisplay(role);
+    return ['ALL', ...roles].map((role) => {
+      const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
+      const name = formatDisplay(role)
 
       return {
         name,
@@ -69,7 +72,7 @@ export function useMatchRoles(
         role,
         winrate: games === 0 ? 0 : (wins / games) * 100,
         wins,
-      };
-    });
-  });
+      }
+    })
+  })
 }

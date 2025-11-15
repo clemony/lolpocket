@@ -1,78 +1,81 @@
 <script lang="ts" setup>
 // @todo fix usermatchdata
 
-const state = inject<SummonerData>(SummonerKey);
+const state = inject<SummonerData>(SummonerKey)
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches);
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 
 const data = ref({
   datasets: [
     {
       data: [],
-      label: "Items",
+      label: 'Items',
       pointRadius: 20,
       pointStyle: [],
     },
   ],
-});
-const itemImages = new Map<number, HTMLImageElement>();
+})
+const itemImages = new Map<number, HTMLImageElement>()
 
 // Preload images and store them when fully loaded
 function preloadItemImage(itemId: number) {
   return new Promise((resolve) => {
     if (!itemImages.has(itemId)) {
-      const img = new Image();
-      img.src = `/img/items/circle/${itemId}.webp`;
+      const img = new Image()
+      img.src = `/img/items/circle/${itemId}.webp`
       img.onload = () => {
-        itemImages.set(itemId, img);
-        resolve(img);
-      };
+        itemImages.set(itemId, img)
+        resolve(img)
+      }
       img.onerror = () => {
-        console.error(`Failed to load image: /img/items/${itemId}.webp`);
-        resolve(null);
-      };
-    } else {
-      resolve(itemImages.get(itemId));
+        console.error(`Failed to load image: /img/items/${itemId}.webp`)
+        resolve(null)
+      }
     }
-  });
+    else {
+      resolve(itemImages.get(itemId))
+    }
+  })
 }
 
 // Watch for `itemObjects` changes and update the entire `data` object
 watchEffect(async () => {
   const newDataset = {
     data: [],
-    label: "Items",
+    label: 'Items',
     pointRadius: 20,
     pointStyle: [],
-  };
+  }
   await Promise.all(
     bayesianItems.value.map(async (item) => {
-      await preloadItemImage(item.item.id);
+      await preloadItemImage(item.item.id)
 
       newDataset.data.push({
         label: item.item.name, // Add item name as the label
         r: Math.sqrt(item.games) * 1, // Bubble size
         x: item.games, // Number of games
         y: item.winrate, // Winrate
-      });
+      })
 
-      newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image());
+      newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image())
     }),
-  );
+  )
 
   // Replace the entire `data` object to trigger reactivity
   data.value = {
     datasets: [newDataset],
-  };
-});
+  }
+})
 </script>
 
 <template>
   <div class="size-full overflow-hidden pb-9">
     <div class="border-shadow size-full max-h-160 bg-b1 inset-shadow-xxs">
       <div
-        class="relative flex size-full flex-col overflow-hidden rounded-box bg-b1 px-4 pt-4 pb-5"
-      >
+        class="
+          relative flex size-full flex-col overflow-hidden rounded-box bg-b1
+          px-4 pt-4 pb-5
+        ">
         <div class="-ml-6 h-full w-full justify-self-end pt-4">
           <BubbleChart :data="data" />
         </div>

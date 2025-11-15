@@ -1,32 +1,31 @@
 <script lang="ts" setup>
 const { match } = defineProps<{
-  match: any;
-}>();
+  match: any
+}>()
 
 const teams = computed(() => {
   return {
-    blue: match.participants.filter((p) => p.teamId === 100),
-    red: match.participants.filter((p) => p.teamId === 200),
-  };
-});
+    blue: match.participants.filter(p => p.teamId === 100),
+    red: match.participants.filter(p => p.teamId === 200),
+  }
+})
 
 const playerRank = computed(() => {
   const sort = [...match.participants]
-    .map((p) => ({
+    .map(p => ({
       puuid: p.puuid,
       mvpScore: p.mvpScore,
       team: p.teamId,
       win: p.win,
     }))
-    .sort((a, b) => b.mvpScore - a.mvpScore);
+    .sort((a, b) => b.mvpScore - a.mvpScore)
 
   return {
-    ace: computed(() => sort.filter((p) => p.team !== sort[0].team)[0]).value
-      .puuid,
+    ace: computed(() => sort.filter(p => p.team !== sort[0].team)[0]).value.puuid,
     list: sort,
     mvp: sort[0].puuid,
-  };
-});
+  }
+})
 </script>
 
 <template>
@@ -35,16 +34,21 @@ const playerRank = computed(() => {
 
     <TeamMatchEndStats
       :team="match.teams[0]"
-      class="border-t-0! from-inspiration/60 shadow-warm-soft"
-    />
+      class="border-t-0! from-inspiration/60 shadow-warm-soft" />
 
     <!--   teammate -->
 
     <div class="size-full">
-      <template v-for="(player, i) in teams.blue" :key="i">
-        <MatchTeammate :player="player" :player-rank="playerRank" />
+      <template
+        v-for="(player, i) in teams.blue"
+        :key="i">
+        <MatchTeammate
+          :player="player"
+          :player-rank="playerRank" />
 
-        <Separator v-show="i !== 4" class="my-0! bg-b3/60" />
+        <Separator
+          v-show="i !== 4"
+          class="my-0! bg-b3/60" />
       </template>
     </div>
 
@@ -52,15 +56,20 @@ const playerRank = computed(() => {
 
     <TeamMatchEndStats
       :team="match.teams[1]"
-      class="from-domination/60 shadow-warm-soft"
-    />
+      class="from-domination/60 shadow-warm-soft" />
 
     <!--   teammate -->
 
     <div class="size-full">
-      <template v-for="(player, i) in teams.red" :key="i">
-        <MatchTeammate :player="player" :player-rank="playerRank" />
-        <Separator v-show="i !== 4" class="my-0! bg-b3/60" />
+      <template
+        v-for="(player, i) in teams.red"
+        :key="i">
+        <MatchTeammate
+          :player="player"
+          :player-rank="playerRank" />
+        <Separator
+          v-show="i !== 4"
+          class="my-0! bg-b3/60" />
       </template>
     </div>
   </div>

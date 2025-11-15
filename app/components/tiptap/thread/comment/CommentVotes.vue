@@ -4,36 +4,24 @@ const { comment } = defineProps<{
 }>()
 const emit = defineEmits(['comment:vote'])
 const vote = ref<number>(0)
-const calculatedVotes = ref<number>(1)
-
-watch(
-  () => vote.value,
-  (newVote, oldVote) => {
-    if (newVote !== oldVote && as().account.puuid) {
-      emit('comment:vote', {
-        id: comment.id,
-        puuid: as().account.puuid,
-        newVote,
-        oldVote,
-      })
-    }
-  },
-  { immediate: false },
-)
+const calculatedVotes = computed (() => {
+  let a = comment.score + vote.value
+  if (comment.is_author)
+    a = a - 1
+  return a
+})
 
 onMounted (() => {
-  calculatedVotes.value = comment.score
+  if (comment.is_author)
+    vote.value = 1
 })
 </script>
 
 <template>
   <ToggleGroup
     v-model:model-value="vote"
-    :disabled="!comment.author_id || comment.author_id === as().account.uuid"
+    :disabled="!comment.author_id || comment.is_author"
     type="single"
-    :class="{
-      'pointer-events-none! **:pointer-events-none!': !comment.author_id,
-    }"
     variant="ghost"
     size="sq-5"
     :on="!comment.author_id ? 'inset' : 'neutral'"
@@ -50,7 +38,7 @@ onMounted (() => {
       aria-label="downvote"
       class="
         grid size-7 cursor-pointer place-items-center
-        disabled:pointer-events-none!
+        has-disabled:cursor-not-allowed
       ">
       <ToggleGroupItem
         name="downvote"
@@ -83,16 +71,19 @@ onMounted (() => {
     <label
       for="upvote"
       aria-label="upvote"
-      class="grid size-7 cursor-pointer place-items-center">
+      class="
+        grid size-7 cursor-pointer place-items-center
+        has-disabled:cursor-not-allowed
+      ">
       <ToggleGroupItem
         name="upvote"
         :value="1">
         <icon
           name="mynaui:arrow-up"
           class="
+            group-disabled-not-on/toggle:opacity-20
             absolute size-3.5 opacity-40
             **:stroke-2
-            group-disabled/toggle:opacity-20
             group-on/toggle:opacity-100
             group-on/toggle:group-not-disabled/toggle:**:stroke-[4]
           " />

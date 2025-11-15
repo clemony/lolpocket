@@ -1,1 +1,1 @@
-export const ps = () => usePocketStore();
+export const ps = () => usePocketStore()

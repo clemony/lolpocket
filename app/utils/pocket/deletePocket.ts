@@ -1,15 +1,15 @@
 // delete
 
-import { toast } from "~/base/notification/toast/use-toast";
+import { toast } from "~/base/popup/toast/use-toast"
 
 export function deletePocket(pocket) {
-  const route = useRoute();
-  const inPocket = route.path === `/pocket/${pocket.key}`;
+  const route = useRoute()
+  const inPocket = route.path === `/pocket/${pocket.key}`
 
-  pocket.location.folder = "trash";
+  pocket.location.folder = "trash"
 
   if (inPocket) {
-    navigateTo("/backpack");
+    navigateTo("/backpack")
   }
 
   if (as().settings.ping_delete_pocket) {
@@ -21,13 +21,13 @@ export function deletePocket(pocket) {
       },
       description: "You can restore it for up to 30 days.",
       duration: 7000,
-    });
+    })
 
     const vars: Record<string, string> = {
       pocketKey: pocket.key,
       pocketName: pocket.name,
-    };
+    }
 
-    saveNotification("deletePocket", vars);
+    saveNotification("deletePocket", vars)
   }
 }

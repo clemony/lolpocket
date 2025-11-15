@@ -1,1 +1,1 @@
-export const ss = () => useSummonerStore();
+export const ss = () => useSummonerStore()

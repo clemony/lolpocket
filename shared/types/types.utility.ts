@@ -1,71 +1,71 @@
-export type Extension<T, E> = T & E;
+export type Extension<T, E> = T & E
 
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+}
 
 export interface ParseState {
-  i: number;
-  str: string;
+  i: number
+  str: string
 }
 
 export interface IconObject {
-  name: string;
-  alt?: IconObject;
-  class?: string | string[];
-  modifier?: IconObject;
+  name: string
+  alt?: IconObject
+  class?: string | string[]
+  modifier?: IconObject
 }
 
 export interface BadgeObject {
-  class?: string;
-  icon?: IconObject;
-  text?: string;
+  class?: string
+  icon?: IconObject
+  text?: string
 }
 
 export interface ImgObject {
-  class?: string;
-  src: string;
+  class?: string
+  src: string
 }
 
-export type LinkGroup = LinkObject[];
+export type LinkGroup = LinkObject[]
 
 export interface LinkObject {
-  name: string;
-  blurb?: string;
-  component?: any;
-  external?: boolean;
-  hash?: string;
-  icon?: IconObject;
-  img?: ImgObject;
-  link?: string;
-  links?: LinkObject[];
+  name: string
+  blurb?: string
+  component?: any
+  external?: boolean
+  hash?: string
+  icon?: IconObject
+  img?: ImgObject
+  link?: string
+  links?: LinkObject[]
 }
 export interface DataObject extends LinkObject {
-  data?: object;
-  value?: number;
+  data?: object
+  value?: number
 }
 
 export interface Category {
-  id: string;
-  name?: string;
-  champions?: Array<string>;
-  checked: boolean;
-  color?: string;
-  icon?: string;
+  id: string
+  name?: string
+  champions?: Array<string>
+  checked: boolean
+  color?: string
+  icon?: string
 }
 
-export type categories = Category[];
+export type categories = Category[]
 
 export interface dateObject {
-  date: string;
-  patch: string;
-  time: string;
+  date: string
+  patch: string
+  time: string
 }
 
 export interface Note {
-  title: string;
-  content: string;
-  date: string;
-  heart?: boolean;
-  icon: string;
+  title: string
+  content: string
+  date: string
+  heart?: boolean
+  icon: string
 }

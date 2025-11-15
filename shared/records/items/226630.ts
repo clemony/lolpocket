@@ -1,19 +1,19 @@
 const item: Item = {
   id: 226630,
-  name: "Goredrinker",
-  nicknames: ["slurp"],
+  name: 'Goredrinker',
+  nicknames: ['slurp'],
   active: [
     {
-      name: "Thirsting Slash",
+      name: 'Thirsting Slash',
       effects:
         'Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src="/img/icons/heal.webp" class="tip-icon" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit.',
       unique: true,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6630_fighter_t4_goredrinker.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6630_fighter_t4_goredrinker.png',
   maps: [30],
   noEffects: false,
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -21,7 +21,7 @@ const item: Item = {
       sell: 0,
       total: 0,
     },
-    tags: ["FIGHTER"],
+    tags: ['FIGHTER'],
   },
   specialRecipe: 220007,
   stats: {
@@ -29,5 +29,5 @@ const item: Item = {
     attackDamage: 55,
     health: 400,
   },
-};
-export default item;
+}
+export default item

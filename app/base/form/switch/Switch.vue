@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { SwitchRootEmits, SwitchRootProps } from "reka-ui";
-import { SwitchRoot, SwitchThumb, useForwardPropsEmits } from "reka-ui";
+import type { SwitchRootEmits, SwitchRootProps } from 'reka-ui'
+import { SwitchRoot, SwitchThumb, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
-  SwitchRootProps & { class?: HTMLAttributes["class"] }
->();
+  SwitchRootProps & { class?: HTMLAttributes['class'] }
+>()
 
-const emits = defineEmits<SwitchRootEmits>();
+const emits = defineEmits<SwitchRootEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -29,8 +29,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot name="on" />
     <SwitchThumb
       id="switch-thumb"
@@ -43,8 +42,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
             data-[state=unchecked]:translate-x-0
           `,
         )
-      "
-    >
+      ">
       <slot name="thumb" />
     </SwitchThumb>
     <slot name="off" />

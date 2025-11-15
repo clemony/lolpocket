@@ -1,119 +1,119 @@
 const item: Item = {
   id: 3133,
-  name: "Caulfield's Warhammer",
+  name: 'Caulfield\'s Warhammer',
   buildsFrom: [
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
     {
       id: 2022,
-      name: "Glowing Mote",
+      name: 'Glowing Mote',
       gold: 250,
     },
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
   ],
   buildsInto: [
     {
       id: 3156,
-      name: "Maw of Malmortius",
+      name: 'Maw of Malmortius',
       gold: 3100,
     },
     {
       id: 126697,
-      name: "Hubris",
+      name: 'Hubris',
       gold: 2950,
     },
     {
       id: 3004,
-      name: "Manamune",
+      name: 'Manamune',
       gold: 2900,
     },
     {
       id: 6693,
-      name: "Prowler's Claw",
+      name: 'Prowler\'s Claw',
       gold: 2850,
     },
     {
       id: 6692,
-      name: "Eclipse",
+      name: 'Eclipse',
       gold: 2900,
     },
     {
       id: 323004,
-      name: "Manamune",
+      name: 'Manamune',
       gold: 2900,
     },
     {
       id: 6691,
-      name: "Duskblade of Draktharr",
+      name: 'Duskblade of Draktharr',
       gold: 2950,
     },
     {
       id: 3074,
-      name: "Ravenous Hydra",
+      name: 'Ravenous Hydra',
       gold: 3300,
     },
     {
       id: 6694,
-      name: "Serylda's Grudge",
+      name: 'Serylda\'s Grudge',
       gold: 3000,
     },
     {
       id: 6697,
-      name: "Hubris",
+      name: 'Hubris',
       gold: 3000,
     },
     {
       id: 4402,
-      name: "Innervating Locket",
+      name: 'Innervating Locket',
       gold: 2950,
     },
     {
       id: 3508,
-      name: "Essence Reaver",
+      name: 'Essence Reaver',
       gold: 2900,
     },
     {
       id: 3179,
-      name: "Umbral Glaive",
+      name: 'Umbral Glaive',
       gold: 2500,
     },
     {
       id: 6333,
-      name: "Death's Dance",
+      name: 'Death\'s Dance',
       gold: 3300,
     },
     {
       id: 6609,
-      name: "Chempunk Chainsword",
+      name: 'Chempunk Chainsword',
       gold: 3100,
     },
     {
       id: 6610,
-      name: "Sundered Sky",
+      name: 'Sundered Sky',
       gold: 3100,
     },
     {
       id: 6632,
-      name: "Divine Sunderer",
+      name: 'Divine Sunderer',
       gold: 3450,
     },
     {
       id: 6696,
-      name: "Axiom Arc",
+      name: 'Axiom Arc',
       gold: 2750,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3133_fighter_t2_caulfieldswarhammer.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3133_fighter_t2_caulfieldswarhammer.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -121,13 +121,13 @@ const item: Item = {
       sell: 420,
       total: 1050,
     },
-    tags: ["FIGHTER", "MARKSMAN", "ASSASSIN"],
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  simpleDescription: "Attack Damage and Cooldown Reduction",
+  simpleDescription: 'Attack Damage and Cooldown Reduction',
   specialRecipe: 0,
   stats: {
     abilityHaste: 10,
     attackDamage: 20,
   },
-};
-export default item;
+}
+export default item

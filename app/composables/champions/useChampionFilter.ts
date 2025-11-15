@@ -1,20 +1,20 @@
-import { championFilters } from "~~/shared/filters/champion-filters";
+import { championFilters } from '~~/shared/filters/champion-filters'
 
 export function useChampionFilter(filters: ChampionFilter) {
-  const champions = ix().champions; // ChampionIndex[]
+  const champions = ix().champions // ChampionIndex[]
 
-  const queryRef = computed(() => filters.query || "");
-  const debouncedQuery = refDebounced(queryRef, 200);
+  const queryRef = computed(() => filters.query || '')
+  const debouncedQuery = refDebounced(queryRef, 200)
 
   const allChampionIds = computed(() => {
-    const ids = new Set<number>();
-    Object.values(championFilters).forEach((group) =>
+    const ids = new Set<number>()
+    Object.values(championFilters).forEach(group =>
       Object.values(group).forEach((idList: number[]) =>
-        idList.forEach((id) => ids.add(id)),
+        idList.forEach(id => ids.add(id)),
       ),
-    );
-    return [...ids];
-  });
+    )
+    return [...ids]
+  })
   /*
   const filteredIds = computed(() => {
     return allChampionIds.value.filter((id) => {
@@ -57,5 +57,5 @@ export function useChampionFilter(filters: ChampionFilter) {
     filteredKeys, */
     pending: ref(false),
     rawChampions: champions,
-  };
+  }
 }

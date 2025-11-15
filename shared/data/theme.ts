@@ -1,10 +1,10 @@
 export const themes = [
   {
-    id: "theme-daylight",
-    name: "daylight",
-    champion: "Lux",
-    icon: "iconoir:sun-light",
-    quote: "If you can smile, you can be the light.",
+    id: 'theme-daylight',
+    name: 'daylight',
+    champion: 'Lux',
+    icon: 'iconoir:sun-light',
+    quote: 'If you can smile, you can be the light.',
   },
   // {
   //   name: "dawn",
@@ -15,18 +15,18 @@ export const themes = [
   //   color: "var(--b1)",
   // },
   {
-    id: "theme-dusk",
-    name: "dusk",
-    champion: "Diana",
-    icon: "si:sun-set-line",
-    quote: "Dusk approaches. Embrace the night.",
+    id: 'theme-dusk',
+    name: 'dusk',
+    champion: 'Diana',
+    icon: 'si:sun-set-line',
+    quote: 'Dusk approaches. Embrace the night.',
   },
   {
-    id: "theme-night",
-    name: "midnight",
-    champion: "Zed",
-    icon: "ph:moon",
-    quote: "The truth lies in darkness.",
+    id: 'theme-night',
+    name: 'midnight',
+    champion: 'Zed',
+    icon: 'ph:moon',
+    quote: 'The truth lies in darkness.',
   },
 
   // {
@@ -66,10 +66,10 @@ export const themes = [
   //
   // },
   {
-    id: "theme-winter",
-    name: "winter",
-    champion: "Braum",
-    icon: "clarity:snowflake-line",
-    quote: "Sometimes icy heart just needs warm smile.",
+    id: 'theme-winter',
+    name: 'winter',
+    champion: 'Braum',
+    icon: 'clarity:snowflake-line',
+    quote: 'Sometimes icy heart just needs warm smile.',
   },
-];
+]

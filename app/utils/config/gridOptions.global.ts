@@ -1,4 +1,4 @@
-import { provideGlobalGridOptions } from "ag-grid-community";
+import { provideGlobalGridOptions } from 'ag-grid-community'
 
 // provide  to all grids via global options
 provideGlobalGridOptions({
@@ -8,4 +8,4 @@ provideGlobalGridOptions({
     sortAscending: '<div class="text-4 text-bc -mb-0.5">⌃</div>',
     sortDescending: '<div class="text-6 text-bc -mt-3">⌵</div>',
   },
-});
+})

@@ -1,19 +1,21 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export const useThreadStore = defineStore(
-  "threadStore",
+  'threadStore',
   () => {
-    const threads = ref<Thread[]>([])
-    const authors = ref<Record<string, Author>>({})
+    const threads = ref<Record<string, CommentData[]>>({})
+    const authors = ref<Record<string, User>>({})
+    const reportComment = ref<CommentData>(null)
     return {
-      threads,
       authors,
+      reportComment,
+      threads,
     }
   },
   {
     persist: {
-      key: "threadStore",
-      storage: piniaPluginPersistedstate.sessionStorage(),
+      key: 'threadStore',
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

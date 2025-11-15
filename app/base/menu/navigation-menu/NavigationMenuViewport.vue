@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { NavigationMenuViewportProps } from "reka-ui";
-import { AnimatePresence, motion } from "motion-v";
-import { NavigationMenuViewport, useForwardProps } from "reka-ui";
+import type { NavigationMenuViewportProps } from 'reka-ui'
+import { AnimatePresence, motion } from 'motion-v'
+import { NavigationMenuViewport, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   NavigationMenuViewportProps & {
-    class?: HTMLAttributes["class"];
-    align?: Align;
-    wrapperClass?: HTMLAttributes["class"];
+    class?: HTMLAttributes['class']
+    align?: Align
+    wrapperClass?: HTMLAttributes['class']
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 
-const target = useTemplateRef<HTMLElement | null>("target");
+const target = useTemplateRef<HTMLElement | null>('target')
 
 const variants = {
   hidden: {
@@ -26,7 +26,7 @@ const variants = {
     opacity: 1,
     scale: 1,
   },
-};
+}
 </script>
 
 <template>
@@ -36,8 +36,7 @@ const variants = {
         ref="target"
         :align="props.align"
         v-bind="forwarded"
-        as-child
-      >
+        as-child>
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -56,8 +55,7 @@ const variants = {
               `,
               props.class,
             )
-          "
-        >
+          ">
           <slot />
         </motion.div>
       </NavigationMenuViewport>

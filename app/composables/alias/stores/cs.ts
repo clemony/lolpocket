@@ -1,1 +1,1 @@
-export const cs = () => useChampStore();
+export const cs = () => useChampStore()

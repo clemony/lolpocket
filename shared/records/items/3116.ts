@@ -1,36 +1,36 @@
 const item: Item = {
   id: 3116,
-  name: "Rylai's Crystal Scepter",
-  nicknames: ["rylais"],
+  name: 'Rylai\'s Crystal Scepter',
+  nicknames: ['rylais'],
   buildsFrom: [
     {
       id: 1026,
-      name: "Blasting Wand",
+      name: 'Blasting Wand',
       gold: 850,
     },
     {
       id: 1011,
-      name: "Giant's Belt",
+      name: 'Giant\'s Belt',
       gold: 900,
     },
     {
       id: 1052,
-      name: "Amplifying Tome",
+      name: 'Amplifying Tome',
       gold: 400,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3116_mage_t3_rylajscrystalscepter.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3116_mage_t3_rylajscrystalscepter.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: "Rimefrost",
+      name: 'Rimefrost',
       effects:
         'Dealing ability damage <img src="/img/icons/slow.webp" class="tip-icon" />slows affected units by 30% for 1 second.',
       unique: true,
     },
   ],
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -38,13 +38,13 @@ const item: Item = {
       sell: 1040,
       total: 2600,
     },
-    tags: ["MAGE"],
+    tags: ['MAGE'],
   },
-  simpleDescription: "Abilities slow enemies",
+  simpleDescription: 'Abilities slow enemies',
   specialRecipe: 0,
   stats: {
     abilityPower: 65,
     health: 400,
   },
-};
-export default item;
+}
+export default item

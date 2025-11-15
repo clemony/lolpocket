@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket?: Pocket;
-}>();
+  pocket?: Pocket
+}>()
 
-const emit = defineEmits(["update:selected"]);
+const emit = defineEmits(['update:selected'])
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 /*
 function update(event, i) {
   console.log(event)
@@ -25,7 +25,11 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="flex gap-3 **:select-none">
+  <div
+    class="
+      flex gap-3
+      **:select-none
+    ">
     <!-- <LazySpellPicker
       :model="0"
       :pocket="pocket"

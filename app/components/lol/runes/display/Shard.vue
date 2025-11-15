@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { shardObject } from "~~/shared/records/shards";
+import { shardObject } from '~~/shared/records/shards'
 
 const {
   id,
   class: className,
   label,
 } = defineProps<{
-  id?: number | null;
-  label?: boolean;
-  class?: HTMLAttributes["class"];
-}>();
+  id?: number | null
+  label?: boolean
+  class?: HTMLAttributes['class']
+}>()
 
 const shard = computed(() =>
-  shardObject.flatMap((o) => o.shards).find((s) => s.id === id),
-);
+  shardObject.flatMap(o => o.shards).find(s => s.id === id),
+)
 </script>
 
 <template>
@@ -34,8 +34,7 @@ const shard = computed(() =>
         },
         className,
       )
-    "
-  >
+    ">
     <slot />
     <component
       :is="`i-lol-${shard?.id}`"
@@ -53,7 +52,6 @@ const shard = computed(() =>
             '!size-4.5': [5011, 5010, 5007].includes(id),
           },
         )
-      "
-    />
+      " />
   </Label>
 </template>

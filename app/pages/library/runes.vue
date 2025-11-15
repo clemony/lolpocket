@@ -4,7 +4,7 @@ import { pathIndex } from '~~/shared/indexes'
 definePageMeta({
   title: 'Runes',
   icon: 'lp:rune-circle',
-  listClass: '!size-5.5 ',
+  listClass: '!size-5.5 !bg-transparent',
   path: '/library/runes',
 })
 

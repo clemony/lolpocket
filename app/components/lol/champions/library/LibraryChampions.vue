@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const { championKeys, filteredKeys } = defineProps<{
-  filteredKeys: string[];
-  championKeys: string[];
-}>();
+  filteredKeys: string[]
+  championKeys: string[]
+}>()
 
-const selectedChampion = ref<string>(null);
-const loaded = ref<boolean>(false);
+const selectedChampion = ref<string>(null)
+const loaded = ref<boolean>(false)
 </script>
 
 <!-- after:size-full after:pointer-events-none after:fixed after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-[101.5%] after:-left-0 -->
@@ -17,26 +17,28 @@ const loaded = ref<boolean>(false);
     :class="{
       'grid-cols-[1fr_420px]': selectedChampion,
       'grid-cols-[1fr_0px]': !selectedChampion,
-    }"
-  >
+    }">
     <TransitionSlideLeft
       group
-      class="scrollbar-hidden flex size-full flex-wrap justify-start overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8"
-      :class="{ '': loaded }"
-    >
+      class="
+        scrollbar-hidden flex size-full flex-wrap justify-start
+        overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8
+      "
+      :class="{ '': loaded }">
       <label
         v-for="key in championKeys"
         :key="key"
         :data-state="filteredKeys.includes(key) ? 'visible' : 'hidden'"
-        class="group flex grow p-1 data-[state=hidden]:hidden"
-        @click="selectedChampion = key"
-      >
+        class="
+          group flex grow p-1
+          data-[state=hidden]:hidden
+        "
+        @click="selectedChampion = key">
         <LibraryChampionCard
           v-show="key"
           :champ-key="key"
           class="h-78 max-w-62 min-w-56"
-          @loaded="loaded = true"
-        />
+          @loaded="loaded = true" />
       </label>
 
       <div class="h-78 w-58 grow" />
@@ -49,14 +51,17 @@ const loaded = ref<boolean>(false);
       :class="{
         'max-w-0': !selectedChampion,
         'max-w-full': selectedChampion,
-      }"
-    >
+      }">
       <div class="absolute inset-0 top-1 left-0 mb-4">
         <button
-          class="group/btn btn absolute top-3 left-3 z-2 btn-circle border-none btn-ghost"
-          @click="selectedChampion = null"
-        >
-          <icon name="x-sm" class="text-white/70" />
+          class="
+            group/btn btn absolute top-3 left-3 z-2 btn-circle border-none
+            btn-ghost
+          "
+          @click="selectedChampion = null">
+          <icon
+            name="x-sm"
+            class="text-white/70" />
         </button>
 
         <ChampionData :champion-key="selectedChampion" />

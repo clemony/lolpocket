@@ -1,29 +1,29 @@
 // Updated Patch 25.21 - 11/05/2025 05:41:14 PM CST
 
 export interface StatRecord {
-  abilityHaste?: number;
-  abilityPower?: number;
-  armor?: number;
-  armorPenetration?: number;
-  attackDamage?: number;
-  attackSpeed?: number;
-  criticalStrikeChance?: number;
-  criticalStrikeDamage?: number;
-  flatMagicPenetration?: number;
-  flatMovespeed?: number;
-  goldPer10?: number;
-  healAndShieldPower?: number;
-  health?: number;
-  healthRegen?: number;
-  lethality?: number;
-  lifesteal?: number;
-  magicResistance?: number;
-  mana?: number;
-  manaRegen?: number;
-  omnivamp?: number;
-  percentMagicPenetration?: number;
-  percentMovespeed?: number;
-  tenacity?: number;
+  abilityHaste?: number
+  abilityPower?: number
+  armor?: number
+  armorPenetration?: number
+  attackDamage?: number
+  attackSpeed?: number
+  criticalStrikeChance?: number
+  criticalStrikeDamage?: number
+  flatMagicPenetration?: number
+  flatMovespeed?: number
+  goldPer10?: number
+  healAndShieldPower?: number
+  health?: number
+  healthRegen?: number
+  lethality?: number
+  lifesteal?: number
+  magicResistance?: number
+  mana?: number
+  manaRegen?: number
+  omnivamp?: number
+  percentMagicPenetration?: number
+  percentMovespeed?: number
+  tenacity?: number
 }
 
 export const itemStatRecord: Record<number, StatRecord> = {
@@ -1212,4 +1212,4 @@ export const itemStatRecord: Record<number, StatRecord> = {
     healAndShieldPower: 15,
     manaRegen: 150,
   },
-};
+}

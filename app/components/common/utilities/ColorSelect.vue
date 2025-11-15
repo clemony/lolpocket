@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 // import { fonts } from './fonts'
 
 const props = defineProps<{
-  model: number;
-  pocket: Pocket;
-  tip?: string;
-}>();
+  model: number
+  pocket: Pocket
+  tip?: string
+}>()
 </script>
 
 <template>

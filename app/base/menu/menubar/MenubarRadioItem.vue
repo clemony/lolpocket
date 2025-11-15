@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { MenubarRadioItemEmits, MenubarRadioItemProps } from "reka-ui";
+import type { MenubarRadioItemEmits, MenubarRadioItemProps } from 'reka-ui'
 import {
   MenubarItemIndicator,
   MenubarRadioItem,
   useForwardPropsEmits,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  MenubarRadioItemProps & { class?: HTMLAttributes["class"] }
->();
-const emits = defineEmits<MenubarRadioItemEmits>();
+  MenubarRadioItemProps & { class?: HTMLAttributes['class'] }
+>()
+const emits = defineEmits<MenubarRadioItemEmits>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -29,14 +29,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <span
       id="indicator"
-      class="order-first flex size-4 items-center justify-center"
-    >
+      class="order-first flex size-4 items-center justify-center">
       <MenubarItemIndicator>
-        <icon name="circle-big-dot" class="size-4 fill-current dst" />
+        <icon
+          name="circle-big-dot"
+          class="size-4 fill-current dst" />
       </MenubarItemIndicator>
     </span>
 

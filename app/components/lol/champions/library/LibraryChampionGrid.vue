@@ -6,8 +6,8 @@ import type {
   GridOptions,
   GridPreDestroyedEvent,
   GridReadyEvent,
-} from "ag-grid-community";
-import ChampionGridIcon from "#components";
+} from 'ag-grid-community'
+import ChampionGridIcon from '#components'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -19,27 +19,27 @@ import {
   RenderApiModule,
   RowSelectionModule,
   ValidationModule,
-} from "ag-grid-community";
-import { AgGridVue } from "ag-grid-vue3";
-import { championsLite } from "~~/shared/records/champions-lite";
-import { pocketTheme } from "~/utils/config/tableTheme";
+} from 'ag-grid-community'
+import { AgGridVue } from 'ag-grid-vue3'
+import { championsLite } from '~~/shared/records/champions-lite'
+import { pocketTheme } from '~/utils/config/tableTheme'
 
 definePageMeta({
-  name: "Champion Stats",
-  icon: "bi:list-ul",
-  section: "library",
-});
+  name: 'Champion Stats',
+  icon: 'bi:list-ul',
+  section: 'library',
+})
 
 defineExpose({
   ChampionGridIcon,
-});
+})
 
 /* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
-const theme = ref(pocketTheme);
-const filteredChamps = ref([]);
+const theme = ref(pocketTheme)
+const filteredChamps = ref([])
 // @todo
-const gridApi = shallowRef<GridApi | null>(null);
+const gridApi = shallowRef<GridApi | null>(null)
 /* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
 
 const gridOptions: GridOptions<ChampionLite> = {
@@ -48,10 +48,10 @@ const gridOptions: GridOptions<ChampionLite> = {
     initialHide: false,
     minWidth: 66,
     autoHeaderHeight: true,
-    cellClass: ["champion-grid-cell", "!text-right", "!justify-end", "!px-4"],
+    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
     flex: 1,
-    headerClass: ["champion-grid-header", "h-full", "items-end"],
-    sortingOrder: ["desc", "asc", null],
+    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
+    sortingOrder: ['desc', 'asc', null],
     wrapHeaderText: true,
   },
   defaultColGroupDef: {
@@ -62,93 +62,95 @@ const gridOptions: GridOptions<ChampionLite> = {
     checkboxes: false,
     enableClickSelection: true,
     headerCheckbox: false,
-    mode: "multiRow",
+    mode: 'multiRow',
   },
-};
+}
 
 watch(
   () => cs().championGridLevel,
   (newVal) => {
-    if (newVal) gridApi.value.refreshCells();
+    if (newVal)
+      gridApi.value.refreshCells()
   },
-);
+)
 
 watch(
   () => cs().championGridType,
   (newVal) => {
-    if (newVal) gridApi.value.refreshCells();
+    if (newVal)
+      gridApi.value.refreshCells()
   },
-);
+)
 
 const { resolveStat } = useChampionStatGrowth(
   computed(() => cs().championGridLevel),
-);
+)
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
     maxWidth: 64,
     minWidth: 64,
     width: 64,
-    cellClass: "!py-1 !pr-1 !ml-0",
+    cellClass: '!py-1 !pr-1 !ml-0',
     cellRenderer: ChampionGridIcon,
-    headerName: "　 ",
-    pinned: "left",
+    headerName: '　 ',
+    pinned: 'left',
     sortable: false,
   },
 
   {
     maxWidth: 100,
     minWidth: 80,
-    cellClass: "font-medium  text-left",
-    cellDataType: "text",
-    colId: "champion",
-    field: "name",
+    cellClass: 'font-medium  text-left',
+    cellDataType: 'text',
+    colId: 'champion',
+    field: 'name',
     flex: 1.5,
-    headerClass: "",
-    headerName: "Champion",
-    pinned: "left",
+    headerClass: '',
+    headerName: 'Champion',
+    pinned: 'left',
     sortable: false,
   },
 
   {
-    headerName: "Health",
-    valueGetter: (params) => resolveStat(params.data.stats?.health),
+    headerName: 'Health',
+    valueGetter: params => resolveStat(params.data.stats?.health),
   },
   {
-    headerName: "Health Regen",
-    valueGetter: (params) =>
+    headerName: 'Health Regen',
+    valueGetter: params =>
       resolveStat(params.data.stats?.healthRegen, { roundTo: 2 }),
   },
   {
-    headerName: "Mana",
-    valueGetter: (params) => resolveStat(params.data.stats?.mana),
+    headerName: 'Mana',
+    valueGetter: params => resolveStat(params.data.stats?.mana),
   },
   {
-    headerName: "Mana Regen",
-    valueGetter: (params) =>
+    headerName: 'Mana Regen',
+    valueGetter: params =>
       resolveStat(params.data.stats?.manaRegen, { roundTo: 2 }),
   },
   {
-    headerName: "Armor",
-    valueGetter: (params) => resolveStat(params.data.stats?.armor),
+    headerName: 'Armor',
+    valueGetter: params => resolveStat(params.data.stats?.armor),
   },
   {
-    headerName: "Magic Resist",
-    valueGetter: (params) => resolveStat(params.data.stats?.magicResistance),
+    headerName: 'Magic Resist',
+    valueGetter: params => resolveStat(params.data.stats?.magicResistance),
   },
   {
-    headerName: "Attack Damage",
-    valueGetter: (params) => resolveStat(params.data.stats?.attackDamage),
+    headerName: 'Attack Damage',
+    valueGetter: params => resolveStat(params.data.stats?.attackDamage),
   },
   {
-    headerName: "Attack Speed",
+    headerName: 'Attack Speed',
     valueGetter: (params) => {
-      const { attackSpeed, attackSpeedRatio } = params.data.stats;
+      const { attackSpeed, attackSpeedRatio } = params.data.stats
       return resolveStat(attackSpeed, {
         ratio: attackSpeedRatio.flat,
         roundTo: 3,
-        type: "attackSpeed",
-      });
+        type: 'attackSpeed',
+      })
     },
   },
   /*    { headerName: 'Crit',
@@ -172,94 +174,95 @@ hide: true },
 
   {
     flex: 1,
-    headerName: "Range",
-    valueGetter: (params) => params.data.stats?.attackRange.flat,
+    headerName: 'Range',
+    valueGetter: params => params.data.stats?.attackRange.flat,
   },
   {
-    headerName: "Move Speed",
-    valueGetter: (params) => params.data.stats?.movespeed.flat,
-  },
-  {
-    minWidth: 90,
-    colId: "resource",
-    field: "resource",
-    flex: 1.5,
-    headerName: "Resource",
-  },
-
-  {
-    minWidth: 90,
-    flex: 1.5,
-    headerName: "Position",
-    valueGetter: (params) => params.data.positions?.[0] ?? "",
+    headerName: 'Move Speed',
+    valueGetter: params => params.data.stats?.movespeed.flat,
   },
   {
     minWidth: 90,
+    colId: 'resource',
+    field: 'resource',
     flex: 1.5,
-    headerName: "Role",
-    valueGetter: (params) => params.data.roles?.[0] ?? "",
-  },
-  {
-    headerName: "Ability Reliance",
-    valueGetter: (params) => params.data.attributeRatings.abilityReliance,
+    headerName: 'Resource',
   },
 
   {
-    headerName: "Control",
-    valueGetter: (params) => params.data.attributeRatings.control,
+    minWidth: 90,
+    flex: 1.5,
+    headerName: 'Position',
+    valueGetter: params => params.data.positions?.[0] ?? '',
   },
   {
-    headerName: "Damage",
-    valueGetter: (params) => params.data.attributeRatings.damage,
+    minWidth: 90,
+    flex: 1.5,
+    headerName: 'Role',
+    valueGetter: params => params.data.roles?.[0] ?? '',
+  },
+  {
+    headerName: 'Ability Reliance',
+    valueGetter: params => params.data.attributeRatings.abilityReliance,
   },
 
   {
-    headerName: "Difficulty",
-    valueGetter: (params) => params.data.attributeRatings.difficulty,
+    headerName: 'Control',
+    valueGetter: params => params.data.attributeRatings.control,
+  },
+  {
+    headerName: 'Damage',
+    valueGetter: params => params.data.attributeRatings.damage,
   },
 
   {
-    headerName: "Mobility",
-    valueGetter: (params) => params.data.attributeRatings.mobility,
+    headerName: 'Difficulty',
+    valueGetter: params => params.data.attributeRatings.difficulty,
   },
 
   {
-    headerName: "Tough- ness",
-    valueGetter: (params) => params.data.attributeRatings.toughness,
+    headerName: 'Mobility',
+    valueGetter: params => params.data.attributeRatings.mobility,
+  },
+
+  {
+    headerName: 'Tough- ness',
+    valueGetter: params => params.data.attributeRatings.toughness,
   },
   {
-    headerName: "Utility",
-    valueGetter: (params) => params.data.attributeRatings.utility,
+    headerName: 'Utility',
+    valueGetter: params => params.data.attributeRatings.utility,
   },
-];
-const listener = (event) => cs().dbChampionStatListKey++;
+]
+const listener = event => cs().dbChampionStatListKey++
 
 async function onGridReady(params: GridReadyEvent) {
-  await params.api;
-  gridApi.value = params.api;
-  cs().championGridApi = gridApi.value;
+  await params.api
+  gridApi.value = params.api
+  cs().championGridApi = gridApi.value
 
-  const columns = gridApi.value.getColumns();
+  const columns = gridApi.value.getColumns()
   columns.forEach((col) => {
-    col.addEventListener("visibleChanged", listener);
-  });
+    col.addEventListener('visibleChanged', listener)
+  })
 }
 
 function onGridPreDestroyed(params: GridPreDestroyedEvent) {
-  cs().dbChampionGridState = gridApi.value.getState();
+  cs().dbChampionGridState = gridApi.value.getState()
 
-  const columns = gridApi.value.getColumns();
+  const columns = gridApi.value.getColumns()
   columns.forEach((col) => {
-    col.removeEventListener("visibleChanged", listener);
-  });
+    col.removeEventListener('visibleChanged', listener)
+  })
 }
 
 watch(
-  () => "",
+  () => '',
   (newVal) => {
-    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", []);
+    if (newVal && gridApi.value)
+      gridApi.value.setGridOption('rowData', [])
   },
-);
+)
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -272,7 +275,7 @@ ModuleRegistry.registerModules([
   CellStyleModule,
   GridStateModule,
   RenderApiModule,
-]);
+])
 </script>
 
 <template>

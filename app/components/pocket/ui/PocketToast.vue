@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket: Pocket;
-}>();
+  pocket: Pocket
+}>()
 
-const viewButton = useTemplateRef<HTMLElement>("viewButton");
+const viewButton = useTemplateRef<HTMLElement>('viewButton')
 
-const { focused } = useFocus(viewButton, { initialValue: true });
+const { focused } = useFocus(viewButton, { initialValue: true })
 
 onMounted(() => {
   // viewButton.value.focus()
-});
+})
 </script>
 
 <template>
@@ -19,8 +19,10 @@ onMounted(() => {
     <PocketIcon
       :pocket="pocket"
       :url="pocket.icon"
-      class="rounded-md **:rounded-md"
-    />
+      class="
+        rounded-md
+        **:rounded-md
+      " />
 
     <div class="flex flex-col gap-3">
       <h5 class="pt-0.5 text-4! leading-none tracking-tight">
@@ -39,7 +41,11 @@ onMounted(() => {
         <Grow />
 
         <NuxtLink :to="`/pocket/${pocket.key}`">
-          <Button ref="viewButton" variant="outline" size="sm" class="">
+          <Button
+            ref="viewButton"
+            variant="outline"
+            size="sm"
+            class="">
             View
           </Button>
         </NuxtLink>
@@ -53,7 +59,7 @@ onMounted(() => {
   [data-sonner-toaster] {
     --offset: 6px !important;
 
-    & [data-expanded="true"] {
+    & [data-expanded='true'] {
       height: var(--initial-height) !important;
       transform: none;
     }

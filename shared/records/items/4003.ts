@@ -1,9 +1,9 @@
 const item: Item = {
   id: 4003,
-  name: "Lifeline",
+  name: 'Lifeline',
   active: [
     {
-      name: "Soul Anchor",
+      name: 'Soul Anchor',
       cooldown: 45,
       effects:
         'Mark your current location. After 4 seconds, you automatically <img src="/img/icons/blink.webp" class="tip-icon" />blink to the marked location after a 0.5-second delay. <i>Soul Anchor</i> may be recast within its duration to manually blink to the marked location after the same delay (45 second cooldown, starts after the blink).',
@@ -13,26 +13,26 @@ const item: Item = {
   buildsFrom: [
     {
       id: 6690,
-      name: "Rectrix",
+      name: 'Rectrix',
       gold: 775,
     },
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
   ],
   buildsInto: [
     {
       id: 4004,
-      name: "Spectral Cutlass",
+      name: 'Spectral Cutlass',
       gold: 2800,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4003_assassin_t2_lifeline.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4003_assassin_t2_lifeline.png',
   maps: [12, 21, 35],
   noEffects: false,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -40,15 +40,15 @@ const item: Item = {
       sell: 640,
       total: 1600,
     },
-    tags: ["ASSASSIN"],
+    tags: ['ASSASSIN'],
   },
   simpleDescription:
-    "Marks the ground, and returns you there after a few moments",
+    'Marks the ground, and returns you there after a few moments',
   specialRecipe: 0,
   stats: {
     attackDamage: 25,
     lethality: 5,
     percentMovespeed: 4,
   },
-};
-export default item;
+}
+export default item

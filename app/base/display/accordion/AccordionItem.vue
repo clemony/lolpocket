@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { AccordionItemProps } from "reka-ui";
-import { AccordionItem, useForwardProps } from "reka-ui";
-import { computed } from "vue";
+import type { AccordionItemProps } from 'reka-ui'
+import { AccordionItem, useForwardProps } from 'reka-ui'
+import { computed } from 'vue'
 
 const props = defineProps<
-  AccordionItemProps & { class?: HTMLAttributes["class"] }
->();
+  AccordionItemProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -19,13 +19,12 @@ const forwarded = useForwardProps(delegatedProps);
     :class="
       cn(
         `
-      border-b border-b-b3
-      last:border-b-0
-    `,
+          border-b border-b-b3
+          last:border-b-0
+        `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </AccordionItem>
 </template>

@@ -1,31 +1,33 @@
 <script setup lang="ts">
-import type { itemTags } from "~~/shared/references";
+import type { itemTags } from '~~/shared/references'
 
 const {
   class: className,
   clear = true,
-  hover = "btn",
-  size = ["sq-12", "12"],
-  variant = "ghost",
+  hover = 'btn',
+  size = ['sq-12', '12'],
+  variant = 'ghost',
 } = defineProps<{
-  class?: HTMLAttributes["class"];
-  size?: ButtonVariants["size"][];
-  variant?: ButtonVariants["variant"];
-  hover?: ButtonVariants["hover"];
-  clear?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  size?: ButtonVariants['size'][]
+  variant?: ButtonVariants['variant']
+  hover?: ButtonVariants['hover']
+  clear?: boolean
+}>()
 
 function handleReset() {
-  is().itemGridApi?.refreshCells();
+  is().itemGridApi?.refreshCells()
 }
 // @todo FIx this for ag grid rfresh
 function handleChange() {
-  is().itemGridApi?.refreshCells();
+  is().itemGridApi?.refreshCells()
 }
 </script>
 
 <template>
-  <Listbox v-model:model-value="is().filters.tags" :multiple="true">
+  <Listbox
+    v-model:model-value="is().filters.tags"
+    :multiple="true">
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
@@ -34,17 +36,20 @@ function handleChange() {
             'relative z-1 flex w-full flex-wrap items-center gap-3 py-0',
             className,
           )
-        "
-      >
+        ">
         <Button
           v-if="is().filters.tags.length && clear"
           :variant
           :hover
           :size="size[0]"
-          class="order-first hover:*:opacity-100"
-          @click="is().filters.tags.length = 0"
-        >
-          <icon name="x" class="size-4" />
+          class="
+            order-first
+            hover:*:opacity-100
+          "
+          @click="is().filters.tags.length = 0">
+          <icon
+            name="x"
+            class="size-4" />
         </Button>
 
         <!--  <BaseListboxItem

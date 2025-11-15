@@ -1,23 +1,29 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  item: Item;
-  index?: number;
-  set?: CalculatorSet;
-}>();
+  item: Item
+  index?: number
+  set?: CalculatorSet
+}>()
 
-const item = ref(0);
+const item = ref(0)
 
 async function handleItem(e) {
-  nextTick();
-  item.value = e;
+  nextTick()
+  item.value = e
 }
 </script>
 
 <template>
   <ItemCommand @update:item="handleItem($event)">
     <button
-      class="group/b hover:ringneutral/40 data-[state=open]:ringneutral/40 size-20 rounded-lg ring-offset-2 hover:ring hover:ring-offset-b1 data-[state=open]:ring data-[state=open]:ring-offset-b1"
-    >
+      class="
+        group/b
+        hover:ringneutral/40
+        data-[state=open]:ringneutral/40
+        size-20 rounded-lg ring-offset-2
+        hover:ring hover:ring-offset-b1
+        data-[state=open]:ring data-[state=open]:ring-offset-b1
+      ">
       <!--       <LazyItem
         v-if="item.name"
         :id="item.id"

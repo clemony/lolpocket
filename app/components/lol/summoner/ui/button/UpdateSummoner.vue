@@ -1,26 +1,26 @@
 <script lang="ts" setup>
-import { useForwardProps } from "reka-ui";
-import type { ButtonVariants } from "~/assets/variants";
+import { useForwardProps } from 'reka-ui'
+import type { ButtonVariants } from '~/assets/variants'
 
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes["class"];
-    placement?: Side;
-    theme?: string;
-    size?: ButtonVariants["size"];
-    variant: ButtonVariants["variant"];
+    class?: HTMLAttributes['class']
+    placement?: Side
+    theme?: string
+    size?: ButtonVariants['size']
+    variant: ButtonVariants['variant']
   }>(),
   {
-    placement: "top",
-    theme: "base",
+    placement: 'top',
+    theme: 'base',
   },
-);
+)
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 
-const state = useSummonerInject();
+const state = useSummonerInject()
 
 const {
   cooldown,
@@ -30,16 +30,16 @@ const {
   () => state.fetchNewMatches(),
   120_000,
   state.summoner.value.puuid,
-  "match-refresh",
-);
+  'match-refresh',
+)
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
     ? state.summoner.value.updatedMatch
       ? `Last updated ${state.summoner.value.updatedMatch}`
-      : "Not updated yet"
+      : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
-);
+)
 </script>
 
 <template>
@@ -56,11 +56,9 @@ const tippy = computed(() =>
         props.class,
       )
     "
-    @click="update()"
-  >
+    @click="update()">
     <TransitionScalePop
-      class="relative grid size-full place-items-center overflow-hidden"
-    >
+      class="relative grid size-full place-items-center overflow-hidden">
       <icon
         v-if="!cooldown"
         name="reset"
@@ -75,20 +73,22 @@ const tippy = computed(() =>
               'animate-rotate': isLoading,
             },
           )
-        "
-      />
+        " />
 
       <div
         v-if="cooldown"
-        class="radial-progress absolute place-self-center border-2 border-neutral bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm **:text-nc"
+        class="
+          radial-progress absolute place-self-center border-2 border-neutral
+          bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
+          **:text-nc
+        "
         :style="{
           '--value': cooldown?.seconds,
           '--size': '2rem',
           '--thickness': '2px',
         }"
         :aria-valuenow="cooldown?.percent"
-        role="progressbar"
-      >
+        role="progressbar">
         <span class="grid size-full place-items-center rounded-full bg-neutral">
           {{ cooldown?.seconds }}
         </span>

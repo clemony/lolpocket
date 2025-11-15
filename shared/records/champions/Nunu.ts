@@ -2,17 +2,17 @@
 
 const champion: Champion = {
   id: 20,
-  key: "Nunu",
-  name: "Nunu & Willump",
-  title: "the Boy and His Yeti",
+  key: 'Nunu',
+  name: 'Nunu & Willump',
+  title: 'the Boy and His Yeti',
   abilities: [
     {
-      key: "P",
-      name: "Call of the Freljord",
-      affects: "Self, Allies",
+      key: 'P',
+      name: 'Call of the Freljord',
+      affects: 'Self, Allies',
       blurb:
-        "Innate: When  Nunu and  Willump deal damage against an enemy  champion, large  monster or  structure, they and a nearby allied champion gain Call of the Freljord for a few seconds, prioritizing the ally with  highest attack speed.",
-      damageType: "Physical damage",
+        'Innate: When  Nunu and  Willump deal damage against an enemy  champion, large  monster or  structure, they and a nearby allied champion gain Call of the Freljord for a few seconds, prioritizing the ally with  highest attack speed.',
+      damageType: 'Physical damage',
       effects: [
         {
           description:
@@ -24,27 +24,27 @@ const champion: Champion = {
         },
         {
           description:
-            "Nunu and Willump cannot trigger Call of the Freljord from the same enemy again for a time. Successive triggers of Call of the Freljord while it is active will extend the duration by 4 seconds.",
+            'Nunu and Willump cannot trigger Call of the Freljord from the same enemy again for a time. Successive triggers of Call of the Freljord while it is active will extend the duration by 4 seconds.',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p',
       notes:
-        "The splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump's location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nEnemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn't present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord's maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.",
-      onTargetCdStatic: "10",
-      spellEffects: "periodic",
-      targeting: "Passive",
-      targetRange: "1000 / 700",
+        'The splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump\'s location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nEnemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn\'t present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord\'s maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.',
+      onTargetCdStatic: '10',
+      spellEffects: 'periodic',
+      targeting: 'Passive',
+      targetRange: '1000 / 700',
     },
     {
-      key: "Q",
-      name: "Consume",
-      affects: "Enemies, Self",
+      key: 'Q',
+      name: 'Consume',
+      affects: 'Enemies, Self',
       blurb:
-        "Active:  Willump takes a bite out of the target enemy, dealing damage and  healing himself. The heal is increased when he is below half health.",
-      castTime: "0.3",
-      cooldown: "12 / 11 / 10 / 9 / 8",
-      cost: "60",
-      damageType: "Other damage",
+        'Active:  Willump takes a bite out of the target enemy, dealing damage and  healing himself. The heal is increased when he is below half health.',
+      castTime: '0.3',
+      cooldown: '12 / 11 / 10 / 9 / 8',
+      cost: '60',
+      damageType: 'Other damage',
       effects: [
         {
           description:
@@ -52,45 +52,45 @@ const champion: Champion = {
         },
         {
           description:
-            "Against minions and monsters, he deals true damage. Additionally, if Consume would kill the target minion or small or medium monster, Willump devours the target, stunning and pulling them towards him over the cast time.",
+            'Against minions and monsters, he deals true damage. Additionally, if Consume would kill the target minion or small or medium monster, Willump devours the target, stunning and pulling them towards him over the cast time.',
           leveling: [
             {
-              attribute: "Non-Champion True Damage",
+              attribute: 'Non-Champion True Damage',
               modifiers: [
                 {
-                  values: "400 / 600 / 800 / 1000 / 1200",
+                  values: '400 / 600 / 800 / 1000 / 1200',
                 },
               ],
             },
             {
-              attribute: "Base Non-Champion Heal",
+              attribute: 'Base Non-Champion Heal',
               modifiers: [
                 {
-                  values: "65 / 95 / 125 / 155 / 185",
+                  values: '65 / 95 / 125 / 155 / 185',
                 },
                 {
-                  unit: "% AP",
-                  values: "90",
+                  unit: '% AP',
+                  values: '90',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "10",
+                  unit: '% bonus health',
+                  values: '10',
                 },
               ],
             },
             {
-              attribute: "Empowered Non-Champion Heal",
+              attribute: 'Empowered Non-Champion Heal',
               modifiers: [
                 {
-                  values: "97.5 / 142.5 / 187.5 / 232.5 / 277.5",
+                  values: '97.5 / 142.5 / 187.5 / 232.5 / 277.5',
                 },
                 {
-                  unit: "% AP",
-                  values: "135",
+                  unit: '% AP',
+                  values: '135',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "15",
+                  unit: '% bonus health',
+                  values: '15',
                 },
               ],
             },
@@ -98,77 +98,77 @@ const champion: Champion = {
         },
         {
           description:
-            "Against champions, he deals magic damage and the heal is reduced to 60%.",
+            'Against champions, he deals magic damage and the heal is reduced to 60%.',
           leveling: [
             {
-              attribute: "Champion Magic Damage",
+              attribute: 'Champion Magic Damage',
               modifiers: [
                 {
-                  values: "60 / 100 / 140 / 180 / 220",
+                  values: '60 / 100 / 140 / 180 / 220',
                 },
                 {
-                  unit: "% AP",
-                  values: "65",
+                  unit: '% AP',
+                  values: '65',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "5",
+                  unit: '% bonus health',
+                  values: '5',
                 },
               ],
             },
             {
-              attribute: "Base Champion Heal",
+              attribute: 'Base Champion Heal',
               modifiers: [
                 {
-                  values: "39 / 57 / 75 / 93 / 111",
+                  values: '39 / 57 / 75 / 93 / 111',
                 },
                 {
-                  unit: "% AP",
-                  values: "54",
+                  unit: '% AP',
+                  values: '54',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "6",
+                  unit: '% bonus health',
+                  values: '6',
                 },
               ],
             },
             {
-              attribute: "Empowered Champion Heal",
+              attribute: 'Empowered Champion Heal',
               modifiers: [
                 {
-                  values: "58.5 / 85.5 / 112.5 / 139.5 / 166.5",
+                  values: '58.5 / 85.5 / 112.5 / 139.5 / 166.5',
                 },
                 {
-                  unit: "% AP",
-                  values: "81",
+                  unit: '% AP',
+                  values: '81',
                 },
                 {
-                  unit: "% bonus health",
-                  values: "9",
+                  unit: '% bonus health',
+                  values: '9',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/q",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/q',
       maxCharges: -1,
       notes:
-        "Icon border glows when he is within the maximum healing threshold.\n Spell shields will block the damage and the heal.\nWhile not on  cooldown, Consume's ability icon on the HUD can be pinged to announce its damage to  monsters in the ally chat.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-      resource: "Mana",
-      spellEffects: "spell",
-      spellshieldable: "True",
-      targeting: "Unit",
-      targetRange: "125",
+        'Icon border glows when he is within the maximum healing threshold.\n Spell shields will block the damage and the heal.\nWhile not on  cooldown, Consume\'s ability icon on the HUD can be pinged to announce its damage to  monsters in the ally chat.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).',
+      resource: 'Mana',
+      spellEffects: 'spell',
+      spellshieldable: 'True',
+      targeting: 'Unit',
+      targetRange: '125',
     },
     {
-      key: "W",
-      name: "Biggest Snowball Ever!",
-      affects: "Self, Enemies",
-      castTime: "none",
-      cooldown: "14",
-      cost: "50 / 55 / 60 / 65 / 70",
-      damageType: "Magic damage",
+      key: 'W',
+      name: 'Biggest Snowball Ever!',
+      affects: 'Self, Enemies',
+      castTime: 'none',
+      cooldown: '14',
+      cost: '50 / 55 / 60 / 65 / 70',
+      damageType: 'Magic damage',
       effects: [
         {
           description:
@@ -176,33 +176,33 @@ const champion: Champion = {
         },
         {
           description:
-            "The snowball increases in size and power over the first 5 seconds. Biggest Snowball Ever! can be recast after 0.5 seconds during the channel, and does so automatically after the channel or if interrupted.",
+            'The snowball increases in size and power over the first 5 seconds. Biggest Snowball Ever! can be recast after 0.5 seconds during the channel, and does so automatically after the channel or if interrupted.',
         },
         {
           description:
-            "The snowball explodes upon hitting an enemy champion, large pet, medium / large monster or terrain, dealing magic damage to nearby enemies, increased by 0% - 400% (based on charge time), knocking them up for 0.5 - 0.75 (based on charge time) seconds and subsequently stunning them for 0 - 0.5 (based on charge time) seconds.",
+            'The snowball explodes upon hitting an enemy champion, large pet, medium / large monster or terrain, dealing magic damage to nearby enemies, increased by 0% - 400% (based on charge time), knocking them up for 0.5 - 0.75 (based on charge time) seconds and subsequently stunning them for 0 - 0.5 (based on charge time) seconds.',
           leveling: [
             {
-              attribute: "Minimum Magic Damage",
+              attribute: 'Minimum Magic Damage',
               modifiers: [
                 {
-                  values: "36 / 45 / 54 / 63 / 72",
+                  values: '36 / 45 / 54 / 63 / 72',
                 },
                 {
-                  unit: "% AP",
-                  values: "30",
+                  unit: '% AP',
+                  values: '30',
                 },
               ],
             },
             {
-              attribute: "Maximum Magic Damage",
+              attribute: 'Maximum Magic Damage',
               modifiers: [
                 {
-                  values: "180 / 225 / 270 / 315 / 360",
+                  values: '180 / 225 / 270 / 315 / 360',
                 },
                 {
-                  unit: "% AP",
-                  values: "150",
+                  unit: '% AP',
+                  values: '150',
                 },
               ],
             },
@@ -210,29 +210,29 @@ const champion: Champion = {
         },
         {
           description:
-            "The snowball rolls over enemy minions and small monsters hit, dealing 33.3% of the damage as magic damage.",
+            'The snowball rolls over enemy minions and small monsters hit, dealing 33.3% of the damage as magic damage.',
           leveling: [
             {
-              attribute: "Minimum Reduced Damage",
+              attribute: 'Minimum Reduced Damage',
               modifiers: [
                 {
-                  values: "11.99 / 14.99 / 17.98 / 20.98 / 23.98",
+                  values: '11.99 / 14.99 / 17.98 / 20.98 / 23.98',
                 },
                 {
-                  unit: "% AP",
-                  values: "9.99",
+                  unit: '% AP',
+                  values: '9.99',
                 },
               ],
             },
             {
-              attribute: "Maximum Reduced Damage",
+              attribute: 'Maximum Reduced Damage',
               modifiers: [
                 {
-                  values: "59.94 / 74.93 / 89.91 / 104.9 / 119.88",
+                  values: '59.94 / 74.93 / 89.91 / 104.9 / 119.88',
                 },
                 {
-                  unit: "% AP",
-                  values: "49.95",
+                  unit: '% AP',
+                  values: '49.95',
                 },
               ],
             },
@@ -243,55 +243,55 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Recast:</span> Willump releases the snowball, sending it rolling forward up to a maximum distance during which it will not grow any larger and will explode upon hitting an enemy.</p>',
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/w",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/w',
       maxCharges: -1,
       notes:
-        "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe movement speed reduction the duo receive from initially casting Biggest Snowball Ever! is not considered a  slow, thus it will not be resisted by their  slow immunity.\nThere are 3 stages where the turn rate increases from the original one:\nAfter turning for 1 second, the turn rate is increased to 175%.\nAfter turning for 3 seconds, the turn rate is increased to 250%.\nAfter turning for 6 seconds, the turn rate is increased to 325% where it caps.\nThe time threshold to begin gaining bonus movement speed may be bugged, as Flat Bonus MS increases the time while % Bonus MS decreases the time.\nThe formula appears to be (X ÷ 100) - Y, where:\nX = Total Flat MS after caps\nY = 0.1 per 1% %MS\nThe delay is not modified from its initially calculated value on-cast, even if additional movement speed is gained.\nNunu and Willump keep all increases in movement speed at time of cast for the duration of the charge.\nNunu and Willump's movement speed always increases in increments of ~14, reaching the greater value between [ Total MS + 85 : 255 (based on level) ][ Total Uncapped Flat MS + 85 : 255 (based on level) ] (click to toggle).\nThis takes 6 increments to reach the Total MS + 85, but may take more to reach the Uncapped Flat + 85. Due to flat bonuses increasing the time threshold, it is possible for the ability's effects to end before reaching the total uncapped movement speed.\nThe bonus movement speed ignores the movement speed cap.\nIf Nunu turns continuously he will create a 600 unit circle, increased with bonus movement speed, striking the same point up to 3 times, for a maximum of 180 / 225 / 270 / 315 / 360 (+ 300% AP) magic damage. The damage can be further increased by detonating the snowball, for a total of 360 / 450 / 540 / 630 / 720 (+450% AP) magic damage.\n Ryze's  Realm Warp will only teleport Nunu and Willump, leaving the  snowball behind.\nHovering the cursor on the HUD (e.g mini map / champion portraits) does not affect the cast and steering of Biggest Snowball Ever!.\nNunu gains a slightly larger field of view during Biggest Snowball Ever!.\n Projectile-interception effects will destroy the snowball only after it has been released.\nBiggest Snowball Ever! is disabled for the first 15 seconds of the game.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
-      projectile: "SPECIAL",
-      resource: "Mana",
-      speed: "400 / 410-569 / 570",
-      spellEffects: "spellaoe",
-      spellshieldable: "True",
-      targeting: "Direction",
-      targetRange: "750 : 1750 (based on charge time)",
+        'The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe movement speed reduction the duo receive from initially casting Biggest Snowball Ever! is not considered a  slow, thus it will not be resisted by their  slow immunity.\nThere are 3 stages where the turn rate increases from the original one:\nAfter turning for 1 second, the turn rate is increased to 175%.\nAfter turning for 3 seconds, the turn rate is increased to 250%.\nAfter turning for 6 seconds, the turn rate is increased to 325% where it caps.\nThe time threshold to begin gaining bonus movement speed may be bugged, as Flat Bonus MS increases the time while % Bonus MS decreases the time.\nThe formula appears to be (X ÷ 100) - Y, where:\nX = Total Flat MS after caps\nY = 0.1 per 1% %MS\nThe delay is not modified from its initially calculated value on-cast, even if additional movement speed is gained.\nNunu and Willump keep all increases in movement speed at time of cast for the duration of the charge.\nNunu and Willump\'s movement speed always increases in increments of ~14, reaching the greater value between [ Total MS + 85 : 255 (based on level) ][ Total Uncapped Flat MS + 85 : 255 (based on level) ] (click to toggle).\nThis takes 6 increments to reach the Total MS + 85, but may take more to reach the Uncapped Flat + 85. Due to flat bonuses increasing the time threshold, it is possible for the ability\'s effects to end before reaching the total uncapped movement speed.\nThe bonus movement speed ignores the movement speed cap.\nIf Nunu turns continuously he will create a 600 unit circle, increased with bonus movement speed, striking the same point up to 3 times, for a maximum of 180 / 225 / 270 / 315 / 360 (+ 300% AP) magic damage. The damage can be further increased by detonating the snowball, for a total of 360 / 450 / 540 / 630 / 720 (+450% AP) magic damage.\n Ryze\'s  Realm Warp will only teleport Nunu and Willump, leaving the  snowball behind.\nHovering the cursor on the HUD (e.g mini map / champion portraits) does not affect the cast and steering of Biggest Snowball Ever!.\nNunu gains a slightly larger field of view during Biggest Snowball Ever!.\n Projectile-interception effects will destroy the snowball only after it has been released.\nBiggest Snowball Ever! is disabled for the first 15 seconds of the game.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects',
+      projectile: 'SPECIAL',
+      resource: 'Mana',
+      speed: '400 / 410-569 / 570',
+      spellEffects: 'spellaoe',
+      spellshieldable: 'True',
+      targeting: 'Direction',
+      targetRange: '750 : 1750 (based on charge time)',
     },
     {
-      key: "E",
-      name: "Snowball Barrage",
-      width: "50",
-      affects: "Enemies",
+      key: 'E',
+      name: 'Snowball Barrage',
+      width: '50',
+      affects: 'Enemies',
       blurb:
-        "Active:  Nunu throws a volley of 3 snowballs in the target direction that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone. Enemies hit 3 times are briefly  slowed.  Champions and large  monsters hit once are marked Snowbound for a few seconds. Shortly after activating Snowball Barrage, Snowbound enemies near  Willump take magic damage and are briefly  rooted.",
-      castTime: "None / None",
-      cooldown: "14 / 13 / 12 / 11 / 10",
-      cost: "50 / 55 / 60 / 65 / 70",
-      damageType: "Magic damage",
+        'Active:  Nunu throws a volley of 3 snowballs in the target direction that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone. Enemies hit 3 times are briefly  slowed.  Champions and large  monsters hit once are marked Snowbound for a few seconds. Shortly after activating Snowball Barrage, Snowbound enemies near  Willump take magic damage and are briefly  rooted.',
+      castTime: 'None / None',
+      cooldown: '14 / 13 / 12 / 11 / 10',
+      cost: '50 / 55 / 60 / 65 / 70',
+      damageType: 'Magic damage',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Nunu throws a volley of 3 snowballs in the target direction over 0.4 seconds that each shatter upon hitting an enemy, dealing magic damage to enemies in a cone.</p>',
           leveling: [
             {
-              attribute: "Magic Damage Per Hit",
+              attribute: 'Magic Damage Per Hit',
               modifiers: [
                 {
-                  values: "16 / 24 / 32 / 40 / 48",
+                  values: '16 / 24 / 32 / 40 / 48',
                 },
                 {
-                  unit: "% AP",
-                  values: "15",
+                  unit: '% AP',
+                  values: '15',
                 },
               ],
             },
             {
-              attribute: "Total Magic Damage",
+              attribute: 'Total Magic Damage',
               modifiers: [
                 {
-                  values: "48 / 72 / 96 / 120 / 144",
+                  values: '48 / 72 / 96 / 120 / 144',
                 },
                 {
-                  unit: "% AP",
-                  values: "45",
+                  unit: '% AP',
+                  values: '45',
                 },
               ],
             },
@@ -299,14 +299,14 @@ const champion: Champion = {
         },
         {
           description:
-            "Enemies hit 3 times are slowed for 1 second. Enemy champions and large monsters hit once are marked Snowbound for 4 seconds, refreshing on subsequent hits. Snowball Barrage can be recast twice within 3 seconds at no additional cost and with a cooldown in between casts.",
+            'Enemies hit 3 times are slowed for 1 second. Enemy champions and large monsters hit once are marked Snowbound for 4 seconds, refreshing on subsequent hits. Snowball Barrage can be recast twice within 3 seconds at no additional cost and with a cooldown in between casts.',
           leveling: [
             {
-              attribute: "Slow",
+              attribute: 'Slow',
               modifiers: [
                 {
-                  unit: "%",
-                  values: "30 / 35 / 40 / 45 / 50",
+                  unit: '%',
+                  values: '30 / 35 / 40 / 45 / 50',
                 },
               ],
             },
@@ -317,14 +317,14 @@ const champion: Champion = {
             '<p class="ability-effect"><span class="ability-header">Recast:</span> Nunu hurls another volley of snowballs, mimicking the first cast\'s effects. An enemy may only be slowed once for being hit by snowballs.</p>',
           leveling: [
             {
-              attribute: "Maximum Total Magic Damage",
+              attribute: 'Maximum Total Magic Damage',
               modifiers: [
                 {
-                  values: "144 / 216 / 288 / 360 / 432",
+                  values: '144 / 216 / 288 / 360 / 432',
                 },
                 {
-                  unit: "% AP",
-                  values: "135",
+                  unit: '% AP',
+                  values: '135',
                 },
               ],
             },
@@ -332,63 +332,63 @@ const champion: Champion = {
         },
         {
           description:
-            "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.5 (based on level) seconds.",
+            'After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.5 (based on level) seconds.',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "20 / 30 / 40 / 50 / 60",
+                  values: '20 / 30 / 40 / 50 / 60',
                 },
                 {
-                  unit: "% AP",
-                  values: "80",
+                  unit: '% AP',
+                  values: '80',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e',
       maxCharges: -1,
       notes:
-        "Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump's position at any given moment.",
-      projectile: "TRUE",
-      resource: "Mana",
-      speed: "2000",
-      spellEffects: "aoe",
-      spellshieldable: "True",
-      targeting: "Direction",
-      targetRange: "700",
+        'Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse\'s passive\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump\'s position at any given moment.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '2000',
+      spellEffects: 'aoe',
+      spellshieldable: 'True',
+      targeting: 'Direction',
+      targetRange: '700',
     },
     {
-      key: "R",
-      name: "Absolute Zero",
-      affects: "Enemies",
-      castTime: "none",
-      cooldown: "110 / 100 / 90",
-      cost: "100",
-      damageType: "Magic damage",
-      effectRadius: "650",
+      key: 'R',
+      name: 'Absolute Zero',
+      affects: 'Enemies',
+      castTime: 'none',
+      cooldown: '110 / 100 / 90',
+      cost: '100',
+      damageType: 'Magic damage',
+      effectRadius: '650',
       effects: [
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Active:</span> Nunu and Willump channel a blizzard for up to 3 seconds, granting themselves a shield and slowing nearby enemies by 0% - 95% (based on channel time).</p>',
           leveling: [
             {
-              attribute: "Shield Strength",
+              attribute: 'Shield Strength',
               modifiers: [
                 {
-                  values: "65 / 75 / 85",
+                  values: '65 / 75 / 85',
                 },
                 {
-                  unit: "% AP",
-                  values: "150",
+                  unit: '% AP',
+                  values: '150',
                 },
                 {
-                  tooltip: "Scaling per rank:\n30 / 40 / 50% bonus health",
-                  unit: "% bonus health",
-                  values: "30 - 50",
+                  tooltip: 'Scaling per rank:\n30 / 40 / 50% bonus health',
+                  unit: '% bonus health',
+                  values: '30 - 50',
                 },
               ],
             },
@@ -396,39 +396,39 @@ const champion: Champion = {
         },
         {
           description:
-            "Absolute Zero can be recast after 0.5 seconds during the channel, and does so automatically when the channel ends by any means.",
+            'Absolute Zero can be recast after 0.5 seconds during the channel, and does so automatically when the channel ends by any means.',
         },
         {
           description:
             '<p class="ability-effect"><span class="ability-header">Recast:</span> Nunu and Willump cause the blizzard to explode, dealing magic damage to nearby enemies, modified to 0% - 100% (based on channel time). Affected enemies will remain slowed for 0 - 3 (based on channel time) seconds and any of the duo\'s remaining shield will decay over 3 seconds.</p>',
           leveling: [
             {
-              attribute: "Magic Damage",
+              attribute: 'Magic Damage',
               modifiers: [
                 {
-                  values: "625 / 950 / 1275",
+                  values: '625 / 950 / 1275',
                 },
                 {
-                  unit: "% AP",
-                  values: "300",
+                  unit: '% AP',
+                  values: '300',
                 },
               ],
             },
           ],
         },
       ],
-      icon: "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/r",
+      icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/r',
       maxCharges: -1,
       notes:
-        "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe affected area is hidden if the duo is not  visible to the enemy team.\nWhile it's unlikely to happen normally, it is possible to deal zero damage with Absolute Zero if canceled as soon as it's started.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
-      resource: "Mana",
-      spellEffects: "spellaoe",
-      spellshieldable: "True",
-      targeting: "Auto",
+        'The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe affected area is hidden if the duo is not  visible to the enemy team.\nWhile it\'s unlikely to happen normally, it is possible to deal zero damage with Absolute Zero if canceled as soon as it\'s started.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects',
+      resource: 'Mana',
+      spellEffects: 'spellaoe',
+      spellshieldable: 'True',
+      targeting: 'Auto',
     },
   ],
-  adaptiveType: "Magic damage",
-  attackType: "Melee",
+  adaptiveType: 'Magic damage',
+  attackType: 'Melee',
   attributeRatings: {
     abilityReliance: 80,
     control: 2,
@@ -438,18 +438,18 @@ const champion: Champion = {
     toughness: 3,
     utility: 2,
   },
-  faction: "freljord",
-  fullName: "Nunu & Willump",
-  lore: "Once upon a time, there was a boy who wanted to prove he was a hero by slaying a fearsome monster—only to discover that the beast, a lonely and magical yeti, merely needed a friend. Bound together by ancient power and a shared love of snowballs, Nunu and Willump now ramble wildly across the Freljord, breathing life into imagined adventures. They hope that somewhere out there, they will find Nunu's mother. If they can save her, maybe they will be heroes after all…",
-  patchLastChanged: "25.09",
-  positions: ["Jungle"],
+  faction: 'freljord',
+  fullName: 'Nunu & Willump',
+  lore: 'Once upon a time, there was a boy who wanted to prove he was a hero by slaying a fearsome monster—only to discover that the beast, a lonely and magical yeti, merely needed a friend. Bound together by ancient power and a shared love of snowballs, Nunu and Willump now ramble wildly across the Freljord, breathing life into imagined adventures. They hope that somewhere out there, they will find Nunu\'s mother. If they can save her, maybe they will be heroes after all…',
+  patchLastChanged: '25.09',
+  positions: ['Jungle'],
   price: {
     blueEssence: 225,
     rp: 260,
   },
-  releaseDate: "2009-02-21",
-  resource: "Mana",
-  roles: ["Mage", "Tank", "Vanguard"],
+  releaseDate: '2009-02-21',
+  resource: 'Mana',
+  roles: ['Mage', 'Tank', 'Vanguard'],
   stats: {
     acquisitionRadius: {
       flat: 600,
@@ -520,5 +520,5 @@ const champion: Champion = {
       flat: 140,
     },
   },
-};
-export default champion;
+}
+export default champion

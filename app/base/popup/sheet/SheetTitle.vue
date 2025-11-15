@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import type { DialogTitleProps } from "reka-ui";
-import { DialogTitle } from "reka-ui";
+import type { DialogTitleProps } from 'reka-ui'
+import { DialogTitle } from 'reka-ui'
 
 const props = defineProps<
-  DialogTitleProps & { class?: HTMLAttributes["class"] }
->();
+  DialogTitleProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
   <DialogTitle
     :class="cn('text-5 font-semibold text-bc', props.class)"
-    v-bind="delegatedProps"
-  >
+    v-bind="delegatedProps">
     <slot />
   </DialogTitle>
 </template>

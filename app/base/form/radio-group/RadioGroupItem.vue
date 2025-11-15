@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { RadioGroupItemProps } from "reka-ui";
-import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from "reka-ui";
+import type { RadioGroupItemProps } from 'reka-ui'
+import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  RadioGroupItemProps & { class?: HTMLAttributes["class"] }
->();
+  RadioGroupItemProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -22,14 +22,12 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <RadioGroupIndicator class="flex items-center justify-center">
       <slot>
         <icon
           name="codicon:circle-filled"
-          class="-mt-px size-5.25 text-neutral"
-        />
+          class="-mt-px size-5.25 text-neutral" />
       </slot>
     </RadioGroupIndicator>
   </RadioGroupItem>

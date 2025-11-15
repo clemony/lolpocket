@@ -1,14 +1,16 @@
 <script setup lang="ts">
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
   <label
-    class="btn relative cursor-pointer justify-start text-3 font-medium btn-ghost btn-lg"
-    :class="cn('', props.class)"
-  >
+    class="
+      btn relative cursor-pointer justify-start text-3 font-medium btn-ghost
+      btn-lg
+    "
+    :class="cn('', props.class)">
     <slot />
   </label>
 </template>

@@ -1,22 +1,22 @@
 <script lang="ts" setup>
 const { title, class: className } = defineProps<{
-  title: string;
-  class?: HTMLAttributes["class"];
-  dropdown?: boolean;
-}>();
+  title: string
+  class?: HTMLAttributes['class']
+  dropdown?: boolean
+}>()
 
-const tabs = ref("MessageView");
+const tabs = ref('MessageView')
 const inboxes: Record<string, DataObject> = {
   news: {
-    name: "News",
-    component: "NewsView",
+    name: 'News',
+    component: 'NewsView',
     icon: {
-      name: "lucide:newspaper",
-      class: "**:stroke-[1.5] ",
+      name: 'lucide:newspaper',
+      class: '**:stroke-[1.5] ',
     },
     value: 0,
   },
-};
+}
 </script>
 
 <template>
@@ -25,13 +25,18 @@ const inboxes: Record<string, DataObject> = {
       <div class="flex w-full items-center justify-between">
         <DropdownMenu
           v-model:open="ui().sidebarStates.inboxDropdown"
-          class="z-0"
-        >
+          class="z-0">
           <DropdownMenuTrigger
             :disabled="!dropdown"
-            class="flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:**:text-bc disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs"
-            as-child
-          >
+            class="
+              flex h-[35.5px] w-fit items-center justify-between px-2
+              disabled:opacity-100 disabled:**:text-bc
+              disabled:hover:border-transparent disabled:hover:bg-transparent
+              disabled:hover:shadow-none disabled:hover:drop-shadow-none
+              data-[state=open]:border-b3 data-[state=open]:bg-b3/50!
+              data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs
+            "
+            as-child>
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
               <h2 class="font-bold dst">
@@ -44,14 +49,17 @@ const inboxes: Record<string, DataObject> = {
           </DropdownMenuPopContent>
         </DropdownMenu>
 
-        <Tabs v-model:model-value="tabs" class="z-1">
-          <TabsList base="indicator" class="h-9 grid-cols-3">
+        <Tabs
+          v-model:model-value="tabs"
+          class="z-1">
+          <TabsList
+            base="indicator"
+            class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"
               :key="item.name"
               class="h-full px-3"
-              :value="item.component"
-            >
+              :value="item.component">
               <icon :name="item.icon.name" />
             </TabsTrigger>
             <TabIndicator class="bg-b1" />

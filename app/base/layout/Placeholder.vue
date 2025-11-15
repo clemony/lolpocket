@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { AsTag, PrimitiveProps } from "reka-ui";
-import { labelVariants } from "@variants";
-import { Primitive } from "reka-ui";
+import type { AsTag, PrimitiveProps } from 'reka-ui'
+import { labelVariants } from '@variants'
+import { Primitive } from 'reka-ui'
 
-const { as = "label", class: className } = defineProps<
+const { as = 'label', class: className } = defineProps<
   PrimitiveProps & {
-    class?: HTMLAttributes["class"];
-    variant?: LabelVariants["variant"];
-    size?: LabelVariants["size"];
-    hover?: LabelVariants["hover"];
-    as?: AsTag | string;
+    class?: HTMLAttributes['class']
+    variant?: LabelVariants['variant']
+    size?: LabelVariants['size']
+    hover?: LabelVariants['hover']
+    as?: AsTag | string
   }
->();
+>()
 </script>
 
 <template>
@@ -27,8 +27,7 @@ const { as = "label", class: className } = defineProps<
         labelVariants({ variant, size, hover }),
         className,
       )
-    "
-  >
+    ">
     <slot />
   </Primitive>
 </template>

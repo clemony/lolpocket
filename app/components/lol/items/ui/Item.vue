@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const {
   id,
-  as = "div",
+  as = 'div',
   class: className,
 } = defineProps<{
-  id: number | null;
-  class?: HTMLAttributes["class"];
-  as?: string;
-}>();
+  id: number | null
+  class?: HTMLAttributes['class']
+  as?: string
+}>()
 </script>
 
 <template>
@@ -23,14 +23,12 @@ const {
 
         className,
       )
-    "
-  >
+    ">
     <Img
       v-if="id"
       :img="`/img/items/${id}.webp`"
       :alt="id.toString()"
-      class="absolute aspect-square size-full self-center rounded-lg opacity-96"
-    />
+      class="absolute aspect-square size-full self-center rounded-lg opacity-96" />
 
     <slot />
   </Element>

@@ -5,8 +5,8 @@ import type {
   NodeViewRendererProps,
 } from '@tiptap/vue-3'
 import { NodeViewWrapper } from '@tiptap/vue-3'
+import { constructMentionAttrs } from '~/composables/tiptap'
 import { attrsToProps } from '~/utils/data/swapDataTypes'
-import { constructMentionAttrs } from '../../utils/mentions/constructMentionAttrs'
 
 const { node } = defineProps<
   NodeViewRendererProps & {

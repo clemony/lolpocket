@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { motion } from "motion-v";
+import { motion } from 'motion-v'
 
-const { class: className, variant = "shadow" } = defineProps<{
-  class?: HTMLAttributes["class"];
-  text?: boolean | string | null;
-  variant?: any;
-}>();
+const { class: className, variant = 'shadow' } = defineProps<{
+  class?: HTMLAttributes['class']
+  text?: boolean | string | null
+  variant?: any
+}>()
 
-const state = useSummonerInject();
+const state = useSummonerInject()
 
 const {
   cooldown,
@@ -17,32 +17,34 @@ const {
   () => state.fetchNewMatches(),
   120_000,
   state.summoner.value.puuid,
-  "match-refresh",
-);
+  'match-refresh',
+)
 
 const buttVariants = {
   hidden: {
-    maxWidth: "33px",
+    maxWidth: '33px',
   },
   visible: {
-    maxWidth: "100%",
+    maxWidth: '100%',
   },
-};
+}
 
 const variants = {
   hidden: {
-    display: "none",
+    display: 'none',
     opacity: 0,
   },
   visible: {
-    display: "inline",
+    display: 'inline',
     opacity: 1,
   },
-};
+}
 </script>
 
 <template>
-  <NavigationMenuItem class="overflow-hidden p-0" as-child>
+  <NavigationMenuItem
+    class="overflow-hidden p-0"
+    as-child>
     <MButton
       :variant="cooldown ? 'secondary' : variant"
       :variants="buttVariants"
@@ -58,11 +60,12 @@ const variants = {
           },
         )
       "
-      @click="update()"
-    >
+      @click="update()">
       <TransitionScalePop
-        class="relative grid aspect-square h-full shrink-0 place-items-center place-self-center overflow-hidden"
-      >
+        class="
+          relative grid aspect-square h-full shrink-0 place-items-center
+          place-self-center overflow-hidden
+        ">
         <icon
           v-if="!cooldown"
           name="mingcute:refresh-2-line"
@@ -76,23 +79,24 @@ const variants = {
                 'animate-rotate': state.loading,
               },
             )
-          "
-        />
+          " />
 
         <div
           v-if="cooldown"
-          class="radial-progress absolute place-self-center border-2 border-neutral bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm **:text-nc"
+          class="
+            radial-progress absolute place-self-center border-2 border-neutral
+            bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
+            **:text-nc
+          "
           :style="{
             '--value': cooldown?.seconds,
             '--size': '2rem',
             '--thickness': '2px',
           }"
           :aria-valuenow="cooldown?.percent"
-          role="progressbar"
-        >
+          role="progressbar">
           <span
-            class="grid size-full place-items-center rounded-full bg-neutral"
-          >
+            class="grid size-full place-items-center rounded-full bg-neutral">
             {{ cooldown?.seconds }}
           </span>
         </div>
@@ -100,8 +104,10 @@ const variants = {
 
       <motion.div
         :variants="variants"
-        class="inline-flex w-full flex-nowrap items-center justify-between gap-3 self-center overflow-hidden text-nowrap"
-      >
+        class="
+          inline-flex w-full flex-nowrap items-center justify-between gap-3
+          self-center overflow-hidden text-nowrap
+        ">
         {{ cooldown ? `${cooldown?.formatted} cd` : "Update" }}
       </motion.div>
     </MButton>

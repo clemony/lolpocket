@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  item: Item;
-}>();
-const item = computed(() => props.item);
+  item: Item
+}>()
+const item = computed(() => props.item)
 const reqs = computed(() => {
   /* const a = replaceFileReferencesWithImages(item.value.req)
 return formatDataTags(a) */
-  return "";
-});
+  return ''
+})
 </script>
 
 <template>

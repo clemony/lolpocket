@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .stat-grid {
   @apply border-l border-l-b3;

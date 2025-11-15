@@ -3,11 +3,13 @@ export interface Thread {
   comments: UUID[]
 }
 
-export interface Author {
-  name: string
+export interface CommentData extends CommentSchema {
+  author: User
+  is_author?: boolean
+}
+
+export interface User {
   puuid: UUID
-  icon: string
-  tag: string
-  region: string
   username: string
+  splash: string
 }

@@ -2,23 +2,19 @@
 const {
   class: className,
   comment,
+  hasReplies,
   hovered,
+  hydratedSummoner,
   open,
 } = defineProps<{
   class?: HTMLAttributes['class']
   comment: CommentData
   open: boolean
+  hydratedSummoner?: Summoner | null
+  hasReplies: boolean
   hovered?: ComputedRef<boolean>
 }>()
 
-const summoner = computed(() => {
-  return {
-    name: comment.author.name,
-    puuid: comment.author_id,
-    icon: comment.author.icon,
-    tag: comment.author.tag,
-  }
-})
 /*      :id=""
             @click="useNavigateToSummoner()" */
 </script>
@@ -32,7 +28,7 @@ const summoner = computed(() => {
     <div class="absolute left-0 flex size-9 flex-col items-center gap-2">
       <slot />
       <CollapsibleTrigger
-        :disabled="!comment.replies?.length"
+        :disabled="!hasReplies"
         class="
           pointer-events-auto size-5
           disabled:opacity-0
@@ -57,16 +53,16 @@ const summoner = computed(() => {
           inline-flex cursor-pointer align-bottom leading-none
           hover:*:first:underline
         "
-        @click="useNavigateToSummoner(comment.author_id)">
+        @click="useNavigateToSummoner(comment.author.puuid)">
         <span class="inline text-4! font-semibold">
-          {{ comment.author.name || "Summoner" }}
+          {{ hydratedSummoner?.name || comment.author?.username || "Summoner" }}
         </span>
         <span class="ml-1 inline-flex align-bottom text-2">
           <icon
-            v-if="comment.author.tag"
+            v-if="hydratedSummoner?.tag"
             name="hash"
             class="mt-0.5 inline size-3" />
-          {{ comment.author.tag }}
+          {{ hydratedSummoner?.tag }}
         </span>
       </button>
 
@@ -76,10 +72,10 @@ const summoner = computed(() => {
           *:align-bottom
         ">
         <span class="text-1 opacity-60">
-          {{ parseISOStringToRelative(comment.created) }}
+          {{ parseISOStringToRelative(comment?.created) }}
         </span>
         <span
-          v-if="comment.updated"
+          v-if="comment?.updated"
           v-tippy="{
             content: 'Edited',
             theme: 'base',

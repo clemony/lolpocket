@@ -1,45 +1,45 @@
 const item: Item = {
   id: 3051,
-  name: "Hearthbound Axe",
-  nicknames: ["blue arrow"],
+  name: 'Hearthbound Axe',
+  nicknames: ['blue arrow'],
   buildsFrom: [
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
     {
       id: 1042,
-      name: "Dagger",
+      name: 'Dagger',
       gold: 250,
     },
     {
       id: 1036,
-      name: "Long Sword",
+      name: 'Long Sword',
       gold: 350,
     },
   ],
   buildsInto: [
     {
       id: 3302,
-      name: "Terminus",
+      name: 'Terminus',
       gold: 3000,
     },
     {
       id: 3078,
-      name: "Trinity Force",
+      name: 'Trinity Force',
       gold: 3333,
     },
     {
       id: 6672,
-      name: "Kraken Slayer",
+      name: 'Kraken Slayer',
       gold: 3000,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3051_fighter_t2_axeofavarosa.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3051_fighter_t2_axeofavarosa.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Epic",
+  rank: 'Epic',
   removed: false,
   shop: {
     prices: {
@@ -47,12 +47,12 @@ const item: Item = {
       sell: 480,
       total: 1200,
     },
-    tags: ["FIGHTER", "MOVEMENT", "ONHIT_EFFECTS"],
+    tags: ['FIGHTER', 'MOVEMENT', 'ONHIT_EFFECTS'],
   },
   specialRecipe: 0,
   stats: {
     attackDamage: 20,
     attackSpeed: 20,
   },
-};
-export default item;
+}
+export default item

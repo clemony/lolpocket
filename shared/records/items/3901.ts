@@ -1,19 +1,19 @@
 const item: Item = {
   id: 3901,
-  name: "Fire at Will",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3901_champ_t0_fireatwillcircle.png",
+  name: 'Fire at Will',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3901_champ_t0_fireatwillcircle.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
   passives: [
     {
-      name: "Fire at Will",
+      name: 'Fire at Will',
       effects:
-        "{{ai|Cannon Barrage|Gangplank|Gangplank}} fires 2 additional clusters of 3 waves over the duration at an increased rate of fire (1 cluster per 1.33 seconds), for a total of 18 waves over the 8 seconds.",
+        '{{ai|Cannon Barrage|Gangplank|Gangplank}} fires 2 additional clusters of 3 waves over the duration at an increased rate of fire (1 cluster per 1.33 seconds), for a total of 18 waves over the 8 seconds.',
       unique: true,
     },
   ],
   removed: false,
-  requiredChampion: "Gangplank",
+  requiredChampion: 'Gangplank',
   shop: {
     prices: {
       combined: 0,
@@ -23,8 +23,8 @@ const item: Item = {
     purchasable: false,
   },
   simpleDescription:
-    "Cannon Barrage fires at an increasing rate over time (additional 6 waves over the duration).",
+    'Cannon Barrage fires at an increasing rate over time (additional 6 waves over the duration).',
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

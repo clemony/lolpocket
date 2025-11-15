@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import type { SelectItemProps } from "reka-ui";
-import { reactiveOmit } from "@vueuse/core";
+import type { SelectItemProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
 import {
   SelectItem,
   SelectItemIndicator,
   SelectItemText,
   useForwardProps,
-} from "reka-ui";
+} from 'reka-ui'
 
 const props = defineProps<
-  SelectItemProps & { class?: HTMLAttributes["class"]; noTick?: boolean }
->();
+  SelectItemProps & { class?: HTMLAttributes['class'], noTick?: boolean }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -34,16 +34,19 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <SelectItemText>
       <slot />
     </SelectItemText>
     <span
-      class="flex h-3.5 w-3.5 items-center justify-center opacity-80 **:stroke-[0.9]"
-    >
+      class="
+        flex h-3.5 w-3.5 items-center justify-center opacity-80
+        **:stroke-[0.9]
+      ">
       <SelectItemIndicator v-if="!props.noTick">
-        <icon name="tick-sm" class="size-6 dst" />
+        <icon
+          name="tick-sm"
+          class="size-6 dst" />
       </SelectItemIndicator>
     </span>
   </SelectItem>

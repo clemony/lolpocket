@@ -4,15 +4,15 @@ const {
   team,
   teamObject,
 } = defineProps<{
-  team: any;
-  teamObject: any;
-  class?: HTMLAttributes["class"];
-}>();
+  team: any
+  teamObject: any
+  class?: HTMLAttributes['class']
+}>()
 
-console.log("team: ", team);
+console.log('team: ', team)
 const elder = computed(() => {
-  return teamObject[0].challenges.teamElderDragonKills;
-});
+  return teamObject[0].challenges.teamElderDragonKills
+})
 </script>
 
 <template>
@@ -26,62 +26,66 @@ const elder = computed(() => {
         `,
         className,
       )
-    "
-  >
-    <div v-tippy="'Dragon Kills'" class="flex items-center gap-1">
+    ">
+    <div
+      v-tippy="'Dragon Kills'"
+      class="flex items-center gap-1">
       <img
         alt="dragons"
         :src="`/img/ui/dragon-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm"
-      />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span>
         {{ team.objectives.dragon.kills ?? 0 }}
       </span>
     </div>
 
-    <div v-tippy="'Baron Kills'" class="flex items-center gap-1">
+    <div
+      v-tippy="'Baron Kills'"
+      class="flex items-center gap-1">
       <img
         alt="baron"
         :src="`/img/ui/baron-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm"
-      />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills ?? 0 }}
       </span>
     </div>
 
-    <div v-tippy="'Elder Dragon Kills'" class="flex items-center gap-1">
+    <div
+      v-tippy="'Elder Dragon Kills'"
+      class="flex items-center gap-1">
       <img
         alt="elder"
         :src="`/img/ui/elder-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm"
-      />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills ?? 0 }}
       </span>
     </div>
 
-    <div v-tippy="'Towers Taken'" class="flex items-center gap-1">
+    <div
+      v-tippy="'Towers Taken'"
+      class="flex items-center gap-1">
       <img
         alt="towers"
         :src="`/img/ui/tower-${team.teamId}.png`"
-        class="size-5 opacity-85 drop-shadow-sm"
-      />
+        class="size-5 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.tower.kills }}
       </span>
     </div>
 
-    <div v-tippy="'Inhibitors Taken'" class="flex items-center gap-1">
+    <div
+      v-tippy="'Inhibitors Taken'"
+      class="flex items-center gap-1">
       <img
         alt="inhibitors"
         :src="`/img/ui/inhibitor-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm"
-      />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.inhibitor.kills }}

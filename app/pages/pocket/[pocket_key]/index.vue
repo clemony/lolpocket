@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { fetchThread } from '~/composables/tiptap'
+
 definePageMeta({
   name: 'pocket-core',
   title: 'core',
@@ -11,6 +13,8 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 const el = useTemplateRef<HTMLElement>('el')
 useScrollProvider(el)
+
+console.log(ts().threads)
 </script>
 
 <template>
@@ -22,12 +26,12 @@ useScrollProvider(el)
       <PocketMenubar />
     </div>
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BackgroundSplashFixed
+      <BgSplash
         size="full"
         :img="pocket.icon" />
     </div>
 
-    <BackgroundSplashFixed
+    <BgSplash
       size="full"
       :img="pocket.icon" />
 
@@ -79,7 +83,17 @@ useScrollProvider(el)
       <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-b1">
         <CoreContent />
 
-        <div class="mt-12 flex w-full justify-center pb-54">
+        <div class="mt-12 flex w-full flex-col items-center pb-54">
+          <div class="flex gap-4">
+            <Button
+              class="w-max"
+              @click="fetchThread(pocket.key)">
+              fetch comments
+            </Button>
+            <Button @click="ts().threads = {}">
+              clear comments
+            </Button>
+          </div>
           <CommentsThread :thread-id="pocket.key as UUID" />
         </div>
         <SiteFooter />

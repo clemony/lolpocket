@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { fullWidth, class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-  fullWidth?: boolean;
-}>();
+  class?: HTMLAttributes['class']
+  fullWidth?: boolean
+}>()
 </script>
 
 <template>
@@ -15,12 +15,13 @@ const { fullWidth, class: className } = defineProps<{
         `,
         className,
       )
-    "
-  >
+    ">
     <aside class="sticky top-40 z-2 w-1/5 self-start">
       <div
-        class="scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible overflow-y-auto pr-2 pl-0.5"
-      >
+        class="
+          scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible
+          overflow-y-auto pr-2 pl-0.5
+        ">
         <slot name="aside"></slot>
       </div>
     </aside>

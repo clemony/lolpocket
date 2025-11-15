@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket: Pocket;
-  class?: HTMLAttributes["class"];
-}>();
+  pocket: Pocket
+  class?: HTMLAttributes['class']
+}>()
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
 /*
 const runeSetsLength = computed (() => {

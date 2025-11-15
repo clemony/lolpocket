@@ -2,25 +2,24 @@
 import * as v from "valibot"
 
 // Account
-export const AccountSchema = v.object({
-  name: v.nullable(v.string("name not a string")),
+export const accountSchema = v.object({
   puuid: v.nullable(v.pipe(v.string("puuid not a string"))),
   title: v.nullable(v.string("title not a string")),
   username: v.nullable(v.string("username not a string")),
   uuid: v.pipe(v.string(), v.uuid("uuid malformed")),
-  icon: v.nullable(v.string("icon not a string")),
-  level: v.nullable(v.number("level not a number")),
   peer_messages: v.fallback(v.boolean(), false),
-  region: v.nullable(v.string("region not a string")),
   splash: v.nullable(v.string("splash not a string")),
-  tag: v.nullable(v.string(" not a string")),
   //
-  created: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
-  updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
+  created: v.nullable(
+    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+  ),
+  updated: v.nullable(
+    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+  ),
 })
 
 // Settings
-export const SettingsSchema = v.object({
+export const settingsSchema = v.object({
   pin_sidebar: v.fallback(v.boolean(), false),
   favorite_pockets: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
   favorite_summoners: v.fallback(v.array(v.pipe(v.string(), v.uuid())), []),
@@ -38,9 +37,10 @@ export const SettingsSchema = v.object({
 })
 
 // --- Types ---
-export type Account = v.InferOutput<typeof AccountSchema>
-export type Settings = v.InferOutput<typeof SettingsSchema>
+export type AccountSchema = v.InferOutput<typeof accountSchema>
+export type Account = v.InferOutput<typeof accountSchema> & Partial<Summoner>
+export type Settings = v.InferOutput<typeof settingsSchema>
 
 // --- Helpers ---
-export const getEmptyAccount = () => <Account>v.getDefaults(AccountSchema)
-export const getEmptySettings = () => <Settings>v.getDefaults(SettingsSchema)
+export const getEmptyAccount = () => <Account>v.getDefaults(accountSchema)
+export const getEmptySettings = () => <Settings>v.getDefaults(settingsSchema)

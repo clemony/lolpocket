@@ -1,7 +1,7 @@
 const item: Item = {
   id: 1501,
-  name: "Lane Swap Detector",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/34.png",
+  name: 'Lane Swap Detector',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/34.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
   passives: [
@@ -11,7 +11,7 @@ const item: Item = {
       unique: true,
     },
   ],
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -23,5 +23,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

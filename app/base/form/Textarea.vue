@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  defaultValue?: string | number;
-  modelValue?: string | number;
-}>();
+  class?: HTMLAttributes['class']
+  defaultValue?: string | number
+  modelValue?: string | number
+}>()
 
 const emits = defineEmits<{
-  (e: "update:modelValue", payload: string | number): void;
-}>();
+  (e: 'update:modelValue', payload: string | number): void
+}>()
 
-const modelValue = useVModel(props, "modelValue", emits, {
+const modelValue = useVModel(props, 'modelValue', emits, {
   defaultValue: props.defaultValue,
   passive: true,
-});
+})
 </script>
 
 <template>
@@ -33,6 +33,5 @@ const modelValue = useVModel(props, "modelValue", emits, {
         `,
         props.class,
       )
-    "
-  />
+    " />
 </template>

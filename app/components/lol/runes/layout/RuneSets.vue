@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { Pocket, RuneSet } from "~~/shared/schema";
+import type { Pocket, RuneSet } from '~~/shared/schema'
 
 const props = defineProps<{
-  pocket: Pocket;
-  selected: RuneSet;
-}>();
+  pocket: Pocket
+  selected: RuneSet
+}>()
 
-const emit = defineEmits(["update:selected"]);
+const emit = defineEmits(['update:selected'])
 
-const pocket = ref(props.pocket);
+const pocket = ref(props.pocket)
 
 /* const selectedSet = ref<RuneSet>(props.pocket.runes.sets[0])
 
@@ -17,7 +17,7 @@ const secondary = computed(() => {
   return a.filter(r => r.name !== 'empty')
 })
  */
-const primaryColor = computedAsync(() => {});
+const primaryColor = computedAsync(() => {})
 </script>
 
 <template>

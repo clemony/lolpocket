@@ -1,127 +1,127 @@
 const item: Item = {
   id: 1036,
-  name: "Long Sword",
+  name: 'Long Sword',
   buildsInto: [
     {
       id: 3032,
-      name: "Yun Tal Wildarrows",
+      name: 'Yun Tal Wildarrows',
       gold: 3000,
     },
     {
       id: 2015,
-      name: "Kircheis Shard",
+      name: 'Kircheis Shard',
       gold: 700,
     },
     {
       id: 6670,
-      name: "Noonquiver",
+      name: 'Noonquiver',
       gold: 1300,
     },
     {
       id: 1053,
-      name: "Vampiric Scepter",
+      name: 'Vampiric Scepter',
       gold: 900,
     },
     {
       id: 3133,
-      name: "Caulfield's Warhammer",
+      name: 'Caulfield\'s Warhammer',
       gold: 1050,
     },
     {
       id: 3004,
-      name: "Manamune",
+      name: 'Manamune',
       gold: 2900,
     },
     {
       id: 2019,
-      name: "Steel Sigil",
+      name: 'Steel Sigil',
       gold: 1100,
     },
     {
       id: 2021,
-      name: "Tunneler",
+      name: 'Tunneler',
       gold: 1150,
     },
     {
       id: 6692,
-      name: "Eclipse",
+      name: 'Eclipse',
       gold: 2900,
     },
     {
       id: 3123,
-      name: "Executioner's Calling",
+      name: 'Executioner\'s Calling',
       gold: 800,
     },
     {
       id: 3051,
-      name: "Hearthbound Axe",
+      name: 'Hearthbound Axe',
       gold: 1200,
     },
     {
       id: 323004,
-      name: "Manamune",
+      name: 'Manamune',
       gold: 2900,
     },
     {
       id: 3155,
-      name: "Hexdrinker",
+      name: 'Hexdrinker',
       gold: 1300,
     },
     {
       id: 3035,
-      name: "Last Whisper",
+      name: 'Last Whisper',
       gold: 1450,
     },
     {
       id: 3077,
-      name: "Tiamat",
+      name: 'Tiamat',
       gold: 1200,
     },
     {
       id: 3044,
-      name: "Phage",
+      name: 'Phage',
       gold: 1100,
     },
     {
       id: 4003,
-      name: "Lifeline",
+      name: 'Lifeline',
       gold: 1600,
     },
     {
       id: 3134,
-      name: "Serrated Dirk",
+      name: 'Serrated Dirk',
       gold: 1000,
     },
     {
       id: 3142,
-      name: "Youmuu's Ghostblade",
+      name: 'Youmuu\'s Ghostblade',
       gold: 2800,
     },
     {
       id: 6671,
-      name: "Galeforce",
+      name: 'Galeforce',
       gold: 3500,
     },
     {
       id: 6690,
-      name: "Rectrix",
+      name: 'Rectrix',
       gold: 775,
     },
     {
       id: 6699,
-      name: "Voltaic Cyclosword",
+      name: 'Voltaic Cyclosword',
       gold: 3000,
     },
     {
       id: 6701,
-      name: "Opportunity",
+      name: 'Opportunity',
       gold: 2700,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Basic",
+  rank: 'Basic',
   removed: false,
   shop: {
     prices: {
@@ -129,12 +129,12 @@ const item: Item = {
       sell: 140,
       total: 350,
     },
-    tags: ["FIGHTER", "MARKSMAN", "ASSASSIN"],
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  simpleDescription: "Slightly increases Attack Damage",
+  simpleDescription: 'Slightly increases Attack Damage',
   specialRecipe: 0,
   stats: {
     attackDamage: 10,
   },
-};
-export default item;
+}
+export default item

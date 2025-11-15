@@ -1,22 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "./index.css";
+@import './index.css';
 
 @source "./colors.css";
 @source "@variants/variants.css"
 @source "./theme.css";
 @source not "../icons";
 @source not "../img";
-@import "./utilities/index.css";
-@import "./classes.css";
-@import "./plugins/index.css";
-@import "./theme.css";
-@import "./colors.css";
-@import "./animation/index.css";
-@import "./fonts.css";
-@import "./color-themes.css";
-@import "./ag-grid/index.css";
-@import "./components/index.css";
+@import './utilities/index.css';
+@import './classes.css';
+@import './plugins/index.css';
+@import './theme.css';
+@import './colors.css';
+@import './animation/index.css';
+@import './fonts.css';
+@import './color-themes.css';
+@import './ag-grid/index.css';
+@import './components/index.css';
 
 @layer base {
   :root {
@@ -42,7 +42,7 @@
   }
 
   input,
-  input:where(:not([type="button"], [type="reset"], [type="submit"])),
+  input:where(:not([type='button'], [type='reset'], [type='submit'])),
   select,
   textarea,
   .reset-input {
@@ -57,11 +57,7 @@
   body {
   }
 
-  .vt-expand-enter-from,
-  .vt-expand-appear-from {
-    max-height: none !important;
-    transform: none !important;
-  }
+
 }
 
 @layer components {

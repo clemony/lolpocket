@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { MenubarLabelProps } from "reka-ui";
-import { MenubarLabel } from "reka-ui";
+import type { MenubarLabelProps } from 'reka-ui'
+import { MenubarLabel } from 'reka-ui'
 
 const props = defineProps<
-  MenubarLabelProps & { class?: HTMLAttributes["class"]; inset?: boolean }
->();
+  MenubarLabelProps & { class?: HTMLAttributes['class'], inset?: boolean }
+>()
 </script>
 
 <template>
@@ -15,8 +15,7 @@ const props = defineProps<
         inset && 'pl-8',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </MenubarLabel>
 </template>

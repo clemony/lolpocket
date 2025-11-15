@@ -4,25 +4,44 @@
   <menu class="mb-3 flex w-full flex-col px-3">
     <SummonerLabel />
   </menu>
-  <Collapsible :default-open="true" class="w-full px-3">
+  <Collapsible
+    :default-open="true"
+    class="w-full px-3">
     <CollapsibleTrigger as-child>
-      <Label class="group/collapse grow hover:underline">
-        <icon name="ci:heart-02" class="size-3.75 opacity-80 dst" />
+      <Label
+        class="
+          group/collapse grow
+          hover:underline
+        ">
+        <icon
+          name="ci:heart-02"
+          class="size-3.75 opacity-80 dst" />
         <span class="grow text-left">following</span>
 
         <icon
           name="left"
-          class="transition-rotate ml-1 duration-200 group-data-[state=open]/collapse:-rotate-90"
-        />
+          class="
+            transition-rotate ml-1 duration-200
+            group-data-[state=open]/collapse:-rotate-90
+          " />
       </Label>
     </CollapsibleTrigger>
 
     <CollapsibleContent
-      class="CollapsibleContent flex w-full flex-col gap-6 py-6 pl-5.25 data-[state=closed]:gap-0"
-    >
-      <SummonerFriend v-for="i in 4" :key="i" />
+      class="
+        CollapsibleContent flex w-full flex-col gap-6 py-6 pl-5.25
+        data-[state=closed]:gap-0
+      ">
+      <SummonerFriend
+        v-for="i in 4"
+        :key="i" />
 
-      <Button v-for="i in 4" :key="i" class="w-full"> h </Button>
+      <Button
+        v-for="i in 4"
+        :key="i"
+        class="w-full">
+        h
+      </Button>
     </CollapsibleContent>
   </Collapsible>
 

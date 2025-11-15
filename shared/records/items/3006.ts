@@ -1,35 +1,35 @@
 const item: Item = {
   id: 3006,
-  name: "Berserker's Greaves",
-  nicknames: ["boots", "zerker"],
+  name: 'Berserker\'s Greaves',
+  nicknames: ['boots', 'zerker'],
   buildsFrom: [
     {
       id: 1001,
-      name: "Boots",
+      name: 'Boots',
       gold: 300,
     },
     {
       id: 1042,
-      name: "Dagger",
+      name: 'Dagger',
       gold: 250,
     },
     {
       id: 1042,
-      name: "Dagger",
+      name: 'Dagger',
       gold: 250,
     },
   ],
   buildsInto: [
     {
       id: 3172,
-      name: "Gunmetal Greaves",
+      name: 'Gunmetal Greaves',
       gold: 1600,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3006_class_t2_berserkersgreaves.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3006_class_t2_berserkersgreaves.png',
   maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: "Boots",
+  rank: 'Boots',
   removed: false,
   shop: {
     prices: {
@@ -38,11 +38,11 @@ const item: Item = {
       total: 1100,
     },
   },
-  simpleDescription: "Enhances Move Speed and Attack Speed",
+  simpleDescription: 'Enhances Move Speed and Attack Speed',
   specialRecipe: 0,
   stats: {
     attackSpeed: 25,
     flatMovespeed: 45,
   },
-};
-export default item;
+}
+export default item

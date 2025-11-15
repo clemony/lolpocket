@@ -1,5 +1,5 @@
 // composables/useParentMeta.ts
-import { useRoute } from "vue-router";
+import { useRoute } from 'vue-router'
 
 /**
  * Get a meta property from the nearest parent route.
@@ -12,7 +12,7 @@ export function useParentMeta<T = unknown>(
   key: string,
   levelsUp = 1,
 ): T | undefined {
-  const route = useRoute();
-  const index = route.matched.length - 1 - levelsUp;
-  return route.matched[index]?.meta?.[key] as T | undefined;
+  const route = useRoute()
+  const index = route.matched.length - 1 - levelsUp
+  return route.matched[index]?.meta?.[key] as T | undefined
 }

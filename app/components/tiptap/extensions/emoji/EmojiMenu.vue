@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Editor } from '@tiptap/core'
 import type { EmojiItem } from '@tiptap/extension-emoji'
-import { filterEmojiArray } from 'tiptap'
+import { filterEmojiArray } from '~/composables/tiptap'
 
 const { editor } = defineProps<{
   editor: Editor | null

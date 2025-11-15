@@ -1,10 +1,10 @@
 const item: Item = {
   id: 3139,
-  name: "Mercurial Scimitar",
-  nicknames: ["merc scim"],
+  name: 'Mercurial Scimitar',
+  nicknames: ['merc scim'],
   active: [
     {
-      name: "Quicksilver",
+      name: 'Quicksilver',
       effects:
         'Removes all crowd control debuffs (except <img src="/img/icons/airborne.webp" class="tip-icon" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src="/img/icons/ghosted.webp" class="tip-icon" />ghosting for 1.5 seconds.',
       unique: true,
@@ -13,24 +13,24 @@ const item: Item = {
   buildsFrom: [
     {
       id: 3140,
-      name: "Quicksilver Sash",
+      name: 'Quicksilver Sash',
       gold: 1300,
     },
     {
       id: 1037,
-      name: "Pickaxe",
+      name: 'Pickaxe',
       gold: 875,
     },
     {
       id: 1053,
-      name: "Vampiric Scepter",
+      name: 'Vampiric Scepter',
       gold: 900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -38,15 +38,15 @@ const item: Item = {
       sell: 1280,
       total: 3200,
     },
-    tags: ["FIGHTER", "MARKSMAN", "MOVEMENT"],
+    tags: ['FIGHTER', 'MARKSMAN', 'MOVEMENT'],
   },
   simpleDescription:
-    "Activate to remove all crowd control debuffs and grant massive Move Speed",
+    'Activate to remove all crowd control debuffs and grant massive Move Speed',
   specialRecipe: 0,
   stats: {
     attackDamage: 40,
     lifesteal: 10,
     magicResistance: 40,
   },
-};
-export default item;
+}
+export default item

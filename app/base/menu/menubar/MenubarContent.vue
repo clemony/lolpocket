@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { MenubarContentProps } from "reka-ui";
-import { MenubarContent, MenubarPortal, useForwardProps } from "reka-ui";
+import type { MenubarContentProps } from 'reka-ui'
+import { MenubarContent, MenubarPortal, useForwardProps } from 'reka-ui'
 
 const props = withDefaults(
-  defineProps<MenubarContentProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<MenubarContentProps & { class?: HTMLAttributes['class'] }>(),
   {
     sideOffset: 4,
-    align: "start",
+    align: 'start',
     alignOffset: -0,
   },
-);
+)
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -37,8 +37,7 @@ const forwarded = useForwardProps(delegatedProps);
           `,
           props.class,
         )
-      "
-    >
+      ">
       <slot />
     </MenubarContent>
   </MenubarPortal>

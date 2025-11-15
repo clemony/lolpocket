@@ -1,10 +1,10 @@
 const item: Item = {
   id: 2052,
-  name: "Poro-Snax",
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2052_poro_snack.png",
+  name: 'Poro-Snax',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2052_poro_snack.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -16,5 +16,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

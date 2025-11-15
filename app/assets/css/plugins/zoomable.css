@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "../theme";
+@import 'tailwindcss';
+@import '../theme';
 
 .controll {
   @apply !flex flex-row !bg-b2/40 items-start opacity-0 scale-75;

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useForwardProps } from "reka-ui";
+import { useForwardProps } from 'reka-ui'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  sideOffset?: number;
-  alignOffset?: number;
-  align?: Align;
-  side?: Side;
-}>();
-const emit = defineEmits(["interact-outside"]);
+  class?: HTMLAttributes['class']
+  sideOffset?: number
+  alignOffset?: number
+  align?: Align
+  side?: Side
+}>()
+const emit = defineEmits(['interact-outside'])
 </script>
 
 <template>
@@ -31,8 +31,7 @@ const emit = defineEmits(["interact-outside"]);
         props.class,
       )
     "
-    @interact-outside="emit('interact-outside')"
-  >
+    @interact-outside="emit('interact-outside')">
     <slot />
   </PopoverContent>
 </template>

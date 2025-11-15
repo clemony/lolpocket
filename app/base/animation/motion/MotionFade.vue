@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { motion } from "motion-v";
+import { motion } from 'motion-v'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 const { class: className } = defineProps<{
-  class?: HTMLAttributes["class"];
-}>();
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -16,8 +16,7 @@ const { class: className } = defineProps<{
     :animate="{ opacity: 1 }"
     :exit="{ opacity: 0 }"
     :class="cn('', className)"
-    :transition="{ duration: 0.4, type: 'spring', bounce: 0.35 }"
-  >
+    :transition="{ duration: 0.4, type: 'spring', bounce: 0.35 }">
     <slot />
   </motion.div>
 </template>

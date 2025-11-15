@@ -1,5 +1,5 @@
 // prettier.config.ts, .prettierrc.ts, prettier.config.mts, or .prettierrc.mts
-import { type Config } from "prettier"
+import type { Config } from 'prettier'
 
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 
@@ -12,18 +12,18 @@ const config: Config = {
   tabWidth: 2,
   bracketSameLine: true,
   experimentalTernaries: true,
-  htmlWhitespaceSensitivity: "ignore",
+  htmlWhitespaceSensitivity: 'ignore',
   plugins: [
-    "prettier-plugin-tailwindcss",
-    "prettier-plugin-organize-attributes",
+    'prettier-plugin-tailwindcss',
+    'prettier-plugin-organize-attributes',
   ],
   semi: false,
   singleAttributePerLine: false,
-  tailwindFunctions: ["clsx", "tw", "tv", "cn", "cva"],
+  tailwindFunctions: ['clsx', 'tw', 'tv', 'cn', 'cva'],
   tailwindPreserveDuplicates: false,
   tailwindPreserveWhitespace: false,
-  tailwindStylesheet: "./app/assets/css/tailwind.css",
-  trailingComma: "es5",
-};
+  tailwindStylesheet: './app/assets/css/tailwind.css',
+  trailingComma: 'es5',
+}
 
-export default config;
+export default config

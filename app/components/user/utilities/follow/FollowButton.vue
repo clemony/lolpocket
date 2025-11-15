@@ -1,49 +1,53 @@
 <script lang="ts" setup>
-import { useForwardProps } from "reka-ui";
-import type { ToggleVariants } from "~/assets/variants";
+import { useForwardProps } from 'reka-ui'
+import type { ToggleVariants } from '~/assets/variants'
 
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes["class"];
-    summoner: Summoner | Partial<Summoner>;
-    placement?: Side;
-    theme?: string;
-    size?: ToggleVariants["size"];
-    variant?: ToggleVariants["variant"];
+    class?: HTMLAttributes['class']
+    summoner: Summoner | Partial<Summoner>
+    placement?: Side
+    theme?: string
+    size?: ToggleVariants['size']
+    variant?: ToggleVariants['variant']
   }>(),
   {
-    placement: "top",
-    theme: "base",
+    placement: 'top',
+    theme: 'base',
   },
-);
+)
 
 const delegatedProps = reactiveOmit(
   props,
-  "class",
-  "placement",
-  "variant",
-  "theme",
-  "size",
-);
-const forwarded = useForwardProps(delegatedProps);
+  'class',
+  'placement',
+  'variant',
+  'theme',
+  'size',
+)
+const forwarded = useForwardProps(delegatedProps)
 
-const isYou = computed(() => as().account?.puuid === props.summoner?.puuid);
-const isFollowed = ref(false);
+const isYou = computed(() => as().account?.puuid === props.summoner?.puuid)
+const isFollowed = ref(false)
 
 watch(
   () => isFollowed.value,
   (newVal) => {
-    console.log("💠 - watch - newVal:", newVal);
+    console.log('💠 - watch - newVal:', newVal)
   },
-);
+)
 </script>
 
 <template>
-  <Toggle v-if="isYou" v-bind="forwarded" v-model="isFollowed" as-child>
+  <Toggle
+    v-if="isYou"
+    v-bind="forwarded"
+    v-model="isFollowed"
+    as-child>
     <Button
       v-tippy="{
         content: isFollowed ? 'Unfollow' : `Follow ${summoner.name}?`,
@@ -51,8 +55,7 @@ watch(
         arrow: false,
         theme: 'base',
       }"
-      :class="cn('group/follow grid place-items-center', props.class)"
-    >
+      :class="cn('group/follow grid place-items-center', props.class)">
       <slot>
         <icon
           name="heart-fill"
@@ -66,8 +69,7 @@ watch(
               `,
               isFollowed ? 'animate-heartbeat' : '',
             )
-          "
-        />
+          " />
       </slot>
     </Button>
   </Toggle>

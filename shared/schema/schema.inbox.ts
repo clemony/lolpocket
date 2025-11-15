@@ -1,9 +1,9 @@
-import * as v from "valibot"
+import * as v from 'valibot'
 
 // InboxItem
 export const InboxItemSchema = v.object({
   id: v.string(),
-  date: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
+  date: v.pipe(v.string(), v.isoTimestamp('incorrect date format')),
   read: v.optional(v.boolean()), // optional default = undefined
   template: v.string(),
   vars: v.record(v.string(), v.string()),
@@ -22,7 +22,7 @@ export const InboxMessageSchema = v.object({
   }),
   to: v.optional(v.string()),
   trash: v.optional(
-    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+    v.pipe(v.string(), v.isoTimestamp('incorrect date format'))
   ),
 })
 

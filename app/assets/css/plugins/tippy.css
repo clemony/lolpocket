@@ -1,40 +1,43 @@
-@import "tailwindcss";
-@import "../theme.css";
-@import "tippy.js/dist/svg-arrow.css";
+@import 'tailwindcss';
+@import '../theme.css';
+@import 'tippy.js/dist/svg-arrow.css';
 
-@import "tippy.js/animations/shift-toward-subtle.css";
-@import "tippy.js/animations/shift-toward.css";
+@import 'tippy.js/animations/shift-toward-subtle.css';
+@import 'tippy.js/animations/shift-toward.css';
 
 @utility tippy-box {
-  @apply border !z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
+  @apply border !z-60 w-auto max-w-80 rounded-lg backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
 
-  &[data-inertia][data-state="visible"] {
+  &[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  &[data-theme~="neutral, tippy-clean"] {
+  &[data-theme~='neutral, tippy-clean'] {
     @apply !w-[258px] !max-w-[258px];
   }
 
-  &[data-theme~="sidebar"] {
+  &[data-theme~='sidebar'] {
     .tippy-content {
       @apply !p-0 !m-0 !h-screen  w-full left-0 top-0;
     }
   }
 
-  &[data-theme~="tippy-clean"] {
+  &[data-theme~='tippy-clean'],
+  &[data-theme~='n-mention'],
+  &[data-theme~='b-mention'] {
     @apply! p-0 max-w-none;
     .tippy-content {
       @apply !p-0 max-w-none;
     }
   }
 
-  .tippy-content:not([data-theme="tippy-clean"]) {
+  .tippy-content:not([data-theme='tippy-clean']) {
     @apply px-3 py-1 text-2  whitespace-pre inline-block font-medium **:text-2;
   }
 
   /* default / contrast */
-  &[data-theme~="neutral"] {
+  &[data-theme~='neutral'],
+  &[data-theme~='n-mention'] {
     @apply bg-neutral/86  border-b3/30  backdrop-blur-md inset-shadow-white/10;
 
     .tippy-content {
@@ -42,20 +45,21 @@
     }
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply **:!text-neutral/40 dss **:!fill-neutral/60  mask-b-from-58% mask-b-to-61%;
+      @apply **:!text-neutral/40 drop-shadow-sm **:!fill-neutral/60  mask-b-from-58% mask-b-to-61%;
     }
   }
 
   /* base color */
-  &[data-theme~="base"] {
+  &[data-theme~='base'],
+  &[data-theme~='b-mention'] {
     @apply border-b3/80 text-bc/90 !bg-b1/90;
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply **:fill-b1/95 **:text-b3 dss mask-b-from-55% mask-b-to-56%;
+      @apply **:fill-b1/95 **:text-b3 drop-shadow-sm mask-b-from-55% mask-b-to-56%;
     }
   }
 
-  &[data-theme~="error"] {
+  /*   &[data-theme~="error"] {
     @apply bg-domination/86  border-b3/30   inset-shadow-white/10;
 
     .tippy-content {
@@ -65,10 +69,10 @@
     & > .tippy-svg-arrow > svg:first-child {
       @apply fill-domination/90;
     }
-  }
+  } */
 
   /* blur transparent */
-  &[data-theme~="blur"] {
+  &[data-theme~='blur'] {
     @apply bg-transparent border-0 p-0 shadow-none text-bc/80;
 
     & > .tippy-svg-arrow {
@@ -77,23 +81,23 @@
   }
 
   /* arrows */
-  &[data-placement="bottom"] > .tippy-svg-arrow,
-  &[data-placement="top"] > .tippy-svg-arrow,
-  &[data-placement="left"] > .tippy-svg-arrow,
-  &[data-placement="right"] > .tippy-svg-arrow {
+  &[data-placement='bottom'] > .tippy-svg-arrow,
+  &[data-placement='top'] > .tippy-svg-arrow,
+  &[data-placement='left'] > .tippy-svg-arrow,
+  &[data-placement='right'] > .tippy-svg-arrow {
     @apply !z-61 *:!z-61;
   }
 
-  &[data-placement="right"] > .tippy-svg-arrow > svg {
+  &[data-placement='right'] > .tippy-svg-arrow > svg {
     @apply !right-1/2 !-top-px;
   }
-  &[data-placement~="left"] > .tippy-svg-arrow > svg {
+  &[data-placement~='left'] > .tippy-svg-arrow > svg {
     @apply !left-1/2 !-top-px;
   }
-  &[data-placement~="bottom"] > .tippy-svg-arrow > svg {
+  &[data-placement~='bottom'] > .tippy-svg-arrow > svg {
     @apply !-left-px !bottom-1/2;
   }
-  &[data-placement~="top"] > .tippy-svg-arrow > svg {
+  &[data-placement~='top'] > .tippy-svg-arrow > svg {
     @apply !left-0 !top-1/2;
   }
 }

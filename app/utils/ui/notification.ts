@@ -1,4 +1,4 @@
-import type { InboxItem } from "~~/shared/schema"
+import type { InboxItem } from '~~/shared/schema'
 
 export function saveNotification(
   template: string,
@@ -16,7 +16,8 @@ export function saveNotification(
 
   list.unshift(item)
 
-  if (list.length > 20) list.pop()
+  if (list.length > 20)
+    list.pop()
 
   return item
 }

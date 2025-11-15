@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 defineOptions({
   inheritAttrs: false,
-});
+})
 
 const props = defineProps<{
-  class?: HTMLAttributes["class"];
-  alignOffset?: number;
-  align?: "start" | "center" | "end";
-}>();
+  class?: HTMLAttributes['class']
+  alignOffset?: number
+  align?: 'start' | 'center' | 'end'
+}>()
 
 const dialogOpenState = {
-  filter: "blur(0px)",
+  filter: 'blur(0px)',
   opacity: 1,
   rotateX: 0,
   rotateY: 0,
@@ -21,14 +21,14 @@ const dialogOpenState = {
     opacity: {
       delay: 0.2,
       duration: 0.3,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
   z: 0,
-};
+}
 
 const dialogInitialState = {
-  filter: "blur(10px)",
+  filter: 'blur(10px)',
   opacity: 0,
   rotateX: 5,
   rotateY: 25,
@@ -38,7 +38,7 @@ const dialogInitialState = {
     ease: [0.67, 0.17, 0.62, 0.64],
   },
   z: -100,
-};
+}
 </script>
 
 <template>
@@ -56,8 +56,7 @@ const dialogInitialState = {
         `,
         props.class,
       )
-    "
-  >
+    ">
     <div>
       <slot />
     </div>

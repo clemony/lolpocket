@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui";
-import type { HTMLAttributes } from "vue";
-import { Primitive } from "reka-ui";
-import type { ButtonGroupVariants } from "./button-group-variants";
+import type { PrimitiveProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
+import { Primitive } from 'reka-ui'
+import type { ButtonGroupVariants } from './button-group-variants'
 
 interface Props extends PrimitiveProps {
-  class?: HTMLAttributes["class"];
-  orientation?: ButtonGroupVariants["orientation"];
+  class?: HTMLAttributes['class']
+  orientation?: ButtonGroupVariants['orientation']
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  as: "div",
-});
+  as: 'div',
+})
 </script>
 
 <template>
@@ -24,14 +24,14 @@ const props = withDefaults(defineProps<Props>(), {
     :class="
       cn(
         `
-      flex items-center gap-2 rounded-md border bg-b2 px-4 font-medium shadow-xs
-      [&_svg]:pointer-events-none
-      [&_svg:not([class*=\'size-\'])]:size-4
-    `,
+          flex items-center gap-2 rounded-md border bg-b2 px-4 font-medium
+          shadow-xs
+          [&_svg]:pointer-events-none
+          [&_svg:not([class*=\'size-\'])]:size-4
+        `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </Primitive>
 </template>

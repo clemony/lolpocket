@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui";
-import { Primitive } from "reka-ui";
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
 
 interface Props extends PrimitiveProps {
-  base?: ButtonVariants["base"];
-  class?: HTMLAttributes["class"];
-  hover?: ButtonVariants["hover"];
-  on?: ButtonVariants["on"];
-  size?: ButtonVariants["size"];
-  variant?: ButtonVariants["variant"];
+  base?: ButtonVariants['base']
+  class?: HTMLAttributes['class']
+  hover?: ButtonVariants['hover']
+  on?: ButtonVariants['on']
+  size?: ButtonVariants['size']
+  variant?: ButtonVariants['variant']
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  as: "button",
-});
+  as: 'button',
+})
 </script>
 
 <template>
@@ -27,8 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
         props.class,
       )
     "
-    :autofocus="false"
-  >
+    :autofocus="false">
     <slot />
   </Primitive>
 </template>

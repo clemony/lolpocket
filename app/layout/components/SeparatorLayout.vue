@@ -4,20 +4,22 @@ const {
   class: className,
   description,
 } = defineProps<{
-  title?: string;
-  description?: string;
-  class?: HTMLAttributes["class"];
-}>();
+  title?: string
+  description?: string
+  class?: HTMLAttributes['class']
+}>()
 /* ? alsdjlsajd */
-const route = useRoute();
+const route = useRoute()
 </script>
 
 <template>
-  <main class="z-auto w-full">
-    <div :class="cn('z-auto w-full space-y-6 px-22 pb-16', className)">
+  <main class="z-auto min-h-screen w-full">
+    <div :class="cn('z-auto w-full grow space-y-6 px-22 pb-16', className)">
       <div
-        class="sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-b1 pt-12"
-      >
+        class="
+          sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-b1
+          pt-12
+        ">
         <slot name="header">
           <h1 class="text-9 font-bold dst">
             {{ title || route.meta?.title || route.name }}
@@ -31,8 +33,7 @@ const route = useRoute();
           </slot>
           <div class="relative grid size-px self-end">
             <div
-              class="absolute bottom-2 h-max w-max self-end justify-self-end"
-            >
+              class="absolute bottom-2 h-max w-max self-end justify-self-end">
               <slot name="right" />
             </div>
           </div>

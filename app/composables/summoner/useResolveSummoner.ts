@@ -1,44 +1,45 @@
 // --- RESOLVE SUMMONER ---
 export async function useResolveSummoner(
   identifier: {
-    puuid?: string;
-    region?: string;
-    name?: string;
-    tag?: string;
+    puuid?: string
+    region?: string
+    name?: string
+    tag?: string
   },
-  options?: { force?: boolean },
+  options?: { force?: boolean }
 ): Promise<Summoner> {
   if (
-    !identifier.puuid &&
-    (!identifier.region || !identifier.name || !identifier.tag)
+    !identifier.puuid
+    && (!identifier.region || !identifier.name || !identifier.tag)
   ) {
-    throw new Error("Must provide puuid or region+name+tag");
+    throw new Error('Must provide puuid or region+name+tag')
   }
 
   // --- Check cache unless forced ---
-  let cached: Summoner | null = null;
+  let cached: Summoner | null = null
   if (identifier.puuid && !options?.force) {
-    cached = ss().getSummoner(identifier.puuid);
+    cached = await ss().resolveSummoner({ puuid: as().account?.puuid })
   }
   if (cached && !isStale(cached.updatedData)) {
-    return cached;
+    return cached
   }
 
   // --- Build API params ---
-  const params: Record<string, string> = identifier.puuid
-    ? { puuid: identifier.puuid }
-    : {
-        name: identifier.name!,
-        region: identifier.region!,
-        tag: identifier.tag!,
-      };
+  const params: Record<string, string>
+    = identifier.puuid
+      ? { puuid: identifier.puuid }
+      : {
+          name: identifier.name!,
+          region: identifier.region!,
+          tag: identifier.tag!,
+        }
 
   // --- Fetch only summoner profile ---
-  const resolved = await $fetch<Summoner>("/api/riot/resolveSummoner", {
+  const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', {
     params,
-  });
+  })
 
-  ss().setSummoner(resolved);
+  ss().setSummoner(resolved)
 
-  return resolved;
+  return resolved
 }

@@ -1,7 +1,7 @@
 const item: Item = {
   id: 3364,
-  name: "Oracle Lens",
-  nicknames: ["red", "totem", "trinket", "sweeper", "spinny"],
+  name: 'Oracle Lens',
+  nicknames: ['red', 'totem', 'trinket', 'sweeper', 'spinny'],
   active: [
     {
       effects:
@@ -10,10 +10,10 @@ const item: Item = {
       unique: false,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3364_class_t1_oracleslens.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3364_class_t1_oracleslens.png',
   maps: [11, 21],
   noEffects: false,
-  rank: "Consumable",
+  rank: 'Consumable',
   removed: false,
   shop: {
     prices: {
@@ -22,8 +22,8 @@ const item: Item = {
       total: 0,
     },
   },
-  simpleDescription: "Disables nearby invisible wards and traps for a duration",
+  simpleDescription: 'Disables nearby invisible wards and traps for a duration',
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

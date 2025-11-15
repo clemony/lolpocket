@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import type { Pocket } from "~~/shared/schema";
+import type { Pocket } from '~~/shared/schema'
 
 const props = defineProps<{
-  index: number;
-  pocket: Pocket;
-  title?: string;
-}>();
-const emit = defineEmits(["update:model-value"]);
+  index: number
+  pocket: Pocket
+  title?: string
+}>()
+const emit = defineEmits(['update:model-value'])
 
 const pocket = computed(() => {
-  return props.pocket;
-});
+  return props.pocket
+})
 </script>
 
 <template>

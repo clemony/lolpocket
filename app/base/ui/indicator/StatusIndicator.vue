@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { color } = defineProps<{
-  color?: HTMLAttributes["class"];
-}>();
+  color?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -10,13 +10,11 @@ const { color } = defineProps<{
       :style="{
         backgroundColor: `var(--color-${color})`,
       }"
-      class="absolute status size-[7px]! animate-ping"
-    />
+      class="absolute status size-[7px]! animate-ping" />
     <span
       :style="{
         backgroundColor: `var(--color-${color})`,
       }"
-      class="absolute status size-[7px]!"
-    />
+      class="absolute status size-[7px]!" />
   </span>
 </template>

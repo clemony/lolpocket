@@ -1,12 +1,12 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
 
 @utility hover-ring {
   @apply transition-all duration-200 cursor-pointer ring  ring-transparent ring-offset-transparent;
 
   &:hover,
-  &[data-state="open"].data-open-ring {
+  &[data-state='open'].data-open-ring {
     @apply ring-n1 ring-offset-b1/98 ring ring-offset-2;
   }
 }

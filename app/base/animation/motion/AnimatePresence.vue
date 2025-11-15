@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { AnimatePresenceProps } from "motion-v";
-import { AnimatePresence } from "motion-v";
+import type { AnimatePresenceProps } from 'motion-v'
+import { AnimatePresence } from 'motion-v'
 
 const props = defineProps<
   AnimatePresenceProps & {
-    class?: HTMLAttributes["class"];
+    class?: HTMLAttributes['class']
   }
->();
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>

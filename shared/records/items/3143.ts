@@ -1,9 +1,9 @@
 const item: Item = {
   id: 3143,
-  name: "Randuin's Omen",
+  name: 'Randuin\'s Omen',
   active: [
     {
-      name: "Humility",
+      name: 'Humility',
       effects:
         'Unleash a shockwave around you that <img src="/img/icons/slow.webp" class="tip-icon" />slows nearby enemies by 70% for 2 seconds.',
       range: 0,
@@ -13,27 +13,27 @@ const item: Item = {
   buildsFrom: [
     {
       id: 3082,
-      name: "Warden's Mail",
+      name: 'Warden\'s Mail',
       gold: 1000,
     },
     {
       id: 1011,
-      name: "Giant's Belt",
+      name: 'Giant\'s Belt',
       gold: 900,
     },
   ],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3143_tank_t3_randuinsomen.png",
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3143_tank_t3_randuinsomen.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: "Resilience",
+      name: 'Resilience',
       effects:
         'Reduces incoming damage from <img src="/img/icons/critical-strike.webp" class="tip-icon" />critical strikes by 30%.',
       unique: true,
     },
   ],
-  rank: "Legendary",
+  rank: 'Legendary',
   removed: false,
   shop: {
     prices: {
@@ -41,14 +41,14 @@ const item: Item = {
       sell: 1080,
       total: 2700,
     },
-    tags: ["TANK"],
+    tags: ['TANK'],
   },
   simpleDescription:
-    "Greatly increases defenses, activate to slow nearby enemies",
+    'Greatly increases defenses, activate to slow nearby enemies',
   specialRecipe: 0,
   stats: {
     armor: 75,
     health: 350,
   },
-};
-export default item;
+}
+export default item

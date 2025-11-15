@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import type { Easing } from "motion-v";
-import { pathIndex } from "#shared/indexes";
-import { motion, stagger } from "motion-v";
+import type { Easing } from 'motion-v'
+import { pathIndex } from '#shared/indexes'
+import { motion, stagger } from 'motion-v'
 
-const emit = defineEmits(["update:paths"]);
+const emit = defineEmits(['update:paths'])
 
 const variants = {
   hidden: {
     opacity: 0,
-    transform: "rotateX(80deg)",
+    transform: 'rotateX(80deg)',
   },
   visible: {
     opacity: 1,
-    transform: "rotateX(0deg)",
+    transform: 'rotateX(0deg)',
   },
-};
+}
 const headerVariants = {
   hidden: {
     opacity: 0,
@@ -30,11 +30,11 @@ const headerVariants = {
   visible: {
     opacity: 1,
   },
-};
+}
 
 const titleVariants = {
   exit: {
-    letterSpacing: "-0.5em",
+    letterSpacing: '-0.5em',
     opacity: 0,
     transition: {
       duration: 0.8,
@@ -42,26 +42,26 @@ const titleVariants = {
     },
   },
   initial: {
-    letterSpacing: "1em",
+    letterSpacing: '1em',
     opacity: 0,
   },
   visible: {
-    letterSpacing: "normal",
+    letterSpacing: 'normal',
     opacity: 1,
     transition: {
       duration: 0.8,
       ease: [0.215, 0.61, 0.355, 1.0] as unknown as Easing[],
     },
   },
-};
-
-const tooltipVariants = {};
-
-function handleSet(p1: string, p2: string) {
-  emit("update:paths", { primary: p1, secondary: p2 });
 }
 
-const pathHovered = ref("");
+const tooltipVariants = {}
+
+function handleSet(p1: string, p2: string) {
+  emit('update:paths', { primary: p1, secondary: p2 })
+}
+
+const pathHovered = ref('')
 </script>
 
 <template>
@@ -69,8 +69,7 @@ const pathHovered = ref("");
     <div class="relative h-18 w-full pr-2 pl-1">
       <div
         v-if="pathHovered"
-        class="absolute size-full items-center justify-between gap-3"
-      >
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           v-if="pathHovered"
           :key="pathHovered"
@@ -79,8 +78,7 @@ const pathHovered = ref("");
               'animate-in fade-in blur-in-50 zoom-in-120': pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered,
             })
-          "
-        >
+          ">
           {{ pathHovered }}
         </h1>
         <p
@@ -91,12 +89,13 @@ const pathHovered = ref("");
               'animate-in fade-in ': pathHovered,
               'animate-out fade-out': !pathHovered,
             })
-          "
-        >
+          ">
           {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
         </p>
       </div>
-      <div v-else class="absolute size-full items-center justify-between gap-3">
+      <div
+        v-else
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           key="default"
           class="dst"
@@ -105,8 +104,7 @@ const pathHovered = ref("");
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': pathHovered,
             })
-          "
-        >
+          ">
           Runes
         </h1>
         <p
@@ -115,8 +113,7 @@ const pathHovered = ref("");
               'animate-in fade-in ': !pathHovered,
               'animate-out fade-out': pathHovered,
             })
-          "
-        >
+          ">
           Select your path.
         </p>
       </div>
@@ -125,8 +122,7 @@ const pathHovered = ref("");
       class="flex max-h-160 items-center justify-center gap-1.5"
       :transition="{
         delayChildren: stagger(0.2),
-      }"
-    >
+      }">
       <motion.button
         v-for="(path, i) in pathIndex"
         :key="path.name"
@@ -143,15 +139,22 @@ const pathHovered = ref("");
           backgroundPosition: '50% 50%',
           backgroundSize: 'cover',
         }"
-        class="after:backdrop-blur-px after:absolute after:z-1 after:size-full after:bg-black/70 after:opacity-0 after:transition-all after:duration-400 relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0 hover:*:opacity-100 hover:after:opacity-100"
+        class="
+          after:backdrop-blur-px after:absolute after:z-1 after:size-full
+          after:bg-black/70 after:opacity-0 after:transition-all
+          after:duration-400
+          relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer
+          items-center justify-center overflow-hidden rounded-lg bg-black
+          bg-center shadow-sm drop-shadow-sm
+          *:opacity-0
+          hover:*:opacity-100 hover:after:opacity-100
+        "
         @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
-        @hover-end="pathHovered = ''"
-      >
+        @hover-end="pathHovered = ''">
         <hicon
           :name="`i-path-${path.name.toLowerCase()}`"
-          class="z-2 size-20! text-white/30!"
-        />
+          class="z-2 size-20! text-white/30!" />
       </motion.button>
     </motion.div>
   </div>

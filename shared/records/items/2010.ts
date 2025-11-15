@@ -1,11 +1,11 @@
 const item: Item = {
   id: 2010,
-  name: "Total Biscuit of Everlasting Will",
-  nicknames: ["kleptomancy"],
-  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2010_class_t1_totalbiscuitofeverlastingwill.png",
+  name: 'Total Biscuit of Everlasting Will',
+  nicknames: ['kleptomancy'],
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2010_class_t1_totalbiscuitofeverlastingwill.png',
   maps: [11, 12, 21, 30, 35],
   noEffects: false,
-  rank: "Special",
+  rank: 'Special',
   removed: false,
   shop: {
     prices: {
@@ -17,5 +17,5 @@ const item: Item = {
   },
   specialRecipe: 0,
   stats: {},
-};
-export default item;
+}
+export default item

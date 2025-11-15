@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import type { PaginationPrevProps } from "reka-ui";
-import { PaginationPrev, useForwardProps } from "reka-ui";
-import { buttonVariants } from "~/assets/variants/variant-index";
+import type { PaginationPrevProps } from 'reka-ui'
+import { PaginationPrev, useForwardProps } from 'reka-ui'
+import { buttonVariants } from '~/assets/variants/variant-index'
 
 const props = withDefaults(
   defineProps<
     PaginationPrevProps & {
-      size?: any;
-      class?: HTMLAttributes["class"];
+      size?: any
+      class?: HTMLAttributes['class']
     }
   >(),
   {
-    size: "default",
+    size: 'default',
   },
-);
+)
 
-const delegatedProps = reactiveOmit(props, "class", "size");
-const forwarded = useForwardProps(delegatedProps);
+const delegatedProps = reactiveOmit(props, 'class', 'size')
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -32,11 +32,14 @@ const forwarded = useForwardProps(delegatedProps);
         props.class,
       )
     "
-    v-bind="forwarded"
-  >
+    v-bind="forwarded">
     <slot>
       <icon name="left" />
-      <span class="hidden sm:block">Previous</span>
+      <span
+        class="
+          hidden
+          sm:block
+        ">Previous</span>
     </slot>
   </PaginationPrev>
 </template>

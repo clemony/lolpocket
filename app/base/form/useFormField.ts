@@ -1,22 +1,22 @@
-import { FieldContextKey } from "vee-validate";
-import { FORM_ITEM_INJECTION_KEY } from "./formInjectionKeys";
+import { FieldContextKey } from 'vee-validate'
+import { FORM_ITEM_INJECTION_KEY } from './formInjectionKeys'
 
 export function useFormField() {
-  const fieldContext = inject(FieldContextKey);
-  const fieldItemContext = inject(FORM_ITEM_INJECTION_KEY);
+  const fieldContext = inject(FieldContextKey)
+  const fieldItemContext = inject(FORM_ITEM_INJECTION_KEY)
 
   if (!fieldContext)
-    throw new Error("useFormField should be used within <FormField>");
+    throw new Error('useFormField should be used within <FormField>')
 
-  const { name, errorMessage: error, meta } = fieldContext;
-  const id = fieldItemContext;
+  const { name, errorMessage: error, meta } = fieldContext
+  const id = fieldItemContext
 
   const fieldState = {
     valid: computed(() => meta.valid),
     error,
     isDirty: computed(() => meta.dirty),
     isTouched: computed(() => meta.touched),
-  };
+  }
 
   return {
     id,
@@ -25,5 +25,5 @@ export function useFormField() {
     formItemId: `${id}-form-item`,
     formMessageId: `${id}-form-item-message`,
     ...fieldState,
-  };
+  }
 }

@@ -13,6 +13,8 @@ export const variantVariants = {
   hidden: "hidden",
   base: "backdrop-blur  bg-b1/90  border-b3",
   btn: "bg-tint-b2/60 border-b3/60 font-medium text-bc **:text-bc",
+  error:
+    "px-3  bg-domination hover:bg-domination/80 border-domination font-semibold text-white **:text-white",
   ghost:
     "btn-ghost hover:bg-tint-b2/20 hover:border-b3/60 shadow-none drop-shadow-none  border-transparent fx-0  font-medium  ",
   ghostBase:
@@ -27,8 +29,6 @@ export const variantVariants = {
   none: "items-center bg-transparent border-0 border-transparent shadow-transparent shadow-none inset-shadow-none inset-shadow-transparen drop-shadow-transparent drop-shadow-none p-0 fx-0 outline-0 ring-0",
   opacity: "",
   outline: "border px-3 fx-0 shadow-xs font-medium border-b3",
-  error:
-    "px-3  bg-domination hover:bg-domination/80 border-domination font-semibold text-white **:text-white",
   secondary:
     "bg-tint-b3/40 fx-1 text-bc px-3 !border-b3  font-medium shadow-xs shadow-black/7 hover:inset-shadow-xs",
 }
@@ -62,6 +62,7 @@ export const baseVariants = tv({
       hidden: "hidden",
       base: "fx-0 hover:!border-b3 hover:!bg-b1",
       btn: "hover:!border-b3/80 hover:!bg-b2 hover:!text-bc hover:**:!text-bc",
+      error: "",
       ghost:
         "on:border-b3 on:bg-b3/36 on:shadow-xs on:!fx-1 [&_.btn-active]:!border-b3 [&_.btn-active]:!bg-b2",
       ghostBase:
@@ -76,7 +77,6 @@ export const baseVariants = tv({
       none: "border-0 !bg-transparent p-0 shadow-none inset-shadow-none drop-shadow-none !fx-0 hover:!bg-transparent",
       opacity: "hover:opacity-80",
       outline: "hover:!border hover:!border-b3 hover:shadow-xs hover:!fx-0",
-      error: "",
       secondary:
         "px-3 hover:!border-b3 hover:!bg-tint-b3/40 hover:shadow-xs hover:inset-shadow-xs hover:shadow-black/7",
     },
@@ -148,6 +148,9 @@ export const labelVariants = tv({
 export const elementVariants = tv({
   defaultVariants: {
     base: "none",
+    active: "none",
+    variant: "none",
+    hover: "none",
     disabled: "disabled",
     states: "states",
   },

@@ -20,11 +20,11 @@ export function newRuneSet(): RuneSet {
     id: crypto.randomUUID(),
     keystone: null,
     primary: {
-      path: "",
+      path: '',
       runes: [0, 0, 0],
     },
     secondary: {
-      path: "",
+      path: '',
       runes: [0, 0],
     },
     shards: [0, 0, 0],
@@ -48,7 +48,8 @@ export function addSpellSet(pocket: Pocket | string) {
 
 export function addRuneSet(pocket: Pocket | string) {
   const p = pType(pocket)
-  if (p.runes.length >= 10) return "Max amount of rune sets reached!"
+  if (p.runes.length >= 10)
+    return 'Max amount of rune sets reached!'
 
   let set = <RuneSet[]>[]
   set = p.runes

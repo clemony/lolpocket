@@ -1,56 +1,58 @@
 // stores/cooldown.ts
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 interface CooldownEntry {
-  timestamp: number;
-  wait: number;
+  timestamp: number
+  wait: number
 }
 
 export const useCooldownStore = defineStore(
-  "cooldown",
+  'cooldown',
   () => {
-    const cooldowns = ref<Record<string, CooldownEntry>>({});
+    const cooldowns = ref<Record<string, CooldownEntry>>({})
 
-    const getKey = (puuid: string, action: string) => `${puuid}:${action}`;
+    const getKey = (puuid: string, action: string) => `${puuid}:${action}`
 
     function set(puuid: string, action: string, wait: number) {
       cooldowns.value[getKey(puuid, action)] = {
         timestamp: Date.now(),
         wait,
-      };
+      }
     }
 
     function get(puuid: string, action: string): CooldownEntry | null {
-      const key = getKey(puuid, action);
-      const entry = cooldowns.value[key];
+      const key = getKey(puuid, action)
+      const entry = cooldowns.value[key]
 
-      if (!entry) return null;
+      if (!entry)
+        return null
 
-      const now = Date.now();
-      const expired = now - entry.timestamp >= entry.wait;
+      const now = Date.now()
+      const expired = now - entry.timestamp >= entry.wait
 
       if (expired) {
-        delete cooldowns.value[key]; // 🔥 Clean up immediately
-        return null;
+        delete cooldowns.value[key] // 🔥 Clean up immediately
+        return null
       }
 
-      return entry;
+      return entry
     }
     function clear(puuid: string, action: string) {
-      delete cooldowns.value[getKey(puuid, action)];
+      delete cooldowns.value[getKey(puuid, action)]
     }
 
     function purgeExpired() {
-      const now = Date.now();
+      const now = Date.now()
       for (const [key, { timestamp, wait }] of Object.entries(
         cooldowns.value,
       )) {
-        if (now - timestamp >= wait) delete cooldowns.value[key];
+        if (now - timestamp >= wait)
+          delete cooldowns.value[key]
       }
     }
 
     // Auto purge every 30s
-    setInterval(purgeExpired, 30_000);
+    setInterval(purgeExpired, 30_000)
 
     return {
       _raw: cooldowns,
@@ -58,9 +60,9 @@ export const useCooldownStore = defineStore(
       get,
       purgeExpired,
       set,
-    };
+    }
   },
   {
     persist: true,
   },
-);
+)

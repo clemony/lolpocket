@@ -1,9 +1,9 @@
 <script setup lang="ts">
 interface SkeletonProps {
-  class?: HTMLAttributes["class"];
+  class?: HTMLAttributes['class']
 }
 
-const props = defineProps<SkeletonProps>();
+const props = defineProps<SkeletonProps>()
 </script>
 
 <template>
@@ -19,8 +19,7 @@ const props = defineProps<SkeletonProps>();
     "
     :style="{
       backgroundSize: '400%',
-    }"
-  >
+    }">
     <slot />
   </div>
 </template>

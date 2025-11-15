@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: "trash",
-  icon: "trash",
-  listClass: "**:stroke-[1.8] size-5.25",
+  title: 'trash',
+  icon: 'trash',
+  listClass: '**:stroke-[1.8] size-5.25',
   order: 3,
-});
+})
 
 /*
     cellRenderer: RemoveFromTrash,
@@ -27,7 +27,9 @@ definePageMeta({
 
 <template>
   <button class="btn bg-domination text-2 font-medium text-white">
-    <icon name="nimbus:fire" class="size-5 text-white" />
+    <icon
+      name="nimbus:fire"
+      class="size-5 text-white" />
 
     <span class="pt-px">Delete All</span>
   </button>

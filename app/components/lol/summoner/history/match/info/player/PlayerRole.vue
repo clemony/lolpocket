@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { class: className, player } = defineProps<{
-  player: Player;
-  class?: HTMLAttributes["class"];
-}>();
+  player: Player
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
@@ -19,8 +19,7 @@ const { class: className, player } = defineProps<{
         `,
         className,
       )
-    "
-  >
+    ">
     <p>
       {{ player.teamPosition }}
     </p>

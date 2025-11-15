@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { NavigationMenuTriggerProps } from "reka-ui";
-import { NavigationMenuTrigger, useForwardProps } from "reka-ui";
+import type { NavigationMenuTriggerProps } from 'reka-ui'
+import { NavigationMenuTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  NavigationMenuTriggerProps & { class?: HTMLAttributes["class"] }
->();
+  NavigationMenuTriggerProps & { class?: HTMLAttributes['class'] }
+>()
 
-const delegatedProps = reactiveOmit(props, "class");
+const delegatedProps = reactiveOmit(props, 'class')
 
-const forwarded = useForwardProps(delegatedProps);
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -27,8 +27,7 @@ const forwarded = useForwardProps(delegatedProps);
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </NavigationMenuTrigger>
 </template>
