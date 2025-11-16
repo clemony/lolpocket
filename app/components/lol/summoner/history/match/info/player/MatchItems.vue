@@ -29,7 +29,7 @@ const items = computed(() => {
     :class="
       cn(
         `
-          flex size-full max-w-66 items-start gap-1.5
+          flex size-full max-w-66 items-start gap-1
           *:rounded-md
         `,
         wrapperClass,
@@ -44,13 +44,13 @@ const items = computed(() => {
         v-tippy="ix().itemNameById(items[i])"
         :alt="items[i]"
         class="
-          size-10 rounded-lg ring-bc/60 transition-all duration-300
+          size-9 rounded-md ring-bc/60 transition-all duration-300
           hover:scale-105 hover:ring
         " />
 
       <Placeholder
         v-else
-        :class="cn('size-10 rounded-lg bg-b3/60!', className)" />
+        :class="cn('size-9 rounded-lg bg-b3/60!', className)" />
     </template>
   </div>
 </template>

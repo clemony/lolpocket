@@ -3,8 +3,9 @@ const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
 }>()
+const s = computed (() => pathIndex.find(p => p.id === player.perks.secondary))
 
-const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
+const keystone = computed (() => runeIndex.find(r => r.id === player.perks.keystone))
 </script>
 
 <template>
@@ -12,32 +13,32 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
     :class="
       cn(
         `
-          -ml-1 flex size-full max-w-10 min-w-10 flex-col place-items-center
-          gap-2 drop-shadow-sm
+          -mt-px -mr-1 ml-1 flex size-full max-w-8 min-w-8 flex-col
+          place-items-center gap-0.5
           **:[&_img]:shrink-0
         `,
         className,
       )
     ">
     <img
-      v-if="playerKeystone"
-      v-tippy="{ content: playerKeystone.name, placement: 'right' }"
-      :alt="playerKeystone.name"
-      :src="`/img/runes/${playerKeystone.id}.webp`"
+      v-if="keystone"
+      v-tippy="{ content: keystone?.name, placement: 'right' }"
+      :alt="keystone?.name"
+      :src="`/img/runes/${player.perks?.keystone}.webp`"
       class="
-        h-8 w-auto shrink-0! drop-shadow-xs transition-all duration-300
+        h-8 w-auto shrink-0! drop-shadow-sm transition-all duration-300
         hover:scale-120
       " />
 
     <img
-      v-if="playerPaths"
-      v-tippy="{ content: playerPaths, placement: 'right' }"
-      :alt="playerPaths"
-      :src="`/img/paths/${playerPaths}.webp`"
+      v-if="s?.name"
+      v-tippy="{ content: s?.name, placement: 'right' }"
+      :alt="s?.name"
+      :src="`/img/paths/${s?.name}.webp`"
       class="
-        h-6 w-auto transition-all duration-300
+        ml-px h-5 w-auto dst transition-all duration-300
         hover:scale-120
       "
-      :class="{ 'h-5.5!': playerPaths === 'inspiration' }" />
+      :class="{ 'h-4.5!': s?.name === 'Inspiration' }" />
   </div>
 </template>

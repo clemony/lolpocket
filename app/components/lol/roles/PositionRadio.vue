@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Field
+  <div
     class=""
     :class="{
       'flex! w-full justify-between! gap-2.5 px-4! py-2': props.class,
@@ -37,5 +37,5 @@ const props = defineProps<{
           " />
       </span>
     </label>
-  </Field>
+  </div>
 </template>

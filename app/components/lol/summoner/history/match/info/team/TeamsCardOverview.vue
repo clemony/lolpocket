@@ -9,12 +9,13 @@ const route = useRoute()
 <template>
   <div
     class="
-      grid max-w-74 grid-flow-col grid-cols-2 grid-rows-5 gap-4 gap-y-px
-      justify-self-end overflow-hidden
+      grid max-h-full w-68 grid-flow-col grid-cols-2 grid-rows-5 gap-1
+      gap-y-0.25 justify-self-end overflow-hidden
     ">
     <BtnLink
       v-for="player in match.participants"
       :key="player.puuid"
+      size="6"
       variant="link"
       :to="`/summoner/${route.params.region}/${player.riotIdGameName}_${player.riotIdTagline}`"
       :class="
@@ -31,13 +32,15 @@ const route = useRoute()
             content: ix().champNameById(player?.championId),
             placement: 'right',
           }"
+          size="sq-5"
           alt="champion-icon"
-          class="size-6 rounded-tiny shadow-xs dst" />
+          class="shadow-xs dst" />
 
         <a
           v-tippy="{ content: player.riotIdGameName, placement: 'right' }"
           class="
             h-full w-full truncate text-1 font-medium tracking-tight text-nowrap
+            normal-case
           ">
           {{ player.riotIdGameName }}
         </a>

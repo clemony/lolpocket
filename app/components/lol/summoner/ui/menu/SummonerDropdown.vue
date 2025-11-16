@@ -3,7 +3,6 @@ const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
   summoner?: Summoner
 }>()
-console.log('🌱 - summoner?:', summoner)
 
 const open = shallowRef<boolean>(false)
 

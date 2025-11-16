@@ -14,7 +14,7 @@ const pocket = computed(() => {
 </script>
 
 <template>
-  <Field :title="props.title">
+  <div :title="props.title">
     <!--   <Select v-model:model-value="pocket.complete.items[props.index]">
       <SelectTrigger
         class="h-auto shadow-none py-4 hover:border-b2 !bg-b2/40 hover:inset-shadow-xs hover:shadow-warm-2 cursor-pointer !rounded-box"
@@ -40,7 +40,7 @@ const pocket = computed(() => {
         </SelectGroup>
       </SelectContent>
     </Select> -->
-  </Field>
+  </div>
 </template>
 
 <style scoped></style>

@@ -1,6 +1,6 @@
 import type { Editor } from "@tiptap/vue-3"
-import { toast } from "~/base/popup/toast/use-toast"
 import { renderCommentHTML } from "~/composables/tiptap"
+import { toast } from "~/composables/utils/useToast"
 
 export async function updateComment(
   content: Doc,

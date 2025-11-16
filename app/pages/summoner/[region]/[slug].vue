@@ -1,34 +1,20 @@
-<script setup lang="ts">
-definePageMeta({
-  name: 'summoner',
-  title: 'Summoner',
-  path: '/summoner/:region/:slug',
-  search: 'hidden',
-})
-
+<script lang="ts" setup>
 const route = useRoute()
-const puuid = computed(() => as().account?.puuid)
+const ss = useSummonerStore()
 
-const state = ref<ReturnType<typeof useSummonerProvider> | null>(null)
+const [name, tag] = String(route.params.slug).split('_')
 
-provide(SummonerKey, state)
-
-watch(
-  puuid,
-  async (newPuuid) => {
-    if (!newPuuid)
-      return
-    const summoner = useSummonerProvider(newPuuid)
-    await summoner.findSummoner()
-    state.value = summoner
-    console.log('state.value????: ', state.value.matches)
-  },
-  { immediate: true },
-)
+const summoner = await ss.ensureSummoner({
+  name: name.toLowerCase(),
+  region: String(route.params.region).toLowerCase(),
+  tag: tag.toLowerCase(),
+})
+const state = await useSummonerProvider(summoner.puuid)
+await state.findSummoner()
 </script>
 
 <template>
-  <TabLayout v-if="state?.summoner">
+  <TabLayout>
     <!-- splash -->
 
     <template #background>
@@ -50,7 +36,7 @@ watch(
     <!-- crumb -->
     <template #crumb>
       <SummonerDropdown
-        :summoner="state.summoner"
+        :summoner="state.summoner.value"
         class="-ml-4" />
     </template>
 
@@ -59,36 +45,49 @@ watch(
       <SummonerHeader :summoner="unref(state?.summoner)" />
     </template>
     <div class="min-h-screen w-full bg-b1">
-      <NuxtPage
-        v-if="state"
-        :key="route.name"
-        :state />
+      <NuxtPage />
     </div>
-    <UpdateSummoner
-      shape="circle"
-      placement="left"
-      variant="outline"
-      class="
-        fab pointer-events-auto! right-24 bottom-64 z-10 size-16!
-        cursor-pointer! bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
-        *:opacity-60
-        hover:*:opacity-100
-        [&_svg]:size-4
-      " />
-    <FollowButton
-      :summoner="state.summoner"
-      shape="circle"
-      placement="left"
-      on="base"
-      variant="outline"
-      class="
-        fab pointer-events-auto! right-24 bottom-44 z-10 size-16!
-        cursor-pointer! bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
-        *:opacity-60
-        hover:*:opacity-100
-        [&_svg]:size-4
-      " />
+    <div class="fixed right-24 bottom-24 grid gap-4">
+      <UpdateSummoner
+        size="c"
+        placement="left"
+        variant="outline"
+        class="
+          pointer-events-auto! z-10 size-16! cursor-pointer! bg-b1/80 shadow-sm
+          shadow-black/4 backdrop-blur
+          *:opacity-60
+          hover:*:opacity-100
+          [&_svg]:size-4
+        " />
+      <FollowButton
+        :summoner="state.summoner.value"
+        size="c"
+        placement="left"
+        on="base"
+        variant="outline"
+        class="
+          pointer-events-auto! z-10 size-16! cursor-pointer! rounded-full!
+          bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
+          *:opacity-60
+          hover:*:opacity-100
+          [&_svg]:size-4
+        " />
 
-    <UpFAB />
+      <UpFAB />
+
+      <Button
+        v-if="as().user.puuid === state.summoner.value.puuid"
+        class="
+          pointer-events-auto! z-10 size-16! cursor-pointer! rounded-full!
+          bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
+          *:opacity-60
+          hover:*:opacity-100
+          [&_svg]:size-4
+        ">
+        <Icon
+          name="gear"
+          class="" />
+      </Button>
+    </div>
   </TabLayout>
 </template>

@@ -101,7 +101,7 @@ console.log(as().account)
       </BtnLink>
 
       <BtnLink
-        v-if="slug"
+        v-if="as().user"
         variant="link"
         on="none"
         class="w-full justify-start gap-2.5! px-3.5 duration-0!"

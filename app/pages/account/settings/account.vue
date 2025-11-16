@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { providers } from '~~/shared/references'
-import { toast } from '~/base/popup/toast/use-toast'
-
 definePageMeta({
   title: 'account',
   description: 'Manage your account settings and login settings.',
@@ -11,183 +8,146 @@ definePageMeta({
   /*   middleware: 'confirm-auth', */
 })
 
-const select = shallowRef<string>(null)
-
-async function onSubmit(values: any) {
-  toast({
-    title: 'Account Updated!',
-    description: h(
-      'pre',
-      { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' },
-      h('code', { class: 'text-white' }, JSON.stringify(values, null, 2)),
-    ),
-  })
-}
-
-const user = useSupabaseUser()
-
 const userProviders = await computedAsync(() =>
-  Object.values(user.value.app_metadata.providers),
+  Object.values(as().user.app_metadata.providers),
 )
+const email = shallowRef<string>(null)
+const username = shallowRef<string>(null)
+onMounted (() => {
+  email.value = as().user.email
+  username.value = as().sb.username
+})
 </script>
 
 <template>
   <form
-    v-if="user"
-    class="w-full space-y-12"
-    @submit="onSubmit">
+    class="flex w-full flex-col gap-6"
+    @submit.prevent>
     <!-- username -->
+    <FormItem>
+      <FieldTitle>
+        Username
+      </FieldTitle>
+      <InputGroup class="px-3">
+        <InputGroupAddon>
+          <icon name="user" />
+        </InputGroupAddon>
+        <InputGroupInput
+          v-model:model-value="username"
+          class="**:text-3!"
+          @blur="validateField(usernameSchema)" />
+      </InputGroup>
 
-    <FieldSet id="username">
-      <FieldContent>
-        <FieldTitle> Username </FieldTitle>
-
-        <FieldDescription>
-          This is the name that will be used throughout the site. Defers to in
-          game name if a Riot account is connected.
-        </FieldDescription>
-      </FieldContent>
-      <ClientOnly>
-        <InputGroup>
-          <InputGroupInput
-            v-model="as().account.username"
-            type="text"
-            placeholder="Username" />
-          <InputGroupAddon>
-            <icon name="user" />
-          </InputGroupAddon>
-        </InputGroup>
-      </ClientOnly>
-    </FieldSet>
-
-    <!-- connected accounts -->
-
-    <fieldset
-      id="connected-accounts"
-      class="space-y-2">
-      <div class="leading-4">
-        <h4
-          as="legend"
-          class="mb-2">
-          Connected Accounts
-        </h4>
-
-        <p class="label text-wrap">
-          Manage the accounts used to log in to
-          <b>lolpocket.</b>
-        </p>
-      </div>
-      <label
-        v-for="(provider, i) in providers"
-        :key="i"
-        for="toggle-provider"
-        class=""
-        :class="
-          cn(
-            `
-              flex h-20 w-full items-center justify-start gap-5! border-b
-              border-b-b2!
-            `,
-          )
-        ">
-        <div
-          :class="
-            cn(
-              `
-                grid aspect-square size-11 place-items-center rounded-lg border
-                border-b3 shadow-sm
-              `,
-              provider.class,
-            )
-          ">
-          <icon
-            :name="String(provider.icon)"
-            :class="cn('size-6.5 dst')" />
-        </div>
-        <h4 class="grow text-start text-4 font-semibold capitalize dst">
-          {{ provider.name }}
-        </h4>
-
-        <span
-          v-if="userProviders?.includes(provider.name)"
-          class="text-2">
-          Connected
-        </span>
-
-        <span
-          v-else
-          class="text-2 opacity-60">Not Connected</span>
-
-        <Switch
-          name="toggle-provider"
-          :model-value="userProviders?.includes(provider.name)"
-          class="
-            switch -mt-0.25 scale-90 dst
-            data-[state=checked]:ring data-[state=checked]:ring-white/60
-          " />
-      </label>
-    </fieldset>
+      <FieldDescription>
+        Used to identify you and your account. Your main display name if you haven't connected a Riot account.
+      </FieldDescription>
+    </FormItem>
 
     <!-- email -->
 
-    <fieldset
-      id="connected-accounts"
-      class="space-y-6">
-      <div class="leading-4">
-        <h4
-          as="legend"
-          class="text-5font-semibold mb-2 flex items-center gap-2">
-          Email
-        </h4>
+    <FormItem>
+      <FieldTitle>
+        Email
+      </FieldTitle>
+      <InputGroup class="px-3">
+        <InputGroupAddon>
+          <Icon
+            name="mail"
+            class="" />
+        </InputGroupAddon>
+        <InputGroupInput
+          v-model:model-value="email"
+          class="**:text-3!"
+          @blur="validateField(emailSchema)" />
+        <InputGroupAddon
+          v-if="!as().user.email_confirmed_at"
+          v-tippy="'verified!'"
+          color="neutral"
+          align="inline-end"
+          hover="neutral"
+          class="aspect-square scale-90 rounded-full dst"
+          size="6">
+          <Icon
+            name="tick"
+            class="
+              absolute size-4.25
+              **:stroke-[3.3]
+            " />
+        </InputGroupAddon>
+        <InputGroupAddon
+          v-else
+          v-tippy="{
+            content: `Check your inbox! Verification email sent at ${as().user.email_change_sent_at}.`,
+            offset: [0, 12],
+          }"
+          size="6"
+          align="inline-end"
+          class="rounded-md border-b3/60"
+          variant="base">
+          <icon
+            name="refresh"
+            class="size-3.5" />
+          pending...
+        </InputGroupAddon>
+      </InputGroup>
 
-        <p class="label text-wrap">
-          Used for password reset and update.
-        </p>
-      </div>
+      <FieldDescription>
+        Receive password reset and update messages.
+      </FieldDescription>
+    </FormItem>
 
-      <Input
-        id="email"
-        v-model:email="user.email"
-        class="h-12"
-        required
-        :default-value="user.email"
-        type="email"
-        placeholder="example@example.com"
-        @clear:input="user.email = ''">
-        <icon name="mail" />
+    <!-- connected accounts -->
 
-        <template #2>
-          <Button
-            v-if="!user.email_confirmed_at"
-            v-tippy="'verified!'"
-            variant="neutral"
-            hover="neutral"
-            class="aspect-square scale-90 rounded-full dst"
-            size="6">
-            <icon
-              name="tick"
-              class="
-                absolute size-4.25
-                **:stroke-[3.3]
-              " />
-          </Button>
-          <Button
-            v-else
-            v-tippy="{
-              content: `Check your inbox! Verification email sent at ${user.email_change_sent_at}.`,
-              offset: [0, 12],
-            }"
-            size="6"
-            class="rounded-md border-b3/60"
-            variant="base">
-            <icon
-              name="refresh"
-              class="size-3.5" />
-            pending...
-          </Button>
-        </template>
-      </Input>
-    </fieldset>
+    <FieldContent>
+      <FieldTitle>
+        Connected Accounts
+      </FieldTitle>
+
+      <FieldDescription>
+        Manage the accounts used to log in to
+        <b>lolpocket.</b>
+      </FieldDescription>
+      <FieldGroup class="grid w-full grid-cols-3">
+        <Label
+          v-for="(provider, i) in providers"
+          :key="i"
+          for="toggle-provider"
+          as-child>
+          <Card>
+            <CardContent class="w-full">
+              <div class="grid h-26 w-full place-items-center">
+                <Icon
+                  :name="String(provider.icon)"
+                  :class="cn('size-10.5 dst', { 'text-domination': provider.name === 'riot', 'scale-90': provider.name === 'google' })" />
+              </div>
+              <CardTitle
+                class="grow text-start text-4 font-semibold capitalize dst">
+                {{ provider.name }}
+              </CardTitle>
+
+              <CardDescription class="flex w-full items-center justify-between">
+                <span
+                  v-if="userProviders?.includes(provider.name)"
+                  class="text-2">
+                  Connected
+                </span>
+                <span
+                  v-else
+                  class="text-2 opacity-60">Not Connected</span>
+
+                <Switch
+                  name="toggle-provider"
+                  :model-value="userProviders?.includes(provider.name)"
+                  class="
+                    switch -mt-0.25 scale-90 dst
+                    data-[state=checked]:ring data-[state=checked]:ring-white/60
+                  " />
+              </CardDescription>
+            </CardContent>
+          </Card>
+        </Label>
+      </FieldGroup>
+    </FieldContent>
 
     <!-- username -->
 
@@ -212,7 +172,10 @@ const userProviders = await computedAsync(() =>
     </fieldset>
 
     <div class="flex justify-start">
-      <Button variant="neutral">
+      <Button
+        variant="neutral"
+        @click.prevent
+        @click="accountUpdate({})">
         Update account
       </Button>
     </div>

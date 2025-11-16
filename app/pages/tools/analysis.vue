@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { getMatchesByPuuid } from '~~/server/api/riotClient'
-
 definePageMeta({
   title: 'analysis',
   icon: 'chart',
@@ -8,9 +6,6 @@ definePageMeta({
   path: '/tools/analysis',
   search: 'hidden',
 })
-
-const s = await ss().resolveSummoner({ puuid: as().account?.puuid })
-const summoner = computed(() => s)
 
 const q = computed(() => ms().analysisQueueSelect)
 const p = computed(() => ms().analysisPatchSelect)
@@ -26,9 +21,6 @@ const p = computed(() => ms().analysisPatchSelect)
     </menu>
 
     <main class="relative w-full grow overflow-x-hidden overflow-y-auto px-10">
-      <NuxtPage
-        v-if="summoner"
-        :matches="getMatchesByPuuid(summoner)" />
     </main>
   </div>
 </template>

@@ -13,7 +13,7 @@ const { class: className, summoner } = defineProps<{
   <IconHeader class="gap-6">
     <template #icon>
       <SummonerIcon
-        class="mt-2 size-20 rounded-full"
+        class="mt-1 size-20 rounded-full"
         :summoner />
     </template>
     <!-- header name -->

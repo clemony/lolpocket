@@ -1,3 +1,5 @@
+export type SummonerInject = ReturnType<typeof useSummonerProvider>
+
 export interface ChampionMastery {
   id: number
   lastPlayed: number
@@ -26,7 +28,6 @@ export interface Summoner {
   tag: string
   updatedData: number
   updatedMatch: number
-  updatedName: number
 }
 export interface RankedEntry {
   division: string

@@ -9,7 +9,7 @@ const {
   championName: string
 }>()
 console.log('💠 - summoner?:', summoner)
-const state = inject<SummonerData>(SummonerKey)
+const { matches } = useSummonerInject()
 const champKey = computed(() => String(ix().champKeyByName(championName)))
 </script>
 
@@ -37,7 +37,7 @@ const champKey = computed(() => String(ix().champKeyByName(championName)))
       <div class="w-100">
         <SummonerChampionLineChart
           :summoner
-          :matches="state.matches"
+          :matches
           :champion-name />
       </div>
     </CollapsibleTrigger>

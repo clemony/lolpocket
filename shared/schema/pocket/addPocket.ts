@@ -1,4 +1,4 @@
-import { toast } from "~/base/popup/toast/use-toast"
+import { toast } from "~/composables/utils/useToast"
 import { heyGoodJob } from "~~/shared/data/good-job"
 import { newPocket } from "./newPocket"
 

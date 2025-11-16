@@ -1,18 +1,25 @@
 <script lang="ts" setup>
+import type { AsTag } from 'reka-ui'
+import { useForwardProps } from 'reka-ui'
+
 defineOptions({
   inheritAttrs: false,
 })
+const props = defineProps<Props>()
 
-const {
-  alt,
-  class: className,
-  img,
-} = defineProps<{
-  alt: string
-  img: string | null
-  class?: HTMLAttributes['class']
-}>()
 const emit = defineEmits(['loaded'])
+
+interface Props {
+  alt: string
+  as?: AsTag | string
+  base?: ElementVariants['base']
+  class?: HTMLAttributes['class']
+  hover?: ElementVariants['hover']
+  img: string | null
+  on?: ElementVariants['on']
+  size?: ElementVariants['size']
+  variant?: ElementVariants['variant']
+}
 
 /* skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40 */
 
@@ -22,12 +29,19 @@ function onLoad() {
   loaded.value = true
   emit('loaded')
 }
+
+const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <label
+  <Element
+
+    v-bind="forwarded"
     :class="
-      cn('relative size-full shrink-0 rounded-lg bg-b2 transform-3d', className)
+      cn(
+        elementVariants({ base, variant, hover, on, size }),
+        props.class,
+      )
     ">
     <img
       :key="img"
@@ -39,10 +53,7 @@ function onLoad() {
       :alt="alt"
       :class="
         cn(
-          `
-            size-full shrink-0 translate-z-0 overflow-hidden rounded-lg
-            object-center
-          `,
+          `size-full shrink-0 translate-z-0 object-center`,
           {
             'opacity-100 ': loaded,
             'opacity-0': !loaded,
@@ -51,5 +62,5 @@ function onLoad() {
       "
       @load="onLoad()" />
     <slot />
-  </label>
+  </Element>
 </template>

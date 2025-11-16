@@ -19,24 +19,24 @@ const {
   tip?: boolean
 }>()
 
-const state = useSummonerInject()
+const { fetchNewMatches, summoner } = useSummonerInject()
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => state.fetchNewMatches(),
+  () => fetchNewMatches(),
   120_000,
-  state.summoner.value.puuid,
+  summoner.value.puuid,
   'match-refresh',
 )
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
-    ? state.summoner.value.updatedMatch
-      ? `last updated ${state.summoner.value.updatedMatch}`
-      : 'not updated yet'
+    ? summoner.value.updatedMatch
+      ? `Last updated ${summoner.value.updatedMatch}`
+      : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
 )
 </script>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { isVNode } from 'vue'
-import { useToast } from './use-toast'
+import { useToast } from '../../../composables/utils/useToast'
 
 const { toasts } = useToast()
 </script>

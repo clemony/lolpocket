@@ -4,15 +4,16 @@ const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const state = inject<SummonerData>(SummonerKey)!
+const { clearFilters, filter, matches, setFilter, summoner: s } = useSummonerInject()
+
 const roleStats = await useMatchRoles(
-  state.summoner.puuid,
-  computed(() => state.matches),
+  s.value.puuid,
+  matches,
 )
 
 const roleModel = computed({
-  get: () => state.filter.role,
-  set: val => state.setFilter('role', val),
+  get: () => filter.value.role,
+  set: val => setFilter('role', val),
 })
 </script>
 
@@ -24,7 +25,7 @@ const roleModel = computed({
         variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
         class="gap-2 place-self-center rounded-lg px-2.5 text-3 font-medium"
-        @click="state.clearFilters()">
+        @click="clearFilters()">
         {{
           ms().filter.role !== "ALL"
             ? roleStats.find((r) => r.role === ms().filter.role).name

@@ -10,7 +10,7 @@ const classObject
 </script>
 
 <template>
-  <Field
+  <div
     class="
       relative grid h-fit w-full px-2 py-3
       *:w-full
@@ -57,5 +57,5 @@ const classObject
       v-if="useSupabaseUser().value.role === 'admin'"
       :account="account"
       class="pointer-events-none absolute -right-46 bottom-4" />
-  </Field>
+  </div>
 </template>

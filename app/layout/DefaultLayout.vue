@@ -61,8 +61,8 @@ const route = useRoute()
         <slot />
         <LazyAppCommand />
       </div>
-
-      <ReportDialog :comment="ts().reportComment" />
+      <!--
+      <ReportDialog :comment="ts().reportComment" /> -->
       <!-- toaster -->
       <Toaster />
 

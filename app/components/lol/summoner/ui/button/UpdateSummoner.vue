@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useForwardProps } from 'reka-ui'
-import type { ButtonVariants } from '~/assets/variants'
 
 const props = withDefaults(
   defineProps<{
@@ -20,23 +19,23 @@ const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 
-const state = useSummonerInject()
+const { fetchNewMatches, summoner } = useSummonerInject()
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => state.fetchNewMatches(),
+  () => fetchNewMatches(),
   120_000,
-  state.summoner.value.puuid,
+  summoner.value.puuid,
   'match-refresh',
 )
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
-    ? state.summoner.value.updatedMatch
-      ? `Last updated ${state.summoner.value.updatedMatch}`
+    ? summoner.value.updatedMatch
+      ? `Last updated ${summoner.value.updatedMatch}`
       : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
 )

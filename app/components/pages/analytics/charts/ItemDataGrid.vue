@@ -5,9 +5,9 @@ const patchGames = computed(() =>
   userMatchData.filter(g => g.patch === ms().filter.patch),
 )
 
-const state = inject<SummonerData>(SummonerKey)
+const { matches, summoner } = useSummonerInject()
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
+const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
 </script>
 
 <template>

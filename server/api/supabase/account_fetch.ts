@@ -28,7 +28,6 @@ export default defineEventHandler(async (event) => {
       throw createError({ statusCode: 404, statusMessage: "Profile not found" })
 
     const accountParse = v.safeParse(accountSchema, data.account)
-    console.log("📎 - accountParse:", accountParse)
     const settingsParse = v.safeParse(settingsSchema, data.settings)
 
     const userPockets: Pocket[] = []
@@ -43,12 +42,6 @@ export default defineEventHandler(async (event) => {
 
     const userSettings =
       settingsParse.success ? settingsParse.output : getEmptySettings()
-
-    // optional logging, only for local dev
-    if (!accountParse.success)
-      console.warn("🚫 Account validation failed:", accountParse.issues)
-    if (!settingsParse.success)
-      console.warn("🚫 Settings validation failed:", settingsParse.issues)
 
     return {
       data: {

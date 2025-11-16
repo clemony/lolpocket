@@ -15,13 +15,14 @@ export const useAccountStore = defineStore(
     const user = useSupabaseUser()
 
     const sb = ref<Account>()
-    const account = computed<Account>(() => {
+    const account = computedAsync<Account>(async () => {
       return {
-        ...sb.value,
-        ...ss().cache[sb.value?.puuid],
+        ...(await sb?.value),
+        ...ss().cache.get(sb.value?.puuid),
       }
-    })
-    console.log("📎 - hydrateAccount:", account)
+    }, null)
+
+    whenever(account, () => console.log("🥳 Account:", account.value))
     const settings = ref<Settings>()
     const inbox = ref<Inbox>()
 

@@ -4,8 +4,6 @@ definePageMeta({
   path: '/summoner',
   search: 'hidden',
 })
-
-const router = useRouter()
 </script>
 
 <template>

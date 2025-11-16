@@ -1,4 +1,4 @@
-import { toast } from "~/base/popup/toast/use-toast"
+import { toast } from "~/composables/utils/useToast"
 // @todo links and variants
 export function sendErrorToast(msg?: string) {
   toast({

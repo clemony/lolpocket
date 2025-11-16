@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-const { state } = defineProps<{
-  state: SummonerData
-}>()
 definePageMeta({
   name: 'history',
   title: 'match history',
@@ -10,8 +7,8 @@ definePageMeta({
   order: 0,
 })
 
-const scrollMain = useTemplateRef<HTMLElement>('scrollMain')
-provide<Scroll>('scroll-top', { top: scroll })
+/* const scrollMain = useTemplateRef<HTMLElement>('scrollMain')
+provide<Scroll>('scroll-top', { top: scroll }) */
 </script>
 
 <template>
@@ -35,9 +32,8 @@ provide<Scroll>('scroll-top', { top: scroll })
           :summoner
           :champion-name="ms().filter?.champion" /> -->
       <MatchList
-        v-if="state"
-        ref="scrollMain"
-        :state />
+
+        ref="scrollMain" />
     </SlideInTopOutBottom>
   </div>
 </template>

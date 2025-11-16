@@ -1,24 +1,24 @@
-import type { Provider } from '@supabase/supabase-js'
+import type { Provider } from "@supabase/supabase-js"
 
 export const authProviders: Provider[] = [
-  'riot' as Provider,
-  'google',
-  'discord',
+  "riot" as Provider,
+  "google",
+  "discord",
 ]
 export const providers = [
   {
-    name: 'riot',
-    class: '*:!size-5.25 *:-ml-px *:!text-white !bg-neutral/90',
-    icon: 'riot',
+    name: "riot",
+    class: "*:!size-5.25 *:-ml-px *:!text-white !bg-neutral/90",
+    icon: "riot",
   },
   {
-    name: 'discord',
-    class: ' *:!text-white  bg-[#747abf]',
-    icon: 'discord',
+    name: "discord",
+    class: " *:!text-white  bg-[#747abf]",
+    icon: "logos:discord-icon",
   },
   {
-    name: 'google',
-    class: '',
-    icon: 'devicon:google',
+    name: "google",
+    class: "",
+    icon: "devicon:google",
   },
 ]

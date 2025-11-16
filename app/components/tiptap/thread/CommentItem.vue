@@ -21,7 +21,7 @@ const renderedHtml = computed(() => {
 })
 const hydratedSummoner = computedAsync(
   async () => {
-    return await ss().resolveSummoner({ puuid: comment?.author?.puuid })
+    return await ss().resolveByPuuid(comment?.author?.puuid)
   },
   null,
 )

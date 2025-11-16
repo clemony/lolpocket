@@ -6,7 +6,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Field
+  <div
     :class="
       cn(
         `
@@ -67,5 +67,5 @@ const props = defineProps<{
         </p>
       </div>
     </div>
-  </Field>
+  </div>
 </template>

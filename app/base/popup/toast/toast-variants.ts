@@ -1,35 +1,20 @@
-import type { VariantProps } from 'class-variance-authority'
-import type { ToastRootProps } from 'reka-ui'
-import { cva } from 'class-variance-authority'
+import type { VariantProps } from "class-variance-authority"
+import { cva } from "class-variance-authority"
+import type { ToastRootProps } from "reka-ui"
 
-export { toast, useToast } from './use-toast'
+export { toast, useToast } from "../../../composables/utils/useToast"
 
 export const toastVariants = cva(
-  `
-    group
-    data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full
-    data-[state=open]:slide-in-from-top-full
-    data-[state=open]:sm:slide-in-from-bottom-full
-    pointer-events-auto relative flex w-full items-center justify-between
-    space-x-4 overflow-hidden rounded-lg border p-6 pr-8 shadow-md
-    transition-all
-    data-[state=open]:animate-in
-    data-[state=closed]:animate-out
-    data-[swipe=end]:animate-out
-    data-[swipe=end]:translate-x-[--reka-toast-swipe-end-x]
-    data-[swipe=cancel]:translate-x-0
-    data-[swipe=move]:translate-x-[--reka-toast-swipe-move-x]
-    data-[swipe=move]:transition-none
-  `,
+  `group data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-lg border p-6 pr-8 shadow-md transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[--reka-toast-swipe-end-x] data-[swipe=move]:translate-x-[--reka-toast-swipe-move-x] data-[swipe=move]:transition-none`,
   {
     defaultVariants: {
-      variant: 'default',
+      variant: "default",
     },
     variants: {
       variant: {
-        default: 'border border-b3/80 bg-b1/90 text-bc backdrop-blur',
+        default: "border border-b3/80 bg-b1/90 text-bc backdrop-blur",
         destructive:
-          'destructive group border-destructive bg-destructive text-destructive-bc',
+          "destructive group border-destructive bg-destructive text-destructive-bc",
       },
     },
   }
@@ -38,7 +23,7 @@ export const toastVariants = cva(
 type ToastVariants = VariantProps<typeof toastVariants>
 
 export interface ToastProps extends ToastRootProps {
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   onOpenChange?: ((value: boolean) => void) | undefined
-  variant?: ToastVariants['variant']
+  variant?: ToastVariants["variant"]
 }

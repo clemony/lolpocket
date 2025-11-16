@@ -38,10 +38,10 @@ const queue = computed(() => {
       :class="
         cn(
           `
-            pointer-events-auto relative z-2 flex h-40 w-full cursor-pointer
-            items-center justify-start justify-items-start gap-7 overflow-hidden
-            rounded-box rounded-xl bg-transparent bg-linear-to-r to-transparent
-            to-40% bg-clip-padding px-5 text-2
+            pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer
+            items-center justify-start justify-items-start gap-0 overflow-hidden
+            rounded-xl bg-transparent bg-linear-to-r to-transparent to-40%
+            bg-clip-padding px-5 text-2
             data-[state=open]:rounded-b-none
           `,
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
@@ -55,7 +55,7 @@ const queue = computed(() => {
           player.win
             ? 'before:border-inspiration '
             : 'before:border-domination',
-          isOpen === true ? 'max-h-240' : 'h-40',
+          isOpen === true ? 'max-h-240' : 'h-36',
         )
       ">
       <div
@@ -102,7 +102,7 @@ const queue = computed(() => {
         </div>
       </div>
 
-      <div class="flex h-full grow flex-col justify-between gap-2 py-6">
+      <div class="flex h-max flex-col gap-1">
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon
@@ -113,7 +113,8 @@ const queue = computed(() => {
             }"
             alt="champion-icon"
             class="
-              size-17 rounded-xl transition-all duration-300
+              size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
+              transition-all duration-300
               hover:scale-105
             " />
 
@@ -121,7 +122,7 @@ const queue = computed(() => {
           <PlayerSpells
             :match
             :player
-            class="mr-2 ml-2 shrink-0" />
+            class="ml-2 shrink-0" />
 
           <!-- runes -->
           <PlayerRunes
@@ -136,13 +137,12 @@ const queue = computed(() => {
         </div>
 
         <!-- items -->
-        <div class="flex min-w-64 gap-3">
-          <MatchItems :player />
-        </div>
+
+        <MatchItems :player />
       </div>
       <TeamsCardOverview :match />
 
-      <div class="grid w-8 place-items-center">
+      <div class="absolute right-4 grid w-8 place-items-center">
         <icon
           name="up"
           :class="

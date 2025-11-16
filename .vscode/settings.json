@@ -32,7 +32,8 @@
     "/shared/data/records/items",
     "/shared/data/records/runes",
     "/shared/records",
-    "/app/utils/tiptap"
+    "/app/utils/tiptap",
+    "/app/composables/form"
   ],
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

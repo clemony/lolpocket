@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-import type { description } from 'valibot'
-import { motion, useDomRef } from 'motion-v'
 import { heyGoodJob } from '~~/shared/data/good-job'
-import { toast, } from '~/base/popup/toast/use-toast'
+import { toast, } from '~/composables/utils/useToast'
 
-const container = useDomRef()
 function toasty() {
   toast({
     title: `Created Toast!`,
@@ -31,10 +28,6 @@ const text = ref<string>()
     </header>
 
     <div class="mx-auto flex w-1/5 items-center gap-3 space-y-2">
-      <Button @click="useFetchSummonerData(as().account.puuid)">
-        try update
-      </Button>
-
       <Button
         variant="neutral"
         class="ml-auto pr-4 pl-2.5 font-normal"
@@ -42,7 +35,7 @@ const text = ref<string>()
         <icon name="add" />
         toast
       </Button>
-      <Button @click="useHydrateUser()">
+      <Button @click="accountFetch()">
         fetch user datasss
       </Button>
 

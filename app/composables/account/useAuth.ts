@@ -1,5 +1,5 @@
 import type { Provider, Session } from "@supabase/supabase-js"
-import { toast } from "~/base/popup/toast/use-toast"
+import { toast } from "~/composables/utils/useToast"
 
 // @todo env var url
 export async function useSignIn(provider: Provider) {

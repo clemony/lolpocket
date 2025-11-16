@@ -1,26 +1,27 @@
 <script setup lang="ts">
-const {
-  id,
-  title,
-  alt,
-  as,
-  class: className,
-  k,
-  params,
-} = defineProps<{
-  id?: number
-  k?: string
-  params?: any
-  alt?: string
-  as?: string
-  class?: HTMLAttributes['class']
-  title?: string
-}>()
+import type { ElementVariants } from '@variants'
+import type { AsTag } from 'reka-ui'
+import { useForwardProps } from 'reka-ui'
 
+interface Props {
+  id?: number
+  title?: string
+  alt?: string
+  as?: AsTag | string
+  base?: ElementVariants['base']
+  class?: HTMLAttributes['class']
+  hover?: ElementVariants['hover']
+  k?: string
+  on?: ElementVariants['on']
+  params?: any
+  size?: ElementVariants['size']
+  variant?: ElementVariants['variant']
+}
+const props = withDefaults(defineProps<Props>(), { size: 'sq-14' })
 const emit = defineEmits(['loaded'])
 
 const champId = computed(() =>
-  params ? params.value : k ? ix().champIdByKey(k) : id,
+  props.params ? props.params.value : props.k ? ix().champIdByKey(props.k) : props.id,
 )
 
 const loaded = ref(false)
@@ -29,23 +30,21 @@ function onLoad() {
   loaded.value = true
   emit('loaded')
 }
+
+const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <Element
-    :as
+  <StaticImg
+    v-bind="forwarded"
+    :img="`/img/champions/${champId}.webp`"
     :class="
       cn(
-        `
-          grid aspect-square shrink-0 place-items-center overflow-hidden
-          rounded-lg shadow-sm drop-shadow-sm
-        `,
-        className,
+        `overflow-hidden shadow-sm drop-shadow-sm`,
+        elementVariants({ base, variant, hover, on, size }),
+        props.class,
       )
-    ">
-    <StaticImg
-      :img="`/img/champions/${champId}.webp`"
-      :alt="title || alt || `Champion ${champId} icon`"
-      @loaded="onLoad" />
-  </Element>
+    "
+    :alt="title || alt || `Champion ${champId} icon`"
+    @loaded="onLoad" />
 </template>

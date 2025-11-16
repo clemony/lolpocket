@@ -12,7 +12,7 @@ function handleClick(i) {
 </script>
 
 <template>
-  <Field class="z-0 flex w-full pl-3">
+  <div class="z-0 flex w-full pl-3">
     <div
       v-if="pocket?.runes && pocket?.runes?.length"
       class="flex w-full flex-wrap gap-6.5 py-3">
@@ -44,5 +44,5 @@ function handleClick(i) {
           " />
       </div>
     </button>
-  </Field>
+  </div>
 </template>

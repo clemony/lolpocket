@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 // @todo fix usermatchdata
 
-const state = inject<SummonerData>(SummonerKey)
+const { matches, summoner } = useSummonerInject()
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
+const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
 
 const data = ref({
   datasets: [

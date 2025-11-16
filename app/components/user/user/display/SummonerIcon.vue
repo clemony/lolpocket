@@ -14,6 +14,8 @@ const props = defineProps<
 const icon = computed(() => {
   if (props.iconId !== null && props.iconId !== undefined)
     return getSummonerIcon(props.iconId)
+  else if (props.summoner?.icon)
+    return getSummonerIcon(props.summoner?.icon)
   else if (as().account?.icon)
     return getSummonerIcon(as().account?.icon)
   else return 'iconoir:plug-type-a'

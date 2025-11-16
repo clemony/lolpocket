@@ -20,7 +20,7 @@ const {
     fullWidth?: boolean
   }
 >()
-const s = await ss().resolveSummoner({ puuid: as().account?.puuid })
+const s = await ss().resolveByPuuid(as().account?.puuid)
 const summoner = computed(() => s)
 </script>
 

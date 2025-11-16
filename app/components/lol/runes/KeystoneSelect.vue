@@ -24,7 +24,7 @@ watch(
 </script>
 
 <template>
-  <Field
+  <div
     title="Keystone"
     class="
       relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm
@@ -83,7 +83,7 @@ watch(
       <div  class="size-full grid grid-cols-3 py-4">
         <Placeholder v-for="i in 3" :key="i" class="size-18 rounded-full place-self-center" />
       </div> -->
-  </Field>
+  </div>
 </template>
 
 <style scoped></style>

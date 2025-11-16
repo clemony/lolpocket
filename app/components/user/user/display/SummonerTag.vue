@@ -18,7 +18,7 @@ const {
 
 const tag = computed(() => {
   if (summoner?.tag) {
-    return summoner.tag
+    return summoner?.tag
   }
   else {
     return as().account?.tag ?? null

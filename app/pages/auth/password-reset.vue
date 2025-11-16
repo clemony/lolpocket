@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { toast } from '~/base/popup/toast/use-toast'
+import { toast } from '~/composables/utils/useToast'
 
 definePageMeta({
   name: 'Reset Password',

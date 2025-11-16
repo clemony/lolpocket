@@ -3,8 +3,10 @@ const emit = defineEmits(['scroll-top'])
 
 const { loading, matches, summoner } = useSummonerInject()
 
+console.log('📎 - summoner:', summoner)
+
 const itemsPerPage = 20
-const currentPage = ref(1)
+const currentPage = shallowRef<number>(1)
 
 const pagedMatches = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
@@ -17,6 +19,7 @@ watch(
     if (newVal)
       currentPage.value = 1
   },
+  { immediate: false }
 )
 </script>
 

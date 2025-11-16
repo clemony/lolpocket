@@ -1,14 +1,32 @@
 // shared/schemas/user.ts
+import { pocketTitleIndex } from "#shared/data/pocket-title-index"
 import * as v from "valibot"
+
+//username
+export const usernameSchema = v.nullable(
+  v.pipe(v.string(), v.trim(), v.maxLength(16, "Max length of 16 characters."))
+)
+
+//title
+export const titleSchema = v.nullable(
+  v.pipe(
+    v.string(),
+    v.picklist(
+      pocketTitleIndex.map((t) => t.title),
+      "Not a valid title!"
+    ),
+    v.trim()
+  )
+)
 
 // Account
 export const accountSchema = v.object({
-  puuid: v.nullable(v.pipe(v.string("puuid not a string"))),
-  title: v.nullable(v.string("title not a string")),
-  username: v.nullable(v.string("username not a string")),
-  uuid: v.pipe(v.string(), v.uuid("uuid malformed")),
+  puuid: v.nullable(v.pipe(v.string("invalid puuid"))),
+  uuid: v.pipe(v.string(), v.uuid("invalid uuid")),
+  username: usernameSchema,
+  title: titleSchema,
   peer_messages: v.fallback(v.boolean(), false),
-  splash: v.nullable(v.string("splash not a string")),
+  splash: v.nullable(v.string()),
   //
   created: v.nullable(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
@@ -17,6 +35,20 @@ export const accountSchema = v.object({
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
   ),
 })
+
+//email
+export const emailSchema = v.pipe(
+  v.string(),
+  v.nonEmpty("Please enter your email."),
+  v.email("The email is badly formatted."),
+  v.maxLength(30, "Your email is too long.")
+)
+
+// --- Types ---
+export type UsernameSchema = v.InferOutput<typeof usernameSchema>
+export type EmailSchema = v.InferOutput<typeof emailSchema>
+export type AccountSchema = v.InferOutput<typeof accountSchema>
+export type Account = v.InferOutput<typeof accountSchema> & Partial<Summoner>
 
 // Settings
 export const settingsSchema = v.object({
@@ -37,8 +69,6 @@ export const settingsSchema = v.object({
 })
 
 // --- Types ---
-export type AccountSchema = v.InferOutput<typeof accountSchema>
-export type Account = v.InferOutput<typeof accountSchema> & Partial<Summoner>
 export type Settings = v.InferOutput<typeof settingsSchema>
 
 // --- Helpers ---

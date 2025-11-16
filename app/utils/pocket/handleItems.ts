@@ -1,4 +1,4 @@
-import { toast } from "~/base/popup/toast/use-toast"
+import { toast } from "~/composables/utils/useToast"
 import type { ItemSet, Pocket } from "~~/shared/schema"
 
 export function removeItemFromSet(

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { toast } from '~/base/popup/toast/use-toast'
+import { toast } from '~/composables/utils/useToast'
 
 definePageMeta({
   title: 'profile settings',
@@ -13,23 +13,12 @@ definePageMeta({
 
 const labelClass
   = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
-
-async function onSubmit(values: any) {
-  toast({
-    title: 'Account Updated!',
-    description: h(
-      'pre',
-      { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' },
-      h('code', { class: 'text-white' }, JSON.stringify(values, null, 2)),
-    ),
-  })
-}
 </script>
 
 <template>
   <form
     class="w-full space-y-12"
-    @submit="onSubmit">
+    @submit.prevent>
     <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
         <Label

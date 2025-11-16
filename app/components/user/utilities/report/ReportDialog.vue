@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/valibot'
-import { useToggle } from '@vueuse/core'
 import { parse } from 'valibot'
 import { useForm } from 'vee-validate'
-import { toast } from '~/base/popup/toast/use-toast'
-import { extractReadableText } from '~/composables/tiptap'
 import { reportOptions } from './reportOptions'
 
 const { button, comment } = defineProps<{
@@ -29,18 +26,7 @@ const {
     options: [],
   },
 })
-watch(
-  () => errors.value,
-  (newVal) => {
-    console.log('💠 - watch - ❌😐 newerrors :', newVal)
-  },
-)
-watch(
-  () => values.options,
-  (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-  },
-)
+
 const onSubmit = handleSubmit((values) => {
   console.log('🌱 - values:', values)
   if (!comment.content.content.length)

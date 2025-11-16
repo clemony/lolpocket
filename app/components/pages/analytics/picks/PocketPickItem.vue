@@ -4,20 +4,19 @@ const { title, itemNum } = defineProps<{
   title?: string
 }>()
 
-const state = inject<SummonerData>(SummonerKey)
+const state = useSummonerInject()
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
-
+/*
 const itemColor = computedAsync(() => {
   if (!bayesianItems[itemNum] && !itemColor.value)
     return
   return getGradeColor(bayesianItems[itemNum].bayesianWinrate)
 })
-console.log('💠 - itemColor - itemColor:', itemColor)
+console.log('💠 - itemColor - itemColor:', itemColor) */
 </script>
 
 <template>
-  <Field
+  <!-- <div
     v-if="bayesianItems[itemNum]"
     class="
       border-shadow flex w-full items-center gap-5 bg-b1 px-0 pt-0 pb-6
@@ -101,7 +100,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
         </span>
       </p>
     </div>
-
-    <!--   <NoDataOverlay v-if="!props.patchGames.length" /> -->
-  </Field>
+ -->g
+  <!--   <NoDataOverlay v-if="!props.patchGames.length" /> -->
+  <!-- </div> -->
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const summoner = await ss().resolveSummoner({ puuid: as().account?.puuid })
+const summoner = await ss().resolveByPuuid(as().account?.puuid)
 </script>
 
 <template>

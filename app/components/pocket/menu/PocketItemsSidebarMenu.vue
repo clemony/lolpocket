@@ -7,7 +7,7 @@ const { pocket } = defineProps<{
 </script>
 
 <template>
-  <Field class="flex w-full px-3">
+  <div class="flex w-full px-3">
     <div
       v-if="pocket?.items && pocket?.items?.length"
       class="flex w-full flex-wrap gap-3.5 py-3">
@@ -39,5 +39,5 @@ const { pocket } = defineProps<{
         <icon name="add" class="text-bc/60 group-hover:text-bc" />
       </div>
     </button> -->
-  </Field>
+  </div>
 </template>

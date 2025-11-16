@@ -31,11 +31,11 @@ const user = useSupabaseUser()
           grid h-fit w-full grid-cols-1 pt-10
           *:w-full
         ">
-        <button
+        <!--         <button
           class="btn w-full"
           @click="ss().clearAll()">
           clear summoner store
-        </button>
+        </button> -->
 
         <ClearMatchesButton />
 

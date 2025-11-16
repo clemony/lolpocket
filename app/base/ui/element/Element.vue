@@ -11,6 +11,7 @@ const {
     class?: HTMLAttributes['class']
     variant?: ElementVariants['variant']
     size?: ElementVariants['size']
+    on?: ElementVariants['on']
     hover?: ElementVariants['hover']
     base?: ElementVariants['base']
     as?: AsTag | string
@@ -22,7 +23,7 @@ const {
   <Primitive
     :as="as"
     v-bind="$attrs"
-    :class="cn('', elementVariants({ base, variant, size, hover }), className)">
+    :class="cn('', elementVariants({ base, variant, on, size, hover }), className)">
     <slot />
   </Primitive>
 </template>

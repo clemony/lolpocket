@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const s = await ss().resolveSummoner({ puuid: as().account?.puuid })
+const s = await ss().resolveByPuuid(as().account?.puuid)
 const summoner = computed(() => s)
 
 // "`/summoner/$as().account.region}/$as().account.name}_$as().account.tag}`"

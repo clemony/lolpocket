@@ -1,35 +1,35 @@
-import * as v from "valibot"
-import { createSupabaseClient } from "../client.supabase"
+import { readBody } from "h3"
+import { requireUser } from "../client.supabase" // assuming you export it
+
 export default defineEventHandler(async (event) => {
-  const { client, user } = await createSupabaseClient(event)
-  if (!user) return
+  const { client, user } = await requireUser(event)
   const body = await readBody(event)
 
-  // build a patch object with only real values (skips null + undefined)
+  // strip null/undefined keys
   const patch = Object.fromEntries(
-    Object.entries({
-      puuid: body.puuid,
-      title: body.title,
-      username: body.username,
-      peer_messages: body.peer_messages,
-      splash: body.splash,
-    }).filter(([_, v]) => v !== null && v !== undefined)
+    Object.entries(body).filter(([_, v]) => v != null)
   )
 
-  if (Object.keys(patch).length === 0) {
-    return { data: null } // nothing to update
-  }
+  // nothing to update
+  if (!Object.keys(patch).length) return { data: null }
 
-  // always include uuid for matching
+  // enforce correct uuid linkage
   patch.uuid = user.id
 
-  // upsert only the provided fields
   const { data, error } = await client
     .from("account")
-    .upsert(patch, { onConflict: "uuid", ignoreDuplicates: false })
+    .upsert(patch, {
+      onConflict: "uuid",
+      ignoreDuplicates: false,
+    })
+    .select()
+    .single()
 
   if (error) {
-    throw createError({ statusCode: 500, statusMessage: error.message })
+    throw createError({
+      statusCode: 500,
+      statusMessage: error.message,
+    })
   }
 
   return { data }

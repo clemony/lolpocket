@@ -66,7 +66,6 @@ useScrollProvider(el)
         <slot />
         <SiteFooter />
       </div>
-      <slot name="fab" />
     </div>
   </div>
 </template>
