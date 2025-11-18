@@ -24,8 +24,8 @@ const {
       hover="outline"
       variant="ghost"
       class="
-        w-full border border-transparent py-2
-        hover:border-b3/50! hover:bg-b2/40 hover:fx-1
+        w-full border border-transparent py-2 hover:border-b3/50! hover:bg-b2/40
+        hover:fx-1
       ">
       <FormItem as-child>
         <FormLabel class="w-full cursor-pointer">

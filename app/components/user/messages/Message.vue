@@ -39,8 +39,8 @@ const { message } = defineProps<{
       <form class="flex w-full flex-col gap-4 px-6 pt-1 pb-6">
         <label
           class="
-            grid grid-cols-[60px_1fr] items-center gap-2
-            **:text-3 **:font-normal
+            grid grid-cols-[60px_1fr] items-center gap-2 **:text-3
+            **:font-normal
           ">
           <span>Subject:</span>
           <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
@@ -51,10 +51,7 @@ const { message } = defineProps<{
           </span>
         </label>
         <label
-          class="
-            grid grid-cols-[60px_1fr] items-center gap-2
-            **:text-3
-          ">
+          class="grid grid-cols-[60px_1fr] items-center gap-2 **:text-3">
           <span>From:</span>
           <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
             <span

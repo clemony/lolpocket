@@ -15,14 +15,7 @@ const query = ref('')
       <ComboboxTrigger
         class="input"
         :class="
-          cn(
-            `
-              group relative flex size-full w-full items-center py-0
-              focus-within:border-transparent! focus-within:ring-offset-1
-              focus-within:ring-offset-b2
-              focus:border-transparent!
-              has-[&_input]:placeholder-shown:*:last:opacity-0
-            `,
+          cn('group relative flex size-full w-full items-center py-0 focus-within:border-transparent! focus-within:ring-offset-1 focus-within:ring-offset-b2 focus:border-transparent! has-[&_input]:placeholder-shown:*:last:opacity-0',
             className,
           )
         ">

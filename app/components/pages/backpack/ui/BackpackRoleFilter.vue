@@ -38,8 +38,7 @@ const tags = ref([])
         class="
           group/btn badge flex h-6.5! h-9 w-fit cursor-pointer items-center
           gap-1.5 rounded-lg badge-lg pr-2.5 pl-1.5 font-medium ring-bc/60
-          ring-offset-b1 duration-0
-          hover:ring hover:ring-offset-2
+          ring-offset-b1 duration-0 hover:ring hover:ring-offset-2
         "
         :style="{
           backgroundColor: position.color,

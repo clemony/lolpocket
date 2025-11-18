@@ -28,11 +28,7 @@ const delegatedProps = computed(() => {
   <Label
     v-bind="delegatedProps"
     :class="
-      cn(
-        `
-          text-3 leading-none font-medium
-          peer-disabled:cursor-not-allowed peer-disabled:opacity-70
-        `,
+      cn('group/label text-3 leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
         labelVariants({ base, variant, size, hover, on }),
         props.class,
       )

@@ -53,7 +53,7 @@ const inboxes: Record<string, DataObject> = {
           v-model:model-value="tabs"
           class="z-1">
           <TabsList
-            base="indicator"
+
             class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"

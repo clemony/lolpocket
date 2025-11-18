@@ -29,10 +29,7 @@ const loaded = ref<boolean>(false)
         v-for="key in championKeys"
         :key="key"
         :data-state="filteredKeys.includes(key) ? 'visible' : 'hidden'"
-        class="
-          group flex grow p-1
-          data-[state=hidden]:hidden
-        "
+        class="group flex grow p-1 data-[state=hidden]:hidden"
         @click="selectedChampion = key">
         <LibraryChampionCard
           v-show="key"

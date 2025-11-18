@@ -81,8 +81,7 @@ onClickOutside(target, (event) => {
   <div
     data-theme="base"
     :class="
-      cn(
-        `tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden p-0!`,
+      cn('tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden p-0!',
         { ' max-h-50  min-w-44': items.length },
       )
     ">
@@ -99,11 +98,7 @@ onClickOutside(target, (event) => {
           tabindex="0"
           :value="item"
           :class="
-            cn(
-              `
-                pr-8 transition-discrete
-                focus:bg-b2/60
-              `,
+            cn('pr-8 transition-discrete focus:bg-b2/60',
               `
                 index-${index}
               `,
@@ -128,10 +123,7 @@ onClickOutside(target, (event) => {
           ">
           <icon
             name="ban"
-            class="
-              -mt-[0.5px] inline size-3.5 align-middle
-              **:stroke-[2.2]
-            " />
+            class="-mt-[0.5px] inline size-3.5 align-middle **:stroke-[2.2]" />
           No result
         </span>
       </div>

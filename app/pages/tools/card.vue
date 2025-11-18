@@ -122,10 +122,7 @@ console.log('💠 - card.splash:', card.splash)
             px-16 pt-28
           ">
           <div
-            class="
-              flex flex-col
-              **:select-none
-            ">
+            class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
                 class="text-9 dst tracking-tight pl-3"

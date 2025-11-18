@@ -52,11 +52,7 @@ const variants = {
           }"
           exit="hidden"
           :class="
-            cn(
-              `
-                text-popover-bc z-50 min-w-32 overflow-hidden rounded-lg border
-                border-b4/60 bg-b1/90 p-1 shadow-md backdrop-blur-md
-              `,
+            cn('text-popover-bc z-50 min-w-32 overflow-hidden rounded-lg border border-b4/60 bg-b1/90 p-1 shadow-md backdrop-blur-md',
               props.class,
             )
           ">

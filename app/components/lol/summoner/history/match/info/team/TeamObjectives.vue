@@ -19,11 +19,7 @@ const elder = computed(() => {
   <div
     class=""
     :class="
-      cn(
-        `
-          0 grid grid-cols-5 justify-center
-          **:font-semibold **:text-bc
-        `,
+      cn('0 grid grid-cols-5 justify-center **:font-semibold **:text-bc',
         className,
       )
     ">

@@ -10,8 +10,6 @@ const { threadId } = defineProps<{
   threadId: UUID
 }>()
 const thread = computed (() => ts().threads[threadId] ?? null)
-console.log('📎 - ts().threads[threadId]:', ts().threads[threadId])
-console.log('📎 - thread:', thread)
 const newComment = ref<Doc>(null)
 const sortRef = useTemplateRef('sortRef')
 const sorted = computed(() => {
@@ -52,12 +50,13 @@ console.log('📎 - user:', user)
       <span class="mt-0.5 text-2 opacity-60">Sort by: </span>
       <SortThread
         ref="sortRef"
+        :disabled="!thread || !thread.length"
         :thread-id
         :thread />
     </div>
 
     <div
-      v-if="sorted?.length"
+      v-if="thread && thread?.length"
       :key="sorted?.length"
       class="grid h-max auto-rows-max">
       <CommentItem

@@ -8,12 +8,7 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     :class="
-      cn(
-        `
-          flex h-9 w-full items-center justify-between gap-2 overflow-hidden
-          border-y border-y-b4/50 bg-linear-to-r to-transparent px-5
-          inset-shadow-xxs
-        `,
+      cn('flex h-9 w-full items-center justify-between gap-2 overflow-hidden border-y border-y-b4/50 bg-linear-to-r to-transparent px-5 inset-shadow-xxs',
         className,
       )
     ">
@@ -44,9 +39,8 @@ const { class: className, team } = defineProps<{
 
     <p class="flex justify-end gap-2">
       <Icon
-        name="gold class="
-        size-4
-        text-[#C2A76E]"" />
+        name="gold"
+        class="size-4 text-[#C2A76E]" />
 
       <span
         v-if="team.gold"

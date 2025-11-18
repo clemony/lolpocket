@@ -37,7 +37,7 @@ onMounted(() => {
         class="**:pointer-events-auto"
         @update:model-value="navigateTo(tabs)">
         <TabsList
-          base="indicator"
+
           class="grid h-10 w-80 max-w-120 grid-cols-2">
           <TabsTrigger value="/library/items">
             Grid

@@ -16,16 +16,10 @@ const { scrollTop } = useScrollInject()
   <Button
     v-tippy="{ content: 'Top', theme, placement, arrow: false }"
 
-    size="c"
-    variant="base"
+    size="c-14"
+    variant="floating"
     :class="
       cn(
-        `
-          pointer-events-auto! z-10 size-16! cursor-pointer! bg-b1/80 shadow-sm
-          shadow-black/4 backdrop-blur fx-0
-          *:opacity-60
-          hover:*:opacity-100
-        `,
         className,
       )
     "

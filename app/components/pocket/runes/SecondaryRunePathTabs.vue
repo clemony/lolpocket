@@ -14,7 +14,7 @@ const set = computed(() => s)
   <!-- secondary trigger start  -->
   <Tabs>
     <TabsList
-      base="indicator"
+
       class="field-box h-19 w-full grid-cols-5 items-center justify-evenly pt-2">
       <PathTabTrigger
         v-for="item in paths"
@@ -29,7 +29,7 @@ const set = computed(() => s)
       <!-- primary indicator  -->
       <Tabs v-model:model-value="set.primary.path">
         <TabsList
-          base="indicator"
+
           class="
             pointer-events-none absolute top-0 left-0 h-19 w-full grid-cols-5
             justify-evenly border-none bg-transparent shadow-none

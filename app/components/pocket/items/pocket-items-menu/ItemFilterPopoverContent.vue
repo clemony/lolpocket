@@ -10,10 +10,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
     variant="input"
     @open-auto-focus.prevent>
     <InputGroup
-      class="
-        h-12 rounded-b-none border-x-0 border-t-0
-        hover:ring-0
-      ">
+      class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
       <InputGroupAddon>
         <icon
           name="search"
@@ -52,10 +49,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
           </Button>
           <ItemStatsList
             wrapper-class="flex-wrap pr-8 gap-x-6 max-h-106 flex flex-col gap-y-0"
-            class="
-              gap-3.5
-              *:w-max *:gap-2.5! *:pr-6 *:pl-4
-            "
+            class="gap-3.5 *:w-max *:gap-2.5! *:pr-6 *:pl-4"
             icons
             :indicator="false"
             labels />

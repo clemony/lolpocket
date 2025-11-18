@@ -9,11 +9,7 @@ const props = defineProps<{
   <div
     class=""
     :class="
-      cn(
-        `
-          radial-progress size-22 text-b3
-          after:hidden
-        `,
+      cn('radial-progress size-22 text-b3 after:hidden',
         props.class,
       )
     "

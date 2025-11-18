@@ -39,10 +39,7 @@ const buttonProps = {
 
     <div
       :class="
-        cn(`
-          relative inline-flex w-full translate-y-1 items-center pl-11.75
-          align-bottom
-        `, { 'pl-6.5': editing },
+        cn('relative inline-flex w-full translate-y-1 items-center pl-11.75 align-bottom', { 'pl-6.5': editing },
            className,
         )
       ">

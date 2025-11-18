@@ -10,11 +10,7 @@ const { class: className, fill } = defineProps<{
     v-if="fill"
     name="up-fill"
     :class="
-      cn(
-        `
-          transition-rotate text-bc/60 duration-150
-          group-data-[state=open]/collapse:-rotate-180
-        `,
+      cn('transition-rotate text-bc/60 duration-150 group-data-[state=open]/collapse:-rotate-180',
         className,
       )
     " />
@@ -22,12 +18,7 @@ const { class: className, fill } = defineProps<{
     v-else
     name="up"
     :class="
-      cn(
-        `
-          transition-rotate text-bc/60 duration-150
-          group-hover/collapse:text-bc/100! group-hover/collapse:**:stroke-[2.5]
-          group-data-[state=open]/collapse:-rotate-180
-        `,
+      cn('transition-rotate text-bc/60 duration-150 group-hover/collapse:text-bc/100! group-hover/collapse:**:stroke-[2.5] group-data-[state=open]/collapse:-rotate-180',
         className,
       )
     " />

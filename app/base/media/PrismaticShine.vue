@@ -7,11 +7,7 @@ const props = defineProps<{
 <template>
   <TransitionFade
     :class="
-      cn(
-        `
-          pointer-events-none absolute top-0 left-0 z-3 size-full object-cover
-          transition-all duration-500
-        `,
+      cn('pointer-events-none absolute top-0 left-0 z-3 size-full object-cover transition-all duration-500',
         props.class,
       )
     ">

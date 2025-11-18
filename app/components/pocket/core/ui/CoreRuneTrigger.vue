@@ -21,9 +21,8 @@ const mainSet = computed(() =>
       :class="
         cn(`
           group/btn pointer-events-auto! z-10 size-20 cursor-pointer!
-          rounded-full fx-0
-          **:pointer-events-none
-          hover:shadow-sm hover:shadow-black/4
+          rounded-full fx-0 **:pointer-events-none hover:shadow-sm
+          hover:shadow-black/4
         `)
       "
       :set="mainSet" />

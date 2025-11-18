@@ -38,8 +38,7 @@ const pocket = computed(() =>
             v-model="pocket.name"
             size="header"
             class="
-              field-sizing-content size-full
-              **:font-bold **:tracking-tight
+              field-sizing-content size-full **:font-bold **:tracking-tight
             "
             @clear:input="pocket.name = ''">
             <template #2>

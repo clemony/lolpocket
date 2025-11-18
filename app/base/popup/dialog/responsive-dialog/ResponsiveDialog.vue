@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Dialog, Drawer } from '#components'
+import { Dialog, Sheet as Drawer } from '#components'
 
 const { drawerOnly } = defineProps<{
   drawerOnly?: boolean

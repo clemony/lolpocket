@@ -135,10 +135,7 @@ function navigate(url: string) {
                 {{ option.meta?.title || option.name }}
               </CommandItem>
               <CommandSeparator
-                class="
-                  mt-2
-                  group-last/pages:hidden
-                " />
+                class="mt-2 group-last/pages:hidden" />
             </CommandGroup>
           </TransitionExpand>
         </CommandList>

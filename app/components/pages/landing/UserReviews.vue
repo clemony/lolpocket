@@ -43,8 +43,7 @@ watchOnce(api, (api) => {
           :key="i"
           class="
             grid h-full w-full grid-cols-2 grid-rows-2 place-items-center
-            gap-x-40 gap-y-60 justify-self-center p-30
-            **:[&_p]:leading-7
+            gap-x-40 gap-y-60 justify-self-center p-30 **:[&_p]:leading-7
           ">
           <motion.div
             v-for="r in page"
@@ -71,10 +70,7 @@ watchOnce(api, (api) => {
 
               <div>
                 <p
-                  class="
-                    mt-5 w-full text-4 text-bc dst
-                    [&_u]:decoration-dotted
-                  "
+                  class="mt-5 w-full text-4 text-bc dst [&_u]:decoration-dotted"
                   v-html="r.text" />
 
                 <p
@@ -115,8 +111,7 @@ watchOnce(api, (api) => {
         <div
           class="
             tldr-20 btn pointer-events-none btn-circle size-2 bg-b3 ring-neutral
-            ring-offset-2
-            group-hover:bg-b4 group-hover:ring-1
+            ring-offset-2 group-hover:bg-b4 group-hover:ring-1
           "
           :class="{ 'bg-neutral group-hover:bg-neutral': i === i }" />
       </label>

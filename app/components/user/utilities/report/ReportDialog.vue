@@ -53,22 +53,19 @@ const onSubmit = handleSubmit((values) => {
   return validated
 })
 
-const open = shallowRef<boolean>(false)
-
-const toggleOpen = useToggle(open)
 defineExpose({
-  report: () => toggleOpen(),
+
 })
 </script>
 
 <template>
   <Dialog
-    v-model:open="open"
+    v-model:open="ts().reportOpen"
     :modal="true"
-    @update:open="!open ? resetForm() : null">
+    @update:open="!ts().reportOpen ? resetForm() : null">
     <slot
       v-if="button"
-      :report="toggleOpen()">
+      :report="ts().report()">
       <DialogTrigger as-child>
         <Button
           size="auto"

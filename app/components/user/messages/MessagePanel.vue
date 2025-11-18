@@ -42,12 +42,7 @@ defineOptions({
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"
           :class="
-            cn(
-              `
-                group/msg flex w-full flex-col items-start gap-2 border-b
-                border-b-b3 p-4 leading-tight whitespace-nowrap
-                last:border-b-0
-              `,
+            cn('group/msg flex w-full flex-col items-start gap-2 border-b border-b-b3 p-4 leading-tight whitespace-nowrap last:border-b-0',
               {
                 ' bg-b1/80 ': !message.read,
                 'bg-transparent hover:bg-sidebar-accent opacity-70':
@@ -67,9 +62,8 @@ defineOptions({
                 <span
                   class="
                     relative flex h-5 items-center justify-self-end text-1
-                    text-bc/80
-                    *:absolute *:right-4 *:transition-opacity *:duration-200
-                    *:first:opacity-0
+                    text-bc/80 *:absolute *:right-4 *:transition-opacity
+                    *:duration-200 *:first:opacity-0
                     group-hover/msg:*:first:opacity-100
                     group-hover/msg:*:last:pointer-events-none
                     group-hover/msg:*:last:opacity-0

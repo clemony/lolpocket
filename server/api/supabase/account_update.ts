@@ -1,5 +1,5 @@
-import { readBody } from "h3"
-import { requireUser } from "../client.supabase" // assuming you export it
+import { readBody } from 'h3'
+import { requireUser } from '../client.supabase' // assuming you export it
 
 export default defineEventHandler(async (event) => {
   const { client, user } = await requireUser(event)
@@ -11,16 +11,17 @@ export default defineEventHandler(async (event) => {
   )
 
   // nothing to update
-  if (!Object.keys(patch).length) return { data: null }
+  if (!Object.keys(patch).length)
+    return { data: null }
 
   // enforce correct uuid linkage
   patch.uuid = user.id
 
   const { data, error } = await client
-    .from("account")
+    .from('account')
     .upsert(patch, {
-      onConflict: "uuid",
       ignoreDuplicates: false,
+      onConflict: 'uuid',
     })
     .select()
     .single()

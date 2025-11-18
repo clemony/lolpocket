@@ -7,12 +7,7 @@ const props = defineProps<{
 <template>
   <DropdownMenuSubTrigger
     :class="
-      cn(
-        `
-          cursor-pointer gap-3 text-2 text-nc/90!
-          focus:bg-b3/15
-          data-[state=open]:bg-b3/15
-        `,
+      cn('cursor-pointer gap-3 text-2 text-nc/90! focus:bg-b3/15 data-[state=open]:bg-b3/15',
         props.class,
       )
     ">

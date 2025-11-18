@@ -52,9 +52,9 @@ onMounted(() => (selected.value = props.currentValue))
           :disabled="selected === ss.name"
           class="
             size-16 cursor-pointer! rounded-lg shadow-sm
-            transition-[colors,opacity] duration-400
-            hover:ring-2 hover:ring-bc/60
-            disabled:opacity-70 disabled:inset-shadow-sm disabled:grayscale
+            transition-[colors,opacity] duration-400 hover:ring-2
+            hover:ring-bc/60 disabled:opacity-70 disabled:inset-shadow-sm
+            disabled:grayscale
           ">
           <input
             id="spells"

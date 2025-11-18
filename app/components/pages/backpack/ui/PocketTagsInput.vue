@@ -83,12 +83,7 @@ function deleteTag(tag: string) {
                   size="md"
                   variant="ghost"
                   :class="
-                    cn(
-                      `
-                        size-full items-center justify-start gap-px! rounded-lg
-                        px-3 text-bc/80 duration-0
-                        hover:bg-b2/60 hover:text-bc hover:inset-shadow-none
-                      `,
+                    cn('size-full items-center justify-start gap-px! rounded-lg px-3 text-bc/80 duration-0 hover:bg-b2/60 hover:text-bc hover:inset-shadow-none',
                       { 'btn-active !bg-b2/20': tags.includes(item) },
                     )
                   ">
@@ -106,8 +101,7 @@ function deleteTag(tag: string) {
                 v-tippy="'Delete Tag'"
                 variant="ghost"
                 class="
-                  btn-square h-9 opacity-0 duration-0
-                  not-hover:**:text-bc/60
+                  btn-square h-9 opacity-0 duration-0 not-hover:**:text-bc/60
                   group-hover/tag:opacity-100
                 "
                 @click="deleteTag(item)">

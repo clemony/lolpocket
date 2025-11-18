@@ -9,10 +9,7 @@
     class="w-full px-3">
     <CollapsibleTrigger as-child>
       <Label
-        class="
-          group/collapse grow
-          hover:underline
-        ">
+        class="group/collapse grow hover:underline">
         <icon
           name="ci:heart-02"
           class="size-3.75 opacity-80 dst" />

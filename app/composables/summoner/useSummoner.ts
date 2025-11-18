@@ -1,15 +1,14 @@
-import { matchFilters, matchFiltersIgnoreChampion } from "#shared/references"
-import type { MatchFilter } from "~/stores"
-import { fetchSummonerMastery } from "./helpers"
+import { bgArt } from '#shared/data'
+import type { MatchFilter } from '~/stores'
 
-export const SummonerKey = Symbol("SummonerProvider")
+export const SummonerKey = Symbol('SummonerProvider')
 
 export function useSummonerProvider(identifier: string) {
   const loading = ref(false)
   const ready = ref(false)
   const summoner = ref<Summoner | null>(null)
   const currentPuuid = ref<string | null>(
-    typeof identifier === "string" ? identifier : null
+    typeof identifier === 'string' ? identifier : null
   )
 
   const { getMatchesForSummoner } = useIndexedDB()
@@ -18,11 +17,11 @@ export function useSummonerProvider(identifier: string) {
 
   // --- FILTER STATE ---
   const filter = ref<MatchFilter>({
-    ally: "",
-    champion: "",
+    ally: '',
+    champion: '',
     patch: 0,
     queue: 0,
-    role: "ALL",
+    role: 'ALL',
   })
 
   // --- FILTER HELPERS ---
@@ -35,46 +34,48 @@ export function useSummonerProvider(identifier: string) {
 
   function clearFilters() {
     filter.value = {
-      ally: "",
-      champion: "",
+      ally: '',
+      champion: '',
       patch: 0,
       queue: 0,
-      role: "ALL",
+      role: 'ALL',
     }
   }
 
   // --- FILTERED MATCHES ---
   const matches = computed(() => {
     if (
-      !filter.value ||
-      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
+      !filter.value
+      || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')
     ) {
       return allMatches.value
     }
-    return allMatches.value.filter((match) =>
+    return allMatches.value.filter(match =>
       matchFilters(currentPuuid.value!, match, filter.value)
     )
   })
 
   const filteredChampionList = computed(() => {
     if (
-      !filter.value ||
-      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
+      !filter.value
+      || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')
     ) {
       return allMatches.value
     }
-    return allMatches.value.filter((match) =>
+    return allMatches.value.filter(match =>
       matchFiltersIgnoreChampion(currentPuuid.value!, match, filter.value)
     )
   })
 
   const loadMatchesFromDB = async () => {
-    if (!summoner.value) return
+    if (!summoner.value)
+      return
     allMatches.value = await getMatchesForSummoner(summoner.value.puuid)
   }
 
   const findSummoner = async (options?: { force?: boolean }) => {
-    if (!currentPuuid.value) return
+    if (!currentPuuid.value)
+      return
     loading.value = true
     ready.value = false
 
@@ -85,7 +86,8 @@ export function useSummonerProvider(identifier: string) {
       summoner.value = resolved
 
       await loadMatchesFromDB()
-    } finally {
+    }
+    finally {
       loading.value = false
       ready.value = true
     }
@@ -93,9 +95,20 @@ export function useSummonerProvider(identifier: string) {
 
   // --- FETCH MASTERY ---
   const fetchMastery = async () => {
-    if (!currentPuuid.value) return null
+    if (!currentPuuid.value)
+      return null
     return await fetchSummonerMastery(currentPuuid.value)
   }
+
+  // --- SPLASH ---
+  const splash = computed(() => {
+    if (!allMatches.value.length)
+      return getRandom(Object.values(bgArt))
+    const c = useChampions(currentPuuid.value, allMatches.value)?.top()?.key
+    if (!c)
+      return getRandom(Object.values(bgArt))
+    else return getSplash(c, 'uncentered', getRandom(skinIndex[c]))
+  })
 
   // --- WATCH PUUID ---
   watch(currentPuuid, () => findSummoner(), { immediate: true })
@@ -120,6 +133,7 @@ export function useSummonerProvider(identifier: string) {
         opt?.champion
       ),
     findSummoner,
+    splash,
 
     // filters
     clearFilters,
@@ -134,8 +148,9 @@ export function useSummonerProvider(identifier: string) {
 
     // fetch
     fetchNewMatches: async () => {
-      if (!summoner.value) return
-      allMatches.value = await useFetchMatches(currentPuuid.value)
+      if (!summoner.value)
+        return
+      allMatches.value = await useFetchMatches(summoner.value)
       summoner.value.updatedMatch = Date.now()
     },
     loadMatches: () => loadMatchesFromDB,
@@ -150,9 +165,8 @@ export function useSummonerInject() {
 
   if (!state) {
     throw new Error(
-      "No Summoner provider found. Make sure provideSummoner is called in a parent component."
+      'No Summoner provider found. Make sure provideSummoner is called in a parent component.'
     )
   }
-
   return state
 }

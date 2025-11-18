@@ -46,17 +46,15 @@ const target = shallowRef<HTMLButtonElement>(null)
     <tippy
       placement="right"
       :tag="null"
-      append-to="parent"
       content-class="     w!-[calc(100%-14px)] max-w-[calc(100%-14px)]!"
       animation="shift-toward-subtle"
       :arrow="false"
       :interactive="true"
-      theme="base, tippy-clean">
+      theme="base tippy-clean">
       <PopoverItem
         class="
-          group/t h-10 w-full
-          aria-expanded:btn-active aria-expanded:border-b3/60
-          aria-expanded:bg-b2/80 aria-expanded:fx-1
+          group/t h-10 w-full aria-expanded:btn-active
+          aria-expanded:border-b3/60 aria-expanded:bg-b2/80 aria-expanded:fx-1
         "
         @click="closeAndNavigate('/settings')">
         <icon
@@ -67,8 +65,7 @@ const target = shallowRef<HTMLButtonElement>(null)
         <icon
           name="right"
           class="
-            absolute right-3 size-3.5 opacity-50
-            group-open:opacity-60
+            absolute right-3 size-3.5 opacity-50 group-open:opacity-60
             group-hover:opacity-60
           " />
       </PopoverItem>

@@ -14,10 +14,7 @@ const summoner = await ss().resolveByPuuid(as().account?.puuid)
 
       <div class="flex w-full flex-col justify-end gap-px">
         <div
-          class="
-            flex items-end gap-3
-            *:leading-none
-          ">
+          class="flex items-end gap-3 *:leading-none">
           <SummonerName
             class="font-serif text-6! font-bold text-bc/94 drop-shadow-sm" />
           <SummonerTag

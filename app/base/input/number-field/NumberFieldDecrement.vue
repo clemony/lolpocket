@@ -20,11 +20,7 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="decrement"
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          absolute top-1/2 left-0 z-2 -translate-y-1/2 cursor-pointer p-3
-          disabled:cursor-not-allowed disabled:opacity-20
-        `,
+      cn('absolute top-1/2 left-0 z-2 -translate-y-1/2 cursor-pointer p-3 disabled:cursor-not-allowed disabled:opacity-20',
         props.class,
       )
     ">

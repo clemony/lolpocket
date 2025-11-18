@@ -22,13 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
     :as="as"
     :as-child="asChild"
     :class="
-      cn(
-        `
-          flex items-center gap-2 rounded-md border bg-b2 px-4 font-medium
-          shadow-xs
-          [&_svg]:pointer-events-none
-          [&_svg:not([class*=\'size-\'])]:size-4
-        `,
+      cn('flex items-center gap-2 rounded-md border bg-b2 px-4 font-medium shadow-xs [&_svg]:pointer-events-none [&_svg:not([class*=\'size-\'])]:size-4',
         props.class,
       )
     ">

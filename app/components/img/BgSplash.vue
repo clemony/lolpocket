@@ -14,9 +14,9 @@ const {
 }>()
 
 const img = useImage()
-const { scrollYProgress } = useScrollInject()
+const { scrollY } = useScrollInject()
 
-const y = useTransform(scrollYProgress, [0, 1], ['0%', '-80%'], {
+const y = useTransform(scrollY, [0, 200], ['0%', '2%'], {
   ease: easeInOut,
 })
 
@@ -29,20 +29,14 @@ const bg = computed(
   <!--  translate-x-[30%] -->
   <div
     :class="
-      cn('absolute -top-16 isolate w-screen bg-tint-b2/30 dss', {
+      cn('absolute -top-16 isolate flex w-screen justify-end bg-tint-b2/30 dss', {
         'h-120': size === 'header',
         'h-[90vh]': size === 'full',
       })
     ">
     <div
       :class="
-        cn(
-          `
-            before:from-bg-tint-b2/60 before:absolute before:z-1
-            before:size-full before:bg-linear-to-r before:to-transparent
-            pointer-events-none relative top-0 -right-4 bottom-32 flex size-full
-            grid-rows-1 flex-nowrap
-          `,
+        cn('before:from-bg-tint-b2/60 before:absolute before:z-1 before:size-full before:bg-linear-to-r before:to-transparent pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen grid-rows-1 flex-nowrap justify-end justify-items-end',
           {
             'mask-l-from-20% mask-l-to-66% before:from-0% before:to-75% ':
               slice,
@@ -57,30 +51,24 @@ const bg = computed(
         v-if="!slice"
         :style="{
           backgroundImage: bg,
-          backgroundPositionX: size === 'full' ? '5%' : '140%',
+          backgroundPositionX: size === 'full' ? '0' : '0',
           backgroundPositionY: y,
           backgroundSize: size === 'full' ? 'cover' : 'auto',
         }"
         :class="
-          cn(
-            `
-              z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto
-              bg-fixed bg-no-repeat blur-sm duration-100
-            `,
+          cn('z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto bg-fixed bg-no-repeat blur-sm duration-100',
           )
         " />
 
       <motion.div
         :style="{
+          backgroundPositionX: size === 'full' ? '0' : '0',
+          backgroundSize: 'auto',
           backgroundImage: bg,
           translateY: y,
         }"
         :class="
-          cn(
-            `
-              w-80% z-0 col-start-2 size-full min-w-7xl mask-l-from-98% bg-cover
-              bg-fixed bg-no-repeat contrast-110 grayscale-10 duration-100
-            `,
+          cn('z-0 size-full mask-l-from-98% bg-no-repeat contrast-110 grayscale-10 duration-100',
           )
         " />
       <div

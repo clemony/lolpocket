@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
   placeholder?: string
-}>()
+}>(), {
+  placeholder: '',
+})
 
 const target = useTemplateRef('target')
 function focusInput() {
@@ -25,17 +27,8 @@ const forwarded = useForwardPropsEmits(delegated)
     :placeholder
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          peer flex-1 rounded-none border-0 bg-transparent shadow-none
-          inset-shadow-none ring-offset-transparent outline-0
-          focus-within:ring-0
-          hover:ring-0
-          focus:ring-0
-          focus-visible:ring-0 focus-visible:ring-transparent
-          dark:bg-transparent
-        `,
-        props.class,
+      cn('peer flex-1 rounded-none border-0 bg-transparent shadow-none inset-shadow-none ring-offset-transparent outline-0 focus-within:ring-0 hover:ring-0 focus:ring-0 focus-visible:ring-0 focus-visible:ring-transparent dark:bg-transparent',
+         props.class,
       )
     " />
 </template>

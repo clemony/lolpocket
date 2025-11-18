@@ -14,8 +14,7 @@
           class="
             dr-30 expand-hide pointer-events-none mt-0.5 flex translate-y-3
             items-center gap-1 pl-3 opacity-0 transition-[translate_opacity]
-            ease-in-out
-            group-hover/up:translate-y-0 group-hover/up:opacity-100
+            ease-in-out group-hover/up:translate-y-0 group-hover/up:opacity-100
           ">
           up
           <icon

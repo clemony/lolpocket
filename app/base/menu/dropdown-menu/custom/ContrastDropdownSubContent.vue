@@ -15,11 +15,7 @@ const props = defineProps<{
     <DropdownMenuSubContent
       v-bind="$attrs"
       :class="
-        cn(
-          `
-            bgneutral/74 ml-1 rounded-lg border border-b4/30 p-1 text-2
-            text-nc/80 backdrop-blur-lg
-          `,
+        cn('bgneutral/74 ml-1 rounded-lg border border-b4/30 p-1 text-2 text-nc/80 backdrop-blur-lg',
           props.class,
         )
       ">

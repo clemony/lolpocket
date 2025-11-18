@@ -48,9 +48,7 @@ const { filtered, filters, setFilter } = useItemFilter()
         input-class=" text-nc"
         class="
           borderneutral/30 sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg
-          border-4 bg-accent! shadow-none
-          **:text-nc!
-          [&_svg]:size-4
+          border-4 bg-accent! shadow-none **:text-nc! [&_svg]:size-4
         "
         set-focus
         @update:query="(e) => e" />

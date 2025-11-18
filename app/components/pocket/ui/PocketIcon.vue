@@ -17,11 +17,7 @@ const loaded = ref(false)
 <template>
   <label
     :class="
-      cn(
-        `
-          relative grid size-full shrink-0 place-items-center overflow-hidden
-          bg-neutral text-nc
-        `,
+      cn('relative grid size-full shrink-0 place-items-center overflow-hidden bg-neutral text-nc',
         {
           'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6':
             !transparent || (transparent && !img),
@@ -34,11 +30,7 @@ const loaded = ref(false)
       :img="img"
       alt="pocket icon"
       :class="
-        cn(
-          `
-            pointer-events-none absolute z-2 mt-1.5 size-full shrink-0 scale-160
-            object-center opacity-0 transition-opacity duration-300
-          `,
+        cn('pointer-events-none absolute z-2 mt-1.5 size-full shrink-0 scale-160 object-center opacity-0 transition-opacity duration-300',
           { 'opacity-100': loaded },
           imgClass,
         )
@@ -53,11 +45,7 @@ const loaded = ref(false)
     <span
       v-else
       :class="
-        cn(
-          `
-            absolute z-0 grid size-full place-items-center text-4 font-semibold
-            text-nc uppercase subpixel-antialiased
-          `,
+        cn('absolute z-0 grid size-full place-items-center text-4 font-semibold text-nc uppercase subpixel-antialiased',
           { '!text-[0.74rem] mt-px font-semibold': size && size === 'sm' },
         )
       ">

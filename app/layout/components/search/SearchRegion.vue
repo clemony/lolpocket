@@ -24,10 +24,7 @@ watch(
 <template>
   <Presence
     :present
-    class="
-      opacity-0
-      data-[present=true]:opacity-100
-    ">
+    class="opacity-0 data-[present=true]:opacity-100">
     <LazyPopover
       @close-auto-focus.prevent
       @click.stop>
@@ -40,8 +37,7 @@ watch(
           size="sm"
           class="
             z-1 flex w-14 flex-nowrap items-center text-2! tracking-[0.5px]
-            text-nowrap text-bc/60 lowercase
-            *:first:text-bc/60
+            text-nowrap text-bc/60 lowercase *:first:text-bc/60
           ">
           <span class="relative -mr-1 grid place-items-center">
             <icon

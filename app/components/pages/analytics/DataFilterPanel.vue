@@ -34,11 +34,8 @@ const entries = [
         v-model:model-value="tabs"
         class="max-w-100">
         <TabsList
-          base="indicator"
-          class="
-            grid-cols-3
-            *:text-3!
-          ">
+
+          class="grid-cols-3 *:text-3!">
           <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"

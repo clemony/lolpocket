@@ -32,12 +32,7 @@ const { filterState } = useCommand()
       v-bind="{ ...forwarded, ...$attrs }"
       v-model="filterState.search"
       :class="
-        cn(
-          `
-            flex h-10 w-full rounded-md bg-transparent py-3 text-2 outline-none
-            placeholder:text-bc/50
-            disabled:cursor-not-allowed disabled:opacity-50
-          `,
+        cn('flex h-10 w-full rounded-md bg-transparent py-3 text-2 outline-none placeholder:text-bc/50 disabled:cursor-not-allowed disabled:opacity-50',
           props.class,
         )
       " />

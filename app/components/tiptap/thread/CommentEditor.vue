@@ -62,13 +62,7 @@ onMounted (() => {
   <button
     ref="target"
     :class="
-      cn(
-        `
-          group/text relative flex min-h-[80px] w-full cursor-text flex-col
-          justify-between rounded-lg border border-b3/80 p-2 text-start ring
-          inset-shadow-xs ring-transparent transition-all duration-200
-          focus-within:ring-bc/60
-        `,
+      cn('group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border border-b3/80 p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200 focus-within:ring-bc/60',
         props.class,
       )
     "
@@ -106,10 +100,7 @@ onMounted (() => {
           @click="editor.commands.undo()">
           <icon
             name="lucide:undo"
-            class="
-              size-4 opacity-60
-              group-hover/button:opacity-100
-            " />
+            class="size-4 opacity-60 group-hover/button:opacity-100" />
         </Button>
         <Button
           variant="ghost"
@@ -120,10 +111,7 @@ onMounted (() => {
           @click="editor.commands.redo()">
           <icon
             name="lucide:redo"
-            class="
-              size-4 opacity-60
-              group-hover/button:opacity-100
-            " />
+            class="size-4 opacity-60 group-hover/button:opacity-100" />
         </Button>
       </div>
       <div class="flex items-center gap-6">

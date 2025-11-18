@@ -53,8 +53,7 @@ onMounted(() => {
         toggleVariants({ variant: currentVariant?.variant, size, base, hover }),
         `
           group relative w-max cursor-pointer overflow-hidden rounded-full
-          border px-3 py-0! text-center
-          data-[state=on]:bg-neutral/90
+          border px-3 py-0! text-center data-[state=on]:bg-neutral/90
           hover:data-[state=on]:**:text-bc
         `,
         props.class,
@@ -69,20 +68,14 @@ onMounted(() => {
             `
               absolute -left-4 size-2 shrink-0 -translate-x-4 scale-100
               rounded-full p-0! shadow-none drop-shadow-xs transition-all
-              duration-350
-              group-hover:scale-[110]
+              duration-350 group-hover:scale-[110]
             `,
           )
         "></div>
 
       <span
         :class="
-          cn(
-            `
-              mx-auto flex inline-block! flex-nowrap items-center gap-1
-              text-nowrap whitespace-nowrap transition-all duration-350
-              group-hover:translate-x-12 group-hover:opacity-0
-            `,
+          cn('mx-auto flex inline-block! flex-nowrap items-center gap-1 text-nowrap whitespace-nowrap transition-all duration-350 group-hover:translate-x-12 group-hover:opacity-0',
           )
         ">
         <icon

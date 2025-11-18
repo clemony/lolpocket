@@ -1,16 +1,16 @@
-import { toast } from "~/composables/utils/useToast"
-import { heyGoodJob } from "~~/shared/data/good-job"
-import { newPocket } from "./newPocket"
+import { heyGoodJob } from '~~/shared/data/good-job'
+import { toast } from '~/composables/utils/useToast'
+import { newPocket } from './newPocket'
 
 export async function addPocket(randomize?: boolean) {
   const p = randomize ? newRandomPocket() : newPocket()
 
   if (p) {
-    console.log("📎 - addPocket - p:", p)
-    const { error } = await $fetch("/api/supabase/pocket_upsert", {
+    console.log('📎 - addPocket - p:', p)
+    const { error } = await $fetch('/api/supabase/pocket_upsert', {
       body: p,
-      headers: useRequestHeaders(["cookie"]),
-      method: "POST",
+      headers: useRequestHeaders(['cookie']),
+      method: 'POST',
     })
 
     if (!error) {
@@ -18,11 +18,12 @@ export async function addPocket(randomize?: boolean) {
 
       toast({
         title: `Created ${p.name}!`,
-        color: "neutral",
+        color: 'neutral',
         description: `${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}`,
-        icon: "tick",
+        icon: 'tick',
       })
-    } else {
+    }
+    else {
       sendErrorToast()
     }
   }

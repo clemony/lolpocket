@@ -121,8 +121,7 @@ const { selectedIndex, selectedItem } = useGridFocusTrap(target, {
         name="hash"
         class="
           size-4! opacity-60 transition-all duration-100
-          group-focus-within/text:opacity-90
-          group-hover/text:opacity-90
+          group-focus-within/text:opacity-90 group-hover/text:opacity-90
         " />
     </PopoverTrigger>
 
@@ -220,11 +219,8 @@ const { selectedIndex, selectedItem } = useGridFocusTrap(target, {
               :key="i"
               :disabled="i === 0 && !query.length"
               class="
-                group/btn h-7 w-full
-                *:opacity-60
-                hover:*:opacity-100
-                disabled:**:text-bc/40
-                on:*:opacity-100 on:**:text-nc!
+                group/btn h-7 w-full *:opacity-60 hover:*:opacity-100
+                disabled:**:text-bc/40 on:*:opacity-100 on:**:text-nc!
               "
               :value="i">
               <Icon

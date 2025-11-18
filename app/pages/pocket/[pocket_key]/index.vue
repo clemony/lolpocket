@@ -38,10 +38,7 @@ console.log(ts().threads)
     <!-- Header block -->
     <div
       :class="
-        cn(`
-          pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh]
-          min-h-[70vh] grid-cols-2 overflow-hidden
-        `)
+        cn('pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden')
       ">
       <div
         class="
@@ -61,12 +58,8 @@ console.log(ts().threads)
     <div
       ref="el"
       :class="
-        cn(
-          `
-            absolute inset-0 top-0 max-w-screen overflow-x-hidden
-            overflow-y-auto pt-[70vh]
-          `,
-          {},
+        cn('absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto pt-[70vh]',
+           {},
         )
       ">
       <!-- Sticky Tabs (now ABOVE parent header) -->

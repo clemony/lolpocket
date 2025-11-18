@@ -18,10 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="
       cn(
         buttonVariants({ variant: 'outline', size: 'sq-10' }),
-        `
-          size-8 bg-transparent p-0 opacity-50
-          hover:opacity-100
-        `,
+        `size-8 bg-transparent p-0 opacity-50 hover:opacity-100`,
         props.class,
       )
     "

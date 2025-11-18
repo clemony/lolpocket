@@ -47,10 +47,7 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
         {{ is().filters.rank }}
         <icon
           name="x"
-          class="
-            size-4
-            **:stroke-[2.1]
-          " />
+          class="size-4 **:stroke-[2.1]" />
       </Button>
       <template v-if="is().filters.tags.length">
         <ItemTagButton

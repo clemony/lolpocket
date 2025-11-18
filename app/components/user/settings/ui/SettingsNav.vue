@@ -5,8 +5,8 @@ const route = useRoute()
 <template>
   <nav
     class="
-      flex size-full space-x-2 gap-y-1 overflow-hidden pr-4 pl-0.5
-      lg:flex-col lg:space-x-0
+      flex size-full space-x-2 gap-y-1 overflow-hidden pr-4 pl-0.5 lg:flex-col
+      lg:space-x-0
     ">
     <Button
       v-for="item in route.matched[0].children"
@@ -15,11 +15,7 @@ const route = useRoute()
       size="xl"
       variant="link"
       :class="
-        cn(
-          `
-            h-12 w-full justify-start text-left text-4! font-medium text-bc/80
-            capitalize underline-offset-4
-          `,
+        cn('h-12 w-full justify-start text-left text-4! font-medium text-bc/80 capitalize underline-offset-4',
           {
             'btn-active pointer-events-none font-semibold':
               route.path === item.path,

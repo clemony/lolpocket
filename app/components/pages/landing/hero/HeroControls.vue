@@ -70,8 +70,7 @@ const isPlaying = ref(true)
               v-model="as().settings.motion as boolean"
               class="
                 scale-85 justify-self-end border-b4/50 from-lime-400/90 to-ah/90
-                to-60% inset-shadow-xs
-                data-[state=checked]:bg-linear-to-br
+                to-60% inset-shadow-xs data-[state=checked]:bg-linear-to-br
                 data-[state=unchecked]:bg-b3/40
               " />
           </div>

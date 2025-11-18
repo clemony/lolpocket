@@ -15,11 +15,7 @@ const props = defineProps<{
       <icon
         name="fa:caret-down"
         :class="
-          cn(
-            `
-              textneutral/77 mask-clip-bottom absolute bottom-3 size-7!
-              stroke-accent stroke-[0.5] drop-shadow-xs
-            `,
+          cn('textneutral/77 mask-clip-bottom absolute bottom-3 size-7! stroke-accent stroke-[0.5] drop-shadow-xs',
             props.class,
           )
         " />

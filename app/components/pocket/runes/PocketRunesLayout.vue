@@ -66,7 +66,7 @@ function handleDelete() {
           v-model:model-value="set.primary.path"
           @update:model-value="handlePath1()">
           <TabsList
-            base="indicator"
+
             class="
               field-box h-19 w-full grid-cols-5 items-center justify-evenly
             ">
@@ -144,10 +144,7 @@ function handleDelete() {
           :set />
       </div>
       <div
-        class="
-          flex h-full w-32 flex-col items-center gap-6
-          *:rounded-full
-        ">
+        class="flex h-full w-32 flex-col items-center gap-6 *:rounded-full">
         <Keystone
           :id="set.keystone"
           class="size-16"

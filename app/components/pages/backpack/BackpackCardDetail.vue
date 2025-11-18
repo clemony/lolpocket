@@ -45,8 +45,7 @@ const bg = computed(() => {
       </div>
       <div
         class="
-          ml-auto text-2 text-bc/60
-          *:flex *:items-center *:justify-end *:gap-2
+          ml-auto text-2 text-bc/60 *:flex *:items-center *:justify-end *:gap-2
         ">
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
@@ -68,8 +67,7 @@ const bg = computed(() => {
       <div
         class="
           relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-[170%_55%]
-          bg-no-repeat inset-shadow-sm inset-shadow-black/20
-          before:z-0
+          bg-no-repeat inset-shadow-sm inset-shadow-black/20 before:z-0
         "
         :style="bg" />
     </div>

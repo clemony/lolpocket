@@ -26,29 +26,13 @@ const modelValue = ref<boolean>(false)
   <SwitchRoot
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          peer relative inline-flex h-6 w-12 w-25 shrink-0 cursor-pointer
-          items-center overflow-hidden rounded-full border shadow-xs ring-bc/50
-          ring-offset-b2 drop-shadow-xs transition-colors
-          hover:ring hover:ring-offset-3
-          has-disabled:bg-transparent!
-          data-[state=checked]:border-neutral/60
-          data-[state=unchecked]:border-b3 data-[state=unchecked]:bg-b3/30
-          [&_#switch-thumb]:z-2 [&_#switch-thumb]:aspect-square
-          [&_#switch-thumb]:h-[90%] [&_#switch-thumb]:w-auto
-          [&_#switch-thumb]:shrink-0 [&_#switch-thumb]:translate-x-0.25
-          on:[&_#switch-thumb]:translate-x-13
-        `,
+      cn('peer relative inline-flex h-6 w-12 w-25 shrink-0 cursor-pointer items-center overflow-hidden rounded-full border shadow-xs ring-bc/50 ring-offset-b2 drop-shadow-xs transition-colors hover:ring hover:ring-offset-3 has-disabled:bg-transparent! data-[state=checked]:border-neutral/60 data-[state=unchecked]:border-b3 data-[state=unchecked]:bg-b3/30 [&_#switch-thumb]:z-2 [&_#switch-thumb]:aspect-square [&_#switch-thumb]:h-[90%] [&_#switch-thumb]:w-auto [&_#switch-thumb]:shrink-0 [&_#switch-thumb]:translate-x-0.25 on:[&_#switch-thumb]:translate-x-13',
 
         //disabled
         'disabled:cursor-not-allowed disabled:opacity-50',
 
         //hover
-        `
-          ring-bc/50 ring-offset-b2
-          hover:ring hover:ring-offset-1
-        `,
+        `ring-bc/50 ring-offset-b2 hover:ring hover:ring-offset-1`,
 
         // focus
         `
@@ -86,13 +70,7 @@ const modelValue = ref<boolean>(false)
     <SwitchThumb
       id="switch-thumb"
       :class="
-        cn(
-          `
-            pointer-events-none z-2 block grid size-4.5 shrink-0
-            translate-x-0.25 place-items-center rounded-full bg-b1 shadow-lg
-            ring-0 transition-transform
-            on:translate-x-6.75
-          `,
+        cn('pointer-events-none z-2 block grid size-4.5 shrink-0 translate-x-0.25 place-items-center rounded-full bg-b1 shadow-lg ring-0 transition-transform on:translate-x-6.75',
         )
       ">
       <slot name="thumb" />

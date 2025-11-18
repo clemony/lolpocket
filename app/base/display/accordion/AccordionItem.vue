@@ -17,11 +17,7 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="accordion-item"
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          border-b border-b-b3
-          last:border-b-0
-        `,
+      cn('border-b border-b-b3 last:border-b-0',
         props.class,
       )
     ">

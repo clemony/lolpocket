@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
   key: 'l',
-  name: 'live',
-  title: 'live match',
+  title: 'live',
   icon: 'mingcute:sound-line-line',
   iconStyle: '',
-  order: 2,
+  order: 3,
 })
 </script>
 

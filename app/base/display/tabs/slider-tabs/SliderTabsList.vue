@@ -25,10 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
     "
     v-bind="forwarded">
     <SliderRange
-      class="
-        absolute h-full bg-neutral
-        data-[orientation=vertical]:w-full
-      " />
+      class="absolute h-full bg-neutral data-[orientation=vertical]:w-full" />
     <slot />
   </SliderTrack>
 </template>

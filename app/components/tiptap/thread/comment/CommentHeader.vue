@@ -29,17 +29,10 @@ const {
       <slot />
       <CollapsibleTrigger
         :disabled="!hasReplies"
-        class="
-          pointer-events-auto size-5
-          disabled:opacity-0
-        ">
+        class="pointer-events-auto size-5 disabled:opacity-0">
         <CaretFlip
           :class="
-            cn(
-              `
-                -translate-x-px text-bc/40
-                hover:text-bc/90!
-              `,
+            cn('-translate-x-px text-bc/40 hover:text-bc/90!',
               { '!text-bc/90': hovered },
             )
           " />
@@ -67,10 +60,7 @@ const {
       </button>
 
       <div
-        class="
-          flex items-center gap-2
-          *:align-bottom
-        ">
+        class="flex items-center gap-2 *:align-bottom">
         <span class="text-1 opacity-60">
           {{ parseISOStringToRelative(comment?.created) }}
         </span>
@@ -89,8 +79,8 @@ const {
             class="inline size-3 align-middle opacity-60" />
           <span
             class="
-              pointer-events-auto ml-1 opacity-70
-              hover:underline hover:opacity-100
+              pointer-events-auto ml-1 opacity-70 hover:underline
+              hover:opacity-100
             ">
             {{ parseISOStringToDate(comment.updated) }}
           </span>

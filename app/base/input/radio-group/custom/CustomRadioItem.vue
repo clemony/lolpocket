@@ -10,13 +10,7 @@ const props = defineProps<{
 <template>
   <RadioGroupItem
     :class="
-      cn(
-        `
-          group relative aspect-square size-5 rounded-full border border-bc
-          text-bc shadow-sm outline outline-bc
-          focus-visible:ring-1 focus-visible:ring-b2
-          disabled:cursor-not-allowed disabled:opacity-50
-        `,
+      cn('group relative aspect-square size-5 rounded-full border border-bc text-bc shadow-sm outline outline-bc focus-visible:ring-1 focus-visible:ring-b2 disabled:cursor-not-allowed disabled:opacity-50',
         props.class,
       )
     ">

@@ -107,16 +107,10 @@ const itemVariants = {
             <Element
               shape="circle"
               variant="neutral"
-              class="
-                size-18!
-                *:transition-all *:duration-300
-              ">
+              class="size-18! *:transition-all *:duration-300">
               <icon
                 name="up"
-                class="
-                  absolute
-                  group-closed:opacity-0
-                " />
+                class="absolute group-closed:opacity-0" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>

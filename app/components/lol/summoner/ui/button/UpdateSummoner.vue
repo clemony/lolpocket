@@ -35,7 +35,7 @@ const {
 const tippy = computed(() =>
   !cooldown.value?.seconds
     ? summoner.value.updatedMatch
-      ? `Last updated ${summoner.value.updatedMatch}`
+      ? `Last updated ${formatTimeAgo(summoner.value.updatedMatch)}`
       : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
 )
@@ -62,12 +62,7 @@ const tippy = computed(() =>
         v-if="!cooldown"
         name="reset"
         :class="
-          cn(
-            `
-              size-5 dst transition-all duration-200
-              **:stroke-[1.8]
-              group-hover/load:opacity-100
-            `,
+          cn('size-5 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
             {
               'animate-rotate': isLoading,
             },
@@ -76,19 +71,16 @@ const tippy = computed(() =>
 
       <div
         v-if="cooldown"
-        class="
-          radial-progress absolute place-self-center border-2 border-neutral
-          bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
-          **:text-nc
-        "
+        :aria-valuemax="120"
+        class="radial-progress absolute place-self-center"
         :style="{
           '--value': cooldown?.seconds,
-          '--size': '2rem',
-          '--thickness': '2px',
+          '--size': '3rem',
+          '--thickness': '4px',
         }"
         :aria-valuenow="cooldown?.percent"
         role="progressbar">
-        <span class="grid size-full place-items-center rounded-full bg-neutral">
+        <span class="absolute place-self-center text-1 font-semibold">
           {{ cooldown?.seconds }}
         </span>
       </div>

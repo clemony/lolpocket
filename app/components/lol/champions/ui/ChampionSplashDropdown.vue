@@ -9,10 +9,7 @@ const { champion } = defineProps<{
 <template>
   <Popover>
     <PopoverTrigger
-      class="
-        btn btn-circle size-11 btn-ghost
-        hover:border-b3 hover:bg-b2
-      ">
+      class="btn btn-circle size-11 btn-ghost hover:border-b3 hover:bg-b2">
       <div
         v-if="champion"
         :key="champion"

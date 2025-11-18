@@ -26,11 +26,7 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
-          cn(
-            `
-              relative grid size-11 place-items-center
-              *:absolute
-            `,
+          cn('relative grid size-11 place-items-center *:absolute',
             {
               'bg-b2/30': pinned,
             },
@@ -45,18 +41,12 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         <icon
           v-if="!pinned"
           name="pin"
-          class="
-            size-4.75
-            **:stroke-[2]
-          " />
+          class="size-4.75 **:stroke-[2]" />
 
         <icon
           v-else
           name="unpin"
-          class="
-            size-4.75
-            **:stroke-[2]
-          " />
+          class="size-4.75 **:stroke-[2]" />
       </Label>
 
       <!-- archive -->
@@ -65,11 +55,7 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="ps().archive.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
-          cn(
-            `
-              relative grid size-11 place-items-center
-              *:absolute
-            `,
+          cn('relative grid size-11 place-items-center *:absolute',
             {
               'bg-b2/30': pinned,
             },
@@ -90,11 +76,7 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="ps().trash.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
-          cn(
-            `
-              relative grid size-11 place-items-center
-              *:absolute
-            `,
+          cn('relative grid size-11 place-items-center *:absolute',
             {
               'bg-b2/30': pinned,
             },

@@ -33,10 +33,7 @@ const {
 
       <icon
         name="link-2"
-        class="
-          size-4.5
-          **:stroke-[2]
-        " />
+        class="size-4.5 **:stroke-[2]" />
     </Button>
   </div>
 </template>

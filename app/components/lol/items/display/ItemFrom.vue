@@ -10,10 +10,7 @@ const { from, gold } = defineProps<{
     v-if="from"
     class="mt-1">
     <div
-      class="
-        divider divider-start text-0!
-        after:h-px
-      ">
+      class="divider divider-start text-0! after:h-px">
       RECIPE
     </div>
 

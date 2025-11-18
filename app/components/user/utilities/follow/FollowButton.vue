@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useForwardProps } from 'reka-ui'
-import type { ToggleVariants } from '~/assets/variants'
 
 defineOptions({
   inheritAttrs: false,
@@ -14,74 +13,36 @@ const props = withDefaults(
     theme?: string
     size?: ToggleVariants['size']
     variant?: ToggleVariants['variant']
+    base?: ToggleVariants['base']
+    on?: ToggleVariants['on']
+    hover?: ToggleVariants['hover']
   }>(),
   {
+    base: 'btn',
+    on: 'floating',
     placement: 'top',
     theme: 'base',
+    variant: 'floating'
   },
 )
 
-const delegatedProps = reactiveOmit(
-  props,
-  'class',
-  'placement',
-  'variant',
-  'theme',
-  'size',
-)
-const forwarded = useForwardProps(delegatedProps)
-
-const isYou = computed(() => as().account?.puuid === props.summoner?.puuid)
-const isFollowed = ref(false)
-
-watch(
-  () => isFollowed.value,
-  (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-  },
-)
+const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <Toggle
-    v-if="isYou"
-    v-bind="forwarded"
-    v-model="isFollowed"
-    as-child>
-    <Button
-      v-tippy="{
-        content: isFollowed ? 'Unfollow' : `Follow ${summoner.name}?`,
-        placement,
-        arrow: false,
-        theme: 'base',
-      }"
-      :class="cn('group/follow grid place-items-center', props.class)">
-      <slot>
-        <icon
-          name="heart-fill"
-          :class="
-            cn(
-              `
-                absolute size-4.5! text-domination/70 opacity-40 dst grayscale
-                transition-all duration-100
-                group-hover/follow:opacity-100
-                in-data-[state=on]:opacity-100 in-data-[state=on]:grayscale-0
-              `,
-              isFollowed ? 'animate-heartbeat' : '',
-            )
-          " />
-      </slot>
-    </Button>
-  </Toggle>
+  <ToggleGroup v-model:model-value="as().settings.favorite_summoners">
+    <ToggleGroupItem
 
-  <!--  <label
-    v-else-if="isYou"
-    v-tippy="{ content: 'You!', placement: 'top' }"
-    :class="cn('grid place-items-center aspect-square  hover:*:animate-pulse relative *:absolute  ', className)">
-
-    <icon
-      v-show="isYou"
-      name="star-fill"
-      class="**:fill-bc/40 size-3.5  **:stroke-bc **:stroke-4" />
-  </label> -->
+      :value="summoner.puuid"
+      placement="left"
+      on="base"
+      v-bind="forwarded"
+      variant="outline"
+      :class="cn('', toggleVariants({ variant, on, size, base }), props.class)">
+      <Icon
+        :name="as().settings.favorite_summoners.includes(summoner.puuid) ? 'heart-sm' : 'heart-sm-outline'"
+        :class="cn('size-8.5 **:stroke-[0.7] group-not-on/toggle:text-bc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination',
+        )" />
+    </ToggleGroupItem>
+  </ToggleGroup>
 </template>

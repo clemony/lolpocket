@@ -57,11 +57,7 @@ watch(
       <Button
         variant="outline"
         size="sm"
-        class="
-          w-fit
-          *:opacity-80
-          hover:inset-shadow-xs hover:*:opacity-100
-        "
+        class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         @click="is().clearFilters()">
         <span>
           {{ !is().filtered.length ? "sold out" : "reset" }}

@@ -31,9 +31,9 @@ const { close, open, toggle } = useAppSidebar()
     <AnimatePresence>
       <motion.div
         v-if="open"
-        :initial="{ x: -303, opacity: [1, 1, 1, 0] }"
-        :animate="{ x: 0, opacity: [0, 1, 1, 1] }"
-        :exit="{ x: -303, opacity: [1, 1, 1, 0] }"
+        :initial="{ x: -303 }"
+        :animate="{ x: 0 }"
+        :exit="{ x: -303 }"
         :transition="{
           duration: 0.2,
           type: 'spring',
@@ -50,7 +50,7 @@ const { close, open, toggle } = useAppSidebar()
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.15s var(--spring);
 }
 .fade-enter-from,
 .fade-leave-to {

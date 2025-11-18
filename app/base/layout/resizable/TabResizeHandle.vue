@@ -19,8 +19,7 @@ const tabs = ref()
   <Label
     role="tab"
     class="
-      tab flex cursor-pointer! flex-nowrap items-center gap-2
-      before:opacity-90
+      tab flex cursor-pointer! flex-nowrap items-center gap-2 before:opacity-90
     "
     :class="props.active ? tabStyles.activeClass : ''"
     :style="props.active ? tabStyles.activeStyle : ''">

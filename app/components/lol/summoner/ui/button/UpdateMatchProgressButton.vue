@@ -60,12 +60,7 @@ const tippy = computed(() =>
       <span
         v-if="!cooldown"
         :class="
-          cn(
-            `
-              flex items-center place-self-center font-semibold antialiased
-              opacity-68
-              group-hover/load:opacity-100
-            `,
+          cn('flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
             { 'text-1': size === 'xs' },
           )
         ">
@@ -86,12 +81,7 @@ const tippy = computed(() =>
       <div
         v-if="cooldown"
         :class="
-          cn(
-            `
-              pointer-events-none z-0 grid size-full grid-rows-2
-              place-items-center gap-1.5 overflow-hidden p-2
-              *:overflow-hidden
-            `,
+          cn('pointer-events-none z-0 grid size-full grid-rows-2 place-items-center gap-1.5 overflow-hidden p-2 *:overflow-hidden',
             { 'gap-0': size === 'xs' },
           )
         ">
@@ -112,11 +102,7 @@ const tippy = computed(() =>
           :model-value="cooldown?.percent"
           class="bg-transparent"
           :class="
-            cn(
-              `
-                relative h-2.75 w-full scale-y-60 rounded-[3px] border border-b4
-                bg-b3
-              `,
+            cn('relative h-2.75 w-full scale-y-60 rounded-[3px] border border-b4 bg-b3',
               { 'h-2.5 mt-1.5': size === 'xs' },
             )
           "
@@ -127,10 +113,9 @@ const tippy = computed(() =>
             :value="cooldown?.percent">
             <motion.div
               class="
-                relative h-full origin-right
-                after:absolute after:inset-0 after:top-0 after:right-0
-                after:size-full after:bg-red-500 after:from-neutral
-                after:via-neutral/80 after:to-neutral
+                relative h-full origin-right after:absolute after:inset-0
+                after:top-0 after:right-0 after:size-full after:bg-red-500
+                after:from-neutral after:via-neutral/80 after:to-neutral
               "
               :initial="{
                 scaleX: 1,

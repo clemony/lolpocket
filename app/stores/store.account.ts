@@ -12,17 +12,20 @@ export const useAccountStore = defineStore(
         tags: true,
       },
     })
+
     const user = useSupabaseUser()
 
-    const sb = ref<Account>()
-    const account = computedAsync<Account>(async () => {
-      return {
-        ...(await sb?.value),
-        ...ss().cache.get(sb.value?.puuid),
-      }
-    }, null)
+    const account = ref<Account>(null)
 
-    whenever(account, () => console.log("🥳 Account:", account.value))
+    const ss = computed(() => {
+      if (!account.value?.puuid) return null
+      return useSummonerStore().resolveByPuuid(account.value?.puuid)
+    })
+
+    watchEffect(() => {
+      if (ss.value) Object.assign(account.value, ss.value)
+      console.log("📎 - account:", account)
+    })
     const settings = ref<Settings>()
     const inbox = ref<Inbox>()
 
@@ -42,8 +45,6 @@ export const useAccountStore = defineStore(
     }
 
     return {
-      user,
-      sb,
       account,
       clearAccount,
       inbox,
@@ -51,6 +52,7 @@ export const useAccountStore = defineStore(
       settings,
       toggles,
       topChampion,
+      user,
     }
   },
   {

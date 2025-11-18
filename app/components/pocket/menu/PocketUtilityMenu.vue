@@ -11,9 +11,8 @@ const pocket = ref(props.pocket)
 <template>
   <div
     class="
-      flex flex-col gap-2
-      *:w-full *:cursor-pointer *:justify-start *:py-3 *:text-left *:text-3
-      **:pointer-events-auto
+      flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start *:py-3
+      *:text-left *:text-3 **:pointer-events-auto
     ">
     <button
       class="group btn btn-ghost btn-lg"

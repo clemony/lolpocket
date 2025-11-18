@@ -59,8 +59,7 @@ console.log('🌱 - pinned:', pinned)
         name="down"
         class="
           mt-px size-4 self-end text-bc/0 transition-all duration-200
-          group-hover/tgr:text-bc/50
-          group-hover-open/tgr:-scale-y-100
+          group-hover/tgr:text-bc/50 group-hover-open/tgr:-scale-y-100
         " />
     </CollapsibleTrigger>
   </Collapsible>

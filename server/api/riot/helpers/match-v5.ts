@@ -1,15 +1,15 @@
-import { getApiRegion, riotGet } from "../client"
+import { getApiRegion, riotGet } from '../client'
 
 export async function getMatchesByPuuid({
   puuid,
   count = 20,
-  start = 0,
   region,
+  start = 0,
 }: {
   puuid: string
+  region: string
   start?: number
   count?: number
-  region: string
 }) {
   return riotGet(
     getApiRegion(region),
@@ -29,9 +29,9 @@ export async function getMatchIdsByPuuid({
   start = 0,
 }: {
   puuid: string
+  region?: string
   start?: number
   count?: number
-  region?: string
 }) {
   return riotGet(
     getApiRegion(region),

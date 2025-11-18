@@ -29,7 +29,7 @@ const playerRank = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 overflow-visible pb-3">
+  <div class="flex w-full flex-col gap-2 overflow-visible pb-3">
     <!-- Blue Stats -->
 
     <TeamMatchEndStats

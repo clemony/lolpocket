@@ -142,11 +142,9 @@ const pathHovered = ref('')
         class="
           after:backdrop-blur-px after:absolute after:z-1 after:size-full
           after:bg-black/70 after:opacity-0 after:transition-all
-          after:duration-400
-          relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer
-          items-center justify-center overflow-hidden rounded-lg bg-black
-          bg-center shadow-sm drop-shadow-sm
-          *:opacity-0
+          after:duration-400 relative my-auto flex aspect-2/3 max-h-140 grow
+          basis-1 cursor-pointer items-center justify-center overflow-hidden
+          rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0
           hover:*:opacity-100 hover:after:opacity-100
         "
         @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"

@@ -17,13 +17,7 @@ console.log('🌱 - pocket:')
 <template>
   <button
     :class="
-      cn(
-        `
-          flex cursor-pointer flex-col items-start gap-2 rounded-xl border
-          border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8
-          ring-transparent transition-colors
-          hover:ring-neutral/50
-        `,
+      cn('flex cursor-pointer flex-col items-start gap-2 rounded-xl border border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8 ring-transparent transition-colors hover:ring-neutral/50',
         selected?.key === pocket?.key && 'bg-b2/30',
       )
     "

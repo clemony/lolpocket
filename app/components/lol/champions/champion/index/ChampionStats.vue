@@ -139,8 +139,8 @@ const filteredStats = computed(() => {
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
     class="
-      group/cl flex flex-col gap-6 px-0
-      data-[state=open]:h-auto data-[state=open]:overflow-visible!
+      group/cl flex flex-col gap-6 px-0 data-[state=open]:h-auto
+      data-[state=open]:overflow-visible!
     ">
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
@@ -149,10 +149,7 @@ const filteredStats = computed(() => {
           justify-between px-5
         ">
         <h3
-          class="
-            underline-offset-3 dst
-            group-hover/tr:underline
-          ">
+          class="underline-offset-3 dst group-hover/tr:underline">
           Stats
         </h3>
         <CaretFlip />
@@ -161,8 +158,8 @@ const filteredStats = computed(() => {
         class="
           group-data-[state=open]/cl:animate-in
           group-data-[state=open]/cl:fade-in-0
-          group-data-[state=closed]/cl:fade-out
-          -mt-3 flex w-full flex-col items-start px-5 pb-2 duration-300
+          group-data-[state=closed]/cl:fade-out -mt-3 flex w-full flex-col
+          items-start px-5 pb-2 duration-300
           group-data-[state=closed]/cl:animate-out
           group-data-[state=closed]/cl:hidden
         "
@@ -193,8 +190,7 @@ const filteredStats = computed(() => {
               :key="i"
               class="
                 relative grid size-full cursor-pointer transition-all
-                duration-200
-                hover:**:font-bold hover:**:opacity-100
+                duration-200 hover:**:font-bold hover:**:opacity-100
               "
               @click="level[0] = i">
               <div
@@ -233,12 +229,7 @@ const filteredStats = computed(() => {
       ">
       <div
         :class="
-          cn(
-            `
-              field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center
-              gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100
-              *:w-full
-            `,
+          cn('field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
             { 'max-h-0 opacity-0 hidden invisible': open },
           )
         ">

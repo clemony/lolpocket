@@ -40,10 +40,7 @@ function navigate() {
       <slot />
 
       <span
-        class="
-          ml-2 grow
-          group-hover:underline
-        ">
+        class="ml-2 grow group-hover:underline">
         {{ page.altName ?? page.name }}
       </span>
 

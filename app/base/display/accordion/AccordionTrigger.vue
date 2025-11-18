@@ -20,14 +20,7 @@ const delegatedProps = computed(() => {
       data-slot="accordion-trigger"
       v-bind="delegatedProps"
       :class="
-        cn(
-          `
-            group/acc-trigger flex flex-1 items-start justify-between gap-4
-            text-left text-3 transition-all outline-none
-            [&_svg]:transition-rotate [&_svg]:duration-250
-            disabled:pointer-events-none disabled:opacity-50
-            [&[data-state=open]>svg]:-rotate-90
-          `,
+        cn('group/acc-trigger flex flex-1 items-start justify-between gap-4 text-left text-3 transition-all outline-none [&_svg]:transition-rotate [&_svg]:duration-250 disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:-rotate-90',
           props.class,
         )
       ">

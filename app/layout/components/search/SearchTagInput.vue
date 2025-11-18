@@ -16,11 +16,7 @@ watch(
 <template>
   <div
     :class="
-      cn(
-        `
-          flex min-w-1/3 shrink items-center gap-1.5 transition-all duration-200
-          not-focus-within:opacity-0
-        `,
+      cn('flex min-w-1/3 shrink items-center gap-1.5 transition-all duration-200 not-focus-within:opacity-0',
         { '!opacity-100': tag.length },
         className,
       )

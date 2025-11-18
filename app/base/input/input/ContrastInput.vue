@@ -14,13 +14,7 @@ const props = defineProps<{
 <template>
   <div
     :class="
-      cn(
-        `
-          bgneutral/85! input flex h-12 w-full items-center gap-4 border
-          border-accent px-3 py-3.5 text-3 text-nc shadow-sm inset-shadow-sm
-          drop-shadow-sm
-          **:text-nc
-        `,
+      cn('bgneutral/85! input flex h-12 w-full items-center gap-4 border border-accent px-3 py-3.5 text-3 text-nc shadow-sm inset-shadow-sm drop-shadow-sm **:text-nc',
         props.class,
       )
     ">
@@ -33,11 +27,7 @@ const props = defineProps<{
       v-bind="$attrs"
       :placeholder="props.placeholder"
       :class="
-        cn(
-          `
-            flex h-full grow border-0 text-start text-3 ring-0 outline-0
-            hover:border-0 hover:ring-0 hover:outline-0
-          `,
+        cn('flex h-full grow border-0 text-start text-3 ring-0 outline-0 hover:border-0 hover:ring-0 hover:outline-0',
           props.inputClass,
         )
       " />

@@ -33,8 +33,7 @@ const position = computed(() => ({
     <div
       class="
         border-muted-foreground/30 flex h-32 w-48 items-center justify-center
-        rounded-lg border border-dashed text-sm font-medium
-        dark:text-foreground
+        rounded-lg border border-dashed text-sm font-medium dark:text-foreground
       "
       @pointerenter="open = true"
       @pointerleave="open = false"

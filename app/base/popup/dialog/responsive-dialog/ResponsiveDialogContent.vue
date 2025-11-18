@@ -33,12 +33,4 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded">
     <slot />
   </FadeDialogContent>
-
-  <DrawerContent
-    v-else
-    :side="side"
-    :class="cn('', props.class)"
-    v-bind="forwarded">
-    <slot />
-  </DrawerContent>
 </template>

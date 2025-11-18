@@ -31,10 +31,7 @@ const today = new Date()
               :disabled="!mail">
               <icon
                 name="pin"
-                class="
-                  size-4.75
-                  **:stroke-[2]
-                " />
+                class="size-4.75 **:stroke-[2]" />
               <span class="sr-only">Pin</span>
             </Button>
           </TooltipTrigger>

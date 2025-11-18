@@ -14,14 +14,7 @@ const props = defineProps<
   <CollapsibleContent
     v-bind="props"
     :class="
-      cn(
-        `
-          data-[state=closed]:animate-collapsible-up
-          data-[state=open]:animate-collapsible-down
-          CollapsibleContent
-          *:not-after:z-1
-          w-full max-w-full overflow-hidden transition-all
-        `,
+      cn('data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down CollapsibleContent *:not-after:z-1 w-full max-w-full overflow-hidden transition-all',
         { ' ': props.menu },
         props.class,
       )

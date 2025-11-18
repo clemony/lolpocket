@@ -1,6 +1,7 @@
-import type { Editor } from "@tiptap/core"
-import { renderCommentHTML } from "~/composables/tiptap"
-import { toast } from "~/composables/utils/useToast"
+import type { Editor } from '@tiptap/core'
+import { renderCommentHTML } from '~/composables/tiptap'
+import { toast } from '~/composables/utils/useToast'
+
 export async function postComment(
   content: Doc,
   thread_id: UUID | string,
@@ -13,23 +14,24 @@ export async function postComment(
     html: renderCommentHTML(content),
   }
   const { data, error } = await $fetch<CommentReturn>(
-    "/api/supabase/comment/comment_post",
+    '/api/supabase/comment/comment_post',
     {
       body,
-      headers: useRequestHeaders(["cookie"]),
-      method: "POST",
+      headers: useRequestHeaders(['cookie']),
+      method: 'POST',
     }
   )
 
   if (error) {
     sendErrorToast()
-  } else {
+  }
+  else {
     ts().threads[thread_id].push(data)
     toast({
-      title: "Comment Posted",
-      color: "ghost",
+      title: 'Comment Posted',
+      color: 'ghost',
       description: `Successfully posted your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}`,
-      icon: "chat",
+      icon: 'chat',
     })
   }
 }

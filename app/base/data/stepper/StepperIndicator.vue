@@ -16,11 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
   <StepperIndicator
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          text-bc/50/50 inline-flex h-10 w-10 items-center justify-center
-          rounded-full
-        `,
+      cn('text-bc/50/50 inline-flex h-10 w-10 items-center justify-center rounded-full',
         // Disabled
         'group-data-[disabled]:text-bc/50 group-data-[disabled]:opacity-50',
         // Active

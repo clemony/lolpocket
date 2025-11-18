@@ -24,11 +24,7 @@ const {
       <TransitionSlideLeft
         group
         :class="
-          cn(
-            `
-              relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap
-              items-center items-start gap-3 gap-y-3 py-0
-            `,
+          cn('relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap items-center items-start gap-3 gap-y-3 py-0',
             className,
           )
         ">
@@ -37,10 +33,7 @@ const {
           :variant
           :hover
           :size="size[0]"
-          class="
-            order-first
-            hover:*:opacity-100
-          "
+          class="order-first hover:*:opacity-100"
           @click="cs().filters.position = null">
           <icon
             name="x"

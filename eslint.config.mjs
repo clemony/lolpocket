@@ -44,6 +44,10 @@ export default antfu({
         position: 'recommended',
       },
     ],
+    'better-tailwindcss/enforce-consistent-line-wrapping': ['off', {
+      group: 'never',
+      preferSingleLine: true
+    }],
     'better-tailwindcss/no-unregistered-classes': 'off',
     // other
     'eqeqeq': ['error', 'smart'],

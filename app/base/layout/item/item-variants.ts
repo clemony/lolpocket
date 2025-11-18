@@ -3,10 +3,8 @@ import { cva } from 'class-variance-authority'
 
 export const itemVariants = cva(
   `
-    group/item
-    [a]:hover:bg-tint-b2/60/50
-    flex flex-wrap items-center rounded-md border border-transparent
-    transition-colors duration-100 outline-none
+    group/item [a]:hover:bg-tint-b2/60/50 flex flex-wrap items-center rounded-md
+    border border-transparent transition-colors duration-100 outline-none
     focus-visible:border-ring focus-visible:ring-offset-background
     focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2
     [a]:transition-colors

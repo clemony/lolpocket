@@ -2,11 +2,16 @@
 import { heyGoodJob } from '~~/shared/data/good-job'
 import { toast, } from '~/composables/utils/useToast'
 
+console.log(ss().cache)
 function toasty() {
   toast({
     title: `Created Toast!`,
     color: 'error',
-    description: `${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}!`,
+    description: `There’s something strangely evocative about the smell of burnt toast. You can probably remember the last time you suddenly detected it and dashed for the grill.
+
+But did you know there’s a part of your brain specifically dedicated to smelling burnt toast?
+
+In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral seizures that worked by zapping particular nerve cells with electrical probes. One of his patients was a woman with epilepsy who smelled burnt toast whenever she was about to have a seizure. ${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}!`,
     icon: 'x',
   })
 }

@@ -24,12 +24,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <SliderRoot
     :class="
-      cn(
-        `
-          relative flex w-full touch-none items-center select-none
-          data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5
-          data-[orientation=vertical]:flex-col
-        `,
+      cn('relative flex w-full touch-none items-center select-none data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5 data-[orientation=vertical]:flex-col',
         props.class,
       )
     "
@@ -40,25 +35,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         data-[orientation=vertical]:w-1.5
       ">
       <SliderRange
-        class="
-          absolute h-full bg-neutral
-          data-[orientation=vertical]:w-full
-        " />
+        class="absolute h-full bg-neutral data-[orientation=vertical]:w-full" />
     </SliderTrack>
 
     <SliderThumb
       v-for="(_, key) in modelValue"
       :key="key"
       :class="
-        cn(
-          `
-            block size-4 cursor-pointer rounded-full border-2 border-neutral
-            bg-b1 shadow-xs shadow-black/10 ring-offset-b1 drop-shadow-sm
-            transition-colors
-            focus-visible:ring focus-visible:ring-neutral
-            focus-visible:ring-offset-2 focus-visible:outline-none
-            disabled:pointer-events-none disabled:opacity-50
-          `,
+        cn('block size-4 cursor-pointer rounded-full border-2 border-neutral bg-b1 shadow-xs shadow-black/10 ring-offset-b1 drop-shadow-sm transition-colors focus-visible:ring focus-visible:ring-neutral focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
           props.thumbClass,
         )
       ">

@@ -27,10 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     </RangeCalendarHeader>
 
     <div
-      class="
-        mt-4 flex flex-col gap-y-4
-        sm:flex-row sm:gap-x-4 sm:gap-y-0
-      ">
+      class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
       <RangeCalendarGrid
         v-for="month in grid"
         :key="month.value.toString()">
@@ -60,13 +57,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
               <span
                 v-if="isToday(weekDate, getLocalTimeZone())"
                 :class="
-                  cn(
-                    `
-                      indicator-item grid-place-items-center size-2
-                      -translate-x-0.75 translate-y-0.75 overflow-hidden
-                      rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs
-                      shadow-black/8 drop-shadow-xs
-                    `,
+                  cn('indicator-item grid-place-items-center size-2 -translate-x-0.75 translate-y-0.75 overflow-hidden rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs shadow-black/8 drop-shadow-xs',
                     `
                       group-has-not-data-[selected]:from-neutral/30
                       group-has-not-data-[selected]:to-neutral

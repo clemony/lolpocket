@@ -64,10 +64,7 @@ defineExpose({
       name="inputRef"
       :placeholder
       autocomplete="off"
-      class="
-        placeholder:text-2 placeholder:italic
-        focus:placeholder:opacity-0
-      "
+      class="placeholder:text-2 placeholder:italic focus:placeholder:opacity-0"
       @keydown.stop
       @keydown.enter.prevent />
     <slot name="2" />

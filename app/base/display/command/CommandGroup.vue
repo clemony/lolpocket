@@ -39,13 +39,7 @@ onUnmounted(() => {
     v-bind="delegatedProps"
     :id="id"
     :class="
-      cn(
-        `
-          overflow-hidden p-1 text-bc
-          [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5
-          [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium
-          [&_[cmdk-group-heading]]:text-bc/50
-        `,
+      cn('overflow-hidden p-1 text-bc [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-bc/50',
         props.class,
       )
     "

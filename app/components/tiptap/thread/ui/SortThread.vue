@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { parseAbsoluteToLocal } from '@internationalized/date'
 
-const { thread } = defineProps<{
+const { disabled, thread } = defineProps<{
   thread: CommentData[] | null
+  disabled?: boolean
 }>()
 useScrollToHash('#app')
 const sort = shallowRef<string>('best')
 const sortedComments = ref<CommentData[]>(null)
 function sortComments() {
-  if (!thread)
+  if (!thread || !thread?.length)
     return
 
   const comments = [...thread]
@@ -41,22 +42,18 @@ defineExpose({
 <template>
   <Select
     v-model:model-value="sort"
-    :disabled="!thread.length"
+    :disabled="disabled || !thread.length"
     @update:model-value="sortComments()">
     <VarSelectTrigger
       variant="ghost"
       hover="inset"
-      class="
-        w-28 justify-start pl-3
-        hover:border-b4/50!
-      "
+      class="w-28 justify-start pl-3 hover:border-b4/50!"
       size="sm">
       <SelectValue />
       <icon
         name="down"
         class="
-          absolute right-2 size-4 opacity-60
-          group-hover/select:opacity-100
+          absolute right-2 size-4 opacity-60 group-hover/select:opacity-100
         " />
     </VarSelectTrigger>
     <LazySelectContent

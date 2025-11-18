@@ -2,8 +2,8 @@ import { toast } from "~/composables/utils/useToast"
 
 export async function accountUpdate(account) {
   const data = await $fetch("/api/supabase/account_update", {
-    headers: useRequestHeaders(["cookie"]),
     body: account,
+    headers: useRequestHeaders(["cookie"]),
     method: "POST",
   })
 
@@ -12,7 +12,7 @@ export async function accountUpdate(account) {
   if (!data) {
     sendErrorToast()
   } else {
-    as().sb = Object.values(data) as unknown as AccountSchema
+    as().account = Object.assign(as().account, data)
     toast({
       title: "Welcome back!",
       color: "neutral",

@@ -22,10 +22,7 @@ definePageMeta({
         <LazyItemPopover
           v-if="is().filtered.includes(item)"
           :id="item"
-          class="
-            **:size-22'
-            aspect-square size-22 max-w-22 rounded-lg
-          " />
+          class="**:size-22' aspect-square size-22 max-w-22 rounded-lg" />
       </div>
     </transition-slide>
 
@@ -35,11 +32,7 @@ definePageMeta({
       <Button
         variant="outline"
         size="sm"
-        class="
-          w-fit
-          *:opacity-80
-          hover:inset-shadow-xs hover:*:opacity-100
-        "
+        class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         @click="is().clearFilters()">
         <span> sold out </span>
         <icon

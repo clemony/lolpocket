@@ -37,11 +37,7 @@ const emit = defineEmits(['update:set'])
     fallback-class="item-set-item-fallback"
     filter=".no-drag"
     :class="
-      cn(
-        `
-          group field-box relative grid size-full w-150 grid-cols-6 items-center
-          justify-center gap-4 place-self-center p-4
-        `,
+      cn('group field-box relative grid size-full w-150 grid-cols-6 items-center justify-center gap-4 place-self-center p-4',
         { '': props.split, '': !props.split },
         props.class,
       )

@@ -23,11 +23,7 @@ const component = computed(() => (nuxt ? NuxtLink : NavigationMenuLink))
   <component
     :is="component"
     :class="
-      cn(
-        `
-          flex items-center text-2 font-medium text-bc/70 underline-offset-2
-          hover:text-bc hover:underline
-        `,
+      cn('flex items-center text-2 font-medium text-bc/70 underline-offset-2 hover:text-bc hover:underline',
         className,
       )
     "

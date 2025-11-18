@@ -17,8 +17,7 @@ const set = computed(() => {
 <template>
   <div
     :class="
-      cn(
-        `relative grid aspect-square size-12 place-items-center rounded-full`,
+      cn('relative grid aspect-square size-12 place-items-center rounded-full',
         className,
       )
     ">

@@ -52,11 +52,7 @@ onMounted(() => {
     <motion.div
       :variants="inputVariants"
       :class="
-        cn(
-          `
-            btn absolute flex btn-circle items-center rounded-full border
-            border-b3/70!
-          `,
+        cn('btn absolute flex btn-circle items-center rounded-full border border-b3/70!',
           props.class,
         )
       ">
@@ -66,8 +62,7 @@ onMounted(() => {
         :disabled="props.query === null"
         class="
           btn pointer-events-auto absolute left-2 z-2 btn-circle btn-ghost
-          btn-xs
-          hover:bg-b3/40
+          btn-xs hover:bg-b3/40
         "
         @click="reset()">
         <icon

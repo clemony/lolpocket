@@ -23,16 +23,12 @@ const summoner = computed(() => s)
           " />
         <SummonerTag
           :summoner
-          class="
-            mb-px text-1 opacity-50
-            [&_svg]:size-3
-          " />
+          class="mb-px text-1 opacity-50 [&_svg]:size-3" />
       </div>
       <div
         class="
           flex items-center gap-2 align-middle font-normal lowercase opacity-0
-          transition-opacity duration-200
-          group-hover/friend:opacity-50
+          transition-opacity duration-200 group-hover/friend:opacity-50
         ">
         <SummonerRegion
           :region-id="summoner.region"

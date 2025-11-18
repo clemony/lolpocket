@@ -18,10 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="
       cn(
         buttonVariants({ variant: 'ghost' }),
-        `
-          h-9 w-9 p-0 font-normal
-          data-[selected]:opacity-100
-        `,
+        `h-9 w-9 p-0 font-normal data-[selected]:opacity-100`,
         '',
         // Selection Start
         `

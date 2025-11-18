@@ -47,21 +47,13 @@ const name = computed(() => ix().champNameByKey(k))
     <PopoverItem
       as="label"
       :class="
-        cn(`
-          disabled
-          hover:bg-b3/60
-          has-disabled:opacity-100
-        `)
+        cn('disabled hover:bg-b3/60 has-disabled:opacity-100')
       "
       @click="pocket._champion = k">
       <icon
         name="star"
         :class="
-          cn(
-            `
-              ml-px size-4! dst
-              **:stroke-[2.8]
-            `,
+          cn('ml-px size-4! dst **:stroke-[2.8]',
             { 'fill-precision': pocket._champion === k },
           )
         " />

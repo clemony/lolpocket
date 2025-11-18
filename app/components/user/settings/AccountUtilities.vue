@@ -11,11 +11,7 @@ const classObject
 
 <template>
   <div
-    class="
-      relative grid h-fit w-full px-2 py-3
-      *:w-full
-      **:text-2
-    ">
+    class="relative grid h-fit w-full px-2 py-3 *:w-full **:text-2">
     <SheetClose
       :class="classObject"
       @click="navigateTo('/about')">

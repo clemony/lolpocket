@@ -1,9 +1,9 @@
 // @fixme probably fix
 /* @ts-ignore */
-import { computePosition } from "@floating-ui/dom"
-import { VueRenderer } from "@tiptap/vue-3"
-import EmojiList from "~/components/tiptap/extensions/emoji/EmojiList.vue"
-import { filterEmojiArray } from "~/composables/tiptap"
+import { computePosition } from '@floating-ui/dom'
+import { VueRenderer } from '@tiptap/vue-3'
+import EmojiList from '~/components/tiptap/extensions/emoji/EmojiList.vue'
+import { filterEmojiArray } from '~/composables/tiptap'
 
 export const emojiSuggestions = {
   command: ({ editor, props, range }) => {
@@ -19,8 +19,8 @@ export const emojiSuggestions = {
       .filter(({ shortcodes, tags }) => {
         const q = query.toLowerCase()
         return (
-          shortcodes.some((s) => s.startsWith(q)) ||
-          tags.some((t) => t.startsWith(q))
+          shortcodes.some(s => s.startsWith(q))
+          || tags.some(t => t.startsWith(q))
         )
       })
       .slice(0, 20)
@@ -29,16 +29,17 @@ export const emojiSuggestions = {
     let component
 
     function repositionComponent(clientRect) {
-      if (!component || !component.element) return
+      if (!component || !component.element)
+        return
 
       const virtualElement = { getBoundingClientRect: () => clientRect }
 
       computePosition(virtualElement, component.element, {
-        placement: "bottom-start",
+        placement: 'bottom-start',
       }).then((pos) => {
         Object.assign(component.element.style, {
           left: `${pos.x}px`,
-          position: pos.strategy === "fixed" ? "fixed" : "absolute",
+          position: pos.strategy === 'fixed' ? 'fixed' : 'absolute',
           top: `${pos.y}px`,
         })
       })
@@ -51,7 +52,7 @@ export const emojiSuggestions = {
         component.destroy()
       },
       onKeyDown(props) {
-        if (props.event.key === "Escape") {
+        if (props.event.key === 'Escape') {
           document.body.removeChild(component.element)
           component.destroy()
           return true

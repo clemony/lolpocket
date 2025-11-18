@@ -42,10 +42,7 @@ function handleChange() {
           :variant
           :hover
           :size="size[0]"
-          class="
-            order-first
-            hover:*:opacity-100
-          "
+          class="order-first hover:*:opacity-100"
           @click="is().filters.tags.length = 0">
           <icon
             name="x"

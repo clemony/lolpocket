@@ -29,8 +29,7 @@ onMounted(async () => {
   <div
     class="
       flex min-h-svh flex-col items-center justify-center gap-6 bg-tint-b2/40
-      p-6
-      md:p-10
+      p-6 md:p-10
     ">
     <div class="-mt-16 flex w-full max-w-md flex-col gap-16">
       <NuxtLink

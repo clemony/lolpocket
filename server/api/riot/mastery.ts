@@ -1,11 +1,12 @@
-import { fetchMasteryTotalV4, fetchMasteryV4 } from "./helpers"
+import { fetchMasteryTotalV4, fetchMasteryV4 } from '.'
+
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   const puuid = query.puuid?.toString()
   const region = query.region?.toString()
 
   if (!puuid)
-    throw createError({ statusCode: 400, statusMessage: "Missing puuid" })
+    throw createError({ statusCode: 400, statusMessage: 'Missing puuid' })
   const masteryData = await fetchMasteryV4(puuid, region)
 
   let totalPoints = 0

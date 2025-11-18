@@ -14,15 +14,11 @@ const heal = computed(() => {
 <template>
   <div
     class="
-      mx-1 h-full w-24 max-w-24 p-1 font-medium
-      *:text-1 *:tracking-tight
+      mx-1 h-full w-24 max-w-24 p-1 font-medium *:text-1 *:tracking-tight
       **:leading-none
     ">
     <tippy
-      class="
-        flex items-center gap-2 truncate text-nowrap
-        hover:underline
-      "
+      class="flex items-center gap-2 truncate text-nowrap hover:underline"
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="relative grid size-3 justify-center">
         <icon
@@ -34,8 +30,7 @@ const heal = computed(() => {
 
     <tippy
       class="
-        mt-2.25 flex items-center gap-2 truncate text-nowrap
-        hover:underline
+        mt-2.25 flex items-center gap-2 truncate text-nowrap hover:underline
       "
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="relative grid size-3 justify-center">
@@ -65,8 +60,7 @@ const heal = computed(() => {
 
     <div
       class="
-        mt-2 flex items-center gap-2.25 truncate text-nowrap
-        hover:underline
+        mt-2 flex items-center gap-2.25 truncate text-nowrap hover:underline
       "
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="relative grid size-3 justify-center">

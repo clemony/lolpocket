@@ -35,7 +35,7 @@ const tag = computed(() => {
       <icon
         v-if="!noTag"
         name="lucide:hash"
-        class="inline size-3.5" />
+        class="-mr-1 inline size-3.5" />
     </span>
     {{ tag }}
   </Primitive>

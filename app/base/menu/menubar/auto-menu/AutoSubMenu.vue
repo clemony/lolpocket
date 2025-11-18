@@ -35,8 +35,7 @@ const { class: className, item } = defineProps<{
           v-if="item.shortcut?.text"
           class="
             badge max-w-40 truncate badge-neutral badge-sm text-1!
-            font-semibold! tracking-normal
-            group-open/trig:badge-neutral
+            font-semibold! tracking-normal group-open/trig:badge-neutral
             group-hover/trig:badge-neutral
           ">
           {{ item.shortcut?.text }}

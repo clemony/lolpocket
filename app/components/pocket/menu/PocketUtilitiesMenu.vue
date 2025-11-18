@@ -28,19 +28,14 @@ async function testSaveAllPockets() {
         size="md"
         hover="ghost"
         :class="
-          cn(
-            `
-              mb-1 btn-square self-end
-              hover:bg-b3!
-            `,
+          cn('mb-1 btn-square self-end hover:bg-b3!',
             { 'btn-active': isOpen },
           )
         ">
         <icon
           name="more"
           class="
-            opacity-60
-            group-hover/drop:opacity-80
+            opacity-60 group-hover/drop:opacity-80
             group-data-[state=open]/drop:opacity-80
           " />
       </Button>
@@ -53,9 +48,8 @@ async function testSaveAllPockets() {
       :align-offset="-4"
       class="
         ml-3 flex min-w-76 flex-col justify-center justify-items-center
-        overflow-hidden px-1 py-3
-        **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:gap-3!
-        **:[&_button]:px-3
+        overflow-hidden px-1 py-3 **:[&_button]:w-full
+        **:[&_button]:justify-start **:[&_button]:gap-3! **:[&_button]:px-3
       ">
       <Button
         variant="ghost"

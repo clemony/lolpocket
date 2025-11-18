@@ -21,11 +21,7 @@ const level = computed(() =>
         :img="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
         :alt="level.toString()"
         :class="
-          cn(
-            `
-              absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm
-              drop-shadow-black/20
-            `,
+          cn('absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
           )
         " />
     </template>
@@ -40,8 +36,7 @@ const level = computed(() =>
     <div
       class="
         relative flex size-full h-12 flex-col justify-center overflow-hidden
-        px-0.75 pt-0.25 pb-1
-        *:leading-none
+        px-0.75 pt-0.25 pb-1 *:leading-none
       ">
       <div class="flex items-end gap-1.5">
         <h2 class="text-5 font-semibold dst">

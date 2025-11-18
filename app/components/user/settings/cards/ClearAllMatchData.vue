@@ -19,16 +19,12 @@ async function clear() {
       <tippy
         class="
           underline-dotted cursor-help rounded-tiny underline transition-colors
-          duration-200
-          hover:bg-neutral/96 hover:text-nc
+          duration-200 hover:bg-neutral/96 hover:text-nc
         ">
         stored data
         <template #content>
           <ul
-            class="
-              list-disc p-3
-              not-first:mt-2
-            ">
+            class="list-disc p-3 not-first:mt-2">
             <li>
               Match data is cached in your browser's internal database to limit
               strain on Riot's API servers.
@@ -52,8 +48,7 @@ async function clear() {
           <span
             class="
               absolute mt-0.5 h-6! w-24 text-center font-medium underline
-              transition-all duration-200
-              hover:font-bold
+              transition-all duration-200 hover:font-bold
             ">
             contact me.
           </span>

@@ -1,27 +1,23 @@
 <script lang="ts" setup>
 const route = useRoute()
+const sum = computed (() => route.path.match(/summoner.*/))
 </script>
 
 <template>
   <div
     id="app"
-    class="relative grid h-screen w-screen grid-rows-1 overflow-hidden">
+    class="relative grid h-screen min-h-screen w-screen grid-rows-1 overflow-hidden">
     <div class="z-auto flex size-full max-w-screen flex-col overflow-y-auto">
       <!-- header -->
       <header
         :class="
-          cn(
-            `
-              sticky top-0 z-10 flex h-15 w-full max-w-screen shrink-0
-              items-center gap-2 border-b bg-linear-to-r from-b1/90 to-b1/40
-              pr-5 pl-2.5 backdrop-blur
-            `,
-            {
-              'border-0 !bg-linear-to-r  h-15 !from-transparent !to-b1/40 !absolute':
-                ['pocket', 'summoner', 'champions'].includes(
-                  String(route.matched?.[0]?.name),
-                ),
-            },
+          cn('sticky top-0 z-10 flex h-15 w-full max-w-screen shrink-0 items-center gap-2 border-b bg-linear-to-r from-b1/90 to-b1/40 pr-5 pl-2.5 backdrop-blur',
+             {
+               'border-0 !bg-linear-to-r  h-15 !from-transparent !to-b1/40 !absolute':
+                 ['pocket', 'summoner', 'champions'].includes(
+                   String(route.matched?.[0]?.name),
+                 ) || sum,
+             },
           )
         ">
         <Button
@@ -34,8 +30,7 @@ const route = useRoute()
           <h5
             class="
               absolute justify-self-center font-bold opacity-100 transition-all
-              duration-300
-              group-hover/logo:scale-0 group-hover/logo:opacity-0
+              duration-300 group-hover/logo:scale-0 group-hover/logo:opacity-0
             ">
             LP
           </h5>
@@ -43,8 +38,8 @@ const route = useRoute()
             name="menu"
             class="
               absolute scale-0 justify-self-center opacity-0 transition-all
-              duration-300
-              group-hover/logo:scale-100 group-hover/logo:opacity-100
+              duration-300 group-hover/logo:scale-100
+              group-hover/logo:opacity-100
             " />
         </Button>
         <BreadcrumbNav />
@@ -57,19 +52,19 @@ const route = useRoute()
 
       <AppSidebarTrigger />
 
-      <div class="relative size-full justify-self-end">
+      <div class="relative size-full min-h-screen">
         <slot />
-        <LazyAppCommand />
       </div>
-      <!--
-      <ReportDialog :comment="ts().reportComment" /> -->
+      <LazyAppCommand />
+
+      <LazyReportDialog :comment="ts().reportComment" />
       <!-- toaster -->
       <Toaster />
 
       <!-- loading -->
-      <ClientOnly>
-        <NuxtLoadingIndicator
-          style="
+
+      <NuxtLoadingIndicator
+        style="
             top: auto;
             bottom: 0;
             height: 5px;
@@ -80,7 +75,6 @@ const route = useRoute()
               var(--color-neutral) 100%
             );
           " />
-      </ClientOnly>
     </div>
   </div>
 </template>

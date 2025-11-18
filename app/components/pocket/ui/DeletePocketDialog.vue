@@ -23,8 +23,7 @@ function handleDelete() {
       <DialogClose
         class="
           absolute top-5 right-6 grid size-8 cursor-pointer place-items-center
-          rounded-lg opacity-60
-          hover:opacity-100 hover:ring hover:ring-b3
+          rounded-lg opacity-60 hover:opacity-100 hover:ring hover:ring-b3
           focus:ring focus:ring-b3
         ">
         <icon name="x-sm" />
@@ -44,8 +43,7 @@ function handleDelete() {
         <Label
           class="
             flex cursor-pointer items-center gap-3 text-2 text-bc/60
-            underline-offset-2
-            hover:text-bc hover:underline
+            underline-offset-2 hover:text-bc hover:underline
           ">
           <input
             v-model="as().settings.instant_trash"

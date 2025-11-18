@@ -9,12 +9,7 @@ const props = defineProps<{
     data-slot="sidebar-menu-badge"
     data-sidebar="menu-badge"
     :class="
-      cn(
-        `
-          pointer-events-none absolute right-1 flex h-5 min-w-5 items-center
-          justify-center rounded-md px-1 text-2 font-medium text-bc tabular-nums
-          select-none
-        `,
+      cn('pointer-events-none absolute right-1 flex h-5 min-w-5 items-center justify-center rounded-md px-1 text-2 font-medium text-bc tabular-nums select-none',
         `
           peer-hover/menu-button:text-sidebar-bc
           peer-data-[active=true]/menu-button:text-sidebar-bc

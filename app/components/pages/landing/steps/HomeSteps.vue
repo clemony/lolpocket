@@ -115,12 +115,7 @@ const steps = [
             bounce: 0.2,
           }"
           :class="
-            cn(
-              `
-                relative mb-10 grid w-full max-w-160 justify-start pb-44
-                will-change-[transform,opacity]
-                group-last:ml-16
-              `,
+            cn('relative mb-10 grid w-full max-w-160 justify-start pb-44 will-change-[transform,opacity] group-last:ml-16',
               isEven(i) && greaterOrEqual
                 ? 'timeline-start  md:text-end'
                 : 'timeline-end',
@@ -153,8 +148,7 @@ const steps = [
           v-if="scrollProg"
           class="
             bg/b2! relative mt-2! grid w-0.75! items-start overflow-hidden
-            rounded-full!
-            group-last:hidden
+            rounded-full! group-last:hidden
           ">
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
@@ -163,9 +157,7 @@ const steps = [
             }"
             class="
               absolute -top-1.5 -left-16 size-full origin-top overflow-hidden!
-              rounded-full! bg-neutral/70!
-              group-last:hidden
-              starting:scale-y-0
+              rounded-full! bg-neutral/70! group-last:hidden starting:scale-y-0
             "></motion.hr>
         </motion.hr>
       </li>

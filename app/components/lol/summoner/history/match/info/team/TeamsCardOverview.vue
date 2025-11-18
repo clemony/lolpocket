@@ -9,15 +9,15 @@ const route = useRoute()
 <template>
   <div
     class="
-      grid max-h-full w-68 grid-flow-col grid-cols-2 grid-rows-5 gap-1
-      gap-y-0.25 justify-self-end overflow-hidden
+      ml-2 grid max-h-full w-68 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
+      gap-y-0.5 justify-self-end overflow-hidden
     ">
     <BtnLink
       v-for="player in match.participants"
       :key="player.puuid"
-      size="6"
+      size="5"
       variant="link"
-      :to="`/summoner/${route.params.region}/${player.riotIdGameName}_${player.riotIdTagline}`"
+      :to="`/summoner/${player.puuid}`"
       :class="
         cn('flex grow gap-2 overflow-hidden', {
           'col-start-1': player.teamId === 100,
@@ -30,20 +30,25 @@ const route = useRoute()
           :id="player?.championId"
           v-tippy="{
             content: ix().champNameById(player?.championId),
-            placement: 'right',
+            placement: 'left',
+            theme: 'neutral one',
           }"
           size="sq-5"
           alt="champion-icon"
           class="shadow-xs dst" />
 
-        <a
-          v-tippy="{ content: player.riotIdGameName, placement: 'right' }"
+        <tippy
+          tag="a"
+          :content="player.riotIdGameName"
+          placement="right"
+          theme="neutral one"
+          :offset="[0, 16]"
           class="
             h-full w-full truncate text-1 font-medium tracking-tight text-nowrap
             normal-case
           ">
           {{ player.riotIdGameName }}
-        </a>
+        </tippy>
       </div>
     </BtnLink>
   </div>

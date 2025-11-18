@@ -37,10 +37,7 @@ function handleSpells(e, i) {
       @click="removeSpellSet(pocket, props.set)">
       <icon
         name="trash"
-        class="
-          size-5 shrink-0 text-bc/50 dst
-          group-hover/btn:text-bc/100
-        " />
+        class="size-5 shrink-0 text-bc/50 dst group-hover/btn:text-bc/100" />
     </button>
   </div>
 </template>

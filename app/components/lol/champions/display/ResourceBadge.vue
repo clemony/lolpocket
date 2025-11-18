@@ -62,9 +62,6 @@ const resource = computed(() => {
     <icon
       v-if="clear"
       name="x"
-      class="
-        size-4 text-white
-        **:stroke-[2.6]
-      " />
+      class="size-4 text-white **:stroke-[2.6]" />
   </Button>
 </template>

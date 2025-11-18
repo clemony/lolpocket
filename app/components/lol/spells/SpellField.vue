@@ -26,10 +26,7 @@ function handleClick() {
 
 <template>
   <div
-    class="
-      flex gap-3
-      **:select-none
-    ">
+    class="flex gap-3 **:select-none">
     <!-- <LazySpellPicker
       :model="0"
       :pocket="pocket"

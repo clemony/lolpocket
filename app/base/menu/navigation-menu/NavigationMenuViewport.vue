@@ -47,12 +47,7 @@ const variants = {
             height: 'var(--reka-navigation-menu-viewport-height)',
           }"
           :class="
-            cn(
-              `
-                relative grid items-center justify-center overflow-hidden
-                rounded-xl border border-b4/70 bg-b1/92 text-bc bg-blend-screen
-                shadow-lg shadow-black/10 backdrop-blur-md
-              `,
+            cn('relative grid items-center justify-center overflow-hidden rounded-xl border border-b4/70 bg-b1/92 text-bc bg-blend-screen shadow-lg shadow-black/10 backdrop-blur-md',
               props.class,
             )
           ">

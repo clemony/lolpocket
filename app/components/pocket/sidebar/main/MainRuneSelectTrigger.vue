@@ -25,15 +25,14 @@ const mainSet = computed(() =>
         variant="ghost"
         class="
           group/btn pointer-events-auto! z-10 size-16! cursor-pointer!
-          rounded-full fx-0
-          **:pointer-events-none
-          hover:shadow-sm hover:shadow-black/4
+          rounded-full fx-0 **:pointer-events-none hover:shadow-sm
+          hover:shadow-black/4
         "
         :set="mainSet" />
       <div
         class="
-          @6xl:animate-in @6xl:flex @6xl:slide-in-from-right @6xl:fade-in
-          hidden shrink flex-col overflow-hidden
+          @6xl:animate-in @6xl:flex @6xl:slide-in-from-right @6xl:fade-in hidden
+          shrink flex-col overflow-hidden
         ">
         <h3
           v-memo="[mainSet]"

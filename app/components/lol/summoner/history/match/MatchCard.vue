@@ -24,26 +24,13 @@ const queue = computed(() => {
   <Collapsible
     v-model:open="isOpen"
     :class="
-      cn(
-        `
-          group group/collapse field-box relative size-full max-w-220 min-w-134
-          cursor-pointer flex-col items-center justify-start overflow-hidden
-          border-b3/70 bg-clip-padding text-2
-          **:select-none
-        `,
+      cn('group group/collapse field-box relative size-full max-w-210 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
-        cn(
-          `
-            pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer
-            items-center justify-start justify-items-start gap-0 overflow-hidden
-            rounded-xl bg-transparent bg-linear-to-r to-transparent to-40%
-            bg-clip-padding px-5 text-2
-            data-[state=open]:rounded-b-none
-          `,
+        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding px-5 text-2 data-[state=open]:rounded-b-none',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
           `
             before:pointer-events-none before:absolute before:left-0 before:z-3
@@ -60,8 +47,8 @@ const queue = computed(() => {
       ">
       <div
         class="
-          flex h-fit w-30 flex-col justify-start gap-1 self-center py-1
-          **:antialiased **:select-none
+          flex h-fit w-30 flex-col justify-start self-center **:antialiased
+          **:select-none
         ">
         <h3
           class="
@@ -71,10 +58,7 @@ const queue = computed(() => {
         </h3>
 
         <div
-          class="
-            flex w-full flex-col font-semibold opacity-76
-            *:text-left
-          ">
+          class="flex w-full flex-col font-semibold opacity-76 *:text-left">
           <p
             class="
               flex items-center gap-1.5 text-left text-4 font-bold text-nowrap
@@ -84,7 +68,7 @@ const queue = computed(() => {
 
           <p
             class="
-              mt-1 flex flex-col justify-center py-1 text-start text-[0.92rem]!
+              mt-1 flex flex-col justify-center text-start text-[0.92rem]!
               leading-4
             ">
             <span>
@@ -108,14 +92,14 @@ const queue = computed(() => {
           <ChampionIcon
             :id="player?.championId"
             v-tippy="{
+              theme: 'neutral',
               content: ix().champNameById(player?.championId),
               placement: 'top',
             }"
             alt="champion-icon"
             class="
               size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
-              transition-all duration-300
-              hover:scale-105
+              transition-all duration-300 hover:scale-105
             " />
 
           <!--  spells -->

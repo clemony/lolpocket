@@ -27,11 +27,7 @@ const items = computed(() => {
   <div
     v-if="player"
     :class="
-      cn(
-        `
-          flex size-full max-w-66 items-start gap-1
-          *:rounded-md
-        `,
+      cn('flex size-full max-w-66 items-start gap-1 *:rounded-md',
         wrapperClass,
       )
     ">
@@ -41,7 +37,9 @@ const items = computed(() => {
       <Item
         v-if="items[i]"
         :id="items[i]"
-        v-tippy="ix().itemNameById(items[i])"
+        v-tippy="{ content: ix().itemNameById(items[i]),
+                   placement: 'bottom',
+                   theme: 'neutral' }"
         :alt="items[i]"
         class="
           size-9 rounded-md ring-bc/60 transition-all duration-300

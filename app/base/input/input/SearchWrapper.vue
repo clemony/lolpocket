@@ -12,11 +12,7 @@ const props = defineProps<{
   <label
     class="input"
     :class="
-      cn(
-        `
-          relative max-w-100 items-center
-          has-[&_input]:placeholder-shown:*:last:opacity-0
-        `,
+      cn('relative max-w-100 items-center has-[&_input]:placeholder-shown:*:last:opacity-0',
         props.class,
       )
     ">

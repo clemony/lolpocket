@@ -26,8 +26,7 @@ watchEffect(async () => {
     v-if="item"
     class="
       flex max-h-[404px] max-w-90 flex-col justify-self-center overflow-hidden
-      px-4 py-3
-      **:select-text
+      px-4 py-3 **:select-text
     ">
     <div class="flex h-fit gap-4">
       <div

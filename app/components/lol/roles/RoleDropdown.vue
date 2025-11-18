@@ -15,8 +15,8 @@ const pocket = ref(props.pocket)
       <Button
         variant="ghost"
         class="
-          hover:bgneutral/50
-          top-1.5 right-2 flex aspect-square size-10 rounded-lg px-1
+          hover:bgneutral/50 top-1.5 right-2 flex aspect-square size-10
+          rounded-lg px-1
         ">
         <component
           :is="`i-roles-${pocket.roles}`"
@@ -41,10 +41,7 @@ const pocket = ref(props.pocket)
       <DropdownMenuItem>
         <label
           for="all"
-          class="
-            flex gap-4 text-2
-            hover:bg-b2/60!
-          ">
+          class="flex gap-4 text-2 hover:bg-b2/60!">
           <input
             id="all"
             v-model="pocket.roles"
@@ -56,10 +53,7 @@ const pocket = ref(props.pocket)
 
           <icon
             name="tick-sm"
-            class="
-              size-5 opacity-0
-              peer-checked:opacity-100
-            " />
+            class="size-5 opacity-0 peer-checked:opacity-100" />
           All
         </label>
       </DropdownMenuItem>
@@ -72,10 +66,7 @@ const pocket = ref(props.pocket)
         class="">
         <label
           :for="role"
-          class="
-            flex gap-4 text-2
-            hover:bg-b2/60!
-          ">
+          class="flex gap-4 text-2 hover:bg-b2/60!">
           <input
             :id="role"
             v-model="pocket.roles[0]"
@@ -86,10 +77,7 @@ const pocket = ref(props.pocket)
 
           <icon
             name="tick-sm"
-            class="
-              size-5 opacity-0
-              peer-checked:opacity-100
-            " />
+            class="size-5 opacity-0 peer-checked:opacity-100" />
           {{ role }}
         </label>
       </DropdownMenuItem>

@@ -23,11 +23,7 @@ const emit = defineEmits(['interact-outside'])
     :align="props.align"
     :side="props.side"
     :class="
-      cn(
-        `
-          bgneutral/86 rounded-xl! border border-accent! text-nc/80
-          backdrop-blur-lg backdrop-brightness-175
-        `,
+      cn('bgneutral/86 rounded-xl! border border-accent! text-nc/80 backdrop-blur-lg backdrop-brightness-175',
         props.class,
       )
     "

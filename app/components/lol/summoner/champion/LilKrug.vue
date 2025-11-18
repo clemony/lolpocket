@@ -24,10 +24,7 @@
     </div>
 
     <DonutSkeleton
-      class="
-        size-18 dst
-        *:opacity-60
-      "
+      class="size-18 dst *:opacity-60"
       label="0%"></DonutSkeleton>
   </div>
 </template>

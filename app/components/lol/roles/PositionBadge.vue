@@ -27,8 +27,7 @@ const position = computed(() => {
     hover="btn"
     :size
     :class="
-      cn(
-        `w-fit gap-2.5! pr-6 pl-4 text-2! font-medium! text-bc/90 capitalize`,
+      cn('w-fit gap-2.5! pr-6 pl-4 text-2! font-medium! text-bc/90 capitalize',
         {
           'hover:**:text-bc hover:text-bc order-first text-white':
             active
@@ -48,9 +47,6 @@ const position = computed(() => {
     <icon
       v-if="clear"
       name="x"
-      class="
-        size-4 text-white
-        **:stroke-[2.6]
-      " />
+      class="size-4 text-white **:stroke-[2.6]" />
   </Button>
 </template>

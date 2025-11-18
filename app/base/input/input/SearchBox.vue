@@ -18,12 +18,7 @@ watch(metaK, (v) => {
   <Button
     variant="input"
     :class="
-      cn(
-        `
-          cursor-text gap-2! border border-b3 bg-b1/60 pr-2 ring-b1
-          transition-all duration-300
-          hover:ring
-        `,
+      cn('cursor-text gap-2! border border-b3 bg-b1/60 pr-2 ring-b1 transition-all duration-300 hover:ring',
         className,
       )
     "

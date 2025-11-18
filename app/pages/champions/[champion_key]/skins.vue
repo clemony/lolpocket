@@ -74,12 +74,7 @@ const skins = computed(() => skinIndex[champion.key])
           @click="onThumbClick(index)">
           <div
             :class="
-              cn(
-                `
-                  cursor-pointer rounded-xl transition-all duration-300
-                  **:pointer-events-none
-                  hover:opacity-100 hover:ring hover:ring-b4
-                `,
+              cn('cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring hover:ring-b4',
                 index === selectedIndex
                   ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1'
                   : 'opacity-80',
@@ -121,8 +116,7 @@ const skins = computed(() => skinIndex[champion.key])
               ">
               <CardContent
                 class="
-                  embla__parallax__layer p-0
-                  after:absolute after:size-full
+                  embla__parallax__layer p-0 after:absolute after:size-full
                   after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)]
                 ">
                 <Img
@@ -148,16 +142,14 @@ const skins = computed(() => skinIndex[champion.key])
         hover="neutral"
         class="
           left-10 size-16 rounded-xl border-0 bg-transparent fx-0
-          **:text-white/70
-          [&_svg]:size-6
+          **:text-white/70 [&_svg]:size-6
         " />
       <CarouselNext
         variant="base"
         hover="neutral"
         class="
           right-6 size-16 rounded-xl border-0 bg-transparent fx-0
-          **:text-white/70
-          [&_svg]:size-6
+          **:text-white/70 [&_svg]:size-6
         " />
     </Carousel>
   </div>

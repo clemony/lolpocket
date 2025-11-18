@@ -34,14 +34,11 @@ function reset() {
           :key="`${role.name}${i}`"
           class="
             has-checked:!bgneutral has-checked:!borderneutral
-            has-checked:!shadowneutral/20
-            btn mr-0 rounded-lg-2! rounded-md border-b2 bg-b2/20! text-3!
-            font-medium tracking-normal capitalize shadow-sm shadow-black/7
-            transition-all duration-300 btn-sm
-            checked:shadow-sm!
-            hover:scale-110 hover:border-b3! hover:bg-b3/40!
-            hover:drop-shadow-sm
-            has-checked:text-nc!
+            has-checked:!shadowneutral/20 btn mr-0 rounded-lg-2! rounded-md
+            border-b2 bg-b2/20! text-3! font-medium tracking-normal capitalize
+            shadow-sm shadow-black/7 transition-all duration-300 btn-sm
+            checked:shadow-sm! hover:scale-110 hover:border-b3! hover:bg-b3/40!
+            hover:drop-shadow-sm has-checked:text-nc!
           "
           :class="{ hidden: filters.role && role.name !== filters.role }">
           <input

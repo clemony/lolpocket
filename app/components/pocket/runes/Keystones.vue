@@ -24,16 +24,12 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
     ">
     <TabsList
       v-if="runes"
-      base="indicator"
+
       mode="in-out"
       :duration="{ leave: 0, enter: 200 }"
       group
       :class="
-        cn(
-          `
-            relative size-full max-w-114 min-w-114 flex-nowrap overflow-hidden
-            **:select-none
-          `,
+        cn('relative size-full max-w-114 min-w-114 flex-nowrap overflow-hidden **:select-none',
           gridCols,
         )
       ">
@@ -43,13 +39,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :title="rune.name"
         :value="rune.id"
         :class="
-          cn(
-            `
-              group/r tldr-30 relative grid aspect-square size-22 shrink-0
-              cursor-pointer place-items-center place-self-center rounded-full
-              border-transparent opacity-75
-              hover:opacity-100 hover:grayscale-0
-            `,
+          cn('group/r tldr-30 relative grid aspect-square size-22 shrink-0 cursor-pointer place-items-center place-self-center rounded-full border-transparent opacity-75 hover:opacity-100 hover:grayscale-0',
             { 'opacity-100  grayscale-0': set.keystone === rune.id },
           )
         ">
@@ -69,17 +59,13 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
           class="
             pointer-events-none absolute h-19 w-auto shrink-0 opacity-100
             brightness-90 contrast-150 drop-shadow-sm transition-all
-            duration-400
-            group-hover/r:opacity-0
+            duration-400 group-hover/r:opacity-0
           "
           :class="{ 'opacity-0': set.keystone === rune.id }" />
       </TabsTrigger>
 
       <TabIndicator
-        class="
-          mt-1
-          *:to-b1/40
-        "
+        class="mt-1 *:to-b1/40"
         round />
     </TabsList>
 

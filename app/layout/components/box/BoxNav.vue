@@ -13,15 +13,9 @@ const route = useRoute()
 <template>
   <div
     :data-collapsed="isCollapsed"
-    class="
-      group flex w-full flex-col gap-4 py-3
-      data-[collapsed=true]:py-2
-    ">
+    class="group flex w-full flex-col gap-4 py-3 data-[collapsed=true]:py-2">
     <nav
-      class="
-        grid w-full gap-1 px-2
-        data-[collapsed=true]:justify-center
-      ">
+      class="grid w-full gap-1 px-2 data-[collapsed=true]:justify-center">
       <BtnLink
         v-for="link of links"
         :key="link.name"
@@ -36,10 +30,7 @@ const route = useRoute()
         ">
         <icon
           :name="String(link.meta.icon)"
-          class="
-            **:stroke-1.2
-            size-4.5
-          " />
+          class="**:stroke-1.2 size-4.5" />
         <span v-show="!isCollapsed">
           {{ link.meta?.title || link.name }}
         </span>

@@ -61,8 +61,7 @@ function handleAdd() {
   <div
     class="
       z-auto flex size-full max-h-full flex-col items-center -space-y-6
-      overflow-y-scroll pt-10 pr-16 pl-10
-      *:max-w-[1200px]
+      overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-[1200px]
     ">
     <!-- thumbnails -->
     <Carousel
@@ -104,12 +103,7 @@ function handleAdd() {
 
           <CarouselItem
             :class="
-              cn(
-                `
-                  w-min grow basis-1 cursor-pointer p-1 opacity-60
-                  has-disabled:cursor-not-allowed has-disabled:opacity-40
-                  has-[not-disabled]:hover:opacity-100
-                `,
+              cn('w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:hover:opacity-100',
               )
             ">
             <Card

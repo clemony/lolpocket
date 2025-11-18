@@ -58,8 +58,7 @@ const tabListClass
               :alt="`${path} icon`"
               class="
                 z-10 h-9 w-auto brightness-90 grayscale transition-all
-                duration-300
-                [&_img]:drop-shadow-sm
+                duration-300 [&_img]:drop-shadow-sm
               "
               :class="{
                 'brightness-100 grayscale-0': path === selectedPath,

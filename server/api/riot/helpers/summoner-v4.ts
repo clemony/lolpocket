@@ -1,4 +1,4 @@
-import { getApiPath, riotGet } from "../client"
+import { getApiPath, riotGet } from '../client'
 
 // ------ V4
 export async function fetchSummonerV4(puuid: string, region: string) {

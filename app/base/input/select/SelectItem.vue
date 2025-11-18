@@ -21,17 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
   <SelectItem
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          relative flex w-full cursor-default items-center justify-between
-          rounded-md border border-transparent px-3 py-1.25 text-2 outline-none
-          select-none
-          focus:bg-b2 focus:text-bc
-          data-[disabled]:pointer-events-none data-[disabled]:opacity-50
-          data-[state=checked]:justify-between data-[state=checked]:border-b2
-          data-[state=checked]:bg-b2/40 data-[state=checked]:px-3
-          data-[state=checked]:shadow-xs
-        `,
+      cn('relative flex w-full cursor-default items-center justify-between rounded-md border border-transparent px-3 py-1.25 text-2 outline-none select-none focus:bg-b2 focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[state=checked]:justify-between data-[state=checked]:border-b2 data-[state=checked]:bg-b2/40 data-[state=checked]:px-3 data-[state=checked]:shadow-xs',
         props.class,
       )
     ">
@@ -40,8 +30,7 @@ const forwarded = useForwardProps(delegatedProps)
     </SelectItemText>
     <span
       class="
-        flex h-3.5 w-3.5 items-center justify-center opacity-80
-        **:stroke-[0.9]
+        flex h-3.5 w-3.5 items-center justify-center opacity-80 **:stroke-[0.9]
       ">
       <SelectItemIndicator v-if="!props.noTick">
         <icon

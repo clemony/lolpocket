@@ -6,7 +6,7 @@ const { class: className, summoner } = defineProps<{
 
 definePageMeta({
   key: 'm',
-  name: 'mastery',
+  name: 'champions',
   icon: 'i-lol-mastery',
   iconStyle: 'scale-90 -mb-0.25',
   order: 1,

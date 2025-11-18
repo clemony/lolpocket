@@ -31,8 +31,7 @@ pocket.icon = pocket.icon.replace('centered', 'tile')
         alt="pocket icon"
         class="
           pointer-events-none z-1 size-22! rounded-full transition-all
-          duration-500 ease-in-out
-          group-hover/icon:brightness-50
+          duration-500 ease-in-out group-hover/icon:brightness-50
           group-data-[state=open]/icon:brightness-50
         " />
 
@@ -40,8 +39,7 @@ pocket.icon = pocket.icon.replace('centered', 'tile')
         name="images"
         class="
           pointer-events-none absolute z-2 size-6 text-nc! opacity-0
-          transition-all duration-500 ease-in-out
-          group-hover/icon:opacity-80
+          transition-all duration-500 ease-in-out group-hover/icon:opacity-80
           group-data-[state=open]/icon:opacity-100
         " />
     </slot>

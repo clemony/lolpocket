@@ -52,8 +52,7 @@ const forwarded = useForwardProps(props)
       v-bind="$attrs"
       :alt="alt"
       :class="
-        cn(
-          `size-full shrink-0 translate-z-0 object-center`,
+        cn('size-full shrink-0 translate-z-0 object-center',
           {
             'opacity-100 ': loaded,
             'opacity-0': !loaded,

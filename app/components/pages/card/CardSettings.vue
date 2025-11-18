@@ -28,9 +28,8 @@ watch(
     class="
       absolute top-16 left-0 z-1 flex h-14 w-full items-center gap-2
       rounded-none border-x-2 border-b border-x-b3/30 border-b-b3/80 bg-b2/40
-      px-5.25 py-1 shadow-none backdrop-blur-md
-      before:absolute before:top-0 before:left-0 before:z-0 before:size-full
-      before:bg-b1/60
+      px-5.25 py-1 shadow-none backdrop-blur-md before:absolute before:top-0
+      before:left-0 before:z-0 before:size-full before:bg-b1/60
     ">
     <LazyChampionDropdown
       :disabled="!card.champion"
@@ -42,8 +41,7 @@ watch(
       class="
         grid-place-items-center tldr-30 relative mx-2 aspect-square size-6.5
         cursor-pointer overflow-hidden rounded-full border border-neutral/60
-        drop-shadow-xs
-        hover:border-neutral hover:ring hover:ring-neutral
+        drop-shadow-xs hover:border-neutral hover:ring hover:ring-neutral
       ">
       <input
         v-model="color"
@@ -64,17 +62,11 @@ watch(
 
       <icon
         name="hugeicons:monocle"
-        class="
-          swap-off size-5.5 dst
-          peer-disabled:text-bc/20
-        " />
+        class="swap-off size-5.5 dst peer-disabled:text-bc/20" />
 
       <icon
         name="streamline:rainbow"
-        class="
-          swap-on size-6 dst
-          peer-disabled:text-bc/20
-        " />
+        class="swap-on size-6 dst peer-disabled:text-bc/20" />
     </label>
 
     <Popover>

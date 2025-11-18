@@ -8,11 +8,7 @@ const { fullWidth, class: className } = defineProps<{
 <template>
   <div
     :class="
-      cn(
-        `
-          z-auto flex size-full flex-col space-y-8
-          lg:flex-row lg:space-y-0 lg:space-x-12
-        `,
+      cn('z-auto flex size-full flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-12',
         className,
       )
     ">

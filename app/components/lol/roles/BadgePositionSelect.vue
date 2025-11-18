@@ -48,8 +48,7 @@ onMounted(() => {
           buttonVariants({ size, variant, hover: 'input' }),
           `
             group/s relative w-44 justify-start inset-shadow-xs transition-all
-            duration-200 fx-0
-            hover:ring hover:ring-bc/50
+            duration-200 fx-0 hover:ring hover:ring-bc/50
           `,
           className,
         )
@@ -63,8 +62,8 @@ onMounted(() => {
       <icon
         name="select"
         class="
-          absolute right-1.5 size-4 opacity-50
-          group-hover/s:text-bc! group-hover/s:opacity-100
+          absolute right-1.5 size-4 opacity-50 group-hover/s:text-bc!
+          group-hover/s:opacity-100
         " />
     </SelectTrigger>
     <LazySelectContent

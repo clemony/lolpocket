@@ -19,11 +19,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <NavigationMenuContent
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          NavigationMenuContent absolute justify-self-center overflow-hidden
-          rounded-xl text-bc will-change-[transform,opacity]
-        `,
+      cn('NavigationMenuContent absolute justify-self-center overflow-hidden rounded-xl text-bc will-change-[transform,opacity]',
         props.class,
       )
     ">

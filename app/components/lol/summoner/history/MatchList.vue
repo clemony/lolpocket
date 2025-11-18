@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const emit = defineEmits(['scroll-top'])
 
-const { loading, matches, summoner } = useSummonerInject()
+const { loading, matches, summoner } = inject<SummonerInject>(SummonerKey)
 
 console.log('📎 - summoner:', summoner)
 
@@ -64,10 +64,7 @@ watch(
         <PaginationFirst class="disabled:hidden" />
         <PaginationPrev
           size="sm"
-          class="
-            btn-square
-            disabled:hidden
-          " />
+          class="btn-square disabled:hidden" />
         <template v-for="(page, index) in items">
           <PaginationItem
             v-if="page.type === 'page'"
@@ -83,10 +80,7 @@ watch(
         </template>
         <PaginationNext
           size="sm"
-          class="
-            btn-square
-            disabled:hidden
-          " />
+          class="btn-square disabled:hidden" />
         <PaginationLast class="disabled:hidden" />
       </PaginationContent>
     </Pagination>

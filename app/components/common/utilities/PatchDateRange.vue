@@ -105,13 +105,7 @@ const blocks = computed(() => Math.round(state.allMatches.value.length / 20))
                       || isPatchDay(weekDate as CalendarDate)
                   "
                   :class="
-                    cn(
-                      `
-                        indicator-item grid-place-items-center size-2
-                        -translate-x-0.75 translate-y-0.75 overflow-hidden
-                        rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs
-                        shadow-black/8 drop-shadow-xs
-                      `,
+                    cn('indicator-item grid-place-items-center size-2 -translate-x-0.75 translate-y-0.75 overflow-hidden rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs shadow-black/8 drop-shadow-xs',
                       '',
 
                       {

@@ -32,12 +32,9 @@ const pinned = computed(() =>
               hover="base"
               size="12"
               class="
-                group
-                data-[state=open]:fx-noise
-                w-full justify-start gap-3! pr-5 pl-4.5
-                hover:bg-transparent
-                data-[state=open]:border-b3/80 data-[state=open]:shadow-sm
-                data-[state=open]:inset-shadow-xs
+                group data-[state=open]:fx-noise w-full justify-start gap-3!
+                pr-5 pl-4.5 hover:bg-transparent data-[state=open]:border-b3/80
+                data-[state=open]:shadow-sm data-[state=open]:inset-shadow-xs
                 data-[state=open]:shadow-black/8
               ">
               <SummonerIcon class="size-7 rounded-full" />

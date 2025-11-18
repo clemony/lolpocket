@@ -63,14 +63,7 @@ const wrapperVariants = {
         bounce: 0.2,
       }"
       :class="
-        cn(
-          `
-            z-50 w-(--reka-dropdown-menu-trigger-width) rounded-lg! border
-            border-b3! bg-b1/94 p-1 text-bc shadow-md drop-shadow-md
-            backdrop-blur-lg outline-none
-            group-data-[state=hidden]:**:opacity-0
-            group-data-[state=visible]:**:opacity-100
-          `,
+        cn('z-50 w-(--reka-dropdown-menu-trigger-width) rounded-lg! border border-b3! bg-b1/94 p-1 text-bc shadow-md drop-shadow-md backdrop-blur-lg outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
           className,
         )
       ">

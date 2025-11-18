@@ -34,8 +34,7 @@ const shortcuts = [
         name="i"
         class="
           size-5! opacity-60 transition-all duration-100
-          group-focus-within/text:opacity-90
-          group-hover/text:opacity-90
+          group-focus-within/text:opacity-90 group-hover/text:opacity-90
         " />
     </PopoverTrigger>
 
@@ -45,10 +44,7 @@ const shortcuts = [
       align="start"
       class="tippy-box w-58 -translate-x-2 rounded-xl px-0 pt-px pb-1">
       <table
-        class="
-          table pr-0
-          [&_th]:pr-1 [&_th]:pb-1
-        ">
+        class="table pr-0 [&_th]:pr-1 [&_th]:pb-1">
         <!-- head -->
         <thead class="mb-0 border-b border-b-b3 pb-0">
           <tr>

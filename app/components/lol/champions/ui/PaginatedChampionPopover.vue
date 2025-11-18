@@ -49,13 +49,7 @@ watch(
         variant="btn"
         hover="btn"
         :class="
-          cn(
-            `
-              transition-[colors, opacity] relative aspect-square h-auto w-full
-              overflow-hidden p-0 ring-bc/60 duration-300
-              open:btn-active open:ring-2
-              hover:text-bc/60 hover:ring hover:inset-shadow-xs
-            `,
+          cn('transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-bc/60 duration-300 open:btn-active open:ring-2 hover:text-bc/60 hover:ring hover:inset-shadow-xs',
             { 'shadow-sm drop-shadow-sm ': pocket._champion },
           )
         ">
@@ -70,13 +64,7 @@ watch(
           :img="getSplash(pocket._champion, 'tile')" />
         <div
           :class="
-            cn(
-              `
-                absolute inset-0 grid size-full items-end justify-center
-                bg-neutral/60 p-1 opacity-0 transition-opacity duration-300
-                group-open/collapse:opacity-100
-                group-hover/collapse:opacity-100
-              `,
+            cn('absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
               { 'bg-b2 **:text-bc/40': !pocket._champion },
             )
           ">
@@ -117,10 +105,7 @@ watch(
           @click="searchQuery = ''">
           <icon
             name="x-sm"
-            class="
-              size-4
-              **:stroke-[1.5]
-            " />
+            class="size-4 **:stroke-[1.5]" />
         </Button>
       </div>
 
@@ -199,16 +184,10 @@ watch(
           <PaginationContent>
             <PaginationPrev
               size="8"
-              class="
-                btn-square size-8
-                disabled:opacity-40
-              " />
+              class="btn-square size-8 disabled:opacity-40" />
             <PaginationNext
               size="8"
-              class="
-                btn-square size-8
-                disabled:opacity-40
-              " />
+              class="btn-square size-8 disabled:opacity-40" />
           </PaginationContent>
         </Pagination>
       </div>

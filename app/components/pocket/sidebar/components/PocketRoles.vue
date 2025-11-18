@@ -75,10 +75,7 @@ const pocket = computed(() => p)
 
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
-              class="
-                h-3.75 w-auto shrink-0 text-bc/70 dst
-                peer-checked:text-nc
-              "
+              class="h-3.75 w-auto shrink-0 text-bc/70 dst peer-checked:text-nc"
               :class="{ 'text-bc/80!': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>

@@ -71,10 +71,7 @@ const roleModel = computed({
 
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-              class="
-                h-5 w-auto shrink-0 dst
-                peer-checked:text-nc
-              "
+              class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
               :class="{ 'text-bc/80!': role.name === 'ALL' }" />
           </label>
         </template>

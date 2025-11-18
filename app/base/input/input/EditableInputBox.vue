@@ -45,10 +45,7 @@ const modelValue = ref(props.modelValue)
       </EditableEditTrigger>
 
       <RandomButton
-        class="
-          absolute right-0 hidden btn-ghost
-          group-focus-within:block
-        "
+        class="absolute right-0 hidden btn-ghost group-focus-within:block"
         @click="modelValue = generateName()" />
     </EditableArea>
   </EditableRoot>

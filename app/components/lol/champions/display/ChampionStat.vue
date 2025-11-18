@@ -29,8 +29,7 @@ const {
         :class="
           cn(`
             text-start text-2 font-medium text-nowrap lowercase
-            underline-offset-2
-            group-hover:underline
+            underline-offset-2 group-hover:underline
           `)
         ">
         {{ stat.abbr[1] || stat.abbr || stat.name }}
@@ -38,8 +37,8 @@ const {
 
       <div
         class="
-          opacity-80
-          **:inline-block **:text-3! **:font-semibold **:text-bc **:tabular-nums
+          opacity-80 **:inline-block **:text-3! **:font-semibold **:text-bc
+          **:tabular-nums
         ">
         <NumberTicker
           v-if="stat?.values.current && stat?.id !== 'criticalStrikeDamage'"

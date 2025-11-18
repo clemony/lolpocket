@@ -7,11 +7,7 @@ const props = defineProps<{
 <template>
   <button
     :class="
-      cn(
-        `
-          absolute bottom-0 left-0 z-10 flex w-[calc(100%-16px)] cursor-default
-          items-center justify-center rounded-b-xl bg-b1 py-1
-        `,
+      cn('absolute bottom-0 left-0 z-10 flex w-[calc(100%-16px)] cursor-default items-center justify-center rounded-b-xl bg-b1 py-1',
         props.class,
       )
     ">

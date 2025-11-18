@@ -55,8 +55,7 @@ const set2 = computed(() => is().calculatorSet2)
     <div
       class="
         btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px]
-        items-center py-2
-        *:text-2
+        items-center py-2 *:text-2
       ">
       <div class="col-start-2 font-medium dst">
         STAT
@@ -82,11 +81,8 @@ const set2 = computed(() => is().calculatorSet2)
           class="
             sticky top-0 left-0 z-1 grid cursor-pointer
             grid-cols-[40px_1fr_30px_30px] items-center border-b border-t-b3/60
-            border-b-b3/55 bg-b1 py-3
-            *:justify-start
-            first:border-t
-            last:border-b-b3!
-            hover:border-y hover:border-y-b3/80 hover:bg-b1/50
+            border-b-b3/55 bg-b1 py-3 *:justify-start first:border-t
+            last:border-b-b3! hover:border-y hover:border-y-b3/80 hover:bg-b1/50
           ">
           <!-- row 1 -->
 
@@ -111,10 +107,8 @@ const set2 = computed(() => is().calculatorSet2)
             :layout="true"
             class="
               grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px]
-              items-center border-b border-b-b3/40 py-3.5
-              first:border-t first:border-t-b3
-              hover:bg-b2/60
-              has-checked:hidden
+              items-center border-b border-b-b3/40 py-3.5 first:border-t
+              first:border-t-b3 hover:bg-b2/60 has-checked:hidden
             ">
             <input
               v-model="checkedStats"
@@ -134,8 +128,7 @@ const set2 = computed(() => is().calculatorSet2)
     <div
       class="
         z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center
-        border-y border-y-b3/50 py-2
-        *:text-2
+        border-y border-y-b3/50 py-2 *:text-2
       ">
       <div class="ml-4 justify-center">
         <i-ui-gold class="size-6 text-bc/80" />

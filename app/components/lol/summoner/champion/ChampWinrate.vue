@@ -9,14 +9,17 @@ const a = computed(() => {
 </script>
 
 <template>
-  <div class="relative grid size-15 place-items-center rounded-lg">
-    <DonutSkeleton class="absolute size-15" />
+  <div class="relative grid size-14 place-items-center rounded-lg">
+    <DonutSkeleton
+      style="--thickness: 22%;"
+      class="absolute size-14" />
 
     <div
       class="radial-progress absolute"
       :style="{
         '--value': a,
-        '--size': '3.65rem',
+        '--size': '3.4rem',
+
         'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
       }"
       role="progressbar">
@@ -26,5 +29,3 @@ const a = computed(() => {
     </div>
   </div>
 </template>
-
-<style scoped></style>

@@ -7,10 +7,7 @@ const props = defineProps<{
 <template>
   <tippy :class="cn('dr-20 cursor-info flex gap-1 transition', props.class)">
     <span
-      class="
-        underline-offset-2
-        hover:underline
-      "><slot /></span>
+      class="underline-offset-2 hover:underline"><slot /></span>
 
     <icon
       name="ph:info"

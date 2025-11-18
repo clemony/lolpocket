@@ -24,22 +24,19 @@ const pocket = computed(() =>
               type="tile"
               class="
                 aspect-square h-auto w-full max-w-80 inset-shadow-sm
-                inset-shadow-black/20
-                *:scale-[130%]
+                inset-shadow-black/20 *:scale-[130%]
               " />
           </HoverCardTrigger>
           <HoverCardContent
             align="start"
             side="bottom"
             class="
-              open:animate-in open:fade-in
-              closed:fade-out
+              open:animate-in open:fade-in closed:fade-out
               h-[calc(var(--reka-hover-card-trigger-height)+3px)]
               w-[calc(var(--reka-hover-card-trigger-width)+3px)]
               -translate-x-0.75
               -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)]
-              border-b3 shadow-none drop-shadow-none
-              closed:animate-out
+              border-b3 shadow-none drop-shadow-none closed:animate-out
             ">
           </HoverCardContent>
         </HoverCard>
@@ -48,8 +45,7 @@ const pocket = computed(() =>
 
       <div
         class="
-          grid-rows-max grid h-fit w-full place-items-center pt-20.5
-          *:w-full
+          grid-rows-max grid h-fit w-full place-items-center pt-20.5 *:w-full
         ">
         <MainRuneSelect :pocket>
           <CoreRuneTrigger :pocket />

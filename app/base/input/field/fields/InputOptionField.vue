@@ -33,8 +33,8 @@ function onBlur() {}
       hover="outline"
       variant="ghost"
       class="
-        w-full border border-transparent py-2
-        hover:border-b3/50! hover:bg-b2/40 hover:fx-1
+        w-full border border-transparent py-2 hover:border-b3/50! hover:bg-b2/40
+        hover:fx-1
       ">
       <FormItem class="w-full">
         <FormLabel class="flex w-full cursor-pointer items-center gap-2">
@@ -59,7 +59,7 @@ function onBlur() {}
 
           <InputGroup
             :class="
-              cn(`relative flex h-11 grow items-center gap-4 self-center bg-b1!`)
+              cn('relative flex h-11 grow items-center gap-4 self-center bg-b1!')
             ">
             <FormControl as-child>
               <InputGroupInput

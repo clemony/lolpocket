@@ -33,8 +33,7 @@ function openInfo(rune: number) {}
   <div
     class="
       field-box relative flex w-full flex-col items-center justify-center
-      gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500
-      **:select-none
+      gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none
     ">
     <template v-if="runes">
       <div

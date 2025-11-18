@@ -24,7 +24,6 @@ const roleStats = await useMatchRoles(
     </FilterLabel>
 
     <TabsList
-      base="indicator"
       class="grid h-14 w-full grid-cols-6">
       <TabsTrigger
         v-for="role in roleStats"
@@ -38,10 +37,7 @@ const roleStats = await useMatchRoles(
         <span class="relative grid size-5.5 place-items-center">
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-            class="
-              h-5 w-auto shrink-0 dst
-              peer-checked:text-nc
-            "
+            class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
             :class="{ 'text-bc/80!': role.name === 'ALL' }" />
         </span>
       </TabsTrigger>

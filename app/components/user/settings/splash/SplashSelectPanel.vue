@@ -19,7 +19,7 @@ const { results: championResult } = useSimpleSearch(
 const result = computed(() => {
   const values = championResult?.value?.length
     ? championResult.value
-    : ix().champions
+    : championIndex
   return [...values].sort((a, b) => a.name.localeCompare(b.name))
 })
 
@@ -33,15 +33,7 @@ function reset() {
   <ResponsiveDialog v-bind="$attrs">
     <ResponsiveDialogTrigger
       :class="
-        cn(
-          `
-            group/icon pointer-events-auto relative z-0 grid aspect-square
-            size-fit shrink-0 cursor-pointer place-items-center self-center
-            rounded-full shadow-xs ring ring-transparent ring-offset-3
-            ring-offset-transparent drop-shadow-sm transition-colors
-            duration-300
-            hover:ring-b4 hover:ring-offset-neutral
-          `,
+        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
           className,
         )
       ">
@@ -118,10 +110,7 @@ function reset() {
               :id="item.id"
               for="item-key"
               :alt="item.name"
-              class="
-                size-10 rounded-lg bg-black
-                **:text-white
-              " />
+              class="size-10 rounded-lg bg-black **:text-white" />
             <span class="grow truncate text-start">
               {{ item.name }}
             </span>
@@ -165,10 +154,7 @@ function reset() {
             class="grid size-full place-items-end p-6">
             <Badge
               variant="neutral"
-              class="
-                font-medium
-                **:text-2
-              ">
+              class="font-medium **:text-2">
               Select or search a champion...
             </Badge>
           </div>

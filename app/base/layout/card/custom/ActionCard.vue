@@ -26,13 +26,7 @@ const {
     :for="title"
     class=""
     :class="
-      cn(
-        `
-          grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2
-          rounded-xl pt-8 pb-6
-          *:px-7
-          **:text-start
-        `,
+      cn('grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2 rounded-xl pt-8 pb-6 *:px-7 **:text-start',
         { 'hover:!bg-b2/60 hover-ring': hover },
         className,
       )

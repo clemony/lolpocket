@@ -1,17 +1,17 @@
-import type { NodeViewProps } from "@tiptap/core"
-import Mention from "@tiptap/extension-mention"
-import { mergeAttributes, VueNodeViewRenderer } from "@tiptap/vue-3"
-import MentionLinkRaw from "~/components/tiptap/extensions/mentions/MentionEditorBadge.vue"
-import { constructMentionAttrs } from "~/composables/tiptap"
+import type { NodeViewProps } from '@tiptap/core'
+import Mention from '@tiptap/extension-mention'
+import { mergeAttributes, VueNodeViewRenderer } from '@tiptap/vue-3'
+import MentionLinkRaw from '~/components/tiptap/extensions/mentions/MentionEditorBadge.vue'
+import { constructMentionAttrs } from '~/composables/tiptap'
 
 const MentionLink = MentionLinkRaw as unknown as Component<NodeViewProps>
 export const Mentions = Mention.extend({
-  name: "mentions",
+  name: 'mentions',
   addAttributes() {
     return {
-      "data-id": 0,
-      "data-key": null,
-      "data-name": null,
+      'data-id': 0,
+      'data-key': null,
+      'data-name': null,
     }
   },
   addNodeView() {
@@ -21,7 +21,7 @@ export const Mentions = Mention.extend({
   parseHTML() {
     return [
       {
-        tag: "mentions",
+        tag: 'mentions',
       },
     ]
   },
@@ -29,17 +29,17 @@ export const Mentions = Mention.extend({
     const item = node.attrs
     const attrs = constructMentionAttrs(item)
     return [
-      "button",
+      'button',
       mergeAttributes(HTMLAttributes, attrs),
 
       [
-        "img",
+        'img',
         {
-          alt: item["data-name"],
-          src: `/img/${attrs["data-label"]}s/${item["data-id"]}.webp`,
+          alt: item['data-name'],
+          src: `/img/${attrs['data-label']}s/${item['data-id']}.webp`,
         },
       ],
-      item["data-name"],
+      item['data-name'],
     ]
   },
 })

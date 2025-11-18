@@ -14,19 +14,13 @@ const { class: className, set } = defineProps<{
       )
     ">
     <div
-      class="
-        avatar size-7.5 border-3!
-        group-open/trig:border-b2
-      ">
+      class="avatar size-7.5 border-3! group-open/trig:border-b2">
       <IndexIcon
         :item="spellbook[set.d]"
         class="-mt-px -ml-px size-6.5" />
     </div>
     <div
-      class="
-        avatar size-7.5 border-3!
-        group-open/trig:border-b2
-      ">
+      class="avatar size-7.5 border-3! group-open/trig:border-b2">
       <IndexIcon
         :item="spellbook[set.f]"
         class="-mt-px -ml-px aspect-square size-6.5 shrink-0" />

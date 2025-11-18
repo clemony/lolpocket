@@ -18,13 +18,9 @@ const { toasts } = useToast()
         <Icons
           v-if="toast.icon"
           :variant="toast.color"
-          wrapper-class="!border-3 mb-0.5 shadow-xs drop-shadow-xs"
           size="c-5"
           :name="toast.icon"
-          class="
-            size-4
-            **:stroke-[2.5]
-          " />
+          class="size-5 **:stroke-[1.8]" />
         {{ toast.title }}
       </ToastTitle>
       <template v-if="toast.description">

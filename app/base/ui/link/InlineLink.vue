@@ -24,11 +24,7 @@ defineNuxtLink({
 <template>
   <NuxtLink
     :class="
-      cn(
-        `
-          inline-block text-nowrap underline transition-all duration-250
-          hover:opacity-30
-        `,
+      cn('inline-block text-nowrap underline transition-all duration-250 hover:opacity-30',
         className,
       )
     "

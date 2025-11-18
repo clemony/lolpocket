@@ -19,13 +19,16 @@ await state.findSummoner()
 
     <template #background>
       <BgSplash
-        size="header"
-        :img="
-          (as().account?.splash ?? state.champions().top().splash).replace(
-            'centered',
-            'uncentered',
-          )
-        " />
+        v-once
+        size="full"
+        :img="state.splash.value" />
+    </template>
+
+    <template #background-slice>
+      <BgSplash
+        v-once
+        size="full"
+        :img="state.splash.value" />
     </template>
 
     <!-- nav -->
@@ -47,47 +50,27 @@ await state.findSummoner()
     <div class="min-h-screen w-full bg-b1">
       <NuxtPage />
     </div>
-    <div class="fixed right-24 bottom-24 grid gap-4">
+    <div class="fixed right-24 bottom-24 z-4 grid gap-4">
       <UpdateSummoner
-        size="c"
+        size="c-14"
         placement="left"
-        variant="outline"
-        class="
-          pointer-events-auto! z-10 size-16! cursor-pointer! bg-b1/80 shadow-sm
-          shadow-black/4 backdrop-blur
-          *:opacity-60
-          hover:*:opacity-100
-          [&_svg]:size-4
-        " />
-      <FollowButton
-        :summoner="state.summoner.value"
-        size="c"
-        placement="left"
-        on="base"
-        variant="outline"
-        class="
-          pointer-events-auto! z-10 size-16! cursor-pointer! rounded-full!
-          bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
-          *:opacity-60
-          hover:*:opacity-100
-          [&_svg]:size-4
-        " />
+        variant="floating"
+        class="[&_svg]:size-4.25" />
 
-      <UpFAB />
+      <!--     <FollowButton
+        v-tippy="{ content: as().settings.favorite_summoners.includes(summoner.puuid) ? 'hi' : 'no', theme: 'base', placement: 'left' }"
+        :summoner
+        size="c-14" /> -->
 
       <Button
-        v-if="as().user.puuid === state.summoner.value.puuid"
-        class="
-          pointer-events-auto! z-10 size-16! cursor-pointer! rounded-full!
-          bg-b1/80 shadow-sm shadow-black/4 backdrop-blur
-          *:opacity-60
-          hover:*:opacity-100
-          [&_svg]:size-4
-        ">
+        v-if="as().account.puuid === state.summoner.value.puuid"
+        variant="floating"
+        size="c-14">
         <Icon
           name="gear"
-          class="" />
+          class="size-5" />
       </Button>
+      <UpFAB />
     </div>
   </TabLayout>
 </template>

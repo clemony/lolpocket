@@ -1,5 +1,5 @@
 // useValibot.ts
-import { safeParse } from "valibot"
+import { safeParse } from 'valibot'
 
 export function validateField(schema) {
   return (value: any) => {

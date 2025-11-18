@@ -4,27 +4,23 @@ const { loading, summoner } = useSummonerInject()
 
 <template>
   <div
-    class="
-      grid w-124 auto-rows-max items-start justify-center gap-8 overflow-y-auto
-      py-24
-    ">
+    class="grid w-108 auto-rows-max items-start gap-8 overflow-y-auto py-24">
     <RankCard
       v-if="as().settings?.show_solo && !loading"
       title="Solo/Duo"
-      :entry="summoner?.ranked?.solo"
-      class="order-2" />
+      :entry="summoner?.ranked?.solo" />
 
     <RankCard
       v-if="summoner.ranked?.flex && as().settings?.show_flex"
       title="Flex"
-      :entry="summoner.ranked.flex"
-      class="order-3" />
+      :entry="summoner.ranked.flex" />
 
-    <QueueFilters class="order-5" />
+    <QueueFilters />
 
-    <MatchChampionFilters class="order-6" />
+    <MatchChampionFilters />
 
-    <div class="order-7">
+    <PatchDateRange />
+    <div>
       <LazyMatchPositionFilter />
     </div>
 

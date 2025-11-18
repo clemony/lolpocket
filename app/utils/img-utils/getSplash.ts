@@ -14,7 +14,7 @@ function cKey(keyOrId: string | number): string {
 export function getSplash(
   keyOrId: string | number,
   type: SplashType,
-  s?: Skin,
+  s?: Skin
 ): string {
   const key = cKey(keyOrId)
   const champ = formatUrlChampKey(key)
@@ -27,7 +27,7 @@ export function getSplash(
     return skin.name === 'Original' && key !== 'Hwei' ? 'base' : `skin${id()}`
   })
 
-  const partialUrl = skin.key.replace('<type', type)
+  const partialUrl = skin.key.replace('<type>', type)
 
   /* type === 'uncentered'
       ? `images/${champ}_splash_uncentered_${skin.id}`
@@ -38,7 +38,7 @@ export function getSplash(
           : type === 'load'
             ? `${champ}loadscreen_skin`
             : null */
-  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/${partialUrl}.jpg`
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
 }
 
 function getSkinDirectory(id: string, key: string) {

@@ -1,4 +1,4 @@
-import { toast } from "~/composables/utils/useToast"
+import { toast } from '~/composables/utils/useToast'
 
 /* future
 async function handleUpdate({ id, content }: { id: string; content: Doc }) {
@@ -10,14 +10,14 @@ async function handleUpdate({ id, content }: { id: string; content: Doc }) {
     .eq('id', id)
 } */
 export function handleRemoval(id: string) {
-  console.log("🌱 - handleRemoval - id:", id)
+  console.log('🌱 - handleRemoval - id:', id)
 }
 
 function removeComment(list: CommentSchema[], id: string) {
   for (const comment of list) {
     if (comment.id === id && comment.author_id === as().account.puuid) {
       toast({
-        title: "Comment Removed",
+        title: 'Comment Removed',
         description: `Your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))} has been removed.`,
       })
       return true

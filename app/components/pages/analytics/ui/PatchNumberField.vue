@@ -12,8 +12,7 @@ console.log('💠 - ms:', ms().filter.patch)
       :step="0.01">
       <NumberFieldDecrement
         class="
-          relative grid h-full max-w-10 shrink-0 place-items-center
-          *:size-6
+          relative grid h-full max-w-10 shrink-0 place-items-center *:size-6
         ">
         <icon
           name="left"

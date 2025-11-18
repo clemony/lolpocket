@@ -23,14 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ContextMenuRadioItem
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          focus:textneutral-bc
-          relative flex cursor-default items-center gap-3 rounded-sm py-1.5 pr-2
-          pl-2 text-2 outline-none select-none
-          focus:bg-b2
-          data-[disabled]:pointer-events-none data-[disabled]:opacity-50
-        `,
+      cn('focus:textneutral-bc relative flex cursor-default items-center gap-3 rounded-sm py-1.5 pr-2 pl-2 text-2 outline-none select-none focus:bg-b2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         props.class,
       )
     ">

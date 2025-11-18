@@ -24,17 +24,11 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
     <MenubarRadioItem
       v-for="(set, i) in pocket.runes"
       :key="i"
-      class="
-        z-0 gap-1 px-2.5
-        [&_#indicator]:order-last
-      "
+      class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
       <Rune
         :id="Number(set.keystone)"
-        class="
-          size-6!
-          *:scale-130
-        " />
+        class="size-6! *:scale-130" />
       <template
         v-for="ix in 4"
         :key="ix">

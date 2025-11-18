@@ -69,8 +69,7 @@ const players = computed(() => match.participants as Player[])
     <div
       class="
         z-auto mt-2 grid h-max grid-flow-row auto-rows-max
-        grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2
-        **:text-1
+        grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2 **:text-1
       ">
       <template
         v-for="group in matchDataStats"
@@ -99,11 +98,7 @@ const players = computed(() => match.participants as Player[])
             v-for="p in players"
             :key="p.puuid"
             :class="
-              cn(
-                `
-                  py-1 text-end text-1! font-medium tracking-tight
-                  *:text-1!
-                `,
+              cn('py-1 text-end text-1! font-medium tracking-tight *:text-1!',
                 {
                   'text-bc/15 **:text-bc/15': p[stat.id] === 0,
                 },

@@ -31,15 +31,7 @@ const forwarded = useForwardProps(delegatedProps)
 
   <NavigationMenuIndicator
     :class="
-      cn(
-        `
-          absolute top-full z-[100] mt-[1px] flex h-[10px]
-          w-(--reka-navigation-menu-indicator-size)
-          translate-x-(--reka-navigation-menu-indicator-position) items-end
-          justify-center overflow-hidden to-98% mask-b-from-97%
-          transition-[all,transform_250ms_ease]
-          data-[state=hidden]:opacity-0
-        `,
+      cn('absolute top-full z-[100] mt-[1px] flex h-[10px] w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) items-end justify-center overflow-hidden to-98% mask-b-from-97% transition-[all,transform_250ms_ease] data-[state=hidden]:opacity-0',
         props.class,
       )
     "

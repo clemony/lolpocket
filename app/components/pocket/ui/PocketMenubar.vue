@@ -259,21 +259,14 @@ console.log('🌱 - menu:', menu)
           variant="link"
           on="secondary"
           size="sm"
-          class="
-            rounded-lg px-4 capitalize
-            open:brightness-98
-          ">
+          class="rounded-lg px-4 capitalize open:brightness-98">
           {{ group.name }}
         </Button>
       </MenubarTrigger>
       <LazyMenubarContent
         :side-offset="2"
         :class="
-          cn(
-            `
-              w-64
-              **:capitalize
-            `,
+          cn('w-64 **:capitalize',
             group.class,
           )
         ">

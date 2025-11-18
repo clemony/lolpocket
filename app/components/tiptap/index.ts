@@ -1,1 +1,1 @@
-export * from "./extensions/mentions/data-sources"
+export * from './extensions/mentions/data-sources'

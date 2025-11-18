@@ -11,7 +11,6 @@ const props = defineProps<
     size?: TabListVariants['size']
   }
 >()
-
 const forwarded = reactiveOmit(props, 'class')
 </script>
 

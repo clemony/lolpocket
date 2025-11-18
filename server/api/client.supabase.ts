@@ -1,11 +1,11 @@
-import { serverSupabaseClient } from "#supabase/server"
+import { serverSupabaseClient } from '#supabase/server'
 
 export async function createSupabaseClient(event) {
   const client = await serverSupabaseClient(event)
   const { data, error } = await client.auth.getUser()
 
   if (error || !data?.user) {
-    throw createError({ statusCode: 401, statusMessage: "Not authenticated" })
+    throw createError({ statusCode: 401, statusMessage: 'Not authenticated' })
   }
 
   return {

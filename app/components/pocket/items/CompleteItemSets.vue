@@ -11,8 +11,7 @@ const props = defineProps<{
   <div
     class="
       p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth
-      shadow-black/10 drop-shadow-md backdrop-blur-md
-      **:select-none
+      shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none
     ">
     <div class="w-full justify-start">
       <!--  <span
@@ -26,10 +25,7 @@ const props = defineProps<{
           <template v-if="i < 6">
             <div
               :key="i"
-              class="
-                size-20 rounded-xl
-                *:rounded-xl
-              ">
+              class="size-20 rounded-xl *:rounded-xl">
               <div class="size-full overflow-hidden rounded-lg">
                 <div
                   v-if="item === 0"

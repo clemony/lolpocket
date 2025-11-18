@@ -10,16 +10,12 @@ const { class: className, set } = defineProps<{
 <template>
   <div
     :class="
-      cn(
-        `avatar-group translate-x-px items-center justify-end -space-x-2.5`,
+      cn('avatar-group translate-x-px items-center justify-end -space-x-2.5',
         className,
       )
     ">
     <div
-      class="
-        avatar size-8 border-3!
-        group-open/trig:border-b2
-      ">
+      class="avatar size-8 border-3! group-open/trig:border-b2">
       <Keystone
         :id="set.keystone"
         class="-mt-px -ml-px size-7" />
@@ -27,8 +23,7 @@ const { class: className, set } = defineProps<{
     <div
       class="
         avatar relative grid size-7 place-items-center! border-1! border-b4/60
-        bg-b1
-        group-open/trig:border-b2
+        bg-b1 group-open/trig:border-b2
       ">
       <img
         :alt="set.secondary.path"

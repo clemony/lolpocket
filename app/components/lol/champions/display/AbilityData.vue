@@ -18,10 +18,7 @@ watch(
 
 <template>
   <div
-    class="
-      flex size-full max-h-full flex-col items-center gap-6 pt-6
-      **:text-3
-    ">
+    class="flex size-full max-h-full flex-col items-center gap-6 pt-6 **:text-3">
     <div class="mt-2 flex w-full items-center justify-between gap-3 px-7">
       <h2
         v-if="ability?.name"
@@ -62,10 +59,7 @@ watch(
           class="flex items-center gap-2">
           <component
             :is="`i-stats-charge-${ability.maxCharges}`"
-            class="
-              -mt-px inline size-7 text-bc/80 dst
-              *:stroke-[1.3]
-            " />
+            class="-mt-px inline size-7 text-bc/80 dst *:stroke-[1.3]" />
 
           <span>
             {{ ability.maxCharges }}
@@ -78,10 +72,7 @@ watch(
           class="flex items-center gap-2">
           <icon
             name="mynaui:battery-charging"
-            class="
-              -mt-px size-7 text-bc/80 dst
-              *:stroke-[1.3]
-            " />
+            class="-mt-px size-7 text-bc/80 dst *:stroke-[1.3]" />
 
           <ValueFormatter :array="ability.rechargeRate" />
         </div>

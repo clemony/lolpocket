@@ -19,12 +19,7 @@ const abilityCount = computed(() => `grid-cols-${champion.abilities.length}`)
       shape="circle"
       size="xl"
       :class="
-        cn(
-          `
-            size-20! overflow-hidden border-0 p-0 shadow-sm shadow-black/10
-            drop-shadow-sm drop-shadow-black/30
-            *:pointer-events-none
-          `,
+        cn('size-20! overflow-hidden border-0 p-0 shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 *:pointer-events-none',
           {
             'btn-active !bg-tint-b2/70': route.hash === `#${ability.key}`,
           },

@@ -38,9 +38,7 @@ function onOpen() {
       <PopoverTrigger
         class="
           field-legend z-0 h-10 max-w-90 min-w-54 cursor-text transition-colors
-          duration-300
-          *:font-semibold *:tracking-tight
-          open:opacity-0
+          duration-300 *:font-semibold *:tracking-tight open:opacity-0
           hover:border-bc/60
         ">
         {{ set.name || "Set name..." }}

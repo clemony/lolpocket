@@ -63,10 +63,7 @@ const itemsLength = computed(() => {
 
 <template>
   <div
-    class="
-      -ml-1.5 flex w-full items-center justify-evenly gap-7
-      **:select-none
-    ">
+    class="-ml-1.5 flex w-full items-center justify-evenly gap-7 **:select-none">
     <slot />
 
     <div

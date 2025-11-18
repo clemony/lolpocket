@@ -46,10 +46,9 @@ const variants = {
   <DialogPortal>
     <DialogOverlay
       class="
-        data-[state=open]:animate-in
-        data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-        data-[state=open]:fade-in-0
-        fixed inset-0 isolate z-50 bg-black/80
+        data-[state=open]:animate-in data-[state=closed]:animate-out
+        data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0
+        isolate z-50 bg-black/80
       "
       :class="{ 'invisible opacity-0': props.noOverlay }">
       <Motion
@@ -63,15 +62,7 @@ const variants = {
       as-child
       v-bind="forwarded"
       :class="
-        cn(
-          `
-            data-[state=closed]:animate-out data-[state=closed]:duration-200
-            data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95
-            data-[state=closed]:slide-out-to-bottom-[48%]
-            fixed top-1/2 left-1/2 isolate z-50 max-w-160 translate-x-[-50%]
-            translate-y-[-50%] gap-4 border bg-b1 px-10 py-8 shadow-lg
-            sm:rounded-xl
-          `,
+        cn('data-[state=closed]:animate-out data-[state=closed]:duration-200 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] fixed top-1/2 left-1/2 isolate z-50 max-w-160 translate-x-[-50%] translate-y-[-50%] gap-4 border bg-b1 px-10 py-8 shadow-lg sm:rounded-xl',
           props.class,
         )
       ">
@@ -91,12 +82,9 @@ const variants = {
         <DialogClose
           v-if="props.noButton"
           class="
-            ring-offset-background
-            focus:ringneutral
-            absolute top-4 right-4 rounded-sm opacity-70 transition-opacity
-            hover:opacity-100
-            focus:ring focus:outline-none
-            disabled:pointer-events-none
+            ring-offset-background focus:ringneutral absolute top-4 right-4
+            rounded-sm opacity-70 transition-opacity hover:opacity-100
+            focus:ring focus:outline-none disabled:pointer-events-none
           ">
           <icon
             name="x-sm"

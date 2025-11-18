@@ -33,11 +33,7 @@ watch(
   <Primitive
     :as
     :class="
-      cn(
-        `
-          relative grid aspect-square h-20 place-items-center overflow-hidden
-          rounded-full transition-all duration-300
-        `,
+      cn('relative grid aspect-square h-20 place-items-center overflow-hidden rounded-full transition-all duration-300',
         {
           'drop-shadow-md': loaded,
         },

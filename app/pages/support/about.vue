@@ -74,8 +74,7 @@ const faq = [
       <div
         class="
           mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-3
-          text-nc
-          **:font-mono
+          text-nc **:font-mono
         ">
         <div class="col-start-1 grid items-center gap-y-1 pl-6">
           <div
@@ -144,9 +143,7 @@ const faq = [
           external
           class="
             absolute right-6 bottom-6 flex items-center gap-1 font-mono italic
-            underline underline-offset-2
-            **:text-nc
-            hover:underline
+            underline underline-offset-2 **:text-nc hover:underline
           ">
           <Icon name="github" />
 
@@ -158,8 +155,7 @@ const faq = [
       <div class="field-box mt-26 px-4 py-3">
         <div
           class="
-            pointer-events-auto flex items-center justify-evenly gap-5
-            *:dst
+            pointer-events-auto flex items-center justify-evenly gap-5 *:dst
             **:size-6
           ">
           <tippy
@@ -228,10 +224,7 @@ const faq = [
           <a
             href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar"
             target="_blank"
-            class="
-              flex items-center gap-1
-              hover:underline
-            ">
+            class="flex items-center gap-1 hover:underline">
             <b>Riot Games, Inc</b>
 
             <icon

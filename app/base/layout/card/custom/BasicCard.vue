@@ -14,11 +14,7 @@ const { as = 'div', class: className } = defineProps<
   <Primitive
     :as="as"
     :class="
-      cn(
-        `
-          rounded-box border border-b3/60 bg-b1 px-4 py-4 text-bc shadow-sm
-          shadow-black/8 drop-shadow-sm drop-shadow-black/4
-        `,
+      cn('rounded-box border border-b3/60 bg-b1 px-4 py-4 text-bc shadow-sm shadow-black/8 drop-shadow-sm drop-shadow-black/4',
         className,
       )
     ">

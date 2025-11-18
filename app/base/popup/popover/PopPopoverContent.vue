@@ -88,13 +88,7 @@ const wrapperVariants = {
           }"
           v-bind="{ forwarded }"
           :class="
-            cn(
-              `
-                z-50 w-72 rounded-lg border border-b3! bg-b1/90 p-4 text-bc
-                shadow-md drop-shadow-md backdrop-blur-md outline-none
-                group-data-[state=hidden]:**:opacity-0
-                group-data-[state=visible]:**:opacity-100
-              `,
+            cn('z-50 w-72 rounded-lg border border-b3! bg-b1/90 p-4 text-bc shadow-md drop-shadow-md backdrop-blur-md outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
               props.class,
             )
           ">

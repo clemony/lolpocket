@@ -11,11 +11,7 @@ const props = defineProps<{
     data-slot="field-separator"
     :data-content="!!$slots.default"
     :class="
-      cn(
-        `
-          relative -my-2 h-5
-          group-data-[variant=outline]/field-group:-mb-2
-        `,
+      cn('relative -my-2 h-5 group-data-[variant=outline]/field-group:-mb-2',
         props.class,
       )
     ">

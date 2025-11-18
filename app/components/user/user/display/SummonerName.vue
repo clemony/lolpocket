@@ -14,13 +14,12 @@ const {
   }
 >()
 const name = computed(() => {
-  if (!summoner && !as()?.account)
-    return null
-
   if (summoner)
     return summoner.name
+  if (as()?.user)
+    return (as()?.account?.name || as()?.account?.username) ?? 'Summoner'
 
-  return (as()?.account?.name || as()?.account?.username) ?? 'Summoner'
+  else return null
 })
 </script>
 

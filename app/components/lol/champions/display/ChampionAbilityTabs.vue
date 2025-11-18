@@ -57,8 +57,7 @@ const gridCols = computed(
       :value="i"
       class="
         group aspect-square h-auto w-full cursor-pointer! overflow-hidden
-        border-0 p-0 transition-transform duration-300
-        **:pointer-events-none
+        border-0 p-0 transition-transform duration-300 **:pointer-events-none
         hover:scale-110
       "
       :class="{
@@ -77,9 +76,8 @@ const gridCols = computed(
         alt="passive icon"
         class="
           pointer-events-none size-full opacity-70 contrast-80 grayscale
-          transition duration-300
-          group-hover:opacity-100 group-hover:contrast-100
-          group-hover:grayscale-0
+          transition duration-300 group-hover:opacity-100
+          group-hover:contrast-100 group-hover:grayscale-0
         "
         :class="{
           'opacity-100 contrast-100 grayscale-0': selectedAbility,

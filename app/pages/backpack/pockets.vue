@@ -75,10 +75,7 @@ const selected = ref<Pocket>(null)
               variant="ghost">
               <icon
                 name="add"
-                class="
-                  size-7
-                  **:stroke-[1.5]
-                " />
+                class="size-7 **:stroke-[1.5]" />
             </Button>
           </TransitionScalePop>
         </BoxPanelCenter>

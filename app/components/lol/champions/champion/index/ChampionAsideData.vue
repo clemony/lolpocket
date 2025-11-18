@@ -46,18 +46,12 @@ const damageType = computed(() =>
     <div :class="wrapperClass">
       <p>Damage Style</p>
       <div
-        class="
-          flex items-center gap-3
-          *:flex *:items-center *:gap-1.5
-        ">
+        class="flex items-center gap-3 *:flex *:items-center *:gap-1.5">
         <span class="font-medium">
           <component
             :is="`i-lol-${champion.attackType.toLowerCase()}`"
             v-if="champion.attackType"
-            class="
-              size-4.5! shrink-0 dst
-              **:stroke-0
-            " />
+            class="size-4.5! shrink-0 dst **:stroke-0" />
           {{ champion.attackType }}
         </span>
         <span v-if="champion.attackType && champion.adaptiveType"> + </span>
@@ -98,8 +92,8 @@ const damageType = computed(() =>
       <p>Price</p>
       <div
         class="
-          flex items-center gap-4 overflow-hidden
-          *:flex *:items-center *:gap-1 *:text-3
+          flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1
+          *:text-3
         ">
         <div class="font-medium">
           <i-lol-be class="mr-0.5 size-4.25! shrink-0! text-platinum dst" />
@@ -130,8 +124,8 @@ const damageType = computed(() =>
           :class="
             cn(`
               group/l gap-1! font-medium text-nowrap! underline decoration-bc/40
-              underline-offset-3 opacity-80
-              hover:decoration-bc hover:opacity-100
+              underline-offset-3 opacity-80 hover:decoration-bc
+              hover:opacity-100
             `)
           ">
           Patch {{ champion.patchLastChanged }}
@@ -141,10 +135,7 @@ const damageType = computed(() =>
             View notes on wiki
             <icon
               name="link"
-              class="
-                mb-0.5 size-3 opacity-60
-                group-hover/l:opacity-100
-              " />
+              class="mb-0.5 size-3 opacity-60 group-hover/l:opacity-100" />
           </p>
         </template>
       </tippy>

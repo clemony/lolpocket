@@ -17,22 +17,22 @@ const modelValue = ref<string | number>('Scoreboard')
     <LazyCollapsibleContent
       v-if="isOpen"
       class="
-        'CollapsibleContent group relative h-200 w-220 max-w-220 translate-x-0
-        p-0 text-2 transition duration-0
-        **:select-none
+        'CollapsibleContent group relative h-200 w-full translate-x-0 p-0 text-2
+        transition duration-0 **:select-none
       ">
       <Tabs
         v-model:model-value="modelValue"
         class="relative">
         <TabsList
-          base="indicator"
+
           class="
             mb-0! w-full auto-cols-min grid-flow-col justify-start rounded-none
             border border-b3 bg-b3/36
           ">
           <TabsTrigger
-            v-for="tab in ['Scoreboard', 'Data', 'Badges']"
+            v-for="tab in ['Scoreboard', 'Statistics', 'Build']"
             :key="tab"
+            size="7"
             :value="tab"
             class="cursor-pointer">
             {{ tab }}

@@ -10,8 +10,7 @@ const { class: className } = defineProps<{
 <template>
   <span
     :class="
-      cn(
-        `grid size-6! shrink-0 place-items-center rounded-full shadow-xs dst`,
+      cn('grid size-6! shrink-0 place-items-center rounded-full shadow-xs dst',
         className,
       )
     "

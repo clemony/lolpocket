@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import type { DialogContentProps } from 'reka-ui'
+import { useForwardPropsEmits } from 'reka-ui'
 import { skinIndex } from '~~/shared/indexes'
 
-const { class: className } = defineProps<{
+const props = defineProps<DialogContentProps & {
   class?: HTMLAttributes['class']
 }>()
 
@@ -27,168 +29,152 @@ function reset() {
   champQuery.value = ''
   selectedChampion.value = null
 }
+
+const delegated = omitUIProps(props)
+const forwarded = useForwardPropsEmits(delegated)
+
+const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-100 '
 </script>
 
 <template>
-  <Dialog v-bind="$attrs">
+  <Dialog
+    v-bind="forwarded">
     <DialogTrigger
       :class="
-        cn(
-          `
-            group/icon pointer-events-auto relative z-0 grid aspect-square
-            size-fit shrink-0 cursor-pointer place-items-center self-center
-            rounded-full shadow-xs ring ring-transparent ring-offset-3
-            ring-offset-transparent drop-shadow-sm transition-colors
-            duration-300
-            hover:ring-b4 hover:ring-offset-neutral
-          `,
-          className,
+        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
+           props.class,
         )
       ">
       <slot />
     </DialogTrigger>
     <LazyGlassDialogContent
-      class="
-        grid h-screen w-screen min-w-screen justify-center p-0 backdrop-blur
-      ">
+      class="grid h-screen w-screen min-w-screen overflow-hidden p-0 backdrop-blur">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
 
       <div
         class="
-          relative flex w-screen max-w-screen flex-col items-center gap-8
-          overflow-x-hidden overflow-y-auto px-32
+      relative mx-auto scrollbar-hidden flex w-full max-w-3/5 flex-col
+          overflow-hidden px-32
         ">
-        <Input
-          v-model:model-value="searchQuery"
-          class="
-            sticky top-0 z-2 mt-44 h-14 w-full max-w-160 shrink-0 rounded-xl
-            bg-b1/90 backdrop-blur
-          ">
-          <icon name="search" />
+        <!-- search -->
+        <InputGroup
+          :as="selectedChampion ? 'button' : 'div'"
+          :class="cn('ring-none sticky top-0 z-2 mt-44 h-20 w-full shrink-0 items-center gap-3 rounded-none border-x-0 border-t-0 border-b border-b-transparent! py-3 shadow-none inset-shadow-none outline-none focus-within:inset-shadow-0 focus-within:border-b-white/50! focus-within:ring-0! focus-within:outline-0 selection:bg-white/40 selection:text-black', { 'cursor-pointer **:pointer-events-none': selectedChampion })"
+          @click="selectedChampion ? selectedChampion = null : ''">
+          <InputGroupAddon
+            align="inline-start">
+            <Icon
+              :name="selectedChampion ? 'arrow-left' : 'search'"
+              class="size-5! text-white/50! **:stroke-[1.8]" />
+          </InputGroupAddon>
+          <InputGroupInput
+            v-if="selectedChampion"
+            v-model:model-value="selectedChampion"
+            read-only
+            class="font-bold text-white select-none **:text-[2.6rem]!" />
+          <InputGroupInput
+            v-else
+            v-model:model-value="searchQuery"
+            class="font-bold text-white **:text-[2.6rem]!" />
+          <InputGroupClear
+            class="**:text-white"
+            @clear:input="selectedChampion ? selectedChampion = null : searchQuery = null" />
+        </InputGroup>
 
-          <template #3>
-            <Button
-              v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
-              shape="square"
-              class="size-8"
-              hover="neutral"
-              variant="ghost">
-              <icon
-                name="refresh"
-                class="size-3.75 dst" />
-            </Button>
-
-            <Button
-              v-tippy="{ content: 'Randomize', placement: 'top' }"
-              shape="square"
-              class="size-8"
-              hover="neutral"
-              variant="ghost">
-              <icon
-                name="shuffle"
-                class="size-3.5 stroke-[1.5] dst" />
-            </Button>
-          </template>
-        </Input>
-
-        <RadioGroup
+        <!-- default list -->
+        <Listbox
           v-if="!selectedChampion"
-          v-model:model-value="selectedChampion"
-          as="div"
-          class="
-            mx-auto flex h-max max-h-screen w-fit flex-wrap justify-center gap-8
-            overflow-x-hidden mask-t-from-50% mask-t-to-96% pt-64
-          ">
-          <label
-            v-for="item in result"
-            :key="item.key"
-            for="item-key"
-            :class="
-              cn(`
-                relative max-h-50 min-h-40 max-w-60 min-w-50 basis-1/2
-                overflow-hidden rounded-md inset-shadow-sm inset-shadow-black/30
-              `)
+          v-model="selectedChampion"
+          class="w-full"
+          :multiple="false">
+          <ListboxContent
+            class="flex h-screen w-full grow flex-col gap-8 overflow-x-hidden mask-t-from-80% mask-t-to-96% text-start
             ">
-            <Champion
-              :img="getSplash(item.id, 'tile')"
-              :alt="item.name"
-              class="
-                absolute size-full bg-black
-                *:object-cover
-                **:text-white
-              " />
-            <Badge
-              variant="neutral"
-              size="xl"
-              class="
-                absolute bottom-2 left-2 truncate bg-neutral/86 backdrop-blur
-              ">
-              {{ item.name }}
-            </Badge>
-            <RadioGroupItem
-              name="item-key"
-              class="hidden"
-              :value="item.key">
-            </RadioGroupItem>
-          </label>
-        </RadioGroup>
+            <ListboxItem
+              v-for="item in result"
+              :key="item.key"
+              :value="item.key"
+              variant="link"
+              class="gap-6 text-white">
+              <ChampionIcon
+                :id="item.id"
+                :alt="item.name"
+                class="size-12 rounded-full" />
+              <h1 class="text-white">
+                {{ item.name }}
+              </h1>
+            </ListboxItem>
+          </ListboxContent>
+        </Listbox>
 
-        <div
+        <!-- search list -->
+        <Listbox
           v-else-if="selectedChampion"
-          group
-          class="
-            grid size-full h-min max-h-150 w-full grid-cols-3 gap-6
-            overflow-y-auto p-8
-          ">
-          <LazySplashCard
-            v-for="skin in skinIndex[selectedChampion]"
-            :key="skin.name"
-            :text="skin.name"
-            :alt="skin.name"
-            :skin-url="getSplash(selectedChampion, 'tile', skin)"
-            @click="
-              emit(
-                'update:splash',
-                getSplash(selectedChampion, 'centered', skin),
-              )
-            " />
-        </div>
+          as-child>
+          <ListboxContent
+            class="grid w-full grid-cols-4 gap-8 overflow-y-auto mask-t-from-90% mask-t-to-98% px-2 pt-18 pb-32">
+            <LazySplashCard
+              v-for="skin in skinIndex[selectedChampion]"
+              :key="skin.name"
+              :text="skin.name"
+              :alt="skin.name"
+              :skin-url="getSplash(selectedChampion, 'tile', skin)"
+              @click="
+                emit(
+                  'update:splash',
+                  getSplash(selectedChampion, 'centered', skin),
+                )
+              " />
+          </ListboxContent>
+        </Listbox>
 
+        <!-- else -->
         <div
           v-else
           class="grid size-full place-items-end p-6">
           <Badge
             variant="neutral"
-            class="
-              font-medium
-              **:text-2
-            ">
+            class="font-medium **:text-2">
             Select or search a champion...
           </Badge>
         </div>
       </div>
-      <DialogClose
-        class="fab pointer-events-auto top-6 right-6 z-20"
-        as-child>
+
+      <div class="pointer-events-auto fixed top-6 right-6 z-20 flex gap-3">
         <Button
-          variant="ghost"
-          size="12"
-          class="
-            border-0
-            **:text-white
-            hover:bg-b1/80 hover:**:text-bc
-          "
-          shape="square">
+
+          v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
+          size="c-8"
+          :class="btnClass"
+          variant="outline">
           <icon
-            name="x"
-            class="
-              size-6
-              **:stroke-[1.5]
-            " />
+            name="refresh"
+            class="size-4.5 text-white dst" />
         </Button>
-      </DialogClose>
+
+        <Button
+          v-tippy="{ content: 'Randomize', placement: 'top' }"
+          size="c-8"
+          :class="btnClass"
+          variant="outline">
+          <icon
+            name="shuffle"
+            class="size-4.5 stroke-[1.3] text-white dst" />
+        </Button>
+
+        <DialogClose as-child>
+          <Button
+            size="c-8"
+            :class="btnClass"
+            variant="outline">
+            <icon
+              name="x"
+              class="size-5.5 text-white **:stroke-[1.7]" />
+          </Button>
+        </DialogClose>
+      </div>
     </LazyGlassDialogContent>
   </Dialog>
 </template>

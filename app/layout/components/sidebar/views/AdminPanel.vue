@@ -16,8 +16,7 @@ const emit = defineEmits(['open:settings', 'open:admin', 'reset-count'])
         v-tippy="'Admin'"
         class="
           btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
-          btn-ghost
-          hover:opacity-100
+          btn-ghost hover:opacity-100
         "
         @click="emit('open:admin')">
         <icon
@@ -29,8 +28,7 @@ const emit = defineEmits(['open:settings', 'open:admin', 'reset-count'])
         v-tippy="'Account Settings'"
         class="
           btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
-          btn-ghost
-          hover:opacity-100
+          btn-ghost hover:opacity-100
         "
         @click="emit('open:settings')">
         <icon

@@ -36,11 +36,7 @@ defineExpose({ onKeyDown })
         hover="inset"
         tabindex="0"
         :class="
-          cn(
-            `
-              rounded-md text-6
-              focus:bg-b2/80 focus:ring focus:ring-b3
-            `,
+          cn('rounded-md text-6 focus:bg-b2/80 focus:ring focus:ring-b3',
             `
               index-${index}
             `,

@@ -23,9 +23,7 @@ const { id, name } = defineProps<{
     <a
       v-tippy="'Official Wiki'"
       class="
-        hover:bgneutral
-        btn btn-square size-7 btn-ghost btn-sm
-        hover:*:text-nc
+        hover:bgneutral btn btn-square size-7 btn-ghost btn-sm hover:*:text-nc
       "
       :href="getWikiLink(name)"
       target="_blank"

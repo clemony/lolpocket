@@ -64,10 +64,9 @@ function handleReset() {
       :key="role"
       :for="role"
       class="
-        has-checked:!bgneutral
-        btn flex gap-3 rounded-lg! bg-b1 text-2 capitalize
-        peer-not-checked:first-of-type:-ml-2
-        has-checked:text-nc has-checked:btn-neutral!
+        has-checked:!bgneutral btn flex gap-3 rounded-lg! bg-b1 text-2
+        capitalize peer-not-checked:first-of-type:-ml-2 has-checked:text-nc
+        has-checked:btn-neutral!
       ">
       <input
         :id="role"
@@ -80,10 +79,7 @@ function handleReset() {
 
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
-        class="
-          h-4.5 w-auto shrink-0 dst
-          peer-checked:text-nc
-        "
+        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc"
         :class="{ 'size-5': role === 'jungle' }" />
       {{ role }}
     </label>

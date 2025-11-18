@@ -31,10 +31,9 @@ const progress = computed(
         <ProgressIndicator
           as-child
           class="
-            relative drop-shadow-sm drop-shadow-black/12
-            after:absolute after:right-0 after:z-3 after:size-full
-            after:rounded-r-[2px] after:border after:border-b4
-            after:inset-shadow-sm
+            relative drop-shadow-sm drop-shadow-black/12 after:absolute
+            after:right-0 after:z-3 after:size-full after:rounded-r-[2px]
+            after:border after:border-b4 after:inset-shadow-sm
           ">
           <motion.div
             :style="{

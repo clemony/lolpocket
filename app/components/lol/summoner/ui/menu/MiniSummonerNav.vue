@@ -38,9 +38,7 @@ const { childRoutes, links, summoner } = defineProps<{
             <p
               class="
                 flex inline-flex w-full items-center justify-between gap-2
-                align-bottom text-2
-                **:leading-none
-                [&_svg]:size-3
+                align-bottom text-2 **:leading-none [&_svg]:size-3
               ">
               <SummonerTag />
 

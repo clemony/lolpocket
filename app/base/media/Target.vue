@@ -9,13 +9,7 @@ const props = defineProps<{
 <template>
   <button
     :class="
-      cn(
-        `
-          no-drag search-drop group border-box relative z-0 grid cursor-pointer!
-          place-items-center rounded-lg border border-b3 bg-b2/20 p-0!
-          inset-shadow-sm
-          hover:border-bc/30
-        `,
+      cn('no-drag search-drop group border-box relative z-0 grid cursor-pointer! place-items-center rounded-lg border border-b3 bg-b2/20 p-0! inset-shadow-sm hover:border-bc/30',
         props.class,
       )
     "
@@ -30,10 +24,7 @@ const props = defineProps<{
 
     <icon
       name="add"
-      class="
-        size-3.5 stroke-[1.3] opacity-30
-        group-hover:opacity-50
-      " />
+      class="size-3.5 stroke-[1.3] opacity-30 group-hover:opacity-50" />
 
     <slot />
   </button>

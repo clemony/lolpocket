@@ -14,11 +14,7 @@ const {
   <Element
     :as
     :class="
-      cn(
-        `
-          relative grid aspect-square shrink-0 place-items-center
-          overflow-hidden rounded-lg bg-b2
-        `,
+      cn('relative grid aspect-square shrink-0 place-items-center overflow-hidden rounded-lg bg-b2',
         { ' shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ': id },
 
         className,

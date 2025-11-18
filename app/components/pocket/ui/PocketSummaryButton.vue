@@ -20,10 +20,7 @@ const route = useRoute()
     <span>
       <icon
         name="infinity"
-        class="
-          h-4.5 w-auto shrink-0 dst
-          peer-checked:text-nc
-        " />
+        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc" />
     </span>
     Summary
     <Grow />

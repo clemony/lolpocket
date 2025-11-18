@@ -18,8 +18,8 @@ export interface SummonerMastery {
 export interface Summoner {
   name: string
   puuid: string
-  level: number
   icon: string
+  level: number
   ranked?: {
     solo?: RankedEntry
     flex?: RankedEntry
@@ -39,6 +39,7 @@ export interface RankedEntry {
 }
 
 export interface TopChampion {
+  key: string
   name: string
   splash: string
 }

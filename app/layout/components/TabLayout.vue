@@ -4,7 +4,7 @@ useScrollProvider(el)
 </script>
 
 <template>
-  <div class="relative size-full max-w-screen">
+  <div class="relative size-full min-h-screen max-w-screen overflow-hidden">
     <!-- BG slice, behind everything but above context -->
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
       <slot name="background-slice" />
@@ -23,8 +23,7 @@ useScrollProvider(el)
       <div
         class="
           w-40% z-1 flex size-full grow flex-col items-start justify-center
-          pt-16 pl-68
-          *:z-1
+          pt-16 pl-68 *:z-1
         ">
         <slot name="header" />
       </div>
@@ -62,7 +61,7 @@ useScrollProvider(el)
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-b1">
+      <div class="relative z-1 -mt-px flex min-h-screen w-screen max-w-screen flex-col content-between bg-b1">
         <slot />
         <SiteFooter />
       </div>

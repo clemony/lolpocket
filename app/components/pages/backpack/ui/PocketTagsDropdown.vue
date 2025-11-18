@@ -63,8 +63,7 @@ watch(
           placeholder="attach new tag"
           class="
             h-10 w-full pr-4 text-2 transition-all duration-200
-            placeholder:italic
-            focus:placeholder:opacity-0
+            placeholder:italic focus:placeholder:opacity-0
           "
           @keydown.stop
           @keydown.enter.prevent="
@@ -88,10 +87,7 @@ watch(
           @click="newTag = ''">
           <icon
             name="x-sm"
-            class="
-              size-4
-              **:stroke-[1.5]
-            " />
+            class="size-4 **:stroke-[1.5]" />
         </Button>
       </div>
       <Separator />

@@ -25,13 +25,13 @@ export interface UseChampionsReturn {
 export function useChampions(
   puuid: string,
   matches: MatchData[],
-  championName?: string,
+  championName?: string
 ): UseChampionsReturn {
   const liteChampionStats = computed<Record<string, number>>(() => {
     const counts: Record<string, number> = {}
 
     const playerMatches = matches.map(p =>
-      p.participants.find(p => p.puuid === puuid),
+      p.participants.find(p => p.puuid === puuid)
     )
 
     for (const p of playerMatches) {
@@ -45,6 +45,7 @@ export function useChampions(
   const topChampion = computed(() => {
     const champ = Object.keys(liteChampionStats.value)[0]
     return {
+      key: champ,
       name: ix().champNameByKey(champ),
       splash: getSplash(champ, 'centered'),
     }
@@ -53,9 +54,9 @@ export function useChampions(
   const filteredMatches = computed<MatchData[]>(() =>
     matches.filter(match =>
       Object.keys(liteChampionStats.value).includes(
-        ix().champNameById(match.participants[puuid]),
-      ),
-    ),
+        ix().champNameById(match.participants[puuid])
+      )
+    )
   )
 
   return {

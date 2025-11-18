@@ -23,8 +23,7 @@ const menuOpen = ref(false)
         class="
           relative h-inherit min-h-inherit w-inherit min-w-inherit
           cursor-pointer gap-3 overflow-hidden rounded-xl border border-b2
-          shadow-warm-soft drop-shadow-sm drop-shadow-black/5
-          **:select-none
+          shadow-warm-soft drop-shadow-sm drop-shadow-black/5 **:select-none
           hover:border-b3 hover:shadow-warm hover:ring-1 hover:ring-b2
         "
         @click="navigateTo(`/pocket/${pocket.key}`)">

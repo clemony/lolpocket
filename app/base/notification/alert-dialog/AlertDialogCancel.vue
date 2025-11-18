@@ -17,10 +17,7 @@ const delegatedProps = reactiveOmit(props, 'class')
     :class="
       cn(
         buttonVariants({ variant: 'outline' }),
-        `
-          mt-2
-          sm:mt-0
-        `,
+        `mt-2 sm:mt-0`,
         props.class,
       )
     ">

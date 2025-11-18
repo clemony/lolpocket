@@ -25,10 +25,7 @@ const modelProxy = computed({
     <MenubarRadioItem
       v-for="option in item.options"
       :key="option"
-      class="
-        z-0
-        [&_#indicator]:order-last
-      "
+      class="z-0 [&_#indicator]:order-last"
       :value="option">
       <Element size="icon">
         <component

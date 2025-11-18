@@ -38,10 +38,7 @@ function handleUpdate() {
       :variant
       :hover
       :size="size[0]"
-      class="
-        order-first
-        hover:*:opacity-100
-      "
+      class="order-first hover:*:opacity-100"
       @click="is().filters.rank = null">
       <icon
         name="x"
@@ -56,11 +53,7 @@ function handleUpdate() {
       :hover="is().filters.rank === rank.name ? 'btn' : hover"
       :variant="is().filters.rank === rank.name ? 'neutral' : variant"
       :class="
-        cn(
-          `
-            order-2 px-5 text-2 font-medium! shadow-none
-            hover:text-bc
-          `,
+        cn('order-2 px-5 text-2 font-medium! shadow-none hover:text-bc',
           { 'order-1 ': is().filters.rank === rank.name },
         )
       "

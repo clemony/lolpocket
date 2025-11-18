@@ -72,23 +72,11 @@ const wrapperVariants = {
           }"
           v-bind="{ forwarded }"
           :class="
-            cn(
-              `
-                z-50 h-max w-max rounded-xl border border-black-30!
-                bg-black-22/94 shadow-md drop-shadow-md backdrop-blur-lg
-                outline-none
-                **:not-[&_.icon]:**:text-white/80
-                not-[.icon]:text-white/80
-                group-data-[state=hidden]:**:opacity-0
-                group-data-[state=visible]:**:opacity-100
-              `,
+            cn('z-50 h-max w-max rounded-xl border border-black-30! bg-black-22/94 shadow-md drop-shadow-md backdrop-blur-lg outline-none **:not-[&_.icon]:**:text-white/80 not-[.icon]:text-white/80 group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
             )
           ">
           <PopoverArrow
-            class="
-              icon translate-y-0.25 text-black/80!
-              **:text-black/80!
-            " />
+            class="icon translate-y-0.25 text-black/80! **:text-black/80!" />
 
           <motion.div
             :variants="wrapperVariants"

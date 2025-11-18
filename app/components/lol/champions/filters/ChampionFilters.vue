@@ -26,10 +26,7 @@ const query = ref<string>(null)
     <div class="flex items-center gap-10">
       <div class="relative flex grow items-center gap-6">
         <ExpandSearch
-          class="
-            absolute left-0 max-w-60 btn-neutral
-            **:[&_svg]:opacity-96!
-          "
+          class="absolute left-0 max-w-60 btn-neutral **:[&_svg]:opacity-96!"
           @update:reset="filters.query = null">
           <input
             v-model="filters.query"

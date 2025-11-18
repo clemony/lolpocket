@@ -20,10 +20,7 @@ const colorChip
     :value="theme.name"
     :data-theme="theme.name"
     :class="
-      cn(
-        `
-          theme-${theme.name}
-        `,
+      cn('theme-${theme.name}',
         `
           group/theme relative grid size-full! max-h-90 max-w-82 hover-ring
           cursor-pointer grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] items-center
@@ -44,19 +41,13 @@ const colorChip
       variant="neutral">
       <icon
         name="tick"
-        class="
-          absolute size-6
-          **:stroke-3
-        " />
+        class="absolute size-6 **:stroke-3" />
     </Button>
     <div
       v-else
       class="" />
     <div
-      class="
-        hidden h-32 w-full pt-3 pr-2 pl-1 -indent-1
-        md:block
-      ">
+      class="hidden h-32 w-full pt-3 pr-2 pl-1 -indent-1 md:block">
       <h4 class="leading-8 font-bold capitalize">
         {{ theme.name }}
       </h4>
@@ -70,10 +61,7 @@ const colorChip
 
     <div class="grid">
       <div
-        class="
-          flex items-center gap-2
-          *:rounded-full
-        ">
+        class="flex items-center gap-2 *:rounded-full">
         <div :class="cn('bg-b2 text-bc', colorChip)"></div>
 
         <div :class="cn('bg-b3 text-bc', colorChip)"></div>
@@ -84,10 +72,7 @@ const colorChip
       </div>
     </div>
     <div
-      class="
-        mt-3 tracking-wide text-bc opacity-90
-        *:leading-3.5
-      ">
+      class="mt-3 tracking-wide text-bc opacity-90 *:leading-3.5">
       <p class="text-[8px] font-semibold uppercase">
         lolpocket theme
       </p>

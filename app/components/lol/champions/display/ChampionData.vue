@@ -28,8 +28,8 @@ const tabs = ref('abilities')
 
       <header
         class="
-          absolute right-5 bottom-4 z-2 w-full drop-shadow-sm
-          *:text-right *:text-white/86 *:dst *:text-shadow-sm
+          absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right
+          *:text-white/86 *:dst *:text-shadow-sm
         ">
         <Grow />
 
@@ -48,7 +48,6 @@ const tabs = ref('abilities')
       if="champion"
       class="size-full max-h-full overflow-hidden">
       <TabsList
-        base="indicator"
         class="relative h-10 w-full grid-cols-3 rounded-none bg-b3!">
         <TabsTrigger value="abilities">
           Abilities

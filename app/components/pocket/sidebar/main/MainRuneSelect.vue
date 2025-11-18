@@ -51,18 +51,11 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
             variant="ghost"
             size="8"
             title="Clear main runes"
-            class="
-              aspect-square btn-square
-              *:opacity-60
-              hover:*:opacity-100
-            "
+            class="aspect-square btn-square *:opacity-60 hover:*:opacity-100"
             @click="pocket._runes === ''">
             <icon
               name="backspace"
-              class="
-                size-5
-                **:stroke-2
-              " />
+              class="size-5 **:stroke-2" />
           </Button>
         </SelectLabel>
         <SelectItem

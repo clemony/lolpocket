@@ -22,8 +22,7 @@
       <CollapsibleTrigger
         class="
           flex w-full cursor-pointer items-center justify-between py-2 pl-1
-          font-semibold text-bc/50 underline-offset-2
-          hover:underline
+          font-semibold text-bc/50 underline-offset-2 hover:underline
         ">
         Statistics
         <PlusMinusExpand :open />
@@ -44,8 +43,7 @@
       <CollapsibleTrigger
         class="
           flex w-full cursor-pointer items-center justify-between py-2 pl-1
-          font-semibold text-bc/50 underline-offset-2
-          hover:underline
+          font-semibold text-bc/50 underline-offset-2 hover:underline
         ">
         Categories
         <PlusMinusExpand :open />

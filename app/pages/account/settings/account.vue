@@ -15,7 +15,7 @@ const email = shallowRef<string>(null)
 const username = shallowRef<string>(null)
 onMounted (() => {
   email.value = as().user.email
-  username.value = as().sb.username
+  username.value = as().account.username
 })
 </script>
 
@@ -69,10 +69,7 @@ onMounted (() => {
           size="6">
           <Icon
             name="tick"
-            class="
-              absolute size-4.25
-              **:stroke-[3.3]
-            " />
+            class="absolute size-4.25 **:stroke-[3.3]" />
         </InputGroupAddon>
         <InputGroupAddon
           v-else
@@ -139,8 +136,8 @@ onMounted (() => {
                   name="toggle-provider"
                   :model-value="userProviders?.includes(provider.name)"
                   class="
-                    switch -mt-0.25 scale-90 dst
-                    data-[state=checked]:ring data-[state=checked]:ring-white/60
+                    switch -mt-0.25 scale-90 dst data-[state=checked]:ring
+                    data-[state=checked]:ring-white/60
                   " />
               </CardDescription>
             </CardContent>

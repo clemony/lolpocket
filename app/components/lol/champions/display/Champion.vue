@@ -62,11 +62,7 @@ const splash = computed(() => `url('${image(getSplash(k ?? id, type))}')`)
   <Img
     :img="img || getSplash(k ?? id, type)"
     :class="
-      cn(
-        `
-          size-full shrink-0 overflow-hidden rounded-lg object-cover shadow-sm
-          drop-shadow-sm select-none
-        `,
+      cn('size-full shrink-0 overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
         className,
       )
     "

@@ -46,8 +46,8 @@ definePageMeta({
             <ol
               class="
                 grid list-outside list-[upper-roman] gap-6 pl-6 leading-5
-                text-pretty
-                marker:w-12 marker:justify-start marker:pr-6 marker:text-start
+                text-pretty marker:w-12 marker:justify-start marker:pr-6
+                marker:text-start
               ">
               <li
                 v-for="(item, c) in section.description"

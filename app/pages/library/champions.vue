@@ -17,7 +17,7 @@ const tabs = ref('grid')
       class="relative flex size-full flex-col px-8"
       as="div">
       <!-- <ChampionFilters>
-        <TabsList base="indicator" class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
+        <TabsList  class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
           <TabsTrigger
             value="grid"
             :class="{ '!text-nc': tabs==='grid' }">

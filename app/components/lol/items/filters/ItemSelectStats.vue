@@ -7,10 +7,7 @@
     <VarSelectTrigger
       :variant="is().filters.stats.length ? 'neutral' : 'outline'"
       size="sq-12"
-      class="
-        indicator relative
-        open:inset-shadow-sm open:not-on:bg-tint-b2/40!
-      ">
+      class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-b2/40!">
       <StatusIndicator
         v-if="is().filters.stats.length"
         color="ah"
@@ -27,10 +24,7 @@
         top-[calc(var(--reka-select-trigger-height)+2px)] w-74 -translate-x-63
       ">
       <ItemStatsList
-        class="
-          flex-row
-          *:w-fit
-        "
+        class="flex-row *:w-fit"
         icons
         variant="btn"
         labels />

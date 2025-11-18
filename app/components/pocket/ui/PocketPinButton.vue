@@ -27,11 +27,7 @@ const pocket = computed(() => p)
     :size
     hover="neutral"
     :class="
-      cn(
-        `
-          group/pin pointer-events-auto size-7! rounded-full
-          *:absolute *:mt-px *:size-4.25
-        `,
+      cn('group/pin pointer-events-auto size-7! rounded-full *:absolute *:mt-px *:size-4.25',
         className,
       )
     ">
@@ -42,27 +38,19 @@ const pocket = computed(() => p)
 
     <icon
       name="pin"
-      class="
-        *:stroke-[1.8]
-        group-hover/pin:opacity-0
-        peer-checked:opacity-0
-      " />
+      class="*:stroke-[1.8] group-hover/pin:opacity-0 peer-checked:opacity-0" />
 
     <icon
       name="pin-solid"
       class="
-        opacity-0
-        group-hover/pin:not-checked:text-bc/50
-        group-hover/pin:not-checked:opacity-100
-        peer-checked:opacity-90
+        opacity-0 group-hover/pin:not-checked:text-bc/50
+        group-hover/pin:not-checked:opacity-100 peer-checked:opacity-90
       " />
 
     <icon
       name="iconoir:pin-slash-solid"
       class="
-        opacity-0
-        peer-checked:text-bc
-        group-hover/pin:peer-checked:opacity-80
+        opacity-0 peer-checked:text-bc group-hover/pin:peer-checked:opacity-80
       " />
   </Label>
 </template>

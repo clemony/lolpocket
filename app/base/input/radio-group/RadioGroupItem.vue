@@ -15,11 +15,7 @@ const forwarded = useForwardProps(delegatedProps)
   <RadioGroupItem
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          aspect-square size-5 rounded-full
-          disabled:cursor-not-allowed disabled:opacity-50
-        `,
+      cn('aspect-square size-5 rounded-full disabled:cursor-not-allowed disabled:opacity-50',
         props.class,
       )
     ">

@@ -15,25 +15,27 @@ const spells = computed(() => {
 <template>
   <div
     class=""
-    :class="cn('flex shrink-0 flex-col items-center gap-1.25', className)">
+    :class="cn('flex shrink-0 flex-col items-center gap-1.5', className)">
     <img
-      v-tippy="{ content: spells?.sum1, placement: 'right' }"
+      v-tippy="{ content: spells?.sum1,
+                 placement: 'right',
+                 theme: 'neutral' }"
       :alt="String(spells?.sum1)"
       :src="`/img/spells/${player?.summoner1Id}.webp`"
       class="
         size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
-        duration-300
-        hover:scale-105 hover:ring
+        duration-300 hover:scale-105 hover:ring
       " />
 
     <img
-      v-tippy="{ content: spells?.sum2, placement: 'right' }"
+      v-tippy="{ content: spells?.sum2,
+                 placement: 'right',
+                 theme: 'neutral' }"
       :alt="String(spells?.sum2)"
       :src="`/img/spells/${player?.summoner2Id}.webp`"
       class="
         size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
-        duration-300
-        hover:scale-105 hover:ring
+        duration-300 hover:scale-105 hover:ring
       " />
   </div>
 </template>

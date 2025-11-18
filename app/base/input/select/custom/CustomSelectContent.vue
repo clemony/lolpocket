@@ -8,11 +8,7 @@ const props = defineProps<{
   <SelectContent
     position="popper"
     :class="
-      cn(
-        `
-          w-[var(--reka-select-trigger-width)]! rounded-xl! border-b2 bg-b1/80!
-          backdrop-blur-lg
-        `,
+      cn('w-[var(--reka-select-trigger-width)]! rounded-xl! border-b2 bg-b1/80! backdrop-blur-lg',
         props.class,
       )
     ">

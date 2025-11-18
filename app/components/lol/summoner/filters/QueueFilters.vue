@@ -11,24 +11,31 @@ const queueModel = computed({
   <Tabs
     v-model:model-value="queueModel"
     :default-value="0"
-    class="w-120 max-w-120">
+    class="w-full">
     <TabsList
-      base="indicator"
-      class="field-box grid h-10 w-full grid-cols-4">
+      class="grid h-10 w-full">
       <TabIndicator />
-      <TabsTrigger :value="0">
+      <TabsTrigger
+        size="9"
+        :value="0">
         All
       </TabsTrigger>
 
-      <TabsTrigger :value="420">
+      <TabsTrigger
+        size="9"
+        :value="420">
         Solo
       </TabsTrigger>
 
-      <TabsTrigger :value="440">
+      <TabsTrigger
+        size="9"
+        :value="440">
         Flex
       </TabsTrigger>
 
-      <TabsTrigger :value="400">
+      <TabsTrigger
+        size="9"
+        :value="400">
         Normal
       </TabsTrigger>
       <!--

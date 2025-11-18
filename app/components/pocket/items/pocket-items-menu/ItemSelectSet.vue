@@ -15,8 +15,7 @@ const set = computed(() => {
   <div
     class="
       p-i-c col-start-1 grid h-fit w-full grid-cols-6 gap-1 rounded-box px-3
-      py-2
-      **:select-none
+      py-2 **:select-none
     ">
     <template v-for="i in 6">
       <template v-if="set === null || set === undefined">

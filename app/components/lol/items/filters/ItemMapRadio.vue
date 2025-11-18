@@ -5,17 +5,13 @@
     v-model:model-value="is().filters.map"
     orientation="vertical">
     <TabsList
-      base="indicator"
       variant="none"
       orientation="vertical"
       contrast
       class="w-11! grid-rows-4 gap-4! px-1 py-1">
       <TabsTrigger
         v-tippy="{ content: 'All', theme: 'neutral', placement: 'left' }"
-        class="
-          **:opacity-90
-          on:**:text-nc on:**:opacity-100
-        "
+        class="**:opacity-90 on:**:text-nc on:**:opacity-100"
         :value="0">
         <span class="relative grid size-5 place-items-center">
           <icon
@@ -31,11 +27,7 @@
           theme: 'neutral',
           placement: 'left',
         }"
-        class="
-          **:
-          opacity-80
-          on:opacity-100 on:**:text-nc
-        "
+        class="**: opacity-80 on:opacity-100 on:**:text-nc"
         :value="map">
         <span class="relative grid size-5 place-items-center px-3">
           <component

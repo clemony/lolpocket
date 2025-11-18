@@ -16,7 +16,7 @@ const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <div :class="cn('field-box w-120 max-w-120 p-0', className)">
+  <div :class="cn('field-box w-full p-0', className)">
     <ListboxRoot
       v-model:model-value="allyModel"
       :highlight-on-hover="false"
@@ -28,10 +28,7 @@ const winrateFormula = ref('absolute')
           <ListboxItem
             v-for="ally in allies"
             :key="ally.riotIdGameName"
-            class="
-              w-full
-              focus:outline-0
-            "
+            class="w-full focus:outline-0"
             :value="ally.riotIdGameName"
             as-child>
             <Button
@@ -39,9 +36,7 @@ const winrateFormula = ref('absolute')
               variant="ghost"
               class="
                 grid w-full grid-cols-[4fr_repeat(2,1fr)] gap-3 px-5 dst
-                duration-0!
-                **:font-medium
-                hover:shadow-xs
+                duration-0! **:font-medium hover:shadow-xs
               ">
               <div
                 class="
@@ -58,10 +53,7 @@ const winrateFormula = ref('absolute')
                   v-if="ally === topAllies[0]"
                   v-tippy="'Great Teamwork'"
                   name="ion:star"
-                  class="
-                    size-3.5 dst
-                    **:text-bc/80!
-                  " />
+                  class="size-3.5 dst **:text-bc/80!" />
               </div>
 
               <div class="text-end text-2">

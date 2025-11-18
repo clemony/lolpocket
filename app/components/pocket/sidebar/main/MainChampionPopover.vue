@@ -36,9 +36,8 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
         <Button
           variant="ghost"
           class="
-            *:transition-scale *:duration-300
-            relative grid size-20 place-items-center overflow-hidden
-            **:pointer-events-none
+            *:transition-scale *:duration-300 relative grid size-20
+            place-items-center overflow-hidden **:pointer-events-none
             hover:*:scale-110
           ">
           <icon

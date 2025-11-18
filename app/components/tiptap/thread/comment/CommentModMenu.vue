@@ -24,19 +24,12 @@ const open = shallowRef<boolean>(false)
         Mod Tools
         <icon
           name="right"
-          class="
-            size-4 opacity-60
-            group-on:opacity-100
-          " />
+          class="size-4 opacity-60 group-on:opacity-100" />
       </Button>
 
       <template #content>
         <div
-          class="
-            grid w-54 px-0 py-1 pt-2
-            **:text-2
-            [&_button]:px-2
-          ">
+          class="grid w-54 px-0 py-1 pt-2 **:text-2 [&_button]:px-2">
           <div class="flex flex-col gap-1 pr-1 pl-1.25">
             <PopoverItem>
               <Icons

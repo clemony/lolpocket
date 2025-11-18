@@ -7,11 +7,7 @@ const props = defineProps<{
 <template>
   <ol
     :class="
-      cn(
-        `
-          flex flex-wrap items-center gap-1.5 text-3 break-words text-bc/50
-          sm:gap-2.5
-        `,
+      cn('flex flex-wrap items-center gap-1.5 text-3 break-words text-bc/50 sm:gap-2.5',
         props.class,
       )
     ">

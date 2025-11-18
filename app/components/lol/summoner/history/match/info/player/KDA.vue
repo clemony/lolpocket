@@ -12,14 +12,12 @@ const math = computed(() => {
 <template>
   <div
     class="
-      ml-2 flex grid w-25 auto-rows-max items-center justify-end
-      justify-items-end gap-2 py-1
-      *:w-full *:items-center
-      **:text-end
+      ml-2 grid w-25 auto-rows-max items-center justify-end justify-items-end gap-2
+   py-1 *:w-full *:items-center **:text-end
     ">
     <p
       class="
-        grid inline-flex flex-nowrap items-center justify-end text-5 leading-4
+        inline-flex flex-nowrap items-center justify-end text-end text-4 leading-4
         font-bold tracking-wide text-nowrap
       ">
       {{ player.kills }}&thinsp;/&thinsp;
@@ -31,11 +29,9 @@ const math = computed(() => {
 
     <div
       class="
-        flex grid size-full flex-col items-center justify-end gap-0.5 text-end
-        font-medium
-        *:flex *:items-center
-        **:flex **:justify-end **:justify-items-end **:text-end **:text-2!
-        **:leading-none
+        space-y-0.5 text-end font-medium
+        opacity-80 *:flex *:items-center *:justify-end **:flex
+      **:text-1! **:leading-none
       ">
       <p>
         {{ Math.round(player.challenges.killParticipation * 100) }}
@@ -47,10 +43,7 @@ const math = computed(() => {
         class="flex items-center gap-1 truncate tracking-tight text-nowrap">
         <icon
           name="proicons:infinity"
-          class="
-            size-4.5
-            **:stroke-[1.6]
-          " />
+          class="size-4.5 **:stroke-[1.6]" />
         KDA
       </p>
 

@@ -9,10 +9,7 @@ const searchInput = ref([])
   <transition-slide
     group
     tag="div"
-    class="
-      z-1 flex h-auto w-full flex-wrap items-center px-4
-      *:select-none
-    ">
+    class="z-1 flex h-auto w-full flex-wrap items-center px-4 *:select-none">
     <template
       v-for="query in searchInput"
       :key="query">

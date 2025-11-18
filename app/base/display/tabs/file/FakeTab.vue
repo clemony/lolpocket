@@ -8,11 +8,7 @@ const { class: className } = defineProps<{
   <li
     role="tab"
     :class="
-      cn(
-        `
-          tab-menu tab pointer-events-none relative w-0! min-w-0! grow-0!
-          border-b-transparent! p-0!
-        `,
+      cn('tab-menu tab pointer-events-none relative w-0! min-w-0! grow-0! border-b-transparent! p-0!',
         className,
       )
     ">

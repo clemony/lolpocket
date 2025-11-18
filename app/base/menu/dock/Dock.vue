@@ -61,13 +61,7 @@ provide(DISTANCE_INJECTION_KEY, distance)
     role="button"
     :tabindex="0"
     :class="
-      cn(
-        `
-          mx-auto mt-8 flex h-[60px] w-max gap-4 rounded-2xl border bg-b1/90 p-2
-          shadow-sm shadow-black/5 dss drop-shadow-black/5 backdrop-blur-md
-          transition-all
-          supports-backdrop-blur:bg-b1/80
-        `,
+      cn('mx-auto mt-8 flex h-[60px] w-max gap-4 rounded-2xl border bg-b1/90 p-2 shadow-sm shadow-black/5 dss drop-shadow-black/5 backdrop-blur-md transition-all supports-backdrop-blur:bg-b1/80',
         orientation === 'vertical' && 'flex-col w-[62px] h-max',
         props.class,
         dockClass,

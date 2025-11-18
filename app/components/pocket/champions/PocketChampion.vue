@@ -72,16 +72,7 @@ onBeforeMount(() => {
       <PopoverTrigger
         v-bind="$attrs"
         :class="
-          cn(
-            `
-              target group relative grid aspect-square size-full
-              cursor-context-menu! rounded-lg ring-bc/50 ring-offset-b1
-              transition-all duration-300
-              **:cursor-context-menu
-              open:ring open:ring-offset-3
-              hover:ring hover:ring-2
-              focus:ring focus:ring-offset-3
-            `,
+          cn('target group relative grid aspect-square size-full cursor-context-menu! rounded-lg ring-bc/50 ring-offset-b1 transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
             className,
           )
         "

@@ -9,10 +9,7 @@ import { itemTags } from '#shared/references'
     <VarSelectTrigger
       :variant="is().filters.tags.length ? 'neutral' : 'outline'"
       size="12"
-      class="
-        indicator relative
-        open:inset-shadow-sm open:not-on:bg-tint-b2/40!
-      "
+      class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-b2/40!"
       shape="square">
       <StatusIndicator
         v-if="is().filters.tags.length"
@@ -43,10 +40,7 @@ import { itemTags } from '#shared/references'
         <SelectItem
           v-for="tag in itemTags"
           :key="tag.id"
-          class="
-            py-1.5 font-medium capitalize
-            *:flex *:items-center *:gap-3
-          "
+          class="py-1.5 font-medium capitalize *:flex *:items-center *:gap-3"
           :value="tag.id">
           <ItemTagIcon :tag />
           {{ tag.name }}

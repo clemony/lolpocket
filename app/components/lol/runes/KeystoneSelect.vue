@@ -41,11 +41,7 @@ watch(
     <RadioGroup
       v-model:model-value="selectedRune"
       :class="
-        cn(
-          `
-            relative flex size-full items-center justify-around rounded-xl
-            **:select-none
-          `,
+        cn('relative flex size-full items-center justify-around rounded-xl **:select-none',
           `
             grid-cols-${runes.length ?? 3}
           `,

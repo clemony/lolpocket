@@ -57,14 +57,7 @@ onMounted(async () => {
     name="name"
     submit-mode="both"
     :class="
-      cn(
-        `
-          group/edit flex h-14 w-160 max-w-160 cursor-text items-center
-          justify-between overflow-hidden rounded-box border border-transparent
-          px-2.5 py-0
-          focus-within:border-b3 focus-within:bg-b1
-          hover:border-b3 hover:bg-b1
-        `,
+      cn('group/edit flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden rounded-box border border-transparent px-2.5 py-0 focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1',
         wrapperClass,
       )
     "
@@ -80,8 +73,7 @@ onMounted(async () => {
       <EditableArea class="w-160 overflow-hidden">
         <div
           class="
-            w-160 overflow-hidden pr-18
-            *:font-bold *:text-nowrap *:dst
+            w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap *:dst
             **:truncate **:tracking-tight
           ">
           <EditablePreview :class="cn('', className)">
@@ -123,8 +115,8 @@ onMounted(async () => {
           ">
           <button
             class="
-              btn btn-square btn-ghost btn-xs
-              hover:border-b3/80 hover:bg-b3/40! hover:inset-shadow-xxs
+              btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40!
+              hover:inset-shadow-xxs
             "
             @click="pocket.name = generateName()">
             <icon
@@ -134,8 +126,8 @@ onMounted(async () => {
 
           <button
             class="
-              btn btn-square btn-ghost btn-xs
-              hover:border-b3/80 hover:bg-b3/40! hover:inset-shadow-xxs
+              btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40!
+              hover:inset-shadow-xxs
             "
             @click="modelValue = ''">
             <icon

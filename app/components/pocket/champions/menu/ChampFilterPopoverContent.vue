@@ -5,10 +5,7 @@
     update-position-strategy="always"
     variant="input">
     <InputGroup
-      class="
-        h-12 rounded-b-none border-x-0 border-t-0 pr-2
-        hover:ring-0
-      ">
+      class="h-12 rounded-b-none border-x-0 border-t-0 pr-2 hover:ring-0">
       <InputGroupAddon>
         <icon
           name="search"

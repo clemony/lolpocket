@@ -45,16 +45,15 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
             <label
               class="
                 btn size-27 cursor-pointer! px-2.5 py-2 btn-ghost
-                hover:border-b3 hover:bg-b2
-                has-checked:border-b3 has-checked:bg-b3/70 has-checked:shadow-sm
+                hover:border-b3 hover:bg-b2 has-checked:border-b3
+                has-checked:bg-b3/70 has-checked:shadow-sm
               ">
               <img
                 :alt="selectedSpell.name.toString()"
                 :src="`/img/spells/${spell.id}.webp`"
                 class="
-                  peer-checked:borderneutral/90
-                  size-22 rounded-lg border border-b3 shadow-sm inset-shadow-sm
-                  shadow-black/20
+                  peer-checked:borderneutral/90 size-22 rounded-lg border
+                  border-b3 shadow-sm inset-shadow-sm shadow-black/20
                 " />
 
               <input

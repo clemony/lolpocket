@@ -39,9 +39,7 @@ watchEffect(() => {
         placeholder="Type or click a suggestion"
         class="
           sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4
-          border-neutral/30 bg-accent! shadow-none
-          **:text-nc!
-          [&_svg]:size-4
+          border-neutral/30 bg-accent! shadow-none **:text-nc! [&_svg]:size-4
         "
         set-focus
         @update:query="(e) => e" />

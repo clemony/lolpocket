@@ -1,7 +1,7 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export const useSummonerStore = defineStore(
-  "SummonerStore",
+  'SummonerStore',
   () => {
     const MAX_CACHE = 100
     const TTL = 86_400_000 // 24h
@@ -22,11 +22,15 @@ export const useSummonerStore = defineStore(
       meta.value.set(puuid, { updated: Date.now() })
 
     const evict = () => {
-      if (cache.value.size <= MAX_CACHE) return
+      if (cache.value.size <= MAX_CACHE)
+        return
       const oldest = cache.value.keys().next().value
       cache.value.delete(oldest)
       meta.value.delete(oldest)
-      for (const [k, v] of index.value) if (v === oldest) index.value.delete(k)
+      for (const [k, v] of index.value) {
+        if (v === oldest)
+          index.value.delete(k)
+      }
     }
 
     const setSummoner = (s: Summoner) => {
@@ -50,55 +54,78 @@ export const useSummonerStore = defineStore(
       tag?: string
       force?: boolean
     }): Promise<Summoner> => {
-      const { puuid, region, name, tag, force } = identifier
+      const { name, puuid, force, region, tag } = identifier
       let summoner: Summoner | null = null
 
-      if (puuid) summoner = resolveByPuuid(puuid)
+      if (puuid)
+        summoner = resolveByPuuid(puuid)
       else if (region && name && tag)
         summoner = resolveBySlug(region, name, tag)
 
-      if (summoner && !force && !isStale(summoner.puuid)) return summoner
+      if (summoner && !force && !isStale(summoner.puuid))
+        return summoner
 
-      console.log("🔹 fetching fresh…")
+      console.log('🔹 fetching fresh…')
 
       // fetch fresh if missing or stale
-      const base = await $fetch<Summoner>("/api/riot/summoner_fetch", {
+      const base = await $fetch<Summoner>('/api/riot/summoner', {
         params: identifier,
       })
-      const ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
-        "/api/riot/ranked_fetch",
+      console.log('📎 - ensureSummoner - base:', base)
+      const ranked = await $fetch<{ ranked: Summoner['ranked'] }>(
+        '/api/riot/ranked',
         {
           params: { puuid: base.puuid, region: base.region },
         }
       )
+      console.log('📎 - ensureSummoner - ranked:', ranked)
       const full: Summoner = { ...base, ranked: ranked.ranked }
+      console.log('📎 - ensureSummoner - full:', full)
 
       setSummoner(full)
       return full
     }
 
+    const mergeRanked = (puuid: string, ranked: Summoner['ranked']) => {
+      const s = cache.value.get(puuid)
+      if (!s)
+        return
+
+      cache.value.set(puuid, {
+        ...s,
+        ranked,
+      })
+
+      bump(puuid)
+    }
+
+    const clearAll = () => {
+      cache.value.clear()
+      meta.value.clear()
+      index.value.clear()
+
+      // nuke persisted storage
+      const key = 'summonerStore'
+      localStorage.removeItem(key)
+    }
+
     return {
+      resolveByPuuid,
       cache,
-      meta,
+      clearAll,
+      ensureSummoner,
       index,
       makeKey,
-      resolveByPuuid,
+      mergeRanked,
+      meta,
       resolveBySlug,
-      ensureSummoner,
       setSummoner,
     }
   },
   {
     persist: {
-      key: "summonerStore",
-      storage: piniaPluginPersistedstate.localStorage(),
+      key: 'summonerStore',
       serializer: {
-        serialize: (state) =>
-          JSON.stringify({
-            cache: [...state.cache.entries()],
-            meta: [...state.meta.entries()],
-            index: [...state.index.entries()],
-          }),
         deserialize: (str) => {
           const raw = JSON.parse(str)
           const cacheMap = new Map<string, Summoner>(raw.cache)
@@ -108,7 +135,7 @@ export const useSummonerStore = defineStore(
               { updated: Number(v.updated) || Date.now() },
             ])
           )
-          let indexMap = new Map(raw.index)
+          const indexMap = new Map(raw.index)
 
           // rebuild index if empty
           if (!indexMap.size) {
@@ -119,9 +146,16 @@ export const useSummonerStore = defineStore(
             }
           }
 
-          return { cache: cacheMap, meta: metaMap, index: indexMap }
+          return { cache: cacheMap, index: indexMap, meta: metaMap }
         },
+        serialize: state =>
+          JSON.stringify({
+            cache: [...state.cache.entries()],
+            index: [...state.index.entries()],
+            meta: [...state.meta.entries()],
+          }),
       },
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

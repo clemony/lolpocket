@@ -17,11 +17,7 @@ const directionClass = computed(() =>
   <icon
     :name="direction"
     :class="
-      cn(
-        `
-          transition-rotate size-4.5 opacity-50! duration-150
-          group-hover/collapse:text-bc/100! group-hover/collapse:**:stroke-[2.5]
-        `,
+      cn('transition-rotate size-4.5 opacity-50! duration-150 group-hover/collapse:text-bc/100! group-hover/collapse:**:stroke-[2.5]',
         directionClass,
         className,
       )

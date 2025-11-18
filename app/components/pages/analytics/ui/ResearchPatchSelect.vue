@@ -14,8 +14,7 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
     class="p-0">
     <SelectTrigger
       class="
-        border-none bg-transparent px-2 shadow-none
-        focus:ring-0 focus:outline-0
+        border-none bg-transparent px-2 shadow-none focus:ring-0 focus:outline-0
       "
       :class="cn('', props.class)"
       no-arrow>

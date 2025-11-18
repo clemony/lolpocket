@@ -37,17 +37,13 @@ watchEffect(async () => {
     :class="
       cn(
         `
-          animate-in fade-in tldr-30 relative flex w-full flex-col
-          justify-center py-3
-        `,
+      animate-in fade-in tldr-30 relative flex w-full flex-col justify-center
+      py-3
+    `,
         className,
       )
     ">
-    <div
-      class="
-        flex w-full items-center gap-4 px-4
-        **:select-none
-      ">
+    <div class="flex w-full items-center gap-4 px-4 **:select-none">
       <button
         v-tippy="{
           content: rune.tier === 0 ? 'Keystone' : null,
@@ -64,20 +60,15 @@ watchEffect(async () => {
             :alt="`${rune.name} Image`"
             :class="
               cn(`
-                pointer-events-none absolute top-0 left-0 size-full rounded-full
-                object-contain shadow-sm inset-shadow-sm drop-shadow-sm
-              `)
+              pointer-events-none absolute top-0 left-0 size-full rounded-full
+              object-contain shadow-sm inset-shadow-sm drop-shadow-sm
+            `)
             " />
         </span>
         <icon
           v-if="rune.tier === 0"
           name="star-fill"
-          class="
-            absolute bottom-0 left-0 size-3.5
-            **:text-g/90
-            group-hover/s:animate-heartbeat group-hover/s:drop-shadow-md
-            group-hover/s:drop-shadow-g group-hover/s:delay-400
-          " />
+          class="absolute bottom-0 left-0 size-3.5 **:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-md group-hover/s:drop-shadow-g group-hover/s:delay-400" />
       </button>
 
       <div class="flex h-full w-full flex-col justify-center gap-1">
@@ -125,15 +116,10 @@ watchEffect(async () => {
 
     <div
       :key="rune.id"
-      class="
-        flex h-max w-full max-w-105 flex-col justify-between gap-8
-        overflow-y-auto px-4.5
-      ">
+      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto px-4.5">
       <span
         class="text-pretty whitespace-pre-line"
         v-html="rune.description" />
     </div>
   </div>
 </template>
-
-<style scoped></style>

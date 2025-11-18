@@ -13,11 +13,7 @@ const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0])
 <template>
   <motion.div
     :class="
-      cn(
-        `
-          absolute flex h-20 w-fit max-w-220 -translate-x-3 flex-nowrap
-          items-center gap-6
-        `,
+      cn('absolute flex h-20 w-fit max-w-220 -translate-x-3 flex-nowrap items-center gap-6',
         className,
       )
     "

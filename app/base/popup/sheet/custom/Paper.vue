@@ -32,12 +32,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <SheetOverlay />
     <DialogContent
       :class="
-        cn(
-          `
-            h-screen max-h-screen border border-x-b3 bg-b1/92 p-0!
-            shadow-warm-soft outline-0 backdrop-blur-md
-            focus:ring-0 focus:ring-offset-0 focus:outline-0
-          `,
+        cn('h-screen max-h-screen border border-x-b3 bg-b1/92 p-0! shadow-warm-soft outline-0 backdrop-blur-md focus:ring-0 focus:ring-offset-0 focus:outline-0',
           sheetVariants({ side }),
           props.class,
         )

@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 import { DialogTrigger } from '#components'
-import { DrawerTrigger } from '~/base/popup/drawer/drawer-index'
 
 const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-  <component :is="isDesktop ? DialogTrigger : DrawerTrigger">
+  <component :is="isDesktop ? DialogTrigger : DialogTrigger">
     <slot />
   </component>
 </template>

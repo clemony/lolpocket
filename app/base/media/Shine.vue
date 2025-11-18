@@ -10,21 +10,13 @@ const { isOutside } = useMouseInElement(target)
   <label
     ref="target"
     :class="
-      cn(
-        `
-          flex items-center justify-center rounded-full border
-          border-transparent shadow-sm
-        `,
+      cn('flex items-center justify-center rounded-full border border-transparent shadow-sm',
         props.class,
       )
     ">
     <div
       :class="
-        cn(
-          `
-            group relative flex items-center justify-center overflow-hidden
-            rounded-full
-          `,
+        cn('group relative flex items-center justify-center overflow-hidden rounded-full',
           props.class,
         )
       ">
@@ -34,8 +26,8 @@ const { isOutside } = useMouseInElement(target)
         class="
           absolute top-0 z-5 block h-full w-1/2 -translate-x-[150%] -skew-x-12
           transform bg-gradient-to-r from-transparent to-white/40 opacity-0
-          transition-all duration-400
-          group-hover:translate-x-full group-hover:opacity-100
+          transition-all duration-400 group-hover:translate-x-full
+          group-hover:opacity-100
         "
         :class="{ 'hidden opacity-0': isOutside }" />
     </div>

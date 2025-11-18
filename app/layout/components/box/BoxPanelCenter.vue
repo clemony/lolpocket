@@ -41,8 +41,7 @@ const filteredMailList = computed(() => {
       <div
         class="
           bg-background/95 sticky top-0 z-1 flex w-full flex-col items-center
-          backdrop-blur
-          supports-[backdrop-filter]:bg-background/6
+          backdrop-blur supports-[backdrop-filter]:bg-background/6
         ">
         <div class="grid h-[45px] w-full place-items-center border-b">
           <div

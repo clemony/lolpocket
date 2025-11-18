@@ -46,10 +46,8 @@ onMounted (() => {
         <icon
           name="mynaui:arrow-up"
           class="
-            absolute size-3.5 -scale-y-100 opacity-40
-            **:stroke-2
-            group-disabled/toggle:opacity-20
-            group-on/toggle:opacity-100
+            absolute size-3.5 -scale-y-100 opacity-40 **:stroke-2
+            group-disabled/toggle:opacity-20 group-on/toggle:opacity-100
             group-on/toggle:group-not-disabled/toggle:stroke-[4]
           " />
       </ToggleGroupItem>
@@ -58,11 +56,7 @@ onMounted (() => {
       variant="none"
       size="6"
       :class="
-        cn(
-          `
-            relative grid place-items-center px-2 text-0 leading-3 lining-nums
-            tabular-nums opacity-50 select-none
-          `,
+        cn('relative grid place-items-center px-2 text-0 leading-3 lining-nums tabular-nums opacity-50 select-none',
           { 'opacity-100 font-medium': vote },
         )
       ">
@@ -81,10 +75,8 @@ onMounted (() => {
         <icon
           name="mynaui:arrow-up"
           class="
-            group-disabled-not-on/toggle:opacity-20
-            absolute size-3.5 opacity-40
-            **:stroke-2
-            group-on/toggle:opacity-100
+            group-disabled-not-on/toggle:opacity-20 absolute size-3.5 opacity-40
+            **:stroke-2 group-on/toggle:opacity-100
             group-on/toggle:group-not-disabled/toggle:**:stroke-[4]
           " />
       </ToggleGroupItem>

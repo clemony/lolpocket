@@ -28,7 +28,9 @@ const chain = computed(() => getRouteChain(route.fullPath))
 </script>
 
 <template>
-  <Breadcrumb class="z-11">
+  <Breadcrumb
+    v-if="!route.path.match(/summoner.*/)"
+    class="z-11">
     <BreadcrumbList
       :key="route.fullPath"
       class="px-3">
@@ -45,15 +47,9 @@ const chain = computed(() => getRouteChain(route.fullPath))
           <template v-if="link.meta?.title !== 'Overview'">
             <BreadcrumbSeparator
               v-if="i !== 0"
-              class="
-                hidden
-                md:block
-              " />
+              class="hidden md:block" />
             <BreadcrumbItem
-              class="
-                group hidden
-                md:block
-              ">
+              class="group hidden md:block">
               <BreadcrumbLink as-child>
                 <ULink
                   v-if="!link.meta?.search && link.path !== route.path"

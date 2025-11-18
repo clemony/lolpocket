@@ -46,12 +46,7 @@ useMentionTooltips(container)
       <Separator
         orientation="vertical"
         :class="
-          cn(
-            `
-              rounded-bl-lg border-l border-shade-b3/10 bg-transparent
-              transition-colors duration-200
-              group-hover/tree:border-shade-b3/20
-            `,
+          cn('rounded-bl-lg border-l border-shade-b3/10 bg-transparent transition-colors duration-200 group-hover/tree:border-shade-b3/20',
             { '!border-shade-b3/20': hovered },
           )
         " />
@@ -68,12 +63,7 @@ useMentionTooltips(container)
       <CollapsibleTrigger
         v-if="!replies?.length && depth"
         :class="
-          cn(
-            `
-              pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7
-              border-b border-b-b3
-              hover:border-shade-b3/20
-            `,
+          cn('pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b border-b-b3 hover:border-shade-b3/20',
             { '!border-shade-b3/20': parentHovered },
           )
         "
@@ -142,8 +132,7 @@ useMentionTooltips(container)
         v-if="replies?.length"
         size="8"
         class="
-          relative ml-5 px-5 text-1 text-bc/30
-          hover:text-bc hover:underline
+          relative ml-5 px-5 text-1 text-bc/30 hover:text-bc hover:underline
         "
         :parent-hovered="hovered"
         @mouseenter="hovered = true"
@@ -152,12 +141,7 @@ useMentionTooltips(container)
         @focusout="hovered = false">
         <span
           :class="
-            cn(
-              `
-                absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b
-                border-shade-b3/10 dst transition-colors duration-200
-                hover:border-shade-b3/20
-              `,
+            cn('absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b border-shade-b3/10 dst transition-colors duration-200 hover:border-shade-b3/20',
               { '!border-shade-b3/25': hovered },
             )
           " />

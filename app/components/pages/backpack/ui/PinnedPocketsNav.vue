@@ -12,10 +12,7 @@ const { isCollapsed, pinned } = defineProps<{
     v-if="!isCollapsed"
     v-model:open="as().toggles.backpack.pinned"
     :data-collapsed="isCollapsed"
-    class="
-      px-3 pb-2
-      data-[collapsed=true]:py-2
-    ">
+    class="px-3 pb-2 data-[collapsed=true]:py-2">
     <CollapsibleTrigger
       as-child
       class="group/collapse">
@@ -42,8 +39,7 @@ const { isCollapsed, pinned } = defineProps<{
       ">
       <nav
         class="
-          grid gap-1
-          group-[[data-collapsed=true]]:justify-center
+          grid gap-1 group-[[data-collapsed=true]]:justify-center
           group-[[data-collapsed=true]]:px-2
         ">
         <div
@@ -78,16 +74,13 @@ const { isCollapsed, pinned } = defineProps<{
             variant="ghost"
             class="
               relative grid size-10 cursor-pointer place-items-center
-              *:transition-opacity *:duration-200
-              hover:*:first:opacity-0 hover:*:last:opacity-100
+              *:transition-opacity *:duration-200 hover:*:first:opacity-0
+              hover:*:last:opacity-100
             "
             @click.stop>
             <icon
               name="pin"
-              class="
-                absolute size-4
-                **:stroke-[1.84]
-              " />
+              class="absolute size-4 **:stroke-[1.84]" />
             <input
               v-model="ps().pinned"
               name="toggle-pin"
@@ -95,10 +88,7 @@ const { isCollapsed, pinned } = defineProps<{
               class="peer hidden" />
             <icon
               name="unpin"
-              class="
-                absolute size-4 opacity-0
-                **:stroke-[1.84]
-              " />
+              class="absolute size-4 opacity-0 **:stroke-[1.84]" />
           </Label>
         </div>
       </nav>

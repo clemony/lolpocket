@@ -15,8 +15,7 @@ const {
 <template>
   <div
     :class="
-      cn(
-        `pointer-events-none inline self-end text-1! text-bc/60 select-none`,
+      cn('pointer-events-none inline self-end text-1! text-bc/60 select-none',
         className,
       )
     ">

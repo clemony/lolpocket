@@ -5,6 +5,7 @@ import { ListboxRoot, useForwardPropsEmits } from 'reka-ui'
 const props = defineProps<
   ListboxRootProps & {
     class?: HTMLAttributes['class']
+    as?: string
   }
 >()
 const emit = defineEmits<ListboxRootEmits>()
@@ -15,6 +16,7 @@ const forwarded = useForwardPropsEmits(delegated, emit)
 
 <template>
   <ListboxRoot
+    :as="props.as"
     :autofocus="false"
     v-bind="forwarded">
     <slot />

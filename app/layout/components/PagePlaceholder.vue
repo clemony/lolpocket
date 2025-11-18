@@ -81,8 +81,8 @@ onMounted(() => {
 
       <footer
         class="
-          flex items-center justify-center gap-4 text-end text-2 italic
-          *:flex *:items-end *:gap-2
+          flex items-center justify-center gap-4 text-end text-2 italic *:flex
+          *:items-end *:gap-2
         ">
         <p class="text-1 text-bc/70">
           Brought to you by

@@ -38,10 +38,7 @@ function handleClick(i) {
         ">
         <icon
           name="add"
-          class="
-            text-bc/60
-            group-hover:text-bc
-          " />
+          class="text-bc/60 group-hover:text-bc" />
       </div>
     </button>
   </div>

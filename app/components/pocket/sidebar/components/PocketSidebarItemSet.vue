@@ -61,8 +61,7 @@ const hovered = ref(false)
       class="
         items-between pointer-events-auto z-1! flex size-20 cursor-pointer
         flex-wrap justify-between gap-0.75! rounded-lg border border-b3/50!
-        bg-b2/80 p-1.5 backdrop-blur-md
-        hover:z-2!
+        bg-b2/80 p-1.5 backdrop-blur-md hover:z-2!
       ">
       <template v-if="set.items && set.items?.length">
         <template

@@ -24,8 +24,7 @@ const navLinks = computed(() => {
   <div
     class="
       scrollbar-hidden h-full max-h-full w-full space-y-2 overflow-y-auto py-3
-      pr-6 pl-6
-      **:text-3
+      pr-6 pl-6 **:text-3
     ">
     <Collapsible
       v-for="(parentRoute, i) in navLinks"
@@ -34,9 +33,8 @@ const navLinks = computed(() => {
       :i="i + 1">
       <CollapsibleTrigger
         class="
-          mt-1 w-full items-center gap-4 py-1 pr-0.75 text-start
-          hover:underline hover:*:text-bc/80
-          focus-visible:outline-0
+          mt-1 w-full items-center gap-4 py-1 pr-0.75 text-start hover:underline
+          hover:*:text-bc/80 focus-visible:outline-0
         ">
         <span class="grow text-2 font-semibold text-bc/50 capitalize">
           {{ parentRoute?.meta?.title || parentRoute?.name }}
@@ -48,9 +46,7 @@ const navLinks = computed(() => {
       <CollapsibleContent
         v-if="parentRoute.path !== '/support'"
         class="
-          relative flex flex-col justify-items-center gap-1
-          *:-ml-2
-          after:top-3
+          relative flex flex-col justify-items-center gap-1 *:-ml-2 after:top-3
         "
         menu>
         <SidebarBtnLink
@@ -65,9 +61,7 @@ const navLinks = computed(() => {
       <CollapsibleContent
         v-else-if="parentRoute.path === '/support'"
         class="
-          relative flex flex-col justify-items-center gap-1
-          *:-ml-2
-          after:top-3
+          relative flex flex-col justify-items-center gap-1 *:-ml-2 after:top-3
         "
         menu>
         <SidebarBtnLink
@@ -83,8 +77,7 @@ const navLinks = computed(() => {
             class="
               flex h-10 w-full flex-nowrap items-center justify-start gap-3.25!
               overflow-hidden pr-1 pl-1.5 font-medium text-nowrap text-bc/50
-              capitalize duration-0!
-              hover:text-bc! hover:underline
+              capitalize duration-0! hover:text-bc! hover:underline
             ">
             <span class="relative grid size-4.5 shrink-0 place-items-center">
               <CaretRotate

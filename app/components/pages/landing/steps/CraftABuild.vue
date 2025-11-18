@@ -79,8 +79,8 @@ onMounted(async () => {
         v-tippy="ix().champNameById(champModel)"
         class="
           animate-in slide-in-from-bottom-10 size-16 rounded-lg shadow-sm
-          drop-shadow-sm transition-all duration-400
-          hover:scale-110 hover:ring-1 hover:ring-neutral hover:ring-offset-2
+          drop-shadow-sm transition-all duration-400 hover:scale-110
+          hover:ring-1 hover:ring-neutral hover:ring-offset-2
           hover:ring-offset-b2
         ">
         <ChampionIcon

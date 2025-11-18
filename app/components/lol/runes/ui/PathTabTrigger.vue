@@ -20,8 +20,7 @@ const emit = defineEmits(['update:path'])
     :value="value"
     class="
       group relative aspect-square size-15 shrink-0 place-self-center
-      rounded-full
-      disabled:pointer-events-none
+      rounded-full disabled:pointer-events-none
     "
     :class="cn('', className)">
     <div class="relative grid size-full place-items-center">
@@ -30,8 +29,7 @@ const emit = defineEmits(['update:path'])
         :alt="`${value} icon`"
         class="
           absolute z-10 h-9 w-auto shrink-0 brightness-90 dst grayscale
-          transition-all duration-300
-          group-data-[state=active]:brightness-100
+          transition-all duration-300 group-data-[state=active]:brightness-100
           group-data-[state=active]:grayscale-0
         " />
     </div>

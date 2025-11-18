@@ -22,12 +22,7 @@ const links = computed(() =>
   <footer
     class=""
     :class="
-      cn(
-        `
-          bgneutral z-0 footer flex h-26 max-h-26 min-h-26 w-full items-center
-          gap-12 bg-neutral p-6 text-nc
-          sm:footer-horizontal
-        `,
+      cn('bgneutral z-0 footer flex h-26 max-h-26 min-h-26 w-full items-center gap-12 bg-neutral p-6 text-nc sm:footer-horizontal',
         className,
       )
     ">
@@ -54,10 +49,7 @@ const links = computed(() =>
         class="flex items-center gap-1.5">
         <NuxtLink
           :to="link.path"
-          class="
-            text-1 font-medium underline-offset-2
-            hover:underline
-          ">
+          class="text-1 font-medium underline-offset-2 hover:underline">
           {{ link.meta?.title || link.name }}
         </NuxtLink>
         <icon
@@ -69,8 +61,7 @@ const links = computed(() =>
     <menu
       class="
         shrink-0 grid-flow-col grid-cols-3 items-center justify-end gap-4
-        justify-self-end
-        *:grid *:place-items-center
+        justify-self-end *:grid *:place-items-center
       ">
       <NuxtLink
         v-for="link in contactLinks"
@@ -79,10 +70,7 @@ const links = computed(() =>
         external
         :to="link.link"
         target="_blank"
-        class="
-          grid place-items-center
-          *:text-nc
-        ">
+        class="grid place-items-center *:text-nc">
         <icon
           :name="link.icon.name"
           :class="link.icon.class" />
@@ -108,10 +96,7 @@ const links = computed(() =>
 
               <icon
                 name="copy"
-                class="
-                  size-3.5!
-                  *:text-nc
-                " />
+                class="size-3.5! *:text-nc" />
             </span>
           </div>
         </template>

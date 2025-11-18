@@ -47,12 +47,7 @@ const summoner = computed(() => s)
       </div>
       <div
         :class="
-          cn(
-            `
-              inline-flex w-full items-center gap-4 leading-none font-normal
-              lowercase
-              *:align-bottom
-            `,
+          cn('inline-flex w-full items-center gap-4 leading-none font-normal lowercase *:align-bottom',
             { 'justify-between': fullWidth },
           )
         ">

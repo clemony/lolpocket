@@ -55,10 +55,7 @@ const rune = computed(() => {
         class="relative px-4 pt-3">
         <div
           :key="`${rune.name}img`"
-          class="
-            img-wrapper group relative z-0
-            before:absolute
-          "
+          class="img-wrapper group relative z-0 before:absolute"
           :href="rune.wiki"
           target="_blank"
           :title="rune.wiki"
@@ -83,9 +80,8 @@ const rune = computed(() => {
           class="
             mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line
             first-letter:float-left first-letter:mr-1.5 first-letter:text-8
-            first-letter:font-[700]
-            first-line:font-[700] first-line:tracking-widest
-            first-line:uppercase
+            first-letter:font-[700] first-line:font-[700]
+            first-line:tracking-widest first-line:uppercase
           ">
           {{ rune.stats }}
         </div>

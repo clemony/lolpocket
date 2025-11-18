@@ -21,9 +21,8 @@ const sliderValue = ref([50])
           <SliderThumb
             class="
               shadow-blackA7 block h-5 w-5 rounded-[10px] bg-white
-              shadow-[0_2px_10px]
-              hover:bg-violet3
-              focus:shadow-blackA8 focus:shadow-[0_0_0_5px] focus:outline-none
+              shadow-[0_2px_10px] hover:bg-violet3 focus:shadow-blackA8
+              focus:shadow-[0_0_0_5px] focus:outline-none
             "
             aria-label="Volume" />
         </TooltipTrigger>

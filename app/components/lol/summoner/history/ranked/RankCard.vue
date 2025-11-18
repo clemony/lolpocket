@@ -24,11 +24,7 @@ const winrate = computed(() =>
 <template>
   <div
     :class="
-      cn(
-        `
-          field-box h-42 max-h-42 w-120 max-w-120 border-b3/40 bg-b2/30 py-0
-          shadow-warm-soft drop-shadow-xs
-        `,
+      cn('field-box h-36 w-full border-b3/40 bg-b2/30 pt-1! shadow-warm-soft drop-shadow-xs',
         className,
       )
     ">
@@ -37,7 +33,7 @@ const winrate = computed(() =>
     </span>
     <div
       class="
-        grid size-full h-42 grid-cols-[1.1fr_1fr_1fr] place-items-center
+        grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center
         content-center overflow-hidden
       ">
       <div class="mt-0.5 grid place-items-center overflow-hidden">
@@ -46,7 +42,7 @@ const winrate = computed(() =>
           v-if="!entry"
           alt="unranked"
           src="/img/crests/unranked.webp"
-          class="size-25 object-contain opacity-40 drop-shadow-sm saturate-0" />
+          class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0" />
 
         <img
           v-else
@@ -58,13 +54,12 @@ const winrate = computed(() =>
       <div class="relative grid size-full place-items-center">
         <div
           class="
-            relative mt-1 grid size-21 place-items-center overflow-hidden
-            rounded-lg
+            relative grid size-21 place-items-center overflow-hidden rounded-lg
           ">
-          <DonutSkeleton class="absolute size-21" />
+          <DonutSkeleton class="absolute size-21 dst" />
 
           <div
-            class="radial-progress absolute dst"
+            class="radial-progress absolute dss"
             :style="{
               '--value': winrate,
               '--size': '5.25rem',
@@ -84,11 +79,7 @@ const winrate = computed(() =>
 
       <div
         :class="
-          cn(
-            `
-              flex flex-col items-end justify-center gap-2.75 overflow-hidden
-              pt-3 pb-3 text-end font-medium
-            `,
+          cn('flex flex-col items-end justify-center gap-2.75 overflow-hidden pt-3 pb-3 text-end font-medium',
             { 'opacity-40': !entry },
           )
         ">
@@ -108,8 +99,7 @@ const winrate = computed(() =>
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
           class="
             flex items-center justify-end gap-1 text-end text-1 text-nowrap
-            decoration-dotted underline-offset-2
-            hover:underline
+            decoration-dotted underline-offset-2 hover:underline
           ">
           <span>{{ entry ? entry.wins : 0 }}W</span>
 

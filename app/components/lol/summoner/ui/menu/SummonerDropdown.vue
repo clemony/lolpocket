@@ -20,11 +20,7 @@ function handleBlock() {
         hover="base"
         on="base"
         :class="
-          cn(
-            `
-              relative w-full justify-start rounded-full pr-8 pl-2 text-start
-              text-nowrap
-            `,
+          cn('relative w-full justify-start rounded-full pr-8 pl-2 text-start text-nowrap',
             { 'btn-active': open },
             className,
           )
@@ -55,10 +51,7 @@ function handleBlock() {
         <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="lucide:user"
-            class="
-              size-3.5
-              **:stroke-[2.1]
-            " />name:
+            class="size-3.5 **:stroke-[2.1]" />name:
         </span>
         <SummonerName
           :summoner
@@ -67,10 +60,7 @@ function handleBlock() {
         <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="hash"
-            class="
-              size-3.5
-              **:stroke-[2.1]
-            " />tag:
+            class="size-3.5 **:stroke-[2.1]" />tag:
         </span>
         <SummonerTag
           :summoner
@@ -79,10 +69,7 @@ function handleBlock() {
         <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="at"
-            class="
-              size-3.5
-              **:stroke-[2.1]
-            " />region:
+            class="size-3.5 **:stroke-[2.1]" />region:
         </span>
         <SummonerRegion
           class="opacity-80"
@@ -106,9 +93,8 @@ function handleBlock() {
 
       <div
         class="
-          grid h-14 grid-cols-3 gap-1.5 p-1 px-3 py-2
-          *:grid *:size-full *:place-items-center *:[&_svg]:size-5
-          *:[&_svg]:stroke-2
+          grid h-14 grid-cols-3 gap-1.5 p-1 px-3 py-2 *:grid *:size-full
+          *:place-items-center *:[&_svg]:size-5 *:[&_svg]:stroke-2
           [&_svg]:group-hover:opacity-100
         ">
         <Button

@@ -159,8 +159,7 @@ watch(
         name="smile"
         class="
           mt-px size-4.25! opacity-70 transition-all duration-100
-          group-focus-within/text:opacity-90
-          group-hover/text:opacity-90
+          group-focus-within/text:opacity-90 group-hover/text:opacity-90
         " />
     </PopoverTrigger>
 
@@ -236,20 +235,14 @@ watch(
                 <TabsTrigger
                   :disabled="group.name === 'Search Results' && !query.length"
                   class="
-                    group/btn h-7
-                    *:opacity-40
-                    hover:*:opacity-90
+                    group/btn h-7 *:opacity-40 hover:*:opacity-90
                     on:*:opacity-100 on:**:text-nc
                   "
                   :value="i">
                   <icon
                     :name="group.icon"
                     :class="
-                      cn(
-                        `
-                          absolute size-5 dxs
-                          **:stroke-[1.7]
-                        `,
+                      cn('absolute size-5 dxs **:stroke-[1.7]',
                         group.class,
                       )
                     " />

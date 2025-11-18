@@ -26,15 +26,7 @@ function handleLike() {
 <template>
   <Label
     :class="
-      cn(
-        `
-          has-checked:
-          group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs
-          ring-bc/50 ring-offset-b2 duration-0
-          hover:ring hover:ring-offset-1
-          has-not-checked:*:opacity-40
-          has-checked:*:opacity-100
-        `,
+      cn('has-checked: group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs ring-bc/50 ring-offset-b2 duration-0 hover:ring hover:ring-offset-1 has-not-checked:*:opacity-40 has-checked:*:opacity-100',
         className,
       )
     "
@@ -51,8 +43,7 @@ function handleLike() {
         name="heart-sm"
         class="
           absolute size-6.5! -translate-y-[0.5px] dst transition-colors
-          duration-200
-          group-hover/x:text-tint-domination/20!
+          duration-200 group-hover/x:text-tint-domination/20!
           group-has-not-checked/x:text-bc/30
           group-has-checked/x:text-tint-domination/20
         " />

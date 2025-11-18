@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { matchFiltersIgnoreChampion } from '#shared/references'
-import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
-
 const queues = {
   0: 'All Recent',
   400: 'Recent Draft',
@@ -30,14 +27,13 @@ const championModel = computed({
 </script>
 
 <template>
-  <ListboxRoot
+  <Listbox
     v-if="champions"
     v-model:model-value="championModel"
-    class="field-box w-120 w-full max-w-120 gap-0 space-y-4 px-2 py-4"
     :multiple="false"
     @entry-focus.prevent>
-    <PatchDateRange />
-    <ListboxContent class="w-full overflow-hidden">
+    <ListboxContent
+      class="field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4">
       <SlideInTopOutBottom
         group
         class="grid h-fit gap-1.5 overflow-hidden">
@@ -45,75 +41,52 @@ const championModel = computed({
           v-for="champion in champions"
           :key="champion.name"
           :value="champion.name"
-          as-child
-          class="
-            peer w-full
-            focus-visible:outline-0
-          ">
-          <Button
+          variant="ghost"
+          hover="secondary"
+          size="16"
+          class="peer w-full gap-4! rounded-xl focus-visible:outline-0">
+          <ChampionIcon
+            :id="champion.id"
+            :alt="champion.name"
             :class="
-              cn(
-                `
-                  grid! h-18 grid-cols-[0.5fr_1fr_1fr_0.5fr] items-center
-                  justify-around duration-0
-                `,
+              cn('size-14 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm',
                 {
-                  'opacity-80':
-                    championModel.length > 1 && champion.name !== championModel,
+                  'grayscale brightness-105 contrast-105':
+                    championModel.length > 1
+                    && champion.name !== championModel,
                 },
               )
-            "
-            variant="ghost">
-            <ChampionIcon
-              :id="champion.id"
-              :alt="champion.name"
-              :class="
-                cn(
-                  `
-                    size-15 items-center overflow-hidden rounded-full shadow-sm
-                    drop-shadow-sm
-                  `,
-                  {
-                    'grayscale brightness-105 contrast-105':
-                      championModel.length > 1
-                      && champion.name !== championModel,
-                  },
-                )
-              " />
+            " />
 
-            <div class="grid size-full gap-1.5 font-medium dst">
-              <p class="self-end text-3!">
-                {{ champion.name }}
-              </p>
+          <div class="grid grow gap-1.5 font-medium dst">
+            <p class="self-end text-3!">
+              {{ champion.name }}
+            </p>
 
-              <p class="text-2 text-nowrap">
-                {{ `${champion.games} Games` }}
-              </p>
-            </div>
+            <p class="text-2 text-nowrap">
+              {{ `${champion.games} Games` }}
+            </p>
+          </div>
 
-            <div
-              class="
-                grid size-full justify-end gap-1.5 dst
-                *:text-end
-              ">
-              <p class="self-end font-medium text-nowrap dst">
-                {{ champion.wins }}&nbsp;Win
-              </p>
+          <div
+            class="grid w-22 shrink-0 justify-end gap-1.5 dst *:text-end">
+            <p class="self-end font-medium text-nowrap dst">
+              {{ champion.wins }}&nbsp;Win
+            </p>
 
-              <p class="font-medium text-nowrap">
-                {{ champion.games - champion.wins }}&nbsp;Loss
-              </p>
-            </div>
-            <div
-              class="
-                grid size-full place-items-center justify-end justify-self-end
-              ">
-              <ChampWinrate :champion="champion" />
-            </div>
-          </Button>
+            <p class="font-medium text-nowrap">
+              {{ champion.games - champion.wins }}&nbsp;Loss
+            </p>
+          </div>
+          <div
+            class="
+              grid w-16 shrink-0 place-items-center justify-end justify-self-end
+            ">
+            <ChampWinrate :champion="champion" />
+          </div>
         </ListboxItem>
         <LilKrug v-if="!champions.length" />
       </SlideInTopOutBottom>
     </ListboxContent>
-  </ListboxRoot>
+  </Listbox>
 </template>

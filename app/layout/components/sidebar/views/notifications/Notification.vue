@@ -16,8 +16,7 @@ const hasAction = computed(() => !!template.value.action)
     v-if="template"
     class="
       group/item chat-end chat min-h-14 w-full shrink-0 items-start gap-4
-      overflow-hidden border border-transparent py-0.5 pr-8
-      **:items-start
+      overflow-hidden border border-transparent py-0.5 pr-8 **:items-start
       first:pt-5
     ">
     <span
@@ -50,9 +49,8 @@ const hasAction = computed(() => !!template.value.action)
           btn absolute -top-3 -right-2 z-2 grid btn-circle size-6 shrink-0
           cursor-pointer place-items-center border-b4! bg-b4! opacity-0
           shadow-sm inset-shadow-xs drop-shadow-xs transition-opacity
-          duration-200 btn-xs
-          group-hover/item:opacity-100
-          hover:bg-neutral hover:btn-neutral hover:**:stroke-[2.5]
+          duration-200 btn-xs group-hover/item:opacity-100 hover:bg-neutral
+          hover:btn-neutral hover:**:stroke-[2.5]
         "
         @click.stop="emit('clear-notification')">
         <icon
@@ -64,8 +62,8 @@ const hasAction = computed(() => !!template.value.action)
         <div class="inline w-full grow text-start">
           <span
             class="
-              inline leading-snug font-medium text-bc/90
-              [&_b]:tracking-tight [&_b]:dst
+              inline leading-snug font-medium text-bc/90 [&_b]:tracking-tight
+              [&_b]:dst
             "
             v-html="template.title" />
         </div>
@@ -77,8 +75,7 @@ const hasAction = computed(() => !!template.value.action)
       class="
         chat-footer flex cursor-pointer flex-nowrap items-center gap-1 p-0
         leading-none font-medium! opacity-0 transition-opacity duration-200
-        group-hover/item:opacity-50
-        hover:underline hover:opacity-100
+        group-hover/item:opacity-50 hover:underline hover:opacity-100
       "
       :to="template.action.function">
       <icon

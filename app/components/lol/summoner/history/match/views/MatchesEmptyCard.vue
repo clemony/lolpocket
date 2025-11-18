@@ -10,8 +10,7 @@ const props = defineProps<{
   <div
     class="
       field grid h-44 w-220 justify-center overflow-visible border-b3/40
-      bg-b2/30 p-0 text-2 shadow-warm-soft drop-shadow-xs
-      **:select-none
+      bg-b2/30 p-0 text-2 shadow-warm-soft drop-shadow-xs **:select-none
     ">
     <div class="flex h-43 w-full items-center justify-center gap-4">
       <i-lol-check-back-later

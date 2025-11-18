@@ -1,4 +1,5 @@
-import { getApiPath, riotGet } from "../client"
+import { getApiPath, riotGet } from '../client'
+
 export async function fetchMasteryV4(puuid: string, region: string) {
   return riotGet(
     getApiPath(region),

@@ -52,8 +52,7 @@ const tag = ref(false)
       <div
         class="
           tippy-content pointer-events-auto z-100 mb-1 w-64 max-w-88 py-2
-          *:first:pt-1
-          [&_button]:px-2
+          *:first:pt-1 [&_button]:px-2
         ">
         <div class="mt-2 flex items-center gap-3 px-2 py-2">
           <UserAvatar

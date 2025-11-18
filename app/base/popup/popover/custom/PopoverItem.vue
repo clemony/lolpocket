@@ -24,8 +24,7 @@ const {
         buttonVariants({ base, on, hover, size, variant }),
         `
           w-full max-w-full flex-nowrap justify-start truncate overflow-hidden
-          rounded-md px-2 text-2 text-nowrap
-          [&_svg]:size-4.5
+          rounded-md px-2 text-2 text-nowrap [&_svg]:size-4.5
         `,
         className,
       )

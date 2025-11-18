@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { RadioGroupItem, RadioGroupRoot } from 'reka-ui'
-
 const clem = [
   {
     class: 'object-cover',

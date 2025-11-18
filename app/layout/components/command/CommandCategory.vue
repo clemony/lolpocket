@@ -62,10 +62,7 @@ const contentVariants = {
         <Grow />
 
         <Badge
-          class="
-            z-1 mr-1
-            group-hover:opacity-100
-          ">
+          class="z-1 mr-1 group-hover:opacity-100">
           {{ results.length ?? "no results" }}
         </Badge>
 
@@ -85,9 +82,8 @@ const contentVariants = {
       class="overflow-hidden">
       <CollapsibleContent
         class="
-          CollapsibleContent mx-7 mb-1
-          before:absolute before:top-2.5 before:left-0 before:w-px
-          before:bg-black-30/64
+          CollapsibleContent mx-7 mb-1 before:absolute before:top-2.5
+          before:left-0 before:w-px before:bg-black-30/64
         "
         :class="{
           'before:h-[calc(100%-36px)]': results.length > 3,

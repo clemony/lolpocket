@@ -24,15 +24,7 @@ watchEffect(() => {
   <button
     v-tippy="'Search'"
     :class="
-      cn(
-        `
-          group
-          hover:ringneutral/50
-          z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center
-          self-center rounded-xl border border-b4/60 bg-b1/50 pr-2 pl-2.75
-          text-2 text-nowrap inset-shadow-xs transition-colors duration-150
-          hover:ring-1
-        `,
+      cn('group hover:ringneutral/50 z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center self-center rounded-xl border border-b4/60 bg-b1/50 pr-2 pl-2.75 text-2 text-nowrap inset-shadow-xs transition-colors duration-150 hover:ring-1',
         props.class,
       )
     "

@@ -38,16 +38,12 @@ const h1Visibility = {
 
 <template>
   <div
-    class="
-      relative grid size-full translate-y-20 gap-8
-      [&_svg]:text-bc
-    ">
+    class="relative grid size-full translate-y-20 gap-8 [&_svg]:text-bc">
     <div class="relative grid h-20 w-100 items-end">
       <motion.div
         class="
           ws-nowrap relative flex h-full w-full origin-bottom-left items-center
-          font-bold drop-shadow-sm
-          **:text-12
+          font-bold drop-shadow-sm **:text-12
         ">
         <h1>l</h1>
 

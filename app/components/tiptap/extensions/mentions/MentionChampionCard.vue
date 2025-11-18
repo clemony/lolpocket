@@ -33,8 +33,7 @@ const position = computed(() =>
     v-if="item"
     class="
       flex max-h-[304px] w-[258px] flex-col justify-self-center overflow-hidden
-      pt-4 pb-3
-      **:select-text
+      pt-4 pb-3 **:select-text
     ">
     <div class="flex h-fit w-full gap-4 px-4">
       <!-- IMG -->

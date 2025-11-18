@@ -15,7 +15,7 @@ const tab = ref('stats')
       default-value="stats"
       class="">
       <TabsList
-        base="indicator"
+
         class="grid h-11 w-full max-w-110 grid-cols-3">
         <TabsTrigger value="stats">
           Stat Totals

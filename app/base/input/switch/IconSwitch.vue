@@ -24,22 +24,13 @@ interface ToggleItem {
   <SwitchRoot
     v-bind="forwarded"
     :class="
-      cn(
-        `
-          peer relative inline-flex h-6 w-12 shrink-0 cursor-pointer
-          items-center overflow-hidden rounded-full border shadow-xs
-          drop-shadow-xs transition-colors
-          has-disabled:bg-transparent!
-        `,
+      cn('peer relative inline-flex h-6 w-12 shrink-0 cursor-pointer items-center overflow-hidden rounded-full border shadow-xs drop-shadow-xs transition-colors has-disabled:bg-transparent!',
 
         //disabled
         'disabled:cursor-not-allowed disabled:opacity-50',
 
         //hover
-        `
-          ring-bc/50 ring-offset-b2
-          hover:ring hover:ring-offset-1
-        `,
+        `ring-bc/50 ring-offset-b2 hover:ring hover:ring-offset-1`,
 
         // focus
         `
@@ -81,13 +72,7 @@ interface ToggleItem {
     <SwitchThumb
       id="switch-thumb"
       :class="
-        cn(
-          `
-            pointer-events-none z-2 block grid size-4.5 shrink-0
-            translate-x-0.25 place-items-center rounded-full bg-b1 shadow-lg
-            ring-0 transition-transform
-            on:translate-x-6.75
-          `,
+        cn('pointer-events-none z-2 block grid size-4.5 shrink-0 translate-x-0.25 place-items-center rounded-full bg-b1 shadow-lg ring-0 transition-transform on:translate-x-6.75',
         )
       ">
       <slot name="thumb" />

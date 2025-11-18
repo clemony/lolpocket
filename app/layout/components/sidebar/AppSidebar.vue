@@ -23,6 +23,7 @@ console.log(as().account)
 
 <template>
   <motion.div
+    id="sidebar"
     class="
       absolute top-0 left-0 z-50 grid size-full max-h-screen w-110 min-w-110!
       grid-cols-[45px_1fr] items-center rounded-r-xl border-y-1 border-r
@@ -82,10 +83,7 @@ console.log(as().account)
       <!-- search buttton -->
 
       <SearchBox
-        class="
-          5 mr-1 ml-3 h-11 justify-between fx-0
-          *:first:gap-3
-        " />
+        class="5 mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
 
       <!-- summoner linkies -->
       <BtnLink
@@ -105,7 +103,7 @@ console.log(as().account)
         variant="link"
         on="none"
         class="w-full justify-start gap-2.5! px-3.5 duration-0!"
-        :to="`/summoner/${slug}`"
+        :to="`/summoner/${as().account.puuid}`"
         @click="close()">
         <icon
           name="history"
@@ -121,20 +119,21 @@ console.log(as().account)
         :inline-positioning="true"
         animation="shift-toward-subtle"
         :arrow="false"
+        content-class="!overflow-visible"
         :interactive="true"
         :tag="null"
         trigger="click focus"
-        theme="base, tippy-clean, sidebar-dropdown">
+        theme="base tippy-clean sidebar-dropdown">
         <Button
           variant="ghost"
           hover="outline"
           on="btn"
           class="
             absolute inset-x-0 bottom-3 mx-2 h-16 justify-between
-            border-transparent px-4 backdrop-blur
-            aria-expanded:btn-active aria-expanded:border-b3
-            aria-expanded:bg-b2/60! aria-expanded:shadow-sm
-            aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4
+            border-transparent px-4 backdrop-blur aria-expanded:btn-active
+            aria-expanded:border-b3 aria-expanded:bg-b2/60!
+            aria-expanded:shadow-sm aria-expanded:inset-shadow-sm
+            aria-expanded:inset-shadow-black/4
           ">
           <div class="flex items-center gap-3">
             <SummonerIcon class="size-11 rounded-lg" />
@@ -142,10 +141,7 @@ console.log(as().account)
               as="h3"
               class="truncate pl-1 leading-none font-semibold text-bc/90 dst" />
             <SummonerTag
-              class="
-                pl-1 align-bottom leading-none italic
-                [&_svg]:pt-px
-              " />
+              class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
           </div>
 
           <icon

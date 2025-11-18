@@ -15,11 +15,7 @@ const props = withDefaults(
     :as="as"
     :as-child="asChild"
     :class="
-      cn(
-        `
-          transition-colors
-          hover:text-bc
-        `,
+      cn('transition-colors hover:text-bc',
         props.class,
       )
     ">

@@ -88,8 +88,7 @@ defineExpose({
               class="mt-6 flex-col p-2">
               <div
                 class="
-                  flex w-full flex-row flex-wrap justify-start gap-2
-                  *:text-3
+                  flex w-full flex-row flex-wrap justify-start gap-2 *:text-3
                 ">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
@@ -122,8 +121,7 @@ defineExpose({
               <TagsInputInput
                 placeholder="optional"
                 class="
-                  min-h-10 w-full rounded-md border-0 text-3
-                  focus:border-0
+                  min-h-10 w-full rounded-md border-0 text-3 focus:border-0
                 "
                 name="pocket-tags " />
             </TagsInput>

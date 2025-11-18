@@ -23,11 +23,7 @@ const open = ref(false)
     <DropdownMenuTrigger
       as-child
       :class="
-        cn(
-          `
-            group/dd z-2
-            data-[state=open]:bg-b2
-          `,
+        cn('group/dd z-2 data-[state=open]:bg-b2',
           className,
         )
       ">
@@ -35,8 +31,7 @@ const open = ref(false)
         <icon
           name="more"
           class="
-            opacity-60
-            group-hover/dd:opacity-100
+            opacity-60 group-hover/dd:opacity-100
             group-data-[state=open]/dd:opacity-100
           " />
       </slot>

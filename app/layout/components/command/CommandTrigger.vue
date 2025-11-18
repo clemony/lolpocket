@@ -26,12 +26,7 @@ watchEffect(() => {
     class="">
     <button
       :class="
-        cn(
-          `
-            group input flex! h-12 w-full cursor-text flex-nowrap items-center
-            gap-2 rounded-lg-2 bg-transparent! px-3 text-nowrap
-            hover:ring-1 hover:ring-b4
-          `,
+        cn('group input flex! h-12 w-full cursor-text flex-nowrap items-center gap-2 rounded-lg-2 bg-transparent! px-3 text-nowrap hover:ring-1 hover:ring-b4',
           props.class,
         )
       "
@@ -39,10 +34,7 @@ watchEffect(() => {
       @click.stop="ui().commandOpen = true">
       <icon
         name="search"
-        class="
-          size-4 shrink-0 opacity-70 dst
-          group-hover:opacity-100
-        " />
+        class="size-4 shrink-0 opacity-70 dst group-hover:opacity-100" />
 
       <span
         class="

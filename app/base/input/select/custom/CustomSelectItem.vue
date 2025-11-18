@@ -12,11 +12,7 @@ const props = defineProps<{
   <SelectItem
     :value="props.value"
     :class="
-      cn(
-        `
-          btn-depth rounded-lg
-          data-[state=highlighted]:bg-tint-b2/60
-        `,
+      cn('btn-depth rounded-lg data-[state=highlighted]:bg-tint-b2/60',
         props.class,
       )
     ">

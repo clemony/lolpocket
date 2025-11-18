@@ -39,8 +39,7 @@ const forwarded = useForwardProps(props)
     v-bind="forwarded"
     :img="`/img/champions/${champId}.webp`"
     :class="
-      cn(
-        `overflow-hidden shadow-sm drop-shadow-sm`,
+      cn('overflow-hidden shadow-sm drop-shadow-sm',
         elementVariants({ base, variant, hover, on, size }),
         props.class,
       )

@@ -20,20 +20,8 @@ const props = withDefaults(
     data-slot="sidebar-menu-action"
     data-sidebar="menu-action"
     :class="
-      cn(
-        `
-          hover:text-sidebar-bc hover:bg-b3
-          peer-hover/menu-button:text-sidebar-bc
-          absolute top-1.5 right-1 flex aspect-square w-5 items-center
-          justify-center rounded-md p-0 text-bc ring ring-bc/60 outline-hidden
-          transition-transform
-          focus-visible:ring-2
-          [&>svg]:size-4 [&>svg]:shrink-0
-        `,
-        `
-          after:absolute after:-inset-2
-          md:after:hidden
-        `,
+      cn('hover:text-sidebar-bc hover:bg-b3 peer-hover/menu-button:text-sidebar-bc absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-bc ring ring-bc/60 outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
+        `after:absolute after:-inset-2 md:after:hidden`,
         'peer-data-[size=sm]/menu-button:top-1',
         'peer-data-[size=default]/menu-button:top-1.5',
         'peer-data-[size=lg]/menu-button:top-2.5',

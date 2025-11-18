@@ -35,10 +35,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <Icon
           :name="`lp:charge-${ability.maxCharges}`"
-          class="
-            -mt-px inline size-7 dst
-            *:stroke-[1.3]
-          " />
+          class="-mt-px inline size-7 dst *:stroke-[1.3]" />
 
         <span>
           {{ ability.maxCharges }}
@@ -51,10 +48,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <icon
           name="mynaui:battery-charging"
-          class="
-            -mt-px size-7 dst
-            *:stroke-[1.3]
-          " />
+          class="-mt-px size-7 dst *:stroke-[1.3]" />
 
         {{ ability.rechargeRate }}
       </div>

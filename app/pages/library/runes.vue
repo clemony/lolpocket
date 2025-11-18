@@ -43,7 +43,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
 
       <Tabs v-model:model-value="selectedPath">
         <TabsList
-          base="indicator"
+
           class="
             field-box h-19 w-full grid-cols-5 items-center justify-evenly
             rounded-box! bg-b2/40 shadow-warm

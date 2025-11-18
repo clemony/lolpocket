@@ -10,18 +10,17 @@ export async function accountFetch(progress?: Ref<number>) {
     sendErrorToast()
   } else {
     progress && (progress.value = 100)
-    as().sb = data.account
-    as().settings = data.settings
-    ps().pockets = data.pockets
+    Object.assign(as().account, data.account)
+    Object.assign(as().settings, data.settings)
+    Object.assign(ps().pockets, data.pockets)
     navigateTo("/nexus")
 
     toast({
       title: "Welcome back!",
-      color: "neutral",
       description: `Great to see you, ${
         as().account?.name ?? as().account?.username ?? "Summoner"
       }!`,
-      icon: "tick",
+      icon: "party",
     })
 
     ps().$persist
