@@ -3,6 +3,7 @@ import { authProviders } from '#shared/references'
 
 definePageMeta({
   name: 'Sign up',
+  alias: '/sign-up',
   description: 'Login with your Riot, Google, or Discord account.',
   icon: 'gear',
   layout: 'basic',
@@ -29,15 +30,15 @@ onBeforeRouteLeave(() => {
             :key="provider"
             size="12"
             variant="link"
-            hover="outline"
+            hover="inset"
             class="
-              grid h-14 w-full place-items-center border border-b4/60 shadow-xs
+              grid! h-14 w-full place-items-center border border-b4/60 shadow-xs
               [&_svg]:opacity-80
             "
             @click="useSignIn(provider)">
             <icon
               :name="provider"
-              :class="cn('size-5.5')" />
+              :class="cn('absolute mx-auto size-5.5 place-self-center')" />
           </Button>
         </div>
         <div

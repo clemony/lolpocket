@@ -1,46 +1,55 @@
-const item: Item = {
-  id: 4005,
-  name: 'Imperial Mandate',
-  nicknames: ['banner of command', 'flag'],
-  buildsFrom: [
+const item: Item =  {
+  "name": "Imperial Mandate",
+  "id": 4005,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3108,
-      name: 'Fiendish Codex',
-      gold: 850,
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
     },
     {
-      id: 4642,
-      name: 'Bandleglass Mirror',
-      gold: 900,
-    },
+      "id": 4642,
+      "name": "Bandleglass Mirror",
+      "gold": 900
+    }
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4005_enchanter_t4_imperialmandate.png',
-  maps: [11, 12, 21, 35],
-  noEffects: false,
-  passives: [
-    {
-      name: 'Coordinated Fire',
-      effects:
-        'Abilities that <img src="/img/icons/slow.webp" class="tip-icon" />slow or <img src="/img/icons/immobilize.webp" class="tip-icon" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target\'s <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application).',
-      unique: true,
-    },
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4005_enchanter_t4_imperialmandate.png",
+  "simpleDescription": "Defer damage until later.",
+  "nicknames": [
+    "banner of command",
+    "flag"
   ],
-  rank: 'Legendary',
-  removed: false,
-  shop: {
-    prices: {
-      combined: 500,
-      sell: 900,
-      total: 2250,
+  "passives": [
+    {
+      "name": "Coordinated Fire",
+      "effects": "Abilities that <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application).",
+      "unique": true
+    }
+  ],
+  "stats": {
+    "abilityPower": 60,
+    "manaRegen": 125,
+    "abilityHaste": 20
+  },
+  "shop": {
+    "prices": {
+      "total": 2250,
+      "combined": 500,
+      "sell": 900
     },
-    tags: ['SUPPORT'],
+    "tags": [
+      "SUPPORT"
+    ]
   },
-  simpleDescription: 'Defer damage until later.',
-  specialRecipe: 0,
-  stats: {
-    abilityHaste: 20,
-    abilityPower: 60,
-    manaRegen: 125,
-  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
 }
 export default item

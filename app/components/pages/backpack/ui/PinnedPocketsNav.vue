@@ -10,7 +10,7 @@ const { isCollapsed, pinned } = defineProps<{
 <template>
   <Collapsible
     v-if="!isCollapsed"
-    v-model:open="as().toggles.backpack.pinned"
+    v-model:open="ui().toggles.backpack.pinned"
     :data-collapsed="isCollapsed"
     class="px-3 pb-2 data-[collapsed=true]:py-2">
     <CollapsibleTrigger

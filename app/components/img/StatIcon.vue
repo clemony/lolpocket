@@ -12,9 +12,9 @@ const stat = computed<StatIndex>(() =>
 </script>
 
 <template>
-  <component
-    :is="stat.icon"
+  <Icon
     v-if="stat"
+    :name="stat.icon"
     :class="
       cn(
         'size-4 shrink-0 text-shadow-xs',

@@ -1,9 +1,8 @@
-// @fixme probably fix
-/* @ts-ignore */
-import { computePosition } from '@floating-ui/dom'
-import { VueRenderer } from '@tiptap/vue-3'
-import EmojiList from '~/components/tiptap/extensions/emoji/EmojiList.vue'
-import { filterEmojiArray } from '~/composables/tiptap'
+import { VueRenderer } from "@tiptap/vue-3"
+
+import { useTippy } from "vue-tippy"
+import EmojiList from "~/components/tiptap/extensions/emoji/EmojiList.vue"
+import { filterEmoji } from "./filterEmoji"
 
 export const emojiSuggestions = {
   command: ({ editor, props, range }) => {
@@ -15,61 +14,50 @@ export const emojiSuggestions = {
       .run()
   },
   items: ({ editor, query }) => {
-    return filterEmojiArray(editor)
+    return filterEmoji(editor)
       .filter(({ shortcodes, tags }) => {
         const q = query.toLowerCase()
         return (
-          shortcodes.some(s => s.startsWith(q))
-          || tags.some(t => t.startsWith(q))
+          shortcodes.some((s) => s.startsWith(q)) ||
+          tags.some((t) => t.startsWith(q))
         )
       })
       .slice(0, 20)
   },
-  render: () => {
-    let component
-
-    function repositionComponent(clientRect) {
-      if (!component || !component.element)
-        return
-
-      const virtualElement = { getBoundingClientRect: () => clientRect }
-
-      computePosition(virtualElement, component.element, {
-        placement: 'bottom-start',
-      }).then((pos) => {
-        Object.assign(component.element.style, {
-          left: `${pos.x}px`,
-          position: pos.strategy === 'fixed' ? 'fixed' : 'absolute',
-          top: `${pos.y}px`,
-        })
-      })
-    }
+  render() {
+    let renderer
+    let instance
 
     return {
-      onExit() {
-        if (document.body.contains(component.element))
-          document.body.removeChild(component.element)
-        component.destroy()
-      },
-      onKeyDown(props) {
-        if (props.event.key === 'Escape') {
-          document.body.removeChild(component.element)
-          component.destroy()
-          return true
-        }
-        return component.ref?.onKeyDown(props)
-      },
       onStart(props) {
-        component = new VueRenderer(EmojiList, {
-          editor: props.editor,
+        renderer = new VueRenderer(EmojiList, {
           props,
+          editor: props.editor,
         })
-        document.body.appendChild(component.element)
-        repositionComponent(props.clientRect())
+
+        instance = useTippy("body", {
+          content: renderer.element,
+          trigger: "manual",
+          placement: "bottom-start",
+          appendTo: () => document.body,
+        })
+
+        instance.show()
+        instance.popperInstance.update()
       },
+
       onUpdate(props) {
-        component.updateProps(props)
-        repositionComponent(props.clientRect())
+        renderer.updateProps(props)
+        instance.popperInstance.update()
+      },
+
+      onKeyDown(props) {
+        return renderer.ref?.onKeyDown(props)
+      },
+
+      onExit() {
+        instance.destroy()
+        renderer.destroy()
       },
     }
   },

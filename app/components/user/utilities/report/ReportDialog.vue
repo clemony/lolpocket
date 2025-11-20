@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { extractReadableText } from '#shared'
 import { toTypedSchema } from '@vee-validate/valibot'
 import { parse } from 'valibot'
 import { useForm } from 'vee-validate'
@@ -37,8 +38,8 @@ const onSubmit = handleSubmit((values) => {
   const payload = {
     ...values,
     comment: {
-      author_id: comment.author_id,
       id: comment.id,
+      uuid: comment.uuid,
       content_text,
       created: comment.created,
     },

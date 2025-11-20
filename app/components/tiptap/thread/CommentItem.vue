@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { vElementHover } from '@vueuse/components'
-import { renderCommentHTML, useMentionTooltips } from '~/composables/tiptap'
+import { renderStaticHTML } from '~~/shared/utils/mentions/renderStaticHTML'
+import { useMentionTooltips } from '~/composables/tiptap'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentData
@@ -11,20 +12,26 @@ const emit = defineEmits([
   'trigger-hovered',
 ])
 
-const replies = computed(() => ts().threads[comment.thread_id].filter(c => c.parent_id === comment.id))
+const replies = ts().getChildComments(comment.thread_id, comment.id)
 const hovered = ref<boolean>(false)
-const container = useTemplateRef<HTMLElement>('container')
 const renderedHtml = computed(() => {
   if (!comment.content)
     return null
-  return renderCommentHTML(comment.content)
+  return renderStaticHTML(comment.content)
 })
-const hydratedSummoner = computedAsync(
+const author = computedAsync(
   async () => {
-    return await ss().resolveByPuuid(comment?.author?.puuid)
+    if (comment.removed)
+      return null
+    const a = acc().getByUuid(comment.uuid)
+    return {
+      ...a,
+      ...await ss().resolveByPuuid(a?.puuid)
+    }
   },
   null,
 )
+const container = useTemplateRef<HTMLElement>('container')
 useMentionTooltips(container)
 </script>
 
@@ -47,7 +54,7 @@ useMentionTooltips(container)
         orientation="vertical"
         :class="
           cn('rounded-bl-lg border-l border-shade-b3/10 bg-transparent transition-colors duration-200 group-hover/tree:border-shade-b3/20',
-            { '!border-shade-b3/20': hovered },
+             { '!border-shade-b3/20': hovered },
           )
         " />
     </button>
@@ -64,7 +71,7 @@ useMentionTooltips(container)
         v-if="!replies?.length && depth"
         :class="
           cn('pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b border-b-b3 hover:border-shade-b3/20',
-            { '!border-shade-b3/20': parentHovered },
+             { '!border-shade-b3/20': parentHovered },
           )
         "
         @mouseenter="emit('trigger-hovered', true)"
@@ -81,11 +88,11 @@ useMentionTooltips(container)
 
           <CommentHeader
             :comment
-            :hydrated-summoner
+            :author
             :has-replies="!!replies?.length"
             :open>
             <UserMenu
-              :hydrated-summoner
+              :author
               :comment />
           </CommentHeader>
 
@@ -142,7 +149,7 @@ useMentionTooltips(container)
         <span
           :class="
             cn('absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b border-shade-b3/10 dst transition-colors duration-200 hover:border-shade-b3/20',
-              { '!border-shade-b3/25': hovered },
+               { '!border-shade-b3/25': hovered },
             )
           " />
         {{ open ? "Collapse" : `${replies?.length} replies...` }}

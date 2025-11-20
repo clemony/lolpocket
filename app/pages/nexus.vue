@@ -23,7 +23,19 @@ definePageMeta({
   order: 1,
   path: '/nexus',
 })
-const text = ref<string>()
+
+useSeoMeta({
+  title: 'Nexus',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
 </script>
 
 <template>
@@ -42,6 +54,9 @@ const text = ref<string>()
       </Button>
       <Button @click="accountFetch()">
         fetch user datasss
+      </Button>
+      <Button @click="console.log('summoner:', ss().cache)">
+        resolve the slug
       </Button>
 
       <Button @click="useSignOut()">

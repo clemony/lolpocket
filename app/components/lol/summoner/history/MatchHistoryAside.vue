@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { loading, summoner } = useSummonerInject()
+const { loading, matches, summoner } = useSummonerInject()
 </script>
 
 <template>
@@ -18,8 +18,10 @@ const { loading, summoner } = useSummonerInject()
     <QueueFilters />
 
     <MatchChampionFilters />
-
-    <PatchDateRange />
+    <div class="flex w-full items-center gap-2 px-3">
+      <PatchDateRange />
+      <h4>Past {{ matches?.length }} games</h4>
+    </div>
     <div>
       <LazyMatchPositionFilter />
     </div>

@@ -20,7 +20,7 @@ watchEffect(async () => {
     return
 
   try {
-    const module = await import(`#shared/appdata/records/runes/${id}.ts`)
+    const module = await import(`#shared/records/runes/${id}.ts`)
     rune.value = module.default || null
   }
   catch (err) {

@@ -83,34 +83,35 @@ console.log(as().account)
       <!-- search buttton -->
 
       <SearchBox
-        class="5 mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
+        class="mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
 
       <!-- summoner linkies -->
-      <BtnLink
-        variant="link"
-        on="none"
-        class="mt-4 w-full justify-start gap-2.5! px-3.5 duration-0!"
-        :to="{ name: 'nexus' }"
-        @click="close()">
-        <icon
-          name="nexus"
-          class="size-5.5" />
-        Nexus
-      </BtnLink>
+      <div class="pl-2">
+        <BtnLink
+          variant="link"
+          on="none"
+          class="mt-4 w-full justify-start gap-2.5! px-3.5 duration-0!"
+          :to="{ name: 'nexus' }"
+          @click="close()">
+          <icon
+            name="nexus"
+            class="size-5.5" />
+          Nexus
+        </BtnLink>
 
-      <BtnLink
-        v-if="as().user"
-        variant="link"
-        on="none"
-        class="w-full justify-start gap-2.5! px-3.5 duration-0!"
-        :to="`/summoner/${as().account.puuid}`"
-        @click="close()">
-        <icon
-          name="history"
-          class="size-5" />
-        Summoner Profile
-      </BtnLink>
-
+        <BtnLink
+          v-if="as().user"
+          variant="link"
+          on="none"
+          class="w-full justify-start gap-2.5! px-3.5 duration-0!"
+          :to="{ path: `/summoner/${as().account.puuid}` }"
+          @click="close()">
+          <icon
+            name="history"
+            class="size-5" />
+          Summoner Profile
+        </BtnLink>
+      </div>
       <NavPanel />
       <!-- summoner menu -->
 
@@ -127,6 +128,7 @@ console.log(as().account)
         <Button
           variant="ghost"
           hover="outline"
+          :disabled="!as().user"
           on="btn"
           class="
             absolute inset-x-0 bottom-3 mx-2 h-16 justify-between
@@ -149,7 +151,7 @@ console.log(as().account)
             class="size-4" />
         </Button>
         <template #content>
-          <SidebarUser />
+          <SidebarUser v-if="as().user" />
         </template>
       </tippy>
     </div>

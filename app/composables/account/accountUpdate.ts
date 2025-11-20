@@ -1,7 +1,7 @@
 import { toast } from "~/composables/utils/useToast"
 
 export async function accountUpdate(account) {
-  const data = await $fetch("/api/supabase/account_update", {
+  const data = await $fetch("/supabase/update/account", {
     body: account,
     headers: useRequestHeaders(["cookie"]),
     method: "POST",

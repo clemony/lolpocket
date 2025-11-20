@@ -20,11 +20,11 @@ onMounted (() => {
 <template>
   <ToggleGroup
     v-model:model-value="vote"
-    :disabled="!comment.author_id || comment.is_author"
+    :disabled="!comment.uuid || comment.is_author"
     type="single"
     variant="ghost"
     size="sq-5"
-    :on="!comment.author_id ? 'inset' : 'neutral'"
+    :on="!comment.uuid ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
     @update:model-value="
@@ -34,7 +34,7 @@ onMounted (() => {
     ">
     <label
       for="downvote"
-      :disabled="!comment.author_id"
+      :disabled="!comment.uuid"
       aria-label="downvote"
       class="
         grid size-7 cursor-pointer place-items-center
@@ -57,7 +57,7 @@ onMounted (() => {
       size="6"
       :class="
         cn('relative grid place-items-center px-2 text-0 leading-3 lining-nums tabular-nums opacity-50 select-none',
-          { 'opacity-100 font-medium': vote },
+           { 'opacity-100 font-medium': vote },
         )
       ">
       {{ calculatedVotes }}

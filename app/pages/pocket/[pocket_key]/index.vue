@@ -15,6 +15,11 @@ const el = useTemplateRef<HTMLElement>('el')
 useScrollProvider(el)
 
 console.log(ts().threads)
+console.log(acc().accounts)
+
+watch(() => acc().accounts, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
@@ -85,6 +90,10 @@ console.log(ts().threads)
             </Button>
             <Button @click="ts().threads = {}">
               clear comments
+            </Button>
+
+            <Button @click="console.log('ass bad: ', acc().accounts)">
+              logggg accs
             </Button>
           </div>
           <CommentsThread :thread-id="pocket.key as UUID" />

@@ -95,7 +95,7 @@
     @apply !left-[calc(50%-0.5px)] !-top-px;
   }
   &[data-placement~='bottom'] > .tippy-svg-arrow > svg {
-    @apply !-left-px !bottom-1/2;
+    @apply !-left-px !bottom-1/2 ;
   }
   &[data-placement~='top'] > .tippy-svg-arrow > svg {
     @apply !left-0 !top-1/2;

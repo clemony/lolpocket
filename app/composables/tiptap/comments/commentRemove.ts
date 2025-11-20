@@ -1,33 +1,22 @@
-import { toast } from '~/composables/utils/useToast'
+import { toast } from "~/composables/utils/useToast"
 
-/* future
-async function handleUpdate({ id, content }: { id: string; content: Doc }) {
-  updateComment(as().comments, id, content)
-
-  await supabase
-    .from('comments')
-    .update({ content })
-    .eq('id', id)
-} */
-export function handleRemoval(id: string) {
-  console.log('🌱 - handleRemoval - id:', id)
-}
-
-function removeComment(list: CommentSchema[], id: string) {
-  for (const comment of list) {
-    if (comment.id === id && comment.author_id === as().account.puuid) {
-      toast({
-        title: 'Comment Removed',
-        description: `Your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))} has been removed.`,
-      })
-      return true
-    }
-    /* @fixme sb call */
-    /*  if (comment.replies?.length) {
-      const found = removeComment(comment.replies, id)
-      if (found)
-        return true
-    } */
+export async function removeComment(
+  comment: CommentData,
+  removed: "mod" | "user"
+) {
+  const data = await $fetch<CommentData>("/supabase/update/comment.remove", {
+    body: { comment, removed },
+    headers: useRequestHeaders(["cookie"]),
+    method: "POST",
+  })
+  if (!data) {
+    sendErrorToast()
+  } else {
+    ts().setComment(data.thread_id, data)
+    console.log("📎 - removeComment - data:", data)
+    toast({
+      title: "Comment Removed",
+      description: `Your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))} has been removed.`,
+    })
   }
-  return false
 }

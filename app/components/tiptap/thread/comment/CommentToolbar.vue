@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { removeComment } from 'tiptap'
+
 const {
   class: className,
   comment,
@@ -9,7 +11,6 @@ const {
 const emit = defineEmits([
   'update:reply-model',
   'update:edit-model',
-  'comment:remove',
   'click:report',
 ])
 
@@ -62,7 +63,7 @@ const buttonProps = {
             v-bind="buttonProps"
             :class="btnClass"
             :disabled="!comment.is_author"
-            @click="() => emit('comment:remove')">
+            @click="() => removeComment(comment, 'user')">
             Remove
           </Button>
         </template>

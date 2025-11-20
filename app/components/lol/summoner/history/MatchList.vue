@@ -1,26 +1,32 @@
 <script lang="ts" setup>
-const emit = defineEmits(['scroll-top'])
+import { motion } from 'motion-v'
+import { VList } from 'virtua/vue'
+/* const emit = defineEmits(['scroll-top']) */
 
-const { loading, matches, summoner } = inject<SummonerInject>(SummonerKey)
+const { loading, loadMatches, matches, summoner } = inject<SummonerInject>(SummonerKey)
 
-console.log('📎 - summoner:', summoner)
+/* console.log('📎 - summoner:', summoner)
 
 const itemsPerPage = 20
 const currentPage = shallowRef<number>(1)
 
 const pagedMatches = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return matches.value.slice(start, start + itemsPerPage)
+  return filteredMatches.value.slice(start, start + itemsPerPage)
 })
 
 watch(
-  () => matches.value.length,
+  () => filteredMatches.value.length,
   (newVal) => {
     if (newVal)
       currentPage.value = 1
   },
   { immediate: false }
-)
+) */
+
+onMounted (() => {
+  loadMatches()
+})
 </script>
 
 <template>
@@ -29,29 +35,32 @@ watch(
       v-if="loading"
       class="flex flex-col gap-8">
       <Skeleton
-        v-for="i in itemsPerPage"
+        v-for="i in 10"
         :key="i"
         class="field-box h-40 w-full max-w-220" />
     </div>
 
-    <TransitionScalePop
-      v-else-if="pagedMatches.length > 0"
-      :appear="false"
-      group
-      class="flex flex-col gap-8 pb-px">
+    <VList
+
+      v-else-if="filteredMatches.length"
+      v-slot="{ item, index }"
+      :style="{ height: '100vh' }"
+      class="flex h-600 flex-col gap-8 pb-px"
+      :data="matches"
+      :item-size="133"
+      :buffer-size="200">
       <LazyMatchCard
-        v-for="match in pagedMatches"
-        :key="match.matchId"
+        :key="index"
         :puuid="summoner?.puuid"
-        :match="match"></LazyMatchCard>
-    </TransitionScalePop>
+        :match="item" />
+    </VList>
 
     <div
       v-else
       class="grid h-64 w-220 place-items-center font-medium">
       No matches found with these filters.
     </div>
-
+    <!--
     <Pagination
       v-model:page="currentPage"
       :total="matches?.length"
@@ -83,6 +92,6 @@ watch(
           class="btn-square disabled:hidden" />
         <PaginationLast class="disabled:hidden" />
       </PaginationContent>
-    </Pagination>
+    </Pagination> -->
   </div>
 </template>

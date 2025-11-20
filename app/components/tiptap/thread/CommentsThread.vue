@@ -1,25 +1,21 @@
 <script setup lang="ts">
 import {
-  handleRemoval,
   postComment,
-  updateComment,
-  updateCommentVote,
 } from '~/composables/tiptap'
 
 const { threadId } = defineProps<{
   threadId: UUID
 }>()
-const thread = computed (() => ts().threads[threadId] ?? null)
+const thread = ref<CommentData[]>(null)
 const newComment = ref<Doc>(null)
-const sortRef = useTemplateRef('sortRef')
-const sorted = computed(() => {
-  if (!thread.value)
-    return null
-  return sortRef.value?.sortedComments
-})
+const sortBy = shallowRef<'best' | 'new'>('best')
 
-const user = useSupabaseUser()
-console.log('📎 - user:', user)
+function updateSort() {
+  thread.value = ts().getSortedRootComments(threadId, sortBy.value)
+}
+onMounted (() => {
+  thread.value = ts().getSortedRootComments(threadId, 'best')
+})
 </script>
 
 <template>
@@ -49,15 +45,14 @@ console.log('📎 - user:', user)
       ">
       <span class="mt-0.5 text-2 opacity-60">Sort by: </span>
       <SortThread
-        ref="sortRef"
-        :disabled="!thread || !thread.length"
-        :thread-id
-        :thread />
+        v-model:model-value="sortBy"
+        :disabled="!thread?.length"
+        @update:model-value="updateSort()" />
     </div>
 
     <div
       v-if="thread && thread?.length"
-      :key="sorted?.length"
+      :key="thread?.length"
       class="grid h-max auto-rows-max">
       <CommentItem
         v-for="comment in thread.filter(t => !t.parent_id)"

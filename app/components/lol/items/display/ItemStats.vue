@@ -8,7 +8,6 @@ const { stats } = defineProps<{
 const statEntries = computed(() =>
   Object.entries(stats).map(([key, value]) => ({ key, value })),
 )
-console.log('🌱 - statEntries:', statEntries)
 </script>
 
 <template>

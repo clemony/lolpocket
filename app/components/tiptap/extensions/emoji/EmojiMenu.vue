@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Editor } from '@tiptap/core'
 import type { EmojiItem } from '@tiptap/extension-emoji'
-import { filterEmojiArray } from '~/composables/tiptap'
+import { filterEmoji } from '~/composables/tiptap'
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -85,7 +85,7 @@ const tab = shallowRef<number>(1)
 const filter = computed(() => {
   const emoji = ref<EmojiItem[]>([])
   const group = groups[tab.value]
-  const emojiArray = filterEmojiArray(editor)
+  const emojiArray = filterEmoji(editor)
 
   if (!group)
     return null
@@ -243,7 +243,7 @@ watch(
                     :name="group.icon"
                     :class="
                       cn('absolute size-5 dxs **:stroke-[1.7]',
-                        group.class,
+                         group.class,
                       )
                     " />
                 </TabsTrigger>

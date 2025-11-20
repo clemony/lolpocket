@@ -25,13 +25,13 @@ export interface Role {
 
 export interface Spell {
   id: number
-  key: string | number
   name: string
-  cd: number | string
-  charges?: number | string | null
-  description: string | null
-  recharge?: number | string | null
-  text?: string
+  cd?: number
+  charges?: number
+  description: string
+  recharge?: number
+  range?: number
+  level?: number
 }
 
 export interface StatIndex {

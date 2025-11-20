@@ -1,27 +1,24 @@
 <script lang="ts" setup>
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
 definePageMeta({
-  name: 'pocket_key',
   props: true,
-  redirect: '/pocket/:pocket_key/champions',
   search: 'hidden',
 })
 
-const route = useRoute()
+const route = useRoute('pocket')
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
-/* const { syncIfDirty } = useSupabaseSync(
-  () => pocket.value,
-  '/api/pockets',
-  (userId, value) => ({ pocket: value }),
-  PocketSchema
-) */
-
-/* async function testSync() {
-  console.log('🌱 - testSync fired')
-  await syncIfDirty()
-  console.log('🌱 - sync forced!')
-}
- */
 const mainSet = computed(() =>
   pocket.value.runes.find(s => s.id === pocket.value._runes),
 )

@@ -1,13 +1,20 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
 export const useUiStore = defineStore(
-  'UiStore',
+  "UiStore",
   () => {
     const sidebarStates = {
       inboxDropdown: ref<boolean>(false),
     }
     const sidebarOpen = ref(false)
     const commandOpen = ref(false)
+    const toggles = ref({
+      backpack: {
+        pinned: true,
+        positions: true,
+        tags: true,
+      },
+    })
 
     const collapseStates = {
       championInfo: ref([true, true, true]),
@@ -26,13 +33,15 @@ export const useUiStore = defineStore(
       sidebarStates,
       collapseStates,
       commandOpen,
+
+      toggles,
     }
   },
   {
     persist: {
-      key: 'tempStore',
-      pick: ['collapseStates', 'sidebarStates'],
+      key: "tempStore",
+      pick: ["collapseStates", "sidebarStates"],
       storage: piniaPluginPersistedstate.sessionStorage(),
     },
-  },
+  }
 )

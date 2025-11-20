@@ -1,19 +1,18 @@
 export async function fetchThread(thread_id: string) {
-  const body = {
-    thread_id,
+  const { comments, authors } = await $fetch("/supabase/fetch/thread", {
+    body: { thread_id },
+    method: "POST",
+  })
+  console.log("📎 - fetchThread - comments:", comments)
+  console.log("📎 - fetchThread - authors:", authors)
+
+  const accs = useAccountsStore()
+
+  for (const acc of Object.values(authors)) {
+    accs.setAccount(acc as Account)
   }
-  const { data, error } = await $fetch<Return>(
-    '/api/supabase/comment/thread_fetch',
-    {
-      body,
-      headers: useRequestHeaders(['cookie']),
-      method: 'POST',
-    }
-  )
-  console.log('📎 - fetchThread - data:', data)
+  if (!comments || !Array.isArray(comments)) return
 
-  if (!data || !Array.isArray(data))
-    return
-
-  ts().threads[thread_id] = [...(ts().threads[thread_id] ?? []), ...data]
+  const threadStore = useThreadStore()
+  threadStore.setThreadComments(thread_id, comments)
 }

@@ -1,7 +1,18 @@
 <script lang="ts" setup>
-const route = useRoute()
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
+const route = useRoute('summoner-region-slug')
 const ss = useSummonerStore()
-
 const [name, tag] = String(route.params.slug).split('_')
 
 const summoner = await ss.ensureSummoner({
@@ -9,7 +20,7 @@ const summoner = await ss.ensureSummoner({
   region: String(route.params.region).toLowerCase(),
   tag: tag.toLowerCase(),
 })
-const state = await useSummonerProvider(summoner.puuid)
+const state = await useSummonerProvider(summoner?.puuid)
 await state.findSummoner()
 </script>
 
@@ -21,14 +32,14 @@ await state.findSummoner()
       <BgSplash
         v-once
         size="full"
-        :img="state.splash.value" />
+        :img="state?.splash.value" />
     </template>
 
     <template #background-slice>
       <BgSplash
         v-once
         size="full"
-        :img="state.splash.value" />
+        :img="state?.splash.value" />
     </template>
 
     <!-- nav -->
@@ -39,7 +50,7 @@ await state.findSummoner()
     <!-- crumb -->
     <template #crumb>
       <SummonerDropdown
-        :summoner="state.summoner.value"
+        :summoner="state?.summoner.value"
         class="-ml-4" />
     </template>
 
@@ -63,7 +74,7 @@ await state.findSummoner()
         size="c-14" /> -->
 
       <Button
-        v-if="as().account.puuid === state.summoner.value.puuid"
+        v-if="as().account.puuid === state?.summoner.value.puuid"
         variant="floating"
         size="c-14">
         <Icon

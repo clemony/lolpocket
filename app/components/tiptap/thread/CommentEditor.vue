@@ -3,9 +3,9 @@ import type { Editor } from '@tiptap/vue-3'
 import Emoji, { emojis } from '@tiptap/extension-emoji'
 import { CharacterCount } from '@tiptap/extensions'
 import StarterKit from '@tiptap/starter-kit'
-import Suggestion from '@tiptap/suggestion'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
-import { emojiSuggestions, Mentions, mentionSuggestions } from '~/composables/tiptap'
+import { BadgeMentions } from '~~/shared'
+import { emojiSuggestions, mentionSuggestions } from '~/composables/tiptap'
 
 const props = defineProps<{
   modelValue?: Doc | null
@@ -15,14 +15,13 @@ const emit = defineEmits<{
   (e: 'update:modelValue', value: any): void
   (e: 'loaded', value: Editor): void
 }>()
-// as().comments = []
-// Initialize editor
+
 const editor = useEditor({
   content: props.modelValue ?? null,
   extensions: [
     StarterKit,
     CharacterCount.configure({ limit: 2000 }),
-    Mentions.configure({
+    BadgeMentions.configure({
       suggestions: mentionSuggestions,
     }),
     Emoji.configure({
@@ -38,12 +37,6 @@ const editor = useEditor({
     emit('update:modelValue', editor.getJSON())
   },
 })
-watch(
-  () => editor.value,
-  (newVal) => {
-    console.log('🌱 - editor:', editor.value?.$doc)
-  },
-)
 
 // helper for handling refs
 const target = shallowRef<HTMLElement>(null)
@@ -63,7 +56,7 @@ onMounted (() => {
     ref="target"
     :class="
       cn('group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border border-b3/80 p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200 focus-within:ring-bc/60',
-        props.class,
+         props.class,
       )
     "
     @dblclick="editor?.commands.selectAll()">

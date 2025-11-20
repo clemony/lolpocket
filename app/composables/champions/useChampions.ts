@@ -2,7 +2,7 @@ import {
   getChampionStatsMap,
   useBasicChampionStats,
   useBayesianChampionStats,
-} from './index'
+} from "./index"
 
 export interface ChampionStatsGroup {
   name: string
@@ -30,8 +30,8 @@ export function useChampions(
   const liteChampionStats = computed<Record<string, number>>(() => {
     const counts: Record<string, number> = {}
 
-    const playerMatches = matches.map(p =>
-      p.participants.find(p => p.puuid === puuid)
+    const playerMatches = filteredMatches.map((p) =>
+      p.participants.find((p) => p.puuid === puuid)
     )
 
     for (const p of playerMatches) {
@@ -47,12 +47,12 @@ export function useChampions(
     return {
       key: champ,
       name: ix().champNameByKey(champ),
-      splash: getSplash(champ, 'centered'),
+      splash: getSplash(champ, "centered"),
     }
   })
 
   const filteredMatches = computed<MatchData[]>(() =>
-    matches.filter(match =>
+    filteredMatches.filter((match) =>
       Object.keys(liteChampionStats.value).includes(
         ix().champNameById(match.participants[puuid])
       )

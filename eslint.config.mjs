@@ -1,5 +1,6 @@
 // eslint.config.mjs
 import antfu from '@antfu/eslint-config'
+
 import css from '@eslint/css'
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
 import pluginJsonc from 'eslint-plugin-jsonc'
@@ -7,16 +8,21 @@ import pluginVue from 'eslint-plugin-vue'
 import jsoncParser from 'jsonc-eslint-parser'
 import path from 'node:path'
 import { tailwind4 } from 'tailwind-csstree'
+
+
 import eslintParserVue from 'vue-eslint-parser'
 
 export default antfu({
+
   ecmaVersion: 'latest',
+
   formatters: {
     css: 'prettier',
     html: true,
     json: 'prettier',
     markdown: 'prettier',
   },
+
   ignores: [
     './dist',
     './node_modules',
@@ -29,21 +35,20 @@ export default antfu({
     '**/raw/**',
     '.save.json',
   ],
+
   plugins: {
     'better-tailwindcss': eslintPluginBetterTailwindcss,
     css,
-    pluginJsonc,
-    pluginVue,
+    'jsonc': pluginJsonc,
+    vue: pluginVue,
   },
+
   rules: {
+
     // tw
     ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
-    'better-tailwindcss/enforce-consistent-important-position': [
-      1,
-      {
-        position: 'recommended',
-      },
-    ],
+    'better-tailwindcss/enforce-consistent-important-position': ['warn', {position: 'recommended', }],
+
     'better-tailwindcss/enforce-consistent-line-wrapping': ['off', {
       group: 'never',
       preferSingleLine: true

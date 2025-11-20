@@ -1,7 +1,7 @@
 export type Extension<T, E> = T & E
 
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
 }
 
 export interface ParseState {
@@ -45,27 +45,18 @@ export interface DataObject extends LinkObject {
   value?: number
 }
 
-export interface Category {
-  id: string
-  name?: string
-  champions?: Array<string>
-  checked: boolean
-  color?: string
-  icon?: string
-}
+import type {
+  SizeColumnsToContentStrategy,
+  SizeColumnsToFitGridStrategy,
+  SizeColumnsToFitProvidedWidthStrategy,
+} from "ag-grid-community"
 
-export type categories = Category[]
+export type { MotionValue } from "motion-v"
 
-export interface dateObject {
-  date: string
-  patch: string
-  time: string
-}
+export type { UUID } from "node:crypto"
+export type { AcceptableValue, PrimitiveProps } from "reka-ui"
 
-export interface Note {
-  title: string
-  content: string
-  date: string
-  heart?: boolean
-  icon: string
-}
+export type AutoSizeStrategy =
+  | SizeColumnsToFitGridStrategy
+  | SizeColumnsToFitProvidedWidthStrategy
+  | SizeColumnsToContentStrategy

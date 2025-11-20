@@ -4,7 +4,6 @@ export interface Thread {
 }
 
 export interface CommentData extends CommentSchema {
-  author: User
   is_author?: boolean
 }
 

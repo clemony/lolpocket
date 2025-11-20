@@ -4,10 +4,11 @@ import { authProviders } from '~~/shared/references'
 definePageMeta({
   name: 'login',
   title: 'Welcome back!',
+  alias: '/login',
   description: 'Login with your Riot, Google, or Discord account',
   icon: 'plug',
   layout: 'basic',
-  search: '!user',
+  search: '!user'
 })
 
 const email = ref('')
@@ -24,15 +25,15 @@ const password = ref('')
             :key="provider"
             size="12"
             variant="link"
-            hover="outline"
+            hover="inset"
             class="
-              grid h-14 w-full place-items-center border border-b4/60 shadow-xs
+              grid! h-14 w-full place-items-center border border-b4/60 shadow-xs
               [&_svg]:opacity-80
             "
             @click="useSignIn(provider)">
             <icon
               :name="provider"
-              :class="cn('size-5.5')" />
+              :class="cn('absolute mx-auto size-5.5 place-self-center')" />
           </Button>
         </div>
         <div
@@ -61,7 +62,7 @@ const password = ref('')
             <div class="flex items-center">
               <Label html-for="password">Password</Label>
               <NuxtLink
-                to="/password-reset"
+                to="/auth/password-reset"
                 class="underline-offset-1.5 ml-auto text-2 hover:underline">
                 Forgot your password?
               </NuxtLink>
@@ -88,7 +89,7 @@ const password = ref('')
               size="12"
               hover="link"
               class="underline-offset-1.5 w-full justify-center"
-              @click="navigateTo('/signup')">
+              @click="navigateTo('/sign-up')">
               Signing up?
             </Button>
           </div>

@@ -4,9 +4,10 @@ import { toast } from '~/composables/utils/useToast'
 definePageMeta({
   name: 'Reset Password',
   title: 'Forgot password?',
+  alias: '/auth/password-reset',
   description: 'Np. They\'re free. We\'ll get you a new one.',
   icon: 'key',
-  layout: 'basic',
+  layout: 'basic'
 })
 
 const password = ref('')

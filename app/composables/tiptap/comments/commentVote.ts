@@ -8,9 +8,9 @@ export async function updateCommentVote(
     uuid,
     newVote,
   }
-  await $fetch('/api/supabase/comment/comment_vote', {
+  await $fetch("/supabase/update/vote", {
     body,
-    headers: useRequestHeaders(['cookie']),
-    method: 'POST',
+    headers: useRequestHeaders(["cookie"]),
+    method: "POST",
   })
 }

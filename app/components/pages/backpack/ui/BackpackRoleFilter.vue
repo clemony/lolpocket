@@ -8,7 +8,7 @@ const tags = ref([])
   <!-- position tags -->
 
   <Collapsible
-    v-model:open="as().toggles.backpack.positions"
+    v-model:open="ui().toggles.backpack.positions"
     :class="cn('px-3')">
     <CollapsibleTrigger as-child>
       <Button

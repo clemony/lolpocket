@@ -1,50 +1,54 @@
-const item: Item = {
-  id: 3013,
-  name: 'Synchronized Souls',
-  nicknames: ['boots'],
-  buildsFrom: [
+const item: Item =  {
+  "name": "Synchronized Souls",
+  "id": 3013,
+  "rank": "Boots",
+  "buildsFrom": [
     {
-      id: 3010,
-      name: 'Symbiotic Soles',
-      gold: 900,
-    },
+      "id": 3010,
+      "name": "Symbiotic Soles",
+      "gold": 900
+    }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 3176,
-      name: 'Forever Forward',
-      gold: 1400,
-    },
+      "id": 3176,
+      "name": "Forever Forward",
+      "gold": 1400
+    }
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png',
-  maps: [11, 21],
-  noEffects: false,
-  passives: [
-    {
-      name: 'Voidborn',
-      effects:
-        'Gain <img src="/img/icons/empowered-recall.webp" class="tip-icon" />Empowered Recall.',
-      unique: true,
-    },
-    {
-      name: 'Synchrony',
-      effects: 'Gain 45 <b>bonus</b> movement speed while out-of-combat.',
-      unique: true,
-    },
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png",
+  "nicknames": [
+    "boots"
   ],
-  rank: 'Boots',
-  removed: false,
-  shop: {
-    prices: {
-      combined: 0,
-      sell: 360,
-      total: 900,
+  "passives": [
+    {
+      "name": "Voidborn",
+      "effects": "Gain <img src=\"/img/icons/empowered-recall.webp\" class=\"tip-icon\" />Empowered Recall.",
+      "unique": true
     },
-    purchasable: false,
+    {
+      "name": "Synchrony",
+      "effects": "Gain 45 <b>bonus</b> movement speed while out-of-combat.",
+      "unique": true
+    }
+  ],
+  "stats": {
+    "flatMovespeed": 45
   },
-  specialRecipe: 0,
-  stats: {
-    flatMovespeed: 45,
+  "shop": {
+    "prices": {
+      "total": 900,
+      "combined": 0,
+      "sell": 360
+    },
+    "purchasable": false
   },
+  "maps": [
+    11,
+    21
+  ]
 }
 export default item

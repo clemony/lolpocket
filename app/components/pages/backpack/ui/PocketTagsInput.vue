@@ -43,7 +43,7 @@ function deleteTag(tag: string) {
       <!-- custom tags -->
 
       <Collapsible
-        v-model:open="as().toggles.backpack.tags"
+        v-model:open="ui().toggles.backpack.tags"
         :disabled="false"
         :class="cn('space-y-1 px-3 pb-3', paddingClass)">
         <CollapsibleTrigger as-child>
@@ -84,7 +84,7 @@ function deleteTag(tag: string) {
                   variant="ghost"
                   :class="
                     cn('size-full items-center justify-start gap-px! rounded-lg px-3 text-bc/80 duration-0 hover:bg-b2/60 hover:text-bc hover:inset-shadow-none',
-                      { 'btn-active !bg-b2/20': tags.includes(item) },
+                       { 'btn-active !bg-b2/20': tags.includes(item) },
                     )
                   ">
                   <icon

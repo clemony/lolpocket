@@ -24,25 +24,25 @@ const queue = computed(() => {
   <Collapsible
     v-model:open="isOpen"
     :class="
-      cn('group group/collapse field-box relative size-full max-w-210 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
+      cn('group group/collapse field-box relative mb-8 size-full max-w-210 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
         cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding px-5 text-2 data-[state=open]:rounded-b-none',
-          player.win ? 'from-inspiration/80 ' : 'from-domination/80',
-          `
+           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
+           `
             before:pointer-events-none before:absolute before:left-0 before:z-3
             before:h-full before:w-1/2 before:rounded-xl before:border
             before:mask-r-from-0 before:opacity-40 before:shadow-sm
             before:shadow-black before:brightness-94
           `,
 
-          player.win
-            ? 'before:border-inspiration '
-            : 'before:border-domination',
-          isOpen === true ? 'max-h-240' : 'h-36',
+           player.win
+             ? 'before:border-inspiration '
+             : 'before:border-domination',
+           isOpen === true ? 'max-h-240' : 'h-36',
         )
       ">
       <div

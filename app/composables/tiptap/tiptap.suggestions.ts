@@ -1,7 +1,6 @@
-/* @ts-expect-error */
-import { computePosition, flip, shift } from '@floating-ui/dom'
-import { posToDOMRect, VueRenderer } from '@tiptap/vue-3'
-import MentionLeagueFilter from '~/components/tiptap/extensions/mentions/MentionLeagueFilter.vue'
+import { computePosition, flip, shift } from "@floating-ui/dom"
+import { posToDOMRect, VueRenderer } from "@tiptap/vue-3"
+import MentionLeagueFilter from "~/components/tiptap/extensions/mentions/MentionLeagueFilter.vue"
 
 function updatePosition(editor, element) {
   const virtualElement = {
@@ -14,10 +13,10 @@ function updatePosition(editor, element) {
   }
   computePosition(virtualElement, element, {
     middleware: [shift(), flip()],
-    placement: 'bottom-start',
-    strategy: 'absolute',
+    placement: "bottom-start",
+    strategy: "absolute",
   }).then(({ strategy, x, y }) => {
-    element.style.width = 'max-content'
+    element.style.width = "max-content"
     element.style.position = strategy
     element.style.left = `${x}px`
     element.style.top = `${y}px`
@@ -31,10 +30,9 @@ function renderSuggestion(c: Component) {
     let mousedownHandler: (e: MouseEvent) => void
     return {
       onExit() {
-        if (!component)
-          return
-        component.element.removeEventListener('mousedown', mousedownHandler)
-        window.removeEventListener('keydown', onKeydownForward, {
+        if (!component) return
+        component.element.removeEventListener("mousedown", mousedownHandler)
+        window.removeEventListener("keydown", onKeydownForward, {
           capture: true,
         } as any)
         component.destroy()
@@ -44,8 +42,7 @@ function renderSuggestion(c: Component) {
       onKeyDown(props) {
         try {
           return component?.ref?.onKeyDown?.(props)
-        }
-        catch {
+        } catch {
           return false
         }
       },
@@ -55,11 +52,10 @@ function renderSuggestion(c: Component) {
           editor: props.editor,
           props,
         })
-        if (!props.clientRect)
-          return
+        if (!props.clientRect) return
         const el = component.element
-        el.classList.add('absolute')
-        el.setAttribute('tabindex', '-1')
+        el.classList.add("absolute")
+        el.setAttribute("tabindex", "-1")
         mousedownHandler = (e: MouseEvent) => {
           const target = e.target as HTMLElement | null
           if (!target) {
@@ -75,23 +71,21 @@ function renderSuggestion(c: Component) {
           }
           e.preventDefault()
         }
-        el.addEventListener('mousedown', mousedownHandler, { passive: false })
+        el.addEventListener("mousedown", mousedownHandler, { passive: false })
         document.body.appendChild(el)
         updatePosition(props.editor, el)
         onKeydownForward = (e: KeyboardEvent) => {
-          if (!component || !component.ref)
-            return
+          if (!component || !component.ref) return
           const forwardKeys = [
-            'ArrowUp',
-            'ArrowDown',
-            'Enter',
-            'Escape',
-            'Tab',
-            'Home',
-            'End',
+            "ArrowUp",
+            "ArrowDown",
+            "Enter",
+            "Escape",
+            "Tab",
+            "Home",
+            "End",
           ]
-          if (!forwardKeys.includes(e.key))
-            return
+          if (!forwardKeys.includes(e.key)) return
 
           const keyProps = {
             clientRect: props.clientRect,
@@ -104,21 +98,17 @@ function renderSuggestion(c: Component) {
 
           try {
             const handled = component.ref?.onKeyDown?.(keyProps)
-            if (handled)
-              e.preventDefault()
-          }
-          catch (err) {}
+            if (handled) e.preventDefault()
+          } catch (err) {}
         }
 
-        window.addEventListener('keydown', onKeydownForward, { capture: true })
+        window.addEventListener("keydown", onKeydownForward, { capture: true })
       },
       onUpdate(props) {
         propsRef = props
-        if (!component)
-          return
+        if (!component) return
         component.updateProps(props)
-        if (!props.clientRect)
-          return
+        if (!props.clientRect) return
         updatePosition(props.editor, component.element)
       },
     }
@@ -126,16 +116,16 @@ function renderSuggestion(c: Component) {
 }
 export const mentionSuggestions = [
   {
-    char: '@',
+    char: "@",
     items: ({ query }) => {
       return []
-        .filter(item => item.toLowerCase().startsWith(query.toLowerCase()))
+        .filter((item) => item.toLowerCase().startsWith(query.toLowerCase()))
         .slice(0, 5)
     },
     render: renderSuggestion(MentionLeagueFilter),
   },
   {
-    char: '#',
+    char: "#",
     items: ({ query }) => {
       const arr = [
         ...ix().items,

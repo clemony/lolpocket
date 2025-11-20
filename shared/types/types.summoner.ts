@@ -32,6 +32,7 @@ export interface Summoner {
 export interface RankedEntry {
   division: string
   losses: number
+  name: string
   lp: number
   queue: string
   tier: string

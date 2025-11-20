@@ -9,3 +9,4 @@ onlyBuiltDependencies:
   - unrs-resolver
   - vue-demi
   - workerd
+'shamefullyHoist': true

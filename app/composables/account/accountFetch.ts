@@ -1,18 +1,30 @@
 import { toast } from "~/composables/utils/useToast"
 
 export async function accountFetch(progress?: Ref<number>) {
-  const { data, error } = await $fetch("/api/supabase/account_fetch", {
+  const { data, error } = await $fetch("/supabase/fetch/account", {
     headers: useRequestHeaders(["cookie"]),
   })
+  console.log("📎 - accountFetch - data:", data)
 
   progress && (progress.value = 70)
   if (error) {
     sendErrorToast()
   } else {
+    console.log("📎 - accountFetch - data:", data)
     progress && (progress.value = 100)
+    as().sb = data.account
+    as().settings = data.settings
+    ps().pockets = data.pockets
+
     Object.assign(as().account, data.account)
-    Object.assign(as().settings, data.settings)
-    Object.assign(ps().pockets, data.pockets)
+
+    const summoner = await ss().ensureSummoner({ puuid: data.account.puuid })
+
+    if (summoner) {
+      console.log("🥸 - accountFetch - summoner:", summoner)
+      Object.assign(as().account, summoner)
+    }
+    as().$persist
     navigateTo("/nexus")
 
     toast({

@@ -2,9 +2,7 @@
 const {
   class: className,
   link,
-  page,
 } = defineProps<{
-  page: PageRecord
   class?: HTMLAttributes['class']
   link?: string
 }>()
@@ -38,19 +36,6 @@ function navigate() {
       @focus="navigate()"
       @click="navigate()">
       <slot />
-
-      <span
-        class="ml-2 grow group-hover:underline">
-        {{ page.altName ?? page.name }}
-      </span>
-
-      <Badge
-        class="
-          mr-1 justify-self-end text-1 capitalize opacity-40
-          group-hover:opacity-80
-        ">
-        {{ page.meta?.section ?? "" }}
-      </Badge>
 
       <icon
         name="link"

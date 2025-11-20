@@ -8,10 +8,11 @@ definePageMeta({
   title: 'runes',
   order: 3,
   path: '/pocket/:pocket_key/runes',
+  props: true,
   search: 'hidden',
 })
 
-const route = useRoute()
+const route = useRoute('pocket-runes')
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key)),
 ).value

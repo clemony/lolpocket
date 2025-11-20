@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const {
+  author,
   class: className,
   comment,
   hasReplies,
   hovered,
-  hydratedSummoner,
   open,
 } = defineProps<{
   class?: HTMLAttributes['class']
   comment: CommentData
   open: boolean
-  hydratedSummoner?: Summoner | null
+  author?: AccountData | null
   hasReplies: boolean
   hovered?: ComputedRef<boolean>
 }>()
@@ -33,7 +33,7 @@ const {
         <CaretFlip
           :class="
             cn('-translate-x-px text-bc/40 hover:text-bc/90!',
-              { '!text-bc/90': hovered },
+               { '!text-bc/90': hovered },
             )
           " />
       </CollapsibleTrigger>
@@ -43,24 +43,24 @@ const {
       @click.stop>
       <button
         class="
-          inline-flex cursor-pointer align-bottom leading-none
+          inline-flex cursor-pointer space-y-0.5 align-bottom
           hover:*:first:underline
         "
-        @click="useNavigateToSummoner(comment.author.puuid)">
-        <span class="inline text-4! font-semibold">
-          {{ hydratedSummoner?.name || comment.author?.username || "Summoner" }}
+        @click="`/summoner/${author.puuid}`">
+        <span :class="cn('inline text-4! leading-none font-semibold', { 'text-3! text-bc/60 ': comment.removed })">
+          {{ author?.username || "Mysterious Summoner" }}
         </span>
-        <span class="ml-1 inline-flex align-bottom text-2">
+        <span class="ml-1 inline-flex align-bottom text-2 leading-none">
           <icon
-            v-if="hydratedSummoner?.tag"
+            v-if="author?.tag"
             name="hash"
             class="mt-0.5 inline size-3" />
-          {{ hydratedSummoner?.tag }}
+          {{ author?.tag }}
         </span>
       </button>
 
       <div
-        class="flex items-center gap-2 *:align-bottom">
+        class="flex items-center gap-2 leading-5">
         <span class="text-1 opacity-60">
           {{ parseISOStringToRelative(comment?.created) }}
         </span>
@@ -72,18 +72,18 @@ const {
             placement: 'top-start',
             followCursor: true,
           }"
-          class="inline text-0">
-          <span class="opacity-60"> -&thinsp; </span>
-          <icon
-            name="lucide:pencil"
-            class="inline size-3 align-middle opacity-60" />
+          class="inline self-start text-[0.85rem]!">
+          <span class="opacity-40"> -&thinsp; </span>
           <span
             class="
-              pointer-events-auto ml-1 opacity-70 hover:underline
+              pointer-events-auto mr-1.5 opacity-50 hover:underline
               hover:opacity-100
             ">
             {{ parseISOStringToDate(comment.updated) }}
           </span>
+          <icon
+            name="edit-line"
+            class="inline size-3 align-[-0.017em] opacity-40" />
         </span>
       </div>
     </div>

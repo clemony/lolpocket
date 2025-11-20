@@ -19,11 +19,11 @@ const runeStyle = computed(() => {
 </script>
 
 <template>
-  <Element
+  <div
     v-if="item"
     :class="
       cn(
-        'size-full overflow-hidden rounded-lg drop-shadow-sm',
+        'grid size-6 shrink-0 place-items-center overflow-hidden rounded-lg drop-shadow-sm',
         runeStyle,
         className,
       )
@@ -37,5 +37,5 @@ const runeStyle = computed(() => {
       "
       :alt="item.name"
       :class="cn('size-full', keystoneStyle)" />
-  </Element>
+  </div>
 </template>

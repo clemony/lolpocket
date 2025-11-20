@@ -1,49 +1,11 @@
 <script setup lang="ts">
-import { parseAbsoluteToLocal } from '@internationalized/date'
-
-const { disabled, thread } = defineProps<{
-  thread: CommentData[] | null
+const { disabled } = defineProps<{
   disabled?: boolean
 }>()
-useScrollToHash('#app')
-const sort = shallowRef<string>('best')
-const sortedComments = ref<CommentData[]>(null)
-function sortComments() {
-  if (!thread || !thread?.length)
-    return
-
-  const comments = [...thread]
-
-  if (sort.value === 'best') {
-    comments.sort(
-      (a, b) => a.score - b.score
-    )
-  }
-  else if (sort.value === 'new') {
-    comments.sort(
-      (a, b) =>
-        parseAbsoluteToLocal(b.created).toDate().getTime()
-        - parseAbsoluteToLocal(a.created).toDate().getTime(),
-    )
-  }
-
-  return (sortedComments.value = comments)
-}
-
-onMounted(() => {
-  sortComments()
-})
-
-defineExpose({
-  sortedComments,
-})
 </script>
 
 <template>
-  <Select
-    v-model:model-value="sort"
-    :disabled="disabled || !thread.length"
-    @update:model-value="sortComments()">
+  <Select>
     <VarSelectTrigger
       variant="ghost"
       hover="inset"

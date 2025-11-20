@@ -57,7 +57,9 @@ const sum = computed (() => route.path.match(/summoner.*/))
       </div>
       <LazyAppCommand />
 
-      <LazyReportDialog :comment="ts().reportComment" />
+      <LazyReportDialog
+        v-if="as().user && as().account"
+        :comment="ts().reportComment" />
       <!-- toaster -->
       <Toaster />
 

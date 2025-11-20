@@ -11,7 +11,7 @@ const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 async function testSaveAllPockets() {
-  await $fetch('/api/supabase/updatePockets', {
+  await $fetch('/supabase/updatePockets', {
     body: { pockets: ps().pockets },
     method: 'POST',
   })
@@ -29,7 +29,7 @@ async function testSaveAllPockets() {
         hover="ghost"
         :class="
           cn('mb-1 btn-square self-end hover:bg-b3!',
-            { 'btn-active': isOpen },
+             { 'btn-active': isOpen },
           )
         ">
         <icon

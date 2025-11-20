@@ -12,7 +12,7 @@ watchEffect(async () => {
     return
 
   try {
-    const module = await import(`#shared/appdata/records/items/${id}.ts`)
+    const module = await import(`#shared/records/items/${id}.ts`)
     item.value = module.default || null
   }
   catch (err) {
@@ -29,7 +29,7 @@ const itemImgClass
   <div
     v-if="item"
     class="
-      flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center
+      flex max-h-[304px] w-[258px] flex-col justify-self-center
       overflow-hidden pt-4 pb-3 **:select-text
     ">
     <div class="flex h-fit w-full gap-4 px-4">

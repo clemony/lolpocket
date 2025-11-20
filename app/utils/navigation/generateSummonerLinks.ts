@@ -1,38 +1,36 @@
-import type { Account } from '~~/shared/schema'
+import type { Account } from "~~/shared/schema"
 
-export function getSummonerSlug(summoner: Account | Summoner) {
-  if (!summoner)
-    return
+export function getSummonerSlug(summoner: Summoner) {
+  if (!summoner) return
 
   return `${summoner.region}/${summoner.name}_${summoner.tag}`
 }
 
-export function generateSummonerLinks(summoner: Account | Summoner) {
-  if (!summoner)
-    return null
+export function generateSummonerLinks(summoner: Summoner) {
+  if (!summoner) return null
 
   const slug = getSummonerSlug(summoner)
   return {
-    name: 'profile', // `${capitalize(as().account.name)}`,
+    name: "profile", // `${capitalize(as().account.name)}`,
     children: [
       {
-        name: 'Match History',
+        name: "Match History",
         meta: {
-          icon: 'history',
+          icon: "history",
         },
         path: `/summoner/${slug}`,
       },
       {
-        name: 'Mastery',
+        name: "Mastery",
         meta: {
-          icon: 'i-lol-mastery',
+          icon: "i-lol-mastery",
         },
         path: `/summoner/${slug}/mastery`,
       },
       {
-        name: 'Live',
+        name: "Live",
         meta: {
-          icon: 'mingcute:sound-line-line',
+          icon: "mingcute:sound-line-line",
         },
         path: `/summoner/${slug}/live`,
       },
