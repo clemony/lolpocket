@@ -2,9 +2,17 @@ import "vue-router"
 declare module "vue-router" {
   interface RouteRecord {
     pocket_key?: string
+    puuid?: string
+    region?: string
+    slug?: string
   }
   interface RouteMeta {
     puuid?: string
+    components?: Record<string, Component>
+  }
+
+  interface RouteNamedMap {
+    summoner: RouteRecordInfo<"summoner", "/summoner">
   }
 }
 

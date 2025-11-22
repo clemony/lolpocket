@@ -17,12 +17,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3107_enchanter_t3_redemption.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3107_enchanter_t3_redemption.png",
   "simpleDescription": "Activate to heal allies and damage enemies in an area",
+  "nicknames": [
+    "burn"
+  ],
   "active": [
     {
       "name": "Intervention",
-      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 200 – 400 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
+      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 150 – 350 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
       "range": 5500,
       "unique": true
     }

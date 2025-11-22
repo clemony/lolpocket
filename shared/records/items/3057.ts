@@ -34,10 +34,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3057_fighter_t2_sheen.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3057_fighter_t2_sheen.png",
   "simpleDescription": "Grants a bonus to next attack after spell cast",
   "nicknames": [
-    "jimmy neutron"
+    "Jimmy Neutron"
   ],
   "passives": [
     {

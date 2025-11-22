@@ -22,11 +22,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
   "simpleDescription": "Overcomes enemies with high Health recovery and Armor",
   "nicknames": [
-    "lw",
-    "grievous"
+    "grievous",
+    "grievous wounds"
   ],
   "passives": [
     {

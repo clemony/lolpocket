@@ -1,6 +1,6 @@
 // server/riot/account/getByRiotId.ts
-import type { AccountReturn } from "@server-types"
 import { riotGet } from "riot"
+import type { AccountReturn } from "~~/server/types"
 
 // fetch account using name + tag
 export async function fetchAccountByRiotId(

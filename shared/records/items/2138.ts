@@ -5,9 +5,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2138_class_elixirofiron.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/autoatlas/smallicons/2138_elixirofiron_64px.milkshake_env.png",
   "simpleDescription": "Temporarily increases defenses. Leaves a trail for allies to follow.",
   "nicknames": [
+    "consumable",
     "orange",
     "white"
   ],

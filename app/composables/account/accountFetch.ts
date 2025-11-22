@@ -1,40 +1,41 @@
 import { toast } from "~/composables/utils/useToast"
 
 export async function accountFetch(progress?: Ref<number>) {
-  const { data, error } = await $fetch("/supabase/fetch/account", {
-    headers: useRequestHeaders(["cookie"]),
-  })
-  console.log("📎 - accountFetch - data:", data)
+  const { account, settings, pockets } = await $fetch<UserProfileResponse>(
+    "/api/supabase/fetch/account",
+    {
+      headers: useRequestHeaders(["cookie"]),
+    }
+  )
 
   progress && (progress.value = 70)
-  if (error) {
+  /*   if (error) {
     sendErrorToast()
-  } else {
-    console.log("📎 - accountFetch - data:", data)
-    progress && (progress.value = 100)
-    as().sb = data.account
-    as().settings = data.settings
-    ps().pockets = data.pockets
+  } else { */
+  progress && (progress.value = 100)
+  as().sb = account
+  as().settings = settings
+  ps().pockets = pockets
 
-    Object.assign(as().account, data.account)
+  Object.assign(as().account, account)
+  acc().setAccount(account)
+  console.log("🥸 - findSummoner - acc():", acc().accounts)
 
-    const summoner = await ss().ensureSummoner({ puuid: data.account.puuid })
+  const summoner = await ss().ensureSummoner({ puuid: account.puuid })
 
-    if (summoner) {
-      console.log("🥸 - accountFetch - summoner:", summoner)
-      Object.assign(as().account, summoner)
-    }
-    as().$persist
-    navigateTo("/nexus")
-
-    toast({
-      title: "Welcome back!",
-      description: `Great to see you, ${
-        as().account?.name ?? as().account?.username ?? "Summoner"
-      }!`,
-      icon: "party",
-    })
-
-    ps().$persist
+  if (summoner) {
+    Object.assign(as().account, summoner)
   }
+  as().$persist
+  navigateTo("/nexus")
+
+  toast({
+    title: "Welcome back!",
+    description: `Great to see you, ${
+      as().account?.name ?? as().account?.username ?? "Summoner"
+    }!`,
+    icon: "party",
+  })
+
+  ps().$persist
 }

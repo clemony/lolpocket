@@ -9,14 +9,14 @@ const item: Item =  {
       "gold": 3300
     },
     {
-      "id": 3046,
-      "name": "Phantom Dancer",
-      "gold": 2650
-    },
-    {
       "id": 1043,
       "name": "Recurve Bow",
       "gold": 700
+    },
+    {
+      "id": 3046,
+      "name": "Phantom Dancer",
+      "gold": 2650
     },
     {
       "id": 3051,
@@ -62,7 +62,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1042_base_t1_dagger.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1042_base_t1_dagger.png",
   "simpleDescription": "Slightly increases Attack Speed",
   "stats": {
     "attackSpeed": 10

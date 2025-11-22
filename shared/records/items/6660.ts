@@ -29,14 +29,14 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6660_tank_t2_bamiscinder.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6660_tank_t2_bamiscinder.png",
   "nicknames": [
     "fire"
   ],
   "passives": [
     {
       "name": "Immolate",
-      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased by 50% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
+      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
       "unique": true
     }
   ],

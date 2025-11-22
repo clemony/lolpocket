@@ -6,7 +6,7 @@ const matches = shallowRef<string>('amount')
 
 const state = useSummonerInject()
 
-const blocks = computed(() => Math.round(state.allMatches.value.length / 20))
+const blocks = computed(() => Math.round(state.matches.value.length / 20))
 </script>
 
 <template>

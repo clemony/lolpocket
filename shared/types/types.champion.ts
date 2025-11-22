@@ -1,6 +1,6 @@
 export type ChampionRecord = Record<string, Champion>
 export type ChampionLiteRecord = Record<string, ChampionLite>
-export type SplashType = 'tile' | 'centered' | 'load' | 'uncentered'
+export type SplashType = "tile" | "centered" | "load" | "uncentered"
 export type SkinRecord = Record<string, Skin>
 
 export interface ChampionLite extends Index {
@@ -24,7 +24,6 @@ export interface Champion {
   adaptiveType: string
   attackType: string
   attributeRatings: Record<string, number>
-  faction: string
   fullName?: string
   lore?: string
   patchLastChanged: string
@@ -105,5 +104,5 @@ export interface AbilityEffect {
   leveling?: Attribute[]
 }
 export type ChampionStat = {
-  [K in 'flat' | 'perLevel']?: number;
+  [K in "flat" | "perLevel"]?: number
 }

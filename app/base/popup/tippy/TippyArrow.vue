@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import 'tippy.js/dist/svg-arrow.css'
+import type { TippyTheme } from '~/types/types.tippy'
 
 const { class: className, theme = 'base' } = defineProps<{
   class?: HTMLAttributes['class']

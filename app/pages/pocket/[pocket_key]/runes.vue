@@ -3,6 +3,19 @@ import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import { addRuneSet } from '~~/shared/schema'
 import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
+
 definePageMeta({
   name: 'pocket-runes',
   title: 'runes',

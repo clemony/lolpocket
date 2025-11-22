@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { queueIndex } from '~~/shared/references'
-
 const { puuid, match } = defineProps<{
   match: MatchData
   puuid: string

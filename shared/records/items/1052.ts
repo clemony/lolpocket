@@ -4,6 +4,11 @@ const item: Item =  {
   "rank": "Basic",
   "buildsInto": [
     {
+      "id": 124011,
+      "name": "Sword of Blossoming Dawn",
+      "gold": 2350
+    },
+    {
       "id": 4632,
       "name": "Verdant Barrier",
       "gold": 1600
@@ -112,7 +117,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1052_mage_t2_amptome.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1052_mage_t2_amptome.png",
   "simpleDescription": "Slightly increases Ability Power",
   "nicknames": [
     "amptome",

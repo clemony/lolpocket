@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-const { class: className, summoner } = defineProps<{
+const { class: className, data: summoner } = defineProps<{
   class?: HTMLAttributes['class']
-  summoner?: Summoner
+  data: Summoner
 }>()
 
 const open = shallowRef<boolean>(false)
@@ -21,8 +21,8 @@ function handleBlock() {
         on="base"
         :class="
           cn('relative w-full justify-start rounded-full pr-8 pl-2 text-start text-nowrap',
-            { 'btn-active': open },
-            className,
+             { 'btn-active': open },
+             className,
           )
         ">
         <LazySummonerIcon

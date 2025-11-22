@@ -71,6 +71,11 @@ const item: Item =  {
       "gold": 2500
     },
     {
+      "id": 667666,
+      "name": "The Collector",
+      "gold": 3000
+    },
+    {
       "id": 6701,
       "name": "Opportunity",
       "gold": 2700
@@ -79,8 +84,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png",
   "simpleDescription": "Increases Attack Damage and Lethality",
+  "nicknames": [
+    "lethality"
+  ],
   "stats": {
     "attackDamage": 20,
     "lethality": 10

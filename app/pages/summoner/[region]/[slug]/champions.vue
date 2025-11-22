@@ -3,7 +3,18 @@ const { class: className, summoner } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
 }>()
-
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
 definePageMeta({
   key: 'm',
   name: 'champions',

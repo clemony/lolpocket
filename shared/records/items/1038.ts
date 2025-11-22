@@ -19,6 +19,11 @@ const item: Item =  {
       "gold": 3400
     },
     {
+      "id": 3095,
+      "name": "Stormrazor",
+      "gold": 3000
+    },
+    {
       "id": 3026,
       "name": "Guardian Angel",
       "gold": 3200
@@ -42,7 +47,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1038_marksman_t1_bfsword.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1038_marksman_t1_bfsword.png",
   "simpleDescription": "Greatly increases Attack Damage",
   "nicknames": [
     "bf"

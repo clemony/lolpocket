@@ -1,82 +1,103 @@
-export async function useMatches(puuid: string) {
-  const { getMatchesForSummoner } = useIndexedDB()
+import type { MatchReturn } from "~~/shared"
+export function useMatches(summoner: Ref<Summoner>) {
+  const { getMatchesForSummoner, addMatches, getCursor, setCursor } =
+    useIndexedDB()
+  const puuid = computed(() => summoner.value?.puuid)
+  const matches = shallowRef<MatchData[]>([])
+  const loading = shallowRef(false)
+  const endOfHistory = shallowRef(false)
 
-  const matches = ref<MatchData[]>([])
+  const cursor = shallowRef<number>(0)
+  const newestTs = shallowRef<number | null>(null)
 
-  /* Filter State--------------------------------------------------- */
+  // --- load local cache + persisted cursor
+  async function loadFromDB() {
+    const id = toValue(puuid)
+    if (!id) return
 
-  const filter = ref<MatchFilter>({
-    ally: "",
-    champion: "",
-    patch: 0,
-    queue: 0,
-    role: "ALL",
-  })
+    const local = await getMatchesForSummoner(id)
+    matches.value = local
+    newestTs.value = local[0]?.gameEndTimestamp ?? null
 
-  /* Filter Helpers ------------------------------------------------- */
-
-  function setFilter<K extends keyof MatchFilter>(
-    key: K,
-    value: MatchFilter[K]
-  ) {
-    filter.value[key] = value
+    const storedCursor = await getCursor(id)
+    cursor.value = storedCursor.lastIndex
   }
 
-  function clearFilters() {
-    filter.value = {
-      ally: "",
-      champion: "",
-      patch: 0,
-      queue: 0,
-      role: "ALL",
+  // --- load newer matches from server
+  async function loadNewer() {
+    const id = toValue(puuid)
+    if (!id || loading.value) return
+    loading.value = true
+
+    const since = newestTs.value ?? 0
+    const res = await $fetch<MatchReturn>(`/api/matches/${id}/newer`, {
+      query: { since },
+    })
+
+    if (res.matches.length) {
+      await addMatches(res.matches)
+      matches.value.unshift(...res.matches)
+      newestTs.value = res.newestTimestamp
     }
+
+    if (res.cursor != null) {
+      cursor.value = res.cursor
+      await setCursor(id, cursor.value)
+    }
+    summoner.value.updatedMatch = new Date().toISOString()
+    loading.value = false
   }
 
-  /* Filtered Matches ----------------------------------------------- */
+  // --- load older matches using server cursor
+  async function loadOlder() {
+    const id = toValue(puuid)
+    if (!id || loading.value || endOfHistory.value) return
 
-  const filteredMatches = computed(() => {
-    if (
-      !filter.value ||
-      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
-    ) {
-      return matches.value
+    loading.value = true
+
+    const res = await $fetch<MatchReturn>(`/api/matches/${id}/older`, {
+      query: { cursor: cursor.value },
+    })
+
+    if (!res.matches.length) {
+      endOfHistory.value = true
+      loading.value = false
+      return
     }
-    return matches.value.filter((match) =>
-      matchFilters(puuid!, match, filter.value)
-    )
-  })
 
-  const filteredChampionList = computed(() => {
-    if (
-      !filter.value ||
-      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
-    ) {
-      return matches.value
+    await addMatches(res.matches)
+    matches.value.push(...res.matches)
+
+    if (res.cursor != null) {
+      cursor.value = res.cursor
+      await setCursor(id, cursor.value)
     }
-    return matches.value.filter((match) =>
-      matchFiltersIgnoreChampion(puuid!, match, filter.value)
-    )
-  })
 
-  const loadCachedMatches = async () => {
-    if (!puuid) return
-    matches.value = await getMatchesForSummoner(puuid)
+    if (res.done) endOfHistory.value = true
+
+    loading.value = false
   }
+
+  // --- reset state on puuid change
+  watch(
+    summoner,
+    async () => {
+      matches.value = []
+      cursor.value = 0
+      newestTs.value = null
+      endOfHistory.value = false
+      await loadFromDB()
+    },
+    { immediate: true }
+  )
 
   return {
-    // match
     matches,
-    filteredMatches,
-
-    //load
-    loadCachedMatches,
-
-    // filters
-    clearFilters,
-    filter,
-    filteredChampionList,
-    setFilter,
+    loading,
+    loadNewer,
+    loadOlder,
+    refreshLocal: loadFromDB,
+    endOfHistory,
+    cursor,
   }
 }
-
-export type UseMatchesReturn = ReturnType<typeof useMatches>

@@ -21,11 +21,6 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
-      "id": 3156,
-      "name": "Maw of Malmortius",
-      "gold": 3100
-    },
-    {
       "id": 126697,
       "name": "Hubris",
       "gold": 2950
@@ -34,6 +29,11 @@ const item: Item =  {
       "id": 3004,
       "name": "Manamune",
       "gold": 2900
+    },
+    {
+      "id": 3156,
+      "name": "Maw of Malmortius",
+      "gold": 3100
     },
     {
       "id": 6693,
@@ -114,7 +114,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3133_fighter_t2_caulfieldswarhammer.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3133_fighter_t2_caulfieldswarhammer.png",
   "simpleDescription": "Attack Damage and Cooldown Reduction",
   "stats": {
     "attackDamage": 20,

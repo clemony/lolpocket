@@ -22,7 +22,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3073_hexaegis.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3073_hexaegis.png",
   "simpleDescription": "Increases maximum Mana as Mana is spent",
   "passives": [
     {
@@ -32,7 +32,7 @@ const item: Item =  {
     },
     {
       "name": "Overdrive",
-      "effects": "Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 30% <b>bonus</b> attack speed and 15% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast).",
+      "effects": "Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 50% <b>bonus</b> attack speed and 20% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast).",
       "unique": true
     }
   ],

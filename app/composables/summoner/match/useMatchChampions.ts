@@ -31,7 +31,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
 
     championStats.clear()
 
-    filteredMatches.forEach((match, index) => {
+    matches.forEach((match, index) => {
       const player = match.participants.find((p) => p.puuid === puuid)
       const champ = player?.championId
       if (!champ) return

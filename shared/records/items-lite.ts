@@ -1,4 +1,4 @@
-// Updated Patch 25.22 - 11/19/2025 02:34:53 PM CST
+// Updated Patch 25.23 - 11/22/2025 10:26:25 AM CST
 
 export const itemsLite: ItemLite[] = [
   {
@@ -433,8 +433,7 @@ export const itemsLite: ItemLite[] = [
     "rank": "Starter",
     "stats": {
       "attackDamage": 10,
-      "health": 80,
-      "lifesteal": 3
+      "health": 80
     },
     "tags": [
       "Fighter",
@@ -558,7 +557,11 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Scorchclaw Pup",
     "aka": [
-      "jungle"
+      "jungle",
+      "red",
+      "cat",
+      "kitty",
+      "meow"
     ],
     "cost": 450,
     "maps": [
@@ -581,7 +584,11 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Gustwalker Hatchling",
     "aka": [
-      "jungle"
+      "jungle",
+      "blue",
+      "dog",
+      "doggo",
+      "woof"
     ],
     "cost": 450,
     "maps": [
@@ -604,7 +611,11 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Mosstomper Seedling",
     "aka": [
-      "jungle"
+      "jungle",
+      "green",
+      "salamander",
+      "lizard",
+      "frog"
     ],
     "cost": 450,
     "maps": [
@@ -621,6 +632,25 @@ export const itemsLite: ItemLite[] = [
       "Tank",
       "Lifesteal vamp"
     ]
+  },
+  {
+    "id": 1111,
+    "key": "item",
+    "name": "Jarvan I's",
+    "cost": 0,
+    "maps": [
+      12
+    ],
+    "rank": "Special",
+    "stats": {
+      "armor": 25,
+      "attackSpeed": 25,
+      "flatMagicPenetration": 12,
+      "magicResistance": 20,
+      "flatMovespeed": 100,
+      "abilityHaste": 10,
+      "tenacity": 30
+    }
   },
   {
     "id": 1500,
@@ -821,6 +851,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Health Potion",
     "aka": [
+      "consumable",
       "red"
     ],
     "cost": 50,
@@ -858,6 +889,9 @@ export const itemsLite: ItemLite[] = [
     "id": 2019,
     "key": "item",
     "name": "Steel Sigil",
+    "aka": [
+      "Bloodstone"
+    ],
     "cost": 1100,
     "maps": [
       11,
@@ -878,6 +912,9 @@ export const itemsLite: ItemLite[] = [
     "id": 2020,
     "key": "item",
     "name": "The Brutalizer",
+    "aka": [
+      "Bloodstone"
+    ],
     "cost": 1337,
     "maps": [
       11,
@@ -899,6 +936,9 @@ export const itemsLite: ItemLite[] = [
     "id": 2021,
     "key": "item",
     "name": "Tunneler",
+    "aka": [
+      "drill"
+    ],
     "cost": 1150,
     "maps": [
       11,
@@ -919,6 +959,9 @@ export const itemsLite: ItemLite[] = [
     "id": 2022,
     "key": "item",
     "name": "Glowing Mote",
+    "aka": [
+      "haste"
+    ],
     "cost": 250,
     "maps": [
       11,
@@ -944,6 +987,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Refillable Potion",
     "aka": [
+      "consumable",
       "Green Potion"
     ],
     "cost": 150,
@@ -1043,9 +1087,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Control Ward",
     "aka": [
-      "kleptomancy",
+      "consumable",
       "orange",
-      "red",
       "pink"
     ],
     "cost": 75,
@@ -1087,6 +1130,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Elixir of Iron",
     "aka": [
+      "consumable",
       "orange",
       "white"
     ],
@@ -1108,9 +1152,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Elixir of Sorcery",
     "aka": [
-      "blue",
-      "brilliance",
-      "illumination"
+      "consumable",
+      "blue"
     ],
     "cost": 500,
     "maps": [
@@ -1131,9 +1174,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Elixir of Wrath",
     "aka": [
-      "red potion",
-      "fortitude",
-      "rage"
+      "consumable",
+      "red"
     ],
     "cost": 500,
     "maps": [
@@ -1450,7 +1492,9 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Archangel's Staff",
     "aka": [
-      "aa"
+      "aa",
+      "seraph's embrace",
+      "tear"
     ],
     "cost": 2900,
     "maps": [
@@ -1473,6 +1517,10 @@ export const itemsLite: ItemLite[] = [
     "id": 3004,
     "key": "item",
     "name": "Manamune",
+    "aka": [
+      "Muramana",
+      "tear"
+    ],
     "cost": 2900,
     "maps": [
       11,
@@ -1538,7 +1586,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Symbiotic Soles",
     "aka": [
-      "boots"
+      "Synchronized Souls"
     ],
     "cost": 900,
     "maps": [
@@ -1686,8 +1734,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Mortal Reminder",
     "aka": [
-      "lw",
-      "grievous"
+      "grievous",
+      "grievous wounds"
     ],
     "cost": 3300,
     "maps": [
@@ -1975,7 +2023,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Sheen",
     "aka": [
-      "jimmy neutron"
+      "Jimmy Neutron"
     ],
     "cost": 900,
     "maps": [
@@ -2077,8 +2125,9 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Sunfire Aegis",
     "aka": [
-      "funfire",
-      "sunborn"
+      "burn",
+      "sunborn",
+      "sunfire"
     ],
     "cost": 2700,
     "maps": [
@@ -2101,6 +2150,14 @@ export const itemsLite: ItemLite[] = [
     "id": 3070,
     "key": "item",
     "name": "Tear of the Goddess",
+    "aka": [
+      "archangel's staff",
+      "Seraph's embrace",
+      "Winter's approach",
+      "Fimbulwinter",
+      "Muramana",
+      "Manamune"
+    ],
     "cost": 400,
     "maps": [
       11,
@@ -2286,9 +2343,10 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Trinity Force",
     "aka": [
+      "Spellblade",
       "triforce",
       "tons of damage",
-      "3333"
+      "33333"
     ],
     "cost": 3333,
     "maps": [
@@ -2353,6 +2411,12 @@ export const itemsLite: ItemLite[] = [
     "id": 3084,
     "key": "item",
     "name": "Heartsteel",
+    "aka": [
+      "Quest",
+      "Steal",
+      "Boy Band",
+      "BoyBand"
+    ],
     "cost": 3000,
     "maps": [
       11,
@@ -2444,7 +2508,9 @@ export const itemsLite: ItemLite[] = [
       "banksys",
       "dc",
       "dcap",
-      "hat"
+      "hat",
+      "witchcap",
+      "wooglets"
     ],
     "cost": 3500,
     "maps": [
@@ -2516,6 +2582,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3100,
     "key": "item",
     "name": "Lich Bane",
+    "aka": [
+      "Spellblade"
+    ],
     "cost": 2900,
     "maps": [
       11,
@@ -2540,7 +2609,8 @@ export const itemsLite: ItemLite[] = [
     "name": "Banshee's Veil",
     "aka": [
       "bv",
-      "spellshield"
+      "spellshield",
+      "spell shield"
     ],
     "cost": 3000,
     "maps": [
@@ -2584,6 +2654,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3107,
     "key": "item",
     "name": "Redemption",
+    "aka": [
+      "burn"
+    ],
     "cost": 2300,
     "maps": [
       11,
@@ -2816,6 +2889,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3118,
     "key": "item",
     "name": "Malignance",
+    "aka": [
+      "burn"
+    ],
     "cost": 2700,
     "maps": [
       11,
@@ -2838,6 +2914,10 @@ export const itemsLite: ItemLite[] = [
     "id": 3119,
     "key": "item",
     "name": "Winter's Approach",
+    "aka": [
+      "Fimbulwinter",
+      "tear"
+    ],
     "cost": 2400,
     "maps": [
       11,
@@ -2882,7 +2962,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Executioner's Calling",
     "aka": [
-      "grievous"
+      "grievous",
+      "grievous wounds"
     ],
     "cost": 800,
     "maps": [
@@ -2950,6 +3031,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3134,
     "key": "item",
     "name": "Serrated Dirk",
+    "aka": [
+      "lethality"
+    ],
     "cost": 1000,
     "maps": [
       11,
@@ -3013,7 +3097,10 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Mercurial Scimitar",
     "aka": [
-      "merc scim"
+      "merc scim",
+      "qss",
+      "quicksilver sash",
+      "silvermere dawn"
     ],
     "cost": 3200,
     "maps": [
@@ -3024,9 +3111,9 @@ export const itemsLite: ItemLite[] = [
     ],
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 40,
+      "attackDamage": 50,
       "lifesteal": 10,
-      "magicResistance": 40
+      "magicResistance": 35
     },
     "tags": [
       "Fighter",
@@ -3039,7 +3126,9 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Quicksilver Sash",
     "aka": [
-      "qss"
+      "qss",
+      "mercurial scimitar",
+      "silvermere dawn"
     ],
     "cost": 1300,
     "maps": [
@@ -3062,6 +3151,10 @@ export const itemsLite: ItemLite[] = [
     "id": 3142,
     "key": "item",
     "name": "Youmuu's Ghostblade",
+    "aka": [
+      "lethality",
+      "haste"
+    ],
     "cost": 2800,
     "maps": [
       11,
@@ -3273,7 +3366,9 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "zhg",
       "zonyas",
-      "zhonyas"
+      "zhonyas",
+      "Witchcap",
+      "Wooglets"
     ],
     "cost": 3250,
     "maps": [
@@ -3334,11 +3429,11 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Morellonomicon",
     "aka": [
-      "nmst",
+      "forbidden book",
       "grievous",
+      "grievous wounds",
       "last shadow",
-      "book",
-      "forbidden book"
+      "nmst"
     ],
     "cost": 2850,
     "maps": [
@@ -3362,6 +3457,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3170,
     "key": "item",
     "name": "Swiftmarch",
+    "aka": [
+      "boots"
+    ],
     "cost": 1500,
     "maps": [
       11
@@ -3375,6 +3473,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3171,
     "key": "item",
     "name": "Crimson Lucidity",
+    "aka": [
+      "boots"
+    ],
     "cost": 1400,
     "maps": [
       11
@@ -3411,6 +3512,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3173,
     "key": "item",
     "name": "Chainlaced Crushers",
+    "aka": [
+      "boots"
+    ],
     "cost": 1750,
     "maps": [
       11
@@ -3426,6 +3530,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3174,
     "key": "item",
     "name": "Armored Advance",
+    "aka": [
+      "boots"
+    ],
     "cost": 1700,
     "maps": [
       11
@@ -3440,6 +3547,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3175,
     "key": "item",
     "name": "Spellslinger's Shoes",
+    "aka": [
+      "boots"
+    ],
     "cost": 1600,
     "maps": [
       11
@@ -3454,6 +3564,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3176,
     "key": "item",
     "name": "Forever Forward",
+    "aka": [
+      "boots"
+    ],
     "cost": 1400,
     "maps": [
       11
@@ -3467,6 +3580,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3177,
     "key": "item",
     "name": "Guardian's Blade",
+    "aka": [
+      "dblade"
+    ],
     "cost": 950,
     "maps": [
       12,
@@ -3489,6 +3605,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3179,
     "key": "item",
     "name": "Umbral Glaive",
+    "aka": [
+      "lethality"
+    ],
     "cost": 2500,
     "maps": [
       11,
@@ -3512,6 +3631,7 @@ export const itemsLite: ItemLite[] = [
     "name": "Hullbreaker",
     "aka": [
       "ahoy",
+      "hull",
       "pirate",
       "yarrr"
     ],
@@ -3535,6 +3655,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3184,
     "key": "item",
     "name": "Guardian's Hammer",
+    "aka": [
+      "dblade"
+    ],
     "cost": 950,
     "maps": [
       12,
@@ -3606,7 +3729,8 @@ export const itemsLite: ItemLite[] = [
     "name": "Mikael's Blessing",
     "aka": [
       "crucible",
-      "michael"
+      "michael",
+      "mikael"
     ],
     "cost": 2300,
     "maps": [
@@ -3658,6 +3782,11 @@ export const itemsLite: ItemLite[] = [
     "id": 3330,
     "key": "item",
     "name": "Scarecrow Effigy",
+    "aka": [
+      "yellow",
+      "totem",
+      "trinket"
+    ],
     "cost": 0,
     "maps": [
       11,
@@ -3675,6 +3804,7 @@ export const itemsLite: ItemLite[] = [
     "name": "Stealth Ward",
     "aka": [
       "yellow",
+      "sweeper",
       "totem",
       "trinket"
     ],
@@ -3722,10 +3852,11 @@ export const itemsLite: ItemLite[] = [
     "name": "Oracle Lens",
     "aka": [
       "red",
-      "totem",
-      "trinket",
+      "lens",
+      "spinny",
       "sweeper",
-      "spinny"
+      "totem",
+      "trinket"
     ],
     "cost": 0,
     "maps": [
@@ -3773,6 +3904,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3504,
     "key": "item",
     "name": "Ardent Censer",
+    "aka": [
+      "censer"
+    ],
     "cost": 2200,
     "maps": [
       11,
@@ -3798,7 +3932,7 @@ export const itemsLite: ItemLite[] = [
     "name": "Essence Reaver",
     "aka": [
       "er",
-      "<s>bloothirster</s>"
+      "Spellblade"
     ],
     "cost": 2900,
     "maps": [
@@ -3823,6 +3957,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3513,
     "key": "item",
     "name": "Eye of the Herald",
+    "aka": [
+      "Herald's Eye"
+    ],
     "cost": 0,
     "purchasable": false,
     "rank": "Consumable",
@@ -3832,6 +3969,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3599,
     "key": "item",
     "name": "Black Spear",
+    "aka": [
+      "spear"
+    ],
     "cost": 0,
     "maps": [
       11,
@@ -3849,9 +3989,9 @@ export const itemsLite: ItemLite[] = [
     "name": "Dead Man's Plate",
     "aka": [
       "dmp",
+      "dreadnought",
       "gangplank",
-      "juggernaut",
-      "dreadnought"
+      "juggernaut"
     ],
     "cost": 2900,
     "maps": [
@@ -3923,7 +4063,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Lost Chapter",
     "aka": [
-      "book"
+      "mana book"
     ],
     "cost": 1200,
     "maps": [
@@ -3946,6 +4086,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3803,
     "key": "item",
     "name": "Catalyst of Aeons",
+    "aka": [
+      "protector"
+    ],
     "cost": 1300,
     "maps": [
       11,
@@ -3955,7 +4098,7 @@ export const itemsLite: ItemLite[] = [
     ],
     "rank": "Epic",
     "stats": {
-      "health": 350,
+      "health": 300,
       "mana": 375
     },
     "tags": [
@@ -3968,6 +4111,7 @@ export const itemsLite: ItemLite[] = [
     "name": "Edge of Night",
     "aka": [
       "eon",
+      "lethality",
       "spellshield",
       "spell shield"
     ],
@@ -3992,6 +4136,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3865,
     "key": "item",
     "name": "World Atlas",
+    "aka": [
+      "Map"
+    ],
     "cost": 400,
     "maps": [
       11
@@ -4071,6 +4218,10 @@ export const itemsLite: ItemLite[] = [
     "id": 3870,
     "key": "item",
     "name": "Dream Maker",
+    "aka": [
+      "Plushie",
+      "plushie"
+    ],
     "cost": 400,
     "maps": [
       11
@@ -4128,6 +4279,9 @@ export const itemsLite: ItemLite[] = [
     "id": 3877,
     "key": "item",
     "name": "Bloodsong",
+    "aka": [
+      "Spellblade"
+    ],
     "cost": 400,
     "maps": [
       11
@@ -4193,7 +4347,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Oblivion Orb",
     "aka": [
-      "grievous"
+      "grievous",
+      "grievous wounds"
     ],
     "cost": 800,
     "maps": [
@@ -4215,6 +4370,9 @@ export const itemsLite: ItemLite[] = [
     "id": 4003,
     "key": "item",
     "name": "Lifeline",
+    "aka": [
+      "lethality"
+    ],
     "cost": 1600,
     "maps": [
       12,
@@ -4316,6 +4474,9 @@ export const itemsLite: ItemLite[] = [
     "id": 4017,
     "key": "item",
     "name": "Hellfire Hatchet",
+    "aka": [
+      "burn"
+    ],
     "cost": 2500,
     "maps": [
       30
@@ -4358,10 +4519,10 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Horizon Focus",
     "aka": [
-      "snipe",
-      "lock on"
+      "lock on",
+      "snipe"
     ],
-    "cost": 2800,
+    "cost": 2750,
     "maps": [
       11,
       12,
@@ -4370,7 +4531,7 @@ export const itemsLite: ItemLite[] = [
     ],
     "rank": "Legendary",
     "stats": {
-      "abilityPower": 115,
+      "abilityPower": 125,
       "abilityHaste": 25
     },
     "tags": [
@@ -4382,7 +4543,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Cosmic Drive",
     "aka": [
-      "hat"
+      "cooldown hat"
     ],
     "cost": 3000,
     "maps": [
@@ -4408,6 +4569,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Blighting Jewel",
     "aka": [
+      "pen",
       "purple"
     ],
     "cost": 1100,
@@ -4479,8 +4641,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Watchful Wardstone",
     "aka": [
-      "Support",
-      "Ward"
+      "sightstone",
+      "ward"
     ],
     "cost": 1100,
     "maps": [
@@ -4526,9 +4688,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Vigilant Wardstone",
     "aka": [
-      "Support",
-      "Ward",
-      "sightstone"
+      "sightstone",
+      "ward"
     ],
     "cost": 2300,
     "maps": [
@@ -4591,8 +4752,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Death's Dance",
     "aka": [
-      "dd",
-      "<s>Bloodbag</s>"
+      "dd"
     ],
     "cost": 3300,
     "maps": [
@@ -4616,7 +4776,8 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Chempunk Chainsword",
     "aka": [
-      "grievous"
+      "grievous",
+      "grievous wounds"
     ],
     "cost": 3100,
     "maps": [
@@ -4736,6 +4897,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6621,
     "key": "item",
     "name": "Dawncore",
+    "aka": [
+      "dawncore"
+    ],
     "cost": 2500,
     "maps": [
       11,
@@ -4785,7 +4949,8 @@ export const itemsLite: ItemLite[] = [
     "name": "Liandry's Torment",
     "aka": [
       "last shadow",
-      "ls"
+      "ls",
+      "burn"
     ],
     "cost": 3000,
     "maps": [
@@ -4832,6 +4997,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6657,
     "key": "item",
     "name": "Rod of Ages",
+    "aka": [
+      "RoA"
+    ],
     "cost": 2600,
     "maps": [
       11,
@@ -4876,6 +5044,13 @@ export const itemsLite: ItemLite[] = [
     "id": 6662,
     "key": "item",
     "name": "Iceborn Gauntlet",
+    "aka": [
+      "Spellblade",
+      "ibg",
+      "frostfire",
+      "frozen",
+      "frozen gauntlet"
+    ],
     "cost": 2900,
     "maps": [
       11,
@@ -4899,6 +5074,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6664,
     "key": "item",
     "name": "Hollow Radiance",
+    "aka": [
+      "catastrophe"
+    ],
     "cost": 2800,
     "maps": [
       11,
@@ -4921,6 +5099,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6665,
     "key": "item",
     "name": "Jak'Sho, The Protean",
+    "aka": [
+      "Jak'Sho, The Protean"
+    ],
     "cost": 3200,
     "maps": [
       11,
@@ -4963,6 +5144,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6672,
     "key": "item",
     "name": "Kraken Slayer",
+    "aka": [
+      "Kraken Slayer"
+    ],
     "cost": 3000,
     "maps": [
       11,
@@ -5005,6 +5189,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6675,
     "key": "item",
     "name": "Navori Flickerblade",
+    "aka": [
+      "crit shojin"
+    ],
     "cost": 2650,
     "maps": [
       11,
@@ -5028,7 +5215,8 @@ export const itemsLite: ItemLite[] = [
     "name": "The Collector",
     "aka": [
       "deathblade",
-      "gun"
+      "gun",
+      "lethality"
     ],
     "cost": 3000,
     "maps": [
@@ -5073,6 +5261,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6692,
     "key": "item",
     "name": "Eclipse",
+    "aka": [
+      "lethality"
+    ],
     "cost": 2900,
     "maps": [
       11,
@@ -5093,6 +5284,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6694,
     "key": "item",
     "name": "Serylda's Grudge",
+    "aka": [
+      "slow"
+    ],
     "cost": 3000,
     "maps": [
       11,
@@ -5114,6 +5308,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6695,
     "key": "item",
     "name": "Serpent's Fang",
+    "aka": [
+      "lethality"
+    ],
     "cost": 2500,
     "maps": [
       11,
@@ -5134,7 +5331,7 @@ export const itemsLite: ItemLite[] = [
     "id": 6696,
     "key": "item",
     "name": "Axiom Arc",
-    "cost": 3000,
+    "cost": 2750,
     "maps": [
       11,
       12,
@@ -5155,6 +5352,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6697,
     "key": "item",
     "name": "Hubris",
+    "aka": [
+      "lethality"
+    ],
     "cost": 3000,
     "maps": [
       11,
@@ -5174,7 +5374,10 @@ export const itemsLite: ItemLite[] = [
     "id": 6698,
     "key": "item",
     "name": "Profane Hydra",
-    "cost": 3200,
+    "aka": [
+      "lethality"
+    ],
+    "cost": 2850,
     "maps": [
       11,
       12,
@@ -5183,7 +5386,7 @@ export const itemsLite: ItemLite[] = [
     ],
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 60,
+      "attackDamage": 55,
       "lethality": 18,
       "abilityHaste": 10
     },
@@ -5195,6 +5398,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6699,
     "key": "item",
     "name": "Voltaic Cyclosword",
+    "aka": [
+      "lethality"
+    ],
     "cost": 3000,
     "maps": [
       11,
@@ -5216,6 +5422,9 @@ export const itemsLite: ItemLite[] = [
     "id": 6701,
     "key": "item",
     "name": "Opportunity",
+    "aka": [
+      "lethality"
+    ],
     "cost": 2700,
     "maps": [
       11,
@@ -5402,6 +5611,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Stormrazor",
     "aka": [
+      "energize",
       "Windblade"
     ],
     "cost": 2500,
@@ -5479,7 +5689,12 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "The Golden Spatula",
     "aka": [
-      "debug"
+      "spatch",
+      "urf",
+      "manatee",
+      "Quest",
+      "Urf's Champion",
+      "burn"
     ],
     "cost": 0,
     "maps": [
@@ -5494,12 +5709,12 @@ export const itemsLite: ItemLite[] = [
       "criticalStrikeChance": 25,
       "health": 350,
       "healthRegen": 200,
-      "lifesteal": 15,
       "magicResistance": 40,
       "mana": 350,
       "manaRegen": 200,
       "percentMovespeed": 10,
-      "abilityHaste": 20
+      "abilityHaste": 20,
+      "omnivamp": 15
     }
   },
   {
@@ -5517,7 +5732,8 @@ export const itemsLite: ItemLite[] = [
     "stats": {
       "attackDamage": 55,
       "health": 400,
-      "abilityHaste": 20
+      "abilityHaste": 20,
+      "omnivamp": 10
     },
     "tags": [
       "Fighter"
@@ -5527,6 +5743,13 @@ export const itemsLite: ItemLite[] = [
     "id": 228001,
     "key": "item",
     "name": "Anathema's Chains",
+    "aka": [
+      "Helia",
+      "Vendetta",
+      "hel",
+      "healia",
+      "heal"
+    ],
     "cost": 2500,
     "maps": [
       30
@@ -5545,6 +5768,10 @@ export const itemsLite: ItemLite[] = [
     "id": 228002,
     "key": "item",
     "name": "Wooglet's Witchcap",
+    "aka": [
+      "Quest",
+      "Deathcap"
+    ],
     "cost": 0,
     "maps": [
       12,
@@ -5564,6 +5791,10 @@ export const itemsLite: ItemLite[] = [
     "id": 443054,
     "key": "item",
     "name": "Darksteel Talons",
+    "aka": [
+      "bloodrazor",
+      "kitae"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -5572,7 +5803,7 @@ export const itemsLite: ItemLite[] = [
     "stats": {
       "armor": 55,
       "attackSpeed": 50,
-      "percentMovespeed": 10
+      "percentMovespeed": 5
     },
     "tags": [
       "Tank"
@@ -5582,6 +5813,9 @@ export const itemsLite: ItemLite[] = [
     "id": 443055,
     "key": "item",
     "name": "Fulmination",
+    "aka": [
+      "energize"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -5734,6 +5968,9 @@ export const itemsLite: ItemLite[] = [
     "id": 443069,
     "key": "item",
     "name": "Hamstringer",
+    "aka": [
+      "bleed"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -5806,7 +6043,7 @@ export const itemsLite: ItemLite[] = [
     "rank": "Special",
     "stats": {
       "attackSpeed": 50,
-      "percentMovespeed": 10
+      "percentMovespeed": 5
     },
     "tags": [
       "Marksman"
@@ -5897,6 +6134,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Divine Sunderer",
     "aka": [
+      "Spellblade",
       "devourer"
     ],
     "cost": 0,
@@ -5941,6 +6179,9 @@ export const itemsLite: ItemLite[] = [
     "id": 446667,
     "key": "item",
     "name": "Radiant Virtue",
+    "aka": [
+      "rv"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -5972,7 +6213,7 @@ export const itemsLite: ItemLite[] = [
       "attackDamage": 65,
       "attackSpeed": 30,
       "criticalStrikeChance": 25,
-      "percentMovespeed": 12
+      "percentMovespeed": 6
     },
     "tags": [
       "Marksman"
@@ -5982,6 +6223,9 @@ export const itemsLite: ItemLite[] = [
     "id": 446691,
     "key": "item",
     "name": "Duskblade of Draktharr",
+    "aka": [
+      "lethality"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -6000,6 +6244,9 @@ export const itemsLite: ItemLite[] = [
     "id": 446693,
     "key": "item",
     "name": "Prowler's Claw",
+    "aka": [
+      "lethality"
+    ],
     "cost": 0,
     "rank": "Special",
     "stats": {
@@ -6022,7 +6269,7 @@ export const itemsLite: ItemLite[] = [
     "rank": "Special",
     "stats": {
       "attackSpeed": 60,
-      "percentMovespeed": 12
+      "percentMovespeed": 6
     }
   },
   {
@@ -6044,6 +6291,9 @@ export const itemsLite: ItemLite[] = [
     "id": 447102,
     "key": "item",
     "name": "Reality Fracture",
+    "aka": [
+      "Kevins"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -6062,6 +6312,9 @@ export const itemsLite: ItemLite[] = [
     "id": 447103,
     "key": "item",
     "name": "Hemomancer's Helm",
+    "aka": [
+      "Omnivamp"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -6135,13 +6388,16 @@ export const itemsLite: ItemLite[] = [
     "rank": "Special",
     "stats": {
       "attackSpeed": 50,
-      "percentMovespeed": 12
+      "percentMovespeed": 6
     }
   },
   {
     "id": 447108,
     "key": "item",
     "name": "Runecarver",
+    "aka": [
+      "energize"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -6149,7 +6405,7 @@ export const itemsLite: ItemLite[] = [
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
-      "percentMovespeed": 8,
+      "percentMovespeed": 4,
       "abilityHaste": 20
     },
     "tags": [
@@ -6284,6 +6540,9 @@ export const itemsLite: ItemLite[] = [
     "id": 447118,
     "key": "item",
     "name": "Pyromancer's Cloak",
+    "aka": [
+      "burn"
+    ],
     "cost": 0,
     "maps": [
       30
@@ -6310,7 +6569,6 @@ export const itemsLite: ItemLite[] = [
     "rank": "Special",
     "stats": {
       "armor": 30,
-      "attackSpeed": 30,
       "health": 500,
       "magicResistance": 30,
       "percentMovespeed": 8

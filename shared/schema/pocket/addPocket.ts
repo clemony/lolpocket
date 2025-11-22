@@ -7,13 +7,13 @@ export async function addPocket(randomize?: boolean) {
 
   if (p) {
     console.log("📎 - addPocket - p:", p)
-    const { error } = await $fetch("/supabase/update/pocket", {
+    const data = await $fetch("/api/supabase/update/pocket", {
       body: p,
       headers: useRequestHeaders(["cookie"]),
       method: "POST",
     })
 
-    if (!error) {
+    if (data) {
       ps().pockets.push(p)
 
       toast({

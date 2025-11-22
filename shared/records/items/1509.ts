@@ -5,10 +5,16 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1509_gusto.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1509_gusto.png",
   "passives": [
     {
+      "name": "Gusto",
       "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 45% of this minion's <b>maximum</b> health as pre-mitigation damage.",
+      "unique": true
+    },
+    {
+      "name": "Minion Wounder",
+      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 2% of the target's <b>current</b> health.",
       "unique": true
     }
   ],

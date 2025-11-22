@@ -3,7 +3,6 @@ definePageMeta({
   name: 'Sign up',
   description: 'Login with your Riot, Google, or Discord account.',
   icon: 'gear',
-  layout: 'basic',
   search: 'hidden',
 })
 </script>

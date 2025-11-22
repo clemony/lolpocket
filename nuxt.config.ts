@@ -4,21 +4,25 @@ import { fileURLToPath } from "node:url"
 
 export default defineNuxtConfig({
   alias: {
-    "@app-types": fileURLToPath(new URL("./app/types", import.meta.url)),
-    "@server-types": fileURLToPath(new URL("./server/types", import.meta.url)),
     "@composables": fileURLToPath(
       new URL("./app/composables", import.meta.url)
     ),
     riot: fileURLToPath(new URL("./server/api/riot", import.meta.url)),
     "@css": fileURLToPath(new URL("./app/assets/css", import.meta.url)),
-    "@data": fileURLToPath(new URL("./shared", import.meta.url)),
     "@layout": fileURLToPath(new URL("./app/layout", import.meta.url)),
+    "@index": fileURLToPath(new URL("./shared/indexes", import.meta.url)),
+    "@references": fileURLToPath(
+      new URL("./shared/references", import.meta.url)
+    ),
     "@plugins": fileURLToPath(new URL("./app/plugins", import.meta.url)),
     "@records": fileURLToPath(new URL("./shared/records", import.meta.url)),
     "@schema": fileURLToPath(new URL("./shared/schema", import.meta.url)),
     "@stores": fileURLToPath(new URL("./app/stores", import.meta.url)),
     "@variants": fileURLToPath(
       new URL("./app/assets/variants", import.meta.url)
+    ),
+    "helpers-server": fileURLToPath(
+      new URL("./server/helpers", import.meta.url)
     ),
     tiptap: fileURLToPath(new URL("./app/composables/tiptap", import.meta.url)),
   },
@@ -99,7 +103,14 @@ export default defineNuxtConfig({
     format: ["webp"],
   },
   imports: {
-    dirs: ["@variants", "@schema", "@data", "@stores", "@app-types"],
+    dirs: [
+      "@variants",
+      "@schema",
+      "@references",
+      "@index",
+      "@stores",
+      "@app-types",
+    ],
     presets: [
       {
         from: "motion-v",
@@ -134,13 +145,6 @@ export default defineNuxtConfig({
     },
     typescript: {
       strict: false,
-      tsConfig: {
-        include: ["server/utils/**"],
-        compilerOptions: {
-          paths: {},
-          types: ["server/types/**"],
-        },
-      },
     },
   },
   pinia: {

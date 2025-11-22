@@ -1,6 +1,14 @@
 <script lang="ts" setup>
+import { Virtualizer, VList } from 'virtua/vue'
 import { heyGoodJob } from '~~/shared/data/good-job'
 import { toast, } from '~/composables/utils/useToast'
+
+const sizes = [20, 40, 180, 77]
+
+const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4])
+
+console.log('🥸 - findSummoner - acc():', acc().accounts)
+const headerHeight = 400
 
 console.log(ss().cache)
 function toasty() {
@@ -22,19 +30,6 @@ definePageMeta({
   listClass: '!size-5.75 **:stroke-[1.6]',
   order: 1,
   path: '/nexus',
-})
-
-useSeoMeta({
-  title: 'Nexus',
-  description: '[description]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogTitle: '[og:title]',
-  ogUrl: '[og:url]',
-  twitterCard: 'summary',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
 })
 </script>
 
@@ -85,11 +80,13 @@ useSeoMeta({
         <a class="tab size-24">Settings</a>
       </div>
     </div> -->
-    </div>
+      <!--     </div>
     <div class="mt-12 flex w-full justify-center pb-54">
-      <!--  <CommentsThread :thread-id="String(useRoute().meta?.id) as UUID" /> -->
+       <CommentsThread :thread-id="String(useRoute().meta?.id) as UUID" />
     </div>
 
     <SiteFooter />
+  </div> -->
+    </div>
   </div>
 </template>

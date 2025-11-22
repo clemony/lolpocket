@@ -24,7 +24,7 @@ const open = ref(false)
       as-child
       :class="
         cn('group/dd z-2 data-[state=open]:bg-b2',
-          className,
+           className,
         )
       ">
       <slot>
@@ -70,11 +70,11 @@ const open = ref(false)
       <Separator class="mb-1" />
 
       <DropdownMenuItem as-child>
-        <FollowButton
+        <!--         <FollowButton
           text
           size="sm"
           variant="base"
-          :summoner />
+          :summoner /> -->
       </DropdownMenuItem>
       <DropdownMenuItem as-child>
         <MessageButton

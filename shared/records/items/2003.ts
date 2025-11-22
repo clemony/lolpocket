@@ -5,9 +5,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2003_class_t1_healthpotion.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/autoatlas/smallicons/2003_healthpotion_64px.milkshake_env.png",
   "simpleDescription": "Consume to restore Health over time",
   "nicknames": [
+    "consumable",
     "red"
   ],
   "stats": {},

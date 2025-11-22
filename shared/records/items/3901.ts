@@ -5,7 +5,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "requiredChampion": "Gangplank",
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3901_champ_t0_fireatwillcircle.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3901_champ_t0_fireatwillcircle.png",
   "simpleDescription": "Cannon Barrage fires at an increasing rate over time (additional 6 waves over the duration).",
   "passives": [
     {

@@ -11,7 +11,7 @@ export async function postComment(
     content,
   }
   const { data, error } = await $fetch<CommentReturn>(
-    "/supabase/comment/post",
+    "/api/supabase/comment/post",
     {
       body,
       headers: useRequestHeaders(["cookie"]),

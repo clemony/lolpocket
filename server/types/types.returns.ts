@@ -1,3 +1,13 @@
+import type { MatchData, RankedEntry } from "./types.import"
+
+export interface MatchDataReturn {
+  matchData: MatchData[]
+  startIndex?: number
+  nextIndex: number
+  end?: boolean
+  newestIds?: string[]
+}
+
 export interface AccountReturn {
   puuid: string
   gameName: string

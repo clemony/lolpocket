@@ -5,12 +5,15 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447118_pyromancerscloak.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447118_pyromancerscloak.png",
+  "nicknames": [
+    "burn"
+  ],
   "passives": [
     {
       "name": "Spark",
       "cooldown": "5",
-      "effects": "Basic attacks and ability hits against enemies inflicts them with a Burn that deals 200 – 450 (based on level) magic damage over 3 seconds.",
+      "effects": "Basic attacks and ability hits against enemies inflicts them with a Burn that deals 100 – 350 (based on level) magic damage over 3 seconds.",
       "unique": true
     },
     {

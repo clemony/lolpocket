@@ -5,7 +5,7 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6630_fighter_t4_goredrinker.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6630_fighter_t4_goredrinker.png",
   "nicknames": [
     "slurp"
   ],
@@ -19,7 +19,8 @@ const item: Item =  {
   "stats": {
     "attackDamage": 55,
     "health": 400,
-    "abilityHaste": 20
+    "abilityHaste": 20,
+    "omnivamp": 10
   },
   "shop": {
     "prices": {

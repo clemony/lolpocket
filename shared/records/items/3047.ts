@@ -24,7 +24,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3047_class_t2_ninjatabi.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3047_class_t2_ninjatabi.png",
   "simpleDescription": "Enhances Move Speed and reduces incoming basic attack damage",
   "nicknames": [
     "boots",
@@ -33,7 +33,7 @@ const item: Item =  {
   "passives": [
     {
       "name": "Plating",
-      "effects": "Reduces incoming damage from all basic attacks by 10% (<i>excluding turret attacks</i>).",
+      "effects": "Reduces all incoming <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage by 10% (<i>excluding from turret attacks</i>).",
       "unique": true
     }
   ],

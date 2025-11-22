@@ -1,32 +1,26 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-import { VList } from 'virtua/vue'
-/* const emit = defineEmits(['scroll-top']) */
+const emit = defineEmits(['scroll-top'])
 
-const { loading, loadMatches, matches, summoner } = inject<SummonerInject>(SummonerKey)
+const { loading, matches, summoner } = inject<SummonerInject>(SummonerKey)
 
-/* console.log('📎 - summoner:', summoner)
+console.log('📎 - summoner:', summoner)
 
 const itemsPerPage = 20
 const currentPage = shallowRef<number>(1)
 
 const pagedMatches = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return filteredMatches.value.slice(start, start + itemsPerPage)
+  return matches.value.slice(start, start + itemsPerPage)
 })
 
 watch(
-  () => filteredMatches.value.length,
+  () => matches.value.length,
   (newVal) => {
     if (newVal)
       currentPage.value = 1
   },
   { immediate: false }
-) */
-
-onMounted (() => {
-  loadMatches()
-})
+)
 </script>
 
 <template>
@@ -35,32 +29,29 @@ onMounted (() => {
       v-if="loading"
       class="flex flex-col gap-8">
       <Skeleton
-        v-for="i in 10"
+        v-for="i in itemsPerPage"
         :key="i"
-        class="field-box h-40 w-full max-w-220" />
+        class="field-box h-40 w-full max-w-210" />
     </div>
 
-    <VList
-
-      v-else-if="filteredMatches.length"
-      v-slot="{ item, index }"
-      :style="{ height: '100vh' }"
-      class="flex h-600 flex-col gap-8 pb-px"
-      :data="matches"
-      :item-size="133"
-      :buffer-size="200">
+    <TransitionScalePop
+      v-else-if="pagedMatches.length > 0"
+      :appear="false"
+      group
+      class="flex flex-col pb-px">
       <LazyMatchCard
-        :key="index"
+        v-for="match in pagedMatches"
+        :key="match.matchId"
         :puuid="summoner?.puuid"
-        :match="item" />
-    </VList>
+        :match="match"></LazyMatchCard>
+    </TransitionScalePop>
 
     <div
       v-else
-      class="grid h-64 w-220 place-items-center font-medium">
+      class="grid h-64 w-210 place-items-center font-medium">
       No matches found with these filters.
     </div>
-    <!--
+
     <Pagination
       v-model:page="currentPage"
       :total="matches?.length"
@@ -68,7 +59,7 @@ onMounted (() => {
       :sibling-count="1"
       :show-edges="false"
       :items-per-page="itemsPerPage"
-      class="mx-0 max-w-220 justify-center justify-self-start pt-8">
+      class="mx-0 max-w-210 justify-center justify-self-start pt-8">
       <PaginationContent v-slot="{ items }">
         <PaginationFirst class="disabled:hidden" />
         <PaginationPrev
@@ -92,6 +83,6 @@ onMounted (() => {
           class="btn-square disabled:hidden" />
         <PaginationLast class="disabled:hidden" />
       </PaginationContent>
-    </Pagination> -->
+    </Pagination>
   </div>
 </template>

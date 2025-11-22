@@ -6,7 +6,6 @@ definePageMeta({
   alias: '/sign-up',
   description: 'Login with your Riot, Google, or Discord account.',
   icon: 'gear',
-  layout: 'basic',
   search: '!user',
 })
 

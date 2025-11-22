@@ -22,22 +22,25 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
   "simpleDescription": "Activate to remove all crowd control debuffs and grant massive Move Speed",
   "nicknames": [
-    "merc scim"
+    "merc scim",
+    "qss",
+    "quicksilver sash",
+    "silvermere dawn"
   ],
   "active": [
     {
       "name": "Quicksilver",
-      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 1.5 seconds.",
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 2 seconds.",
       "unique": true
     }
   ],
   "stats": {
-    "attackDamage": 40,
+    "attackDamage": 50,
     "lifesteal": 10,
-    "magicResistance": 40
+    "magicResistance": 35
   },
   "shop": {
     "prices": {

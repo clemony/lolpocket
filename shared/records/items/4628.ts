@@ -22,11 +22,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
   "simpleDescription": "Immobilizing a champion causes lightning to strike them",
   "nicknames": [
-    "snipe",
-    "lock on"
+    "lock on",
+    "snipe"
   ],
   "passives": [
     {
@@ -42,14 +42,14 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "abilityPower": 115,
+    "abilityPower": 125,
     "abilityHaste": 25
   },
   "shop": {
     "prices": {
-      "total": 2800,
+      "total": 2750,
       "combined": 200,
-      "sell": 1120
+      "sell": 1100
     },
     "tags": [
       "MAGE"

@@ -1,5 +1,5 @@
-import type { SummonerReturn } from "@server-types"
 import { getApiPath, riotGet } from "riot"
+import type { SummonerReturn } from "~~/server/types"
 
 export function fetchSummonerByPuuid(puuid: string, region: string) {
   return riotGet<SummonerReturn>(

@@ -17,13 +17,16 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3179_assassin_t3_umbralglaive.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3179_assassin_t3_umbralglaive.png",
   "simpleDescription": "Provides trap and ward detection periodically",
+  "nicknames": [
+    "lethality"
+  ],
   "passives": [
     {
       "name": "Blackout",
       "cooldown": "90",
-      "effects": "When near an enemy stealthed <img src=\"/img/icons/ward.webp\" class=\"tip-icon\" />ward or <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon\" />trap, gain <i>Blackout</i> for 8 seconds.",
+      "effects": "When spotted by enemy stealthed <img src=\"/img/icons/wards.webp\" class=\"tip-icon\" />wards or <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon\" />traps, gain <i>Blackout</i> for 8 seconds.",
       "range": 400,
       "unique": true
     },

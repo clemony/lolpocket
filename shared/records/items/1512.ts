@@ -5,9 +5,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1512_supermechpowerfield.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1512_supermechpowerfield.png",
   "passives": [
     {
+      "name": "Super Mech Power Field",
       "effects": "Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance.",
       "unique": true
     }

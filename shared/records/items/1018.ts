@@ -9,6 +9,11 @@ const item: Item =  {
       "gold": 1300
     },
     {
+      "id": 123430,
+      "name": "Rite of Ruin",
+      "gold": 3000
+    },
+    {
       "id": 3086,
       "name": "Zeal",
       "gold": 1200
@@ -17,6 +22,11 @@ const item: Item =  {
       "id": 3095,
       "name": "Stormrazor",
       "gold": 3000
+    },
+    {
+      "id": 3039,
+      "name": "Atma's Reckoning",
+      "gold": 2900
     },
     {
       "id": 6676,
@@ -37,12 +47,17 @@ const item: Item =  {
       "id": 3508,
       "name": "Essence Reaver",
       "gold": 2900
+    },
+    {
+      "id": 667666,
+      "name": "The Collector",
+      "gold": 3000
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1018_base_t1_cloakagility.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1018_base_t1_cloakagility.png",
   "simpleDescription": "Increases critical strike chance",
   "stats": {
     "criticalStrikeChance": 15

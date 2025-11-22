@@ -8,7 +8,7 @@ defineOptions({
 const props = withDefaults(
   defineProps<{
     class?: HTMLAttributes['class']
-    summoner: Summoner | Partial<Summoner>
+    summoner?: Summoner
     placement?: Side
     theme?: string
     size?: ToggleVariants['size']
@@ -27,20 +27,21 @@ const props = withDefaults(
 )
 
 const forwarded = useForwardProps(props)
+const puuid = computed (() => props.summoner?.puuid)
 </script>
 
 <template>
   <ToggleGroup v-model:model-value="as().settings.favorite_summoners">
     <ToggleGroupItem
-
-      :value="summoner.puuid"
+      v-if="puuid"
+      :value="puuid"
       placement="left"
       on="base"
       v-bind="forwarded"
       variant="outline"
       :class="cn('', toggleVariants({ variant, on, size, base }), props.class)">
       <Icon
-        :name="as().settings.favorite_summoners.includes(summoner.puuid) ? 'heart-sm' : 'heart-sm-outline'"
+        :name="as().settings.favorite_summoners.includes(puuid) ? 'heart-sm' : 'heart-sm-outline'"
         :class="cn('size-8.5 **:stroke-[0.7] group-not-on/toggle:text-bc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination',
         )" />
     </ToggleGroupItem>

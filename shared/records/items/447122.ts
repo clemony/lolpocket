@@ -5,7 +5,7 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447122_blackholegauntlet.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447122_blackholegauntlet.png",
   "passives": [
     {
       "name": "Accretion",
@@ -16,7 +16,7 @@ const item: Item =  {
   "active": [
     {
       "name": "Dark Star",
-      "effects": "Summon a black hole at the target location after a 0.5-second delay that lasts for 2 (+0.1 per 100 <b>bonus</b> health) seconds. Enemies within are dealt 30 – 100 (based on level) magic damage (+6.5% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowed by 35%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second.",
+      "effects": "Summon a black hole at the target location after a 0.5-second delay that lasts for 2 (+0.1 per 100 <b>bonus</b> health) seconds. Enemies within are dealt 30 – 100 (based on level) magic damage (+5% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowed by 30%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second.",
       "unique": true
     }
   ],

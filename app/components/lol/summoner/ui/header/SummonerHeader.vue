@@ -20,8 +20,18 @@ const open = shallowRef<boolean>(false)
           open = false
         }">
         <SummonerIcon
-          class="pointer-events-auto size-20 rounded-full"
+          class="pointer-events-none size-20 rounded-full transition-all
+          duration-500 ease-in-out group-hover/icon:brightness-40
+          group-data-[state=open]/icon:brightness-40"
           :summoner />
+
+        <icon
+          name="images"
+          class="
+          pointer-events-none absolute z-2 size-6 text-nc! opacity-0
+          transition-all duration-500 ease-in-out group-hover/icon:opacity-80
+          group-data-[state=open]/icon:opacity-100
+        " />
       </GlassSplashBrowser>
     </template>
     <!-- header name -->

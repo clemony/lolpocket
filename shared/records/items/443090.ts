@@ -5,7 +5,7 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/443090_reaperstoll.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/443090_reaperstoll.png",
   "passives": [
     {
       "name": "Reap",
@@ -14,13 +14,13 @@ const item: Item =  {
     },
     {
       "name": "Sow",
-      "effects": "Increases the attack speed gained from all sources by 25%.",
+      "effects": "Increases the attack speed gained from all sources by 15%.",
       "unique": true
     }
   ],
   "stats": {
     "attackSpeed": 50,
-    "percentMovespeed": 10
+    "percentMovespeed": 5
   },
   "shop": {
     "prices": {

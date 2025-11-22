@@ -7,7 +7,7 @@ interface RoleStats {
 }
 
 export function useChampionRoleStats(
-  matches: MatchData[],
+  filteredMatches: MatchData[],
   championName: string
 ): RoleStats[] {
   const grouped: Record<string, RoleStats> = {}

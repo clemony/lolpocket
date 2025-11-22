@@ -41,7 +41,7 @@ export function getChampionStatsMap(
 ): Map<string, ChampionStats> {
   const map = new Map<string, ChampionStats>()
 
-  const player = filteredMatches.map((m) =>
+  const player = matches.map((m) =>
     m.participants.find((p) => p.puuid === puuid)
   )
 

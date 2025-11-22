@@ -1,14 +1,14 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import type { Skin } from '../../types/types.import'
-import { resolvePath } from '../resolvePath'
-import { cleanImageLink, cleanImageNum, handleImageId } from '../utils'
-import { markUpdate } from '../utils/markUpdate'
+import fs from "node:fs"
+import path from "node:path"
+import type { Skin } from "../../types/types.import"
+import { resolvePath } from "../resolvePath"
+import { cleanImageLink, cleanImageNum } from "../utils"
+import { markUpdate } from "../utils/markUpdate"
 
-const championsPath = resolvePath('./champions/raw/champions-raw-meraki.json')
-const outputFull = path.resolve('./shared/indexes/skin-index.ts')
-const outputTile = path.resolve('./shared/indexes/champion-key-to-tile.ts')
-const outputBase = path.resolve('./shared/indexes/skins-base.ts')
+/* const championsPath = resolvePath("./champions/raw/champions-raw-meraki.json") */
+const outputFull = path.resolve("./shared/indexes/skin-index.ts")
+const outputTile = path.resolve("./shared/indexes/champion-key-to-tile.ts")
+const outputBase = path.resolve("./shared/indexes/skins-base.ts")
 
 export interface RawSkin {
   name?: string
@@ -17,9 +17,25 @@ export interface RawSkin {
   tilePath: string
   uncenteredSplashPath: string
 }
+const dataDirectoryM = resolvePath("./champions/raw/champions")
 
-const championsRaw = fs.readFileSync(championsPath, 'utf-8')
-const champions = JSON.parse(championsRaw)
+// ---------- Load raw Meraki data from directory ----------
+const champions: Record<string, any> = {}
+const filenames = fs
+  .readdirSync(dataDirectoryM)
+  .filter((f) => f.endsWith(".json"))
+
+for (const filename of filenames) {
+  const key = path.basename(filename, ".json")
+  try {
+    const raw = fs.readFileSync(path.join(dataDirectoryM, filename), "utf-8")
+    const parsed: any = JSON.parse(raw)
+
+    champions[key] = parsed
+  } catch (err) {
+    console.warn(`⚠️ Failed to parse Meraki file ${filename}`, err)
+  }
+}
 
 const fullSkins: Record<string, Skin[]> = {}
 const primarySkins: Record<string, Skin> = {}
@@ -54,7 +70,7 @@ for (const key in champions) {
   }
  */
   const allSkins = skins
-    .filter(skin => skin.splashPath && skin.loadScreenPath)
+    .filter((skin) => skin.splashPath && skin.loadScreenPath)
     .map((skin) => {
       return {
         id: String(cleanImageNum(skin.tilePath)),
@@ -65,8 +81,8 @@ for (const key in champions) {
     })
 
   const allTile = skins
-    .filter(skin => skin.tilePath)
-    .map(skin => String(cleanImageLink(skin.tilePath)))
+    .filter((skin) => skin.tilePath)
+    .map((skin) => String(cleanImageLink(skin.tilePath)))
 
   if (allSkins.length > 0) {
     fullSkins[key] = allSkins

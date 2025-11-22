@@ -5,12 +5,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2140_class_t0_elixirofwrath.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/autoatlas/smallicons/2140_elixirofwrath_64px.milkshake_env.png",
   "simpleDescription": "Temporarily grants Attack Damage and heals you when dealing physical damage to champions.",
   "nicknames": [
-    "red potion",
-    "fortitude",
-    "rage"
+    "consumable",
+    "red"
   ],
   "stats": {},
   "shop": {

@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import { useForwardProps } from 'reka-ui'
-
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes['class']
+    state?: SummonerInject
     placement?: Side
     theme?: string
     size?: ButtonVariants['size']
-    variant: ButtonVariants['variant']
+    variant?: ButtonVariants['variant']
   }>(),
   {
     placement: 'top',
@@ -15,27 +13,23 @@ const props = withDefaults(
   },
 )
 
-const delegatedProps = reactiveOmit(props, 'class')
-
-const forwarded = useForwardProps(delegatedProps)
-
-const { fetchNewMatches, summoner } = useSummonerInject()
+const { loadNewer, summoner } = props.state ? props.state : useSummonerInject()
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => fetchNewMatches(),
+  () => loadNewer(),
   120_000,
-  summoner.value.puuid,
+  summoner?.value?.puuid,
   'match-refresh',
 )
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
-    ? summoner.value.updatedMatch
-      ? `Last updated ${formatTimeAgo(summoner.value.updatedMatch)}`
+    ? summoner?.value?.updatedMatch
+      ? `Last updated ${formatTimeAgo(summoner?.value?.updatedMatch)}`
       : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
 )
@@ -44,7 +38,11 @@ const tippy = computed(() =>
 <template>
   <Button
     v-tippy="{ content: tippy ?? null, theme, placement }"
-    v-bind="forwarded"
+    size="c-14"
+    placement="left"
+    variant="floating"
+    class="[&_svg]:size-4.25"
+
     :class="
       cn(
         'shrink-0 p-0',
@@ -52,7 +50,7 @@ const tippy = computed(() =>
           'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
             cooldown,
         },
-        props.class,
+
       )
     "
     @click="update()">
@@ -63,9 +61,9 @@ const tippy = computed(() =>
         name="reset"
         :class="
           cn('size-5 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
-            {
-              'animate-rotate': isLoading,
-            },
+             {
+               'animate-rotate': isLoading,
+             },
           )
         " />
 

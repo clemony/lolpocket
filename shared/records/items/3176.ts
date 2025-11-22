@@ -12,7 +12,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_syncronisedsouls_64.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_syncronisedsouls_64.png",
+  "nicknames": [
+    "boots"
+  ],
   "passives": [
     {
       "name": "Voidborn",
@@ -21,7 +24,7 @@ const item: Item =  {
     },
     {
       "name": "Noxian Synchrony",
-      "effects": "Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed while out-of-combat.",
+      "effects": "Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed, going on cooldown for 6 seconds upon taking or dealing damage.",
       "unique": true
     }
   ],

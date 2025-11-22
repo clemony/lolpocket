@@ -5,8 +5,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3177_aram_t1_guardiansblade.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3177_aram_t1_guardiansblade.png",
   "simpleDescription": "Good starting item for attackers",
+  "nicknames": [
+    "dblade"
+  ],
   "stats": {
     "attackDamage": 30,
     "health": 150,

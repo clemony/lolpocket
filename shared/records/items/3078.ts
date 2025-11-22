@@ -22,12 +22,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
   "simpleDescription": "Tons of Damage",
   "nicknames": [
+    "Spellblade",
     "triforce",
     "tons of damage",
-    "3333"
+    "33333"
   ],
   "passives": [
     {

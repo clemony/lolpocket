@@ -9,11 +9,6 @@ const item: Item =  {
       "gold": 3000
     },
     {
-      "id": 2015,
-      "name": "Kircheis Shard",
-      "gold": 700
-    },
-    {
       "id": 6670,
       "name": "Noonquiver",
       "gold": 1300
@@ -32,6 +27,11 @@ const item: Item =  {
       "id": 3004,
       "name": "Manamune",
       "gold": 2900
+    },
+    {
+      "id": 2015,
+      "name": "Kircheis Shard",
+      "gold": 700
     },
     {
       "id": 2019,
@@ -122,7 +122,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png",
   "simpleDescription": "Slightly increases Attack Damage",
   "stats": {
     "attackDamage": 10

@@ -1,5 +1,5 @@
-import type { RegionReturn } from "@server-types"
 import { riotGet } from "riot"
+import type { RegionReturn } from "~~/server/types"
 
 export function fetchRegionByPuuid(puuid: string) {
   return riotGet<RegionReturn>(

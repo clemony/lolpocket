@@ -16,6 +16,11 @@ const item: Item =  {
       "gold": 2600
     },
     {
+      "id": 123430,
+      "name": "Rite of Ruin",
+      "gold": 3000
+    },
+    {
       "id": 4646,
       "name": "Stormsurge",
       "gold": 2800
@@ -49,7 +54,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3113_mage_t2_aetherwisp.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3113_mage_t2_aetherwisp.png",
   "simpleDescription": "Increases Ability Power and Move Speed",
   "nicknames": [
     "spooky ghost"

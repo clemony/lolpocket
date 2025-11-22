@@ -12,8 +12,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_mercury_64.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_mercury_64.png",
   "simpleDescription": "Increases Move Speed and Cooldown Reduction",
+  "nicknames": [
+    "boots"
+  ],
   "passives": [
     {
       "name": "Noxian Persistence",

@@ -8,6 +8,7 @@ import {
   DropdownMenuPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
+import type { TippyAnimation, TippyTheme } from '~/types/types.tippy'
 
 const props = withDefaults(
   defineProps<

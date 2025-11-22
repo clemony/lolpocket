@@ -19,7 +19,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png",
   "nicknames": [
     "boots"
   ],
@@ -31,7 +31,7 @@ const item: Item =  {
     },
     {
       "name": "Synchrony",
-      "effects": "Gain 45 <b>bonus</b> movement speed while out-of-combat.",
+      "effects": "Gain 45 <b>bonus</b> movement speed, going on cooldown for 6 seconds upon taking or dealing damage.",
       "unique": true
     }
   ],

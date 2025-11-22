@@ -19,15 +19,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidboots.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidboots.png",
   "simpleDescription": "Spend Mana to recover Health",
   "nicknames": [
-    "boots"
+    "Synchronized Souls"
   ],
   "passives": [
     {
       "name": "Synchrony",
-      "effects": "Gain 10 <b>bonus</b> movement speed while out-of-combat.",
+      "effects": "Gain 10 <b>bonus</b> movement speed, going on cooldown for 6 seconds upon taking or dealing damage.",
       "unique": true
     },
     {

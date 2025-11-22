@@ -14,7 +14,6 @@ useSeoMeta({
 
 definePageMeta({
   name: 'home',
-  layout: 'basic',
   meta: {
     title: 'lolpocket',
     icon: 'teenyicons:home-alt-outline',

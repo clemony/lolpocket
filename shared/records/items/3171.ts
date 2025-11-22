@@ -12,7 +12,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_ionianboots_64.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_ionianboots_64.png",
+  "nicknames": [
+    "boots"
+  ],
   "passives": [
     {
       "name": "Ionian Insight",

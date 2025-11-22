@@ -5,7 +5,7 @@ const item: Item =  {
   "specialRecipe": 3004,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_marksman_t3_muramana.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_marksman_t3_muramana.png",
   "passives": [
     {
       "name": "Awe",

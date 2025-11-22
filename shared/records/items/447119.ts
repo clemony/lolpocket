@@ -5,7 +5,7 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447119_lightningrod.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/447119_lightningrod.png",
   "passives": [
     {
       "name": "Call Lightning",
@@ -21,7 +21,6 @@ const item: Item =  {
   ],
   "stats": {
     "armor": 30,
-    "attackSpeed": 30,
     "health": 500,
     "magicResistance": 30,
     "percentMovespeed": 8

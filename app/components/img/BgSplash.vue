@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { circOut, easeInOut, motion } from 'motion-v'
+import { easeInOut, motion } from 'motion-v'
 
 const {
   class: className,
@@ -8,7 +8,7 @@ const {
   slice,
 } = defineProps<{
   class?: HTMLAttributes['class']
-  img: string
+  img: string | null
   size: 'header' | 'full'
   slice?: boolean
 }>()
@@ -20,13 +20,14 @@ const y = useTransform(scrollY, [0, 200], ['0%', '2%'], {
   ease: easeInOut,
 })
 
-const bg = computed(
-  () => `url('${img(i.replace('tile', 'centered'), { quality: 100 })}')`,
-)
+const bg = computed(() => {
+  if (!i)
+    return null
+  return `url('${img(i, { quality: 100 })}')`
+})
 </script>
 
 <template>
-  <!--  translate-x-[30%] -->
   <div
     :class="
       cn('absolute -top-16 isolate flex w-screen justify-end bg-tint-b2/30 dss', {
@@ -37,14 +38,14 @@ const bg = computed(
     <div
       :class="
         cn('before:from-bg-tint-b2/60 before:absolute before:z-1 before:size-full before:bg-linear-to-r before:to-transparent pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen grid-rows-1 flex-nowrap justify-end justify-items-end',
-          {
-            'mask-l-from-20% mask-l-to-66% before:from-0% before:to-75% ':
-              slice,
-            'mask-l-from-30% mask-l-to-70% before:from-45% before:to-75%':
-              !slice,
-            '': size === 'header',
-            '': size === 'full',
-          },
+           {
+             'mask-l-from-20% mask-l-to-66% before:from-0% before:to-75% ':
+               slice,
+             'mask-l-from-30% mask-l-to-70% before:from-45% before:to-75%':
+               !slice,
+             '': size === 'header',
+             '': size === 'full',
+           },
         )
       ">
       <motion.div

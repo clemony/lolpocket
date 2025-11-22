@@ -49,11 +49,6 @@ const item: Item =  {
       "gold": 3000
     },
     {
-      "id": 3039,
-      "name": "Atma's Reckoning",
-      "gold": 2900
-    },
-    {
       "id": 6676,
       "name": "The Collector",
       "gold": 3000
@@ -104,6 +99,11 @@ const item: Item =  {
       "gold": 3300
     },
     {
+      "id": 667666,
+      "name": "The Collector",
+      "gold": 3000
+    },
+    {
       "id": 6701,
       "name": "Opportunity",
       "gold": 2700
@@ -112,7 +112,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1037_class_t1_pickaxe.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1037_class_t1_pickaxe.png",
   "simpleDescription": "Moderately increases Attack Damage",
   "stats": {
     "attackDamage": 25

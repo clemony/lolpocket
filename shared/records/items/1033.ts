@@ -9,6 +9,16 @@ const item: Item =  {
       "gold": 850
     },
     {
+      "id": 323190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2600
+    },
+    {
+      "id": 4632,
+      "name": "Verdant Barrier",
+      "gold": 1600
+    },
+    {
       "id": 3211,
       "name": "Spectre's Cowl",
       "gold": 1250
@@ -22,16 +32,6 @@ const item: Item =  {
       "id": 3111,
       "name": "Mercury's Treads",
       "gold": 1250
-    },
-    {
-      "id": 323190,
-      "name": "Locket of the Iron Solari",
-      "gold": 2600
-    },
-    {
-      "id": 4632,
-      "name": "Verdant Barrier",
-      "gold": 1600
     },
     {
       "id": 3190,
@@ -67,7 +67,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1033_base_t1_magicmantle.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1033_base_t1_magicmantle.png",
   "simpleDescription": "Slightly increases Magic Resist",
   "stats": {
     "magicResistance": 20

@@ -1,4 +1,4 @@
-// Updated Patch 25.22 - 11/19/2025 02:34:53 PM CST
+// Updated Patch 25.23 - 11/22/2025 10:26:25 AM CST
 
 export const itemIndex: ItemIndex[] = [
   {
@@ -140,6 +140,11 @@ export const itemIndex: ItemIndex[] = [
     "id": 1103,
     "key": "item",
     "name": "Mosstomper Seedling"
+  },
+  {
+    "id": 1111,
+    "key": "item",
+    "name": "Jarvan I's"
   },
   {
     "id": 1500,

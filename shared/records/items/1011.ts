@@ -31,6 +31,11 @@ const item: Item =  {
       "gold": 3100
     },
     {
+      "id": 3039,
+      "name": "Atma's Reckoning",
+      "gold": 2900
+    },
+    {
       "id": 2502,
       "name": "Unending Despair",
       "gold": 2800
@@ -79,7 +84,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1011_class_t2_giantsbelt.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1011_class_t2_giantsbelt.png",
   "simpleDescription": "Greatly increases Health",
   "stats": {
     "health": 350

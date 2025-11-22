@@ -14,14 +14,14 @@ const item: Item =  {
       "gold": 1200
     },
     {
-      "id": 2019,
-      "name": "Steel Sigil",
-      "gold": 1100
-    },
-    {
       "id": 323190,
       "name": "Locket of the Iron Solari",
       "gold": 2600
+    },
+    {
+      "id": 2019,
+      "name": "Steel Sigil",
+      "gold": 1100
     },
     {
       "id": 2421,
@@ -77,7 +77,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1029_base_t1_clotharmor.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1029_base_t1_clotharmor.png",
   "simpleDescription": "Slightly increases Armor",
   "stats": {
     "armor": 15

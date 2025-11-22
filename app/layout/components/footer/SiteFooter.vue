@@ -7,6 +7,7 @@ const { class: className } = defineProps<{
 <template>
   <div
     v-once
+    :style="{ height: '498px' }"
     :class="cn('bottom-0 z-1 mb-0 grid w-full auto-rows-max', className)">
     <SiteMap />
 

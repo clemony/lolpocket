@@ -4,11 +4,14 @@ export async function removeComment(
   comment: CommentData,
   removed: "mod" | "user"
 ) {
-  const data = await $fetch<CommentData>("/supabase/update/comment.remove", {
-    body: { comment, removed },
-    headers: useRequestHeaders(["cookie"]),
-    method: "POST",
-  })
+  const data = await $fetch<CommentData>(
+    "/api/supabase/update/comment.remove",
+    {
+      body: { comment, removed },
+      headers: useRequestHeaders(["cookie"]),
+      method: "POST",
+    }
+  )
   if (!data) {
     sendErrorToast()
   } else {

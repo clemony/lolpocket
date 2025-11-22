@@ -1,100 +1,109 @@
-import { bgArt } from "#shared/data"
-import type { MatchFilter } from "~/stores"
-
 export const SummonerKey = Symbol("SummonerProvider")
+import { bgArt } from "#shared/data"
 
-export async function useSummonerProvider(identifier?: string) {
+export function useSummonerProvider(identifier?: string) {
+  const currentPuuid = ref(identifier ?? null)
+  const account = shallowRef<Account>(null)
+
   const loading = ref(false)
   const ready = ref(false)
-  const summoner = ref<Summoner | null>(null)
-  const currentPuuid = ref<string | null>(
-    typeof identifier === "string" ? identifier : null
-  )
+  const summoner = shallowRef(null)
 
-  const findSummoner = async (options?: { force?: boolean }) => {
+  async function findSummoner() {
     if (!currentPuuid.value) return
+
     loading.value = true
-    ready.value = false
+    const result = await ss().resolveOrFetch(currentPuuid.value)
+    summoner.value = result
+    currentPuuid.value = result.puuid
+    account.value = await acc().getByPuuid(currentPuuid.value)
+    console.log("🥸 - findSummoner - acc():", acc().accounts)
+    console.log("🥸 - findSummoner - account.value:", account.value)
+    await refreshLocal()
 
-    try {
-      const resolved = await ss().resolveOrFetch(currentPuuid.value)
-
-      currentPuuid.value = resolved.puuid
-      summoner.value = resolved
-    } finally {
-      loading.value = false
-      ready.value = true
-    }
+    loading.value = false
+    ready.value = true
   }
 
-  const { matches, filteredMatches, filteredChampionList, loadCachedMatches } =
-    await useMatches(currentPuuid.value)
+  const {
+    matches,
+    loadNewer,
+    loadOlder,
+    refreshLocal,
+    loading: matchesLoading,
+  } = useMatches(summoner)
 
-  // --- FETCH MASTERY ---
+  const {
+    filter,
+    setFilter,
+    clearFilters,
+    filteredMatches,
+    filteredChampionList,
+  } = useMatchFilters(currentPuuid, matches)
+
+  /* mastery */
   const fetchMastery = async () => {
     if (!currentPuuid.value) return null
     return await fetchSummonerMastery(currentPuuid.value)
   }
 
-  // --- SPLASH ---
   const splash = computed(() => {
-    if (!matches.value.length) return getRandom(Object.values(bgArt))
-    const c = useChampions(currentPuuid.value, matches.value)?.top()?.key
-    if (!c) return getRandom(Object.values(bgArt))
-    else return getSplash(c, "uncentered", getRandom(skinIndex[c]))
+    if (account && account.value?.splash) return account.value?.splash
+    const { top } = useChampions(summoner?.value?.puuid, matches?.value)
+    if (top()?.key && top()?.key !== "0")
+      return getSplash(
+        top()?.key,
+        "uncentered",
+        getRandom(skinIndex[top()?.key])
+      )
+    //
+    return getRandom(Object.values(bgArt))
   })
+  watch(currentPuuid, findSummoner, { immediate: true })
 
-  /* Watch Puuid ---------------------------------------------------- */
-
-  watch(currentPuuid, () => findSummoner(), { immediate: true })
-
-  /* State ---------------------------------------------------------- */
-
-  const state = {
+  const api = {
     summoner,
+    account,
+    splash,
+    //splash: () => useSummonerSplash(account, summoner, matches.value),
+    //
+    matches,
+    filteredMatches,
+    filteredChampionList,
 
-    // data
-    allies: () => useRepeatedTeammates(summoner.value.puuid, matches.value),
+    //
     fetchMastery,
     roles: () => useMatchRoles(summoner.value.puuid, matches),
-
-    // champions
+    allies: () => useRepeatedTeammates(summoner.value.puuid, matches.value),
     champions: (opt?: UseChampionOptions) =>
       useChampions(
         summoner.value.puuid,
         opt?.filtered ? filteredChampionList.value : matches.value,
         opt?.champion
       ),
-    findSummoner,
-    splash,
 
-    //matches
-    filteredMatches,
-    matches,
-    fetchNewMatches: async () => {
-      if (!summoner.value) return
-      matches.value = await useFetchMatches(summoner.value)
-      summoner.value.updatedMatch = Date.now()
-    },
-    loadMatches: () => loadCachedMatches,
+    filter,
+    setFilter,
+    clearFilters,
 
-    // loading
-    forceReload: () => findSummoner({ force: true }),
-    loading,
+    loadNewer,
+    loadOlder,
+
+    loading: computed(() => loading.value || matchesLoading.value),
     ready,
   }
 
-  provide(SummonerKey, state)
-  return state
+  provide(SummonerKey, api)
+  return api
 }
 
 export function useSummonerInject() {
-  const state = inject<SummonerInject>(SummonerKey)
+  const api = inject<SummonerInject>(SummonerKey)
 
-  if (!state) {
+  if (!api) {
     throw new Error(
       "No Summoner provider found. Make sure provideSummoner is called in a parent component."
     )
   }
-  return state
+  return api
 }

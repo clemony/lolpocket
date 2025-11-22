@@ -26,6 +26,11 @@ const item: Item =  {
       "gold": 2800
     },
     {
+      "id": 124011,
+      "name": "Sword of Blossoming Dawn",
+      "gold": 2350
+    },
+    {
       "id": 3504,
       "name": "Ardent Censer",
       "gold": 2200
@@ -74,7 +79,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3114_mage_t2_forbiddenidol.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3114_mage_t2_forbiddenidol.png",
   "simpleDescription": "Increases Heal and Shield Power, Mana Regeneration, and Cooldown Reduction",
   "stats": {
     "healAndShieldPower": 8,

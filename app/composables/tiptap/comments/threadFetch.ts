@@ -1,10 +1,11 @@
 export async function fetchThread(thread_id: string) {
-  const { comments, authors } = await $fetch("/supabase/fetch/thread", {
-    body: { thread_id },
-    method: "POST",
-  })
-  console.log("📎 - fetchThread - comments:", comments)
-  console.log("📎 - fetchThread - authors:", authors)
+  const { comments, authors } = await $fetch<ThreadReturn>(
+    "/api/supabase/fetch/thread",
+    {
+      body: { thread_id },
+      method: "POST",
+    }
+  )
 
   const accs = useAccountsStore()
 

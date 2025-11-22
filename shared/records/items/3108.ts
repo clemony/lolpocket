@@ -31,6 +31,11 @@ const item: Item =  {
       "gold": 2900
     },
     {
+      "id": 123430,
+      "name": "Rite of Ruin",
+      "gold": 3000
+    },
+    {
       "id": 3003,
       "name": "Archangel's Staff",
       "gold": 2900
@@ -94,7 +99,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
   "simpleDescription": "Increases Ability Power and Cooldown Reduction",
   "nicknames": [
     "book"

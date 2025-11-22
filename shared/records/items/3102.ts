@@ -17,11 +17,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
   "simpleDescription": "Periodically blocks enemy abilities",
   "nicknames": [
     "bv",
-    "spellshield"
+    "spellshield",
+    "spell shield"
   ],
   "passives": [
     {

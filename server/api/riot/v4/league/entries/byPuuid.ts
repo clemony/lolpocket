@@ -1,9 +1,9 @@
+import { getApiPath, riotGet } from "riot"
 import type {
   RankedEntry,
   RankedEntryResponse,
   RankedResponse,
-} from "@server-types"
-import { getApiPath, riotGet } from "riot"
+} from "~~/server/types"
 
 export async function fetchRankedByPuuid(puuid: string, region: string) {
   const league = await riotGet<RankedEntryResponse[]>(

@@ -7,16 +7,16 @@ const { class: className, variant = 'shadow' } = defineProps<{
   variant?: any
 }>()
 
-const state = useSummonerInject()
+const { loading, loadNewer, summoner } = useSummonerInject()
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => state.fetchNewMatches(),
+  () => loadNewer(),
   120_000,
-  state.summoner.value.puuid,
+  summoner.value.puuid,
   'match-refresh',
 )
 
@@ -50,10 +50,10 @@ const variants = {
       :variants="buttVariants"
       :class="
         cn('relative flex h-11 w-full max-w-full flex-row flex-nowrap items-center justify-start gap-3 p-0',
-          {
-            'pointer-events-none w-full !bg-b2/80 btn-active cursor-not-allowed':
-              cooldown,
-          },
+           {
+             'pointer-events-none w-full !bg-b2/80 btn-active cursor-not-allowed':
+               cooldown,
+           },
         )
       "
       @click="update()">
@@ -67,9 +67,9 @@ const variants = {
           name="mingcute:refresh-2-line"
           :class="
             cn('absolute size-5 dst transition-all duration-200 group-hover/load:opacity-100',
-              {
-                'animate-rotate': state.loading,
-              },
+               {
+                 'animate-rotate': loading,
+               },
             )
           " />
 

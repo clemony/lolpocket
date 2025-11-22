@@ -24,10 +24,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3140_marksman_t2_quicksilversash.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3140_marksman_t2_quicksilversash.png",
   "simpleDescription": "Activate to remove all crowd control debuffs",
   "nicknames": [
-    "qss"
+    "qss",
+    "mercurial scimitar",
+    "silvermere dawn"
   ],
   "active": [
     {

@@ -5,14 +5,14 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3131_fighter_t3_swordofthedivine.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3131_fighter_t3_swordofthedivine.png",
   "nicknames": [
     "sotd"
   ],
   "passives": [
     {
       "name": "Excoriate",
-      "effects": "<img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />Critical strikes gain random <b>bonus</b> critical strike damage that scales up to 50% of critical strike chance.",
+      "effects": "Gain a random amount of <b>bonus</b> critical strike damage that scales up to 50% of your critical strike chance, with the value of this amount changing every 0.25 seconds.",
       "unique": true
     }
   ],

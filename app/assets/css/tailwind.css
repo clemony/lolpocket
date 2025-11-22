@@ -54,7 +54,8 @@
     font-size: 12px;
   }
 
-  body {
+ html, body {
+    @apply overflow-x-hidden  ;
   }
 }
 

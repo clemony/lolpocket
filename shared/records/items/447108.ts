@@ -5,7 +5,10 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7108_runecarver.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7108_runecarver.png",
+  "nicknames": [
+    "energize"
+  ],
   "passives": [
     {
       "name": "Energized",
@@ -25,7 +28,7 @@ const item: Item =  {
   ],
   "stats": {
     "abilityPower": 80,
-    "percentMovespeed": 8,
+    "percentMovespeed": 4,
     "abilityHaste": 20
   },
   "shop": {

@@ -5,15 +5,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1056_mage_t1_doransring.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1056_mage_t1_doransring.png",
   "simpleDescription": "Good starting item for casters",
   "nicknames": [
     "dring"
   ],
   "passives": [
     {
-      "name": "Restoration",
-      "effects": "Restore 1.25 mana every second. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal 0.55 health instead.",
+      "name": "Drain",
+      "effects": "Restore 1 mana every second. Dealing damage to an enemy champion increases the restoration to 2 mana for the next 5 seconds. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal for 45% of the value instead.",
       "unique": true
     },
     {

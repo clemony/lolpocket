@@ -1,4 +1,4 @@
-export function useMatchItems(puuid: string, matches: MatchData[]) {
+export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
   // @todo probably fix
 
   const player = filteredMatches.map((m) => ({

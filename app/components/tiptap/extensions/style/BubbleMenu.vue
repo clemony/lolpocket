@@ -2,6 +2,7 @@
 import type { Editor } from '@tiptap/vue-3'
 import { isTextSelection } from '@tiptap/core'
 import { BubbleMenu } from '@tiptap/vue-3/menus'
+import type { TippyTheme } from '~/types/types.tippy'
 
 const { editor, theme = 'base' } = defineProps<{
   editor: Editor | null

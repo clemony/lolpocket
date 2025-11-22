@@ -22,10 +22,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3003_mage_t3_archangelstaff.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3003_mage_t3_archangelstaff.png",
   "simpleDescription": "Increases Ability Power based on maximum Mana",
   "nicknames": [
-    "aa"
+    "aa",
+    "seraph's embrace",
+    "tear"
   ],
   "passives": [
     {

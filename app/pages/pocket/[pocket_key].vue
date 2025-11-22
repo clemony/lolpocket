@@ -12,6 +12,7 @@ useSeoMeta({
   twitterTitle: '[twitter:title]'
 })
 definePageMeta({
+  layout: false,
   props: true,
   search: 'hidden',
 })
@@ -35,49 +36,17 @@ const selectedSet = computed(() => {
 </script>
 
 <template>
-  <TabLayout v-if="pocket && route.name !== 'pocket-core'">
-    <template #crumb>
-      <PocketMenubar />
-    </template>
-
-    <!-- splash -->
-
-    <template #background>
-      <BgSplash
-        v-memo="[pocket.icon]"
-        size="header"
-        :img="pocket?.icon" />
-    </template>
-
-    <template #background-slice>
-      <BgSplash
-        v-memo="[pocket.icon]"
-        size="header"
-        slice
-        :img="pocket?.icon" />
-    </template>
-
-    <template #header>
-      <PocketHeader :pocket="pocket" />
-    </template>
-
-    <div class="z-auto grid min-h-screen w-4/5 justify-self-center bg-b1 px-14">
-      <NuxtPage
-        v-if="pocket"
-        :pocket="pocket" />
-    </div>
-
-    <!--
-  -->
-
-    <!--   -->
-  </TabLayout>
-
-  <div
-    v-else
-    class="h-screen w-screen">
+  <NuxtLayout
+    v-if="pocket && route.name !== 'pocket-core'"
+    name="tab"
+    :pocket
+    class="z-auto grid min-h-screen w-4/5 justify-self-center bg-b1 px-14">
     <NuxtPage
       v-if="pocket"
       :pocket="pocket" />
-  </div>
+  </NuxtLayout>
+
+  <NuxtPage
+    v-else
+    :pocket="pocket" />
 </template>

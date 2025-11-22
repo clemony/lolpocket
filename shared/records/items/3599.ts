@@ -6,8 +6,11 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "requiredChampion": "Kalista",
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3599_kalistapassiveitem.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3599_kalistapassiveitem.png",
   "simpleDescription": "Kalista's spear that binds an Oathsworn Ally.",
+  "nicknames": [
+    "spear"
+  ],
   "active": [
     {
       "name": "Oathsworn Bond",

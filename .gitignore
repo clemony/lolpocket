@@ -15,31 +15,20 @@ node_modules
 logs
 *.log
 
+
+patch
+server/patch
+
 #notes
-**.no
-**.note
+*.no
+*.note
 .notes
-**/.notes/**
 notes
 .notes/**
 *.notes
 **/📌*
 
-#old
-**/📜*
-**/⌦*
 
-#todo
-**/🔜*
-
-#idea
-**/💭*
-
-#refactor
-**/🧼*
-#delete
-**/❌*
-**/🗑️*
 
 
 # Misc

@@ -81,10 +81,7 @@ const wrapperClass
           <p>Full name</p>
           {{ champion.fullName || champion.name }}
         </div>
-        <div :class="wrapperClass">
-          <p>Faction</p>
-          {{ champion.faction }}
-        </div>
+
         <p class="mt-4 pl-2 indent-2 leading-7 text-pretty">
           {{ champion.lore }}
         </p>

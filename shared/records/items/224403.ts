@@ -5,14 +5,19 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4403_goldenspatula.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4403_goldenspatula.png",
   "nicknames": [
-    "debug"
+    "spatch",
+    "urf",
+    "manatee",
+    "Quest",
+    "Urf's Champion",
+    "burn"
   ],
   "passives": [
     {
       "name": "Doing Something",
-      "effects": "You are permanently 20px|link= <b>On Fire!</b>, causing you to Burn nearby enemies every second for magic damage and reduce your cooldowns twice as fast as well as gain <b>bonus</b> movement speed while facing nearby enemy champions, <b>bonus</b> attack speed, and <b>bonus</b> mana regeneration. While <b>On Fire!</b>, however, you also take increased damage and reduce the effectiveness of incoming heals and shields.",
+      "effects": "You are permanently 20px|link= <b>On Fire!</b>, causing you to Burn enemies within 400 units every second for 26 – 43 (based on level) magic damage and reduce your abilities' cooldowns by 0.2 seconds every 0.25 seconds as well as gain 5% <b>bonus</b> movement speed, increased to 20% ms while facing nearby enemy champions, 20% <b>bonus</b> attack speed, 50 – 900 (based on level) <b>bonus</b> health, 1.5 <b>bonus</b> mana regeneration, and 4 <b>bonus</b> energy regeneration. While <b>On Fire!</b>, however, you also take (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />35%) increased damage and reduce the effectiveness of incoming heals and shields by 25%.",
       "unique": true
     }
   ],
@@ -24,12 +29,12 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "health": 350,
     "healthRegen": 200,
-    "lifesteal": 15,
     "magicResistance": 40,
     "mana": 350,
     "manaRegen": 200,
     "percentMovespeed": 10,
-    "abilityHaste": 20
+    "abilityHaste": 20,
+    "omnivamp": 15
   },
   "shop": {
     "prices": {

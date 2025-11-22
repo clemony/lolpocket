@@ -41,7 +41,7 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
     v-bind="forwarded">
     <DialogTrigger
       :class="
-        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
+        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-2 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
            props.class,
         )
       ">
@@ -124,7 +124,7 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
               @click="
                 emit(
                   'update:splash',
-                  getSplash(selectedChampion, 'centered', skin),
+                  getSplash(selectedChampion, 'uncentered', skin),
                 )
               " />
           </ListboxContent>

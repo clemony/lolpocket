@@ -20,7 +20,7 @@ const translateX = useTransform(sticky, [0, 1], ['0%', '8%'])
 const opacity = useTransform(sticky, [0, 1], ['1', '0.95'])
 
 // Individual tab transforms
-const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
+const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '1.6rem'])
 </script>
 
 <template>
@@ -43,9 +43,9 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
       }"
       :class="
         cn('group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-22 grow origin-bottom cursor-pointer items-start self-end border-b-0! tabs-lg transition-none',
-          {
-            grow: stickyRaw.get() <= 0.5,
-          },
+           {
+             grow: stickyRaw.get() <= 0.5,
+           },
         )
       "
       @click="navigateTo(targetRoutes[String(item.name)])">
@@ -54,21 +54,21 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
       <div
         :class="
           cn('tab absolute bottom-0! left-0 w-full grow origin-bottom border-b-0!',
-            {
-              ' ': stickyRaw.get() > 0.5,
-              'bg-b1/90': stickyRaw.get() > 0.5 && item.name === route.name,
-              'tab-active': item.name === route.name,
-            },
+             {
+               ' ': stickyRaw.get() > 0.5,
+               'bg-b1/90': stickyRaw.get() > 0.5 && item.name === route.name,
+               'tab-active': item.name === route.name,
+             },
           )
         " />
 
       <motion.div
         :class="
           cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-2 font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
-            {
-              'opacity-60': item.name !== route.name,
-              'opacity-100': item.name === route.name,
-            },
+             {
+               'opacity-60': item.name !== route.name,
+               'opacity-100': item.name === route.name,
+             },
           )
         "
         :style="{

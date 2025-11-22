@@ -26,6 +26,16 @@ const item: Item =  {
       "gold": 2800
     },
     {
+      "id": 124011,
+      "name": "Sword of Blossoming Dawn",
+      "gold": 2350
+    },
+    {
+      "id": 323190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2600
+    },
+    {
       "id": 3119,
       "name": "Winter's Approach",
       "gold": 2400
@@ -39,11 +49,6 @@ const item: Item =  {
       "id": 3071,
       "name": "Black Cleaver",
       "gold": 3000
-    },
-    {
-      "id": 323190,
-      "name": "Locket of the Iron Solari",
-      "gold": 2600
     },
     {
       "id": 3190,
@@ -154,7 +159,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3067_tank_t1_kindlegem.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3067_tank_t1_kindlegem.png",
   "simpleDescription": "Increases Health and Cooldown Reduction",
   "stats": {
     "health": 200,

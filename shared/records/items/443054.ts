@@ -5,7 +5,11 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3054_silversteeltalons.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3054_silversteeltalons.png",
+  "nicknames": [
+    "bloodrazor",
+    "kitae"
+  ],
   "passives": [
     {
       "name": "Gash",
@@ -16,7 +20,7 @@ const item: Item =  {
   "stats": {
     "armor": 55,
     "attackSpeed": 50,
-    "percentMovespeed": 10
+    "percentMovespeed": 5
   },
   "shop": {
     "prices": {

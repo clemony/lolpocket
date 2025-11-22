@@ -2,6 +2,32 @@
 import { LayoutGroup, motion } from 'motion-v'
 import { VueDraggable } from 'vue-draggable-plus'
 
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
+
+useSeoMeta({
+  title: '[title]',
+  description: '[description]',
+  ogDescription: '[og:description]',
+  ogImage: '[og:image]',
+  ogTitle: '[og:title]',
+  ogUrl: '[og:url]',
+  twitterCard: 'summary',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterTitle: '[twitter:title]'
+})
+
 definePageMeta({
   name: 'pocket-champions',
   title: 'champions',

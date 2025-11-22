@@ -1,3 +1,4 @@
+export * from "../../app/composables/summoner/match/useIndexedDB"
 export * from "./capitalize"
 export * from "./data/attrsToProps"
 export * from "./data/extractReadableText"

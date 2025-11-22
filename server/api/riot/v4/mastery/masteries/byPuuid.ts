@@ -1,5 +1,5 @@
-import type { MasteryReturn } from "@server-types"
 import { getApiPath, riotGet } from "riot"
+import type { MasteryReturn } from "~~/server/types"
 
 export function fetchMasteries(puuid: string, region: string) {
   return riotGet<MasteryReturn[]>(

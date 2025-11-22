@@ -21,6 +21,16 @@ export const useSummonerStore = defineStore(
       const puuid = index.value[makeKey(region, name, tag)]
       return puuid ? (cache.value[puuid] ?? null) : null
     }
+    /*
+    async function getByRoute() {
+      const route = useRoute()
+      const [name, tag] = String(route.params.slug).split("_")
+      return await ss().resolveBySlug(
+        name.toLowerCase(),
+        String(route.params.region).toLowerCase(),
+        tag.toLowerCase()
+      )
+    } */
 
     const isStale = (puuid: string) =>
       !meta.value[puuid] || Date.now() - meta.value[puuid] > TTL
@@ -113,6 +123,7 @@ export const useSummonerStore = defineStore(
       index,
       makeKey,
       resolveByPuuid,
+      //getByRoute,
       resolveBySlug,
       ensureSummoner,
       resolveOrFetch,

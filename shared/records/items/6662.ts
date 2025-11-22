@@ -22,8 +22,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6662_tank_t3_iceborngauntlet.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6662_tank_t3_iceborngauntlet.png",
   "simpleDescription": "High Magic Resist.Passively slow nearby enemies. When spells are cast near you, release a wave of energy that damages and slows.",
+  "nicknames": [
+    "Spellblade",
+    "ibg",
+    "frostfire",
+    "frozen",
+    "frozen gauntlet"
+  ],
   "passives": [
     {
       "name": "Spellblade",

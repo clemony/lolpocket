@@ -5,7 +5,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "requiredChampion": "Gangplank",
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3903_champ_t0_raisemoralecircle.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3903_champ_t0_raisemoralecircle.png",
   "simpleDescription": "Allies in the Cannon Barrage gain <speed>bonus Move Speed</speed>.",
   "passives": [
     {

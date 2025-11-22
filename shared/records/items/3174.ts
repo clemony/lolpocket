@@ -12,12 +12,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_platedsteelcaps_64.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_platedsteelcaps_64.png",
   "simpleDescription": "Deal damage to empower your heals and shields",
+  "nicknames": [
+    "boots"
+  ],
   "passives": [
     {
       "name": "Plating",
-      "effects": "Reduces incoming damage from all basic attacks by 10% (<i>excluding turret attacks</i>).",
+      "effects": "Reduces all incoming <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage by 10% (<i>excluding from turret attacks</i>).",
       "unique": true
     },
     {

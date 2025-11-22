@@ -1,8 +1,0 @@
-[
-  "fetch:champions",
-  "generate:champions",
-  "generate:champion-index",
-  "generate:champions-lite",
-  "generate:champions-titles",
-  "generate:champion-skins"
-]

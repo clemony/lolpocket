@@ -7,7 +7,6 @@ definePageMeta({
   alias: '/auth/password-update',
   description: 'Let\'s try out a password manager this time, yeah?',
   icon: 'key',
-  layout: 'basic',
   search: 'user'
 })
 

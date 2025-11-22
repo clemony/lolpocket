@@ -19,14 +19,14 @@ const {
   tip?: boolean
 }>()
 
-const { fetchNewMatches, summoner } = useSummonerInject()
+const { loadNewer, summoner } = useSummonerInject()
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => fetchNewMatches(),
+  () => loadNewer(),
   120_000,
   summoner.value.puuid,
   'match-refresh',
@@ -61,7 +61,7 @@ const tippy = computed(() =>
         v-if="!cooldown"
         :class="
           cn('flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
-            { 'text-1': size === 'xs' },
+             { 'text-1': size === 'xs' },
           )
         ">
         <icon
@@ -82,13 +82,13 @@ const tippy = computed(() =>
         v-if="cooldown"
         :class="
           cn('pointer-events-none z-0 grid size-full grid-rows-2 place-items-center gap-1.5 overflow-hidden p-2 *:overflow-hidden',
-            { 'gap-0': size === 'xs' },
+             { 'gap-0': size === 'xs' },
           )
         ">
         <div
           v-if="size !== 'xs'"
           class="
-            grid inline w-full grid-flow-col grid-cols-2 items-center
+         inline w-full grid-flow-col grid-cols-2 items-center
             justify-between pr-0.25 text-end align-bottom text-1 font-semibold
             text-nowrap dst
           ">
@@ -103,7 +103,7 @@ const tippy = computed(() =>
           class="bg-transparent"
           :class="
             cn('relative h-2.75 w-full scale-y-60 rounded-[3px] border border-b4 bg-b3',
-              { 'h-2.5 mt-1.5': size === 'xs' },
+               { 'h-2.5 mt-1.5': size === 'xs' },
             )
           "
           :value="cooldown?.percent"

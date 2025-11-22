@@ -22,7 +22,7 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3074_fighter_t3_ravenoushydra.png",
+  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3074_fighter_t3_ravenoushydra.png",
   "simpleDescription": "Melee attacks hit nearby enemies, dealing damage and restoring Health",
   "nicknames": [
     "rav hydra"
@@ -30,14 +30,14 @@ const item: Item =  {
   "passives": [
     {
       "name": "Cleave",
-      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.",
+      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness.",
       "unique": true
     }
   ],
   "active": [
     {
       "name": "Ravenous Crescent",
-      "effects": "Deal 80% AD physical damage to enemies within a 450 radius in front of you.",
+      "effects": "Deal 80% AD physical damage to enemies within a 450 radius in front of you. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness.",
       "unique": true
     }
   ],
