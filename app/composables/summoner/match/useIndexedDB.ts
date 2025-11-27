@@ -10,12 +10,32 @@ export function useIndexedDB() {
   }
 
   const addMatches = async (matches: MatchData[]) => {
-    console.log("🥸 - addMatches - matches.length:", matches.length)
     if (matches.length) {
       await matchDB.matchData.bulkPut(matches)
     }
   }
 
+  const getMatchTimeline = async (matchId: string) => {
+    return await matchDB.matchTimeline.get(matchId)
+  }
+
+  const putMatchTimeline = async (matchId: string, data: MatchTimeline) => {
+    await matchDB.matchTimeline.put(data)
+  }
+
+  const addPlayerTimeline = async (
+    matchId: string,
+    puuid: string,
+    playerTimeline: PlayerTimeline
+  ) => {
+    const existing = (await matchDB.matchTimeline.get(matchId)) || {
+      matchId,
+      players: {},
+    }
+    existing.players[puuid] = playerTimeline
+    await matchDB.matchTimeline.put(existing)
+    return existing.players[puuid]
+  }
   const getMatchesForSummoner = async (puuid: string) => {
     const arr = await matchDB.matchData
       .where("participantIds")
@@ -64,8 +84,16 @@ export function useIndexedDB() {
   }
 
   return {
+    //cursor
     setCursor,
     getCursor,
+
+    //timeline
+    getMatchTimeline,
+    putMatchTimeline,
+    addPlayerTimeline,
+
+    //match
     getAllMatchIdsForPuuid,
     addMatches,
     clearMatches,

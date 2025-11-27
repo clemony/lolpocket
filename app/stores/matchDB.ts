@@ -9,6 +9,7 @@ export interface MatchCursor {
 export class MatchDexie extends Dexie {
   matchData!: Table<MatchData, string> // matchId primary key
   matchCursor!: Table<MatchCursor, string>
+  matchTimeline!: Table<MatchTimeline, string>
 
   constructor() {
     super("MatchDB")
@@ -25,6 +26,13 @@ export class MatchDexie extends Dexie {
     // version 2 adds the cursor table
     this.version(2).stores({
       matchCursor: `puuid, lastIndex`,
+    })
+
+    this.version(3).stores({
+      matchTimeline: `
+        matchId,
+        *participantIds
+      `,
     })
   }
 }

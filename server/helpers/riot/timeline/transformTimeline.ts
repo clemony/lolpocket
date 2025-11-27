@@ -1,10 +1,11 @@
 import fs from "node:fs"
 import path from "node:path"
-import { PlayerTimeline } from "../../../types"
+import { type PlayerTimeline } from "../../../types"
+import { normalizeItemEvents } from "./normalizeItemEvents"
 import { toDeathEvent } from "./toDeathEvent"
 
 const rawPath = path.resolve("../timeline.json")
-const outputPath = path.resolve("../data/timeline-parsed.json")
+const outputPath = path.resolve("../data/timeline-parsed.ts")
 const raw = JSON.parse(fs.readFileSync(rawPath, "utf-8"))
 
 export function transformTimeline(raw: any, puuid: string): PlayerTimeline {
@@ -58,7 +59,7 @@ export function transformTimeline(raw: any, puuid: string): PlayerTimeline {
     puuid,
     matchId: raw.metadata.matchId,
     stats: { deathsBefore15, killsBefore15, assistsBefore15 },
-    items,
+    inventory: normalizeItemEvents(items),
     kills,
     assists,
     deaths,
@@ -81,5 +82,5 @@ const line = transformTimeline(
 fs.writeFileSync(
   outputPath,
   `
-export const playerTimeline = ${JSON.stringify(line, null, 2)}`
+export const playerTimeline: PlayerTimeline[] = ${JSON.stringify(line, null, 2)}`
 )

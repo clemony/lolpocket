@@ -3,7 +3,7 @@ export type ItemName = string
 export type ItemRecord = Record<ItemId, ItemLite>
 export type StatLite = number
 export type StatArray = StatLite[]
-export type StatKeys = keyof ItemLite['stats']
+export type StatKeys = keyof ItemLite["stats"]
 export type effectAmount = number
 
 export interface ItemLite extends ItemIndex {
@@ -60,11 +60,6 @@ export interface Item {
   stats: Record<string, number>
 }
 
-/* export interface ItemSet {
-  name: string
-  items: number[]
-}
- */
 export interface Effect {
   name?: string
   charges?: string | number

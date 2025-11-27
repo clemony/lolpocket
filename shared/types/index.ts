@@ -1,5 +1,4 @@
 export * from "./database.types"
-export * from "./types"
 export * from "./types.champion"
 export * from "./types.doc"
 export * from "./types.form"

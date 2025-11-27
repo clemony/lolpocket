@@ -4,9 +4,6 @@ const { champion, pocket, summonerState: ss } = defineProps<{
   pocket?: Pocket
   champion?: Champion
 }>()
-console.log('🥸 - ss:', ss)
-console.log('💭 ss:', ss)
-
 const scrollRef = useState('scrollRef', () => shallowRef<HTMLElement>(null))
 
 useScrollProvider(scrollRef)

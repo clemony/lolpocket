@@ -1,16 +1,11 @@
 export const SummonerKey = Symbol("SummonerProvider")
 import { bgArt } from "#shared/data"
 
-export interface Identifier {
-  puuid?: string
-  region?: string
-  name?: string
-  tag?: string
-}
 export function useSummonerProvider(
   identifierInput: MaybeRef<Identifier> | null
 ) {
   // reactive identity inputs
+
   const identifier = shallowRef(toValue(identifierInput))
   const puuid = shallowRef<string | null>(null)
   const summoner = shallowRef<Summoner | null>(null)
@@ -20,6 +15,7 @@ export function useSummonerProvider(
   const ready = ref(false)
 
   // -- resolve identifier into a puuid ---------
+
   async function resolveIdentifier() {
     const value = identifier.value
     if (!value) return null
@@ -54,6 +50,7 @@ export function useSummonerProvider(
   }
 
   // ----- matches subsystem --------------------
+
   const {
     matches,
     loadNewer,
@@ -63,16 +60,12 @@ export function useSummonerProvider(
   } = useMatches(summoner)
 
   const filters = useMatchFilters(puuid, matches)
+
   // ----- data --------------------
 
   const allies = ref<MatchTeammatesReturn>(null)
-
-  watch(
-    () => matches?.value,
-    (newVal) => {}
-  )
-
   const champions = ref<ChampionStats[]>([])
+
   watch(
     () => filters.filteredMatches.value,
     () => {
@@ -86,6 +79,7 @@ export function useSummonerProvider(
   )
 
   // ----- background splash --------------------
+
   const splash = computed(() => {
     if (account.value?.splash) return account.value?.splash
     const t = ix().champKeyById(champions.value[0]?.id)
@@ -96,6 +90,7 @@ export function useSummonerProvider(
   })
 
   // ---------- watcher logic -------------------
+
   let resolveLock = false
 
   watch(
@@ -125,6 +120,7 @@ export function useSummonerProvider(
   )
 
   // -------- public api ------------------------
+
   const api = {
     summoner,
     account,

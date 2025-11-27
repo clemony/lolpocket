@@ -94,6 +94,11 @@ export interface MatchTeam {
   win: boolean
 }
 
+export interface MatchTimeline {
+  matchId: string
+  players: Record<string, PlayerTimeline>
+}
+
 export interface PlayerTimeline {
   puuid: string
   matchId?: string
@@ -102,10 +107,16 @@ export interface PlayerTimeline {
     killsBefore15: number
     assistsBefore15: number
   }
-  items: PlayerItemEvent[]
+  inventory: NormalizedItemEvent[]
   kills: ChampionDeathEvent[]
   assists: ChampionDeathEvent[]
   deaths: ChampionDeathEvent[]
+}
+
+export interface NormalizedItemEvent {
+  timestamp: number
+  action: "ADD" | "REMOVE"
+  itemId: number
 }
 
 export interface PlayerItemEvent {
@@ -120,11 +131,10 @@ export interface PlayerItemEvent {
     | "ITEM_UNDO"
     | "ITEM_SOLD"
     | "ITEM_DESTROYED"
-    | "ITEM_OBTAINED "
+    | "ITEM_OBTAINED"
 }
 
 export interface ChampionDeathEvent {
-  type: "CHAMPION_KILL" | "CHAMPION_SPECIAL_KILL"
   killerId: number
   assistingParticipantIds: number[]
   victimId: number

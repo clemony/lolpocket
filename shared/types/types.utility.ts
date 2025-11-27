@@ -9,7 +9,7 @@ export interface ParseState {
   str: string
 }
 
-export interface IconObject {
+/* export interface IconObject {
   name: string
   alt?: IconObject
   class?: string | string[]
@@ -22,10 +22,6 @@ export interface BadgeObject {
   text?: string
 }
 
-export interface ImgObject {
-  class?: string
-  src: string
-}
 
 export type LinkGroup = LinkObject[]
 
@@ -44,7 +40,7 @@ export interface DataObject extends LinkObject {
   data?: object
   value?: number
 }
-
+ */
 import type {
   SizeColumnsToContentStrategy,
   SizeColumnsToFitGridStrategy,

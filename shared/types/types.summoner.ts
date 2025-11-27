@@ -1,4 +1,13 @@
+export type AccountData = Account & Summoner
+
 export type SummonerInject = ReturnType<typeof useSummonerProvider>
+
+export interface Identifier {
+  puuid?: string
+  region?: string
+  name?: string
+  tag?: string
+}
 
 export interface ChampionMastery {
   id: number
