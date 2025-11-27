@@ -30,7 +30,7 @@ const dateRange = ref({
 <template>
   <RangeCalendarRoot
     v-slot="{ grid, weekDays }"
-    v-model="dateRange"
+    v-model:model-value="dateRange"
     :class="cn('rounded-lg p-3', props.class)"
     v-bind="forwarded">
     <RangeCalendarHeader>

@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div
     class="
-      ml-2 grid max-h-full w-68 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
+      ml-4 grid max-h-full w-84 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
       gap-y-0.5 justify-self-end overflow-hidden
     ">
     <BtnLink
@@ -23,7 +23,8 @@ const route = useRoute()
           'col-start-1': player.teamId === 100,
           'col-start-2 ': player.teamId === 200,
         })
-      ">
+      "
+      @click.stop>
       <div class="flex gap-2 overflow-hidden">
         <ChampionIcon
           v-if="player"

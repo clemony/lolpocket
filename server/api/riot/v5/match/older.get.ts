@@ -1,29 +1,41 @@
+// /server/api/matches/older.get.ts
 import { idsByPuuid, matchById, transformMatchData } from "~~/server/helpers"
-import type { MatchReturn } from "~~/shared"
+import type { MatchData, MatchReturn } from "~~/shared"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
   const cursor = Number(getQuery(event).cursor || 0)
-  const region = "americas"
-  const batchSize = 100
+  const region = getQuery(event).region as string
 
-  // fetch next batch of match IDs
+  const batchSize = 20
+  const results: MatchData[] = []
+
+  // fetch next window of ids
   const ids = await idsByPuuid({
     puuid,
     region,
     start: cursor,
     count: batchSize,
   })
+
   if (!ids.length) {
+    // no more matches at all
     return { matches: [], cursor, done: true }
   }
 
-  const matches = await Promise.all(ids.map((id) => matchById(id, region)))
-  const transformed = matches.map(transformMatchData)
+  // stream-match loading to avoid blowing ram
+  for (const id of ids) {
+    // fetch each match individually to prevent promise.all spikes
+    const m = await matchById(id, region)
+    results.push(transformMatchData(m))
+  }
+
+  const nextCursor = cursor + ids.length
+  const done = ids.length < batchSize // if we didn’t fill the window, we're out of matches
 
   return {
-    matches: transformed,
-    cursor: cursor + batchSize,
-    done: transformed.length < batchSize,
+    matches: results,
+    cursor: nextCursor,
+    done,
   }
 })

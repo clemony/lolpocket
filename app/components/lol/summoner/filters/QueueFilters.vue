@@ -1,10 +1,11 @@
 <script setup lang="ts">
-const state = useSummonerInject()
+const { filter, setFilter, } = useSummonerInject()
 
 const queueModel = computed({
-  get: () => state.filter.value.queue,
-  set: val => state.setFilter('queue', val),
+  get: () => filter.value.queue,
+  set: val => setFilter('queue', val),
 })
+const tabClass = '!text-bc'
 </script>
 
 <template>
@@ -16,25 +17,29 @@ const queueModel = computed({
       class="grid h-10 w-full">
       <TabIndicator />
       <TabsTrigger
-        size="9"
+        size="8"
+        :class="tabClass"
         :value="0">
         All
       </TabsTrigger>
 
       <TabsTrigger
-        size="9"
+        size="8"
+        :class="tabClass"
         :value="420">
         Solo
       </TabsTrigger>
 
       <TabsTrigger
-        size="9"
+        size="8"
+        :class="tabClass"
         :value="440">
         Flex
       </TabsTrigger>
 
       <TabsTrigger
-        size="9"
+        size="8"
+        :class="tabClass"
         :value="400">
         Normal
       </TabsTrigger>

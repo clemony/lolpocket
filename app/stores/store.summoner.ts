@@ -71,14 +71,13 @@ export const useSummonerStore = defineStore(
       force?: boolean
     }): Promise<Summoner> => {
       const { puuid, region, name, tag, force } = args
+      if (!puuid && !region && !name && !tag) return
 
       let existing: Summoner | null = null
 
       if (puuid) existing = resolveByPuuid(puuid)
       else if (region && name && tag)
         existing = resolveBySlug(region, name, tag)
-
-      console.log("📎 - ensureSummoner - existing:", existing)
 
       if (existing && !force && !isStale(existing.puuid)) return existing
 
@@ -98,6 +97,8 @@ export const useSummonerStore = defineStore(
     }
 
     const resolveOrFetch = async (puuid: string) => {
+      if (!puuid) return
+
       const hit = resolveByPuuid(puuid)
       if (hit) return hit
       return await ensureSummoner({ puuid })

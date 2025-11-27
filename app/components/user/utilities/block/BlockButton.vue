@@ -6,7 +6,7 @@ const {
   variant = 'shadow',
 } = defineProps<{
   class?: HTMLAttributes['class']
-  summoner: Summoner | Partial<Summoner>
+  summoner: Summoner
   variant?: any
   size?: any
 }>()
@@ -16,7 +16,8 @@ const {
   <Button
     :class="cn('', className)"
     :variant="variant"
-    :size="size">
+    :size="size"
+    @click="ui().blockDialog = true">
     <icon
       name="lucide:ban"
       class="" />

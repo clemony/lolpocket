@@ -1,8 +1,11 @@
-import { getApiPath, riotGet } from "riot"
+import { riotFetch } from "riot"
+import { apiPath } from "~~/server/helpers/riot"
 import type { MasteryReturn } from "~~/server/types"
 
 export function fetchMasteries(puuid: string, region: string) {
-  return riotGet<MasteryReturn[]>(
-    `${getApiPath(region)}/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
-  )
+  const url = `${apiPath(region)}/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
+
+  const key = `mastery:${puuid}`
+
+  return riotFetch<MasteryReturn[]>(key, url)
 }

@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { class: className, label, thickness = '6px' } = defineProps<{
   class?: HTMLAttributes['class']
   label?: string
+  thickness?: string
 }>()
 </script>
 
@@ -10,13 +11,13 @@ const props = defineProps<{
     class=""
     :class="
       cn('radial-progress size-22 text-b3 after:hidden',
-        props.class,
+         className,
       )
     "
-    style="--value: 100"
+    :style="`--value: 100; --thickness: ${thickness}`"
     role="progressbar">
     <span class="font-medium text-bc/60">
-      {{ props.label }}
+      {{ label }}
     </span>
   </div>
 </template>

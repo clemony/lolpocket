@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 import {
   championIndex,
   championTitleIndex,
@@ -7,13 +7,13 @@ import {
   patchIndex,
   pathIndex,
   runeIndex,
-} from '~~/shared/indexes'
+} from "~~/shared/indexes"
 
 export const useIndexStore = defineStore(
-  'indexStore',
+  "indexStore",
   () => {
-    const patchList = ref<number[]>([])
-    const patch = ref<number>()
+    const patchList = ref<string[]>([])
+    const patch = ref<string>()
     const lastPatchCheck = ref<Date>()
     const lastFullRefresh = ref<Date>()
     const champions = ref<ChampionIndex[]>([])
@@ -62,22 +62,21 @@ export const useIndexStore = defineStore(
       dataset: T[] | undefined,
       inputKey: keyof T,
       value: T[keyof T],
-      outputKey: keyof T,
+      outputKey: keyof T
     ): T[keyof T] | undefined {
-      return dataset?.find(item => item[inputKey] === value)?.[outputKey]
+      return dataset?.find((item) => item[inputKey] === value)?.[outputKey]
     }
 
     function getByIndex<T extends Record<string, any>>(
       dataset: T[] | undefined,
       inputKey: keyof T,
-      value: T[keyof T],
+      value: T[keyof T]
     ): T | undefined {
-      return dataset?.find(item => item[inputKey] === value)
+      return dataset?.find((item) => item[inputKey] === value)
     }
 
     function getChampionTitle(key) {
-      if (!titles.value)
-        loadTitles()
+      if (!titles.value) loadTitles()
       return titles.value[key]
     }
 
@@ -103,51 +102,51 @@ export const useIndexStore = defineStore(
 
       // champion helpers
       champIdByKey: (key: string) =>
-        findInIndex(champions.value, 'key', key, 'id') as number,
+        findInIndex(champions.value, "key", key, "id") as number,
       champIdByName: (name: string) =>
-        findInIndex(champions.value, 'name', name, 'id'),
-      championById: (id: number) => getByIndex(champions.value, 'id', id),
-      championByKey: (key: string) => getByIndex(champions.value, 'key', key),
+        findInIndex(champions.value, "name", name, "id"),
+      championById: (id: number) => getByIndex(champions.value, "id", id),
+      championByKey: (key: string) => getByIndex(champions.value, "key", key),
       champKeyById: (id: number) =>
-        findInIndex(champions.value, 'id', id, 'key') as string,
+        findInIndex(champions.value, "id", id, "key") as string,
       champKeyByName: (name: string) =>
-        findInIndex(champions.value, 'name', name, 'key'),
+        findInIndex(champions.value, "name", name, "key"),
       champNameById: (id: number) =>
-        findInIndex(champions.value, 'id', id, 'name') as string,
+        findInIndex(champions.value, "id", id, "name") as string,
       champNameByKey: (key: string) =>
-        findInIndex(champions.value, 'key', key, 'name') as string,
+        findInIndex(champions.value, "key", key, "name") as string,
       getChampionTitle,
 
       // item helpers
 
-      itemById: (id: number) => getByIndex(items.value, 'id', id),
+      itemById: (id: number) => getByIndex(items.value, "id", id),
       itemIdByName: (name: string) =>
-        findInIndex(items.value, 'name', name, 'id'),
+        findInIndex(items.value, "name", name, "id"),
       itemNameById: (id: number) =>
-        findInIndex(items.value, 'id', id, 'name') as string,
+        findInIndex(items.value, "id", id, "name") as string,
 
       // runes
 
-      runeById: (id: number) => getByIndex(runes.value, 'id', id),
+      runeById: (id: number) => getByIndex(runes.value, "id", id),
       runeNameById: (id: number) =>
-        findInIndex(runes.value, 'id', id, 'name') as string,
+        findInIndex(runes.value, "id", id, "name") as string,
 
       // paths
 
       pathColorByName: (name: string) =>
-        findInIndex(paths.value, 'name', name, 'color') as string,
+        findInIndex(paths.value, "name", name, "color") as string,
       pathNameById: (id: number) =>
-        findInIndex(paths.value, 'id', id, 'name') as string,
+        findInIndex(paths.value, "id", id, "name") as string,
 
       // maps
       mapIdById: (id: number) =>
-        maps.value.find(m => m.id === id)?.mapStringId,
-      mapNameById: (id: number) => maps.value.find(m => m.id === id)?.name,
+        maps.value.find((m) => m.id === id)?.mapStringId,
+      mapNameById: (id: number) => maps.value.find((m) => m.id === id)?.name,
     }
   },
   {
     persist: {
       storage: piniaPluginPersistedstate.sessionStorage(),
     },
-  },
+  }
 )

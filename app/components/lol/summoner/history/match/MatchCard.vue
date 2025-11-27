@@ -84,7 +84,7 @@ const queue = computed(() => {
         </div>
       </div>
 
-      <div class="flex h-max flex-col gap-1">
+      <div class="ml-2 flex h-max flex-col gap-1">
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon
@@ -136,6 +136,7 @@ const queue = computed(() => {
     </CollapsibleTrigger>
 
     <LazyMatchContent
+      v-show="isOpen"
       :is-open
       :match
       :player />

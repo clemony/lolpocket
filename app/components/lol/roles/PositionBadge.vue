@@ -2,7 +2,7 @@
 import type { ChampionPosition } from '~~/shared/references'
 import { championPositions } from '~~/shared/references'
 
-const { class: className, position: pos } = defineProps<{
+const { class: className, position: pos, size = '7' } = defineProps<{
   class?: HTMLAttributes['class']
   position: ChampionPosition | string | null
   noLabel?: boolean
@@ -27,20 +27,22 @@ const position = computed(() => {
     hover="btn"
     :size
     :class="
-      cn('w-fit gap-2.5! pr-6 pl-4 text-2! font-medium! text-bc/90 capitalize',
-        {
-          'hover:**:text-bc hover:text-bc order-first text-white':
-            active
-            || (cs().filters.position && cs().filters.position === position.name),
-          'pr-3': active && clear,
-        },
-        className,
+      cn('w-fit gap-2.5! rounded-lg text-2! font-medium! text-bc/90 capitalize',
+         {
+           'hover:**:text-bc hover:text-bc order-first text-white':
+             active
+             || (cs().filters.position && cs().filters.position === position.name),
+           'pr-3': active && clear,
+         },
+         className,
       )
     "
     :style="{
       backgroundColor: `${(cs().filters.position && cs().filters.position === position.name) || active ? position.color : 'transparent'}`,
     }">
-    <RoleIcon :position="position.name" />
+    <RoleIcon
+      :position="position.name"
+      class="text-white" />
     <slot>
       {{ position.name }}
     </slot>

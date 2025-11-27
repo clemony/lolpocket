@@ -26,8 +26,8 @@ export interface Summoner {
   }
   region: string
   tag: string
-  updatedData: string
-  updatedMatch: string
+  updatedData: number
+  updatedMatch: number
 }
 export interface RankedEntry {
   division: string

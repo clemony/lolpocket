@@ -17,7 +17,7 @@ const position = computed(() => {
 </script>
 
 <template>
-  <component
-    :is="`i-lol-${position?.name.toLowerCase()}`"
+  <Icon
+    :name="`lp:${position?.name.toLowerCase()}`"
     :class="cn('size-4 shrink-0 dst', className)" />
 </template>

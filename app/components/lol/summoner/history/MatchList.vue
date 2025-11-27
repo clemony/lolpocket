@@ -1,88 +1,72 @@
 <script lang="ts" setup>
+import { Virtualizer } from 'virtua/vue'
+
 const emit = defineEmits(['scroll-top'])
 
-const { loading, matches, summoner } = inject<SummonerInject>(SummonerKey)
-
-console.log('📎 - summoner:', summoner)
-
-const itemsPerPage = 20
-const currentPage = shallowRef<number>(1)
-
-const pagedMatches = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  return matches.value.slice(start, start + itemsPerPage)
-})
-
-watch(
-  () => matches.value.length,
-  (newVal) => {
-    if (newVal)
-      currentPage.value = 1
-  },
-  { immediate: false }
-)
+const { filteredMatches, loading, loadOlder, matches, summoner }
+  = useSummonerInject()
+const scrollRef = useState<HTMLElement>('scrollRef')
+const hasMatches = computed(() => filteredMatches.value.length > 0)
 </script>
 
 <template>
-  <div class="flex w-full flex-col overflow-visible py-24">
+  <div class="flex min-w-210 grow flex-col overflow-visible py-24">
+    <!-- loading skeleton -->
     <div
-      v-if="loading"
+      v-if="loading "
       class="flex flex-col gap-8">
       <Skeleton
-        v-for="i in itemsPerPage"
+        v-for="i in 12"
         :key="i"
         class="field-box h-40 w-full max-w-210" />
     </div>
 
-    <TransitionScalePop
-      v-else-if="pagedMatches.length > 0"
-      :appear="false"
-      group
-      class="flex flex-col pb-px">
-      <LazyMatchCard
-        v-for="match in pagedMatches"
-        :key="match.matchId"
-        :puuid="summoner?.puuid"
-        :match="match"></LazyMatchCard>
-    </TransitionScalePop>
-
+    <!-- empty state -->
     <div
-      v-else
+      v-else-if="!hasMatches"
       class="grid h-64 w-210 place-items-center font-medium">
-      No matches found with these filters.
+      No filtered matches found with these filters.
     </div>
 
-    <Pagination
-      v-model:page="currentPage"
-      :total="matches?.length"
-      :default-page="1"
-      :sibling-count="1"
-      :show-edges="false"
-      :items-per-page="itemsPerPage"
-      class="mx-0 max-w-210 justify-center justify-self-start pt-8">
-      <PaginationContent v-slot="{ items }">
-        <PaginationFirst class="disabled:hidden" />
-        <PaginationPrev
-          size="sm"
-          class="btn-square disabled:hidden" />
-        <template v-for="(page, index) in items">
-          <PaginationItem
-            v-if="page.type === 'page'"
-            :key="index"
-            variant="outline"
-            size="sm"
-            :value="page.value"
-            :is-active="page.value === currentPage"></PaginationItem>
-          <PaginationEllipsis
-            v-else
-            :key="page.type"
-            :index="index" />
-        </template>
-        <PaginationNext
-          size="sm"
-          class="btn-square disabled:hidden" />
-        <PaginationLast class="disabled:hidden" />
-      </PaginationContent>
-    </Pagination>
+    <!-- virtualized rows -->
+    <Virtualizer
+      v-else
+      ref="virtuaRef"
+      v-slot="{ item }"
+      v-memo="[filteredMatches]"
+      :scroll-ref="scrollRef"
+      :data="filteredMatches"
+      :item-size="118"
+      :start-margin="290"
+      :shift="false"
+      :buffer-size="200">
+      <MatchCard
+        :key="item.id"
+        :match="item"
+        :puuid="summoner?.puuid" />
+    </Virtualizer>
+
+    <div class="grid h-32 w-210 place-items-center">
+      <Button
+        variant="ghost"
+        class="group/c"
+        @click="loadOlder()">
+        <div class="grid size-5 place-items-center *:absolute">
+          <Icon
+            v-if="loading"
+            name="lp-ui:rain"
+            class="translate-y-px" />
+          <template v-else>
+            <Icon
+              name="bi:cloud-download"
+              class="translate-y-0.75 opacity-0 transition-all duration-200 group-hover/c:opacity-100" />
+            <Icon
+              name="bi:cloud-arrow-down"
+              class="transition-all duration-200 group-hover/c:opacity-0" />
+          </template>
+        </div>
+        load older matches
+      </Button>
+    </div>
   </div>
 </template>

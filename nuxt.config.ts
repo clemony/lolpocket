@@ -146,6 +146,24 @@ export default defineNuxtConfig({
     typescript: {
       strict: false,
     },
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+      wrangler: {
+        kv_namespaces: [
+          {
+            binding: "MATCHES_KV",
+            id: "3eef843a4bd44eec9075ef0c5fb7ea70",
+          },
+        ],
+      },
+    },
+    storage: {
+      matchesKV: {
+        driver: "cloudflare-kv-binding",
+      },
+    },
   },
   pinia: {
     storesDirs: ["app/stores/**"],

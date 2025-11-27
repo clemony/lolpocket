@@ -1,28 +1,9 @@
 <script lang="ts" setup>
-const queues = {
-  0: 'All Recent',
-  400: 'Recent Draft',
-  410: 'Recent Flex',
-  420: 'Recent Ranked',
-}
-
-const state = useSummonerInject()
-const championStats = computed(() =>
-  state.champions({ filtered: true }).stats(),
-)
-const champions = computed(() =>
-  [...championStats.value].sort((a, b) => b.games - a.games).splice(0, 5),
-)
-
-const length = computed(() =>
-  championStats.value?.length >= 5
-    ? 'grid-rows-5'
-    : `grid-cols-${championStats.value?.length}`,
-)
+const { champions, filter, setFilter } = await useSummonerInject()
 
 const championModel = computed({
-  get: () => state.filter.value.champion,
-  set: val => state.setFilter('champion', val),
+  get: () => filter.value.champion,
+  set: val => setFilter('champion', val),
 })
 </script>
 
@@ -31,30 +12,31 @@ const championModel = computed({
     v-if="champions"
     v-model:model-value="championModel"
     :multiple="false"
+    selection-behavior="replace"
     @entry-focus.prevent>
     <ListboxContent
-      class="field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4">
+      :class="cn('field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4', { 'pb-3': filter.champion })">
       <SlideInTopOutBottom
         group
         class="grid h-fit gap-1.5 overflow-hidden">
         <ListboxItem
-          v-for="champion in champions"
+          v-for="champion in [...champions].slice(0, 6)"
           :key="champion.name"
-          :value="champion.name"
+          :value="filter.champion === champion.name ? '' : champion.name"
           variant="ghost"
           hover="secondary"
           size="16"
-          class="peer w-full gap-4! rounded-xl focus-visible:outline-0">
+          class="peer group/c relative w-full gap-4! rounded-xl focus-visible:outline-0">
           <ChampionIcon
             :id="champion.id"
             :alt="champion.name"
             :class="
               cn('size-14 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm',
-                {
-                  'grayscale brightness-105 contrast-105':
-                    championModel.length > 1
-                    && champion.name !== championModel,
-                },
+                 {
+                   'grayscale brightness-105 contrast-105':
+                     championModel.length > 1
+                     && champion.name !== championModel,
+                 },
               )
             " />
 
@@ -69,7 +51,7 @@ const championModel = computed({
           </div>
 
           <div
-            class="grid w-22 shrink-0 justify-end gap-1.5 dst *:text-end">
+            class="z-0 grid w-22 shrink-0 justify-end gap-1.5 dst *:text-end">
             <p class="self-end font-medium text-nowrap dst">
               {{ champion.wins }}&nbsp;Win
             </p>
@@ -80,11 +62,29 @@ const championModel = computed({
           </div>
           <div
             class="
-              grid w-16 shrink-0 place-items-center justify-end justify-self-end
+              z-0 grid w-16 shrink-0 place-items-center justify-end justify-self-end
             ">
             <ChampWinrate :champion="champion" />
           </div>
+
+          <Element
+            v-if="filter.champion === champion.name"
+            base="btn"
+            wrapper-class=""
+            size="c-6"
+            class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur group-hover/c:animate-heartbeat">
+            <Icons
+              name="heroicons:x-circle-16-solid"
+              class="size-5.25!" />
+          </Element>
         </ListboxItem>
+        <div
+          v-if="filter.champion"
+          class="mx-4 flex gap-4 justify-self-end text-1">
+          <span class="self-end opacity-50">
+            ...filtered
+          </span>
+        </div>
         <LilKrug v-if="!champions.length" />
       </SlideInTopOutBottom>
     </ListboxContent>

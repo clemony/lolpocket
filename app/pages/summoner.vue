@@ -6,34 +6,39 @@ definePageMeta({
 
 // get route so we can detect puuid or slug
 const route = useRoute()
-const ss = useSummonerStore()
+console.log('🥸 - route:', route.name)
 
-// if the user hit /summoner/:puuid → resolve, redirect, and stop
-if (route.params.puuid) {
-  const res = await ss.resolveOrFetch(String(route.params.puuid))
-  if (res?.region && res?.name && res?.tag) {
+const params = ref<Identifier>(null)
+
+watchEffect(() => {
+  if (route.name === 'summoner-puuid') {
+    params.value = { puuid: String(route.params.puuid) }
+  }
+  else if (route.name === 'summoner-region-slug') {
+    const [name, tag] = route.params.slug.toString().split('_')
+    params.value = {
+      name: name.toLowerCase(),
+      region: route.params.region.toString().toLowerCase(),
+      tag: tag.toLowerCase(),
+    }
+  }
+})
+
+// pass the ref, not the value
+const api = useSummonerProvider(params)
+watch(() => api, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
+watch(() => api?.summoner?.value, (newVal) => {
+  if (newVal && route.params.puuid) {
     navigateTo(
-      `/summoner/${res.region.toLowerCase()}/${res.name.toLowerCase()}_${res.tag.toLowerCase()}`,
+      `/summoner/${newVal.region.toLowerCase()}/${newVal.name.toLowerCase()}_${newVal.tag.toLowerCase()}`,
       { replace: true }
     )
   }
-}
-
-// if we're NOT in [puuid], we're in [slug] or deeper → initialize provider once
-if (route.params.slug) {
-  const [name, tag] = String(route.params.slug).split('_')
-  const region = String(route.params.region).toLowerCase()
-
-  const summoner = await ss.ensureSummoner({
-    name: name.toLowerCase(),
-    region,
-    tag: tag.toLowerCase(),
-  })
-
-  await useSummonerProvider(summoner?.puuid)
-}
+})
 </script>
 
 <template>
-  <NuxtPage />
+  <NuxtPage :api />
 </template>

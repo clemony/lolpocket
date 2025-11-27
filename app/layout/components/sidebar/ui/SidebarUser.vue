@@ -50,7 +50,7 @@ const target = shallowRef<HTMLButtonElement>(null)
       animation="shift-toward-subtle"
       :arrow="false"
       :interactive="true"
-      theme="base tippy-clean">
+      theme="base clean">
       <PopoverItem
         class="
           group/t h-10 w-full aria-expanded:btn-active

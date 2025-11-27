@@ -4,7 +4,7 @@ import { StatTip } from '#components'
 const {
   i,
   length,
-  stat: st,
+  stat
 } = defineProps<{
   stat: StatValues
   i: number
@@ -32,7 +32,7 @@ const {
             underline-offset-2 group-hover:underline
           `)
         ">
-        {{ stat.abbr[1] || stat.abbr || stat.name }}
+        {{ stat.abbr || stat?.key || stat.name }}
       </span>
 
       <div

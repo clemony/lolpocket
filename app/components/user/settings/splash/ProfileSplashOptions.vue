@@ -3,7 +3,7 @@ const cardClass
   = 'flex !px-4 w-1/2 items-center group/photo-button rounded-xl  cursor-pointer group/photo !gap-5 photo  h-40  justify-start **:text-start '
 
 const inactiveClass
-  = ' *:grayscale hover:[&_p]:text-bc hover:[&_h4]:text-bc [&_p]:text-bc/40 [&_h4]:text-bc/30  hover:*:grayscale-0'
+  = '  hover:[&_p]:text-bc hover:[&_h4]:text-bc [&_p]:text-bc/40 [&_h4]:text-bc/30 '
 
 const isOpen = ref(false)
 
@@ -11,7 +11,7 @@ const currentSplash = computed(() => as().account?.splash ?? null)
 
 const { getMatchesForSummoner } = useIndexedDB()
 const matchData = await getMatchesForSummoner(as().account.puuid)
-const { top } = useChampions(as().account.puuid, matchData)
+const { top } = useChampions({ puuid: as().account.puuid, matches: matchData })
 
 function handleSplash(e: string) {
   as().account.splash = e

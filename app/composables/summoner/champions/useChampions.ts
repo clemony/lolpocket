@@ -1,32 +1,10 @@
-import {
-  getChampionStatsMap,
-  useBasicChampionStats,
-  useBayesianChampionStats,
-} from "./index"
-
-export interface ChampionStatsGroup {
-  name: string
-  splash: string
-}
-
-export interface UseChampionOptions {
-  champion?: string
-  filtered?: boolean
-}
-export interface UseChampionsReturn {
-  bayesian: () => BayesianChampionStats[]
-  liteChampionStats: Record<string, number>
-  singleBayesian: (championName: string) => BayesianChampionStats | null
-  singleStat: (championName: string) => ChampionStats | null
-  stats: () => ChampionStats[]
-  top: () => TopChampion
-}
-
-export function useChampions(
-  puuid: string,
-  matches: MatchData[],
-  championName?: string
-): UseChampionsReturn {
+export function useChampions({
+  puuid,
+  matches,
+}: {
+  puuid: string
+  matches: MatchData[]
+}) {
   const liteChampionStats = computed<Record<string, number>>(() => {
     const counts: Record<string, number> = {}
 
@@ -51,14 +29,6 @@ export function useChampions(
         splash: getSplash(champ, "centered"),
       }
   })
-
-  const filteredMatches = computed<MatchData[]>(() =>
-    filteredMatches.filter((match) =>
-      Object.keys(liteChampionStats.value).includes(
-        ix().champNameById(match.participants[puuid])
-      )
-    )
-  )
 
   return {
     bayesian: () => useBayesianChampionStats(matches, puuid),

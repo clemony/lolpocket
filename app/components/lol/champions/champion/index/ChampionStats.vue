@@ -128,7 +128,7 @@ const filteredStats = computed(() => {
       },
       {
         name: 'Unit Radius',
-        stats: stats.filter(k => k.id.match(/.*Radius/)),
+        stats: stats?.filter(k => k?.id?.match(/.*Radius/)),
       },
     ],
   }
@@ -230,7 +230,7 @@ const filteredStats = computed(() => {
       <div
         :class="
           cn('field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
-            { 'max-h-0 opacity-0 hidden invisible': open },
+             { 'max-h-0 opacity-0 hidden invisible': open },
           )
         ">
         <ChampionStat

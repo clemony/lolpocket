@@ -23,11 +23,11 @@ async function main() {
         return major >= MIN_PATCH_MAJOR
       })
  */
-    const normalized = versions.map((patch) => normalizePatch(patch))
+    //const normalized = versions.map((patch) => normalizePatch(patch))
 
     await writeFile(
       "./server/patch/misc/raw/patch-index.json",
-      JSON.stringify(normalized, null, 2)
+      JSON.stringify(versions, null, 2)
     )
 
     await writeFile(
@@ -38,7 +38,7 @@ async function main() {
       "./shared/indexes/patch-index.ts",
       `// ${getFormattedDateTime()}
 
-export const patchIndex = ${JSON.stringify(normalized, null, 2)}`
+export const patchIndex = ${JSON.stringify(versions, null, 2)}`
     )
 
     console.log(

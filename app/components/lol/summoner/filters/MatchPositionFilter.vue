@@ -1,11 +1,22 @@
 <script lang="ts" setup>
-const state = useSummonerInject()
-const roles = await computed(() => state.roles()).value
+const { filter, matches, setFilter, summoner } = useSummonerInject()
 
-const roleModel = computed({
-  get: () => state.filter.value.role,
-  set: val => state.setFilter('role', val),
+const roles = computed(() => {
+  if (!matches.value || !summoner.value)
+    return
+
+  return useMatchRoles(summoner.value.puuid, matches)
 })
+
+watch(() => filter.value.role, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
+const roleModel = computed({
+  get: () => filter.value.role,
+  set: val => setFilter('role', val),
+})
+
+const tabClass = '**:!text-bc'
 </script>
 
 <template>
@@ -21,10 +32,7 @@ const roleModel = computed({
         v-for="role in roles"
         :key="role.name"
         :value="role.role"
-        class="
-          z-1 place-items-center rounded-field not-disabled:opacity-100!
-          hover:bg-b3/40 hover:inset-shadow-sm
-        "
+        :class="tabClass"
         :disabled="!role.games">
         <Icon
           :name="`lp:${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
@@ -35,4 +43,3 @@ const roleModel = computed({
     <slot />
   </Tabs>
 </template>
-oles

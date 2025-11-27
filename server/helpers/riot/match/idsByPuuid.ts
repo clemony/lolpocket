@@ -1,17 +1,10 @@
-import { getApiRegion, riotGet } from "riot"
+import { riotFetch } from "~~/server/api/riot"
+import { serverToRegion } from "~~/server/helpers"
 
-export function idsByPuuid({
-  puuid,
-  start = 0,
-  count = 100,
-  region = "americas",
-}: {
-  puuid: string
-  start: number
-  count: number
-  region: string
-}): Promise<string[]> {
-  return riotGet(
-    `${getApiRegion(region)}/lol/match/v5/matches/by-puuid/${puuid}/ids?start=${start}&count=${count}`
-  )
+export function idsByPuuid({ puuid, region, start, count }) {
+  const url = `${serverToRegion(region)}/lol/match/v5/matches/by-puuid/${puuid}/ids`
+  const params = { start, count }
+  const key = `ids:${puuid}:${start}`
+
+  return riotFetch<string[]>(key, url, params)
 }

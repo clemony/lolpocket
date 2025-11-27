@@ -1,10 +1,12 @@
-import { getApiPath, riotGet } from "riot"
+import { riotFetch } from "riot"
+import { apiPath } from "~~/server/helpers/riot"
 
 export default defineEventHandler(async (event) => {
   const params = await getQuery(event)
   const { puuid, region } = params
-  const data = await riotGet<number>(
-    `${getApiPath(String(region))}/lol/champion-mastery/v4/scores/by-puuid/${puuid}`
-  )
-  return data
+  const url = `${apiPath(String(region))}/lol/champion-mastery/v4/scores/by-puuid/${puuid}`
+
+  const key = `mastery-score:${puuid}`
+
+  return riotFetch<number>(key, url, params)
 })

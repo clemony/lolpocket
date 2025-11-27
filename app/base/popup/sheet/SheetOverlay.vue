@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DialogOverlayProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
+import { useAnimate } from 'motion-v'
 import { DialogOverlay } from 'reka-ui'
 
 const props = defineProps<
@@ -8,17 +8,25 @@ const props = defineProps<
 >()
 
 const delegatedProps = reactiveOmit(props, 'class')
+
+const [overlay, animate] = useAnimate()
+
+function onStateChange(state: string) {
+  animate(
+    overlay.value,
+    { opacity: state === 'open' ? 1 : 0 },
+    { duration: 0.3, ease: 'easeInOut' }
+  )
+}
 </script>
 
 <template>
   <DialogOverlay
+    ref="overlay"
     data-slot="sheet-overlay"
-    :class="
-      cn('data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80',
-        props.class,
-      )
-    "
-    v-bind="delegatedProps">
+    :class="cn('fixed inset-0 z-40 bg-black/80', props.class)"
+    v-bind="delegatedProps"
+    @update:state="onStateChange">
     <slot />
   </DialogOverlay>
 </template>

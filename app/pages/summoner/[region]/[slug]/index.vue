@@ -22,16 +22,12 @@ definePageMeta({
 <template>
   <div
     :class="
-      cn('z-auto mx-auto mb-42 flex h-max min-h-screen w-fit gap-10 justify-self-center',
+      cn('z-auto grid h-max min-h-screen w-screen grid-cols-[1fr_1.5fr] gap-10 justify-self-center',
       )
     ">
-    <div class="scrollbar-none grid shrink justify-end">
-      <MatchHistoryAside />
-    </div>
-    <SlideInTopOutBottom
-      group
-      :class="cn('flex h-max min-w-210 grow flex-col justify-center')">
-      <MatchList ref="scrollMain" />
-    </SlideInTopOutBottom>
+    <MatchHistoryAside />
+
+    <MatchList
+      ref="scrollMain" />
   </div>
 </template>

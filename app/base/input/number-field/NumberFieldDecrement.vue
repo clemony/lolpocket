@@ -2,16 +2,22 @@
 import type { NumberFieldDecrementProps } from 'reka-ui'
 import { NumberFieldDecrement, useForwardProps } from 'reka-ui'
 
-const props = defineProps<
-  NumberFieldDecrementProps & { class?: HTMLAttributes['class'] }
->()
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
+const props = withDefaults(defineProps<
+  NumberFieldDecrementProps & {
+    base?: ButtonVariants['base']
+    class?: HTMLAttributes['class']
+    hover?: ButtonVariants['hover']
+    size?: ButtonVariants['size']
+    variant?: ButtonVariants['variant']
+  }
+>(), {
+  base: 'btn',
+  hover: 'neutral',
+  size: 'sq-9',
+  variant: 'base'
 })
 
+const delegatedProps = reactiveOmit(omitUIProps(props))
 const forwarded = useForwardProps(delegatedProps)
 </script>
 
@@ -20,8 +26,9 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="decrement"
     v-bind="forwarded"
     :class="
-      cn('absolute top-1/2 left-0 z-2 -translate-y-1/2 cursor-pointer p-3 disabled:cursor-not-allowed disabled:opacity-20',
-        props.class,
+      cn('cursor-pointer disabled:cursor-not-allowed disabled:opacity-20',
+         buttonVariants({ base, variant, size, hover }),
+         props.class,
       )
     ">
     <slot>

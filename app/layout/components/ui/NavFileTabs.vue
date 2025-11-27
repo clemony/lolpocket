@@ -42,7 +42,7 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '1.6rem'])
         paddingRight: tabPaddingX,
       }"
       :class="
-        cn('group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-22 grow origin-bottom cursor-pointer items-start self-end border-b-0! tabs-lg transition-none',
+        cn('group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-22 grow origin-bottom cursor-pointer items-start self-end border-b-0! tabs-lg transition-none *:pointer-events-none',
            {
              grow: stickyRaw.get() <= 0.5,
            },
@@ -74,7 +74,11 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '1.6rem'])
         :style="{
           translateY,
         }">
-        {{ item?.meta?.title || item.name.toString() }}
+        <Icons
+          v-if="route.fullPath.match(/backpack.*/)"
+          :name="item?.meta?.icon"
+          :class="cn('mr-4 size-3.75 **:stroke-2', { 'size-3.75': item.meta.icon === 'folder' })" />
+        {{ item?.meta?.title || item?.name?.toString() }}
       </motion.div>
 
       <FakeTab />

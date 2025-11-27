@@ -21,7 +21,7 @@ const props = withDefaults(
   {
     sideOffset: 4,
     animation: 'shift-toward',
-    theme: 'base, tippy-clean',
+    theme: 'base, clean',
   },
 )
 const emits = defineEmits<DropdownMenuContentEmits>()

@@ -12,7 +12,7 @@
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  &[data-theme~='neutral, tippy-clean'] {
+  &[data-theme~='neutral, clean'] {
     @apply !w-[258px] !max-w-[258px];
   }
 
@@ -22,7 +22,7 @@
     }
   }
 
-  &[data-theme~='tippy-clean'],
+  &[data-theme~='clean'],
   &[data-theme~='n-mention'],
   &[data-theme~='b-mention'] {
     @apply! p-0 max-w-none;
@@ -31,7 +31,7 @@
     }
   }
 
-  .tippy-content:not([data-theme='tippy-clean']) {
+  .tippy-content:not([data-theme='clean']) {
     @apply px-3 py-1 text-2  whitespace-pre inline-block font-medium **:text-2;
   }
 

@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 
-const slug = computed(() => getSummonerSlug(as().account) || null)
 const route = useRoute()
 
-const { close, open } = useAppSidebar()
+const { close, open, toggle } = useAppSidebar()
 
 const isLeft = usePageLeave()
 
@@ -18,24 +17,26 @@ const isLeft = usePageLeave()
     v-element-hover="[() => close(), { delayLeave: 300 }]" */
 
 const hoverStart = shallowRef<boolean>(false)
-console.log(as().account)
+
+function onHover() {
+/*   hoverStart.value = true
+  setTimeout(() => {
+    if (hoverStart.value && !open)
+      toggle(true)
+  }, 900) */
+}
 </script>
 
 <template>
   <motion.div
     id="sidebar"
     class="
-      absolute top-0 left-0 z-50 grid size-full max-h-screen w-110 min-w-110!
-      grid-cols-[45px_1fr] items-center rounded-r-xl border-y-1 border-r
+      absolute top-0 left-0 z-50 grid size-full max-h-screen w-90 min-w-90!
+       items-center rounded-r-xl border-y-1 border-r
       border-l-0 border-b3/50 bg-b1/90 drop-shadow-md drop-shadow-black/12
       backdrop-blur-md
     "
-    @hover-start="
-      () => {
-        if (!open) open = true;
-        hoverStart = true;
-      }
-    "
+    @hover-start="onHover()"
     @hover-end="
       () => {
         hoverStart = false;
@@ -52,15 +53,13 @@ console.log(as().account)
     </div>
 
     <!-- logo -->
-    <div
+
+    <!--  <div
       class="
         flex h-screen w-full flex-col items-center gap-y-3 border-r
         border-r-b3/80 pt-3
       ">
-      <h1 class="mb-1 dss">
-        LP
-      </h1>
-      <BtnLink
+    <BtnLink
         v-for="pocket in ps().pockets.filter((p) =>
           ps().pinned.includes(p.key),
         )"
@@ -73,17 +72,20 @@ console.log(as().account)
           :img="pocket.icon"
           class="size-full scale-120" />
       </BtnLink>
-    </div>
+    </div> -->
 
     <div
       class="
         pointer-events-auto relative scrollbar-hidden flex h-screen w-full
-        flex-col overflow-hidden pt-16 pr-2
+        flex-col overflow-hidden pt-3 pr-2 pl-1
       ">
+      <h1 class="mb-2 h-11 px-3.5 dss">
+        LP
+      </h1>
       <!-- search buttton -->
 
       <SearchBox
-        class="mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
+        class="my-1 mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
 
       <!-- summoner linkies -->
       <div class="pl-2">
@@ -124,7 +126,7 @@ console.log(as().account)
         :interactive="true"
         :tag="null"
         trigger="click focus"
-        theme="base tippy-clean sidebar-dropdown">
+        theme="base clean sidebar-dropdown">
         <Button
           variant="ghost"
           hover="outline"

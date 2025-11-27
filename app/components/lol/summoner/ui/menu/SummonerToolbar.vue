@@ -1,15 +1,19 @@
 <script lang="ts" setup>
 const {
   class: className,
+  size = '9',
   summoner,
   tooltipPlacement = 'bottom',
   update,
+  variant = 'outline',
   warning,
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
   sidebar?: boolean
   warning?: boolean
+  variant?: ButtonVariants['variant']
+  size?: ButtonVariants['size']
   update?: boolean
   tooltipPlacement?: Side
 }>()
@@ -19,32 +23,30 @@ const tippy = {
   delay: [0, 0],
   offset: [0, 16],
   placement: tooltipPlacement,
-  theme: 'base',
+  theme: 'outline',
 }
-
 // @todo finish scripts block and report
+
+const btnClass = 'fx-0!'
 </script>
 
 <template>
   <div
-    class="items-center"
-    :class="cn('', className)">
+    :class="cn('grid auto-cols-fr grid-flow-col grid-rows-2 items-center gap-1', className)">
     <UpdateSummoner
       v-if="update"
+      class="col-span-4! bg-neutral"
       :placement="tooltipPlacement"
-      class=""
-      text
       variant="neutral"
-      :show-icon="true"
-      size="md"
-      :summoner />
+      :size />
 
     <Button
       v-if="warning"
       v-tippy="{ ...tippy, content: 'Report' }"
-      size="md"
+      :size
       tabindex="-1"
-      variant="neutral"
+      :class="btnClass"
+      :variant
       :summoner>
       <icon
         name="warning"
@@ -52,17 +54,22 @@ const tippy = {
     </Button>
     <BlockButton
       v-tippy="{ ...tippy, content: 'Block' }"
-      size="md"
+      :class="btnClass"
+      :size
+      :variant
       :summoner />
     <MessageButton
       v-tippy="{ ...tippy, content: 'Message' }"
-      size="md"
+      :class="btnClass"
+      :size
+      :variant
       :summoner />
 
     <FollowButton
-      class="w-full"
+      :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-[1]', btnClass)"
+      :variant
       :placement="tooltipPlacement"
-      size="md"
+      :size
       :summoner />
   </div>
 </template>

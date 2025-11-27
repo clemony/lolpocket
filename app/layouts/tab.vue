@@ -1,19 +1,22 @@
 <script lang="ts" setup>
-const { pocket, summonerState: ss } = defineProps<{
+const { champion, pocket, summonerState: ss } = defineProps<{
   summonerState?: SummonerInject
   pocket?: Pocket
-
+  champion?: Champion
 }>()
-const el = useTemplateRef<HTMLElement>('el')
-useScrollProvider(el)
+console.log('🥸 - ss:', ss)
+console.log('💭 ss:', ss)
 
-const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : getRandomBg())
+const scrollRef = useState('scrollRef', () => shallowRef<HTMLElement>(null))
+
+useScrollProvider(scrollRef)
+const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : champion ? getSplash(champion.key, 'uncentered') : getRandomBg())
 </script>
 
 <template>
   <div
     id="app"
-    class="relative h-screen min-h-screen w-screen max-w-screen overflow-y-auto">
+    class="relative w-screen max-w-screen overflow-x-hidden overflow-y-hidden">
     <!-- navbar -->
     <Navbar />
     <!-- sidebar -->
@@ -21,20 +24,16 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : getRand
 
     <!-- bg -->
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash
-        size="full"
-        :img="bg" />
+      <BgSplash :img="bg" />
     </div>
 
-    <BgSplash
-      size="full"
-      :img="bg" />
+    <BgSplash :img="bg" />
 
     <!-- Header block -->
     <div
       class="
         pointer-events-none z-0 grid size-full h-70 max-h-70 min-h-70
-        grid-cols-2 overflow-hidden
+        grid-cols-2
       ">
       <div
         class="
@@ -47,21 +46,29 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : getRand
         <PocketHeader
           v-else-if="pocket"
           :pocket />
+        <ChampionHeader
+          v-else-if="champion"
+          :champion />
       </div>
     </div>
 
-    <div class="fixed top-0 left-[45px] z-12 flex h-15 w-56 items-center">
+    <div class="fixed top-0 left-[47px] z-10 flex h-15 w-56 items-center gap-3">
       <SummonerDropdown
         v-if="ss"
+        size="c-11"
         :data="ss.summoner.value" />
+
       <PocketMenubar
         v-else-if="pocket" />
     </div>
 
     <!-- Scrollable content -->
     <div
-      ref="el"
-      class="absolute inset-0 top-0 h-screen max-w-screen overflow-x-hidden overflow-y-auto pt-70">
+
+      ref="scrollRef"
+      :style="{ overflowAnchor: 'none' }"
+      class="absolute inset-0 top-0 size-full max-w-screen overflow-auto pt-70">
+      <!--  <ProfileSettingsSidebar /> -->
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
         class="
@@ -73,7 +80,8 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : getRand
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative z-1 -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1">
+      <div
+        class="relative z-1 -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1">
         <!-- page -->
         <slot />
       </div>
@@ -82,8 +90,10 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : getRand
   </div>
 
   <div class="fixed right-24 bottom-24 z-4 grid gap-4">
-    <SummonerFAB
+    <UpdateSummoner
       v-if="ss"
+      placement="left"
+      size="c-14"
       :state="ss" />
     <UpFAB />
   </div>

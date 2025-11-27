@@ -93,3 +93,40 @@ export interface MatchTeam {
   teamId: number
   win: boolean
 }
+
+export interface PlayerTimeline {
+  puuid: string
+  matchId?: string
+  stats: {
+    deathsBefore15: number
+    killsBefore15: number
+    assistsBefore15: number
+  }
+  items: PlayerItemEvent[]
+  kills: ChampionDeathEvent[]
+  assists: ChampionDeathEvent[]
+  deaths: ChampionDeathEvent[]
+}
+
+export interface PlayerItemEvent {
+  timestamp: number
+  participantId: number
+  itemId?: number
+  afterId?: number
+  beforeId?: number
+  goldGain?: number
+  type:
+    | "ITEM_PURCHASED"
+    | "ITEM_UNDO"
+    | "ITEM_SOLD"
+    | "ITEM_DESTROYED"
+    | "ITEM_OBTAINED "
+}
+
+export interface ChampionDeathEvent {
+  type: "CHAMPION_KILL" | "CHAMPION_SPECIAL_KILL"
+  killerId: number
+  assistingParticipantIds: number[]
+  victimId: number
+  timestamp: number
+}

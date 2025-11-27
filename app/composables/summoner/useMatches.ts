@@ -26,56 +26,67 @@ export function useMatches(summoner: Ref<Summoner>) {
   // --- load newer matches from server
   async function loadNewer() {
     const id = toValue(puuid)
+    const region = toValue(summoner.value.region)
     if (!id || loading.value) return
+
     loading.value = true
+    try {
+      const since = newestTs.value ?? 0
+      console.log("🥸 - loadNewer - since:", since)
+      const res = await $fetch<MatchReturn>(`/api/riot/v5/match/newer`, {
+        query: { puuid: id, region, since },
+      })
 
-    const since = newestTs.value ?? 0
-    const res = await $fetch<MatchReturn>(`/api/matches/${id}/newer`, {
-      query: { since },
-    })
+      console.log("🥸 - loadNewer - res.matches.length:", res.matches.length)
+      if (res.matches.length) {
+        console.log("🥸 - loadNewer -IN:", res.matches.length)
+        await addMatches(res.matches)
+        matches.value.unshift(...res.matches)
+        newestTs.value = res.newestTimestamp
+      }
 
-    if (res.matches.length) {
-      await addMatches(res.matches)
-      matches.value.unshift(...res.matches)
-      newestTs.value = res.newestTimestamp
+      if (res.cursor != null) {
+        cursor.value = res.cursor
+        console.log("🥸 - loadNewer - cursor.value:", cursor.value)
+        await setCursor(id, cursor.value)
+      }
+
+      summoner.value.updatedMatch = Date.now()
+    } finally {
+      loading.value = false
     }
-
-    if (res.cursor != null) {
-      cursor.value = res.cursor
-      await setCursor(id, cursor.value)
-    }
-    summoner.value.updatedMatch = new Date().toISOString()
-    loading.value = false
   }
 
-  // --- load older matches using server cursor
+  // older
+
   async function loadOlder() {
     const id = toValue(puuid)
+    const region = toValue(summoner.value.region)
     if (!id || loading.value || endOfHistory.value) return
 
     loading.value = true
+    try {
+      const res = await $fetch<MatchReturn>(`/api/riot/v5/match/older`, {
+        query: { puuid: id, region, cursor: cursor.value },
+      })
 
-    const res = await $fetch<MatchReturn>(`/api/matches/${id}/older`, {
-      query: { cursor: cursor.value },
-    })
+      if (!res.matches.length) {
+        endOfHistory.value = true
+        return
+      }
 
-    if (!res.matches.length) {
-      endOfHistory.value = true
+      await addMatches(res.matches)
+      matches.value.push(...res.matches)
+
+      if (res.cursor != null) {
+        cursor.value = res.cursor
+        await setCursor(id, cursor.value)
+      }
+
+      if (res.done) endOfHistory.value = true
+    } finally {
       loading.value = false
-      return
     }
-
-    await addMatches(res.matches)
-    matches.value.push(...res.matches)
-
-    if (res.cursor != null) {
-      cursor.value = res.cursor
-      await setCursor(id, cursor.value)
-    }
-
-    if (res.done) endOfHistory.value = true
-
-    loading.value = false
   }
 
   // --- reset state on puuid change

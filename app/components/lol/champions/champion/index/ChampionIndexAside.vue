@@ -42,7 +42,7 @@ const wrapperClass
     </menu>
 
     <ChampionStats
-      v-model:open="ui().collapseStates.championInfo[0]"
+      v-if="champion?.stats"
       :champion />
 
     <Collapsible

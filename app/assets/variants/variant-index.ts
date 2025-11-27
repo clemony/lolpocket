@@ -2,7 +2,7 @@ import type { VariantProps } from "tailwind-variants"
 import { tv } from "tailwind-variants"
 
 export const elementBaseVariants = {
-  btn: "shrink-0 btn relative focus:outline-0 focus-visible:outline-0 relative focus-visible:ring-0 flex bg-transparent has-[first:[&_svg]]:gap-3 has-not:[span:empty]:gap-2 text-start has-[span:empty]:gap-0 [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex px-3",
+  btn: "shrink-0 btn relative focus:outline-0 duration-100 focus-visible:outline-0 relative focus-visible:ring-0 flex bg-transparent has-[first:[&_svg]]:gap-3 has-not:[span:empty]:gap-2 text-start has-[span:empty]:gap-0 [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex px-3",
   label: "font-medium flex gap-4 items-center select-none",
   none: "",
 }
@@ -78,7 +78,7 @@ export const baseVariants = tv({
       opacity: "hover:opacity-80",
       outline: "hover:!border hover:!border-b3 hover:shadow-xs hover:!fx-0",
       secondary:
-        "px-3 hover:!border-b3 hover:!bg-tint-b3/40 hover:shadow-xs hover:inset-shadow-xs hover:shadow-black/7",
+        "px-3 hover:!border-b3 hover:!bg-tint-b3/45 hover:shadow-xs hover:inset-shadow-xs hover:shadow-black/5 hover:inset-shadow-black/2",
     },
 
     // active

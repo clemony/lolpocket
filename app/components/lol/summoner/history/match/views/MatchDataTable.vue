@@ -8,8 +8,8 @@ const { match, player } = defineProps<{
 
 const gameOutcome = computed(() => {
   return {
-    player: player.win ? 'Ally' : 'Enemy',
-    win: match.teams[0].win === true ? 'Blue Team Win' : 'Red Team Win',
+    player: player?.win ? 'Ally' : 'Enemy',
+    win: match?.teams[0]?.win === true ? 'Blue Team Win' : 'Red Team Win',
   }
 })
 const gameEnd = computed(() => {
@@ -24,7 +24,7 @@ const players = computed(() => match.participants as Player[])
 <template>
   <div
     class="
-      group/head grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)]
+      group/head mt-2 grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)]
       gap-1 px-2 py-1
     ">
     <div class="size-full items-center pl-2">
@@ -68,7 +68,7 @@ const players = computed(() => match.participants as Player[])
   <div class="relative h-171 w-full overflow-auto">
     <div
       class="
-        z-auto mt-2 grid h-max grid-flow-row auto-rows-max
+        z-auto grid h-max grid-flow-row auto-rows-max
         grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2 **:text-1
       ">
       <template
@@ -99,9 +99,9 @@ const players = computed(() => match.participants as Player[])
             :key="p.puuid"
             :class="
               cn('py-1 text-end text-1! font-medium tracking-tight *:text-1!',
-                {
-                  'text-bc/15 **:text-bc/15': p[stat.id] === 0,
-                },
+                 {
+                   'text-bc/15 **:text-bc/15': p[stat.id] === 0,
+                 },
               )
             ">
             {{

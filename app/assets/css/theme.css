@@ -76,20 +76,6 @@
 
   --drop-shadow-tiny: 1px 0px 0px #00000020;
 
-  --animate-gradient: gradient ease infinite;
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
   @keyframes heartbeat {
     0%,

@@ -2,7 +2,7 @@
 import type { TabsTriggerProps } from 'reka-ui'
 import { TabsTrigger, useForwardProps } from 'reka-ui'
 
-const props = defineProps<
+const props = withDefaults(defineProps<
   TabsTriggerProps & {
     value?: string | number | null
     on?: TabsTriggerVariants['on']
@@ -12,7 +12,9 @@ const props = defineProps<
     size?: TabsTriggerVariants['size']
     variant?: TabsTriggerVariants['variant']
   }
->()
+>(), {
+  base: 'btn'
+})
 
 const delegatedProps = reactiveOmit(props, 'class')
 

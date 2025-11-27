@@ -1,6 +1,7 @@
 export * from "./components/field-variants"
 export * from "./components/input-variants"
 export * from "./components/popover-variants"
+export * from "./components/sheet-variants"
 export * from "./components/tab-variants"
 export * from "./components/toast-variants"
 export * from "./components/toggle-variants"

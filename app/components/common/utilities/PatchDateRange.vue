@@ -1,76 +1,79 @@
 <script setup lang="ts">
 import type { CalendarDate } from '@internationalized/date'
-import { getLocalTimeZone, isToday, today } from '@internationalized/date'
+import type { DateRange } from 'reka-ui'
+import { fromAbsolute, getLocalTimeZone, isToday, today } from '@internationalized/date'
 
-const matches = shallowRef<string>('amount')
+const { filter, filteredMatches, matches, setFilter } = useSummonerInject()
+const date = ref({
+  end: null,
+  start: null,
+}) as Ref<DateRange>
 
-const state = useSummonerInject()
+const minDate = computed (() => {
+  if (!matches.value)
+    return null
 
-const blocks = computed(() => Math.round(state.matches.value.length / 20))
+  const a = [...matches?.value]?.pop()
+  if (!a)
+    return null
+  return fromAbsolute(a?.gameEndTimestamp, getLocalTimeZone())
+})
+
+watch(() => filter?.value?.date, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
+
+const open = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger as-child>
-      <Button
-        as="label"
-        for="match-select"
-        variant="outline"
-        shape="square"
-        :class="cn('size-9', { 'btn-active': matches === 'range' })"
-        on="base">
-        <icon
-          name="calendar"
-          class="size-4" />
+  <Popover v-model="open">
+    <PopoverTrigger
+      base="btn"
+      size="10"
+      class="w-full justify-start"
+      variant="base"
+      hover="secondary"
+      on="base">
+      <icon
+        name="calendar"
+        class="size-4" />
+      <span class="grow text-start">
 
-        <input
-          v-model="matches"
-          type="radio"
-          name="match-select"
-          value="range"
-          class="peer hidden" />
-      </Button>
+        {{ date?.start || date?.end
+          ? `${useDateFormat(date?.start.toString(), 'MMM D, YYYY').value || ''}
+            ${date?.start ? ' - ' : ''}
+            ${useDateFormat(date?.end.toString(), 'MMM D, YYYY').value || ''}`
+          : minDate
+            ? `${useDateFormat(minDate.toDate(), 'MMM D, YYYY').value} - ${useDateFormat(
+              today(getLocalTimeZone()).toString(), 'MMM D, YYYY').value}`
+            : 'No matches loaded'
+        }}
+      </span>
+      <Icon
+        name="select"
+        class="size-4 text-bc/40 group-hover/select:text-bc/90 group-on/select:text-bc/90" />
     </PopoverTrigger>
     <LazyPopoverContent
       align="start"
-      class="grid w-fit grid-cols-2 px-1 py-2">
-      <Select :multiple="false">
-        <Label
-          for="match-select"
-          as-child
-          variant="outline"
-          :class="cn('h-9 max-w-40', { 'btn-active': matches === 'amount' })"
-          on="base">
-          <BaseSelectTrigger>
-            <SelectValue />
-          </BaseSelectTrigger>
-          <input
-            v-model="matches"
-            type="radio"
-            name="match-select"
-            value="amount"
-            class="peer hidden" />
-        </Label>
-        <LazySelectContent class="w-[var(--reka-select-trigger-width)]">
-          <SelectGroup>
-            <SelectLabel class="opacity-50">
-              # matches:
-            </SelectLabel>
-            <SelectItem
-              v-for="i in blocks"
-              :key="i"
-              class="flex-row-reverse font-medium"
-              :value="i * 20">
-              {{ i === blocks ? "All" : i * 20 }}
-            </SelectItem>
-          </SelectGroup>
-        </LazySelectContent>
-      </Select>
+      class="grid w-fit rounded-xl! px-1 py-1"
+      @interact-outside="open = false">
+      <!--  -->
 
+      <!-- calendar -->
       <CalendarWrapper
         v-slot="{ month }"
+        v-model="date"
+        :disabled="!matches.length"
+        :close-on-select="true"
         :fixed-weeks="true"
-        :max-value="today(getLocalTimeZone())">
+        :min-value="minDate"
+        :max-value="today(getLocalTimeZone())"
+        @update:start-value="e => setFilter('date', { start: e, end: e })"
+        @update:model-value="e => setFilter('date', e)">
+        <!--
+
+        -->
         <RangeCalendarGridBody>
           <RangeCalendarGridRow
             v-for="(weekDates, index) in month.rows"

@@ -55,12 +55,12 @@ onMounted(() => {
     :class="cn('', props.class)">
     <article class="container mx-auto max-w-250 min-w-190 p-6 dst">
       <header class="mb-6 text-start tracking-tight dst">
-        <span class="text-6">
-          404: <span class="italic">page seems afk</span>
+        <span class="text-3">
+          404 | <span class=""> This page looks afk</span>
         </span>
         <br />
 
-        <span class="font-serif text-[2rem] leading-14 font-bold">In place, I offer you a cat fact.</span>
+        <span class="font-serif text-[2rem] leading-14 font-bold">In place of content, I offer you a cat fact.</span>
       </header>
 
       <section
@@ -71,7 +71,7 @@ onMounted(() => {
         <div class="flex flex-col gap-3">
           <p class="mt-1 text-6 dst">
             <!-- #{{catFact.num}}  -->
-            {{ catFact.num }}: {{ catFact.title }}
+            {{ catFact.num }}. {{ catFact.title }}
           </p>
           <p class="leading-7">
             {{ catFact.text }}
@@ -81,21 +81,20 @@ onMounted(() => {
 
       <footer
         class="
-          flex items-center justify-center gap-4 text-end text-2 italic *:flex
+           flex items-center gap-1 text-end text-2 italic *:flex
           *:items-end *:gap-2
         ">
+        <icon
+          name="la:flag-usa"
+          class="size-5" />
         <p class="text-1 text-bc/70">
           Brought to you by
         </p>
-        <p class="font-semibold italic antialiased opacity-80">
-          <icon
-            name="la:flag-usa"
-            class="size-5" />
-          Paws for Progress
-          <span class="">2028</span>
+        <p class="font-semibold italic antialiased opacity-70">
+          Paws for Progress, 2028.
         </p>
         <p class="text-1 text-bc/70">
-          Refresh in peace
+          Refresh in peace.
         </p>
       </footer>
     </article>

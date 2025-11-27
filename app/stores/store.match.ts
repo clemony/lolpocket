@@ -1,14 +1,17 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
+import type { DateRange } from "reka-ui"
 
 export interface MatchFilter {
   ally?: string | null
   champion?: string | null
-  ignoreRole?: boolean
   patch?: number | null
   queue?: number | null
+  ignoreRole?: boolean
   role?: string | null
+  date?: MaybeRef<DateRange>
+  number?: number
 }
-export const useMatchStore = defineStore('matchStore', () => {
+export const useMatchStore = defineStore("matchStore", () => {
   const summonerSearch = ref(null)
 
   const championTabsQueue = ref<number>(0)
@@ -19,7 +22,12 @@ export const useMatchStore = defineStore('matchStore', () => {
     champion: null,
     patch: null,
     queue: 0,
-    role: 'ALL',
+    role: "ALL",
+    date: {
+      start: null,
+      end: null,
+    },
+    number: null,
   })
 
   function clearFilter() {
@@ -28,7 +36,12 @@ export const useMatchStore = defineStore('matchStore', () => {
       champion: null,
       patch: null,
       queue: 0,
-      role: 'ALL',
+      role: "ALL",
+      date: {
+        start: null,
+        end: null,
+      },
+      number: null,
     })
   }
 

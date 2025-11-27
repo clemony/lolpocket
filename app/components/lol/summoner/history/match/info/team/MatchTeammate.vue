@@ -159,11 +159,11 @@ const runeClass
 
       <Badge
         v-if="stats.kda / 100 === Infinity"
-        size="sm"
+        size="5"
         class="
-          h-6! border-master/40 bg-master/20 text-0 saturate-180 **:leading-0
+           w-fit gap-1 border-master/40 bg-master/20 text-0! saturate-180 **:leading-0
         ">
-        <icon
+        <Icon
           name="fa6-solid:infinity"
           class="mt-[0.04em] size-3.5 dst" />
         KDA
@@ -194,10 +194,10 @@ const runeClass
           size="5"
           :class="
             cn('-mt-px gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
-              {
-                'border-gold/40 bg-precision ': player.puuid === playerRank.mvp,
-                'bg-fighter/70 border-fighter': player.puuid === playerRank.ace,
-              },
+               {
+                 'border-gold/40 bg-precision ': player.puuid === playerRank.mvp,
+                 'bg-fighter/70 border-fighter': player.puuid === playerRank.ace,
+               },
             )
           ">
           {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}

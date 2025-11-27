@@ -53,7 +53,7 @@ function handleDelete() {
       group
       class="
         @container relative left-0 flex size-full flex-wrap justify-center
-        gap-10 gap-18 px-12
+     gap-18 px-12
       ">
       <div
         v-if="set?.primary && primaryRunes"

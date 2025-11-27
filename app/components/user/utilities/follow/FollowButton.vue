@@ -35,10 +35,8 @@ const puuid = computed (() => props.summoner?.puuid)
     <ToggleGroupItem
       v-if="puuid"
       :value="puuid"
-      placement="left"
-      on="base"
+      :placement
       v-bind="forwarded"
-      variant="outline"
       :class="cn('', toggleVariants({ variant, on, size, base }), props.class)">
       <Icon
         :name="as().settings.favorite_summoners.includes(puuid) ? 'heart-sm' : 'heart-sm-outline'"

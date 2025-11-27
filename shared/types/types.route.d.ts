@@ -1,11 +1,6 @@
 import "vue-router"
 declare module "vue-router" {
-  interface RouteRecord {
-    pocket_key?: string
-    puuid?: string
-    region?: string
-    slug?: string
-  }
+  interface RouteRecord {}
   interface RouteMeta {
     puuid?: string
     components?: Record<string, Component>

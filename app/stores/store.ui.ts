@@ -7,6 +7,7 @@ export const useUiStore = defineStore(
       inboxDropdown: ref<boolean>(false),
     }
     const sidebarOpen = ref(false)
+    const profileSettings = ref<boolean>(false)
     const commandOpen = ref(false)
     const toggles = ref({
       backpack: {
@@ -28,9 +29,12 @@ export const useUiStore = defineStore(
       // dialog
       blockDialog,
 
-      // collapse
+      //sidebar
+      profileSettings,
       sidebarOpen,
       sidebarStates,
+
+      // collapse
       collapseStates,
       commandOpen,
 

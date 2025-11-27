@@ -1,20 +1,23 @@
 <script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
-    state?: SummonerInject
     placement?: Side
     theme?: string
     size?: ButtonVariants['size']
+    on?: ButtonVariants['on']
+
     variant?: ButtonVariants['variant']
   }>(),
   {
-    placement: 'top',
+    on: 'floating',
+    placement: 'bottom',
+    size: 'c-11',
     theme: 'base',
+    variant: 'floating'
   },
 )
 
-const { loadNewer, summoner } = props.state ? props.state : useSummonerInject()
-
+const { loadNewer, summoner } = useSummonerInject()
 const {
   cooldown,
   isLoading,
@@ -22,7 +25,7 @@ const {
 } = throttleFunction(
   () => loadNewer(),
   120_000,
-  summoner?.value?.puuid,
+  summoner.value?.puuid,
   'match-refresh',
 )
 
@@ -38,22 +41,20 @@ const tippy = computed(() =>
 <template>
   <Button
     v-tippy="{ content: tippy ?? null, theme, placement }"
-    size="c-14"
-    placement="left"
-    variant="floating"
-    class="[&_svg]:size-4.25"
+    :placement
 
     :class="
       cn(
-        'shrink-0 p-0',
         {
           'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
             cooldown,
         },
+        buttonVariants({ on, variant, size }),
 
+        'shrink-0 [&_svg]:size-4.25',
       )
     "
-    @click="update()">
+    @click="loadNewer()">
     <TransitionScalePop
       class="relative grid size-full place-items-center overflow-hidden">
       <icon

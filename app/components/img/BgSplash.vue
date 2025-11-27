@@ -4,19 +4,17 @@ import { easeInOut, motion } from 'motion-v'
 const {
   class: className,
   img: i,
-  size,
   slice,
 } = defineProps<{
   class?: HTMLAttributes['class']
   img: string | null
-  size: 'header' | 'full'
   slice?: boolean
 }>()
 
 const img = useImage()
 const { scrollY } = useScrollInject()
 
-const y = useTransform(scrollY, [0, 200], ['0%', '2%'], {
+const y = useTransform(scrollY, [0, 200], ['0%', '3%'], {
   ease: easeInOut,
 })
 
@@ -30,9 +28,7 @@ const bg = computed(() => {
 <template>
   <div
     :class="
-      cn('absolute -top-16 isolate flex w-screen justify-end bg-tint-b2/30 dss', {
-        'h-120': size === 'header',
-        'h-[90vh]': size === 'full',
+      cn('absolute -top-16 isolate flex h-[80vh] w-screen justify-end bg-tint-b2/30 dss', {
       })
     ">
     <div
@@ -43,8 +39,6 @@ const bg = computed(() => {
                slice,
              'mask-l-from-30% mask-l-to-70% before:from-45% before:to-75%':
                !slice,
-             '': size === 'header',
-             '': size === 'full',
            },
         )
       ">
@@ -52,9 +46,9 @@ const bg = computed(() => {
         v-if="!slice"
         :style="{
           backgroundImage: bg,
-          backgroundPositionX: size === 'full' ? '0' : '0',
+          backgroundPositionX: '0',
           backgroundPositionY: y,
-          backgroundSize: size === 'full' ? 'cover' : 'auto',
+          backgroundSize: 'cover',
         }"
         :class="
           cn('z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto bg-fixed bg-no-repeat blur-sm duration-100',
@@ -63,8 +57,8 @@ const bg = computed(() => {
 
       <motion.div
         :style="{
-          backgroundPositionX: size === 'full' ? '0' : '0',
-          backgroundSize: 'auto',
+          backgroundPositionX: '100%',
+          backgroundSize: 'cover',
           backgroundImage: bg,
           translateY: y,
         }"

@@ -1,13 +1,13 @@
 // server/riot/account/getByPuuid.ts
-import { riotGet } from "riot"
+import { riotFetch } from "riot"
 import type { AccountReturn } from "~~/server/types"
 
 // fetch account using puuid
 export async function fetchAccountByPuuid(
   puuid: string
 ): Promise<AccountReturn> {
-  // riot requires query params not path interpolation
-  return await riotGet<AccountReturn>(
-    `https://americas.api.riotgames.com/riot/account/v1/accounts/by-puuid/${puuid}`
-  )
+  const url = `https://americas.api.riotgames.com/riot/account/v1/accounts/by-puuid/${puuid}`
+  const key = `accounts:${puuid}`
+
+  return riotFetch<AccountReturn>(key, url)
 }

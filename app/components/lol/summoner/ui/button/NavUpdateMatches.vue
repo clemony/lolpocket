@@ -16,7 +16,7 @@ const {
 } = throttleFunction(
   () => loadNewer(),
   120_000,
-  summoner.value.puuid,
+  summoner.value.puuid.toString(),
   'match-refresh',
 )
 

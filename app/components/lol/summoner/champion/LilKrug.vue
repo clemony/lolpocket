@@ -6,15 +6,22 @@
       grid w-full shrink-0 grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center
       gap-5 px-4
     ">
-    <Placeholder
-      class="
-        relative grid size-17 place-items-center overflow-hidden rounded-full
-      "></Placeholder>
+    <Icons
+      name="lp:champ"
+      base="btn"
+      class="text-bc/40"
+      wrapper-class="bg-b2!"
+      variant="secondary"
+      size="c-14" />
 
-    <div class="flex flex-col justify-center gap-2 font-medium opacity-60 dst">
-      <p>Krug</p>
+    <div class="flex flex-col justify-center gap-1 py-px font-medium opacity-60 dst">
+      <p class="italic">
+        No champions
+      </p>
 
-      <p>0 Games</p>
+      <p class="text-bc/60">
+        0 games played
+      </p>
     </div>
 
     <div class="flex grow flex-col items-end justify-center px-3 text-2">
@@ -24,7 +31,8 @@
     </div>
 
     <DonutSkeleton
-      class="size-18 dst *:opacity-60"
+      thickness="4px"
+      class="size-14 dst *:opacity-60"
       label="0%"></DonutSkeleton>
   </div>
 </template>

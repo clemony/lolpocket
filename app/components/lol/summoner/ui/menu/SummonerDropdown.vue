@@ -1,8 +1,23 @@
 <script lang="ts" setup>
-const { class: className, data: summoner } = defineProps<{
+const {
+  base = 'btn',
+  class: className,
+  data: s,
+  hover = 'base',
+  on = 'base',
+  size = 'c-11',
+  variant = 'ghost',
+} = defineProps<{
   class?: HTMLAttributes['class']
-  data: Summoner
+  data: MaybeRef<Summoner>
+  size?: ButtonVariants['size']
+  variant?: ButtonVariants['variant']
+  base?: ButtonVariants['base']
+  on?: ButtonVariants['on']
+  hover?: ButtonVariants['hover']
 }>()
+
+const summoner = computed (() => toValue(s))
 
 const open = shallowRef<boolean>(false)
 
@@ -13,124 +28,87 @@ function handleBlock() {
 </script>
 
 <template>
-  <Popover v-model:open="open">
-    <PopoverTrigger as-child>
-      <Button
-        variant="ghost"
-        hover="base"
-        on="base"
-        :class="
-          cn('relative w-full justify-start rounded-full pr-8 pl-2 text-start text-nowrap',
-             { 'btn-active': open },
-             className,
-          )
-        ">
-        <LazySummonerIcon
-          v-if="summoner"
-          :summoner
-          class="size-6 min-h-6 min-w-6 rounded-full" />
-
+  <tippy
+    :interactive="true"
+    animation="shift-toward"
+    theme="base clean">
+    <Button
+      :class="
+        cn('relative overflow-hidden border-b3! p-0 shadow-sm drop-shadow-sm',
+           buttonVariants({ size, hover, variant, base, on }),
+           { 'btn-active': open },
+           className,
+        )
+      ">
+      <LazySummonerIcon
+        v-if="summoner"
+        :summoner
+        class="size-11 rounded-full" />
+      <!--
         <SummonerName
           :summoner
           class="w-full truncate font-medium" />
         <icon
           name="select"
-          class="absolute right-3 size-3.5" />
-      </Button>
-    </PopoverTrigger>
-    <LazyPopoverContent
-      class="w-[var(--reka-popover-trigger-width)] p-0"
-      align="start"
-      :side-offset="4"
-      @open-auto-focus.stop.prevent>
-      <div
-        class="
+          class="absolute right-3 size-3.5" /> -->
+    </Button>
+
+    <template #content>
+      <div class="w-64! p-1.5">
+        <div
+          class="
           grid auto-rows-fr grid-cols-2 items-center gap-y-1 py-2 pr-4 pl-3
           *:odd:opacity-50 *:even:justify-self-end
         ">
-        <span class="flex items-center gap-1.5 font-medium opacity-60">
-          <icon
-            name="lucide:user"
-            class="size-3.5 **:stroke-[2.1]" />name:
-        </span>
-        <SummonerName
-          :summoner
-          class="" />
-
-        <span class="flex items-center gap-1.5 font-medium opacity-60">
-          <icon
-            name="hash"
-            class="size-3.5 **:stroke-[2.1]" />tag:
-        </span>
-        <SummonerTag
-          :summoner
-          no-tag
-          class="" />
-        <span class="flex items-center gap-1.5 font-medium opacity-60">
-          <icon
-            name="at"
-            class="size-3.5 **:stroke-[2.1]" />region:
-        </span>
-        <SummonerRegion
-          class="opacity-80"
-          :summoner
-          no-icon />
-
-        <span class="flex items-center gap-1.5 font-medium opacity-60">
-          <span
-            class="relative grid size-3.5 place-items-center overflow-hidden">
+          <span class="flex items-center gap-1.5 font-medium opacity-60">
             <icon
-              name="gg:loadbar-sound"
-              class="absolute size-5.5" /></span>
-          level:
-        </span>
-        <SummonerLevel
-          no-tag
-          class="-mt-px opacity-80"
-          :summoner />
-      </div>
-      <Separator />
+              name="lucide:user"
+              class="size-3.5 **:stroke-[2.1]" />name:
+          </span>
+          <SummonerName
+            :summoner
+            class="" />
 
-      <div
-        class="
-          grid h-14 grid-cols-3 gap-1.5 p-1 px-3 py-2 *:grid *:size-full
-          *:place-items-center *:[&_svg]:size-5 *:[&_svg]:stroke-2
-          [&_svg]:group-hover:opacity-100
-        ">
-        <Button
-          v-tippy="{ content: 'Block', theme: 'base', placement: 'bottom' }"
-          tabindex="-1"
-          class="size-full"
-          variant="outline"
-          hover="btn"
-          @click="handleBlock()">
-          <icon
-            name="ban"
-            class="opacity-60" />
-        </Button>
-        <!-- TODO add disable messaging -->
-        <Button
-          v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
-          variant="outline"
-          tabindex="-1"
-          class="size-full"
-          hover="btn">
-          <icon
-            class="opacity-60"
-            name="lucide:message-square-more" />
-        </Button>
-        <Button
-          variant="outline"
-          class="group size-full"
-          as-child>
-          <FollowButton
-            placement="bottom"
-            tabindex="-1"
-            :summoner>
-          </FollowButton>
-        </Button>
+          <span class="flex items-center gap-1.5 font-medium opacity-60">
+            <icon
+              name="hash"
+              class="size-3.5 **:stroke-[2.1]" />tag:
+          </span>
+          <SummonerTag
+            :summoner
+            no-tag
+            class="" />
+          <span class="flex items-center gap-1.5 font-medium opacity-60">
+            <icon
+              name="at"
+              class="size-3.5 **:stroke-[2.1]" />region:
+          </span>
+          <SummonerRegion
+            class="opacity-80"
+            :summoner
+            no-icon />
+
+          <span class="flex items-center gap-1.5 font-medium opacity-60">
+            <span
+              class="relative grid size-3.5 place-items-center overflow-hidden">
+              <icon
+                name="gg:loadbar-sound"
+                class="absolute size-5.5" /></span>
+            level:
+          </span>
+          <SummonerLevel
+            no-tag
+            class="-mt-px opacity-80"
+            :summoner />
+        </div>
+        <Separator />
+        <SummonerToolbar
+          :summoner
+          warning
+          update />
       </div>
-    </LazyPopoverContent>
-  </Popover>
-  <LazyBlockDialog :summoner />
+    </template>
+  </tippy>
+  <LazyBlockDialog
+    :summoner />
 </template>

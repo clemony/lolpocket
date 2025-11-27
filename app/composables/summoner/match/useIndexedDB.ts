@@ -10,6 +10,7 @@ export function useIndexedDB() {
   }
 
   const addMatches = async (matches: MatchData[]) => {
+    console.log("🥸 - addMatches - matches.length:", matches.length)
     if (matches.length) {
       await matchDB.matchData.bulkPut(matches)
     }

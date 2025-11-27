@@ -1,5 +1,5 @@
 export * from "../../helpers/riot/match/fetchInBatches"
-export * from "./client"
+export * from "./fetch"
 export * from "./v1/account/accounts/byEither"
 export * from "./v1/account/accounts/byPuuid"
 export * from "./v1/account/accounts/byRiotId"

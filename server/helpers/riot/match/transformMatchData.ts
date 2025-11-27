@@ -39,13 +39,13 @@ export function transformMatchData(raw: any): MatchData {
       },
       profileIcon: p.profileIcon,
       quadraKills: p.quadraKills,
-      riotIdGameName: p.riotIdGameName ?? '',
-      riotIdTagline: p.riotIdTagline ?? '',
+      riotIdGameName: p.riotIdGameName ?? "",
+      riotIdTagline: p.riotIdTagline ?? "",
       soloKills: p.soloKills,
       summoner1Id: p.summoner1Id,
       summoner2Id: p.summoner2Id,
       teamId: p.teamId,
-      teamPosition: p.teamPosition ?? '',
+      teamPosition: p.teamPosition ?? "",
       timeCCingOthers: p.timeCCingOthers,
       totalDamageDealtToChampions: p.totalDamageDealtToChampions,
       totalDamageShieldedOnTeammates: p.totalDamageShieldedOnTeammates,
@@ -61,11 +61,11 @@ export function transformMatchData(raw: any): MatchData {
 
       // placeholder, will overwrite after MVP calculation
       mvpScore: 0,
-    }),
+    })
   )
 
   // prep stats for mvp
-  const playerStats: PlayerStats[] = participants.map(p => ({
+  const playerStats: PlayerStats[] = participants.map((p) => ({
     puuid: p.puuid,
     assists: p.assists,
     challenges: {
@@ -108,7 +108,7 @@ export function transformMatchData(raw: any): MatchData {
   // continue mapping
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(
-      p => p.teamId === team.teamId,
+      (p) => p.teamId === team.teamId
     )
 
     return {
@@ -140,7 +140,7 @@ export function transformMatchData(raw: any): MatchData {
     endOfGameResult: raw.info.endOfGameResult,
     gameDuration: raw.info.gameDuration,
     gameEndTimestamp: raw.info.gameEndTimestamp,
-    gamePatch: normalizePatchNumber(raw.info.gameVersion),
+    gamePatch: raw.info.gameVersion,
     matchId: raw.metadata.matchId,
     participantIds: raw.metadata.participants,
     participants,

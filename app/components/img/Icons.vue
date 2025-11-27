@@ -7,19 +7,18 @@ const props = withDefaults(defineProps<{
   name: string
   wrapperClass?: HTMLAttributes['class']
   size?: ElementVariants['size']
+  variant?: ElementVariants['variant']
+  base?: ElementVariants['base']
 }>(), {
   size: 'sq-4',
 
 })
-
-const delegated = reactiveOmit(props, 'class', 'name')
-const forwarded = useForwardProps(delegated)
 </script>
 
 <template>
   <Element
-    v-bind="forwarded"
-    :class="cn('', props.wrapperClass)">
+
+    :class="cn('inline aspect-square', buttonVariants({ base, variant, size }), props.wrapperClass)">
     <icon
       :name
       :class="cn('', props.class)" />

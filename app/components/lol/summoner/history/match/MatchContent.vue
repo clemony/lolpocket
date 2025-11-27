@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { MatchDataTable, MatchScoreboard } from '#components'
+
 defineOptions({
   inheritAttrs: false,
 })
@@ -9,59 +11,64 @@ const { isOpen, match } = defineProps<{
   isOpen: boolean
 }>()
 
-const modelValue = ref<string | number>('Scoreboard')
+const modelValue = ref<string>('Scoreboard')
+
+const tabs = {
+  Scoreboard: {
+    name: 'Scoreboard',
+    component: MatchScoreboard,
+  },
+  Statistics: {
+    name: 'Statistics',
+    component: MatchDataTable,
+  },
+  //
+  Build: {
+    name: 'Build',
+  },
+  Timeline: {
+    name: 'Timeline',
+  }
+}
 </script>
 
 <template>
-  <AnimatePresence>
-    <LazyCollapsibleContent
-      v-if="isOpen"
-      class="
-        'CollapsibleContent group relative h-200 w-full translate-x-0 p-0 text-2
-        transition duration-0 **:select-none
+  <LazyCollapsibleContent
+    v-if="isOpen"
+    class="
+        'group relative h-200 w-full translate-x-0 p-0 text-2
+        **:select-none
       ">
-      <Tabs
-        v-model:model-value="modelValue"
-        class="relative">
-        <TabsList
+    <Tabs
+      v-model:model-value="modelValue"
+      class="relative">
+      <TabsList
 
-          class="
-            mb-0! w-full auto-cols-min grid-flow-col justify-start rounded-none
-            border border-b3 bg-b3/36
+        class="
+            w-full auto-cols-max grid-flow-col justify-start rounded-none border
+            border-b3 bg-b3/36
           ">
+        <template
+          v-for="tab, i in tabs"
+          :key="i">
           <TabsTrigger
-            v-for="tab in ['Scoreboard', 'Statistics', 'Build']"
-            :key="tab"
             size="7"
-            :value="tab"
-            class="cursor-pointer">
-            {{ tab }}
+            :value="tab.name"
+            class="cursor-pointer px-3 shadow-black/2">
+            {{ tab.name }}
           </TabsTrigger>
 
-          <TabIndicator />
-        </TabsList>
+          <TabIndicator class="-translate-y-px" />
+        </template>
+      </TabsList>
 
-        <TabsContent
-          value="Scoreboard"
-          class="m-0! p-0">
-          <LazyMatchScoreboard :match="match" />
-        </TabsContent>
-
-        <TabsContent value="Badges">
-          <LazyMatchBadgesEarned
-            v-if="modelValue === 'Badges'"
-            :match="match" />
-        </TabsContent>
-
-        <TabsContent
-          value="Data"
-          class="">
-          <LazyMatchDataTable
-            v-if="modelValue === 'Data'"
-            :player
-            :match="match" />
-        </TabsContent>
-      </Tabs>
-    </LazyCollapsibleContent>
-  </AnimatePresence>
+      <div
+        class="m-0! p-0">
+        <component
+          :is="tabs[modelValue].component"
+          v-if="tabs[modelValue].component"
+          :match="match" />
+      </div>
+    </Tabs>
+  </LazyCollapsibleContent>
 </template>

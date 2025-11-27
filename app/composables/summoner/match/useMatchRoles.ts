@@ -10,52 +10,54 @@ export interface RoleStats {
 export function useMatchRoles(
   puuid: string,
   matches: Ref<MatchData[]>
-): ComputedRef<RoleStats[]> {
-  return computed(() => {
-    const roles = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
-    const roleStatsMap = new Map<string, { games: number; wins: number }>()
+): RoleStats[] {
+  if (!matches) return
 
-    let allGames = 0
-    let allWins = 0
+  const roleNames = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
+  const roleStatsMap = new Map<string, { games: number; wins: number }>()
 
-    for (const match of matches.value) {
-      const player = match.participants.find((p) => p.puuid === puuid)
-      const role = player.teamPosition.toUpperCase()
-      if (!roles.includes(role)) continue
+  let allGames = 0
+  let allWins = 0
 
-      allGames++
-      if (player.win) allWins++
+  for (const match of toValue(matches)) {
+    const player = match.participants.find((p) => p.puuid === puuid)
+    const role = player.teamPosition.toUpperCase()
+    if (!roleNames.includes(role)) continue
 
-      if (!roleStatsMap.has(role)) {
-        roleStatsMap.set(role, { games: 0, wins: 0 })
-      }
+    allGames++
+    if (player.win) allWins++
 
-      const stats = roleStatsMap.get(role)!
-      stats.games++
-      if (player.win) stats.wins++
+    if (!roleStatsMap.has(role)) {
+      roleStatsMap.set(role, { games: 0, wins: 0 })
     }
 
-    roleStatsMap.set("ALL", { games: allGames, wins: allWins })
+    const stats = roleStatsMap.get(role)!
+    stats.games++
+    if (player.win) stats.wins++
+  }
 
-    const globalWinrate = allGames === 0 ? 0 : allWins / allGames
-    const m = 500
+  roleStatsMap.set("ALL", { games: allGames, wins: allWins })
 
-    const formatDisplay = (role: string) => {
-      switch (role) {
-        case "UTILITY":
-          return "Support"
-        case "MIDDLE":
-          return "Mid"
-        case "BOTTOM":
-          return "Bot"
-        case "ALL":
-          return "All"
-        default:
-          return role.charAt(0) + role.slice(1).toLowerCase()
-      }
+  const globalWinrate = allGames === 0 ? 0 : allWins / allGames
+  const m = 500
+
+  const formatDisplay = (role: string) => {
+    switch (role) {
+      case "UTILITY":
+        return "Support"
+      case "MIDDLE":
+        return "Mid"
+      case "BOTTOM":
+        return "Bot"
+      case "ALL":
+        return "All"
+      default:
+        return role.charAt(0) + role.slice(1).toLowerCase()
     }
+  }
 
-    return ["ALL", ...roles].map((role) => {
+  const roles = computed(() => {
+    return ["ALL", ...roleNames].map((role) => {
       const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
       const name = formatDisplay(role)
 
@@ -69,4 +71,5 @@ export function useMatchRoles(
       }
     })
   })
+  return roles.value
 }
