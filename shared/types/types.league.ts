@@ -18,6 +18,12 @@ export interface MapData extends MapIndex {
   description: string
 }
 
+export interface QueueIndex {
+map: Partial<MapIndex>
+  description: string
+  queueId: number,
+}
+
 export interface Role {
   name: string
   icon: string

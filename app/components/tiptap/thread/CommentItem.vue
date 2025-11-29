@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { vElementHover } from '@vueuse/components'
 import { renderStaticHTML } from '~~/shared/utils/mentions/renderStaticHTML'
-import { useMentionTooltips } from '~/composables/tiptap'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentData
@@ -32,7 +31,7 @@ const author = computedAsync(
   null,
 )
 const container = useTemplateRef<HTMLElement>('container')
-useMentionTooltips(container)
+useTooltips(container)
 </script>
 
 <template>

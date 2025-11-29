@@ -21,17 +21,21 @@ const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   ItemLite
 >
 
-const outputFilter = path.resolve('./shared/filters/item-aka.ts')
-const outputAka = path.resolve('./shared/filters/item-filters.ts')
+const outputTag = path.resolve('./shared/filters/tagToItem.ts')
+const outputMap = path.resolve('./shared/filters/mapToItem.ts')
+const outputRank = path.resolve('./shared/filters/rankToItem.ts')
+const outputStat = path.resolve('./shared/filters/statToItem.ts')
+const outputUnpurchasable = path.resolve('./shared/filters/unpurchasableItems.ts')
+
+const outputAka = path.resolve('./shared/filters/item-aka.ts')
 
 const itemsById: Record<number, ItemLite> = {}
-const itemFilters = {
-  maps: {} as Record<number, number[]>,
-  rank: {} as Record<string, number[]>,
-  stats: {} as Record<string, number[]>,
-  tags: {} as Record<string, number[]>,
-  unpurchasable: [] as number[],
-}
+const mapToItem = {} as Record<number, number[]>
+  const rankToItem = {} as Record<string, number[]>
+  const statToItem = {} as Record<string, number[]>
+  const tagToItem = {} as Record<string, number[]>
+  const unpurchasableItems = [] as number[]
+
 
 const akaLookup: Record<string, number> = {}
 
@@ -41,31 +45,31 @@ for (const item of Object.values(raw)) {
   itemsById[id] = item
 
   for (const r of normalizeArray(rank)) {
-    if (!itemFilters.rank[r])
-      itemFilters.rank[r] = []
-    itemFilters.rank[r].push(id)
+    if (!rankToItem[r])
+      rankToItem[r] = []
+    rankToItem[r].push(id)
   }
 
   for (const tag of normalizeArray(tags)) {
-    if (!itemFilters.tags[tag])
-      itemFilters.tags[tag] = []
-    itemFilters.tags[tag].push(id)
+    if (!tagToItem[tag])
+      tagToItem[tag] = []
+    tagToItem[tag].push(id)
   }
 
   for (const map of maps ?? []) {
-    if (!itemFilters.maps[map])
-      itemFilters.maps[map] = []
-    itemFilters.maps[map].push(id)
+    if (!mapToItem[map])
+      mapToItem[map] = []
+    mapToItem[map].push(id)
   }
 
   for (const stat of Object.keys(stats ?? {})) {
-    if (!itemFilters.stats[stat])
-      itemFilters.stats[stat] = []
-    itemFilters.stats[stat].push(id)
+    if (!statToItem[stat])
+      statToItem[stat] = []
+    statToItem[stat].push(id)
   }
 
   if (purchasable === false) {
-    itemFilters.unpurchasable.push(id)
+    unpurchasableItems.push(id)
   }
 
   for (const akaName of normalizeArray(aka)) {
@@ -74,10 +78,40 @@ for (const item of Object.values(raw)) {
 }
 // Output filters
 fs.writeFileSync(
-  outputFilter,
+  outputRank,
   `// ${markUpdate()}
 
-export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`,
+export const rankToItem = ${JSON.stringify(rankToItem, null, 2)}`,
+)
+
+
+fs.writeFileSync(
+  outputTag,
+  `// ${markUpdate()}
+
+export const tagToItem = ${JSON.stringify(tagToItem, null, 2)}`,
+)
+
+
+fs.writeFileSync(
+  outputMap,
+  `// ${markUpdate()}
+
+export const mapToItem = ${JSON.stringify(mapToItem, null, 2)}`,
+)
+
+fs.writeFileSync(
+  outputStat,
+  `// ${markUpdate()}
+
+export const statToItem = ${JSON.stringify(statToItem, null, 2)}`,
+)
+
+fs.writeFileSync(
+  outputUnpurchasable,
+  `// ${markUpdate()}
+
+export const unpurchasableItems = ${JSON.stringify(unpurchasableItems, null, 2)}`,
 )
 
 // Optional: output aka map

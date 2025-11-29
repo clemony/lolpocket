@@ -6,7 +6,7 @@ export interface InboxTemplate {
     text?: string
     icon?: IconObject
   }
-  badge?: BadgeObject
+  badge?: InboxBadge
 }
 
 type InboxTemplateFactory = (vars: Record<string, string>) => InboxTemplate

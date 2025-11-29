@@ -10,7 +10,7 @@ const stats = computed(() => {
   if (!player)
     return null
 
-  const id = player?.perks?.keystone
+  const id = player?.runes?.keystone
 
   const list = [
     player.item0,
@@ -21,12 +21,12 @@ const stats = computed(() => {
     player.item5,
   ]
   return {
-    keystone: ix().runes.find(r => r.id === id),
+    keystone: runeIndex.find(r => r.id === id),
     cs: player.totalMinionsKilled + player.neutralMinionsKilled,
-    items: Object.values(list),
+    items: list,
     kda: Math.round(((player.kills + player.assists) / player.deaths) * 100),
     lpScore: playerRank.list.findIndex(p => p.puuid === player.puuid) + 1,
-    secondaryPath: pathIndex.find(p => p.id === player?.perks?.secondary)
+    secondaryPath: pathIndex.find(p => p.id === player?.runes?.secondary.path)
       ?.name,
   }
 })
@@ -55,7 +55,7 @@ const runeClass
         :id="player?.championId"
         v-tippy="{
           theme: 'neutral',
-          content: ix().champNameById(player?.championId),
+          content: champNameById(player?.championId),
           placement: 'top',
         }"
         alt="champion-icon"
@@ -108,7 +108,7 @@ const runeClass
       <div
         v-tippy="{
           theme: 'neutral',
-          content: ix().runeNameById(player?.perks?.keystone).toString(),
+          content: runeNameById(player?.runes?.keystone).toString(),
           placement: 'left',
         }"
         :class="runeClass">
@@ -290,27 +290,21 @@ const runeClass
     <div
       :class="cn('w-[170px] grid-cols-6! grid-rows-1! justify-self-end pl-3', divClass)">
       <template
-        v-for="i in 6"
-        :key="i">
-        <Item
-          v-if="stats?.items[i]"
-          :id="stats?.items[i]"
-          v-tippy="{
-            theme: 'neutral',
-            content: ix().itemNameById(stats.items[i]),
-            placement: 'bottom',
-          }"
-          class="
-            size-8 rounded-md ring-bc/60 transition-all duration-300
-            *:rounded-md hover:scale-105 hover:ring
-          " />
-
-        <Placeholder
-          v-else
-          class="
-            size-8 shrink-0 rounded-md border-b3 bg-b2/80 shadow-sm
-            shadow-black/4
-          " />
+        v-for="item in stats.items"
+        :key="item">
+        <div :class="cn('size-8 rounded-md border-b3/80 bg-b3/30 inset-shadow-xs inset-shadow-black/4', { border: !item })">
+          <Item
+            v-if="item"
+            :id="item"
+            v-tippy="{ content: ix().itemNameById(item),
+                       placement: 'bottom',
+                       theme: 'neutral' }"
+            :alt="item"
+            class="
+          size-8 rounded-md ring-bc/60 transition-all duration-300
+          hover:scale-105 hover:ring
+        " />
+        </div>
       </template>
     </div>
 

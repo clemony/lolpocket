@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { AbilityVariants } from '@variants/manual'
-import { abilityVariants } from '@variants/manual'
-
 const {
   ability,
   color,

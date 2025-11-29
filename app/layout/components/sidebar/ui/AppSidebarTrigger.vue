@@ -1,13 +1,20 @@
 <script lang="ts" setup>
-import { vElementHover } from '@vueuse/components'
 import { motion } from 'motion-v'
 
-const { close, open, toggle } = useAppSidebar()
+const { open, toggle } = useAppSidebar()
+const trigger = useTemplateRef<HTMLElement>('trigger')
+const isHovered = useElementHover(trigger, { delayEnter: 600, delayLeave: 300 })
+
+watch(() => isHovered.value, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+  if (newVal === true)
+    toggle(true)
+})
 </script>
 
 <template>
   <button
-    v-element-hover="[() => (open = true), { delayEnter: 200 }]"
+    ref="trigger"
     class="
       group/btn fixed top-0 left-0 z-30 grid h-screen w-8 place-items-center
     ">

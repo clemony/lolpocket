@@ -119,7 +119,7 @@
   }
 
   .field-box {
-    background: url('../icons/ui/noise.svg');
+    background: url('../../icons/ui/noise.svg');
     @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-2   relative;
   }
 

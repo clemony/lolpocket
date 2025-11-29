@@ -6,6 +6,7 @@ export interface MatchStat {
   id: string
   name: string
   spec?: string
+  expand?: MatchStat[]
 }
 export const matchDataStats: MatchStats[] = [
   {
@@ -75,6 +76,29 @@ export const matchDataStats: MatchStats[] = [
       {
         id: 'kills',
         name: 'kills',
+        expand: [
+
+      {
+        id: 'killingSprees',
+        name: 'sprees',
+      },
+      {
+        id: 'doubleKills',
+        name: 'double',
+      },
+      {
+        id: 'tripleKills',
+        name: 'triple',
+      },
+      {
+        id: 'quadraKills',
+        name: 'quadra',
+      },
+      {
+        id: 'pentaKills',
+        name: 'penta',
+      },
+        ]
       },
       {
         id: 'deaths',
@@ -100,26 +124,6 @@ export const matchDataStats: MatchStats[] = [
         spec: 'round',
       },
 
-      {
-        id: 'killingSprees',
-        name: 'sprees',
-      },
-      {
-        id: 'doubleKills',
-        name: 'double',
-      },
-      {
-        id: 'tripleKills',
-        name: 'triple',
-      },
-      {
-        id: 'quadraKills',
-        name: 'quadra',
-      },
-      {
-        id: 'pentaKills',
-        name: 'penta',
-      },
     ],
   },
 

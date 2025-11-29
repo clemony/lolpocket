@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Primitive } from 'reka-ui'
-import { runeToPath } from '~~/shared/indexes'
 
 const {
   id,
@@ -33,12 +32,7 @@ watch(
   <Primitive
     :as
     :class="
-      cn('relative grid aspect-square h-20 place-items-center overflow-hidden rounded-full transition-all duration-300',
-        {
-          'drop-shadow-md': loaded,
-        },
-        loaded ? loadedClass : ' border border-b2 bg-b2/30 ',
-        className,
+      cn('relative grid aspect-square h-20 place-items-center overflow-visible rounded-full transition-all duration-300', className,
       )
     ">
     <slot />
@@ -47,10 +41,10 @@ watch(
       :key="id"
       ref="imgEl"
       :src="`/img/runes/${runeToPath[id]}/${id}.webp`"
-      :alt="ix().runeNameById(id)"
+      :alt="runeNameById(id)"
       :class="
-        cn('size-full rounded-full bg-b3/80 transition-all duration-300', {
-          'scale-105 ': loaded,
+        cn('size-full rounded-full bg-radial from-b3 to-transparent to-90% transition-all duration-300', {
+          'scale-105 drop-shadow-md': loaded,
         })
       "
       @load="loaded = true" />

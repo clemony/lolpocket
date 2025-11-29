@@ -3,16 +3,16 @@ const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
 }>()
-const s = computed (() => pathIndex.find(p => p.id === player.perks.secondary))
+const s = computed (() => pathIndex.find(p => p.id === player?.runes?.secondary.path))
 
-const keystone = computed (() => runeIndex.find(r => r.id === player.perks.keystone))
+const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keystone))
 </script>
 
 <template>
   <div
     :class="
       cn('-mt-px -mr-1 ml-1 flex size-full max-w-8 min-w-8 flex-col place-items-center gap-0.5 **:[&_img]:shrink-0',
-        className,
+         className,
       )
     ">
     <img
@@ -21,7 +21,7 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.perks.keyst
                  placement: 'right',
                  theme: 'neutral' }"
       :alt="keystone?.name"
-      :src="`/img/runes/${player.perks?.keystone}.webp`"
+      :src="`/img/runes/${player.runes?.keystone}.webp`"
       class="
         h-8 w-auto shrink-0! drop-shadow-sm transition-all duration-300
         hover:scale-120

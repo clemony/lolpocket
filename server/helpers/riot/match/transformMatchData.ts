@@ -32,10 +32,23 @@ export function transformMatchData(raw: any): MatchData {
       neutralMinionsKilled: p.neutralMinionsKilled,
       objectivesStolen: p.objectivesStolen,
       pentaKills: p.pentaKills,
-      perks: {
-        keystone: p.perks?.styles?.[0]?.selections?.[0]?.perk ?? 0,
-        primary: p.perks?.styles?.[0]?.style ?? 0,
-        secondary: p.perks?.styles?.[1]?.style ?? 0,
+      runes: {
+          keystone: p.perks?.styles?.[0]?.selections?.[0]?.perk ?? 0,
+        primary: {
+          path: p.perks?.styles?.[0]?.style ?? 0,
+          runes: [
+             p.perks?.styles?.[0]?.selections?.[1]?.perk ?? 0,
+              p.perks?.styles?.[0]?.selections?.[2]?.perk ?? 0,
+               p.perks?.styles?.[0]?.selections?.[3]?.perk ?? 0
+          ]
+        },
+        secondary: {
+          path: p.perks?.styles?.[1]?.style ?? 0,
+          runes: [
+             p.perks?.styles?.[1]?.selections?.[0]?.perk ?? 0,
+              p.perks?.styles?.[1]?.selections?.[1]?.perk ?? 0
+          ]
+        }
       },
       profileIcon: p.profileIcon,
       quadraKills: p.quadraKills,

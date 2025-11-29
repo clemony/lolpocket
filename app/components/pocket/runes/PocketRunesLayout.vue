@@ -17,10 +17,10 @@ const set = computed(() => s).value
 const pathList = pathIndex.map(p => p.name)
 
 const primaryRunes = computed(() =>
-  runePaths.find(p => p.name === set.primary?.path),
+  runePaths[set.primary?.path],
 )
 const secondaryRunes = computed(() =>
-  runePaths.find(p => p.name === set.secondary?.path),
+  runePaths[set.secondary?.path]
 )
 
 function handlePath1() {

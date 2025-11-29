@@ -9,6 +9,7 @@
 
 /*       */
 @layer utilities {
+  .tiptap{
   [data-label='deleted-comment']{
 @apply !italic text-bc/40;
     }
@@ -78,6 +79,7 @@
     [data-role='support'] {
       @apply bg-inspiration/36 hover:bg-inspiration/70;
     }
+  }
   }
   .emoji {
     @apply !text-7 align-bottom;

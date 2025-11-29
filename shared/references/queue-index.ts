@@ -1,4 +1,4 @@
-export const queueIndex = [
+export const queueIndex: QueueIndex[] = [
   {
     description: 'Draft',
     map: {

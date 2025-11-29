@@ -1,12 +1,6 @@
-import fs from "node:fs"
-import path from "node:path"
 import { type PlayerTimeline } from "../../../types"
 import { normalizeItemEvents } from "./normalizeItemEvents"
 import { toDeathEvent } from "./toDeathEvent"
-
-const rawPath = path.resolve("../timeline.json")
-const outputPath = path.resolve("../data/timeline-parsed.ts")
-const raw = JSON.parse(fs.readFileSync(rawPath, "utf-8"))
 
 export function transformTimeline(raw: any, puuid: string): PlayerTimeline {
   const id = raw.info.participants.find(
@@ -55,11 +49,18 @@ export function transformTimeline(raw: any, puuid: string): PlayerTimeline {
     (a: { timestamp: number }) => a.timestamp < FIFTEEN_MIN
   ).length
 
+    // SKILL EVENTS
+  const skillOrder = allEvents.filter(
+    (e: any) => e.type === 'SKILL_LEVEL_UP' && e.participantId === id
+  ).flatMap(e => e.skillSlot)
+
+
   return {
     puuid,
     matchId: raw.metadata.matchId,
     stats: { deathsBefore15, killsBefore15, assistsBefore15 },
     inventory: normalizeItemEvents(items),
+    skills: {order: skillOrder, priority: ''},
     kills,
     assists,
     deaths,
@@ -74,13 +75,3 @@ const ITEM_EVENT_TYPES = new Set([
   "ITEM_DESTROYED",
   "ITEM_OBTAINED",
 ])
-
-const line = transformTimeline(
-  raw,
-  "P84Ak9qWwk2epueCD7ZeGQeqIXSiJnNAc_-EoqEWj1jT7uODKXTGY1rpvSO7ePL9XyygjZOvb0Jm2A"
-)
-fs.writeFileSync(
-  outputPath,
-  `
-export const playerTimeline: PlayerTimeline[] = ${JSON.stringify(line, null, 2)}`
-)

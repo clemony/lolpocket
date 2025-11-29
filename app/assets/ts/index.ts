@@ -1,1 +1,1 @@
-export * from '../variants/variant-index'
+export * from '../variants/variant.index'

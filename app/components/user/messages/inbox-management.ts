@@ -1,6 +1,6 @@
 import type { InboxMessage } from '~~/shared/schema'
 
-export const inboxBox: DataObject[] = [
+export const inboxBox: InboxType[] = [
   {
     name: 'Messages',
     icon: {

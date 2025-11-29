@@ -9,36 +9,36 @@ export interface ParseState {
   str: string
 }
 
-/* export interface IconObject {
+export interface InboxBadge {
+  class?: string
+  icon?: IconObject
+  text?: string
+}
+export interface IconObject {
   name: string
   alt?: IconObject
   class?: string | string[]
   modifier?: IconObject
 }
 
-export interface BadgeObject {
-  class?: string
+export interface InboxType {
+  data?: object
+  value?: number
   icon?: IconObject
-  text?: string
+  name: string
+  component?: any
 }
-
+/*
 
 export type LinkGroup = LinkObject[]
 
 export interface LinkObject {
-  name: string
   blurb?: string
-  component?: any
   external?: boolean
   hash?: string
-  icon?: IconObject
   img?: ImgObject
   link?: string
   links?: LinkObject[]
-}
-export interface DataObject extends LinkObject {
-  data?: object
-  value?: number
 }
  */
 import type {

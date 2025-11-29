@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { LinkTippy } from '#components'
+import { mapToItem } from '~~/shared/filters/mapToItem'
 
-const { id } = defineProps<{
+const { id, map } = defineProps<{
   id: number
+  map?: number
 }>()
+console.log('🥸 - map?:', map)
 
 const item = ref<Item>(null)
 
@@ -21,6 +24,13 @@ watchEffect(async () => {
   }
 })
 
+const filteredFrom = computed (() =>
+  item.value.buildsFrom.filter(i => map ? mapToItem[map].includes(i.id) : i)
+)
+
+const filteredInto = computed (() =>
+  item.value.buildsInto.filter(i => map ? mapToItem[map].includes(i.id) : i)
+)
 const itemImgClass
   = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rounded-md  transition-all  duration-200 *:rounded-md  *:pointer-events-none hover:ring-1 hover:ring-offset-2'
 </script>
@@ -144,7 +154,7 @@ const itemImgClass
           color="neutral" />
         <div class="group flex items-center gap-3 p-1">
           <template
-            v-for="(fromItem, i) in item.buildsFrom"
+            v-for="(fromItem, i) in filteredFrom"
             :key="i">
             <Item
               :id="fromItem.id"
@@ -188,7 +198,7 @@ const itemImgClass
             })
           ">
           <Item
-            v-for="(buildItem, i) in item.buildsInto"
+            v-for="(buildItem, i) in filteredInto"
             :id="buildItem.id"
             :key="i"
             :title="`${buildItem.name} ‑ ${buildItem.gold}g`"

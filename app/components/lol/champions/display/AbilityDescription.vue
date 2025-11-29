@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { abilityVariants, AbilityVariants } from '@variants/manual'
-
 const { class: className, effect } = defineProps<{
   effect: AbilityEffect
   damageType?: string

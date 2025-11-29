@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { match } = defineProps<{
-  match: any
+  match: MatchDataCurrentPlayer
 }>()
 
 const teams = computed(() => {

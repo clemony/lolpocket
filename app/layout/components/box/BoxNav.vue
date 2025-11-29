@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const { items: i, links } = defineProps<{
   links?: RouteRecordRaw[]
-  items?: DataObject[]
+  items?: any[]
   isCollapsed: boolean
 }>()
 

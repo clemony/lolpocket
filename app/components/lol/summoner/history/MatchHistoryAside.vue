@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { clearFilters, filteredMatches, loading, loadOlder, matches, summoner } = useSummonerInject()
+const { clearFilters, summoner } = useSummonerInject()
 </script>
 
 <template>

@@ -6,7 +6,7 @@ const { title, class: className } = defineProps<{
 }>()
 
 const tabs = ref('MessageView')
-const inboxes: Record<string, DataObject> = {
+const inboxes: Record<string, InboxType> = {
   news: {
     name: 'News',
     component: 'NewsView',

@@ -1,187 +1,5 @@
-[
-  {
-    "id": 8400,
-    "name": "Resolve",
-    "slots": [
-      {
-        "label": "Keystone",
-        "runes": [
-          {
-            "id": 8437,
-            "name": "Grasp of the Undying",
-            "description": "Every 4s in combat, your next basic attack on a champion will:<li>Deal bonus magic damage equal to 3.5% of your max health<li>Heal you for 1.3% of your max health<li>Permanently increase your health by 5<br><rules><i>Ranged Champions:</i> Damage, healing, and permanent health gained are 40% effective.</rules>"
-          },
-          {
-            "id": 8439,
-            "name": "Aftershock",
-            "description": "After immobilizing an enemy champion, increase your Armor and Magic Resist by 35 + 80% of your Bonus Resists for 2.5s. Then explode, dealing magic damage to nearby enemies.<br><br>Damage: 25 - 120 (+8% of your bonus health)<br>Cooldown: 20s<br><br>Resistance bonus from Aftershock capped at: 80-150 (based on level)<br>"
-          },
-          {
-            "id": 8465,
-            "name": "Guardian",
-            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <span class=\"scale-level\">90 - 40</span> seconds<br>Shield: <span class=\"scale-level\">45 - 180</span> + <scaleAP>25%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <span class=\"scale-level\">50 - 165</span> postmitigation damage"
-          }
-        ],
-        "tier": 0
-      },
-      {
-        "label": "Strength",
-        "runes": [
-          {
-            "id": 8446,
-            "name": "Demolish",
-            "description": "Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s"
-          },
-          {
-            "id": 8463,
-            "name": "Font of Life",
-            "description": "Impairing the movement of an enemy champion restores Health to you and the lowest health nearby allied champion.<br><br>70% effect for Ranged Users.<br><br>Cooldown: 20s"
-          },
-          {
-            "id": 8401,
-            "name": "Shield Bash",
-            "description": "Whenever you gain a new shield,  your next basic attack against a champion deals <span class=\"scale-level\">5 - 30</span> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect."
-          }
-        ],
-        "tier": 1
-      },
-      {
-        "label": "Resistance",
-        "runes": [
-          {
-            "id": 8429,
-            "name": "Conditioning",
-            "description": "After 12 min gain +8 Armor and +8 Magic Resist and increase your Armor and Magic Resist by 3%."
-          },
-          {
-            "id": 8444,
-            "name": "Second Wind",
-            "description": "After taking damage from an enemy champion, heal for 4% of your missing health over 10s."
-          },
-          {
-            "id": 8473,
-            "name": "Bone Plating",
-            "description": "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 (based on level) less damage.<br><br>Duration: 1.5s<br>Cooldown: 55s"
-          }
-        ],
-        "tier": 2
-      },
-      {
-        "label": "Vitality",
-        "runes": [
-          {
-            "id": 8451,
-            "name": "Overgrowth",
-            "description": "Absorb life essence from monsters or enemy minions that die near you, permanently gaining 3 maximum health for every 8.<br><br>When you've absorbed 120 monsters or enemy minions, gain an additional 3.5% maximum health."
-          },
-          {
-            "id": 8453,
-            "name": "Revitalize",
-            "description": "Gain 5% Heal and Shield Power.<br><br>Heals and shields you cast or receive are 10% stronger on targets below 40% health."
-          },
-          {
-            "id": 8242,
-            "name": "Unflinching",
-            "description": "Gain 10 Armor and Magic Resist when crowd controlled and for 2 seconds after."
-          }
-        ],
-        "tier": 3
-      }
-    ],
-    "tooltip": "Durability and crowd control"
-  },
-  {
-    "id": 8100,
-    "name": "Domination",
-    "slots": [
-      {
-        "label": "Keystone",
-        "runes": [
-          {
-            "id": 8112,
-            "name": "Electrocute",
-            "description": "Hitting a champion with 3 <b>separate</b> attacks or abilities within 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Damage: 70 - 240 (+0.1 bonus AD, +0.05 AP) damage.<br>Cooldown: 20s<br><br><i>'We called them the Thunderlords, for to speak of their lightning was to invite disaster.'</i>"
-          },
-          {
-            "id": 8128,
-            "name": "Dark Harvest",
-            "description": "Damaging a Champion below 50% health deals <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests their soul, permanently increasing Dark Harvest's damage by 11.<br><br>Dark Harvest damage: 30 (+11 damage per soul) (+0.1 bonus AD) (+0.05 AP)<br>Cooldown: 35s (resets to 1.0s on takedown)"
-          },
-          {
-            "id": 9923,
-            "name": "Hail of Blades",
-            "description": "Gain 160% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the attack speed limit.</rules>"
-          }
-        ],
-        "tier": 0
-      },
-      {
-        "label": "Malice",
-        "runes": [
-          {
-            "id": 8126,
-            "name": "Cheap Shot",
-            "description": "Damaging champions with <b>impaired movement or actions</b> deals 10 - 45 bonus true damage (based on level).<br><br>Cooldown: 4s<br><rules>Activates on damage occurring after the impairment.</rules>"
-          },
-          {
-            "id": 8139,
-            "name": "Taste of Blood",
-            "description": "Heal when you damage an enemy champion.<br><br>Healing: 16-40 (+0.1 bonus AD, +0.05 AP) health (based on level)<br><br>Cooldown: 20s"
-          },
-          {
-            "id": 8143,
-            "name": "Sudden Impact",
-            "description": "Damaging basic attacks and abilities deal a bonus <trueDamage>20 - 80 True Damage</trueDamage> based on level to enemy champions after using a dash, leap, blink, teleport, or when leaving stealth for 4s.<br><br>Cooldown: 10s"
-          }
-        ],
-        "tier": 1
-      },
-      {
-        "label": "Tracking",
-        "runes": [
-          {
-            "id": 8137,
-            "name": "Sixth Sense",
-            "description": "Automatically sense a nearby untracked and unseen ward, tracking it for the team. <br><br>Level 11: Also reveal the ward for 10s.<br><br>This effect has a 250 second Cooldown."
-          },
-          {
-            "id": 8140,
-            "name": "Grisly Mementos",
-            "description": "Collect 1 memento on champion <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword>, up to 18 total.<br><br>Gain 6 Trinket Haste for each collected. In game modes where vision Trinkets do not exist, instead gain 3 Summoner Spell Haste."
-          },
-          {
-            "id": 8141,
-            "name": "Deep Ward",
-            "description": "Your wards in the enemy jungle are <keywordMajor>Deep</keywordMajor>. <keywordMajor>Deep</keywordMajor> wards gain +1 extra Health and +[30 - 45]s increased duration (+[45 - 150]s for Trinket stealth wards).<br><br>Level 9: Wards in the river are also <keywordMajor>Deep</keywordMajor>."
-          }
-        ],
-        "tier": 2
-      },
-      {
-        "label": "Hunter",
-        "runes": [
-          {
-            "id": 8135,
-            "name": "Treasure Hunter",
-            "description": "Gain an additional <span class=\"gold\">50 gold</span> the next time you collect a <i>Bounty Hunter</i> stack. Increase the gold gained by <span class=\"gold\">20 gold</span> for each <i>Bounty Hunter</i> stack, up to <span class=\"gold\">130 gold</span>.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
-          },
-          {
-            "id": 8105,
-            "name": "Relentless Hunter",
-            "description": "Gain <speed>8 Move Speed</speed> out of combat per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
-          },
-          {
-            "id": 8106,
-            "name": "Ultimate Hunter",
-            "description": "Your ultimate gains <attention>6</attention> Ability Haste, plus an additional <attention>5</attention> Ability Haste per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
-          }
-        ],
-        "tier": 3
-      }
-    ],
-    "tooltip": "Burst damage and target access "
-  },
-  {
+{
+  "8000": {
     "id": 8000,
     "name": "Precision",
     "slots": [
@@ -277,7 +95,98 @@
     ],
     "tooltip": "Improved attacks and sustained damage"
   },
-  {
+  "8100": {
+    "id": 8100,
+    "name": "Domination",
+    "slots": [
+      {
+        "label": "Keystone",
+        "runes": [
+          {
+            "id": 8112,
+            "name": "Electrocute",
+            "description": "Hitting a champion with 3 <b>separate</b> attacks or abilities within 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Damage: 70 - 240 (+0.1 bonus AD, +0.05 AP) damage.<br>Cooldown: 20s<br><br><i>'We called them the Thunderlords, for to speak of their lightning was to invite disaster.'</i>"
+          },
+          {
+            "id": 8128,
+            "name": "Dark Harvest",
+            "description": "Damaging a Champion below 50% health deals <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage</lol-uikit-tooltipped-keyword> and harvests their soul, permanently increasing Dark Harvest's damage by 11.<br><br>Dark Harvest damage: 30 (+11 damage per soul) (+0.1 bonus AD) (+0.05 AP)<br>Cooldown: 35s (resets to 1.0s on takedown)"
+          },
+          {
+            "id": 9923,
+            "name": "Hail of Blades",
+            "description": "Gain 160% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the Attack Speed limit.</rules>"
+          }
+        ],
+        "tier": 0
+      },
+      {
+        "label": "Malice",
+        "runes": [
+          {
+            "id": 8126,
+            "name": "Cheap Shot",
+            "description": "Damaging champions with <b>impaired movement or actions</b> deals 10 - 45 bonus true damage (based on level).<br><br>Cooldown: 4s<br><rules>Activates on damage occurring after the impairment.</rules>"
+          },
+          {
+            "id": 8139,
+            "name": "Taste of Blood",
+            "description": "Heal when you damage an enemy champion.<br><br>Healing: 16-40 (+0.1 bonus AD, +0.05 AP) health (based on level)<br><br>Cooldown: 20s"
+          },
+          {
+            "id": 8143,
+            "name": "Sudden Impact",
+            "description": "Damaging basic attacks and abilities deal a bonus <trueDamage>20 - 80 True Damage</trueDamage> based on level to enemy champions after using a dash, leap, blink, teleport, or when leaving stealth for 4s.<br><br>Cooldown: 10s"
+          }
+        ],
+        "tier": 1
+      },
+      {
+        "label": "Tracking",
+        "runes": [
+          {
+            "id": 8137,
+            "name": "Sixth Sense",
+            "description": "Automatically sense a nearby untracked and unseen ward, tracking it for the team. <br><br>Level 11: Also reveal the ward for 10s.<br><br>This effect has a 250 second Cooldown."
+          },
+          {
+            "id": 8140,
+            "name": "Grisly Mementos",
+            "description": "Collect 1 memento on champion <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword>, up to 18 total.<br><br>Gain 6 Trinket Haste for each collected. In game modes where vision Trinkets do not exist, instead gain 3 Summoner Spell Haste."
+          },
+          {
+            "id": 8141,
+            "name": "Deep Ward",
+            "description": "Your wards in the enemy jungle are <keywordMajor>Deep</keywordMajor>. <keywordMajor>Deep</keywordMajor> wards gain +1 extra Health and +[30 - 45]s increased duration (+[45 - 150]s for Trinket stealth wards).<br><br>Level 9: Wards in the river are also <keywordMajor>Deep</keywordMajor>."
+          }
+        ],
+        "tier": 2
+      },
+      {
+        "label": "Hunter",
+        "runes": [
+          {
+            "id": 8135,
+            "name": "Treasure Hunter",
+            "description": "Gain an additional <span class=\"gold\">50 gold</span> the next time you collect a <i>Bounty Hunter</i> stack. Increase the gold gained by <span class=\"gold\">20 gold</span> for each <i>Bounty Hunter</i> stack, up to <span class=\"gold\">130 gold</span>.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
+          },
+          {
+            "id": 8105,
+            "name": "Relentless Hunter",
+            "description": "Gain <speed>8 Move Speed</speed> out of combat per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
+          },
+          {
+            "id": 8106,
+            "name": "Ultimate Hunter",
+            "description": "Your ultimate gains <attention>6</attention> Ability Haste, plus an additional <attention>5</attention> Ability Haste per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
+          }
+        ],
+        "tier": 3
+      }
+    ],
+    "tooltip": "Burst damage and target access "
+  },
+  "8200": {
     "id": 8200,
     "name": "Sorcery",
     "slots": [
@@ -368,7 +277,7 @@
     ],
     "tooltip": "Empowered abilities and resource manipulation"
   },
-  {
+  "8300": {
     "id": 8300,
     "name": "Inspiration",
     "slots": [
@@ -458,5 +367,96 @@
       }
     ],
     "tooltip": "Creative tools and rule bending "
+  },
+  "8400": {
+    "id": 8400,
+    "name": "Resolve",
+    "slots": [
+      {
+        "label": "Keystone",
+        "runes": [
+          {
+            "id": 8437,
+            "name": "Grasp of the Undying",
+            "description": "Every 4s in combat, your next basic attack on a champion will:<li>Deal bonus magic damage equal to 3.5% of your max health<li>Heal you for 1.3% of your max health<li>Permanently increase your health by 5<br><rules><i>Ranged Champions:</i> Damage, healing, and permanent health gained are 40% effective.</rules>"
+          },
+          {
+            "id": 8439,
+            "name": "Aftershock",
+            "description": "After immobilizing an enemy champion, increase your Armor and Magic Resist by 35 + 80% of your Bonus Resists for 2.5s. Then explode, dealing magic damage to nearby enemies.<br><br>Damage: 25 - 120 (+8% of your bonus health)<br>Cooldown: 20s<br><br>Resistance bonus from Aftershock capped at: 80-150 (based on level)<br>"
+          },
+          {
+            "id": 8465,
+            "name": "Guardian",
+            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <span class=\"scale-level\">90 - 40</span> seconds<br>Shield: <span class=\"scale-level\">45 - 180</span> + <scaleAP>25%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <span class=\"scale-level\">50 - 165</span> postmitigation damage"
+          }
+        ],
+        "tier": 0
+      },
+      {
+        "label": "Strength",
+        "runes": [
+          {
+            "id": 8446,
+            "name": "Demolish",
+            "description": "Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s"
+          },
+          {
+            "id": 8463,
+            "name": "Font of Life",
+            "description": "Impairing the movement of an enemy champion restores Health to you and the lowest health nearby allied champion.<br><br>70% effect for Ranged Users.<br><br>Cooldown: 20s"
+          },
+          {
+            "id": 8401,
+            "name": "Shield Bash",
+            "description": "Whenever you gain a new shield,  your next basic attack against a champion deals <span class=\"scale-level\">5 - 30</span> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect."
+          }
+        ],
+        "tier": 1
+      },
+      {
+        "label": "Resistance",
+        "runes": [
+          {
+            "id": 8429,
+            "name": "Conditioning",
+            "description": "After 12 min gain +8 Armor and +8 Magic Resist and increase your Armor and Magic Resist by 3%."
+          },
+          {
+            "id": 8444,
+            "name": "Second Wind",
+            "description": "After taking damage from an enemy champion, heal for 4% of your missing health over 10s."
+          },
+          {
+            "id": 8473,
+            "name": "Bone Plating",
+            "description": "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 (based on level) less damage.<br><br>Duration: 1.5s<br>Cooldown: 55s"
+          }
+        ],
+        "tier": 2
+      },
+      {
+        "label": "Vitality",
+        "runes": [
+          {
+            "id": 8451,
+            "name": "Overgrowth",
+            "description": "Absorb life essence from monsters or enemy minions that die near you, permanently gaining 3 maximum health for every 8.<br><br>When you've absorbed 120 monsters or enemy minions, gain an additional 3.5% maximum health."
+          },
+          {
+            "id": 8453,
+            "name": "Revitalize",
+            "description": "Gain 5% Heal and Shield Power.<br><br>Heals and shields you cast or receive are 10% stronger on targets below 40% health."
+          },
+          {
+            "id": 8242,
+            "name": "Unflinching",
+            "description": "Gain 10 Armor and Magic Resist when crowd controlled and for 2 seconds after."
+          }
+        ],
+        "tier": 3
+      }
+    ],
+    "tooltip": "Durability and crowd control"
   }
-]
+}

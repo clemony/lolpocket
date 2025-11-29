@@ -2,7 +2,7 @@
 import type { InputVariants } from '@variants'
 import { useVModel } from '@vueuse/core'
 import { useForwardPropsEmits } from 'reka-ui'
-import { inputVariants } from '~/assets/variants/components/input-variants'
+import { inputVariants } from '~/assets/variants/components/variants.input'
 
 defineOptions({
   inheritAttrs: false,

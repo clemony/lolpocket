@@ -1,21 +1,34 @@
 <script setup lang="ts">
-const { puuid, match } = defineProps<{
+const { puuid, match: m } = defineProps<{
   match: MatchData
   puuid: string
 }>()
 
-const player = computed(() => {
-  return match?.participants.find(p => p.puuid === puuid)
-})
-
-const isOpen = ref(false)
-
 const queue = computed(() => {
-  const foundQueue = queueIndex.find(q => q.queueId === match.queueId)
+  const foundQueue = queueIndex.find(q => q.queueId === m.queueId)
   if (!foundQueue)
     return null
   return foundQueue
 })
+
+const match = computed<MatchDataCurrentPlayer>(() => {
+  const player = m?.participants.find(p => p.puuid === puuid)
+  return {
+    ...m,
+    items: [
+      player.item0,
+      player.item1,
+      player.item2,
+      player.item3,
+      player.item4,
+      player.item5,
+    ],
+    player,
+    queue: queue.value,
+  }
+})
+
+const isOpen = ref(false)
 </script>
 
 <template>
@@ -29,7 +42,7 @@ const queue = computed(() => {
       :for="match.matchId"
       :class="
         cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding px-5 text-2 data-[state=open]:rounded-b-none',
-           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
+           match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
            `
             before:pointer-events-none before:absolute before:left-0 before:z-3
             before:h-full before:w-1/2 before:rounded-xl before:border
@@ -37,7 +50,7 @@ const queue = computed(() => {
             before:shadow-black before:brightness-94
           `,
 
-           player.win
+           match.player.win
              ? 'before:border-inspiration '
              : 'before:border-domination',
            isOpen === true ? 'max-h-240' : 'h-36',
@@ -52,7 +65,7 @@ const queue = computed(() => {
           class="
             text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
           ">
-          {{ player.win ? "Win" : "Loss" }}
+          {{ match.player.win ? "Win" : "Loss" }}
         </h3>
 
         <div
@@ -88,10 +101,10 @@ const queue = computed(() => {
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon
-            :id="player?.championId"
+            :id="match.player?.championId"
             v-tippy="{
               theme: 'neutral',
-              content: ix().champNameById(player?.championId),
+              content: ix().champNameById(match.player?.championId),
               placement: 'top',
             }"
             alt="champion-icon"
@@ -102,17 +115,16 @@ const queue = computed(() => {
 
           <!--  spells -->
           <PlayerSpells
-            :match
-            :player
+            :player="match.player"
             class="ml-2 shrink-0" />
 
           <!-- runes -->
           <PlayerRunes
-            :match
-            :player />
+            :player="match.player" />
 
           <!--   kda -->
-          <KDA :player />
+          <KDA
+            :player="match.player" />
 
           <!--   stats
                <PlayerScoreboardStats :player /> -->
@@ -120,7 +132,27 @@ const queue = computed(() => {
 
         <!-- items -->
 
-        <MatchItems :player />
+        <div
+          v-if="match.player"
+          class="flex size-full max-w-66 items-start gap-1 *:rounded-md">
+          <template
+            v-for="item in match.items"
+            :key="item">
+            <div :class="cn('size-9 rounded-md border-b3/80 bg-b3/30 inset-shadow-xs inset-shadow-black/4', { border: !item })">
+              <Item
+                v-if="item"
+                :id="item"
+                v-tippy="{ content: ix().itemNameById(item),
+                           placement: 'bottom',
+                           theme: 'neutral' }"
+                :alt="item"
+                class="
+          size-9 rounded-md ring-bc/60 transition-all duration-300
+          hover:scale-105 hover:ring
+        " />
+            </div>
+          </template>
+        </div>
       </div>
       <TeamsCardOverview :match />
 
@@ -137,8 +169,6 @@ const queue = computed(() => {
 
     <LazyMatchContent
       v-show="isOpen"
-      :is-open
-      :match
-      :player />
+      :match />
   </Collapsible>
 </template>

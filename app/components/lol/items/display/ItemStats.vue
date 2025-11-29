@@ -26,9 +26,9 @@ const statEntries = computed(() =>
           {{ statIndex[stat.key].name }}
         </p>
 
-        <p
+        <div
           class="
-            badge h-5.5 gap-1 justify-self-end border-none badge-sm px-1.25
+            badge h-5 gap-1 justify-self-end rounded-[0.32rem]! border-none badge-sm px-1.25
             drop-shadow-black/20!
           "
           :style="{
@@ -37,16 +37,16 @@ const statEntries = computed(() =>
           <StatIcon
             :stat="stat.key"
             class="
-              stat-badge-content color-badge-content size-3.25! self-center
+              stat-badge-content color-badge-content size-3! self-center
             " />
           <span
             class="
-              stat-badge-content color-badge-content text-1! font-bold
-              text-shadow-xs
+              stat-badge-content color-badge-content text-0! font-bold
+
             ">
-            {{ statIndex[stat.key].abbr[0] }}
+            {{ statIndex[stat.key].key }}
           </span>
-        </p>
+        </div>
       </div>
     </div>
   </div>

@@ -1,21 +1,16 @@
 <script lang="ts" setup>
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '#components'
 import { matchDataStats } from '~~/shared/data/match-data-stats'
 
-const { match, player } = defineProps<{
-  match: any
-  player: Player
+const { match } = defineProps<{
+  match: MatchDataCurrentPlayer
 }>()
 
 const gameOutcome = computed(() => {
   return {
-    player: player?.win ? 'Ally' : 'Enemy',
+    player: match.player?.win ? 'Ally' : 'Enemy',
     win: match?.teams[0]?.win === true ? 'Blue Team Win' : 'Red Team Win',
   }
-})
-const gameEnd = computed(() => {
-  return match.teams[0].gameEndedInSurrender === true
-    ? 'Enemy Surrender'
-    : null
 })
 
 const players = computed(() => match.participants as Player[])
@@ -40,12 +35,11 @@ const players = computed(() => match.participants as Player[])
         ">
         {{ gameOutcome.win }}
       </p>
-      {{ gameEnd ?? "" }}
     </div>
 
     <div
       v-for="p in match.participants"
-      :key="p.pId"
+      :key="p.puuid"
       :class="
         cn('z-0 grid size-full place-items-center rounded-xl', {
           'bg-inspiration/30': p.teamId === 100,
@@ -59,7 +53,7 @@ const players = computed(() => match.participants as Player[])
         ">
         <ChampionIcon
           :id="p.championId"
-          :alt="p.championName"
+          :alt="champNameById(p.championId)"
           class="size-full! rounded-lg" />
       </div>
     </div>
@@ -82,19 +76,22 @@ const players = computed(() => match.participants as Player[])
           ">
           {{ group.name }}
         </div>
-
-        <template
+        <component
+          :is="stat.name === 'kills' ? Collapsible : 'div'"
           v-for="stat in group.stats"
-          :key="stat.name">
-          <div
+          :key="stat.name"
+          class="contents">
+          <component
+            :is="stat.name === 'kills' ? CollapsibleTrigger : 'div'"
             class="
               col-start-1 truncate pl-2 font-medium tracking-tight
               whitespace-nowrap capitalize
             ">
             {{ stat.name }}
-          </div>
+          </component>
 
-          <div
+          <component
+            :is="stat.name === 'kills' ? CollapsibleTrigger : 'div'"
             v-for="p in players"
             :key="p.puuid"
             :class="
@@ -121,7 +118,7 @@ const players = computed(() => match.participants as Player[])
                 // units
 
                 c
-                  = ["damageTakenOnTeamPercentage", "killParticipation"].includes(
+                  = ["teamDamagePercentage", "damageTakenOnTeamPercentage", "killParticipation"].includes(
                     stat.id,
                   ) && c
                     ? `${Math.round(c * 100)}%`
@@ -132,8 +129,29 @@ const players = computed(() => match.participants as Player[])
                 return c;
               })
             }}
-          </div>
-        </template>
+          </component>
+          <CollapsibleContent
+            v-if="stat.name === 'kills'"
+            class="w-full grid-cols-10">
+            <div
+              v-for="expandStat in group.stats.find(s => s.name === 'Kills').expand"
+              :key="expandStat.name"
+              class="contents">
+              <div
+                v-for="p in players"
+                :key="p.puuid"
+                :class="
+                  cn('py-1 text-end text-1! font-medium tracking-tight *:text-1!',
+                     {
+                       'text-bc/15 **:text-bc/15': p[expandStat.id] === 0,
+                     },
+                  )
+                ">
+                {{ p[expandStat.id] ?? p.challenges[expandStat.id] }}
+              </div>
+            </div>
+          </CollapsibleContent>
+        </component>
       </template>
     </div>
   </div>

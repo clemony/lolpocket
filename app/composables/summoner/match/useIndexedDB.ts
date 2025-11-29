@@ -23,6 +23,10 @@ export function useIndexedDB() {
     await matchDB.matchTimeline.put(data)
   }
 
+    const clearTimelines = async () => {
+    await Promise.all([matchDB.matchTimeline.clear()])
+  }
+
   const addPlayerTimeline = async (
     matchId: string,
     puuid: string,
@@ -92,6 +96,7 @@ export function useIndexedDB() {
     getMatchTimeline,
     putMatchTimeline,
     addPlayerTimeline,
+    clearTimelines,
 
     //match
     getAllMatchIdsForPuuid,

@@ -31,10 +31,14 @@ watch(() => api, (newVal) => {
 })
 watch(() => api?.summoner?.value, (newVal) => {
   if (newVal && route.params.puuid) {
-    navigateTo(
-      `/summoner/${newVal.region.toLowerCase()}/${newVal.name.toLowerCase()}_${newVal.tag.toLowerCase()}`,
-      { replace: true }
-    )
+    navigateTo({
+      name: 'summoner-region-slug',
+      params: {
+        region: newVal.region.toLowerCase(),
+        slug: `${newVal.name.toLowerCase()}_${newVal.tag.toLowerCase()}`
+      },
+      replace: true
+    })
   }
 })
 </script>

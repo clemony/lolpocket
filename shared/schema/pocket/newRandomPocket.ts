@@ -24,7 +24,7 @@ export function newRandomPocket(): Pocket {
     const set = [1, 2, 3].filter(n => n !== getRandomInt[3] + 1)
 
     const path1 = runePaths[i1]
-    const path2 = runePaths.filter(p => p.id !== path1.id)[i2]
+    const path2 = Object.values(runePaths).filter(p => p.id !== path1.id)[i2]
 
     a.primary.path = path1.name
     a.keystone = getRandom(path1.slots[0].runes.map(k => k.id))

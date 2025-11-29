@@ -10,6 +10,14 @@ export interface MatchData {
   teams: MatchTeam[]
 }
 
+
+export interface MatchDataCurrentPlayer extends MatchData {
+  items: number[]
+  player: Player
+  queue: QueueIndex
+}
+
+
 export interface Player {
   puuid: string
   assists: number
@@ -41,10 +49,16 @@ export interface Player {
   neutralMinionsKilled: number
   objectivesStolen: number
   pentaKills: number
-  perks: {
+  runes: {
     keystone: number
-    primary: number
-    secondary: number
+    primary: {
+      path: number
+      runes: number[]
+    }
+    secondary:  {
+      path: number
+      runes: number[]
+    }
   }
   profileIcon: number
   quadraKills: number
@@ -107,17 +121,22 @@ export interface PlayerTimeline {
     killsBefore15: number
     assistsBefore15: number
   }
-  inventory: NormalizedItemEvent[]
+  inventory: ItemEvent[]
+  skills: any
   kills: ChampionDeathEvent[]
   assists: ChampionDeathEvent[]
   deaths: ChampionDeathEvent[]
 }
 
-export interface NormalizedItemEvent {
+export interface ItemEvent {
   timestamp: number
-  action: "ADD" | "REMOVE"
-  itemId: number
-}
+  events: NormalizedItemEvent[] }
+
+export type NormalizedItemEvent =
+  | { action: "ADD"; id: number, count: number }
+  | {  action: "REMOVE"; id: number, count: number }
+  | {  action: "UPGRADE"; from: number | number[]; to: number }
+  | { action: "SUPPORT_UPGRADE"; from: number | number[]; to: number }
 
 export interface PlayerItemEvent {
   timestamp: number

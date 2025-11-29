@@ -1,6 +1,6 @@
+import { akaLookup, itemFilters } from '#shared/filters'
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
-import { akaLookup, itemFilters } from '~~/shared/filters'
 
 export interface ItemFilter {
   map: number

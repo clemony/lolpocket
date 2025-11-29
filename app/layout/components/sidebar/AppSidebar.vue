@@ -3,45 +3,26 @@ import { motion } from 'motion-v'
 
 const route = useRoute()
 
-const { close, open, toggle } = useAppSidebar()
+const { close, toggle } = useAppSidebar()
+const sidebar = useTemplateRef<HTMLElement>('sidebar')
+const isHovered = useElementHover(sidebar, { delayLeave: 300 })
 
-const isLeft = usePageLeave()
-
-/* watch(() => isLeft.value, (newVal) => {
+watch(() => isHovered.value, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
-  if (newVal === true)
-    close
-}) */
-/* provide('hide-tippy', () => tippy.value.hide())
-
-    v-element-hover="[() => close(), { delayLeave: 300 }]" */
-
-const hoverStart = shallowRef<boolean>(false)
-
-function onHover() {
-/*   hoverStart.value = true
-  setTimeout(() => {
-    if (hoverStart.value && !open)
-      toggle(true)
-  }, 900) */
-}
+  if (newVal === false)
+    toggle(false)
+})
 </script>
 
 <template>
   <motion.div
     id="sidebar"
+    ref="sidebar"
     class="
       absolute top-0 left-0 z-50 grid size-full max-h-screen w-90 min-w-90!
        items-center rounded-r-xl border-y-1 border-r
       border-l-0 border-b3/50 bg-b1/90 drop-shadow-md drop-shadow-black/12
       backdrop-blur-md
-    "
-    @hover-start="onHover()"
-    @hover-end="
-      () => {
-        hoverStart = false;
-        close();
-      }
     ">
     <!-- handle -->
     <div
@@ -77,7 +58,7 @@ function onHover() {
     <div
       class="
         pointer-events-auto relative scrollbar-hidden flex h-screen w-full
-        flex-col overflow-hidden pt-3 pr-2 pl-1
+        flex-col overflow-hidden pt-3 pr-2 pl-2
       ">
       <h1 class="mb-2 h-11 px-3.5 dss">
         LP

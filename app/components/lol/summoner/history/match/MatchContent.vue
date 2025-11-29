@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import { MatchDataTable, MatchScoreboard } from '#components'
+import { MatchBuild, MatchDataTable, MatchScoreboard } from '#components'
 
 defineOptions({
   inheritAttrs: false,
 })
 
-const { isOpen, match } = defineProps<{
-  match: MatchData
-  player: Player
-  isOpen: boolean
+const { match } = defineProps<{
+  match: MatchDataCurrentPlayer
 }>()
 
 const modelValue = ref<string>('Scoreboard')
@@ -25,18 +23,15 @@ const tabs = {
   //
   Build: {
     name: 'Build',
+    component: MatchBuild,
   },
-  Timeline: {
-    name: 'Timeline',
-  }
 }
 </script>
 
 <template>
   <LazyCollapsibleContent
-    v-if="isOpen"
     class="
-        'group relative h-200 w-full translate-x-0 p-0 text-2
+        'group relative h-max w-full translate-x-0 p-0 text-2
         **:select-none
       ">
     <Tabs
@@ -63,7 +58,7 @@ const tabs = {
       </TabsList>
 
       <div
-        class="m-0! p-0">
+        class="m-0! pb-5">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"

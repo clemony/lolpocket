@@ -10,7 +10,7 @@ const rawRunes = await $fetch(
   'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json',
 )
 
-const rawPaths = await fetch(
+const rawPaths = await $fetch(
   'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perkstyles.json',
 )
 
@@ -60,7 +60,7 @@ const extraSlots: any[] = []
 // create object for pathName -> perk IDs
 const pathIdMap: Record<string, number[]> = {}
 
-const transformedPaths = rawPaths.styles.map((path: any, pathIndex: number) => {
+const transformedPaths = rawPaths.styles.reduce((acc: any, path: any, pathIndex: number) => {
   const mappedSlots = path.slots
     .map((slot: any, index: number) => {
       if (index >= 4) {
@@ -70,8 +70,7 @@ const transformedPaths = rawPaths.styles.map((path: any, pathIndex: number) => {
             shards: slot.perks
               .map((perkId: number) => {
                 const rune = runesById[perkId]
-                if (!rune)
-                  return null
+                if (!rune) return null
                 return {
                   id: rune.id,
                   name: rune.name,
@@ -86,21 +85,18 @@ const transformedPaths = rawPaths.styles.map((path: any, pathIndex: number) => {
         return null
       }
 
-      rawPaths.styles.forEach((path: any) => {
-        // flatten all perks from main slots (slots 0-3)
-        const allPerkIds = path.slots
-          .slice(0, 4)
-          .flatMap((slot: any) => slot.perks)
-        pathIdMap[path.name] = allPerkIds
-      })
+      // Build pathIdMap only once per path, and only for main slots
+      const allPerkIds = path.slots
+        .slice(0, 4)
+        .flatMap((slot: any) => slot.perks)
+      pathIdMap[path.id] = allPerkIds
 
       return {
         label: slot.slotLabel || 'Keystone',
         runes: slot.perks
           .map((perkId: number) => {
             const rune = runesById[perkId]
-            if (!rune)
-              return null
+            if (!rune) return null
             return {
               id: rune.id,
               name: rune.name,
@@ -113,31 +109,38 @@ const transformedPaths = rawPaths.styles.map((path: any, pathIndex: number) => {
     })
     .filter(Boolean)
 
-  return {
+  acc[path.id] = {
     id: path.id,
     name: path.name,
     slots: mappedSlots,
     tooltip: path.tooltip,
   }
-})
+
+  return acc
+}, {})
 
 // Make a lightweight version for TS (no descriptions)
-const strippedPaths = transformedPaths.map((path: any) => ({
-  ...path,
-  slots: path.slots.map((slot: any) => ({
-    ...slot,
-    runes: slot.runes.map((r: any) => ({
-      id: r.id,
-      name: r.name,
-    })),
-  })),
-}))
+const strippedPaths = Object.fromEntries(
+  Object.entries(transformedPaths).map(([id, path]: any) => [
+    id,
+    {
+      ...path,
+      slots: path.slots.map((slot: any) => ({
+        ...slot,
+        runes: slot.runes.map((r: any) => ({
+          id: r.id,
+          name: r.name,
+        })),
+      })),
+    },
+  ]),
+)
 
 fs.writeFileSync(
   runesTSOutput,
   `// ${markUpdate()}
 
-export const runePaths: RunePath[] = ${JSON.stringify(strippedPaths, null, 2)}`,
+export const runePaths: Record<string, RunePath> = ${JSON.stringify(strippedPaths, null, 2)}`,
 )
 
 // write it as a TS file
