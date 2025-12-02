@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     "@css": fileURLToPath(new URL("./app/assets/css", import.meta.url)),
     "@layout": fileURLToPath(new URL("./app/layout", import.meta.url)),
     "@index": fileURLToPath(new URL("./shared/indexes", import.meta.url)),
+    "@types": fileURLToPath(new URL("./shared/types", import.meta.url)),
+    "@constants": fileURLToPath(new URL("./shared/constants", import.meta.url)),
     "@references": fileURLToPath(
       new URL("./shared/references", import.meta.url)
     ),
@@ -21,10 +23,9 @@ export default defineNuxtConfig({
     "@variants": fileURLToPath(
       new URL("./app/assets/variants", import.meta.url)
     ),
-    "helpers-server": fileURLToPath(
-      new URL("./server/helpers", import.meta.url)
-    ),
+    _helpers: fileURLToPath(new URL("./server/helpers", import.meta.url)),
     tiptap: fileURLToPath(new URL("./app/composables/tiptap", import.meta.url)),
+    _types: fileURLToPath(new URL("./server/types", import.meta.url)),
   },
   components: [
     {
@@ -68,6 +69,12 @@ export default defineNuxtConfig({
         weights: [300, 400, 600, 700],
       },
       {
+        name: "DM Mono",
+        provider: "fontsource",
+        styles: ["italic", "normal"],
+        weights: [300, 400, 500],
+      },
+      {
         name: "Tabular",
         provider: "fontshare",
         styles: ["italic", "normal"],
@@ -105,9 +112,11 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       "@variants",
+      "@constants",
       "@schema",
       "@references",
       "@index",
+      "#shared/utils",
       "@stores",
       "@app-types",
     ],
@@ -137,6 +146,9 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
   nitro: {
+    imports: {
+      dirs: ["server/types", "shared/types", "shared/constants"],
+    },
     routeRules: {
       "/api/**": {
         cors: true,
@@ -145,6 +157,13 @@ export default defineNuxtConfig({
     },
     typescript: {
       strict: false,
+      tsConfig: {
+        compilerOptions: {
+          baseUrl: "../",
+          types: ["shared/types/**", "server/types/**"],
+        },
+        include: ["shared/**"],
+      },
     },
     preset: "cloudflare_module",
     cloudflare: {

@@ -1,4 +1,3 @@
-import { championIndex } from '#shared/indexes'
 
 export const championById = (id: number) =>
   championIndex.find(c => c.id === id)

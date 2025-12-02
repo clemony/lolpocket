@@ -5,9 +5,7 @@ const { class: className, player } = defineProps<{
 }>()
 
 const heal = computed(() => {
-  return player.challenges.effectiveHealAndShielding > 0
-    ? player.challenges.effectiveHealAndShielding
-    : null
+  return player.utility.effectiveHealingAndShielding.value ?? null
 })
 </script>
 
@@ -25,7 +23,7 @@ const heal = computed(() => {
           name="el:fire"
           class="absolute size-3.25 text-domination dst" />
       </span>
-      {{ player.totalDamageDealtToChampions.toLocaleString() }}
+      {{ player.offense.totalDamage.toLocaleString() }}
     </tippy>
 
     <tippy
@@ -43,17 +41,17 @@ const heal = computed(() => {
       <template #content>
         <p>
           <span class="grow">Healing</span>
-          {{ player.totalHealsOnTeammates.toLocaleString() }}
+          {{ player.utility.totalAllyHealing.value.toLocaleString() }}
         </p>
 
         <p>
           <span class="grow">Shielding</span>
-          {{ player.totalDamageShieldedOnTeammates.toLocaleString() }}
+          {{ player.utility.totalAllyShielding.value.toLocaleString() }}
         </p>
 
         <p>
           <span class="grow">Lives Saved</span>
-          {{ player.challenges.saveAllyFromDeath || 0 }}
+          {{ player.utility.allySaves.value || 0 }}
         </p>
       </template>
     </tippy>
@@ -68,7 +66,7 @@ const heal = computed(() => {
           name="ph:shield-fill"
           class="size-3.25 text-[#C2A76E]! dst" />
       </span>
-      {{ Math.round(player.totalDamageTaken).toLocaleString() }}
+      {{ Math.round(player.defense.totalDamageTaken.value).toLocaleString() }}
     </div>
   </div>
 </template>

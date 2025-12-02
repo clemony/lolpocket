@@ -1,0 +1,96 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "W",
+  "name": "Path Maker",
+  "affects": "Self, Enemies",
+  "castTime": "none",
+  "cooldown": "14 / 13 / 12 / 11 / 10",
+  "cost": "40 / 45 / 50 / 55 / 60",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> K'Sante raises his ntofos defensively and prepares to dash in the target direction, charging for a minimum of 0.4 seconds and up to 1 second. During this time, he gains displacement immunity and 30% damage reduction; additionally, Path Maker's range, stun duration, and All Out bonus true damage modifier increase over the first 0.9 seconds of the channel.</p>"
+    },
+    {
+      "description": "Path Maker can be recast within the duration, and does so automatically afterwards. Path Maker's charge cannot be interrupted by crowd control."
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> K'Sante dashes in the direction he targeted at the time of cast, though not through terrain, dealing physical damage to enemies he passes through, carrying them alongside him, and stunning them for 0.5 - 1.75 (based on channel time) seconds. This damage is capped against monsters.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "45 / 75 / 105 / 135 / 165"
+            },
+            {
+              "unit": "% (+ 2% per 100 bonus armor) (+ 2% per 100 bonus magic resistance) of target's maximum health",
+              "values": "8"
+            }
+          ]
+        },
+        {
+          "attribute": "Monster Damage Cap",
+          "modifiers": [
+            {
+              "values": "180 / 260 / 340 / 420 / 500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Path Maker no longer applies its knock back and stun, but its damage reduction is increased to 75%, the dash deals 10% - 80% (based on channel time) bonus true damage, and the dash speed is increased by 20%. Upon entering All Out, Path Maker's cooldown is refreshed.</p>",
+      "leveling": [
+        {
+          "attribute": "Minimum Bonus True Damage",
+          "modifiers": [
+            {
+              "values": "4.5 / 7.5 / 10.5 / 13.5 / 16.5"
+            },
+            {
+              "unit": "% (+ 0.2% per 100 bonus armor) (+ 0.2% per 100 bonus magic resistance) of target's maximum health",
+              "values": "0.8"
+            }
+          ]
+        },
+        {
+          "attribute": "Maximum Bonus True Damage",
+          "modifiers": [
+            {
+              "values": "36 / 60 / 84 / 108 / 132"
+            },
+            {
+              "unit": "% (+ 1.6% per 100 bonus armor) (+ 1.6% per 100 bonus magic resistance) of target's maximum health",
+              "values": "6.4"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Maximum Mixed Damage",
+          "modifiers": [
+            {
+              "values": "81 / 135 / 189 / 243 / 297"
+            },
+            {
+              "unit": "% (+ 3.6% per 100 bonus armor) (+ 3.6% per 100 bonus magic resistance) of target's maximum health",
+              "values": "14.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ntofo Strikes and All Out can be cast during the dash. Path Maker's recast can be used while affected by cast-inhibiting crowd control."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/w",
+  "notes": "This ability always employs Quick cast.\n All Out's duration is increased by 2 seconds if it were to expire during Path Maker's charge.\nPath Maker cancels any existing movement or attack commands. However, new inputs given during the charge will be retained once the dash ends, except when the dash hits only one enemy champion. If Path Maker hits only one enemy champion K'Sante will be ordered to basic attack them afterwards.\nK'Sante cannot use  Flash during Path Maker's dash.\nPath Maker's damage is not capped against monsters while empowered by All Out.(bug)\nPath Maker's recast can be used even while  grounded or  rooted, but the initial cast cannot.\nPath Maker can be recast by issuing an attack move command (or LMB) but not a targeted attack command.\nThe following table refers for interactions while K'Sante is  channeling:\nIf the charge is cancelled, he will not automatically use the recast.\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but allows trinkets\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+  "resource": "Mana",
+  "speed": "1300 / 1500 / 1800",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "true",
+  "targeting": "Direction / Auto"
+}
+export default ability

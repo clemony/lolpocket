@@ -1,6 +1,7 @@
-import { akaLookup, itemFilters } from '#shared/filters'
+
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
+import { akaLookup, mapToItem, rankToItem, statToItem, tagToItem, unpurchasableItems } from '~~/shared'
 
 export interface ItemFilter {
   map: number
@@ -26,8 +27,8 @@ export const useItemStore = defineStore(
 
     const defaultFilterLength = computed<number>(
       () =>
-        itemFilters.maps[11].filter(
-          i => !itemFilters.unpurchasable.includes(i),
+        mapToItem[11].filter(
+          i => !unpurchasableItems.includes(i),
         ).length,
     )
     console.log('🌱 - defaultFilterLength:', defaultFilterLength)
@@ -71,7 +72,7 @@ export const useItemStore = defineStore(
         for (const stat of filters.value.stats) {
           const equivalentStats = statAliases[stat] ?? [stat]
           const ids = equivalentStats.flatMap(
-            s => itemFilters.stats[s] ?? [],
+            s => statToItem[s] ?? [],
           )
           matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
         }
@@ -79,23 +80,23 @@ export const useItemStore = defineStore(
 
       if (filters.value.tags.length > 0) {
         for (const tag of filters.value.tags) {
-          const ids = itemFilters.tags[String(tag)] ?? []
+          const ids = tagToItem[String(tag)] ?? []
           matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
         }
       }
 
       if (filters.value.rank && filters.value.rank !== 'all') {
-        const rankIds = itemFilters.rank[filters.value.rank] ?? []
+        const rankIds = rankToItem[filters.value.rank] ?? []
         matchedIds = new Set(rankIds.filter(id => matchedIds.has(id)))
       }
 
       if (filters.value.map && filters.value.map !== 0) {
-        const mapIds = itemFilters.maps[filters.value.map] ?? []
+        const mapIds = mapToItem[filters.value.map] ?? []
         matchedIds = new Set(mapIds.filter(id => matchedIds.has(id)))
       }
 
       if (filters.value.purchasable === true) {
-        const unpurchasableSet = new Set(itemFilters.unpurchasable)
+        const unpurchasableSet = new Set(unpurchasableItems)
         matchedIds = new Set(
           [...matchedIds].filter(id => !unpurchasableSet.has(id)),
         )
@@ -109,11 +110,11 @@ export const useItemStore = defineStore(
               return false
 
             const name = item.name.toLowerCase()
-            const akas = akaLookup[item.name.toLowerCase()] || []
+          /*   const akas = akaLookup[item.name.toLowerCase()] || []
             return (
               name.includes(query)
               || akas.some(aka => aka.toLowerCase().includes(query))
-            )
+            ) */
           }),
         )
       }

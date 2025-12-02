@@ -1,10 +1,6 @@
 import { riotFetch } from "riot"
-import { apiPath } from "~~/server/helpers/riot"
-import type {
-  RankedEntry,
-  RankedEntryResponse,
-  RankedResponse,
-} from "~~/server/types"
+import { apiPath } from "~~/server/helpers"
+import type { RankedEntryResponse, RankedResponse } from "~~/server/types"
 
 export async function fetchRankedByPuuid(puuid: string, region: string) {
   const league = await riotFetch<RankedEntryResponse[]>(

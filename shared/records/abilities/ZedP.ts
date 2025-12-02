@@ -1,0 +1,27 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:24:14 PM CST
+
+const ability: Ability = {
+  "key": "P",
+  "name": "Contempt for the Weak",
+  "affects": "Enemies",
+  "blurb": "Innate:  Zed's basic attacks against targets below half health will deal bonus magic damage equal to a portion of their maximum health.",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6% / 8% / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
+    },
+    {
+      "description": "Against monsters, Contempt for the Weak deals 200% damage, capped at 300."
+    },
+    {
+      "description": "Contempt for the Weak cannot occur on the same champion more than once every few seconds."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
+  "notes": "The enhanced attack applies other on-hit effects and can  critically strike as normal (the bonus damage cannot).\nContempt for the Weak is not consumed when  dodged or  missed, but it is consumed when  blocked.\nContempt for the Weak considers the target's health upon landing the attack, not when it's declared.\nIf the target falls below the threshold while Zed is winding up the attack, Contempt for the Weak applies, and vice versa.\nThe empowered attack will not trigger against structures.",
+  "onTargetCdStatic": "10",
+  "spellEffects": "proc",
+  "spellshieldable": "False",
+  "targeting": "Passive"
+}
+export default ability

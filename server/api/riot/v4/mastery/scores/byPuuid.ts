@@ -1,5 +1,5 @@
 import { riotFetch } from "riot"
-import { apiPath } from "~~/server/helpers/riot"
+import { apiPath } from "~~/server/helpers"
 
 export default defineEventHandler(async (event) => {
   const params = await getQuery(event)

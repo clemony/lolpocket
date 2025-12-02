@@ -1,5 +1,5 @@
 import { riotFetch } from "~~/server/api/riot"
-import { serverToRegion } from "~~/server/helpers/riot/lookup/serverToRegion"
+import { serverToRegion } from "~~/server/helpers"
 
 export async function matchById(id: string, region: string) {
   const url = `${serverToRegion(region)}/lol/match/v5/matches/${id}`

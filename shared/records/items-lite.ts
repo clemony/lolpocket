@@ -1,4 +1,4 @@
-// Updated Patch 25.23 - 11/22/2025 10:26:25 AM CST
+// Updated Patch 15.23.1 - 11/30/2025 03:52:39 PM CST
 
 export const itemsLite: ItemLite[] = [
   {
@@ -66,6 +66,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1028
     ],
     "rank": "Epic",
     "stats": {
@@ -201,6 +204,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1029
+    ],
     "rank": "Epic",
     "stats": {
       "armor": 40
@@ -334,6 +340,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1042
+    ],
     "rank": "Epic",
     "stats": {
       "attackSpeed": 15
@@ -378,6 +387,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -476,6 +488,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1033
     ],
     "rank": "Epic",
     "stats": {
@@ -899,6 +914,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1029,
+      1036,
+      1029
+    ],
     "rank": "Epic",
     "stats": {
       "armor": 30,
@@ -921,6 +941,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2022,
+      1037
     ],
     "rank": "Epic",
     "stats": {
@@ -945,6 +969,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      1028
     ],
     "rank": "Epic",
     "stats": {
@@ -1112,6 +1140,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3113,
+      4642
     ],
     "rank": "Legendary",
     "stats": {
@@ -1315,6 +1347,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052,
+      1029,
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -1334,6 +1371,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1052,
+      1029,
+      1052
     ],
     "rank": "Epic",
     "stats": {
@@ -1369,6 +1411,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      2021,
+      2021
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 30,
@@ -1389,6 +1435,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3105,
+      1011
     ],
     "rank": "Legendary",
     "stats": {
@@ -1415,6 +1465,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3802,
+      2508
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 80,
@@ -1435,6 +1489,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3211,
+      1057
     ],
     "rank": "Legendary",
     "stats": {
@@ -1457,6 +1515,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 30
@@ -1475,6 +1536,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3066,
+      1031
     ],
     "rank": "Legendary",
     "stats": {
@@ -1503,6 +1568,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3070,
+      3802,
+      3108
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -1527,6 +1597,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3070,
+      3133,
+      1036
     ],
     "rank": "Legendary",
     "stats": {
@@ -1556,6 +1631,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1001,
+      1042,
+      1042
+    ],
     "rank": "Boots",
     "stats": {
       "attackSpeed": 25,
@@ -1576,6 +1656,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1001
+    ],
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 55
@@ -1593,6 +1676,9 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
+    "recipe": [
+      1001
+    ],
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 40
@@ -1609,6 +1695,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11,
       21
+    ],
+    "recipe": [
+      3010
     ],
     "purchasable": false,
     "rank": "Boots",
@@ -1631,6 +1720,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1001
+    ],
     "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 12,
@@ -1647,6 +1739,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1029,
+      1027,
+      2022
     ],
     "rank": "Epic",
     "stats": {
@@ -1669,6 +1766,10 @@ export const itemsLite: ItemLite[] = [
     "cost": 3200,
     "maps": [
       11
+    ],
+    "recipe": [
+      2019,
+      1038
     ],
     "rank": "Legendary",
     "stats": {
@@ -1695,6 +1796,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1038,
+      1037,
+      1018
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 65,
@@ -1720,6 +1826,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1038,
+      3144,
+      1036
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -1744,6 +1855,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3123,
+      3035,
+      1018
+    ],
     "rank": "Legendary",
     "stats": {
       "armorPenetration": 35,
@@ -1767,6 +1883,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -1795,6 +1915,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3035,
+      6670
+    ],
     "rank": "Legendary",
     "stats": {
       "armorPenetration": 40,
@@ -1816,6 +1940,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3003
+    ],
     "purchasable": false,
     "rank": "Legendary",
     "stats": {
@@ -1834,6 +1961,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 1500,
     "maps": [
       11
+    ],
+    "recipe": [
+      1082
     ],
     "rank": "Legendary",
     "stats": {
@@ -1855,6 +1985,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3004
     ],
     "purchasable": false,
     "rank": "Legendary",
@@ -1884,6 +2017,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1028,
+      1036
+    ],
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -1907,6 +2044,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1042,
+      3086,
+      1042
     ],
     "rank": "Legendary",
     "stats": {
@@ -1934,6 +2076,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1001,
+      1029
+    ],
     "rank": "Boots",
     "stats": {
       "armor": 25,
@@ -1953,6 +2099,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3067,
+      1029,
+      1033
     ],
     "rank": "Legendary",
     "stats": {
@@ -1979,6 +2130,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      1042,
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -2008,6 +2164,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1037,
+      2021,
+      1028
+    ],
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -2031,6 +2192,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2022
     ],
     "rank": "Epic",
     "stats": {
@@ -2056,6 +2220,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3211,
+      3067
     ],
     "rank": "Legendary",
     "stats": {
@@ -2085,6 +2253,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1028
+    ],
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -2105,6 +2276,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1028,
+      2022
     ],
     "rank": "Epic",
     "stats": {
@@ -2135,6 +2310,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      6660,
+      1031
     ],
     "rank": "Legendary",
     "stats": {
@@ -2188,6 +2367,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3044,
+      3067,
+      1037
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -2216,6 +2400,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1038,
+      1037,
+      1053
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 80,
@@ -2235,6 +2424,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2021,
+      3044,
+      1042
     ],
     "rank": "Legendary",
     "stats": {
@@ -2262,6 +2456,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3077,
+      1053,
+      3133
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 65,
@@ -2286,6 +2485,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3076,
+      1031,
+      1028
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -2309,6 +2513,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1029,
+      1029
+    ],
     "rank": "Epic",
     "stats": {
       "armor": 30
@@ -2327,6 +2535,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -2355,6 +2567,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3057,
+      3044,
+      3051
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 36,
@@ -2379,6 +2596,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1029,
+      1029
+    ],
     "rank": "Epic",
     "stats": {
       "armor": 40
@@ -2397,6 +2618,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1011,
+      1011,
+      3801
     ],
     "rank": "Legendary",
     "stats": {
@@ -2424,6 +2650,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1011,
+      3801,
+      1011
+    ],
     "rank": "Legendary",
     "stats": {
       "health": 900,
@@ -2443,6 +2674,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3086,
+      3144
     ],
     "rank": "Legendary",
     "stats": {
@@ -2467,6 +2702,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1018,
+      1042
+    ],
     "rank": "Epic",
     "stats": {
       "attackSpeed": 15,
@@ -2488,6 +2727,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3144,
+      6690,
+      1037
     ],
     "rank": "Legendary",
     "stats": {
@@ -2519,6 +2763,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1058,
+      1058
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 130
@@ -2537,6 +2785,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1043,
+      1057,
+      1043
     ],
     "rank": "Legendary",
     "stats": {
@@ -2567,6 +2820,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3086,
+      3144
+    ],
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 35,
@@ -2591,6 +2848,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3057,
+      3113,
+      1026
     ],
     "rank": "Legendary",
     "stats": {
@@ -2619,6 +2881,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1058,
+      4632
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
@@ -2638,6 +2904,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1033,
+      1029
     ],
     "rank": "Epic",
     "stats": {
@@ -2664,6 +2934,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3067,
+      3114
+    ],
     "rank": "Legendary",
     "stats": {
       "healAndShieldPower": 10,
@@ -2689,6 +2963,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052,
+      2022
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 25,
@@ -2711,6 +2989,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3067,
+      1031,
+      1006
     ],
     "rank": "Legendary",
     "stats": {
@@ -2738,6 +3021,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3082,
+      3024
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -2763,6 +3050,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1001,
+      1033
     ],
     "rank": "Boots",
     "stats": {
@@ -2806,6 +3097,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 30,
@@ -2826,6 +3120,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1004
     ],
     "rank": "Epic",
     "stats": {
@@ -2849,6 +3146,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1043,
+      1026,
+      3108
     ],
     "rank": "Legendary",
     "stats": {
@@ -2876,6 +3178,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1026,
+      1011,
+      1052
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
@@ -2898,6 +3205,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3802,
+      1026
     ],
     "rank": "Legendary",
     "stats": {
@@ -2925,6 +3236,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3070,
+      1011,
+      3067
+    ],
     "rank": "Legendary",
     "stats": {
       "health": 550,
@@ -2945,6 +3261,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3119
     ],
     "purchasable": false,
     "rank": "Legendary",
@@ -2972,6 +3291,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1036
+    ],
     "rank": "Epic",
     "stats": {
       "attackDamage": 15
@@ -2992,6 +3314,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1052,
+      1043,
+      1037
     ],
     "rank": "Legendary",
     "stats": {
@@ -3015,6 +3342,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      2022,
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -3041,6 +3373,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1036,
+      1036
+    ],
     "rank": "Epic",
     "stats": {
       "attackDamage": 20,
@@ -3062,6 +3398,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      4630,
+      1026
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 95,
@@ -3081,6 +3421,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      4630,
+      3108,
+      3108
     ],
     "rank": "Legendary",
     "stats": {
@@ -3108,6 +3453,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3140,
+      1037,
+      1053
     ],
     "rank": "Legendary",
     "stats": {
@@ -3137,6 +3487,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1033
+    ],
     "rank": "Epic",
     "stats": {
       "magicResistance": 30
@@ -3162,6 +3515,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3134,
+      6690,
+      1036
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -3184,6 +3542,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3082,
+      1011
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -3203,6 +3565,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1042,
+      1042
     ],
     "rank": "Epic",
     "stats": {
@@ -3228,6 +3594,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052,
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 45
@@ -3249,6 +3619,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1052,
+      1028
     ],
     "rank": "Epic",
     "stats": {
@@ -3273,6 +3647,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3145,
+      3108,
+      1028
     ],
     "rank": "Legendary",
     "stats": {
@@ -3302,6 +3681,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1053,
+      1043,
+      1037
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -3325,6 +3709,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1036,
+      1033,
+      1036
+    ],
     "rank": "Epic",
     "stats": {
       "attackDamage": 25,
@@ -3346,6 +3735,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3155,
+      3133
     ],
     "rank": "Legendary",
     "stats": {
@@ -3377,6 +3770,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1058,
+      2420
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
@@ -3397,6 +3794,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1001,
+      2022
+    ],
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 45,
@@ -3413,6 +3814,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1037,
+      2021,
+      1028
     ],
     "rank": "Legendary",
     "stats": {
@@ -3442,6 +3848,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3916,
+      1026,
+      3067
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 75,
@@ -3464,6 +3875,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3009
+    ],
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 65
@@ -3480,6 +3894,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3158
+    ],
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 50,
@@ -3495,6 +3912,9 @@ export const itemsLite: ItemLite[] = [
       11,
       21,
       35
+    ],
+    "recipe": [
+      3006
     ],
     "rank": "Legendary",
     "stats": {
@@ -3519,6 +3939,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3111
+    ],
     "rank": "Boots",
     "stats": {
       "magicResistance": 35,
@@ -3537,6 +3960,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3047
+    ],
     "rank": "Boots",
     "stats": {
       "armor": 40,
@@ -3554,6 +3980,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3020
+    ],
     "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 18,
@@ -3570,6 +3999,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 1400,
     "maps": [
       11
+    ],
+    "recipe": [
+      3013
     ],
     "rank": "Boots",
     "stats": {
@@ -3615,6 +4047,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3134,
+      3133
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -3640,6 +4076,11 @@ export const itemsLite: ItemLite[] = [
       11,
       12,
       21
+    ],
+    "recipe": [
+      2021,
+      3066,
+      1037
     ],
     "rank": "Legendary",
     "stats": {
@@ -3686,6 +4127,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3067,
+      1029,
+      1033
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 25,
@@ -3713,6 +4159,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1028,
+      1033,
+      1006
+    ],
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -3739,6 +4190,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3067,
+      3114
+    ],
     "rank": "Legendary",
     "stats": {
       "healAndShieldPower": 12,
@@ -3764,6 +4219,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3051,
+      1043
     ],
     "rank": "Legendary",
     "stats": {
@@ -3914,6 +4373,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3113,
+      3114
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -3940,6 +4403,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1037,
+      3133,
+      1018
     ],
     "rank": "Legendary",
     "stats": {
@@ -4000,6 +4468,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3066,
+      1028,
+      1031
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 55,
@@ -4026,6 +4499,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3077,
+      2021,
+      1011
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -4047,6 +4525,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1028,
+      1006
     ],
     "rank": "Epic",
     "stats": {
@@ -4072,6 +4554,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052,
+      1027,
+      2022
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -4095,6 +4582,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1028,
+      1028,
+      1027
     ],
     "rank": "Epic",
     "stats": {
@@ -4121,6 +4613,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3134,
+      2021
     ],
     "rank": "Legendary",
     "stats": {
@@ -4163,6 +4659,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3865
+    ],
     "purchasable": false,
     "rank": "Epic",
     "stats": {
@@ -4183,6 +4682,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3866
+    ],
     "purchasable": false,
     "rank": "Legendary",
     "stats": {
@@ -4202,6 +4704,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 400,
     "maps": [
       11
+    ],
+    "recipe": [
+      3867
     ],
     "rank": "Legendary",
     "stats": {
@@ -4226,6 +4731,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3867
+    ],
     "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
@@ -4245,6 +4753,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11
     ],
+    "recipe": [
+      3867
+    ],
     "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
@@ -4263,6 +4774,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 400,
     "maps": [
       11
+    ],
+    "recipe": [
+      3867
     ],
     "rank": "Legendary",
     "stats": {
@@ -4285,6 +4799,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 400,
     "maps": [
       11
+    ],
+    "recipe": [
+      3867
     ],
     "rank": "Legendary",
     "stats": {
@@ -4357,6 +4874,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 25
@@ -4378,6 +4898,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      6690,
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -4403,6 +4927,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3108,
+      4642
     ],
     "rank": "Legendary",
     "stats": {
@@ -4504,6 +5032,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1057,
+      1028,
+      3066
+    ],
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -4529,6 +5062,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3108,
+      3108,
+      1026
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 125,
@@ -4551,6 +5089,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3067,
+      3113,
+      3108
     ],
     "rank": "Legendary",
     "stats": {
@@ -4579,6 +5122,9 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 25,
@@ -4602,6 +5148,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1052,
+      1033,
+      1052
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -4624,6 +5175,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3147,
+      3108
     ],
     "rank": "Legendary",
     "stats": {
@@ -4673,6 +5228,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1004,
+      1052,
+      2022
+    ],
     "rank": "Epic",
     "stats": {
       "abilityPower": 20,
@@ -4694,6 +5254,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 2300,
     "maps": [
       11
+    ],
+    "recipe": [
+      4638
     ],
     "rank": "Legendary",
     "stats": {
@@ -4717,6 +5280,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3145,
+      1058
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 110,
@@ -4736,6 +5303,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3145,
+      3113
     ],
     "rank": "Legendary",
     "stats": {
@@ -4760,6 +5331,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2019,
+      1037,
+      3133
     ],
     "rank": "Legendary",
     "stats": {
@@ -4786,6 +5362,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3123,
+      1011,
+      3133
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -4807,6 +5388,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2021,
+      3133,
+      1028
     ],
     "rank": "Legendary",
     "stats": {
@@ -4831,6 +5417,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3108,
+      3114
     ],
     "rank": "Legendary",
     "stats": {
@@ -4857,6 +5447,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3067,
+      4642
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 25,
@@ -4881,6 +5475,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3067,
+      4642
     ],
     "rank": "Legendary",
     "stats": {
@@ -4907,6 +5505,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1026,
+      3114,
+      3114
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -4931,6 +5534,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3077,
+      3044,
+      1042
     ],
     "rank": "Legendary",
     "stats": {
@@ -4959,6 +5567,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3147,
+      2508
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
@@ -4982,6 +5594,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3802,
+      3145
     ],
     "rank": "Legendary",
     "stats": {
@@ -5007,6 +5623,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1026,
+      3803
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -5030,6 +5650,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1028,
+      2022
     ],
     "rank": "Epic",
     "stats": {
@@ -5058,6 +5682,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3057,
+      1028,
+      1031
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 50,
@@ -5084,6 +5713,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      6660,
+      3211
+    ],
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -5109,6 +5742,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1011,
+      1031,
+      1057
+    ],
     "rank": "Legendary",
     "stats": {
       "armor": 45,
@@ -5129,6 +5767,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036,
+      1018
     ],
     "rank": "Epic",
     "stats": {
@@ -5154,6 +5796,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      6690,
+      3051,
+      1043
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -5174,6 +5821,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1037,
+      6670
     ],
     "rank": "Legendary",
     "stats": {
@@ -5198,6 +5849,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1042,
+      3086,
+      1042
     ],
     "rank": "Legendary",
     "stats": {
@@ -5225,6 +5881,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1037,
+      3134,
+      1018
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
@@ -5246,6 +5907,9 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      1036
     ],
     "rank": "Epic",
     "stats": {
@@ -5271,6 +5935,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3133,
+      1037,
+      1036
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
@@ -5293,6 +5962,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3133,
+      3035
     ],
     "rank": "Legendary",
     "stats": {
@@ -5318,6 +5991,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3134,
+      1037
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -5337,6 +6014,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2020,
+      3133
     ],
     "rank": "Legendary",
     "stats": {
@@ -5359,6 +6040,10 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       11,
       21
+    ],
+    "recipe": [
+      3134,
+      3133
     ],
     "rank": "Legendary",
     "stats": {
@@ -5384,6 +6069,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3077,
+      2020
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -5407,6 +6096,11 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      2020,
+      1036,
+      1036
     ],
     "rank": "Legendary",
     "stats": {
@@ -5432,6 +6126,11 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      1037,
+      3134,
+      1036
+    ],
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -5453,6 +6152,10 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
+    "recipe": [
+      3147,
+      3108
+    ],
     "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
@@ -5473,6 +6176,10 @@ export const itemsLite: ItemLite[] = [
       12,
       21,
       35
+    ],
+    "recipe": [
+      3067,
+      1057
     ],
     "rank": "Legendary",
     "stats": {
@@ -5728,6 +6435,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -5799,6 +6509,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "armor": 55,
@@ -5820,6 +6533,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -5838,6 +6554,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {}
   },
@@ -5848,6 +6567,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -5865,6 +6587,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -5886,6 +6611,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "criticalStrikeChance": 50
@@ -5901,6 +6629,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -5920,6 +6651,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -5937,6 +6671,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -5961,6 +6698,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {}
   },
@@ -5974,6 +6714,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -5996,6 +6739,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "health": 600
@@ -6012,6 +6758,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {}
   },
@@ -6022,6 +6771,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6040,6 +6792,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackSpeed": 50,
@@ -6056,6 +6811,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6080,6 +6838,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 90,
@@ -6101,6 +6862,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -6117,6 +6881,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6141,6 +6908,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -6164,6 +6934,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 100,
@@ -6185,6 +6958,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6208,6 +6984,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 65,
@@ -6230,6 +7009,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 50,
@@ -6248,6 +7030,9 @@ export const itemsLite: ItemLite[] = [
       "lethality"
     ],
     "cost": 0,
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -6266,6 +7051,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackSpeed": 60,
@@ -6279,6 +7067,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6297,6 +7088,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6319,6 +7113,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 60,
@@ -6337,6 +7134,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 70,
@@ -6354,6 +7154,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6374,6 +7177,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {}
   },
@@ -6384,6 +7190,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6401,6 +7210,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6420,6 +7232,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -6437,6 +7252,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6456,6 +7274,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "health": 500,
@@ -6469,6 +7290,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6489,6 +7313,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "armor": 35,
@@ -6507,6 +7334,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackDamage": 60,
@@ -6524,6 +7354,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6547,6 +7380,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "health": 400,
@@ -6565,6 +7401,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6585,6 +7424,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "attackSpeed": 30
@@ -6601,6 +7443,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {
@@ -6620,6 +7465,9 @@ export const itemsLite: ItemLite[] = [
     "maps": [
       30
     ],
+    "recipe": [
+      220007
+    ],
     "rank": "Special",
     "stats": {
       "health": 900,
@@ -6636,6 +7484,9 @@ export const itemsLite: ItemLite[] = [
     "cost": 0,
     "maps": [
       30
+    ],
+    "recipe": [
+      220007
     ],
     "rank": "Special",
     "stats": {

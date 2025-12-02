@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/28/2025 05:38:36 PM CST
+// Updated Patch 15.23.1 - 12/02/2025 03:21:03 AM CST
 
 export const shardObject: ShardObject[] = [
   {
@@ -7,7 +7,7 @@ export const shardObject: ShardObject[] = [
       {
         "id": 5008,
         "name": "Adaptive Force",
-        "color": "var(--color-sorcery",
+        "color": "var(--color-sorcery)",
         "description": "+9 Adaptive Force"
       },
       {
@@ -19,7 +19,7 @@ export const shardObject: ShardObject[] = [
       {
         "id": 5007,
         "name": "Ability Haste",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+8 Ability Haste "
       }
     ],
@@ -31,13 +31,13 @@ export const shardObject: ShardObject[] = [
       {
         "id": 5008,
         "name": "Adaptive Force",
-        "color": "var(--color-sorcery",
+        "color": "var(--color-sorcery)",
         "description": "+9 Adaptive Force"
       },
       {
         "id": 5010,
         "name": "Move Speed",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+2.5% Move Speed"
       },
       {
@@ -61,7 +61,7 @@ export const shardObject: ShardObject[] = [
       {
         "id": 5013,
         "name": "Tenacity and Slow Resist",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+15% Tenacity and Slow Resist"
       },
       {

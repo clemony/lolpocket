@@ -46,7 +46,7 @@ const championModel = computed({
             </p>
 
             <p class="text-2 text-nowrap">
-              {{ `${champion.games} Games` }}
+              {{ `${((champion?.kills + champion?.assists) / champion?.deaths).toFixed(2)} KDA` }}
             </p>
           </div>
 

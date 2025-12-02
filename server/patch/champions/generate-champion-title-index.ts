@@ -4,7 +4,7 @@ import type { Champion } from '../../types/types.import'
 import { resolvePath } from '../resolvePath'
 import { markUpdate } from '../utils/markUpdate'
 
-const outputFile = path.resolve('./shared/indexes/champion-title-index.ts')
+const outputFile = path.resolve('./shared/constants/champions/champion-to-title.ts')
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
 const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
@@ -22,7 +22,7 @@ for (const key in champs) {
 // Create the TypeScript content
 const output = `// ${markUpdate()}
 
-export const championTitleIndex: Record<string, string> = ${JSON.stringify(index, null, 2)}
+export const championToTitle: Record<string, string> = ${JSON.stringify(index, null, 2)}
 `
 
 fs.writeFileSync(outputFile, output)

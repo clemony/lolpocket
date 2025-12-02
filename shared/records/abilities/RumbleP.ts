@@ -1,0 +1,25 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:24:02 PM CST
+
+const ability: Ability = {
+  "key": "P",
+  "name": "Junkyard Titan",
+  "affects": "Self",
+  "blurb": "Innate:  Rumble's basic ability casts generate  Heat, which gradually expires after a few seconds without generating Heat. Rumble enters the Danger Zone while he has at least  50 Heat, and becomes Overheated at  Max Heat.",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rumble's basic ability casts generate Heat, which decays by 10 Heat per second after not using any basic ability within 4 seconds or The Equalizer within 2 seconds. Rumble's mech enters the Danger Zone when at or above 50 Heat, and becomes Overheated while at 150 Heat.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone:</span> Rumble's mech enters the Danger Zone, empowering his basic abilities.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overheated:</span> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 40 (based on level) (+ 25% AP) (+ 4% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 150 (based on level) against monsters.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/p",
+  "notes": "While Rumble is overheating, a  Silenced icon will appear above him to signify he cannot cast abilities. This is visible to all units.\nThe attacks do not deal the bonus damage against structures.",
+  "spellEffects": "Proc",
+  "targeting": "Passive"
+}
+export default ability

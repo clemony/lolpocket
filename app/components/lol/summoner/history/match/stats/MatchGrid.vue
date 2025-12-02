@@ -59,12 +59,12 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   },
   {
     children: [
-      { field: 'kills', headerName: 'Kills', headerTooltip: 'Kills' },
-      { field: 'deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
-      { field: 'assists', headerName: 'Assists', headerTooltip: 'Assists' },
-      { field: 'challenges.kda', headerName: 'KDA', headerTooltip: 'KDA' },
+      { field: 'stats.kills.total', headerName: 'Kills', headerTooltip: 'Kills' },
+      { field: 'stats.deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
+      { field: 'stats.assists', headerName: 'Assists', headerTooltip: 'Assists' },
+      { field: 'stats.kda', headerName: 'KDA', headerTooltip: 'KDA' },
       {
-        field: 'challenges.killParticipation',
+        field: 'stats.kp',
         headerName: 'Kill Participation',
         headerTooltip: 'Kill Participation',
       },
@@ -74,12 +74,12 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     children: [
       {
-        field: 'totalDamageDealtToChampions',
+        field: 'offense.totalDamage',
         headerName: 'Damage to Champions',
         headerTooltip: 'Damage to Champions',
       },
       {
-        field: 'challenges.teamDamagePercentage',
+        field: 'offense.damagePercentage',
         headerName: 'Team Dmg %',
         headerTooltip: 'Team Dmg %',
       },
@@ -90,7 +90,7 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     children: [
       {
-        field: 'challenges.effectiveHealAndShielding',
+        field: 'utility.effectiveHealingAndShielding',
         headerName: 'Effective Healing & Shielding',
         headerTooltip: 'Effective Healing & Shielding',
       },

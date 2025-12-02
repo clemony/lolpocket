@@ -1,0 +1,24 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "P",
+  "name": "Mark of the Kindred",
+  "affects": "Self, Enemies",
+  "blurb": "Innate: Both  Lamb and  Wolf mark targets to hunt. Scoring a  takedown against a hunted target collects a permanent stack of Mark of the Kindred. Lamb can select an enemy  champion to hunt, and Wolf automatically selects a large  monster to hunt.",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Both Lamb and Wolf mark targets to hunt. Scoring a takedown against a hunted target collects a stack of Mark of the Kindred. Mark of the Kindred: Lamb gains 75 - 250 (based on marks) bonus range on her basic attacks and Mounting Dread.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lamb:</span> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Wolf:</span> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">0 :</span> Rift Scuttler</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/p",
+  "notes": "The selection of enemy champions to mark is offered through a special menu in the HUD that displays the portraits of up to 5 enemy champions. The player can mark an enemy by  clicking on their portrait or via the Champion Specific Interaction hotkeys (default: Shift+F1:F5).\nMarked enemies have a trim around their portrait. Unavailable selections are greyed out.\nThe portraits are ordered based on their spawn ID.\n Takedowns on  monsters occur if Kindred had damaged them within the last 6 seconds.\nThis only includes if the monster was slain by Kindred or an ally.\nOnly killing the large monster is required to claim Wolf's mark.\nGaining stacks from champions that would change what constitutes a valid target for Wolf will not affect Kindred's ability to claim Wolf's current target.\nWolf cannot mark monsters that have been slain, even if Kindred's team doesn't know that the camp has been slain.\nWolf's cooldown is not displayed in-game. Combined with the above point and the target restrictions, Wolf may go extended periods of time without seeming to do anything.\nWolf's marked target will always have its mark removed from the map 15 seconds after dying for both teams, regardless of whether they have vision of it or not.",
+  "onTargetCdStatic": "240",
+  "targeting": "Passive"
+}
+export default ability

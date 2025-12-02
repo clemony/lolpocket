@@ -1,0 +1,23 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:24:09 PM CST
+
+const ability: Ability = {
+  "key": "P",
+  "name": "Organic Deconstruction",
+  "affects": "Enemies / Self",
+  "blurb": "Innate:  Vel'Koz's  abilities apply a stack of Deconstruction to enemies hit for a few seconds.",
+  "damageType": "True damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
+    },
+    {
+      "description": "The third stack consumes them all to deal 35 - 180 (based on level) (+ 60% AP) bonus true damage."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/p",
+  "notes": "No additional notes.",
+  "spellEffects": "Proc",
+  "spellshieldable": "True",
+  "targeting": "Passive"
+}
+export default ability

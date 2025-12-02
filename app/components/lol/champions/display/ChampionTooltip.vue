@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { championPositions } from '~~/shared/references'
-
 const { id } = defineProps<{
   id: number
 }>()
@@ -86,7 +84,7 @@ const position = computed(() =>
         </div>
 
         <span class="grow text-2 font-normal text-nc/60 italic">
-          {{ championTitleIndex[item?.key] }}
+          {{ championToTitle[item?.key] }}
         </span>
       </div>
     </div>

@@ -1,0 +1,17 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "R",
+  "name": "Dismounted Chaaaaaaaarge!!!",
+  "cooldown": "140 / 125 / 110",
+  "cost": "0",
+  "effects": [
+    {
+      "description": "This ability is unusable while dismounted."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/r",
+  "notes": "No additional details.",
+  "targeting": "N/A"
+}
+export default ability

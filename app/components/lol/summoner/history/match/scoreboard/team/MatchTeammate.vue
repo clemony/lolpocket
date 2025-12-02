@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { pathIndex } from '~~/shared/indexes'
-
 const { player, playerRank } = defineProps<{
   player: Player
   playerRank: any
@@ -12,19 +10,10 @@ const stats = computed(() => {
 
   const id = player?.runes?.keystone
 
-  const list = [
-    player.item0,
-    player.item1,
-    player.item2,
-    player.item3,
-    player.item4,
-    player.item5,
-  ]
   return {
     keystone: runeIndex.find(r => r.id === id),
-    cs: player.totalMinionsKilled + player.neutralMinionsKilled,
-    items: list,
-    kda: Math.round(((player.kills + player.assists) / player.deaths) * 100),
+    cs: player.farming.minionsKilled.value + player.farming.neutralMinionsKilled.value,
+    kda: Math.round(((player.stats.kills.total + player.stats.assists) / player.stats.deaths) * 100),
     lpScore: playerRank.list.findIndex(p => p.puuid === player.puuid) + 1,
     secondaryPath: pathIndex.find(p => p.id === player?.runes?.secondary.path)
       ?.name,
@@ -70,12 +59,12 @@ const runeClass
       :class="divClass">
       <PlayerSpells
         :player="player"
-        class="h-11 gap-0.5 [&_img]:size-4 [&_img]:rounded-[3px]" />
+        class="h-11 gap-0.5 [&_img]:size-5 [&_img]:rounded-[3px]" />
     </div>
     <!-- name and tag -->
 
     <div
-      class="max-w-[60px] grow py-3!"
+      class="max-w-[100px] grow py-3!"
       :class="divClass">
       <h4
         v-tippy="{
@@ -92,10 +81,35 @@ const runeClass
 
       <p
         class="
-          flex items-center self-start truncate text-2 font-medium text-nowrap
+          flex items-center gap-2 self-start truncate text-2 font-medium text-nowrap
           opacity-60
         ">
         <span>#{{ player.riotIdTagline }}</span>
+
+        <!-- badge - rank / kp -->
+
+        <Badge
+          v-if="
+            player.puuid === playerRank.mvp || player.puuid === playerRank.ace
+          "
+          size="5"
+          :class="
+            cn('-mt-px gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
+               {
+                 'border-gold/40 bg-precision ': player.puuid === playerRank.mvp,
+                 'bg-fighter/70 border-fighter': player.puuid === playerRank.ace,
+               },
+            )
+          ">
+          {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
+        </Badge>
+
+        <Badge
+          v-else
+          size="5"
+          class="-mt-px px-1 text-1! leading-0 font-normal shadow-xs">
+          {{ stats.lpScore }}{{ formatNumberPosition(stats.lpScore) }}
+        </Badge>
       </p>
     </div>
 
@@ -145,16 +159,19 @@ const runeClass
     <!-- kda -->
 
     <div
-      class="w-[50px]"
+      class="w-[73px]"
       :class="divClass">
       <p
         class="
-          flex flex-nowrap items-center text-2! leading-0 font-semibold
+          flex flex-nowrap items-center text-1! leading-0 font-semibold
           tracking-wide text-nowrap **:tracking-wide
         ">
-        {{ player.kills }}&#8198;/&#8198;<span class="text-red-800">{{
-          player.deaths
-        }}</span>&#8198;/&#8198;{{ player.assists }}
+        {{ player.stats.kills.total }}&#8198;/&#8198;<span class="text-red-800">{{
+          player.stats.deaths
+        }}</span>&#8198;/&#8198;{{ player.stats.assists }}
+        <span class="text-0!">
+          &nbsp;({{ Math.round(player.stats.kp * 100) }}%)
+        </span>
       </p>
 
       <Badge
@@ -174,57 +191,24 @@ const runeClass
         class="
           flex gap-1 truncate leading-3 font-medium text-nowrap text-bc/80 dst
         ">
-        {{ stats.kda / 100 }} KDA
+        {{ stats.kda / 100 }} kda
       </p>
     </div>
 
     <!-- mvp kp -->
 
-    <div :class="cn('relative w-[44px]', divClass)">
-      <div class="flex w-full items-center gap-2">
+    <!--     <div :class="cn('relative w-[47px]', divClass)">
+      <div class="flex w-full items-center gap-3">
         <div class="font-bold tracking-wide">
-          {{ player.mvpScore }}
+          {{ player.mvpScore }} <span class="font-normal! **:text-1!">lpx</span>
         </div>
-        <!-- badge - rank / kp -->
-
-        <Badge
-          v-if="
-            player.puuid === playerRank.mvp || player.puuid === playerRank.ace
-          "
-          size="5"
-          :class="
-            cn('-mt-px gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
-               {
-                 'border-gold/40 bg-precision ': player.puuid === playerRank.mvp,
-                 'bg-fighter/70 border-fighter': player.puuid === playerRank.ace,
-               },
-            )
-          ">
-          {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
-        </Badge>
-
-        <Badge
-          v-else
-          size="5"
-          class="-mt-px px-1 text-1! leading-0 font-normal shadow-xs">
-          {{ stats.lpScore }}{{ formatNumberPosition(stats.lpScore) }}
-        </Badge>
       </div>
-      <p
-        class="
-          w-full truncate text-2! leading-4 font-medium tracking-tight
-          text-bc/80
-        ">
-        {{ Math.round(player.challenges.killParticipation * 100) }}%
-        <span
-          class="leading-0 **:text-1!">kp</span>
-      </p>
-    </div>
+    </div> -->
 
     <!-- healing & vision score -->
 
     <div
-      class="w-[60px] justify-end! justify-items-end! text-nowrap"
+      class="w-[54px] justify-end! justify-items-end! text-nowrap"
       :class="divClass">
       <p
         v-tippy="{
@@ -235,7 +219,7 @@ const runeClass
         :class="cn(pClass)">
         {{
           Math.round(
-            player.challenges.effectiveHealAndShielding ?? 0,
+            player.utility.effectiveHealingAndShielding.value ?? 0,
           ).toLocaleString()
         }}
         <span class="relative grid size-3 justify-end">
@@ -247,12 +231,12 @@ const runeClass
 
       <p
         v-tippy="{
-          content: `[Vision Score] ${player.wardsPlaced} placed (${player.challenges.controlWardsPlaced} pink)`,
+          content: `[Vision Score] ${player.vision.wardsPlaced.value} placed (${player.vision.controlWardsPlaced.value} pink)`,
           placement: 'top',
           theme: 'neutral',
         }"
         :class="cn(pClass)">
-        {{ player.visionScore }}
+        {{ player.vision.visionScore.value }}
         <Icon
           name="lp:support"
           class="size-3! text-bc dst" />
@@ -260,10 +244,10 @@ const runeClass
     </div>
 
     <div
-      class="w-[60px] justify-end! justify-items-end! text-nowrap"
+      class="w-[54px] justify-end! justify-items-end! text-nowrap"
       :class="divClass">
       <p :class="cn(pClass)">
-        {{ player.totalDamageDealtToChampions.toLocaleString() }}
+        {{ player.offense.totalDamage.value.toLocaleString() }}
         <span class="relative grid size-3 justify-center">
           <icon
             name="el:fire"
@@ -278,7 +262,7 @@ const runeClass
           placement: 'top',
         }"
         :class="cn(pClass)">
-        {{ Math.round(player.totalDamageTaken).toLocaleString() }}
+        {{ Math.round(player.defense.totalDamageTaken.value).toLocaleString() }}
         <span class="relative grid size-3 justify-center">
           <icon
             name="ph:shield-fill"
@@ -288,24 +272,19 @@ const runeClass
     </div>
 
     <div
-      :class="cn('w-[170px] grid-cols-6! grid-rows-1! justify-self-end pl-3', divClass)">
-      <template
-        v-for="item in stats.items"
-        :key="item">
-        <div :class="cn('size-8 rounded-md border-b3/80 bg-b3/30 inset-shadow-xs inset-shadow-black/4', { border: !item })">
-          <Item
-            v-if="item"
-            :id="item"
-            v-tippy="{ content: ix().itemNameById(item),
-                       placement: 'bottom',
-                       theme: 'neutral' }"
-            :alt="item"
-            class="
-          size-8 rounded-md ring-bc/60 transition-all duration-300
+      :class="cn('w-[184px] grid-cols-7! grid-rows-1! gap-1! justify-self-end', divClass)">
+      <Item
+        v-for="item in player.items"
+        :id="item"
+        :key="item"
+        v-tippy="{ content: ix().itemNameById(item),
+                   placement: 'bottom',
+                   theme: 'neutral' }"
+        :alt="item"
+        class="
+          size-8 rounded-md ring-bc/60 transition-all duration-300 *:rounded-md
           hover:scale-105 hover:ring
         " />
-        </div>
-      </template>
     </div>
 
     <!-- gold -->
@@ -316,7 +295,7 @@ const runeClass
       <p
         v-tippy="{
           theme: 'neutral',
-          content: `${player.totalMinionsKilled.toLocaleString()} minions`,
+          content: `${player.farming.minionsKilled.value.toLocaleString()} minions`,
           placement: 'top',
         }"
         class="hover:underline">
@@ -324,7 +303,7 @@ const runeClass
       </p>
 
       <p class="hover:underline">
-        {{ player.goldEarned.toLocaleString() }} G
+        {{ player.farming.goldEarned.value.toLocaleString() }} G
       </p>
     </div>
   </div>

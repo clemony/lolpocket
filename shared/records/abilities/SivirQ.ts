@@ -1,0 +1,86 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:24:04 PM CST
+
+const ability: Ability = {
+  "key": "Q",
+  "name": "Boomerang Blade",
+  "width": "180 / 200",
+  "affects": "Enemies",
+  "blurb": "Active:  Sivir hurls her crossblade in the target direction that deals physical damage to enemies hit.",
+  "castTime": "0.25 : 0.1 (based on bonus attack speed)",
+  "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
+  "cost": "55 / 60 / 65 / 70 / 75",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "60 / 85 / 110 / 135 / 160"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "85"
+            },
+            {
+              "unit": "% AP",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Boomerang Blade's damage is reduced by 0% - 60% (based on non-champions hit). Upon reaching maximum range, the crossblade returns to her, resetting the damage modifier and dealing the same damage to enemies on its way back.",
+      "leveling": [
+        {
+          "attribute": "Minimum Damage",
+          "modifiers": [
+            {
+              "values": "24 / 34 / 44 / 54 / 64"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "34"
+            },
+            {
+              "unit": "% AP",
+              "values": "24"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Maximum Champion Damage",
+          "modifiers": [
+            {
+              "values": "120 / 170 / 220 / 270 / 320"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "170"
+            },
+            {
+              "unit": "% AP",
+              "values": "120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enemies can be hit only once per pass."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/q",
+  "notes": "Due to the cast time effectively rounding up to full game ticks, at undesturbed game tick interval times the technical minimum cast time is 0.198 seconds reached at 99.8% bonus attack speed.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe damage reduction per unit hit resets back to full damage upon changing direction.\nBoomerang Blade will still return to Sivir even if she dies before it changes direction.\n Spell shield only blocks one instance of damage.",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "speed": "1450 / 1200",
+  "spellEffects": "AoE",
+  "spellshieldable": "Special",
+  "targeting": "Direction",
+  "targetRange": "1250"
+}
+export default ability

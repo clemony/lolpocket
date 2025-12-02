@@ -1,7 +1,0 @@
-export * from "../../shared/types/types.champion"
-export * from "../../shared/types/types.item"
-export * from "../../shared/types/types.league"
-export * from "../../shared/types/types.match"
-export * from "../../shared/types/types.rune"
-export * from "../../shared/types/types.summoner"
-export * from "../../shared/types/types.utility"

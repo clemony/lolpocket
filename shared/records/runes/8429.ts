@@ -1,15 +1,14 @@
-// Updated Patch 25.21 - 11/05/2025 06:05:23 PM CST
+// Updated Patch 15.23.1 - 12/02/2025 03:27:49 AM CST
 
 const rune: Rune = {
-  id: 8429,
-  name: 'Conditioning',
-  description:
-    'After 12 min gain +8 Armor and +8 Magic Resist and increase your Armor and Magic Resist by 3%.',
-  path: 'Resolve',
-  pathId: 8400,
-  tier: 2,
-  tierLabel: 'Resistance',
-  tierSlot: 0,
+  "id": 8429,
+  "name": "Conditioning",
+  "description": "After 12 min gain +8 Armor and +8 Magic Resist and increase your Armor and Magic Resist by 3%.",
+  "path": "Resolve",
+  "pathId": 8400,
+  "tier": 2,
+  "tierLabel": "Resistance",
+  "tierSlot": 0
 }
 
 export default rune

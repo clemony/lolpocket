@@ -9,56 +9,78 @@ const supportUpgrade = computed(() => {
     return null
 
   const supportItemIds = [3869, 3870, 3871, 3876, 3877]
-  const matchItemsSet = new Set(match.items) // O(1) lookups
 
-  const finalSupportItem = supportItemIds.find(id => matchItemsSet.has(id))
+  const finalSupportItem = supportItemIds.find(id => Object.values(match.player.items).includes(id))
 
   return finalSupportItem ?? null
 })
 </script>
 
 <template>
-  <ul
-    class="timeline mt-8 w-full! flex-wrap justify-items-stretch">
+  <ul class="timeline relative mx-0 flex min-h-40 w-full flex-wrap items-center justify-around gap-y-3">
     <li
-      v-for="transaction, i in timeline?.inventory"
+      v-for="eventGroup, i in timeline?.items"
       :key="i"
-      class="my-0! h-32 max-h-32 grow">
+      class="max-w-1/3 grow grid-rows-[51px_14px_24px] items-center">
       <hr
-        v-if="i !== 0" />
-      <div class="timeline-start flex items-center gap-2 timeline-box">
+        v-if="i !== 0"
+        class="bg-b3/60" />
+      <div class="timeline-start mx-3 flex h-full items-center gap-2.25 justify-self-center timeline-box">
         <template
-          v-for="event, ix in transaction.events"
+          v-for="event, ix in eventGroup?.events"
           :key="ix">
           <div
-            v-if="event.action === 'UPGRADE' || event.action === 'SUPPORT_UPGRADE'"
+            v-if="event.action === 'UPGRADE' || event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'"
             class="relative size-12">
             <Item
-              :id="event.action === 'SUPPORT_UPGRADE' ? supportUpgrade : event.to"
+              :id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
               :data-map="match.queue.map.id"
-              :data-id="event.action === 'SUPPORT_UPGRADE' ? supportUpgrade : event.to"
+              :data-id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
               size="sq-12"
               class="tippy"
               data-label="item" />
 
-            <Item
-              v-for="item, idx in event.from"
-              :id="item"
-              :key="item"
-              :data-map="match.queue.map.id"
-              :data-id="item"
-              size="sq-5.5"
-              :style="{
-                marginLeft: `${14 * idx}px`,
-              }"
-              data-label="item"
-              class="tippy absolute -top-1 -left-1 rounded-full ring-2 ring-b1" />
+            <template
+              v-if="event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'">
+              <Item
+                :id="event.from"
+                :key="event.from"
+                :data-map="match.queue.map.id"
+                :data-id="event.from"
+                size="sq-5.5"
+                data-label="item"
+                class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+
+              <Item
+                v-if="event.action === 'S2_UPGRADE'"
+                :id="3867"
+                :key="3867"
+                :data-map="match.queue.map.id"
+                :data-id="3867"
+                size="sq-5.5"
+                data-label="item"
+                class="tippy absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
+            </template>
+            <template v-else>
+              <Item
+                v-for="item, idx in event.from"
+                :id="item"
+                :key="item"
+                :data-map="match.queue.map.id"
+                :data-id="item"
+                size="sq-5.5"
+                :style="{
+                  marginLeft: `${10 * idx}px`,
+                }"
+                data-label="item"
+                class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+            </template>
           </div>
 
           <!-- add event -->
 
           <div
-            v-else
+            v-else-if="event.action === 'ADD'"
             :key="event.id"
             class="tippy relative size-12"
             data-label="item"
@@ -77,22 +99,27 @@ const supportUpgrade = computed(() => {
         </template>
       </div>
 
-      <Icons
-        size="c-4"
-        wrapper-class="z-2 timeline-middle bg-tint-b2/40"
-        name="dot"
-        class="size-7 dss" />
-
-      <div class="relative timeline-end mt-2 grid place-items-center rounded-md border border-b3 bg-b1 px-1.5 text-[0.86rem]! font-bold text-bc dxs">
-        <Icon
-          name="tabler:caret-up-filled"
-          class="absolute -top-3 mx-auto size-5! mask-b-from-59% mask-b-to-60% text-b1 **:stroke-b3" />
-
-        {{ formatHMS(transaction.timestamp) }}
+      <div class="relative z-1 timeline-middle grid w-full place-items-center">
+        <div class="absolute grid size-4 place-items-center bg-tint-b2/40">
+          <Icons
+            size="4"
+            wrapper-class="z-2  absolute "
+            name="dot"
+            class="size-7 dss" />
+        </div>
       </div>
 
+      <div class="relative timeline-end mt-2 grid place-items-center justify-self-center rounded-md border border-b3 bg-b1 px-1.5 text-[0.86rem]! font-bold text-bc dxs">
+        <Icon
+          name="tabler:caret-up-filled"
+          class="absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61% text-b1 **:stroke-b3" />
+
+        {{ formatHMS(eventGroup.timestamp) }}
+      </div>
       <hr
-        v-if="i !== timeline?.inventory.length - 1" />
+        v-if="i !== timeline?.items.length - 1"
+        class="bg-b3/60" />
     </li>
+    <li class="grow" />
   </ul>
 </template>

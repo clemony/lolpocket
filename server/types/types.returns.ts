@@ -1,5 +1,3 @@
-import type { MatchData, RankedEntry } from "./types.import"
-
 export interface MatchDataReturn {
   matchData: MatchData[]
   startIndex?: number

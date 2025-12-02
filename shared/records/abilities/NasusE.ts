@@ -1,0 +1,78 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "E",
+  "name": "Spirit Fire",
+  "affects": "Enemies",
+  "blurb": "Active:  Nasus unleashes a spirit fire at the target location that deals magic damage to enemies within.",
+  "castTime": "0.25",
+  "cooldown": "12",
+  "cost": "60 / 70 / 80 / 90 / 100",
+  "damageType": "Magic damage",
+  "effectRadius": "400 /  200",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "50 / 80 / 110 / 140 / 170"
+            },
+            {
+              "unit": "% AP",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "The fire then remains for 5 seconds, dealing magic damage each second to enemies within and inflicting them with armor reduction, lingering for 1 second.",
+      "leveling": [
+        {
+          "attribute": "Magic Damage Per Tick",
+          "modifiers": [
+            {
+              "values": "10 / 16 / 22 / 28 / 34"
+            },
+            {
+              "unit": "% AP",
+              "values": "12"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Magic Damage",
+          "modifiers": [
+            {
+              "values": "100 / 160 / 220 / 280 / 340"
+            },
+            {
+              "unit": "% AP",
+              "values": "120"
+            }
+          ]
+        },
+        {
+          "attribute": "Armor Reduction",
+          "modifiers": [
+            {
+              "unit": "% of target's armor",
+              "values": "30 / 35 / 40 / 45 / 50"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/e",
+  "notes": "No additional details.",
+  "resource": "Mana",
+  "spellEffects": "AoEDoT",
+  "spellshieldable": "False",
+  "targeting": "Location",
+  "targetRange": "650"
+}
+export default ability

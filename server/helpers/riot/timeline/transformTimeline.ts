@@ -1,4 +1,4 @@
-import { type PlayerTimeline } from "../../../types"
+import { skillPriority } from "~~/server/helpers"
 import { normalizeItemEvents } from "./normalizeItemEvents"
 import { toDeathEvent } from "./toDeathEvent"
 
@@ -49,18 +49,19 @@ export function transformTimeline(raw: any, puuid: string): PlayerTimeline {
     (a: { timestamp: number }) => a.timestamp < FIFTEEN_MIN
   ).length
 
-    // SKILL EVENTS
-  const skillOrder = allEvents.filter(
-    (e: any) => e.type === 'SKILL_LEVEL_UP' && e.participantId === id
-  ).flatMap(e => e.skillSlot)
+  // SKILL EVENTS
+  const skillOrder = allEvents
+    .filter((e: any) => e.type === "SKILL_LEVEL_UP" && e.participantId === id)
+    .flatMap((e) => e.skillSlot)
 
+  const priority = skillPriority(skillOrder)
 
   return {
     puuid,
     matchId: raw.metadata.matchId,
     stats: { deathsBefore15, killsBefore15, assistsBefore15 },
-    inventory: normalizeItemEvents(items),
-    skills: {order: skillOrder, priority: ''},
+    items: normalizeItemEvents(items),
+    skills: { order: skillOrder, priority },
     kills,
     assists,
     deaths,

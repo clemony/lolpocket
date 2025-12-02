@@ -56,10 +56,10 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
       const stats = championStats.get(champ)!
       stats.games++
       player.win ? stats.wins++ : stats.losses++
-      stats.kills += player.kills
-      stats.deaths += player.deaths
-      stats.assists += player.assists
-      stats.killParticipation += player.challenges.killParticipation
+      stats.kills += player.stats.kills.total
+      stats.deaths += player.stats.deaths
+      stats.assists += player.stats.assists
+      stats.killParticipation += player.stats.kp
       stats.matchIndexes.push(index)
       stats.gamePatches.push(match.gamePatch)
       stats.winrate = (stats.wins / stats.games) * 100

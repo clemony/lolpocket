@@ -1,0 +1,45 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "W",
+  "name": "Smoke Screen",
+  "affects": "Enemies",
+  "blurb": "Active:  Graves fires a smoke canister at the target location that creates a cloud of smoke upon impact, dealing magic damage and  slowing nearby enemies.",
+  "castTime": "0.25",
+  "cooldown": "26 / 24 / 22 / 20 / 18",
+  "cost": "70 / 75 / 80 / 85 / 90",
+  "damageType": "Magic damage",
+  "effectRadius": "200",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves fires a smoke canister at the target location that upon impact deals magic damage to enemies within the area and slows them by 50% for 0.5 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "60 / 110 / 160 / 210 / 260"
+            },
+            {
+              "unit": "% AP",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "The canister creates a cloud of smoke for 4 seconds that applies nearsight of outside the area to all enemies within every 0.25 seconds, reducing their sight radius relative to the center."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/w",
+  "notes": "Smoke Screen will  nearsight  untargetable units.\n Spell shields will block the instance of damage and  slow, but will not mitigate the persistent area of effect.\n Crowd control immunity and  cleanses have no effect on the user's  sight radius reduction despite the  nearsight being resisted / removed. Loss of allied vision will still be affected.(note)\nRemoving or resisting the nearsight will prevent it from being reapplied while staying inside the area (leaving and coming back inside will not).\nThe nearsight debuff applies to non-champions but it does not inherently stop them from performing actions that require  sight, such as basic attacking.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "speed": "1500",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "Special",
+  "targeting": "Location",
+  "targetRange": "950"
+}
+export default ability

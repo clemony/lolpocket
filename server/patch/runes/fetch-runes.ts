@@ -1,36 +1,37 @@
+import { Rune, type PathIndex } from "../.."
 /* eslint-disable antfu/no-top-level-await */
-import fs from 'node:fs'
-import path from 'node:path'
-import { $fetch } from 'ofetch'
-import { resolvePath } from '../resolvePath'
-import { markUpdate } from '../utils'
-import { colorDict } from '../utils/colorDict'
+import fs from "node:fs"
+import path from "node:path"
+import { $fetch } from "ofetch"
+import { resolvePath } from "../resolvePath"
+import { markUpdate } from "../utils"
+import { colorDict } from "../utils/colorDict"
 
 const rawRunes = await $fetch(
-  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json',
+  "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json"
 )
 
 const rawPaths = await $fetch(
-  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perkstyles.json',
+  "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perkstyles.json"
 )
 
-const outputRawRunes = resolvePath('./runes/raw/runes-raw.json')
-const outputRawPaths = resolvePath('./runes/raw/paths-raw.json')
-const outputRunes = resolvePath('./runes/raw/runes.json')
-const runesTSOutput = path.resolve('./shared/records/runes.ts')
-const rawShards = resolvePath('./runes/raw/shards-raw.json')
-const shardOutput = path.resolve('./shared/records/shards.ts')
+const outputRawRunes = resolvePath("./runes/raw/runes-raw.json")
+const outputRawPaths = resolvePath("./runes/raw/paths-raw.json")
+const outputRunes = resolvePath("./runes/raw/runes.json")
+const runesTSOutput = path.resolve("./shared/records/runes.ts")
+const rawShards = resolvePath("./runes/raw/shards-raw.json")
+const shardOutput = path.resolve("./shared/records/shards.ts")
 
 function transformDescription(desc: string) {
   return desc
     .replaceAll(
       /<truedamage>(.*?)<\/truedamage>/g,
-      '<span class="truedamage">$1</span>',
+      '<span class="truedamage">$1</span>'
     )
     .replaceAll(/<gold>(.*?)<\/gold>/g, '<span class="gold">$1</span>')
     .replaceAll(
       /<scaleLevel>(.*?)<\/scaleLevel>/g,
-      '<span class="scale-level">$1</span>',
+      '<span class="scale-level">$1</span>'
     )
 }
 
@@ -38,21 +39,21 @@ function transformShardDescription(desc: string) {
   return desc
     .replaceAll(
       /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
-      '$1',
+      "$1"
     )
     .replaceAll(
       /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
-      '$1',
+      "$1"
     )
     .replaceAll(
       /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
-      '$1',
+      "$1"
     )
-    .replaceAll(/<font color='#48C4B7'>(.*?)<\/font>/g, '$1')
+    .replaceAll(/<font color='#48C4B7'>(.*?)<\/font>/g, "$1")
 }
 // Create a lookup map for runes by ID for quick access
 const runesById = Object.fromEntries(
-  rawRunes.map((rune: any) => [rune.id, rune]),
+  rawRunes.map((rune: Rune) => [rune.id, rune])
 )
 
 // container for slots >= 4
@@ -60,64 +61,67 @@ const extraSlots: any[] = []
 // create object for pathName -> perk IDs
 const pathIdMap: Record<string, number[]> = {}
 
-const transformedPaths = rawPaths.styles.reduce((acc: any, path: any, pathIndex: number) => {
-  const mappedSlots = path.slots
-    .map((slot: any, index: number) => {
-      if (index >= 4) {
-        if (pathIndex === 0) {
-          extraSlots.push({
-            label: slot.slotLabel || `Slot ${index}`,
-            shards: slot.perks
-              .map((perkId: number) => {
-                const rune = runesById[perkId]
-                if (!rune) return null
-                return {
-                  id: rune.id,
-                  name: rune.name,
-                  color: colorDict[rune.id],
-                  description: transformShardDescription(rune.longDesc),
-                }
-              })
-              .filter(Boolean),
-            tier: index - 4,
-          })
+const transformedPaths = rawPaths.styles.reduce(
+  (acc: any, path: any, pathIndex: number) => {
+    const mappedSlots = path.slots
+      .map((slot: any, index: number) => {
+        if (index >= 4) {
+          if (pathIndex === 0) {
+            extraSlots.push({
+              label: slot.slotLabel || `Slot ${index}`,
+              shards: (slot.perks ?? [])
+                .map((perkId: number) => {
+                  const rune = runesById[perkId]
+                  if (!rune) return null
+                  return {
+                    id: rune.id,
+                    name: rune.name,
+                    color: colorDict[rune.id],
+                    description: transformShardDescription(rune.longDesc),
+                  }
+                })
+                .filter(Boolean),
+              tier: index - 4,
+            })
+          }
+          return null
         }
-        return null
-      }
 
-      // Build pathIdMap only once per path, and only for main slots
-      const allPerkIds = path.slots
-        .slice(0, 4)
-        .flatMap((slot: any) => slot.perks)
-      pathIdMap[path.id] = allPerkIds
+        // Build pathIdMap only once per path, and only for main slots
+        const allPerkIds = path.slots
+          .slice(0, 4)
+          .flatMap((slot: any) => slot.perks)
+        pathIdMap[path.id] = allPerkIds
 
-      return {
-        label: slot.slotLabel || 'Keystone',
-        runes: slot.perks
-          .map((perkId: number) => {
-            const rune = runesById[perkId]
-            if (!rune) return null
-            return {
-              id: rune.id,
-              name: rune.name,
-              description: transformDescription(rune.longDesc),
-            }
-          })
-          .filter(Boolean),
-        tier: index,
-      }
-    })
-    .filter(Boolean)
+        return {
+          label: slot.slotLabel || "Keystone",
+          runes: (slot.perks ?? [])
+            .map((perkId: number) => {
+              const rune = runesById[perkId]
+              if (!rune) return null
+              return {
+                id: rune.id,
+                name: rune.name,
+                description: transformDescription(rune.longDesc),
+              }
+            })
+            .filter(Boolean),
+          tier: index,
+        }
+      })
+      .filter(Boolean)
 
-  acc[path.id] = {
-    id: path.id,
-    name: path.name,
-    slots: mappedSlots,
-    tooltip: path.tooltip,
-  }
+    acc[path.id] = {
+      id: path.id,
+      name: path.name,
+      slots: mappedSlots,
+      tooltip: path.tooltip,
+    }
 
-  return acc
-}, {})
+    return acc
+  },
+  {}
+)
 
 // Make a lightweight version for TS (no descriptions)
 const strippedPaths = Object.fromEntries(
@@ -133,23 +137,23 @@ const strippedPaths = Object.fromEntries(
         })),
       })),
     },
-  ]),
+  ])
 )
 
 fs.writeFileSync(
   runesTSOutput,
   `// ${markUpdate()}
 
-export const runePaths: Record<string, RunePath> = ${JSON.stringify(strippedPaths, null, 2)}`,
+export const runePaths: Record<string, RunePath> = ${JSON.stringify(strippedPaths, null, 2)}`
 )
 
 // write it as a TS file
-const pathIdsTSOutput = resolvePath('./runes/raw/pathIds.ts')
+const pathIdsTSOutput = resolvePath("./runes/raw/pathIds.ts")
 fs.writeFileSync(
   pathIdsTSOutput,
   `// ${markUpdate()}
 
-export const pathIds: Record<string, number[]> = ${JSON.stringify(pathIdMap, null, 2)}`,
+export const pathIds: Record<string, number[]> = ${JSON.stringify(pathIdMap, null, 2)}`
 )
 
 // Write extra slots separately
@@ -166,4 +170,4 @@ fs.writeFileSync(outputRunes, JSON.stringify(transformedPaths, null, 2))
 fs.writeFileSync(outputRawRunes, JSON.stringify(rawRunes, null, 2))
 fs.writeFileSync(outputRawPaths, JSON.stringify(rawPaths, null, 2))
 
-console.log('✅ runes.json written!')
+console.log("✅ runes.json written!")

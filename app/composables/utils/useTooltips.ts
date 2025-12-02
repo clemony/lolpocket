@@ -3,13 +3,33 @@ import type { Instance } from "tippy.js"
 import tippy from "tippy.js"
 import "tippy.js/animations/scale-subtle.css"
 import "tippy.js/animations/shift-toward.css"
-import { createApp, defineAsyncComponent, h, nextTick, onUnmounted, ref, unref, watch } from "vue"
+import {
+  createApp,
+  defineAsyncComponent,
+  h,
+  nextTick,
+  onUnmounted,
+  ref,
+  unref,
+  watch,
+} from "vue"
 import { popoverArrow } from "~/assets/ts/popoverArrow"
 
-const ChampionCard = defineAsyncComponent(() => import("~/components/lol/champions/display/ChampionTooltip.vue"))
-const ItemData = defineAsyncComponent(() => import("~/components/lol/items/display/ItemTooltip.vue"))
-const RuneData = defineAsyncComponent(() => import("~/components/lol/runes/display/RuneData.vue"))
-const SpellData = defineAsyncComponent(() => import("~/components/lol/spells/SpellData.vue"))
+const ChampionCard = defineAsyncComponent(
+  () => import("~/components/lol/champions/display/ChampionTooltip.vue")
+)
+const Ability = defineAsyncComponent(
+  () => import("~/components/lol/champions/display/AbilityTooltip.vue")
+)
+const ItemData = defineAsyncComponent(
+  () => import("~/components/lol/items/display/ItemTooltip.vue")
+)
+const RuneData = defineAsyncComponent(
+  () => import("~/components/lol/runes/display/RuneData.vue")
+)
+const SpellData = defineAsyncComponent(
+  () => import("~/components/lol/spells/SpellData.vue")
+)
 
 interface TooltipEntry {
   app: ReturnType<typeof createApp>
@@ -22,10 +42,16 @@ const tooltipCache = new WeakMap<HTMLElement, TooltipEntry>()
 let activeTippy: Instance | null = null
 
 export function useTooltips(container: MaybeRef<HTMLElement | null>) {
- const instances = new Map<HTMLElement, Instance>()
+  const instances = new Map<HTMLElement, Instance>()
   let observer: MutationObserver | null = null
 
-  const createOrGetEntry = (node: HTMLElement, label: string, id: string, map?: string) => {
+  const createOrGetEntry = (
+    node: HTMLElement,
+    label: string,
+    id: string,
+    map?: string,
+    ability?: string
+  ) => {
     let entry = tooltipCache.get(node)
     if (entry) return entry
 
@@ -39,9 +65,14 @@ export function useTooltips(container: MaybeRef<HTMLElement | null>) {
           if (!visible.value) return null
 
           switch (label) {
-            case "item": return h(ItemData, { id: +id, map: +map })
-            case "champion": return h(ChampionCard, { id: +id })
-            case "spell": return h(SpellData, { id: +id })
+            case "item":
+              return h(ItemData, { id: +id, map: +map })
+            case "champion":
+              return h(ChampionCard, { id: +id })
+            case "ability":
+              return h(Ability, { id: +id, ability })
+            case "spell":
+              return h(SpellData, { id: +id })
             case "rune":
               return h(RuneData, {
                 id: +id,
@@ -52,7 +83,7 @@ export function useTooltips(container: MaybeRef<HTMLElement | null>) {
               return h("div", "Unknown mention")
           }
         }
-      }
+      },
     })
 
     // inherit Nuxt app context
@@ -80,9 +111,10 @@ export function useTooltips(container: MaybeRef<HTMLElement | null>) {
     const label = node.dataset.label
     const id = node.dataset.id
     const map = node.dataset.map
+    const ability = node.dataset.ability
     if (!label || !id) return
 
-    const entry = createOrGetEntry(node, label, id, map)
+    const entry = createOrGetEntry(node, label, id, map, ability)
 
     const instance = tippy(node, {
       hideOnClick: false,
@@ -131,7 +163,9 @@ export function useTooltips(container: MaybeRef<HTMLElement | null>) {
 
   const scan = async (el: HTMLElement) => {
     await nextTick()
-    const nodes = el.querySelectorAll<HTMLElement>("[data-label].tippy, [data-label].mention")
+    const nodes = el.querySelectorAll<HTMLElement>(
+      "[data-label].tippy, [data-label].mention"
+    )
     nodes.forEach((n) => initNode(n))
   }
 

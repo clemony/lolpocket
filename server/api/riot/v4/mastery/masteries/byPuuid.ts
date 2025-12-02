@@ -1,5 +1,5 @@
 import { riotFetch } from "riot"
-import { apiPath } from "~~/server/helpers/riot"
+import { apiPath } from "~~/server/helpers"
 import type { MasteryReturn } from "~~/server/types"
 
 export function fetchMasteries(puuid: string, region: string) {

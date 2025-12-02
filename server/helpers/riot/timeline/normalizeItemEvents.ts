@@ -1,167 +1,109 @@
-export function normalizeItemEvents(events) {
-  // -------------------------------------------------------
-  // 1. PREP
-  // -------------------------------------------------------
-  events = [...events].sort((a, b) => a.timestamp - b.timestamp)
+import {
+  findLastIndex,
+  refineWindow,
+  stripTs,
+  timestampOfFirst,
+} from "~~/server/helpers"
 
-  const result = []
-
-  // stackable tracking
-  const STACKABLE = new Set([2003, 2055])
-  const STACK_WINDOW = 10_000
-
-  // Track active items to detect real upgrades
-  const inventory = new Map() // itemId → count
-
-  // Track purchases that later get undone
-  const undonePurchases = new Set() // timestamps of purchase events
-
-  // To link destroy→purchase→upgrade chains
-  const pendingDestroys = [] // { itemId, timestamp }
-
-  // Helper
-  const pushAdd = (timestamp, id, count = 1) => {
-    if (STACKABLE.has(id)) {
-      for (let i = result.length - 1; i >= 0; i--) {
-        const ev = result[i]
-        if (ev.action !== "ADD" || !ev.items) continue
-        const found = ev.items.find(it => it.id === id)
-        if (found && timestamp - ev.timestamp <= STACK_WINDOW) {
-          found.count += count
-          return
-        }
-        if (timestamp - ev.timestamp > STACK_WINDOW) break
-      }
-    }
-    result.push({
-      timestamp,
-      action: "ADD",
-      id, count
-    })
-  }
-
-  const pushUpgrade = (timestamp, from, to, meta = null) => {
-    result.push({
-      timestamp,
-      action: meta ?? "UPGRADE",
-      from,
-      to
-    })
-  }
-
-  // -------------------------------------------------------
-  // 2. MAIN EVENT LOOP
-  // -------------------------------------------------------
-  for (const e of events) {
-    const ts = e.timestamp
-
-    switch (e.type) {
-      case "ITEM_DESTROYED":
-      case "ITEM_SOLD": {
-        pendingDestroys.push({ itemId: e.itemId, timestamp: ts })
-        break
-      }
-
-      case "ITEM_PURCHASED": {
-        const bought = e.itemId
-
-        // Was this paired with a destroy at this ts?
-        const matching = pendingDestroys.find(d => d.timestamp === ts)
-        if (matching) {
-          // real upgrade
-          pushUpgrade(ts, [matching.itemId], bought)
-          // consume the destroy
-          const idx = pendingDestroys.indexOf(matching)
-          pendingDestroys.splice(idx, 1)
-        } else {
-          // pure purchase
-          pushAdd(ts, bought)
-        }
-
-        // update active inventory
-        inventory.set(bought, (inventory.get(bought) || 0) + 1)
-        break
-      }
-
-      case "ITEM_UNDO": {
-        const ref = e.beforeId
-        if (!ref) break
-
-        // mark the last purchase of that item as undone
-        undonePurchases.add(ref)
-
-        // revert ADD or UPGRADE that created `ref`
-        const idx = result.findLastIndex(ev =>
-          (ev.action === "ADD" && ev.items.some(i => i.id === ref)) ||
-          (ev.action === "UPGRADE" && ev.to === ref)
-        )
-        if (idx !== -1) {
-          result.splice(idx, 1)
-        }
-
-        // restore the reverted item to inventory
-        inventory.set(ref, (inventory.get(ref) || 1))
-        break
-      }
-
-      case "ITEM_OBTAINED": {
-        const item = e.afterId ?? e.itemId
-        pushAdd(ts, item)
-        inventory.set(item, (inventory.get(item) || 0) + 1)
-        break
-      }
-    }
-  }
-
-  // -------------------------------------------------------
-  // 3. SUPPORT ITEM SPECIAL CASE
-  // -------------------------------------------------------
-  const S1 = 3865
-  const S2 = 3866
-  const S3 = 3867
-  const CHAIN = [S1, S2, S3]
-
-  const r65 = result.find(ev => ev.action === "ADD" && ev.items?.some(i => i.id === S1))
-  const r66 = result.find(ev => ev.action === "ADD" && ev.items?.some(i => i.id === S2))
-  const r67 = result.find(ev => ev.action === "ADD" && ev.items?.some(i => i.id === S3))
-
-  if (r65) {
-    pushUpgrade(r65.timestamp, [S1], S2)
-  }
-  if (r66 || r67) {
-    pushUpgrade(
-      (r67?.timestamp ?? r66.timestamp),
-      [
-        ...(r66 ? [S2] : []),
-        ...(r67 ? [S3] : [])
-      ],
-      null,
-      "SUPPORT_UPGRADE"
+export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
+  // group raw events by timestamp (stable order)
+  const byTs = new Map<number, any[]>()
+  for (const e of [...events].sort((a, b) => a.timestamp - b.timestamp)) {
+    ;(byTs.get(e.timestamp) ?? byTs.set(e.timestamp, []).get(e.timestamp)).push(
+      e
     )
   }
 
-  // -------------------------------------------------------
-  // 4. CLEANUP + SORT
-  // -------------------------------------------------------
-  result.sort((a, b) => a.timestamp - b.timestamp)
-
-  // -------------------------------------------------------
-  // 5. SHOPPING WINDOW MERGE
-  // -------------------------------------------------------
+  const STACKABLE = new Set([2003, 2055])
   const SHOP_WINDOW = 30_000
-  const merged = []
+  let pendingSupport: { id: number; ts: number } | null = null
 
-  for (const ev of result) {
-    const last = merged[merged.length - 1]
-    if (last && ev.timestamp - last.timestamp <= SHOP_WINDOW) {
-      last.events.push({ ...ev, timestamp: undefined })
-    } else {
-      merged.push({
-        timestamp: ev.timestamp,
-        events: [{ ...ev, timestamp: undefined }]
-      })
+  const rawOut: ItemEvent[] = []
+
+  //
+  // PHASE 1 — ONLY PURCHASED / OBTAINED / UNDO
+  //
+  for (const [ts, group] of Array.from(byTs.entries()).sort(
+    (a, b) => a[0] - b[0]
+  )) {
+    const purchases: number[] = []
+    const obtained: number[] = []
+    const undos: any[] = []
+
+    for (const ev of group) {
+      if (ev.type === "ITEM_PURCHASED") purchases.push(ev.itemId ?? ev.afterId)
+      else if (ev.type === "ITEM_OBTAINED")
+        obtained.push(ev.itemId ?? ev.afterId)
+      else if (ev.type === "ITEM_UNDO") undos.push(ev)
+      //
+      // PHASE 2 — SUPPORT ITEM SYNTHETIC UPGRADES
+      //
+      if (ev.type === "ITEM_DESTROYED" && ev.itemId === 3865) {
+        rawOut.push({
+          timestamp: events[0].timestamp,
+          action: "ADD",
+          id: 3865,
+          count: 1,
+        })
+        rawOut.push({
+          timestamp: ts,
+          action: "S1_UPGRADE",
+          from: 3865,
+          to: 3866,
+        })
+        continue
+      }
+
+      if (ev.type === "ITEM_DESTROYED" && ev.itemId === 3866) {
+        rawOut.push({
+          timestamp: ts,
+          action: "S2_UPGRADE",
+          from: 3866,
+          to: 0,
+        })
+        continue
+      }
+    }
+
+    // obtained → always add
+    for (const id of obtained)
+      rawOut.push({ timestamp: ts, action: "ADD", id, count: 1 })
+
+    // purchases → always add
+    for (const id of purchases)
+      rawOut.push({ timestamp: ts, action: "ADD", id, count: 1 })
+
+    // undo removes last entry matching beforeId
+    for (const undo of undos) {
+      const ref = undo.beforeId
+      if (!ref) continue
+      const idx = findLastIndex(
+        rawOut,
+        (r) =>
+          (r.action === "ADD" && r.id === ref) ||
+          (r.action === "UPGRADE" && r.to === ref)
+      )
+      if (idx !== -1) rawOut.splice(idx, 1)
     }
   }
 
-  return merged
+  rawOut.sort((a, b) => a.timestamp - b.timestamp)
+
+  //
+  // PHASE 3 — CREATE SHOPPING WINDOWS
+  //
+  const windows: ItemEventGroup[] = []
+  for (const ev of rawOut) {
+    const last = windows[windows.length - 1]
+    if (last && ev.timestamp - last.timestamp <= SHOP_WINDOW)
+      last.events.push(stripTs(ev))
+    else windows.push({ timestamp: ev.timestamp, events: [stripTs(ev)] })
+  }
+
+  //
+  // PHASE 4 — REFINE EACH WINDOW
+  //
+  const refined = windows.map((w) => refineWindow(w, STACKABLE, rawOut))
+
+  return refined
 }

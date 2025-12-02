@@ -5,7 +5,7 @@ const { class: className, player } = defineProps<{
 }>()
 
 const cs = computed(() => {
-  return player.totalMinionsKilled + player.neutralMinionsKilled
+  return player.farming.minionsKilled.value + player.farming.neutralMinionsKilled.value
 })
 </script>
 
@@ -15,7 +15,7 @@ const cs = computed(() => {
     :offset="[2, -2]"
     :class="
       cn('flex size-full flex-col items-end justify-start py-1 font-medium *:py-0.5 *:text-1 *:leading-none **:text-nowrap',
-        className,
+         className,
       )
     ">
     <p
@@ -28,7 +28,7 @@ const cs = computed(() => {
     <p
       v-tippy="'Gold Earned'"
       class="flex items-center gap-1 decoration-1 hover:underline">
-      {{ player.goldEarned.toLocaleString() }}
+      {{ player.farming.goldEarned.value.toLocaleString() }}
       <span class="font-mono">G</span>
     </p>
   </div>

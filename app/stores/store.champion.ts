@@ -1,6 +1,5 @@
 import type { GridApi, GridState } from 'ag-grid-community'
 import { defineStore } from 'pinia'
-import { championFilters } from '~~/shared/filters'
 
 export interface ChampionFilter {
   attackType: string | null
@@ -60,25 +59,25 @@ export const useChampStore = defineStore('ChampStore', () => {
 
     if (filters.value.attackType?.length > 0) {
       for (const stat of filters.value.attackType) {
-        const ids = championFilters.attackType[stat] ?? []
+        const ids = rangeToChamp[stat] ?? []
         matched = new Set(ids.filter(id => matched.has(id)))
       }
     }
 
     if (filters.value.role && filters.value.role !== 'all') {
-      const rolesIds = championFilters.roles[filters.value.role] ?? []
+      const rolesIds = roleToChamp[filters.value.role] ?? []
       matched = new Set(rolesIds.filter(id => matched.has(id)))
     }
 
     if (filters.value.position && filters.value.position !== 'all') {
       const positionsIds
-        = championFilters.positions[filters.value.position] ?? []
+        = positionToChamp[filters.value.position] ?? []
       matched = new Set(positionsIds.filter(id => matched.has(id)))
     }
 
     if (filters.value.resource && filters.value.resource !== null) {
       const resourceIds
-        = championFilters.resource[filters.value.resource] ?? []
+        = resourceToChamp[filters.value.resource] ?? []
       matched = new Set(resourceIds.filter(id => matched.has(id)))
     }
 

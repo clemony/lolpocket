@@ -1,4 +1,4 @@
-// Updated Patch 25.23 - 11/22/2025 10:19:22 AM CST
+// Updated Patch 15.23.1 - 11/30/2025 03:10:52 AM CST
  export const skinIndex: Record<string, Skin[]> = {
   "Aatrox": [
     {

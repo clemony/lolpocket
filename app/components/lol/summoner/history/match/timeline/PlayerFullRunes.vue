@@ -1,13 +1,45 @@
 <script lang="ts" setup>
-import { runePaths } from '~~/shared/records/runes'
-
 const { match } = defineProps<{
   match: MatchDataCurrentPlayer
 }>()
 </script>
 
 <template>
-  <div
+  <!--     <img
+      :src="`/img/paths/${pathNameById(match.player.runes.primary.path)}.webp`"
+      class="size-6 dxs" /> -->
+  <Card class="flex h-20 items-center gap-4 rounded-xl px-5">
+    <div class="relative mr-1 grid h-10 w-11 place-items-center">
+      <Keystone
+        :id="match.player.runes.keystone"
+        :key="match.player.runes.keystone"
+        :data-id="match.player.runes.keystone"
+        data-label="rune"
+        class="tippy absolute z-1 size-13" />
+    </div>
+    <Rune
+      v-for="rune in match.player.runes.primary.runes.concat(match.player.runes.secondary.runes)"
+      :id="rune"
+      :key="rune"
+      :data-id="rune"
+      data-label="rune"
+      class="tippy size-10" />
+  </Card>
+
+  <!--     <img
+      class="ml-2 size-6 dxs"
+      :src="`/img/paths/${pathNameById(match.player.runes.secondary.path)}.webp`" /> -->
+  <Card class="flex h-20 flex-col items-center justify-between rounded-xl p-2">
+    <Shard
+      v-for="shard in match.player.runes.shards"
+      :id="shard"
+      :key="shard"
+      data-label="rune"
+      class="tippy size-5 border-0 shadow-none drop-shadow-none"
+      :icon-class="cn('size-4!', { 'size-3.5!': [5011, 5010, 5007].includes(shard) })" />
+  </Card>
+
+  <!--  <div
     v-for="path, ix in [runePaths[match.player.runes.primary.path], runePaths[match.player.runes.secondary.path]]"
     :key="ix"
     class="flex w-58 flex-col gap-4 **:cursor-default">
@@ -39,5 +71,5 @@ const { match } = defineProps<{
           :class="cn('tippy size-10.5 opacity-70 grayscale', { 'opacity-100 grayscale-0': match.player.runes.primary.runes.concat(match.player.runes.secondary.runes).includes(rune.id) })" />
       </div>
     </Card>
-  </div>
+  </div> -->
 </template>

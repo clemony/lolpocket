@@ -6,8 +6,8 @@ const { class: className, player } = defineProps<{
 
 const spells = computed(() => {
   return {
-    sum1: spellbook[player?.summoner1Id].name,
-    sum2: spellbook[player?.summoner2Id].name,
+    sum1: spellbook[player?.spells[0]].name,
+    sum2: spellbook[player?.spells[1]].name,
   }
 })
 </script>
@@ -21,7 +21,7 @@ const spells = computed(() => {
                  placement: 'right',
                  theme: 'neutral' }"
       :alt="String(spells?.sum1)"
-      :src="`/img/spells/${player?.summoner1Id}.webp`"
+      :src="`/img/spells/${player?.spells[0]}.webp`"
       class="
         size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
         duration-300 hover:scale-105 hover:ring
@@ -32,7 +32,7 @@ const spells = computed(() => {
                  placement: 'right',
                  theme: 'neutral' }"
       :alt="String(spells?.sum2)"
-      :src="`/img/spells/${player?.summoner2Id}.webp`"
+      :src="`/img/spells/${player?.spells[1]}.webp`"
       class="
         size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
         duration-300 hover:scale-105 hover:ring

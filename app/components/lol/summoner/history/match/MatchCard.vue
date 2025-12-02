@@ -15,14 +15,6 @@ const match = computed<MatchDataCurrentPlayer>(() => {
   const player = m?.participants.find(p => p.puuid === puuid)
   return {
     ...m,
-    items: [
-      player.item0,
-      player.item1,
-      player.item2,
-      player.item3,
-      player.item4,
-      player.item5,
-    ],
     player,
     queue: queue.value,
   }
@@ -97,8 +89,8 @@ const isOpen = ref(false)
         </div>
       </div>
 
-      <div class="ml-2 flex h-max flex-col gap-1">
-        <div class="flex items-start">
+      <div class="ml-2 flex h-max w-70 flex-col gap-1">
+        <div class="flex w-full items-start">
           <!-- champ image -->
           <ChampionIcon
             :id="match.player?.championId"
@@ -134,24 +126,16 @@ const isOpen = ref(false)
 
         <div
           v-if="match.player"
-          class="flex size-full max-w-66 items-start gap-1 *:rounded-md">
-          <template
-            v-for="item in match.items"
-            :key="item">
-            <div :class="cn('size-9 rounded-md border-b3/80 bg-b3/30 inset-shadow-xs inset-shadow-black/4', { border: !item })">
-              <Item
-                v-if="item"
-                :id="item"
-                v-tippy="{ content: ix().itemNameById(item),
-                           placement: 'bottom',
-                           theme: 'neutral' }"
-                :alt="item"
-                class="
-          size-9 rounded-md ring-bc/60 transition-all duration-300
-          hover:scale-105 hover:ring
-        " />
-            </div>
-          </template>
+          class="flex h-full w-full items-start gap-1 *:rounded-md">
+          <Item
+            v-for="item in match.player.items"
+            :id="item"
+            :key="item"
+            v-tippy="{ content: ix().itemNameById(item),
+                       placement: 'bottom',
+                       theme: 'neutral' }"
+            :alt="item"
+            :class="cn('size-9 rounded-md border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 *:rounded-md hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
         </div>
       </div>
       <TeamsCardOverview :match />

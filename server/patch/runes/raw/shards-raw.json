@@ -5,7 +5,7 @@
       {
         "id": 5008,
         "name": "Adaptive Force",
-        "color": "var(--color-sorcery",
+        "color": "var(--color-sorcery)",
         "description": "+9 Adaptive Force"
       },
       {
@@ -17,7 +17,7 @@
       {
         "id": 5007,
         "name": "Ability Haste",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+8 Ability Haste "
       }
     ],
@@ -29,13 +29,13 @@
       {
         "id": 5008,
         "name": "Adaptive Force",
-        "color": "var(--color-sorcery",
+        "color": "var(--color-sorcery)",
         "description": "+9 Adaptive Force"
       },
       {
         "id": 5010,
         "name": "Move Speed",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+2.5% Move Speed"
       },
       {
@@ -59,7 +59,7 @@
       {
         "id": 5013,
         "name": "Tenacity and Slow Resist",
-        "color": "var(--color-inspiration",
+        "color": "var(--color-inspiration)",
         "description": "+15% Tenacity and Slow Resist"
       },
       {

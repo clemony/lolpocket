@@ -22,7 +22,7 @@ const players = computed(() => match.participants as Player[])
       group/head mt-2 grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)]
       gap-1 px-2 py-1
     ">
-    <div class="size-full items-center pl-2">
+    <!--     <div class="size-full items-center pl-2">
       <div class="text-1 font-semibold text-bc/60 uppercase">
         {{ gameOutcome.player }}
       </div>
@@ -153,6 +153,6 @@ const players = computed(() => match.participants as Player[])
           </CollapsibleContent>
         </component>
       </template>
-    </div>
+    </div> -->
   </div>
 </template>

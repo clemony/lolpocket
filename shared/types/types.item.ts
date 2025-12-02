@@ -12,6 +12,7 @@ export interface ItemLite extends ItemIndex {
   maps?: number[]
   purchasable?: boolean
   rank?: string
+  recipe?: number[]
   stats?: Record<string, number>
   tags?: string[]
 }

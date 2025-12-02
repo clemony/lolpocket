@@ -1,0 +1,42 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "Q",
+  "name": "Tentacle Smash",
+  "width": "200",
+  "affects": "Enemies",
+  "castTime": "0.75",
+  "cooldown": "10 / 9 / 8 / 7 / 6",
+  "cost": "40 / 45 / 50 / 55 / 60",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tentacle damage is increased.</p>",
+      "leveling": [
+        {
+          "attribute": "Damage Increase",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "10 / 15 / 20 / 25 / 30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Illaoi slams down a Tentacle in the target direction.</p>"
+    },
+    {
+      "description": "Illaoi reveals herself during the cast if there is an enemy champion nearby."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/q",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nTentacle Smash's hitbox is fixed in front of Illaoi, while the indicator on the ground is fixed to the targeted direction.\nFor allied  Original Illaoi skin, Tentacle Smash's indicator is further in front of Illaoi compared to an enemy Illaoi's and other skins (with the hitbox unchanged). [3] (bug)\n Conqueror will pre-emptively amplify Tentacle Smash's damage by the generated Conqueror stack. (note)\nPENDING FOR TEST: Only Tentacle Smash or also  Prophet of an Elder God attacks?\nPENDING FOR TEST: The self-reveal has not been fully tested for complete confirmation. Is the ability invisible when hitting minions and there is no enemy champion nearby? Is the tip of the ability enough to reveal her? Whether it can hit a minion or not? Just if she's around the exit of the fog of war, and even if she points towards the inside of the fog of war? [4]\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Test of Spirit and  Leap of Faith are buffered.  Harsh Lesson is usable.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+  "projectile": "FALSE",
+  "resource": "Mana",
+  "spellEffects": "Area of effect",
+  "spellshieldable": "True",
+  "targeting": "Direction"
+}
+export default ability

@@ -1,7 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import process from "node:process"
-import type { Ability, Champion } from "../../types/types.import"
+import type { Ability, Champion } from "../.."
 import { resolvePath } from "../resolvePath"
 import {
   markUpdate,
@@ -27,6 +27,7 @@ const outputMergedRaw = resolvePath("./champions/raw/champions-raw.json")
 const savepointPath = resolvePath(
   "./champions/raw/.generate-champions-save.json"
 )
+const outputAbilities = path.resolve("./shared/records/abilities/")
 
 // ---------- Ensure output dirs ----------
 fs.mkdirSync(outputDir, { recursive: true })
@@ -138,6 +139,24 @@ for (const [key, champ] of Object.entries(merakiData)) {
 
     const cleanedAbilities = mergedAbilities.map(normalizeAbility)
 
+    fs.mkdirSync(outputAbilities, { recursive: true })
+
+    for (const ability of cleanedAbilities) {
+      const abilityFile = path.join(
+        outputAbilities,
+        `${champ.key}${ability.key}.ts`
+      )
+
+      fs.writeFileSync(
+        abilityFile,
+        `// ${markUpdate()}
+
+const ability: Ability = ${JSON.stringify(stripEmpty(ability), null, 2)}
+export default ability
+`
+      )
+    }
+
     // ---------- Filter stats safely ----------
     const filteredStats = Object.fromEntries(
       Object.entries(champ.stats || {})
@@ -155,8 +174,6 @@ for (const [key, champ] of Object.entries(merakiData)) {
           return [k, Object.keys(cleaned).length > 0 ? cleaned : { flat: 0 }]
         })
     )
-
-    // ...continue writing output, updating savepoints etc.
 
     // ---------- Build normalized champion ----------
     const champData = {

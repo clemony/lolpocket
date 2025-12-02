@@ -1,5 +1,3 @@
-import type { ChampionDeathEvent } from "../../../types"
-
 export function toDeathEvent(e: any): ChampionDeathEvent {
   return {
     killerId: e.killerId ?? 0,

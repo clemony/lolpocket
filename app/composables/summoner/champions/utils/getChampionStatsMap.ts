@@ -32,10 +32,10 @@ export function getChampionStatsMap(
     const stats = map.get(champ)!
     stats.games++
     match.win ? stats.wins++ : stats.losses++
-    stats.kills += match.kills
-    stats.deaths += match.deaths
-    stats.assists += match.assists
-    stats.killParticipation += match.challenges.killParticipation
+    stats.kills += match.stats.kills.total
+    stats.deaths += match.stats.deaths
+    stats.assists += match.stats.assists
+    stats.killParticipation += match.stats.kp
     stats.matchIndexes.push(index)
     stats.gamePatches.push(matches[index].gamePatch.toString())
     stats.winrate = (stats.wins / stats.games) * 100

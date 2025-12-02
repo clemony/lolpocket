@@ -31,17 +31,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
     player.forEach((match, index) => {
       const { data, patch } = match
 
-      const items = [
-        data.item0,
-        data.item1,
-        data.item2,
-        data.item3,
-        data.item4,
-        data.item5,
-        data.item6,
-      ]
-
-      items.forEach((itemId) => {
+      Object.values(data.items).forEach((itemId) => {
         if (!itemId || itemId === 0) return
 
         if (!itemStats.has(itemId)) {

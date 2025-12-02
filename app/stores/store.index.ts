@@ -1,13 +1,4 @@
 import { defineStore } from "pinia"
-import {
-  championIndex,
-  championTitleIndex,
-  itemIndex,
-  mapIndex,
-  patchIndex,
-  pathIndex,
-  runeIndex,
-} from "~~/shared/indexes"
 
 export const useIndexStore = defineStore(
   "indexStore",
@@ -30,10 +21,6 @@ export const useIndexStore = defineStore(
       runes.value = runeIndex
       paths.value = pathIndex
       maps.value = mapIndex
-    }
-
-    async function loadTitles() {
-      titles.value = championTitleIndex
     }
 
     async function loadPatch() {
@@ -76,7 +63,6 @@ export const useIndexStore = defineStore(
     }
 
     function getChampionTitle(key) {
-      if (!titles.value) loadTitles()
       return titles.value[key]
     }
 
@@ -94,7 +80,6 @@ export const useIndexStore = defineStore(
       // load
       loadBasic,
       loadPatch,
-      loadTitles,
 
       // helpers
       findInIndex,

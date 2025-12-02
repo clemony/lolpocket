@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LinkTippy } from '#components'
-import { mapToItem } from '~~/shared/filters/mapToItem'
+import { mapToItem } from '~~/shared'
 
 const { id, map } = defineProps<{
   id: number

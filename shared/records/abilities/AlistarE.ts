@@ -1,0 +1,54 @@
+// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+
+const ability: Ability = {
+  "key": "E",
+  "name": "Trample",
+  "affects": "Enemies",
+  "blurb": "Active:  Alistar becomes  ghosted and continually deals magic damage to nearby enemies. He generates a stack of Trample each time this damages at least one  champion.",
+  "castTime": "none",
+  "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
+  "cost": "50 / 55 / 60 / 65 / 70",
+  "damageType": "Magic damage",
+  "effectRadius": "350",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Alistar tramples the ground around him every 0.5 seconds over 5 seconds, becoming ghosted and dealing magic damage to nearby enemies. Each time this damages at least one enemy champion, he generates a stack of Trample that lasts for the remaining duration, stacking up to 5 times.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage Per Tick",
+          "modifiers": [
+            {
+              "values": "8 / 11 / 14 / 17 / 20"
+            },
+            {
+              "unit": "% AP",
+              "values": "7"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Magic Damage",
+          "modifiers": [
+            {
+              "values": "80 / 110 / 140 / 170 / 200"
+            },
+            {
+              "unit": "% AP",
+              "values": "70"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 275 (based on level) bonus magic damage and stun the target for 1 second."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/e",
+  "notes": "Trample deals  persistent area damage damage around Alistar, while the bonus damage on the resulting attack is  proc damage.\nThe  stun and bonus damage are blocked by  spell shields but the base attack damage is not.\nThe on-hit effect is consumed if the attack  blocked, but not if it is  dodged or missed while Alistar is  blinded. In all cases, the attack's effects are negated as normal.\nThe bonus damage and stun can be applied by  Guinsoo's Rageblade's Phantom Hit if the triggering attack did not.\nIf the triggering attack does however apply the bonus damage and stun already, then Phantom Hit cannot apply them a subsequent time by triggering on-hit effects, despite Trample's empowered attack being an on-hit effect.",
+  "resource": "Mana",
+  "spellEffects": "Special",
+  "spellshieldable": "Special",
+  "targeting": "Auto"
+}
+export default ability

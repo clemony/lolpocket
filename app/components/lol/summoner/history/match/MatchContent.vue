@@ -58,7 +58,7 @@ const tabs = {
       </TabsList>
 
       <div
-        class="m-0! pb-5">
+        class="m-0!">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"

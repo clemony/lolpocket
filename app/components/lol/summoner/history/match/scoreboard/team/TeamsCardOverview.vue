@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div
     class="
-      ml-4 grid max-h-full w-84 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
+      grid max-h-full w-84 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
       gap-y-0.5 justify-self-end overflow-hidden
     ">
     <BtnLink

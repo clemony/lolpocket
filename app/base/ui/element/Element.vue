@@ -1,29 +1,19 @@
 <script setup lang="ts">
-import type { AsTag, PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
-
-const {
-  as = 'div',
-  base = 'none',
-  class: className,
-} = defineProps<
-  PrimitiveProps & {
-    class?: HTMLAttributes['class']
-    variant?: ElementVariants['variant']
-    size?: ElementVariants['size']
-    on?: ElementVariants['on']
-    hover?: ElementVariants['hover']
-    base?: ElementVariants['base']
-    as?: AsTag | string
-  }
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+  variant?: ButtonVariants['variant']
+  size?: ButtonVariants['size']
+  on?: ButtonVariants['on']
+  hover?: ButtonVariants['hover']
+  base?: ButtonVariants['base']
+}
 >()
 </script>
 
 <template>
-  <Primitive
-    :as="as"
-    v-bind="$attrs"
-    :class="cn('', elementVariants({ base, variant, on, size, hover }), className)">
+  <div
+    v-bind="props"
+    :class="cn('', elementVariants({ base, variant, on, size, hover }), props.class)">
     <slot />
-  </Primitive>
+  </div>
 </template>

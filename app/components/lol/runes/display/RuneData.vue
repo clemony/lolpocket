@@ -37,7 +37,7 @@ watchEffect(async () => {
     :class="
       cn(
         `
-      animate-in fade-in tldr-30 relative flex w-full flex-col justify-center
+      animate-in fade-in tldr-30 relative flex w-[258px] flex-col justify-center
       py-3
     `,
         className,

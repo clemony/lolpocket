@@ -26,7 +26,7 @@
     'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-serif: 'Noto Serif KR', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   --font-mono:
-    'Tabular', SFMono-Regular, ui-monospace, 'Liberation Mono', 'Courier New', Consolas, Menlo, Monaco, monospace;
+    'DM Mono', SFMono-Regular, ui-monospace, 'Liberation Mono', 'Courier New', Consolas, Menlo, Monaco, monospace;
 
   --spacing-mw: calc(100vw - 45px);
   --spacing-mh: calc(100vh - 45px);
