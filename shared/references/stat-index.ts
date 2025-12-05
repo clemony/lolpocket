@@ -130,7 +130,6 @@ export const statIndex: Record<string, StatIndex> = {
   health: {
     id: "health",
     name: "Health",
-    abbr: "Health",
     key: "HP",
     color: "var(--color-resolve)",
     description: "",
@@ -151,6 +150,7 @@ export const statIndex: Record<string, StatIndex> = {
   mana: {
     id: "mana",
     name: "Mana",
+    key: "MP",
     color: "var(--color-inspiration)",
     description: "",
     group: "basic",

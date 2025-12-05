@@ -149,12 +149,8 @@ export const labelVariants = tv({
 
 export const elementVariants = tv({
   defaultVariants: {
-    active: "none",
-    base: "none",
     disabled: "disabled",
-    hover: "none",
     states: "states",
-    variant: "none",
   },
   extend: baseVariants,
 })

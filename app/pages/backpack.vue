@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { accounts, mails } from '~/layout'
-
 definePageMeta({
   name: 'backpack',
   icon: 'backpack',

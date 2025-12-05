@@ -16,7 +16,7 @@ const { item } = defineProps<{
     <PocketIcon
       v-if="item?.key && typeof item.icon === 'string'"
       size="sm"
-      :img="String(item?.icon)"
+      :src="String(item?.icon)"
       class="size-7 rounded-full" />
     <hicon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"

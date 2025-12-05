@@ -15,9 +15,9 @@ interface Props {
   base?: ElementVariants['base']
   class?: HTMLAttributes['class']
   hover?: ElementVariants['hover']
-  img: string | null
   on?: ElementVariants['on']
   size?: ElementVariants['size']
+  src: string | null
   variant?: ElementVariants['variant']
 }
 
@@ -44,19 +44,19 @@ const forwarded = useForwardProps(props)
       )
     ">
     <img
-      :key="img"
+      :key="src"
       decoding="async"
       loading="lazy"
-      :src="img"
+      :src
       placeholder-class=""
       v-bind="$attrs"
       :alt="alt"
       :class="
         cn('size-full shrink-0 translate-z-0 object-center',
-          {
-            'opacity-100 ': loaded,
-            'opacity-0': !loaded,
-          },
+           {
+             'opacity-100 ': loaded,
+             'opacity-0': !loaded,
+           },
         )
       "
       @load="onLoad()" />

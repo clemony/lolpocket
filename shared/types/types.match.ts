@@ -13,6 +13,9 @@ export interface MatchData {
 export interface MatchDataCurrentPlayer extends MatchData {
   player: Player
   queue: QueueIndex
+  mvp: string
+  ace: string
+  ranking: string[]
 }
 
 export interface Player {

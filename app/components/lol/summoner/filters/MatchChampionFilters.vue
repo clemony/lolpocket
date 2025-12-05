@@ -25,39 +25,34 @@ const championModel = computed({
           :value="filter.champion === champion.name ? '' : champion.name"
           variant="ghost"
           hover="secondary"
-          size="16"
+          size="14"
           class="peer group/c relative w-full gap-4! rounded-xl focus-visible:outline-0">
           <ChampionIcon
             :id="champion.id"
             :alt="champion.name"
-            :class="
-              cn('size-14 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm',
-                 {
-                   'grayscale brightness-105 contrast-105':
-                     championModel.length > 1
-                     && champion.name !== championModel,
-                 },
-              )
-            " />
+            class="size-12 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm" />
 
-          <div class="grid grow gap-1.5 font-medium dst">
+          <div class="grid grow gap-1 font-medium dst">
             <p class="self-end text-3!">
               {{ champion.name }}
             </p>
 
-            <p class="text-2 text-nowrap">
-              {{ `${((champion?.kills + champion?.assists) / champion?.deaths).toFixed(2)} KDA` }}
+            <p
+              :class="cn('text-2 text-nowrap normal-case')">
+              {{ ((champion?.kills + champion?.assists) / champion?.deaths).toFixed(2) }}
+              kda
             </p>
           </div>
 
           <div
-            class="z-0 grid w-22 shrink-0 justify-end gap-1.5 dst *:text-end">
-            <p class="self-end font-medium text-nowrap dst">
-              {{ champion.wins }}&nbsp;Win
+            class="z-0 grid w-22 shrink-0 justify-end gap-1 text-2 dst *:text-end">
+            <p class="text-nowrap normal-case">
+              {{ champion.wins }} win
             </p>
 
-            <p class="font-medium text-nowrap">
-              {{ champion.games - champion.wins }}&nbsp;Loss
+            <p class="text-nowrap normal-case">
+              {{ champion.games - champion.wins }} loss
+              <!--        {{ champion.games }} game{{ champion.games > 1 ? 's' : '' }} -->
             </p>
           </div>
           <div

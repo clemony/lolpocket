@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-const { class: className, effect } = defineProps<{
+const { class: className, effect, variants } = defineProps<{
   effect: AbilityEffect
+  variants?: any
   damageType?: string
   class?: HTMLAttributes['class']
 }>()
-
-const { attributeBadge, attributeContent, attributeWrapper, description }
-  = inject<Record<string, typeof abilityVariants>>('ability-variants')
 </script>
 
 <template>
@@ -22,7 +20,7 @@ const { attributeBadge, attributeContent, attributeWrapper, description }
       )
     ">
     <div
-      :class="description()"
+      :class="variants?.description"
       v-html="effect.description" />
 
     <div
@@ -31,8 +29,8 @@ const { attributeBadge, attributeContent, attributeWrapper, description }
       <div
         v-for="attribute in effect.leveling"
         :key="attribute.attribute"
-        :class="attributeWrapper()">
-        <div :class="attributeContent()">
+        :class="variants?.attributeWrapper">
+        <div :class="variants?.attributeContent">
           <p class="text-2! text-wrap">
             {{ attribute.attribute }}:
           </p>
@@ -57,7 +55,7 @@ const { attributeBadge, attributeContent, attributeWrapper, description }
                     'hover:bg-b2 pb-0.5 decoration-bc/40 hover:*:decoration-bc ':
                       attribute.modifiers?.[1].tooltip,
                   },
-                  attributeBadge(),
+                  variants?.attributeBadge,
                 )
               ">+&thinsp;
               <span

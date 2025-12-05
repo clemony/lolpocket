@@ -23,9 +23,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <Icon
         name="lp:ah"
-        class="mt-px inline size-3.5 shrink-0 text-black dst" />
-
-      {{ ability.cooldown }}
+        class="mt-px inline size-3 shrink-0 text-black dst" />{{ ability.cooldown }}
     </div>
 
     <template v-if="ability.resource === 'Charge'">
@@ -37,8 +35,7 @@ const { ability, class: className } = defineProps<{
           :name="`lp:charge-${ability.maxCharges}`"
           class="-mt-px inline size-7 dst *:stroke-[1.3]" />
 
-        <span>
-          {{ ability.maxCharges }}
+        <span>{{ ability.maxCharges }}
         </span>
       </div>
 
@@ -48,9 +45,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <icon
           name="mynaui:battery-charging"
-          class="-mt-px size-7 dst *:stroke-[1.3]" />
-
-        {{ ability.rechargeRate }}
+          class="-mt-px size-7 dst *:stroke-[1.3]" />{{ ability.rechargeRate }}
       </div>
     </template>
 
@@ -58,22 +53,20 @@ const { ability, class: className } = defineProps<{
       v-else-if="ability.cost?.length && ability.resource"
       v-tippy="`${ability.resource} Cost`"
       :name="ability.resource"
-      class="flex items-center gap-2">
+      class="flex items-center gap-1.5">
       <Icon
         :name="`lp:${ability.resource.replace(/\s/g, '-').toLowerCase()}`"
-        :class="cn('size-4 dst')" />
-
-      {{ ability.cost }}
+        :class="cn('size-3.25 dst')" />{{ ability.cost }}
     </div>
 
     <div
       v-if="ability.effectRadius"
       v-tippy="{ content: 'Effect Radius', theme: 'base' }"
-      class="flex items-center gap-3">
+      class="flex items-center gap-2">
       <span class="relative size-3 justify-start">
         <Icon
-          name="lp:radius "
-          class="absolute -top-0.5 size-4.5 dst" />
+          name="lp:radius"
+          class="absolute -top-0.5 size-3.25 dst" />
       </span>
       {{ ability.effectRadius }}
     </div>

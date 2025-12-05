@@ -20,14 +20,14 @@ const abilityCount = computed(() => `grid-cols-${champion.abilities.length}`)
       size="xl"
       :class="
         cn('size-20! overflow-hidden border-0 p-0 shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 *:pointer-events-none',
-          {
-            'btn-active !bg-tint-b2/70': route.hash === `#${ability.key}`,
-          },
+           {
+             'btn-active !bg-tint-b2/70': route.hash === `#${ability.key}`,
+           },
         )
       "
       :to="{ path: route.path, hash: `#${ability.key}` }">
       <Img
-        :img="ability.icon"
+        :src="ability.icon"
         :alt="ability.name"
         class="size-full" />
       <!--       <span

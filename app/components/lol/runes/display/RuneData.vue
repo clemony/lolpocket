@@ -2,19 +2,13 @@
 const {
   id,
   class: className,
-  runeSize = 16,
 } = defineProps<{
   id: number
   class?: HTMLAttributes['class']
-  runeSize?: number
 }>()
 
 const rune = shallowRef<Rune>(null)
 
-const wrapperSize = computed(() => `size-${runeSize}`)
-const imgSize = computed(() =>
-  rune.value.tier === 0 ? `size-${runeSize + 1} ` : `size-${runeSize}`,
-)
 watchEffect(async () => {
   if (!id)
     return
@@ -33,30 +27,18 @@ watchEffect(async () => {
 <template>
   <div
     v-if="rune"
-    :key="rune.id"
-    :class="
-      cn(
-        `
-      animate-in fade-in tldr-30 relative flex w-[258px] flex-col justify-center
-      py-3
-    `,
-        className,
-      )
-    ">
+    :class=" cn('relative flex w-full flex-col justify-center py-3', className)">
     <div class="flex w-full items-center gap-4 px-4 **:select-none">
       <button
-        v-tippy="{
-          content: rune.tier === 0 ? 'Keystone' : null,
-          theme: 'neutral',
-          placement: 'top-start',
-          offset: [-12, 8],
-        }"
-        :class="cn('group/s relative shrink-0', wrapperSize)">
-        <span :class="cn('absolute top-0 left-0', imgSize)">
+
+        :title="rune.tier === 0 ? 'Keystone' : null"
+        :class="cn('group/s relative size-12 shrink-0', { '[&_img]:size-14 [&_img]:-translate-y-1': rune.tier === 0, '[&_img]:size-12': rune.tier !== 0 })">
+        <span class="absolute top-0 left-0 grid size-full place-items-center">
           <Img
             v-if="rune"
             :key="rune.name"
-            :img="`/img/runes/${rune.id}.webp`"
+            spinner
+            :src="`/img/runes/${rune.id}.webp`"
             :alt="`${rune.name} Image`"
             :class="
               cn(`
@@ -71,19 +53,14 @@ watchEffect(async () => {
           class="absolute bottom-0 left-0 size-3.5 **:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-md group-hover/s:drop-shadow-g group-hover/s:delay-400" />
       </button>
 
-      <div class="flex h-full w-full flex-col justify-center gap-1">
+      <div class="flex h-full w-full flex-col justify-center gap-0.5">
         <div class="flex items-center justify-between">
-          <h2 class="grow leading-none dst">
+          <h4 class="grow text-4 leading-none font-bold dst">
             {{ rune.name }}
-          </h2>
+          </h4>
           <a
             :key="rune.id"
-            v-tippy="{
-              content: `Official LoL Wiki - ${rune.name}`,
-              theme: 'neutral',
-              placement: 'top-end',
-              offset: [12, 8],
-            }"
+            :title="`Official LoL Wiki - ${rune.name}`"
             :href="getWikiLink(rune.name)"
             target="_blank"
             alt="link to league wiki">
@@ -104,7 +81,7 @@ watchEffect(async () => {
             </span>
           </Element>
 
-          <span class="grow text-4 font-medium italic">{{ rune.path }}</span>
+          <span class="grow text-2 font-medium italic">{{ rune.path }}</span>
         </div>
       </div>
     </div>
@@ -112,11 +89,11 @@ watchEffect(async () => {
     <Separator
       color="neutral"
       class="px-4"
-      :size="3" />
+      :size="2" />
 
     <div
       :key="rune.id"
-      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto px-4.5">
+      class="flex h-max w-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5">
       <span
         class="text-pretty whitespace-pre-line"
         v-html="rune.description" />

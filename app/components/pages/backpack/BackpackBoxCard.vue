@@ -18,7 +18,7 @@ console.log('🌱 - pocket:')
   <button
     :class="
       cn('flex cursor-pointer flex-col items-start gap-2 rounded-xl border border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8 ring-transparent transition-colors hover:ring-neutral/50',
-        selected?.key === pocket?.key && 'bg-b2/30',
+         selected?.key === pocket?.key && 'bg-b2/30',
       )
     "
     @dblclick="navigateTo(`/pocket/${pocket.key}`)">
@@ -26,7 +26,7 @@ console.log('🌱 - pocket:')
       <div class="flex cursor-pointer items-center gap-3 text-start">
         <!-- icon -->
         <PocketIcon
-          :img="pocket.icon"
+          :src="pocket.icon"
           class="size-11 rounded-full" />
         <div
           class="

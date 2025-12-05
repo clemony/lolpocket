@@ -13,7 +13,7 @@ export function constructMentionAttrs(rawAttrs: any) {
 
   return {
     class: "mention",
-    "data-label": label,
+    "data-tip": label,
     "data-path": label === "rune" ? runeToPath[item.id]?.toLowerCase() : null,
     "data-role":
       label === "champion" ? championRoleIndex[item.key]?.toLowerCase() : null,

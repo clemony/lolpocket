@@ -50,7 +50,7 @@ watch(
         hover="btn"
         :class="
           cn('transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-bc/60 duration-300 open:btn-active open:ring-2 hover:text-bc/60 hover:ring hover:inset-shadow-xs',
-            { 'shadow-sm drop-shadow-sm ': pocket._champion },
+             { 'shadow-sm drop-shadow-sm ': pocket._champion },
           )
         ">
         <icon
@@ -61,11 +61,11 @@ watch(
           v-else
           v-memo="pocket._champion"
           class="*:scale-160"
-          :img="getSplash(pocket._champion, 'tile')" />
+          :src="getSplash(pocket._champion, 'tile')" />
         <div
           :class="
             cn('absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
-              { 'bg-b2 **:text-bc/40': !pocket._champion },
+               { 'bg-b2 **:text-bc/40': !pocket._champion },
             )
           ">
           <CaretFlip

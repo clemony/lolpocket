@@ -10,7 +10,7 @@ const modelProxy = computed({
 </script>
 
 <template>
-  <MenubarRadioGroup v-model:model-value="modelProxy as string">
+  <MenubarRadioGroup v-model:model-value="modelProxy">
     <MenubarLabel
       class="
         sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur

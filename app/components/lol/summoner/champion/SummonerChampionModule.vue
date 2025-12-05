@@ -19,7 +19,7 @@ const champKey = computed(() => String(ix().champKeyByName(championName)))
       <Champion
         translate="0%, 6%"
         class="aspect-square size-54 max-h-54 max-w-54 rounded-xl"
-        :img="getSplash(champKey, 'tile')">
+        :src="getSplash(champKey, 'tile')">
         <div
           class="
             absolute inset-0 bottom-0 left-0 z-1 grid items-end justify-start

@@ -30,8 +30,8 @@ const author = computedAsync(
   },
   null,
 )
-const container = useTemplateRef<HTMLElement>('container')
-useTooltips(container)
+/* const container = useTemplateRef<HTMLElement>('container')
+useTooltips(container) */
 </script>
 
 <template>

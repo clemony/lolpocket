@@ -18,9 +18,9 @@ const { from, gold } = defineProps<{
       <div
         v-for="(item, i) in from"
         :key="i"
-        v-tippy="`${item.name} ‑ ${item.gold}g`"
+        :title="`${item.name} ‑ ${item.gold}g`"
         class="flex items-center gap-3">
-        <LazyItemPopover
+        <Item
           :id="item.id"
           class="
             size-10 hover-ring overflow-hidden rounded-lg shadow-sm
@@ -40,8 +40,8 @@ const { from, gold } = defineProps<{
           name="dashicons:plus"
           class="size-3.5 opacity-80" />
 
-        <Img
-          img="/img/icons/gold-coin.webp"
+        <img
+          src="/img/icons/gold-coin.webp"
           alt="coin"
           class="mr-1 ml-3 size-4.25 opacity-80" />
         {{ gold }}

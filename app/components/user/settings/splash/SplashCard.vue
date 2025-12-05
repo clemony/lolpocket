@@ -112,7 +112,7 @@ function handlePointerLeave() {
             <Champion
               v-if="skinUrl"
               :alt="alt"
-              :img="
+              :src="
                 skinUrl
                   .replace('uncentered', 'tile')
                   .replace('centered', 'tile')

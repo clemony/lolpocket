@@ -25,7 +25,8 @@ const supportUpgrade = computed(() => {
       <hr
         v-if="i !== 0"
         class="bg-b3/60" />
-      <div class="timeline-start mx-3 flex h-full items-center gap-2.25 justify-self-center timeline-box">
+      <div
+        class="timeline-start mx-3 flex h-full items-center gap-2.25 justify-self-center timeline-box">
         <template
           v-for="event, ix in eventGroup?.events"
           :key="ix">
@@ -38,7 +39,7 @@ const supportUpgrade = computed(() => {
               :data-id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
               size="sq-12"
               class="tippy"
-              data-label="item" />
+              data-tip="item" />
 
             <template
               v-if="event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'">
@@ -48,7 +49,7 @@ const supportUpgrade = computed(() => {
                 :data-map="match.queue.map.id"
                 :data-id="event.from"
                 size="sq-5.5"
-                data-label="item"
+                data-tip="item"
                 class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
 
               <Item
@@ -58,7 +59,7 @@ const supportUpgrade = computed(() => {
                 :data-map="match.queue.map.id"
                 :data-id="3867"
                 size="sq-5.5"
-                data-label="item"
+                data-tip="item"
                 class="tippy absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
             </template>
             <template v-else>
@@ -72,7 +73,7 @@ const supportUpgrade = computed(() => {
                 :style="{
                   marginLeft: `${10 * idx}px`,
                 }"
-                data-label="item"
+                data-tip="item"
                 class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
             </template>
           </div>
@@ -83,7 +84,7 @@ const supportUpgrade = computed(() => {
             v-else-if="event.action === 'ADD'"
             :key="event.id"
             class="tippy relative size-12"
-            data-label="item"
+            data-tip="item"
             :data-map="match.queue.map.id"
             :data-id="event.id">
             <Item
@@ -100,13 +101,11 @@ const supportUpgrade = computed(() => {
       </div>
 
       <div class="relative z-1 timeline-middle grid w-full place-items-center">
-        <div class="absolute grid size-4 place-items-center bg-tint-b2/40">
-          <Icons
-            size="4"
-            wrapper-class="z-2  absolute "
-            name="dot"
-            class="size-7 dss" />
-        </div>
+        <Icons
+          size="sq-4"
+          wrapper-class="z-2 bg-tint-b2/40 absolute "
+          name="dot"
+          class="size-7 dss" />
       </div>
 
       <div class="relative timeline-end mt-2 grid place-items-center justify-self-center rounded-md border border-b3 bg-b1 px-1.5 text-[0.86rem]! font-bold text-bc dxs">

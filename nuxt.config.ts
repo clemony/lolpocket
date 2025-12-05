@@ -33,10 +33,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
     {
-      path: "./layout",
-      pathPrefix: false,
-    },
-    {
       path: "~/components",
       pathPrefix: false,
     },
@@ -113,6 +109,7 @@ export default defineNuxtConfig({
     dirs: [
       "@variants",
       "@constants",
+      "./shared/constants",
       "@schema",
       "@references",
       "@index",

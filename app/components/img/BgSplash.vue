@@ -3,11 +3,11 @@ import { easeInOut, motion } from 'motion-v'
 
 const {
   class: className,
-  img: i,
   slice,
+  src: i,
 } = defineProps<{
   class?: HTMLAttributes['class']
-  img: string | null
+  src: string | null
   slice?: boolean
 }>()
 

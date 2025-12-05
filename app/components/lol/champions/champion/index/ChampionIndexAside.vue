@@ -34,7 +34,7 @@ const wrapperClass
         <span
           class="size-10 overflow-hidden rounded-lg shadow-sm drop-shadow-sm">
           <Img
-            :img="ability.icon"
+            :src="ability.icon"
             :alt="ability.name" />
         </span>
         {{ ability.name }}

@@ -1,13 +1,18 @@
 <script lang="ts" setup>
-const { abilities } = defineProps<{
-  abilities: Ability[]
+const { abilities, ability: a } = defineProps<{
+  abilities?: Ability[]
+  ability?: Ability
 }>()
 
 const selected = ref('P')
 
-const ability = computed(
-  () => Object.values(abilities[selected.value])[0] as Ability,
-)
+const ability = computed(() => {
+  if (a)
+    return a
+
+  else return Object.values(abilities[selected.value])[0] as Ability
+})
+
 watch(
   () => ability.value,
   (newVal) => {
@@ -106,7 +111,7 @@ watch(
         v-if="ability.targetRange"
         v-tippy="'Range'"
         class="flex items-center gap-2">
-        <i-stats-range class="size-4 text-bc text-bc/80 dst" />
+        <i-stats-range class="size-4 text-bc/80 dst" />
         {{ ability.targetRange }}
       </div>
 

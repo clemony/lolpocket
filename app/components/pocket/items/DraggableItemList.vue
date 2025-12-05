@@ -45,7 +45,7 @@ watch(
             duration: 0.2,
           }"
           layout="position">
-          <LazyItemPopover
+          <LazyItemTooltip
             :id="item"
             class="aspect-square size-20" />
         </motion.div>

@@ -5,15 +5,11 @@ const { match } = defineProps<{
 const { summoner } = useSummonerInject()
 const { getTimeline } = useTimeline()
 
-const container = useTemplateRef<HTMLElement>('container')
-
 const timeline = ref<PlayerTimeline>(null)
 onMounted (async () => {
   if (summoner.value && match)
     timeline.value = await getTimeline(match.matchId, summoner.value.region, summoner.value.puuid)
 })
-
-useTooltips(container)
 </script>
 
 <template>
@@ -32,4 +28,3 @@ useTooltips(container)
     </MatchSkillOrder>
   </div>
 </template>
-<!--  -->

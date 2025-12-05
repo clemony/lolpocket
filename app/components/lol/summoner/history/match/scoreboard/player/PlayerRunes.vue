@@ -11,30 +11,35 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keyst
 <template>
   <div
     :class="
-      cn('-mt-px -mr-1 ml-1 flex size-full max-w-8 min-w-8 flex-col place-items-center gap-0.5 **:[&_img]:shrink-0',
+      cn('mx-2 -mt-px flex size-full w-max shrink-0 flex-col place-items-center gap-1',
          className,
       )
     ">
-    <img
-      v-if="keystone"
-      v-tippy="{ content: keystone?.name,
-                 placement: 'right',
-                 theme: 'neutral' }"
-      :alt="keystone?.name"
-      :src="`/img/runes/${player.runes?.keystone}.webp`"
-      class="
-        h-8 w-auto shrink-0! drop-shadow-sm transition-all duration-300
-        hover:scale-120
-      " />
+    <div
+      :data-id="keystone?.id"
+      data-tip="rune"
+      class="tippy relative grid size-7.5 shrink-0 place-items-center transition-all duration-300 hover:scale-120">
+      <img
+        v-if="keystone"
+        :alt="keystone?.name"
+        :src="`/img/runes/${player.runes?.keystone}.webp`"
+        class="
+          absolute h-8.5 shrink-0! object-cover drop-shadow-sm
+        " />
+    </div>
 
-    <img
-      v-if="s?.name"
-      v-tippy="{ content: s?.name,
-                 placement: 'right',
-                 theme: 'neutral' }"
-      :alt="s?.name"
-      :src="`/img/paths/${s?.name}.webp`"
-      class="ml-px h-5 w-auto dst transition-all duration-300 hover:scale-120"
-      :class="{ 'h-4.5!': s?.name === 'Inspiration' }" />
+    <Element
+      size="c-6"
+      class="relative grid shrink-0 place-items-center transition-all duration-300 hover:scale-120">
+      <img
+        v-if="s?.name"
+        v-tippy="{ content: s?.name,
+                   placement: 'right',
+                   theme: 'neutral line' }"
+        :alt="s?.name"
+        :src="`/img/paths/${s?.name}.webp`"
+        class="ml-px h-4.75 w-auto place-self-center dst"
+        :class="{ 'h-4.25!': s?.name === 'Inspiration', '-translate-x-px': ['Inspiration', 'Precision'].includes(s?.name) }" />
+    </Element>
   </div>
 </template>

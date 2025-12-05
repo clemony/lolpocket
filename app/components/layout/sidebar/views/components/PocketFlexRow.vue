@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Pocket } from '~~/shared/schema'
-import { closeAndNav } from '~/layout'
 
 const { class: className, row } = defineProps<{
   class?: HTMLAttributes['class']
@@ -18,15 +17,16 @@ const route = useRoute()
     :class="
       cn('group/p relative flex h-full max-h-22 min-h-22 flex-1 cursor-pointer items-center overflow-hidden rounded-lg shadow-sm shadow-black/8 drop-shadow-sm transition-all delay-50 duration-500 ease-in-out *:pointer-events-none hover:flex-[3]',
 
-        //hover
-        `
+         //hover
+         `
           *:transition-scale *:duration-500 *:ease-in-out
           group-has-hover/wrap:*:scale-170 hover:*:scale-100
         `,
-        { 'btn-active': route.params?.pocket_key === pocket.key },
+         { 'btn-active': route.params?.pocket_key === pocket.key },
       )
-    "
-    @click="closeAndNav(`/pocket/${pocket.key}`)">
+    ">
+    <!--
+    @click="closeAndNav(`/pocket/${pocket.key}`)" -->
     <AspectRatio
       :ratio="1 / 1"
       class="
@@ -34,7 +34,7 @@ const route = useRoute()
         object-cover
       ">
       <PocketIcon
-        :img="pocket.icon"
+        :src="pocket.icon"
         class="absolute h-full grow object-cover" />
     </AspectRatio>
     <div

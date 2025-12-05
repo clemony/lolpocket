@@ -19,22 +19,22 @@ watchEffect(() => {
     as="div"
     :class="
       cn('parallax group relative grid size-full cursor-pointer place-items-center rounded-xl **:select-none',
-        { '': loaded },
-        className,
+         { '': loaded },
+         className,
       )
     ">
     <div
       class="size-full"
       :class="
         cn('group relative grid size-full cursor-pointer justify-center overflow-hidden rounded-lg bg-no-repeat **:select-none',
-          className,
+           className,
         )
       "
       :style="{
         objectPosition: '50% -1.8rem',
       }">
       <Img
-        :img="img"
+        :src="img"
         :quality="60"
         class="
           absolute -top-8 rounded-xl! bg-size-[190%] object-cover *:rounded-xl

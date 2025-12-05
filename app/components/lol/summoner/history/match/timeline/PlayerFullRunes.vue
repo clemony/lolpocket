@@ -14,7 +14,7 @@ const { match } = defineProps<{
         :id="match.player.runes.keystone"
         :key="match.player.runes.keystone"
         :data-id="match.player.runes.keystone"
-        data-label="rune"
+        data-tip="rune"
         class="tippy absolute z-1 size-13" />
     </div>
     <Rune
@@ -22,7 +22,7 @@ const { match } = defineProps<{
       :id="rune"
       :key="rune"
       :data-id="rune"
-      data-label="rune"
+      data-tip="rune"
       class="tippy size-10" />
   </Card>
 
@@ -34,7 +34,7 @@ const { match } = defineProps<{
       v-for="shard in match.player.runes.shards"
       :id="shard"
       :key="shard"
-      data-label="rune"
+      data-tip="rune"
       class="tippy size-5 border-0 shadow-none drop-shadow-none"
       :icon-class="cn('size-4!', { 'size-3.5!': [5011, 5010, 5007].includes(shard) })" />
   </Card>
@@ -52,7 +52,7 @@ const { match } = defineProps<{
         :id="keystone.id"
         :key="keystone.id"
         :data-id="keystone.id"
-        data-label="rune"
+        data-tip="rune"
         :class="cn('tippy z-1 size-12 opacity-70 grayscale', { 'grayscale-0 opacity-100': keystone.id === match.player.runes.keystone })" />
     </Card>
     <Card
@@ -67,7 +67,7 @@ const { match } = defineProps<{
           :id="rune.id"
           :key="rune.id"
           :data-id="rune.id"
-          data-label="rune"
+          data-tip="rune"
           :class="cn('tippy size-10.5 opacity-70 grayscale', { 'opacity-100 grayscale-0': match.player.runes.primary.runes.concat(match.player.runes.secondary.runes).includes(rune.id) })" />
       </div>
     </Card>

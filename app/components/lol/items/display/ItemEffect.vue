@@ -30,8 +30,8 @@ const { data, type } = defineProps<{
     <div
       v-if="data.cooldown"
       class="ws-no-wrap mt-2 ml-6 flex w-full items-center gap-1 text-nowrap">
-      <Img
-        img="/img/icons/manaless.webp"
+      <img
+        src="/img/icons/manaless.webp"
         alt="cooldown-icon"
         class="mt-px size-4" />
       <!-- &nbsp;Cooldown:&nbsp; -->

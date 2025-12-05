@@ -21,10 +21,10 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : champio
 
     <!-- bg -->
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash :img="bg" />
+      <BgSplash :src="bg" />
     </div>
 
-    <BgSplash :img="bg" />
+    <BgSplash :src="bg" />
 
     <!-- Header block -->
     <div

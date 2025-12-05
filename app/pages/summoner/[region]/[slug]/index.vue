@@ -17,10 +17,13 @@ definePageMeta({
   listClass: '**:stroke-[1.6]',
   order: 0,
 })
+
+const container = useTemplateRef<HTMLElement>('container')
 </script>
 
 <template>
   <div
+    ref="container"
     :class="
       cn('z-auto grid h-max min-h-screen w-screen grid-cols-[1fr_1.5fr] gap-10 justify-self-center',
       )

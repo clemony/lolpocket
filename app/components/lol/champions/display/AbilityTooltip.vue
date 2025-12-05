@@ -3,10 +3,8 @@ const { id, ability } = defineProps<{
   id: number
   ability: string
 }>()
-console.log('🥸 - id:', id)
 
 const item = ref<Ability>(null)
-const loading = shallowRef<boolean>(false)
 watchEffect(async () => {
   if (!id)
     return
@@ -18,53 +16,41 @@ watchEffect(async () => {
     item.value = module.default || null
   }
   catch (err) {
-    console.error(`Failed to load champion for ${id}`, err)
+    console.error(`Failed to load ability for ${id}`, err)
     item.value = null
   }
-  loading.value = false
-})
-
-onMounted (() => {
-  loading.value = true
 })
 </script>
 
 <template>
   <div
     v-if="item"
-    class="
-      flex max-h-[304px] w-[258px] flex-col justify-self-center overflow-hidden
-      pt-4 pb-3 **:select-text
-    ">
-    <div class="flex h-fit w-full gap-4 px-4">
+    class="flex w-full flex-col pt-4 pb-3">
+    <div class="grid h-fit w-full grid-cols-[36px_1fr] grid-rows-1 gap-4 px-4">
       <!-- IMG -->
 
       <Img
         alt="icon"
-        :img="item?.icon"
-        class="size-12 rounded-lg shadow-sm dss" />
+        :src="item?.icon"
+        class="min-size-12 size-12 rounded-lg shadow-sm dss" />
 
-      <div class="flex w-full flex-col text-4">
+      <div class="col-start-2 flex w-full flex-col text-4">
         <div
-          class="flex w-full items-center justify-between gap-1">
+          class="flex w-full justify-between gap-1">
           <!-- NAME / LINK -->
           <a
-            v-if="item.name"
-            :href="`/champions/${item.key}`">
+            :href="`/champions/${champKeyById(id)}`"
+            class="hover:*:first:underline">
+            <h3 class="text-5! font-bold!">{{ item?.name }}</h3>
             <h5
-              class="leading-4 font-semibold">
-              {{ item.name }}
+              class="leading-4 font-medium italic">
+              {{ champNameById(id) }} - {{ item?.key }}
             </h5>
           </a>
 
           <a
             v-if="id"
-            v-tippy="{
-              content: `Official LoL Wiki - ${champNameById(id)}`,
-              theme: 'neutral',
-              placement: 'top-end',
-              offset: [12, 8],
-            }"
+            :title="`Official LoL Wiki - ${champNameById(id)}`"
             target="_blank"
             :href="getWikiLink(champNameById(id))">
             <img
@@ -72,21 +58,31 @@ onMounted (() => {
               alt="wiki"
               class="size-5 shrink-0 rounded-sm" />
           </a>
-          <!-- role -->
-          <!--   <div
-            class=" z-0 flex items-center gap-1 ">
-            <RoleIcon
-              :position="position.name"
-              class="position-badge-content   !size-5 self-center" />
-            <span class=" position-badge-content color-badge-content font-semibold contrast-125">
-              {{ position.name }}
-            </span>
-          </div> -->
         </div>
+      </div>
+    </div>
+    <div class="w-full overflow-y-scroll">
+      <Separator
+        color="neutral"
+        :size="3" />
+      <!--  -->
+      <div class="w-full px-4">
+        <AbilityStats
+          class="flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-2 *:w-max *:justify-start *:text-start *:leading-none **:cursor-default **:select-none *:hover:underline"
+          :ability="item" />
+      </div>
 
-        <span class="grow text-2 font-normal text-nc/60 italic">
-          {{ championToTitle[item?.key] }}
-        </span>
+      <Separator
+        color="neutral"
+        :size="3" />
+      <div class="w-full space-y-3 px-4 pb-4 text-wrap">
+        <AbilityDescription
+          v-for="(effect, i) in item.effects"
+          :key="i"
+          size="sm"
+          class="space-y-3"
+          color="neutral"
+          :effect="effect" />
       </div>
     </div>
   </div>

@@ -148,7 +148,7 @@ function onOpen() {
       "
       @end="onEnd"
       @start="isDragging = true">
-      <LazyItemPopover
+      <LazyItemTooltip
         v-for="item in set.items"
         :id="item"
         :key="item.toString()"
@@ -170,7 +170,7 @@ function onOpen() {
               class="absolute size-3.5 shrink-0 text-nc/70!" />
           </Button>
         </div>
-      </LazyItemPopover>
+      </LazyItemTooltip>
 
       <transition-slide>
         <div

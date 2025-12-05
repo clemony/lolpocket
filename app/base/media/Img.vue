@@ -1,44 +1,53 @@
 <script lang="ts" setup>
+import type { ImgHTMLAttributes } from 'vue'
+
 defineOptions({
   inheritAttrs: false,
 })
 
-const props = defineProps<{
-  alt: string
-  sizes?: string[]
-  preload?: boolean
-  img: string | null
+const props = withDefaults(defineProps<{
+  alt: ImgHTMLAttributes['alt']
+  src: ImgHTMLAttributes['src']
   class?: HTMLAttributes['class']
-}>()
-
-const loaded = ref(false)
+  format?: string
+  loading?: ImgHTMLAttributes['loading']
+  decoding?: ImgHTMLAttributes['decoding']
+  spinner?: boolean
+}>(), {
+  decoding: 'async',
+  format: 'webp',
+  loading: 'lazy'
+})
 </script>
 
 <template>
-  <div
-    v-if="!loaded"
-    class="grid size-full place-items-center">
-    <Spinner />
+  <div class="size-full shrink-0">
+    <NuxtImg
+      v-slot="{ src: source, isLoaded, imgAttrs }"
+      :src="props.src"
+      :format="props.format"
+      custom>
+      <img
+        v-if="isLoaded"
+        :src="source"
+        :alt="props.alt"
+        :loading="props.loading"
+        :decoding="props.decoding"
+        :class="cn(
+          'size-full shrink-0 opacity-0 transition-[opacity,transform] duration-400',
+          { 'translate-z-0 opacity-100 animate-in fade-in duration-400  transition-all duration-500': isLoaded },
+          props.class,
+        )"
+        v-bind="imgAttrs" />
+      <div
+        v-else
+        :class="cn('animate-in fade-in grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500', { 'animate-out fade-out opacity-0  transition-all duration-500': isLoaded })"
+        alt="placeholder">
+        <Spinner v-if="props.spinner" />
+        <Skeleton
+          v-else
+          class="size-full bg-b1" />
+      </div>
+    </NuxtImg>
   </div>
-  <NuxtImg
-    :key="props.img"
-    format="webp"
-    :sizes
-    :preload
-    decoding="async"
-    loading="lazy"
-    :src="props.img"
-    placeholder-class="skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3  inset-shadow-xs border !opacity-40"
-    v-bind="props"
-    :alt="props.alt"
-    :class="
-      cn(
-        'size-full shrink-0 opacity-0 transition-[opacity,transform]',
-        {
-          'translate-z-0 opacity-100': loaded,
-        },
-        loaded ? props.class : '',
-      )
-    "
-    @load="loaded = true"></NuxtImg>
 </template>

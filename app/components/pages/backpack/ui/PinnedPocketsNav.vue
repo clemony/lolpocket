@@ -58,7 +58,7 @@ const { isCollapsed, pinned } = defineProps<{
             ">
             <PocketIcon
               size="sm"
-              :img="link.icon"
+              :src="link.icon"
               class="size-6 rounded-full" />
 
             <span
@@ -106,7 +106,7 @@ const { isCollapsed, pinned } = defineProps<{
       variant="ghost">
       <PocketIcon
         size="sm"
-        :img="link.icon"
+        :src="link.icon"
         class="size-9 rounded-full" />
     </BtnLink>
   </nav>

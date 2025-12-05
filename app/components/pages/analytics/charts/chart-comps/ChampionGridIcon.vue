@@ -21,7 +21,7 @@ const img = useImage()
       }"></div>
 
     <Img
-      :img="`/img/mastery/banner/crest-and-banner-mastery-${params.data.level > 10 ? 10 : params.data.level}.webp`"
+      :src="`/img/mastery/banner/crest-and-banner-mastery-${params.data.level > 10 ? 10 : params.data.level}.webp`"
       alt="banner"
       class="
         absolute -top-1.5 z-2 h-full w-auto drop-shadow-sm drop-shadow-black/15

@@ -50,7 +50,7 @@ export default defineNuxtPlugin(() => {
           stop()
         }
       },
-      { immediate: true },
+      { immediate: true }
     )
     return result
   }
@@ -71,7 +71,7 @@ export default defineNuxtPlugin(() => {
           stop()
         }
       },
-      { immediate: true },
+      { immediate: true }
     )
     return result
   }

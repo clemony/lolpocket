@@ -11,7 +11,7 @@ const modelProxy = computed({
 <template>
   <!-- checkbox -->
   <MenubarCheckboxItem
-    v-model:model-value="modelProxy as boolean"
+    v-model:model-value="modelProxy"
     as="label"
     :checkbox-type="item.checkboxType"
     :inset="item.inset">

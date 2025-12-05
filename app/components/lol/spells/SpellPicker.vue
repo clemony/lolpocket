@@ -32,7 +32,7 @@ onMounted(() => (selected.value = props.currentValue))
         <Img
           v-else
           :alt="selected"
-          :img="`/img/spells/${selected}.webp`"
+          :src="`/img/spells/${selected}.webp`"
           class="size-16" />
       </Button>
     </PopoverTrigger>
@@ -66,7 +66,7 @@ onMounted(() => (selected.value = props.currentValue))
             @change="emit('update:spell', ss.name)" />
 
           <Img
-            :img="`/img/spells/${ss.name}.webp`"
+            :src="`/img/spells/${ss.name}.webp`"
             :alt="ss.name.toString()"
             class="size-full rounded-lg" />
         </label>

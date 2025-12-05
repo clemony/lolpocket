@@ -75,9 +75,9 @@ const skins = computed(() => skinIndex[champion.key])
           <div
             :class="
               cn('cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring hover:ring-b4',
-                index === selectedIndex
-                  ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1'
-                  : 'opacity-80',
+                 index === selectedIndex
+                   ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1'
+                   : 'opacity-80',
               )
             ">
             <Card
@@ -89,7 +89,7 @@ const skins = computed(() => skinIndex[champion.key])
                 class="relative flex items-center justify-center p-0">
                 <Img
                   :alt="skin.name"
-                  :img="getSplash(champion.key, 'tile', skin)"
+                  :src="getSplash(champion.key, 'tile', skin)"
                   class="inset-0 -mt-10 size-full object-cover" />
               </CardContent>
             </Card>
@@ -121,7 +121,7 @@ const skins = computed(() => skinIndex[champion.key])
                 ">
                 <Img
                   :alt="skin.name"
-                  :img="getSplash(champion.key, 'uncentered', skin)"
+                  :src="getSplash(champion.key, 'uncentered', skin)"
                   class="embla__slide__img embla__parallax__img" />
 
                 <div

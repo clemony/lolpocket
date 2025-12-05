@@ -27,7 +27,7 @@ const teeny = computed(() =>
     :class="cn('', classes, className)" />
   <Img
     v-else-if="name.match(img) || name.match(img1)"
-    :img="name"
+    :src="name"
     alt="icon"
     :class="cn('', classes, className)" />
   <icon

@@ -27,7 +27,7 @@ pocket.icon = pocket.icon.replace('centered', 'tile')
     <slot>
       <!-- TODO default splash -->
       <PocketIcon
-        :img="pocket ? pocket?.icon : ''"
+        :src="pocket ? pocket?.icon : ''"
         alt="pocket icon"
         class="
           pointer-events-none z-1 size-22! rounded-full transition-all

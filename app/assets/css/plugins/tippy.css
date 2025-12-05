@@ -12,9 +12,7 @@
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  &[data-theme~='neutral, clean'] {
-    @apply !w-[258px] !max-w-[258px];
-  }
+
 
   &[data-theme~='sidebar'] {
     .tippy-content {
@@ -22,10 +20,12 @@
     }
   }
 
+  &[data-theme~='datatip']{
+  @apply max-h-[304px] w-80 max-w-80 **:select-text !rounded-lg;
+}
   &[data-theme~='clean'],
-  &[data-theme~='n-mention'],
-  &[data-theme~='b-mention'] {
-    @apply! p-0 max-w-none;
+  &[data-theme~='datatip'] {
+    @apply p-0! max-w-none;
     .tippy-content {
       @apply !p-0 max-w-none;
     }
@@ -37,14 +37,14 @@
 
   /* default / contrast */
   &[data-theme~='neutral'],
-  &[data-theme~='n-mention'] {
-    @apply bg-neutral/86 border-b3/30  backdrop-blur-md inset-shadow-white/10;
+  &[data-theme~='datatip'] {
+    @apply bg-neutral/86 text-nc/80 **:text-nc/80 border-b3/30  backdrop-blur-md inset-shadow-white/10;
 
     .tippy-content {
-      @apply text-nc/80 **:text-nc/80;
+      @apply text-nc/80 **:text-nc/80 !overflow-hidden max-h-80;
     }
 
-    & > .tippy-svg-arrow > svg:first-child {
+   .tippy-svg-arrow > svg:first-child {
       @apply opacity-86 **:!text-neutral **:!fill-neutral  mask-b-from-58% mask-b-to-61%;
     }
   }
@@ -101,7 +101,7 @@
     @apply !left-0 !top-1/2;
   }
 
-  &[data-theme~='one'] {
+  &[data-theme~='one'], &[data-theme~='line'] {
     @apply rounded-l-lg border-l-0;
 
     &[data-placement='right'] > .tippy-svg-arrow > svg {
@@ -112,5 +112,31 @@
     &[data-placement='left'] > .tippy-svg-arrow > svg {
       @apply !size-[29px]  !left-[calc(50%-6px)]  !-top-[6.5px] mask-b-from-54% mask-b-to-55%;
     }
+  }
+}
+
+.tippy-box[data-entrance='initial'][data-state='visible'] {
+  opacity: 0;
+  transform: translateY(-4px);
+  animation: shift-toward 140ms cubic-bezier(0.28, 0.93, 0.75, 1.38) forwards;
+}
+
+/* Your smooth moveTransition (already in plugin) */
+/* .tooltip-motion {
+  transition: transform 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+ */
+.tippy-box[data-animate='move'][data-state='visible'] {
+  animation: none;
+}
+
+@keyframes shift-toward {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

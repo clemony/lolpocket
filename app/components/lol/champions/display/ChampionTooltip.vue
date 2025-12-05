@@ -29,10 +29,7 @@ const position = computed(() =>
 <template>
   <div
     v-if="item"
-    class="
-      flex max-h-[304px] w-[258px] flex-col justify-self-center overflow-hidden
-      pt-4 pb-3 **:select-text
-    ">
+    class="flex w-full flex-col justify-self-center pt-4 pb-3">
     <div class="flex h-fit w-full gap-4 px-4">
       <!-- IMG -->
 
@@ -58,12 +55,8 @@ const position = computed(() =>
 
           <a
             v-if="item.name"
-            v-tippy="{
-              content: `Official LoL Wiki - ${item.name}`,
-              theme: 'neutral',
-              placement: 'top-end',
-              offset: [12, 8],
-            }"
+            :title="`Official LoL Wiki - ${item.name}`"
+
             target="_blank"
             :href="getWikiLink(item.name)">
             <img
@@ -97,13 +90,6 @@ const position = computed(() =>
         label="ABILITIES"
         placement="end"
         color="neutral" />
-      <ChampionAbility
-        v-for="(ability, i) in item.abilities"
-        :key="i"
-        :default-open="false"
-        size="sm"
-        color="neutral"
-        :ability />
     </div>
   </div>
 </template>

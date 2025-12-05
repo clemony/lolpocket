@@ -20,7 +20,7 @@ const bg = computed(() => {
     <div class="flex items-start p-4">
       <div class="flex items-start gap-4 text-2">
         <PocketIcon
-          :img="pocket.icon"
+          :src="pocket.icon"
           class="aspect-square size-16 rounded-full" />
         <div class="grid gap-px">
           <div class="text-3 leading-4 font-semibold">

@@ -2,13 +2,13 @@
 const {
   id,
   class: className,
-  img,
   k,
+  src,
   type,
 } = defineProps<{
   k?: string
   id?: number
-  img?: string
+  src?: string
   type?: SplashType
   class?: HTMLAttributes['class']
 }>()
@@ -60,10 +60,10 @@ const splash = computed(() => `url('${image(getSplash(k ?? id, type))}')`)
 
 <template>
   <Img
-    :img="img || getSplash(k ?? id, type)"
+    :src="src || getSplash(k ?? id, type)"
     :class="
       cn('size-full shrink-0 overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
-        className,
+         className,
       )
     "
     :alt="`${k}-Splash`" />

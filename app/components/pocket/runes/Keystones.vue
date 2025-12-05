@@ -30,7 +30,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
       group
       :class="
         cn('relative size-full max-w-114 min-w-114 flex-nowrap overflow-hidden **:select-none',
-          gridCols,
+           gridCols,
         )
       ">
       <TabsTrigger
@@ -40,11 +40,11 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :value="rune.id"
         :class="
           cn('group/r tldr-30 relative grid aspect-square size-22 shrink-0 cursor-pointer place-items-center place-self-center rounded-full border-transparent opacity-75 hover:opacity-100 hover:grayscale-0',
-            { 'opacity-100  grayscale-0': set.keystone === rune.id },
+             { 'opacity-100  grayscale-0': set.keystone === rune.id },
           )
         ">
         <Img
-          :img="`/img/runes/${set.primary.path}/${rune.id}.webp`"
+          :src="`/img/runes/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
           class="
             pointer-events-none absolute h-19 w-auto shrink-0 opacity-0
@@ -54,7 +54,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
           :class="{ 'opacity-100': set.keystone === rune.id }" />
 
         <Img
-          :img="`/img/runes/grayscale/${rune.id}.webp`"
+          :src="`/img/runes/grayscale/${rune.id}.webp`"
           :alt="rune.name"
           class="
             pointer-events-none absolute h-19 w-auto shrink-0 opacity-100

@@ -19,7 +19,7 @@ definePageMeta({
         v-for="item in is().filtered"
         :key="item"
         class="group relative grid place-items-center">
-        <LazyItemPopover
+        <LazyItemTooltip
           v-if="is().filtered.includes(item)"
           :id="item"
           class="**:size-22' aspect-square size-22 max-w-22 rounded-lg" />

@@ -23,7 +23,7 @@ const skillOrder = computed(() => [
       <div
         v-for="ability, i in abilities?.filter(a => a.key !== 'R').sort((a, b) => timeline?.skills?.priority?.indexOf(a.key) - timeline?.skills?.priority.indexOf(b.key))"
         :key="i"
-        data-label="ability"
+        data-tip="ability"
         :data-id="match.player.championId"
         :data-ability="ability.key"
         :style="{
@@ -32,7 +32,7 @@ const skillOrder = computed(() => [
         class="tippy relative size-12">
         <Img
           alt="icon"
-          :img="ability.icon"
+          :src="ability.icon"
           class="size-12 rounded-lg shadow-sm dss" />
         <div
           class="absolute -right-1 -bottom-1 grid size-6.5 place-items-center rounded-full border-2 border-b1 bg-neutral font-mono text-0 font-semibold text-nc"
@@ -64,11 +64,11 @@ const skillOrder = computed(() => [
         </div>
         <Img
           v-tippy="{ content: ability?.name, theme: 'neutral line', placement: 'top' }"
-          data-label="ability"
+          data-tip="ability"
           :data-id="match.player.championId"
           :data-ability="ability.key"
           alt="icon"
-          :img="ability?.icon"
+          :src="ability?.icon"
           class="size-7 rounded-lg shadow-sm dss" />
       </template>
     </div>

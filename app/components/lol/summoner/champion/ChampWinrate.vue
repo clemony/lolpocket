@@ -12,18 +12,18 @@ const a = computed(() => {
   <div class="relative grid size-14 place-items-center rounded-lg">
     <DonutSkeleton
       style="--thickness: 22%;"
-      class="absolute size-14" />
+      class="absolute size-[3rem]" />
 
     <div
       class="radial-progress absolute"
       :style="{
         '--value': a,
-        '--size': '3.4rem',
+        '--size': '3rem',
 
         'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
       }"
       role="progressbar">
-      <span class="text-1! font-medium text-bc dst">
+      <span class="text-0! font-medium text-bc dst">
         {{ a.toFixed(1).replace(".0", "") }}%
       </span>
     </div>

@@ -28,7 +28,7 @@ const statEntries = computed(() =>
 
         <div
           class="
-            badge h-5 gap-1 justify-self-end rounded-[0.32rem]! border-none badge-sm px-1.25
+            badge h-5 gap-1 justify-self-end rounded-[0.32rem]! border-none px-1.25 badge-sm
             drop-shadow-black/20!
           "
           :style="{
@@ -41,10 +41,10 @@ const statEntries = computed(() =>
             " />
           <span
             class="
-              stat-badge-content color-badge-content text-0! font-bold
+              stat-badge-content color-badge-content text-0! font-bold uppercase
 
             ">
-            {{ statIndex[stat.key].key }}
+            {{ statIndex[stat.key].key || statIndex[stat.key].name }}
           </span>
         </div>
       </div>

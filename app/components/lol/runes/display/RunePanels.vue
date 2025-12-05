@@ -54,7 +54,7 @@ const tabListClass
               name="selected-primary" />
 
             <Img
-              :img="`/img/runes/${path}.webp`"
+              :src="`/img/runes/${path}.webp`"
               :alt="`${path} icon`"
               class="
                 z-10 h-9 w-auto brightness-90 grayscale transition-all

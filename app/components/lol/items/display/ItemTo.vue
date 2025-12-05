@@ -25,9 +25,9 @@ const filtered = computed(() => to.filter(to => to.id < 9999))
       <div
         v-for="(item, i) in filtered"
         :key="i"
-        v-tippy="`${item.name} ‑ ${item.gold}g`"
+        :title="`${item.name} ‑ ${item.gold}g`"
         class="flex items-center gap-3">
-        <LazyItemPopover
+        <Item
           :id="item.id"
           class="
             tldr-20 size-9 overflow-hidden rounded-lg shadow-sm hover:ring-1

@@ -72,7 +72,7 @@ const gridCols = computed(
         @change="emit('update:ability', selectedAbility)" />
 
       <Img
-        :img="ability.icon"
+        :src="ability.icon"
         alt="passive icon"
         class="
           pointer-events-none size-full opacity-70 contrast-80 grayscale

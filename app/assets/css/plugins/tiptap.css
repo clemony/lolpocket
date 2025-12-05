@@ -10,18 +10,18 @@
 /*       */
 @layer utilities {
   .tiptap{
-  [data-label='deleted-comment']{
+  [data-tip='deleted-comment']{
 @apply !italic text-bc/40;
     }
-    [data-label='champion'] {
+    [data-tip='champion'] {
       @apply italic text-bc/80;
     }
 
     [data-role='mod'],
-    [data-label='champion'],
-    [data-label='item'],
-    [data-label='spell'],
-    [data-label='rune'] {
+    [data-tip='champion'],
+    [data-tip='item'],
+    [data-tip='spell'],
+    [data-tip='rune'] {
       @apply inset-shadow-[-1px_-1px_0px_rgba(0,0,0,0.06)] shadow-xs  my-px px-2;
     }
 
@@ -31,7 +31,7 @@
       @apply bg-ad/36 hover:bg-ad/70;
     }
 
-    [data-label='spell'],
+    [data-tip='spell'],
     [data-tier='basic'],
     [data-tier='boots'],
     [data-tier='consumable'],

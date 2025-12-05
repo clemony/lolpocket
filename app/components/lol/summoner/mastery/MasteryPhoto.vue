@@ -18,7 +18,7 @@ const level = computed(() =>
     class="group/photo pb-0.5">
     <template #banner>
       <Img
-        :img="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
+        :src="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
         :alt="level.toString()"
         :class="
           cn('absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
@@ -28,7 +28,7 @@ const level = computed(() =>
 
     <!--     <template #crest>
       <Img
-        :img="`/img/mastery/mastery-${level}.webp`"
+        :src="`/img/mastery/mastery-${level}.webp`"
         :alt="level.toString()"
         :class="cn('h-full scale-130 object-cover w-auto absolute z-4 drop-shadow-sm drop-shadow-black/20  -top-0 -right-0')" />
     </template> -->

@@ -11,12 +11,31 @@ const queue = computed(() => {
   return foundQueue
 })
 
+const playerRank = computed(() => {
+  const sort = [...m.participants]
+    .map(p => ({
+      puuid: p.puuid,
+      mvpScore: p.mvpScore,
+      team: p.teamId,
+      win: p.win,
+    }))
+    .sort((a, b) => b.mvpScore - a.mvpScore)
+
+  return {
+    ace: computed(() => sort.filter(p => p.team !== sort[0].team)[0]).value.puuid,
+    mvp: sort[0].puuid,
+    ranking: sort.map(p => p.puuid),
+  }
+})
 const match = computed<MatchDataCurrentPlayer>(() => {
   const player = m?.participants.find(p => p.puuid === puuid)
   return {
     ...m,
+    ace: playerRank.value.ace,
+    mvp: playerRank.value.mvp,
     player,
     queue: queue.value,
+    ranking: playerRank.value.ranking,
   }
 })
 
@@ -31,9 +50,10 @@ const isOpen = ref(false)
       )
     ">
     <CollapsibleTrigger
+      ref="container"
       :for="match.matchId"
       :class="
-        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding px-5 text-2 data-[state=open]:rounded-b-none',
+        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding pr-4 pl-5 text-2 data-[state=open]:rounded-b-none',
            match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
            `
             before:pointer-events-none before:absolute before:left-0 before:z-3
@@ -89,22 +109,18 @@ const isOpen = ref(false)
         </div>
       </div>
 
-      <div class="ml-2 flex h-max w-70 flex-col gap-1">
+      <div class="mr-1 ml-2 flex h-max w-69 flex-col gap-1">
         <div class="flex w-full items-start">
           <!-- champ image -->
           <ChampionIcon
             :id="match.player?.championId"
-            v-tippy="{
-              theme: 'neutral',
-              content: ix().champNameById(match.player?.championId),
-              placement: 'top',
-            }"
-            alt="champion-icon"
+            :data-id="match?.player?.championId"
+            data-tip="champion"
+            :alt="`${champNameById(match.player?.championId)}-icon`"
             class="
-              size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
+              tippy size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
               transition-all duration-300 hover:scale-105
             " />
-
           <!--  spells -->
           <PlayerSpells
             :player="match.player"
@@ -116,10 +132,8 @@ const isOpen = ref(false)
 
           <!--   kda -->
           <KDA
+            :match
             :player="match.player" />
-
-          <!--   stats
-               <PlayerScoreboardStats :player /> -->
         </div>
 
         <!-- items -->
@@ -130,10 +144,10 @@ const isOpen = ref(false)
           <Item
             v-for="item in match.player.items"
             :id="item"
-            :key="item"
-            v-tippy="{ content: ix().itemNameById(item),
-                       placement: 'bottom',
-                       theme: 'neutral' }"
+            :key="itemNameById(item)"
+            :data-id="item"
+            data-placement="bottom"
+            data-tip="item"
             :alt="item"
             :class="cn('size-9 rounded-md border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 *:rounded-md hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
         </div>

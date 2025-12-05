@@ -30,12 +30,12 @@ const {
   statsWrapper,
   trigger,
 } = styles
-provide('ability-variants', {
+const variants = [
   attributeBadge,
   attributeContent,
   attributeWrapper,
   description,
-})
+]
 </script>
 
 <template>
@@ -48,7 +48,7 @@ provide('ability-variants', {
       :size="size as CollapsibleTriggerVariants['size']">
       <div :class="iconWrapper()">
         <Img
-          :img="ability.icon"
+          :src="ability.icon"
           :alt="ability.name" />
       </div>
 
@@ -78,6 +78,7 @@ provide('ability-variants', {
         <AbilityDescription
           v-for="(effect, i) in ability.effects"
           :key="i"
+          :variants
           :effect="effect" />
 
         <Collapsible

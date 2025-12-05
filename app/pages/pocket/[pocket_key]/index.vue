@@ -33,12 +33,12 @@ watch(() => acc().accounts, (newVal) => {
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
       <BgSplash
         size="full"
-        :img="pocket.icon" />
+        :src="pocket.icon" />
     </div>
 
     <BgSplash
       size="full"
-      :img="pocket.icon" />
+      :src="pocket.icon" />
 
     <!-- Header block -->
     <div

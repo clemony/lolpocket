@@ -37,11 +37,11 @@ const forwarded = useForwardProps(props)
 <template>
   <StaticImg
     v-bind="forwarded"
-    :img="`/img/champions/${champId}.webp`"
+    :src="`/img/champions/${champId}.webp`"
     :class="
       cn('overflow-hidden shadow-sm drop-shadow-sm',
-        elementVariants({ base, variant, hover, on, size }),
-        props.class,
+         elementVariants({ base, variant, hover, on, size }),
+         props.class,
       )
     "
     :alt="title || alt || `Champion ${champId} icon`"

@@ -9,27 +9,10 @@ const teams = computed(() => {
     red: match.participants.filter(p => p.teamId === 200),
   }
 })
-
-const playerRank = computed(() => {
-  const sort = [...match.participants]
-    .map(p => ({
-      puuid: p.puuid,
-      mvpScore: p.mvpScore,
-      team: p.teamId,
-      win: p.win,
-    }))
-    .sort((a, b) => b.mvpScore - a.mvpScore)
-
-  return {
-    ace: computed(() => sort.filter(p => p.team !== sort[0].team)[0]).value.puuid,
-    list: sort,
-    mvp: sort[0].puuid,
-  }
-})
 </script>
 
 <template>
-  <div class="flex w-full flex-col gap-2 overflow-visible pb-3">
+  <div class="flex w-full flex-col gap-2 overflow-visible pb-1">
     <!-- Blue Stats -->
 
     <TeamMatchEndStats
@@ -43,8 +26,8 @@ const playerRank = computed(() => {
         v-for="(player, i) in teams.blue"
         :key="i">
         <MatchTeammate
-          :player="player"
-          :player-rank="playerRank" />
+          :match
+          :player="player" />
 
         <Separator
           v-show="i !== 4"
@@ -66,7 +49,7 @@ const playerRank = computed(() => {
         :key="i">
         <MatchTeammate
           :player="player"
-          :player-rank="playerRank" />
+          :match />
         <Separator
           v-show="i !== 4"
           class="my-0! bg-b3/60" />

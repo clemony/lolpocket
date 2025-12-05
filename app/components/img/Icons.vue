@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
   base?: ElementVariants['base']
 }>(), {
   size: 'sq-4',
-
+  variant: 'none'
 })
 </script>
 

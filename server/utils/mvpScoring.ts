@@ -1,5 +1,5 @@
 // mvpScoring.ts
-export interface PlayerStats {
+export interface MvpStats {
   puuid: string
   assists: number
   challenges: {
@@ -133,62 +133,54 @@ const roleWeights: Record<string, Record<string, number>> = {
   },
 }
 
-export function normalizeStat(
-  players: PlayerStats[],
-  role: string,
-  key: string,
-) {
+export function normalizeStat(players: MvpStats[], role: string, key: string) {
   const values = players
-    .filter(p => p.teamPosition?.toUpperCase() === role)
+    .filter((p) => p.teamPosition?.toUpperCase() === role)
     .map((p) => {
-      if (key === 'effectiveHealAndShielding') {
+      if (key === "effectiveHealAndShielding") {
         return (
-          (p.totalHealsOnTeammates || 0)
-          + (p.totalDamageShieldedOnTeammates || 0)
+          (p.totalHealsOnTeammates || 0) +
+          (p.totalDamageShieldedOnTeammates || 0)
         )
       }
-      if (key === 'deathsInverse') {
-        return p.deaths === 0
-          ? Math.max(...players.map(pp => pp.deaths || 1))
+      if (key === "deathsInverse") {
+        return p.deaths === 0 ?
+            Math.max(...players.map((pp) => pp.deaths || 1))
           : 1 / p.deaths
       }
-      return (p[key as keyof PlayerStats] as number) || 0
+      return (p[key as keyof MvpStats] as number) || 0
     })
 
   const min = Math.min(...values)
   const max = Math.max(...values)
 
-  return (player: PlayerStats) => {
+  return (player: MvpStats) => {
     let val = 0
-    if (key === 'effectiveHealAndShielding') {
-      val
-        = (player.totalHealsOnTeammates || 0)
-          + (player.totalDamageShieldedOnTeammates || 0)
-    }
-    else if (key === 'deathsInverse') {
+    if (key === "effectiveHealAndShielding") {
+      val =
+        (player.totalHealsOnTeammates || 0) +
+        (player.totalDamageShieldedOnTeammates || 0)
+    } else if (key === "deathsInverse") {
       val = player.deaths === 0 ? max : 1 / player.deaths
+    } else {
+      val = (player[key as keyof MvpStats] as number) || 0
     }
-    else {
-      val = (player[key as keyof PlayerStats] as number) || 0
-    }
-    if (max === min)
-      return 0.5
+    if (max === min) return 0.5
     return (val - min) / (max - min)
   }
 }
 
-export function calculateMvpScores(players: PlayerStats[]) {
+export function calculateMvpScores(players: MvpStats[]) {
   const scores: Record<string, number> = {}
 
   const roles = Object.keys(roleWeights)
   for (const role of roles) {
     const rolePlayers = players.filter(
-      p => p.teamPosition?.toUpperCase() === role,
+      (p) => p.teamPosition?.toUpperCase() === role
     )
-    if (!rolePlayers.length)
-      continue
+    if (!rolePlayers.length) continue
 
-    const normalizers: Record<string, (p: PlayerStats) => number> = {}
+    const normalizers: Record<string, (p: MvpStats) => number> = {}
     for (const stat in roleWeights[role]) {
       normalizers[stat] = normalizeStat(players, role, stat)
     }
@@ -216,10 +208,9 @@ export function calculateMvpScores(players: PlayerStats[]) {
   for (const [puuid, raw] of Object.entries(scores)) {
     if (max === min) {
       scaledScores[puuid] = 5
-    }
-    else {
-      scaledScores[puuid]
-        = Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
+    } else {
+      scaledScores[puuid] =
+        Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
     }
   }
 

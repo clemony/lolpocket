@@ -50,7 +50,7 @@ watch(() => isHovered.value, (newVal) => {
         class="overflow-hidden border-none p-0"
         variant="neutral">
         <PocketIcon
-          :img="pocket.icon"
+          :src="pocket.icon"
           class="size-full scale-120" />
       </BtnLink>
     </div> -->

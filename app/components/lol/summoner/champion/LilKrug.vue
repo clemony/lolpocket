@@ -6,10 +6,9 @@
       grid w-full shrink-0 grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center
       gap-5 px-4
     ">
-    <Icons
-      name="lp:champ"
-      base="btn"
-      class="text-bc/40"
+    <Button
+
+      class="pointer-events-none text-bc/40"
       wrapper-class="bg-b2!"
       variant="secondary"
       size="c-14" />

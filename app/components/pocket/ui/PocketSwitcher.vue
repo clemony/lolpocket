@@ -33,7 +33,7 @@ useIntersectionObserver(
       ">
       <LazyPocketIcon
         v-if="pocket"
-        :img="pocket.icon"
+        :src="pocket.icon"
         class="relative size-10 rounded-full" />
       <icon
         name="select"
@@ -126,7 +126,7 @@ useIntersectionObserver(
               <LazyPocketIcon
                 v-if="pock"
                 size="sm"
-                :img="pock.icon"
+                :src="pock.icon"
                 class="relative size-6 rounded-full" />
               <span class="w-full truncate">
                 {{ pock.name }}
@@ -177,7 +177,7 @@ useIntersectionObserver(
               <LazyPocketIcon
                 v-if="pock"
                 size="sm"
-                :img="pock.icon"
+                :src="pock.icon"
                 class="relative size-7 rounded-full" />
               <span class="w-full truncate">
                 {{ pock.name }}

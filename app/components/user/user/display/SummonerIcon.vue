@@ -18,7 +18,7 @@ const icon = computed(() => {
     return getSummonerIcon(props.summoner?.icon)
   else if (as().account?.icon)
     return getSummonerIcon(as().account?.icon)
-  else return 'iconoir:plug-type-a'
+  else return null
 })
 
 const forwarded = reactiveOmit(props, 'class')
@@ -26,23 +26,16 @@ const forwarded = reactiveOmit(props, 'class')
 
 <template>
   <Primitive
-    v-bind="forwarded"
     :class="
-      cn('relative grid aspect-square size-12 shrink-0 place-items-center overflow-hidden bg-neutral shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
-        props.class,
+      cn('relative grid aspect-square size-12 shrink-0 place-items-center overflow-hidden bg-b2 shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
+         props.class,
       )
     ">
-    <hicon
-      :name="String(icon)"
+    <Img
+      v-bind="forwarded"
+      :src="String(icon)"
       alt="summoner icon"
-      :class="
-        cn('pointer-events-none size-full [&_img]:scale-115',
-          {
-            '!size-6 place-self-center **:text-nc **:stroke-[1.7]':
-              icon === 'iconoir:plug-type-a',
-          },
-        )
-      " />
+      class="pointer-events-none size-full [&_img]:scale-115" />
 
     <slot />
   </Primitive>

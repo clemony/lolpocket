@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-const { class: className, player } = defineProps<{
+const { class: className, match, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
+  match: MatchDataCurrentPlayer
 }>()
 
 const math = computed(() => {
@@ -11,15 +12,10 @@ const math = computed(() => {
 
 <template>
   <div
-    class="
-      ml-2 grid grow auto-rows-max items-center justify-end justify-items-end gap-2 justify-self-end py-1
-   text-end *:w-full *:items-center **:text-end
-    ">
+    class="ml-2 grid min-w-20 grow auto-rows-max items-center justify-end justify-items-end gap-2 justify-self-end py-1 text-end *:w-full *:items-center **:text-end">
     <p
       class="
-        inline-flex flex-nowrap items-center justify-end text-end text-4 leading-4
-        font-bold tracking-wide text-nowrap
-      ">
+        inline-flex flex-nowrap items-center justify-end text-end text-4 leading-4 font-bold tracking-wide text-nowrap">
       {{ player.stats.kills.total }}&thinsp;/&thinsp;
       <span class="inline text-shade-domination/10">
         {{ player.stats.deaths }}
@@ -38,19 +34,25 @@ const math = computed(() => {
         <span>%&nbsp;KP</span>
       </p>
 
-      <p
-        v-if="!player.stats.deaths"
-        class="flex items-center gap-1 truncate tracking-tight text-nowrap">
-        <icon
-          name="proicons:infinity"
-          class="size-4.5 **:stroke-[1.6]" />
-        KDA
-      </p>
+      <div class="flex h-4 items-center gap-4">
+        <MvpBadge
+          v-if="match.mvp === match.player.puuid || match.ace === match.player.puuid"
+          :match
+          :player="match.player" />
+        <p
+          v-if="!player.stats.deaths"
+          class="flex items-center gap-1 truncate tracking-tight text-nowrap">
+          <icon
+            name="proicons:infinity"
+            class="size-4.5 **:stroke-[1.6]" />
+          KDA
+        </p>
 
-      <p v-else>
-        {{ (math / 100).toFixed(1) }}
-        <span>&nbsp;KDA</span>
-      </p>
+        <p v-else>
+          {{ (math / 100).toFixed(1) }}
+          <span>&nbsp;KDA</span>
+        </p>
+      </div>
     </div>
   </div>
 </template>

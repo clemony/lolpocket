@@ -25,7 +25,7 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
     :title="title">
     <div class="relative flex w-full items-center gap-5 px-5 pt-8 dst">
       <div class="size-16 rounded-full shadow-sm drop-shadow-sm">
-        <ItemPopover
+        <ItemTooltip
           :id="bayesianItems[itemNum]"
           class="size-16 overflow-hidden rounded-full" />
       </div>

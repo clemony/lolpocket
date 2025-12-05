@@ -2,9 +2,10 @@ const gc =
   "relative grid aspect-square place-items-center p-0 shrink-0 *:absolute"
 const sv = {
   3: [gc, "size-3 text-2"],
+  3.5: [gc, "size-3.5 text-2"],
   4: [gc, "size-4 text-2"],
   5: [gc, "size-5 text-2"],
-  '5.5': [gc, "size-5.5 text-2"],
+  "5.5": [gc, "size-5.5 text-2"],
   6: [gc, "size-6 text-2"],
   7: [gc, "size-7 text-2"],
   8: [gc, "size-8 text-2"],
@@ -40,9 +41,10 @@ export const sizeVariants = {
   /* square */
   sq: [gc, "rounded-lg"],
   "sq-3": [sv[3], "rounded-md"],
+  "sq-3.5": [sv[3.5], "rounded-sm"],
   "sq-4": [sv[4], "rounded-md"],
   "sq-5": [sv[5], "rounded-md"],
-  "sq-5.5": [sv['5.5'], "rounded-md"],
+  "sq-5.5": [sv[5.5], "rounded-md"],
   "sq-6": [sv[6], "rounded-md"],
   "sq-7": [sv[7], "rounded-md"],
   "sq-8": [sv[8], "rounded-md"],
@@ -61,9 +63,10 @@ export const sizeVariants = {
   /* circle */
   c: [gc, "rounded-full"],
   "c-3": [sv[3], "rounded-full"],
+  "c-3.5": [sv[3.5], "rounded-full"],
   "c-4": [sv[4], "rounded-full"],
   "c-5": [sv[5], "rounded-full"],
-  "c-5.5": [sv['5.5'], "rounded-full"],
+  "c-5.5": [sv[5.5], "rounded-full"],
   "c-6": [sv[6], "rounded-full"],
   "c-7": [sv[7], "rounded-full"],
   "c-8": [sv[8], "rounded-full"],
