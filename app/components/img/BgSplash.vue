@@ -7,7 +7,7 @@ const {
   src: i,
 } = defineProps<{
   class?: HTMLAttributes['class']
-  src: string | null
+  src: string | null | undefined
   slice?: boolean
 }>()
 

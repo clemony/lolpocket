@@ -6,6 +6,7 @@ defineOptions({
 })
 
 const props = withDefaults(defineProps<{
+  size?: ElementVariants['size']
   alt: ImgHTMLAttributes['alt']
   src: ImgHTMLAttributes['src']
   class?: HTMLAttributes['class']
@@ -21,7 +22,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <div class="size-full shrink-0">
+  <div :class="cn('size-full shrink-0', elementVariants({ size: props.size }))">
     <NuxtImg
       v-slot="{ src: source, isLoaded, imgAttrs }"
       :src="props.src"

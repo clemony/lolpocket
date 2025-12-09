@@ -2,17 +2,17 @@
 const { filter, matches, setFilter, summoner } = useSummonerInject()
 
 const roles = computed(() => {
-  if (!matches.value || !summoner.value)
+  if (!matches.value || !summoner?.value)
     return
 
-  return useMatchRoles(summoner.value.puuid, matches)
+  return useMatchRoles(summoner?.value?.puuid, matches)
 })
 
-watch(() => filter.value.role, (newVal) => {
+watch(() => filter?.value?.role, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
 })
 const roleModel = computed({
-  get: () => filter.value.role,
+  get: () => filter?.value?.role,
   set: val => setFilter('role', val),
 })
 

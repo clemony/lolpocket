@@ -1,5 +1,5 @@
-[
-  {
+{
+  "1001": {
     "id": 1001,
     "key": "item",
     "name": "Boots",
@@ -15,7 +15,7 @@
       "flatMovespeed": 25
     }
   },
-  {
+  "1004": {
     "id": 1004,
     "key": "item",
     "name": "Faerie Charm",
@@ -35,7 +35,7 @@
       "Support"
     ]
   },
-  {
+  "1006": {
     "id": 1006,
     "key": "item",
     "name": "Rejuvenation Bead",
@@ -54,7 +54,7 @@
       "Tank"
     ]
   },
-  {
+  "1011": {
     "id": 1011,
     "key": "item",
     "name": "Giant's Belt",
@@ -78,7 +78,7 @@
       "Tank"
     ]
   },
-  {
+  "1018": {
     "id": 1018,
     "key": "item",
     "name": "Cloak of Agility",
@@ -97,7 +97,7 @@
       "Marksman"
     ]
   },
-  {
+  "1026": {
     "id": 1026,
     "key": "item",
     "name": "Blasting Wand",
@@ -117,7 +117,7 @@
       "Support"
     ]
   },
-  {
+  "1027": {
     "id": 1027,
     "key": "item",
     "name": "Sapphire Crystal",
@@ -140,7 +140,7 @@
       "Tank"
     ]
   },
-  {
+  "1028": {
     "id": 1028,
     "key": "item",
     "name": "Ruby Crystal",
@@ -167,7 +167,7 @@
       "Support"
     ]
   },
-  {
+  "1029": {
     "id": 1029,
     "key": "item",
     "name": "Cloth Armor",
@@ -191,7 +191,7 @@
       "Support"
     ]
   },
-  {
+  "1031": {
     "id": 1031,
     "key": "item",
     "name": "Chain Vest",
@@ -216,7 +216,7 @@
       "Tank"
     ]
   },
-  {
+  "1033": {
     "id": 1033,
     "key": "item",
     "name": "Null-Magic Mantle",
@@ -240,7 +240,7 @@
       "Support"
     ]
   },
-  {
+  "1036": {
     "id": 1036,
     "key": "item",
     "name": "Long Sword",
@@ -261,7 +261,7 @@
       "Assassin"
     ]
   },
-  {
+  "1037": {
     "id": 1037,
     "key": "item",
     "name": "Pickaxe",
@@ -282,7 +282,7 @@
       "Assassin"
     ]
   },
-  {
+  "1038": {
     "id": 1038,
     "key": "item",
     "name": "B. F. Sword",
@@ -306,7 +306,7 @@
       "Assassin"
     ]
   },
-  {
+  "1042": {
     "id": 1042,
     "key": "item",
     "name": "Dagger",
@@ -327,7 +327,7 @@
       "Assassin"
     ]
   },
-  {
+  "1043": {
     "id": 1043,
     "key": "item",
     "name": "Recurve Bow",
@@ -351,7 +351,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "1052": {
     "id": 1052,
     "key": "item",
     "name": "Amplifying Tome",
@@ -375,7 +375,7 @@
       "Support"
     ]
   },
-  {
+  "1053": {
     "id": 1053,
     "key": "item",
     "name": "Vampiric Scepter",
@@ -400,7 +400,7 @@
       "Assassin"
     ]
   },
-  {
+  "1054": {
     "id": 1054,
     "key": "item",
     "name": "Doran's Shield",
@@ -427,7 +427,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "1055": {
     "id": 1055,
     "key": "item",
     "name": "Doran's Blade",
@@ -452,7 +452,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "1056": {
     "id": 1056,
     "key": "item",
     "name": "Doran's Ring",
@@ -476,7 +476,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "1057": {
     "id": 1057,
     "key": "item",
     "name": "Negatron Cloak",
@@ -500,7 +500,7 @@
       "Support"
     ]
   },
-  {
+  "1058": {
     "id": 1058,
     "key": "item",
     "name": "Needlessly Large Rod",
@@ -522,7 +522,7 @@
       "Mage"
     ]
   },
-  {
+  "1082": {
     "id": 1082,
     "key": "item",
     "name": "Dark Seal",
@@ -542,7 +542,7 @@
       "Mage"
     ]
   },
-  {
+  "1083": {
     "id": 1083,
     "key": "item",
     "name": "Cull",
@@ -565,7 +565,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "1101": {
     "id": 1101,
     "key": "item",
     "name": "Scorchclaw Pup",
@@ -592,7 +592,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "1102": {
     "id": 1102,
     "key": "item",
     "name": "Gustwalker Hatchling",
@@ -619,7 +619,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "1103": {
     "id": 1103,
     "key": "item",
     "name": "Mosstomper Seedling",
@@ -646,7 +646,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "1111": {
     "id": 1111,
     "key": "item",
     "name": "Jarvan I's",
@@ -665,7 +665,7 @@
       "tenacity": 30
     }
   },
-  {
+  "1500": {
     "id": 1500,
     "key": "item",
     "name": "Ohmwrecker (Turret Item)",
@@ -683,7 +683,7 @@
       "armorPenetration": 30
     }
   },
-  {
+  "1501": {
     "id": 1501,
     "key": "item",
     "name": "Lane Swap Detector",
@@ -699,7 +699,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1502": {
     "id": 1502,
     "key": "item",
     "name": "Reinforced Armor (Turret Item)",
@@ -715,7 +715,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1503": {
     "id": 1503,
     "key": "item",
     "name": "Warden's Eye",
@@ -731,7 +731,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1506": {
     "id": 1506,
     "key": "item",
     "name": "Base Turret Reinforced Armor (Turret Item)",
@@ -747,7 +747,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1507": {
     "id": 1507,
     "key": "item",
     "name": "Overcharged",
@@ -763,7 +763,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1508": {
     "id": 1508,
     "key": "item",
     "name": "Anti-Tower Socks",
@@ -779,7 +779,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1509": {
     "id": 1509,
     "key": "item",
     "name": "Gusto",
@@ -795,7 +795,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1510": {
     "id": 1510,
     "key": "item",
     "name": "Phreakish Gusto",
@@ -811,7 +811,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1511": {
     "id": 1511,
     "key": "item",
     "name": "Super Mech Armor",
@@ -827,7 +827,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1512": {
     "id": 1512,
     "key": "item",
     "name": "Super Mech Power Field",
@@ -843,7 +843,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "1515": {
     "id": 1515,
     "key": "item",
     "name": "Turret Plating",
@@ -859,7 +859,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "2003": {
     "id": 2003,
     "key": "item",
     "name": "Health Potion",
@@ -879,7 +879,7 @@
       "Health and reg"
     ]
   },
-  {
+  "2010": {
     "id": 2010,
     "key": "item",
     "name": "Total Biscuit of Everlasting Will",
@@ -898,7 +898,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "2019": {
     "id": 2019,
     "key": "item",
     "name": "Steel Sigil",
@@ -926,7 +926,7 @@
       "Fighter"
     ]
   },
-  {
+  "2020": {
     "id": 2020,
     "key": "item",
     "name": "The Brutalizer",
@@ -954,7 +954,7 @@
       "Assassin"
     ]
   },
-  {
+  "2021": {
     "id": 2021,
     "key": "item",
     "name": "Tunneler",
@@ -981,7 +981,7 @@
       "Fighter"
     ]
   },
-  {
+  "2022": {
     "id": 2022,
     "key": "item",
     "name": "Glowing Mote",
@@ -1008,7 +1008,7 @@
       "Support"
     ]
   },
-  {
+  "2031": {
     "id": 2031,
     "key": "item",
     "name": "Refillable Potion",
@@ -1028,7 +1028,7 @@
       "Health and reg"
     ]
   },
-  {
+  "2049": {
     "id": 2049,
     "key": "item",
     "name": "Guardian's Amulet",
@@ -1046,7 +1046,7 @@
       "Support"
     ]
   },
-  {
+  "2050": {
     "id": 2050,
     "key": "item",
     "name": "Guardian's Shroud",
@@ -1065,7 +1065,7 @@
       "Tank"
     ]
   },
-  {
+  "2051": {
     "id": 2051,
     "key": "item",
     "name": "Guardian's Horn",
@@ -1092,7 +1092,7 @@
       "Support"
     ]
   },
-  {
+  "2052": {
     "id": 2052,
     "key": "item",
     "name": "Poro-Snax",
@@ -1108,7 +1108,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "2055": {
     "id": 2055,
     "key": "item",
     "name": "Control Ward",
@@ -1124,7 +1124,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2065": {
     "id": 2065,
     "key": "item",
     "name": "Shurelya's Battlesong",
@@ -1155,7 +1155,7 @@
       "Movement"
     ]
   },
-  {
+  "2138": {
     "id": 2138,
     "key": "item",
     "name": "Elixir of Iron",
@@ -1177,7 +1177,7 @@
       "Movement"
     ]
   },
-  {
+  "2139": {
     "id": 2139,
     "key": "item",
     "name": "Elixir of Sorcery",
@@ -1199,7 +1199,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "2140": {
     "id": 2140,
     "key": "item",
     "name": "Elixir of Wrath",
@@ -1220,7 +1220,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "2141": {
     "id": 2141,
     "key": "item",
     "name": "Cappa Juice",
@@ -1232,7 +1232,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2142": {
     "id": 2142,
     "key": "item",
     "name": "Juice of Power",
@@ -1247,7 +1247,7 @@
       "Ability power"
     ]
   },
-  {
+  "2143": {
     "id": 2143,
     "key": "item",
     "name": "Juice of Vitality",
@@ -1261,7 +1261,7 @@
       "Health and reg"
     ]
   },
-  {
+  "2144": {
     "id": 2144,
     "key": "item",
     "name": "Juice of Haste",
@@ -1272,7 +1272,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2145": {
     "id": 2145,
     "key": "item",
     "name": "Lucky Dice",
@@ -1284,7 +1284,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "2150": {
     "id": 2150,
     "key": "item",
     "name": "Elixir of Skill",
@@ -1299,7 +1299,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2151": {
     "id": 2151,
     "key": "item",
     "name": "Elixir of Avarice",
@@ -1314,7 +1314,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2152": {
     "id": 2152,
     "key": "item",
     "name": "Elixir of Force",
@@ -1329,7 +1329,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "2420": {
     "id": 2420,
     "key": "item",
     "name": "Seeker's Armguard",
@@ -1359,7 +1359,7 @@
       "Mage"
     ]
   },
-  {
+  "2421": {
     "id": 2421,
     "key": "item",
     "name": "Shattered Armguard",
@@ -1381,7 +1381,7 @@
       "armor": 25
     }
   },
-  {
+  "2422": {
     "id": 2422,
     "key": "item",
     "name": "Slightly Magical Boots",
@@ -1398,7 +1398,7 @@
       "flatMovespeed": 25
     }
   },
-  {
+  "2501": {
     "id": 2501,
     "key": "item",
     "name": "Overlord's Bloodmail",
@@ -1423,7 +1423,7 @@
       "Tank"
     ]
   },
-  {
+  "2502": {
     "id": 2502,
     "key": "item",
     "name": "Unending Despair",
@@ -1449,7 +1449,7 @@
       "Tank"
     ]
   },
-  {
+  "2503": {
     "id": 2503,
     "key": "item",
     "name": "Blackfire Torch",
@@ -1477,7 +1477,7 @@
       "Mage"
     ]
   },
-  {
+  "2504": {
     "id": 2504,
     "key": "item",
     "name": "Kaenic Rookern",
@@ -1502,7 +1502,7 @@
       "Tank"
     ]
   },
-  {
+  "2508": {
     "id": 2508,
     "key": "item",
     "name": "Fated Ashes",
@@ -1524,7 +1524,7 @@
       "Mage"
     ]
   },
-  {
+  "3002": {
     "id": 3002,
     "key": "item",
     "name": "Trailblazer",
@@ -1550,7 +1550,7 @@
       "Tank"
     ]
   },
-  {
+  "3003": {
     "id": 3003,
     "key": "item",
     "name": "Archangel's Staff",
@@ -1581,7 +1581,7 @@
       "Mage"
     ]
   },
-  {
+  "3004": {
     "id": 3004,
     "key": "item",
     "name": "Manamune",
@@ -1614,7 +1614,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3006": {
     "id": 3006,
     "key": "item",
     "name": "Berserker's Greaves",
@@ -1640,7 +1640,7 @@
       "flatMovespeed": 45
     }
   },
-  {
+  "3009": {
     "id": 3009,
     "key": "item",
     "name": "Boots of Swiftness",
@@ -1662,7 +1662,7 @@
       "flatMovespeed": 55
     }
   },
-  {
+  "3010": {
     "id": 3010,
     "key": "item",
     "name": "Symbiotic Soles",
@@ -1682,7 +1682,7 @@
       "flatMovespeed": 40
     }
   },
-  {
+  "3013": {
     "id": 3013,
     "key": "item",
     "name": "Synchronized Souls",
@@ -1703,7 +1703,7 @@
       "flatMovespeed": 45
     }
   },
-  {
+  "3020": {
     "id": 3020,
     "key": "item",
     "name": "Sorcerer's Shoes",
@@ -1727,7 +1727,7 @@
       "flatMovespeed": 45
     }
   },
-  {
+  "3024": {
     "id": 3024,
     "key": "item",
     "name": "Glacial Buckler",
@@ -1754,7 +1754,7 @@
       "Support"
     ]
   },
-  {
+  "3026": {
     "id": 3026,
     "key": "item",
     "name": "Guardian Angel",
@@ -1780,7 +1780,7 @@
       "Assassin"
     ]
   },
-  {
+  "3031": {
     "id": 3031,
     "key": "item",
     "name": "Infinity Edge",
@@ -1809,7 +1809,7 @@
       "Marksman"
     ]
   },
-  {
+  "3032": {
     "id": 3032,
     "key": "item",
     "name": "Yun Tal Wildarrows",
@@ -1838,7 +1838,7 @@
       "Marksman"
     ]
   },
-  {
+  "3033": {
     "id": 3033,
     "key": "item",
     "name": "Mortal Reminder",
@@ -1868,7 +1868,7 @@
       "Marksman"
     ]
   },
-  {
+  "3035": {
     "id": 3035,
     "key": "item",
     "name": "Last Whisper",
@@ -1897,7 +1897,7 @@
       "Assassin"
     ]
   },
-  {
+  "3036": {
     "id": 3036,
     "key": "item",
     "name": "Lord Dominik's Regards",
@@ -1927,7 +1927,7 @@
       "Marksman"
     ]
   },
-  {
+  "3040": {
     "id": 3040,
     "key": "item",
     "name": "Seraph's Embrace",
@@ -1949,7 +1949,7 @@
       "abilityHaste": 25
     }
   },
-  {
+  "3041": {
     "id": 3041,
     "key": "item",
     "name": "Mejai's Soulstealer",
@@ -1973,7 +1973,7 @@
       "Movement"
     ]
   },
-  {
+  "3042": {
     "id": 3042,
     "key": "item",
     "name": "Muramana",
@@ -2001,7 +2001,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3044": {
     "id": 3044,
     "key": "item",
     "name": "Phage",
@@ -2029,7 +2029,7 @@
       "Tank"
     ]
   },
-  {
+  "3046": {
     "id": 3046,
     "key": "item",
     "name": "Phantom Dancer",
@@ -2059,7 +2059,7 @@
       "Movement"
     ]
   },
-  {
+  "3047": {
     "id": 3047,
     "key": "item",
     "name": "Plated Steelcaps",
@@ -2084,7 +2084,7 @@
       "flatMovespeed": 45
     }
   },
-  {
+  "3050": {
     "id": 3050,
     "key": "item",
     "name": "Zeke's Convergence",
@@ -2115,7 +2115,7 @@
       "Support"
     ]
   },
-  {
+  "3051": {
     "id": 3051,
     "key": "item",
     "name": "Hearthbound Axe",
@@ -2145,7 +2145,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3053": {
     "id": 3053,
     "key": "item",
     "name": "Sterak's Gage",
@@ -2177,7 +2177,7 @@
       "Attack damage"
     ]
   },
-  {
+  "3057": {
     "id": 3057,
     "key": "item",
     "name": "Sheen",
@@ -2205,7 +2205,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3065": {
     "id": 3065,
     "key": "item",
     "name": "Spirit Visage",
@@ -2234,7 +2234,7 @@
       "Tank"
     ]
   },
-  {
+  "3066": {
     "id": 3066,
     "key": "item",
     "name": "Winged Moonplate",
@@ -2264,7 +2264,7 @@
       "Movement"
     ]
   },
-  {
+  "3067": {
     "id": 3067,
     "key": "item",
     "name": "Kindlegem",
@@ -2293,7 +2293,7 @@
       "Support"
     ]
   },
-  {
+  "3068": {
     "id": 3068,
     "key": "item",
     "name": "Sunfire Aegis",
@@ -2323,7 +2323,7 @@
       "Tank"
     ]
   },
-  {
+  "3070": {
     "id": 3070,
     "key": "item",
     "name": "Tear of the Goddess",
@@ -2351,7 +2351,7 @@
       "Mage"
     ]
   },
-  {
+  "3071": {
     "id": 3071,
     "key": "item",
     "name": "Black Cleaver",
@@ -2383,7 +2383,7 @@
       "Movement"
     ]
   },
-  {
+  "3072": {
     "id": 3072,
     "key": "item",
     "name": "Bloodthirster",
@@ -2412,7 +2412,7 @@
       "Marksman"
     ]
   },
-  {
+  "3073": {
     "id": 3073,
     "key": "item",
     "name": "Experimental Hexplate",
@@ -2440,7 +2440,7 @@
       "Movement"
     ]
   },
-  {
+  "3074": {
     "id": 3074,
     "key": "item",
     "name": "Ravenous Hydra",
@@ -2469,7 +2469,7 @@
       "Fighter"
     ]
   },
-  {
+  "3075": {
     "id": 3075,
     "key": "item",
     "name": "Thornmail",
@@ -2497,7 +2497,7 @@
       "Tank"
     ]
   },
-  {
+  "3076": {
     "id": 3076,
     "key": "item",
     "name": "Bramble Vest",
@@ -2523,7 +2523,7 @@
       "Tank"
     ]
   },
-  {
+  "3077": {
     "id": 3077,
     "key": "item",
     "name": "Tiamat",
@@ -2548,7 +2548,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3078": {
     "id": 3078,
     "key": "item",
     "name": "Trinity Force",
@@ -2583,7 +2583,7 @@
       "Movement"
     ]
   },
-  {
+  "3082": {
     "id": 3082,
     "key": "item",
     "name": "Warden's Mail",
@@ -2606,7 +2606,7 @@
       "Tank"
     ]
   },
-  {
+  "3083": {
     "id": 3083,
     "key": "item",
     "name": "Warmog's Armor",
@@ -2631,7 +2631,7 @@
       "Tank"
     ]
   },
-  {
+  "3084": {
     "id": 3084,
     "key": "item",
     "name": "Heartsteel",
@@ -2662,7 +2662,7 @@
       "Tank"
     ]
   },
-  {
+  "3085": {
     "id": 3085,
     "key": "item",
     "name": "Runaan's Hurricane",
@@ -2689,7 +2689,7 @@
       "Movement"
     ]
   },
-  {
+  "3086": {
     "id": 3086,
     "key": "item",
     "name": "Zeal",
@@ -2715,7 +2715,7 @@
       "Movement"
     ]
   },
-  {
+  "3087": {
     "id": 3087,
     "key": "item",
     "name": "Statikk Shiv",
@@ -2742,7 +2742,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3089": {
     "id": 3089,
     "key": "item",
     "name": "Rabadon's Deathcap",
@@ -2773,7 +2773,7 @@
       "Mage"
     ]
   },
-  {
+  "3091": {
     "id": 3091,
     "key": "item",
     "name": "Wit's End",
@@ -2801,7 +2801,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3094": {
     "id": 3094,
     "key": "item",
     "name": "Rapid Firecannon",
@@ -2833,7 +2833,7 @@
       "Movement"
     ]
   },
-  {
+  "3100": {
     "id": 3100,
     "key": "item",
     "name": "Lich Bane",
@@ -2863,7 +2863,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3102": {
     "id": 3102,
     "key": "item",
     "name": "Banshee's Veil",
@@ -2892,7 +2892,7 @@
       "Mage"
     ]
   },
-  {
+  "3105": {
     "id": 3105,
     "key": "item",
     "name": "Aegis of the Legion",
@@ -2918,7 +2918,7 @@
       "Support"
     ]
   },
-  {
+  "3107": {
     "id": 3107,
     "key": "item",
     "name": "Redemption",
@@ -2947,7 +2947,7 @@
       "Support"
     ]
   },
-  {
+  "3108": {
     "id": 3108,
     "key": "item",
     "name": "Fiendish Codex",
@@ -2974,7 +2974,7 @@
       "Mage"
     ]
   },
-  {
+  "3109": {
     "id": 3109,
     "key": "item",
     "name": "Knight's Vow",
@@ -3005,7 +3005,7 @@
       "Support"
     ]
   },
-  {
+  "3110": {
     "id": 3110,
     "key": "item",
     "name": "Frozen Heart",
@@ -3034,7 +3034,7 @@
       "Support"
     ]
   },
-  {
+  "3111": {
     "id": 3111,
     "key": "item",
     "name": "Mercury's Treads",
@@ -3060,7 +3060,7 @@
       "tenacity": 30
     }
   },
-  {
+  "3112": {
     "id": 3112,
     "key": "item",
     "name": "Guardian's Orb",
@@ -3081,7 +3081,7 @@
       "Mana and reg"
     ]
   },
-  {
+  "3113": {
     "id": 3113,
     "key": "item",
     "name": "Aether Wisp",
@@ -3108,7 +3108,7 @@
       "Movement"
     ]
   },
-  {
+  "3114": {
     "id": 3114,
     "key": "item",
     "name": "Forbidden Idol",
@@ -3131,7 +3131,7 @@
       "Support"
     ]
   },
-  {
+  "3115": {
     "id": 3115,
     "key": "item",
     "name": "Nashor's Tooth",
@@ -3162,7 +3162,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3116": {
     "id": 3116,
     "key": "item",
     "name": "Rylai's Crystal Scepter",
@@ -3190,7 +3190,7 @@
       "Mage"
     ]
   },
-  {
+  "3118": {
     "id": 3118,
     "key": "item",
     "name": "Malignance",
@@ -3219,7 +3219,7 @@
       "Ability haste"
     ]
   },
-  {
+  "3119": {
     "id": 3119,
     "key": "item",
     "name": "Winter's Approach",
@@ -3249,7 +3249,7 @@
       "Tank"
     ]
   },
-  {
+  "3121": {
     "id": 3121,
     "key": "item",
     "name": "Fimbulwinter",
@@ -3274,7 +3274,7 @@
       "Tank"
     ]
   },
-  {
+  "3123": {
     "id": 3123,
     "key": "item",
     "name": "Executioner's Calling",
@@ -3302,7 +3302,7 @@
       "Assassin"
     ]
   },
-  {
+  "3124": {
     "id": 3124,
     "key": "item",
     "name": "Guinsoo's Rageblade",
@@ -3330,7 +3330,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3133": {
     "id": 3133,
     "key": "item",
     "name": "Caulfield's Warhammer",
@@ -3357,7 +3357,7 @@
       "Assassin"
     ]
   },
-  {
+  "3134": {
     "id": 3134,
     "key": "item",
     "name": "Serrated Dirk",
@@ -3385,7 +3385,7 @@
       "Armor pen"
     ]
   },
-  {
+  "3135": {
     "id": 3135,
     "key": "item",
     "name": "Void Staff",
@@ -3409,7 +3409,7 @@
       "Mage"
     ]
   },
-  {
+  "3137": {
     "id": 3137,
     "key": "item",
     "name": "Cryptbloom",
@@ -3435,7 +3435,7 @@
       "Mage"
     ]
   },
-  {
+  "3139": {
     "id": 3139,
     "key": "item",
     "name": "Mercurial Scimitar",
@@ -3469,7 +3469,7 @@
       "Movement"
     ]
   },
-  {
+  "3140": {
     "id": 3140,
     "key": "item",
     "name": "Quicksilver Sash",
@@ -3498,7 +3498,7 @@
       "Assassin"
     ]
   },
-  {
+  "3142": {
     "id": 3142,
     "key": "item",
     "name": "Youmuu's Ghostblade",
@@ -3529,7 +3529,7 @@
       "Movement"
     ]
   },
-  {
+  "3143": {
     "id": 3143,
     "key": "item",
     "name": "Randuin's Omen",
@@ -3553,7 +3553,7 @@
       "Tank"
     ]
   },
-  {
+  "3144": {
     "id": 3144,
     "key": "item",
     "name": "Scout's Slingshot",
@@ -3577,7 +3577,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3145": {
     "id": 3145,
     "key": "item",
     "name": "Hextech Alternator",
@@ -3604,7 +3604,7 @@
       "Mage"
     ]
   },
-  {
+  "3147": {
     "id": 3147,
     "key": "item",
     "name": "Haunting Guise",
@@ -3631,7 +3631,7 @@
       "Mage"
     ]
   },
-  {
+  "3152": {
     "id": 3152,
     "key": "item",
     "name": "Hextech Rocketbelt",
@@ -3662,7 +3662,7 @@
       "Movement"
     ]
   },
-  {
+  "3153": {
     "id": 3153,
     "key": "item",
     "name": "Blade of the Ruined King",
@@ -3696,7 +3696,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3155": {
     "id": 3155,
     "key": "item",
     "name": "Hexdrinker",
@@ -3723,7 +3723,7 @@
       "Assassin"
     ]
   },
-  {
+  "3156": {
     "id": 3156,
     "key": "item",
     "name": "Maw of Malmortius",
@@ -3750,7 +3750,7 @@
       "Assassin"
     ]
   },
-  {
+  "3157": {
     "id": 3157,
     "key": "item",
     "name": "Zhonya's Hourglass",
@@ -3781,7 +3781,7 @@
       "Mage"
     ]
   },
-  {
+  "3158": {
     "id": 3158,
     "key": "item",
     "name": "Ionian Boots of Lucidity",
@@ -3802,7 +3802,7 @@
       "abilityHaste": 10
     }
   },
-  {
+  "3161": {
     "id": 3161,
     "key": "item",
     "name": "Spear of Shojin",
@@ -3828,7 +3828,7 @@
       "Ability haste"
     ]
   },
-  {
+  "3165": {
     "id": 3165,
     "key": "item",
     "name": "Morellonomicon",
@@ -3862,7 +3862,7 @@
       "Support"
     ]
   },
-  {
+  "3170": {
     "id": 3170,
     "key": "item",
     "name": "Swiftmarch",
@@ -3881,7 +3881,7 @@
       "flatMovespeed": 65
     }
   },
-  {
+  "3171": {
     "id": 3171,
     "key": "item",
     "name": "Crimson Lucidity",
@@ -3901,7 +3901,7 @@
       "abilityHaste": 25
     }
   },
-  {
+  "3172": {
     "id": 3172,
     "key": "item",
     "name": "Zephyr",
@@ -3926,7 +3926,7 @@
       "Fighter"
     ]
   },
-  {
+  "3173": {
     "id": 3173,
     "key": "item",
     "name": "Chainlaced Crushers",
@@ -3947,7 +3947,7 @@
       "tenacity": 30
     }
   },
-  {
+  "3174": {
     "id": 3174,
     "key": "item",
     "name": "Armored Advance",
@@ -3967,7 +3967,7 @@
       "flatMovespeed": 50
     }
   },
-  {
+  "3175": {
     "id": 3175,
     "key": "item",
     "name": "Spellslinger's Shoes",
@@ -3987,7 +3987,7 @@
       "flatMovespeed": 50
     }
   },
-  {
+  "3176": {
     "id": 3176,
     "key": "item",
     "name": "Forever Forward",
@@ -4006,7 +4006,7 @@
       "flatMovespeed": 55
     }
   },
-  {
+  "3177": {
     "id": 3177,
     "key": "item",
     "name": "Guardian's Blade",
@@ -4031,7 +4031,7 @@
       "Tank"
     ]
   },
-  {
+  "3179": {
     "id": 3179,
     "key": "item",
     "name": "Umbral Glaive",
@@ -4059,7 +4059,7 @@
       "Assassin"
     ]
   },
-  {
+  "3181": {
     "id": 3181,
     "key": "item",
     "name": "Hullbreaker",
@@ -4090,7 +4090,7 @@
       "Fighter"
     ]
   },
-  {
+  "3184": {
     "id": 3184,
     "key": "item",
     "name": "Guardian's Hammer",
@@ -4114,7 +4114,7 @@
       "Assassin"
     ]
   },
-  {
+  "3190": {
     "id": 3190,
     "key": "item",
     "name": "Locket of the Iron Solari",
@@ -4142,7 +4142,7 @@
       "Support"
     ]
   },
-  {
+  "3211": {
     "id": 3211,
     "key": "item",
     "name": "Spectre's Cowl",
@@ -4172,7 +4172,7 @@
       "Tank"
     ]
   },
-  {
+  "3222": {
     "id": 3222,
     "key": "item",
     "name": "Mikael's Blessing",
@@ -4203,7 +4203,7 @@
       "Support"
     ]
   },
-  {
+  "3302": {
     "id": 3302,
     "key": "item",
     "name": "Terminus",
@@ -4235,7 +4235,7 @@
       "Magic pen"
     ]
   },
-  {
+  "3330": {
     "id": 3330,
     "key": "item",
     "name": "Scarecrow Effigy",
@@ -4252,10 +4252,10 @@
       30,
       35
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3340": {
     "id": 3340,
     "key": "item",
     "name": "Stealth Ward",
@@ -4270,10 +4270,10 @@
       11,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3348": {
     "id": 3348,
     "key": "item",
     "name": "Arcane Sweeper (Trinket)",
@@ -4282,10 +4282,10 @@
       30
     ],
     "purchasable": false,
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3363": {
     "id": 3363,
     "key": "item",
     "name": "Farsight Alteration",
@@ -4300,10 +4300,10 @@
       12,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3364": {
     "id": 3364,
     "key": "item",
     "name": "Oracle Lens",
@@ -4320,10 +4320,10 @@
       11,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3400": {
     "id": 3400,
     "key": "item",
     "name": "Your Cut",
@@ -4339,7 +4339,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "3430": {
     "id": 3430,
     "key": "item",
     "name": "Rite of Ruin",
@@ -4357,7 +4357,7 @@
       "Mage"
     ]
   },
-  {
+  "3504": {
     "id": 3504,
     "key": "item",
     "name": "Ardent Censer",
@@ -4387,7 +4387,7 @@
       "Attack speed"
     ]
   },
-  {
+  "3508": {
     "id": 3508,
     "key": "item",
     "name": "Essence Reaver",
@@ -4419,7 +4419,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3513": {
     "id": 3513,
     "key": "item",
     "name": "Eye of the Herald",
@@ -4428,10 +4428,10 @@
     ],
     "cost": 0,
     "purchasable": false,
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
-  {
+  "3599": {
     "id": 3599,
     "key": "item",
     "name": "Black Spear",
@@ -4449,7 +4449,7 @@
     "rank": "Starter",
     "stats": {}
   },
-  {
+  "3742": {
     "id": 3742,
     "key": "item",
     "name": "Dead Man's Plate",
@@ -4482,7 +4482,7 @@
       "Tank"
     ]
   },
-  {
+  "3748": {
     "id": 3748,
     "key": "item",
     "name": "Titanic Hydra",
@@ -4513,7 +4513,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "3801": {
     "id": 3801,
     "key": "item",
     "name": "Crystalline Bracer",
@@ -4538,7 +4538,7 @@
       "Support"
     ]
   },
-  {
+  "3802": {
     "id": 3802,
     "key": "item",
     "name": "Lost Chapter",
@@ -4567,7 +4567,7 @@
       "Mage"
     ]
   },
-  {
+  "3803": {
     "id": 3803,
     "key": "item",
     "name": "Catalyst of Aeons",
@@ -4595,7 +4595,7 @@
       "Mage"
     ]
   },
-  {
+  "3814": {
     "id": 3814,
     "key": "item",
     "name": "Edge of Night",
@@ -4626,7 +4626,7 @@
       "Assassin"
     ]
   },
-  {
+  "3865": {
     "id": 3865,
     "key": "item",
     "name": "World Atlas",
@@ -4649,7 +4649,7 @@
       "Mage"
     ]
   },
-  {
+  "3866": {
     "id": 3866,
     "key": "item",
     "name": "Runic Compass",
@@ -4672,7 +4672,7 @@
       "Support"
     ]
   },
-  {
+  "3867": {
     "id": 3867,
     "key": "item",
     "name": "Bounty of Worlds",
@@ -4695,7 +4695,7 @@
       "Support"
     ]
   },
-  {
+  "3869": {
     "id": 3869,
     "key": "item",
     "name": "Celestial Opposition",
@@ -4717,7 +4717,7 @@
       "Support"
     ]
   },
-  {
+  "3870": {
     "id": 3870,
     "key": "item",
     "name": "Dream Maker",
@@ -4743,7 +4743,7 @@
       "Support"
     ]
   },
-  {
+  "3871": {
     "id": 3871,
     "key": "item",
     "name": "Zaz'Zak's Realmspike",
@@ -4765,7 +4765,7 @@
       "Support"
     ]
   },
-  {
+  "3876": {
     "id": 3876,
     "key": "item",
     "name": "Solstice Sleigh",
@@ -4787,7 +4787,7 @@
       "Support"
     ]
   },
-  {
+  "3877": {
     "id": 3877,
     "key": "item",
     "name": "Bloodsong",
@@ -4812,7 +4812,7 @@
       "Support"
     ]
   },
-  {
+  "3901": {
     "id": 3901,
     "key": "item",
     "name": "Fire at Will",
@@ -4827,7 +4827,7 @@
     "purchasable": false,
     "stats": {}
   },
-  {
+  "3902": {
     "id": 3902,
     "key": "item",
     "name": "Death's Daughter",
@@ -4842,7 +4842,7 @@
     "purchasable": false,
     "stats": {}
   },
-  {
+  "3903": {
     "id": 3903,
     "key": "item",
     "name": "Raise Morale",
@@ -4857,7 +4857,7 @@
     "purchasable": false,
     "stats": {}
   },
-  {
+  "3916": {
     "id": 3916,
     "key": "item",
     "name": "Oblivion Orb",
@@ -4884,7 +4884,7 @@
       "Support"
     ]
   },
-  {
+  "4003": {
     "id": 4003,
     "key": "item",
     "name": "Lifeline",
@@ -4911,7 +4911,7 @@
       "Assassin"
     ]
   },
-  {
+  "4005": {
     "id": 4005,
     "key": "item",
     "name": "Imperial Mandate",
@@ -4940,7 +4940,7 @@
       "Support"
     ]
   },
-  {
+  "4011": {
     "id": 4011,
     "key": "item",
     "name": "Sword of Blossoming Dawn",
@@ -4959,7 +4959,7 @@
       "Support"
     ]
   },
-  {
+  "4015": {
     "id": 4015,
     "key": "item",
     "name": "Perplexity",
@@ -4978,7 +4978,7 @@
       "Mage"
     ]
   },
-  {
+  "4016": {
     "id": 4016,
     "key": "item",
     "name": "Wordless Promise",
@@ -4996,7 +4996,7 @@
       "Support"
     ]
   },
-  {
+  "4017": {
     "id": 4017,
     "key": "item",
     "name": "Hellfire Hatchet",
@@ -5016,7 +5016,7 @@
       "Assassin"
     ]
   },
-  {
+  "4401": {
     "id": 4401,
     "key": "item",
     "name": "Force of Nature",
@@ -5045,7 +5045,7 @@
       "Tank"
     ]
   },
-  {
+  "4628": {
     "id": 4628,
     "key": "item",
     "name": "Horizon Focus",
@@ -5074,7 +5074,7 @@
       "Mage"
     ]
   },
-  {
+  "4629": {
     "id": 4629,
     "key": "item",
     "name": "Cosmic Drive",
@@ -5105,7 +5105,7 @@
       "Movement"
     ]
   },
-  {
+  "4630": {
     "id": 4630,
     "key": "item",
     "name": "Blighting Jewel",
@@ -5132,7 +5132,7 @@
       "Mage"
     ]
   },
-  {
+  "4632": {
     "id": 4632,
     "key": "item",
     "name": "Verdant Barrier",
@@ -5160,7 +5160,7 @@
       "Mage"
     ]
   },
-  {
+  "4633": {
     "id": 4633,
     "key": "item",
     "name": "Riftmaker",
@@ -5189,7 +5189,7 @@
       "Lifesteal vamp"
     ]
   },
-  {
+  "4638": {
     "id": 4638,
     "key": "item",
     "name": "Watchful Wardstone",
@@ -5212,7 +5212,7 @@
       "Support"
     ]
   },
-  {
+  "4642": {
     "id": 4642,
     "key": "item",
     "name": "Bandleglass Mirror",
@@ -5241,7 +5241,7 @@
       "Support"
     ]
   },
-  {
+  "4643": {
     "id": 4643,
     "key": "item",
     "name": "Vigilant Wardstone",
@@ -5267,7 +5267,7 @@
       "Support"
     ]
   },
-  {
+  "4645": {
     "id": 4645,
     "key": "item",
     "name": "Shadowflame",
@@ -5291,7 +5291,7 @@
       "Mage"
     ]
   },
-  {
+  "4646": {
     "id": 4646,
     "key": "item",
     "name": "Stormsurge",
@@ -5316,7 +5316,7 @@
       "Mage"
     ]
   },
-  {
+  "6333": {
     "id": 6333,
     "key": "item",
     "name": "Death's Dance",
@@ -5345,7 +5345,7 @@
       "Fighter"
     ]
   },
-  {
+  "6609": {
     "id": 6609,
     "key": "item",
     "name": "Chempunk Chainsword",
@@ -5376,7 +5376,7 @@
       "Assassin"
     ]
   },
-  {
+  "6610": {
     "id": 6610,
     "key": "item",
     "name": "Sundered Sky",
@@ -5402,7 +5402,7 @@
       "Fighter"
     ]
   },
-  {
+  "6616": {
     "id": 6616,
     "key": "item",
     "name": "Staff of Flowing Water",
@@ -5431,7 +5431,7 @@
       "Support"
     ]
   },
-  {
+  "6617": {
     "id": 6617,
     "key": "item",
     "name": "Moonstone Renewer",
@@ -5460,7 +5460,7 @@
       "Support"
     ]
   },
-  {
+  "6620": {
     "id": 6620,
     "key": "item",
     "name": "Echoes of Helia",
@@ -5489,7 +5489,7 @@
       "Support"
     ]
   },
-  {
+  "6621": {
     "id": 6621,
     "key": "item",
     "name": "Dawncore",
@@ -5518,7 +5518,7 @@
       "Support"
     ]
   },
-  {
+  "6631": {
     "id": 6631,
     "key": "item",
     "name": "Stridebreaker",
@@ -5549,7 +5549,7 @@
       "Movement"
     ]
   },
-  {
+  "6653": {
     "id": 6653,
     "key": "item",
     "name": "Liandry's Torment",
@@ -5578,7 +5578,7 @@
       "Mage"
     ]
   },
-  {
+  "6655": {
     "id": 6655,
     "key": "item",
     "name": "Luden's Companion",
@@ -5607,7 +5607,7 @@
       "Mage"
     ]
   },
-  {
+  "6657": {
     "id": 6657,
     "key": "item",
     "name": "Rod of Ages",
@@ -5635,7 +5635,7 @@
       "Mage"
     ]
   },
-  {
+  "6660": {
     "id": 6660,
     "key": "item",
     "name": "Bami's Cinder",
@@ -5662,7 +5662,7 @@
       "Tank"
     ]
   },
-  {
+  "6662": {
     "id": 6662,
     "key": "item",
     "name": "Iceborn Gauntlet",
@@ -5697,7 +5697,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "6664": {
     "id": 6664,
     "key": "item",
     "name": "Hollow Radiance",
@@ -5726,7 +5726,7 @@
       "Tank"
     ]
   },
-  {
+  "6665": {
     "id": 6665,
     "key": "item",
     "name": "Jak'Sho, The Protean",
@@ -5755,7 +5755,7 @@
       "Tank"
     ]
   },
-  {
+  "6670": {
     "id": 6670,
     "key": "item",
     "name": "Noonquiver",
@@ -5780,7 +5780,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "6672": {
     "id": 6672,
     "key": "item",
     "name": "Kraken Slayer",
@@ -5809,7 +5809,7 @@
       "Marksman"
     ]
   },
-  {
+  "6673": {
     "id": 6673,
     "key": "item",
     "name": "Immortal Shieldbow",
@@ -5834,7 +5834,7 @@
       "Health and reg"
     ]
   },
-  {
+  "6675": {
     "id": 6675,
     "key": "item",
     "name": "Navori Flickerblade",
@@ -5863,7 +5863,7 @@
       "Marksman"
     ]
   },
-  {
+  "6676": {
     "id": 6676,
     "key": "item",
     "name": "The Collector",
@@ -5895,7 +5895,7 @@
       "Assassin"
     ]
   },
-  {
+  "6690": {
     "id": 6690,
     "key": "item",
     "name": "Rectrix",
@@ -5919,7 +5919,7 @@
       "Fighter"
     ]
   },
-  {
+  "6692": {
     "id": 6692,
     "key": "item",
     "name": "Eclipse",
@@ -5947,7 +5947,7 @@
       "Fighter"
     ]
   },
-  {
+  "6694": {
     "id": 6694,
     "key": "item",
     "name": "Serylda's Grudge",
@@ -5975,7 +5975,7 @@
       "Assassin"
     ]
   },
-  {
+  "6695": {
     "id": 6695,
     "key": "item",
     "name": "Serpent's Fang",
@@ -6002,7 +6002,7 @@
       "Assassin"
     ]
   },
-  {
+  "6696": {
     "id": 6696,
     "key": "item",
     "name": "Axiom Arc",
@@ -6027,7 +6027,7 @@
       "Assassin"
     ]
   },
-  {
+  "6697": {
     "id": 6697,
     "key": "item",
     "name": "Hubris",
@@ -6053,7 +6053,7 @@
       "Assassin"
     ]
   },
-  {
+  "6698": {
     "id": 6698,
     "key": "item",
     "name": "Profane Hydra",
@@ -6081,7 +6081,7 @@
       "Assassin"
     ]
   },
-  {
+  "6699": {
     "id": 6699,
     "key": "item",
     "name": "Voltaic Cyclosword",
@@ -6110,7 +6110,7 @@
       "Assassin"
     ]
   },
-  {
+  "6701": {
     "id": 6701,
     "key": "item",
     "name": "Opportunity",
@@ -6139,7 +6139,7 @@
       "Movement"
     ]
   },
-  {
+  "8010": {
     "id": 8010,
     "key": "item",
     "name": "Bloodletter's Curse",
@@ -6164,7 +6164,7 @@
       "Mage"
     ]
   },
-  {
+  "8020": {
     "id": 8020,
     "key": "item",
     "name": "Abyssal Mask",
@@ -6190,7 +6190,7 @@
       "Support"
     ]
   },
-  {
+  "220000": {
     "id": 220000,
     "key": "item",
     "name": "Stat Bonus",
@@ -6201,7 +6201,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220001": {
     "id": 220001,
     "key": "item",
     "name": "Legendary Fighter Item",
@@ -6212,7 +6212,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220002": {
     "id": 220002,
     "key": "item",
     "name": "Legendary Marksman Item",
@@ -6223,7 +6223,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220003": {
     "id": 220003,
     "key": "item",
     "name": "Legendary Assassin Item",
@@ -6234,7 +6234,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220004": {
     "id": 220004,
     "key": "item",
     "name": "Legendary Mage Item",
@@ -6245,7 +6245,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220005": {
     "id": 220005,
     "key": "item",
     "name": "Legendary Tank Item",
@@ -6256,7 +6256,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220006": {
     "id": 220006,
     "key": "item",
     "name": "Legendary Support Item",
@@ -6267,7 +6267,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "220007": {
     "id": 220007,
     "key": "item",
     "name": "Prismatic Item",
@@ -6278,7 +6278,7 @@
     "rank": "Consumable",
     "stats": {}
   },
-  {
+  "223005": {
     "id": 223005,
     "key": "item",
     "name": "Ghostcrawlers",
@@ -6291,7 +6291,7 @@
       "flatMovespeed": 70
     }
   },
-  {
+  "223039": {
     "id": 223039,
     "key": "item",
     "name": "Atma's Reckoning",
@@ -6311,7 +6311,7 @@
       "Fighter"
     ]
   },
-  {
+  "223095": {
     "id": 223095,
     "key": "item",
     "name": "Stormrazor",
@@ -6334,7 +6334,7 @@
       "Onhit effects"
     ]
   },
-  {
+  "223146": {
     "id": 223146,
     "key": "item",
     "name": "Hextech Gunblade",
@@ -6352,7 +6352,7 @@
       "Mage"
     ]
   },
-  {
+  "223185": {
     "id": 223185,
     "key": "item",
     "name": "Guardian's Dirk",
@@ -6371,7 +6371,7 @@
       "Assassin"
     ]
   },
-  {
+  "224004": {
     "id": 224004,
     "key": "item",
     "name": "Spectral Cutlass",
@@ -6389,7 +6389,7 @@
       "Assassin"
     ]
   },
-  {
+  "224403": {
     "id": 224403,
     "key": "item",
     "name": "The Golden Spatula",
@@ -6422,7 +6422,7 @@
       "omnivamp": 15
     }
   },
-  {
+  "226630": {
     "id": 226630,
     "key": "item",
     "name": "Goredrinker",
@@ -6447,7 +6447,7 @@
       "Fighter"
     ]
   },
-  {
+  "228001": {
     "id": 228001,
     "key": "item",
     "name": "Anathema's Chains",
@@ -6472,7 +6472,7 @@
       "Support"
     ]
   },
-  {
+  "228002": {
     "id": 228002,
     "key": "item",
     "name": "Wooglet's Witchcap",
@@ -6495,7 +6495,7 @@
       "Mage"
     ]
   },
-  {
+  "443054": {
     "id": 443054,
     "key": "item",
     "name": "Darksteel Talons",
@@ -6520,7 +6520,7 @@
       "Tank"
     ]
   },
-  {
+  "443055": {
     "id": 443055,
     "key": "item",
     "name": "Fulmination",
@@ -6544,7 +6544,7 @@
       "Marksman"
     ]
   },
-  {
+  "443056": {
     "id": 443056,
     "key": "item",
     "name": "Demon King's Crown",
@@ -6558,7 +6558,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "443058": {
     "id": 443058,
     "key": "item",
     "name": "Shield of Molten Stone",
@@ -6578,7 +6578,7 @@
       "Tank"
     ]
   },
-  {
+  "443059": {
     "id": 443059,
     "key": "item",
     "name": "Cloak of Starry Night",
@@ -6598,7 +6598,7 @@
       "Tank"
     ]
   },
-  {
+  "443060": {
     "id": 443060,
     "key": "item",
     "name": "Sword of the Divine",
@@ -6620,7 +6620,7 @@
       "Assassin"
     ]
   },
-  {
+  "443061": {
     "id": 443061,
     "key": "item",
     "name": "Force of Entropy",
@@ -6641,7 +6641,7 @@
       "Tank"
     ]
   },
-  {
+  "443062": {
     "id": 443062,
     "key": "item",
     "name": "Sanguine Gift",
@@ -6662,7 +6662,7 @@
       "Mage"
     ]
   },
-  {
+  "443063": {
     "id": 443063,
     "key": "item",
     "name": "Eleisa's Miracle",
@@ -6683,7 +6683,7 @@
       "Support"
     ]
   },
-  {
+  "443064": {
     "id": 443064,
     "key": "item",
     "name": "Talisman of Ascension",
@@ -6702,7 +6702,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "443069": {
     "id": 443069,
     "key": "item",
     "name": "Hamstringer",
@@ -6726,7 +6726,7 @@
       "Marksman"
     ]
   },
-  {
+  "443079": {
     "id": 443079,
     "key": "item",
     "name": "Turbo Chemtank",
@@ -6748,7 +6748,7 @@
       "Tank"
     ]
   },
-  {
+  "443080": {
     "id": 443080,
     "key": "item",
     "name": "Twin Mask",
@@ -6762,7 +6762,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "443081": {
     "id": 443081,
     "key": "item",
     "name": "Hexbolt Companion",
@@ -6782,7 +6782,7 @@
       "Tank"
     ]
   },
-  {
+  "443090": {
     "id": 443090,
     "key": "item",
     "name": "Reaper's Toll",
@@ -6802,7 +6802,7 @@
       "Marksman"
     ]
   },
-  {
+  "443193": {
     "id": 443193,
     "key": "item",
     "name": "Gargoyle Stoneplate",
@@ -6824,7 +6824,7 @@
       "Tank"
     ]
   },
-  {
+  "444636": {
     "id": 444636,
     "key": "item",
     "name": "Night Harvester",
@@ -6849,7 +6849,7 @@
       "Mage"
     ]
   },
-  {
+  "444637": {
     "id": 444637,
     "key": "item",
     "name": "Demonic Embrace",
@@ -6872,7 +6872,7 @@
       "Mage"
     ]
   },
-  {
+  "444644": {
     "id": 444644,
     "key": "item",
     "name": "Crown of the Shattered Queen",
@@ -6894,7 +6894,7 @@
       "Mage"
     ]
   },
-  {
+  "446632": {
     "id": 446632,
     "key": "item",
     "name": "Divine Sunderer",
@@ -6919,7 +6919,7 @@
       "Fighter"
     ]
   },
-  {
+  "446656": {
     "id": 446656,
     "key": "item",
     "name": "Everfrost",
@@ -6946,7 +6946,7 @@
       "Mage"
     ]
   },
-  {
+  "446667": {
     "id": 446667,
     "key": "item",
     "name": "Radiant Virtue",
@@ -6971,7 +6971,7 @@
       "Tank"
     ]
   },
-  {
+  "446671": {
     "id": 446671,
     "key": "item",
     "name": "Galeforce",
@@ -6996,7 +6996,7 @@
       "Marksman"
     ]
   },
-  {
+  "446691": {
     "id": 446691,
     "key": "item",
     "name": "Duskblade of Draktharr",
@@ -7020,7 +7020,7 @@
       "Assassin"
     ]
   },
-  {
+  "446693": {
     "id": 446693,
     "key": "item",
     "name": "Prowler's Claw",
@@ -7041,7 +7041,7 @@
       "Assassin"
     ]
   },
-  {
+  "447100": {
     "id": 447100,
     "key": "item",
     "name": "Mirage Blade",
@@ -7058,7 +7058,7 @@
       "percentMovespeed": 6
     }
   },
-  {
+  "447101": {
     "id": 447101,
     "key": "item",
     "name": "Gambler's Blade",
@@ -7076,7 +7076,7 @@
       "abilityHaste": 40
     }
   },
-  {
+  "447102": {
     "id": 447102,
     "key": "item",
     "name": "Reality Fracture",
@@ -7100,7 +7100,7 @@
       "Mage"
     ]
   },
-  {
+  "447103": {
     "id": 447103,
     "key": "item",
     "name": "Hemomancer's Helm",
@@ -7124,7 +7124,7 @@
       "Fighter"
     ]
   },
-  {
+  "447104": {
     "id": 447104,
     "key": "item",
     "name": "Innervating Locket",
@@ -7145,7 +7145,7 @@
       "Mage"
     ]
   },
-  {
+  "447105": {
     "id": 447105,
     "key": "item",
     "name": "Empyrean Promise",
@@ -7167,7 +7167,7 @@
       "Mage"
     ]
   },
-  {
+  "447106": {
     "id": 447106,
     "key": "item",
     "name": "Dragonheart",
@@ -7181,7 +7181,7 @@
     "rank": "Special",
     "stats": {}
   },
-  {
+  "447107": {
     "id": 447107,
     "key": "item",
     "name": "Decapitator",
@@ -7198,7 +7198,7 @@
       "percentMovespeed": 6
     }
   },
-  {
+  "447108": {
     "id": 447108,
     "key": "item",
     "name": "Runecarver",
@@ -7222,7 +7222,7 @@
       "Mage"
     ]
   },
-  {
+  "447109": {
     "id": 447109,
     "key": "item",
     "name": "Cruelty",
@@ -7243,7 +7243,7 @@
       "Mage"
     ]
   },
-  {
+  "447110": {
     "id": 447110,
     "key": "item",
     "name": "Moonflair Spellblade",
@@ -7264,7 +7264,7 @@
       "Mage"
     ]
   },
-  {
+  "447112": {
     "id": 447112,
     "key": "item",
     "name": "Flesheater",
@@ -7281,7 +7281,7 @@
       "abilityHaste": 20
     }
   },
-  {
+  "447113": {
     "id": 447113,
     "key": "item",
     "name": "Detonation Orb",
@@ -7303,7 +7303,7 @@
       "Mage"
     ]
   },
-  {
+  "447114": {
     "id": 447114,
     "key": "item",
     "name": "Reverberation",
@@ -7324,7 +7324,7 @@
       "Tank"
     ]
   },
-  {
+  "447115": {
     "id": 447115,
     "key": "item",
     "name": "Regicide",
@@ -7345,7 +7345,7 @@
       "Assassin"
     ]
   },
-  {
+  "447116": {
     "id": 447116,
     "key": "item",
     "name": "Kinkou Jitte",
@@ -7367,7 +7367,7 @@
       "Mage"
     ]
   },
-  {
+  "447118": {
     "id": 447118,
     "key": "item",
     "name": "Pyromancer's Cloak",
@@ -7392,7 +7392,7 @@
       "Mage"
     ]
   },
-  {
+  "447119": {
     "id": 447119,
     "key": "item",
     "name": "Lightning Rod",
@@ -7414,7 +7414,7 @@
       "Tank"
     ]
   },
-  {
+  "447120": {
     "id": 447120,
     "key": "item",
     "name": "Diamond-Tipped Spear",
@@ -7434,7 +7434,7 @@
       "Mage"
     ]
   },
-  {
+  "447121": {
     "id": 447121,
     "key": "item",
     "name": "Twilight's Edge",
@@ -7455,7 +7455,7 @@
       "Mage"
     ]
   },
-  {
+  "447122": {
     "id": 447122,
     "key": "item",
     "name": "Black Hole Gauntlet",
@@ -7475,7 +7475,7 @@
       "Tank"
     ]
   },
-  {
+  "447123": {
     "id": 447123,
     "key": "item",
     "name": "Puppeteer",
@@ -7497,4 +7497,4 @@
       "Support"
     ]
   }
-]
+}

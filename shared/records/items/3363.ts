@@ -1,7 +1,7 @@
 const item: Item =  {
   "name": "Farsight Alteration",
   "id": 3363,
-  "rank": "Consumable",
+  "rank": "Trinket",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,

@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 const { clearFilters, summoner } = useSummonerInject()
+onMounted(() => {
+  if (clearFilters)
+    clearFilters()
+})
 </script>
 
 <template>

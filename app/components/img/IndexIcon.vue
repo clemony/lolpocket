@@ -28,7 +28,7 @@ const runeStyle = computed(() => {
         className,
       )
     ">
-    <img
+    <Img
       v-if="item"
       :src="
         ['item', 'rune', 'spell'].includes(item?.key)

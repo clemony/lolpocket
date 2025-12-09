@@ -1,18 +1,21 @@
-import { riotFetch } from "~~/server/api/riot"
+import { riotFetch } from "~~/server/api/riot/fetch"
 import { serverToRegion, transformTimeline } from "~~/server/helpers"
 
 export default defineEventHandler(async (event) => {
-  const { matchId, region, puuid } = getQuery(event)
-  if (!puuid || !matchId)
+  const { matchId, region } = getQuery(event)
+
+  if (!matchId || !region) {
     throw createError({
       statusCode: 400,
-      statusMessage: "Missing puuid or region",
+      statusMessage: "Missing matchId or region",
     })
+  }
 
   const url = `${serverToRegion(region.toString())}/lol/match/v5/matches/${matchId}/timeline`
-
   const key = `timeline:${region}:${matchId}`
 
   const match = await riotFetch<any>(key, url)
-  return transformTimeline(match, puuid.toString())
+
+  // returns Record<puuid, PlayerTimeline>
+  return transformTimeline(match)
 })

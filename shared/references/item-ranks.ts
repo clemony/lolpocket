@@ -1,32 +1,10 @@
-export const itemRanks = [
-  {
-    name: 'Basic',
-    color: 'var(--color-b1)',
-  },
-  {
-    name: 'Boots',
-    color: 'var(--color-b1)',
-  },
-  {
-    name: 'Consumable',
-    color: 'var(--color-b1)',
-  },
-  {
-    name: 'Epic',
-    color: 'var(--color-mana)',
-    icon: 'emojione-monotone:small-blue-diamond',
-  },
-  {
-    name: 'Legendary',
-    color: 'oklch(79% 45% 88deg)',
-    icon: 'tabler:north-star',
-  },
-  {
-    name: 'Special',
-    color: 'var(--color-b1)',
-  },
-  {
-    name: 'Starter',
-    color: 'var(--color-b1)',
-  },
-]
+export const itemRankColor = {
+  Basic: "--alpha(var(--color-nc) / 60%)",
+  Boots: "var(--color-vanguard)",
+  Trinket: "var(--color-precision)",
+  Consumable: "--alpha(var(--color-nc) / 60%)",
+  Epic: "var(--color-platinum)",
+  Legendary: "var(--color-g)",
+  Special: "var(--color-master)",
+  Starter: "--alpha(var(--color-nc) / 60%)",
+}

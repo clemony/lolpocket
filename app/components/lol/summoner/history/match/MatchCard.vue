@@ -15,7 +15,7 @@ const playerRank = computed(() => {
   const sort = [...m.participants]
     .map(p => ({
       puuid: p.puuid,
-      mvpScore: p.mvpScore,
+      mvpScore: p.stats.mvpScore,
       team: p.teamId,
       win: p.win,
     }))
@@ -46,14 +46,14 @@ const isOpen = ref(false)
   <Collapsible
     v-model:open="isOpen"
     :class="
-      cn('group group/collapse field-box relative mb-8 size-full max-w-210 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
+      cn('group group/collapse field-box relative mb-8 size-full max-w-220 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
       )
     ">
     <CollapsibleTrigger
       ref="container"
       :for="match.matchId"
       :class="
-        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-4 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding pr-4 pl-5 text-2 data-[state=open]:rounded-b-none',
+        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-6 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding pr-4 pl-5 text-2 data-[state=open]:rounded-b-none',
            match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
            `
             before:pointer-events-none before:absolute before:left-0 before:z-3
@@ -70,7 +70,7 @@ const isOpen = ref(false)
       ">
       <div
         class="
-          flex h-fit w-30 flex-col justify-start self-center **:antialiased
+          flex h-fit w-30 shrink-0 flex-col justify-start self-center **:antialiased
           **:select-none
         ">
         <h3
@@ -109,7 +109,7 @@ const isOpen = ref(false)
         </div>
       </div>
 
-      <div class="mr-1 ml-2 flex h-max w-69 flex-col gap-1">
+      <div class="mr-1 flex h-max w-69 shrink-0 flex-col gap-1">
         <div class="flex w-full items-start">
           <!-- champ image -->
           <ChampionIcon
@@ -149,19 +149,13 @@ const isOpen = ref(false)
             data-placement="bottom"
             data-tip="item"
             :alt="item"
-            :class="cn('size-9 rounded-md border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 *:rounded-md hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
+            :class="cn('size-9 rounded-md! border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 **:rounded-md! hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
         </div>
       </div>
       <TeamsCardOverview :match />
 
-      <div class="absolute right-4 grid w-8 place-items-center">
-        <icon
-          name="up"
-          :class="
-            cn('transition-rotate mx-4 size-5 dst duration-200', {
-              '-rotate-180': isOpen,
-            })
-          " />
+      <div class="grid h-full w-8 place-items-center">
+        <CaretFlip />
       </div>
     </CollapsibleTrigger>
 

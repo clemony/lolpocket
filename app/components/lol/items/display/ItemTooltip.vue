@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { itemPrice, itemRank } from '@constants'
+import { itemRankColor } from '@references'
 
 const { id, map } = defineProps<{
   id: number
@@ -11,9 +12,12 @@ const rank = computed (() => itemRank[id])
 </script>
 
 <template>
-  <div
-    class="flex w-80 flex-col justify-self-center overflow-hidden pt-4 pb-3">
-    <div class="flex h-fit w-full grow gap-3 px-4">
+  <ItemData
+    :id
+    v-slot="{ open, disabled }"
+    :map
+    class="flex flex-col pt-3 pb-2">
+    <CollapsibleTrigger class="flex h-11 w-full grow gap-3 px-4">
       <!-- IMG -->
 
       <Item
@@ -24,15 +28,16 @@ const rank = computed (() => itemRank[id])
         class="size-11">
       </Item>
 
-      <div class="flex w-full grow flex-col text-4">
-        <div class="flex w-full items-center justify-between gap-1">
+      <div class="items-between flex h-full grow flex-col gap-1">
+        <div
+          class="flex w-full items-center justify-between gap-1">
           <!-- NAME / LINK -->
 
-          <h5 class="text-4! leading-3 font-semibold!">
+          <h5 class="text-3! leading-3 font-semibold!">
             {{ name }}
           </h5>
 
-          <a
+          <!--           <a
             v-if="name"
             :title="`Official LoL Wiki - ${name}`"
             :href="getWikiLink(name)"
@@ -42,19 +47,24 @@ const rank = computed (() => itemRank[id])
             <Icon
               name="la:wikipedia-w"
               class="" />
-          </a>
+          </a> -->
+
+          <CaretFlip
+            :class="cn('size-4.25', { '!opacity-0': open || disabled })" />
         </div>
 
         <!-- TIER -->
         <div class="z-0 flex items-end gap-1">
           <span
             v-if="rank"
-            class="text-2">
+            :style="{
+              color: itemRankColor[rank],
+            }"
+            class="text-1! italic">
             {{ rank }}
           </span>
 
           <Grow />
-
           <!-- PRICE -->
           <figure
             class="inline-flex items-end gap-1 text-2 font-medium">
@@ -68,10 +78,6 @@ const rank = computed (() => itemRank[id])
           </figure>
         </div>
       </div>
-    </div>
-
-    <LazyItemData
-      :id
-      :map />
-  </div>
+    </CollapsibleTrigger>
+  </ItemData>
 </template>

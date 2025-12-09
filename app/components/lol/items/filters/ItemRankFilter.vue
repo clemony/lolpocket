@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemRanks } from '#shared/references'
+import { itemRankColor } from '@references'
 
 const {
   class: className,
@@ -46,27 +46,27 @@ function handleUpdate() {
     </Button>
 
     <Label
-      v-for="rank in itemRanks"
-      :key="rank.name"
+      v-for="rank in Object.keys(itemRankColor)"
+      :key="rank"
       :size="size[1]"
       base="btn"
-      :hover="is().filters.rank === rank.name ? 'btn' : hover"
-      :variant="is().filters.rank === rank.name ? 'neutral' : variant"
+      :hover="is().filters.rank === rank ? 'btn' : hover"
+      :variant="is().filters.rank === rank ? 'neutral' : variant"
       :class="
         cn('order-2 px-5 text-2 font-medium! shadow-none hover:text-bc',
-          { 'order-1 ': is().filters.rank === rank.name },
+           { 'order-1 ': is().filters.rank === rank },
         )
       "
       @click="
-        is().filters.rank === rank.name ? (is().filters.rank = null) : null
+        is().filters.rank === rank ? (is().filters.rank = null) : null
       ">
       <input
         v-model="is().filters.rank"
         class="peer absolute hidden"
         type="radio"
-        :value="rank.name"
+        :value="rank"
         name="item-types" />
-      {{ rank.name }}
+      {{ rank }}
     </Label>
   </TransitionSlideLeft>
 </template>

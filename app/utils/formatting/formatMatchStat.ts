@@ -1,32 +1,20 @@
-export function formatMatchStat(stat) {
+export function formatMatchStat(stat: number, name: string) {
   const a = stat
 
-  const b = a && a.toString().length > 6 ? a : 0
+  if (a === 0) return "⎯"
 
-  let c = b ? b.toFixed(2) : a
-  c =
-    (
-      stat.id === "effectiveHealAndShielding" ||
-      stat.id === "bountyGold" ||
-      stat.id === "goldPerMinute"
-    ) ?
-      Math.round(c)
-    : c
-
+  const fix = ["kda"]
   // units
+  const p = [
+    "Team damage percentage",
+    "Damage taken of team total",
+    "kill participation",
+  ]
 
-  c =
-    (
-      [
-        "teamDamagePercentage",
-        "damageTakenOnTeamPercentage",
-        "killParticipation",
-      ].includes(stat.id) && c
-    ) ?
-      `${Math.round(c * 100)}%`
-    : c
-  c = stat.id === "timeCCingOthers" ? `${c}s` : c
-
-  c = c ? c.toLocaleString() : c
-  return c
+  if (fix.includes(name)) return (Math.round(a * 100) / 100).toLocaleString()
+  else if (p.includes(name)) return `${Math.round(a * 100)}%`
+  else if (name === "effective healing and shielding")
+    return Math.round(a).toLocaleString()
+  else if (name === "Crowd-control duration on enemies") return `${a}s`
+  else if (a) return a.toLocaleString()
 }

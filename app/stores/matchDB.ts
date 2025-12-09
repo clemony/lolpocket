@@ -6,15 +6,15 @@ export interface MatchCursor {
   lastIndex: number
 }
 
-export class MatchDexie extends Dexie {
-  matchData!: Table<MatchData, string> // matchId primary key
+export class MatchDB extends Dexie {
+  matchData!: Table<MatchData, string>
   matchCursor!: Table<MatchCursor, string>
   matchTimeline!: Table<MatchTimeline, string>
+  playerChampions!: Table<PlayerChampionData, [string, number]> // [puuid+champId]
 
   constructor() {
     super("MatchDB")
 
-    // version 1 was your original schema
     this.version(1).stores({
       matchData: `
         matchId,
@@ -23,7 +23,6 @@ export class MatchDexie extends Dexie {
       `,
     })
 
-    // version 2 adds the cursor table
     this.version(2).stores({
       matchCursor: `puuid, lastIndex`,
     })
@@ -34,7 +33,15 @@ export class MatchDexie extends Dexie {
         *participantIds
       `,
     })
+
+    this.version(4).stores({
+      playerChampions: `
+        &[puuid+championId],
+        puuid,
+        championId
+      `,
+    })
   }
 }
 
-export const matchDB = new MatchDexie()
+export const matchDB = new MatchDB()

@@ -151,6 +151,10 @@ export default defineNuxtConfig({
         cors: true,
         headers: { "Access-Control-Allow-Origin": "*" },
       },
+      "/supabase/**": {
+        cors: true,
+        headers: { "Access-Control-Allow-Origin": "*" },
+      },
     },
     typescript: {
       strict: false,
@@ -184,16 +188,19 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ["app/stores/**"],
   },
+
   runtimeConfig: {
+    supabasePooler: process.env.SUPABASE_POOLER,
+    riotApiKey: process.env.NUXT_RIOT_API,
     public: {
       baseUrl: process.env.BASE_URL || "http://localhost:8080",
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     },
-    riotApiKey: process.env.NUXT_RIOT_API,
-    supabaseAnonKey: process.env.SUPABASE_KEY,
-    supabasePooler: process.env.SUPABASE_POOLER,
-    supabaseUrl: process.env.SUPABASE_URL,
   },
+
   supabase: {
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
     redirectOptions: {
@@ -203,7 +210,6 @@ export default defineNuxtConfig({
       saveRedirectToCookie: true,
     },
     types: "./shared/types/database.types.ts",
-    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
   },
   typescript: {
@@ -223,6 +229,13 @@ export default defineNuxtConfig({
   vite: {
     build: {
       sourcemap: false,
+    },
+    optimizeDeps: {
+      include: ["@supabase/supabase-js"],
+      exclude: ["@modelcontextprotocol/sdk", "jose"],
+    },
+    ssr: {
+      external: ["@modelcontextprotocol/sdk", "jose"],
     },
     clearScreen: false,
     plugins: [tailwindcss()],

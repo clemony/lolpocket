@@ -17,5 +17,6 @@ export const REGIONINDEX = {
 }
 
 export function serverToRegion(region: string): string {
-  return `https://${REGIONINDEX[region]}.api.riotgames.com`
+  const r = region.toLowerCase() || "americas"
+  return `https://${REGIONINDEX[r]}.api.riotgames.com`
 }

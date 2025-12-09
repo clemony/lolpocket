@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/02/2025 03:27:49 AM CST
+// Updated Patch 15.23.1 - 12/05/2025 07:22:03 PM CST
 
 const rune: Rune = {
   "id": 8105,

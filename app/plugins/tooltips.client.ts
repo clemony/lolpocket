@@ -1,5 +1,6 @@
 // /app/plugins/tooltips.client.ts
 import { defineNuxtPlugin } from "#app"
+import { autoPlacement, type Alignment, type Placement } from "@floating-ui/dom"
 import {
   arrow,
   autoUpdate,
@@ -10,6 +11,7 @@ import {
 } from "@floating-ui/vue"
 import { createApp, h, markRaw, nextTick, shallowRef } from "vue"
 import TooltipArrow from "~/base/popup/tooltip/TooltipArrow.vue"
+import MiniTip from "~/components/common/ui/MiniTip.vue"
 
 export default defineNuxtPlugin(() => {
   if (typeof window === "undefined") return
@@ -25,6 +27,9 @@ export default defineNuxtPlugin(() => {
   const mounted = shallowRef(false) // DOM exists
   const shown = shallowRef(false) // visible (opacity / data-state)
 
+  const requestedPlacement = shallowRef<Placement>("top")
+  const requestedAlignment = shallowRef<Alignment>(null)
+
   const compRef = shallowRef<any | null>(null)
   const propsRef = shallowRef<Record<string, any>>({})
   const activeTrigger = shallowRef<HTMLElement | null>(null)
@@ -39,13 +44,10 @@ export default defineNuxtPlugin(() => {
     referenceEl,
     floatingEl,
     {
-      placement: "top",
+      placement: requestedPlacement,
       middleware: [
         offset(8),
-        flip({
-          fallbackPlacements: ["top", "right", "bottom", "left"],
-          fallbackAxisSideDirection: "end",
-        }),
+        flip({}),
         shift({ padding: 6 }),
         arrow({ element: arrowEl }),
       ],
@@ -58,34 +60,7 @@ export default defineNuxtPlugin(() => {
     const cached = cache.get(type)
     if (cached) return cached
 
-    let c: any
-    switch (type) {
-      case "item":
-        c = (await import("~/components/lol/items/display/ItemTooltip.vue"))
-          .default
-        break
-      case "champion":
-        c = (
-          await import("~/components/lol/champions/display/ChampionTooltip.vue")
-        ).default
-        break
-      case "ability":
-        c = (
-          await import("~/components/lol/champions/display/AbilityTooltip.vue")
-        ).default
-        break
-      case "spell":
-        c = (await import("~/components/lol/spells/SpellData.vue")).default
-        break
-      case "rune":
-        c = (await import("~/components/lol/runes/display/RuneData.vue"))
-          .default
-        break
-      default:
-        c = { render: () => "Unknown tooltip" }
-    }
-
-    c = markRaw(c)
+    const c = markRaw(MiniTip)
     cache.set(type, c)
     return c
   }
@@ -110,6 +85,7 @@ export default defineNuxtPlugin(() => {
               ...floatingStyles.value,
               zIndex: 9999,
               pointerEvents: "none",
+              "data-placement": placement.value,
               // ONLY transform moveTransition here (between triggers),
               // not entry animation.
               transition:
@@ -125,12 +101,11 @@ export default defineNuxtPlugin(() => {
                 class: "tippy-box ",
                 "data-inertia": "",
                 "data-state": shown.value ? "visible" : "hidden",
-                "data-theme": propsRef.value.theme ?? "datatip neutral",
+                "data-theme": propsRef.value.theme ?? "mini-tip neutral",
                 "data-placement": placement.value,
                 // tells CSS whether to run the shift-toward keyframes
                 "data-animate": animateIn.value ? "in" : "move",
                 style: {
-                  pointerEvents: "auto",
                   // opacity controlled here for entry/exit only
                   opacity: shown.value ? 1 : 0,
                 },
@@ -175,7 +150,7 @@ export default defineNuxtPlugin(() => {
 
   let hideTimer: number | null = null
   let longPressTimer: number | null = null
-  const HOT_SELECTOR = "[data-tip][data-id]"
+  const HOT_SELECTOR = "[data-tip]"
 
   function clearHideTimer() {
     if (hideTimer != null) {
@@ -199,6 +174,10 @@ export default defineNuxtPlugin(() => {
     const type = el.dataset.tip
     if (!type) return
 
+    // 👇 read the desired base placement from the trigger
+    const triggerPlacement = el.dataset.placement as Placement | undefined
+    requestedPlacement.value = triggerPlacement || "top"
+
     const isReenteringSame =
       shown.value && activeTrigger.value === el && activeType.value === type
 
@@ -208,42 +187,34 @@ export default defineNuxtPlugin(() => {
     isPositioned.value = false
 
     propsRef.value = {
-      id: el.dataset.id ? Number(el.dataset.id) : undefined,
-      ability: el.dataset.ability,
-      map: el.dataset.map ? Number(el.dataset.map) : undefined,
+      id: el.dataset.id,
+      label: el.dataset.tip,
       theme: el.dataset.theme,
+      class: el.dataset.class,
+      name: el.dataset.name,
+      tag: el.dataset.tag,
     }
+
     justShown.value = true
     visible.value = true
     mounted.value = true
-
-    // Decide if we should run shift-toward animation:
-    // - first time visible in this cycle -> animate
-    // - moving between triggers while already shown -> no animate
     animateIn.value = !shown.value && !isReenteringSame
 
     if (!visible.value || activeTrigger.value !== el) return
 
-    // Show shell, but keep opacity 0 until position is ready
     const component = await loadTooltip(type)
     compRef.value = component
 
     await nextTick()
-    // first computePosition for the current trigger
     await update()
 
-    // 👉 Now floating UI produced a real transform, allow animation
     requestAnimationFrame(() => {
       isPositioned.value = true
       justShown.value = false
     })
 
-    // user might have moved off meanwhile
-    if (activeTrigger.value !== el || activeType.value !== type) {
-      return
-    }
+    if (activeTrigger.value !== el || activeType.value !== type) return
 
-    // now that position is correct, fade in / run shift-toward
     shown.value = true
   }
 

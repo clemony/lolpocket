@@ -9,48 +9,38 @@ const route = useRoute()
 <template>
   <div
     class="
-      grid max-h-full w-84 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5
-      gap-y-0.5 justify-self-end overflow-hidden
+      ml-2 grid max-h-full w-full grid-flow-col grid-cols-2 grid-rows-5 gap-0.5 gap-y-0.5
+      justify-self-end overflow-hidden
     ">
     <BtnLink
       v-for="player in match.participants"
       :key="player.puuid"
+      data-tip="player"
+      :data-id="player.profileIcon"
+      data-placement="right"
+      :data-name="player.riotIdGameName"
+      :data-tag="`#${player.riotIdTagline}`"
       size="5"
       variant="link"
       :to="`/summoner/${player.puuid}`"
       :class="
-        cn('flex grow gap-2 overflow-hidden', {
+        cn('gap-2overflow-hidden flex size-full items-center text-1 font-medium tracking-tight text-nowrap normal-case', {
           'col-start-1': player.teamId === 100,
           'col-start-2 ': player.teamId === 200,
         })
       "
       @click.stop>
-      <div class="flex gap-2 overflow-hidden">
-        <ChampionIcon
-          v-if="player"
-          :id="player?.championId"
-          v-tippy="{
-            content: ix().champNameById(player?.championId),
-            placement: 'left',
-            theme: 'neutral one',
-          }"
-          size="sq-5"
-          alt="champion-icon"
-          class="shadow-xs dst" />
+      <ChampionIcon
+        v-if="player"
+        :id="player?.championId"
+        size="sq-5"
+        alt="champion-icon"
+        class="shadow-xs dst" />
 
-        <tippy
-          tag="a"
-          :content="player.riotIdGameName"
-          placement="right"
-          theme="neutral one"
-          :offset="[0, 16]"
-          class="
-            h-full w-full truncate text-1 font-medium tracking-tight text-nowrap
-            normal-case
-          ">
-          {{ player.riotIdGameName }}
-        </tippy>
-      </div>
+      <span
+        class="truncate">
+        {{ player.riotIdGameName }}
+      </span>
     </BtnLink>
   </div>
 </template>

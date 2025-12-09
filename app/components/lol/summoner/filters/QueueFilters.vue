@@ -2,7 +2,7 @@
 const { filter, setFilter, } = useSummonerInject()
 
 const queueModel = computed({
-  get: () => filter.value.queue,
+  get: () => filter?.value?.queue,
   set: val => setFilter('queue', val),
 })
 const tabClass = '!text-bc'

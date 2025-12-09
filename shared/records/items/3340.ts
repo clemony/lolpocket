@@ -1,7 +1,7 @@
 const item: Item =  {
   "name": "Stealth Ward",
   "id": 3340,
-  "rank": "Consumable",
+  "rank": "Trinket",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,

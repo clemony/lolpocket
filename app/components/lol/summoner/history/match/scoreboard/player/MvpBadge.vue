@@ -7,26 +7,28 @@ const lpScore = computed (() => match.ranking.findIndex(p => p === player.puuid)
 </script>
 
 <template>
-  <Badge
-    v-if="
-      player.puuid === match.mvp || player.puuid === match.ace
-    "
-    size="5"
-    :class="
-      cn('-mt-px gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
-         {
-           'border-g/40 bg-g ': player.puuid === match.mvp,
-           'bg-sorcery border-shade-sorcery/3': player.puuid === match.ace,
-         },
-      )
-    ">
-    {{ player.puuid === match.mvp ? "MVP" : "ACE" }}
-  </Badge>
+  <div class="flex w-10 items-center justify-end">
+    <Badge
+      v-if="
+        player.puuid === match.mvp || player.puuid === match.ace
+      "
+      size="5"
+      :class="
+        cn('-mt-px gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
+           {
+             'border-g/40 bg-as ': player.puuid === match.mvp,
+             'bg-sorcery border-shade-sorcery/3': player.puuid === match.ace,
+           },
+        )
+      ">
+      {{ player.puuid === match.mvp ? "MVP" : "ACE" }}
+    </Badge>
 
-  <Badge
-    v-else
-    size="5"
-    class="-mt-px px-1 text-1! leading-0 font-normal shadow-xs">
-    {{ lpScore }}{{ formatNumberPosition(lpScore) }}
-  </Badge>
+    <div
+      v-else
+      size="5"
+      class="-mt-px border-0 px-1 text-1! leading-0 font-normal">
+      {{ lpScore }}{{ formatNumberPosition(lpScore) }}
+    </div>
+  </div>
 </template>

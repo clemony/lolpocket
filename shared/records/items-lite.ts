@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/30/2025 03:52:39 PM CST
+// Updated Patch 15.23.1 - 12/05/2025 03:18:44 AM CST
 
 export const itemsLite: ItemLite[] = [
   {
@@ -4254,7 +4254,7 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {
@@ -4272,7 +4272,7 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {
@@ -4284,7 +4284,7 @@ export const itemsLite: ItemLite[] = [
       30
     ],
     "purchasable": false,
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {
@@ -4302,7 +4302,7 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {
@@ -4322,7 +4322,7 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {
@@ -4430,7 +4430,7 @@ export const itemsLite: ItemLite[] = [
     ],
     "cost": 0,
     "purchasable": false,
-    "rank": "Consumable",
+    "rank": "Trinket",
     "stats": {}
   },
   {

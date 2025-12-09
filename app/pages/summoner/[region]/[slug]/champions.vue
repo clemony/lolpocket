@@ -28,7 +28,7 @@ const state = useSummonerInject()
 const champQuery = ref<string | null>('')
 const sm = computed (() => my().summonerMastery[summoner.puuid]).value
 
-const noMastery = computed(() => {
+/* const noMastery = computed(() => {
   if (!sm.champions?.length)
     return
 
@@ -46,14 +46,14 @@ const noMastery = computed(() => {
   })
 })
 
-const list = computed(() => {
+ const list = computed(() => {
   return sm?.champions.concat(noMastery.value)
 })
 
 onMounted(() => {
   state.fetchMastery()
 })
-
+ */
 const masteryStats = [
   {
     title: 'Levels',
@@ -63,10 +63,10 @@ const masteryStats = [
     title: 'Points',
     data: sm?.totalPoints?.toLocaleString() ?? 0,
   },
-  {
+/*   {
     title: 'Champions Played',
     data: `${sm?.champions?.length ?? 0} / ${ix().champions?.length}`,
-  },
+  }, */
 ]
 </script>
 
@@ -114,10 +114,10 @@ const masteryStats = [
         </div>
       </article>
 
-      <MasteryGrid
+    <!--   <MasteryGrid
         v-if="list"
         :mastery="list"
-        :summoner />
+        :summoner /> -->
     </div>
   </div>
 </template>

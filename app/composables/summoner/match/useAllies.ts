@@ -63,8 +63,8 @@ export function useAllies(
   )
 
   return {
-    allies,
-    loading,
-    topAllies: topBayesianTeammates,
+    allies: allies.value,
+    loading: loading.value,
+    topAllies: topBayesianTeammates.value,
   }
 }

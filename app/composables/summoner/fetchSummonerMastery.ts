@@ -1,24 +1,25 @@
+import { fetchSummonerByPuuid } from "~~/server/api/riot"
+
 export interface ChampionMasteryResponse {
   puuid: string
-  mastery: ChampionMastery[]
+  mastery: PlayerChampionData[]
   totalLevels: number
   totalPoints: number
   // @fixme
 }
-export async function fetchSummonerMastery(puuid: string) {
-  if (!puuid) throw new Error("Missing puuid for mastery fetch")
-  /*
-  const summoner = ss().getSummoner(puuid);
-  const TWO_HOURS = 1000 * 60 * 60 * 2;
+export async function fetchSummonerMastery(summoner: Summoner) {
+  if (!summoner) throw new Error("Missing puuid for mastery fetch")
+
+  const TWO_HOURS = 1000 * 60 * 60 * 2
 
   const isStale = (timestamp?: number) =>
-    !timestamp || Date.now() - new Date(timestamp).getTime() > TWO_HOURS;
+    !timestamp || Date.now() - new Date(timestamp).getTime() > TWO_HOURS
 
-  const needsUpdate =
+  /*   const needsUpdate =
     !summoner?.mastery?.champions?.length ||
     !summoner?.mastery?.totalPoints ||
-    isStale(my().summonerMastery.updated);
- */
+    isStale(my().summonerMastery.updated) */
+
   // If nothing is stale or missing, return existing data
   /*  if (!needsUpdate) return summoner.mastery;
 

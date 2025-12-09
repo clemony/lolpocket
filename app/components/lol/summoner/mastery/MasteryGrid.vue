@@ -28,7 +28,7 @@ import { AgGridVue } from 'ag-grid-vue3'
 import { masteryGridTheme } from '~/utils/config/masteryTheme'
 
 const { mastery, summoner } = defineProps<{
-  mastery: ChampionMastery[]
+  mastery: PlayerChampionData[]
   summoner: Summoner
 }>()
 
@@ -42,7 +42,7 @@ const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
 
-const gridOptions: GridOptions<ChampionMastery> = {
+const gridOptions: GridOptions<PlayerChampionData> = {
   columnHoverHighlight: false,
   defaultColDef: {
     initialHide: false,
@@ -58,7 +58,7 @@ const gridOptions: GridOptions<ChampionMastery> = {
   rowHeight: 68,
 }
 
-const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
+const colDefs: (ColDef<PlayerChampionData> | ColGroupDef<PlayerChampionData>)[] = [
   {
     maxWidth: 360,
     minWidth: 180,
@@ -81,11 +81,11 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     cellRenderer: params =>
       `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-2 font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
     colId: 'champion',
-    field: 'id',
+    field: 'championId',
     headerClass:
       'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
     headerName: 'Champion',
-    valueFormatter: params => ix().champNameById(params.data.id),
+    valueFormatter: params => ix().champNameById(params.data.championId),
   },
   {
     cellClass: 'font-medium  ',

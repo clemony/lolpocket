@@ -1,18 +1,3 @@
-export interface ChampionStats {
-  id: number
-  name: string
-  assists: number
-  deaths: number
-  gamePatches: string[]
-  games: number
-  killParticipation: number
-  kills: number
-  losses: number
-  matchIndexes: number[]
-  winrate: number
-  wins: number
-}
-
 export interface BayesianChampion {
   assists: number
   deaths: number
@@ -52,7 +37,7 @@ export interface Teammate {
 }
 
 export interface MatchTeammatesReturn {
-  allies: Ref<Teammate[]>
-  loading: Ref<boolean>
-  topAllies: ComputedRef<Teammate[]>
+  allies: Teammate[]
+  loading: boolean
+  topAllies: Teammate[]
 }

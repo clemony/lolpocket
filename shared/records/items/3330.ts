@@ -1,7 +1,7 @@
 const item: Item =  {
   "name": "Scarecrow Effigy",
   "id": 3330,
-  "rank": "Consumable",
+  "rank": "Trinket",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,

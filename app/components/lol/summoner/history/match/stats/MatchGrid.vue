@@ -59,7 +59,7 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   },
   {
     children: [
-      { field: 'stats.kills.total', headerName: 'Kills', headerTooltip: 'Kills' },
+
       { field: 'stats.deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
       { field: 'stats.assists', headerName: 'Assists', headerTooltip: 'Assists' },
       { field: 'stats.kda', headerName: 'KDA', headerTooltip: 'KDA' },

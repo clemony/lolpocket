@@ -4,10 +4,12 @@ export interface MatchData {
   gameEndTimestamp: number
   gamePatch: number
   matchId: string
+  regionId: string
   participantIds: string[]
   participants: Player[]
   queueId: number
   teams: MatchTeam[]
+  lastAccessedAt?: number
 }
 
 export interface MatchDataCurrentPlayer extends MatchData {
@@ -26,6 +28,7 @@ export interface Player {
   teamId: number
   teamPosition: string
   championId: number
+  timeSpentDead: number
   //
   stats: PlayerStats
   //
@@ -38,59 +41,60 @@ export interface Player {
   utility: PlayerUtility
   farming: PlayerFarming
   vision: PlayerVision
-  mvpScore: number
   win: boolean
 }
-export interface PlayerStat {
-  name: string
-  value: number
-}
+
 export interface PlayerOffense {
-  totalDamage: PlayerStat
-  damagePercentage: PlayerStat
+  totalDamage: number
+  damagePercentage: number
 }
 
 export interface PlayerUtility {
-  effectiveHealingAndShielding: PlayerStat
-  totalAllyHealing: PlayerStat
-  totalAllyShielding: PlayerStat
-  allySaves: PlayerStat
+  effectiveHealingAndShielding: number
+  totalAllyHealing: number
+  totalAllyShielding: number
+  allySaves: number
 }
 
 export interface PlayerDefense {
-  totalDamageTaken: PlayerStat
-  damageTakenPercentage: PlayerStat
-  damageSelfMitigated: PlayerStat
-  ccDuration: PlayerStat
+  totalDamageTaken: number
+  damageTakenPercentage: number
+  damageSelfMitigated: number
+  ccDuration: number
 }
 
 export interface PlayerFarming {
-  goldEarned: PlayerStat
-  minionsKilled: PlayerStat
-  neutralMinionsKilled: PlayerStat
-  turretsKilled: PlayerStat
-  objectivesStolen: PlayerStat
+  goldEarned: number
+  minionsKilled: number
+  neutralMinionsKilled: number
+  turretsKilled: number
+  objectivesStolen: number
 }
 export interface PlayerVision {
-  visionScore: PlayerStat
-  wardsKilled: PlayerStat
-  wardsPlaced: PlayerStat
-  controlWardsPlaced: PlayerStat
+  visionScore: number
+  wardsKilled: number
+  wardsPlaced: number
+  controlWardsPlaced: number
 }
 
 export interface PlayerStats {
+  champLevel: number
   kills: {
-    total: number
-    killingSprees: number
-    tripleKills: number
-    doubleKills: number
-    quadraKills: number
-    pentaKills: number
+    expandable?: boolean
+    value: number
+    stats: {
+      killingSprees: number
+      tripleKills: number
+      doubleKills: number
+      quadraKills: number
+      pentaKills: number
+    }
   }
   deaths: number
   assists: number
   kda: number
   kp: number
+  mvpScore: number
 }
 
 export interface PlayerRunes {
@@ -124,24 +128,17 @@ export type PlayerSpells = {
 export interface MatchTeam {
   assists?: number
   deaths?: number
-  feats: {
-    EPIC_MONSTER_KILL: number
-    FIRST_BLOOD: number
-    FIRST_TURRET: number
-  }
   gold?: number
   goldSpent?: number
   kills?: number
-  objectives: {
-    atakhan: number
-    baron: number
-    champion: number
-    dragon: number
-    horde: number
-    inhibitor: number
-    riftHerald: number
-    tower: number
-  }
+  baron: number
+  elder: number
+  dragon: number
+  horde: number
+  inhibitor: number
+  riftHerald: number
+  tower: number
+  bans: number[]
   teamId: number
   win: boolean
 }

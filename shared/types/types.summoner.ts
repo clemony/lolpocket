@@ -9,16 +9,60 @@ export interface Identifier {
   tag?: string
 }
 
-export interface ChampionMastery {
-  id: number
+export interface PlayerChampionMastery {
   lastPlayed: number
   level: number
   points: number
 }
 
+export type TrackedQueueId = 400 | 420 | 440 | 0
+export type QueueKey = "all" | `${TrackedQueueId}`
+
+export interface QueueStats {
+  games: number
+  wins: number
+  losses: number
+
+  kills: number
+  deaths: number
+  assists: number
+  killParticipation: number
+
+  matchIds: string[]
+  gamePatches: number[]
+}
+
+export interface PlayerChampionData {
+  puuid: string
+  championId: number
+  championName: string
+  overall: QueueStats
+  queues: Record<QueueKey, QueueStats>
+
+  lastPlayed: number
+  level?: number
+  points?: number
+
+  lastAccessedAt?: number
+}
+
+export interface ChampionStats {
+  championId: number
+  championName: string
+  assists: number
+  deaths: number
+  gamePatches: number[]
+  games: number
+  kp: number
+  kills: number
+  losses: number
+  matchIndexes: number[]
+  winrate: number
+  wins: number
+}
+
 export interface SummonerMastery {
   puuid: string
-  champions: ChampionMastery[]
   totalLevels: number
   totalPoints: number
   updated: number
@@ -46,10 +90,4 @@ export interface RankedEntry {
   queue: string
   tier: string
   wins: number
-}
-
-export interface TopChampion {
-  key: string
-  name: string
-  splash: string
 }

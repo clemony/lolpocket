@@ -23,7 +23,6 @@ const shard = computed(() =>
     variant="base"
     hover="ghost"
     :style="{ '--shard-color': shard?.color }"
-    :title="shard?.description"
     :class="
       cn('group/shard relative grid shrink-0 place-items-center rounded-full border border-b2 shadow-black/5 drop-shadow-sm drop-shadow-black/5',
          {
@@ -34,7 +33,7 @@ const shard = computed(() =>
       )
     ">
     <slot />
-    <Icon
+    <!--    <Icon
       v-if="id"
       :name="`lp:${shard?.id}`"
       :alt="`shard-${shard?.name}`"
@@ -45,6 +44,10 @@ const shard = computed(() =>
              '!size-4.5': [5011, 5010, 5007].includes(id),
            }, iconClass,
         )
-      " />
+      " /> -->
+    <Img
+      :src="`/img/shards/${shard?.id}.webp`"
+      alt="icon"
+      class="size-6 shrink-0" />
   </Label>
 </template>

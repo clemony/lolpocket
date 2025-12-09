@@ -27,7 +27,7 @@ watchEffect(async () => {
 <template>
   <div
     v-if="rune"
-    :class=" cn('relative flex w-full flex-col justify-center py-3', className)">
+    :class=" cn('relative flex flex-col justify-center py-3', className)">
     <div class="flex w-full items-center gap-4 px-4 **:select-none">
       <button
 

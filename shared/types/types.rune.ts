@@ -1,9 +1,9 @@
-export type PathName
-  = | 'Precision'
-    | 'Domination'
-    | 'Sorcery'
-    | 'Resolve'
-    | 'Inspiration'
+export type PathName =
+  | "Precision"
+  | "Domination"
+  | "Sorcery"
+  | "Resolve"
+  | "Inspiration"
 
 export interface Rune {
   id: number
@@ -30,7 +30,7 @@ export interface RuneMin {
 
 export interface PathSlot {
   label: string
-  runes: RuneMin[]
+  runes: Rune[] | RuneMin[]
   tier: number
 }
 

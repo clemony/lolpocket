@@ -1,8 +1,11 @@
 import type { MatchReturn } from "~~/shared"
-export function useMatches(summoner: Ref<Summoner>) {
-  const { getMatchesForSummoner, addMatches, getCursor, setCursor } =
-    useIndexedDB()
-  const puuid = computed(() => summoner.value?.puuid)
+
+export function useMatches(summoner: Ref<Summoner | null>) {
+  const { getMatchesForSummoner, getCursor, setCursor } = useIndexedDB()
+
+  const puuid = computed(() => summoner.value?.puuid ?? null)
+  const region = computed(() => summoner.value?.region ?? null)
+
   const matches = shallowRef<MatchData[]>([])
   const loading = shallowRef(false)
   const endOfHistory = shallowRef(false)
@@ -10,9 +13,8 @@ export function useMatches(summoner: Ref<Summoner>) {
   const cursor = shallowRef<number>(0)
   const newestTs = shallowRef<number | null>(null)
 
-  // --- load local cache + persisted cursor
   async function loadFromDB() {
-    const id = toValue(puuid)
+    const id = puuid.value
     if (!id) return
 
     const local = await getMatchesForSummoner(id)
@@ -23,51 +25,45 @@ export function useMatches(summoner: Ref<Summoner>) {
     cursor.value = storedCursor.lastIndex
   }
 
-  // --- load newer matches from server
   async function loadNewer() {
-    const id = toValue(puuid)
-    const region = toValue(summoner.value.region)
-    if (!id || loading.value) return
+    const id = puuid.value
+    const r = region.value
+    if (!id || !r || loading.value) return
 
     loading.value = true
     try {
       const since = newestTs.value ?? 0
-      console.log("🥸 - loadNewer - since:", since)
+
       const res = await $fetch<MatchReturn>(`/api/riot/v5/match/newer`, {
-        query: { puuid: id, region, since },
+        query: { puuid: id, region: r, since },
       })
 
-      console.log("🥸 - loadNewer - res.matches.length:", res.matches.length)
       if (res.matches.length) {
-        console.log("🥸 - loadNewer -IN:", res.matches.length)
-        await addMatches(res.matches)
+        await useAddMatches(res.matches)
         matches.value.unshift(...res.matches)
         newestTs.value = res.newestTimestamp
       }
 
       if (res.cursor != null) {
         cursor.value = res.cursor
-        console.log("🥸 - loadNewer - cursor.value:", cursor.value)
         await setCursor(id, cursor.value)
       }
 
-      summoner.value.updatedMatch = Date.now()
+      if (summoner.value) summoner.value.updatedMatch = Date.now()
     } finally {
       loading.value = false
     }
   }
 
-  // older
-
   async function loadOlder() {
-    const id = toValue(puuid)
-    const region = toValue(summoner.value.region)
-    if (!id || loading.value || endOfHistory.value) return
+    const id = puuid.value
+    const r = region.value
+    if (!id || !r || loading.value || endOfHistory.value) return
 
     loading.value = true
     try {
       const res = await $fetch<MatchReturn>(`/api/riot/v5/match/older`, {
-        query: { puuid: id, region, cursor: cursor.value },
+        query: { puuid: id, region: r, cursor: cursor.value },
       })
 
       if (!res.matches.length) {
@@ -75,7 +71,7 @@ export function useMatches(summoner: Ref<Summoner>) {
         return
       }
 
-      await addMatches(res.matches)
+      await useAddMatches(res.matches)
       matches.value.push(...res.matches)
 
       if (res.cursor != null) {
@@ -89,7 +85,6 @@ export function useMatches(summoner: Ref<Summoner>) {
     }
   }
 
-  // --- reset state on puuid change
   watch(
     summoner,
     async () => {

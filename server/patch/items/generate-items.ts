@@ -1,6 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
-import type { ItemIndex, ItemLite } from "../.."
+import { capitalize, type ItemIndex, type ItemLite } from "../.."
 import { resolvePath } from "../resolvePath"
 import {
   formatStats,
@@ -143,11 +143,11 @@ export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), nul
 
 export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
-  fs.writeFileSync(
-    itemLiteOutput,
-    JSON.stringify(Object.values(simplified), null, 2)
-  )
+
+  fs.writeFileSync(itemLiteOutput, JSON.stringify(simplified, null, 2))
+
   fs.writeFileSync(tagsOutput, JSON.stringify([...uniqueTags].sort(), null, 2))
+
   fs.writeFileSync(
     ranksOutput,
     JSON.stringify([...uniqueRanks].sort(), null, 2)

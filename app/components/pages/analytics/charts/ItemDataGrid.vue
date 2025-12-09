@@ -42,7 +42,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
               <div
                 class="
                   flex w-fit self-center rounded-xl border border-black/10
-                  badge-xl px-2.5 font-semibold shadow-xs inset-shadow-sm
+                  px-2.5 badge-xl font-semibold shadow-xs inset-shadow-sm
                   drop-shadow-xs
                 "
                 :style="{

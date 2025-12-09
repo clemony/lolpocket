@@ -4,10 +4,6 @@ const { class: className, match, player } = defineProps<{
   class?: HTMLAttributes['class']
   match: MatchDataCurrentPlayer
 }>()
-
-const math = computed(() => {
-  return Math.round(((player.stats.kills.total + player.stats.assists) / player.stats.deaths) * 100)
-})
 </script>
 
 <template>
@@ -16,7 +12,7 @@ const math = computed(() => {
     <p
       class="
         inline-flex flex-nowrap items-center justify-end text-end text-4 leading-4 font-bold tracking-wide text-nowrap">
-      {{ player.stats.kills.total }}&thinsp;/&thinsp;
+      {{ player.stats.kills.value }}&thinsp;/&thinsp;
       <span class="inline text-shade-domination/10">
         {{ player.stats.deaths }}
       </span>
@@ -49,7 +45,7 @@ const math = computed(() => {
         </p>
 
         <p v-else>
-          {{ (math / 100).toFixed(1) }}
+          {{ player.stats.kda.toFixed(2) }}
           <span>&nbsp;KDA</span>
         </p>
       </div>

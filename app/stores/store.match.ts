@@ -5,7 +5,7 @@ export interface MatchFilter {
   ally?: string | null
   champion?: string | null
   patch?: number | null
-  queue?: number | null
+  queue?: TrackedQueueId
   ignoreRole?: boolean
   role?: string | null
   date?: MaybeRef<DateRange>
@@ -21,7 +21,7 @@ export const useMatchStore = defineStore("matchStore", () => {
     ally: null,
     champion: null,
     patch: null,
-    queue: 0,
+    queue: null,
     role: "ALL",
     date: {
       start: null,
@@ -35,7 +35,7 @@ export const useMatchStore = defineStore("matchStore", () => {
       ally: null,
       champion: null,
       patch: null,
-      queue: 0,
+      queue: null,
       role: "ALL",
       date: {
         start: null,

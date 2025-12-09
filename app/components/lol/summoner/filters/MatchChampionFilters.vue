@@ -1,40 +1,40 @@
 <script lang="ts" setup>
-const { champions, filter, setFilter } = await useSummonerInject()
+const { champions, setFilter } = useSummonerInject()
 
-const championModel = computed({
-  get: () => filter.value.champion,
-  set: val => setFilter('champion', val),
+const cModel = shallowRef<string>(null)
+const champs = computed (() => {
+  return champions?.value?.values().toArray()
 })
 </script>
 
 <template>
   <Listbox
-    v-if="champions"
-    v-model:model-value="championModel"
+    v-model:model-value="cModel"
     :multiple="false"
-    selection-behavior="replace"
+    selection-behavior="toggle"
+    @update:model-value="setFilter('champion', cModel)"
     @entry-focus.prevent>
     <ListboxContent
-      :class="cn('field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4', { 'pb-3': filter.champion })">
+      :class="cn('field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4', { 'pb-3': cModel })">
       <SlideInTopOutBottom
         group
         class="grid h-fit gap-1.5 overflow-hidden">
         <ListboxItem
-          v-for="champion in [...champions].slice(0, 6)"
-          :key="champion.name"
-          :value="filter.champion === champion.name ? '' : champion.name"
+          v-for=" champion in champs"
+          :key="champion?.championId"
+          :value="champion.championName"
           variant="ghost"
           hover="secondary"
           size="14"
-          class="peer group/c relative w-full gap-4! rounded-xl focus-visible:outline-0">
+          :class="cn('peer group/c relative w-full gap-4! rounded-xl focus-visible:outline-0', { hidden: cModel && cModel !== champion.championName })">
           <ChampionIcon
-            :id="champion.id"
-            :alt="champion.name"
+            :id="champion.championId"
+            :alt="champion.championName"
             class="size-12 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm" />
 
           <div class="grid grow gap-1 font-medium dst">
             <p class="self-end text-3!">
-              {{ champion.name }}
+              {{ champion.championName }}
             </p>
 
             <p
@@ -52,7 +52,6 @@ const championModel = computed({
 
             <p class="text-nowrap normal-case">
               {{ champion.games - champion.wins }} loss
-              <!--        {{ champion.games }} game{{ champion.games > 1 ? 's' : '' }} -->
             </p>
           </div>
           <div
@@ -63,7 +62,7 @@ const championModel = computed({
           </div>
 
           <Element
-            v-if="filter.champion === champion.name"
+            v-if="cModel === champion.championName"
             base="btn"
             wrapper-class=""
             size="c-6"
@@ -74,13 +73,13 @@ const championModel = computed({
           </Element>
         </ListboxItem>
         <div
-          v-if="filter.champion"
+          v-if="cModel"
           class="mx-4 flex gap-4 justify-self-end text-1">
           <span class="self-end opacity-50">
             ...filtered
           </span>
         </div>
-        <LilKrug v-if="!champions.length" />
+        <LilKrug v-if="!champs?.length" />
       </SlideInTopOutBottom>
     </ListboxContent>
   </Listbox>

@@ -45,7 +45,7 @@ const variants = {
       :variants="buttVariants"
       :class="
         cn('relative flex h-11 w-full max-w-full flex-row flex-nowrap items-center justify-start gap-3 p-0',
-          { 'pointer-events-none ': isYou },
+           { 'pointer-events-none ': isYou },
         )
       ">
       <div
@@ -68,10 +68,10 @@ const variants = {
           name="ph:heart-straight-fill"
           :class="
             cn('absolute size-5.5 text-b4 drop-shadow-sm dst drop-shadow-b2 transition-all duration-300 group-hover/follow:scale-120 group-hover/follow:text-tint-domination/40 group-hover/follow:opacity-90',
-              {
-                'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
-                  isFollowed,
-              },
+               {
+                 'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
+                   isFollowed,
+               },
             )
           " />
       </div>

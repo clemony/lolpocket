@@ -24,8 +24,8 @@ const skillOrder = computed(() => [
         v-for="ability, i in abilities?.filter(a => a.key !== 'R').sort((a, b) => timeline?.skills?.priority?.indexOf(a.key) - timeline?.skills?.priority.indexOf(b.key))"
         :key="i"
         data-tip="ability"
-        :data-id="match.player.championId"
-        :data-ability="ability.key"
+        :data-id="`${match.player.championId}${ability.key}`"
+
         :style="{
           order: 1 + (i * 2),
         }"
@@ -62,14 +62,16 @@ const skillOrder = computed(() => [
         <div class="grid h-7 w-full items-center font-mono font-[500] uppercase">
           {{ ability.key }}
         </div>
-        <Img
-          v-tippy="{ content: ability?.name, theme: 'neutral line', placement: 'top' }"
+        <div
           data-tip="ability"
-          :data-id="match.player.championId"
-          :data-ability="ability.key"
-          alt="icon"
-          :src="ability?.icon"
-          class="size-7 rounded-lg shadow-sm dss" />
+          data-placement="left"
+          :data-id="`${match.player.championId}${ability.key}`"
+          class="size-7 overflow-hidden rounded-md shadow-sm dss">
+          <Img
+            :alt="`${champNameById(match.player.championId)} ${ability.key} icon`"
+            :src="ability?.icon"
+            class="size-full" />
+        </div>
       </template>
     </div>
     <div class="flex h-full flex-col justify-evenly gap-1.25 rounded-lg">
@@ -96,14 +98,6 @@ const skillOrder = computed(() => [
             {{ i + 1 }}
           </div>
         </div>
-        <!--     <template v-if="timeline.skills.order.length < 18">
-            <div
-              v-for="i in (18 - timeline.skills.order.length)"
-              :key="i"
-              :style="{ gridColumnStart: i + timeline.skills.order.length }"
-              class="absolute grid size-7 ring-2 ring-b1">
-            </div>
-          </template> -->
       </div>
     </div>
   </Card>

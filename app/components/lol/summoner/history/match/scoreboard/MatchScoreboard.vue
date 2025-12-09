@@ -22,17 +22,11 @@ const teams = computed(() => {
     <!--   teammate -->
 
     <div class="size-full">
-      <template
+      <MatchTeammate
         v-for="(player, i) in teams.blue"
-        :key="i">
-        <MatchTeammate
-          :match
-          :player="player" />
-
-        <Separator
-          v-show="i !== 4"
-          class="my-0! bg-b3/60" />
-      </template>
+        :key="i"
+        :match
+        :player="player" />
     </div>
 
     <!-- red Stats -->
@@ -44,16 +38,11 @@ const teams = computed(() => {
     <!--   teammate -->
 
     <div class="size-full">
-      <template
+      <MatchTeammate
         v-for="(player, i) in teams.red"
-        :key="i">
-        <MatchTeammate
-          :player="player"
-          :match />
-        <Separator
-          v-show="i !== 4"
-          class="my-0! bg-b3/60" />
-      </template>
+        :key="i"
+        :player="player"
+        :match />
     </div>
   </div>
 </template>

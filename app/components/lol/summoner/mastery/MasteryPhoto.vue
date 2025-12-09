@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const { champion, championId } = defineProps<{
-  champion?: ChampionMastery | null
+  champion?: PlayerChampionData | null
   championId?: number
 }>()
 
-const name = computed(() => ix().champNameById(champion?.id ?? championId))
-const id = computed(() => champion?.id ?? championId)
+const name = computed(() => ix().champNameById(champion?.championId ?? championId))
+const id = computed(() => champion?.championId ?? championId)
 const level = computed(() =>
   champion?.level >= 10 ? 10 : champion?.level ? champion.level : 0,
 )

@@ -13,79 +13,63 @@ console.log('team: ', team)
 const elder = computed(() => {
   return teamObject[0].challenges.teamElderDragonKills
 })
+
+const objs = [
+  {
+    id: team.elder,
+    name: 'Elder',
+  },
+  {
+    id: team.baron,
+    name: 'Baron',
+  },
+
+  {
+    id: team.dragon,
+    name: 'Dragon',
+  },
+  {
+    id: team.riftHerald,
+    name: 'Herald',
+  },
+  {
+    id: team.horde,
+    name: 'Grub',
+  },
+  {
+    id: team.inhibitor,
+    name: 'Inhibitor',
+  },
+  {
+    id: team.tower,
+    name: 'Tower',
+  },
+]
 </script>
 
 <template>
-  <div
-    class=""
-    :class="
-      cn('0 grid grid-cols-5 justify-center **:font-semibold **:text-bc',
-        className,
-      )
-    ">
+  <div class="flex grow items-center justify-center">
     <div
-      v-tippy="'Dragon Kills'"
-      class="flex items-center gap-1">
-      <img
-        alt="dragons"
-        :src="`/img/ui/dragon-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm" />
+      :class="
+        cn('grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-bc',
+           className,
+        )
+      ">
+      <div
+        v-for="obj in objs"
+        :key="obj.name"
+        :data-tip="`${obj.name} kills`"
+        class="flex w-9 items-center gap-1">
+        <Img
+          size="sq-4.5"
+          :alt="`${obj.name} icon`"
+          :src="`/img/scoreboard/${obj.name.toLowerCase()}-${team.teamId}.webp`"
+          :class="cn('size-4 shrink-0 opacity-85 drop-shadow-sm', { 'size-5 -ml-2': obj.name === 'Tower', '-translate-y-px': obj.name === 'Grub', 'size-3.75': obj.name === 'Baron' })" />
 
-      <span>
-        {{ team.objectives.dragon.kills ?? 0 }}
-      </span>
-    </div>
-
-    <div
-      v-tippy="'Baron Kills'"
-      class="flex items-center gap-1">
-      <img
-        alt="baron"
-        :src="`/img/ui/baron-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm" />
-
-      <span class="w-7 max-w-7">
-        {{ team.objectives.baron.kills ?? 0 }}
-      </span>
-    </div>
-
-    <div
-      v-tippy="'Elder Dragon Kills'"
-      class="flex items-center gap-1">
-      <img
-        alt="elder"
-        :src="`/img/ui/elder-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm" />
-
-      <span class="w-7 max-w-7">
-        {{ team.objectives.baron.kills ?? 0 }}
-      </span>
-    </div>
-
-    <div
-      v-tippy="'Towers Taken'"
-      class="flex items-center gap-1">
-      <img
-        alt="towers"
-        :src="`/img/ui/tower-${team.teamId}.png`"
-        class="size-5 opacity-85 drop-shadow-sm" />
-
-      <span class="w-7 max-w-7">
-        {{ team.objectives.tower.kills }}
-      </span>
-    </div>
-
-    <div
-      v-tippy="'Inhibitors Taken'"
-      class="flex items-center gap-1">
-      <img
-        alt="inhibitors"
-        :src="`/img/ui/inhibitor-${team.teamId}.png`"
-        class="size-4 opacity-85 drop-shadow-sm" />
-
-      <span class="w-7 max-w-7">
-        {{ team.objectives.inhibitor.kills }}
-      </span>
+        <span :class="{ '-ml-1.25': obj.name === 'Tower' }">
+          {{ obj.id ?? 0 }}
+        </span>
+      </div>
     </div>
   </div>
 </template>

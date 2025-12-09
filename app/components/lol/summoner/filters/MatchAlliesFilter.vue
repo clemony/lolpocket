@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import { Motion, motion, stagger } from 'motion-v'
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const { allies, filter, loading, setFilter } = useSummonerInject()
 
 const allyModel = computed({
-  get: () => filter.value?.ally,
+  get: () => filter?.value?.ally,
   set: val => setFilter('ally', val),
 })
 
-const filterAllies = computed (() => filter.value?.ally ? allies?.value?.allies.filter(a => filter.value?.ally === a?.riotIdGameName) : allies?.value?.allies)
+const filterAllies = computed (() => filter?.value?.ally ? allies?.value?.allies.filter(a => filter.value?.ally === a?.riotIdGameName) : allies?.value?.allies)
 const winrateFormula = ref('absolute')
 </script>
 

@@ -2,8 +2,7 @@ export async function useFetchMatches(summoner: Summoner) {
   if (!summoner.puuid) throw new Error("puuid is null")
   if (!summoner.region) throw new Error("region is null")
 
-  const { getAllMatchIdsForPuuid, addMatches, getMatchesForSummoner } =
-    useIndexedDB()
+  const { getAllMatchIdsForPuuid, getMatchesForSummoner } = useIndexedDB()
 
   // Get all matches already stored for this summoner
   const existingIds = await getAllMatchIdsForPuuid(summoner.puuid)
@@ -15,7 +14,7 @@ export async function useFetchMatches(summoner: Summoner) {
 
   // Store new matches
   if (newMatches.length) {
-    await addMatches(newMatches)
+    await useAddMatches(newMatches)
 
     // ranked update if ranked matches are present
     const hasRanked = newMatches.some(

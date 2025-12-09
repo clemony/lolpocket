@@ -1,7 +1,7 @@
 const item: Item =  {
   "name": "Oracle Lens",
   "id": 3364,
-  "rank": "Consumable",
+  "rank": "Trinket",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,

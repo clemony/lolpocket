@@ -1,13 +1,21 @@
 import fs from "node:fs"
 import path from "node:path"
-import type { Champion } from "../../types/types.import"
+import type { Champion } from "../.."
 import { markUpdate, normalize, normalizeArray } from "../utils"
 
 const dataPath = path.resolve("./server/patch/champions/raw/champions-raw.json")
-const outputPos = path.resolve("./shared/constants/champions/position-to-champ.ts")
-const outputAtk = path.resolve("./shared/constants/champions/range-to-champp.ts")
-const outputResource = path.resolve("./shared/constants/champions/resource-to-champ.ts")
-const outputRoles = path.resolve("./shared/constants/champions/role-to-champ.ts")
+const outputPos = path.resolve(
+  "./shared/constants/champions/position-to-champ.ts"
+)
+const outputAtk = path.resolve(
+  "./shared/constants/champions/range-to-champp.ts"
+)
+const outputResource = path.resolve(
+  "./shared/constants/champions/resource-to-champ.ts"
+)
+const outputRoles = path.resolve(
+  "./shared/constants/champions/role-to-champ.ts"
+)
 const champions = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
   string,
   Champion
@@ -15,13 +23,19 @@ const champions = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
 
 type FilterMap = Record<string, number[]>
 
-const  positions: FilterMap= {}
- const  attackType: FilterMap={}
-  const  resource: FilterMap ={}
- const roles: FilterMap={}
+const positions: FilterMap = {}
+const attackType: FilterMap = {}
+const resource: FilterMap = {}
+const roles: FilterMap = {}
 
 for (const champ of Object.values(champions)) {
-  const { id, attackType: a, positions:p, resource:re = [], roles:r = [] } = champ
+  const {
+    id,
+    attackType: a,
+    positions: p,
+    resource: re = [],
+    roles: r = [],
+  } = champ
 
   if (!id) continue
 
@@ -52,7 +66,6 @@ fs.writeFileSync(
 
 export const resourceToChamp: Record<string, number[]> = ${JSON.stringify(resource, null, 2)}`
 )
-
 
 fs.writeFileSync(
   outputAtk,

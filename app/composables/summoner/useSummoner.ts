@@ -1,12 +1,41 @@
+import type { ShallowRef } from "vue"
+
+export interface SummonerProviderApi {
+  summoner: ShallowRef<Summoner | null>
+  account: ShallowRef<Account | null>
+  splash: ComputedRef<string | undefined>
+  matches: ShallowRef<MatchData[]>
+
+  loadSummoner: () => Promise<void>
+  resolveIdentifier: () => Promise<string | null>
+
+  filteredMatches: ComputedRef<MatchData[]>
+  setFilter: <K extends keyof MatchFilter>(
+    key: K,
+    value: MatchFilter[K]
+  ) => void
+  clearFilters: () => void
+  filter: ShallowRef<MatchFilter>
+
+  champions: Ref<Map<number, ChampionStats> | null>
+
+  allies: Ref<MatchTeammatesReturn | null>
+
+  loadNewer: () => Promise<void>
+  loadOlder: () => Promise<void>
+
+  loading: ComputedRef<boolean>
+  ready: Ref<boolean>
+}
+
 export const SummonerKey = Symbol("SummonerProvider")
-import { bgArt } from "#shared/data"
 
 export function useSummonerProvider(
-  identifierInput: MaybeRef<Identifier> | null
+  identifierInput: MaybeRef<Identifier | null> | null
 ) {
-  // reactive identity inputs
-
-  const identifier = shallowRef(toValue(identifierInput))
+  const identifier = shallowRef<Identifier | null>(
+    toValue(identifierInput) ?? null
+  )
   const puuid = shallowRef<string | null>(null)
   const summoner = shallowRef<Summoner | null>(null)
   const account = shallowRef<Account | null>(null)
@@ -14,25 +43,19 @@ export function useSummonerProvider(
   const loading = ref(false)
   const ready = ref(false)
 
-  // -- resolve identifier into a puuid ---------
-
   async function resolveIdentifier() {
     const value = identifier.value
     if (!value) return null
 
-    // already a puuid
     if (value.puuid) return value.puuid
 
-    // region/name/tag object
     const hit = ss().resolveBySlug(value.region, value.name, value.tag)
     if (hit) return hit.puuid
 
-    // fallback: fetch using the composite
     const fetched = await ss().ensureSummoner(value)
     return fetched.puuid
   }
 
-  // -- load full summoner once puuid known -----
   async function loadSummoner() {
     if (!puuid.value) return
 
@@ -42,14 +65,11 @@ export function useSummonerProvider(
     summoner.value = result
 
     account.value = await acc().getByPuuid(result.puuid)
-
     await refreshLocal()
 
     loading.value = false
     ready.value = true
   }
-
-  // ----- matches subsystem --------------------
 
   const {
     matches,
@@ -59,37 +79,51 @@ export function useSummonerProvider(
     loading: matchesLoading,
   } = useMatches(summoner)
 
-  const filters = useMatchFilters(puuid, matches)
+  const id = computed(() => puuid.value)
 
-  // ----- data --------------------
+  const { filteredMatches, setFilter, filter, clearFilters } = useMatchFilters(
+    id,
+    matches
+  )
 
-  const allies = ref<MatchTeammatesReturn>(null)
-  const champions = ref<ChampionStats[]>([])
+  const champions = computedAsync<Map<number, ChampionStats> | null>(
+    async () => {
+      const currentId = id.value
+      if (!currentId) return null
 
-  watch(
-    () => filters.filteredMatches.value,
-    () => {
-      champions.value = useBasicChampionStats(
-        unref(filters.filteredMatches.value),
-        puuid.value
-      )
-
-      allies.value = useAllies(puuid.value, filters.filteredMatches)
+      return await useChampionStats(currentId, filter.value?.queue)
     }
   )
 
-  // ----- background splash --------------------
+  const allies = ref<MatchTeammatesReturn>(null)
+  watch(
+    () => filteredMatches.value,
+    (val) => {
+      if (!puuid.value || !val?.length) {
+        allies.value = null
+        return
+      }
+      allies.value = useAllies(puuid.value, filteredMatches)
+    },
+    { immediate: true }
+  )
 
   const splash = computed(() => {
-    if (account.value?.splash) return account.value?.splash
-    const t = ix().champKeyById(champions.value[0]?.id)
-    if (t && t !== "0") {
-      return getSplash(t, "uncentered", getRandom(skinIndex[t]))
-    }
-    return getRandom(Object.values(bgArt))
-  })
+    if (account.value?.splash) return account.value.splash
 
-  // ---------- watcher logic -------------------
+    const arr = matches.value || []
+    if (!arr.length || !puuid.value) return undefined
+
+    const first = arr[0]
+    const self = first.participants?.find((p) => p.puuid === puuid.value)
+    if (!self) return undefined
+
+    const a = champKeyById(self.championId)
+    if (a && a !== "0")
+      return getSplash(a, "uncentered", getRandom(skinIndex[a]))
+
+    return undefined
+  })
 
   let resolveLock = false
 
@@ -98,10 +132,10 @@ export function useSummonerProvider(
     async () => {
       if (resolveLock) return
       resolveLock = true
+
       const next = await resolveIdentifier()
       if (next && next !== puuid.value) {
         puuid.value = next
-        filters.clearFilters()
         await loadSummoner()
       }
 
@@ -113,36 +147,26 @@ export function useSummonerProvider(
   watch(
     () => toValue(identifierInput),
     (next) => {
-      filters.clearFilters()
-      identifier.value = next
+      identifier.value = next ?? null
     },
     { immediate: true }
   )
 
-  // -------- public api ------------------------
-
-  const api = {
+  const api: SummonerProviderApi = {
     summoner,
     account,
     splash,
     matches,
-    filteredMatches: filters.filteredMatches,
-    //filteredChampionList,
     loadSummoner,
     resolveIdentifier,
-
-    fetchMastery: async () => {
-      if (!puuid.value) return null
-      return await fetchSummonerMastery(puuid.value)
-    },
-
+    filteredMatches,
+    clearFilters,
+    setFilter,
+    filter,
     champions,
-    // roles,
     allies,
-    ...filters,
     loadNewer,
     loadOlder,
-
     loading: computed(() => loading.value || matchesLoading.value),
     ready,
   }
@@ -150,13 +174,9 @@ export function useSummonerProvider(
   provide(SummonerKey, api)
   return api
 }
-export function useSummonerInject() {
-  const api = inject<SummonerInject>(SummonerKey)
 
-  if (!api) {
-    throw new Error(
-      "No Summoner provider found. Make sure provideSummoner is called in a parent component."
-    )
-  }
+export function useSummonerInject() {
+  const api = inject<SummonerProviderApi>(SummonerKey)
+  if (!api) throw new Error("No Summoner provider found.")
   return api
 }

@@ -1,15 +1,8 @@
 <script lang="ts" setup>
 const { match } = defineProps<{
   match: MatchDataCurrentPlayer
+  timeline: PlayerTimeline
 }>()
-const { summoner } = useSummonerInject()
-const { getTimeline } = useTimeline()
-
-const timeline = ref<PlayerTimeline>(null)
-onMounted (async () => {
-  if (summoner.value && match)
-    timeline.value = await getTimeline(match.matchId, summoner.value.region, summoner.value.puuid)
-})
 </script>
 
 <template>

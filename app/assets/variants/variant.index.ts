@@ -148,10 +148,6 @@ export const labelVariants = tv({
 })
 
 export const elementVariants = tv({
-  defaultVariants: {
-    disabled: "disabled",
-    states: "states",
-  },
   extend: baseVariants,
 })
 

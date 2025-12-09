@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/03/2025 04:51:38 PM CST
+// Updated Patch 15.23.1 - 12/05/2025 03:19:44 AM CST
 
 export const itemRank: Record<number, string> = {
   "1001": "Boots",
@@ -173,16 +173,16 @@ export const itemRank: Record<number, string> = {
   "3211": "Epic",
   "3222": "Legendary",
   "3302": "Legendary",
-  "3330": "Consumable",
-  "3340": "Consumable",
-  "3348": "Consumable",
-  "3363": "Consumable",
-  "3364": "Consumable",
+  "3330": "Trinket",
+  "3340": "Trinket",
+  "3348": "Trinket",
+  "3363": "Trinket",
+  "3364": "Trinket",
   "3400": "Special",
   "3430": "Legendary",
   "3504": "Legendary",
   "3508": "Legendary",
-  "3513": "Consumable",
+  "3513": "Trinket",
   "3599": "Starter",
   "3742": "Legendary",
   "3748": "Legendary",

@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/30/2025 03:52:39 PM CST
+// Updated Patch 15.23.1 - 12/05/2025 03:18:44 AM CST
 
 export const itemIndex: ItemIndex[] = [
   {

@@ -33,11 +33,6 @@ export function useChampions({
   return {
     bayesian: () => useBayesianChampionStats(matches, puuid),
     liteChampionStats: liteChampionStats.value,
-    singleBayesian: (championName: string) =>
-      useSingleBayesianChampionStats(matches, championName, puuid),
-    singleStat: (championName: string) =>
-      useSingleChampionStats(matches, championName, puuid),
-    stats: () => useBasicChampionStats(matches, puuid),
     top: () => topChampion.value,
   }
 }

@@ -26,6 +26,10 @@ const tabs = {
     component: MatchBuild,
   },
 }
+
+const { getTimeline } = useTimeline()
+
+const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId, match.player.puuid)
 </script>
 
 <template>
@@ -58,11 +62,12 @@ const tabs = {
       </TabsList>
 
       <div
-        class="m-0!">
+        class="relative m-0! max-h-190 w-full overflow-x-hidden overscroll-auto">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"
-          :match="match" />
+          :match="match"
+          :timeline />
       </div>
     </Tabs>
   </LazyCollapsibleContent>

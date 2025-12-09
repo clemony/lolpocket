@@ -5,7 +5,7 @@ const { class: className, player } = defineProps<{
 }>()
 
 const cs = computed(() => {
-  return player.farming.minionsKilled.value + player.farming.neutralMinionsKilled.value
+  return player.farming.minionsKilled + player.farming.neutralMinionsKilled
 })
 </script>
 
@@ -28,7 +28,7 @@ const cs = computed(() => {
     <p
       v-tippy="'Gold Earned'"
       class="flex items-center gap-1 decoration-1 hover:underline">
-      {{ player.farming.goldEarned.value.toLocaleString() }}
+      {{ player.farming.goldEarned.toLocaleString() }}
       <span class="font-mono">G</span>
     </p>
   </div>

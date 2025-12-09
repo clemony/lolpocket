@@ -1,7 +1,7 @@
 const item: Item =  {
   "name": "Eye of the Herald",
   "id": 3513,
-  "rank": "Consumable",
+  "rank": "Trinket",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,

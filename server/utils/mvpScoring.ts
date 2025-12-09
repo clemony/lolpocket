@@ -1,35 +1,4 @@
 // mvpScoring.ts
-export interface MvpStats {
-  puuid: string
-  assists: number
-  challenges: {
-    killParticipation: number
-    teamDamagePercentage: number
-    damageTakenOnTeamPercentage: number
-    saveAllyFromDeath: number
-  }
-  championId: number
-  damageSelfMitigated: number
-  deaths: number
-  dragonKills: number
-  effectiveHealAndShielding: number
-  goldEarned: number
-  kills: number
-  matchId: string
-  objectivesStolen: number
-  teamId: number
-  teamPosition: string
-  timeCCingOthers: number
-  totalDamageDealtToChampions: number
-  totalDamageShieldedOnTeammates: number
-  totalDamageTaken: number
-  totalHealsOnTeammates: number
-  totalMinionsKilled: number
-  turretKills: number
-  visionScore: number
-  win: boolean
-}
-
 const roleWeights: Record<string, Record<string, number>> = {
   BOTTOM: {
     assists: 5,
@@ -40,16 +9,21 @@ const roleWeights: Record<string, Record<string, number>> = {
     effectiveHealAndShielding: 0,
     goldEarned: 15,
     killParticipation: 6,
-    kills: 20,
     objectivesStolen: 0,
     saveAllyFromDeath: 0,
-    teamDamagePercentage: 7,
     timeCCingOthers: 5,
-    totalDamageDealtToChampions: 20,
     totalDamageTaken: 0,
     totalMinionsKilled: 15,
     turretKills: 5,
     visionScore: 3,
+    kills: 16,
+    totalDamageDealtToChampions: 14,
+    teamDamagePercentage: 10,
+    laneMinionsFirst10Minutes: 6,
+    maxCsAdvantageOnLaneOpponent: 5,
+    damageDealtToBuildings: 4,
+    damagePerGold: 6,
+    objectiveImpact: 5,
   },
   JUNGLE: {
     assists: 15,
@@ -70,6 +44,12 @@ const roleWeights: Record<string, Record<string, number>> = {
     totalMinionsKilled: 6,
     turretKills: 4,
     visionScore: 5,
+    jungleCsBefore10Minutes: 7,
+    damageDealtToEpicMonsters: 10, // objective control MVP stat
+    pickKillWithAlly: 6,
+    immobilizeAndKillWithAlly: 4,
+    damagePerGold: 5,
+    objectiveImpact: 10,
   },
   MIDDLE: {
     assists: 10,
@@ -83,13 +63,17 @@ const roleWeights: Record<string, Record<string, number>> = {
     kills: 15,
     objectivesStolen: 0,
     saveAllyFromDeath: 0,
-    teamDamagePercentage: 5,
     timeCCingOthers: 5,
-    totalDamageDealtToChampions: 20,
     totalDamageTaken: 5,
     totalMinionsKilled: 12,
     turretKills: 5,
     visionScore: 5,
+    totalDamageDealtToChampions: 14,
+    teamDamagePercentage: 10,
+    laningPhaseGoldExpAdvantage: 8,
+    killAfterHiddenWithAlly: 5,
+    pickKillWithAlly: 4,
+    damagePerGold: 8,
   },
   TOP: {
     assists: 10,
@@ -110,16 +94,20 @@ const roleWeights: Record<string, Record<string, number>> = {
     totalMinionsKilled: 10,
     turretKills: 5,
     visionScore: 5,
+    damageDealtToBuildings: 8,
+    maxCsAdvantageOnLaneOpponent: 6,
+    laningPhaseGoldExpAdvantage: 5,
+    objectiveImpact: 8,
   },
   UTILITY: {
-    assists: 20,
+    assists: 14,
     damageSelfMitigated: 10,
     damageTakenOnTeamPercentage: 3,
     deathsInverse: 10,
     dragonKills: 2,
     effectiveHealAndShielding: 20,
     goldEarned: 5,
-    killParticipation: 6,
+    killParticipation: 10,
     kills: 5,
     objectivesStolen: 0,
     saveAllyFromDeath: 5,
@@ -129,43 +117,32 @@ const roleWeights: Record<string, Record<string, number>> = {
     totalDamageTaken: 10,
     totalMinionsKilled: 0,
     turretKills: 2,
-    visionScore: 10,
+    visionScore: 8,
+    pickKillWithAlly: 10,
+    immobilizeAndKillWithAlly: 8,
+    killAfterHiddenWithAlly: 4,
   },
+}
+
+export type MvpStats = {
+  puuid: string
+  teamPosition: string
+  win: boolean
+  deaths: number
+  [key: string]: number | string | boolean
 }
 
 export function normalizeStat(players: MvpStats[], role: string, key: string) {
   const values = players
-    .filter((p) => p.teamPosition?.toUpperCase() === role)
-    .map((p) => {
-      if (key === "effectiveHealAndShielding") {
-        return (
-          (p.totalHealsOnTeammates || 0) +
-          (p.totalDamageShieldedOnTeammates || 0)
-        )
-      }
-      if (key === "deathsInverse") {
-        return p.deaths === 0 ?
-            Math.max(...players.map((pp) => pp.deaths || 1))
-          : 1 / p.deaths
-      }
-      return (p[key as keyof MvpStats] as number) || 0
-    })
+    .filter((p) => String(p.teamPosition)?.toUpperCase() === role)
+    .map((p) => Number(p[key]) || 0)
 
   const min = Math.min(...values)
   const max = Math.max(...values)
 
   return (player: MvpStats) => {
-    let val = 0
-    if (key === "effectiveHealAndShielding") {
-      val =
-        (player.totalHealsOnTeammates || 0) +
-        (player.totalDamageShieldedOnTeammates || 0)
-    } else if (key === "deathsInverse") {
-      val = player.deaths === 0 ? max : 1 / player.deaths
-    } else {
-      val = (player[key as keyof MvpStats] as number) || 0
-    }
-    if (max === min) return 0.5
+    const val = Number(player[key]) || 0
+    if (max === min) return max === 0 ? 0 : 0.5
     return (val - min) / (max - min)
   }
 }
@@ -176,9 +153,15 @@ export function calculateMvpScores(players: MvpStats[]) {
   const roles = Object.keys(roleWeights)
   for (const role of roles) {
     const rolePlayers = players.filter(
-      (p) => p.teamPosition?.toUpperCase() === role
+      (p) => String(p.teamPosition)?.toUpperCase() === role
     )
     if (!rolePlayers.length) continue
+
+    for (const stat in roleWeights[role]) {
+      if (!(stat in rolePlayers[0])) {
+        console.warn(`[MVP] Missing stat "${stat}" for role "${role}"`)
+      }
+    }
 
     const normalizers: Record<string, (p: MvpStats) => number> = {}
     for (const stat in roleWeights[role]) {
@@ -200,17 +183,28 @@ export function calculateMvpScores(players: MvpStats[]) {
     }
   }
 
-  const values = Object.values(scores)
-  const min = Math.min(...values)
-  const max = Math.max(...values)
-
   const scaledScores: Record<string, number> = {}
-  for (const [puuid, raw] of Object.entries(scores)) {
-    if (max === min) {
-      scaledScores[puuid] = 5
-    } else {
-      scaledScores[puuid] =
-        Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
+
+  for (const role of roles) {
+    const rolePlayers = players.filter(
+      (p) => String(p.teamPosition)?.toUpperCase() === role
+    )
+    if (!rolePlayers.length) continue
+
+    const roleValues = rolePlayers.map((p) => scores[p.puuid])
+    const min = Math.min(...roleValues)
+    const max = Math.max(...roleValues)
+
+    for (const p of rolePlayers) {
+      const raw = scores[p.puuid]
+
+      if (max === min) {
+        scaledScores[p.puuid] = 5
+      } else {
+        const linear = (raw - min) / (max - min)
+        const curved = Math.pow(linear, 1.25) // harder to hit 1.0
+        scaledScores[p.puuid] = Math.round((curved * 8 + 2) * 10) / 10
+      }
     }
   }
 

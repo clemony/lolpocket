@@ -29,17 +29,15 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keyst
     </div>
 
     <Element
+      :data-id="s?.name"
+      data-tip="path"
       size="c-6"
       class="relative grid shrink-0 place-items-center transition-all duration-300 hover:scale-120">
       <img
         v-if="s?.name"
-        v-tippy="{ content: s?.name,
-                   placement: 'right',
-                   theme: 'neutral line' }"
         :alt="s?.name"
         :src="`/img/paths/${s?.name}.webp`"
-        class="ml-px h-4.75 w-auto place-self-center dst"
-        :class="{ 'h-4.25!': s?.name === 'Inspiration', '-translate-x-px': ['Inspiration', 'Precision'].includes(s?.name) }" />
+        class="h-4.75 w-auto place-self-center dst" />
     </Element>
   </div>
 </template>

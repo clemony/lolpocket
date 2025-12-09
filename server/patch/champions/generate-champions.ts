@@ -78,6 +78,8 @@ if (FRESH) savepoints[SCRIPT_KEY] = []
 
 const completed = new Set<string>(RESUME ? savepoints[SCRIPT_KEY] || [] : [])
 
+const abilityIdToName: Record<string, string> = {}
+
 // ---------- Champion processing ----------
 for (const [key, champ] of Object.entries(merakiData)) {
   if (!champ) {
@@ -147,6 +149,8 @@ for (const [key, champ] of Object.entries(merakiData)) {
         `${champ.key}${ability.key}.ts`
       )
 
+      abilityIdToName[`${champ.id}${ability.key}`] = ability.name
+
       fs.writeFileSync(
         abilityFile,
         `// ${markUpdate()}
@@ -211,6 +215,15 @@ export default ability
     fs.writeFileSync(
       outputTsPath,
       `// ${markUpdate()}\n\nconst champion: Champion = ${JSON.stringify(stripEmpty(champData), null, 2)}\nexport default champion`
+    )
+
+    // ---------- Write individual champion file ----------
+    const outputAbilityId = path.resolve(
+      "./shared/constants/champions/ability-id-to-name.ts"
+    )
+    fs.writeFileSync(
+      outputAbilityId,
+      `// ${markUpdate()}\n\nexport const abilityIdToName: Record<string, string> = ${JSON.stringify(abilityIdToName, null, 2)}`
     )
 
     // ---------- Update savepoint ----------

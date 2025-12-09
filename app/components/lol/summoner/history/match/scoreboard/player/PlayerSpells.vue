@@ -3,13 +3,6 @@ const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
 }>()
-
-const spells = computed(() => {
-  return {
-    sum1: spellbook[player?.spells[0]].name,
-    sum2: spellbook[player?.spells[1]].name,
-  }
-})
 </script>
 
 <template>
@@ -17,22 +10,12 @@ const spells = computed(() => {
     class=""
     :class="cn('flex shrink-0 flex-col items-center gap-1.5', className)">
     <img
-      v-tippy="{ content: spells?.sum1,
-                 placement: 'right',
-                 theme: 'neutral' }"
-      :alt="String(spells?.sum1)"
-      :src="`/img/spells/${player?.spells[0]}.webp`"
-      class="
-        size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
-        duration-300 hover:scale-105 hover:ring
-      " />
-
-    <img
-      v-tippy="{ content: spells?.sum2,
-                 placement: 'right',
-                 theme: 'neutral' }"
-      :alt="String(spells?.sum2)"
-      :src="`/img/spells/${player?.spells[1]}.webp`"
+      v-for="spell in player?.spells"
+      :key="spell"
+      :data-id="spell"
+      data-tip="spell"
+      :alt="String(spell)"
+      :src="`/img/spells/${spell}.webp`"
       class="
         size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
         duration-300 hover:scale-105 hover:ring

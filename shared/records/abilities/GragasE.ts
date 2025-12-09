@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/30/2025 12:23:55 PM CST
+// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
 
 const ability: Ability = {
   "key": "E",

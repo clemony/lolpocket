@@ -11,7 +11,7 @@ const { class: className, team } = defineProps<{
     :class="cn('flex w-26 flex-nowrap justify-items-start', className)">
     <p
       class="
-        grid inline-flex flex-nowrap items-center justify-start text-3
+         inline-flex flex-nowrap items-center justify-start text-3
         font-semibold tracking-tight text-nowrap
       ">
       {{ team.kills }}
