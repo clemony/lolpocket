@@ -1,27 +1,23 @@
 <script setup lang="ts">
+import { fromAbsolute, getLocalTimeZone } from '@internationalized/date'
+
 const { params } = defineProps<{
   params: any
 }>()
+
+const patch = computed (() => getPatchForDate(fromAbsolute(params.data.lastPlayed, getLocalTimeZone())))
 </script>
 
 <template>
   <div
     v-if="params.data.lastPlayed"
-    class="
-      relative flex size-full flex-col justify-center gap-1 *:flex
-      *:items-center *:gap-3
-    ">
-    <p>
-      <icon
-        name="lucide:calendar"
-        class="-mt-0.25 size-3.5 align-middle opacity-80 dst **:stroke-[2.1]" />
-      {{ useDateFormat(params.data.lastPlayed, "MMM DD, YYYY").value }}
-    </p>
-    <p>
-      <icon
-        name="lucide:clock"
-        class="size-3.5 align-text-bottom opacity-80 dst **:stroke-[2.4]" />
-      {{ useDateFormat(params.data.lastPlayed, "h:mm a").value }}
-    </p>
+    :data-tip="`${useDateFormat(params.data.lastPlayed, 'h:mm a').value}
+    Patch ${patch} ${patchIndex[0].match(patch) ? ' 🟢' : patchIndex[1].match(patch) ? ' 🟡' : patchIndex[2] === patch ? ' 🟠' : ' 🔴'}
+    `"
+    class="grid size-full grid-cols-[1fr_20px] items-center justify-end justify-items-end py-2 text-end text-2!">
+    {{ useDateFormat(params.data.lastPlayed, "M/DD/YY").value }}
+    <Icon
+      name="lucide:calendar"
+      class="col-start-2 -mt-0.25 size-3.5 opacity-60 **:stroke-[2.8]" />
   </div>
 </template>

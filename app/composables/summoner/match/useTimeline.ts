@@ -24,7 +24,11 @@ export function useTimeline() {
     const payload: MatchTimeline = {
       matchId,
       players,
+      participantIds: Object.keys(players), // REQUIRED
+      lastAccessedAt: Date.now(),
     }
+
+    await matchDB.matchTimeline.put(payload)
 
     // 3. Store full match once
     await putMatchTimeline(matchId, payload)
@@ -33,6 +37,19 @@ export function useTimeline() {
     if (!player) throw new Error(`timeline missing for puuid: ${puuid}`)
 
     return player
+  }
+
+  const getAllTimelinesForPuuid = async (
+    puuid: string
+  ): Promise<PlayerTimeline[]> => {
+    const rows = await matchDB.matchTimeline
+      .where("participantIds")
+      .equals(puuid)
+      .toArray()
+
+    return rows
+      .map((r) => r.players?.[puuid])
+      .filter((t): t is PlayerTimeline => !!t)
   }
 
   const getBulkTimelines = async (
@@ -58,6 +75,8 @@ export function useTimeline() {
     const payload: MatchTimeline = {
       matchId,
       players,
+      participantIds: Object.keys(players), // REQUIRED
+      lastAccessedAt: Date.now(),
     }
 
     await putMatchTimeline(matchId, payload)
@@ -67,6 +86,7 @@ export function useTimeline() {
 
   return {
     getTimeline,
+    getAllTimelinesForPuuid,
     getBulkTimelines,
   }
 }

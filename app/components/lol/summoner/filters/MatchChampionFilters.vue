@@ -3,7 +3,7 @@ const { champions, setFilter } = useSummonerInject()
 
 const cModel = shallowRef<string>(null)
 const champs = computed (() => {
-  return champions?.value?.values().toArray()
+  return champions?.value?.values().toArray().sort((a, b) => b.games - a.games)
 })
 </script>
 
@@ -15,10 +15,10 @@ const champs = computed (() => {
     @update:model-value="setFilter('champion', cModel)"
     @entry-focus.prevent>
     <ListboxContent
-      :class="cn('field-box w-full gap-0 space-y-4 overflow-hidden px-2 py-4', { 'pb-3': cModel })">
+      :class="cn('field-box h-fit max-h-98 w-full gap-0 space-y-4 overflow-y-scroll px-2 py-4', { 'pb-3': cModel })">
       <SlideInTopOutBottom
         group
-        class="grid h-fit gap-1.5 overflow-hidden">
+        class="grid h-fit w-full gap-1.5">
         <ListboxItem
           v-for=" champion in champs"
           :key="champion?.championId"

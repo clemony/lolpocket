@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { AnimatePresence, motion } from 'motion-v'
-
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()

@@ -5,37 +5,76 @@ export interface SummonerProviderApi {
   account: ShallowRef<Account | null>
   splash: ComputedRef<string | undefined>
   matches: ShallowRef<MatchData[]>
-
   loadSummoner: () => Promise<void>
   resolveIdentifier: () => Promise<string | null>
-
   filteredMatches: ComputedRef<MatchData[]>
   setFilter: <K extends keyof MatchFilter>(
     key: K,
     value: MatchFilter[K]
   ) => void
   clearFilters: () => void
+  filterEmpty: () => boolean
   filter: ShallowRef<MatchFilter>
-
   champions: Ref<Map<number, ChampionStats> | null>
-
-  allies: Ref<MatchTeammatesReturn | null>
-
+  allies: () => Promise<Teammate[]>
+  mastery: () => Promise<PlayerChampionMastery[]>
   loadNewer: () => Promise<void>
   loadOlder: () => Promise<void>
-
   loading: ComputedRef<boolean>
+  loadingOlder: Ref<boolean>
   ready: Ref<boolean>
+  whenReady: () => Promise<void>
 }
 
 export const SummonerKey = Symbol("SummonerProvider")
 
-export function useSummonerProvider(
-  identifierInput: MaybeRef<Identifier | null> | null
-) {
-  const identifier = shallowRef<Identifier | null>(
-    toValue(identifierInput) ?? null
+export function useSummonerProvider() {
+  function whenReady() {
+    if (ready.value) return Promise.resolve()
+
+    return new Promise<void>((resolve) => {
+      const stop = watch(
+        ready,
+        (v) => {
+          if (v) {
+            stop()
+            resolve()
+          }
+        },
+        { immediate: true }
+      )
+    })
+  }
+  const route = useRoute()
+
+  const identifier = shallowRef<Identifier | null>(null)
+
+  watch(
+    () => route.fullPath,
+    () => {
+      const { puuid, region, slug } = route.params
+
+      if (puuid) {
+        identifier.value = { puuid: String(puuid) }
+        return
+      }
+
+      if (region && slug) {
+        const [name, tag] = String(slug).split("_")
+
+        identifier.value = {
+          name: name.toLowerCase(),
+          region: String(region).toLowerCase(),
+          tag: tag.toLowerCase(),
+        }
+        return
+      }
+
+      identifier.value = null
+    },
+    { immediate: true }
   )
+
   const puuid = shallowRef<string | null>(null)
   const summoner = shallowRef<Summoner | null>(null)
   const account = shallowRef<Account | null>(null)
@@ -57,18 +96,26 @@ export function useSummonerProvider(
   }
 
   async function loadSummoner() {
-    if (!puuid.value) return
+    if (!puuid.value) {
+      ready.value = true
+      return
+    }
 
     loading.value = true
+    try {
+      const result = await ss().resolveOrFetch(puuid.value)
+      summoner.value = result
+      account.value = await acc().getByPuuid(result.puuid)
+      await refreshLocal()
+    } finally {
+      loading.value = false
+      ready.value = true
+    }
+  }
 
-    const result = await ss().resolveOrFetch(puuid.value)
-    summoner.value = result
-
-    account.value = await acc().getByPuuid(result.puuid)
-    await refreshLocal()
-
-    loading.value = false
-    ready.value = true
+  async function mastery(): Promise<PlayerChampionMastery[]> {
+    await whenReady()
+    return await getOrFetchAllMastery(puuid.value!, summoner.value!.region)
   }
 
   const {
@@ -76,15 +123,13 @@ export function useSummonerProvider(
     loadNewer,
     loadOlder,
     refreshLocal,
+    loadingOlder,
     loading: matchesLoading,
   } = useMatches(summoner)
 
   const id = computed(() => puuid.value)
 
-  const { filteredMatches, setFilter, filter, clearFilters } = useMatchFilters(
-    id,
-    matches
-  )
+  const { filteredMatches, filter, ...rest } = useMatchFilters(id, matches)
 
   const champions = computedAsync<Map<number, ChampionStats> | null>(
     async () => {
@@ -95,18 +140,10 @@ export function useSummonerProvider(
     }
   )
 
-  const allies = ref<MatchTeammatesReturn>(null)
-  watch(
-    () => filteredMatches.value,
-    (val) => {
-      if (!puuid.value || !val?.length) {
-        allies.value = null
-        return
-      }
-      allies.value = useAllies(puuid.value, filteredMatches)
-    },
-    { immediate: true }
-  )
+  async function allies(): Promise<Teammate[]> {
+    await whenReady()
+    return await useAllies(puuid.value, filteredMatches)
+  }
 
   const splash = computed(() => {
     if (account.value?.splash) return account.value.splash
@@ -125,29 +162,16 @@ export function useSummonerProvider(
     return undefined
   })
 
-  let resolveLock = false
-
   watch(
     identifier,
-    async () => {
-      if (resolveLock) return
-      resolveLock = true
+    async (next) => {
+      if (!next) return
 
-      const next = await resolveIdentifier()
-      if (next && next !== puuid.value) {
-        puuid.value = next
+      const nextPuuid = await resolveIdentifier()
+      if (nextPuuid && nextPuuid !== puuid.value) {
+        puuid.value = nextPuuid
         await loadSummoner()
       }
-
-      resolveLock = false
-    },
-    { immediate: true }
-  )
-
-  watch(
-    () => toValue(identifierInput),
-    (next) => {
-      identifier.value = next ?? null
     },
     { immediate: true }
   )
@@ -160,15 +184,17 @@ export function useSummonerProvider(
     loadSummoner,
     resolveIdentifier,
     filteredMatches,
-    clearFilters,
-    setFilter,
+    ...rest,
     filter,
     champions,
     allies,
+    mastery,
     loadNewer,
     loadOlder,
+    loadingOlder,
     loading: computed(() => loading.value || matchesLoading.value),
     ready,
+    whenReady,
   }
 
   provide(SummonerKey, api)

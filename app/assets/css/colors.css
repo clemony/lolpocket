@@ -1,10 +1,11 @@
-@import 'tailwindcss';
-@import './theme';
+@import "tailwindcss";
+@import "./theme";
 
 @theme {
   --color-discord: oklch(58% 52 274);
   --color-b4: var(--b4);
   --color-all-roles: oklch(37% 0 0);
+  --color-win: oklch(69% 33% 132deg);
 
   /* path */
   --color-precision: oklch(85.49% 0.0892 84.09);
@@ -143,28 +144,97 @@
   --white-70: var(--color-white-70);
 }
 
-[data-role='support'] {
+[data-role="support"] {
   &.role-bg {
     @apply bg-inspiration;
   }
 }
 
-[data-role='middle'] {
+[data-role="middle"] {
   &.role-bg {
     @apply bg-sorcery;
   }
 }
 
-[data-role='bottom'] {
+[data-role="bottom"] {
   @apply !bg-precision;
 }
-[data-role='top'] {
+[data-role="top"] {
   &.role-bg {
     @apply bg-domination;
   }
 }
-[data-role='jungle'] {
+[data-role="jungle"] {
   &.role-bg {
     @apply bg-resolve;
   }
+}
+
+&[data-color="5001"],
+&[data-color="5011"],
+&[data-color="5013"] {
+  @apply **:text-resolve;
+}
+&[data-color="5005"] {
+  @apply **:text-precision;
+}
+&[data-color="5007"],
+&[data-color="5010"] {
+  @apply **:text-inspiration!;
+}
+&[data-color="5008"] {
+  @apply text-sorcery!;
+}
+
+&[data-color="lethality"],
+&[data-color="attackDamage"],
+&[data-color="armorPenetration"] {
+  @apply text-ad! **:text-ad!;
+}
+
+&[data-color="armor"],
+&[data-color="attackSpeed"],
+&[data-color="goldPer10"] {
+  @apply text-precision! **:text-precision!;
+}
+
+&[data-color="criticalStrikeChance"],
+&[data-color="criticalStrikeDamage"],
+&[data-color="lifesteal"] {
+  @apply text-domination! **:text-domination!;
+}
+
+&[data-color="abilityPower"],
+&[data-color="percentMagicPenetration"],
+&[data-color="flatMagicPenetration"] {
+  @apply text-sorcery! **:text-sorcery!;
+}
+
+&[data-color="healAndShieldPower"],
+&[data-color="abilityHaste"] {
+  @apply text-hsp! **:text-hsp!;
+}
+
+&[data-color="health"],
+&[data-color="healthRegen"] {
+  @apply text-hp! **:text-hp!;
+}
+
+&[data-color="mana"],
+&[data-color="manaRegen"] {
+  @apply text-mana! **:text-mana!;
+}
+
+&[data-color="magicResistance"] {
+  @apply text-mr! **:text-mr!;
+}
+
+&[data-color="flatMovespeed"],
+&[data-color="percentMovespeed"],
+&[data-color="tenacity"] {
+  @apply text-silver! **:text-silver!;
+}
+
+&[data-color="omnivamp"] {
+  @apply text-vamp! **:text-vamp!;
 }

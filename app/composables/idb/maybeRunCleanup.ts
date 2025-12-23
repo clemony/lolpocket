@@ -1,32 +1,49 @@
 const CLEANUP_KEY = "lolpocket-idb-cleanup-last-run"
-const CLEANUP_INTERVAL_MS = 1000 * 60 * 60 * 24 // 24h
-const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 30 // 30 days
+const CLEANUP_INTERVAL_MS = 1000 * 60 * 60 * 24
+const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 30
 
-function maybeRunCleanup() {
+export function maybeRunCleanup(accountPuuid?: string) {
   const now = Date.now()
   const lastRun = Number(localStorage.getItem(CLEANUP_KEY) || 0)
 
   if (now - lastRun < CLEANUP_INTERVAL_MS) return
 
   localStorage.setItem(CLEANUP_KEY, String(now))
-  void runCleanup() // fire and forget
+  void runCleanup(accountPuuid)
 }
 
-async function runCleanup() {
+async function runCleanup(accountPuuid?: string) {
   const cutoff = Date.now() - MAX_AGE_MS
 
-  // Example: delete matchData older than 30 days AND not accessed recently
-  /*   await matchDB.matchData
-    .where("playedAt")
+  // ---- matchData ----
+  await matchDB.matchData
+    .where("lastAccessedAt")
     .below(cutoff)
-    .and((m) => m.lastAccessedAt < cutoff)
-    .and((m) => !m.participantIds.includes(as().account.puuid))
+    .and((m) => !accountPuuid || !m.participantIds.includes(accountPuuid))
     .delete()
 
-  await matchDB.matchTimeline
-    .where("playedAt")
+  // ---- matchTimeline ----
+  const oldTimelines = await matchDB.matchTimeline
+    .where("lastAccessedAt")
     .below(cutoff)
-    .and((m) => m.lastAccessedAt < cutoff)
-    .and((m) => !m.participantIds.includes(as().account.puuid))
-    .delete() */
+    .toArray()
+
+  const timelineDeletes = oldTimelines
+    .filter(
+      (t) =>
+        !accountPuuid ||
+        !Object.values(t.players).some((p) => p.puuid === accountPuuid)
+    )
+    .map((t) => t.matchId)
+
+  if (timelineDeletes.length) {
+    await matchDB.matchTimeline.bulkDelete(timelineDeletes)
+  }
+
+  // ---- playerChampions ----
+  await matchDB.playerChampions
+    .where("lastAccessedAt")
+    .below(cutoff)
+    .and((p) => !accountPuuid || p.puuid !== accountPuuid)
+    .delete()
 }

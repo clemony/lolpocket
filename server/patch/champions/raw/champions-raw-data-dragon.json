@@ -12530,7 +12530,7 @@
       "difficulty": 3
     },
     "stats": {
-      "hp": 610,
+      "hp": 630,
       "hpperlevel": 112,
       "mp": 311,
       "mpperlevel": 45,
@@ -16270,12 +16270,14 @@
           "label": [
             "Damage",
             "Maximum Health Damage",
+            "Monster Damage",
             "Slow",
             "Cooldown"
           ],
           "effect": [
             "{{ basedamage }} -> {{ basedamageNL }}",
             "{{ percenthealthdamage }}% -> {{ percenthealthdamageNL }}%",
+            "{{ modifiedmonstercap }} -> {{ modifiedmonstercapNL }}",
             "{{ slowamountpercentage }}% -> {{ slowamountpercentageNL }}%",
             "{{ cooldown }} -> {{ cooldownNL }}"
           ]
@@ -18758,6 +18760,12 @@
         "id": "119058",
         "num": 58,
         "name": "Grand Reckoning Draven",
+        "chromas": true
+      },
+      {
+        "id": "119068",
+        "num": 68,
+        "name": "Victorious Draven",
         "chromas": true
       }
     ],
@@ -44953,11 +44961,11 @@
         "effect": [
           null,
           [
-            85,
-            115,
-            145,
-            175,
-            205
+            75,
+            105,
+            135,
+            165,
+            195
           ],
           [
             55,
@@ -45025,7 +45033,7 @@
         ],
         "effectBurn": [
           null,
-          "85/115/145/175/205",
+          "75/105/135/165/195",
           "55/75/95/115/135",
           "40",
           "2",
@@ -51634,6 +51642,12 @@
         "num": 62,
         "name": "Masked Justice Lucian",
         "chromas": true
+      },
+      {
+        "id": "236072",
+        "num": 72,
+        "name": "Sunken Shadows Lucian",
+        "chromas": false
       }
     ],
     "lore": "Lucian, a Sentinel of Light, is a grim hunter of wraiths and specters, pursuing them relentlessly and annihilating them with his twin relic pistols. After the specter Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to life, his rage is undiminished. Merciless and single-minded, Lucian will stop at nothing to protect the living from the long-dead horrors of the Black Mist.",
@@ -55969,7 +55983,7 @@
       "difficulty": 4
     },
     "stats": {
-      "hp": 655,
+      "hp": 640,
       "hpperlevel": 105,
       "mp": 251,
       "mpperlevel": 42,
@@ -55986,7 +56000,7 @@
       "crit": 0,
       "critperlevel": 0,
       "attackdamage": 65,
-      "attackdamageperlevel": 2.8,
+      "attackdamageperlevel": 2.5,
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.679
     },
@@ -56573,6 +56587,12 @@
         "num": 1,
         "name": "Arcane Councilor Mel",
         "chromas": true
+      },
+      {
+        "id": "800010",
+        "num": 10,
+        "name": "Prestige Winterblessed Mel",
+        "chromas": true
       }
     ],
     "lore": "Mel Medarda is the presumed heir of the Medarda family, once one of the most powerful in Noxus. In appearance she is a graceful aristocrat, but beneath the surface lies a skilled politician who makes it her business to know everything about everyone she meets. After an encounter with the mysterious Black Rose, Mel discovered the depths of her mother's deception and, for once, faced a situation potentially beyond her control. With newly awakened magical abilities, she sailed home in search of answers—and though many still seek to temper the light within her, Mel's soul remains forever defiant.",
@@ -56923,7 +56943,7 @@
           "effect": [
             "{{ basedamage }} -> {{ basedamageNL }}",
             "{{ rootduration }} -> {{ rootdurationNL }}",
-            "{{ baseareadamage*8.000000 }} -> {{ baseareadamagenl*8.000000 }}",
+            "{{ baseareadamage }} -> {{ baseareadamageNL }}",
             "{{ cooldown }} -> {{ cooldownNL }}",
             "{{ cost }} -> {{ costNL }}"
           ]
@@ -56939,12 +56959,12 @@
         "cooldownBurn": "12/11.5/11/10.5/10",
         "cost": [
           50,
-          55,
           60,
-          65,
-          70
+          70,
+          80,
+          90
         ],
-        "costBurn": "50/55/60/65/70",
+        "costBurn": "50/60/70/80/90",
         "datavalues": {},
         "effect": [
           null,
@@ -57222,6 +57242,12 @@
         "id": "902011",
         "num": 11,
         "name": "Rain Shepherd Milio",
+        "chromas": true
+      },
+      {
+        "id": "902020",
+        "num": 20,
+        "name": "Winter Wonder Milio",
         "chromas": true
       }
     ],
@@ -61438,6 +61464,12 @@
         "num": 58,
         "name": "Mythmaker Nami",
         "chromas": true
+      },
+      {
+        "id": "267068",
+        "num": 68,
+        "name": "Sunken Shadows Nami",
+        "chromas": false
       }
     ],
     "lore": "A headstrong young vastaya of the seas, Nami was the first of the Marai tribe to leave the waves and venture onto dry land, when their ancient accord with the Targonians was broken. With no other option, she took it upon herself to complete the sacred ritual that would ensure the safety of her people. Amidst the chaos of this new age, Nami faces an uncertain future with grit and determination, using her Tidecaller staff to summon the strength of the oceans themselves.",
@@ -62168,7 +62200,7 @@
       "difficulty": 6
     },
     "stats": {
-      "hp": 631,
+      "hp": 650,
       "hpperlevel": 104,
       "mp": 326,
       "mpperlevel": 62,
@@ -80047,30 +80079,30 @@
         },
         "maxrank": 5,
         "cooldown": [
-          19,
-          17.5,
-          16,
-          14.5,
-          13
+          18,
+          16.5,
+          15,
+          13.5,
+          12
         ],
-        "cooldownBurn": "19/17.5/16/14.5/13",
+        "cooldownBurn": "18/16.5/15/13.5/12",
         "cost": [
+          60,
+          65,
           70,
           75,
-          80,
-          85,
-          90
+          80
         ],
-        "costBurn": "70/75/80/85/90",
+        "costBurn": "60/65/70/75/80",
         "datavalues": {},
         "effect": [
           null,
           [
-            90,
-            140,
-            190,
-            240,
-            290
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
             625,
@@ -80138,7 +80170,7 @@
         ],
         "effectBurn": [
           null,
-          "90/140/190/240/290",
+          "0",
           "625",
           "1000",
           "0.5",
@@ -80198,13 +80230,13 @@
         ],
         "cooldownBurn": "9/8/7/6/5",
         "cost": [
-          65,
-          65,
-          65,
-          65,
-          65
+          60,
+          60,
+          60,
+          60,
+          60
         ],
-        "costBurn": "65",
+        "costBurn": "60",
         "datavalues": {},
         "effect": [
           null,
@@ -80362,11 +80394,11 @@
             0
           ],
           [
-            55,
-            105,
-            155,
-            205,
-            255
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
             4,
@@ -80422,7 +80454,7 @@
           null,
           "1",
           "0",
-          "55/105/155/205/255",
+          "0",
           "4",
           "5",
           "1100",
@@ -80472,11 +80504,11 @@
         },
         "maxrank": 3,
         "cooldown": [
-          130,
-          110,
+          120,
+          105,
           90
         ],
-        "cooldownBurn": "130/110/90",
+        "cooldownBurn": "120/105/90",
         "cost": [
           100,
           100,
@@ -87545,6 +87577,12 @@
         "id": "901001",
         "num": 1,
         "name": "Heavenscale Smolder",
+        "chromas": true
+      },
+      {
+        "id": "901011",
+        "num": 11,
+        "name": "Reindeer Smolder",
         "chromas": true
       }
     ],
@@ -105759,11 +105797,11 @@
         "effect": [
           null,
           [
-            60,
-            75,
-            90,
-            105,
-            120
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
             2.5,
@@ -105787,32 +105825,32 @@
             0
           ],
           [
-            20,
-            45,
-            70,
-            95,
-            120
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
-            0.08,
-            0.08,
-            0.08,
-            0.08,
-            0.08
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
-            0.18,
-            0.18,
-            0.18,
-            0.18,
-            0.18
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
-            0.6,
-            0.6,
-            0.6,
-            0.6,
-            0.6
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           [
             0,
@@ -105831,14 +105869,14 @@
         ],
         "effectBurn": [
           null,
-          "60/75/90/105/120",
+          "0",
           "2.5",
           "30",
           "0",
-          "20/45/70/95/120",
-          "0.08",
-          "0.18",
-          "0.6",
+          "0",
+          "0",
+          "0",
+          "0",
           "0",
           "0"
         ],
@@ -115915,6 +115953,12 @@
         "num": 29,
         "name": "Prestige Fright Night Zeri",
         "chromas": false
+      },
+      {
+        "id": "221040",
+        "num": 40,
+        "name": "Winter Wonder Zeri",
+        "chromas": true
       }
     ],
     "lore": "A headstrong, spirited young woman from Zaun's working-class, Zeri channels her electric magic to charge herself and her custom-crafted gun. Her volatile power mirrors her emotions, its sparks reflecting her lightning-fast approach to life. Deeply compassionate toward others, Zeri carries the love of her family and her home into every fight. Though her eagerness to help can sometimes backfire, Zeri believes one truth to be certain: stand up for your community, and it will stand up with you.",

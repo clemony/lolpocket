@@ -15,11 +15,17 @@ definePageMeta({
   title: 'pockets',
   icon: '',
   listClass: '**:stroke-[1.6]',
-  order: 2,
+  order: 3,
+})
+
+const { summoner } = useSummonerInject()
+watch(() => summoner.value, (v) => {
+  console.log('💠 - watch - newVal:', v)
 })
 </script>
 
 <template>
   <div>
+    hi
   </div>
 </template>

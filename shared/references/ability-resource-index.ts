@@ -11,7 +11,7 @@ export const abilityResources: AbilityResource[] = [
   {
     name: "Mana",
     color: "var(--color-platinum)",
-    icon: "lp:mana",
+    icon: "stat:mana",
   },
   {
     name: "Energy",
@@ -35,7 +35,7 @@ export const abilityResources: AbilityResource[] = [
     title: "Current HP",
     class: "!size-3.5",
     color: "var(--color-resolve)",
-    icon: "lp:health",
+    icon: "stat:health",
   },
   {
     name: "Fury",
@@ -51,18 +51,18 @@ export const abilityResources: AbilityResource[] = [
   {
     name: "Health",
     color: "var(--color-hp)",
-    icon: "lp:hp",
+    icon: "stat:hp",
   },
   {
     name: "Mana / s",
     color: "var(--color-inspiration",
-    icon: "lp:mana-regen",
+    icon: "stat:mana-regen",
   },
   {
     name: "Max health",
     title: "Max HP",
     color: "var(--color-hp)",
-    icon: "lp:hp",
+    icon: "stat:hp",
   },
   {
     name: "Blood well",

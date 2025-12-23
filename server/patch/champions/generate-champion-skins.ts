@@ -1,13 +1,15 @@
 import fs from "node:fs"
 import path from "node:path"
-import type { Skin } from "../../types/types.import"
+import type { Skin } from "../.."
 import { resolvePath } from "../resolvePath"
 import { cleanImageLink, cleanImageNum } from "../utils"
 import { markUpdate } from "../utils/markUpdate"
 
 /* const championsPath = resolvePath("./champions/raw/champions-raw-meraki.json") */
 const outputFull = path.resolve("./shared/indexes/skin-index.ts")
-const outputTile = path.resolve("./shared/constants/champions/champion-key-to-tile.ts")
+const outputTile = path.resolve(
+  "./shared/constants/champions/champion-key-to-tile.ts"
+)
 const outputBase = path.resolve("./shared/indexes/skins-base.ts")
 
 export interface RawSkin {

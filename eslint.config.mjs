@@ -96,6 +96,14 @@ export default antfu({
     'unused-imports/no-unused-imports': 'off',
     'unused-imports/no-unused-vars': 'off',
   },
+  'no-restricted-imports': [
+  'error',
+  {
+    paths: [
+      { name: 'lodash', message: 'Use lodash/<method> imports only.' }
+    ]
+  }
+],
   settings: {
     'better-tailwindcss': {
       callees: ['cn', 'clsx', 'cva', 'tw', 'tv'],

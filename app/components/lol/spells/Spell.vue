@@ -27,13 +27,12 @@ watch(
     size="sq-14"
     :class="
       cn('size-14 overflow-hidden group-hover/select:bg-b3/50',
-        { ' shadow-sm drop-shadow-sm border border-b4 ': id },
-        className,
+         { ' shadow-sm drop-shadow-sm border border-b4 ': id },
+         className,
       )
     ">
     <img
       v-if="id"
-      :title="spellbook[id].name"
       :alt="spellbook[id].name"
       :src="`/img/spells/${id}.webp`"
       class="absolute size-full"

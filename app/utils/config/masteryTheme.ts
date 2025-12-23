@@ -25,8 +25,8 @@ export const masteryGridTheme = themeQuartz
     rowHoverColor: 'transparent',
     selectCellBorder: true,
     selectedRowBackgroundColor: 'transparent',
-    tooltipBackgroundColor: 'var(--color-b1)',
-    tooltipBorder: 'var(--color-b3)',
-    tooltipTextColor: 'var(--color-bc)',
+    tooltipBackgroundColor: 'var(--color-neutral)',
+    tooltipBorder: 'var(--color-n3)',
+    tooltipTextColor: 'var(--color-nc)',
     wrapperBorder: false,
   })

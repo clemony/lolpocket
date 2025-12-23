@@ -1,3 +1,4 @@
+import equal from "fast-deep-equal/es6"
 import type { DateRange } from "reka-ui"
 import { computed, shallowRef, unref } from "vue"
 
@@ -42,6 +43,10 @@ export function useMatchFilters(
     filter.value = defaultFilter
   }
 
+  function filterEmpty(): boolean {
+    return equal(filter.value, defaultFilter)
+  }
+
   function setDateStart<K extends keyof DateRange>(value: DateRange[K]) {
     filter.value = { ...filter.value, date: { start: value, end: value } }
   }
@@ -73,6 +78,7 @@ export function useMatchFilters(
     setFilter,
     setDateStart,
     clearFilters,
+    filterEmpty,
     filteredMatches,
   }
 }

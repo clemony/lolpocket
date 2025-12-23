@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/02/2025 03:21:03 AM CST
+// Updated Patch 15.24.1 - 12/16/2025 03:41:08 PM CST
 
 export const runePaths: Record<string, RunePath> = {
   "8000": {

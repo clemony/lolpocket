@@ -63,7 +63,7 @@ const groups: IndexGroup[] = [
   },
   {
     name: 'Spells',
-    icon: 'lp:mage',
+    icon: 'role:mage',
     items: Object.values(spellbook),
   },
 ]

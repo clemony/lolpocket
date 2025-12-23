@@ -36,16 +36,18 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
       :scroll-ref="scrollRef"
       :data="filteredMatches"
       :item-size="118"
-      :start-margin="290"
-      :shift="false"
-      :buffer-size="200">
+      :start-margin="220"
+      :shift="true"
+      :buffer-size="2000">
       <MatchCard
         :key="item.id"
         :match="item"
         :puuid="summoner?.puuid" />
     </Virtualizer>
 
-    <div class="grid h-32 w-220 place-items-center">
+    <div
+      v-if="matches?.length"
+      class="grid h-32 w-220 place-items-center">
       <Button
         variant="ghost"
         class="group/c"

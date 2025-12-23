@@ -17,7 +17,7 @@ const img = useImage()
         bg-no-repeat shadow-sm drop-shadow-sm
       "
       :style="{
-        backgroundImage: `url('${img(getSplash(ix().champKeyById(params.data.id), 'centered'))}')`,
+        backgroundImage: `url('${img(getSplash(champKeyById(params.data.championId), 'centered'))}')`,
       }"></div>
 
     <Img

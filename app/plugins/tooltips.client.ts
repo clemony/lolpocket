@@ -28,7 +28,7 @@ export default defineNuxtPlugin(() => {
   const shown = shallowRef(false) // visible (opacity / data-state)
 
   const requestedPlacement = shallowRef<Placement>("top")
-  const requestedAlignment = shallowRef<Alignment>(null)
+  const requestedAlignment = shallowRef<Alignment>()
 
   const compRef = shallowRef<any | null>(null)
   const propsRef = shallowRef<Record<string, any>>({})
@@ -47,7 +47,9 @@ export default defineNuxtPlugin(() => {
       placement: requestedPlacement,
       middleware: [
         offset(8),
-        flip({}),
+        flip({
+          flipAlignment: false,
+        }),
         shift({ padding: 6 }),
         arrow({ element: arrowEl }),
       ],
@@ -84,7 +86,8 @@ export default defineNuxtPlugin(() => {
             style: {
               ...floatingStyles.value,
               zIndex: 9999,
-              pointerEvents: "none",
+              pointerEvents:
+                shown.value && propsRef.value.interactive ? "auto" : "none",
               "data-placement": placement.value,
               // ONLY transform moveTransition here (between triggers),
               // not entry animation.
@@ -101,7 +104,7 @@ export default defineNuxtPlugin(() => {
                 class: "tippy-box ",
                 "data-inertia": "",
                 "data-state": shown.value ? "visible" : "hidden",
-                "data-theme": propsRef.value.theme ?? "mini-tip neutral",
+                "data-theme": propsRef.value.theme ?? "mini-tip neutral ",
                 "data-placement": placement.value,
                 // tells CSS whether to run the shift-toward keyframes
                 "data-animate": animateIn.value ? "in" : "move",
@@ -161,13 +164,19 @@ export default defineNuxtPlugin(() => {
 
   function scheduleHide() {
     clearHideTimer()
+
+    const delay = propsRef.value.interactive ? 150 : 80
+
     hideTimer = window.setTimeout(() => {
       shown.value = false
       visible.value = false
-      // leave mounted = true so next show is faster
       activeTrigger.value = null
       activeType.value = null
-    }, 80)
+    }, delay)
+  }
+
+  function isAnchorAlive(el: HTMLElement | null) {
+    return !!el && el.isConnected
   }
 
   async function activate(el: HTMLElement) {
@@ -181,6 +190,14 @@ export default defineNuxtPlugin(() => {
     const isReenteringSame =
       shown.value && activeTrigger.value === el && activeType.value === type
 
+    if (!isAnchorAlive(el)) {
+      shown.value = false
+      visible.value = false
+      activeTrigger.value = null
+      activeType.value = null
+      return
+    }
+
     activeTrigger.value = el
     activeType.value = type
     referenceEl.value = el
@@ -193,13 +210,16 @@ export default defineNuxtPlugin(() => {
       class: el.dataset.class,
       name: el.dataset.name,
       tag: el.dataset.tag,
+      icon: el.dataset.icon,
+      text: el.dataset.text,
+      size: el.dataset.size,
+      interactive: el.dataset.interactive === "true",
     }
 
     justShown.value = true
     visible.value = true
     mounted.value = true
     animateIn.value = !shown.value && !isReenteringSame
-
     if (!visible.value || activeTrigger.value !== el) return
 
     const component = await loadTooltip(type)
@@ -290,5 +310,13 @@ export default defineNuxtPlugin(() => {
       activeTrigger.value = null
       activeType.value = null
     }
+  })
+
+  root.addEventListener("focusin", () => {
+    clearHideTimer()
+  })
+
+  root.addEventListener("focusout", () => {
+    scheduleHide()
   })
 })

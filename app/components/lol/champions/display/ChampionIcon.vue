@@ -13,7 +13,6 @@ interface Props {
   hover?: ElementVariants['hover']
   k?: string
   on?: ElementVariants['on']
-  params?: any
   size?: ElementVariants['size']
   variant?: ElementVariants['variant']
 }
@@ -21,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), { size: 'sq-14' })
 const emit = defineEmits(['loaded'])
 
 const champId = computed(() =>
-  props.params ? props.params.value : props.k ? ix().champIdByKey(props.k) : props.id,
+  props.k ? ix().champIdByKey(props.k) : props.id,
 )
 
 const loaded = ref(false)

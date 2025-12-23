@@ -1,9 +1,40 @@
 @import 'tailwindcss';
 
-.stat-grid {
-  @apply border-l border-l-b3;
+
+
+@utility stat-grid {
+  @apply border-0;
+
+  .ag-header{
+    @apply h-16! max-h-16! min-h-16!;
+
+  .ag-header-container {
+    @apply  grid! grid-rows-2 gap-0! space-y-0! items-center;
+
+.ag-header-row-group,
+.ag-header-row-column {
+  @apply h-8! !my-0 grid! auto-cols-auto min-h-8!;
 }
 
-.stat-grid .ag-header {
-  @apply !border-y font-medium !border-y-b3/60 text-center;
+.ag-header-cell-resize{
+  @apply h-full grid! items-center!  after:h-14! ;
+}
+
+.ag-header-row-group{
+  .ag-header-group-cell{
+    @apply row-span-1 [&_.ag-header-cell-resize]:after:mt-0! ;
+  }
+}
+    .ag-header-cell {
+      @apply  h-full max-h-16 row-span-2 flex items-center;
+      .ag-header-cell-comp-wrapper,
+      .ag-header-cell-label{
+        @apply h-full! flex items-center;
+      }
+    }
+  }
+.ag-header-row-column {
+  @apply top-8!;
+}
+}
 }

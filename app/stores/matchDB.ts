@@ -10,36 +10,48 @@ export class MatchDB extends Dexie {
   matchData!: Table<MatchData, string>
   matchCursor!: Table<MatchCursor, string>
   matchTimeline!: Table<MatchTimeline, string>
-  playerChampions!: Table<PlayerChampionData, [string, number]> // [puuid+champId]
+  playerChampions!: Table<PlayerChampionStats, [string, number]>
+  playerChampionMastery!: Table<PlayerChampionMastery, [string, number]>
+  summonerMastery!: Table<SummonerMastery, string>
 
   constructor() {
     super("MatchDB")
 
-    this.version(1).stores({
-      matchData: `
-        matchId,
-        *participantIds,
-        creation
-      `,
-    })
-
     this.version(2).stores({
+      matchData: `
+    matchId,
+    *participantIds,
+    creation,
+    queueId,
+    lastAccessedAt
+  `,
+
       matchCursor: `puuid, lastIndex`,
-    })
 
-    this.version(3).stores({
       matchTimeline: `
-        matchId,
-        *participantIds
-      `,
-    })
+    matchId,
+    *participantIds,
+    lastAccessedAt
+  `,
 
-    this.version(4).stores({
       playerChampions: `
-        &[puuid+championId],
-        puuid,
-        championId
-      `,
+    &[puuid+championId],
+    puuid,
+    championId,
+    lastAccessedAt
+  `,
+
+      playerChampionMastery: `
+    &[puuid+championId],
+    puuid,
+    championId,
+    lastAccessedAt
+  `,
+
+      summonerMastery: `
+    &puuid,
+    updated
+  `,
     })
   }
 }

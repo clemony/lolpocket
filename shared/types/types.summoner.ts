@@ -9,12 +9,6 @@ export interface Identifier {
   tag?: string
 }
 
-export interface PlayerChampionMastery {
-  lastPlayed: number
-  level: number
-  points: number
-}
-
 export type TrackedQueueId = 400 | 420 | 440 | 0
 export type QueueKey = "all" | `${TrackedQueueId}`
 
@@ -27,44 +21,97 @@ export interface QueueStats {
   deaths: number
   assists: number
   killParticipation: number
-
   matchIds: string[]
   gamePatches: number[]
 }
 
-export interface PlayerChampionData {
+export interface PlayerChampionStats {
   puuid: string
   championId: number
   championName: string
-  overall: QueueStats
-  queues: Record<QueueKey, QueueStats>
+  overall?: QueueStats
+  queues?: Record<QueueKey, QueueStats>
+  lastAccessedAt?: number
+}
+export interface ChampionStats {
+  puuid?: string
+  championId: number
+  championName: string
 
-  lastPlayed: number
-  level?: number
-  points?: number
+  games: number
+  wins: number
+  losses: number
+
+  kills: number
+  deaths: number
+  assists: number
+  kp: number
+
+  winrate?: number
+
+  matchIds: string[]
+  gamePatches: number[]
 
   lastAccessedAt?: number
 }
 
-export interface ChampionStats {
-  championId: number
-  championName: string
-  assists: number
-  deaths: number
-  gamePatches: number[]
+export type AggregatedStats = Partial<ChampionStats> &
+  Partial<PlayerChampionMastery> &
+  Partial<Multikills> &
+  Partial<PlayerOffense> &
+  Partial<PlayerUtility> &
+  Partial<PlayerDefense> &
+  Partial<PlayerFarming> &
+  Partial<PlayerVision> & {
+    killsBefore15?: number
+    assistsBefore15?: number
+    deathsBefore15?: number
+  }
+
+export interface StatDetail {
   games: number
-  kp: number
-  kills: number
-  losses: number
-  matchIndexes: number[]
-  winrate: number
-  wins: number
+  win: number
+  winrate?: number
+  pickrate?: number
+}
+
+export interface StatDetailExtended {
+  id: number
+  games?: number
+  win?: number
+  winrate?: number
+  name: string
+  key?: string
+}
+
+export interface TimedStatDetail extends StatDetail {
+  avgTimestamp?: number
+}
+
+export type OrderedStatEntry = [number, TimedStatDetail]
+
+export type SkillLevelStats = Record<
+  number, // level (1–18)
+  Record<SkillKey, StatDetail>
+>
+
+export type SkillKey = "Q" | "W" | "E" | "R"
+
+export interface PlayerChampionMastery {
+  puuid: string
+  championId: number
+  lastPlayed?: number
+  level?: number
+  totalPoints?: number
+  pointsUntilLevel: number
+  pointsSinceLevel: number
+  lastAccessedAt?: number
 }
 
 export interface SummonerMastery {
   puuid: string
-  totalLevels: number
-  totalPoints: number
+  masteryLevels: number
+  masteryPoints: number
   updated: number
 }
 

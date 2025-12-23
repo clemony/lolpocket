@@ -22,7 +22,7 @@ const { ability, class: className } = defineProps<{
       v-tippy="{ content: 'Cooldown', theme: 'base' }"
       class="flex items-center gap-2">
       <Icon
-        name="lp:ah"
+        name="stat:abilityHaste"
         class="mt-px inline size-3 shrink-0 text-black dst" />{{ ability.cooldown }}
     </div>
 
@@ -32,7 +32,7 @@ const { ability, class: className } = defineProps<{
         v-tippy="{ content: 'Max Charges', theme: 'base' }"
         class="flex items-center gap-2">
         <Icon
-          :name="`lp:charge-${ability.maxCharges}`"
+          :name="`stat:charge-${ability.maxCharges}`"
           class="-mt-px inline size-7 dst *:stroke-[1.3]" />
 
         <span>{{ ability.maxCharges }}
@@ -55,7 +55,7 @@ const { ability, class: className } = defineProps<{
       :name="ability.resource"
       class="flex items-center gap-1.5">
       <Icon
-        :name="`lp:${ability.resource.replace(/\s/g, '-').toLowerCase()}`"
+        :name="`stat:${ability.resource.replace(/\s/g, '-').toLowerCase()}`"
         :class="cn('size-3.25 dst')" />{{ ability.cost }}
     </div>
 
@@ -65,7 +65,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <span class="relative size-3 justify-start">
         <Icon
-          name="lp:radius"
+          name="stat:radius"
           class="absolute -top-0.5 size-3.25 dst" />
       </span>
       {{ ability.effectRadius }}
@@ -76,7 +76,7 @@ const { ability, class: className } = defineProps<{
       v-tippy="{ content: 'Range', theme: 'base' }"
       class="flex items-center gap-2">
       <Icon
-        name="lp:range"
+        name="stat:range"
         class="size-4 dst" />
       {{ ability.targetRange }}
     </div>

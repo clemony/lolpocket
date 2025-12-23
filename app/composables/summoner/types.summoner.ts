@@ -28,10 +28,12 @@ export interface ChampionStatsGroup {
 export type UseChampionsReturn = ReturnType<typeof useChampions>
 
 export interface Teammate {
-  bayesianWinrate: number
+  weightedWinrate: number
   games: number
   profileIcon: number
-  riotIdGameName: string
+  puuid: string
+  name: string
+  tag: string
   winrate: number
   wins: number
 }

@@ -43,8 +43,8 @@ watch(
       :src="`/img/runes/${runeToPath[id]}/${id}.webp`"
       :alt="runeNameById(id)"
       :class="
-        cn('size-full rounded-full bg-radial from-b3 to-transparent to-90% transition-all duration-300', {
-          'scale-105 drop-shadow-md': loaded,
+        cn('size-full object-contain', {
+          'scale-105 drop-shadow-sm drop-shadow-black/40': loaded,
         })
       "
       @load="loaded = true" />

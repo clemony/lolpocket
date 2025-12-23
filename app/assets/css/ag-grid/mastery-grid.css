@@ -1,5 +1,0 @@
-.mastery-grid {
-  & > .ag-row {
-    @apply !rounded-xl;
-  }
-}

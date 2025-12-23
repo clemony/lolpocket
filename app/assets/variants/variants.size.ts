@@ -1,6 +1,8 @@
 const gc =
   "relative grid aspect-square place-items-center p-0 shrink-0 *:absolute"
 const sv = {
+  px: [gc, "size-px text-2"],
+  2: [gc, "size-2 text-2"],
   3: [gc, "size-3 text-2"],
   3.5: [gc, "size-3.5 text-2"],
   4: [gc, "size-4 text-2"],
@@ -41,6 +43,8 @@ export const sizeVariants = {
 
   /* square */
   sq: [gc, "rounded-lg"],
+  px: [sv["px"], "rounded-md"],
+  "sq-2": [sv[2], "rounded-md"],
   "sq-3": [sv[3], "rounded-md"],
   "sq-3.5": [sv[3.5], "rounded-sm"],
   "sq-4": [sv[4], "rounded-md"],

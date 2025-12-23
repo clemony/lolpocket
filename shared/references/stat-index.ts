@@ -1,9 +1,8 @@
 export const statTotalGold = {
-  id: "total",
+  id: "goldPer10",
   name: "Total Gold Cost",
   abbr: "Total",
   description: "",
-  icon: "lp:gold",
 }
 
 export const statIndex: Record<string, StatIndex> = {
@@ -16,7 +15,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-sorcery)",
     description: "",
     group: "spells",
-    icon: "lp:ap",
   },
   percentMagicPenetration: {
     id: "percentMagicPenetration",
@@ -26,7 +24,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-mpen)",
     description: "",
     group: "spells",
-    icon: "lp:mpen",
     unit: "%",
   },
   //
@@ -37,7 +34,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-enchanter)",
     description: "",
     group: "spells",
-    icon: "lp:hsp",
     unit: "%",
   },
   //
@@ -48,7 +44,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-ah)",
     description: "",
     group: "spells",
-    icon: "lp:ah",
   },
 
   // physical
@@ -60,7 +55,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-ad)",
     description: "",
     group: "physical",
-    icon: "lp:ad",
   },
   attackSpeed: {
     id: "attackSpeed",
@@ -70,7 +64,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-as)",
     description: "",
     group: "physical",
-    icon: "lp:as",
     unit: "%",
   },
   criticalStrikeChance: {
@@ -81,7 +74,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-domination)",
     description: "",
     group: "physical",
-    icon: "lp:cs",
     unit: "%",
   },
   criticalStrikeDamage: {
@@ -91,7 +83,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-fighter)",
     description: "",
     group: "physical",
-    icon: "lp:crit-dmg",
   },
   //
   armorPenetration: {
@@ -102,7 +93,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-apen)",
     description: "",
     group: "physical",
-    icon: "lp:armor-pen",
   },
   lethality: {
     id: "lethality",
@@ -112,7 +102,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-apen)",
     description: "",
     group: "physical",
-    icon: "lp:armor-pen",
   },
   lifesteal: {
     id: "lifesteal",
@@ -122,7 +111,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-domination)",
     description: "",
     group: "physical",
-    icon: "lp:ls",
   },
 
   // basic
@@ -134,7 +122,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-resolve)",
     description: "",
     group: "basic",
-    icon: "lp:health",
   },
   healthRegen: {
     id: "healthRegen",
@@ -144,7 +131,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-resolve)",
     description: "",
     group: "basic",
-    icon: "lp:hp",
     unit: "%",
   },
   mana: {
@@ -154,7 +140,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-inspiration)",
     description: "",
     group: "basic",
-    icon: "lp:mana",
   },
   manaRegen: {
     id: "manaRegen",
@@ -164,7 +149,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-inspiration)",
     description: "",
     group: "basic",
-    icon: "lp:mana-regen",
     unit: "%",
   },
 
@@ -176,7 +160,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-iron)",
     description: "",
     group: "defense",
-    icon: "lp:armor",
   },
   magicResistance: {
     id: "magicResistance",
@@ -185,7 +168,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-mr)",
     description: "",
     group: "defense",
-    icon: "lp:mr",
   },
 
   // utility
@@ -197,7 +179,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-white-70)",
     description: "",
     group: "utility",
-    icon: "lp:ms",
     unit: "%",
   },
   tenacity: {
@@ -206,7 +187,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-platinum)",
     description: "",
     group: "utility",
-    icon: "lp:tenacity",
   },
   //
   goldPer10: {
@@ -216,7 +196,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-g)",
     description: "",
     group: "utility",
-    icon: "lp:gold",
   },
   //
   omnivamp: {
@@ -226,7 +205,6 @@ export const statIndex: Record<string, StatIndex> = {
     key: "Vamp",
     color: "var(--color-vamp)",
     description: "",
-    icon: "lp:vamp",
     unit: "%",
   },
 
@@ -240,7 +218,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-mpen)",
     description: "",
     group: "champion",
-    icon: "lp:mpen",
   },
   flatMovespeed: {
     id: "flatMovespeed",
@@ -249,7 +226,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-white-70)",
     description: "",
     group: "champion",
-    icon: "lp:ms",
   },
   //
   acquisitionRadius: {
@@ -259,7 +235,6 @@ export const statIndex: Record<string, StatIndex> = {
     description:
       "The range at which a unit acquires basic attack targets when a target unit is not specified by the player.",
     group: "champion",
-    icon: "lp:acquisition-radius",
   },
   attackCastTime: {
     id: "attackCastTime",
@@ -281,7 +256,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: "var(--color-white-70)",
     description: "Range of the champion's basic attack.",
     group: "champion",
-    icon: "lp:range",
   },
   attackSpeedRatio: {
     id: "attackSpeedRatio",
@@ -303,7 +277,6 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Crit Modifier",
     description: "",
     group: "champion",
-    icon: "lp:cs",
     unit: "%",
   },
   gameplayRadius: {
@@ -312,7 +285,6 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Gameplay",
     description: "Determines reach of both incoming and outgoing effects.",
     group: "champion",
-    icon: "lp:radius",
   },
   pathingRadius: {
     id: "pathingRadius",
@@ -321,7 +293,6 @@ export const statIndex: Record<string, StatIndex> = {
     description:
       "The gameplay area a unit occupies for unit-collision and pathfinding logic.",
     group: "champion",
-    icon: "lp:pathing",
   },
   selectionRadius: {
     id: "selectionRadius",
@@ -329,6 +300,5 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Selection",
     description: "The farthest selectable point from the unit's center point.",
     group: "champion",
-    icon: "lp:range-center",
   },
 }

@@ -1,18 +1,18 @@
-import type { DateValue, ZonedDateTime } from '@internationalized/date'
+import type { DateValue, ZonedDateTime } from "@internationalized/date"
 import {
   getLocalTimeZone,
   parseAbsoluteToLocal,
   Time,
   toCalendarDateTime,
   toZoned,
-} from '@internationalized/date'
-import { patchDates } from '~~/shared/references/patch-date'
+} from "@internationalized/date"
+import { patchDates } from "~~/shared/references/patch-date"
 
 export const patchDatesMap: Record<string, ZonedDateTime> = Object.fromEntries(
   Object.entries(patchDates).map(([patch, dateStr]) => {
     const date = parseAbsoluteToLocal(dateStr).set({ hour: 0 })
     return [patch, date]
-  }),
+  })
 )
 
 export function isPatchDay(date: DateValue) {
@@ -23,14 +23,26 @@ export function isPatchDay(date: DateValue) {
   const zonedDate = toZoned(midnightDateTime, getLocalTimeZone())
 
   const a = Object.values(patchDatesMap).some(
-    patchDate => patchDate.compare(zonedDate) === 0,
+    (patchDate) => patchDate.compare(zonedDate) === 0
   )
   return a
 }
 
-export function getPatchForDate(date: DateValue) {
-  const entry = Object.entries(patchDatesMap).find(
-    ([_, patchDate]) => patchDate.compare(date) === 0,
-  )
-  return entry ? entry[0] : null
+export function getPatchForDate(date: DateValue): string | null {
+  const entries = Object.entries(patchDatesMap).sort((a, b) =>
+    a[1].compare(b[1])
+  ) // ascending by date
+
+  let currentPatch: string | null = null
+
+  for (const [patch, patchDate] of entries) {
+    // patchDate <= date
+    if (patchDate.compare(date) <= 0) {
+      currentPatch = patch
+    } else {
+      break
+    }
+  }
+
+  return currentPatch
 }

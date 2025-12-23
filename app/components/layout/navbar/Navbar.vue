@@ -44,5 +44,6 @@ const sum = computed (() => route.path.match(/summoner.*/))
 
     <!-- search buttton -->
     <SearchBox class="bg-b1/60!" />
+    <AccountNavbarMenu />
   </header>
 </template>

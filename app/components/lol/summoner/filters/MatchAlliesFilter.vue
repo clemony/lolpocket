@@ -2,73 +2,73 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const { allies, filter, loading, setFilter } = useSummonerInject()
+const { allies: a, filter, loading, setFilter, summoner, whenReady } = useSummonerInject()
+console.log('🥸 - summoner:', summoner)
 
-const allyModel = computed({
-  get: () => filter?.value?.ally,
-  set: val => setFilter('ally', val),
-})
-
-const filterAllies = computed (() => filter?.value?.ally ? allies?.value?.allies.filter(a => filter.value?.ally === a?.riotIdGameName) : allies?.value?.allies)
+const allyModel = ref<string>(null)
+await whenReady()
+const allies = await a()
+console.log('🥸 - allies:', allies)
+/* const filterAllies = computed (() => filter?.value?.ally ? allies?.allies.filter(a => filter.value?.ally === a?.puuid) : allies?.allies) */
 const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <div :class="cn('field-box w-full px-2 py-3', className)">
+  <div :class="cn('field-box w-108 max-w-108 px-2 py-3', className)">
     <Listbox
       v-model:model-value="allyModel"
       :highlight-on-hover="false"
       :multiple="false"
       selection-behavior="toggle"
-
+      @update:model-value="setFilter('ally', allyModel)"
       @entry-focus.prevent>
       <ListboxContent as-child>
         <SlideInTopOutBottom
           class="h-max max-h-100 w-full overflow-y-scroll overscroll-auto py-2">
           <template
-            v-if="!loading && filterAllies">
+            v-if="!loading && allies.sort((a, b) => b.games - a.games)">
             <ListboxItem
-              v-for="ally in filterAllies"
-              :key="ally.riotIdGameName"
+              v-for="ally in allies"
+              :key="ally.name"
+              :value="ally.puuid"
               size="12"
+              data-tip="Great Teamwork"
               base="btn"
               variant="ghost"
               hover="secondary"
-              class="
-                 group/ally w-full gap-3 pr-4 pl-3 normal-case dst
-                duration-0! **:font-medium focus:outline-0
-              "
-
-              :value="ally.riotIdGameName">
+              :class="cn('group/ally w-full gap-3 pr-4 pl-3 dst duration-0! **:font-medium **:normal-case focus:outline-0', { hidden: filter?.ally && filter?.ally !== ally.puuid })">
               <SummonerIcon
                 class="size-8 rounded-full shadow-sm drop-shadow-sm"
                 :icon-id="ally.profileIcon"
-                :alt="`${ally.riotIdGameName}'s Icon`" />
+                :alt="`${ally.name}'s Icon`" />
 
-              <span class="flex grow items-center gap-2">
-                {{ ally.riotIdGameName }}
-
-                <icon
-                  v-if="ally === allies.topAllies[0]"
-                  v-tippy="'Great Teamwork'"
+              <span class="inline-flex w-52 gap-1 truncate overflow-hidden align-baseline leading-4">
+                <span class="inline truncate align-baseline">
+                  {{ ally.name }}
+                </span>
+                <span class="inline align-baseline text-1 opacity-50">
+                  #{{ ally.tag }}
+                </span>
+                <Icon
+                  v-if="ally === allies.sort((a, b) => a.weightedWinrate - b.weightedWinrate)[0]"
                   name="ion:star"
-                  class="size-3.5 dst **:text-bc/80!" />
+                  class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!" />
               </span>
 
-              <div class="text-end text-2 normal-case">
+              <div class="text-end text-2 whitespace-nowrap">
                 {{ ally.games }} played
               </div>
 
-              <div class="w-12 text-end text-2">
+              <div class="w-10 text-end text-2">
                 {{
                   winrateFormula === "absolute"
                     ? ally.winrate
-                    : ally.bayesianWinrate
+                    : ally.weightedWinrate
                 }}%
               </div>
 
               <Element
-                v-if="filter?.ally === ally.riotIdGameName"
+                v-if="filter?.ally === ally.name"
                 base="btn"
                 wrapper-class=""
                 size="c-6"

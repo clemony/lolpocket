@@ -29,11 +29,5 @@ onMounted(() => {
       v-if="as().settings?.show_allies" />
 
     <AdvancedMatchFilters />
-    <Button
-      class="w-full"
-      variant="neutral"
-      @click="clearFilters()">
-      Clear Filters
-    </Button>
   </div>
 </template>

@@ -17,12 +17,8 @@ const spell = computed (() => spells[id])
     v-if="spell"
     :key="spell.id"
     :class="
-      cn(
-        `
- relative flex w-[255px] flex-col justify-center
-      py-3
-    `,
-        className,
+      cn('relative flex size-full flex-col justify-center overflow-hidden py-3',
+         className,
       )
     ">
     <div class="flex w-full items-center gap-4 px-4 **:select-none">
@@ -61,7 +57,7 @@ const spell = computed (() => spells[id])
             v-tippy="{ content: spell.cd ? 'Cooldown' : 'Recharge', theme: 'neutral', placement: 'top' }"
             class="font-medium">
             <Icons
-              name="lp:ah"
+              name="stat:abilityHaste"
               class="inline size-3" />
             {{ spell.cd || spell.recharge }}s
           </span>
@@ -81,7 +77,7 @@ const spell = computed (() => spells[id])
             v-tippy="{ content: 'Range', theme: 'neutral', placement: 'top' }"
             class="font-medium">
             <Icons
-              name="lp:range"
+              name="stat:rangeCenter"
               class="inline size-3" />
             {{ spell.range }}
           </span>

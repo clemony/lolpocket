@@ -3,11 +3,13 @@ const {
   id,
   class: className,
   k,
+  ratio,
   src,
   type,
 } = defineProps<{
   k?: string
   id?: number
+  ratio?: number
   src?: string
   type?: SplashType
   class?: HTMLAttributes['class']
@@ -53,16 +55,14 @@ const y = computed(() =>
 )
 /* , {'translate-y-10': } */
 const x = computed(() => (left.includes(k) ? '70%' : '50%'))
-
-const image = useImage()
-const splash = computed(() => `url('${image(getSplash(k ?? id, type))}')`)
 </script>
 
 <template>
   <Img
     :src="src || getSplash(k ?? id, type)"
+    :ratio
     :class="
-      cn('size-full shrink-0 overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
+      cn('overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
          className,
       )
     "

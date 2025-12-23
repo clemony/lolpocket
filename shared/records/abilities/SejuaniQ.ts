@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
+// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
 
 const ability: Ability = {
   "key": "Q",
@@ -7,8 +7,8 @@ const ability: Ability = {
   "blurb": "Active:  Sejuani  dashes to the target location, dealing magic damage and briefly  knocking up enemies she passes through. She will stop upon hitting an enemy  champion.",
   "castTime": "none",
   "collisionRadius": "75",
-  "cooldown": "19 / 17.5 / 16 / 14.5 / 13",
-  "cost": "70 / 75 / 80 / 85 / 90",
+  "cooldown": "18 / 16.5 / 15 / 13.5 / 12",
+  "cost": "60 / 65 / 70 / 75 / 80",
   "damageType": "Magic damage",
   "effects": [
     {

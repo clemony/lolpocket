@@ -7,13 +7,8 @@ import type {
   GridReadyEvent,
 } from 'ag-grid-community'
 import {
-  ChampionGridIcon,
-  GridLastPlayed,
-  GridMasteryPoints,
-} from '#components'
-import { useScroll } from '@vueuse/core'
-import {
   CellStyleModule,
+  ClientSideRowModelApiModule,
   ClientSideRowModelModule,
   ColumnApiModule,
   ColumnAutoSizeModule,
@@ -22,168 +17,120 @@ import {
   ModuleRegistry,
   RenderApiModule,
   RowSelectionModule,
+  RowStyleModule,
+  TooltipModule,
   ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { masteryGridTheme } from '~/utils/config/masteryTheme'
 
-const { mastery, summoner } = defineProps<{
-  mastery: PlayerChampionData[]
-  summoner: Summoner
+const { champions } = defineProps<{
+  champions: AggregatedStats[]
 }>()
-
-defineExpose({
-  ChampionGridIcon,
-  GridLastPlayed,
-  GridMasteryPoints,
-})
 
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
+const prevRows = shallowRef<AggregatedStats[]>([])
 
-const gridOptions: GridOptions<PlayerChampionData> = {
+watch(
+  () => champions,
+  (next) => {
+    if (!gridApi.value)
+      return
+
+    const prev = prevRows.value
+    if (prev === next)
+      return
+
+    const prevMap = new Map(prev.map(r => [r.championId, r]))
+    const nextMap = new Map(next.map(r => [r.championId, r]))
+
+    const add: AggregatedStats[] = []
+    const update: AggregatedStats[] = []
+    const remove: AggregatedStats[] = []
+
+    for (const row of next) {
+      if (!prevMap.has(row.championId))
+        add.push(row)
+      else update.push(row)
+    }
+
+    for (const row of prev) {
+      if (!nextMap.has(row.championId))
+        remove.push(row)
+    }
+
+    if (add.length || update.length || remove.length) {
+      gridApi.value.applyTransaction({ add, remove, update })
+      gridApi.value.refreshClientSideRowModel('sort')
+    }
+
+    prevRows.value = next
+  },
+  { flush: 'post' }
+)
+
+const gridOptions: GridOptions<AggregatedStats> = {
+  ...globalGridOptions,
+  hidePaddedHeaderRows: true,
+  animateRows: true,
+  colResizeDefault: 'shift',
   columnHoverHighlight: false,
   defaultColDef: {
     initialHide: false,
-    minWidth: 66,
-    autoHeaderHeight: true,
-    cellClass: [''],
+    minWidth: 50,
+    cellClass: 'items-center px-0 text-center! justify-center h-full! flex self-center font-semibold',
+    cellClassRules: {
+      'opacity-10': params => params.value === 0 || params.value === '0',
+    },
     flex: 1,
-    headerClass: ['sticky top-0'],
+    headerClass: 'p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8',
     sortingOrder: ['desc', 'asc', null],
-    wrapHeaderText: false,
+    wrapHeaderText: true,
   },
-  rowData: mastery,
-  rowHeight: 68,
+  getRowId: p => String(p.data.championId),
+  rowClassRules: {
+    'opacity-0': () => false,
+  },
+  rowHeight: 50,
 }
 
-const colDefs: (ColDef<PlayerChampionData> | ColGroupDef<PlayerChampionData>)[] = [
-  {
-    maxWidth: 360,
-    minWidth: 180,
-    width: 360,
-    cellClass: 'py-2 !px-0',
-    cellDataType: 'number',
-    cellRenderer: ChampionGridIcon,
-    cellRendererParams: {
-      img: true,
-    },
-    colId: 'rank',
-    field: 'level',
-    headerName: 'Rank',
-    valueGetter: params => params.data.level,
-  },
+const colDefs: (ColDef<AggregatedStats> | ColGroupDef<AggregatedStats>)[] = useStatGrid()
 
-  {
-    cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
-    cellDataType: 'text',
-    cellRenderer: params =>
-      `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-2 font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
-    colId: 'champion',
-    field: 'championId',
-    headerClass:
-      'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
-    headerName: 'Champion',
-    valueFormatter: params => ix().champNameById(params.data.championId),
-  },
-  {
-    cellClass: 'font-medium  ',
-    cellDataType: 'text',
-    cellRenderer: GridLastPlayed,
-    colId: 'lastPlayed',
-    field: 'lastPlayed',
-    headerClass: '',
-    headerName: 'Last Played',
-  },
-  {
-    cellClass: 'font-medium  text-left',
-    cellDataType: 'number',
-    cellRenderer: GridMasteryPoints,
-    cellRendererParams: {
-      totalPoints: my().summonerMastery[summoner.puuid].totalPoints,
-    },
-    colId: 'points',
-    field: 'points',
-    headerClass: '',
-    headerName: 'Points',
-  },
-  {
-    maxWidth: 80,
-    width: 80,
-    cellClass: '!grid place-items-center',
-    cellDataType: 'number',
-    cellRenderer: params =>
-      `<div class="size-10 text-4 font-semibold leading-none  grid place-items-center tracking-wide text-nc inset-shadow-sm inset-shadow-b4/20 shadow-sm drop-shadow-sm bg-linear-to-br from-neutral/80 to-neutral/90  rounded-full">${params.data.level}</div>`,
-    colId: 'level',
-    field: 'level',
-    headerName: 'Level',
-  },
-]
-
-async function onGridReady(params: GridReadyEvent) {
-  await params.api
+function onGridReady(params: GridReadyEvent) {
   gridApi.value = params.api
+  prevRows.value = champions
+  params.api.applyTransaction({ add: champions })
 }
 
-watch(
-  () => '',
-  (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  },
-)
-
-/* onMounted (async () => {
-  if (params.img) {
-    ix().loadTitles()
-    champKey.value = await ix().champKeyById(params.data.id)
-  }
-})
- */
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
+  RowStyleModule,
+  ClientSideRowModelApiModule,
   ValidationModule,
   RowSelectionModule,
   ColumnAutoSizeModule,
   ColumnHoverModule,
   ColumnHoverModule,
   ColumnApiModule,
+  TooltipModule,
   CellStyleModule,
   GridStateModule,
   RenderApiModule,
 ])
-
-const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
-const { arrivedState } = useScroll(masteryGrid)
-
-watch(
-  () => arrivedState.top,
-  (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-  },
-)
 </script>
 
 <template>
   <AgGridVue
-    v-if="mastery"
-    ref="masteryGrid"
-    class="
-      mastery-grid sticky top-20 h-[100vh] min-h-[100vh] w-full pt-20
-      [&_.ag-center-cols-viewport]:mx-auto
-      [&_.ag-center-cols-viewport]:max-w-[1100px]
-      [&_.ag-header-container]:mx-auto
-    "
-    :class="
-      cn('', {
-        '**:!overflow-auto': arrivedState.top,
-        ' **:!overflow-hidden': !arrivedState.top,
-      })
-    "
-    :tooltip-show-delay="400"
+    v-if="champions"
+    data-theme="neutral line"
+    class="mx-auto min-h-[100vh] w-full self-start"
+    :tooltip-show-delay="100"
     :grid-options="gridOptions"
+
     :theme="theme"
+    dom-layout="autoHeight"
     :column-defs="colDefs"
     @grid-ready="onGridReady" />
 </template>

@@ -82,19 +82,21 @@ export interface PlayerStats {
   kills: {
     expandable?: boolean
     value: number
-    stats: {
-      killingSprees: number
-      tripleKills: number
-      doubleKills: number
-      quadraKills: number
-      pentaKills: number
-    }
+    stats: Multikills
   }
   deaths: number
   assists: number
   kda: number
   kp: number
   mvpScore: number
+}
+
+export interface Multikills {
+  killingSprees: number
+  tripleKills: number
+  doubleKills: number
+  quadraKills: number
+  pentaKills: number
 }
 
 export interface PlayerRunes {
@@ -141,4 +143,10 @@ export interface MatchTeam {
   bans: number[]
   teamId: number
   win: boolean
+}
+
+export interface MatchPlayerData {
+  timeline: PlayerTimeline
+  match: MatchData
+  player: Player
 }

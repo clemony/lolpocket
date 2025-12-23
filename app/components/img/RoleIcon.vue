@@ -18,6 +18,6 @@ const position = computed(() => {
 
 <template>
   <Icon
-    :name="`lp:${position?.name.toLowerCase()}`"
+    :name="`role:${position?.name.toLowerCase()}`"
     :class="cn('size-4 shrink-0 dst', className)" />
 </template>

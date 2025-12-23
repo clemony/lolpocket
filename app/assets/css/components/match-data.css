@@ -1,13 +1,17 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .match-data-table {
- .match-row{
-@apply transition-colors duration-50 grid h-full w-full grid-cols-[116px_repeat(10,54px)];
+  .match-row {
+    @apply grid h-full w-full grid-cols-[116px_repeat(10,54px)];
+  }
+  .match-cell {
+    @apply relative inline h-full w-full truncate px-2 align-middle text-1! leading-9 font-medium tracking-tight whitespace-nowrap capitalize *:text-1!;
+  }
+  .match-null {
+    @apply font-light text-bc/30 **:text-bc/15;
+  }
 }
-.match-cell{
-@apply align-middle px-2 leading-9 font-medium tracking-tight whitespace-nowrap capitalize truncate w-full h-full text-1! *:text-1! relative inline border-r border-b3/60;
-}
-.match-null{
-@apply  text-bc/30 font-light **:text-bc/15;
-}
+
+.stat-label {
+  @apply pl-px text-0 leading-4 font-medium opacity-60;
 }

@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
+// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
 
 const ability: Ability = {
   "key": "W",
@@ -9,7 +9,7 @@ const ability: Ability = {
   "blurb": "Active:  Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit,  knocking back  minions and  monsters.",
   "castTime": "1",
   "cooldown": "9 / 8 / 7 / 6 / 5",
-  "cost": "65",
+  "cost": "60",
   "damageType": "Physical damage",
   "effects": [
     {

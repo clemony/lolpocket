@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { champion, championId } = defineProps<{
-  champion?: PlayerChampionData | null
+  champion?: PlayerChampionMastery | null
   championId?: number
 }>()
 
@@ -58,7 +58,7 @@ const level = computed(() =>
                 object-center
               " />
           </span>
-          {{ champion?.points?.toLocaleString() ?? 0 }}
+          {{ champion?.totalPoints?.toLocaleString() ?? 0 }}
         </p>
       </div>
 

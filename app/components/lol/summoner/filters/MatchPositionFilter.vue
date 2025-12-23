@@ -35,7 +35,7 @@ const tabClass = '**:!text-bc'
         :class="tabClass"
         :disabled="!role.games">
         <Icon
-          :name="`lp:${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
+          :name="`role:${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
           class="mb-px h-4.5 w-auto shrink-0 dst" />
       </TabsTrigger>
     </TabsList>

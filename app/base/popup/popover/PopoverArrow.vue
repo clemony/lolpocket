@@ -30,7 +30,19 @@ const { arrow } = popoverContentVariants({
     :width="18" />
   <PopoverArrow
     v-bind="forwarded"
-    :class="cn('z-1 z-50 overflow-hidden outline-none', arrow(), props.class)"
+    :class="cn('z-50 overflow-hidden outline-none', arrow(), props.class)"
     :height="9"
     :width="18" />
+
+  <!--  <PopoverArrow
+    v-bind="forwarded"
+    as-child>
+    <div
+      :class="
+        cn('tippy-svg-arrow popover-arrow', props.class)
+      ">
+      <Icon
+        name="lp-ui:popover-arrow" />
+    </div>
+  </PopoverArrow> -->
 </template>

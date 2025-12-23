@@ -42,7 +42,7 @@ export function matchFilters(
     ix().champNameById(player.championId) === champion
 
   const matchesPlayer =
-    !ally || match.participants.some((p) => p.riotIdGameName === ally)
+    !ally || match.participants.some((p) => p.puuid === ally)
 
   const matchesRole =
     ignoreRole || !role || role === "ALL" || player.teamPosition === role

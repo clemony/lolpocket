@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
+// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
 
 const ability: Ability = {
   "key": "E",
@@ -7,7 +7,7 @@ const ability: Ability = {
   "blurb": "Active:  Mel fires an orb that deals magic damage to enemies hit and  roots them for a moment.",
   "castTime": "0.25",
   "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
-  "cost": "50 / 55 / 60 / 65 / 70",
+  "cost": "50 / 60 / 70 / 80 / 90",
   "damageType": "Magic damage",
   "effectRadius": "80 / 80 / 260",
   "effects": [

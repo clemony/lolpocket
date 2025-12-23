@@ -1,6 +1,10 @@
 import { matchDB } from "~/stores"
 
 export function useIndexedDB() {
+  const now = () => Date.now()
+
+  // ---------- cursor ----------
+
   const getCursor = async (puuid: string) => {
     return (await matchDB.matchCursor.get(puuid)) ?? { puuid, lastIndex: 0 }
   }
@@ -9,17 +13,34 @@ export function useIndexedDB() {
     await matchDB.matchCursor.put({ puuid, lastIndex })
   }
 
+  // ---------- timeline ----------
+
   const getMatchTimeline = async (matchId: string) => {
-    return await matchDB.matchTimeline.get(matchId)
+    const tl = await matchDB.matchTimeline.get(matchId)
+
+    if (tl) {
+      matchDB.matchTimeline
+        .update(matchId, {
+          lastAccessedAt: now(),
+        })
+        .catch(() => {})
+    }
+
+    return tl
   }
 
   const putMatchTimeline = async (matchId: string, data: MatchTimeline) => {
-    await matchDB.matchTimeline.put(data)
+    await matchDB.matchTimeline.put({
+      ...data,
+      lastAccessedAt: now(),
+    })
   }
 
   const clearTimelines = async () => {
     await matchDB.matchTimeline.clear()
   }
+
+  // ---------- matches ----------
 
   const getMatchesForSummoner = async (puuid: string) => {
     const arr = await matchDB.matchData
@@ -28,12 +49,36 @@ export function useIndexedDB() {
       .reverse()
       .sortBy("creation")
 
-    return arr.filter((m) => m.queueId !== 3200)
+    const filtered = arr.filter((m) => m.queueId !== 3200)
+
+    if (filtered.length) {
+      const ts = now()
+      await matchDB.matchData.bulkPut(
+        filtered.map((m) => ({
+          ...m,
+          lastAccessedAt: ts,
+        }))
+      )
+    }
+
+    return filtered
   }
 
   const getAllMatches = async () => {
-    const a = await matchDB.matchData.toArray()
-    return a.filter((m) => m.queueId !== 3200)
+    const arr = await matchDB.matchData.toArray()
+    const filtered = arr.filter((m) => m.queueId !== 3200)
+
+    if (filtered.length) {
+      const ts = now()
+      await matchDB.matchData.bulkPut(
+        filtered.map((m) => ({
+          ...m,
+          lastAccessedAt: ts,
+        }))
+      )
+    }
+
+    return filtered
   }
 
   const getAllMatchIds = async () => {
@@ -41,59 +86,99 @@ export function useIndexedDB() {
   }
 
   const getAllMatchIdsForPuuid = async (puuid: string): Promise<string[]> => {
-    const matches = await matchDB.matchData
+    return await matchDB.matchData
       .where("participantIds")
       .equals(puuid)
       .primaryKeys()
-    return matches
   }
 
   async function sortMatchIdsByCreation(ids: string[]): Promise<string[]> {
     const matches = await matchDB.matchData.bulkGet(ids)
-    return matches
-      .filter((m): m is MatchData => !!m)
+
+    const valid = matches.filter((m): m is MatchData => !!m)
+
+    if (valid.length) {
+      const ts = now()
+      await matchDB.matchData.bulkPut(
+        valid.map((m) => ({
+          ...m,
+          lastAccessedAt: ts,
+        }))
+      )
+    }
+
+    return valid
       .sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
       .map((m) => m.matchId)
   }
 
-  // champions
+  // ---------- champions ----------
 
   const championDataByPuuid = async (puuid: string) => {
     if (!puuid) return
-    return await matchDB.playerChampions.where("puuid").equals(puuid).toArray()
+
+    const data = await matchDB.playerChampions
+      .where("puuid")
+      .equals(puuid)
+      .toArray()
+
+    if (data.length) {
+      const ts = now()
+      await matchDB.playerChampions.bulkPut(
+        data.map((d) => ({
+          ...d,
+          lastAccessedAt: ts,
+        }))
+      )
+    }
+
+    return data
   }
 
-  // db utilities
+  // ---------- db utilities ----------
 
   const clearMatches = async () => {
     await Promise.all([matchDB.matchData.clear()])
   }
 
   const refreshMatches = async () => {
-    return await matchDB.matchData.toArray()
+    const data = await matchDB.matchData.toArray()
+
+    if (data.length) {
+      const ts = now()
+      await matchDB.matchData.bulkPut(
+        data.map((m) => ({
+          ...m,
+          lastAccessedAt: ts,
+        }))
+      )
+    }
+
+    return data
   }
 
   return {
-    //cursor
+    // cursor
     setCursor,
     getCursor,
 
-    //timeline
+    // timeline
     getMatchTimeline,
     putMatchTimeline,
     clearTimelines,
 
-    //match
+    // match
     getAllMatchIdsForPuuid,
     getAllMatches,
     getAllMatchIds,
     getMatchesForSummoner,
     sortMatchIdsByCreation,
-    //
+
+    // db utilities
     refreshMatches,
     clearMatches,
 
-    //champion
+    // champion
     championDataByPuuid,
   }
 }

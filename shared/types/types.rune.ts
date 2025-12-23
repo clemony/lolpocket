@@ -44,7 +44,6 @@ export interface PathIndex {
 export interface Shard {
   id: number
   name: string
-  color: string
   description: string
 }
 

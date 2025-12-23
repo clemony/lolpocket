@@ -27,7 +27,7 @@ const skillOrder = computed(() => [
         :data-id="`${match.player.championId}${ability.key}`"
 
         :style="{
-          order: 1 + (i * 2),
+          order: 1 + (Number(i) * 2),
         }"
         class="tippy relative size-12">
         <Img

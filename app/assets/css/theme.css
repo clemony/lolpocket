@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   @theme inline {
@@ -18,15 +18,21 @@
 
 @theme {
   --default-font-family:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   --font-sans:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
-  --font-serif: 'Noto Serif KR', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-serif:
+    "Noto Serif KR", Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   --font-mono:
-    'DM Mono', SFMono-Regular, ui-monospace, 'Liberation Mono', 'Courier New', Consolas, Menlo, Monaco, monospace;
+    "Red Hat Mono", SFMono-Regular, ui-monospace, "Liberation Mono",
+    "Courier New", Consolas, Menlo, Monaco, monospace;
+
+  --font-tab:
+    "Tabular", SFMono-Regular, ui-monospace, "Liberation Mono", "Courier New",
+    Consolas, Menlo, Monaco, monospace;
 
   --spacing-mw: calc(100vw - 45px);
   --spacing-mh: calc(100vh - 45px);
@@ -58,24 +64,27 @@
   --text-7: 1.5rem;
   --text-8: 1.675rem;
   --text-9: 1.875rem;
-  --text-10: 1.9rem;
+  --text-10: 2rem;
 
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;
   --shadow-warm-2: rgba(0, 0, 0, 0.1) 0px 2px 8px;
   --shadow-warm-soft: rgba(0, 0, 0, 0.03) 0px 2px 5px;
   --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
-  --shadow-flat: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --shadow-flat:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --shadow-mask: 0px 3px 20px 30px #00000024;
   --inset-shadow-mask: inset 0px 0px 20px 16px #00000024;
   --inset-shadow-sides: inset 0 0 2px 2px rgba(0, 0, 0, 0.06);
   --inset-shadow-sm-reverse: inset -1px -1px 25px 0px rgba(0, 0, 0, 0.04);
   --inset-shadow-shade-sm: inset 0 0px 3px 1px rgba(0, 0, 0, 0.04);
   --inset-shadow-sm-x: inset 0 -2px 4px rgb(0 0 0 / 0.05);
-  --inset-shadow-xxs: inset 0.5px 0.5px 0px rgb(0 0 0 / 0.05), inset -0.5px -0.5px 0px rgb(0 0 0 / 0.1);
+  --inset-shadow-xxs:
+    inset 0.5px 0.5px 0px rgb(0 0 0 / 0.05),
+    inset -0.5px -0.5px 0px rgb(0 0 0 / 0.1);
 
   --drop-shadow-tiny: 1px 0px 0px #00000020;
-
 
   @keyframes heartbeat {
     0%,
@@ -90,6 +99,16 @@
     }
     75% {
       transform: scale(1.05);
+    }
+  }
+
+  --animate-hue: rainbow 4s steps(36) infinite;
+  @keyframes rainbow {
+    from {
+      filter: hue-rotate(10deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
     }
   }
 

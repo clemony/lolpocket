@@ -16,7 +16,7 @@ definePageMeta({
   title: 'live',
   icon: 'mingcute:sound-line-line',
   iconStyle: '',
-  order: 3,
+  order: 4,
 })
 </script>
 

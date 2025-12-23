@@ -69,9 +69,9 @@ onMounted(() => {
           **:text-pretty
         ">
         <div class="flex flex-col gap-3">
-          <p class="mt-1 text-6 dst">
+          <p class="mt-1 dst">
             <!-- #{{catFact.num}}  -->
-            {{ catFact.num }}. {{ catFact.title }}
+            {{ catFact.num }}<span class="text-[5rem] font-bold tracking-tight"> {{ catFact.title }}</span>
           </p>
           <p class="leading-7">
             {{ catFact.text }}

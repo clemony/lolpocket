@@ -1,6 +1,8 @@
 export interface MatchTimeline {
   matchId: string
   players: Record<string, PlayerTimeline>
+  participantIds: string[]
+  lastAccessedAt?: number
 }
 
 export interface PlayerTimeline {
@@ -11,7 +13,6 @@ export interface PlayerTimeline {
     killsBefore15: number
     assistsBefore15: number
   }
-  //timeShoppingInSec: number
   items: ItemEventGroup[]
   skills: {
     order: number[]

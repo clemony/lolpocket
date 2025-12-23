@@ -35,9 +35,11 @@ const { class: className, group, ix, match, stat, subStat } = defineProps<{
 
   <div
     v-else
-    class="match-row">
+    class="match-row border-b3/50! group-not-last/row:border-b">
     <div
-      :class="cn('match-cell px-2 opacity-80', { 'font-semibold gap-3 inline-flex items-center justify-between': matchStatIndex[ix] === 'kills' })">
+      :data-tip="matchStatIndex[ix]"
+      data-placement="left"
+      :class="cn('match-cell px-2 opacity-80 hover:underline hover:opacity-100', { 'font-semibold gap-3 inline-flex! items-center justify-between': matchStatIndex[ix] === 'kills' })">
       {{ matchStatIndex[ix] }}
       <slot></slot>
     </div>
@@ -45,8 +47,11 @@ const { class: className, group, ix, match, stat, subStat } = defineProps<{
     <div
       v-for="player, i in match.participants"
       :key="i"
+      :data-id="player.championId"
+      data-tip="champion"
+      :data-tag="matchStatIndex[ix]"
       :class="
-        cn('match-cell text-center last-of-type:border-0!',
+        cn('match-cell rounded-md text-center last-of-type:border-0! hover:bg-b3/30 hover:ring hover:ring-bc/70',
            player[group][ix] === 0 ? 'match-null' : '',
         )
       ">

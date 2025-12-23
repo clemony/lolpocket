@@ -21,6 +21,7 @@ const outputRunes = resolvePath("./runes/raw/runes.json")
 const runesTSOutput = path.resolve("./shared/records/runes.ts")
 const rawShards = resolvePath("./runes/raw/shards-raw.json")
 const shardOutput = path.resolve("./shared/records/shards.ts")
+const shardColor = path.resolve("./shared/constants/runes/shard-color.ts")
 
 function transformDescription(desc: string) {
   return desc
@@ -60,6 +61,7 @@ const runesById = Object.fromEntries(
 const extraSlots: any[] = []
 // create object for pathName -> perk IDs
 const pathIdMap: Record<string, number[]> = {}
+const shardColorMap: Record<number, string> = {}
 
 const transformedPaths = rawPaths.styles.reduce(
   (acc: any, path: any, pathIndex: number) => {
@@ -73,10 +75,10 @@ const transformedPaths = rawPaths.styles.reduce(
                 .map((perkId: number) => {
                   const rune = runesById[perkId]
                   if (!rune) return null
+                  shardColorMap[perkId] = colorDict[perkId]
                   return {
                     id: rune.id,
                     name: rune.name,
-                    color: colorDict[rune.id],
                     description: transformShardDescription(rune.longDesc),
                   }
                 })
@@ -163,6 +165,11 @@ const shardTSOutput = `// ${markUpdate()}
 
 export const shardObject: ShardObject[] = ${JSON.stringify(extraSlots, null, 2)}`
 fs.writeFileSync(shardOutput, shardTSOutput)
+
+const shardTSColorOutput = `// ${markUpdate()}
+
+export const shardColor: Record<number, string> = ${JSON.stringify(shardColorMap, null, 2)}`
+fs.writeFileSync(shardColor, shardTSColorOutput)
 
 console.log(`✅ shard-index.ts created with ${extraSlots.length} shards`)
 

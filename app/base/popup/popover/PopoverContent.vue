@@ -15,6 +15,7 @@ const props = withDefaults(
   {
     sideOffset: 8,
     align: 'center',
+    dataTheme: 'base',
   },
 )
 
@@ -33,6 +34,7 @@ provide('popoverVariant', props.variant)
       :id="props.id"
       ref="content"
       :align
+      :data-theme="props.dataTheme"
       :side-offset
       v-bind="{ forwarded }"
       :class="cn(base(), props.class)"

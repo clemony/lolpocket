@@ -10,17 +10,18 @@ const props = withDefaults(defineProps<{
   variant?: ElementVariants['variant']
   base?: ElementVariants['base']
 }>(), {
+  base: 'btn',
   size: 'sq-4',
-  variant: 'none'
+  variant: 'none',
 })
 </script>
 
 <template>
   <Element
 
-    :class="cn('inline aspect-square', buttonVariants({ base, variant, size }), props.wrapperClass)">
-    <icon
-      :name
+    :class="cn('p-0!', buttonVariants({ base: props.base, variant: props.variant, size: props.size }), props.wrapperClass)">
+    <Icon
+      :name="props.name"
       :class="cn('', props.class)" />
   </Element>
 </template>

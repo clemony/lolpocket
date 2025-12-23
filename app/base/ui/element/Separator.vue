@@ -10,6 +10,7 @@ const props = withDefaults(
   defineProps<
     SeparatorProps & {
       class?: HTMLAttributes['class']
+      labelClass?: HTMLAttributes['class']
       label?: string
       color?: SeparatorVariants['color']
       placement?: SeparatorVariants['placement']
@@ -81,6 +82,7 @@ const { label, separator, wrapper } = styles
           ? 'flex-col justify-center h-full w-px'
           : 'flex-row items-center w-full',
         props.class,
+        'pointer-events-none',
       )
     ">
     <!-- First separator -->
@@ -97,7 +99,7 @@ const { label, separator, wrapper } = styles
     <!-- Label -->
     <span
       v-if="props.label"
-      :class="cn(label())">
+      :class="cn(label(), labelClass)">
       {{ props.label }}
     </span>
 
@@ -112,5 +114,6 @@ const { label, separator, wrapper } = styles
           props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
         )
       " />
+    <slot />
   </div>
 </template>

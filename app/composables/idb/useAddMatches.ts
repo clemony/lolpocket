@@ -51,10 +51,6 @@ export const useAddMatches = async (matches: MatchData[]) => {
           }
 
           if (existing.overall.matchIds.includes(match.matchId)) {
-            existing.lastPlayed = Math.max(
-              existing.lastPlayed,
-              match.gameEndTimestamp
-            )
             await matchDB.playerChampions.put(existing)
             continue
           }
@@ -78,11 +74,6 @@ export const useAddMatches = async (matches: MatchData[]) => {
             }
             updateBucket(existing.queues[qKey], match, player)
           }
-
-          existing.lastPlayed = Math.max(
-            existing.lastPlayed,
-            match.gameEndTimestamp
-          )
 
           await matchDB.playerChampions.put(existing)
         }

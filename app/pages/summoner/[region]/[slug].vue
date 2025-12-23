@@ -2,12 +2,16 @@
 const { api } = defineProps<{
   api: SummonerInject
 }>()
+const route = useRoute()
+const championKey = computed (() => route.params?.championKey)
 </script>
 
 <template>
   <NuxtLayout
-    :summoner-state="api"
+    :api
     name="tab">
-    <NuxtPage />
+    <NuxtPage
+      :api
+      :champion-key />
   </NuxtLayout>
 </template>

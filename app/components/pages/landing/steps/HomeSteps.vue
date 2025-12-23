@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MotionValue } from 'motion-v'
-import { motion } from 'motion-v'
+import { Motion, motion } from 'motion-v'
 import { useBreakpoint } from '~/utils/ui/useBreakpoints'
 
 const { scrollProg, scrollRef } = defineProps<{
@@ -116,9 +116,9 @@ const steps = [
           }"
           :class="
             cn('relative mb-10 grid w-full max-w-160 justify-start pb-44 will-change-[transform,opacity] group-last:ml-16',
-              isEven(i) && greaterOrEqual
-                ? 'timeline-start  md:text-end'
-                : 'timeline-end',
+               isEven(i) && greaterOrEqual
+                 ? 'timeline-start  md:text-end'
+                 : 'timeline-end',
             )
           ">
           <p class="py-2 font-mono text-4 italic dst">

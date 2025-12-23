@@ -1,6 +1,19 @@
 import tailwindcss from "@tailwindcss/vite"
+import fs from "node:fs"
+import path from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
+
+const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
+
+const customCollections = fs
+  .readdirSync(iconsRoot, { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => ({
+    dir: path.join(iconsRoot, d.name),
+    prefix: d.name, // or "" if you truly don’t care
+    normalizeIconName: false,
+  }))
 
 export default defineNuxtConfig({
   alias: {
@@ -61,13 +74,14 @@ export default defineNuxtConfig({
       {
         name: "Noto Serif KR",
         provider: "fontsource",
+
         styles: ["italic", "normal"],
         weights: [300, 400, 600, 700],
       },
       {
-        name: "DM Mono",
+        name: "Geist Mono",
         provider: "fontsource",
-        styles: ["italic", "normal"],
+        styles: ["normal"],
         weights: [300, 400, 500],
       },
       {
@@ -81,23 +95,13 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 5,
   },
+
   icon: {
     provider: "server",
     componentName: "icon",
-    customCollections: [
-      {
-        dir: fileURLToPath(new URL("./app/assets/icons/lol", import.meta.url)),
-        normalizeIconName: false,
-        prefix: "lp",
-      },
-      {
-        dir: fileURLToPath(new URL("./app/assets/icons/ui", import.meta.url)),
-        normalizeIconName: false,
-        prefix: "lp-ui",
-      },
-    ],
+    customCollections,
     serverBundle: {
-      collections: ["lucide", "lp", "lp-ui"],
+      collections: ["lucide"],
     },
   },
   image: {

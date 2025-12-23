@@ -91,11 +91,12 @@ const isOpen = ref(false)
 
           <p
             class="
-              mt-1 flex flex-col justify-center text-start text-[0.92rem]!
+              user-select-text! mt-1 flex flex-col justify-center text-start text-[0.92rem]!
               leading-4
             ">
             <span>
-              {{ queue?.map?.name }}
+              <!-- {{ queue?.map?.name }} -->
+              {{ match.matchId }}
             </span>
             <span class="capitalize">
               {{ formatTimeAgo(match.gameEndTimestamp) }}
@@ -142,12 +143,13 @@ const isOpen = ref(false)
           v-if="match.player"
           class="flex h-full w-full items-start gap-1 *:rounded-md">
           <Item
-            v-for="item in match.player.items"
+            v-for="item, i in match.player.items"
             :id="item"
-            :key="itemNameById(item)"
+            :key="`${item}${i}`"
             :data-id="item"
             data-placement="bottom"
             data-tip="item"
+            loading-style="none"
             :alt="item"
             :class="cn('size-9 rounded-md! border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 **:rounded-md! hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
         </div>

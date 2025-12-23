@@ -6,6 +6,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
   const cursor = Number(getQuery(event).cursor || 0)
   const region = getQuery(event).region as string
+  const queue = getQuery(event).queue
 
   const batchSize = 20
   const results: MatchData[] = []
@@ -14,6 +15,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const ids = await idsByPuuid({
     puuid,
     region,
+    queue,
     start: cursor,
     count: batchSize,
   })

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { shardColor } from '~~/shared/constants/runes/shard-color'
 import { shardObject } from '~~/shared/records/shards'
 
 const {
@@ -22,7 +23,7 @@ const shard = computed(() =>
   <Label
     variant="base"
     hover="ghost"
-    :style="{ '--shard-color': shard?.color }"
+    :style="{ '--shard-color': shardColor[id] }"
     :class="
       cn('group/shard relative grid shrink-0 place-items-center rounded-full border border-b2 shadow-black/5 drop-shadow-sm drop-shadow-black/5',
          {
@@ -35,7 +36,7 @@ const shard = computed(() =>
     <slot />
     <!--    <Icon
       v-if="id"
-      :name="`lp:${shard?.id}`"
+      :name="`shard:${shard?.id}`"
       :alt="`shard-${shard?.name}`"
       :class="
         cn('absolute shrink-0 text-[var(--shard-color)] dst group-hover/shard:brightness-100! peer-not-checked:opacity-50 peer-not-checked:brightness-0',

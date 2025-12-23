@@ -27,8 +27,8 @@ watchEffect(async () => {
 <template>
   <div
     v-if="rune"
-    :class=" cn('relative flex flex-col justify-center py-3', className)">
-    <div class="flex w-full items-center gap-4 px-4 **:select-none">
+    :class=" cn('relative flex size-full flex-col justify-center py-3', className)">
+    <div class="flex size-full items-center gap-4 px-4 **:select-none">
       <button
 
         :title="rune.tier === 0 ? 'Keystone' : null"
@@ -37,7 +37,7 @@ watchEffect(async () => {
           <Img
             v-if="rune"
             :key="rune.name"
-            spinner
+            loading-style="spinner"
             :src="`/img/runes/${rune.id}.webp`"
             :alt="`${rune.name} Image`"
             :class="
@@ -93,7 +93,7 @@ watchEffect(async () => {
 
     <div
       :key="rune.id"
-      class="flex h-max w-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5">
+      class="flex h-fit w-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5">
       <span
         class="text-pretty whitespace-pre-line"
         v-html="rune.description" />

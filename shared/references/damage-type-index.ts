@@ -1,12 +1,12 @@
 export const damageTypes = [
   {
     color: "var(--color-sorcery)",
-    icon: "lp:ap",
+    icon: "stat:abilityPower",
     type: "Magic damage",
   },
   {
     color: "var(--color-ad)",
-    icon: "lp:ad",
+    icon: "stat:ad",
     type: "Physical damage",
   },
   {

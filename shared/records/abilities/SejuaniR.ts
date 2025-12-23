@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
+// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
 
 const ability: Ability = {
   "key": "R",
@@ -7,7 +7,7 @@ const ability: Ability = {
   "affects": "Enemies",
   "blurb": "Active:  Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and briefly  stunning them.",
   "castTime": "0.25",
-  "cooldown": "130 / 110 / 90",
+  "cooldown": "120 / 105 / 90",
   "cost": "100",
   "damageType": "Magic damage",
   "effectRadius": "450 /  450 /  300",

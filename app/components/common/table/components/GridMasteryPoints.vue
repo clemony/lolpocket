@@ -1,96 +1,39 @@
 <script setup lang="ts">
 import 'assets/css/components/mastery-progress.css'
-import { motion } from 'motion-v'
-import { ProgressIndicator, ProgressRoot } from 'reka-ui'
 
 const { params } = defineProps<{
   params: any
 }>()
 
-const root = useTemplateRef<HTMLElement>('root')
-const progress = computed(
-  () => Math.round((params.data.points / params.totalPoints) * 100 * 100) / 100,
-)
+const progress = computed(() => {
+  if (params.data.pointsUntilLevel <= 0) {
+    return 100
+  }
+  else {
+    return Math.round(params.data.pointsSinceLevel / (params.data.pointsSinceLevel + params.data.pointsUntilLevel) * 100)
+  }
+})
+
+const level = computed (() => params.data.level >= 10 ? 10 : params.data.level)
 </script>
 
 <template>
-  <div class="grid size-full items-center">
-    <ProgressRoot
-      v-if="params.data.points"
-      :model-value="params.data.points"
-      :max="params.totalPoints"
-      class="grid w-full items-center self-center">
-      <div
-        ref="root"
-        class="
-          relative top-0 left-0 z-0 h-3 w-full hover-ring overflow-hidden
-          rounded-xl border border-b4/40 border-neutral/20 bg-linear-to-r
-          from-b3/80 to-b3/70 shadow-xs inset-shadow-xs ring-offset-3!
-          hover:ring-neutral/60 hover:ring-offset-b1!
-        ">
-        <ProgressIndicator
-          as-child
-          class="
-            relative drop-shadow-sm drop-shadow-black/12 after:absolute
-            after:right-0 after:z-3 after:size-full after:rounded-r-[2px]
-            after:border after:border-b4 after:inset-shadow-sm
-          ">
-          <motion.div
-            :style="{
-              width: `${progress}%`,
-            }"
-            :initial="{
-              transform: 'scaleX(0)',
-            }"
-            :animate="{
-              transform: 'scaleX(1.1)',
-            }"
-            class="
-              absolute left-0 h-full min-w-2 origin-left overflow-hidden
-              rounded-r-[2px] inset-shadow-sm duration-600
-            ">
-            <div
-              id="mastery-gradient-progress"
-              :data-level="
-                params.data.level >= 10
-                  ? 10
-                  : params.data.level <= 5
-                    ? 0
-                    : params.data.level
-              "
-              class="absolute size-full -scale-x-100">
-              <Sparkles
-                class="
-                  sparkles absolute size-full scale-200 opacity-50 saturate-80
-                " />
-            </div>
-            <tippy
-              theme="mastery"
-              tag="span"
-              class="absolute top-0 right-5.5 h-full w-px"
-              :trigger-target="root"
-              :placement="progress < 50 ? 'top-start' : 'top-end'">
-              <template #content>
-                <div
-                  class="
-                    flex items-center gap-3 px-0 py-1 text-2 leading-none
-                    font-normal tracking-tight text-nc
-                  ">
-                  <i-lol-mastery class="-ml-1 size-4 opacity-80 dst" />
+  <div
+    data-placement="left"
+    data-theme="mini-tip multi-line neutral"
+    :data-tip="`Total:  ${params.data.totalPoints.toLocaleString()}
+    Since last level:  ${params.data.pointsSinceLevel.toLocaleString()}
+    Next level in:  ${params.data.pointsUntilLevel.toLocaleString()}`"
+    class="relative grid size-full place-items-center bg-transparent py-1">
+    <!--  -->
+    <div class="absolute z-1 grid size-10 place-items-center rounded-full bg-neutral text-3 leading-none font-semibold tracking-wide text-nc drop-shadow-sm">
+      {{ params.data.level }}
+    </div>
 
-                  {{ params.data.points.toLocaleString() }} &nbsp; [
-                  {{ progress }}%]
-                </div>
-              </template>
-            </tippy>
-          </motion.div>
-        </ProgressIndicator>
-      </div>
-    </ProgressRoot>
+    <MasteryRing
+      :value="progress"
+      :thickness="5"
+      :level
+      :size="38" />
   </div>
-
-  <!--
-            :style="{
-              transform: `translateX(${progress}%)`,
-            }" -->
 </template>

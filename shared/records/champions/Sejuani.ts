@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/06/2025 02:55:20 PM CST
+// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
 
 const champion: Champion = {
   "id": 113,
@@ -36,8 +36,8 @@ const champion: Champion = {
       "blurb": "Active:  Sejuani  dashes to the target location, dealing magic damage and briefly  knocking up enemies she passes through. She will stop upon hitting an enemy  champion.",
       "castTime": "none",
       "collisionRadius": "75",
-      "cooldown": "19 / 17.5 / 16 / 14.5 / 13",
-      "cost": "70 / 75 / 80 / 85 / 90",
+      "cooldown": "18 / 16.5 / 15 / 13.5 / 12",
+      "cost": "60 / 65 / 70 / 75 / 80",
       "damageType": "Magic damage",
       "effects": [
         {
@@ -79,7 +79,7 @@ const champion: Champion = {
       "blurb": "Active:  Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit,  knocking back  minions and  monsters.",
       "castTime": "1",
       "cooldown": "9 / 8 / 7 / 6 / 5",
-      "cost": "65",
+      "cost": "60",
       "damageType": "Physical damage",
       "effects": [
         {
@@ -204,7 +204,7 @@ const champion: Champion = {
       "affects": "Enemies",
       "blurb": "Active:  Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and briefly  stunning them.",
       "castTime": "0.25",
-      "cooldown": "130 / 110 / 90",
+      "cooldown": "120 / 105 / 90",
       "cost": "100",
       "damageType": "Magic damage",
       "effectRadius": "450 /  450 /  300",

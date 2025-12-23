@@ -101,7 +101,7 @@ const pinned = computed(() =>
                 <Button
                   variant="ghost"
                   size="icon">
-                  <Icon name="lp:all" />
+                  <Icon name="role:all" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent>

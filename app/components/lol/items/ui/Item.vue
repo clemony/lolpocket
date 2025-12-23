@@ -2,11 +2,11 @@
 const {
   id,
   class: className,
-  spinner
+  loadingStyle
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
-  spinner?: boolean
+  loadingStyle?: LoadingStyle
 }>()
 </script>
 
@@ -23,8 +23,8 @@ const {
       v-if="id"
       :src="`/img/items/${id}.webp`"
       :alt="id.toString()"
-      :spinner
-      class="aspect-square size-full rounded-lg opacity-96" />
+      :loading-style
+      class="aspect-square size-full opacity-96" />
 
     <slot />
   </Element>
