@@ -18,7 +18,7 @@ const index: { id: number; name: string; color: string }[] = paths.map(
   })
 )
 
-const outputDir = path.resolve("./shared/indexes/path-index.ts")
+const outputDir = path.resolve("./shared/constants/runes/path-index.ts")
 const tsOutput = `// ${markUpdate()}
 
 export const pathIndex: PathIndex[] = ${JSON.stringify(index, null, 2)}`

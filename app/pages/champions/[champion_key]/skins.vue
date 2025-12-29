@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import '~/assets/css/plugins/embla.css'
-import { skinIndex } from '~~/shared/indexes'
+import { skinIndex } from '~~/shared'
 import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 import { setupTweenParallax } from '~/assets/ts/embla-tween-parallax'
 

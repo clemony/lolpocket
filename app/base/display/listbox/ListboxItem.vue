@@ -34,8 +34,8 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
       :on
       :base
       :class="
-        cn('relative w-full justify-start capitalize outline-offset-0! focus:outline-1',
-          props.class,
+        cn('relative w-full justify-start capitalize outline-offset-0! duration-0! focus:outline-1',
+           props.class,
         )
       ">
       <slot />

@@ -1,4 +1,4 @@
-import { itemIndex } from "#shared/indexes"
+import { itemIndex } from "#shared"
 import { itemRankColor } from "@references"
 
 export const itemById = (id: number) => itemIndex.find((i) => i.id === id)

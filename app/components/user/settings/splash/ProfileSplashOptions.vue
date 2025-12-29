@@ -20,7 +20,7 @@ function handleSplash(e: string) {
 </script>
 
 <template>
-  <section class="flex size-full gap-x-4 pt-3">
+  <section class="flex size-full flex-wrap gap-x-4 pt-3">
     <button
       :class="cn('-ml-3', currentSplash ? inactiveClass : '', cardClass)"
       @click="currentSplash = null">
@@ -30,7 +30,7 @@ function handleSplash(e: string) {
         :skin-url="top().splash?.replace('uncentered', 'tile')"
         :text="top().name"
         :alt="`${as().account?.name ?? null}'s Most Played`" />
-      <div class="flex h-full flex-col gap-4 pt-3">
+      <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="text-5 font-semibold dst">
           Automatic
         </h4>
@@ -44,29 +44,28 @@ function handleSplash(e: string) {
 
     <LazySplashSelectPanel
       v-model:open="isOpen"
+      :class="cn(!currentSplash ? inactiveClass : ' w-full', cardClass)"
       @update:splash="(e) => handleSplash(e)"
       @dialog:close="isOpen = false">
-      <button :class="cn(!currentSplash ? inactiveClass : '', cardClass)">
-        <SplashCard
-          class="w-36"
-          :text="skinNameFromUrl(as().account?.splash) ?? ''"
-          :skin-url="as().account?.splash"
-          :alt="`${as().account?.name ?? null}'s splash`" />
-        <div class="flex h-full w-full flex-col gap-4 pt-3">
-          <h4 class="text-5 font-semibold dst">
-            Custom
-          </h4>
-          <p class="w-full min-w-56">
-            <span class="italic">Never played a champ?</span>
-            <br />
-            Np. Rep your guy.
-          </p>
+      <SplashCard
+        class="w-36"
+        :text="skinNameFromUrl(as().account?.splash) ?? ''"
+        :skin-url="as().account?.splash"
+        :alt="`${as().account?.name ?? null}'s splash`" />
+      <div class="flex size-full flex-col gap-4 pt-3">
+        <h4 class="text-5 font-semibold dst">
+          Custom
+        </h4>
+        <p class="w-full min-w-56">
+          <span class="italic">Never played a champ?</span>
+          <br />
+          Np. You're a Yuumi main now.
+        </p>
 
-          <ActiveTick
-            v-if="currentSplash"
-            class="mt-2 h-6" />
-        </div>
-      </button>
+        <ActiveTick
+          v-if="currentSplash"
+          class="mt-2 h-6" />
+      </div>
     </LazySplashSelectPanel>
   </section>
 </template>

@@ -95,8 +95,8 @@ const isOpen = ref(false)
               leading-4
             ">
             <span>
-              <!-- {{ queue?.map?.name }} -->
-              {{ match.matchId }}
+              {{ queue?.map?.name }}
+            <!--   {{ match.matchId }} -->
             </span>
             <span class="capitalize">
               {{ formatTimeAgo(match.gameEndTimestamp) }}

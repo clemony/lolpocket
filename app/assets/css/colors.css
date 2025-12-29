@@ -26,10 +26,12 @@
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
 
-  /* roles */
-  --color-jungle: oklch(77% 49% 126deg);
-  --color-support: oklch(80% 29% 184deg);
-  --color-top: oklch(68% 34% 26deg);
+  /* position */
+  --color-top: var(--color-domination);
+  --color-jungle: var(--color-resolve);
+  --color-middle: var(--color-sorcery);
+  --color-bottom: var(--color-precision);
+  --color-support: var(--color-inspiration);
 
   --color-onhit: oklch(75% 27% 10deg);
   --color-vamp: oklch(58% 22% 17deg);
@@ -86,12 +88,10 @@
   --mana: var(--color-mana);
   --platinum: var(--color-platinum);
   --mp5: var(--color-mp5);
-  --challenger: var(--color-challenger);
   --hsp: var(--color-hsp);
   --enchanter: var(--color-enchanter);
   --ah: var(--color-ah);
   --success: var(--color-success);
-  --jungle: var(--color-jungle);
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
   --resolve: var(--color-resolve);
@@ -102,7 +102,6 @@
   --energy: var(--color-energy);
   --error: var(--color-error);
   --vamp: var(--color-vamp);
-  --top: var(--color-top);
   --fighter: var(--color-fighter);
   --apen: var(--color-apen);
   --ad: var(--color-ad);
@@ -112,6 +111,7 @@
   --mr: var(--color-mr);
   --ap: var(--color-ap);
 
+  /* rank */
   --iron: var(--color-iron);
   --bronze: var(--color-bronze);
   --silver: var(--color-silver);
@@ -119,8 +119,19 @@
   --diamond: var(--color-diamond);
   --master: var(--color-master);
   --grandmaster: var(--color-grandmaster);
+  --challenger: var(--color-challenger);
+
   --vanguard: var(--color-vanguard);
   --warden: var(--color-warden);
+
+  /* position */
+  --top: var(--color-top);
+  --jungle: var(--color-jungle);
+  --middle: var(--color-middle);
+  --bottom: var(--color-bottom);
+  --support: var(--color-support);
+
+  /* attributes */
   --color-utility: var(--color-inspiration);
   --color-mobility: var(--color-precision);
   --color-toughness: var(--color-resolve);
@@ -130,18 +141,6 @@
   --color-s-plus: var(--color-challenger);
   --color-s-plus: var(--color-master);
   --color-s-minus: var(--color-diamond);
-
-  --black-22: var(--color-black-22);
-  --black-30: var(--color-black-30);
-  --black-35: var(--color-black-35);
-  --black-25: var(--color-black-25);
-  --black-50: var(--color-black-50);
-  --white: var(--color-white);
-  --white-95: var(--color-white-95);
-  --white-90: var(--color-white-90);
-  --white-85: var(--color-white-85);
-  --white-80: var(--color-white-80);
-  --white-70: var(--color-white-70);
 }
 
 [data-role="support"] {

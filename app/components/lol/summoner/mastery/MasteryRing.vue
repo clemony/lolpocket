@@ -7,6 +7,7 @@ const props = withDefaults(
     level?: number // your gradient theme
     speed?: number // rotation duration
     particles?: boolean
+    class?: HTMLAttributes['class']
   }>(),
   {
     particles: true,
@@ -26,11 +27,12 @@ const strokeOffset = computed(() =>
 
 // unique mask id (important!)
 const _uid = crypto.randomUUID()
+const level = computed (() => props.level >= 10 ? 10 : props.level)
 </script>
 
 <template>
   <div
-    class="mastery-ring relative inline-block -rotate-90 rounded-full bg-b2"
+    :class="cn('mastery-ring relative inline-block -rotate-90 rounded-full bg-b2', props.class)"
     :style="{ width: `${size}px`, height: `${size}px` }">
     <div class="absolute inset-0 scale-100 rounded-full border border-b3" />
     <!-- GRADIENT RING (rotates around the arc mask) -->

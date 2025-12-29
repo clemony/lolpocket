@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { statIndex } from '#shared/references'
 import { motion } from 'motion-v'
-import { itemStatRecord } from '~~/shared/indexes'
+import { itemStatRecord } from '~~/shared'
 
 const checkedStats = ref([])
 

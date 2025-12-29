@@ -44,54 +44,54 @@ export interface Player {
   win: boolean
 }
 
-export interface PlayerOffense {
+export type PlayerOffense = {
   totalDamage: number
   damagePercentage: number
 }
 
-export interface PlayerUtility {
+export type PlayerUtility = {
   effectiveHealingAndShielding: number
   totalAllyHealing: number
   totalAllyShielding: number
   allySaves: number
 }
 
-export interface PlayerDefense {
+export type PlayerDefense = {
   totalDamageTaken: number
   damageTakenPercentage: number
   damageSelfMitigated: number
   ccDuration: number
 }
 
-export interface PlayerFarming {
+export type PlayerFarming = {
   goldEarned: number
   minionsKilled: number
   neutralMinionsKilled: number
   turretsKilled: number
   objectivesStolen: number
 }
-export interface PlayerVision {
+export type PlayerVision = {
   visionScore: number
   wardsKilled: number
   wardsPlaced: number
   controlWardsPlaced: number
 }
 
-export interface PlayerStats {
+export type PlayerStats = {
   champLevel: number
-  kills: {
-    expandable?: boolean
-    value: number
-    stats: Multikills
-  }
+  kills: PlayerKillStats
   deaths: number
   assists: number
   kda: number
   kp: number
   mvpScore: number
 }
-
-export interface Multikills {
+export type PlayerKillStats = {
+  expandable?: boolean
+  value: number
+  stats: Multikills
+}
+export type Multikills = {
   killingSprees: number
   tripleKills: number
   doubleKills: number

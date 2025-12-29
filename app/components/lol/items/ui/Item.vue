@@ -2,19 +2,27 @@
 const {
   id,
   class: className,
-  loadingStyle
+  dataSize = 'lg',
+  loadingStyle,
+  noTip = false
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
   loadingStyle?: LoadingStyle
+  dataSize?: TooltipSize
+  noTip?: boolean
 }>()
 </script>
 
 <template>
   <Element
+    :data-id="noTip ? '' : id"
+    :data-size="dataSize"
+    :data-interactive="dataSize === 'lg' ? true : false"
+    :data-tip="noTip ? null : 'item'"
     :class="
-      cn('relative grid aspect-square shrink-0 place-items-center overflow-hidden rounded-lg',
-         { ' shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ': id },
+      cn('relative grid aspect-square shrink-0 place-items-center overflow-hidden rounded-md',
+         { 'shadow-sm shadow-black/30  drop-shadow-sm ': id },
 
          className,
       )

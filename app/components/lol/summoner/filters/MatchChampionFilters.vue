@@ -39,7 +39,7 @@ const champs = computed (() => {
 
             <p
               :class="cn('text-2 text-nowrap normal-case')">
-              {{ ((champion?.kills + champion?.assists) / champion?.deaths).toFixed(2) }}
+              {{ champion.kda }}
               kda
             </p>
           </div>

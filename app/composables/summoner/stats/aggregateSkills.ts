@@ -34,8 +34,8 @@ function createEmptySkillLevel() {
 }
 export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
   const priority = <SkillPriorityStats>{}
-
   const byLevel: SkillLevelStats = {}
+  const totalMatches = matches.length
 
   for (let level = 1; level <= MAX_LEVEL; level++) {
     byLevel[level] = createEmptySkillLevel()
@@ -72,12 +72,14 @@ export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
     for (const stat of Object.values(level)) {
       stat.winrate =
         stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
+      stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
     }
   }
 
   for (const stat of Object.values(priority)) {
     stat.winrate =
       stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
+    stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
   }
 
   return {

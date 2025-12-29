@@ -27,7 +27,7 @@ watchEffect(async () => {
 <template>
   <div
     v-if="rune"
-    :class=" cn('relative flex size-full flex-col justify-center py-3', className)">
+    :class=" cn('relative flex size-full max-h-80 cursor-default flex-col justify-center py-3', className)">
     <div class="flex size-full items-center gap-4 px-4 **:select-none">
       <button
 
@@ -93,7 +93,7 @@ watchEffect(async () => {
 
     <div
       :key="rune.id"
-      class="flex h-fit w-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5">
+      class="flex size-full max-h-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5">
       <span
         class="text-pretty whitespace-pre-line"
         v-html="rune.description" />

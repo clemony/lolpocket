@@ -29,7 +29,7 @@ const data = usePlayerStatsProvider(api, championId)
   <div
     ref="scrollRef"
     :class="
-      cn('z-auto grid h-max min-h-screen w-screen grid-cols-[1fr_3fr] gap-28 justify-self-center px-24',
+      cn('z-auto mx-auto grid h-fit min-h-screen w-full max-w-[1480px] grid-cols-[0.9fr_4fr] items-start justify-center gap-x-28 justify-self-center px-24 pb-44',
       )
     ">
     <SummonerChampionAside
@@ -37,6 +37,7 @@ const data = usePlayerStatsProvider(api, championId)
       :mastery
       :data />
     <SummonerChampionMain
-      v-if="data" />
+      v-if="data"
+      :mastery />
   </div>
 </template>

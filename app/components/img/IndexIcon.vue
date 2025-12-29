@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { keystoneIndex } from '~~/shared/indexes'
+import { keystoneIndex } from '~~/shared'
 
 const { class: className, item } = defineProps<{
   class?: HTMLAttributes['class']

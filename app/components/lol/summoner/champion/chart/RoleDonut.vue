@@ -1,35 +1,50 @@
 <script setup lang="ts">
-const props = defineProps<{
-  roles: any
-  datasets: any
-  mostRoled: any
-  colors: any
+const { cutout, roles } = defineProps<{
+  roles: PlayerChampionRoleStats
+  cutout: string
 }>()
 
-const hexColors = {
-  mid: '#be86b5',
-  bottom: '#ebcb8b',
-  jungle: '#a3be8c',
-  support: '#99c4c8',
-  top: '#e0746b',
-}
+const data = computed(() => {
+  return {
+    datasets: [{
+      backgroundColor: [
+        getColorFromVariable('--color-domination'),
+        getColorFromVariable('--color-resolve'),
+        getColorFromVariable('--color-sorcery'),
+        getColorFromVariable('--color-precision'),
+        getColorFromVariable('--color-inspiration'),
+      ],
+      data: [
+        roles?.stats?.top?.games ?? 0,
+        roles?.stats?.jungle?.games ?? 0,
+        roles?.stats?.middle?.games ?? 0,
+        roles?.stats?.bottom?.games ?? 0,
+        roles?.stats?.support?.games ?? 0,
+      ],
+      label: 'Games',
+    }],
+    labels: ['Top', 'Jungle', 'Middle', 'Bottom', 'Support']
+  }
+})
 </script>
 
 <template>
-  <div class="relative grid size-22 items-center justify-center">
+  <div
+    v-if="roles"
+    class="relative grid size-44 place-items-center overflow-hidden">
     <Donut
-      :datasets="props.datasets"
-      :colors="props.colors"
-      type="gauge"
-      aria="Playrate by role in percentage" />
+      v-if="data"
+      :cutout
+      :data
+      gauge
+      class="size-full"
+      aria-label="Playrate by role in percentage" />
 
-    <div class="absolute top-7 left-7">
-      <component
-        :is="`i-roles-${props.mostRoled}`"
-        v-if="roles && props.mostRoled"
-        class="size-8 dst"
-        :style="{ color: hexColors[props.mostRoled] }" />
-    </div>
+    <Icon
+      v-if="roles?.mostPlayed"
+      :name="`role:${roles?.mostPlayed}`"
+      class="absolute aspect-square size-full max-h-12 min-h-4 dst"
+      :style="{ color: `var(--color-${roles?.mostPlayed})` }" />
   </div>
 </template>
 

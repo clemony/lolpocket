@@ -1,7 +1,7 @@
-import { mapIndex } from '#shared/indexes'
+import { mapIndex } from "#shared"
 
 export const mapIdById = (id: number) =>
-  mapIndex.find(m => m.id === id)?.mapStringId
+  mapIndex.find((m) => m.id === id)?.mapStringId
 
 export const mapNameById = (id: number) =>
-  mapIndex.find(m => m.id === id)?.name
+  mapIndex.find((m) => m.id === id)?.name

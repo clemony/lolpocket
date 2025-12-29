@@ -30,6 +30,7 @@ const forwarded = useForwardProps(delegated)
   <NuxtLink
     exact-active-class="btn-active"
     trailing-slash="remove"
+    no-prefetch
     external-rel-attribute="noopener noreferrer"
     :class="
       cn(

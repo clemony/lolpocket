@@ -1,59 +1,50 @@
 <script setup lang="ts">
+import type { ChartData, ChartOptions } from 'chart.js'
 import {
   ArcElement,
-  CategoryScale,
   Chart,
   DoughnutController,
-  Tooltip,
+  RadialLinearScale,
+  Tooltip
 } from 'chart.js'
 import { Doughnut } from 'vue-chartjs'
 
-const props = defineProps<{
-  labels?: Array<string>
-  datasets: any
-  colors: Array<string>
-  aria?: string
+const { class: className, cutout, data, gauge, noTooltip, overlap } = defineProps<{
+  data: ChartData<'doughnut', number[], string>
   overlap?: boolean
   class?: HTMLAttributes['class']
-  type?: string
   cutout?: string
+  gauge?: boolean
   noTooltip?: boolean
 }>()
 Chart.defaults.datasets.doughnut.borderRadius = 100
 Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
 Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 
-Chart.register(Tooltip, DoughnutController, ArcElement)
+Chart.register(Tooltip, DoughnutController, ArcElement, RadialLinearScale)
 
-const chartData = computed(() => ({
-  datasets: props.datasets,
-  labels: props.labels,
-  options: {
-    cutout: props.cutout ? props.cutout : '80%',
-    elements: {
-      arc: {
-        backgroundColor: props.colors,
-        borderColor: 'rgba(0,0,0,0)',
-        hoverOffset: 1,
-        roundedCornersFor: props.overlap ? 0 : null,
-      },
+const chartOptions = computed<ChartOptions<'doughnut'>>(() => ({
+  cutout: cutout || '80%',
+  elements: {
+    arc: {
+      backgroundColor: 'rgba(0,0,0,0)',
+      borderColor: 'rgba(0,0,0,0)',
+      hoverOffset: 1,
+      roundedCornersFor: overlap ? 0 : null,
     },
-    plugins: {
-      tooltip: {
-        enabled: false,
-      },
-    },
-    spacing: props.type === 'gauge' ? -4 : 2,
   },
-  type: 'doughnut',
+  plugins: {
+  },
+  responsive: true,
+  spacing: gauge ? -4 : 2,
 }))
 </script>
 
 <template>
   <Doughnut
-    :data="chartData"
-    :options="chartData.options"
-    :aria-label="props.aria"
+    :data
+    :options="chartOptions"
+    :aria-label="data.labels"
     role="img"
-    :class="props.class" />
+    :class="className" />
 </template>

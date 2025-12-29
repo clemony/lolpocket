@@ -1,20 +1,20 @@
-import { runeToPath } from '~~/shared/indexes'
+import { runeToPath } from "~~/shared"
 
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => ix().runes)
 
   const playerKeystone = computed(() =>
-    ix().runeById(player.value.perks.keystone),
+    ix().runeById(player.value.perks.keystone)
   )
 
   const playerPaths = runeToPath[player.value?.perks?.secondary] ?? null
 
   const pathList = [
-    'Precision',
-    'Domination',
-    'Sorcery',
-    'Resolve',
-    'Inspiration',
+    "Precision",
+    "Domination",
+    "Sorcery",
+    "Resolve",
+    "Inspiration",
   ]
 
   /*   const getKeystones = (set: ComputedRef<any>) =>
@@ -24,15 +24,13 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
 
   const getPrimarySlots = (set: ComputedRef<any>) =>
     computed(() => {
-      if (!set.value?.[0]?.path)
-        return []
+      if (!set.value?.[0]?.path) return []
       return Object.values(runes.value?.[set.value[0].path] ?? {}).slice(1, 4)
     })
 
   const getSecondarySlots = (set: ComputedRef<any>) =>
     computed(() => {
-      if (!set.value?.[1]?.path)
-        return []
+      if (!set.value?.[1]?.path) return []
       return Object.values(runes.value?.[set.value[1].path] ?? {}).slice(1, 4)
     })
 

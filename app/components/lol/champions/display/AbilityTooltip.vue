@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const { id, ability } = defineProps<{
-  id: number
-  ability: string
+const { id } = defineProps<{
+  id: string
 }>()
 
 const item = ref<Ability>(null)
@@ -11,7 +10,7 @@ watchEffect(async () => {
 
   try {
     const module = await import(
-      `#shared/records/abilities/${champKeyById(id)}${ability}.ts`
+      `#shared/records/abilities/${id}.ts`
     )
     item.value = module.default || null
   }
@@ -19,6 +18,11 @@ watchEffect(async () => {
     console.error(`Failed to load ability for ${id}`, err)
     item.value = null
   }
+})
+
+const champ = computed (() => {
+  const ckey = id.slice(0, -1)
+  return champNameByKey(ckey)
 })
 </script>
 
@@ -29,9 +33,8 @@ watchEffect(async () => {
     <div class="grid h-fit w-full grid-cols-[36px_1fr] grid-rows-1 gap-4 px-4">
       <!-- IMG -->
 
-      <Img
-        alt="icon"
-        :src="item?.icon"
+      <Ability
+        :id
         class="min-size-12 size-12 rounded-lg shadow-sm dss" />
 
       <div class="col-start-2 flex w-full flex-col text-4">
@@ -39,20 +42,20 @@ watchEffect(async () => {
           class="flex w-full justify-between gap-1">
           <!-- NAME / LINK -->
           <a
-            :href="`/champions/${champKeyById(id)}`"
+            :href="`/champions/${id.length - 1}`"
             class="hover:*:first:underline">
             <h3 class="text-5! font-bold!">{{ item?.name }}</h3>
             <h5
               class="leading-4 font-medium italic">
-              {{ champNameById(id) }} - {{ item?.key }}
+              {{ champ }} - {{ item?.key }}
             </h5>
           </a>
 
           <a
             v-if="id"
-            :title="`Official LoL Wiki - ${champNameById(id)}`"
+            :title="`Official LoL Wiki - ${champ}`"
             target="_blank"
-            :href="getWikiLink(champNameById(id))">
+            :href="getWikiLink(champ)">
             <img
               src="/img/logos/wiki.webp"
               alt="wiki"

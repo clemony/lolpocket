@@ -1,4 +1,4 @@
-import { runeIndex } from "#shared/indexes"
+import { runeIndex } from "#shared"
 import { shardObject } from "~~/shared/records/shards"
 
 export const runeById = (id: number) => runeIndex.find((r) => r.id === id)

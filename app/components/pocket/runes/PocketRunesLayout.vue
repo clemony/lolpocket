@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { RuneSet } from '~~/shared/schema'
-import { pathIndex } from '~~/shared/indexes'
+import { pathIndex } from '~~/shared'
 import { runePaths } from '~~/shared/records/runes'
 
 const { set: s } = defineProps<{

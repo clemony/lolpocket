@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { pathIndex } from '~~/shared/indexes'
+import { pathIndex } from '~~/shared'
 
 definePageMeta({
   title: 'Runes',

@@ -7,16 +7,10 @@ const { summoner } = defineProps<{
 }>()
 const items = [
   {
-    id: 'overview',
-    name: 'overview',
+    id: 'summary',
+    name: 'summary',
     class: '**:stroke-[2]',
     icon: 'infinity'
-  },
-  {
-    id: 'stats',
-    name: 'Match Stats',
-    class: 'size-4.5 **:stroke-[1.8]',
-    icon: 'tabler:chart-arcs'
   },
   {
     id: 'spells',
@@ -37,8 +31,14 @@ const items = [
   },
   {
     id: 'skills',
-    name: 'skills',
+    name: 'Abilities',
     icon: 'fluent-mdl2:venn-diagram',
+  },
+/*   {
+    id: 'stats',
+    name: 'Match Stats',
+    class: 'size-4.5 **:stroke-[1.8]',
+    icon: 'tabler:chart-arcs'
   },
   {
     id: 'duos',
@@ -50,7 +50,7 @@ const items = [
     name: 'allies',
     class: 'size-6',
     icon: 'heart-sm-outline',
-  },
+  }, */
 ]
 
 const { activeIndex, progressBetween, progressOverall, sections }
@@ -81,13 +81,13 @@ const isNext = (i: number) => i === activeIndex.value + 1
       :key="i"
       variant="link"
       as="a"
-      :class="cn('flex items-center justify-start pl-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': i === activeIndex })"
+      :class="cn('flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': i === activeIndex })"
       size="12"
-      @click="section = `#${item.name}`">
+      @click="section = `#${item.id}`">
       <Icon
         name="right"
         :class="cn('size-4 opacity-0 transition-opacity duration-150', { 'opacity-100': i === activeIndex })" />
-      <span :class="cn('text-5 font-medium capitalize', { 'font-bold ': i === activeIndex })">
+      <span :class="cn('text-3 font-light! capitalize', { 'text-5 font-bold! ': i === activeIndex })">
         {{ item.name }}
       </span>
     </Button>

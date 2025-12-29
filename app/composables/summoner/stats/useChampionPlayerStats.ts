@@ -48,14 +48,15 @@ export function usePlayerStatsProvider(
       })
       .filter(Boolean) as MatchPlayerData[]
   })
-
+  const stats = useAggregateSingleChampion(matchData)
   const statsApi: UsePlayerStats = {
     summoner,
     matchData,
     skills: computed(() => aggregateSkills(matchData.value)),
     runes: useChampionRuneStats(matchData),
     spells: useChampionSpellStats(matchData),
-    stats: useAggregateSingleChampion(matchData),
+    items: useChampionItemTimelineStats(matchData),
+    stats,
   }
 
   provide(PlayerStatsKey, statsApi)

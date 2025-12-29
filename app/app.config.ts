@@ -60,7 +60,7 @@ export default defineAppConfig({
       // menu
       "gear-solid": "ri:settings-4-fill",
       gallery: "lucide:gallery-vertical-end",
-      gear: "lucide:settings",
+      gear: "solar:settings-linear",
       lines: "teenyicons:align-text-justify-outline",
       menu: "lucide:menu",
       more: "ri:more-line",

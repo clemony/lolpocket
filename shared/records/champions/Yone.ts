@@ -1,4 +1,4 @@
-// Updated Patch 15.24.1 - 12/23/2025 09:26:31 AM CST
+// Updated Patch 15.24.1 - 12/26/2025 07:04:15 PM CST
 
 const champion: Champion = {
   "id": 777,

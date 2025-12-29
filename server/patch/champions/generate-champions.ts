@@ -42,6 +42,8 @@ const dragonData: Record<string, any> = JSON.parse(
   fs.readFileSync(dataPathD, "utf-8")
 )
 
+const championsMergedRaw: Record<string, any> = {}
+
 // ---------- Load raw Meraki data from directory ----------
 const merakiData: Record<string, BuildChampion> = {}
 const filenames = fs
@@ -203,12 +205,12 @@ export default ability
       stats: filteredStats,
     }
 
-    /* championsMergedRaw[key] = Object.fromEntries(
+    championsMergedRaw[key] = Object.fromEntries(
       Object.entries(champData).filter(
         ([, v]) =>
           v != null && v !== "" && !(Array.isArray(v) && v.length === 0)
       )
-    ) */
+    )
 
     // ---------- Write individual champion file ----------
     const outputTsPath = path.join(outputDir, `${key}.ts`)
@@ -230,10 +232,12 @@ export default ability
     completed.add(key)
     savepoints[SCRIPT_KEY] = [...completed]
     fs.writeFileSync(savepointPath, JSON.stringify(savepoints, null, 2))
-    /* fs.writeFileSync(
+
+    // OUTPUT MERGED
+    fs.writeFileSync(
       outputMergedRaw,
       JSON.stringify(championsMergedRaw, null, 2)
-    ) */
+    )
     console.log(`✅ Processed ${key}`)
   } catch (err) {
     console.error(`❌ Failed processing ${key}`, err)

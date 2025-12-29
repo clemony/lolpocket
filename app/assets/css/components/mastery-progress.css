@@ -84,7 +84,7 @@
 /* Outer bloom glow */
 .ring-outer-glow {
   border-radius: 9999px;
-  box-shadow: 0 0 18px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 18px 6px rgba(0, 0, 0, 0.3);
   opacity: 0.7;
   filter: blur(2px);
   opacity: 0.7;

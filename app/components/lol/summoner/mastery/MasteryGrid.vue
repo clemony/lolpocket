@@ -25,13 +25,13 @@ import { AgGridVue } from 'ag-grid-vue3'
 import { masteryGridTheme } from '~/utils/config/masteryTheme'
 
 const { champions } = defineProps<{
-  champions: AggregatedStats[]
+  champions: AggregatedStatsAndMastery[]
 }>()
 
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
-const prevRows = shallowRef<AggregatedStats[]>([])
+const prevRows = shallowRef<AggregatedStatsAndMastery[]>([])
 
 watch(
   () => champions,
@@ -46,9 +46,9 @@ watch(
     const prevMap = new Map(prev.map(r => [r.championId, r]))
     const nextMap = new Map(next.map(r => [r.championId, r]))
 
-    const add: AggregatedStats[] = []
-    const update: AggregatedStats[] = []
-    const remove: AggregatedStats[] = []
+    const add: AggregatedStatsAndMastery[] = []
+    const update: AggregatedStatsAndMastery[] = []
+    const remove: AggregatedStatsAndMastery[] = []
 
     for (const row of next) {
       if (!prevMap.has(row.championId))
@@ -71,7 +71,7 @@ watch(
   { flush: 'post' }
 )
 
-const gridOptions: GridOptions<AggregatedStats> = {
+const gridOptions: GridOptions<Partial<AggregatedStatsAndMastery> & Partial<PlayerChampionMastery>> = {
   ...globalGridOptions,
   hidePaddedHeaderRows: true,
   animateRows: true,
@@ -96,7 +96,7 @@ const gridOptions: GridOptions<AggregatedStats> = {
   rowHeight: 50,
 }
 
-const colDefs: (ColDef<AggregatedStats> | ColGroupDef<AggregatedStats>)[] = useStatGrid()
+const colDefs: (ColDef<AggregatedStatsAndMastery> | ColGroupDef<AggregatedStatsAndMastery>)[] = useStatGrid()
 
 function onGridReady(params: GridReadyEvent) {
   gridApi.value = params.api

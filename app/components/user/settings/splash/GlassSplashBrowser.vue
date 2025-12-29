@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { DialogContentProps } from 'reka-ui'
 import { useForwardPropsEmits } from 'reka-ui'
-import { skinIndex } from '~~/shared/indexes'
+import { skinIndex } from '~~/shared'
 
 const props = defineProps<DialogContentProps & {
   class?: HTMLAttributes['class']

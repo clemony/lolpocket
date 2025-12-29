@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../theme.css";
 
 @utility dss-* {
   box-shadow: var(--drop-shadow-sm) --value([color]) --modifier(integer);
@@ -27,11 +27,11 @@
 }
 
 @utility text-link {
-  @apply hover:underline font-medium decoration-dotted hover:decoration-solid decoration-bc/60 hover:decoration-bc;
+  @apply font-medium decoration-bc/60 decoration-dotted hover:underline hover:decoration-bc hover:decoration-solid;
 }
 
 @utility trim {
-  @apply text-ellipsis whitespace-nowrap   text-clip;
+  @apply text-clip text-ellipsis whitespace-nowrap;
 }
 
 /* @utility animate-gradient-* {
@@ -59,4 +59,12 @@
 
 @utility min-h-inherit {
   min-height: inherit;
+}
+
+@utility grid-rows-masonry {
+  grid-template-rows: masonry;
+}
+
+@utility grid-cols-masonry {
+  grid-template-columns: masonry;
 }

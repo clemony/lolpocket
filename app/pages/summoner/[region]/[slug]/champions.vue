@@ -25,10 +25,17 @@ definePageMeta({
 const { champions, filteredMatches, mastery: m, summoner } = useSummonerInject()
 
 const awaitMastery: PlayerChampionMastery[] = await m()
-
-const data = useAggregatedStats(filteredMatches, awaitMastery, summoner.value.puuid)
+const masteryMap = new Map(awaitMastery.map(m => [m.championId, m]))
+const data = useAggregatedStats(filteredMatches, summoner.value.puuid)
 
 const summary = await getMasterySummary(summoner.value.puuid)
+
+const championData = computed (() =>
+  data.value.map(c => ({
+    ...c,
+    ...awaitMastery.find(a => a.championId === c.championId)
+  }))
+)
 </script>
 
 <template>
@@ -48,7 +55,7 @@ const summary = await getMasterySummary(summoner.value.puuid)
 
     <MasteryGrid
       v-if="data"
-      :champions="data"
+      :champions="championData"
       :summoner />
   </div>
 </template>

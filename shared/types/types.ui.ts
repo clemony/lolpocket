@@ -7,3 +7,4 @@ export type Size = "xs" | "sm" | "md" | "lg" | "xl"
 export type Shape = "square" | "circle"
 export type Orientation = "vertical" | "horizontal" | "responsive"
 export type LoadingStyle = "none" | "spinner" | null
+export type TooltipSize = "default" | "md" | "lg"

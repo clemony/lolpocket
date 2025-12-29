@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { skinIndex } from '~~/shared/indexes'
+import { skinIndex } from '~~/shared'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -22,6 +22,7 @@ const result = computed(() => {
     : championIndex
   return [...values].sort((a, b) => a.name.localeCompare(b.name))
 })
+console.log('🥸 - result:', result)
 
 function reset() {
   champQuery.value = ''
@@ -33,8 +34,8 @@ function reset() {
   <ResponsiveDialog v-bind="$attrs">
     <ResponsiveDialogTrigger
       :class="
-        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
-          className,
+        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center overflow-hidden rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
+           className,
         )
       ">
       <slot />
@@ -88,7 +89,7 @@ function reset() {
           </Button>
         </header>
 
-        <RadioGroup
+        <Listbox
           v-model:model-value="selectedChampion"
           :multiple="false"
           as="div"
@@ -97,30 +98,31 @@ function reset() {
             relative h-150 max-h-150 w-60 overflow-y-auto border-r border-r-b3
             bg-b2/30 p-1 transition-all duration-200
           ">
-          <Label
-            v-for="item in result"
-            :key="item.key"
-            variant="ghost"
-            :class="
-              cn('w-full overflow-hidden', {
-                'btn-active': item.key === selectedChampion,
-              })
-            ">
-            <ChampionIcon
-              :id="item.id"
-              for="item-key"
-              :alt="item.name"
-              class="size-10 rounded-lg bg-black **:text-white" />
-            <span class="grow truncate text-start">
-              {{ item.name }}
-            </span>
-            <RadioGroupItem
-              name="item-key"
-              :value="item.key">
-              <icon name="right" />
-            </RadioGroupItem>
-          </Label>
-        </RadioGroup>
+          <ListboxContent>
+            <ListboxItem
+              v-for="item in result"
+              :key="item.key"
+              :value="item.key"
+              variant="ghost"
+              :class="
+                cn('w-full overflow-hidden', {
+                  'btn-active': item.key === selectedChampion,
+                })
+              ">
+              <ChampionIcon
+                :id="item.id"
+                for="item-key"
+                :alt="item.name"
+                class="size-7 rounded-md bg-black **:text-white" />
+              <span class="grow truncate text-start">
+                {{ item.name }}
+              </span>
+              <ListboxItemIndicator>
+                <icon name="right" />
+              </ListboxItemIndicator>
+            </ListboxItem>
+          </ListboxContent>
+        </Listbox>
 
         <transition-fade
           as="section"

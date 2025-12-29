@@ -8,29 +8,29 @@ import type { ColDef, ColGroupDef } from "ag-grid-community"
 
 export function useStatGrid() {
   const perGameGetter =
-    <K extends keyof AggregatedStats>(field: K) =>
+    <K extends keyof AggregatedStatsAndMastery>(field: K) =>
     (p: any) =>
       p.data?.games ? p.data[field] / p.data.games : null
   const perGameFormatter =
-    <K extends keyof AggregatedStats>(field: K) =>
+    <K extends keyof AggregatedStatsAndMastery>(field: K) =>
     (p: any) =>
       p.data?.games ?
         (Math.round((p.data[field]! / p.data.games) * 10) / 10).toString()
       : ""
   const percentPerGameFormatter =
-    <K extends keyof AggregatedStats>(field: K) =>
+    <K extends keyof AggregatedStatsAndMastery>(field: K) =>
     (p: any) =>
       p.data?.games ?
         `${Math.round((p.data[field]! / p.data.games) * 1000) / 10}%`
       : ""
 
+  const statGetter =
+    <K extends keyof AggregatedStatsAndMastery>(field: K) =>
+    (p: any) =>
+      p.data?.games ? p.data[field].average : null
+
   const killStats = [
     { field: "kills", label: "Total", tooltip: "Kills", bold: true },
-    { field: "killingSprees", label: "Sprees", tooltip: "Killing sprees" },
-    { field: "doubleKills", label: "Double kills", tooltip: "Double kills" },
-    { field: "tripleKills", label: "Triple kills", tooltip: "Triple kills" },
-    { field: "quadraKills", label: "Quadra kills", tooltip: "Quadra kills" },
-    { field: "pentaKills", label: "Penta kills", tooltip: "Penta kills" },
   ] as const
 
   const killGroup: ColGroupDef = {
@@ -52,12 +52,12 @@ export function useStatGrid() {
     })),
   }
 
-  const numericPerGameColumn = <K extends keyof AggregatedStats>(
+  const numericPerGameColumn = <K extends keyof AggregatedStatsAndMastery>(
     field: K,
     headerName: string,
     tooltip: string,
     className = "text-center"
-  ): ColDef<AggregatedStats> => ({
+  ): ColDef<AggregatedStatsAndMastery> => ({
     width: 56,
     cellDataType: "number",
     field,
@@ -68,12 +68,12 @@ export function useStatGrid() {
     valueFormatter: perGameFormatter(field),
   })
 
-  const plainNumber = <K extends keyof AggregatedStats>(
+  const plainNumber = <K extends keyof AggregatedStatsAndMastery>(
     field: K,
     headerName: string,
     tooltip: string,
     className = "text-center"
-  ): ColDef<AggregatedStats> => ({
+  ): ColDef<AggregatedStatsAndMastery> => ({
     width: 60,
     cellDataType: "number",
     field,
@@ -82,12 +82,27 @@ export function useStatGrid() {
     cellClass: className,
   })
 
+  const averagedNumber = <K extends keyof AggregatedStatsAndMastery>(
+    field: K,
+    headerName: string,
+    tooltip: string,
+    className = "text-center"
+  ): ColDef<AggregatedStatsAndMastery> => ({
+    width: 60,
+    cellDataType: "number",
+    field,
+    headerName,
+    headerTooltip: tooltip,
+    cellClass: className,
+    valueGetter: statGetter(field),
+  })
+
   /*   @click="${handleNav(params.data.championId)}"
   function handleNav(championId: number) {
 
   } */
 
-  const championIdColumn: ColDef<AggregatedStats> = {
+  const championIdColumn: ColDef<AggregatedStatsAndMastery> = {
     cellClass: "*!px-0 items-center !flex ",
     cellRenderer: TableChampion,
     colId: "champion",
@@ -100,18 +115,17 @@ export function useStatGrid() {
     valueFormatter: (params) => champNameById(params.data.championId),
   }
 
-  const kpColumn: ColDef<AggregatedStats> = {
+  const kpColumn: ColDef<AggregatedStatsAndMastery> = {
     width: 70,
     cellDataType: "number",
     field: "kp",
     headerName: "KP",
     headerTooltip: "Kill Participation",
     cellClass: "text-center",
-    valueGetter: perGameGetter("kp"),
-    valueFormatter: percentPerGameFormatter("kp"),
+    valueGetter: statGetter("kp"),
   }
 
-  const winrateColumn: ColDef<AggregatedStats> = {
+  const winrateColumn: ColDef<AggregatedStatsAndMastery> = {
     width: 90,
     cellDataType: "number",
     field: "wins",
@@ -124,7 +138,7 @@ export function useStatGrid() {
       : "",
   }
 
-  const masteryPointsColumn: ColDef<AggregatedStats> = {
+  const masteryPointsColumn: ColDef<AggregatedStatsAndMastery> = {
     minWidth: 80,
     width: 90,
     cellDataType: "number",
@@ -141,7 +155,7 @@ export function useStatGrid() {
     headerTooltip: "Level & Points",
   }
 
-  const badgeColumn: ColDef<AggregatedStats> = {
+  const badgeColumn: ColDef<AggregatedStatsAndMastery> = {
     minWidth: 80,
     width: 90,
     cellClass: "!grid place-items-center",
@@ -153,7 +167,7 @@ export function useStatGrid() {
     headerTooltip: "Badge",
   }
 
-  const lastPlayedColumn: ColDef<AggregatedStats> = {
+  const lastPlayedColumn: ColDef<AggregatedStatsAndMastery> = {
     width: 160,
     cellClass: "font-medium justify-end! justify-items-end text-end px-0!",
     cellDataType: "text",
@@ -174,14 +188,14 @@ export function useStatGrid() {
     spacerColumn,
     championIdColumn,
     //   killGroup,
-    numericPerGameColumn("kills", "Kills", "Kills"),
-    numericPerGameColumn(
+    averagedNumber("kills", "Kills", "Kills"),
+    averagedNumber(
       "deaths",
       "Deaths",
       "Deaths",
       "text-center text-shade-domination/15"
     ),
-    numericPerGameColumn("assists", "Assists", "Assists"),
+    averagedNumber("assists", "Assists", "Assists"),
     kpColumn,
     plainNumber("wins", "Win", "Wins"),
     plainNumber(

@@ -2,11 +2,13 @@
 const {
   id,
   class: className,
-  variant = 'btn',
+  dataSize = 'lg',
+  noTip = false,
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | undefined
-  variant?: LabelVariants['variant']
+  dataSize?: TooltipSize
+  noTip?: boolean
 }>()
 
 const loaded = ref(false)
@@ -21,26 +23,26 @@ watch(
 </script>
 
 <template>
-  <Label
-    base="btn"
-    :variant="variant"
-    size="sq-14"
+  <label
+    :data-id="noTip ? '' : id"
+    :data-size="dataSize"
+    :data-interactive="dataSize === 'lg' ? true : false"
+    :data-tip="noTip ? null : 'spell'"
     :class="
-      cn('size-14 overflow-hidden group-hover/select:bg-b3/50',
-         { ' shadow-sm drop-shadow-sm border border-b4 ': id },
+      cn('relative grid size-14 place-items-center overflow-hidden rounded-md group-hover/select:bg-b3/50',
+         { ' shadow-sm drop-shadow-sm  shadow-black/30': loaded },
          className,
       )
     ">
+    <Spinner
+      v-if="!loaded"
+      class="absolute z-0" />
     <img
       v-if="id"
       :alt="spellbook[id].name"
       :src="`/img/spells/${id}.webp`"
-      class="absolute size-full"
+      class="size-full shrink-0"
       @load="loaded = true" />
-    <!--
-    <icon
-      id="tabler:flame"
-      alt="no summoner spell chosen"
-      class="size-6 opacity-6 absolute **:stroke-[1.5]" /> -->
-  </Label>
+    <slot />
+  </label>
 </template>

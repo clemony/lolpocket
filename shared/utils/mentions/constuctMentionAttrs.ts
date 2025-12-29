@@ -1,9 +1,4 @@
-import {
-  attrsToProps,
-  championRoleIndex,
-  getTierGroup,
-  runeToPath,
-} from "#shared"
+import { attrsToProps, champKeyToRole, getTierGroup, runeToPath } from "#shared"
 
 export function constructMentionAttrs(rawAttrs: any) {
   const item = attrsToProps(rawAttrs)
@@ -16,7 +11,7 @@ export function constructMentionAttrs(rawAttrs: any) {
     "data-tip": label,
     "data-path": label === "rune" ? runeToPath[item.id]?.toLowerCase() : null,
     "data-role":
-      label === "champion" ? championRoleIndex[item.key]?.toLowerCase() : null,
+      label === "champion" ? champKeyToRole[item.key]?.toLowerCase() : null,
     "data-tier": label === "item" ? getTierGroup(item.id)?.toLowerCase() : null,
   }
 }

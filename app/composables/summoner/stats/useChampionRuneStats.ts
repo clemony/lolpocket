@@ -117,6 +117,7 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
     // 1️⃣ Primary pass: enforce sample-size guard
     for (const page of allPages) {
       page.winrate = Math.round((page.win / page.games) * 1000) / 10
+      page.pickrate = Math.round((page.games / totalMatches) * 1000) / 10
       if (page.games < 5) continue
 
       const s = scorePage(page)

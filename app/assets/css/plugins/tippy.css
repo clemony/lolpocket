@@ -198,25 +198,25 @@
   }
 }
 
-.tippy-box[data-entrance="initial"][data-state="visible"] {
+.tippy-box[data-state="hidden"] {
   opacity: 0;
-  transform: translateY(-4px);
+}
+
+.tippy-box[data-state="visible"] {
+  opacity: 1;
+}
+
+.tippy-box[data-entrance="initial"][data-state="visible"] {
   animation: shift-toward 140ms cubic-bezier(0.28, 0.93, 0.75, 1.38) forwards;
 }
 
-/* Your smooth moveTransition (already in plugin) */
-/* .tooltip-motion {
-  transition: transform 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
- */
-.tippy-box[data-animate="move"][data-state="visible"] {
+.tippy-box[data-animate="move"] {
   animation: none;
 }
-
 @keyframes shift-toward {
   from {
     opacity: 0;
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;

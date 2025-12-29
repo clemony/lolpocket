@@ -5,11 +5,10 @@ import '@css/colors.css'
 const { stats } = defineProps<{
   stats: Record<string, number>
 }>()
-console.log('🥸 - stats:', stats)
 </script>
 
 <template>
-  <div class="grid w-full items-center gap-y-0.5">
+  <div class="grid w-full items-center gap-y-0.25">
     <div
       v-for="[k, v] in Object.entries(stats)"
       :key="k"
@@ -30,12 +29,3 @@ console.log('🥸 - stats:', stats)
     </div>
   </div>
 </template>
-
-<style>
-.stat-badge-content {
-  color: var(--stat-color);
-  * {
-    color: var(--stat-color);
-  }
-}
-</style>

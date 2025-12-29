@@ -27,7 +27,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        '',
+        'group/tt z-1',
         tabsTriggerVariants({ base, variant, size, hover, on }),
         props.class,
       )

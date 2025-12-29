@@ -35,7 +35,7 @@ const { stickyRaw, tabPaddingX, translateY } = await tabTransform()
            {
              ' ': stickyRaw.get() > 0.5,
              'bg-b1/90': stickyRaw.get() > 0.5 && routeName === route.name,
-             'tab-active': routeName === route.name,
+             'tab-active': routeName === route.name || (routeName === 'summoner-region-slug-champions' && route.name === 'summoner-region-slug-champion_key'),
            },
         )
       " />

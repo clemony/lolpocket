@@ -11,20 +11,20 @@ const best = computed (() => {
 <template>
   <div
     v-if="best && best.length"
-    class="flex items-center gap-5">
-    <Card
-      class="flex! w-fit! items-center justify-center gap-5 p-4">
-      <StatNumberLabel
-        percent
-        :stat="Object.values(spells.best)[0].winrate"
-        :tip="[Object.values(spells.best)[0].winrate,
-               Object.values(spells.best)[0].games,
-               Object.values(spells.best)[0].pickrate]" />
-      <ChampionSpellStat
+    class="flex h-28 items-center justify-start">
+    <ChampStatLabel
+      title="Spells"
+      :stat="Object.values(spells.best)[0]" />
+    <ChampStatRowWrapper simple>
+      <ChampStatObjectWrapper
         v-for="[k, v] in best"
         :key="k"
-        :k
-        :v />
-    </Card>
+        simple
+        :stat="v">
+        <Spell
+          :id="parseInt(k)"
+          :class="cn('size-15 shrink-0 cursor-default opacity-90 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0', { 'opacity-100 grayscale-0': v?.games })" />
+      </ChampStatObjectWrapper>
+    </ChampStatRowWrapper>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChampionData, ItemTooltip, RuneData, SpellData } from '#components'
+import { AbilityTooltip, ChampionData, ItemTooltip, RuneData, SpellData } from '#components'
 
 const { id, name, class: className, icon, label, size, tag, text } = defineProps<{
   id?: string
@@ -15,6 +15,7 @@ const { id, name, class: className, icon, label, size, tag, text } = defineProps
 const color = computed (() => label === 'item' ? itemColorByTier(Number(id)) : 'var(--color-nc)')
 
 const labelIndex = {
+  ability: AbilityTooltip,
   champion: ChampionData,
   item: ItemTooltip,
   rune: RuneData,
@@ -24,11 +25,14 @@ const labelIndex = {
 
 <template>
   <div :class="cn('flex cursor-pointer flex-nowrap items-center **:text-start', { ' px-2  py-1.5 gap-3': size !== 'lg' })">
-    <template v-if="size === 'lg' && label">
+    <Suspense v-if="size === 'lg' && label">
       <component
         :is="labelIndex[label]"
-        :id="parseInt(id)" />
-    </template>
+        :id="label === 'ability' ? id : parseInt(id)" />
+      <template #fallback>
+        <Spinner />
+      </template>
+    </Suspense>
 
     <template v-else>
       <!-- IMG -->

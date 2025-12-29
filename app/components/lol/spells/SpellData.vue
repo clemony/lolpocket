@@ -22,11 +22,11 @@ const spell = computed (() => spells[id])
       )
     ">
     <div class="flex w-full items-center gap-4 px-4 **:select-none">
-      <IndexIcon
-        :item="spellbook[spell.id]"
-
+      <Spell
+        :id="spell.id"
+        no-tip
         :alt="`${spell.name} Image`"
-        class="size-10" />
+        class="size-10 shrink-0 bg-transparent!" />
 
       <div class="flex h-full w-full flex-col justify-center gap-1">
         <div class="flex items-center justify-between">
@@ -35,12 +35,7 @@ const spell = computed (() => spells[id])
           </h2>
           <a
             :key="spell.id"
-            v-tippy="{
-              content: `Official LoL Wiki - ${spell.name}`,
-              theme: 'neutral',
-              placement: 'top-end',
-              offset: [12, 8],
-            }"
+            :title="`Official LoL Wiki - ${spell.name}`"
             :href="getWikiLink(spell.name)"
             target="_blank"
             alt="link to league wiki">
@@ -54,7 +49,7 @@ const spell = computed (() => spells[id])
         <div class="flex w-full items-center justify-start gap-4 *:flex *:w-fit *:items-center *:gap-0.25">
           <span
             v-if="spell.cd || spell.recharge"
-            v-tippy="{ content: spell.cd ? 'Cooldown' : 'Recharge', theme: 'neutral', placement: 'top' }"
+            :title="spell.cd ? 'Cooldown' : 'Recharge'"
             class="font-medium">
             <Icons
               name="stat:abilityHaste"
@@ -63,7 +58,7 @@ const spell = computed (() => spells[id])
           </span>
           <span
             v-if="spell.charges"
-            v-tippy="{ content: 'Charges', theme: 'neutral', placement: 'top' }"
+            title="Charges"
             class="font-medium">
             <Icons
               size="4"
@@ -74,7 +69,7 @@ const spell = computed (() => spells[id])
           </span>
           <span
             v-if="spell.range"
-            v-tippy="{ content: 'Range', theme: 'neutral', placement: 'top' }"
+            title="Range"
             class="font-medium">
             <Icons
               name="stat:rangeCenter"
@@ -87,7 +82,7 @@ const spell = computed (() => spells[id])
 
     <Separator
       color="neutral"
-      class="px-4"
+      class="w-full px-4"
       :size="3" />
 
     <div

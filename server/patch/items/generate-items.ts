@@ -17,7 +17,7 @@ const tagsOutput = resolvePath("./items/raw/unique-tags.json")
 const ranksOutput = resolvePath("./items/raw/unique-ranks.json")
 
 // shared
-const outputIndex = path.resolve("./shared/indexes/item-index.ts")
+const outputIndex = path.resolve("./shared/constants/items/item-index.ts")
 const outputLitePath = path.resolve("./shared/records/items-lite.ts")
 const itemOutputDir = path.resolve("./shared/records/items/")
 

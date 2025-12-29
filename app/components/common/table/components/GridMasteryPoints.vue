@@ -13,8 +13,6 @@ const progress = computed(() => {
     return Math.round(params.data.pointsSinceLevel / (params.data.pointsSinceLevel + params.data.pointsUntilLevel) * 100)
   }
 })
-
-const level = computed (() => params.data.level >= 10 ? 10 : params.data.level)
 </script>
 
 <template>
@@ -33,7 +31,7 @@ const level = computed (() => params.data.level >= 10 ? 10 : params.data.level)
     <MasteryRing
       :value="progress"
       :thickness="5"
-      :level
+      :level="params.data.level"
       :size="38" />
   </div>
 </template>

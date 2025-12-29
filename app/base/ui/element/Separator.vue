@@ -35,6 +35,10 @@ const separatorVariants = tv({
   },
   variants: {
     color: {
+      b3: {
+        label: 'text-bc/60',
+        separator: 'bg-b3',
+      },
       base: {
         label: 'text-bc/60',
         separator: 'bg-b3/60',

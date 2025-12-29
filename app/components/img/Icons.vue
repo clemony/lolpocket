@@ -9,6 +9,7 @@ const props = withDefaults(defineProps<{
   size?: ElementVariants['size']
   variant?: ElementVariants['variant']
   base?: ElementVariants['base']
+  color?: string
 }>(), {
   base: 'btn',
   size: 'sq-4',
@@ -21,6 +22,7 @@ const props = withDefaults(defineProps<{
 
     :class="cn('p-0!', buttonVariants({ base: props.base, variant: props.variant, size: props.size }), props.wrapperClass)">
     <Icon
+      :color
       :name="props.name"
       :class="cn('', props.class)" />
   </Element>

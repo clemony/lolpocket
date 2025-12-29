@@ -7,17 +7,21 @@ export async function accountFetch(progress?: Ref<number>) {
       headers: useRequestHeaders(["cookie"]),
     }
   )
+  console.log("🥸 - accountFetch - account:", account)
 
   progress && (progress.value = 70)
-  /*   if (error) {
-    sendErrorToast()
-  } else { */
+
   progress && (progress.value = 100)
-  as().sb = account
+  if (account) {
+    as().account ??= {} as AccountData
+    Object.assign(as().account, account)
+  } else
+    sendErrorToast("Unable to load account data. Please try logging in again.")
+
   as().settings = settings
   ps().pockets = pockets
 
-  Object.assign(as().account, account)
+  // Object.assign(as().account, account)
   acc().setAccount(account)
   console.log("🥸 - findSummoner - acc():", acc().accounts)
 

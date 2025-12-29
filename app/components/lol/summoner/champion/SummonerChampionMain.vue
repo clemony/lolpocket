@@ -1,65 +1,54 @@
 <script lang="ts" setup>
-const spellRef = useTemplateRef('spellRef')
-
-const { isActive, progressBetween } = useScrollSection(
-  'spells',
-  spellRef
-)
+const { mastery } = defineProps<{
+  mastery?: PlayerChampionMastery
+}>()
+const layoutClass = 'w-full  col-start-2'
+const headerClass = ' mb-10 text-10 font-bold h-30 select-none  bg-blend-screen sticky flex items-end pb-6 w-[104%] -top-55  bg-b1/90 backdrop-blur z-2 ring-2 ring-b1 border-2 border-b1'
+const separatorClass = 'mt-24 mb-16'
 </script>
 
 <template>
-  <div class="flex w-full max-w-[1000px] min-w-220 flex-col overflow-visible py-24">
-    <!-- overview -->
-    <BestChampionSpellSet />
-    <ChampionRuneSet page="best" />
-
+  <div class="w-full space-y-32">
     <!-- stats -->
-    <Separator class="mt-24 mb-16" />
-    <h1 class="mb-6 w-full text-start dst">
-      Stats
-    </h1>
-    <ChampionMatchStats />
+    <div :class="cn(layoutClass, headerClass, 'mt-24')">
+      Summary
+    </div>
+    <PlayerChampionSummary
+      :mastery
+      :class="cn(layoutClass)" />
 
     <!-- spells -->
-    <Separator class="mt-24 mb-16" />
-    <div
-      id="spells"
-      ref="spellRef"
-      class="grid w-full place-items-center">
-      <h1 class="mb-10 w-full text-start dst">
-        Summoner Spells
-      </h1>
-      <ChampionSpellStats />
-    <!--   -->
+    <div :class="cn(layoutClass, headerClass)">
+      Summoner Spells
     </div>
 
+    <ChampionSpellStats :class="cn(layoutClass, 'pl-2')" />
+    <!--   -->
+
     <!-- items -->
-    <Separator class="mt-24 mb-16" />
-    <h1 class="mb-6 w-full text-start dst">
+    <div :class="cn(layoutClass, headerClass)">
       Items
-    </h1>
-    <ChampionItemStats />
+    </div>
+    <ChampionItemStats :class="cn(layoutClass, 'pl-2')" />
 
     <!-- runes -->
-    <Separator class="mt-24 opacity-0" />
-    <h1 class="mb-6 w-full text-start dst">
+    <div :class="cn(layoutClass, headerClass)">
       Runes
-    </h1>
-    <ChampionRuneStats />
+    </div>
+    <ChampionRuneStats :class="cn(layoutClass)" />
 
     <!-- skills -->
 
-    <Separator class="mt-24 mb-16" />
-    <h1 class="mb-6 w-full text-start dst">
+    <Separator :class="cn(separatorClass, layoutClass)" />
+    <div :class="cn(layoutClass, headerClass)">
       Abilities
-    </h1>
-    <ChampionSkillStats />
+    </div>
+    <ChampionSkillStats :class="cn(layoutClass, 'pl-2')" />
 
     <!-- pairings -->
-    <Separator class="mt-24 mb-16" />
-    <ChampionDuoStats />
+    <!--       <Separator :class="cn(separatorClass, layoutClass)" />
+      <ChampionDuoStats  :class="cn(layoutClass)" /> -->
 
     <!-- allies -->
-    <Separator class="mt-24 mb-16" />
   </div>
 </template>

@@ -2,17 +2,16 @@
 const props = withDefaults(
   defineProps<{
     placement?: Side
-    theme?: string
     size?: ButtonVariants['size']
     on?: ButtonVariants['on']
-
+    hover?: ButtonVariants['hover']
     variant?: ButtonVariants['variant']
   }>(),
   {
+    hover: 'neutral',
     on: 'floating',
     placement: 'bottom',
     size: 'c-11',
-    theme: 'base',
     variant: 'floating'
   },
 )
@@ -40,16 +39,17 @@ const tippy = computed(() =>
 
 <template>
   <Button
-    v-tippy="{ content: tippy ?? null, theme, placement }"
-    :placement
+    :data-tip="tippy ?? null"
+    data-theme="mini-tip neutral line"
+    :data-placement="placement"
 
     :class="
       cn(
         {
-          'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
+          'pointer-events-none duration-0!  btn-active cursor-not-allowed':
             cooldown,
         },
-        buttonVariants({ on, variant, size }),
+        buttonVariants({ on, variant, hover, size }),
 
         'shrink-0 [&_svg]:size-4.25',
       )

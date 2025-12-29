@@ -1,7 +1,7 @@
 export type SpellStat = Record<string | number, StatDetail>
 
 export type SpellStats = {
-  single: Record<number, StatDetail>
+  single: OrderedStatEntry[]
   pairs: Record<string, StatDetail>
   best: Record<string, StatDetail>
 }
@@ -15,7 +15,7 @@ export const useChampionSpellStats = (source: Ref<MatchPlayerData[]>) =>
 
     const totalMatches = source.value.length
     if (!totalMatches) {
-      return { single: {}, pairs: {}, best: {} }
+      return { single: [], pairs: {}, best: {} }
     }
 
     for (const match of source.value) {
@@ -41,5 +41,5 @@ export const useChampionSpellStats = (source: Ref<MatchPlayerData[]>) =>
 
     const best = pickBestSpellSet(pairs)
 
-    return { single, pairs, best }
+    return { single: sortEntriesByPickrate(single), pairs, best }
   })

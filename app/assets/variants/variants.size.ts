@@ -16,6 +16,7 @@ const sv = {
   10: [gc, "size-10"],
   11: [gc, "size-11"],
   12: [gc, "size-12"],
+  13: [gc, "size-13"],
   14: [gc, "size-14"],
   15: [gc, "size-15"],
 }
@@ -58,6 +59,7 @@ export const sizeVariants = {
   "sq-10": [sv[10], "rounded-lg"],
   "sq-11": [sv[11], "rounded-lg"],
   "sq-12": [sv[12], "rounded-lg"],
+  "sq-13": [sv[13], "rounded-lg"],
   "sq-14": [sv[14], "rounded-lg"],
   "sq-15": [sv[15], "rounded-lg"],
 
@@ -81,6 +83,7 @@ export const sizeVariants = {
   "c-10": [sv[10], "rounded-full"],
   "c-11": [sv[11], "rounded-full"],
   "c-12": [sv[12], "rounded-full"],
+  "c-13": [sv[13], "rounded-full"],
   "c-14": [sv[14], "rounded-full"],
   "c-15": [sv[15], "rounded-full"],
 }

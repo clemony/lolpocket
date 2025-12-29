@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { Easing } from 'motion-v'
-import { pathIndex } from '#shared/indexes'
 import { motion, stagger } from 'motion-v'
 
 const emit = defineEmits(['update:paths'])

@@ -19,7 +19,7 @@ const { ability, class: className } = defineProps<{
     :class="cn('', className)">
     <div
       v-if="ability.cooldown?.length"
-      v-tippy="{ content: 'Cooldown', theme: 'base' }"
+      title="Cooldown"
       class="flex items-center gap-2">
       <Icon
         name="stat:abilityHaste"
@@ -29,7 +29,7 @@ const { ability, class: className } = defineProps<{
     <template v-if="ability.resource === 'Charge'">
       <div
         v-if="ability.resource"
-        v-tippy="{ content: 'Max Charges', theme: 'base' }"
+        title="Max Charges"
         class="flex items-center gap-2">
         <Icon
           :name="`stat:charge-${ability.maxCharges}`"
@@ -41,7 +41,7 @@ const { ability, class: className } = defineProps<{
 
       <div
         v-if="ability.rechargeRate"
-        v-tippy="{ content: 'Recharge Rate', theme: 'base' }"
+        title="Recharge Rate"
         class="flex items-center gap-2">
         <icon
           name="mynaui:battery-charging"
@@ -51,7 +51,7 @@ const { ability, class: className } = defineProps<{
 
     <div
       v-else-if="ability.cost?.length && ability.resource"
-      v-tippy="`${ability.resource} Cost`"
+      :title="`${ability.resource} Cost`"
       :name="ability.resource"
       class="flex items-center gap-1.5">
       <Icon
@@ -61,11 +61,11 @@ const { ability, class: className } = defineProps<{
 
     <div
       v-if="ability.effectRadius"
-      v-tippy="{ content: 'Effect Radius', theme: 'base' }"
+      title="Effect Radius"
       class="flex items-center gap-2">
       <span class="relative size-3 justify-start">
         <Icon
-          name="stat:radius"
+          name="stat:gameplayRadius"
           class="absolute -top-0.5 size-3.25 dst" />
       </span>
       {{ ability.effectRadius }}
@@ -73,10 +73,10 @@ const { ability, class: className } = defineProps<{
 
     <div
       v-if="ability.targetRange"
-      v-tippy="{ content: 'Range', theme: 'base' }"
+      title="Range"
       class="flex items-center gap-2">
       <Icon
-        name="stat:range"
+        name="stat:rangeCenter"
         class="size-4 dst" />
       {{ ability.targetRange }}
     </div>

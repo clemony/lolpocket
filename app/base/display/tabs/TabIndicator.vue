@@ -69,7 +69,7 @@ const variants = {
         )
       ">
       <motion.div
-        class="h-full w-full min-w-0! rounded-lg text-bc shadow"
+        class="h-full w-full min-w-0! -translate-y-px rounded-lg text-bc shadow"
         :class="
           cn(
             'bg-b1',

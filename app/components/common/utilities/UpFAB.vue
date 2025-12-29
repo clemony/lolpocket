@@ -14,15 +14,13 @@ const { scrollTop } = useScrollInject()
 
 <template>
   <Button
-    v-tippy="{ content: 'Top', theme, placement, arrow: false }"
-
+    data-tip="Top"
+    data-theme="neutral mini-tip line"
+    :data-placement="placement"
+    hover="neutral"
     size="c-14"
     variant="floating"
-    :class="
-      cn(
-        className,
-      )
-    "
+    :class="cn('duration-0!', className)"
     @click="scrollTop()">
     <icon
       name="arrow-up"

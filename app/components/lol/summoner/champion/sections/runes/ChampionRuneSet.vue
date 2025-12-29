@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+
+}>()
 const { runes } = usePlayerStatsInject()
 const page = computed (() => {
   if (!runes.value?.best)
@@ -6,55 +10,45 @@ const page = computed (() => {
   return runes.value?.best
 })
 const bestTip = computed (() => `${runes.value.best.games} game${runes.value.best.games > 1 ? 's' : ''} - ${runes.value.best.winrate}% WR`)
+
+const setClass = ' h-full items-center gap-5 flex'
 </script>
 
 <template>
-  <Card
+  <div
     v-if="page"
-    class="flex w-fit items-center justify-center gap-4 self-center px-5 py-3">
-    <StatNumberLabel
-      :stat="page.winrate"
-      :tip="[page.winrate,
-             page.games,
-             page.winrate]"
-      percent />
-    <Keystone
-      :id="page.keystone"
-      :data-id="page.keystone"
-      data-tip="rune"
-      data-size="md"
-      :data-text="bestTip"
-      class="" />
-    <Rune
-      v-for="rune in page.primaryRunes"
-      :id="rune"
-      :key="rune"
-      :data-id="rune"
-      data-tip="rune"
-      data-size="md"
-      :data-text="bestTip"
-      class="size-14" />
+    class="flex h-28 grow items-center">
+    <ChampStatLabel
+      title="Runes"
+      :stat="page" />
+    <div
+      :class="cn('w-full justify-start self-center border-b border-b3/80 p-3', setClass, className)">
+      <Keystone
+        :id="page.keystone"
+        :data-text="bestTip"
+        class="size-18 contrast-105" />
 
-    <Rune
-      v-for="rune in page.secondaryRunes"
-      :id="rune"
-      :key="rune"
-      data-tip="rune"
-      data-size="md"
-      :data-id="rune"
-      :data-text="bestTip"
-      class="size-14" />
+      <Rune
+        v-for="rune in page.primaryRunes"
+        :id="rune"
+        :key="rune"
+        :data-text="bestTip"
+        class="size-14" />
 
-    <Element
-      v-for="shard in page.shards"
-      :key="shard"
-      base="btn"
-      variant="neutral"
-      class="bg-neutral/90"
-      size="c-11">
-      <ShardIcon
+      <Rune
+        v-for="rune in page.secondaryRunes"
+        :id="rune"
+        :key="rune"
+        :data-text="bestTip"
+        class="size-14" />
+
+      <Shard
+        v-for="shard in page.shards"
         :id="shard"
-        color />
-    </Element>
-  </Card>
+        :key="shard"
+        size="c-12"
+        variant="neutral">
+      </Shard>
+    </div>
+  </div>
 </template>

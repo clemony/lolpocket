@@ -17,11 +17,11 @@ const sum = computed (() => route.path.match(/summoner.*/))
       )
     ">
     <Button
-      v-tippy="{ content: 'Menu', theme: 'base', placement: 'bottom' }"
-      class="group/logo size-11! shrink-0"
+      data-tip="To Nexus 🡭"
+      class="group/logo size-9! shrink-0"
       variant="neutral"
       tabindex="0"
-      size="c-11"
+      size="sq-11"
       @click="ui().sidebarOpen = true">
       <h5
         class="

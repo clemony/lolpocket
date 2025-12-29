@@ -43,12 +43,7 @@ const { class: className, effect, variants } = defineProps<{
 
             <span
               v-if="attribute.modifiers?.[1]"
-              v-tippy="{
-                content: attribute.modifiers?.[1].tooltip,
-                theme: 'base',
-                placement: 'bottom-start',
-                offset: [0, 6],
-              }"
+              :data-tip="attribute.modifiers?.[1].tooltip"
               :class="
                 cn(
                   {

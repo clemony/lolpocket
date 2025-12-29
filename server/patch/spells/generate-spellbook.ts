@@ -1,13 +1,13 @@
 import fs from "node:fs"
 import path from "node:path"
 
-import type { Index, Spell } from "../../../types/types.import"
+import type { Index, Spell } from "../.."
 import { resolvePath } from "../resolvePath"
 import { checkUpdate, markUpdate } from "../utils"
 import { fetchSpells } from "./fetch-spells" // import your handler directly
 
 const dataPath = resolvePath("./spells/raw/summoner-spells.json")
-const outputPath = path.resolve("./shared/indexes/spellbook.ts")
+const outputPath = path.resolve("./shared/constants/misc/spellbook.ts")
 
 async function buildSpellIndex() {
   const needsUpdate = await checkUpdate("spell")

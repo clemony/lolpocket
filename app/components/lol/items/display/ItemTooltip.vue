@@ -8,24 +8,27 @@ const { id, map } = defineProps<{
   map?: number
 }>()
 
-const item = ref<Item>()
 const name = computed (() => itemNameById(id))
 const rank = computed (() => itemRank[id])
+
+const item = shallowRef<Item | null>(null)
+const status = shallowRef<'idle' | 'loading' | 'success' | 'error'>('idle')
 
 watchEffect(async () => {
   if (!id)
     return
 
+  status.value = 'loading'
   try {
-    const module = await import(`#shared/records/items/${id}.ts`)
-    item.value = module.default || null
+    const mod = await import(`#shared/records/items/${id}.ts`)
+    item.value = mod.default
+    status.value = 'success'
   }
-  catch (err) {
-    console.error(`Failed to load champion for ${id}`, err)
-    item.value = null
+  catch (e) {
+    status.value = 'error'
+    console.error(e)
   }
 })
-
 const filteredFrom = computed (() => {
   if (!item.value || !item.value?.buildsFrom)
     return null
@@ -40,15 +43,21 @@ const filteredInto = computed (() => {
 const itemImgClass
   = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rounded-md  transition-all  duration-200 *:rounded-md  *:pointer-events-none hover:ring-1 hover:ring-offset-2'
 
+const hasThings = computed (() => {
+  if ((item.value?.stats && Object.entries(item.value?.stats)?.length) || item.value?.requiredChampion || item.value?.passives || item.value?.active?.[0] || item.value?.buildsFrom || item.value?.buildsInto)
+    return true
+  else return false
+})
+
 const el = useTemplateRef<HTMLDivElement>('el')
 const { arrivedState } = useScroll(el)
 </script>
 
 <template>
   <div
-    :class="cn('size-full max-h-80 overflow-hidden transition-all duration-150', { 'min-h-full': !arrivedState.top })"
+    :class="cn('h-fit max-h-80 w-80 overflow-hidden transition-all duration-150', { 'min-h-80': hasThings && !arrivedState.top, 'h-80': hasThings && !arrivedState.bottom })"
     class="">
-    <div class="flex w-full grow items-center gap-3 p-3">
+    <div class="grid w-full grid-cols-[20px_1fr_50px] items-center gap-3 p-3">
       <!-- IMG -->
 
       <Item
@@ -56,20 +65,20 @@ const { arrivedState } = useScroll(el)
         :id="id"
         loading-style="spinner"
         :alt="`${name} Image`"
-        :class="cn('size-11 origin-top transition-all duration-150', { 'size-6': !arrivedState.top })">
+        :class="cn('size-7')">
       </Item>
 
-      <div
-        :class="cn('items-between flex size-full flex-col gap-1 transition-all duration-150', { 'flex-row! justify-between! items-center! max-w-full overflow-x-hidden': !arrivedState.top })">
-        <div
-          class="flex items-center justify-between gap-1">
-          <!-- NAME / LINK -->
+      <!-- NAME / LINK -->
 
-          <h5 class="text-3! leading-3 font-semibold!">
-            {{ name }}
-          </h5>
+      <h5
+        class="text-3! leading-3 font-medium!"
+        :style="{
+          color: itemRankColor?.[rank],
+        }">
+        {{ name }}
+      </h5>
 
-          <!--           <a
+      <!--           <a
             v-if="name"
             :title="`Official LoL Wiki - ${name}`"
             :href="getWikiLink(name)"
@@ -80,37 +89,22 @@ const { arrivedState } = useScroll(el)
               name="la:wikipedia-w"
               class="" />
           </a> -->
-        </div>
 
-        <!-- TIER -->
-        <div class="z-0 flex grow items-end justify-between gap-1">
-          <span
-            v-if="rank"
-            :style="{
-              color: itemRankColor[rank],
-            }"
-            :class="cn('text-1! italic opacity-100 transition-discrete duration-150', { 'hidden opacity-0': !arrivedState.top })"
-            class="">
-            {{ rank }}
-          </span>
-
-          <Grow />
-          <!-- PRICE -->
-          <figure
-            class="inline-flex items-end gap-1 text-2 font-medium">
-            <img
-              src="/img/icons/gold-coin.webp"
-              alt="item price"
-              class="ml-1 inline size-4 self-center opacity-80" />
-            <figcaption>
-              {{ itemPrice[id] }}
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+      <!-- PRICE -->
+      <figure
+        class="inline-flex items-end gap-1 text-2 font-medium">
+        <img
+          src="/img/icons/gold-coin.webp"
+          alt="item price"
+          class="ml-1 inline size-4 self-center opacity-80" />
+        <figcaption>
+          {{ itemPrice[id] }}
+        </figcaption>
+      </figure>
     </div>
 
     <div
+      v-if="hasThings "
       ref="el"
       :class="cn('relative grid w-full grow auto-rows-auto overflow-x-hidden overflow-y-scroll px-3 pb-3 transition-all duration-150 *:first:-mt-2')"
       class="">
@@ -127,7 +121,7 @@ const { arrivedState } = useScroll(el)
       </div>
       <!-- STATS -->
 
-      <ItemStats
+      <LazyItemStats
         v-if="item?.stats && Object.entries(item?.stats).length"
         :stats="item?.stats" />
 
@@ -136,7 +130,7 @@ const { arrivedState } = useScroll(el)
         <Separator
           :size="2"
           color="neutral" />
-        <ItemEffect
+        <LazyItemEffect
           v-for="(passive, i) in item.passives"
           :key="i"
           :data="passive"
@@ -148,7 +142,7 @@ const { arrivedState } = useScroll(el)
         <Separator
           :size="2"
           color="neutral" />
-        <ItemEffect
+        <LazyItemEffect
           :data="item.active[0]"
           type="Active" />
       </template>
@@ -164,7 +158,7 @@ const { arrivedState } = useScroll(el)
           <template
             v-for="(fromItem, i) in filteredFrom"
             :key="i">
-            <Item
+            <LazyItem
               :id="fromItem.id"
               loading-style="spinner"
               :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
@@ -206,7 +200,7 @@ const { arrivedState } = useScroll(el)
               'justify-start': item.buildsInto.length > 7,
             })
           ">
-          <Item
+          <LazyItem
             v-for="(buildItem, i) in filteredInto"
             :id="buildItem.id"
             :key="i"

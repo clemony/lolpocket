@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-import { Primitive } from 'reka-ui'
-
 const {
   id,
-  as = 'label',
   class: className,
-  loadedClass,
+  dataSize = 'lg',
+  noTip = false,
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | null
   loadedClass?: HTMLAttributes['class']
-  as?: string
+  dataSize?: TooltipSize
+  noTip?: boolean
 }>()
 const loaded = ref(false)
 const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
@@ -29,18 +28,21 @@ watch(
 </script>
 
 <template>
-  <Primitive
-    :as
+  <label
+    :data-id="id"
+    :data-tip="noTip ? null : 'rune' "
+    :data-size="noTip ? null : dataSize"
+    :data-interactive="dataSize === 'lg' ? true : false"
     :class="
-      cn('relative grid aspect-square h-20 place-items-center overflow-visible rounded-full transition-all duration-300', className,
+      cn('hover-3d relative grid aspect-square size-full h-20 place-items-center', className,
       )
     ">
-    <slot />
     <img
       v-if="id"
       :key="id"
       ref="imgEl"
-      :src="`/img/runes/${runeToPath[id]}/${id}.webp`"
+
+      :src="`/img/runes/${id}.webp`"
       :alt="runeNameById(id)"
       :class="
         cn('size-full object-contain', {
@@ -48,5 +50,7 @@ watch(
         })
       "
       @load="loaded = true" />
-  </Primitive>
+
+    <slot />
+  </label>
 </template>

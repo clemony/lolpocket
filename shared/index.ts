@@ -1,6 +1,5 @@
 export * from "./constants"
 export * from "./data"
-export * from "./indexes"
 export * from "./references"
 export * from "./schema"
 export * from "./types"
