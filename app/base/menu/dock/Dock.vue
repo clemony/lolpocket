@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { DataOrientation, Direction } from './types'
 import {
   DISTANCE_INJECTION_KEY,
   MAGNIFICATION_INJECTION_KEY,
@@ -10,7 +9,7 @@ import {
 
 interface DockProps {
   class?: HTMLAttributes['class']
-  direction?: Direction
+  direction?: DataAlign
   distance?: number
   magnification?: number
   orientation?: DataOrientation
@@ -62,9 +61,9 @@ provide(DISTANCE_INJECTION_KEY, distance)
     :tabindex="0"
     :class="
       cn('mx-auto mt-8 flex h-[60px] w-max gap-4 rounded-2xl border bg-b1/90 p-2 shadow-sm shadow-black/5 dss drop-shadow-black/5 backdrop-blur-md transition-all supports-backdrop-blur:bg-b1/80',
-        orientation === 'vertical' && 'flex-col w-[62px] h-max',
-        props.class,
-        dockClass,
+         orientation === 'vertical' && 'flex-col w-[62px] h-max',
+         props.class,
+         dockClass,
       )
     "
     @mousemove="onMouseMove"

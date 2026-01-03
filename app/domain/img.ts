@@ -1,0 +1,53 @@
+export function getSplash(
+  keyOrId: string | number,
+  type: SplashType,
+  s?: Skin
+): string {
+  const key = ckey(keyOrId)
+  const champ = formatUrlChampKey(key)
+  const skin = s || skinIndex[key][0]
+  const folder = computed(() => {
+    function id() {
+      const a = skin.id.replace(/(\d+)\..*/, "$1")
+      return a.length === 1 && key !== "Hwei" ? `0${a}` : a
+    }
+    return skin.name === "Original" && key !== "Hwei" ? "base" : `skin${id()}`
+  })
+
+  const partialUrl = skin.key.replace("<type>", type)
+
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
+}
+
+import { bgArt, skinIndex as skins } from "~~/shared"
+
+export function getRandomBg() {
+  return getRandom(Object.values(bgArt))
+}
+
+export function getSkinName(
+  key: string,
+  id: number | string
+): string | undefined {
+  return skins[key]?.find((skin) => skin.id === id.toString())?.name
+}
+
+export function skinNameFromUrl(url: string): string | undefined {
+  const s = url
+    .replace(
+      "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/",
+      ""
+    )
+    .split("/")
+
+  const name = capitalize(s[0])
+  let id = [...s].pop()
+  id = id.replace(/[a-z]+_splash_[a-z]+_/, "")
+  id = id.replace(".jpg", "")
+
+  return `${skins[name]?.find((skin) => skin.id === id.toString())?.name} ${name}`
+}
+
+export function getSummonerIcon(icon) {
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg`
+}

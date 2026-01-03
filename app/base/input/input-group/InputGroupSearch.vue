@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <InputGroupAddon>
+  <InputGroupAddon align="inline-start">
     <icon
       name="search"
       class="size-4 opacity-40" />

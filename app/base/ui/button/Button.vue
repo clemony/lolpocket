@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
     :as-child="asChild"
     :class="
       cn(
-        'group/button',
+        'group/button group/btn',
         buttonVariants({ base, variant, size, hover, on }),
         props.class,
       )

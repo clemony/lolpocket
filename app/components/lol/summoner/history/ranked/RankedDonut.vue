@@ -11,7 +11,7 @@ const color1 = computed(() => getComputedStyle(document.documentElement).getProp
 const data = computed(() => {
   return {
     datasets: [{ backgroundColor: [
-      getColorFromVariable('--color-b3'),
+      cssVar('--color-b3'),
       color1.value
     ], data: [100 - winrate, winrate], label: 'Recent winrate in percentage' }],
     labels: ['Loss', 'Win']

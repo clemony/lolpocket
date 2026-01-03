@@ -17,7 +17,7 @@ const { champions } = defineProps<{
 const styles = getComputedStyle(document.documentElement)
 ChartJS.defaults.color = styles.getPropertyValue('--colorneutral')
 ChartJS.defaults.font.weight = 400
-ChartJS.defaults.scale.grid.color = getColorFromVariable('--color-b3')
+ChartJS.defaults.scale.grid.color = cssVar('--color-b3')
 
 ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 
@@ -34,9 +34,9 @@ const chartRef = ref<any>(null)
 const imagePositions = ref<{ x: number, label: string }[]>([])
 
 const options = {
-  backgroundColor: getColorFromVariable('--colorneutral'),
+  backgroundColor: cssVar('--colorneutral'),
   barThickness: 32,
-  color: getColorFromVariable('--colorneutral'),
+  color: cssVar('--colorneutral'),
   elements: {
     bar: {
       borderRadius: 4,
@@ -105,7 +105,7 @@ const options = {
         display: false,
       },
       border: {
-        color: `${getColorFromVariable('--color-b2')}`,
+        color: `${cssVar('--color-b2')}`,
       },
       ticks: {
         display: false,
@@ -117,7 +117,7 @@ const options = {
       },
       beginAtZero: true,
       border: {
-        color: `${getColorFromVariable('--color-b2')}`,
+        color: `${cssVar('--color-b2')}`,
       },
       max: 100,
       min: 0,

@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+const { title = ['Skill', 'Priority'], class: className, separator, set, } = defineProps<{
+  class?: HTMLAttributes['class']
+  set?: OrderedStatEntry
+  title?: string | string[] | number
+  separator?: boolean
+}>()
 const { skills } = usePlayerStatsInject()
 
 const route = useRoute()
@@ -7,17 +13,22 @@ const ckey = computed (() => String(route.params.champion_key))
 const prio = computed (() => {
   if (!skills.value)
     return
+  if (set)
+    return set
   return Object.entries(skills.value.priority).sort((a, b) => b[1].winrate - a[1].winrate)[0]
 })
 </script>
 
 <template>
-  <div class="flex h-28 w-full grow items-center">
+  <ChampStatRow
+    simple
+    :class="cn('', className)">
     <ChampStatLabel
-      :title="['Skill', 'Priority']"
+      :separator
+      :title="title"
       :stat="prio?.[1]" />
-    <div
-      class="flex size-full items-center gap-2 border-b border-b3/80 px-3">
+    <ChampStatRowWrapper
+      v-if="prio">
       <template
         v-for="k, i in prio?.[0].split('>')"
         :key="k">
@@ -34,6 +45,9 @@ const prio = computed (() => {
           </span>
         </Ability>
       </template>
-    </div>
-  </div>
+    </ChampStatRowWrapper>
+    <NoItemData
+      v-else
+      simple />
+  </ChampStatRow>
 </template>

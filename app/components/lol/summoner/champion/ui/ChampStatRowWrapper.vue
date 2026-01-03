@@ -1,13 +1,12 @@
 <script lang="ts" setup>
-const { class: className, simple } = defineProps<{
+const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
-  simple?: boolean
 }>()
 </script>
 
 <template>
   <div
-    :class="cn('flex! size-full items-center gap-4 overflow-x-scroll border-b border-b-b3/80 px-3 pt-3 pb-2.5', { 'py-3 h-28': simple }, className)">
+    :class="cn('inset-y-0 flex h-full min-h-full grow flex-nowrap items-center justify-start justify-items-start gap-4 overflow-x-scroll overflow-y-hidden border-b border-b-b3/80 py-2.5 pr-3 pl-34', className)">
     <slot />
   </div>
 </template>

@@ -19,7 +19,7 @@ import {
   ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/utils/config/tableTheme'
+import { pocketTheme } from '~/assets/config'
 
 definePageMeta({
   name: 'Item Stats',

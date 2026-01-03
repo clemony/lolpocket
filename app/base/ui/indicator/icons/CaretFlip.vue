@@ -8,7 +8,7 @@ const { class: className, fill } = defineProps<{
 <template>
   <icon
     v-if="fill"
-    name="up-fill"
+    name="caret-up"
     :class="
       cn('transition-rotate text-bc/60 duration-150 group-data-[state=open]/collapse:-rotate-180',
          className,

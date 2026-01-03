@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenubarItem, MenubarRadioGroup } from '../menubar.types'
+import type { MenubarItem, MenubarRadioGroup } from '../types.menubar'
 
 const { item } = defineProps<{ item: MenubarItem }>()
 </script>

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-const { class: className } = defineProps<{
+const { class: className, size = 'sq-8' } = defineProps<{
   class?: HTMLAttributes['class']
-
+  size?: ButtonVariants['size']
 }>()
 const emit = defineEmits(['clear:input'])
 </script>
 
 <template>
   <InputGroupButton
-    size="sq-8"
+    :size
     align="inline-end"
-    :class="cn('pointer-events-auto mr-2 peer-has-placeholder-shown:opacity-0', className)"
+    :class="cn('pointer-events-auto peer-has-placeholder-shown:opacity-0', className)"
     @click.stop="emit('clear:input')">
     <icon
       name="x"

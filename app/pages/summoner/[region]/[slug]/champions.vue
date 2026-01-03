@@ -25,7 +25,6 @@ definePageMeta({
 const { champions, filteredMatches, mastery: m, summoner } = useSummonerInject()
 
 const awaitMastery: PlayerChampionMastery[] = await m()
-const masteryMap = new Map(awaitMastery.map(m => [m.championId, m]))
 const data = useAggregatedStats(filteredMatches, summoner.value.puuid)
 
 const summary = await getMasterySummary(summoner.value.puuid)
@@ -39,7 +38,7 @@ const championData = computed (() =>
 </script>
 
 <template>
-  <div class="relative h-max w-full px-20 pb-32">
+  <div class="relative w-full max-w-[1400px] px-24 pb-32">
     <div class="mx-auto w-3/5">
       <header class="flex w-full items-center justify-between pt-24 pb-2">
         <h1 class="self-start font-bold dst">
@@ -49,7 +48,7 @@ const championData = computed (() =>
 
       <div class="mb-4 flex gap-4">
         <QueueFilters />
-        <LazyMatchPositionFilter />
+        <LazyMatchPositionFilter orientation="vertical" />
       </div>
     </div>
 

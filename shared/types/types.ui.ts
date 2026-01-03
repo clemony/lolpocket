@@ -8,3 +8,6 @@ export type Shape = "square" | "circle"
 export type Orientation = "vertical" | "horizontal" | "responsive"
 export type LoadingStyle = "none" | "spinner" | null
 export type TooltipSize = "default" | "md" | "lg"
+export type SortDirection = "asc" | "desc"
+export type DataOrientation = "vertical" | "horizontal"
+export type DataAlign = "top" | "middle" | "bottom"

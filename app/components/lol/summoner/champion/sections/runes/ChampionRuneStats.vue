@@ -5,38 +5,15 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const route = useRoute()
-
 const { runes } = usePlayerStatsInject()
 
-const used = computed (() => {
-  return {
-    primary: runes.value?.all.map(p => p.primaryPath),
-    secondary: runes.value?.all.map(p => p.secondaryPath),
-  }
-})
-const runeRef = useTemplateRef('runeRef')
-
-const { isActive, progressBetween } = useScrollSection(
-  'runes',
-  runeRef
-)
-
-watch(progressBetween, (v) => {
-  if (isActive.value) {
-    console.log('runes progress', v)
-  }
-}, { immediate: false })
-
-const gridClass = 'grid w-full grid-cols-5 gap-4 items-center justify-between '
+const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
 </script>
 
 <template>
   <div
     v-if="runes"
-    id="runes"
-    ref="runeRef"
-    :class="cn('flex flex-col items-center gap-8', className)">
+    :class="cn('flex flex-col items-center gap-6', className)">
     <div
       v-if="runes.best"
       class="mb-10 w-full space-y-4">
@@ -59,21 +36,43 @@ const gridClass = 'grid w-full grid-cols-5 gap-4 items-center justify-between '
         v-for="path in runePaths"
         :key="path.id"
         :runes="runes?.primary"
-        :used="used?.primary"
         :keystones="runes?.keystone"
         :path />
     </div>
-    <Separator class="opacity-70" />
+    <!--  <div :class="cn(gridClass, 'relative')">
+      <Separator class="absolute z-0 w-full opacity-90" />
+      <div
+        v-for="path in runePaths"
+        :key="path.id"
+        class="z-1 grid size-12 place-items-center rounded-full bg-b1">
+        <Button
+          data-tip="path"
+          :data-id="path.name"
+          base="btn"
+          size="c-7"
+          class=""
+          variant="outline">
+          <img
+            :src="`/img/paths/${path.name}.webp`"
+            :alt="`path:${path.name}`"
+            :class="cn('size-4 object-contain opacity-40 contrast-0 grayscale', {
+              ' opacity-100! grayscale-0 contrast-100 brightness-100!': used.includes(path.name),
+              'size-3.75': path.name === 'Domination',
+              'contrast-100 brightness-160': path.name === 'Domination' && !used.includes(path.name),
+              'size-4.25': path.name === 'Sorcery' })" />
+        </Button>
+      </div>
+    </div>
+ -->
     <div :class="cn(gridClass, 'overflow-hidden')">
       <LazyChampionRuneWinrates
         v-for="path in runePaths"
         :key="path.id"
-        :used="used?.secondary"
         :runes="runes?.secondary"
         :path />
     </div>
 
-    <div :class="gridClass">
+    <div :class="cn(gridClass, 'overflow-hidden')">
       <LazyChampionShardWinrates
         :shards="runes?.shards" />
     </div>

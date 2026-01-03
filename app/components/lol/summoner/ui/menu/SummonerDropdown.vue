@@ -5,7 +5,7 @@ const {
   data: s,
   hover = 'base',
   on = 'base',
-  size = 'c-11',
+  size,
   variant = 'ghost',
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -34,23 +34,22 @@ function handleBlock() {
     theme="base clean">
     <Button
       :class="
-        cn('relative overflow-hidden border-b3! p-0 shadow-sm drop-shadow-sm',
+        cn('relative flex gap-3 overflow-hidden p-0',
            buttonVariants({ size, hover, variant, base, on }),
-           { 'btn-active': open },
+           { 'btn-active': open,
+             'w-full-pl-0 rounded-full': !size,
+           },
            className,
         )
       ">
       <LazySummonerIcon
         v-if="summoner"
         :summoner
-        class="size-11 rounded-full" />
-      <!--
-        <SummonerName
-          :summoner
-          class="w-full truncate font-medium" />
-        <icon
-          name="select"
-          class="absolute right-3 size-3.5" /> -->
+        class="size-9 rounded-full shadow-sm drop-shadow-sm" />
+
+      <SummonerName
+        :summoner
+        class="w-full truncate font-medium" />
     </Button>
 
     <template #content>

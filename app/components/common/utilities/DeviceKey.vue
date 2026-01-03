@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getDeviceKey } from '~/utils/config/handleDevice'
+import { getDeviceKey } from '~/utils/device'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

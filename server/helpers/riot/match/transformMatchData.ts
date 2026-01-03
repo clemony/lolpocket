@@ -7,7 +7,8 @@ export function transformMatchData(raw: any): MatchData {
       riotIdTagline: p.riotIdTagline ?? "",
       profileIcon: p.profileIcon,
       teamId: p.teamId,
-      teamPosition: p.teamPosition ?? "",
+      teamPosition:
+        p.teamPosition.toLowerCase().replace("utility", "support") ?? "",
       championId: p.championId,
       timeSpentDead: p.totalTimeSpentDead ?? "",
       //

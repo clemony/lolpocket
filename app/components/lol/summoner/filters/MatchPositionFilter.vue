@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+const { class: className, orientation, size = '10', variant } = defineProps<{
+  class?: HTMLAttributes['class']
+  variant?: TabListVariants['variant']
+  size?: TabListVariants['size']
+  orientation?: DataOrientation
+}>()
 const { filter, matches, setFilter, summoner } = useSummonerInject()
 
 const roles = computed(() => {
@@ -15,28 +21,26 @@ const roleModel = computed({
   get: () => filter?.value?.role,
   set: val => setFilter('role', val),
 })
-
-const tabClass = '**:!text-bc'
 </script>
 
 <template>
   <Tabs
     v-model:model-value="roleModel"
     default-value="ALL"
+    :orientation
     class="w-full p-0">
     <TabsList
-
-      class="h-10 w-full justify-stretch border-b3/80">
+      :class="cn('h-10 w-full justify-stretch border-b3/80', buttonVariants({ variant, size }), className)">
       <TabIndicator class="z-0" />
       <TabsTrigger
         v-for="role in roles"
         :key="role.name"
         :value="role.role"
-        :class="tabClass"
+        class="h-full **:text-bc!"
         :disabled="!role.games">
         <Icon
           :name="`role:${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-          class="mb-px h-4.5 w-auto shrink-0 dst" />
+          class="mb-px h-5.5 w-auto shrink-0 dst" />
       </TabsTrigger>
     </TabsList>
 

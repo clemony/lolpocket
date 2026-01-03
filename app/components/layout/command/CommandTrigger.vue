@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~/utils/config/handleDevice'
+import { getDeviceKey } from '~/utils/device'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -27,7 +27,7 @@ watchEffect(() => {
     <button
       :class="
         cn('group input flex! h-12 w-full cursor-text flex-nowrap items-center gap-2 rounded-lg-2 bg-transparent! px-3 text-nowrap hover:ring-1 hover:ring-b4',
-          props.class,
+           props.class,
         )
       "
       class=""

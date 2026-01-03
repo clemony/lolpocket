@@ -6,7 +6,7 @@ const props = defineProps<
   TabsListProps & {
     class?: HTMLAttributes['class']
     variant?: TabListVariants['variant']
-    orientation?: TabListVariants['orientation']
+    orientation?: Orientation
     base?: TabListVariants['base']
     size?: TabListVariants['size']
   }
@@ -17,8 +17,9 @@ const forwarded = reactiveOmit(props, 'class')
 <template>
   <TabsList
     v-bind="forwarded"
+    :orientation
     :class="
-      cn(tabListVariants({ variant, orientation, base, size }), props.class)
+      cn(tabListVariants({ variant, base, size }), props.class)
     ">
     <slot />
   </TabsList>

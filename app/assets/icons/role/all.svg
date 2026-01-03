@@ -1,8 +1,8 @@
-<svg width="271" height="271" viewBox="0 0 271 271" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M99.922 97.3495H171.153V168.581H99.922V97.3495Z" fill="currentColor" fill-opacity="0.85"/>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" fill="currentColor" height="24">
 
-<path d="M30.934 265.93H270.877V25.9871L218.641 78.2234V216.068H80.7959L30.934 265.93Z" fill="currentColor"  fill-opacity="0.85"/>
-
-<path d="M186.56 49.8619H52.4344V183.988L0.19812 236.224V0H236.422L186.56 49.8619Z" fill="currentColor" fill-opacity="0.85"/>
-
+	<g>
+		<path class="s0" d="m19 3l-4 4h-8v8l-4 4v-16z"/>
+		<path class="s0" d="m5 21l4-4h8v-8l4-4v16z"/>
+		<path class="s0" d="m10 10h4v4h-4z"/>
+	</g>
 </svg>

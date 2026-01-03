@@ -63,7 +63,7 @@ const amount = computed(() => {
   <div class="col-start-3 text-2 dst select-none">
     <span class="flex items-center justify-end gap-2">
       <!--
-  <icon name="bi:caret-up-fill" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
+  <icon name="bi:caret-caret-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
       {{ statValue > 0 ? statValue : "" }}
 
       <span

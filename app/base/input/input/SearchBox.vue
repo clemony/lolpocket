@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getMetaIcon } from '~/utils/config/handleDevice'
+import { getMetaIcon } from '~/utils/device'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -19,7 +19,7 @@ watch(metaK, (v) => {
     variant="input"
     :class="
       cn('cursor-text gap-2! border border-b3 bg-b1/60 pr-2 ring-b1 transition-all duration-300 hover:ring',
-        className,
+         className,
       )
     "
     @click="ui().commandOpen = true">

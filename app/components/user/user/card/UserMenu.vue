@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { TippyOptions } from 'vue-tippy'
-import { popoverArrow } from '~/assets/ts/popoverArrow'
+import { popoverArrow } from '~/assets/config/popoverArrow'
 
 const props = withDefaults(
   defineProps<

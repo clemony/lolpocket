@@ -20,7 +20,7 @@ import {
   ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/utils/config/tableTheme'
+import { pocketTheme } from '~/assets/config'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
 import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
 
@@ -209,7 +209,7 @@ ModuleRegistry.registerModules([
   <AgGridVue
     :initial-state="cs().dbChampionGridState"
     class="
-      stat-grid champion-grid border-shadow-sm size-full! min-w-full bg-b1
+      champion-grid border-shadow-sm stat-grid size-full! min-w-full bg-b1
       shadow-black/3! drop-shadow-black/3!
     "
     :grid-options="gridOptions"

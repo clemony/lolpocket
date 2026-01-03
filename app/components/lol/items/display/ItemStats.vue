@@ -8,7 +8,7 @@ const { stats } = defineProps<{
 </script>
 
 <template>
-  <div class="grid w-full items-center gap-y-0.25">
+  <div class="grid w-full items-center gap-y-0.25 pr-2">
     <div
       v-for="[k, v] in Object.entries(stats)"
       :key="k"

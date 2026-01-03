@@ -50,12 +50,11 @@ const hasThings = computed (() => {
 })
 
 const el = useTemplateRef<HTMLDivElement>('el')
-const { arrivedState } = useScroll(el)
 </script>
 
 <template>
   <div
-    :class="cn('h-fit max-h-80 w-80 overflow-hidden transition-all duration-150', { 'min-h-80': hasThings && !arrivedState.top, 'h-80': hasThings && !arrivedState.bottom })"
+    :class="cn('h-fit max-h-80 w-74 overflow-hidden transition-all duration-150')"
     class="">
     <div class="grid w-full grid-cols-[20px_1fr_50px] items-center gap-3 p-3">
       <!-- IMG -->
@@ -92,7 +91,7 @@ const { arrivedState } = useScroll(el)
 
       <!-- PRICE -->
       <figure
-        class="inline-flex items-end gap-1 text-2 font-medium">
+        class="inline-flex items-end justify-end gap-1 text-2 font-medium">
         <img
           src="/img/icons/gold-coin.webp"
           alt="item price"
@@ -106,8 +105,7 @@ const { arrivedState } = useScroll(el)
     <div
       v-if="hasThings "
       ref="el"
-      :class="cn('relative grid w-full grow auto-rows-auto overflow-x-hidden overflow-y-scroll px-3 pb-3 transition-all duration-150 *:first:-mt-2')"
-      class="">
+      :class="cn('relative grid size-full grow auto-rows-auto overflow-x-hidden overflow-y-scroll px-3 pb-3 transition-all duration-150 *:first:-mt-2')">
       <!-- separator -->
       <Separator
         v-if="item?.stats && Object.entries(item?.stats).length"

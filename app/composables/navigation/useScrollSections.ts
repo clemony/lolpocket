@@ -1,81 +1,91 @@
-import { clamp } from "motion-v"
-
 // scroll-sections.ts
+const SECTION_IDS = [
+  "summary",
+  "spells",
+  "items",
+  "runes",
+  "skills",
+  "allies",
+] as const
+
+type SectionId = (typeof SECTION_IDS)[number]
+
 export const ScrollSectionsKey = Symbol("ScrollSections")
 
-type SectionEntry = {
+type Section = {
   id: string
   el: HTMLElement
   top: number
-  bottom: number
+}
+
+export interface ScrollSectionsApi {
+  activeId: Ref<string>
+  activeIndex: Ref<number>
+  registerAll: (ids: readonly string[]) => void
 }
 
 export function useScrollSectionsProvider(
   container: Ref<HTMLElement | null>,
-  scrollY: MotionValue<number>
-) {
-  const sections = ref<SectionEntry[]>([])
-  const activeIndex = ref(0)
-  const progressBetween = ref(0)
+  scrollY: MotionValue<number>,
+  opts?: { offset?: number }
+): ScrollSectionsApi {
+  const offset = opts?.offset ?? -550
+  const sections = ref<Section[]>([])
+  console.log("🥸 - useScrollSectionsProvider - sections:", sections)
+  const activeId = ref<string | null>(null)
 
-  function registerSection(id: string, el: HTMLElement) {
-    sections.value.push({ id, el, top: 0, bottom: 0 })
+  function registerAll(ids: readonly string[]) {
+    const root = container.value
+    if (!root) return
+
+    sections.value = ids
+      .map((id) => {
+        const el = root.querySelector<HTMLElement>(`#${id}`)
+        if (!el) return null
+        return { id, el, top: 0 }
+      })
+      .filter(Boolean) as Section[]
+
+    measure()
+    if (!activeId.value) activeId.value = sections.value[0]?.id
   }
 
   function measure() {
-    if (!container.value) return
-    const containerTop = container.value.getBoundingClientRect().top
+    const root = container.value
+    if (!root) return
+
+    const containerTop = root.getBoundingClientRect().top
 
     for (const s of sections.value) {
       const r = s.el.getBoundingClientRect()
       s.top = r.top - containerTop + scrollY.get()
-      s.bottom = s.top + r.height
     }
 
     sections.value.sort((a, b) => a.top - b.top)
   }
 
+  const activeIndex = computed(() =>
+    sections.value.map((s) => s.id).indexOf(activeId.value as any)
+  )
+
   useMotionValueEvent(scrollY, "change", (y) => {
-    const list = sections.value
-    if (!list.length || !container.value) return
+    const trigger = y + offset
 
-    const viewportMid = y + container.value.clientHeight / 2
+    let candidate: Section | undefined
 
-    let i = list.findIndex(
-      (s, idx) =>
-        viewportMid >= s.top &&
-        (idx === list.length - 1 || viewportMid < list[idx + 1].top)
-    )
+    for (const s of sections.value) {
+      if (s.top <= trigger) candidate = s
+      else break
+    }
 
-    if (i === -1) i = list.length - 1
-    activeIndex.value = i
-
-    const curr = list[i]
-    const next = list[i + 1]
-    if (!next) {
-      progressBetween.value = 1
-    } else {
-      progressBetween.value = clamp(
-        (viewportMid - curr.top) / (next.top - curr.top),
-        0,
-        1
-      )
+    // only update when we actually found something
+    if (candidate?.id) {
+      activeId.value = candidate.id
     }
   })
 
-  const progressOverall = computed(() => {
-    const count = sections.value.length
-    if (count <= 1) return 0
-
-    return clamp(
-      ((activeIndex.value + progressBetween.value) / (count - 1)) * 100,
-      0,
-      100
-    )
-  })
-
   onMounted(() => {
-    nextTick(measure)
+    nextTick(() => registerAll(sections.value.map((s) => s.id)))
     window.addEventListener("resize", measure)
   })
 
@@ -83,52 +93,20 @@ export function useScrollSectionsProvider(
     window.removeEventListener("resize", measure)
   })
 
-  provide(ScrollSectionsKey, {
-    registerSection,
-    activeIndex,
-    progressBetween,
-    sections,
-    progressOverall,
-  })
+  const api = { activeId, registerAll, activeIndex }
 
-  return {
-    activeIndex,
-    progressBetween,
-    progressOverall,
-    sections,
-  }
-}
-
-export function useScrollSection(id: string, el: Ref<HTMLElement | null>) {
-  const ctx = inject<any>(ScrollSectionsKey)
-  if (!ctx) throw new Error("Missing ScrollSections provider")
-
-  onMounted(() => {
-    if (el.value) ctx.registerSection(id, el.value)
-  })
-
-  const index = computed(() =>
-    ctx.sections.value.findIndex((s: any) => s.id === id)
-  )
-
-  const isActive = computed(() => index.value === ctx.activeIndex.value)
-
-  return {
-    isActive,
-    activeIndex: ctx.activeIndex,
-    progressBetween: ctx.progressBetween,
-  }
+  provide(ScrollSectionsKey, api)
+  return api
 }
 
 export function useScrollSectionsInject() {
-  const ctx = inject<{
-    sections: Ref<{ id: string }[]>
-    activeIndex: Ref<number>
-    progressBetween: Ref<number>
-    progressOverall: ComputedRef<number>
+  const api: ScrollSectionsApi = inject<{
+    activeId
+    activeIndex
+    registerAll
   }>(ScrollSectionsKey)
 
-  if (!ctx) throw new Error("No ScrollSections provider found")
+  if (!api) throw new Error("No ScrollSections provider found")
 
-  return ctx
+  return api
 }

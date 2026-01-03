@@ -1,11 +1,11 @@
-import type { IFuseOptions } from 'fuse.js'
-import Fuse from 'fuse.js'
+import type { IFuseOptions } from "fuse.js"
+import Fuse from "fuse.js"
 
 export function useSimpleSearch<T>(
   source: T[] | Ref<T[]>,
   query: Ref<string>,
   options?: IFuseOptions<T>,
-  keys?: string[],
+  keys?: string[]
 ) {
   const fuse = ref<Fuse<T> | null>(null)
 
@@ -13,18 +13,17 @@ export function useSimpleSearch<T>(
     () => unref(source),
     (val) => {
       fuse.value = new Fuse(val, {
-        keys: [keys || '', 'name'],
+        keys: [keys || "", "name"],
         threshold: 0.3,
       })
     },
-    { deep: true, immediate: true },
+    { deep: true, immediate: true }
   )
 
   const results = computed<T[]>(() => {
-    const list = unref(source) // always unwrap to T[]
-    if (!query.value.trim())
-      return list
-    return fuse.value?.search(query.value).map(r => r.item) ?? []
+    const list = toValue(source) // always unwrap to T[]
+    if (!query.value.trim()) return list
+    return fuse.value?.search(query.value).map((r) => r.item) ?? []
   })
 
   return { results }

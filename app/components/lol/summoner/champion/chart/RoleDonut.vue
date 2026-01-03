@@ -8,11 +8,11 @@ const data = computed(() => {
   return {
     datasets: [{
       backgroundColor: [
-        getColorFromVariable('--color-domination'),
-        getColorFromVariable('--color-resolve'),
-        getColorFromVariable('--color-sorcery'),
-        getColorFromVariable('--color-precision'),
-        getColorFromVariable('--color-inspiration'),
+        cssVar('--color-domination'),
+        cssVar('--color-resolve'),
+        cssVar('--color-sorcery'),
+        cssVar('--color-precision'),
+        cssVar('--color-inspiration'),
       ],
       data: [
         roles?.stats?.top?.games ?? 0,

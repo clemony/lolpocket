@@ -1,13 +1,17 @@
 <script lang="ts" setup>
+import { summonerSections } from '~/components/lol/summoner/champion/summonerSections'
+
 const { api, champion, pocket } = defineProps<{
   api?: SummonerInject
   pocket?: Pocket
   champion?: Champion
 }>()
 
+const route = useRoute()
+
 const scrollRef = useState<HTMLElement | null>('scrollRef', () => null)
 
-const { scrollY } = useScrollProvider(scrollRef)
+const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -80 })
 
 const isScrolling = useState('isScrolling', () => ref(false))
 const isScrollingFast = useState('isScrollingFast', () => ref(false))
@@ -40,11 +44,19 @@ function onScroll(e: Event) {
     isScrollingFast.value = false
   }, 100)
 }
-useScrollSectionsProvider(scrollRef, scrollY)
+
+const { activeId, registerAll } = useScrollSectionsProvider(
+  scrollRef,
+  scrollY,
+)
+watch(() => activeId.value, (v) => {
+  console.log('💠 - watch - newVal:', v)
+})
+onMounted(() => {
+  registerAll(summonerSections.map(s => s.id))
+})
 
 const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champion ? getSplash(champion.key, 'uncentered') : getRandomBg())
-
-const route = useRoute()
 </script>
 
 <template>
@@ -86,10 +98,9 @@ const route = useRoute()
       </div>
     </div>
 
-    <div class="fixed top-0 left-[47px] z-10 flex h-15 w-56 items-center gap-3">
+    <div class="fixed top-0 left-[40px] z-10 flex h-15 w-56 items-center gap-3">
       <SummonerDropdown
         v-if="api"
-        size="c-11"
         :data="api.summoner.value" />
 
       <PocketMenubar
@@ -98,9 +109,10 @@ const route = useRoute()
 
     <!-- Scrollable content -->
     <div
+      id="scrollRef"
       ref="scrollRef"
       :style="{ overflowAnchor: 'none' }"
-      class="absolute inset-0 top-0 size-full h-[120vh] max-w-screen overflow-auto pt-70"
+      class="absolute inset-0 top-0 size-full h-screen max-w-screen overflow-auto pt-70"
       @scroll="onScroll">
       <!--  <ProfileSettingsSidebar /> -->
       <!-- Sticky Tabs (now ABOVE parent header) -->

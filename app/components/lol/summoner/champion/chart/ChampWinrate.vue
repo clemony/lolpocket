@@ -20,7 +20,7 @@ const a = computed(() => {
         '--value': a,
         '--size': '3rem',
 
-        'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
+        'color': cssVar(`--color-${getAbsoluteColor(a)}`),
       }"
       role="progressbar">
       <span class="text-0! font-medium text-bc dst">

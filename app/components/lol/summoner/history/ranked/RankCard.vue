@@ -14,7 +14,7 @@ const color1 = computed(() => {
     `--color-${entry?.tier ?? 'b3'}`,
   )
 })
-const colors = [getColorFromVariable('--color-b3'), color1.value]
+const colors = [cssVar('--color-b3'), color1.value]
 
 const winrate = computed(() =>
   entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0,
@@ -25,7 +25,7 @@ const winrate = computed(() =>
   <div
     :class="
       cn('field-box h-36 w-full border-b3/40 bg-b2/30 pt-1! shadow-warm-soft drop-shadow-xs',
-        className,
+         className,
       )
     ">
     <span class="field-legend">
@@ -63,7 +63,7 @@ const winrate = computed(() =>
             :style="{
               '--value': winrate,
               '--size': '5.25rem',
-              'color': getColorFromVariable(
+              'color': cssVar(
                 `--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`,
               ),
             }"
@@ -80,7 +80,7 @@ const winrate = computed(() =>
       <div
         :class="
           cn('flex flex-col items-end justify-center gap-2.75 overflow-hidden pt-3 pb-3 text-end font-medium',
-            { 'opacity-40': !entry },
+             { 'opacity-40': !entry },
           )
         ">
         <p class="capitalize">

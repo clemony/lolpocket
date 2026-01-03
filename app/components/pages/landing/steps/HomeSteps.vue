@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { MotionValue } from 'motion-v'
 import { Motion, motion } from 'motion-v'
-import { useBreakpoint } from '~/utils/ui/useBreakpoints'
 
 const { scrollProg, scrollRef } = defineProps<{
   scrollRef: HTMLElement

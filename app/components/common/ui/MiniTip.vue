@@ -21,10 +21,38 @@ const labelIndex = {
   rune: RuneData,
   spell: SpellData
 }
+
+function itemName(label: string, id: string) {
+  return (
+    label === 'item'
+      ? itemNameById(Number.parseFloat(id))
+      : label === 'champion'
+        ? champNameById(Number.parseFloat(id))
+        : label === 'rune'
+          ? runeNameById(Number.parseFloat(id))
+          : label === 'spell'
+            ? spellNameById(Number.parseFloat(id))
+            : label === 'shard'
+              ? shardById(Number.parseFloat(id)).description
+              : label === 'path'
+                ? id
+                : label === 'ability'
+                  ? abilityNameById(id)
+                  : null
+  )
+}
+
+function iconSource(type: string, id: string) {
+  return (
+    type === 'player'
+      ? getSummonerIcon(id)
+      : `/img/${type}s/${id}.webp`
+  )
+}
 </script>
 
 <template>
-  <div :class="cn('flex cursor-pointer flex-nowrap items-center **:text-start', { ' px-2  py-1.5 gap-3': size !== 'lg' })">
+  <div :class="cn('flex cursor-pointer flex-nowrap items-center **:text-start **:text-nc/70', { ' px-2  py-1.5 gap-3': size !== 'lg' })">
     <Suspense v-if="size === 'lg' && label">
       <component
         :is="labelIndex[label]"
@@ -43,7 +71,7 @@ const labelIndex = {
         loading-style="spinner"
         :size="size === 'md' ? 'c-8' : 'c-5'"
         :alt="`${name || itemName(label, id)} Image`"
-        class="origin-left scale-110 overflow-hidden rounded-full shadow-sm drop-shadow-sm">
+        :class="cn('origin-left scale-110 overflow-hidden rounded-full shadow-sm drop-shadow-sm', { 'scale-100 object-contain': label === 'path' })">
       </Img>
 
       <!-- ICON -->
@@ -78,7 +106,7 @@ const labelIndex = {
         <span
           v-else-if="label && id"
           :style="{ color }"
-          class="h-4 text-start leading-4">
+          class="h-4 text-start leading-4 opacity-80">
           {{ itemName(label, id) }}
         </span>
         <span

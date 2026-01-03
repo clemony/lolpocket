@@ -8,27 +8,30 @@ const { title, class: className, data, simple } = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('flex w-full flex-nowrap items-center overflow-hidden', { 'pb-3': !simple }, className)">
+  <ChampStatRow :simple>
     <slot>
-      <StatSingleLabels
+      <ChampStatLabel
+        separator
         :title
         time />
     </slot>
 
-    <ChampStatRowWrapper>
-      <template v-if="data && data?.length">
-        <ChampStatObjectWrapper
-          v-for="[k, v] in data"
-          :key="k"
-          :simple
-          :stat="v">
-          <Item
-            :id="k"
-            class="size-15" />
-        </ChampStatObjectWrapper>
-      </template>
-
-      <NoItemData v-else />
+    <ChampStatRowWrapper
+      v-if="data && data?.length"
+      :class="cn('', className)">
+      <ChampStatObjectWrapper
+        v-for="[k, v] in data"
+        :key="k"
+        :simple
+        :stat="v">
+        <Item
+          :id="k"
+          class="size-15" />
+      </ChampStatObjectWrapper>
     </ChampStatRowWrapper>
-  </div>
+
+    <NoItemData
+      v-else
+      :simple />
+  </ChampStatRow>
 </template>

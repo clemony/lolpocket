@@ -110,7 +110,7 @@ const supportUpgrade = computed(() => {
 
       <div class="relative timeline-end mt-2 grid place-items-center justify-self-center rounded-md border border-b3 bg-b1 px-1.5 text-[0.86rem]! font-bold text-bc dxs">
         <Icon
-          name="tabler:caret-up-filled"
+          name="tabler:caret-caret-uped"
           class="absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61% text-b1 **:stroke-b3" />
 
         {{ formatHMS(eventGroup.timestamp) }}

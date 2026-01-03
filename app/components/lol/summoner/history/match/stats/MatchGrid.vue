@@ -21,7 +21,7 @@ import {
   ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '~/utils/config/masteryTheme'
+import { masteryGridTheme } from '~/assets/config/masteryTheme'
 
 const { match, player } = defineProps<{
   match: MatchData

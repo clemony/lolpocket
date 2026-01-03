@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Pocket } from '~~/shared/schema'
-import { getDeviceKey } from '~/utils/config/handleDevice'
+import { getDeviceKey } from '~/utils/device'
 
 const props = defineProps<{
   pocketData?: Pocket

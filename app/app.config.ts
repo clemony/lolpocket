@@ -26,7 +26,7 @@ export default defineAppConfig({
       "arrow-up": "lucide:arrow-up",
       collapse: "lucide:arrow-left-from-line",
       down: "tabler:chevron-down",
-      "down-fill": "tabler:caret-down-filled",
+      "caret-down": "tabler:caret-down-filled",
       expand: "lucide:arrow-right-from-line",
       left: "tabler:chevron-left",
       "left-pipe": "tabler:chevron-left-pipe",
@@ -34,7 +34,7 @@ export default defineAppConfig({
       "right-pipe": "tabler:chevron-right-pipe",
       select: "lucide:chevrons-up-down",
       up: "tabler:chevron-up",
-      "up-fill": "tabler:caret-up-filled",
+      "caret-up": "tabler:caret-up-filled",
       "up-to-line": "lucide:arrow-up-to-line",
 
       // actions
@@ -66,6 +66,8 @@ export default defineAppConfig({
       more: "ri:more-line",
       "more-vertical": "ri:more-2-line",
       settings: "lucide:settings-2",
+      handle: "radix-icons:button",
+      radio: "formkit:radio",
 
       // editing
       archive: "lucide:archive",
@@ -153,6 +155,7 @@ export default defineAppConfig({
       // shape
       "circle-big-dot": "clarity:dot-circle-line",
       "circle-dot": "lucide:circle-dot",
+      round: "mynaui:circle-solid",
       dot: "lucide:dot",
       heart: "gg:heart",
       "heart-fill": "teenyicons:heart-solid",

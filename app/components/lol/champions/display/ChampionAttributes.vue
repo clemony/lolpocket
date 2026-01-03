@@ -90,7 +90,7 @@ const options = {
       angleLines: {
         display: false,
       },
-      backgroundColor: `color-mix(in oklch, ${getColorFromVariable('--color-b3')} 40%, #00000000 60%)`,
+      backgroundColor: `color-mix(in oklch, ${cssVar('--color-b3')} 40%, #00000000 60%)`,
       beginAtZero: true,
       pointLabels: {
         font: {

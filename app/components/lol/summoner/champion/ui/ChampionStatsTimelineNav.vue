@@ -1,64 +1,17 @@
 <script lang="ts" setup>
 import type { ShallowRef } from 'vue'
 import { useRouteHash } from '@vueuse/router'
+import { summonerSections } from '~/components/lol/summoner/champion/summonerSections'
 
 const { summoner } = defineProps<{
   summoner: ShallowRef<Summoner>
 }>()
-const items = [
-  {
-    id: 'summary',
-    name: 'summary',
-    class: '**:stroke-[2]',
-    icon: 'infinity'
-  },
-  {
-    id: 'spells',
-    name: 'spells',
-    class: 'size-4.5 opacity-80',
-    icon: 'role:mage',
-  },
-  {
-    id: 'items',
-    name: 'items',
-    icon: 'lol:regen',
-  },
-  {
-    id: 'runes',
-    name: 'runes',
-    class: 'size-5! fill-bc active:fill-nc',
-    icon: 'lol:runes'
-  },
-  {
-    id: 'skills',
-    name: 'Abilities',
-    icon: 'fluent-mdl2:venn-diagram',
-  },
-/*   {
-    id: 'stats',
-    name: 'Match Stats',
-    class: 'size-4.5 **:stroke-[1.8]',
-    icon: 'tabler:chart-arcs'
-  },
-  {
-    id: 'duos',
-    name: 'duos',
-    icon: 'fluent-mdl2:venn-diagram',
-  },
-  {
-    id: 'allies',
-    name: 'allies',
-    class: 'size-6',
-    icon: 'heart-sm-outline',
-  }, */
-]
 
-const { activeIndex, progressBetween, progressOverall, sections }
-  = useScrollSectionsInject()
 const section = useRouteHash()
-
-const isActive = (i: number) => i === activeIndex.value
-const isNext = (i: number) => i === activeIndex.value + 1
+const { activeId } = useScrollSectionsInject()
+watch(() => activeId.value, (v) => {
+  console.log('💠 - watch - newVal:', v)
+})
 </script>
 
 <template>
@@ -77,17 +30,17 @@ const isNext = (i: number) => i === activeIndex.value + 1
       progress
       :current="progressOverall" /> -->
     <Button
-      v-for="item, i in items"
+      v-for="item, i in summonerSections"
       :key="i"
       variant="link"
       as="a"
-      :class="cn('flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': i === activeIndex })"
+      :class="cn('flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': item.id === activeId })"
       size="12"
       @click="section = `#${item.id}`">
       <Icon
         name="right"
-        :class="cn('size-4 opacity-0 transition-opacity duration-150', { 'opacity-100': i === activeIndex })" />
-      <span :class="cn('text-3 font-light! capitalize', { 'text-5 font-bold! ': i === activeIndex })">
+        :class="cn('size-4 opacity-0 transition-opacity duration-150', { 'opacity-100': item.id === activeId })" />
+      <span :class="cn('text-3 font-light! capitalize group-hover/btn:font-medium!', { 'text-5 font-bold! ': item.id === activeId })">
         {{ item.name }}
       </span>
     </Button>

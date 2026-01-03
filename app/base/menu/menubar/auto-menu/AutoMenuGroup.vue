@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MenubarItem } from '../menubar.types'
+import type { MenubarItem } from '../types.menubar'
 
 const { item } = defineProps<{
   item: MenubarItem

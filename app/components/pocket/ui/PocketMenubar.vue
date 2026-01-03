@@ -11,7 +11,8 @@ import {
   SpellsAutoMenu,
 } from '#components'
 import { championPositions } from '~~/shared/references'
-import type { MenubarGroup } from '~/base/menu/menubar/menubar.types'
+import type { MenubarGroup } from '~/base/menu/menubar/types.menubar'
+import { createCheckboxItem, createRadioGroupItem } from '~/base/menu/menubar/auto-menu/createCheckboxItem'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -267,7 +268,7 @@ console.log('🌱 - menu:', menu)
         :side-offset="2"
         :class="
           cn('w-64 **:capitalize',
-            group.class,
+             group.class,
           )
         ">
         <AutoMenuContent

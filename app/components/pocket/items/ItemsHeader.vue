@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~/utils/config/handleDevice'
+import { getDeviceKey } from '~/utils/device'
 </script>
 
 <template>

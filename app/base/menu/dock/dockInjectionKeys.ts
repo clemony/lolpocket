@@ -1,20 +1,18 @@
-import type { DataOrientation } from './types'
-
-export const MOUSE_X_INJECTION_KEY = Symbol('mouse-x') as InjectionKey<
+export const MOUSE_X_INJECTION_KEY = Symbol("mouse-x") as InjectionKey<
   Ref<number>
 >
-export const MOUSE_Y_INJECTION_KEY = Symbol('mouse-y') as InjectionKey<
+export const MOUSE_Y_INJECTION_KEY = Symbol("mouse-y") as InjectionKey<
   Ref<number>
 >
 
 export const MAGNIFICATION_INJECTION_KEY = Symbol(
-  'magnification',
+  "magnification"
 ) as InjectionKey<ComputedRef<number>>
 
-export const DISTANCE_INJECTION_KEY = Symbol('distance') as InjectionKey<
+export const DISTANCE_INJECTION_KEY = Symbol("distance") as InjectionKey<
   ComputedRef<number>
 >
 
 export const ORIENTATION_INJECTION_KEY = Symbol(
-  'orientation',
+  "orientation"
 ) as InjectionKey<DataOrientation>

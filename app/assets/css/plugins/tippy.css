@@ -25,7 +25,7 @@
   &[data-theme~="datatip"] {
     @apply max-h-65 w-80 max-w-80 !rounded-lg **:select-text;
     .tippy-content {
-      @apply max-h-65 w-80 max-w-80 !p-0 *:max-h-65 *:w-full *:overflow-hidden;
+      @apply max-h-65 w-74 max-w-74 !p-0 *:max-h-65 *:w-full *:overflow-hidden;
     }
   }
   &[data-theme~="mini-tip"] {
@@ -52,7 +52,7 @@
 
   /* default / contrast */
   &[data-theme~="neutral"] {
-    @apply border border-tint-neutral/30 bg-neutral/86 text-nc/80 inset-shadow-white/10 backdrop-blur-md **:text-nc/80;
+    @apply border border-tint-neutral/30 bg-neutral/86 text-nc/70 inset-shadow-white/10 backdrop-blur-md **:text-nc/70;
 
     .tippy-content {
       @apply max-h-80 !overflow-hidden text-nc/70 **:text-nc/70;

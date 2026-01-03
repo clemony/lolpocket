@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@composables": fileURLToPath(
       new URL("./app/composables", import.meta.url)
     ),
+    "@domain": fileURLToPath(new URL("./app/domain", import.meta.url)),
     riot: fileURLToPath(new URL("./server/api/riot", import.meta.url)),
     "@css": fileURLToPath(new URL("./app/assets/css", import.meta.url)),
     "@layout": fileURLToPath(new URL("./app/layout", import.meta.url)),
@@ -113,6 +114,7 @@ export default defineNuxtConfig({
     dirs: [
       "@variants",
       "@constants",
+      "@domain",
       "./shared/constants",
       "@schema",
       "@references",
@@ -120,6 +122,7 @@ export default defineNuxtConfig({
       "#shared/utils",
       "@stores",
       "@app-types",
+      "./app/assets/config",
     ],
     presets: [
       {

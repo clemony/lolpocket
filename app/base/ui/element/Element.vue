@@ -13,7 +13,7 @@ const props = defineProps<{
 <template>
   <div
     v-bind="props"
-    :class="cn('', elementVariants({ base, variant, on, size, hover }), props.class)">
+    :class="cn('group/el', elementVariants({ base, variant, on, size, hover }), props.class)">
     <slot />
   </div>
 </template>

@@ -7,6 +7,7 @@ export interface Identifier {
   region?: string
   name?: string
   tag?: string
+  icon?: string
 }
 
 export type TrackedQueueId = 400 | 420 | 440 | 0
@@ -117,6 +118,21 @@ export interface StatDetail {
   pickrate?: number
 }
 
+export type AllyChampionStat = TimedStatDetail & {
+  synergy: StatAverage
+  championName: string
+  championId: number
+}
+
+export interface AllyStatDetail extends Identifier, TimedStatDetail {
+  champions: Record<number, AllyChampionStat>
+  synergy: StatAverage
+}
+
+export interface TimedStatDetail extends StatDetail {
+  avgTimestamp?: number
+}
+
 export interface StatAverage {
   total: number
   average: number
@@ -129,22 +145,12 @@ export interface StatDetailExtended {
   name: string
   key?: string
 }
-
-export interface TimedStatDetail extends StatDetail {
-  avgTimestamp?: number
-}
-
 export interface ItemSetStat extends StatDetail {
   items: number[]
 }
 
 export type OrderedStatEntry = [string, StatDetail]
 export type OrderedTimedStatEntry = [number, TimedStatDetail]
-
-export type SkillLevelStats = Record<
-  number, // level (1–18)
-  Record<SkillKey, StatDetail>
->
 
 export type SkillKey = "Q" | "W" | "E" | "R"
 

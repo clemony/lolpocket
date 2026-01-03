@@ -22,7 +22,6 @@ import {
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { championsLite } from '~~/shared/records/champions-lite'
-import { pocketTheme } from '~/utils/config/tableTheme'
 
 definePageMeta({
   name: 'Champion Stats',
@@ -36,7 +35,6 @@ defineExpose({
 
 /* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
-const theme = ref(pocketTheme)
 const filteredChamps = ref([])
 // @todo
 const gridApi = shallowRef<GridApi | null>(null)

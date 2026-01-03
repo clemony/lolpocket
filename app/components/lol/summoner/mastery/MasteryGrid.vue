@@ -22,7 +22,7 @@ import {
   ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '~/utils/config/masteryTheme'
+import { globalGridOptions, masteryGridTheme } from '~/assets/config'
 
 const { champions } = defineProps<{
   champions: AggregatedStatsAndMastery[]
