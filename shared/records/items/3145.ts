@@ -16,6 +16,11 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
+      "id": 3146,
+      "name": "Hextech Gunblade",
+      "gold": 3250
+    },
+    {
       "id": 4646,
       "name": "Stormsurge",
       "gold": 2800
@@ -44,7 +49,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3145_mage_t2_hextechalternator.png",
   "simpleDescription": "Increases Ability Power. Deal bonus magic damage on attack periodically.",
   "nicknames": [
     "revolver",
@@ -61,21 +65,16 @@ const item: Item =  {
   "stats": {
     "abilityPower": 45
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 300,
-      "sell": 440
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3065_tank_t3_spiritvisage.png",
   "simpleDescription": "Increases Health and healing effects",
   "nicknames": [
     "sv"
@@ -35,21 +34,16 @@ const item: Item =  {
     "magicResistance": 50,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 650,
-      "sell": 1080
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 650,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

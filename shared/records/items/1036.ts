@@ -59,6 +59,11 @@ const item: Item =  {
       "gold": 1200
     },
     {
+      "id": 6671,
+      "name": "Galeforce",
+      "gold": 3500
+    },
+    {
       "id": 323004,
       "name": "Manamune",
       "gold": 2900
@@ -99,11 +104,6 @@ const item: Item =  {
       "gold": 2800
     },
     {
-      "id": 6671,
-      "name": "Galeforce",
-      "gold": 3500
-    },
-    {
       "id": 6690,
       "name": "Rectrix",
       "gold": 775
@@ -122,28 +122,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png",
   "simpleDescription": "Slightly increases Attack Damage",
   "stats": {
     "attackDamage": 10
-  },
-  "shop": {
-    "prices": {
-      "total": 350,
-      "combined": 350,
-      "sell": 140
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 350,
+    "sell": 245
+  }
 }
 export default item

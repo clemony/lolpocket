@@ -86,7 +86,7 @@ const variants = {
                 props.roundDisabled,
             },
 
-            buttonVariants({ base, variant, size, hover, on }), 'fx-0',
+            buttonVariants({ base, variant, size, hover, on }), 'rounded-lg fx-0',
             indicatorClass,
           )
         " />

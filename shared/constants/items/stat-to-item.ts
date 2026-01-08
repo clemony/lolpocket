@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:19:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
 
 export const statToItem: Record<string, number[]> = {
   "flatMovespeed": [
@@ -96,7 +96,6 @@ export const statToItem: Record<string, number[]> = {
     3078,
     3083,
     3084,
-    3107,
     3109,
     3112,
     3116,
@@ -130,8 +129,6 @@ export const statToItem: Record<string, number[]> = {
     4401,
     4629,
     4633,
-    4638,
-    4643,
     6609,
     6610,
     6617,
@@ -211,6 +208,7 @@ export const statToItem: Record<string, number[]> = {
     3089,
     3100,
     3102,
+    3107,
     3108,
     3112,
     3113,
@@ -305,7 +303,6 @@ export const statToItem: Record<string, number[]> = {
     3075,
     3076,
     3082,
-    3105,
     3109,
     3110,
     3143,
@@ -313,8 +310,6 @@ export const statToItem: Record<string, number[]> = {
     3174,
     3190,
     3742,
-    4638,
-    4643,
     6333,
     6662,
     6665,
@@ -333,13 +328,11 @@ export const statToItem: Record<string, number[]> = {
     1033,
     1057,
     1111,
-    2502,
     2504,
     3050,
     3065,
     3091,
     3102,
-    3105,
     3111,
     3139,
     3140,
@@ -350,8 +343,6 @@ export const statToItem: Record<string, number[]> = {
     3211,
     4401,
     4632,
-    4638,
-    4643,
     6664,
     6665,
     8020,
@@ -493,6 +484,13 @@ export const statToItem: Record<string, number[]> = {
     3153,
     3184
   ],
+  "omnivamp": [
+    1055,
+    223146,
+    224403,
+    226630,
+    447103
+  ],
   "flatMagicPenetration": [
     1111,
     3020,
@@ -524,7 +522,6 @@ export const statToItem: Record<string, number[]> = {
     3074,
     3078,
     3100,
-    3105,
     3107,
     3108,
     3109,
@@ -554,9 +551,7 @@ export const statToItem: Record<string, number[]> = {
     4628,
     4629,
     4633,
-    4638,
     4642,
-    4643,
     6333,
     6609,
     6610,
@@ -711,11 +706,5 @@ export const statToItem: Record<string, number[]> = {
     3871,
     3876,
     3877
-  ],
-  "omnivamp": [
-    223146,
-    224403,
-    226630,
-    447103
   ]
 }

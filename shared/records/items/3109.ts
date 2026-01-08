@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3109_tank_t3_knightsvow.png",
   "simpleDescription": "Partner with an ally to protect each other",
   "nicknames": [
     "kv"
@@ -48,22 +47,16 @@ const item: Item =  {
     "healthRegen": 100,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2300,
-      "combined": 400,
-      "sell": 920
-    },
-    "tags": [
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 2300,
+    "sell": 1610
+  }
 }
 export default item

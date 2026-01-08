@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3385_forge_wooglets_witchcap.png",
   "nicknames": [
     "Quest",
     "Deathcap"
@@ -29,19 +28,14 @@ const item: Item =  {
     "armor": 50,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 6000,
-      "sell": 0
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     12,
     30
-  ]
+  ],
+  "gold": {
+    "base": 6000,
+    "total": 6000,
+    "sell": 4200
+  }
 }
 export default item

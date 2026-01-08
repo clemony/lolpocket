@@ -39,27 +39,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6690_rectrix.png",
   "stats": {
     "attackDamage": 15,
     "percentMovespeed": 4
-  },
-  "shop": {
-    "prices": {
-      "total": 775,
-      "combined": 425,
-      "sell": 310
-    },
-    "tags": [
-      "ASSASSIN",
-      "FIGHTER"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 425,
+    "total": 775,
+    "sell": 543
+  }
 }
 export default item

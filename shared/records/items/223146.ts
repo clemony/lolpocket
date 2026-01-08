@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3146_hextechgunblade.png",
   "active": [
     {
       "name": "Lightning Bolt",
@@ -19,18 +18,13 @@ const item: Item =  {
     "attackDamage": 45,
     "omnivamp": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 2500,
-      "sell": 1000
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1250
+  }
 }
 export default item

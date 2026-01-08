@@ -19,7 +19,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3009_class_t2_bootsofswiftness.png",
   "simpleDescription": "Enhances Move Speed and reduces the effect of slows",
   "nicknames": [
     "swifties"
@@ -34,18 +33,16 @@ const item: Item =  {
   "stats": {
     "flatMovespeed": 55
   },
-  "shop": {
-    "prices": {
-      "total": 1000,
-      "combined": 700,
-      "sell": 400
-    }
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 700,
+    "total": 1000,
+    "sell": 700
+  }
 }
 export default item

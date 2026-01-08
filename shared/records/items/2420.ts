@@ -29,7 +29,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3191_battlemage_t2_seekersarmguard.png",
   "simpleDescription": "Activate to become invincible but unable to take actions",
   "nicknames": [
     "zhg",
@@ -47,21 +46,16 @@ const item: Item =  {
     "abilityPower": 40,
     "armor": 25
   },
-  "shop": {
-    "prices": {
-      "total": 1600,
-      "combined": 500,
-      "sell": 640
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1600,
+    "sell": 640
+  }
 }
 export default item

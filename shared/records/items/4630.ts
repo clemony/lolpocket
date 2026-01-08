@@ -11,20 +11,19 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
-      "id": 3137,
-      "name": "Cryptbloom",
+      "id": 3135,
+      "name": "Void Staff",
       "gold": 3000
     },
     {
-      "id": 3135,
-      "name": "Void Staff",
+      "id": 3137,
+      "name": "Cryptbloom",
       "gold": 3000
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4630_mage_t2_voidcrystal.png",
   "nicknames": [
     "pen",
     "purple"
@@ -33,21 +32,16 @@ const item: Item =  {
     "abilityPower": 25,
     "percentMagicPenetration": 13
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 700,
-      "sell": 440
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 700,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3118_malignance.png",
   "simpleDescription": "Partner with an ally to protect each other",
   "nicknames": [
     "burn"
@@ -39,22 +38,16 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 650,
-      "sell": 1080
-    },
-    "tags": [
-      "MAGE",
-      "ABILITY_HASTE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 650,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

@@ -9,19 +9,24 @@ const item: Item =  {
       "gold": 3000
     },
     {
-      "id": 3146,
-      "name": "Hextech Gunblade",
-      "gold": 3250
-    },
-    {
       "id": 3072,
       "name": "Bloodthirster",
       "gold": 3400
     },
     {
+      "id": 6671,
+      "name": "Galeforce",
+      "gold": 3500
+    },
+    {
       "id": 3095,
       "name": "Stormrazor",
       "gold": 3000
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
     },
     {
       "id": 3026,
@@ -32,22 +37,11 @@ const item: Item =  {
       "id": 3031,
       "name": "Infinity Edge",
       "gold": 3450
-    },
-    {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
-      "id": 6671,
-      "name": "Galeforce",
-      "gold": 3500
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1038_marksman_t1_bfsword.png",
   "simpleDescription": "Greatly increases Attack Damage",
   "nicknames": [
     "bf"
@@ -55,23 +49,16 @@ const item: Item =  {
   "stats": {
     "attackDamage": 40
   },
-  "shop": {
-    "prices": {
-      "total": 1300,
-      "combined": 1300,
-      "sell": 520
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 1300,
+    "total": 1300,
+    "sell": 910
+  }
 }
 export default item

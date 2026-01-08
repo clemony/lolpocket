@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6675_navoriflickerblade.png",
   "nicknames": [
     "crit shojin"
   ],
@@ -38,21 +37,16 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 2650,
-      "combined": 950,
-      "sell": 1060
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 950,
+    "total": 2650,
+    "sell": 1855
+  }
 }
 export default item

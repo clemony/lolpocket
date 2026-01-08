@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3222_enchanter_t3_mikaelsblessing.png",
   "simpleDescription": "Activate to remove all disabling effects from an allied champion",
   "nicknames": [
     "crucible",
@@ -38,21 +37,16 @@ const item: Item =  {
     "manaRegen": 100,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2300,
-      "combined": 900,
-      "sell": 920
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 900,
+    "total": 2300,
+    "sell": 1610
+  }
 }
 export default item

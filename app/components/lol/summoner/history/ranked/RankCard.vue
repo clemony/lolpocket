@@ -24,7 +24,7 @@ const winrate = computed(() =>
 <template>
   <div
     :class="
-      cn('field-box h-36 w-full border-b3/40 bg-b2/30 pt-1! shadow-warm-soft drop-shadow-xs',
+      cn('field-box h-36 w-full pt-1!',
          className,
       )
     ">

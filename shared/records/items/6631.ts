@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6631_fighter_t4_stridebreaker.png",
   "nicknames": [
     "kneecapper",
     "whipchain"
@@ -46,22 +45,16 @@ const item: Item =  {
     "attackSpeed": 25,
     "health": 450
   },
-  "shop": {
-    "prices": {
-      "total": 3300,
-      "combined": 750,
-      "sell": 1320
-    },
-    "tags": [
-      "FIGHTER",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 750,
+    "total": 3300,
+    "sell": 2310
+  }
 }
 export default item

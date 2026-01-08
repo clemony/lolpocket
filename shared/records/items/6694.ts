@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6694_assasin_t3_seryldasgrudge.png",
   "nicknames": [
     "slow"
   ],
@@ -33,21 +32,16 @@ const item: Item =  {
     "attackDamage": 45,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 500,
-      "sell": 1200
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

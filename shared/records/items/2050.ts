@@ -5,25 +5,18 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3194_battlemage_blocker.png",
   "stats": {
     "abilityPower": 35,
     "health": 300,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 500,
-      "combined": 500,
-      "sell": 200
-    },
-    "tags": [
-      "MAGE",
-      "TANK"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 250
+  }
 }
 export default item

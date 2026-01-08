@@ -39,7 +39,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3051_fighter_t2_axeofavarosa.png",
   "nicknames": [
     "blue arrow"
   ],
@@ -47,23 +46,16 @@ const item: Item =  {
     "attackDamage": 20,
     "attackSpeed": 20
   },
-  "shop": {
-    "prices": {
-      "total": 1200,
-      "combined": 250,
-      "sell": 480
-    },
-    "tags": [
-      "FIGHTER",
-      "MOVEMENT",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 250,
+    "total": 1200,
+    "sell": 840
+  }
 }
 export default item

@@ -11,14 +11,14 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
-      "id": 322065,
-      "name": "Shurelya's Battlesong",
-      "gold": 2600
-    },
-    {
       "id": 123430,
       "name": "Rite of Ruin",
       "gold": 3000
+    },
+    {
+      "id": 322065,
+      "name": "Shurelya's Battlesong",
+      "gold": 2600
     },
     {
       "id": 4646,
@@ -54,7 +54,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3113_mage_t2_aetherwisp.png",
   "simpleDescription": "Increases Ability Power and Move Speed",
   "nicknames": [
     "spooky ghost"
@@ -63,22 +62,16 @@ const item: Item =  {
     "abilityPower": 30,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 500,
-      "sell": 360
-    },
-    "tags": [
-      "MAGE",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

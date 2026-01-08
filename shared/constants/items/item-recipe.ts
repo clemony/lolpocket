@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:19:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
 
 export const itemRecipe: Record<number, number[]> = {
   "1011": [
@@ -48,8 +48,9 @@ export const itemRecipe: Record<number, number[]> = {
     2021
   ],
   "2502": [
-    3105,
-    1011
+    1031,
+    3067,
+    1028
   ],
   "2503": [
     3802,
@@ -267,12 +268,8 @@ export const itemRecipe: Record<number, number[]> = {
     1058,
     4632
   ],
-  "3105": [
-    1033,
-    1029
-  ],
   "3107": [
-    3067,
+    3108,
     3114
   ],
   "3108": [
@@ -465,7 +462,7 @@ export const itemRecipe: Record<number, number[]> = {
     3114
   ],
   "3508": [
-    1037,
+    3057,
     3133,
     1018
   ],
@@ -537,7 +534,7 @@ export const itemRecipe: Record<number, number[]> = {
   "4628": [
     3108,
     3108,
-    1026
+    1052
   ],
   "4629": [
     3067,
@@ -560,9 +557,6 @@ export const itemRecipe: Record<number, number[]> = {
     1004,
     1052,
     2022
-  ],
-  "4643": [
-    4638
   ],
   "4645": [
     3145,

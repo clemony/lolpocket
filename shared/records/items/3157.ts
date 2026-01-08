@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3157_mage_t3_zhonyashourglass.png",
   "simpleDescription": "Activate to become invincible but unable to take actions",
   "nicknames": [
     "zhg",
@@ -37,21 +36,16 @@ const item: Item =  {
     "abilityPower": 105,
     "armor": 50
   },
-  "shop": {
-    "prices": {
-      "total": 3250,
-      "combined": 450,
-      "sell": 1300
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 3250,
+    "sell": 2275
+  }
 }
 export default item

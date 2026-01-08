@@ -13,10 +13,10 @@ const { class: className, set } = defineProps<{
       <Item
         v-if="set[i]"
         :id="set[i]"
-        class="size-16" />
+        class="size-14" />
       <Placeholder
         v-else
-        class="size-16" />
+        class="size-14" />
     </template>
   </div>
 </template>

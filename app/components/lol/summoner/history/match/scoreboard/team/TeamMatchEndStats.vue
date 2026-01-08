@@ -8,7 +8,7 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     :class="
-      cn('flex h-9 w-full items-center justify-between gap-2 overflow-hidden border-y border-y-b4/50 bg-linear-to-r to-transparent pr-2 pl-5 inset-shadow-xxs',
+      cn('mx-auto flex h-9 w-[99%] items-center justify-between gap-2 overflow-hidden rounded-xl border border-bc/10 bg-linear-to-r to-transparent pr-2 pl-5 inset-shadow-xxs',
          className,
       )
     ">

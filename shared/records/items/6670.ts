@@ -29,27 +29,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6670_marksman_t2_noonquiver.png",
   "stats": {
     "attackDamage": 15,
     "criticalStrikeChance": 20
-  },
-  "shop": {
-    "prices": {
-      "total": 1300,
-      "combined": 350,
-      "sell": 520
-    },
-    "tags": [
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 1300,
+    "sell": 910
+  }
 }
 export default item

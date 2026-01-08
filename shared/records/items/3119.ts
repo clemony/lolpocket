@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3119_wintersapproach.png",
   "nicknames": [
     "Fimbulwinter",
     "tear"
@@ -48,21 +47,16 @@ const item: Item =  {
     "mana": 500,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2400,
-      "combined": 300,
-      "sell": 960
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 2400,
+    "sell": 1680
+  }
 }
 export default item

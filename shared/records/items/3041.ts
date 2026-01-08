@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3041_mage_t2_mejaissoulstealer.png",
   "simpleDescription": "Grants Ability Power for kills and assists",
   "nicknames": [
     "book"
@@ -28,19 +27,13 @@ const item: Item =  {
     "abilityPower": 20,
     "health": 100
   },
-  "shop": {
-    "prices": {
-      "total": 1500,
-      "combined": 1150,
-      "sell": 600
-    },
-    "tags": [
-      "MAGE",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 1150,
+    "total": 1500,
+    "sell": 1050
+  }
 }
 export default item

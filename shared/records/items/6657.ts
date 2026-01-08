@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6657_mage_t4_rodofages.png",
   "nicknames": [
     "RoA"
   ],
@@ -38,21 +37,16 @@ const item: Item =  {
     "health": 350,
     "mana": 500
   },
-  "shop": {
-    "prices": {
-      "total": 2600,
-      "combined": 450,
-      "sell": 1040
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 2600,
+    "sell": 1820
+  }
 }
 export default item

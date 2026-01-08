@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1082_mage_t1_darkseal.png",
   "simpleDescription": "Provides Ability Power and Mana.  Increases in power as you kill enemies.",
   "nicknames": [
     "Noxian"
@@ -28,18 +27,13 @@ const item: Item =  {
     "abilityPower": 15,
     "health": 50
   },
-  "shop": {
-    "prices": {
-      "total": 350,
-      "combined": 350,
-      "sell": 140
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 350,
+    "sell": 140
+  }
 }
 export default item

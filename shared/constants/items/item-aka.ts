@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:19:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
 
 export const akaLookup: Record<string, number> = {
   "33333": 3078,
@@ -170,8 +170,6 @@ export const akaLookup: Record<string, number> = {
   "Purple": 4630,
   "Necklace": 4632,
   "Velkoz": 4633,
-  "Sightstone": 4643,
-  "Ward": 4643,
   "Yordle": 4642,
   "Dd": 6333,
   "Nami": 6616,
@@ -181,7 +179,6 @@ export const akaLookup: Record<string, number> = {
   "Kneecapper": 6631,
   "Whipchain": 6631,
   "Ls": 6653,
-  "Boomstick": 6655,
   "Roa": 6657,
   "Fire": 6660,
   "Ibg": 6662,

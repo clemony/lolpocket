@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3112_aram_t1_guardiansorb.png",
   "simpleDescription": "Good starting item for mages",
   "passives": [
     {
@@ -18,22 +17,14 @@ const item: Item =  {
     "abilityPower": 50,
     "health": 150
   },
-  "shop": {
-    "prices": {
-      "total": 950,
-      "combined": 950,
-      "sell": 380
-    },
-    "tags": [
-      "MAGE",
-      "TANK",
-      "SUPPORT",
-      "MANA_AND_REG"
-    ]
-  },
   "maps": [
     12,
     35
-  ]
+  ],
+  "gold": {
+    "base": 950,
+    "total": 950,
+    "sell": 665
+  }
 }
 export default item

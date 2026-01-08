@@ -11,7 +11,7 @@ export function useMatchFilters(
     champion: "",
     patch: null,
     queue: 0,
-    role: "ALL",
+    role: "all",
     date: {
       start: null,
       end: null,
@@ -24,7 +24,7 @@ export function useMatchFilters(
     champion: "",
     patch: null,
     queue: 0,
-    role: "ALL",
+    role: "all",
     date: {
       start: null,
       end: null,
@@ -62,7 +62,7 @@ export function useMatchFilters(
       !f.patch &&
       !f.queue &&
       !f.number &&
-      f.role === "ALL"
+      f.role === "all"
 
     if (!id) return arr
     if (empty) return arr

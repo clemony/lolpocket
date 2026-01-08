@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3084_tank_t4_heartsteel.png",
   "simpleDescription": "Restores Health on kill or assist",
   "nicknames": [
     "Quest",
@@ -46,21 +45,16 @@ const item: Item =  {
     "health": 900,
     "healthRegen": 100
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 400,
-      "sell": 1200
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

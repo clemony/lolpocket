@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6620_echoes_of_helia.png",
   "simpleDescription": "Damage low-health enemies to trigger a cursed explosion, dealing damage and slowing nearby foes",
   "nicknames": [
     "spooky cup"
@@ -25,7 +24,7 @@ const item: Item =  {
   "passives": [
     {
       "name": "Soul Siphon",
-      "effects": "Damaging an enemy champion with a basic attack or ability damage grants a <i>Soul Shard</i>, up to 2. <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding an allied champion (<i>excluding yourself</i>) consumes all <i>Soul Shards</i> to heal them for 65 per shard and deal 50 magic damage per shard to the nearest enemy champion within 1100 units of the ally.",
+      "effects": "Gain 35% of pre-mitigation damage dealt to champions as Soul Charges, up to 80 – 250 (based on level) charges. Healing or shielding an ally consumes all Soul Charges to restore 100% of that value as health.",
       "unique": true
     }
   ],
@@ -35,21 +34,16 @@ const item: Item =  {
     "manaRegen": 125,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2200,
-      "combined": 500,
-      "sell": 880
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 2200,
+    "sell": 1540
+  }
 }
 export default item

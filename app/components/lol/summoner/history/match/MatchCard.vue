@@ -43,126 +43,41 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <Collapsible
-    v-model:open="isOpen"
-    :class="
-      cn('group group/collapse field-box relative mb-8 size-full max-w-220 min-w-134 cursor-pointer flex-col items-center justify-start overflow-hidden border-b3/70 bg-clip-padding text-2 **:select-none',
-      )
-    ">
-    <CollapsibleTrigger
-      ref="container"
-      :for="match.matchId"
-      :class="
-        cn('pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-start justify-items-start gap-6 overflow-hidden rounded-xl bg-transparent bg-linear-to-r to-transparent to-40% bg-clip-padding pr-4 pl-5 text-2 data-[state=open]:rounded-b-none',
-           match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
-           `
-            before:pointer-events-none before:absolute before:left-0 before:z-3
-            before:h-full before:w-1/2 before:rounded-xl before:border
-            before:mask-r-from-0 before:opacity-40 before:shadow-sm
-            before:shadow-black before:brightness-94
-          `,
+  <div class="field-box mb-8 w-full rounded-xl">
+    <Collapsible
+      v-model:open="isOpen"
+      :class="cn('group/collapse collapse-class relative',
+                 match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
+                 match.player.win
+                   ? 'before:border-inspiration '
+                   : 'before:border-domination')">
+      <CollapsibleTrigger
+        ref="container"
+        :for="match.matchId"
+        class="trigger-style">
+        <MatchInfo :match />
+        <PlayerMatchCardInfo :match />
 
-           match.player.win
-             ? 'before:border-inspiration '
-             : 'before:border-domination',
-           isOpen === true ? 'max-h-240' : 'h-36',
-        )
-      ">
-      <div
-        class="
-          flex h-fit w-30 shrink-0 flex-col justify-start self-center **:antialiased
-          **:select-none
-        ">
-        <h3
-          class="
-            text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
-          ">
-          {{ match.player.win ? "Win" : "Loss" }}
-        </h3>
-
-        <div
-          class="flex w-full flex-col font-semibold opacity-76 *:text-left">
-          <p
-            class="
-              flex items-center gap-1.5 text-left text-4 font-bold text-nowrap
-            ">
-            {{ queue?.description || queue?.map?.name || "" }}
-          </p>
-
-          <p
-            class="
-              user-select-text! mt-1 flex flex-col justify-center text-start text-[0.92rem]!
-              leading-4
-            ">
-            <span>
-              {{ queue?.map?.name }}
-            <!--   {{ match.matchId }} -->
-            </span>
-            <span class="capitalize">
-              {{ formatTimeAgo(match.gameEndTimestamp) }}
-            </span>
-          </p>
-          <p class="font-bold tracking-wide">
-            {{
-              (match.gameDuration / 60).toFixed(2).toString().replace(".", ":")
-            }}
-          </p>
+        <TeamsCardOverview :match />
+        <div class="grid h-full w-8 place-items-center">
+          <CaretFlip />
         </div>
-      </div>
+      </CollapsibleTrigger>
 
-      <div class="mr-1 flex h-max w-69 shrink-0 flex-col gap-1">
-        <div class="flex w-full items-start">
-          <!-- champ image -->
-          <ChampionIcon
-            :id="match.player?.championId"
-            :data-id="match?.player?.championId"
-            data-tip="champion"
-            :alt="`${champNameById(match.player?.championId)}-icon`"
-            class="
-              tippy size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
-              transition-all duration-300 hover:scale-105
-            " />
-          <!--  spells -->
-          <PlayerSpells
-            :player="match.player"
-            class="ml-2 shrink-0" />
-
-          <!-- runes -->
-          <PlayerRunes
-            :player="match.player" />
-
-          <!--   kda -->
-          <KDA
-            :match
-            :player="match.player" />
-        </div>
-
-        <!-- items -->
-
-        <div
-          v-if="match.player"
-          class="flex h-full w-full items-start gap-1 *:rounded-md">
-          <Item
-            v-for="item, i in match.player.items"
-            :id="item"
-            :key="`${item}${i}`"
-            :data-id="item"
-            data-placement="bottom"
-            data-tip="item"
-            loading-style="none"
-            :alt="item"
-            :class="cn('size-9 rounded-md! border-b3 inset-shadow-xs ring-bc/60 inset-shadow-black/4 transition-all duration-300 **:rounded-md! hover:scale-105 hover:ring', { 'border pointer-events-none saturate-40 ': !item, 'bg-domination/10!': !match.player.win, 'bg-inspiration/10!': match.player.win })" />
-        </div>
-      </div>
-      <TeamsCardOverview :match />
-
-      <div class="grid h-full w-8 place-items-center">
-        <CaretFlip />
-      </div>
-    </CollapsibleTrigger>
-
-    <LazyMatchContent
-      v-show="isOpen"
-      :match />
-  </Collapsible>
+      <LazyMatchContent :match />
+    </Collapsible>
+  </div>
 </template>
+
+<style scoped>
+  @reference '@css/tailwind.css';
+.collapse-class {
+  @apply relative size-full min-w-134 cursor-pointer rounded-xl  bg-linear-to-r to-transparent bg-cover to-40% border-b3/70 bg-clip-padding text-2 **:select-none;
+  &::before {
+    @apply pointer-events-none absolute left-0 z-3 h-full w-1/2 rounded-xl border mask-r-from-0 opacity-40 shadow-sm shadow-black brightness-94;
+  }
+}
+.trigger-style {
+  @apply pointer-events-auto relative bg-clip-padding  z-2 flex h-36 w-full cursor-pointer items-center justify-between gap-6 overflow-hidden pr-4 pl-5 text-2 data-[state=open]:rounded-b-none;
+}
+</style>

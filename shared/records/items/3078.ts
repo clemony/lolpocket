@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
   "simpleDescription": "Tons of Damage",
   "nicknames": [
     "Spellblade",
@@ -48,23 +47,16 @@ const item: Item =  {
     "health": 333,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 3333,
-      "combined": 133,
-      "sell": 1333
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 133,
+    "total": 3333,
+    "sell": 2333
+  }
 }
 export default item

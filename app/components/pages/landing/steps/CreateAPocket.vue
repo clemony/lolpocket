@@ -56,25 +56,16 @@ const cardStyle = computed(() => ({
       class="absolute size-full"
       :style="layer0">
       <div
-        class="
-          absolute top-2 right-10 z-0 flex h-[95%] w-[45%] rounded-xl bg-b1/90
-          px-8 pt-7 shadow-md shadow-black/5
-        "
+        class="absolute top-2 right-10 z-0 flex h-[95%] w-[45%] rounded-xl bg-b1/90 px-8 pt-7 shadow-md shadow-black/5"
         :style="containerStyle">
         <div
-          class="
-            grid h-fit w-full grid-cols-1 justify-start justify-items-start
-            gap-3
-          ">
+          class="grid h-fit w-full grid-cols-1 justify-start justify-items-start gap-3">
           <p class="font-medium tracking-tight dst">
             New Pocket
           </p>
 
           <div
-            class="
-              h-6 w-32 rounded-sm border border-b3 bg-b1 shadow-sm
-              inset-shadow-xs shadow-black/8
-            "
+            class="h-6 w-32 rounded-sm border border-b3 bg-b1 shadow-sm inset-shadow-xs shadow-black/8"
             :style="layer0" />
 
           <p class="text-1">
@@ -82,66 +73,42 @@ const cardStyle = computed(() => ({
           </p>
 
           <div
-            class="
-              grid h-fit w-full grid-flow-row grid-cols-2 grid-rows-2 gap-y-5
-            "
+            class="grid h-fit w-full grid-flow-row grid-cols-2 grid-rows-2 gap-y-5"
             :style="layer0">
             <div
-              class="
-                z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10
-                ring-b3
-              ">
+              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;jungle
             </div>
 
             <div
-              class="
-                z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10
-                ring-b3
-              ">
+              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;support
             </div>
 
             <div
-              class="
-                z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10
-                ring-b3
-              ">
+              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;marksman
             </div>
           </div>
 
           <div
-            class="
-              mt-2 grid w-full grid-flow-row grid-cols-3 place-items-center
-            "
+            class="mt-2 grid w-full grid-flow-row grid-cols-3 place-items-center"
             :style="layer1">
             <div
               v-for="index in 3"
               :key="index"
-              class="
-                btn aspect-square rounded-md border-b3 bg-b2 shadow-md
-                shadow-black/10 btn-lg
-              " />
+              class="btn aspect-square rounded-md border-b3 bg-b2 shadow-md shadow-black/10 btn-lg" />
           </div>
 
           <div
-            class="
-              absolute right-5 bottom-6 z-10 badge badge-neutral bg-b1
-              bg-neutral badge-md text-3 shadow-pretty ring shadow-black/10
-              ring-b3
-            ">
+            class="absolute right-5 bottom-6 z-10 badge badge-neutral bg-neutral badge-md text-3 shadow-pretty ring shadow-black/10 ring-b3">
             Create
           </div>
         </div>
       </div>
 
       <div
-        class="
-          align-end absolute top-23 left-9 flex h-10 w-54 items-center
-          justify-between rounded-lg border border-b3 bg-b1 px-3 shadow-pretty
-          shadow-b3/70 select-none
-        "
+        class="align-end absolute top-23 left-9 flex h-10 w-54 items-center justify-between rounded-lg border border-b3 bg-b1 px-3 shadow-pretty shadow-b3/70 select-none"
         :style="layerBase">
         <span class="dst">Pocket Name</span>
 

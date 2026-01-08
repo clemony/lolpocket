@@ -39,7 +39,7 @@ export default defineAppConfig({
 
       // actions
       copy: "lucide:copy",
-      download: "lucide:download",
+      download: "mingcute:download-2-line",
       export: "lucide:upload",
       filter: "lucide:list-filter",
       lock: "gg:lock",

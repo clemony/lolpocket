@@ -1,18 +1,31 @@
 import {
   ChampionAllyStats,
   ChampionItemStats,
+  ChampionMatchStats,
   ChampionRuneStats,
   ChampionSkillStats,
   ChampionSpellStats,
   PlayerChampionSummary,
 } from "#components"
 
+export const SECTION_IDS = [
+  "summary",
+  "spells",
+  "items",
+  "runes",
+  "duos",
+  "skills",
+  "allies",
+] as const
+
+export type SectionId = (typeof SECTION_IDS)[number]
+
 export interface ScrollSection {
   id: string
   name: string
   class?: string
   icon?: string
-  component: Component
+  component?: Component
 }
 export const summonerSections: ScrollSection[] = [
   {
@@ -24,7 +37,7 @@ export const summonerSections: ScrollSection[] = [
   },
   {
     id: "spells",
-    name: "spells",
+    name: "Summoner Spells",
     class: "size-4.5 opacity-80",
     icon: "role:mage",
     component: ChampionSpellStats,
@@ -49,23 +62,22 @@ export const summonerSections: ScrollSection[] = [
     component: ChampionSkillStats,
   },
   {
+    id: "duos",
+    name: "Synergy & Counters",
+    icon: "fluent-mdl2:venn-diagram",
+  },
+  {
     id: "allies",
     name: "allies",
     class: "size-6",
     icon: "heart-sm-outline",
     component: ChampionAllyStats,
   },
-  /*   {
-    id: 'statsRef',
-    name: 'Match Stats',
-    class: 'size-4.5 **:stroke-[1.8]',
-    icon: 'tabler:chart-arcs'
-  component: ,
-},
   {
-    id: 'duosRef',
-    name: 'duos',
-    icon: 'fluent-mdl2:venn-diagram',
-  component: ,
-}, */
+    id: "stats",
+    name: "Match Stats",
+    class: "size-4.5 **:stroke-[1.8]",
+    icon: "tabler:chart-arcs",
+    component: ChampionMatchStats,
+  },
 ]

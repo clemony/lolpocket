@@ -19,6 +19,10 @@ onMounted(() => {
   )
   ix().loadPatch()
 })
+
+onUnmounted(() => {
+  console.trace('UNMOUNTED HERE')
+})
 </script>
 
 <template>

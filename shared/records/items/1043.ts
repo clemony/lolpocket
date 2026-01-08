@@ -44,7 +44,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1043_base_t2_recurvebow.png",
   "simpleDescription": "Greatly increases Attack Speed",
   "passives": [
     {
@@ -56,23 +55,16 @@ const item: Item =  {
   "stats": {
     "attackSpeed": 15
   },
-  "shop": {
-    "prices": {
-      "total": 700,
-      "combined": 450,
-      "sell": 280
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 700,
+    "sell": 490
+  }
 }
 export default item

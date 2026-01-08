@@ -21,6 +21,11 @@ const item: Item =  {
       "gold": 2900
     },
     {
+      "id": 3508,
+      "name": "Essence Reaver",
+      "gold": 2900
+    },
+    {
       "id": 3078,
       "name": "Trinity Force",
       "gold": 3333
@@ -34,7 +39,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3057_fighter_t2_sheen.png",
   "simpleDescription": "Grants a bonus to next attack after spell cast",
   "nicknames": [
     "Jimmy Neutron"
@@ -49,24 +53,16 @@ const item: Item =  {
   "stats": {
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 650,
-      "sell": 360
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "MAGE",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 650,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

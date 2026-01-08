@@ -32,7 +32,6 @@ const item: Item =  {
   "specialRecipe": 3866,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3867_bountyofworlds.png",
   "passives": [
     {
       "name": "Upgrade",
@@ -58,19 +57,14 @@ const item: Item =  {
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 400,
-      "sell": 160
-    },
-    "purchasable": false,
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "purchasable": false,
+    "total": 400,
+    "sell": 160
+  }
 }
 export default item

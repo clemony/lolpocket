@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4645_shadowflame.png",
   "passives": [
     {
       "name": "Cinderbloom",
@@ -29,21 +28,16 @@ const item: Item =  {
     "abilityPower": 110,
     "flatMagicPenetration": 15
   },
-  "shop": {
-    "prices": {
-      "total": 3200,
-      "combined": 900,
-      "sell": 1280
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 900,
+    "total": 3200,
+    "sell": 2240
+  }
 }
 export default item

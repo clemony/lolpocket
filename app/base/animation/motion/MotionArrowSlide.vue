@@ -3,7 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const variants = {
+const variants: Record<string, Record<string, string | number>> = {
   hidden: {
     opacity: 0,
     transform: 'translate(-10px, 0)',

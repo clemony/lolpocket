@@ -4,14 +4,24 @@ const item: Item =  {
   "rank": "Basic",
   "buildsInto": [
     {
-      "id": 124011,
-      "name": "Sword of Blossoming Dawn",
-      "gold": 2350
+      "id": 4635,
+      "name": "Leeching Leer",
+      "gold": 1265
     },
     {
       "id": 4632,
       "name": "Verdant Barrier",
       "gold": 1600
+    },
+    {
+      "id": 124011,
+      "name": "Sword of Blossoming Dawn",
+      "gold": 2350
+    },
+    {
+      "id": 3146,
+      "name": "Hextech Gunblade",
+      "gold": 3250
     },
     {
       "id": 3145,
@@ -39,9 +49,9 @@ const item: Item =  {
       "gold": 1600
     },
     {
-      "id": 4630,
-      "name": "Blighting Jewel",
-      "gold": 1100
+      "id": 4628,
+      "name": "Horizon Focus",
+      "gold": 2750
     },
     {
       "id": 3113,
@@ -89,9 +99,9 @@ const item: Item =  {
       "gold": 800
     },
     {
-      "id": 4635,
-      "name": "Leeching Leer",
-      "gold": 1265
+      "id": 4630,
+      "name": "Blighting Jewel",
+      "gold": 1100
     },
     {
       "id": 4637,
@@ -117,7 +127,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1052_mage_t2_amptome.png",
   "simpleDescription": "Slightly increases Ability Power",
   "nicknames": [
     "amptome",
@@ -126,22 +135,16 @@ const item: Item =  {
   "stats": {
     "abilityPower": 20
   },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 400,
-      "sell": 160
-    },
-    "tags": [
-      "MAGE",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 400,
+    "sell": 280
+  }
 }
 export default item

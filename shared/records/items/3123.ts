@@ -24,7 +24,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3123_fighter_t2_executionerscalling.png",
   "simpleDescription": "Overcomes enemies with high health gain",
   "nicknames": [
     "grievous",
@@ -40,23 +39,16 @@ const item: Item =  {
   "stats": {
     "attackDamage": 15
   },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 450,
-      "sell": 320
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

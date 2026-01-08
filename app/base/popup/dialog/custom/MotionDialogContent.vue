@@ -23,7 +23,7 @@ const emits = defineEmits<DialogContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-const variants = {
+const variants: Record<string, Record<string, string | number>> = {
   dialogInitialState: {
     filter: 'blur(10px)',
     opacity: 0,
@@ -63,7 +63,7 @@ const variants = {
       v-bind="forwarded"
       :class="
         cn('data-[state=closed]:animate-out data-[state=closed]:duration-200 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] fixed top-1/2 left-1/2 isolate z-50 max-w-160 translate-x-[-50%] translate-y-[-50%] gap-4 border bg-b1 px-10 py-8 shadow-lg sm:rounded-xl',
-          props.class,
+           props.class,
         )
       ">
       <Motion

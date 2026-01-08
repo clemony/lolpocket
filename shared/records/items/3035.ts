@@ -34,7 +34,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3035_marksman_t2_lastwhisper.png",
   "simpleDescription": "Overcomes enemies with high Armor",
   "nicknames": [
     "lw"
@@ -43,23 +42,16 @@ const item: Item =  {
     "armorPenetration": 18,
     "attackDamage": 20
   },
-  "shop": {
-    "prices": {
-      "total": 1450,
-      "combined": 750,
-      "sell": 580
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 750,
+    "total": 1450,
+    "sell": 1015
+  }
 }
 export default item

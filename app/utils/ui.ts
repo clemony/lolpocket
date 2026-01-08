@@ -90,3 +90,12 @@ export function scrollContainerToTop(container: HTMLElement | null) {
     container?.scrollTo({ behavior: "smooth", top: 0 })
   })
 }
+
+export function createNoise(str: string) {
+  let h = 2166136261
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i)
+    h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)
+  }
+  return (h >>> 0) / 4294967295 // 0 → 1
+}

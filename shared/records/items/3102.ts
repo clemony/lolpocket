@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
   "simpleDescription": "Periodically blocks enemy abilities",
   "nicknames": [
     "bv",
@@ -35,21 +34,16 @@ const item: Item =  {
     "abilityPower": 105,
     "magicResistance": 40
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 200,
-      "sell": 1200
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

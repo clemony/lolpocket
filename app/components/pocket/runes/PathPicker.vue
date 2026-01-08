@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import type { Easing } from 'motion-v'
-import { motion, stagger } from 'motion-v'
+import { motion } from 'motion-v'
 
 const emit = defineEmits(['update:paths'])
 
@@ -24,7 +23,7 @@ const headerVariants = {
   transition: {
     delay: 0.2,
     duration: 0.8,
-    ease: [0.215, 0.61, 0.355, 1.0] as unknown as Easing[],
+    ease: [0.215, 0.61, 0.355, 1.0],
   },
   visible: {
     opacity: 1,
@@ -37,7 +36,7 @@ const titleVariants = {
     opacity: 0,
     transition: {
       duration: 0.8,
-      ease: [0.55, 0.085, 0.68, 0.53] as unknown as Easing[],
+      ease: [0.55, 0.085, 0.68, 0.53],
     },
   },
   initial: {
@@ -49,7 +48,7 @@ const titleVariants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.215, 0.61, 0.355, 1.0] as unknown as Easing[],
+      ease: [0.215, 0.61, 0.355, 1.0],
     },
   },
 }
@@ -120,7 +119,7 @@ const pathHovered = ref('')
     <motion.div
       class="flex max-h-160 items-center justify-center gap-1.5"
       :transition="{
-        delayChildren: stagger(0.2),
+        delayChildren: 0.2,
       }">
       <motion.button
         v-for="(path, i) in pathIndex"

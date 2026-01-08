@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3058_shieldofmoltenstone.png",
   "passives": [
     {
       "name": "Immovable as the Earth",
@@ -17,18 +16,13 @@ const item: Item =  {
     "armor": 100,
     "health": 300
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 1000,
-      "sell": 0
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 1000,
+    "sell": 400
+  }
 }
 export default item

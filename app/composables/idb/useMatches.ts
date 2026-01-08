@@ -41,7 +41,12 @@ export function useMatches(
       const since = newestTs.value ?? 0
 
       const res = await $fetch<MatchReturn>(`/api/riot/v5/match/newer`, {
-        query: { puuid: id, region: r, since, queue: opts?.queue },
+        query: {
+          puuid: id,
+          region: r,
+          since,
+          queue: opts?.queue,
+        },
       })
 
       if (res.matches.length) {
@@ -63,10 +68,11 @@ export function useMatches(
 
   async function loadOlder() {
     const id = puuid.value
+    console.log("🥸 - loadOlder - id:", id)
     const r = region.value
     if (!id || !r || loading.value || endOfHistory.value) return
 
-    loadingOlder.value = true
+    loading.value = true
     try {
       const res = await $fetch<MatchReturn>(`/api/riot/v5/match/older`, {
         query: {
@@ -92,7 +98,7 @@ export function useMatches(
 
       if (res.done) endOfHistory.value = true
     } finally {
-      loadingOlder.value = false
+      loading.value = false
     }
   }
 

@@ -24,7 +24,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3111_class_t2_mercurystreads.png",
   "simpleDescription": "Increases Move Speed and reduces duration of disabling effects",
   "nicknames": [
     "boots",
@@ -35,18 +34,16 @@ const item: Item =  {
     "flatMovespeed": 45,
     "tenacity": 30
   },
-  "shop": {
-    "prices": {
-      "total": 1250,
-      "combined": 550,
-      "sell": 500
-    }
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 550,
+    "total": 1250,
+    "sell": 875
+  }
 }
 export default item

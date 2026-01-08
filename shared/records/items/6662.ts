@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6662_tank_t3_iceborngauntlet.png",
   "simpleDescription": "High Magic Resist.Passively slow nearby enemies. When spells are cast near you, release a wave of energy that damages and slows.",
   "nicknames": [
     "Spellblade",
@@ -43,23 +42,16 @@ const item: Item =  {
     "health": 300,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2900,
-      "combined": 800,
-      "sell": 1160
-    },
-    "tags": [
-      "FIGHTER",
-      "TANK",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2900,
+    "sell": 2030
+  }
 }
 export default item

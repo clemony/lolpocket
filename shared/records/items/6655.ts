@@ -1,5 +1,5 @@
 const item: Item =  {
-  "name": "Luden's Companion",
+  "name": "Luden's Echo",
   "id": 6655,
   "rank": "Legendary",
   "buildsFrom": [
@@ -17,17 +17,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6655_casterscompanion.png",
   "simpleDescription": "High burst damage, good against fragile foes",
-  "nicknames": [
-    "boomstick",
-    "gun"
-  ],
   "passives": [
     {
-      "name": "Fire",
+      "name": "Echo",
       "cooldown": "12",
-      "effects": "Gain 6 <i>Shot Charge</i> stacks to fire. Dealing ability damage to an enemy consumes all <i>Shot Charges</i> to deal 75 magic damage (+5% AP) <b>bonus</b> magic damage to them and, for each charge consumed beyond the first, an additional enemy within 600 units of them, firing an orb at each secondary target that impacts after 0.528 seconds to deal the damage. If the number of additional targets fired at is less than the number of charges consumed, deal an additional 15 - 75 (based on remaining Shot Charges) (+1% - 5% AP) magic damage to the primary target, for a total of <span class=\"text-nowrap whitespace-nowrap\">90 - 150</span> <span class=\"text-nowrap whitespace-nowrap\">(+6 - 10% AP).</span>",
+      "effects": "Gain 6 <i>Echoes</i> stacks to fire. Dealing ability damage to an enemy consumes all <i>Echoes</i> to deal 75 magic damage (+5% AP) <b>bonus</b> magic damage to them and, for each charge consumed beyond the first, an additional enemy within 600 units of them, firing an orb at each secondary target that impacts after 0.528 seconds to deal the damage. If the number of additional targets fired at is less than the number of charges consumed,deal an additional 15 – 75 (based on remaining <i>Echoes</i>) magic damage (+1% – 5% (based on remaining <i>Echoes</i>) AP) magic damage to the primary target, for a total of 1 – 5 (based on remaining <i>Echoes</i>) magic damage (+1% – 5% (based on remaining <i>Echoes</i>) AP)",
       "unique": true
     }
   ],
@@ -36,21 +31,16 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2750,
-      "combined": 450,
-      "sell": 1100
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 2750,
+    "sell": 1925
+  }
 }
 export default item

@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4016_wordlesspromise.png",
   "passives": [
     {
       "name": "Promise",
@@ -25,18 +24,13 @@ const item: Item =  {
     "healAndShieldPower": 25,
     "abilityHaste": 25
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 2500,
-      "sell": 1000
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1250
+  }
 }
 export default item

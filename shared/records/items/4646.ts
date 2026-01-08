@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4646_stormsurge.png",
   "passives": [
     {
       "name": "Stormraider",
@@ -26,7 +25,7 @@ const item: Item =  {
     },
     {
       "name": "Squall",
-      "effects": "After 2 seconds of having applied <i>Squall</i>, strike the target with lightning, dealing 125 magic damage (+10% AP) magic damage to them. If the target dies before being struck, they emit an electric field instantly that shocks all enemy champions near them, dealing them the same damage.",
+      "effects": "After 2 seconds of having applied <i>Squall</i>, strike the target with lightning, dealing 125 magic damage (+10% AP) magic damage to them. If the target dies before being struck, they emit an electric field instantly that shocks all enemy champions in a 600 radius, dealing them the same damage.",
       "unique": true
     }
   ],
@@ -35,21 +34,16 @@ const item: Item =  {
     "flatMagicPenetration": 15,
     "percentMovespeed": 6
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 800,
-      "sell": 1120
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

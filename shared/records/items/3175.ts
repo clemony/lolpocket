@@ -12,23 +12,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_sorceror_64.png",
   "nicknames": [
     "boots"
   ],
   "stats": {
     "flatMagicPenetration": 18,
-    "flatMovespeed": 50
-  },
-  "shop": {
-    "prices": {
-      "total": 1600,
-      "combined": 500,
-      "sell": 640
-    }
+    "flatMovespeed": 45
   },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1600,
+    "sell": 1120
+  }
 }
 export default item

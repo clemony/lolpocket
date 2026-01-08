@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1101_jungle_t1_scorchclawpup.png",
   "nicknames": [
     "jungle",
     "red",
@@ -26,24 +25,14 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 450,
-      "combined": 450,
-      "sell": 180
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "LIFESTEAL_VAMP"
-    ]
-  },
   "maps": [
     11,
     21
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 450,
+    "sell": 0
+  }
 }
 export default item

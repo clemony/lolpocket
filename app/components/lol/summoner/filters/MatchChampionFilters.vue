@@ -17,7 +17,7 @@ const champs = computed (() => {
     <ListboxContent
       :class="cn('field-box h-fit max-h-98 w-full gap-0 space-y-4 overflow-y-scroll px-2 py-4', { 'pb-3': cModel })">
       <SlideInTopOutBottom
-        group
+        groupl
         class="grid h-fit w-full gap-1.5">
         <ListboxItem
           v-for=" champion in champs"

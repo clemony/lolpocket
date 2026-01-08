@@ -5,6 +5,7 @@ export interface SummonerProviderApi {
   account: ShallowRef<Account | null>
   splash: ComputedRef<string | undefined>
   matches: ShallowRef<MatchData[]>
+  timelines: ShallowRef<PlayerTimeline[]>
   loadSummoner: () => Promise<void>
   resolveIdentifier: () => Promise<string | null>
   filteredMatches: ComputedRef<MatchData[]>
@@ -15,13 +16,13 @@ export interface SummonerProviderApi {
   clearFilters: () => void
   filterEmpty: () => boolean
   filter: ShallowRef<MatchFilter>
-  champions: Ref<Map<number, ChampionStats> | null>
-  allies: () => Promise<Teammate[]>
+  champions: ShallowRef<AggregatedStats[]>
+  allies: ShallowRef<AllyStatDetail[]>
   mastery: () => Promise<PlayerChampionMastery[]>
   loadNewer: () => Promise<void>
   loadOlder: () => Promise<void>
   loading: ComputedRef<boolean>
-  loadingOlder: Ref<boolean>
+  loadingOlder: ShallowRef<boolean>
   ready: Ref<boolean>
   whenReady: () => Promise<void>
 }
@@ -113,37 +114,55 @@ export function useSummonerProvider() {
     }
   }
 
+  // MASTERY
+
   async function mastery(): Promise<PlayerChampionMastery[]> {
     await whenReady()
     return await getOrFetchAllMastery(puuid.value!, summoner.value!.region)
   }
 
+  // MATCHES
+
   const {
     matches,
     loadNewer,
     loadOlder,
-    refreshLocal,
     loadingOlder,
+    refreshLocal,
     loading: matchesLoading,
   } = useMatches(summoner)
 
+  // ID
+
   const id = computed(() => puuid.value)
+
+  // TIMELINES
+
+  const { getAllTimelinesForPuuid } = useTimeline()
+
+  const timelines = computedAsync<PlayerTimeline[] | null>(async () => {
+    if (!id.value) return null
+    return await getAllTimelinesForPuuid(id.value)
+  })
+
+  // FILTERS
 
   const { filteredMatches, filter, ...rest } = useMatchFilters(id, matches)
 
-  const champions = computedAsync<Map<number, ChampionStats> | null>(
-    async () => {
-      const currentId = id.value
-      if (!currentId) return null
+  // CHAMPIONS
+  const champions = computedAsync<AggregatedStats[]>(async () => {
+    if (!id.value) return null
+    return await useChampionStats(filteredMatches, id.value).value
+  })
 
-      return await useChampionStats(currentId, filter.value?.queue)
-    }
-  )
+  // ALLIES
 
-  async function allies(): Promise<Teammate[]> {
-    await whenReady()
-    return await useAllies(puuid.value, filteredMatches)
-  }
+  const allies = computed<AllyStatDetail[]>(() => {
+    if (!id.value) return null
+    return aggregateAllies(filteredMatches, id.value).value
+  })
+
+  // SPLASH
 
   const splash = computed(() => {
     if (account.value?.splash) return account.value.splash
@@ -181,6 +200,7 @@ export function useSummonerProvider() {
     account,
     splash,
     matches,
+    timelines,
     loadSummoner,
     resolveIdentifier,
     filteredMatches,
@@ -191,8 +211,8 @@ export function useSummonerProvider() {
     mastery,
     loadNewer,
     loadOlder,
-    loadingOlder,
     loading: computed(() => loading.value || matchesLoading.value),
+    loadingOlder,
     ready,
     whenReady,
   }

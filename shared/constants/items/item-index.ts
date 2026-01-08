@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:18:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:33:50 PM CST
 
 export const itemIndex: ItemIndex[] = [
   {
@@ -612,11 +612,6 @@ export const itemIndex: ItemIndex[] = [
     "name": "Banshee's Veil"
   },
   {
-    "id": 3105,
-    "key": "item",
-    "name": "Aegis of the Legion"
-  },
-  {
     "id": 3107,
     "key": "item",
     "name": "Redemption"
@@ -1067,19 +1062,9 @@ export const itemIndex: ItemIndex[] = [
     "name": "Riftmaker"
   },
   {
-    "id": 4638,
-    "key": "item",
-    "name": "Watchful Wardstone"
-  },
-  {
     "id": 4642,
     "key": "item",
     "name": "Bandleglass Mirror"
-  },
-  {
-    "id": 4643,
-    "key": "item",
-    "name": "Vigilant Wardstone"
   },
   {
     "id": 4645,
@@ -1139,7 +1124,7 @@ export const itemIndex: ItemIndex[] = [
   {
     "id": 6655,
     "key": "item",
-    "name": "Luden's Companion"
+    "name": "Luden's Echo"
   },
   {
     "id": 6657,

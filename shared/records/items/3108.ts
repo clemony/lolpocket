@@ -51,6 +51,11 @@ const item: Item =  {
       "gold": 3000
     },
     {
+      "id": 3107,
+      "name": "Redemption",
+      "gold": 2300
+    },
+    {
       "id": 324005,
       "name": "Imperial Mandate",
       "gold": 2750
@@ -99,7 +104,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
   "simpleDescription": "Increases Ability Power and Cooldown Reduction",
   "nicknames": [
     "book"
@@ -108,21 +112,16 @@ const item: Item =  {
     "abilityPower": 25,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 850,
-      "combined": 200,
-      "sell": 340
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 850,
+    "sell": 595
+  }
 }
 export default item

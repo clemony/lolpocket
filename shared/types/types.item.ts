@@ -47,15 +47,14 @@ export interface Item {
   removed?: boolean | string
   requiedAlly?: string
   requiredChampion?: string
-  shop?: {
-    prices: {
-      total?: number
-      combined?: number
-      sell?: number
-    }
+  gold: {
+    total?: number
+    base?: number
+    sell?: number
     purchasable?: boolean
-    tags?: string[]
   }
+
+  tags?: string[]
   simpleDescription?: string
   specialRecipe?: string | number
   stats: Record<string, number>

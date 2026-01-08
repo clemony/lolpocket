@@ -17,27 +17,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3135_mage_t3_voidstaff.png",
   "simpleDescription": "Increases magic damage",
   "stats": {
     "abilityPower": 95,
     "percentMagicPenetration": 40
-  },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 1050,
-      "sell": 1200
-    },
-    "tags": [
-      "MAGE"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 1050,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

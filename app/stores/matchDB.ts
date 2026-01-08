@@ -17,53 +17,42 @@ export class MatchDB extends Dexie {
   constructor() {
     super("MatchDB")
 
-    this.version(3)
-      .stores({
-        matchData: `
-        matchId,
-        *participantIds,
-        creation,
-        queueId,
-        lastAccessedAt
-      `,
-        matchCursor: `puuid, lastIndex`,
-        matchTimeline: `
-        matchId,
-        *participantIds,
-        lastAccessedAt
-      `,
-        playerChampions: `
-        &[puuid+championId],
-        puuid,
-        championId,
-        lastAccessedAt
-      `,
-        playerChampionMastery: `
-        &[puuid+championId],
-        puuid,
-        championId,
-        lastAccessedAt
-      `,
-        summonerMastery: `
-        &puuid,
-        updated
-      `,
-      })
-      .upgrade(async (tx) => {
-        const table = tx.table<MatchData, string>("matchData")
+    this.version(2).stores({
+      matchData: `
+    matchId,
+    *participantIds,
+    creation,
+    queueId,
+    lastAccessedAt
+  `,
 
-        await table.toCollection().modify((match) => {
-          if (!match?.participants) return
+      matchCursor: `puuid, lastIndex`,
 
-          for (const p of match.participants) {
-            if (!p.teamPosition) continue
+      matchTimeline: `
+    matchId,
+    *participantIds,
+    lastAccessedAt
+  `,
 
-            p.teamPosition = p.teamPosition
-              .toLowerCase()
-              .replace("utility", "support")
-          }
-        })
-      })
+      playerChampions: `
+    &[puuid+championId],
+    puuid,
+    championId,
+    lastAccessedAt
+  `,
+
+      playerChampionMastery: `
+    &[puuid+championId],
+    puuid,
+    championId,
+    lastAccessedAt
+  `,
+
+      summonerMastery: `
+    &puuid,
+    updated
+  `,
+    })
   }
 }
 

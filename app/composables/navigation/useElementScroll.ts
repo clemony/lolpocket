@@ -1,5 +1,18 @@
+import type { MotionValue } from "motion-v"
+
 // scroll.ts
 export const ScrollKey = Symbol("ScrollProvider")
+
+type ScrollState = {
+  scrollTop: (instant?: boolean) => void
+  scrollToHash: (instant?: boolean) => void
+  scrollY: MotionValue<number>
+  scrollYProgress: MotionValue<number>
+}
+
+// module-level fallbacks (stable identity)
+const fallbackScrollY = useMotionValue(0)
+const fallbackScrollYProgress = useMotionValue(0)
 
 export function useScrollProvider(
   el: Ref<HTMLElement | null>,
@@ -12,11 +25,11 @@ export function useScrollProvider(
     container: el,
   })
 
-  function scrollTop(instant = false) {
-    el.value?.scrollTo({
-      top: 0,
-      behavior: instant ? "auto" : "smooth",
-    })
+  const state: ScrollState = {
+    scrollTop,
+    scrollToHash,
+    scrollY,
+    scrollYProgress,
   }
 
   function scrollToHash(instant = false) {
@@ -34,7 +47,12 @@ export function useScrollProvider(
       behavior: instant ? "auto" : "smooth",
     })
   }
-
+  function scrollTop(instant = false) {
+    el.value?.scrollTo({
+      top: 0,
+      behavior: instant ? "auto" : "smooth",
+    })
+  }
   // 🔥 scroll on initial mount
   onMounted(() => {
     nextTick(() => scrollToHash(true))
@@ -46,28 +64,17 @@ export function useScrollProvider(
     () => nextTick(() => scrollToHash())
   )
 
-  const state = {
-    scrollTop,
-    scrollToHash,
-    scrollY,
-    scrollYProgress,
-  }
-
   provide(ScrollKey, state)
   return state
 }
 
-export function useScrollInject() {
-  const state = inject<{
-    scrollTop: (instant?: boolean) => void
-    scrollToHash: (instant?: boolean) => void
-    scrollY: MotionValue
-    scrollYProgress: MotionValue
-  }>(ScrollKey)
-
-  if (!state) {
-    throw new Error("No Scroll provider found.")
-  }
-
-  return state
+export function useScrollInject(): ScrollState {
+  return (
+    inject<ScrollState>(ScrollKey) ?? {
+      scrollTop: () => {},
+      scrollToHash: () => {},
+      scrollY: fallbackScrollY,
+      scrollYProgress: fallbackScrollYProgress,
+    }
+  )
 }

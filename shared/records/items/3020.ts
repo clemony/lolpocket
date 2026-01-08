@@ -19,7 +19,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3020_class_t2_sorcerersshoes.png",
   "simpleDescription": "Enhances Move Speed and magic damage",
   "nicknames": [
     "boots",
@@ -29,18 +28,16 @@ const item: Item =  {
     "flatMagicPenetration": 12,
     "flatMovespeed": 45
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 800,
-      "sell": 440
-    }
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

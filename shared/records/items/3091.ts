@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3091_fighter_t3_witsend.png",
   "simpleDescription": "Resist magic damage and claw your way back to life.",
   "passives": [
     {
@@ -36,23 +35,16 @@ const item: Item =  {
     "magicResistance": 45,
     "tenacity": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 550,
-      "sell": 1120
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 550,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

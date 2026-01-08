@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/30/2025 03:07:21 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 03:03:01 PM CST
 
 export const positionToChamp: Record<string, number[]> = {
   "Top": [
@@ -27,6 +27,7 @@ export const positionToChamp: Record<string, number[]> = {
     85,
     240,
     54,
+    62,
     82,
     75,
     2,
@@ -56,10 +57,10 @@ export const positionToChamp: Record<string, number[]> = {
     8,
     106,
     19,
-    62,
     157,
     777,
     83,
+    904,
     154
   ],
   "Middle": [
@@ -92,6 +93,7 @@ export const positionToChamp: Record<string, number[]> = {
     54,
     90,
     800,
+    25,
     950,
     518,
     61,
@@ -194,6 +196,7 @@ export const positionToChamp: Record<string, number[]> = {
     876,
     57,
     11,
+    62,
     76,
     56,
     20,
@@ -215,7 +218,6 @@ export const positionToChamp: Record<string, number[]> = {
     234,
     106,
     19,
-    62,
     5,
     154,
     238

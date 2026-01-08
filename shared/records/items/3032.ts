@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3032_yuntalwildarrows.png",
   "nicknames": [
     "arrow",
     "yuntal"
@@ -40,24 +39,19 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "attackDamage": 55,
-    "attackSpeed": 35
-  },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 750,
-      "sell": 1200
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
+    "attackDamage": 50,
+    "attackSpeed": 40
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 750,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

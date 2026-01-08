@@ -22,31 +22,25 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3031_marksman_t3_infinityedge.png",
   "simpleDescription": "Massively enhances critical strikes",
   "nicknames": [
     "ie"
   ],
   "stats": {
-    "attackDamage": 65,
+    "attackDamage": 75,
     "criticalStrikeChance": 25,
-    "criticalStrikeDamage": 40
-  },
-  "shop": {
-    "prices": {
-      "total": 3450,
-      "combined": 675,
-      "sell": 1380
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
+    "criticalStrikeDamage": 30
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 675,
+    "total": 3450,
+    "sell": 2415
+  }
 }
 export default item

@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3110_tank_t3_frozenheart.png",
   "simpleDescription": "Massively increases Armor and slows enemy basic attacks",
   "nicknames": [
     "fh"
@@ -34,22 +33,16 @@ const item: Item =  {
     "mana": 400,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 600,
-      "sell": 1000
-    },
-    "tags": [
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 600,
+    "total": 2500,
+    "sell": 1750
+  }
 }
 export default item

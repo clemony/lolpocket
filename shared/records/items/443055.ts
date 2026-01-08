@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3055_fulmination.png",
   "nicknames": [
     "energize"
   ],
@@ -22,7 +21,7 @@ const item: Item =  {
     },
     {
       "name": "Dynamo",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 10% of the target's <b>current</b> health.",
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health.",
       "unique": true
     }
   ],
@@ -31,18 +30,13 @@ const item: Item =  {
     "attackSpeed": 45,
     "percentMovespeed": 15
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 1000,
-      "sell": 0
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 1000,
+    "sell": 400
+  }
 }
 export default item

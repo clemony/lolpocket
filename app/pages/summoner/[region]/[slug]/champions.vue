@@ -25,7 +25,7 @@ definePageMeta({
 const { champions, filteredMatches, mastery: m, summoner } = useSummonerInject()
 
 const awaitMastery: PlayerChampionMastery[] = await m()
-const data = useAggregatedStats(filteredMatches, summoner.value.puuid)
+const data = useChampionStats(filteredMatches, summoner.value.puuid)
 
 const summary = await getMasterySummary(summoner.value.puuid)
 

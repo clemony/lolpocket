@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6676_marksman_t3_thecollector.png",
   "nicknames": [
     "deathblade",
     "gun",
@@ -45,22 +44,16 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "lethality": 10
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 525,
-      "sell": 1200
-    },
-    "tags": [
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 525,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

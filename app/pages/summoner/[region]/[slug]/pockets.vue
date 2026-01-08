@@ -25,7 +25,20 @@ watch(() => summoner.value, (v) => {
 </script>
 
 <template>
-  <div>
-    hi
+  <div class="grid w-full justify-center">
+    <div class="">
+      <LazyBackpackBoxCard
+        v-for="pocket in ps().pockets.filter(
+          (p) =>
+            !(
+              ps().pinned.includes(p.key)
+              || ps().trash.includes(p.key)
+              || ps().archive.includes(p.key)
+            ),
+        )"
+        :key="pocket.key"
+        :pocket
+        @click="navigateTo(`/pocket/${pocket.key}`)" />
+    </div>
   </div>
 </template>

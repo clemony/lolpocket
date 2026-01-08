@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3179_assassin_t3_umbralglaive.png",
   "simpleDescription": "Provides trap and ward detection periodically",
   "nicknames": [
     "lethality"
@@ -32,35 +31,30 @@ const item: Item =  {
     },
     {
       "name": "Blackout",
-      "effects": "You <img src=\"/img/icons/disabled-ward.webp\" class=\"tip-icon\" />disable surrounding stealthed wards, as well as <img src=\"/img/icons/expose.webp\" class=\"tip-icon\" />expose and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon\" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active.",
+      "effects": "You <img src=\"/img/icons/disabled-ward.webp\" class=\"tip-icon\" />disable surrounding stealthed wards, as well as <img src=\"/img/icons/expose.webp\" class=\"tip-icon\" />expose and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon\" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active. Your basic attacks deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />2 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />1) <b>bonus</b> true damage to wards.",
       "unique": false
     },
     {
-      "name": "Extinguish",
-      "effects": "Your basic attacks deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />2 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />1) <b>bonus</b> true damage to wards.",
+      "name": "Nightstalker",
+      "effects": "While out of vision of enemies for 1 second, and for 4 seconds after seen, your next basic attack against a champion deals 50 (+1.5 per 1 Lethality) <b>bonus</b> true damage.",
       "unique": true
     }
   ],
   "stats": {
-    "attackDamage": 55,
+    "attackDamage": 60,
     "lethality": 15,
-    "abilityHaste": 10
-  },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 450,
-      "sell": 1000
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
+    "abilityHaste": 15
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 2500,
+    "sell": 1750
+  }
 }
 export default item

@@ -9,6 +9,11 @@ const item: Item =  {
       "gold": 2900
     },
     {
+      "id": 3135,
+      "name": "Void Staff",
+      "gold": 3000
+    },
+    {
       "id": 326657,
       "name": "Rod of Ages",
       "gold": 2600
@@ -24,19 +29,9 @@ const item: Item =  {
       "gold": 2700
     },
     {
-      "id": 4628,
-      "name": "Horizon Focus",
-      "gold": 2750
-    },
-    {
       "id": 3116,
       "name": "Rylai's Crystal Scepter",
       "gold": 2600
-    },
-    {
-      "id": 3135,
-      "name": "Void Staff",
-      "gold": 3000
     },
     {
       "id": 3165,
@@ -67,27 +62,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1026_mage_t1_blastingwand.png",
   "simpleDescription": "Moderately increases Ability Power",
   "stats": {
     "abilityPower": 45
-  },
-  "shop": {
-    "prices": {
-      "total": 850,
-      "combined": 850,
-      "sell": 340
-    },
-    "tags": [
-      "MAGE",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 850,
+    "total": 850,
+    "sell": 595
+  }
 }
 export default item

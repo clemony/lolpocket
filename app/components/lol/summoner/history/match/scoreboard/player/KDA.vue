@@ -8,47 +8,48 @@ const { class: className, match, player } = defineProps<{
 
 <template>
   <div
-    class="ml-2 grid min-w-20 grow auto-rows-max items-center justify-end justify-items-end gap-2 justify-self-end py-1 text-end *:w-full *:items-center **:text-end">
-    <p
-      class="
-        inline-flex flex-nowrap items-center justify-end text-end text-4 leading-4 font-bold tracking-wide text-nowrap">
-      {{ player.stats.kills.value }}&thinsp;/&thinsp;
-      <span class="inline text-shade-domination/10">
+    class="ml-2 grid h-15 max-h-15 w-fit min-w-20 auto-rows-max justify-self-end pb-1">
+    <div class="inline h-6 self-start text-start text-4 leading-5 font-bold text-nowrap whitespace-nowrap">
+      {{ player.stats.kills.value }}
+      /
+      <span class="text-shade-domination/10">
         {{ player.stats.deaths }}
       </span>
-      &thinsp;/&thinsp;{{ player.stats.assists }}
-    </p>
-
-    <div
-      class="
-        space-y-0.5 text-end font-medium
-        opacity-80 *:flex *:items-center *:justify-end **:flex
-      **:text-1! **:leading-none
-      ">
-      <p>
-        {{ Math.round(player.stats.kp * 100) }}
-        <span>%&nbsp;KP</span>
-      </p>
-
-      <div class="flex h-4 items-center gap-4">
-        <MvpBadge
-          v-if="match.mvp === match.player.puuid || match.ace === match.player.puuid"
-          :match
-          :player="match.player" />
-        <p
-          v-if="!player.stats.deaths"
-          class="flex items-center gap-1 truncate tracking-tight text-nowrap">
-          <icon
-            name="proicons:infinity"
-            class="size-4.5 **:stroke-[1.6]" />
-          KDA
-        </p>
-
-        <p v-else>
-          {{ player.stats.kda.toFixed(2) }}
-          <span>&nbsp;KDA</span>
-        </p>
-      </div>
+      /
+      {{ player.stats.assists }}
     </div>
+
+    <span class="label-class">
+      {{ Math.round(player.stats.kp * 100) }}%&nbsp;
+      <span>KP</span>
+    </span>
+
+    <MvpBadge
+      v-if="match.mvp === match.player.puuid || match.ace === match.player.puuid"
+      :match
+      :player="match.player" />
+    <span
+      v-if="!player.stats.deaths"
+      class="flex h-4 items-center gap-1 truncate tracking-tight text-nowrap">
+      <icon
+        name="proicons:infinity"
+        class="size-4.5 **:stroke-[1.6]" />
+      KDA
+    </span>
+
+    <span
+      v-else
+      class="label-class">
+      {{ roundDecimal(player.stats.kda, 2) }}
+      <span>&nbsp;KDA</span>
+    </span>
   </div>
 </template>
+
+<style scoped>
+  @reference '@css/tailwind.css';
+
+.label-class {
+  @apply h-4 gap-0 text-1 text-start whitespace-nowrap text-nowrap lowercase   *:tracking-wide leading-4;
+}
+</style>

@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4403_goldenspatula.png",
   "nicknames": [
     "spatch",
     "urf",
@@ -36,15 +35,13 @@ const item: Item =  {
     "abilityHaste": 20,
     "omnivamp": 15
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 2500,
-      "sell": 0
-    }
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1750
+  }
 }
 export default item

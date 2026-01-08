@@ -78,16 +78,14 @@ async function run(
 
 export async function championUpdate() {
   const pipeline: [string, string][] = [
-    // ["fetch:champions", "./champions/fetch-champions.ts"],
-    ["generate:champions", "./champions/generate-champions.ts"],
-    ["generate:champion-index", "./champions/generate-champion-index.ts"],
-    ["generate:champions-lite", "./champions/generate-champions-lite.ts"],
-    [
-      "generate:champions-titles",
-      "./champions/generate-champion-title-index.ts",
-    ],
-    ["generate:champion-skins", "./champions/generate-champion-skins.ts"],
-    ["generate:champion-filter", "./champions/generate-champion-filter.ts"],
+    ["fetch:champions", "./champions/fetch/champions.ts"],
+    ["fetch:icons", "./champions/fetch/icons.ts"],
+    ["generate:champions", "./champions/build/champions.ts"],
+    ["generate:champion-index", "./champions/build/index.ts"],
+    ["generate:champions-lite", "./champions/build/lite.ts"],
+    ["generate:champions-titles", "./champions/build/titles.ts"],
+    //["generate:champion-skins", "./champions/build/skins.ts"],
+    ["generate:champion-filter", "./champions/build/filter.ts"],
     // ['generate:max-stats', './generate-max-stats.ts'],
   ]
 

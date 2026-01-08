@@ -39,7 +39,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2019_steel_sigil.png",
   "nicknames": [
     "Bloodstone"
   ],
@@ -47,21 +46,16 @@ const item: Item =  {
     "armor": 30,
     "attackDamage": 15
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 150,
-      "sell": 440
-    },
-    "tags": [
-      "FIGHTER"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 150,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

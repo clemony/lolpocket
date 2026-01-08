@@ -7,6 +7,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const region = getQuery(event).region as string
   const since = Number(getQuery(event).since || 0)
   const queue = getQuery(event).queue
+  console.log("🥸 - queue:", queue)
 
   const batchSize = 20
   const ids = await idsByPuuid({
@@ -37,7 +38,9 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   return {
     matches,
     newestTimestamp: matches[0]?.gameEndTimestamp ?? since,
-    cursor: ids.length, // you can still track cursor if needed
-    done: true, // always true for “newest”
+    cursor: ids.length,
+    done: true,
   }
+
+  //return null
 })

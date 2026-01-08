@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div
     class="
-      ml-2 grid max-h-full w-full grid-flow-col grid-cols-2 grid-rows-5 gap-0.5 gap-y-0.5
+      ml-2 grid max-h-full w-full max-w-90 grid-flow-col grid-cols-2 grid-rows-5 gap-0.5 gap-y-0.5
       justify-self-end overflow-hidden
     ">
     <BtnLink
@@ -25,7 +25,7 @@ const route = useRoute()
       variant="link"
       :to="`/summoner/${player.puuid}`"
       :class="
-        cn('gap-2overflow-hidden flex size-full items-center text-1 font-medium tracking-tight text-nowrap normal-case', {
+        cn('flex size-full items-center gap-2 overflow-hidden text-1 font-medium tracking-tight text-nowrap normal-case', {
           'col-start-1': player.teamId === 100,
           'col-start-2 ': player.teamId === 200,
         })

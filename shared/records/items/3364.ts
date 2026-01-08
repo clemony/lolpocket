@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3364_class_t1_oracleslens.png",
   "simpleDescription": "Disables nearby invisible wards and traps for a duration",
   "nicknames": [
     "red",
@@ -17,22 +16,20 @@ const item: Item =  {
   ],
   "active": [
     {
-      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper-drone.webp\" class=\"tip-icon\" />Sweeper Drone that escorts you for the next 6 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />visible.",
+      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper-drone.webp\" class=\"tip-icon\" />Sweeper Drone that escorts you for the next 8 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />visible.",
       "range": 0,
       "unique": false
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 0,
-      "sell": 0
-    }
-  },
   "maps": [
     11,
     21
-  ]
+  ],
+  "gold": {
+    "base": 0,
+    "total": 0,
+    "sell": 0
+  }
 }
 export default item

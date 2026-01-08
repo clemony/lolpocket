@@ -11,21 +11,16 @@ export interface UsePlayerStats {
   items?: any
   spells: ComputedRef<SpellStats>
   allies?: ComputedRef<AllyStatDetail[]>
+  duos?: ComputedRef<ChampionPairStats>
 }
 
 export function usePlayerStatsProvider(
   api: SummonerInject,
   championId: ComputedRef<number>
 ): UsePlayerStats {
-  const { filteredMatches, summoner } = api
+  const { filteredMatches, summoner, timelines } = api
 
-  const timelines = shallowRef<PlayerTimeline[]>([])
   const mastery = shallowRef<PlayerChampionMastery | undefined>(undefined)
-
-  watchEffect(async () => {
-    const { getAllTimelinesForPuuid } = useTimeline()
-    timelines.value = await getAllTimelinesForPuuid(summoner.value.puuid)
-  })
 
   const matchData = computed<MatchPlayerData[]>(() => {
     if (!timelines.value.length) return []
@@ -50,7 +45,8 @@ export function usePlayerStatsProvider(
   })
   const stats = useAggregateSingleChampion(matchData)
   const statsApi: UsePlayerStats = {
-    allies: aggregateAllies(matchData),
+    allies: aggregateAllies(filteredMatches, summoner.value?.puuid),
+    duos: aggregateDuos(matchData),
     summoner,
     matchData,
     skills: computed(() => aggregateSkills(matchData.value)),

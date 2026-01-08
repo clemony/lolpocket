@@ -5,7 +5,7 @@
   --color-discord: oklch(58% 52 274);
   --color-b4: var(--b4);
   --color-all-roles: oklch(37% 0 0);
-  --color-win: oklch(69% 33% 132deg);
+  --color-win: oklch(80% 19% 214);
 
   /* path */
   --color-precision: oklch(85.49% 0.0892 84.09);
@@ -17,7 +17,7 @@
   /* rank */
   --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
-  --color-silver: oklch(65.69% 0.022 257.49);
+  --color-silver: oklch(70% 0% 90);
   --color-gold: oklch(85.49% 0.0892 84.09);
   --color-platinum: oklch(69.21% 0.085 233.45);
   --color-emerald: oklch(56.81% 0.0628 168.43);
@@ -87,6 +87,7 @@
   --mana-hex: var(--color-mana-hex);
   --mana: var(--color-mana);
   --platinum: var(--color-platinum);
+  --win: var(--color-win);
   --mp5: var(--color-mp5);
   --hsp: var(--color-hsp);
   --enchanter: var(--color-enchanter);

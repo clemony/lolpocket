@@ -29,7 +29,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3155_fighter_t2_hexdrinker.png",
   "simpleDescription": "Increases Attack Damage and Magic Resist",
   "passives": [
     {
@@ -43,23 +42,16 @@ const item: Item =  {
     "attackDamage": 25,
     "magicResistance": 25
   },
-  "shop": {
-    "prices": {
-      "total": 1300,
-      "combined": 200,
-      "sell": 520
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 1300,
+    "sell": 910
+  }
 }
 export default item

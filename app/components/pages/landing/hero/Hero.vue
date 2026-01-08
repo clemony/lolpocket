@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
 import { heroDisplays } from '~~/shared/data/video'
 
 const { progress: p, visible } = defineProps<{
-  progress: MotionValue
+  progress: any
   visible: boolean
 }>()
 
@@ -13,7 +12,7 @@ const videoRef = ref<any>()
 const prog = ref(0)
 
 useMotionValueEvent(p, 'change', (latest) => {
-  let a = latest * 80
+  let a = Number(latest) * 80
   a = Math.round(a * 100) / 100
   prog.value = a
 })

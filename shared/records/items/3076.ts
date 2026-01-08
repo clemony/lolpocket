@@ -29,7 +29,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3076_tank_t2_bramblevest.png",
   "nicknames": [
     "grievous wounds"
   ],
@@ -43,21 +42,16 @@ const item: Item =  {
   "stats": {
     "armor": 30
   },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 200,
-      "sell": 320
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
   "simpleDescription": "Overcomes enemies with high Health recovery and Armor",
   "nicknames": [
     "grievous",
@@ -36,25 +35,20 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "armorPenetration": 35,
+    "armorPenetration": 30,
     "attackDamage": 35,
     "criticalStrikeChance": 25
-  },
-  "shop": {
-    "prices": {
-      "total": 3300,
-      "combined": 450,
-      "sell": 1320
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 3300,
+    "sell": 2310
+  }
 }
 export default item

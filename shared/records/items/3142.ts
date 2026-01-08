@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3142_assassin_t3_youmuusghostblade.png",
   "simpleDescription": "Activate to greatly increase Move Speed",
   "nicknames": [
     "lethality",
@@ -47,22 +46,16 @@ const item: Item =  {
     "lethality": 18,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 675,
-      "sell": 1120
-    },
-    "tags": [
-      "ASSASSIN",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 675,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

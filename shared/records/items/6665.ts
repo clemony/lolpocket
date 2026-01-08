@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6665_tank_t4_jakshotheprotean.png",
   "nicknames": [
     "Jak'Sho, The Protean"
   ],
@@ -38,21 +37,16 @@ const item: Item =  {
     "health": 350,
     "magicResistance": 45
   },
-  "shop": {
-    "prices": {
-      "total": 3200,
-      "combined": 650,
-      "sell": 1280
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 650,
+    "total": 3200,
+    "sell": 2240
+  }
 }
 export default item

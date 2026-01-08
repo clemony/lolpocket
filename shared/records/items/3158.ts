@@ -24,7 +24,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3158_class_t2_ionianbootsoflucidity.png",
   "simpleDescription": "Increases Move Speed and Cooldown Reduction",
   "passives": [
     {
@@ -37,18 +36,16 @@ const item: Item =  {
     "flatMovespeed": 45,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 350,
-      "sell": 360
-    }
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

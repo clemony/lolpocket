@@ -19,7 +19,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidboots.png",
   "simpleDescription": "Spend Mana to recover Health",
   "nicknames": [
     "Synchronized Souls"
@@ -39,16 +38,14 @@ const item: Item =  {
   "stats": {
     "flatMovespeed": 40
   },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 600,
-      "sell": 360
-    }
-  },
   "maps": [
     11,
     21
-  ]
+  ],
+  "gold": {
+    "base": 600,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

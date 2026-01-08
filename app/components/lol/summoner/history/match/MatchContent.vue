@@ -34,35 +34,26 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
 
 <template>
   <LazyCollapsibleContent
-    class="
-        'group relative h-max w-full translate-x-0 p-0 text-2
-        **:select-none
-      ">
+    class="h-201 w-full p-0 text-2 **:select-none">
     <Tabs
       v-model:model-value="modelValue"
-      class="relative">
-      <TabsList
-
-        class="
-            w-full auto-cols-max grid-flow-col justify-start rounded-none border
-            border-b3 bg-b3/36
-          ">
+      class="">
+      <FileTabsList
+        class="relative h-9 w-[98%] gap-x-1 overflow-x-hidden">
         <template
           v-for="tab, i in tabs"
           :key="i">
-          <TabsTrigger
-            size="7"
+          <FileTabTrigger
             :value="tab.name"
-            class="cursor-pointer px-3 shadow-black/2">
+            class="z-5 h-full min-w-38 shrink-0 cursor-pointer px-3 font-medium shadow-none on:bg-[color-mix(in_lch,var(--color-b2)_40%,white_60%)]">
             {{ tab.name }}
-          </TabsTrigger>
-
-          <TabIndicator class="-translate-y-px" />
+          </FileTabTrigger>
         </template>
-      </TabsList>
+        <FakeTab />
+      </FileTabsList>
 
       <div
-        class="relative m-0! max-h-190 w-full overflow-x-hidden overscroll-auto">
+        :class="cn('tabs-content field-box relative m-0! h-190 max-h-190 min-h-fit w-full overflow-x-hidden overscroll-auto rounded-tr-xl rounded-b-xl bg-tint-b2/60 p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-b3)_70%,white_30%)]', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"

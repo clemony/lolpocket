@@ -44,28 +44,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1057_tank_t2_negatroncloak.png",
   "simpleDescription": "Moderately increases Magic Resist",
   "stats": {
     "magicResistance": 45
-  },
-  "shop": {
-    "prices": {
-      "total": 850,
-      "combined": 450,
-      "sell": 340
-    },
-    "tags": [
-      "FIGHTER",
-      "TANK",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 850,
+    "sell": 595
+  }
 }
 export default item

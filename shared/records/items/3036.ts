@@ -15,35 +15,36 @@ const item: Item =  {
     }
   ],
   "specialRecipe": 0,
-  "noEffects": true,
+  "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3036_marksman_t3_dominikregards.png",
   "simpleDescription": "Overcomes enemies with high health and armor",
   "nicknames": [
     "lw",
     "ldr",
     "doms"
   ],
+  "passives": [
+    {
+      "name": "Giant Slayer",
+      "effects": "Deal 0% – 15% (based on enemy bonus health) against enemy champions.",
+      "unique": true
+    }
+  ],
   "stats": {
-    "armorPenetration": 40,
+    "armorPenetration": 35,
     "attackDamage": 35,
     "criticalStrikeChance": 25
-  },
-  "shop": {
-    "prices": {
-      "total": 3100,
-      "combined": 350,
-      "sell": 1240
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 3100,
+    "sell": 2170
+  }
 }
 export default item

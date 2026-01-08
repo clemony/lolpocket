@@ -6,6 +6,38 @@ export function isOdd(n) {
   return Math.abs(n % 2) === 1
 }
 
+export function clamp(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value))
+}
+
+export function lerp(min: number, max: number, t: number) {
+  return min + (max - min) * t
+}
+
+export function confidence(value: number, k = 5) {
+  return value / (value + k)
+}
+
+export function mode(nums: number[]): number | null {
+  if (!nums.length) return null
+
+  const freq = new Map<number, number>()
+  let maxCount = 0
+  let result = nums[0]
+
+  for (const n of nums) {
+    const count = (freq.get(n) ?? 0) + 1
+    freq.set(n, count)
+
+    if (count > maxCount) {
+      maxCount = count
+      result = n
+    }
+  }
+
+  return result
+}
+
 export const coerceNumber = (v: unknown, fallback = 0) =>
   Number.isFinite(+v) ? +v : fallback
 
@@ -20,6 +52,9 @@ export function getRandomInt(max) {
 
 export const roundDecimalToPercent = (v: number, total: number) =>
   v ? Math.round((v / total) * 1000) / 10 : 0
+
+export const roundDecimal = (v: number, dec = 1) =>
+  v ? Math.round(v * (10 * dec)) / (10 * dec) : 0
 
 export const roundInt = (v: number, total: number, decimals = 1) =>
   v ? Math.round((v / total) * 10 ** decimals) / 10 ** decimals : 0

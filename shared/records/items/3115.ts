@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3115_mage_t3_nashorstooth.png",
   "simpleDescription": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
   "nicknames": [
     "nashors"
@@ -39,23 +38,16 @@ const item: Item =  {
     "attackSpeed": 50,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2900,
-      "combined": 500,
-      "sell": 1160
-    },
-    "tags": [
-      "MARKSMAN",
-      "MAGE",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 2900,
+    "sell": 2030
+  }
 }
 export default item

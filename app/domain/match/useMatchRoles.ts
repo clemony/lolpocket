@@ -1,6 +1,5 @@
 export interface RoleStats {
   name: string
-  bayesianWinrate: number
   games: number
   role: string
   winrate: number
@@ -13,19 +12,12 @@ export function useMatchRoles(
 ): RoleStats[] {
   if (!matches) return
 
-  const roleNames = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"]
   const roleStatsMap = new Map<string, { games: number; wins: number }>()
-
-  let allGames = 0
-  let allWins = 0
 
   for (const match of toValue(matches)) {
     const player = match.participants.find((p) => p.puuid === puuid)
-    const role = player.teamPosition.toUpperCase()
-    if (!roleNames.includes(role)) continue
-
-    allGames++
-    if (player.win) allWins++
+    const role = player.teamPosition
+    if (!roleKey.includes(role)) continue
 
     if (!roleStatsMap.has(role)) {
       roleStatsMap.set(role, { games: 0, wins: 0 })
@@ -36,34 +28,12 @@ export function useMatchRoles(
     if (player.win) stats.wins++
   }
 
-  roleStatsMap.set("ALL", { games: allGames, wins: allWins })
-
-  const globalWinrate = allGames === 0 ? 0 : allWins / allGames
-  const m = 500
-
-  const formatDisplay = (role: string) => {
-    switch (role) {
-      case "UTILITY":
-        return "Support"
-      case "MIDDLE":
-        return "Mid"
-      case "BOTTOM":
-        return "Bot"
-      case "ALL":
-        return "All"
-      default:
-        return role.charAt(0) + role.slice(1).toLowerCase()
-    }
-  }
-
   const roles = computed(() => {
-    return ["ALL", ...roleNames].map((role) => {
+    return roleKey.map((role) => {
       const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
-      const name = formatDisplay(role)
 
       return {
-        name,
-        bayesianWinrate: ((wins + m * globalWinrate) / (games + m)) * 100,
+        name: role,
         games,
         role,
         winrate: games === 0 ? 0 : (wins / games) * 100,

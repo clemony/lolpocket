@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4001_ghostwalkers.png",
   "active": [
     {
       "name": "Wall Walk",
@@ -16,15 +15,13 @@ const item: Item =  {
   "stats": {
     "flatMovespeed": 70
   },
-  "shop": {
-    "prices": {
-      "total": 500,
-      "combined": 500,
-      "sell": 200
-    }
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 350
+  }
 }
 export default item

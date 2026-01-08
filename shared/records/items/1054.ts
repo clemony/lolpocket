@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1054_tank_t1_doransshield.png",
   "simpleDescription": "Good defensive starting item",
   "nicknames": [
     "dshield"
@@ -13,7 +12,7 @@ const item: Item =  {
   "passives": [
     {
       "name": "Enduring Focus",
-      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0 – 5 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0 – 3.75) health for 8 seconds, refreshing on subsequent hits. Area of effect, damage over time, or proc damage taken trigger this effect with the <img src=\"/img/icons/ranged.webp\" class=\"tip-icon\" />ranged values.",
+      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0 – 5 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0 – 3.75) health for 8 seconds, refreshing on subsequent champion damage taken. Area of effect, damage over time, or proc damage taken trigger this effect with the <img src=\"/img/icons/ranged.webp\" class=\"tip-icon\" />ranged values.",
       "unique": true
     },
     {
@@ -26,25 +25,15 @@ const item: Item =  {
     "health": 110,
     "healthRegen": 4
   },
-  "shop": {
-    "prices": {
-      "total": 450,
-      "combined": 450,
-      "sell": 180
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 450,
+    "sell": 180
+  }
 }
 export default item

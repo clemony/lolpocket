@@ -16,6 +16,11 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
+      "id": 3181,
+      "name": "Hullbreaker",
+      "gold": 3000
+    },
+    {
       "id": 3748,
       "name": "Titanic Hydra",
       "gold": 3300
@@ -28,11 +33,6 @@ const item: Item =  {
     {
       "id": 3814,
       "name": "Edge of Night",
-      "gold": 3000
-    },
-    {
-      "id": 3181,
-      "name": "Hullbreaker",
       "gold": 3000
     },
     {
@@ -59,7 +59,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2012_tunneler.png",
   "nicknames": [
     "drill"
   ],
@@ -67,21 +66,16 @@ const item: Item =  {
     "attackDamage": 15,
     "health": 250
   },
-  "shop": {
-    "prices": {
-      "total": 1150,
-      "combined": 400,
-      "sell": 460
-    },
-    "tags": [
-      "FIGHTER"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 1150,
+    "sell": 805
+  }
 }
 export default item

@@ -34,9 +34,9 @@ export interface PlayerChampionStats {
   queues?: Record<QueueKey, QueueStats>
   lastAccessedAt?: number
 }
-
 export interface SharedChampionStats {
   championId: number
+  championName: string
   games: number
   wins: number
   losses: number
@@ -45,7 +45,6 @@ export interface SharedChampionStats {
 
 export interface ChampionStats extends SharedChampionStats {
   puuid?: string
-  championName: string
 
   kills: number | StatAverage
   deaths: number | StatAverage
@@ -118,20 +117,18 @@ export interface StatDetail {
   pickrate?: number
 }
 
-export type AllyChampionStat = TimedStatDetail & {
-  synergy: StatAverage
+export interface TimedStatDetail extends StatDetail {
+  avgTimestamp?: number
+}
+
+export interface PairedChampionStat extends TimedStatDetail {
+  synergy: number
+  delta: number
   championName: string
   championId: number
 }
 
-export interface AllyStatDetail extends Identifier, TimedStatDetail {
-  champions: Record<number, AllyChampionStat>
-  synergy: StatAverage
-}
-
-export interface TimedStatDetail extends StatDetail {
-  avgTimestamp?: number
-}
+export type PairedChampionStatGroup = Record<number, PairedChampionStat>
 
 export interface StatAverage {
   total: number
@@ -151,6 +148,7 @@ export interface ItemSetStat extends StatDetail {
 
 export type OrderedStatEntry = [string, StatDetail]
 export type OrderedTimedStatEntry = [number, TimedStatDetail]
+export type OrderedChampionEntry = [number, PairedChampionStat]
 
 export type SkillKey = "Q" | "W" | "E" | "R"
 

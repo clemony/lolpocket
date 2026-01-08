@@ -21,14 +21,14 @@ const item: Item =  {
       "gold": 2800
     },
     {
-      "id": 126697,
-      "name": "Hubris",
-      "gold": 2950
-    },
-    {
       "id": 6693,
       "name": "Prowler's Claw",
       "gold": 2850
+    },
+    {
+      "id": 126697,
+      "name": "Hubris",
+      "gold": 2950
     },
     {
       "id": 6691,
@@ -84,7 +84,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png",
   "simpleDescription": "Increases Attack Damage and Lethality",
   "nicknames": [
     "lethality"
@@ -93,22 +92,16 @@ const item: Item =  {
     "attackDamage": 20,
     "lethality": 10
   },
-  "shop": {
-    "prices": {
-      "total": 1000,
-      "combined": 300,
-      "sell": 400
-    },
-    "tags": [
-      "ASSASSIN",
-      "ARMOR_PEN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 1000,
+    "sell": 700
+  }
 }
 export default item

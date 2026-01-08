@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6696_axiomarc.png",
   "passives": [
     {
       "name": "Flux",
@@ -30,21 +29,16 @@ const item: Item =  {
     "lethality": 18,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2750,
-      "combined": 363,
-      "sell": 1100
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 363,
+    "total": 2750,
+    "sell": 1925
+  }
 }
 export default item

@@ -5,17 +5,14 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/220007_prismaticanvil.png",
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 4000,
-      "combined": 4000,
-      "sell": 1600
-    }
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 4000,
+    "total": 4000,
+    "sell": 4000
+  }
 }
 export default item

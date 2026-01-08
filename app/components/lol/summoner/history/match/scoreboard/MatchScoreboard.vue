@@ -12,12 +12,42 @@ const teams = computed(() => {
 </script>
 
 <template>
+  <div class="grid w-full grid-cols-2 gap-3 px-3">
+    <!-- Blue Stats -->
+    <div class="grid w-full auto-rows-max gap-y-2">
+      <TeamEndStatTotals :team="match.teams[0]" />
+      <TeamObjectives :team="match.teams[0]" />
+
+      <!--   teammate -->
+
+      <TeammateCard
+        v-for="(player, i) in teams.blue"
+        :key="i"
+        :match
+        :player="player" />
+    </div>
+
+    <!-- red Stats -->
+
+    <div class="w-full">
+      <TeamEndStatTotals :team="match.teams[1]" />
+      <TeamObjectives :team="match.teams[1]" />
+
+      <!--   teammate -->
+
+      <TeammateCard
+        v-for="(player, i) in teams.red"
+        :key="i"
+        :match
+        :player="player" />
+    </div>
+  </div>
   <div class="flex w-full flex-col gap-2 overflow-visible pb-1">
     <!-- Blue Stats -->
 
     <TeamMatchEndStats
       :team="match.teams[0]"
-      class="border-t-0! from-inspiration/60 shadow-warm-soft" />
+      class="mt-3 from-inspiration/60 shadow-warm-soft" />
 
     <!--   teammate -->
 

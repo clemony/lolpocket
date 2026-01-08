@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { class: className, orientation, size = '10', variant } = defineProps<{
+const { class: className, orientation = 'horizontal', size = '10', variant } = defineProps<{
   class?: HTMLAttributes['class']
   variant?: TabListVariants['variant']
   size?: TabListVariants['size']
@@ -14,9 +14,6 @@ const roles = computed(() => {
   return useMatchRoles(summoner?.value?.puuid, matches)
 })
 
-watch(() => filter?.value?.role, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 const roleModel = computed({
   get: () => filter?.value?.role,
   set: val => setFilter('role', val),
@@ -26,20 +23,30 @@ const roleModel = computed({
 <template>
   <Tabs
     v-model:model-value="roleModel"
-    default-value="ALL"
-    :orientation
-    class="w-full p-0">
+    default-value="all"
+    as-child
+    :class="cn('w-full', { '': orientation === 'vertical' })"
+    :orientation>
     <TabsList
-      :class="cn('h-10 w-full justify-stretch border-b3/80', buttonVariants({ variant, size }), className)">
+      :class="cn(tabListVariants({ variant, size }), className)">
       <TabIndicator class="z-0" />
+
+      <TabsTrigger
+        value="all"
+        class="size-full **:text-bc!"
+        :disabled="!matches">
+        <Icon
+          name="role:all"
+          class="mb-px h-5.5 w-auto shrink-0 dst" />
+      </TabsTrigger>
       <TabsTrigger
         v-for="role in roles"
         :key="role.name"
         :value="role.role"
-        class="h-full **:text-bc!"
+        class="size-full **:text-bc!"
         :disabled="!role.games">
         <Icon
-          :name="`role:${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
+          :name="`role:${role.role}`"
           class="mb-px h-5.5 w-auto shrink-0 dst" />
       </TabsTrigger>
     </TabsList>

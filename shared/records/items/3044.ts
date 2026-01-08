@@ -21,14 +21,14 @@ const item: Item =  {
       "gold": 3300
     },
     {
-      "id": 3071,
-      "name": "Black Cleaver",
-      "gold": 3000
-    },
-    {
       "id": 6630,
       "name": "Goredrinker",
       "gold": 3200
+    },
+    {
+      "id": 3071,
+      "name": "Black Cleaver",
+      "gold": 3000
     },
     {
       "id": 3073,
@@ -44,7 +44,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3044_fighter_t2_phage.png",
   "simpleDescription": "Attacks and kills give a small burst of speed",
   "nicknames": [
     "mallet"
@@ -60,22 +59,16 @@ const item: Item =  {
     "attackDamage": 15,
     "health": 200
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 350,
-      "sell": 440
-    },
-    "tags": [
-      "FIGHTER",
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 350,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

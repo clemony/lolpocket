@@ -41,22 +41,35 @@ const filteredInto = computed (() => {
   return item.value?.buildsInto?.filter(i => map ? mapToItem[map].includes(i.id) : i)
 })
 const itemImgClass
-  = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rounded-md  transition-all  duration-200 *:rounded-md  *:pointer-events-none hover:ring-1 hover:ring-offset-2'
+  = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-6.5 rounded-md  transition-all  duration-200 *:rounded-md  *:pointer-events-none hover:ring-1 hover:ring-offset-2'
 
-const hasThings = computed (() => {
-  if ((item.value?.stats && Object.entries(item.value?.stats)?.length) || item.value?.requiredChampion || item.value?.passives || item.value?.active?.[0] || item.value?.buildsFrom || item.value?.buildsInto)
-    return true
-  else return false
+const has = computed (() => {
+  const a = []
+  if (item.value?.stats && Object.entries(item.value?.stats)?.length)
+    a.push('stats')
+  if (item.value?.requiredChampion)
+    a.push('reqChamp')
+  if (item.value?.passives)
+    a.push('passives')
+  if (item.value?.active?.[0])
+    a.push('actives')
+  if (item.value?.buildsFrom)
+    a.push('buildsFrom')
+  if (item.value?.buildsInto)
+    a.push('buildsInto')
+  return a
 })
 
 const el = useTemplateRef<HTMLDivElement>('el')
+
+const { height } = useElementBounding(el)
 </script>
 
 <template>
   <div
-    :class="cn('h-fit max-h-80 w-74 overflow-hidden transition-all duration-150')"
+    :class="cn('mt-12 max-h-80 min-h-12 w-74 cursor-default overflow-x-hidden')"
     class="">
-    <div class="grid w-full grid-cols-[20px_1fr_50px] items-center gap-3 p-3">
+    <div class="absolute top-0 z-1 grid h-12 w-full grid-cols-[20px_1fr_50px] items-center gap-3 p-3">
       <!-- IMG -->
 
       <Item
@@ -70,7 +83,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
       <!-- NAME / LINK -->
 
       <h5
-        class="text-3! leading-3 font-medium!"
+        class="text-3! leading-4 font-medium! text-wrap"
         :style="{
           color: itemRankColor?.[rank],
         }">
@@ -100,18 +113,18 @@ const el = useTemplateRef<HTMLDivElement>('el')
           {{ itemPrice[id] }}
         </figcaption>
       </figure>
+      <!-- separator -->
+      <Separator
+
+        v-if="has.length"
+        class="absolute bottom-0 opacity-80"
+        color="neutral" />
     </div>
 
     <div
-      v-if="hasThings "
+      v-if="has[0] !== 'reqChamp'"
       ref="el"
-      :class="cn('relative grid size-full grow auto-rows-auto overflow-x-hidden overflow-y-scroll px-3 pb-3 transition-all duration-150 *:first:-mt-2')">
-      <!-- separator -->
-      <Separator
-        v-if="item?.stats && Object.entries(item?.stats).length"
-        :size="2"
-        color="neutral" />
-
+      :class="cn('relative flex grow flex-col overflow-x-hidden overflow-y-scroll px-3 pt-2 pb-3', { 'mb-12': height > 272 })">
       <!-- REQ CHAMP -->
       <div
         v-if="item?.requiredChampion">
@@ -126,6 +139,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
       <!-- EFFECTS -->
       <template v-if="item?.passives?.length && item?.noEffects !== true">
         <Separator
+          v-if="has[0] !== 'passives'"
           :size="2"
           color="neutral" />
         <LazyItemEffect
@@ -138,6 +152,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
       <!-- ACTIVES -->
       <template v-if="item?.active?.[0] && item?.noEffects !== true">
         <Separator
+          v-if="has[0] !== 'actives'"
           :size="2"
           color="neutral" />
         <LazyItemEffect
@@ -149,8 +164,9 @@ const el = useTemplateRef<HTMLDivElement>('el')
 
       <template v-if="item?.buildsFrom">
         <Separator
-          :size="4"
+          class="my-3.5 h-px"
           label="RECIPE"
+
           color="neutral" />
         <div class="group flex items-center gap-3 p-1">
           <template
@@ -159,6 +175,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
             <LazyItem
               :id="fromItem.id"
               loading-style="spinner"
+              no-tip
               :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
               :class="itemImgClass" />
 
@@ -169,7 +186,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
           </template>
 
           <div
-            v-if="item?.shop?.prices?.combined"
+            v-if="item?.gold?.total"
             class="flex items-center">
             <icon
               name="dashicons:plus"
@@ -179,7 +196,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
               src="/img/icons/gold-coin.webp"
               alt="coin"
               class="mr-1 ml-3 size-4.25 opacity-80" />
-            {{ item.shop?.prices?.combined }}
+            {{ item.gold?.total }}
           </div>
         </div>
       </template>
@@ -188,7 +205,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
 
       <template v-if="item && item?.buildsInto">
         <Separator
-          :size="4"
+          class="my-3.5 h-px"
           label="BUILDS INTO"
           color="neutral" />
 
@@ -202,6 +219,7 @@ const el = useTemplateRef<HTMLDivElement>('el')
             v-for="(buildItem, i) in filteredInto"
             :id="buildItem.id"
             :key="i"
+            no-tip
             loading-style="spinner"
             :title="`${buildItem.name} ‑ ${buildItem.gold}g`"
             :class="itemImgClass" />

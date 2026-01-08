@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { EasingDefinition } from 'motion-v'
 import { motion } from 'motion-v'
 
 const h1Variants = {
@@ -21,7 +20,7 @@ const h1Visibility = {
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: 'linear' as EasingDefinition,
+      ease: 'linear',
     },
   },
   initial: {
@@ -30,7 +29,7 @@ const h1Visibility = {
     transition: {
       delay: 1.5,
       duration: 0.4,
-      ease: 'linear' as EasingDefinition,
+      ease: 'linear',
     },
   },
 }

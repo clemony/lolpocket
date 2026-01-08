@@ -14,31 +14,27 @@ const tabClass = '!text-bc'
     :default-value="0"
     class="w-full">
     <TabsList
-      class="grid h-10 w-full">
+      class="">
       <TabIndicator />
       <TabsTrigger
-        size="8"
         :class="tabClass"
         :value="0">
         All
       </TabsTrigger>
 
       <TabsTrigger
-        size="8"
         :class="tabClass"
         :value="420">
         Solo
       </TabsTrigger>
 
       <TabsTrigger
-        size="8"
         :class="tabClass"
         :value="440">
         Flex
       </TabsTrigger>
 
       <TabsTrigger
-        size="8"
         :class="tabClass"
         :value="400">
         Normal

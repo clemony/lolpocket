@@ -44,7 +44,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3144_scoutslingshot.png",
   "simpleDescription": "Activate to deal magic damage and slow target champion",
   "passives": [
     {
@@ -56,22 +55,16 @@ const item: Item =  {
   "stats": {
     "attackSpeed": 20
   },
-  "shop": {
-    "prices": {
-      "total": 600,
-      "combined": 100,
-      "sell": 240
-    },
-    "tags": [
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 100,
+    "total": 600,
+    "sell": 420
+  }
 }
 export default item

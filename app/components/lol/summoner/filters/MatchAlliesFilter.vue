@@ -2,13 +2,11 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const { allies: a, filter, loading, setFilter, summoner, whenReady } = useSummonerInject()
+const { allies, filter, loading, setFilter, summoner, whenReady } = useSummonerInject()
 console.log('🥸 - summoner:', summoner)
 
 const allyModel = ref<string>(null)
 await whenReady()
-const allies = await a()
-console.log('🥸 - allies:', allies)
 /* const filterAllies = computed (() => filter?.value?.ally ? allies?.allies.filter(a => filter.value?.ally === a?.puuid) : allies?.allies) */
 const winrateFormula = ref('absolute')
 </script>
@@ -39,10 +37,10 @@ const winrateFormula = ref('absolute')
               :class="cn('group/ally w-full gap-3 pr-4 pl-3 dst duration-0! **:font-medium **:normal-case focus:outline-0', { hidden: filter?.ally && filter?.ally !== ally.puuid })">
               <SummonerIcon
                 class="size-8 rounded-full shadow-sm drop-shadow-sm"
-                :icon-id="ally.profileIcon"
+                :icon-id="ally.icon"
                 :alt="`${ally.name}'s Icon`" />
 
-              <span class="inline-flex w-52 gap-1 truncate overflow-hidden align-baseline leading-4">
+              <span class="inline-flex w-50 max-w-50 gap-1 truncate overflow-hidden align-baseline leading-4">
                 <span class="inline truncate align-baseline">
                   {{ ally.name }}
                 </span>
@@ -50,21 +48,17 @@ const winrateFormula = ref('absolute')
                   #{{ ally.tag }}
                 </span>
                 <Icon
-                  v-if="ally === allies.sort((a, b) => a.weightedWinrate - b.weightedWinrate)[0]"
+                  v-if="ally === allies.sort((a, b) => b.synergy - a.synergy)[0]"
                   name="ion:star"
                   class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!" />
               </span>
 
-              <div class="text-end text-2 whitespace-nowrap">
+              <div class="w-24 text-end text-2 whitespace-nowrap">
                 {{ ally.games }} played
               </div>
 
-              <div class="w-10 text-end text-2">
-                {{
-                  winrateFormula === "absolute"
-                    ? ally.winrate
-                    : ally.weightedWinrate
-                }}%
+              <div class="w-12 text-end text-2">
+                {{ ally.winrate }}%
               </div>
 
               <Element

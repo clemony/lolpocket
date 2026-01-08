@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 11/30/2025 03:07:21 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 03:03:01 PM CST
 
 export const rangeToChamp: Record<string, number[]> = {
   "Melee": [
@@ -43,6 +43,7 @@ export const rangeToChamp: Record<string, number[]> = {
     54,
     57,
     11,
+    62,
     82,
     950,
     75,
@@ -83,11 +84,11 @@ export const rangeToChamp: Record<string, number[]> = {
     234,
     106,
     19,
-    62,
     5,
     157,
     777,
     83,
+    904,
     154,
     238
   ],

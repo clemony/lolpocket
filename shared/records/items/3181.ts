@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3181_hullbreaker.png",
   "nicknames": [
     "ahoy",
     "hull",
@@ -46,20 +45,15 @@ const item: Item =  {
     "health": 500,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 175,
-      "sell": 1200
-    },
-    "tags": [
-      "FIGHTER"
-    ]
-  },
   "maps": [
     11,
     12,
     21
-  ]
+  ],
+  "gold": {
+    "base": 175,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

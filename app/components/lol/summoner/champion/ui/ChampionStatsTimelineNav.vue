@@ -8,27 +8,36 @@ const { summoner } = defineProps<{
 }>()
 
 const section = useRouteHash()
-const { activeId } = useScrollSectionsInject()
-watch(() => activeId.value, (v) => {
+const { activeId, activeIndex } = useScrollSectionsInject()
+watch(() => activeIndex.value, (v) => {
   console.log('💠 - watch - newVal:', v)
+})
+
+const map = computedOnce (() => {
+  return summonerSections.map(s => s.id)
+}).value
+console.log('🥸 - map:', map)
+const next = computed (() => {
+  if (activeIndex.value === map.length - 1)
+    return `#${map[0]}`
+  return `#${map[activeIndex.value + 1]}`
+})
+
+const prev = computed (() => {
+  if (activeIndex.value === 0)
+    return `#${map[map.length - 1]}`
+  return `#${map[activeIndex.value - 1]}`
 })
 </script>
 
 <template>
   <menu class="relative flex flex-col justify-center py-3">
-    <!--    <Separator
-      class="absolute inset-y-0 top-0 left-9 z-0 *:w-1"
-      orientation="vertical">
-      <div
-        class="rounded-full bg-neutral transition-all"
-        :style="{
-          height: `${progressOverall}%`,
-        }" />
-    </Separator>
+    <!--
      <MasteryProgress
       :mastery
       progress
       :current="progressOverall" /> -->
+
     <Button
       v-for="item, i in summonerSections"
       :key="i"
@@ -37,10 +46,10 @@ watch(() => activeId.value, (v) => {
       :class="cn('flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': item.id === activeId })"
       size="12"
       @click="section = `#${item.id}`">
-      <Icon
+      <Icons
         name="right"
         :class="cn('size-4 opacity-0 transition-opacity duration-150', { 'opacity-100': item.id === activeId })" />
-      <span :class="cn('text-3 font-light! capitalize group-hover/btn:font-medium!', { 'text-5 font-bold! ': item.id === activeId })">
+      <span :class="cn('text-3 font-light! capitalize group-hover/btn:font-medium!', { 'text-5 font-bold! group-hover/btn:font-bold! group-hover/btn:opacity-70 group-hover/btn:decoration-1!': item.id === activeId })">
         {{ item.name }}
       </span>
     </Button>

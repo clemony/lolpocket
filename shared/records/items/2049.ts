@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2049_guardiansamulet.png",
   "simpleDescription": "Increases Health and provides Stealth Wards over time",
   "passives": [
     {
@@ -19,18 +18,13 @@ const item: Item =  {
     "healAndShieldPower": 15,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 500,
-      "combined": 500,
-      "sell": 200
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 250
+  }
 }
 export default item

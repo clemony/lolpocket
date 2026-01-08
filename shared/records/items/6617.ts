@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png",
   "simpleDescription": "Your heals and shields cool down faster and have greater effect on low health allies",
   "nicknames": [
     "yuumi"
@@ -35,21 +34,16 @@ const item: Item =  {
     "manaRegen": 125,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2200,
-      "combined": 500,
-      "sell": 880
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 2200,
+    "sell": 1540
+  }
 }
 export default item

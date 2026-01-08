@@ -5,20 +5,14 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/icons_souljuice_green.png",
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 500,
-      "combined": 500,
-      "sell": 200
-    },
-    "tags": [
-      "HEALTH_AND_REG"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 500
+  }
 }
 export default item

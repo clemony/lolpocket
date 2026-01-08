@@ -11,7 +11,7 @@ const route = useRoute()
 
 const scrollRef = useState<HTMLElement | null>('scrollRef', () => null)
 
-const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -80 })
+const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 
 const isScrolling = useState('isScrolling', () => ref(false))
 const isScrollingFast = useState('isScrollingFast', () => ref(false))
@@ -21,7 +21,6 @@ let lastTs = performance.now()
 let scrollTimeout: number | undefined
 
 const FAST_SCROLL_PX_PER_MS = 1.2
-// ~1200px/sec — tweak if needed
 
 function onScroll(e: Event) {
   const el = e.target as HTMLElement
@@ -73,7 +72,9 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       <BgSplash :src="bg" />
     </div>
 
-    <BgSplash :src="bg" />
+    <BgSplash
+      :src="bg"
+      class="mask-b-from-30% mask-b-to-70%" />
 
     <!-- Header block -->
     <div
@@ -98,15 +99,6 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       </div>
     </div>
 
-    <div class="fixed top-0 left-[40px] z-10 flex h-15 w-56 items-center gap-3">
-      <SummonerDropdown
-        v-if="api"
-        :data="api.summoner.value" />
-
-      <PocketMenubar
-        v-else-if="pocket" />
-    </div>
-
     <!-- Scrollable content -->
     <div
       id="scrollRef"
@@ -114,7 +106,6 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       :style="{ overflowAnchor: 'none' }"
       class="absolute inset-0 top-0 size-full h-screen max-w-screen overflow-auto pt-70"
       @scroll="onScroll">
-      <!--  <ProfileSettingsSidebar /> -->
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
         class="
@@ -123,7 +114,7 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
         ">
         <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
         <SummonerChampionNavTabs
-          v-if="route.path.match(/summoner\/.+/)" />
+          v-if="route.fullPath.match(/\/summoner\/.+/)" />
         <NavFileTabs
           v-else />
       </div>
@@ -137,7 +128,14 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       <SiteFooter />
     </div>
   </div>
+  <div class="fixed top-0 left-[40px] z-20 flex h-15 w-56 items-center gap-3">
+    <SummonerDropdown
+      v-if="api"
+      :data="api.summoner.value" />
 
+    <PocketMenubar
+      v-else-if="pocket" />
+  </div>
   <div class="fixed right-24 bottom-24 z-4 grid gap-4">
     <FloatingSummonerUtilities
       v-if="route.path.match(/\/summoner\/.+/)"

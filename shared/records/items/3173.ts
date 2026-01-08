@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_mercury_64.png",
   "simpleDescription": "Increases Move Speed and Cooldown Reduction",
   "nicknames": [
     "boots"
@@ -21,24 +20,22 @@ const item: Item =  {
     {
       "name": "Noxian Persistence",
       "cooldown": "15",
-      "effects": "Taking magic damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) magic damage for 4 seconds.",
+      "effects": "Taking magic damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+10% <b>maximum</b> health) magic damage for 5 seconds.",
       "unique": true
     }
   ],
   "stats": {
-    "magicResistance": 35,
-    "flatMovespeed": 50,
+    "magicResistance": 30,
+    "flatMovespeed": 45,
     "tenacity": 30
-  },
-  "shop": {
-    "prices": {
-      "total": 1750,
-      "combined": 500,
-      "sell": 700
-    }
   },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1750,
+    "sell": 1225
+  }
 }
 export default item

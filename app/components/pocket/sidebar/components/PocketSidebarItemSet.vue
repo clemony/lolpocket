@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ItemSet, Pocket } from '~~/shared/schema'
-import { AnimatePresence, easeOut, motion } from 'motion-v'
+import { AnimatePresence, motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent, PopoverPortal } from 'reka-ui'
 
 const { pocket, set } = defineProps<{

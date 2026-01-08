@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1027_base_t1_saphirecrystal.png",
   "simpleDescription": "Increases Mana",
   "nicknames": [
     "blue"
@@ -30,22 +29,16 @@ const item: Item =  {
   "stats": {
     "mana": 300
   },
-  "shop": {
-    "prices": {
-      "total": 300,
-      "combined": 300,
-      "sell": 120
-    },
-    "tags": [
-      "MAGE",
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 300,
+    "sell": 210
+  }
 }
 export default item

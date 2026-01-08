@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6621_dawncore.png",
   "nicknames": [
     "dawncore"
   ],
@@ -38,21 +37,16 @@ const item: Item =  {
     "healAndShieldPower": 16,
     "manaRegen": 100
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 450,
-      "sell": 1000
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 2500,
+    "sell": 1750
+  }
 }
 export default item

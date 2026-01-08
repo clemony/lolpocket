@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3137_cryptbloom.png",
   "simpleDescription": "Activate to remove all debuffs and grant massive Move Speed",
   "passives": [
     {
@@ -37,21 +36,16 @@ const item: Item =  {
     "percentMagicPenetration": 30,
     "abilityHaste": 20
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 200,
-      "sell": 1200
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

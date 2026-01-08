@@ -6,6 +6,7 @@ export const useAggregateSingleChampion = (
 
     const acc: AggregatedStats = {
       championId: matchData.value[0].player.championId,
+      championName: champNameById(matchData.value[0].player.championId),
       role: {
         stats: {} as Record<string, StatDetail>,
       },
@@ -56,8 +57,6 @@ export const useAggregateSingleChampion = (
         ((acc.kills.total + acc.assists.total) / acc.deaths.total) * 10
       ) / 10
 
-    console.log("🥸 - useAggregateSingleChampion - acc.kp:", acc.kp)
-
     acc.winrate = acc.games ? Math.round((acc.wins / acc.games) * 1000) / 10 : 0
     acc.gameTime.average = acc.games ? acc.gameTime.average / 60 : 0
 
@@ -70,10 +69,6 @@ export const useAggregateSingleChampion = (
           ).toFixed(1)
         )
       : 0
-    console.log(
-      "🥸 - useAggregateSingleChampion - acc.visionScorePerMin:",
-      acc.visionScorePerMin
-    )
 
     acc.csPerMin =
       acc.games ?
@@ -92,6 +87,5 @@ export const useAggregateSingleChampion = (
     }
     acc.role.mostPlayed = sortEntriesByPickrate(acc.role.stats)[0][0]
 
-    console.log("🥸 - useAggregateSingleChampion - acc:", acc)
     return acc.games ? acc : null
   })

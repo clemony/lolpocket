@@ -9,14 +9,24 @@ const item: Item =  {
       "gold": 850
     },
     {
+      "id": 4632,
+      "name": "Verdant Barrier",
+      "gold": 1600
+    },
+    {
       "id": 323190,
       "name": "Locket of the Iron Solari",
       "gold": 2600
     },
     {
-      "id": 4632,
-      "name": "Verdant Barrier",
-      "gold": 1600
+      "id": 323050,
+      "name": "Zeke's Convergence",
+      "gold": 2300
+    },
+    {
+      "id": 3190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2200
     },
     {
       "id": 3211,
@@ -32,11 +42,6 @@ const item: Item =  {
       "id": 3111,
       "name": "Mercury's Treads",
       "gold": 1250
-    },
-    {
-      "id": 3190,
-      "name": "Locket of the Iron Solari",
-      "gold": 2200
     },
     {
       "id": 3155,
@@ -67,31 +72,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1033_base_t1_magicmantle.png",
   "simpleDescription": "Slightly increases Magic Resist",
   "stats": {
     "magicResistance": 20
-  },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 400,
-      "sell": 160
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 400,
+    "sell": 280
+  }
 }
 export default item

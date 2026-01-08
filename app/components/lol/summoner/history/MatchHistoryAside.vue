@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="sticky top-0 grid w-108 auto-rows-max items-start gap-8 justify-self-end overflow-y-auto py-24">
+    class="sticky inset-y-0 -top-66 grid h-fit max-h-dvh w-full auto-rows-max items-start gap-8 overflow-y-auto px-1 py-24 *:w-108">
     <RankCard
       v-if="as().settings?.show_solo"
       title="Solo/Duo"

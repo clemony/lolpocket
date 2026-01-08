@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { VariantType } from 'motion-v'
 import { Motion } from 'motion-v'
 import { onMounted, ref, useSlots, watchEffect } from 'vue'
 
@@ -43,7 +44,7 @@ function getAnimate() {
     filter: `blur(0px)`,
     opacity: 1,
     y: 0,
-  }
+  } as VariantType
 }
 </script>
 

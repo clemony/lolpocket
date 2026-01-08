@@ -20,8 +20,7 @@ console.log('🌱 - pocket:')
       cn('flex cursor-pointer flex-col items-start gap-2 rounded-xl border border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8 ring-transparent transition-colors hover:ring-neutral/50',
          selected?.key === pocket?.key && 'bg-b2/30',
       )
-    "
-    @dblclick="navigateTo(`/pocket/${pocket.key}`)">
+    ">
     <div class="flex h-14 w-full items-center justify-between gap-2">
       <div class="flex cursor-pointer items-center gap-3 text-start">
         <!-- icon -->

@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3161_fighter_t3_spearofshojin.png",
   "simpleDescription": "Reduce damage taken from champions by a flat amount. Attack while near multiple enemy champions to increase this amount for a short time.",
   "passives": [
     {
@@ -40,22 +39,16 @@ const item: Item =  {
     "attackDamage": 45,
     "health": 450
   },
-  "shop": {
-    "prices": {
-      "total": 3100,
-      "combined": 675,
-      "sell": 1240
-    },
-    "tags": [
-      "FIGHTER",
-      "ABILITY_HASTE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 675,
+    "total": 3100,
+    "sell": 2170
+  }
 }
 export default item

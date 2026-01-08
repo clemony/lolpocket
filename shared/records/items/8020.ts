@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/8020_tank_t3_abyssalmask.png",
   "passives": [
     {
       "name": "Unmake",
@@ -30,22 +29,16 @@ const item: Item =  {
     "magicResistance": 45,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2650,
-      "combined": 1000,
-      "sell": 1060
-    },
-    "tags": [
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 2650,
+    "sell": 1855
+  }
 }
 export default item

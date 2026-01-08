@@ -1,17 +1,21 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:18:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:33:50 PM CST
 
 export const itemsLite: ItemLite[] = [
   {
     "id": 1001,
     "key": "item",
     "name": "Boots",
-    "cost": 300,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 300,
+      "total": 300,
+      "sell": 210
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 25
@@ -21,13 +25,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1004,
     "key": "item",
     "name": "Faerie Charm",
-    "cost": 200,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 200,
+      "total": 200,
+      "sell": 140
+    },
     "rank": "Basic",
     "stats": {
       "manaRegen": 50
@@ -41,13 +49,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1006,
     "key": "item",
     "name": "Rejuvenation Bead",
-    "cost": 300,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 300,
+      "total": 300,
+      "sell": 120
+    },
     "rank": "Basic",
     "stats": {
       "healthRegen": 100
@@ -60,7 +72,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1011,
     "key": "item",
     "name": "Giant's Belt",
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -70,6 +81,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1028
     ],
+    "gold": {
+      "base": 500,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "health": 350
@@ -84,13 +100,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1018,
     "key": "item",
     "name": "Cloak of Agility",
-    "cost": 600,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 600,
+      "total": 600,
+      "sell": 420
+    },
     "rank": "Basic",
     "stats": {
       "criticalStrikeChance": 15
@@ -103,13 +123,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1026,
     "key": "item",
     "name": "Blasting Wand",
-    "cost": 850,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 850,
+      "total": 850,
+      "sell": 595
+    },
     "rank": "Basic",
     "stats": {
       "abilityPower": 45
@@ -126,13 +150,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "blue"
     ],
-    "cost": 300,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 300,
+      "total": 300,
+      "sell": 210
+    },
     "rank": "Basic",
     "stats": {
       "mana": 300
@@ -149,13 +177,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "red"
     ],
-    "cost": 400,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 280
+    },
     "rank": "Basic",
     "stats": {
       "health": 150
@@ -173,13 +205,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1029,
     "key": "item",
     "name": "Cloth Armor",
-    "cost": 300,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 300,
+      "total": 300,
+      "sell": 210
+    },
     "rank": "Basic",
     "stats": {
       "armor": 15
@@ -197,7 +233,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1031,
     "key": "item",
     "name": "Chain Vest",
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -207,6 +242,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1029
     ],
+    "gold": {
+      "base": 500,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "armor": 40
@@ -222,13 +262,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1033,
     "key": "item",
     "name": "Null-Magic Mantle",
-    "cost": 400,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 280
+    },
     "rank": "Basic",
     "stats": {
       "magicResistance": 20
@@ -246,13 +290,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1036,
     "key": "item",
     "name": "Long Sword",
-    "cost": 350,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 350,
+      "total": 350,
+      "sell": 245
+    },
     "rank": "Basic",
     "stats": {
       "attackDamage": 10
@@ -267,13 +315,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1037,
     "key": "item",
     "name": "Pickaxe",
-    "cost": 875,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 875,
+      "total": 875,
+      "sell": 613
+    },
     "rank": "Basic",
     "stats": {
       "attackDamage": 25
@@ -291,13 +343,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "bf"
     ],
-    "cost": 1300,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 1300,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Basic",
     "stats": {
       "attackDamage": 40
@@ -312,13 +368,17 @@ export const itemsLite: ItemLite[] = [
     "id": 1042,
     "key": "item",
     "name": "Dagger",
-    "cost": 250,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 250,
+      "total": 250,
+      "sell": 175
+    },
     "rank": "Basic",
     "stats": {
       "attackSpeed": 10
@@ -333,7 +393,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1043,
     "key": "item",
     "name": "Recurve Bow",
-    "cost": 700,
     "maps": [
       11,
       12,
@@ -343,6 +402,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1042
     ],
+    "gold": {
+      "base": 450,
+      "total": 700,
+      "sell": 490
+    },
     "rank": "Epic",
     "stats": {
       "attackSpeed": 15
@@ -361,13 +425,17 @@ export const itemsLite: ItemLite[] = [
       "amptome",
       "book"
     ],
-    "cost": 400,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 280
+    },
     "rank": "Basic",
     "stats": {
       "abilityPower": 20
@@ -381,7 +449,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1053,
     "key": "item",
     "name": "Vampiric Scepter",
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -391,6 +458,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1036
     ],
+    "gold": {
+      "base": 550,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -409,12 +481,16 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dshield"
     ],
-    "cost": 450,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    },
     "rank": "Starter",
     "stats": {
       "health": 110,
@@ -436,16 +512,21 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dblade"
     ],
-    "cost": 450,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    },
     "rank": "Starter",
     "stats": {
       "attackDamage": 10,
-      "health": 80
+      "health": 80,
+      "omnivamp": 2.5
     },
     "tags": [
       "Fighter",
@@ -461,12 +542,16 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dring"
     ],
-    "cost": 400,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Starter",
     "stats": {
       "abilityPower": 18,
@@ -482,7 +567,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1057,
     "key": "item",
     "name": "Negatron Cloak",
-    "cost": 850,
     "maps": [
       11,
       12,
@@ -492,6 +576,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1033
     ],
+    "gold": {
+      "base": 450,
+      "total": 850,
+      "sell": 595
+    },
     "rank": "Epic",
     "stats": {
       "magicResistance": 45
@@ -509,13 +598,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "nlr"
     ],
-    "cost": 1200,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 1200,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Basic",
     "stats": {
       "abilityPower": 65
@@ -531,10 +624,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Noxian"
     ],
-    "cost": 350,
     "maps": [
       11
     ],
+    "gold": {
+      "base": 350,
+      "total": 350,
+      "sell": 140
+    },
     "rank": "Starter",
     "stats": {
       "abilityPower": 15,
@@ -551,10 +648,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dblade"
     ],
-    "cost": 450,
     "maps": [
       11
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    },
     "rank": "Starter",
     "stats": {
       "attackDamage": 7
@@ -578,11 +679,15 @@ export const itemsLite: ItemLite[] = [
       "kitty",
       "meow"
     ],
-    "cost": 450,
     "maps": [
       11,
       21
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 0
+    },
     "rank": "Starter",
     "stats": {},
     "tags": [
@@ -605,11 +710,15 @@ export const itemsLite: ItemLite[] = [
       "doggo",
       "woof"
     ],
-    "cost": 450,
     "maps": [
       11,
       21
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 0
+    },
     "rank": "Starter",
     "stats": {},
     "tags": [
@@ -632,11 +741,15 @@ export const itemsLite: ItemLite[] = [
       "lizard",
       "frog"
     ],
-    "cost": 450,
     "maps": [
       11,
       21
     ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 0
+    },
     "rank": "Starter",
     "stats": {},
     "tags": [
@@ -652,10 +765,15 @@ export const itemsLite: ItemLite[] = [
     "id": 1111,
     "key": "item",
     "name": "Jarvan I's",
-    "cost": 0,
     "maps": [
       12
     ],
+    "gold": {
+      "base": 300,
+      "purchasable": false,
+      "total": 300,
+      "sell": 210
+    },
     "rank": "Special",
     "stats": {
       "armor": 25,
@@ -671,7 +789,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1500,
     "key": "item",
     "name": "Ohmwrecker (Turret Item)",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -679,7 +796,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {
       "armorPenetration": 30
@@ -689,7 +811,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1501,
     "key": "item",
     "name": "Lane Swap Detector",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -697,7 +818,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -705,7 +831,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1502,
     "key": "item",
     "name": "Reinforced Armor (Turret Item)",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -713,7 +838,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -721,7 +851,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1503,
     "key": "item",
     "name": "Warden's Eye",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -729,7 +858,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -737,7 +871,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1506,
     "key": "item",
     "name": "Base Turret Reinforced Armor (Turret Item)",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -745,7 +878,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -753,7 +891,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1507,
     "key": "item",
     "name": "Overcharged",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -761,7 +898,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -769,7 +911,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1508,
     "key": "item",
     "name": "Anti-Tower Socks",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -777,7 +918,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -785,7 +931,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1509,
     "key": "item",
     "name": "Gusto",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -793,7 +938,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -801,7 +951,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1510,
     "key": "item",
     "name": "Phreakish Gusto",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -809,7 +958,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -817,7 +971,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1511,
     "key": "item",
     "name": "Super Mech Armor",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -825,7 +978,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -833,7 +991,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1512,
     "key": "item",
     "name": "Super Mech Power Field",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -841,7 +998,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -849,7 +1011,6 @@ export const itemsLite: ItemLite[] = [
     "id": 1515,
     "key": "item",
     "name": "Turret Plating",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -857,7 +1018,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -869,12 +1035,16 @@ export const itemsLite: ItemLite[] = [
       "consumable",
       "red"
     ],
-    "cost": 50,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 50,
+      "total": 50,
+      "sell": 20
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -888,7 +1058,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "kleptomancy"
     ],
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -896,7 +1065,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 50,
+      "purchasable": false,
+      "total": 50,
+      "sell": 5
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -907,7 +1081,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Bloodstone"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -919,6 +1092,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1029
     ],
+    "gold": {
+      "base": 150,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Epic",
     "stats": {
       "armor": 30,
@@ -935,7 +1113,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Bloodstone"
     ],
-    "cost": 1337,
     "maps": [
       11,
       12,
@@ -946,6 +1123,11 @@ export const itemsLite: ItemLite[] = [
       2022,
       1037
     ],
+    "gold": {
+      "base": 212,
+      "total": 1337,
+      "sell": 936
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 25,
@@ -963,7 +1145,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "drill"
     ],
-    "cost": 1150,
     "maps": [
       11,
       12,
@@ -974,6 +1155,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1028
     ],
+    "gold": {
+      "base": 400,
+      "total": 1150,
+      "sell": 805
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -990,13 +1176,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "haste"
     ],
-    "cost": 250,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 250,
+      "total": 250,
+      "sell": 175
+    },
     "rank": "Basic",
     "stats": {
       "abilityHaste": 5
@@ -1018,12 +1208,16 @@ export const itemsLite: ItemLite[] = [
       "consumable",
       "Green Potion"
     ],
-    "cost": 150,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 150,
+      "total": 150,
+      "sell": 60
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1034,10 +1228,14 @@ export const itemsLite: ItemLite[] = [
     "id": 2049,
     "key": "item",
     "name": "Guardian's Amulet",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    },
     "rank": "Starter",
     "stats": {
       "abilityPower": 20,
@@ -1052,10 +1250,14 @@ export const itemsLite: ItemLite[] = [
     "id": 2050,
     "key": "item",
     "name": "Guardian's Shroud",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    },
     "rank": "Starter",
     "stats": {
       "abilityPower": 35,
@@ -1078,11 +1280,15 @@ export const itemsLite: ItemLite[] = [
       "Horn of the ManWolf",
       "ManWolf"
     ],
-    "cost": 950,
     "maps": [
       12,
       35
     ],
+    "gold": {
+      "base": 950,
+      "total": 950,
+      "sell": 665
+    },
     "rank": "Starter",
     "stats": {
       "health": 150,
@@ -1098,7 +1304,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2052,
     "key": "item",
     "name": "Poro-Snax",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -1106,7 +1311,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -1119,10 +1329,14 @@ export const itemsLite: ItemLite[] = [
       "orange",
       "pink"
     ],
-    "cost": 75,
     "maps": [
       11
     ],
+    "gold": {
+      "base": 75,
+      "total": 75,
+      "sell": 30
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1134,7 +1348,6 @@ export const itemsLite: ItemLite[] = [
       "shurelya",
       "reverie"
     ],
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -1145,6 +1358,11 @@ export const itemsLite: ItemLite[] = [
       3113,
       4642
     ],
+    "gold": {
+      "base": 400,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
@@ -1166,12 +1384,16 @@ export const itemsLite: ItemLite[] = [
       "orange",
       "white"
     ],
-    "cost": 500,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 200
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1187,12 +1409,16 @@ export const itemsLite: ItemLite[] = [
       "consumable",
       "blue"
     ],
-    "cost": 500,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 200
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1209,12 +1435,16 @@ export const itemsLite: ItemLite[] = [
       "consumable",
       "red"
     ],
-    "cost": 500,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 200
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1226,11 +1456,15 @@ export const itemsLite: ItemLite[] = [
     "id": 2141,
     "key": "item",
     "name": "Cappa Juice",
-    "cost": 300,
     "maps": [
       11,
       12
     ],
+    "gold": {
+      "base": 300,
+      "total": 300,
+      "sell": 300
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1238,10 +1472,14 @@ export const itemsLite: ItemLite[] = [
     "id": 2142,
     "key": "item",
     "name": "Juice of Power",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 500
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1253,10 +1491,14 @@ export const itemsLite: ItemLite[] = [
     "id": 2143,
     "key": "item",
     "name": "Juice of Vitality",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 500
+    },
     "rank": "Consumable",
     "stats": {},
     "tags": [
@@ -1267,10 +1509,14 @@ export const itemsLite: ItemLite[] = [
     "id": 2144,
     "key": "item",
     "name": "Juice of Haste",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 500
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1278,11 +1524,15 @@ export const itemsLite: ItemLite[] = [
     "id": 2145,
     "key": "item",
     "name": "Lucky Dice",
-    "cost": 0,
     "maps": [
       30
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -1290,14 +1540,18 @@ export const itemsLite: ItemLite[] = [
     "id": 2150,
     "key": "item",
     "name": "Elixir of Skill",
-    "cost": 0,
     "maps": [
       11,
       12,
       21,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1305,14 +1559,18 @@ export const itemsLite: ItemLite[] = [
     "id": 2151,
     "key": "item",
     "name": "Elixir of Avarice",
-    "cost": 0,
     "maps": [
       11,
       12,
       21,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 50,
+      "purchasable": false,
+      "total": 50,
+      "sell": 20
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1320,14 +1578,18 @@ export const itemsLite: ItemLite[] = [
     "id": 2152,
     "key": "item",
     "name": "Elixir of Force",
-    "cost": 0,
     "maps": [
       11,
       12,
       21,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 50,
+      "purchasable": false,
+      "total": 50,
+      "sell": 20
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -1340,7 +1602,6 @@ export const itemsLite: ItemLite[] = [
       "zonyas",
       "zhonyas"
     ],
-    "cost": 1600,
     "maps": [
       11,
       12,
@@ -1352,6 +1613,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1052
     ],
+    "gold": {
+      "base": 500,
+      "total": 1600,
+      "sell": 640
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -1365,7 +1631,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2421,
     "key": "item",
     "name": "Shattered Armguard",
-    "cost": 1600,
     "maps": [
       11,
       12,
@@ -1377,6 +1642,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1052
     ],
+    "gold": {
+      "base": 500,
+      "total": 1600,
+      "sell": 640
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -1387,14 +1657,18 @@ export const itemsLite: ItemLite[] = [
     "id": 2422,
     "key": "item",
     "name": "Slightly Magical Boots",
-    "cost": 0,
     "maps": [
       11,
       12,
       21,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 300,
+      "purchasable": false,
+      "total": 300,
+      "sell": 90
+    },
     "rank": "Special",
     "stats": {
       "flatMovespeed": 25
@@ -1404,7 +1678,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2501,
     "key": "item",
     "name": "Overlord's Bloodmail",
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -1415,6 +1688,11 @@ export const itemsLite: ItemLite[] = [
       2021,
       2021
     ],
+    "gold": {
+      "base": 1000,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 30,
@@ -1429,7 +1707,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2502,
     "key": "item",
     "name": "Unending Despair",
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -1437,15 +1714,20 @@ export const itemsLite: ItemLite[] = [
       35
     ],
     "recipe": [
-      3105,
-      1011
+      1031,
+      3067,
+      1028
     ],
+    "gold": {
+      "base": 800,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
-      "armor": 25,
+      "armor": 50,
       "health": 400,
-      "magicResistance": 25,
-      "abilityHaste": 10
+      "abilityHaste": 15
     },
     "tags": [
       "Tank"
@@ -1458,7 +1740,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "bft"
     ],
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -1469,6 +1750,11 @@ export const itemsLite: ItemLite[] = [
       3802,
       2508
     ],
+    "gold": {
+      "base": 700,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 80,
@@ -1483,7 +1769,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2504,
     "key": "item",
     "name": "Kaenic Rookern",
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -1494,6 +1779,11 @@ export const itemsLite: ItemLite[] = [
       3211,
       1057
     ],
+    "gold": {
+      "base": 800,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -1508,7 +1798,6 @@ export const itemsLite: ItemLite[] = [
     "id": 2508,
     "key": "item",
     "name": "Fated Ashes",
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -1518,6 +1807,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1052
     ],
+    "gold": {
+      "base": 500,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 30
@@ -1530,7 +1824,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3002,
     "key": "item",
     "name": "Trailblazer",
-    "cost": 2400,
     "maps": [
       11,
       12,
@@ -1541,6 +1834,11 @@ export const itemsLite: ItemLite[] = [
       3066,
       1031
     ],
+    "gold": {
+      "base": 800,
+      "total": 2400,
+      "sell": 1680
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 40,
@@ -1561,7 +1859,6 @@ export const itemsLite: ItemLite[] = [
       "seraph's embrace",
       "tear"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -1573,6 +1870,11 @@ export const itemsLite: ItemLite[] = [
       3802,
       3108
     ],
+    "gold": {
+      "base": 450,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -1591,7 +1893,6 @@ export const itemsLite: ItemLite[] = [
       "Muramana",
       "tear"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -1603,6 +1904,11 @@ export const itemsLite: ItemLite[] = [
       3133,
       1036
     ],
+    "gold": {
+      "base": 1100,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
@@ -1624,7 +1930,6 @@ export const itemsLite: ItemLite[] = [
       "boots",
       "zerker"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -1636,6 +1941,11 @@ export const itemsLite: ItemLite[] = [
       1042,
       1042
     ],
+    "gold": {
+      "base": 300,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Boots",
     "stats": {
       "attackSpeed": 25,
@@ -1649,7 +1959,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "swifties"
     ],
-    "cost": 1000,
     "maps": [
       11,
       12,
@@ -1659,6 +1968,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1001
     ],
+    "gold": {
+      "base": 700,
+      "total": 1000,
+      "sell": 700
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 55
@@ -1671,7 +1985,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Synchronized Souls"
     ],
-    "cost": 900,
     "maps": [
       11,
       21
@@ -1679,6 +1992,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1001
     ],
+    "gold": {
+      "base": 600,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 40
@@ -1691,7 +2009,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 900,
     "maps": [
       11,
       21
@@ -1699,7 +2016,12 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3010
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 45
@@ -1713,7 +2035,6 @@ export const itemsLite: ItemLite[] = [
       "boots",
       "sorcs"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -1723,6 +2044,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1001
     ],
+    "gold": {
+      "base": 800,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 12,
@@ -1733,7 +2059,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3024,
     "key": "item",
     "name": "Glacial Buckler",
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -1745,6 +2070,11 @@ export const itemsLite: ItemLite[] = [
       1027,
       2022
     ],
+    "gold": {
+      "base": 50,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "armor": 25,
@@ -1763,7 +2093,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "ga"
     ],
-    "cost": 3200,
     "maps": [
       11
     ],
@@ -1771,6 +2100,11 @@ export const itemsLite: ItemLite[] = [
       2019,
       1038
     ],
+    "gold": {
+      "base": 800,
+      "total": 3200,
+      "sell": 1280
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 45,
@@ -1789,7 +2123,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "ie"
     ],
-    "cost": 3450,
     "maps": [
       11,
       12,
@@ -1801,11 +2134,16 @@ export const itemsLite: ItemLite[] = [
       1037,
       1018
     ],
+    "gold": {
+      "base": 675,
+      "total": 3450,
+      "sell": 2415
+    },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 65,
+      "attackDamage": 75,
       "criticalStrikeChance": 25,
-      "criticalStrikeDamage": 40
+      "criticalStrikeDamage": 30
     },
     "tags": [
       "Marksman"
@@ -1819,7 +2157,6 @@ export const itemsLite: ItemLite[] = [
       "arrow",
       "yuntal"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -1831,10 +2168,15 @@ export const itemsLite: ItemLite[] = [
       3144,
       1036
     ],
+    "gold": {
+      "base": 750,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 55,
-      "attackSpeed": 35
+      "attackDamage": 50,
+      "attackSpeed": 40
     },
     "tags": [
       "Marksman"
@@ -1848,7 +2190,6 @@ export const itemsLite: ItemLite[] = [
       "grievous",
       "grievous wounds"
     ],
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -1860,9 +2201,14 @@ export const itemsLite: ItemLite[] = [
       3035,
       1018
     ],
+    "gold": {
+      "base": 450,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
-      "armorPenetration": 35,
+      "armorPenetration": 30,
       "attackDamage": 35,
       "criticalStrikeChance": 25
     },
@@ -1877,7 +2223,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lw"
     ],
-    "cost": 1450,
     "maps": [
       11,
       12,
@@ -1888,6 +2233,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1036
     ],
+    "gold": {
+      "base": 750,
+      "total": 1450,
+      "sell": 1015
+    },
     "rank": "Epic",
     "stats": {
       "armorPenetration": 18,
@@ -1908,7 +2258,6 @@ export const itemsLite: ItemLite[] = [
       "ldr",
       "doms"
     ],
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -1919,9 +2268,14 @@ export const itemsLite: ItemLite[] = [
       3035,
       6670
     ],
+    "gold": {
+      "base": 350,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
-      "armorPenetration": 40,
+      "armorPenetration": 35,
       "attackDamage": 35,
       "criticalStrikeChance": 25
     },
@@ -1933,7 +2287,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3040,
     "key": "item",
     "name": "Seraph's Embrace",
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -1943,7 +2296,12 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3003
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 2900,
+      "purchasable": false,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -1958,13 +2316,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "book"
     ],
-    "cost": 1500,
     "maps": [
       11
     ],
     "recipe": [
       1082
     ],
+    "gold": {
+      "base": 1150,
+      "total": 1500,
+      "sell": 1050
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 20,
@@ -1979,7 +2341,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3042,
     "key": "item",
     "name": "Muramana",
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -1989,11 +2350,16 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3004
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 2900,
+      "purchasable": false,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
-      "mana": 860,
+      "mana": 1000,
       "abilityHaste": 15
     },
     "tags": [
@@ -2010,7 +2376,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "mallet"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -2021,6 +2386,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       1036
     ],
+    "gold": {
+      "base": 350,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -2038,7 +2408,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "pd"
     ],
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -2050,6 +2419,11 @@ export const itemsLite: ItemLite[] = [
       3086,
       1042
     ],
+    "gold": {
+      "base": 950,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 65,
@@ -2069,7 +2443,6 @@ export const itemsLite: ItemLite[] = [
       "boots",
       "ninja tabi"
     ],
-    "cost": 1200,
     "maps": [
       11,
       12,
@@ -2080,6 +2453,11 @@ export const itemsLite: ItemLite[] = [
       1001,
       1029
     ],
+    "gold": {
+      "base": 600,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Boots",
     "stats": {
       "armor": 25,
@@ -2093,7 +2471,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "haroldandkumar"
     ],
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -2105,6 +2482,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1033
     ],
+    "gold": {
+      "base": 700,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 25,
@@ -2124,7 +2506,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "blue arrow"
     ],
-    "cost": 1200,
     "maps": [
       11,
       12,
@@ -2136,6 +2517,11 @@ export const itemsLite: ItemLite[] = [
       1042,
       1036
     ],
+    "gold": {
+      "base": 250,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 20,
@@ -2157,7 +2543,6 @@ export const itemsLite: ItemLite[] = [
       "shield",
       "sterak's cage"
     ],
-    "cost": 3200,
     "maps": [
       11,
       12,
@@ -2169,6 +2554,11 @@ export const itemsLite: ItemLite[] = [
       2021,
       1028
     ],
+    "gold": {
+      "base": 775,
+      "total": 3200,
+      "sell": 2240
+    },
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -2186,7 +2576,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Jimmy Neutron"
     ],
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -2196,6 +2585,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       2022
     ],
+    "gold": {
+      "base": 650,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "abilityHaste": 10
@@ -2214,7 +2608,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "sv"
     ],
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -2225,6 +2618,11 @@ export const itemsLite: ItemLite[] = [
       3211,
       3067
     ],
+    "gold": {
+      "base": 650,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -2246,7 +2644,6 @@ export const itemsLite: ItemLite[] = [
       "leggings",
       "zoomin"
     ],
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -2256,6 +2653,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1028
     ],
+    "gold": {
+      "base": 400,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -2270,7 +2672,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3067,
     "key": "item",
     "name": "Kindlegem",
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -2281,6 +2682,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       2022
     ],
+    "gold": {
+      "base": 150,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -2304,7 +2710,6 @@ export const itemsLite: ItemLite[] = [
       "sunborn",
       "sunfire"
     ],
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -2315,6 +2720,11 @@ export const itemsLite: ItemLite[] = [
       6660,
       1031
     ],
+    "gold": {
+      "base": 1000,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 50,
@@ -2337,13 +2747,17 @@ export const itemsLite: ItemLite[] = [
       "Muramana",
       "Manamune"
     ],
-    "cost": 400,
     "maps": [
       11,
       12,
       21,
       35
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 280
+    },
     "rank": "Starter",
     "stats": {
       "mana": 240
@@ -2360,7 +2774,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "bc"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -2372,6 +2785,11 @@ export const itemsLite: ItemLite[] = [
       3067,
       1037
     ],
+    "gold": {
+      "base": 225,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -2393,7 +2811,6 @@ export const itemsLite: ItemLite[] = [
       "bt",
       "healsword"
     ],
-    "cost": 3400,
     "maps": [
       11,
       12,
@@ -2405,6 +2822,11 @@ export const itemsLite: ItemLite[] = [
       1037,
       1053
     ],
+    "gold": {
+      "base": 325,
+      "total": 3400,
+      "sell": 2380
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 80,
@@ -2418,7 +2840,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3073,
     "key": "item",
     "name": "Experimental Hexplate",
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -2430,6 +2851,11 @@ export const itemsLite: ItemLite[] = [
       3044,
       1042
     ],
+    "gold": {
+      "base": 500,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -2449,7 +2875,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "rav hydra"
     ],
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -2461,6 +2886,11 @@ export const itemsLite: ItemLite[] = [
       1053,
       3133
     ],
+    "gold": {
+      "base": 150,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 65,
@@ -2478,7 +2908,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "grievous wounds"
     ],
-    "cost": 2450,
     "maps": [
       11,
       12,
@@ -2490,6 +2919,11 @@ export const itemsLite: ItemLite[] = [
       1031,
       1028
     ],
+    "gold": {
+      "base": 450,
+      "total": 2450,
+      "sell": 1715
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -2506,7 +2940,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "grievous wounds"
     ],
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -2517,6 +2950,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1029
     ],
+    "gold": {
+      "base": 200,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "armor": 30
@@ -2529,7 +2967,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3077,
     "key": "item",
     "name": "Tiamat",
-    "cost": 1200,
     "maps": [
       11,
       12,
@@ -2540,6 +2977,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1036
     ],
+    "gold": {
+      "base": 500,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 20
@@ -2560,7 +3002,6 @@ export const itemsLite: ItemLite[] = [
       "tons of damage",
       "33333"
     ],
-    "cost": 3333,
     "maps": [
       11,
       12,
@@ -2572,6 +3013,11 @@ export const itemsLite: ItemLite[] = [
       3044,
       3051
     ],
+    "gold": {
+      "base": 133,
+      "total": 3333,
+      "sell": 2333
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 36,
@@ -2589,7 +3035,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3082,
     "key": "item",
     "name": "Warden's Mail",
-    "cost": 1000,
     "maps": [
       11,
       12,
@@ -2600,6 +3045,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1029
     ],
+    "gold": {
+      "base": 400,
+      "total": 1000,
+      "sell": 700
+    },
     "rank": "Epic",
     "stats": {
       "armor": 40
@@ -2612,7 +3062,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3083,
     "key": "item",
     "name": "Warmog's Armor",
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -2624,6 +3073,11 @@ export const itemsLite: ItemLite[] = [
       1011,
       3801
     ],
+    "gold": {
+      "base": 500,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
       "health": 1000,
@@ -2643,7 +3097,6 @@ export const itemsLite: ItemLite[] = [
       "Boy Band",
       "BoyBand"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -2655,6 +3108,11 @@ export const itemsLite: ItemLite[] = [
       3801,
       1011
     ],
+    "gold": {
+      "base": 400,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "health": 900,
@@ -2668,7 +3126,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3085,
     "key": "item",
     "name": "Runaan's Hurricane",
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -2679,6 +3136,11 @@ export const itemsLite: ItemLite[] = [
       3086,
       3144
     ],
+    "gold": {
+      "base": 850,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 40,
@@ -2695,7 +3157,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3086,
     "key": "item",
     "name": "Zeal",
-    "cost": 1200,
     "maps": [
       11,
       12,
@@ -2706,6 +3167,11 @@ export const itemsLite: ItemLite[] = [
       1018,
       1042
     ],
+    "gold": {
+      "base": 350,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Epic",
     "stats": {
       "attackSpeed": 15,
@@ -2721,7 +3187,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3087,
     "key": "item",
     "name": "Statikk Shiv",
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -2733,6 +3198,11 @@ export const itemsLite: ItemLite[] = [
       6690,
       1037
     ],
+    "gold": {
+      "base": 450,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -2756,7 +3226,6 @@ export const itemsLite: ItemLite[] = [
       "witchcap",
       "wooglets"
     ],
-    "cost": 3500,
     "maps": [
       11,
       12,
@@ -2767,6 +3236,11 @@ export const itemsLite: ItemLite[] = [
       1058,
       1058
     ],
+    "gold": {
+      "base": 1100,
+      "total": 3500,
+      "sell": 2450
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 130
@@ -2779,7 +3253,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3091,
     "key": "item",
     "name": "Wit's End",
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -2791,6 +3264,11 @@ export const itemsLite: ItemLite[] = [
       1057,
       1043
     ],
+    "gold": {
+      "base": 550,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 50,
@@ -2813,7 +3291,6 @@ export const itemsLite: ItemLite[] = [
       "rapidfire",
       "rfc"
     ],
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -2824,6 +3301,11 @@ export const itemsLite: ItemLite[] = [
       3086,
       3144
     ],
+    "gold": {
+      "base": 850,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 35,
@@ -2842,7 +3324,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Spellblade"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -2854,6 +3335,11 @@ export const itemsLite: ItemLite[] = [
       3113,
       1026
     ],
+    "gold": {
+      "base": 250,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 100,
@@ -2874,7 +3360,6 @@ export const itemsLite: ItemLite[] = [
       "spellshield",
       "spell shield"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -2885,6 +3370,11 @@ export const itemsLite: ItemLite[] = [
       1058,
       4632
     ],
+    "gold": {
+      "base": 200,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
@@ -2895,39 +3385,12 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 3105,
-    "key": "item",
-    "name": "Aegis of the Legion",
-    "cost": 1100,
-    "maps": [
-      11,
-      12,
-      21,
-      35
-    ],
-    "recipe": [
-      1033,
-      1029
-    ],
-    "rank": "Epic",
-    "stats": {
-      "armor": 25,
-      "magicResistance": 25,
-      "abilityHaste": 10
-    },
-    "tags": [
-      "Tank",
-      "Support"
-    ]
-  },
-  {
     "id": 3107,
     "key": "item",
     "name": "Redemption",
     "aka": [
       "burn"
     ],
-    "cost": 2300,
     "maps": [
       11,
       12,
@@ -2935,13 +3398,18 @@ export const itemsLite: ItemLite[] = [
       35
     ],
     "recipe": [
-      3067,
+      3108,
       3114
     ],
+    "gold": {
+      "base": 900,
+      "total": 2300,
+      "sell": 1610
+    },
     "rank": "Legendary",
     "stats": {
+      "abilityPower": 30,
       "healAndShieldPower": 10,
-      "health": 200,
       "manaRegen": 100,
       "abilityHaste": 15
     },
@@ -2956,7 +3424,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "book"
     ],
-    "cost": 850,
     "maps": [
       11,
       12,
@@ -2967,6 +3434,11 @@ export const itemsLite: ItemLite[] = [
       1052,
       2022
     ],
+    "gold": {
+      "base": 200,
+      "total": 850,
+      "sell": 595
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 25,
@@ -2983,7 +3455,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "kv"
     ],
-    "cost": 2300,
     "maps": [
       11,
       12,
@@ -2995,6 +3466,11 @@ export const itemsLite: ItemLite[] = [
       1031,
       1006
     ],
+    "gold": {
+      "base": 400,
+      "total": 2300,
+      "sell": 1610
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 40,
@@ -3014,7 +3490,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "fh"
     ],
-    "cost": 2500,
     "maps": [
       11,
       12,
@@ -3025,6 +3500,11 @@ export const itemsLite: ItemLite[] = [
       3082,
       3024
     ],
+    "gold": {
+      "base": 600,
+      "total": 2500,
+      "sell": 1750
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -3044,7 +3524,6 @@ export const itemsLite: ItemLite[] = [
       "boots",
       "mercs"
     ],
-    "cost": 1250,
     "maps": [
       11,
       12,
@@ -3055,6 +3534,11 @@ export const itemsLite: ItemLite[] = [
       1001,
       1033
     ],
+    "gold": {
+      "base": 550,
+      "total": 1250,
+      "sell": 875
+    },
     "rank": "Boots",
     "stats": {
       "magicResistance": 20,
@@ -3066,11 +3550,15 @@ export const itemsLite: ItemLite[] = [
     "id": 3112,
     "key": "item",
     "name": "Guardian's Orb",
-    "cost": 950,
     "maps": [
       12,
       35
     ],
+    "gold": {
+      "base": 950,
+      "total": 950,
+      "sell": 665
+    },
     "rank": "Starter",
     "stats": {
       "abilityPower": 50,
@@ -3090,7 +3578,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "spooky ghost"
     ],
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -3100,6 +3587,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1052
     ],
+    "gold": {
+      "base": 500,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 30,
@@ -3114,7 +3606,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3114,
     "key": "item",
     "name": "Forbidden Idol",
-    "cost": 600,
     "maps": [
       11,
       12,
@@ -3124,6 +3615,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1004
     ],
+    "gold": {
+      "base": 400,
+      "total": 600,
+      "sell": 420
+    },
     "rank": "Epic",
     "stats": {
       "healAndShieldPower": 8,
@@ -3140,7 +3636,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "nashors"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -3152,6 +3647,11 @@ export const itemsLite: ItemLite[] = [
       1026,
       3108
     ],
+    "gold": {
+      "base": 500,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 80,
@@ -3171,7 +3671,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "rylais"
     ],
-    "cost": 2600,
     "maps": [
       11,
       12,
@@ -3183,6 +3682,11 @@ export const itemsLite: ItemLite[] = [
       1011,
       1052
     ],
+    "gold": {
+      "base": 450,
+      "total": 2600,
+      "sell": 1820
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
@@ -3199,7 +3703,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "burn"
     ],
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -3210,6 +3713,11 @@ export const itemsLite: ItemLite[] = [
       3802,
       1026
     ],
+    "gold": {
+      "base": 650,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
@@ -3229,7 +3737,6 @@ export const itemsLite: ItemLite[] = [
       "Fimbulwinter",
       "tear"
     ],
-    "cost": 2400,
     "maps": [
       11,
       12,
@@ -3241,6 +3748,11 @@ export const itemsLite: ItemLite[] = [
       1011,
       3067
     ],
+    "gold": {
+      "base": 300,
+      "total": 2400,
+      "sell": 1680
+    },
     "rank": "Legendary",
     "stats": {
       "health": 550,
@@ -3255,7 +3767,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3121,
     "key": "item",
     "name": "Fimbulwinter",
-    "cost": 2400,
     "maps": [
       11,
       12,
@@ -3265,11 +3776,16 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3119
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 2400,
+      "purchasable": false,
+      "total": 2400,
+      "sell": 1680
+    },
     "rank": "Legendary",
     "stats": {
       "health": 550,
-      "mana": 860,
+      "mana": 1000,
       "abilityHaste": 15
     },
     "tags": [
@@ -3284,7 +3800,6 @@ export const itemsLite: ItemLite[] = [
       "grievous",
       "grievous wounds"
     ],
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -3294,6 +3809,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1036
     ],
+    "gold": {
+      "base": 450,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15
@@ -3308,7 +3828,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3124,
     "key": "item",
     "name": "Guinsoo's Rageblade",
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -3320,6 +3839,11 @@ export const itemsLite: ItemLite[] = [
       1043,
       1037
     ],
+    "gold": {
+      "base": 1025,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 30,
@@ -3336,7 +3860,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3133,
     "key": "item",
     "name": "Caulfield's Warhammer",
-    "cost": 1050,
     "maps": [
       11,
       12,
@@ -3348,6 +3871,11 @@ export const itemsLite: ItemLite[] = [
       2022,
       1036
     ],
+    "gold": {
+      "base": 100,
+      "total": 1050,
+      "sell": 735
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 20,
@@ -3366,7 +3894,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 1000,
     "maps": [
       11,
       12,
@@ -3377,6 +3904,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1036
     ],
+    "gold": {
+      "base": 300,
+      "total": 1000,
+      "sell": 700
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 20,
@@ -3391,7 +3923,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3135,
     "key": "item",
     "name": "Void Staff",
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -3402,6 +3933,11 @@ export const itemsLite: ItemLite[] = [
       4630,
       1026
     ],
+    "gold": {
+      "base": 1050,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 95,
@@ -3415,7 +3951,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3137,
     "key": "item",
     "name": "Cryptbloom",
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -3427,6 +3962,11 @@ export const itemsLite: ItemLite[] = [
       3108,
       3108
     ],
+    "gold": {
+      "base": 200,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 75,
@@ -3447,7 +3987,6 @@ export const itemsLite: ItemLite[] = [
       "quicksilver sash",
       "silvermere dawn"
     ],
-    "cost": 3200,
     "maps": [
       11,
       12,
@@ -3459,6 +3998,11 @@ export const itemsLite: ItemLite[] = [
       1037,
       1053
     ],
+    "gold": {
+      "base": 125,
+      "total": 3200,
+      "sell": 2240
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
@@ -3480,7 +4024,6 @@ export const itemsLite: ItemLite[] = [
       "mercurial scimitar",
       "silvermere dawn"
     ],
-    "cost": 1300,
     "maps": [
       11,
       12,
@@ -3490,6 +4033,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1033
     ],
+    "gold": {
+      "base": 900,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Epic",
     "stats": {
       "magicResistance": 30
@@ -3508,7 +4056,6 @@ export const itemsLite: ItemLite[] = [
       "lethality",
       "haste"
     ],
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -3520,6 +4067,11 @@ export const itemsLite: ItemLite[] = [
       6690,
       1036
     ],
+    "gold": {
+      "base": 675,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -3535,7 +4087,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3143,
     "key": "item",
     "name": "Randuin's Omen",
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -3546,6 +4097,11 @@ export const itemsLite: ItemLite[] = [
       3082,
       1011
     ],
+    "gold": {
+      "base": 800,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 75,
@@ -3559,7 +4115,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3144,
     "key": "item",
     "name": "Scout's Slingshot",
-    "cost": 600,
     "maps": [
       11,
       12,
@@ -3570,6 +4125,11 @@ export const itemsLite: ItemLite[] = [
       1042,
       1042
     ],
+    "gold": {
+      "base": 100,
+      "total": 600,
+      "sell": 420
+    },
     "rank": "Epic",
     "stats": {
       "attackSpeed": 20
@@ -3587,7 +4147,6 @@ export const itemsLite: ItemLite[] = [
       "revolver",
       "pewpew"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -3598,6 +4157,11 @@ export const itemsLite: ItemLite[] = [
       1052,
       1052
     ],
+    "gold": {
+      "base": 300,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 45
@@ -3613,7 +4177,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "mask"
     ],
-    "cost": 1300,
     "maps": [
       11,
       12,
@@ -3624,6 +4187,11 @@ export const itemsLite: ItemLite[] = [
       1052,
       1028
     ],
+    "gold": {
+      "base": 500,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 30,
@@ -3641,7 +4209,6 @@ export const itemsLite: ItemLite[] = [
       "protobelt",
       "rocket belt"
     ],
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -3653,6 +4220,11 @@ export const itemsLite: ItemLite[] = [
       3108,
       1028
     ],
+    "gold": {
+      "base": 300,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -3674,7 +4246,6 @@ export const itemsLite: ItemLite[] = [
       "botrk",
       "mist"
     ],
-    "cost": 3200,
     "maps": [
       11,
       12,
@@ -3686,6 +4257,11 @@ export const itemsLite: ItemLite[] = [
       1043,
       1037
     ],
+    "gold": {
+      "base": 725,
+      "total": 3200,
+      "sell": 2240
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -3702,7 +4278,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3155,
     "key": "item",
     "name": "Hexdrinker",
-    "cost": 1300,
     "maps": [
       11,
       12,
@@ -3714,6 +4289,11 @@ export const itemsLite: ItemLite[] = [
       1033,
       1036
     ],
+    "gold": {
+      "base": 200,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 25,
@@ -3729,7 +4309,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3156,
     "key": "item",
     "name": "Maw of Malmortius",
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -3740,6 +4319,11 @@ export const itemsLite: ItemLite[] = [
       3155,
       3133
     ],
+    "gold": {
+      "base": 750,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
@@ -3763,7 +4347,6 @@ export const itemsLite: ItemLite[] = [
       "Witchcap",
       "Wooglets"
     ],
-    "cost": 3250,
     "maps": [
       11,
       12,
@@ -3774,6 +4357,11 @@ export const itemsLite: ItemLite[] = [
       1058,
       2420
     ],
+    "gold": {
+      "base": 450,
+      "total": 3250,
+      "sell": 2275
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
@@ -3787,7 +4375,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3158,
     "key": "item",
     "name": "Ionian Boots of Lucidity",
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -3798,6 +4385,11 @@ export const itemsLite: ItemLite[] = [
       1001,
       2022
     ],
+    "gold": {
+      "base": 350,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 45,
@@ -3808,7 +4400,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3161,
     "key": "item",
     "name": "Spear of Shojin",
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -3820,6 +4411,11 @@ export const itemsLite: ItemLite[] = [
       2021,
       1028
     ],
+    "gold": {
+      "base": 675,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -3841,7 +4437,6 @@ export const itemsLite: ItemLite[] = [
       "last shadow",
       "nmst"
     ],
-    "cost": 2850,
     "maps": [
       11,
       12,
@@ -3853,6 +4448,11 @@ export const itemsLite: ItemLite[] = [
       1026,
       3067
     ],
+    "gold": {
+      "base": 400,
+      "total": 2850,
+      "sell": 1995
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 75,
@@ -3871,13 +4471,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1500,
     "maps": [
       11
     ],
     "recipe": [
       3009
     ],
+    "gold": {
+      "base": 500,
+      "total": 1500,
+      "sell": 1050
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 65
@@ -3890,24 +4494,27 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1400,
     "maps": [
       11
     ],
     "recipe": [
       3158
     ],
+    "gold": {
+      "base": 500,
+      "total": 1400,
+      "sell": 980
+    },
     "rank": "Boots",
     "stats": {
-      "flatMovespeed": 50,
-      "abilityHaste": 25
+      "flatMovespeed": 45,
+      "abilityHaste": 20
     }
   },
   {
     "id": 3172,
     "key": "item",
     "name": "Zephyr",
-    "cost": 2500,
     "maps": [
       11,
       21,
@@ -3916,6 +4523,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3006
     ],
+    "gold": {
+      "base": 500,
+      "total": 1600,
+      "sell": 1120
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 50,
@@ -3935,17 +4547,21 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1750,
     "maps": [
       11
     ],
     "recipe": [
       3111
     ],
+    "gold": {
+      "base": 500,
+      "total": 1750,
+      "sell": 1225
+    },
     "rank": "Boots",
     "stats": {
-      "magicResistance": 35,
-      "flatMovespeed": 50,
+      "magicResistance": 30,
+      "flatMovespeed": 45,
       "tenacity": 30
     }
   },
@@ -3956,17 +4572,21 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1700,
     "maps": [
       11
     ],
     "recipe": [
       3047
     ],
+    "gold": {
+      "base": 500,
+      "total": 1700,
+      "sell": 1190
+    },
     "rank": "Boots",
     "stats": {
-      "armor": 40,
-      "flatMovespeed": 50
+      "armor": 35,
+      "flatMovespeed": 45
     }
   },
   {
@@ -3976,17 +4596,21 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1600,
     "maps": [
       11
     ],
     "recipe": [
       3020
     ],
+    "gold": {
+      "base": 500,
+      "total": 1600,
+      "sell": 1120
+    },
     "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 18,
-      "flatMovespeed": 50
+      "flatMovespeed": 45
     }
   },
   {
@@ -3996,13 +4620,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "boots"
     ],
-    "cost": 1400,
     "maps": [
       11
     ],
     "recipe": [
       3013
     ],
+    "gold": {
+      "base": 500,
+      "total": 1400,
+      "sell": 980
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 55
@@ -4015,11 +4643,15 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dblade"
     ],
-    "cost": 950,
     "maps": [
       12,
       35
     ],
+    "gold": {
+      "base": 950,
+      "total": 950,
+      "sell": 665
+    },
     "rank": "Starter",
     "stats": {
       "attackDamage": 30,
@@ -4040,7 +4672,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 2500,
     "maps": [
       11,
       12,
@@ -4051,11 +4682,16 @@ export const itemsLite: ItemLite[] = [
       3134,
       3133
     ],
+    "gold": {
+      "base": 450,
+      "total": 2500,
+      "sell": 1750
+    },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 55,
+      "attackDamage": 60,
       "lethality": 15,
-      "abilityHaste": 10
+      "abilityHaste": 15
     },
     "tags": [
       "Assassin"
@@ -4071,7 +4707,6 @@ export const itemsLite: ItemLite[] = [
       "pirate",
       "yarrr"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -4082,6 +4717,11 @@ export const itemsLite: ItemLite[] = [
       3066,
       1037
     ],
+    "gold": {
+      "base": 175,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -4099,11 +4739,15 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dblade"
     ],
-    "cost": 950,
     "maps": [
       12,
       35
     ],
+    "gold": {
+      "base": 950,
+      "total": 950,
+      "sell": 665
+    },
     "rank": "Starter",
     "stats": {
       "attackDamage": 25,
@@ -4120,7 +4764,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3190,
     "key": "item",
     "name": "Locket of the Iron Solari",
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -4132,6 +4775,11 @@ export const itemsLite: ItemLite[] = [
       1029,
       1033
     ],
+    "gold": {
+      "base": 700,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 25,
@@ -4152,7 +4800,6 @@ export const itemsLite: ItemLite[] = [
       "hat",
       "ghost"
     ],
-    "cost": 1250,
     "maps": [
       11,
       12,
@@ -4164,6 +4811,11 @@ export const itemsLite: ItemLite[] = [
       1033,
       1006
     ],
+    "gold": {
+      "base": 150,
+      "total": 1250,
+      "sell": 875
+    },
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -4183,7 +4835,6 @@ export const itemsLite: ItemLite[] = [
       "michael",
       "mikael"
     ],
-    "cost": 2300,
     "maps": [
       11,
       12,
@@ -4194,6 +4845,11 @@ export const itemsLite: ItemLite[] = [
       3067,
       3114
     ],
+    "gold": {
+      "base": 900,
+      "total": 2300,
+      "sell": 1610
+    },
     "rank": "Legendary",
     "stats": {
       "healAndShieldPower": 12,
@@ -4213,7 +4869,6 @@ export const itemsLite: ItemLite[] = [
       "bow",
       "sentinel"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -4224,6 +4879,11 @@ export const itemsLite: ItemLite[] = [
       3051,
       1043
     ],
+    "gold": {
+      "base": 1100,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 30,
@@ -4246,7 +4906,6 @@ export const itemsLite: ItemLite[] = [
       "totem",
       "trinket"
     ],
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4254,6 +4913,11 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4267,11 +4931,15 @@ export const itemsLite: ItemLite[] = [
       "totem",
       "trinket"
     ],
-    "cost": 0,
     "maps": [
       11,
       21
     ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4279,11 +4947,15 @@ export const itemsLite: ItemLite[] = [
     "id": 3348,
     "key": "item",
     "name": "Arcane Sweeper (Trinket)",
-    "cost": 0,
     "maps": [
       30
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4296,12 +4968,16 @@ export const itemsLite: ItemLite[] = [
       "totem",
       "trinket"
     ],
-    "cost": 0,
     "maps": [
       11,
       12,
       21
     ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4317,11 +4993,15 @@ export const itemsLite: ItemLite[] = [
       "totem",
       "trinket"
     ],
-    "cost": 0,
     "maps": [
       11,
       21
     ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4329,7 +5009,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3400,
     "key": "item",
     "name": "Your Cut",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4337,7 +5016,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -4345,10 +5029,14 @@ export const itemsLite: ItemLite[] = [
     "id": 3430,
     "key": "item",
     "name": "Rite of Ruin",
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
@@ -4366,7 +5054,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "censer"
     ],
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -4377,6 +5064,11 @@ export const itemsLite: ItemLite[] = [
       3113,
       3114
     ],
+    "gold": {
+      "base": 700,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -4397,7 +5089,6 @@ export const itemsLite: ItemLite[] = [
       "er",
       "Spellblade"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -4405,15 +5096,20 @@ export const itemsLite: ItemLite[] = [
       35
     ],
     "recipe": [
-      1037,
+      3057,
       3133,
       1018
     ],
+    "gold": {
+      "base": 375,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 60,
+      "attackDamage": 55,
       "criticalStrikeChance": 25,
-      "abilityHaste": 15
+      "abilityHaste": 20
     },
     "tags": [
       "Marksman",
@@ -4428,8 +5124,12 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Herald's Eye"
     ],
-    "cost": 0,
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Trinket",
     "stats": {}
   },
@@ -4440,7 +5140,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "spear"
     ],
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4448,6 +5147,11 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    },
     "rank": "Starter",
     "stats": {}
   },
@@ -4461,7 +5165,6 @@ export const itemsLite: ItemLite[] = [
       "gangplank",
       "juggernaut"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -4473,6 +5176,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       1031
     ],
+    "gold": {
+      "base": 900,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 55,
@@ -4492,7 +5200,6 @@ export const itemsLite: ItemLite[] = [
       "beefer",
       "juggernaut"
     ],
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -4504,6 +5211,11 @@ export const itemsLite: ItemLite[] = [
       2021,
       1011
     ],
+    "gold": {
+      "base": 50,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -4519,7 +5231,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3801,
     "key": "item",
     "name": "Crystalline Bracer",
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -4530,6 +5241,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       1006
     ],
+    "gold": {
+      "base": 100,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "health": 200,
@@ -4547,7 +5263,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "mana book"
     ],
-    "cost": 1200,
     "maps": [
       11,
       12,
@@ -4559,6 +5274,11 @@ export const itemsLite: ItemLite[] = [
       1027,
       2022
     ],
+    "gold": {
+      "base": 250,
+      "total": 1200,
+      "sell": 840
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -4576,7 +5296,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "protector"
     ],
-    "cost": 1300,
     "maps": [
       11,
       12,
@@ -4588,6 +5307,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       1027
     ],
+    "gold": {
+      "base": 200,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Epic",
     "stats": {
       "health": 300,
@@ -4607,7 +5331,6 @@ export const itemsLite: ItemLite[] = [
       "spellshield",
       "spell shield"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -4618,6 +5341,11 @@ export const itemsLite: ItemLite[] = [
       3134,
       2021
     ],
+    "gold": {
+      "base": 850,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
@@ -4635,10 +5363,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Map"
     ],
-    "cost": 400,
     "maps": [
       11
     ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Starter",
     "stats": {
       "goldPer10": 3,
@@ -4655,14 +5387,18 @@ export const itemsLite: ItemLite[] = [
     "id": 3866,
     "key": "item",
     "name": "Runic Compass",
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3865
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Epic",
     "stats": {
       "goldPer10": 5,
@@ -4678,14 +5414,18 @@ export const itemsLite: ItemLite[] = [
     "id": 3867,
     "key": "item",
     "name": "Bounty of Worlds",
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3866
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
@@ -4701,16 +5441,20 @@ export const itemsLite: ItemLite[] = [
     "id": 3869,
     "key": "item",
     "name": "Celestial Opposition",
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3867
     ],
+    "gold": {
+      "base": 0,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
-      "goldPer10": 5,
+      "goldPer10": 9,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
@@ -4727,16 +5471,20 @@ export const itemsLite: ItemLite[] = [
       "Plushie",
       "plushie"
     ],
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3867
     ],
+    "gold": {
+      "base": 0,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
-      "goldPer10": 5,
+      "goldPer10": 9,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
@@ -4749,16 +5497,20 @@ export const itemsLite: ItemLite[] = [
     "id": 3871,
     "key": "item",
     "name": "Zaz'Zak's Realmspike",
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3867
     ],
+    "gold": {
+      "base": 0,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
-      "goldPer10": 5,
+      "goldPer10": 9,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
@@ -4771,16 +5523,20 @@ export const itemsLite: ItemLite[] = [
     "id": 3876,
     "key": "item",
     "name": "Solstice Sleigh",
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3867
     ],
+    "gold": {
+      "base": 0,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
-      "goldPer10": 5,
+      "goldPer10": 9,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
@@ -4796,16 +5552,20 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Spellblade"
     ],
-    "cost": 400,
     "maps": [
       11
     ],
     "recipe": [
       3867
     ],
+    "gold": {
+      "base": 0,
+      "total": 400,
+      "sell": 160
+    },
     "rank": "Legendary",
     "stats": {
-      "goldPer10": 5,
+      "goldPer10": 9,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
@@ -4818,7 +5578,6 @@ export const itemsLite: ItemLite[] = [
     "id": 3901,
     "key": "item",
     "name": "Fire at Will",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4826,14 +5585,18 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "stats": {}
   },
   {
     "id": 3902,
     "key": "item",
     "name": "Death's Daughter",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4841,14 +5604,18 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "stats": {}
   },
   {
     "id": 3903,
     "key": "item",
     "name": "Raise Morale",
-    "cost": 0,
     "maps": [
       11,
       12,
@@ -4856,7 +5623,12 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    "purchasable": false,
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
     "stats": {}
   },
   {
@@ -4867,7 +5639,6 @@ export const itemsLite: ItemLite[] = [
       "grievous",
       "grievous wounds"
     ],
-    "cost": 800,
     "maps": [
       11,
       12,
@@ -4877,6 +5648,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1052
     ],
+    "gold": {
+      "base": 400,
+      "total": 800,
+      "sell": 560
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 25
@@ -4893,7 +5669,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 1600,
     "maps": [
       12,
       21,
@@ -4903,6 +5678,11 @@ export const itemsLite: ItemLite[] = [
       6690,
       1036
     ],
+    "gold": {
+      "base": 475,
+      "total": 1600,
+      "sell": 1120
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 25,
@@ -4921,7 +5701,6 @@ export const itemsLite: ItemLite[] = [
       "banner of command",
       "flag"
     ],
-    "cost": 2250,
     "maps": [
       11,
       12,
@@ -4932,6 +5711,11 @@ export const itemsLite: ItemLite[] = [
       3108,
       4642
     ],
+    "gold": {
+      "base": 500,
+      "total": 2250,
+      "sell": 1575
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
@@ -4946,10 +5730,14 @@ export const itemsLite: ItemLite[] = [
     "id": 4011,
     "key": "item",
     "name": "Sword of Blossoming Dawn",
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -4965,10 +5753,14 @@ export const itemsLite: ItemLite[] = [
     "id": 4015,
     "key": "item",
     "name": "Perplexity",
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
@@ -4984,10 +5776,14 @@ export const itemsLite: ItemLite[] = [
     "id": 4016,
     "key": "item",
     "name": "Wordless Promise",
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
@@ -5005,10 +5801,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "burn"
     ],
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
@@ -5025,7 +5825,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "fon"
     ],
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -5037,6 +5836,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       3066
     ],
+    "gold": {
+      "base": 750,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -5055,7 +5859,6 @@ export const itemsLite: ItemLite[] = [
       "lock on",
       "snipe"
     ],
-    "cost": 2750,
     "maps": [
       11,
       12,
@@ -5065,11 +5868,16 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       3108,
       3108,
-      1026
+      1052
     ],
+    "gold": {
+      "base": 200,
+      "total": 2750,
+      "sell": 1925
+    },
     "rank": "Legendary",
     "stats": {
-      "abilityPower": 125,
+      "abilityPower": 75,
       "abilityHaste": 25
     },
     "tags": [
@@ -5083,7 +5891,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "cooldown hat"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5095,6 +5902,11 @@ export const itemsLite: ItemLite[] = [
       3113,
       3108
     ],
+    "gold": {
+      "base": 450,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -5115,7 +5927,6 @@ export const itemsLite: ItemLite[] = [
       "pen",
       "purple"
     ],
-    "cost": 1100,
     "maps": [
       11,
       12,
@@ -5125,6 +5936,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1052
     ],
+    "gold": {
+      "base": 700,
+      "total": 1100,
+      "sell": 770
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 25,
@@ -5141,7 +5957,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "necklace"
     ],
-    "cost": 1600,
     "maps": [
       11,
       12,
@@ -5153,6 +5968,11 @@ export const itemsLite: ItemLite[] = [
       1033,
       1052
     ],
+    "gold": {
+      "base": 400,
+      "total": 1600,
+      "sell": 1120
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 40,
@@ -5169,7 +5989,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "velkoz"
     ],
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -5180,6 +5999,11 @@ export const itemsLite: ItemLite[] = [
       3147,
       3108
     ],
+    "gold": {
+      "base": 950,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
@@ -5192,36 +6016,12 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 4638,
-    "key": "item",
-    "name": "Watchful Wardstone",
-    "aka": [
-      "sightstone",
-      "ward"
-    ],
-    "cost": 1100,
-    "maps": [
-      11
-    ],
-    "rank": "Epic",
-    "stats": {
-      "armor": 10,
-      "health": 150,
-      "magicResistance": 15,
-      "abilityHaste": 10
-    },
-    "tags": [
-      "Support"
-    ]
-  },
-  {
     "id": 4642,
     "key": "item",
     "name": "Bandleglass Mirror",
     "aka": [
       "yordle"
     ],
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -5233,6 +6033,11 @@ export const itemsLite: ItemLite[] = [
       1052,
       2022
     ],
+    "gold": {
+      "base": 50,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "abilityPower": 20,
@@ -5244,36 +6049,9 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 4643,
-    "key": "item",
-    "name": "Vigilant Wardstone",
-    "aka": [
-      "sightstone",
-      "ward"
-    ],
-    "cost": 2300,
-    "maps": [
-      11
-    ],
-    "recipe": [
-      4638
-    ],
-    "rank": "Legendary",
-    "stats": {
-      "armor": 25,
-      "health": 250,
-      "magicResistance": 30,
-      "abilityHaste": 20
-    },
-    "tags": [
-      "Support"
-    ]
-  },
-  {
     "id": 4645,
     "key": "item",
     "name": "Shadowflame",
-    "cost": 3200,
     "maps": [
       11,
       12,
@@ -5284,6 +6062,11 @@ export const itemsLite: ItemLite[] = [
       3145,
       1058
     ],
+    "gold": {
+      "base": 900,
+      "total": 3200,
+      "sell": 2240
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 110,
@@ -5297,7 +6080,6 @@ export const itemsLite: ItemLite[] = [
     "id": 4646,
     "key": "item",
     "name": "Stormsurge",
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -5308,6 +6090,11 @@ export const itemsLite: ItemLite[] = [
       3145,
       3113
     ],
+    "gold": {
+      "base": 800,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
@@ -5325,7 +6112,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dd"
     ],
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -5337,6 +6123,11 @@ export const itemsLite: ItemLite[] = [
       1037,
       3133
     ],
+    "gold": {
+      "base": 275,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 50,
@@ -5355,7 +6146,6 @@ export const itemsLite: ItemLite[] = [
       "grievous",
       "grievous wounds"
     ],
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -5367,6 +6157,11 @@ export const itemsLite: ItemLite[] = [
       1011,
       3133
     ],
+    "gold": {
+      "base": 350,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -5382,7 +6177,6 @@ export const itemsLite: ItemLite[] = [
     "id": 6610,
     "key": "item",
     "name": "Sundered Sky",
-    "cost": 3100,
     "maps": [
       11,
       12,
@@ -5394,9 +6188,14 @@ export const itemsLite: ItemLite[] = [
       3133,
       1028
     ],
+    "gold": {
+      "base": 500,
+      "total": 3100,
+      "sell": 2170
+    },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 40,
+      "attackDamage": 45,
       "health": 400,
       "abilityHaste": 10
     },
@@ -5411,7 +6210,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "nami"
     ],
-    "cost": 2250,
     "maps": [
       11,
       12,
@@ -5422,6 +6220,11 @@ export const itemsLite: ItemLite[] = [
       3108,
       3114
     ],
+    "gold": {
+      "base": 800,
+      "total": 2250,
+      "sell": 1575
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 35,
@@ -5440,7 +6243,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "yuumi"
     ],
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -5451,6 +6253,11 @@ export const itemsLite: ItemLite[] = [
       3067,
       4642
     ],
+    "gold": {
+      "base": 500,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 25,
@@ -5469,7 +6276,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "spooky cup"
     ],
-    "cost": 2200,
     "maps": [
       11,
       12,
@@ -5480,6 +6286,11 @@ export const itemsLite: ItemLite[] = [
       3067,
       4642
     ],
+    "gold": {
+      "base": 500,
+      "total": 2200,
+      "sell": 1540
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 35,
@@ -5498,7 +6309,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "dawncore"
     ],
-    "cost": 2500,
     "maps": [
       11,
       12,
@@ -5510,6 +6320,11 @@ export const itemsLite: ItemLite[] = [
       3114,
       3114
     ],
+    "gold": {
+      "base": 450,
+      "total": 2500,
+      "sell": 1750
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -5528,7 +6343,6 @@ export const itemsLite: ItemLite[] = [
       "kneecapper",
       "whipchain"
     ],
-    "cost": 3300,
     "maps": [
       11,
       12,
@@ -5540,6 +6354,11 @@ export const itemsLite: ItemLite[] = [
       3044,
       1042
     ],
+    "gold": {
+      "base": 750,
+      "total": 3300,
+      "sell": 2310
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
@@ -5560,7 +6379,6 @@ export const itemsLite: ItemLite[] = [
       "ls",
       "burn"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5571,6 +6389,11 @@ export const itemsLite: ItemLite[] = [
       3147,
       2508
     ],
+    "gold": {
+      "base": 800,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
@@ -5583,12 +6406,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 6655,
     "key": "item",
-    "name": "Luden's Companion",
-    "aka": [
-      "boomstick",
-      "gun"
-    ],
-    "cost": 2750,
+    "name": "Luden's Echo",
     "maps": [
       11,
       12,
@@ -5599,6 +6417,11 @@ export const itemsLite: ItemLite[] = [
       3802,
       3145
     ],
+    "gold": {
+      "base": 450,
+      "total": 2750,
+      "sell": 1925
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 100,
@@ -5616,7 +6439,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "RoA"
     ],
-    "cost": 2600,
     "maps": [
       11,
       12,
@@ -5627,6 +6449,11 @@ export const itemsLite: ItemLite[] = [
       1026,
       3803
     ],
+    "gold": {
+      "base": 450,
+      "total": 2600,
+      "sell": 1820
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
@@ -5644,7 +6471,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "fire"
     ],
-    "cost": 900,
     "maps": [
       11,
       12,
@@ -5655,6 +6481,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       2022
     ],
+    "gold": {
+      "base": 250,
+      "total": 900,
+      "sell": 630
+    },
     "rank": "Epic",
     "stats": {
       "health": 150,
@@ -5675,7 +6506,6 @@ export const itemsLite: ItemLite[] = [
       "frozen",
       "frozen gauntlet"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -5687,6 +6517,11 @@ export const itemsLite: ItemLite[] = [
       1028,
       1031
     ],
+    "gold": {
+      "base": 800,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 50,
@@ -5706,7 +6541,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "catastrophe"
     ],
-    "cost": 2800,
     "maps": [
       11,
       12,
@@ -5717,6 +6551,11 @@ export const itemsLite: ItemLite[] = [
       6660,
       3211
     ],
+    "gold": {
+      "base": 650,
+      "total": 2800,
+      "sell": 1960
+    },
     "rank": "Legendary",
     "stats": {
       "health": 400,
@@ -5735,7 +6574,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Jak'Sho, The Protean"
     ],
-    "cost": 3200,
     "maps": [
       11,
       12,
@@ -5747,6 +6585,11 @@ export const itemsLite: ItemLite[] = [
       1031,
       1057
     ],
+    "gold": {
+      "base": 650,
+      "total": 3200,
+      "sell": 2240
+    },
     "rank": "Legendary",
     "stats": {
       "armor": 45,
@@ -5761,7 +6604,6 @@ export const itemsLite: ItemLite[] = [
     "id": 6670,
     "key": "item",
     "name": "Noonquiver",
-    "cost": 1300,
     "maps": [
       11,
       12,
@@ -5772,6 +6614,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1018
     ],
+    "gold": {
+      "base": 350,
+      "total": 1300,
+      "sell": 910
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -5789,7 +6636,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Kraken Slayer"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5801,6 +6647,11 @@ export const itemsLite: ItemLite[] = [
       3051,
       1043
     ],
+    "gold": {
+      "base": 325,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -5815,7 +6666,6 @@ export const itemsLite: ItemLite[] = [
     "id": 6673,
     "key": "item",
     "name": "Immortal Shieldbow",
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5826,6 +6676,11 @@ export const itemsLite: ItemLite[] = [
       1037,
       6670
     ],
+    "gold": {
+      "base": 825,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -5843,7 +6698,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "crit shojin"
     ],
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -5855,6 +6709,11 @@ export const itemsLite: ItemLite[] = [
       3086,
       1042
     ],
+    "gold": {
+      "base": 950,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "attackSpeed": 40,
@@ -5874,7 +6733,6 @@ export const itemsLite: ItemLite[] = [
       "gun",
       "lethality"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5886,6 +6744,11 @@ export const itemsLite: ItemLite[] = [
       3134,
       1018
     ],
+    "gold": {
+      "base": 525,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
@@ -5901,7 +6764,6 @@ export const itemsLite: ItemLite[] = [
     "id": 6690,
     "key": "item",
     "name": "Rectrix",
-    "cost": 775,
     "maps": [
       11,
       12,
@@ -5911,6 +6773,11 @@ export const itemsLite: ItemLite[] = [
     "recipe": [
       1036
     ],
+    "gold": {
+      "base": 425,
+      "total": 775,
+      "sell": 543
+    },
     "rank": "Epic",
     "stats": {
       "attackDamage": 15,
@@ -5928,7 +6795,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -5940,6 +6806,11 @@ export const itemsLite: ItemLite[] = [
       1037,
       1036
     ],
+    "gold": {
+      "base": 625,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
@@ -5956,7 +6827,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "slow"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -5967,6 +6837,11 @@ export const itemsLite: ItemLite[] = [
       3133,
       3035
     ],
+    "gold": {
+      "base": 500,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "armorPenetration": 35,
@@ -5984,7 +6859,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 2500,
     "maps": [
       11,
       12,
@@ -5995,6 +6869,11 @@ export const itemsLite: ItemLite[] = [
       3134,
       1037
     ],
+    "gold": {
+      "base": 625,
+      "total": 2500,
+      "sell": 1750
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -6008,7 +6887,6 @@ export const itemsLite: ItemLite[] = [
     "id": 6696,
     "key": "item",
     "name": "Axiom Arc",
-    "cost": 2750,
     "maps": [
       11,
       12,
@@ -6019,6 +6897,11 @@ export const itemsLite: ItemLite[] = [
       2020,
       3133
     ],
+    "gold": {
+      "base": 363,
+      "total": 2750,
+      "sell": 1925
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -6036,7 +6919,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 3000,
     "maps": [
       11,
       21
@@ -6045,6 +6927,11 @@ export const itemsLite: ItemLite[] = [
       3134,
       3133
     ],
+    "gold": {
+      "base": 950,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
@@ -6062,7 +6949,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 2850,
     "maps": [
       11,
       12,
@@ -6073,6 +6959,11 @@ export const itemsLite: ItemLite[] = [
       3077,
       2020
     ],
+    "gold": {
+      "base": 313,
+      "total": 2850,
+      "sell": 1995
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -6090,7 +6981,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 3000,
     "maps": [
       11,
       12,
@@ -6102,6 +6992,11 @@ export const itemsLite: ItemLite[] = [
       1036,
       1036
     ],
+    "gold": {
+      "base": 963,
+      "total": 3000,
+      "sell": 2100
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -6119,7 +7014,6 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 2700,
     "maps": [
       11,
       12,
@@ -6131,6 +7025,11 @@ export const itemsLite: ItemLite[] = [
       3134,
       1036
     ],
+    "gold": {
+      "base": 475,
+      "total": 2700,
+      "sell": 1890
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
@@ -6145,7 +7044,6 @@ export const itemsLite: ItemLite[] = [
     "id": 8010,
     "key": "item",
     "name": "Bloodletter's Curse",
-    "cost": 2900,
     "maps": [
       11,
       12,
@@ -6156,6 +7054,11 @@ export const itemsLite: ItemLite[] = [
       3147,
       3108
     ],
+    "gold": {
+      "base": 750,
+      "total": 2900,
+      "sell": 2030
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
@@ -6170,7 +7073,6 @@ export const itemsLite: ItemLite[] = [
     "id": 8020,
     "key": "item",
     "name": "Abyssal Mask",
-    "cost": 2650,
     "maps": [
       11,
       12,
@@ -6181,6 +7083,11 @@ export const itemsLite: ItemLite[] = [
       3067,
       1057
     ],
+    "gold": {
+      "base": 1000,
+      "total": 2650,
+      "sell": 1855
+    },
     "rank": "Legendary",
     "stats": {
       "health": 350,
@@ -6196,10 +7103,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220000,
     "key": "item",
     "name": "Stat Bonus",
-    "cost": 750,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 750,
+      "total": 750,
+      "sell": 375
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6207,10 +7118,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220001,
     "key": "item",
     "name": "Legendary Fighter Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6218,10 +7133,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220002,
     "key": "item",
     "name": "Legendary Marksman Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6229,10 +7148,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220003,
     "key": "item",
     "name": "Legendary Assassin Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6240,10 +7163,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220004,
     "key": "item",
     "name": "Legendary Mage Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6251,10 +7178,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220005,
     "key": "item",
     "name": "Legendary Tank Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6262,10 +7193,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220006,
     "key": "item",
     "name": "Legendary Support Item",
-    "cost": 2000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2000,
+      "total": 2000,
+      "sell": 2000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6273,10 +7208,14 @@ export const itemsLite: ItemLite[] = [
     "id": 220007,
     "key": "item",
     "name": "Prismatic Item",
-    "cost": 4000,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 4000,
+      "total": 4000,
+      "sell": 4000
+    },
     "rank": "Consumable",
     "stats": {}
   },
@@ -6284,10 +7223,14 @@ export const itemsLite: ItemLite[] = [
     "id": 223005,
     "key": "item",
     "name": "Ghostcrawlers",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    },
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 70
@@ -6300,10 +7243,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "wreckoning"
     ],
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "criticalStrikeChance": 20,
@@ -6321,10 +7268,14 @@ export const itemsLite: ItemLite[] = [
       "energize",
       "Windblade"
     ],
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
@@ -6340,10 +7291,14 @@ export const itemsLite: ItemLite[] = [
     "id": 223146,
     "key": "item",
     "name": "Hextech Gunblade",
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
@@ -6358,10 +7313,14 @@ export const itemsLite: ItemLite[] = [
     "id": 223185,
     "key": "item",
     "name": "Guardian's Dirk",
-    "cost": 500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    },
     "rank": "Starter",
     "stats": {
       "attackDamage": 25,
@@ -6377,10 +7336,14 @@ export const itemsLite: ItemLite[] = [
     "id": 224004,
     "key": "item",
     "name": "Spectral Cutlass",
-    "cost": 2800,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
@@ -6403,10 +7366,14 @@ export const itemsLite: ItemLite[] = [
       "Urf's Champion",
       "burn"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 125,
@@ -6431,13 +7398,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "slurp"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -6460,10 +7431,14 @@ export const itemsLite: ItemLite[] = [
       "healia",
       "heal"
     ],
-    "cost": 2500,
     "maps": [
       30
     ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    },
     "rank": "Legendary",
     "stats": {
       "health": 650,
@@ -6482,11 +7457,15 @@ export const itemsLite: ItemLite[] = [
       "Quest",
       "Deathcap"
     ],
-    "cost": 0,
     "maps": [
       12,
       30
     ],
+    "gold": {
+      "base": 6000,
+      "total": 6000,
+      "sell": 4200
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 300,
@@ -6505,13 +7484,17 @@ export const itemsLite: ItemLite[] = [
       "bloodrazor",
       "kitae"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 55,
@@ -6529,13 +7512,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "energize"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -6550,13 +7537,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443056,
     "key": "item",
     "name": "Demon King's Crown",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -6564,13 +7555,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443058,
     "key": "item",
     "name": "Shield of Molten Stone",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 100,
@@ -6584,13 +7579,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443059,
     "key": "item",
     "name": "Cloak of Starry Night",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 300,
@@ -6607,13 +7606,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "sotd"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "criticalStrikeChance": 50
@@ -6626,13 +7629,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443061,
     "key": "item",
     "name": "Force of Entropy",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "criticalStrikeChance": 25,
@@ -6647,13 +7654,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443062,
     "key": "item",
     "name": "Sanguine Gift",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -6668,13 +7679,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443063,
     "key": "item",
     "name": "Eleisa's Miracle",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 50,
@@ -6694,13 +7709,17 @@ export const itemsLite: ItemLite[] = [
       "Economy",
       "Gold"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -6711,13 +7730,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "bleed"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 45,
@@ -6735,13 +7758,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "catastrophe"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 600
@@ -6754,13 +7781,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443080,
     "key": "item",
     "name": "Twin Mask",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -6768,13 +7799,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443081,
     "key": "item",
     "name": "Hexbolt Companion",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 75,
@@ -6788,13 +7823,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443090,
     "key": "item",
     "name": "Reaper's Toll",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 50,
@@ -6808,13 +7847,17 @@ export const itemsLite: ItemLite[] = [
     "id": 443193,
     "key": "item",
     "name": "Gargoyle Stoneplate",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 65,
@@ -6834,13 +7877,17 @@ export const itemsLite: ItemLite[] = [
       "dark",
       "scythe"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 90,
@@ -6858,13 +7905,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "helmet"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -6878,17 +7929,21 @@ export const itemsLite: ItemLite[] = [
     "id": 444644,
     "key": "item",
     "name": "Crown of the Shattered Queen",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 85,
-      "health": 300,
+      "health": 350,
       "mana": 600,
       "abilityHaste": 25
     },
@@ -6904,13 +7959,17 @@ export const itemsLite: ItemLite[] = [
       "Spellblade",
       "devourer"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -6930,13 +7989,17 @@ export const itemsLite: ItemLite[] = [
       "hose",
       "supersoaker"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 100,
@@ -6955,13 +8018,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "rv"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 35,
@@ -6980,13 +8047,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "squallrider"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 65,
@@ -7005,13 +8076,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 50,
@@ -7029,10 +8104,14 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "lethality"
     ],
-    "cost": 0,
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 55,
@@ -7047,13 +8126,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447100,
     "key": "item",
     "name": "Mirage Blade",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 60,
@@ -7064,13 +8147,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447101,
     "key": "item",
     "name": "Gambler's Blade",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 70,
@@ -7085,13 +8172,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Kevins"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -7109,16 +8200,20 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "Omnivamp"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
-      "attackDamage": 60,
+      "attackDamage": 70,
       "abilityHaste": 30,
       "omnivamp": 15
     },
@@ -7130,13 +8225,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447104,
     "key": "item",
     "name": "Innervating Locket",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 70,
@@ -7151,13 +8250,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447105,
     "key": "item",
     "name": "Empyrean Promise",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 70,
@@ -7173,13 +8276,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447106,
     "key": "item",
     "name": "Dragonheart",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {}
   },
@@ -7187,17 +8294,21 @@ export const itemsLite: ItemLite[] = [
     "id": 447107,
     "key": "item",
     "name": "Decapitator",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 50,
-      "percentMovespeed": 6
+      "percentMovespeed": 8
     }
   },
   {
@@ -7207,13 +8318,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "energize"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -7228,13 +8343,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447109,
     "key": "item",
     "name": "Cruelty",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 80,
@@ -7249,13 +8368,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447110,
     "key": "item",
     "name": "Moonflair Spellblade",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 85,
@@ -7270,13 +8393,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447112,
     "key": "item",
     "name": "Flesheater",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 500,
@@ -7287,13 +8414,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447113,
     "key": "item",
     "name": "Detonation Orb",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 90,
@@ -7309,13 +8440,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447114,
     "key": "item",
     "name": "Reverberation",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 35,
@@ -7330,13 +8465,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447115,
     "key": "item",
     "name": "Regicide",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackDamage": 60,
@@ -7351,13 +8490,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447116,
     "key": "item",
     "name": "Kinkou Jitte",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 400,
@@ -7376,13 +8519,17 @@ export const itemsLite: ItemLite[] = [
     "aka": [
       "burn"
     ],
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 400,
@@ -7398,13 +8545,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447119,
     "key": "item",
     "name": "Lightning Rod",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "armor": 30,
@@ -7420,13 +8571,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447120,
     "key": "item",
     "name": "Diamond-Tipped Spear",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 30
@@ -7440,13 +8595,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447121,
     "key": "item",
     "name": "Twilight's Edge",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "abilityPower": 100,
@@ -7461,13 +8620,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447122,
     "key": "item",
     "name": "Black Hole Gauntlet",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "health": 900,
@@ -7481,13 +8644,17 @@ export const itemsLite: ItemLite[] = [
     "id": 447123,
     "key": "item",
     "name": "Puppeteer",
-    "cost": 0,
     "maps": [
       30
     ],
     "recipe": [
       220007
     ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    },
     "rank": "Special",
     "stats": {
       "attackSpeed": 30,

@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6695_assassin_t3_serpentsfang.png",
   "nicknames": [
     "lethality"
   ],
@@ -32,21 +31,16 @@ const item: Item =  {
     "attackDamage": 55,
     "lethality": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 625,
-      "sell": 1000
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 625,
+    "total": 2500,
+    "sell": 1750
+  }
 }
 export default item

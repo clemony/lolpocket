@@ -2,7 +2,7 @@
 import type { TabsListProps } from 'reka-ui'
 import { TabsList } from 'reka-ui'
 
-const props = defineProps<
+const props = withDefaults(defineProps<
   TabsListProps & {
     class?: HTMLAttributes['class']
     variant?: TabListVariants['variant']
@@ -10,16 +10,18 @@ const props = defineProps<
     base?: TabListVariants['base']
     size?: TabListVariants['size']
   }
->()
+>(), {
+  size: '9'
+})
+
 const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
   <TabsList
     v-bind="forwarded"
-    :orientation
     :class="
-      cn(tabListVariants({ variant, base, size }), props.class)
+      cn(tabListVariants({ variant, base, size }), 'rounded-xl!', props.class)
     ">
     <slot />
   </TabsList>

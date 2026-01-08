@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1083_marksman_t1_cull.png",
   "simpleDescription": "Provides damage and Life Steal on hit - Killing minions grant bonus Gold",
   "nicknames": [
     "dblade"
@@ -20,22 +19,13 @@ const item: Item =  {
   "stats": {
     "attackDamage": 7
   },
-  "shop": {
-    "prices": {
-      "total": 450,
-      "combined": 450,
-      "sell": 180
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "LIFESTEAL_VAMP",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 450,
+    "sell": 180
+  }
 }
 export default item

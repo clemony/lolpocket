@@ -16,14 +16,14 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
-      "id": 6698,
-      "name": "Profane Hydra",
-      "gold": 2850
-    },
-    {
       "id": 6696,
       "name": "Axiom Arc",
       "gold": 2750
+    },
+    {
+      "id": 6698,
+      "name": "Profane Hydra",
+      "gold": 2850
     },
     {
       "id": 6699,
@@ -34,7 +34,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2020_thebrutalizer.png",
   "nicknames": [
     "Bloodstone"
   ],
@@ -43,21 +42,16 @@ const item: Item =  {
     "lethality": 5,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 1337,
-      "combined": 212,
-      "sell": 534
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 212,
+    "total": 1337,
+    "sell": 936
+  }
 }
 export default item

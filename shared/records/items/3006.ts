@@ -29,7 +29,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3006_class_t2_berserkersgreaves.png",
   "simpleDescription": "Enhances Move Speed and Attack Speed",
   "nicknames": [
     "boots",
@@ -39,18 +38,16 @@ const item: Item =  {
     "attackSpeed": 25,
     "flatMovespeed": 45
   },
-  "shop": {
-    "prices": {
-      "total": 1100,
-      "combined": 300,
-      "sell": 440
-    }
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 1100,
+    "sell": 770
+  }
 }
 export default item

@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3744_enchanter_t3_staffofflowingwater.png",
   "simpleDescription": "Your heals and shields reduce crowd control and grant Move Speed",
   "nicknames": [
     "nami"
@@ -35,21 +34,16 @@ const item: Item =  {
     "manaRegen": 125,
     "abilityHaste": 15
   },
-  "shop": {
-    "prices": {
-      "total": 2250,
-      "combined": 800,
-      "sell": 900
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2250,
+    "sell": 1575
+  }
 }
 export default item

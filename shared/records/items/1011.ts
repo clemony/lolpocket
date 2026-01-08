@@ -36,11 +36,6 @@ const item: Item =  {
       "gold": 2900
     },
     {
-      "id": 2502,
-      "name": "Unending Despair",
-      "gold": 2800
-    },
-    {
       "id": 3084,
       "name": "Heartsteel",
       "gold": 3000
@@ -84,28 +79,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1011_class_t2_giantsbelt.png",
   "simpleDescription": "Greatly increases Health",
   "stats": {
     "health": 350
-  },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 500,
-      "sell": 360
-    },
-    "tags": [
-      "FIGHTER",
-      "MAGE",
-      "TANK"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

@@ -3,41 +3,26 @@ const item: Item =  {
   "id": 1055,
   "rank": "Starter",
   "specialRecipe": 0,
-  "noEffects": false,
+  "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1055_marksman_t1_doransblade.png",
   "simpleDescription": "Good starting item for attackers",
   "nicknames": [
     "dblade"
   ],
-  "passives": [
-    {
-      "name": "Life Draining",
-      "effects": "<img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />Heal for 2.5% of post-mitigation damage dealt, reduced to 33.3% effectiveness for area of effect and pet damage.",
-      "unique": true
-    }
-  ],
   "stats": {
     "attackDamage": 10,
-    "health": 80
-  },
-  "shop": {
-    "prices": {
-      "total": 450,
-      "combined": 450,
-      "sell": 180
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "LIFESTEAL_VAMP"
-    ]
+    "health": 80,
+    "omnivamp": 2.5
   },
   "maps": [
     11,
     12,
     21
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 450,
+    "sell": 180
+  }
 }
 export default item

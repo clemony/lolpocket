@@ -16,11 +16,6 @@ const item: Item =  {
       "gold": 2800
     },
     {
-      "id": 223011,
-      "name": "Chemtech Putrifier",
-      "gold": 1900
-    },
-    {
       "id": 323222,
       "name": "Mikael's Blessing",
       "gold": 2800
@@ -29,6 +24,11 @@ const item: Item =  {
       "id": 124011,
       "name": "Sword of Blossoming Dawn",
       "gold": 2350
+    },
+    {
+      "id": 223011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
     },
     {
       "id": 3504,
@@ -79,27 +79,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3114_mage_t2_forbiddenidol.png",
   "simpleDescription": "Increases Heal and Shield Power, Mana Regeneration, and Cooldown Reduction",
   "stats": {
     "healAndShieldPower": 8,
     "manaRegen": 50
-  },
-  "shop": {
-    "prices": {
-      "total": 600,
-      "combined": 400,
-      "sell": 240
-    },
-    "tags": [
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 600,
+    "sell": 420
+  }
 }
 export default item

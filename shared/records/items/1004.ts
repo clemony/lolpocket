@@ -22,27 +22,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1004_class_t1_faeriecharm.png",
   "simpleDescription": "Slightly increases Mana Regen",
   "stats": {
     "manaRegen": 50
-  },
-  "shop": {
-    "prices": {
-      "total": 200,
-      "combined": 200,
-      "sell": 80
-    },
-    "tags": [
-      "MAGE",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 200,
+    "sell": 140
+  }
 }
 export default item

@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3869_celestialopposition.png",
   "passives": [
     {
       "name": "Blessing of the Mountain",
@@ -33,23 +32,18 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "goldPer10": 5,
+    "goldPer10": 9,
     "health": 200,
     "healthRegen": 75,
     "manaRegen": 75
   },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 0,
-      "sell": 160
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 0,
+    "total": 400,
+    "sell": 160
+  }
 }
 export default item

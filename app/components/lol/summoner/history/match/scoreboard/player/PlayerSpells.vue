@@ -8,7 +8,7 @@ const { class: className, player } = defineProps<{
 <template>
   <div
     class=""
-    :class="cn('flex shrink-0 flex-col items-center gap-1.5', className)">
+    :class="cn('items-between flex shrink-0 flex-col gap-1.5', className)">
     <img
       v-for="spell in player?.spells"
       :key="spell"

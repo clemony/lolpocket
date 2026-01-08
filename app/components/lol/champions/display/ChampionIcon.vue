@@ -36,6 +36,8 @@ const forwarded = useForwardProps(props)
 <template>
   <StaticImg
     v-bind="forwarded"
+    :data-id="champId"
+    data-tip="champion"
     :src="`/img/champions/${champId}.webp`"
     :class="
       cn('overflow-hidden shadow-sm drop-shadow-sm',

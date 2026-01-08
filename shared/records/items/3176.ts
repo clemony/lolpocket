@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_syncronisedsouls_64.png",
   "nicknames": [
     "boots"
   ],
@@ -31,15 +30,13 @@ const item: Item =  {
   "stats": {
     "flatMovespeed": 55
   },
-  "shop": {
-    "prices": {
-      "total": 1400,
-      "combined": 500,
-      "sell": 560
-    }
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1400,
+    "sell": 980
+  }
 }
 export default item

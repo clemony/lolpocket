@@ -4,20 +4,24 @@ const item: Item =  {
   "rank": "Legendary",
   "buildsFrom": [
     {
-      "id": 3105,
-      "name": "Aegis of the Legion",
-      "gold": 1100
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
     },
     {
-      "id": 1011,
-      "name": "Giant's Belt",
-      "gold": 900
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2502_unendingdespair.png",
   "passives": [
     {
       "name": "Anguish",
@@ -26,26 +30,20 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "armor": 25,
+    "armor": 50,
     "health": 400,
-    "magicResistance": 25,
-    "abilityHaste": 10
-  },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 800,
-      "sell": 1120
-    },
-    "tags": [
-      "TANK"
-    ]
+    "abilityHaste": 15
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

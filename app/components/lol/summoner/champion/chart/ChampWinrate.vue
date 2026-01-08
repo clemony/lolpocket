@@ -9,7 +9,7 @@ const a = computed(() => {
 </script>
 
 <template>
-  <div class="relative grid size-14 place-items-center rounded-lg">
+  <div class="relative grid size-14 shrink-0 place-items-center rounded-lg">
     <DonutSkeleton
       style="--thickness: 22%;"
       class="absolute size-[3rem]" />
@@ -20,12 +20,11 @@ const a = computed(() => {
         '--value': a,
         '--size': '3rem',
 
-        'color': cssVar(`--color-${getAbsoluteColor(a)}`),
+        'color': cssVar(`--color-${a >= 51 ? 'win' : a <= 49 ? 'domination' : 'silver'}`),
       }"
       role="progressbar">
-      <span class="text-0! font-medium text-bc dst">
-        {{ a.toFixed(1).replace(".0", "") }}%
-      </span>
     </div>
+    <span class="absolute text-0! font-medium text-bc dst">{{ a.toFixed(1).replace(".0", "") }}
+    </span>
   </div>
 </template>

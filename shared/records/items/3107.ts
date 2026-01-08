@@ -4,9 +4,9 @@ const item: Item =  {
   "rank": "Legendary",
   "buildsFrom": [
     {
-      "id": 3067,
-      "name": "Kindlegem",
-      "gold": 800
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
     },
     {
       "id": 3114,
@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3107_enchanter_t3_redemption.png",
   "simpleDescription": "Activate to heal allies and damage enemies in an area",
   "nicknames": [
     "burn"
@@ -31,26 +30,21 @@ const item: Item =  {
     }
   ],
   "stats": {
+    "abilityPower": 30,
     "healAndShieldPower": 10,
-    "health": 200,
     "manaRegen": 100,
     "abilityHaste": 15
-  },
-  "shop": {
-    "prices": {
-      "total": 2300,
-      "combined": 900,
-      "sell": 920
-    },
-    "tags": [
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 900,
+    "total": 2300,
+    "sell": 1610
+  }
 }
 export default item

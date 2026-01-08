@@ -1,15 +1,4 @@
 // scroll-sections.ts
-const SECTION_IDS = [
-  "summary",
-  "spells",
-  "items",
-  "runes",
-  "skills",
-  "allies",
-] as const
-
-type SectionId = (typeof SECTION_IDS)[number]
-
 export const ScrollSectionsKey = Symbol("ScrollSections")
 
 type Section = {
@@ -26,12 +15,11 @@ export interface ScrollSectionsApi {
 
 export function useScrollSectionsProvider(
   container: Ref<HTMLElement | null>,
-  scrollY: MotionValue<number>,
+  scrollY: any,
   opts?: { offset?: number }
 ): ScrollSectionsApi {
-  const offset = opts?.offset ?? -550
+  const offset = opts?.offset ?? 0
   const sections = ref<Section[]>([])
-  console.log("🥸 - useScrollSectionsProvider - sections:", sections)
   const activeId = ref<string | null>(null)
 
   function registerAll(ids: readonly string[]) {
@@ -69,7 +57,7 @@ export function useScrollSectionsProvider(
   )
 
   useMotionValueEvent(scrollY, "change", (y) => {
-    const trigger = y + offset
+    const trigger = Number(y) + offset
 
     let candidate: Section | undefined
 

@@ -9,11 +9,10 @@ const props = withDefaults(defineProps<
     base?: TabsTriggerVariants['base']
     class?: HTMLAttributes['class']
     hover?: TabsTriggerVariants['hover']
-    size?: TabsTriggerVariants['size']
     variant?: TabsTriggerVariants['variant']
   }
 >(), {
-  base: 'btn'
+  base: 'btn',
 })
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -27,8 +26,8 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'group/tt z-1',
-        tabsTriggerVariants({ base, variant, size, hover, on }),
+        tabsTriggerVariants({ base, variant, hover, on }),
+        'group/tt z-1 size-full',
         props.class,
       )
     ">

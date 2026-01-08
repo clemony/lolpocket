@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2051_aram_t1_guardianshorn.png",
   "simpleDescription": "Good starting item for tanks",
   "nicknames": [
     "Golden Arm of Kobe",
@@ -17,7 +16,7 @@ const item: Item =  {
   "passives": [
     {
       "name": "Undaunted",
-      "effects": "Reduces all sources of incoming champion damage by 15 <i>(3.75 against damage over time abilities)</i>.",
+      "effects": "Reduces all sources of incoming champion damage by 15, modified to 3.75 against damage over time abilities.",
       "unique": true
     }
   ],
@@ -25,21 +24,14 @@ const item: Item =  {
     "health": 150,
     "healthRegen": 20
   },
-  "shop": {
-    "prices": {
-      "total": 950,
-      "combined": 950,
-      "sell": 380
-    },
-    "tags": [
-      "FIGHTER",
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     12,
     35
-  ]
+  ],
+  "gold": {
+    "base": 950,
+    "total": 950,
+    "sell": 665
+  }
 }
 export default item

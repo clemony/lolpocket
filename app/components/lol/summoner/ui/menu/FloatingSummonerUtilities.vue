@@ -12,8 +12,7 @@ const route = useRoute()
 const target = useTemplateRef('target')
 
 onClickOutside(target, event => open.value = false)
-
-const isSummoner = computed (() => api?.summoner.value?.puuid === as().account.puuid)
+const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.puuid === as().account.puuid)
 </script>
 
 <template>

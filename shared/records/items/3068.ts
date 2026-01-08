@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3068_tank_t4_sunfireaegis.png",
   "simpleDescription": "High armor. Constantly deals damage to nearby enemies. Immobilize enemies to release a wave of damaging flame",
   "nicknames": [
     "burn",
@@ -36,21 +35,16 @@ const item: Item =  {
     "health": 350,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 1000,
-      "sell": 1080
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

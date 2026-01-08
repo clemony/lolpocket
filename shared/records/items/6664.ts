@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6664_hollowradiance.png",
   "simpleDescription": "Immobilize enemies to gain a shield. Activate to run faster at opponents.",
   "nicknames": [
     "catastrophe"
@@ -40,21 +39,16 @@ const item: Item =  {
     "magicResistance": 40,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 650,
-      "sell": 1120
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 650,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

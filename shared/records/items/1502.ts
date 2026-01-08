@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3042_netherrift_armor.png",
   "passives": [
     {
       "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage.",
@@ -13,20 +12,18 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 0,
-      "sell": 0
-    },
-    "purchasable": false
-  },
   "maps": [
     11,
     12,
     21,
     30,
     35
-  ]
+  ],
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  }
 }
 export default item

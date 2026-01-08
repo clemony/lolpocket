@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6697_hubris.png",
   "nicknames": [
     "lethality"
   ],
@@ -33,19 +32,14 @@ const item: Item =  {
     "lethality": 18,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 3000,
-      "combined": 950,
-      "sell": 1200
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     21
-  ]
+  ],
+  "gold": {
+    "base": 950,
+    "total": 3000,
+    "sell": 2100
+  }
 }
 export default item

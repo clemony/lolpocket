@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7106_dragonheart.png",
   "passives": [
     {
       "name": "Inner Flame",
@@ -14,15 +13,13 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 1000,
-      "sell": 0
-    }
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 1000,
+    "sell": 400
+  }
 }
 export default item

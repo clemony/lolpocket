@@ -4,9 +4,9 @@ const item: Item =  {
   "rank": "Legendary",
   "buildsFrom": [
     {
-      "id": 1037,
-      "name": "Pickaxe",
-      "gold": 875
+      "id": 3057,
+      "name": "Sheen",
+      "gold": 900
     },
     {
       "id": 3133,
@@ -22,40 +22,32 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3508_marksman_t3_essencereaver.png",
   "nicknames": [
     "er",
     "Spellblade"
   ],
   "passives": [
     {
-      "name": "Essence Drain",
-      "effects": "Basic attacks on-hit restore 15 mana (+10% <b>bonus</b> AD) ad mana.",
+      "name": "Spellblade",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+50% critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal 50% of damage dealt (1.5 second cooldown, starts after using the empowered attack).",
       "unique": true
     }
   ],
   "stats": {
-    "attackDamage": 60,
+    "attackDamage": 55,
     "criticalStrikeChance": 25,
-    "abilityHaste": 15
-  },
-  "shop": {
-    "prices": {
-      "total": 2900,
-      "combined": 375,
-      "sell": 1160
-    },
-    "tags": [
-      "MARKSMAN",
-      "MANA_AND_REG",
-      "ONHIT_EFFECTS"
-    ]
+    "abilityHaste": 20
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 375,
+    "total": 2900,
+    "sell": 2030
+  }
 }
 export default item

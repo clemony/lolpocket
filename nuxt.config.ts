@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     port: 8080,
   },
   devtools: {
-    enabled: true,
+    enabled: false,
   },
   experimental: {
     extractAsyncDataHandlers: true,
@@ -98,7 +98,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    provider: "server",
+    provider: "none",
     componentName: "icon",
     customCollections,
     serverBundle: {
@@ -124,19 +124,6 @@ export default defineNuxtConfig({
       "@app-types",
       "./app/assets/config",
     ],
-    presets: [
-      {
-        from: "motion-v",
-        imports: [
-          "useSpring",
-          "useMotionValue",
-          "useMotionValueEvent",
-          "Motion",
-          "useTransform",
-          "motion",
-        ],
-      },
-    ],
   },
   modules: [
     "@pinia/nuxt",
@@ -148,6 +135,7 @@ export default defineNuxtConfig({
     "@morev/vue-transitions/nuxt",
     "@nuxt/icon",
     "@nuxt/fonts",
+    "motion-v/nuxt",
   ],
   nitro: {
     imports: {

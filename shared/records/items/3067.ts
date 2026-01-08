@@ -26,6 +26,11 @@ const item: Item =  {
       "gold": 2800
     },
     {
+      "id": 6630,
+      "name": "Goredrinker",
+      "gold": 3200
+    },
+    {
       "id": 124011,
       "name": "Sword of Blossoming Dawn",
       "gold": 2350
@@ -34,6 +39,11 @@ const item: Item =  {
       "id": 323190,
       "name": "Locket of the Iron Solari",
       "gold": 2600
+    },
+    {
+      "id": 323050,
+      "name": "Zeke's Convergence",
+      "gold": 2300
     },
     {
       "id": 3119,
@@ -46,24 +56,29 @@ const item: Item =  {
       "gold": 2500
     },
     {
-      "id": 3071,
-      "name": "Black Cleaver",
-      "gold": 3000
-    },
-    {
       "id": 3190,
       "name": "Locket of the Iron Solari",
       "gold": 2200
     },
     {
-      "id": 6630,
-      "name": "Goredrinker",
-      "gold": 3200
+      "id": 3071,
+      "name": "Black Cleaver",
+      "gold": 3000
     },
     {
       "id": 6620,
       "name": "Echoes of Helia",
       "gold": 2200
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
+    },
+    {
+      "id": 2502,
+      "name": "Unending Despair",
+      "gold": 2800
     },
     {
       "id": 3050,
@@ -79,11 +94,6 @@ const item: Item =  {
       "id": 3065,
       "name": "Spirit Visage",
       "gold": 2700
-    },
-    {
-      "id": 3107,
-      "name": "Redemption",
-      "gold": 2300
     },
     {
       "id": 3109,
@@ -121,11 +131,6 @@ const item: Item =  {
       "gold": 2850
     },
     {
-      "id": 4403,
-      "name": "The Golden Spatula",
-      "gold": 7187
-    },
-    {
       "id": 4629,
       "name": "Cosmic Drive",
       "gold": 3000
@@ -159,32 +164,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3067_tank_t1_kindlegem.png",
   "simpleDescription": "Increases Health and Cooldown Reduction",
   "stats": {
     "health": 200,
     "abilityHaste": 10
-  },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 150,
-      "sell": 320
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 150,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

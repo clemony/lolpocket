@@ -4,6 +4,11 @@ const item: Item =  {
   "rank": "Basic",
   "buildsInto": [
     {
+      "id": 3181,
+      "name": "Hullbreaker",
+      "gold": 3000
+    },
+    {
       "id": 6035,
       "name": "Silvermere Dawn",
       "gold": 3000
@@ -44,11 +49,6 @@ const item: Item =  {
       "gold": 3100
     },
     {
-      "id": 3181,
-      "name": "Hullbreaker",
-      "gold": 3000
-    },
-    {
       "id": 6676,
       "name": "The Collector",
       "gold": 3000
@@ -62,11 +62,6 @@ const item: Item =  {
       "id": 3053,
       "name": "Sterak's Gage",
       "gold": 3200
-    },
-    {
-      "id": 3508,
-      "name": "Essence Reaver",
-      "gold": 2900
     },
     {
       "id": 3087,
@@ -112,28 +107,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1037_class_t1_pickaxe.png",
   "simpleDescription": "Moderately increases Attack Damage",
   "stats": {
     "attackDamage": 25
-  },
-  "shop": {
-    "prices": {
-      "total": 875,
-      "combined": 875,
-      "sell": 350
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 875,
+    "total": 875,
+    "sell": 613
+  }
 }
 export default item

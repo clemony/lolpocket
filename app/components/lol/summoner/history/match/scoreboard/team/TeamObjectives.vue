@@ -2,17 +2,10 @@
 const {
   class: className,
   team,
-  teamObject,
 } = defineProps<{
   team: any
-  teamObject: any
   class?: HTMLAttributes['class']
 }>()
-
-console.log('team: ', team)
-const elder = computed(() => {
-  return teamObject[0].challenges.teamElderDragonKills
-})
 
 const objs = [
   {
@@ -48,28 +41,26 @@ const objs = [
 </script>
 
 <template>
-  <div class="flex grow items-center justify-center">
+  <div
+    :class="
+      cn('grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-bc',
+         className,
+      )
+    ">
     <div
-      :class="
-        cn('grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-bc',
-           className,
-        )
-      ">
-      <div
-        v-for="obj in objs"
-        :key="obj.name"
-        :data-tip="`${obj.name} kills`"
-        class="flex w-9 items-center gap-1">
-        <Img
-          size="sq-4.5"
-          :alt="`${obj.name} icon`"
-          :src="`/img/scoreboard/${obj.name.toLowerCase()}-${team.teamId}.webp`"
-          :class="cn('size-4 shrink-0 opacity-85 drop-shadow-sm', { 'size-5 -ml-2': obj.name === 'Tower', '-translate-y-px': obj.name === 'Grub', 'size-3.75': obj.name === 'Baron' })" />
+      v-for="obj in objs"
+      :key="obj.name"
+      :data-tip="`${obj.name} kills`"
+      class="flex w-9 items-center gap-1">
+      <Img
+        size="sq-4.5"
+        :alt="`${obj.name} icon`"
+        :src="`/img/scoreboard/${obj.name.toLowerCase()}-${team.teamId}.webp`"
+        :class="cn('size-4 shrink-0 opacity-85 drop-shadow-sm', { 'size-5 -ml-2': obj.name === 'Tower', '-translate-y-px': obj.name === 'Grub', 'size-3.75': obj.name === 'Baron' })" />
 
-        <span :class="{ '-ml-1.25': obj.name === 'Tower' }">
-          {{ obj.id ?? 0 }}
-        </span>
-      </div>
+      <span :class="{ '-ml-1.25': obj.name === 'Tower' }">
+        {{ obj.id ?? 0 }}
+      </span>
     </div>
   </div>
 </template>

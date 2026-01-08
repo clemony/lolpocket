@@ -24,7 +24,7 @@ export const tabIndicatorVariants = tv({
 })
 
 export const tabListVariants = tv({
-  base: "relative grid h-9 auto-cols-auto grid-flow-col items-center justify-center justify-stretch rounded-xl border border-b3/80 bg-tint-b2/40 px-1 py-0.5 inset-shadow-xs inset-shadow-black/2",
+  base: "relative grid size-full h-9 w-full max-w-full auto-cols-auto grid-flow-col items-center overflow-hidden rounded-xl border border-b3/80 bg-tint-b2/40 px-1 py-0.5 inset-shadow-xs inset-shadow-black/2",
   extend: baseVariants,
   variants: {
     defaultVariants: {

@@ -24,14 +24,19 @@ const item: Item =  {
       "gold": 2800
     },
     {
+      "id": 4635,
+      "name": "Leeching Leer",
+      "gold": 1265
+    },
+    {
       "id": 6035,
       "name": "Silvermere Dawn",
       "gold": 3000
     },
     {
-      "id": 323050,
-      "name": "Zeke's Convergence",
-      "gold": 2300
+      "id": 3801,
+      "name": "Crystalline Bracer",
+      "gold": 800
     },
     {
       "id": 2021,
@@ -72,6 +77,11 @@ const item: Item =  {
       "id": 3803,
       "name": "Catalyst of Aeons",
       "gold": 1300
+    },
+    {
+      "id": 2502,
+      "name": "Unending Despair",
+      "gold": 2800
     },
     {
       "id": 3012,
@@ -124,16 +134,6 @@ const item: Item =  {
       "gold": 2900
     },
     {
-      "id": 3801,
-      "name": "Crystalline Bracer",
-      "gold": 800
-    },
-    {
-      "id": 4635,
-      "name": "Leeching Leer",
-      "gold": 1265
-    },
-    {
       "id": 6610,
       "name": "Sundered Sky",
       "gold": 3100
@@ -142,7 +142,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1028_base_t1_rubycrystal.png",
   "simpleDescription": "Increases Health",
   "nicknames": [
     "red"
@@ -150,26 +149,16 @@ const item: Item =  {
   "stats": {
     "health": 150
   },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 400,
-      "sell": 160
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 400,
+    "sell": 280
+  }
 }
 export default item

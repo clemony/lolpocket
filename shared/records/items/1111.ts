@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3013_voidwalkers.png",
   "passives": [
     {
       "name": "Jarvan One",
@@ -37,15 +36,14 @@ const item: Item =  {
     "abilityHaste": 10,
     "tenacity": 30
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 300,
-      "sell": 0
-    }
-  },
   "maps": [
     12
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "purchasable": false,
+    "total": 300,
+    "sell": 210
+  }
 }
 export default item

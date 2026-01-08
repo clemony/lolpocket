@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_berserkersgreaves_64.png",
   "simpleDescription": "Mobility and Tenacity",
   "passives": [
     {
@@ -27,21 +26,15 @@ const item: Item =  {
     "abilityHaste": 30,
     "tenacity": 20
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 500,
-      "sell": 1000
-    },
-    "tags": [
-      "MARKSMAN",
-      "FIGHTER"
-    ]
-  },
   "maps": [
     11,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1600,
+    "sell": 1120
+  }
 }
 export default item

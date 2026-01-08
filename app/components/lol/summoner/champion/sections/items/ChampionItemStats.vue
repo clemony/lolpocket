@@ -9,7 +9,7 @@ const { items } = usePlayerStatsInject()
 <template>
   <div
     v-if="items"
-    :class="cn('grid auto-rows-fr gap-3', className)">
+    :class="cn('grid auto-rows-fr gap-4', className)">
     <ChampionItemRow
       title="Early"
       type="item"

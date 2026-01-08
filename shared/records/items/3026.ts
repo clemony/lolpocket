@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3026_fighter_t3_guardianangel.png",
   "simpleDescription": "Periodically revives champion upon death",
   "nicknames": [
     "ga"
@@ -33,20 +32,13 @@ const item: Item =  {
     "armor": 45,
     "attackDamage": 55
   },
-  "shop": {
-    "prices": {
-      "total": 3200,
-      "combined": 800,
-      "sell": 1280
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 3200,
+    "sell": 1280
+  }
 }
 export default item

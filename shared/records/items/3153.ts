@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3153_fighter_t3_bladeoftheruinedking.png",
   "simpleDescription": "Deals damage based on target's Health, can steal Move Speed",
   "nicknames": [
     "brk",
@@ -48,23 +47,16 @@ const item: Item =  {
     "attackSpeed": 25,
     "lifesteal": 10
   },
-  "shop": {
-    "prices": {
-      "total": 3200,
-      "combined": 725,
-      "sell": 1280
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 725,
+    "total": 3200,
+    "sell": 2240
+  }
 }
 export default item

@@ -68,6 +68,7 @@ const selected = ref<Pocket>(null)
               :key="pocket.key"
               :pocket
               :selected
+              @dblclick="navigateTo(`/pocket/${pocket.key}`)"
               @click="selected = pocket" />
             <Button
               v-tippy="'Add Pocket'"

@@ -19,6 +19,16 @@ const item: Item =  {
       "gold": 2600
     },
     {
+      "id": 323050,
+      "name": "Zeke's Convergence",
+      "gold": 2300
+    },
+    {
+      "id": 3190,
+      "name": "Locket of the Iron Solari",
+      "gold": 2200
+    },
+    {
       "id": 2019,
       "name": "Steel Sigil",
       "gold": 1100
@@ -37,11 +47,6 @@ const item: Item =  {
       "id": 3082,
       "name": "Warden's Mail",
       "gold": 1000
-    },
-    {
-      "id": 3190,
-      "name": "Locket of the Iron Solari",
-      "gold": 2200
     },
     {
       "id": 2420,
@@ -77,31 +82,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1029_base_t1_clotharmor.png",
   "simpleDescription": "Slightly increases Armor",
   "stats": {
     "armor": 15
-  },
-  "shop": {
-    "prices": {
-      "total": 300,
-      "combined": 300,
-      "sell": 120
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "total": 300,
+    "sell": 210
+  }
 }
 export default item

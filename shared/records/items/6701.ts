@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6701_opportunity.png",
   "nicknames": [
     "lethality"
   ],
@@ -42,22 +41,16 @@ const item: Item =  {
     "attackDamage": 55,
     "lethality": 18
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 475,
-      "sell": 1080
-    },
-    "tags": [
-      "ASSASSIN",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 475,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

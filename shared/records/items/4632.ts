@@ -29,7 +29,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4632_tank_t2_verdantbarrier.png",
   "nicknames": [
     "necklace"
   ],
@@ -44,21 +43,16 @@ const item: Item =  {
     "abilityPower": 40,
     "magicResistance": 25
   },
-  "shop": {
-    "prices": {
-      "total": 1600,
-      "combined": 400,
-      "sell": 640
-    },
-    "tags": [
-      "MAGE"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 1600,
+    "sell": 1120
+  }
 }
 export default item

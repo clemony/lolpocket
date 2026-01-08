@@ -14,15 +14,14 @@ const item: Item =  {
       "gold": 850
     },
     {
-      "id": 1026,
-      "name": "Blasting Wand",
-      "gold": 850
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
   "simpleDescription": "Immobilizing a champion causes lightning to strike them",
   "nicknames": [
     "lock on",
@@ -31,7 +30,7 @@ const item: Item =  {
   "passives": [
     {
       "name": "Hypershot",
-      "effects": "Dealing ability damage to a champion at 600 or more units away from the cast position <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />reveals them for 6 seconds.",
+      "effects": "Dealing ability damage to a champion at 600 or more units away from the cast position <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />reveals them for 6 seconds. Deals 10% increased damage to champions revealed by <i>Hypershot</i>.",
       "unique": true
     },
     {
@@ -42,24 +41,19 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "abilityPower": 125,
+    "abilityPower": 75,
     "abilityHaste": 25
-  },
-  "shop": {
-    "prices": {
-      "total": 2750,
-      "combined": 200,
-      "sell": 1100
-    },
-    "tags": [
-      "MAGE"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 200,
+    "total": 2750,
+    "sell": 1925
+  }
 }
 export default item

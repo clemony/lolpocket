@@ -1,4 +1,4 @@
-// Updated Patch 15.23.1 - 12/05/2025 03:19:44 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
 
 export const tagToItem: Record<string, number[]> = {
   "Mage": [
@@ -95,7 +95,6 @@ export const tagToItem: Record<string, number[]> = {
     3024,
     3050,
     3067,
-    3105,
     3107,
     3109,
     3110,
@@ -118,9 +117,7 @@ export const tagToItem: Record<string, number[]> = {
     4005,
     4011,
     4016,
-    4638,
     4642,
-    4643,
     6616,
     6617,
     6620,
@@ -163,7 +160,6 @@ export const tagToItem: Record<string, number[]> = {
     3082,
     3083,
     3084,
-    3105,
     3109,
     3110,
     3112,

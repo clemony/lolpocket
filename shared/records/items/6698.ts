@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6698_profanehydra.png",
   "nicknames": [
     "lethality"
   ],
@@ -40,21 +39,16 @@ const item: Item =  {
     "lethality": 18,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 2850,
-      "combined": 313,
-      "sell": 1140
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 313,
+    "total": 2850,
+    "sell": 1995
+  }
 }
 export default item

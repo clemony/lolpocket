@@ -1,15 +1,18 @@
 <script lang="ts" setup>
-const { title, class: className, separator, stat, time } = defineProps<{
+import { statLabels, statLabelsWithSynergy, statLabelsWithTime } from './stat-labels'
+
+const { title, class: className, icon, separator, stat, type } = defineProps<{
   stat?: ItemSetStat | TimedStatDetail | StatDetail | undefined
   class?: HTMLAttributes['class']
   title?: string | number | string[]
-  time?: boolean
+  icon?: string[]
+  type?: string
   separator?: boolean
 }>()
 
 const isA = computed (() => typeof title !== 'string' && typeof title !== 'number')
 
-const labels = computed (() => time ? statLabelsWithTime : statLabels)
+const labels = computed (() => type === 'time' ? statLabelsWithTime : type === 'synergy' ? statLabelsWithSynergy : statLabels)
 </script>
 
 <template>
@@ -23,6 +26,7 @@ const labels = computed (() => time ? statLabelsWithTime : statLabels)
         ${(stat as TimedStatDetail)?.avgTimestamp ? `${(((stat as TimedStatDetail)?.avgTimestamp / 1000) / 60).toFixed(2).replace('.', ':')} acquired` : ''}` : null"
       hover="inset"
       class="z-2 size-full flex-col items-start justify-between! gap-0 p-2!">
+      <!-- title -->
       <h4
         v-if="title"
         :class="cn('leading-5.5 font-bold dst', { 'pt-1': !isA, 'pt-1 text-8!': typeof title === 'number' })">
@@ -37,6 +41,11 @@ const labels = computed (() => time ? statLabelsWithTime : statLabels)
           </template>
         </template>
       </h4>
+      <div v-else-if="icon">
+        <Icon
+          :name="icon[0]"
+          :class="cn('', icon[1])" />
+      </div>
       <Grow />
       <div
         class="relative flex h-fit grow-0 flex-col items-start justify-end gap-0.75 justify-self-end pt-[5px] **:text-1 **:font-medium">
@@ -44,15 +53,17 @@ const labels = computed (() => time ? statLabelsWithTime : statLabels)
           v-if="separator"
           :size="0"
           color="b3"
-          class="absolute top-0 w-full" />
-        <div class="hidden flex-col items-start justify-end gap-0.75 in-data-[style=simple]:flex">
-          <span>{{ stat?.games }} games</span>
-          <span>{{ stat?.winrate }} WR</span>
+          class="absolute top-0 w-full opacity-70" />
+
+        <!-- labels -->
+        <div class="grid h-fit items-start justify-end gap-0.75">
+          <span class="hidden in-data-[style=simple]:block">{{ stat?.games }} games</span>
+          <span class="hidden in-data-[style=simple]:block">{{ stat?.winrate }} WR</span>
+          <span
+            v-for="l in labels"
+            :key="l"
+            class="opacity-60 in-data-[style=simple]:hidden">{{ l }}</span>
         </div>
-        <span
-          v-for="l in labels"
-          :key="l"
-          class="opacity-60 in-data-[style=simple]:hidden">{{ l }}</span>
       </div>
     </Button>
   </div>

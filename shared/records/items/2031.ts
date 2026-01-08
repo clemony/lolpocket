@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/autoatlas/smallicons/2031_refillablepotion_64px.milkshake_env.png",
   "simpleDescription": "Restores Health over time. Refills at shop.",
   "nicknames": [
     "consumable",
@@ -25,20 +24,15 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 150,
-      "combined": 150,
-      "sell": 60
-    },
-    "tags": [
-      "HEALTH_AND_REG"
-    ]
-  },
   "maps": [
     11,
     12,
     21
-  ]
+  ],
+  "gold": {
+    "base": 150,
+    "total": 150,
+    "sell": 60
+  }
 }
 export default item

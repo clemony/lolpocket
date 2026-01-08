@@ -13,7 +13,7 @@ const { title, class: className, data, simple } = defineProps<{
       <ChampStatLabel
         separator
         :title
-        time />
+        type="time" />
     </slot>
 
     <ChampStatRowWrapper
@@ -22,7 +22,7 @@ const { title, class: className, data, simple } = defineProps<{
       <ChampStatObjectWrapper
         v-for="[k, v] in data"
         :key="k"
-        :simple
+        type="time"
         :stat="v">
         <Item
           :id="k"

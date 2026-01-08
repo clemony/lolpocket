@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3087_statikk_shiv.png",
   "simpleDescription": "Movement builds charges that release chain lightning on basic attack",
   "passives": [
     {
@@ -41,22 +40,16 @@ const item: Item =  {
     "attackSpeed": 30,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 450,
-      "sell": 1080
-    },
-    "tags": [
-      "MARKSMAN",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 450,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

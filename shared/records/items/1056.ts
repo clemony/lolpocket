@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1056_mage_t1_doransring.png",
   "simpleDescription": "Good starting item for casters",
   "nicknames": [
     "dring"
@@ -26,22 +25,15 @@ const item: Item =  {
     "abilityPower": 18,
     "health": 90
   },
-  "shop": {
-    "prices": {
-      "total": 400,
-      "combined": 400,
-      "sell": 160
-    },
-    "tags": [
-      "MAGE",
-      "MANA_AND_REG",
-      "ONHIT_EFFECTS"
-    ]
-  },
   "maps": [
     11,
     12,
     21
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 400,
+    "sell": 160
+  }
 }
 export default item

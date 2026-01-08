@@ -31,9 +31,6 @@ const timeLeft = computed(() => {
             : 'Update Data'
         "
         as="button"
-        :while-press="{
-          rotate: '180deg',
-        }"
         class="
           dr-30 btn absolute -right-1 bottom-0 btn-square size-7
           justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md

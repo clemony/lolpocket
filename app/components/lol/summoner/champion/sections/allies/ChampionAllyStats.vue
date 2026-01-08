@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { buildAllyBubbleData, getAllyColorMap, groupByAlly } from './allyBubbles'
+import { buildAllyBubbleData, getAllyColorMap } from '.'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const { allies } = usePlayerStatsInject()
+const { allies, stats } = usePlayerStatsInject()
 
 const points = computed (() => buildAllyBubbleData(allies.value))
 const colorMap = computed(() => getAllyColorMap(points.value))
@@ -18,7 +18,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
       :color-map />
 
     <table
-      class="table max-w-240 select-none">
+      class="table max-w-220 select-none">
       <!-- head -->
 
       <thead>
@@ -29,7 +29,11 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           </th>
           <th>Matches</th>
           <th>Winrate</th>
-          <th>Synergy</th>
+          <th
+            data-tip="Percent winrate change when on team."
+            class="hover:underline">
+            Delta*
+          </th>
           <th>Avg. Match Duration</th>
         </tr>
       </thead>
@@ -71,7 +75,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           </td>
           <td>
             <CollapsibleTrigger class="size-full h-12! justify-center">
-              {{ v?.synergy.average }}
+              {{ v?.delta }}
             </CollapsibleTrigger>
           </td>
           <td>
@@ -100,7 +104,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
             class="items-center justify-self-center">
             {{ c?.winrate }}
           </td>
-          <td>{{ c?.synergy.average }}</td>
+          <td>{{ c?.delta }}</td>
           <td>{{ secondsToTime(c?.avgTimestamp) }}</td>
         </CollapsibleContent>
       </Collapsible>

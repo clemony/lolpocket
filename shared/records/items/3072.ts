@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3072_fighter_t3_bloodthirster.png",
   "simpleDescription": "Grants Attack Damage, Life Steal and Life Steal now overheals",
   "nicknames": [
     "bt",
@@ -39,21 +38,16 @@ const item: Item =  {
     "attackDamage": 80,
     "lifesteal": 15
   },
-  "shop": {
-    "prices": {
-      "total": 3400,
-      "combined": 325,
-      "sell": 1360
-    },
-    "tags": [
-      "MARKSMAN"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 325,
+    "total": 3400,
+    "sell": 2380
+  }
 }
 export default item

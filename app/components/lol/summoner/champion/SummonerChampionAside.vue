@@ -28,7 +28,7 @@ const img = useImage()
   <div
     class="sticky inset-y-0 -top-66 grid h-fit max-h-dvh w-full max-w-64 auto-rows-max items-start gap-3 overflow-y-auto px-1 pt-28 **:select-none">
     <div
-      class="relative mb-6 w-full">
+      class="relative w-full">
       <Button
         data-tip="Back to all champions"
         data-placement="right"
@@ -60,7 +60,7 @@ const img = useImage()
       </h1>
     </div>
 
-    <div class="flex w-full flex-col gap-3">
+    <div class="mt-4 flex w-full flex-col">
       <!--       <div class="absolute bottom-1.5 flex w-full items-center gap-2 px-2">
         <Icon
           name="lol:mastery"
@@ -69,12 +69,14 @@ const img = useImage()
           v-if="mastery"
           class="grow"
           :mastery />
-      </div> --><ChampionStatsTimelineNav
-      :summoner="data.summoner"
-      :scroll-ref />
+      </div> -->
+
+      <ChampionStatsTimelineNav
+        :summoner="data.summoner"
+        :scroll-ref />
       <div
         class="mt-6 flex w-full flex-col gap-4 pl-3">
-        <Separator class="opacity-80" />
+        <Separator class="mb-2 h-px opacity-80" />
         <h6 class="pl-2 capitalize">
           Search {{ summoner.name }}'s Champions
         </h6>

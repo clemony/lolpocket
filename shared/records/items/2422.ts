@@ -42,7 +42,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2422_class_t1_slightlymagicalboots.png",
   "passives": [
     {
       "name": "Slightly Quicker",
@@ -53,19 +52,17 @@ const item: Item =  {
   "stats": {
     "flatMovespeed": 25
   },
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 300,
-      "sell": 0
-    },
-    "purchasable": false
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 300,
+    "purchasable": false,
+    "total": 300,
+    "sell": 90
+  }
 }
 export default item

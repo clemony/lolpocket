@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3083_tank_t3_warmogs.png",
   "simpleDescription": "Grants massive Health and Health Regen",
   "passives": [
     {
@@ -44,21 +43,16 @@ const item: Item =  {
     "health": 1000,
     "healthRegen": 100
   },
-  "shop": {
-    "prices": {
-      "total": 3100,
-      "combined": 500,
-      "sell": 1240
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 3100,
+    "sell": 2170
+  }
 }
 export default item

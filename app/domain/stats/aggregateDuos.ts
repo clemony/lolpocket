@@ -1,140 +1,96 @@
-export interface ChampionTeamAndEnemyStats {
-    enemy: Record<string, Record<number, TimedStatDetail>>
-    team: Record<string, Record<number, TimedStatDetail>>
+export interface ChampionPairStats {
+  enemy: PairedChampionStat[][]
+  team: PairedChampionStat[][]
 }
-function createEmptyChampionStat(): AllyChampionStat {
-  return {
-    games: 0,
-    championId: 0,
-    championName: "",
-    win: 0,
-    avgTimestamp: 0,
-    synergy: { total: 0, average: 0 },
-  }
-}
+
+export type PairedChampionDuoStatGroup = Record<
+  RoleKey,
+  Record<number, PairedChampionStat>
+>
 
 function bumpChampion(
-  map: Record<string, AllyStatDetail>,
-  ally: Player,
+  map: PairedChampionDuoStatGroup,
+  role: RoleKey,
+  championId: number,
   win: boolean,
   gameDuration: number
 ) {
-  const allyEntry = map[ally.puuid]
-
-  if (!allyEntry.champions[ally.championId]) {
-    allyEntry.champions[ally.championId] = createEmptyChampionStat()
+  if (!map[role][championId]) {
+    map[role][championId] = createEmptyChampionStat(
+      championId,
+      champNameById(championId)
+    )
   }
+  const e = map[role][championId]
 
-  const c = allyEntry.champions[ally.championId]
+  e.games++
+  if (win) e.win!++
 
-  c.championId = ally.championId
-  c.championName = champNameById(ally.championId)
-  c.games++
-  if (win) c.win!++
-
-  // running average of game duration
-  c.avgTimestamp =
-    ((c.avgTimestamp ?? 0) * (c.games - 1) + gameDuration) / c.games
-}
-
-function bumpAlly(
-  map: Record<string, AllyStatDetail>,
-  ally: Player,
-  win: boolean,
-  gameDuration: number
-) {
-  const key = ally.puuid
-
-  if (!map[key]) {
-    map[key] = {
-      puuid: ally.puuid,
-      name: ally.riotIdGameName,
-      tag: ally.riotIdTagline,
-      icon: String(ally.profileIcon),
-      champions: {},
-      games: 0,
-      win: 0,
-      avgTimestamp: 0,
-      synergy: { total: 0, average: 0 },
-    }
-  }
-
-  const s = map[key]
-
-  s.games++
-  if (win) s.win!++
-
-  s.avgTimestamp =
-    ((s.avgTimestamp ?? 0) * (s.games - 1) + gameDuration) / s.games
-
-  bumpChampion(map, ally, win, gameDuration)
+  e.avgTimestamp =
+    ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
 }
 
 export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
-  computed<AllyStatDetail[]>(() => {
-    const duos:  = {}
+  computed<ChampionPairStats>(() => {
+    const enemy: PairedChampionDuoStatGroup = buildEmptyRoleObject()
+    const team: PairedChampionDuoStatGroup = buildEmptyRoleObject()
 
     const totalGames = data.value.length
-    if (!totalGames) return []
+    if (!totalGames) {
+      return { enemy: [], team: [] }
+    }
 
-    const totalWins = data.value
-      .map((d) => d.player.win)
-      .filter((w) => w === true).length
-
-    const baselineWinrate = totalWins / totalGames
+    const totalWins = data.value.filter((d) => d.player.win).length
 
     for (const d of data.value) {
       const player = d.player
       if (!player) continue
 
+      const teamId = player.teamId
       const win = player.win
       const gameDuration = d.match.gameDuration
 
-      const allyArray = d.match.participants.filter(
-        (p) => p.teamId === player.teamId && p.puuid !== player.puuid
-      )
+      for (const p of d.match.participants) {
+        if (p.puuid === player.puuid) continue
 
-      for (const ally of allyArray) {
-        bumpAlly(allies, ally, win, gameDuration)
+        const target = p.teamId === teamId ? team : enemy
+        const role = normalizeRole(p.teamPosition)
+
+        bumpChampion(target, role, p.championId, win, gameDuration)
       }
     }
 
-    //  finalize
-    for (const ally of Object.values(allies)) {
-      ally.winrate = roundDecimalToPercent(ally.win!, ally.games)
-      ally.pickrate = roundDecimalToPercent(ally.games, totalGames)
+    function finalize(
+      group: PairedChampionDuoStatGroup
+    ): PairedChampionStat[][] {
+      const out: PairedChampionStat[][] = []
 
-      const delta = ally.winrate - baselineWinrate
-      ally.synergy.total = delta * Math.log(ally.games + 1) * ally.pickrate
-
-      for (const champ of Object.values(ally.champions)) {
-        champ.winrate = roundDecimalToPercent(champ.win!, champ.games)
-
-        const delta = champ.winrate - baselineWinrate
-
-        champ.synergy.total =
-          delta * Math.log(champ.games + 1) * (champ.games / ally.games)
+      //  winrate, pickrate, raw synergy
+      for (const role of Object.keys(group) as RoleKey[]) {
+        for (const c of Object.values(group[role])) {
+          c.delta = winDelta(c.win, c.games, totalWins, totalGames)
+        }
       }
-      ally.champions = sortRecordBy(ally.champions, "games", "desc")
-    }
 
-    const maxChampionAbs =
-      Math.max(
-        ...Object.values(allies)
-          .flatMap((a) => Object.values(a.champions))
-          .map((c) => Math.abs(c.synergy.total))
-      ) || 1
+      for (const role of Object.keys(group) as RoleKey[]) {
+        const champs = Object.values(group[role])
+        //const maxAbs = Math.max(...champs.map((c) => Math.abs(c.synergy))) || 1
+        for (const c of champs) {
+          c.winrate = roundDecimalToPercent(c.win!, c.games)
+          // c.synergy = synergyScore(c.delta, maxAbs)
+          c.delta = c.delta ? Math.round(c.delta * 1000) / 10 : 0
+        }
 
-    for (const ally of Object.values(allies)) {
-      for (const champ of Object.values(ally.champions)) {
-        champ.synergy.average = Math.round(
-          Math.tanh(champ.synergy.total / maxChampionAbs) * 100
+        out.push(
+          champs.filter((c) => c.games >= 1).sort((a, b) => b.games - a.games)
         )
       }
-    }
-    const filter = Object.fromEntries(
-      Object.entries(allies).filter(([, s]) => s.games >= 3)
-    )
 
-    return sortRecordBy(filter, "games", "desc") as AllyStatDetail[]
+      return out
+    }
+
+    return {
+      enemy: finalize(enemy),
+      team: finalize(team),
+    }
   })

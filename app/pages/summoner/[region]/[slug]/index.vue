@@ -24,7 +24,7 @@ definePageMeta({
 <template>
   <div
     :class="
-      cn('z-auto grid h-max min-h-screen w-screen grid-cols-[1fr_1.5fr] gap-10 justify-self-center',
+      cn('relative z-auto mx-auto grid h-fit min-h-screen w-full max-w-[1280px] grid-cols-[330px_1fr] gap-14 px-24 pb-44',
       )
     ">
     <MatchHistoryAside />

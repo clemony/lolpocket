@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { Easing, EasingDefinition } from 'motion-v'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
 import { AnimatePresence, motion } from 'motion-v'
@@ -70,7 +69,7 @@ const overlayInitialState = {
       v-bind="forwarded"
       :class="
         cn('data-[state=closed]:animate-out data-[state=closed]:duration-200 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] fixed top-1/2 left-1/2 isolate z-50 translate-x-[-50%] translate-y-[-50%] gap-4 border bg-b1 px-10 py-8 shadow-lg sm:rounded-xl',
-          props.class,
+           props.class,
         )
       ">
       <Motion

@@ -22,6 +22,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
 
   if (!ids.length) {
     // no more matches at all
+    console.log("🥸 - ids.length:", ids.length)
     return { matches: [], cursor, done: true }
   }
 

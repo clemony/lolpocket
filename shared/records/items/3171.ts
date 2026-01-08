@@ -12,14 +12,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_ionianboots_64.png",
   "nicknames": [
     "boots"
   ],
   "passives": [
     {
-      "name": "Ionian Insight",
-      "effects": "Gain 10 summoner spell haste.",
+      "name": "Ionian Lucidity",
+      "effects": "Gain 20 summoner spell haste.",
       "unique": true
     },
     {
@@ -29,18 +28,16 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "flatMovespeed": 50,
-    "abilityHaste": 25
-  },
-  "shop": {
-    "prices": {
-      "total": 1400,
-      "combined": 500,
-      "sell": 560
-    }
+    "flatMovespeed": 45,
+    "abilityHaste": 20
   },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1400,
+    "sell": 980
+  }
 }
 export default item

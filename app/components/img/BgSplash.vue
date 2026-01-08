@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { easeInOut, motion } from 'motion-v'
+import { motion, useTransform } from 'motion-v'
 
 const {
   class: className,
@@ -14,14 +14,21 @@ const {
 const img = useImage()
 const { scrollY } = useScrollInject()
 
-const y = useTransform(scrollY, [0, 200], ['0%', '3%'], {
-  ease: easeInOut,
-})
+const fallback = useMotionValue(0)
+const source = scrollY ?? fallback
+
+// numeric only
+const yPx = useTransform(source, [0, 200], [0, 24])
 
 const bg = computed(() => {
   if (!i)
-    return null
-  return `url('${img(i, { quality: 100 })}')`
+    return undefined
+  try {
+    return `url('${img(i, { quality: 100 })}')`
+  }
+  catch {
+    return undefined
+  }
 })
 </script>
 
@@ -29,7 +36,7 @@ const bg = computed(() => {
   <div
     :class="
       cn('absolute -top-16 isolate flex h-[80vh] w-screen justify-end bg-tint-b2/30 dss', {
-      })
+      }, className)
     ">
     <div
       :class="
@@ -45,10 +52,11 @@ const bg = computed(() => {
       <motion.div
         v-if="!slice"
         :style="{
-          backgroundImage: bg,
-          backgroundPositionX: '0',
-          backgroundPositionY: y,
-          backgroundSize: 'cover',
+          'backgroundImage': bg,
+          'backgroundPositionX': '0',
+          '--bg-y': yPx,
+          'backgroundPositionY': 'calc(var(--bg-y) * 1px)',
+          'backgroundSize': 'cover',
         }"
         :class="
           cn('z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto bg-fixed bg-no-repeat blur-sm duration-100',
@@ -60,7 +68,7 @@ const bg = computed(() => {
           backgroundPositionX: '100%',
           backgroundSize: 'cover',
           backgroundImage: bg,
-          translateY: y,
+          translateY: yPx,
         }"
         :class="
           cn('z-0 size-full mask-l-from-98% bg-no-repeat contrast-110 grayscale-10 duration-100',

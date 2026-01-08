@@ -12,7 +12,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/boots_tier3_platedsteelcaps_64.png",
   "simpleDescription": "Deal damage to empower your heals and shields",
   "nicknames": [
     "boots"
@@ -26,23 +25,21 @@ const item: Item =  {
     {
       "name": "Noxian Endurance",
       "cooldown": "15",
-      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) physical damage for 4 seconds.",
+      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+10% <b>maximum</b> health) physical damage for 5 seconds.",
       "unique": true
     }
   ],
   "stats": {
-    "armor": 40,
-    "flatMovespeed": 50
-  },
-  "shop": {
-    "prices": {
-      "total": 1700,
-      "combined": 500,
-      "sell": 680
-    }
+    "armor": 35,
+    "flatMovespeed": 45
   },
   "maps": [
     11
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 1700,
+    "sell": 1190
+  }
 }
 export default item

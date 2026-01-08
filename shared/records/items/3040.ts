@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 3003,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3048_mage_t3_seraphsembrace.png",
   "passives": [
     {
       "name": "Awe",
@@ -24,19 +23,17 @@ const item: Item =  {
     "mana": 1000,
     "abilityHaste": 25
   },
-  "shop": {
-    "prices": {
-      "total": 2900,
-      "combined": 2900,
-      "sell": 1160
-    },
-    "purchasable": false
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 2900,
+    "purchasable": false,
+    "total": 2900,
+    "sell": 2030
+  }
 }
 export default item

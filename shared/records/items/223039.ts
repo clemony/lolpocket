@@ -5,14 +5,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3005_fighter_t3_atmasreckoning.png",
   "nicknames": [
     "wreckoning"
   ],
   "passives": [
     {
       "name": "Big Hands",
-      "effects": "Gain 1% critical strike chance for every 100 <b>bonus</b> health, up to a <b>maximum</b> of 30% critical strike chance at 3000 <b>bonus</b> health.",
+      "effects": "Gain <img src=\"/img/icons/critical-strike-chance.webp\" class=\"tip-icon\" />critical strike chance critical strike chance.",
       "unique": true
     }
   ],
@@ -20,18 +19,13 @@ const item: Item =  {
     "criticalStrikeChance": 20,
     "health": 700
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 2500,
-      "sell": 1000
-    },
-    "tags": [
-      "FIGHTER"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1250
+  }
 }
 export default item

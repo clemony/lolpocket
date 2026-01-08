@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3340_class_t1_wardingtotem.png",
   "simpleDescription": "Periodically place a Stealth Ward",
   "nicknames": [
     "yellow",
@@ -22,16 +21,14 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 0,
-      "sell": 0
-    }
-  },
   "maps": [
     11,
     21
-  ]
+  ],
+  "gold": {
+    "base": 0,
+    "total": 0,
+    "sell": 0
+  }
 }
 export default item

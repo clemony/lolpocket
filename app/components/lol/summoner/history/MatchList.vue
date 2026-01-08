@@ -3,14 +3,14 @@ import { Virtualizer } from 'virtua/vue'
 
 const emit = defineEmits(['scroll-top'])
 
-const { filteredMatches, loading, loadOlder, matches, summoner }
+const { filteredMatches, loading, loadingOlder, loadOlder, matches, summoner }
   = useSummonerInject()
 const scrollRef = useState<HTMLElement>('scrollRef')
 const hasMatches = computed(() => filteredMatches?.value?.length > 0)
 </script>
 
 <template>
-  <div class="flex min-w-220 grow flex-col overflow-visible py-24">
+  <div class="flex w-full max-w-240 min-w-220 grow flex-col items-center overflow-visible py-24">
     <!-- loading skeleton -->
     <div
       v-if="loading "
@@ -18,13 +18,13 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
       <Skeleton
         v-for="i in 12"
         :key="i"
-        class="field-box h-40 w-full max-w-220" />
+        class="field-box h-40 w-full" />
     </div>
 
     <!-- empty state -->
     <div
       v-else-if="!hasMatches"
-      class="grid h-64 w-220 place-items-center font-medium">
+      class="grid h-64 place-items-center font-medium">
       No filtered matches found with these filters.
     </div>
 
@@ -37,7 +37,7 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
       :data="filteredMatches"
       :item-size="118"
       :start-margin="220"
-      :shift="true"
+      :shift="loadingOlder"
       :buffer-size="2000">
       <MatchCard
         :key="item.id"
@@ -47,7 +47,7 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
 
     <div
       v-if="matches?.length"
-      class="grid h-32 w-220 place-items-center">
+      class="grid h-32 place-items-center">
       <Button
         variant="ghost"
         class="group/c"

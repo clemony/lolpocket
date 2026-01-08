@@ -53,8 +53,6 @@ function setTimer(timer, i?, item?) {
       isChampVisible.value = false
       champComplete.value = true
       itemModel[0].visible.value = true
-      console.log('💠 - setTimeout - itemModel:', itemModel[0].visible.value)
-      console.log('💠 - itemIndex:', itemIndex)
     }
     else if (timer === 'item') {
       itemModel[i].item.value = item

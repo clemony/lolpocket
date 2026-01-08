@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2504_kaenicrookern.png",
   "passives": [
     {
       "name": "Magebane",
@@ -30,21 +29,16 @@ const item: Item =  {
     "healthRegen": 100,
     "magicResistance": 80
   },
-  "shop": {
-    "prices": {
-      "total": 2900,
-      "combined": 800,
-      "sell": 1160
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2900,
+    "sell": 2030
+  }
 }
 export default item

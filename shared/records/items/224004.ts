@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4004_assassin_t3_spectralcutlass.png",
   "active": [
     {
       "name": "Soul Anchor",
@@ -19,18 +18,13 @@ const item: Item =  {
     "lethality": 15,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 2500,
-      "sell": 1120
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1250
+  }
 }
 export default item

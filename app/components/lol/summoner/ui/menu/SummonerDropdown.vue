@@ -33,8 +33,9 @@ function handleBlock() {
     animation="shift-toward"
     theme="base clean">
     <Button
+      size="9"
       :class="
-        cn('relative flex gap-3 overflow-hidden p-0',
+        cn('relative flex gap-2 overflow-hidden p-0',
            buttonVariants({ size, hover, variant, base, on }),
            { 'btn-active': open,
              'w-full-pl-0 rounded-full': !size,
@@ -45,11 +46,11 @@ function handleBlock() {
       <LazySummonerIcon
         v-if="summoner"
         :summoner
-        class="size-9 rounded-full shadow-sm drop-shadow-sm" />
+        class="size-8 rounded-full shadow-sm drop-shadow-sm" />
 
       <SummonerName
         :summoner
-        class="w-full truncate font-medium" />
+        class="w-full truncate text-5 font-semibold" />
     </Button>
 
     <template #content>

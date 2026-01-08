@@ -29,28 +29,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3801_tank_t2_crystallinebracer.png",
   "simpleDescription": "Grants Health and Health Regen",
   "stats": {
     "health": 200,
     "healthRegen": 100
-  },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 100,
-      "sell": 320
-    },
-    "tags": [
-      "TANK",
-      "SUPPORT"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 100,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

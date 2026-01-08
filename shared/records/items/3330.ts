@@ -6,7 +6,6 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "requiredChampion": "FiddleSticks",
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/fiddlestickstrinket1.png",
   "simpleDescription": "Periodically place a Stealth Ward",
   "nicknames": [
     "yellow",
@@ -22,19 +21,17 @@ const item: Item =  {
     }
   ],
   "stats": {},
-  "shop": {
-    "prices": {
-      "total": 0,
-      "combined": 0,
-      "sell": 0
-    }
-  },
   "maps": [
     11,
     12,
     21,
     30,
     35
-  ]
+  ],
+  "gold": {
+    "base": 0,
+    "total": 0,
+    "sell": 0
+  }
 }
 export default item

@@ -11,14 +11,14 @@ const item: Item =  {
   ],
   "buildsInto": [
     {
-      "id": 4401,
-      "name": "Force of Nature",
-      "gold": 2800
-    },
-    {
       "id": 3181,
       "name": "Hullbreaker",
       "gold": 3000
+    },
+    {
+      "id": 4401,
+      "name": "Force of Nature",
+      "gold": 2800
     },
     {
       "id": 3002,
@@ -39,7 +39,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3066_tank_t3_wingedmoonplate.png",
   "nicknames": [
     "chaps",
     "pants",
@@ -50,22 +49,16 @@ const item: Item =  {
     "health": 200,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 400,
-      "sell": 320
-    },
-    "tags": [
-      "TANK",
-      "MOVEMENT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 400,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

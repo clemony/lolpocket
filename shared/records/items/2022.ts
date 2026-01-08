@@ -57,33 +57,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2022_glowingmote.png",
   "nicknames": [
     "haste"
   ],
   "stats": {
     "abilityHaste": 5
   },
-  "shop": {
-    "prices": {
-      "total": 250,
-      "combined": 250,
-      "sell": 100
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "MAGE",
-      "TANK",
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 250,
+    "total": 250,
+    "sell": 175
+  }
 }
 export default item

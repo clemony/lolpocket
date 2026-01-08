@@ -17,7 +17,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3143_tank_t3_randuinsomen.png",
   "simpleDescription": "Greatly increases defenses, activate to slow nearby enemies",
   "passives": [
     {
@@ -38,21 +37,16 @@ const item: Item =  {
     "armor": 75,
     "health": 350
   },
-  "shop": {
-    "prices": {
-      "total": 2700,
-      "combined": 800,
-      "sell": 1080
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 800,
+    "total": 2700,
+    "sell": 1890
+  }
 }
 export default item

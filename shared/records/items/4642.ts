@@ -64,7 +64,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4642_enchanter_t2_bandleglassmirror.png",
   "nicknames": [
     "yordle"
   ],
@@ -73,21 +72,16 @@ const item: Item =  {
     "manaRegen": 100,
     "abilityHaste": 10
   },
-  "shop": {
-    "prices": {
-      "total": 900,
-      "combined": 50,
-      "sell": 360
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 50,
+    "total": 900,
+    "sell": 630
+  }
 }
 export default item

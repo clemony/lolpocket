@@ -26,6 +26,11 @@ const item: Item =  {
       "gold": 2700
     },
     {
+      "id": 2502,
+      "name": "Unending Despair",
+      "gold": 2800
+    },
+    {
       "id": 3002,
       "name": "Trailblazer",
       "gold": 2400
@@ -64,29 +69,20 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1031_base_t2_chainvest.png",
   "simpleDescription": "Greatly increases Armor",
   "stats": {
     "armor": 40
-  },
-  "shop": {
-    "prices": {
-      "total": 800,
-      "combined": 500,
-      "sell": 320
-    },
-    "tags": [
-      "FIGHTER",
-      "MARKSMAN",
-      "ASSASSIN",
-      "TANK"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 500,
+    "total": 800,
+    "sell": 560
+  }
 }
 export default item

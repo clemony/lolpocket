@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4017_hellfirehatchet.png",
   "nicknames": [
     "burn"
   ],
@@ -21,18 +20,13 @@ const item: Item =  {
     "attackDamage": 35,
     "lethality": 12
   },
-  "shop": {
-    "prices": {
-      "total": 2500,
-      "combined": 2500,
-      "sell": 1000
-    },
-    "tags": [
-      "ASSASSIN"
-    ]
-  },
   "maps": [
     30
-  ]
+  ],
+  "gold": {
+    "base": 2500,
+    "total": 2500,
+    "sell": 1250
+  }
 }
 export default item

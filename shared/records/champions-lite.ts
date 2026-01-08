@@ -1,4 +1,4 @@
-// Updated Patch 25.22 - 11/22/2025 06:24:02 AM CST
+// Updated Patch 15.24.1 - 01/08/2026 03:03:01 PM CST
 
 export const championsLite: ChampionLite[] = [
   {
@@ -293,7 +293,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 630,
+        "flat": 610,
         "perLevel": 107
       },
       "healthRegen": {
@@ -965,7 +965,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackDamage": {
         "flat": 59,
-        "perLevel": 2.95
+        "perLevel": 3.45
       },
       "movespeed": {
         "flat": 325
@@ -1061,7 +1061,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 3.2
       },
       "movespeed": {
-        "flat": 335
+        "flat": 340
       },
       "acquisitionRadius": {
         "flat": 400
@@ -1272,7 +1272,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackSpeed": {
         "flat": 0.625,
-        "perLevel": 5.5
+        "perLevel": 5
       },
       "attackSpeedRatio": {
         "flat": 0.694
@@ -1303,7 +1303,7 @@ export const championsLite: ChampionLite[] = [
       "mobility": 2,
       "utility": 3,
       "abilityReliance": 65,
-      "difficulty": 2
+      "difficulty": 3
     },
     "positions": [
       "Support"
@@ -1879,7 +1879,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 1.3
       },
       "attackDamage": {
-        "flat": 60,
+        "flat": 62,
         "perLevel": 3.8
       },
       "movespeed": {
@@ -1967,7 +1967,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 35,
-        "perLevel": 5
+        "perLevel": 4.5
       },
       "magicResistance": {
         "flat": 32,
@@ -2048,7 +2048,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.5
       },
       "mana": {
-        "flat": 400,
+        "flat": 450,
         "perLevel": 40
       },
       "manaRegen": {
@@ -2519,7 +2519,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 32,
-        "perLevel": 3.7
+        "perLevel": 4.5
       },
       "magicResistance": {
         "flat": 29,
@@ -2987,7 +2987,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackDamage": {
         "flat": 60,
-        "perLevel": 2.75
+        "perLevel": 3.25
       },
       "movespeed": {
         "flat": 325
@@ -3253,7 +3253,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.8
       },
       "armor": {
-        "flat": 22,
+        "flat": 26,
         "perLevel": 4.6
       },
       "magicResistance": {
@@ -3804,8 +3804,8 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 4.6
       },
       "magicResistance": {
-        "flat": 32,
-        "perLevel": 2.05
+        "flat": 30,
+        "perLevel": 1.3
       },
       "attackDamage": {
         "flat": 68,
@@ -3879,8 +3879,8 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 600,
-        "perLevel": 110
+        "flat": 620,
+        "perLevel": 115
       },
       "healthRegen": {
         "flat": 9,
@@ -3895,7 +3895,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.7
       },
       "armor": {
-        "flat": 36,
+        "flat": 39,
         "perLevel": 4.9
       },
       "magicResistance": {
@@ -4640,7 +4640,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 36,
-        "perLevel": 5.2
+        "perLevel": 4.6
       },
       "magicResistance": {
         "flat": 32,
@@ -4718,7 +4718,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 665,
+        "flat": 650,
         "perLevel": 103
       },
       "healthRegen": {
@@ -4931,7 +4931,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 1.3
       },
       "attackDamage": {
-        "flat": 59,
+        "flat": 61,
         "perLevel": 4.4
       },
       "movespeed": {
@@ -5194,7 +5194,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.7
       },
       "armor": {
-        "flat": 27,
+        "flat": 25,
         "perLevel": 4.2
       },
       "magicResistance": {
@@ -5292,7 +5292,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackDamage": {
         "flat": 57,
-        "perLevel": 4
+        "perLevel": 4.75
       },
       "movespeed": {
         "flat": 330
@@ -5651,7 +5651,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.7
       },
       "armor": {
-        "flat": 28,
+        "flat": 32,
         "perLevel": 4.7
       },
       "magicResistance": {
@@ -6370,7 +6370,7 @@ export const championsLite: ChampionLite[] = [
     "stats": {
       "health": {
         "flat": 598,
-        "perLevel": 111
+        "perLevel": 108
       },
       "healthRegen": {
         "flat": 7.5,
@@ -6386,7 +6386,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 22,
-        "perLevel": 4.7
+        "perLevel": 4.2
       },
       "magicResistance": {
         "flat": 30,
@@ -6478,7 +6478,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 36,
-        "perLevel": 4.9
+        "perLevel": 4.5
       },
       "magicResistance": {
         "flat": 32,
@@ -7137,7 +7137,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.55
       },
       "armor": {
-        "flat": 37,
+        "flat": 40,
         "perLevel": 4.95
       },
       "magicResistance": {
@@ -7401,7 +7401,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 669,
+        "flat": 655,
         "perLevel": 105
       },
       "healthRegen": {
@@ -7704,7 +7704,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 1.3
       },
       "attackDamage": {
-        "flat": 53,
+        "flat": 55,
         "perLevel": 2.4
       },
       "movespeed": {
@@ -7746,6 +7746,101 @@ export const championsLite: ChampionLite[] = [
       },
       "attackRange": {
         "flat": 550
+      }
+    }
+  },
+  {
+    "id": 62,
+    "key": "MonkeyKing",
+    "name": "Wukong",
+    "attackType": "Melee",
+    "attributeRatings": {
+      "damage": 2,
+      "toughness": 2,
+      "control": 2,
+      "mobility": 2,
+      "utility": 1,
+      "abilityReliance": 55,
+      "difficulty": 1
+    },
+    "positions": [
+      "Jungle",
+      "Top"
+    ],
+    "resource": "Mana",
+    "roles": [
+      "Diver",
+      "Fighter",
+      "Tank"
+    ],
+    "stats": {
+      "health": {
+        "flat": 610,
+        "perLevel": 99
+      },
+      "healthRegen": {
+        "flat": 3.5,
+        "perLevel": 0.65
+      },
+      "mana": {
+        "flat": 330,
+        "perLevel": 65
+      },
+      "manaRegen": {
+        "flat": 8,
+        "perLevel": 0.8
+      },
+      "armor": {
+        "flat": 31,
+        "perLevel": 4.7
+      },
+      "magicResistance": {
+        "flat": 28,
+        "perLevel": 2.05
+      },
+      "attackDamage": {
+        "flat": 66,
+        "perLevel": 3.5
+      },
+      "movespeed": {
+        "flat": 340
+      },
+      "acquisitionRadius": {
+        "flat": 600
+      },
+      "selectionRadius": {
+        "flat": 100
+      },
+      "pathingRadius": {
+        "flat": 35
+      },
+      "gameplayRadius": {
+        "flat": 65
+      },
+      "criticalStrikeDamage": {
+        "flat": 175
+      },
+      "criticalStrikeDamageModifier": {
+        "flat": 1
+      },
+      "attackSpeed": {
+        "flat": 0.69,
+        "perLevel": 3
+      },
+      "attackSpeedRatio": {
+        "flat": 0.658
+      },
+      "attackCastTime": {
+        "flat": 0.3
+      },
+      "attackTotalTime": {
+        "flat": 1.6
+      },
+      "attackDelayOffset": {
+        "flat": -0.092
+      },
+      "attackRange": {
+        "flat": 175
       }
     }
   },
@@ -7850,6 +7945,7 @@ export const championsLite: ChampionLite[] = [
       "difficulty": 1
     },
     "positions": [
+      "Middle",
       "Support"
     ],
     "resource": "Mana",
@@ -7877,7 +7973,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 25,
-        "perLevel": 5
+        "perLevel": 4.2
       },
       "magicResistance": {
         "flat": 30,
@@ -8626,7 +8722,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 38,
-        "perLevel": 4.7
+        "perLevel": 4.2
       },
       "magicResistance": {
         "flat": 32,
@@ -9356,7 +9452,7 @@ export const championsLite: ChampionLite[] = [
     "stats": {
       "health": {
         "flat": 590,
-        "perLevel": 124
+        "perLevel": 121
       },
       "healthRegen": {
         "flat": 8,
@@ -9372,14 +9468,14 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 31,
-        "perLevel": 4.7
+        "perLevel": 4.5
       },
       "magicResistance": {
         "flat": 32,
         "perLevel": 2.05
       },
       "attackDamage": {
-        "flat": 66,
+        "flat": 64,
         "perLevel": 3.1
       },
       "movespeed": {
@@ -9743,7 +9839,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 2.05
       },
       "attackDamage": {
-        "flat": 58,
+        "flat": 62,
         "perLevel": 3
       },
       "movespeed": {
@@ -10678,7 +10774,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackSpeed": {
         "flat": 0.625,
-        "perLevel": 2
+        "perLevel": 2.6
       },
       "attackSpeedRatio": {
         "flat": 0.4
@@ -10722,7 +10818,7 @@ export const championsLite: ChampionLite[] = [
     "stats": {
       "health": {
         "flat": 570,
-        "perLevel": 90
+        "perLevel": 95
       },
       "healthRegen": {
         "flat": 6.5,
@@ -10730,7 +10826,7 @@ export const championsLite: ChampionLite[] = [
       },
       "mana": {
         "flat": 360,
-        "perLevel": 25
+        "perLevel": 40
       },
       "manaRegen": {
         "flat": 11.5,
@@ -11479,7 +11575,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackDamage": {
         "flat": 63,
-        "perLevel": 3
+        "perLevel": 5
       },
       "movespeed": {
         "flat": 335
@@ -12020,7 +12116,7 @@ export const championsLite: ChampionLite[] = [
     "stats": {
       "health": {
         "flat": 563,
-        "perLevel": 104
+        "perLevel": 100
       },
       "healthRegen": {
         "flat": 6.5,
@@ -12036,7 +12132,7 @@ export const championsLite: ChampionLite[] = [
       },
       "armor": {
         "flat": 25,
-        "perLevel": 4.6
+        "perLevel": 4
       },
       "magicResistance": {
         "flat": 30,
@@ -12699,7 +12795,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackDamage": {
         "flat": 60,
-        "perLevel": 2.5
+        "perLevel": 2.9
       },
       "movespeed": {
         "flat": 325
@@ -13934,7 +14030,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackSpeed": {
         "flat": 0.658,
-        "perLevel": 2.5
+        "perLevel": 2.25
       },
       "attackSpeedRatio": {
         "flat": 0.658
@@ -14072,7 +14168,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 607,
+        "flat": 600,
         "perLevel": 110
       },
       "healthRegen": {
@@ -14083,7 +14179,7 @@ export const championsLite: ChampionLite[] = [
         "flat": 2
       },
       "armor": {
-        "flat": 27,
+        "flat": 24,
         "perLevel": 4.5
       },
       "magicResistance": {
@@ -14178,7 +14274,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 0.5
       },
       "armor": {
-        "flat": 31,
+        "flat": 35,
         "perLevel": 5.2
       },
       "magicResistance": {
@@ -14186,7 +14282,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 2.05
       },
       "attackDamage": {
-        "flat": 60,
+        "flat": 65,
         "perLevel": 3.5
       },
       "movespeed": {
@@ -14278,8 +14374,8 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 2.05
       },
       "attackDamage": {
-        "flat": 60,
-        "perLevel": 2.75
+        "flat": 65,
+        "perLevel": 2.5
       },
       "movespeed": {
         "flat": 335
@@ -14304,7 +14400,7 @@ export const championsLite: ChampionLite[] = [
       },
       "attackSpeed": {
         "flat": 0.638,
-        "perLevel": 2.3
+        "perLevel": 2
       },
       "attackSpeedRatio": {
         "flat": 0.638
@@ -14320,101 +14416,6 @@ export const championsLite: ChampionLite[] = [
       },
       "attackRange": {
         "flat": 125
-      }
-    }
-  },
-  {
-    "id": 62,
-    "key": "MonkeyKing",
-    "name": "Wukong",
-    "attackType": "Melee",
-    "attributeRatings": {
-      "damage": 2,
-      "toughness": 2,
-      "control": 2,
-      "mobility": 2,
-      "utility": 1,
-      "abilityReliance": 55,
-      "difficulty": 1
-    },
-    "positions": [
-      "Jungle",
-      "Top"
-    ],
-    "resource": "Mana",
-    "roles": [
-      "Diver",
-      "Fighter",
-      "Tank"
-    ],
-    "stats": {
-      "health": {
-        "flat": 610,
-        "perLevel": 99
-      },
-      "healthRegen": {
-        "flat": 3.5,
-        "perLevel": 0.65
-      },
-      "mana": {
-        "flat": 330,
-        "perLevel": 65
-      },
-      "manaRegen": {
-        "flat": 8,
-        "perLevel": 0.8
-      },
-      "armor": {
-        "flat": 31,
-        "perLevel": 4.7
-      },
-      "magicResistance": {
-        "flat": 28,
-        "perLevel": 2.05
-      },
-      "attackDamage": {
-        "flat": 66,
-        "perLevel": 3.5
-      },
-      "movespeed": {
-        "flat": 340
-      },
-      "acquisitionRadius": {
-        "flat": 600
-      },
-      "selectionRadius": {
-        "flat": 100
-      },
-      "pathingRadius": {
-        "flat": 35
-      },
-      "gameplayRadius": {
-        "flat": 65
-      },
-      "criticalStrikeDamage": {
-        "flat": 175
-      },
-      "criticalStrikeDamageModifier": {
-        "flat": 1
-      },
-      "attackSpeed": {
-        "flat": 0.69,
-        "perLevel": 3
-      },
-      "attackSpeedRatio": {
-        "flat": 0.658
-      },
-      "attackCastTime": {
-        "flat": 0.3
-      },
-      "attackTotalTime": {
-        "flat": 1.6
-      },
-      "attackDelayOffset": {
-        "flat": -0.092
-      },
-      "attackRange": {
-        "flat": 175
       }
     }
   },
@@ -14627,7 +14628,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 640,
+        "flat": 620,
         "perLevel": 106
       },
       "healthRegen": {
@@ -14829,7 +14830,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 2.05
       },
       "attackDamage": {
-        "flat": 60,
+        "flat": 62,
         "perLevel": 2
       },
       "movespeed": {
@@ -14988,7 +14989,7 @@ export const championsLite: ChampionLite[] = [
     ],
     "stats": {
       "health": {
-        "flat": 600,
+        "flat": 590,
         "perLevel": 110
       },
       "healthRegen": {
@@ -15012,7 +15013,7 @@ export const championsLite: ChampionLite[] = [
         "perLevel": 1.3
       },
       "attackDamage": {
-        "flat": 56,
+        "flat": 55,
         "perLevel": 2.5
       },
       "movespeed": {
@@ -15142,6 +15143,97 @@ export const championsLite: ChampionLite[] = [
       },
       "attackRange": {
         "flat": 425
+      }
+    }
+  },
+  {
+    "id": 904,
+    "key": "Zaahen",
+    "name": "Zaahen",
+    "attackType": "Melee",
+    "attributeRatings": {
+      "damage": 2,
+      "toughness": 2,
+      "control": 2,
+      "mobility": 2,
+      "utility": 1,
+      "abilityReliance": 30,
+      "difficulty": 1
+    },
+    "positions": [
+      "Top"
+    ],
+    "resource": "Mana",
+    "roles": [
+      "Assassin",
+      "Fighter",
+      "Skirmisher"
+    ],
+    "stats": {
+      "health": {
+        "flat": 640,
+        "perLevel": 114
+      },
+      "healthRegen": {
+        "flat": 7.5,
+        "perLevel": 0.8
+      },
+      "mana": {
+        "flat": 350,
+        "perLevel": 55
+      },
+      "manaRegen": {
+        "flat": 8.15,
+        "perLevel": 0.75
+      },
+      "armor": {
+        "flat": 36,
+        "perLevel": 5
+      },
+      "magicResistance": {
+        "flat": 32,
+        "perLevel": 2.05
+      },
+      "attackDamage": {
+        "flat": 63,
+        "perLevel": 4
+      },
+      "movespeed": {
+        "flat": 345
+      },
+      "acquisitionRadius": {
+        "flat": 600
+      },
+      "selectionRadius": {
+        "flat": 100
+      },
+      "pathingRadius": {
+        "flat": 35
+      },
+      "gameplayRadius": {
+        "flat": 65
+      },
+      "criticalStrikeDamage": {
+        "flat": 175
+      },
+      "criticalStrikeDamageModifier": {
+        "flat": 1
+      },
+      "attackSpeed": {
+        "flat": 0.625,
+        "perLevel": 2.5
+      },
+      "attackSpeedRatio": {
+        "flat": 0.625
+      },
+      "attackCastTime": {
+        "flat": 0.25
+      },
+      "attackTotalTime": {
+        "flat": 1.6
+      },
+      "attackRange": {
+        "flat": 175
       }
     }
   },

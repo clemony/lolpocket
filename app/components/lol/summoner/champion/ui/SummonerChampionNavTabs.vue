@@ -67,6 +67,10 @@ function navigate() {
       :tab-transform
       :route-name="item.name"
       @click="navigateTo({ name: item.name, params: { champion_key: ui().openChampionTab } })">
+      <Icon
+        v-if="route.name === 'summoner-region-slug-champion_key' && item.name === 'summoner-region-slug-champions'"
+        name="left"
+        class="absolute -left-6 size-3.75 **:stroke-[2.4]" />
       {{ item.title }}
     </ChampionNavTab>
   </motion.nav>

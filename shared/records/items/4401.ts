@@ -22,7 +22,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4401_tank_t3_forceofnature.png",
   "simpleDescription": "Move Speed, Magic Resist, and max Health Regeneration",
   "nicknames": [
     "fon"
@@ -39,21 +38,16 @@ const item: Item =  {
     "magicResistance": 55,
     "percentMovespeed": 4
   },
-  "shop": {
-    "prices": {
-      "total": 2800,
-      "combined": 750,
-      "sell": 1120
-    },
-    "tags": [
-      "TANK"
-    ]
-  },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 750,
+    "total": 2800,
+    "sell": 1960
+  }
 }
 export default item

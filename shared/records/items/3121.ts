@@ -5,7 +5,6 @@ const item: Item =  {
   "specialRecipe": 3119,
   "noEffects": false,
   "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3121_fimbulwinter.png",
   "passives": [
     {
       "name": "Awe",
@@ -20,25 +19,20 @@ const item: Item =  {
   ],
   "stats": {
     "health": 550,
-    "mana": 860,
+    "mana": 1000,
     "abilityHaste": 15
-  },
-  "shop": {
-    "prices": {
-      "total": 2400,
-      "combined": 2400,
-      "sell": 960
-    },
-    "purchasable": false,
-    "tags": [
-      "TANK"
-    ]
   },
   "maps": [
     11,
     12,
     21,
     35
-  ]
+  ],
+  "gold": {
+    "base": 2400,
+    "purchasable": false,
+    "total": 2400,
+    "sell": 1680
+  }
 }
 export default item
