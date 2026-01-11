@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Lord Dominik's Regards",
   "id": 3036,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Overcomes enemies with high health and armor",
   "nicknames": [
     "lw",
     "ldr",
@@ -25,9 +25,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Giant Slayer",
-      "effects": "Deal 0% – 15% (based on enemy bonus health) against enemy champions.",
-      "unique": true
+      "effects": "Deal 0% – 15% (based on target's bonus health) increased damage against enemy champions."
     }
   ],
   "stats": {
@@ -35,6 +36,7 @@ const item: Item =  {
     "attackDamage": 35,
     "criticalStrikeChance": 25
   },
+  "description": "35 Attack Damage\n35% Armor Penetration\n25% Critical Strike Chance\n\nGiant Slayer\nDeal up to 15% bonus damage against champions based on their bonus Health. Maximum damage bonus reached at 1500 bonus Health.",
   "maps": [
     11,
     12,
@@ -42,9 +44,9 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 350,
-    "total": 3100,
-    "sell": 2170
+    "base": 550,
+    "total": 3300,
+    "sell": 2310
   }
 }
 export default item

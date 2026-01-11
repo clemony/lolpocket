@@ -1,0 +1,13 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 226035,
+  "name": "Silvermere Dawn",
+  "description": "40 Attack Damage\n300 Health\n40 Magic Resist\n\n\n\nActive - Quicksilver: Remove all crowd control debuffs and gain Tenacity and Slow Resistance.",
+  "gold": {
+    "base": 2500,
+    "purchasable": false,
+    "total": 2500,
+    "sell": 1750
+  }
+}
+export default item

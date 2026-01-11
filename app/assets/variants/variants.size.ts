@@ -1,89 +1,50 @@
+const STEP = 0.25
+const MAX = 16
+
+function range(step: number, max: number) {
+  const out: number[] = []
+  for (let v = step; v <= max; v += step) out.push(+v.toFixed(2))
+  return out
+}
+
+const sizes = range(STEP, MAX)
+
 const gc =
   "relative grid aspect-square place-items-center p-0 shrink-0 *:absolute"
-const sv = {
+
+const sv: Record<string, string[]> = {
   px: [gc, "size-px text-2"],
-  2: [gc, "size-2 text-2"],
-  3: [gc, "size-3 text-2"],
-  3.5: [gc, "size-3.5 text-2"],
-  4: [gc, "size-4 text-2"],
-  4.5: [gc, "size-4.5 text-2"],
-  5: [gc, "size-5 text-2"],
-  5.5: [gc, "size-5.5 text-2"],
-  6: [gc, "size-6 text-2"],
-  7: [gc, "size-7 text-2"],
-  8: [gc, "size-8 text-2"],
-  9: [gc, "size-9 text-2"],
-  10: [gc, "size-10"],
-  11: [gc, "size-11"],
-  12: [gc, "size-12"],
-  13: [gc, "size-13"],
-  14: [gc, "size-14"],
-  15: [gc, "size-15"],
 }
 
-export const sizeVariants = {
-  "4": "h-5 text-2 px-2 rounded-md",
-  "5": "h-5 text-2 px-2 rounded-md",
-  "6": "h-6 text-2 px-2 rounded-md",
-  "7": "h-7 text-2 rounded-md",
-  "8": "h-8 text-2 rounded-lg",
-  "9": "h-9 text-2 rounded-lg",
-  "10": "h-10 text-2 rounded-lg",
-  "11": "h-11 text-2 rounded-lg",
-  "12": "rounded-lg h-12",
-  "14": "rounded-lg h-14",
-  "15": "rounded-lg h-15",
-  "16": "rounded-lg h-16",
+export const heightVariants: Record<string, string> = {}
+
+for (const h of range(STEP, MAX)) {
+  heightVariants[h] = `h-${h} ${h <= 7 ? "rounded-md" : "rounded-lg"}`
+}
+
+for (const s of sizes) {
+  sv[s] = [gc, `size-${s} text-2`]
+}
+
+export const sizeVariants: Record<string, any> = {
+  ...heightVariants,
   auto: "h-max w-full rounded-lg",
-  fit: " w-fit h-fit rounded-lg",
-  max: " w-max h-fit rounded-lg",
-  md: "rounded-lg h-10",
+  fit: "w-fit h-fit rounded-lg",
+  max: "w-max h-fit rounded-lg",
   none: "",
-  sm: "h-9 text-2 rounded-lg",
-  xl: "rounded-lg h-14",
-
-  /* square */
-  sq: [gc, "rounded-lg"],
-  px: [sv["px"], "rounded-md"],
-  "sq-2": [sv[2], "rounded-md"],
-  "sq-3": [sv[3], "rounded-md"],
-  "sq-3.5": [sv[3.5], "rounded-sm"],
-  "sq-4": [sv[4], "rounded-md"],
-  "sq-4.5": [sv[4.5], "rounded-md"],
-  "sq-5": [sv[5], "rounded-md"],
-  "sq-5.5": [sv[5.5], "rounded-md"],
-  "sq-6": [sv[6], "rounded-md"],
-  "sq-7": [sv[7], "rounded-md"],
-  "sq-8": [sv[8], "rounded-md"],
-  "sq-9": [sv[9], "rounded-lg"],
-  "sq-10": [sv[10], "rounded-lg"],
-  "sq-11": [sv[11], "rounded-lg"],
-  "sq-12": [sv[12], "rounded-lg"],
-  "sq-13": [sv[13], "rounded-lg"],
-  "sq-14": [sv[14], "rounded-lg"],
-  "sq-15": [sv[15], "rounded-lg"],
-
-  // anchor
-  icon: " grid aspect-square relative place-items-center size-4.5 *:absolute",
-  "icon-sm":
-    " grid aspect-square relative place-items-center size-4 *:absolute",
-
-  /* circle */
-  c: [gc, "rounded-full"],
-  "c-3": [sv[3], "rounded-full"],
-  "c-3.5": [sv[3.5], "rounded-full"],
-  "c-4": [sv[4], "rounded-full"],
-  "c-4.5": [sv[4.5], "rounded-full"],
-  "c-5": [sv[5], "rounded-full"],
-  "c-5.5": [sv[5.5], "rounded-full"],
-  "c-6": [sv[6], "rounded-full"],
-  "c-7": [sv[7], "rounded-full"],
-  "c-8": [sv[8], "rounded-full"],
-  "c-9": [sv[9], "rounded-full"],
-  "c-10": [sv[10], "rounded-full"],
-  "c-11": [sv[11], "rounded-full"],
-  "c-12": [sv[12], "rounded-full"],
-  "c-13": [sv[13], "rounded-full"],
-  "c-14": [sv[14], "rounded-full"],
-  "c-15": [sv[15], "rounded-full"],
 }
+
+for (const s of sizes) {
+  sizeVariants[`sq-${s}`] = [sv[s], s < 9 ? "rounded-md" : "rounded-lg"]
+  sizeVariants[`c-${s}`] = [sv[s], "rounded-full"]
+}
+
+Object.assign(sizeVariants, {
+  sq: [gc, "rounded-lg"],
+  c: [gc, "rounded-full"],
+
+  icon: "grid aspect-square relative place-items-center size-4.5 *:absolute",
+  "icon-sm": "grid aspect-square relative place-items-center size-4 *:absolute",
+})
+
+console.log("🥸 - sizeVariants:", sizeVariants)

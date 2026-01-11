@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Hextech Alternator",
   "id": 3145,
   "rank": "Epic",
@@ -18,7 +19,7 @@ const item: Item =  {
     {
       "id": 3146,
       "name": "Hextech Gunblade",
-      "gold": 3250
+      "gold": 3000
     },
     {
       "id": 4646,
@@ -42,29 +43,30 @@ const item: Item =  {
     },
     {
       "id": 6655,
-      "name": "Luden's Companion",
+      "name": "Luden's Echo",
       "gold": 2750
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Ability Power. Deal bonus magic damage on attack periodically.",
   "nicknames": [
     "revolver",
     "pewpew"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Revved",
-      "cooldown": "40",
       "effects": "Damaging an enemy champion deals 65 <b>bonus</b> magic damage.",
-      "unique": true
+      "cooldown": "40"
     }
   ],
   "stats": {
     "abilityPower": 45
   },
+  "description": "45 Ability Power\n\nRevved\nDamaging a champion deals bonus magic damage.",
   "maps": [
     11,
     12,

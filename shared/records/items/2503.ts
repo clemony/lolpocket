@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Blackfire Torch",
   "id": 2503,
   "rank": "Legendary",
@@ -22,14 +23,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Baleful Blaze",
-      "effects": "Dealing ability damage burns enemies, causing them to take 10 (+1% AP) magic damage every 0.5 seconds over 3 seconds, for a total of 60 magic damage (+6% AP). Against monsters, the burn deals 10 <b>bonus</b> magic damage per tick, dealing a total of 20 (+1% AP) magic damage per tick for up to 120 magic damage (+6% AP).",
-      "unique": true
+      "effects": "Dealing ability damage burns enemies, causing them to take 10 (+1% AP) magic damage every 0.5 seconds over 3 seconds, for a total of 60 magic damage (+6% AP). Against monsters, the burn deals 10 <b>bonus</b> magic damage per tick, dealing a total of 20 (+1% AP) magic damage per tick for up to 120 magic damage (+6% AP)."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Blackfire",
-      "effects": "For each champion, epic monster, and large monster afflicted with <i>Baleful Blaze's</i> burn, increase your ability power by 4%.",
-      "unique": true
+      "effects": "For each champion, epic monster, and large monster afflicted with <i>Baleful Blaze's</i> burn, increase your ability power by 4%."
     }
   ],
   "stats": {
@@ -37,6 +40,7 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 20
   },
+  "description": "80 Ability Power\n600 Mana\n20 Ability Haste\n\nBaleful Blaze\nDamaging Abilities deals bonus magic damage for 3 seconds.\n\nBlackfire\nFor each enemy champion, epic and large monster affected by your Baleful Blaze, gain 4% Ability Power. ",
   "maps": [
     11,
     12,

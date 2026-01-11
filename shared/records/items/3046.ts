@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Phantom Dancer",
   "id": 3046,
   "rank": "Legendary",
@@ -22,15 +23,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Move faster while attacking enemies and gain a shield when on low health.",
   "nicknames": [
     "pd"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spectral Waltz",
-      "effects": "Become permanently <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosted.",
-      "unique": true
+      "effects": "Become permanently <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosted."
     }
   ],
   "stats": {
@@ -38,6 +39,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "percentMovespeed": 10
   },
+  "description": "65% Attack Speed\n25% Critical Strike Chance\n10% Move Speed\n\nSpectral Waltz\nBecome Ghosted.",
   "maps": [
     11,
     12,

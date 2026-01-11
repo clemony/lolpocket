@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Locket of the Iron Solari",
   "id": 3190,
   "rank": "Legendary",
@@ -22,12 +23,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to shield nearby allies from damage",
   "active": [
     {
+      "unique": true,
       "name": "Devotion",
-      "effects": "Grants you and allied champions within 850 units a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 200 – 360 (based on target's level) that decays over 2.5 seconds.",
-      "unique": true
+      "effects": "Grants you and allied champions within 850 units a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 200 – 360 (based on target's level) that decays over 2.5 seconds."
     }
   ],
   "stats": {
@@ -36,6 +36,7 @@ const item: Item =  {
     "magicResistance": 25,
     "abilityHaste": 10
   },
+  "description": "200 Health\n25 Armor\n25 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 200 - 360 Shield that decays over 2.5 seconds.",
   "maps": [
     11,
     12,

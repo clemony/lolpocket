@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Chainlaced Crushers",
   "id": 3173,
   "rank": "Boots",
@@ -12,16 +13,16 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Move Speed and Cooldown Reduction",
   "nicknames": [
     "boots"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Noxian Persistence",
-      "cooldown": "15",
       "effects": "Taking magic damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 10 – 120 (based on level) (+10% <b>maximum</b> health) magic damage for 5 seconds.",
-      "unique": true
+      "cooldown": "15"
     }
   ],
   "stats": {
@@ -29,13 +30,14 @@ const item: Item =  {
     "flatMovespeed": 45,
     "tenacity": 30
   },
+  "description": "30 Magic Resist\n45 Move Speed\n30% Tenacity\n\nNoxian Persistence (0s)\nAfter taking magic damage from a Champion, gain a  magic shield for 5 seconds.",
   "maps": [
     11
   ],
   "gold": {
-    "base": 500,
-    "total": 1750,
-    "sell": 1225
+    "base": 0,
+    "total": 1250,
+    "sell": 875
   }
 }
 export default item

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/references'
 import { motion } from 'motion-v'
 import { itemStatRecord } from '~~/shared'
 

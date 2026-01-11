@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Mercurial Scimitar",
   "id": 3139,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to remove all crowd control debuffs and grant massive Move Speed",
   "nicknames": [
     "merc scim",
     "qss",
@@ -31,9 +31,9 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Quicksilver",
-      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 2 seconds.",
-      "unique": true
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion and grants 50% <b>bonus total</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for 2 seconds."
     }
   ],
   "stats": {
@@ -41,6 +41,7 @@ const item: Item =  {
     "lifesteal": 10,
     "magicResistance": 35
   },
+  "description": "50 Attack Damage\n35 Magic Resist\n10% Life Steal\n\n\n\nACTIVE\nQuicksilver\nRemoves all crowd control debuffs (excluding Airborne) and grants Move Speed.",
   "maps": [
     11,
     12,

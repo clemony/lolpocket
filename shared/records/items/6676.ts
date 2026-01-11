@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "The Collector",
   "id": 6676,
   "rank": "Legendary",
@@ -29,14 +30,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Death",
-      "effects": "If you deal post-mitigation damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />execute them.",
-      "unique": true
+      "effects": "If you deal post-mitigation damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />execute them."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Taxes",
-      "effects": "Killing a champion grants you an additional <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />25.",
-      "unique": true
+      "effects": "Killing a champion grants you an additional <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />25."
     }
   ],
   "stats": {
@@ -44,6 +47,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "lethality": 10
   },
+  "description": "50 Attack Damage\n10 Lethality\n25% Critical Strike Chance\n\nDeath\nYour damage executes champions that are below 5% Health.\n\nTaxes\nChampion kills grant 25 bonus gold.",
   "maps": [
     11,
     12,

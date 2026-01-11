@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Glacial Buckler",
   "id": 3024,
   "rank": "Epic",
@@ -34,12 +35,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Armor and Cooldown Reduction",
   "stats": {
     "armor": 25,
     "mana": 300,
     "abilityHaste": 10
   },
+  "description": "25 Armor\n300 Mana\n10 Ability Haste\n\n",
   "maps": [
     11,
     12,

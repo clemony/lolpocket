@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { regionIndex } from '#shared/references'
 import { useDebounceFn } from '@vueuse/core'
 import { safeParse, string } from 'valibot'
 

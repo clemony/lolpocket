@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Malignance",
   "id": 3118,
   "rank": "Legendary",
@@ -17,20 +18,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Partner with an ally to protect each other",
   "nicknames": [
     "burn"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Scorn",
-      "effects": "Gain 20 ultimate haste.",
-      "unique": true
+      "effects": "Gain 20 ultimate haste."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Hatefog",
-      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation).",
-      "unique": true
+      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation)."
     }
   ],
   "stats": {
@@ -38,6 +40,7 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 15
   },
+  "description": "90 Ability Power\n600 Mana\n15 Ability Haste\n\nScorn\nGain 20 Ultimate Ability Haste.\n\nHatefog\nDamaging a champion with your Ultimate burns the ground beneath them for 3s, dealing magic damage per second and reducing their Magic Resist. \n",
   "maps": [
     11,
     12,

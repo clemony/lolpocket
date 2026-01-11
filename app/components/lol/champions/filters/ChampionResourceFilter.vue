@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { championResources } from '#shared/references'
-
 const {
   class: className,
   clear = false,
@@ -24,8 +22,8 @@ const {
       <TransitionSlideLeft
         group
         :class="
-          cn('relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap items-center items-start gap-x-7 gap-y-3 py-0',
-            className,
+          cn('relative z-1 flex max-h-60 w-full flex-col flex-wrap items-start gap-x-7 gap-y-3 py-0',
+             className,
           )
         ">
         <Button
@@ -41,7 +39,7 @@ const {
         </Button>
 
         <BaseListboxItem
-          v-for="resource in championResources"
+          v-for="resource in abilityResources"
           :key="resource.name"
           class="bg-transparent fx-0"
           :value="resource.name"

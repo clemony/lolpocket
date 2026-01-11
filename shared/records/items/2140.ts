@@ -1,16 +1,17 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Elixir of Wrath",
   "id": 2140,
   "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Temporarily grants Attack Damage and heals you when dealing physical damage to champions.",
   "nicknames": [
     "consumable",
     "red"
   ],
   "stats": {},
+  "description": "\n\nConsume\nGrants 30 Attack Damage and 12% Physical Vamp against champions for 3 minutes.",
   "maps": [
     11,
     12,

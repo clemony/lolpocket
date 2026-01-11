@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Shattered Armguard",
   "id": 2421,
   "rank": "Epic",
@@ -29,11 +30,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Upgrades to stopwatch",
   "stats": {
     "abilityPower": 40,
     "armor": 25
   },
+  "description": "40 Ability Power\n25 Armor\n\nShattered Time\nArmguard is broken, but can still be upgraded.\n\nAfter breaking one Armguard, the shopkeeper will only sell you Shattered Armguard.\n\n",
   "maps": [
     11,
     12,

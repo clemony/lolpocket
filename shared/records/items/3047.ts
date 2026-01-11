@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Plated Steelcaps",
   "id": 3047,
   "rank": "Boots",
@@ -18,28 +19,29 @@ const item: Item =  {
     {
       "id": 3174,
       "name": "Armored Advance",
-      "gold": 1700
+      "gold": 1200
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Enhances Move Speed and reduces incoming basic attack damage",
   "nicknames": [
     "boots",
     "ninja tabi"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Plating",
-      "effects": "Reduces all incoming <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage by 10% (<i>excluding from turret attacks</i>).",
-      "unique": true
+      "effects": "Reduces all incoming <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage by 10% (<i>excluding from turret attacks</i>)."
     }
   ],
   "stats": {
     "armor": 25,
     "flatMovespeed": 45
   },
+  "description": "25 Armor\n45 Move Speed\n\nPlating\nReduces incoming damage from Attacks by 10%.",
   "maps": [
     11,
     12,

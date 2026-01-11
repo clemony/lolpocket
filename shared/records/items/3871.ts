@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Zaz'Zak's Realmspike",
   "id": 3871,
   "rank": "Legendary",
@@ -14,22 +15,24 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Void Explosion",
-      "cooldown": "10",
       "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 magic damage (+15% AP) (+3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
-      "unique": true
+      "cooldown": "10"
     },
     {
-      "effects": "Receives diminishing gold from excessive minion kills.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "Receives diminishing gold from excessive minion kills."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Ward",
       "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
-      "range": 600,
-      "unique": true
+      "range": 600
     }
   ],
   "stats": {
@@ -38,6 +41,7 @@ const item: Item =  {
     "healthRegen": 75,
     "manaRegen": 75
   },
+  "description": "200 Health\n75% Base Health Regen\n75% Base Mana Regen\n9 Gold Per 10 Seconds\n\nVoid Explosion\nDealing Ability damage to a champion causes an explosion that deals magic damage.\n\nActive (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
   "maps": [
     11
   ],

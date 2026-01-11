@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Dawncore",
   "id": 6621,
   "rank": "Legendary",
@@ -27,9 +28,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "First Light",
-      "effects": "Gain 2% heal and shield power hsp and 10 ability power for every additional 100% <b>base</b> mana regeneration.",
-      "unique": true
+      "effects": "Gain 2% heal and shield power hsp and 10 ability power for every additional 100% <b>base</b> mana regeneration."
     }
   ],
   "stats": {
@@ -37,6 +39,7 @@ const item: Item =  {
     "healAndShieldPower": 16,
     "manaRegen": 100
   },
+  "description": "45 Ability Power\n16% Heal and Shield Power\n100% Base Mana Regen\n\nFirst Light\nGain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
   "maps": [
     11,
     12,

@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Rite of Ruin",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Rite Of Ruin",
   "id": 3430,
   "rank": "Legendary",
   "specialRecipe": 0,
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Wrath and Ruin",
-      "effects": "Casting an ability grants <img src=\"/img/icons/2.5%-critical-strike-chance.webp\" class=\"tip-icon\" />2.5% critical strike chance for 6 seconds, stacking up to 8 times for a maximum of <img src=\"/img/icons/critical-strike-chance.webp\" class=\"tip-icon\" />critical strike chance.",
-      "unique": true
+      "effects": "Casting an ability grants <img src=\"/img/icons/2.5%-critical-strike-chance.webp\" class=\"tip-icon\" />2.5% critical strike chance for 6 seconds, stacking up to 8 times for a maximum of <img src=\"/img/icons/critical-strike-chance.webp\" class=\"tip-icon\" />critical strike chance."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Salvage the Wreckage",
-      "effects": "Casting an ability has a 0% – 100% (based on critical strike chance) chance to grant you or your ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds that absorbs 70 – 210 (based on level) (+25% <b>bonus</b> AD) (+15% AP) damage.",
-      "unique": true
+      "effects": "Casting an ability has a 0% – 100% (based on critical strike chance) chance to grant you or your ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds that absorbs 70 – 210 (based on level) (+25% <b>bonus</b> AD) (+15% AP) damage."
     }
   ],
   "stats": {
@@ -22,6 +25,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "abilityHaste": 15
   },
+  "description": "50 Ability Power\n15 Ability Haste\n25% Critical Strike Chance\n\nWrath and Ruin\nOn spell cast, gain 2.5% critical chance for 6 seconds, stacking up to 20%.\n\nSalvage the Wreckage\nYour spells have a chance equal to your crit chance to grant you or your targeted ally a shield for  for 3s.\n",
   "maps": [
     30
   ],

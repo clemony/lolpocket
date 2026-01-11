@@ -14,11 +14,11 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
     <!-- loading skeleton -->
     <div
       v-if="loading "
-      class="flex flex-col gap-8">
+      class="flex w-full flex-col gap-8">
       <Skeleton
         v-for="i in 12"
         :key="i"
-        class="field-box h-40 w-full" />
+        class="field-box h-40 w-full min-w-full grow" />
     </div>
 
     <!-- empty state -->

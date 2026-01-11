@@ -1,0 +1,13 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 221057,
+  "name": "Negatron Cloak",
+  "description": "30 Magic Resist\n\n",
+  "gold": {
+    "base": 450,
+    "purchasable": false,
+    "total": 450,
+    "sell": 315
+  }
+}
+export default item

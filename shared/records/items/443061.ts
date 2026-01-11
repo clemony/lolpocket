@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Force of Entropy",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Force Of Entropy",
   "id": 443061,
   "rank": "Special",
   "specialRecipe": 220007,
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Atrophy",
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon\" />champions have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+33% of immobilizing effect's duration).",
-      "unique": true
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon\" />champions have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+33% of immobilizing effect's duration)."
     }
   ],
   "stats": {
@@ -17,6 +19,7 @@ const item: Item =  {
     "health": 900,
     "abilityHaste": 30
   },
+  "description": "900 Health\n30 Ability Haste\n25% Critical Strike Chance\n\nAtrophy\nImmobilizing Crowd Control effects you apply roll your Critical Chance to increase their duration by 0.25 +33% seconds.",
   "maps": [
     30
   ],

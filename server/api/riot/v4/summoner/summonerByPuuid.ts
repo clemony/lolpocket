@@ -1,5 +1,5 @@
 import { riotFetch } from "riot"
-import { apiPath } from "~~/server/helpers"
+import { apiPath } from "~~/server/domain"
 import type { SummonerReturn } from "~~/server/types"
 
 export function fetchSummonerByPuuid(puuid: string, region: string) {

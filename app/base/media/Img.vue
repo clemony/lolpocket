@@ -1,12 +1,9 @@
 <script lang="ts" setup>
 import type { ImgHTMLAttributes } from 'vue'
 
-defineOptions({
-  inheritAttrs: false,
-})
-
 const props = withDefaults(defineProps<{
-  size?: ElementVariants['size']
+  size?: ButtonVariants['size']
+  variant?: ButtonVariants['variant']
   alt: ImgHTMLAttributes['alt']
   ratio?: number
   src: ImgHTMLAttributes['src']
@@ -19,7 +16,8 @@ const props = withDefaults(defineProps<{
   decoding: 'async',
   format: 'webp',
   loading: 'lazy',
-  ratio: 1
+  ratio: 1,
+  variant: 'none'
 })
 
 const emit = defineEmits(['load'])
@@ -27,7 +25,8 @@ const emit = defineEmits(['load'])
 
 <template>
   <div
-    :class="cn('inset-0 grid size-full shrink-0 place-items-center select-none', elementVariants({ size: props.size }))">
+    :class="cn(buttonVariants({ base: 'btn', variant: props.variant, size: props.size }), 'relative inset-0 grid shrink-0 place-items-center overflow-hidden border-0 select-none',
+               props.class)">
     <NuxtImg
       v-slot="{ src: source, isLoaded, imgAttrs }"
       :src="props.src"
@@ -42,7 +41,6 @@ const emit = defineEmits(['load'])
         :class="cn(
           'size-full shrink-0 opacity-0 transition-[opacity,transform] duration-400',
           { 'translate-z-0 opacity-100 animate-in fade-in duration-400  transition-all duration-500': isLoaded },
-          props.class,
         )"
         v-bind="imgAttrs"
         @load="emit('load')" />
@@ -54,8 +52,9 @@ const emit = defineEmits(['load'])
         <span v-else-if="props.loadingStyle === 'none'" />
         <Skeleton
           v-else
-          class="size-full bg-b1" />
+          class="size-full" />
       </div>
     </NuxtImg>
+    <slot />
   </div>
 </template>

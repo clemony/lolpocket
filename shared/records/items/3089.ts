@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Rabadon's Deathcap",
   "id": 3089,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Massively increases Ability Power",
   "nicknames": [
     "banksys",
     "dc",
@@ -28,14 +28,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Magical Opus",
-      "effects": "Increase your ability power by 30%.",
-      "unique": true
+      "effects": "Increase your ability power by 30%."
     }
   ],
   "stats": {
     "abilityPower": 130
   },
+  "description": "130 Ability Power\n\nMagical Opus\nIncreases your total Ability Power by 30%.",
   "maps": [
     11,
     12,

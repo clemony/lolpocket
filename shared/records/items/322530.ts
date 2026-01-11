@@ -1,0 +1,16 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 322530,
+  "name": "Diadem of Songs",
+  "description": "200 Health\n8% Heal and Shield Power\n1000 Mana\n100% Base Mana Regen\n\nHarmony\nGain % Heal and Shield Power.\n\nConsonance\nWhile you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
+  "maps": [
+    11
+  ],
+  "gold": {
+    "base": 2250,
+    "purchasable": false,
+    "total": 2250,
+    "sell": 1575
+  }
+}
+export default item

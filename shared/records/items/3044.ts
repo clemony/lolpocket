@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Phage",
   "id": 3044,
   "rank": "Epic",
@@ -44,21 +45,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Attacks and kills give a small burst of speed",
   "nicknames": [
     "mallet"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Rage",
-      "effects": "Basic attacks on-hit grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed for 2 seconds.",
-      "unique": true
+      "effects": "Basic attacks on-hit grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed for 2 seconds."
     }
   ],
   "stats": {
     "attackDamage": 15,
     "health": 200
   },
+  "description": "15 Attack Damage\n200 Health\n\nRage\nAttacking grants Move Speed for 2 seconds.",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Scout's Slingshot",
   "id": 3144,
   "rank": "Epic",
@@ -18,12 +19,22 @@ const item: Item =  {
     {
       "id": 3032,
       "name": "Yun Tal Wildarrows",
-      "gold": 3000
+      "gold": 3100
+    },
+    {
+      "id": 3097,
+      "name": "Stormrazor",
+      "gold": 3200
     },
     {
       "id": 3095,
       "name": "Stormrazor",
       "gold": 3000
+    },
+    {
+      "id": 2512,
+      "name": "Fiendhunter Bolts",
+      "gold": 2650
     },
     {
       "id": 3087,
@@ -44,17 +55,18 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to deal magic damage and slow target champion",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Bullseye",
-      "effects": "Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second ).",
-      "unique": true
+      "effects": "Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second )."
     }
   ],
   "stats": {
     "attackSpeed": 20
   },
+  "description": "20% Attack Speed\n\nBullseye\nDamaging a champion deals bonus magic damage. \nAttacks reduce this cooldown by 1 second.",
   "maps": [
     11,
     12,

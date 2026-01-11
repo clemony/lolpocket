@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Morellonomicon",
   "id": 3165,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases magic damage",
   "nicknames": [
     "forbidden book",
     "grievous",
@@ -32,9 +32,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Grievous Wounds",
-      "effects": "Dealing magic damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
-      "unique": true
+      "effects": "Dealing magic damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds."
     }
   ],
   "stats": {
@@ -42,6 +43,7 @@ const item: Item =  {
     "health": 350,
     "abilityHaste": 15
   },
+  "description": "75 Ability Power\n350 Health\n15 Ability Haste\n\nGrievous Wounds\nDealing magic damage to champions applies 40% Wounds for 3 seconds.",
   "maps": [
     11,
     12,

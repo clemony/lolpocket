@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Reinforced Armor (Turret Item)",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Reinforced Armor",
   "id": 1502,
   "rank": "Special",
   "specialRecipe": 0,
@@ -7,11 +8,13 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
-      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage."
     }
   ],
   "stats": {},
+  "description": "\n\nReinforced\nTurrets take 80% reduced damage, including True Damage, when no enemy Lane Minions or Rift Herald are nearby.\n\nMelee Weakness\nTurrets take 20% increased damage from melee Champions.",
   "maps": [
     11,
     12,

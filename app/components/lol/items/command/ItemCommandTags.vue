@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/references'
-
 const { filtered, filters, setFilter } = useItemFilter()
 const searchInput = ref([])
 </script>

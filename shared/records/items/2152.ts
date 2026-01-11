@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Elixir of Force",
   "id": 2152,
   "rank": "Consumable",
@@ -6,6 +7,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "stats": {},
+  "description": "\n\nConsume\nGrants 30 Adaptive Force for 60 seconds. ",
   "maps": [
     11,
     12,

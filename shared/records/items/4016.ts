@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Wordless Promise",
   "id": 4016,
   "rank": "Legendary",
@@ -7,16 +8,17 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Promise",
-      "effects": "While your <i>Promised</i> ally is tethered to you, gain ability power equal to 20% of <i>Promised</i> ally's AP, and grant your <i>Promised</i> ally ability haste equal to 20% of your ability haste. <i>Increases and decreases to each teammate's stats recalculate this effect.</i>",
-      "unique": true
+      "effects": "While your <i>Promised</i> ally is tethered to you, gain ability power equal to 20% of <i>Promised</i> ally's AP, and grant your <i>Promised</i> ally ability haste equal to 20% of your ability haste. <i>Increases and decreases to each teammate's stats recalculate this effect.</i>"
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Promise",
-      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them.",
-      "unique": true
+      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them."
     }
   ],
   "stats": {
@@ -24,6 +26,7 @@ const item: Item =  {
     "healAndShieldPower": 25,
     "abilityHaste": 25
   },
+  "description": "50 Ability Power\n25% Heal and Shield Power\n25 Ability Haste\n\nPromise\nGain 20% of your Promised ally's Ability Power, and grant your Promised ally 20% of your Ability Haste.\n\nACTIVE (0s)\nPromise\nMake a Promise to an ally.",
   "maps": [
     30
   ],

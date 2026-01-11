@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Needlessly Large Rod",
   "id": 1058,
   "rank": "Basic",
@@ -37,13 +38,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Greatly increases Ability Power",
   "nicknames": [
     "nlr"
   ],
   "stats": {
     "abilityPower": 65
   },
+  "description": "65 Ability Power\n\n",
   "maps": [
     11,
     12,

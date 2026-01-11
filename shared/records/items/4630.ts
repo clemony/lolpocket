@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Blighting Jewel",
   "id": 4630,
   "rank": "Epic",
@@ -32,6 +33,7 @@ const item: Item =  {
     "abilityPower": 25,
     "percentMagicPenetration": 13
   },
+  "description": "25 Ability Power\n13% Magic Penetration\n\n",
   "maps": [
     11,
     12,

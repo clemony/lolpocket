@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Winged Moonplate",
   "id": 3066,
   "rank": "Epic",
@@ -49,6 +50,7 @@ const item: Item =  {
     "health": 200,
     "percentMovespeed": 4
   },
+  "description": "200 Health\n4% Move Speed\n\n",
   "maps": [
     11,
     12,

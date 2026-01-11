@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Lich Bane",
   "id": 3100,
   "rank": "Legendary",
@@ -22,15 +23,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Grants a bonus to next attack after spell cast",
   "nicknames": [
     "Spellblade"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds gains 50% <b>bonus</b> attack speed and deals 75% <b>base</b> AD (+40% AP) <b>bonus</b> magic damage on-hit (1.5 second cooldown, starts after using the empowered attack).",
-      "unique": true
+      "effects": "After using an ability, your next basic attack within 10 seconds gains 50% <b>bonus</b> attack speed and deals 75% <b>base</b> AD (+40% AP) <b>bonus</b> magic damage on-hit (1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
@@ -38,6 +39,7 @@ const item: Item =  {
     "percentMovespeed": 4,
     "abilityHaste": 10
   },
+  "description": "100 Ability Power\n4% Move Speed\n10 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus magic damage On-Hit.",
   "maps": [
     11,
     12,

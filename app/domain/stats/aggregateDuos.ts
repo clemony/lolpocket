@@ -54,7 +54,7 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
         if (p.puuid === player.puuid) continue
 
         const target = p.teamId === teamId ? team : enemy
-        const role = normalizeRole(p.teamPosition)
+        const role = normalizeRole(p.role)
 
         bumpChampion(target, role, p.championId, win, gameDuration)
       }

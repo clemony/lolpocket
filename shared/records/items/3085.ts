@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Runaan's Hurricane",
   "id": 3085,
   "rank": "Legendary",
@@ -17,12 +18,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Ranged attacks fire two bolts at nearby enemies",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Wind's Fury",
-      "effects": "Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 55% AD physical damage. Bolts apply <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit effects and are affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strike modifiers.",
-      "unique": true
+      "effects": "Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 55% AD physical damage. Bolts apply <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit effects and are affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strike modifiers."
     }
   ],
   "stats": {
@@ -30,6 +31,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
+  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nWind's Fury\nAttacks fire bolts at 2 additional enemies near the target.\nEach bolt deals physical damage and applies On-Hit effects.",
   "maps": [
     11,
     12,

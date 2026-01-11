@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { ItemTag } from '#shared/references'
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
   tag: ItemTag
@@ -11,7 +9,7 @@ const { class: className } = defineProps<{
   <span
     :class="
       cn('grid size-6! shrink-0 place-items-center rounded-full shadow-xs dst',
-        className,
+         className,
       )
     "
     :style="{

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Turret Plating",
   "id": 1515,
   "rank": "Special",
@@ -7,8 +8,9 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
-      "effects": "Provides extra defensive measures. Attackers are rewarded for destroying portions of the plating. This item disappears after 14 minutes.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "Provides extra defensive measures. Attackers are rewarded for destroying portions of the plating."
     }
   ],
   "stats": {},

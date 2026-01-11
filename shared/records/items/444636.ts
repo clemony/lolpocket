@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Night Harvester",
   "id": 444636,
   "rank": "Special",
@@ -11,9 +12,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Soulrend",
-      "effects": "Damaging an enemy champion with a basic attack or ability damage deals 125 (+15% AP) <b>bonus</b> magic damage and grants you 40% <b>bonus</b> movement speed for 1.5 seconds, with the duration extending on subsequent triggers (10 second cooldown per champion).",
-      "unique": true
+      "effects": "Damaging an enemy champion with a basic attack or ability damage deals 125 (+15% AP) <b>bonus</b> magic damage and grants you 40% <b>bonus</b> movement speed for 1.5 seconds, with the duration extending on subsequent triggers (10 second cooldown per champion)."
     }
   ],
   "stats": {
@@ -21,6 +23,7 @@ const item: Item =  {
     "health": 300,
     "abilityHaste": 25
   },
+  "description": "90 Ability Power\n300 Health\n25 Ability Haste\n\nSoulrend (0s) per champion\nDamaging a champion with Attacks or Abilities deals an additional  magic damage and grants you 40% Move Speed for 1.5 seconds.\n\nDamaging a new champion will extend the duration of the Move Speed bonus.",
   "maps": [
     30
   ],

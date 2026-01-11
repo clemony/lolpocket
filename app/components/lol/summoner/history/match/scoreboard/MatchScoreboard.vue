@@ -12,9 +12,9 @@ const teams = computed(() => {
 </script>
 
 <template>
-  <div class="grid w-full grid-cols-2 gap-3 px-3">
+  <div class="grid w-full grid-cols-2 gap-3 px-3 pt-4">
     <!-- Blue Stats -->
-    <div class="grid w-full auto-rows-max gap-y-2">
+    <div class="grid w-full auto-rows-max place-items-center gap-y-3">
       <TeamEndStatTotals :team="match.teams[0]" />
       <TeamObjectives :team="match.teams[0]" />
 
@@ -25,11 +25,17 @@ const teams = computed(() => {
         :key="i"
         :match
         :player="player" />
-    </div>
 
+      <div class="grid h-full w-fit -translate-y-0.25 grid-cols-5 place-items-center gap-1.5 px-1">
+        <ChampionBan
+          v-for="champion in match.teams[0].bans"
+          :id="champion"
+          :key="champion" />
+      </div>
+    </div>
     <!-- red Stats -->
 
-    <div class="w-full">
+    <div class="grid w-full auto-rows-max place-items-center gap-y-3">
       <TeamEndStatTotals :team="match.teams[1]" />
       <TeamObjectives :team="match.teams[1]" />
 
@@ -40,16 +46,21 @@ const teams = computed(() => {
         :key="i"
         :match
         :player="player" />
+
+      <div class="grid h-full w-fit -translate-y-0.25 grid-cols-5 place-items-center gap-1.5 overflow-hidden px-1">
+        <ChampionBan
+          v-for="champion in match.teams[1].bans"
+          :id="champion"
+          :key="champion" />
+      </div>
     </div>
   </div>
-  <div class="flex w-full flex-col gap-2 overflow-visible pb-1">
-    <!-- Blue Stats -->
+<!--
+   <div class="flex w-full flex-col gap-2 overflow-visible pb-1">
 
     <TeamMatchEndStats
       :team="match.teams[0]"
       class="mt-3 from-inspiration/60 shadow-warm-soft" />
-
-    <!--   teammate -->
 
     <div class="size-full">
       <MatchTeammate
@@ -59,13 +70,9 @@ const teams = computed(() => {
         :player="player" />
     </div>
 
-    <!-- red Stats -->
-
     <TeamMatchEndStats
       :team="match.teams[1]"
       class="from-domination/60 shadow-warm-soft" />
-
-    <!--   teammate -->
 
     <div class="size-full">
       <MatchTeammate
@@ -74,5 +81,5 @@ const teams = computed(() => {
         :player="player"
         :match />
     </div>
-  </div>
+  </div> -->
 </template>

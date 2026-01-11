@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Bandleglass Mirror",
   "id": 4642,
   "rank": "Epic",
@@ -72,6 +73,7 @@ const item: Item =  {
     "manaRegen": 100,
     "abilityHaste": 10
   },
+  "description": "20 Ability Power\n100% Base Mana Regen\n10 Ability Haste\n\n",
   "maps": [
     11,
     12,

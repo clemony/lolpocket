@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Seeker's Armguard",
   "id": 2420,
   "rank": "Epic",
@@ -29,7 +30,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to become invincible but unable to take actions",
   "nicknames": [
     "zhg",
     "zonyas",
@@ -37,15 +37,16 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Time Stop",
-      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
-      "unique": true
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
     }
   ],
   "stats": {
     "abilityPower": 40,
     "armor": 25
   },
+  "description": "40 Ability Power\n25 Armor\n\nTime Stop (Single use)\nEnter Stasis for 2.5 seconds.",
   "maps": [
     11,
     12,

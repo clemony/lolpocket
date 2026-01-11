@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { championRoles } from '#shared/references'
-
 const {
   class: className,
   clear = false,
@@ -25,7 +23,7 @@ const {
         group
         :class="
           cn('relative z-1 flex max-h-64 w-9/10 w-full flex-col flex-wrap items-center items-start gap-2 gap-y-3 py-0',
-            className,
+             className,
           )
         ">
         <Button

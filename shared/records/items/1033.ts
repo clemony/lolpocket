@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Null-Magic Mantle",
   "id": 1033,
   "rank": "Basic",
@@ -27,6 +28,11 @@ const item: Item =  {
       "id": 3190,
       "name": "Locket of the Iron Solari",
       "gold": 2200
+    },
+    {
+      "id": 2524,
+      "name": "Bandlepipes",
+      "gold": 2000
     },
     {
       "id": 3211,
@@ -72,10 +78,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Magic Resist",
   "stats": {
     "magicResistance": 20
   },
+  "description": "20 Magic Resist\n\n",
   "maps": [
     11,
     12,

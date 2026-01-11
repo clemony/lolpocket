@@ -2,7 +2,6 @@
 import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
-import { championPositions } from '~~/shared/references'
 
 const {
   side = 'bottom',

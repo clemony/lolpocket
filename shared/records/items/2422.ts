@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Slightly Magical Boots",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Slightly Magical Footwear",
   "id": 2422,
   "rank": "Special",
   "buildsInto": [
@@ -44,14 +45,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Slightly Quicker",
-      "effects": "Gain 10 <b>bonus</b> movement speed.",
-      "unique": true
+      "effects": "Gain 10 <b>bonus</b> movement speed."
     }
   ],
   "stats": {
     "flatMovespeed": 25
   },
+  "description": "25 Move Speed\n\nGrants an additional 10 Move Speed. Boots that build from Slightly Magical Footwear retain this bonus Move Speed.",
   "maps": [
     11,
     12,

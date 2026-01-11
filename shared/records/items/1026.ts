@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Blasting Wand",
   "id": 1026,
   "rank": "Basic",
@@ -27,6 +28,16 @@ const item: Item =  {
       "id": 3118,
       "name": "Malignance",
       "gold": 2700
+    },
+    {
+      "id": 2510,
+      "name": "Dusk and Dawn",
+      "gold": 3100
+    },
+    {
+      "id": 2522,
+      "name": "Actualizer",
+      "gold": 3100
     },
     {
       "id": 3116,
@@ -62,10 +73,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Moderately increases Ability Power",
   "stats": {
     "abilityPower": 45
   },
+  "description": "45 Ability Power\n\n",
   "maps": [
     11,
     12,

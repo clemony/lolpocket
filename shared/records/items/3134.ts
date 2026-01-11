@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Serrated Dirk",
   "id": 3134,
   "rank": "Epic",
@@ -29,6 +30,11 @@ const item: Item =  {
       "id": 126697,
       "name": "Hubris",
       "gold": 2950
+    },
+    {
+      "id": 2520,
+      "name": "Bastionbreaker",
+      "gold": 3200
     },
     {
       "id": 6691,
@@ -63,7 +69,7 @@ const item: Item =  {
     {
       "id": 3179,
       "name": "Umbral Glaive",
-      "gold": 2500
+      "gold": 2800
     },
     {
       "id": 6695,
@@ -84,7 +90,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Attack Damage and Lethality",
   "nicknames": [
     "lethality"
   ],
@@ -92,6 +97,7 @@ const item: Item =  {
     "attackDamage": 20,
     "lethality": 10
   },
+  "description": "20 Attack Damage\n10 Lethality\n\n",
   "maps": [
     11,
     12,

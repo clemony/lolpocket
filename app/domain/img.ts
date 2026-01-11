@@ -48,6 +48,10 @@ export function skinNameFromUrl(url: string): string | undefined {
   return `${skins[name]?.find((skin) => skin.id === id.toString())?.name} ${name}`
 }
 
+const sanctumIcons = [7056, 7057]
 export function getSummonerIcon(icon) {
-  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg`
+  if (sanctumIcons.includes(icon)) return `/img/sanctum/${icon}.webp`
+  return `https://ddragon.leagueoflegends.com/cdn/${patchIndex[0]}/img/profileicon/${icon}.png`
 }
+
+//`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons.jpg`

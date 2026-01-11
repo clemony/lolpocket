@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Guardian's Dirk",
   "id": 223185,
   "rank": "Starter",
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Agricultural Reaper",
-      "effects": "Increases the effects of 20px|link=Arena#Power Flowers <i>Power Flowers</i> by 20%. Additionally, dealing damage to a <i>Power Flower</i> grants you 100 <b>bonus</b> movement speed for 3 seconds.",
-      "unique": true
+      "effects": "Increases the effects of 20px|link=Arena#Power Flowers <i>Power Flowers</i> by 20%. Additionally, dealing damage to a <i>Power Flower</i> grants you 100 <b>bonus</b> movement speed for 3 seconds."
     }
   ],
   "stats": {
@@ -17,6 +19,7 @@ const item: Item =  {
     "lethality": 11,
     "abilityHaste": 10
   },
+  "description": "25 Attack Damage\n11 Lethality\n10 Ability Haste\n\nAgricultural Reaper \nIncreases effects of Power Flower by 20%. Gain 100 Move speed for 3s after attacking a plant.",
   "maps": [
     30
   ],

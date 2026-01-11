@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 323190,
+  "name": "Locket of the Iron Solari",
+  "description": "250 Health\n30 Armor\n30 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 200 - 360 Shield that decays over 2.5 seconds.",
+  "maps": [
+    11
+  ],
+  "gold": {
+    "base": 1100,
+    "total": 2600,
+    "sell": 1820
+  }
+}
+export default item

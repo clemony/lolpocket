@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Boots of Swiftness",
   "id": 3009,
   "rank": "Boots",
@@ -13,26 +14,27 @@ const item: Item =  {
     {
       "id": 3170,
       "name": "Swiftmarch",
-      "gold": 1500
+      "gold": 1000
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Enhances Move Speed and reduces the effect of slows",
   "nicknames": [
     "swifties"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Fleetfooted",
-      "effects": "Gain 25% slow resist.",
-      "unique": true
+      "effects": "Gain 25% slow resist."
     }
   ],
   "stats": {
     "flatMovespeed": 55
   },
+  "description": "55 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 25%.",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sunfire Aegis",
   "id": 3068,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "High armor. Constantly deals damage to nearby enemies. Immobilize enemies to release a wave of damaging flame",
   "nicknames": [
     "burn",
     "sunborn",
@@ -25,9 +25,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Immolate",
-      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 20 (+1% <b>bonus</b> health) magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 160% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and to 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
-      "unique": true
+      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 20 (+1% <b>bonus</b> health) magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 160% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and to 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage."
     }
   ],
   "stats": {
@@ -35,6 +36,7 @@ const item: Item =  {
     "health": 350,
     "abilityHaste": 10
   },
+  "description": "350 Health\n50 Armor\n10 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. ",
   "maps": [
     11,
     12,

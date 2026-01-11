@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Void Staff",
   "id": 3135,
   "rank": "Legendary",
@@ -17,11 +18,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases magic damage",
   "stats": {
     "abilityPower": 95,
     "percentMagicPenetration": 40
   },
+  "description": "95 Ability Power\n40% Magic Penetration\n\n",
   "maps": [
     11,
     12,

@@ -27,7 +27,7 @@ export const useAggregateSingleChampion = (
       if (!row) continue
 
       // role
-      const roleKey = normalizeRole(row.teamPosition)
+      const roleKey = normalizeRole(row.role)
       const roleStat = getRoleStat(acc.role.stats, roleKey)
 
       roleStat.games++

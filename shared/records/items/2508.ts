@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Fated Ashes",
   "id": 2508,
   "rank": "Epic",
@@ -26,14 +27,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Inflame",
-      "effects": "Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15 magic damage. Against monsters, the burn deals 7.5 <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60 magic damage.",
-      "unique": true
+      "effects": "Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15 magic damage. Against monsters, the burn deals 7.5 <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60 magic damage."
     }
   ],
   "stats": {
     "abilityPower": 30
   },
+  "description": "30 Ability Power\n\nInflame\nDamaging Abilities deal 15 bonus magic damage over 3 seconds.\nDeals an additional 45 magic damage to monsters.",
   "maps": [
     11,
     12,

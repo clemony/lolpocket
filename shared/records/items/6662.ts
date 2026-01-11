@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Iceborn Gauntlet",
   "id": 6662,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "High Magic Resist.Passively slow nearby enemies. When spells are cast near you, release a wave of energy that damages and slows.",
   "nicknames": [
     "Spellblade",
     "ibg",
@@ -32,9 +32,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />12.5%) (1.5 second cooldown, starts after using the empowered attack).",
-      "unique": true
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />12.5%) (1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
@@ -42,6 +43,7 @@ const item: Item =  {
     "health": 300,
     "abilityHaste": 15
   },
+  "description": "300 Health\n50 Armor\n15 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit and creates a frost field for 2s that Slows.",
   "maps": [
     11,
     12,

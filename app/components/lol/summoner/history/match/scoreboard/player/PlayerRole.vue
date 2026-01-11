@@ -11,11 +11,11 @@ const { class: className, player } = defineProps<{
     :offset="[2, -2]"
     :class="
       cn('flex size-full flex-col items-start justify-start gap-1 py-1 font-medium tracking-tight *:text-1 *:leading-none **:text-nowrap',
-        className,
+         className,
       )
     ">
     <p>
-      {{ player.teamPosition }}
+      {{ player.role }}
     </p>
   </div>
 </template>

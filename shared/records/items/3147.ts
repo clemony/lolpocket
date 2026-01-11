@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Haunting Guise",
   "id": 3147,
   "rank": "Epic",
@@ -34,21 +35,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Deals additional physical damage when ambushing enemies",
   "nicknames": [
     "mask"
   ],
   "passives": [
     {
+      "unique": false,
+      "mythic": false,
       "name": "Madness",
-      "effects": "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%.",
-      "unique": false
+      "effects": "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%."
     }
   ],
   "stats": {
     "abilityPower": 30,
     "health": 200
   },
+  "description": "30 Ability Power\n200 Health\n\nMadness\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 6%. ",
   "maps": [
     11,
     12,

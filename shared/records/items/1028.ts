@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Ruby Crystal",
   "id": 1028,
   "rank": "Basic",
@@ -37,6 +38,11 @@ const item: Item =  {
       "id": 3801,
       "name": "Crystalline Bracer",
       "gold": 800
+    },
+    {
+      "id": 2526,
+      "name": "Whispering Circlet",
+      "gold": 2250
     },
     {
       "id": 2021,
@@ -129,6 +135,11 @@ const item: Item =  {
       "gold": 2650
     },
     {
+      "id": 322526,
+      "name": "Whispering Circlet",
+      "gold": 2250
+    },
+    {
       "id": 3742,
       "name": "Dead Man's Plate",
       "gold": 2900
@@ -142,13 +153,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Health",
   "nicknames": [
     "red"
   ],
   "stats": {
     "health": 150
   },
+  "description": "150 Health\n\n",
   "maps": [
     11,
     12,

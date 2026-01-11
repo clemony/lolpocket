@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Caulfield's Warhammer",
   "id": 3133,
   "rank": "Epic",
@@ -51,6 +52,11 @@ const item: Item =  {
       "gold": 2750
     },
     {
+      "id": 2517,
+      "name": "Endless Hunger",
+      "gold": 3000
+    },
+    {
       "id": 6692,
       "name": "Eclipse",
       "gold": 2900
@@ -88,7 +94,7 @@ const item: Item =  {
     {
       "id": 3179,
       "name": "Umbral Glaive",
-      "gold": 2500
+      "gold": 2800
     },
     {
       "id": 6333,
@@ -114,11 +120,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Attack Damage and Cooldown Reduction",
   "stats": {
     "attackDamage": 20,
     "abilityHaste": 10
   },
+  "description": "20 Attack Damage\n10 Ability Haste\n\n",
   "maps": [
     11,
     12,

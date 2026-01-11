@@ -1,10 +1,10 @@
-import { matchDB } from "~/stores"
+import { lpdb } from "~/stores"
 
 function updateBucket(bucket: QueueStats, match: MatchData, player: Player) {
   bucket.games++
   player.win ? bucket.wins++ : bucket.losses++
 
-  bucket.kills += player.stats.kills.value
+  bucket.kills += player.stats.kills
   bucket.deaths += player.stats.deaths
   bucket.assists += player.stats.assists
   bucket.killParticipation += player.stats.kp
@@ -20,18 +20,14 @@ const TRACKED_QUEUES: TrackedQueueId[] = [400, 420, 440]
 export const useAddMatches = async (matches: MatchData[]) => {
   if (!matches.length) return
 
-  await matchDB.transaction(
-    "rw",
-    matchDB.matchData,
-    matchDB.playerChampions,
-    async () => {
-      await matchDB.matchData.bulkPut(matches)
-
+  await lpdb.transaction("rw", lpdb.matchData, async () => {
+    await lpdb.matchData.bulkPut(matches)
+    /*
       for (const match of matches) {
         for (const player of match.participants) {
           const key: [string, number] = [player.puuid, player.championId]
 
-          const existing = (await matchDB.playerChampions.get(key)) ?? {
+          const existing = (await lpdb.playerChampions.get(key)) ?? {
             puuid: player.puuid,
             championId: player.championId,
             championName: champNameById(player.championId),
@@ -51,7 +47,7 @@ export const useAddMatches = async (matches: MatchData[]) => {
           }
 
           if (existing.overall.matchIds.includes(match.matchId)) {
-            await matchDB.playerChampions.put(existing)
+            await lpdb.playerChampions.put(existing)
             continue
           }
 
@@ -75,9 +71,8 @@ export const useAddMatches = async (matches: MatchData[]) => {
             updateBucket(existing.queues[qKey], match, player)
           }
 
-          await matchDB.playerChampions.put(existing)
+          await lpdb.playerChampions.put(existing)
         }
-      }
-    }
-  )
+      } */
+  })
 }

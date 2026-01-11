@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "B. F. Sword",
   "id": 1038,
   "rank": "Basic",
@@ -6,7 +7,12 @@ const item: Item =  {
     {
       "id": 3032,
       "name": "Yun Tal Wildarrows",
-      "gold": 3000
+      "gold": 3100
+    },
+    {
+      "id": 3097,
+      "name": "Stormrazor",
+      "gold": 3200
     },
     {
       "id": 3072,
@@ -36,19 +42,19 @@ const item: Item =  {
     {
       "id": 3031,
       "name": "Infinity Edge",
-      "gold": 3450
+      "gold": 3500
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Greatly increases Attack Damage",
   "nicknames": [
     "bf"
   ],
   "stats": {
     "attackDamage": 40
   },
+  "description": "40 Attack Damage\n\n",
   "maps": [
     11,
     12,

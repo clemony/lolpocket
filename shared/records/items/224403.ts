@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "The Golden Spatula",
   "id": 224403,
   "rank": "Special",
@@ -15,9 +16,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Doing Something",
-      "effects": "You are permanently 20px|link= <b>On Fire!</b>, causing you to Burn enemies within 400 units every second for 26 – 43 (based on level) magic damage and reduce your abilities' cooldowns by 0.2 seconds every 0.25 seconds as well as gain 5% <b>bonus</b> movement speed, increased to 20% ms while facing nearby enemy champions, 20% <b>bonus</b> attack speed, 50 – 900 (based on level) <b>bonus</b> health, 1.5 <b>bonus</b> mana regeneration, and 4 <b>bonus</b> energy regeneration. While <b>On Fire!</b>, however, you also take (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />35%) increased damage and reduce the effectiveness of incoming heals and shields by 25%.",
-      "unique": true
+      "effects": "You are permanently 20px|link= <b>On Fire!</b>, causing you to Burn enemies within 400 units every second for 26 – 43 (based on level) magic damage and reduce your abilities' cooldowns by 0.2 seconds every 0.25 seconds as well as gain 5% <b>bonus</b> movement speed, increased to 20% ms while facing nearby enemy champions, 20% <b>bonus</b> attack speed, 50 – 900 (based on level) <b>bonus</b> health, 1.5 <b>bonus</b> mana regeneration, and 4 <b>bonus</b> energy regeneration. While <b>On Fire!</b>, however, you also take (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />35%) increased damage and reduce the effectiveness of incoming heals and shields by 25%."
     }
   ],
   "stats": {
@@ -35,6 +37,7 @@ const item: Item =  {
     "abilityHaste": 20,
     "omnivamp": 15
   },
+  "description": "90 Attack Damage\n125 Ability Power\n60% Attack Speed\n25% Critical Strike Chance\n250 Health\n30 Armor\n30 Magic Resist\n250 Mana\n20 Ability Haste\n10% Move Speed\n10% Omnivamp\n100% Base Health Regen\n100% Base Mana Regen\n\nDoing Something\nYou are permanently On Fire!\n\n\"It must do something...\nDeclined, it does EVERYTHING\"",
   "maps": [
     30
   ],

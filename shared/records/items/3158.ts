@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Ionian Boots of Lucidity",
   "id": 3158,
   "rank": "Boots",
@@ -18,24 +19,25 @@ const item: Item =  {
     {
       "id": 3171,
       "name": "Crimson Lucidity",
-      "gold": 1400
+      "gold": 900
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Move Speed and Cooldown Reduction",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Ionian Insight",
-      "effects": "Gain 10 summoner spell haste.",
-      "unique": true
+      "effects": "Gain 10 summoner spell haste."
     }
   ],
   "stats": {
     "flatMovespeed": 45,
     "abilityHaste": 10
   },
+  "description": "10 Ability Haste\n45 Move Speed\n\nIonian Insight\nGain 10 Summoner Spell Haste.\n\n",
   "maps": [
     11,
     12,

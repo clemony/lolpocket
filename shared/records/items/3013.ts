@@ -1,42 +1,8 @@
-const item: Item =  {
-  "name": "Synchronized Souls",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "id": 3013,
-  "rank": "Boots",
-  "buildsFrom": [
-    {
-      "id": 3010,
-      "name": "Symbiotic Soles",
-      "gold": 900
-    }
-  ],
-  "buildsInto": [
-    {
-      "id": 3176,
-      "name": "Forever Forward",
-      "gold": 1400
-    }
-  ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "boots"
-  ],
-  "passives": [
-    {
-      "name": "Voidborn",
-      "effects": "Gain <img src=\"/img/icons/empowered-recall.webp\" class=\"tip-icon\" />Empowered Recall.",
-      "unique": true
-    },
-    {
-      "name": "Synchrony",
-      "effects": "Gain 45 <b>bonus</b> movement speed, going on cooldown for 6 seconds upon taking or dealing damage.",
-      "unique": true
-    }
-  ],
-  "stats": {
-    "flatMovespeed": 45
-  },
+  "name": "Synchronized Souls",
+  "description": "45 Move Speed\n\nVoidborn\nGain Empowered Recall.\n\nSynchrony\nGain 45 Move Speed when out of combat.",
   "maps": [
     11,
     21

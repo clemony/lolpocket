@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Glowing Mote",
   "id": 2022,
   "rank": "Basic",
@@ -63,6 +64,7 @@ const item: Item =  {
   "stats": {
     "abilityHaste": 5
   },
+  "description": "5 Ability Haste\n\n",
   "maps": [
     11,
     12,

@@ -7,7 +7,7 @@ export function useAllies(
     {
       games: number
       wins: number
-      profileIcon: number
+      icon: number
       puuid: string
       name: string
       tag: string
@@ -26,10 +26,10 @@ export function useAllies(
       const s = teammateStats.get(ally.puuid) || {
         games: 0,
         wins: 0,
-        profileIcon: ally.profileIcon,
+        icon: ally.icon,
         puuid: ally.puuid,
-        name: ally.riotIdGameName,
-        tag: ally.riotIdTagline,
+        name: ally.name,
+        tag: ally.tag,
       }
 
       s.games++

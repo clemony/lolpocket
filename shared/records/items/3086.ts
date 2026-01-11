@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Zeal",
   "id": 3086,
   "rank": "Epic",
@@ -36,6 +37,11 @@ const item: Item =  {
       "gold": 7187
     },
     {
+      "id": 2512,
+      "name": "Fiendhunter Bolts",
+      "gold": 2650
+    },
+    {
       "id": 3085,
       "name": "Runaan's Hurricane",
       "gold": 2650
@@ -49,12 +55,12 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slight bonuses to Critical Strike Chance, Move Speed and Attack Speed",
   "stats": {
     "attackSpeed": 15,
     "criticalStrikeChance": 15,
     "percentMovespeed": 4
   },
+  "description": "15% Attack Speed\n15% Critical Strike Chance\n4% Move Speed\n\n",
   "maps": [
     11,
     12,

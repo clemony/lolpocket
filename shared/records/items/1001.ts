@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Boots",
   "id": 1001,
   "rank": "Boots",
@@ -52,10 +53,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Move Speed",
   "stats": {
     "flatMovespeed": 25
   },
+  "description": "25 Move Speed\n\n",
   "maps": [
     11,
     12,

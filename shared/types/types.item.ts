@@ -6,11 +6,18 @@ export type StatArray = StatLite[]
 export type StatKeys = keyof ItemLite["stats"]
 export type effectAmount = number
 
+export type ItemGold = {
+  total?: number
+  base?: number
+  sell?: number
+  purchasable?: boolean
+}
+
 export interface ItemLite extends ItemIndex {
   aka?: string[]
   cost?: number
   maps?: number[]
-  purchasable?: boolean
+  gold?: ItemGold
   rank?: string
   recipe?: number[]
   stats?: Record<string, number>
@@ -47,17 +54,12 @@ export interface Item {
   removed?: boolean | string
   requiedAlly?: string
   requiredChampion?: string
-  gold: {
-    total?: number
-    base?: number
-    sell?: number
-    purchasable?: boolean
-  }
+  gold?: ItemGold
 
   tags?: string[]
-  simpleDescription?: string
+  description?: string
   specialRecipe?: string | number
-  stats: Record<string, number>
+  stats?: Record<string, number>
 }
 
 export interface Effect {
@@ -68,6 +70,7 @@ export interface Effect {
   range?: number
   recharge?: string
   unique?: boolean
+  mythic?: boolean
 }
 
 export interface ItemClone {

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Chain Vest",
   "id": 1031,
   "rank": "Epic",
@@ -69,10 +70,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Greatly increases Armor",
   "stats": {
     "armor": 40
   },
+  "description": "40 Armor\n\n",
   "maps": [
     11,
     12,

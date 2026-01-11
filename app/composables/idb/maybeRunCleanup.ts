@@ -16,14 +16,14 @@ async function runCleanup(accountPuuid?: string) {
   const cutoff = Date.now() - MAX_AGE_MS
 
   // ---- matchData ----
-  await matchDB.matchData
+  await lpdb.matchData
     .where("lastAccessedAt")
     .below(cutoff)
     .and((m) => !accountPuuid || !m.participantIds.includes(accountPuuid))
     .delete()
 
   // ---- matchTimeline ----
-  const oldTimelines = await matchDB.matchTimeline
+  const oldTimelines = await lpdb.matchTimeline
     .where("lastAccessedAt")
     .below(cutoff)
     .toArray()
@@ -37,13 +37,6 @@ async function runCleanup(accountPuuid?: string) {
     .map((t) => t.matchId)
 
   if (timelineDeletes.length) {
-    await matchDB.matchTimeline.bulkDelete(timelineDeletes)
+    await lpdb.matchTimeline.bulkDelete(timelineDeletes)
   }
-
-  // ---- playerChampions ----
-  await matchDB.playerChampions
-    .where("lastAccessedAt")
-    .below(cutoff)
-    .and((p) => !accountPuuid || p.puuid !== accountPuuid)
-    .delete()
 }

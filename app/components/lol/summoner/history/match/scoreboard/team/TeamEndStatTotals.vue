@@ -8,13 +8,13 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     :class="
-      cn('row-start-1 mt-3 w-full overflow-hidden rounded-xl border border-bc/10 bg-linear-to-r px-3 shadow-warm-soft inset-shadow-xxs',
+      cn('row-start-1 w-full overflow-hidden rounded-xl border border-bc/10 bg-linear-to-r px-3 shadow-warm-soft inset-shadow-xxs',
          {
            'from-inspiration/60 to-transparent  border-r-b3!': team.teamId === 100,
            'from-transparent to-domination/60 border-l-b3!': team.teamId === 200,
          },
          className) ">
-    <div class="inline-flex h-9 w-full items-center justify-between gap-2">
+    <div class="inline-flex h-8 w-full items-center justify-between gap-2">
       <!-- WIN / LOSS -->
       <div
         :class="cn('flex items-center gap-4',
@@ -44,30 +44,23 @@ const { class: className, team } = defineProps<{
       <!-- GOLD -->
       <span
         v-if="team.gold"
-        :class=" cn('inline-flex items-center gap-1 font-semibold tracking-tight opacity-70', {
+        :class=" cn('inline-flex items-center gap-1 text-2 font-semibold', {
           'order-2': team.teamId === 100,
           'order-1': team.teamId === 200,
         }) ">
-        <!--           <Icon
-            name="lol:gold"
-            class="inline size-3.5 text-bc/99" /> -->
-        {{ team.gold.toLocaleString() }} G
+        <Icon
+          name="lol:gold"
+          :class=" cn('inline size-4 dst', {
+            'text-inspiration! brightness-80 saturate-125': team.teamId === 100,
+            'text-domination! brightness-90': team.teamId === 200,
+          }) " />
+        {{ roundDecimal(team.gold / 1000) }}K
       </span>
 
       <!-- KDA -->
-      <TeamKDA
-        :class="cn('opacity-90', team.teamId === 100 ? 'order-last pr-1' : 'pl-0.5 order-first')"
-        :team="team" />
+      <KDA
+        :class="cn('text-3 opacity-90', team.teamId === 100 ? 'order-last pr-1' : 'pl-0.5 order-first')"
+        :stats="team" />
     </div>
-
-    <!--     <div class="mx-4 grid w-35 grid-cols-5 gap-1 px-1">
-      <ChampionIcon
-        v-for="champion in team.bans"
-        :id="champion"
-        :key="champion"
-        :data-id="champion"
-        data-tip="champion"
-        class="size-6.25 rounded-md opacity-80 brightness-100 contrast-120 grayscale-80" />
-    </div> -->
   </div>
 </template>

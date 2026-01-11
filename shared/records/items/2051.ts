@@ -1,11 +1,11 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Guardian's Horn",
   "id": 2051,
   "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Good starting item for tanks",
   "nicknames": [
     "Golden Arm of Kobe",
     "Golden Bicep of Kobe",
@@ -15,16 +15,19 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Undaunted",
-      "effects": "Reduces all sources of incoming champion damage by 15, modified to 3.75 against damage over time abilities.",
-      "unique": true
+      "effects": "Reduces all sources of incoming champion damage by 15, modified to 3.75 against damage over time abilities."
     }
   ],
   "stats": {
     "health": 150,
     "healthRegen": 20
   },
+  "description": "150 Health\n\n\nRecovery: Restores 20 Health every 5 seconds.Undaunted: Blocks 15 damage from attacks and spells from champions (25% effectiveness vs. damage over time abilities).\n",
   "maps": [
+    11,
     12,
     35
   ],

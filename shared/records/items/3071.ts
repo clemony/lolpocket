@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Black Cleaver",
   "id": 3071,
   "rank": "Legendary",
@@ -22,20 +23,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Dealing physical damage to enemy champions reduces their Armor",
   "nicknames": [
     "bc"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Carve",
-      "effects": "Dealing physical damage to an enemy champion applies a stack of <i>Carve</i> for 6 seconds, stacking up to 5 times. Each stack inflicts 6% armor reduction, up to 30% armor at 5 stacks.",
-      "unique": true
+      "effects": "Dealing physical damage to an enemy champion applies a stack of <i>Carve</i> for 6 seconds, stacking up to 5 times. Each stack inflicts 6% armor reduction, up to 30% armor at 5 stacks."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Fervor",
-      "effects": "Dealing physical damage grants you 20 <b>bonus</b> movement speed for 2 seconds.",
-      "unique": true
+      "effects": "Dealing physical damage grants you 20 <b>bonus</b> movement speed for 2 seconds."
     }
   ],
   "stats": {
@@ -43,6 +45,7 @@ const item: Item =  {
     "health": 400,
     "abilityHaste": 20
   },
+  "description": "40 Attack Damage\n400 Health\n20 Ability Haste\n\nCarve\nDealing physical damage to champions reduces their Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
   "maps": [
     11,
     12,

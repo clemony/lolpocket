@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Rod of Ages",
   "id": 6657,
   "rank": "Legendary",
@@ -22,14 +23,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Timeless",
-      "effects": "This item gains 10 <b>bonus</b> health, 30 <b>bonus</b> mana, and 3 ability power every minute, up to 10 times, for a maximum of 100 <b>bonus</b> health, 300 <b>bonus</b> mana, and 30 ability power. Upon reaching maximum stacks, gain a level that preserves your current experience (cap remains at level 18).",
-      "unique": true
+      "effects": "This item gains 10 <b>bonus</b> health, 30 <b>bonus</b> mana, and 3 ability power every minute, up to 10 times, for a maximum of 100 <b>bonus</b> health, 300 <b>bonus</b> mana, and 30 ability power. Upon reaching maximum stacks, gain a level that preserves your current experience (cap remains at level 18)."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Eternity",
-      "effects": "Restore mana equal to 10% of pre-mitigation damage taken from champions, and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second.",
-      "unique": true
+      "effects": "Restore mana equal to 10% of pre-mitigation damage taken from champions, and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second."
     }
   ],
   "stats": {
@@ -37,6 +40,7 @@ const item: Item =  {
     "health": 350,
     "mana": 500
   },
+  "description": "45 Ability Power\n350 Health\n500 Mana\n\nTimeless\nThis item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks, gain a level.\n\nEternity\nTaking damage from champions restores 10% of the damage as Mana. \nCasting an ability heals for 25% of Mana spent.",
   "maps": [
     11,
     12,

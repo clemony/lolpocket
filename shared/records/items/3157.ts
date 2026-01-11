@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Zhonya's Hourglass",
   "id": 3157,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to become invincible but unable to take actions",
   "nicknames": [
     "zhg",
     "zonyas",
@@ -27,15 +27,16 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Time Stop",
-      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
-      "unique": true
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
     }
   ],
   "stats": {
     "abilityPower": 105,
     "armor": 50
   },
+  "description": "105 Ability Power\n50 Armor\n\n\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Wooglet's Witchcap",
   "id": 228002,
   "rank": "Special",
@@ -11,16 +12,17 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Magical Opus",
-      "effects": "Increase your ability power by 50%.",
-      "unique": true
+      "effects": "Increase your ability power by 50%."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Stasis",
-      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.",
-      "unique": true
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
     }
   ],
   "stats": {
@@ -28,6 +30,7 @@ const item: Item =  {
     "armor": 50,
     "abilityHaste": 20
   },
+  "description": "300 Ability Power\n50 Armor\n20 Ability Haste\n\nMagical Opus\nIncreases your total Ability Power by 50%.\n\nRequires Augment: Quest: Wooglet's Witchcap\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
   "maps": [
     12,
     30

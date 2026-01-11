@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Mikael's Blessing",
   "id": 3222,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to remove all disabling effects from an allied champion",
   "nicknames": [
     "crucible",
     "michael",
@@ -25,10 +25,10 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Purify",
       "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon\" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon\" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon\" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal the target for 100 – 250 (based on target's level).",
-      "range": 0,
-      "unique": true
+      "range": 0
     }
   ],
   "stats": {
@@ -37,6 +37,7 @@ const item: Item =  {
     "manaRegen": 100,
     "abilityHaste": 15
   },
+  "description": "250 Health\n100% Base Mana Regen\n12% Heal and Shield Power\n15 Ability Haste\n\nPurify\nRemove all crowd control debuffs (excluding Airborne and Suppression) from an ally champion and restore 100 - 250 Health.",
   "maps": [
     11,
     12,

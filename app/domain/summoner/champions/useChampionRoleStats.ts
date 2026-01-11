@@ -19,7 +19,7 @@ export function useChampionRoleStats(
   for (const match of player) {
     if (ix().champNameById(match.championId) !== championName) continue
 
-    const role = match.teamPosition || "UNKNOWN"
+    const role = match.role || "UNKNOWN"
     if (!grouped[role]) {
       grouped[role] = {
         games: 0,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Mortal Reminder",
   "id": 3033,
   "rank": "Legendary",
@@ -22,16 +23,16 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Overcomes enemies with high Health recovery and Armor",
   "nicknames": [
     "grievous",
     "grievous wounds"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Grievous Wounds",
-      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
-      "unique": true
+      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds."
     }
   ],
   "stats": {
@@ -39,6 +40,7 @@ const item: Item =  {
     "attackDamage": 35,
     "criticalStrikeChance": 25
   },
+  "description": "35 Attack Damage\n30% Armor Penetration\n25% Critical Strike Chance\n\nGrievous Wounds\nDealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
   "maps": [
     11,
     12,
@@ -46,9 +48,9 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 450,
-    "total": 3300,
-    "sell": 2310
+    "base": 150,
+    "total": 3000,
+    "sell": 2100
   }
 }
 export default item

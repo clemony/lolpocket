@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { regionIndex } from '~~/shared/references'
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()

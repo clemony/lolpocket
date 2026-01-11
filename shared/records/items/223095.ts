@@ -1,31 +1,8 @@
-const item: Item =  {
-  "name": "Stormrazor",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "id": 223095,
-  "rank": "Legendary",
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "energize",
-    "Windblade"
-  ],
-  "passives": [
-    {
-      "name": "Energized",
-      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100.",
-      "unique": true
-    },
-    {
-      "name": "Bolt",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> magic damage on-hit and grants you 45% <b>bonus</b> movement speed for 1.5 seconds.",
-      "unique": true
-    }
-  ],
-  "stats": {
-    "attackDamage": 45,
-    "attackSpeed": 25,
-    "criticalStrikeChance": 25
-  },
+  "name": "Stormrazor",
+  "description": "50 Attack Damage\n20% Attack Speed\n25% Critical Strike Chance\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nBolt\nYour Energized Attack applies  bonus magic damage and grants 45% Move Speed for 1.5s.\n\nEnergized stacks twice as fast in Arena.\n",
   "maps": [
     30
   ],

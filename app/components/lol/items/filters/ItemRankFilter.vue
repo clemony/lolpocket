@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { itemRankColor } from '@references'
-
 const {
   class: className,
   clear = true,

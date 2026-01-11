@@ -4,110 +4,71 @@ const { match, player } = defineProps<{
   match: MatchDataCurrentPlayer
 }>()
 
-const stats = computed(() => {
-  if (!player)
-    return null
+const isSR = computed (() => queueIndex.filter(q => q.map.id === 11).map(q => q.queueId).includes(match.queueId))
 
-  const id = player?.runes?.keystone
-
-  return {
-    keystone: runeIndex.find(r => r.id === id),
-    cs: player.farming.minionsKilled + player.farming.neutralMinionsKilled,
-    secondaryPath: pathIndex.find(p => p.id === player?.runes?.secondary.path)
-      ?.name,
-  }
+const bars = computed (() => {
+  return [
+    {
+      color: 'domination',
+      icon: ['lol:scoreboard-sword', '-translate-y-px size-4 opacity-100'],
+      max: match.participants.map(p => p.offense.totalDamage).sort((a, b) => (b - a))[0],
+      tip: 'Total Damage Dealt to Champions',
+      value: player.offense.totalDamage
+    },
+    {
+      color: 'precision',
+      icon: ['stat:armor'],
+      max: match.participants.map(p => p.defense.totalDamageTaken).sort((a, b) => (b - a))[0],
+      tip: 'Total Damage Taken by Champions',
+      value: player.defense.totalDamageTaken
+    },
+    {
+      color: 'resolve',
+      icon: ['stat:health'],
+      max: match.participants.map(p => p.utility.effectiveHealingAndShielding).sort((a, b) => (b - a))[0],
+      tip: 'Effective Healing & Shielding',
+      value: player.utility.effectiveHealingAndShielding
+    },
+  ]
 })
-
-const divClass
-  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-1 grid items-center grid-rows-2 justify-start justify-items-start h-full py-2 shrink-0 max-h-16.5'
-
-const pClass
-  = 'leading-0 rounded-tiny w-full gap-1  py-px  inline-flex text-end items-center justify-end font-semibold tracking-tight text-nowrap hover:underline'
 </script>
 
 <template>
   <Card
     v-if="player"
-    class="">
-    <div class="flex items-center">
-      <!-- champion -->
+    class="grid w-full max-w-full grid-cols-[54px_1fr_50px] grid-rows-[repeat(3,13px)_auto] gap-x-3 gap-y-0.75 overflow-hidden px-3.5 py-3.5">
+    <!-- champion -->
 
+    <div class="row-span-2 flex items-center">
       <ChampionIcon
         :id="player?.championId"
         :data-id="player?.championId"
         data-tip="champion"
         alt="champion-icon"
-        class="
-            mb-px size-11 self-center rounded-lg transition-all duration-300
-            hover:scale-105
-          " />
-
-      <!-- spells -->
-
-      <PlayerSpells
-        :player="player"
-        class="h-11 gap-0.5 [&_img]:size-5 [&_img]:rounded-[3px]" />
-
-      <!-- runes -->
-      <div
-        :class="
-          cn('mb-px -ml-1 flex! w-[18px] shrink-0 flex-col items-center justify-center gap-0.5 self-center overflow-visible py-1',
-          )
-        ">
-        <!-- keystone -->
-        <Button
-          variant="neutral"
-          size="c-5"
-          data-tip="rune"
-          class="aspect-square shrink-0 overflow-hidden p-0! transition-all duration-300 hover:scale-110"
-          :data-id="player?.runes?.keystone">
-          <img
-            :src="`/img/runes/${stats.keystone?.id}.webp`"
-            :alt="stats?.keystone?.id?.toString()"
-            class="
-                 absolute h-5.5 w-auto object-center
-                dst
-              " />
-        </Button>
-
-        <!-- path -->
-        <Button
-          variant="neutral"
-          size="c-5"
-          data-tip="path"
-          :data-id="stats?.secondaryPath"
-          class="p-0!">
-          <img
-            :alt="stats?.secondaryPath"
-            :src="`/img/paths/${stats?.secondaryPath}.webp`"
-            class="
-              absolute size-full h-4 w-auto
-            "
-            :class="{
-              'h-3.5! w-auto': stats.secondaryPath?.toLowerCase() === 'inspiration',
-            }" />
-        </Button>
-      </div>
+        class="z-0 mt-2 size-12 self-center rounded-full transition-all duration-300 hover:scale-105" />
+      <ScoreboardCardRunes :player />
     </div>
     <!-- name and tag -->
-
-    <h4
-      :title="player.riotIdGameName"
-      class="
-          w-full grow flex-nowrap truncate text-2 font-semibold
-          text-nowrap
-        ">
-      {{ player.riotIdGameName }}
-    </h4>
-
     <div
-      class="flex w-full grow items-center justify-between gap-2 text-2 font-medium text-nowrap">
-      <span class="grow opacity-50">#{{ player.riotIdTagline }}</span>
+      class="inline-flex grow items-center gap-1 text-nowrap whitespace-nowrap">
+      <h4
+        :title="player.name"
+        :class="cn('', { 'opacity-0': player.name.match(/Here/g) })"
+        class="truncate text-2 font-semibold text-nowrap">
+        {{ player.name }}
+      </h4>
+
+      <span class="inline-flex grow items-center gap-0! text-0 font-medium opacity-50">
+        <Icon
+          name="hash"
+          class="inline size-3.25" />
+        {{ player.tag }}
+      </span>
 
       <!-- badge - rank / kp -->
       <div class="flex grow items-center justify-end gap-2">
         <span class="grow text-end! text-1 opacity-50">
-          {{ player.stats.mvpScore.toFixed(1) }}
+          {{ roundDecimal(player.stats.mvpScore) }}
         </span>
         <MvpBadge
           :match
@@ -116,115 +77,65 @@ const pClass
     </div>
 
     <!-- kda -->
+    <KDA
+      :stats="player.stats"
+      class="col-start-3 self-center justify-self-end" />
 
-    <p
-      class="
-        inline flex-nowrap align-middle text-1! leading-0 font-semibold
-          tracking-wide text-nowrap **:tracking-wide
-        ">
-      {{ player.stats.kills.value }}&#8198;/&#8198;<span class="text-red-800">{{
-        player.stats.deaths
-      }}</span>&#8198;/&#8198;{{ player.stats.assists }}
-      <span class="text-1!">
-        &nbsp;({{ Math.round(player.stats.kp * 100) }}%)
-      </span>
-    </p>
-
-    <Badge
-      v-if="player.stats.kda / 100 === Infinity"
-      size="5"
-      class="
-           w-fit gap-1 border-master/40 bg-master/20 text-1! saturate-180 **:leading-0
-        ">
-      <Icon
-        name="fa6-solid:infinity"
-        class="mt-[0.04em] size-3.5 dst" />
-      KDA
-    </Badge>
-
-    <p
-      v-else
-      class="
-          flex gap-1 truncate text-1! leading-3 font-medium text-nowrap text-bc/80 dst
-        ">
-      {{ player.stats.kda.toFixed(2) }} KDA
-    </p>
-
-    <!-- healing & vision score -->
-
-    <p
-      data-tip="Effective Healing & Shielding"
-
-      :class="cn('inline! text-1!', pClass, { 'text-bc/30': player.utility.effectiveHealingAndShielding === 0 })">
-      {{
-        player.utility.effectiveHealingAndShielding
-          === 0 ? '—   ' : Math.round(
-          player.utility.effectiveHealingAndShielding,
-        ).toLocaleString()
-      }}
-      <Icon
-        name="lp:health"
-        class="ml-0.5 inline size-3 -translate-y-px opacity-40" />
-    </p>
-
-    <p
-      data-class="text-start"
-      :data-tip="`Vision Score - ${player.vision.visionScore}
-        ${player.vision.wardsPlaced} wards placed
-        ${player.vision.controlWardsPlaced} control wards placed
-        ${player.vision.wardsKilled} wards destroyed`"
-      :class="cn('inline text-1!', pClass)">
-      {{ player.vision.visionScore }}
-      <Icon
-        name="lp:support"
-        class="inline size-3! -translate-y-px opacity-60" />
-    </p>
-
-    <p
-      data-tip="Total Damage Dealt to Champions"
-
-      :class="cn('inline gap-1!', pClass)">
-      {{ player.offense.totalDamage.toLocaleString() }}
-      <icon
-        name="el:fire"
-        class="mr-0.25 ml-0.5 inline size-3 opacity-50" />
-    </p>
-
-    <p
-      data-tip="Total Damage Taken"
-
-      :class="cn('inline! gap-1!', pClass)">
-      {{ Math.round(player.defense.totalDamageTaken).toLocaleString() }}
-      <icon
-        name="ph:shield-fill"
-        class="ml-0.5 inline size-3.5 -translate-y-px opacity-40" />
-    </p>
-
-    <!-- items -->
-    <div
-      :class="cn('ml-3 grid w-58 grid-cols-7! grid-rows-1! items-center gap-1! self-center')">
-      <Item
-        v-for="item in player.items"
-        :id="item"
-        :key="item"
-        :data-id="item"
-        data-tip="item"
-        :alt="item"
-        :class="cn('size-7.5 rounded-md! bg-b3/60 ring-bc/60 transition-all duration-300 **:rounded-md!', { 'hover:scale-105 hover:ring': item, 'pointer-events-none border border-b3': !item })" />
+    <!-- PROGRESS STAT ROW -->
+    <div class="col-start-2 row-span-2 row-start-2 flex w-full grow items-center gap-4 pb-1">
+      <TeammateStatProgressBars
+        v-for="s, i in bars"
+        :key="i"
+        :value="s.value"
+        :max="s.max"
+        :color="s.color"
+        :icon="s.icon"
+        :tip="s.tip" />
     </div>
 
-    <!-- gold -->
+    <div class="col-start-1 row-span-2 row-start-3 grid size-full auto-rows-fr items-end pt-3 pl-px">
+      <!-- gold -->
 
-    <div
-      class="w-16 justify-end! justify-items-end! py-2 text-nowrap **:text-1!"
-      :class="divClass">
-      <p>
-        {{ stats.cs }} CS
-      </p>
+      <label
+        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}`"
+        class="s-badge">
+        <Icons
+          base="btn"
+          size="c"
+          variant="neutral"
+          wrapper-class="size-3.75! border-0"
+          name="lol:minion"
+          class="size-3" />
+        <span>{{ player.farming.minionsKilled + player.farming.neutralMinionsKilled }}</span>
+      </label>
 
-      <p class="tracking-tight">
-        {{ player.farming.goldEarned.toLocaleString() }} G
-      </p>
+      <label
+        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}`"
+        class="s-badge translate-y-0.5">
+        <Icons
+          size="c"
+          variant="neutral"
+          wrapper-class="size-3.75! border-0"
+          name="lol:gold"
+          class="size-3 **:text-precision" />
+        <span>{{ roundDecimal(player.farming.goldEarned / 1000) }}k</span>
+      </label>
     </div>
+    <ScoreboardCardItems
+      :player
+      class="col-span-2 col-start-2 row-start-4"
+      :is-s-r />
+
+    <ScoreboardStatPanel
+      :player
+      class="col-start-3 row-span-2 row-start-2" />
   </Card>
 </template>
+
+<style scoped>
+@reference '@css/tailwind.css';
+
+.s-badge {
+  @apply text-0! flex gap-2 items-center leading-none font-bold;
+}
+</style>

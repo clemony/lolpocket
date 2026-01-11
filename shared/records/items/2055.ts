@@ -1,17 +1,18 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Control Ward",
   "id": 2055,
   "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Used to disable wards and invisible traps in an area.",
   "nicknames": [
     "consumable",
     "orange",
     "pink"
   ],
   "stats": {},
+  "description": "\n\nConsume\nPlaces a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
   "maps": [
     11
   ],

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Frozen Heart",
   "id": 3110,
   "rank": "Legendary",
@@ -17,15 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Massively increases Armor and slows enemy basic attacks",
   "nicknames": [
     "fh"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Winter's Caress",
-      "effects": "<img src=\"/img/icons/cripple.webp\" class=\"tip-icon\" />Cripples the attack speed of enemy champions within 700 units by 20%.",
-      "unique": true
+      "effects": "<img src=\"/img/icons/cripple.webp\" class=\"tip-icon\" />Cripples the attack speed of enemy champions within 700 units by 20%."
     }
   ],
   "stats": {
@@ -33,6 +34,7 @@ const item: Item =  {
     "mana": 400,
     "abilityHaste": 20
   },
+  "description": "75 Armor\n400 Mana\n20 Ability Haste\n\nWinter's Caress\nReduce the Attack Speed of nearby champions by 20%.",
   "maps": [
     11,
     12,

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 async function logAllMatches() {
-  const matches = await matchDB.matchData.toArray()
+  const matches = await lpdb.matchData.toArray()
   console.log('📦 Matches in Dexie:', matches)
 }
 </script>

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Recurve Bow",
   "id": 1043,
   "rank": "Epic",
@@ -44,17 +45,18 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Greatly increases Attack Speed",
   "passives": [
     {
+      "unique": false,
+      "mythic": false,
       "name": "Sting",
-      "effects": "Basic attacks deal 15 <b>bonus</b> physical damage on-hit.",
-      "unique": false
+      "effects": "Basic attacks deal 15 <b>bonus</b> physical damage on-hit."
     }
   ],
   "stats": {
     "attackSpeed": 15
   },
+  "description": "15% Attack Speed\n\nSting\nAttacks deal 15 bonus physical damage On-Hit.",
   "maps": [
     11,
     12,

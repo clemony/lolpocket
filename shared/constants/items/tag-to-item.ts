@@ -1,4 +1,4 @@
-// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
+// Updated Patch 16.1.1 - 01/10/2026 05:45:07 PM CST
 
 export const tagToItem: Record<string, number[]> = {
   "Mage": [
@@ -22,6 +22,8 @@ export const tagToItem: Record<string, number[]> = {
     2420,
     2503,
     2508,
+    2522,
+    2526,
     3003,
     3041,
     3057,
@@ -39,6 +41,7 @@ export const tagToItem: Record<string, number[]> = {
     3135,
     3137,
     3145,
+    3146,
     3147,
     3152,
     3157,
@@ -60,7 +63,6 @@ export const tagToItem: Record<string, number[]> = {
     6655,
     6657,
     8010,
-    223146,
     228002,
     443062,
     444636,
@@ -146,6 +148,8 @@ export const tagToItem: Record<string, number[]> = {
     2501,
     2502,
     2504,
+    2524,
+    2525,
     3002,
     3024,
     3044,
@@ -215,6 +219,7 @@ export const tagToItem: Record<string, number[]> = {
     2022,
     2051,
     2501,
+    2517,
     3004,
     3026,
     3035,
@@ -280,6 +285,8 @@ export const tagToItem: Record<string, number[]> = {
     1102,
     1103,
     2022,
+    2512,
+    2523,
     3004,
     3026,
     3031,
@@ -299,6 +306,7 @@ export const tagToItem: Record<string, number[]> = {
     3087,
     3091,
     3094,
+    3097,
     3115,
     3123,
     3124,
@@ -319,7 +327,6 @@ export const tagToItem: Record<string, number[]> = {
     6673,
     6675,
     6676,
-    223095,
     443055,
     443069,
     443090,
@@ -346,6 +353,7 @@ export const tagToItem: Record<string, number[]> = {
     1103,
     2020,
     2022,
+    2520,
     3004,
     3026,
     3035,
@@ -388,6 +396,7 @@ export const tagToItem: Record<string, number[]> = {
     1056,
     1083,
     2139,
+    2510,
     3004,
     3042,
     3051,
@@ -397,6 +406,7 @@ export const tagToItem: Record<string, number[]> = {
     3085,
     3087,
     3091,
+    3097,
     3100,
     3115,
     3124,
@@ -406,8 +416,7 @@ export const tagToItem: Record<string, number[]> = {
     3508,
     3748,
     6662,
-    6670,
-    223095
+    6670
   ],
   "Lifesteal vamp": [
     1055,
@@ -434,6 +443,7 @@ export const tagToItem: Record<string, number[]> = {
   "Movement": [
     2065,
     2138,
+    2512,
     3041,
     3046,
     3051,

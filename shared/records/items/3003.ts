@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Archangel's Staff",
   "id": 3003,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Ability Power based on maximum Mana",
   "nicknames": [
     "aa",
     "seraph's embrace",
@@ -30,18 +30,21 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Awe",
-      "effects": "Grants ability power equal to 1% <b>bonus</b> mana.",
-      "unique": true
+      "effects": "Grants ability power equal to 1% <b>bonus</b> mana."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Manaflow",
-      "effects": "Grants a charge every 8 seconds, up to 5 charges. Affecting an enemy or ally with an ability consumes a charge to grant 5 <b>bonus</b> mana, increased to 10 mana if they are a champion, up to a <b>maximum</b> of 360 <b>bonus</b> mana.",
-      "unique": true
+      "effects": "Grants a charge every 8 seconds, up to 5 charges. Affecting an enemy or ally with an ability consumes a charge to grant 5 <b>bonus</b> mana, increased to 10 mana if they are a champion, up to a <b>maximum</b> of 360 <b>bonus</b> mana."
     },
     {
-      "effects": "Transforms into <img src=\"/img/icons/seraphs-embrace.webp\" class=\"tip-icon\" />Seraph's Embrace at 360 <b>bonus</b> mana.",
-      "unique": false
+      "unique": false,
+      "mythic": false,
+      "effects": "Transforms into <img src=\"/img/icons/seraphs-embrace.webp\" class=\"tip-icon\" />Seraph's Embrace at 360 <b>bonus</b> mana."
     }
   ],
   "stats": {
@@ -49,6 +52,7 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 25
   },
+  "description": "70 Ability Power\n600 Mana\n25 Ability Haste\n\nAwe\nGain Ability Power equal to 1% bonus Mana.\n\nManaflow (8s, max 5 charges)\nLanding Abilities grants 5 max Mana (doubled vs. champions).\nTransforms into Seraph's Embrace at 360 max Mana.",
   "maps": [
     11,
     12,

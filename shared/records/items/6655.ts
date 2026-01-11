@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Luden's Echo",
   "id": 6655,
   "rank": "Legendary",
@@ -17,13 +18,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "High burst damage, good against fragile foes",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Echo",
-      "cooldown": "12",
-      "effects": "Gain 6 <i>Echoes</i> stacks to fire. Dealing ability damage to an enemy consumes all <i>Echoes</i> to deal 75 magic damage (+5% AP) <b>bonus</b> magic damage to them and, for each charge consumed beyond the first, an additional enemy within 600 units of them, firing an orb at each secondary target that impacts after 0.528 seconds to deal the damage. If the number of additional targets fired at is less than the number of charges consumed,deal an additional 15 – 75 (based on remaining <i>Echoes</i>) magic damage (+1% – 5% (based on remaining <i>Echoes</i>) AP) magic damage to the primary target, for a total of 1 – 5 (based on remaining <i>Echoes</i>) magic damage (+1% – 5% (based on remaining <i>Echoes</i>) AP)",
-      "unique": true
+      "effects": "Gain 6 <i>Echo</i> stacks. Dealing ability damage to an enemy consumes all <i>Echo</i> stacks to deal 75 magic damage (+5% AP) <b>bonus</b> magic damage to them and, for each stack consumed beyond the first, an additional enemy within 600 units of them, firing an orb at each secondary target that impacts after 0.528 seconds to deal the damage. If the number of additional targets fired at is less than the number of stacks consumed,deal an additional 15 – 75 (based on remaining <i>Echo</i> stacks) magic damage (+1% – 5% (based on remaining <i>Echo</i> stacks) AP) magic damage to the primary target, for a total of 1 – 5 (based on remaining <i>Echo</i> stacks) magic damage (+1% – 5% (based on remaining <i>Echo</i> stacks) AP)",
+      "cooldown": "12"
     }
   ],
   "stats": {
@@ -31,6 +32,7 @@ const item: Item =  {
     "mana": 600,
     "abilityHaste": 10
   },
+  "description": "100 Ability Power\n600 Mana\n10 Ability Haste\n\nEcho\nDamaging Abilities fire 6 Echoes that deal bonus magic damage to the target and nearby enemies. Remaining Echoes fire on the primary target, dealing 20% damage.\n",
   "maps": [
     11,
     12,

@@ -71,9 +71,9 @@ const groups = [{
     <div
       v-for="p, i in match.participants"
       :key="p.puuid"
-      :data-id="p.profileIcon"
-      :data-name="p.riotIdGameName"
-      :data-tag="p.riotIdTagline"
+      :data-id="p.icon"
+      :data-name="p.name"
+      :data-tag="p.tag"
       data-tip="player"
       :class="cn('relative grid size-full place-items-center py-2 after:absolute after:z-0 after:size-full after:scale-92 after:rounded-xl', { ' after:bg-inspiration/40': i < 5, ' after:bg-tint-domination/70': i >= 5 })">
       <ChampionIcon

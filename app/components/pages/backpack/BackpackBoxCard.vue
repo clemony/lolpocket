@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { Pocket } from '~~/shared/schema'
-import { championPositions } from '#shared/references'
 
 const {
   class: className,

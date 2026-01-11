@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { itemQuotes } from '~~/shared/data'
-
 definePageMeta({
   title: 'Items',
   icon: 'bow',

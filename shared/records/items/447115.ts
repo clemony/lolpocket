@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Regicide",
   "id": 447115,
   "rank": "Special",
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "End the Line",
-      "effects": "At the start of the combat phase in each round, declare the enemy champion with the lowest <b>total maximum</b> health as the <i>Regent</i>. Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against the <i>Regent</i> for the first time in the combat phase grants you 10 <b>bonus</b> attack damage permanently and sets the <b>current</b> cooldown of your ultimate ability to 0.5 seconds.",
-      "unique": true
+      "effects": "At the start of the combat phase in each round, declare the enemy champion with the lowest <b>total maximum</b> health as the <i>Regent</i>. Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against the <i>Regent</i> for the first time in the combat phase grants you 10 <b>bonus</b> attack damage permanently and sets the <b>current</b> cooldown of your ultimate ability to 0.5 seconds."
     }
   ],
   "stats": {
@@ -17,6 +19,7 @@ const item: Item =  {
     "lethality": 15,
     "percentMovespeed": 8
   },
+  "description": "60 Attack Damage\n15 Lethality\n8% Move Speed\n\nEnd the Line\nAt the start of each round, declare the lowest health enemy the Regent. Getting a takedown on the Regent grants you a permanent 10 Attack Damage and refreshes your Ultimate's Cooldown.",
   "maps": [
     30
   ],

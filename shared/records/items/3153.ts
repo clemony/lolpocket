@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Blade of the Ruined King",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Blade of The Ruined King",
   "id": 3153,
   "rank": "Legendary",
   "buildsFrom": [
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Deals damage based on target's Health, can steal Move Speed",
   "nicknames": [
     "brk",
     "bork",
@@ -31,15 +31,17 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Mist's Edge",
-      "effects": "Basic attacks deal <b>bonus</b> physical damage on-hit equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />9% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />6%) of the target's <b>current</b> health, with a <b>maximum</b> of 100 against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
-      "unique": true
+      "effects": "Basic attacks deal <b>bonus</b> physical damage on-hit equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />9% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />6%) of the target's <b>current</b> health, with a <b>maximum</b> of 100 against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Clawing Shadows",
-      "cooldown": "15",
       "effects": "Basic attacks on-hit against enemy champions apply a stack for 6 seconds, stacking up to 3 times. The third stack consumes them all to <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow the target by 30% for 1 second.",
-      "unique": true
+      "cooldown": "15"
     }
   ],
   "stats": {
@@ -47,6 +49,7 @@ const item: Item =  {
     "attackSpeed": 25,
     "lifesteal": 10
   },
+  "description": "40 Attack Damage\n25% Attack Speed\n10% Life Steal\n\nMist's Edge\nAttacks deal a percentage of enemy's current Health as bonus physical damage On-Hit.\n\nClawing Shadows\nAttacking a champion 3 times Slows them by 30% for 1 second.",
   "maps": [
     11,
     12,

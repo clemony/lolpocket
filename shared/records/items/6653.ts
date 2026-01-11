@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Liandry's Torment",
   "id": 6653,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Charge up in combat to deal high damage over time, especially against durable enemies",
   "nicknames": [
     "last shadow",
     "ls",
@@ -25,20 +25,23 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Torment",
-      "effects": "Dealing ability damage burns enemies, causing them to take 1% of the target's <b>maximum</b> health magic damage every 0.5 seconds over 3 seconds, capped at 20 per tick against monsters.",
-      "unique": true
+      "effects": "Dealing ability damage burns enemies, causing them to take 1% of the target's <b>maximum</b> health magic damage every 0.5 seconds over 3 seconds, capped at 20 per tick against monsters."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Suffering",
-      "effects": "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%.",
-      "unique": true
+      "effects": "For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%."
     }
   ],
   "stats": {
     "abilityPower": 60,
     "health": 300
   },
+  "description": "60 Ability Power\n300 Health\n\nTorment\nDamaging Abilities burn enemies for 2% max Health magic damage per second for 3 seconds.\n\nSuffering\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 6%.",
   "maps": [
     11,
     12,

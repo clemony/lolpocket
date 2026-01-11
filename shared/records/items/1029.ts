@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Cloth Armor",
   "id": 1029,
   "rank": "Basic",
@@ -32,6 +33,11 @@ const item: Item =  {
       "id": 2019,
       "name": "Steel Sigil",
       "gold": 1100
+    },
+    {
+      "id": 2524,
+      "name": "Bandlepipes",
+      "gold": 2000
     },
     {
       "id": 2421,
@@ -82,10 +88,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Armor",
   "stats": {
     "armor": 15
   },
+  "description": "15 Armor\n\n",
   "maps": [
     11,
     12,

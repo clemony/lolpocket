@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Riftmaker",
   "id": 4633,
   "rank": "Legendary",
@@ -22,14 +23,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Void Corruption",
-      "effects": "For each second in combat with champions, deal 2% increased damage, stacking up to 4 times for a total of 8% increased damage. At maximum stacks, gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />6%) omnivamp.",
-      "unique": true
+      "effects": "For each second in combat with champions, deal 2% increased damage, stacking up to 4 times for a total of 8% increased damage. At maximum stacks, gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />6%) omnivamp."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Void Infusion",
-      "effects": "Gain ability power equal to 2% <b>bonus</b> health.",
-      "unique": true
+      "effects": "Gain ability power equal to 2% <b>bonus</b> health."
     }
   ],
   "stats": {
@@ -37,6 +40,7 @@ const item: Item =  {
     "health": 350,
     "abilityHaste": 15
   },
+  "description": "70 Ability Power\n350 Health\n15 Ability Haste\n\nVoid Corruption\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strength, gain Omnivamp.\n\nVoid Infusion\nGain 2% of your bonus Health as Ability Power.",
   "maps": [
     11,
     12,

@@ -2,6 +2,9 @@ import type { ClassValue } from "clsx"
 import { clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
+export const tooltipPlacements = ["top", "bottom", "left", "right"]
+export const tooltipSizes = ["default", "md", "lg"]
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }

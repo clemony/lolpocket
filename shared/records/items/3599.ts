@@ -1,23 +1,24 @@
-const item: Item =  {
-  "name": "Black Spear",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Kalista's Black Spear",
   "id": 3599,
   "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
   "requiredChampion": "Kalista",
-  "simpleDescription": "Kalista's spear that binds an Oathsworn Ally.",
   "nicknames": [
     "spear"
   ],
   "active": [
     {
+      "unique": true,
       "name": "Oathsworn Bond",
-      "effects": "Consumes this item to initiate a 3.5-second cast time and a 3-second <img src=\"/img/icons/channel.webp\" class=\"tip-icon\" />channel afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel's duration. Afterwards, the target becomes an <i>Oathsworn</i>.",
-      "unique": true
+      "effects": "Consumes this item to initiate a 3.5-second cast time and a 3-second <img src=\"/img/icons/channel.webp\" class=\"tip-icon\" />channel afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel's duration. Afterwards, the target becomes an <i>Oathsworn</i>."
     }
   ],
   "stats": {},
+  "description": "\n\nActive - Consume: Bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.",
   "maps": [
     11,
     12,

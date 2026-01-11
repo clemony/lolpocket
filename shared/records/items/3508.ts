@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Essence Reaver",
   "id": 3508,
   "rank": "Legendary",
@@ -28,16 +29,18 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+50% critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal 50% of damage dealt (1.5 second cooldown, starts after using the empowered attack).",
-      "unique": true
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+50% critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal to 50% of that amount(1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
-    "attackDamage": 55,
+    "attackDamage": 50,
     "criticalStrikeChance": 25,
     "abilityHaste": 20
   },
+  "description": "55 Attack Damage\n20 Ability Haste\n25% Critical Strike Chance\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage and grants Mana On-Hit.",
   "maps": [
     11,
     12,
@@ -45,7 +48,7 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 375,
+    "base": 350,
     "total": 2900,
     "sell": 2030
   }

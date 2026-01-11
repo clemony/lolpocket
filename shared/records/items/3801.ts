@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Crystalline Bracer",
   "id": 3801,
   "rank": "Epic",
@@ -29,11 +30,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Grants Health and Health Regen",
   "stats": {
     "health": 200,
     "healthRegen": 100
   },
+  "description": "200 Health\n100% Base Health Regen\n\n",
   "maps": [
     11,
     12,

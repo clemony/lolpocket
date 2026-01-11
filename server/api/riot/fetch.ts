@@ -1,5 +1,4 @@
 import { $fetch } from "ofetch"
-import { cacheGet, cacheSet, dedupeFetch, scheduleJob } from "~~/server/helpers"
 const NUXT_RIOT_API = process.env.NUXT_RIOT_API!
 
 async function rawRiotFetch<T>(url: string, params?: any): Promise<T> {

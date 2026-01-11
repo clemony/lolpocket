@@ -5,12 +5,12 @@ const { match, timeline } = defineProps<{
 }>()
 
 const supportUpgrade = computed(() => {
-  if (!timeline || match.player.teamPosition !== 'UTILITY')
+  if (!timeline || match.player.role !== 'UTILITY')
     return null
 
   const supportItemIds = [3869, 3870, 3871, 3876, 3877]
 
-  const finalSupportItem = supportItemIds.find(id => Object.values(match.player.items).includes(id))
+  const finalSupportItem = supportItemIds.find(id => Object.values(match.player.items.slots).includes(id))
 
   return finalSupportItem ?? null
 })

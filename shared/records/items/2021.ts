@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Tunneler",
   "id": 2021,
   "rank": "Epic",
@@ -66,6 +67,7 @@ const item: Item =  {
     "attackDamage": 15,
     "health": 250
   },
+  "description": "15 Attack Damage\n250 Health\n\n",
   "maps": [
     11,
     12,

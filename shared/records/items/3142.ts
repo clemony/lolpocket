@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Youmuu's Ghostblade",
   "id": 3142,
   "rank": "Legendary",
@@ -22,23 +23,23 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to greatly increase Move Speed",
   "nicknames": [
     "lethality",
     "haste"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Haunt",
-      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed while out-of-combat with enemy champions for 3 seconds.",
-      "unique": true
+      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10) <b>bonus</b> movement speed while out-of-combat with enemy champions for 3 seconds."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Wraith Step",
-      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />15%) <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds.",
-      "unique": true
+      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />15%) <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds."
     }
   ],
   "stats": {
@@ -46,6 +47,7 @@ const item: Item =  {
     "lethality": 18,
     "percentMovespeed": 4
   },
+  "description": "55 Attack Damage\n18 Lethality\n4% Move Speed\n\nHaunt \nGain  Move Speed while out of combat.\n\nWraith Step\nGain Move Speed and Ghosting for  seconds.",
   "maps": [
     11,
     12,

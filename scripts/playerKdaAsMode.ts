@@ -34,7 +34,7 @@ function logTeamStatModes(matches: MatchData[], puuid: string) {
       if (p.teamId !== teamId) continue
 
       const entry = perPlayer.get(p.puuid) ?? {
-        name: `${p.riotIdGameName}#${p.riotIdTagline}`,
+        name: `${p.name}#${p.tag}`,
         assists: [],
         deaths: [],
         kills: [],

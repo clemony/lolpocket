@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sheen",
   "id": 3057,
   "rank": "Epic",
@@ -21,6 +22,11 @@ const item: Item =  {
       "gold": 2900
     },
     {
+      "id": 2510,
+      "name": "Dusk and Dawn",
+      "gold": 3100
+    },
+    {
       "id": 3508,
       "name": "Essence Reaver",
       "gold": 2900
@@ -39,20 +45,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Grants a bonus to next attack after spell cast",
   "nicknames": [
     "Jimmy Neutron"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit (1.5 second cooldown, starts after using the empowered attack).",
-      "unique": true
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit (1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
     "abilityHaste": 10
   },
+  "description": "10 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit.\n",
   "maps": [
     11,
     12,

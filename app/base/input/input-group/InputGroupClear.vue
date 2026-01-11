@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { class: className, size = 'sq-8' } = defineProps<{
   class?: HTMLAttributes['class']
-  size?: ButtonVariants['size']
+  size?: InputGroupButtonVariants['size']
 }>()
 const emit = defineEmits(['clear:input'])
 </script>

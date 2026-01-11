@@ -101,17 +101,17 @@ const pClass
 
     <div :class="cn('flex w-36 grow flex-col py-2.5 pr-3')">
       <h4
-        :title="player.riotIdGameName"
+        :title="player.name"
         class="
           w-full grow flex-nowrap truncate text-2 font-semibold
           text-nowrap
         ">
-        {{ player.riotIdGameName }}
+        {{ player.name }}
       </h4>
 
       <div
         class="flex w-full grow items-center justify-between gap-2 text-2 font-medium text-nowrap">
-        <span class="grow opacity-50">#{{ player.riotIdTagline }}</span>
+        <span class="grow opacity-50">#{{ player.tag }}</span>
 
         <!-- badge - rank / kp -->
         <div class="flex grow items-center justify-end gap-2">
@@ -135,7 +135,7 @@ const pClass
         inline flex-nowrap align-middle text-1! leading-0 font-semibold
           tracking-wide text-nowrap **:tracking-wide
         ">
-        {{ player.stats.kills.value }}&#8198;/&#8198;<span class="text-red-800">{{
+        {{ player.stats.kills }}&#8198;/&#8198;<span class="text-red-800">{{
           player.stats.deaths
         }}</span>&#8198;/&#8198;{{ player.stats.assists }}
         <span class="text-1!">
@@ -223,18 +223,11 @@ const pClass
     </div>
 
     <!-- items -->
-    <div
-      :class="cn('ml-3 grid w-58 grid-cols-7! grid-rows-1! items-center gap-1! self-center')">
-      <Item
-        v-for="item in player.items"
-        :id="item"
-        :key="item"
-        :data-id="item"
-        data-tip="item"
-        :alt="item"
-        :class="cn('size-7.5 rounded-md! bg-b3/60 ring-bc/60 transition-all duration-300 **:rounded-md!', { 'hover:scale-105 hover:ring': item, 'pointer-events-none border border-b3': !item })" />
+    <div class="flex grow items-center">
+      <ScoreboardCardItems
+        :player
+        :is-s-r="true" />
     </div>
-
     <!-- gold -->
 
     <div

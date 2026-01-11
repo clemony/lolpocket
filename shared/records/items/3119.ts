@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Winter's Approach",
   "id": 3119,
   "rank": "Legendary",
@@ -28,18 +29,21 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Awe",
-      "effects": "Grants <b>bonus</b> health equal to 15% <b>bonus</b> mana.",
-      "unique": true
+      "effects": "Grants <b>bonus</b> health equal to 15% <b>bonus</b> mana."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Manaflow",
-      "effects": "Grants a charge every 8 seconds, up to 4 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 3 <b>bonus</b> mana, increased to 6 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana.",
-      "unique": true
+      "effects": "Grants a charge every 8 seconds, up to 4 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 3 <b>bonus</b> mana, increased to 6 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana."
     },
     {
-      "effects": "Transforms into <img src=\"/img/icons/fimbulwinter.webp\" class=\"tip-icon\" />Fimbulwinter at 360 <b>bonus</b> mana.",
-      "unique": false
+      "unique": false,
+      "mythic": false,
+      "effects": "Transforms into <img src=\"/img/icons/fimbulwinter.webp\" class=\"tip-icon\" />Fimbulwinter at 360 <b>bonus</b> mana."
     }
   ],
   "stats": {
@@ -47,6 +51,7 @@ const item: Item =  {
     "mana": 500,
     "abilityHaste": 15
   },
+  "description": "550 Health\n500 Mana\n15 Ability Haste\n\nAwe\nGain  Health.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grant 3 max Mana (doubled vs. champions).\nTransforms into Fimbulwinter at 360 max Mana.",
   "maps": [
     11,
     12,

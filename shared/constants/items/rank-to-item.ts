@@ -1,12 +1,10 @@
-// Updated Patch 15.24.1 - 01/08/2026 02:34:09 PM CST
+// Updated Patch 16.1.1 - 01/10/2026 05:45:07 PM CST
 
 export const rankToItem: Record<string, number[]> = {
   "Boots": [
     1001,
     3006,
     3009,
-    3010,
-    3013,
     3020,
     3047,
     3111,
@@ -16,7 +14,6 @@ export const rankToItem: Record<string, number[]> = {
     3173,
     3174,
     3175,
-    3176,
     223005
   ],
   "Basic": [
@@ -107,7 +104,6 @@ export const rankToItem: Record<string, number[]> = {
   "Special": [
     1111,
     1500,
-    1501,
     1502,
     1503,
     1506,
@@ -121,6 +117,7 @@ export const rankToItem: Record<string, number[]> = {
     2010,
     2052,
     2145,
+    2146,
     2422,
     3400,
     224403,
@@ -203,6 +200,16 @@ export const rankToItem: Record<string, number[]> = {
     2502,
     2503,
     2504,
+    2510,
+    2512,
+    2517,
+    2520,
+    2522,
+    2523,
+    2524,
+    2525,
+    2526,
+    2530,
     3002,
     3003,
     3004,
@@ -232,6 +239,7 @@ export const rankToItem: Record<string, number[]> = {
     3089,
     3091,
     3094,
+    3097,
     3100,
     3102,
     3107,
@@ -248,6 +256,7 @@ export const rankToItem: Record<string, number[]> = {
     3139,
     3142,
     3143,
+    3146,
     3152,
     3153,
     3156,
@@ -312,8 +321,6 @@ export const rankToItem: Record<string, number[]> = {
     8010,
     8020,
     223039,
-    223095,
-    223146,
     224004,
     228001
   ],

@@ -1,4 +1,4 @@
-// Updated Patch 15.24.1 - 01/08/2026 02:33:50 PM CST
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
 
 export const itemsLite: ItemLite[] = [
   {
@@ -287,6 +287,17 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 1035,
+    "key": "item",
+    "name": "Emberknife",
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 350,
+      "sell": 140
+    }
+  },
+  {
     "id": 1036,
     "key": "item",
     "name": "Long Sword",
@@ -363,6 +374,27 @@ export const itemsLite: ItemLite[] = [
       "Marksman",
       "Assassin"
     ]
+  },
+  {
+    "id": 1039,
+    "key": "item",
+    "name": "Hailblade",
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 350,
+      "sell": 140
+    }
+  },
+  {
+    "id": 1040,
+    "key": "item",
+    "name": "Obsidian Edge",
+    "gold": {
+      "base": 350,
+      "total": 350,
+      "sell": 140
+    }
   },
   {
     "id": 1042,
@@ -669,6 +701,56 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 1090,
+    "key": "item",
+    "name": "Quest: Top",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1091,
+    "key": "item",
+    "name": "Quest: Mid",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1092,
+    "key": "item",
+    "name": "Quest: Bot",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1093,
+    "key": "item",
+    "name": "Quest: Support",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1094,
+    "key": "item",
+    "name": "Quest: Jungle",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
     "id": 1101,
     "key": "item",
     "name": "Scorchclaw Pup",
@@ -762,6 +844,56 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 1104,
+    "key": "item",
+    "name": "Eye of the Herald",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1105,
+    "key": "item",
+    "name": "Mosstomper Seedling",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    }
+  },
+  {
+    "id": 1106,
+    "key": "item",
+    "name": "Gustwalker Hatchling",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    }
+  },
+  {
+    "id": 1107,
+    "key": "item",
+    "name": "Scorchclaw Pup",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 450,
+      "total": 450,
+      "sell": 180
+    }
+  },
+  {
     "id": 1111,
     "key": "item",
     "name": "Jarvan I's",
@@ -786,9 +918,141 @@ export const itemsLite: ItemLite[] = [
     }
   },
   {
+    "id": 1200,
+    "key": "item",
+    "name": "Top Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1201,
+    "key": "item",
+    "name": "Mid Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1202,
+    "key": "item",
+    "name": "Bot Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1203,
+    "key": "item",
+    "name": "Support Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1204,
+    "key": "item",
+    "name": "Jungle Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1206,
+    "key": "item",
+    "name": "Mid Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1207,
+    "key": "item",
+    "name": "Bot Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1208,
+    "key": "item",
+    "name": "Support Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1209,
+    "key": "item",
+    "name": "Jungle Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1220,
+    "key": "item",
+    "name": "Unleashed Teleport",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1221,
+    "key": "item",
+    "name": "Top Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1222,
+    "key": "item",
+    "name": "Top Lane Quest",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
     "id": 1500,
     "key": "item",
-    "name": "Ohmwrecker (Turret Item)",
+    "name": "Penetrating Bullets",
     "maps": [
       11,
       12,
@@ -810,7 +1074,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 1501,
     "key": "item",
-    "name": "Lane Swap Detector",
+    "name": "Fortification",
     "maps": [
       11,
       12,
@@ -823,14 +1087,12 @@ export const itemsLite: ItemLite[] = [
       "purchasable": false,
       "total": 0,
       "sell": 0
-    },
-    "rank": "Special",
-    "stats": {}
+    }
   },
   {
     "id": 1502,
     "key": "item",
-    "name": "Reinforced Armor (Turret Item)",
+    "name": "Reinforced Armor",
     "maps": [
       11,
       12,
@@ -868,9 +1130,36 @@ export const itemsLite: ItemLite[] = [
     "stats": {}
   },
   {
+    "id": 1504,
+    "key": "item",
+    "name": "Vanguard",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1505,
+    "key": "item",
+    "name": "Reinforced Armor",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
     "id": 1506,
     "key": "item",
-    "name": "Base Turret Reinforced Armor (Turret Item)",
+    "name": "Reinforced Armor",
     "maps": [
       11,
       12,
@@ -910,7 +1199,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 1508,
     "key": "item",
-    "name": "Anti-Tower Socks",
+    "name": "Anti-tower Socks",
     "maps": [
       11,
       12,
@@ -1028,6 +1317,171 @@ export const itemsLite: ItemLite[] = [
     "stats": {}
   },
   {
+    "id": 1516,
+    "key": "item",
+    "name": "Structure Bounty",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1517,
+    "key": "item",
+    "name": "Structure Bounty",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1518,
+    "key": "item",
+    "name": "Structure Bounty",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1519,
+    "key": "item",
+    "name": "Structure Bounty",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1520,
+    "key": "item",
+    "name": "OvererchargedHA",
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1521,
+    "key": "item",
+    "name": "Fortification",
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1522,
+    "key": "item",
+    "name": "Tower Power-Up",
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1523,
+    "key": "item",
+    "name": "Overcharged",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 1524,
+    "key": "item",
+    "name": "Overgrowth",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 2002,
+    "key": "item",
+    "name": "Enhanced Recall",
+    "gold": {
+      "base": 60,
+      "purchasable": false,
+      "total": 60,
+      "sell": 42
+    }
+  },
+  {
     "id": 2003,
     "key": "item",
     "name": "Health Potion",
@@ -1073,6 +1527,17 @@ export const itemsLite: ItemLite[] = [
     },
     "rank": "Special",
     "stats": {}
+  },
+  {
+    "id": 2015,
+    "key": "item",
+    "name": "Kircheis Shard",
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 700,
+      "sell": 490
+    }
   },
   {
     "id": 2019,
@@ -1225,6 +1690,21 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 2033,
+    "key": "item",
+    "name": "Corrupting Potion",
+    "maps": [
+      11,
+      21
+    ],
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 500,
+      "sell": 200
+    }
+  },
+  {
     "id": 2049,
     "key": "item",
     "name": "Guardian's Amulet",
@@ -1281,6 +1761,7 @@ export const itemsLite: ItemLite[] = [
       "ManWolf"
     ],
     "maps": [
+      11,
       12,
       35
     ],
@@ -1339,6 +1820,17 @@ export const itemsLite: ItemLite[] = [
     },
     "rank": "Consumable",
     "stats": {}
+  },
+  {
+    "id": 2056,
+    "key": "item",
+    "name": "Stealth Ward",
+    "gold": {
+      "base": 40,
+      "purchasable": false,
+      "total": 40,
+      "sell": 16
+    }
   },
   {
     "id": 2065,
@@ -1537,6 +2029,22 @@ export const itemsLite: ItemLite[] = [
     "stats": {}
   },
   {
+    "id": 2146,
+    "key": "item",
+    "name": "Enhanced Lucky Dice",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    },
+    "rank": "Special",
+    "stats": {}
+  },
+  {
     "id": 2150,
     "key": "item",
     "name": "Elixir of Skill",
@@ -1592,6 +2100,62 @@ export const itemsLite: ItemLite[] = [
     },
     "rank": "Consumable",
     "stats": {}
+  },
+  {
+    "id": 2161,
+    "key": "item",
+    "name": "Bandle Juice of Power",
+    "maps": [
+      35
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 2162,
+    "key": "item",
+    "name": "Bandle Juice of Vitality",
+    "maps": [
+      35
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 2163,
+    "key": "item",
+    "name": "Bandle Juice of Haste",
+    "maps": [
+      35
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 2403,
+    "key": "item",
+    "name": "Minion Dematerializer",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
   },
   {
     "id": 2420,
@@ -1656,7 +2220,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 2422,
     "key": "item",
-    "name": "Slightly Magical Boots",
+    "name": "Slightly Magical Footwear",
     "maps": [
       11,
       12,
@@ -1821,6 +2385,311 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 2510,
+    "key": "item",
+    "name": "Dusk and Dawn",
+    "aka": [
+      "Spellblade"
+    ],
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3057,
+      1026,
+      3067,
+      1042
+    ],
+    "gold": {
+      "base": 300,
+      "total": 3100,
+      "sell": 2170
+    },
+    "rank": "Legendary",
+    "stats": {
+      "abilityPower": 70,
+      "attackSpeed": 25,
+      "health": 300,
+      "abilityHaste": 20
+    },
+    "tags": [
+      "Onhit effects"
+    ]
+  },
+  {
+    "id": 2512,
+    "key": "item",
+    "name": "Fiendhunter Bolts",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3086,
+      3144
+    ],
+    "gold": {
+      "base": 850,
+      "total": 2650,
+      "sell": 1855
+    },
+    "rank": "Legendary",
+    "stats": {
+      "attackSpeed": 40,
+      "criticalStrikeChance": 25,
+      "percentMovespeed": 4
+    },
+    "tags": [
+      "Marksman",
+      "Movement"
+    ]
+  },
+  {
+    "id": 2517,
+    "key": "item",
+    "name": "Endless Hunger",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3133,
+      1037
+    ],
+    "gold": {
+      "base": 1075,
+      "total": 3000,
+      "sell": 2100
+    },
+    "rank": "Legendary",
+    "stats": {
+      "attackDamage": 60,
+      "omnivamp": 5,
+      "tenacity": 20
+    },
+    "tags": [
+      "Fighter"
+    ]
+  },
+  {
+    "id": 2520,
+    "key": "item",
+    "name": "Bastionbreaker",
+    "aka": [
+      "lethality"
+    ],
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      2020,
+      3134
+    ],
+    "gold": {
+      "base": 863,
+      "total": 3200,
+      "sell": 2240
+    },
+    "rank": "Legendary",
+    "stats": {
+      "attackDamage": 55,
+      "lethality": 22,
+      "abilityHaste": 15
+    },
+    "tags": [
+      "Assassin"
+    ]
+  },
+  {
+    "id": 2522,
+    "key": "item",
+    "name": "Actualizer",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3802,
+      1026
+    ],
+    "gold": {
+      "base": 1050,
+      "total": 3100,
+      "sell": 2170
+    },
+    "rank": "Legendary",
+    "stats": {
+      "abilityPower": 90,
+      "mana": 300,
+      "abilityHaste": 10
+    },
+    "tags": [
+      "Mage"
+    ]
+  },
+  {
+    "id": 2523,
+    "key": "item",
+    "name": "Hexoptics C44",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      1037,
+      6670,
+      1036
+    ],
+    "gold": {
+      "base": 275,
+      "total": 2800,
+      "sell": 1960
+    },
+    "rank": "Legendary",
+    "stats": {
+      "attackDamage": 50,
+      "criticalStrikeChance": 25
+    },
+    "tags": [
+      "Marksman"
+    ]
+  },
+  {
+    "id": 2524,
+    "key": "item",
+    "name": "Bandlepipes",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3067,
+      1029,
+      1033
+    ],
+    "gold": {
+      "base": 500,
+      "total": 2000,
+      "sell": 1400
+    },
+    "rank": "Legendary",
+    "stats": {
+      "armor": 20,
+      "health": 200,
+      "magicResistance": 20,
+      "abilityHaste": 15
+    },
+    "tags": [
+      "Tank"
+    ]
+  },
+  {
+    "id": 2525,
+    "key": "item",
+    "name": "Protoplasm Harness",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3067,
+      1011
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2500,
+      "sell": 1750
+    },
+    "rank": "Legendary",
+    "stats": {
+      "health": 600,
+      "abilityHaste": 15
+    },
+    "tags": [
+      "Tank"
+    ]
+  },
+  {
+    "id": 2526,
+    "key": "item",
+    "name": "Whispering Circlet",
+    "aka": [
+      "tear"
+    ],
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      3114,
+      1028,
+      3070
+    ],
+    "gold": {
+      "base": 850,
+      "total": 2250,
+      "sell": 1575
+    },
+    "rank": "Legendary",
+    "stats": {
+      "healAndShieldPower": 8,
+      "health": 200,
+      "mana": 300,
+      "manaRegen": 75
+    },
+    "tags": [
+      "Mage"
+    ]
+  },
+  {
+    "id": 2530,
+    "key": "item",
+    "name": "Diadem of Songs",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      2526
+    ],
+    "gold": {
+      "base": 2250,
+      "purchasable": false,
+      "total": 2250,
+      "sell": 1575
+    },
+    "rank": "Legendary",
+    "stats": {
+      "healAndShieldPower": 8,
+      "health": 200,
+      "mana": 1000,
+      "manaRegen": 100
+    }
+  },
+  {
+    "id": 3001,
+    "key": "item",
+    "name": "Evenshroud",
+    "gold": {
+      "base": 850,
+      "purchasable": false,
+      "total": 2300,
+      "sell": 1610
+    }
+  },
+  {
     "id": 3002,
     "key": "item",
     "name": "Trailblazer",
@@ -1923,6 +2792,19 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 3005,
+    "key": "item",
+    "name": "Ghostcrawlers",
+    "maps": [
+      21
+    ],
+    "gold": {
+      "base": 700,
+      "total": 1000,
+      "sell": 700
+    }
+  },
+  {
     "id": 3006,
     "key": "item",
     "name": "Berserker's Greaves",
@@ -1982,49 +2864,58 @@ export const itemsLite: ItemLite[] = [
     "id": 3010,
     "key": "item",
     "name": "Symbiotic Soles",
-    "aka": [
-      "Synchronized Souls"
-    ],
     "maps": [
       11,
       21
     ],
-    "recipe": [
-      1001
-    ],
     "gold": {
       "base": 600,
+      "purchasable": false,
       "total": 900,
       "sell": 630
-    },
-    "rank": "Boots",
-    "stats": {
-      "flatMovespeed": 40
+    }
+  },
+  {
+    "id": 3011,
+    "key": "item",
+    "name": "Chemtech Putrifier",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 1900,
+      "sell": 1330
+    }
+  },
+  {
+    "id": 3012,
+    "key": "item",
+    "name": "Chalice of Blessing",
+    "gold": {
+      "base": 300,
+      "purchasable": false,
+      "total": 900,
+      "sell": 630
     }
   },
   {
     "id": 3013,
     "key": "item",
     "name": "Synchronized Souls",
-    "aka": [
-      "boots"
-    ],
     "maps": [
       11,
       21
-    ],
-    "recipe": [
-      3010
     ],
     "gold": {
       "base": 0,
       "purchasable": false,
       "total": 900,
       "sell": 630
-    },
-    "rank": "Boots",
-    "stats": {
-      "flatMovespeed": 45
     }
   },
   {
@@ -2053,6 +2944,17 @@ export const itemsLite: ItemLite[] = [
     "stats": {
       "flatMagicPenetration": 12,
       "flatMovespeed": 45
+    }
+  },
+  {
+    "id": 3023,
+    "key": "item",
+    "name": "Lifewell Pendant",
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 1050,
+      "sell": 735
     }
   },
   {
@@ -2135,9 +3037,9 @@ export const itemsLite: ItemLite[] = [
       1018
     ],
     "gold": {
-      "base": 675,
-      "total": 3450,
-      "sell": 2415
+      "base": 725,
+      "total": 3500,
+      "sell": 2450
     },
     "rank": "Legendary",
     "stats": {
@@ -2169,9 +3071,9 @@ export const itemsLite: ItemLite[] = [
       1036
     ],
     "gold": {
-      "base": 750,
-      "total": 3000,
-      "sell": 2100
+      "base": 850,
+      "total": 3100,
+      "sell": 2170
     },
     "rank": "Legendary",
     "stats": {
@@ -2202,9 +3104,9 @@ export const itemsLite: ItemLite[] = [
       1018
     ],
     "gold": {
-      "base": 450,
-      "total": 3300,
-      "sell": 2310
+      "base": 150,
+      "total": 3000,
+      "sell": 2100
     },
     "rank": "Legendary",
     "stats": {
@@ -2269,9 +3171,9 @@ export const itemsLite: ItemLite[] = [
       6670
     ],
     "gold": {
-      "base": 350,
-      "total": 3100,
-      "sell": 2170
+      "base": 550,
+      "total": 3300,
+      "sell": 2310
     },
     "rank": "Legendary",
     "stats": {
@@ -2282,6 +3184,20 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Marksman"
     ]
+  },
+  {
+    "id": 3039,
+    "key": "item",
+    "name": "Atma's Reckoning",
+    "maps": [
+      12,
+      21
+    ],
+    "gold": {
+      "base": 500,
+      "total": 2900,
+      "sell": 2030
+    }
   },
   {
     "id": 3040,
@@ -3318,6 +4234,53 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 3095,
+    "key": "item",
+    "name": "Stormrazor",
+    "maps": [
+      12
+    ],
+    "gold": {
+      "base": 500,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 3097,
+    "key": "item",
+    "name": "Stormrazor",
+    "aka": [
+      "energize",
+      "Windblade"
+    ],
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      1038,
+      1018,
+      3144
+    ],
+    "gold": {
+      "base": 700,
+      "total": 3200,
+      "sell": 2240
+    },
+    "rank": "Legendary",
+    "stats": {
+      "attackDamage": 50,
+      "attackSpeed": 20,
+      "criticalStrikeChance": 25
+    },
+    "tags": [
+      "Marksman",
+      "Onhit effects"
+    ]
+  },
+  {
     "id": 3100,
     "key": "item",
     "name": "Lich Bane",
@@ -3385,6 +4348,19 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 3105,
+    "key": "item",
+    "name": "Aegis of the Legion",
+    "maps": [
+      35
+    ],
+    "gold": {
+      "base": 400,
+      "total": 1100,
+      "sell": 770
+    }
+  },
+  {
     "id": 3107,
     "key": "item",
     "name": "Redemption",
@@ -3402,7 +4378,7 @@ export const itemsLite: ItemLite[] = [
       3114
     ],
     "gold": {
-      "base": 900,
+      "base": 850,
       "total": 2300,
       "sell": 1610
     },
@@ -3551,6 +4527,7 @@ export const itemsLite: ItemLite[] = [
     "key": "item",
     "name": "Guardian's Orb",
     "maps": [
+      11,
       12,
       35
     ],
@@ -3695,6 +4672,23 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Mage"
     ]
+  },
+  {
+    "id": 3117,
+    "key": "item",
+    "name": "Mobility Boots",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 700,
+      "purchasable": false,
+      "total": 1000,
+      "sell": 700
+    }
   },
   {
     "id": 3118,
@@ -3855,6 +4849,32 @@ export const itemsLite: ItemLite[] = [
       "Marksman",
       "Onhit effects"
     ]
+  },
+  {
+    "id": 3128,
+    "key": "item",
+    "name": "Deathfire Grasp",
+    "maps": [
+      21
+    ],
+    "gold": {
+      "base": 850,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 3131,
+    "key": "item",
+    "name": "Sword of the Divine",
+    "maps": [
+      21
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2300,
+      "sell": 1610
+    }
   },
   {
     "id": 3133,
@@ -4171,6 +5191,35 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 3146,
+    "key": "item",
+    "name": "Hextech Gunblade",
+    "maps": [
+      11,
+      12,
+      21
+    ],
+    "recipe": [
+      1053,
+      3145,
+      1052
+    ],
+    "gold": {
+      "base": 600,
+      "total": 3000,
+      "sell": 2100
+    },
+    "rank": "Legendary",
+    "stats": {
+      "abilityPower": 80,
+      "attackDamage": 40,
+      "omnivamp": 10
+    },
+    "tags": [
+      "Mage"
+    ]
+  },
+  {
     "id": 3147,
     "key": "item",
     "name": "Haunting Guise",
@@ -4239,7 +5288,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3153,
     "key": "item",
-    "name": "Blade of the Ruined King",
+    "name": "Blade of The Ruined King",
     "aka": [
       "brk",
       "bork",
@@ -4478,9 +5527,9 @@ export const itemsLite: ItemLite[] = [
       3009
     ],
     "gold": {
-      "base": 500,
-      "total": 1500,
-      "sell": 1050
+      "base": 0,
+      "total": 1000,
+      "sell": 700
     },
     "rank": "Boots",
     "stats": {
@@ -4501,9 +5550,9 @@ export const itemsLite: ItemLite[] = [
       3158
     ],
     "gold": {
-      "base": 500,
-      "total": 1400,
-      "sell": 980
+      "base": 0,
+      "total": 900,
+      "sell": 630
     },
     "rank": "Boots",
     "stats": {
@@ -4514,7 +5563,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3172,
     "key": "item",
-    "name": "Zephyr",
+    "name": "Gunmetal Greaves",
     "maps": [
       11,
       21,
@@ -4524,9 +5573,9 @@ export const itemsLite: ItemLite[] = [
       3006
     ],
     "gold": {
-      "base": 500,
-      "total": 1600,
-      "sell": 1120
+      "base": 0,
+      "total": 1100,
+      "sell": 770
     },
     "rank": "Legendary",
     "stats": {
@@ -4554,9 +5603,9 @@ export const itemsLite: ItemLite[] = [
       3111
     ],
     "gold": {
-      "base": 500,
-      "total": 1750,
-      "sell": 1225
+      "base": 0,
+      "total": 1250,
+      "sell": 875
     },
     "rank": "Boots",
     "stats": {
@@ -4579,9 +5628,9 @@ export const itemsLite: ItemLite[] = [
       3047
     ],
     "gold": {
-      "base": 500,
-      "total": 1700,
-      "sell": 1190
+      "base": 0,
+      "total": 1200,
+      "sell": 840
     },
     "rank": "Boots",
     "stats": {
@@ -4603,9 +5652,9 @@ export const itemsLite: ItemLite[] = [
       3020
     ],
     "gold": {
-      "base": 500,
-      "total": 1600,
-      "sell": 1120
+      "base": 0,
+      "total": 1100,
+      "sell": 770
     },
     "rank": "Boots",
     "stats": {
@@ -4617,23 +5666,14 @@ export const itemsLite: ItemLite[] = [
     "id": 3176,
     "key": "item",
     "name": "Forever Forward",
-    "aka": [
-      "boots"
-    ],
     "maps": [
       11
     ],
-    "recipe": [
-      3013
-    ],
     "gold": {
-      "base": 500,
-      "total": 1400,
-      "sell": 980
-    },
-    "rank": "Boots",
-    "stats": {
-      "flatMovespeed": 55
+      "base": 0,
+      "purchasable": false,
+      "total": 900,
+      "sell": 630
     }
   },
   {
@@ -4644,6 +5684,7 @@ export const itemsLite: ItemLite[] = [
       "dblade"
     ],
     "maps": [
+      11,
       12,
       35
     ],
@@ -4683,14 +5724,14 @@ export const itemsLite: ItemLite[] = [
       3133
     ],
     "gold": {
-      "base": 450,
-      "total": 2500,
-      "sell": 1750
+      "base": 750,
+      "total": 2800,
+      "sell": 1960
     },
     "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
-      "lethality": 15,
+      "lethality": 18,
       "abilityHaste": 15
     },
     "tags": [
@@ -4740,6 +5781,7 @@ export const itemsLite: ItemLite[] = [
       "dblade"
     ],
     "maps": [
+      11,
       12,
       35
     ],
@@ -4791,6 +5833,17 @@ export const itemsLite: ItemLite[] = [
       "Tank",
       "Support"
     ]
+  },
+  {
+    "id": 3193,
+    "key": "item",
+    "name": "Gargoyle Stoneplate",
+    "gold": {
+      "base": 1350,
+      "purchasable": false,
+      "total": 3150,
+      "sell": 2205
+    }
   },
   {
     "id": 3211,
@@ -4946,7 +5999,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3348,
     "key": "item",
-    "name": "Arcane Sweeper (Trinket)",
+    "name": "Arcane Sweeper",
     "maps": [
       30
     ],
@@ -4958,6 +6011,17 @@ export const itemsLite: ItemLite[] = [
     },
     "rank": "Trinket",
     "stats": {}
+  },
+  {
+    "id": 3349,
+    "key": "item",
+    "name": "Lucent Singularity",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
   },
   {
     "id": 3363,
@@ -5006,6 +6070,28 @@ export const itemsLite: ItemLite[] = [
     "stats": {}
   },
   {
+    "id": 3398,
+    "key": "item",
+    "name": "Small Party Favor",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 3399,
+    "key": "item",
+    "name": "Party Favor",
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
     "id": 3400,
     "key": "item",
     "name": "Your Cut",
@@ -5028,7 +6114,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3430,
     "key": "item",
-    "name": "Rite of Ruin",
+    "name": "Rite Of Ruin",
     "maps": [
       30
     ],
@@ -5101,13 +6187,13 @@ export const itemsLite: ItemLite[] = [
       1018
     ],
     "gold": {
-      "base": 375,
+      "base": 350,
       "total": 2900,
       "sell": 2030
     },
     "rank": "Legendary",
     "stats": {
-      "attackDamage": 55,
+      "attackDamage": 50,
       "criticalStrikeChance": 25,
       "abilityHaste": 20
     },
@@ -5136,7 +6222,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3599,
     "key": "item",
-    "name": "Black Spear",
+    "name": "Kalista's Black Spear",
     "aka": [
       "spear"
     ],
@@ -5154,6 +6240,23 @@ export const itemsLite: ItemLite[] = [
     },
     "rank": "Starter",
     "stats": {}
+  },
+  {
+    "id": 3600,
+    "key": "item",
+    "name": "Kalista's Black Spear",
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
   },
   {
     "id": 3742,
@@ -5355,6 +6458,138 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Assassin"
     ]
+  },
+  {
+    "id": 3850,
+    "key": "item",
+    "name": "Spellthief's Edge",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3851,
+    "key": "item",
+    "name": "Frostfang",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3853,
+    "key": "item",
+    "name": "Shard of True Ice",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3854,
+    "key": "item",
+    "name": "Steel Shoulderguards",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3855,
+    "key": "item",
+    "name": "Runesteel Spaulders",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3857,
+    "key": "item",
+    "name": "Pauldrons of Whiterock",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3858,
+    "key": "item",
+    "name": "Relic Shield",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3859,
+    "key": "item",
+    "name": "Targon's Buckler",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3860,
+    "key": "item",
+    "name": "Bulwark of the Mountain",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3862,
+    "key": "item",
+    "name": "Spectral Sickle",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3863,
+    "key": "item",
+    "name": "Harrowing Crescent",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
+  },
+  {
+    "id": 3864,
+    "key": "item",
+    "name": "Black Mist Scythe",
+    "gold": {
+      "base": 400,
+      "purchasable": false,
+      "total": 400,
+      "sell": 160
+    }
   },
   {
     "id": 3865,
@@ -5577,7 +6812,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3901,
     "key": "item",
-    "name": "Fire at Will",
+    "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "maps": [
       11,
       12,
@@ -5596,7 +6831,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3902,
     "key": "item",
-    "name": "Death's Daughter",
+    "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "maps": [
       11,
       12,
@@ -5615,7 +6850,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 3903,
     "key": "item",
-    "name": "Raise Morale",
+    "name": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "maps": [
       11,
       12,
@@ -5694,6 +6929,21 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 4004,
+    "key": "item",
+    "name": "Spectral Cutlass",
+    "maps": [
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 200,
+      "total": 2800,
+      "sell": 1960
+    }
+  },
+  {
     "id": 4005,
     "key": "item",
     "name": "Imperial Mandate",
@@ -5727,6 +6977,19 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 4010,
+    "key": "item",
+    "name": "Bloodletter's Curse",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
     "id": 4011,
     "key": "item",
     "name": "Sword of Blossoming Dawn",
@@ -5748,6 +7011,37 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Support"
     ]
+  },
+  {
+    "id": 4012,
+    "key": "item",
+    "name": "Sin Eater",
+    "gold": {
+      "base": 3000,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 4013,
+    "key": "item",
+    "name": "Lightning Braid",
+    "gold": {
+      "base": 3000,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 4014,
+    "key": "item",
+    "name": "Frozen Mallet",
+    "gold": {
+      "base": 3000,
+      "purchasable": false,
+      "total": 3000,
+      "sell": 2100
+    }
   },
   {
     "id": 4015,
@@ -5852,6 +7146,32 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 4402,
+    "key": "item",
+    "name": "Innervating Locket",
+    "maps": [
+      21
+    ],
+    "gold": {
+      "base": 600,
+      "total": 2950,
+      "sell": 2065
+    }
+  },
+  {
+    "id": 4403,
+    "key": "item",
+    "name": "The Golden Spatula",
+    "maps": [
+      21
+    ],
+    "gold": {
+      "base": 687,
+      "total": 7187,
+      "sell": 5031
+    }
+  },
+  {
     "id": 4628,
     "key": "item",
     "name": "Horizon Focus",
@@ -5871,9 +7191,9 @@ export const itemsLite: ItemLite[] = [
       1052
     ],
     "gold": {
-      "base": 200,
-      "total": 2750,
-      "sell": 1925
+      "base": 600,
+      "total": 2700,
+      "sell": 1890
     },
     "rank": "Legendary",
     "stats": {
@@ -6016,6 +7336,81 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 4635,
+    "key": "item",
+    "name": "Leeching Leer",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 465,
+      "purchasable": false,
+      "total": 1265,
+      "sell": 886
+    }
+  },
+  {
+    "id": 4636,
+    "key": "item",
+    "name": "Night Harvester",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 815,
+      "purchasable": false,
+      "total": 2765,
+      "sell": 1936
+    }
+  },
+  {
+    "id": 4637,
+    "key": "item",
+    "name": "Demonic Embrace",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 850,
+      "purchasable": false,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 4638,
+    "key": "item",
+    "name": "Watchful Wardstone",
+    "gold": {
+      "base": 1100,
+      "total": 1100,
+      "sell": 770
+    }
+  },
+  {
+    "id": 4641,
+    "key": "item",
+    "name": "Stirring Wardstone",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 350,
+      "purchasable": false,
+      "total": 350,
+      "sell": 140
+    }
+  },
+  {
     "id": 4642,
     "key": "item",
     "name": "Bandleglass Mirror",
@@ -6047,6 +7442,27 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Support"
     ]
+  },
+  {
+    "id": 4643,
+    "key": "item",
+    "name": "Vigilant Wardstone",
+    "gold": {
+      "base": 1200,
+      "total": 2300,
+      "sell": 1610
+    }
+  },
+  {
+    "id": 4644,
+    "key": "item",
+    "name": "Crown of the Shattered Queen",
+    "gold": {
+      "base": 465,
+      "purchasable": false,
+      "total": 2865,
+      "sell": 2006
+    }
   },
   {
     "id": 4645,
@@ -6104,6 +7520,41 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Mage"
     ]
+  },
+  {
+    "id": 6029,
+    "key": "item",
+    "name": "Ironspike Whip",
+    "gold": {
+      "base": 225,
+      "purchasable": false,
+      "total": 1100,
+      "sell": 770
+    }
+  },
+  {
+    "id": 6032,
+    "key": "item",
+    "name": "Stat Bonus",
+    "maps": [
+      12
+    ],
+    "gold": {
+      "base": 750,
+      "total": 750,
+      "sell": 375
+    }
+  },
+  {
+    "id": 6035,
+    "key": "item",
+    "name": "Silvermere Dawn",
+    "gold": {
+      "base": 425,
+      "purchasable": false,
+      "total": 3000,
+      "sell": 2100
+    }
   },
   {
     "id": 6333,
@@ -6336,6 +7787,17 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 6630,
+    "key": "item",
+    "name": "Goredrinker",
+    "gold": {
+      "base": 200,
+      "purchasable": false,
+      "total": 3200,
+      "sell": 2240
+    }
+  },
+  {
     "id": 6631,
     "key": "item",
     "name": "Stridebreaker",
@@ -6369,6 +7831,17 @@ export const itemsLite: ItemLite[] = [
       "Fighter",
       "Movement"
     ]
+  },
+  {
+    "id": 6632,
+    "key": "item",
+    "name": "Divine Sunderer",
+    "gold": {
+      "base": 700,
+      "purchasable": false,
+      "total": 3450,
+      "sell": 2415
+    }
   },
   {
     "id": 6653,
@@ -6431,6 +7904,17 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Mage"
     ]
+  },
+  {
+    "id": 6656,
+    "key": "item",
+    "name": "Everfrost",
+    "gold": {
+      "base": 465,
+      "purchasable": false,
+      "total": 2865,
+      "sell": 2006
+    }
   },
   {
     "id": 6657,
@@ -6601,6 +8085,17 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 6667,
+    "key": "item",
+    "name": "Radiant Virtue",
+    "gold": {
+      "base": 600,
+      "purchasable": false,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
     "id": 6670,
     "key": "item",
     "name": "Noonquiver",
@@ -6628,6 +8123,17 @@ export const itemsLite: ItemLite[] = [
       "Marksman",
       "Onhit effects"
     ]
+  },
+  {
+    "id": 6671,
+    "key": "item",
+    "name": "Galeforce",
+    "gold": {
+      "base": 650,
+      "purchasable": false,
+      "total": 3500,
+      "sell": 2450
+    }
   },
   {
     "id": 6672,
@@ -6761,6 +8267,17 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 6677,
+    "key": "item",
+    "name": "Rageknife",
+    "gold": {
+      "base": 600,
+      "purchasable": false,
+      "total": 1100,
+      "sell": 770
+    }
+  },
+  {
     "id": 6690,
     "key": "item",
     "name": "Rectrix",
@@ -6787,6 +8304,17 @@ export const itemsLite: ItemLite[] = [
       "Assassin",
       "Fighter"
     ]
+  },
+  {
+    "id": 6691,
+    "key": "item",
+    "name": "Duskblade of Draktharr",
+    "gold": {
+      "base": 900,
+      "purchasable": false,
+      "total": 2950,
+      "sell": 2065
+    }
   },
   {
     "id": 6692,
@@ -6819,6 +8347,23 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Fighter"
     ]
+  },
+  {
+    "id": 6693,
+    "key": "item",
+    "name": "Prowler's Claw",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 800,
+      "purchasable": false,
+      "total": 2850,
+      "sell": 1995
+    }
   },
   {
     "id": 6694,
@@ -7008,6 +8553,17 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 6700,
+    "key": "item",
+    "name": "Shield of the Rakkor",
+    "gold": {
+      "base": 800,
+      "purchasable": false,
+      "total": 2675,
+      "sell": 1873
+    }
+  },
+  {
     "id": 6701,
     "key": "item",
     "name": "Opportunity",
@@ -7039,6 +8595,55 @@ export const itemsLite: ItemLite[] = [
       "Assassin",
       "Movement"
     ]
+  },
+  {
+    "id": 6702,
+    "key": "item",
+    "name": "Scouting Ahead",
+    "maps": [
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 7050,
+    "key": "item",
+    "name": "Gangplank Placeholder",
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
+    ],
+    "gold": {
+      "base": 0,
+      "purchasable": false,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 8001,
+    "key": "item",
+    "name": "Anathema's Chains",
+    "maps": [
+      11,
+      12,
+      21,
+      35
+    ],
+    "gold": {
+      "base": 800,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
   },
   {
     "id": 8010,
@@ -7098,6 +8703,813 @@ export const itemsLite: ItemLite[] = [
       "Tank",
       "Support"
     ]
+  },
+  {
+    "id": 9168,
+    "key": "item",
+    "name": "Locked Weapon Slot",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9171,
+    "key": "item",
+    "name": "Cyclonic Slicers",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9172,
+    "key": "item",
+    "name": "YuumiBot",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9173,
+    "key": "item",
+    "name": "Radiant Field",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9174,
+    "key": "item",
+    "name": "Statikk Sword",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9175,
+    "key": "item",
+    "name": "Lioness's Lament",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9176,
+    "key": "item",
+    "name": "Gatling Bunny-Guns",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9177,
+    "key": "item",
+    "name": "Searing Shortbow",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9178,
+    "key": "item",
+    "name": "The Annihilator",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9179,
+    "key": "item",
+    "name": "Battle Bunny Crossbow",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9180,
+    "key": "item",
+    "name": "UwU Blaster",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9181,
+    "key": "item",
+    "name": "Vortex Glove",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9183,
+    "key": "item",
+    "name": "Blade-o-rang",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9184,
+    "key": "item",
+    "name": "Bunny Mega-Blast",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9185,
+    "key": "item",
+    "name": "Anti-Shark Sea Mine",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9187,
+    "key": "item",
+    "name": "T.I.B.B.E.R.S",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9188,
+    "key": "item",
+    "name": "Ani-Mines",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9189,
+    "key": "item",
+    "name": "Final City Transit",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9190,
+    "key": "item",
+    "name": "Echoing Batblades",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9192,
+    "key": "item",
+    "name": "Paw Print Poisoner",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9193,
+    "key": "item",
+    "name": "Iceblast Armor",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9271,
+    "key": "item",
+    "name": "Unceasing Cyclone",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9272,
+    "key": "item",
+    "name": "YuumiBot_Final_FINAL",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9273,
+    "key": "item",
+    "name": "Explosive Embrace",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9274,
+    "key": "item",
+    "name": "Prumbis's Electrocarver",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9275,
+    "key": "item",
+    "name": "Enveloping Light",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9276,
+    "key": "item",
+    "name": "Double Bun-Bun Barrage",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9277,
+    "key": "item",
+    "name": "Evolved Embershot",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9278,
+    "key": "item",
+    "name": "Animapocalypse",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9279,
+    "key": "item",
+    "name": "Bunny Prime Ballista",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9280,
+    "key": "item",
+    "name": "OwO Blaster",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9281,
+    "key": "item",
+    "name": "Tempest's Gauntlet",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9283,
+    "key": "item",
+    "name": "Quad-o-rang",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9284,
+    "key": "item",
+    "name": "Rapid Rabbit Raindown",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9285,
+    "key": "item",
+    "name": "Neverending Mobstomper",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9287,
+    "key": "item",
+    "name": "T.I.B.B.E.R.S (B.E.E.G Edition)",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9288,
+    "key": "item",
+    "name": "Jinx's Tri-Namite",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9289,
+    "key": "item",
+    "name": "FC Limited Express",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9290,
+    "key": "item",
+    "name": "Vayne's Chromablades",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9292,
+    "key": "item",
+    "name": "Bearfoot Chem-Dispenser",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9293,
+    "key": "item",
+    "name": "Deep Freeze",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9300,
+    "key": "item",
+    "name": "Meow Meow",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9301,
+    "key": "item",
+    "name": "Shield Slam",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9302,
+    "key": "item",
+    "name": "Sound Wave",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9303,
+    "key": "item",
+    "name": "Pillory Swipe",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9304,
+    "key": "item",
+    "name": "Steel Tempest",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9305,
+    "key": "item",
+    "name": "Tentacle Slam",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9306,
+    "key": "item",
+    "name": "Winged Dagger",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9307,
+    "key": "item",
+    "name": "Guiding Hex",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9308,
+    "key": "item",
+    "name": "Bunny Hop",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9400,
+    "key": "item",
+    "name": "Battle Cat Barrage",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9401,
+    "key": "item",
+    "name": "Light of the Lion",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9402,
+    "key": "item",
+    "name": "Anima Echo",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9403,
+    "key": "item",
+    "name": "Savage Slice",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9404,
+    "key": "item",
+    "name": "Wandering Storms",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9405,
+    "key": "item",
+    "name": "Grizzly Smash",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9406,
+    "key": "item",
+    "name": "Lover's Ricochet",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9407,
+    "key": "item",
+    "name": "Hopped-Up Hex",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 9408,
+    "key": "item",
+    "name": "Carrot Crash",
+    "maps": [
+      33
+    ],
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  {
+    "id": 123430,
+    "key": "item",
+    "name": "Rite of Ruin",
+    "maps": [
+      12
+    ],
+    "gold": {
+      "base": 650,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 124011,
+    "key": "item",
+    "name": "Sword of Blossoming Dawn",
+    "maps": [
+      12
+    ],
+    "gold": {
+      "base": 550,
+      "total": 2350,
+      "sell": 1645
+    }
+  },
+  {
+    "id": 126697,
+    "key": "item",
+    "name": "Hubris",
+    "maps": [
+      12,
+      35
+    ],
+    "gold": {
+      "base": 900,
+      "total": 2950,
+      "sell": 2065
+    }
   },
   {
     "id": 220000,
@@ -7220,6 +9632,409 @@ export const itemsLite: ItemLite[] = [
     "stats": {}
   },
   {
+    "id": 220008,
+    "key": "item",
+    "name": "Anvil Voucher",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 750,
+      "purchasable": false,
+      "total": 750,
+      "sell": 0
+    }
+  },
+  {
+    "id": 220009,
+    "key": "item",
+    "name": "Gold Stat Anvil Voucher",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 750,
+      "purchasable": false,
+      "total": 750,
+      "sell": 0
+    }
+  },
+  {
+    "id": 220010,
+    "key": "item",
+    "name": "Prismatic Stat Voucher",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 750,
+      "purchasable": false,
+      "total": 750,
+      "sell": 0
+    }
+  },
+  {
+    "id": 220011,
+    "key": "item",
+    "name": "Bravery Voucher",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 750,
+      "purchasable": false,
+      "total": 750,
+      "sell": 0
+    }
+  },
+  {
+    "id": 221011,
+    "key": "item",
+    "name": "Giant's Belt",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 221026,
+    "key": "item",
+    "name": "Blasting Wand",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 221031,
+    "key": "item",
+    "name": "Chain Vest",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 221038,
+    "key": "item",
+    "name": "B. F. Sword",
+    "gold": {
+      "base": 1300,
+      "total": 1300,
+      "sell": 910
+    }
+  },
+  {
+    "id": 221043,
+    "key": "item",
+    "name": "Recurve Bow",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 221053,
+    "key": "item",
+    "name": "Vampiric Scepter",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 221057,
+    "key": "item",
+    "name": "Negatron Cloak",
+    "gold": {
+      "base": 450,
+      "purchasable": false,
+      "total": 450,
+      "sell": 315
+    }
+  },
+  {
+    "id": 221058,
+    "key": "item",
+    "name": "Needlessly Large Rod",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 0
+    }
+  },
+  {
+    "id": 222022,
+    "key": "item",
+    "name": "Glowing Mote",
+    "gold": {
+      "base": 250,
+      "purchasable": false,
+      "total": 250,
+      "sell": 175
+    }
+  },
+  {
+    "id": 222051,
+    "key": "item",
+    "name": "Guardian's Horn",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    }
+  },
+  {
+    "id": 222065,
+    "key": "item",
+    "name": "Shurelya's Battlesong",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 222141,
+    "key": "item",
+    "name": "Cappa Juice",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 500
+    }
+  },
+  {
+    "id": 222502,
+    "key": "item",
+    "name": "Unending Despair",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222503,
+    "key": "item",
+    "name": "Blackfire Torch",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 222504,
+    "key": "item",
+    "name": "Kaenic Rookern",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 222510,
+    "key": "item",
+    "name": "Dusk and Dawn",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222512,
+    "key": "item",
+    "name": "Fiendhunter Bolts",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 222517,
+    "key": "item",
+    "name": "Endless Hunger",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222522,
+    "key": "item",
+    "name": "Actualizer",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222523,
+    "key": "item",
+    "name": "Hexoptics C44",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222524,
+    "key": "item",
+    "name": "Bandlepipes",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222525,
+    "key": "item",
+    "name": "Protoplasm Harness",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 222526,
+    "key": "item",
+    "name": "Whispering Circlet",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 222530,
+    "key": "item",
+    "name": "Diadem of Songs",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223001,
+    "key": "item",
+    "name": "Evenshroud",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223002,
+    "key": "item",
+    "name": "Trailblazer",
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223003,
+    "key": "item",
+    "name": "Archangel's Staff",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223004,
+    "key": "item",
+    "name": "Manamune",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
     "id": 223005,
     "key": "item",
     "name": "Ghostcrawlers",
@@ -7234,6 +10049,124 @@ export const itemsLite: ItemLite[] = [
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 70
+    }
+  },
+  {
+    "id": 223006,
+    "key": "item",
+    "name": "Berserker's Greaves",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223009,
+    "key": "item",
+    "name": "Boots of Swiftness",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223011,
+    "key": "item",
+    "name": "Chemtech Putrifier",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 1900,
+      "sell": 1330
+    }
+  },
+  {
+    "id": 223020,
+    "key": "item",
+    "name": "Sorcerer's Shoes",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223026,
+    "key": "item",
+    "name": "Guardian Angel",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223031,
+    "key": "item",
+    "name": "Infinity Edge",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223032,
+    "key": "item",
+    "name": "Yun Tal Wildarrows",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223033,
+    "key": "item",
+    "name": "Mortal Reminder",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223036,
+    "key": "item",
+    "name": "Lord Dominik's Regards",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
     }
   },
   {
@@ -7261,13 +10194,37 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 223095,
+    "id": 223040,
     "key": "item",
-    "name": "Stormrazor",
-    "aka": [
-      "energize",
-      "Windblade"
+    "name": "Seraph's Embrace",
+    "maps": [
+      30
     ],
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223042,
+    "key": "item",
+    "name": "Muramana",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223046,
+    "key": "item",
+    "name": "Phantom Dancer",
     "maps": [
       30
     ],
@@ -7275,17 +10232,509 @@ export const itemsLite: ItemLite[] = [
       "base": 2500,
       "total": 2500,
       "sell": 1250
-    },
-    "rank": "Legendary",
-    "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 25,
-      "criticalStrikeChance": 25
-    },
-    "tags": [
-      "Marksman",
-      "Onhit effects"
-    ]
+    }
+  },
+  {
+    "id": 223047,
+    "key": "item",
+    "name": "Plated Steelcaps",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223050,
+    "key": "item",
+    "name": "Zeke's Convergence",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223053,
+    "key": "item",
+    "name": "Sterak's Gage",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223057,
+    "key": "item",
+    "name": "Sheen",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223065,
+    "key": "item",
+    "name": "Spirit Visage",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223067,
+    "key": "item",
+    "name": "Kindlegem",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223068,
+    "key": "item",
+    "name": "Sunfire Aegis",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223071,
+    "key": "item",
+    "name": "Black Cleaver",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223072,
+    "key": "item",
+    "name": "Bloodthirster",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223073,
+    "key": "item",
+    "name": "Experimental Hexplate",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223074,
+    "key": "item",
+    "name": "Ravenous Hydra",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223075,
+    "key": "item",
+    "name": "Thornmail",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223078,
+    "key": "item",
+    "name": "Trinity Force",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223084,
+    "key": "item",
+    "name": "Heartsteel",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223085,
+    "key": "item",
+    "name": "Runaan's Hurricane",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223087,
+    "key": "item",
+    "name": "Statikk Shiv",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223089,
+    "key": "item",
+    "name": "Rabadon's Deathcap",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223091,
+    "key": "item",
+    "name": "Wit's End",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223094,
+    "key": "item",
+    "name": "Rapid Firecannon",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223095,
+    "key": "item",
+    "name": "Stormrazor",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223100,
+    "key": "item",
+    "name": "Lich Bane",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223102,
+    "key": "item",
+    "name": "Banshee's Veil",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223105,
+    "key": "item",
+    "name": "Aegis of the Legion",
+    "gold": {
+      "base": 500,
+      "purchasable": false,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223107,
+    "key": "item",
+    "name": "Redemption",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223109,
+    "key": "item",
+    "name": "Knight's Vow",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223110,
+    "key": "item",
+    "name": "Frozen Heart",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223111,
+    "key": "item",
+    "name": "Mercury's Treads",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223112,
+    "key": "item",
+    "name": "Guardian's Orb",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    }
+  },
+  {
+    "id": 223115,
+    "key": "item",
+    "name": "Nashor's Tooth",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223116,
+    "key": "item",
+    "name": "Rylai's Crystal Scepter",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223118,
+    "key": "item",
+    "name": "Malignance",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223119,
+    "key": "item",
+    "name": "Winter's Approach",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223121,
+    "key": "item",
+    "name": "Fimbulwinter",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223124,
+    "key": "item",
+    "name": "Guinsoo's Rageblade",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223135,
+    "key": "item",
+    "name": "Void Staff",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223137,
+    "key": "item",
+    "name": "Cryptbloom",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223139,
+    "key": "item",
+    "name": "Mercurial Scimitar",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223142,
+    "key": "item",
+    "name": "Youmuu's Ghostblade",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223143,
+    "key": "item",
+    "name": "Randuin's Omen",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
   },
   {
     "id": 223146,
@@ -7298,16 +10747,150 @@ export const itemsLite: ItemLite[] = [
       "base": 2500,
       "total": 2500,
       "sell": 1250
-    },
-    "rank": "Legendary",
-    "stats": {
-      "abilityPower": 90,
-      "attackDamage": 45,
-      "omnivamp": 15
-    },
-    "tags": [
-      "Mage"
-    ]
+    }
+  },
+  {
+    "id": 223152,
+    "key": "item",
+    "name": "Hextech Rocketbelt",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223153,
+    "key": "item",
+    "name": "Blade of The Ruined King",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223156,
+    "key": "item",
+    "name": "Maw of Malmortius",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223157,
+    "key": "item",
+    "name": "Zhonya's Hourglass",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223158,
+    "key": "item",
+    "name": "Ionian Boots of Lucidity",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 350
+    }
+  },
+  {
+    "id": 223161,
+    "key": "item",
+    "name": "Spear of Shojin",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223165,
+    "key": "item",
+    "name": "Morellonomicon",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223172,
+    "key": "item",
+    "name": "Zephyr",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223177,
+    "key": "item",
+    "name": "Guardian's Blade",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    }
+  },
+  {
+    "id": 223181,
+    "key": "item",
+    "name": "Hullbreaker",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223184,
+    "key": "item",
+    "name": "Guardian's Hammer",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 500,
+      "total": 500,
+      "sell": 250
+    }
   },
   {
     "id": 223185,
@@ -7333,6 +10916,121 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 223190,
+    "key": "item",
+    "name": "Locket of the Iron Solari",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223193,
+    "key": "item",
+    "name": "Gargoyle Stoneplate",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 223222,
+    "key": "item",
+    "name": "Mikael's Blessing",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223302,
+    "key": "item",
+    "name": "Terminus",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223504,
+    "key": "item",
+    "name": "Ardent Censer",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223508,
+    "key": "item",
+    "name": "Essence Reaver",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223742,
+    "key": "item",
+    "name": "Dead Man's Plate",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223748,
+    "key": "item",
+    "name": "Titanic Hydra",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 223814,
+    "key": "item",
+    "name": "Edge of Night",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
     "id": 224004,
     "key": "item",
     "name": "Spectral Cutlass",
@@ -7353,6 +11051,32 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Assassin"
     ]
+  },
+  {
+    "id": 224005,
+    "key": "item",
+    "name": "Imperial Mandate",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 224401,
+    "key": "item",
+    "name": "Force of Nature",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
   },
   {
     "id": 224403,
@@ -7392,6 +11116,206 @@ export const itemsLite: ItemLite[] = [
     }
   },
   {
+    "id": 224628,
+    "key": "item",
+    "name": "Horizon Focus",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 224629,
+    "key": "item",
+    "name": "Cosmic Drive",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 224633,
+    "key": "item",
+    "name": "Riftmaker",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 224636,
+    "key": "item",
+    "name": "Night Harvester",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 224637,
+    "key": "item",
+    "name": "Demonic Embrace",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 224644,
+    "key": "item",
+    "name": "Crown of the Shattered Queen",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 224645,
+    "key": "item",
+    "name": "Shadowflame",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 224646,
+    "key": "item",
+    "name": "Stormsurge",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226035,
+    "key": "item",
+    "name": "Silvermere Dawn",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226333,
+    "key": "item",
+    "name": "Death's Dance",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226609,
+    "key": "item",
+    "name": "Chempunk Chainsword",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226610,
+    "key": "item",
+    "name": "Sundered Sky",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226616,
+    "key": "item",
+    "name": "Staff of Flowing Water",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226617,
+    "key": "item",
+    "name": "Moonstone Renewer",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226620,
+    "key": "item",
+    "name": "Echoes of Helia",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226621,
+    "key": "item",
+    "name": "Dawncore",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
     "id": 226630,
     "key": "item",
     "name": "Goredrinker",
@@ -7419,6 +11343,321 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Fighter"
     ]
+  },
+  {
+    "id": 226631,
+    "key": "item",
+    "name": "Stridebreaker",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226632,
+    "key": "item",
+    "name": "Divine Sunderer",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226653,
+    "key": "item",
+    "name": "Liandry's Anguish",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226655,
+    "key": "item",
+    "name": "Luden's Echo",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226656,
+    "key": "item",
+    "name": "Everfrost",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226657,
+    "key": "item",
+    "name": "Rod of Ages",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226662,
+    "key": "item",
+    "name": "Iceborn Gauntlet",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226664,
+    "key": "item",
+    "name": "Hollow Radiance",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226665,
+    "key": "item",
+    "name": "Jak'Sho, The Protean",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226667,
+    "key": "item",
+    "name": "Radiant Virtue",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226671,
+    "key": "item",
+    "name": "Galeforce",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226672,
+    "key": "item",
+    "name": "Kraken Slayer",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226673,
+    "key": "item",
+    "name": "Immortal Shieldbow",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226675,
+    "key": "item",
+    "name": "Navori Flickerblades",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226676,
+    "key": "item",
+    "name": "The Collector",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226691,
+    "key": "item",
+    "name": "Duskblade of Draktharr",
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 226692,
+    "key": "item",
+    "name": "Eclipse",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226693,
+    "key": "item",
+    "name": "Prowler's Claw",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    }
+  },
+  {
+    "id": 226694,
+    "key": "item",
+    "name": "Serylda's Grudge",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226695,
+    "key": "item",
+    "name": "Serpent's Fang",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226696,
+    "key": "item",
+    "name": "Axiom Arc",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226697,
+    "key": "item",
+    "name": "Hubris",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226698,
+    "key": "item",
+    "name": "Profane Hydra",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226699,
+    "key": "item",
+    "name": "Voltaic Cyclosword",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 226701,
+    "key": "item",
+    "name": "Opportunity",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
   },
   {
     "id": 228001,
@@ -7475,6 +11714,444 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Mage"
     ]
+  },
+  {
+    "id": 228003,
+    "key": "item",
+    "name": "Deathblade",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 9000,
+      "purchasable": false,
+      "total": 9000,
+      "sell": 6300
+    }
+  },
+  {
+    "id": 228004,
+    "key": "item",
+    "name": "Adaptive Helm",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 6000,
+      "purchasable": false,
+      "total": 6000,
+      "sell": 4200
+    }
+  },
+  {
+    "id": 228005,
+    "key": "item",
+    "name": "Obsidian Cleaver",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 3000,
+      "purchasable": false,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 228006,
+    "key": "item",
+    "name": "Sanguine Blade",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 3000,
+      "purchasable": false,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 228008,
+    "key": "item",
+    "name": "Runeglaive",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 9000,
+      "purchasable": false,
+      "total": 9000,
+      "sell": 6300
+    }
+  },
+  {
+    "id": 228009,
+    "key": "item",
+    "name": "Multitool",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 228020,
+    "key": "item",
+    "name": "Abyssal Mask",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 322065,
+    "key": "item",
+    "name": "Shurelya's Battlesong",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 322526,
+    "key": "item",
+    "name": "Whispering Circlet",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 850,
+      "total": 2250,
+      "sell": 1575
+    }
+  },
+  {
+    "id": 322530,
+    "key": "item",
+    "name": "Diadem of Songs",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2250,
+      "purchasable": false,
+      "total": 2250,
+      "sell": 1575
+    }
+  },
+  {
+    "id": 323002,
+    "key": "item",
+    "name": "Trailblazer",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 323003,
+    "key": "item",
+    "name": "Archangel's Staff",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 450,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 323004,
+    "key": "item",
+    "name": "Manamune",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1100,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 323040,
+    "key": "item",
+    "name": "Seraph's Embrace",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2900,
+      "purchasable": false,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 323042,
+    "key": "item",
+    "name": "Muramana",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2900,
+      "purchasable": false,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 323050,
+    "key": "item",
+    "name": "Zeke's Convergence",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2300,
+      "sell": 1610
+    }
+  },
+  {
+    "id": 323070,
+    "key": "item",
+    "name": "Tear of the Goddess",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 400,
+      "total": 400,
+      "sell": 280
+    }
+  },
+  {
+    "id": 323075,
+    "key": "item",
+    "name": "Thornmail",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 650,
+      "total": 2650,
+      "sell": 1855
+    }
+  },
+  {
+    "id": 323107,
+    "key": "item",
+    "name": "Redemption",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 2800,
+      "sell": 1960
+    }
+  },
+  {
+    "id": 323109,
+    "key": "item",
+    "name": "Knight's Vow",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 323110,
+    "key": "item",
+    "name": "Frozen Heart",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2700,
+      "sell": 1890
+    }
+  },
+  {
+    "id": 323119,
+    "key": "item",
+    "name": "Winter's Approach",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 300,
+      "total": 2400,
+      "sell": 1680
+    }
+  },
+  {
+    "id": 323121,
+    "key": "item",
+    "name": "Fimbulwinter",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2400,
+      "purchasable": false,
+      "total": 2400,
+      "sell": 1680
+    }
+  },
+  {
+    "id": 323190,
+    "key": "item",
+    "name": "Locket of the Iron Solari",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1100,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 323222,
+    "key": "item",
+    "name": "Mikael's Blessing",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 2800,
+      "sell": 1960
+    }
+  },
+  {
+    "id": 323504,
+    "key": "item",
+    "name": "Ardent Censer",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 700,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 324005,
+    "key": "item",
+    "name": "Imperial Mandate",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 600,
+      "total": 2750,
+      "sell": 1925
+    }
+  },
+  {
+    "id": 326616,
+    "key": "item",
+    "name": "Staff of Flowing Water",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 750,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 326617,
+    "key": "item",
+    "name": "Moonstone Renewer",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 800,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 326620,
+    "key": "item",
+    "name": "Echoes of Helia",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 900,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 326621,
+    "key": "item",
+    "name": "Dawncore",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 850,
+      "total": 2900,
+      "sell": 2030
+    }
+  },
+  {
+    "id": 326657,
+    "key": "item",
+    "name": "Rod of Ages",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 450,
+      "total": 2600,
+      "sell": 1820
+    }
+  },
+  {
+    "id": 328020,
+    "key": "item",
+    "name": "Abyssal Mask",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 1200,
+      "total": 2850,
+      "sell": 1995
+    }
   },
   {
     "id": 443054,
@@ -7628,7 +12305,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 443061,
     "key": "item",
-    "name": "Force of Entropy",
+    "name": "Force Of Entropy",
     "maps": [
       30
     ],
@@ -7703,7 +12380,7 @@ export const itemsLite: ItemLite[] = [
   {
     "id": 443064,
     "key": "item",
-    "name": "Talisman of Ascension",
+    "name": "Talisman Of Ascension",
     "aka": [
       "Support",
       "Economy",
@@ -7818,6 +12495,19 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Tank"
     ]
+  },
+  {
+    "id": 443083,
+    "key": "item",
+    "name": "Warmog's Armor",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 1000,
+      "total": 1000,
+      "sell": 400
+    }
   },
   {
     "id": 443090,
@@ -8390,6 +13080,19 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
+    "id": 447111,
+    "key": "item",
+    "name": "Overlord's Bloodmail",
+    "maps": [
+      30
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
     "id": 447112,
     "key": "item",
     "name": "Flesheater",
@@ -8665,5 +13368,227 @@ export const itemsLite: ItemLite[] = [
     "tags": [
       "Support"
     ]
+  },
+  {
+    "id": 663039,
+    "key": "item",
+    "name": "Atma's Reckoning",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 663056,
+    "key": "item",
+    "name": "Demon King's Crown",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 663058,
+    "key": "item",
+    "name": "Shield of Molten Stone",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 663059,
+    "key": "item",
+    "name": "Cloak of Starry Night",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 663060,
+    "key": "item",
+    "name": "Sword of the Divine",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 663064,
+    "key": "item",
+    "name": "Veigar's Talisman of Ascension",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 900,
+      "total": 900,
+      "sell": 0
+    }
+  },
+  {
+    "id": 663146,
+    "key": "item",
+    "name": "Hextech Gunblade",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 663172,
+    "key": "item",
+    "name": "Zephyr",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 663193,
+    "key": "item",
+    "name": "Gargoyle Stoneplate",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 664011,
+    "key": "item",
+    "name": "Sword of Blossoming Dawn",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1250
+    }
+  },
+  {
+    "id": 664403,
+    "key": "item",
+    "name": "The Golden Spatula",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "purchasable": false,
+      "total": 2500,
+      "sell": 1750
+    }
+  },
+  {
+    "id": 664644,
+    "key": "item",
+    "name": "Crown of the Shattered Queen",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 667101,
+    "key": "item",
+    "name": "Gambler's Blade",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 0
+    }
+  },
+  {
+    "id": 667109,
+    "key": "item",
+    "name": "Cruelty",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 667112,
+    "key": "item",
+    "name": "Flesheater",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1000
+    }
+  },
+  {
+    "id": 667666,
+    "key": "item",
+    "name": "The Collector",
+    "maps": [
+      11
+    ],
+    "gold": {
+      "base": 525,
+      "total": 3000,
+      "sell": 2100
+    }
+  },
+  {
+    "id": 994403,
+    "key": "item",
+    "name": "Golden Spatula",
+    "maps": [
+      12
+    ],
+    "gold": {
+      "base": 2500,
+      "total": 2500,
+      "sell": 1750
+    }
   }
 ]

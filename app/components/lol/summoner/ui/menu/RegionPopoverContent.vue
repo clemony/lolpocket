@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { regionIndex } from '~~/shared/references'
-
 defineOptions({
   inheritAttrs: false,
 })
@@ -39,7 +37,7 @@ const modelValue = ref(as().account.region)
         :value="region"
         :class="
           cn('flex items-center justify-start gap-3 rounded-md py-1.5 text-2 text-nowrap',
-            { 'btn-active !bg-b2/30': region === modelValue },
+             { 'btn-active !bg-b2/30': region === modelValue },
           )
         ">
         <span class="">

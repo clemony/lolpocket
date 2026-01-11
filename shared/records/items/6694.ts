@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Serylda's Grudge",
   "id": 6694,
   "rank": "Legendary",
@@ -22,9 +23,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Bitter Cold",
-      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows them by 30% for 1 second.",
-      "unique": true
+      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows them by 30% for 1 second."
     }
   ],
   "stats": {
@@ -32,6 +34,7 @@ const item: Item =  {
     "attackDamage": 45,
     "abilityHaste": 15
   },
+  "description": "45 Attack Damage\n35% Armor Penetration\n15 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
   "maps": [
     11,
     12,

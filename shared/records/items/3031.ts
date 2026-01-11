@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Infinity Edge",
   "id": 3031,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Massively enhances critical strikes",
   "nicknames": [
     "ie"
   ],
@@ -31,6 +31,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "criticalStrikeDamage": 30
   },
+  "description": "75 Attack Damage\n25% Critical Strike Chance\n30% Critical Strike Damage\n\n",
   "maps": [
     11,
     12,
@@ -38,9 +39,9 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 675,
-    "total": 3450,
-    "sell": 2415
+    "base": 725,
+    "total": 3500,
+    "sell": 2450
   }
 }
 export default item

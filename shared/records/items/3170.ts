@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Swiftmarch",
   "id": 3170,
   "rank": "Boots",
@@ -12,32 +13,34 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Improves defense and reduces duration of disabling effects",
   "nicknames": [
     "boots"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Fleetfooted",
-      "effects": "Gain 40% slow resist.",
-      "unique": true
+      "effects": "Gain 40% slow resist."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Noxian Fervor",
-      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon\" />adaptive force equal to 5% of your <b>total</b> movement speed.",
-      "unique": true
+      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon\" />adaptive force equal to 5% of your <b>total</b> movement speed."
     }
   ],
   "stats": {
     "flatMovespeed": 65
   },
+  "description": "65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.",
   "maps": [
     11
   ],
   "gold": {
-    "base": 500,
-    "total": 1500,
-    "sell": 1050
+    "base": 0,
+    "total": 1000,
+    "sell": 700
   }
 }
 export default item

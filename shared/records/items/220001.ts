@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Legendary Fighter Item",
   "id": 220001,
   "rank": "Consumable",
@@ -6,6 +7,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "stats": {},
+  "description": "\n\nActive - Consume: Automatically open a semi-random selection for a Legendary Fighter item.",
   "maps": [
     30
   ],

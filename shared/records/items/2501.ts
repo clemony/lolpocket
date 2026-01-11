@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Overlord's Bloodmail",
   "id": 2501,
   "rank": "Legendary",
@@ -19,20 +20,23 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Tyranny",
-      "effects": "Gain <b>bonus</b> attack damage equal to 2.5% <b>bonus</b> health.",
-      "unique": true
+      "effects": "Gain <b>bonus</b> attack damage equal to 2.5% <b>bonus</b> health."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Retribution",
-      "effects": "Gain <b>bonus</b> attack damage equal to 0% – 70% (based on missing health) of your <b>total</b> attack damage from other sources.",
-      "unique": true
+      "effects": "Gain <b>bonus</b> attack damage equal to 0% – 70% (based on missing health) of your <b>total</b> attack damage from other sources."
     }
   ],
   "stats": {
     "attackDamage": 30,
     "health": 550
   },
+  "description": "30 Attack Damage\n550 Health\n\nTyranny\nGain 2.5% of your bonus Health as Attack Damage. \n\nRetribution\nGain up to 12% increased Attack Damage based on your percent missing Health. ",
   "maps": [
     11,
     12,

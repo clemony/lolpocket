@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sorcerer's Shoes",
   "id": 3020,
   "rank": "Boots",
@@ -13,13 +14,12 @@ const item: Item =  {
     {
       "id": 3175,
       "name": "Spellslinger's Shoes",
-      "gold": 1600
+      "gold": 1100
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Enhances Move Speed and magic damage",
   "nicknames": [
     "boots",
     "sorcs"
@@ -28,6 +28,7 @@ const item: Item =  {
     "flatMagicPenetration": 12,
     "flatMovespeed": 45
   },
+  "description": "12 Magic Penetration\n45 Move Speed\n\n",
   "maps": [
     11,
     12,

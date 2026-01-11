@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Dark Seal",
   "id": 1082,
   "rank": "Starter",
@@ -12,21 +13,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Provides Ability Power and Mana.  Increases in power as you kill enemies.",
   "nicknames": [
     "Noxian"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Glory",
-      "effects": "Gain 2 stacks for each champion kill and 1 stack for each assist, up to a <b>maximum</b> of 10 stacks. For every stack, gain 4 ability power, up to 40 AP at <b>maximum</b> stacks. Lose 5 stacks on death. Stacks are preserved when upgrading to <img src=\"/img/icons/mejais-soulstealer.webp\" class=\"tip-icon\" />Mejai's Soulstealer.",
-      "unique": true
+      "effects": "Gain 2 stacks for each champion kill and 1 stack for each assist, up to a <b>maximum</b> of 10 stacks. For every stack, gain 4 ability power, up to 40 AP at <b>maximum</b> stacks. Lose 5 stacks on death. Stacks are preserved when upgrading to <img src=\"/img/icons/mejais-soulstealer.webp\" class=\"tip-icon\" />Mejai's Soulstealer."
     }
   ],
   "stats": {
     "abilityPower": 15,
     "health": 50
   },
+  "description": "15 Ability Power\n50 Health\n\nGlory\nTakedowns grant Glory, up to 10. 5 Glory is lost on death.\nGain 4 Ability Power per Glory.",
   "maps": [
     11
   ],

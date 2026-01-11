@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Ravenous Hydra",
   "id": 3074,
   "rank": "Legendary",
@@ -22,22 +23,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Melee attacks hit nearby enemies, dealing damage and restoring Health",
   "nicknames": [
     "rav hydra"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Cleave",
-      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness.",
-      "unique": true
+      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Ravenous Crescent",
-      "effects": "Deal 80% AD physical damage to enemies within a 450 radius in front of you. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness.",
-      "unique": true
+      "effects": "Deal 80% AD physical damage to enemies within a 450 radius in front of you. This damage benefits from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal at 100% effectiveness."
     }
   ],
   "stats": {
@@ -45,6 +46,7 @@ const item: Item =  {
     "lifesteal": 12,
     "abilityHaste": 15
   },
+  "description": "65 Attack Damage\n15 Ability Haste\n12% Life Steal\n\nCleave\nAttacks deal physical damage to nearby enemies.Ravenous Crescent\nDeal physical damage to enemies around you. \nYour Life Steal applies to this damage.",
   "maps": [
     11,
     12,

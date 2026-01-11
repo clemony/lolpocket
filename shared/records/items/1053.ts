@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Vampiric Scepter",
   "id": 1053,
   "rank": "Epic",
@@ -18,7 +19,7 @@ const item: Item =  {
     {
       "id": 3146,
       "name": "Hextech Gunblade",
-      "gold": 3250
+      "gold": 3000
     },
     {
       "id": 3072,
@@ -44,11 +45,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Basic attacks restore Health",
   "stats": {
     "attackDamage": 15,
     "lifesteal": 7
   },
+  "description": "15 Attack Damage\n7% Life Steal\n\n",
   "maps": [
     11,
     12,

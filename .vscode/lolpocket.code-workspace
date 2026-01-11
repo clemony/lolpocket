@@ -7,6 +7,7 @@
   ],
   "settings": {
     "css.customData": ["./tailwind-custom-data.json"],
+    "vscode_custom_css.imports": ["file:///Users/caitlin/.vscode/vscode.css"],
     "tailwindCSS.includeLanguages": {
       "vue": "html",
       "plaintext": "html",
@@ -19,9 +20,7 @@
     "vs-code-prettier-eslint.prettierLast": false,
     "eslint.enable": true,
     "tailwindCSS.experimental.configFile": "../app/assets/css/tailwind.css",
-    "vscode_custom_css.imports": [
-      "file://Users/caitlin/Documents/css/vscode/vscode.css",
-    ],
+
     // Disable the default formatter, use eslint instead
     "prettier.enable": false,
     "editor.formatOnSave": false,

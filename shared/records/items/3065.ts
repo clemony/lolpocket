@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Spirit Visage",
   "id": 3065,
   "rank": "Legendary",
@@ -17,15 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Health and healing effects",
   "nicknames": [
     "sv"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Boundless Vitality",
-      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration by 25%.",
-      "unique": true
+      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration by 25%."
     }
   ],
   "stats": {
@@ -34,6 +35,7 @@ const item: Item =  {
     "magicResistance": 50,
     "abilityHaste": 10
   },
+  "description": "400 Health\n50 Magic Resist\n10 Ability Haste\n100% Base Health Regen\n\nBoundless Vitality\nHeals and Shields on you are increased by 25%.",
   "maps": [
     11,
     12,

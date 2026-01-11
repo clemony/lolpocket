@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Rectrix",
   "id": 6690,
   "rank": "Epic",
@@ -43,6 +44,7 @@ const item: Item =  {
     "attackDamage": 15,
     "percentMovespeed": 4
   },
+  "description": "15 Attack Damage\n4% Move Speed\n\n",
   "maps": [
     11,
     12,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from '#shared/references'
+
 </script>
 
 <template>

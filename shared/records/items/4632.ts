@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Verdant Barrier",
   "id": 4632,
   "rank": "Epic",
@@ -34,15 +35,17 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Annul",
-      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (60 second cooldown, timer restarts upon taking damage from champions).",
-      "unique": true
+      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (60 second cooldown, timer restarts upon taking damage from champions)."
     }
   ],
   "stats": {
     "abilityPower": 40,
     "magicResistance": 25
   },
+  "description": "40 Ability Power\n25 Magic Resist\n\nAnnul\nGrants a Spell Shield that blocks the next enemy Ability.",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Voltaic Cyclosword",
   "id": 6699,
   "rank": "Legendary",
@@ -27,19 +28,22 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Energized",
-      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100.",
-      "unique": true
+      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Galvanize",
-      "effects": "<img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized stack generation is increased by 75% for distance travelled from <img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />dashes, <img src=\"/img/icons/lunge.webp\" class=\"tip-icon\" />lunges and <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blinks, as well as while moving in <img src=\"/img/icons/stealth.webp\" class=\"tip-icon\" />stealth.",
-      "unique": true
+      "effects": "<img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized stack generation is increased by 75% for distance travelled from <img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />dashes, <img src=\"/img/icons/lunge.webp\" class=\"tip-icon\" />lunges and <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blinks, as well as while moving in <img src=\"/img/icons/stealth.webp\" class=\"tip-icon\" />stealth."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Firmament",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> physical damage on-hit and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows the target by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />99% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) for 0.75 seconds.",
-      "unique": true
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals 100 <b>bonus</b> physical damage on-hit and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows the target by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />99% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) for 0.75 seconds."
     }
   ],
   "stats": {
@@ -47,6 +51,7 @@ const item: Item =  {
     "lethality": 18,
     "abilityHaste": 10
   },
+  "description": "55 Attack Damage\n18 Lethality\n10 Ability Haste\n\nGalvanize\nDashes and Stealth stack Energized 75% faster.\n\nFirmament\nYour Energized Attack deals bonus physical damage and Slows for 0.75 seconds.",
   "maps": [
     11,
     12,

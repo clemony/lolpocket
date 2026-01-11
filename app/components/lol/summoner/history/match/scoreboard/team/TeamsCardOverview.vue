@@ -17,10 +17,10 @@ const route = useRoute()
       :key="player.puuid"
       data-tip="player"
       data-theme="neutral line"
-      :data-id="player.profileIcon"
+      :data-id="player.icon"
       data-placement="right"
-      :data-name="player.riotIdGameName"
-      :data-tag="player.riotIdTagline"
+      :data-name="player.name"
+      :data-tag="player.tag"
       size="5"
       variant="link"
       :to="`/summoner/${player.puuid}`"
@@ -40,7 +40,7 @@ const route = useRoute()
 
       <span
         class="truncate">
-        {{ player.riotIdGameName }}
+        {{ player.name }}
       </span>
     </BtnLink>
   </div>

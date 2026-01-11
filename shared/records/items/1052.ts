@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Amplifying Tome",
   "id": 1052,
   "rank": "Basic",
@@ -21,7 +22,7 @@ const item: Item =  {
     {
       "id": 3146,
       "name": "Hextech Gunblade",
-      "gold": 3250
+      "gold": 3000
     },
     {
       "id": 3145,
@@ -51,7 +52,7 @@ const item: Item =  {
     {
       "id": 4628,
       "name": "Horizon Focus",
-      "gold": 2750
+      "gold": 2700
     },
     {
       "id": 3113,
@@ -127,7 +128,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Ability Power",
   "nicknames": [
     "amptome",
     "book"
@@ -135,6 +135,7 @@ const item: Item =  {
   "stats": {
     "abilityPower": 20
   },
+  "description": "20 Ability Power\n\n",
   "maps": [
     11,
     12,

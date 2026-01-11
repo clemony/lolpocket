@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Eleisa's Miracle",
   "id": 443063,
   "rank": "Special",
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Enduring Vitality",
-      "effects": "Gain <img src=\"/img/icons/hsp.webp\" class=\"tip-icon\" />hsp per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing.",
-      "unique": true
+      "effects": "Gain <img src=\"/img/icons/hsp.webp\" class=\"tip-icon\" />hsp per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing."
     }
   ],
   "stats": {
@@ -17,6 +19,7 @@ const item: Item =  {
     "magicResistance": 50,
     "abilityHaste": 25
   },
+  "description": "50 Armor\n50 Magic Resist\n25 Ability Haste\n\nEnduring Vitality\nGain +2.5% Heal and Shield Power per 100 Missing Health, up to 60%.",
   "maps": [
     30
   ],

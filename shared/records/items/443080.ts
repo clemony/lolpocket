@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Twin Mask",
   "id": 443080,
   "rank": "Special",
@@ -7,12 +8,14 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Unanimity",
-      "effects": "Gain 20% of your teammate's attack damage, ability power, <b>total</b> attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste, increased to 35% if they also have <b>Twin Mask</b> and are alive.",
-      "unique": true
+      "effects": "Gain 20% of your teammate's attack damage, ability power, <b>total</b> attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste, increased to 35% if they also have <b>Twin Mask</b> and are alive."
     }
   ],
   "stats": {},
+  "description": "\n\nUnanimity\nGain a percent of your teammate's Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste, increased significantly if they also have Twin Mask and are alive.",
   "maps": [
     30
   ],

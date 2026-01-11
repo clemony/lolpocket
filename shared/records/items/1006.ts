@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Rejuvenation Bead",
   "id": 1006,
   "rank": "Basic",
@@ -27,10 +28,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Health Regen",
   "stats": {
     "healthRegen": 100
   },
+  "description": "100% Base Health Regen\n\n",
   "maps": [
     11,
     12,

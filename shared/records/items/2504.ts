@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Kaenic Rookern",
   "id": 2504,
   "rank": "Legendary",
@@ -19,9 +20,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Magebane",
-      "effects": "After not taking magic damage for 15 seconds, gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs magic damage equal to 15% of <b>maximum</b> health until destroyed.",
-      "unique": true
+      "effects": "After not taking magic damage for 15 seconds, gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs magic damage equal to 15% of <b>maximum</b> health until destroyed."
     }
   ],
   "stats": {
@@ -29,6 +31,7 @@ const item: Item =  {
     "healthRegen": 100,
     "magicResistance": 80
   },
+  "description": "400 Health\n80 Magic Resist\n100% Base Health Regen\n\nMagebane\nAfter not taking magic damage for 15 seconds, gain a magic shield. ",
   "maps": [
     11,
     12,

@@ -46,21 +46,21 @@ export function formatStats(
 export function normalizeItemData(item: {
   rank: string[]
   shop: { tags: any }
-  maps: any
+  maps: Record<string, boolean>
 }): { rank: string[]; tags: string[]; maps: number[] } {
-  if (item.rank[0] === "POTION") {
+  if (item?.rank?.[0] === "POTION") {
     item.rank[0] = "Consumable"
   }
   if (
-    item.rank[0] === "MINION" ||
-    item.rank[0] === "TURRET" ||
-    item.rank[0] === "DISTRIBUTED"
+    item?.rank?.[0] === "MINION" ||
+    item?.rank?.[0] === "TURRET" ||
+    item?.rank?.[0] === "DISTRIBUTED"
   ) {
     item.rank[0] = "Special"
   }
   const normalizedTags = (item.shop?.tags ?? []).map(normalize)
 
-  const normalizedRanks = (item.rank ?? []).map(normalize)
+  const normalizedRanks = (item?.rank ?? []).map(normalize)
 
   const mapIds = Object.entries(item.maps || {})
     .filter(([, enabled]) => enabled === true)

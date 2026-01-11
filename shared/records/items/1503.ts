@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Warden's Eye",
   "id": 1503,
   "rank": "Special",
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "True Sight",
-      "effects": "Can see <img src=\"/img/icons/camouflage.webp\" class=\"tip-icon\" />camouflaged and <img src=\"/img/icons/invisible.webp\" class=\"tip-icon\" />invisible units within 1100 units.",
-      "unique": true
+      "effects": "Can see <img src=\"/img/icons/camouflage.webp\" class=\"tip-icon\" />camouflaged and <img src=\"/img/icons/invisible.webp\" class=\"tip-icon\" />invisible units within 1100 units."
     }
   ],
   "stats": {},

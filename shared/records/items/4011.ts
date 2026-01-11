@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sword of Blossoming Dawn",
   "id": 4011,
   "rank": "Legendary",
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Effervescence",
-      "effects": "Gain 1.2% <b>bonus</b> attack speed per 1% <img src=\"/img/icons/heal-and-shield-power.webp\" class=\"tip-icon\" />heal and shield power.",
-      "unique": true
+      "effects": "Gain 1.2% <b>bonus</b> attack speed per 1% <img src=\"/img/icons/heal-and-shield-power.webp\" class=\"tip-icon\" />heal and shield power."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Peppermint",
-      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP).",
-      "unique": true
+      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP)."
     }
   ],
   "stats": {
@@ -23,6 +26,7 @@ const item: Item =  {
     "health": 200,
     "abilityHaste": 15
   },
+  "description": "45 Ability Power\n200 Health\n12% Heal and Shield Power\n15 Ability Haste\n\nEffervescence\nGain +1.2% Attack Speed for every 1% Heal and Shield Power you have. \n\nPeppermint\nOn-Hit, heal the lowest health ally champion near you for , prioritizing lower health allies.",
   "maps": [
     30
   ],

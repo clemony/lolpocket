@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Tear of the Goddess",
   "id": 3070,
   "rank": "Starter",
@@ -17,12 +18,16 @@ const item: Item =  {
       "id": 3119,
       "name": "Winter's Approach",
       "gold": 2400
+    },
+    {
+      "id": 2526,
+      "name": "Whispering Circlet",
+      "gold": 2250
     }
   ],
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases maximum Mana as Mana is spent",
   "nicknames": [
     "archangel's staff",
     "Seraph's embrace",
@@ -33,19 +38,22 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Manaflow",
-      "effects": "Grants a charge every 8 seconds, up to 4 charges. Affecting an enemy or ally with an ability consumes a charge to grant 3 <b>bonus</b> mana, increased to 6 mana if they are a champion, up to <b>maximum</b> of 360 <b>bonus</b> mana.",
-      "unique": true
+      "effects": "Grants a charge every 8 seconds, up to 4 charges. Affecting an enemy or ally with an ability consumes a charge to grant 3 <b>bonus</b> mana, increased to 6 mana if they are a champion, up to <b>maximum</b> of 360 <b>bonus</b> mana. Can only be triggered if an ability was cast and only once per cast instance."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Helping Hand",
-      "effects": "Basic attacks deal 5 <b>bonus</b> physical damage on-hit against minions.",
-      "unique": true
+      "effects": "Basic attacks deal 5 <b>bonus</b> physical damage on-hit against minions."
     }
   ],
   "stats": {
     "mana": 240
   },
+  "description": "240 Mana\n\nManaflow (8s, max 4 charges)\nLanding Abilities grants 3 max Mana (doubled vs. champions), up to 360.\n\nHelping Hand\nAttacks deal an additional 5 physical damage to minions.",
   "maps": [
     11,
     12,

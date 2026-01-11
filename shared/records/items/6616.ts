@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Staff of Flowing Water",
   "id": 6616,
   "rank": "Legendary",
@@ -17,15 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Your heals and shields reduce crowd control and grant Move Speed",
   "nicknames": [
     "nami"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Rapids",
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds.",
-      "unique": true
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds."
     }
   ],
   "stats": {
@@ -34,6 +35,7 @@ const item: Item =  {
     "manaRegen": 125,
     "abilityHaste": 15
   },
+  "description": "35 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
   "maps": [
     11,
     12,

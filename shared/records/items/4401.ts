@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Force of Nature",
   "id": 4401,
   "rank": "Legendary",
@@ -22,15 +23,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Move Speed, Magic Resist, and max Health Regeneration",
   "nicknames": [
     "fon"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Steadfast",
-      "effects": "Taking magic damage from champions generates a stack of <i>Steadfast</i> for 7 seconds, stacking up to 8 times with the duration refreshing on subsequent magic damage from them and whenever dealing damage to them. Becoming <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilized by an enemy champion generates 2 stacks and also refreshes the duration. Once per cast instance, each incoming basic attack, ability, or item effect can only generate 1 stack of <i>Steadfast</i> from their damage every 1 second. At <b>maximum</b> stacks, gain 70 <b>bonus</b> magic resistance and 6% <b>bonus</b> movement speed.",
-      "unique": true
+      "effects": "Taking magic damage from champions generates a stack of <i>Steadfast</i> for 7 seconds, stacking up to 8 times with the duration refreshing on subsequent magic damage from them and whenever dealing damage to them. Becoming <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilized by an enemy champion generates 2 stacks and also refreshes the duration. Once per cast instance, each incoming basic attack, ability, or item effect can only generate 1 stack of <i>Steadfast</i> from their damage every 1 second. At <b>maximum</b> stacks, gain 70 <b>bonus</b> magic resistance and 6% <b>bonus</b> movement speed."
     }
   ],
   "stats": {
@@ -38,6 +39,7 @@ const item: Item =  {
     "magicResistance": 55,
     "percentMovespeed": 4
   },
+  "description": "400 Health\n55 Magic Resist\n4% Move Speed\n\nSteadfast\nGain 70 Magic Resist and 6% bonus Move Speed after taking magic damage from Champions 8 times.",
   "maps": [
     11,
     12,

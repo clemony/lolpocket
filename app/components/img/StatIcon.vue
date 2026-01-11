@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { statIndex } from '~~/shared/references'
-
 const { class: className, stat: s } = defineProps<{
   class?: HTMLAttributes['class']
   stat: StatIndex | string

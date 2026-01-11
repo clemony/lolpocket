@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sterak's Gage",
   "id": 3053,
   "rank": "Legendary",
@@ -22,7 +23,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Shields against large bursts of damage",
   "nicknames": [
     "juggernaut",
     "primal",
@@ -31,21 +31,24 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "The Claws that Catch",
-      "effects": "Gain <b>bonus</b> attack damage equal to 45% <b>base</b> AD.",
-      "unique": true
+      "effects": "Gain <b>bonus</b> attack damage equal to 45% <b>base</b> AD."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Lifeline",
-      "cooldown": "90",
       "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs damage equal to 60% of <b>bonus</b> health which decays over 4.5 seconds.",
-      "unique": true
+      "cooldown": "90"
     }
   ],
   "stats": {
     "health": 400,
     "tenacity": 20
   },
+  "description": "400 Health\n20% Tenacity\n\nThe Claws that Catch\nGain bonus Attack Damage.\n\nLifeline\nTaking damage that would reduce your Health below 30% grants a decaying Shield for 4.5 seconds.",
   "maps": [
     11,
     12,

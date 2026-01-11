@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { regionIndex } from '~~/shared/references'
 import { ListboxVirtualizer } from 'reka-ui'
 
 const query = ref<string>('')

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Redemption",
   "id": 3107,
   "rank": "Legendary",
@@ -17,16 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to heal allies and damage enemies in an area",
   "nicknames": [
     "burn"
   ],
   "active": [
     {
+      "unique": true,
       "name": "Intervention",
       "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 150 – 350 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
-      "range": 5500,
-      "unique": true
+      "range": 5500
     }
   ],
   "stats": {
@@ -35,6 +35,7 @@ const item: Item =  {
     "manaRegen": 100,
     "abilityHaste": 15
   },
+  "description": "30 Ability Power\n15 Ability Haste\n100% Base Mana Regen\n10% Heal and Shield Power\n\nIntervention\nRestore 150 - 350 Health to allied units and deal 10% max Health true damage to enemy champions after 2.5 seconds.",
   "maps": [
     11,
     12,
@@ -42,7 +43,7 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 900,
+    "base": 850,
     "total": 2300,
     "sell": 1610
   }

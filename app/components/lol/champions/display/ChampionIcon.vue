@@ -35,6 +35,7 @@ const forwarded = useForwardProps(props)
 
 <template>
   <StaticImg
+    v-if="champId && champId > 0"
     v-bind="forwarded"
     :data-id="champId"
     data-tip="champion"
@@ -42,9 +43,20 @@ const forwarded = useForwardProps(props)
     :class="
       cn('overflow-hidden shadow-sm drop-shadow-sm',
          elementVariants({ base, variant, hover, on, size }),
-         props.class,
-      )
-    "
+         props.class, 'border-0')"
     :alt="title || alt || `Champion ${champId} icon`"
     @loaded="onLoad" />
+
+  <Element
+    v-else
+    base="btn"
+
+    :class="
+      cn(
+        elementVariants({ base, variant: 'none', hover, on, size }), '',
+        props.class) ">
+    <Icon
+      name="lol:champ"
+      class="absolute size-5.5 place-self-center opacity-60" />
+  </Element>
 </template>

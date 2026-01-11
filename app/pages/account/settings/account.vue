@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { providers } from '#shared/data'
+
 definePageMeta({
   title: 'account',
   description: 'Manage your account settings and login settings.',

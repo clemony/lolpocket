@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Overcharged",
   "id": 1507,
   "rank": "Special",
@@ -7,8 +8,9 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
-      "effects": "At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its <img src=\"/img/icons/health.webp\" class=\"tip-icon\" />health every 30 seconds.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its <img src=\"/img/icons/health.webp\" class=\"tip-icon\" />health every 30 seconds."
     }
   ],
   "stats": {},

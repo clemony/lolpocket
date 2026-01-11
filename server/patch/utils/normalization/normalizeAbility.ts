@@ -1,4 +1,4 @@
-import type { Ability } from "../../../types/types.import"
+import type { Ability } from "../../.."
 import { normalize } from "./normalizeStrings"
 
 interface DirtyModifier {

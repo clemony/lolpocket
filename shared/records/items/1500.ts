@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Ohmwrecker (Turret Item)",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Penetrating Bullets",
   "id": 1500,
   "rank": "Special",
   "specialRecipe": 0,
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Dodge Piercing",
-      "effects": "Turret attacks cannot be dodged.",
-      "unique": true
+      "effects": "Turret attacks cannot be dodged."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Warming Up",
-      "effects": "Turrets gain a stack for 5 seconds each time they strike a champion. Each stack increases their damage dealt by 50%, up to 150%.",
-      "unique": true
+      "effects": "Turrets gain a stack for 5 seconds each time they strike a champion. Each stack increases their damage dealt by 50%, up to 150%."
     }
   ],
   "stats": {

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { ChampionPosition } from '~~/shared/references'
-import { championPositions } from '~~/shared/references'
-
 const { class: className, position: pos } = defineProps<{
   class?: HTMLAttributes['class']
   position: ChampionPosition | string | null

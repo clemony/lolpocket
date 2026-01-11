@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Tiamat",
   "id": 3077,
   "rank": "Epic",
@@ -39,24 +40,25 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Melee attacks hit nearby enemies",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Cleave",
-      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.",
-      "unique": true
+      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Crescent",
-      "effects": "Deal 75% AD physical damage to enemies within a 450 radius in front of you.",
-      "unique": true
+      "effects": "Deal 75% AD physical damage to enemies within a 450 radius in front of you."
     }
   ],
   "stats": {
     "attackDamage": 20
   },
+  "description": "20 Attack Damage\n\nCleave\nAttacks deal physical damage to nearby enemies.\nCrescent\nDeal physical damage to enemies around you.",
   "maps": [
     11,
     12,

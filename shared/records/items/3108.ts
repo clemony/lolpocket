@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Fiendish Codex",
   "id": 3108,
   "rank": "Epic",
@@ -43,7 +44,7 @@ const item: Item =  {
     {
       "id": 4628,
       "name": "Horizon Focus",
-      "gold": 2750
+      "gold": 2700
     },
     {
       "id": 3137,
@@ -104,7 +105,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Ability Power and Cooldown Reduction",
   "nicknames": [
     "book"
   ],
@@ -112,6 +112,7 @@ const item: Item =  {
     "abilityPower": 25,
     "abilityHaste": 10
   },
+  "description": "25 Ability Power\n10 Ability Haste\n\n",
   "maps": [
     11,
     12,

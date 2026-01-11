@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Guardian Angel",
   "id": 3026,
   "rank": "Legendary",
@@ -17,21 +18,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Periodically revives champion upon death",
   "nicknames": [
     "ga"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Rebirth",
-      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.webp\" class=\"tip-icon\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable, <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends).",
-      "unique": true
+      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.webp\" class=\"tip-icon\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable, <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends)."
     }
   ],
   "stats": {
     "armor": 45,
     "attackDamage": 55
   },
+  "description": "55 Attack Damage\n45 Armor\n\nRebirth\nUpon taking lethal damage, restores 50% base Health and 100% max Mana after 4 seconds of Stasis.",
   "maps": [
     11
   ],

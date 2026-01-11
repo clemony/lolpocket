@@ -37,9 +37,9 @@ function bumpAlly(
   if (!map[key]) {
     map[key] = {
       puuid: ally.puuid,
-      name: ally.riotIdGameName,
-      tag: ally.riotIdTagline,
-      icon: String(ally.profileIcon),
+      name: ally.name,
+      tag: ally.tag,
+      icon: String(ally.icon),
       champions: {},
       games: 0,
       win: 0,

@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { itemPrice, itemRank } from '@constants'
-import { itemRankColor } from '@references'
-import { useScroll } from '@vueuse/core'
-
 const { id, map } = defineProps<{
   id: number
   map?: number
@@ -21,6 +17,7 @@ watchEffect(async () => {
   status.value = 'loading'
   try {
     const mod = await import(`#shared/records/items/${id}.ts`)
+    console.log('🥸 - mod:', mod)
     item.value = mod.default
     status.value = 'success'
   }
@@ -75,6 +72,7 @@ const { height } = useElementBounding(el)
       <Item
         v-if="id"
         :id="id"
+        :tip="null"
         loading-style="spinner"
         :alt="`${name} Image`"
         :class="cn('size-7')">
@@ -116,115 +114,118 @@ const { height } = useElementBounding(el)
       <!-- separator -->
       <Separator
 
-        v-if="has.length"
         class="absolute bottom-0 opacity-80"
         color="neutral" />
     </div>
 
     <div
-      v-if="has[0] !== 'reqChamp'"
       ref="el"
       :class="cn('relative flex grow flex-col overflow-x-hidden overflow-y-scroll px-3 pt-2 pb-3', { 'mb-12': height > 272 })">
-      <!-- REQ CHAMP -->
-      <div
-        v-if="item?.requiredChampion">
-        <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
-      </div>
-      <!-- STATS -->
+      <template v-if="has?.length">
+        <!-- REQ CHAMP -->
+        <div
+          v-if="item?.requiredChampion">
+          <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
+        </div>
+        <!-- STATS -->
 
-      <LazyItemStats
-        v-if="item?.stats && Object.entries(item?.stats).length"
-        :stats="item?.stats" />
+        <LazyItemStats
+          v-if="item?.stats && Object.entries(item?.stats).length"
+          :stats="item?.stats" />
 
-      <!-- EFFECTS -->
-      <template v-if="item?.passives?.length && item?.noEffects !== true">
-        <Separator
-          v-if="has[0] !== 'passives'"
-          :size="2"
-          color="neutral" />
-        <LazyItemEffect
-          v-for="(passive, i) in item.passives"
-          :key="i"
-          :data="passive"
-          type="Passive" />
-      </template>
+        <!-- EFFECTS -->
+        <template v-if="item?.passives?.length && item?.noEffects !== true">
+          <Separator
+            v-if="has[0] !== 'passives'"
+            :size="2"
+            color="neutral" />
+          <LazyItemEffect
+            v-for="(passive, i) in item.passives"
+            :key="i"
+            :data="passive"
+            type="Passive" />
+        </template>
 
-      <!-- ACTIVES -->
-      <template v-if="item?.active?.[0] && item?.noEffects !== true">
-        <Separator
-          v-if="has[0] !== 'actives'"
-          :size="2"
-          color="neutral" />
-        <LazyItemEffect
-          :data="item.active[0]"
-          type="Active" />
-      </template>
+        <!-- ACTIVES -->
+        <template v-if="item?.active?.[0] && item?.noEffects !== true">
+          <Separator
+            v-if="has[0] !== 'actives'"
+            :size="2"
+            color="neutral" />
+          <LazyItemEffect
+            :data="item.active[0]"
+            type="Active" />
+        </template>
 
-      <!-- RECIPE -->
+        <!-- RECIPE -->
 
-      <template v-if="item?.buildsFrom">
-        <Separator
-          class="my-3.5 h-px"
-          label="RECIPE"
+        <template v-if="item?.buildsFrom">
+          <Separator
+            class="my-3.5 h-px"
+            label="RECIPE"
 
-          color="neutral" />
-        <div class="group flex items-center gap-3 p-1">
-          <template
-            v-for="(fromItem, i) in filteredFrom"
-            :key="i">
-            <LazyItem
-              :id="fromItem.id"
-              loading-style="spinner"
-              no-tip
-              :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
-              :class="itemImgClass" />
+            color="neutral" />
+          <div class="group flex items-center gap-3 p-1">
+            <template
+              v-for="(fromItem, i) in filteredFrom"
+              :key="i">
+              <LazyItem
+                :id="fromItem.id"
+                loading-style="spinner"
+                :tip="null"
+                :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
+                :class="itemImgClass" />
 
-            <icon
-              v-if="i !== item.buildsFrom.length - 1"
-              name="dashicons:plus"
-              class="size-3.5 opacity-80" />
-          </template>
+              <icon
+                v-if="i !== item.buildsFrom.length - 1"
+                name="dashicons:plus"
+                class="size-3.5 opacity-80" />
+            </template>
+
+            <div
+              v-if="item?.gold?.total"
+              class="flex items-center">
+              <icon
+                name="dashicons:plus"
+                class="size-3.5 opacity-80" />
+
+              <img
+                src="/img/icons/gold-coin.webp"
+                alt="coin"
+                class="mr-1 ml-3 size-4.25 opacity-80" />
+              {{ item.gold?.total }}
+            </div>
+          </div>
+        </template>
+
+        <!-- component OF -->
+
+        <template v-if="item && item?.buildsInto">
+          <Separator
+            class="my-3.5 h-px"
+            label="BUILDS INTO"
+            color="neutral" />
 
           <div
-            v-if="item?.gold?.total"
-            class="flex items-center">
-            <icon
-              name="dashicons:plus"
-              class="size-3.5 opacity-80" />
-
-            <img
-              src="/img/icons/gold-coin.webp"
-              alt="coin"
-              class="mr-1 ml-3 size-4.25 opacity-80" />
-            {{ item.gold?.total }}
+            :class="
+              cn('group flex flex-wrap items-center gap-3 px-1', {
+                'justify-start': item.buildsInto.length > 7,
+              })
+            ">
+            <LazyItem
+              v-for="(buildItem, i) in filteredInto"
+              :id="buildItem.id"
+              :key="i"
+              :tip="null"
+              loading-style="spinner"
+              :title="`${buildItem.name} ‑ ${buildItem.gold}g`"
+              :class="itemImgClass" />
           </div>
-        </div>
+        </template>
       </template>
-
-      <!-- component OF -->
-
-      <template v-if="item && item?.buildsInto">
-        <Separator
-          class="my-3.5 h-px"
-          label="BUILDS INTO"
-          color="neutral" />
-
-        <div
-          :class="
-            cn('group flex flex-wrap items-center gap-3 px-1', {
-              'justify-start': item.buildsInto.length > 7,
-            })
-          ">
-          <LazyItem
-            v-for="(buildItem, i) in filteredInto"
-            :id="buildItem.id"
-            :key="i"
-            no-tip
-            loading-style="spinner"
-            :title="`${buildItem.name} ‑ ${buildItem.gold}g`"
-            :class="itemImgClass" />
-        </div>
-      </template>
+      <span
+        v-else
+        v-html="item?.description" />
     </div>
   </div>
 </template>

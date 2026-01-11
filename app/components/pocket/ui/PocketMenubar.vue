@@ -10,7 +10,6 @@ import {
   RunesAutoMenu,
   SpellsAutoMenu,
 } from '#components'
-import { championPositions } from '~~/shared/references'
 import type { MenubarGroup } from '~/base/menu/menubar/types.menubar'
 import { createCheckboxItem, createRadioGroupItem } from '~/base/menu/menubar/auto-menu/createCheckboxItem'
 

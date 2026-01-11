@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { ItemTag } from '#shared/references'
 import type { AsTag } from 'reka-ui'
-import { itemTags } from '#shared/references'
 
 const {
   active,

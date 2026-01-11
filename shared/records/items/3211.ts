@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Spectre's Cowl",
   "id": 3211,
   "rank": "Epic",
@@ -39,7 +40,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Improves defense and grants regeneration upon being damaged",
   "nicknames": [
     "hat",
     "ghost"
@@ -49,6 +49,7 @@ const item: Item =  {
     "healthRegen": 100,
     "magicResistance": 35
   },
+  "description": "200 Health\n35 Magic Resist\n100% Base Health Regen\n\n",
   "maps": [
     11,
     12,

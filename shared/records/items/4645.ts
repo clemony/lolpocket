@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Shadowflame",
   "id": 4645,
   "rank": "Legendary",
@@ -19,15 +20,17 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Cinderbloom",
-      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health.",
-      "unique": true
+      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health."
     }
   ],
   "stats": {
     "abilityPower": 110,
     "flatMagicPenetration": 15
   },
+  "description": "110 Ability Power\n15 Magic Penetration\n\nCinderbloom\nMagic and true damage Critically Strikes enemies below 40% Health, dealing 20% increased damage. ",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Total Biscuit of Everlasting Will",
   "id": 2010,
   "rank": "Special",
@@ -9,6 +10,7 @@ const item: Item =  {
     "kleptomancy"
   ],
   "stats": {},
+  "description": "\n\nActive - Consume: Eat the biscuit to restore Health over 5 seconds, increased based on missing health. Consuming or selling a biscuit permanently grants 30 maximum Health. ",
   "maps": [
     11,
     12,

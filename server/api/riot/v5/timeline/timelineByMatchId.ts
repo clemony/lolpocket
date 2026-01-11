@@ -1,5 +1,5 @@
 import { riotFetch } from "~~/server/api/riot/fetch"
-import { serverToRegion, transformTimeline } from "~~/server/helpers"
+import { serverToRegion, transformTimeline } from "~~/server/domain"
 
 export default defineEventHandler(async (event) => {
   const { matchId, region } = getQuery(event)

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Death's Dance",
   "id": 6333,
   "rank": "Legendary",
@@ -27,14 +28,16 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Ignore Pain",
-      "effects": "Reduces (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />30% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10%) of all post-mitigation physical damage and magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second.",
-      "unique": true
+      "effects": "Reduces (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />30% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10%) of all post-mitigation physical damage and magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Defy",
-      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon\" />heals you for 75% <b>bonus</b> AD over 2 seconds.",
-      "unique": true
+      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon\" />heals you for 75% <b>bonus</b> AD over 2 seconds."
     }
   ],
   "stats": {
@@ -42,6 +45,7 @@ const item: Item =  {
     "attackDamage": 60,
     "abilityHaste": 15
   },
+  "description": "60 Attack Damage\n50 Armor\n15 Ability Haste\n\nIgnore Pain\nA percentage of damage taken is dealt to you over 3 seconds instead.\n\nDefy\nWhen a champion that you damaged within 3 seconds dies, cleanse Ignore Pain's remaining damage and restore Health over 2 seconds.",
   "maps": [
     11,
     12,

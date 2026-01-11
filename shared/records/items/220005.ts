@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Legendary Tank Item",
   "id": 220005,
   "rank": "Consumable",
@@ -6,6 +7,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "stats": {},
+  "description": "\n\nActive - Consume: Automatically open a semi-random selection for a Legendary Tank item.",
   "maps": [
     30
   ],

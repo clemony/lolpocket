@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Long Sword",
   "id": 1036,
   "rank": "Basic",
@@ -6,7 +7,7 @@ const item: Item =  {
     {
       "id": 3032,
       "name": "Yun Tal Wildarrows",
-      "gold": 3000
+      "gold": 3100
     },
     {
       "id": 6670,
@@ -84,6 +85,11 @@ const item: Item =  {
       "gold": 1200
     },
     {
+      "id": 2523,
+      "name": "Hexoptics C44",
+      "gold": 2800
+    },
+    {
       "id": 3044,
       "name": "Phage",
       "gold": 1100
@@ -122,10 +128,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Attack Damage",
   "stats": {
     "attackDamage": 10
   },
+  "description": "10 Attack Damage\n\n",
   "maps": [
     11,
     12,

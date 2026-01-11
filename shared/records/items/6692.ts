@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Eclipse",
   "id": 6692,
   "rank": "Legendary",
@@ -27,16 +28,18 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Ever Rising Moon",
-      "cooldown": "6",
       "effects": "Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4%) of target's <b>maximum</b> health and grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />160 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />80) (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) <b>bonus</b> AD) for 2 seconds.",
-      "unique": true
+      "cooldown": "6"
     }
   ],
   "stats": {
     "attackDamage": 60,
     "abilityHaste": 15
   },
+  "description": "60 Attack Damage\n15 Ability Haste\n\nEver Rising Moon\nHitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
   "maps": [
     11,
     12,

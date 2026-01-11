@@ -16,7 +16,7 @@ export function useMatchRoles(
 
   for (const match of toValue(matches)) {
     const player = match.participants.find((p) => p.puuid === puuid)
-    const role = player.teamPosition
+    const role = player.role
     if (!roleKey.includes(role)) continue
 
     if (!roleStatsMap.has(role)) {

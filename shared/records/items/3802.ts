@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Lost Chapter",
   "id": 3802,
   "rank": "Epic",
@@ -41,13 +42,18 @@ const item: Item =  {
       "gold": 2800
     },
     {
+      "id": 2522,
+      "name": "Actualizer",
+      "gold": 3100
+    },
+    {
       "id": 4644,
       "name": "Crown of the Shattered Queen",
       "gold": 2865
     },
     {
       "id": 6655,
-      "name": "Luden's Companion",
+      "name": "Luden's Echo",
       "gold": 2750
     },
     {
@@ -59,15 +65,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Restores Mana upon levelling up.",
   "nicknames": [
     "mana book"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Enlighten",
-      "effects": "Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds.",
-      "unique": true
+      "effects": "Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds."
     }
   ],
   "stats": {
@@ -75,6 +81,7 @@ const item: Item =  {
     "mana": 300,
     "abilityHaste": 10
   },
+  "description": "40 Ability Power\n300 Mana\n10 Ability Haste\n\nEnlighten\nLevelling up restores 20% max Mana over 3 seconds.",
   "maps": [
     11,
     12,

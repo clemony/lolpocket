@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Aether Wisp",
   "id": 3113,
   "rank": "Epic",
@@ -54,7 +55,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Ability Power and Move Speed",
   "nicknames": [
     "spooky ghost"
   ],
@@ -62,6 +62,7 @@ const item: Item =  {
     "abilityPower": 30,
     "percentMovespeed": 4
   },
+  "description": "30 Ability Power\n4% Move Speed\n\n",
   "maps": [
     11,
     12,

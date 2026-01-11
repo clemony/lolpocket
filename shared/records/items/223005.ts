@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Ghostcrawlers",
   "id": 223005,
   "rank": "Boots",
@@ -7,14 +8,15 @@ const item: Item =  {
   "removed": false,
   "active": [
     {
+      "unique": true,
       "name": "Wall Walk",
-      "effects": "Become ghostly for 6 seconds, ignoring terrain collision until you basic attack or cast an ability. While inside terrain, gain 300 <b>bonus</b> movement speed.",
-      "unique": true
+      "effects": "Become ghostly for 6 seconds, ignoring terrain collision until you basic attack or cast an ability. While inside terrain, gain 300 <b>bonus</b> movement speed."
     }
   ],
   "stats": {
     "flatMovespeed": 70
   },
+  "description": "70 Move Speed\n\nWall Walk (0s)\nGain the ability to walk through walls for 6 seconds. While inside walls, gain 300 move speed. Casting a spell or attacking will end this effect.",
   "maps": [
     30
   ],

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Fulmination",
   "id": 443055,
   "rank": "Special",
@@ -10,19 +11,22 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Energized",
-      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100.",
-      "unique": true
+      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Polarity",
-      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.",
-      "unique": true
+      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Dynamo",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health.",
-      "unique": true
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health."
     }
   ],
   "stats": {
@@ -30,6 +34,7 @@ const item: Item =  {
     "attackSpeed": 45,
     "percentMovespeed": 15
   },
+  "description": "55 Attack Damage\n45% Attack Speed\n15% Move Speed\n\nPolarity\nOn Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. \n\nDynamo\nEnergized Attacks deal an additional magic damage based on the Target's Current Health.",
   "maps": [
     30
   ],

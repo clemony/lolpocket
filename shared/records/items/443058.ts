@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Shield of Molten Stone",
   "id": 443058,
   "rank": "Special",
@@ -7,15 +8,17 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Immovable as the Earth",
-      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.webp\" class=\"tip-icon\" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance.",
-      "unique": true
+      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.webp\" class=\"tip-icon\" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance."
     }
   ],
   "stats": {
     "armor": 100,
     "health": 300
   },
+  "description": "300 Health\n100 Armor\n\nImmovable as the Earth\nIncrease your armor by 20%, and gain Block Chance based on your Armor.",
   "maps": [
     30
   ],

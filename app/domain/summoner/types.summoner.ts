@@ -30,7 +30,7 @@ export type UseChampionsReturn = ReturnType<typeof useChampions>
 export interface Teammate {
   weightedWinrate: number
   games: number
-  profileIcon: number
+  icon: number
   puuid: string
   name: string
   tag: string

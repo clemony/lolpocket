@@ -27,9 +27,6 @@ export default defineNuxtConfig({
     "@index": fileURLToPath(new URL("./shared/indexes", import.meta.url)),
     "@types": fileURLToPath(new URL("./shared/types", import.meta.url)),
     "@constants": fileURLToPath(new URL("./shared/constants", import.meta.url)),
-    "@references": fileURLToPath(
-      new URL("./shared/references", import.meta.url)
-    ),
     "@plugins": fileURLToPath(new URL("./app/plugins", import.meta.url)),
     "@records": fileURLToPath(new URL("./shared/records", import.meta.url)),
     "@schema": fileURLToPath(new URL("./shared/schema", import.meta.url)),
@@ -37,9 +34,7 @@ export default defineNuxtConfig({
     "@variants": fileURLToPath(
       new URL("./app/assets/variants", import.meta.url)
     ),
-    _helpers: fileURLToPath(new URL("./server/helpers", import.meta.url)),
     tiptap: fileURLToPath(new URL("./app/composables/tiptap", import.meta.url)),
-    _types: fileURLToPath(new URL("./server/types", import.meta.url)),
   },
   components: [
     {
@@ -98,7 +93,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    provider: "none",
+    provider: "server",
     componentName: "icon",
     customCollections,
     serverBundle: {
@@ -117,11 +112,8 @@ export default defineNuxtConfig({
       "@domain",
       "./shared/constants",
       "@schema",
-      "@references",
-      "@index",
       "#shared/utils",
       "@stores",
-      "@app-types",
       "./app/assets/config",
     ],
   },
@@ -139,7 +131,13 @@ export default defineNuxtConfig({
   ],
   nitro: {
     imports: {
-      dirs: ["server/types", "shared/types", "shared/constants"],
+      dirs: [
+        "server/types",
+        "shared/types",
+        "shared/constants",
+        "server/utils",
+        "server/domain",
+      ],
     },
     routeRules: {
       "/api/**": {
@@ -158,7 +156,7 @@ export default defineNuxtConfig({
           baseUrl: "../",
           types: ["shared/types/**", "server/types/**"],
         },
-        include: ["shared/**"],
+        include: ["shared/**, server/utils/**"],
       },
     },
     preset: "cloudflare_module",

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Warden's Mail",
   "id": 3082,
   "rank": "Epic",
@@ -36,14 +37,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Rock Solid",
-      "effects": "Every first incoming instance of post-mitigation <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.",
-      "unique": true
+      "effects": "Every first incoming instance of post-mitigation <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each."
     }
   ],
   "stats": {
     "armor": 40
   },
+  "description": "40 Armor\n\nRock Solid\nReduce incoming damage from Attacks.",
   "maps": [
     11,
     12,

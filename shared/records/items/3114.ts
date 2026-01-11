@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Forbidden Idol",
   "id": 3114,
   "rank": "Epic",
@@ -31,6 +32,11 @@ const item: Item =  {
       "gold": 1900
     },
     {
+      "id": 2526,
+      "name": "Whispering Circlet",
+      "gold": 2250
+    },
+    {
       "id": 3504,
       "name": "Ardent Censer",
       "gold": 2200
@@ -49,6 +55,11 @@ const item: Item =  {
       "id": 3222,
       "name": "Mikael's Blessing",
       "gold": 2300
+    },
+    {
+      "id": 322526,
+      "name": "Whispering Circlet",
+      "gold": 2250
     },
     {
       "id": 323504,
@@ -79,11 +90,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Heal and Shield Power, Mana Regeneration, and Cooldown Reduction",
   "stats": {
     "healAndShieldPower": 8,
     "manaRegen": 50
   },
+  "description": "50% Base Mana Regen\n8% Heal and Shield Power\n\n",
   "maps": [
     11,
     12,

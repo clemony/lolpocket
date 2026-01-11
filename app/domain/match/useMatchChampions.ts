@@ -56,7 +56,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
       const stats = championStats.get(champ)!
       stats.games++
       player.win ? stats.wins++ : stats.losses++
-      stats.kills += player.stats.kills.value
+      stats.kills += player.stats.kills
       stats.deaths += player.stats.deaths
       stats.assists += player.stats.assists
       stats.killParticipation += player.stats.kp

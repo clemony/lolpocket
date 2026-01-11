@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Edge of Night",
   "id": 3814,
   "rank": "Legendary",
@@ -17,7 +18,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Periodically blocks enemy abilities",
   "nicknames": [
     "eon",
     "lethality",
@@ -26,9 +26,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Annul",
-      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions).",
-      "unique": true
+      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions)."
     }
   ],
   "stats": {
@@ -36,6 +37,7 @@ const item: Item =  {
     "health": 250,
     "lethality": 15
   },
+  "description": "50 Attack Damage\n15 Lethality\n250 Health\n\nAnnul\nGrants a Spell Shield that blocks the next enemy Ability.",
   "maps": [
     11,
     12,

@@ -1,39 +1,52 @@
 <script setup lang="ts">
 const {
   id,
+  title,
   class: className,
-  dataSize = 'lg',
   loadingStyle,
-  noTip = false
+  size,
+  tip,
+  variant
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
   loadingStyle?: LoadingStyle
+  size?: ButtonVariants['size']
+  title?: string
+  variant?: ButtonVariants['variant']
   dataSize?: TooltipSize
-  noTip?: boolean
+  tip?: string | null
 }>()
+
+const loaded = shallowRef<boolean>(false)
+const tps = computed (() => {
+  if (tip === null)
+    return null
+  const a = tip?.split(', ')
+  return {
+    placement: a?.filter(s => tooltipPlacements.includes(s))[0] || 'top',
+    size: a?.filter(s => tooltipSizes.includes(s))[0] || 'lg',
+  }
+})
 </script>
 
 <template>
-  <Element
-    :data-id="noTip ? '' : id"
-    :data-size="dataSize"
-    :data-interactive="dataSize === 'lg' ? true : false"
-    :data-tip="noTip ? null : 'item'"
+  <Img
+    :size
+    :variant
+    :data-id="id"
+    :data-placement="tps?.placement"
+    :data-size="tps?.size"
+    :data-interactive="tps?.size === 'lg' ? true : false"
+    :data-tip="!tps ? null : 'item'"
+    :title=" !tps && title ? title : !tps ? itemNameById(id) : null"
     :class="
-      cn('relative grid aspect-square shrink-0 place-items-center overflow-hidden rounded-md',
-         { 'shadow-sm shadow-black/30  drop-shadow-sm ': id },
-
+      cn({ 'opacity-96 shadow-sm shadow-black/30  drop-shadow-sm ': id && loaded },
          className,
       )
-    ">
-    <Img
-      v-if="id"
-      :src="`/img/items/${id}.webp`"
-      :alt="id.toString()"
-      :loading-style
-      class="aspect-square size-full opacity-96" />
-
-    <slot />
-  </Element>
+    "
+    :src="`/img/items/${id}.webp`"
+    :alt="itemNameById(id)"
+    :loading-style
+    @load="loaded = true" />
 </template>

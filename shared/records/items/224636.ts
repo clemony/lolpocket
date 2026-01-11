@@ -1,0 +1,13 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 224636,
+  "name": "Night Harvester",
+  "description": "90 Ability Power\n300 Health\n25 Ability Haste\n\nSoulrend\nDamaging a champion with Attacks or Abilities deals an additional  magic damage and grants you 25% Move Speed for 1.5 seconds (30(0s) per champion).\n\nDamaging a new champion will extend the duration of the Move Speed bonus.",
+  "gold": {
+    "base": 2500,
+    "purchasable": false,
+    "total": 2500,
+    "sell": 1750
+  }
+}
+export default item

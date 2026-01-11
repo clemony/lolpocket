@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Sapphire Crystal",
   "id": 1027,
   "rank": "Basic",
@@ -22,13 +23,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Mana",
   "nicknames": [
     "blue"
   ],
   "stats": {
     "mana": 300
   },
+  "description": "300 Mana\n\n",
   "maps": [
     11,
     12,

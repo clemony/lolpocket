@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Cryptbloom",
   "id": 3137,
   "rank": "Legendary",
@@ -22,13 +23,13 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to remove all debuffs and grant massive Move Speed",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Life From Death",
-      "cooldown": "60",
       "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing you and allied champions hit for 100 (+20% AP).",
-      "unique": true
+      "cooldown": "60"
     }
   ],
   "stats": {
@@ -36,6 +37,7 @@ const item: Item =  {
     "percentMagicPenetration": 30,
     "abilityHaste": 20
   },
+  "description": "75 Ability Power\n30% Magic Penetration\n20 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
   "maps": [
     11,
     12,

@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-import type { ChampionResource } from '#shared/references'
-import { championResources } from '#shared/references'
-
 const { class: className, resource: p } = defineProps<{
   class?: HTMLAttributes['class']
-  resource: ChampionResource | string | null
+  resource: AbilityResource | string | null
   noLabel?: boolean
   size?: ButtonVariants['size']
   active?: boolean
@@ -15,7 +12,7 @@ const resource = computed(() => {
   if (typeof p !== 'string')
     return p
 
-  return championResources.find(p => p.name === (p ?? 'All'))
+  return abilityResources.find(p => p.name === (p ?? 'All'))
 })
 </script>
 

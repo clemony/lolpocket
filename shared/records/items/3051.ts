@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Hearthbound Axe",
   "id": 3051,
   "rank": "Epic",
@@ -46,6 +47,7 @@ const item: Item =  {
     "attackDamage": 20,
     "attackSpeed": 20
   },
+  "description": "20 Attack Damage\n20% Attack Speed\n\n",
   "maps": [
     11,
     12,

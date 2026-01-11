@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Super Mech Power Field",
   "id": 1512,
   "rank": "Special",
@@ -7,9 +8,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Super Mech Power Field",
-      "effects": "Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance.",
-      "unique": true
+      "effects": "Grants nearby minions (excluding super minions) 35 armor and 35 magic resistance."
     }
   ],
   "stats": {},

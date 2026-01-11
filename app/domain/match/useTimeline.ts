@@ -28,7 +28,7 @@ export function useTimeline() {
       lastAccessedAt: Date.now(),
     }
 
-    await matchDB.matchTimeline.put(payload)
+    await lpdb.matchTimeline.put(payload)
 
     // 3. Store full match once
     await putMatchTimeline(matchId, payload)
@@ -42,7 +42,7 @@ export function useTimeline() {
   const getAllTimelinesForPuuid = async (
     puuid: string
   ): Promise<PlayerTimeline[]> => {
-    const rows = await matchDB.matchTimeline
+    const rows = await lpdb.matchTimeline
       .where("participantIds")
       .equals(puuid)
       .toArray()

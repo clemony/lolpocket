@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Berserker's Greaves",
   "id": 3006,
   "rank": "Boots",
@@ -23,13 +24,12 @@ const item: Item =  {
     {
       "id": 3172,
       "name": "Gunmetal Greaves",
-      "gold": 1600
+      "gold": 1100
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Enhances Move Speed and Attack Speed",
   "nicknames": [
     "boots",
     "zerker"
@@ -38,6 +38,7 @@ const item: Item =  {
     "attackSpeed": 25,
     "flatMovespeed": 45
   },
+  "description": "25% Attack Speed\n45 Move Speed\n\n",
   "maps": [
     11,
     12,

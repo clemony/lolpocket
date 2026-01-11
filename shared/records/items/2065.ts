@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Shurelya's Battlesong",
   "id": 2065,
   "rank": "Legendary",
@@ -17,16 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to speed up nearby allies.",
   "nicknames": [
     "shurelya",
     "reverie"
   ],
   "active": [
     {
+      "unique": true,
       "name": "Inspiring Speech",
-      "effects": "Grants you and all allies within 1000 units 30% <b>bonus</b> movement speed for 4 seconds.",
-      "unique": true
+      "effects": "Grants you and all allies within 1000 units 30% <b>bonus</b> movement speed for 4 seconds."
     }
   ],
   "stats": {
@@ -35,6 +35,7 @@ const item: Item =  {
     "percentMovespeed": 4,
     "abilityHaste": 15
   },
+  "description": "50 Ability Power\n15 Ability Haste\n4% Move Speed\n125% Base Mana Regen\n\nInspiring Speech\nGrant nearby allies 30% Move Speed for 4 seconds.",
   "maps": [
     11,
     12,

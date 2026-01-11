@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Pickaxe",
   "id": 1037,
   "rank": "Basic",
@@ -22,6 +23,11 @@ const item: Item =  {
       "id": 2020,
       "name": "The Brutalizer",
       "gold": 1337
+    },
+    {
+      "id": 2517,
+      "name": "Endless Hunger",
+      "gold": 3000
     },
     {
       "id": 6692,
@@ -54,9 +60,14 @@ const item: Item =  {
       "gold": 3000
     },
     {
+      "id": 2523,
+      "name": "Hexoptics C44",
+      "gold": 2800
+    },
+    {
       "id": 3031,
       "name": "Infinity Edge",
-      "gold": 3450
+      "gold": 3500
     },
     {
       "id": 3053,
@@ -107,10 +118,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Moderately increases Attack Damage",
   "stats": {
     "attackDamage": 25
   },
+  "description": "25 Attack Damage\n\n",
   "maps": [
     11,
     12,

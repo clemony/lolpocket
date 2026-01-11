@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Last Whisper",
   "id": 3035,
   "rank": "Epic",
@@ -23,18 +24,17 @@ const item: Item =  {
     {
       "id": 3033,
       "name": "Mortal Reminder",
-      "gold": 3300
+      "gold": 3000
     },
     {
       "id": 3036,
       "name": "Lord Dominik's Regards",
-      "gold": 3100
+      "gold": 3300
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Overcomes enemies with high Armor",
   "nicknames": [
     "lw"
   ],
@@ -42,6 +42,7 @@ const item: Item =  {
     "armorPenetration": 18,
     "attackDamage": 20
   },
+  "description": "20 Attack Damage\n18% Armor Penetration\n\n",
   "maps": [
     11,
     12,

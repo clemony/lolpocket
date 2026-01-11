@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Profane Hydra",
   "id": 6698,
   "rank": "Legendary",
@@ -22,16 +23,17 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Cleave",
-      "effects": "Damaging basic attacks deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.",
-      "unique": true
+      "effects": "Damaging basic attacks deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Heretical Cleave",
-      "effects": "Deal 80% AD physical damage to enemies in a 450 radius.",
-      "unique": true
+      "effects": "Deal 80% AD physical damage to enemies in a 450 radius."
     }
   ],
   "stats": {
@@ -39,6 +41,7 @@ const item: Item =  {
     "lethality": 18,
     "abilityHaste": 10
   },
+  "description": "55 Attack Damage\n18 Lethality\n10 Ability Haste\n\nCleave\nAttacks deal physical damage to nearby enemies.\nHeretical Cleave\nDeal physical damage around you.",
   "maps": [
     11,
     12,

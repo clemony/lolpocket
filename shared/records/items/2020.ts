@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "The Brutalizer",
   "id": 2020,
   "rank": "Epic",
@@ -19,6 +20,11 @@ const item: Item =  {
       "id": 6696,
       "name": "Axiom Arc",
       "gold": 2750
+    },
+    {
+      "id": 2520,
+      "name": "Bastionbreaker",
+      "gold": 3200
     },
     {
       "id": 6698,
@@ -42,6 +48,7 @@ const item: Item =  {
     "lethality": 5,
     "abilityHaste": 10
   },
+  "description": "25 Attack Damage\n10 Ability Haste\n5 Lethality\n\n",
   "maps": [
     11,
     12,

@@ -1,5 +1,5 @@
 import pLimit from "p-limit"
-import { idsByPuuid, matchById, transformMatchData } from "~~/server/helpers"
+import { idsByPuuid, matchById, transformMatchData } from "~~/server/domain"
 import type { MatchData, MatchReturn } from "~~/shared"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {

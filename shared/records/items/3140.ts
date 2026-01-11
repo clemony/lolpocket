@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Quicksilver Sash",
   "id": 3140,
   "rank": "Epic",
@@ -24,7 +25,6 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Activate to remove all crowd control debuffs",
   "nicknames": [
     "qss",
     "mercurial scimitar",
@@ -32,14 +32,15 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Quicksilver",
-      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion.",
-      "unique": true
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne) from your champion."
     }
   ],
   "stats": {
     "magicResistance": 30
   },
+  "description": "30 Magic Resist\n\nQuicksilver\nRemove all crowd control debuffs (excluding Airborne).",
   "maps": [
     11,
     12,

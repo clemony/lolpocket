@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Spellslinger's Shoes",
   "id": 3175,
   "rank": "Boots",
@@ -19,13 +20,14 @@ const item: Item =  {
     "flatMagicPenetration": 18,
     "flatMovespeed": 45
   },
+  "description": "18 Magic Penetration\n8% Magic Penetration\n45 Move Speed\n\n",
   "maps": [
     11
   ],
   "gold": {
-    "base": 500,
-    "total": 1600,
-    "sell": 1120
+    "base": 0,
+    "total": 1100,
+    "sell": 770
   }
 }
 export default item

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Phreakish Gusto",
   "id": 1510,
   "rank": "Special",
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Phreakish Gusto",
-      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 70% of this minion's <b>maximum</b> health as pre-mitigation damage.",
-      "unique": true
+      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 70% of this minion's <b>maximum</b> health as pre-mitigation damage."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Minion Damager",
-      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 4% of the target's <b>current</b> health.",
-      "unique": true
+      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 4% of the target's <b>current</b> health."
     }
   ],
   "stats": {},

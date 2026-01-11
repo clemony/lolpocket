@@ -1,5 +1,6 @@
-const item: Item =  {
-  "name": "Anti-Tower Socks",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "name": "Anti-tower Socks",
   "id": 1508,
   "rank": "Special",
   "specialRecipe": 0,
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Reinforced Armor",
-      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 14% – 8% (based on turret type) of this minion's <b>maximum</b> health as pre-mitigation damage.",
-      "unique": true
+      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 14% – 8% (based on turret type) of this minion's <b>maximum</b> health as pre-mitigation damage."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Minion Slayer",
-      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 6% of the target's <b>current</b> health.",
-      "unique": true
+      "effects": "Against lane minions, this minion deals <b>bonus</b> physical damage on-hit equal to 6% of the target's <b>current</b> health."
     }
   ],
   "stats": {},

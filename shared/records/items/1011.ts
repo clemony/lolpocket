@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Giant's Belt",
   "id": 1011,
   "rank": "Epic",
@@ -34,6 +35,11 @@ const item: Item =  {
       "id": 3039,
       "name": "Atma's Reckoning",
       "gold": 2900
+    },
+    {
+      "id": 2525,
+      "name": "Protoplasm Harness",
+      "gold": 2500
     },
     {
       "id": 3084,
@@ -79,10 +85,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Greatly increases Health",
   "stats": {
     "health": 350
   },
+  "description": "350 Health\n\n",
   "maps": [
     11,
     12,

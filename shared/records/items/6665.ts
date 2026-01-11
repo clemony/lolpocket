@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Jak'Sho, The Protean",
   "id": 6665,
   "rank": "Legendary",
@@ -27,9 +28,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Voidborn Resilience",
-      "effects": "Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat.",
-      "unique": true
+      "effects": "Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat."
     }
   ],
   "stats": {
@@ -37,6 +39,7 @@ const item: Item =  {
     "health": 350,
     "magicResistance": 45
   },
+  "description": "350 Health\n45 Armor\n45 Magic Resist\n\nVoidborn Resilience\nAfter 5 seconds of champion combat, increase your bonus Armor and Magic Resist by 30% until end of combat.\n\n",
   "maps": [
     11,
     12,

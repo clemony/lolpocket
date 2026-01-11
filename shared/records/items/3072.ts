@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Bloodthirster",
   "id": 3072,
   "rank": "Legendary",
@@ -22,22 +23,23 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Grants Attack Damage, Life Steal and Life Steal now overheals",
   "nicknames": [
     "bt",
     "healsword"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Ichorshield",
-      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to 165 – 315 (based on level), which lasts until destroyed.",
-      "unique": true
+      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to 165 – 315 (based on level), which lasts until destroyed."
     }
   ],
   "stats": {
     "attackDamage": 80,
     "lifesteal": 15
   },
+  "description": "80 Attack Damage\n15% Life Steal\n\nIchorshield\nConvert excess healing from your Lifesteal to a Shield.",
   "maps": [
     11,
     12,

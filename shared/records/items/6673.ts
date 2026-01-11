@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Immortal Shieldbow",
   "id": 6673,
   "rank": "Legendary",
@@ -19,16 +20,18 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Lifeline",
-      "cooldown": "90",
       "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />400 – 700 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />320 – 560) damage for 3 seconds.",
-      "unique": true
+      "cooldown": "90"
     }
   ],
   "stats": {
     "attackDamage": 55,
     "criticalStrikeChance": 25
   },
+  "description": "55 Attack Damage\n25% Critical Strike Chance\n\nLifeline\nTaking damage that would reduce your Health below 30% grants a Shield for 3 seconds.",
   "maps": [
     11,
     12,

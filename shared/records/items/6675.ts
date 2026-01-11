@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Navori Flickerblade",
   "id": 6675,
   "rank": "Legendary",
@@ -27,9 +28,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Transcendence",
-      "effects": "Basic attacks on-attack reduce the <b>remaining</b> cooldowns of your basic abilities by 15%.",
-      "unique": true
+      "effects": "Basic attacks on-attack reduce the <b>remaining</b> cooldowns of your basic abilities by 15%."
     }
   ],
   "stats": {
@@ -37,6 +39,7 @@ const item: Item =  {
     "criticalStrikeChance": 25,
     "percentMovespeed": 4
   },
+  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nTranscendence\nAttacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
   "maps": [
     11,
     12,

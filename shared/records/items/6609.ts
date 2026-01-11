@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Chempunk Chainsword",
   "id": 6609,
   "rank": "Legendary",
@@ -28,9 +29,10 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Hackshorn",
-      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
-      "unique": true
+      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds."
     }
   ],
   "stats": {
@@ -38,6 +40,7 @@ const item: Item =  {
     "health": 450,
     "abilityHaste": 15
   },
+  "description": "45 Attack Damage\n450 Health\n15 Ability Haste\n\nHackshorn\nDealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
   "maps": [
     11,
     12,

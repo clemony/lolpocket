@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Goredrinker",
   "id": 226630,
   "rank": "Special",
@@ -10,9 +11,9 @@ const item: Item =  {
   ],
   "active": [
     {
+      "unique": true,
       "name": "Thirsting Slash",
-      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit.",
-      "unique": true
+      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit."
     }
   ],
   "stats": {
@@ -21,6 +22,7 @@ const item: Item =  {
     "abilityHaste": 20,
     "omnivamp": 10
   },
+  "description": "55 Attack Damage\n400 Health\n20 Ability Haste\n10% Omnivamp\n\n\n\nActive - Thirsting Slash: Deal damage to nearby enemies. Restore Health for each champion hit.",
   "maps": [
     30
   ],

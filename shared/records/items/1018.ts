@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Cloak of Agility",
   "id": 1018,
   "rank": "Basic",
@@ -7,6 +8,11 @@ const item: Item =  {
       "id": 6670,
       "name": "Noonquiver",
       "gold": 1300
+    },
+    {
+      "id": 3097,
+      "name": "Stormrazor",
+      "gold": 3200
     },
     {
       "id": 123430,
@@ -36,12 +42,12 @@ const item: Item =  {
     {
       "id": 3031,
       "name": "Infinity Edge",
-      "gold": 3450
+      "gold": 3500
     },
     {
       "id": 3033,
       "name": "Mortal Reminder",
-      "gold": 3300
+      "gold": 3000
     },
     {
       "id": 3508,
@@ -57,10 +63,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases critical strike chance",
   "stats": {
     "criticalStrikeChance": 15
   },
+  "description": "15% Critical Strike Chance\n\n",
   "maps": [
     11,
     12,

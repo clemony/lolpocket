@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Steel Sigil",
   "id": 2019,
   "rank": "Epic",
@@ -46,6 +47,7 @@ const item: Item =  {
     "armor": 30,
     "attackDamage": 15
   },
+  "description": "15 Attack Damage\n30 Armor\n\n",
   "maps": [
     11,
     12,

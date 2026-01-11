@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Cosmic Drive",
   "id": 4629,
   "rank": "Legendary",
@@ -22,15 +23,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Massive amounts of Cooldown Reduction",
   "nicknames": [
     "cooldown hat"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Spelldance",
-      "effects": "Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.",
-      "unique": true
+      "effects": "Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds."
     }
   ],
   "stats": {
@@ -39,6 +40,7 @@ const item: Item =  {
     "percentMovespeed": 4,
     "abilityHaste": 25
   },
+  "description": "70 Ability Power\n350 Health\n25 Ability Haste\n4% Move Speed\n\nSpelldance\nDealing magic or true damage to champions grants Move Speed for 4 seconds. ",
   "maps": [
     11,
     12,

@@ -29,7 +29,7 @@ const { match } = defineProps<{
       <!-- grow -->
       <Grow />
       <!--   kda -->
-      <KDA
+      <PlayerKDA
         :match
         :player="match.player" />
     </div>
@@ -38,21 +38,48 @@ const { match } = defineProps<{
 
     <div
       v-if="match.player"
-      class="flex h-full w-full shrink-0 items-start gap-1 *:rounded-md">
+      class="flex h-full w-full shrink-0 items-start gap-1">
       <Item
-        v-for="item, i in match.player.items"
+        v-for="item, i in match.player.items.slots"
         :id="item"
         :key="`${item}${i}`"
-        :data-id="item"
-        data-placement="bottom"
-        data-tip="item"
-        loading-style="none"
-        :alt="item"
-        :class="cn('size-9 shrink-0 rounded-md! ring-bc/60 transition-all duration-300 **:rounded-md! hover:scale-105 hover:ring', {
-          'border bg-blend-screen  pointer-events-none inset-shadow-none border-bc/10 shadow-xs saturate-40  after:size-full after:rounded-md after:border after:absolute': !item,
-          'bg-domination/16! after:border-domination/20 after:mix-blend-hue': !match.player.win,
-          ' opacity-90 ': !match.player.win && !item,
-          'bg-inspiration/16! after:border-inspiration/20': match.player.win })" />
+        size="sq-9"
+        tip="bottom"
+        :class="cn('active-img', {
+          'no-img': !item,
+          'img-loss': !match.player.win,
+          'opacity-90': !match.player.win && !item,
+          'img-win': match.player.win })" />
+
+      <Item
+        v-if="match.mapId === 11"
+        :id="match.player.items.role"
+        size="c-9"
+        tip="bottom"
+        :class="cn('active-img ml-2', {
+          'no-img': !match.player.items.role,
+          'img-loss': !match.player.win,
+          'opacity-90': !match.player.win && !match.player.items.role,
+          'img-win': match.player.win })" />
     </div>
   </div>
 </template>
+
+<style scoped>
+@reference '@css/tailwind.css';
+
+.active-img {
+  @apply ring-bc/60 transition-all duration-300  hover:scale-105 hover:ring;
+}
+.no-img {
+  @apply border bg-blend-screen  pointer-events-none inset-shadow-none border-bc/10 shadow-xs saturate-40  after:size-full after:rounded-md after:border after:absolute;
+}
+
+.img-loss {
+  @apply bg-domination/16! after:border-domination/20 after:mix-blend-hue;
+}
+
+.img-win {
+  @apply bg-inspiration/16! after:border-inspiration/20;
+}
+</style>

@@ -4,6 +4,7 @@ export interface MatchData {
   gameEndTimestamp: number
   gamePatch: number
   matchId: string
+  mapId: number
   regionId: string
   participantIds: string[]
   participants: Player[]
@@ -22,19 +23,18 @@ export interface MatchDataCurrentPlayer extends MatchData {
 
 export interface Player {
   puuid: string
-  riotIdGameName: string
-  riotIdTagline: string
-  profileIcon: number
+  name: string
+  tag: string
+  icon: number
   teamId: number
-  teamPosition: string
+  role: string
   championId: number
-  timeSpentDead: number
   //
   stats: PlayerStats
   //
   items: PlayerItems
   runes: PlayerRunes
-  spells: PlayerSpells
+  spells: [number, number]
   //
   offense: PlayerOffense
   defense: PlayerDefense
@@ -47,12 +47,20 @@ export interface Player {
 export type PlayerOffense = {
   totalDamage: number
   damagePercentage: number
+  multiKills: {
+    tripleKills: number
+    doubleKills: number
+    quadraKills: number
+    pentaKills: number
+  }
+  sprees: number
 }
 
 export type PlayerUtility = {
   effectiveHealingAndShielding: number
   totalAllyHealing: number
   totalAllyShielding: number
+  //healingAndShieldingPercentage: number
   allySaves: number
 }
 
@@ -79,24 +87,13 @@ export type PlayerVision = {
 
 export type PlayerStats = {
   champLevel: number
-  kills: PlayerKillStats
+  kills: number
   deaths: number
   assists: number
   kda: number
   kp: number
+  timeSpentDead: number
   mvpScore: number
-}
-export type PlayerKillStats = {
-  expandable?: boolean
-  value: number
-  stats: Multikills
-}
-export type Multikills = {
-  killingSprees: number
-  tripleKills: number
-  doubleKills: number
-  quadraKills: number
-  pentaKills: number
 }
 
 export interface PlayerRunes {
@@ -112,19 +109,10 @@ export interface PlayerRunes {
   shards: number[]
 }
 
-export type PlayerItems = {
-  0: number
-  1: number
-  2: number
-  3: number
-  4: number
-  5: number
-  6: number
-}
-
-export type PlayerSpells = {
-  0: number
-  1: number
+export interface PlayerItems {
+  role: number
+  slots: [number, number, number, number, number, number]
+  trinket: number
 }
 
 export interface MatchTeam {

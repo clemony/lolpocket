@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { itemTags } from '#shared/references'
-
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }

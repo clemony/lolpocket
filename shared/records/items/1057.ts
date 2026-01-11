@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Negatron Cloak",
   "id": 1057,
   "rank": "Epic",
@@ -44,10 +45,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Moderately increases Magic Resist",
   "stats": {
     "magicResistance": 45
   },
+  "description": "45 Magic Resist\n\n",
   "maps": [
     11,
     12,

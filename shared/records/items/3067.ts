@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Kindlegem",
   "id": 3067,
   "rank": "Epic",
@@ -61,6 +62,11 @@ const item: Item =  {
       "gold": 2200
     },
     {
+      "id": 2524,
+      "name": "Bandlepipes",
+      "gold": 2000
+    },
+    {
       "id": 3071,
       "name": "Black Cleaver",
       "gold": 3000
@@ -79,6 +85,16 @@ const item: Item =  {
       "id": 2502,
       "name": "Unending Despair",
       "gold": 2800
+    },
+    {
+      "id": 2510,
+      "name": "Dusk and Dawn",
+      "gold": 3100
+    },
+    {
+      "id": 2525,
+      "name": "Protoplasm Harness",
+      "gold": 2500
     },
     {
       "id": 3050,
@@ -164,11 +180,11 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Health and Cooldown Reduction",
   "stats": {
     "health": 200,
     "abilityHaste": 10
   },
+  "description": "200 Health\n10 Ability Haste\n\n",
   "maps": [
     11,
     12,

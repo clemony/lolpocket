@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { authProviders } from '#shared/references'
+import { authProviders } from '~~/shared'
 
 definePageMeta({
   name: 'Sign up',

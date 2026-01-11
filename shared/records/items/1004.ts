@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Faerie Charm",
   "id": 1004,
   "rank": "Basic",
@@ -22,10 +23,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Mana Regen",
   "stats": {
     "manaRegen": 50
   },
+  "description": "50% Base Mana Regen\n\n",
   "maps": [
     11,
     12,

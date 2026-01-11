@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Warmog's Armor",
   "id": 3083,
   "rank": "Legendary",
@@ -22,27 +23,30 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Grants massive Health and Health Regen",
   "passives": [
     {
-      "effects": "Grants <i>Warmog's Heart</i> if you have at least 2000 <b>bonus</b> health.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "Grants <i>Warmog's Heart</i> if you have at least 2000 <b>bonus</b> health."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Warmog's Heart",
-      "effects": "<img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />Health regeneration 1.5% <b>maximum</b> health every 0.5 seconds if damage has not been taken in the last 8 seconds (3 seconds for damage from non-champions).",
-      "unique": true
+      "effects": "<img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />Health regeneration 1.5% <b>maximum</b> health every 0.5 seconds if damage has not been taken in the last 8 seconds (3 seconds for damage from non-champions)."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Warmog's Vitality",
-      "effects": "Gain <b>bonus</b> health equal to 12% <b>bonus</b> health <b>from items</b>.",
-      "unique": true
+      "effects": "Gain <b>bonus</b> health equal to 12% <b>bonus</b> health <b>from items</b>."
     }
   ],
   "stats": {
     "health": 1000,
     "healthRegen": 100
   },
+  "description": "1000 Health\n100% Base Health Regen\n\nWarmog's Heart \nIf you have 2000 bonus Health and have not taken damage within 8 seconds, restore  Health per second.\n\nWarmog's Vitality\nGain bonus Health equal to 12% of your Item Health (0).",
   "maps": [
     11,
     12,

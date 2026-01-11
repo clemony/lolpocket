@@ -6,7 +6,8 @@ export function useMatches(
     queue?: number
   }
 ) {
-  const { getMatchesForSummoner, getCursor, setCursor } = useIndexedDB()
+  const { getMatchesForSummoner, getCursor, setCursor, putMatchData } =
+    useIndexedDB()
 
   const puuid = computed(() => summoner.value?.puuid ?? null)
   const region = computed(() => summoner.value?.region ?? null)
@@ -50,7 +51,7 @@ export function useMatches(
       })
 
       if (res.matches.length) {
-        await useAddMatches(res.matches)
+        await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
         newestTs.value = res.newestTimestamp
       }
@@ -88,7 +89,7 @@ export function useMatches(
         return
       }
 
-      await useAddMatches(res.matches)
+      await putMatchData(res.matches)
       matches.value.push(...res.matches)
 
       if (res.cursor != null) {

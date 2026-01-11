@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Executioner's Calling",
   "id": 3123,
   "rank": "Epic",
@@ -13,7 +14,7 @@ const item: Item =  {
     {
       "id": 3033,
       "name": "Mortal Reminder",
-      "gold": 3300
+      "gold": 3000
     },
     {
       "id": 6609,
@@ -24,21 +25,22 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Overcomes enemies with high health gain",
   "nicknames": [
     "grievous",
     "grievous wounds"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Grievous Wounds",
-      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds.",
-      "unique": true
+      "effects": "Dealing physical damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds."
     }
   ],
   "stats": {
     "attackDamage": 15
   },
+  "description": "15 Attack Damage\n\nGrievous Wounds\nDealing physical damage to champions applies 40% Wounds for 3 seconds.",
   "maps": [
     11,
     12,

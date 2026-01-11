@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Refillable Potion",
   "id": 2031,
   "rank": "Consumable",
@@ -12,18 +13,19 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Restores Health over time. Refills at shop.",
   "nicknames": [
     "consumable",
     "Green Potion"
   ],
   "passives": [
     {
-      "effects": "Holds charges that refill upon visiting the shop.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "Holds charges that refill upon visiting the shop."
     }
   ],
   "stats": {},
+  "description": "\n\nActive (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
   "maps": [
     11,
     12,

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Bami's Cinder",
   "id": 6660,
   "rank": "Epic",
@@ -34,15 +35,17 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Immolate",
-      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage.",
-      "unique": true
+      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage."
     }
   ],
   "stats": {
     "health": 150,
     "abilityHaste": 5
   },
+  "description": "150 Health\n5 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage to nearby enemies for 3 seconds.",
   "maps": [
     11,
     12,

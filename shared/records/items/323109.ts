@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
+  "id": 323109,
+  "name": "Knight's Vow",
+  "description": "300 Health\n50 Armor\n10 Ability Haste\n150% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.",
+  "maps": [
+    11
+  ],
+  "gold": {
+    "base": 1000,
+    "total": 2900,
+    "sell": 2030
+  }
+}
+export default item

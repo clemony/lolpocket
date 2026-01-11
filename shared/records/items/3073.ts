@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Experimental Hexplate",
   "id": 3073,
   "rank": "Legendary",
@@ -22,17 +23,18 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases maximum Mana as Mana is spent",
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Hexcharged",
-      "effects": "Gain 30 ultimate haste.",
-      "unique": true
+      "effects": "Gain 30 ultimate haste."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Overdrive",
-      "effects": "Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 50% <b>bonus</b> attack speed and 20% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast).",
-      "unique": true
+      "effects": "Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 50% <b>bonus</b> attack speed and 20% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast)."
     }
   ],
   "stats": {
@@ -40,6 +42,7 @@ const item: Item =  {
     "attackSpeed": 20,
     "health": 450
   },
+  "description": "40 Attack Damage\n20% Attack Speed\n450 Health\n\nHexcharged\nGain 30 Ultimate Ability Haste.\n\nOverdrive\nAfter casting your Ultimate, gain 50% Attack Speed and 20% Move Speed for 8 seconds. ",
   "maps": [
     11,
     12,

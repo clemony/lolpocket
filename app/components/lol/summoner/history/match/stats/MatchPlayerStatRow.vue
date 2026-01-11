@@ -51,10 +51,10 @@ function formatMatchStat(stat: number, name: string) {
       :key="i"
       :class="
         cn('match-cell text-center last-of-type:border-0!',
-           player.stats.kills.stats[ix] === 0 ? 'match-null' : '',
+           player.offense.multiKills?.[ix] === 0 ? 'match-null' : '',
         )
       ">
-      {{ formatMatchStat(player.stats.kills.stats?.[ix], matchStatIndex[ix]) }}
+      {{ formatMatchStat(player.offense.multiKills?.[ix], matchStatIndex[ix]) }}
     </div>
   </div>
 

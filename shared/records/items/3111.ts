@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Mercury's Treads",
   "id": 3111,
   "rank": "Boots",
@@ -18,13 +19,12 @@ const item: Item =  {
     {
       "id": 3173,
       "name": "Chainlaced Crushers",
-      "gold": 1750
+      "gold": 1250
     }
   ],
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Increases Move Speed and reduces duration of disabling effects",
   "nicknames": [
     "boots",
     "mercs"
@@ -34,6 +34,7 @@ const item: Item =  {
     "flatMovespeed": 45,
     "tenacity": 30
   },
+  "description": "20 Magic Resist\n45 Move Speed\n30% Tenacity\n\n",
   "maps": [
     11,
     12,

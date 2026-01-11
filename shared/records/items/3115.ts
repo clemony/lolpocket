@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Nashor's Tooth",
   "id": 3115,
   "rank": "Legendary",
@@ -22,15 +23,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
   "nicknames": [
     "nashors"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Icathian Bite",
-      "effects": "Basic attacks deal 15 (+15% AP) <b>bonus</b> magic damage on-hit.",
-      "unique": true
+      "effects": "Basic attacks deal 15 (+15% AP) <b>bonus</b> magic damage on-hit."
     }
   ],
   "stats": {
@@ -38,6 +39,7 @@ const item: Item =  {
     "attackSpeed": 50,
     "abilityHaste": 15
   },
+  "description": "80 Ability Power\n50% Attack Speed\n15 Ability Haste\n\nIcathian Bite\nAttacks deal bonus magic damage On-Hit.",
   "maps": [
     11,
     12,

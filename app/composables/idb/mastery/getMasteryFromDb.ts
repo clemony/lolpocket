@@ -1,12 +1,12 @@
-import { matchDB } from "~/stores"
+import { lpdb } from "~/stores"
 
 const now = () => Date.now()
 
 export async function getMastery(puuid: string, championId: number) {
-  const data = await matchDB.playerChampionMastery.get([puuid, championId])
+  const data = await lpdb.playerChampionMastery.get([puuid, championId])
 
   if (data) {
-    matchDB.playerChampionMastery
+    lpdb.playerChampionMastery
       .update([puuid, championId], {
         lastAccessedAt: now(),
       })
@@ -17,14 +17,14 @@ export async function getMastery(puuid: string, championId: number) {
 }
 
 export async function getAllMastery(puuid: string) {
-  const arr = await matchDB.playerChampionMastery
+  const arr = await lpdb.playerChampionMastery
     .where("puuid")
     .equals(String(puuid))
     .toArray()
 
   if (arr.length) {
     const ts = now()
-    await matchDB.playerChampionMastery.bulkPut(
+    await lpdb.playerChampionMastery.bulkPut(
       arr.map((m) => ({
         ...m,
         lastAccessedAt: ts,
@@ -36,5 +36,5 @@ export async function getAllMastery(puuid: string) {
 }
 
 export async function getMasterySummary(puuid: string) {
-  return await matchDB.summonerMastery.get(puuid)
+  return await lpdb.summonerMastery.get(puuid)
 }

@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Noonquiver",
   "id": 6670,
   "rank": "Epic",
@@ -21,9 +22,14 @@ const item: Item =  {
       "gold": 3000
     },
     {
+      "id": 2523,
+      "name": "Hexoptics C44",
+      "gold": 2800
+    },
+    {
       "id": 3036,
       "name": "Lord Dominik's Regards",
-      "gold": 3100
+      "gold": 3300
     }
   ],
   "specialRecipe": 0,
@@ -33,6 +39,7 @@ const item: Item =  {
     "attackDamage": 15,
     "criticalStrikeChance": 20
   },
+  "description": "15 Attack Damage\n20% Critical Strike Chance\n\n",
   "maps": [
     11,
     12,

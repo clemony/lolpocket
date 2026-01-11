@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { itemTags } from '~~/shared/references'
-
 const {
   class: className,
   clear = true,

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { variant } from 'valibot'
-
 interface InputGroupButtonProps {
   class?: HTMLAttributes['class']
   size?: InputGroupButtonVariants['size']
@@ -8,7 +6,6 @@ interface InputGroupButtonProps {
 }
 
 const props = withDefaults(defineProps<InputGroupButtonProps>(), {
-  size: '8',
   variant: 'ghost',
 })
 </script>

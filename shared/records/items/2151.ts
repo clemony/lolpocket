@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Elixir of Avarice",
   "id": 2151,
   "rank": "Consumable",
@@ -6,6 +7,7 @@ const item: Item =  {
   "noEffects": false,
   "removed": false,
   "stats": {},
+  "description": "\n\nConsume\nGrants 5 true damage on hit against minions for 60 seconds. When this effect expires, gain 60 gold. ",
   "maps": [
     11,
     12,

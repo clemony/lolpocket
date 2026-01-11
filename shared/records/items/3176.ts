@@ -1,42 +1,16 @@
-const item: Item =  {
-  "name": "Forever Forward",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "id": 3176,
-  "rank": "Boots",
-  "buildsFrom": [
-    {
-      "id": 3013,
-      "name": "Synchronized Souls",
-      "gold": 900
-    }
-  ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "boots"
-  ],
-  "passives": [
-    {
-      "name": "Voidborn",
-      "effects": "Gain <img src=\"/img/icons/empowered-recall.webp\" class=\"tip-icon\" />Empowered Recall.",
-      "unique": true
-    },
-    {
-      "name": "Noxian Synchrony",
-      "effects": "Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed, going on cooldown for 6 seconds upon taking or dealing damage.",
-      "unique": true
-    }
-  ],
-  "stats": {
-    "flatMovespeed": 55
-  },
+  "name": "Forever Forward",
+  "description": "55 Move Speed\n\nOmnipresent\nGain a new Active: Teleport.\n\nVoidborn\nGain Empowered Recall.\n\nNoxian Synchrony\nGain 45 Move Speed and 8% total Move Speed when out of combat.",
   "maps": [
     11
   ],
   "gold": {
-    "base": 500,
-    "total": 1400,
-    "sell": 980
+    "base": 0,
+    "purchasable": false,
+    "total": 900,
+    "sell": 630
   }
 }
 export default item

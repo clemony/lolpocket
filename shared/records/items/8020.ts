@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Abyssal Mask",
   "id": 8020,
   "rank": "Legendary",
@@ -19,9 +20,10 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Unmake",
-      "effects": "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources.",
-      "unique": true
+      "effects": "Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources."
     }
   ],
   "stats": {
@@ -29,6 +31,7 @@ const item: Item =  {
     "magicResistance": 45,
     "abilityHaste": 15
   },
+  "description": "350 Health\n45 Magic Resist\n15 Ability Haste\n\nUnmake\nNearby enemy champions take 12% more magic damage.",
   "maps": [
     11,
     12,

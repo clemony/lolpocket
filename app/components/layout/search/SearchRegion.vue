@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { regionIndex } from '~~/shared/references'
 import { Presence } from 'reka-ui'
 
 const {

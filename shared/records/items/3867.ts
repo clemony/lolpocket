@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Bounty of Worlds",
   "id": 3867,
   "rank": "Legendary",
@@ -34,21 +35,23 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Upgrade",
-      "effects": "You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i><img src=\"/img/icons/bloodsong.webp\" class=\"tip-icon\" />Bloodsong</i>, <i><img src=\"/img/icons/celestial-opposition.webp\" class=\"tip-icon\" />Celestial Opposition</i>, <i><img src=\"/img/icons/dream-maker.webp\" class=\"tip-icon\" />Dream Maker</i>, <i><img src=\"/img/icons/solstice-sleigh.webp\" class=\"tip-icon\" />Solstice Sleigh</i>, or <i><img src=\"/img/icons/zazzaks-realmspike.webp\" class=\"tip-icon\" />Zaz'Zak's Realmspike</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>",
-      "unique": true
+      "effects": "You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i><img src=\"/img/icons/bloodsong.webp\" class=\"tip-icon\" />Bloodsong</i>, <i><img src=\"/img/icons/celestial-opposition.webp\" class=\"tip-icon\" />Celestial Opposition</i>, <i><img src=\"/img/icons/dream-maker.webp\" class=\"tip-icon\" />Dream Maker</i>, <i><img src=\"/img/icons/solstice-sleigh.webp\" class=\"tip-icon\" />Solstice Sleigh</i>, or <i><img src=\"/img/icons/zazzaks-realmspike.webp\" class=\"tip-icon\" />Zaz'Zak's Realmspike</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>"
     },
     {
-      "effects": "Receives diminishing gold from excessive minion kills.",
-      "unique": true
+      "unique": true,
+      "mythic": false,
+      "effects": "Receives diminishing gold from excessive minion kills."
     }
   ],
   "active": [
     {
+      "unique": true,
       "name": "Ward",
       "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
-      "range": 600,
-      "unique": true
+      "range": 600
     }
   ],
   "stats": {
@@ -57,6 +60,7 @@ const item: Item =  {
     "healthRegen": 75,
     "manaRegen": 75
   },
+  "description": "5 Gold Per 10 Seconds\n75% Base Health Regen\n75% Base Mana Regen\n200 Health\n\nUpgrade \nThis item can be upgraded into Bloodsong, Celestial Opposition, Dream Maker, Zaz'Zak's Realmspike, or Solstice Sleigh for free.Active (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
   "maps": [
     11
   ],

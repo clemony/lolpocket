@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { statIndex } from '#shared/references'
-
 const {
   active,
   class: className,

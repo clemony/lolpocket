@@ -1,58 +1,12 @@
-const item: Item =  {
-  "name": "Vigilant Wardstone",
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "id": 4643,
-  "rank": "Legendary",
-  "buildsFrom": [
-    {
-      "id": 4638,
-      "name": "Watchful Wardstone",
-      "gold": 1100
-    }
-  ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "icon": "https://raw.communitydragon.org/15.23/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4643_enchanter_t3_vigilantsightstone.png",
-  "nicknames": [
-    "sightstone",
-    "ward"
-  ],
-  "passives": [
-    {
-      "name": "Arcane Cache",
-      "effects": "Purchasing a <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward stocks it as a charge, up to maximum of 3.",
-      "unique": true
-    },
-    {
-      "name": "Behold",
-      "effects": "Increase your <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward, <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon\" />Totem Ward, and <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward caps by 1.",
-      "unique": true
-    }
-  ],
-  "active": [
-    {
-      "effects": "Consumes a charge of <i>Arcane Cache</i> to place a visible <img src=\"/img/icons/control-ward.webp\" class=\"tip-icon\" />Control Ward at the target location (600 range).",
-      "unique": true
-    }
-  ],
-  "stats": {
-    "armor": 25,
-    "health": 250,
-    "magicResistance": 30,
-    "abilityHaste": 20
-  },
-  "shop": {
-    "prices": {
-      "total": 2300,
-      "combined": 1200,
-      "sell": 920
-    },
-    "tags": [
-      "SUPPORT"
-    ]
-  },
-  "maps": [
-    11
-  ]
+  "name": "Vigilant Wardstone",
+  "description": "250 Health\n20 Ability Haste\n25 Armor\n30 Magic Resist\n\nArcane Cache\nThis item can store up to 3 purchased Control Wards.\n\nBehold\nIncrease your Stealth Ward and Control Ward placement caps by 1.",
+  "gold": {
+    "base": 1200,
+    "total": 2300,
+    "sell": 1610
+  }
 }
 export default item

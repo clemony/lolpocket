@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Echoes of Helia",
   "id": 6620,
   "rank": "Legendary",
@@ -17,15 +18,15 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Damage low-health enemies to trigger a cursed explosion, dealing damage and slowing nearby foes",
   "nicknames": [
     "spooky cup"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Soul Siphon",
-      "effects": "Gain 35% of pre-mitigation damage dealt to champions as Soul Charges, up to 80 – 250 (based on level) charges. Healing or shielding an ally consumes all Soul Charges to restore 100% of that value as health.",
-      "unique": true
+      "effects": "Gain 35% of pre-mitigation damage dealt to champions as <i>Soul Charges</i>, up to 80 – 250 (based on level). <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shielding.webp\" class=\"tip-icon\" />shielding an allied champion <i>(excluding yourself)</i> consumes all charges to heal them equal to the consumed amount."
     }
   ],
   "stats": {
@@ -34,6 +35,7 @@ const item: Item =  {
     "manaRegen": 125,
     "abilityHaste": 20
   },
+  "description": "35 Ability Power\n200 Health\n20 Ability Haste\n125% Base Mana Regen\n\nSoul Siphon\nGain 35% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all Soul Charges to restore Health.",
   "maps": [
     11,
     12,

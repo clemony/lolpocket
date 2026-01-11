@@ -1,11 +1,11 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Guardian's Hammer",
   "id": 3184,
   "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Good starting item for attackers",
   "nicknames": [
     "dblade"
   ],
@@ -14,7 +14,9 @@ const item: Item =  {
     "health": 150,
     "lifesteal": 5
   },
+  "description": "25 Attack Damage\n150 Health\n5% Life Steal\n\n",
   "maps": [
+    11,
     12,
     35
   ],

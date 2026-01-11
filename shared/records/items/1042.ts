@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Dagger",
   "id": 1042,
   "rank": "Basic",
@@ -49,6 +50,11 @@ const item: Item =  {
       "gold": 1100
     },
     {
+      "id": 2510,
+      "name": "Dusk and Dawn",
+      "gold": 3100
+    },
+    {
       "id": 3073,
       "name": "Experimental Hexplate",
       "gold": 3000
@@ -62,10 +68,10 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
-  "simpleDescription": "Slightly increases Attack Speed",
   "stats": {
     "attackSpeed": 10
   },
+  "description": "10% Attack Speed\n\n",
   "maps": [
     11,
     12,

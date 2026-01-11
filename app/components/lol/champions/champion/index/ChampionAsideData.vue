@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { abilityResources, damageTypes } from '~~/shared/references'
-
 const { champion, wrapperClass } = defineProps<{
   champion: Champion
   wrapperClass: string

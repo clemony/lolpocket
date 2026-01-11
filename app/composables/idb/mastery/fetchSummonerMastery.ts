@@ -15,7 +15,7 @@ export async function fetchSummonerMastery(puuid: string, region: string) {
     !timestamp || Date.now() - timestamp > TWO_HOURS
   console.log("🥸 - isStale - isStale:", isStale)
 
-  const existing = await matchDB.summonerMastery.get(puuid)
+  const existing = await lpdb.summonerMastery.get(puuid)
   console.log("🥸 - fetchSummonerMastery - existing:", existing)
 
   if (existing && !isStale(existing.updated)) {
@@ -33,7 +33,7 @@ export async function fetchSummonerMastery(puuid: string, region: string) {
   const ts = Date.now()
 
   // store individual champion mastery
-  await matchDB.playerChampionMastery.bulkPut(
+  await lpdb.playerChampionMastery.bulkPut(
     result.mastery.map((m) => ({
       ...m,
       puuid: puuid,
@@ -49,5 +49,5 @@ export async function fetchSummonerMastery(puuid: string, region: string) {
     updated: ts,
   }
 
-  await matchDB.summonerMastery.put(summary)
+  await lpdb.summonerMastery.put(summary)
 }

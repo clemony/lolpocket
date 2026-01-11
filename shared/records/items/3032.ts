@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Yun Tal Wildarrows",
   "id": 3032,
   "rank": "Legendary",
@@ -28,20 +29,23 @@ const item: Item =  {
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Practice Makes Lethal",
-      "effects": "Basic attacks grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0.4% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0.2%) critical strike chance permanently, stacking up to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />63 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />125) times (capped at 25% critical strike chance).",
-      "unique": true
+      "effects": "Basic attacks grant (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0.4% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0.2%) critical strike chance permanently, stacking up to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />63 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />125) times (capped at 25% critical strike chance)."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Flurry",
-      "effects": "Launching a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit and 2 seconds if the attack <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strikes).",
-      "unique": true
+      "effects": "Launching a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit and 2 seconds if the attack <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strikes)."
     }
   ],
   "stats": {
     "attackDamage": 50,
     "attackSpeed": 40
   },
+  "description": "50 Attack Damage\n40% Attack Speed\n0% Critical Strike Chance\n\nPractice Makes Lethal\nOn-Attack, gain Critical Strike Chance permanently up to 25%.\n\nFlurry\nOn-Attacking an enemy champion, gain 30% Attack Speed for 6 seconds (30 second cooldown). \nAttacks reduce this cooldown by 1 second, increased to 2 seconds for Critical Strikes.",
   "maps": [
     11,
     12,
@@ -49,9 +53,9 @@ const item: Item =  {
     35
   ],
   "gold": {
-    "base": 750,
-    "total": 3000,
-    "sell": 2100
+    "base": 850,
+    "total": 3100,
+    "sell": 2170
   }
 }
 export default item

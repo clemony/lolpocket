@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Muramana",
   "id": 3042,
   "rank": "Legendary",
@@ -7,14 +8,16 @@ const item: Item =  {
   "removed": false,
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Awe",
-      "effects": "Grants <b>bonus</b> attack damage equal to 2% <b>maximum</b> mana.",
-      "unique": true
+      "effects": "Grants <b>bonus</b> attack damage equal to 2% <b>maximum</b> mana."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Shock",
-      "effects": "Basic attacks on-hit against champions deal 1.2% <b>maximum</b> mana <b>bonus</b> physical damage. Dealing ability damage to champions with a <img src=\"/img/icons/champion-ability.webp\" class=\"tip-icon\" />champion ability deals (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />4% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />3%) <b>maximum</b> mana <b>bonus</b> physical damage, unless the damage also counts as <img src=\"/img/icons/proc-damage.webp\" class=\"tip-icon\" />proc damage. Can only be triggered on the same target once every 6.5 seconds from the same attack or cast.",
-      "unique": true
+      "effects": "Basic attacks on-hit against champions deal 1.2% <b>maximum</b> mana <b>bonus</b> physical damage. Can only be triggered on the same target once every 6.5 seconds from the same cast instance."
     }
   ],
   "stats": {
@@ -22,6 +25,7 @@ const item: Item =  {
     "mana": 1000,
     "abilityHaste": 15
   },
+  "description": "35 Attack Damage\n1000 Mana\n15 Ability Haste\n\nAwe\nGain 2% max Mana as bonus Attack Damage.\n\nShock\nAttacks against champions deal 1.2% max Mana as bonus physical damage On-Hit. \nDamaging Abilities against champions deal 3% - 4% max Mana as bonus physical damage.",
   "maps": [
     11,
     12,

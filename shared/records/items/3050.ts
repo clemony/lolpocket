@@ -1,4 +1,5 @@
-const item: Item =  {
+// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+      const item: Item =  {
   "name": "Zeke's Convergence",
   "id": 3050,
   "rank": "Legendary",
@@ -22,20 +23,21 @@ const item: Item =  {
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
-  "simpleDescription": "Grants you and your ally bonuses when you cast your ultimate.",
   "nicknames": [
     "haroldandkumar"
   ],
   "passives": [
     {
+      "unique": true,
+      "mythic": false,
       "name": "Cryocumbustion",
-      "effects": "Gain 15 ultimate ability haste",
-      "unique": true
+      "effects": "Gain 15 ultimate haste."
     },
     {
+      "unique": true,
+      "mythic": false,
       "name": "Frostfire Tempest",
-      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25 seconds to enemies within 350 units and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 30% (45 second cooldown, starts on ultimate cast).",
-      "unique": true
+      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25 seconds to enemies within 350 units and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 30% (45 second cooldown, starts on ultimate cast)."
     }
   ],
   "stats": {
@@ -44,6 +46,7 @@ const item: Item =  {
     "magicResistance": 25,
     "abilityHaste": 10
   },
+  "description": "300 Health\n25 Armor\n25 Magic Resist\n10 Ability Haste\n\nFrostfire Tempest\nCasting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic damage per second to enemy champions and Slows them by 30%.",
   "maps": [
     11,
     12,

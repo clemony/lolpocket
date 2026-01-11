@@ -11,6 +11,7 @@ const props = defineProps<
   }
 >()
 
+console.log('🥸 - iconId?:', as().account.icon)
 const icon = computed(() => {
   if (props.iconId !== null && props.iconId !== undefined)
     return getSummonerIcon(props.iconId)
