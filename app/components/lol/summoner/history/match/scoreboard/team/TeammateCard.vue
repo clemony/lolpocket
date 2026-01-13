@@ -36,7 +36,9 @@ const bars = computed (() => {
 <template>
   <Card
     v-if="player"
-    class="grid w-full max-w-full grid-cols-[54px_1fr_50px] grid-rows-[repeat(3,13px)_auto] gap-x-3 gap-y-0.75 overflow-hidden px-3.5 py-3.5">
+    :class="cn(
+      'card-class relative grid w-full cursor-pointer grid-cols-[54px_1fr_50px] grid-rows-[repeat(3,13px)_auto] gap-x-3 gap-y-0.75 overflow-hidden border-b3/70 bg-linear-to-r bg-cover bg-clip-padding px-3.5 py-3.5 **:select-none',
+      player.teamId === 100 ? ' to-30% to-transparent from-inspiration/60 before:border-inspiration ' : 'from-70% to-domination/50 from-transparent before:border-domination')">
     <!-- champion -->
 
     <div class="row-span-2 flex items-center">
@@ -78,6 +80,10 @@ const bars = computed (() => {
 
     <!-- kda -->
     <KDA
+      data-tip="stat"
+      data-size="lg"
+      :data-stats="[player.stats.kda, roundDecimalToPercent(player.stats.kp, 1)]"
+      :data-name="['KDA', 'KP']"
       :stats="player.stats"
       class="col-start-3 self-center justify-self-end" />
 
@@ -135,6 +141,13 @@ const bars = computed (() => {
 <style scoped>
 @reference '@css/tailwind.css';
 
+.card-class::before {
+  @apply pointer-events-none absolute left-0 z-3 h-full w-1/2 rounded-xl border mask-r-from-0 opacity-40 shadow-sm shadow-black brightness-94;
+}
+
+.trigger-style {
+  @apply pointer-events-auto relative bg-clip-padding  z-2 flex h-36 w-full cursor-pointer items-center justify-between gap-6 overflow-hidden pr-4 pl-5 text-2 data-[state=open]:rounded-b-none;
+}
 .s-badge {
   @apply text-0! flex gap-2 items-center leading-none font-bold;
 }

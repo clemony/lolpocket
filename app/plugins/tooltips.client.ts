@@ -152,6 +152,7 @@ export default defineNuxtPlugin(() => {
   // =====================================================
 
   let hideTimer: number | null = null
+  let showTimer: number | null = null
   let longPressTimer: number | null = null
   const HOT_SELECTOR = "[data-tip]"
 
@@ -159,6 +160,13 @@ export default defineNuxtPlugin(() => {
     if (hideTimer != null) {
       clearTimeout(hideTimer)
       hideTimer = null
+    }
+  }
+
+  function clearShowTimer() {
+    if (showTimer != null) {
+      clearTimeout(showTimer)
+      showTimer = null
     }
   }
 
@@ -213,6 +221,7 @@ export default defineNuxtPlugin(() => {
       icon: el.dataset.icon,
       text: el.dataset.text,
       size: el.dataset.size,
+      value: el.dataset.value,
       interactive: el.dataset.interactive === "true",
     }
 
@@ -249,13 +258,28 @@ export default defineNuxtPlugin(() => {
 
       clearHideTimer()
 
+      if (shown.value && activeTrigger.value === trigger) {
+        activate(trigger)
+        return
+      }
+
       if (e.pointerType === "touch") {
         if (longPressTimer != null) clearTimeout(longPressTimer)
         longPressTimer = window.setTimeout(() => {
           activate(trigger)
         }, 250)
       } else {
-        activate(trigger)
+        clearShowTimer()
+
+        const delay =
+          trigger.dataset.delay != null ? Number(trigger.dataset.delay) : 140 // 👈 default hover intent delay
+
+        showTimer = window.setTimeout(() => {
+          // make sure we're still on the same element
+          if (trigger.matches(":hover")) {
+            activate(trigger)
+          }
+        }, delay)
       }
     },
     { passive: true, capture: true }
@@ -264,6 +288,7 @@ export default defineNuxtPlugin(() => {
   document.addEventListener(
     "pointerout",
     (e) => {
+      clearShowTimer()
       const from = e.target as HTMLElement | null
       if (!from) return
 

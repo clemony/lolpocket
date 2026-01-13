@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   @theme inline {
     --color-b1: var(--b1);
@@ -13,6 +14,13 @@
     --color-n1: var(--n1);
     --color-neutral: var(--n1);
     --color-nc: var(--nc);
+
+    /* path */
+    --color-precision: var(--precision);
+    --color-domination: var(--domination);
+    --color-sorcery: var(--sorcery);
+    --color-resolve: var(--resolve);
+    --color-inspiration: var(--inspiration);
   }
 }
 

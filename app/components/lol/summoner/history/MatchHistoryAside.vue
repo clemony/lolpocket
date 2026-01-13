@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+import { AnimatePresence, motion } from 'motion-v'
+
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
+
 const { clearFilters, summoner } = useSummonerInject()
 onMounted(() => {
   if (clearFilters)
@@ -8,7 +14,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="sticky inset-y-0 -top-66 grid h-fit max-h-dvh w-full auto-rows-max items-start gap-8 overflow-y-auto px-1 py-24 *:w-108">
+    :class="cn('sticky inset-y-0 -top-20 grid h-fit max-h-dvh w-110 origin-top auto-rows-max items-start gap-8 overflow-y-auto px-1 pt-2 *:w-108', className)">
     <RankCard
       v-if="as().settings?.show_solo"
       title="Solo/Duo"

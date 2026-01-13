@@ -30,26 +30,6 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
       name="gear"
       class="**:stroke-[1.7]" />
   </Button>
-  <Button
-    data-placement="left"
-    data-theme="mini-tip neutral line"
-    :data-tip="api?.filterEmpty() ? 'No filters applied' : 'Clear filters'"
-    size="c-14"
-    hover="neutral"
-    :disabled="api?.filterEmpty()"
-    class="duration-0! disabled:pointer-events-none"
-    :variant="api?.filterEmpty() ? 'floating' : 'neutral'"
-    @click="api.clearFilters()">
-    <Icon
-      name="lucide:filter-x"
-      class="" />
-  </Button>
-  <UpdateSummoner
-    v-if="ss"
-    placement="left"
-    size="c-14"
-    :state="ss" />
-
   <Teleport to="body">
     <AnimatePresence>
       <motion.div

@@ -9,11 +9,12 @@ const { editor } = defineProps<{
 
 const query = shallowRef<string>('')
 
-const { results: r } = useSimpleSearch(editor.storage.emoji.emojis, query, {
+const search = useSearch(editor.storage.emoji.emojis, query, {
   keys: ['shortcodes', 'tags'],
 })
 
-const results = computed(() => [...r.value].splice(0, 20))
+const results = computed (() => search.value.length ? search.value : [...editor.storage.emoji.emojis].splice(0, 20))
+
 const selectedIndex = ref(0)
 // const selectedItem = computed(() => items[selectedIndex.value])
 

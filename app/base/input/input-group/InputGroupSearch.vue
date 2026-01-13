@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+
+}>()
+</script>
 
 <template>
-  <InputGroupAddon align="inline-start">
+  <InputGroupAddon
+    size="8"
+    :class="cn('', className)"
+    align="inline-start">
     <icon
       name="search"
       class="size-4 opacity-40" />

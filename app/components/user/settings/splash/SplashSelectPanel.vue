@@ -11,16 +11,16 @@ const champQuery = ref<string | null>('')
 const selectedChampion = ref<string | null>(null)
 
 const searchQuery = ref<string>('')
-const { results: championResult } = useSimpleSearch(
+const search = useSearch(
   ix().champions, // array or ref
   searchQuery,
 )
 
-const result = computed(() => {
-  const values = championResult?.value?.length
-    ? championResult.value
-    : championIndex
-  return [...values].sort((a, b) => a.name.localeCompare(b.name))
+const result = computed (() => {
+  if (search?.value?.length)
+    return search.value.length ? search.value : ix().champions.sort((a, b) => a.name.localeCompare(b.name))
+
+  else return ix().champions
 })
 console.log('🥸 - result:', result)
 

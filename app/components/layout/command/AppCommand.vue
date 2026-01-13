@@ -13,10 +13,10 @@ const user = useSupabaseUser()
 
 const focus = ref<HTMLElement>()
 
-const { champions, clear, pages, pockets } = await useSearch(query, tag, {
+/* const { champions, clear, pages, pockets } = await useSearch(query, tag, {
   pages: true,
 })
-
+ */
 function navigate(url: string) {
   ui().commandOpen = false
   navigateTo(url)
@@ -35,7 +35,7 @@ function navigate(url: string) {
         desc="search pages, pockets, items, champions, summoners, & more" />
 
       <Command :highlight-on-hover="true">
-        <Input
+        <!--  <Input
           ref="queryName"
           v-model:model-value="query"
           type="text"
@@ -64,7 +64,7 @@ function navigate(url: string) {
               K
             </DeviceKey>
           </template>
-        </Input>
+        </Input> -->
 
         <CommandList>
           <TransitionExpand group>
@@ -72,7 +72,7 @@ function navigate(url: string) {
             <CommandEmpty>No results found.</CommandEmpty>
 
             <!-- champions -->
-            <CommandGroup
+            <!--  <CommandGroup
               v-if="champions.length"
               heading="Champions">
               <CommandItem
@@ -92,10 +92,10 @@ function navigate(url: string) {
                 }}
               </CommandItem>
               <CommandSeparator class="mt-2" />
-            </CommandGroup>
+            </CommandGroup> -->
 
             <!-- pockets -->
-            <CommandGroup
+            <!--    <CommandGroup
               v-if="pockets.length"
               heading="Pockets">
               <CommandItem
@@ -115,9 +115,9 @@ function navigate(url: string) {
                 }}
               </CommandItem>
               <CommandSeparator class="mt-2" />
-            </CommandGroup>
+            </CommandGroup> -->
             <!-- pages -->
-            <CommandGroup
+            <!--  <CommandGroup
               v-for="group in pages"
               :key="group.name"
               class="group/pages capitalize"
@@ -135,7 +135,7 @@ function navigate(url: string) {
               </CommandItem>
               <CommandSeparator
                 class="mt-2 group-last/pages:hidden" />
-            </CommandGroup>
+            </CommandGroup> -->
           </TransitionExpand>
         </CommandList>
       </Command>

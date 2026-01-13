@@ -47,10 +47,7 @@ const isOpen = ref(false)
     <Collapsible
       v-model:open="isOpen"
       :class="cn('group/collapse collapse-class relative',
-                 match.player.win ? 'from-inspiration/80 ' : 'from-domination/80',
-                 match.player.win
-                   ? 'before:border-inspiration '
-                   : 'before:border-domination')">
+                 match.player.win ? 'from-inspiration/80 before:border-inspiration ' : 'from-domination/80 before:border-domination')">
       <CollapsibleTrigger
         ref="container"
         :for="match.matchId"

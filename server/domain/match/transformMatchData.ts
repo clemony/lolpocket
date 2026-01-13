@@ -80,6 +80,7 @@ export function transformMatchData(raw: any): MatchData {
         damagePercentage:
           Math.round(p.challenges?.teamDamagePercentage * 1000) / 10,
         sprees: p.challenges?.killingSprees ?? 0,
+        damagePerMin: p.damagePerMinute ?? 0,
         multiKills: {
           doubleKills: p.doubleKills,
           tripleKills: p.tripleKills,
@@ -115,6 +116,7 @@ export function transformMatchData(raw: any): MatchData {
       //
       farming: {
         goldEarned: p.goldEarned,
+        goldPerMin: p.goldPerMinute ?? 0,
         minionsKilled: p.totalMinionsKilled,
         neutralMinionsKilled: p.neutralMinionsKilled,
         turretsKilled: p.turretKills,
@@ -133,6 +135,18 @@ export function transformMatchData(raw: any): MatchData {
       win: p.win ?? false,
     })
   )
+
+  //lane compare
+  /*
+  maxLevelLeadLaneOpponent
+moreEnemyJungleThanOpponent
+maxCsAdvantageOnLaneOpponent
+laningPhaseGoldExpAdvantage
+maxKillDeficit
+maxCsAdvantageOnLaneOpponent
+earlyLaningPhaseGoldExpAdvantage
+getTakedownsInAllLanesEarlyJungleAsLaner
+  */
 
   // calc mvp scores
   const mvpScores = calculateMvpScores(raw)

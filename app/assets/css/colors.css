@@ -7,13 +7,6 @@
   --color-all-roles: oklch(37% 0 0);
   --color-win: oklch(80% 19% 214);
 
-  /* path */
-  --color-precision: oklch(85.49% 0.0892 84.09);
-  --color-domination: oklch(60.61% 0.1206 15.34);
-  --color-sorcery: oklch(69.02% 0.0644 332.52);
-  --color-resolve: oklch(76.8% 0.0749 131.06);
-  --color-inspiration: oklch(76.93% 0.0494 204.19);
-
   /* rank */
   --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
@@ -54,22 +47,7 @@
   --color-ap: oklch(65% 25% 310deg);
   --color-transparent: #00000000;
   --color-black: oklch(0% 0 0);
-  --color-black-10: oklch(10% 0 0);
-  --color-black-15: oklch(15% 0 0);
-  --color-black-20: oklch(20% 0 0);
-  --color-black-21: oklch(20.2% 0 0);
-  --color-black-22: oklch(22% 0 0);
-  --color-black-30: oklch(30% 0 0);
-  --color-black-35: oklch(35% 0 0);
-  --color-black-25: oklch(25% 0 0);
-  --color-black-50: oklch(50% 0 0);
-
   --color-white: oklch(100% 0 0);
-  --color-white-95: oklch(95% 0 0);
-  --color-white-90: oklch(90% 0 0);
-  --color-white-85: oklch(85% 0 0);
-  --color-white-80: oklch(80% 0 0);
-  --color-white-70: oklch(70% 0 0);
 
   --color-white-hex: #ffffff;
 
@@ -184,57 +162,4 @@
 }
 &[data-color="5008"] {
   @apply text-sorcery!;
-}
-
-&[data-color="lethality"],
-&[data-color="attackDamage"],
-&[data-color="armorPenetration"] {
-  @apply text-ad! **:text-ad!;
-}
-
-&[data-color="armor"],
-&[data-color="attackSpeed"],
-&[data-color="goldPer10"] {
-  @apply text-precision! **:text-precision!;
-}
-
-&[data-color="criticalStrikeChance"],
-&[data-color="criticalStrikeDamage"],
-&[data-color="lifesteal"] {
-  @apply text-domination! **:text-domination!;
-}
-
-&[data-color="abilityPower"],
-&[data-color="percentMagicPenetration"],
-&[data-color="flatMagicPenetration"] {
-  @apply text-sorcery! **:text-sorcery!;
-}
-
-&[data-color="healAndShieldPower"],
-&[data-color="abilityHaste"] {
-  @apply text-hsp! **:text-hsp!;
-}
-
-&[data-color="health"],
-&[data-color="healthRegen"] {
-  @apply text-hp! **:text-hp!;
-}
-
-&[data-color="mana"],
-&[data-color="manaRegen"] {
-  @apply text-mana! **:text-mana!;
-}
-
-&[data-color="magicResistance"] {
-  @apply text-mr! **:text-mr!;
-}
-
-&[data-color="flatMovespeed"],
-&[data-color="percentMovespeed"],
-&[data-color="tenacity"] {
-  @apply text-silver! **:text-silver!;
-}
-
-&[data-color="omnivamp"] {
-  @apply text-vamp! **:text-vamp!;
 }

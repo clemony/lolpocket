@@ -9,10 +9,7 @@ const props = withDefaults(
   }>(),
   {
     hover: 'neutral',
-    on: 'floating',
     placement: 'bottom',
-    size: 'c-11',
-    variant: 'floating'
   },
 )
 
@@ -40,33 +37,19 @@ const tippy = computed(() =>
 <template>
   <Button
     :data-tip="tippy ?? null"
-    data-theme="mini-tip neutral line"
     :data-placement="placement"
-
-    :class="
-      cn(
-        {
-          'pointer-events-none duration-0!  btn-active cursor-not-allowed':
-            cooldown,
-        },
-        buttonVariants({ on, variant, hover, size }),
-
-        'shrink-0 [&_svg]:size-4.25',
-      )
-    "
+    :class="cn({
+                 'pointer-events-none duration-0!  btn-active cursor-not-allowed': cooldown },
+               buttonVariants({ on, variant, hover, size }),
+               'shrink-0 [&_svg]:size-4.25')"
     @click="loadNewer()">
     <TransitionScalePop
       class="relative grid size-full place-items-center overflow-hidden">
-      <icon
+      <Icon
         v-if="!cooldown"
         name="reset"
         :class="
-          cn('size-5 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
-             {
-               'animate-rotate': isLoading,
-             },
-          )
-        " />
+          cn('size-5 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100', { 'animate-rotate': isLoading })" />
 
       <div
         v-if="cooldown"

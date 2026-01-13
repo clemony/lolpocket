@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
 import { Virtualizer } from 'virtua/vue'
+
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 
 const emit = defineEmits(['scroll-top'])
 
@@ -10,7 +15,9 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
 </script>
 
 <template>
-  <div class="flex w-full max-w-240 min-w-220 grow flex-col items-center overflow-visible py-24">
+  <motion.div
+    layout="preserve-aspect"
+    :class="cn('flex w-full max-w-260 min-w-220 grow flex-col items-center justify-self-end overflow-visible px-1 pt-2', className)">
     <!-- loading skeleton -->
     <div
       v-if="loading "
@@ -69,5 +76,5 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
         load older matches
       </Button>
     </div>
-  </div>
+  </motion.div>
 </template>

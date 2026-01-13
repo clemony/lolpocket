@@ -13,7 +13,7 @@ const lpScore = computed (() => match.ranking.findIndex(p => p === player.puuid)
         player.puuid === match.mvp || player.puuid === match.ace
       "
       :class="
-        cn('-mt-px h-4.5! gap-1 px-1! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
+        cn('-mt-px h-4.5! gap-1 px-1.5! text-0! font-bold tracking-wide text-white shadow-xs **:leading-0',
            {
              'border-g/40 bg-as ': player.puuid === match.mvp,
              'bg-domination border-shade-domination/3': player.puuid === match.ace,

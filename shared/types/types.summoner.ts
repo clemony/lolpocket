@@ -1,7 +1,5 @@
 export type AccountData = Account & Summoner
 
-export type SummonerInject = ReturnType<typeof useSummonerProvider>
-
 export interface Identifier {
   puuid?: string
   region?: string
@@ -10,104 +8,19 @@ export interface Identifier {
   icon?: string
 }
 
-export type TrackedQueueId = 400 | 420 | 440 | 0
-export type QueueKey = "all" | `${TrackedQueueId}`
-
-export interface QueueStats {
-  games: number
-  wins: number
-  losses: number
-
-  kills: number
-  deaths: number
-  assists: number
-  killParticipation: number
-  matchIds: string[]
-  gamePatches: number[]
-}
-
-export interface PlayerChampionStats {
+export interface Summoner {
+  name: string
   puuid: string
-  championId: number
-  championName: string
-  overall?: QueueStats
-  queues?: Record<QueueKey, QueueStats>
-  lastAccessedAt?: number
-}
-export interface SharedChampionStats {
-  championId: number
-  championName: string
-  games: number
-  wins: number
-  losses: number
-  gamePatches: number[]
-}
-
-export interface ChampionStats extends SharedChampionStats {
-  puuid?: string
-
-  kills: number | StatAverage
-  deaths: number | StatAverage
-  assists: number | StatAverage
-  kda?: number
-  kp: number
-  winrate?: number
-
-  matchIds: string[]
-  lastAccessedAt?: number
-}
-export type AggregatedStatsAndMastery = Partial<AggregatedStats> &
-  PlayerChampionMastery
-
-export type PlayerChampionRoleStats = {
-  mostPlayed?: string
-  stats: Record<string, StatDetail>
-}
-
-export interface AggregatedStats extends SharedChampionStats {
-  kp?: StatAverage
-  kda?: number
-  winrate?: number
-
-  kills?: StatAverage
-  deaths?: StatAverage
-  assists?: StatAverage
-
-  role?: PlayerChampionRoleStats
-
-  gameTime?: StatAverage
-
-  totalDamage?: StatAverage
-  damagePercentage?: StatAverage
-
-  totalDamageTaken?: StatAverage
-  damageTakenPercentage?: StatAverage
-  ccDuration?: StatAverage
-
-  totalAllyHealing?: StatAverage
-  totalAllyShielding?: StatAverage
-  allySaves?: StatAverage
-
-  goldEarned?: StatAverage
-  minionsKilled?: StatAverage
-  neutralMinionsKilled?: StatAverage
-  csPerMin?: number
-  turretsKilled?: StatAverage
-  objectivesStolen?: StatAverage
-
-  visionScorePerMin?: number
-  visionScore?: StatAverage
-  controlWardsPlaced?: StatAverage
-
-  killsBefore15?: StatAverage
-  assistsBefore15?: StatAverage
-  deathsBefore15?: StatAverage
-
-  killingSprees?: StatAverage
-  tripleKills?: StatAverage
-  doubleKills?: StatAverage
-  quadraKills?: StatAverage
-  pentaKills?: StatAverage
+  icon: string
+  level: number
+  ranked?: {
+    solo?: RankedEntry
+    flex?: RankedEntry
+  }
+  region: string
+  tag: string
+  updatedData: number
+  updatedMatch: number
 }
 
 export interface StatDetail {
@@ -134,14 +47,7 @@ export interface StatAverage {
   total: number
   average: number
 }
-export interface StatDetailExtended {
-  id: number
-  games?: number
-  win?: number
-  winrate?: number
-  name: string
-  key?: string
-}
+
 export interface ItemSetStat extends StatDetail {
   items: number[]
 }
@@ -170,20 +76,6 @@ export interface SummonerMastery {
   updated: number
 }
 
-export interface Summoner {
-  name: string
-  puuid: string
-  icon: string
-  level: number
-  ranked?: {
-    solo?: RankedEntry
-    flex?: RankedEntry
-  }
-  region: string
-  tag: string
-  updatedData: number
-  updatedMatch: number
-}
 export interface RankedEntry {
   division: string
   losses: number

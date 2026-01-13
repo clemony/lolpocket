@@ -29,9 +29,9 @@ const data = computed(() => [
 ])
 
 const query = shallowRef<string>('')
-const { results: r } = useSimpleSearch(data, query, { keys: ['name', 'key'] })
+const search = useSearch(data, query, { keys: ['name', 'key'] })
 
-const results = computed<Index[]>(() => [...r.value].splice(0, 20))
+const results = computed (() => search.value.length ? search.value : [...data.value].splice(0, 20))
 
 const tab = shallowRef<number>(1)
 

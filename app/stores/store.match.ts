@@ -5,7 +5,7 @@ export interface MatchFilter {
   ally?: string | null
   champion?: string | null
   patch?: number | null
-  queue?: TrackedQueueId
+  queue?: number
   ignoreRole?: boolean
   role?: string | null
   date?: MaybeRef<DateRange>

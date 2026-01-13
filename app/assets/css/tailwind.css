@@ -12,5 +12,9 @@
 @import './color-themes.css';
 @import './ag-grid/index.css';
 @import './components/index.css';
+@import './attrs/index.css';
+
 @source not "../icons";
+@source not "../URI";
 @source not "../img";
+@source not "../config";

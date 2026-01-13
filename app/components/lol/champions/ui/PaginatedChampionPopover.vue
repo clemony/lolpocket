@@ -5,8 +5,8 @@ const pocket = computed(() =>
 ).value
 
 const searchQuery = ref<string>('')
-const { results } = useSimpleSearch(ix().champions, searchQuery)
-
+const search = useSearch(ix().champions, searchQuery)
+const results = computed (() => search.value.length ? search.value : ix().champions)
 function handleChampions(champion: string) {
   if (pocket.champions.includes(champion))
     return

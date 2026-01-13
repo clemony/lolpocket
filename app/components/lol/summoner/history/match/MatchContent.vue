@@ -45,7 +45,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
           :key="i">
           <FileTabTrigger
             :value="tab.name"
-            class="on:field-box e z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:bg-[color-mix(in_lch,var(--color-b2)_40%,white_60%)]">
+            class="on:field-box e on:light:bg-tint-b2/60 z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-b1/1">
             {{ tab.name }}
           </FileTabTrigger>
         </template>
@@ -53,7 +53,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
       </FileTabsList>
 
       <div
-        :class="cn('tabs-content field-box relative m-0! size-full h-192 max-h-192 min-h-full overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! bg-tint-b2/60 p-0 inset-shadow-none', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
+        :class="cn('tabs-content field-box light:bg-tint-b2/60 relative m-0! size-full h-192 max-h-192 min-h-full overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none dark:bg-tint-b1/1', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"

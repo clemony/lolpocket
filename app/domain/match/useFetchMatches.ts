@@ -14,7 +14,7 @@ export async function useFetchMatches(summoner: Summoner) {
 
   // Store new matches
   if (newMatches.length) {
-    await useAddMatches(newMatches)
+    //await useAddMatches(newMatches)
 
     // ranked update if ranked matches are present
     const hasRanked = newMatches.some(

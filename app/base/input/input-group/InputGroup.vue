@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<PrimitiveProps & {
   variant?: InputGroupVariants['variant']
   hover?: InputGroupVariants['hover']
 }>(), {
-  size: '12'
+  size: '11'
 })
 </script>
 

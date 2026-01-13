@@ -35,6 +35,10 @@ export const inputGroupAddonVariants = tv({
     size: "sq-6",
   },
   variants: {
+    base: { ...baseVariants },
+    color: { ...variantVariants },
+    size: { ...sizeVariants },
+    //
     align: {
       "block-end":
         "order-last w-full justify-start px-3 pb-3 group-has-[>input]/input-group:pb-2.5 [.border-t]:pt-3",
@@ -45,9 +49,6 @@ export const inputGroupAddonVariants = tv({
       "inline-start":
         "order-first pl-3 has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem]",
     },
-    base: { ...baseVariants },
-    color: { ...variantVariants },
-    size: { ...sizeVariants },
   },
 })
 
@@ -83,6 +84,7 @@ export const inputGroupVariants = tv({
   ),
   defaultVariants: {
     variant: "default",
+    size: "11",
   },
   extend: baseVariants,
   variants: {

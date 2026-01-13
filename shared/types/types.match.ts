@@ -47,6 +47,7 @@ export interface Player {
 export type PlayerOffense = {
   totalDamage: number
   damagePercentage: number
+  damagePerMin: number
   multiKills: {
     tripleKills: number
     doubleKills: number
@@ -73,6 +74,7 @@ export type PlayerDefense = {
 
 export type PlayerFarming = {
   goldEarned: number
+  goldPerMin: number
   minionsKilled: number
   neutralMinionsKilled: number
   turretsKilled: number

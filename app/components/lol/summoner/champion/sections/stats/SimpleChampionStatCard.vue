@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-const { subtitle, title, icon } = defineProps<{
+const { subtitle, title, icon, value } = defineProps<{
   icon?: string[]
   title: string
+  value?: string | number
   subtitle?: string
 }>()
 </script>
@@ -14,7 +15,9 @@ const { subtitle, title, icon } = defineProps<{
       </div>
       <div class="stat-value flex w-full flex-nowrap items-center justify-between text-7!">
         <span class="grow">
-          <slot />
+          <slot>
+            {{ value }}
+          </slot>
         </span>
         <div class="grid size-3 place-items-center">
           <Icon

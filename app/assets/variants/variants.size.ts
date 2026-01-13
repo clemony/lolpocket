@@ -46,5 +46,3 @@ Object.assign(sizeVariants, {
   icon: "grid aspect-square relative place-items-center size-4.5 *:absolute",
   "icon-sm": "grid aspect-square relative place-items-center size-4 *:absolute",
 })
-
-console.log("🥸 - sizeVariants:", sizeVariants)

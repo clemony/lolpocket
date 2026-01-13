@@ -14,6 +14,7 @@ export interface SummonerProviderApi {
     value: MatchFilter[K]
   ) => void
   clearFilters: () => void
+  query: ShallowRef<string>
   filterEmpty: () => boolean
   filter: ShallowRef<MatchFilter>
   champions: ShallowRef<AggregatedStats[]>

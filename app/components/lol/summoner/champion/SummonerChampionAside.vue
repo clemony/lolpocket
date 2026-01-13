@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { FuseResultMatch } from 'fuse.js'
 import { useScroll } from 'motion-v'
 
 const { api, data, mastery } = defineProps<{
@@ -19,9 +20,15 @@ const { summoner } = useSummonerInject()
 const param = useRouteParams('champion_key')
 const filter = shallowRef<string>('')
 
-const { results } = useSimpleSearch(sortAbc(Array.from(api?.champions.value.values()), 'championName'), filter, null, ['championName'])
+const sorted = computed (() => sortAbc(Array.from(api?.champions.value.values()), 'championName'))
 
-const img = useImage()
+const search = useSearch(sorted.value, filter, { keys: ['championName'] })
+
+const results = computed (() => {
+  if (search.value.length)
+    return search.value
+  else return sorted.value
+})
 </script>
 
 <template>

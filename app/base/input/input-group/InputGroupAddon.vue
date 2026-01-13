@@ -8,6 +8,7 @@ const props = withDefaults(
     PrimitiveProps & {
       align?: InputGroupAddonVariants['align']
       class?: HTMLAttributes['class']
+      size?: InputGroupAddonVariants['size']
       color?: InputGroupAddonVariants['color']
       base?: InputGroupAddonVariants['base']
     }
@@ -35,7 +36,7 @@ function handleInputGroupAddonClick(e: MouseEvent) {
     v-bind="props"
     data-slot="input-group-addon"
     :data-align="props.align"
-    :class="cn(inputGroupAddonVariants({ color, base, align: props.align }), props.class)"
+    :class="cn(inputGroupAddonVariants({ color, base, size, align: props.align }), props.class)"
     @click="handleInputGroupAddonClick">
     <slot />
   </Primitive>

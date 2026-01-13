@@ -17,17 +17,12 @@ const customCollections = fs
 
 export default defineNuxtConfig({
   alias: {
-    "@composables": fileURLToPath(
-      new URL("./app/composables", import.meta.url)
-    ),
     "@domain": fileURLToPath(new URL("./app/domain", import.meta.url)),
     riot: fileURLToPath(new URL("./server/api/riot", import.meta.url)),
     "@css": fileURLToPath(new URL("./app/assets/css", import.meta.url)),
     "@layout": fileURLToPath(new URL("./app/layout", import.meta.url)),
-    "@index": fileURLToPath(new URL("./shared/indexes", import.meta.url)),
     "@types": fileURLToPath(new URL("./shared/types", import.meta.url)),
     "@constants": fileURLToPath(new URL("./shared/constants", import.meta.url)),
-    "@plugins": fileURLToPath(new URL("./app/plugins", import.meta.url)),
     "@records": fileURLToPath(new URL("./shared/records", import.meta.url)),
     "@schema": fileURLToPath(new URL("./shared/schema", import.meta.url)),
     "@stores": fileURLToPath(new URL("./app/stores", import.meta.url)),
@@ -55,7 +50,7 @@ export default defineNuxtConfig({
     enabled: false,
   },
   experimental: {
-    extractAsyncDataHandlers: true,
+    //extractAsyncDataHandlers: true,
     typescriptPlugin: true,
     viteEnvironmentApi: true,
   },
@@ -79,12 +74,6 @@ export default defineNuxtConfig({
         provider: "fontsource",
         styles: ["normal"],
         weights: [300, 400, 500],
-      },
-      {
-        name: "Tabular",
-        provider: "fontshare",
-        styles: ["italic", "normal"],
-        weights: [400, 500, 600],
       },
     ],
   },
@@ -179,7 +168,7 @@ export default defineNuxtConfig({
     },
   },
   pinia: {
-    storesDirs: ["app/stores/**"],
+    storesDirs: ["app/stores/*"],
   },
 
   runtimeConfig: {
@@ -212,7 +201,6 @@ export default defineNuxtConfig({
         pretty: true,
         skipLibCheck: true,
       },
-      include: ["app/types/**/*.ts"],
     },
     typeCheck: true,
   },

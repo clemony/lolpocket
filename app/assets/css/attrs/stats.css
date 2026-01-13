@@ -1,0 +1,52 @@
+&[data-color="lethality"],
+&[data-color="attackDamage"],
+&[data-color="armorPenetration"] {
+  @apply text-ad! **:text-ad!;
+}
+
+&[data-color="armor"],
+&[data-color="attackSpeed"],
+&[data-color="goldPer10"] {
+  @apply text-precision! **:text-precision!;
+}
+
+&[data-color="criticalStrikeChance"],
+&[data-color="criticalStrikeDamage"],
+&[data-color="lifesteal"] {
+  @apply text-domination! **:text-domination!;
+}
+
+&[data-color="abilityPower"],
+&[data-color="percentMagicPenetration"],
+&[data-color="flatMagicPenetration"] {
+  @apply text-sorcery! **:text-sorcery!;
+}
+
+&[data-color="healAndShieldPower"],
+&[data-color="abilityHaste"] {
+  @apply text-hsp! **:text-hsp!;
+}
+
+&[data-color="health"],
+&[data-color="healthRegen"] {
+  @apply text-hp! **:text-hp!;
+}
+
+&[data-color="mana"],
+&[data-color="manaRegen"] {
+  @apply text-mana! **:text-mana!;
+}
+
+&[data-color="magicResistance"] {
+  @apply text-mr! **:text-mr!;
+}
+
+&[data-color="flatMovespeed"],
+&[data-color="percentMovespeed"],
+&[data-color="tenacity"] {
+  @apply text-silver! **:text-silver!;
+}
+
+&[data-color="omnivamp"] {
+  @apply text-vamp! **:text-vamp!;
+}

@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { AbilityTooltip, ChampionData, ItemTooltip, RuneData, SpellData } from '#components'
+import { AbilityTooltip, ChampionData, ItemTooltip, RuneData, SpellData, StatTooltip } from '#components'
 
-const { id, name, class: className, icon, label, size, tag, text } = defineProps<{
+const { id, name, class: className, icon, label, size, tag, text, value } = defineProps<{
   id?: string
   label: string
   icon?: string
-  name?: string
+  value?: string | string[]
+  name?: string | string[]
   tag?: string
-  text?: string
+  text?: string | string[]
   size?: 'default' | 'md' | 'lg'
   class?: HTMLAttributes['class']
 }>()
@@ -19,7 +20,8 @@ const labelIndex = {
   champion: ChampionData,
   item: ItemTooltip,
   rune: RuneData,
-  spell: SpellData
+  spell: SpellData,
+  stat: StatTooltip
 }
 
 function itemName(label: string, id: string) {
@@ -56,7 +58,10 @@ function iconSource(type: string, id: string) {
     <Suspense v-if="size === 'lg' && label">
       <component
         :is="labelIndex[label]"
-        :id="label === 'ability' ? id : parseInt(id)" />
+        :id="label === 'ability' ? id : parseFloat(id)"
+        :name
+        :value
+        :text />
       <template #fallback>
         <Spinner />
       </template>
@@ -77,7 +82,7 @@ function iconSource(type: string, id: string) {
       <!-- ICON -->
       <Icon
         v-if="icon"
-        :name="icon"
+        :name="typeof icon === 'string' ? icon : icon[0]"
         class="" />
       <div
         :class="cn('flex flex-nowrap **:text-start',

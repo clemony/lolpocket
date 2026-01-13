@@ -6,17 +6,19 @@ export function getSplash(
   const key = ckey(keyOrId)
   const champ = formatUrlChampKey(key)
   const skin = s || skinIndex[key][0]
+  function id() {
+    const a = skin.id.replace(/(\d+)\..*/, "$1")
+    return a.length === 1 && key !== "Hwei" ? `0${a}` : a
+  }
   const folder = computed(() => {
-    function id() {
-      const a = skin.id.replace(/(\d+)\..*/, "$1")
-      return a.length === 1 && key !== "Hwei" ? `0${a}` : a
-    }
     return skin.name === "Original" && key !== "Hwei" ? "base" : `skin${id()}`
   })
 
   const partialUrl = skin.key.replace("<type>", type)
 
-  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
+  return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${skin.id}.jpg`
+
+  //`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
 }
 
 import { bgArt, skinIndex as skins } from "~~/shared"

@@ -1,0 +1,18 @@
+{
+  "loader_for_redirecting_bad_requests": {
+    "prefix": "loader_for_redirecting_bad_requests",
+    "body": [
+      "export async function loader() {  return json({ error: \"GET not allowed\" }, { status: 405 })}"
+    ],
+    "description": "Custom snippet from loader-for-redirecting-bad-requiests.snippet.tsx",
+    "scope": "typescript,typescriptreact"
+  },
+  "action_for_redirecting_bad_requests": {
+    "prefix": "action_for_redirecting_bad_requests",
+    "body": [
+      "export async function action() {  return json({ error: \"POST not allowed\" }, { status: 405 })}"
+    ],
+    "description": "Custom snippet from action-for-redirecting-bad-requests.snippet.tsx",
+    "scope": "typescript,typescriptreact"
+  }
+}

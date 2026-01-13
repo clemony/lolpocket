@@ -133,11 +133,11 @@ export const mentionSuggestions = [
         ...ix().runes,
         ...Object.values(spellbook),
       ]
-      const { results } = useSimpleSearch(
+      const search = useSearch(
         arr,
         computed(() => query)
       )
-      return results.value.slice(0, 15)
+      return search.value.slice(0, 15)
     },
     render: renderSuggestion(MentionLeagueFilter),
   },
