@@ -37,7 +37,7 @@ watchEffect(async () => {
           <Img
             v-if="rune"
             :key="rune.name"
-            loading-style="spinner"
+            loading-type="spinner"
             :src="`/img/runes/${rune.id}.webp`"
             :alt="`${rune.name} Image`"
             :class="
@@ -53,7 +53,7 @@ watchEffect(async () => {
           class="absolute bottom-0 left-0 size-3.5 **:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-md group-hover/s:drop-shadow-g group-hover/s:delay-400" />
       </button>
 
-      <div class="flex h-full w-full flex-col justify-center gap-0.5">
+      <div class="flex size-full flex-col justify-center gap-0.5">
         <div class="flex items-center justify-between">
           <h4 class="grow text-4 leading-none font-bold dst">
             {{ rune.name }}

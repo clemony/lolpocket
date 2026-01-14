@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Arcane Sweeper",
   "id": 3348,
@@ -14,7 +14,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nUNIQUE Active - Hunter's Sight: An arcane mist grants vision in the target area for 5 seconds, revealing enemy champions and granting True Sight of traps in the area for 3 seconds (30 second cooldown).",
+  "description": "UNIQUE Active - Hunter's Sight: An arcane mist grants vision in the target area for 5 seconds, revealing enemy champions and granting True Sight of traps in the area for 3 seconds (30 second cooldown).",
   "maps": [
     30
   ],

@@ -4,13 +4,6 @@ const { puuid, match: m } = defineProps<{
   puuid: string
 }>()
 
-const queue = computed(() => {
-  const foundQueue = queueIndex.find(q => q.queueId === m.queueId)
-  if (!foundQueue)
-    return null
-  return foundQueue
-})
-
 const playerRank = computed(() => {
   const sort = [...m.participants]
     .map(p => ({
@@ -34,7 +27,6 @@ const match = computed<MatchDataCurrentPlayer>(() => {
     ace: playerRank.value.ace,
     mvp: playerRank.value.mvp,
     player,
-    queue: queue.value,
     ranking: playerRank.value.ranking,
   }
 })
@@ -47,10 +39,11 @@ const isOpen = ref(false)
     <Collapsible
       v-model:open="isOpen"
       :class="cn('group/collapse collapse-class relative',
-                 match.player.win ? 'from-inspiration/80 before:border-inspiration ' : 'from-domination/80 before:border-domination')">
+                 match.player?.win === 'remake' ? 'from-b3 before:border-b3'
+                 : match.player?.win === true ? 'from-inspiration/80 before:border-inspiration ' : 'from-domination/80 before:border-domination')">
       <CollapsibleTrigger
         ref="container"
-        :for="match.matchId"
+        :for="match?.matchId"
         class="trigger-style">
         <MatchInfo :match />
         <PlayerMatchCardInfo :match />

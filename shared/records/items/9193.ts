@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9193,
   "name": "Iceblast Armor",
-  "description": "\n\nBlocks damage freezing enemies. Damage scales with Armor and Max Health.\n\nEvolve: Armor\n\nDamage, Ability Haste, Area Size, Duration, Armor",
+  "description": "Blocks damage freezing enemies. Damage scales with Armor and Max Health.\n\nEvolve: Armor\n\nDamage, Ability Haste, Area Size, Duration, Armor",
   "maps": [
     33
   ],

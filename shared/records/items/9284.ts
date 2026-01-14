@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9284,
   "name": "Rapid Rabbit Raindown",
-  "description": "\n\nFires orbital bombardments at random enemies, ending with a large strike.\n\nDamage, Ability Haste, Area Size, Crit Chance",
+  "description": "Fires orbital bombardments at random enemies, ending with a large strike.\n\nDamage, Ability Haste, Area Size, Crit Chance",
   "maps": [
     33
   ],

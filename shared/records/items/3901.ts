@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
   "id": 3901,

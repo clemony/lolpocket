@@ -63,6 +63,10 @@ export function formatHMS(ms) {
   }${seconds.toString().padStart(2, "0")}`
 }
 
+export function msToMin(ms: number) {
+  return Math.floor((ms / 60) % 60)
+}
+
 export function secondsToTime(ms) {
   const hours = Math.floor((ms / 3600) % 24)
 

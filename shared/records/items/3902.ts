@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
   "id": 3902,
@@ -15,7 +15,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nCannon Barrage additionally fires a mega-cannonball at the center of the Barrage, dealing bonus true damage and Slowing.",
+  "description": "Cannon Barrage additionally fires a mega-cannonball at the center of the Barrage, dealing bonus true damage and Slowing.",
   "maps": [
     11,
     12,

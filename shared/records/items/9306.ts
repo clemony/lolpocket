@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9306,
   "name": "Winged Dagger",
-  "description": "\n\nXayah throws out a dagger infront of her that pierces through enemies, dealing less damage to subsequent enemies and leaves a Dagger in the ground.\n\nEvolve:  Pickup Radius\n\nDamage, Ability Haste, Crit Chance, Projectile Count, Duration",
+  "description": "Xayah throws out a dagger infront of her that pierces through enemies, dealing less damage to subsequent enemies and leaves a Dagger in the ground.\n\nEvolve:  Pickup Radius\n\nDamage, Ability Haste, Crit Chance, Projectile Count, Duration",
   "maps": [
     33
   ],

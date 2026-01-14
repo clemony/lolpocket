@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 228009,
   "name": "Multitool",
-  "description": "\n\nMolds into another item each Shopping Phase.",
+  "description": "Molds into another item each Shopping Phase.",
   "maps": [
     30
   ],

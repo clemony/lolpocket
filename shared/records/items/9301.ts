@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9301,
   "name": "Shield Slam",
-  "description": "\n\nLeona slams her shield, dealing damage in a cone that scales with her armor.\n\nEvolve: Armor\n\nDamage, Ability Haste, Area Size, Crit Chance, Armor",
+  "description": "Leona slams her shield, dealing damage in a cone that scales with her armor.\n\nEvolve: Armor\n\nDamage, Ability Haste, Area Size, Crit Chance, Armor",
   "maps": [
     33
   ],

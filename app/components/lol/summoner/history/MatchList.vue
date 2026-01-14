@@ -12,12 +12,19 @@ const { filteredMatches, loading, loadingOlder, loadOlder, matches, summoner }
   = useSummonerInject()
 const scrollRef = useState<HTMLElement>('scrollRef')
 const hasMatches = computed(() => filteredMatches?.value?.length > 0)
+
+watch(
+  () => filteredMatches.value,
+  (v) => {
+    console.log('💠 - watch - newVal:', Object.values(filteredMatches.value))
+  }
+)
 </script>
 
 <template>
-  <motion.div
-    layout="preserve-aspect"
-    :class="cn('flex w-full max-w-260 min-w-220 grow flex-col items-center justify-self-end overflow-visible px-1 pt-2', className)">
+  <TransitionSlide
+    group
+    :class="cn('@container flex w-full max-w-260 min-w-220 grow flex-col items-center justify-self-end overflow-visible px-1 pt-2', className)">
     <!-- loading skeleton -->
     <div
       v-if="loading "
@@ -41,7 +48,7 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
       ref="virtuaRef"
       v-slot="{ item }"
       :scroll-ref="scrollRef"
-      :data="filteredMatches"
+      :data="toValue(filteredMatches)"
       :item-size="118"
       :start-margin="220"
       :shift="loadingOlder"
@@ -76,5 +83,5 @@ const hasMatches = computed(() => filteredMatches?.value?.length > 0)
         load older matches
       </Button>
     </div>
-  </motion.div>
+  </TransitionSlide>
 </template>

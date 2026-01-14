@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 1201,
   "name": "Mid Lane Quest",
-  "description": "\n\nTakedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!\n\nRewards\n• Upgrade boots to tier 3\n• Enhanced Recall",
+  "description": "Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in mid lane!\n\nRewards\n• Upgrade boots to tier 3\n• Enhanced Recall",
   "gold": {
     "base": 0,
     "purchasable": false,

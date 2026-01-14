@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9308,
   "name": "Bunny Hop",
-  "description": "\n\nRiven passively gains Move Speed and gains charge as she moves. At max charge she jumps forward, dealing damage in an area. Every second cast knocks up.\n\nEvolve:  Movement Speed\n\nDamage, Area Size, Crit Chance, Movement Speed ",
+  "description": "Riven passively gains Move Speed and gains charge as she moves. At max charge she jumps forward, dealing damage in an area. Every second cast knocks up.\n\nEvolve:  Movement Speed\n\nDamage, Area Size, Crit Chance, Movement Speed ",
   "maps": [
     33
   ],

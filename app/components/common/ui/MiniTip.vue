@@ -73,7 +73,7 @@ function iconSource(type: string, id: string) {
       <Img
         v-if="id && label"
         :src="iconSource(label, id)"
-        loading-style="spinner"
+        loading-type="spinner"
         :size="size === 'md' ? 'c-8' : 'c-5'"
         :alt="`${name || itemName(label, id)} Image`"
         :class="cn('origin-left scale-110 overflow-hidden rounded-full shadow-sm drop-shadow-sm', { 'scale-100 object-contain': label === 'path' })">

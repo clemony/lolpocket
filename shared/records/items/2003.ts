@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Health Potion",
   "id": 2003,
@@ -11,7 +11,7 @@
     "red"
   ],
   "stats": {},
-  "description": "\n\nConsume\nRestores 120 Health over 15 seconds.",
+  "description": "Consume\nRestores 120 Health over 15 seconds.",
   "maps": [
     11,
     12,

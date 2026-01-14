@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Dragonheart",
   "id": 447106,
@@ -15,7 +15,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nInner Flame\nIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 4% per Dragon Soul you possess.\n\nEvery 2 rounds, gain a Dragon Soul.\n\nIf you already have every elemental soul and would gain another, an ancient power awakens within...\n\nWhen purchased, if it is past round 5, immediately gain 1 soul, plus 1 for every 2 rounds beyond round 5.",
+  "description": "Inner Flame\nIncreases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 4% per Dragon Soul you possess.\n\nEvery 2 rounds, gain a Dragon Soul.\n\nIf you already have every elemental soul and would gain another, an ancient power awakens within...\n\nWhen purchased, if it is past round 5, immediately gain 1 soul, plus 1 for every 2 rounds beyond round 5.",
   "maps": [
     30
   ],

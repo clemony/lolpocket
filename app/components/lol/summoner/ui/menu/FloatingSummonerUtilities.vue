@@ -69,7 +69,7 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
                   <div class="leading-4">
                     <Label
                       as="legend"
-                      class="text-5font-semibold mb-2">
+                      class="mb-2 text-5 font-semibold">
                       Summoner Splash
                     </Label>
 

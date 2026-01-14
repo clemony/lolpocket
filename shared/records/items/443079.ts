@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Turbo Chemtank",
   "id": 443079,
@@ -19,7 +19,7 @@
   "stats": {
     "health": 600
   },
-  "description": "600 Health\n80 Adaptive Force\n\n\n\nACTIVE (0s)\nSupercharged\nRemove all crowd control debuffs (excluding Airborne) and become Unstoppable for 3 seconds.",
+  "description": "600 Health\n80 Adaptive Force\n\nACTIVE (0s)\nSupercharged\nRemove all crowd control debuffs (excluding Airborne) and become Unstoppable for 3 seconds.",
   "maps": [
     30
   ],

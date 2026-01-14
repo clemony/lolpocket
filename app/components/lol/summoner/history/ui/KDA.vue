@@ -9,7 +9,7 @@ const { class: className, stats } = defineProps<{
   <span :class="cn('inline align-middle text-2 leading-0 font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight', className)">
     {{ stats.kills }}
     /
-    <span class="text-shade-domination/30">
+    <span class="light:text-shade-domination/30 dark:text-tint-domination/20 dark:saturate-150">
       {{ stats.deaths }}
     </span>
     /

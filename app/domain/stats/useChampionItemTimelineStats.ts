@@ -42,7 +42,7 @@ export const useChampionItemTimelineStats = (
     for (const m of matchData.value) {
       if (!m.player || !m.timeline) continue
       const win = m.player.win
-      if (win == null) continue
+      if (win === null || win === "remake") continue
 
       const finalItems = getFinalItems(m.player.items)
       const supportItem = finalItems.find((id) => SUPPORT_LEGENDARIES.has(id))

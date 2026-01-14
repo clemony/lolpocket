@@ -41,14 +41,14 @@ export const useChampionSpellStats = (source: Ref<MatchPlayerData[]>) =>
     const single: Record<number, StatDetail> = {}
     const pairs: Record<string, StatDetail> = {}
 
-    const totalMatches = source.value.length
+    const totalMatches = source.value?.length
     if (!totalMatches) {
       return { single: [], pairs: {}, best: {} }
     }
 
     for (const match of source.value) {
       const p = match.player
-      if (!p) continue
+      if (!p || p.win === "remake") continue
 
       const [s1, s2] = Object.values(p.spells)
 

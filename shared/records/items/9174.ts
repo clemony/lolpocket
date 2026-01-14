@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9174,
   "name": "Statikk Sword",
-  "description": "\n\nFires lightning that bounces between enemies with the highest health.\n\nEvolve: Max Health\n\nDamage, Ability Haste, Area Size, Crit Chance, Duration ",
+  "description": "Fires lightning that bounces between enemies with the highest health.\n\nEvolve: Max Health\n\nDamage, Ability Haste, Area Size, Crit Chance, Duration ",
   "maps": [
     33
   ],

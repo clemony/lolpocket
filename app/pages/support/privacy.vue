@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { privacyPolicy } from '~~/shared/data/policies/privacy-policy'
+import { privacyPolicy } from '~/domain/lp/policies/privacy-policy'
 
 definePageMeta({
   title: 'Privacy Policy',
@@ -41,7 +41,7 @@ definePageMeta({
             :key="b"
             class="grid auto-rows-max gap-4">
             <span
-              class="align-middle text-3 leading-7"
+              class="align-middle text-3/7"
               v-html="section.title" />
             <ol
               class="

@@ -2,7 +2,7 @@ export const useAggregateSingleChampion = (
   matchData: ComputedRef<MatchPlayerData[]>
 ) =>
   computed<AggregatedStats | null>(() => {
-    if (!matchData.value.length) return null
+    if (!matchData.value?.length) return null
 
     const acc: AggregatedStats = {
       championId: matchData.value[0].player.championId,
@@ -31,7 +31,7 @@ export const useAggregateSingleChampion = (
       const roleStat = getRoleStat(acc.role.stats, roleKey)
 
       roleStat.games++
-      if (row.win) roleStat.win++
+      if (row.win && row.win !== "remake") roleStat.win++
 
       applyParticipantStats(acc, row)
       bumpFromPlayerStats(acc, row)

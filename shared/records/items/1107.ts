@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 1107,
   "name": "Scorchclaw Pup",
-  "description": "\n\nJungle Companions\nSummon a Scorchclaw that assists you against monsters.\n\nScorchclaw's Slash\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it periodically imbues your next Attack or Ability to burn enemies and Slow them. Killing large monsters readies this immediately.",
+  "description": "Jungle Companions\nSummon a Scorchclaw that assists you against monsters.\n\nScorchclaw's Slash\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it periodically imbues your next Attack or Ability to burn enemies and Slow them. Killing large monsters readies this immediately.",
   "maps": [
     11
   ],

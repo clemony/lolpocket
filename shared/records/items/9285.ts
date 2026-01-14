@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9285,
   "name": "Neverending Mobstomper",
-  "description": "\n\nFires explosives that bounce endlessly between enemies as long as it can find a target. \n\nDamage, Ability Haste, Area Size",
+  "description": "Fires explosives that bounce endlessly between enemies as long as it can find a target. \n\nDamage, Ability Haste, Area Size",
   "maps": [
     33
   ],

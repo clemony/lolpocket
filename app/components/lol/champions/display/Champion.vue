@@ -61,6 +61,7 @@ const x = computed(() => (left.includes(k) ? '70%' : '50%'))
   <Img
     :src="src || getSplash(k ?? id, type)"
     :ratio
+
     :class="
       cn('overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
          className,

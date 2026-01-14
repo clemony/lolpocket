@@ -4,8 +4,6 @@ const { match, player } = defineProps<{
   match: MatchDataCurrentPlayer
 }>()
 
-const isSR = computed (() => queueIndex.filter(q => q.map.id === 11).map(q => q.queueId).includes(match.queueId))
-
 const bars = computed (() => {
   return [
     {
@@ -37,58 +35,63 @@ const bars = computed (() => {
   <Card
     v-if="player"
     :class="cn(
-      'card-class relative grid w-full cursor-pointer grid-cols-[54px_1fr_50px] grid-rows-[repeat(3,13px)_auto] gap-x-3 gap-y-0.75 overflow-hidden border-b3/70 bg-linear-to-r bg-cover bg-clip-padding px-3.5 py-3.5 **:select-none',
-      player.teamId === 100 ? ' to-30% to-transparent from-inspiration/60 before:border-inspiration ' : 'from-70% to-domination/50 from-transparent before:border-domination')">
+      'relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none dark:border-b3/70 dark:bg-b2/60 light:border-b3/60 light:bg-b1/70! light:shadow-none! light:drop-shadow-none!')">
     <!-- champion -->
 
-    <div class="row-span-2 flex items-center">
+    <div class="flex w-18 items-center">
       <ChampionIcon
         :id="player?.championId"
         :data-id="player?.championId"
         data-tip="champion"
         alt="champion-icon"
-        class="z-0 mt-2 size-12 self-center rounded-full transition-all duration-300 hover:scale-105" />
+        class="z-0 size-10 rounded-full transition-all duration-300 hover:scale-105" />
       <ScoreboardCardRunes :player />
     </div>
     <!-- name and tag -->
     <div
-      class="inline-flex grow items-center gap-1 text-nowrap whitespace-nowrap">
-      <h4
-        :title="player.name"
-        :class="cn('', { 'opacity-0': player.name.match(/Here/g) })"
-        class="truncate text-2 font-semibold text-nowrap">
-        {{ player.name }}
-      </h4>
+      class="flex h-fit w-full max-w-26 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap @min-700:max-w-32">
+      <div
+        data-tip="player"
+        :data-name="player.name"
+        :data-tag="player.tag"
+        :data-icon="player.icon"
+        class="inline-flex items-center gap-1 leading-4">
+        <h4
+          class="truncate text-2 font-semibold text-nowrap">
+          {{ player.name }}
+        </h4>
 
-      <span class="inline-flex grow items-center gap-0! text-0 font-medium opacity-50">
-        <Icon
-          name="hash"
-          class="inline size-3.25" />
-        {{ player.tag }}
-      </span>
+        <span class="hidden grow items-center gap-0! text-0 font-medium opacity-50 @min-700:inline-flex">
+          <Icon
+            name="hash"
+            class="inline size-3.25" />
+          {{ player.tag }}
+        </span>
+      </div>
 
       <!-- badge - rank / kp -->
-      <div class="flex grow items-center justify-end gap-2">
-        <span class="grow text-end! text-1 opacity-50">
-          {{ roundDecimal(player.stats.mvpScore) }}
-        </span>
+      <div class="flex items-center gap-2 leading-4">
         <MvpBadge
           :match
           :player />
+        <span class="text-1 opacity-50">
+          {{ roundDecimal(player.stats.mvpScore) }}
+        </span>
       </div>
     </div>
 
     <!-- kda -->
-    <KDA
-      data-tip="stat"
-      data-size="lg"
-      :data-stats="[player.stats.kda, roundDecimalToPercent(player.stats.kp, 1)]"
-      :data-name="['KDA', 'KP']"
-      :stats="player.stats"
-      class="col-start-3 self-center justify-self-end" />
+    <div class="flex h-fit w-full max-w-32 flex-col items-center gap-0.5">
+      <KDA
+        :stats="player.stats"
+        class="leading-4" />
 
+      <ScoreboardStatPanel
+        :player
+        class="" />
+    </div>
     <!-- PROGRESS STAT ROW -->
-    <div class="col-start-2 row-span-2 row-start-2 flex w-full grow items-center gap-4 pb-1">
+    <div class="grid w-full max-w-52 grid-cols-3 items-center gap-3 overflow-hidden">
       <TeammateStatProgressBars
         v-for="s, i in bars"
         :key="i"
@@ -99,56 +102,54 @@ const bars = computed (() => {
         :tip="s.tip" />
     </div>
 
-    <div class="col-start-1 row-span-2 row-start-3 grid size-full auto-rows-fr items-end pt-3 pl-px">
+    <ScoreboardCardItems
+      :player
+      class=""
+      :is-s-r="match?.mapId === 11" />
+
+    <div class="flex h-fit w-5 flex-col @min-700:w-16">
       <!-- gold -->
 
       <label
-        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}`"
-        class="s-badge">
+        :data-tip="`Total CS: ${(player.farming.minionsKilled + player.farming.neutralMinionsKilled).toLocaleString()}
+        Minions: ${player.farming.minionsKilled}
+        Neutral monsters: ${player.farming.neutralMinionsKilled}
+        CS/min: ${roundDecimal(((player.farming.minionsKilled + player.farming.neutralMinionsKilled) / msToMin(match.gameDuration)))}`"
+        class="text-badge-xs">
         <Icons
-          base="btn"
-          size="c"
-          variant="neutral"
-          wrapper-class="size-3.75! border-0"
+          size="c-3.5"
           name="lol:minion"
-          class="size-3" />
-        <span>{{ player.farming.minionsKilled + player.farming.neutralMinionsKilled }}</span>
+          class="size-3.5 opacity-85" />
+
+        <span class="hidden @min-700:flex">{{ player.farming.minionsKilled + player.farming.neutralMinionsKilled }}</span>
       </label>
 
       <label
-        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}`"
-        class="s-badge translate-y-0.5">
+        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}
+        Gold/min: ${player.farming.goldPerMin}`"
+        class="text-badge-xs align-baseline">
         <Icons
-          size="c"
-          variant="neutral"
-          wrapper-class="size-3.75! border-0"
+          size="c-3.5"
           name="lol:gold"
-          class="size-3 **:text-precision" />
-        <span>{{ roundDecimal(player.farming.goldEarned / 1000) }}k</span>
+          class="inline size-3.25 translate-y-px opacity-75" />
+
+        <span class="hidden @min-700:flex">{{ roundDecimal(player.farming.goldEarned / 1000) }}k</span>
       </label>
     </div>
-    <ScoreboardCardItems
-      :player
-      class="col-span-2 col-start-2 row-start-4"
-      :is-s-r />
 
-    <ScoreboardStatPanel
-      :player
-      class="col-start-3 row-span-2 row-start-2" />
+    <div class="flex h-max flex-col items-center -space-y-2">
+      <div
+        v-for="spell, i in player?.spells"
+        :key="spell"
+        class="round-wrapper size-6"
+        :style="{
+          zIndex: i,
+        }">
+        <Spell
+          :id="spell"
+          size="c-5"
+          :class="cn('img-active z-1', { 'no-img': !spell })" />
+      </div>
+    </div>
   </Card>
 </template>
-
-<style scoped>
-@reference '@css/tailwind.css';
-
-.card-class::before {
-  @apply pointer-events-none absolute left-0 z-3 h-full w-1/2 rounded-xl border mask-r-from-0 opacity-40 shadow-sm shadow-black brightness-94;
-}
-
-.trigger-style {
-  @apply pointer-events-auto relative bg-clip-padding  z-2 flex h-36 w-full cursor-pointer items-center justify-between gap-6 overflow-hidden pr-4 pl-5 text-2 data-[state=open]:rounded-b-none;
-}
-.s-badge {
-  @apply text-0! flex gap-2 items-center leading-none font-bold;
-}
-</style>

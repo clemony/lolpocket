@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { themes } from '~/domain/lp/ui/theme'
+
 const summoner = computed (() => as().account)
 
 const open = shallowRef<boolean>(false)
@@ -33,7 +35,7 @@ const settings = computed(() => {
 
     <HoverCardContent class="flex h-fit w-64! flex-col overflow-hidden">
       <HoverCardArrow />
-      <div class="flex items-center gap-3 px-2 pt-2">
+      <div class="flex items-center gap-3 p-2">
         <SummonerIcon class="size-11 rounded-lg" />
         <div class="flex flex-col">
           <SummonerName
@@ -74,6 +76,27 @@ const settings = computed(() => {
           <icon name="gear" />
           Settings
         </PopoverItem>
+
+        <div>
+          <div
+            v-for="theme, i in themes"
+            :key="i"
+            :data-theme="theme.name">
+            <Label
+              base="btn"
+              size="c-9"
+              class="relative p-0!"
+              variant="base">
+              <input
+                v-model="as().settings.theme"
+                type=""
+                class="peer hidden" />
+              <Icon
+                name="theme.icon"
+                class="absolute text-bc" />
+            </Label>
+          </div>
+        </div>
       </div>
 
       <DropdownMenuSeparator />

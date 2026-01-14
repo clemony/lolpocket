@@ -53,7 +53,7 @@ const results = computed (() => {
       <h1 class="flex size-full items-center gap-3 pt-0.5 pl-0.5 leading-none">
         <button
           data-tip="Back to all champions"
-          class="grid size-8 place-items-center overflow-hidden rounded-full shadow-sm dss after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
+          class="grid size-8 place-items-center overflow-hidden rounded-full shadow-sm dss after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
           @click="navigateTo({ name: 'summoner-region-slug-champions' })">
           <ChampionIcon
             :id="mastery?.championId"

@@ -3,13 +3,13 @@ export const useChampionStats = (
   puuid: string
 ) =>
   computed<AggregatedStats[]>(() => {
-    if (!filteredMatches.value.length) return []
+    if (!filteredMatches.value?.length) return []
 
     const map = new Map<number, AggregatedStats>()
 
     for (const match of filteredMatches.value) {
       const row = match.participants.find((p) => p.puuid === puuid)
-      if (!row) continue
+      if (!row || row.win === "remake") continue
 
       const id = row.championId
 

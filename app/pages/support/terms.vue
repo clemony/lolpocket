@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { riotDisclaimer } from '#shared/data/riot-disclaimer'
+import { riotDisclaimer } from '~/domain/riot/riot-disclaimer'
 
 definePageMeta({
   name: 'terms',

@@ -8,46 +8,38 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     :class="
-      cn('row-start-1 w-full overflow-hidden rounded-xl border border-bc/10 bg-linear-to-r px-3 shadow-warm-soft inset-shadow-xxs',
+      cn('mb-1.25 w-full overflow-hidden rounded-xl border border-bc/10 border-r-b3! bg-linear-to-r to-transparent px-3 shadow-warm-soft inset-shadow-xxs',
          {
-           'from-inspiration/60 to-transparent  border-r-b3!': team.teamId === 100,
-           'from-transparent to-domination/60 border-l-b3!': team.teamId === 200,
+           'from-inspiration/60 ': team.teamId === 100,
+           'from-domination/60 ': team.teamId === 200,
          },
          className) ">
-    <div class="inline-flex h-8 w-full items-center justify-between gap-2">
+    <div class="inline-flex h-8 w-full items-center justify-between gap-8 align-baseline">
       <!-- WIN / LOSS -->
       <div
-        :class="cn('flex items-center gap-4',
-                   {
-                     'order-first': team.teamId === 100,
-                     'order-last': team.teamId === 200,
-                   })">
-        <h3
-          :class="cn('text-5 leading-none font-bold text-white/86 dst',
-                     {
-                       'order-first': team.teamId === 100,
-                       'order-last': team.teamId === 200,
-                     })">
+        :class="cn('flex items-center gap-4')">
+        <h3 class="text-5 leading-none font-bold text-white/86 dst">
           {{ team.win ? "WIN" : "LOSS" }}
         </h3>
 
         <!-- TEAM COLOR -->
         <span
           :class=" cn('flex justify-start leading-4 font-bold tracking-wide! brightness-70', {
-            'text-inspiration order-last': team.teamId === 100,
-            'text-domination order-first': team.teamId === 200,
+            'light:text-inspiration dark:text-tint-inspiration/50': team.teamId === 100,
+            'light:text-domination dark:text-tint-domination/50 ': team.teamId === 200,
           }) ">
           {{ team.teamId === 100 ? "Blue" : "Red" }}
         </span>
       </div>
 
+      <div class="flex w-full items-center justify-between px-2">
+        <TeamObjectives :team="team" />
+      </div>
+
       <!-- GOLD -->
       <span
         v-if="team.gold"
-        :class=" cn('inline-flex items-center gap-1 text-2 font-semibold', {
-          'order-2': team.teamId === 100,
-          'order-1': team.teamId === 200,
-        }) ">
+        :class=" cn('inline-flex items-center gap-1 align-baseline text-2 leading-none font-semibold') ">
         <Icon
           name="lol:gold"
           :class=" cn('inline size-4 dst', {
@@ -59,7 +51,7 @@ const { class: className, team } = defineProps<{
 
       <!-- KDA -->
       <KDA
-        :class="cn('text-3 opacity-90', team.teamId === 100 ? 'order-last pr-1' : 'pl-0.5 order-first')"
+        class="align-baseline text-3 leading-none opacity-90"
         :stats="team" />
     </div>
   </div>

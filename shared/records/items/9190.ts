@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9190,
   "name": "Echoing Batblades",
-  "description": "\n\nFires piercing projectiles that bounce off walls.\n\nEvolve: Projectile Count\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "Fires piercing projectiles that bounce off walls.\n\nEvolve: Projectile Count\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
   "maps": [
     33
   ],

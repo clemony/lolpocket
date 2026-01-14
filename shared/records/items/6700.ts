@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 6700,
   "name": "Shield of the Rakkor",
-  "description": "50 Attack Damage\n30 Armor\n5% Move Speed\n\n\nAegis: Every 8(0s),  block the first Attack that would hit you. While the shield is broken, your first attack against a champion refunds 50% of its current Cooldown and grants  20% Movement Speed for a short duration.\n\n\n\n",
+  "description": "50 Attack Damage\n30 Armor\n5% Move Speed\n\n\nAegis: Every 8(0s),  block the first Attack that would hit you. While the shield is broken, your first attack against a champion refunds 50% of its current Cooldown and grants  20% Movement Speed for a short duration.\n\n",
   "gold": {
     "base": 800,
     "purchasable": false,

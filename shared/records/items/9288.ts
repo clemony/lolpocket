@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9288,
   "name": "Jinx's Tri-Namite",
-  "description": "\n\nDrops timed explosive projectiles in a ring that explode and release additional explosions for massive area damage.\n\nDamage, Ability Haste, Area Size, Projectile Count",
+  "description": "Drops timed explosive projectiles in a ring that explode and release additional explosions for massive area damage.\n\nDamage, Ability Haste, Area Size, Projectile Count",
   "maps": [
     33
   ],

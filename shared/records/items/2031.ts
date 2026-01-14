@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Refillable Potion",
   "id": 2031,
@@ -25,7 +25,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nActive (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
+  "description": "Active (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
   "maps": [
     11,
     12,

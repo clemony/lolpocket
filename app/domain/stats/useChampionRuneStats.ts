@@ -51,11 +51,11 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
       2: {},
     }
 
-    const totalMatches = source.value.length
+    const totalMatches = source.value?.length
 
     for (const match of source.value) {
       const p = match.player
-      if (!p) continue
+      if (!p || p.win === "remake") continue
 
       bumpStat(keystone, p.runes.keystone, p.win)
 
@@ -69,7 +69,8 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
 
       //  slot-aware shard aggregation
       p.runes.shards.forEach((shardId, slot) => {
-        bumpStat(shards[slot as ShardSlot], shardId, p.win)
+        if (p.win !== "remake")
+          bumpStat(shards[slot as ShardSlot], shardId, p.win)
       })
 
       const r = p.runes

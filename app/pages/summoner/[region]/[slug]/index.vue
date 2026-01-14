@@ -44,32 +44,48 @@ const wrapVar = {
       <Toggle
         v-model:model-value="open"
         on="inset"
-        class="fx-0 hover:bg-b2 hover:fx-1 on:bg-transparent!"
+        hover="inset"
+        size="sq-10"
+        class="bg-transparent! fx-0 on:bg-transparent! hover:on:fx-1"
         variant="ghost">
         <Icon
-          :name="open ? 'menu' : 'menu'"
-          class="**:stroke-[1.6]" />
+          name="ic:baseline-menu"
+          class="" />
       </Toggle>
 
+      <Popover>
+        <PopoverTrigger
+          variant="ghost"
+          on="inset"
+          hover="inset"
+          size="sq-10"
+          class="bg-transparent! fx-0 on:bg-transparent! hover:on:fx-1">
+          <Icon
+            name="ic:baseline-filter-list"
+            class="" />
+        </PopoverTrigger>
+      </Popover>
+
+      <span
+        :data-tip="filterEmpty() ? 'No filters applied' : 'Clear filters'">
+        <Button
+          size="sq-10"
+          hover="inset"
+          :disabled="filterEmpty()"
+          class="bg-transparent! duration-0! disabled:pointer-events-none"
+          :variant="filterEmpty() ? 'ghost' : 'neutral'"
+          @click="clearFilters()">
+          <Icon
+            name="ic:baseline-filter-list-off"
+            class="in-disabled:opacity-40" />
+        </Button>
+      </span>
       <UpdateSummoner
         variant="ghost"
+        hover="inset"
+        class="bg-transparent"
         placement="top"
         size="sq-10" />
-
-      <Button
-        data-placement="left"
-        data-theme="mini-tip neutral line"
-        :data-tip="filterEmpty() ? 'No filters applied' : 'Clear filters'"
-        size="sq-10"
-        hover="neutral"
-        :disabled="filterEmpty()"
-        class="duration-0! disabled:pointer-events-none"
-        :variant="filterEmpty() ? 'ghost' : 'neutral'"
-        @click="clearFilters()">
-        <Icon
-          name="lucide:filter-x"
-          class="" />
-      </Button>
 
       <Grow />
 
@@ -91,7 +107,7 @@ const wrapVar = {
       <MatchHistoryAside
         v-if="open" />
 
-      <MatchList :class="cn('', { '': !open })" />
+      <MatchList />
     </TransitionSlide>
   </div>
 </template>

@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 1200,
   "name": "Top Lane Quest",
-  "description": "\n\nTakedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in top lane!\n\nRewards\n• Teleport as a 3rd Summoner Spell\n• Flat bonus experience, more experience from all sources, and an increased level cap",
+  "description": "Takedown champions, minions, towers, plates, and epic monsters to complete your quest. Earn points much faster in top lane!\n\nRewards\n• Teleport as a 3rd Summoner Spell\n• Flat bonus experience, more experience from all sources, and an increased level cap",
   "gold": {
     "base": 0,
     "purchasable": false,

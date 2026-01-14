@@ -40,7 +40,7 @@ function createEmptySkillLevel() {
 export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
   const priority = <SkillPriorityStats>{}
   const byLevel: SkillLevelStats = {}
-  const totalMatches = matches.length
+  const totalMatches = matches?.length
 
   for (let level = 1; level <= MAX_LEVEL; level++) {
     byLevel[level] = createEmptySkillLevel()

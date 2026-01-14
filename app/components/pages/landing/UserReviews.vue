@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reviews } from '#shared/data'
+import { reviews } from '@domain'
 import { motion } from 'motion-v'
 import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 import { reviewVariants } from './variants'
@@ -30,7 +30,7 @@ watchOnce(api, (api) => {
 <template>
   <div
     class="
-      relative grid w-full items-center overflow-hidden bg-b1 px-30 pt-40 pb-40
+      relative grid w-full items-center overflow-hidden bg-b1 px-30 py-40
     ">
     <Carousel
       :opts="{
@@ -42,7 +42,7 @@ watchOnce(api, (api) => {
           v-for="(page, i) in reviews"
           :key="i"
           class="
-            grid h-full w-full grid-cols-2 grid-rows-2 place-items-center
+            grid size-full grid-cols-2 grid-rows-2 place-items-center
             gap-x-40 gap-y-60 justify-self-center p-30 **:[&_p]:leading-7
           ">
           <motion.div

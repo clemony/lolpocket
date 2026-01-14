@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Virtualizer, VList } from 'virtua/vue'
-import { heyGoodJob } from '~~/shared/data/good-job'
 import { toast, } from '~/composables/utils/useToast'
+import { heyGoodJob } from '~/domain/lp/ui/good-job'
 
 const sizes = [20, 40, 180, 77]
 
@@ -34,7 +34,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex h-full w-full flex-col items-center pt-8">
+  <div class="flex size-full flex-col items-center pt-8">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>

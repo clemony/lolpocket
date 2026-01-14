@@ -10,3 +10,5 @@ export const itemNameById = (id: number) =>
   itemIndex.find((i) => i.id === id)?.name
 
 export const itemColorByTier = (id: number) => itemRankColor?.[itemRank[id]]
+
+export const supportItemIds = [3869, 3870, 3871, 3876, 3877]

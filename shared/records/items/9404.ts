@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9404,
   "name": "Wandering Storms",
-  "description": "\n\nYasuo hones his energy, shooting fewer and larger tornadoes that curve through the air and leave damaging tempests at their end point.\n\nDamage, Abilty Haste, Crit Chance, Projectile Count, Area Size, Duration",
+  "description": "Yasuo hones his energy, shooting fewer and larger tornadoes that curve through the air and leave damaging tempests at their end point.\n\nDamage, Abilty Haste, Crit Chance, Projectile Count, Area Size, Duration",
   "maps": [
     33
   ],

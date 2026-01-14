@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Goredrinker",
   "id": 226630,
@@ -22,7 +22,7 @@
     "abilityHaste": 20,
     "omnivamp": 10
   },
-  "description": "55 Attack Damage\n400 Health\n20 Ability Haste\n10% Omnivamp\n\n\n\nActive - Thirsting Slash: Deal damage to nearby enemies. Restore Health for each champion hit.",
+  "description": "55 Attack Damage\n400 Health\n20 Ability Haste\n10% Omnivamp\n\nActive - Thirsting Slash: Deal damage to nearby enemies. Restore Health for each champion hit.",
   "maps": [
     30
   ],

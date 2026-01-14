@@ -14,7 +14,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
 <template>
   <div
-    class="z-auto size-full max-w-[1020px]">
+    class="z-auto size-full max-w-340">
     <!-- stats -->
 
     <div

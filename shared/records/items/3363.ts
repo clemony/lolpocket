@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Farsight Alteration",
   "id": 3363,
@@ -20,7 +20,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nActive (198 - 99s)\nReveals a distant area for 2 seconds and leaves a Ward that expires upon spotting an enemy champion.",
+  "description": "Active (198 - 99s)\nReveals a distant area for 2 seconds and leaves a Ward that expires upon spotting an enemy champion.",
   "maps": [
     11,
     12,

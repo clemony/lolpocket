@@ -76,75 +76,76 @@ export function transformMatchData(raw: any): MatchData {
 
       //
       offense: {
-        totalDamage: p.totalDamageDealtToChampions,
+        totalDamage: p.totalDamageDealtToChampions ?? 0,
         damagePercentage:
           Math.round(p.challenges?.teamDamagePercentage * 1000) / 10,
         sprees: p.challenges?.killingSprees ?? 0,
-        damagePerMin: p.damagePerMinute ?? 0,
+        damagePerMin: p.challenges.damagePerMinute ?? 0,
+        firstBloodAssist: p.challenges.firstBloodAssist ?? false,
+        firstBloodKill: p.challenges.firstBloodKill ?? false,
         multiKills: {
-          doubleKills: p.doubleKills,
-          tripleKills: p.tripleKills,
-          quadraKills: p.quadraKills,
-          pentaKills: p.pentaKills,
+          doubleKills: p.doubleKills ?? 0,
+          tripleKills: p.tripleKills ?? 0,
+          quadraKills: p.quadraKills ?? 0,
+          pentaKills: p.pentaKills ?? 0,
         },
       },
 
       //
       defense: {
-        totalDamageTaken: p.totalDamageTaken,
+        totalDamageTaken: p.totalDamageTaken ?? 0,
         damageTakenPercentage:
           Math.round(p.challenges?.damageTakenOnTeamPercentage * 1000) / 10,
-        damageSelfMitigated: p.damageSelfMitigated,
-        ccDuration: p.timeCCingOthers,
+        damageSelfMitigated: p.damageSelfMitigated ?? 0,
+        ccDuration: p.timeCCingOthers ?? 0,
       },
 
       //
       utility: {
         effectiveHealingAndShielding:
           Math.round(p.challenges?.effectiveHealAndShielding) ?? 0,
-        /*        healingAndShieldingPercentage:
-          Math.round(
-            (p.challenges?.effectiveHealAndShielding /
-              teamHealingAndShielding[p.teamId]) *
-              1000
-          ) / 10, */
-        totalAllyHealing: p.totalHealsOnTeammates,
-        totalAllyShielding: p.totalDamageShieldedOnTeammates,
+        totalAllyHealing: p.totalHealsOnTeammates ?? 0,
+        totalAllyShielding: p.totalDamageShieldedOnTeammates ?? 0,
         allySaves: p.challenges?.saveAllyFromDeath ?? 0,
       },
 
       //
       farming: {
-        goldEarned: p.goldEarned,
-        goldPerMin: p.goldPerMinute ?? 0,
-        minionsKilled: p.totalMinionsKilled,
+        goldEarned: p.goldEarned ?? 0,
+        goldPerMin: p.challenges.goldPerMinute ?? 0,
+        minionsKilled: p.totalMinionsKilled ?? 0,
         neutralMinionsKilled: p.neutralMinionsKilled,
-        turretsKilled: p.turretKills,
-        objectivesStolen: p.objectivesStolen,
+        turretsKilled: p.turretKills ?? 0,
+        objectivesStolen: p.objectivesStolen ?? 0,
+        firstTowerAssist: p.challenges.firstTowerAssist ?? 0,
+        firstTowerKill: p.challenges.firstTowerKill ?? 0,
       },
 
       //
       vision: {
-        visionScore: p.visionScore,
-        wardsKilled: p.wardsKilled,
-        wardsPlaced: p.wardsPlaced,
+        visionScore: p.visionScore ?? 0,
+        wardsKilled: p.wardsKilled ?? 0,
+        wardsPlaced: p.wardsPlaced ?? 0,
         controlWardsPlaced: p.challenges?.controlWardsPlaced ?? 0,
       },
 
       //
-      win: p.win ?? false,
+      win: raw.info.gameDuration < 147 ? "remake" : (p.win ?? false),
     })
   )
 
   //lane compare
   /*
+challenges.maxCsAdvantageOnLaneOpponent
   maxLevelLeadLaneOpponent
 moreEnemyJungleThanOpponent
-maxCsAdvantageOnLaneOpponent
-laningPhaseGoldExpAdvantage
 maxKillDeficit
-maxCsAdvantageOnLaneOpponent
-earlyLaningPhaseGoldExpAdvantage
+challenges.earlyLaningPhaseGoldExpAdvantage
+
+challenges.laningPhaseGoldExpAdvantage
+
+
+challenges.laneMinionsFirst10Minutes
 getTakedownsInAllLanesEarlyJungleAsLaner
   */
 

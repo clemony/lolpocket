@@ -8,34 +8,47 @@ const { class: className, isSR, player } = defineProps<{
 
 <template>
   <!-- items -->
-  <div :class="cn('flex justify-between gap-1', className)">
+  <div :class="cn('flex w-fit gap-1 px-2 @min-700:gap-4 @min-700:px-4', className)">
     <div
-      :class="cn('grid shrink-0 grid-cols-6! grid-rows-1! items-center gap-1! self-center')">
-      <Item
-        v-for="item in player.items.slots"
-        :id="item"
+      :class="cn('flex shrink-0 items-center -space-x-2 self-center')">
+      <div
+        v-for="item, i in player.items.slots"
         :key="item"
-        size="sq-7.5"
-        :class="cn('active-img', {
-          'no-img': !item })" />
+        class="grid size-9.5 place-items-center rounded-full bg-b1"
+        :style="{
+          zIndex: i,
+        }">
+        <Item
+          :id="item"
+          variant="inset"
+          size="c-7.5"
+          :class="cn('img-active dark:bg-b1! light:bg-tint-b2/40!', {
+            'no-img': !item })" />
+      </div>
     </div>
-    <div class="flex items-center gap-1">
-      <Item
-        :id="player.items.role ? player.items.role : isSR ? roleItems[player.role] : null"
-        size="c-7.5"
-        :class="cn('active-img', {
-          'no-img ': !player.items.role && !isSR,
-          'pointer-events-none brightness-115 contrast-102': !player.items.role,
-          'brightness-150': player.role === 'support' })" />
 
-      <div class="relative size-7">
+    <div class="flex w-full max-w-16 items-center -space-x-2">
+      <div class="z-0 grid size-9.5 shrink-0 place-items-center rounded-full bg-b1">
+        <Item
+          :id="player.items.role ? player.items.role : isSR ? roleItems[player.role] : null"
+
+          variant="inset"
+          size="c-7.5"
+          :class="cn('img-active dark:bg-b1! light:bg-tint-b2/40!', {
+            'no-img ': !player.items.role && !isSR,
+            'pointer-events-none brightness-115 contrast-102': !player.items.role,
+            'brightness-150': player.role === 'support' })" />
+      </div>
+      <div class="relative z-1 grid size-9.5 shrink-0 place-items-center rounded-full bg-b1">
         <Item
           :id="player.items.trinket"
-          size="c-7"
-          :class="cn('active-img', { 'no-img': !player.items.trinket })" />
+
+          variant="inset"
+          size="c-7.5"
+          :class="cn('img-active dark:bg-b1! light:bg-tint-b2/40!', { 'no-img': !player.items.trinket })" />
         <!-- vision -->
         <span
-          class="absolute -top-1 -right-1.5 badge origin-left badge-neutral bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm backdrop-blur *:rounded-full"
+          class="absolute -top-0.5 -right-0.5 badge origin-left badge-neutral bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent backdrop-blur-sm *:rounded-full"
           :data-tip="`Vision Score - ${player.vision.visionScore}
                 ${player.vision.wardsPlaced} wards placed
                 ${player.vision.controlWardsPlaced} control wards placed
@@ -44,24 +57,5 @@ const { class: className, isSR, player } = defineProps<{
         </span>
       </div>
     </div>
-
-    <div class="flex items-center gap-1">
-      <Spell
-        v-for="spell in player?.spells"
-        :id="spell"
-        :key="spell"
-        size="c-7"
-        :class="cn('active-img', { 'no-img': !spell })" />
-    </div>
   </div>
 </template>
-
-<style scoped>
-@reference '@css/tailwind.css';
-.active-img {
-  @apply bg-b3/60 ring-bc/60 hover:ring transition-all duration-300 hover:scale-105;
-}
-.no-img {
-  @apply pointer-events-none border border-b3;
-}
-</style>

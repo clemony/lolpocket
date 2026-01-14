@@ -6,27 +6,27 @@ const { class: className, player } = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('-mt-0.5 grid size-full auto-rows-fr pb-1', className)">
+  <div :class="cn('flex gap-2', className)">
     <Badge
       v-if="player.stats.kills + player.stats.assists / player.stats.deaths === Infinity"
       variant="base"
       size="4"
-      class="s-badge border-ad bg-tint-ad/10 px-1.5! font-semibold! text-white">
+      class="text-badge-xs dark:font-bld border-ad px-2! dark:bg-ad/70 dark:text-b1 light:bg-tint-ad/10 light:font-semibold! light:text-white">
       <Icons
         size="3.5"
         name="proicons:infinity"
-        class="mt-[0.04em] size-4.5 text-white dst **:stroke-[2.4]" />
+        class="mt-[0.04em] size-4.5 dst **:stroke-[2.2] dark:text-b1 light:text-white" />
       <span class="tracking-wide">kda</span>
     </Badge>
 
     <span
       v-else
-      class="s-badge opacity-60">
+      class="text-badge-xs opacity-60">
       {{ roundDecimal(player.stats.kda) }} <span>kda</span>
     </span>
 
-    <span class="s-badge opacity-60">
-
+    <span class="text-badge-xs opacity-60">
+      {{ roundDecimalToPercent(player.stats.kp, 1) }} kp
     </span>
   </div>
 </template>
@@ -34,7 +34,7 @@ const { class: className, player } = defineProps<{
 <style scoped>
 @reference '@css/tailwind.css';
 
-.s-badge {
-  @apply text-0! inline-flex gap-1 text-end  justify-self-end justify-end flex-nowrap whitespace-nowrap text-nowrap items-center leading-none tracking-tight font-bold;
+.text-badge-xs {
+  @apply text-0! inline-flex gap-1 text-end  justify-self-end justify-end flex-nowrap whitespace-nowrap text-nowrap items-center leading-4 tracking-tight font-bold;
 }
 </style>

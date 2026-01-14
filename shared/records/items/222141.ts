@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 222141,
   "name": "Cappa Juice",
-  "description": "\n\nHelps you get on a head.Active - Consume: This juice does nothing.\n",
+  "description": "Helps you get on a head.Active - Consume: This juice does nothing.\n",
   "maps": [
     30
   ],

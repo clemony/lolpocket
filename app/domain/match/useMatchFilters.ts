@@ -2,20 +2,14 @@ import equal from "fast-deep-equal/es6"
 import type { DateRange } from "reka-ui"
 import { computed, shallowRef, unref } from "vue"
 
-const GLOBAL_KEYS = new Set([
-  "participants.championName",
-  "participants.name",
-  "participants.tag",
-])
-
-const RESTRICTED_KEYS = new Set(["participants.role", "participants.items"])
-const SEARCH_KEYS = [
+const GLOBAL_KEYS = [
   ["participants", "championName"],
   ["participants", "name"],
   ["participants", "tag"],
-  ["participants", "role"],
-  ["participants", "items"],
 ]
+
+const RESTRICTED_KEYS = ["keywords"]
+
 const defaultFilter: MatchFilter = {
   ally: "",
   champion: "",
@@ -55,7 +49,7 @@ export function useMatchFilters(
     filter.value = { ...filter.value, date: { start: value, end: value } }
   }
 
-  const filteredByFilters = computed<MatchData[]>(() => {
+  const filtered = computed<MatchData[]>(() => {
     const id = unref(puuid)
     const arr = unref(matches) ?? []
     const f = filter.value
@@ -75,23 +69,85 @@ export function useMatchFilters(
     return arr.filter((m) => matchFilters(id, m, f))
   })
 
-  const limitedMatches = computed<MatchData[]>(() => {
-    const f = filter.value
-    const arr = filteredByFilters.value
+  const player = computed(() => {
+    const p = filtered.value.map((m) => {
+      return {
+        matchId: m.matchId,
+        mapId: m.mapId,
+        queueId: m.queueId,
+        ...m.participants.find((p) => p.puuid === toValue(puuid)),
+      }
+    })
+    return p.map((a) => {
+      const items = [
+        ...Object.values(a.items),
+        ...Object.values(a.items.slots),
+      ].flatMap((i) => itemNameById(i))
 
-    if (!f.number || f.number >= arr.length) return arr
+      const runes = [
+        a.runes.keystone,
+        ...Object.values(a.runes.primary.runes),
+        ...Object.values(a.runes.secondary.runes),
+      ].flatMap((i) => runeNameById(i))
 
-    return arr.slice(0, f.number)
+      const paths = [a.runes.primary.path, a.runes.secondary.path].map((i) =>
+        pathNameById(i)
+      )
+      const spells = a.spells.map((i) => spellNameById(i))
+
+      const outcome =
+        a.win === "remake" ? ["remake", "surrender", "redo"]
+        : a.win ? ["win", "victory"]
+        : ["loss", "lose", "defeat"]
+
+      const map = Object.values(mapIndex.find((i) => i.id === a.mapId)).filter(
+        (i) => typeof i === "string"
+      )
+
+      const queue = Object.values(queueIndex)
+
+      return {
+        matchId: a.matchId,
+        keywords: [
+          champNameById(a.championId),
+          a.role,
+          ...items,
+          ...runes,
+          ...paths,
+          ...spells,
+          ...outcome,
+          ...map,
+        ].filter((i) => i),
+      }
+    })
   })
 
-  const search = useSearch(limitedMatches, query, {
-    keys: SEARCH_KEYS,
-    includeMatches: true,
+  const globalSearch = useSearch(filtered, query, {
+    keys: GLOBAL_KEYS,
   })
 
-  const filteredMatches = computed<MatchData[]>(() =>
-    search.value.length ? search.value : limitedMatches.value
-  )
+  const playerSearch = useSearch(player, query, {
+    keys: RESTRICTED_KEYS,
+  })
+
+  const filteredMatches = computed<MatchData[]>(() => {
+    if (!query.value.length) return filtered.value
+
+    const playerMatches =
+      playerSearch.value?.map((p) =>
+        unref(matches)?.find((m) => m.matchId === p.matchId)
+      ) ?? []
+
+    const globalMatches = globalSearch.value ?? []
+
+    const map = new Map<string, MatchData>()
+
+    for (const m of [...playerMatches, ...globalMatches]) {
+      if (m) map.set(m.matchId, m)
+    }
+
+    return [...map.values()]
+  })
 
   return {
     filter,

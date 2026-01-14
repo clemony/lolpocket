@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Elixir of Avarice",
   "id": 2151,
@@ -7,7 +7,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "\n\nConsume\nGrants 5 true damage on hit against minions for 60 seconds. When this effect expires, gain 60 gold. ",
+  "description": "Consume\nGrants 5 true damage on hit against minions for 60 seconds. When this effect expires, gain 60 gold. ",
   "maps": [
     11,
     12,

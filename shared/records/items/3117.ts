@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 3117,
   "name": "Mobility Boots",
-  "description": "\n\n25 Move Speed \nWhen out of combat for at least 5 seconds, increase this item's effect to 45.",
+  "description": "25 Move Speed \nWhen out of combat for at least 5 seconds, increase this item's effect to 45.",
   "maps": [
     11,
     12,

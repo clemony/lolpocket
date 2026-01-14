@@ -1,3 +1,6 @@
+import { skinIndex as skins } from "#shared"
+import { bgArt } from "@domain"
+
 export function getSplash(
   keyOrId: string | number,
   type: SplashType,
@@ -16,12 +19,12 @@ export function getSplash(
 
   const partialUrl = skin.key.replace("<type>", type)
 
-  return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${skin.id}.jpg`
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
 
-  //`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
+  //`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${skin.id}.jpg`
+
+  //
 }
-
-import { bgArt, skinIndex as skins } from "~~/shared"
 
 export function getRandomBg() {
   return getRandom(Object.values(bgArt))
@@ -52,8 +55,9 @@ export function skinNameFromUrl(url: string): string | undefined {
 
 const sanctumIcons = [7056, 7057]
 export function getSummonerIcon(icon) {
-  if (sanctumIcons.includes(icon)) return `/img/sanctum/${icon}.webp`
-  return `https://ddragon.leagueoflegends.com/cdn/${patchIndex[0]}/img/profileicon/${icon}.png`
-}
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg`
 
-//`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons.jpg`
+  /*
+  if (sanctumIcons.includes(icon)) return `/img/sanctum/${icon}.webp`
+  return `https://ddragon.leagueoflegends.com/cdn/${patchIndex[0]}/img/profileicon/${icon}.png` */
+}

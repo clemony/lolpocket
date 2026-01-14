@@ -15,7 +15,6 @@ export interface MatchData {
 
 export interface MatchDataCurrentPlayer extends MatchData {
   player: Player
-  queue: QueueIndex
   mvp: string
   ace: string
   ranking: string[]
@@ -41,13 +40,15 @@ export interface Player {
   utility: PlayerUtility
   farming: PlayerFarming
   vision: PlayerVision
-  win: boolean
+  win: boolean | "remake"
 }
 
 export type PlayerOffense = {
   totalDamage: number
   damagePercentage: number
   damagePerMin: number
+  firstBloodAssist: boolean
+  firstBloodKill: boolean
   multiKills: {
     tripleKills: number
     doubleKills: number
@@ -61,7 +62,6 @@ export type PlayerUtility = {
   effectiveHealingAndShielding: number
   totalAllyHealing: number
   totalAllyShielding: number
-  //healingAndShieldingPercentage: number
   allySaves: number
 }
 
@@ -78,6 +78,8 @@ export type PlayerFarming = {
   minionsKilled: number
   neutralMinionsKilled: number
   turretsKilled: number
+  firstTowerAssist: boolean
+  firstTowerKill: boolean
   objectivesStolen: number
 }
 export type PlayerVision = {

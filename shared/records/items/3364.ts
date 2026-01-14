@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Oracle Lens",
   "id": 3364,
@@ -22,7 +22,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nActive (160 - 100s, max 2 charges)\nReveals enemy Stealth Wards and traps around you for 8 seconds.",
+  "description": "Active (160 - 100s, max 2 charges)\nReveals enemy Stealth Wards and traps around you for 8 seconds.",
   "maps": [
     11,
     21

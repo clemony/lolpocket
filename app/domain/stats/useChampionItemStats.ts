@@ -13,7 +13,7 @@ export const useChampionItemStats = (
       if (!p) continue
 
       for (const itemId of Object.values(p.items)) {
-        if (!itemId) continue
+        if (!itemId || p.win === "remake") continue
         bumpStat(single, itemId, p.win)
       }
     }

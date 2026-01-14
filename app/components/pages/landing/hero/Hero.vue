@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import { heroDisplays } from '~~/shared/data/video'
+import { heroDisplays } from '~/domain/riot/media/video'
 
 const { progress: p, visible } = defineProps<{
   progress: any
@@ -41,7 +41,7 @@ onMounted(() => {
 <template>
   <div
     class="
-      relative top-0 left-0 z-0 h-[100vh] w-full overflow-hidden *:z-0
+      relative top-0 left-0 z-0 h-screen w-full overflow-hidden *:z-0
       *:size-full
     "
     :class="{ sticky: visible }">
@@ -56,7 +56,7 @@ onMounted(() => {
           :autoplay="true"
           :src="video.url"
           :class="
-            cn('absolute block h-[100vh] opacity-50 grayscale', video.class)
+            cn('absolute block h-screen opacity-50 grayscale', video.class)
           "
           :style="{
             display: 'block',
@@ -80,7 +80,7 @@ onMounted(() => {
               variant="outline"
               size="12"
               :class="
-                cn('pointer-events-auto relative mt-3 w-28 self-end justify-self-end overflow-hidden border-b3 text-2 shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
+                cn('pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-b3 text-2 shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
                 )
               "
               @click="navigateTo('/login')">

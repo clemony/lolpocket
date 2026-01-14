@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Mercurial Scimitar",
   "id": 3139,
@@ -41,7 +41,7 @@
     "lifesteal": 10,
     "magicResistance": 35
   },
-  "description": "50 Attack Damage\n35 Magic Resist\n10% Life Steal\n\n\n\nACTIVE\nQuicksilver\nRemoves all crowd control debuffs (excluding Airborne) and grants Move Speed.",
+  "description": "50 Attack Damage\n35 Magic Resist\n10% Life Steal\n\nACTIVE\nQuicksilver\nRemoves all crowd control debuffs (excluding Airborne) and grants Move Speed.",
   "maps": [
     11,
     12,

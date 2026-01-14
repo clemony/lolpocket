@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 1208,
   "name": "Support Quest",
-  "description": "\n\nRewards\n• A new slot for control wards\n• Discounted control wards",
+  "description": "Rewards\n• A new slot for control wards\n• Discounted control wards",
   "gold": {
     "base": 0,
     "purchasable": false,

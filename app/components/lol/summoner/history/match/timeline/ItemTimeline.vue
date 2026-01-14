@@ -8,8 +8,6 @@ const supportUpgrade = computed(() => {
   if (!timeline || match.player.role !== 'UTILITY')
     return null
 
-  const supportItemIds = [3869, 3870, 3871, 3876, 3877]
-
   const finalSupportItem = supportItemIds.find(id => Object.values(match.player.items.slots).includes(id))
 
   return finalSupportItem ?? null
@@ -35,8 +33,7 @@ const supportUpgrade = computed(() => {
             class="relative size-12">
             <Item
               :id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
-              :data-map="match.queue.map.id"
-              :data-id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
+              :map="match.mapId"
               size="sq-12"
               class="tippy"
               data-tip="item" />
@@ -46,35 +43,32 @@ const supportUpgrade = computed(() => {
               <Item
                 :id="event.from"
                 :key="event.from"
-                :data-map="match.queue.map.id"
-                :data-id="event.from"
+                :map="match.mapId"
                 size="sq-5.5"
                 data-tip="item"
-                class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+                class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
 
               <Item
                 v-if="event.action === 'S2_UPGRADE'"
                 :id="3867"
                 :key="3867"
-                :data-map="match.queue.map.id"
-                :data-id="3867"
+                :map="match.mapId"
                 size="sq-5.5"
                 data-tip="item"
-                class="tippy absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
+                class="absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
             </template>
             <template v-else>
               <Item
                 v-for="item, idx in event.from"
                 :id="item"
                 :key="item"
-                :data-map="match.queue.map.id"
-                :data-id="item"
+                :map="match.mapId"
                 size="sq-5.5"
                 :style="{
                   marginLeft: `${10 * idx}px`,
                 }"
                 data-tip="item"
-                class="tippy absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+                class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
             </template>
           </div>
 
@@ -83,12 +77,10 @@ const supportUpgrade = computed(() => {
           <div
             v-else-if="event.action === 'ADD'"
             :key="event.id"
-            class="tippy relative size-12"
-            data-tip="item"
-            :data-map="match.queue.map.id"
-            :data-id="event.id">
+            class="relative size-12">
             <Item
               :id="event.id"
+              :map="match.mapId"
               size="sq-12" />
             <div
               v-if="event.count > 1"

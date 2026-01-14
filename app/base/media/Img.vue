@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
   format?: string
   loading?: ImgHTMLAttributes['loading']
   decoding?: ImgHTMLAttributes['decoding']
-  loadingStyle?: LoadingStyle
+  loadingType?: LoadingStyle
 }>(), {
   decoding: 'async',
   format: 'webp',
@@ -25,7 +25,7 @@ const emit = defineEmits(['load'])
 
 <template>
   <div
-    :class="cn(buttonVariants({ base: 'btn', variant: props.variant, size: props.size }), 'relative inset-0 grid shrink-0 place-items-center overflow-hidden border-0 select-none',
+    :class="cn(buttonVariants({ base: 'btn', variant: props.variant, size: props.size }), 'relative inset-0 grid shrink-0 cursor-default place-items-center overflow-hidden border-0 select-none',
                props.class)">
     <NuxtImg
       v-slot="{ src: source, isLoaded, imgAttrs }"
@@ -48,8 +48,10 @@ const emit = defineEmits(['load'])
         v-else
         :class="cn('animate-in fade-in grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500', { 'animate-out fade-out opacity-0  transition-all duration-500': isLoaded })"
         alt="placeholder">
-        <Spinner v-if="props.loadingStyle === 'spinner'" />
-        <span v-else-if="props.loadingStyle === 'none'" />
+        <span
+          v-if="props.loadingType === 'spinner'"
+          class="grid size-full shrink-0 place-items-center"><Spinner /></span>
+
         <Skeleton
           v-else
           class="size-full" />

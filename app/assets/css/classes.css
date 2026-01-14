@@ -1,18 +1,38 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import './theme.css';
+@import "./theme.css";
 
 @layer components {
-  .icon-grid-style {
-    @apply hover:ring-neutral hover:bg-neutral rounded-lg !size-full cursor-pointer  hover:ring;
-  }
-  .rune-hover:hover label,
-  .rune-hover[aria-expanded='true'] label {
-    @apply !grayscale-0 ring-neutral opacity-100 ring;
+  /* text */
+
+  .text-badge-xs {
+    @apply flex items-center gap-1 text-0! leading-4 font-bold hover:underline;
   }
 
   .role-text {
-    @apply saturate-250 brightness-70;
+    @apply brightness-70 saturate-250;
+  }
+  /* images */
+
+  .img-active {
+    @apply bg-b3/60 ring-bc/60 transition-all duration-300 hover:scale-105 hover:ring;
+  }
+  .no-img {
+    @apply pointer-events-none border border-b3;
+  }
+
+  .icon-grid-style {
+    @apply !size-full cursor-pointer rounded-lg hover:bg-neutral hover:ring hover:ring-neutral;
+  }
+  .rune-hover:hover label,
+  .rune-hover[aria-expanded="true"] label {
+    @apply opacity-100 ring ring-neutral !grayscale-0;
+  }
+
+  /* element */
+
+  .round-wrapper {
+    @apply grid shrink-0 place-items-center rounded-full bg-b1;
   }
 
   .set-absolute {
@@ -24,11 +44,11 @@
   }
 
   .border-shadow {
-    @apply shadow-[#000]/5 border-b3/60 rounded-box shadow-warm-2 border;
+    @apply rounded-box border border-b3/60 shadow-warm-2 shadow-[#000]/5;
   }
 
   .border-shadow-sm {
-    @apply shadow-[#000]/4 border-b3/60 rounded-box border shadow-md drop-shadow-sm;
+    @apply rounded-box border border-b3/60 shadow-md shadow-[#000]/4 drop-shadow-sm;
   }
 
   .scrollbar-hidden::-webkit-scrollbar {
@@ -38,11 +58,11 @@
   }
 
   .tip-icon {
-    @apply mb-0.25 size-4.25 mr-2 ml-0.5 inline-flex align-middle;
+    @apply mr-2 mb-0.25 ml-0.5 inline-flex size-4.25 align-middle;
   }
 
   .inline-icon {
-    @apply mb-0.25 size-4.25 mr-0.5 ml-0.5 inline-flex align-middle;
+    @apply mr-0.5 mb-0.25 ml-0.5 inline-flex size-4.25 align-middle;
   }
 
   .item-price-arrow::first-letter {
@@ -51,20 +71,15 @@
   }
 
   .ring-check {
-    @apply shadow-sm drop-shadow-sm transition-all duration-150 has-checked:ring
-    has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90
-    has-checked:grayscale-0 hover:ring hover:ring-n1/50 hover:ring-offset-2
-    hover:ring-offset-b2/90;
+    @apply shadow-sm drop-shadow-sm transition-all duration-150 hover:ring hover:ring-n1/50 hover:ring-offset-2 hover:ring-offset-b2/90 has-checked:ring has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90 has-checked:grayscale-0;
   }
 
   .ability-effect {
-    @apply dst nth-of-type-2:mt-3 inline-block justify-self-center
-    align-middle leading-5 not-first:ml-2 not-first:pl-4 not-first:border-l
-    not-first:border-l-b4 not-first:not-nth-of-type-2:pt-3;
+    @apply inline-block justify-self-center align-middle leading-5 dst not-first:ml-2 not-first:border-l not-first:border-l-b4 not-first:pl-4 not-first:not-nth-of-type-2:pt-3 nth-of-type-2:mt-3;
   }
 
   .ability-header {
-    @apply dst !text-2 font-semibold uppercase tracking-normal;
+    @apply !text-2 font-semibold tracking-normal uppercase dst;
   }
 
   .corner-mask {
@@ -72,11 +87,17 @@
     /* the radius */
     --s: 40px;
     /* the size of the cut */
-    --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
+    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
+      radial-gradient(#000 70%, #0000 72%) no-repeat;
     mask:
       calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
-      conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);
+      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
+        no-repeat,
+      conic-gradient(
+        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+        #000 75%,
+        #0000 0
+      );
   }
 }

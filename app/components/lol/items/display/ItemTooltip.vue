@@ -73,7 +73,7 @@ const { height } = useElementBounding(el)
         v-if="id"
         :id="id"
         :tip="null"
-        loading-style="spinner"
+        loading-type="spinner"
         :alt="`${name} Image`"
         :class="cn('size-7')">
       </Item>
@@ -171,7 +171,7 @@ const { height } = useElementBounding(el)
               :key="i">
               <LazyItem
                 :id="fromItem.id"
-                loading-style="spinner"
+                loading-type="spinner"
                 :tip="null"
                 :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
                 :class="itemImgClass" />
@@ -217,7 +217,7 @@ const { height } = useElementBounding(el)
               :id="buildItem.id"
               :key="i"
               :tip="null"
-              loading-style="spinner"
+              loading-type="spinner"
               :title="`${buildItem.name} ‑ ${buildItem.gold}g`"
               :class="itemImgClass" />
           </div>

@@ -14,7 +14,7 @@ const { match } = defineProps<{
         data-tip="champion"
         :alt="`${champNameById(match.player?.championId)}-icon`"
         class="
-             size-15 rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
+             size-header rounded-lg shadow-sm inset-shadow-xs drop-shadow-sm
               transition-all duration-300 hover:scale-105
             " />
       <!--  spells -->
@@ -38,14 +38,14 @@ const { match } = defineProps<{
 
     <div
       v-if="match.player"
-      class="flex h-full w-full shrink-0 items-start gap-1">
+      class="flex size-full shrink-0 items-start gap-1">
       <Item
         v-for="item, i in match.player.items.slots"
         :id="item"
         :key="`${item}${i}`"
         size="sq-9"
         tip="bottom"
-        :class="cn('active-img', {
+        :class="cn('img-active', {
           'no-img': !item,
           'img-loss': !match.player.win,
           'opacity-90': !match.player.win && !item,
@@ -56,7 +56,7 @@ const { match } = defineProps<{
         :id="match.player.items.role"
         size="c-9"
         tip="bottom"
-        :class="cn('active-img ml-2', {
+        :class="cn('img-active ml-2', {
           'no-img': !match.player.items.role,
           'img-loss': !match.player.win,
           'opacity-90': !match.player.win && !match.player.items.role,
@@ -68,7 +68,7 @@ const { match } = defineProps<{
 <style scoped>
 @reference '@css/tailwind.css';
 
-.active-img {
+.img-active {
   @apply ring-bc/60 transition-all duration-300  hover:scale-105 hover:ring;
 }
 .no-img {

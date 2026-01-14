@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9271,
   "name": "Unceasing Cyclone",
-  "description": "\n\nPermanently orbiting projectiles damage and knock back enemies.\n\nDamage, Ability Haste, Projectile Count, Area Size, Duration",
+  "description": "Permanently orbiting projectiles damage and knock back enemies.\n\nDamage, Ability Haste, Projectile Count, Area Size, Duration",
   "maps": [
     33
   ],

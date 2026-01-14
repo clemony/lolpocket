@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9300,
   "name": "Meow Meow",
-  "description": "\n\nJinx shoots out a barrage of bullets in a target direction.\n\nEvolve:  Ability Haste\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
+  "description": "Jinx shoots out a barrage of bullets in a target direction.\n\nEvolve:  Ability Haste\n\nDamage, Ability Haste, Crit Chance, Projectile Count",
   "maps": [
     33
   ],

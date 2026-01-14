@@ -12,24 +12,10 @@ const teams = computed(() => {
 </script>
 
 <template>
-  <div class="grid w-full grid-cols-2 gap-3 px-3 pt-4">
+  <div class="grid w-full gap-3 px-3 pt-4">
     <!-- Blue Stats -->
-    <div class="grid w-full auto-rows-max place-items-center gap-y-3">
+    <div class="grid w-full auto-rows-max place-items-center gap-y-2">
       <TeamEndStatTotals :team="match.teams[0]" />
-      <div class="flex w-full items-center justify-between px-2">
-        <TeamObjectives :team="match.teams[0]" />
-
-        <div class="flex h-full w-fit items-center justify-end gap-1">
-          <Icon
-            name="x"
-            class="mr-0.5 size-4 translate-y-px opacity-50 **:stroke-[2.6]" />
-          <ChampionBan
-            v-for="champion, i in match.teams[0].bans"
-            :id="champion"
-            :key="champion"
-            :style="{ zIndex: i }" />
-        </div>
-      </div>
       <!--   teammate -->
 
       <TeammateCard
@@ -40,22 +26,8 @@ const teams = computed(() => {
     </div>
     <!-- red Stats -->
 
-    <div class="grid w-full auto-rows-max place-items-center gap-y-3">
+    <div class="grid w-full auto-rows-max place-items-center gap-y-1.75">
       <TeamEndStatTotals :team="match.teams[1]" />
-      <div class="flex w-full items-center justify-between px-2">
-        <TeamObjectives :team="match.teams[1]" />
-
-        <div class="flex h-full w-fit items-center justify-end gap-1">
-          <Icon
-            name="ban"
-            class="mr-1 size-5 translate-y-px opacity-50" />
-          <ChampionBan
-            v-for="champion, i in match.teams[1].bans"
-            :id="champion"
-            :key="champion"
-            :style="{ zIndex: i }" />
-        </div>
-      </div>
       <!--   teammate -->
 
       <TeammateCard

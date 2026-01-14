@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Legendary Fighter Item",
   "id": 220001,
@@ -7,7 +7,7 @@
   "noEffects": false,
   "removed": false,
   "stats": {},
-  "description": "\n\nActive - Consume: Automatically open a semi-random selection for a Legendary Fighter item.",
+  "description": "Active - Consume: Automatically open a semi-random selection for a Legendary Fighter item.",
   "maps": [
     30
   ],

@@ -28,10 +28,9 @@ const groups = [{
 
 <template>
   <div
-    class="
-      group/head sticky top-0 z-3 grid w-full grid-flow-col grid-cols-[116px_repeat(10,54px)] overflow-hidden bg-tint-b2/40 py-1">
-    <div class="grid h-15 w-full self-center px-2 *:grid *:grid-cols-2 **:tracking-tight">
-      <div class="w-full place-items-center text-center *:w-full *:leading-5">
+    class="flex w-full flex-nowrap">
+    <div class="grid h-15 self-center px-2 *:grid *:grid-cols-2 **:tracking-tight">
+      <div class="place-items-center text-center *:leading-5">
         <span
           class="rounded-tl-lg bg-inspiration font-medium text-nowrap text-white dst">
           Blue
@@ -67,7 +66,31 @@ const groups = [{
           {{ match.teams[i].gold.toLocaleString() }} G
         </span>
       </div>
+
+      <div class="flex h-full w-fit items-center justify-end gap-1">
+        <Icon
+          name="x"
+          class="mr-0.5 size-4 translate-y-px opacity-50 **:stroke-[2.6]" />
+        <ChampionBan
+          v-for="champion, i in match.teams[0].bans"
+          :id="champion"
+          :key="champion"
+          :style="{ zIndex: i }" />
+      </div>
+
+      <div class="flex h-full w-fit items-center justify-end gap-1">
+        <Icon
+          name="ban"
+          class="mr-1 size-5 translate-y-px opacity-50" />
+        <ChampionBan
+          v-for="champion, i in match.teams[1].bans"
+          :id="champion"
+          :key="champion"
+          :style="{ zIndex: i }" />
+      </div>
     </div>
+  </div>
+  <div class="group/head light:bg-tint-b2/40 sticky top-0 z-3 grid w-full grid-flow-col grid-cols-[116px_repeat(10,54px)] overflow-hidden py-1 dark:bg-b2/60">
     <div
       v-for="p, i in match.participants"
       :key="p.puuid"
@@ -82,7 +105,6 @@ const groups = [{
         class="z-1 size-13.25!" />
     </div>
   </div>
-
   <div
     v-for="group in groups"
     :key="group.name"

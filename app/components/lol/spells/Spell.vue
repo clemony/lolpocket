@@ -3,14 +3,14 @@ const {
   id,
   title,
   class: className,
-  loadingStyle = 'spinner',
+  loadingType = 'spinner',
   size = 'sq-14',
   tip,
   variant
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | undefined
-  loadingStyle?: LoadingStyle
+  loadingType?: LoadingStyle
   size?: ButtonVariants['size']
   title?: string
   variant?: ButtonVariants['variant']
@@ -51,7 +51,7 @@ const tps = computed (() => {
     :title="!tps && title ? title : !tps ? spellNameById(id) : null"
     :class="
       cn({ ' shadow-sm drop-shadow-sm  shadow-black/30': loaded }, className)"
-    :loading-style="loadingStyle"
+    :loading-type
     :alt="spellbook[id].name"
     :src="`/img/spells/${id}.webp`"
     @load="loaded = true" />

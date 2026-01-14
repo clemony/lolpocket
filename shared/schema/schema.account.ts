@@ -1,6 +1,6 @@
 // shared/schemas/user.ts
-import { pocketTitleIndex } from "#shared/data/pocket-title-index"
 import * as v from "valibot"
+import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
 
 // username
 export const usernameSchema = v.nullable(

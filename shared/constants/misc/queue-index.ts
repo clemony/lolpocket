@@ -1,129 +1,18 @@
-export const queueIndex: QueueIndex[] = [
-  {
-    description: 'Draft',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 400,
-  },
-  {
-    description: 'Ranked Solo',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 420,
-  },
-  {
-    description: 'Blind Pick',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 430,
-  },
-  {
-    description: 'Ranked Flex',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 440,
-  },
-  {
-    description: 'ARAM',
-    map: {
-      id: 12,
-      name: 'Howling Abyss',
-    },
-    queueId: 450,
-  },
-  {
-    description: 'Swiftplay',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 480,
-  },
-  {
-    description: 'Quickplay',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 490,
-  },
-  {
-    description: 'SR Clash',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 700,
-  },
-  {
-    description: 'ARAM Clash',
-    map: {
-      id: 12,
-      name: 'Howling Abyss',
-    },
-    queueId: 720,
-  },
-  {
-    description: 'Co-op vs. AI (Beginner)',
-    map: {
-      name: 'Twisted Treeline',
-    },
-    queueId: 820,
-  },
-  {
-    description: 'Co-op vs. AI (Intro)',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 870,
-  },
-  {
-    description: 'Co-op vs. AI (Beginner)',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 880,
-  },
-  {
-    description: 'Co-op vs. AI (Intermediate)',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 890,
-  },
-  {
-    description: 'ARURF',
-    map: {
-      id: 11,
-      name: 'Summoner\'s Rift',
-    },
-    queueId: 900,
-  },
-  {
-    description: 'Arena',
-    map: {
-      id: 30,
-      name: 'Rings of Wrath',
-    },
-    queueId: 1700,
-  },
-  {
-    description: 'Arena',
-    map: {
-      id: 30,
-      name: 'Rings of Wrath',
-    },
-    queueId: 1710,
-  },
-]
+export const queueIndex: Record<number, string> = {
+  400: "Draft",
+  420: "Ranked Solo",
+  430: "Blind Pick",
+  440: "Ranked Flex",
+  450: "ARAM",
+  480: "Swiftplay",
+  490: "Quickplay",
+  700: "SR Clash",
+  720: "ARAM Clash",
+  820: "Co-op vs. AI (Beginner)",
+  870: "Co-op vs. AI (Intro)",
+  880: "Co-op vs. AI (Beginner)",
+  890: "Co-op vs. AI (Intermediate)",
+  900: "ARURF",
+  1700: "Arena",
+  1710: "Arena",
+}

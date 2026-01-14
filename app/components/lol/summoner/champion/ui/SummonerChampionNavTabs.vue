@@ -3,34 +3,7 @@ import { motion, useMotionValueEvent, useSpring, useTransform } from 'motion-v'
 
 const { scrollY } = useScrollInject()
 
-async function tabTransform() {
-// Smooth sticky state (0 → not sticky, 1 → sticky)
-  const stickyRaw = useMotionValue(0)
-  const sticky = useSpring(stickyRaw, { damping: 18, mass: 0.7, stiffness: 180 })
-
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    stickyRaw.set(latest > 220 ? 1 : 0)
-  })
-
-  // Individual tab transforms
-  const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '3rem'])
-
-  // Nav container transforms
-  const gap = useTransform(sticky, [0, 1], ['0.5rem', '0rem'])
-  const translateY = useTransform(sticky, [0, 1], ['-6%', '-13%'])
-  const translateX = useTransform(sticky, [0, 1], ['0%', '-0%'])
-  const opacity = useTransform(sticky, [0, 1], ['1', '0.95'])
-
-  return {
-    sticky,
-    stickyRaw,
-    style: { gap, opacity, translateX },
-    tabPaddingX,
-    translateY
-  }
-}
-
-const tt = await tabTransform()
+// const tt = await tabTransform()
 
 const items = [
   {
@@ -55,7 +28,6 @@ function navigate() {
 <template>
   <motion.nav
     role="tablist"
-    :style="tt?.style"
     :class="
       cn('relative z-3 flex h-15 w-fit items-end self-end justify-self-end border-b-0! transition-none *:select-none **:text-2',
       )
@@ -63,8 +35,6 @@ function navigate() {
     <ChampionNavTab
       v-for="item, i in filteredItems"
       :key="i"
-
-      :tab-transform
       :route-name="item.name"
       @click="navigateTo({ name: item.name, params: { champion_key: ui().openChampionTab } })">
       <Icon

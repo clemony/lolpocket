@@ -35,7 +35,7 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
     const enemy: PairedChampionDuoStatGroup = buildEmptyRoleObject()
     const team: PairedChampionDuoStatGroup = buildEmptyRoleObject()
 
-    const totalGames = data.value.length
+    const totalGames = data.value?.length
     if (!totalGames) {
       return { enemy: [], team: [] }
     }
@@ -56,6 +56,7 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
         const target = p.teamId === teamId ? team : enemy
         const role = normalizeRole(p.role)
 
+        if (win === "remake") continue
         bumpChampion(target, role, p.championId, win, gameDuration)
       }
     }

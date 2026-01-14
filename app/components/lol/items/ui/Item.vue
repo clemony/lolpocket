@@ -3,16 +3,18 @@ const {
   id,
   title,
   class: className,
-  loadingStyle,
+  loadingType,
+  map,
   size,
   tip,
   variant
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
-  loadingStyle?: LoadingStyle
+  loadingType?: LoadingStyle
   size?: ButtonVariants['size']
   title?: string
+  map?: number
   variant?: ButtonVariants['variant']
   dataSize?: TooltipSize
   tip?: string | null
@@ -34,6 +36,7 @@ const tps = computed (() => {
   <Img
     :size
     :variant
+    :data-map="map"
     :data-id="id"
     :data-placement="tps?.placement"
     :data-size="tps?.size"
@@ -41,12 +44,12 @@ const tps = computed (() => {
     :data-tip="!tps ? null : 'item'"
     :title=" !tps && title ? title : !tps ? itemNameById(id) : null"
     :class="
-      cn({ 'opacity-96 shadow-sm shadow-black/30  drop-shadow-sm ': id && loaded },
+      cn({ 'opacity-96 shadow-sm shadow-black/30  p-0! drop-shadow-sm ': id && loaded },
          className,
       )
     "
     :src="`/img/items/${id}.webp`"
     :alt="itemNameById(id)"
-    :loading-style
+    :loading-type
     @load="loaded = true" />
 </template>

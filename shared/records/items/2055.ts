@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Control Ward",
   "id": 2055,
@@ -12,7 +12,7 @@
     "pink"
   ],
   "stats": {},
-  "description": "\n\nConsume\nPlaces a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
+  "description": "Consume\nPlaces a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
   "maps": [
     11
   ],

@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Zhonya's Hourglass",
   "id": 3157,
@@ -36,7 +36,7 @@
     "abilityPower": 105,
     "armor": 50
   },
-  "description": "105 Ability Power\n50 Armor\n\n\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
+  "description": "105 Ability Power\n50 Armor\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
   "maps": [
     11,
     12,

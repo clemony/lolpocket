@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { themes } from '#shared/data'
+import { themes } from '@domain'
 import { ListboxContent, ListboxRoot } from 'reka-ui'
 
 definePageMeta({

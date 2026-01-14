@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9168,
   "name": "Locked Weapon Slot",
-  "description": "\n\nProve yourself, and Miss Fortune will approve an inventory upgrade.\n\n[Unlocked by completing achievements.]",
+  "description": "Prove yourself, and Miss Fortune will approve an inventory upgrade.\n\n[Unlocked by completing achievements.]",
   "maps": [
     33
   ],

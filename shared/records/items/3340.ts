@@ -1,4 +1,4 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "name": "Stealth Ward",
   "id": 3340,
@@ -21,7 +21,7 @@
     }
   ],
   "stats": {},
-  "description": "\n\nActive (170 - 90s, max 2 charges)\nPlaces an Invisible Stealth Ward that grants vision for 90-120 seconds.",
+  "description": "Active (170 - 90s, max 2 charges)\nPlaces an Invisible Stealth Ward that grants vision for 90-120 seconds.",
   "maps": [
     11,
     21

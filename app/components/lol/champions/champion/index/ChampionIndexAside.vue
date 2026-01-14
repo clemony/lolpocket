@@ -11,7 +11,7 @@ const wrapperClass
 <template>
   <aside
     class="
-      sticky top-0 scrollbar-hidden flex w-120 shrink-0 flex-col gap-10
+      scrollbar-hidden sticky top-0 flex w-120 shrink-0 flex-col gap-10
       overflow-y-auto px-1 py-22
     ">
     <menu class="space-y-2">
@@ -47,11 +47,11 @@ const wrapperClass
 
     <Collapsible
       v-model:open="ui().collapseStates.championInfo[1]"
-      class="data field-box">
+      class="field-box data">
       <CollapsibleTrigger
         class="
           flex h-16 min-h-16 w-full items-center justify-between px-5
-          data-[state=open]:border-b data-[state=open]:border-b-b3
+          open:border-b open:border-b-b3
         ">
         <h3>Data</h3>
 
@@ -70,7 +70,7 @@ const wrapperClass
       <CollapsibleTrigger
         class="
           flex h-16 min-h-16 w-full items-center justify-between px-5
-          data-[state=open]:border-b data-[state=open]:border-b-b3
+          open:border-b open:border-b-b3
         ">
         <h3>Bio</h3>
 

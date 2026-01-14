@@ -1,5 +1,5 @@
 import { toast } from "~/composables/utils/useToast"
-import { heyGoodJob } from "~~/shared/data/good-job"
+import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { newPocket } from "./newPocket"
 
 export async function addPocket(randomize?: boolean) {

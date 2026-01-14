@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9172,
   "name": "YuumiBot",
-  "description": "\n\nSummons a Yuum.Ai drone. Yuum.Ai damages and knocks up enemies, and also gathers XP.\n\nEvolve: Pickup Radius\n\nDamage, Ability Haste, Area Size, Duration, Pickup Radius",
+  "description": "Summons a Yuum.Ai drone. Yuum.Ai damages and knocks up enemies, and also gathers XP.\n\nEvolve: Pickup Radius\n\nDamage, Ability Haste, Area Size, Duration, Pickup Radius",
   "maps": [
     33
   ],

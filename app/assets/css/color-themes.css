@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @custom-variant light (
-  &:where[data-theme="daylight"],
-  &:where[data-theme="dawn"]
-  );
-@custom-variant dark (
   &:where([data-theme=daylight], [data-theme=daylight] *),
   &:where([data-theme=dawn], [data-theme=dawn] *)
   );
@@ -52,6 +48,15 @@
   --bc: oklch(0% 0.02476 255.701624);
   --n1: oklch(27% 0.006 286.033);
   --nc: oklch(97.788% 0.004 56.375);
+}
+
+[data-theme="winter"] {
+  --b1: oklch(95.127% 0.007 260.731);
+  --b2: oklch(45.229% 0.035 264.131);
+  --n1: oklch(89.925% 0.016 262.749);
+  --b3: oklch(93.299% 0.01 261.788);
+  --bc: oklch(32.437% 0.022 264.182);
+  --nc: oklch(45.229% 0.035 264.131);
 }
 
 [data-theme="dusk"] {

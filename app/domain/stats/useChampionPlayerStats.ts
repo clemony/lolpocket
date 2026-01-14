@@ -23,7 +23,7 @@ export function usePlayerStatsProvider(
   const mastery = shallowRef<PlayerChampionMastery | undefined>(undefined)
 
   const matchData = computed<MatchPlayerData[]>(() => {
-    if (!timelines.value.length) return []
+    if (!timelines.value?.length) return []
 
     return filteredMatches.value
       .filter((m) =>

@@ -64,7 +64,7 @@ export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
   computed<AllyStatDetail[]>(() => {
     const allies: Record<string, AllyStatDetail> = {}
 
-    const totalGames = data.value.length
+    const totalGames = data.value?.length
     if (!totalGames) return []
 
     const totalWins = data.value
@@ -83,6 +83,7 @@ export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
       )
 
       for (const ally of allyArray) {
+        if (win === "remake") continue
         bumpAlly(allies, ally, win, gameDuration)
       }
     }
@@ -130,10 +131,10 @@ export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
     const filter = Object.fromEntries(
       Object.entries(allies).filter(([, s]) => s.games >= 3)
     )
-    console.log(
+    /*     console.log(
       "🥸 - aggregateAllies - filter:",
       Object.values(filter).map((p) => p.champions)
     )
-
+ */
     return sortRecordBy(filter, "games", "desc") as AllyStatDetail[]
   })

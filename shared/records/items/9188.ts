@@ -1,8 +1,8 @@
-// Updated Patch 16.1.1 - 01/10/2026 05:42:34 PM CST
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
       const item: Item =  {
   "id": 9188,
   "name": "Ani-Mines",
-  "description": "\n\nDrops timed explosive projectiles in a ring that explode for large area damage.\n\nEvolve: Area Size\n\nDamage, Ability Haste, Area Size, Projectile Count",
+  "description": "Drops timed explosive projectiles in a ring that explode for large area damage.\n\nEvolve: Area Size\n\nDamage, Ability Haste, Area Size, Projectile Count",
   "maps": [
     33
   ],

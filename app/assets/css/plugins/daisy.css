@@ -119,8 +119,8 @@
   }
 
   .field-box {
-    background: url("../../icons/ui/noise.svg");
-    @apply relative overflow-visible rounded-xl border border-b3/60 bg-b2/40 bg-size-[160px] bg-repeat text-2 shadow-warm-soft drop-shadow-xs **:select-none;
+    background-image: url("../../icons/ui/noise.svg");
+    @apply relative overflow-visible rounded-xl border border-b3/60 bg-b2/40 bg-size-[160px] bg-repeat text-2 shadow-warm-soft drop-shadow-xs **:select-none dark:bg-tint-b1/1 light:bg-tint-b2/60!;
   }
 
   /* progress */

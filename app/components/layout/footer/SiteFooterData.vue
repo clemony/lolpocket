@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { contactLinks, riotDisclaimer } from '~~/shared/data'
+import { contactLinks, riotDisclaimer } from '@domain'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -23,7 +23,7 @@ const links = computed(() =>
     class=""
     :class="
       cn('bgneutral z-0 footer flex h-26 max-h-26 min-h-26 w-full items-center gap-12 bg-neutral p-6 text-nc sm:footer-horizontal',
-        className,
+         className,
       )
     ">
     <aside class="flex grow items-center gap-5">
@@ -83,7 +83,7 @@ const links = computed(() =>
         @click="copy()">
         <icon
           name="teenyicons:at-outline"
-          class="size-6 shrink-0 stroke-1/2 text-nc" />
+          class="size-6 shrink-0 stroke-1 text-nc" />
 
         <template #content>
           <div class="flex flex-col gap-1 p-2">
