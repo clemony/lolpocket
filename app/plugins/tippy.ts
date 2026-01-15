@@ -25,7 +25,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           expanded: "auto",
         },
         arrow: popoverArrow,
-        delay: [400, 0],
+        delay: [200, 0],
         duration: [150],
         flip: true,
         followCursor: false,

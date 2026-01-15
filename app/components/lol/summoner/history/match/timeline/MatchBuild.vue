@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { match } = defineProps<{
-  match: MatchDataCurrentPlayer
+  match: Player
   timeline: PlayerTimeline
 }>()
 </script>

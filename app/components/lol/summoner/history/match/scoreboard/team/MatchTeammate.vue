@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { match, player } = defineProps<{
   player: Player
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 
 const stats = computed(() => {
@@ -12,7 +12,7 @@ const stats = computed(() => {
 
   return {
     keystone: runeIndex.find(r => r.id === id),
-    cs: player.farming.minionsKilled + player.farming.neutralMinionsKilled,
+    cs: player.stats.minionsKilled + player.stats.neutralMinionsKilled,
     secondaryPath: pathIndex.find(p => p.id === player?.runes?.secondary.path)
       ?.name,
   }
@@ -50,7 +50,7 @@ const pClass
 
     <!-- spells -->
     <div
-      class="w-[18px] grid-rows-1!"
+      class="w-6 grid-rows-1!"
       :class="divClass">
       <PlayerSpells
         :player="player"
@@ -60,7 +60,7 @@ const pClass
     <!-- runes -->
     <div
       :class="
-        cn('mb-px -ml-1 flex! w-[18px] shrink-0 flex-col items-center justify-center gap-0.5 self-center overflow-visible py-1',
+        cn('mb-px -ml-1 flex! w-6 shrink-0 flex-col items-center justify-center gap-0.5 self-center overflow-visible py-1',
         )
       ">
       <!-- keystone -->
@@ -172,11 +172,11 @@ const pClass
       <p
         data-tip="Effective Healing & Shielding"
 
-        :class="cn('inline! text-1!', pClass, { 'text-bc/30': player.utility.effectiveHealingAndShielding === 0 })">
+        :class="cn('inline! text-1!', pClass, { 'text-bc/30': player.stats.effectiveHealingAndShielding === 0 })">
         {{
-          player.utility.effectiveHealingAndShielding
+          player.stats.effectiveHealingAndShielding
             === 0 ? '—   ' : Math.round(
-            player.utility.effectiveHealingAndShielding,
+            player.stats.effectiveHealingAndShielding,
           ).toLocaleString()
         }}
         <Icon
@@ -186,12 +186,12 @@ const pClass
 
       <p
         data-class="text-start"
-        :data-tip="`Vision Score - ${player.vision.visionScore}
-        ${player.vision.wardsPlaced} wards placed
-        ${player.vision.controlWardsPlaced} control wards placed
-        ${player.vision.wardsKilled} wards destroyed`"
+        :data-tip="`Vision Score - ${player.stats.visionScore}
+        ${player.stats.wardsPlaced} wards placed
+        ${player.stats.controlWardsPlaced} control wards placed
+        ${player.stats.wardsKilled} wards destroyed`"
         :class="cn('inline text-1!', pClass)">
-        {{ player.vision.visionScore }}
+        {{ player.stats.visionScore }}
         <Icon
           name="lp:support"
           class="inline size-3! -translate-y-px opacity-60" />
@@ -205,7 +205,7 @@ const pClass
         data-tip="Total Damage Dealt to Champions"
 
         :class="cn('inline gap-1!', pClass)">
-        {{ player.offense.totalDamage.toLocaleString() }}
+        {{ player.stats.totalDamage.toLocaleString() }}
         <icon
           name="el:fire"
           class="mr-0.25 ml-0.5 inline size-3 opacity-50" />
@@ -215,7 +215,7 @@ const pClass
         data-tip="Total Damage Taken"
 
         :class="cn('inline! gap-1!', pClass)">
-        {{ Math.round(player.defense.totalDamageTaken).toLocaleString() }}
+        {{ Math.round(player.stats.totalDamageTaken).toLocaleString() }}
         <icon
           name="ph:shield-fill"
           class="ml-0.5 inline size-3.5 -translate-y-px opacity-40" />
@@ -238,7 +238,7 @@ const pClass
       </p>
 
       <p class="tracking-tight">
-        {{ player.farming.goldEarned.toLocaleString() }} G
+        {{ player.stats.goldEarned.toLocaleString() }} G
       </p>
     </div>
   </div>

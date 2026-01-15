@@ -45,5 +45,3 @@ watch(searchResult, (newSearchResults) => {
     :class="cn('m-0 size-full border-0 py-0 pl-8 shadow-none', props.class)"
     @update:model-value="emit('update:input', searchQuery)" />
 </template>
-
-<style></style>

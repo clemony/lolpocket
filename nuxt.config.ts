@@ -145,7 +145,7 @@ export default defineNuxtConfig({
           baseUrl: "../",
           types: ["shared/types/**", "server/types/**"],
         },
-        include: ["shared/**, server/utils/**"],
+        include: ["shared/*", "server/**", "shared/utils/*"],
       },
     },
     preset: "cloudflare_module",

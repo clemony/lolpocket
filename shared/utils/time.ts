@@ -92,29 +92,36 @@ export function isStale(date?: number | string | Date | null, maxMinutes = 30) {
   return diff > maxMinutes
 }
 
-export function getGreeting() {
-  const hour = new Date().getHours()
+import { patchIndex } from "../constants"
 
-  if (hour >= 5 && hour < 12) {
-    return {
-      greeting: "Good morning",
-      icon: "fluent-mdl2:partly-cloudy-day",
-    }
+export function getFormattedDateTime(): string {
+  const now = new Date()
+
+  const options: Intl.DateTimeFormatOptions = {
+    day: "2-digit",
+    hour: "2-digit",
+    hour12: true,
+    minute: "2-digit",
+    month: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short",
+    year: "numeric", // 👈 these must be literal values
   }
-  if (hour >= 12 && hour < 17) {
-    return {
-      greeting: "Good afternoon",
-      icon: "si:clear-day-line",
-    }
-  }
-  if (hour >= 17 && hour < 21) {
-    return {
-      greeting: "Good evening",
-      icon: "ph:sun-horizon",
-    }
-  }
-  return {
-    greeting: "Good night",
-    icon: "quill:moon",
-  }
+
+  const formatter = new Intl.DateTimeFormat("en-US", options)
+  const parts = formatter.formatToParts(now)
+
+  const partMap = Object.fromEntries(
+    parts.map(({ type, value }) => [type, value])
+  ) as Record<string, string> // 👈 optional: avoid TS warning
+
+  return (
+    `${partMap.month}/${partMap.day}/${partMap.year} ` +
+    `${partMap.hour}:${partMap.minute}:${partMap.second} ` +
+    `${partMap.dayPeriod} ${partMap.timeZoneName}`
+  )
+}
+
+export function markUpdate() {
+  return `Updated Patch ${patchIndex[0]} - ${getFormattedDateTime()}`
 }

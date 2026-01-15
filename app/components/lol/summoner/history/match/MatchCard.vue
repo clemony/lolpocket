@@ -20,7 +20,7 @@ const playerRank = computed(() => {
     ranking: sort.map(p => p.puuid),
   }
 })
-const match = computed<MatchDataCurrentPlayer>(() => {
+const match = computed<Player>(() => {
   const player = m?.participants.find(p => p.puuid === puuid)
   return {
     ...m,

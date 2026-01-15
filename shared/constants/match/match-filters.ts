@@ -64,7 +64,7 @@ export function matchFiltersIgnoreChampion(
   match: MatchData,
   options: MatchFilter
 ) {
-  const { ally, ignoreRole = false, date, number, patch, queue, role } = options
+  const { ally, ignoreRole = false, date, amount, patch, queue, role } = options
   const player = match.participants.find((p) => p.puuid === puuid)
 
   if (!player) return false

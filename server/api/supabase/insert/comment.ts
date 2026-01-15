@@ -1,4 +1,4 @@
-import { renderStaticHTML } from "~~/shared/utils/mentions/renderStaticHTML"
+import { renderStaticHTML } from "~~/shared/scripts/mentions/renderStaticHTML"
 import { createSupabaseClient } from "../client.supabase"
 
 export default defineEventHandler(async (event) => {

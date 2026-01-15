@@ -61,7 +61,7 @@ watchEffect(async () => {
           <a
             :key="rune.id"
             :title="`Official LoL Wiki - ${rune.name}`"
-            :href="getWikiLink(rune.name)"
+            :href="wikiLink(rune.name)"
             target="_blank"
             alt="link to league wiki">
             <img

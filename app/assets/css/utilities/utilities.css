@@ -26,10 +26,6 @@
   }
 }
 
-@utility text-link {
-  @apply font-medium decoration-bc/60 decoration-dotted hover:underline hover:decoration-bc hover:decoration-solid;
-}
-
 @utility trim {
   @apply text-clip text-ellipsis whitespace-nowrap;
 }
@@ -39,10 +35,6 @@
 } */
 @utility col-span-all {
   column-span: all;
-}
-
-@utility text-shadow {
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.11);
 }
 
 @utility w-inherit {
@@ -67,4 +59,22 @@
 
 @utility grid-cols-masonry {
   grid-template-columns: masonry;
+}
+
+@layer utilities {
+  .color-badge-content {
+    @apply opacity-96 brightness-40 contrast-110 dst saturate-180;
+  }
+}
+@utility hover-ring {
+  @apply cursor-pointer ring ring-transparent ring-offset-transparent transition-all duration-200;
+
+  &:hover,
+  &[data-state="open"].data-open-ring {
+    @apply ring ring-n1 ring-offset-2 ring-offset-b1/98;
+  }
+}
+
+.hover-ring-sm {
+  @apply cursor-pointer inset-shadow-sm hover:ring hover:shadow-black/40 hover:ring-n1/60 hover:drop-shadow-sm;
 }

@@ -74,12 +74,12 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     children: [
       {
-        field: 'offense.totalDamage',
+        field: 'stats.totalDamage',
         headerName: 'Damage to Champions',
         headerTooltip: 'Damage to Champions',
       },
       {
-        field: 'offense.damagePercentage',
+        field: 'stats.damagePercentage',
         headerName: 'Team Dmg %',
         headerTooltip: 'Team Dmg %',
       },
@@ -90,7 +90,7 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     children: [
       {
-        field: 'utility.effectiveHealingAndShielding',
+        field: 'stats.effectiveHealingAndShielding',
         headerName: 'Effective Healing & Shielding',
         headerTooltip: 'Effective Healing & Shielding',
       },
@@ -142,7 +142,7 @@ const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
     v-if="match"
     ref="masteryGrid"
     class="
-      mastery-grid sticky top-20 h-[100vh] min-h-[100vh] w-full pt-20
+      mastery-grid sticky top-20 h-screen min-h-screen w-full pt-20
       [&_.ag-center-cols-viewport]:mx-auto
       [&_.ag-center-cols-viewport]:max-w-[1100px]
       [&_.ag-header-container]:mx-auto

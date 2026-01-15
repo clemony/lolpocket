@@ -52,23 +52,5 @@ onMounted(() => {
 </template>
 
 <style>
-:root {
-  [data-sonner-toaster] {
-    --offset: 6px !important;
 
-    & [data-expanded='true'] {
-      height: var(--initial-height) !important;
-      transform: none;
-    }
-  }
-
-  [data-close-button] {
-    --toast-close-button-start: 93% !important;
-    --toast-close-button-end: 15px !important;
-    top: 12px;
-    outline: 0;
-    border: 0;
-    box-shadow: unset;
-  }
-}
 </style>

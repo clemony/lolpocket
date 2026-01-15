@@ -3,31 +3,14 @@ export function formatLink(link: string) {
 }
 // get wiki link
 
-export function getWikiLink(thing: string) {
+export function wikiLink(thing: string, region = "en-us") {
   const a = formatLink(thing)
-  return `https://wiki.leagueoflegends.com/en-us/${a}`
+  return `https://wiki.leagueoflegends.com/${region}/${a}`
 }
 
 export function formatUrlChampKey(key: string): string {
   if (!key) return
   return key.toLowerCase().replace("'", "").replace(". ", "")
-}
-
-const nameHyphenMap: Record<string, string> = {
-  "Aurelion Sol": "Aurelion\nSol",
-  // 'Blitzcrank': 'Blitz-\ncrank',
-  Fiddlesticks: "Fiddle-\nsticks",
-  Heimerdinger: "Heimer-\ndinger",
-  "Miss Fortune": "Miss\nFortune",
-  Mordekaiser: "Morde-\nkaiser",
-  // 'Master Yi': 'Master\nYi',
-  "Renata Glasc": "Renata\nGlasc",
-  "Tahm Kench": "Tahm\nkench",
-  Tryndamere: "Tryn-\ndamere",
-}
-
-export function hyphenateChampionName(n: string): string {
-  return nameHyphenMap[n] ?? n
 }
 
 export function formatNumberPosition(num: number, returnNum?: boolean) {
@@ -46,4 +29,17 @@ export function formatNumberPosition(num: number, returnNum?: boolean) {
       : `th`
     )
   }
+}
+
+export function normalizePatchNumber(patch: string): number {
+  const [major, minor] = patch.split(".").map(Number)
+  const formattedMinor = minor.toString().padStart(2, "0")
+  return Number.parseFloat(`${major}.${formattedMinor}`)
+}
+
+export const normalizePatch = (rawPatch) =>
+  rawPatch.split(".").slice(0, 2).join(".")
+
+export function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }

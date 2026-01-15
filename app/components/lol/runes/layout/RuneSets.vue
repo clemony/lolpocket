@@ -105,5 +105,3 @@ const primaryColor = computedAsync(() => {})
     </DropdownMenu> -->
   </div>
 </template>
-
-<style></style>

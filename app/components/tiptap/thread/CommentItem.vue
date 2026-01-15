@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { vElementHover } from '@vueuse/components'
-import { renderStaticHTML } from '~~/shared/utils/mentions/renderStaticHTML'
+import { renderStaticHTML } from '~~/shared/scripts/mentions/renderStaticHTML'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentData
@@ -62,7 +62,7 @@ useTooltips(container) */
       v-slot="{ open }"
       :default-open="!comment?.removed"
       :disabled="!replies?.length"
-      :class="cn('z-auto h-max pt-2 pb-2', { ' ml-12': depth })">
+      :class="cn('z-auto h-max py-2', { ' ml-12': depth })">
       <!-- child trigger
       v-element-hover="" -->
 

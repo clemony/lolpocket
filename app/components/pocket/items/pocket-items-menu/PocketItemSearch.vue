@@ -107,7 +107,7 @@ watchEffect(() => {
   <motion.div
     :class="
       cn('bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
-        props.class,
+         props.class,
       )
     "
     :variants="variants"
@@ -148,5 +148,3 @@ watchEffect(() => {
     </button>
   </motion.div>
 </template>
-
-<style></style>

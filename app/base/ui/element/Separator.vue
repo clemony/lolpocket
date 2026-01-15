@@ -84,7 +84,7 @@ const { label, separator, wrapper } = styles
         wrapper(),
         props.orientation === 'vertical'
           ? 'flex-col justify-center h-full w-px'
-          : 'flex-row items-center w-full',
+          : 'flex-row items-center w-full h-px',
         props.class,
         'pointer-events-none',
       )

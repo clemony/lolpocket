@@ -25,7 +25,7 @@ const { id, name } = defineProps<{
       class="
         hover:bgneutral btn btn-square size-7 btn-ghost btn-sm hover:*:text-nc
       "
-      :href="getWikiLink(name)"
+      :href="wikiLink(name)"
       target="_blank"
       alt="link to league wiki">
       <icon

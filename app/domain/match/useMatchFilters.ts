@@ -10,19 +10,6 @@ const GLOBAL_KEYS = [
 
 const RESTRICTED_KEYS = ["keywords"]
 
-const defaultFilter: MatchFilter = {
-  ally: "",
-  champion: "",
-  patch: null,
-  queue: 0,
-  role: "all",
-  date: {
-    start: null,
-    end: null,
-  },
-  number: null,
-}
-
 export function useMatchFilters(
   puuid: MaybeRef<string | null | undefined>,
   matches: MaybeRef<MatchData[] | null | undefined>
@@ -30,6 +17,18 @@ export function useMatchFilters(
   const query = shallowRef<string>("")
   const filter = shallowRef<MatchFilter>({})
 
+  const defaultFilter: MatchFilter = {
+    ally: "",
+    champion: "",
+    patch: null,
+    queue: 0,
+    role: "all",
+    date: {
+      start: null,
+      end: null,
+    },
+    amount: toValue(matches).length,
+  }
   function setFilter<K extends keyof MatchFilter>(
     key: K,
     value: MatchFilter[K]
@@ -57,12 +56,7 @@ export function useMatchFilters(
     if (!id) return arr
 
     const empty =
-      !f.ally &&
-      !f.champion &&
-      !f.patch &&
-      !f.queue &&
-      !f.number &&
-      f.role === "all"
+      !f.ally && !f.champion && !f.patch && !f.queue && f.role === "all"
 
     if (empty) return arr
 
@@ -117,6 +111,7 @@ export function useMatchFilters(
           ...spells,
           ...outcome,
           ...map,
+          ...queue,
         ].filter((i) => i),
       }
     })
@@ -146,7 +141,13 @@ export function useMatchFilters(
       if (m) map.set(m.matchId, m)
     }
 
-    return [...map.values()]
+    const final =
+      filter.value.amount ?
+        [...map.values()].splice(0, filter.value.amount)
+      : [...map.values()]
+
+    filter.value.amount === final.length
+    return final
   })
 
   return {

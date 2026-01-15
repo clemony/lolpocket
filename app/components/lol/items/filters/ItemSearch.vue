@@ -32,7 +32,7 @@ const searchQuery = ref('')
       :placeholder="props.placeholder"
       :class="
         cn('flex h-full grow border-0 text-start text-3 ring-0 outline-0 hover:border-0 hover:ring-0 hover:outline-0',
-          props.inputClass,
+           props.inputClass,
         )
       " />
 
@@ -47,5 +47,3 @@ const searchQuery = ref('')
     </button>
   </div>
 </template>
-
-<style></style>

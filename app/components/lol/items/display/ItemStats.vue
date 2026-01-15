@@ -1,30 +1,29 @@
 <script lang="ts" setup>
-import '@css/colors.css'
-
-const { stats } = defineProps<{
+const { class: className, stats } = defineProps<{
   stats: Record<string, number>
+  class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-  <div class="grid w-full items-center gap-y-0.25 pr-2">
-    <div
+  <ul :class="cn('grid w-full items-center gap-y-1', className)">
+    <li
       v-for="[k, v] in Object.entries(stats)"
       :key="k"
       :data-color="k"
-      class="flex w-full items-center pl-1 **:text-2 **:font-medium">
-      <span class="w-14">
+      class="inline-flex gap-1 text-end text-1/4.5 font-normal text-wrap">
+      <span class="">
         {{ `${v}${statIndex[k]?.unit ?? ""}` }}
       </span>
-      <span class="grow">
+      <span>
         {{ statIndex[k].name }}
       </span>
 
-      <span class="relative h-px w-4 place-items-center *:absolute">
+      <!--       <span class="relative h-px w-4 place-items-center *:absolute">
         <Icon
           :name="`stat:${k}`"
           class="size-3.5! self-center" />
-      </span>
-    </div>
-  </div>
+      </span> -->
+    </li>
+  </ul>
 </template>

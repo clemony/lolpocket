@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { generateName } from '~~/shared'
+
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key)),
@@ -29,9 +31,9 @@ const pocket = computed(() =>
           :side-offset="0"
           position-strategy="absolute"
           class="
-            pointer-events-auto h-[var(--reka-popover-trigger-height)] w-min
+            pointer-events-auto h-(--reka-popover-trigger-height) w-min
             min-w-[calc(var(--reka-popover-trigger-width)+70px)]
-            -translate-y-[var(--reka-popover-trigger-height)] p-0 shadow-none
+            -translate-y-(--reka-popover-trigger-height) p-0 shadow-none
             drop-shadow-none
           ">
           <Input

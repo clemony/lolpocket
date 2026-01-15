@@ -221,6 +221,7 @@ export default defineNuxtPlugin(() => {
       icon: el.dataset.icon,
       text: el.dataset.text,
       size: el.dataset.size,
+      map: el.dataset.map,
       value: el.dataset.value,
       interactive: el.dataset.interactive === "true",
     }

@@ -33,7 +33,5 @@ onMounted(() => {
 
     <LazyMatchAlliesFilter
       v-if="as().settings?.show_allies" />
-
-    <AdvancedMatchFilters />
   </div>
 </template>

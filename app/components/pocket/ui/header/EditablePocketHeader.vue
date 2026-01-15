@@ -7,6 +7,7 @@ import {
   EditablePreview,
   EditableRoot,
 } from 'reka-ui'
+import { generateName } from '~~/shared'
 
 const {
   buttonClass,
@@ -58,7 +59,7 @@ onMounted(async () => {
     submit-mode="both"
     :class="
       cn('group/edit flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden rounded-box border border-transparent px-2.5 py-0 focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1',
-        wrapperClass,
+         wrapperClass,
       )
     "
     as-child

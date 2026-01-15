@@ -9,7 +9,7 @@ export interface MatchFilter {
   ignoreRole?: boolean
   role?: string | null
   date?: MaybeRef<DateRange>
-  number?: number
+  amount?: number
 }
 export const useMatchStore = defineStore("matchStore", () => {
   const summonerSearch = ref(null)
@@ -27,7 +27,7 @@ export const useMatchStore = defineStore("matchStore", () => {
       start: null,
       end: null,
     },
-    number: null,
+    amount: null,
   })
 
   function clearFilter() {
@@ -41,7 +41,7 @@ export const useMatchStore = defineStore("matchStore", () => {
         start: null,
         end: null,
       },
-      number: null,
+      amount: null,
     })
   }
 

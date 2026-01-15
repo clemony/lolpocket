@@ -28,7 +28,7 @@ const spell = computed (() => spells[id])
         :alt="`${spell.name} Image`"
         class="size-10 shrink-0 bg-transparent!" />
 
-      <div class="flex h-full w-full flex-col justify-center gap-1">
+      <div class="flex size-full flex-col justify-center gap-1">
         <div class="flex items-center justify-between">
           <h2 class="grow text-4! leading-none dst">
             {{ spell.name }}
@@ -36,7 +36,7 @@ const spell = computed (() => spells[id])
           <a
             :key="spell.id"
             :title="`Official LoL Wiki - ${spell.name}`"
-            :href="getWikiLink(spell.name)"
+            :href="wikiLink(spell.name)"
             target="_blank"
             alt="link to league wiki">
             <img

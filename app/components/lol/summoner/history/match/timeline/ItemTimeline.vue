@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { match, timeline } = defineProps<{
   timeline: PlayerTimeline
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 
 const supportUpgrade = computed(() => {

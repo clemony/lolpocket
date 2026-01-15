@@ -1,10 +1,10 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .champion-grid {
-  @apply pt-36 border-t border-t-b3/60;
+  @apply border-t border-t-b3/60 pt-36;
 }
 .champion-grid-cell {
-  @apply grid size-full  capitalize px-2;
+  @apply grid size-full px-2 capitalize;
 }
 
 .champion-grid .hidden-cell {
@@ -14,24 +14,3 @@
 .champion-grid .ag-header-expand-icon {
   @apply absolute right-1 bg-transparent;
 }
-
-
-
-/* }
-
-.champion-grid .ag-header-group-cell .ag-header-cell-comp-wrapper {
-  @apply text-start items-end justify-start;
-}
-
-.champion-grid .ag-header-group-cell {
-  @apply font-semibold;
-}
-
-.champion-grid .ag-header-group-cell-label {
-  @apply w-full relative grow order-last;
-}
-
-.champion-grid .ag-header-row .ag-header-row-column {
-  @apply text-start items-end justify-start;
-}
- */

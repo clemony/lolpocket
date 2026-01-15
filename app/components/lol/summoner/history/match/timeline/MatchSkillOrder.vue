@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { match, timeline } = defineProps<{
   timeline: PlayerTimeline
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 
 const championData = await import(
@@ -59,7 +59,7 @@ const skillOrder = computed(() => [
       <template
         v-for="ability, i in abilities"
         :key="i">
-        <div class="grid h-7 w-full items-center font-mono font-[500] uppercase">
+        <div class="grid h-7 w-full items-center font-mono font-medium uppercase">
           {{ ability.key }}
         </div>
         <div

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import { matchStatRegistry } from '#shared'
+
 const { match } = defineProps<{
-  match: MatchDataCurrentPlayer
+  match: MatchData
 }>()
 
 const open = shallowRef<boolean>(false)
@@ -90,7 +92,7 @@ const groups = [{
       </div>
     </div>
   </div>
-  <div class="group/head light:bg-tint-b2/40 sticky top-0 z-3 grid w-full grid-flow-col grid-cols-[116px_repeat(10,54px)] overflow-hidden py-1 dark:bg-b2/60">
+  <div class="group/head sticky top-0 z-3 grid w-full grid-flow-col grid-cols-[116px_repeat(10,54px)] overflow-hidden py-1 dark:bg-b2/60 light:bg-tint-b2/40">
     <div
       v-for="p, i in match.participants"
       :key="p.puuid"
@@ -114,7 +116,7 @@ const groups = [{
 
     <div
       class="
-            sticky! top-19 left-0 z-2 -mr-4 mb-0.5 -ml-2 inline-flex w-full items-center justify-between gap-2 bg-tint-b3/30 py-1 pr-2 pl-2 leading-5 font-semibold text-nowrap capitalize
+            sticky! top-19 left-0 z-2 -mr-4 mb-0.5 -ml-2 inline-flex w-full items-center justify-between gap-2 bg-tint-b3/30 px-2 py-1 leading-5 font-semibold text-nowrap capitalize
           ">
       {{ group.name }}
     </div>
@@ -122,21 +124,19 @@ const groups = [{
     <!-- collapsible stats -->
 
     <div
-      v-for="row, ix in match.player[group.name]"
-      :key="ix"
+      v-for="[k, v] in Object.entries(matchStatRegistry).filter(s => s[1].group === group.name)"
+      :key="k"
       class="group/row z-auto h-fit w-full">
       <Collapsible
-        v-if="row && row.expandable"
+        v-if="k && k === 'kills'"
         v-model:open="open"
         class="h-fit w-full">
         <!-- trigger -->
         <CollapsibleTrigger as-child>
           <MatchPlayerStatRow
-            :key="ix"
+            :key="k"
             :match
-            :stat="row.value"
-            :ix
-            :group="group.name">
+            :stat="[k, v]">
             <Icon
               name="up"
               :class="cn('transition-rotate size-4 duration-200', { '-rotate-180': open })" />
@@ -145,25 +145,21 @@ const groups = [{
 
         <!-- content -->
         <CollapsibleContent
-          class="grid h-fit w-fit auto-rows-max overflow-hidden border border-b3 bg-b3/30">
+          class="grid size-fit auto-rows-max overflow-hidden border border-b3 bg-b3/30">
           <MatchPlayerStatRow
-            v-for="stat, i in row.stats"
-            :key="i"
-            :sub-stat="true"
+            v-for="[k2, v2] in Object.entries(matchStatRegistry).filter(s => s[1].group === 'kills')"
+            :key="k2"
             :match
-            :ix="i"
-            :stat />
+            :stat="[k2, v2]" />
         </CollapsibleContent>
       </Collapsible>
 
       <!-- regular stats -->
       <MatchPlayerStatRow
         v-else
-        :key="ix"
+        :key="k"
         :match
-        :stat="row"
-        :ix
-        :group="group.name" />
+        :stat="[k, v]" />
     </div>
   </div>
 </template>

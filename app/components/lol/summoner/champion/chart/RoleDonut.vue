@@ -47,5 +47,3 @@ const data = computed(() => {
       :style="{ color: `var(--color-${roles?.mostPlayed})` }" />
   </div>
 </template>
-
-<style></style>

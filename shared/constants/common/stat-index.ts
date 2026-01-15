@@ -30,6 +30,8 @@ export const statIndex: Record<string, StatIndex> = {
   healAndShieldPower: {
     id: "healAndShieldPower",
     name: "Heal & Shield Power",
+
+    abbr: "Heal & Shield",
     key: "HSP",
     color: "var(--color-enchanter)",
     description: "",
@@ -126,7 +128,6 @@ export const statIndex: Record<string, StatIndex> = {
   healthRegen: {
     id: "healthRegen",
     name: "Health Regen",
-    abbr: "HP ∕ 5",
     key: "HP/5",
     color: "var(--color-resolve)",
     description: "",
@@ -144,8 +145,7 @@ export const statIndex: Record<string, StatIndex> = {
   manaRegen: {
     id: "manaRegen",
     name: "Mana Regen",
-    abbr: "Mana ∕ 5",
-    key: "MP ∕ 5",
+    key: "MP/5",
     color: "var(--color-inspiration)",
     description: "",
     group: "basic",
@@ -213,7 +213,7 @@ export const statIndex: Record<string, StatIndex> = {
   flatMagicPenetration: {
     id: "flatMagicPenetration",
     name: "Flat Magic Penetration",
-    abbr: "Magic Pen.",
+    abbr: "Magic Pen",
     key: "MPEN",
     color: "var(--color-mpen)",
     description: "",
@@ -221,7 +221,7 @@ export const statIndex: Record<string, StatIndex> = {
   },
   flatMovespeed: {
     id: "flatMovespeed",
-    name: "Base Movespeed",
+    name: "Base MS",
     key: "MS",
     color: "var(--color-white-70)",
     description: "",

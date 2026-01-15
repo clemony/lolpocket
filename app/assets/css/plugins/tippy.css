@@ -6,7 +6,7 @@
 @import "tippy.js/animations/shift-toward.css";
 
 @utility tippy-box {
-  @apply !z-70 grid w-auto max-w-80 rounded-lg border p-0 shadow-md drop-shadow-[1px_1px_2px_#0000006] backdrop-blur-md;
+  @apply !z-70 grid w-auto rounded-xl border p-0 shadow-md drop-shadow-[1px_1px_2px_#0000006] backdrop-blur-md;
 
   .tippy-content {
     @apply z-1! w-full rounded-lg;

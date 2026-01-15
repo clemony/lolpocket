@@ -43,9 +43,6 @@
     "Tabular", SFMono-Regular, ui-monospace, "Liberation Mono", "Courier New",
     Consolas, Menlo, Monaco, monospace;
 
-  --spacing-mw: calc(100vw - 45px);
-  --spacing-mh: calc(100vh - 45px);
-  --spacing-header: 45px;
   --radius-xl: initial;
   --radius-xl: 0.7rem;
   --radius-xxl: 0.75rem;
@@ -59,7 +56,6 @@
   --radius-box: 1rem;
   --depth: 1;
   --noise: 1;
-  --height-header: 40px;
 
   --text-*: initial;
   --text-00: 0.78rem;

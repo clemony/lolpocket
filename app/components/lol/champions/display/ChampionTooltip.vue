@@ -58,22 +58,12 @@ const position = computed(() =>
             :title="`Official LoL Wiki - ${item.name}`"
 
             target="_blank"
-            :href="getWikiLink(item.name)">
+            :href="wikiLink(item.name)">
             <img
               src="/img/logos/wiki.webp"
               alt="wiki"
               class="size-5 shrink-0 rounded-sm" />
           </a>
-          <!-- role -->
-          <!--   <div
-            class=" z-0 flex items-center gap-1 ">
-            <RoleIcon
-              :position="position.name"
-              class="position-badge-content   !size-5 self-center" />
-            <span class=" position-badge-content color-badge-content font-semibold contrast-125">
-              {{ position.name }}
-            </span>
-          </div> -->
         </div>
 
         <span class="grow text-2 font-normal text-nc/60 italic">
@@ -93,12 +83,3 @@ const position = computed(() =>
     </div>
   </div>
 </template>
-
-<style>
-.position-badge-content {
-  color: var(--position-color);
-  * {
-    color: var(--position-color);
-  }
-}
-</style>

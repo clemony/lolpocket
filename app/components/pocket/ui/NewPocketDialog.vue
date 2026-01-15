@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { generateName } from '~~/shared'
+
 const emit = defineEmits(['update:name'])
 
 // Form fields
@@ -60,7 +62,7 @@ defineExpose({
 
         <div
           class="
-            flex h-full w-full flex-col justify-start gap-6 px-0.5 pt-4
+            flex size-full flex-col justify-start gap-6 px-0.5 pt-4
             [&_label]:text-3
           ">
           <div class="flex flex-col gap-1">

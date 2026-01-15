@@ -6,12 +6,17 @@ defineOptions({
 })
 
 const { match } = defineProps<{
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 
 const modelValue = ref<string>('Scoreboard')
 
 const tabs = {
+  //
+  Build: {
+    name: 'Build',
+    component: MatchBuild,
+  },
   Scoreboard: {
     name: 'Scoreboard',
     component: MatchScoreboard,
@@ -19,11 +24,6 @@ const tabs = {
   Statistics: {
     name: 'Statistics',
     component: MatchDataTable,
-  },
-  //
-  Build: {
-    name: 'Build',
-    component: MatchBuild,
   },
 }
 
@@ -45,7 +45,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
           :key="i">
           <FileTabTrigger
             :value="tab.name"
-            class="on:field-box e on:light:bg-tint-b2/60 z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-b1/1">
+            class="on:field-box e z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-b1/1 on:light:bg-tint-b2/60">
             {{ tab.name }}
           </FileTabTrigger>
         </template>
@@ -53,7 +53,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
       </FileTabsList>
 
       <div
-        :class="cn('tabs-content field-box cursor-default relative m-0! size-full h-196 max-h-196 min-h-full overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
+        :class="cn('field-box tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"

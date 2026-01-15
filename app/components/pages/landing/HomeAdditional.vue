@@ -85,7 +85,7 @@ const data = [
           </div>
 
           <p
-            class="text-4 leading-loose font-light text-pretty text-nc"
+            class="text-4/loose font-light text-pretty text-nc"
             v-html="item.text" />
         </motion.div>
       </div>
@@ -94,5 +94,3 @@ const data = [
     <div class="wp-17% min-w-32 shrink" />
   </div>
 </template>
-
-<style></style>

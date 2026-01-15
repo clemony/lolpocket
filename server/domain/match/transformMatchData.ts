@@ -1,14 +1,18 @@
 export function transformMatchData(raw: any): MatchData {
-  /*   const teamHealingAndShielding = {
-    100: raw.info.participants
-      .filter((p) => p.teamId === 100)
-      .map((p) => p.challenges.effectiveHealAndShielding)
-      .reduce((sum, ehsp) => sum + ehsp, 0),
-    200: raw.info.participants
-      .filter((p) => p.teamId === 200)
-      .map((p) => p.challenges.effectiveHealAndShielding)
-      .reduce((sum, ehsp) => sum + ehsp, 0),
-  } */
+  function teamTotal(sKey: string, teamId: number): number {
+    return raw.info.participants
+      .filter((p) => p.teamId === teamId)
+      .map((p) => p[sKey])
+      .reduce((s, v) => s + v, 0)
+  }
+  const teamGold = {
+    100: teamTotal("goldEarned", 100),
+    200: teamTotal("goldEarned", 200),
+  }
+  const teamVision = {
+    100: teamTotal("visionScore", 100),
+    200: teamTotal("visionScore", 200),
+  }
 
   const participants: Player[] = raw.info.participants.map(
     (p: any): Player => ({
@@ -19,20 +23,15 @@ export function transformMatchData(raw: any): MatchData {
       teamId: p.teamId,
       role: p.teamPosition.toLowerCase().replace("utility", "support"),
       championId: p.championId,
-      //
-      stats: {
-        champLevel: p.champLevel,
-        kills: p.kills,
-        deaths: p.deaths,
-        assists: p.assists,
-        kda: p.challenges?.kda ?? 0,
-        kp: p.challenges?.killParticipation ?? 0,
-        timeSpentDead: p.totalTimeSpentDead ?? "",
-        // placeholder, will overwrite after MVP calculation
-        mvpScore: 0,
+
+      // placeholder, will overwrite after MVP calculation
+      lpScore: {
+        rank: 0,
+        score: 0,
+        ace: false,
+        mvp: false,
       },
 
-      //
       items: {
         role: p.roleBoundItem ?? 0,
         slots: [
@@ -46,7 +45,6 @@ export function transformMatchData(raw: any): MatchData {
         trinket: p.item6 ?? 0,
       },
 
-      //
       runes: {
         keystone: p.perks?.styles?.[0]?.selections?.[0]?.perk ?? 0,
         primary: {
@@ -71,59 +69,61 @@ export function transformMatchData(raw: any): MatchData {
         ],
       },
 
-      //
       spells: [p.summoner1Id ?? 0, p.summoner2Id ?? 0],
 
-      //
-      offense: {
+      //stats
+      stats: {
+        champLevel: p.champLevel,
+        kills: p.kills,
+        deaths: p.deaths,
+        assists: p.assists,
+        kda: roundDecimal(p.challenges?.kda) ?? 0,
+        kp: roundDecimalToPercent(p.challenges?.killParticipation, 1) ?? 0,
+        timeSpentDead: p.totalTimeSpentDead ?? "",
+
+        //offense
         totalDamage: p.totalDamageDealtToChampions ?? 0,
         damagePercentage:
-          Math.round(p.challenges?.teamDamagePercentage * 1000) / 10,
+          roundDecimalToPercent(p.challenges?.teamDamagePercentage, 1) ?? 0,
         sprees: p.challenges?.killingSprees ?? 0,
-        damagePerMin: p.challenges.damagePerMinute ?? 0,
+        damagePerMin: roundDecimal(p.challenges.damagePerMinute) ?? 0,
         firstBloodAssist: p.challenges.firstBloodAssist ?? false,
         firstBloodKill: p.challenges.firstBloodKill ?? false,
-        multiKills: {
-          doubleKills: p.doubleKills ?? 0,
-          tripleKills: p.tripleKills ?? 0,
-          quadraKills: p.quadraKills ?? 0,
-          pentaKills: p.pentaKills ?? 0,
-        },
-      },
+        doubleKills: p.doubleKills ?? 0,
+        tripleKills: p.tripleKills ?? 0,
+        quadraKills: p.quadraKills ?? 0,
+        pentaKills: p.pentaKills ?? 0,
 
-      //
-      defense: {
+        //defense
         totalDamageTaken: p.totalDamageTaken ?? 0,
         damageTakenPercentage:
-          Math.round(p.challenges?.damageTakenOnTeamPercentage * 1000) / 10,
+          roundDecimalToPercent(p.challenges?.damageTakenOnTeamPercentage, 1) ??
+          0,
         damageSelfMitigated: p.damageSelfMitigated ?? 0,
         ccDuration: p.timeCCingOthers ?? 0,
-      },
 
-      //
-      utility: {
+        //utility
         effectiveHealingAndShielding:
           Math.round(p.challenges?.effectiveHealAndShielding) ?? 0,
         totalAllyHealing: p.totalHealsOnTeammates ?? 0,
         totalAllyShielding: p.totalDamageShieldedOnTeammates ?? 0,
         allySaves: p.challenges?.saveAllyFromDeath ?? 0,
-      },
 
-      //
-      farming: {
+        //farming
         goldEarned: p.goldEarned ?? 0,
-        goldPerMin: p.challenges.goldPerMinute ?? 0,
+        goldPerMin: roundDecimal(p.challenges.goldPerMinute) ?? 0,
+        goldShare: roundDecimalToPercent(p.goldEarned, teamGold[p.teamId]) ?? 0,
         minionsKilled: p.totalMinionsKilled ?? 0,
         neutralMinionsKilled: p.neutralMinionsKilled,
         turretsKilled: p.turretKills ?? 0,
         objectivesStolen: p.objectivesStolen ?? 0,
         firstTowerAssist: p.challenges.firstTowerAssist ?? 0,
         firstTowerKill: p.challenges.firstTowerKill ?? 0,
-      },
 
-      //
-      vision: {
+        //vision
         visionScore: p.visionScore ?? 0,
+        visionShare:
+          roundDecimalToPercent(p.visionScore, teamVision[p.teamId]) ?? 0,
         wardsKilled: p.wardsKilled ?? 0,
         wardsPlaced: p.wardsPlaced ?? 0,
         controlWardsPlaced: p.challenges?.controlWardsPlaced ?? 0,
@@ -154,7 +154,7 @@ getTakedownsInAllLanesEarlyJungleAsLaner
 
   // inject mvp into player
   for (const participant of participants) {
-    participant.stats.mvpScore = mvpScores[participant.puuid] ?? 0
+    participant.lpScore.score = mvpScores[participant.puuid] ?? 0
   }
 
   // continue mapping
@@ -166,10 +166,11 @@ getTakedownsInAllLanesEarlyJungleAsLaner
     const tp = raw.info.participants.filter((p) => p.teamId === team.teamId)
 
     return {
-      assists: teamParticipants.reduce((sum, p) => sum + p.stats.assists, 0),
-      deaths: teamParticipants.reduce((sum, p) => sum + p.stats.deaths, 0),
-      gold: teamParticipants.reduce((sum, p) => sum + p.farming.goldEarned, 0),
-      kills: teamParticipants.reduce((sum, p) => sum + p.stats.kills, 0),
+      assists:
+        teamParticipants.reduce((sum, p) => sum + p.stats.assists, 0) ?? 0,
+      deaths: teamParticipants.reduce((sum, p) => sum + p.stats.deaths, 0) ?? 0,
+      kills: teamParticipants.reduce((sum, p) => sum + p.stats.kills, 0) ?? 0,
+      gold: teamGold[team.teamId] ?? 0,
 
       baron: team.objectives?.baron.kills ?? 0,
       elder: tp[0].challenges.teamElderDragonKills ?? 0,
@@ -180,16 +181,15 @@ getTakedownsInAllLanesEarlyJungleAsLaner
       tower: team.objectives?.tower.kills ?? 0,
 
       bans: team.bans.map((b) => b.championId ?? 0),
-      teamId: team.teamId,
-      win: team.win,
+      teamId: team.teamId ?? 0,
+      win: team.win ?? false,
     }
   })
 
   return {
-    endOfGameResult: raw.info.endOfGameResult,
     gameDuration: raw.info.gameDuration,
     gameEndTimestamp: raw.info.gameEndTimestamp,
-    gamePatch: raw.info.gameVersion,
+    gamePatch: normalizePatch(raw.info.gameVersion),
     matchId: raw.metadata.matchId,
     participantIds: raw.metadata.participants,
     participants,

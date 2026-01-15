@@ -55,7 +55,7 @@ const champ = computed (() => {
             v-if="id"
             :title="`Official LoL Wiki - ${champ}`"
             target="_blank"
-            :href="getWikiLink(champ)">
+            :href="wikiLink(champ)">
             <img
               src="/img/logos/wiki.webp"
               alt="wiki"

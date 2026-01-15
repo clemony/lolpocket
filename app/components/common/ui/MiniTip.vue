@@ -11,6 +11,7 @@ const { id, name, class: className, icon, label, size, tag, text, value } = defi
   text?: string | string[]
   size?: 'default' | 'md' | 'lg'
   class?: HTMLAttributes['class']
+  map?: string
 }>()
 
 const color = computed (() => label === 'item' ? itemColorByTier(Number(id)) : 'var(--color-nc)')
@@ -60,6 +61,7 @@ function iconSource(type: string, id: string) {
         :is="labelIndex[label]"
         :id="label === 'ability' ? id : parseFloat(id)"
         :name
+        :map="parseFloat(map)"
         :value
         :text />
       <template #fallback>

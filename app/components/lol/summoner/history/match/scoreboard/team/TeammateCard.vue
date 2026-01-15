@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { match, player } = defineProps<{
   player: Player
-  match: MatchDataCurrentPlayer
+  match: MatchData
 }>()
 
 const bars = computed (() => {
@@ -9,23 +9,23 @@ const bars = computed (() => {
     {
       color: 'domination',
       icon: ['lol:scoreboard-sword', '-translate-y-px size-4 opacity-100'],
-      max: match.participants.map(p => p.offense.totalDamage).sort((a, b) => (b - a))[0],
+      max: match.participants.map(p => p.stats.totalDamage).sort((a, b) => (b - a))[0],
       tip: 'Total Damage Dealt to Champions',
-      value: player.offense.totalDamage
+      value: player.stats.totalDamage
     },
     {
       color: 'precision',
       icon: ['stat:armor'],
-      max: match.participants.map(p => p.defense.totalDamageTaken).sort((a, b) => (b - a))[0],
+      max: match.participants.map(p => p.stats.totalDamageTaken).sort((a, b) => (b - a))[0],
       tip: 'Total Damage Taken by Champions',
-      value: player.defense.totalDamageTaken
+      value: player.stats.totalDamageTaken
     },
     {
       color: 'resolve',
       icon: ['stat:health'],
-      max: match.participants.map(p => p.utility.effectiveHealingAndShielding).sort((a, b) => (b - a))[0],
+      max: match.participants.map(p => p.stats.effectiveHealingAndShielding).sort((a, b) => (b - a))[0],
       tip: 'Effective Healing & Shielding',
-      value: player.utility.effectiveHealingAndShielding
+      value: player.stats.effectiveHealingAndShielding
     },
   ]
 })
@@ -75,7 +75,7 @@ const bars = computed (() => {
           :match
           :player />
         <span class="text-1 opacity-50">
-          {{ roundDecimal(player.stats.mvpScore) }}
+          {{ player.lpScore }}
         </span>
       </div>
     </div>
@@ -111,29 +111,29 @@ const bars = computed (() => {
       <!-- gold -->
 
       <label
-        :data-tip="`Total CS: ${(player.farming.minionsKilled + player.farming.neutralMinionsKilled).toLocaleString()}
-        Minions: ${player.farming.minionsKilled}
-        Neutral monsters: ${player.farming.neutralMinionsKilled}
-        CS/min: ${roundDecimal(((player.farming.minionsKilled + player.farming.neutralMinionsKilled) / msToMin(match.gameDuration)))}`"
+        :data-tip="`Total CS: ${(player.stats.minionsKilled + player.stats.neutralMinionsKilled).toLocaleString()}
+        Minions: ${player.stats.minionsKilled}
+        Neutral monsters: ${player.stats.neutralMinionsKilled}
+        CS/min: ${roundDecimal(((player.stats.minionsKilled + player.stats.neutralMinionsKilled) / msToMin(match.gameDuration)))}`"
         class="text-badge-xs">
         <Icons
           size="c-3.5"
           name="lol:minion"
           class="size-3.5 opacity-85" />
 
-        <span class="hidden @min-700:flex">{{ player.farming.minionsKilled + player.farming.neutralMinionsKilled }}</span>
+        <span class="hidden @min-700:flex">{{ player.stats.minionsKilled + player.stats.neutralMinionsKilled }}</span>
       </label>
 
       <label
-        :data-tip="`Total gold earned: ${player.farming.goldEarned.toLocaleString()}
-        Gold/min: ${player.farming.goldPerMin}`"
+        :data-tip="`Total gold earned: ${player.stats.goldEarned.toLocaleString()}
+        Gold/min: ${player.stats.goldPerMin}`"
         class="text-badge-xs align-baseline">
         <Icons
           size="c-3.5"
           name="lol:gold"
           class="inline size-3.25 translate-y-px opacity-75" />
 
-        <span class="hidden @min-700:flex">{{ roundDecimal(player.farming.goldEarned / 1000) }}k</span>
+        <span class="hidden @min-700:flex">{{ roundDecimal(player.stats.goldEarned / 1000) }}k</span>
       </label>
     </div>
 

@@ -73,15 +73,3 @@ function onSpill(e: DraggableEvent) {
     </TransitionScalePop>
   </div>
 </template>
-
-<style>
-.champion-card-ghost-class {
-  width: 170px;
-  min-width: 170px;
-  max-width: 170px;
-  border: 1px solid var(--color-b3);
-  height: calc(var(--spacing) * 36);
-  max-height: calc(var(--spacing) * 36);
-  overflow: hidden;
-}
-</style>

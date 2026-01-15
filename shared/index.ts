@@ -1,4 +1,5 @@
 export * from "./constants"
 export * from "./schema"
+export * from "./scripts/index"
 export * from "./types"
 export * from "./utils"

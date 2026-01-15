@@ -1,7 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .module-ghost {
-  @apply size-full bg-b2/20 rounded-xl inset-shadow-sm;
+  @apply size-full rounded-xl bg-b2/20 inset-shadow-sm;
 }
 
 .module-ghost::before {
@@ -9,9 +9,9 @@
 }
 
 .module-drag {
-  @apply w-full  !bg-transparent !opacity-97  border-transparent;
+  @apply w-full border-transparent !bg-transparent !opacity-97;
   .module-bg {
-    @apply bg-b1 border-b2 transition-all duration-300 shadow-smooth;
+    @apply border-b2 bg-b1 shadow-smooth transition-all duration-300;
   }
 }
 
@@ -21,7 +21,7 @@
 .item-set-ghost,
 .item-set-fallback,
 .item-set-chosen {
-  @apply border-b2 bg-b2/30  w-full h-fit cursor-pointer items-center gap-2  border opacity-70 shadow-xs rounded-box;
+  @apply h-fit w-full cursor-pointer items-center gap-2 rounded-box border border-b2 bg-b2/30 opacity-70 shadow-xs;
 }
 
 /* item set item */
@@ -40,20 +40,20 @@
 
 .draggable-icon-ghost,
 .draggable-icon-fallback {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+  @apply aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
 }
 
 .draggable-icon-fallback-80px,
 .draggable-icon-ghost-80px,
 .item-set-item-chosen-80px {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg !size-[78px];
+  @apply aspect-square !size-[78px] cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
 }
 /* spell set */
 
 .spell-set-ghost,
 .spell-set-drag,
 .spell-set-chosen {
-  @apply h-20 w-98 !bg-b2/40 rounded-box border-b3/60;
+  @apply h-20 w-98 rounded-box border-b3/60 !bg-b2/40;
 }
 
 /* role */
@@ -61,5 +61,15 @@
 .role-ghost,
 .role-drag,
 .role-chosen {
-  @apply h-8 max-h-8 min-w-26 max-w-32 bg-n1;
+  @apply h-8 max-h-8 max-w-32 min-w-26 bg-n1;
+}
+
+.champion-card-ghost-class {
+  width: 170px;
+  min-width: 170px;
+  max-width: 170px;
+  border: 1px solid var(--color-b3);
+  height: calc(var(--spacing) * 36);
+  max-height: calc(var(--spacing) * 36);
+  overflow: hidden;
 }

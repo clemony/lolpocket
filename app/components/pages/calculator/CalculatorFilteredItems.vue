@@ -23,5 +23,3 @@ const { filtered, filters, setFilter } = useItemFilter()
       @click="emit('update:item', item)"></Item>
   </PopoverClose>
 </template>
-
-<style></style>

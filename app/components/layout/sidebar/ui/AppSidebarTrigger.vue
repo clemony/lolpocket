@@ -47,14 +47,3 @@ watch(() => isHovered.value, (newVal) => {
     </AnimatePresence>
   </Teleport>
 </template>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.15s var(--spring);
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

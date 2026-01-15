@@ -2,7 +2,7 @@
 const { class: className, match, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 </script>
 
@@ -12,7 +12,7 @@ const { class: className, match, player } = defineProps<{
     <!-- kda -->
     <KDA
       :stats="player.stats"
-      class="h-6 text-start text-4 leading-5 font-bold" />
+      class="h-6 text-start text-4/5 font-bold" />
 
     <span class="label-class">
       {{ Math.round(player.stats.kp * 100) }}%&nbsp;

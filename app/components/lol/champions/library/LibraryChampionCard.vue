@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { hyphenateChampionName } from '~/domain/champions/utils'
+
 const { champKey, class: className } = defineProps<{
   class?: HTMLAttributes['class']
   champKey?: string

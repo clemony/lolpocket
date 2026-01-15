@@ -1,6 +1,7 @@
 import type { ClassValue } from "clsx"
 import { clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { useTippy, type TippyOptions } from "vue-tippy"
 
 export const tooltipPlacements = ["top", "bottom", "left", "right"]
 export const tooltipSizes = ["default", "md", "lg"]
@@ -101,4 +102,41 @@ export function createNoise(str: string) {
     h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)
   }
   return (h >>> 0) / 4294967295 // 0 → 1
+}
+
+export const tippyMenu = {
+  animation: "shift-toward",
+  duration: 150,
+  interactive: true,
+  offset: [0, 14] as any,
+  placement: "bottom",
+  trigger: "focus click",
+  hideOnClick: true,
+}
+
+export function getGreeting() {
+  const hour = new Date().getHours()
+
+  if (hour >= 5 && hour < 12) {
+    return {
+      greeting: "Good morning",
+      icon: "fluent-mdl2:partly-cloudy-day",
+    }
+  }
+  if (hour >= 12 && hour < 17) {
+    return {
+      greeting: "Good afternoon",
+      icon: "si:clear-day-line",
+    }
+  }
+  if (hour >= 17 && hour < 21) {
+    return {
+      greeting: "Good evening",
+      icon: "ph:sun-horizon",
+    }
+  }
+  return {
+    greeting: "Good night",
+    icon: "quill:moon",
+  }
 }

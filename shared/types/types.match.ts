@@ -1,5 +1,4 @@
 export interface MatchData {
-  endOfGameResult: string
   gameDuration: number
   gameEndTimestamp: number
   gamePatch: number
@@ -13,13 +12,6 @@ export interface MatchData {
   lastAccessedAt?: number
 }
 
-export interface MatchDataCurrentPlayer extends MatchData {
-  player: Player
-  mvp: string
-  ace: string
-  ranking: string[]
-}
-
 export interface Player {
   puuid: string
   name: string
@@ -28,65 +20,20 @@ export interface Player {
   teamId: number
   role: string
   championId: number
-  //
   stats: PlayerStats
-  //
+
   items: PlayerItems
   runes: PlayerRunes
   spells: [number, number]
-  //
-  offense: PlayerOffense
-  defense: PlayerDefense
-  utility: PlayerUtility
-  farming: PlayerFarming
-  vision: PlayerVision
+  lpScore: PlayerLpScore
   win: boolean | "remake"
 }
 
-export type PlayerOffense = {
-  totalDamage: number
-  damagePercentage: number
-  damagePerMin: number
-  firstBloodAssist: boolean
-  firstBloodKill: boolean
-  multiKills: {
-    tripleKills: number
-    doubleKills: number
-    quadraKills: number
-    pentaKills: number
-  }
-  sprees: number
-}
-
-export type PlayerUtility = {
-  effectiveHealingAndShielding: number
-  totalAllyHealing: number
-  totalAllyShielding: number
-  allySaves: number
-}
-
-export type PlayerDefense = {
-  totalDamageTaken: number
-  damageTakenPercentage: number
-  damageSelfMitigated: number
-  ccDuration: number
-}
-
-export type PlayerFarming = {
-  goldEarned: number
-  goldPerMin: number
-  minionsKilled: number
-  neutralMinionsKilled: number
-  turretsKilled: number
-  firstTowerAssist: boolean
-  firstTowerKill: boolean
-  objectivesStolen: number
-}
-export type PlayerVision = {
-  visionScore: number
-  wardsKilled: number
-  wardsPlaced: number
-  controlWardsPlaced: number
+export type PlayerLpScore = {
+  rank: number
+  score: number
+  ace: boolean
+  mvp: boolean
 }
 
 export type PlayerStats = {
@@ -97,7 +44,43 @@ export type PlayerStats = {
   kda: number
   kp: number
   timeSpentDead: number
-  mvpScore: number
+
+  totalDamage: number
+  damagePercentage: number
+  damagePerMin: number
+  firstBloodAssist: boolean
+  firstBloodKill: boolean
+  tripleKills: number
+  doubleKills: number
+  quadraKills: number
+  pentaKills: number
+  sprees: number
+
+  effectiveHealingAndShielding: number
+  totalAllyHealing: number
+  totalAllyShielding: number
+  allySaves: number
+
+  totalDamageTaken: number
+  damageTakenPercentage: number
+  damageSelfMitigated: number
+  ccDuration: number
+
+  goldEarned: number
+  goldPerMin: number
+  goldShare: number
+  minionsKilled: number
+  neutralMinionsKilled: number
+  turretsKilled: number
+  firstTowerAssist: boolean
+  firstTowerKill: boolean
+  objectivesStolen: number
+
+  visionScore: number
+  visionShare: number
+  wardsKilled: number
+  wardsPlaced: number
+  controlWardsPlaced: number
 }
 
 export interface PlayerRunes {

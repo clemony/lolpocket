@@ -3,13 +3,8 @@ const { filter, filteredMatches, matches, setFilter } = useSummonerInject()
 
 const blocks = computed(() => Math.round(matches.value.length / 20))
 const numberModel = computed({
-  get: () => filter.value.number,
-  set: val => setFilter('number', val),
-})
-
-watchEffect (() => {
-  if (!numberModel.value && filteredMatches.value.length)
-    setFilter('number', filteredMatches.value.length)
+  get: () => filter.value.amount,
+  set: val => setFilter('amount', val),
 })
 </script>
 
@@ -19,7 +14,7 @@ watchEffect (() => {
     :step="10"
     :step-snapping="false"
     as-child
-    @update:model-value="e => setFilter('number', e)">
+    @update:model-value="e => setFilter('amount', e)">
     <ButtonGroup
       orientation="horizontal"
       class="flex max-w-34 gap-0!">
@@ -28,6 +23,7 @@ watchEffect (() => {
         size="sq-8"
         variant="base" />
       <NumberFieldInput
+        class="text-2"
         variant="base"
         size="8" />
       <NumberFieldIncrement

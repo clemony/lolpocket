@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { match } = defineProps<{
-  match: MatchDataCurrentPlayer
+  match: Player
 }>()
 </script>
 
@@ -43,6 +43,7 @@ const { match } = defineProps<{
         v-for="item, i in match.player.items.slots"
         :id="item"
         :key="`${item}${i}`"
+        :map="match.mapId"
         size="sq-9"
         tip="bottom"
         :class="cn('img-active', {
@@ -55,6 +56,7 @@ const { match } = defineProps<{
         v-if="match.mapId === 11"
         :id="match.player.items.role"
         size="c-9"
+        :map="match.mapId"
         tip="bottom"
         :class="cn('img-active ml-2', {
           'no-img': !match.player.items.role,

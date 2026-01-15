@@ -167,5 +167,3 @@ function handleDelete() {
     </TransitionFade>
   </div>
 </template>
-
-<style></style>

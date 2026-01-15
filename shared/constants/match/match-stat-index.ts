@@ -1,45 +1,169 @@
-export const matchStatIndex = {
-  //stats
-  champLevel: "level",
-  kills: "kills",
-  killingSprees: "killing sprees",
-  doubleKills: "double kills",
-  tripleKills: "triple kills",
-  quadraKills: "quadra kills",
-  pentaKills: "pentakills",
+export type MatchStat = {
+  name: string
+  group: string
+  unit: string
+}
 
-  deaths: "deaths",
-  assists: "assists",
-  kda: "kda",
-  kp: "kill participation",
-  mvpScore: "LPx",
+export const matchStatRegistry: Record<string, MatchStat> = {
+  //stats
+  champLevel: {
+    name: "level",
+    group: "",
+    unit: "",
+  },
+  kills: {
+    name: "kills",
+    group: "",
+    unit: "",
+  },
+  deaths: {
+    name: "deaths",
+    group: "",
+    unit: "",
+  },
+  assists: {
+    name: "assists",
+    group: "",
+    unit: "",
+  },
+  kda: {
+    name: "kda",
+    group: "",
+    unit: "",
+  },
+  kp: {
+    name: "kill participation",
+    group: "",
+    unit: "%",
+  },
 
   // offense
-  totalDamage: "damage to champions",
-  damagePercentage: "Team damage percentage",
+  totalDamage: {
+    name: "damage to champions",
+    group: "offense",
+    unit: "",
+  },
+  damagePercentage: {
+    name: "Team damage percentage",
+    group: "offense",
+    unit: "%",
+  },
+  killingSprees: {
+    name: "killing sprees",
+    group: "offense",
+    unit: "",
+  },
+  doubleKills: {
+    name: "double kills",
+    group: "kills",
+    unit: "",
+  },
+  tripleKills: {
+    name: "triple kills",
+    group: "kills",
+    unit: "",
+  },
+  quadraKills: {
+    name: "quadra kills",
+    group: "kills",
+    unit: "",
+  },
+  pentaKills: {
+    name: "pentakills",
+    group: "kills",
+    unit: "",
+  },
 
   // defense
-  totalDamageTaken: "damage taken",
-  damageTakenPercentage: "Damage taken of team total",
-  damageSelfMitigated: "Damage self-mitigated",
-  ccDuration: "Crowd-control duration on enemies",
+  totalDamageTaken: {
+    name: "damage taken",
+    group: "defense",
+    unit: "",
+  },
+  damageTakenPercentage: {
+    name: "Damage taken of team total",
+    group: "defense",
+    unit: "%",
+  },
+  damageSelfMitigated: {
+    name: "Damage self-mitigated",
+    group: "defense",
+    unit: "",
+  },
+  ccDuration: {
+    name: "Crowd-control duration on enemies",
+    group: "defense",
+    unit: "s",
+  },
 
   // utility
-  effectiveHealingAndShielding: "effective healing and shielding",
-  totalAllyHealing: "ally healing",
-  totalAllyShielding: "ally shielding",
-  allySaves: "ally saves from death",
+  effectiveHealingAndShielding: {
+    name: "effective healing and shielding",
+    group: "utility",
+    unit: "",
+  },
+  totalAllyHealing: {
+    name: "ally healing",
+    group: "utility",
+    unit: "",
+  },
+  totalAllyShielding: {
+    name: "ally shielding",
+    group: "utility",
+    unit: "",
+  },
+  allySaves: {
+    name: "ally saves from death",
+    group: "utility",
+    unit: "",
+  },
 
   // farming
-  goldEarned: "gold earned",
-  minionsKilled: "minions killed",
-  neutralMinionsKilled: "monsters killed",
-  turretsKilled: "turrets killed",
-  objectivesStolen: "objectives stolen",
+  goldEarned: {
+    name: "gold earned",
+    group: "farming",
+    unit: "",
+  },
+  minionsKilled: {
+    name: "minions killed",
+    group: "farming",
+    unit: "",
+  },
+  neutralMinionsKilled: {
+    name: "monsters killed",
+    group: "farming",
+    unit: "",
+  },
+  turretsKilled: {
+    name: "turrets killed",
+    group: "farming",
+    unit: "",
+  },
+  objectivesStolen: {
+    name: "objectives stolen",
+    group: "farming",
+    unit: "",
+  },
 
   //vision
-  visionScore: "vision score",
-  wardsKilled: "wards killed",
-  wardsPlaced: "wards placed",
-  controlWardsPlaced: "control wards placed",
+  visionScore: {
+    name: "vision score",
+    group: "vision",
+    unit: "",
+  },
+  wardsKilled: {
+    name: "wards killed",
+    group: "vision",
+    unit: "",
+  },
+  wardsPlaced: {
+    name: "wards placed",
+    group: "vision",
+    unit: "",
+  },
+  controlWardsPlaced: {
+    name: "control wards placed",
+    group: "vision",
+    unit: "",
+  },
 }

@@ -30,15 +30,14 @@ const open = shallowRef<boolean>(false)
   <Popover v-model="open">
     <PopoverTrigger
       base="btn"
-      size="10"
-      class="w-full justify-start"
-      variant="base"
-      hover="secondary"
-      on="base">
+      size="sq-10"
+      on="inset"
+      hover="inset"
+      class="bg-transparent! duration-0! disabled:pointer-events-none">
       <icon
         name="calendar"
         class="size-4" />
-      <span class="grow text-start">
+      <!--       <span class="grow text-start">
 
         {{ date?.start || date?.end
           ? `${useDateFormat(date?.start.toString(), 'MMM D, YYYY').value || ''}
@@ -52,11 +51,11 @@ const open = shallowRef<boolean>(false)
       </span>
       <Icon
         name="select"
-        class="size-4 text-bc/40 group-hover/select:text-bc/90 group-on/select:text-bc/90" />
+        class="size-4 text-bc/40 group-hover/select:text-bc/90 group-on/select:text-bc/90" /> -->
     </PopoverTrigger>
     <LazyPopoverContent
       align="start"
-      class="grid w-fit rounded-xl! px-1 py-1"
+      class="grid w-fit rounded-xl! p-1"
       @interact-outside="open = false">
       <!--  -->
 

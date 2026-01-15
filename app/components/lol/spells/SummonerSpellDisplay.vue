@@ -29,7 +29,7 @@ const imgArr = [
 
 <template>
   <div
-    class="l flex h-auto items-center gap-2 border-b3 bg-b2 px-2 py-2 shadow-sm">
+    class="l flex h-auto items-center gap-2 border-b3 bg-b2 p-2 shadow-sm">
     <Popover>
       <PopoverTrigger class="">
         <!--       <img
@@ -77,5 +77,3 @@ const imgArr = [
     </Popover>
   </div>
 </template>
-
-<style></style>
