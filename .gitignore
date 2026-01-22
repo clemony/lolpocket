@@ -20,12 +20,8 @@ patch
 server/patch
 
 #notes
-*.no
-*.note
 .notes
 notes
-.notes/**
-*.notes
 **/📌*
 
 
@@ -39,9 +35,7 @@ notes
 
 
 # data folders
-
-/z/
-
+original
 d1
 
 #wrangler

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -22,11 +22,11 @@ onMounted(() => {
       class="rounded-md **:rounded-md" />
 
     <div class="flex flex-col gap-3">
-      <h5 class="pt-0.5 text-4! leading-none tracking-tight">
+      <h5 class="pt-0.5 text-lg! leading-none tracking-tight">
         New Pocket Created!
       </h5>
 
-      <p class="text-3 font-normal text-wrap">
+      <p class="text-md font-normal text-wrap">
         Pocket
         <span class="font-medium underline underline-offset-2">
           {{ pocket.name }}

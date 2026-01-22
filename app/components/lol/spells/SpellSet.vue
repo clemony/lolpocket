@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   set: object
@@ -26,7 +26,7 @@ function handleSpells(e, i) {
       v-for="(spell, i) in props.set"
       :key="i"
       :selected-spell="spell"
-      :class="cn('size-16 rounded-lg border border-b3/60', props.class)"
+      :class="cn('border-b3/60 size-16 rounded-lg border', props.class)"
       @update:spell="handleSpells($event, i)" />
 
     <Grow />
@@ -37,7 +37,7 @@ function handleSpells(e, i) {
       @click="removeSpellSet(pocket, props.set)">
       <icon
         name="trash"
-        class="size-5 shrink-0 text-bc/50 dst group-hover/btn:text-bc/100" />
+        class="text-bc/50 dst group-hover/btn:text-bc/100 size-5 shrink-0" />
     </button>
   </div>
 </template>

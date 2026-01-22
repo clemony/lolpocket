@@ -14,7 +14,7 @@ const { scrollTop } = useScrollInject()
 
 <template>
   <Button
-    data-tip="Top"
+    v-tooltip="'Top'"
     data-theme="neutral mini-tip line"
     :data-placement="placement"
     hover="neutral"

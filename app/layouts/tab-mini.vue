@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { champion, pocket, summonerState: ss } = defineProps<{
-  summonerState?: SummonerInject
+  summonerState?: SummonerApi
   pocket?: Pocket
   champion?: Champion
 }>()
@@ -17,7 +17,7 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : champio
     <!-- navbar -->
     <Navbar />
     <!-- sidebar -->
-    <AppSidebarTrigger />
+    <AppSidebar />
 
     <!-- bg -->
     <div class="absolute top-0 left-0 z-5 h-31 w-full overflow-hidden bg-b2/40" />

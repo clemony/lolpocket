@@ -41,8 +41,8 @@ const h1Visibility = {
     <div class="relative grid h-20 w-100 items-end">
       <motion.div
         class="
-          ws-nowrap relative flex h-full w-full origin-bottom-left items-center
-          font-bold drop-shadow-sm **:text-12
+          ws-nowrap relative flex size-full origin-bottom-left items-center
+          font-bold drop-shadow-sm **:text-6xl
         ">
         <h1>l</h1>
 
@@ -80,11 +80,11 @@ const h1Visibility = {
       :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }"
       class="grid w-140 shrink-0 space-y-3 justify-self-start text-bc">
       <div class="flex items-center gap-2 drop-shadow-sm">
-        <h1 class="text-9!">
+        <h1 class="text-5xl!">
           lolpocket
         </h1>
 
-        <span class="font-serif text-5 italic"> noun</span>
+        <span class="font-serif text-xl italic"> noun</span>
       </div>
 
       <p class="o mb-3 px-1">
@@ -92,7 +92,7 @@ const h1Visibility = {
       </p>
 
       <div
-        class="mt-6 flex flex-col gap-4 font-serif text-5 drop-shadow-sm">
+        class="mt-6 flex flex-col gap-4 font-serif text-xl drop-shadow-sm">
         <p class="">
           A pocket to store your League picks, builds, and theorycrafts.
         </p>
@@ -101,7 +101,7 @@ const h1Visibility = {
 
         <p>
           so you can focus on the
-          <span class="mt-4 ml-1 text-6 font-bold">win.</span>
+          <span class="text-xxl mt-4 ml-1 font-bold">win.</span>
         </p>
       </div>
 

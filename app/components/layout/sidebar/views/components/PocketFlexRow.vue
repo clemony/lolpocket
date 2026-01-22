@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { class: className, row } = defineProps<{
   class?: HTMLAttributes['class']
@@ -15,7 +15,7 @@ const route = useRoute()
     theme="base"
     tag="div"
     :class="
-      cn('group/p relative flex h-full max-h-22 min-h-22 flex-1 cursor-pointer items-center overflow-hidden rounded-lg shadow-sm shadow-black/8 drop-shadow-sm transition-all delay-50 duration-500 ease-in-out *:pointer-events-none hover:flex-[3]',
+      cn('group/p relative flex h-full max-h-22 min-h-22 flex-1 cursor-pointer items-center overflow-hidden rounded-lg shadow-sm shadow-black/8 drop-shadow-sm transition-all delay-50 duration-500 ease-in-out *:pointer-events-none hover:flex-3',
 
          //hover
          `
@@ -39,13 +39,13 @@ const route = useRoute()
     </AspectRatio>
     <div
       class="
-        absolute z-1 flex size-full items-end justify-start bg-neutral/70 p-1
-        text-start font-bold text-nc opacity-0 transition-opacity duration-300
+        bg-neutral/70 text-nc absolute z-1 flex size-full items-end justify-start
+        p-1 text-start font-bold opacity-0 transition-opacity duration-300
         group-hover/p:opacity-100
       ">
       <icon
         name="open"
-        class="absolute top-1.5 right-1.5 text-nc" />
+        class="text-nc absolute top-1.5 right-1.5" />
       <span class="absolute w-full truncate px-1">
         {{ pocket.name }}
       </span>

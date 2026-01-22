@@ -1,4 +1,4 @@
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 export function handleRoles(pocket: Pocket, role?: string) {
   if (!pocket.roles)

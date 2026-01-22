@@ -1,6 +1,6 @@
 // CHAMPS
 
-import { newRuneSet } from '~~/shared/schema'
+import { newRuneSet } from '@types'
 
 export function removeChampion(champion, pocket) {
   const find = pocket.champions.findIndex(c => c === champion)

@@ -14,7 +14,7 @@ const { class: className, imgClass, player } = defineProps<{
       v-for="spell in player?.spells"
       :key="spell"
       :data-id="spell"
-      data-tip="spell">
+      data-type="spell">
       <img
         :alt="String(spell)"
         :src="`/img/spells/${spell}.webp`"

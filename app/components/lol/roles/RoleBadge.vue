@@ -24,7 +24,7 @@ const role = computed(() => {
     :size
     :class="
       cn(
-        'w-fit pr-6 pl-4 text-2! font-medium! text-bc/90 capitalize',
+        'w-fit pr-6 pl-4 text-sm! font-medium! text-bc/90 capitalize',
         {
           'hover:**:text-bc hover:text-bc order-first text-white':
             active || (cs().filters.role && cs().filters.role === role.name),

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { addSpellSet } from '#shared/schema'
+import { addSpellSet } from '@types'
 
 const route = useRoute()
 const pocket = computed(() =>

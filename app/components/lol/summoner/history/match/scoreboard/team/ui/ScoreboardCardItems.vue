@@ -49,7 +49,7 @@ const { class: className, isSR, player } = defineProps<{
         <!-- vision -->
         <span
           class="absolute -top-0.5 -right-0.5 badge origin-left badge-neutral bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent backdrop-blur-sm *:rounded-full"
-          :data-tip="`Vision Score - ${player.stats.visionScore}
+          :data-type="`Vision Score - ${player.stats.visionScore}
                 ${player.stats.wardsPlaced} wards placed
                 ${player.stats.controlWardsPlaced} control wards placed
                 ${player.stats.wardsKilled} wards destroyed`">

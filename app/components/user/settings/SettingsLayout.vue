@@ -9,12 +9,12 @@ const route = useRoute()
 <template>
   <article class="w-full space-y-8">
     <header>
-      <h3 class="text-7 font-semibold capitalize dst">
+      <h3 class="text-3xl font-semibold capitalize dst">
         {{ title || route.meta?.title || route.name }}
       </h3>
       <p
         v-if="route.meta?.description"
-        class="text-3 leading-8 opacity-60">
+        class="text-md/8 opacity-60">
         {{ description || route.meta?.description }}
       </p>
       <Separator class="my-4" />

@@ -10,7 +10,7 @@ const { from, gold } = defineProps<{
     v-if="from"
     class="mt-1">
     <div
-      class="divider divider-start text-0! after:h-px">
+      class="divider divider-start text-xxs! after:h-px">
       RECIPE
     </div>
 
@@ -29,7 +29,7 @@ const { from, gold } = defineProps<{
 
         <icon
           v-if="i !== from.length - 1"
-          name="dashicons:plus"
+          name="dasIcons:plus"
           class="size-3.5 opacity-80" />
       </div>
 
@@ -37,7 +37,7 @@ const { from, gold } = defineProps<{
         v-if="gold"
         class="flex items-center">
         <icon
-          name="dashicons:plus"
+          name="dasIcons:plus"
           class="size-3.5 opacity-80" />
 
         <img

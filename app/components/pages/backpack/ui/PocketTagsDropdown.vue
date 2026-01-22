@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import Fuse from 'fuse.js'
 
 const { class: className, pocket: p } = defineProps<{
@@ -62,7 +62,7 @@ watch(
           v-model="newTag"
           placeholder="attach new tag"
           class="
-            h-10 w-full pr-4 text-2 transition-all duration-200
+            h-10 w-full pr-4 text-sm transition-all duration-200
             placeholder:italic focus:placeholder:opacity-0
           "
           @keydown.stop
@@ -81,8 +81,8 @@ watch(
           variant="ghost"
           size="8"
           class="
-            absolute top-2.5 right-1 btn-square size-6 shrink-0 opacity-100
-            group-has-[:placeholder-shown]:opacity-0
+            btn-square absolute top-2.5 right-1 size-6 shrink-0 opacity-100
+            group-has-placeholder-shown:opacity-0
           "
           @click="newTag = ''">
           <icon
@@ -110,12 +110,12 @@ watch(
             type="checkbox"
             :checked="pocket.tags.includes(item)"
             class="
-              checkbox checkbox-sm checkbox-neutral shadow-xs drop-shadow-xs
-              checked:bg-neutral/80
+              checkbox checkbox-sm checkbox-neutral checked:bg-neutral/80 shadow-xs
+              drop-shadow-xs
             " />
           <icon
             name="hash"
-            class="size-3.75! text-bc/80" />
+            class="text-bc/80 size-3.75!" />
           <span class="-ml-2.5 w-full truncate">
             {{ item }}
           </span>
@@ -126,7 +126,7 @@ watch(
           class="grid w-full place-items-center py-6">
           <div class="w-fit justify-start space-y-1">
             <p class="flex items-center gap-3">
-              <span class="badge border-b4/80 text-1 shadow-sm drop-shadow-xs">
+              <span class="badge border-b4/80 text-xs shadow-sm drop-shadow-xs">
                 ENTER
               </span>
               to

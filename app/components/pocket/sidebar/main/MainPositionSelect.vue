@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 
@@ -54,7 +54,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
                 (p) => p.name === pocket?._role,
               ).color,
             }"
-            class="absolute z-2 size-7! dst" />
+            class="dst absolute z-2 size-7!" />
         </div>
         <!--
         <icon
@@ -69,7 +69,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
+      class="w-(--reka-select-trigger-width) min-w-54 p-0">
       <div class="flex items-center gap-3 p-2">
         <component
           :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
@@ -77,7 +77,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
             color: championPositions.find((p) => p.name === pocket?._role)
               .color,
           }"
-          class="size-6! dst" />
+          class="dst size-6!" />
         <h3
           v-memo="[pocket._role]"
           :class="

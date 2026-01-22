@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 defineOptions({
   inheritAttrs: false,
@@ -28,15 +28,15 @@ function handleRemove() {
       <CarouselItem class="group/all relative h-30 overflow-hidden p-1.5">
         <PopoverTrigger
           class="
-            embla__slide group/wrap grid size-full shrink-0 place-items-center
-            rounded-lg ring-bc/60 ring-offset-b1 transition-all duration-100
+            embla__slide group/wrap ring-bc/60 ring-offset-b1 grid size-full
+            shrink-0 place-items-center rounded-lg transition-all duration-100
             *:last:pointer-events-none open:ring open:ring-offset-3 hover:ring
             focus:ring focus:ring-offset-2 focus:*:last:pointer-events-auto
           ">
           <div
             :class="
               cn('group embla__slide pointer-events-none relative z-0 grid size-full shrink-0 place-items-center overflow-hidden rounded-lg border-0 p-0 shadow-sm shadow-black/15 drop-shadow-sm',
-                `
+                 `
                   after:pointer-events-none after:absolute after:inset-0
                   after:z-2 after:bg-radial-[at_75%_25%] after:from-transparent
                   after:from-45% after:to-black/70
@@ -78,7 +78,7 @@ function handleRemove() {
             type="checkbox"
             :value="champion.key"
             class="peer hidden" />
-          <h1 class="font-bold dss">
+          <h1 class="dss font-bold">
             {{ champion.name }}
           </h1>
 

@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <div
-    :class="cn('sticky inset-y-0 -top-20 grid h-fit max-h-dvh w-110 origin-top auto-rows-max items-start gap-8 overflow-y-auto px-1 pt-2 *:w-108', className)">
+    :class="cn('inset-y-0 grid h-fit max-h-dvh w-110 max-w-110 origin-top auto-rows-max items-start gap-8 overflow-y-auto px-1 pt-2 *:w-108', className)">
     <RankCard
       v-if="as().settings?.show_solo"
       title="Solo/Duo"

@@ -30,7 +30,7 @@ watch(
 <template>
   <label
     :data-id="id"
-    :data-tip="noTip ? null : 'rune' "
+    :data-type="noTip ? null : 'rune' "
     :data-size="noTip ? null : dataSize"
     :data-interactive="dataSize === 'lg' ? true : false"
     :class="

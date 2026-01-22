@@ -1,4 +1,4 @@
-import type { MatchReturn } from "~~/shared"
+import type { MatchReturn } from "@constants"
 
 export function useMatches(
   summoner: Ref<Summoner | null>,
@@ -9,8 +9,8 @@ export function useMatches(
   const { getMatchesForSummoner, getCursor, setCursor, putMatchData } =
     useIndexedDB()
 
-  const puuid = computed(() => summoner.value?.puuid ?? null)
-  const region = computed(() => summoner.value?.region ?? null)
+  const puuid = computed(() => toValue(summoner)?.puuid ?? null)
+  const region = computed(() => toValue(summoner)?.region ?? null)
 
   const matches = shallowRef<MatchData[]>([])
   const loading = shallowRef(false)
@@ -19,6 +19,7 @@ export function useMatches(
 
   const cursor = shallowRef<number>(0)
   const newestTs = shallowRef<number | null>(null)
+  const loadMessage = shallowRef<string>()
 
   async function loadFromDB() {
     const id = puuid.value
@@ -32,7 +33,7 @@ export function useMatches(
     cursor.value = storedCursor.lastIndex
   }
 
-  async function loadNewer() {
+  async function loadNewer(): Promise<string> {
     const id = puuid.value
     const r = region.value
     if (!id || !r || loading.value) return
@@ -54,14 +55,16 @@ export function useMatches(
         await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
         newestTs.value = res.newestTimestamp
+        loadMessage.value = `Loaded ${res.matches.length} new matches!`
+      } else if (!res.matches.length) {
+        loadMessage.value = "No new matches found!"
       }
-
       if (res.cursor != null) {
         cursor.value = res.cursor
         await setCursor(id, cursor.value)
       }
 
-      if (summoner.value) summoner.value.updatedMatch = Date.now()
+      ss().patchSummoner(id, { lastMatchUpdate: Date.now() })
     } finally {
       loading.value = false
     }
@@ -124,5 +127,6 @@ export function useMatches(
     refreshLocal: loadFromDB,
     endOfHistory,
     cursor,
+    loadMessage,
   }
 }

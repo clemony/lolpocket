@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Virtualizer, VList } from 'virtua/vue'
-import { toast, } from '~/composables/utils/useToast'
 import { heyGoodJob } from '~/domain/lp/ui/good-job'
 
 const sizes = [20, 40, 180, 77]
@@ -10,9 +9,9 @@ const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4])
 console.log('🥸 - findSummoner - acc():', acc().accounts)
 const headerHeight = 400
 
-console.log(ss().cache)
+const toast = useToast()
 function toasty() {
-  toast({
+  toast.add({
     title: `Created Toast!`,
     color: 'error',
     description: `There’s something strangely evocative about the smell of burnt toast. You can probably remember the last time you suddenly detected it and dashed for the grill.
@@ -26,10 +25,11 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
 definePageMeta({
   id: '8e12b21b-2f27-43b0-b7e7-77c49bbe972d',
   name: 'nexus',
+  abbr: 'Nx',
   icon: 'nexus',
   listClass: '!size-5.75 **:stroke-[1.6]',
   order: 1,
-  path: '/nexus',
+  path: '/nexus'
 })
 </script>
 

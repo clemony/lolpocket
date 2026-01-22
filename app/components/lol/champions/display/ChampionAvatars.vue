@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { pocket } = defineProps<{
   pocket: Pocket
@@ -18,7 +18,7 @@ const group = computed(() =>
       :key="champion"
       size="c-10"
       variant="base"
-      class="z-1 size-22! border-0 bg-b1 fx-0">
+      class="bg-b1 fx-0 z-1 size-22! border-0">
       <ChampionIcon
         :k="champion"
         class="size-18! rounded-full" />
@@ -28,8 +28,8 @@ const group = computed(() =>
       variant="base"
       size="c-10"
       class="
-        relative z-1 grid size-22! place-items-center rounded-full border-0
-        bg-b1 fx-0
+        bg-b1 fx-0 relative z-1 grid size-22! place-items-center
+        rounded-full border-0
       ">
       <Element
         size="c-10"
@@ -37,7 +37,7 @@ const group = computed(() =>
         class="size-18! *:transition-all *:duration-300">
         <icon
           name="up"
-          class="absolute group-closed:opacity-0" />
+          class="group-closed:opacity-0 absolute" />
         <h3 class="group-open:text-transparent group-open:opacity-0">
           +{{ pocket.champions.length - 4 }}
         </h3>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import type { Pocket } from '@types'
 import type { PopoverContentProps } from 'reka-ui'
-import type { Pocket } from '~~/shared/schema'
 
 const { k, pocket: p } = defineProps<
   PopoverContentProps & {
@@ -53,8 +53,8 @@ const name = computed(() => ix().champNameByKey(k))
       <icon
         name="star"
         :class="
-          cn('ml-px size-4! dst **:stroke-[2.8]',
-            { 'fill-precision': pocket._champion === k },
+          cn('dst ml-px size-4! **:stroke-[2.8]',
+             { 'fill-precision': pocket._champion === k },
           )
         " />
       <input

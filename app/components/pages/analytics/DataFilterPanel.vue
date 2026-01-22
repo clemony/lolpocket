@@ -35,7 +35,7 @@ const entries = [
         class="max-w-100">
         <TabsList
 
-          class="grid-cols-3 *:text-3!">
+          class="grid-cols-3 *:text-md!">
           <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"

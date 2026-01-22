@@ -15,12 +15,12 @@ const route = useRoute()
       size="xl"
       variant="link"
       :class="
-        cn('h-12 w-full justify-start text-left text-4! font-medium text-bc/80 capitalize underline-offset-4',
-          {
-            'btn-active pointer-events-none font-semibold':
-              route.path === item.path,
-            'text-bc/40 hover:text-bc': route.fullPath !== item.path,
-          },
+        cn('h-12 w-full justify-start text-left text-lg! font-medium text-bc/80 capitalize underline-offset-4',
+           {
+             'btn-active pointer-events-none font-semibold':
+               route.path === item.path,
+             'text-bc/40 hover:text-bc': route.fullPath !== item.path,
+           },
         )
       "
       @click="navigateTo(item.path)">

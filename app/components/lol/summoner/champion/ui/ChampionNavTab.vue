@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from 'motion-v';
 
 const { class: className } = defineProps<{
 
@@ -30,7 +30,7 @@ const route = useRoute()
 
     <motion.div
       :class="
-        cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-2 font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
+        cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
            {
              'opacity-60': routeName !== route.name,
              'opacity-100': routeName === route.name,

@@ -1,25 +1,25 @@
 <script lang="ts" setup>
 import type {
-  ColDef,
-  GridApi,
-  GridOptions,
-  GridPreDestroyedEvent,
-  GridReadyEvent,
+    ColDef,
+    GridApi,
+    GridOptions,
+    GridPreDestroyedEvent,
+    GridReadyEvent,
 } from 'ag-grid-community'
 import {
-  CellStyleModule,
-  ClientSideRowModelModule,
-  ColumnApiModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  GridStateModule,
-  ModuleRegistry,
-  RenderApiModule,
-  RowSelectionModule,
-  ValidationModule,
+    CellStyleModule,
+    ClientSideRowModelModule,
+    ColumnApiModule,
+    ColumnAutoSizeModule,
+    ColumnHoverModule,
+    GridStateModule,
+    ModuleRegistry,
+    RenderApiModule,
+    RowSelectionModule,
+    ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/assets/config'
+import { pocketTheme } from '~/ui/config'
 
 definePageMeta({
   name: 'Item Stats',

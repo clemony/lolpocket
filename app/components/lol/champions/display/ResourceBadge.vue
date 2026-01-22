@@ -29,7 +29,7 @@ const resource = computed(() => {
     :size
     :class="
       cn(
-        'w-fit gap-2! px-5 text-2! font-medium! text-bc/90',
+        'w-fit gap-2! px-5 text-sm! font-medium! text-bc/90',
         {
           //
           'hover:**:text-bc hover:text-bc order-first ':
@@ -50,7 +50,7 @@ const resource = computed(() => {
     :style="{
       backgroundColor: `${(cs().filters.resource && cs().filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
     }">
-    <!--    <hicon
+    <!--    <Icon
       v-if="resource?.icon"
       :name="resource?.icon"
       :class="cn('!size-4  dst shrink-0', resource?.class)" /> -->

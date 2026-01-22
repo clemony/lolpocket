@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { runePaths } from '~~/shared/records/runes'
+import { runePaths } from '~~/layers/domain/records/runes';
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -21,8 +21,8 @@ const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
       <div
         class="flex w-full items-center justify-end self-end select-none">
         <div
-          :data-tip="runes.usedFallback ? `*Based on limited data (${runes.best.games} games)` : null"
-          class="inline-flex items-center gap-1 text-1 font-medium">
+          :data-type="runes.usedFallback ? `*Based on limited data (${runes.best.games} games)` : null"
+          class="inline-flex items-center gap-1 text-xs font-medium">
           Highest performing rune set
           <Icon
             name="info"
@@ -46,7 +46,7 @@ const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
         :key="path.id"
         class="z-1 grid size-12 place-items-center rounded-full bg-b1">
         <Button
-          data-tip="path"
+          data-type="path"
           :data-id="path.name"
           base="btn"
           size="c-7"

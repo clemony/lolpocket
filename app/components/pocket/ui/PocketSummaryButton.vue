@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -20,7 +20,7 @@ const route = useRoute()
     <span>
       <icon
         name="infinity"
-        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc" />
+        class="dst peer-checked:text-nc h-4.5 w-auto shrink-0" />
     </span>
     Summary
     <Grow />

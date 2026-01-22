@@ -34,20 +34,20 @@ const query = ref<string>(null)
             class="size-full" />
         </ExpandSearch>
 
-        <h1 class="mr-1 text-9! tracking-tight">
+        <h1 class="mr-1 text-5xl! tracking-tight">
           Champions
         </h1>
 
         <ChampionQuote
           as="p"
           class="
-            flex items-center px-2 pt-1 font-serif text-3 tracking-wide
+            flex items-center px-2 pt-1 font-serif text-md tracking-wide
             text-nowrap dst
           " />
       </div>
 
       <!--     <NumberField id="level" v-model:model-value="cs().championGridLevel" :min="1" :max="18">
-      <Label class="text-2">Champion Level</Label>
+      <Label class="text-sm">Champion Level</Label>
 
       <NumberPickerContent class="w-32">
         <NumberFieldDecrement />

@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import type { CarouselApi } from '@ui'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { skinIndex } from '~~/shared'
-import '~/assets/css/plugins/embla.css'
-import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
-import { setupTweenParallax } from '~/assets/config/embla-tween-parallax'
+import { skinIndex } from '~~/shared/.index'
+import '~/ui/css/plugins/embla.css'
+import { setupTweenParallax } from '~/ui/config/embla-tween-parallax'
 
 const { champion } = defineProps<{
   champion: Champion
@@ -66,7 +66,7 @@ const skins = computed(() => skinIndex[champion.key])
         mask-x-from-0% mask-x-to-black mask-x-to-6% pl-6
       "
       @init-api="(val) => (emblaThumbnailApi = val)">
-      <CarouselContent class="-ml-6 scrollbar-hidden flex pt-22 pb-6">
+      <CarouselContent class="scrollbar-hidden -ml-6 flex pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
@@ -74,7 +74,7 @@ const skins = computed(() => skinIndex[champion.key])
           @click="onThumbClick(index)">
           <div
             :class="
-              cn('cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring hover:ring-b4',
+              cn('hover:ring-b4 cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring',
                  index === selectedIndex
                    ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1'
                    : 'opacity-80',
@@ -127,8 +127,8 @@ const skins = computed(() => skinIndex[champion.key])
                 <div
                   class="
                     absolute bottom-4 left-6 grid w-max place-items-center
-                    rounded-full bg-black/70 px-5 py-1 text-4 font-medium
-                    text-white/80 italic opacity-90 backdrop-blur
+                    rounded-full bg-black/70 px-5 py-1 text-lg font-medium
+                    text-white/80 italic opacity-90 backdrop-blur-sm
                   ">
                   {{ skin.name }}
                 </div>
@@ -141,14 +141,14 @@ const skins = computed(() => skinIndex[champion.key])
         variant="base"
         hover="neutral"
         class="
-          left-10 size-16 rounded-xl border-0 bg-transparent fx-0
+          fx-0 left-10 size-16 rounded-xl border-0 bg-transparent
           **:text-white/70 [&_svg]:size-6
         " />
       <CarouselNext
         variant="base"
         hover="neutral"
         class="
-          right-6 size-16 rounded-xl border-0 bg-transparent fx-0
+          fx-0 right-6 size-16 rounded-xl border-0 bg-transparent
           **:text-white/70 [&_svg]:size-6
         " />
     </Carousel>

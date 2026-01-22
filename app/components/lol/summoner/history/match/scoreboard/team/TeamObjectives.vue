@@ -50,7 +50,7 @@ const objs = [
     <div
       v-for="obj in objs"
       :key="obj.name"
-      :data-tip="`${obj.name} kills`"
+      :data-type="`${obj.name} kills`"
       class="flex w-9 items-center gap-1">
       <Img
         size="sq-4.5"

@@ -120,7 +120,7 @@ export default antfu({
   settings: {
     "better-tailwindcss": {
       callees: ["cn", "clsx", "cva", "tw", "tv"],
-      entryPoint: path.resolve("./app/assets/css/tailwind.css"),
+      entryPoint: path.resolve("./app/ui/css/tailwind.css"),
       detectComponentClasses: true,
       tags: ["style"],
     },

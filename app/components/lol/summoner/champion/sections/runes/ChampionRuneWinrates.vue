@@ -20,7 +20,7 @@ const loaded = ref(false)
         v-for="keystone in path.slots[0].runes"
         :key="keystone.id"
         :data-id="keystone.id"
-        data-tip="rune"
+        data-type="rune"
         :data-interactive="true"
         data-size="lg"
         class="relative grid size-12">
@@ -38,7 +38,7 @@ const loaded = ref(false)
           :value="keystones?.[keystone.id]?.winrate" />
         <span
           v-if="keystones?.[keystone.id]"
-          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-0! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
+          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
           {{ keystones[keystone.id].winrate }}
         </span>
       </div>
@@ -54,7 +54,7 @@ const loaded = ref(false)
           v-for="rune in slot.runes"
           :key="rune.id"
           :data-id="rune.id"
-          data-tip="rune"
+          data-type="rune"
           :data-interactive="true"
           data-size="lg"
           :data-text="runes?.[rune.id] ? `${runes[rune.id]?.games} game${runes[rune.id]?.games > 1 ? 's' : ''} - ${runes[rune.id]?.winrate}% WR` : ''"
@@ -76,7 +76,7 @@ const loaded = ref(false)
           <span
             v-if="runes?.[rune.id]"
             :class="cn('')"
-            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-0 leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
+            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
             {{ runes[rune.id].winrate }}
           </span>
         </div>

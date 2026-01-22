@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer components {
+  /* MATCH CARD */
+  .match-card {
+    .collapse-class {
+      @apply relative size-full min-w-134 cursor-pointer rounded-xl border-b3/70 bg-linear-to-r to-transparent to-40% bg-cover bg-clip-padding text-sm **:select-none;
+      &::before {
+        @apply pointer-events-none absolute left-0 z-3 h-full w-1/2 rounded-xl border mask-r-from-0 opacity-40 shadow-sm shadow-black brightness-94;
+      }
+    }
+    .trigger-style {
+      @apply pointer-events-auto relative z-2 flex h-36 w-full cursor-pointer items-center justify-between gap-6 overflow-hidden bg-clip-padding pr-4 pl-5 text-sm data-[state=open]:rounded-b-none;
+    }
+  }
+
+  /* MATCH DATA TABLE */
+  .match-data-table {
+    .match-row {
+      @apply grid h-10 w-full grid-cols-[2.18fr_repeat(10,1fr)] justify-center justify-items-center;
+    }
+    .match-cell {
+      @apply relative grid size-full items-center justify-center truncate overflow-hidden rounded-md bg-transparent! px-0 text-center align-middle text-xs! leading-9 font-semibold tracking-tight whitespace-nowrap capitalize *:text-xs! **:font-semibold last-of-type:border-transparent hover:bg-b3/30!;
+    }
+    .match-null {
+      @apply font-light text-bc/30 **:text-bc/15;
+    }
+  }
+
+  .stat-label {
+    @apply pl-px text-xxs leading-4 font-medium opacity-60;
+  }
+
+  /* PLAYER MATCH CARD ITEMS */
+  .player-items {
+    .img-active {
+      @apply ring-bc/60 transition-all duration-300 hover:ring!;
+    }
+    .no-img {
+      @apply pointer-events-none border border-bc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border;
+    }
+
+    .img-loss {
+      @apply bg-domination/16! after:border-domination/20 after:mix-blend-hue;
+    }
+
+    .img-win {
+      @apply bg-inspiration/16! after:border-inspiration/20;
+    }
+  }
+}

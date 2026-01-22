@@ -1,4 +1,4 @@
-import { Rune, type PathIndex } from "../.."
+import type { PathIndex, Rune } from "../.."
 /* eslint-disable antfu/no-top-level-await */
 import fs from "node:fs"
 import path from "node:path"

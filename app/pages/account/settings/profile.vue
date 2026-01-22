@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { toast } from '~/composables/utils/useToast'
-
 definePageMeta({
   title: 'profile settings',
   description:
@@ -23,7 +21,7 @@ const labelClass
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-5font-semibold mb-2">
+          class="text-xlfont-semibold mb-2">
           Summoner Splash
         </Label>
 
@@ -39,7 +37,7 @@ const labelClass
       <div class="leading-4">
         <Label
           as="legend"
-          class="mb-2 text-5 font-semibold">Title</Label>
+          class="mb-2 text-xl font-semibold">Title</Label>
         <p class="label text-wrap">
           Display a title from an earned Badge.
         </p>
@@ -50,7 +48,7 @@ const labelClass
       <div class="leading-4">
         <Label
           as="legend"
-          class="mb-2 text-5 font-semibold">
+          class="mb-2 text-xl font-semibold">
           Hide Profile Elements
         </Label>
 
@@ -69,7 +67,7 @@ const labelClass
             lies
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="pointer-events-auto! hover-ring" />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
         <h5>Ranked Solo/Duo</h5>
@@ -79,7 +77,7 @@ const labelClass
             {{ as().settings.show_solo ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="pointer-events-auto! hover-ring" />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
 
@@ -90,7 +88,7 @@ const labelClass
             {{ as().settings.show_flex ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_flex"
-              class="pointer-events-auto! hover-ring" />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
 
@@ -101,7 +99,7 @@ const labelClass
             {{ as().settings.show_allies ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_allies"
-              class="pointer-events-auto! hover-ring" />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
       </div>

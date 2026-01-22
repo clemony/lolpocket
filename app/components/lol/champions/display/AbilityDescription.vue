@@ -31,7 +31,7 @@ const { class: className, effect, variants } = defineProps<{
         :key="attribute.attribute"
         :class="variants?.attributeWrapper">
         <div :class="variants?.attributeContent">
-          <p class="text-2! text-wrap">
+          <p class="text-sm! text-wrap">
             {{ attribute.attribute }}:
           </p>
           <p class="overflow-hidden text-wrap">
@@ -43,7 +43,7 @@ const { class: className, effect, variants } = defineProps<{
 
             <span
               v-if="attribute.modifiers?.[1]"
-              :data-tip="attribute.modifiers?.[1].tooltip"
+              v-tooltip="attribute.modifiers?.[1].tooltip"
               :class="
                 cn(
                   {

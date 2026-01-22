@@ -35,14 +35,14 @@ const bars = computed (() => {
   <Card
     v-if="player"
     :class="cn(
-      'relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none dark:border-b3/70 dark:bg-b2/60 light:border-b3/60 light:bg-b1/70! light:shadow-none! light:drop-shadow-none!')">
+      'relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none dark:border-b3/70 dark:bg-b2/60 light:border-transparent! light:bg-b1/80! light:shadow-none! light:drop-shadow-none!')">
     <!-- champion -->
 
     <div class="flex w-18 items-center">
       <ChampionIcon
         :id="player?.championId"
         :data-id="player?.championId"
-        data-tip="champion"
+        data-type="champion"
         alt="champion-icon"
         class="z-0 size-10 rounded-full transition-all duration-300 hover:scale-105" />
       <ScoreboardCardRunes :player />
@@ -51,17 +51,17 @@ const bars = computed (() => {
     <div
       class="flex h-fit w-full max-w-26 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap @min-700:max-w-32">
       <div
-        data-tip="player"
+        data-type="player"
         :data-name="player.name"
         :data-tag="player.tag"
         :data-icon="player.icon"
         class="inline-flex items-center gap-1 leading-4">
         <h4
-          class="truncate text-2 font-semibold text-nowrap">
+          class="truncate text-sm/4 font-semibold text-nowrap">
           {{ player.name }}
         </h4>
 
-        <span class="hidden grow items-center gap-0! text-0 font-medium opacity-50 @min-700:inline-flex">
+        <span class="hidden grow items-center gap-0! text-xxs/4 font-medium opacity-50 @min-700:inline-flex">
           <Icon
             name="hash"
             class="inline size-3.25" />
@@ -74,8 +74,8 @@ const bars = computed (() => {
         <MvpBadge
           :match
           :player />
-        <span class="text-1 opacity-50">
-          {{ player.lpScore }}
+        <span class="text-xs opacity-50">
+          {{ player.lpScore.score }}
         </span>
       </div>
     </div>
@@ -108,33 +108,10 @@ const bars = computed (() => {
       :is-s-r="match?.mapId === 11" />
 
     <div class="flex h-fit w-5 flex-col @min-700:w-16">
+      <!-- minions -->
+      <PlayerCS :player />
       <!-- gold -->
-
-      <label
-        :data-tip="`Total CS: ${(player.stats.minionsKilled + player.stats.neutralMinionsKilled).toLocaleString()}
-        Minions: ${player.stats.minionsKilled}
-        Neutral monsters: ${player.stats.neutralMinionsKilled}
-        CS/min: ${roundDecimal(((player.stats.minionsKilled + player.stats.neutralMinionsKilled) / msToMin(match.gameDuration)))}`"
-        class="text-badge-xs">
-        <Icons
-          size="c-3.5"
-          name="lol:minion"
-          class="size-3.5 opacity-85" />
-
-        <span class="hidden @min-700:flex">{{ player.stats.minionsKilled + player.stats.neutralMinionsKilled }}</span>
-      </label>
-
-      <label
-        :data-tip="`Total gold earned: ${player.stats.goldEarned.toLocaleString()}
-        Gold/min: ${player.stats.goldPerMin}`"
-        class="text-badge-xs align-baseline">
-        <Icons
-          size="c-3.5"
-          name="lol:gold"
-          class="inline size-3.25 translate-y-px opacity-75" />
-
-        <span class="hidden @min-700:flex">{{ roundDecimal(player.stats.goldEarned / 1000) }}k</span>
-      </label>
+      <PlayerGold :player />
     </div>
 
     <div class="flex h-max flex-col items-center -space-y-2">

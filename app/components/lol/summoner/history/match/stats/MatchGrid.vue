@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import type {
-  ColDef,
-  ColGroupDef,
-  GridApi,
-  GridOptions,
-  GridReadyEvent,
-} from 'ag-grid-community'
 import { ChampionIcon } from '#components'
+import type {
+    ColDef,
+    ColGroupDef,
+    GridApi,
+    GridOptions,
+    GridReadyEvent,
+} from 'ag-grid-community'
 import {
-  CellStyleModule,
-  ClientSideRowModelModule,
-  ColumnApiModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  GridStateModule,
-  ModuleRegistry,
-  RenderApiModule,
-  RowSelectionModule,
-  TooltipModule,
-  ValidationModule,
+    CellStyleModule,
+    ClientSideRowModelModule,
+    ColumnApiModule,
+    ColumnAutoSizeModule,
+    ColumnHoverModule,
+    GridStateModule,
+    ModuleRegistry,
+    RenderApiModule,
+    RowSelectionModule,
+    TooltipModule,
+    ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '~/assets/config/masteryTheme'
+import { masteryGridTheme } from '~/ui/config/masteryTheme'
 
 const { match, player } = defineProps<{
   match: MatchData

@@ -137,8 +137,8 @@ const filteredStats = computed(() => {
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
     class="
-      group/cl flex flex-col gap-6 px-0 data-[state=open]:h-auto
-      data-[state=open]:overflow-visible!
+      group/cl flex flex-col gap-6 px-0 open:h-auto
+      open:overflow-visible!
     ">
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
@@ -156,10 +156,10 @@ const filteredStats = computed(() => {
         class="
           group-data-[state=open]/cl:animate-in
           group-data-[state=open]/cl:fade-in-0
-          group-data-[state=closed]/cl:fade-out -mt-3 flex w-full flex-col
-          items-start px-5 pb-2 duration-300
-          group-data-[state=closed]/cl:animate-out
-          group-data-[state=closed]/cl:hidden
+          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full
+          flex-col items-start px-5 pb-2
+          duration-300
+          group-closed/cl:hidden
         "
         @click.stop>
         <span class="w-full text-start">
@@ -176,7 +176,7 @@ const filteredStats = computed(() => {
             :step="1"
             :min-steps-between-thumbs="1"
             :min="1">
-            <span class="absolute text-1! font-semibold">{{ level[0] }}</span>
+            <span class="absolute text-xs! font-semibold">{{ level[0] }}</span>
           </Slider>
           <div
             class="
@@ -210,7 +210,7 @@ const filteredStats = computed(() => {
                   v-if="[1, 6, 11, 16, 18].includes(i)"
                   class="
                     absolute translate-y-4.5 items-end self-end
-                    justify-self-center text-1 tabular-nums
+                    justify-self-center text-xs tabular-nums
                   ">
                   {{ i }}
                 </span>
@@ -223,7 +223,7 @@ const filteredStats = computed(() => {
     <CollapsibleContent
       class="
         z-1 flex h-fit w-full flex-col gap-2 pb-2
-        data-[state=open]:overflow-visible!
+        open:overflow-visible!
       ">
       <div
         :class="

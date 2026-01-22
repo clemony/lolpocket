@@ -88,7 +88,7 @@ watch(
         <input
           v-model="searchQuery"
           class="
-            h-full w-full pr-4 text-2 transition-all duration-200
+            h-full w-full pr-4 text-sm transition-all duration-200
             placeholder:italic
           "
           placeholder="Search All Champions..."

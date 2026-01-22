@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
   title: 'Items',
-  icon: 'bow',
+  icon: 'lol:regen',
   path: '/library/items',
+
+  navClass: 'size-5',
 })
 
 const route = useRoute()

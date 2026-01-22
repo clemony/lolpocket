@@ -1,5 +1,5 @@
+import { ITEM_EVENT_TYPES } from "@constants"
 import { computeShopTime, skillPriority } from "~~/server/domain"
-import { ITEM_EVENT_TYPES } from "~~/shared"
 import { normalizeItemEvents } from "./normalizeItemEvents"
 import { toDeathEvent } from "./toDeathEvent"
 

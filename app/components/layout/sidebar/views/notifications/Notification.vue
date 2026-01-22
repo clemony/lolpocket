@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { InboxItem } from '~~/shared/schema'
-import { getInboxTemplate } from '~~/shared/schema/generate/inbox-templates'
+import type { InboxItem } from '@types'
+import { getInboxTemplate } from '~~/layers/types/src/schema/generate/inbox-templates'
 
 const { item } = defineProps<{ item: InboxItem }>()
 
@@ -46,24 +46,24 @@ const hasAction = computed(() => !!template.value.action)
       ">
       <button
         class="
-          btn absolute -top-3 -right-2 z-2 grid btn-circle size-6 shrink-0
-          cursor-pointer place-items-center border-b4! bg-b4! opacity-0
-          shadow-sm inset-shadow-xs drop-shadow-xs transition-opacity
-          duration-200 btn-xs group-hover/item:opacity-100 hover:bg-neutral
-          hover:btn-neutral hover:**:stroke-[2.5]
+          btn btn-circle border-b4! bg-b4! btn-xs hover:bg-neutral hover:btn-neutral absolute -top-3
+          -right-2 z-2 grid size-6 shrink-0
+          cursor-pointer place-items-center opacity-0 shadow-sm
+          inset-shadow-xs drop-shadow-xs transition-opacity duration-200
+          group-hover/item:opacity-100 hover:**:stroke-[2.5]
         "
         @click.stop="emit('clear-notification')">
         <icon
           name="x"
-          class="size-2.5 shrink-0 stroke-[2] text-white" />
+          class="size-2.5 shrink-0 stroke-2 text-white" />
       </button>
 
       <div class="flex w-full items-center gap-2">
         <div class="inline w-full grow text-start">
           <span
             class="
-              inline leading-snug font-medium text-bc/90 [&_b]:tracking-tight
-              [&_b]:dst
+              text-bc/90 [&_b]:dst inline leading-snug font-medium
+              [&_b]:tracking-tight
             "
             v-html="template.title" />
         </div>
@@ -80,7 +80,7 @@ const hasAction = computed(() => !!template.value.action)
       :to="template.action.function">
       <icon
         :name="template.action.icon.name"
-        :class="cn('shrink-0 dst', template.action.icon.class)" />
+        :class="cn('dst shrink-0', template.action.icon.class)" />
       <span
         class="leading-none"
         v-html="template.action.text" />

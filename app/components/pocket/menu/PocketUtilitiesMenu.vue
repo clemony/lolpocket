@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { pocket: p } = defineProps<{
   pocket: Pocket
@@ -28,7 +28,7 @@ async function testSaveAllPockets() {
         size="md"
         hover="ghost"
         :class="
-          cn('mb-1 btn-square self-end hover:bg-b3!',
+          cn('btn-square hover:bg-b3! mb-1 self-end',
              { 'btn-active': isOpen },
           )
         ">
@@ -79,13 +79,13 @@ async function testSaveAllPockets() {
         Download Pocket Card
       </Button>
 
-      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
+      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
       <Label
         variant="label"
         class="mb-1 px-3 py-2">
         <icon
           name="export"
-          class="size-4.5 dst" />
+          class="dst size-4.5" />
         Export to League Client
       </Label>
       <Button
@@ -102,7 +102,7 @@ async function testSaveAllPockets() {
         Runes
       </Button>
 
-      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
+      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
       <Button
         variant="ghost"
         size="sm"
@@ -111,7 +111,7 @@ async function testSaveAllPockets() {
         <DeletePocketDialog :pocket="pocket">
           <icon
             name="trash"
-            class="size-4.5 dst" />
+            class="dst size-4.5" />
           Delete Pocket
         </DeletePocketDialog>
       </Button>

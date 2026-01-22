@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -22,6 +22,6 @@ const itemsLength = computed(() => {
   <div
     v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`"
     :class="cn('flex items-center gap-1.5', props.class)">
-    <span class="font-mono text-1 dst">{{ itemsLength }}</span>
+    <span class="dst font-mono text-xs">{{ itemsLength }}</span>
   </div>
 </template>

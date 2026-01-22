@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '~~/shared/schema'
+import type { Pocket, RuneSet } from '@types'
 import RunePanelMenu from '#components'
 
 const {

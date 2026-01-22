@@ -5,6 +5,7 @@ definePageMeta({
   layout: 'tab-mini',
   order: 4,
   redirect: '/backpack/pockets',
+
 })
 const isCollapsed = ref(false)
 const route = useRoute()
@@ -32,14 +33,14 @@ const pinned = computed(() =>
         size="12"
         class="
                 group data-[state=open]:fx-noise w-full justify-start gap-3!
-                pr-5 pl-4.5 hover:bg-transparent data-[state=open]:border-b3/80
-                data-[state=open]:shadow-sm data-[state=open]:inset-shadow-xs
-                data-[state=open]:shadow-black/8
+                pr-5 pl-4.5 open:border-b3/80 open:shadow-sm
+                open:inset-shadow-xs open:shadow-black/8
+                hover:bg-transparent
               ">
         <SummonerIcon class="size-7 rounded-full" />
         <span
           class="
-                  w-full items-center truncate text-5 font-semibold dst
+                  w-full items-center truncate text-xl font-semibold dst
                   *:first:capitalize
                 ">
           <SummonerName class="inline" />

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '#shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket?: Pocket
@@ -31,7 +31,7 @@ const tabListClass
           layout-id="path1" />
       </Transition>
 
-      <div class="relative h-18 w-120 rounded-xl shadow-smooth">
+      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
           :data-path="selectedPath" />

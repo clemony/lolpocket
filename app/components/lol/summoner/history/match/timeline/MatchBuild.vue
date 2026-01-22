@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-const { match } = defineProps<{
-  match: Player
+const { match, player, timeline } = defineProps<{
+  match: MatchData
+  player: Player
   timeline: PlayerTimeline
 }>()
 </script>
@@ -12,12 +13,16 @@ const { match } = defineProps<{
     <ItemTimeline
       v-if="timeline"
       :timeline
+      :player
       :match />
     <MatchSkillOrder
       v-if="timeline"
       :timeline
+      :player
       :match>
-      <PlayerFullRunes :match />
+      <PlayerFullRunes
+        :match
+        :player />
     </MatchSkillOrder>
   </div>
 </template>

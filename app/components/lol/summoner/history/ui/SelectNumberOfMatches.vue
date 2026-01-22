@@ -23,7 +23,7 @@ const numberModel = computed({
         size="sq-8"
         variant="base" />
       <NumberFieldInput
-        class="text-2"
+        class="text-sm"
         variant="base"
         size="8" />
       <NumberFieldIncrement

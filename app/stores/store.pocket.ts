@@ -1,5 +1,5 @@
+import type { Pocket } from '@types'
 import type { GridApi } from 'ag-grid-community'
-import type { Pocket } from '~~/shared/schema'
 import { defineStore } from 'pinia'
 
 export const usePocketStore = defineStore(

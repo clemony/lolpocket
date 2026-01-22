@@ -19,7 +19,7 @@ const { childRoutes, links, summoner } = defineProps<{
               class="size-11 size-full rounded-field"></SummonerIcon>
             <SummonerLevel
               class="
-                absolute -bottom-1.5 z-1 rounded-full bg-neutral pt-px text-2
+                absolute -bottom-1.5 z-1 rounded-full bg-neutral pt-px text-sm
                 text-nc
               " />
           </div>
@@ -38,7 +38,7 @@ const { childRoutes, links, summoner } = defineProps<{
             <p
               class="
                 flex inline-flex w-full items-center justify-between gap-2
-                align-bottom text-2 **:leading-none [&_svg]:size-3
+                align-bottom text-sm **:leading-none [&_svg]:size-3
               ">
               <SummonerTag />
 
@@ -57,7 +57,7 @@ const { childRoutes, links, summoner } = defineProps<{
         :item="item"
         @click="navigateTo(links[item.name])">
         <template #icon>
-          <hicon
+          <Icon
             :name="String(item.meta?.icon)"
             class="absolute size-5.5 place-self-center object-center"
             :class="cn('', item.meta?.iconStyle ?? null)" />

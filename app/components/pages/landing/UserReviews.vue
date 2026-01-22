@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { CarouselApi } from '@ui'
 import { reviews } from '@domain'
 import { motion } from 'motion-v'
-import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 import { reviewVariants } from './variants'
 
 const api = ref<CarouselApi>()
@@ -30,7 +30,7 @@ watchOnce(api, (api) => {
 <template>
   <div
     class="
-      relative grid w-full items-center overflow-hidden bg-b1 px-30 py-40
+      bg-b1 relative grid w-full items-center overflow-hidden px-30 py-40
     ">
     <Carousel
       :opts="{
@@ -58,7 +58,7 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class="font-serif leading-9 font-black dst">
+            <h1 class="dst font-serif leading-9 font-black">
               “{{ r.title }}”
             </h1>
 
@@ -70,7 +70,7 @@ watchOnce(api, (api) => {
 
               <div>
                 <p
-                  class="mt-5 w-full text-4 text-bc dst [&_u]:decoration-dotted"
+                  class="text-bc dst mt-5 w-full text-lg [&_u]:decoration-dotted"
                   v-html="r.text" />
 
                 <p
@@ -110,8 +110,8 @@ watchOnce(api, (api) => {
 
         <div
           class="
-            tldr-20 btn pointer-events-none btn-circle size-2 bg-b3 ring-neutral
-            ring-offset-2 group-hover:bg-b4 group-hover:ring-1
+            tldr-20 btn btn-circle bg-b3 ring-neutral group-hover:bg-b4 pointer-events-none
+            size-2 ring-offset-2 group-hover:ring-1
           "
           :class="{ 'bg-neutral group-hover:bg-neutral': i === i }" />
       </label>

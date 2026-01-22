@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SpellSet } from '~~/shared/schema'
+import type { SpellSet } from '@types'
 
 const { class: className, set: s } = defineProps<{
   class?: HTMLAttributes['class']
@@ -18,7 +18,7 @@ const set = computed(() => {
   <div
     :class="
       cn('relative grid aspect-square size-12 place-items-center rounded-full',
-        className,
+         className,
       )
     ">
     <IndexIcon

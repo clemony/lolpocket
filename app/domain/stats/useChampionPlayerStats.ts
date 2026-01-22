@@ -15,7 +15,7 @@ export interface UsePlayerStats {
 }
 
 export function usePlayerStatsProvider(
-  api: SummonerInject,
+  api: SummonerApi,
   championId: ComputedRef<number>
 ): UsePlayerStats {
   const { filteredMatches, summoner, timelines } = api

@@ -40,13 +40,13 @@ const filteredMailList = computed(() => {
       class="h-[calc(100vh-(var(--spacing)*16))]">
       <div
         class="
-          bg-background/95 sticky top-0 z-1 flex w-full flex-col items-center
-          backdrop-blur supports-[backdrop-filter]:bg-background/6
+          bg-background/95 supports-[backdrop-filter]:bg-background/6 sticky top-0 z-1 flex w-full flex-col
+          items-center backdrop-blur-sm
         ">
-        <div class="grid h-[45px] w-full place-items-center border-b">
+        <div class="grid h-15 w-full place-items-center border-b">
           <div
             class="border-box flex size-full max-w-220 items-center gap-3 px-4">
-            <h1 class="text-7 dst">
+            <h1 class="text-3xl dst">
               {{ title }}
             </h1>
             <slot name="tabs" />

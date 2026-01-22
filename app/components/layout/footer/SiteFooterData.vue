@@ -33,7 +33,7 @@ const links = computed(() =>
           aspect-square cursor-pointer p-3 decoration-3 underline-offset-4
           hover:underline
         ">
-        <h1 class="text-10 font-bold">
+        <h1 class="text-xxs font-bold">
           LP
         </h1>
       </button>
@@ -49,7 +49,7 @@ const links = computed(() =>
         class="flex items-center gap-1.5">
         <NuxtLink
           :to="link.path"
-          class="text-1 font-medium underline-offset-2 hover:underline">
+          class="text-xs font-medium underline-offset-2 hover:underline">
           {{ link.meta?.title || link.name }}
         </NuxtLink>
         <icon
@@ -87,11 +87,11 @@ const links = computed(() =>
 
         <template #content>
           <div class="flex flex-col gap-1 p-2">
-            <span class="-mx-2 badge badge-neutral text-3 italic">
+            <span class="-mx-2 badge badge-neutral text-md italic">
               contact@lolpocket.win
             </span>
 
-            <span class="flex items-center gap-1 text-1">
+            <span class="flex items-center gap-1 text-xs">
               {{ !copied ? "Click @ to Copy" : "Copied!" }}
 
               <icon

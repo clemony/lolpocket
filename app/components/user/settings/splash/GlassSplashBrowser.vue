@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { DialogContentProps } from 'reka-ui'
-import { useForwardPropsEmits } from 'reka-ui'
-import { skinIndex } from '~~/shared'
+import type { DialogContentProps } from 'reka-ui';
+import { useForwardPropsEmits } from 'reka-ui';
+import { skinIndex } from '~~/shared/.index';
 
 const props = defineProps<DialogContentProps & {
   class?: HTMLAttributes['class']
@@ -136,7 +136,7 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
           class="grid size-full place-items-end p-6">
           <Badge
             variant="neutral"
-            class="font-medium **:text-2">
+            class="font-medium **:text-sm">
             Select or search a champion...
           </Badge>
         </div>

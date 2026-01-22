@@ -1,4 +1,4 @@
-import { ITEM_EVENT_TYPES } from "~~/shared"
+import { ITEM_EVENT_TYPES } from "@constants"
 
 export const SHOP_BOUNDS = {
   BLUE: {

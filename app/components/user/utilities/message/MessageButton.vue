@@ -6,7 +6,7 @@ const {
   variant = 'shadow',
 } = defineProps<{
   class?: HTMLAttributes['class']
-  summoner: Summoner | Partial<Summoner>
+  summoner: MaybeRef<Summoner> | Partial<Summoner>
   variant?: any
   size?: any
 }>()

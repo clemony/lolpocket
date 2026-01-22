@@ -12,7 +12,7 @@ const target = useTemplateRef<HTMLElement>('target')
 
 <template>
   <div
-    :data-tip="tip"
+    :data-type="tip"
     class="relative flex grow basis-1/3 flex-col justify-center gap-1 hover:underline">
     <div
       class="progress-label w-full">
@@ -39,6 +39,6 @@ const target = useTemplateRef<HTMLElement>('target')
   @reference '@css/tailwind.css';
 
 .progress-label {
-  @apply text-1 flex shrink-0  *:shrink-0 leading-4 font-bold  gap-1 items-center;
+  @apply text-xs flex shrink-0  *:shrink-0 leading-4 font-bold  gap-1 items-center;
 }
 </style>

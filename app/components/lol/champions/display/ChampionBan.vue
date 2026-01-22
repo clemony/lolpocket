@@ -7,13 +7,15 @@ const { id, class: className } = defineProps<{
 
 <template>
   <div
-    :class="cn('relative grid size-7 place-items-center', className)">
+    :class="cn('relative grid size-7 place-items-center', { ' translate-y-0.75 ': id <= 0 }, className)">
     <ChampionIcon
+      v-if="id > 0"
       :id
-      :class="cn('z-1 size-7 rounded-full object-contain opacity-70 ring-bc/60 brightness-110 contrast-120 grayscale transition-all duration-200 hover:scale-105 hover:opacity-100 hover:ring hover:brightness-100 hover:contrast-100 hover:grayscale-0', { 'pointer-events-none  *:opacity-100 brightness-0 contrast-0': !id || id <= 0 })" />
-      <!--     <Icon
-        v-if="id && id > 0"
-        name="slash"
-        class="absolute z-3 size-10 -scale-x-100 -rotate-30 opacity-65 **:stroke-[2.3] **:text-tint-b2/40" /> -->
+      variant="btn"
+      class="z-1 size-9 rounded-full object-contain opacity-80 ring-bc/60 brightness-110 contrast-120 grayscale transition-all duration-200 hover:scale-105 hover:opacity-100 hover:ring hover:brightness-100 hover:contrast-100 hover:grayscale-0" />
+    <Icon
+      v-else
+      name="lol:champ"
+      class="pointer-events-none absolute size-6 place-self-center opacity-40" />
   </div>
 </template>

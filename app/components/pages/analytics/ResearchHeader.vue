@@ -47,7 +47,7 @@ const timeLeft = computed(() => {
     </SummonerIcon>
 
     <div class="flex flex-col items-center justify-center">
-      <SummonerName class="truncate text-6 leading-none font-semibold dst" />
+      <SummonerName class="text-xxl truncate leading-none font-semibold dst" />
 
       <p class="left-2 mt-2.5">
         #

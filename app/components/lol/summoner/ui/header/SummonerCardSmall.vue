@@ -41,14 +41,14 @@ const summoner = computed(() => s)
         <SummonerName
           as="h1"
           class="
-            font-serif text-6 leading-none font-bold text-bc/94 drop-shadow-sm
+            text-xxl font-serif leading-none font-bold text-bc/94 drop-shadow-sm
           " />
         <slot />
       </div>
       <div
         :class="
           cn('inline-flex w-full items-center gap-4 leading-none font-normal lowercase *:align-bottom',
-            { 'justify-between': fullWidth },
+             { 'justify-between': fullWidth },
           )
         ">
         <SummonerTag :summoner />

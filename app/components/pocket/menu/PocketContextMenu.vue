@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
-import { getDeviceKey } from '~/utils/device'
+import type { Pocket } from '@types'
+import { getDeviceKey } from '~~/@lib/app/utils/device'
 
 const props = defineProps<{
   pocketData?: Pocket
@@ -30,7 +30,7 @@ onMounted(async () => {
     <ContextMenuPortal>
       <ContextMenuContent
         class="
-          context-menu pointer-events-auto z-999 h-max w-74 text-2 **:text-2
+          context-menu pointer-events-auto z-999 h-max w-74 text-sm **:text-sm
         "
         @interact-outside="emit('update:grid')">
         <ContextMenuItem

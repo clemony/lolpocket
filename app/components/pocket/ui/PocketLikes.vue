@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
@@ -26,8 +26,8 @@ function handleLike() {
 <template>
   <Label
     :class="
-      cn('has-checked: group/x h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs ring-bc/50 ring-offset-b2 duration-0 hover:ring hover:ring-offset-1 has-not-checked:*:opacity-40 has-checked:*:opacity-100',
-        className,
+      cn('has-checked: group/x ring-bc/50 ring-offset-b2 h-6 gap-1.5! rounded-full pr-2.5 pl-2 inset-shadow-xs duration-0 hover:ring hover:ring-offset-1 has-not-checked:*:opacity-40 has-checked:*:opacity-100',
+         className,
       )
     "
     variant="outline">
@@ -42,13 +42,13 @@ function handleLike() {
       <icon
         name="heart-sm"
         class="
-          absolute size-6.5! -translate-y-[0.5px] dst transition-colors
-          duration-200 group-hover/x:text-tint-domination/20!
-          group-has-not-checked/x:text-bc/30
-          group-has-checked/x:text-tint-domination/20
+          dst group-hover/x:text-tint-domination/20! group-has-not-checked/x:text-bc/30 group-has-checked/x:text-tint-domination/20 absolute
+          size-6.5! -translate-y-[0.5px]
+          transition-colors
+          duration-200
         " />
     </span>
-    <span class="text-1! font-semibold">
+    <span class="text-xs! font-semibold">
       {{ pocket.likes }}
     </span>
   </Label>

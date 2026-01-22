@@ -55,7 +55,7 @@ const chain = computed(() => getRouteChain(route.fullPath))
                   v-if="!link.meta?.search && link.path !== route.path"
                   :to="String(link.path)"
                   class="
-                    text-4 font-medium capitalize transition-all
+                    text-lg font-medium capitalize transition-all
                     not-group-last-of-type:opacity-60
                     not-group-last-of-type:hover:opacity-90
                   ">
@@ -64,7 +64,7 @@ const chain = computed(() => getRouteChain(route.fullPath))
                 <span
                   v-else
                   class="
-                    text-4 font-medium capitalize
+                    text-lg font-medium capitalize
                     not-group-last-of-type:opacity-60
                     not-group-last-of-type:hover:opacity-90
                   ">

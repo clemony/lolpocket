@@ -26,21 +26,18 @@ const open = shallowRef<boolean>(true)
 
 <template>
   <div
-    :initial="getDevice() === 'Mobile' ? 'closed' : 'open'"
-    :animate="open ? 'open' : 'closed'"
-    class="relative z-auto mx-auto flex h-fit min-h-screen w-full max-w-[1400px] flex-col items-center gap-y-6 px-24 pt-8 pb-44">
-    <MatchHistoryMenu @open="e => open = e" />
+    :class="cn('relative z-auto mx-auto flex h-fit min-h-screen w-full max-w-[1400px] gap-14 px-24 pt-8 pb-44', { 'flex-col max-w-308': !open })">
     <TransitionSlide
       group
       :offset=" {
         enter: [0, '10%'],
         leave: [0, '10%'],
       } "
-      class="z-auto flex w-full origin-right justify-center gap-14">
+      class="z-auto flex w-full max-w-110 origin-right flex-col items-center gap-y-6">
+      <MatchHistoryMenu @open="e => open = e" />
       <MatchHistoryAside
         v-if="open" />
-
-      <MatchList />
     </TransitionSlide>
+    <MatchList />
   </div>
 </template>

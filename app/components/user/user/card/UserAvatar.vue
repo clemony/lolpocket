@@ -26,7 +26,7 @@ const icon = computed(() => {
          className,
       )
     ">
-    <hicon
+    <Icon
       :name="String(icon)"
       alt="summoner icon"
       :class="

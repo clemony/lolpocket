@@ -33,7 +33,7 @@ const isPlaying = ref(true)
           v-show="!isPlaying"
           :class="
             cn(
-              'align-end mt-px overflow-hidden text-2 font-semibold text-bc/60',
+              'align-end mt-px overflow-hidden text-sm font-semibold text-bc/60',
             )
           ">
           Paused
@@ -55,7 +55,7 @@ const isPlaying = ref(true)
           :align-offset="-10"
           class="mr-3 w-60">
           <div
-            class="flex w-full items-center gap-3 px-1.5 py-1 text-2 text-nc/80">
+            class="flex w-full items-center gap-3 px-1.5 py-1 text-sm text-nc/80">
             <icon
               :name="
                 as().settings.motion

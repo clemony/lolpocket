@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Account } from '#shared/schema'
+import type { Account } from '@types'
 
 const { account } = defineProps<{
   account: Account
@@ -11,7 +11,7 @@ const classObject
 
 <template>
   <div
-    class="relative grid h-fit w-full px-2 py-3 *:w-full **:text-2">
+    class="relative grid h-fit w-full px-2 py-3 *:w-full **:text-sm">
     <SheetClose
       :class="classObject"
       @click="navigateTo('/about')">
@@ -28,7 +28,7 @@ const classObject
         <IconWrapper>
           <icon
             name="gear-solid"
-            class="size-4.75 opacity-60 dst" />
+            class="dst size-4.75 opacity-60" />
         </IconWrapper>
         Settings
       </SheetClose>
@@ -40,7 +40,7 @@ const classObject
       <IconWrapper>
         <icon
           name="mdi:sign-out"
-          class="absolute left-0.25 size-4.75 dst" />
+          class="dst absolute left-0.25 size-4.75" />
       </IconWrapper>
       Sign Out
     </SheetClose>

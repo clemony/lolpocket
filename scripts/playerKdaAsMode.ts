@@ -40,7 +40,7 @@ function logTeamStatModes(matches: MatchData[], puuid: string) {
         kills: [],
       }
 
-      entry.kills.push(p.stats.kills.value)
+      entry.kills.push(p.stats.kills)
       entry.deaths.push(p.stats.deaths)
       entry.assists.push(p.stats.assists)
 

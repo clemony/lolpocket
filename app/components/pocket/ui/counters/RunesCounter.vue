@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -43,7 +43,7 @@ if (pocket.value.runes.length === 1) {
   <!-- <span
     v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`"
     :class="cn('flex gap-1.5 items-center', props.class)">
-    <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
+    <span class="dst font-mono text-xs ">{{ runeSetsLength }}</span>
   </span> -->
   h
 </template>

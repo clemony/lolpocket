@@ -10,7 +10,7 @@
       ">
       <Button
         variant="neutral"
-        class="size-7 text-0 font-bold">
+        class="size-7 text-xxs font-bold">
         LP
       </Button>
 

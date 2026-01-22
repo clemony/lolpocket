@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { runeToPath } from '~~/shared'
+import { runeToPath } from '~~/shared/.index';
 
 const { id, class: className, dataSize = 'lg', noTip = false, } = defineProps<{
   class?: HTMLAttributes['class']
@@ -15,7 +15,7 @@ const img = `/img/runes/${runeToPath[id]}/${id}.webp`
 
 <template>
   <Label
-    :data-tip="noTip ? null : 'rune' "
+    :data-type="noTip ? null : 'rune' "
     :data-size="noTip ? null : dataSize"
     :data-interactive="dataSize === 'lg' ? true : false"
     :data-id="id"

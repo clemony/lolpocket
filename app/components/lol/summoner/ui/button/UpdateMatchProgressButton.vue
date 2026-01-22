@@ -34,8 +34,8 @@ const {
 
 const tippy = computed(() =>
   !cooldown.value?.seconds
-    ? summoner.value.updatedMatch
-      ? `Last updated ${summoner.value.updatedMatch}`
+    ? summoner.value.lastMatchUpdate
+      ? `Last updated ${summoner.value.lastMatchUpdate}`
       : 'Not updated yet'
     : `${cooldown.value?.seconds} cd`,
 )
@@ -61,14 +61,14 @@ const tippy = computed(() =>
         v-if="!cooldown"
         :class="
           cn('flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
-             { 'text-1': size === 'xs' },
+             { 'text-xs': size === 'xs' },
           )
         ">
         <icon
           v-if="showIcon"
           name="reset"
           class="mr-3 -ml-2 size-5" />
-        <span class="text-2">
+        <span class="text-sm">
           {{
             typeof text === "string"
               ? text
@@ -89,10 +89,10 @@ const tippy = computed(() =>
           v-if="size !== 'xs'"
           class="
          inline w-full grid-flow-col grid-cols-2 items-center
-            justify-between pr-0.25 text-end align-bottom text-1 font-semibold
+            justify-between pr-0.25 text-end align-bottom text-xs font-semibold
             text-nowrap dst
           ">
-          <span :class="cn('text-2 font-bold')">
+          <span :class="cn('text-sm font-bold')">
             {{ cooldown?.formatted }}
           </span>
           <span> cd </span>
@@ -102,7 +102,7 @@ const tippy = computed(() =>
           :model-value="cooldown?.percent"
           class="bg-transparent"
           :class="
-            cn('relative h-2.75 w-full scale-y-60 rounded-[3px] border border-b4 bg-b3',
+            cn('relative h-2.75 w-full scale-y-60 rounded-xs border border-b4 bg-b3',
                { 'h-2.5 mt-1.5': size === 'xs' },
             )
           "

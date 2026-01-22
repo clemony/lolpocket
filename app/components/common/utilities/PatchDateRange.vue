@@ -3,6 +3,9 @@ import type { CalendarDate } from '@internationalized/date'
 import type { DateRange } from 'reka-ui'
 import { fromAbsolute, getLocalTimeZone, isToday, today } from '@internationalized/date'
 
+const { asideRef } = defineProps<{
+  asideRef: HTMLElement
+}>()
 const { filter, filteredMatches, matches, setFilter } = useSummonerInject()
 const date = ref({
   end: null,
@@ -30,13 +33,13 @@ const open = shallowRef<boolean>(false)
   <Popover v-model="open">
     <PopoverTrigger
       base="btn"
-      size="sq-10"
+      size="sq-12"
       on="inset"
       hover="inset"
       class="bg-transparent! duration-0! disabled:pointer-events-none">
       <icon
         name="calendar"
-        class="size-4" />
+        class="size-4.5" />
       <!--       <span class="grow text-start">
 
         {{ date?.start || date?.end
@@ -54,6 +57,8 @@ const open = shallowRef<boolean>(false)
         class="size-4 text-bc/40 group-hover/select:text-bc/90 group-on/select:text-bc/90" /> -->
     </PopoverTrigger>
     <LazyPopoverContent
+      :collision-boundary="asideRef"
+      :avoid-collisions="true"
       align="start"
       class="grid w-fit rounded-xl! p-1"
       @interact-outside="open = false">
@@ -65,7 +70,6 @@ const open = shallowRef<boolean>(false)
         v-model="date"
         :disabled="!matches.length"
         :close-on-select="true"
-        :fixed-weeks="true"
         :min-value="minDate"
         :max-value="today(getLocalTimeZone())"
         @update:start-value="e => setFilter('date', { start: e, end: e })"

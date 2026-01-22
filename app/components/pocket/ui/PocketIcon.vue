@@ -45,7 +45,7 @@ const loaded = ref(false)
     <span
       v-else
       :class="
-        cn('absolute z-0 grid size-full place-items-center text-4 font-semibold text-nc uppercase subpixel-antialiased',
+        cn('absolute z-0 grid size-full place-items-center text-lg font-semibold text-nc uppercase subpixel-antialiased',
            { '!text-[0.74rem] mt-px font-semibold': size && size === 'sm' },
         )
       ">

@@ -50,7 +50,7 @@ const data = [
           :style="{
             transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
           }"
-          class="text-14 absolute h-full pr-14"
+          class="text-xs4 absolute h-full pr-14"
           :transition="{ type: 'inertia' }">
           Additional Tools.
         </motion.h2>
@@ -79,13 +79,13 @@ const data = [
               :name="item.icon"
               class="size-7 justify-self-center stroke-[0.5] text-nc" />
 
-            <h3 class="grow text-7! font-semibold! text-nc">
+            <h3 class="grow text-3xl! font-semibold! text-nc">
               {{ item.title }}
             </h3>
           </div>
 
           <p
-            class="text-4/loose font-light text-pretty text-nc"
+            class="text-lg/loose font-light text-pretty text-nc"
             v-html="item.text" />
         </motion.div>
       </div>

@@ -31,7 +31,7 @@ function handleSplash(e: string) {
         :text="top().name"
         :alt="`${as().account?.name ?? null}'s Most Played`" />
       <div class="flex size-full flex-col gap-4 pt-3">
-        <h4 class="text-5 font-semibold dst">
+        <h4 class="text-xl font-semibold dst">
           Automatic
         </h4>
         <p>Displays your most played champion in recent games.</p>
@@ -53,7 +53,7 @@ function handleSplash(e: string) {
         :skin-url="as().account?.splash"
         :alt="`${as().account?.name ?? null}'s splash`" />
       <div class="flex size-full flex-col gap-4 pt-3">
-        <h4 class="text-5 font-semibold dst">
+        <h4 class="text-xl font-semibold dst">
           Custom
         </h4>
         <p class="w-full min-w-56">

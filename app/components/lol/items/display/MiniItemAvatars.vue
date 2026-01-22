@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ItemSet } from '~~/shared/schema'
+import type { ItemSet } from '@types'
 
 const { class: className, set } = defineProps<{
   class?: HTMLAttributes['class']
@@ -18,7 +18,7 @@ const { class: className, set } = defineProps<{
     <div
       v-for="item in set.items.slice(0, 3)"
       :key="item"
-      class="avatar size-7.5 border-3! group-open/trig:border-b2">
+      class="avatar group-open/trig:border-b2 size-7.5 border-3!">
       <div class="size-6">
         <Item :id="item" />
       </div>

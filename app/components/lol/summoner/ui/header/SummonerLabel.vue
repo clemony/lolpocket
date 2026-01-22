@@ -16,7 +16,7 @@ const summoner = await ss().resolveByPuuid(as().account?.puuid)
         <div
           class="flex items-end gap-3 *:leading-none">
           <SummonerName
-            class="font-serif text-6! font-bold text-bc/94 drop-shadow-sm" />
+            class="text-xxl! font-serif font-bold text-bc/94 drop-shadow-sm" />
           <SummonerTag
             :summoner
             class="mb-px" />

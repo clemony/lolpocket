@@ -19,7 +19,7 @@ const winrateDiff = computed(() => {
             relative grid size-8 place-items-center font-mono leading-none
             font-bold tracking-wide
           ">
-          <span class="absolute right-1.5 object-center text-9"> S+ </span>
+          <span class="absolute right-1.5 object-center text-5xl"> S+ </span>
         </div>
       </div>
 

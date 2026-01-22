@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { toast } from '~/composables/utils/useToast'
-
 definePageMeta({
   name: 'Reset Password',
   title: 'Forgot password?',
@@ -12,7 +10,8 @@ definePageMeta({
 const password = ref('')
 
 function handleReset() {
-  toast({
+  const toast = useToast()
+  toast.add({
     title: 'Password reset link sent!',
     description:
       'Check your email for a message from the customer support lolpocat.',

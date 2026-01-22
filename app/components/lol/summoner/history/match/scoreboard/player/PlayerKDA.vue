@@ -2,27 +2,26 @@
 const { class: className, match, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
-  match: Player
+  match: MatchData
 }>()
 </script>
 
 <template>
   <div
-    class="ml-2 grid h-15 max-h-15 w-fit min-w-20 auto-rows-max justify-self-end pb-1">
+    class="ml-2 grid h-15 max-h-15 w-fit min-w-20 auto-rows-max place-self-end">
     <!-- kda -->
     <KDA
       :stats="player.stats"
-      class="h-6 text-start text-4/5 font-bold" />
+      class="-mt-0.5 h-6.75 text-start text-lg font-bold" />
 
-    <span class="label-class">
-      {{ Math.round(player.stats.kp * 100) }}%&nbsp;
+    <span class="h-4 gap-0 text-start text-xs/4 text-nowrap whitespace-nowrap lowercase *:tracking-wide">
+      {{ player.stats.kp }}%&nbsp;
       <span>KP</span>
     </span>
 
-    <MvpBadge
-      v-if="match.mvp === match.player.puuid || match.ace === match.player.puuid"
+    <!--    <MvpBadge
       :match
-      :player="match.player" />
+      :player="player" /> -->
     <span
       v-if="!player.stats.deaths"
       class="flex h-4 items-center gap-1 truncate tracking-tight text-nowrap">
@@ -34,17 +33,9 @@ const { class: className, match, player } = defineProps<{
 
     <span
       v-else
-      class="label-class">
-      {{ roundDecimal(player.stats.kda, 2) }}
+      class="h-4 gap-0 text-start text-xs/4 text-nowrap whitespace-nowrap lowercase *:tracking-wide">
+      {{ player.stats.kda }}
       <span>&nbsp;KDA</span>
     </span>
   </div>
 </template>
-
-<style scoped>
-  @reference '@css/tailwind.css';
-
-.label-class {
-  @apply h-4 gap-0 text-1 text-start whitespace-nowrap text-nowrap lowercase   *:tracking-wide leading-4;
-}
-</style>

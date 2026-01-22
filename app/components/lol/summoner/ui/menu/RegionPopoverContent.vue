@@ -36,7 +36,7 @@ const modelValue = ref(as().account.region)
         variant="ghost"
         :value="region"
         :class="
-          cn('flex items-center justify-start gap-3 rounded-md py-1.5 text-2 text-nowrap',
+          cn('flex items-center justify-start gap-3 rounded-md py-1.5 text-sm text-nowrap',
              { 'btn-active !bg-b2/30': region === modelValue },
           )
         ">

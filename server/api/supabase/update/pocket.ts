@@ -1,6 +1,6 @@
 import * as v from "valibot"
-import type { Pocket } from "~~/shared/schema"
-import { pocketSchema } from "~~/shared/schema"
+import type { Pocket } from "~~/layers/types/schema"
+import { pocketSchema } from "~~/layers/types/schema"
 import { createSupabaseClient } from "../client.supabase"
 
 export default defineEventHandler(async (event) => {

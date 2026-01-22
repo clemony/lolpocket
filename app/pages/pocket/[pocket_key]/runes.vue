@@ -1,7 +1,6 @@
 <script setup lang="ts">
+import type { CarouselApi } from '@ui'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { addRuneSet } from '~~/shared/schema'
-import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 
 useSeoMeta({
   title: '[title]',
@@ -75,13 +74,13 @@ function handleAdd() {
   <div
     class="
       z-auto flex size-full max-h-full flex-col items-center -space-y-6
-      overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-[1200px]
+      overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-400
     ">
     <!-- thumbnails -->
     <Carousel
       class="
-        sticky -top-10 z-1 flex w-full flex-shrink-1 items-center justify-center
-        gap-2 bg-b1/60 mask-x-from-transparent mask-x-from-0% mask-x-to-black
+        bg-b1/60 sticky -top-10 z-1 flex w-full shrink items-center
+        justify-center gap-2 mask-x-from-transparent mask-x-from-0% mask-x-to-black
         mask-x-to-10% py-4 backdrop-blur-md
       "
       :opts="{ loop: true }"

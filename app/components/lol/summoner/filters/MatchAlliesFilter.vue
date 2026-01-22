@@ -3,7 +3,6 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const { allies, filter, loading, setFilter, summoner, whenReady } = useSummonerInject()
-console.log('🥸 - summoner:', summoner)
 
 const allyModel = ref<string>(null)
 await whenReady()
@@ -30,7 +29,7 @@ const winrateFormula = ref('absolute')
               :key="ally.name"
               :value="ally.puuid"
               size="12"
-              data-tip="Great Teamwork"
+              data-type="Great Teamwork"
               base="btn"
               variant="ghost"
               hover="secondary"
@@ -44,7 +43,7 @@ const winrateFormula = ref('absolute')
                 <span class="inline truncate align-baseline">
                   {{ ally.name }}
                 </span>
-                <span class="inline align-baseline text-1 opacity-50">
+                <span class="inline align-baseline text-xs opacity-50">
                   #{{ ally.tag }}
                 </span>
                 <Icon
@@ -53,11 +52,11 @@ const winrateFormula = ref('absolute')
                   class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!" />
               </span>
 
-              <div class="w-24 text-end text-2 whitespace-nowrap">
+              <div class="w-24 text-end text-sm whitespace-nowrap">
                 {{ ally.games }} played
               </div>
 
-              <div class="w-12 text-end text-2">
+              <div class="w-12 text-end text-sm">
                 {{ ally.winrate }}%
               </div>
 
@@ -66,7 +65,7 @@ const winrateFormula = ref('absolute')
                 base="btn"
                 wrapper-class=""
                 size="c-6"
-                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur group-hover/ally:animate-heartbeat">
+                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/ally:animate-heartbeat">
                 <Icons
                   name="heroicons:x-circle-16-solid"
                   class="size-5.25!" />
@@ -89,7 +88,7 @@ const winrateFormula = ref('absolute')
           </template>
           <div
             v-if="filter?.ally"
-            class="mx-4 flex gap-4 justify-self-end text-1">
+            class="mx-4 flex gap-4 justify-self-end text-xs">
             <span class="self-end opacity-50">
               ...filtered
             </span>

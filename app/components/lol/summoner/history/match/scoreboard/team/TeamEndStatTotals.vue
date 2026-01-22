@@ -18,7 +18,7 @@ const { class: className, team } = defineProps<{
       <!-- WIN / LOSS -->
       <div
         :class="cn('flex items-center gap-4')">
-        <h3 class="text-5 leading-none font-bold text-white/86 dst">
+        <h3 class="text-xl leading-none font-bold text-white/86 dst">
           {{ team.win ? "WIN" : "LOSS" }}
         </h3>
 
@@ -39,7 +39,7 @@ const { class: className, team } = defineProps<{
       <!-- GOLD -->
       <span
         v-if="team.gold"
-        :class=" cn('inline-flex items-center gap-1 align-baseline text-2 leading-none font-semibold') ">
+        :class=" cn('inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold') ">
         <Icon
           name="lol:gold"
           :class=" cn('inline size-4 dst', {
@@ -51,7 +51,7 @@ const { class: className, team } = defineProps<{
 
       <!-- KDA -->
       <KDA
-        class="align-baseline text-3 leading-none opacity-90"
+        class="align-baseline text-md leading-none opacity-90"
         :stats="team" />
     </div>
   </div>

@@ -53,7 +53,7 @@ const groups = computed(() => {
           capitalize
         "
         :to="item.path">
-        <hicon
+        <Icon
           v-if="item.meta?.icon"
           :class="item.meta?.iconClass"
           :name="String(item.meta?.icon)" />
@@ -79,7 +79,7 @@ const groups = computed(() => {
             capitalize
           "
           :to="item.path">
-          <hicon
+          <Icon
             v-if="item.meta?.icon"
             :class="item.meta?.iconClass"
             :name="item.meta?.icon" />

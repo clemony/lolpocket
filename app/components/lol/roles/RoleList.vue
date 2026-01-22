@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { roles } from './handleRoles'
 
 const props = defineProps<{
@@ -43,7 +43,7 @@ function handleReset() {
 </script>
 
 <template>
-  <p class="mb-3 text-2">
+  <p class="mb-3 text-sm">
     Is your pocket for a specific role? Roles can be specified in addition to
     champions, or in place of them.
   </p>
@@ -51,9 +51,9 @@ function handleReset() {
   <transition-slide
     tag="form"
     group
-    class="filter gap-2">
+    class="gap-2 filter">
     <input
-      class="filter-reset peer btn bg-b1 text-7 font-normal! text-bc"
+      class="filter-reset peer btn bg-b1 text-bc text-3xl font-normal!"
       type="checkbox"
       name="roles"
       aria-label="x"
@@ -64,9 +64,9 @@ function handleReset() {
       :key="role"
       :for="role"
       class="
-        has-checked:!bgneutral btn flex gap-3 rounded-lg! bg-b1 text-2
-        capitalize peer-not-checked:first-of-type:-ml-2 has-checked:text-nc
-        has-checked:btn-neutral!
+        has-checked:!bgneutral btn bg-b1 has-checked:text-nc has-checked:btn-neutral! flex gap-3
+        rounded-lg! text-sm capitalize
+        peer-not-checked:first-of-type:-ml-2
       ">
       <input
         :id="role"
@@ -79,7 +79,7 @@ function handleReset() {
 
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
-        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc"
+        class="dst peer-checked:text-nc h-4.5 w-auto shrink-0"
         :class="{ 'size-5': role === 'jungle' }" />
       {{ role }}
     </label>

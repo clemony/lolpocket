@@ -25,12 +25,14 @@ const settings = computed(() => {
     animation="shift-toward"
     theme="base clean popover">
     <HoverCardTrigger
-      size="c-10"
-      class="relative overflow-hidden border-b3! p-0 shadow-sm drop-shadow-sm">
+      as-child
+      class="relative overflow-hidden">
       <LazySummonerIcon
+
         v-if="summoner"
+        size="c-10"
         :summoner
-        class="size-10 rounded-full" />
+        class="rounded-full" />
     </HoverCardTrigger>
 
     <HoverCardContent class="flex h-fit w-64! flex-col overflow-hidden">
@@ -39,7 +41,7 @@ const settings = computed(() => {
         <SummonerIcon class="size-11 rounded-lg" />
         <div class="flex flex-col">
           <SummonerName
-            class="truncate pl-1 text-6! leading-none font-semibold text-bc/90 dst" />
+            class="text-xxl! truncate pl-1 leading-none font-semibold text-bc/90 dst" />
           <SummonerTag
             class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
         </div>
@@ -53,7 +55,7 @@ const settings = computed(() => {
 
           <span
             v-if="as().inbox?.messages?.length"
-            class="absolute right-4 font-mono text-2 opacity-60">
+            class="absolute right-4 font-mono text-sm opacity-60">
             {{ as().inbox.messages.filter((m) => !m.read).length }}
           </span>
         </PopoverItem>

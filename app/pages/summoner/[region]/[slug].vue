@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { api } = defineProps<{
-  api: SummonerInject
+  api: SummonerApi
 }>()
 const route = useRoute()
 const championKey = computed (() => route.params?.championKey)

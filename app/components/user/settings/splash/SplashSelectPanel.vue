@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { skinIndex } from '~~/shared'
+import { skinIndex } from '~~/shared/.index';
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -156,7 +156,7 @@ function reset() {
             class="grid size-full place-items-end p-6">
             <Badge
               variant="neutral"
-              class="font-medium **:text-2">
+              class="font-medium **:text-sm">
               Select or search a champion...
             </Badge>
           </div>

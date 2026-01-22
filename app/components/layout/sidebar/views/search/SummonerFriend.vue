@@ -18,12 +18,12 @@ const summoner = computed(() => s)
       <div class="flex items-center gap-1">
         <SummonerName
           class="
-            text-3! font-normal text-bc/94 drop-shadow-sm
+            text-md! font-normal text-bc/94 drop-shadow-sm
             group-hover/friend:underline
           " />
         <SummonerTag
           :summoner
-          class="mb-px text-1 opacity-50 [&_svg]:size-3" />
+          class="mb-px text-xs opacity-50 [&_svg]:size-3" />
       </div>
       <div
         class="

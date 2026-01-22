@@ -12,7 +12,7 @@ const { class: className, team } = defineProps<{
          className,
       )
     ">
-    <h3 class="text-start text-5 font-bold text-nowrap text-white/86 uppercase dst">
+    <h3 class="text-start text-xl font-bold text-nowrap text-white/86 uppercase dst">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
@@ -34,7 +34,7 @@ const { class: className, team } = defineProps<{
         :id="champion"
         :key="champion"
         :data-id="champion"
-        data-tip="champion"
+        data-type="champion"
         class="size-6.25 rounded-md opacity-80 brightness-100 contrast-120 grayscale-80" />
     </div>
 

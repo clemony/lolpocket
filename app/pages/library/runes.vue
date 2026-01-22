@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { pathIndex } from '~~/shared'
+import { runePaths } from '~~/layers/domain/records/runes';
 
 definePageMeta({
   title: 'Runes',
-  icon: 'lol:rune-circle',
-  listClass: '!size-5.5 !bg-transparent',
+  icon: 'lol:runes',
+  listClass: 'size-5.5 !bg-transparent',
+  navClass: 'size-6',
   path: '/library/runes',
 })
 
-const { pathList } = useRunes()
-
-const selectedPath = ref<PathName>('Inspiration')
+const selectedPath = ref<number>(830)
 const selectedRune = ref<number>(null)
-const test = ref<PathName>(pathIndex[selectedPath.value])
 </script>
 
 <template>
@@ -23,7 +21,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
       v-if="selectedRune"
       class="tldr-80 relative z-0 mt-22 max-h-165 w-114 max-w-114 flex-col"
       :class="{ 'opacity-0': !selectedRune, 'opacity-100': selectedRune }">
-      <RuneData
+      <RuneTooltip
         :id="selectedRune"
         :key="selectedRune" />
 
@@ -39,7 +37,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
       <RunesBlurb
         v-if="selectedPath"
         :key="selectedPath"
-        :current-path="selectedPath" />
+        :current-path="runePaths[selectedPath]?.name" />
 
       <Tabs v-model:model-value="selectedPath">
         <TabsList
@@ -59,24 +57,24 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
           </div>
 
           <PathTabTrigger
-            v-for="path in pathList"
-            :key="path"
+            v-for="path in pathIndex"
+            :key="path.id"
             v-tippy="path"
-            :value="path" />
+            :value="path.name" />
 
           <TabIndicator round />
         </TabsList>
       </Tabs>
 
-      <KeystoneSelect
+      <!--       <KeystoneSelect
         v-model:selected="selectedRune"
-        :runes="pathIndex[selectedPath][0]"
+        :runes="Object.values(runePaths[selectedPath]?.slots?.[0])"
         @update:rune="(e) => (selectedRune = e)" />
 
-      <RuneSelect
+      <RunePanels
         v-model:selected="selectedRune"
-        :runes="pathIndex[selectedPath].slice(0)"
-        @update:rune="(e) => (selectedRune = e)" />
+        :runes="runePaths[selectedPath]?.slots.slice(1)"
+        @update:rune="(e) => (selectedRune = e)" /> -->
     </transition-fade>
   </transition-slide>
 </template>

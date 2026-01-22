@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-
+  path: '/auth/redirect',
   search: 'hidden',
 })
 
-const progress = ref(0)
 const loadingText = [
   'Polishing data...',
   'Calculating gains...',
@@ -12,17 +11,9 @@ const loadingText = [
   'Gathering poros...',
 ]
 
-onMounted(async () => {
-  await useSupabaseSessionWait()
-  const user = useSupabaseUser().value
+const { progress } = await accountFetch()
 
-  if (user) {
-    await accountFetch(progress)
-  }
-  else {
-    navigateTo('/login')
-  }
-})
+const cookie = useSupabaseCookieRedirect()
 </script>
 
 <template>
@@ -40,7 +31,7 @@ onMounted(async () => {
 
       <div class="flex flex-col gap-2">
         <div class="flex w-full! max-w-180! flex-col gap-2">
-          <div class="h-6 w-full overflow-hidden px-px text-2 font-medium">
+          <div class="h-6 w-full overflow-hidden px-px text-sm font-medium">
             {{ loadingText[Math.floor(progress / 25)] || loadingText.at(-1) }}
           </div>
           <Progress

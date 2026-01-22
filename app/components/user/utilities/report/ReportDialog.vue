@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { extractReadableText } from '#shared'
 import { toTypedSchema } from '@vee-validate/valibot'
 import { parse } from 'valibot'
 import { useForm } from 'vee-validate'
+import { extractReadableText } from '~~/shared/.index'
 import { reportOptions } from './reportOptions'
 
 const { button, comment } = defineProps<{
@@ -46,8 +46,8 @@ const onSubmit = handleSubmit((values) => {
   }
 
   const validated = parse(reportSchema, payload)
-  console.log('🌱 - onSubmit - validated:', validated)
-  toast({
+  const toast = useToast()
+  toast.add({
     title: 'You submitted the following values:',
     description: '',
   })
@@ -71,7 +71,7 @@ defineExpose({
         <Button
           size="auto"
           variant="link"
-          class="text-1">
+          class="text-xs">
           Report
         </Button>
       </DialogTrigger>
@@ -79,7 +79,7 @@ defineExpose({
     <LazyDialogContent class="h-max max-w-172 px-7 pt-8">
       <DialogHeader>
         <DialogTitle> Report Card </DialogTitle>
-        <DialogDescription class="text-2 text-bc">
+        <DialogDescription class="text-sm text-bc">
           Report offensive, negative, or disruptive content. Please fill out the
           form to clarify and give additional context.
         </DialogDescription>
@@ -112,7 +112,7 @@ defineExpose({
           <TransitionScalePop
             v-if="errorBag?.options?.length"
             class="
-              mr-2 flex items-center gap-2 text-2 leading-none
+              mr-2 flex items-center gap-2 text-sm leading-none
               text-shade-domination/8
             ">
             <icon

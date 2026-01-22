@@ -12,7 +12,7 @@ const { player } = defineProps<{
       <Button
         variant="neutral"
         size="c-4"
-        data-tip="rune"
+        data-type="rune"
         class="z-2 aspect-square bg-neutral/80 p-0! transition-all duration-300 hover:scale-110"
         :data-id="player?.runes?.keystone">
         <img
@@ -25,7 +25,7 @@ const { player } = defineProps<{
     <div class="z-1 mt-0.5 grid size-4 place-items-center rounded-full bg-b1">
       <Button
         variant="neutral"
-        data-tip="path"
+        data-type="path"
         size="c-4"
         :style="{
           '--path': `${pathColorByName(pathNameById(player?.runes?.secondary?.path))}`,

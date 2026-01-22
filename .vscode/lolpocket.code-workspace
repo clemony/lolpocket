@@ -19,7 +19,7 @@
     "files.autoSave": "onFocusChange",
     "vs-code-prettier-eslint.prettierLast": false,
     "eslint.enable": true,
-    "tailwindCSS.experimental.configFile": "../app/assets/css/tailwind.css",
+    "tailwindCSS.experimental.configFile": "../app/ui/css/tailwind.css",
 
     // Disable the default formatter, use eslint instead
     "prettier.enable": false,

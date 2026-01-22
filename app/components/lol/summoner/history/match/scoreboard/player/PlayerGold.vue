@@ -1,35 +1,22 @@
 <script lang="ts" setup>
-const { class: className, player } = defineProps<{
-  player: Player
+const { class: className, icon = true, player } = defineProps<{
   class?: HTMLAttributes['class']
+  player: Player
+  icon?: boolean
 }>()
-
-const cs = computed(() => {
-  return player.stats.minionsKilled + player.stats.neutralMinionsKilled
-})
 </script>
 
 <template>
-  <div
-    class=""
-    :offset="[2, -2]"
-    :class="
-      cn('flex size-full flex-col items-end justify-start py-1 font-medium *:py-0.5 *:text-1 *:leading-none **:text-nowrap',
-         className,
-      )
-    ">
-    <p
-      v-tippy="'Minions Farmed'"
-      class="flex items-center gap-1 decoration-1 hover:underline">
-      {{ cs }}
-      <span class="font-mono">CS</span>
-    </p>
+  <label
+    :data-type="`${player.stats.goldEarned.toLocaleString()} g
+       ${player.stats.goldPerMin} / min`"
+    :class="cn('text-badge-xs align-baseline', className)">
+    <Icons
+      v-if="icon === true"
+      size="c-3.5"
+      name="lol:gold"
+      class="inline size-3.25 translate-y-px opacity-75" />
 
-    <p
-      v-tippy="'Gold Earned'"
-      class="flex items-center gap-1 decoration-1 hover:underline">
-      {{ player.stats.goldEarned.toLocaleString() }}
-      <span class="font-mono">G</span>
-    </p>
-  </div>
+    <span class="hidden @min-700:flex">{{ roundDecimal(player.stats.goldEarned / 1000) }}k</span>
+  </label>
 </template>

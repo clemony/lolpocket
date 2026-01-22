@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { VueDraggable } from 'vue-draggable-plus'
 
 const { class: className, pocket: p } = defineProps<{
@@ -17,10 +17,10 @@ const pocket = computed(() => p)
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
       class="
-        group flex w-full items-center justify-start gap-1 px-3 py-3 text-start
-        text-3 capitalize
+        group text-md flex w-full items-center justify-start gap-1 p-3
+        text-start capitalize
       ">
-      <h3 class="grow dst">
+      <h3 class="dst grow">
         Roles
       </h3>
 
@@ -60,7 +60,7 @@ const pocket = computed(() => p)
             v-if="role"
             variant="outline"
             size="8"
-            class="order-3 rounded-lg border-b3/80 bg-b1"
+            class="border-b3/80 bg-b1 order-3 rounded-lg"
             :class="cn({ 'hidden ': pocket.roles.includes(role.name) })"
             @click.stop>
             <input
@@ -74,7 +74,7 @@ const pocket = computed(() => p)
 
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
-              class="h-3.75 w-auto shrink-0 text-bc/70 dst peer-checked:text-nc"
+              class="text-bc/70 dst peer-checked:text-nc h-3.75 w-auto shrink-0"
               :class="{ 'text-bc/80!': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>

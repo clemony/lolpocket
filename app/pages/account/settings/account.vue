@@ -36,7 +36,7 @@ onMounted (() => {
         </InputGroupAddon>
         <InputGroupInput
           v-model:model-value="username"
-          class="**:text-3!"
+          class="**:text-md!"
           @blur="validateField(usernameSchema)" />
       </InputGroup>
 
@@ -59,7 +59,7 @@ onMounted (() => {
         </InputGroupAddon>
         <InputGroupInput
           v-model:model-value="email"
-          class="**:text-3!"
+          class="**:text-mdd!"
           @blur="validateField(emailSchema)" />
         <InputGroupAddon
           v-if="!as().user.email_confirmed_at"
@@ -120,19 +120,19 @@ onMounted (() => {
                   :class="cn('size-10.5 dst', { 'text-domination': provider.name === 'riot', 'scale-90': provider.name === 'google' })" />
               </div>
               <CardTitle
-                class="grow text-start text-4 font-semibold capitalize dst">
+                class="grow text-start text-lg font-semibold capitalize dst">
                 {{ provider.name }}
               </CardTitle>
 
               <CardDescription class="flex w-full items-center justify-between">
                 <span
                   v-if="userProviders?.includes(provider.name)"
-                  class="text-2">
+                  class="text-sm">
                   Connected
                 </span>
                 <span
                   v-else
-                  class="text-2 opacity-60">Not Connected</span>
+                  class="text-sm opacity-60">Not Connected</span>
 
                 <Switch
                   name="toggle-provider"
@@ -156,7 +156,7 @@ onMounted (() => {
       <div class="leading-4">
         <h4
           as="legend"
-          class="mb-2 text-5 font-semibold">
+          class="mb-2 text-xl font-semibold">
           Blocked Users
         </h4>
 

@@ -42,7 +42,7 @@ const ckey = computed (() => String(route.params.champion_key))
           <div
             v-for="_, i in skills.byLevel"
             :key="i"
-            class="grid size-12 place-items-center text-2 font-medium">
+            class="grid size-12 place-items-center text-sm font-medium">
             {{ i }}
           </div>
         </div>
@@ -54,10 +54,10 @@ const ckey = computed (() => String(route.params.champion_key))
             <div
               v-for="ability, k in level"
               :key="k"
-              :data-tip="`${ability.winrate}% winrate
+              :data-type="`${ability.winrate}% winrate
           ${ability.games} games
           ${ability.pickrate}% pickrate`"
-              :class="cn('flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-b2/40 text-1! leading-none select-none', {
+              :class="cn('flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-b2/40 text-xs! leading-none select-none', {
                 'text-transparent': ability.winrate === 0,
                 'bg-neutral/90 text-nc dss shadow-sm': ability.winrate !== 0 })">
               <span

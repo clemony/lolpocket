@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -9,8 +9,8 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
   <MenubarRadioGroup v-model:model-value="pocket._spells">
     <MenubarLabel
       class="
-        sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur
-        before:absolute before:top-0 before:left-0 before:z-1 before:bg-b1/30
+        before:bg-b1/30 sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1
+        backdrop-blur-sm before:absolute before:top-0 before:left-0 before:z-1
         before:mix-blend-lighten
       ">
       <span class="isolate z-2"> Default Spells </span>

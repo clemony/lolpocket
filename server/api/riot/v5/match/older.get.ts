@@ -1,6 +1,6 @@
 // /server/api/matches/older.get.ts
+import type { MatchData, MatchReturn } from "@constants"
 import { idsByPuuid, matchById, transformMatchData } from "~~/server/domain"
-import type { MatchData, MatchReturn } from "~~/shared"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string

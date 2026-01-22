@@ -33,11 +33,11 @@ const tabs = ref('abilities')
         ">
         <Grow />
 
-        <h1 class="text-11 font-bold tracking-tight">
+        <h1 class="text-xs font-bold tracking-tight">
           {{ champion?.name }}
         </h1>
 
-        <p class="text-3 font-medium tracking-tight uppercase">
+        <p class="text-md font-medium tracking-tight uppercase">
           {{ champion?.title }}
         </p>
       </header>

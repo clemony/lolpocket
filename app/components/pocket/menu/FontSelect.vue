@@ -20,7 +20,7 @@ const props = defineProps<{
         class="p-0">
         <!--
           :style="{ fontFamily: props.card.font[props.model] }" -->
-        <div class="items-center align-text-bottom text-4 font-medium dst">
+        <div class="items-center align-text-bottom text-lg font-medium dst">
           {{ props.model === 0 ? "Title Font" : "Accent Font" }}
         </div>
       </SelectValue>
@@ -35,7 +35,7 @@ const props = defineProps<{
           :key="font.id"
           :value="font.id"
           :style="{ fontFamily: font.id }"
-          class="text-4 dst">
+          class="text-lg dst">
           {{ font.display }}
         </SelectItem>
       </SelectGroup>

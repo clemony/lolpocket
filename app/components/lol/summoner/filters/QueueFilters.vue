@@ -12,9 +12,11 @@ const tabClass = '!text-bc'
   <Tabs
     v-model:model-value="queueModel"
     :default-value="0"
+
     class="w-full">
     <TabsList
-      class="">
+      :size="9"
+      class="relative">
       <TabIndicator />
       <TabsTrigger
         :class="tabClass"

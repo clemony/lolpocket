@@ -17,7 +17,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
         <div class="oveflow-y-auto size-full">
           <div
             class="
-              flex w-full items-center gap-4 px-2 pt-3 pb-1 text-2 tracking-wide
+              flex w-full items-center gap-4 px-2 pt-3 pb-1 text-sm tracking-wide
               capitalize opacity-60
             ">
             <span class="grow pl-2">{{ ms().filter.patch }} Items</span>
@@ -39,7 +39,9 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
               ">
               <div />
 
-              <div
+              <!--
+@fixme
+<div
                 class="
                   flex w-fit self-center rounded-xl border border-black/10
                   px-2.5 badge-xl font-semibold shadow-xs inset-shadow-sm
@@ -51,12 +53,12 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
                 }">
                 <span
                   class="
-                    font-mono text-4 tracking-wide text-[#FFF] dst
+                    font-mono text-lg tracking-wide text-[#FFF] dst
                     text-shadow-black/5 text-shadow-xs
                   ">
                   {{ getGrade(entry.bayesianWinrate) }}
                 </span>
-              </div>
+              </div> -->
 
               <div>
                 <img
@@ -66,20 +68,20 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
               </div>
 
               <div class="list-col-grow -space-y-1">
-                <div class="truncate text-3">
+                <div class="truncate text-md">
                   {{ entry.item?.name }}
                 </div>
 
-                <div class="text-1 font-semibold uppercase opacity-60">
+                <div class="text-xs font-semibold uppercase opacity-60">
                   {{ entry.win }}W {{ entry.loss }}L
                 </div>
               </div>
 
-              <div class="text-end text-2">
+              <div class="text-end text-sm">
                 {{ entry.winrate.toFixed(1) }}%
               </div>
 
-              <div class="text-end text-2">
+              <div class="text-end text-sm">
                 {{ entry.bayesianWinrate.toFixed(1) }}%
               </div>
             </div>

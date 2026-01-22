@@ -17,7 +17,7 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keyst
     ">
     <div
       :data-id="keystone?.id"
-      data-tip="rune"
+      data-type="rune"
       class="tippy relative grid size-7.5 shrink-0 place-items-center transition-all duration-300 hover:scale-120">
       <img
         v-if="keystone"
@@ -30,7 +30,7 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keyst
 
     <Element
       :data-id="s?.name"
-      data-tip="path"
+      data-type="path"
       size="c-6"
       class="relative grid shrink-0 place-items-center transition-all duration-300 hover:scale-120">
       <img

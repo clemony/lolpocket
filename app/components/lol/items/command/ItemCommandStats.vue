@@ -38,7 +38,7 @@ const { filtered, filters, setFilter } = useItemFilter()
 
             <div
               class="
-                badge rounded-field border-accent bg-b1/90 text-1! tracking-wide
+                badge rounded-field border-accent bg-b1/90 text-xs! tracking-wide
               ">
               <span class="text-bc dst">{{ stat.abbr[0] }}</span>
             </div>

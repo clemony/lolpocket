@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
-import type { Account, Pocket, Settings } from "~~/shared/schema"
-import { getEmptyAccount } from "~~/shared/schema"
+import type { Account, Pocket, Settings } from "~~/layers/types/schema"
+import { getEmptyAccount } from "~~/layers/types/schema"
 
 export const useAccountStore = defineStore(
   "as",
@@ -19,8 +19,8 @@ export const useAccountStore = defineStore(
         if (!update || !account.value) return
 
         if (
-          !account.value.updatedData ||
-          update.updatedData > account.value.updatedData
+          !account.value.lastDataUpdate ||
+          update.lastDataUpdate > account.value.lastDataUpdate
         ) {
           Object.assign(account.value, update)
         }

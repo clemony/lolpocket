@@ -21,7 +21,7 @@ const route = useRoute()
           pt-12
         ">
         <slot name="header">
-          <h1 class="text-9 font-bold dst">
+          <h1 class="text-5xl font-bold dst">
             {{ title || route.meta?.title || route.name }}
           </h1>
         </slot>
@@ -33,7 +33,7 @@ const route = useRoute()
           </slot>
           <div class="relative grid size-px self-end">
             <div
-              class="absolute bottom-2 h-max w-max self-end justify-self-end">
+              class="absolute bottom-2 size-max place-self-end">
               <slot name="right" />
             </div>
           </div>

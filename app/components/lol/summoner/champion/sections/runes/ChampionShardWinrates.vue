@@ -31,7 +31,7 @@ const { class: className, shards } = defineProps<{
           :value="shards[ix]?.[shard.id]?.winrate" />
         <span
           v-if="shards[ix as ShardSlot]?.[shard.id]"
-          class="absolute -bottom-2 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70! px-1.5 py-0.5 align-middle text-0! leading-none font-bold text-nc/80! shadow-sm dss backdrop-blur-sm">
+          class="absolute -bottom-2 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70! px-1.5 py-0.5 align-middle text-xxs! leading-none font-bold text-nc/80! shadow-sm dss backdrop-blur-sm">
           {{ shards[ix]?.[shard.id].winrate }}
         </span>
       </div>

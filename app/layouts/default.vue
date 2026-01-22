@@ -8,7 +8,7 @@
     <!-- navbar -->
     <Navbar />
     <!-- sidebar -->
-    <AppSidebarTrigger />
+    <AppSidebar />
     <!-- page -->
     <slot />
   </div>

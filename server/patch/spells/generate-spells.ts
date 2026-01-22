@@ -1,6 +1,5 @@
 import fs from "node:fs"
 import path from "node:path"
-import type { Spell } from "../../types/types.import"
 import { resolvePath } from "../resolvePath"
 import { checkUpdate, markUpdate, stripEmpty } from "../utils"
 

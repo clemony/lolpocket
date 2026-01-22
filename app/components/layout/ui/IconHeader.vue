@@ -7,7 +7,7 @@ const { class: className, textWrapper } = defineProps<{
 }>()
 
 const { scrollY } = useScrollInject()
-const y = useTransform(scrollY, [0, 198], ['0', '60%'])
+const y = useTransform(scrollY, [0, 198], ['0', '20%'])
 const opacity = useTransform(scrollY, [0, 198], [1, 0])
 </script>
 
@@ -19,7 +19,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
       )
     "
     :style="{
-      y,
+      /*  y, */
       opacity,
     }">
     <!-- icon -->
@@ -37,7 +37,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
       <div
         class="
           inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst
-          **:text-3
+          **:text-md
         ">
         <slot name="subheader" />
       </div>

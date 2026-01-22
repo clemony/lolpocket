@@ -2,12 +2,11 @@
 definePageMeta({
   keepalive: true,
   layout: false,
-  search: 'hidden'
+  search: 'hidden',
 })
 
 // get route so we can detect puuid or slug
 const route = useRoute()
-console.log('🥸 - route:', route)
 
 const params = ref<Identifier>(null)
 

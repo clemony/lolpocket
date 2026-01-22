@@ -106,7 +106,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
         <ChampionQuote
           v-once
           class="
-            grow text-end text-2 font-normal text-nowrap whitespace-nowrap
+            grow text-end text-sm font-normal text-nowrap whitespace-nowrap
             italic
           " />
         <InputGroupPopover

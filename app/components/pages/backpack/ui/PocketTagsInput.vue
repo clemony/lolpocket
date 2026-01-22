@@ -54,7 +54,7 @@ function deleteTag(tag: string) {
             size="md">
             <span
               class="
-                grow text-4 font-semibold tracking-normal capitalize opacity-40
+                grow text-lg font-semibold tracking-normal capitalize opacity-40
                 duration-0
               ">
               Tags
@@ -117,7 +117,7 @@ function deleteTag(tag: string) {
             hover="outline"
             class="
               group flex w-full flex-nowrap items-center gap-3!
-              justify-self-center px-3 py-0 text-2 duration-0
+              justify-self-center px-3 py-0 text-sm duration-0
               focus-within:border-neutral/60
               focus-within:[&_input]:placeholder:opacity-0
             ">
@@ -130,7 +130,7 @@ function deleteTag(tag: string) {
               v-model="newTag"
               placeholder="create new tag..."
               class="
-                h-full w-full grow rounded-none transition-all duration-300
+                size-full grow rounded-none transition-all duration-300
                 placeholder:italic
               "
               @keydown.enter="
@@ -144,7 +144,7 @@ function deleteTag(tag: string) {
               size="8"
               class="
                 btn-square size-6 duration-0
-                group-has-[:placeholder-shown]:opacity-0
+                group-has-placeholder-shown:opacity-0
               "
               @click="newTag = ''">
               <icon name="x-sm" />

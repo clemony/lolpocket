@@ -1,4 +1,4 @@
-import type { MatchData } from "#shared/types/types.match"
+import type { MatchData } from "~~/layers/types/src/data/types.match"
 
 export async function fetchInBatches(ids: string[], region: string) {
   const concurrency = 10

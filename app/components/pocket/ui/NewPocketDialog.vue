@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { generateName } from '~~/shared'
+import { generateName } from '~~/shared/.index'
 
 const emit = defineEmits(['update:name'])
 
@@ -38,7 +38,7 @@ defineExpose({
   <Dialog>
     <MotionDialogContent class="w-110 rounded-xl! px-7 pt-8 pb-6">
       <DialogHeader>
-        <DialogTitle class="text-6 dst">
+        <DialogTitle class="text-xxl dst">
           New Pocket
         </DialogTitle>
 
@@ -63,7 +63,7 @@ defineExpose({
         <div
           class="
             flex size-full flex-col justify-start gap-6 px-0.5 pt-4
-            [&_label]:text-3
+            [&_label]:text-md
           ">
           <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
@@ -73,7 +73,7 @@ defineExpose({
                   type="text"
                   name="pocket-name"
                   placeholder="Pocket Name"
-                  class="size-full text-3" />
+                  class="size-full text-md" />
               </div>
 
               <span class="flex gap-2">
@@ -90,7 +90,7 @@ defineExpose({
               class="mt-6 flex-col p-2">
               <div
                 class="
-                  flex w-full flex-row flex-wrap justify-start gap-2 *:text-3
+                  flex w-full flex-row flex-wrap justify-start gap-2 *:text-md
                 ">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
@@ -123,7 +123,7 @@ defineExpose({
               <TagsInputInput
                 placeholder="optional"
                 class="
-                  min-h-10 w-full rounded-md border-0 text-3 focus:border-0
+                  min-h-10 w-full rounded-md border-0 text-md focus:border-0
                 "
                 name="pocket-tags " />
             </TagsInput>
@@ -138,7 +138,7 @@ defineExpose({
       <DialogFooter class="mt-1 justify-start">
         <button
           type="submit"
-          class="btn px-6 text-3! font-medium! btn-md btn-neutral"
+          class="btn px-6 text-md! font-medium! btn-md btn-neutral"
           @click="submitForm">
           Create
         </button>

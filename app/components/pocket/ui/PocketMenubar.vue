@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
 import {
   ChampionIcon,
-  Hicon,
+  Icon,
   ItemsAutoMenu,
   MiniItemAvatars,
   MiniSpellAvatars,
   RuneAndPathImg,
   RunesAutoMenu,
-  SpellsAutoMenu,
+  SpellsAutoMenu
 } from '#components'
-import type { MenubarGroup } from '~/base/menu/menubar/types.menubar'
-import { createCheckboxItem, createRadioGroupItem } from '~/base/menu/menubar/auto-menu/createCheckboxItem'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -170,7 +167,7 @@ const menu: MenubarGroup[] = [
                 name: 'Main Role',
                 get: () => pocket.value._role,
                 optionIcon: k =>
-                  h(Hicon, { name: `i-lol-${k}`, class: '!size-4 mx-1' }),
+                  h(Icon, { name: `i-lol-${k}`, class: '!size-4 mx-1' }),
                 optionName: k => k,
                 options: championPositions.map(p => p.name),
                 set: v => (pocket.value._role = v),
@@ -279,7 +276,7 @@ console.log('🌱 - menu:', menu)
 
     <!--             <div
               v-if="!ps().pockets.filter(p => ps().pinned.includes(p.key)).length"
-              class="grid h-8 pb-2 text-2 opacity-50  w-full place-items-center">
+              class="grid h-8 pb-2 text-sm opacity-50  w-full place-items-center">
               No pockets found.
             </div> -->
   </Menubar>

@@ -110,7 +110,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 </template>
 
 <style scoped>
-  @reference '~/assets/css/tailwind.css';
+  @reference '~/ui/css/tailwind.css';
 @reference 'tailwindcss';
 
 .layout-class {

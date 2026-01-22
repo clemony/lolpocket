@@ -45,19 +45,18 @@ const a = computed(() => {
 
 <template>
   <transition-fade
-    v-if="currentPath === currentPath"
     group>
     <div class="flex items-center gap-6 leading-none">
-      <h1 class="text-8 dst transition-all duration-300">
+      <h1 class="text-4xl dst transition-all duration-300">
         {{ currentPath === "" ? "Runes" : (currentPath ?? title) }}
       </h1>
 
-      <span class="pt-1 text-2 lowercase">{{ a.tag ?? "select a path" }}</span>
+      <span class="pt-1 text-sm lowercase">{{ a?.tag ?? "select a path" }}</span>
     </div>
 
-    <p class="mt-2.5 font-serif text-4">
+    <p class="mt-2.5 font-serif text-lg">
       {{
-        a.description || "Precision, Domination, Sorcery, Resolve, Inspiration"
+        a?.description || "Precision, Domination, Sorcery, Resolve, Inspiration"
       }}.
     </p>
   </transition-fade>

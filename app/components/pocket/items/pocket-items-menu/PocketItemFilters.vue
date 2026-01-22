@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { newItemSet } from '#shared/schema'
+import { newItemSet } from '@types'
 
 const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
@@ -9,10 +9,10 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
   <!--   <div class="w-full justify-self-center mx-auto px-4  items-center sticky py-0 -top-50  z-1 bg-b1/86 backdrop-blur  relative rounded-lg  gap-4 flex flex-col before:border-b1"></div> -->
   <div
     class="
-      relative sticky -top-55 z-1 flex w-full flex-col items-center gap-4 pt-4
-      before:absolute before:top-0 before:-left-1 before:box-content
-      before:size-full before:border-4 before:border-b1 before:bg-b1/96
-      before:backdrop-blur
+      before:border-b1 before:bg-b1/96 relative sticky -top-55 z-1 flex w-full flex-col items-center
+      gap-4 pt-4 before:absolute before:top-0
+      before:-left-1 before:box-content before:size-full before:border-4
+      before:backdrop-blur-sm
     ">
     <div
       class="

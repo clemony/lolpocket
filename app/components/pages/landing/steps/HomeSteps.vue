@@ -120,7 +120,7 @@ const steps = [
                  : 'timeline-end',
             )
           ">
-          <p class="py-2 font-mono text-4 italic dst">
+          <p class="py-2 font-mono text-lg italic dst">
             Step {{ i }}
           </p>
 

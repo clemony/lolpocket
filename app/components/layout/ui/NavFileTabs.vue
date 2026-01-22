@@ -29,7 +29,7 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '1.6rem'])
     role="tablist"
     :style="{ gap, opacity, translateX }"
     :class="
-      cn('relative z-3 flex h-15 w-fit items-end self-end justify-self-end border-b-0! transition-none *:select-none **:text-2',
+      cn('relative z-3 flex h-15 w-fit items-end place-self-end border-b-0! transition-none *:select-none **:text-sm',
       )
     ">
     <motion.button
@@ -64,7 +64,7 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3rem', '1.6rem'])
 
       <motion.div
         :class="
-          cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-2 font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
+          cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
              {
                'opacity-60': item.name !== route.name,
                'opacity-100': item.name === route.name,

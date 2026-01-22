@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { isCollapsed, pinned } = defineProps<{
   isCollapsed: boolean
@@ -23,7 +23,7 @@ const { isCollapsed, pinned } = defineProps<{
         size="md">
         <span
           class="
-            grow text-4 font-semibold tracking-normal capitalize opacity-40
+            grow text-lg font-semibold tracking-normal capitalize opacity-40
           ">
           Pinned Pockets
         </span>
@@ -39,8 +39,8 @@ const { isCollapsed, pinned } = defineProps<{
       ">
       <nav
         class="
-          grid gap-1 group-[[data-collapsed=true]]:justify-center
-          group-[[data-collapsed=true]]:px-2
+          grid gap-1 group-data-[collapsed=true]:justify-center
+          group-data-[collapsed=true]:px-2
         ">
         <div
           v-for="link of pinned"
@@ -53,7 +53,7 @@ const { isCollapsed, pinned } = defineProps<{
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
             class="
-              flex grow items-center justify-start gap-3! px-2 text-3
+              text-md flex grow items-center justify-start gap-3! px-2
               duration-0!
             ">
             <PocketIcon

@@ -49,7 +49,7 @@ const prev = computed (() => {
       <Icons
         name="right"
         :class="cn('size-4 opacity-0 transition-opacity duration-150', { 'opacity-100': item.id === activeId })" />
-      <span :class="cn('text-3 font-light! capitalize group-hover/btn:font-medium!', { 'text-5 font-bold! group-hover/btn:font-bold! group-hover/btn:opacity-70 group-hover/btn:decoration-1!': item.id === activeId })">
+      <span :class="cn('text-md font-light! capitalize group-hover/btn:font-medium!', { 'text-xl font-bold! group-hover/btn:font-bold! group-hover/btn:opacity-70 group-hover/btn:decoration-1!': item.id === activeId })">
         {{ item.name }}
       </span>
     </Button>

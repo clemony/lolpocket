@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ListboxItem, ListboxItemIndicator } from 'reka-ui'
+import { ListboxItem, ListboxItemIndicator } from 'reka-ui';
 
 const {
   activeTheme,
@@ -54,7 +54,7 @@ const colorChip
       <p class="h-9 leading-5 text-pretty italic">
         '{{ theme.quote }}'
       </p>
-      <p class="pr-4 text-end text-2 leading-4 text-pretty italic opacity-80">
+      <p class="pr-4 text-end text-sm leading-4 text-pretty italic opacity-80">
         —{{ theme.champion }}
       </p>
     </div>

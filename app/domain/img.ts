@@ -1,4 +1,4 @@
-import { skinIndex as skins } from "#shared"
+import { skinIndex as skins } from "@constants"
 import { bgArt } from "@domain"
 
 export function getSplash(

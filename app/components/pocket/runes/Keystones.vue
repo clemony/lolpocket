@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '~~/shared/schema'
+import type { Pocket, RuneSet } from '@types'
 
 const {
   pocket,
@@ -65,7 +65,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
       </TabsTrigger>
 
       <TabIndicator
-        class="mt-1 *:to-b1/40"
+        class="*:to-b1/40 mt-1"
         round />
     </TabsList>
 

@@ -19,7 +19,7 @@ const { title, icon } = defineProps<{
       :aria-valuenow="value"
       role="progressbar">
       <div class="absolute -translate-y-1 place-self-center leading-7">
-        <div class="text-1 font-medium">
+        <div class="text-xs font-medium">
           {{ title }}
         </div>
         <h2 class="place-self-center">

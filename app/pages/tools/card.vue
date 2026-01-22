@@ -50,7 +50,7 @@ console.log('💠 - card.splash:', card.splash)
 <template>
   <div
     class="
-      relative grid h-full w-full items-center justify-center overflow-hidden
+      relative grid size-full items-center justify-center overflow-hidden
     ">
     <!--
 
@@ -95,7 +95,7 @@ console.log('💠 - card.splash:', card.splash)
         id="pocket-card"
         ref="pocketCardRef"
         class="
-          relative aspect-square h-300 w-300 rounded-box border border-b3/70
+          relative aspect-square size-300 rounded-box border border-b3/70
           object-contain shadow-smooth inset-shadow-sm
         "
         :style="{
@@ -125,14 +125,14 @@ console.log('💠 - card.splash:', card.splash)
             class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
-                class="text-9 dst tracking-tight pl-3"
+                class="text-5xl dst tracking-tight pl-3"
                 :style="{ fontFamily: card.font[1] }"
                 :class="fontClass2">
                 {{ card.champion ? `${card.champion}\'s` : '' }} Pocket
               </h3>
 
               <h1
-                class="text-12 tracking-tight drop-shadow-sm"
+                class="text-6xl tracking-tight drop-shadow-sm"
                 :style="{ fontFamily: card.font[0] }"
                 :class="fontClass1">
                 {{ ix().champNameByKey(card.champion) ?? '' }}

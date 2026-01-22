@@ -24,8 +24,8 @@ function getBadgeVariantFromLabel(label: string) {
     v-for="item of items"
     :key="item.id"
     :class="
-      cn('flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-2 transition-all hover:bg-b2/50',
-        selected === item.id && 'bg-b2/30',
+      cn('flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-b2/50',
+         selected === item.id && 'bg-b2/30',
       )
     "
     @click="selected = item.id">
@@ -37,12 +37,12 @@ function getBadgeVariantFromLabel(label: string) {
           </div>
           <span
             v-if="!item.read"
-            class="flex h-2 w-2 rounded-full bg-blue-600" />
+            class="flex size-2 rounded-full bg-blue-600" />
         </div>
         <div
           :class="
             cn(
-              'ml-auto text-2',
+              'ml-auto text-sm',
               selected === item.id ? 'text-bc' : 'text-bc/60',
             )
           ">
@@ -50,11 +50,11 @@ function getBadgeVariantFromLabel(label: string) {
         </div>
       </div>
 
-      <div class="text-2 font-medium">
+      <div class="text-sm font-medium">
         {{ item.subject }}
       </div>
     </div>
-    <div class="line-clamp-2 text-2 text-bc/60">
+    <div class="line-clamp-2 text-sm text-bc/60">
       {{ item.text.substring(0, 300) }}
     </div>
     <div class="flex items-center gap-2">

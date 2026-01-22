@@ -1,6 +1,6 @@
 // duplicate
 
-import type { ItemSet, Pocket, RuneSet } from '~~/shared/schema'
+import type { ItemSet, Pocket, RuneSet } from '@types'
 
 export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))

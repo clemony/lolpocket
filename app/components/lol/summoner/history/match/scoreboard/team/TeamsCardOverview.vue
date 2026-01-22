@@ -15,7 +15,7 @@ const route = useRoute()
     <BtnLink
       v-for="player in match.participants"
       :key="player.puuid"
-      data-tip="player"
+      data-type="player"
       data-theme="neutral line"
       :data-id="player.icon"
       data-placement="right"
@@ -25,7 +25,7 @@ const route = useRoute()
       variant="link"
       :to="`/summoner/${player.puuid}`"
       :class="
-        cn('flex size-full items-center gap-2 overflow-hidden text-1 font-medium tracking-tight text-nowrap normal-case', {
+        cn('flex size-full items-center gap-2 overflow-hidden text-xs font-medium tracking-tight text-nowrap normal-case', {
           'col-start-1': player.teamId === 100,
           'col-start-2 ': player.teamId === 200,
         })

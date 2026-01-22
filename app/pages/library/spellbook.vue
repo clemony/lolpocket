@@ -78,7 +78,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
             v-if="selectedSpell.text"
             :key="selectedSpell.name"
             class="pl-4.5 pr-3">
-            <p class="font-serif text-4 leading-9 dst">
+            <p class="font-serif text-lg leading-9 dst">
               {{ selectedSpell.text }}
             </p>
 
@@ -126,7 +126,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
                   Summoner
                 </p>
 
-                <h1 class="text-9 tracking-tight dst">
+                <h1 class="text-5xl tracking-tight dst">
                   {{ selectedSpell.name }}
                 </h1>
               </div>

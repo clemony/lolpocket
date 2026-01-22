@@ -70,7 +70,7 @@ const damageType = computed(() =>
     <div :class="wrapperClass">
       <p>Resource</p>
       <p class="flex items-center gap-2 font-medium">
-        <hicon
+        <Icon
           v-if="resource?.icon"
           :name="resource?.icon"
           class="inline size-3.5! shrink-0 opacity-90 dst" />
@@ -83,7 +83,7 @@ const damageType = computed(() =>
       <div
         class="
           flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1
-          *:text-3
+          *:text-md
         ">
         <div class="font-medium">
           <Icon
@@ -91,7 +91,7 @@ const damageType = computed(() =>
             class="mr-0.5 size-4.25! shrink-0! text-platinum dst" />
           <p>
             {{ champion.price.blueEssence }}
-            <span class="pr-0.5 text-1 font-medium">BE</span>
+            <span class="pr-0.5 text-xs font-medium">BE</span>
           </p>
         </div>
         <div>
@@ -100,7 +100,7 @@ const damageType = computed(() =>
             class="mr-1 size-4.5! shrink-0! text-gold dst" />
           <p class="font-medium">
             {{ champion.price.rp }}
-            <span class="pr-0.5 text-1 font-medium">RP</span>
+            <span class="pr-0.5 text-xs font-medium">RP</span>
           </p>
         </div>
       </div>

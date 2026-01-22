@@ -31,7 +31,7 @@ const today = new Date()
               :disabled="!mail">
               <icon
                 name="pin"
-                class="size-4.75 **:stroke-[2]" />
+                class="size-4.75 **:stroke-2" />
               <span class="sr-only">Pin</span>
             </Button>
           </TooltipTrigger>
@@ -105,7 +105,7 @@ const today = new Date()
             </PopoverTrigger>
             <PopoverContent class="flex w-[535px] p-0">
               <div class="flex flex-col gap-2 border-r px-2 py-4">
-                <div class="px-4 text-2 font-medium">
+                <div class="px-4 text-sm font-medium">
                   Snooze until
                 </div>
                 <div class="grid min-w-[250px] gap-1">
@@ -203,16 +203,16 @@ const today = new Date()
       v-if="mail"
       class="flex flex-1 flex-col">
       <div class="flex items-start p-4">
-        <div class="flex items-start gap-4 text-2">
+        <div class="flex items-start gap-4 text-sm">
           <PocketIcon class="aspect-square size-17 rounded-full" />
           <div class="grid gap-1">
             <div class="font-semibold">
               {{ mail.name }}
             </div>
-            <div class="line-clamp-1 text-2">
+            <div class="line-clamp-1 text-sm">
               {{ mail.subject }}
             </div>
-            <div class="line-clamp-1 text-2">
+            <div class="line-clamp-1 text-sm">
               <span class="font-medium">Reply-To:</span>
               {{ mail.email }}
             </div>
@@ -220,12 +220,12 @@ const today = new Date()
         </div>
         <div
           v-if="mail.date"
-          class="ml-auto text-2 text-bc/60">
+          class="ml-auto text-sm text-bc/60">
           1/12/2046
         </div>
       </div>
       <Separator />
-      <div class="flex-1 p-4 text-2 whitespace-pre-wrap">
+      <div class="flex-1 p-4 text-sm whitespace-pre-wrap">
         {{ mail.text }}
       </div>
       <Separator class="mt-auto" />
@@ -238,7 +238,7 @@ const today = new Date()
             <div class="flex items-center">
               <Label
                 html-for="mute"
-                class="flex items-center gap-2 text-2 font-normal">
+                class="flex items-center gap-2 text-sm font-normal">
                 <Switch
                   id="mute"
                   aria-label="Mute thread" />

@@ -28,7 +28,7 @@ const target = shallowRef<HTMLButtonElement>(null)
 
       <span
         v-if="as().inbox?.messages?.length"
-        class="absolute right-4 font-mono text-2 opacity-60">
+        class="absolute right-4 font-mono text-sm opacity-60">
         {{ as().inbox.messages.filter((m) => !m.read).length }}
       </span>
     </PopoverItem>

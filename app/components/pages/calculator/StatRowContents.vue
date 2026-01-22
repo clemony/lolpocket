@@ -43,7 +43,7 @@ const amount = computed(() => {
 </script>
 
 <template>
-  <div class="ability-icon col-start-1 ml-5 text-2!">
+  <div class="ability-icon col-start-1 ml-5 text-sm!">
     <component
       :is="`i-stats-${stat.icon}`"
       filled
@@ -60,7 +60,7 @@ const amount = computed(() => {
     {{ stat.name }}
   </div>
 
-  <div class="col-start-3 text-2 dst select-none">
+  <div class="col-start-3 text-sm dst select-none">
     <span class="flex items-center justify-end gap-2">
       <!--
   <icon name="bi:caret-caret-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
@@ -76,7 +76,7 @@ const amount = computed(() => {
 
   <div
     v-if="is().isComparing"
-    class="col-start-4 font-mono text-2 dst select-none">
+    class="col-start-4 font-mono text-sm dst select-none">
     <span class="flex items-center justify-end gap-2">
       {{ statValue2 > 0 ? statValue2 : "" }}
       <!--  <icon name="rivet-icons:arrow-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare===2}" /> -->

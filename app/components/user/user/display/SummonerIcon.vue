@@ -1,44 +1,20 @@
 <script lang="ts" setup>
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
-
-const props = defineProps<
-  PrimitiveProps & {
-    class?: HTMLAttributes['class']
-    iconId?: number | string | null
-    summoner?: Summoner | Partial<Summoner>
-    alt?: string
-  }
+const { alt, class: className, iconId, size, summoner } = defineProps<{
+  class?: HTMLAttributes['class']
+  iconId?: number | string | null
+  summoner?: Summoner | Partial<Summoner>
+  alt?: string
+  size?: ButtonVariants['size']
+}
 >()
-
-const icon = computed(() => {
-  if (props.iconId !== null && props.iconId !== undefined)
-    return getSummonerIcon(props.iconId)
-  else if (props.summoner?.icon)
-    return getSummonerIcon(props.summoner?.icon)
-  else if (as().account?.icon)
-    return getSummonerIcon(as().account?.icon)
-  else return null
-})
-
-const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <Primitive
-    :class="
-      cn('relative grid aspect-square size-12 shrink-0 place-items-center overflow-hidden bg-b2 shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
-         props.class,
-      )
-    ">
-    <Img
-      v-bind="forwarded"
-      :src="String(icon)"
-      alt="summoner icon"
-      class="pointer-events-none size-full [&_img]:scale-115" />
+  <Img
+    :size
 
-    <slot />
-  </Primitive>
+    variant="neutral"
+    :src="getSummonerIcon(iconId || summoner?.icon || as().account.icon)"
+    alt="summoner icon"
+    :class="cn('pointer-events-none grid place-items-center p-0!', className)" />
 </template>
-
-<style scoped></style>

@@ -32,7 +32,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
         :class="cn({ 'row-span-2': group === 'physical' })">
         <ListboxGroupLabel
           v-if="labels"
-          class="mb-1 pl-0 text-2! font-semibold text-bc/90 capitalize">
+          class="mb-1 pl-0 text-sm! font-semibold text-bc/90 capitalize">
           {{ group }}
         </ListboxGroupLabel>
 
@@ -54,7 +54,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
             :value="stat.id">
             <span
               v-if="icons">
-              <hicon
+              <Icon
                 :style="{
                   color: is().filters.stats.includes(stat.id) ? '#FFFFFF' : stat.color,
                 }"

@@ -24,18 +24,12 @@ const winrate = computed(() =>
 <template>
   <div
     :class="
-      cn('field-box h-36 w-full pt-1!',
-         className,
-      )
-    ">
+      cn('field-box h-36 w-full pt-1!', className) ">
     <span class="field-legend">
       {{ `Ranked ${title}` }}
     </span>
     <div
-      class="
-        grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center
-        content-center overflow-hidden
-      ">
+      class="grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden">
       <div class="mt-0.5 grid place-items-center overflow-hidden">
         <!-- crest -->
         <img
@@ -53,9 +47,7 @@ const winrate = computed(() =>
 
       <div class="relative grid size-full place-items-center">
         <div
-          class="
-            relative grid size-21 place-items-center overflow-hidden rounded-lg
-          ">
+          class="relative grid size-21 place-items-center overflow-hidden rounded-lg">
           <DonutSkeleton class="absolute size-21 dst" />
 
           <div
@@ -79,10 +71,8 @@ const winrate = computed(() =>
 
       <div
         :class="
-          cn('flex flex-col items-end justify-center gap-2.75 overflow-hidden pt-3 pb-3 text-end font-medium',
-             { 'opacity-40': !entry },
-          )
-        ">
+          cn('flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium',
+             { 'opacity-40': !entry }) ">
         <p class="capitalize">
           {{
             entry
@@ -91,14 +81,14 @@ const winrate = computed(() =>
           }}
         </p>
 
-        <p class="text-4 font-semibold capitalize">
+        <p class="text-lg font-semibold capitalize">
           {{ entry?.lp ?? 0 }} LP
         </p>
 
         <p
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
           class="
-            flex items-center justify-end gap-1 text-end text-1 text-nowrap
+            flex items-center justify-end gap-1 text-end text-xs text-nowrap
             decoration-dotted underline-offset-2 hover:underline
           ">
           <span>{{ entry ? entry.wins : 0 }}W</span>

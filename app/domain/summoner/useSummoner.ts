@@ -20,8 +20,9 @@ export interface SummonerProviderApi {
   champions: ShallowRef<AggregatedStats[]>
   allies: ShallowRef<AllyStatDetail[]>
   mastery: () => Promise<PlayerChampionMastery[]>
-  loadNewer: () => Promise<void>
+  loadNewer: () => Promise<string>
   loadOlder: () => Promise<void>
+  loadMessage: ShallowRef<string>
   loading: ComputedRef<boolean>
   loadingOlder: ShallowRef<boolean>
   ready: Ref<boolean>
@@ -78,21 +79,34 @@ export function useSummonerProvider() {
   )
 
   const puuid = shallowRef<string | null>(null)
-  const summoner = shallowRef<Summoner | null>(null)
+  const summoner = computed(() =>
+    puuid.value ? ss().resolveByPuuid(puuid.value) : null
+  )
+
+  watch(
+    () => summoner.value,
+    (v) => {
+      console.log("💠 - watch - newVal:", v)
+    }
+  )
   const account = shallowRef<Account | null>(null)
 
-  const loading = ref(false)
-  const ready = ref(false)
+  const loading = ref<boolean>(false)
+  const ready = ref<boolean>(false)
 
   async function resolveIdentifier() {
     const value = identifier.value
     if (!value) return null
 
+    //await until(() => ss().hydrated).toBe(true)
+
     if (value.puuid) return value.puuid
 
     const hit = ss().resolveBySlug(value.region, value.name, value.tag)
+    console.log("🥸 - resolveIdentifier - hit:", hit)
     if (hit) return hit.puuid
 
+    //  legal to fetch
     const fetched = await ss().ensureSummoner(value)
     return fetched.puuid
   }
@@ -105,16 +119,19 @@ export function useSummonerProvider() {
 
     loading.value = true
     try {
-      const result = await ss().resolveOrFetch(puuid.value)
-      summoner.value = result
-      account.value = await acc().getByPuuid(result.puuid)
-      await refreshLocal()
+      // This guarantees the store has the summoner
+      await ss().resolveOrFetch(puuid.value)
+
+      // summoner.value is  live from the store
+      if (summoner.value) {
+        account.value = await acc().getByPuuid(summoner.value.puuid)
+        await refreshLocal()
+      }
     } finally {
       loading.value = false
       ready.value = true
     }
   }
-
   // MASTERY
 
   async function mastery(): Promise<PlayerChampionMastery[]> {
@@ -130,6 +147,7 @@ export function useSummonerProvider() {
     loadOlder,
     loadingOlder,
     refreshLocal,
+    loadMessage,
     loading: matchesLoading,
   } = useMatches(summoner)
 
@@ -212,6 +230,7 @@ export function useSummonerProvider() {
     mastery,
     loadNewer,
     loadOlder,
+    loadMessage,
     loading: computed(() => loading.value || matchesLoading.value),
     loadingOlder,
     ready,

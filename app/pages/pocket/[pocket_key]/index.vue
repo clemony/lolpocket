@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { fetchThread } from '~/composables/tiptap'
-
 definePageMeta({
   name: 'pocket-core',
   title: 'core',
@@ -24,7 +22,7 @@ watch(() => acc().accounts, (newVal) => {
 
 <template>
   <div class="relative size-full max-w-screen">
-    <div class="fixed top-0 left-[45px] z-12 flex h-15 w-56 items-center">
+    <div class="fixed top-0 left-15 z-12 flex h-15 w-56 items-center">
       <icon
         name=""
         class="-mx-1 size-6.5 stroke-2" />

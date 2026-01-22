@@ -70,7 +70,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               <span
                 v-show="!isCollapsed"
                 class="
-                  grow items-center text-5 font-semibold dst *:first:capitalize
+                  grow items-center text-xl font-semibold dst *:first:capitalize
                 ">
                 <SummonerName class="inline" />
                 's Inbox
@@ -83,7 +83,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
           </PopoverTrigger>
           <LazyPopoverContent
             class="
-              w-[var(--reka-popover-trigger-width)] min-w-64 space-y-1 p-1.5
+              w-(--reka-popover-trigger-width) min-w-64 space-y-1 p-1.5
             ">
             <InboxDropdownMenu />
           </LazyPopoverContent>

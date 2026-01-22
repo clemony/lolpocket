@@ -47,7 +47,7 @@ const tps = computed (() => {
     :data-placement="tps?.placement"
     :data-size="tps?.size"
     :data-interactive="tps?.size === 'lg' ? true : false"
-    :data-tip="!tps ? null : 'spell'"
+    :data-type="!tps ? null : 'spell'"
     :title="!tps && title ? title : !tps ? spellNameById(id) : null"
     :class="
       cn({ ' shadow-sm drop-shadow-sm  shadow-black/30': loaded }, className)"

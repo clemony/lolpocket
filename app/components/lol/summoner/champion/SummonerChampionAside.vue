@@ -37,12 +37,12 @@ const results = computed (() => {
     <div
       class="relative w-full">
       <Button
-        data-tip="Back to all champions"
+        data-type="Back to all champions"
         data-placement="right"
         data-them="neutral mini-tip line"
         variant="none"
         size="5"
-        class="absolute -top-10 left-0 justify-start gap-1 p-0 text-2 leading-none font-medium"
+        class="absolute -top-10 left-0 justify-start gap-1 p-0 text-sm leading-none font-medium"
         @click="navigateTo({ name: 'summoner-region-slug-champions' })">
         <span class="font-semibold capitalize opacity-40">{{ summoner?.name }}</span>
         <Icon
@@ -52,7 +52,7 @@ const results = computed (() => {
       </Button>
       <h1 class="flex size-full items-center gap-3 pt-0.5 pl-0.5 leading-none">
         <button
-          data-tip="Back to all champions"
+          data-type="Back to all champions"
           class="grid size-8 place-items-center overflow-hidden rounded-full shadow-sm dss after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
           @click="navigateTo({ name: 'summoner-region-slug-champions' })">
           <ChampionIcon
@@ -129,7 +129,7 @@ const results = computed (() => {
           <Button
             variant="link"
             size="9"
-            class="w-fit justify-start rounded-xl pr-8 text-2">
+            class="w-fit justify-start rounded-xl pr-8 text-sm">
             <Icon
               name="arrow-left"
               class="size-3.5 **:stroke-[2.2]" />
@@ -143,13 +143,13 @@ const results = computed (() => {
   <!--       <div class="flex w-full flex-col gap-1.5 pr-1 text-end">
           <div class="inline-flex items-center justify-between align-baseline">
             <span
-              data-tip="Total level"
-              class="text-4 font-bold">
+              data-type="Total level"
+              class="text-lg font-bold">
               lv. {{ mastery?.level }}
             </span>
             <span
-              data-tip="Total points"
-              class="pr-1 text-1 font-medium tracking-wide">
+              data-type="Total points"
+              class="pr-1 text-xs font-medium tracking-wide">
               {{ mastery?.totalPoints.toLocaleString() }}
             </span>
           </div>

@@ -29,7 +29,7 @@ function navigate() {
   <motion.nav
     role="tablist"
     :class="
-      cn('relative z-3 flex h-15 w-fit items-end self-end justify-self-end border-b-0! transition-none *:select-none **:text-2',
+      cn('relative z-3 flex h-15 w-fit items-end self-end justify-self-end border-b-0! transition-none *:select-none **:text-sm',
       )
     ">
     <ChampionNavTab

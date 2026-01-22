@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
+import { newItemSet } from '@types'
 import { vDraggable } from 'vue-draggable-plus'
-import { newItemSet } from '~~/shared/schema'
 
 const props = defineProps<{
   pocket: Pocket
@@ -80,7 +80,7 @@ watch(items, (newItemSets) => {
 
     <Button
       variant="outline"
-      class="h-22 w-full rounded-xl border-b3/40"
+      class="border-b3/40 h-22 w-full rounded-xl"
       @click="pocket.items.push(newItemSet())">
       <icon
         name="add"

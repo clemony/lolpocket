@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { StatTip } from '#components'
+import { StatTip } from '#components';
 
 const {
   i,
@@ -28,7 +28,7 @@ const {
       <span
         :class="
           cn(`
-            text-start text-2 font-medium text-nowrap lowercase
+            text-start text-sm font-medium text-nowrap lowercase
             underline-offset-2 group-hover:underline
           `)
         ">
@@ -37,7 +37,7 @@ const {
 
       <div
         class="
-          opacity-80 **:inline-block **:text-3! **:font-semibold **:text-bc
+          opacity-80 **:inline-block **:text-md! **:font-semibold **:text-bc
           **:tabular-nums
         ">
         <NumberTicker

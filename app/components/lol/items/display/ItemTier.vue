@@ -7,7 +7,7 @@ const { ranks } = defineProps<{
 <template>
   <p
     v-if="ranks"
-    class="mt-1 text-2">
+    class="mt-1 text-sm">
     <span
       v-for="(rank, i) in ranks"
       :key="rank">

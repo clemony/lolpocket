@@ -27,7 +27,7 @@
       </Element>
     </div>
 
-    <div class="flex grow flex-col items-end justify-center px-3 text-2">
+    <div class="flex grow flex-col items-end justify-center px-3 text-sm">
       <p class="items-center font-medium text-nowrap dst"></p>
 
       <p class="items-center font-medium text-nowrap dst"></p>

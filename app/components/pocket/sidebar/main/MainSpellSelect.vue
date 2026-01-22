@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 
@@ -69,7 +69,7 @@ const keyClass
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
+      class="w-(--reka-select-trigger-width) min-w-54 p-0">
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Spells
@@ -78,7 +78,7 @@ const keyClass
             variant="ghost"
             size="8"
             title="Clear main spells"
-            class="aspect-square btn-square *:opacity-60 hover:*:opacity-100"
+            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             @click="pocket._spells === ''">
             <icon
               name="backspace"

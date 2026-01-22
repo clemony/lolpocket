@@ -1,4 +1,4 @@
-import { extractReadableText } from "#shared"
+import { extractReadableText } from "@constants"
 import { createSupabaseClient } from "../client.supabase"
 
 export default defineEventHandler(async (event) => {

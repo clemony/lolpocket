@@ -20,37 +20,30 @@ onMounted(() => {
   ix().loadPatch()
 })
 
-onUnmounted(() => {
-  console.trace('UNMOUNTED HERE')
-})
 </script>
 
 <template>
-  <ToastProvider
-    :duration="16000"
-    as-child>
-    <TooltipProvider as-child>
-      <NuxtLayout>
-        <NuxtPage />
-        <LazyAppCommand />
+  <UApp>
+    <NuxtLayout>
+      <NuxtPage />
+      <LazyAppCommand />
 
-        <LazyReportDialog
-          v-if="as().user && as().account"
-          :comment="ts().reportComment" />
-        <!-- toaster -->
-        <Toaster />
-        <!-- loading -->
+      <LazyReportDialog
+        v-if="as().user && as().account"
+        :comment="ts().reportComment" />
+      <!-- loading -->
+      <ClientOnly>
         <NuxtLoadingIndicator
           style="
-            height: 5px;
-            background: repeating-linear-gradient(
-              to right,
-              var(--color-n3) 0%,
-              var(--color-n2),
-              var(--color-neutral) 100%
-            );
-          " />
-      </NuxtLayout>
-    </TooltipProvider>
-  </ToastProvider>
+              height: 5px;
+              background: repeating-linear-gradient(
+                to right,
+                var(--color-n3) 0%,
+                var(--color-n2),
+                var(--color-neutral) 100%
+              );
+            " />
+      </ClientOnly>
+    </NuxtLayout>
+  </UApp>
 </template>

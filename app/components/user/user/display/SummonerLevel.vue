@@ -24,7 +24,7 @@ const levelVariants = tv({
   variants: {
     variant: {
       badge:
-        'badge badge-sm badge-neutral text-0 bg-neutral/75 bottom-0.5 backdrop-blur',
+        'badge badge-sm badge-neutral text-xxs bg-neutral/75 bottom-0.5 backdrop-blur',
     },
   },
 })

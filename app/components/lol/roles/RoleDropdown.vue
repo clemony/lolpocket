@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { roles } from './handleRoles'
 
 const props = defineProps<{
@@ -24,13 +24,13 @@ const pocket = ref(props.pocket)
           :key="pocket.roles"
           v-tippy="pocket.roles"
           class="
-            drop-shadow-text size-6.5 shrink-0 text-3! text-white/70
+            drop-shadow-text text-md! size-6.5 shrink-0 text-white/70
             focus:outline-0
           " />
 
         <i-roles-all-lanes
           v-else
-          class="size-6 shrink-0 text-white/80 dst" />
+          class="dst size-6 shrink-0 text-white/80" />
       </Button>
     </DropdownMenuTrigger>
 
@@ -41,7 +41,7 @@ const pocket = ref(props.pocket)
       <DropdownMenuItem>
         <label
           for="all"
-          class="flex gap-4 text-2 hover:bg-b2/60!">
+          class="hover:bg-b2/60! flex gap-4 text-sm">
           <input
             id="all"
             v-model="pocket.roles"
@@ -66,7 +66,7 @@ const pocket = ref(props.pocket)
         class="">
         <label
           :for="role"
-          class="flex gap-4 text-2 hover:bg-b2/60!">
+          class="hover:bg-b2/60! flex gap-4 text-sm">
           <input
             :id="role"
             v-model="pocket.roles[0]"

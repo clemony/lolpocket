@@ -16,8 +16,8 @@ const route = useRoute()
     <slot>
       <Icon
         :name="String(to.meta?.icon)"
-        :class="cn('size-5', to?.meta?.listClass)" />
-      {{ to.meta?.title || to.name }}
+        :class="cn('size-5.5', to?.meta?.navClass)" />
+      <span>{{ to.meta?.title || to.name }}</span>
     </slot>
   </BtnLink>
 </template>

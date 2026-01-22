@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const { pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
@@ -24,15 +24,15 @@ const mainSet = computed(() =>
         placement="left"
         variant="ghost"
         class="
-          group/btn pointer-events-auto! z-10 size-16! cursor-pointer!
-          rounded-full fx-0 **:pointer-events-none hover:shadow-sm
+          group/btn fx-0 pointer-events-auto! z-10 size-16!
+          cursor-pointer! rounded-full **:pointer-events-none hover:shadow-sm
           hover:shadow-black/4
         "
         :set="mainSet" />
       <div
         class="
-          @6xl:animate-in @6xl:flex @6xl:slide-in-from-right @6xl:fade-in hidden
-          shrink flex-col overflow-hidden
+          @6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden shrink
+          flex-col overflow-hidden @6xl:flex
         ">
         <h3
           v-memo="[mainSet]"
@@ -48,7 +48,7 @@ const mainSet = computed(() =>
         <p
           v-memo="[mainSet?.secondary?.path]"
           :class="
-            cn('truncate text-3 leading-none italic', {
+            cn('text-md truncate leading-none italic', {
               'font-medium': mainSet?.secondary?.path,
               '!font-normal  opacity-20': !mainSet?.secondary?.path,
             })

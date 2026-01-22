@@ -1,8 +1,8 @@
+import type { PathSlot, Rune } from "#shared/types/types.rune"
 import fs from "node:fs"
 import path from "node:path"
 import { resolvePath } from "../resolvePath"
 import { markUpdate } from "../utils"
-import { Rune, type PathSlot } from "./../../../shared/types/types.rune"
 
 const dataPath = resolvePath("./runes/raw/runes.json")
 const raw = JSON.parse(fs.readFileSync(dataPath, "utf-8"))

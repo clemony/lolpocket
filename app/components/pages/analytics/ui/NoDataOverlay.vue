@@ -17,7 +17,7 @@ const props = withDefaults(
         absolute top-0 left-0 grid size-full place-items-center rounded-box
         bg-black/40
       ">
-      <div class="badge badge-xl text-2 opacity-90 shadow-lg">
+      <div class="badge badge-xl text-sm opacity-90 shadow-lg">
         {{ props.text }}
       </div>
     </div>

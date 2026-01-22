@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-const { match, timeline } = defineProps<{
+const { match, player, timeline } = defineProps<{
   timeline: PlayerTimeline
-  match: Player
+  match: MatchData
+  player: Player
 }>()
 
 const championData = await import(
-  `#shared/records/champions/${champKeyById(match.player.championId)}.ts`
+  `#shared/records/champions/${champKeyById(player.championId)}.ts`
 )
 const champion = computed(() => championData.default)
 
@@ -23,8 +24,8 @@ const skillOrder = computed(() => [
       <div
         v-for="ability, i in abilities?.filter(a => a.key !== 'R').sort((a, b) => timeline?.skills?.priority?.indexOf(a.key) - timeline?.skills?.priority.indexOf(b.key))"
         :key="i"
-        data-tip="ability"
-        :data-id="`${match.player.championId}${ability.key}`"
+        data-type="ability"
+        :data-id="`${player.championId}${ability.key}`"
 
         :style="{
           order: 1 + (Number(i) * 2),
@@ -35,7 +36,7 @@ const skillOrder = computed(() => [
           :src="ability.icon"
           class="size-12 rounded-lg shadow-sm dss" />
         <div
-          class="absolute -right-1 -bottom-1 grid size-6.5 place-items-center rounded-full border-2 border-b1 bg-neutral font-mono text-0 font-semibold text-nc"
+          class="absolute -right-1 -bottom-1 grid size-6.5 place-items-center rounded-full border-2 border-b1 bg-neutral font-mono text-xxs font-semibold text-nc"
           variant="neutral">
           {{ ability.key }}
         </div>
@@ -63,12 +64,12 @@ const skillOrder = computed(() => [
           {{ ability.key }}
         </div>
         <div
-          data-tip="ability"
+          data-type="ability"
           data-placement="left"
-          :data-id="`${match.player.championId}${ability.key}`"
+          :data-id="`${player.championId}${ability.key}`"
           class="size-7 overflow-hidden rounded-md shadow-sm dss">
           <Img
-            :alt="`${champNameById(match.player.championId)} ${ability.key} icon`"
+            :alt="`${champNameById(player.championId)} ${ability.key} icon`"
             :src="ability?.icon"
             class="size-full" />
         </div>
@@ -94,7 +95,7 @@ const skillOrder = computed(() => [
           <div
             v-if="skill === row"
             :style="{ gridColumnStart: i + 1 }"
-            class="absolute grid size-7 place-items-center bg-neutral text-0 font-semibold text-nc shadow-sm">
+            class="absolute grid size-7 place-items-center bg-neutral text-xxs font-semibold text-nc shadow-sm">
             {{ i + 1 }}
           </div>
         </div>

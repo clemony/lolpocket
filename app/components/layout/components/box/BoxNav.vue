@@ -23,7 +23,7 @@ const route = useRoute()
         :size="isCollapsed ? 'icon' : '11'"
         variant="ghost"
         :class="
-          cn('rounded-md text-3 font-medium! capitalize', {
+          cn('rounded-md text-md font-medium! capitalize', {
             'btn-active border-b3/60 shadow-xs': route.path === link.path,
             'w-full px-4 justify-start  !gap-3 ': !isCollapsed,
           })

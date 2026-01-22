@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { RuneSet } from '~~/shared/schema'
+import type { RuneSet } from '@types'
 
 const { set } = defineProps<{
   set: RuneSet
@@ -28,7 +28,7 @@ const { set } = defineProps<{
       <Placeholder
         v-else
         :class="
-          cn('size-11 shrink-0 justify-end rounded-full bg-b2/80', xClass)
+          cn('bg-b2/80 size-11 shrink-0 justify-end rounded-full', xClass)
         "
         class="" />
     </span>
@@ -41,7 +41,7 @@ const { set } = defineProps<{
     <Placeholder
       v-else
       :class="
-        cn('size-11 shrink-0 justify-start rounded-full bg-b2/80', xClass)
+        cn('bg-b2/80 size-11 shrink-0 justify-start rounded-full', xClass)
       " />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { InboxMessage } from '#shared/schema'
+import type { InboxMessage } from '@types'
 
 defineOptions({
   inheritAttrs: false,
@@ -14,7 +14,7 @@ const { message } = defineProps<{
   <div>
     <LazyDialogContentPop
       class="
-        grid h-160 w-220 grid-rows-[28px_80px_1fr] gap-1 bg-b1/86 p-0
+        bg-b1/86 grid h-160 w-220 grid-rows-[28px_80px_1fr] gap-1 p-0
         backdrop-blur-lg
       "
       :auto-focus="false"
@@ -25,7 +25,7 @@ const { message } = defineProps<{
           flex size-full flex-row items-center justify-between gap-4
           object-contain px-3 tracking-normal
         ">
-        <DialogTitle class="items-center pl-2 text-2! font-semibold text-bc/50">
+        <DialogTitle class="text-bc/50 items-center pl-2 text-sm! font-semibold">
           Message Received!
         </DialogTitle>
         <DialogDescription class=""></DialogDescription>
@@ -39,11 +39,11 @@ const { message } = defineProps<{
       <form class="flex w-full flex-col gap-4 px-6 pt-1 pb-6">
         <label
           class="
-            grid grid-cols-[60px_1fr] items-center gap-2 **:text-3
+            **:text-md grid grid-cols-[60px_1fr] items-center gap-2
             **:font-normal
           ">
           <span>Subject:</span>
-          <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
+          <span class="btn input bg-b1/40 h-11 w-full backdrop-blur-lg">
             <input
               type="text"
               :value="message.title"
@@ -51,15 +51,15 @@ const { message } = defineProps<{
           </span>
         </label>
         <label
-          class="grid grid-cols-[60px_1fr] items-center gap-2 **:text-3">
+          class="**:text-mdd grid grid-cols-[60px_1fr] items-center gap-2">
           <span>From:</span>
-          <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
+          <span class="btn input bg-b1/40 h-11 w-full backdrop-blur-lg">
             <span
               class="
-                size-7.5 shrink-0 rounded-full bg-neutral shadow-sm
+                bg-neutral size-7.5 shrink-0 rounded-full shadow-sm
                 drop-shadow-xs
               ">
-              <hicon
+              <Icon
                 :name="message.from.icon"
                 class="text-nc"
                 :icon-scale="0.65" />
@@ -76,7 +76,7 @@ const { message } = defineProps<{
           :value="message.content"
           readonly
           class="
-            btn textarea size-full bg-b1/40 text-start text-3 backdrop-blur-lg
+            text-mdd btn textarea bg-b1/40 size-full text-start backdrop-blur-lg
           " />
       </article>
     </LazyDialogContentPop>

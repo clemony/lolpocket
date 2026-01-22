@@ -16,7 +16,7 @@ const tags = ref([])
         size="md">
         <span
           class="
-            grow text-4 font-semibold tracking-normal capitalize opacity-40
+            grow text-lg font-semibold tracking-normal capitalize opacity-40
             duration-0
           ">
           Position

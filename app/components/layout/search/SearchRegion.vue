@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Presence } from 'reka-ui'
+import { Presence } from 'reka-ui';
 
 const {
   class: className,
@@ -35,7 +35,7 @@ watch(
           variant="ghost"
           size="sm"
           class="
-            z-1 flex w-14 flex-nowrap items-center text-2! tracking-[0.5px]
+            z-1 flex w-14 flex-nowrap items-center text-sm! tracking-[0.5px]
             text-nowrap text-bc/60 lowercase *:first:text-bc/60
           ">
           <span class="relative -mr-1 grid place-items-center">

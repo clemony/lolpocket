@@ -1,6 +1,5 @@
-// /app/plugins/tooltips.client.ts
 import { defineNuxtPlugin } from "#app"
-import { autoPlacement, type Alignment, type Placement } from "@floating-ui/dom"
+import type { Placement } from "@floating-ui/dom"
 import {
   arrow,
   autoUpdate,
@@ -10,8 +9,9 @@ import {
   useFloating,
 } from "@floating-ui/vue"
 import { createApp, h, markRaw, nextTick, shallowRef } from "vue"
-import TooltipArrow from "~/base/popup/tooltip/TooltipArrow.vue"
-import MiniTip from "~/components/common/ui/MiniTip.vue"
+//import TooltipArrow from "~/base/tooltip/TooltipArrow.vue"
+import MiniTip from "~/components/common/tooltip/TooltipRenderer.vue"
+import { tooltipPayloadRegistry } from "~/utils/tooltipPayload"
 
 export default defineNuxtPlugin(() => {
   if (typeof window === "undefined") return
@@ -20,15 +20,22 @@ export default defineNuxtPlugin(() => {
   const floatingEl = shallowRef<HTMLElement | null>(null)
   const arrowEl = shallowRef<HTMLElement | null>(null)
 
+  let hoverToken = 0
+
+  const frozenTransform = shallowRef<string | null>(null)
+  const lastTransform = shallowRef<string | null>(null)
+  const lastPosition = shallowRef<{ x: number; y: number } | null>(null)
+
+  const axisMode = shallowRef<"x" | "y" | "none">("none")
+  const AXIS_EPSILON = 2 // px
+
   const visible = shallowRef(false)
   const isPositioned = shallowRef(false)
   const justShown = shallowRef(false)
-  // separate mounted vs shown
   const mounted = shallowRef(false) // DOM exists
   const shown = shallowRef(false) // visible (opacity / data-state)
 
   const requestedPlacement = shallowRef<Placement>("top")
-  const requestedAlignment = shallowRef<Alignment>()
 
   const compRef = shallowRef<any | null>(null)
   const propsRef = shallowRef<Record<string, any>>({})
@@ -58,6 +65,15 @@ export default defineNuxtPlugin(() => {
     }
   )
 
+  watch(activeTrigger, (el) => {
+    if (el && !el.isConnected) {
+      shown.value = false
+      visible.value = false
+      activeTrigger.value = null
+      activeType.value = null
+    }
+  })
+
   async function loadTooltip(type: string) {
     const cached = cache.get(type)
     if (cached) return cached
@@ -74,10 +90,18 @@ export default defineNuxtPlugin(() => {
         // don't render at all if not mounted or no component yet
         if (!mounted.value || !compRef.value) return null
 
-        const { x, y } = middlewareData.value.arrow || {}
+        const arrowData = isPositioned.value ? middlewareData.value.arrow : null
+
+        const { x, y } = arrowData || {}
         const arrowStyle: Record<string, string> = {}
         if (x != null) arrowStyle.left = `${x}px`
         if (y != null) arrowStyle.top = `${y}px`
+
+        const resolvedTransform =
+          (isPositioned.value && floatingStyles.value.transform) ||
+          frozenTransform.value ||
+          lastTransform.value ||
+          "translate3d(0px, 0px, 0)"
 
         return h(
           "div",
@@ -85,14 +109,12 @@ export default defineNuxtPlugin(() => {
             ref: floatingEl,
             style: {
               ...floatingStyles.value,
+              transform: resolvedTransform,
               zIndex: 9999,
               pointerEvents:
                 shown.value && propsRef.value.interactive ? "auto" : "none",
-              "data-placement": placement.value,
-              // ONLY transform moveTransition here (between triggers),
-              // not entry animation.
               transition:
-                shown.value ?
+                shown.value && axisMode.value === "x" && !animateIn.value ?
                   "transform 150ms cubic-bezier(0.22, 0.61, 0.36, 1)"
                 : "transform 0ms linear",
             },
@@ -107,7 +129,8 @@ export default defineNuxtPlugin(() => {
                 "data-theme": propsRef.value.theme ?? "mini-tip neutral ",
                 "data-placement": placement.value,
                 // tells CSS whether to run the shift-toward keyframes
-                "data-animate": animateIn.value ? "in" : "move",
+                "data-animate":
+                  animateIn.value || axisMode.value === "y" ? "in" : "move",
                 style: {
                   // opacity controlled here for entry/exit only
                   opacity: shown.value ? 1 : 0,
@@ -124,8 +147,8 @@ export default defineNuxtPlugin(() => {
                       arrowEl.value = (el as HTMLElement) || null
                     },
                     style: arrowStyle,
-                  },
-                  [h(TooltipArrow)]
+                  }
+                  //[h(TooltipArrow)]
                 ),
 
                 h("div", { class: "tippy-content" }, [
@@ -154,7 +177,7 @@ export default defineNuxtPlugin(() => {
   let hideTimer: number | null = null
   let showTimer: number | null = null
   let longPressTimer: number | null = null
-  const HOT_SELECTOR = "[data-tip]"
+  const HOT_SELECTOR = "[data-type]"
 
   function clearHideTimer() {
     if (hideTimer != null) {
@@ -187,16 +210,16 @@ export default defineNuxtPlugin(() => {
     return !!el && el.isConnected
   }
 
+  if (shown.value && axisMode.value === "x") {
+    frozenTransform.value = floatingEl.value?.style.transform ?? null
+  }
+
   async function activate(el: HTMLElement) {
-    const type = el.dataset.tip
+    const type = el.dataset.type
     if (!type) return
 
-    // 👇 read the desired base placement from the trigger
     const triggerPlacement = el.dataset.placement as Placement | undefined
     requestedPlacement.value = triggerPlacement || "top"
-
-    const isReenteringSame =
-      shown.value && activeTrigger.value === el && activeType.value === type
 
     if (!isAnchorAlive(el)) {
       shown.value = false
@@ -211,26 +234,29 @@ export default defineNuxtPlugin(() => {
     referenceEl.value = el
     isPositioned.value = false
 
+    const payload = tooltipPayloadRegistry.get(el)
+
     propsRef.value = {
       id: el.dataset.id,
-      label: el.dataset.tip,
+      type: el.dataset.type,
       theme: el.dataset.theme,
       class: el.dataset.class,
       name: el.dataset.name,
       tag: el.dataset.tag,
       icon: el.dataset.icon,
+      img: el.dataset.img,
       text: el.dataset.text,
       size: el.dataset.size,
       map: el.dataset.map,
-      value: el.dataset.value,
+      payload,
       interactive: el.dataset.interactive === "true",
     }
 
     justShown.value = true
-    visible.value = true
     mounted.value = true
-    animateIn.value = !shown.value && !isReenteringSame
-    if (!visible.value || activeTrigger.value !== el) return
+    animateIn.value = !shown.value
+
+    if (activeTrigger.value !== el) return
 
     const component = await loadTooltip(type)
     compRef.value = component
@@ -238,14 +264,39 @@ export default defineNuxtPlugin(() => {
     await nextTick()
     await update()
 
+    const t = floatingEl.value?.style.transform
+    if (t) {
+      const match = t.match(/translate3d?\(([-\d.]+)px,\s*([-\d.]+)px/)
+      if (match) {
+        const [, xStr, yStr] = match
+        const x = Number(xStr)
+        const y = Number(yStr)
+
+        if (lastPosition.value) {
+          const dx = Math.abs(x - lastPosition.value.x)
+          const dy = Math.abs(y - lastPosition.value.y)
+
+          // axis detection threshold (tweakable)
+          axisMode.value =
+            dx > dy + AXIS_EPSILON ? "x"
+            : dy > dx + AXIS_EPSILON ? "y"
+            : "none"
+        }
+
+        lastPosition.value = { x, y }
+      }
+    }
+
     requestAnimationFrame(() => {
+      if (activeTrigger.value !== el) return
+
       isPositioned.value = true
+      frozenTransform.value = null
+      visible.value = true
+      shown.value = true
+      animateIn.value = false
       justShown.value = false
     })
-
-    if (activeTrigger.value !== el || activeType.value !== type) return
-
-    shown.value = true
   }
 
   document.addEventListener(
@@ -256,6 +307,9 @@ export default defineNuxtPlugin(() => {
 
       const trigger = target.closest(HOT_SELECTOR) as HTMLElement | null
       if (!trigger) return
+
+      hoverToken++
+      const token = hoverToken
 
       clearHideTimer()
 
@@ -276,10 +330,9 @@ export default defineNuxtPlugin(() => {
           trigger.dataset.delay != null ? Number(trigger.dataset.delay) : 140 // 👈 default hover intent delay
 
         showTimer = window.setTimeout(() => {
-          // make sure we're still on the same element
-          if (trigger.matches(":hover")) {
-            activate(trigger)
-          }
+          if (token !== hoverToken) return
+          if (!trigger.matches(":hover")) return
+          activate(trigger)
         }, delay)
       }
     },
@@ -289,7 +342,6 @@ export default defineNuxtPlugin(() => {
   document.addEventListener(
     "pointerout",
     (e) => {
-      clearShowTimer()
       const from = e.target as HTMLElement | null
       if (!from) return
 
@@ -301,6 +353,8 @@ export default defineNuxtPlugin(() => {
       if (to && to.closest(HOT_SELECTOR)) return
       if (to && root.contains(to)) return
 
+      hoverToken++
+      clearShowTimer()
       scheduleHide()
     },
     { passive: true, capture: true }
@@ -313,6 +367,8 @@ export default defineNuxtPlugin(() => {
   root.addEventListener("pointerout", (e) => {
     const to = e.relatedTarget as HTMLElement | null
     if (to && to.closest(HOT_SELECTOR)) return
+    hoverToken++
+    clearShowTimer()
     scheduleHide()
   })
 
@@ -324,6 +380,8 @@ export default defineNuxtPlugin(() => {
         longPressTimer = null
       }
       if (e.pointerType === "touch") {
+        hoverToken++
+        clearShowTimer()
         scheduleHide()
       }
     },
@@ -343,6 +401,8 @@ export default defineNuxtPlugin(() => {
   })
 
   root.addEventListener("focusout", () => {
+    hoverToken++
+    clearShowTimer()
     scheduleHide()
   })
 })

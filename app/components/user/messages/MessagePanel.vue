@@ -43,11 +43,11 @@ defineOptions({
           :key="`${message.date}-${i}`"
           :class="
             cn('group/msg flex w-full flex-col items-start gap-2 border-b border-b-b3 p-4 leading-tight whitespace-nowrap last:border-b-0',
-              {
-                ' bg-b1/80 ': !message.read,
-                'bg-transparent hover:bg-sidebar-accent opacity-70':
-                  message.read,
-              },
+               {
+                 ' bg-b1/80 ': !message.read,
+                 'bg-transparent hover:bg-sidebar-accent opacity-70':
+                   message.read,
+               },
             )
           ">
           <Dialog>
@@ -55,13 +55,13 @@ defineOptions({
               class="grid size-full justify-items-start"
               @click="markRead(message.id)">
               <div class="flex w-full items-center justify-between gap-2">
-                <span class="text-2 font-medium text-bc/60">
+                <span class="text-sm font-medium text-bc/60">
                   {{ message.from.name }}
                 </span>
 
                 <span
                   class="
-                    relative flex h-5 items-center justify-self-end text-1
+                    relative flex h-5 items-center justify-self-end text-xs
                     text-bc/80 *:absolute *:right-4 *:transition-opacity
                     *:duration-200 *:first:opacity-0
                     group-hover/msg:*:first:opacity-100
@@ -83,7 +83,7 @@ defineOptions({
               </div>
               <span
                 :class="
-                  cn('py-1 text-4 font-bold tracking-tight', {
+                  cn('py-1 text-lg font-bold tracking-tight', {
                     'opacity-70': message.read,
                   })
                 ">
@@ -91,7 +91,7 @@ defineOptions({
               </span>
               <span
                 class="
-                  line-clamp-2 w-[260px] text-start text-2
+                  line-clamp-2 w-[260px] text-start text-sm
                   whitespace-break-spaces
                 ">
                 {{ message.content }}
@@ -106,7 +106,7 @@ defineOptions({
       <div
         v-else
         class="grid h-44 w-full place-items-center">
-        <span class="overflow-hidden text-2 text-nowrap dst">
+        <span class="overflow-hidden text-sm text-nowrap dst">
           {{ `No mail right now!` }}
         </span>
       </div>

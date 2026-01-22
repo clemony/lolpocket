@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import { heroDisplays } from '~/domain/riot/media/video'
+import { motion } from 'motion-v';
+import { heroDisplays } from '~/domain/riot/media/video';
 
 const { progress: p, visible } = defineProps<{
   progress: any
@@ -80,7 +80,7 @@ onMounted(() => {
               variant="outline"
               size="12"
               :class="
-                cn('pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-b3 text-2 shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
+                cn('pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-b3 text-sm shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
                 )
               "
               @click="navigateTo('/login')">

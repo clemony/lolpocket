@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -71,17 +71,17 @@ const itemsLength = computed(() => {
         `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
       "
       class="flex items-center gap-1.5">
-      <i-no-champ class="size-8.5 opacity-80 dst" />
+      <i-no-champ class="dst size-8.5 opacity-80" />
 
-      <span class="font-medium dst">{{ championsLength }}</span>
+      <span class="dst font-medium">{{ championsLength }}</span>
     </div>
 
     <div
       v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
       class="flex items-center gap-3">
-      <i-roles-all class="size-5 opacity-80 dst" />
+      <i-roles-all class="dst size-5 opacity-80" />
 
-      <span class="font-medium dst">{{ rolesLength }}</span>
+      <span class="dst font-medium">{{ rolesLength }}</span>
     </div>
 
     <div
@@ -89,9 +89,9 @@ const itemsLength = computed(() => {
       class="flex items-center gap-2">
       <icon
         name="game-icons:fire-spell-cast"
-        class="size-6 opacity-70 dst" />
+        class="dst size-6 opacity-70" />
 
-      <span class="font-medium dst">{{ spellsLength }}</span>
+      <span class="dst font-medium">{{ spellsLength }}</span>
     </div>
     <!--
     <div v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
@@ -104,9 +104,9 @@ const itemsLength = computed(() => {
       class="flex items-center gap-2.5">
       <icon
         name="bow"
-        class="size-6 dst" />
+        class="dst size-6" />
 
-      <span class="font-medium dst">{{ itemsLength }}</span>
+      <span class="dst font-medium">{{ itemsLength }}</span>
     </div>
   </div>
 </template>

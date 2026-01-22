@@ -35,7 +35,7 @@ const { stats } = defineProps<{
         <div
           v-for="r in ['top', 'jungle', 'middle', 'bottom', 'support']"
           :key="r"
-          :data-tip="`${r}
+          :data-type="`${r}
             ${stats?.role[r]?.games ?? 0} games`"
           class="group/bar flex size-full items-center gap-3">
           <Icons
@@ -47,7 +47,7 @@ const { stats } = defineProps<{
             class="h-3 transition-all duration-200 group-hover/bar:ring group-hover/bar:ring-bc/20"
             :color="`var(--color-${r})`"
             :model-value="stats?.role[r]?.winrate || 0" />
-          <div :class="cn('w-10 overflow-hidden text-end text-0!', { 'text-bc/50': !stats?.role[r]?.games })">
+          <div :class="cn('w-10 overflow-hidden text-end text-xxs!', { 'text-bc/50': !stats?.role[r]?.games })">
             {{ stats?.role[r]?.games ?? 0 }}
           </div>
         </div>

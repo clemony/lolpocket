@@ -24,7 +24,7 @@ const roleModel = computed({
         size="sm"
         variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
-        class="gap-2 place-self-center rounded-lg px-2.5 text-3 font-medium"
+        class="gap-2 place-self-center rounded-lg px-2.5 text-md font-medium"
         @click="clearFilters()">
         {{
           ms().filter.role !== "ALL"

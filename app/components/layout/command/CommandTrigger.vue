@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~/utils/device'
+import { getDeviceKey } from '~~/@lib/app/utils/device';
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -38,12 +38,12 @@ watchEffect(() => {
 
       <span
         class="
-          mt-px grow text-left text-2 font-medium tracking-tight text-bc/70
+          mt-px grow text-left text-sm font-medium tracking-tight text-bc/70
         ">
         summoners, data, pockets...
       </span>
 
-      <span class="text-3! font-medium text-bc/60">{{ getDeviceKey() }} K</span>
+      <span class="text-md! font-medium text-bc/60">{{ getDeviceKey() }} K</span>
     </button>
   </SheetClose>
 </template>

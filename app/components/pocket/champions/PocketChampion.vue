@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { motion } from 'motion-v'
 
 /* const hover = shallowRef<boolean>(false)
@@ -72,8 +72,8 @@ onBeforeMount(() => {
       <PopoverTrigger
         v-bind="$attrs"
         :class="
-          cn('target group relative grid aspect-square size-full cursor-context-menu! rounded-lg ring-bc/50 ring-offset-b1 transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
-            className,
+          cn('target group ring-bc/50 ring-offset-b1 relative grid aspect-square size-full cursor-context-menu! rounded-lg transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
+             className,
           )
         "
         tabindex="0">

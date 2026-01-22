@@ -1,14 +1,15 @@
 <script lang="ts" setup>
-const { match, timeline } = defineProps<{
+const { match, player, timeline } = defineProps<{
+  match: MatchData
+  player: Player
   timeline: PlayerTimeline
-  match: Player
 }>()
 
 const supportUpgrade = computed(() => {
-  if (!timeline || match.player.role !== 'UTILITY')
+  if (!timeline || player.role !== 'support')
     return null
 
-  const finalSupportItem = supportItemIds.find(id => Object.values(match.player.items.slots).includes(id))
+  const finalSupportItem = supportItemIds.find(id => Object.values(player.items.slots).includes(id))
 
   return finalSupportItem ?? null
 })
@@ -36,7 +37,7 @@ const supportUpgrade = computed(() => {
               :map="match.mapId"
               size="sq-12"
               class="tippy"
-              data-tip="item" />
+              data-type="item" />
 
             <template
               v-if="event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'">
@@ -45,7 +46,7 @@ const supportUpgrade = computed(() => {
                 :key="event.from"
                 :map="match.mapId"
                 size="sq-5.5"
-                data-tip="item"
+                data-type="item"
                 class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
 
               <Item
@@ -54,7 +55,7 @@ const supportUpgrade = computed(() => {
                 :key="3867"
                 :map="match.mapId"
                 size="sq-5.5"
-                data-tip="item"
+                data-type="item"
                 class="absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
             </template>
             <template v-else>
@@ -67,7 +68,7 @@ const supportUpgrade = computed(() => {
                 :style="{
                   marginLeft: `${10 * idx}px`,
                 }"
-                data-tip="item"
+                data-type="item"
                 class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
             </template>
           </div>
@@ -84,7 +85,7 @@ const supportUpgrade = computed(() => {
               size="sq-12" />
             <div
               v-if="event.count > 1"
-              class="absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 border-b1 bg-neutral font-medium text-nc"
+              class="absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 border-b1 bg-neutral font-semibold text-nc"
               variant="neutral">
               {{ event.count }}
             </div>

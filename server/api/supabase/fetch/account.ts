@@ -4,7 +4,7 @@ import {
   getEmptySettings,
   pocketSchema,
   settingsSchema,
-} from "#shared"
+} from "@constants"
 import * as v from "valibot"
 import { createSupabaseClient } from "../client.supabase"
 

@@ -77,7 +77,7 @@ const variants = {
           v-if="cooldown"
           class="
             radial-progress absolute place-self-center border-2 border-neutral
-            bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
+            bg-neutral text-xxs font-semibold text-nc opacity-90 shadow-sm
             **:text-nc
           "
           :style="{
@@ -107,7 +107,7 @@ const variants = {
     <motion.span
       :variants="variants"
       :transition="{ delay: 200 }"
-      class="text-0 absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
+      class="text-xxs absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
       {{ `${formatTimeAgo(state.summoner.value.updated.match, 'short').replace('ago', 'old')}` }}
     </motion.span> -->
   </NavigationMenuItem>

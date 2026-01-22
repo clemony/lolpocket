@@ -68,7 +68,7 @@ const cardStyle = computed(() => ({
             class="h-6 w-32 rounded-sm border border-b3 bg-b1 shadow-sm inset-shadow-xs shadow-black/8"
             :style="layer0" />
 
-          <p class="text-1">
+          <p class="text-xs">
             Search Tags
           </p>
 
@@ -76,17 +76,17 @@ const cardStyle = computed(() => ({
             class="grid h-fit w-full grid-flow-row grid-cols-2 grid-rows-2 gap-y-5"
             :style="layer0">
             <div
-              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
+              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;jungle
             </div>
 
             <div
-              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
+              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;support
             </div>
 
             <div
-              class="z-10 badge bg-b1 badge-md text-3 shadow-md ring shadow-black/10 ring-b3">
+              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3">
               #&#x202F;marksman
             </div>
           </div>
@@ -101,7 +101,7 @@ const cardStyle = computed(() => ({
           </div>
 
           <div
-            class="absolute right-5 bottom-6 z-10 badge badge-neutral bg-neutral badge-md text-3 shadow-pretty ring shadow-black/10 ring-b3">
+            class="absolute right-5 bottom-6 z-10 badge badge-neutral bg-neutral badge-md text-md shadow-pretty ring shadow-black/10 ring-b3">
             Create
           </div>
         </div>
@@ -126,7 +126,7 @@ const cardStyle = computed(() => ({
       <!--     <PocketIcon image="/img/champion-centered/Sona_56.webp" class="size-34  left-22 bottom-6 absolute !shadow-md shadow-black/70" :style="layer1" />
    <icon name="teenyicons:chat-solid" class="text-b1 bottom-34 left-6   size-22 absolute z-0  drop-shadow-[10_15px_15px_#00000090]" :style="layerBase"/>
 
-        <div class=" tracking-tight absolute text-3  bottom-38 left-10   dst z-10 font-medium text-center"  :style="layerBase">
+        <div class=" tracking-tight absolute text-md  bottom-38 left-10   dst z-10 font-medium text-center"  :style="layerBase">
           Choose<br />Icon
           </div> -->
     </div>

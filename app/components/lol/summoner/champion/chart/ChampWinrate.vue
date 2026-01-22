@@ -24,7 +24,7 @@ const a = computed(() => {
       }"
       role="progressbar">
     </div>
-    <span class="absolute text-0! font-medium text-bc dst">{{ a.toFixed(1).replace(".0", "") }}
+    <span class="absolute text-xxs! font-medium text-bc dst">{{ a.toFixed(1).replace(".0", "") }}
     </span>
   </div>
 </template>

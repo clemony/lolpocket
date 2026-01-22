@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core'
-import { useForwardProps } from 'reka-ui'
-
 const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
   name: string

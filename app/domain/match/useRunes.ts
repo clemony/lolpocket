@@ -1,4 +1,4 @@
-import { runeToPath } from "~~/shared"
+import { runeToPath } from "@constants"
 
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => ix().runes)
@@ -7,7 +7,7 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
     ix().runeById(player.value.perks.keystone)
   )
 
-  const playerPaths = runeToPath[player.value?.perks?.secondary] ?? null
+  const playerPaths = runeToPath[player.value?.runes?.secondary] ?? null
 
   const pathList = [
     "Precision",

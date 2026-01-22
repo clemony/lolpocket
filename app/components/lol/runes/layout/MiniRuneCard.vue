@@ -17,8 +17,8 @@ const { class: className, path, selections } = defineProps<{
         :id="keystone.id"
         :key="keystone.id"
         :data-id="keystone.id"
-        data-tip="rune"
-        :class="cn('tippy z-1 max-w-16 min-w-12 opacity-70 grayscale **:shrink-1', { 'grayscale-0 opacity-100': selections?.includes(keystone.id) }, path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3')" />
+        data-type="rune"
+        :class="cn('tippy z-1 max-w-16 min-w-12 opacity-70 grayscale **:shrink', { 'grayscale-0 opacity-100': selections?.includes(keystone.id) }, path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3')" />
     </div>
     <div
       :data-path="path.name"
@@ -32,7 +32,7 @@ const { class: className, path, selections } = defineProps<{
           :id="rune.id"
           :key="rune.id"
           :data-id="rune.id"
-          data-tip="rune"
+          data-type="rune"
           :class="cn('tippy max-h-12 min-h-10.5 max-w-12 min-w-10.5 opacity-70 grayscale **:shrink', { 'opacity-100 grayscale-0': selections?.includes(rune.id) })" />
       </div>
     </div>

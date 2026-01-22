@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket: Pocket
@@ -11,8 +11,8 @@ const pocket = ref(props.pocket)
 <template>
   <div
     class="
-      flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start *:py-3
-      *:text-left *:text-3 **:pointer-events-auto
+      *:text-md flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start
+      *:py-3 *:text-left **:pointer-events-auto
     ">
     <button
       class="group btn btn-ghost btn-lg"
@@ -29,7 +29,7 @@ const pocket = ref(props.pocket)
     </button>
 
     <button
-      class="group btn cursor-pointer btn-ghost btn-lg"
+      class="group btn btn-ghost btn-lg cursor-pointer"
       @click="deletePocket(pocket)">
       Send Pocket to Trash
     </button>

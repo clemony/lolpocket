@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const {
   class: className,
@@ -16,7 +16,7 @@ console.log('🌱 - pocket:')
 <template>
   <button
     :class="
-      cn('flex cursor-pointer flex-col items-start gap-2 rounded-xl border border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8 ring-transparent transition-colors hover:ring-neutral/50',
+      cn('border-b4/70 hover:ring-neutral/50 flex cursor-pointer flex-col items-start gap-2 rounded-xl border px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8 ring-transparent transition-colors',
          selected?.key === pocket?.key && 'bg-b2/30',
       )
     ">
@@ -36,7 +36,7 @@ console.log('🌱 - pocket:')
           </div>
           <PocketChampions
             list
-            class="text-2 text-bc/70!"
+            class="text-bc/70! text-sm"
             :champions="pocket.champions" />
         </div>
       </div>
@@ -77,7 +77,7 @@ console.log('🌱 - pocket:')
           <template v-if="championPositions.map((p) => p.name).includes(tag)">
             <component
               :is="`i-roles-${tag}`"
-              :class="cn('mr-1.25 size-3.5 text-white dst')" />
+              :class="cn('dst mr-1.25 size-3.5 text-white')" />
             <span class="font-medium text-white lowercase">
               {{ tag }}
             </span>

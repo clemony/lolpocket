@@ -43,5 +43,5 @@ export const useChampionStats = (
       }
     }
 
-    return [...map.values()]
+    return [...sortMapBy(map, "games").values()]
   })

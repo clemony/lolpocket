@@ -1,26 +1,26 @@
 <script lang="ts" setup>
 import type {
-  ColDef,
-  ColGroupDef,
-  GridApi,
-  GridOptions,
-  GridPreDestroyedEvent,
-  GridReadyEvent,
+    ColDef,
+    ColGroupDef,
+    GridApi,
+    GridOptions,
+    GridPreDestroyedEvent,
+    GridReadyEvent,
 } from 'ag-grid-community'
 import {
-  CellStyleModule,
-  ClientSideRowModelModule,
-  ColumnApiModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  GridStateModule,
-  ModuleRegistry,
-  RenderApiModule,
-  RowSelectionModule,
-  ValidationModule,
+    CellStyleModule,
+    ClientSideRowModelModule,
+    ColumnApiModule,
+    ColumnAutoSizeModule,
+    ColumnHoverModule,
+    GridStateModule,
+    ModuleRegistry,
+    RenderApiModule,
+    RowSelectionModule,
+    ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/assets/config'
+import { pocketTheme } from '~/ui/config'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
 import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
 

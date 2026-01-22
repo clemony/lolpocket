@@ -23,7 +23,7 @@ const rune = computed(() => {
     v-if="rune"
     class="
       relative h-fit max-h-full max-w-64 overflow-y-auto pb-6
-      shadow-[inset_0px_0px_40px_#00000009,_rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]
+      shadow-[inset_0px_0px_40px_#00000009,rgba(50,50,105,0.15)_0px_2px_5px_0px,rgba(0,0,0,0.05)_0px_1px_1px_0px]
       transition-all duration-500
     ">
     <div
@@ -79,8 +79,8 @@ const rune = computed(() => {
           :key="`${rune.name}3`"
           class="
             mt-1 text-justify font-serif text-[0.76rem] whitespace-pre-line
-            first-letter:float-left first-letter:mr-1.5 first-letter:text-8
-            first-letter:font-[700] first-line:font-[700]
+            first-letter:float-left first-letter:mr-1.5 first-letter:text-4xl
+            first-letter:font-bold first-line:font-bold
             first-line:tracking-widest first-line:uppercase
           ">
           {{ rune.stats }}

@@ -26,7 +26,7 @@ definePageMeta({
 </script>
 
 <template>
-  <button class="btn bg-domination text-2 font-medium text-white">
+  <button class="btn bg-domination text-sm font-medium text-white">
     <icon
       name="nimbus:fire"
       class="size-5 text-white" />

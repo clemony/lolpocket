@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useScroll } from 'motion-v'
+
 useSeoMeta({
   title: 'lolpocket',
   description: 'is that lp in your pocket?',
@@ -29,13 +31,13 @@ const home = useTemplateRef<HTMLElement | null>('home')
 const steps = useTemplateRef<HTMLElement | null>('steps')
 const hero = useTemplateRef<HTMLElement | null>('hero')
 
-const { scrollYProgress: stepProgress } = useMotionScroll({
+const { scrollYProgress: stepProgress } = useScroll({
   container: homeWrapper,
   offset: ['start end', 'end start'],
   target: steps,
 })
 
-const { scrollYProgress } = useMotionScroll({
+const { scrollYProgress } = useScroll({
   container: homeWrapper,
   offset: ['start end', 'end start'],
   target: home,

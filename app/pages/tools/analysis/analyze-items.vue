@@ -30,7 +30,7 @@ definePageMeta({
 
   <div class="size-full px-14">
     <div class="mb-8 w-full border-b border-b-b3 pt-10 pb-8">
-      <h1 class="pb-2 text-8 font-semibold dst">
+      <h1 class="pb-2 text-4xl font-semibold dst">
         Item Data
       </h1>
 
@@ -66,7 +66,7 @@ definePageMeta({
       </div>
 
       <div class="mb-10 w-full border-b border-b-b3 pt-26 pb-10">
-        <h1 class="pb-2 text-8 font-semibold dst">
+        <h1 class="pb-2 text-4xl font-semibold dst">
           Winrates & Playrates
         </h1>
 

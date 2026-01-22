@@ -18,13 +18,13 @@ watch(
 <template>
   <LazyIconPopover
     class="
-      group/pop flex size-full place-items-end justify-end rounded-none pr-10
-      pb-4 after:text-5overflow-hidden after:z-1 after:order-first after:mr-4
-      after:-mb-1 after:font-bold after:text-nc! after:transition-opacity
-      after:duration-500 after:content-['Edit'] **:text-nc! before:absolute
-      before:right-0 before:bottom-0 before:z-0 before:size-full
-      before:bg-linear-145 before:from-transparent before:from-30%
-      before:to-black/70 before:transition-opacity before:duration-500
+      group/pop after:text-xloverflow-hidden flex size-full place-items-end justify-end rounded-none
+      pr-10 pb-4 **:text-nc! before:absolute before:right-0
+      before:bottom-0 before:z-0 before:size-full before:bg-linear-145
+      before:from-transparent before:from-30% before:to-black/70 before:transition-opacity
+      before:duration-500 after:z-1 after:order-first after:mr-4
+      after:-mb-1 after:font-bold after:text-nc!
+      after:transition-opacity after:duration-500 after:content-['Edit']
       hover:before:opacity-100 hover:after:opacity-100
     "
     :class="{
@@ -44,7 +44,7 @@ watch(
         name="images"
         :class="
           cn('size-7 text-nc opacity-60 transition-opacity duration-500 group-hover/pop:opacity-100',
-            { 'opacity-100': isOpen },
+             { 'opacity-100': isOpen },
           )
         " />dfddfd
     </PopoverTrigger>

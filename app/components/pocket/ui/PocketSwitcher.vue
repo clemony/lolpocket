@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const open = shallowRef<boolean>(false)
 
@@ -45,25 +45,25 @@ useIntersectionObserver(
       :side-offset="4">
       <div
         class="
-          grid h-16 w-full shrink-0 grid-cols-4 gap-1.5 bg-b2/30 px-2.5 pt-2.5
+          bg-b2/30 grid h-16 w-full shrink-0 grid-cols-4 gap-1.5 px-2.5 pt-2.5
           pb-3 bg-blend-screen
         ">
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           variant="base"
           tabindex="-1"
-          class="size-full fx-0"
+          class="fx-0 size-full"
           hover="btn">
           <icon
             name="trash"
-            class="size-4.5 dst" />
+            class="dst size-4.5" />
         </Button>
 
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           variant="base"
           tabindex="-1"
-          class="size-full fx-0"
+          class="fx-0 size-full"
           hover="btn">
           <icon
             name="send"
@@ -74,7 +74,7 @@ useIntersectionObserver(
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           variant="base"
           tabindex="-1"
-          class="size-full fx-0"
+          class="fx-0 size-full"
           hover="btn">
           <icon
             name="hugeicons:image-download"
@@ -89,21 +89,21 @@ useIntersectionObserver(
           }"
           variant="base"
           tabindex="-1"
-          class="size-full fx-0"
+          class="fx-0 size-full"
           hover="btn">
           <icon
             name="export"
-            class="size-4.5 dst" />
+            class="dst size-4.5" />
         </Button>
       </div>
 
       <!-- separator  -->
-      <DropdownMenuSeparator class="-mt-2 mb-0 bg-b3/40" />
+      <DropdownMenuSeparator class="bg-b3/40 -mt-2 mb-0" />
       <article class="size-full overflow-y-auto">
         <section class="z-auto">
           <div
             class="
-              sticky top-0 z-1 w-full bg-b1/30 bg-blend-darken backdrop-blur
+              bg-b1/30 sticky top-0 z-1 w-full bg-blend-darken backdrop-blur-sm
             ">
             <h6 class="flex w-full items-center px-3 pt-2 pb-1.5">
               <icon
@@ -111,7 +111,7 @@ useIntersectionObserver(
                 class="size-4" />
               Pinned
             </h6>
-            <DropdownMenuSeparator class="mt-0 mb-2 bg-b3/40" />
+            <DropdownMenuSeparator class="bg-b3/40 mt-0 mb-2" />
           </div>
           <!-- pinned -->
           <template
@@ -139,12 +139,12 @@ useIntersectionObserver(
             v-if="
               !ps().pockets.filter((p) => ps().pinned.includes(p.key)).length
             "
-            class="grid h-8 w-full place-items-center pb-2 text-2 opacity-50">
+            class="grid h-8 w-full place-items-center pb-2 text-sm opacity-50">
             No pockets found.
           </div>
 
           <!-- separator  -->
-          <DropdownMenuSeparator class="mb-0 bg-b3/40" />
+          <DropdownMenuSeparator class="bg-b3/40 mb-0" />
         </section>
 
         <!-- ALL SECTION -->
@@ -154,7 +154,7 @@ useIntersectionObserver(
           class="z-auto pb-3">
           <div
             class="
-              sticky top-0 z-1 w-full bg-b1/30 bg-blend-darken backdrop-blur
+              bg-b1/30 sticky top-0 z-1 w-full bg-blend-darken backdrop-blur-sm
             ">
             <h6 class="flex w-full items-center px-3 pt-2 pb-1.5">
               <icon
@@ -162,7 +162,7 @@ useIntersectionObserver(
                 class="size-4 opacity-60" />
               All
             </h6>
-            <DropdownMenuSeparator class="mt-0 mb-2 bg-b3/40" />
+            <DropdownMenuSeparator class="bg-b3/40 mt-0 mb-2" />
           </div>
 
           <!-- all pocket -->
@@ -188,7 +188,7 @@ useIntersectionObserver(
             v-if="
               !ps().pockets.filter((p) => !ps().pinned.includes(p.key)).length
             "
-            class="grid w-full place-items-center pb-3 text-2 opacity-50">
+            class="grid w-full place-items-center pb-3 text-sm opacity-50">
             No pockets found.
           </div>
         </section>

@@ -1,4 +1,4 @@
-import type { InboxMessage } from '~~/shared/schema'
+import type { InboxMessage } from '@types'
 
 export const inboxBox: InboxType[] = [
   {

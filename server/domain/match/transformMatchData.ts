@@ -1,5 +1,5 @@
 export function transformMatchData(raw: any): MatchData {
-  function teamTotal(sKey: string, teamId: number): number {
+  const teamTotal = (sKey: string, teamId: number) => {
     return raw.info.participants
       .filter((p) => p.teamId === teamId)
       .map((p) => p[sKey])
@@ -114,11 +114,22 @@ export function transformMatchData(raw: any): MatchData {
         goldPerMin: roundDecimal(p.challenges.goldPerMinute) ?? 0,
         goldShare: roundDecimalToPercent(p.goldEarned, teamGold[p.teamId]) ?? 0,
         minionsKilled: p.totalMinionsKilled ?? 0,
-        neutralMinionsKilled: p.neutralMinionsKilled,
+        allyJungleMinions: p.totalAllyJungleMinionsKilled ?? 0,
+        enemyJungleMinions: p.totalEnemyJungleMinionsKilled ?? 0,
+        totalCs:
+          p.totalMinionsKilled +
+          p.totalAllyJungleMinionsKilled +
+          p.totalEnemyJungleMinionsKilled,
+        csPerMin: roundDecimal(
+          (p.totalMinionsKilled +
+            p.totalAllyJungleMinionsKilled +
+            p.totalEnemyJungleMinionsKilled) /
+            (raw.info.gameDuration / 60)
+        ),
         turretsKilled: p.turretKills ?? 0,
         objectivesStolen: p.objectivesStolen ?? 0,
-        firstTowerAssist: p.challenges.firstTowerAssist ?? 0,
-        firstTowerKill: p.challenges.firstTowerKill ?? 0,
+        firstTowerAssist: p.challenges.firstTowerAssist ?? false,
+        firstTowerKill: p.challenges.firstTowerKill ?? false,
 
         //vision
         visionScore: p.visionScore ?? 0,
@@ -187,7 +198,7 @@ getTakedownsInAllLanesEarlyJungleAsLaner
   })
 
   return {
-    gameDuration: raw.info.gameDuration,
+    gameDuration: raw.info.gameDuration / 60,
     gameEndTimestamp: raw.info.gameEndTimestamp,
     gamePatch: normalizePatch(raw.info.gameVersion),
     matchId: raw.metadata.matchId,

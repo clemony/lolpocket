@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ItemSet, Pocket } from '~~/shared/schema'
+import type { ItemSet, Pocket } from '@types'
 
 const props = defineProps<{
   set?: ItemSet
@@ -10,12 +10,12 @@ const props = defineProps<{
 <template>
   <div
     class="
-      p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth
+      p-i-c rounded-box shadow-smooth h-auto w-fit px-6 pt-4 pb-5
       shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none
     ">
     <div class="w-full justify-start">
       <!--  <span
-        class="text-5dst font-medium"
+        class="text-xldst font-medium"
         :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span> -->
     </div>
 
@@ -29,14 +29,14 @@ const props = defineProps<{
               <div class="size-full overflow-hidden rounded-lg">
                 <div
                   v-if="item === 0"
-                  class="aspect-square size-full bg-b3" />
+                  class="bg-b3 aspect-square size-full" />
 
                 <img
                   :alt="ix().itemNameById(item)"
                   :src="`/img/items/${item}.webp`"
                   class="
-                    inset-shadow-rounded shadow-rounded aspect-square size-full
-                    bg-b3 shadow-black inset-shadow-black
+                    inset-shadow-rounded shadow-rounded bg-b3 aspect-square
+                    size-full shadow-black inset-shadow-black
                   " />
               </div>
             </div>

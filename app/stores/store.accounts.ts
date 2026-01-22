@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import type { Account } from "~~/shared/schema"
+import type { Account } from "~~/layers/types/schema"
 
 export const useAccountsStore = defineStore(
   "accountsStore",

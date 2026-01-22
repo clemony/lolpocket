@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema/schema.pocket'
+import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
 
 const props = defineProps<{
   pocket: Pocket

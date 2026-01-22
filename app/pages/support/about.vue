@@ -70,10 +70,10 @@ const faq = [
 
 <template>
   <div class="grid h-screen w-full place-items-center px-18">
-    <div class="mx-auto -mt-[45px] flex w-180 flex-col items-center gap-6">
+    <div class="mx-auto -mt-15 flex w-180 flex-col items-center gap-6">
       <div
         class="
-          mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-3
+          mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-md
           text-nc **:font-mono
         ">
         <div class="col-start-1 grid items-center gap-y-1 pl-6">
@@ -129,7 +129,7 @@ const faq = [
 
             <div>
               }
-              <span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
+              <span class="animate-[blink-1_1s_infinite_both] text-lg">|</span>
             </div>
           </div>
           <div>&rbrace;</div>
@@ -186,7 +186,7 @@ const faq = [
           </tippy>
 
           <icon
-            class="brightness-[80%] contrast-200 grayscale"
+            class="brightness-80 contrast-200 grayscale"
             name="logos:pinia" />
         </div>
       </div>

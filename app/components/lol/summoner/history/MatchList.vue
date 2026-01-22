@@ -8,23 +8,40 @@ const { class: className } = defineProps<{
 
 const emit = defineEmits(['scroll-top'])
 
-const { filteredMatches, loading, loadingOlder, loadOlder, matches, summoner }
+const { filteredMatches, loading, loadingOlder, loadMessage, loadOlder, matches, summoner }
   = useSummonerInject()
 const scrollRef = useState<HTMLElement>('scrollRef')
 const hasMatches = computed(() => filteredMatches?.value?.length > 0)
 
-watch(
-  () => filteredMatches.value,
-  (v) => {
-    console.log('💠 - watch - newVal:', Object.values(filteredMatches.value))
-  }
-)
+watch(() => loadMessage.value, (v) => {
+  console.log('💠 - watch - newVal:', v)
+})
 </script>
 
 <template>
   <TransitionSlide
     group
-    :class="cn('@container flex w-full max-w-260 min-w-220 grow flex-col items-center justify-self-end overflow-visible px-1 pt-2', className)">
+    :class="cn('@container flex w-full max-w-260 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2', className)">
+    <Alert
+      v-if="loadMessage"
+      class="w-full">
+      <Icon
+        name="reset"
+        class="translate-y-1.75 **:stroke-[2.2]" />
+      <AlertTitle class="flex size-full items-center justify-between">
+        {{ loadMessage }}
+        <Button
+          variant="ghost"
+          hover="btn"
+          size="sq-7"
+          @click="loadMessage = ''">
+          <Icon
+            name="x"
+            class="size-3.75 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100" />
+        </Button>
+      </AlertTitle>
+    </Alert>
+
     <!-- loading skeleton -->
     <div
       v-if="loading "
@@ -39,7 +56,7 @@ watch(
     <div
       v-else-if="!hasMatches"
       class="grid h-64 place-items-center font-medium">
-      No filtered matches found with these filters.
+      No matches found with these filters.
     </div>
 
     <!-- virtualized rows -->

@@ -23,7 +23,7 @@ const isOpen = shallowRef<boolean>(false)
       hover="btn"
       size="xl"
       variant="ghost"
-      class=" [&_h1]:!text-7 group/b pl-1 *:justify-between *:not-first:py-1.5 ">
+      class=" [&_h1]:!text-3xl group/b pl-1 *:justify-between *:not-first:py-1.5 ">
       <icon
         name="arrow-ne"
         class="text-bc/50 group-hover/b:text-bc -translate-y-px translate-x-1" />

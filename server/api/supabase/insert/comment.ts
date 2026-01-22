@@ -1,4 +1,4 @@
-import { renderStaticHTML } from "~~/shared/scripts/mentions/renderStaticHTML"
+import { renderStaticHTML } from "~~/layers/tiptap/src/utils/mentions/renderStaticHTML"
 import { createSupabaseClient } from "../client.supabase"
 
 export default defineEventHandler(async (event) => {

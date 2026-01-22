@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ItemSet } from '~~/shared/schema'
+import type { ItemSet } from '@types'
 
 const props = defineProps<{
   set?: ItemSet
@@ -14,14 +14,14 @@ const set = computed(() => {
 <template>
   <div
     class="
-      p-i-c col-start-1 grid h-fit w-full grid-cols-6 gap-1 rounded-box px-3
+      p-i-c rounded-box col-start-1 grid h-fit w-full grid-cols-6 gap-1 px-3
       py-2 **:select-none
     ">
     <template v-for="i in 6">
       <template v-if="set === null || set === undefined">
         <Placeholder
           :key="i"
-          class="size-16 bg-b3/80" />
+          class="bg-b3/80 size-16" />
       </template>
     </template>
 
@@ -37,14 +37,14 @@ const set = computed(() => {
             <div class="size-full overflow-hidden rounded-lg">
               <div
                 v-if="item === 0"
-                class="aspect-square size-full bg-b3" />
+                class="bg-b3 aspect-square size-full" />
 
               <img
                 :alt="ix().itemNameById(item)"
                 :src="`/img/items/${item}.webp`"
                 class="
-                  inset-shadow-rounded shadow-rounded aspect-square size-full
-                  bg-b3 shadow-black inset-shadow-black
+                  inset-shadow-rounded shadow-rounded bg-b3 aspect-square
+                  size-full shadow-black inset-shadow-black
                 " />
             </div>
           </div>

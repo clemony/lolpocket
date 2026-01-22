@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~/utils/device'
+import { getDeviceKey } from '~~/@lib/app/utils/device'
 </script>
 
 <template>
@@ -20,9 +20,9 @@ import { getDeviceKey } from '~/utils/device'
 
       a set and
 
-      <span class="drop-shadow-text ml-1 text-4">{{ getDeviceKey() }}</span>
+      <span class="drop-shadow-text ml-1 text-lg">{{ getDeviceKey() }}</span>
 
-      <span class="px-1 text-4">+</span>
+      <span class="px-1 text-lg">+</span>
 
       <icon
         name="ph:mouse-left-click-fill"

@@ -22,11 +22,11 @@ const { class: className, player } = defineProps<{
     <span
       v-else
       class="text-badge-xs opacity-60">
-      {{ roundDecimal(player.stats.kda) }} <span>kda</span>
+      {{ player.stats.kda }} <span>kda</span>
     </span>
 
     <span class="text-badge-xs opacity-60">
-      {{ roundDecimalToPercent(player.stats.kp, 1) }} kp
+      {{ player.stats.kp }} kp
     </span>
   </div>
 </template>
@@ -35,6 +35,6 @@ const { class: className, player } = defineProps<{
 @reference '@css/tailwind.css';
 
 .text-badge-xs {
-  @apply text-0! inline-flex gap-1 text-end  justify-self-end justify-end flex-nowrap whitespace-nowrap text-nowrap items-center leading-4 tracking-tight font-bold;
+  @apply text-xxs! inline-flex gap-1 text-end  justify-self-end justify-end flex-nowrap whitespace-nowrap text-nowrap items-center leading-4 tracking-tight font-bold;
 }
 </style>

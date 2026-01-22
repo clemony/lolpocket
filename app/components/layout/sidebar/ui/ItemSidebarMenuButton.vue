@@ -20,7 +20,7 @@ const {
   <Button
     :size="size"
     :class="cn('', className)">
-    <hicon
+    <Icon
       v-if="item.meta?.icon && (!text || full)"
       :name="String(item.meta?.icon)"
       :class="

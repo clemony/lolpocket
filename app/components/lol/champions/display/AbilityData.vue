@@ -23,11 +23,11 @@ watch(
 
 <template>
   <div
-    class="flex size-full max-h-full flex-col items-center gap-6 pt-6 **:text-3">
+    class="flex size-full max-h-full flex-col items-center gap-6 pt-6 **:text-md">
     <div class="mt-2 flex w-full items-center justify-between gap-3 px-7">
       <h2
         v-if="ability?.name"
-        class="grow text-8! tracking-tight">
+        class="grow text-4xl! tracking-tight">
         {{ ability.name }}
       </h2>
     </div>

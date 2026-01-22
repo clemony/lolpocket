@@ -80,7 +80,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
           <p
             v-memo="[pocket._champion]"
             :class="
-              cn('truncate text-3 leading-none italic', {
+              cn('truncate text-md leading-none italic', {
                 'font-medium': pocket._champion,
                 '!font-normal  opacity-20': !pocket._champion,
               })

@@ -73,7 +73,6 @@ export function isTrinket(id: number) {
   return itemRank[id] === "Trinket"
 }
 
-// @todo more tear items in new season...
 export const SUPPORT_LEGENDARIES = new Set<number>([
   3869, // Celestial Opposition
   3870, // Dream Maker
@@ -83,9 +82,10 @@ export const SUPPORT_LEGENDARIES = new Set<number>([
 ])
 
 export const TEAR_TRANSFORMS: Record<number, number> = {
-  3003: 3040, // Archangel → Seraph
-  3004: 3042, // Manamune → Muramana
-  3119: 3121, // Winter's Approach → Fimbulwinter
+  3003: 3040, // Archangel -> Seraph
+  3004: 3042, // Manamune -> Muramana
+  3119: 3121, // Winter's Approach -> Fimbulwinter
+  2526: 2530, // Circlet -> Diadem
 }
 
 export const TEAR_BASE_BY_FINAL = Object.fromEntries(

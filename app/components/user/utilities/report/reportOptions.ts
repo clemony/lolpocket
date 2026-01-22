@@ -1,5 +1,5 @@
-import type { FieldOption } from '~~/shared/types/types.form'
 import OffensiveName from '~/components/user/utilities/report/OffensiveName.vue'
+import type { FieldOption } from '~~/layers/types/src/types/types.form'
 
 export const reportOptions: FieldOption[] = [
   {

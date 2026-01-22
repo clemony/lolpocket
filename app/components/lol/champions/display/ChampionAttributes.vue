@@ -109,7 +109,7 @@ const options = {
   <div class="relative m-0 w-full justify-self-center bg-b3/30 pt-6 pb-0!">
     <div
       class="
-        absolute top-5 left-6 text-3 font-bold tracking-tight text-bc/50
+        absolute top-5 left-6 text-md font-bold tracking-tight text-bc/50
         drop-shadow-sm
       ">
       Champion Attributes

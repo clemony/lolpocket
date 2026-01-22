@@ -40,7 +40,7 @@ const bg = computed(() => {
     ">
     <div
       :class="
-        cn('before:from-bg-tint-b2/60 before:absolute before:z-1 before:size-full before:bg-linear-to-r before:to-transparent pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen grid-rows-1 flex-nowrap justify-end justify-items-end',
+        cn('before:from-bg-tint-b2/60 pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen grid-rows-1 flex-nowrap justify-end justify-items-end before:absolute before:z-1 before:size-full before:bg-linear-to-r before:to-transparent',
            {
              'mask-l-from-20% mask-l-to-66% before:from-0% before:to-75% ':
                slice,
@@ -49,26 +49,27 @@ const bg = computed(() => {
            },
         )
       ">
-      <motion.div
+      <!--
+          '--bg-y': yPx,
+          'backgroundPositionY': 'calc(var(--bg-y) * 1px)', -->
+      <div
         v-if="!slice"
         :style="{
-          'backgroundImage': bg,
-          'backgroundPositionX': '0',
-          '--bg-y': yPx,
-          'backgroundPositionY': 'calc(var(--bg-y) * 1px)',
-          'backgroundSize': 'cover',
+          backgroundPositionX: '0',
+          backgroundImage: bg,
+          backgroundSize: 'cover',
         }"
         :class="
           cn('z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto bg-fixed bg-no-repeat blur-sm duration-100',
           )
         " />
-
-      <motion.div
+      <!--
+          translateY: yPx, -->
+      <div
         :style="{
           backgroundPositionX: '100%',
           backgroundSize: 'cover',
           backgroundImage: bg,
-          translateY: yPx,
         }"
         :class="
           cn('z-0 size-full mask-l-from-98% bg-no-repeat contrast-110 grayscale-10 duration-100',

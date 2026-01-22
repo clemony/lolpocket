@@ -3,21 +3,35 @@ import { defineStore } from "pinia"
 export const useSummonerStore = defineStore(
   "summoner",
   () => {
+    const hydrated = ref<boolean>(false)
+    const previousSummoner = ref<Identity>()
     const MAX_CACHE = 100
     const TTL = 86_400_000 // 24 hours
 
     // only top-level mutations matter, contents never individually watched
-    const cache = shallowRef<Record<string, Summoner>>({})
-    const meta = shallowRef<Record<string, number>>({})
-    const index = shallowRef<Record<string, string>>({})
+    const cache = ref<Record<string, Summoner>>({})
+    const meta = ref<Record<string, number>>({})
+    const index = ref<Record<string, string>>({})
 
     const makeKey = (r: string, n: string, t: string) =>
       `${r.toLowerCase()}:${n.toLowerCase()}:${t.toLowerCase()}`
 
+    const rebuildIndex = () => {
+      index.value = {}
+
+      for (const s of Object.values(cache.value)) {
+        index.value[makeKey(s.region, s.name, s.tag)] = s.puuid
+      }
+    }
+
     const resolveByPuuid = (puuid?: string | null) =>
       puuid ? (cache.value[puuid] ?? null) : null
 
-    const resolveBySlug = (region: string, name: string, tag: string) => {
+    const resolveBySlug = (region, name, tag) => {
+      if (!Object.keys(index.value).length) {
+        rebuildIndex()
+      }
+
       const puuid = index.value[makeKey(region, name, tag)]
       return puuid ? (cache.value[puuid] ?? null) : null
     }
@@ -73,11 +87,13 @@ export const useSummonerStore = defineStore(
       const { puuid, region, name, tag, force } = args
       if (!puuid && !region && !name && !tag) return
 
+      console.log("🥸 - index:", index)
       let existing: Summoner | null = null
 
       if (puuid) existing = resolveByPuuid(puuid)
       else if (region && name && tag)
         existing = resolveBySlug(region, name, tag)
+      console.log("🥸 - ensureSummoner - existing:", existing)
 
       if (existing && !force && !isStale(existing.puuid)) return existing
 
@@ -90,7 +106,10 @@ export const useSummonerStore = defineStore(
         { params: { puuid: base.puuid, region: base.region } }
       )
 
-      const full = { ...base, ranked: ranked.ranked }
+      const full = {
+        ...base,
+        ranked: ranked.ranked,
+      }
       setSummoner(full)
 
       return full
@@ -100,6 +119,7 @@ export const useSummonerStore = defineStore(
       if (!puuid) return
 
       const hit = resolveByPuuid(puuid)
+      console.log("🥸 - resolveOrFetch - hit:", hit)
       if (hit) return hit
       return await ensureSummoner({ puuid })
     }
@@ -118,17 +138,30 @@ export const useSummonerStore = defineStore(
       localStorage.removeItem("summonerStore")
     }
 
+    const patchSummoner = (puuid: string, patch: Partial<Summoner>) => {
+      const s = cache.value[puuid]
+      if (!s) return
+
+      cache.value[puuid] = { ...s, ...patch }
+      bump(puuid)
+      useSummonerStore().$persist
+    }
+
     return {
       cache,
+      hydrated,
       meta,
+      previousSummoner,
       index,
       makeKey,
       resolveByPuuid,
+      rebuildIndex,
       //getByRoute,
       resolveBySlug,
       ensureSummoner,
       resolveOrFetch,
       setSummoner,
+      patchSummoner,
       mergeRanked,
       clearAll,
     }
@@ -137,22 +170,9 @@ export const useSummonerStore = defineStore(
     persist: {
       key: "summonerStore",
       storage: piniaPluginPersistedstate.localStorage(),
-      serializer: {
-        serialize: (state) => {
-          return JSON.stringify({
-            cache: Object.entries(state.cache.value), // <= FIXED
-            meta: state.meta.value, // <= FIXED
-            index: state.index.value, // <= FIXED
-          })
-        },
-        deserialize: (raw) => {
-          const parsed = JSON.parse(raw)
-          return {
-            cache: Object.fromEntries(parsed.cache),
-            meta: parsed.meta,
-            index: parsed.index,
-          }
-        },
+      afterHydrate: (ctx) => {
+        ctx.store.rebuildIndex()
+        ctx.store.hydrated = true
       },
     },
   }

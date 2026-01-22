@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AsTag } from 'reka-ui'
+import type { AsTag } from 'reka-ui';
 
 const {
   active,
@@ -34,7 +34,7 @@ const tagValue = computed<ItemTag>(() => {
     :as
     :class="
       cn(
-        'w-fit px-5 text-2! font-medium! text-bc/90 capitalize',
+        'w-fit px-5 text-sm! font-medium! text-bc/90 capitalize',
         {
           'hover:**:text-bc hover:text-bc order-first text-white': active,
           'pr-3': active && clear,

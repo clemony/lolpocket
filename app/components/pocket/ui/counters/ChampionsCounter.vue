@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 const props = defineProps<{
   pocket?: Pocket
@@ -21,6 +21,6 @@ const championsLength = computed(() => {
       `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
     "
     :class="cn('flex items-center gap-1.5', props.class)">
-    <span class="font-mono text-1 dst">{{ championsLength }}</span>
+    <span class="dst font-mono text-xs">{{ championsLength }}</span>
   </span>
 </template>

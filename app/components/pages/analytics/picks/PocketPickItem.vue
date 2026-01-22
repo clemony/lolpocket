@@ -31,15 +31,15 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
       </div>
 
       <div class="grow text-bc">
-        <p class="text-5font-semibold pb-1 tracking-tight">
+        <p class="text-xlfont-semibold pb-1 tracking-tight">
           {{ bayesianItems[itemNum].item?.name }}
         </p>
 
-        <p class="text-3 font-medium tracking-tight text-bc/60">
+        <p class="text-md font-medium tracking-tight text-bc/60">
           {{ bayesianItems[itemNum].games }} Total Matches
         </p>
 
-        <p class="text-3 font-medium text-bc/60">
+        <p class="text-mdd font-medium text-bc/60">
           {{ bayesianItems[itemNum].win }}W {{ bayesianItems[itemNum].loss }}L
         </p>
       </div>
@@ -55,7 +55,7 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
         }">
         <span
           class="
-            font-mono text-4 tracking-wide text-[#FFF] dst text-shadow-black/5
+            font-mono text-lg tracking-wide text-[#FFF] dst text-shadow-black/5
             text-shadow-xs
           ">
           {{ getGrade(bayesianItems[itemNum].bayesianWinrate) }}
@@ -65,8 +65,8 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
 
     <Separator />
 
-    <div class="flex justify-between px-6 text-2 dst">
-      <div class="grid items-end text-2 font-medium text-bc/60">
+    <div class="flex justify-between px-6 text-sm dst">
+      <div class="grid items-end text-sm font-medium text-bc/60">
         <Grow />
 
         <p>
@@ -81,7 +81,7 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
       <p class="flex flex-col gap-1">
         <span class="mb-px font-medium opacity-60">Absolute</span>
 
-        <span class="flex text-7 font-bold text-bc dst">
+        <span class="flex text-3xl font-bold text-bc dst">
           {{ bayesianItems[itemNum].winrate.toFixed(2) }}
           <icon
             name="ph:percent-bold"
@@ -92,7 +92,7 @@ console.log('💠 - itemColor - itemColor:', itemColor) */
       <p class="flex flex-col gap-1">
         <span class="mb-px font-medium opacity-60">Weighted</span>
 
-        <span class="flex text-7 font-bold text-bc dst">
+        <span class="flex text-3xl font-bold text-bc dst">
           {{ bayesianItems[itemNum].bayesianWinrate.toFixed(2) }}
           <icon
             name="ph:percent-bold"

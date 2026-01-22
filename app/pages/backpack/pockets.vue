@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
-import { addPocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
+import { addPocket } from '@types'
 
 definePageMeta({
   name: 'pockets',

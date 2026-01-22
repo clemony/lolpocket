@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { TippyOptions } from 'vue-tippy'
-import { popoverArrow } from '~/assets/config/popoverArrow'
+import { popoverArrow } from '~/ui/config/popoverArrow'
 
 const props = withDefaults(
   defineProps<
@@ -41,7 +41,7 @@ const tag = ref(false)
       base="btn"
       size="c-9"
       variant="neutral"
-      class="pointer-events-auto z-4 hover-ring rounded-full"
+      class="hover-ring pointer-events-auto z-4 rounded-full"
       :disabled="!props.comment.uuid"
       @click.stop>
       <UserAvatar
@@ -67,7 +67,7 @@ const tag = ref(false)
           class="relative z-0 h-28 w-full overflow-hidden rounded-t-lg">
           <Badge
             size="6"
-            class="absolute top-2 right-2 gap-0 rounded-lg text-1! font-medium opacity-76"
+            class="absolute top-2 right-2 gap-0 rounded-lg text-xs! font-medium opacity-76"
             variant="neutral">
             <Icon
               name="lp:cxp"
@@ -83,7 +83,7 @@ const tag = ref(false)
         </div>
         <div class="flex items-center gap-3 px-2 pb-2">
           <div class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
-            <h2 class="inline font-serif text-5! leading-3 dst">
+            <h2 class="inline font-serif text-xl! leading-3 dst">
               {{ props.author?.name || author?.username || "Mysterious Summoner" }}
             </h2>
             <span

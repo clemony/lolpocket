@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getMasterySummary } from '~/composables'
+import { getMasterySummary } from '@domain'
 
 useSeoMeta({
   title: '[title]',

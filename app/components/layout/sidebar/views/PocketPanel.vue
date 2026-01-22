@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 
 defineOptions({
   meta: {
@@ -52,14 +52,14 @@ console.log('🌱 - pinned:', pinned)
       ">
       <DropdownMenuSeparator
         class="
-          absolute inset-x-0! -mx-4 mt-0 mb-px transition-colors duration-200
-          group-hover/tgr:bg-shade-b3/6!
+          group-hover/tgr:bg-shade-b3/6! absolute inset-x-0! -mx-4 mt-0 mb-px transition-colors
+          duration-200
         " />
       <icon
         name="down"
         class="
-          mt-px size-4 self-end text-bc/0 transition-all duration-200
-          group-hover/tgr:text-bc/50 group-hover-open/tgr:-scale-y-100
+          text-bc/0 group-hover/tgr:text-bc/50 group-hover-open/tgr:-scale-y-100 mt-px size-4 self-end
+          transition-all duration-200
         " />
     </CollapsibleTrigger>
   </Collapsible>

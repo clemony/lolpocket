@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 
@@ -42,7 +42,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
+      class="w-(--reka-select-trigger-width) min-w-54 p-0">
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Runes
@@ -51,7 +51,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
             variant="ghost"
             size="8"
             title="Clear main runes"
-            class="aspect-square btn-square *:opacity-60 hover:*:opacity-100"
+            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             @click="pocket._runes === ''">
             <icon
               name="backspace"

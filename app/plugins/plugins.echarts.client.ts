@@ -13,7 +13,7 @@ import {
 import { init, registerTheme, use } from "echarts/core"
 import { AxisBreak } from "echarts/features"
 import { CanvasRenderer } from "echarts/renderers"
-import theme from "~/assets/config/config.echarts.theme"
+import theme from "~/ui/config/config.echarts.theme"
 
 export default defineNuxtPlugin(() => {
   registerTheme("theme", theme)

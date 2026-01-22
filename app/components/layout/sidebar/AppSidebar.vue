@@ -3,36 +3,55 @@ import { motion } from 'motion-v'
 
 const route = useRoute()
 
-const { close, toggle } = useAppSidebar()
+const { close, open, toggle } = useAppSidebar()
 const sidebar = useTemplateRef<HTMLElement>('sidebar')
-const isHovered = useElementHover(sidebar, { delayLeave: 300 })
+const isHovered = useElementHover(sidebar, { delayEnter: 300, delayLeave: 300 })
 
 watch(() => isHovered.value, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
-  if (newVal === false)
-    toggle(false)
+  if (newVal === true)
+    toggle(true)
+  else toggle(false)
 })
+
+const variants = {
+  closed: {
+    translateX: '-100%',
+  },
+  open: {
+    translateX: '0',
+  }
+}
+
+/* const wrapVar = {
+  closed: {
+    maxWidth: 'calc(var(--spacing) * 17)',
+  },
+  open: {
+    translateX: '-100%',
+  }
+} */
 </script>
 
 <template>
-  <motion.div
+  <div
     id="sidebar"
     ref="sidebar"
-    class="absolute inset-y-0 left-0 z-50 h-[99vh] max-h-screen w-100 min-w-100! self-center
-   pl-3">
-    <div class="grid size-full items-center overflow-hidden rounded-xl border border-b3 bg-b1/90 drop-shadow-md drop-shadow-black/12 backdrop-blur-md">
-      <!-- handle -->
-      <div
-        class="
-          pointer-events-auto absolute right-0 z-2 my-auto grid h-32 w-8
-          place-items-center self-center
-        ">
-        <span class="h-full w-3 rounded-full border border-b3 bg-tint-b3/50" />
-      </div>
-
-      <!-- logo -->
-
-      <!--  <div
+    class="fixed inset-y-0 left-0 z-40 h-screen w-px">
+    <LpLogo :class="cn('absolute top-3 left-3 z-80', { 'pointer-events-none': open })" />
+    <motion.div
+      :variants="variants"
+      :animate="open ? 'open' : 'closed'"
+      initial="closed"
+      :transition="{
+        duration: 0.3,
+        type: 'spring',
+        bounce: 0.2,
+      }"
+      class="absolute inset-y-0 left-0 z-50 h-screen max-h-screen w-100 self-center">
+      <motion.div
+        :class="cn('grid size-full auto-rows-max grid-cols-1 items-center justify-start gap-y-3 overflow-hidden border border-b3 bg-b1/80 px-2.75 pt-17 pb-3 backdrop-blur-md')">
+        <!--  <div
         class="
           flex h-screen w-full flex-col items-center gap-y-3 border-r
           border-r-b3/80 pt-3
@@ -52,47 +71,42 @@ watch(() => isHovered.value, (newVal) => {
         </BtnLink>
       </div> -->
 
-      <div
-        class="
-          pointer-events-auto relative scrollbar-hidden flex size-full
-          flex-col overflow-hidden pt-3 pr-2 pl-2
-        ">
-        <h1 class="mb-2 h-11 px-3.5 dss">
-          LP
-        </h1>
         <!-- search buttton -->
 
         <SearchBox
-          class="my-1 mr-1 ml-3 h-11 justify-between fx-0 *:first:gap-3" />
+          variant="input"
+          :class="cn('justify-between fx-0 *:first:gap-3', { '[&_svg]:opacity-100 [&_svg]:size-5.5 max-w-11!': !open })" />
 
-        <!-- summoner linkies -->
-        <div class="pl-2">
-          <BtnLink
-            variant="link"
-            on="none"
-            class="mt-4 w-full justify-start gap-2.5! px-3.5 duration-0!"
-            :to="{ name: 'nexus' }"
-            @click="close()">
-            <icon
-              name="nexus"
-              class="size-5.5" />
-            Nexus
-          </BtnLink>
+        <BtnLink
+          :class="cn('w-full justify-start gap-2.5! px-3.5', { 'max-w-11 px-2': !open })"
+          :to="{ name: 'nexus' }"
+          @click="close()">
+          <icon
+            name="nexus"
+            class="size-6 **:stroke-[1.5]" />
+          Nexus
+        </BtnLink>
 
-          <BtnLink
-            v-if="as().user"
-            variant="link"
-            on="none"
-            class="w-full justify-start gap-2.5! px-3.5 duration-0!"
-            :to="{ path: `/summoner/${as().account.puuid}` }"
-            @click="close()">
-            <icon
-              name="history"
-              class="size-5" />
-            Summoner Profile
-          </BtnLink>
+        <BtnLink
+          v-if="as().user"
+          name="nexus"
+          :class="cn('w-full justify-start gap-2.5! px-3.5', { 'max-w-11 px-2.75': !open })"
+          :to="{ path: `/summoner/${as().account.puuid}` }"
+          @click="close()">
+          <icon
+            name="history" />
+          Summoner Profile
+        </BtnLink>
+        <div
+          class="
+          scrollbar-hidden pointer-events-auto relative flex size-full
+          flex-col overflow-hidden pt-3
+        ">
+          <!-- summoner linkies -->
+
+          <LazyNavPanel />
+          <LazyHelpAndSupportNav />
         </div>
-        <NavPanel />
         <!-- summoner menu -->
 
         <tippy
@@ -110,13 +124,7 @@ watch(() => isHovered.value, (newVal) => {
             hover="outline"
             :disabled="!as().user"
             on="btn"
-            class="
-              absolute inset-x-0 bottom-3 mx-2 h-16 justify-between
-              border-transparent px-4 backdrop-blur aria-expanded:btn-active
-              aria-expanded:border-b3 aria-expanded:bg-b2/60!
-              aria-expanded:shadow-sm aria-expanded:inset-shadow-sm
-              aria-expanded:inset-shadow-black/4
-            ">
+            :class="cn('absolute inset-x-0 bottom-0 h-16 w-full justify-between border-transparent px-4 backdrop-blur-sm aria-expanded:btn-active aria-expanded:border-b3 aria-expanded:bg-b2/60! aria-expanded:shadow-sm aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4', { ' px-3': !open })">
             <div class="flex items-center gap-3">
               <SummonerIcon class="size-11 rounded-lg" />
               <SummonerName
@@ -134,7 +142,7 @@ watch(() => isHovered.value, (newVal) => {
             <SidebarUser v-if="as().user" />
           </template>
         </tippy>
-      </div>
-    </div>
-  </motion.div>
+      </motion.div>
+    </motion.div>
+  </div>
 </template>

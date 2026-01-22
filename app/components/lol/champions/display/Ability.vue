@@ -32,7 +32,7 @@ const ability = computed (() => id || `${champ.value}${akey}`)
     :data-id="noTip ? '' : ability"
     :data-size="dataSize"
     :data-interactive="dataSize === 'lg' ? true : false"
-    :data-tip="noTip ? null : 'ability'"
+    :data-type="noTip ? null : 'ability'"
     :class="
       cn('relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
          { ' shadow-sm drop-shadow-sm  shadow-black/30 ': loaded },

@@ -1,4 +1,4 @@
-import type { InboxItem } from '~~/shared/schema'
+import type { InboxItem } from '@types'
 
 export function saveNotification(
   template: string,

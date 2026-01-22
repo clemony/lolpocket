@@ -46,7 +46,7 @@ const champKey = computed (() => String(route.params?.champion_key))
       <!-- HEALING AND SHIELDING -->
       <SimpleChampionStatCard
         v-if="champKeyToRole[champKey] === 'Enchanter'"
-        data-tip="Effective Ally Healing & Shielding"
+        data-type="Effective Ally Healing & Shielding"
         data-placement="right"
         data-theme="neutral mini-tip line"
         title="Healing & Shielding"
@@ -94,7 +94,7 @@ const champKey = computed (() => String(route.params?.champion_key))
       <!-- SAVED ALLIES -->
       <SimpleChampionStatCard
         v-if="champKeyToRole[champKey] === 'Enchanter'"
-        data-tip="Heals or shields that saved an ally from the brink of death"
+        data-type="Heals or shields that saved an ally from the brink of death"
         title="Lives Saved"
         subtitle="Perfect heals & shields."
         :icon="['ability:revive', 'size-6.5 ']">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { shardColor } from '~~/shared/constants/runes/shard-color'
-import { shardObject } from '~~/shared/records/shards'
+import { shardColor } from '@constants'
+import { shardObject } from '~~/layers/domain/records/shards'
 
 const {
   id,
@@ -34,7 +34,7 @@ const shard = computed(() =>
 
 <template>
   <Label
-    data-tip="shard"
+    data-type="shard"
     :data-id="shard?.id"
     :data-size
     :data-text

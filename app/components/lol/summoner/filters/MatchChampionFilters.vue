@@ -33,19 +33,19 @@ const champs = computed (() => {
             class="size-12 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm" />
 
           <div class="grid grow gap-1 font-medium dst">
-            <p class="self-end text-3!">
+            <p class="text-md! self-end">
               {{ champion.championName }}
             </p>
 
             <p
-              :class="cn('text-2 text-nowrap normal-case')">
+              :class="cn('text-sm text-nowrap normal-case')">
               {{ champion.kda }}
               kda
             </p>
           </div>
 
           <div
-            class="z-0 grid w-22 shrink-0 justify-end gap-1 text-2 dst *:text-end">
+            class="z-0 grid w-22 shrink-0 justify-end gap-1 text-sm dst *:text-end">
             <p class="text-nowrap normal-case">
               {{ champion.wins }} win
             </p>
@@ -66,7 +66,7 @@ const champs = computed (() => {
             base="btn"
             wrapper-class=""
             size="c-6"
-            class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur group-hover/c:animate-heartbeat">
+            class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/c:animate-heartbeat">
             <Icons
               name="heroicons:x-circle-16-solid"
               class="size-5.25!" />
@@ -74,7 +74,7 @@ const champs = computed (() => {
         </ListboxItem>
         <div
           v-if="cModel"
-          class="mx-4 flex gap-4 justify-self-end text-1">
+          class="mx-4 flex gap-4 justify-self-end text-xs">
           <span class="self-end opacity-50">
             ...filtered
           </span>

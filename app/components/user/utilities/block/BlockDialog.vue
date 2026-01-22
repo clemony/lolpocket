@@ -11,7 +11,7 @@ const { summoner } = defineProps<{
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
-        <DialogTitle class="text-6">
+        <DialogTitle class="text-xxl">
           Block {{ summoner.name }}?
         </DialogTitle>
         <DialogDescription class="mt-3 space-y-4 leading-7 text-bc">
@@ -39,7 +39,7 @@ const { summoner } = defineProps<{
         class="
           mt-4 flex w-full grow flex-row! items-center justify-between gap-10
         ">
-        <span class="text-2 italic opacity-60">
+        <span class="text-sm italic opacity-60">
           Are you sure you want to block {{ summoner.name }}?
         </span>
 

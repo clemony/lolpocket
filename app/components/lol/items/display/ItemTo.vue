@@ -13,7 +13,7 @@ const filtered = computed(() => to.filter(to => to.id < 9999))
     class="mt-1.5">
     <div
       class="
-        divider my-2 divider-start text-0! after:h-px after:bg-white
+        divider my-2 divider-start text-xxs! after:h-px after:bg-white
         after:opacity-10
       ">
       BUILDS INTO

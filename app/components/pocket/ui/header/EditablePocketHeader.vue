@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from '@types'
 import {
   EditableArea,
   EditableEditTrigger,
@@ -7,7 +7,7 @@ import {
   EditablePreview,
   EditableRoot,
 } from 'reka-ui'
-import { generateName } from '~~/shared'
+import { generateName } from '~~/shared/.index'
 
 const {
   buttonClass,
@@ -58,7 +58,7 @@ onMounted(async () => {
     name="name"
     submit-mode="both"
     :class="
-      cn('group/edit flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden rounded-box border border-transparent px-2.5 py-0 focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1',
+      cn('group/edit rounded-box focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1 flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden border border-transparent px-2.5 py-0',
          wrapperClass,
       )
     "
@@ -74,7 +74,7 @@ onMounted(async () => {
       <EditableArea class="w-160 overflow-hidden">
         <div
           class="
-            w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap *:dst
+            *:dst w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap
             **:truncate **:tracking-tight
           ">
           <EditablePreview :class="cn('', className)">
@@ -104,7 +104,7 @@ onMounted(async () => {
           ">
           <icon
             name="edit"
-            class="mr-2 size-4 text-bc/50" />
+            class="text-bc/50 mr-2 size-4" />
         </EditableEditTrigger>
 
         <!-- Show action icons when editing -->
@@ -122,7 +122,7 @@ onMounted(async () => {
             @click="pocket.name = generateName()">
             <icon
               name="shuffle"
-              class="size-3 dst" />
+              class="dst size-3" />
           </button>
 
           <button

@@ -2,7 +2,7 @@
 import { motion } from 'motion-v'
 
 const { api, champion, pocket } = defineProps<{
-  api: SummonerInject
+  api: SummonerApi
   pocket?: Pocket
   champion?: Champion
 }>()
@@ -20,7 +20,7 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
     v-if="isSummoner"
     data-theme="mini-tip neutral line"
     data-placement="left"
-    data-tip="Profile Settings"
+    data-type="Profile Settings"
     size="c-14"
     class="duration-0!"
     hover="neutral"
@@ -69,7 +69,7 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
                   <div class="leading-4">
                     <Label
                       as="legend"
-                      class="mb-2 text-5 font-semibold">
+                      class="mb-2 text-xl font-semibold">
                       Summoner Splash
                     </Label>
 
@@ -85,7 +85,7 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
                   <div class="leading-4">
                     <Label
                       as="legend"
-                      class="mb-2 text-5 font-semibold">Title</Label>
+                      class="mb-2 text-xl font-semibold">Title</Label>
                     <p class="label text-wrap">
                       Display a title from an earned Badge.
                     </p>

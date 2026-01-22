@@ -2,7 +2,7 @@
 import { summonerSections } from '~/components/lol/summoner/champion/summonerSections'
 
 const { api, champion, pocket } = defineProps<{
-  api?: SummonerInject
+  api?: SummonerApi
   pocket?: Pocket
   champion?: Champion
 }>()
@@ -44,13 +44,11 @@ function onScroll(e: Event) {
   }, 100)
 }
 
-const { activeId, registerAll } = useScrollSectionsProvider(
+const { registerAll } = useScrollSectionsProvider(
   scrollRef,
   scrollY,
 )
-watch(() => activeId.value, (v) => {
-  console.log('💠 - watch - newVal:', v)
-})
+
 onMounted(() => {
   registerAll(summonerSections.map(s => s.id))
 })
@@ -65,7 +63,7 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
     <!-- navbar -->
     <Navbar />
     <!-- sidebar -->
-    <AppSidebarTrigger />
+    <AppSidebar />
 
     <!-- bg -->
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
@@ -128,10 +126,10 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       <SiteFooter />
     </div>
   </div>
-  <div class="fixed top-0 left-[40px] z-20 flex h-15 w-56 items-center gap-3">
-    <SummonerDropdown
+  <div class="fixed top-0 right-8 z-20 flex h-15 w-56 items-center gap-3">
+    <LazySummonerDropdown
       v-if="api"
-      :data="api.summoner.value" />
+      :api />
 
     <PocketMenubar
       v-else-if="pocket" />

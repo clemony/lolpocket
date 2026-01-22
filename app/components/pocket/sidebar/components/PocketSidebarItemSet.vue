@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ItemSet, Pocket } from '~~/shared/schema'
+import type { ItemSet, Pocket } from '@types'
 import { AnimatePresence, motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent, PopoverPortal } from 'reka-ui'
 
@@ -59,9 +59,9 @@ const hovered = ref(false)
     @click="navigateTo(`/pocket/${pocket.key}/items`)">
     <PopoverTrigger
       class="
-        items-between pointer-events-auto z-1! flex size-20 cursor-pointer
-        flex-wrap justify-between gap-0.75! rounded-lg border border-b3/50!
-        bg-b2/80 p-1.5 backdrop-blur-md hover:z-2!
+        items-between border-b3/50! bg-b2/80 pointer-events-auto z-1! flex
+        size-20 cursor-pointer flex-wrap justify-between gap-0.75! rounded-lg
+        border p-1.5 backdrop-blur-md hover:z-2!
       ">
       <template v-if="set.items && set.items?.length">
         <template
@@ -90,8 +90,8 @@ const hovered = ref(false)
               delay: 0.2,
             }"
             class="
-              grid items-center overflow-hidden border border-b3/50 bg-b2/90
-              shadow-smooth backdrop-blur-md
+              border-b3/50 bg-b2/90 shadow-smooth grid items-center overflow-hidden
+              border backdrop-blur-md
             "
             :style="{
               transformOrigin: 'var(--reka-popover-content-transform-origin)',

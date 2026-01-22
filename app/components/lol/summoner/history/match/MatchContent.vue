@@ -5,18 +5,13 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const { match } = defineProps<{
-  match: Player
+const { match, player } = defineProps<{
+  player: Player
+  match: MatchData
 }>()
-
 const modelValue = ref<string>('Scoreboard')
 
 const tabs = {
-  //
-  Build: {
-    name: 'Build',
-    component: MatchBuild,
-  },
   Scoreboard: {
     name: 'Scoreboard',
     component: MatchScoreboard,
@@ -25,16 +20,22 @@ const tabs = {
     name: 'Statistics',
     component: MatchDataTable,
   },
+
+  //
+  Build: {
+    name: 'Build',
+    component: MatchBuild,
+  },
 }
 
 const { getTimeline } = useTimeline()
 
-const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId, match.player.puuid)
+const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId, player.puuid)
 </script>
 
 <template>
   <LazyCollapsibleContent
-    class="h-205 w-full p-0 text-2 **:select-none">
+    class="relative h-205 w-full p-0 text-sm **:select-none">
     <Tabs
       v-model:model-value="modelValue"
       class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-b3)_70%,transparent_30%)]">
@@ -53,11 +54,15 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
       </FileTabsList>
 
       <div
+        v-if="tabs[modelValue].name === 'Statistics'"
+        class="absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b from-b2-light to-b2-light/90"></div>
+      <div
         :class="cn('field-box tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"
           :match="match"
+          :player
           :timeline />
       </div>
     </Tabs>

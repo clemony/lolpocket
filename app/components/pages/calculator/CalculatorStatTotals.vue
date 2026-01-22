@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
-import { itemStatRecord } from '~~/shared'
+import { itemStatRecord } from '~~/shared/.index'
 
 const checkedStats = ref([])
 
@@ -54,7 +54,7 @@ const set2 = computed(() => is().calculatorSet2)
     <div
       class="
         btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px]
-        items-center py-2 *:text-2
+        items-center py-2 *:text-sm
       ">
       <div class="col-start-2 font-medium dst">
         STAT
@@ -127,7 +127,7 @@ const set2 = computed(() => is().calculatorSet2)
     <div
       class="
         z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center
-        border-y border-y-b3/50 py-2 *:text-2
+        border-y border-y-b3/50 py-2 *:text-sm
       ">
       <div class="ml-4 justify-center">
         <i-ui-gold class="size-6 text-bc/80" />

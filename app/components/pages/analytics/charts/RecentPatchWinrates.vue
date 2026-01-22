@@ -111,15 +111,15 @@ const range = computed(() => {
       shadow-warm-soft
     ">
     <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
-      <div class="stat-desc mb-1 text-1 font-medium">
+      <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>
 
-      <div class="text-5font-semibold dst">
+      <div class="text-xlfont-semibold dst">
         Recent Patch
       </div>
 
-      <div class="stat-desc text-3">
+      <div class="stat-desc text-md">
         Winrate vs. Games
       </div>
     </div>

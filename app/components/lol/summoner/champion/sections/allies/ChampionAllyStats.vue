@@ -30,7 +30,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           <th>Matches</th>
           <th>Winrate</th>
           <th
-            data-tip="Percent winrate change when on team."
+            data-type="Percent winrate change when on team."
             class="hover:underline">
             Delta*
           </th>
@@ -58,9 +58,9 @@ const colorMap = computed(() => getAllyColorMap(points.value))
             <CollapsibleTrigger class="inline-flex h-12! justify-start align-baseline">
               <Icon
                 name="round"
-                class="text-[var(--ally-color)]!" />
+                class="text-(--ally-color)!" />
               <span class="font-semibold">{{ v?.name }}</span>
-              <span class="text-1 font-medium opacity-60"> #{{ v?.tag }}</span>
+              <span class="text-xs font-medium opacity-60"> #{{ v?.tag }}</span>
             </CollapsibleTrigger>
           </td>
           <td>

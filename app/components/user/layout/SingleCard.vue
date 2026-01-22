@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+
+}>()
 const route = useRoute()
 </script>
 
@@ -20,7 +24,7 @@ const route = useRoute()
       <div class="flex flex-col gap-6">
         <Card class="w-full! max-w-180!">
           <CardHeader class="my-2 text-center">
-            <CardTitle class="text-6">
+            <CardTitle class="text-xxl">
               {{ route.meta?.title || route.name }}
             </CardTitle>
             <CardDescription
@@ -29,13 +33,13 @@ const route = useRoute()
               {{ route.meta?.description }}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent :class="cn('', className)">
             <slot />
           </CardContent>
         </Card>
         <div
           class="
-            text-center text-1 text-balance text-bc/60 [&_a]:underline
+            text-center text-xs text-balance text-bc/60 [&_a]:underline
             [&_a]:underline-offset-1 [&_a]:hover:text-bc
           ">
           By continuing, you agree to our

@@ -128,7 +128,7 @@ function navigate(url: string) {
                 class="w-full gap-4 pl-5 capitalize"
                 :value="option"
                 @click="navigate(option.path)">
-                <hicon
+                <Icon
                   :name="String(option.meta?.icon)"
                   :class="cn('size-5', option.meta?.listClass)" />
                 {{ option.meta?.title || option.name }}

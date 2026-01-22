@@ -22,7 +22,7 @@ const config: Config = {
   tailwindFunctions: ['clsx', 'tw', 'tv', 'cn', 'cva'],
   tailwindPreserveDuplicates: false,
   tailwindPreserveWhitespace: false,
-  tailwindStylesheet: './app/assets/css/tailwind.css',
+  tailwindStylesheet: './app/ui/css/tailwind.css',
   trailingComma: 'es5',
 }
 

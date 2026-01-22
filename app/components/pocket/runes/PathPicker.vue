@@ -138,17 +138,17 @@ const pathHovered = ref('')
           backgroundSize: 'cover',
         }"
         class="
-          after:backdrop-blur-px after:absolute after:z-1 after:size-full
-          after:bg-black/70 after:opacity-0 after:transition-all
-          after:duration-400 relative my-auto flex aspect-2/3 max-h-140 grow
-          basis-1 cursor-pointer items-center justify-center overflow-hidden
-          rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0
+          after:backdrop-blur-px relative my-auto flex
+          aspect-2/3 max-h-140 grow
+          basis-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-black
+          bg-center shadow-sm drop-shadow-sm *:opacity-0 after:absolute
+          after:z-1 after:size-full after:bg-black/70 after:opacity-0 after:transition-all after:duration-400
           hover:*:opacity-100 hover:after:opacity-100
         "
         @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">
-        <hicon
+        <Icon
           :name="`i-path-${path.name.toLowerCase()}`"
           class="z-2 size-20! text-white/30!" />
       </motion.button>

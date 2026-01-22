@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Card } from '~~/shared/schema'
+import type { Card } from '@types'
 
 const { card: c } = defineProps<{
   card: Card
@@ -26,10 +26,10 @@ watch(
 <template>
   <div
     class="
-      absolute top-16 left-0 z-1 flex h-14 w-full items-center gap-2
-      rounded-none border-x-2 border-b border-x-b3/30 border-b-b3/80 bg-b2/40
-      px-5.25 py-1 shadow-none backdrop-blur-md before:absolute before:top-0
-      before:left-0 before:z-0 before:size-full before:bg-b1/60
+      border-x-b3/30 border-b-b3/80 bg-b2/40 before:bg-b1/60 absolute top-16 left-0 z-1 flex
+      h-14 w-full items-center gap-2 rounded-none border-x-2
+      border-b px-5.25 py-1 shadow-none backdrop-blur-md before:absolute
+      before:top-0 before:left-0 before:z-0 before:size-full
     ">
     <LazyChampionDropdown
       :disabled="!card.champion"
@@ -39,9 +39,9 @@ watch(
     <label
       v-tippy="'Background Color'"
       class="
-        grid-place-items-center tldr-30 relative mx-2 aspect-square size-6.5
-        cursor-pointer overflow-hidden rounded-full border border-neutral/60
-        drop-shadow-xs hover:border-neutral hover:ring hover:ring-neutral
+        grid-place-items-center tldr-30 border-neutral/60 hover:border-neutral hover:ring-neutral relative
+        mx-2 aspect-square size-6.5 cursor-pointer overflow-hidden
+        rounded-full border drop-shadow-xs hover:ring
       ">
       <input
         v-model="color"
@@ -62,11 +62,11 @@ watch(
 
       <icon
         name="hugeicons:monocle"
-        class="swap-off size-5.5 dst peer-disabled:text-bc/20" />
+        class="swap-off dst peer-disabled:text-bc/20 size-5.5" />
 
       <icon
         name="streamline:rainbow"
-        class="swap-on size-6 dst peer-disabled:text-bc/20" />
+        class="swap-on dst peer-disabled:text-bc/20 size-6" />
     </label>
 
     <Popover>
@@ -76,7 +76,7 @@ watch(
           class="btn btn-square btn-ghost">
           <icon
             name="ph:arrows-out-line-horizontal"
-            class="size-5.5 shrink-0 dst" />
+            class="dst size-5.5 shrink-0" />
         </button>
       </PopoverTrigger>
 
@@ -84,7 +84,7 @@ watch(
         align="start"
         :side-offset="10"
         side="bottom"
-        class="PopoverContent w-44 border border-b3">
+        class="PopoverContent border-b3 w-44 border">
         <input
           v-model="align"
           type="range"
@@ -113,21 +113,21 @@ watch(
       class="btn btn-square btn-ghost">
       <icon
         name="iconoir:text"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
 
     <Grow />
 
     <Separator
       orientation="vertical"
-      class="mx-3 h-5/6 bg-b2" />
+      class="bg-b2 mx-3 h-5/6" />
 
     <button
       v-tippy="'Share'"
       class="btn btn-square btn-ghost">
       <icon
         name="share"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
 
     <button
@@ -136,29 +136,29 @@ watch(
       @click="emit('download')">
       <icon
         name="iconoir:download"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
 
     <Separator
       orientation="vertical"
-      class="mx-3 h-5/6 bg-b2" />
+      class="bg-b2 mx-3 h-5/6" />
 
     <button class="control-btn btn btn-square btn-ghost">
       <icon
         name="ph:arrows-in-simple-light"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
 
     <button class="btn btn-square btn-ghost">
       <icon
         name="iconoir:zoom-in"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
 
     <button class="btn btn-square btn-ghost">
       <icon
         name="iconoir:zoom-out"
-        class="size-5.5 dst" />
+        class="dst size-5.5" />
     </button>
   </div>
 </template>
