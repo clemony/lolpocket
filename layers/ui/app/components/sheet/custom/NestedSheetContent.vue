@@ -1,0 +1,43 @@
+<script setup lang="ts">
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import {
+  DialogClose,
+  DialogContent,
+  DialogOverlay,
+  DialogPortal,
+  useForwardPropsEmits,
+} from 'reka-ui'
+
+interface SheetContentProps extends DialogContentProps {
+  side?: SheetVariants['side']
+  class?: HTMLAttributes['class']
+}
+
+defineOptions({
+  inheritAttrs: false,
+})
+
+const props = defineProps<SheetContentProps>()
+
+const emits = defineEmits<DialogContentEmits>()
+
+const delegatedProps = reactiveOmit(props, 'side', 'class')
+
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
+</script>
+
+<template>
+  <DialogPortal>
+    <DialogContent
+      :class="
+        cn(
+          'border-l-accent/30! w-116 min-w-116 pt-26 drop-shadow-sm',
+          sheetVariants({ side }),
+          props.class,
+        )
+      "
+      v-bind="{ ...forwarded, ...$attrs }">
+      <slot />
+    </DialogContent>
+  </DialogPortal>
+</template>

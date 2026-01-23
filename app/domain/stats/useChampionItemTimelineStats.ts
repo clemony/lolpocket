@@ -1,9 +1,4 @@
 export interface ItemSlotOrder {
-  trinket: OrderedTimedStatEntry[]
-  boots: OrderedTimedStatEntry[]
-  early: OrderedTimedStatEntry[]
-  support: OrderedTimedStatEntry[]
-  legendary: OrderedTimedStatEntry[][]
   best?: {
     core?: {
       items: OrderedTimedStatEntry[]
@@ -12,40 +7,45 @@ export interface ItemSlotOrder {
     slots?: OrderedTimedStatEntry[]
     byWinrate?: OrderedTimedStatEntry[]
   }
+  boots: OrderedTimedStatEntry[]
+  early: OrderedTimedStatEntry[]
+  legendary: OrderedTimedStatEntry[][]
+  support: OrderedTimedStatEntry[]
+  trinket: OrderedTimedStatEntry[]
 }
 
 export interface ChampionItemStats {
-  trinket: Record<number, TimedStatDetail>
-  support: Record<number, TimedStatDetail>
   boots: Record<number, TimedStatDetail>
   early: Record<number, TimedStatDetail>
   legendary: Array<Record<number, TimedStatDetail>>
+  support: Record<number, TimedStatDetail>
+  trinket: Record<number, TimedStatDetail>
 }
 
 type ItemSetKey = string // e.g. "1055,2003,2003"
 
 const startingItemSets: Record<ItemSetKey, ItemSetStat> = {}
-export const useChampionItemTimelineStats = (
-  matchData: ComputedRef<MatchPlayerData[]>
-) => {
+export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerData[]>) {
   return computed<ItemSlotOrder>(() => {
     const out: ChampionItemStats = {
-      trinket: {},
       boots: {},
       early: {},
-      support: {},
       legendary: [],
+      support: {},
+      trinket: {},
     }
 
     const allLegendaries: Record<number, TimedStatDetail> = {}
 
     for (const m of matchData.value) {
-      if (!m.player || !m.timeline) continue
+      if (!m.player || !m.timeline)
+        continue
       const win = m.player.win
-      if (win === null || win === "remake") continue
+      if (win === null || win === 'remake')
+        continue
 
       const finalItems = getFinalItems(m.player.items)
-      const supportItem = finalItems.find((id) => SUPPORT_LEGENDARIES.has(id))
+      const supportItem = finalItems.find(id => SUPPORT_LEGENDARIES.has(id))
       const acquireTimes = getItemAcquireTimes(
         m.timeline,
         finalItems,
@@ -59,22 +59,24 @@ export const useChampionItemTimelineStats = (
         .map(([id]) => id)
 
       const setItems = [...new Set(startingItems)].sort((a, b) => a - b)
-      if (!setItems.length) continue
+      if (!setItems.length)
+        continue
 
-      const key = setItems.join(",")
+      const key = setItems.join(',')
 
-      const stat =
-        startingItemSets[key] ??
-        (startingItemSets[key] = {
-          items: setItems,
-          games: 0,
-          win: 0,
-          winrate: 0,
-          pickrate: 0,
-        })
+      const stat
+        = startingItemSets[key]
+          ?? (startingItemSets[key] = {
+            games: 0,
+            items: setItems,
+            pickrate: 0,
+            win: 0,
+            winrate: 0,
+          })
 
       stat.games++
-      if (win) stat.win++
+      if (win)
+        stat.win++
 
       for (const [id, ts] of acquireTimes) {
         if (ts <= TEN_MINUTES) {
@@ -107,11 +109,13 @@ export const useChampionItemTimelineStats = (
         }
       }
 
-      const legendaryBySlot = new Map<number, { id: number; ts: number }>()
+      const legendaryBySlot = new Map<number, { id: number, ts: number }>()
 
       for (const item of classified) {
-        if (!isLegendary(item.id)) continue
-        if (SUPPORT_LEGENDARIES.has(item.id)) continue
+        if (!isLegendary(item.id))
+          continue
+        if (SUPPORT_LEGENDARIES.has(item.id))
+          continue
 
         const slotKey = getLegendarySlotKey(item.id)
 
@@ -154,7 +158,7 @@ export const useChampionItemTimelineStats = (
     }
 
     const support = sortTimedByWinratePickrate(out?.support)
-    console.log("🥸 - useChampionItemTimelineStats - support:", support)
+    console.log('🥸 - useChampionItemTimelineStats - support:', support)
     const boot = sortTimedByWinratePickrate(out?.boots)
 
     const supportPickrateSum = support.reduce(
@@ -183,12 +187,13 @@ export const useChampionItemTimelineStats = (
     // fill remaining slots from legendary
     for (let i = 0; i < legendary.length && core.length < 3; i++) {
       const slot = legendary[i]
-      if (!slot?.length) continue
+      if (!slot?.length)
+        continue
       core.push(slot[0])
     }
     const sortedCore = sortTimedByTime(core)
 
-    const excluded = new Set<number>(sortedCore.flatMap((i) => i[0]))
+    const excluded = new Set<number>(sortedCore.flatMap(i => i[0]))
     const slots: OrderedTimedStatEntry[] = []
 
     let slotIndex = isSupport ? 1 : 2
@@ -212,48 +217,48 @@ export const useChampionItemTimelineStats = (
 
     for (const stat of Object.values(startingItemSets)) {
       stat.winrate = Math.round((stat.win / stat.games) * 1000) / 10
-      stat.pickrate =
-        Math.round((stat.games / matchData.value.length) * 1000) / 10
+      stat.pickrate
+        = Math.round((stat.games / matchData.value.length) * 1000) / 10
     }
 
     return {
-      trinket: sortTimedByPickrate(out.trinket),
-      boots: sortTimedByPickrate(out.boots),
-      early: sortTimedByPickrate(out.early),
-      support: sortTimedByPickrate(out.support),
-      legendary,
-      starting: sortTimedByPickrate(startingItemSets)?.[0]?.[1],
       best: {
+        byWinrate: sortTimedByWinrate(allLegendaries),
         core: {
-          items: sortedCore,
-          winrate:
-            core.length ?
-              Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.winrate ?? 0), 0) /
-                  core.length) *
-                  10
-              ) / 10
-            : 0,
           games:
-            core.length ?
-              Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.games ?? 0), 0) /
-                  core.length) *
-                  10
+            core.length
+              ? Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.games ?? 0), 0)
+                  / core.length)
+                * 10
               ) / 10
-            : 0,
+              : 0,
+          items: sortedCore,
           pickrate:
-            core.length ?
-              Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.pickrate ?? 0), 0) /
-                  core.length) *
-                  10
+            core.length
+              ? Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.pickrate ?? 0), 0)
+                  / core.length)
+                * 10
               ) / 10
-            : 0,
+              : 0,
+          winrate:
+            core.length
+              ? Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.winrate ?? 0), 0)
+                  / core.length)
+                * 10
+              ) / 10
+              : 0,
         },
         slots,
-        byWinrate: sortTimedByWinrate(allLegendaries),
       },
+      boots: sortTimedByPickrate(out.boots),
+      early: sortTimedByPickrate(out.early),
+      legendary,
+      starting: sortTimedByPickrate(startingItemSets)?.[0]?.[1],
+      support: sortTimedByPickrate(out.support),
+      trinket: sortTimedByPickrate(out.trinket),
     }
   })
 }

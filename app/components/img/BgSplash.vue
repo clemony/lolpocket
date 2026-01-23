@@ -35,7 +35,7 @@ const bg = computed(() => {
 <template>
   <div
     :class="
-      cn('absolute -top-16 isolate flex h-[80vh] w-screen justify-end bg-tint-b2/30 dss', {
+      cn('bg-tint-b2/30 dss absolute -top-16 isolate flex h-[80vh] w-screen justify-end', {
       }, className)
     ">
     <div
@@ -77,8 +77,8 @@ const bg = computed(() => {
         " />
       <div
         class="
-          absolute z-1 size-full scale-x-104 scale-y-230 bg-radial-[at_80%_50%]
-          from-transparent from-24% via-b2/60 via-42% to-b2 to-60%
+          via-b2/60 to-b2 absolute z-1 size-full scale-x-104
+          scale-y-230 bg-radial-[at_80%_50%] from-transparent from-24% via-42% to-60%
         " />
     </div>
   </div>

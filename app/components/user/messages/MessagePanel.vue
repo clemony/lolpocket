@@ -31,7 +31,7 @@ defineOptions({
         <div class="px-3">
           <Input
             placeholder="Search messages..."
-            class="input mb-3 h-12 bg-b1!" />
+            class="input bg-b1! mb-3 h-12" />
         </div>
       </template>
     </SidebarHeaderWrapper>
@@ -42,7 +42,7 @@ defineOptions({
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"
           :class="
-            cn('group/msg flex w-full flex-col items-start gap-2 border-b border-b-b3 p-4 leading-tight whitespace-nowrap last:border-b-0',
+            cn('group/msg border-b-b3 flex w-full flex-col items-start gap-2 border-b p-4 leading-tight whitespace-nowrap last:border-b-0',
                {
                  ' bg-b1/80 ': !message.read,
                  'bg-transparent hover:bg-sidebar-accent opacity-70':
@@ -55,14 +55,14 @@ defineOptions({
               class="grid size-full justify-items-start"
               @click="markRead(message.id)">
               <div class="flex w-full items-center justify-between gap-2">
-                <span class="text-sm font-medium text-bc/60">
+                <span class="text-bc/60 text-sm font-medium">
                   {{ message.from.name }}
                 </span>
 
                 <span
                   class="
-                    relative flex h-5 items-center justify-self-end text-xs
-                    text-bc/80 *:absolute *:right-4 *:transition-opacity
+                    text-bc/80 relative flex h-5 items-center justify-self-end
+                    text-xs *:absolute *:right-4 *:transition-opacity
                     *:duration-200 *:first:opacity-0
                     group-hover/msg:*:first:opacity-100
                     group-hover/msg:*:last:pointer-events-none
@@ -106,7 +106,7 @@ defineOptions({
       <div
         v-else
         class="grid h-44 w-full place-items-center">
-        <span class="overflow-hidden text-sm text-nowrap dst">
+        <span class="dst overflow-hidden text-sm text-nowrap">
           {{ `No mail right now!` }}
         </span>
       </div>

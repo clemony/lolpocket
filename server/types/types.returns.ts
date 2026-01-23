@@ -1,9 +1,9 @@
 export interface MatchDataReturn {
-  matchData: MatchData[]
-  startIndex?: number
-  nextIndex: number
   end?: boolean
+  matchData: MatchData[]
   newestIds?: string[]
+  nextIndex: number
+  startIndex?: number
 }
 
 export interface AccountReturn {
@@ -20,51 +20,51 @@ export interface RegionReturn {
 
 export interface MasteryReturn {
   puuid: string
-  championPointsUntilNextLevel: number
-  chestGranted: boolean
   championId: number
-  lastPlayTime: number
   championLevel: number
   championPoints: number
   championPointsSinceLastLevel: number
-  markRequiredForNextLevel: number
+  championPointsUntilNextLevel: number
   championSeasonMilestone: number
+  chestGranted: boolean
+  lastPlayTime: number
+  markRequiredForNextLevel: number
+  milestoneGrades: string[]
   nextSeasonMilestone: NextSeasonMilestonesDto
   tokensEarned: number
-  milestoneGrades: string[]
 }
 
 export interface NextSeasonMilestonesDto {
-  requireGradeCounts: object
-  rewardMarks: number
   bonus: boolean
+  requireGradeCounts: object
   rewardConfig: RewardConfigDto
+  rewardMarks: number
 }
 
 export interface RewardConfigDto {
-  rewardValue: string
-  rewardType: string
   maximumReward: number
+  rewardType: string
+  rewardValue: string
 }
 
 export interface SummonerReturn {
+  puuid: string
   profileIconId: number
   revisionDate: string
-  puuid: string
   summonerLevel: number
 }
 
 export interface RankedEntryResponse {
-  losses: number
+  leagueId: string
   leaguePoints: number
+  losses: number
   queueType: string
+  rank: string
   tier: string
   wins: number
-  leagueId: string
-  rank: string
 }
 
 export interface RankedResponse {
-  solo?: RankedEntry
   flex?: RankedEntry
+  solo?: RankedEntry
 }

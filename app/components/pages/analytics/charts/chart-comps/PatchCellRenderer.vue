@@ -15,7 +15,7 @@ console.log('💠 - patch - patch:', patch)
       :key="i">
       <div
         v-if="i <= 2"
-        class="badge border badge-ghost border-b3/60! badge-sm">
+        class="badge badge-ghost border-b3/60! badge-sm border">
         {{ p }}
       </div>
     </template>

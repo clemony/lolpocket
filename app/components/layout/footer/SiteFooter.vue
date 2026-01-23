@@ -13,7 +13,7 @@ const { class: className } = defineProps<{
 
     <SiteFooterData
       class="
-        z-10 h-20 max-h-20 min-h-20 overflow-hidden border-t-2 border-t-neutral
+        border-t-neutral z-10 h-20 max-h-20 min-h-20 overflow-hidden border-t-2
         py-5
       " />
   </div>

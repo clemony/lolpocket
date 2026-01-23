@@ -1,0 +1,53 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Essence Flux',
+  width: '160',
+  affects: 'Enemies',
+  blurb: 'Active:  Ezreal fires an orb that shortly marks the first enemy  champion, epic  monster, or  structure hit.',
+  castTime: '0.25',
+  cooldown: '8',
+  cost: '50',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ezreal fires an orb in the target direction that marks the first enemy champion, epic monster, or structure hit for 4 seconds.</p>'
+    },
+    {
+      description: 'His next basic attack or ability against the target detonates the mark to deal them bonus magic damage.',
+      leveling: [
+        {
+          attribute: 'Bonus Magic Damage',
+          modifiers: [
+            {
+              values: '80 / 135 / 190 / 245 / 300'
+            },
+            {
+              unit: '% bonus AD',
+              values: '100'
+            },
+            {
+              tooltip: 'Scaling per rank:\n70 / 75 / 80 / 85 / 90% AP',
+              unit: '% AP',
+              values: '70 - 90'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'If the mark was detonated with an ability, Ezreal restores 60 mana plus the mana cost of that ability.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/w',
+  notes: 'The application of Essence Flux deals 0  proc damage.\nThis triggers in-combat effects such as drawing turret aggro and drawing monster aggression.\nIt also triggers  Sudden Impact and applies  Elixir of Sorcery.\nIt does not trigger  Cheap Shot, however, as  proc damage doesn\'t trigger  Cheap Shot.\n Block and  Dodge prevents the mark from being triggered by a basic attack.\n Spell shield prevents the mark from being triggered by an ability. If the mark is triggered by a basic attack, spell shield will prevent Essence Flux\'s damage.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '1700',
+  spellEffects: 'spell',
+  spellshieldable: 'Special',
+  targeting: 'Direction',
+  targetRange: '1200'
+}
+export default ability

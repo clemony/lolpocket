@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { RuneSet } from '@types'
-
 const { class: className, set } = defineProps<{
   class?: HTMLAttributes['class']
   set: RuneSet

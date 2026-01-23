@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import type { RuneSet } from '@types'
-import { pathIndex } from '@constants'
-import { runePaths } from '~~/layers/domain/records/runes'
-
 const { set: s } = defineProps<{
   set: RuneSet
 }>()
@@ -160,8 +156,8 @@ function handleDelete() {
           :id="shard"
           :key="shard"
           :class="`
-            border-b3 size-10
-            ${shard === 0 ? `border-b2! bg-b2/30 border` : ''}
+            size-10 border-b3
+            ${shard === 0 ? `border border-b2! bg-b2/30` : ''}
           `" />
       </div>
     </TransitionFade>

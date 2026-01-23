@@ -17,7 +17,7 @@ console.log('🥸 - bans:', bans)
 
 <template>
   <div
-    :class="cn('match-row grid w-full grid-flow-col grid-cols-[2.14fr_repeat(10,1fr)]! place-items-center border-b border-b3/50!', { 'border-b-transparent! h-12': k === 'bans' })">
+    :class="cn('match-row border-b3/50! grid w-full grid-flow-col grid-cols-[2.14fr_repeat(10,1fr)]! place-items-center border-b', { 'border-b-transparent! h-12': k === 'bans' })">
     <div
       :data-type="v.name"
       data-placement="left"
@@ -40,7 +40,7 @@ console.log('🥸 - bans:', bans)
         v-for="team, i in teams"
         :key="team.teamId"
         :class="
-          cn('match-cell z-0 size-full items-center last-of-type:border-0! hover:z-3 hover:bg-b3/30',
+          cn('match-cell hover:bg-b3/30 z-0 size-full items-center last-of-type:border-0! hover:z-3',
              team?.[k] === 0 ? 'match-null' : '', i === 0 && k === 'bans' ? 'col-start-2 col-span-5' : k === 'bans' ? 'col-start-7 col-span-5' : i === 0 ? 'col-start-4' : 'col-start-9', {}) ">
         <div
           v-if="k === 'teamId'"

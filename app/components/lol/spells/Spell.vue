@@ -52,7 +52,7 @@ const tps = computed (() => {
     :class="
       cn({ ' shadow-sm drop-shadow-sm  shadow-black/30': loaded }, className)"
     :loading-type
-    :alt="spellbook[id].name"
+    :alt="spells[id].name"
     :src="`/img/spells/${id}.webp`"
     @load="loaded = true" />
 </template>

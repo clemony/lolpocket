@@ -10,16 +10,16 @@ const { title, class: className } = defineProps<{
     <DropdownMenuTrigger
       variant="ghost"
       class="
-        flex h-11 w-full items-center justify-between bg-transparent px-2
-        disabled:border-transparent! disabled:bg-transparent
-        disabled:opacity-100 disabled:**:text-bc disabled:hover:bg-transparent
-        disabled:hover:shadow-none disabled:hover:drop-shadow-none
-        data-[state=open]:border-b3 data-[state=open]:bg-b3/50!
-        data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs
+        disabled:**:text-bc data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:inset-shadow-xxs flex h-11 w-full
+        items-center justify-between
+        bg-transparent px-2 disabled:border-transparent!
+        disabled:bg-transparent disabled:opacity-100
+        disabled:hover:bg-transparent disabled:hover:shadow-none
+        disabled:hover:drop-shadow-none data-[state=open]:shadow-xs
       "
       as-child>
       <slot>
-        <h2 class="pt-1 font-bold dst">
+        <h2 class="dst pt-1 font-bold">
           {{ title }}
         </h2>
       </slot>

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
-import { itemStatRecord } from '~~/shared/.index'
 
 const checkedStats = ref([])
 
@@ -56,17 +55,17 @@ const set2 = computed(() => is().calculatorSet2)
         btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px]
         items-center py-2 *:text-sm
       ">
-      <div class="col-start-2 font-medium dst">
+      <div class="dst col-start-2 font-medium">
         STAT
       </div>
 
-      <div class="justify-center font-medium dst">
+      <div class="dst justify-center font-medium">
         {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="justify-center font-medium dst">
+        class="dst justify-center font-medium">
         2
       </div>
     </div>
@@ -78,10 +77,10 @@ const set2 = computed(() => is().calculatorSet2)
           :key="stat.id"
           :layout="true"
           class="
-            sticky top-0 left-0 z-1 grid cursor-pointer
-            grid-cols-[40px_1fr_30px_30px] items-center border-b border-t-b3/60
-            border-b-b3/55 bg-b1 py-3 *:justify-start first:border-t
-            last:border-b-b3! hover:border-y hover:border-y-b3/80 hover:bg-b1/50
+            border-t-b3/60 border-b-b3/55 bg-b1 last:border-b-b3! hover:border-y-b3/80 hover:bg-b1/50
+            sticky top-0 left-0 z-1
+            grid cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b
+            py-3 *:justify-start first:border-t hover:border-y
           ">
           <!-- row 1 -->
 
@@ -105,9 +104,9 @@ const set2 = computed(() => is().calculatorSet2)
             v-if="!checkedStats.includes(stat)"
             :layout="true"
             class="
-              grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px]
-              items-center border-b border-b-b3/40 py-3.5 first:border-t
-              first:border-t-b3 hover:bg-b2/60 has-checked:hidden
+              border-b-b3/40 first:border-t-b3 hover:bg-b2/60 grid
+              w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b
+              py-3.5 first:border-t has-checked:hidden
             ">
             <input
               v-model="checkedStats"
@@ -126,24 +125,24 @@ const set2 = computed(() => is().calculatorSet2)
 
     <div
       class="
-        z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center
-        border-y border-y-b3/50 py-2 *:text-sm
+        border-y-b3/50 z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px]
+        items-center border-y py-2 *:text-sm
       ">
       <div class="ml-4 justify-center">
-        <i-ui-gold class="size-6 text-bc/80" />
+        <i-ui-gold class="text-bc/80 size-6" />
       </div>
 
-      <div class="col-start-2 font-medium dst">
+      <div class="dst col-start-2 font-medium">
         TOTAL GOLD
       </div>
 
-      <div class="justify-center font-medium dst">
+      <div class="dst justify-center font-medium">
         {{ totalCost }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="justify-center font-medium dst">
+        class="dst justify-center font-medium">
         {{ totalCost2 }}
       </div>
     </div>

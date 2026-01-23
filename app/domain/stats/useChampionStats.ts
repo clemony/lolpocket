@@ -1,15 +1,14 @@
-export const useChampionStats = (
-  filteredMatches: Ref<MatchData[]>,
-  puuid: string
-) =>
-  computed<AggregatedStats[]>(() => {
-    if (!filteredMatches.value?.length) return []
+export function useChampionStats(filteredMatches: Ref<MatchData[]>, puuid: string) {
+  return computed<AggregatedStats[]>(() => {
+    if (!filteredMatches.value?.length)
+      return []
 
     const map = new Map<number, AggregatedStats>()
 
     for (const match of filteredMatches.value) {
-      const row = match.participants.find((p) => p.puuid === puuid)
-      if (!row || row.win === "remake") continue
+      const row = match.participants.find(p => p.puuid === puuid)
+      if (!row || row.win === 'remake')
+        continue
 
       const id = row.championId
 
@@ -17,11 +16,11 @@ export const useChampionStats = (
         map.set(id, {
           championId: id,
           championName: champNameById(id),
-          games: 0,
-          wins: 0,
-          losses: 0,
-          kda: 0,
           gamePatches: [],
+          games: 0,
+          kda: 0,
+          losses: 0,
+          wins: 0,
           ...initFromSchema(AGGREGATED_STAT_SCHEMA),
         })
       }
@@ -29,8 +28,8 @@ export const useChampionStats = (
       const acc = map.get(id)!
       applyParticipantStats(acc, row)
       acc.gamePatches?.push(match.gamePatch)
-      acc.kda =
-        Math.round(
+      acc.kda
+        = Math.round(
           ((acc.kills.total + acc.assists.total) / acc.deaths.total) * 100
         ) / 100
 
@@ -43,5 +42,6 @@ export const useChampionStats = (
       }
     }
 
-    return [...sortMapBy(map, "games").values()]
+    return [...sortMapBy(map, 'games').values()]
   })
+}

@@ -16,14 +16,14 @@ console.log('💠 - ms:', ms().filter.patch)
         ">
         <icon
           name="left"
-          class="size-6 dst" />
+          class="dst size-6" />
       </NumberFieldDecrement>
 
       <NumberFieldContent class="size-full grow">
         <NumberFieldInput
           class="
-            size-full border-0 text-xxs font-bold shadow-none
-            inset-shadow-none dst
+            text-xxs dst size-full border-0 font-bold
+            shadow-none inset-shadow-none
           " />
       </NumberFieldContent>
 
@@ -31,7 +31,7 @@ console.log('💠 - ms:', ms().filter.patch)
         class="relative grid size-full max-w-10 shrink-0 place-items-center">
         <icon
           name="right"
-          class="size-6 dst" />
+          class="dst size-6" />
       </NumberFieldIncrement>
     </NumberField>
   </div>

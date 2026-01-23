@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { MenubarItemType } from '../types.menubar'
-
 const { class: className, item } = defineProps<{
   item: MenubarItemType
   class?: HTMLAttributes['class']
@@ -34,9 +32,9 @@ const { class: className, item } = defineProps<{
         <span
           v-if="item.shortcut?.text"
           class="
-            badge max-w-40 truncate badge-neutral text-xs! badge-sm
-            font-semibold! tracking-normal group-open/trig:badge-neutral
-            group-hover/trig:badge-neutral
+            badge badge-neutral badge-sm group-open/trig:badge-neutral group-hover/trig:badge-neutral max-w-40
+            truncate text-xs! font-semibold!
+            tracking-normal
           ">
           {{ item.shortcut?.text }}
         </span>

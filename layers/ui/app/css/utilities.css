@@ -1,0 +1,124 @@
+
+@reference './theme.css';
+
+@utility dss-* {
+  box-shadow: var(--drop-shadow-sm) --value([color]) --modifier(integer);
+}
+@utility dss {
+  @apply drop-shadow-sm;
+}
+@utility dsm {
+  @apply drop-shadow-md;
+}
+
+@utility dxs {
+  @apply drop-shadow-xs;
+}
+@utility dst {
+  @apply drop-shadow-tiny;
+}
+
+@utility scrollbar-hidden {
+  scrollbar-color: transparent transparent !important;
+  &::-webkit-scrollbar {
+    scrollbar-color: transparent transparent !important;
+    display: none !important;
+  }
+}
+
+@utility trim {
+  @apply text-clip text-ellipsis whitespace-nowrap;
+}
+
+/* @utility animate-gradient-* {
+  animation: gradient --value(integer) s ease infinite;
+} */
+@utility col-span-all {
+  column-span: all;
+}
+
+@utility w-inherit {
+  width: inherit;
+}
+
+@utility h-inherit {
+  height: inherit;
+}
+
+@utility min-w-inherit {
+  min-width: inherit;
+}
+
+@utility min-h-inherit {
+  min-height: inherit;
+}
+
+@utility grid-rows-masonry {
+  grid-template-rows: masonry;
+}
+
+@utility grid-cols-masonry {
+  grid-template-columns: masonry;
+}
+
+/* TABLE */
+@utility table {
+  tr {
+    @apply h-12 items-center!;
+  }
+  th,
+  td {
+    @apply h-full items-center py-0! text-sm! not-last:text-center last:text-end;
+  }
+}
+
+/* tabs */
+
+@utility tabs-box {
+  border-radius: var(--radius-lg);
+}
+
+@utility tabs-box {
+  @apply rounded-lg;
+}
+
+@utility tabs-sm {
+  .tab {
+    @apply h-8.5 pt-0.75;
+    --tab-radius-min: 0.64rem;
+  }
+  .tab-content {
+    --tabcontent-radius-se: var(--radius-xl);
+    --tabcontent-radius-es: var(--radius-xl);
+    --tabcontent-radius-ee: var(--radius-xl);
+  }
+}
+
+@utility tab {
+  --radius-field: 1rem;
+  --tab-bg: var(--b1);
+  --tab-border-color: var(--color-b3);
+  --tab-border-colors: var(--color-b3);
+
+  &::before {
+    @apply opacity-90 mix-blend-plus-lighter;
+  }
+}
+
+@layer utilities {
+  .tab {
+    @apply text-md z-1 flex items-center gap-2 !text-start !font-medium;
+  }
+  &:where(:not(.tabs-lift-start)) > .tab {
+    @apply !border-b-0 has-checked:!border-x-2 has-checked:!border-t-2;
+    &:not(.tab-active) {
+      @apply border-2 border-transparent;
+      &:hover {
+        @apply border-[var(tab-border-color)] bg-b2;
+      }
+    }
+    & .tab-active {
+      @apply !border-x-2 !border-t-2 border-b-0 border-b-transparent;
+    }
+  }
+}

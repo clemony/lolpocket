@@ -18,7 +18,7 @@ const summoner = computed(() => s)
       <div class="flex items-center gap-1">
         <SummonerName
           class="
-            text-md! font-normal text-bc/94 drop-shadow-sm
+            text-md! text-bc/94 font-normal drop-shadow-sm
             group-hover/friend:underline
           " />
         <SummonerTag

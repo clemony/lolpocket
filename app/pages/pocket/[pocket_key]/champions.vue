@@ -96,9 +96,8 @@ function showContextMenu(e: MouseEvent, champion: string) {
   <div class="inset-0 z-auto pt-12">
     <div
       class="
-        sticky -top-56 z-2 w-full items-center space-y-6 bg-b1/98 pt-10 pb-6
-        backdrop-blur
-      ">
+        bg-b1/98 sticky -top-56 z-2 w-full items-center space-y-6 pt-10 pb-6
+        backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
         <h1 class="capitalize">
           Champions

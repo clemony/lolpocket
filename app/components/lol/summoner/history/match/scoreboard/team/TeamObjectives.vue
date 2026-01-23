@@ -43,7 +43,7 @@ const objs = [
 <template>
   <div
     :class="
-      cn('grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-bc',
+      cn('**:text-bc grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold',
          className,
       )
     ">

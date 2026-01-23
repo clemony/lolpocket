@@ -1,1 +1,1 @@
-export * from "./components/box/mails"
+export * from './components/box/mails'

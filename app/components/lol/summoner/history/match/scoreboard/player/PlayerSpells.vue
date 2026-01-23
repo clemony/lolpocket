@@ -17,7 +17,7 @@ const { class: className, player } = defineProps<{
       :alt="String(spell)"
       :src="`/img/spells/${spell}.webp`"
       class="
-        size-6.5 rounded-md shadow-sm ring-bc/60 drop-shadow-sm transition-all
+        ring-bc/60 size-6.5 rounded-md shadow-sm drop-shadow-sm transition-all
         duration-300 hover:scale-105 hover:ring
       " />
   </div>

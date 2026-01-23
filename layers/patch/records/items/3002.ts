@@ -1,0 +1,47 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 3002,
+  name: 'Trailblazer',
+  buildsFrom: [
+    {
+      id: 3066,
+      name: 'Winged Moonplate',
+      gold: 800
+    },
+    {
+      id: 1031,
+      name: 'Chain Vest',
+      gold: 800
+    }
+  ],
+  description: '250 Health\n40 Armor\n4% Move Speed\n\nLead the Way\nWhile moving, build up to 20 bonus Move Speed. \nAt max speed:Create a trail that grants allied champions Move Speed equal to 15% of yours. If you are Melee, your next Attack Slows the target by 50% for 1 second.\n\n',
+  gold: {
+    base: 800,
+    sell: 1680,
+    total: 2400
+  },
+  maps: [
+    11,
+    12,
+    21,
+    35
+  ],
+  noEffects: false,
+  passives: [
+    {
+      name: 'Lead the Way',
+      effects: 'While moving, generate 7 stacks of <i>Momentum</i> every 0.25 seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75 seconds of moving. At <b>maximum</b> stacks, you leave behind a path briefly that grants 15% of your <b>total</b> movement speed as <b>bonus</b> movement speed to allied champions within. Basic attacks consume all stacks. If you are <img src="/img/icons/melee.webp" class="tip-icon" />melee and at <b>maximum</b> stacks, your next basic attack <img src="/img/icons/slow.webp" class="tip-icon" />slows the target by 50% for 1 second.',
+      mythic: false,
+      unique: true
+    }
+  ],
+  rank: 'Legendary',
+  removed: false,
+  specialRecipe: 0,
+  stats: {
+    armor: 40,
+    health: 250,
+    percentMovespeed: 4
+  }
+}
+export default item

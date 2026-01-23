@@ -14,7 +14,7 @@ const props = withDefaults(
     <div
       v-bind="$attrs"
       class="
-        absolute top-0 left-0 grid size-full place-items-center rounded-box
+        rounded-box absolute top-0 left-0 grid size-full place-items-center
         bg-black/40
       ">
       <div class="badge badge-xl text-sm opacity-90 shadow-lg">

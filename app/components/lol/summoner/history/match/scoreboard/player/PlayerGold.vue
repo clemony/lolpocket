@@ -17,6 +17,6 @@ const { class: className, icon = true, player } = defineProps<{
       name="lol:gold"
       class="inline size-3.25 translate-y-px opacity-75" />
 
-    <span class="hidden @min-700:flex">{{ roundDecimal(player.stats.goldEarned / 1000) }}k</span>
+    <span class="@min-700:flex hidden">{{ roundDecimal(player.stats.goldEarned / 1000) }}k</span>
   </label>
 </template>

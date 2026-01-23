@@ -41,7 +41,7 @@ const settings = computed(() => {
         <SummonerIcon class="size-11 rounded-lg" />
         <div class="flex flex-col">
           <SummonerName
-            class="text-xxl! truncate pl-1 leading-none font-semibold text-bc/90 dst" />
+            class="text-xxl! text-bc/90 dst truncate pl-1 leading-none font-semibold" />
           <SummonerTag
             class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
         </div>
@@ -95,7 +95,7 @@ const settings = computed(() => {
                 class="peer hidden" />
               <Icon
                 name="theme.icon"
-                class="absolute text-bc" />
+                class="text-bc absolute" />
             </Label>
           </div>
         </div>

@@ -1,33 +1,33 @@
-import equal from "fast-deep-equal/es6"
-import type { DateRange } from "reka-ui"
-import { computed, shallowRef, unref } from "vue"
+import type { DateRange } from 'reka-ui'
+import equal from 'fast-deep-equal/es6'
+import { computed, shallowRef, unref } from 'vue'
 
 const GLOBAL_KEYS = [
-  ["participants", "championName"],
-  ["participants", "name"],
-  ["participants", "tag"],
+  ['participants', 'championName'],
+  ['participants', 'name'],
+  ['participants', 'tag'],
 ]
 
-const RESTRICTED_KEYS = ["keywords"]
+const RESTRICTED_KEYS = ['keywords']
 
 export function useMatchFilters(
   puuid: MaybeRef<string | null | undefined>,
   matches: MaybeRef<MatchData[] | null | undefined>
 ) {
-  const query = shallowRef<string>("")
+  const query = shallowRef<string>('')
   const filter = shallowRef<MatchFilter>({})
 
   const defaultFilter: MatchFilter = {
-    ally: "",
-    champion: "",
+    ally: '',
+    amount: toValue(matches).length,
+    champion: '',
+    date: {
+      end: null,
+      start: null,
+    },
     patch: null,
     queue: 0,
-    role: "all",
-    date: {
-      start: null,
-      end: null,
-    },
-    amount: toValue(matches).length,
+    role: 'all',
   }
   function setFilter<K extends keyof MatchFilter>(
     key: K,
@@ -45,7 +45,7 @@ export function useMatchFilters(
   }
 
   function setDateStart<K extends keyof DateRange>(value: DateRange[K]) {
-    filter.value = { ...filter.value, date: { start: value, end: value } }
+    filter.value = { ...filter.value, date: { end: value, start: value } }
   }
 
   const filtered = computed<MatchData[]>(() => {
@@ -53,55 +53,58 @@ export function useMatchFilters(
     const arr = unref(matches) ?? []
     const f = filter.value
 
-    if (!id) return arr
+    if (!id)
+      return arr
 
-    const empty =
-      !f.ally && !f.champion && !f.patch && !f.queue && f.role === "all"
+    const empty
+      = !f.ally && !f.champion && !f.patch && !f.queue && f.role === 'all'
 
-    if (empty) return arr
+    if (empty)
+      return arr
 
-    return arr.filter((m) => matchFilters(id, m, f))
+    return arr.filter(m => matchFilters(id, m, f))
   })
 
   const player = computed(() => {
     const p = filtered.value.map((m) => {
       return {
-        matchId: m.matchId,
         mapId: m.mapId,
+        matchId: m.matchId,
         queueId: m.queueId,
-        ...m.participants.find((p) => p.puuid === toValue(puuid)),
+        ...m.participants.find(p => p.puuid === toValue(puuid)),
       }
     })
     return p.map((a) => {
       const items = [
         ...Object.values(a.items),
         ...Object.values(a.items.slots),
-      ].flatMap((i) => itemNameById(i))
+      ].flatMap(i => itemNameById(i))
 
       const runes = [
         a.runes.keystone,
         ...Object.values(a.runes.primary.runes),
         ...Object.values(a.runes.secondary.runes),
-      ].flatMap((i) => runeNameById(i))
+      ].flatMap(i => runeNameById(i))
 
-      const paths = [a.runes.primary.path, a.runes.secondary.path].map((i) =>
+      const paths = [a.runes.primary.path, a.runes.secondary.path].map(i =>
         pathNameById(i)
       )
-      const spells = a.spells.map((i) => spellNameById(i))
+      const spells = a.spells.map(i => spellNameById(i))
 
-      const outcome =
-        a.win === "remake" ? ["remake", "surrender", "redo"]
-        : a.win ? ["win", "victory"]
-        : ["loss", "lose", "defeat"]
+      const outcome
+        = a.win === 'remake'
+          ? ['remake', 'surrender', 'redo']
+          : a.win
+            ? ['win', 'victory']
+            : ['loss', 'lose', 'defeat']
 
-      const map = Object.values(mapIndex.find((i) => i.id === a.mapId)).filter(
-        (i) => typeof i === "string"
+      const map = Object.values(mapIndex.find(i => i.id === a.mapId)).filter(
+        i => typeof i === 'string'
       )
 
       const queue = Object.values(queueIndex)
 
       return {
-        matchId: a.matchId,
         keywords: [
           champNameById(a.championId),
           a.role,
@@ -112,7 +115,8 @@ export function useMatchFilters(
           ...outcome,
           ...map,
           ...queue,
-        ].filter((i) => i),
+        ].filter(i => i),
+        matchId: a.matchId,
       }
     })
   })
@@ -126,11 +130,12 @@ export function useMatchFilters(
   })
 
   const filteredMatches = computed<MatchData[]>(() => {
-    if (!query.value.length) return filtered.value
+    if (!query.value.length)
+      return filtered.value
 
-    const playerMatches =
-      playerSearch.value?.map((p) =>
-        unref(matches)?.find((m) => m.matchId === p.matchId)
+    const playerMatches
+      = playerSearch.value?.map(p =>
+        unref(matches)?.find(m => m.matchId === p.matchId)
       ) ?? []
 
     const globalMatches = globalSearch.value ?? []
@@ -138,25 +143,26 @@ export function useMatchFilters(
     const map = new Map<string, MatchData>()
 
     for (const m of [...playerMatches, ...globalMatches]) {
-      if (m) map.set(m.matchId, m)
+      if (m)
+        map.set(m.matchId, m)
     }
 
-    const final =
-      filter.value.amount ?
-        [...map.values()].splice(0, filter.value.amount)
-      : [...map.values()]
+    const final
+      = filter.value.amount
+        ? [...map.values()].splice(0, filter.value.amount)
+        : [...map.values()]
 
     filter.value.amount === final.length
     return final
   })
 
   return {
-    filter,
-    query,
-    setFilter,
-    setDateStart,
     clearFilters,
-    filterEmpty,
+    filter,
     filteredMatches,
+    filterEmpty,
+    query,
+    setDateStart,
+    setFilter,
   }
 }

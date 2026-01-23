@@ -1,5 +1,6 @@
 export function mode(nums: number[]): number | null {
-  if (!nums.length) return null
+  if (!nums.length)
+    return null
 
   const freq = new Map<number, number>()
   let maxCount = 0
@@ -21,17 +22,19 @@ export function mode(nums: number[]): number | null {
 function logTeamStatModes(matches: MatchData[], puuid: string) {
   const perPlayer = new Map<
     string,
-    { name: string; kills: number[]; deaths: number[]; assists: number[] }
+    { name: string, kills: number[], deaths: number[], assists: number[] }
   >()
 
   for (const match of matches) {
-    const self = match.participants.find((p) => p.puuid === puuid)
-    if (!self) continue
+    const self = match.participants.find(p => p.puuid === puuid)
+    if (!self)
+      continue
 
     const teamId = self.teamId
 
     for (const p of match.participants) {
-      if (p.teamId !== teamId) continue
+      if (p.teamId !== teamId)
+        continue
 
       const entry = perPlayer.get(p.puuid) ?? {
         name: `${p.name}#${p.tag}`,
@@ -48,7 +51,7 @@ function logTeamStatModes(matches: MatchData[], puuid: string) {
     }
   }
 
-  const table = Array.from(perPlayer.values()).map((p) => ({
+  const table = Array.from(perPlayer.values()).map(p => ({
     assistMode: mode(p.assists),
     deathMode: mode(p.deaths),
     games: p.kills.length,

@@ -1,8 +1,8 @@
 export function toDeathEvent(e: any): ChampionDeathEvent {
   return {
-    killerId: e.killerId ?? 0,
     assistingParticipantIds: e.assistingParticipantIds ?? [],
-    victimId: e.victimId,
+    killerId: e.killerId ?? 0,
     timestamp: e.timestamp,
+    victimId: e.victimId,
   }
 }

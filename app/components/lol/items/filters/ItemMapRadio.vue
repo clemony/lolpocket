@@ -8,10 +8,10 @@
       variant="none"
       orientation="vertical"
       contrast
-      class="w-11! grid-rows-4 gap-4! px-1 py-1">
+      class="w-11! grid-rows-4 gap-4! p-1">
       <TabsTrigger
         v-tippy="{ content: 'All', theme: 'neutral', placement: 'left' }"
-        class="**:opacity-90 on:**:text-nc on:**:opacity-100"
+        class="on:**:text-nc on:**:opacity-100 **:opacity-90"
         :value="0">
         <span class="relative grid size-5 place-items-center">
           <icon
@@ -27,12 +27,12 @@
           theme: 'neutral',
           placement: 'left',
         }"
-        class="**: opacity-80 on:opacity-100 on:**:text-nc"
+        class="**: on:opacity-100 on:**:text-nc opacity-80"
         :value="map">
         <span class="relative grid size-5 place-items-center px-3">
           <component
             :is="`i-lol-${map}`"
-            class="absolute shrink-0 dst"
+            class="dst absolute shrink-0"
             :class="{
               'size-4!': map === 12 || map === 11,
               'size-5.5!': map === 30,

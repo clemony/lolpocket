@@ -1,7 +1,5 @@
 // CHAMPS
 
-import { newRuneSet } from '@types'
-
 export function removeChampion(champion, pocket) {
   const find = pocket.champions.findIndex(c => c === champion)
   if (find !== -1)

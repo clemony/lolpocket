@@ -83,7 +83,7 @@ function deleteTag(tag: string) {
                   size="md"
                   variant="ghost"
                   :class="
-                    cn('size-full items-center justify-start gap-px! rounded-lg px-3 text-bc/80 duration-0 hover:bg-b2/60 hover:text-bc hover:inset-shadow-none',
+                    cn('text-bc/80 hover:bg-b2/60 hover:text-bc size-full items-center justify-start gap-px! rounded-lg px-3 duration-0 hover:inset-shadow-none',
                        { 'btn-active !bg-b2/20': tags.includes(item) },
                     )
                   ">
@@ -101,7 +101,7 @@ function deleteTag(tag: string) {
                 v-tippy="'Delete Tag'"
                 variant="ghost"
                 class="
-                  btn-square h-9 opacity-0 duration-0 not-hover:**:text-bc/60
+                  btn-square not-hover:**:text-bc/60 h-9 opacity-0 duration-0
                   group-hover/tag:opacity-100
                 "
                 @click="deleteTag(item)">
@@ -116,12 +116,12 @@ function deleteTag(tag: string) {
             variant="base"
             hover="outline"
             class="
-              group flex w-full flex-nowrap items-center gap-3!
-              justify-self-center px-3 py-0 text-sm duration-0
-              focus-within:border-neutral/60
+              group focus-within:border-neutral/60 flex w-full flex-nowrap items-center
+              gap-3! justify-self-center px-3 py-0 text-sm
+              duration-0
               focus-within:[&_input]:placeholder:opacity-0
             ">
-            <span class="z-1 grid h-full w-4.5 place-items-center bg-b1">
+            <span class="bg-b1 z-1 grid h-full w-4.5 place-items-center">
               <icon
                 name="tag"
                 class="size-4.5 opacity-50" />

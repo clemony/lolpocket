@@ -43,7 +43,7 @@ const prev = computed (() => {
       :key="i"
       variant="link"
       as="a"
-      :class="cn('flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc', { 'text-bc': item.id === activeId })"
+      :class="cn('text-bc/50 hover:text-bc flex items-center justify-start px-0 duration-0', { 'text-bc': item.id === activeId })"
       size="12"
       @click="section = `#${item.id}`">
       <Icons

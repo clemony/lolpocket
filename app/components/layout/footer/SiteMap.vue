@@ -35,15 +35,15 @@ const groups = computed(() => {
 <template>
   <div
     :class="
-      cn('relative z-1 flex h-146 max-h-146 min-h-146 w-full justify-center overflow-hidden border-t border-t-b3/60 bg-b2 text-bc before:absolute before:z-0 before:size-full before:bg-b2',
-        className,
+      cn('border-t-b3/60 bg-b2 text-bc before:bg-b2 relative z-1 flex h-146 max-h-146 min-h-146 w-full justify-center overflow-hidden border-t before:absolute before:z-0 before:size-full',
+         className,
       )
     ">
     <div
       v-if="groups.length"
       class="
-        z-1 grid h-full auto-cols-max grid-flow-col items-start gap-x-10
-        gap-y-16 px-12 pt-30 pb-40 [&_h1]:dss
+        [&_h1]:dss z-1 grid h-full auto-cols-max grid-flow-col items-start
+        gap-x-10 gap-y-16 px-12 pt-30 pb-40
       ">
       <ul
         v-for="group in groups"

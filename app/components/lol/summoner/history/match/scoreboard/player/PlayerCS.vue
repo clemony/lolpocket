@@ -21,7 +21,7 @@ const { class: className, icon = true, player } = defineProps<{
       name="lol:minion"
       class="size-3.5 opacity-85" />
 
-    <span class="hidden @min-700:flex">
+    <span class="@min-700:flex hidden">
       {{ player.stats.totalCs }}
     </span>
   </label>

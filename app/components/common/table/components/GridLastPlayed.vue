@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { fromAbsolute, getLocalTimeZone } from '@internationalized/date';
+import { fromAbsolute, getLocalTimeZone } from '@internationalized/date'
 
 const { params } = defineProps<{
   params: any

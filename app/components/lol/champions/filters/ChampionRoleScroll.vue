@@ -19,7 +19,7 @@ function reset() {
           overflow-x-auto px-10 pt-2 pb-4
         ">
         <button
-          class="text-xlrounded-md! btn btn-square font-normal btn-sm"
+          class="text-xlrounded-md! btn btn-square btn-sm font-normal"
           :class="{ hidden: !filters.role }">
           <icon
             name="x-sm"
@@ -32,11 +32,11 @@ function reset() {
           :key="`${role.name}${i}`"
           class="
             has-checked:!bgneutral has-checked:!borderneutral
-            has-checked:!shadowneutral/20 btn mr-0 rounded-lg-2! rounded-md
-            border-b2 bg-b2/20! text-md! font-medium tracking-normal capitalize
-            shadow-sm shadow-black/7 transition-all duration-300 btn-sm
-            checked:shadow-sm! hover:scale-110 hover:border-b3! hover:bg-b3/40!
-            hover:drop-shadow-sm has-checked:text-nc!
+            has-checked:!shadowneutral/20 btn rounded-lg-2! border-b2 bg-b2/20!
+            text-md! btn-sm hover:border-b3! hover:bg-b3/40! has-checked:text-nc! mr-0
+            rounded-md font-medium tracking-normal capitalize shadow-sm
+            shadow-black/7 transition-all duration-300 checked:shadow-sm!
+            hover:scale-110 hover:drop-shadow-sm
           "
           :class="{ hidden: filters.role && role.name !== filters.role }">
           <input
@@ -54,7 +54,7 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="absolute top-2 -left-4 grid h-13 w-6 place-items-center bg-b1">
+      class="bg-b1 absolute top-2 -left-4 grid h-13 w-6 place-items-center">
       <icon
         name="left"
         class="z-1 size-6 shrink-0" />
@@ -62,7 +62,7 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="absolute top-2 -right-4 grid h-13 w-6 place-items-center bg-b1">
+      class="bg-b1 absolute top-2 -right-4 grid h-13 w-6 place-items-center">
       <icon
         name="right"
         class="size-6" />

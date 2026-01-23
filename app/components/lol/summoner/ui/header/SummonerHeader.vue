@@ -22,7 +22,7 @@ const open = shallowRef<boolean>(false)
       <icon
         name="images"
         class="
-          pointer-events-none absolute z-2 size-6 text-nc! opacity-0
+          text-nc! pointer-events-none absolute z-2 size-6 opacity-0
           transition-all duration-500 ease-in-out group-hover/icon:opacity-80
           group-data-[state=open]/icon:opacity-100
         " />
@@ -32,8 +32,8 @@ const open = shallowRef<boolean>(false)
       <SummonerName
         as="h1"
         :summoner
-        class="overflow-y-visible font-serif text-[2.6rem] leading-15
-         text-bc/94 drop-shadow-sm" />
+        class="text-bc/94 overflow-y-visible font-serif text-[31.200000000000003px]/15
+          drop-shadow-sm" />
     </template>
 
     <!-- header sub-text -->

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { runePaths } from '~~/layers/domain/records/runes';
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()

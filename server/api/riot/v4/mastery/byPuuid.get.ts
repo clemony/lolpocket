@@ -1,12 +1,13 @@
-import { fetchMasteries } from "../.."
+import { fetchMasteries } from '../..'
 
 export default defineEventHandler(async (event) => {
   const { puuid, region } = getQuery(event)
-  if (!puuid || !region)
+  if (!puuid || !region) {
     throw createError({
       statusCode: 400,
-      statusMessage: "Missing puuid or region",
+      statusMessage: 'Missing puuid or region',
     })
+  }
 
   const masteryData = await fetchMasteries(String(puuid), String(region))
   let masteryPoints = 0

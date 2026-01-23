@@ -113,25 +113,25 @@ const today = new Date()
                     variant="ghost"
                     class="justify-start font-normal">
                     Later today
-                    <span class="ml-auto text-bc/60">3:00pm</span>
+                    <span class="text-bc/60 ml-auto">3:00pm</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     Tomorrow
-                    <span class="ml-auto text-bc/60">1 day</span>
+                    <span class="text-bc/60 ml-auto">1 day</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     This weekend
-                    <span class="ml-auto text-bc/60">2 days</span>
+                    <span class="text-bc/60 ml-auto">2 days</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     Next week
-                    <span class="ml-auto text-bc/60">5 days</span>
+                    <span class="text-bc/60 ml-auto">5 days</span>
                   </Button>
                 </div>
               </div>
@@ -220,7 +220,7 @@ const today = new Date()
         </div>
         <div
           v-if="mail.date"
-          class="ml-auto text-sm text-bc/60">
+          class="text-bc/60 ml-auto text-sm">
           1/12/2046
         </div>
       </div>
@@ -257,7 +257,7 @@ const today = new Date()
     </div>
     <div
       v-else
-      class="p-8 text-center text-bc/60">
+      class="text-bc/60 p-8 text-center">
       No message selected
     </div>
   </div>

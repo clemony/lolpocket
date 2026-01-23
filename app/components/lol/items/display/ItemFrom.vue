@@ -23,8 +23,8 @@ const { from, gold } = defineProps<{
         <Item
           :id="item.id"
           class="
-            size-10 hover-ring overflow-hidden rounded-lg shadow-sm
-            ring-neutral/60
+            hover-ring ring-neutral/60 size-10 overflow-hidden rounded-lg
+            shadow-sm
           " />
 
         <icon

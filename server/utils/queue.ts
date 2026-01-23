@@ -1,4 +1,4 @@
-import pLimit from "p-limit"
+import pLimit from 'p-limit'
 
 const concurrency = 1
 const limit = pLimit(concurrency)
@@ -21,7 +21,7 @@ export function scheduleJob<T>(job: () => Promise<T>): Promise<T> {
   return limit(async () => {
     // wait until we have capacity
     while (secondBucket >= MAX_PER_SECOND || minuteBucket >= MAX_PER_TWO_MIN) {
-      await new Promise((r) => setTimeout(r, 50))
+      await new Promise(r => setTimeout(r, 50))
     }
 
     secondBucket++

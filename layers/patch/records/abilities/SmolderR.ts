@@ -1,0 +1,80 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:14 PM CST
+
+const ability: Ability = {
+  key: 'R',
+  name: 'MMOOOMMMM!',
+  width: '125',
+  affects: 'Enemies, Self',
+  castTime: '0.75',
+  cooldown: '120 / 110 / 100',
+  cost: '100',
+  damageType: 'Physical damage',
+  effectRadius: '1000',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Self Heal',
+          modifiers: [
+            {
+              values: '100 / 135 / 170'
+            },
+            {
+              unit: '% bonus AD',
+              values: '50'
+            },
+            {
+              unit: '% AP',
+              values: '75'
+            }
+          ]
+        },
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '200 / 300 / 400'
+            },
+            {
+              unit: '% bonus AD',
+              values: '110'
+            },
+            {
+              unit: '% AP',
+              values: '100'
+            }
+          ]
+        },
+        {
+          attribute: 'Increased Physical Damage',
+          modifiers: [
+            {
+              values: '300 / 450 / 600'
+            },
+            {
+              unit: '% bonus AD',
+              values: '165'
+            },
+            {
+              unit: '% AP',
+              values: '150'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'MMOOOMMMM! deals 50% damage against minions and monsters.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/r',
+  notes: 'This ability will cast from wherever the caster is at the start of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled in the first 0.4 seconds of the cast time.\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '1700',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'true',
+  targeting: 'Direction'
+}
+export default ability

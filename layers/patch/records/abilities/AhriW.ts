@@ -1,0 +1,100 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Fox-Fire',
+  affects: 'Enemies',
+  blurb: 'Active:  Ahri gains a burst of  move speed and conjures three fox-fires that orbit her for a short time. Fox-fires home onto nearby enemies, dealing magic damage.',
+  castTime: 'none',
+  cooldown: '10 / 9 / 8 / 7 / 6',
+  cost: '30',
+  damageType: 'Magic damage',
+  effectRadius: '150 / 550 / 725',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ahri gains 40% bonus movement speed that decays over 2 seconds and conjures three flames which orbit her clockwise for up to 2.5 seconds.</p>'
+    },
+    {
+      description: 'After 0.25 seconds of the cast, each flame targets a visible enemy based on priority, or after 0.4 seconds, simply targets the closest visible enemy in range. Each flame deals magic damage, with subsequent flames against a target dealing 40% damage.',
+      leveling: [
+        {
+          attribute: 'Primary Magic Damage',
+          modifiers: [
+            {
+              values: '40 / 60 / 80 / 100 / 120'
+            },
+            {
+              unit: '% AP',
+              values: '40'
+            }
+          ]
+        },
+        {
+          attribute: 'Subsequent Magic Damage',
+          modifiers: [
+            {
+              values: '16 / 24 / 32 / 40 / 48'
+            },
+            {
+              unit: '% AP',
+              values: '16'
+            }
+          ]
+        },
+        {
+          attribute: 'Total Single-Target Damage',
+          modifiers: [
+            {
+              values: '72 / 108 / 144 / 180 / 216'
+            },
+            {
+              unit: '% AP',
+              values: '72'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Flames prioritize enemy champions hit by Charm, then enemy champions, then minions that would die to Fox-Fire\'s damage, and then the target of Ahri\'s last basic attack within 3 seconds.'
+    },
+    {
+      description: 'Fox-Fire\'s damage is doubled against minions below 20% maximum health.',
+      leveling: [
+        {
+          attribute: 'Primary Minion Damage',
+          modifiers: [
+            {
+              values: '80 / 120 / 160 / 200 / 240'
+            },
+            {
+              unit: '% AP',
+              values: '80'
+            }
+          ]
+        },
+        {
+          attribute: 'Subsequent Minion Damage',
+          modifiers: [
+            {
+              values: '32 / 48 / 64 / 80 / 96'
+            },
+            {
+              unit: '% AP',
+              values: '32'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/w',
+  notes: 'Each missile of Fox-Fire has its own shorter non-priority range.\nAny unused Fox-Fires will fizzle upon death.\nThis ability\'s damage is calculated based on the caster\'s current stats and changes dynamically.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '75.92° per second / 1400',
+  spellEffects: 'Single target',
+  spellshieldable: 'True',
+  targeting: 'Auto'
+}
+export default ability

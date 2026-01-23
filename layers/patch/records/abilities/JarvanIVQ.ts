@@ -1,0 +1,55 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:49 PM CST
+
+const ability: Ability = {
+  key: 'Q',
+  name: 'Dragon Strike',
+  width: '136 /  300',
+  affects: 'Self, Enemies',
+  blurb: 'Active:  Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and  reducing their armor for a short time.',
+  castTime: '0.4',
+  collisionRadius: '180',
+  cooldown: '10 / 9 / 8 / 7 / 6',
+  cost: '45 / 50 / 55 / 60 / 65',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '90 / 130 / 170 / 210 / 250'
+            },
+            {
+              unit: '% bonus AD',
+              values: '145'
+            }
+          ]
+        },
+        {
+          attribute: 'Armor Reduction',
+          modifiers: [
+            {
+              unit: '% of target\'s armor',
+              values: '10 / 14 / 18 / 22 / 26'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'If the lance connects with a deployed Demacian Standard, Jarvan IV dashes to its location, knocking up nearby enemies around him and along his path for 0.75 seconds.'
+    },
+    {
+      description: 'Jarvan IV can cast any of his abilities during the dash.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q',
+  notes: 'The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.',
+  resource: 'Mana',
+  spellEffects: 'Aoe',
+  spellshieldable: 'True',
+  targeting: 'Direction'
+}
+export default ability

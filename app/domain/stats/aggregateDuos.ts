@@ -24,14 +24,15 @@ function bumpChampion(
   const e = map[role][championId]
 
   e.games++
-  if (win) e.win!++
+  if (win)
+    e.win!++
 
-  e.avgTimestamp =
-    ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
+  e.avgTimestamp
+    = ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
 }
 
-export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
-  computed<ChampionPairStats>(() => {
+export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
+  return computed<ChampionPairStats>(() => {
     const enemy: PairedChampionDuoStatGroup = buildEmptyRoleObject()
     const team: PairedChampionDuoStatGroup = buildEmptyRoleObject()
 
@@ -40,23 +41,26 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
       return { enemy: [], team: [] }
     }
 
-    const totalWins = data.value.filter((d) => d.player.win).length
+    const totalWins = data.value.filter(d => d.player.win).length
 
     for (const d of data.value) {
       const player = d.player
-      if (!player) continue
+      if (!player)
+        continue
 
       const teamId = player.teamId
       const win = player.win
       const gameDuration = d.match.gameDuration
 
       for (const p of d.match.participants) {
-        if (p.puuid === player.puuid) continue
+        if (p.puuid === player.puuid)
+          continue
 
         const target = p.teamId === teamId ? team : enemy
         const role = normalizeRole(p.role)
 
-        if (win === "remake") continue
+        if (win === 'remake')
+          continue
         bumpChampion(target, role, p.championId, win, gameDuration)
       }
     }
@@ -75,7 +79,7 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
 
       for (const role of Object.keys(group) as RoleKey[]) {
         const champs = Object.values(group[role])
-        //const maxAbs = Math.max(...champs.map((c) => Math.abs(c.synergy))) || 1
+        // const maxAbs = Math.max(...champs.map((c) => Math.abs(c.synergy))) || 1
         for (const c of champs) {
           c.winrate = roundDecimalToPercent(c.win!, c.games)
           // c.synergy = synergyScore(c.delta, maxAbs)
@@ -83,7 +87,7 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
         }
 
         out.push(
-          champs.filter((c) => c.games >= 1).sort((a, b) => b.games - a.games)
+          champs.filter(c => c.games >= 1).sort((a, b) => b.games - a.games)
         )
       }
 
@@ -95,3 +99,4 @@ export const aggregateDuos = (data: Ref<MatchPlayerData[]>) =>
       team: finalize(team),
     }
   })
+}

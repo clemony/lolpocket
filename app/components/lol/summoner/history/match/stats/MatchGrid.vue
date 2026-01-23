@@ -1,33 +1,31 @@
 <script lang="ts" setup>
-import { ChampionIcon } from '#components'
 import type {
-    ColDef,
-    ColGroupDef,
-    GridApi,
-    GridOptions,
-    GridReadyEvent,
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridReadyEvent,
 } from 'ag-grid-community'
 import {
-    CellStyleModule,
-    ClientSideRowModelModule,
-    ColumnApiModule,
-    ColumnAutoSizeModule,
-    ColumnHoverModule,
-    GridStateModule,
-    ModuleRegistry,
-    RenderApiModule,
-    RowSelectionModule,
-    TooltipModule,
-    ValidationModule,
+  CellStyleModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  TooltipModule,
+  ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '~/ui/config/masteryTheme'
 
 const { match, player } = defineProps<{
   match: MatchData
   player: Player
 }>()
-
+const ChampionIcon = resolveComponent('ChampionIcon')
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)

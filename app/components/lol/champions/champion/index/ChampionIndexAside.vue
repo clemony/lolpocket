@@ -15,7 +15,7 @@ const wrapperClass
       overflow-y-auto px-1 py-22
     ">
     <menu class="space-y-2">
-      <h3 class="mb-4 dst">
+      <h3 class="dst mb-4">
         Abilities
       </h3>
       <BtnLink
@@ -50,8 +50,8 @@ const wrapperClass
       class="field-box data">
       <CollapsibleTrigger
         class="
-          flex h-16 min-h-16 w-full items-center justify-between px-5
-          open:border-b open:border-b-b3
+          open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between
+          px-5 open:border-b
         ">
         <h3>Data</h3>
 
@@ -69,8 +69,8 @@ const wrapperClass
       class="field-box">
       <CollapsibleTrigger
         class="
-          flex h-16 min-h-16 w-full items-center justify-between px-5
-          open:border-b open:border-b-b3
+          open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between
+          px-5 open:border-b
         ">
         <h3>Bio</h3>
 

@@ -25,7 +25,7 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
 
     <SelectContent
       position="popper"
-      class="w-[var(--reka-select-trigger-width)]!">
+      class="w-(--reka-select-trigger-width)!">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
 
@@ -41,7 +41,7 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
               <icon
                 v-if="ms().filter.patch === patch"
                 name="tick-sm"
-                class="size-4.5 dst" />
+                class="dst size-4.5" />
             </span>
             {{ patch }}
           </span>

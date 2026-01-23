@@ -8,8 +8,8 @@ export function useChampions({
   const liteChampionStats = computed<Record<string, number>>(() => {
     const counts: Record<string, number> = {}
 
-    const playerMatches = matches.map((p) =>
-      p.participants.find((p) => p.puuid === puuid)
+    const playerMatches = matches.map(p =>
+      p.participants.find(p => p.puuid === puuid)
     )
 
     for (const p of playerMatches) {
@@ -22,12 +22,13 @@ export function useChampions({
   })
   const topChampion = computed(() => {
     const champ = Object.keys(liteChampionStats.value)[0]
-    if (champ)
+    if (champ) {
       return {
         key: champ,
         name: ix().champNameByKey(champ),
-        splash: getSplash(champ, "centered"),
+        splash: getSplash(champ, 'centered'),
       }
+    }
   })
 
   return {

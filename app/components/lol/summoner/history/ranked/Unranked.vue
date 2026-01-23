@@ -8,7 +8,7 @@ const props = defineProps<{
 <template>
   <div
     :class="
-      cn('h-42 max-h-42 w-120 max-w-120 border-b3/40 bg-b2/30 py-0 drop-shadow-xs',
+      cn('border-b3/40 bg-b2/30 h-42 max-h-42 w-120 max-w-120 py-0 drop-shadow-xs',
          props.class,
       )
     "
@@ -38,8 +38,8 @@ const props = defineProps<{
 
       <div
         class="
-          flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3
-           text-end font-medium dst **:text-bc/30
+          dst **:text-bc/30 flex flex-col items-end justify-center gap-2.75
+           overflow-hidden py-3 text-end font-medium
         ">
         <p class="capitalize">
           Unranked
@@ -52,8 +52,8 @@ const props = defineProps<{
         <p
           v-tippy="`0 total`"
           class="
-            flex items-center justify-end gap-1 border-b border-b-transparent
-            text-end text-xs text-nowrap hover:border-b-bc
+            hover:border-b-bc flex items-center justify-end gap-1 border-b
+            border-b-transparent text-end text-xs text-nowrap
           ">
           <span>0W</span>
 

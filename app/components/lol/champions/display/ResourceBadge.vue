@@ -29,7 +29,7 @@ const resource = computed(() => {
     :size
     :class="
       cn(
-        'w-fit gap-2! px-5 text-sm! font-medium! text-bc/90',
+        'text-bc/90 w-fit gap-2! px-5 text-sm! font-medium!',
         {
           //
           'hover:**:text-bc hover:text-bc order-first ':

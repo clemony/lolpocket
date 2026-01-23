@@ -13,7 +13,7 @@ const toast = useToast()
 function toasty() {
   toast.add({
     title: `Created Toast!`,
-    color: 'error',
+    color: 'domination',
     description: `There’s something strangely evocative about the smell of burnt toast. You can probably remember the last time you suddenly detected it and dashed for the grill.
 
 But did you know there’s a part of your brain specifically dedicated to smelling burnt toast?

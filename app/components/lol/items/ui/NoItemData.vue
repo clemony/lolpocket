@@ -12,7 +12,7 @@ const { class: className, simple } = defineProps<{
     <Element
       base="btn"
       size="7"
-      class="text-xs font-medium text-bc/70 fx-0"
+      class="text-bc/70 fx-0 text-xs font-medium"
       variant="base">
       No data
     </Element>

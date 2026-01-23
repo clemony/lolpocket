@@ -18,10 +18,10 @@ watchEffect(() => {
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger
-      class="btn relative flex btn-square items-center btn-neutral">
+      class="btn btn-square btn-neutral relative flex items-center">
       <icon
         name="search-bold"
-        class="-mt-px size-4.5 shrink-0 text-nc" />
+        class="text-nc -mt-px size-4.5 shrink-0" />
 
       <StatusIndicator
         v-if="hasData"
@@ -38,8 +38,8 @@ watchEffect(() => {
       <ItemSearch
         placeholder="Type or click a suggestion"
         class="
-          sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4
-          border-neutral/30 bg-accent! shadow-none **:text-nc! [&_svg]:size-4
+          border-neutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13
+          w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4
         "
         set-focus
         @update:query="(e) => e" />
@@ -58,7 +58,7 @@ watchEffect(() => {
             <div>
               <LazyItemCommandTypes />
 
-              <Separator class="mt-3 mb-1.5 bg-accent" />
+              <Separator class="bg-accent mt-3 mb-1.5" />
 
               <LazyItemCommandStats />
             </div>

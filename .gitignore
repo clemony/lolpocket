@@ -16,8 +16,6 @@ logs
 *.log
 
 
-patch
-server/patch
 
 #notes
 .notes
@@ -37,6 +35,7 @@ notes
 # data folders
 original
 d1
+.no
 
 #wrangler
 .wrangler

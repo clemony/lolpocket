@@ -39,9 +39,9 @@ const value = computed(() => {
         <!-- TRACK (CLIPS FILL ONLY) -->
         <div
           class="
-        relative z-0 h-3 w-full overflow-hidden
-        rounded-xl border border-neutral/20
-        bg-linear-to-r from-b3/70 to-b3/80
+        border-neutral/20 from-b3/70 to-b3/80 relative z-0
+        h-3 w-full overflow-hidden
+        rounded-xl border bg-linear-to-r
         shadow-xs inset-shadow-xs
       ">
           <!-- GLOW LAYER (NO CLIP) -->
@@ -58,7 +58,7 @@ const value = computed(() => {
             class="relative h-full origin-left">
             <div
               :data-level="mastery.level >= 10 ? 10 : mastery.level"
-              class="mastery-gradient-progress animate-prism absolute inset-0 rounded-[2px] after:absolute after:right-0 after:z-3 after:size-full after:rounded-r-[2px] after:border after:border-b4 after:inset-shadow-sm">
+              class="mastery-gradient-progress animate-prism after:border-b4 absolute inset-0 rounded-[2px] after:absolute after:right-0 after:z-3 after:size-full after:rounded-r-[2px] after:border after:inset-shadow-sm">
               <!-- SHEEN -->
               <div class="mastery-bar-sheen absolute inset-0" />
 

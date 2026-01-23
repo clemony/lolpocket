@@ -1,11 +1,11 @@
-import type { EChartsOption } from "echarts"
-import { heatmap, scatterChart } from "~/assets/URI"
+import type { EChartsOption } from 'echarts'
+import { heatmap, scatterChart } from '~/assets/URI'
 import {
   allyHeatMapOptions,
   buildAllyBubbleOptions,
   buildAllyBubbleSeries,
   buildAllyHeatmapSeries,
-} from "."
+} from '.'
 
 export interface AllyDataPoint {
   allyPuuid: string
@@ -14,24 +14,24 @@ export interface AllyDataPoint {
   avgTimestamp?: number
   championId: number
   championName: string
+  delta: number
   // color: string
   games: number
-  delta: number
   winrate: number
 }
 
-type AllyChartData = {
-  option: Ref<EChartsOption>
+interface AllyChartData {
   chartMode: Ref<ChartMode>
+  option: Ref<EChartsOption>
 }
 
-const magicTypes = ["scatter", "heatmap"] as const
+const magicTypes = ['scatter', 'heatmap'] as const
 
 export function buildAllyChart(
   points: AllyDataPoint[],
   colorMap: Map<string, string>
 ): AllyChartData {
-  const chartMode = ref<ChartMode>("bubble")
+  const chartMode = ref<ChartMode>('bubble')
 
   const maxChampionDelta = computed(() => {
     return {
@@ -51,17 +51,17 @@ export function buildAllyChart(
 
   const option = computed(
     (): EChartsOption => ({
-      title: {
-        text: "Ally Delta by Winrate",
-        z: 20,
-        left: 10,
-        top: 10,
-      },
       grid: {
         bottom: 40,
         left: 40,
         right: 250,
         top: 80,
+      },
+      title: {
+        left: 10,
+        text: 'Ally Delta by Winrate',
+        top: 10,
+        z: 20,
       },
       dataZoom: [
         {
@@ -69,7 +69,7 @@ export function buildAllyChart(
           minSpan: 10,
           moveOnMouseWheel: false,
           start: 0,
-          type: "inside",
+          type: 'inside',
           xAxisIndex: [0],
           zoomOnMouseWheel: true,
         },
@@ -78,7 +78,7 @@ export function buildAllyChart(
           minSpan: 10,
           moveOnMouseWheel: false,
           start: 0,
-          type: "inside",
+          type: 'inside',
           yAxisIndex: [0],
           zoomOnMouseWheel: true,
         },
@@ -86,15 +86,15 @@ export function buildAllyChart(
       legend: {
         width: 165,
         right: 20,
+        show: true,
         textStyle: {
           fontWeight: 550,
           opacity: 0.8,
         },
-        show: true,
         top: 54,
       },
+      series: bubbleSeries,
       toolbox: {
-        top: 0,
         feature: {
           dataView: {
             // optionToContent: '',
@@ -105,10 +105,10 @@ export function buildAllyChart(
           },
         },
         right: 74,
+        top: 0,
       },
-      series: bubbleSeries,
       tooltip: {
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
         formatter: ({ data }: any) => `
       <ul class="**:text-sm! flex flex-col gap-0 rounded-lg overflow-hidden w-40 max-w-40 bg-neutral/80 backdrop-blur-md text-nc/90 py-2 *:w-full *:px-2 **:not-first:font-medium [&_.stat]:flex [&_.stat]:items-center overflow-hidden [&_.stat]:justify-between [&_.stat]:*:first:font-semibold [&_.stat]:flex-nowrap [&_.stat]:py-0  ">
         <li class="font-bold max-w-full w-full flex"><span class="truncate">${data.allyName}</span><span class="w-fit"> #${data.allyTag}</span></li>
@@ -127,8 +127,8 @@ export function buildAllyChart(
   )
 
   return {
-    option,
     chartMode,
+    option,
   }
 }
 

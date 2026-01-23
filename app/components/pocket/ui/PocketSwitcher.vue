@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-
 const open = shallowRef<boolean>(false)
 
 const route = useRoute()

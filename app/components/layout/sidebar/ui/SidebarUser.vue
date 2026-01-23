@@ -53,8 +53,8 @@ const target = shallowRef<HTMLButtonElement>(null)
       theme="base clean">
       <PopoverItem
         class="
-          group/t h-10 w-full aria-expanded:btn-active
-          aria-expanded:border-b3/60 aria-expanded:bg-b2/80 aria-expanded:fx-1
+          group/t aria-expanded:btn-active aria-expanded:border-b3/60 aria-expanded:bg-b2/80
+          aria-expanded:fx-1 h-10 w-full
         "
         @click="closeAndNavigate('/settings')">
         <icon

@@ -1,0 +1,16 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 220009,
+  name: 'Gold Stat Anvil Voucher',
+  description: 'Redeem during a Shopping Phase to gain a Stat Anvil!',
+  gold: {
+    base: 750,
+    purchasable: false,
+    sell: 0,
+    total: 750
+  },
+  maps: [
+    30
+  ]
+}
+export default item

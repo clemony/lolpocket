@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { skinIndex } from '~~/shared/.index';
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
@@ -34,7 +32,7 @@ function reset() {
   <ResponsiveDialog v-bind="$attrs">
     <ResponsiveDialogTrigger
       :class="
-        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center overflow-hidden rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
+        cn('group/icon hover:ring-b4 hover:ring-offset-neutral pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center overflow-hidden rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300',
            className,
         )
       ">
@@ -42,36 +40,36 @@ function reset() {
     </ResponsiveDialogTrigger>
     <LazyResponsiveDialogContent
       class="
-        h-164 w-250 min-w-250 overflow-hidden rounded-xl border-n3/70 p-0
-        shadow-xs shadow-b4/30 drop-shadow-md
+        border-n3/70 shadow-b4/30 h-164 w-250 min-w-250 overflow-hidden rounded-xl
+        p-0 shadow-xs drop-shadow-md
       ">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
       <article
         class="
-          grid size-full auto-rows-auto grid-cols-[1fr_6fr] overflow-hidden
-          rounded-lg inset-shadow-shade-sm inset-shadow-black/40
+          inset-shadow-shade-sm grid size-full auto-rows-auto grid-cols-[1fr_6fr]
+          overflow-hidden rounded-lg inset-shadow-black/40
         ">
         <header
           class="
-            col-span-full row-start-1 flex h-14.5 items-center gap-2 border-b
-            border-b-b3/60 bg-b4/40 pt-1 pr-3 pl-3
+            border-b-b3/60 bg-b4/40 col-span-full row-start-1 flex h-14.5 items-center
+            gap-2 border-b px-3 pt-1
           ">
           <button
             v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
-            class="btn grid btn-square place-items-center btn-ghost">
+            class="btn btn-square btn-ghost grid place-items-center">
             <icon
               name="refresh"
-              class="absolute size-3.75 dst" />
+              class="dst absolute size-3.75" />
           </button>
 
           <button
             v-tippy="{ content: 'Randomize', placement: 'top' }"
-            class="btn grid btn-square place-items-center btn-ghost">
+            class="btn btn-square btn-ghost grid place-items-center">
             <icon
               name="shuffle"
-              class="size-3.5 stroke-[1.5] dst" />
+              class="dst size-3.5 stroke-[1.5]" />
           </button>
 
           <Input
@@ -85,7 +83,7 @@ function reset() {
             shape="square">
             <icon
               name="x"
-              class="absolute size-4 shrink-0 dst" />
+              class="dst absolute size-4 shrink-0" />
           </Button>
         </header>
 
@@ -95,8 +93,8 @@ function reset() {
           as="div"
           selection-behavior="replace"
           class="
-            relative h-150 max-h-150 w-60 overflow-y-auto border-r border-r-b3
-            bg-b2/30 p-1 transition-all duration-200
+            border-r-b3 bg-b2/30 relative h-150 max-h-150 w-60 overflow-y-auto
+            border-r p-1 transition-all duration-200
           ">
           <ListboxContent>
             <ListboxItem

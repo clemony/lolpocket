@@ -1,0 +1,18 @@
+export const queueIndex: Record<number, string> = {
+  400: 'Draft',
+  420: 'Ranked Solo',
+  430: 'Blind Pick',
+  440: 'Ranked Flex',
+  450: 'ARAM',
+  480: 'Swiftplay',
+  490: 'Quickplay',
+  700: 'SR Clash',
+  720: 'ARAM Clash',
+  820: 'Co-op vs. AI (Beginner)',
+  870: 'Co-op vs. AI (Intro)',
+  880: 'Co-op vs. AI (Beginner)',
+  890: 'Co-op vs. AI (Intermediate)',
+  900: 'ARURF',
+  1700: 'Arena',
+  1710: 'Arena',
+}

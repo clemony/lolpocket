@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v';
-import { heroDisplays } from '~/domain/riot/media/video';
+import { motion } from 'motion-v'
+import { heroDisplays } from '~/domain/riot/media/video'
 
 const { progress: p, visible } = defineProps<{
   progress: any
@@ -70,8 +70,8 @@ onMounted(() => {
     <div
       ref="welcome"
       class="
-        absolute inset-0 top-0 left-0 z-1 grid grid-cols-2 place-items-center
-        bg-linear-to-r from-b1 from-25% to-transparent to-90%
+        from-b1 absolute inset-0 top-0 left-0 z-1 grid grid-cols-2
+        place-items-center bg-linear-to-r from-25% to-transparent to-90%
       ">
       <div class="justify-self-start pl-44">
         <div class="relative grid size-full w-140 max-w-140 items-center">
@@ -80,7 +80,7 @@ onMounted(() => {
               variant="outline"
               size="12"
               :class="
-                cn('pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-b3 text-sm shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
+                cn('border-b3 hover:bg-neutral hover:text-nc pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden text-sm shadow-xs transition-all duration-200',
                 )
               "
               @click="navigateTo('/login')">

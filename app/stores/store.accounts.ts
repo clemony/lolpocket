@@ -1,8 +1,7 @@
-import { defineStore } from "pinia"
-import type { Account } from "~~/layers/types/schema"
+import { defineStore } from 'pinia'
 
 export const useAccountsStore = defineStore(
-  "accountsStore",
+  'accountsStore',
   () => {
     // maps instead of objects
     const accounts = ref(new Map<string, Account>())
@@ -10,7 +9,8 @@ export const useAccountsStore = defineStore(
 
     const setAccount = (acc: Account) => {
       accounts.value.set(acc.uuid, acc)
-      if (acc.puuid) byPuuid.value.set(acc.puuid, acc.uuid)
+      if (acc.puuid)
+        byPuuid.value.set(acc.puuid, acc.uuid)
     }
 
     const getByUuid = (uuid: string) => accounts.value.get(uuid) ?? null
@@ -22,7 +22,8 @@ export const useAccountsStore = defineStore(
 
     const ensureByUuid = async (uuid: string) => {
       const existing = getByUuid(uuid)
-      if (existing) return existing
+      if (existing)
+        return existing
 
       /* const acc = await $fetch<Account>("/api/supabase/account_fetch", {
            params: { uuid },
@@ -33,7 +34,8 @@ export const useAccountsStore = defineStore(
 
     const ensureByPuuid = async (puuid: string) => {
       const existing = getByPuuid(puuid)
-      if (existing) return existing
+      if (existing)
+        return existing
 
       /* const acc = await $fetch<Account>("/api/account/by_puuid", {
            params: { puuid },
@@ -45,40 +47,40 @@ export const useAccountsStore = defineStore(
     const clearAll = () => {
       accounts.value.clear()
       byPuuid.value.clear()
-      localStorage.removeItem("accountsStore")
+      localStorage.removeItem('accountsStore')
     }
 
     return {
-      accounts,
       byPuuid,
-      setAccount,
-      getByUuid,
-      getByPuuid,
-      ensureByUuid,
       ensureByPuuid,
+      ensureByUuid,
+      getByPuuid,
+      getByUuid,
+      accounts,
       clearAll,
+      setAccount,
     }
   },
   {
     persist: {
-      key: "accountsStore",
-      storage: piniaPluginPersistedstate.localStorage(),
+      key: 'accountsStore',
       // optional custom serializer for Maps
       serializer: {
-        serialize: (state) => {
-          return JSON.stringify({
-            accounts: Array.from(state.accounts.entries()),
-            byPuuid: Array.from(state.byPuuid.entries()),
-          })
-        },
         deserialize: (str) => {
           const parsed = JSON.parse(str)
           return {
-            accounts: new Map(parsed.accounts),
             byPuuid: new Map(parsed.byPuuid),
+            accounts: new Map(parsed.accounts),
           }
         },
+        serialize: (state) => {
+          return JSON.stringify({
+            byPuuid: Array.from(state.byPuuid.entries()),
+            accounts: Array.from(state.accounts.entries()),
+          })
+        },
       },
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

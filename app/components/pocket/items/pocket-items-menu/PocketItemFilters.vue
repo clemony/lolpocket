@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { newItemSet } from '@types'
-
 const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>
-  <!--   <div class="w-full justify-self-center mx-auto px-4  items-center sticky py-0 -top-50  z-1 bg-b1/86 backdrop-blur  relative rounded-lg  gap-4 flex flex-col before:border-b1"></div> -->
+  <!--   <div class="w-full justify-self-center mx-auto px-4  items-center sticky py-0 -top-50  z-1 bg-b1/86 backdrop-blur-sm  relative rounded-lg  gap-4 flex flex-col before:border-b1"></div> -->
   <div
     class="
       before:border-b1 before:bg-b1/96 relative sticky -top-55 z-1 flex w-full flex-col items-center

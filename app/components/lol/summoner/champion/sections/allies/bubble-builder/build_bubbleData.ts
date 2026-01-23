@@ -1,9 +1,9 @@
-import type { AllyDataPoint, CollisionValue } from ".."
+import type { AllyDataPoint, CollisionValue } from '..'
 import {
   buildCollisionGroups,
   buildCollisionIndexMap,
   radiusFromGames,
-} from ".."
+} from '..'
 
 export type PointKey = string
 
@@ -15,8 +15,10 @@ function edgeFalloff(value: number, min: number, max: number) {
 const BIAS_PX = 16
 
 function edgeBias(value: number, min: number, max: number) {
-  if (value <= min) return min + BIAS_PX
-  if (value >= max) return max - BIAS_PX
+  if (value <= min)
+    return min + BIAS_PX
+  if (value >= max)
+    return max - BIAS_PX
   return value
 }
 
@@ -25,7 +27,8 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
 
   for (const ally of allies) {
     for (const champ of Object.values(ally.champions)) {
-      if (!champ.games || !champ.winrate) continue
+      if (!champ.games || !champ.winrate)
+        continue
 
       out.push({
         allyPuuid: ally.puuid,
@@ -34,8 +37,8 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
         avgTimestamp: champ.avgTimestamp,
         championId: champ.championId,
         championName: champ.championName,
-        games: champ.games,
         delta: champ.delta,
+        games: champ.games,
         winrate: champ.winrate,
       })
     }
@@ -50,18 +53,19 @@ function groupAngle(key: string) {
 
 export function separateValue(
   base: number,
-  axis: "x" | "y",
+  axis: 'x' | 'y',
   points: AllyDataPoint[],
   group: CollisionValue
 ) {
-  const min = axis === "x" ? 0 : -100
+  const min = axis === 'x' ? 0 : -100
   const max = 100
 
   const spacing = 3
 
-  const { count, index, maxRadius, id } = group
+  const { id, count, index, maxRadius } = group
 
-  if (count <= 1) return base
+  if (count <= 1)
+    return base
 
   const rotation = groupAngle(id)
   const angle = rotation + (index / count) * Math.PI * 2
@@ -72,10 +76,10 @@ export function separateValue(
 
   const pushFactor = 1 + (maxRadius - selfRadius) / maxRadius
   const clampedPush = Math.max(0.8, Math.min(1.6, pushFactor))
-  const offset =
-    axis === "x" ?
-      Math.cos(angle) * scaledSpacing * clampedPush
-    : Math.sin(angle) * scaledSpacing * clampedPush
+  const offset
+    = axis === 'x'
+      ? Math.cos(angle) * scaledSpacing * clampedPush
+      : Math.sin(angle) * scaledSpacing * clampedPush
 
   const falloff = edgeFalloff(base, min, max)
   return edgeBias(base + offset * falloff, min, max)

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v';
+import { motion } from 'motion-v'
 
 const { class: className } = defineProps<{
 
@@ -16,7 +16,7 @@ const route = useRoute()
     role="tab"
     tabindex="0"
     :class="
-      cn('group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-42 grow origin-bottom cursor-pointer items-start self-end border-b-0! tabs-lg transition-none *:pointer-events-none')">
+      cn('group/tab tabs-lift tabs tabs-lg pointer-events-auto relative flex w-max min-w-42 grow origin-bottom cursor-pointer items-start self-end border-b-0! transition-none *:pointer-events-none')">
     <FakeTab />
 
     <div
@@ -30,7 +30,7 @@ const route = useRoute()
 
     <motion.div
       :class="
-        cn('d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium text-bc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
+        cn('d text-bc/90 z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
            {
              'opacity-60': routeName !== route.name,
              'opacity-100': routeName === route.name,

@@ -33,7 +33,7 @@ const isPlaying = ref(true)
           v-show="!isPlaying"
           :class="
             cn(
-              'align-end mt-px overflow-hidden text-sm font-semibold text-bc/60',
+              'align-end text-bc/60 mt-px overflow-hidden text-sm font-semibold',
             )
           ">
           Paused
@@ -55,7 +55,7 @@ const isPlaying = ref(true)
           :align-offset="-10"
           class="mr-3 w-60">
           <div
-            class="flex w-full items-center gap-3 px-1.5 py-1 text-sm text-nc/80">
+            class="text-nc/80 flex w-full items-center gap-3 px-1.5 py-1 text-sm">
             <icon
               :name="
                 as().settings.motion
@@ -69,9 +69,9 @@ const isPlaying = ref(true)
             <Switch
               v-model="as().settings.motion as boolean"
               class="
-                scale-85 justify-self-end border-b4/50 from-lime-400/90 to-ah/90
-                to-60% inset-shadow-xs data-[state=checked]:bg-linear-to-br
-                data-[state=unchecked]:bg-b3/40
+                border-b4/50 to-ah/90 data-[state=unchecked]:bg-b3/40 scale-85 justify-self-end
+                from-lime-400/90 to-60% inset-shadow-xs
+                data-[state=checked]:bg-linear-to-br
               " />
           </div>
         </ContrastDropdownContent>

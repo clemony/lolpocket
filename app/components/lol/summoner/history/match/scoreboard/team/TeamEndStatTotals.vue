@@ -8,7 +8,7 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     :class="
-      cn('mb-1.25 w-full overflow-hidden rounded-xl border border-bc/10 border-r-b3! bg-linear-to-r to-transparent px-3 shadow-warm-soft inset-shadow-xxs',
+      cn('border-bc/10 border-r-b3! shadow-warm-soft inset-shadow-xxs mb-1.25 w-full overflow-hidden rounded-xl border bg-linear-to-r to-transparent px-3',
          {
            'from-inspiration/60 ': team.teamId === 100,
            'from-domination/60 ': team.teamId === 200,
@@ -18,7 +18,7 @@ const { class: className, team } = defineProps<{
       <!-- WIN / LOSS -->
       <div
         :class="cn('flex items-center gap-4')">
-        <h3 class="text-xl leading-none font-bold text-white/86 dst">
+        <h3 class="dst text-xl leading-none font-bold text-white/86">
           {{ team.win ? "WIN" : "LOSS" }}
         </h3>
 
@@ -42,7 +42,7 @@ const { class: className, team } = defineProps<{
         :class=" cn('inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold') ">
         <Icon
           name="lol:gold"
-          :class=" cn('inline size-4 dst', {
+          :class=" cn('dst inline size-4', {
             'text-inspiration! brightness-80 saturate-125': team.teamId === 100,
             'text-domination! brightness-90': team.teamId === 200,
           }) " />
@@ -51,7 +51,7 @@ const { class: className, team } = defineProps<{
 
       <!-- KDA -->
       <KDA
-        class="align-baseline text-md leading-none opacity-90"
+        class="text-md align-baseline leading-none opacity-90"
         :stats="team" />
     </div>
   </div>

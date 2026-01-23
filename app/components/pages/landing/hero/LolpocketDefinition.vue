@@ -37,7 +37,7 @@ const h1Visibility = {
 
 <template>
   <div
-    class="relative grid size-full translate-y-20 gap-8 [&_svg]:text-bc">
+    class="[&_svg]:text-bc relative grid size-full translate-y-20 gap-8">
     <div class="relative grid h-20 w-100 items-end">
       <motion.div
         class="
@@ -78,7 +78,7 @@ const h1Visibility = {
       :initial="{ opacity: 0, transform: 'translateY(10%)' }"
       :animate="{ opacity: 1, transform: 'translateY(0)' }"
       :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }"
-      class="grid w-140 shrink-0 space-y-3 justify-self-start text-bc">
+      class="text-bc grid w-140 shrink-0 space-y-3 justify-self-start">
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="text-5xl!">
           lolpocket

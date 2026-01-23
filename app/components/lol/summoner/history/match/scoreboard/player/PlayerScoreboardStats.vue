@@ -21,7 +21,7 @@ const heal = computed(() => {
       <span class="relative grid size-3 justify-center">
         <icon
           name="el:fire"
-          class="absolute size-3.25 text-domination dst" />
+          class="text-domination dst absolute size-3.25" />
       </span>
       {{ player.stats.totalDamage.toLocaleString() }}
     </tippy>
@@ -34,7 +34,7 @@ const heal = computed(() => {
       <span class="relative grid size-3 justify-center">
         <icon
           name="oi:plus"
-          class="size-2.75 text-inspiration dst" />
+          class="text-inspiration dst size-2.75" />
       </span>
       {{ Math.round(heal).toLocaleString() }}
 
@@ -64,7 +64,7 @@ const heal = computed(() => {
       <span class="relative grid size-3 justify-center">
         <icon
           name="ph:shield-fill"
-          class="size-3.25 text-[#C2A76E]! dst" />
+          class="dst size-3.25 text-[#C2A76E]!" />
       </span>
       {{ Math.round(player.stats.totalDamageTaken).toLocaleString() }}
     </div>

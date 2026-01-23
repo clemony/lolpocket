@@ -47,7 +47,7 @@ const amount = computed(() => {
     <component
       :is="`i-stats-${stat.icon}`"
       filled
-      class="size-4 shrink-0 text-bc opacity-70 dst"
+      class="text-bc dst size-4 shrink-0 opacity-70"
       :class="{
         'size-4.5':
           stat.icon === 'mana-regen'
@@ -56,11 +56,11 @@ const amount = computed(() => {
       }" />
   </div>
 
-  <div class="col-start-2 font-medium dst select-none">
+  <div class="dst col-start-2 font-medium select-none">
     {{ stat.name }}
   </div>
 
-  <div class="col-start-3 text-sm dst select-none">
+  <div class="dst col-start-3 text-sm select-none">
     <span class="flex items-center justify-end gap-2">
       <!--
   <icon name="bi:caret-caret-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
@@ -76,7 +76,7 @@ const amount = computed(() => {
 
   <div
     v-if="is().isComparing"
-    class="col-start-4 font-mono text-sm dst select-none">
+    class="dst col-start-4 font-mono text-sm select-none">
     <span class="flex items-center justify-end gap-2">
       {{ statValue2 > 0 ? statValue2 : "" }}
       <!--  <icon name="rivet-icons:arrow-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare===2}" /> -->

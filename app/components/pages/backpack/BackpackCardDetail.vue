@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
+import type { Pocket } from '~~/shared/types/schema/schema.pocket'
 
 const { pocket } = defineProps<{
   pocket: Pocket
@@ -45,7 +45,7 @@ const bg = computed(() => {
       </div>
       <div
         class="
-          ml-auto text-sm text-bc/60 *:flex *:items-center *:justify-end *:gap-2
+          text-bc/60 ml-auto text-sm *:flex *:items-center *:justify-end *:gap-2
         ">
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
@@ -63,7 +63,7 @@ const bg = computed(() => {
     <Separator />
 
     <!-- content -->
-    <div class="border-y border-y-b4 bg-black">
+    <div class="border-y-b4 border-y bg-black">
       <div
         class="
           relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-position-[170%_55%]
@@ -101,7 +101,7 @@ const bg = computed(() => {
   </div>
   <div
     v-else
-    class="grid size-full justify-center text-center text-bc/60">
+    class="text-bc/60 grid size-full justify-center text-center">
     <span class="translate-y-1/4">No pocket selected</span>
   </div>
 </template>

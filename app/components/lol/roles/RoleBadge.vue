@@ -24,7 +24,7 @@ const role = computed(() => {
     :size
     :class="
       cn(
-        'w-fit pr-6 pl-4 text-sm! font-medium! text-bc/90 capitalize',
+        'text-bc/90 w-fit pr-6 pl-4 text-sm! font-medium! capitalize',
         {
           'hover:**:text-bc hover:text-bc order-first text-white':
             active || (cs().filters.role && cs().filters.role === role.name),
@@ -39,7 +39,7 @@ const role = computed(() => {
     <Element size="icon-sm">
       <component
         :is="`i-lol-${role?.name.toLowerCase()}`"
-        :class="cn('absolute size-4.25! shrink-0 dst', role?.class)" />
+        :class="cn('dst absolute size-4.25! shrink-0', role?.class)" />
     </Element>
     {{ role.name }}
     <icon

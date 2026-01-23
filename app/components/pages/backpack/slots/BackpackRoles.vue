@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
+import type { Pocket } from '~~/shared/types/schema/schema.pocket'
 
 const props = defineProps<{
   pocket: Pocket
@@ -19,7 +19,7 @@ const roles = computed(() => {
 <template>
   <p
     class="
-      divider mt-0 mb-3 divider-start grow flex-nowrap divider-neutral
+      divider divider-start divider-neutral mt-0 mb-3 grow flex-nowrap
       text-nowrap after:opacity-40
     "
     :class="{ 'opacity-20': !roles.length }">

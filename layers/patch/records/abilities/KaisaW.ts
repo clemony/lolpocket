@@ -1,0 +1,49 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:51 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Void Seeker',
+  width: '200',
+  affects: 'Enemies',
+  blurb: 'Active:  Kai\'Sa fires a void bolt in the target direction that grants  sight around its trajectory as it travels and deals magic damage to the first enemy hit,  revealing them for a few seconds.',
+  castTime: '0.4',
+  cooldown: '22 / 20 / 18 / 16 / 14',
+  cost: '55 / 60 / 65 / 70 / 75',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kai\'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Magic Damage',
+          modifiers: [
+            {
+              values: '30 / 55 / 80 / 105 / 130'
+            },
+            {
+              unit: '% AD',
+              values: '130'
+            },
+            {
+              unit: '% AP',
+              values: '45'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Evolution:</span> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.</p>'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/w',
+  notes: 'This ability will cast from wherever the caster is at the end of the cast time.\nPENDING FOR TEST: Size of area revealed around target',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '1750',
+  spellEffects: 'Single',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '3000'
+}
+export default ability

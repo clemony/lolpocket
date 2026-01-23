@@ -28,11 +28,11 @@ const selectedEmailData = computed(() =>
       <SelectTrigger
         aria-label="Select account"
         :class="
-          cn('flex items-center gap-2 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0 [&>span]:line-clamp-1 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:gap-1 [&>span]:truncate',
-            {
-              'flex h-9 w-9 shrink-0 items-center justify-center p-0 [&>span]:w-auto [&>svg]:hidden':
-                isCollapsed,
-            },
+          cn('flex items-center gap-2 [&_svg]:size-4 [&_svg]:shrink-0 [&>span]:line-clamp-1 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:gap-1 [&>span]:truncate',
+             {
+               'flex h-9 w-9 shrink-0 items-center justify-center p-0 [&>span]:w-auto [&>svg]:hidden':
+                 isCollapsed,
+             },
           )
         ">
         <SelectValue placeholder="Select an account">
@@ -53,8 +53,8 @@ const selectedEmailData = computed(() =>
           :value="account.email">
           <div
             class="
-              flex items-center gap-3 [&_svg]:size-4 [&_svg]:shrink-0
-              [&_svg]:text-bc
+              [&_svg]:text-bc flex items-center gap-3 [&_svg]:size-4
+              [&_svg]:shrink-0
             ">
             <icon
               class="size-4"

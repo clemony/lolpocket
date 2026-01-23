@@ -1,55 +1,19 @@
-import { floatingShiftSubtle, sizeVariants, variantVariants } from "@ui"
-
 export default defineAppConfig({
-  ui: {
-    variants: {
-      variants: { ...variantVariants },
-    },
-    //
-    colors: {
-      b1: "var(--color-default)",
-      b2: "var(--color-primary-100)",
-      b3: "var(--color-primary-200",
-      bc: "var(--color-bc",
-      primary: "var(--color-primary-50)",
-      neutral: "var(--color-primary-950)",
-      nc: "var(--color-primary-300",
-      inspiration: "var(--color-inspiration-300)",
-      resolve: "var(--color-resolve-400)",
-      sorcery: "var(--color-sorcery-500)",
-      domination: "var(--color-domination-500)",
-      precision: "var(--color-precision-300)",
-    },
-    popover: {
-      slots: {
-        content: `
-         bg-default/90 shadow-lg  backdrop-blur-md rounded-lg shadow-lg
-          ring ring-neutral/40 focus:outline-none pointer-events-auto
-          ${floatingShiftSubtle}
-        `,
-      },
-    },
-    tooltip: {
-      slots: {
-        content: `
-          flex items-center ring-neutral h-max max-h-80 max-w-104 border-tint-neutral/30 inset-shadow-white/10 bg-neutral/86 text-nc gap-1 backdrop-blur-sm p-0 shadow-sm rounded-lg ring cursor-default select-none pointer-events-auto
-          ${floatingShiftSubtle}
-          `,
-        arrow: "fill-neutral/90 scale-y-140 scale-x-180",
-      },
-    },
+
+   ui: {
+
   },
 
-  icon: {
-    aliases: {
+icons: {
+    alias: {
       // math
       "calc-solid": "streamline:calculator-1-solid",
       absolute: "hugeicons:absolute",
       add: "lucide:plus",
-      "sq-plus": "lucide:square-plus",
-      "sq-minus": "lucide:square-minus",
       calc: "teenyicons:calculator-outline",
       minus: "lucide:minus",
+      "sq-minus": "lucide:square-minus",
+      "sq-plus": "lucide:square-plus",
       weighted: "tabler:math-integral-x",
 
       // check
@@ -63,21 +27,21 @@ export default defineAppConfig({
       "arrow-ne": "lucide:arrow-up-right",
       "arrow-right": "lucide:arrow-right",
       "arrow-up": "lucide:arrow-up",
-      "left-from-line": "lucide:arrow-left-from-line",
-      "right-from-line": "lucide:arrow-right-from-line",
-      "right-to-line": "lucide:arrow-right-to-line",
-      "left-to-line": "lucide:arrow-left-to-line",
-      down: "tabler:chevron-down",
       "caret-down": "tabler:caret-down-filled",
+      "caret-up": "tabler:caret-up-filled",
+      down: "tabler:chevron-down",
       left: "tabler:chevron-left",
+      "left-from-line": "lucide:arrow-left-from-line",
       "left-pipe": "tabler:chevron-left-pipe",
+      "left-to-line": "lucide:arrow-left-to-line",
       right: "tabler:chevron-right",
+      "right-from-line": "lucide:arrow-right-from-line",
       "right-pipe": "tabler:chevron-right-pipe",
+      "right-to-line": "lucide:arrow-right-to-line",
       select: "lucide:chevrons-up-down",
       up: "tabler:chevron-up",
-      "up-up": "tabler:chevrons-up",
-      "caret-up": "tabler:caret-up-filled",
       "up-to-line": "lucide:arrow-up-to-line",
+      "up-up": "tabler:chevrons-up",
 
       // actions
       copy: "lucide:copy",
@@ -103,13 +67,13 @@ export default defineAppConfig({
       "gear-solid": "ri:settings-4-fill",
       gallery: "lucide:gallery-vertical-end",
       gear: "solar:settings-linear",
+      handle: "radix-icons:button",
       lines: "teenyicons:align-text-justify-outline",
       menu: "lucide:menu",
       more: "ri:more-line",
       "more-vertical": "ri:more-2-line",
-      settings: "lucide:settings-2",
-      handle: "radix-icons:button",
       radio: "formkit:radio",
+      settings: "lucide:settings-2",
 
       // editing
       archive: "lucide:archive",
@@ -197,20 +161,18 @@ export default defineAppConfig({
       // shape
       "circle-big-dot": "clarity:dot-circle-line",
       "circle-dot": "lucide:circle-dot",
-      round: "mynaui:circle-solid",
       dot: "lucide:dot",
       heart: "gg:heart",
       "heart-fill": "teenyicons:heart-solid",
       "heart-sm": "teenyicons:heart-small-solid",
       "heart-sm-outline": "teenyicons:heart-small-outline",
       infinity: "iconoir:infinite",
+      round: "mynaui:circle-solid",
       shield: "teenyicons:shield-tick-outline",
       square: "lucide:square",
       star: "ph:star",
       "star-fill": "ph:star-fill",
 
-      // pic
-      party: "lucide:party-popper",
       key: "lucide:key-round",
       "pin-solid": "iconoir:pin-solid",
       backpack: "radix-icons:backpack", // 'radix-icons:backpack',
@@ -234,6 +196,8 @@ export default defineAppConfig({
       "paint-bucket": "lucide:paint-bucket",
       paintbrush: "lucide:paintbrush-vertical",
       "panel-dash": "lucide:panel-top-dashed",
+      // pic
+      party: "lucide:party-popper",
       plug: "tabler:plug",
       "shopping-bag": "lucide:shopping-bag",
       smile: "lucide:smile",
@@ -246,10 +210,12 @@ export default defineAppConfig({
 
       // 'boot': 'hugeicons:armored-boot',
       // tabler:brand-juejin upside down league xp icon?
-    },
-    class: "text-[var(--color-bc)] shrink-0 pointer-events-none",
-    mode: "svg",
-    size: "15px",
   },
-  theme: {},
+
+
+        class: "text-[var(--color-bc)] size-5 shrink-0 pointer-events-none",
+    mode: "svg",
+
+}
 })
+

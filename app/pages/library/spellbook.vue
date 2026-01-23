@@ -4,7 +4,7 @@ definePageMeta({
   title: 'Spellbook',
   icon: 'teenyicons:book-outline',
   listClass: '**:stroke-[2.6]',
-  path: '/library/spellbook',
+  path: '/library/spells',
   searchKeys: [
     'summoner',
     'spell',
@@ -21,7 +21,7 @@ definePageMeta({
 })
 
 const selectedSpellId = ref(1)
-const selectedSpell = computed(() => spellbook[selectedSpellId.value])
+const selectedSpell = computed(() => spells[selectedSpellId.value])
 </script>
 
 <template>
@@ -34,26 +34,26 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
       <div class="flex w-114 flex-col gap-14">
         <div
           class="
-            grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-box border-b3/80
-            px-9 py-8 shadow-smooth
+            rounded-box border-b3/80 shadow-smooth grid h-fit grid-cols-3 grid-rows-3
+            gap-4 px-9 py-8
           ">
           <div
-            v-for="spell in spellbook"
+            v-for="spell in spells"
             :key="spell.name"
             v-tippy="{ content: spell.name, theme: 'neutral' }"
             class="size-fit">
             <label
               class="
-                btn size-27 cursor-pointer! px-2.5 py-2 btn-ghost
-                hover:border-b3 hover:bg-b2 has-checked:border-b3
-                has-checked:bg-b3/70 has-checked:shadow-sm
+                btn btn-ghost hover:border-b3 hover:bg-b2 has-checked:border-b3 has-checked:bg-b3/70
+                size-27 cursor-pointer! px-2.5
+                py-2 has-checked:shadow-sm
               ">
               <img
                 :alt="selectedSpell.name.toString()"
                 :src="`/img/spells/${spell.id}.webp`"
                 class="
-                  peer-checked:borderneutral/90 size-22 rounded-lg border
-                  border-b3 shadow-sm inset-shadow-sm shadow-black/20
+                  peer-checked:borderneutral/90 border-b3 size-22 rounded-lg
+                  border shadow-sm inset-shadow-sm shadow-black/20
                 " />
 
               <input
@@ -111,8 +111,8 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
           class="flex w-160 flex-col gap-14 transition-all duration-300">
           <div
             class="
-              flex max-h-min w-full flex-col gap-6 rounded-xl border
-              border-b3/80 px-9 pt-7 pb-8 shadow-smooth transition-all
+              border-b3/80 shadow-smooth flex max-h-min w-full flex-col gap-6
+              rounded-xl border px-9 pt-7 pb-8 transition-all
               duration-300
             ">
             <div class="i-c flex w-full gap-6">
@@ -126,7 +126,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
                   Summoner
                 </p>
 
-                <h1 class="text-5xl tracking-tight dst">
+                <h1 class="dst text-5xl tracking-tight">
                   {{ selectedSpell.name }}
                 </h1>
               </div>
@@ -173,7 +173,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
             </ul> -->
           </div>
 
-          <div class="w-full rounded-xl bg-black/90 shadow-pretty">
+          <div class="shadow-pretty w-full rounded-xl bg-black/90">
             <video-background
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`"
               class="aspect-video h-auto w-90 rounded-xl"></video-background>

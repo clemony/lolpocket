@@ -12,8 +12,8 @@ const img = useImage()
     class="relative size-full">
     <div
       class="
-        absolute inset-0 size-full rounded-none rounded-r-xl border-y border-r
-        border-y-b4 border-r-b4 mask-l-from-60% bg-size-[220%] bg-[40%_24%]
+        border-y-b4 border-r-b4 absolute inset-0 size-full rounded-none rounded-r-xl
+        border-y border-r mask-l-from-60% bg-size-[220%] bg-position-[40%_24%]
         bg-no-repeat shadow-sm drop-shadow-sm
       "
       :style="{

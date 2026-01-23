@@ -53,10 +53,10 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
         :key="champion">
         <div
           v-if="i < 3"
-          class="avatar size-fit bg-b1">
+          class="avatar bg-b1 size-fit">
           <ChampionIcon
             :id="ix().champIdByKey(champion)"
-            class="size-11 rounded-full border-bc shadow-sm shadow-black" />
+            class="border-bc size-11 rounded-full shadow-sm shadow-black" />
         </div>
       </template>
     </template>
@@ -66,7 +66,7 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     <div
       v-if="champions?.length > 3"
       class="avatar avatar-placeholder">
-      <div class="w-11 bg-neutral text-sm text-neutral-content">
+      <div class="bg-neutral text-neutral-content w-11 text-sm">
         <span>+99</span>
       </div>
     </div>

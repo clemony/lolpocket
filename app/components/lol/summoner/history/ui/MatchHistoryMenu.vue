@@ -14,13 +14,13 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
 <template>
   <div
     ref="asideRef"
-    :class="cn('z-2 flex h-20 w-full max-w-110 flex-nowrap items-center gap-3 overflow-hidden bg-b1/94 px-1 backdrop-blur-md transition-all duration-300')">
+    :class="cn('bg-b1/94 z-2 flex h-20 w-full max-w-110 flex-nowrap items-center gap-3 overflow-hidden px-1 backdrop-blur-md transition-all duration-300')">
     <Toggle
       v-model:model-value="open"
       on="inset"
       hover="inset"
       size="sq-12"
-      class="bg-transparent! fx-0 on:bg-transparent! hover:on:fx-1"
+      class="fx-0 on:bg-transparent! hover:on:fx-1 bg-transparent!"
       variant="ghost"
       @update:model-value="emit('open', open)">
       <Icon
@@ -35,7 +35,7 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
         on="inset"
         hover="inset"
         size="sq-12"
-        class="bg-transparent! fx-0 aria-expanded:btn-active on:bg-transparent! hover:on:fx-1">
+        class="fx-0 aria-expanded:btn-active on:bg-transparent! hover:on:fx-1 bg-transparent!">
         <!--      <Icon
             name="ic:baseline-filter-list"
             class="" /> -->

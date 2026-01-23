@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 223073,
+  name: 'Experimental Hexplate',
+  description: '40 Attack Damage\n30% Attack Speed\n450 Health\n\nHexcharged\nGain 30 Ultimate Ability Haste.\n\nOverdrive\nAfter casting your Ultimate, gain 50% Attack Speed and 20% Move Speed for 8 seconds. ',
+  gold: {
+    base: 2500,
+    sell: 1750,
+    total: 2500
+  },
+  maps: [
+    30
+  ]
+}
+export default item

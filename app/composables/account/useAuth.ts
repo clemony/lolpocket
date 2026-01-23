@@ -1,4 +1,4 @@
-import type { Provider, Session } from "@supabase/supabase-js"
+import type { Provider, Session } from '@supabase/supabase-js'
 
 export async function useSignIn(provider: Provider) {
   const config = useRuntimeConfig()
@@ -10,7 +10,7 @@ export async function useSignIn(provider: Provider) {
     },
   })
   if (error) {
-    console.error("Error logging in with Discord:", error)
+    console.error('Error logging in with Discord:', error)
   }
 }
 
@@ -18,11 +18,11 @@ export async function useSignInWithEmail(email: string, password: string) {
   const config = useRuntimeConfig()
   const client = useSupabaseClient()
   const { data, error } = await client.auth.signInWithPassword({
-    email: "valid.email@supabase.io",
-    password: "example-password",
+    email: 'valid.email@supabase.io',
+    password: 'example-password',
   })
   if (error) {
-    console.error("Error logging in with email:", error)
+    console.error('Error logging in with email:', error)
   }
 }
 
@@ -37,7 +37,7 @@ async function useSignUpNewUser(email: string, password: string) {
     password,
   })
   if (error) {
-    console.error("Error logging in with Discord:", error)
+    console.error('Error logging in with Discord:', error)
   }
 }
 
@@ -45,7 +45,7 @@ export async function useResetPassword(email: string) {
   const client = useSupabaseClient()
 
   await client.auth.resetPasswordForEmail(email, {
-    redirectTo: "http://example.com/account/update-password",
+    redirectTo: 'http://example.com/account/update-password',
   })
 }
 
@@ -58,6 +58,6 @@ export async function useSignOut() {
   const toast = useToast()
   const supabaseClient = useSupabaseClient()
   await supabaseClient.auth.signOut()
-  console.log("Successfully logged out")
-  toast.add({ title: "Successfully logged out" })
+  console.log('Successfully logged out')
+  toast.add({ title: 'Successfully logged out' })
 }

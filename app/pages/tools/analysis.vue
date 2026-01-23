@@ -15,7 +15,7 @@ const p = computed(() => ms().analysisPatchSelect)
   <div class="oveflow-hidden size-full">
     <menu
       class="
-        overflow-hidden border-r border-r-b3/40 shadow-warm-2 shadow-black/7
+        border-r-b3/40 shadow-warm-2 overflow-hidden border-r shadow-black/7
       ">
       <DataFilterPanel />
     </menu>

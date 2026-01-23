@@ -1,27 +1,26 @@
 <script lang="ts" setup>
-import ChampionGridIcon from '#components'
 import type {
-    ColDef,
-    ColGroupDef,
-    GridApi,
-    GridOptions,
-    GridPreDestroyedEvent,
-    GridReadyEvent,
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridPreDestroyedEvent,
+  GridReadyEvent,
 } from 'ag-grid-community'
+import ChampionGridIcon from '#components'
 import {
-    CellStyleModule,
-    ClientSideRowModelModule,
-    ColumnApiModule,
-    ColumnAutoSizeModule,
-    ColumnHoverModule,
-    GridStateModule,
-    ModuleRegistry,
-    RenderApiModule,
-    RowSelectionModule,
-    ValidationModule,
+  CellStyleModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { championsLite } from '~~/layers/domain/records/champions-lite'
 
 definePageMeta({
   name: 'Champion Stats',

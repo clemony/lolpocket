@@ -47,8 +47,8 @@ const { filtered, filters, setFilter } = useItemFilter()
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
         class="
-          borderneutral/30 sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg
-          border-4 bg-accent! shadow-none **:text-nc! [&_svg]:size-4
+          borderneutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13
+          w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4
         "
         set-focus
         @update:query="(e) => e" />
@@ -63,7 +63,7 @@ const { filtered, filters, setFilter } = useItemFilter()
             ">
             <LazyItemCommandTypes />
 
-            <Separator class="mt-3 mb-1.5 bg-accent" />
+            <Separator class="bg-accent mt-3 mb-1.5" />
 
             <LazyItemCommandStats />
           </div>
@@ -74,7 +74,7 @@ const { filtered, filters, setFilter } = useItemFilter()
           class="flex w-full justify-center">
           <div
             v-if="filters.rank !== '' || filters.stats.length || filters.query"
-            class="z-0 flex! flex-wrap justify-center gap-1.5 px-4 py-4">
+            class="z-0 flex! flex-wrap justify-center gap-1.5 p-4">
             <LazyCalculatorFilteredItems
               class="z-0 size-15!"
               @update:item="handleItem($event)" />

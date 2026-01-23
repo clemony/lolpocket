@@ -1,9 +1,7 @@
-import { defineStore } from "pinia"
-import type { Account, Pocket, Settings } from "~~/layers/types/schema"
-import { getEmptyAccount } from "~~/layers/types/schema"
+import { defineStore } from 'pinia'
 
 export const useAccountStore = defineStore(
-  "as",
+  'as',
   () => {
     const user = useSupabaseUser()
     const sb = ref<Account>()
@@ -14,13 +12,14 @@ export const useAccountStore = defineStore(
     const ss = useSummonerStore()
 
     watch(
-      () => ss.cache[account.value?.puuid ?? ""],
+      () => ss.cache[account.value?.puuid ?? ''],
       (update) => {
-        if (!update || !account.value) return
+        if (!update || !account.value)
+          return
 
         if (
-          !account.value.lastDataUpdate ||
-          update.lastDataUpdate > account.value.lastDataUpdate
+          !account.value.lastDataUpdate
+          || update.lastDataUpdate > account.value.lastDataUpdate
         ) {
           Object.assign(account.value, update)
         }
@@ -42,7 +41,7 @@ export const useAccountStore = defineStore(
   },
   {
     persist: {
-      key: "accountStore",
+      key: 'accountStore',
       storage: piniaPluginPersistedstate.localStorage(),
     },
   }

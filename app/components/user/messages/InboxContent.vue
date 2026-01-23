@@ -21,7 +21,7 @@ const inboxes: Record<string, InboxType> = {
 
 <template>
   <div class="size-full">
-    <div :class="cn('w-full gap-0 border-b border-b-b3/80 px-3', className)">
+    <div :class="cn('border-b-b3/80 w-full gap-0 border-b px-3', className)">
       <div class="flex w-full items-center justify-between">
         <DropdownMenu
           v-model:open="ui().sidebarStates.inboxDropdown"
@@ -29,17 +29,17 @@ const inboxes: Record<string, InboxType> = {
           <DropdownMenuTrigger
             :disabled="!dropdown"
             class="
-              flex h-[35.5px] w-fit items-center justify-between px-2
-              disabled:opacity-100 disabled:**:text-bc
-              disabled:hover:border-transparent disabled:hover:bg-transparent
-              disabled:hover:shadow-none disabled:hover:drop-shadow-none
-              data-[state=open]:border-b3 data-[state=open]:bg-b3/50!
-              data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs
+              disabled:**:text-bc data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:inset-shadow-xxs flex h-[35.5px]
+              w-fit items-center
+              justify-between px-2
+              disabled:opacity-100 disabled:hover:border-transparent
+              disabled:hover:bg-transparent disabled:hover:shadow-none
+              disabled:hover:drop-shadow-none data-[state=open]:shadow-xs
             "
             as-child>
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
-              <h2 class="font-bold dst">
+              <h2 class="dst font-bold">
                 {{ title }}
               </h2>
             </SidebarMenuButton>

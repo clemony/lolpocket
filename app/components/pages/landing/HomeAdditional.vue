@@ -35,11 +35,11 @@ const data = [
 <template>
   <div
     ref="wrapper"
-    class="relative z-2 h-[80vh] w-full items-center justify-center bg-b1">
+    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center">
     <div
       class="
-        bgneutral z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2 items-center
-        gap-10 overflow-hidden rounded-3xl px-10 text-nc
+        bgneutral text-nc z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2
+        items-center gap-10 overflow-hidden rounded-3xl px-10
       ">
       <div
         class="
@@ -77,15 +77,15 @@ const data = [
             <icon
               v-if="item.icon"
               :name="item.icon"
-              class="size-7 justify-self-center stroke-[0.5] text-nc" />
+              class="text-nc size-7 justify-self-center stroke-[0.5]" />
 
-            <h3 class="grow text-3xl! font-semibold! text-nc">
+            <h3 class="text-nc grow text-3xl! font-semibold!">
               {{ item.title }}
             </h3>
           </div>
 
           <p
-            class="text-lg/loose font-light text-pretty text-nc"
+            class="text-nc text-lg/loose font-light text-pretty"
             v-html="item.text" />
         </motion.div>
       </div>

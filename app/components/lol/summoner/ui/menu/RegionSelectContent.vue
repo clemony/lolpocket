@@ -21,7 +21,7 @@ const { class: className } = defineProps<{
         :key="region"
         :value="region"
         class="flex items-center gap-3 py-1.5 text-nowrap">
-        <SelectItemText class="truncate text-md">
+        <SelectItemText class="text-md truncate">
           <span class="italic">
             {{ regionIndex[region] }}
           </span>

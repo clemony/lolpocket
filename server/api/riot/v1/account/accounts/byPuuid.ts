@@ -1,6 +1,6 @@
+import type { AccountReturn } from '~~/server/types'
 // server/riot/account/getByPuuid.ts
-import { riotFetch } from "riot"
-import type { AccountReturn } from "~~/server/types"
+import { riotFetch } from 'riot'
 
 // fetch account using puuid
 export async function fetchAccountByPuuid(

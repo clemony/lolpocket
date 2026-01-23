@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import type { CarouselApi } from '@ui'
+import '@ui/css/plugins/embla.css'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { skinIndex } from '~~/shared/.index'
-import '~/ui/css/plugins/embla.css'
-import { setupTweenParallax } from '~/ui/config/embla-tween-parallax'
 
 const { champion } = defineProps<{
   champion: Champion

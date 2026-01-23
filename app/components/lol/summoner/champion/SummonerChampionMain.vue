@@ -118,7 +118,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 }
 
 .header-class {
-  @apply first:mb-6! items-center  pt-11 not-first:mt-20 first:mt-10 w-full col-start-2 h-31 select-none not-first:mb-10 bg-blend-screen flex w-[104%]  -top-55   z-5 translate-y-0 opacity-100 sticky! transition-[transform,_opacity] duration-200  bg-b1 backdrop-blur sticky;
+  @apply first:mb-6! items-center  pt-11 not-first:mt-20 first:mt-10 w-full col-start-2 h-31 select-none not-first:mb-10 bg-blend-screen flex w-[104%]  -top-55   z-5 translate-y-0 opacity-100 sticky! transition-[transform,_opacity] duration-200  bg-b1 backdrop-blur-sm sticky;
 }
 
 .separator-class {

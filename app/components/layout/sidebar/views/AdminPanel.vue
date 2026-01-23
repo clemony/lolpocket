@@ -15,25 +15,25 @@ const emit = defineEmits(['open:settings', 'open:admin', 'reset-count'])
         v-if="useSupabaseUser().value.role === 'admin'"
         v-tippy="'Admin'"
         class="
-          btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
-          btn-ghost hover:opacity-100
+          btn btn-ghost -mr-2 grid size-10 cursor-pointer place-items-center
+          opacity-60 hover:opacity-100
         "
         @click="emit('open:admin')">
         <icon
           name="ri:key-2-line"
-          class="pointer-events-none size-6 shrink-0 dst" />
+          class="dst pointer-events-none size-6 shrink-0" />
       </button>
 
       <button
         v-tippy="'Account Settings'"
         class="
-          btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
-          btn-ghost hover:opacity-100
+          btn btn-ghost -mr-2 grid size-10 cursor-pointer place-items-center
+          opacity-60 hover:opacity-100
         "
         @click="emit('open:settings')">
         <icon
           name="gear-solid"
-          class="pointer-events-none size-4.5 shrink-0 dst" />
+          class="dst pointer-events-none size-4.5 shrink-0" />
       </button>
     </div>
     <menu>

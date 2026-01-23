@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { ItemSet } from '@types'
-
 const props = defineProps<{
   set?: ItemSet
   modelValue?: ItemSet

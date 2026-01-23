@@ -23,7 +23,7 @@ watch(
 
 <template>
   <div
-    class="flex size-full max-h-full flex-col items-center gap-6 pt-6 **:text-md">
+    class="**:text-md flex size-full max-h-full flex-col items-center gap-6 pt-6">
     <div class="mt-2 flex w-full items-center justify-between gap-3 px-7">
       <h2
         v-if="ability?.name"
@@ -52,7 +52,7 @@ watch(
         class="flex items-center gap-2">
         <i-stats-ah
           name="ph:hourglass"
-          class="mt-px inline size-3.5 shrink-0 text-black dst" />
+          class="dst mt-px inline size-3.5 shrink-0 text-black" />
 
         <ValueFormatter :array="ability.cooldown" />
       </div>
@@ -64,7 +64,7 @@ watch(
           class="flex items-center gap-2">
           <component
             :is="`i-stats-charge-${ability.maxCharges}`"
-            class="-mt-px inline size-7 text-bc/80 dst *:stroke-[1.3]" />
+            class="text-bc/80 dst -mt-px inline size-7 *:stroke-[1.3]" />
 
           <span>
             {{ ability.maxCharges }}
@@ -77,7 +77,7 @@ watch(
           class="flex items-center gap-2">
           <icon
             name="mynaui:battery-charging"
-            class="-mt-px size-7 text-bc/80 dst *:stroke-[1.3]" />
+            class="text-bc/80 dst -mt-px size-7 *:stroke-[1.3]" />
 
           <ValueFormatter :array="ability.rechargeRate" />
         </div>
@@ -91,7 +91,7 @@ watch(
         <ChampionDataIcon
           v-if="ability.resource"
           :name="ability.resource"
-          class="size-4 text-bc/80 dst" />
+          class="text-bc/80 dst size-4" />
 
         <ValueFormatter :array="ability.cost" />
       </div>
@@ -102,7 +102,7 @@ watch(
         class="flex items-center gap-2">
         <span class="relative size-3 justify-start">
           <i-stats-radius
-            class="absolute -top-0.5 -left-1.5 size-4.5 text-bc/80 dst" />
+            class="text-bc/80 dst absolute -top-0.5 -left-1.5 size-4.5" />
         </span>
         {{ ability.effectRadius }}
       </div>
@@ -111,7 +111,7 @@ watch(
         v-if="ability.targetRange"
         v-tippy="'Range'"
         class="flex items-center gap-2">
-        <i-stats-range class="size-4 text-bc/80 dst" />
+        <i-stats-range class="text-bc/80 dst size-4" />
         {{ ability.targetRange }}
       </div>
 

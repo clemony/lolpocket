@@ -1,0 +1,38 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Wallop',
+  width: '200',
+  affects: 'Enemies',
+  castTime: '0.6',
+  cooldown: '7',
+  cost: '0',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '45 / 75 / 105 / 135 / 165'
+            },
+            {
+              unit: '% AD',
+              values: '100'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w',
+  notes: 'Gnar is locked out of moving and casting movement abilities for 0.25 seconds after the cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection',
+  projectile: 'FALSE',
+  spellEffects: 'Area of effect',
+  spellshieldable: 'True',
+  targeting: 'Direction'
+}
+export default ability

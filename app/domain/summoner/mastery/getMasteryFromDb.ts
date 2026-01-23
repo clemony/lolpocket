@@ -1,4 +1,4 @@
-import { lpdb } from "~/stores"
+import { lpdb } from '~/stores'
 
 const now = () => Date.now()
 
@@ -18,14 +18,14 @@ export async function getMastery(puuid: string, championId: number) {
 
 export async function getAllMastery(puuid: string) {
   const arr = await lpdb.playerChampionMastery
-    .where("puuid")
+    .where('puuid')
     .equals(String(puuid))
     .toArray()
 
   if (arr.length) {
     const ts = now()
     await lpdb.playerChampionMastery.bulkPut(
-      arr.map((m) => ({
+      arr.map(m => ({
         ...m,
         lastAccessedAt: ts,
       }))

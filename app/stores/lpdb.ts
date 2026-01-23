@@ -1,5 +1,5 @@
-import type { Table } from "dexie"
-import Dexie from "dexie"
+import type { Table } from 'dexie'
+import Dexie from 'dexie'
 
 export interface MatchCursor {
   puuid: string
@@ -14,7 +14,7 @@ export class LPDB extends Dexie {
   summonerMastery!: Table<SummonerMastery, string>
 
   constructor() {
-    super("Lpdb")
+    super('Lpdb')
 
     this.version(1).stores({
       matchData: `

@@ -41,7 +41,7 @@ const {
         <BaseListboxItem
           v-for="position in championPositions.filter((p) => p.name !== 'All')"
           :key="position.name"
-          class="bg-transparent fx-0"
+          class="fx-0 bg-transparent"
           :value="position.name"
           as-child>
           <PositionBadge

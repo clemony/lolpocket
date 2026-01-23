@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Pocket } from '@types'
-
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket

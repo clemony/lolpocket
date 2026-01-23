@@ -1,7 +1,8 @@
 export function useMatchChampions(puuid: string, matches: MatchData[]) {
-  console.log("matches: ", matches)
-  console.log("puuid: ", puuid)
-  if (!puuid) return
+  console.log('matches: ', matches)
+  console.log('puuid: ', puuid)
+  if (!puuid)
+    return
 
   const championStats = new Map<
     number,
@@ -32,9 +33,10 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
     championStats.clear()
 
     matches.forEach((match, index) => {
-      const player = match.participants.find((p) => p.puuid === puuid)
+      const player = match.participants.find(p => p.puuid === puuid)
       const champ = player?.championId
-      if (!champ) return
+      if (!champ)
+        return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
@@ -69,18 +71,18 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
       (sum, s) => sum + s.games,
       0
     )
-    const globalWinrate =
-      [...championStats.values()].reduce((sum, s) => sum + s.wins, 0) /
-        totalGames || 0
+    const globalWinrate
+      = [...championStats.values()].reduce((sum, s) => sum + s.wins, 0)
+        / totalGames || 0
 
     bayesianChampions.value = [...championStats.entries()]
       .map(([championId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate =
-          ((1 - confidence) * globalWinrate +
-            confidence * (stats.wins / stats.games)) *
-          100
+        const bayesianWinrate
+          = ((1 - confidence) * globalWinrate
+            + confidence * (stats.wins / stats.games))
+          * 100
         const kda = (stats.kills + stats.assists) / Math.max(1, stats.deaths)
         const avgKP = stats.killParticipation / stats.games
         const avgKills = stats.kills / stats.games

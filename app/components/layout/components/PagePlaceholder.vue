@@ -53,14 +53,14 @@ onMounted(() => {
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
     :class="cn('', props.class)">
-    <article class="container mx-auto max-w-250 min-w-190 p-6 dst">
-      <header class="mb-6 text-start tracking-tight dst">
+    <article class="dst container mx-auto max-w-250 min-w-190 p-6">
+      <header class="dst mb-6 text-start tracking-tight">
         <span class="text-md">
           404 | <span class=""> This page looks afk</span>
         </span>
         <br />
 
-        <span class="font-serif text-xxs/14 font-bold">In place of content, I offer you a cat fact.</span>
+        <span class="text-xxs/14 font-serif font-bold">In place of content, I offer you a cat fact.</span>
       </header>
 
       <section
@@ -69,7 +69,7 @@ onMounted(() => {
           **:text-pretty
         ">
         <div class="flex flex-col gap-3">
-          <p class="mt-1 dst">
+          <p class="dst mt-1">
             <!-- #{{catFact.num}}  -->
             {{ catFact.num }}<span class="text-[5rem] font-bold tracking-tight"> {{ catFact.title }}</span>
           </p>
@@ -87,7 +87,7 @@ onMounted(() => {
         <icon
           name="la:flag-usa"
           class="size-5" />
-        <p class="text-xs text-bc/70">
+        <p class="text-bc/70 text-xs">
           Brought to you by
         </p>
         <p class="font-semibold italic antialiased opacity-70">

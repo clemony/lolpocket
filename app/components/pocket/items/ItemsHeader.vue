@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~~/@lib/app/utils/device'
 </script>
 
 <template>
@@ -14,7 +13,7 @@ import { getDeviceKey } from '~~/@lib/app/utils/device'
       <icon
         name="gg:check-o"
         class="
-          drop-shadow-text mx-1 mb-1.5 inline-block size-4 shrink-0 text-bc
+          drop-shadow-text text-bc mx-1 mb-1.5 inline-block size-4 shrink-0
           **:stroke-[1.8]
         " />
 
@@ -27,8 +26,8 @@ import { getDeviceKey } from '~~/@lib/app/utils/device'
       <icon
         name="ph:mouse-left-click-fill"
         class="
-          drop-shadow-text mr-1 mb-0.5 inline-block size-4.5 shrink-0
-          scale-x-105 scale-y-95 text-bc
+          drop-shadow-text text-bc mr-1 mb-0.5 inline-block size-4.5
+          shrink-0 scale-x-105 scale-y-95
         " />
 
       an item from the main list to quick add. Drag entire sets to reorder set

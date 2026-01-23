@@ -23,7 +23,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <Icon
         name="stat:abilityHaste"
-        class="mt-px inline size-3 shrink-0 text-black dst" />{{ ability.cooldown }}
+        class="dst mt-px inline size-3 shrink-0 text-black" />{{ ability.cooldown }}
     </div>
 
     <template v-if="ability.resource === 'Charge'">
@@ -33,7 +33,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <Icon
           :name="`stat:charge-${ability.maxCharges}`"
-          class="-mt-px inline size-7 dst *:stroke-[1.3]" />
+          class="dst -mt-px inline size-7 *:stroke-[1.3]" />
 
         <span>{{ ability.maxCharges }}
         </span>
@@ -45,7 +45,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <icon
           name="mynaui:battery-charging"
-          class="-mt-px size-7 dst *:stroke-[1.3]" />{{ ability.rechargeRate }}
+          class="dst -mt-px size-7 *:stroke-[1.3]" />{{ ability.rechargeRate }}
       </div>
     </template>
 
@@ -56,7 +56,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-1.5">
       <Icon
         :name="`stat:${ability.resource.replace(/\s/g, '-').toLowerCase()}`"
-        :class="cn('size-3.25 dst')" />{{ ability.cost }}
+        :class="cn('dst size-3.25')" />{{ ability.cost }}
     </div>
 
     <div
@@ -66,7 +66,7 @@ const { ability, class: className } = defineProps<{
       <span class="relative size-3 justify-start">
         <Icon
           name="stat:gameplayRadius"
-          class="absolute -top-0.5 size-3.25 dst" />
+          class="dst absolute -top-0.5 size-3.25" />
       </span>
       {{ ability.effectRadius }}
     </div>
@@ -77,7 +77,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <Icon
         name="stat:rangeCenter"
-        class="size-4 dst" />
+        class="dst size-4" />
       {{ ability.targetRange }}
     </div>
   </div>

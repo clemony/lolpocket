@@ -1,5 +1,3 @@
-import type { InboxMessage } from '@types'
-
 export const testMessage: InboxMessage = {
   id: crypto.randomUUID(),
   title: 'A test message for you.',

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '@types'
-
 const props = defineProps<{
   pocket: Pocket
   set?: RuneSet

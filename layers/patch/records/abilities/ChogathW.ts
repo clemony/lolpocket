@@ -1,0 +1,55 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Feral Scream',
+  affects: 'Enemies',
+  angle: '60°',
+  blurb: 'Active:  Cho\'Gath roars in a cone, dealing magic damage and  silencing enemies hit.',
+  castTime: '0.5',
+  cooldown: '11 / 10.5 / 10 / 9.5 / 9',
+  cost: '70 / 75 / 80 / 85 / 90',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Cho\'Gath roars in a cone in the target direction, dealing magic damage to enemies hit.</p>',
+      leveling: [
+        {
+          attribute: 'Magic damage',
+          modifiers: [
+            {
+              values: '80 / 130 / 180 / 230 / 280'
+            },
+            {
+              unit: '% AP',
+              values: '70'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Enemy champions and Rift Scuttlers hit are also silenced for a duration.',
+      leveling: [
+        {
+          attribute: 'Silence Duration',
+          modifiers: [
+            {
+              unit: ' seconds',
+              values: '1.6 / 1.7 / 1.8 / 1.9 / 2'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/w',
+  notes: 'This ability will cast from wherever the caster is at the end of the cast time.\nFeral Scream uses  edge range for enemy targets only; Its range is center-to-edge.',
+  projectile: 'FALSE',
+  resource: 'Mana',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '650'
+}
+export default ability

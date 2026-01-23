@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { generateName } from '~~/shared/.index'
-
 const emit = defineEmits(['update:name'])
 
 // Form fields
@@ -42,7 +40,7 @@ defineExpose({
           New Pocket
         </DialogTitle>
 
-        <DialogDescription class="mt-1 mb-5 leading-6 dst">
+        <DialogDescription class="dst mt-1 mb-5 leading-6">
           Choose a pocket name, tag your pocket (for easier searching), and
           create your pocket icon.
           <span class="font-semibold">All items can be left blank</span>
@@ -62,8 +60,8 @@ defineExpose({
 
         <div
           class="
-            flex size-full flex-col justify-start gap-6 px-0.5 pt-4
-            [&_label]:text-md
+            [&_label]:text-md flex size-full flex-col justify-start gap-6 px-0.5
+            pt-4
           ">
           <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
@@ -73,7 +71,7 @@ defineExpose({
                   type="text"
                   name="pocket-name"
                   placeholder="Pocket Name"
-                  class="size-full text-md" />
+                  class="text-md size-full" />
               </div>
 
               <span class="flex gap-2">
@@ -90,7 +88,7 @@ defineExpose({
               class="mt-6 flex-col p-2">
               <div
                 class="
-                  flex w-full flex-row flex-wrap justify-start gap-2 *:text-md
+                  *:text-md flex w-full flex-row flex-wrap justify-start gap-2
                 ">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
@@ -123,7 +121,7 @@ defineExpose({
               <TagsInputInput
                 placeholder="optional"
                 class="
-                  min-h-10 w-full rounded-md border-0 text-md focus:border-0
+                  text-md min-h-10 w-full rounded-md border-0 focus:border-0
                 "
                 name="pocket-tags " />
             </TagsInput>
@@ -138,7 +136,7 @@ defineExpose({
       <DialogFooter class="mt-1 justify-start">
         <button
           type="submit"
-          class="btn px-6 text-md! font-medium! btn-md btn-neutral"
+          class="btn text-md! btn-md btn-neutral px-6 font-medium!"
           @click="submitForm">
           Create
         </button>

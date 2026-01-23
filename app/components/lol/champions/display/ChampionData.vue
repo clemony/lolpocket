@@ -10,12 +10,12 @@ const tabs = ref('abilities')
 <template>
   <div
     class="
-      field-box relative flex max-h-full w-full flex-col rounded-xxl!
-      border-b3/80 bg-b2/40 drop-shadow-sm
+      field-box rounded-xxl! border-b3/80 bg-b2/40 relative flex max-h-full
+      w-full flex-col drop-shadow-sm
     ">
     <div
       class="
-        relative h-50 w-full overflow-hidden rounded-t-xxl bg-b2/30
+        rounded-t-xxl bg-b2/30 relative h-50 w-full overflow-hidden
         inset-shadow-sm drop-shadow-sm
       "
       :class="{ 'shadow-warm': !champion }">
@@ -28,8 +28,8 @@ const tabs = ref('abilities')
 
       <header
         class="
-          absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right
-          *:text-white/86 *:dst *:text-shadow-sm
+          *:dst absolute right-5 bottom-4 z-2 w-full drop-shadow-sm
+          *:text-right *:text-white/86 *:text-shadow-sm
         ">
         <Grow />
 
@@ -48,7 +48,7 @@ const tabs = ref('abilities')
       if="champion"
       class="size-full max-h-full overflow-hidden">
       <TabsList
-        class="relative h-10 w-full grid-cols-3 rounded-none bg-b3!">
+        class="bg-b3! relative h-10 w-full grid-cols-3 rounded-none">
         <TabsTrigger value="abilities">
           Abilities
         </TabsTrigger>

@@ -52,8 +52,8 @@ const contentVariants = {
 
         <span
           class="
-            tldr-20 z-1 flex items-center gap-3 text-bc/40 capitalize
-            group-hover:text-bc/80 group-hover:**:text-bc/60
+            tldr-20 text-bc/40 group-hover:text-bc/80 group-hover:**:text-bc/60 z-1 flex items-center
+            gap-3 capitalize
           ">
           <slot name="icon" />
           {{ name }}
@@ -82,8 +82,8 @@ const contentVariants = {
       class="overflow-hidden">
       <CollapsibleContent
         class="
-          CollapsibleContent mx-7 mb-1 before:absolute before:top-2.5
-          before:left-0 before:w-px before:bg-black-30/64
+          CollapsibleContent before:bg-black-30/64 mx-7 mb-1 before:absolute
+          before:top-2.5 before:left-0 before:w-px
         "
         :class="{
           'before:h-[calc(100%-36px)]': results.length > 3,

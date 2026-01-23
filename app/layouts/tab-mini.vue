@@ -20,7 +20,7 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : champio
     <AppSidebar />
 
     <!-- bg -->
-    <div class="absolute top-0 left-0 z-5 h-31 w-full overflow-hidden bg-b2/40" />
+    <div class="bg-b2/40 absolute top-0 left-0 z-5 h-31 w-full overflow-hidden" />
 
     <!-- Scrollable content -->
     <div
@@ -37,12 +37,12 @@ const bg = computed (() => ss ? ss.splash.value : pocket ? pocket.icon : champio
           pointer-events-none sticky z-13 flex h-15 min-h-15 w-full items-end
           gap-4 overflow-hidden pl-66
         ">
-        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
+        <Separator class="bg-b3/60 absolute bottom-0 left-0 z-0 w-full" />
         <NavFileTabs />
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative z-1 -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1">
+      <div class="bg-b1 relative z-1 -mt-px flex min-h-screen w-screen max-w-screen flex-col">
         <!-- page -->
         <slot />
       </div>

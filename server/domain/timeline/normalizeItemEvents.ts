@@ -3,7 +3,7 @@ import {
   refineWindow,
   stripTs,
   timestampOfFirst,
-} from "~~/server/domain"
+} from '~~/server/domain'
 
 export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
   // group raw events by timestamp (stable order)
@@ -16,7 +16,7 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
 
   const STACKABLE = new Set([2003, 2055])
   const SHOP_WINDOW = 30_000
-  let pendingSupport: { id: number; ts: number } | null = null
+  const pendingSupport: { id: number, ts: number } | null = null
 
   const rawOut: ItemEvent[] = []
 
@@ -31,34 +31,36 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
     const undos: any[] = []
 
     for (const ev of group) {
-      if (ev.type === "ITEM_PURCHASED") purchases.push(ev.itemId ?? ev.afterId)
-      else if (ev.type === "ITEM_OBTAINED")
+      if (ev.type === 'ITEM_PURCHASED')
+        purchases.push(ev.itemId ?? ev.afterId)
+      else if (ev.type === 'ITEM_OBTAINED')
         obtained.push(ev.itemId ?? ev.afterId)
-      else if (ev.type === "ITEM_UNDO") undos.push(ev)
+      else if (ev.type === 'ITEM_UNDO')
+        undos.push(ev)
       //
       // PHASE 2 — SUPPORT ITEM SYNTHETIC UPGRADES
       //
-      if (ev.type === "ITEM_DESTROYED" && ev.itemId === 3865) {
+      if (ev.type === 'ITEM_DESTROYED' && ev.itemId === 3865) {
         rawOut.push({
-          timestamp: events[0].timestamp,
-          action: "ADD",
           id: 3865,
+          action: 'ADD',
           count: 1,
+          timestamp: events[0].timestamp,
         })
         rawOut.push({
-          timestamp: ts,
-          action: "S1_UPGRADE",
+          action: 'S1_UPGRADE',
           from: 3865,
+          timestamp: ts,
           to: 3866,
         })
         continue
       }
 
-      if (ev.type === "ITEM_DESTROYED" && ev.itemId === 3866) {
+      if (ev.type === 'ITEM_DESTROYED' && ev.itemId === 3866) {
         rawOut.push({
-          timestamp: ts,
-          action: "S2_UPGRADE",
+          action: 'S2_UPGRADE',
           from: 3866,
+          timestamp: ts,
           to: 0,
         })
         continue
@@ -67,23 +69,25 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
 
     // obtained → always add
     for (const id of obtained)
-      rawOut.push({ timestamp: ts, action: "ADD", id, count: 1 })
+      rawOut.push({ id, action: 'ADD', count: 1, timestamp: ts })
 
     // purchases → always add
     for (const id of purchases)
-      rawOut.push({ timestamp: ts, action: "ADD", id, count: 1 })
+      rawOut.push({ id, action: 'ADD', count: 1, timestamp: ts })
 
     // undo removes last entry matching beforeId
     for (const undo of undos) {
       const ref = undo.beforeId
-      if (!ref) continue
+      if (!ref)
+        continue
       const idx = findLastIndex(
         rawOut,
-        (r) =>
-          (r.action === "ADD" && r.id === ref) ||
-          (r.action === "UPGRADE" && r.to === ref)
+        r =>
+          (r.action === 'ADD' && r.id === ref)
+          || (r.action === 'UPGRADE' && r.to === ref)
       )
-      if (idx !== -1) rawOut.splice(idx, 1)
+      if (idx !== -1)
+        rawOut.splice(idx, 1)
     }
   }
 
@@ -97,13 +101,13 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
     const last = windows[windows.length - 1]
     if (last && ev.timestamp - last.timestamp <= SHOP_WINDOW)
       last.events.push(stripTs(ev))
-    else windows.push({ timestamp: ev.timestamp, events: [stripTs(ev)] })
+    else windows.push({ events: [stripTs(ev)], timestamp: ev.timestamp })
   }
 
   //
   // PHASE 4 — REFINE EACH WINDOW
   //
-  const refined = windows.map((w) => refineWindow(w, STACKABLE, rawOut))
+  const refined = windows.map(w => refineWindow(w, STACKABLE, rawOut))
 
   return refined
 }

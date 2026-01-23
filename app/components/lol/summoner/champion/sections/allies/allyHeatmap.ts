@@ -1,6 +1,6 @@
-import type { EChartsOption, HeatmapSeriesOption } from "echarts"
+import type { EChartsOption, HeatmapSeriesOption } from 'echarts'
+import type { AllyDataPoint } from '.'
 
-import type { AllyDataPoint } from "."
 const WINRATE_BIN = 5 // %
 const delta_BIN = 1 // 1–10
 
@@ -25,22 +25,22 @@ export function buildAllyHeatmapSeries(
     map.set(key, (map.get(key) ?? 0) + p.games)
   }
 
-  console.log("🥸 - buildAllyHeatmapSeries - map:", map)
+  console.log('🥸 - buildAllyHeatmapSeries - map:', map)
   const data = [...map.entries()].map(([key, value]) => {
-    const [x, y] = key.split("-").map(Number)
+    const [x, y] = key.split('-').map(Number)
     return [x, y, value]
   })
 
   return [
     {
-      type: "heatmap",
-      data: data,
+      data,
       progressive: 0,
+      type: 'heatmap',
 
       emphasis: {
         itemStyle: {
-          borderColor: "#fff",
           borderWidth: 1,
+          borderColor: '#fff',
         },
       },
     },
@@ -49,32 +49,32 @@ export function buildAllyHeatmapSeries(
 
 export const allyHeatMapOptions: EChartsOption = {
   visualMap: {
-    min: 0,
-    max: 10,
+    bottom: '15%',
     calculable: true,
-    orient: "horizontal",
-    left: "center",
-    bottom: "15%",
+    left: 'center',
+    max: 10,
+    min: 0,
+    orient: 'horizontal',
   },
   xAxis: {
-    name: "Winrate",
+    name: 'Winrate',
     nameGap: 30,
-    nameLocation: "center",
+    nameLocation: 'center',
     axisLabel: {
-      alignMinLabel: "left",
+      alignMinLabel: 'left',
     },
     axisTick: {
       show: true,
     },
     data: Array.from({ length: 21 }, (_, i) => `${i * 5}%`),
 
-    type: "category",
+    type: 'category',
   },
   yAxis: {
-    name: "delta",
+    name: 'delta',
     nameGap: 20,
     nameTextStyle: {
-      align: "right",
+      align: 'right',
     },
     axisLabel: {
       // showMinLabel: false
@@ -83,6 +83,6 @@ export const allyHeatMapOptions: EChartsOption = {
       show: true,
     },
     data: Array.from({ length: 11 }, (_, i) => i),
-    type: "category",
+    type: 'category',
   },
 }

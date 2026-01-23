@@ -15,7 +15,7 @@ const open = shallowRef<boolean>(true)
     <CollapsibleTrigger class="contents w-full">
       <div class="sticky top-11 left-0 z-2 mb-0.5 -ml-1 grid h-6 w-full grid-cols-[2.14fr_10fr] items-center">
         <div
-          class="inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap text-bc/80 capitalize saturate-110"
+          class="text-bc/80 inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap capitalize saturate-110"
           :style="{
             color: `color-mix(in lch, ${group.color} 80%, black 20%)`,
           }">

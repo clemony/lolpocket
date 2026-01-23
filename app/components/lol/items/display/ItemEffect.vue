@@ -10,13 +10,13 @@ const { class: className, data, type } = defineProps<{
   <div :class="cn('w w-full gap-x-1 align-middle leading-normal text-pretty', className)">
     <span
       v-if="data.unique"
-      class="tracking-tight text-precision/90! italic">Unique {{ type }}<template v-if="!data.name">
+      class="text-precision/90! tracking-tight italic">Unique {{ type }}<template v-if="!data.name">
         :&nbsp;
       </template></span>
 
     <span
       v-if="data.name"
-      class="tracking-tight text-precision/90! italic">
+      class="text-precision/90! tracking-tight italic">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 

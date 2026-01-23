@@ -46,7 +46,7 @@ const filteredMailList = computed(() => {
         <div class="grid h-15 w-full place-items-center border-b">
           <div
             class="border-box flex size-full max-w-220 items-center gap-3 px-4">
-            <h1 class="text-3xl dst">
+            <h1 class="dst text-3xl">
               {{ title }}
             </h1>
             <slot name="tabs" />
@@ -60,7 +60,7 @@ const filteredMailList = computed(() => {
             @clear:input="searchQuery = ''">
             <icon
               name="lucide:search"
-              class="size-4 text-bc/60" />
+              class="text-bc/60 size-4" />
           </Input>
         </form>
       </div>

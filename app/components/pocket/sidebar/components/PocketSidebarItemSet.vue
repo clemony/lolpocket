@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { ItemSet, Pocket } from '@types'
 import { AnimatePresence, motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent, PopoverPortal } from 'reka-ui'
 

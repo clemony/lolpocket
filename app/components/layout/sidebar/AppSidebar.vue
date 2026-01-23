@@ -50,7 +50,7 @@ const variants = {
       }"
       class="absolute inset-y-0 left-0 z-50 h-screen max-h-screen w-100 self-center">
       <motion.div
-        :class="cn('grid size-full auto-rows-max grid-cols-1 items-center justify-start gap-y-3 overflow-hidden border border-b3 bg-b1/80 px-2.75 pt-17 pb-3 backdrop-blur-md')">
+        :class="cn('border-b3 bg-b1/80 grid size-full auto-rows-max grid-cols-1 items-center justify-start gap-y-3 overflow-hidden border px-2.75 pt-17 pb-3 backdrop-blur-md')">
         <!--  <div
         class="
           flex h-screen w-full flex-col items-center gap-y-3 border-r
@@ -75,7 +75,7 @@ const variants = {
 
         <SearchBox
           variant="input"
-          :class="cn('justify-between fx-0 *:first:gap-3', { '[&_svg]:opacity-100 [&_svg]:size-5.5 max-w-11!': !open })" />
+          :class="cn('fx-0 justify-between *:first:gap-3', { '[&_svg]:opacity-100 [&_svg]:size-5.5 max-w-11!': !open })" />
 
         <BtnLink
           :class="cn('w-full justify-start gap-2.5! px-3.5', { 'max-w-11 px-2': !open })"
@@ -124,12 +124,12 @@ const variants = {
             hover="outline"
             :disabled="!as().user"
             on="btn"
-            :class="cn('absolute inset-x-0 bottom-0 h-16 w-full justify-between border-transparent px-4 backdrop-blur-sm aria-expanded:btn-active aria-expanded:border-b3 aria-expanded:bg-b2/60! aria-expanded:shadow-sm aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4', { ' px-3': !open })">
+            :class="cn('aria-expanded:btn-active aria-expanded:border-b3 aria-expanded:bg-b2/60! absolute inset-x-0 bottom-0 h-16 w-full justify-between border-transparent px-4 backdrop-blur-sm aria-expanded:shadow-sm aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4', { ' px-3': !open })">
             <div class="flex items-center gap-3">
               <SummonerIcon class="size-11 rounded-lg" />
               <SummonerName
                 as="h3"
-                class="truncate pl-1 leading-none font-semibold text-bc/90 dst" />
+                class="text-bc/90 dst truncate pl-1 leading-none font-semibold" />
               <SummonerTag
                 class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
             </div>

@@ -1,5 +1,5 @@
-import { readBody } from "h3"
-import { requireUser } from "../client.supabase" // assuming you export it
+import { readBody } from 'h3'
+import { requireUser } from '../../../../layers/client/server/client.supabase'; // assuming you export it
 
 export default defineEventHandler(async (event) => {
   const { client, user } = await requireUser(event)
@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   if (!body) {
     throw createError({
       statusCode: 404,
-      statusMessage: "Missing body context",
+      statusMessage: 'Missing body context',
     })
   }
   const update = {
@@ -25,15 +25,16 @@ export default defineEventHandler(async (event) => {
   )
 
   // nothing to update
-  if (!Object.keys(patch).length) return { data: null }
+  if (!Object.keys(patch).length)
+    return { data: null }
 
-  const { data, error } = await client.rpc("update_account", {
+  const { data, error } = await client.rpc('update_account', {
     ...patch,
     p_uuid: user.id,
   })
 
   if (error) {
-    console.error("Insert RPC error", error)
+    console.error('Insert RPC error', error)
     throw createError({ statusCode: 500, statusMessage: error.message })
   }
 

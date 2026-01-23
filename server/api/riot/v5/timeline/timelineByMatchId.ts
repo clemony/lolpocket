@@ -1,5 +1,5 @@
-import { riotFetch } from "~~/server/api/riot/fetch"
-import { serverToRegion, transformTimeline } from "~~/server/domain"
+import { riotFetch } from '~~/server/api/riot/fetch'
+import { serverToRegion, transformTimeline } from '~~/server/domain'
 
 export default defineEventHandler(async (event) => {
   const { matchId, region } = getQuery(event)
@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   if (!matchId || !region) {
     throw createError({
       statusCode: 400,
-      statusMessage: "Missing matchId or region",
+      statusMessage: 'Missing matchId or region',
     })
   }
 

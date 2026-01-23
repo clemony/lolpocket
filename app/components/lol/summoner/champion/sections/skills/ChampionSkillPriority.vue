@@ -40,7 +40,7 @@ const prio = computed (() => {
         <Ability
           :ckey
           :akey="k">
-          <span class="absolute top-0 right-0 badge aspect-square size-6 rounded-t-none rounded-br-none badge-neutral bg-neutral/80 p-0 font-mono font-semibold shadow-sm dss backdrop-blur">
+          <span class="badge badge-neutral bg-neutral/80 dss absolute top-0 right-0 aspect-square size-6 rounded-t-none rounded-br-none p-0 font-mono font-semibold shadow-sm backdrop-blur-sm">
             {{ k }}
           </span>
         </Ability>

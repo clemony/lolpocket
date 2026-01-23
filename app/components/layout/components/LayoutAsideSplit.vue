@@ -9,7 +9,7 @@ const { fullWidth, class: className } = defineProps<{
   <div
     :class="
       cn('z-auto flex size-full flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-12',
-        className,
+         className,
       )
     ">
     <aside class="sticky top-40 z-2 w-1/5 self-start">

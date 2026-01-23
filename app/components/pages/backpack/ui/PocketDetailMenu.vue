@@ -17,7 +17,7 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
 
 <template>
   <div
-    class="border-box flex h-[45px] items-center px-2"
+    class="border-box flex h-15 items-center px-2"
     :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
     <div class="flex items-center gap-2">
       <!-- pin -->
@@ -27,9 +27,9 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute',
-            {
-              'bg-b2/30': pinned,
-            },
+             {
+               'bg-b2/30': pinned,
+             },
           )
         ">
         <input
@@ -41,12 +41,12 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         <icon
           v-if="!pinned"
           name="pin"
-          class="size-4.75 **:stroke-[2]" />
+          class="size-4.75 **:stroke-2" />
 
         <icon
           v-else
           name="unpin"
-          class="size-4.75 **:stroke-[2]" />
+          class="size-4.75 **:stroke-2" />
       </Label>
 
       <!-- archive -->
@@ -56,9 +56,9 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="ps().archive.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute',
-            {
-              'bg-b2/30': pinned,
-            },
+             {
+               'bg-b2/30': pinned,
+             },
           )
         ">
         <input
@@ -77,9 +77,9 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="ps().trash.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute',
-            {
-              'bg-b2/30': pinned,
-            },
+             {
+               'bg-b2/30': pinned,
+             },
           )
         ">
         <icon name="trash" />

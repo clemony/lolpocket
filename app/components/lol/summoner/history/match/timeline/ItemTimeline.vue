@@ -25,7 +25,7 @@ const supportUpgrade = computed(() => {
         v-if="i !== 0"
         class="bg-b3/60" />
       <div
-        class="timeline-start mx-3 flex h-full items-center gap-2.25 justify-self-center timeline-box">
+        class="timeline-start timeline-box mx-3 flex h-full items-center gap-2.25 justify-self-center">
         <template
           v-for="event, ix in eventGroup?.events"
           :key="ix">
@@ -47,7 +47,7 @@ const supportUpgrade = computed(() => {
                 :map="match.mapId"
                 size="sq-5.5"
                 data-type="item"
-                class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+                class="border-b1 ring-b1 absolute -top-1 -left-1.5 rounded-full border ring-1" />
 
               <Item
                 v-if="event.action === 'S2_UPGRADE'"
@@ -56,7 +56,7 @@ const supportUpgrade = computed(() => {
                 :map="match.mapId"
                 size="sq-5.5"
                 data-type="item"
-                class="absolute -top-1 -left-1.5 ml-[10px] rounded-full border border-b1 ring-1 ring-b1" />
+                class="border-b1 ring-b1 absolute -top-1 -left-1.5 ml-[10px] rounded-full border ring-1" />
             </template>
             <template v-else>
               <Item
@@ -69,7 +69,7 @@ const supportUpgrade = computed(() => {
                   marginLeft: `${10 * idx}px`,
                 }"
                 data-type="item"
-                class="absolute -top-1 -left-1.5 rounded-full border border-b1 ring-1 ring-b1" />
+                class="border-b1 ring-b1 absolute -top-1 -left-1.5 rounded-full border ring-1" />
             </template>
           </div>
 
@@ -85,7 +85,7 @@ const supportUpgrade = computed(() => {
               size="sq-12" />
             <div
               v-if="event.count > 1"
-              class="absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 border-b1 bg-neutral font-semibold text-nc"
+              class="border-b1 bg-neutral text-nc absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 font-semibold"
               variant="neutral">
               {{ event.count }}
             </div>
@@ -93,18 +93,18 @@ const supportUpgrade = computed(() => {
         </template>
       </div>
 
-      <div class="relative z-1 timeline-middle grid w-full place-items-center">
+      <div class="timeline-middle relative z-1 grid w-full place-items-center">
         <Icons
           size="sq-4"
           wrapper-class="z-2 bg-tint-b2/40 absolute "
           name="dot"
-          class="size-7 dss" />
+          class="dss size-7" />
       </div>
 
-      <div class="relative timeline-end mt-2 grid place-items-center justify-self-center rounded-md border border-b3 bg-b1 px-1.5 text-[0.86rem]! font-bold text-bc dxs">
+      <div class="timeline-end border-b3 bg-b1 text-bc dxs relative mt-2 grid place-items-center justify-self-center rounded-md border px-1.5 text-[0.86rem]! font-bold">
         <Icon
           name="tabler:caret-caret-uped"
-          class="absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61% text-b1 **:stroke-b3" />
+          class="text-b1 **:stroke-b3 absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61%" />
 
         {{ formatHMS(eventGroup.timestamp) }}
       </div>

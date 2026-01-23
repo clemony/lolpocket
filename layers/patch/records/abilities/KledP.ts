@@ -1,0 +1,30 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:52 PM CST
+
+const ability: Ability = {
+  key: 'P',
+  name: 'Dismounted Skaarl the Cowardly Lizard',
+  affects: 'Self',
+  blurb: 'Innate: While Dismounted,  Kled suffers all damage taken and is vulnerable to  death. Kled\'s base health cannot be improved through any means, his movement speed is reduced, and his  basic attacks against  champions deal less physical damage. However, Kled gains a large amount of bonus movement speed when facing  visible enemy champions,  bonus armor and  bonus magic resistance, and he has the ability to restore  Skaarl\'s  Courage to  mount again.',
+  effectRadius: '1200 /  1400',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Kled is only vulnerable to death while Dismounted. Kled has 410 - 1838 (based on level) base health, which is not improved by sources of bonus health, as well as reduced base movement speed and increased base attack range. Effects based on percentage health consider Kled and Skaarl\'s combined maximum health, meaning that a Dismounted Kled is never considered to be at full health.</p>'
+    },
+    {
+      description: 'Kled gains 70 - 155 (based on level) bonus movement speed while facing and after attacking nearby visible enemy champions, but his basic attacks against them are reduced to 85% / 90% / 95% / 100% (based on level) AD physical damage. He also gains bonus armor and bonus magic resistance equal to 4 (+ 1% of bonus health), increased by 30% for each nearby visible enemy champion, up to a maximum of 10 (+ 2.5% bonus health) resistances. Additionally, he gains the ability to restore Skaarl\'s Courage to mount again.'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Innate - Courage:</span> Kled gains 15 Courage after completing a basic attack against a champion and 5 Courage for minion kills and when basic attacking structures or epic monsters. He can also restore Courage from hitting enemies with Pocket Pistol. Upon reaching 100 Courage, Skaarl instantly restores 40% / 50% / 60% / 70% (based on level) of her maximum health and reunites with Kled over 0.25 seconds, after which he becomes Mounted and the duo become unable to declare basic attacks or cast their abilities for 0.25 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.</p>'
+    },
+    {
+      description: 'While at the allied fountain, 25 Courage is generated every 0.25 seconds. If reuniting outside of the fountain, Skaarl gets Frayed Nerves, which prevents Kled from gaining Courage for 30 seconds. Being within the fountain while Dismounted removes Frayed Nerves.'
+    },
+    {
+      description: 'The current status of Kled\'s own health is preserved between subsequent dismounts.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Kled/ability-icon/p',
+  notes: 'Clones are counted as champions for all of this passive\'s effects.\nKled will retain the bonus movement speed buff for 1.5 seconds while facing an enemy champion even if that champion is no longer  visible.\nAfter completing a  basic attack on a champion, the bonus movement speed buff is granted for 1.5 seconds regardless of his facing direction.\nThe bonus movement speed buff\'s value is refreshed when Kled levels up.\nKled will neither gain Courage nor bonus movement speed if his basic attack is  dodged,  blocked,  missed or  parried.\nIt is possible to get the Courage from the fountain but have Kled and  Skaarl reunite outside the fountain.\nSources of increased maximum health that additionally restore current health will restore Kled\'s current health even if he is DISMOUNTED.\nThe Courage bar is white when under 50 courage, yellow when equal to or above 50 courage, and red at 100 courage.',
+  targeting: 'Passive'
+}
+export default ability

@@ -10,7 +10,7 @@ const pocket = computed(() =>
     <div class="grid w-full grid-cols-[2.5fr_1fr] gap-4 pt-22">
       <div class="flex w-full flex-col gap-3">
         <div class="mb-2 h-16">
-          <h1 class="leading-10 tracking-tight dst">
+          <h1 class="dst leading-10 tracking-tight">
             {{ pocket._champion }}
           </h1>
           <div class="text-lg font-medium italic">
@@ -33,10 +33,10 @@ const pocket = computed(() =>
             class="
               open:animate-in open:fade-in closed:fade-out
               closed:animate-out
+              border-b3
               h-[calc(var(--reka-hover-card-trigger-height)+3px)]
               w-[calc(var(--reka-hover-card-trigger-width)+3px)]
-              -translate-x-0.75
-              -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] border-b3 shadow-none drop-shadow-none
+              -translate-x-0.75 -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] shadow-none drop-shadow-none
             ">
           </HoverCardContent>
         </HoverCard>
@@ -57,7 +57,7 @@ const pocket = computed(() =>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
-        <h2 class="leading-10 tracking-tight dst">
+        <h2 class="dst leading-10 tracking-tight">
           Pocket Stats
         </h2>
         <div class="text-lg font-medium italic"></div>

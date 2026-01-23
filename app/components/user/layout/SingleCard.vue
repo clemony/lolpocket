@@ -9,8 +9,8 @@ const route = useRoute()
 <template>
   <div
     class="
-      flex size-full min-h-svh flex-col items-center justify-center gap-6
-      bg-tint-b2/40 p-6 md:p-10
+      bg-tint-b2/40 flex size-full min-h-svh flex-col items-center justify-center
+      gap-6 p-6 md:p-10
     ">
     <div class="flex w-full max-w-md flex-col gap-6">
       <NuxtLink
@@ -39,8 +39,8 @@ const route = useRoute()
         </Card>
         <div
           class="
-            text-center text-xs text-balance text-bc/60 [&_a]:underline
-            [&_a]:underline-offset-1 [&_a]:hover:text-bc
+            text-bc/60 [&_a]:hover:text-bc text-center text-xs text-balance
+            [&_a]:underline [&_a]:underline-offset-1
           ">
           By continuing, you agree to our
           <a href="#">Terms of Service</a>

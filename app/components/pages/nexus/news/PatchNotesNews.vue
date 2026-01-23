@@ -21,7 +21,7 @@ const backgroundStyles = computed(() => {
 <template>
   <div
     class="
-      relative flex h-60 w-100 flex-col justify-end overflow-hidden rounded-box
+      rounded-box relative flex h-60 w-100 flex-col justify-end overflow-hidden
       bg-cover bg-center p-4 shadow-sm inset-shadow-sm
       inset-shadow-black/50 drop-shadow-sm before:absolute before:top-0
       before:left-0 before:z-1 before:size-full before:-bg-linear-155

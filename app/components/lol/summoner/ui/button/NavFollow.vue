@@ -67,7 +67,7 @@ const variants = {
           v-else
           name="ph:heart-straight-fill"
           :class="
-            cn('absolute size-5.5 text-b4 drop-shadow-sm dst drop-shadow-b2 transition-all duration-300 group-hover/follow:scale-120 group-hover/follow:text-tint-domination/40 group-hover/follow:opacity-90',
+            cn('text-b4 dst drop-shadow-b2 group-hover/follow:text-tint-domination/40 absolute size-5.5 drop-shadow-sm transition-all duration-300 group-hover/follow:scale-120 group-hover/follow:opacity-90',
                {
                  'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
                    isFollowed,

@@ -32,15 +32,15 @@ const pinned = computed(() =>
         hover="base"
         size="12"
         class="
-                group data-[state=open]:fx-noise w-full justify-start gap-3!
-                pr-5 pl-4.5 open:border-b3/80 open:shadow-sm
+                group data-[state=open]:fx-noise open:border-b3/80 w-full justify-start
+                gap-3! pr-5 pl-4.5 open:shadow-sm
                 open:inset-shadow-xs open:shadow-black/8
                 hover:bg-transparent
               ">
         <SummonerIcon class="size-7 rounded-full" />
         <span
           class="
-                  w-full items-center truncate text-xl font-semibold dst
+                  dst w-full items-center truncate text-xl font-semibold
                   *:first:capitalize
                 ">
           <SummonerName class="inline" />
@@ -48,7 +48,7 @@ const pinned = computed(() =>
         </span>
         <icon
           name="select"
-          :class="cn('size-4.5 text-bc/60')" />
+          :class="cn('text-bc/60 size-4.5')" />
       </DropdownMenuTrigger>
       <LazyDropdownMenuContent>
         <DropdownMenuItem>Edit pins</DropdownMenuItem>

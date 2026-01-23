@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { addSpellSet } from '@types'
-
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key)),
@@ -21,7 +19,7 @@ const pocket = computed(() =>
         class="flex items-center gap-3">
         <SpellPicker
           class="size-16"
-          :current-value="spellbook[set.d].name"
+          :current-value="spells[set.d].name"
           @update:spell="(e) => (set.d = e)" />
         <!--         <SpellPicker
           class="size-16"

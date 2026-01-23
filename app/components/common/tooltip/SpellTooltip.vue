@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { spells } from '~~/layers/domain/records/spells';
-
 const {
   id,
   class: className,

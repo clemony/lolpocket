@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { getMasterySummary } from '@domain'
-
 useSeoMeta({
   title: '[title]',
   description: '[description]',
@@ -41,7 +39,7 @@ const championData = computed (() =>
   <div class="relative w-full max-w-[1400px] px-24 pb-32">
     <div class="mx-auto w-3/5">
       <header class="flex w-full items-center justify-between pt-24 pb-2">
-        <h1 class="self-start font-bold dst">
+        <h1 class="dst self-start font-bold">
           Champion Stats
         </h1>
       </header>

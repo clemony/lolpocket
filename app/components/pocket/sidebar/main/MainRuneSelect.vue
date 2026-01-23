@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import { HeadingTip } from '#components'
-import { SelectTrigger } from 'reka-ui'
-
 const {
   side = 'bottom',
   sideOffset,
@@ -19,7 +15,7 @@ const {
   align?: Align
   alignOffset?: number
 }>()
-
+const HeadingTip = resolveComponent('HeadingTip')
 const pocket = computed(() => p)
 const mainSet = computed(() =>
   pocket.value.runes.find(s => s.id === pocket.value._runes),

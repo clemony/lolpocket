@@ -1,4 +1,3 @@
-import type { Pocket } from '@types'
 import type { GridApi } from 'ag-grid-community'
 import { defineStore } from 'pinia'
 
@@ -18,13 +17,13 @@ export const usePocketStore = defineStore(
 
     return {
       archive,
-      pinned,
-      trash,
       //
       downloadCard,
+      pinned,
       pocketCardRef,
       pockets,
       tags,
+      trash,
 
       // helpers
       getPocket: (key: string) =>

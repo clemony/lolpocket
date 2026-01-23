@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-
 defineOptions({
   meta: {
     name: 'Pockets',

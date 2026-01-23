@@ -12,7 +12,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="border-shadow h-160 max-h-160 w-full bg-b1 inset-shadow-xxs">
+    <div class="border-shadow bg-b1 inset-shadow-xxs h-160 max-h-160 w-full">
       <div class="size-full overflow-hidden!">
         <div class="oveflow-y-auto size-full">
           <div
@@ -33,9 +33,9 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
             <div
               v-if="entry"
               class="
-                grid w-full
-                grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px]
-                items-center overflow-y-auto border-b border-b-b2 py-3
+                border-b-b2 grid
+                w-full
+                grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b py-3
               ">
               <div />
 
@@ -68,7 +68,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
               </div>
 
               <div class="list-col-grow -space-y-1">
-                <div class="truncate text-md">
+                <div class="text-md truncate">
                   {{ entry.item?.name }}
                 </div>
 

@@ -1,17 +1,17 @@
-import { fetchAccountByPuuid, fetchAccountByRiotId } from "riot"
+import { fetchAccountByPuuid, fetchAccountByRiotId } from 'riot'
 
 export async function resolveAccountByEither(opts: {
   puuid?: string
   name?: string
   tag?: string
 }) {
-  const { puuid, name, tag } = opts
+  const { name, puuid, tag } = opts
 
   if (puuid) {
     const account = await fetchAccountByPuuid(puuid)
     return {
-      puuid: account.puuid,
       name: account.gameName,
+      puuid: account.puuid,
       tag: account.tagLine,
     }
   }
@@ -19,14 +19,14 @@ export async function resolveAccountByEither(opts: {
   if (name && tag) {
     const account = await fetchAccountByRiotId(name, tag)
     return {
-      puuid: account.puuid,
       name: account.gameName,
+      puuid: account.puuid,
       tag: account.tagLine,
     }
   }
 
   throw createError({
     statusCode: 400,
-    statusMessage: "Missing puuid OR (name + tag)",
+    statusMessage: 'Missing puuid OR (name + tag)',
   })
 }

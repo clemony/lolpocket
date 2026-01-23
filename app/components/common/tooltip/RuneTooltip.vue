@@ -50,12 +50,12 @@ watchEffect(async () => {
         <icon
           v-if="rune.tier === 0"
           name="star-fill"
-          class="absolute bottom-0 left-0 size-3.5 **:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-md group-hover/s:drop-shadow-g group-hover/s:delay-400" />
+          class="**:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-g absolute bottom-0 left-0 size-3.5 group-hover/s:drop-shadow-md group-hover/s:delay-400" />
       </button>
 
       <div class="flex size-full flex-col justify-center gap-0.5">
         <div class="flex items-center justify-between">
-          <h4 class="grow text-lg leading-none font-bold dst">
+          <h4 class="dst grow text-lg leading-none font-bold">
             {{ rune.name }}
           </h4>
           <a
@@ -77,7 +77,7 @@ watchEffect(async () => {
               <img
                 :src="`/img/paths/${rune.path}.webp`"
                 :alt="rune.path"
-                class="shrink-0 object-contain dst" />
+                class="dst shrink-0 object-contain" />
             </span>
           </Element>
 

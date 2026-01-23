@@ -1,7 +1,7 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore(
-  "UiStore",
+  'UiStore',
   () => {
     const openChampionTab = ref<string>(null)
     const sidebarStates = {
@@ -27,15 +27,15 @@ export const useUiStore = defineStore(
     }
     const blockDialog = ref<boolean>(false)
     return {
-      //tab
-      openChampionTab,
       // dialog
       blockDialog,
+      // tab
+      openChampionTab,
 
-      //sidebar
-      profileSettings,
       sidebarOpen,
       sidebarStates,
+      // sidebar
+      profileSettings,
 
       // collapse
       collapseStates,
@@ -46,8 +46,8 @@ export const useUiStore = defineStore(
   },
   {
     persist: {
-      key: "tempStore",
-      pick: ["collapseStates", "sidebarStates", "openChampionTab"],
+      key: 'tempStore',
+      pick: ['collapseStates', 'sidebarStates', 'openChampionTab'],
       storage: piniaPluginPersistedstate.sessionStorage(),
     },
   }

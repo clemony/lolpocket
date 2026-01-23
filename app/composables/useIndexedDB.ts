@@ -1,4 +1,4 @@
-import { lpdb } from "~/stores"
+import { lpdb } from '~/stores'
 
 export function useIndexedDB() {
   const now = () => Date.now()
@@ -48,17 +48,17 @@ export function useIndexedDB() {
 
   const getMatchesForSummoner = async (puuid: string) => {
     const arr = await lpdb.matchData
-      .where("participantIds")
+      .where('participantIds')
       .equals(puuid)
       .reverse()
-      .sortBy("creation")
+      .sortBy('creation')
 
-    const filtered = arr.filter((m) => m.queueId !== 3200)
+    const filtered = arr.filter(m => m.queueId !== 3200)
 
     if (filtered.length) {
       const ts = now()
       await lpdb.matchData.bulkPut(
-        filtered.map((m) => ({
+        filtered.map(m => ({
           ...m,
           lastAccessedAt: ts,
         }))
@@ -70,12 +70,12 @@ export function useIndexedDB() {
 
   const getAllMatches = async () => {
     const arr = await lpdb.matchData.toArray()
-    const filtered = arr.filter((m) => m.queueId !== 3200)
+    const filtered = arr.filter(m => m.queueId !== 3200)
 
     if (filtered.length) {
       const ts = now()
       await lpdb.matchData.bulkPut(
-        filtered.map((m) => ({
+        filtered.map(m => ({
           ...m,
           lastAccessedAt: ts,
         }))
@@ -86,12 +86,12 @@ export function useIndexedDB() {
   }
 
   const getAllMatchIds = async () => {
-    return await lpdb.matchData.orderBy("metadata.matchId").keys()
+    return await lpdb.matchData.orderBy('metadata.matchId').keys()
   }
 
   const getAllMatchIdsForPuuid = async (puuid: string): Promise<string[]> => {
     return await lpdb.matchData
-      .where("participantIds")
+      .where('participantIds')
       .equals(puuid)
       .primaryKeys()
   }
@@ -104,7 +104,7 @@ export function useIndexedDB() {
     if (valid.length) {
       const ts = now()
       await lpdb.matchData.bulkPut(
-        valid.map((m) => ({
+        valid.map(m => ({
           ...m,
           lastAccessedAt: ts,
         }))
@@ -113,7 +113,7 @@ export function useIndexedDB() {
 
     return valid
       .sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
-      .map((m) => m.matchId)
+      .map(m => m.matchId)
   }
 
   // ---------- db utilities ----------
@@ -128,7 +128,7 @@ export function useIndexedDB() {
     if (data.length) {
       const ts = now()
       await lpdb.matchData.bulkPut(
-        data.map((m) => ({
+        data.map(m => ({
           ...m,
           lastAccessedAt: ts,
         }))
@@ -139,25 +139,25 @@ export function useIndexedDB() {
   }
 
   return {
+    getCursor,
     // cursor
     setCursor,
-    getCursor,
 
+    clearTimelines,
     // timeline
     getMatchTimeline,
     putMatchTimeline,
-    clearTimelines,
 
-    // match
-    putMatchData,
     getAllMatchIdsForPuuid,
     getAllMatches,
     getAllMatchIds,
     getMatchesForSummoner,
+    // match
+    putMatchData,
     sortMatchIdsByCreation,
 
+    clearMatches,
     // db utilities
     refreshMatches,
-    clearMatches,
   }
 }

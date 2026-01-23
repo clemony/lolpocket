@@ -1,10 +1,10 @@
 export interface ChampionRuneStats {
   keystone: Record<number, StatDetail>
+  all: RunePageStats[]
+  best: RunePageStats
   primary: Record<number, StatDetail>
   secondary: Record<number, StatDetail>
   shards: ShardStats
-  all: RunePageStats[]
-  best: RunePageStats
   usedFallback?: boolean
 }
 
@@ -22,7 +22,7 @@ export type ShardSlot = 0 | 1 | 2
 export type ShardStats = Record<ShardSlot, Record<number, StatDetail>>
 
 function makeRunePageKey(r: PlayerRunes) {
-  return [r.keystone, ...r.primary.runes, "|", ...r.secondary.runes].join("-")
+  return [r.keystone, ...r.primary.runes, '|', ...r.secondary.runes].join('-')
 }
 
 function scorePage(p: RunePageStats) {
@@ -38,8 +38,8 @@ export function pickBestShard(
   return res ? Number(Object.keys(res)[0]) : null
 }
 
-export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
-  computed(() => {
+export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
+  return computed(() => {
     const keystone: Record<number, StatDetail> = {}
     const primary: Record<number, StatDetail> = {}
     const secondary: Record<number, StatDetail> = {}
@@ -55,7 +55,8 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
 
     for (const match of source.value) {
       const p = match.player
-      if (!p || p.win === "remake") continue
+      if (!p || p.win === 'remake')
+        continue
 
       bumpStat(keystone, p.runes.keystone, p.win)
 
@@ -69,7 +70,7 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
 
       //  slot-aware shard aggregation
       p.runes.shards.forEach((shardId, slot) => {
-        if (p.win !== "remake")
+        if (p.win !== 'remake')
           bumpStat(shards[slot as ShardSlot], shardId, p.win)
       })
 
@@ -79,7 +80,8 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
       const secondaryPath = pathNameById(r.secondary.path)
 
       // enforce path constraints (defensive)
-      if (primaryPath === secondaryPath) continue
+      if (primaryPath === secondaryPath)
+        continue
 
       const key = makeRunePageKey(r)
 
@@ -99,7 +101,8 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
       }
 
       pages[key] ? pages[key].games++ : null
-      if (p.win) pages[key] ? pages[key].win++ : null
+      if (p.win)
+        pages[key] ? pages[key].win++ : null
     }
 
     for (const bucket of [
@@ -127,7 +130,8 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
     for (const page of allPages) {
       page.winrate = Math.round((page.win / page.games) * 1000) / 10
       page.pickrate = Math.round((page.games / totalMatches) * 1000) / 10
-      if (page.games < 5) continue
+      if (page.games < 5)
+        continue
 
       const s = scorePage(page)
       if (s > bestScore) {
@@ -156,14 +160,15 @@ export const useChampionRuneStats = (source: Ref<MatchPlayerData[]>) =>
 
     return {
       keystone,
-      primary,
-      secondary,
-      shards,
+      all: allPages,
       best: bestPage && {
         ...bestPage,
         shards: bestShards,
       },
+      primary,
+      secondary,
+      shards,
       usedFallback,
-      all: allPages,
     }
   })
+}

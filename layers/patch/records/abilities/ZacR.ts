@@ -1,0 +1,65 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:15 PM CST
+
+const ability: Ability = {
+  key: 'R',
+  name: 'Let\'s Bounce!',
+  affects: 'Enemies, Self',
+  blurb: 'Active:  Zac bounces four times. Each impact deals magic damage to enemies hit and briefly  knocks back and  slows them.',
+  castTime: '0.3',
+  cooldown: '120 / 105 / 90',
+  cost: '0',
+  damageType: 'Magic damage',
+  effectRadius: '300',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds. Each bounce deals magic damage to enemies hit, knocks them back over 1 second, and slows them by 20% for the same duration. An enemy can be hit by multiple bounces, but ones beyond the first deal 50% damage to them and do not apply the knock back.</p>',
+      leveling: [
+        {
+          attribute: 'Primary Magic Damage',
+          modifiers: [
+            {
+              values: '140 / 210 / 280'
+            },
+            {
+              unit: '% AP',
+              values: '40'
+            }
+          ]
+        },
+        {
+          attribute: 'Reduced Magic Damage',
+          modifiers: [
+            {
+              values: '70 / 105 / 140'
+            },
+            {
+              unit: '% AP',
+              values: '20'
+            }
+          ]
+        },
+        {
+          attribute: 'Total Magic Damage',
+          modifiers: [
+            {
+              values: '350 / 525 / 700'
+            },
+            {
+              unit: '% AP',
+              values: '100'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Zac can move while Let\'s Bounce! is active, gaining ghosting and 20% - 50% (based on duration) bonus movement speed, but becomes unable to declare basic attacks, Stretching Strikes, and Elastic Slingshot. He also automatically consumes all chunks within the bounce radius.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/r',
+  notes: 'Spell shield only blocks a single instance of damage.\nEntering  stasis will end Let\'s Bounce! prematurely.\nCasting Let\'s Bounce may cause  chunks that are further away to disappear.(bug)\nPENDING FOR TEST: how much farther exactly?\nCasting Let\'s Bounce just before dying may put it on cooldown while not displaying it as on cooldown.(bug)\nThe following table refers for interactions while Zac is performing Let\'s Bounce!:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Stretching Strikes and  Elastic Slingshot are disabled.  Unstable Matter is usable.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath',
+  spellEffects: 'Area of effect',
+  spellshieldable: 'Special',
+  targeting: 'Auto'
+}
+export default ability

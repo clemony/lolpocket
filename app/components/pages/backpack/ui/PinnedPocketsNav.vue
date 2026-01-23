@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-
 const { isCollapsed, pinned } = defineProps<{
   isCollapsed: boolean
   pinned: Pocket[]

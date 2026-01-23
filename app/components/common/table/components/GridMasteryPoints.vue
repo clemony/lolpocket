@@ -24,7 +24,7 @@ const progress = computed(() => {
     Next level in:  ${params.data.pointsUntilLevel.toLocaleString()}`"
     class="relative grid size-full place-items-center bg-transparent py-1">
     <!--  -->
-    <div class="absolute z-1 grid size-10 place-items-center rounded-full bg-neutral text-md leading-none font-semibold tracking-wide text-nc drop-shadow-sm">
+    <div class="bg-neutral text-md text-nc absolute z-1 grid size-10 place-items-center rounded-full leading-none font-semibold tracking-wide drop-shadow-sm">
       {{ params.data.level }}
     </div>
 

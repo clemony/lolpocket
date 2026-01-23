@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ItemSet, Pocket } from '@types'
 import { vDraggable } from 'vue-draggable-plus'
 
 const { pocket, set: itemSet } = defineProps<{

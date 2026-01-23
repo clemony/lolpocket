@@ -1,14 +1,15 @@
 <script lang="ts" setup>
-import { MatchBuild, MatchDataTable, MatchScoreboard } from '#components'
-
 defineOptions({
   inheritAttrs: false,
 })
-
 const { match, player } = defineProps<{
   player: Player
   match: MatchData
 }>()
+const MatchBuild = resolveComponent('MatchBuild')
+const MatchDataTable = resolveComponent('MatchDataTable')
+const MatchScoreboard = resolveComponent('MatchScoreboard')
+
 const modelValue = ref<string>('Scoreboard')
 
 const tabs = {
@@ -46,7 +47,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
           :key="i">
           <FileTabTrigger
             :value="tab.name"
-            class="on:field-box e z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-b1/1 on:light:bg-tint-b2/60">
+            class="on:field-box e on:dark:bg-tint-b1/1 on:light:bg-tint-b2/60 z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium">
             {{ tab.name }}
           </FileTabTrigger>
         </template>
@@ -55,7 +56,7 @@ const timeline: PlayerTimeline = await getTimeline(match.matchId, match.regionId
 
       <div
         v-if="tabs[modelValue].name === 'Statistics'"
-        class="absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b from-b2-light to-b2-light/90"></div>
+        class="from-b2-light to-b2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b"></div>
       <div
         :class="cn('field-box tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none', { 'rounded-tl-none': modelValue === 'Scoreboard' })">
         <component

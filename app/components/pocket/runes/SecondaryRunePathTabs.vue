@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '@types'
-
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
   path: string | undefined

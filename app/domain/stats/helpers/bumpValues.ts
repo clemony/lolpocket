@@ -5,21 +5,23 @@ export function bumpTimedStatDetail(
   timestamp?: number
 ) {
   if (!map[itemId]) {
-    map[itemId] = { games: 0, win: 0, avgTimestamp: 0 }
+    map[itemId] = { avgTimestamp: 0, games: 0, win: 0 }
   }
 
   const s = map[itemId]
   s.games++
-  if (win) s.win++
+  if (win)
+    s.win++
 
   if (timestamp != null) {
-    s.avgTimestamp =
-      ((s.avgTimestamp ?? 0) * (s.games - 1) + timestamp) / s.games
+    s.avgTimestamp
+      = ((s.avgTimestamp ?? 0) * (s.games - 1) + timestamp) / s.games
   }
 }
 
 export function bumpAverage(stat: StatAverage, value?: number) {
-  if (value == null) return
+  if (value == null)
+    return
   stat.total += value
 }
 
@@ -33,5 +35,6 @@ export function bumpStat(
   }
 
   map[id].games++
-  if (win) map[id].win++
+  if (win)
+    map[id].win++
 }

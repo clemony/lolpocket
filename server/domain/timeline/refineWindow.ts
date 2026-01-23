@@ -1,7 +1,5 @@
-import { itemRecipe } from "~~/shared/constants/items/item-recipe"
-
 export function refineWindow(
-  window: { events: ItemEvent[]; timestamp: number },
+  window: { events: ItemEvent[], timestamp: number },
   STACKABLE: Set<number>,
   history: any[]
 ) {
@@ -9,7 +7,7 @@ export function refineWindow(
 
   // We only care about ADDs that already happened before this window timestamp
   const priorAdds = history.filter(
-    (h) => h.timestamp < window.timestamp && h.action === "ADD"
+    h => h.timestamp < window.timestamp && h.action === 'ADD'
   )
 
   // Fast lookup for counts of all items purchased prior to this window
@@ -19,22 +17,24 @@ export function refineWindow(
   }
 
   for (const ev of window.events) {
-    if (ev.action === "S1_UPGRADE" || ev.action === "S2_UPGRADE") {
+    if (ev.action === 'S1_UPGRADE' || ev.action === 'S2_UPGRADE') {
       refined.push(ev)
       continue
     }
-    if (ev.action !== "ADD") continue
+    if (ev.action !== 'ADD')
+      continue
 
     const id = ev.id
     const count = ev.count ?? 1
 
     // Handle stackables normally
     if (STACKABLE.has(id)) {
-      const last = refined.find((r) => r.action === "ADD" && r.id === id)
+      const last = refined.find(r => r.action === 'ADD' && r.id === id)
       if (last) {
         last.count = (last.count ?? 1) + count
-      } else {
-        refined.push({ action: "ADD", id, count })
+      }
+      else {
+        refined.push({ id, action: 'ADD', count })
       }
       continue
     }
@@ -43,29 +43,29 @@ export function refineWindow(
 
     if (!recipe) {
       // No recipe → straight ADD
-      refined.push({ action: "ADD", id, count })
+      refined.push({ id, action: 'ADD', count })
       continue
     }
 
     // Check if every recipe component appears in priorAdds
-    const canUpgrade = recipe.every((comp) => priorCounts.get(comp) > 0)
+    const canUpgrade = recipe.every(comp => priorCounts.get(comp) > 0)
 
     if (!canUpgrade) {
       // Bought whole item → ADD
-      refined.push({ action: "ADD", id, count })
+      refined.push({ id, action: 'ADD', count })
       continue
     }
 
     // Valid upgrade
     refined.push({
-      action: "UPGRADE",
-      to: id,
+      action: 'UPGRADE',
       from: recipe.slice(),
+      to: id,
     })
   }
 
   return {
-    timestamp: window.timestamp,
     events: refined,
+    timestamp: window.timestamp,
   }
 }

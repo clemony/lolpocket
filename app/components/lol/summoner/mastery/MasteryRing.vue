@@ -32,9 +32,9 @@ const level = computed (() => props.level >= 10 ? 10 : props.level)
 
 <template>
   <div
-    :class="cn('mastery-ring relative inline-block -rotate-90 rounded-full bg-b2', props.class)"
+    :class="cn('mastery-ring bg-b2 relative inline-block -rotate-90 rounded-full', props.class)"
     :style="{ width: `${size}px`, height: `${size}px` }">
-    <div class="absolute inset-0 scale-100 rounded-full border border-b3" />
+    <div class="border-b3 absolute inset-0 scale-100 rounded-full border" />
     <!-- GRADIENT RING (rotates around the arc mask) -->
     <div
       :data-level="level"

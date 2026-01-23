@@ -106,10 +106,10 @@ const options = {
 </script>
 
 <template>
-  <div class="relative m-0 w-full justify-self-center bg-b3/30 pt-6 pb-0!">
+  <div class="bg-b3/30 relative m-0 w-full justify-self-center pt-6 pb-0!">
     <div
       class="
-        absolute top-5 left-6 text-md font-bold tracking-tight text-bc/50
+        text-md text-bc/50 absolute top-5 left-6 font-bold tracking-tight
         drop-shadow-sm
       ">
       Champion Attributes

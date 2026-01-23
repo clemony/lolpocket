@@ -101,8 +101,8 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
       </div>
       <div
         class="
-          sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col
-          items-center justify-between gap-3 border-l border-l-b3 pt-3 pb-2 pb-3
+          border-l-b3 sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0
+          flex-col items-center justify-between gap-3 border-l pt-3 pb-2 pb-3
         ">
         <ItemMapRadio />
         <!-- shop -->
@@ -110,7 +110,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
         <Grow class="max-w-14" />
         <ShopToggle
           size="sq-9"
-          class="border border-b4/60!" />
+          class="border-b4/60! border" />
         <Button
           variant="neutral"
           size="sq-9"

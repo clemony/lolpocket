@@ -49,7 +49,7 @@ const damageType = computed(() =>
           <Icon
             v-if="champion.attackType"
             :name="`lp:${champion.attackType.toLowerCase()}`"
-            class="inline size-4.5! shrink-0 dst **:stroke-0" />
+            class="dst inline size-4.5! shrink-0 **:stroke-0" />
           {{ champion.attackType }}
         </span>
         <span v-if="champion.attackType && champion.adaptiveType"> + </span>
@@ -58,7 +58,7 @@ const damageType = computed(() =>
             v-if="damageType?.icon"
             :name="damageType?.icon"
             :class="
-              cn('absolute size-3.5! shrink-0 dst', {
+              cn('dst absolute size-3.5! shrink-0', {
                 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage',
               })
             " />
@@ -73,7 +73,7 @@ const damageType = computed(() =>
         <Icon
           v-if="resource?.icon"
           :name="resource?.icon"
-          class="inline size-3.5! shrink-0 opacity-90 dst" />
+          class="dst inline size-3.5! shrink-0 opacity-90" />
         {{ champion.resource }}
       </p>
     </div>
@@ -82,13 +82,13 @@ const damageType = computed(() =>
       <p>Price</p>
       <div
         class="
-          flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1
-          *:text-md
+          *:text-md flex items-center gap-4 overflow-hidden *:flex *:items-center
+          *:gap-1
         ">
         <div class="font-medium">
           <Icon
             name="lp:be"
-            class="mr-0.5 size-4.25! shrink-0! text-platinum dst" />
+            class="text-platinum dst mr-0.5 size-4.25! shrink-0!" />
           <p>
             {{ champion.price.blueEssence }}
             <span class="pr-0.5 text-xs font-medium">BE</span>
@@ -97,7 +97,7 @@ const damageType = computed(() =>
         <div>
           <Icon
             name="lp:rp"
-            class="mr-1 size-4.5! shrink-0! text-gold dst" />
+            class="text-gold dst mr-1 size-4.5! shrink-0!" />
           <p class="font-medium">
             {{ champion.price.rp }}
             <span class="pr-0.5 text-xs font-medium">RP</span>
@@ -115,8 +115,8 @@ const damageType = computed(() =>
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
           variant="link"
-          class="gap-1! px-0 font-medium underline decoration-bc/40
-              underline-offset-3 opacity-80 hover:decoration-bc
+          class="decoration-bc/40 hover:decoration-bc gap-1! px-0 font-medium
+              underline underline-offset-3 opacity-80
               hover:opacity-100">
           Patch {{ champion.patchLastChanged }}
           <template #content>

@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import { addPocket } from '@types'
-
 definePageMeta({
   name: 'pockets',
   icon: 'folder',

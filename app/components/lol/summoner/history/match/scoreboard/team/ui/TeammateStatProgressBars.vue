@@ -34,11 +34,3 @@ const target = useTemplateRef<HTMLElement>('target')
     </Progress>
   </div>
 </template>
-
-<style scoped>
-  @reference '@css/tailwind.css';
-
-.progress-label {
-  @apply text-xs flex shrink-0  *:shrink-0 leading-4 font-bold  gap-1 items-center;
-}
-</style>

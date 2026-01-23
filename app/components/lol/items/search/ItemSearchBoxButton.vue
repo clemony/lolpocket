@@ -18,10 +18,10 @@ const props = defineProps<{
     }">
     <icon
       name="search"
-      class="z-1 size-5 shrink-0 text-bc opacity-60 dst"
+      class="text-bc dst z-1 size-5 shrink-0 opacity-60"
       :class="{ 'text-nc opacity-90': props.contrast }" />
 
-    <div class="z-0 grow pt-0.5 text-left dst">
+    <div class="dst z-0 grow pt-0.5 text-left">
       Search Items...
     </div>
 

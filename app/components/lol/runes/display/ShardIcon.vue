@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { shardColor } from '~~/shared/constants/runes/shard-color'
-
 const { id, class: className, color } = defineProps<{
   class?: HTMLAttributes['class']
   id: string | number

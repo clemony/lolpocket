@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { shardObject } from '@records/shards'
-
 const { class: className, shards } = defineProps<{
   shards: ShardStats
   class?: HTMLAttributes['class']
@@ -12,7 +10,7 @@ const { class: className, shards } = defineProps<{
     v-for="row, ix in shardObject"
     :key="row.label">
     <div
-      class="grid w-full max-w-60 min-w-40 grid-cols-3 place-items-center gap-x-5 gap-y-5 rounded-lg border border-b3 px-2 py-3">
+      class="border-b3 grid w-full max-w-60 min-w-40 grid-cols-3 place-items-center gap-5 rounded-lg border px-2 py-3">
       <div
         v-for="shard, i in row.shards"
         :key="i"
@@ -31,7 +29,7 @@ const { class: className, shards } = defineProps<{
           :value="shards[ix]?.[shard.id]?.winrate" />
         <span
           v-if="shards[ix as ShardSlot]?.[shard.id]"
-          class="absolute -bottom-2 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70! px-1.5 py-0.5 align-middle text-xxs! leading-none font-bold text-nc/80! shadow-sm dss backdrop-blur-sm">
+          class="border-tint-neutral/50 bg-neutral/70! text-xxs! text-nc/80! dss absolute -bottom-2 z-1 inline-flex justify-self-center rounded-lg border px-1.5 py-0.5 align-middle leading-none font-bold shadow-sm backdrop-blur-sm">
           {{ shards[ix]?.[shard.id].winrate }}
         </span>
       </div>

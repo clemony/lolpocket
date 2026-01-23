@@ -17,7 +17,8 @@ export function pickBestGeneric<K extends string | number>(
 
   // 1️⃣ guarded pass
   for (const [key, s] of entries) {
-    if (s.games < minGames) continue
+    if (s.games < minGames)
+      continue
 
     const score = s.winrate ?? s.win / s.games
     if (score > bestScore) {
@@ -39,7 +40,8 @@ export function pickBestGeneric<K extends string | number>(
     }
   }
 
-  if (!bestKey || !bestStat) return null
+  if (!bestKey || !bestStat)
+    return null
 
   return {
     [bestKey]: bestStat,

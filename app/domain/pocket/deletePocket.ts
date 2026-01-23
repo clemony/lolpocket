@@ -4,10 +4,10 @@ export function deletePocket(pocket) {
   const route = useRoute()
   const inPocket = route.path === `/pocket/${pocket.key}`
 
-  pocket.location.folder = "trash"
+  pocket.location.folder = 'trash'
 
   if (inPocket) {
-    navigateTo("/backpack")
+    navigateTo('/backpack')
   }
 
   if (as().settings.ping_delete_pocket) {
@@ -18,7 +18,7 @@ export function deletePocket(pocket) {
         label: "Restore?",
         // onClick: () => navigateTo({ path: `/${newPocket.key}` }),
       }, */
-      description: "You can restore it for up to 30 days.",
+      description: 'You can restore it for up to 30 days.',
       duration: 7000,
     })
 
@@ -27,6 +27,6 @@ export function deletePocket(pocket) {
       pocketName: pocket.name,
     }
 
-    saveNotification("deletePocket", vars)
+    saveNotification('deletePocket', vars)
   }
 }

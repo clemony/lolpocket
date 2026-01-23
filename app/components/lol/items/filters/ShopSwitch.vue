@@ -9,7 +9,7 @@ const { class: className, label = true } = defineProps<{
   <label :class="cn('flex cursor-pointer items-center gap-3', className)">
     <span
       v-if="label === true"
-      class="font-semibold text-bc/90">
+      class="text-bc/90 font-semibold">
       {{ is().filters.purchasable ? "Purchasable" : "All Items" }}
     </span>
 

@@ -21,7 +21,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="h-hit z-2 w-full bg-b1">
+  <div class="h-hit bg-b1 z-2 w-full">
     <PagePlaceholder />
   </div>
 </template>

@@ -147,7 +147,7 @@ const filteredStats = computed(() => {
           justify-between px-5
         ">
         <h3
-          class="underline-offset-3 dst group-hover/tr:underline">
+          class="dst underline-offset-3 group-hover/tr:underline">
           Stats
         </h3>
         <CaretFlip />
@@ -156,10 +156,10 @@ const filteredStats = computed(() => {
         class="
           group-data-[state=open]/cl:animate-in
           group-data-[state=open]/cl:fade-in-0
-          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full
-          flex-col items-start px-5 pb-2
+          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out group-closed/cl:hidden -mt-3 flex
+          w-full flex-col items-start px-5
+          pb-2
           duration-300
-          group-closed/cl:hidden
         "
         @click.stop>
         <span class="w-full text-start">

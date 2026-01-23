@@ -8,12 +8,12 @@
     ">
     <Button
 
-      class="pointer-events-none text-bc/40"
+      class="text-bc/40 pointer-events-none"
       wrapper-class="bg-b2!"
       variant="secondary"
       size="c-14" />
 
-    <div class="flex flex-col justify-center gap-2 py-px font-medium opacity-60 dst">
+    <div class="dst flex flex-col justify-center gap-2 py-px font-medium opacity-60">
       <Element
         variant="secondary"
         base="btn"
@@ -28,14 +28,14 @@
     </div>
 
     <div class="flex grow flex-col items-end justify-center px-3 text-sm">
-      <p class="items-center font-medium text-nowrap dst"></p>
+      <p class="dst items-center font-medium text-nowrap"></p>
 
-      <p class="items-center font-medium text-nowrap dst"></p>
+      <p class="dst items-center font-medium text-nowrap"></p>
     </div>
 
     <DonutSkeleton
       thickness="4px"
-      class="size-14 opacity-50 dst"
+      class="dst size-14 opacity-50"
       label=""></DonutSkeleton>
   </div>
 </template>

@@ -11,7 +11,7 @@ const loaded = ref(false)
 
 <template>
   <div
-    :class="cn('relative flex size-full max-w-60 min-w-40 flex-col gap-6 rounded-lg border border-b3 px-2 py-6 **:cursor-default',
+    :class="cn('border-b3 relative flex size-full max-w-60 min-w-40 flex-col gap-6 rounded-lg border px-2 py-6 **:cursor-default',
                { 'order-last': path.name === 'Inspiration' }, className)">
     <div
       v-if="keystones"
@@ -38,7 +38,7 @@ const loaded = ref(false)
           :value="keystones?.[keystone.id]?.winrate" />
         <span
           v-if="keystones?.[keystone.id]"
-          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
+          class="border-tint-neutral/50 bg-neutral/70 text-xxs! text-nc/80 dss absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border px-1.5 py-0.5 align-middle leading-none font-bold shadow-sm backdrop-blur-sm">
           {{ keystones[keystone.id].winrate }}
         </span>
       </div>
@@ -76,7 +76,7 @@ const loaded = ref(false)
           <span
             v-if="runes?.[rune.id]"
             :class="cn('')"
-            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
+            class="border-tint-neutral/50 bg-neutral/70 text-xxs text-nc/80 dss absolute -bottom-2 z-1 inline-flex rounded-lg border px-1.5 py-0.5 align-middle leading-none font-bold shadow-sm backdrop-blur-sm">
             {{ runes[rune.id].winrate }}
           </span>
         </div>

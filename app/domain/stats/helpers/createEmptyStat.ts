@@ -3,16 +3,16 @@ export function createEmptyChampionStat(
   championName: string
 ): PairedChampionStat {
   return {
-    games: 0,
-    win: 0,
+    avgTimestamp: 0,
     championId,
     championName,
-    avgTimestamp: 0,
     delta: 0,
+    games: 0,
     synergy: 0,
+    win: 0,
   }
 }
 
 export function buildEmptyRoleObject() {
-  return { top: {}, jungle: {}, middle: {}, bottom: {}, support: {} }
+  return { middle: {}, bottom: {}, jungle: {}, support: {}, top: {} }
 }

@@ -29,12 +29,12 @@ definePageMeta({
   </div> -->
 
   <div class="size-full px-14">
-    <div class="mb-8 w-full border-b border-b-b3 pt-10 pb-8">
-      <h1 class="pb-2 text-4xl font-semibold dst">
+    <div class="border-b-b3 mb-8 w-full border-b pt-10 pb-8">
+      <h1 class="dst pb-2 text-4xl font-semibold">
         Item Data
       </h1>
 
-      <p class="font-medium text-bc/70">
+      <p class="text-bc/70 font-medium">
         Your best items during patch {{ ms().filter.patch }}
       </p>
     </div>
@@ -65,12 +65,12 @@ definePageMeta({
           title="☆ Rising Star" /> -->
       </div>
 
-      <div class="mb-10 w-full border-b border-b-b3 pt-26 pb-10">
-        <h1 class="pb-2 text-4xl font-semibold dst">
+      <div class="border-b-b3 mb-10 w-full border-b pt-26 pb-10">
+        <h1 class="dst pb-2 text-4xl font-semibold">
           Winrates & Playrates
         </h1>
 
-        <p class="font-medium text-bc/70">
+        <p class="text-bc/70 font-medium">
           How are your most played be doing well left right ->
         </p>
       </div>

@@ -33,21 +33,21 @@ const roleModel = computed({
 
       <TabsTrigger
         value="all"
-        class="grid! place-items-center **:text-bc!"
+        class="**:text-bc! grid! place-items-center"
         :disabled="!matches">
         <Icon
           name="role:all"
-          class="mb-px size-5.5 shrink-0 dst" />
+          class="dst mb-px size-5.5 shrink-0" />
       </TabsTrigger>
       <TabsTrigger
         v-for="role in roles"
         :key="role.name"
         :value="role.role"
-        class="grid! place-items-center **:text-bc!"
+        class="**:text-bc! grid! place-items-center"
         :disabled="!role.games">
         <Icon
           :name="`role:${role.role}`"
-          class="mb-px size-5.5 shrink-0 dst" />
+          class="dst mb-px size-5.5 shrink-0" />
       </TabsTrigger>
     </TabsList>
 

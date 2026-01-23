@@ -23,7 +23,7 @@ const { champion, class: className } = defineProps<{
     <!-- header name -->
     <template #title>
       <h1
-        class="text-[2.8rem] leading-none text-bc/94 drop-shadow-sm">
+        class="text-bc/94 text-[2.8rem] leading-none drop-shadow-sm">
         {{ champion.name }}
       </h1>
     </template>

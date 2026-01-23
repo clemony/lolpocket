@@ -2,7 +2,6 @@
 import { toTypedSchema } from '@vee-validate/valibot'
 import { parse } from 'valibot'
 import { useForm } from 'vee-validate'
-import { extractReadableText } from '~~/shared/.index'
 import { reportOptions } from './reportOptions'
 
 const { button, comment } = defineProps<{
@@ -79,7 +78,7 @@ defineExpose({
     <LazyDialogContent class="h-max max-w-172 px-7 pt-8">
       <DialogHeader>
         <DialogTitle> Report Card </DialogTitle>
-        <DialogDescription class="text-sm text-bc">
+        <DialogDescription class="text-bc text-sm">
           Report offensive, negative, or disruptive content. Please fill out the
           form to clarify and give additional context.
         </DialogDescription>
@@ -112,13 +111,13 @@ defineExpose({
           <TransitionScalePop
             v-if="errorBag?.options?.length"
             class="
-              mr-2 flex items-center gap-2 text-sm leading-none
-              text-shade-domination/8
+              text-shade-domination/8 mr-2 flex items-center gap-2 text-sm
+              leading-none
             ">
             <icon
               name="error"
               class="
-                inline size-4.5 align-bottom font-medium text-shade-domination/8
+                text-shade-domination/8 inline size-4.5 align-bottom font-medium
               " />
             <span
               v-for="(reason, i) in errorBag.options"

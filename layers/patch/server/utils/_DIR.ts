@@ -1,0 +1,5 @@
+export const c_DIR = "./server/patch/champions/"
+export const i_DIR = "./server/patch/items/"
+export const r_DIR = "./server/patch/runes/"
+export const s_DIR = "./server/patch/spells/"
+export const m_DIR = "./server/patch/misc/"

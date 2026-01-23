@@ -95,8 +95,8 @@ console.log('💠 - card.splash:', card.splash)
         id="pocket-card"
         ref="pocketCardRef"
         class="
-          relative aspect-square size-300 rounded-box border border-b3/70
-          object-contain shadow-smooth inset-shadow-sm
+          rounded-box border-b3/70 shadow-smooth relative aspect-square size-300
+          border object-contain inset-shadow-sm
         "
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,

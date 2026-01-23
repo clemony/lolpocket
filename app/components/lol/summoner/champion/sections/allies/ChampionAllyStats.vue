@@ -47,7 +47,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         class="group/collapse">
         <tr
           :class="cn(
-            'w-full! rounded-md *:leading-none group-open/collapse:bg-b2/60 hover:bg-b2/60 group-open/collapse:hover:bg-b2',
+            'group-open/collapse:bg-b2/60 hover:bg-b2/60 group-open/collapse:hover:bg-b2 w-full! rounded-md *:leading-none',
             '')">
           <td>
             <CollapsibleTrigger class="size-full h-12! justify-center">
@@ -89,7 +89,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           v-for="c, i in v.champions"
           :key="c.championId"
           as="tr"
-          class="CollapsibleContent w-full hover:bg-b2/30">
+          class="CollapsibleContent hover:bg-b2/30 w-full">
           <th class="font-semibold">
             <span>{{ i + 1 }}</span>
           </th>

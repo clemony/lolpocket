@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
+import type { Pocket } from '~~/shared/types/schema/schema.pocket'
 
 const props = defineProps<{
   pocket: Pocket
@@ -14,17 +14,17 @@ const menuOpen = ref(false)
 </script>
 
 <template>
-  <div class="max-h-[22.5rem] min-h-[17.5rem] w-full max-w-100 min-w-[22rem]">
+  <div class="max-h-90 min-h-70 w-full max-w-100 min-w-88">
     <ContextMenu
       as="div"
       class="h-inherit min-h-inherit w-inherit min-w-inherit">
       <ContextMenuTrigger
         as="div"
         class="
-          relative h-inherit min-h-inherit w-inherit min-w-inherit
-          cursor-pointer gap-3 overflow-hidden rounded-xl border border-b2
-          shadow-warm-soft drop-shadow-sm drop-shadow-black/5 **:select-none
-          hover:border-b3 hover:shadow-warm hover:ring-1 hover:ring-b2
+          h-inherit min-h-inherit w-inherit min-w-inherit border-b2
+          shadow-warm-soft hover:border-b3 hover:shadow-warm hover:ring-b2 relative cursor-pointer
+          gap-3 overflow-hidden rounded-xl border
+          drop-shadow-sm drop-shadow-black/5 **:select-none hover:ring-1
         "
         @click="navigateTo(`/pocket/${pocket.key}`)">
         <BackpackCardBackground :pocket="pocket" />
@@ -37,7 +37,7 @@ const menuOpen = ref(false)
           ">
           <div
             class="
-              inset-shadow pointer-events-none relative grid size-full px-4 py-3
+              pointer-events-none relative grid size-full px-4 py-3 inset-shadow-sm
             ">
             <BackpackRunes :pocket="pocket" />
 

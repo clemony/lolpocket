@@ -33,7 +33,7 @@ const payload = computed (() => {
     :content="{ side: 'top' }">
     <Card
       :class="
-        cn('flex w-full flex-col items-center pt-1 ring-bc/60 select-none hover:ring', className) ">
+        cn('ring-bc/60 flex w-full flex-col items-center pt-1 select-none hover:ring', className) ">
       <span class="text-xs! font-bold">
         {{ title }}
       </span>

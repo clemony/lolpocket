@@ -1,7 +1,7 @@
 export interface AllyStatDetail extends Identifier, TimedStatDetail {
   champions: Record<number, PairedChampionStat>
-  synergy: number
   delta: number
+  synergy: number
 }
 
 function bumpChampion(
@@ -20,10 +20,11 @@ function bumpChampion(
   const c = allyEntry.champions[ally.championId]
 
   c.games++
-  if (win) c.win++
+  if (win)
+    c.win++
 
-  c.avgTimestamp =
-    ((c.avgTimestamp ?? 0) * (c.games - 1) + gameDuration) / c.games
+  c.avgTimestamp
+    = ((c.avgTimestamp ?? 0) * (c.games - 1) + gameDuration) / c.games
 }
 
 function bumpAlly(
@@ -36,54 +37,59 @@ function bumpAlly(
 
   if (!map[key]) {
     map[key] = {
-      puuid: ally.puuid,
       name: ally.name,
-      tag: ally.tag,
-      icon: String(ally.icon),
-      champions: {},
-      games: 0,
-      win: 0,
+      puuid: ally.puuid,
       avgTimestamp: 0,
-      synergy: 0,
+      champions: {},
       delta: 0,
+      games: 0,
+      icon: String(ally.icon),
+      synergy: 0,
+      tag: ally.tag,
+      win: 0,
     }
   }
 
   const s = map[key]
 
   s.games++
-  if (win) s.win!++
+  if (win)
+    s.win!++
 
-  s.avgTimestamp =
-    ((s.avgTimestamp ?? 0) * (s.games - 1) + gameDuration) / s.games
+  s.avgTimestamp
+    = ((s.avgTimestamp ?? 0) * (s.games - 1) + gameDuration) / s.games
 
   bumpChampion(s, ally, win, gameDuration)
 }
 
-export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
-  computed<AllyStatDetail[]>(() => {
+export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
+  return computed<AllyStatDetail[]>(() => {
     const allies: Record<string, AllyStatDetail> = {}
 
     const totalGames = data.value?.length
-    if (!totalGames) return []
+    if (!totalGames)
+      return []
 
     const totalWins = data.value
-      .map((d) => d.participants.find((p) => p.puuid === puuid).win)
-      .filter((w) => w === true).length
+      .map(d => d.participants.find(p => p.puuid === puuid).win)
+      .filter(w => w === true)
+      .length
 
     for (const d of data.value) {
-      const player = d.participants.find((p) => p.puuid === puuid)
-      if (!player) continue
+      const player = d.participants.find(p => p.puuid === puuid)
+      if (!player)
+        continue
 
       const win = player.win
       const gameDuration = d.gameDuration
 
       const allyArray = d.participants.filter(
-        (p) => p.teamId === player.teamId && p.puuid !== player.puuid
+        p => p.teamId === player.teamId && p.puuid !== player.puuid
       )
 
       for (const ally of allyArray) {
-        if (win === "remake") continue
+        if (win === 'remake')
+          continue
         bumpAlly(allies, ally, win, gameDuration)
       }
     }
@@ -101,14 +107,14 @@ export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
         c.delta = winDelta(c.win, c.games, totalWins, totalGames)
       }
 
-      ally.champions = sortRecordBy(ally.champions, "games", "desc")
+      ally.champions = sortRecordBy(ally.champions, 'games', 'desc')
     }
 
     // collect ALL raw synergy values
     const allSynergyTotals = [
-      ...Object.values(allies).map((a) => a.delta),
-      ...Object.values(allies).flatMap((a) =>
-        Object.values(a.champions).map((c) => c.delta)
+      ...Object.values(allies).map(a => a.delta),
+      ...Object.values(allies).flatMap(a =>
+        Object.values(a.champions).map(c => c.delta)
       ),
     ]
 
@@ -136,5 +142,6 @@ export const aggregateAllies = (data: Ref<MatchData[]>, puuid: string) =>
       Object.values(filter).map((p) => p.champions)
     )
  */
-    return sortRecordBy(filter, "games", "desc") as AllyStatDetail[]
+    return sortRecordBy(filter, 'games', 'desc') as AllyStatDetail[]
   })
+}

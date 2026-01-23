@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AbilityTooltip, ChampionData, DataTooltip, ItemTooltip, RuneTooltip, SpellTooltip, StatTooltip } from '#components';
+/* import { AbilityTooltip, ChampionData, DataTooltip, ItemTooltip, RuneTooltip, SpellTooltip, StatTooltip } from '#components' */
 
 const { id, name, class: className, icon, payload, size, tag, text, type } = defineProps<{
   id?: string
@@ -22,7 +22,7 @@ watch(() => type, (v) => {
 })
 const color = computed (() => type === 'item' ? itemColorByTier(Number(id)) : 'var(--color-nc)')
 
-const typeIndex = {
+/* const typeIndex = {
   ability: AbilityTooltip,
   champion: ChampionData,
   data: DataTooltip,
@@ -30,7 +30,7 @@ const typeIndex = {
   rune: RuneTooltip,
   spell: SpellTooltip,
   stat: StatTooltip
-}
+} */
 
 const staticSize = ['data', 'stat']
 
@@ -65,7 +65,7 @@ function iconSource(type: string, id: string) {
 
 <template>
   <div :class="cn('flex cursor-pointer flex-nowrap items-center **:text-start', { ' px-2  py-1.5 gap-3': size !== 'lg' })">
-    <Suspense v-if="(size === 'lg' || staticSize.includes(type)) && type">
+    <!--  <Suspense v-if="(size === 'lg' || staticSize.includes(type)) && type">
       <component
         :is="typeIndex[type]"
         :id="type === 'ability' ? id : parseFloat(id)"
@@ -75,64 +75,63 @@ function iconSource(type: string, id: string) {
         <Spinner />
       </template>
     </Suspense>
+ -->
 
-    <template v-else>
-      <!-- IMG -->
+    <!--  <template v-else> IMG -->
 
-      <Img
-        v-if="id && type"
-        :src="iconSource(type, id)"
-        loading-type="spinner"
-        :size="size === 'md' ? 'c-8' : 'c-5'"
-        :alt="`${name || itemName(type, id)} Image`"
-        :class="cn('origin-left scale-110 overflow-hidden rounded-full shadow-sm drop-shadow-sm', { 'scale-100 object-contain': type === 'path' })">
-      </Img>
+    <Img
+      v-if="id && type"
+      :src="iconSource(type, id)"
+      loading-type="spinner"
+      :size="size === 'md' ? 'c-8' : 'c-5'"
+      :alt="`${name || itemName(type, id)} Image`"
+      :class="cn('origin-left scale-110 overflow-hidden rounded-full shadow-sm drop-shadow-sm', { 'scale-100 object-contain': type === 'path' })">
+    </Img>
 
-      <!-- ICON -->
-      <Icon
-        v-if="icon"
-        :name="typeof icon === 'string' ? icon : icon[0]"
-        class="" />
+    <!-- ICON -->
+    <Icon
+      v-if="icon"
+      :name="typeof icon === 'string' ? icon : icon[0]"
+      class="" />
+    <div
+      :class="cn('flex flex-nowrap **:text-start',
+                 {
+                   'items-center gap-3 ': !size || size === 'default',
+                   'flex-col items-start! gap-px': size === 'md' })">
+      <!-- PLAYER -->
+      <span
+        v-if="type === 'player'"
+        :style="{ color }"
+        class="inline-flex h-5 w-fit items-center align-baseline leading-none">
+        {{ name }}
+
+        <span class="text-xxs! ml-1 inline">
+          #{{ tag }}
+        </span>
+      </span>
+
       <div
-        :class="cn('flex flex-nowrap **:text-start',
-                   {
-                     'items-center gap-3 ': !size || size === 'default',
-                     'flex-col items-start! gap-px': size === 'md' })">
-        <!-- PLAYER -->
-        <span
-          v-if="type === 'player'"
-          :style="{ color }"
-          class="inline-flex h-5 w-fit items-center align-baseline leading-none">
-          {{ name }}
-
-          <span class="text-xxs! ml-1 inline">
-            #{{ tag }}
-          </span>
-        </span>
-
-        <div
-          v-else-if="type === 'default'"
-          :style="{ color }"
-          :class="cn('inline w-full pl-1 leading-5 text-pretty whitespace-pre-line first-letter:capitalize', { 'text-center justify-self-center': !icon && !img }, className)">
-          {{ text }}
-        </div>
-        <span
-          v-else-if="type && id"
-          :style="{ color }"
-          class="h-4 text-start leading-4 opacity-80">
-          {{ itemName(type, id) }}
-        </span>
-        <span
-          v-if="!name"
-          class="-ml-1 inline align-baseline text-xs first-letter:capitalize">
-          {{ tag }}
-        </span>
-        <p
-          v-if="text && size === 'md'"
-          :class="cn('text-sm! leading-4 text-pretty whitespace-pre-line', { '': icon || (id && type) })">
-          {{ text }}
-        </p>
+        v-else-if="type === 'default'"
+        :style="{ color }"
+        :class="cn('inline w-full pl-1 leading-5 text-pretty whitespace-pre-line first-letter:capitalize', { 'text-center justify-self-center': !icon && !img }, className)">
+        {{ text }}
       </div>
-    </template>
+      <span
+        v-else-if="type && id"
+        :style="{ color }"
+        class="h-4 text-start leading-4 opacity-80">
+        {{ itemName(type, id) }}
+      </span>
+      <span
+        v-if="!name"
+        class="-ml-1 inline align-baseline text-xs first-letter:capitalize">
+        {{ tag }}
+      </span>
+      <p
+        v-if="text && size === 'md'"
+        :class="cn('text-sm! leading-4 text-pretty whitespace-pre-line', { '': icon || (id && type) })">
+        {{ text }}
+      </p>
+    </div>
   </div>
 </template>

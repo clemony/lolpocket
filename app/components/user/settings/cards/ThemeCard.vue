@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ListboxItem, ListboxItemIndicator } from 'reka-ui';
+import { ListboxItem, ListboxItemIndicator } from 'reka-ui'
 
 const {
   activeTheme,
@@ -21,17 +21,17 @@ const colorChip
     :data-theme="theme.name"
     :class="
       cn('theme-${theme.name}',
-        `
-          group/theme relative grid size-full! max-h-90 max-w-82 hover-ring
-          cursor-pointer grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] items-center
-          justify-center gap-5 overflow-hidden rounded-lg bg-b1 px-6 py-4
-          text-bc shadow-sm shadow-black/16 drop-shadow-xs select-none
+         `
+          group/theme hover-ring bg-b1 text-bc relative grid size-full!
+          max-h-90 max-w-82 cursor-pointer
+          grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] items-center justify-center gap-5 overflow-hidden rounded-lg px-6
+          py-4 shadow-sm shadow-black/16 drop-shadow-xs select-none
         `,
-        {
-          'border-bc group-hover/label:ring group-hover/label:ring-offset-1    ':
-            theme.name === activeTheme,
-        },
-        className,
+         {
+           'border-bc group-hover/label:ring group-hover/label:ring-offset-1    ':
+             theme.name === activeTheme,
+         },
+         className,
       )
     ">
     <Button
@@ -54,7 +54,7 @@ const colorChip
       <p class="h-9 leading-5 text-pretty italic">
         '{{ theme.quote }}'
       </p>
-      <p class="pr-4 text-end text-sm leading-4 text-pretty italic opacity-80">
+      <p class="pr-4 text-end text-sm/4 text-pretty italic opacity-80">
         —{{ theme.champion }}
       </p>
     </div>
@@ -72,7 +72,7 @@ const colorChip
       </div>
     </div>
     <div
-      class="mt-3 tracking-wide text-bc opacity-90 *:leading-3.5">
+      class="text-bc mt-3 tracking-wide opacity-90 *:leading-3.5">
       <p class="text-[8px] font-semibold uppercase">
         lolpocket theme
       </p>

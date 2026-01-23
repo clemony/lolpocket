@@ -1,6 +1,6 @@
 // plugins/echarts.client.ts
-import { defineNuxtPlugin } from "#app"
-import { HeatmapChart, ScatterChart } from "echarts/charts"
+import { defineNuxtPlugin } from '#app'
+import { HeatmapChart, ScatterChart } from 'echarts/charts'
 import {
   DataZoomComponent,
   GridComponent,
@@ -9,14 +9,13 @@ import {
   ToolboxComponent,
   TooltipComponent,
   VisualMapComponent,
-} from "echarts/components"
-import { init, registerTheme, use } from "echarts/core"
-import { AxisBreak } from "echarts/features"
-import { CanvasRenderer } from "echarts/renderers"
-import theme from "~/ui/config/config.echarts.theme"
+} from 'echarts/components'
+import { init, registerTheme, use } from 'echarts/core'
+import { AxisBreak } from 'echarts/features'
+import { CanvasRenderer } from 'echarts/renderers'
 
 export default defineNuxtPlugin(() => {
-  registerTheme("theme", theme)
+  // registerTheme("theme", theme)
 
   use([
     CanvasRenderer,

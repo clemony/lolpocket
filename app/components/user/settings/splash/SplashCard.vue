@@ -82,9 +82,9 @@ function handlePointerLeave() {
     @pointerleave="handlePointerLeave">
     <Card
       :class="
-        cn('border-outset grid h-full origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden rounded-md border border-b3 transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
+        cn('border-outset border-b3 grid h-full origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden rounded-md border transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
 
-           'group/photo grid aspect-7/8 h-auto w-full min-w-32 shrink-0 cursor-pointer grid-rows-[1fr_0.2fr] border-b3 bg-b1! p-2 inset-shadow-xxs',
+           'group/photo border-b3 bg-b1! inset-shadow-xxs grid aspect-7/8 h-auto w-full min-w-32 shrink-0 cursor-pointer grid-rows-[1fr_0.2fr] p-2',
         )
       ">
       <div

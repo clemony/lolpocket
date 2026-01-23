@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { InboxItem } from '@types'
-import { getInboxTemplate } from '~~/layers/types/src/schema/generate/inbox-templates'
+import { getInboxTemplate } from '~~/shared/types/schema/generate/inbox-templates'
 
 const { item } = defineProps<{ item: InboxItem }>()
 

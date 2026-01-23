@@ -19,7 +19,7 @@ const searchQuery = ref('')
   <div
     :class="
       cn(
-        'flex h-12 items-center gap-4 border border-b3 bg-b1! px-3 py-2 text-md',
+        'border-b3 bg-b1! text-md flex h-12 items-center gap-4 border px-3 py-2',
         props.class,
       )
     ">
@@ -31,7 +31,7 @@ const searchQuery = ref('')
       v-model="searchQuery"
       :placeholder="props.placeholder"
       :class="
-        cn('flex h-full grow border-0 text-start text-md ring-0 outline-0 hover:border-0 hover:ring-0 hover:outline-0',
+        cn('text-md flex h-full grow border-0 text-start ring-0 outline-0 hover:border-0 hover:ring-0 hover:outline-0',
            props.inputClass,
         )
       " />
@@ -39,7 +39,7 @@ const searchQuery = ref('')
     <slot />
 
     <button
-      class="btn absolute right-2 btn-square btn-ghost btn-sm"
+      class="btn btn-square btn-ghost btn-sm absolute right-2"
       @click="searchQuery = null">
       <icon
         name="x-sm"

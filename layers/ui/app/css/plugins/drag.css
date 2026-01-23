@@ -1,0 +1,74 @@
+
+.module-ghost {
+  @apply size-full rounded-xl bg-b2/20 inset-shadow-sm;
+}
+
+.module-ghost::before {
+  @apply opacity-0;
+}
+
+.module-drag {
+  @apply w-full border-transparent !bg-transparent !opacity-97;
+  .module-bg {
+    @apply border-b2 bg-b1 shadow-smooth transition-all duration-300;
+  }
+}
+
+/* pocket item set */
+
+.item-set-drag,
+.item-set-ghost,
+.item-set-fallback,
+.item-set-chosen {
+  @apply h-fit w-full cursor-pointer items-center gap-2 rounded-box border border-b2 bg-b2/30 opacity-70 shadow-xs;
+}
+
+/* item set item */
+
+.item-set-icon {
+  border-color: var(--color-b2);
+  background-color: --alpha(var(--bg-b2) / 30%);
+  overflow: hidden;
+  aspect-ratio: square;
+  width: var(--spacing) * 18;
+  height: var(--spacing) * 18;
+  border-radius: var(--radius-lg);
+}
+
+/* draggable icon */
+
+.draggable-icon-ghost,
+.draggable-icon-fallback {
+  @apply aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
+}
+
+.draggable-icon-fallback-80px,
+.draggable-icon-ghost-80px,
+.item-set-item-chosen-80px {
+  @apply aspect-square !size-[78px] cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
+}
+/* spell set */
+
+.spell-set-ghost,
+.spell-set-drag,
+.spell-set-chosen {
+  @apply h-20 w-98 rounded-box border-b3/60 !bg-b2/40;
+}
+
+/* role */
+
+.role-ghost,
+.role-drag,
+.role-chosen {
+  @apply h-8 max-h-8 max-w-32 min-w-26 bg-neutral;
+}
+
+.champion-card-ghost-class {
+  width: 170px;
+  min-width: 170px;
+  max-width: 170px;
+  border: 1px solid var(--color-b3);
+  height: calc(var(--spacing) * 36);
+  max-height: calc(var(--spacing) * 36);
+  overflow: hidden;
+}

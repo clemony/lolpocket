@@ -1,5 +1,3 @@
-import type { InboxItem } from '@types'
-
 export function saveNotification(
   template: string,
   vars: Record<string, string>

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
 import { roles } from './handleRoles'
 
 const props = defineProps<{

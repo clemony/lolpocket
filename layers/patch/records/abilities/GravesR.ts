@@ -1,0 +1,60 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'R',
+  name: 'Collateral Damage',
+  width: '200',
+  affects: 'Enemies / Self',
+  angle: '60°',
+  blurb: 'Active:  Graves  recoils backward and fires an explosive shell in the target direction that deals physical damage to enemies it passes through.',
+  castTime: '0.25',
+  cooldown: '100 / 80 / 60',
+  cost: '100',
+  damageType: 'Physical damage',
+  effectRadius: '740',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Graves fires an explosive shell in the target direction that deals physical damage to enemies hit and causes him to recoil 400 units in the opposite direction.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '275 / 425 / 575'
+            },
+            {
+              unit: '% bonus AD',
+              values: '150'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Upon hitting an enemy champion or reaching the end of its range, the shell explodes in a cone to deal reduced damage to additional enemies.',
+      leveling: [
+        {
+          attribute: 'Reduced Damage',
+          modifiers: [
+            {
+              values: '200 / 320 / 440'
+            },
+            {
+              unit: '% bonus AD',
+              values: '120'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/r',
+  notes: 'Applies  spell damage to the target hit by the shell (including to non-champions struck before exploding(bug)) and  area damage to targets within the explosion cone.\nThe projectile will still explode early if the champion hit by the shell is protected by a  spell shield.\nThe explosion cone is anchored on the location of the shell missile when it collided with a champion, or otherwise its maximum cast range.\nThe cone damage is always located 150 units behind, based off its direction\nCollateral Damage is not disabled while  grounded or  rooted, but Graves will not dash after the cast time while affected by them.\nGraves will not  dash after the cast time if he is  airborne.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '2100',
+  spellEffects: 'Special',
+  spellshieldable: 'special',
+  targeting: 'Direction'
+}
+export default ability

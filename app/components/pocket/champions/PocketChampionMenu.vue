@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { Pocket } from '@types'
 import type { PopoverContentProps } from 'reka-ui'
 
 const { k, pocket: p } = defineProps<

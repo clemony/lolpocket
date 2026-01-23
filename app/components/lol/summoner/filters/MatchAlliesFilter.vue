@@ -33,7 +33,7 @@ const winrateFormula = ref('absolute')
               base="btn"
               variant="ghost"
               hover="secondary"
-              :class="cn('group/ally w-full gap-3 pr-4 pl-3 dst duration-0! **:font-medium **:normal-case focus:outline-0', { hidden: filter?.ally && filter?.ally !== ally.puuid })">
+              :class="cn('group/ally dst w-full gap-3 pr-4 pl-3 duration-0! **:font-medium **:normal-case focus:outline-0', { hidden: filter?.ally && filter?.ally !== ally.puuid })">
               <SummonerIcon
                 class="size-8 rounded-full shadow-sm drop-shadow-sm"
                 :icon-id="ally.icon"
@@ -49,7 +49,7 @@ const winrateFormula = ref('absolute')
                 <Icon
                   v-if="ally === allies.sort((a, b) => b.synergy - a.synergy)[0]"
                   name="ion:star"
-                  class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!" />
+                  class="dst **:text-bc/80! ml-1 inline size-3.5 align-bottom" />
               </span>
 
               <div class="w-24 text-end text-sm whitespace-nowrap">
@@ -65,7 +65,7 @@ const winrateFormula = ref('absolute')
                 base="btn"
                 wrapper-class=""
                 size="c-6"
-                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/ally:animate-heartbeat">
+                class="bg-b2! group-hover/ally:animate-heartbeat pointer-events-none absolute top-0.5 left-1 z-5 p-0 opacity-80 backdrop-blur-sm">
                 <Icons
                   name="heroicons:x-circle-16-solid"
                   class="size-5.25!" />
@@ -78,8 +78,8 @@ const winrateFormula = ref('absolute')
               v-for="i in 5"
               :key="i"
               class="
-              pointer-events-none ml-3 grid w-[94%]
-              grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost
+              btn-ghost pointer-events-none ml-3 grid
+              w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60
             ">
               <Skeleton class="size-8.5 rounded-full" />
 

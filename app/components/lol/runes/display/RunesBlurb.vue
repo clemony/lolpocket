@@ -47,7 +47,7 @@ const a = computed(() => {
   <transition-fade
     group>
     <div class="flex items-center gap-6 leading-none">
-      <h1 class="text-4xl dst transition-all duration-300">
+      <h1 class="dst text-4xl transition-all duration-300">
         {{ currentPath === "" ? "Runes" : (currentPath ?? title) }}
       </h1>
 

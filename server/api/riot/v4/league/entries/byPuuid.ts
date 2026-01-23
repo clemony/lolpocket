@@ -1,6 +1,6 @@
-import { riotFetch } from "riot"
-import { apiPath } from "~~/server/domain"
-import type { RankedEntryResponse, RankedResponse } from "~~/server/types"
+import type { RankedEntryResponse, RankedResponse } from '~~/server/types'
+import { riotFetch } from 'riot'
+import { apiPath } from '~~/server/domain'
 
 export async function fetchRankedByPuuid(puuid: string, region: string) {
   const league = await riotFetch<RankedEntryResponse[]>(
@@ -12,17 +12,19 @@ export async function fetchRankedByPuuid(puuid: string, region: string) {
 
   for (const entry of league) {
     const processed: RankedEntry = {
+      name: entry.leagueId,
       division: entry.rank,
       losses: entry.losses,
-      name: entry.leagueId,
       lp: entry.leaguePoints,
       queue: entry.queueType,
       tier: entry.tier,
       wins: entry.wins,
     }
 
-    if (entry.queueType === "RANKED_SOLO_5x5") ranked.solo = processed
-    if (entry.queueType === "RANKED_FLEX_SR") ranked.flex = processed
+    if (entry.queueType === 'RANKED_SOLO_5x5')
+      ranked.solo = processed
+    if (entry.queueType === 'RANKED_FLEX_SR')
+      ranked.flex = processed
   }
 
   return { ranked }

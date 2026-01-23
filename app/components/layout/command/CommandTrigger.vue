@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~~/@lib/app/utils/device';
-
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
@@ -26,7 +24,7 @@ watchEffect(() => {
     class="">
     <button
       :class="
-        cn('group input flex! h-12 w-full cursor-text flex-nowrap items-center gap-2 rounded-lg-2 bg-transparent! px-3 text-nowrap hover:ring-1 hover:ring-b4',
+        cn('group input rounded-lg-2 hover:ring-b4 flex! h-12 w-full cursor-text flex-nowrap items-center gap-2 bg-transparent! px-3 text-nowrap hover:ring-1',
            props.class,
         )
       "
@@ -34,16 +32,16 @@ watchEffect(() => {
       @click.stop="ui().commandOpen = true">
       <icon
         name="search"
-        class="size-4 shrink-0 opacity-70 dst group-hover:opacity-100" />
+        class="dst size-4 shrink-0 opacity-70 group-hover:opacity-100" />
 
       <span
         class="
-          mt-px grow text-left text-sm font-medium tracking-tight text-bc/70
+          text-bc/70 mt-px grow text-left text-sm font-medium tracking-tight
         ">
         summoners, data, pockets...
       </span>
 
-      <span class="text-md! font-medium text-bc/60">{{ getDeviceKey() }} K</span>
+      <span class="text-md! text-bc/60 font-medium">{{ getDeviceKey() }} K</span>
     </button>
   </SheetClose>
 </template>

@@ -12,7 +12,7 @@ const { id, class: className } = defineProps<{
       v-if="id > 0"
       :id
       variant="btn"
-      class="z-1 size-9 rounded-full object-contain opacity-80 ring-bc/60 brightness-110 contrast-120 grayscale transition-all duration-200 hover:scale-105 hover:opacity-100 hover:ring hover:brightness-100 hover:contrast-100 hover:grayscale-0" />
+      class="ring-bc/60 z-1 size-9 rounded-full object-contain opacity-80 brightness-110 contrast-120 grayscale transition-all duration-200 hover:scale-105 hover:opacity-100 hover:ring hover:brightness-100 hover:contrast-100 hover:grayscale-0" />
     <Icon
       v-else
       name="lol:champ"

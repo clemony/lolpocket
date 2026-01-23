@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { Pocket } from '@types'
 import { motion } from 'motion-v'
 
 /* const hover = shallowRef<boolean>(false)

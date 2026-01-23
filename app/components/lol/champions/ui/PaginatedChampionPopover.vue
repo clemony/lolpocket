@@ -49,14 +49,14 @@ watch(
         variant="btn"
         hover="btn"
         :class="
-          cn('transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-bc/60 duration-300 open:btn-active open:ring-2 hover:text-bc/60 hover:ring hover:inset-shadow-xs',
+          cn('transition-[colors, opacity] ring-bc/60 open:btn-active hover:text-bc/60 relative aspect-square h-auto w-full overflow-hidden p-0 duration-300 open:ring-2 hover:ring hover:inset-shadow-xs',
              { 'shadow-sm drop-shadow-sm ': pocket._champion },
           )
         ">
         <icon
           v-if="!pocket?._champion"
           name="lp:champ"
-          class="size-10 text-bc/20" />
+          class="text-bc/20 size-10" />
         <Champion
           v-else
           v-memo="pocket._champion"
@@ -64,12 +64,12 @@ watch(
           :src="getSplash(pocket._champion, 'tile')" />
         <div
           :class="
-            cn('absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
+            cn('bg-neutral/60 absolute inset-0 grid size-full items-end justify-center p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
                { 'bg-b2 **:text-bc/40': !pocket._champion },
             )
           ">
           <CaretFlip
-            class="size-8 text-nc! opacity-80 drop-shadow-sm"
+            class="text-nc! size-8 opacity-80 drop-shadow-sm"
             fill />
         </div>
       </Button>
@@ -88,7 +88,7 @@ watch(
         <input
           v-model="searchQuery"
           class="
-            h-full w-full pr-4 text-sm transition-all duration-200
+            size-full pr-4 text-sm transition-all duration-200
             placeholder:italic
           "
           placeholder="Search All Champions..."
@@ -99,8 +99,8 @@ watch(
           variant="ghost"
           size="8"
           class="
-            absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100
-            group-has-[:placeholder-shown]/txt:opacity-0
+            btn-square absolute top-3 right-2 size-6 shrink-0 opacity-100
+            group-has-placeholder-shown/txt:opacity-0
           "
           @click="searchQuery = ''">
           <icon
@@ -148,13 +148,13 @@ watch(
               variant="btn"
               title="Clear main champion"
               class="
-                aspect-square h-auto w-full hover-ring border-b3 bg-b2
-                hover:bg-b3/80!
+                hover-ring border-b3 bg-b2 hover:bg-b3/80! aspect-square h-auto
+                w-full
               "
               @click="pocket._champion = ''">
               <icon
                 name="lp:champ"
-                class="size-7 text-bc/20" />
+                class="text-bc/20 size-7" />
             </Button>
           </PopoverClose>
           <ChampionIcon
@@ -163,7 +163,7 @@ watch(
             :key="champion"
             as="label"
             class="
-              aspect-square h-auto w-full hover-ring cursor-pointer rounded-lg
+              hover-ring aspect-square h-auto w-full cursor-pointer rounded-lg
             "
             @click="open = false">
             <input

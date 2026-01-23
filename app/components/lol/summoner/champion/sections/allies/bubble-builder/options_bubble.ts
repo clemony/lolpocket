@@ -1,15 +1,15 @@
-import type { EChartsOption } from "echarts"
+import type { EChartsOption } from 'echarts'
 
 export function buildAllyBubbleOptions(
   breaks: Record<string, number>
 ): EChartsOption {
   return {
     xAxis: {
-      name: "Winrate",
+      name: 'Winrate',
       nameGap: 30,
-      nameLocation: "center",
+      nameLocation: 'center',
       axisLabel: {
-        alignMinLabel: "left",
+        alignMinLabel: 'left',
       },
       axisTick: {
         show: true,
@@ -19,49 +19,49 @@ export function buildAllyBubbleOptions(
       splitLine: {
         show: false,
       },
-      type: "value",
+      type: 'value',
     },
     yAxis: {
-      name: "Delta",
+      name: 'Delta',
       nameGap: 20,
       nameTextStyle: {
-        align: "right",
+        align: 'right',
       },
       breaks: [
         {
-          start: breaks.high,
           end: 100,
+          start: breaks.high,
         },
         {
-          start: breaks.low,
           end: -100,
+          start: breaks.low,
         },
       ],
 
-      breakArea: {
-        show: true,
-        itemStyle: {
-          color: cssVar("--color-b3"),
-          borderColor: cssVar("--color-b3"),
-        },
-        zigzagAmplitude: 0,
-        zigzagMinSpan: 4,
-        zigzagMaxSpan: 20,
-        zigzagZ: 0,
-        expandOnClick: true,
-      },
       axisLabel: {
         // showMinLabel: false
       },
       axisTick: {
         show: true,
       },
+      breakArea: {
+        expandOnClick: true,
+        itemStyle: {
+          borderColor: cssVar('--color-b3'),
+          color: cssVar('--color-b3'),
+        },
+        show: true,
+        zigzagAmplitude: 0,
+        zigzagMaxSpan: 20,
+        zigzagMinSpan: 4,
+        zigzagZ: 0,
+      },
       max: 100,
       min: -100,
       splitLine: {
         showMaxLine: false,
       },
-      type: "value",
+      type: 'value',
     },
   }
 }

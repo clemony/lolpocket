@@ -9,7 +9,7 @@ const { class: className, path, selections } = defineProps<{
 <template>
   <Card
     :data-path="path.name"
-    :class="cn('gradient relative flex flex-col gap-2 overflow-hidden rounded-xxl! px-4 pt-4 pb-6 **:cursor-default after:absolute after:inset-0 after:z-0 after:size-full after:bg-linear-to-b after:from-b1/60 after:to-b1', className)">
+    :class="cn('gradient rounded-xxl! after:from-b1/60 after:to-b1 relative flex flex-col gap-2 overflow-hidden px-4 pt-4 pb-6 **:cursor-default after:absolute after:inset-0 after:z-0 after:size-full after:bg-linear-to-b', className)">
     <div
       class="flex h-fit w-full max-w-full shrink flex-nowrap items-center justify-between">
       <Keystone

@@ -15,17 +15,17 @@ export function useTimeline() {
 
     // 2. Fetch full match timeline ONCE
     const players = await $fetch<Record<string, PlayerTimeline>>(
-      "/api/riot/v5/timeline/timelineByMatchId",
+      '/api/riot/v5/timeline/timelineByMatchId',
       {
         params: { matchId, region },
       }
     )
 
     const payload: MatchTimeline = {
-      matchId,
-      players,
-      participantIds: Object.keys(players), // REQUIRED
       lastAccessedAt: Date.now(),
+      matchId,
+      participantIds: Object.keys(players), // REQUIRED
+      players,
     }
 
     await lpdb.matchTimeline.put(payload)
@@ -34,7 +34,8 @@ export function useTimeline() {
     await putMatchTimeline(matchId, payload)
 
     const player = players[puuid]
-    if (!player) throw new Error(`timeline missing for puuid: ${puuid}`)
+    if (!player)
+      throw new Error(`timeline missing for puuid: ${puuid}`)
 
     return player
   }
@@ -43,12 +44,12 @@ export function useTimeline() {
     puuid: string
   ): Promise<PlayerTimeline[]> => {
     const rows = await lpdb.matchTimeline
-      .where("participantIds")
+      .where('participantIds')
       .equals(puuid)
       .toArray()
 
     return rows
-      .map((r) => r.players?.[puuid])
+      .map(r => r.players?.[puuid])
       .filter((t): t is PlayerTimeline => !!t)
   }
 
@@ -61,32 +62,32 @@ export function useTimeline() {
     const local = await getMatchTimeline(matchId)
 
     if (local?.players) {
-      return puuids.map((p) => local.players[p]).filter(Boolean)
+      return puuids.map(p => local.players[p]).filter(Boolean)
     }
 
     // Fetch once, store once
     const players = await $fetch<Record<string, PlayerTimeline>>(
-      "/api/riot/v5/timeline/timelineByMatchId",
+      '/api/riot/v5/timeline/timelineByMatchId',
       {
         params: { matchId, region },
       }
     )
 
     const payload: MatchTimeline = {
-      matchId,
-      players,
-      participantIds: Object.keys(players), // REQUIRED
       lastAccessedAt: Date.now(),
+      matchId,
+      participantIds: Object.keys(players), // REQUIRED
+      players,
     }
 
     await putMatchTimeline(matchId, payload)
 
-    return puuids.map((p) => players[p]).filter(Boolean)
+    return puuids.map(p => players[p]).filter(Boolean)
   }
 
   return {
-    getTimeline,
     getAllTimelinesForPuuid,
     getBulkTimelines,
+    getTimeline,
   }
 }

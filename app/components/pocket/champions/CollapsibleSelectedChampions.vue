@@ -68,7 +68,7 @@ const itemVariants = {
               zIndex: `-${i}`,
             }"
             as-child
-            class="grid size-22! place-items-center border-0 bg-b1 fx-0">
+            class="bg-b1 fx-0 grid size-22! place-items-center border-0">
             <motion.div
               :variants="itemVariants"
               :transition="{
@@ -91,7 +91,7 @@ const itemVariants = {
               :key="champion"
               variant="base"
               shape="circle"
-              class="z-1 grid size-22! place-items-center border-0 bg-b1 fx-0">
+              class="bg-b1 fx-0 z-1 grid size-22! place-items-center border-0">
               <ChampionIcon
                 :k="champion"
                 class="size-18! rounded-full" />
@@ -102,7 +102,7 @@ const itemVariants = {
             variant="base"
             shape="circle"
             class="
-              relative z-1 grid size-22! place-items-center border-0 bg-b1 fx-0
+              bg-b1 fx-0 relative z-1 grid size-22! place-items-center border-0
             ">
             <Element
               shape="circle"
@@ -110,7 +110,7 @@ const itemVariants = {
               class="size-18! *:transition-all *:duration-300">
               <icon
                 name="up"
-                class="absolute group-closed:opacity-0" />
+                class="group-closed:opacity-0 absolute" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>

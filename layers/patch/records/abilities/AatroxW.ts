@@ -1,0 +1,81 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Infernal Chains',
+  width: '160',
+  affects: 'Enemies',
+  blurb: 'Active:  Aatrox sends a chain in the target direction that deals physical damage and  slows the first enemy hit.',
+  castTime: '0.25',
+  cooldown: '20 / 18 / 16 / 14 / 12',
+  cost: '0',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Aatrox sends a chain in the target direction that deals physical damage to the first enemy hit, doubled against minions, and slowing them for 1.5 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '30 / 40 / 50 / 60 / 70'
+            },
+            {
+              unit: '% AD',
+              values: '40'
+            }
+          ]
+        },
+        {
+          attribute: 'Minion Damage',
+          modifiers: [
+            {
+              values: '60 / 80 / 100 / 120 / 140'
+            },
+            {
+              unit: '% AD',
+              values: '80'
+            }
+          ]
+        },
+        {
+          attribute: 'Slow',
+          modifiers: [
+            {
+              unit: '%',
+              values: '25 / 27.5 / 30 / 32.5 / 35'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'If this hits an enemy champion or large monster, a tether is formed between the target and the ground beneath them for 1.5 seconds, during which they are revealed.'
+    },
+    {
+      description: 'If the tether is not broken by the end of its duration, the target is dealt the same physical damage again and pulled to the center of the area.',
+      leveling: [
+        {
+          attribute: 'Total Damage',
+          modifiers: [
+            {
+              values: '60 / 80 / 100 / 120 / 140'
+            },
+            {
+              unit: '% AD',
+              values: '80'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/w',
+  notes: 'The impact area is oriented relative to Aatrox\'s position when the projectile hits, not where the projectile originated from.\nThe location that the target is dragged to is not at the target\'s original location, but slightly closer towards Aatrox\'s position when the zone expires.\n Spell shield will block the chain\'s application and initial damage but not the aftereffects of one already applied.\nThis ability\'s damage is calculated based on the caster\'s current stats and changes dynamically.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+  projectile: 'TRUE',
+  speed: '1800',
+  spellEffects: 'spell',
+  spellshieldable: 'Special',
+  targeting: 'Direction'
+}
+export default ability

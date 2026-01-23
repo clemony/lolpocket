@@ -14,7 +14,7 @@ const highest = computed (() =>
 <template>
   <div
     :style="{ '--stat-color': color }"
-    class="match-row border-b group-not-last/row:border-b3/50! group-last/row:border-transparent">
+    class="match-row group-not-last/row:border-b3/50! border-b group-last/row:border-transparent">
     <div
       :data-type="stat[1].name"
       data-placement="left"

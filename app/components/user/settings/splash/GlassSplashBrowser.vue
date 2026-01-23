@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import type { DialogContentProps } from 'reka-ui';
-import { useForwardPropsEmits } from 'reka-ui';
-import { skinIndex } from '~~/shared/.index';
+import type { DialogContentProps } from 'reka-ui'
+import { useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<DialogContentProps & {
   class?: HTMLAttributes['class']
@@ -41,27 +40,27 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
     v-bind="forwarded">
     <DialogTrigger
       :class="
-        cn('group/icon pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-2 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-b4 hover:ring-offset-neutral',
+        cn('group/icon hover:ring-b4 hover:ring-offset-neutral pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center rounded-full shadow-xs ring ring-transparent ring-offset-2 ring-offset-transparent drop-shadow-sm transition-colors duration-300',
            props.class,
         )
       ">
       <slot />
     </DialogTrigger>
     <LazyGlassDialogContent
-      class="grid h-screen w-screen min-w-screen overflow-hidden p-0 backdrop-blur">
+      class="grid h-screen w-screen min-w-screen overflow-hidden p-0 backdrop-blur-sm">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
 
       <div
         class="
-      relative mx-auto scrollbar-hidden flex w-full max-w-3/5 flex-col
+      scrollbar-hidden relative mx-auto flex w-full max-w-3/5 flex-col
           overflow-hidden px-32
         ">
         <!-- search -->
         <InputGroup
           :as="selectedChampion ? 'button' : 'div'"
-          :class="cn('ring-none sticky top-0 z-2 mt-44 h-20 w-full shrink-0 items-center gap-3 rounded-none border-x-0 border-t-0 border-b border-b-transparent! py-3 shadow-none inset-shadow-none outline-none focus-within:inset-shadow-0 focus-within:border-b-white/50! focus-within:ring-0! focus-within:outline-0 selection:bg-white/40 selection:text-black', { 'cursor-pointer **:pointer-events-none': selectedChampion })"
+          :class="cn('ring-none focus-within:inset-shadow-0 sticky top-0 z-2 mt-44 h-20 w-full shrink-0 items-center gap-3 rounded-none border-x-0 border-t-0 border-b border-b-transparent! py-3 shadow-none inset-shadow-none outline-none selection:bg-white/40 selection:text-black focus-within:border-b-white/50! focus-within:ring-0! focus-within:outline-0', { 'cursor-pointer **:pointer-events-none': selectedChampion })"
           @click="selectedChampion ? selectedChampion = null : ''">
           <InputGroupAddon
             align="inline-start">
@@ -151,7 +150,7 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
           variant="outline">
           <icon
             name="refresh"
-            class="size-4.5 text-white dst" />
+            class="dst size-4.5 text-white" />
         </Button>
 
         <Button
@@ -161,7 +160,7 @@ const btnClass = '  border-white/30 *:opacity-50  hover:bg-b1/30 hover:opacity-1
           variant="outline">
           <icon
             name="shuffle"
-            class="size-4.5 stroke-[1.3] text-white dst" />
+            class="dst size-4.5 stroke-[1.3] text-white" />
         </Button>
 
         <DialogClose as-child>

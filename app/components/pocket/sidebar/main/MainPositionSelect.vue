@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 
 const {
@@ -21,6 +19,9 @@ const {
 }>()
 
 const emit = defineEmits(['update:select'])
+
+const HeadingTip = resolveComponent('HeadingTip')
+
 const pocket = computed(() => p)
 const select = ref('All')
 

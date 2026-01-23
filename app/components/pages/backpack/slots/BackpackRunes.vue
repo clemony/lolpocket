@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
+import type { Pocket } from '~~/shared/types/schema/schema.pocket'
 
 const { pocket } = defineProps<{
   pocket: Pocket
@@ -25,9 +25,9 @@ const hasOneRune = computed (() => {
   <div class="relative size-22">
     <div
       class="
-        shadow-outline relative z-0 mt-1.5 grid aspect-square size-20
-        place-items-center overflow-visible rounded-full bg-gradient-to-br
-        from-b1/90 to-b1/40 ring-1 shadow-black/15 ring-b2 backdrop-blur-md
+        shadow-outline from-b1/90 to-b1/40 ring-b2 relative z-0 mt-1.5
+        grid aspect-square size-20 place-items-center
+        overflow-visible rounded-full bg-linear-to-br ring-1 shadow-black/15 backdrop-blur-md
       ">
       <!--  <img v-if="primary.runes[0]" :src="`/img/runes/${primary.path}/${primary.runes[0].name.replace(/\s/g, '')}.webp`" class="object-contain h-16 drop-shadow-sm opacity-98" />
  -->

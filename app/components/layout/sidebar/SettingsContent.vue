@@ -20,7 +20,7 @@ const option = ref('General')
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="justify-between text-md font-semibold text-bc/60">
+                  class="text-md text-bc/60 justify-between font-semibold">
                   General
 
                   <icon
@@ -46,7 +46,7 @@ const option = ref('General')
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="justify-between text-md font-semibold text-bc/60">
+                  class="text-md text-bc/60 justify-between font-semibold">
                   Account
                   <icon
                     name="left"

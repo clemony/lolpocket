@@ -1,15 +1,16 @@
 export interface NormalizeOptions {
-  maxAbs: number
-  scale?: number // default: 1
   clamp?: (x: number) => number // default: tanh
+  maxAbs: number
   round?: boolean // default: true
+  scale?: number // default: 1
 }
 
 export function normalizeScore(
   raw: number,
-  { maxAbs, scale = 1, clamp = Math.tanh, round = true }: NormalizeOptions
+  { clamp = Math.tanh, maxAbs, round = true, scale = 1 }: NormalizeOptions
 ): number {
-  if (!maxAbs || maxAbs === 0) return 0
+  if (!maxAbs || maxAbs === 0)
+    return 0
 
   const normalized = clamp(raw / maxAbs) * scale
   return round ? Math.round(normalized) : normalized
@@ -30,7 +31,7 @@ export function percentScore(raw: number, maxAbs: number): number {
 }
 
 export function score1to10(raw: number, maxAbs: number): number {
-  const n = normalizeScore(raw, { maxAbs, scale: 1, round: false }) // [-1..1]
+  const n = normalizeScore(raw, { maxAbs, round: false, scale: 1 }) // [-1..1]
   return Math.round(((n + 1) / 2) * 9 + 1)
 }
 
@@ -42,7 +43,8 @@ export function bayesianWinrate(
   baselineWinrate: number,
   priorGames = 10
 ): number {
-  if (games === 0) return baselineWinrate
+  if (games === 0)
+    return baselineWinrate
 
   return (wins + priorGames * baselineWinrate) / (games + priorGames)
 }

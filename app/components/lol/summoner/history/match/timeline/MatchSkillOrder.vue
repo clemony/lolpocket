@@ -34,9 +34,9 @@ const skillOrder = computed(() => [
         <Img
           alt="icon"
           :src="ability.icon"
-          class="size-12 rounded-lg shadow-sm dss" />
+          class="dss size-12 rounded-lg shadow-sm" />
         <div
-          class="absolute -right-1 -bottom-1 grid size-6.5 place-items-center rounded-full border-2 border-b1 bg-neutral font-mono text-xxs font-semibold text-nc"
+          class="border-b1 bg-neutral text-xxs text-nc absolute -right-1 -bottom-1 grid size-6.5 place-items-center rounded-full border-2 font-mono font-semibold"
           variant="neutral">
           {{ ability.key }}
         </div>
@@ -67,7 +67,7 @@ const skillOrder = computed(() => [
           data-type="ability"
           data-placement="left"
           :data-id="`${player.championId}${ability.key}`"
-          class="size-7 overflow-hidden rounded-md shadow-sm dss">
+          class="dss size-7 overflow-hidden rounded-md shadow-sm">
           <Img
             :alt="`${champNameById(player.championId)} ${ability.key} icon`"
             :src="ability?.icon"
@@ -83,19 +83,19 @@ const skillOrder = computed(() => [
           '': index === 0,
           '': index === 3,
         })"
-        class="grid h-7 w-fit grid-flow-col grid-cols-18 place-items-center gap-x-1.25 bg-b2/80 first:rounded-t-lg last:rounded-b-lg">
+        class="bg-b2/80 grid h-7 w-fit grid-flow-col grid-cols-18 place-items-center gap-x-1.25 first:rounded-t-lg last:rounded-b-lg">
         <div
           v-for="skill, i in skillOrder"
           :key="i"
           class="relative grid size-7 place-items-center">
           <div
             :style="{ gridColumnStart: i + 1 }"
-            class="absolute grid size-7 ring-2 ring-b1">
+            class="ring-b1 absolute grid size-7 ring-2">
           </div>
           <div
             v-if="skill === row"
             :style="{ gridColumnStart: i + 1 }"
-            class="absolute grid size-7 place-items-center bg-neutral text-xxs font-semibold text-nc shadow-sm">
+            class="bg-neutral text-xxs text-nc absolute grid size-7 place-items-center font-semibold shadow-sm">
             {{ i + 1 }}
           </div>
         </div>

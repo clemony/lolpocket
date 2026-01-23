@@ -34,7 +34,7 @@ const tab = ref('stats')
 
       <TabsContent
         value="stats"
-        class="mt-8 w-full rounded-lg bg-b1">
+        class="bg-b1 mt-8 w-full rounded-lg">
         <LazyCalculatorStatTotals />
       </TabsContent>
 

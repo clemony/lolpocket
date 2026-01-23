@@ -15,25 +15,27 @@ export function useAllies(
   >()
 
   for (const match of toValue(matches)) {
-    const player = match.participants.find((p) => p.puuid === puuid)
-    if (!player) continue
+    const player = match.participants.find(p => p.puuid === puuid)
+    if (!player)
+      continue
 
     const teammates = match.participants.filter(
-      (p) => p.teamId === player.teamId && p.puuid !== puuid
+      p => p.teamId === player.teamId && p.puuid !== puuid
     )
 
     for (const ally of teammates) {
       const s = teammateStats.get(ally.puuid) || {
-        games: 0,
-        wins: 0,
-        icon: ally.icon,
-        puuid: ally.puuid,
         name: ally.name,
+        puuid: ally.puuid,
+        games: 0,
+        icon: ally.icon,
         tag: ally.tag,
+        wins: 0,
       }
 
       s.games++
-      if (player.win) s.wins++
+      if (player.win)
+        s.wins++
 
       teammateStats.set(ally.puuid, s)
     }
@@ -47,8 +49,8 @@ export function useAllies(
 
       return {
         ...stats,
-        winrate: Math.round(raw * 100),
         weightedWinrate: Math.round(wilson * 100), // replaced
+        winrate: Math.round(raw * 100),
       }
     })
     .sort((a, b) => b.games - a.games)

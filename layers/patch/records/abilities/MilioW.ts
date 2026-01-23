@@ -1,0 +1,67 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:06 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Cozy Campfire',
+  affects: 'Self, Allies',
+  blurb: 'Active:  Milio summons a fuemigo that lasts for 6 seconds and follows the closest allied  champion. Allied champions near the fuemigo gain increased  attack range and are continually  healed.',
+  castTime: '0.25 / None',
+  cooldown: '29 / 27 / 25 / 23 / 21',
+  cost: '90 / 100 / 110 / 120 / 130',
+  effectRadius: '415',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Milio summons a fuemigo at the target location or upon the target allied champion for 6 seconds that follows the nearest allied champion and grants sight of its surroundings. Allied champions near the fuemigo gain bonus attack range equal to a percentage of their base attack range and heal every 0.264 seconds over the duration.</p>',
+      leveling: [
+        {
+          attribute: 'Base Attack Range Scaling',
+          modifiers: [
+            {
+              unit: '%',
+              values: '10 / 12.5 / 15 / 17.5 / 20'
+            }
+          ]
+        },
+        {
+          attribute: 'Heal per Tick',
+          modifiers: [
+            {
+              values: '2.8 / 3.6 / 4.4 / 5.2 / 6'
+            },
+            {
+              unit: '% AP',
+              values: '0.6'
+            }
+          ]
+        },
+        {
+          attribute: 'Total Heal',
+          modifiers: [
+            {
+              values: '70 / 90 / 110 / 130 / 150'
+            },
+            {
+              unit: '% AP',
+              values: '15'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Cozy Campfire can be recast after 0.5 seconds within the duration.'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Milio commands the fuemigo to follow the target allied champion to within 150-units, placing the recast on a 0.5-second static cooldown.</p>'
+    },
+    {
+      description: 'Milio counts as an allied champion for this ability. Cozy Campfire may grant Fired Up! upon being summoned and at most once every 3 seconds thereafter.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Milio/ability-icon/w',
+  notes: 'Cozy Campfire\'s initial cast and recast have a  forgiveness radius of 175 units for their unit-targeted version.\nThe summoned fuemigo will still follow the nearest allied champion in range, even if the initial cast was targeted on a different ally.\nThe  attack range increase lingers on allies for the entire duration of Cozy Campfire, even if they leave the zone.',
+  resource: 'Mana',
+  targeting: 'Location / Unit',
+  targetRange: '650 / 3000'
+}
+export default ability

@@ -1,39 +1,42 @@
-import type { ShallowRef } from "vue"
+import type { ShallowRef } from 'vue'
+
+export type SummonerApi = ReturnType<typeof useSummonerProvider>
 
 export interface SummonerProviderApi {
-  summoner: ShallowRef<Summoner | null>
   account: ShallowRef<Account | null>
-  splash: ComputedRef<string | undefined>
-  matches: ShallowRef<MatchData[]>
-  timelines: ShallowRef<PlayerTimeline[]>
-  loadSummoner: () => Promise<void>
-  resolveIdentifier: () => Promise<string | null>
+  allies: ShallowRef<AllyStatDetail[]>
+  champions: ShallowRef<AggregatedStats[]>
+  clearFilters: () => void
+  filter: ShallowRef<MatchFilter>
   filteredMatches: ComputedRef<MatchData[]>
+  filterEmpty: () => boolean
+  loading: ComputedRef<boolean>
+  loadingOlder: ShallowRef<boolean>
+  loadMessage: ShallowRef<string>
+  loadNewer: () => Promise<string>
+  loadOlder: () => Promise<void>
+  loadSummoner: () => Promise<void>
+  mastery: () => Promise<PlayerChampionMastery[]>
+  matches: ShallowRef<MatchData[]>
+  query: ShallowRef<string>
+  ready: Ref<boolean>
+  resolveIdentifier: () => Promise<string | null>
   setFilter: <K extends keyof MatchFilter>(
     key: K,
     value: MatchFilter[K]
   ) => void
-  clearFilters: () => void
-  query: ShallowRef<string>
-  filterEmpty: () => boolean
-  filter: ShallowRef<MatchFilter>
-  champions: ShallowRef<AggregatedStats[]>
-  allies: ShallowRef<AllyStatDetail[]>
-  mastery: () => Promise<PlayerChampionMastery[]>
-  loadNewer: () => Promise<string>
-  loadOlder: () => Promise<void>
-  loadMessage: ShallowRef<string>
-  loading: ComputedRef<boolean>
-  loadingOlder: ShallowRef<boolean>
-  ready: Ref<boolean>
+  splash: ComputedRef<string | undefined>
+  summoner: ShallowRef<Summoner | null>
+  timelines: ShallowRef<PlayerTimeline[]>
   whenReady: () => Promise<void>
 }
 
-export const SummonerKey = Symbol("SummonerProvider")
+export const SummonerKey = Symbol('SummonerProvider')
 
 export function useSummonerProvider() {
   function whenReady() {
-    if (ready.value) return Promise.resolve()
+    if (ready.value)
+      return Promise.resolve()
 
     return new Promise<void>((resolve) => {
       const stop = watch(
@@ -63,7 +66,7 @@ export function useSummonerProvider() {
       }
 
       if (region && slug) {
-        const [name, tag] = String(slug).split("_")
+        const [name, tag] = String(slug).split('_')
 
         identifier.value = {
           name: name.toLowerCase(),
@@ -86,7 +89,7 @@ export function useSummonerProvider() {
   watch(
     () => summoner.value,
     (v) => {
-      console.log("💠 - watch - newVal:", v)
+      console.log('💠 - watch - newVal:', v)
     }
   )
   const account = shallowRef<Account | null>(null)
@@ -96,15 +99,18 @@ export function useSummonerProvider() {
 
   async function resolveIdentifier() {
     const value = identifier.value
-    if (!value) return null
+    if (!value)
+      return null
 
-    //await until(() => ss().hydrated).toBe(true)
+    // await until(() => ss().hydrated).toBe(true)
 
-    if (value.puuid) return value.puuid
+    if (value.puuid)
+      return value.puuid
 
     const hit = ss().resolveBySlug(value.region, value.name, value.tag)
-    console.log("🥸 - resolveIdentifier - hit:", hit)
-    if (hit) return hit.puuid
+    console.log('🥸 - resolveIdentifier - hit:', hit)
+    if (hit)
+      return hit.puuid
 
     //  legal to fetch
     const fetched = await ss().ensureSummoner(value)
@@ -127,7 +133,8 @@ export function useSummonerProvider() {
         account.value = await acc().getByPuuid(summoner.value.puuid)
         await refreshLocal()
       }
-    } finally {
+    }
+    finally {
       loading.value = false
       ready.value = true
     }
@@ -142,13 +149,13 @@ export function useSummonerProvider() {
   // MATCHES
 
   const {
-    matches,
+    loading: matchesLoading,
+    loadingOlder,
+    loadMessage,
     loadNewer,
     loadOlder,
-    loadingOlder,
+    matches,
     refreshLocal,
-    loadMessage,
-    loading: matchesLoading,
   } = useMatches(summoner)
 
   // ID
@@ -160,42 +167,48 @@ export function useSummonerProvider() {
   const { getAllTimelinesForPuuid } = useTimeline()
 
   const timelines = computedAsync<PlayerTimeline[] | null>(async () => {
-    if (!id.value) return null
+    if (!id.value)
+      return null
     return await getAllTimelinesForPuuid(id.value)
   })
 
   // FILTERS
 
-  const { filteredMatches, filter, ...rest } = useMatchFilters(id, matches)
+  const { filter, filteredMatches, ...rest } = useMatchFilters(id, matches)
 
   // CHAMPIONS
   const champions = computedAsync<AggregatedStats[]>(async () => {
-    if (!id.value) return null
+    if (!id.value)
+      return null
     return await useChampionStats(filteredMatches, id.value).value
   })
 
   // ALLIES
 
   const allies = computed<AllyStatDetail[]>(() => {
-    if (!id.value) return null
+    if (!id.value)
+      return null
     return aggregateAllies(filteredMatches, id.value).value
   })
 
   // SPLASH
 
   const splash = computed(() => {
-    if (account.value?.splash) return account.value.splash
+    if (account.value?.splash)
+      return account.value.splash
 
     const arr = matches.value || []
-    if (!arr.length || !puuid.value) return undefined
+    if (!arr.length || !puuid.value)
+      return undefined
 
     const first = arr[0]
-    const self = first.participants?.find((p) => p.puuid === puuid.value)
-    if (!self) return undefined
+    const self = first.participants?.find(p => p.puuid === puuid.value)
+    if (!self)
+      return undefined
 
     const a = champKeyById(self.championId)
-    if (a && a !== "0")
-      return getSplash(a, "uncentered", getRandom(skinIndex[a]))
+    if (a && a !== '0')
+      return getSplash(a, 'uncentered', getRandom(skinIndex[a]))
 
     return undefined
   })
@@ -203,7 +216,8 @@ export function useSummonerProvider() {
   watch(
     identifier,
     async (next) => {
-      if (!next) return
+      if (!next)
+        return
 
       const nextPuuid = await resolveIdentifier()
       if (nextPuuid && nextPuuid !== puuid.value) {
@@ -215,24 +229,24 @@ export function useSummonerProvider() {
   )
 
   const api: SummonerProviderApi = {
-    summoner,
     account,
-    splash,
-    matches,
-    timelines,
-    loadSummoner,
-    resolveIdentifier,
     filteredMatches,
+    loadSummoner,
+    matches,
+    resolveIdentifier,
+    splash,
+    summoner,
+    timelines,
     ...rest,
-    filter,
-    champions,
     allies,
-    mastery,
-    loadNewer,
-    loadOlder,
-    loadMessage,
+    champions,
+    filter,
     loading: computed(() => loading.value || matchesLoading.value),
     loadingOlder,
+    loadMessage,
+    loadNewer,
+    loadOlder,
+    mastery,
     ready,
     whenReady,
   }
@@ -243,6 +257,7 @@ export function useSummonerProvider() {
 
 export function useSummonerInject() {
   const api = inject<SummonerProviderApi>(SummonerKey)
-  if (!api) throw new Error("No Summoner provider found.")
+  if (!api)
+    throw new Error('No Summoner provider found.')
   return api
 }

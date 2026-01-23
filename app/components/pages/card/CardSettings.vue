@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Card } from '@types'
-
 const { card: c } = defineProps<{
   card: Card
 }>()

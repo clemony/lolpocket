@@ -37,7 +37,7 @@ const keystone = computed (() => runeIndex.find(r => r.id === player.runes.keyst
         v-if="s?.name"
         :alt="s?.name"
         :src="`/img/paths/${s?.name}.webp`"
-        class="h-4.75 w-auto place-self-center dst" />
+        class="dst h-4.75 w-auto place-self-center" />
     </Element>
   </div>
 </template>

@@ -39,7 +39,7 @@ function onClick(rank: string): void {
       <icon
         v-if="is().filters.rank === rank"
         name="tick-sm"
-        class="size-6 dst" />
+        class="dst size-6" />
     </Label>
   </div>
 </template>

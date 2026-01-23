@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { SpellSet } from '@types'
-
 const { class: className, set: s } = defineProps<{
   class?: HTMLAttributes['class']
   set: SpellSet
@@ -24,7 +22,7 @@ const set = computed(() => {
     <IndexIcon
       v-for="(spell, i) in set"
       :key="i"
-      :item="spellbook[i]"
+      :item="spells[i]"
       :name="spell"
       :class="
         cn('pointer-events-none absolute size-full rounded-full', {

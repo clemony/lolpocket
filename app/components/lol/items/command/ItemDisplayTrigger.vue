@@ -25,7 +25,7 @@ const props = defineProps<{
         :key="props.itemId"
         :alt="ix().itemNameById(itemId)"
         class="
-          pointer-events-none! shrink-0 overflow-hidden rounded-field
+          rounded-field pointer-events-none! shrink-0 overflow-hidden
           **:pointer-events-none
         "
         basic />
@@ -33,14 +33,14 @@ const props = defineProps<{
       <div
         v-else
         class="
-          no-drag tldr-30 btn pointer-events-none! size-20!
-          group-hover/b:bg-b1/60! group-data-[state=open]/b:bg-b1/60!
+          no-drag tldr-30 btn group-hover/b:bg-b1/60! group-data-[state=open]/b:bg-b1/60!
+          pointer-events-none! size-20!
         ">
         <icon
           name="search"
           class="
-            pointer-events-none! size-4 text-bc/70 group-hover/b:text-bc
-            group-data-[state=open]/b:text-bc
+            text-bc/70 group-hover/b:text-bc group-data-[state=open]/b:text-bc pointer-events-none!
+            size-4
           " />
       </div>
     </button>

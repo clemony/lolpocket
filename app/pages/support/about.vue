@@ -73,8 +73,8 @@ const faq = [
     <div class="mx-auto -mt-15 flex w-180 flex-col items-center gap-6">
       <div
         class="
-          mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-md
-          text-nc **:font-mono
+          mockup-code text-md text-nc relative grid w-full grid-cols-[20px_1fr]
+          gap-x-14 **:font-mono
         ">
         <div class="col-start-1 grid items-center gap-y-1 pl-6">
           <div
@@ -142,8 +142,8 @@ const faq = [
           to="https://github.com/clemony/lolpocket"
           external
           class="
-            absolute right-6 bottom-6 flex items-center gap-1 font-mono italic
-            underline underline-offset-2 **:text-nc hover:underline
+            **:text-nc absolute right-6 bottom-6 flex items-center gap-1 font-mono
+            italic underline underline-offset-2 hover:underline
           ">
           <Icon name="github" />
 
@@ -155,7 +155,7 @@ const faq = [
       <div class="field-box mt-26 px-4 py-3">
         <div
           class="
-            pointer-events-auto flex items-center justify-evenly gap-5 *:dst
+            *:dst pointer-events-auto flex items-center justify-evenly gap-5
             **:size-6
           ">
           <tippy
@@ -169,7 +169,7 @@ const faq = [
                 :target="icon.link ? '_blank' : ''">
                 <icon
                   :name="icon.icon"
-                  class="size-6 shrink-0 dst" />
+                  class="dst size-6 shrink-0" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
@@ -180,7 +180,7 @@ const faq = [
                 <icon
                   v-if="icon.link"
                   name="link"
-                  class="size-3.5 text-nc" />
+                  class="text-nc size-3.5" />
               </div>
             </template>
           </tippy>
@@ -191,7 +191,7 @@ const faq = [
         </div>
       </div>
 
-      <div class="mt-6 flex flex-col items-center px-4 tracking-tight dst">
+      <div class="dst mt-6 flex flex-col items-center px-4 tracking-tight">
         <p class="text-center">
           <i>Lolpockets </i>
 

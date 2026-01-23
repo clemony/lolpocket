@@ -15,12 +15,12 @@ const { class: className, stat, type } = defineProps<{
     </div>
     <span
       v-if="stat?.games"
-      class="text-xxs gap-1 font-medium text-bc/90">
+      class="text-xxs text-bc/90 gap-1 font-medium">
       {{ stat?.games }}
     </span>
     <span
       v-if="(stat as TimedStatDetail)?.avgTimestamp && type === 'time'"
-      class="text-xxs font-medium text-bc/90">
+      class="text-xxs text-bc/90 font-medium">
       {{ useDateFormat((stat as TimedStatDetail)?.avgTimestamp, 'm:ss') }}
     </span>
     <!-- <span
@@ -31,11 +31,11 @@ const { class: className, stat, type } = defineProps<{
     <div
       v-if="(stat as PairedChampionStat)?.synergy && type === 'synergy'"
       :class="cn(Math.sign((stat as PairedChampionStat)?.delta) === -1 ? '-ml-1.25' : '-ml-1.75')">
-      <span class="text-xxs! font-medium! text-bc/90!">{{ Math.sign((stat as PairedChampionStat)?.synergy) === 1 ? '+' : '' }}{{ (stat as PairedChampionStat)?.delta }}</span>
+      <span class="text-xxs! text-bc/90! font-medium!">{{ Math.sign((stat as PairedChampionStat)?.synergy) === 1 ? '+' : '' }}{{ (stat as PairedChampionStat)?.delta }}</span>
     </div>
     <span
       v-if="!type"
-      class="text-xxs font-medium text-bc/90">
+      class="text-xxs text-bc/90 font-medium">
       {{ stat?.pickrate }}
     </span>
   </div>

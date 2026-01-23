@@ -1,0 +1,60 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 6690,
+  name: 'Rectrix',
+  buildsFrom: [
+    {
+      id: 1036,
+      name: 'Long Sword',
+      gold: 350
+    }
+  ],
+  buildsInto: [
+    {
+      id: 3087,
+      name: 'Statikk Shiv',
+      gold: 2700
+    },
+    {
+      id: 4003,
+      name: 'Lifeline',
+      gold: 1600
+    },
+    {
+      id: 3142,
+      name: 'Youmuu\'s Ghostblade',
+      gold: 2800
+    },
+    {
+      id: 6672,
+      name: 'Kraken Slayer',
+      gold: 3000
+    },
+    {
+      id: 6700,
+      name: 'Shield of the Rakkor',
+      gold: 2675
+    }
+  ],
+  description: '15 Attack Damage\n4% Move Speed\n\n',
+  gold: {
+    base: 425,
+    sell: 543,
+    total: 775
+  },
+  maps: [
+    11,
+    12,
+    21,
+    35
+  ],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  specialRecipe: 0,
+  stats: {
+    attackDamage: 15,
+    percentMovespeed: 4
+  }
+}
+export default item

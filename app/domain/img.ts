@@ -1,6 +1,3 @@
-import { skinIndex as skins } from "@constants"
-import { bgArt } from "@domain"
-
 export function getSplash(
   keyOrId: string | number,
   type: SplashType,
@@ -21,7 +18,7 @@ export function getSplash(
 
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/images/${partialUrl}.jpg`
 
-  //`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${skin.id}.jpg`
+  // `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${skin.id}.jpg`
 
   //
 }
@@ -34,7 +31,7 @@ export function getSkinName(
   key: string,
   id: number | string
 ): string | undefined {
-  return skins[key]?.find((skin) => skin.id === id.toString())?.name
+  return skinIndex[key]?.find((skin) => skin.id === id.toString())?.name
 }
 
 export function skinNameFromUrl(url: string): string | undefined {
@@ -50,7 +47,7 @@ export function skinNameFromUrl(url: string): string | undefined {
   id = id.replace(/[a-z]+_splash_[a-z]+_/, "")
   id = id.replace(".jpg", "")
 
-  return `${skins[name]?.find((skin) => skin.id === id.toString())?.name} ${name}`
+  return `${skinIndex[name]?.find((skin) => skin.id === id.toString())?.name} ${name}`
 }
 
 const sanctumIcons = [7056, 7057]

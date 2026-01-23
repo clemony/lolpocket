@@ -1,5 +1,3 @@
-import type { InboxMessage } from '@types'
-
 export const inboxBox: InboxType[] = [
   {
     name: 'Messages',

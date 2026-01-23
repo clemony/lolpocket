@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 224401,
+  name: 'Force of Nature',
+  description: '400 Health\n50 Magic Resist\n4% Move Speed\n\nAbsorb\nTaking magic damage from enemy Champions grants a stack of Steadfast (max 10) for 7 seconds. Enemy Immobilizing effects grant an additional 2 stacks.\n\nDissipate\nWhile at 10 stacks of Steadfast, gain 50 Magic Resist and 14% increased Move Speed.\n\nOne spell can add a new stack of Steadfast every 1 second.',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
+  },
+  maps: [
+    30
+  ]
+}
+export default item

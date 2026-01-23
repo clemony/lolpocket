@@ -24,9 +24,9 @@ const modelValue = ref(as().account.region)
     <div class="grid size-full gap-px overflow-y-auto px-1 pb-2">
       <div
         class="
-          sticky top-0 z-1 mb-2 flex h-11 w-full items-center border-b bg-b1
+          bg-b1 sticky top-0 z-1 mb-2 flex h-11 w-full items-center border-b
         ">
-        <Label class="px-4 text-bc/50">Select Region...</Label>
+        <Label class="text-bc/50 px-4">Select Region...</Label>
       </div>
 
       <Button

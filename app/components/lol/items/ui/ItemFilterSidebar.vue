@@ -21,8 +21,8 @@
       :default-open="true">
       <CollapsibleTrigger
         class="
-          flex w-full cursor-pointer items-center justify-between py-2 pl-1
-          font-semibold text-bc/50 underline-offset-2 hover:underline
+          text-bc/50 flex w-full cursor-pointer items-center justify-between py-2
+          pl-1 font-semibold underline-offset-2 hover:underline
         ">
         Statistics
         <PlusMinusExpand :open />
@@ -42,8 +42,8 @@
       :default-open="true">
       <CollapsibleTrigger
         class="
-          flex w-full cursor-pointer items-center justify-between py-2 pl-1
-          font-semibold text-bc/50 underline-offset-2 hover:underline
+          text-bc/50 flex w-full cursor-pointer items-center justify-between py-2
+          pl-1 font-semibold underline-offset-2 hover:underline
         ">
         Categories
         <PlusMinusExpand :open />
@@ -62,7 +62,7 @@
 
     <!-- map -->
     <div class="flex flex-col gap-3">
-      <span class="pl-1 font-semibold text-bc/50">Map</span>
+      <span class="text-bc/50 pl-1 font-semibold">Map</span>
       <ItemMapFilter
         v-model:model-value="is().filters.map"
         class="w-full" />

@@ -1,4 +1,4 @@
-import type { AllyDataPoint, PointKey } from ".."
+import type { AllyDataPoint, PointKey } from '..'
 
 const EPS_X = 10 // winrate %
 const EPS_Y = 10 // delta units
@@ -15,19 +15,21 @@ export function buildCollisionGroups(
   const used = new Set<number>()
 
   for (let i = 0; i < points.length; i++) {
-    if (used.has(i)) continue
+    if (used.has(i))
+      continue
 
     const a = points[i]
     const group = [a]
     used.add(i)
 
     for (let j = i + 1; j < points.length; j++) {
-      if (used.has(j)) continue
+      if (used.has(j))
+        continue
       const b = points[j]
 
       if (
-        Math.abs(a.winrate - b.winrate) <= epsX &&
-        Math.abs(a.delta - b.delta) <= epsY
+        Math.abs(a.winrate - b.winrate) <= epsX
+        && Math.abs(a.delta - b.delta) <= epsY
       ) {
         group.push(b)
         used.add(j)
@@ -50,11 +52,11 @@ export function radiusFromGames(
 
   return size / 2 // radius, not diameter
 }
-export type CollisionValue = {
-  index: number
-  count: number
-  maxRadius: number
+export interface CollisionValue {
   id: string
+  count: number
+  index: number
+  maxRadius: number
 }
 
 export function buildCollisionIndexMap(
@@ -63,18 +65,18 @@ export function buildCollisionIndexMap(
 ) {
   const indexMap = new Map<
     PointKey,
-    { index: number; count: number; maxRadius: number; id: string }
+    { index: number, count: number, maxRadius: number, id: string }
   >()
 
   for (const group of groups) {
     const maxRadius = Math.max(
-      ...group.map((p) => radiusFromGames(p.games, maxGames))
+      ...group.map(p => radiusFromGames(p.games, maxGames))
     )
     group.forEach((p, i) => {
       indexMap.set(`${p.allyPuuid}-${p.championId}`, {
         id: `${p.allyPuuid}-${p.championId}`,
-        index: i,
         count: group.length,
+        index: i,
         maxRadius,
       })
     })

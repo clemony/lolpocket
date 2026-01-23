@@ -1,11 +1,11 @@
-import type { EChartsOption, ScatterSeriesOption } from "echarts"
-import type { AllyDataPoint } from ".."
+import type { EChartsOption, ScatterSeriesOption } from 'echarts'
+import type { AllyDataPoint } from '..'
 import {
   buildCollisionGroups,
   buildCollisionIndexMap,
   separateValue,
   sizeFromMax,
-} from ".."
+} from '..'
 
 export function groupByAlly(points: AllyDataPoint[]) {
   const map = new Map<string, AllyDataPoint[]>()
@@ -49,8 +49,8 @@ export function buildAllyBubbleSeries(
             symbolKeepAspect: true,
 
             value: [
-              separateValue(d.winrate, "x", points, group),
-              separateValue(d.delta, "y", points, group),
+              separateValue(d.winrate, 'x', points, group),
+              separateValue(d.delta, 'y', points, group),
               d.games,
             ],
             ...d,
@@ -59,8 +59,8 @@ export function buildAllyBubbleSeries(
         itemStyle: {
           opacity: 1,
 
-          shadowColor: color,
           shadowBlur: 2,
+          shadowColor: color,
           shadowOffsetX: 1,
           shadowOffsetY: 1,
         },
@@ -71,7 +71,7 @@ export function buildAllyBubbleSeries(
             (params.data as AllyDataPoint).games,
             maxChampionGames.value
           ),
-        type: "scatter",
+        type: 'scatter',
       },
     ]
   })

@@ -28,8 +28,8 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
   <Dialog>
     <DialogTrigger
       class="
-        flex cursor-pointer underline-offset-2
-        hover:bg-b2/35 hover:underline
+        hover:bg-b2/35 flex cursor-pointer
+        underline-offset-2 hover:underline
       ">
       <slot />
     </DialogTrigger>
@@ -81,7 +81,7 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
           }"
           variant="ghost"
           hover="neutral"
-          class="absolute top-4 right-4 grid btn-square place-items-center"
+          class="btn-square absolute top-4 right-4 grid place-items-center"
           @click="toggle()">
           <icon
             v-show="!isFullscreen"

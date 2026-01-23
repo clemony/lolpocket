@@ -66,7 +66,7 @@ const position = computed(() =>
           </a>
         </div>
 
-        <span class="grow text-sm font-normal text-nc/60 italic">
+        <span class="text-nc/60 grow text-sm font-normal italic">
           {{ championToTitle[item?.key] }}
         </span>
       </div>

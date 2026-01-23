@@ -52,8 +52,8 @@ const loaded = ref<boolean>(false)
       <div class="absolute inset-0 top-1 left-0 mb-4">
         <button
           class="
-            group/btn btn absolute top-3 left-3 z-2 btn-circle border-none
-            btn-ghost
+            group/btn btn btn-circle btn-ghost absolute top-3 left-3 z-2
+            border-none
           "
           @click="selectedChampion = null">
           <icon

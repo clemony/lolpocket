@@ -37,7 +37,7 @@ const region = computed(() => {
     <icon
       v-show="!noIcon"
       name="at"
-      class="inline size-3.25 dst" />
+      class="dst inline size-3.25" />
     {{ region }}
   </Primitive>
 

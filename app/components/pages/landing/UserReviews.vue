@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { CarouselApi } from '@ui'
-import { reviews } from '@domain'
 import { motion } from 'motion-v'
 import { reviewVariants } from './variants'
 

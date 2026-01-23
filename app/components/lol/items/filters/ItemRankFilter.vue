@@ -51,7 +51,7 @@ function handleUpdate() {
       :hover="is().filters.rank === rank ? 'btn' : hover"
       :variant="is().filters.rank === rank ? 'neutral' : variant"
       :class="
-        cn('order-2 px-5 text-sm font-medium! shadow-none hover:text-bc',
+        cn('hover:text-bc order-2 px-5 text-sm font-medium! shadow-none',
            { 'order-1 ': is().filters.rank === rank },
         )
       "

@@ -18,11 +18,11 @@ const password = ref('')
     <AuthProviderGrid />
     <div
       class="
-            relative text-center text-md after:absolute after:inset-0
-            after:top-1/2 after:z-0 after:flex after:items-center after:border-t
-            after:border-b3
+            text-md after:border-b3 relative text-center after:absolute
+            after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center
+            after:border-t
           ">
-      <span class="relative z-10 bg-b1 px-2 text-bc/60">
+      <span class="bg-b1 text-bc/60 relative z-10 px-2">
         Or continue with
       </span>
     </div>

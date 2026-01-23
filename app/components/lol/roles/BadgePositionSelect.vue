@@ -46,8 +46,8 @@ onMounted(() => {
         cn(
           buttonVariants({ size, variant, hover: 'input' }),
           `
-            group/s relative w-44 justify-start inset-shadow-xs transition-all
-            duration-200 fx-0 hover:ring hover:ring-bc/50
+            group/s fx-0 hover:ring-bc/50 relative w-44 justify-start
+            inset-shadow-xs transition-all duration-200 hover:ring
           `,
           className,
         )
@@ -55,13 +55,13 @@ onMounted(() => {
       :position="currentValue">
       <component
         :is="`i-lol-${currentValue}`"
-        :class="cn('size-4.5! shrink-0 text-bc! dst')" />
+        :class="cn('text-bc! dst size-4.5! shrink-0')" />
 
       <SelectValue placeholder="all" />
       <icon
         name="select"
         class="
-          absolute right-1.5 size-4 opacity-50 group-hover/s:text-bc!
+          group-hover/s:text-bc! absolute right-1.5 size-4 opacity-50
           group-hover/s:opacity-100
         " />
     </SelectTrigger>
@@ -73,7 +73,7 @@ onMounted(() => {
       position="popper"
       class="
         top-[calc(var(--reka-select-trigger-height)+2px)]
-        w-[var(--reka-select-trigger-width)]!
+        w-(--reka-select-trigger-width)!
       ">
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>

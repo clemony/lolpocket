@@ -1,7 +1,7 @@
 export function finalizeStatAverage(
   stat: StatAverage,
   games: number,
-  rule: { decimals?: number; scale?: number } = {}
+  rule: { decimals?: number, scale?: number } = {}
 ) {
   if (!games) {
     stat.average = 0

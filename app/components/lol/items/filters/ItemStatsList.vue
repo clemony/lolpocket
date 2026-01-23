@@ -32,7 +32,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
         :class="cn({ 'row-span-2': group === 'physical' })">
         <ListboxGroupLabel
           v-if="labels"
-          class="mb-1 pl-0 text-sm! font-semibold text-bc/90 capitalize">
+          class="text-bc/90 mb-1 pl-0 text-sm! font-semibold capitalize">
           {{ group }}
         </ListboxGroupLabel>
 

@@ -40,7 +40,7 @@ const isOpen = ref<boolean>(false)
 
     <LazyPopperPopoverContent
       :side-offset="8"
-      class="max-h-[420px] w-100! min-w-110 px-0 py-2 inset-shadow-xs">
+      class="max-h-140 w-100! min-w-110 px-0 py-2 inset-shadow-xs">
       <LazyItemData
         v-if="open"
         :id="id" />

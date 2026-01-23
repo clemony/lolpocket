@@ -28,12 +28,12 @@ export interface ChampionStatsGroup {
 export type UseChampionsReturn = ReturnType<typeof useChampions>
 
 export interface Teammate {
-  weightedWinrate: number
+  name: string
+  puuid: string
   games: number
   icon: number
-  puuid: string
-  name: string
   tag: string
+  weightedWinrate: number
   winrate: number
   wins: number
 }

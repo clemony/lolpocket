@@ -13,7 +13,7 @@ const filtered = computed(() => to.filter(to => to.id < 9999))
     class="mt-1.5">
     <div
       class="
-        divider my-2 divider-start text-xxs! after:h-px after:bg-white
+        divider divider-start text-xxs! my-2 after:h-px after:bg-white
         after:opacity-10
       ">
       BUILDS INTO
@@ -30,8 +30,8 @@ const filtered = computed(() => to.filter(to => to.id < 9999))
         <Item
           :id="item.id"
           class="
-            tldr-20 size-9 overflow-hidden rounded-lg shadow-sm hover:ring-1
-            hover:ring-nc/90 hover:ring-offset-2 hover:ring-offset-neutral/80
+            tldr-20 hover:ring-nc/90 hover:ring-offset-neutral/80 size-9 overflow-hidden rounded-lg
+            shadow-sm hover:ring-1 hover:ring-offset-2
           " />
       </div>
     </div>

@@ -14,7 +14,7 @@ const { summoner } = defineProps<{
         <DialogTitle class="text-xxl">
           Block {{ summoner.name }}?
         </DialogTitle>
-        <DialogDescription class="mt-3 space-y-4 leading-7 text-bc">
+        <DialogDescription class="text-bc mt-3 space-y-4 leading-7">
           <p>
             Blocking this summoner will remove them from your follow list and
             from search results. This user will also no longer be able to
@@ -24,7 +24,7 @@ const { summoner } = defineProps<{
             You can manage any summoners you've blocked in
             <BtnLink
               class="
-                inline text-bc/70 underline decoration-dotted hover:text-bc
+                text-bc/70 hover:text-bc inline underline decoration-dotted
                 hover:decoration-solid
               "
               variant="link"

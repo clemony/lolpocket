@@ -1,0 +1,55 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'Q',
+  name: 'Bladesurge',
+  affects: 'Enemies, Self',
+  blurb: 'Active:  Irelia  dashes through the target enemy, dealing physical damage, applying  on-hit effects, and  healing herself.',
+  castTime: 'none',
+  cooldown: '10 / 9 / 8 / 7 / 6',
+  cost: '15',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Irelia dashes 100 units through the target enemy\'s location, and upon collision or dash completion, she deals physical damage, applies on-hit effects, and heals herself. Bladesurge deals 50 - 237 (based on level) bonus physical damage to minions.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '5 / 25 / 45 / 65 / 85'
+            },
+            {
+              unit: '% AD',
+              values: '70'
+            }
+          ]
+        },
+        {
+          attribute: 'Heal',
+          modifiers: [
+            {
+              unit: '% AD',
+              values: '9 / 10 / 11 / 12 / 13'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Bladesurge\'s current cooldown is reduced to 0.2 seconds upon collision of targets marked as Unsteady, and is reset if the target dies to or during Bladesurge\'s dash.'
+    },
+    {
+      description: 'Flawless Duet can be cast during the dash.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/q',
+  notes: 'Bladesurge will be buffered and cast when the cooldown ends or is reset if the player attempts to cast it within 0.5 seconds of the cooldown ending/resetting.\nBladesurge deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nIf the target dies during Bladesurge\'s dash, the cooldown is fully refunded and Irelia may also cast her other abilities during the dash.\nIf the target dies to Bladesurge and was also marked, the cooldown is still fully refunded.\nBladesurge will only allow Irelia to dash through walls if there is enough space for her on the other side.\nBladesurge deals its damage and consumes marks when Irelia collides with the target, or at the end of the dash if the target moves away.\nBladesurge will not deal damage if the  dash is  interrupted beforehand.\nThe damage will be dealt if the target is in collision range when the dash is interrupted however.\n Flash will interrupt the  dash but Irelia will still collide with and deal damage to her target if the blink leaves her in contact with it at the new location.\nIrelia will complete her remaining dash distance even if the damage is dealt earlier.\nIf the target is  untargetable, Bladesurge will instead deals its damage at the end of the dash, rather than on collision.\nIrelia will automatically be ordered to acquire and attack Bladesurge\'s target as soon as the dash completes.\nIf a different target than Bladesurge\'s is selected during the dash, she will acquire that different target instead.',
+  resource: 'Mana',
+  speed: '1400 + 100% movement speed',
+  spellEffects: 'Special',
+  spellshieldable: 'True',
+  targeting: 'Unit',
+  targetRange: '600'
+}
+export default ability

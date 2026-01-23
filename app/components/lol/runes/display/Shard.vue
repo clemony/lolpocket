@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { shardColor } from '@constants'
-import { shardObject } from '~~/layers/domain/records/shards'
-
 const {
   id,
   base = 'btn',

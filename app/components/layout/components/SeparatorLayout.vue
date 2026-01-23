@@ -17,17 +17,17 @@ const route = useRoute()
     <div :class="cn('z-auto w-full grow space-y-6 px-22 pb-16', className)">
       <div
         class="
-          sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-b1
+          bg-b1 sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5
           pt-12
         ">
         <slot name="header">
-          <h1 class="text-5xl font-bold dst">
+          <h1 class="dst text-5xl font-bold">
             {{ title || route.meta?.title || route.name }}
           </h1>
         </slot>
         <div class="flex justify-between">
           <slot name="description">
-            <p class="leading-8 text-bc/60">
+            <p class="text-bc/60 leading-8">
               {{ description || route.meta?.description }}
             </p>
           </slot>

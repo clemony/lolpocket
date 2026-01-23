@@ -17,7 +17,7 @@ const labels = computed (() => type === 'time' ? statLabelsWithTime : type === '
 
 <template>
   <div
-    :class="cn('absolute top-0 left-0 z-1 size-full h-[calc(100%+2px)] w-30 max-w-30 min-w-30 border-b border-b1 bg-linear-to-r from-b1 to-b1/45 pr-6 pb-1 leading-none backdrop-blur-sm select-none after:absolute after:top-0 after:left-0 after:z-1 after:size-full after:bg-linear-to-b after:from-b1 after:to-b1/45 in-data-[style=full]:pt-1 in-data-[style=simple]:pt-3', className)">
+    :class="cn('border-b1 from-b1 to-b1/45 after:from-b1 after:to-b1/45 absolute top-0 left-0 z-1 size-full h-[calc(100%+2px)] w-30 max-w-30 min-w-30 border-b bg-linear-to-r pr-6 pb-1 leading-none backdrop-blur-sm select-none after:absolute after:top-0 after:left-0 after:z-1 after:size-full after:bg-linear-to-b in-data-[style=full]:pt-1 in-data-[style=simple]:pt-3', className)">
     <Button
       variant="ghost"
       :data-type="stat ? `${stat?.winrate}% winrate
@@ -29,7 +29,7 @@ const labels = computed (() => type === 'time' ? statLabelsWithTime : type === '
       <!-- title -->
       <h4
         v-if="title"
-        :class="cn('leading-5.5 font-bold dst', { 'pt-1': !isA, 'pt-1 text-4xl!': typeof title === 'number' })">
+        :class="cn('dst leading-5.5 font-bold', { 'pt-1': !isA, 'pt-1 text-4xl!': typeof title === 'number' })">
         <template v-if="!isA">
           {{ title }}
         </template>

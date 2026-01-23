@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 223102,
+  name: 'Banshee\'s Veil',
+  description: '80 Ability Power\n40 Magic Resist\n\nAnnul\nGrants a Spell Shield that blocks the next enemy Ability.\n\nItem cooldown is restarted if you take damage from champions before it is completed.',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
+  },
+  maps: [
+    30
+  ]
+}
+export default item

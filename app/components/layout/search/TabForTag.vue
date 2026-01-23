@@ -5,7 +5,7 @@
     <span class="flex items-center">
       Press&nbsp;<span
         class="
-          mx-1 badge gap-1.5 rounded-md! border border-b4/80 shadow-black/6
+          badge border-b4/80 mx-1 gap-1.5 rounded-md! border shadow-black/6
         ">
         <icon
           name="tab"

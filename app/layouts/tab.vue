@@ -110,7 +110,7 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
           pointer-events-none sticky -top-70 z-16 flex h-15 min-h-15 w-full
           items-end gap-4 overflow-hidden pl-66
         ">
-        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
+        <Separator class="bg-b3/60 absolute bottom-0 left-0 z-0 w-full" />
         <SummonerChampionNavTabs
           v-if="route.fullPath.match(/\/summoner\/.+/)" />
         <NavFileTabs
@@ -119,7 +119,7 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
 
       <!-- Context wrapper -->
       <div
-        class="relative z-auto -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1">
+        class="bg-b1 relative z-auto -mt-px flex min-h-screen w-screen max-w-screen flex-col">
         <!-- page -->
         <slot :api />
       </div>

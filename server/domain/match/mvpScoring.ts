@@ -1,23 +1,24 @@
 // mvpScoring.ts
-export type MvpStats = {
+export interface MvpStats {
+  [key: string]: number | string | boolean
   puuid: string
+  deaths: number
   teamPosition: string
   win: boolean
-  deaths: number
-  [key: string]: number | string | boolean
 }
 
 export function normalizeStat(players: MvpStats[], role: string, key: string) {
   const values = players
-    .filter((p) => String(p.role)?.toUpperCase() === role)
-    .map((p) => Number(p[key]) || 0)
+    .filter(p => String(p.role)?.toUpperCase() === role)
+    .map(p => Number(p[key]) || 0)
 
   const min = Math.min(...values)
   const max = Math.max(...values)
 
   return (player: MvpStats) => {
     const val = Number(player[key]) || 0
-    if (max === min) return max === 0 ? 0 : 0.5
+    if (max === min)
+      return max === 0 ? 0 : 0.5
     return (val - min) / (max - min)
   }
 }
@@ -25,33 +26,39 @@ export function normalizeStat(players: MvpStats[], role: string, key: string) {
 export function calculateMvpScores(raw: any) {
   /* prep stats for mvp */
   const players = raw.info.participants.map((p: any) => ({
-    deathsInverse: Math.exp(-(p.deaths ?? 99) * 0.35),
+    killAfterHiddenWithAlly: p.challenges.killAfterHiddenWithAlly,
     puuid: p.puuid,
     assists: p.assists,
-    damageTakenOnTeamPercentage: p.challenges.damageTakenOnTeamPercentage,
-    killParticipation: p.challenges.killParticipation,
-    saveAllyFromDeath: p.challenges.saveAllyFromDeath,
-    teamDamagePercentage: p.challenges.teamDamagePercentage,
-    immobilizeAndKillWithAlly: p.challenges.immobilizeAndKillWithAlly,
-    killAfterHiddenWithAlly: p.challenges.killAfterHiddenWithAlly,
-    laneMinionsFirst10Minutes: p.challenges.laneMinionsFirst10Minutes,
-    laningPhaseGoldExpAdvantage: p.challenges.laningPhaseGoldExpAdvantage,
-    maxCsAdvantageOnLaneOpponent: p.challenges.maxCsAdvantageOnLaneOpponent,
-    pickKillWithAlly: p.challenges.pickKillWithAlly,
-    damageDealtToBuildings: p.challenges.damageDealtToBuildings,
-    damageDealtToTurrets: p.challenges.damageDealtToTurrets,
-    damageDealtToEpicMonsters: p.challenges.damageDealtToEpicMonsters,
-    jungleCsBefore10Minutes: p.challenges.jungleCsBefore10Minutes,
     championId: p.championId,
+    damageDealtToBuildings: p.challenges.damageDealtToBuildings,
+    damageDealtToEpicMonsters: p.challenges.damageDealtToEpicMonsters,
+    damageDealtToTurrets: p.challenges.damageDealtToTurrets,
+    damagePerGold:
+      p.goldEarned > 0 ? p.totalDamageDealtToChampions / p.goldEarned : 0,
     damageSelfMitigated: p.damageSelfMitigated,
+    damageTakenOnTeamPercentage: p.challenges.damageTakenOnTeamPercentage,
     deaths: p.deaths,
+    deathsInverse: Math.exp(-(p.deaths ?? 99) * 0.35),
     dragonKills: p.dragonKills,
     effectiveHealAndShielding:
       (p.totalHealsOnTeammates || 0) + (p.totalDamageShieldedOnTeammates || 0),
     goldEarned: p.goldEarned,
+    immobilizeAndKillWithAlly: p.challenges.immobilizeAndKillWithAlly,
+    jungleCsBefore10Minutes: p.challenges.jungleCsBefore10Minutes,
+    killParticipation: p.challenges.killParticipation,
     kills: p.kills,
+    laneMinionsFirst10Minutes: p.challenges.laneMinionsFirst10Minutes,
+    laningPhaseGoldExpAdvantage: p.challenges.laningPhaseGoldExpAdvantage,
     matchId: raw.metadata.matchId,
+    maxCsAdvantageOnLaneOpponent: p.challenges.maxCsAdvantageOnLaneOpponent,
+    objectiveImpact:
+      (p.challenges.damageDealtToTurrets || 0)
+      + (p.challenges.damageDealtToBuildings || 0)
+      + (p.challenges.damageDealtToEpicMonsters || 0),
     objectivesStolen: p.objectivesStolen,
+    pickKillWithAlly: p.challenges.pickKillWithAlly,
+    saveAllyFromDeath: p.challenges.saveAllyFromDeath,
+    teamDamagePercentage: p.challenges.teamDamagePercentage,
     teamId: p.teamId,
     teamPosition: p.role,
     timeCCingOthers: p.timeCCingOthers,
@@ -63,12 +70,6 @@ export function calculateMvpScores(raw: any) {
     turretKills: p.turretKills,
     visionScore: p.visionScore,
     win: p.win,
-    damagePerGold:
-      p.goldEarned > 0 ? p.totalDamageDealtToChampions / p.goldEarned : 0,
-    objectiveImpact:
-      (p.challenges.damageDealtToTurrets || 0) +
-      (p.challenges.damageDealtToBuildings || 0) +
-      (p.challenges.damageDealtToEpicMonsters || 0),
   }))
 
   const scores: Record<string, number> = {}
@@ -76,9 +77,10 @@ export function calculateMvpScores(raw: any) {
   const roles = Object.keys(roleWeights)
   for (const role of roles) {
     const rolePlayers = players.filter(
-      (p) => String(p.role)?.toUpperCase() === role
+      p => String(p.role)?.toUpperCase() === role
     )
-    if (!rolePlayers.length) continue
+    if (!rolePlayers.length)
+      continue
 
     for (const stat in roleWeights[role]) {
       if (!(stat in rolePlayers[0])) {
@@ -110,11 +112,12 @@ export function calculateMvpScores(raw: any) {
 
   for (const role of roles) {
     const rolePlayers = players.filter(
-      (p) => String(p.role)?.toUpperCase() === role
+      p => String(p.role)?.toUpperCase() === role
     )
-    if (!rolePlayers.length) continue
+    if (!rolePlayers.length)
+      continue
 
-    const roleValues = rolePlayers.map((p) => scores[p.puuid])
+    const roleValues = rolePlayers.map(p => scores[p.puuid])
     const min = Math.min(...roleValues)
     const max = Math.max(...roleValues)
 
@@ -123,9 +126,10 @@ export function calculateMvpScores(raw: any) {
 
       if (max === min) {
         scaledScores[p.puuid] = 5
-      } else {
+      }
+      else {
         const linear = (raw - min) / (max - min)
-        const curved = Math.pow(linear, 1.25) // harder to hit 1.0
+        const curved = linear ** 1.25 // harder to hit 1.0
         scaledScores[p.puuid] = Math.round((curved * 8 + 2) * 10) / 10
       }
     }

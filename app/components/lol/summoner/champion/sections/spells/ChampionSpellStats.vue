@@ -8,7 +8,7 @@ const { spells } = usePlayerStatsInject()
 const allSpells = computed <OrderedStatEntry[]>(() => {
   const singles = spells.value.single
   const map = singles.map(s => s[0])
-  const all = Object.values(spellbook).filter(s => (s.id < 30 && s.id !== 13 && !map.includes(s.id.toString())) || s.id === 2201 || s.id === 32)
+  const all = Object.values(spells).filter(s => (s.id < 30 && s.id !== 13 && !map.includes(s.id.toString())) || s.id === 2201 || s.id === 32)
   return singles.concat(all.map((s) => {
     return [s.id.toString(), { games: null, pickrate: null, winrate: null, }] as OrderedStatEntry
   }))

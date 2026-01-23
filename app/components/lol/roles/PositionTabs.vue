@@ -37,7 +37,7 @@ const roleStats = await useMatchRoles(
         <span class="relative grid size-5.5 place-items-center">
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-            class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
+            class="dst peer-checked:text-nc h-5 w-auto shrink-0"
             :class="{ 'text-bc/80!': role.name === 'ALL' }" />
         </span>
       </TabsTrigger>

@@ -1,5 +1,3 @@
-import type { Pocket } from '@types'
-
 export function handleRoles(pocket: Pocket, role?: string) {
   if (!pocket.roles)
     return

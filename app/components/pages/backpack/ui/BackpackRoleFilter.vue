@@ -34,9 +34,9 @@ const tags = ref([])
         :key="position.name"
         for="position.name"
         class="
-          group/btn badge flex h-6.5! h-9 w-fit cursor-pointer items-center
-          gap-1.5 rounded-lg pr-2.5 pl-1.5 badge-lg font-medium ring-bc/60
-          ring-offset-b1 duration-0 hover:ring hover:ring-offset-2
+          group/btn badge badge-lg ring-bc/60 ring-offset-b1 flex h-6.5! h-9
+          w-fit cursor-pointer items-center gap-1.5 rounded-lg pr-2.5 pl-1.5
+          font-medium duration-0 hover:ring hover:ring-offset-2
         "
         :style="{
           backgroundColor: position.color,
@@ -54,13 +54,13 @@ const tags = ref([])
             borderColor: position.color,
           }"
           class="
-            checkbox checkbox-xs rounded-full border-0 bg-b1 text-white fx-0
-            checked:bg-b1
+            checkbox checkbox-xs bg-b1 fx-0 checked:bg-b1 rounded-full border-0
+            text-white
           " />
 
         <component
           :is="`i-lol-${position.name}`"
-          :class="cn('ml-1 size-3.5 text-white dst')" />
+          :class="cn('dst ml-1 size-3.5 text-white')" />
 
         <span class="text-white">
           {{ position.name }}

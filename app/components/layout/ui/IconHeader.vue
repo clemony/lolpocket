@@ -36,8 +36,8 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
       <!-- header sub-text -->
       <div
         class="
-          inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst
-          **:text-md
+          dst **:text-md inline-flex flex-nowrap gap-2 font-normal text-nowrap
+          lowercase
         ">
         <slot name="subheader" />
       </div>

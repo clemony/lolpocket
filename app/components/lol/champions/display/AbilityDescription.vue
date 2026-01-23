@@ -55,7 +55,7 @@ const { class: className, effect, variants } = defineProps<{
               ">+&thinsp;
               <span
                 :class="{
-                  'underline decoration-bc/40 decoration-dotted underline-offset-2':
+                  'decoration-bc/40 underline decoration-dotted underline-offset-2':
                     attribute.modifiers?.[1].tooltip,
                 }">
                 {{ attribute.modifiers?.[1].values }} </span>{{ attribute.modifiers?.[1].unit }}

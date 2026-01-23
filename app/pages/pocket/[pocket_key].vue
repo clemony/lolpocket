@@ -40,7 +40,7 @@ const selectedSet = computed(() => {
     v-if="pocket && route.name !== 'pocket-core'"
     name="tab"
     :pocket
-    class="z-auto grid min-h-screen w-4/5 justify-self-center bg-b1 px-14">
+    class="bg-b1 z-auto grid min-h-screen w-4/5 justify-self-center px-14">
     <NuxtPage
       v-if="pocket"
       :pocket="pocket" />

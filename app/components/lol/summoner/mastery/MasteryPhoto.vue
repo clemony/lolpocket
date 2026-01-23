@@ -39,7 +39,7 @@ const level = computed(() =>
         px-0.75 pt-0.25 pb-1 *:leading-none
       ">
       <div class="flex items-end gap-1.5">
-        <h2 class="text-xl font-semibold dst">
+        <h2 class="dst text-xl font-semibold">
           {{ name }}
         </h2>
 
@@ -51,7 +51,7 @@ const level = computed(() =>
       <div class="h-3 items-center text-nowrap">
         <p class="absolute flex items-center gap-1 text-xs font-medium">
           <span
-            class="relative size-4 overflow-hidden rounded-full shadow-sm dst">
+            class="dst relative size-4 overflow-hidden rounded-full shadow-sm">
             <i-lol-cm-mastery-token
               class="
                 absolute grid size-full scale-105 place-items-center

@@ -7,7 +7,7 @@
     <VarSelectTrigger
       :variant="is().filters.stats.length ? 'neutral' : 'outline'"
       size="sq-12"
-      class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-b2/40!">
+      class="indicator open:not-on:bg-tint-b2/40! relative open:inset-shadow-sm">
       <StatusIndicator
         v-if="is().filters.stats.length"
         color="ah"

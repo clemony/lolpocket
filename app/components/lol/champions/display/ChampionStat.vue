@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { StatTip } from '#components';
-
 const {
   i,
   length,
@@ -11,6 +9,8 @@ const {
   groupName?: string
   length: number
 }>()
+
+const StatTip = resolveComponent('StatTip')
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const {
 
       <div
         class="
-          opacity-80 **:inline-block **:text-md! **:font-semibold **:text-bc
+          **:text-md! **:text-bc opacity-80 **:inline-block **:font-semibold
           **:tabular-nums
         ">
         <NumberTicker

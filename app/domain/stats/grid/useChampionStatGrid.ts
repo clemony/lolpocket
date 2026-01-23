@@ -1,34 +1,34 @@
-import {
-  GridLastPlayed,
-  GridMasteryPoints,
-  MasteryBadge,
-  TableChampion,
-} from "#components"
+
+const GridLastPlayed = resolveComponent('GridLastPlayed')
+const GridMasteryPoints = resolveComponent('GridMasteryPoints')
+const MasteryBadge = resolveComponent('MasteryBadge')
+const TableChampion = resolveComponent('TableChampion')
+
 import type { ColDef, ColGroupDef } from "ag-grid-community"
 import { perGameFormatter, perGameGetter, statGetter } from "."
 
 export function useChampionStatGrid() {
   const killStats = [
-    { field: "kills", label: "Total", tooltip: "Kills", bold: true },
+    { bold: true, field: "kills", label: "Total", tooltip: "Kills" },
   ] as const
 
   const killGroup: ColGroupDef = {
-    headerName: "Kills",
-    openByDefault: false,
     children: killStats.map((s, i) => ({
       width: 56,
-      cellDataType: "number",
-      field: s.field,
-      headerName: s.label,
-      headerTooltip: s.tooltip,
-      columnGroupShow: i === 0 ? undefined : "open",
       cellClass: "text-center",
+      cellDataType: "number",
+      columnGroupShow: i === 0 ? undefined : "open",
+      field: s.field,
       headerClass:
         "h-8! max-h-8! min-h-8! row-span-1! -translate-y-1 row-start-2! text-start [&_.ag-header-cell-resize]:after:-translate-y-3!",
-      valueGetter: perGameGetter(s.field),
+      headerName: s.label,
+      headerTooltip: s.tooltip,
       valueFormatter: perGameFormatter(s.field),
+      valueGetter: perGameGetter(s.field),
       wrapHeaderText: false,
     })),
+    headerName: "Kills",
+    openByDefault: false,
   }
 
   const numericPerGameColumn = <K extends keyof AggregatedStatsAndMastery>(
@@ -38,13 +38,13 @@ export function useChampionStatGrid() {
     className = "text-center"
   ): ColDef<AggregatedStatsAndMastery> => ({
     width: 56,
+    cellClass: className,
     cellDataType: "number",
     field,
     headerName,
     headerTooltip: tooltip,
-    cellClass: className,
-    valueGetter: perGameGetter(field),
     valueFormatter: perGameFormatter(field),
+    valueGetter: perGameGetter(field),
   })
 
   const plainNumber = <K extends keyof AggregatedStatsAndMastery>(
@@ -54,11 +54,11 @@ export function useChampionStatGrid() {
     className = "text-center"
   ): ColDef<AggregatedStatsAndMastery> => ({
     width: 60,
+    cellClass: className,
     cellDataType: "number",
     field,
     headerName,
     headerTooltip: tooltip,
-    cellClass: className,
   })
 
   const averagedNumber = <K extends keyof AggregatedStatsAndMastery>(
@@ -68,11 +68,11 @@ export function useChampionStatGrid() {
     className = "text-center"
   ): ColDef<AggregatedStatsAndMastery> => ({
     width: 60,
+    cellClass: className,
     cellDataType: "number",
     field,
     headerName,
     headerTooltip: tooltip,
-    cellClass: className,
     valueGetter: statGetter(field),
   })
 
@@ -96,21 +96,21 @@ export function useChampionStatGrid() {
 
   const kpColumn: ColDef<AggregatedStatsAndMastery> = {
     width: 70,
+    cellClass: "text-center",
     cellDataType: "number",
     field: "kp",
     headerName: "KP",
     headerTooltip: "Kill Participation",
-    cellClass: "text-center",
     valueGetter: statGetter("kp"),
   }
 
   const winrateColumn: ColDef<AggregatedStatsAndMastery> = {
     width: 90,
+    cellClass: "text-center",
     cellDataType: "number",
     field: "wins",
     headerName: "WR",
     headerTooltip: "Winrate",
-    cellClass: "text-center",
     valueFormatter: (p) =>
       p.data?.games ?
         `${Math.round((p.data.wins / p.data.games) * 1000) / 10}%`

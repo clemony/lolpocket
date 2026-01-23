@@ -1,8 +1,8 @@
 export interface TooltipPayload {
-  img?: string
-  icon?: string
   title?: string
   data?: any
+  icon?: string
+  img?: string
   text?: string
 }
 

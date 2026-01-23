@@ -1,17 +1,7 @@
-import { defineStore } from "pinia"
-import type { DateRange } from "reka-ui"
+import type { DateRange } from 'reka-ui'
+import { defineStore } from 'pinia'
 
-export interface MatchFilter {
-  ally?: string | null
-  champion?: string | null
-  patch?: number | null
-  queue?: number
-  ignoreRole?: boolean
-  role?: string | null
-  date?: MaybeRef<DateRange>
-  amount?: number
-}
-export const useMatchStore = defineStore("matchStore", () => {
+export const useMatchStore = defineStore('matchStore', () => {
   const summonerSearch = ref(null)
 
   const championTabsQueue = ref<number>(0)
@@ -19,29 +9,29 @@ export const useMatchStore = defineStore("matchStore", () => {
   // match filters
   const filter = ref<MatchFilter>({
     ally: null,
+    amount: null,
     champion: null,
+    date: {
+      end: null,
+      start: null,
+    },
     patch: null,
     queue: null,
-    role: "ALL",
-    date: {
-      start: null,
-      end: null,
-    },
-    amount: null,
+    role: 'ALL',
   })
 
   function clearFilter() {
     filter.value = Object.assign(filter, {
       ally: null,
+      amount: null,
       champion: null,
+      date: {
+        end: null,
+        start: null,
+      },
       patch: null,
       queue: null,
-      role: "ALL",
-      date: {
-        start: null,
-        end: null,
-      },
-      amount: null,
+      role: 'ALL',
     })
   }
 

@@ -17,7 +17,7 @@ const loaded = ref(false)
 <template>
   <label
     :class="
-      cn('relative grid size-full shrink-0 place-items-center overflow-hidden bg-neutral text-nc',
+      cn('bg-neutral text-nc relative grid size-full shrink-0 place-items-center overflow-hidden',
          {
            'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6':
              !transparent || (transparent && !img),
@@ -40,12 +40,12 @@ const loaded = ref(false)
     <icon
       v-if="!loaded && img"
       name="svg-spinners:bars-scale-middle"
-      class="absolute text-nc opacity-80" />
+      class="text-nc absolute opacity-80" />
 
     <span
       v-else
       :class="
-        cn('absolute z-0 grid size-full place-items-center text-lg font-semibold text-nc uppercase subpixel-antialiased',
+        cn('text-nc absolute z-0 grid size-full place-items-center text-lg font-semibold uppercase subpixel-antialiased',
            { '!text-[0.74rem] mt-px font-semibold': size && size === 'sm' },
         )
       ">

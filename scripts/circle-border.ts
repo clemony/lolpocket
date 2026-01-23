@@ -1,24 +1,24 @@
-import fs from "fs"
-import path from "path"
-import sharp from "sharp"
+import fs from 'node:fs'
+import path from 'node:path'
+import sharp from 'sharp'
 
-const INPUT_DIR = "./public/img/champions/circle"
-const OUTPUT_DIR = "./public/img/champions/circle/daylight"
+const INPUT_DIR = './public/img/champions/circle'
+const OUTPUT_DIR = './public/img/champions/circle/daylight'
 
 const BORDER = 8 // px
-const RING_COLOR = "#000000"
+const RING_COLOR = '#000000'
 
 fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 
 const files = fs
   .readdirSync(INPUT_DIR)
-  .filter((f) => /\.(png|webp|jpg|jpeg)$/i.test(f))
+  .filter(f => /\.(png|webp|jpg|jpeg)$/i.test(f))
 
 for (const file of files) {
   const inputPath = path.join(INPUT_DIR, file)
   const outputPath = path.join(
     OUTPUT_DIR,
-    file.replace(path.extname(file), ".webp")
+    file.replace(path.extname(file), '.webp')
   )
 
   const image = sharp(inputPath)
@@ -56,15 +56,15 @@ for (const file of files) {
   await image
     .resize(size, size)
     .extend({
-      top: BORDER,
+      background: { alpha: 0, b: 0, g: 0, r: 0 },
       bottom: BORDER,
       left: BORDER,
       right: BORDER,
-      background: { r: 0, g: 0, b: 0, alpha: 0 },
+      top: BORDER,
     })
     .composite([
-      { input: maskSvg, blend: "dest-in" },
-      { input: ringSvg, blend: "over" },
+      { blend: 'dest-in', input: maskSvg },
+      { blend: 'over', input: ringSvg },
     ])
     .png()
     .toFile(outputPath)

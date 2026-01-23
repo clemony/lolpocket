@@ -36,7 +36,7 @@ const btnClass = 'fx-0!'
     <UpdateSummoner
       v-if="update"
       :api
-      class="col-span-4! **:text-nc!"
+      class="**:text-nc! col-span-4!"
       variant="neutral"
       :size />
 

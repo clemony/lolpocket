@@ -24,8 +24,8 @@ const { filtered, filters, setFilter } = useItemFilter()
           <label
             v-if="!filters.stats.includes(stat.id)"
             class="
-              flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize
-              hover:bg-accent
+              hover:bg-accent flex w-full rounded-md py-1.5 pr-2.5 pl-8
+              capitalize
             ">
             <input
               v-model="filters.stats"

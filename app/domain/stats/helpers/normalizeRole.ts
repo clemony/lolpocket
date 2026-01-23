@@ -1,29 +1,29 @@
-export type RoleKey = "top" | "jungle" | "middle" | "bottom" | "support"
+export type RoleKey = 'top' | 'jungle' | 'middle' | 'bottom' | 'support'
 export const roleKey: string[] = [
-  "top",
-  "jungle",
-  "middle",
-  "bottom",
-  "support",
+  'top',
+  'jungle',
+  'middle',
+  'bottom',
+  'support',
 ] satisfies RoleKey[]
 
 export function normalizeRole(pos: string): RoleKey {
   switch (pos.toLowerCase()) {
-    case "top":
-      return "top"
-    case "jungle":
-      return "jungle"
-    case "middle":
-    case "mid":
-      return "middle"
-    case "bottom":
-    case "bot":
-      return "bottom"
-    case "utility":
-    case "support":
-      return "support"
+    case 'top':
+      return 'top'
+    case 'jungle':
+      return 'jungle'
+    case 'middle':
+    case 'mid':
+      return 'middle'
+    case 'bottom':
+    case 'bot':
+      return 'bottom'
+    case 'utility':
+    case 'support':
+      return 'support'
     default:
-      return "support" // safe fallback
+      return 'support' // safe fallback
   }
 }
 

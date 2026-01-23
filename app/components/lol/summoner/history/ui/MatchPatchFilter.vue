@@ -18,7 +18,7 @@ const p = computed (() => new Set(filteredMatches.value.map(m => m.gamePatch.toS
     :arrow="false">
     <Button
       variant="input"
-      class="w-full justify-between bg-b1! text-sm hover:bg-b1! hover:ring hover:ring-bc/60 hover:fx-0">
+      class="bg-b1! hover:bg-b1! hover:ring-bc/60 hover:fx-0 w-full justify-between text-sm hover:ring">
       {{ filter?.patch ?? 'Select Patch' }}
 
       <Icon

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { getDeviceKey } from '~~/@lib/app/utils/device';
-
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
@@ -24,7 +22,7 @@ watchEffect(() => {
   <button
     v-tippy="'Search'"
     :class="
-      cn('group hover:ringneutral/50 z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center self-center rounded-xl border border-b4/60 bg-b1/50 pr-2 pl-2.75 text-sm text-nowrap inset-shadow-xs transition-colors duration-150 hover:ring-1',
+      cn('group hover:ringneutral/50 border-b4/60 bg-b1/50 z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center self-center rounded-xl border pr-2 pl-2.75 text-sm text-nowrap inset-shadow-xs transition-colors duration-150 hover:ring-1',
          props.class,
       )
     "
@@ -33,16 +31,16 @@ watchEffect(() => {
     <span class="relative -left-0.25 grid size-5 place-items-center">
       <icon
         name="weui:search-filled"
-        class="size-4.75 shrink-0 opacity-60 dst" />
+        class="dst size-4.75 shrink-0 opacity-60" />
     </span>
 
     <span
       class="
-        mt-px grow truncate text-left font-medium tracking-tight text-bc/60
+        text-bc/60 mt-px grow truncate text-left font-medium tracking-tight
       ">
       <slot />
     </span>
 
-    <span class="px-1 font-medium text-bc/80!">{{ getDeviceKey() }} K</span>
+    <span class="text-bc/80! px-1 font-medium">{{ getDeviceKey() }} K</span>
   </button>
 </template>

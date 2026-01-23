@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { hyphenateChampionName } from '~/domain/champions/utils';
+import { hyphenateChampionName } from '~/domain/champions/utils'
 
 const { champKey, class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -54,12 +54,12 @@ watchEffect(() => {
     <div
       v-show="champKey"
       class="
-        hover:ringneutral/60 bgneutral/50 text-6xl pointer-events-none absolute
-        inset-0 grid items-end justify-start overflow-hidden rounded-xl px-3.5
-        py-4 text-left leading-none font-bold tracking-tighter text-wrap
-        break-all hyphens-manual whitespace-break-spaces text-nc opacity-0
-        transition-all duration-300 group-hover:opacity-100 hover:ring-offset-2
-        hover:ring-offset-b1/95
+        hover:ringneutral/60 bgneutral/50 text-nc hover:ring-offset-b1/95 pointer-events-none
+        absolute inset-0 grid items-end justify-start overflow-hidden rounded-xl
+        px-3.5 py-4 text-left text-6xl leading-none font-bold
+        tracking-tighter text-wrap break-all hyphens-manual whitespace-break-spaces
+        opacity-0 transition-all duration-300 group-hover:opacity-100
+        hover:ring-offset-2
       ">
       {{ hyphenateChampionName(ix().champNameByKey(champKey)) }}
     </div>
@@ -67,7 +67,7 @@ watchEffect(() => {
     <div
       v-show="loaded"
       class="
-        absolute top-0 left-0 size-full rounded-xl border border-b4 shadow-sm!
+        border-b4 absolute top-0 left-0 size-full rounded-xl border shadow-sm!
         drop-shadow-sm
       " />
   </div>

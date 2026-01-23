@@ -1,0 +1,15 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 223157,
+  name: 'Zhonya\'s Hourglass',
+  description: '80 Ability Power\n50 Armor\n\nActive - Stasis: You become Invulnerable and Untargetable for 2.5 seconds, but are prevented from taking any other actions during this time (120s).',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
+  },
+  maps: [
+    30
+  ]
+}
+export default item

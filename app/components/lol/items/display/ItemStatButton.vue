@@ -33,7 +33,7 @@ const statValue = computed<StatIndex>(() => {
     }"
     :class="
       cn(
-        'w-fit px-3 font-medium text-bc/90 capitalize shadow-xs dxs',
+        'text-bc/90 dxs w-fit px-3 font-medium capitalize shadow-xs',
         { '  order-first text-white': active, 'pr-2': active && clear },
         className,
       )

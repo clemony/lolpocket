@@ -1,12 +1,10 @@
-import { PocketChampionMenu } from '#components'
-import type { Pocket } from '@types'
 import type { Instance } from 'tippy.js'
 import tippy from 'tippy.js'
 import { ref, render } from 'vue'
 
 let singleton: Instance | null = null
 const content = ref<HTMLElement | null>(null)
-
+const PocketChampionMenu = resolveComponent('PocketChampionMenu')
 export function useChampionContextMenu() {
   const show = (
     event: MouseEvent,

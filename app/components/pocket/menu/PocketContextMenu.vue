@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import { getDeviceKey } from '~~/@lib/app/utils/device'
-
 const props = defineProps<{
   pocketData?: Pocket
 }>()

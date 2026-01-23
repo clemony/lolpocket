@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Account } from '@types'
-
 const { account } = defineProps<{
   account: Account
 }>()

@@ -12,7 +12,7 @@
         class="group/collapse grow hover:underline">
         <icon
           name="ci:heart-02"
-          class="size-3.75 opacity-80 dst" />
+          class="dst size-3.75 opacity-80" />
         <span class="grow text-left">following</span>
 
         <icon

@@ -35,7 +35,7 @@ const champ = computed (() => {
 
       <Ability
         :id
-        class="min-size-12 size-12 rounded-lg shadow-sm dss" />
+        class="min-size-12 dss size-12 rounded-lg shadow-sm" />
 
       <div class="col-start-2 flex w-full flex-col text-lg">
         <div

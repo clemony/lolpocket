@@ -1,0 +1,47 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'E',
+  name: 'Body Slam',
+  affects: 'Enemies',
+  blurb: 'Passive:  Gragas  charges in the target direction, stopping upon the first enemy hit, which deals magic damage to nearby enemies,  knocks them back, and  stuns them.',
+  castTime: 'none',
+  cooldown: '14 / 13.5 / 13 / 12.5 / 12',
+  cost: '50',
+  damageType: 'Magic damage',
+  effectRadius: '180 /  180',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Gragas charges in the target direction and stops upon colliding with an enemy, dealing magic damage to all nearby enemies, knocking them back, though not through terrain, and stunning them for 1 second.</p>',
+      leveling: [
+        {
+          attribute: 'Magic Damage',
+          modifiers: [
+            {
+              values: '80 / 125 / 170 / 215 / 260'
+            },
+            {
+              unit: '% AP',
+              values: '60'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Body Slam\'s current cooldown is reduced by 40% if Gragas hits an enemy.'
+    },
+    {
+      description: 'Barrel Roll and Explosive Cask can be cast during the dash.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/e',
+  notes: 'Flash can be casted during Body Slam, instantly ending it and affecting enemies at the flash location.\nUnits hit by Body Slam turn away from Gragas.\n Displacement immunity will not resist the application of the  stun.',
+  resource: 'Mana',
+  speed: '910',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '600'
+}
+export default ability

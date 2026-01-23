@@ -1,21 +1,21 @@
 // scripts/circle-champion-icons.ts
-import fs from "node:fs/promises"
-import path from "node:path"
-import sharp from "sharp"
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import sharp from 'sharp'
 
-const iconsDir = path.resolve("./public/img/champions")
-const outDir = path.join(iconsDir, "circle")
+const iconsDir = path.resolve('./public/img/champions')
+const outDir = path.join(iconsDir, 'circle')
 
 const ICON_SIZE = 100
 const STROKE = 0
 const PADDING = 0
-const STROKE_COLOR = "#000000"
+const STROKE_COLOR = '#000000'
 
 async function run() {
   await fs.mkdir(outDir, { recursive: true })
 
   const files = await fs.readdir(iconsDir)
-  const webps = files.filter((f) => f.endsWith(".webp"))
+  const webps = files.filter(f => f.endsWith('.webp'))
 
   for (const file of webps) {
     const inputPath = path.join(iconsDir, file)
@@ -23,7 +23,8 @@ async function run() {
 
     const img = sharp(inputPath)
     const meta = await img.metadata()
-    if (!meta.width || !meta.height) continue
+    if (!meta.width || !meta.height)
+      continue
 
     // 1️⃣ center-crop to square
     const side = Math.min(meta.width, meta.height)
@@ -31,7 +32,7 @@ async function run() {
     const top = Math.floor((meta.height - side) / 2)
 
     const cropped = await img
-      .extract({ left, top, width: side, height: side })
+      .extract({ width: side, height: side, left, top })
       .resize(ICON_SIZE, ICON_SIZE)
       .toBuffer()
 
@@ -48,7 +49,7 @@ async function run() {
     `)
 
     const masked = await sharp(cropped)
-      .composite([{ input: maskSvg, blend: "dest-in" }])
+      .composite([{ blend: 'dest-in', input: maskSvg }])
       .toBuffer()
 
     // 3️⃣ final canvas
@@ -71,9 +72,9 @@ async function run() {
     await sharp({
       create: {
         width: CANVAS,
-        height: CANVAS,
+        background: { alpha: 0, b: 0, g: 0, r: 0 },
         channels: 4,
-        background: { r: 0, g: 0, b: 0, alpha: 0 },
+        height: CANVAS,
       },
     })
       .composite([
@@ -81,16 +82,16 @@ async function run() {
         { input: masked, left: PADDING, top: PADDING },
       ])
       .webp({
-        quality: 90,
         alphaQuality: 100,
         effort: 6,
+        quality: 90,
       })
       .toFile(outputPath)
 
     console.log(`✔ ${file}`)
   }
 
-  console.log("🎉 Done")
+  console.log('🎉 Done')
 }
 
 run().catch((err) => {

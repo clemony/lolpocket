@@ -64,8 +64,8 @@ const steps = [
 <template>
   <motion.div
     class="
-      relative z-1 w-full border-t border-b2/30 bg-b1 px-18 pt-46 pb-6
-      [&_hr]:mx-16 [&_hr]:bg-b2
+      border-b2/30 bg-b1 [&_hr]:bg-b2 relative z-1 w-full border-t px-18 pt-46
+      pb-6 [&_hr]:mx-16
     "
     :initial="{ boxShadow: '0 0 0 0 #00000000' }"
     :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
@@ -76,7 +76,7 @@ const steps = [
         class="group relative"
         :class="cn('', { '!grid-cols-1 !justify-start !-left-20': lessThan })">
         <div
-          class="z-2 timeline-middle scale-110 rounded-full drop-shadow-sm"
+          class="timeline-middle z-2 scale-110 rounded-full drop-shadow-sm"
           :class="{ 'bg-b2': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
@@ -87,7 +87,7 @@ const steps = [
             }">
             <icon
               name="check-fill"
-              class="size-5 text-bc/80" />
+              class="text-bc/80 size-5" />
           </Motion>
         </div>
 
@@ -120,22 +120,22 @@ const steps = [
                  : 'timeline-end',
             )
           ">
-          <p class="py-2 font-mono text-lg italic dst">
+          <p class="dst py-2 font-mono text-lg italic">
             Step {{ i }}
           </p>
 
-          <h2 class="pt-1 dst">
+          <h2 class="dst pt-1">
             {{ step.title }}
           </h2>
 
-          <p class="pt-6 leading-7 dst">
+          <p class="dst pt-6 leading-7">
             {{ step.description }}
           </p>
 
           <div
             class="
-              relative mt-10 h-90 w-full overflow-hidden rounded-xl bg-b2/40
-              shadow-warm-2 shadow-black/4 drop-shadow-sm
+              bg-b2/40 shadow-warm-2 relative mt-10 h-90 w-full overflow-hidden
+              rounded-xl shadow-black/4 drop-shadow-sm
             ">
             <component
               :is="step.component"
@@ -155,8 +155,8 @@ const steps = [
               scaleY: progress[i] || 0,
             }"
             class="
-              absolute -top-1.5 -left-16 size-full origin-top overflow-hidden!
-              rounded-full! bg-neutral/70! group-last:hidden starting:scale-y-0
+              bg-neutral/70! absolute -top-1.5 -left-16 size-full origin-top
+              overflow-hidden! rounded-full! group-last:hidden starting:scale-y-0
             "></motion.hr>
         </motion.hr>
       </li>

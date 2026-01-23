@@ -1,0 +1,44 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:15 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Dark Matter',
+  affects: 'Enemies',
+  blurb: 'Active:  Veigar casts down a mass of dark matter that strikes the target location after a brief delay, dealing magic damage to enemies hit.',
+  castTime: '0.25',
+  cooldown: '0',
+  cost: '60 / 65 / 70 / 75 / 80',
+  damageType: 'Magic damage',
+  effectRadius: '240',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.</p>',
+      leveling: [
+        {
+          attribute: 'Magic Damage',
+          modifiers: [
+            {
+              values: '85 / 140 / 195 / 250 / 305'
+            },
+            {
+              tooltip: 'Scaling per rank:\n70 / 80 / 90 / 100 / 110% AP',
+              unit: '% AP',
+              values: '70 - 110'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Dark Matter\'s cooldown is reduced based on stacks of Phenomenal Evil.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/w',
+  notes: 'The delay starts at the beginning of the cast time.\nIf Veigar dies during the cast time, Dark Matter will still successfully fall from the sky.\nDark Matter grants  sight of the area during the delay.',
+  resource: 'Mana',
+  spellEffects: 'Area of effect',
+  spellshieldable: 'True',
+  targeting: 'Location',
+  targetRange: '950'
+}
+export default ability

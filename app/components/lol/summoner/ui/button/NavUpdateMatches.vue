@@ -66,7 +66,7 @@ const variants = {
           v-if="!cooldown"
           name="mingcute:refresh-2-line"
           :class="
-            cn('absolute size-5 dst transition-all duration-200 group-hover/load:opacity-100',
+            cn('dst absolute size-5 transition-all duration-200 group-hover/load:opacity-100',
                {
                  'animate-rotate': loading,
                },
@@ -76,9 +76,9 @@ const variants = {
         <div
           v-if="cooldown"
           class="
-            radial-progress absolute place-self-center border-2 border-neutral
-            bg-neutral text-xxs font-semibold text-nc opacity-90 shadow-sm
-            **:text-nc
+            radial-progress border-neutral bg-neutral text-xxs text-nc
+            **:text-nc absolute place-self-center border-2 font-semibold opacity-90
+            shadow-sm
           "
           :style="{
             '--value': cooldown?.seconds,
@@ -88,7 +88,7 @@ const variants = {
           :aria-valuenow="cooldown?.percent"
           role="progressbar">
           <span
-            class="grid size-full place-items-center rounded-full bg-neutral">
+            class="bg-neutral grid size-full place-items-center rounded-full">
             {{ cooldown?.seconds }}
           </span>
         </div>

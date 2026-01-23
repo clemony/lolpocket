@@ -106,7 +106,7 @@ watchEffect(() => {
 <template>
   <motion.div
     :class="
-      cn('bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
+      cn('bgneutral/84 btn btn-circle text-nc btn-neutral relative flex items-center rounded-full border',
          props.class,
       )
     "
@@ -132,19 +132,19 @@ watchEffect(() => {
     <button
       :disabled="searchQuery === null"
       class="
-        btn pointer-events-auto absolute top-1.5 left-1.5 z-2 btn-circle
-        btn-ghost btn-xs hover:bg-b3/40
+        btn btn-circle btn-ghost btn-xs hover:bg-b3/40 pointer-events-auto absolute
+        top-1.5 left-1.5 z-2
       "
       @click="clearFilters">
       <icon
         v-if="searchQuery"
         name="x-sm"
-        class="absolute size-5.5 shrink-0 text-bc/70 dst" />
+        class="text-bc/70 dst absolute size-5.5 shrink-0" />
 
       <icon
         v-else
         name="search"
-        class="absolute size-4.75 shrink-0 text-bc/70 dst" />
+        class="text-bc/70 dst absolute size-4.75 shrink-0" />
     </button>
   </motion.div>
 </template>

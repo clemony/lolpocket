@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { runePaths } from '~~/layers/domain/records/runes';
-
 definePageMeta({
   title: 'Runes',
   icon: 'lol:runes',

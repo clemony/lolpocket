@@ -83,7 +83,7 @@ const pathHovered = ref('')
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
+            cn('dst pt-1 pr-2 text-end font-medium duration-600', {
               'animate-in fade-in ': pathHovered,
               'animate-out fade-out': !pathHovered,
             })
@@ -107,7 +107,7 @@ const pathHovered = ref('')
         </h1>
         <p
           :class="
-            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
+            cn('dst pt-1 pr-2 text-end font-medium duration-600', {
               'animate-in fade-in ': !pathHovered,
               'animate-out fade-out': pathHovered,
             })

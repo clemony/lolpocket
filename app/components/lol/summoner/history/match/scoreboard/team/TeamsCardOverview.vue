@@ -36,7 +36,7 @@ const route = useRoute()
         :id="player?.championId"
         size="sq-5"
         alt="champion-icon"
-        class="shadow-xs dst" />
+        class="dst shadow-xs" />
 
       <span
         class="truncate">

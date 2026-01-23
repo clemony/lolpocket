@@ -1,2 +1,2 @@
-export * from "./heatmap"
-export * from "./scatter-chart"
+export * from './heatmap'
+export * from './scatter-chart'

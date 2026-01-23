@@ -8,9 +8,9 @@ const { subtitle, title, icon, value } = defineProps<{
 </script>
 
 <template>
-  <div class="stats grid h-29 min-h-29 w-full items-center overflow-hidden rounded-none! border-b border-b3/80">
+  <div class="stats border-b3/80 grid h-29 min-h-29 w-full items-center overflow-hidden rounded-none! border-b">
     <div class="stat gap-2.5 pr-6 pb-5 pl-0! leading-none select-none">
-      <div class="flex items-center gap-2 text-md font-semibold! text-nowrap text-bc/60">
+      <div class="text-md text-bc/60 flex items-center gap-2 font-semibold! text-nowrap">
         {{ title }}
       </div>
       <div class="stat-value flex w-full flex-nowrap items-center justify-between text-3xl!">

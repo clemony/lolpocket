@@ -1,0 +1,46 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'Q',
+  name: 'Five Point Strike',
+  width: '350',
+  affects: 'Enemies, Self',
+  angle: '20°',
+  blurb: 'Active:  Akali throws out a cone of kunai that deals magic damage to enemies hit. Targets hit at maximum range are briefly  slowed.',
+  castTime: '0.25 / 0.225 / 0.2 / 0.175 (based on level)',
+  cooldown: '1.5',
+  cost: '110 / 100 / 90 / 80 / 70',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Akali unleashes kunai in a cone in the target direction, dealing magic damage to enemies hit. Targets beyond a certain range are also slowed by 50% for 0.5 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Magic Damage',
+          modifiers: [
+            {
+              values: '45 / 70 / 95 / 120 / 145'
+            },
+            {
+              unit: '% AD',
+              values: '65'
+            },
+            {
+              unit: '% AP',
+              values: '60'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/q',
+  notes: 'Five Point Strike will hit enemies after only 0.188 / 0.169 / 0.15 / 0.131 (based on level) seconds (75% of cast time) into the cast time.\nDue to any actions only starting on integer game ticks, the effective cast time rounds up to 0.264 / 0.231 / 0.231 / 0.198 (based on level) and the hit will occur at 0.198 / 0.198 / 0.165 / 0.132 (based on level) seconds into it.\nThis ability\'s damage is calculated based on the caster\'s stats at the time of its initial application and does not change dynamically.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+  projectile: 'TRUE',
+  resource: 'Energy',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '500 / 120'
+}
+export default ability

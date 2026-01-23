@@ -1,7 +1,6 @@
-import { ITEM_EVENT_TYPES } from "@constants"
-import { computeShopTime, skillPriority } from "~~/server/domain"
-import { normalizeItemEvents } from "./normalizeItemEvents"
-import { toDeathEvent } from "./toDeathEvent"
+import { computeShopTime, skillPriority } from '~~/server/domain'
+import { normalizeItemEvents } from './normalizeItemEvents'
+import { toDeathEvent } from './toDeathEvent'
 
 export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
   const matchId = raw.metadata.matchId
@@ -17,7 +16,7 @@ export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
   const allEvents = raw.info.frames.flatMap((f: any) => f.events || [])
 
   const isKillEvent = (e: any) =>
-    e.type === "CHAMPION_KILL" || e.type === "CHAMPION_SPECIAL_KILL"
+    e.type === 'CHAMPION_KILL' || e.type === 'CHAMPION_SPECIAL_KILL'
 
   const FIFTEEN_MIN = 15 * 60 * 1000
 
@@ -46,24 +45,24 @@ export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
     const assists = allEvents
       .filter(
         (e: any) =>
-          isKillEvent(e) &&
-          Array.isArray(e.assistingParticipantIds) &&
-          e.assistingParticipantIds.includes(id)
+          isKillEvent(e)
+          && Array.isArray(e.assistingParticipantIds)
+          && e.assistingParticipantIds.includes(id)
       )
       .map(toDeathEvent)
 
     const deathsBefore15 = deaths.filter(
-      (d) => d.timestamp < FIFTEEN_MIN
+      d => d.timestamp < FIFTEEN_MIN
     ).length
-    const killsBefore15 = kills.filter((k) => k.timestamp < FIFTEEN_MIN).length
+    const killsBefore15 = kills.filter(k => k.timestamp < FIFTEEN_MIN).length
     const assistsBefore15 = assists.filter(
-      (a) => a.timestamp < FIFTEEN_MIN
+      a => a.timestamp < FIFTEEN_MIN
     ).length
 
     // SKILLS
     const skillOrder = allEvents
-      .filter((e: any) => e.type === "SKILL_LEVEL_UP" && e.participantId === id)
-      .map((e) => e.skillSlot)
+      .filter((e: any) => e.type === 'SKILL_LEVEL_UP' && e.participantId === id)
+      .map(e => e.skillSlot)
 
     const priority = skillPriority(skillOrder)
 
@@ -72,21 +71,21 @@ export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
 
     result[puuid] = {
       puuid,
-      matchId,
-      //timeShoppingInSec: Math.round(shopTimeMs / 1000),
-      stats: {
-        deathsBefore15,
-        killsBefore15,
-        assistsBefore15,
-      },
+      assists,
+      deaths,
       items: normalizeItemEvents(items),
+      kills,
+      matchId,
       skills: {
         order: skillOrder,
         priority,
       },
-      kills,
-      assists,
-      deaths,
+      // timeShoppingInSec: Math.round(shopTimeMs / 1000),
+      stats: {
+        assistsBefore15,
+        deathsBefore15,
+        killsBefore15,
+      },
     }
   }
   return result

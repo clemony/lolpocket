@@ -11,39 +11,23 @@ const customCollections = fs
   .filter((d) => d.isDirectory())
   .map((d) => ({
     dir: path.join(iconsRoot, d.name),
-    prefix: d.name, // or "" if you truly don’t care
     normalizeIconName: false,
+    prefix: d.name, // or "" if you truly don’t care
   }))
 
 export default defineNuxtConfig({
   alias: {
-    //
-    "@types": fileURLToPath(new URL("./layers/types/types", import.meta.url)),
-    "@schema": fileURLToPath(new URL("./layers/types/schema", import.meta.url)),
-    "@lib": fileURLToPath(new URL("./layers/lib/src", import.meta.url)),
-    //
-    "@css": fileURLToPath(new URL("./layers/ui/src/css", import.meta.url)),
-    "@ui": fileURLToPath(new URL("./layers/ui/src", import.meta.url)),
-    "@variants": fileURLToPath(new URL("./layers/ui/src/variants", import.meta.url)),
-    //
-    "@domain": fileURLToPath(new URL("./app/domain", import.meta.url)),
     riot: fileURLToPath(new URL("./server/api/riot", import.meta.url)),
-    "@constants": fileURLToPath(new URL("./layers/domain/constants", import.meta.url)),
-    "@records": fileURLToPath(new URL("./shared/records", import.meta.url)),
-    "@stores": fileURLToPath(new URL("./app/stores", import.meta.url)),
-    "~tiptap": fileURLToPath(new URL("./layers/tiptap/src", import.meta.url)),
   },
-
   imports: {
     dirs: [
-      "@variants",
-      "@constants",
-      "@domain",
-      "./layers/types/schema",
-      "@lib",
-      "@ui",
-      "./layers/types/types",
-      "~tiptap"
+      "~/domain",
+      "~/stores",
+      "#shared/types/**/*",
+      "#layers/ui/app",
+      "#layers/lib/app",
+      "#layers/patch/constants/**/*",
+      "#layers/ui/variants/**/*",
     ],
   },
   modules: [
@@ -56,141 +40,36 @@ export default defineNuxtConfig({
     "@morev/vue-transitions/nuxt",
     "@nuxt/ui",
     "@nuxt/icon",
-    "@nuxt/fonts",
     "motion-v/nuxt",
   ],
+
   // app
   typescript: {
     includeWorkspace: true,
     strict: false,
-    typeCheck: true,
     tsConfig: {
       compilerOptions: {
         pretty: true,
         skipLibCheck: true,
       },
     },
+    typeCheck: true,
   },
-  //
-  nitro: {
-    imports: {
-      dirs: [
-        "./server/types",
-        "@types",
-        "@constants",
-        "@schema",
-        "./server/utils",
-        "@lib",
-        "./server/domain",
-      ],
-    },
-    routeRules: {
-      "/api/**": {
-        cors: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      },
-      "/supabase/**": {
-        cors: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      },
-    },
-    //server
- typescript: {
-      strict: false,
-      tsConfig: {
-        compilerOptions: {
-           baseUrl: "../",
-         types: ["layers/types/types/**/*", "server/types/**/*", "layers/types/schema/**/*"],
-        },
-        include: ["layers/types/schema/**/*", "layers/types/types/**/*"],
-      }
-  },
-    preset: "cloudflare_module",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-      wrangler: {
-        kv_namespaces: [
-          {
-            binding: "MATCHES_KV",
-            id: "3eef843a4bd44eec9075ef0c5fb7ea70",
-          },
-        ],
-      },
-    },
-    storage: {
-      matchesKV: {
-        driver: "cloudflare-kv-binding",
-      },
-    },
-  },
-  pinia: {
-    storesDirs: ["./app/stores/*"],
-  },
-  //
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-      global: true
-    },
-  ],
-  devServer: {
-    host: "localhost",
-    https: false,
-    port: 8080,
-  },
-  devtools: {
-    enabled: false,
-  },
-  experimental: {
-    //extractAsyncDataHandlers: true,
- typescriptPlugin: true,
-   // viteEnvironmentApi: true,
-  },
-  fonts: {
-    families: [
-      {
-        name: "Inter",
-        provider: "fontsource",
-        styles: ["italic", "normal"],
-        weights: [300, 400, 500, 600, 700, 800],
-      },
-      {
-        name: "Noto Serif KR",
-        provider: "fontsource",
 
-        styles: ["italic", "normal"],
-        weights: [300, 400, 600, 700],
-      },
-      {
-        name: "Geist Mono",
-        provider: "fontsource",
-        styles: ["normal"],
-        weights: [300, 400, 500],
-      },
-    ],
+components: [
+  {
+    path: '~/components',
+    pathPrefix: false,
+    global: true
+  },,
+  {
+    path: '#layers/ui/app/components',
+    pathPrefix: false,
+    global: true
   },
-  future: {
-    compatibilityVersion: 5,
-  },
-  ui: {
-    theme: {
-      colors: [
-        "primary",
-        "b1",
-        "b2",
-        "b3",
-        "neutral",
-        "nc",
-        "inspiration",
-        "resolve",
-        "domination",
-        "precision",
-        "sorcery",
-      ],
-    },
-  },
+   '~/components',
+],
+
   icon: {
     provider: "server",
     componentName: "icon",
@@ -204,21 +83,39 @@ export default defineNuxtConfig({
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
     format: ["webp"],
   },
+  css: ["#layers/ui/app/css/tailwind.css"],
 
-  runtimeConfig: {
-    supabasePooler: process.env.SUPABASE_POOLER,
-    riotApiKey: process.env.NUXT_RIOT_API,
-    public: {
-      baseUrl: "",
-      supabaseUrl: "",
-      supabaseKey: "",
-      authRedirect: "",
-      newUserRedirect: "",
+  nitro: {
+    imports: {
+      dirs: [
+        "./server/types",
+        "./server/utils",
+        "./server/domain",
+        "#layers/lib/app",
+        "#shared/types",
+      ],
+    },
+    routeRules: {
+      "/api/**": {
+        cors: true,
+        headers: { "Access-Control-Allow-Origin": "*" },
+      },
+      "/supabase/**": {
+        cors: true,
+        headers: { "Access-Control-Allow-Origin": "*" },
+      },
+    },
+    typescript: {
+      strict: false,
+      tsConfig: {
+        compilerOptions: {
+          baseUrl: "../",
+        },
+        include: ["server/types/**/*"],
+      },
     },
   },
-
   supabase: {
-    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
     redirectOptions: {
@@ -227,12 +124,10 @@ export default defineNuxtConfig({
       login: "/auth/login",
       saveRedirectToCookie: true,
     },
-    types: "@types/database.types.ts",
+    //types: "@types/database.types.ts",
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
   },
-
-  //
-  css: ["./app/ui/css/tailwind.css"],
   vite: {
     build: {
       sourcemap: false,
@@ -240,16 +135,25 @@ export default defineNuxtConfig({
     clearScreen: false,
     plugins: [tailwindcss()],
   },
+  runtimeConfig: {
+    public: {
+      authRedirect: "",
+      baseUrl: "",
+      newUserRedirect: "",
+      supabaseKey: "",
+      supabaseUrl: "",
+    },
+    riotApiKey: process.env.NUXT_RIOT_API,
+    supabasePooler: process.env.SUPABASE_POOLER,
+  },
 
-  // routes
-
+  pinia: { storesDirs: ["./app/stores"]},
   router: {
     options: {
       scrollBehaviorType: "smooth",
     },
   },
   routeRules: {
-    // Root pages
     "/": { ssr: false },
     "/backpack": { ssr: false },
     "/champions": { ssr: false },
@@ -258,39 +162,37 @@ export default defineNuxtConfig({
     "/nexus": { ssr: false },
     "/pocket": { ssr: false },
     "/tools": { ssr: false },
-
-    // Account pages
     "/account/**": { ssr: false },
-
-    // Settings pages
     "/settings/**": { ssr: false },
-
-    // Backpack folder
     "/backpack/**": { ssr: false },
-
-    // Champions folder
     "/champions/**": { ssr: false },
-
-    // FAQ folder
     "/faq/**": { ssr: false },
-
-    // Library folder
     "/library/**": { ssr: false },
-
-    // Pocket folder
     "/pocket/**": { ssr: false },
-
-    // Summoner folder
     "/summoner/**": { ssr: false },
-
-    // Tools folder
     "/tools/**": { ssr: false },
-
     // Auth folder — keep SSR enabled
     "/auth/**": { ssr: true },
   },
   ssr: true,
 
-  //
+  devServer: {
+    host: "localhost",
+    https: false,
+    port: 8080,
+  },
+  devtools: {
+    enabled: false,
+  },
+  experimental: {
+   extractAsyncDataHandlers: true,
+    nitroAutoImports: true,
+    typescriptPlugin: true,
+     viteEnvironmentApi: true,
+  },
+  future: {
+    compatibilityVersion: 5,
+  },
   compatibilityDate: "2025-07-18",
+
 })

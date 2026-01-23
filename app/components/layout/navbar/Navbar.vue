@@ -7,7 +7,7 @@ const sum = computed (() => route.path.match(/summoner.*/))
   <header
     class=""
     :class="
-      cn('fixed top-0 z-10 flex h-15 w-full max-w-screen shrink-0 items-center gap-2 border-b bg-linear-to-r from-b1/40 to-b1/40 pr-5 pl-16 backdrop-blur-sm',
+      cn('from-b1/40 to-b1/40 fixed top-0 z-10 flex h-15 w-full max-w-screen shrink-0 items-center gap-2 border-b bg-linear-to-r pr-5 pl-16 backdrop-blur-sm',
          {
            'border-0   !from-transparent  ':
              ['pocket', 'summoner', 'champions'].includes(

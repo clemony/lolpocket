@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
 import { DialogDescription, DialogTitle } from 'reka-ui'
 
 const { class: className, pocket } = defineProps<{

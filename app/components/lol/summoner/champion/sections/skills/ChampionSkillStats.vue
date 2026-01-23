@@ -57,7 +57,7 @@ const ckey = computed (() => String(route.params.champion_key))
               :data-type="`${ability.winrate}% winrate
           ${ability.games} games
           ${ability.pickrate}% pickrate`"
-              :class="cn('flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-b2/40 text-xs! leading-none select-none', {
+              :class="cn('bg-tint-b2/40 flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden text-xs! leading-none select-none', {
                 'text-transparent': ability.winrate === 0,
                 'bg-neutral/90 text-nc dss shadow-sm': ability.winrate !== 0 })">
               <span

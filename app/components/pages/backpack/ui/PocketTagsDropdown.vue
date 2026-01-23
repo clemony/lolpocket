@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
 import Fuse from 'fuse.js'
 
 const { class: className, pocket: p } = defineProps<{

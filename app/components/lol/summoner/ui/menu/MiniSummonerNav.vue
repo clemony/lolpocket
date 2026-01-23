@@ -16,11 +16,11 @@ const { childRoutes, links, summoner } = defineProps<{
           <div class="relative">
             <SummonerIcon
               :summoner
-              class="size-11 size-full rounded-field"></SummonerIcon>
+              class="rounded-field size-11 size-full"></SummonerIcon>
             <SummonerLevel
               class="
-                absolute -bottom-1.5 z-1 rounded-full bg-neutral pt-px text-sm
-                text-nc
+                bg-neutral text-nc absolute -bottom-1.5 z-1 rounded-full pt-px
+                text-sm
               " />
           </div>
         </template>

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { generateName } from '~~/shared/.index';
-
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key)),
@@ -20,7 +18,7 @@ const pocket = computed(() =>
           hover="base"
           size="12"
           class="pointer-events-auto w-max min-w-54 rounded-xl">
-          <h1 class="text-xxs font-bold! tracking-tight text-nowrap dst">
+          <h1 class="text-xxs dst font-bold! tracking-tight text-nowrap">
             {{ pocket.name }}
           </h1>
         </PopoverTrigger>

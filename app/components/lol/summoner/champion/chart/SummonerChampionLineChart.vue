@@ -105,10 +105,10 @@ const range = computed(() => {
 <template>
   <div
     class="
-      stats relative h-54 w-full rounded-box border border-b3 bg-b1 px-5
-      shadow-warm-soft
+      stats rounded-box border-b3 bg-b1 shadow-warm-soft relative h-54 w-full border
+      px-5
     ">
-    <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
+    <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>

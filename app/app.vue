@@ -19,7 +19,6 @@ onMounted(() => {
   )
   ix().loadPatch()
 })
-
 </script>
 
 <template>

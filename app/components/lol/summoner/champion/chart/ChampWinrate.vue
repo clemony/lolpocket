@@ -12,7 +12,7 @@ const a = computed(() => {
   <div class="relative grid size-14 shrink-0 place-items-center rounded-lg">
     <DonutSkeleton
       style="--thickness: 22%;"
-      class="absolute size-[3rem]" />
+      class="absolute size-12" />
 
     <div
       class="radial-progress absolute"
@@ -24,7 +24,7 @@ const a = computed(() => {
       }"
       role="progressbar">
     </div>
-    <span class="absolute text-xxs! font-medium text-bc dst">{{ a.toFixed(1).replace(".0", "") }}
+    <span class="text-xxs! text-bc dst absolute font-medium">{{ a.toFixed(1).replace(".0", "") }}
     </span>
   </div>
 </template>

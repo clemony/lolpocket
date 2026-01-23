@@ -41,7 +41,7 @@ definePageMeta({
             :key="b"
             class="grid auto-rows-max gap-4">
             <span
-              class="align-middle text-md/7"
+              class="text-md/7 align-middle"
               v-html="section.title" />
             <ol
               class="

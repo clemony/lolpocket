@@ -1,0 +1,55 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:50 PM CST
+
+const ability: Ability = {
+  key: 'Q',
+  name: 'Ntofo Strikes',
+  width: '100 / 100',
+  affects: 'Enemies, Self',
+  castTime: '0.45 : 0.35 (based on bonus resistances)',
+  cooldown: '3.5',
+  cost: '20',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> K\'Sante slams his ntofo down in the target direction that deals physical damage to enemies hit and slows them by 80% for 0.5 seconds.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '70 / 100 / 130 / 160 / 190'
+            },
+            {
+              unit: '% bonus armor',
+              values: '40'
+            },
+            {
+              unit: '% bonus magic resistance',
+              values: '40'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'If this hits at least one enemy, K\'Sante generates a stack for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Ntofo Strikes cast consumes them all to become empowered with a new effect.'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Empowered Active:</span> K\'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds.</p>'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">All Out Bonus:</span> Ntofo Strikes\' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes\' stacks are reset. Ntofo Strikes\' cooldown is reset if K\'Sante had 2 stacks before entering All Out.</p>'
+    },
+    {
+      description: 'Ntofo Strikes resets K\'Sante\'s basic attack timer.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/q',
+  notes: 'This ability will cast from wherever the caster is at the end of the cast time.\nIf Ntofo Strikes hits no more than one enemy champion, K\'Sante will be ordered an attack command against them.\nThe basic attack reset is not considered one for  Hail of Blades.\nTemporary increases/decreases in bonus resistances will count for reducing/increasing Ntofo Strikes\' cooldown.\nOnly the empowered active is a  projectile.\nThe following table refers for interactions while K\'Sante is in the cast time of the third cast:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection',
+  projectile: 'SPECIAL',
+  resource: 'Mana',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'true',
+  targeting: 'Direction'
+}
+export default ability

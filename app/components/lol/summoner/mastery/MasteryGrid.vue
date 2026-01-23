@@ -1,28 +1,27 @@
 <script lang="ts" setup>
 import type {
-    ColDef,
-    ColGroupDef,
-    GridApi,
-    GridOptions,
-    GridReadyEvent,
-} from 'ag-grid-community';
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridReadyEvent,
+} from 'ag-grid-community'
 import {
-    CellStyleModule,
-    ClientSideRowModelApiModule,
-    ClientSideRowModelModule,
-    ColumnApiModule,
-    ColumnAutoSizeModule,
-    ColumnHoverModule,
-    GridStateModule,
-    ModuleRegistry,
-    RenderApiModule,
-    RowSelectionModule,
-    RowStyleModule,
-    TooltipModule,
-    ValidationModule,
-} from 'ag-grid-community';
-import { AgGridVue } from 'ag-grid-vue3';
-import { globalGridOptions, masteryGridTheme } from '~/ui/config';
+  CellStyleModule,
+  ClientSideRowModelApiModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  RowStyleModule,
+  TooltipModule,
+  ValidationModule,
+} from 'ag-grid-community'
+import { AgGridVue } from 'ag-grid-vue3'
 
 const { champions } = defineProps<{
   champions: AggregatedStatsAndMastery[]
@@ -125,7 +124,7 @@ ModuleRegistry.registerModules([
   <AgGridVue
     v-if="champions"
     data-theme="neutral line"
-    class="mx-auto min-h-[100vh] w-full self-start"
+    class="mx-auto min-h-screen w-full self-start"
     :tooltip-show-delay="100"
     :grid-options="gridOptions"
 

@@ -41,7 +41,7 @@ const summoner = computed(() => s)
         <SummonerName
           as="h1"
           class="
-            text-xxl font-serif leading-none font-bold text-bc/94 drop-shadow-sm
+            text-xxl text-bc/94 font-serif leading-none font-bold drop-shadow-sm
           " />
         <slot />
       </div>

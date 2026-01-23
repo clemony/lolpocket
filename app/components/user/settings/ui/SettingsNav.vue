@@ -15,7 +15,7 @@ const route = useRoute()
       size="xl"
       variant="link"
       :class="
-        cn('h-12 w-full justify-start text-left text-lg! font-medium text-bc/80 capitalize underline-offset-4',
+        cn('text-bc/80 h-12 w-full justify-start text-left text-lg! font-medium capitalize underline-offset-4',
            {
              'btn-active pointer-events-none font-semibold':
                route.path === item.path,

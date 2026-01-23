@@ -1,9 +1,11 @@
-export const STAT_AVERAGE = (): StatAverage => ({
-  total: 0,
-  average: 0,
-})
+export function STAT_AVERAGE(): StatAverage {
+  return {
+    average: 0,
+    total: 0,
+  }
+}
 
-export type StatFinalizeRule = {
+export interface StatFinalizeRule {
   decimals?: number
   scale?: number
 }
@@ -13,70 +15,70 @@ export type StatSchemaEntry = StatFinalizeRule & {
 }
 
 export const AGGREGATED_STAT_SCHEMA = {
-  kills: { init: STAT_AVERAGE },
-  deaths: { init: STAT_AVERAGE },
   assists: { init: STAT_AVERAGE },
-  kp: { init: STAT_AVERAGE, decimals: 1, scale: 100 },
+  deaths: { init: STAT_AVERAGE },
+  kills: { init: STAT_AVERAGE },
+  kp: { decimals: 1, init: STAT_AVERAGE, scale: 100 },
 
-  // damage
-  totalDamage: {
-    init: STAT_AVERAGE,
-    decimals: 0,
-  },
-  totalDamageTaken: {
-    init: STAT_AVERAGE,
-    decimals: 0,
-  },
   damagePercentage: {
+    decimals: 2,
     init: STAT_AVERAGE,
     scale: 100,
-    decimals: 2,
+  },
+  // damage
+  totalDamage: {
+    decimals: 0,
+    init: STAT_AVERAGE,
+  },
+  totalDamageTaken: {
+    decimals: 0,
+    init: STAT_AVERAGE,
   },
 
   // defense
   damageTakenPercentage: {
+    decimals: 2,
     init: STAT_AVERAGE,
     scale: 100,
-    decimals: 2,
   },
 
+  allySaves: { init: STAT_AVERAGE },
   // utility
   ccDuration: { init: STAT_AVERAGE },
   totalAllyHealing: {
-    init: STAT_AVERAGE,
     decimals: 0,
+    init: STAT_AVERAGE,
   },
   totalAllyShielding: {
-    init: STAT_AVERAGE,
     decimals: 0,
+    init: STAT_AVERAGE,
   },
-  allySaves: { init: STAT_AVERAGE },
 
   // farming
   goldEarned: { init: STAT_AVERAGE },
   minionsKilled: { init: STAT_AVERAGE },
   neutralMinionsKilled: { init: STAT_AVERAGE },
-  turretsKilled: { init: STAT_AVERAGE },
   objectivesStolen: { init: STAT_AVERAGE },
+  turretsKilled: { init: STAT_AVERAGE },
 
+  controlWardsPlaced: { init: STAT_AVERAGE },
   // vision
   visionScore: { init: STAT_AVERAGE },
-  controlWardsPlaced: { init: STAT_AVERAGE },
 
-  // timeline
-  killsBefore15: { init: STAT_AVERAGE },
   assistsBefore15: { init: STAT_AVERAGE },
   deathsBefore15: { init: STAT_AVERAGE },
+  // timeline
+  killsBefore15: { init: STAT_AVERAGE },
 
+  doubleKills: { init: STAT_AVERAGE },
   // kills
   killingSprees: { init: STAT_AVERAGE },
-  doubleKills: { init: STAT_AVERAGE },
-  tripleKills: { init: STAT_AVERAGE },
-  quadraKills: { init: STAT_AVERAGE },
   pentaKills: { init: STAT_AVERAGE },
+  quadraKills: { init: STAT_AVERAGE },
+  tripleKills: { init: STAT_AVERAGE },
 
   gameTime: {
-    init: STAT_AVERAGE,
     decimals: 2,
+    init: STAT_AVERAGE,
   },
 } as const satisfies Record<string, StatSchemaEntry>

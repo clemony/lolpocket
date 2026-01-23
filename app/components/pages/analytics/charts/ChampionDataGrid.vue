@@ -1,26 +1,25 @@
 <script lang="ts" setup>
 import type {
-    ColDef,
-    ColGroupDef,
-    GridApi,
-    GridOptions,
-    GridPreDestroyedEvent,
-    GridReadyEvent,
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridPreDestroyedEvent,
+  GridReadyEvent,
 } from 'ag-grid-community'
 import {
-    CellStyleModule,
-    ClientSideRowModelModule,
-    ColumnApiModule,
-    ColumnAutoSizeModule,
-    ColumnHoverModule,
-    GridStateModule,
-    ModuleRegistry,
-    RenderApiModule,
-    RowSelectionModule,
-    ValidationModule,
+  CellStyleModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  ValidationModule,
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/ui/config'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
 import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
 
@@ -44,12 +43,12 @@ const gridOptions: GridOptions<any[]> = {
   // scaleUpToFitGridWidth: true,
   columnHoverHighlight: false,
   defaultColDef: {
-    minWidth: 50,
-    flex: 1,
     // autoHeaderHeight: true,
     // wrapHeaderText: true,
     initialHide: false,
+    minWidth: 50,
     cellClass: ['champion-grid-cell'],
+    flex: 1,
     headerClass: ['champion-grid-header', 'text-center'],
     sortingOrder: ['desc', 'asc', null],
     /*     headerComponentParams: {
@@ -209,7 +208,7 @@ ModuleRegistry.registerModules([
   <AgGridVue
     :initial-state="cs().dbChampionGridState"
     class="
-      champion-grid border-shadow-sm stat-grid size-full! min-w-full bg-b1
+      champion-grid border-shadow-sm stat-grid bg-b1 size-full! min-w-full
       shadow-black/3! drop-shadow-black/3!
     "
     :grid-options="gridOptions"

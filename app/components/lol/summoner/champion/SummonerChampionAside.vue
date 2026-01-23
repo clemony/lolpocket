@@ -53,7 +53,7 @@ const results = computed (() => {
       <h1 class="flex size-full items-center gap-3 pt-0.5 pl-0.5 leading-none">
         <button
           data-type="Back to all champions"
-          class="grid size-8 place-items-center overflow-hidden rounded-full shadow-sm dss after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
+          class="dss grid size-8 place-items-center overflow-hidden rounded-full shadow-sm after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
           @click="navigateTo({ name: 'summoner-region-slug-champions' })">
           <ChampionIcon
             :id="mastery?.championId"
@@ -113,7 +113,7 @@ const results = computed (() => {
                   size="8"
                   variant="link"
                   on="neutral"
-                  class="hover-on:underline w-fit gap-2 rounded-xl pr-6 pl-2.5 font-medium on:no-underline">
+                  class="hover-on:underline on:no-underline w-fit gap-2 rounded-xl pr-6 pl-2.5 font-medium">
                   <ChampionIcon
                     :id="k.championId"
                     class="size-5 rounded-full" />

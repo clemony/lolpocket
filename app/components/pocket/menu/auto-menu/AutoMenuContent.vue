@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { MenubarItem, MenubarRadioGroup } from '../types.menubar'
-
 const { item } = defineProps<{ item: MenubarItem }>()
 </script>
 
@@ -8,7 +6,7 @@ const { item } = defineProps<{ item: MenubarItem }>()
   <!-- separator -->
   <MenubarSeparator
     v-if="item.name === 'separator'"
-    class="mt-0.75 mb-0.5 bg-b3/60" />
+    class="bg-b3/60 mt-0.75 mb-0.5" />
 
   <!-- checkbox -->
   <AutoMenuCheckboxItem

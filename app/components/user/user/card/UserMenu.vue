@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { TippyOptions } from 'vue-tippy'
-import { popoverArrow } from '~/ui/config/popoverArrow'
 
 const props = withDefaults(
   defineProps<
@@ -71,11 +70,11 @@ const tag = ref(false)
             variant="neutral">
             <Icon
               name="lp:cxp"
-              class="size-3 text-nc" />
+              class="text-nc size-3" />
             {{ author?.level }}
           </Badge>
         </div>
-        <div class="absolute top-18 left-2 grid size-20 place-items-center rounded-lg bg-b1 p-1.5">
+        <div class="bg-b1 absolute top-18 left-2 grid size-20 place-items-center rounded-lg p-1.5">
           <UserAvatar
             :author
             :comment
@@ -83,7 +82,7 @@ const tag = ref(false)
         </div>
         <div class="flex items-center gap-3 px-2 pb-2">
           <div class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
-            <h2 class="inline font-serif text-xl! leading-3 dst">
+            <h2 class="dst inline font-serif text-xl! leading-3">
               {{ props.author?.name || author?.username || "Mysterious Summoner" }}
             </h2>
             <span

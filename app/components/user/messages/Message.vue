@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { InboxMessage } from '@types'
-
 defineOptions({
   inheritAttrs: false,
 })

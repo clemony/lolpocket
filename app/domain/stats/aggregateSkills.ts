@@ -1,8 +1,8 @@
 const SKILL_BY_INDEX: Record<number, SkillKey> = {
-  1: "Q",
-  2: "W",
-  3: "E",
-  4: "R",
+  1: 'Q',
+  2: 'W',
+  3: 'E',
+  4: 'R',
 }
 
 type PriorityKey = `${SkillKey}>${SkillKey}>${SkillKey}`
@@ -21,20 +21,20 @@ export interface AggregatedSkills {
 
 export const EMPTY_SKILL_STATS = {
   byLevel: {
-    Q: { games: 0, win: 0 },
-    W: { games: 0, win: 0 },
     E: { games: 0, win: 0 },
+    Q: { games: 0, win: 0 },
     R: { games: 0, win: 0 },
+    W: { games: 0, win: 0 },
   },
   priority: {} as SkillPriorityStats,
 }
 
 function createEmptySkillLevel() {
   return {
-    Q: { games: 0, win: 0 },
-    W: { games: 0, win: 0 },
     E: { games: 0, win: 0 },
+    Q: { games: 0, win: 0 },
     R: { games: 0, win: 0 },
+    W: { games: 0, win: 0 },
   }
 }
 export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
@@ -46,44 +46,48 @@ export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
     byLevel[level] = createEmptySkillLevel()
   }
 
-  for (const { timeline, player } of matches) {
+  for (const { player, timeline } of matches) {
     const win = player.win
 
-    if (!timeline) continue
+    if (!timeline)
+      continue
 
     const order = timeline?.skills.order
-    const prio = timeline?.skills.priority.join(">") as PriorityKey
+    const prio = timeline?.skills.priority.join('>') as PriorityKey
 
     // 1️⃣ Priority stats (per match)
     if (!priority[prio]) {
       priority[prio] = { games: 0, win: 0 }
     }
     priority[prio].games++
-    if (win) priority[prio].win++
+    if (win)
+      priority[prio].win++
 
     for (let i = 0; i < order.length; i++) {
       const level = i + 1
       const skill = SKILL_BY_INDEX[order[i]]
-      if (!skill) continue
+      if (!skill)
+        continue
 
       const s = byLevel[level][skill]
       s.games++
-      if (win) s.win++
+      if (win)
+        s.win++
     }
   }
 
   // 3️⃣ Compute winrates
   for (const level of Object.values(byLevel)) {
     for (const stat of Object.values(level)) {
-      stat.winrate =
-        stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
+      stat.winrate
+        = stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
       stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
     }
   }
 
   for (const stat of Object.values(priority)) {
-    stat.winrate =
-      stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
+    stat.winrate
+      = stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
     stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
   }
 

@@ -1,14 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import {
-  EditableArea,
-  EditableEditTrigger,
-  EditableInput,
-  EditablePreview,
-  EditableRoot,
-} from 'reka-ui'
-import { generateName } from '~~/shared/.index'
-
 const {
   buttonClass,
   class: className,

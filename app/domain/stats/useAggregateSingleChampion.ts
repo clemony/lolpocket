@@ -1,37 +1,38 @@
-export const useAggregateSingleChampion = (
-  matchData: ComputedRef<MatchPlayerData[]>
-) =>
-  computed<AggregatedStats | null>(() => {
-    if (!matchData.value?.length) return null
+export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerData[]>) {
+  return computed<AggregatedStats | null>(() => {
+    if (!matchData.value?.length)
+      return null
 
     const acc: AggregatedStats = {
       championId: matchData.value[0].player.championId,
       championName: champNameById(matchData.value[0].player.championId),
+      gamePatches: [],
+      games: 0,
+      losses: 0,
       role: {
         stats: {} as Record<string, StatDetail>,
       },
-      gamePatches: [],
-      games: 0,
       wins: 0,
-      losses: 0,
 
-      //other
-      visionScorePerMin: 0,
       csPerMin: 0,
+      // other
+      visionScorePerMin: 0,
 
       ...initFromSchema(AGGREGATED_STAT_SCHEMA),
     }
 
     for (const m of matchData.value) {
       const row = m.player
-      if (!row) continue
+      if (!row)
+        continue
 
       // role
       const roleKey = normalizeRole(row.role)
       const roleStat = getRoleStat(acc.role.stats, roleKey)
 
       roleStat.games++
-      if (row.win && row.win !== "remake") roleStat.win++
+      if (row.win && row.win !== 'remake')
+        roleStat.win++
 
       applyParticipantStats(acc, row)
       bumpFromPlayerStats(acc, row)
@@ -52,40 +53,41 @@ export const useAggregateSingleChampion = (
       finalizeStatAverage(acc[key], acc.games, finalizeRule)
     }
 
-    acc.kda =
-      Math.round(
+    acc.kda
+      = Math.round(
         ((acc.kills.total + acc.assists.total) / acc.deaths.total) * 10
       ) / 10
 
     acc.winrate = acc.games ? Math.round((acc.wins / acc.games) * 1000) / 10 : 0
     acc.gameTime.average = acc.games ? acc.gameTime.average / 60 : 0
 
-    acc.visionScorePerMin =
-      acc.games ?
-        parseFloat(
-          (
-            ((acc.visionScore.average / acc.gameTime.average) * 10) /
-            10
-          ).toFixed(1)
-        )
-      : 0
+    acc.visionScorePerMin
+      = acc.games
+        ? Number.parseFloat(
+            (
+              ((acc.visionScore.average / acc.gameTime.average) * 10)
+              / 10
+            ).toFixed(1)
+          )
+        : 0
 
-    acc.csPerMin =
-      acc.games ?
-        parseFloat(
-          (
-            (acc.minionsKilled.average + acc.neutralMinionsKilled.average) /
-            acc.gameTime.average
-          ).toFixed(1)
-        )
-      : 0
+    acc.csPerMin
+      = acc.games
+        ? Number.parseFloat(
+            (
+              (acc.minionsKilled.average + acc.neutralMinionsKilled.average)
+              / acc.gameTime.average
+            ).toFixed(1)
+          )
+        : 0
 
     for (const stat of Object.values(acc.role.stats)) {
-      stat.winrate =
-        stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
+      stat.winrate
+        = stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
       stat.pickrate = Math.round((stat.games / acc.games) * 1000) / 10
     }
     acc.role.mostPlayed = sortEntriesByPickrate(acc.role.stats)[0][0]
 
     return acc.games ? acc : null
   })
+}

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { Pocket, RuneSet } from '@types'
-import { shardObject } from '~~/layers/domain/records/shards'
-
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
   set: RuneSet

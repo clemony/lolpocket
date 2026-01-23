@@ -1,0 +1,43 @@
+
+@reference './theme.css';
+
+@layer base {
+  :root {
+    font-size: 12px;
+    /* user-select: none; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    @apply border-b3 decoration-from-font underline-offset-2;
+  }
+  img {
+    @apply select-none;
+  }
+  html,
+  body,
+  #app {
+    scrollbar-color: --alpha(var(--color-b3) / 40%) transparent;
+    scrollbar-width: thin;
+    font-family: var(--font-sans);
+    @apply text-md relative h-screen w-screen text-bc selection:bg-neutral/80 selection:text-nc;
+  }
+
+  input,
+  input:where(:not([type='button'], [type='reset'], [type='submit'])),
+  select,
+  textarea,
+  .reset-input {
+    @apply border-transparent ring-0 ring-offset-0 outline-0 focus:ring-0 focus:outline-0;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+}

@@ -19,8 +19,8 @@ onMounted(() => (selected.value = props.currentValue))
       <Button
         variant="secondary"
         class="
-          relative grid size-16 place-items-center overflow-hidden p-0
-          hover:ring hover:ring-b4
+          hover:ring-b4 relative grid size-16 place-items-center overflow-hidden
+          p-0 hover:ring
         "
         :class="{ 'shadow-sm drop-shadow-sm': selected !== '' }">
         <icon
@@ -45,15 +45,15 @@ onMounted(() => (selected.value = props.currentValue))
       align="center">
       <div class="grid grid-cols-3 place-content-evenly gap-3">
         <label
-          v-for="ss in spellbook"
+          v-for="ss in spells"
           :key="ss.name"
           as="label"
           :title="ss.name.toString()"
           :disabled="selected === ss.name"
           class="
-            size-16 cursor-pointer! rounded-lg shadow-sm
-            transition-[colors,opacity] duration-400 hover:ring-2
-            hover:ring-bc/60 disabled:opacity-70 disabled:inset-shadow-sm
+            hover:ring-bc/60 size-16 cursor-pointer! rounded-lg
+            shadow-sm transition-[colors,opacity] duration-400
+            hover:ring-2 disabled:opacity-70 disabled:inset-shadow-sm
             disabled:grayscale
           ">
           <input

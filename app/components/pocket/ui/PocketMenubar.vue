@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import {
-  ChampionIcon,
-  Icon,
-  ItemsAutoMenu,
-  MiniItemAvatars,
-  MiniSpellAvatars,
-  RuneAndPathImg,
-  RunesAutoMenu,
-  SpellsAutoMenu
-} from '#components'
+import { Icon } from '#components'
+
+const ChampionIcon = resolveComponent('ChampionIcon')
+const SpellsAutoMenu = resolveComponent('SpellsAutoMenu')
+const ItemsAutoMenu = resolveComponent('ItemsAutoMenu')
+const MiniItemAvatars = resolveComponent('MiniItemAvatars')
+const MiniSpellAvatars = resolveComponent('MiniSpellAvatars')
+const RuneAndPathImg = resolveComponent('RuneAndPathImg')
+const RunesAutoMenu = resolveComponent('RunesAutoMenu')
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))

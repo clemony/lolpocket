@@ -18,8 +18,8 @@ async function clear() {
       Remove
       <tippy
         class="
-          underline-dotted cursor-help rounded-tiny underline transition-colors
-          duration-200 hover:bg-neutral/96 hover:text-nc
+          underline-dotted rounded-tiny hover:bg-neutral/96 hover:text-nc cursor-help
+          underline transition-colors duration-200
         ">
         stored data
         <template #content>

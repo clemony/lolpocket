@@ -1,0 +1,28 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:15 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Arc of Ruin',
+  width: '120',
+  affects: 'Enemies',
+  blurb: 'Active:  Yunara fires a beam of spirit magic in the target direction that deals magic damage to enemies and  slows them for a short duration.',
+  castTime: '0.6 : 0.45 (based on bonus attack speed)',
+  cooldown: '10',
+  cost: '60',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Yunara fires a beam of spirit magic in the target direction that deals 175 / 350 / 525 (based on Transcend One\'s Self\'s Rank) (+ 150% bonus AD) (+ 75% AP) magic damage to enemies hit and slows them by 99% decaying over 1 second, as well as granting sight of the surrounding area.</p>'
+    },
+    {
+      description: 'This ability benefits from ultimate ability effects and is the upgraded version of Arc of Judgment during Transcendent State.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/w',
+  notes: 'Arc of Ruin grants  sight of its surroundings during the cast time and for 0.3 seconds afterwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Ruin does not trigger ultimate cast effects, such as  Experimental Hexplate\'s Overdrive,  Zeke\'s Convergence\'s Frostfire Tempest and  Cloud Dragon Soul\'s increased movement speed. This is intended.',
+  projectile: 'FALSE',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'true',
+  targeting: 'Direction'
+}
+export default ability

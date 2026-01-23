@@ -36,7 +36,7 @@ const puuid = computed (() => toValue(props.summoner)?.puuid)
         :class="cn('', toggleVariants({ variant, on, size, base }), props.class)">
         <Icon
           :name="as().settings.favorite_summoners.includes(puuid) ? 'heart-sm' : 'heart-sm-outline'"
-          :class="cn('size-8.5 **:stroke-[0.7] group-not-on/toggle:text-bc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination',
+          :class="cn('group-not-on/toggle:text-bc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination size-8.5 **:stroke-[0.7]',
           )" />
       </ToggleGroupItem>
     </Tooltip>

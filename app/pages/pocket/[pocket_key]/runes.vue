@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { CarouselApi } from '@ui'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 useSeoMeta({

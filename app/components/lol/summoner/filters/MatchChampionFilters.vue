@@ -32,7 +32,7 @@ const champs = computed (() => {
             :alt="champion.championName"
             class="size-12 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm" />
 
-          <div class="grid grow gap-1 font-medium dst">
+          <div class="dst grid grow gap-1 font-medium">
             <p class="text-md! self-end">
               {{ champion.championName }}
             </p>
@@ -45,7 +45,7 @@ const champs = computed (() => {
           </div>
 
           <div
-            class="z-0 grid w-22 shrink-0 justify-end gap-1 text-sm dst *:text-end">
+            class="dst z-0 grid w-22 shrink-0 justify-end gap-1 text-sm *:text-end">
             <p class="text-nowrap normal-case">
               {{ champion.wins }} win
             </p>
@@ -66,7 +66,7 @@ const champs = computed (() => {
             base="btn"
             wrapper-class=""
             size="c-6"
-            class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/c:animate-heartbeat">
+            class="bg-b2! group-hover/c:animate-heartbeat pointer-events-none absolute top-0.5 left-1 z-5 p-0 opacity-80 backdrop-blur-sm">
             <Icons
               name="heroicons:x-circle-16-solid"
               class="size-5.25!" />

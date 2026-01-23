@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { contactLinks, riotDisclaimer } from '@domain'
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
@@ -22,7 +20,7 @@ const links = computed(() =>
   <footer
     class=""
     :class="
-      cn('bgneutral z-0 footer flex h-26 max-h-26 min-h-26 w-full items-center gap-12 bg-neutral p-6 text-nc sm:footer-horizontal',
+      cn('bgneutral footer bg-neutral text-nc sm:footer-horizontal z-0 flex h-26 max-h-26 min-h-26 w-full items-center gap-12 p-6',
          className,
       )
     ">
@@ -55,7 +53,7 @@ const links = computed(() =>
         <icon
           v-if="i + 1 !== links.length"
           name="slash"
-          class="size-4 text-nc opacity-70" />
+          class="text-nc size-4 opacity-70" />
       </li>
     </ul>
     <menu
@@ -70,7 +68,7 @@ const links = computed(() =>
         external
         :to="link.link"
         target="_blank"
-        class="grid place-items-center *:text-nc">
+        class="*:text-nc grid place-items-center">
         <icon
           :name="link.icon.name"
           :class="link.icon.class" />
@@ -83,11 +81,11 @@ const links = computed(() =>
         @click="copy()">
         <icon
           name="teenyicons:at-outline"
-          class="size-6 shrink-0 stroke-1 text-nc" />
+          class="text-nc size-6 shrink-0 stroke-1" />
 
         <template #content>
           <div class="flex flex-col gap-1 p-2">
-            <span class="-mx-2 badge badge-neutral text-md italic">
+            <span class="badge badge-neutral text-md -mx-2 italic">
               contact@lolpocket.win
             </span>
 
@@ -96,7 +94,7 @@ const links = computed(() =>
 
               <icon
                 name="copy"
-                class="size-3.5! *:text-nc" />
+                class="*:text-nc size-3.5!" />
             </span>
           </div>
         </template>

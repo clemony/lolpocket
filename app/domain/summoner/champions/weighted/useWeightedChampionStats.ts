@@ -1,17 +1,17 @@
 export function useBayesianChampionStats(matches: MatchData[], puuid) {
   const statsList = Object.values(useChampionStats(puuid, null))
   const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
-  const globalWinrate =
-    statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
+  const globalWinrate
+    = statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
 
   return statsList
     .map((stats) => {
       const adjustedWeight = stats.games ** 0.7
       const confidence = adjustedWeight / (adjustedWeight + 15)
-      const bayesianWinrate =
-        ((1 - confidence) * globalWinrate +
-          confidence * (stats.wins / stats.games)) *
-        100
+      const bayesianWinrate
+        = ((1 - confidence) * globalWinrate
+          + confidence * (stats.wins / stats.games))
+        * 100
 
       return {
         ...stats,

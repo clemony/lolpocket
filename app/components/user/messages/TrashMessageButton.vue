@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { InboxMessage } from '@types'
 import { trashMsg } from './inbox-management'
 
 const { class: className, message } = defineProps<{

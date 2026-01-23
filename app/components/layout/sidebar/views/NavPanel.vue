@@ -31,7 +31,7 @@ const navLinks = computed(() => {
         <span :class="cn('w-full max-w-0 opacity-100 transition-all transition-discrete duration-200', { 'max-w-0 opacity-0 hidden ': !open })">
           {{ parentRoute?.meta?.title || parentRoute?.name }}
         </span>
-        <Separator :class="cn('ml-1.5 hidden h-px w-full max-w-0 grow bg-b3 opacity-0 transition-all transition-discrete duration-200', { 'max-w-9 opacity-100 block': !open })" />
+        <Separator :class="cn('bg-b3 ml-1.5 hidden h-px w-full max-w-0 grow opacity-0 transition-all transition-discrete duration-200', { 'max-w-9 opacity-100 block': !open })" />
       </div>
 
       <SidebarBtnLink

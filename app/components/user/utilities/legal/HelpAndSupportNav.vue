@@ -12,9 +12,9 @@ const nav = computed<RouteRecordRaw[]>(() => routes.find(r => r.path === '/suppo
   <Collapsible :default-open="false">
     <CollapsibleTrigger
       class="
-              flex h-10 w-full flex-nowrap items-center justify-start gap-3.25!
-              overflow-hidden pr-1 pl-1.5 font-medium text-nowrap text-bc/50
-              capitalize duration-0! hover:text-bc! hover:underline
+              text-bc/50 hover:text-bc! flex h-10 w-full flex-nowrap items-center
+              justify-start gap-3.25! overflow-hidden pr-1 pl-1.5 font-medium
+              text-nowrap capitalize duration-0! hover:underline
             ">
       <span class="relative grid size-4.5 shrink-0 place-items-center">
         <CaretRotate

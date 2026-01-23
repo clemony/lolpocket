@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Pocket } from '@types'
-
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
 </script>
@@ -22,11 +20,11 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
       <IndexIcon
-        :item="spellbook[set.d]"
+        :item="spells[set.d]"
         class="size-6" />
 
       <IndexIcon
-        :item="spellbook[set.f]"
+        :item="spells[set.f]"
         class="size-6" />
       <Grow />
     </MenubarRadioItem>

@@ -45,7 +45,7 @@ const winrateDiff = computed(() => {
           ">
           <icon
             name="teenyicons:heart-circle-solid"
-            class="-mt-0.5 size-8 text-bc dst" />
+            class="text-bc dst -mt-0.5 size-8" />
         </div>
       </div>
 

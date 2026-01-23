@@ -1,0 +1,66 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:04:11 PM CST
+
+const ability: Ability = {
+  key: 'E',
+  name: 'Heroic Charge',
+  affects: 'Enemies',
+  blurb: 'Active:  Poppy  dashes to the target enemy, dealing physical damage and  carrying them forward. If the target hits terrain, Poppy deals the same physical damage again and briefly  stuns them.',
+  castTime: 'none',
+  cooldown: '14 / 13 / 12 / 11 / 10',
+  cost: '70',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Poppy dashes to the target enemy\'s location. If they are in range upon arrival, she deals physical damage and carries them along with her for up to 400 units.</p>',
+      leveling: [
+        {
+          attribute: 'Physical Damage',
+          modifiers: [
+            {
+              values: '40 / 60 / 80 / 100 / 120'
+            },
+            {
+              unit: '% bonus AD',
+              values: '60'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'If the target hits terrain, she stops to deal the same physical damage again and stuns them for a duration.',
+      leveling: [
+        {
+          attribute: 'Stun Duration',
+          modifiers: [
+            {
+              unit: ' seconds',
+              values: '1.6 / 1.7 / 1.8 / 1.9 / 2'
+            }
+          ]
+        },
+        {
+          attribute: 'Total Physical Damage',
+          modifiers: [
+            {
+              values: '80 / 120 / 160 / 200 / 240'
+            },
+            {
+              unit: '% bonus AD',
+              values: '120'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/e',
+  notes: 'Poppy will be ordered to basic attack the target.\nHeroic Charge can apply  spell effects twice (once when Poppy hits her target and once she stuns them against a wall).\nBoth instances of damage and crowd control are all the same cast instance. Effects that only trigger once per spell cast will not trigger twice.\nPoppy dashes slightly less far than the distance she pushes the target.\nHeroic Charge can interact with player-generated terrain.\nThe  dash does not follow targets. The target\'s position at the time of Heroic Charge\'s cast is the direction Poppy will dash towards.\nPoppy does not  carry nor deal damage to the target if they have left a certain radius before she collides with them.',
+  resource: 'Mana',
+  speed: '1800',
+  spellEffects: 'spell',
+  spellshieldable: 'True',
+  targeting: 'Unit',
+  targetRange: '475'
+}
+export default ability

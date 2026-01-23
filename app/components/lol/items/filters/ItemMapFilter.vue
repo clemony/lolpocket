@@ -11,7 +11,7 @@ const { modelValue: selectedMap } = defineProps<{
         <span class="relative grid size-5 place-items-center">
           <component
             :is="`i-lol-${selectedMap}`"
-            class="absolute shrink-0 opacity-80 dst"
+            class="dst absolute shrink-0 opacity-80"
             :class="{
               'size-5!': selectedMap === 12 || selectedMap === 11,
               'size-6!': selectedMap === 30,
@@ -27,7 +27,7 @@ const { modelValue: selectedMap } = defineProps<{
       v-once
       class="w-[calc(var(--reka-select-trigger-width)+2px)] px-0">
       <SelectGroup class="px-0">
-        <SelectLabel class="w-full border-b border-b-b3/60">
+        <SelectLabel class="border-b-b3/60 w-full border-b">
           <span class="opacity-50">Select a Map...</span>
         </SelectLabel>
         <SelectGroup class="size-full space-y-1 p-0.5">
@@ -52,7 +52,7 @@ const { modelValue: selectedMap } = defineProps<{
               <span class="relative grid size-5 place-items-center">
                 <component
                   :is="`i-lol-${map}`"
-                  class="absolute shrink-0 opacity-80 dst"
+                  class="dst absolute shrink-0 opacity-80"
                   :class="{
                     'size-5!': map === 12 || map === 11,
                     'size-6!': map === 30,

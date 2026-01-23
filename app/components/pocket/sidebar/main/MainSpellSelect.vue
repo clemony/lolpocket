@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '@types'
-import { HeadingTip } from '#components'
-import { SelectTrigger } from 'reka-ui'
-
 const {
   side = 'bottom',
   sideOffset,
@@ -18,6 +14,8 @@ const {
   align?: Align
   alignOffset?: number
 }>()
+
+const HeadingTip = resolveComponent('HeadingTip')
 
 const pocket = computed(() => p)
 const selectedSet = computed(() =>
@@ -91,9 +89,9 @@ const keyClass
           class="group/select flex-nowrap *:flex *:items-center"
           :value="set.id">
           <IndexIcon
-            :item="spellbook[set.d]"
+            :item="spells[set.d]"
             class="mr-1" />
-          <IndexIcon :item="spellbook[set.f]" />
+          <IndexIcon :item="spells[set.f]" />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

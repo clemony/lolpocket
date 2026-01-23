@@ -1,0 +1,27 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'P',
+  name: 'Concussive Blows',
+  affects: 'Enemies',
+  blurb: 'Innate:  Braum\'s  basic attacks and  Winter\'s Bite apply a  stack of Concussive Blows. Once the first stack is applied, allied champion  basic attacks can also stack Concussive Blows.',
+  damageType: 'Magic damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Braum\'s basic attacks and Winter\'s Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion\'s basic attack applies an additional stack to the target on-hit.</p>'
+    },
+    {
+      description: 'The fourth stack against a target consumes them all to deal 26 - 196 (based on his level) magic damage and stun them for 1.25 - 1.75 (based on his level) seconds.'
+    },
+    {
+      description: 'This effect cannot apply to the same target more than once every few seconds. During this immunity period, affected targets take[ bonus magic damage equal to 20% of the trigger damage ][ 5.2 - 39.2 (based on level) bonus magic damage ]from Braum\'s basic attacks.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/p',
+  notes: 'Concussive Blows won\'t be applied if the attack is  dodged or  blocked or if the attack  misses.',
+  onTargetCdStatic: '8 / 6 / 4 (based on level)',
+  spellEffects: 'Proc',
+  spellshieldable: 'True',
+  targeting: 'Passive'
+}
+export default ability

@@ -1,30 +1,28 @@
-import { ITEM_EVENT_TYPES } from "@constants"
-
 export const SHOP_BOUNDS = {
   BLUE: {
-    minX: 0,
     maxX: 1500,
-    minY: 0,
     maxY: 1500,
+    minX: 0,
+    minY: 0,
   },
   RED: {
-    minX: 13000,
     maxX: 15000,
-    minY: 13000,
     maxY: 15000,
+    minX: 13000,
+    minY: 13000,
   },
 }
 
-function isInShopArea(pos: { x: number; y: number }, teamId: 100 | 200) {
+function isInShopArea(pos: { x: number, y: number }, teamId: 100 | 200) {
   const b = teamId === 100 ? SHOP_BOUNDS.BLUE : SHOP_BOUNDS.RED
   return (
     pos.x >= b.minX && pos.x <= b.maxX && pos.y >= b.minY && pos.y <= b.maxY
   )
 }
 
-type ShopState = {
-  lastTimestamp: number
+interface ShopState {
   lastInShop: boolean
+  lastTimestamp: number
   totalShopMs: number
 }
 
@@ -68,7 +66,7 @@ export function computeShopTime(
   if (totalShopMs === 0) {
     const itemEvents = events
       .filter(
-        (e) => e.participantId === participantId && ITEM_EVENT_TYPES.has(e.type)
+        e => e.participantId === participantId && ITEM_EVENT_TYPES.has(e.type)
       )
       .sort((a, b) => a.timestamp - b.timestamp)
 

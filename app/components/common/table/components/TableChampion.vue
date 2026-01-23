@@ -21,7 +21,7 @@ const route = useRoute()
       :src="`/img/champions/${params.data.championId}.webp`"
       class="size-13 rounded-full shadow-sm drop-shadow-sm"
       :alt="`${champNameById(params.data.championId)}-icon`" />
-    <h4 class="text-start leading-none font-semibold dst">
+    <h4 class="dst text-start leading-none font-semibold">
       {{ champNameById(params.data.championId) }}
     </h4>
     <Icon

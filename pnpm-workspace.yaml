@@ -1,3 +1,8 @@
+shamefullyHoist: true
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
 onlyBuiltDependencies:
   - '@morev/vue-transitions'
   - '@parcel/watcher'
@@ -9,4 +14,3 @@ onlyBuiltDependencies:
   - unrs-resolver
   - vue-demi
   - workerd
-'shamefullyHoist': true

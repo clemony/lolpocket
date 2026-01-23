@@ -1,0 +1,16 @@
+// Updated Patch 16.1.1 - 01/13/2026 08:49:58 AM CST
+const item: Item = {
+  id: 323040,
+  name: 'Seraph\'s Embrace',
+  description: '70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.',
+  gold: {
+    base: 2900,
+    purchasable: false,
+    sell: 2030,
+    total: 2900
+  },
+  maps: [
+    11
+  ]
+}
+export default item

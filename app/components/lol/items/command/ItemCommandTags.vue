@@ -14,7 +14,7 @@ const searchInput = ref([])
       <button
         v-if="query !== ''"
         :appear="false"
-        class="f btn mt-4 gap-2 rounded-md bg-b2/97 text-sm! font-normal! btn-xs">
+        class="f btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!">
         {{ query }}
       </button>
     </template>
@@ -22,7 +22,7 @@ const searchInput = ref([])
     <button
       v-if="filters.tags && filters.tags !== null"
       :appear="false"
-      class="f btn mt-4 gap-2 rounded-md bg-b2/97 text-sm! font-normal! btn-xs"
+      class="f btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!"
       @click="filters.tags = null">
       {{ filters.tags }}
 
@@ -33,7 +33,7 @@ const searchInput = ref([])
       v-for="stat in filters.stats"
       :key="stat"
       :appear="false"
-      class="btn mt-4 gap-2 rounded-md bg-b2/97 text-sm! font-normal! btn-xs">
+      class="btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!">
       <input
         v-model="filters.tags"
         type="checkbox"

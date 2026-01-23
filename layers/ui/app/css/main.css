@@ -1,0 +1,88 @@
+
+@import '@nuxt/ui';
+@reference "./theme.css";
+
+:root {
+  /*   --ui-text-dimmed: var(--color-bc);
+  --ui-text-muted: var(--color-bc);
+  --ui-text-toned: var(--color-bc);
+  --ui-text: var(--color-bc);
+  --ui-text-highlighted: var(--color-nc);
+  --ui-text-inverted: var(--color-nc);
+
+  --ui-bg: var(--color-b1);
+  --ui-bg-muted: color-mix(in lch, var(--color-b2) 60%, var(--color-b1) 40%);
+  --ui-bg-elevated: var(--color-b3);
+  --ui-bg-accented: var(--color-b1);
+  --ui-bg-inverted: var(--color-bc);
+
+  --ui-border: color-mix(in lch, var(--color-b1) 80%, var(--color-b1) 20%);
+  --ui-border-muted: var(--color-b2);
+  --ui-border-accented: var(--color-b3);
+  --ui-border-inverted: color-mix(in lch, var(--color-bc) 60%, transparent 20%);
+
+  --ui-primary: color-mix(in lch, var(--color-b2) 60%, var(--color-b1) 40%);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500); */
+
+  --b1: var(--color-primary-0);
+  --b2: var(--color-primary-100);
+  --b3: var(--color-primary-200);
+  --bc: var(--color-bc);
+  --primary: var(--color-primary-50);
+  --neutral: var(--color-primary-950);
+  --nc: var(--color-primary-300);
+  --inspiration: var(--color-inspiration-400);
+  --resolve: var(--color-resolve-400);
+  --sorcery: var(--color-sorcery-400);
+  --domination: var(--color-domination-400);
+  --precision: var(--color-precision-400);
+
+  .light {
+    --b1: var(--color-primary-0);
+    --b2: var(--color-primary-100);
+    --b3: var(--color-primary-200);
+    --bc: var(--color-bc);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-950);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-400);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-400);
+    --domination: var(--color-domination-400);
+    --precision: var(--color-precision-400);
+  }
+
+  .dim {
+    --b1: var(--color-primary-0);
+    --b2: var(--color-primary-100);
+    --b3: var(--color-primary-200);
+    --bc: var(--color-bc);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-950);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-300);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-500);
+    --domination: var(--color-domination-500);
+    --precision: var(--color-precision-300);
+  }
+
+  .dark {
+    --b1: var(--color-primary-0);
+    --b2: var(--color-primary-100);
+    --b3: var(--color-primary-200);
+    --bc: var(--color-bc);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-950);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-300);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-500);
+    --domination: var(--color-domination-500);
+    --precision: var(--color-precision-300);
+  }
+}

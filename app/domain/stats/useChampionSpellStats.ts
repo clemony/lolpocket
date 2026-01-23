@@ -1,9 +1,9 @@
 export type SpellStat = Record<string | number, StatDetail>
 
-export type SpellStats = {
-  single: OrderedStatEntry[]
-  pairs: Record<string, StatDetail>
+export interface SpellStats {
   best: Record<string, StatDetail>
+  pairs: Record<string, StatDetail>
+  single: OrderedStatEntry[]
 }
 
 export function makeSpellPairKey(a: number, b: number) {
@@ -16,7 +16,7 @@ export function expandSpellPairRecord(
   const result: Record<number, StatDetail> = {}
 
   const [[key, stat]] = Object.entries(pair)
-  const [a, b] = key.split("-").map(Number)
+  const [a, b] = key.split('-').map(Number)
 
   result[a] = stat
   result[b] = stat
@@ -29,26 +29,28 @@ export function pickBestSpellSet(
   minGames = 5
 ): Record<number, StatDetail> | null {
   const bestPair = pickBestGeneric(pairs, minGames)
-  if (!bestPair) return null
+  if (!bestPair)
+    return null
 
   return expandSpellPairRecord(bestPair)
 }
 
 export const EMPTY_SPELL_SET: Record<string, StatDetail> = {}
 
-export const useChampionSpellStats = (source: Ref<MatchPlayerData[]>) =>
-  computed<SpellStats>(() => {
+export function useChampionSpellStats(source: Ref<MatchPlayerData[]>) {
+  return computed<SpellStats>(() => {
     const single: Record<number, StatDetail> = {}
     const pairs: Record<string, StatDetail> = {}
 
     const totalMatches = source.value?.length
     if (!totalMatches) {
-      return { single: [], pairs: {}, best: {} }
+      return { best: {}, pairs: {}, single: [] }
     }
 
     for (const match of source.value) {
       const p = match.player
-      if (!p || p.win === "remake") continue
+      if (!p || p.win === 'remake')
+        continue
 
       const [s1, s2] = Object.values(p.spells)
 
@@ -69,5 +71,6 @@ export const useChampionSpellStats = (source: Ref<MatchPlayerData[]>) =>
 
     const best = pickBestSpellSet(pairs)
 
-    return { single: sortEntriesByPickrate(single), pairs, best }
+    return { best, pairs, single: sortEntriesByPickrate(single) }
   })
+}

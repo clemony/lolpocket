@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
 
 const {
@@ -36,14 +35,14 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
         <Button
           variant="ghost"
           class="
-            *:transition-scale *:duration-300 relative grid size-20
-            place-items-center overflow-hidden **:pointer-events-none
+            *:transition-scale relative grid size-20 place-items-center
+            overflow-hidden *:duration-300 **:pointer-events-none
             hover:*:scale-110
           ">
           <icon
             v-if="!pocket?._champion"
             name="lp:champ"
-            class="size-10 text-bc/20" />
+            class="text-bc/20 size-10" />
           <ChampionIcon
             v-else
             v-memo="[pocket._champion]"
@@ -60,7 +59,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align
       :side
-      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
+      class="w-(--reka-select-trigger-width) min-w-54 p-0">
       <div class="flex gap-3">
         <ChampionIcon
           :k="pocket._champion"
@@ -80,7 +79,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
           <p
             v-memo="[pocket._champion]"
             :class="
-              cn('truncate text-md leading-none italic', {
+              cn('text-md truncate leading-none italic', {
                 'font-medium': pocket._champion,
                 '!font-normal  opacity-20': !pocket._champion,
               })

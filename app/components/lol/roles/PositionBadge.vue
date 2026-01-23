@@ -24,7 +24,7 @@ const position = computed(() => {
     hover="btn"
     :size
     :class="
-      cn('w-fit gap-2.5! rounded-lg text-sm! font-medium! text-bc/90 capitalize',
+      cn('text-bc/90 w-fit gap-2.5! rounded-lg text-sm! font-medium! capitalize',
          {
            'hover:**:text-bc hover:text-bc order-first text-white':
              active

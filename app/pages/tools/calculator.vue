@@ -39,7 +39,7 @@ console.log('💠 - is().calculatorSets:', is().calculatorSet)
             :num="1"
             :set="is().calculatorSet" />
           <CollapsibleTrigger
-            class="btn absolute top-0 right-0 btn-square btn-ghost">
+            class="btn btn-square btn-ghost absolute top-0 right-0">
             hi
           </CollapsibleTrigger>
         </div>

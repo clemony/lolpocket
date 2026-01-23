@@ -50,7 +50,7 @@ watch(() => acc().accounts, (newVal) => {
           *:z-1
         ">
         <BlurReveal>
-          <h1 class="text-[3.4rem]! dst">
+          <h1 class="dst text-[3.4rem]!">
             {{ pocket.name }}
           </h1>
         </BlurReveal>
@@ -71,12 +71,12 @@ watch(() => acc().accounts, (newVal) => {
           pointer-events-none sticky -top-[70vh] z-13 flex h-15 min-h-15 w-full
           items-end gap-4 overflow-hidden pl-66
         ">
-        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
+        <Separator class="bg-b3/60 absolute bottom-0 left-0 z-0 w-full" />
         <NavFileTabs />
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-b1">
+      <div class="bg-b1 relative z-1 -mt-px min-h-screen w-screen max-w-screen">
         <CoreContent />
 
         <div class="mt-12 flex w-full flex-col items-center pb-54">

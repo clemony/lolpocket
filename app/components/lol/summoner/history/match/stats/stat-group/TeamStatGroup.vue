@@ -14,10 +14,10 @@ const open = shallowRef<boolean>(true)
     <CollapsibleTrigger class="contents w-full">
       <div class="sticky top-11 left-0 z-2 mb-0.5 -ml-1 grid h-6 w-full grid-cols-[2.14fr_10fr] items-center">
         <div
-          class="inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap text-shade-b3/20 capitalize saturate-110">
+          class="text-shade-b3/20 inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap capitalize saturate-110">
           <Icon
             name="up"
-            :class="cn('transition-rotate size-4 duration-200 **:stroke-[3.6] **:text-shade-b3/20', open ? 'rotate-0' : 'rotate-180')" />
+            :class="cn('transition-rotate **:text-shade-b3/20 size-4 duration-200 **:stroke-[3.6]', open ? 'rotate-0' : 'rotate-180')" />
           Teams
         </div>
       </div>
@@ -27,7 +27,7 @@ const open = shallowRef<boolean>(true)
           Teams
         </div>
         <Separator
-          class="h-0.5 w-full bg-shade-b3/20" />
+          class="bg-shade-b3/20 h-0.5 w-full" />
       </div>
     </CollapsibleTrigger>
 

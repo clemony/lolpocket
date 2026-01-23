@@ -1,9 +1,9 @@
 const AGGREGATABLE_PLAYER_BLOCKS = [
-  "offense",
-  "defense",
-  "utility",
-  "farming",
-  "vision",
+  'offense',
+  'defense',
+  'utility',
+  'farming',
+  'vision',
 ] as const
 
 type AggregatableBlock = (typeof AGGREGATABLE_PLAYER_BLOCKS)[number]
@@ -13,11 +13,12 @@ export function bumpFromPlayerStats(acc: AggregatedStats, player: Player) {
     const source = player[block] as Record<string, number>
 
     for (const [key, value] of Object.entries(source)) {
-      if (!(key in AGGREGATED_STAT_SCHEMA)) continue
+      if (!(key in AGGREGATED_STAT_SCHEMA))
+        continue
       bumpAverage(acc[key as keyof AggregatedStats] as StatAverage, value)
     }
   }
 }
-export const useBumpPlayerStats = () => {
+export function useBumpPlayerStats() {
   return ref()
 }

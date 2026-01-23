@@ -1,5 +1,5 @@
 export function getFinalItems(items: PlayerItems): number[] {
-  return Object.values(items).filter((id) => id && id !== 0)
+  return Object.values(items).filter(id => id && id !== 0)
 }
 
 export function getItemAcquireTimes(
@@ -13,19 +13,19 @@ export function getItemAcquireTimes(
   for (const frame of timeline.items) {
     for (const ev of frame.events) {
       // 1️⃣ Normal purchases
-      if (ev.action === "ADD" && ev.id) {
+      if (ev.action === 'ADD' && ev.id) {
         if (!map.has(ev.id)) {
           map.set(ev.id, frame.timestamp)
         }
       }
 
-      if (ev.action === "UPGRADE" && ev.to) {
+      if (ev.action === 'UPGRADE' && ev.to) {
         if (!map.has(ev.to)) {
           map.set(ev.to, frame.timestamp)
         }
       }
 
-      if (ev.action === "ADD" && ev.id) {
+      if (ev.action === 'ADD' && ev.id) {
         // 🔑 Tear base → final item alias
         const finalId = TEAR_TRANSFORMS[ev.id]
         if (finalId && finalSet.has(finalId) && !map.has(finalId)) {
@@ -35,9 +35,9 @@ export function getItemAcquireTimes(
 
       // 3️⃣ Support item upgrades
       if (
-        (ev.action === "S1_UPGRADE" || ev.action === "S2_UPGRADE") &&
-        supportItem &&
-        !map.has(supportItem)
+        (ev.action === 'S1_UPGRADE' || ev.action === 'S2_UPGRADE')
+        && supportItem
+        && !map.has(supportItem)
       ) {
         map.set(supportItem, frame.timestamp)
       }
@@ -52,7 +52,7 @@ export function resolveFinalItemOrder(
   acquireTimes: Map<number, number>
 ) {
   return finalItems
-    .map((id) => ({
+    .map(id => ({
       id,
       timestamp: acquireTimes.get(id) ?? Infinity,
     }))
@@ -62,15 +62,15 @@ export function resolveFinalItemOrder(
 export const TEN_MINUTES = 10 * 60 * 1000
 
 export function isBoots(id: number) {
-  return itemRank[id] === "Boots"
+  return itemRank[id] === 'Boots'
 }
 
 export function isLegendary(id: number) {
-  return itemRank[id] === "Legendary"
+  return itemRank[id] === 'Legendary'
 }
 
 export function isTrinket(id: number) {
-  return itemRank[id] === "Trinket"
+  return itemRank[id] === 'Trinket'
 }
 
 export const SUPPORT_LEGENDARIES = new Set<number>([
@@ -82,10 +82,10 @@ export const SUPPORT_LEGENDARIES = new Set<number>([
 ])
 
 export const TEAR_TRANSFORMS: Record<number, number> = {
+  2526: 2530, // Circlet -> Diadem
   3003: 3040, // Archangel -> Seraph
   3004: 3042, // Manamune -> Muramana
   3119: 3121, // Winter's Approach -> Fimbulwinter
-  2526: 2530, // Circlet -> Diadem
 }
 
 export const TEAR_BASE_BY_FINAL = Object.fromEntries(

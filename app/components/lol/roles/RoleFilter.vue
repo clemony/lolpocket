@@ -24,7 +24,7 @@ const roleModel = computed({
         size="sm"
         variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
-        class="gap-2 place-self-center rounded-lg px-2.5 text-md font-medium"
+        class="text-md gap-2 place-self-center rounded-lg px-2.5 font-medium"
         @click="clearFilters()">
         {{
           ms().filter.role !== "ALL"
@@ -71,7 +71,7 @@ const roleModel = computed({
 
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-              class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
+              class="dst peer-checked:text-nc h-5 w-auto shrink-0"
               :class="{ 'text-bc/80!': role.name === 'ALL' }" />
           </label>
         </template>

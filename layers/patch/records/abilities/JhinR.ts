@@ -1,0 +1,85 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:50 PM CST
+
+const ability: Ability = {
+  key: 'R',
+  name: 'Curtain Call',
+  width: '160',
+  affects: 'Enemies',
+  angle: '60°',
+  castTime: '1 / 0.25',
+  cooldown: '120 / 105 / 90',
+  cost: '100',
+  damageType: 'Physical damage',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.</p>'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Recast:</span> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target\'s missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.</p>',
+      leveling: [
+        {
+          attribute: 'Minimum Physical Damage per Bullet',
+          modifiers: [
+            {
+              values: '64 / 128 / 192'
+            },
+            {
+              unit: '% AD',
+              values: '25'
+            }
+          ]
+        },
+        {
+          attribute: 'Maximum Physical Damage per Bullet',
+          modifiers: [
+            {
+              values: '256 / 512 / 768'
+            },
+            {
+              unit: '% AD',
+              values: '100'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'The fourth shot critically strikes for (200% + 40%) damage.',
+      leveling: [
+        {
+          attribute: 'Minimum Fourth Shot Damage',
+          modifiers: [
+            {
+              values: '128 / 256 / 384'
+            },
+            {
+              unit: '% AD',
+              values: '50'
+            }
+          ]
+        },
+        {
+          attribute: 'Maximum Fourth Shot Damage',
+          modifiers: [
+            {
+              values: '512 / 1024 / 1536'
+            },
+            {
+              unit: '% AD',
+              values: '200'
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/r',
+  notes: 'Applies  spell damage to enemy champions and  area damage to other enemy units.\nEach cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse\'s passive.\nCurtain Call\'s shooting range is fixed in front of Jhin.\nThe opening sound effect and area of range are audible and visible to both teams.\nLeveling up the ability while channeling will change the final cooldown.\nJhin will turn to face in the target direction whenever he uses a recast.\nJhin gains a wider field of view during Curtain Call.\nThe reveal debuff is named  Caught Out.\nThis debuff is shared between  Captive Audience and Curtain Call.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe following table refers for interactions while Jhin is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Hexflash\n\n\nInterrupted by\n\n Teleport  Recall\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '5000',
+  spellEffects: 'Special',
+  spellshieldable: 'True',
+  targeting: 'Direction'
+}
+export default ability

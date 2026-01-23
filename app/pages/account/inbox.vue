@@ -70,7 +70,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               <span
                 v-show="!isCollapsed"
                 class="
-                  grow items-center text-xl font-semibold dst *:first:capitalize
+                  dst grow items-center text-xl font-semibold *:first:capitalize
                 ">
                 <SummonerName class="inline" />
                 's Inbox
@@ -78,7 +78,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               <icon
                 v-show="!isCollapsed"
                 name="select"
-                :class="cn('size-4.5 text-bc/60')" />
+                :class="cn('text-bc/60 size-4.5')" />
             </Button>
           </PopoverTrigger>
           <LazyPopoverContent

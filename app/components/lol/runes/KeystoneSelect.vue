@@ -27,11 +27,11 @@ watch(
   <div
     title="Keystone"
     class="
-      relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm
+      shadow-warm relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4
     ">
     <div
       class="
-        absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26
+        rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-26
       ">
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"

@@ -1,0 +1,311 @@
+
+@plugin "daisyui";
+
+@utility fx-0 {
+  --noise: 0;
+  --depth: 0;
+}
+
+@utility fx-1 {
+  --noise: 0.7;
+  --depth: 1;
+}
+
+/* tooltip */
+
+@utility tooltip-light {
+  --tt-bg: --alpha(var(--color-b1) / 99%) !important;
+  @apply relative;
+
+  &::before {
+    @apply border-b3 bg-[var(--tt-bg)] text-bc;
+  }
+
+  &::after {
+    @apply hidden;
+  }
+}
+@utility tooltip {
+  @apply cursor-default select-none hover:underline;
+  &::before {
+    @apply z-50 max-w-66 px-3 py-1.5 text-start text-sm leading-5.5 text-pretty whitespace-pre-wrap text-nc drop-shadow-sm transition-all duration-300;
+    &::after {
+      @apply transition-all delay-200 duration-200;
+    }
+  }
+}
+
+/* input */
+
+@utility input {
+  --input-color: var(--b3);
+}
+
+@utility text-area {
+  &:hover,
+  &:focus-within {
+    @apply ring-1 ring-bc/60;
+  }
+}
+/* divider */
+
+@utility divider {
+  @apply h-px text-sm font-semibold opacity-50;
+}
+
+/* badge */
+
+@utility badge {
+  @apply box-border flex items-center gap-2 rounded-lg px-2 text-sm shadow-sm shadow-black/2 dst;
+}
+
+@utility badge-neutral {
+  @apply bg-neutral text-nc;
+}
+
+@utility badge-default {
+  @apply border-b4/70 bg-b1/94 text-bc backdrop-blur-sm;
+}
+
+/* chkbx */
+
+@utility checkbox {
+  &::before {
+    clip-path: polygon(26.6% 50%, 46.6% 66.6%, 73.3% 33.3%);
+  }
+}
+@utility checkbox-neutral {
+  @apply border-b4 inset-shadow-none;
+}
+@utility checkbox-sm {
+  @apply rounded-[3.5px];
+}
+
+@utility checkbox-xs {
+  @apply rounded-[3.5px];
+}
+
+/*  btn */
+
+@utility btn {
+  @apply items-center gap-3 bg-transparent px-3 text-md font-normal;
+}
+
+/* chat */
+
+@utility chat-header {
+  @apply translate-y-0.75 px-2 text-xs !leading-0;
+}
+@utility chat-footer {
+  @apply -translate-y-2.75 px-2 !text-xs !leading-0;
+}
+
+@utility chat-bubble {
+  @apply bg-b2;
+  &::before {
+    @apply translate-x-1 -translate-y-[6.5px] scale-x-200 scale-y-250;
+  }
+}
+
+@layer components {
+  /* field  */
+
+  .field {
+    @apply relative mt-2 fieldset h-fit w-full rounded-xl border border-b3/60 bg-b2 p-4;
+  }
+
+  .field-legend {
+    @apply absolute -top-5 left-5.5 fieldset-legend max-h-12 max-w-64 text-md;
+  }
+
+  .field-box {
+    background-image: url('../../icons/ui/noise.svg');
+    @apply relative overflow-visible rounded-xl border border-b3/60 bg-b2/40 bg-size-[160px] bg-repeat text-sm shadow-warm-soft drop-shadow-xs **:select-none dark:bg-tint-b1/1 light:bg-tint-b2/60!;
+  }
+
+  /* progress */
+
+  .progress {
+    @supports (-webkit-appearance: none) {
+      &::-webkit-progress-value {
+        @apply rounded-xl;
+      }
+    }
+  }
+
+  .progress&::-webkit-progress-value {
+    border-radius: var(--rounded-xl) !important;
+  }
+
+  /* stat display  */
+
+  .stats {
+    .stat {
+      @apply items-center;
+    }
+
+    .stat-title {
+      @apply !text-md font-semibold drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-desc {
+      @apply !text-sm font-medium drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-figure {
+      @apply drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-value {
+      @apply drop-shadow-[1px_0px_0px_#00000020];
+    }
+  }
+}
+
+/* config */
+
+@plugin "daisyui" {
+  root: ':root';
+  themes: lofi;
+  styled: true;
+}
+
+@plugin "daisyui/theme" {
+  name: 'lofi';
+  default: true;
+  prefersdark: true, false;
+  color-scheme: dark, light;
+  styled: true;
+
+  --color-base-100: var(--b1);
+  --color-base-200: var(--b2);
+  --color-base-300: var(--b3);
+  --color-base-content: var(--bc);
+  --color-primary: var(--neutral) !important;
+  --color-primary-content: var(--nc);
+  --color-secondary: var(--neutral) !important;
+  --color-secondary-content: var(--nc);
+  --color-accent: var(--neutral) !important;
+  --color-accent-content: var(--nc);
+  --color-neutral: var(--neutral) !important;
+  --color-neutral-content: var(--nc);
+  --color-info: var(--sorcery);
+  --color-info-content: #000000;
+  --color-success: var(--resolve);
+  --color-success-content: #000000;
+  --color-warning: var(--precision);
+  --color-warning-content: #000000;
+  --color-error: var(--domination);
+  --color-error-content: #000000;
+  --input-color: var(--color-b3);
+  --tabcontent-radius-ss: var(--rounded-xl);
+  --tabcontent-radius-se: var(--rounded-xl);
+  --tabcontent-radius-es: var(--rounded-xl);
+  --tabcontent-radius-ee: var(--rounded-xl);
+
+  --radius-selector: 0.4rem;
+  --radius-box: 1rem;
+  --radius-field: 0.55rem;
+  --depth: 1;
+  --noise: 0.8;
+}
+
+.tabs-lift-start {
+  @layer daisyui.modifier {
+    --tabs-height: auto;
+    --tabs-direction: column;
+    --border: 2px;
+
+    > .tab {
+      /* ⤷ Inactive state: borders are transparent */
+      --tab-border: var(--border) 0 var(--border) var(--border);
+      --tab-border-colors: #0000 #0000 #0000 #0000;
+      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min)); /* top-left */
+      --tab-radius-se: 0; /* top-right */
+      --tab-radius-es: min(var(--radius-field), var(--tab-radius-min)); /* bottom-left */
+      --tab-radius-ee: 0; /* bottom-right */
+      --tab-paddings: var(--tab-p) var(--border) var(--tab-p) 0;
+
+      border-width: var(--tab-border);
+      border-color: var(--tab-border-colors);
+      border-radius: var(--tab-radius-ss) var(--tab-radius-se) var(--tab-radius-ee) var(--tab-radius-es);
+      padding: var(--tab-paddings);
+      position: relative;
+      background-color: transparent;
+
+      /* ⤷ Active state: visible borders, mask corners */
+      &:is(.tab-active, [aria-selected='true'], [aria-current='true'], [aria-current='page']),
+      &:is(input:checked, label:has(:checked)) {
+        --tab-border-color: color-mix(in lch, var(--color-b3) 100%, #ffffff 2%);
+        background-color: var(--tab-bg);
+        border-color: var(--tab-border-color);
+
+        border-top-width: var(--border);
+        border-right-width: 0;
+        border-bottom-width: var(--border) !important;
+        border-left-width: var(--border);
+
+        border-top-color: var(--tab-border-color);
+        border-bottom-color: var(--tab-border-color);
+        border-right-color: #0000;
+        border-left-color: var(--tab-border-color);
+
+        --tab-paddings: calc(var(--tab-p) - var(--border)) 0 calc(var(--tab-p) - var(--border)) var(--border);
+        --tab-inset: 0 auto 0 auto;
+        --tab-grad: calc(69% - var(--border));
+
+        --tab-corner-width: min(var(--radius-field), var(--tab-radius-min));
+        --tab-corner-height: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
+        --tab-corner-position: top left, bottom left;
+
+        --radius-start: radial-gradient(
+          circle at top left,
+          #0000 var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad)),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--border))
+        );
+        --radius-end: radial-gradient(
+          circle at bottom left,
+          #0000 var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad)),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--border))
+        );
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: var(--tab-corner-height);
+          width: var(--tab-corner-width);
+          background-position: var(--tab-corner-position);
+          background-image: var(--radius-start), var(--radius-end);
+          background-size: var(--tab-corner-width) var(--tab-corner-width);
+          background-repeat: no-repeat;
+          right: 0;
+          top: calc(-1 * var(--tab-corner-width));
+          bottom: calc(-1 * var(--tab-corner-width));
+          z-index: 1;
+        }
+
+        &:first-child:before {
+          --radius-start: none;
+        }
+
+        &:last-child:before {
+          --radius-end: none;
+        }
+      }
+    }
+
+    > .tab-content {
+      --tabcontent-margin: 0 0 0 calc(-1 * var(--border));
+      --tabcontent-radius-ss: 0;
+      --tabcontent-radius-se: var(--radius-box);
+      --tabcontent-radius-es: var(--radius-box);
+      --tabcontent-radius-ee: var(--radius-box);
+      order: 1;
+    }
+  }
+}

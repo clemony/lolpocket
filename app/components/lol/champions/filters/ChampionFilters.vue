@@ -20,13 +20,13 @@ const query = ref<string>(null)
 <template>
   <menu
     class="
-      absolute inset-x-0 top-16 z-1 flex h-32 flex-col gap-5 overflow-hidden
-      bg-b1 px-8 pt-11
+      bg-b1 absolute inset-x-0 top-16 z-1 flex h-32 flex-col gap-5
+      overflow-hidden px-8 pt-11
     ">
     <div class="flex items-center gap-10">
       <div class="relative flex grow items-center gap-6">
         <ExpandSearch
-          class="absolute left-0 max-w-60 btn-neutral **:[&_svg]:opacity-96!"
+          class="btn-neutral absolute left-0 max-w-60 **:[&_svg]:opacity-96!"
           @update:reset="filters.query = null">
           <input
             v-model="filters.query"
@@ -41,8 +41,8 @@ const query = ref<string>(null)
         <ChampionQuote
           as="p"
           class="
-            flex items-center px-2 pt-1 font-serif text-md tracking-wide
-            text-nowrap dst
+            text-md dst flex items-center px-2 pt-1 font-serif
+            tracking-wide text-nowrap
           " />
       </div>
 

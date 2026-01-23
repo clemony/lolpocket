@@ -48,10 +48,10 @@ const winrate = computed(() =>
       <div class="relative grid size-full place-items-center">
         <div
           class="relative grid size-21 place-items-center overflow-hidden rounded-lg">
-          <DonutSkeleton class="absolute size-21 dst" />
+          <DonutSkeleton class="dst absolute size-21" />
 
           <div
-            class="radial-progress absolute dss"
+            class="radial-progress dss absolute"
             :style="{
               '--value': winrate,
               '--size': '5.25rem',
@@ -62,7 +62,7 @@ const winrate = computed(() =>
             role="progressbar">
             <span
               v-if="entry"
-              class="font-medium text-bc dst">
+              class="text-bc dst font-medium">
               {{ winrate.toFixed(1).replace(".0", "") }}%
             </span>
           </div>

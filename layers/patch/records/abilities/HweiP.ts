@@ -1,0 +1,21 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'P',
+  name: 'Signature of the Visionary',
+  affects: 'Self, Enemies',
+  blurb: 'Innate:  Hwei\'s damaging abilities mark enemies hit for a short time. Damaging them with a different ability consumes the mark to create an explosion at their location that deals magic damage in an area.',
+  damageType: 'Magic damage',
+  effectRadius: '285',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Hwei\'s damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 230 (based on level) (+ 35% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p>'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p',
+  notes: 'The ability that consumes the mark cannot apply it on the same cast instance.\nThe mark cannot be triggered from the same cast instance of an ability, even if the triggering ability was empowered by  Stirring Lights.\nThe explosion occurs around the marked target from where they were when the ability damaged them to consume the mark.\nIn other words, the explosion is at the location of where they were hit, not where they are at the end of the delay.\nThe target who had their mark consumed is able to escape the area of the explosion within the delay period.\nEnemies can be damaged by multiple explosions at once.\n Spell shield will block both the mark and its consumption as well as the detonation.\nThe indicator for the effect telegraphs an unusually smaller radius than it actually hits.(bug)',
+  spellEffects: 'aoe',
+  spellshieldable: 'true',
+  targeting: 'Passive'
+}
+export default ability

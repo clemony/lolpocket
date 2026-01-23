@@ -1,7 +1,7 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export const useThreadStore = defineStore(
-  "threadStore",
+  'threadStore',
   () => {
     const threads = ref<Record<string, Record<string, CommentData>>>({})
     const children = ref<Record<string, Record<string, string[]>>>({})
@@ -17,10 +17,12 @@ export const useThreadStore = defineStore(
       parentId: string,
       commentId: string
     ) {
-      if (!children.value[threadId]) children.value[threadId] = {}
+      if (!children.value[threadId])
+        children.value[threadId] = {}
       const list = children.value[threadId][parentId] ?? []
 
-      if (!list.includes(commentId)) list.push(commentId)
+      if (!list.includes(commentId))
+        list.push(commentId)
 
       list.sort((a, b) => {
         const A = threads.value[threadId][a]
@@ -35,11 +37,12 @@ export const useThreadStore = defineStore(
     // set a single comment
     // -----------------------------------------
     function setComment(threadId: string, comment: CommentData) {
-      if (!threads.value[threadId]) threads.value[threadId] = {}
+      if (!threads.value[threadId])
+        threads.value[threadId] = {}
 
       threads.value[threadId][comment.id] = comment
 
-      const pid = comment.parent_id ?? "root"
+      const pid = comment.parent_id ?? 'root'
       insertChild(threadId, pid, comment.id)
     }
 
@@ -47,12 +50,14 @@ export const useThreadStore = defineStore(
     // set many comments (bulk)
     // -----------------------------------------
     function setThreadComments(threadId: string, comments: CommentData[]) {
-      if (!threads.value[threadId]) threads.value[threadId] = {}
-      if (!children.value[threadId]) children.value[threadId] = {}
+      if (!threads.value[threadId])
+        threads.value[threadId] = {}
+      if (!children.value[threadId])
+        children.value[threadId] = {}
 
       for (const c of comments) {
         threads.value[threadId][c.id] = c
-        const pid = c.parent_id ?? "root"
+        const pid = c.parent_id ?? 'root'
         insertChild(threadId, pid, c.id)
       }
     }
@@ -65,21 +70,23 @@ export const useThreadStore = defineStore(
     }
 
     function getChildComments(threadId: string, parentId: string | null) {
-      const pid = parentId ?? "root"
+      const pid = parentId ?? 'root'
       const ids = children.value[threadId]?.[pid] ?? []
-      return ids.map((id) => threads.value[threadId][id])
+      return ids.map(id => threads.value[threadId][id])
     }
 
-    function getSortedRootComments(threadId: string, sortBy: "best" | "new") {
+    function getSortedRootComments(threadId: string, sortBy: 'best' | 'new') {
       const thread = threads.value[threadId]
-      if (!thread) return []
+      if (!thread)
+        return []
 
       const rootIds = children.value[threadId]?.root ?? []
-      const items = rootIds.map((id) => thread[id]).filter(Boolean)
+      const items = rootIds.map(id => thread[id]).filter(Boolean)
 
-      if (sortBy === "best") {
+      if (sortBy === 'best') {
         items.sort((a, b) => b.score - a.score)
-      } else if (sortBy === "new") {
+      }
+      else if (sortBy === 'new') {
         items.sort(
           (a, b) =>
             new Date(b.created).getTime() - new Date(a.created).getTime()
@@ -90,21 +97,21 @@ export const useThreadStore = defineStore(
     }
 
     return {
-      threads,
       children,
+      getChildComments,
+      getComment,
+      getSortedRootComments,
+      report: () => toggleOpen(),
       reportComment,
       reportOpen,
-      report: () => toggleOpen(),
       setComment,
       setThreadComments,
-      getComment,
-      getChildComments,
-      getSortedRootComments,
+      threads,
     }
   },
   {
     persist: {
-      key: "threadStore",
+      key: 'threadStore',
       storage: piniaPluginPersistedstate.localStorage(),
     },
   }

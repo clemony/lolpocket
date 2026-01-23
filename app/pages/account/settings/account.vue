@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { providers } from '@domain'
-
 definePageMeta({
   title: 'account',
   description: 'Manage your account settings and login settings.',
@@ -67,7 +65,7 @@ onMounted (() => {
           color="neutral"
           align="inline-end"
           hover="neutral"
-          class="aspect-square scale-90 rounded-full dst"
+          class="dst aspect-square scale-90 rounded-full"
           size="6">
           <Icon
             name="tick"
@@ -81,7 +79,7 @@ onMounted (() => {
           }"
           size="6"
           align="inline-end"
-          class="rounded-md border-b3/60"
+          class="border-b3/60 rounded-md"
           variant="base">
           <icon
             name="refresh"
@@ -117,10 +115,10 @@ onMounted (() => {
               <div class="grid h-26 w-full place-items-center">
                 <Icon
                   :name="String(provider.icon)"
-                  :class="cn('size-10.5 dst', { 'text-domination': provider.name === 'riot', 'scale-90': provider.name === 'google' })" />
+                  :class="cn('dst size-10.5', { 'text-domination': provider.name === 'riot', 'scale-90': provider.name === 'google' })" />
               </div>
               <CardTitle
-                class="grow text-start text-lg font-semibold capitalize dst">
+                class="dst grow text-start text-lg font-semibold capitalize">
                 {{ provider.name }}
               </CardTitle>
 
@@ -138,7 +136,7 @@ onMounted (() => {
                   name="toggle-provider"
                   :model-value="userProviders?.includes(provider.name)"
                   class="
-                    switch -mt-0.25 scale-90 dst data-[state=checked]:ring
+                    switch dst -mt-0.25 scale-90 data-[state=checked]:ring
                     data-[state=checked]:ring-white/60
                   " />
               </CardDescription>

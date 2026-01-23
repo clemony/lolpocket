@@ -1,12 +1,12 @@
-import { defineStore } from "pinia"
-import { useRoute, useRouter } from "vue-router"
+import { defineStore } from 'pinia'
+import { useRoute, useRouter } from 'vue-router'
 
-type ChampionTab = {
+interface ChampionTab {
   championKey: string
 }
 
 export const useChampionTabStore = defineStore(
-  "champion-tabs",
+  'champion-tabs',
   () => {
     const route = useRoute()
     const router = useRouter()
@@ -17,13 +17,13 @@ export const useChampionTabStore = defineStore(
     // --- actions ---
 
     function openTab(championKey: string) {
-      if (!tabs.value.some((t) => t.championKey === championKey)) {
+      if (!tabs.value.some(t => t.championKey === championKey)) {
         tabs.value.push({ championKey })
       }
     }
 
     function closeTab(championKey: string) {
-      tabs.value = tabs.value.filter((t) => t.championKey !== championKey)
+      tabs.value = tabs.value.filter(t => t.championKey !== championKey)
     }
 
     function clearTabs() {
@@ -35,15 +35,16 @@ export const useChampionTabStore = defineStore(
       const region = route.params.region
       const slug = route.params.slug
 
-      if (!region || !slug) return []
+      if (!region || !slug)
+        return []
 
-      return tabs.value.map((tab) =>
+      return tabs.value.map(tab =>
         router.resolve({
-          name: "summoner-region-slug-champion_key",
+          name: 'summoner-region-slug-champion_key',
           params: {
+            champion_key: tab.championKey,
             region,
             slug,
-            champion_key: tab.championKey,
           },
         })
       )
@@ -60,11 +61,11 @@ export const useChampionTabStore = defineStore(
     )
 
     return {
-      tabs,
-      openTab,
-      closeTab,
-      clearTabs,
       championRoutes,
+      clearTabs,
+      closeTab,
+      openTab,
+      tabs,
     }
   },
   {

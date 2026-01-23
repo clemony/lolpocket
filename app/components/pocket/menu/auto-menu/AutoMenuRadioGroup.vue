@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { MenubarRadioGroup } from '../types.menubar'
-
 const { item } = defineProps<{ item: MenubarRadioGroup }>()
 
 const modelProxy = computed({
@@ -12,11 +10,7 @@ const modelProxy = computed({
 <template>
   <MenubarRadioGroup>
     <MenubarLabel
-      class="
-        sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur
-        before:absolute before:top-0 before:left-0 before:z-1 before:bg-b1/30
-        before:mix-blend-lighten
-      ">
+      class="before:bg-b1/30 sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur-sm before:absolute before:top-0 before:left-0 before:z-1 before:mix-blend-lighten">
       <span class="isolate z-2">
         {{ item.name }}
       </span>

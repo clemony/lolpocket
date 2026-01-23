@@ -1,0 +1,49 @@
+// Updated Patch 15.24.1 - 12/26/2025 07:03:45 PM CST
+
+const ability: Ability = {
+  key: 'W',
+  name: 'Astral Flight',
+  affects: 'Self',
+  blurb: 'Active:  Aurelion Sol  flies in the target direction. During flight, he can cast any of his abilities, and  Breath of Light has no  cooldown, no maximum channel duration, and its flat damage is increased.  Aurelion Sol flies at a reduced speed while channeling  Breath of Light.',
+  castTime: '0.4 / None',
+  cooldown: '22 / 20.5 / 19 / 17.5 / 16',
+  cost: '50 / 55 / 60 / 65 / 70',
+  effects: [
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Aurelion Sol dashes in the target direction and resets Breath of Light\'s cooldown. During flight, he has unobstructed vision and Breath of Light has no cooldown and maximum channel duration and its flat damage is increased, but Astral Flight\'s dash speed is reduced by 50% during its channel.</p>',
+      leveling: [
+        {
+          attribute: 'Breath of Light Flat Damage Modifier',
+          modifiers: [
+            {
+              unit: '%',
+              values: '108 / 109 / 110 / 111 / 112'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      description: 'Aurelion Sol will be knocked down by any immobilizing crowd control during the dash.'
+    },
+    {
+      description: 'Astral Flight can be recast after 0.5 seconds during the dash, and does so automatically upon arrival.'
+    },
+    {
+      description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Aurelion Sol ends Astral Flight.</p>'
+    },
+    {
+      description: 'Scoring a champion takedown within 3 seconds of damaging them reduces Astral Flight\'s current cooldown by 90% of its total cooldown.'
+    },
+    {
+      description: 'Aurelion Sol will not dash if he is immobilized or grounded during the cast time. He can cast any of his abilities during the dash. Breath of Light\'s channel will be interrupted if Astral Flight ends or Singularity or Falling Star / The Skies Descend is cast during the flight, but the ability will automatically be cast afterwards.'
+    }
+  ],
+  icon: 'https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/w',
+  notes: 'If a  takedown is scored while Astral Flight is active, the cooldown will be reduced after it ends.\nAstral Flight cannot be used in the first 15 seconds of the game.\nThe following table refers for interactions while Aurelion Sol is  dashing:\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nAllowed\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Zhonya\'s Hourglass  Hextech Rocketbelt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Hexflash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Flash\n\n\nInterrupted by\n\nDeath Immobilizing effects',
+  resource: 'Mana',
+  speed: '340 + 100% movement speed / 170 + 50% movement speed',
+  targeting: 'Direction',
+  targetRange: '1500 (+ 7.5  ×  Stardust)'
+}
+export default ability

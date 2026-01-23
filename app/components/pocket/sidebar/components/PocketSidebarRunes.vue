@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/layers/types/src/schema/schema.pocket'
+import type { Pocket } from '~~/shared/types/schema/schema.pocket'
 
 const { pocket } = defineProps<{
   pocket: Pocket
@@ -33,8 +33,8 @@ function handleClick(i) {
       ">
       <div
         class="
-          grid size-6 place-items-center rounded-lg border border-transparent
-          group-hover:border-b3/60 group-hover:bg-b2/80
+          group-hover:border-b3/60 group-hover:bg-b2/80 grid size-6 place-items-center rounded-lg
+          border border-transparent
         ">
         <icon
           name="add"

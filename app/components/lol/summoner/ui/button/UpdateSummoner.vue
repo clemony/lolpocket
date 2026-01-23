@@ -60,7 +60,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
           v-if="!cooldown"
           name="reset"
           :class="
-            cn('size-5 opacity-100 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100', { 'animate-rotate': isLoading })" />
+            cn('dst size-5 opacity-100 transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100', { 'animate-rotate': isLoading })" />
 
         <div
           v-if="cooldown"
