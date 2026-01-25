@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import type { MenubarItem } from '~/components/pocket/menu/types.menubar'
+
 const { item } = defineProps<{
-  item: MenubarItemType
+  item: MenubarItem
 }>()
 </script>
 
@@ -10,27 +12,32 @@ const { item } = defineProps<{
     :key="item.name.toString()"
     :inset="item.inset"
     class="group/item truncate"
-    @click="item.key ? navigateTo(`/pocket/${item.key}`) : null">
+    @click="item.key ? navigateTo(`/pocket/${item.key}`) : null"
+  >
     <PocketIcon
       v-if="item?.key && typeof item.icon === 'string'"
       size="sm"
       :src="String(item?.icon)"
-      class="size-7 rounded-full" />
+      class="size-7 rounded-full"
+    />
     <Icon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
       :name="getIcon(item.icon)?.name"
-      :class="cn('size-4.5', getIcon(item.icon)?.class)" />
+      :class="cn('size-4.5', getIcon(item.icon)?.class)"
+    />
     <span class="truncate">
       {{ item.name }}
     </span>
 
     <MenubarShortcut
       v-if="item.shortcut"
-      class="flex gap-2 pr-1 text-xs">
+      class="flex gap-2 pr-1 text-xs"
+    >
       <Icon
         v-if="item.shortcut?.icon"
         :name="item.shortcut?.icon"
-        :class="cn(item.shortcut?.class)" />
+        :class="cn(item.shortcut?.class)"
+      />
       <template v-if="item.shortcut?.text">
         {{ item.shortcut?.text }}
       </template>

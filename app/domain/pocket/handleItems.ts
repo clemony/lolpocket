@@ -1,7 +1,7 @@
 export function removeItemFromSet(
   pocket: Pocket,
   itemSet: ItemSet,
-  itemx: ItemId
+  itemx: number
 ) {
   const set = pocket?.items.find(set => set === itemSet)
   if (set) {
@@ -12,7 +12,7 @@ export function removeItemFromSet(
   }
 }
 
-export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: ItemId) {
+export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: number) {
   const set = pocket.items.find(set => set === itemSet)
 
   if (set && Array.isArray(set.items)) {

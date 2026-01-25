@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { stats } = defineProps<{
-  stats: AggregatedStats
+  stats: ChampionStats
 }>()
 </script>
 

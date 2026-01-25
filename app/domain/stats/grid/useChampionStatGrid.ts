@@ -31,46 +31,46 @@ export function useChampionStatGrid() {
     openByDefault: false,
   }
 
-  const numericPerGameColumn = <K extends keyof AggregatedStatsAndMastery>(
+  const numericPerGameColumn = <K extends keyof ChampionStatsAndMastery>(
     field: K,
     headerName: string,
     tooltip: string,
     className = "text-center"
-  ): ColDef<AggregatedStatsAndMastery> => ({
+  ): ColDef<ChampionStatsAndMastery> => ({
     width: 56,
     cellClass: className,
     cellDataType: "number",
-    field,
+    field: field as string,
     headerName,
     headerTooltip: tooltip,
     valueFormatter: perGameFormatter(field),
     valueGetter: perGameGetter(field),
   })
 
-  const plainNumber = <K extends keyof AggregatedStatsAndMastery>(
+  const plainNumber = <K extends keyof ChampionStatsAndMastery>(
     field: K,
     headerName: string,
     tooltip: string,
     className = "text-center"
-  ): ColDef<AggregatedStatsAndMastery> => ({
+  ): ColDef<ChampionStatsAndMastery> => ({
     width: 60,
     cellClass: className,
     cellDataType: "number",
-    field,
+    field: field as string,
     headerName,
     headerTooltip: tooltip,
   })
 
-  const averagedNumber = <K extends keyof AggregatedStatsAndMastery>(
+  const averagedNumber = <K extends keyof ChampionStatsAndMastery>(
     field: K,
     headerName: string,
     tooltip: string,
     className = "text-center"
-  ): ColDef<AggregatedStatsAndMastery> => ({
+  ): ColDef<ChampionStatsAndMastery> => ({
     width: 60,
     cellClass: className,
     cellDataType: "number",
-    field,
+    field: field as string,
     headerName,
     headerTooltip: tooltip,
     valueGetter: statGetter(field),
@@ -81,7 +81,7 @@ export function useChampionStatGrid() {
 
   } */
 
-  const championIdColumn: ColDef<AggregatedStatsAndMastery> = {
+  const championIdColumn: ColDef<ChampionStatsAndMastery> = {
     cellClass: "*!px-0 items-center !flex ",
     cellRenderer: TableChampion,
     colId: "champion",
@@ -94,7 +94,7 @@ export function useChampionStatGrid() {
     valueFormatter: (params) => champNameById(params.data.championId),
   }
 
-  const kpColumn: ColDef<AggregatedStatsAndMastery> = {
+  const kpColumn: ColDef<ChampionStatsAndMastery> = {
     width: 70,
     cellClass: "text-center",
     cellDataType: "number",
@@ -104,7 +104,7 @@ export function useChampionStatGrid() {
     valueGetter: statGetter("kp"),
   }
 
-  const winrateColumn: ColDef<AggregatedStatsAndMastery> = {
+  const winrateColumn: ColDef<ChampionStatsAndMastery> = {
     width: 90,
     cellClass: "text-center",
     cellDataType: "number",
@@ -117,7 +117,7 @@ export function useChampionStatGrid() {
       : "",
   }
 
-  const masteryPointsColumn: ColDef<AggregatedStatsAndMastery> = {
+  const masteryPointsColumn: ColDef<ChampionStatsAndMastery> = {
     minWidth: 80,
     width: 90,
     cellDataType: "number",
@@ -134,7 +134,7 @@ export function useChampionStatGrid() {
     headerTooltip: "Level & Points",
   }
 
-  const badgeColumn: ColDef<AggregatedStatsAndMastery> = {
+  const badgeColumn: ColDef<ChampionStatsAndMastery> = {
     minWidth: 80,
     width: 90,
     cellClass: "!grid place-items-center",
@@ -146,7 +146,7 @@ export function useChampionStatGrid() {
     headerTooltip: "Badge",
   }
 
-  const lastPlayedColumn: ColDef<AggregatedStatsAndMastery> = {
+  const lastPlayedColumn: ColDef<ChampionStatsAndMastery> = {
     width: 160,
     cellClass: "font-medium justify-end! justify-items-end text-end px-0!",
     cellDataType: "text",

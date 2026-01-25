@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -17,7 +15,8 @@ const champion = computed(() => {
 <template>
   <h1
     v-if="champion"
-    class="dst grow pb-3 font-serif text-3xl! font-bold opacity-90">
+    class="grow pb-3 font-serif text-3xl! font-bold opacity-90 dst"
+  >
     <!--     {{ champion.key }} -->
   </h1>
 </template>

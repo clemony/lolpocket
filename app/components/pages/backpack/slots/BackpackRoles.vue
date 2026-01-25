@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -19,10 +17,11 @@ const roles = computed(() => {
 <template>
   <p
     class="
-      divider divider-start divider-neutral mt-0 mb-3 grow flex-nowrap
+      divider mt-0 mb-3 divider-start grow flex-nowrap divider-neutral
       text-nowrap after:opacity-40
     "
-    :class="{ 'opacity-20': !roles.length }">
+    :class="{ 'opacity-20': !roles.length }"
+  >
     <span class="group/role capitalize">
       {{ roles }}
     </span>

@@ -3,7 +3,7 @@ import type { FuseResultMatch } from 'fuse.js'
 import { useScroll } from 'motion-v'
 
 const { api, data, mastery } = defineProps<{
-  mastery: PlayerChampionMastery
+  mastery: ChampionMastery
   data: UsePlayerStats
   api: SummonerProviderApi
 }>()
@@ -33,9 +33,11 @@ const results = computed (() => {
 
 <template>
   <div
-    class="sticky inset-y-0 -top-66 grid h-fit max-h-dvh w-full max-w-64 auto-rows-max items-start gap-3 overflow-y-auto px-1 pt-28 **:select-none">
+    class="sticky inset-y-0 -top-66 grid h-fit max-h-dvh w-full max-w-64 auto-rows-max items-start gap-3 overflow-y-auto px-1 pt-28 **:select-none"
+  >
     <div
-      class="relative w-full">
+      class="relative w-full"
+    >
       <Button
         data-type="Back to all champions"
         data-placement="right"
@@ -43,25 +45,30 @@ const results = computed (() => {
         variant="none"
         size="5"
         class="absolute -top-10 left-0 justify-start gap-1 p-0 text-sm leading-none font-medium"
-        @click="navigateTo({ name: 'summoner-region-slug-champions' })">
+        @click="navigateTo({ name: 'summoner-region-slug-champions' })"
+      >
         <span class="font-semibold capitalize opacity-40">{{ summoner?.name }}</span>
         <Icon
           name="slash"
-          class="size-4 opacity-50" />
+          class="size-4 opacity-50"
+        />
         <span class="group-hover/btn:underline">Champions</span>
       </Button>
       <h1 class="flex size-full items-center gap-3 pt-0.5 pl-0.5 leading-none">
         <button
           data-type="Back to all champions"
-          class="dss grid size-8 place-items-center overflow-hidden rounded-full shadow-sm after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
-          @click="navigateTo({ name: 'summoner-region-slug-champions' })">
+          class="grid size-8 place-items-center overflow-hidden rounded-full shadow-sm dss after:absolute after:z-1 after:size-full after:bg-black/50 after:opacity-0 after:backdrop-blur-sm after:transition-opacity after:duration-200 group-hover/btn:after:opacity-100"
+          @click="navigateTo({ name: 'summoner-region-slug-champions' })"
+        >
           <ChampionIcon
             :id="mastery?.championId"
             type="tile"
-            class="pointer-events-none z-0 size-full rounded-full" />
+            class="pointer-events-none z-0 size-full rounded-full"
+          />
           <Icon
             name="arrow-left"
-            class="absolute z-2 text-white/80 opacity-0 transition-opacity duration-200 **:stroke-[2.5] group-hover/btn:opacity-100" />
+            class="absolute z-2 text-white/80 opacity-0 transition-opacity duration-200 **:stroke-[2.5] group-hover/btn:opacity-100"
+          />
         </button>
         {{ champNameById(stats?.championId) }}
       </h1>
@@ -80,9 +87,11 @@ const results = computed (() => {
 
       <ChampionStatsTimelineNav
         :summoner="data.summoner"
-        :scroll-ref />
+        :scroll-ref
+      />
       <div
-        class="mt-6 flex w-full flex-col gap-4 pl-3">
+        class="mt-6 flex w-full flex-col gap-4 pl-3"
+      >
         <Separator class="mb-2 h-px opacity-80" />
         <h6 class="pl-2 capitalize">
           Search {{ summoner.name }}'s Champions
@@ -92,31 +101,36 @@ const results = computed (() => {
           <InputGroup
             variant="input"
             class="px-1.5"
-            size="9">
+            size="9"
+          >
             <InputGroupSearch />
             <InputGroupInput
-              v-model:model-value="filter">
-            </InputGroupInput>
+              v-model:model-value="filter"
+            />
             <InputGroupClear size="sq-6" />
           </InputGroup>
           <Listbox
             v-model:model-value="param"
             :multiple="false"
-            selection-behavior="replace">
+            selection-behavior="replace"
+          >
             <ListboxContent class="max-h-124 w-full space-y-0.5 overflow-y-scroll py-4">
               <label
                 v-for="k in results"
                 :key="k.championId"
-                class="flex h-9 w-full cursor-pointer items-center">
+                class="flex h-9 w-full cursor-pointer items-center"
+              >
                 <ListboxItem
                   :value="champKeyById(k.championId)"
                   size="8"
                   variant="link"
                   on="neutral"
-                  class="hover-on:underline on:no-underline w-fit gap-2 rounded-xl pr-6 pl-2.5 font-medium">
+                  class="hover-on:underline w-fit gap-2 rounded-xl pr-6 pl-2.5 font-medium on:no-underline"
+                >
                   <ChampionIcon
                     :id="k.championId"
-                    class="size-5 rounded-full" />
+                    class="size-5 rounded-full"
+                  />
                   {{ k.championName }}
                 </ListboxItem>
               </label>
@@ -129,10 +143,12 @@ const results = computed (() => {
           <Button
             variant="link"
             size="9"
-            class="w-fit justify-start rounded-xl pr-8 text-sm">
+            class="w-fit justify-start rounded-xl pr-8 text-sm"
+          >
             <Icon
               name="arrow-left"
-              class="size-3.5 **:stroke-[2.2]" />
+              class="size-3.5 **:stroke-[2.2]"
+            />
             <span>Champion list</span>
           </Button>
         </label>

@@ -8,29 +8,19 @@ import jsoncParser from 'jsonc-eslint-parser'
 import path from 'node:path'
 import { tailwind4 } from 'tailwind-csstree'
 import eslintParserVue from 'vue-eslint-parser'
+import withNuxt from './.nuxt/eslint.config.mjs'
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+
 
 const customGroups = [
   {
     elementNamePattern: ['name', 'id', 'key', 'title'],
     groupName: 'pinned',
-  },
+},
 ]
-export default antfu({
-  'ecmaVersion': 'latest',
-
-  'plugins': {
-    'better-tailwindcss': eslintPluginBetterTailwindcss,
-    css,
-    pluginJsonc,
-    pluginVue,
-  },
-
-  'formatters': {
-    css: 'prettier',
-    html: true,
-    json: 'prettier',
-    markdown: 'prettier',
-  },
+export default withNuxt(
+  antfu({
+  'stylistic': true,
 
   'ignores': [
     './dist',
@@ -45,15 +35,31 @@ export default antfu({
     '.save.json',
   ],
 
-  'no-restricted-imports': [
-    'error',
-    {
-      paths: [{ name: 'lodash', message: 'Use lodash/<method> imports only.' }],
+plugins: {
+  vue: pluginVue,
+  css,
+  jsonc: pluginJsonc,
+  'better-tailwindcss': eslintPluginBetterTailwindcss,
+},
+
+'formatters': {
+    css: 'prettier',
+    html: true,
+    json: 'prettier',
+    markdown: 'prettier',
+  },
+
+  'settings': {
+    'better-tailwindcss': {
+      callees: ['cn', 'clsx', 'cva', 'tw', 'tv'],
+      detectComponentClasses: true,
+      entryPoint: path.resolve('./layers/ui/app/css/tailwind.css'),
+      tags: ['style'],
     },
-  ],
+  },
+
   'rules': {
-    // tw
-    ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+     ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
     'better-tailwindcss/enforce-consistent-important-position': [
       'warn',
       { position: 'recommended' },
@@ -76,7 +82,6 @@ export default antfu({
     ],
     'better-tailwindcss/no-unknown-classes': ['off', {}],
     'better-tailwindcss/no-unregistered-classes': 'off',
-    // other
     'eqeqeq': ['error', 'smart'],
     'eslint-comments/no-unlimited-disable': 'off',
     'no-console': 'off',
@@ -116,20 +121,8 @@ export default antfu({
     'unused-imports/no-unused-imports': 'off',
     'unused-imports/no-unused-vars': 'off',
   },
-  'settings': {
-    'better-tailwindcss': {
-      callees: ['cn', 'clsx', 'cva', 'tw', 'tv'],
-      detectComponentClasses: true,
-      entryPoint: path.resolve('./layers/ui/app/css/tailwind.css'),
-      tags: ['style'],
-    },
-  },
-  'sourceType': 'module',
-  'stylistic': true,
-
-  // plugins
   'vue': {
-    overrides: {
+    rules: {
       'vue/custom-event-name-casing': 'off',
       'vue/eqeqeq': ['error', 'smart'],
       'vue/html-closing-bracket-newline': [
@@ -156,21 +149,17 @@ export default antfu({
       'vue/padding-line-between-tags': 'off',
       'vue/require-typed-ref': 'warn',
     },
-    files: ['**/*.vue'],
     languageOptions: {
       parser: eslintParserVue,
     },
-  },
-
-  // overrides
-  'overrides': [
-    {
-      files: ['*.json', '*.jsonc'],
+},
+"jsonc": {
+  files: ['*.json', '*.jsonc'],
       languageOptions: {
         parser: jsoncParser,
       },
-      rules: {
-        'jsonc/sort-keys': [
+  rules:{
+    'jsonc/sort-keys': [
           'error',
           {
             order: ['name', 'version', 'private', 'publishConfig', 'scripts'],
@@ -190,41 +179,25 @@ export default antfu({
           },
         ],
         'jsonc/valid-jsonc': 'error',
+      }
       },
-    },
-    // CSS
-    {
-      files: ['**/*.css'],
-      ...css.configs.recommended,
-      language: 'css/css',
-      languageOptions: {
-        customSyntax: tailwind4,
-      },
-      rules: {
-        ...css.configs.recommended.rules,
-        'css/no-duplicate-imports': 'error',
-        'prettier/prettier': ['error', { parser: 'css' }],
-      },
-    },
-    {
-      files: ['**/*.vue'],
-      processor: 'vue/block',
-    },
+
+      overrides: [
     {
       files: ['**/*.vue/*.css'],
-      ...css.configs.recommended,
       language: 'css/css',
       languageOptions: {
         customSyntax: tailwind4,
-      },
-      rules: {
-        ...css.configs.recommended.rules,
-        'css/no-duplicate-imports': 'error',
-        'prettier/prettier': ['error', { parser: 'css' }],
       },
       settings: {
         tailwindcss: { callees: ['tw'], cssFiles: ['**/*.vue/*.css'] },
+      rules: {
+        ...css.configs.recommended.rules,
+        'css/no-duplicate-imports': 'error',
+        'prettier/prettier': ['error', { parser: 'css' }],
+      }
       },
     },
   ],
-})
+  eslintConfigPrettier
+}))

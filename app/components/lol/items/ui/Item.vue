@@ -37,7 +37,7 @@ const loaded = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <UTooltip
+  <Tooltip
     size="lg"
     variant="neutral"
     arrow>
@@ -58,5 +58,5 @@ const loaded = shallowRef<boolean>(false)
         :id
         :map />
     </template>
-  </UTooltip>
+  </Tooltip>
 </template>

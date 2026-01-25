@@ -1,20 +1,75 @@
-
+@import 'tailwindcss';
 @import '@nuxt/ui';
+
+
+:root {
+  --b1: var(--color-primary-0);
+  --b2: var(--color-primary-100);
+  --b3: var(--color-primary-200);
+  --bc: var(--color-bc);
+  --primary: var(--color-primary-50);
+  --neutral: var(--color-primary-950);
+  --nc: var(--color-primary-300);
+  --inspiration: var(--color-inspiration-400);
+  --resolve: var(--color-resolve-400);
+  --sorcery: var(--color-sorcery-400);
+  --domination: var(--color-domination-400);
+  --precision: var(--color-precision-400);
+
+  .light {
+    --b1: var(--color-primary-0);
+    --b2: var(--color-primary-100);
+    --b3: var(--color-primary-200);
+    --bc: var(--color-bc);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-950);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-400);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-400);
+    --domination: var(--color-domination-400);
+    --precision: var(--color-precision-400);
+  }
+
+  .dim {
+    --b1: var(--color-primary-0);
+    --b2: var(--color-primary-100);
+    --b3: var(--color-primary-200);
+    --bc: var(--color-bc);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-950);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-300);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-500);
+    --domination: var(--color-domination-500);
+    --precision: var(--color-precision-300);
+  }
+
+  .dark {
+    --b1: var(--color-primary-900);
+    --b2: var(--color-primary-800);
+    --b3: var(--color-primary-700);
+    --bc: v var(--color-primary-300);
+    --primary: var(--color-primary-50);
+    --neutral: var(--color-primary-900);
+    --nc: var(--color-primary-300);
+    --inspiration: var(--color-inspiration-300);
+    --resolve: var(--color-resolve-400);
+    --sorcery: var(--color-sorcery-500);
+    --domination: var(--color-domination-500);
+    --precision: var(--color-precision-300);
+  }
+}
 
 @theme inline {
   --color-b1: var(--b1);
   --color-b2: var(--b2);
   --color-b3: var(--b3);
-  --color-b4: var(--b4);
-  --color-b5: var(--b5);
   --color-bc: var(--bc);
-  --color-n3: var(--n3);
-  --color-n2: var(--n2);
-  --color-n1: var(--n1);
-  --color-neutral: var(--n1);
+  --color-primary: var(--primary);
+  --color-neutral: var(--neutral);
   --color-nc: var(--nc);
-
-  /* path */
   --color-precision: var(--precision);
   --color-domination: var(--domination);
   --color-sorcery: var(--sorcery);
@@ -23,18 +78,18 @@
 }
 
 @theme {
-  --color-primary-0: oklch(100 0 68);
-  --color-primary-50: oklch(98.5 0 68);
-  --color-primary-100: oklch(95 0 68);
-  --color-primary-200: oklch(90.489 0.00311 67.945);
-  --color-primary-300: oklch(85.778 0.00522 67.911);
-  --color-primary-400: oklch(69.367 0.01433 67.692);
-  --color-primary-500: oklch(54.256 0.01544 67.563);
-  --color-primary-600: oklch(43.444 0.01656 67.411);
-  --color-primary-700: oklch(36.433 0.01267 67.43);
-  --color-primary-800: oklch(27.022 0.00578 67.658);
-  --color-primary-900: oklch(20.811 0.00589 67.51);
-  --color-primary-950: oklch(14.1 0.005 67.448);
+  --color-primary-0: oklch(100% 0 68);
+  --color-primary-50: oklch(98.5% 0 68);
+  --color-primary-100: oklch(95% 0 68);
+  --color-primary-200: oklch(90.489% 0.00311 67.945);
+  --color-primary-300: oklch(85.778% 0.00522 67.911);
+  --color-primary-400: oklch(69.367% 0.01433 67.692);
+  --color-primary-500: oklch(54.256% 0.01544 67.563);
+  --color-primary-600: oklch(43.444% 0.01656 67.411);
+  --color-primary-700: oklch(36.433% 0.01267 67.43);
+  --color-primary-800: oklch(27.022% 0.00578 67.658);
+  --color-primary-900: oklch(20.811% 0.00589 67.51);
+  --color-primary-950: oklch(14.1% 0.005 67.448);
 
   --color-nord-50: oklch(0.956 0.007 247.87);
   --color-nord-100: oklch(0.922 0.012 247.94);

@@ -107,7 +107,7 @@ export const useItemStore = defineStore(
             if (!item)
               return false
 
-            const name = item.name.toLowerCase()
+           // const name = item.name.toLowerCase()
           /*   const akas = akaLookup[item.name.toLowerCase()] || []
             return (
               name.includes(query)

@@ -27,7 +27,7 @@ const payload = computed (() => {
 </script>
 
 <template>
-  <UTooltip
+  <Tooltip
     arrow
     variant="neutral"
     :content="{ side: 'top' }">
@@ -71,5 +71,5 @@ const payload = computed (() => {
     <template #content>
       <DataTooltip :payload />
     </template>
-  </UTooltip>
+  </Tooltip>
 </template>

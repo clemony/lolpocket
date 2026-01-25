@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { mastery } = defineProps<{
-  mastery?: PlayerChampionMastery
+  mastery?: ChampionMastery
 }>()
 
 const activeClass = ''
@@ -14,23 +14,27 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
 <template>
   <div
-    class="z-auto size-full max-w-340">
+    class="z-auto size-full max-w-340"
+  >
     <!-- stats -->
 
     <div
       id="summary"
-      :class="cn('header-class', activeId !== 'summary' && activeIndex > 0 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'summary' && activeIndex > 0 ? inActiveClass : activeClass)"
+    >
       <h1>Summary</h1>
     </div>
     <PlayerChampionSummary
       :mastery
-      :class="cn('layout-class')" />
+      :class="cn('layout-class')"
+    />
 
     <!-- spells -->
 
     <div
       id="spells"
-      :class="cn('header-class', activeId !== 'spells' && activeIndex > 1 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'spells' && activeIndex > 1 ? inActiveClass : activeClass)"
+    >
       <h1>Summoner Spells</h1>
     </div>
 
@@ -42,7 +46,8 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
     <div
       id="items"
-      :class="cn('header-class', activeId !== 'items' && activeIndex > 2 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'items' && activeIndex > 2 ? inActiveClass : activeClass)"
+    >
       <h1>Items</h1>
     </div>
     <ChampionItemStats :class="cn('layout-class')" />
@@ -51,7 +56,8 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
     <div
       id="runes"
-      :class="cn('header-class', activeId !== 'runes' && activeIndex > 3 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'runes' && activeIndex > 3 ? inActiveClass : activeClass)"
+    >
       <h1>Runes</h1>
     </div>
     <ChampionRuneStats :class="cn('layout-class')" />
@@ -60,7 +66,8 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
     <div
       id="skills"
-      :class="cn('header-class', activeId !== 'skills' && activeIndex > 4 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'skills' && activeIndex > 4 ? inActiveClass : activeClass)"
+    >
       <h1>Abilities</h1>
     </div>
     <ChampionSkillStats :class="cn('layout-class', '')" />
@@ -69,13 +76,15 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
     <div
       id="duos"
-      :class="cn('header-class justify-between', activeId !== 'items' && activeIndex > 5 ? inActiveClass : activeClass)">
+      :class="cn('header-class justify-between', activeId !== 'items' && activeIndex > 5 ? inActiveClass : activeClass)"
+    >
       <h1>Synergy & Counters</h1>
 
       <Tabs v-model:model-value="duoView">
         <TabsList class="w-44">
           <TabsTrigger
-            value="team">
+            value="team"
+          >
             Synergy
           </TabsTrigger>
 
@@ -88,13 +97,15 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
     </div>
     <ChampionDuoStats
       :view="duoView"
-      :class="cn('layout-class')" />
+      :class="cn('layout-class')"
+    />
 
     <!-- allies -->
 
     <div
       id="allies"
-      :class="cn('header-class', activeId !== 'allies' && activeIndex > 6 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'allies' && activeIndex > 6 ? inActiveClass : activeClass)"
+    >
       <h1>Allies</h1>
     </div>
     <ChampionAllyStats :class="cn('layout-class')" />
@@ -102,7 +113,8 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
 
     <div
       id="stats"
-      :class="cn('header-class', activeId !== 'stats' && activeIndex > 7 ? inActiveClass : activeClass)">
+      :class="cn('header-class', activeId !== 'stats' && activeIndex > 7 ? inActiveClass : activeClass)"
+    >
       <h1>Match Stats</h1>
     </div>
     <ChampionMatchStats :class="cn('layout-class')" />

@@ -5,7 +5,7 @@ export type SummonerApi = ReturnType<typeof useSummonerProvider>
 export interface SummonerProviderApi {
   account: ShallowRef<Account | null>
   allies: ShallowRef<AllyStatDetail[]>
-  champions: ShallowRef<AggregatedStats[]>
+  champions: ShallowRef<ChampionStats[]>
   clearFilters: () => void
   filter: ShallowRef<MatchFilter>
   filteredMatches: ComputedRef<MatchData[]>
@@ -16,7 +16,7 @@ export interface SummonerProviderApi {
   loadNewer: () => Promise<string>
   loadOlder: () => Promise<void>
   loadSummoner: () => Promise<void>
-  mastery: () => Promise<PlayerChampionMastery[]>
+  mastery: () => Promise<ChampionMastery[]>
   matches: ShallowRef<MatchData[]>
   query: ShallowRef<string>
   ready: Ref<boolean>
@@ -141,7 +141,7 @@ export function useSummonerProvider() {
   }
   // MASTERY
 
-  async function mastery(): Promise<PlayerChampionMastery[]> {
+  async function mastery(): Promise<ChampionMastery[]> {
     await whenReady()
     return await getOrFetchAllMastery(puuid.value!, summoner.value!.region)
   }
@@ -177,7 +177,7 @@ export function useSummonerProvider() {
   const { filter, filteredMatches, ...rest } = useMatchFilters(id, matches)
 
   // CHAMPIONS
-  const champions = computedAsync<AggregatedStats[]>(async () => {
+  const champions = computedAsync<ChampionStats[]>(async () => {
     if (!id.value)
       return null
     return await useChampionStats(filteredMatches, id.value).value

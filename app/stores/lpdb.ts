@@ -10,7 +10,7 @@ export class LPDB extends Dexie {
   matchData!: Table<MatchData, string>
   matchCursor!: Table<MatchCursor, string>
   matchTimeline!: Table<MatchTimeline, string>
-  playerChampionMastery!: Table<PlayerChampionMastery, [string, number]>
+  playerChampionMastery!: Table<ChampionMastery, [string, number]>
   summonerMastery!: Table<SummonerMastery, string>
 
   constructor() {

@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "typecheck",
+      "problemMatcher": [],
+      "label": "nuxi: typecheck",
+      "detail": "pnpm exec nuxt typecheck"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "nuxt: dev",
+      "detail": "nuxt dev"
+    },
+    {
+      "type": "npm",
+      "script": "eslint: config",
+      "problemMatcher": [],
+      "label": "eslint: config",
+      "detail": "pnpm exec eslint-config-inspector"
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "problemMatcher": ["$eslint-compact"],
+      "label": "npm: lint:fix",
+      "detail": "eslint . --fix"
+    }
+  ]
+}

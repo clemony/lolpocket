@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     name: 'lib',
   },
 
-  imports: {
+/*   imports: {
     dirs: [join(currentDir, './app')]
-  },
+  }, */
 })

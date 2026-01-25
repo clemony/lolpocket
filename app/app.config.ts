@@ -1,10 +1,41 @@
+
 export default defineAppConfig({
-
    ui: {
+    colors:  {
+      b1: "var(--color-b1)",
+      b2: "var(--color-b2)",
+      b3: "var(--color-b3)",
+      bc: "var(--color-bc)",
+      domination: "var(--color-domination",
+      inspiration: "var(--color-inspiration)",
+      nc: "var(--color-primary)",
+      neutral: "var(--color-nc)",
+      precision: "var(--color-precision)",
+      primary: "var(--color-primary)",
+      resolve: "var(--color-resolve)",
+      sorcery: "var(--color-sorcery",
+    },
+    popover: {
+      slots: {
+        content: `
+         bg-default/90 shadow-lg  backdrop-blur-md rounded-lg shadow-lg
+          ring ring-neutral/40 focus:outline-none pointer-events-auto
+        `,
+      },
+    },
+    tooltip: {
+      slots: {
+        arrow: "fill-neutral/90 scale-y-140 scale-x-180",
+        content: `
 
+          `,
+      },
+    },
+ /*    variants: {
+      variants: { ...variantVariants },
+    }, */
   },
-
-icons: {
+icon: {
     alias: {
       // math
       "calc-solid": "streamline:calculator-1-solid",
@@ -29,19 +60,19 @@ icons: {
       "arrow-up": "lucide:arrow-up",
       "caret-down": "tabler:caret-down-filled",
       "caret-up": "tabler:caret-up-filled",
-      down: "tabler:chevron-down",
-      left: "tabler:chevron-left",
+      down: "lucide:chevron-down",
+      left: "lucide:chevron-left",
       "left-from-line": "lucide:arrow-left-from-line",
       "left-pipe": "tabler:chevron-left-pipe",
       "left-to-line": "lucide:arrow-left-to-line",
-      right: "tabler:chevron-right",
+      right: "lucide:chevron-right",
       "right-from-line": "lucide:arrow-right-from-line",
       "right-pipe": "tabler:chevron-right-pipe",
       "right-to-line": "lucide:arrow-right-to-line",
       select: "lucide:chevrons-up-down",
-      up: "tabler:chevron-up",
+      up: "lucide:chevron-up",
       "up-to-line": "lucide:arrow-up-to-line",
-      "up-up": "tabler:chevrons-up",
+      "up-up": "lucide:chevrons-up",
 
       // actions
       copy: "lucide:copy",
@@ -54,7 +85,7 @@ icons: {
       open: "radix-icons:open-in-new-window",
       pin: "iconoir:pin",
       refresh: "radix-icons:reload",
-      reset: "lucide:refresh-ccw",
+      reset: "lucide:refresh-cw",
       search: "lucide:search",
       tag: "lucide:tag",
       tags: "lucide:tags",
@@ -175,7 +206,7 @@ icons: {
 
       key: "lucide:key-round",
       "pin-solid": "iconoir:pin-solid",
-      backpack: "radix-icons:backpack", // 'radix-icons:backpack',
+      backpack: "radix-icons:backpack",
       "bar-chart": "lucide:chart-no-axes-column",
       basket: "lucide:shopping-basket",
       "bell-ring": "lucide:bell-ring",
@@ -207,15 +238,10 @@ icons: {
       user: "lucide:user",
       "user-cog": "lucide:user-cog",
       "user-square": "lucide:square-user",
-
-      // 'boot': 'hugeicons:armored-boot',
       // tabler:brand-juejin upside down league xp icon?
   },
-
-
         class: "text-[var(--color-bc)] size-5 shrink-0 pointer-events-none",
     mode: "svg",
-
 }
 })
 

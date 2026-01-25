@@ -15,11 +15,11 @@ export interface ItemSlotOrder {
 }
 
 export interface ChampionItemStats {
-  boots: Record<number, TimedStatDetail>
-  early: Record<number, TimedStatDetail>
-  legendary: Array<Record<number, TimedStatDetail>>
-  support: Record<number, TimedStatDetail>
-  trinket: Record<number, TimedStatDetail>
+  boots: Record<number, StatDetail>
+  early: Record<number, StatDetail>
+  legendary: Array<Record<number, StatDetail>>
+  support: Record<number, StatDetail>
+  trinket: Record<number, StatDetail>
 }
 
 type ItemSetKey = string // e.g. "1055,2003,2003"
@@ -35,7 +35,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
       trinket: {},
     }
 
-    const allLegendaries: Record<number, TimedStatDetail> = {}
+    const allLegendaries: Record<number, StatDetail> = {}
 
     for (const m of matchData.value) {
       if (!m.player || !m.timeline)
@@ -80,7 +80,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
 
       for (const [id, ts] of acquireTimes) {
         if (ts <= TEN_MINUTES) {
-          bumpTimedStatDetail(out.early, id, win, ts)
+          bumpStatDetail(out.early, id, win, ts)
         }
       }
       const classified = finalItems.map((id) => {
@@ -90,22 +90,22 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
 
       for (const { id, ts } of classified) {
         if (isTrinket(id)) {
-          bumpTimedStatDetail(out.trinket, id, win, ts)
+          bumpStatDetail(out.trinket, id, win, ts)
           continue
         }
 
         if (SUPPORT_LEGENDARIES.has(id)) {
-          bumpTimedStatDetail(out.support, id, win, ts)
+          bumpStatDetail(out.support, id, win, ts)
           continue
         }
 
         if (isBoots(id)) {
-          bumpTimedStatDetail(out.boots, id, win, ts)
+          bumpStatDetail(out.boots, id, win, ts)
           continue
         }
 
         if (isLegendary(id)) {
-          bumpTimedStatDetail(allLegendaries, id, win, ts)
+          bumpStatDetail(allLegendaries, id, win, ts)
         }
       }
 
@@ -132,7 +132,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
       )
       legendaries.forEach(({ id, ts }, slot) => {
         out.legendary[slot] ??= {}
-        bumpTimedStatDetail(out.legendary[slot], id, win, ts)
+        bumpStatDetail(out.legendary[slot], id, win, ts)
       })
     }
     // compute winrates

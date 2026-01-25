@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
@@ -15,7 +13,8 @@ function handleClick(i) {
   <div class="z-0 flex w-full pl-3">
     <div
       v-if="pocket?.runes && pocket?.runes?.length"
-      class="flex w-full flex-wrap gap-6.5 py-3">
+      class="flex w-full flex-wrap gap-6.5 py-3"
+    >
       <!--    <RuneSetButton
         v-for="(set, i) in pocket.runes"
         :key="i"
@@ -30,15 +29,18 @@ function handleClick(i) {
       class="
         group grid h-full w-14 cursor-pointer place-items-center rounded-l-none
         rounded-r-xl p-0
-      ">
+      "
+    >
       <div
         class="
-          group-hover:border-b3/60 group-hover:bg-b2/80 grid size-6 place-items-center rounded-lg
-          border border-transparent
-        ">
+          grid size-6 place-items-center rounded-lg border border-transparent
+          group-hover:border-b3/60 group-hover:bg-b2/80
+        "
+      >
         <icon
           name="add"
-          class="text-bc/60 group-hover:text-bc" />
+          class="text-bc/60 group-hover:text-bc"
+        />
       </div>
     </button>
   </div>

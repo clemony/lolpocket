@@ -1,6 +1,6 @@
 export interface ChampionMasteryResponse {
   puuid: string
-  mastery: PlayerChampionMastery[]
+  mastery: ChampionMastery[]
   masteryLevels: number
   masteryPoints: number
 }
@@ -24,7 +24,7 @@ export async function fetchSummonerMastery(puuid: string, region: string) {
   }
 
   const result = await $fetch<ChampionMasteryResponse>(
-    '/api/riot/v4/mastery/byPuuid',
+    '/api/v4/mastery/byPuuid',
     {
       query: { puuid, region },
     }

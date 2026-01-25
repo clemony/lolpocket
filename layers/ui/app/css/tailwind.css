@@ -1,7 +1,5 @@
 @import 'tailwindcss';
-
 @import '@nuxt/ui';
-@import './main.css';
 @import './preflight.css';
 @import './components.css';
 @import './fonts.css';
@@ -14,3 +12,6 @@
 @import './plugins/index.css';
 @import './animation/index.css';
 @import './attrs.css';
+
+@source "../components/"
+@source "~/app/components/"

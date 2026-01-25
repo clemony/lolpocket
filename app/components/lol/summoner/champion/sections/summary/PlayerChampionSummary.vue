@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { class: className, mastery } = defineProps<{
   class?: HTMLAttributes['class']
-  mastery?: PlayerChampionMastery
+  mastery?: ChampionMastery
 }>()
 
 const { items, stats, summoner } = usePlayerStatsInject()
@@ -22,7 +22,8 @@ const progress = computed(() => {
 
 <template>
   <div
-    :class="cn('grid w-full max-w-full gap-6 overflow-hidden', className)">
+    :class="cn('grid w-full max-w-full gap-6 overflow-hidden', className)"
+  >
     <!-- RUNES -->
     <ChampionRuneSet />
 
@@ -34,17 +35,21 @@ const progress = computed(() => {
       <ChampStatRow
         v-if="items?.starting"
         simple
-        :data="items?.starting?.items">
+        :data="items?.starting?.items"
+      >
         <ChampStatLabel
           :title="['Starting', 'Items']"
-          :stat="items?.starting" />
+          :stat="items?.starting"
+        />
         <ChampStatRowWrapper
-          v-if="items?.starting">
+          v-if="items?.starting"
+        >
           <Item
             v-for="item in items?.starting?.items"
             :id="item"
             :key="item"
-            class="size-15" />
+            class="size-15"
+          />
         </ChampStatRowWrapper>
         <NoItemData v-else />
       </ChampStatRow>
@@ -55,26 +60,32 @@ const progress = computed(() => {
       <ChampionItemRow
         v-if="items?.best?.core"
         simple
-        :data="items?.best?.core?.items">
+        :data="items?.best?.core?.items"
+      >
         <ChampStatLabel
           title="Core"
-          :stat="items?.best?.core" />
+          :stat="items?.best?.core"
+        />
       </ChampionItemRow>
 
       <ChampStatRow
         v-for="slot, i in items?.best?.slots"
         :key="i"
         simple
-        class="grow">
+        class="grow"
+      >
         <ChampStatLabel
           :title="`Slot ${Number(i) + 4}`"
-          :stat="slot[1]" />
+          :stat="slot[1]"
+        />
         <ChampStatRowWrapper
           v-if="slot[0]"
-          class="justify-center">
+          class="justify-center"
+        >
           <Item
             :id="slot[0]"
-            class="size-15" />
+            class="size-15"
+          />
         </ChampStatRowWrapper>
         <NoItemData v-else />
       </ChampStatRow>

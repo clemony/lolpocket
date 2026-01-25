@@ -1,4 +1,4 @@
-
+@import 'tailwindcss';
 
 @utility text-tint-* {
   color: color-mix(in oklab, --value(--color-*, [*]), white calc(--modifier(integer) * 1%));

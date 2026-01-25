@@ -1,4 +1,4 @@
-
+@import 'tailwindcss';
 @reference './theme.css';
 
 @utility dss-* {

@@ -8,7 +8,7 @@ const props = defineProps<{
   <div
     :class="
       cn(
-        'border-b3/90 bg-b1 text-bc rounded-xl border shadow-sm shadow-black/6',
+        'rounded-xl border border-b3/90 bg-b1 text-bc shadow-sm shadow-black/6',
         props.class,
       )
     ">

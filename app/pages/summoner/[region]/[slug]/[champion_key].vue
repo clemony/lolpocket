@@ -15,7 +15,7 @@ const championId = computed (() => champIdByKey(ui().openChampionTab))
 
 const { mastery: m } = api
 
-const mt: PlayerChampionMastery[] = await m()
+const mt: ChampionMastery[] = await m()
 const mastery = computed (() => {
   if (!championId.value || !mt)
     return null
@@ -30,14 +30,17 @@ const data = usePlayerStatsProvider(api, championId)
     :class="
       cn('relative z-auto mx-auto grid h-fit min-h-screen w-full max-w-[1280px] grid-cols-[260px_1fr] gap-x-1 pb-44',
       )
-    ">
+    "
+  >
     <SummonerChampionAside
       v-if="data"
       :api
       :mastery
-      :data />
+      :data
+    />
     <SummonerChampionMain
       v-if="data"
-      :mastery />
+      :mastery
+    />
   </div>
 </template>

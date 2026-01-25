@@ -1,5 +1,7 @@
 // factories/menubarItem.ts
 
+import type { MenubarRadioGroup } from '~/components/pocket/menu/types.menubar'
+
 export interface CheckboxItemFactory {
   name: () => string
   checkboxType?: 'tick' | 'tick-end' | 'switch' | 'checkbox'

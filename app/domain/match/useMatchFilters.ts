@@ -1,5 +1,5 @@
-import type { DateRange } from 'reka-ui'
 import equal from 'fast-deep-equal/es6'
+import type { DateRange } from 'reka-ui'
 import { computed, shallowRef, unref } from 'vue'
 
 const GLOBAL_KEYS = [
@@ -78,7 +78,7 @@ export function useMatchFilters(
       const items = [
         ...Object.values(a.items),
         ...Object.values(a.items.slots),
-      ].flatMap(i => itemNameById(i))
+      ].flatMap(i => itemNameById(i as number))
 
       const runes = [
         a.runes.keystone,

@@ -1,12 +1,6 @@
 import type { ConcreteComponent } from 'vue'
 
-const ChampionAllyStats = resolveComponent('ChampionAllyStats')
-const ChampionItemStats = resolveComponent('ChampionItemStats')
-const ChampionMatchStats = resolveComponent('ChampionMatchStats')
-const ChampionRuneStats = resolveComponent('ChampionRuneStats')
-const ChampionSkillStats = resolveComponent('ChampionSkillStats')
-const ChampionSpellStats = resolveComponent('ChampionSpellStats')
-const PlayerChampionSummary = resolveComponent('PlayerChampionSummary')
+
 
 export const SECTION_IDS = [
   'summary',
@@ -32,33 +26,33 @@ export const summonerSections: ScrollSection[] = [
     id: 'summary',
     name: 'summary',
     class: '**:stroke-[2]',
-    component: PlayerChampionSummary,
+    component: 'PlayerChampionSummary',
     icon: 'infinity',
   },
   {
     id: 'spells',
     name: 'Summoner Spells',
     class: 'size-4.5 opacity-80',
-    component: ChampionSpellStats,
+    component: 'ChampionSpellStats',
     icon: 'role:mage',
   },
   {
     id: 'items',
     name: 'items',
-    component: ChampionItemStats,
+    component: 'ChampionItemStats',
     icon: 'lol:regen',
   },
   {
     id: 'runes',
     name: 'runes',
     class: 'size-5! fill-bc active:fill-nc',
-    component: ChampionRuneStats,
+    component: 'ChampionRuneStats',
     icon: 'lol:runes',
   },
   {
     id: 'skills',
     name: 'Abilities',
-    component: ChampionSkillStats,
+    component: 'ChampionSkillStats',
     icon: 'fluent-mdl2:venn-diagram',
   },
   {
@@ -70,14 +64,14 @@ export const summonerSections: ScrollSection[] = [
     id: 'allies',
     name: 'allies',
     class: 'size-6',
-    component: ChampionAllyStats,
+    component: 'ChampionAllyStats',
     icon: 'heart-sm-outline',
   },
   {
     id: 'stats',
     name: 'Match Stats',
     class: 'size-4.5 **:stroke-[1.8]',
-    component: ChampionMatchStats,
+    component: 'ChampionMatchStats',
     icon: 'tabler:chart-arcs',
   },
 ]

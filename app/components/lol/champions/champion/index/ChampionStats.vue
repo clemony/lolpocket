@@ -87,16 +87,16 @@ const filteredStats = computed(() => {
   if (!resolvedScalingStats.value)
     return
 
-  const stats = Object.entries(champion.stats).map((s) => {
-    const val = resolvedScalingStats.value[s[0]]
+  const stats = Object.entries(champion.stats).map(([k, v]) => {
+    const val = resolvedScalingStats.value[k]
     return {
       values: {
-        ...s[1],
         current: val ? val.current : null,
         max: val ? val.max : null,
         min: val ? val.min : null,
+        v,
       },
-      ...statIndex[s[0]],
+      ...statIndex[k],
     }
   })
 
@@ -139,15 +139,18 @@ const filteredStats = computed(() => {
     class="
       group/cl flex flex-col gap-6 px-0 open:h-auto
       open:overflow-visible!
-    ">
+    "
+  >
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
         class="
           group/tr flex h-16 min-h-16 w-full cursor-pointer items-center
           justify-between px-5
-        ">
+        "
+      >
         <h3
-          class="dst underline-offset-3 group-hover/tr:underline">
+          class="underline-offset-3 dst group-hover/tr:underline"
+        >
           Stats
         </h3>
         <CaretFlip />
@@ -156,12 +159,13 @@ const filteredStats = computed(() => {
         class="
           group-data-[state=open]/cl:animate-in
           group-data-[state=open]/cl:fade-in-0
-          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out group-closed/cl:hidden -mt-3 flex
-          w-full flex-col items-start px-5
-          pb-2
+          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full
+          flex-col items-start px-5 pb-2
           duration-300
+          group-closed/cl:hidden
         "
-        @click.stop>
+        @click.stop
+      >
         <span class="w-full text-start">
           {{ champion.name }} lv. {{ level[0] }}
         </span>
@@ -175,14 +179,16 @@ const filteredStats = computed(() => {
             :max="18"
             :step="1"
             :min-steps-between-thumbs="1"
-            :min="1">
+            :min="1"
+          >
             <span class="absolute text-xs! font-semibold">{{ level[0] }}</span>
           </Slider>
           <div
             class="
               absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18
               justify-evenly pr-4 pl-5.5
-            ">
+            "
+          >
             <button
               v-for="i in 18"
               :key="i"
@@ -190,12 +196,14 @@ const filteredStats = computed(() => {
                 relative grid size-full cursor-pointer transition-all
                 duration-200 hover:**:font-bold hover:**:opacity-100
               "
-              @click="level[0] = i">
+              @click="level[0] = i"
+            >
               <div
                 :class="cn('absolute grid self-start!')"
                 :style="{
                   transform: `translateX(${((i - 1) / 18) * 100}%)`,
-                }">
+                }"
+              >
                 <span
                   :class="
                     cn('scale-y-50 self-start! opacity-50', {
@@ -203,7 +211,8 @@ const filteredStats = computed(() => {
                         i,
                       ),
                     })
-                  ">
+                  "
+                >
                   |
                 </span>
                 <span
@@ -211,7 +220,8 @@ const filteredStats = computed(() => {
                   class="
                     absolute translate-y-4.5 items-end self-end
                     justify-self-center text-xs tabular-nums
-                  ">
+                  "
+                >
                   {{ i }}
                 </span>
               </div>
@@ -224,29 +234,34 @@ const filteredStats = computed(() => {
       class="
         z-1 flex h-fit w-full flex-col gap-2 pb-2
         open:overflow-visible!
-      ">
+      "
+    >
       <div
         :class="
           cn('field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
              { 'max-h-0 opacity-0 hidden invisible': open },
           )
-        ">
+        "
+      >
         <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
           :key="stat.name"
           :i
           :length="scalingStats.length"
-          :stat />
+          :stat
+        />
       </div>
 
       <Collapsible
         v-model:open="open"
-        class="w-full">
+        class="w-full"
+      >
         <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
           <div
             v-for="(group, ix) in filteredStats.more"
             :key="ix"
-            class="field-box pt-3">
+            class="field-box pt-3"
+          >
             <div class="field-legend">
               {{ group.name }}
             </div>
@@ -256,21 +271,24 @@ const filteredStats = computed(() => {
                   grid! w-full auto-rows-fr grid-cols-2! items-center gap-x-6
                   gap-y-1 px-5 pb-1
                 `)
-              ">
+              "
+            >
               <ChampionStat
                 v-for="(stat, i) in group.stats"
                 :key="i"
                 :i
                 :group-name="group.name"
                 :length="group.stats.length"
-                :stat />
+                :stat
+              />
             </div>
           </div>
         </CollapsibleContent>
         <CollapsibleTrigger class="w-full">
           <LessOrMore
             :open
-            class="w-[98%] justify-self-center" />
+            class="w-[98%] justify-self-center"
+          />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>

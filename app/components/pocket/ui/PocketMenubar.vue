@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '#components'
+import type { MenubarGroup } from '~/components/pocket/menu/types.menubar'
 
 const ChampionIcon = resolveComponent('ChampionIcon')
 const SpellsAutoMenu = resolveComponent('SpellsAutoMenu')
@@ -247,15 +248,18 @@ console.log('🌱 - menu:', menu)
     <MenubarMenu
       v-for="group in menu"
       :key="group.name"
-      :value="group.name">
+      :value="group.name"
+    >
       <MenubarTrigger
         as-child
-        class="hover:bg-transparent">
+        class="hover:bg-transparent"
+      >
         <Button
           variant="link"
           on="secondary"
           size="sm"
-          class="rounded-lg px-4 capitalize open:brightness-98">
+          class="rounded-lg px-4 capitalize open:brightness-98"
+        >
           {{ group.name }}
         </Button>
       </MenubarTrigger>
@@ -265,11 +269,13 @@ console.log('🌱 - menu:', menu)
           cn('w-64 **:capitalize',
              group.class,
           )
-        ">
+        "
+      >
         <AutoMenuContent
           v-for="item in group.items"
           :key="item.name.toString()"
-          :item />
+          :item
+        />
       </LazyMenubarContent>
     </MenubarMenu>
 

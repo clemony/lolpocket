@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 &[data-color='lethality'],
 &[data-color='attackDamage'],
 &[data-color='armorPenetration'] {

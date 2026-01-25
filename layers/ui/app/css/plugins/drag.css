@@ -1,4 +1,4 @@
-
+@import 'tailwindcss';
 .module-ghost {
   @apply size-full rounded-xl bg-b2/20 inset-shadow-sm;
 }

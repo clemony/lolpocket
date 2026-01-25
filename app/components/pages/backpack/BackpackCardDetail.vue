@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
@@ -15,13 +13,15 @@ const bg = computed(() => {
 <template>
   <div
     v-if="pocket"
-    class="flex flex-1 flex-col">
+    class="flex flex-1 flex-col"
+  >
     <!-- header -->
     <div class="flex items-start p-4">
       <div class="flex items-start gap-4 text-sm">
         <PocketIcon
           :src="pocket.icon"
-          class="aspect-square size-16 rounded-full" />
+          class="aspect-square size-16 rounded-full"
+        />
         <div class="grid gap-px">
           <div class="text-md/4 font-semibold">
             {{ pocket.name }}
@@ -31,13 +31,15 @@ const bg = computed(() => {
             v-if="pocket.champions.length"
             class="leading-5"
             :champions="pocket.champions"
-            list />
+            list
+          />
 
           <div class="line-clamp-1 text-sm/4 capitalize">
             <span class="font-medium">Role:</span>
             <template
               v-for="role in pocket.roles"
-              :key="role">
+              :key="role"
+            >
               {{ role }}
             </template>
           </div>
@@ -45,17 +47,20 @@ const bg = computed(() => {
       </div>
       <div
         class="
-          text-bc/60 ml-auto text-sm *:flex *:items-center *:justify-end *:gap-2
-        ">
+          ml-auto text-sm text-bc/60 *:flex *:items-center *:justify-end *:gap-2
+        "
+      >
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
         </p>
         <p
           v-if="pocket.updated"
-          v-tippy="'Last Updated'">
+          v-tippy="'Last Updated'"
+        >
           <icon
             name="reset"
-            class="size-3.5 opacity-70" />
+            class="size-3.5 opacity-70"
+          />
           Patch {{ pocket.updated }}
         </p>
       </div>
@@ -63,35 +68,40 @@ const bg = computed(() => {
     <Separator />
 
     <!-- content -->
-    <div class="border-y-b4 border-y bg-black">
+    <div class="border-y border-y-b4 bg-black">
       <div
         class="
           relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-position-[170%_55%]
           bg-no-repeat inset-shadow-sm inset-shadow-black/20 before:z-0
         "
-        :style="bg" />
+        :style="bg"
+      />
     </div>
-    <div class="flex-1 p-4 text-sm whitespace-pre-wrap"></div>
+    <div class="flex-1 p-4 text-sm whitespace-pre-wrap" />
     <Separator class="mt-auto" />
     <div class="p-4">
       <form>
         <div class="grid gap-4">
           <Textarea
             class="border-b3/60 p-4 inset-shadow-xs"
-            :placeholder="`Comment on ${pocket.name}...`" />
+            :placeholder="`Comment on ${pocket.name}...`"
+          />
           <div class="flex items-center">
             <Label
               html-for="mute"
-              class="flex items-center gap-2 text-sm font-normal">
+              class="flex items-center gap-2 text-sm font-normal"
+            >
               <Switch
                 id="mute"
-                aria-label="Mute thread" />
+                aria-label="Mute thread"
+              />
               Mute comment notifications
             </Label>
             <Button
               type="button"
               size="sm"
-              class="ml-auto">
+              class="ml-auto"
+            >
               Send
             </Button>
           </div>
@@ -101,7 +111,8 @@ const bg = computed(() => {
   </div>
   <div
     v-else
-    class="text-bc/60 grid size-full justify-center text-center">
+    class="grid size-full justify-center text-center text-bc/60"
+  >
     <span class="translate-y-1/4">No pocket selected</span>
   </div>
 </template>

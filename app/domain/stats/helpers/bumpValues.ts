@@ -1,5 +1,5 @@
-export function bumpTimedStatDetail(
-  map: Record<number, TimedStatDetail>,
+export function bumpStatDetail(
+  map: Record<number, StatDetail>,
   itemId: number,
   win: boolean,
   timestamp?: number

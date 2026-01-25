@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -20,6 +18,7 @@ const spells = computed(() => {
       v-for="spell in spells"
       :key="spell"
       :src="`/img/spells/${spell}.webp`"
-      class="size-6 rounded-full shadow-sm drop-shadow-sm" />
+      class="size-6 rounded-full shadow-sm drop-shadow-sm"
+    >
   </div>
 </template>

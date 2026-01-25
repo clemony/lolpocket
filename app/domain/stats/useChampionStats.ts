@@ -1,9 +1,9 @@
 export function useChampionStats(filteredMatches: Ref<MatchData[]>, puuid: string) {
-  return computed<AggregatedStats[]>(() => {
+  return computed<ChampionStats[]>(() => {
     if (!filteredMatches.value?.length)
       return []
 
-    const map = new Map<number, AggregatedStats>()
+    const map = new Map<number, ChampionStats>()
 
     for (const match of filteredMatches.value) {
       const row = match.participants.find(p => p.puuid === puuid)

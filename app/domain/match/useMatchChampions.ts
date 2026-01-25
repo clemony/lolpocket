@@ -99,7 +99,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
           avgKp: Number((avgKP * 100).toFixed(2)),
           bayesianWinrate,
           champion: stats.name,
-          championId: champion.value.id,
+          championId: championId,
           gamePatches: stats.gamePatches,
           games: stats.games,
           kda: Number(kda.toFixed(2)),

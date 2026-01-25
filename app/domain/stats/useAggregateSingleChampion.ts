@@ -1,9 +1,9 @@
 export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerData[]>) {
-  return computed<AggregatedStats | null>(() => {
+  return computed<ChampionStats | null>(() => {
     if (!matchData.value?.length)
       return null
 
-    const acc: AggregatedStats = {
+    const acc: ChampionStats = {
       championId: matchData.value[0].player.championId,
       championName: champNameById(matchData.value[0].player.championId),
       gamePatches: [],
@@ -81,7 +81,7 @@ export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerDat
           )
         : 0
 
-    for (const stat of Object.values(acc.role.stats)) {
+    for (const stat of Object.values(acc.role.stats) as StatValues) {
       stat.winrate
         = stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
       stat.pickrate = Math.round((stat.games / acc.games) * 1000) / 10

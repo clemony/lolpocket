@@ -1,33 +1,22 @@
 import tailwindcss from "@tailwindcss/vite"
-import fs from "node:fs"
-import path from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
 
-const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
-
-const customCollections = fs
-  .readdirSync(iconsRoot, { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => ({
-    dir: path.join(iconsRoot, d.name),
-    normalizeIconName: false,
-    prefix: d.name, // or "" if you truly don’t care
-  }))
-
 export default defineNuxtConfig({
   alias: {
-    riot: fileURLToPath(new URL("./server/api/riot", import.meta.url)),
+    records: fileURLToPath(new URL("./layers/patch/records", import.meta.url)),
   },
   imports: {
     dirs: [
       "~/domain",
       "~/stores",
-      "#shared/types/**/*",
-      "#layers/ui/app",
-      "#layers/lib/app",
-      "#layers/patch/constants/**/*",
-      "#layers/ui/variants/**/*",
+      "#layers/ui/app/variants",
+      "#layers/ui/app/types",
+      "#layers/ui/app/config",
+      "#layers/lib/shared",
+      "#layers/ui/app/utils",
+     "#layers/patch/constants",
+   "#layers/supabase/shared/schema",
     ],
   },
   modules: [
@@ -39,13 +28,11 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@morev/vue-transitions/nuxt",
     "@nuxt/ui",
-    "@nuxt/icon",
     "motion-v/nuxt",
   ],
 
   // app
   typescript: {
-    includeWorkspace: true,
     strict: false,
     tsConfig: {
       compilerOptions: {
@@ -61,23 +48,21 @@ components: [
     path: '~/components',
     pathPrefix: false,
     global: true
-  },,
+  },
   {
     path: '#layers/ui/app/components',
+    pathPrefix: false,
+    global: true
+  },
+  {
+    path: '#layers/supabase/app/components',
     pathPrefix: false,
     global: true
   },
    '~/components',
 ],
 
-  icon: {
-    provider: "server",
-    componentName: "icon",
-    customCollections,
-    serverBundle: {
-      collections: ["lucide"],
-    },
-  },
+
   image: {
     provider: "ipx",
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
@@ -88,11 +73,10 @@ components: [
   nitro: {
     imports: {
       dirs: [
-        "./server/types",
-        "./server/utils",
-        "./server/domain",
-        "#layers/lib/app",
-        "#shared/types",
+        "#server/utils",
+        "#server/domain",
+        "#layers/lib/shared",
+        "#server/api"
       ],
     },
     routeRules: {
@@ -107,12 +91,6 @@ components: [
     },
     typescript: {
       strict: false,
-      tsConfig: {
-        compilerOptions: {
-          baseUrl: "../",
-        },
-        include: ["server/types/**/*"],
-      },
     },
   },
   supabase: {
@@ -124,7 +102,7 @@ components: [
       login: "/auth/login",
       saveRedirectToCookie: true,
     },
-    //types: "@types/database.types.ts",
+    types: "#layers/supabase/shared/types/database.types.ts",
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
   },
@@ -146,7 +124,11 @@ components: [
     riotApiKey: process.env.NUXT_RIOT_API,
     supabasePooler: process.env.SUPABASE_POOLER,
   },
-
+eslint: {
+config: {
+      standalone: false
+    }
+},
   pinia: { storesDirs: ["./app/stores"]},
   router: {
     options: {
@@ -182,7 +164,7 @@ components: [
     port: 8080,
   },
   devtools: {
-    enabled: false,
+    enabled: true,
   },
   experimental: {
    extractAsyncDataHandlers: true,

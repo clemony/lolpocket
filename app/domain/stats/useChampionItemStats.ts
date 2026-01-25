@@ -12,7 +12,7 @@ export function useChampionItemStats(matches: Ref<MatchData[]>, puuid: string, c
       for (const itemId of Object.values(p.items)) {
         if (!itemId || p.win === 'remake')
           continue
-        bumpStat(single, itemId, p.win)
+        bumpStat(single, itemId as number, p.win)
       }
     }
 

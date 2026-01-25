@@ -84,7 +84,7 @@ export const useChampStore = defineStore('ChampStore', () => {
     if (query) {
       matched = new Set(
         [...matched].filter((id) => {
-          const champion = ix().championById(id)
+          const champion: ChampionIndex = ix().championById(id)
           if (!champion)
             return false
 

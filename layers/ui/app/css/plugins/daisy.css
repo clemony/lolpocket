@@ -1,5 +1,6 @@
-
+@import 'tailwindcss';
 @plugin "daisyui";
+@reference '../theme.css';
 
 @utility fx-0 {
   --noise: 0;
@@ -119,8 +120,8 @@
   }
 
   .field-box {
-    background-image: url('../../icons/ui/noise.svg');
-    @apply relative overflow-visible rounded-xl border border-b3/60 bg-b2/40 bg-size-[160px] bg-repeat text-sm shadow-warm-soft drop-shadow-xs **:select-none dark:bg-tint-b1/1 light:bg-tint-b2/60!;
+    background-image: url('--assets/icons/ui/noise.svg');
+    @apply relative overflow-visible rounded-xl border border-b3/60 bg-primary bg-size-[160px] bg-repeat text-sm shadow-warm-soft drop-shadow-xs **:select-none ;
   }
 
   /* progress */

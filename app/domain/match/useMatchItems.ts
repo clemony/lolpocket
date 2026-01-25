@@ -31,7 +31,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
     player.forEach((match, index) => {
       const { data, patch } = match
 
-      Object.values(data.items).forEach((itemId) => {
+      Object.values(data.items).forEach((itemId: number) => {
         if (!itemId || itemId === 0)
           return
 

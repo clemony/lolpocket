@@ -26,7 +26,7 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
   const out: AllyDataPoint[] = []
 
   for (const ally of allies) {
-    for (const champ of Object.values(ally.champions)) {
+    for (const champ of Object.values(ally.champions) as [string,  AllyStatDetail]) {
       if (!champ.games || !champ.winrate)
         continue
 
@@ -40,7 +40,7 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
         delta: champ.delta,
         games: champ.games,
         winrate: champ.winrate,
-      })
+      } as AllyStatDetail)
     }
   }
 

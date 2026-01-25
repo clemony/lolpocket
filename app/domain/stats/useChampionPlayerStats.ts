@@ -10,7 +10,7 @@ export interface UsePlayerStats {
   runes: ComputedRef<ChampionRuneStats>
   skills: ComputedRef<AggregatedSkills>
   spells: ComputedRef<SpellStats>
-  stats: ComputedRef<AggregatedStats>
+  stats: ComputedRef<ChampionStats>
   summoner: ShallowRef<Summoner>
 }
 
@@ -20,7 +20,7 @@ export function usePlayerStatsProvider(
 ): UsePlayerStats {
   const { filteredMatches, summoner, timelines } = api
 
-  const mastery = shallowRef<PlayerChampionMastery | undefined>(undefined)
+  const mastery = shallowRef<ChampionMastery | undefined>(undefined)
 
   const matchData = computed<MatchPlayerData[]>(() => {
     if (!timelines.value?.length)

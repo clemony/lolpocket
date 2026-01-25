@@ -103,12 +103,12 @@ export const useSummonerStore = defineStore(
       if (existing && !force && !isStale(existing.puuid))
         return existing
 
-      const base = await $fetch<Summoner>('/api/riot/summonerAccount', {
+      const base = await $fetch<Summoner>('/api/summonerAccount', {
         params: args,
       })
 
       const ranked = await $fetch<{ ranked: Summoner['ranked'] }>(
-        '/api/riot/v4/league/entries/byPuuid',
+        '/api/v4/league/entries/byPuuid',
         { params: { puuid: base.puuid, region: base.region } }
       )
 
@@ -132,7 +132,10 @@ export const useSummonerStore = defineStore(
       return await ensureSummoner({ puuid })
     }
 
-    const mergeRanked = (puuid: string, ranked: Summoner['ranked']) => {
+const mergeRanked = (
+  puuid: Summoner['puuid'],
+  ranked: Summoner['ranked']
+) => {
       const s = cache.value[puuid]
       if (!s)
         return

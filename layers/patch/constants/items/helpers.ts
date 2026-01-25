@@ -12,4 +12,4 @@ export function itemNameById(id: number) {
 
 export const itemColorByTier = (id: number) => itemRankColor?.[itemRank[id]]
 
-export const supportItemIds = [3869, 3870, 3871, 3876, 3877]
+export const supportnumbers = [3869, 3870, 3871, 3876, 3877]

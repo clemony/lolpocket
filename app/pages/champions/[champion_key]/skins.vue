@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import '@ui/css/plugins/embla.css'
+import type { CarouselApi } from '~~/layers/ui/app/components/carousel/interface'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 const { champion } = defineProps<{
@@ -62,32 +63,38 @@ const skins = computed(() => skinIndex[champion.key])
         relative -ml-6 w-full overflow-auto mask-x-from-transparent
         mask-x-from-0% mask-x-to-black mask-x-to-6% pl-6
       "
-      @init-api="(val) => (emblaThumbnailApi = val)">
-      <CarouselContent class="scrollbar-hidden -ml-6 flex pt-22 pb-6">
+      @init-api="(val) => (emblaThumbnailApi = val)"
+    >
+      <CarouselContent class="-ml-6 scrollbar-hidden flex pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
           class="pl-46h-38 basis-1/6! cursor-pointer"
-          @click="onThumbClick(index)">
+          @click="onThumbClick(index)"
+        >
           <div
             :class="
-              cn('hover:ring-b4 cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring',
+              cn('cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring hover:ring-b4',
                  index === selectedIndex
                    ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1'
                    : 'opacity-80',
               )
-            ">
+            "
+          >
             <Card
               class="
                 h-38 overflow-hidden rounded-xl! border-0 p-0! shadow-sm
                 shadow-black/20 drop-shadow-sm drop-shadow-black/20
-              ">
+              "
+            >
               <CardContent
-                class="relative flex items-center justify-center p-0">
+                class="relative flex items-center justify-center p-0"
+              >
                 <Img
                   :alt="skin.name"
                   :src="getSplash(champion.key, 'tile', skin)"
-                  class="inset-0 -mt-10 size-full object-cover" />
+                  class="inset-0 -mt-10 size-full object-cover"
+                />
               </CardContent>
             </Card>
           </div>
@@ -99,34 +106,40 @@ const skins = computed(() => skinIndex[champion.key])
       :opts="{ loop: true }"
       :plugins="[WheelGesturesPlugin()]"
       class="relative size-full"
-      @init-api="(val) => (emblaMainApi = val)">
+      @init-api="(val) => (emblaMainApi = val)"
+    >
       <CarouselContent class="embla__container pt-2 pb-20">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
-          class="rounded-xl!">
+          class="rounded-xl!"
+        >
           <div class="embla__slide p-2">
             <Card
               class="
                 embla__parallax rounded-xl! border-0 shadow-sm shadow-black/20
                 drop-shadow-sm drop-shadow-black/20
-              ">
+              "
+            >
               <CardContent
                 class="
                   embla__parallax__layer p-0 after:absolute after:size-full
                   after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)]
-                ">
+                "
+              >
                 <Img
                   :alt="skin.name"
                   :src="getSplash(champion.key, 'uncentered', skin)"
-                  class="embla__slide__img embla__parallax__img" />
+                  class="embla__slide__img embla__parallax__img"
+                />
 
                 <div
                   class="
                     absolute bottom-4 left-6 grid w-max place-items-center
                     rounded-full bg-black/70 px-5 py-1 text-lg font-medium
                     text-white/80 italic opacity-90 backdrop-blur-sm
-                  ">
+                  "
+                >
                   {{ skin.name }}
                 </div>
               </CardContent>
@@ -138,16 +151,18 @@ const skins = computed(() => skinIndex[champion.key])
         variant="base"
         hover="neutral"
         class="
-          fx-0 left-10 size-16 rounded-xl border-0 bg-transparent
+          left-10 size-16 rounded-xl border-0 bg-transparent fx-0
           **:text-white/70 [&_svg]:size-6
-        " />
+        "
+      />
       <CarouselNext
         variant="base"
         hover="neutral"
         class="
-          fx-0 right-6 size-16 rounded-xl border-0 bg-transparent
+          right-6 size-16 rounded-xl border-0 bg-transparent fx-0
           **:text-white/70 [&_svg]:size-6
-        " />
+        "
+      />
     </Carousel>
   </div>
 </template>

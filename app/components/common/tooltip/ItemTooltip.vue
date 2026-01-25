@@ -16,7 +16,7 @@ watchEffect(async () => {
 
   status.value = 'loading'
   try {
-    const mod = await import(`#shared/records/items/${id}.ts`)
+    const mod = await import(`records/items/${id}.ts`)
     console.log('🥸 - mod:', mod)
     item.value = mod.default
     status.value = 'success'
@@ -79,13 +79,13 @@ const { height } = useElementBounding(el)
         <!-- NAME / LINK -->
 
         <h5
-          class="text-md! mt-2 inline-flex justify-center self-center text-center! leading-5 font-semibold! text-wrap">
+          class="mt-2 inline-flex justify-center self-center text-center! text-md! leading-5 font-semibold! text-wrap">
           {{ name }}
         </h5>
 
         <!-- RANK -->
         <span
-          class="text-xxs text-nc font-normal italic opacity-90"
+          class="text-xxs font-normal text-nc italic opacity-90"
           :style="{
             color: itemRankColor?.[rank],
           }">
@@ -118,7 +118,7 @@ const { height } = useElementBounding(el)
             <Icon
               name="lol:gold"
               alt="item price"
-              class="**:text-g! inline size-3.5 self-center opacity-80" />
+              class="inline size-3.5 self-center opacity-80 **:text-g!" />
             <figcaption>
               {{ itemPrice[id] }}
             </figcaption>

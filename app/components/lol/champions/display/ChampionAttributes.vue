@@ -28,7 +28,7 @@ const normalizedKeys = rawKeys.map((val, index) => {
   return val.charAt(0).toUpperCase() + val.slice(1)
 })
 const rawValues = Object.values(champion.attributeRatings)
-const normalizedValues = rawValues.map((val, index) => {
+const normalizedValues = rawValues.map((val: number, index) => {
   if (index !== 5)
     return val
 
@@ -106,18 +106,20 @@ const options = {
 </script>
 
 <template>
-  <div class="bg-b3/30 relative m-0 w-full justify-self-center pt-6 pb-0!">
+  <div class="relative m-0 w-full justify-self-center bg-b3/30 pt-6 pb-0!">
     <div
       class="
-        text-md text-bc/50 absolute top-5 left-6 font-bold tracking-tight
+        absolute top-5 left-6 text-md font-bold tracking-tight text-bc/50
         drop-shadow-sm
-      ">
+      "
+    >
       Champion Attributes
     </div>
 
     <Radar
       :data="data"
       :options="options"
-      class="drop-shadow-sm" />
+      class="drop-shadow-sm"
+    />
   </div>
 </template>

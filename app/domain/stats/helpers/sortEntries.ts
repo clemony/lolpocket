@@ -1,5 +1,5 @@
 export function sortTimedByWinratePickrate(
-  record: Record<number, TimedStatDetail>
+  record: Record<number, StatDetail>
 ): OrderedTimedStatEntry[] {
   const totalGames = Object.values(record).reduce((s, r) => s + r.games, 0)
 
@@ -15,7 +15,7 @@ export function sortTimedByWinratePickrate(
 }
 
 export function sortTimedByWinrate(
-  record: Record<number, TimedStatDetail>
+  record: Record<number, StatDetail>
 ): OrderedTimedStatEntry[] {
   return Object.entries(record)
     .map(([k, v]) => [Number(k), v] as OrderedTimedStatEntry)
@@ -27,7 +27,7 @@ export function sortTimedByWinrate(
 }
 
 export function sortTimedByPickrate(
-  record: Record<number, TimedStatDetail>
+  record: Record<number, StatDetail>
 ): OrderedTimedStatEntry[] {
   const totalGames = Object.values(record).reduce((s, r) => s + r.games, 0)
 

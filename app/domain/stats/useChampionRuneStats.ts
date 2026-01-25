@@ -1,25 +1,4 @@
-export interface ChampionRuneStats {
-  keystone: Record<number, StatDetail>
-  all: RunePageStats[]
-  best: RunePageStats
-  primary: Record<number, StatDetail>
-  secondary: Record<number, StatDetail>
-  shards: ShardStats
-  usedFallback?: boolean
-}
 
-export interface RunePageStats extends StatDetail {
-  keystone: number
-  primaryPath: string
-  primaryRunes: number[]
-  secondaryPath: string
-  secondaryRunes: number[]
-  shards: number[]
-}
-
-export type RunePageKey = string
-export type ShardSlot = 0 | 1 | 2
-export type ShardStats = Record<ShardSlot, Record<number, StatDetail>>
 
 function makeRunePageKey(r: PlayerRunes) {
   return [r.keystone, ...r.primary.runes, '|', ...r.secondary.runes].join('-')

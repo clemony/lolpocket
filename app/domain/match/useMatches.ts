@@ -42,7 +42,7 @@ export function useMatches(
     try {
       const since = newestTs.value ?? 0
 
-      const res = await $fetch<MatchReturn>(`/api/riot/v5/match/newer`, {
+      const res = await $fetch<MatchReturn>(`/api/v5/match/newer`, {
         query: {
           puuid: id,
           queue: opts?.queue,
@@ -81,7 +81,7 @@ export function useMatches(
 
     loading.value = true
     try {
-      const res = await $fetch<MatchReturn>(`/api/riot/v5/match/older`, {
+      const res = await $fetch<MatchReturn>(`/api/v5/match/older`, {
         query: {
           puuid: id,
           cursor: cursor.value,

@@ -10,7 +10,7 @@ export async function useFetchMatches(summoner: Summoner) {
   const existingIds = await getAllMatchIdsForPuuid(summoner.puuid)
 
   // Ask server for new matches
-  const { matchData: newMatches } = await $fetch('/api/riot/v5/match/batch', {
+  const { matchData: newMatches } = await $fetch('/api/v5/match/batch', {
     params: { puuid: summoner.puuid, existingIds, region: summoner.region },
   })
 
@@ -25,11 +25,11 @@ export async function useFetchMatches(summoner: Summoner) {
     if (hasRanked) {
       ;(async () => {
         try {
-          const ranked = await $fetch('/api/riot/v4/league/entries/byPuuid', {
+        const res = await $fetch<{ ranked: Summoner['ranked'] }>('/api/v4/league/entries/byPuuid', {
             params: { puuid: summoner.puuid, region: summoner.region },
           })
 
-          ss().mergeRanked(summoner.puuid, ranked.ranked)
+          ss().mergeRanked(summoner.puuid, res.ranked)
         }
         catch (err) {
           console.error('🔥 Failed ranked refresh', err)

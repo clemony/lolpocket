@@ -110,6 +110,7 @@
   overflow-hidden rounded-lg;
 }
 
+@import 'tailwindcss';
 .btn-table-class {
   @apply btn btn-md join-item bg-b2/50 h-16 w-11;
 }

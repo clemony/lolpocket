@@ -15,20 +15,23 @@ const isOpen = ref(false)
   <div class="field-box match-card mb-8 w-full rounded-xl">
     <Collapsible
       v-model:open="isOpen"
-      :class="cn('group/collapse collapse-class relative',
+      :class="cn('collapse-class group/collapse relative',
                  player?.win === 'remake' ? 'from-b3 before:border-b3'
-                 : player?.win === true ? 'from-inspiration/80 before:border-inspiration ' : 'from-domination/80 before:border-domination')">
+                 : player?.win === true ? 'from-inspiration/80 before:border-inspiration ' : 'from-domination/80 before:border-domination')"
+    >
       <!--  -->
       <CollapsibleTrigger
-        ref="container"
         :for="match?.matchId"
-        class="trigger-style">
+        class="trigger-style"
+      >
         <MatchInfo
           :match
-          :player />
+          :player
+        />
         <PlayerMatchCardInfo
           :match
-          :player />
+          :player
+        />
 
         <TeamsCardOverview :match />
         <div class="grid h-full w-8 place-items-center">
@@ -38,7 +41,8 @@ const isOpen = ref(false)
 
       <LazyMatchContent
         :match
-        :player />
+        :player
+      />
     </Collapsible>
   </div>
 </template>

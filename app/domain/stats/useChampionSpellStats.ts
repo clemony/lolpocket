@@ -52,7 +52,7 @@ export function useChampionSpellStats(source: Ref<MatchPlayerData[]>) {
       if (!p || p.win === 'remake')
         continue
 
-      const [s1, s2] = Object.values(p.spells)
+      const [s1, s2] = Object.values(p.spells) as [number , number]
 
       bumpStat(single, s1, p.win)
       bumpStat(single, s2, p.win)

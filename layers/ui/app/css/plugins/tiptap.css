@@ -1,3 +1,4 @@
+@import 'tailwindcss';
 
 @utility tiptap {
   @apply focus-within:outline-0 hover:!border-b3 hover:!ring-0 hover:!outline-0;

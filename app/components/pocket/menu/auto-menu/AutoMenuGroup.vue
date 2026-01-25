@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { MenubarItem } from '~/components/pocket/menu/types.menubar'
+
 const { item } = defineProps<{
   item: MenubarItem
 }>()
@@ -11,6 +13,7 @@ const { item } = defineProps<{
     <AutoMenuContent
       v-for="(subitem, i) in item.items"
       :key="i"
-      :item="subitem" />
+      :item="subitem"
+    />
   </MenubarGroup>
 </template>

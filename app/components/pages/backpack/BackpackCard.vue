@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/types/schema/schema.pocket'
-
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -17,16 +15,18 @@ const menuOpen = ref(false)
   <div class="max-h-90 min-h-70 w-full max-w-100 min-w-88">
     <ContextMenu
       as="div"
-      class="h-inherit min-h-inherit w-inherit min-w-inherit">
+      class="h-inherit min-h-inherit w-inherit min-w-inherit"
+    >
       <ContextMenuTrigger
         as="div"
         class="
-          h-inherit min-h-inherit w-inherit min-w-inherit border-b2
-          shadow-warm-soft hover:border-b3 hover:shadow-warm hover:ring-b2 relative cursor-pointer
-          gap-3 overflow-hidden rounded-xl border
-          drop-shadow-sm drop-shadow-black/5 **:select-none hover:ring-1
+          relative h-inherit min-h-inherit w-inherit min-w-inherit
+          cursor-pointer gap-3 overflow-hidden rounded-xl border border-b2
+          shadow-warm-soft drop-shadow-sm drop-shadow-black/5 **:select-none
+          hover:border-b3 hover:shadow-warm hover:ring-1 hover:ring-b2
         "
-        @click="navigateTo(`/pocket/${pocket.key}`)">
+        @click="navigateTo(`/pocket/${pocket.key}`)"
+      >
         <BackpackCardBackground :pocket="pocket" />
 
         <div
@@ -34,16 +34,19 @@ const menuOpen = ref(false)
           class="
             pointer-events-auto! absolute inset-0 z-1 grid size-full
             items-center overflow-hidden rounded-xl
-          ">
+          "
+        >
           <div
             class="
               pointer-events-none relative grid size-full px-4 py-3 inset-shadow-sm
-            ">
+            "
+          >
             <BackpackRunes :pocket="pocket" />
 
             <div class="flex w-full gap-6 self-end">
               <div
-                class="flex grow flex-col gap-2 self-end pb-4 pl-3 font-medium">
+                class="flex grow flex-col gap-2 self-end pb-4 pl-3 font-medium"
+              >
                 <BackpackChampion :pocket="pocket" />
 
                 <div class="group flex flex-col gap-1 pr-4">
@@ -63,7 +66,8 @@ const menuOpen = ref(false)
 
       <LazyBackpackPocketMenu
         :pocket="pocket"
-        hydrate-on-interact />
+        hydrate-on-interact
+      />
     </ContextMenu>
   </div>
 </template>

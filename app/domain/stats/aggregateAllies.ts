@@ -1,8 +1,3 @@
-export interface AllyStatDetail extends Identifier, TimedStatDetail {
-  champions: Record<number, PairedChampionStat>
-  delta: number
-  synergy: number
-}
 
 function bumpChampion(
   allyEntry: AllyStatDetail,
@@ -95,10 +90,10 @@ export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
     }
 
     //  finalize
-    for (const ally of Object.values(allies)) {
+    for (const ally of Object.values(allies) as AllyStatDetail[]) {
       ally.delta = winDelta(ally.win, ally.games, totalWins, totalGames)
 
-      for (const c of Object.values(ally.champions)) {
+      for (const c of Object.values(ally.champions) as PairedChampionStat[]) {
         if (totalGames === c.games) {
           c.delta = 0
           continue
@@ -106,15 +101,17 @@ export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
 
         c.delta = winDelta(c.win, c.games, totalWins, totalGames)
       }
-
-      ally.champions = sortRecordBy(ally.champions, 'games', 'desc')
+ally.champions = Object.fromEntries(
+  sortRecordBy((ally.champions as Record<string, PairedChampionStat>), 'games', 'desc')
+    .map(c => [c.championId, c])
+)
     }
 
     // collect ALL raw synergy values
     const allSynergyTotals = [
       ...Object.values(allies).map(a => a.delta),
       ...Object.values(allies).flatMap(a =>
-        Object.values(a.champions).map(c => c.delta)
+        (Object.values(a.champions) as PairedChampionStat[]).map(c => c.delta)
       ),
     ]
 
@@ -127,7 +124,7 @@ export function aggregateAllies(data: Ref<MatchData[]>, puuid: string) {
       ally.pickrate = roundDecimalToPercent(ally.games, totalGames)
       ally.delta = ally.delta ? Math.round(ally.delta * 1000) / 10 : 0
 
-      for (const c of Object.values(ally.champions)) {
+      for (const c of Object.values(ally.champions)  as PairedChampionStat[]) {
         c.synergy = synergyScore(c.delta, globalMaxAbs)
         c.winrate = roundDecimalToPercent(c.win, c.games)
         c.delta = c.delta ? Math.round(c.delta * 1000) / 10 : 0

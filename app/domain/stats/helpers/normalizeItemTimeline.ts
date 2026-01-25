@@ -1,5 +1,5 @@
 export function getFinalItems(items: PlayerItems): number[] {
-  return Object.values(items).filter(id => id && id !== 0)
+  return Object.values(items).filter(id => id && id !== 0) as number[]
 }
 
 export function getItemAcquireTimes(
