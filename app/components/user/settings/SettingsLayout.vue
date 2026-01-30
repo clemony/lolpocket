@@ -12,9 +12,7 @@ const route = useRoute()
       <h3 class="dst text-3xl font-semibold capitalize">
         {{ title || route.meta?.title || route.name }}
       </h3>
-      <p
-        v-if="route.meta?.description"
-        class="text-md/8 opacity-60">
+      <p v-if="route.meta?.description" class="text-md/8 opacity-60">
         {{ description || route.meta?.description }}
       </p>
       <Separator class="my-4" />

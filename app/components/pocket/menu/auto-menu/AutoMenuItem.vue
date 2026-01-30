@@ -10,15 +10,15 @@ const { item } = defineProps<{
   <!-- item -->
   <MenubarItem
     :key="item.name.toString()"
-    :inset="item.inset"
     class="group/item truncate"
+    :inset="item.inset"
     @click="item.key ? navigateTo(`/pocket/${item.key}`) : null"
   >
     <PocketIcon
       v-if="item?.key && typeof item.icon === 'string'"
+      class="size-7 rounded-full"
       size="sm"
       :src="String(item?.icon)"
-      class="size-7 rounded-full"
     />
     <Icon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
@@ -29,10 +29,7 @@ const { item } = defineProps<{
       {{ item.name }}
     </span>
 
-    <MenubarShortcut
-      v-if="item.shortcut"
-      class="flex gap-2 pr-1 text-xs"
-    >
+    <MenubarShortcut v-if="item.shortcut" class="flex gap-2 pr-1 text-xs">
       <Icon
         v-if="item.shortcut?.icon"
         :name="item.shortcut?.icon"

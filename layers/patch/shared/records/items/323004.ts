@@ -1,0 +1,17 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "id": 323004,
+  "name": "Manamune",
+  "description": "35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.",
+  "gold": {
+    "base": 1100,
+    "total": 2900,
+    "sell": 2030
+  },
+  "maps": [
+    11
+  ]
+}
+export default item

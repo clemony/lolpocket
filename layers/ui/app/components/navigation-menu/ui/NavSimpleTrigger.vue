@@ -15,10 +15,12 @@ const forwarded = useForwardProps(delegatedProps)
   <NavigationMenuTrigger
     v-bind="forwarded"
     :class="
-      cn('group btn btn-ghost hover:bg-b2/60 hover:text-bc focus:bg-b2/60 focus:text-bc data-[active]:bg-b2/60! data-[state=open]:bg-b2/60! inline-flex items-center justify-center gap-1 rounded-lg text-sm font-medium capitalize transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50',
-         props.class,
+      cn(
+        'group btn btn-ghost hover:bg-b2/60 hover:text-bc focus:bg-b2/60 focus:text-bc data-[active]:bg-b2/60! data-[state=open]:bg-b2/60! inline-flex items-center justify-center gap-1 rounded-lg text-sm font-medium capitalize transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </NavigationMenuTrigger>
 </template>

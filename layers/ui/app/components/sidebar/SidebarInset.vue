@@ -18,7 +18,8 @@ const props = defineProps<{
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </main>
 </template>

@@ -15,7 +15,7 @@ const props = withDefaults(
   >(),
   {
     align: 'inline-start',
-  },
+  }
 )
 
 function handleInputGroupAddonClick(e: MouseEvent) {
@@ -32,12 +32,18 @@ function handleInputGroupAddonClick(e: MouseEvent) {
 
 <template>
   <Primitive
-    role="group"
     v-bind="props"
+    role="group"
     data-slot="input-group-addon"
     :data-align="props.align"
-    :class="cn(inputGroupAddonVariants({ color, base, size, align: props.align }), props.class)"
-    @click="handleInputGroupAddonClick">
+    :class="
+      cn(
+        inputGroupAddonVariants({ color, base, size, align: props.align }),
+        props.class,
+      )
+    "
+    @click="handleInputGroupAddonClick"
+  >
     <slot />
   </Primitive>
 </template>

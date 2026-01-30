@@ -9,7 +9,7 @@ const {
   iconClass,
   on,
   size = 'c-10',
-  variant = 'base'
+  variant = 'base',
 } = defineProps<{
   id: number | null
   dataSize?: TooltipSize
@@ -25,7 +25,7 @@ const {
 }>()
 
 const shard = computed(() =>
-  shardObject.flatMap(o => o.shards).find(s => s.id === id),
+  shardRegistry.flatMap(o => o.shards).find(s => s.id === id)
 )
 </script>
 
@@ -36,10 +36,15 @@ const shard = computed(() =>
     :data-size
     :data-text
     :data-placement
-    :class="cn('relative', labelVariants({ base, on, hover, size, variant }), className)">
-    <ShardIcon
-      :id
-      :class="iconClass" />
+    :class="
+      cn(
+        'relative',
+        labelVariants({ base, on, hover, size, variant }),
+        className,
+      )
+    "
+  >
+    <ShardIcon :id :class="iconClass" />
     <slot />
   </Label>
 </template>

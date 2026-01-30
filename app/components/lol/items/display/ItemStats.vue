@@ -10,13 +10,14 @@ const { class: className, stats } = defineProps<{
     <li
       v-for="[k, v] in Object.entries(stats)"
       :key="k"
+      class="inline-flex gap-1 text-xs/4.5! font-medium text-wrap"
       :data-color="k"
-      class="inline-flex gap-1 text-end text-xs/4.5! font-normal text-wrap">
+    >
       <span class="">
         {{ `${v}${statIndex[k]?.unit ?? ""}` }}
       </span>
       <span>
-        {{ statIndex[k].key === 'HSP' ? statIndex[k].abbr : statIndex[k].name }}
+        {{ ["HSP", "APEN", "MPEN"].includes(statIndex[k].key) ? statIndex[k].abbr : statIndex[k].name }}
       </span>
 
       <!--       <span class="relative h-px w-4 place-items-center *:absolute">

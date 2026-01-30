@@ -1,0 +1,51 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:09 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "R",
+  "name": "Insanity Potion",
+  "affects": "Self",
+  "blurb": "Active:  Singed empowers himself for some time with  bonus ability power,  bonus armor,  bonus magic resist,  bonus movement speed,  bonus health regen, and  bonus mana regen.",
+  "castTime": "none",
+  "cooldown": "100",
+  "cost": "100",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Singed empowers himself for 25 seconds with ability power, bonus armor, bonus magic resistance, bonus movement speed, bonus health regeneration, and bonus mana regeneration.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Stats",
+          "modifiers": [
+            {
+              "values": "25 / 60 / 95"
+            }
+          ]
+        },
+        {
+          "attribute": "HP/Mana Regenerated per 0.5 Seconds",
+          "modifiers": [
+            {
+              "values": "2.5 / 6 / 9.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Total HP/Mana Regeneration (per 5 Seconds)",
+          "modifiers": [
+            {
+              "values": "125 / 300 / 475"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "During this time, Poison Trail additionally applies Grievous Wounds for 1 second, which refreshes every 0.25 seconds while the poison persists."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/r",
+  "notes": "No additional notes.",
+  "resource": "Mana",
+  "targeting": "Auto"
+}
+  export default ability

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'summoner-puuid',
-  layout: 'default'
+  layout: 'default',
 })
 </script>
 

@@ -23,7 +23,7 @@ const props = withDefaults(
     as: 'button',
     size: '12',
     variant: 'default',
-  },
+  }
 )
 
 const { isMobile, state } = useSidebar()
@@ -34,7 +34,8 @@ const delegatedProps = reactiveOmit(props, 'tooltip')
 <template>
   <SidebarMenuButtonChild
     v-if="!tooltip"
-    v-bind="{ ...delegatedProps, ...$attrs }">
+    v-bind="{ ...delegatedProps, ...$attrs }"
+  >
     <slot />
   </SidebarMenuButtonChild>
 
@@ -45,16 +46,15 @@ const delegatedProps = reactiveOmit(props, 'tooltip')
       </SidebarMenuButtonChild>
     </TooltipTrigger>
     <TooltipContent
+      class="bg-neutral text-nc capitalize"
       :side
       align="center"
-      class="bg-neutral text-nc capitalize"
-      :hidden="state !== 'collapsed' || isMobile">
+      :hidden="state !== 'collapsed' || isMobile"
+    >
       <template v-if="typeof tooltip === 'string'">
         {{ tooltip }}
       </template>
-      <component
-        :is="tooltip"
-        v-else />
+      <component :is="tooltip" v-else />
     </TooltipContent>
   </Tooltip>
 </template>

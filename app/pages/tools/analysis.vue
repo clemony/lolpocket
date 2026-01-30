@@ -14,14 +14,14 @@ const p = computed(() => ms().analysisPatchSelect)
 <template>
   <div class="oveflow-hidden size-full">
     <menu
-      class="
-        border-r-b3/40 shadow-warm-2 overflow-hidden border-r shadow-black/7
-      ">
+      class="border-r-b3/40 shadow-warm-2 overflow-hidden border-r shadow-black/7"
+    >
       <DataFilterPanel />
     </menu>
 
-    <main class="relative w-full grow overflow-x-hidden overflow-y-auto px-10">
-    </main>
+    <main
+      class="relative w-full grow overflow-x-hidden overflow-y-auto px-10"
+    />
   </div>
 </template>
 

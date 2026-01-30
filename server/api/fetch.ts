@@ -1,6 +1,7 @@
 import { $fetch } from 'ofetch'
 
-const NUXT_RIOT_API = process.env.NUXT_RIOT_API!
+const config = useAppConfig()
+const NUXT_RIOT_API: string = config.NUXT_RIOT_API! as string
 
 async function rawRiotFetch<T>(url: string, params?: any): Promise<T> {
   return scheduleJob(async () => {
@@ -26,8 +27,7 @@ export async function riotFetch<T>(
   params?: any
 ): Promise<T> {
   const cached = cacheGet<T>(key)
-  if (cached)
-    return cached
+  if (cached) return cached
 
   return dedupeFetch(key, async () => {
     try {

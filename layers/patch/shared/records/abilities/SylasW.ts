@@ -1,0 +1,77 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:10 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Kingslayer",
+  "affects": "Enemies",
+  "blurb": "Active:  Sylas  dashes to the target enemy and strikes them to deal magic damage.",
+  "castTime": "none",
+  "cooldown": "12 / 10.5 / 9 / 7.5 / 6",
+  "cost": "50 / 60 / 70 / 80 / 90",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "75 / 110 / 145 / 180 / 215"
+            },
+            {
+              "unit": "% AP",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "If this damages a champion, Sylas is also healed, increased by 0% - 100% (based on his missing health).",
+      "leveling": [
+        {
+          "attribute": "Minimum Heal",
+          "modifiers": [
+            {
+              "values": "20 / 40 / 60 / 80 / 100"
+            },
+            {
+              "unit": "% AP",
+              "values": "20"
+            },
+            {
+              "unit": "% of his bonus health",
+              "values": "5"
+            }
+          ]
+        },
+        {
+          "attribute": "Maximum Heal",
+          "modifiers": [
+            {
+              "values": "40 / 80 / 120 / 160 / 200"
+            },
+            {
+              "unit": "% AP",
+              "values": "40"
+            },
+            {
+              "unit": "% of his bonus health",
+              "values": "10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
+  "notes": "The damage will be dealt if the dash completed uninterrupted, and regardless of how far the target's location is at the end of the dash.\nSylas will heal even if the target champion dies before the dash is completed.\nThe only exception is if the target becomes  untargetable, in which case Kingslayer will have no effect.",
+  "resource": "Mana",
+  "spellEffects": "Single target",
+  "spellshieldable": "true",
+  "targeting": "Unit",
+  "targetRange": "400"
+}
+  export default ability

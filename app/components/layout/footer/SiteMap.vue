@@ -15,7 +15,7 @@ const route = useRoute()
 const pages = router.getRoutes()
 
 const items = computed(() =>
-  pages.filter(r => !r.meta?.search && r.path.split('/').length === 2),
+  pages.filter(r => !r.meta?.search && r.path.split('/').length === 2)
 )
 const groups = computed(() => {
   const g = shallowRef([])
@@ -35,27 +35,25 @@ const groups = computed(() => {
 <template>
   <div
     :class="
-      cn('border-t-b3/60 bg-b2 text-bc before:bg-b2 relative z-1 flex h-146 max-h-146 min-h-146 w-full justify-center overflow-hidden border-t before:absolute before:z-0 before:size-full',
-         className,
+      cn(
+        'border-t-b3/60 bg-b2 text-bc before:bg-b2 relative z-1 flex h-146 max-h-146 min-h-146 w-full justify-center overflow-hidden border-t before:absolute before:z-0 before:size-full',
+        className,
       )
-    ">
+    "
+  >
     <div
       v-if="groups.length"
-      class="
-        [&_h1]:dss z-1 grid h-full auto-cols-max grid-flow-col items-start
-        gap-x-10 gap-y-16 px-12 pt-30 pb-40
-      ">
-      <ul
-        v-for="group in groups"
-        :key="group?.name"
-        :class="listClass">
+      class="[&_h1]:dss z-1 grid h-full auto-cols-max grid-flow-col items-start gap-x-10 gap-y-16 px-12 pt-30 pb-40"
+    >
+      <ul v-for="group in groups" :key="group?.name" :class="listClass">
         <h1 class="capitalize">
           {{ group.meta?.title || group?.name }}
         </h1>
         <li
           v-for="item in group.items"
           :key="item?.name"
-          :class="cn('capitalize', itemClass)">
+          :class="cn('capitalize', itemClass)"
+        >
           {{ item?.meta?.title || item?.name }}
         </li>
       </ul>

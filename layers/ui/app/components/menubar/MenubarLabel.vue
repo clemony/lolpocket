@@ -15,7 +15,8 @@ const props = defineProps<
         inset && 'pl-8',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </MenubarLabel>
 </template>

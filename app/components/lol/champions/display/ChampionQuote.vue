@@ -85,10 +85,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Primitive
-    v-bind="$attrs"
-    :as="as"
-    :class="cn('', className)">
+  <Primitive v-bind="$attrs" :as="as" :class="cn('', className)">
     {{ quote }}
   </Primitive>
 </template>

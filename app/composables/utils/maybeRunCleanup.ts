@@ -6,8 +6,7 @@ export function maybeRunCleanup(accountPuuid?: string) {
   const now = Date.now()
   const lastRun = Number(localStorage.getItem(CLEANUP_KEY) || 0)
 
-  if (now - lastRun < CLEANUP_INTERVAL_MS)
-    return
+  if (now - lastRun < CLEANUP_INTERVAL_MS) return
 
   localStorage.setItem(CLEANUP_KEY, String(now))
   void runCleanup(accountPuuid)
@@ -33,7 +32,9 @@ async function runCleanup(accountPuuid?: string) {
     .filter(
       t =>
         !accountPuuid
-        || !(Object.values(t.players) as Player[]).some(p => p.puuid === accountPuuid)
+        || !(Object.values(t.players)).some(
+          p => p.puuid === accountPuuid
+        )
     )
     .map(t => t.matchId)
 

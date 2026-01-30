@@ -1,21 +1,22 @@
-import fs from "node:fs"
-import path from "node:path"
-import { markUpdate, normalize, normalizeArray } from "../../utils"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
+import { normalize, normalizeArray } from '../../utils'
 
-const dataPath = path.resolve("./server/patch/champions/raw/champions-raw.json")
-const outputPos = path.resolve(
-  "./layers/domain/constants/champions/position-to-champ.ts"
+const dataPath = resolve('./layers/patch/server/champions/raw/champions-raw.json')
+const outputPos = resolve(
+  './layers/patch/shared/constants/champions/positionToChamp.ts'
 )
-const outputAtk = path.resolve(
-  "./layers/domain/constants/champions/range-to-champp.ts"
+const outputAtk = resolve(
+  './layers/patch/shared/constants/champions/rangeToChamp.ts'
 )
-const outputResource = path.resolve(
-  "./layers/domain/constants/champions/resource-to-champ.ts"
+const outputResource = resolve(
+  './layers/patch/shared/constants/champions/resourceToChamp.ts'
 )
-const outputRoles = path.resolve(
-  "./layers/domain/constants/champions/role-to-champ.ts"
+const outputRoles = resolve(
+  './layers/patch/shared/constants/champions/roleToChamp.ts'
 )
-const champions = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
+const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   Champion
 >

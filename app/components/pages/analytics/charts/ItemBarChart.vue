@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 // @todo fix usermatchdata
 
-const { matches, summoner } = useSummonerInject()
-
+/* const { matches, summoner } = useSummonerInject() */
+/*
 const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
 
 const data = ref({
@@ -16,9 +16,9 @@ const data = ref({
   ],
 })
 const itemImages = new Map<number, HTMLImageElement>()
-
+ */
 // Preload images and store them when fully loaded
-function preloadItemImage(itemId: number) {
+/* function preloadItemImage(itemId: number) {
   return new Promise((resolve) => {
     if (!itemImages.has(itemId)) {
       const img = new Image()
@@ -37,9 +37,9 @@ function preloadItemImage(itemId: number) {
     }
   })
 }
-
+ */
 // Watch for `itemObjects` changes and update the entire `data` object
-watchEffect(async () => {
+/* watchEffect(async () => {
   const newDataset = {
     data: [],
     label: 'Items',
@@ -58,26 +58,24 @@ watchEffect(async () => {
       })
 
       newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image())
-    }),
+    })
   )
-
-  // Replace the entire `data` object to trigger reactivity
-  data.value = {
+ */
+// Replace the entire `data` object to trigger reactivity
+/*   data.value = {
     datasets: [newDataset],
   }
-})
+}) */
 </script>
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="border-shadow bg-b1 inset-shadow-xxs size-full max-h-160">
+    <div class="border-shadow size-full max-h-160 bg-b1 inset-shadow-xxs">
       <div
-        class="
-          rounded-box bg-b1 relative flex size-full flex-col overflow-hidden
-          px-4 pt-4 pb-5
-        ">
+        class="relative flex size-full flex-col overflow-hidden rounded-box bg-b1 px-4 pt-4 pb-5"
+      >
         <div class="-ml-6 size-full justify-self-end pt-4">
-          <BubbleChart :data="data" />
+        <!--   <BubbleChart :data="data" /> -->
         </div>
 
         <transition-slide class="pointer-events-none">

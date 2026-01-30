@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { MenubarItem, MenubarItemType } from '~/components/pocket/menu/types.menubar'
+import type {
+  MenubarItem,
+  MenubarItemType,
+} from '~/components/pocket/menu/types.menubar'
 
 const { class: className, item } = defineProps<{
   item: MenubarItem
@@ -38,11 +41,7 @@ const { class: className, item } = defineProps<{
         />
         <span
           v-if="item.shortcut?.text"
-          class="
-            badge max-w-40 truncate badge-neutral text-xs! badge-sm
-            font-semibold! tracking-normal group-open/trig:badge-neutral
-            group-hover/trig:badge-neutral
-          "
+          class="badge badge-neutral badge-sm group-open/trig:badge-neutral group-hover/trig:badge-neutral max-w-40 truncate text-xs! font-semibold! tracking-normal"
         >
           {{ item.shortcut?.text }}
         </span>
@@ -52,10 +51,7 @@ const { class: className, item } = defineProps<{
       :class="cn('max-h-90 w-64 overflow-y-auto', item.class?.content)"
       :align-offset="-2"
     >
-      <component
-        :is="item.component"
-        v-if="item.component"
-      />
+      <component :is="item.component" v-if="item.component" />
       <!-- subitem -->
       <AutoMenuContent
         v-for="(subitem, i) in item.items"

@@ -9,11 +9,12 @@ const wrapperVariants = {
 
 <template>
   <motion.label
-    :variants="wrapperVariants"
     class="group flex cursor-pointer items-center gap-4"
+    :variants="wrapperVariants"
     while-hover="visible"
     initial="hidden"
-    exit="hidden">
+    exit="hidden"
+  >
     <slot />
   </motion.label>
 </template>

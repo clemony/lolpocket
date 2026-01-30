@@ -33,7 +33,8 @@ const forwarded = useForwardProps(delegatedProps)
         }),
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ToggleGroupItem>
 </template>

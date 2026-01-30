@@ -18,32 +18,39 @@ const props = withDefaults(
 )
 
 const dim = props.size
-const radius = (dim / 2) - (props.thickness / 2)
+const radius = dim / 2 - props.thickness / 2
 const circumference = 2 * Math.PI * radius
 
-const strokeOffset = computed(() =>
-  circumference - (props.value / 100) * circumference
+const strokeOffset = computed(
+  () => circumference - (props.value / 100) * circumference
 )
 
 // unique mask id (important!)
 const _uid = crypto.randomUUID()
-const level = computed (() => props.level >= 10 ? 10 : props.level)
+const level = computed(() => (props.level >= 10 ? 10 : props.level))
 </script>
 
 <template>
   <div
-    :class="cn('mastery-ring bg-b2 relative inline-block -rotate-90 rounded-full', props.class)"
-    :style="{ width: `${size}px`, height: `${size}px` }">
+    :class="
+      cn(
+        'mastery-ring bg-b2 relative inline-block -rotate-90 rounded-full',
+        props.class,
+      )
+    "
+    :style="{ width: `${size}px`, height: `${size}px` }"
+  >
     <div class="border-b3 absolute inset-0 scale-100 rounded-full border" />
     <!-- GRADIENT RING (rotates around the arc mask) -->
     <div
-      :data-level="level"
       class="mastery-gradient-progress repeat-infinite absolute inset-0 animate-spin overflow-hidden rounded-full ring [animation-duration:2.5s]"
+      :data-level="level"
       :style="{
         animationDuration: `${speed}s`,
         mask: `url(#arc-mask-${_uid})`,
         WebkitMask: `url(#arc-mask-${_uid})`,
-      }"></div>
+      }"
+    />
 
     <!-- INNER GLOW -->
     <div
@@ -51,7 +58,8 @@ const level = computed (() => props.level >= 10 ? 10 : props.level)
       :style="{
         mask: `url(#arc-mask-${_uid})`,
         WebkitMask: `url(#arc-mask-${_uid})`,
-      }"></div>
+      }"
+    />
 
     <!-- OUTER GLOW -->
     <div
@@ -59,14 +67,16 @@ const level = computed (() => props.level >= 10 ? 10 : props.level)
       :style="{
         mask: `url(#arc-mask-${_uid})`,
         WebkitMask: `url(#arc-mask-${_uid})`,
-      }"></div>
+      }"
+    />
 
     <!-- SVG MASK + OUTLINE -->
     <svg
       class="absolute inset-0"
       :width="size"
       :height="size"
-      :viewBox="`0 0 ${dim} ${dim}`">
+      :viewBox="`0 0 ${dim} ${dim}`"
+    >
       <defs>
         <mask :id="`arc-mask-${_uid}`">
           <circle
@@ -78,18 +88,20 @@ const level = computed (() => props.level >= 10 ? 10 : props.level)
             :stroke-width="thickness"
             stroke-linecap="round"
             :stroke-dasharray="circumference"
-            :stroke-dashoffset="strokeOffset" />
+            :stroke-dashoffset="strokeOffset"
+          />
         </mask>
       </defs>
 
       <!-- OUTLINE RIM -->
       <circle
+        class="ring-outline"
         :cx="dim / 2"
         :cy="dim / 2"
         :r="radius"
         fill="none"
-        class="ring-outline"
-        :stroke-width="thickness * 0.33" />
+        :stroke-width="thickness * 0.33"
+      />
     </svg>
   </div>
 </template>

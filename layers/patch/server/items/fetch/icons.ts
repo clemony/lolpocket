@@ -1,29 +1,31 @@
 // look for missing item icons by comparing local ids to community dragon ids
 
-import { Buffer } from "node:buffer"
-import fs from "node:fs"
-import path from "node:path"
-import sharp from "sharp"
-const iconsDir = path.resolve("./public/img/items")
+import { itemIndex } from '#layers/patch/shared/constants'
+import { Buffer } from 'node:buffer'
+import fs from 'node:fs'
+import path from 'node:path'
+import sharp from 'sharp'
+
+const iconsDir = path.resolve('./public/img/items')
 
 // cdn path for latest item metadata
 
-//1202.png
-const CDN_BASE = "https://ddragon.leagueoflegends.com/cdn/16.1.1/img/item/"
+// 1202.png
+const CDN_BASE = 'https://ddragon.leagueoflegends.com/cdn/16.1.1/img/item/'
 
 const localIds = new Set(
   fs
     .readdirSync(iconsDir)
-    .filter((f) => f.endsWith(".webp"))
-    .map((f) => Number(f.split(".")[0]))
+    .filter(f => f.endsWith('.webp'))
+    .map(f => Number(f.split('.')[0]))
 )
-console.log("🥸 - localIds:", localIds)
+console.log('🥸 - localIds:', localIds)
 
 export async function fetchMissingItemIcons() {
-  const missing = itemIndex.filter((item) => !localIds.has(item.id))
+  const missing = itemIndex.filter(item => !localIds.has(item.id))
 
   if (!missing.length) {
-    console.log("🌟 all item icons present")
+    console.log('🌟 all item icons present')
     return
   }
 
@@ -45,7 +47,8 @@ export async function fetchMissingItemIcons() {
       await sharp(buf).webp({ quality: 90 }).toFile(webpPath)
 
       console.log(`✨ processed ${item.name} (${item.id})`)
-    } catch (err) {
+    }
+    catch (err) {
       console.error(`❌ error on ${item.name} (${item.id})`, err)
     }
   }

@@ -1,9 +1,7 @@
-
-
 export function newRandomPocket(): Pocket {
   const itemSet = computed(() => {
     const a = newItemSet()
-    const i = ix().items.map(i => i.id)
+    const i = itemIndex.map(i => i.id)
     a.items = [
       getRandom(i),
       getRandom(i),
@@ -22,8 +20,8 @@ export function newRandomPocket(): Pocket {
     const i2 = getRandomInt(4)
     const set = [1, 2, 3].filter(n => n !== getRandomInt[3] + 1)
 
-    const path1 = runePaths[i1]
-    const path2 = Object.values(runePaths).filter(p => p.id !== path1.id)[i2]
+    const path1 = pathRecord[i1]
+    const path2 = Object.values(pathRecord).filter(p => p.id !== path1.id)[i2]
 
     a.primary.path = path1.name
     a.keystone = getRandom(path1.slots[0].runes.map(k => k.id))
@@ -40,7 +38,7 @@ export function newRandomPocket(): Pocket {
     return a
   }).value
 
-  const champion = getRandom(ix().champions.map(c => c.key))
+  const champion = getRandom(championIndex.map(c => c.key))
   const spellSet = computed(() => {
     const a = newSpellSet()
     const b = getRandom(Object.values(spells).map(s => s.id))
@@ -53,7 +51,7 @@ export function newRandomPocket(): Pocket {
     return a
   }).value
 
-  const role = getRandom(championPositions.map(p => p.name))
+  const role = getRandom(mapPositions.map(p => p.name))
   const icon = computed(() => {
     const a = skinIndex[getRandomInt(skinIndex.length)]
     const b = a[getRandomInt(a.length)]

@@ -1,5 +1,3 @@
-import { lpdb } from '~/stores'
-
 export function useIndexedDB() {
   const now = () => Date.now()
 

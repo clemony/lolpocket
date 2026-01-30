@@ -48,10 +48,12 @@ const dialogInitialState = {
     :align="props.align"
     :align-offset="props.alignOffset"
     :class="
-      cn('bgneutral/73 border-b3/50 **:text-nc min-w-44 rounded-xl border p-1.5 backdrop-blur-lg',
-         props.class,
+      cn(
+        'bgneutral/73 border-b3/50 **:text-nc min-w-44 rounded-xl border p-1.5 backdrop-blur-lg',
+        props.class,
       )
-    ">
+    "
+  >
     <div>
       <slot />
     </div>

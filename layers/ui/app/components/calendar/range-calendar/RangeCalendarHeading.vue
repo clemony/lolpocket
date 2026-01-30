@@ -19,8 +19,9 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <RangeCalendarHeading
     v-slot="{ headingValue }"
+    v-bind="forwardedProps"
     :class="cn('text-md font-medium', props.class)"
-    v-bind="forwardedProps">
+  >
     <slot :heading-value>
       {{ headingValue }}
     </slot>

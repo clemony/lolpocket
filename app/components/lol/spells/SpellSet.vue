@@ -25,17 +25,20 @@ function handleSpells(e, i) {
       :key="i"
       :selected-spell="spell"
       :class="cn('border-b3/60 size-16 rounded-lg border', props.class)"
-      @update:spell="handleSpells($event, i)" />
+      @update:spell="handleSpells($event, i)"
+    />
 
     <Grow />
 
     <button
       v-tippy="'Remove Set'"
       class="trash-button group/btn btn btn-square btn-ghost btn-xs"
-      @click="removeSpellSet(pocket, props.set)">
+      @click="removeSpellSet(pocket, props.set)"
+    >
       <icon
+        class="text-bc/50 dst group-hover/btn:text-bc/100 size-5 shrink-0"
         name="trash"
-        class="text-bc/50 dst group-hover/btn:text-bc/100 size-5 shrink-0" />
+      />
     </button>
   </div>
 </template>

@@ -18,12 +18,7 @@ const props = defineProps<{
   noTooltip?: boolean
 }>()
 
-Chart.register(
-  PolarAreaController,
-  ArcElement,
-  RadialLinearScale,
-  Tooltip,
-)
+Chart.register(PolarAreaController, ArcElement, RadialLinearScale, Tooltip)
 
 const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
   elements: {
@@ -61,5 +56,6 @@ const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
     :options="chartOptions"
     :aria-label="aria"
     role="img"
-    :class="cn('max-h-200', props.class)" />
+    :class="cn('max-h-200', props.class)"
+  />
 </template>

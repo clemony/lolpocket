@@ -17,19 +17,19 @@ const delegatedProps = computed(() => {
 <template>
   <AccordionHeader class="flex">
     <AccordionTrigger
-      data-slot="accordion-trigger"
       v-bind="delegatedProps"
+      data-slot="accordion-trigger"
       :class="
-        cn('group/acc-trigger text-md [&_svg]:transition-rotate flex flex-1 items-start justify-between gap-4 text-left transition-all outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:duration-250 [&[data-state=open]>svg]:-rotate-90',
-           props.class,
+        cn(
+          'group/acc-trigger text-md [&_svg]:transition-rotate flex flex-1 items-start justify-between gap-4 text-left transition-all outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:duration-250 [&[data-state=open]>svg]:-rotate-90',
+          props.class,
         )
-      ">
+      "
+    >
       <slot />
 
       <slot name="icon">
-        <icon
-          name="left"
-          class="dst mx-4 size-5" />
+        <icon class="dst mx-4 size-5" name="left" />
       </slot>
     </AccordionTrigger>
   </AccordionHeader>

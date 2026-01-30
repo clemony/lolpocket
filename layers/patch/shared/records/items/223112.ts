@@ -1,0 +1,17 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "id": 223112,
+  "name": "Guardian's Orb",
+  "description": "55 Ability Power\n25 Ability Haste\n\nRecovery\nRestores 10 Mana every 5 seconds. If you can't gain mana, restores 15 Health instead.",
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 250
+  },
+  "maps": [
+    30
+  ]
+}
+export default item

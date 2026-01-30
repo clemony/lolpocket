@@ -6,8 +6,7 @@ const { pocketKey } = defineProps<{
 const isDisabled = computed(() => pocketKey === null)
 
 const pocket = computed(() => {
-  if (!pocketKey)
-    return
+  if (!pocketKey) return
 
   return pocketKey ? ps().getPocket(pocketKey) : null
 })
@@ -18,7 +17,8 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
 <template>
   <div
     class="border-box flex h-15 items-center px-2"
-    :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
+    :class="cn('', { 'pointer-events-none opacity-50': isDisabled })"
+  >
     <div class="flex items-center gap-2">
       <!-- pin -->
       <Label
@@ -26,27 +26,21 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
-          cn('relative grid size-11 place-items-center *:absolute',
-             {
-               'bg-b2/30': pinned,
-             },
-          )
-        ">
+          cn('relative grid size-11 place-items-center *:absolute', {
+            'bg-b2/30': pinned,
+          })
+        "
+      >
         <input
           v-if="pocket && pocket?.key"
           v-model="ps().pinned"
+          class="peer hidden"
           :value="pocket.key"
           type="checkbox"
-          class="peer hidden" />
-        <icon
-          v-if="!pinned"
-          name="pin"
-          class="size-4.75 **:stroke-2" />
+        >
+        <icon v-if="!pinned" class="size-4.75 **:stroke-2" name="pin" />
 
-        <icon
-          v-else
-          name="unpin"
-          class="size-4.75 **:stroke-2" />
+        <icon v-else class="size-4.75 **:stroke-2" name="unpin" />
       </Label>
 
       <!-- archive -->
@@ -55,18 +49,18 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="ps().archive.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
-          cn('relative grid size-11 place-items-center *:absolute',
-             {
-               'bg-b2/30': pinned,
-             },
-          )
-        ">
+          cn('relative grid size-11 place-items-center *:absolute', {
+            'bg-b2/30': pinned,
+          })
+        "
+      >
         <input
           v-if="pocket && pocket?.key"
           v-model="ps().pinned"
+          class="peer hidden"
           :value="pocket.key"
           type="checkbox"
-          class="peer hidden" />
+        >
         <icon name="archive" />
       </Label>
 
@@ -76,64 +70,54 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         base="btn"
         :variant="ps().trash.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
-          cn('relative grid size-11 place-items-center *:absolute',
-             {
-               'bg-b2/30': pinned,
-             },
-          )
-        ">
+          cn('relative grid size-11 place-items-center *:absolute', {
+            'bg-b2/30': pinned,
+          })
+        "
+      >
         <icon name="trash" />
       </Button>
 
-      <Separator
-        orientation="vertical"
-        class="mx-1 h-6" />
+      <Separator class="mx-1 h-6" orientation="vertical" />
 
       <!-- tags -->
 
-      <PocketTagsDropdown :pocket></PocketTagsDropdown>
+      <PocketTagsDropdown :pocket />
       <!-- edit -->
       <BtnLink
         v-if="pocket && pocket?.key"
+        class="size-11"
         :to="`/pocket/${pocket.key}`"
         variant="ghost"
-        class="size-11">
+      >
         <icon name="edit-line" />
       </BtnLink>
     </div>
 
     <div class="ml-auto flex items-center gap-2">
       <!-- share -->
-      <Button
-        v-tippy="'Share'"
-        variant="ghost"
-        class="size-11">
+      <Button v-tippy="'Share'" class="size-11" variant="ghost">
         <icon name="send" />
       </Button>
 
       <!-- export -->
       <Button
         v-tippy="'Export to LoL'"
+        class="size-11"
         :disabled="!as().account.puuid"
         variant="ghost"
-        class="size-11">
+      >
         <icon name="export" />
       </Button>
     </div>
-    <Separator
-      orientation="vertical"
-      class="mx-2 h-6" />
+    <Separator class="mx-2 h-6" orientation="vertical" />
 
     <!-- more -->
     <DropdownMenu>
-      <DropdownMenuTrigger
-        variant="neutral"
-        class="size-11">
+      <DropdownMenuTrigger class="size-11" variant="neutral">
         <icon name="more-vertical" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="end"
-        class="w-64">
+      <DropdownMenuContent class="w-64" align="end">
         <DropdownMenuItem>
           <icon name="copy" />
           Create Pocket Copy

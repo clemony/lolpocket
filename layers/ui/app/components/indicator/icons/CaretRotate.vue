@@ -9,7 +9,7 @@ const directionClass = computed(() =>
     ? ' group-data-[state=open]/collapse:-rotate-90 '
     : direction === 'right'
       ? ' group-data-[state=open]/collapse:rotate-90 '
-      : '',
+      : ''
 )
 </script>
 
@@ -17,9 +17,11 @@ const directionClass = computed(() =>
   <icon
     :name="direction"
     :class="
-      cn('transition-rotate group-hover/collapse:text-bc/100! size-4.5 opacity-50! duration-150 group-hover/collapse:**:stroke-[2.5]',
-         directionClass,
-         className,
+      cn(
+        'transition-rotate group-hover/collapse:text-bc/100! size-4.5 opacity-50! duration-150 group-hover/collapse:**:stroke-[2.5]',
+        directionClass,
+        className,
       )
-    " />
+    "
+  />
 </template>

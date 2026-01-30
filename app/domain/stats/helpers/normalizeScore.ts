@@ -9,8 +9,7 @@ export function normalizeScore(
   raw: number,
   { clamp = Math.tanh, maxAbs, round = true, scale = 1 }: NormalizeOptions
 ): number {
-  if (!maxAbs || maxAbs === 0)
-    return 0
+  if (!maxAbs || maxAbs === 0) return 0
 
   const normalized = clamp(raw / maxAbs) * scale
   return round ? Math.round(normalized) : normalized
@@ -43,8 +42,7 @@ export function bayesianWinrate(
   baselineWinrate: number,
   priorGames = 10
 ): number {
-  if (games === 0)
-    return baselineWinrate
+  if (games === 0) return baselineWinrate
 
   return (wins + priorGames * baselineWinrate) / (games + priorGames)
 }

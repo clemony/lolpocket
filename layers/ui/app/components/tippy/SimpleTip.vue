@@ -5,5 +5,5 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <span> </span>
+  <span />
 </template>

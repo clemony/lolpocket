@@ -14,8 +14,7 @@ import MiniTip from '~/components/common/tooltip/TooltipRenderer.vue'
 import { tooltipPayloadRegistry } from '~/utils/tooltipPayload'
 
 export default defineNuxtPlugin(() => {
-  if (typeof window === 'undefined')
-    return
+  if (typeof window === 'undefined') return
 
   const referenceEl = shallowRef<HTMLElement | null>(null)
   const floatingEl = shallowRef<HTMLElement | null>(null)
@@ -77,8 +76,7 @@ export default defineNuxtPlugin(() => {
 
   async function loadTooltip(type: string) {
     const cached = cache.get(type)
-    if (cached)
-      return cached
+    if (cached) return cached
 
     const c = markRaw(MiniTip)
     cache.set(type, c)
@@ -90,17 +88,14 @@ export default defineNuxtPlugin(() => {
     setup() {
       return () => {
         // don't render at all if not mounted or no component yet
-        if (!mounted.value || !compRef.value)
-          return null
+        if (!mounted.value || !compRef.value) return null
 
         const arrowData = isPositioned.value ? middlewareData.value.arrow : null
 
         const { x, y } = arrowData || {}
         const arrowStyle: Record<string, string> = {}
-        if (x != null)
-          arrowStyle.left = `${x}px`
-        if (y != null)
-          arrowStyle.top = `${y}px`
+        if (x != null) arrowStyle.left = `${x}px`
+        if (y != null) arrowStyle.top = `${y}px`
 
         const resolvedTransform
           = (isPositioned.value && floatingStyles.value.transform)
@@ -221,8 +216,7 @@ export default defineNuxtPlugin(() => {
 
   async function activate(el: HTMLElement) {
     const type = el.dataset.type
-    if (!type)
-      return
+    if (!type) return
 
     const triggerPlacement = el.dataset.placement as Placement | undefined
     requestedPlacement.value = triggerPlacement || 'top'
@@ -262,8 +256,7 @@ export default defineNuxtPlugin(() => {
     mounted.value = true
     animateIn.value = !shown.value
 
-    if (activeTrigger.value !== el)
-      return
+    if (activeTrigger.value !== el) return
 
     const component = await loadTooltip(type)
     compRef.value = component
@@ -297,8 +290,7 @@ export default defineNuxtPlugin(() => {
     }
 
     requestAnimationFrame(() => {
-      if (activeTrigger.value !== el)
-        return
+      if (activeTrigger.value !== el) return
 
       isPositioned.value = true
       frozenTransform.value = null
@@ -313,12 +305,10 @@ export default defineNuxtPlugin(() => {
     'pointerover',
     (e) => {
       const target = e.target as HTMLElement | null
-      if (!target)
-        return
+      if (!target) return
 
       const trigger = target.closest(HOT_SELECTOR) as HTMLElement | null
-      if (!trigger)
-        return
+      if (!trigger) return
 
       hoverToken++
       const token = hoverToken
@@ -331,8 +321,7 @@ export default defineNuxtPlugin(() => {
       }
 
       if (e.pointerType === 'touch') {
-        if (longPressTimer != null)
-          clearTimeout(longPressTimer)
+        if (longPressTimer != null) clearTimeout(longPressTimer)
         longPressTimer = window.setTimeout(() => {
           activate(trigger)
         }, 250)
@@ -344,10 +333,8 @@ export default defineNuxtPlugin(() => {
           = trigger.dataset.delay != null ? Number(trigger.dataset.delay) : 140 // 👈 default hover intent delay
 
         showTimer = window.setTimeout(() => {
-          if (token !== hoverToken)
-            return
-          if (!trigger.matches(':hover'))
-            return
+          if (token !== hoverToken) return
+          if (!trigger.matches(':hover')) return
           activate(trigger)
         }, delay)
       }
@@ -359,20 +346,15 @@ export default defineNuxtPlugin(() => {
     'pointerout',
     (e) => {
       const from = e.target as HTMLElement | null
-      if (!from)
-        return
+      if (!from) return
 
       const trigger = from.closest(HOT_SELECTOR) as HTMLElement | null
-      if (!trigger)
-        return
+      if (!trigger) return
 
       const to = e.relatedTarget as HTMLElement | null
-      if (to && trigger.contains(to))
-        return
-      if (to && to.closest(HOT_SELECTOR))
-        return
-      if (to && root.contains(to))
-        return
+      if (to && trigger.contains(to)) return
+      if (to && to.closest(HOT_SELECTOR)) return
+      if (to && root.contains(to)) return
 
       hoverToken++
       clearShowTimer()
@@ -387,8 +369,7 @@ export default defineNuxtPlugin(() => {
 
   root.addEventListener('pointerout', (e) => {
     const to = e.relatedTarget as HTMLElement | null
-    if (to && to.closest(HOT_SELECTOR))
-      return
+    if (to && to.closest(HOT_SELECTOR)) return
     hoverToken++
     clearShowTimer()
     scheduleHide()

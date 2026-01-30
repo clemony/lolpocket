@@ -5,7 +5,7 @@ definePageMeta({
   alias: '/auth/password-update',
   description: 'Let\'s try out a password manager this time, yeah?',
   icon: 'key',
-  search: 'user'
+  search: 'user',
 })
 const toast = useToast()
 
@@ -35,28 +35,28 @@ function handleReset() {
               class="h-12"
               type="password"
               required
-              @clear:input="password = ''" />
+              @clear-input="password = ''"
+            />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
+              class="h-14 w-full font-medium"
               variant="neutral"
               size="12"
               type="submit"
-              class="h-14 w-full font-medium"
-              @click="handleReset()">
+              @click="handleReset()"
+            >
               Reset Password
             </Button>
 
             <Button
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
               as="a"
               variant="link"
               size="12"
               hover="link"
-              class="
-                underline-offset-1.5 h-14 w-full justify-center gap-3
-                justify-self-start
-              "
-              @click="navigateTo('/login')">
+              @click="navigateTo('/login')"
+            >
               Remembered it? Log in
             </Button>
           </div>

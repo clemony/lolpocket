@@ -15,7 +15,8 @@ const props = defineProps<{
         `[&>a:hover]:text-neutral [&>a]:underline [&>a]:underline-offset-4`,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </p>
 </template>

@@ -11,43 +11,43 @@ watch(
   () => selectedRune.value,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-  },
+  }
 )
 
 watch(
   () => selected,
   (newVal) => {
-    if (newVal && newVal !== selectedRune.value)
-      selectedRune.value = selected
-  },
+    if (newVal && newVal !== selectedRune.value) selectedRune.value = selected
+  }
 )
 </script>
 
 <template>
   <div
+    class="shadow-warm relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4"
     title="Keystone"
-    class="
-      shadow-warm relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4
-    ">
+  >
     <div
-      class="
-        rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-26
-      ">
+      class="rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-26"
+    >
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"
-        :data-path="runes[0].path" />
+        :data-path="runes[0].path"
+      />
     </div>
 
     <RadioGroup
       v-model:model-value="selectedRune"
       :class="
-        cn('relative flex size-full items-center justify-around rounded-xl **:select-none',
-           `
+        cn(
+          'relative flex size-full items-center justify-around rounded-xl **:select-none',
+          `
             grid-cols-${runes.length ?? 3}
           `,
         )
       "
-      @update:model-value="emit('update:rune', selectedRune)">
+      @update:model-value="emit('update:rune', selectedRune)"
+    >
       <!--   <Label
         v-for="rune in runes"
         :key="rune.id"

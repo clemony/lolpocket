@@ -15,9 +15,8 @@ const open = ref(props.modelValue ?? false)
 watch(
   () => props.modelValue,
   (v) => {
-    if (v !== undefined)
-      open.value = v
-  },
+    if (v !== undefined) open.value = v
+  }
 )
 
 watch(open, (v) => {
@@ -33,11 +32,7 @@ function updateOpen(value: boolean) {
 </script>
 
 <template>
-  <ContextMenuRoot
-    v-bind="forwarded"
-    v-model:open="open">
-    <slot
-      :open="open"
-      :update-open="updateOpen" />
+  <ContextMenuRoot v-bind="forwarded" v-model:open="open">
+    <slot :open="open" :update-open="updateOpen" />
   </ContextMenuRoot>
 </template>

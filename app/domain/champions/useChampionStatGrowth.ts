@@ -1,10 +1,8 @@
 export function useChampionStatGrowth(level: Ref<number>) {
   function calcStat(base?: number, growth?: number, lvl: number = level.value) {
-    if (base === null)
-      return null
+    if (base === null) return null
     const totalLevelUps = lvl - 1
-    if (totalLevelUps === 0 || growth === null)
-      return base
+    if (totalLevelUps === 0 || growth === null) return base
 
     const levelGrowth = 0.0175 * totalLevelUps + 0.7025
     const totalGrowth = growth * totalLevelUps * levelGrowth
@@ -15,13 +13,11 @@ export function useChampionStatGrowth(level: Ref<number>) {
     base?: number,
     growth?: number,
     ratio?: number,
-    lvl: number = level.value,
+    lvl: number = level.value
   ) {
-    if (base === null || ratio === null)
-      return null
+    if (base === null || ratio === null) return null
     const totalLevelUps = lvl - 1
-    if (totalLevelUps === 0 || growth === null)
-      return base
+    if (totalLevelUps === 0 || growth === null) return base
 
     const levelGrowth = 0.0175 * totalLevelUps + 0.7025
     const bonusAS = growth * totalLevelUps * levelGrowth
@@ -35,10 +31,9 @@ export function useChampionStatGrowth(level: Ref<number>) {
       type?: 'attackSpeed' | 'criticalStrikeDamage'
       ratio?: number
       modifier?: number
-    },
+    }
   ) {
-    if (!stat)
-      return null
+    if (!stat) return null
 
     const { flat, perLevel } = stat
     const type = options?.type ?? 'normal'
@@ -52,8 +47,7 @@ export function useChampionStatGrowth(level: Ref<number>) {
     if (type === 'criticalStrikeDamage') {
       const base = flat ?? null
       const modifier = options?.modifier ?? 1
-      if (base === null)
-        return null
+      if (base === null) return null
 
       const basePct = `${round(base)}%`
       const current = modifier === 1 ? basePct : `${basePct} × ${modifier}`

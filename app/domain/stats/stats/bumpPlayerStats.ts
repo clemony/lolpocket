@@ -13,8 +13,7 @@ export function bumpFromPlayerStats(acc: ChampionStats, player: Player) {
     const source = player[block] as Record<string, number>
 
     for (const [key, value] of Object.entries(source)) {
-      if (!(key in AGGREGATED_STAT_SCHEMA))
-        continue
+      if (!(key in AGGREGATED_STAT_SCHEMA)) continue
       bumpAverage(acc[key as keyof ChampionStats] as StatAverage, value)
     }
   }

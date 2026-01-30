@@ -27,12 +27,14 @@ const { arrow } = popoverContentVariants({
       cn('dxs z-0 translate-y-px opacity-20 invert', arrow(), props.class)
     "
     :height="9"
-    :width="18" />
+    :width="18"
+  />
   <PopoverArrow
     v-bind="forwarded"
     :class="cn('z-50 overflow-hidden outline-none', arrow(), props.class)"
     :height="9"
-    :width="18" />
+    :width="18"
+  />
 
   <!--  <PopoverArrow
     v-bind="forwarded"

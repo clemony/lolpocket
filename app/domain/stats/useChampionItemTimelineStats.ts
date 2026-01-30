@@ -2,6 +2,7 @@ export interface ItemSlotOrder {
   best?: {
     core?: {
       items: OrderedTimedStatEntry[]
+      games: number
       winrate: number
     }
     slots?: OrderedTimedStatEntry[]
@@ -25,7 +26,9 @@ export interface ChampionItemStats {
 type ItemSetKey = string // e.g. "1055,2003,2003"
 
 const startingItemSets: Record<ItemSetKey, ItemSetStat> = {}
-export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerData[]>) {
+export function useChampionItemTimelineStats(
+  matchData: ComputedRef<MatchPlayerData[]>
+) {
   return computed<ItemSlotOrder>(() => {
     const out: ChampionItemStats = {
       boots: {},
@@ -38,11 +41,9 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
     const allLegendaries: Record<number, StatDetail> = {}
 
     for (const m of matchData.value) {
-      if (!m.player || !m.timeline)
-        continue
+      if (!m.player || !m.timeline) continue
       const win = m.player.win
-      if (win === null || win === 'remake')
-        continue
+      if (win === null || win === 'remake') continue
 
       const finalItems = getFinalItems(m.player.items)
       const supportItem = finalItems.find(id => SUPPORT_LEGENDARIES.has(id))
@@ -59,8 +60,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
         .map(([id]) => id)
 
       const setItems = [...new Set(startingItems)].sort((a, b) => a - b)
-      if (!setItems.length)
-        continue
+      if (!setItems.length) continue
 
       const key = setItems.join(',')
 
@@ -75,8 +75,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
           })
 
       stat.games++
-      if (win)
-        stat.win++
+      if (win) stat.win++
 
       for (const [id, ts] of acquireTimes) {
         if (ts <= TEN_MINUTES) {
@@ -112,10 +111,8 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
       const legendaryBySlot = new Map<number, { id: number, ts: number }>()
 
       for (const item of classified) {
-        if (!isLegendary(item.id))
-          continue
-        if (SUPPORT_LEGENDARIES.has(item.id))
-          continue
+        if (!isLegendary(item.id)) continue
+        if (SUPPORT_LEGENDARIES.has(item.id)) continue
 
         const slotKey = getLegendarySlotKey(item.id)
 
@@ -187,8 +184,7 @@ export function useChampionItemTimelineStats(matchData: ComputedRef<MatchPlayerD
     // fill remaining slots from legendary
     for (let i = 0; i < legendary.length && core.length < 3; i++) {
       const slot = legendary[i]
-      if (!slot?.length)
-        continue
+      if (!slot?.length) continue
       core.push(slot[0])
     }
     const sortedCore = sortTimedByTime(core)

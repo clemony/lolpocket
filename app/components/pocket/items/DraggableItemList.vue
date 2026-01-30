@@ -8,7 +8,7 @@ watch(
   () => a.value,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-  },
+  }
 )
 </script>
 
@@ -32,11 +32,9 @@ watch(
           chosenClass: 'item-icon-ghost',
         },
       ]"
+      class="grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-between gap-4 pt-6 select-none"
       layout="position"
-      class="
-        grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))]
-        justify-between gap-4 pt-6 select-none
-      ">
+    >
       <AnimatePresence>
         <motion.div
           v-for="item in is().filtered"
@@ -44,27 +42,26 @@ watch(
           :transition="{
             duration: 0.2,
           }"
-          layout="position">
-          <LazyItemTooltip
-            :id="item"
-            class="aspect-square size-20" />
+          layout="position"
+        >
+          <LazyItemTooltip :id="item" class="aspect-square size-20" />
         </motion.div>
       </AnimatePresence>
     </motion.div>
     <TransitionScalePop
       v-if="is().filtered.length < is().defaultFilterLength"
-      class="z-2 grid w-full place-items-center pt-32">
+      class="z-2 grid w-full place-items-center pt-32"
+    >
       <Button
+        class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         variant="outline"
         size="sm"
-        class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
-        @click="is().clearFilters()">
+        @click="is().clearFilters()"
+      >
         <span>
           {{ !is().filtered.length ? "sold out" : "reset" }}
         </span>
-        <icon
-          name="reset"
-          class="size-3.5" />
+        <icon class="size-3.5" name="reset" />
       </Button>
     </TransitionScalePop>
   </div>

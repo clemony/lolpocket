@@ -9,28 +9,23 @@ const tabs = ref('abilities')
 
 <template>
   <div
-    class="
-      field-box rounded-xxl! border-b3/80 bg-b2/40 relative flex max-h-full
-      w-full flex-col drop-shadow-sm
-    ">
+    class="field-box rounded-xxl! border-b3/80 bg-b2/40 relative flex max-h-full w-full flex-col drop-shadow-sm"
+  >
     <div
-      class="
-        rounded-t-xxl bg-b2/30 relative h-50 w-full overflow-hidden
-        inset-shadow-sm drop-shadow-sm
-      "
-      :class="{ 'shadow-warm': !champion }">
+      class="rounded-t-xxl bg-b2/30 relative h-50 w-full overflow-hidden inset-shadow-sm drop-shadow-sm"
+      :class="{ 'shadow-warm': !champion }"
+    >
       <Champion
         v-if="championKey"
         :key="championKey"
+        class="z-1 size-full scale-180"
         :champ-key="championKey"
         :src="getSplash(championKey, 'centered')"
-        class="z-1 size-full scale-180" />
+      />
 
       <header
-        class="
-          *:dst absolute right-5 bottom-4 z-2 w-full drop-shadow-sm
-          *:text-right *:text-white/86 *:text-shadow-sm
-        ">
+        class="*:dst absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right *:text-white/86 *:text-shadow-sm"
+      >
         <Grow />
 
         <h1 class="text-xs font-bold tracking-tight">
@@ -45,10 +40,10 @@ const tabs = ref('abilities')
 
     <Tabs
       v-model:model-value="tabs"
+      class="size-full max-h-full overflow-hidden"
       if="champion"
-      class="size-full max-h-full overflow-hidden">
-      <TabsList
-        class="bg-b3! relative h-10 w-full grid-cols-3 rounded-none">
+    >
+      <TabsList class="bg-b3! relative h-10 w-full grid-cols-3 rounded-none">
         <TabsTrigger value="abilities">
           Abilities
         </TabsTrigger>
@@ -64,24 +59,16 @@ const tabs = ref('abilities')
         <TabIndicator />
       </TabsList>
 
-      <TabsContent
-        value="abilities"
-        class="max-h-full overflow-y-auto">
-        <AbilityData
-          v-if="champion"
-          :abilities="champion.abilities" />
+      <TabsContent class="max-h-full overflow-y-auto" value="abilities">
+        <AbilityData v-if="champion" :abilities="champion.abilities" />
       </TabsContent>
 
       <TabsContent value="stats">
-        <ChampionBio
-          v-if="champion"
-          :champion="champion" />
+        <ChampionBio v-if="champion" :champion="champion" />
       </TabsContent>
 
       <TabsContent value="bio">
-        <ChampionBasicData
-          v-if="champion"
-          :champion="champion" />
+        <ChampionBasicData v-if="champion" :champion="champion" />
       </TabsContent>
     </Tabs>
   </div>

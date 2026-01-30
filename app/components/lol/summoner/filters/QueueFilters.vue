@@ -1,54 +1,31 @@
 <script setup lang="ts">
-const { filter, setFilter, } = useSummonerInject()
-
 const queueModel = computed({
-  get: () => filter?.value?.queue,
-  set: val => setFilter('queue', val),
+  get: () => s_matches().filter?.queue,
+  set: val => s_matches().setFilter('queue', val),
 })
-const tabClass = '!text-bc'
+watch(() => s_matches().filter, (v) => {
+  console.log('💠 - watch - newVal:', v)
+})
+const queues = [
+  {
+    label: 'All',
+    value: 0
+  },
+  {
+    label: 'Solo',
+    value: 420
+  },
+  {
+    label: 'Flex',
+    value: 440
+  },
+  {
+    label: 'Normal',
+    value: 400
+  },
+]
 </script>
 
 <template>
-  <Tabs
-    v-model:model-value="queueModel"
-    :default-value="0"
-
-    class="w-full">
-    <TabsList
-      :size="9"
-      class="relative">
-      <TabIndicator />
-      <TabsTrigger
-        :class="tabClass"
-        :value="0">
-        All
-      </TabsTrigger>
-
-      <TabsTrigger
-        :class="tabClass"
-        :value="420">
-        Solo
-      </TabsTrigger>
-
-      <TabsTrigger
-        :class="tabClass"
-        :value="440">
-        Flex
-      </TabsTrigger>
-
-      <TabsTrigger
-        :class="tabClass"
-        :value="400">
-        Normal
-      </TabsTrigger>
-      <!--
-        <TabsTrigger :value="-1">
-          <icon
-            name="ri:more-line"
-            class="shrink-0 size-5.5 opacity-60 dst" />
-        </TabsTrigger> -->
-    </TabsList>
-
-    <slot />
-  </Tabs>
+  <UTabs v-model:model-value="queueModel" class="h-9 w-full" :default-value="0" :items="queues" />
 </template>

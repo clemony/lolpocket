@@ -1,0 +1,66 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:17 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "E",
+  "name": "Shadow Slash",
+  "affects": "Enemies",
+  "blurb": "Active:  Zed slashes to deal physical damage to nearby enemies hit. Enemies hit by a  Shadow's slash are also briefly  slowed.",
+  "castTime": "none",
+  "cooldown": "5 / 4.5 / 4 / 3.5 / 3",
+  "cost": "40",
+  "damageType": "Physical damage",
+  "effectRadius": "315 / 290",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed slashes to deal physical damage to nearby enemies.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "70 / 95 / 120 / 145 / 170"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enemies hit by a Shadow's slash are slowed for 1.5 seconds, with multiple slashes dealing no additional damage but the slow's effectiveness being increased by 50%.",
+      "leveling": [
+        {
+          "attribute": "Slow",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "20 / 25 / 30 / 35 / 40"
+            }
+          ]
+        },
+        {
+          "attribute": "Enhanced Slow",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "30 / 37.5 / 45 / 52.5 / 60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Living Shadow's current cooldown is reduced by 3 seconds for each enemy champion hit by Zed's slash."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/e",
+  "notes": "An enemy counts as being hit by multiple slashes at once when they are hit by a Shadow Slash from Zed and at least one of his Shadows, or two of his Shadows. In any case, a target can only be damaged by one slash per cast of Shadow Slash.\nThe enhanced slow strength is applied as long as the enemy is hit by at least two slashes, even if Zed's slash is one of them despite him not being able to apply the base slow himself.\nSlashes beyond the second have no additional effect on the target; a third slash against an enemy does not deal damage nor increase the slow's strength (slow effectiveness is capped at 150% of the base strength).\n Spell shield will only block one Shadow Slash even if multiple of them hit at the same time, prioritizing blocking the slash from Zed's  Shadow.\nThe damage from at least one slash will always be blocked but still counts for preventing other slashes from applying the damage (other slashes are considered to be additional slashes which are not eligible for dealing the damage).\nThe slow will be blocked if hit by Zed's slash and a Shadow's slash, due to the latter slash being blocked.\nThe slow will be applied at base strength if hit by the slashes of two Shadows, due to at least one slash from a Shadow successfully hitting the target with the other slash being blocked (thus preventing the slow from being enhanced).\nThe slow will be applied at enhanced strength if hit by the slashes of Zed and two of his Shadows, due at least two of the slashes successfully hitting the target (in this case, the slashes from Zed and one of the  Shadows).\nShadow Slash does not interrupt attack, movement, or cast commands.",
+  "resource": "Energy",
+  "spellEffects": "aoe",
+  "spellshieldable": "special",
+  "targeting": "Auto"
+}
+  export default ability

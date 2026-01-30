@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { themes } from '~/domain/lp/ui/theme'
 
-const summoner = computed (() => as().account)
+const summoner = computed(() => as().account)
 
 const open = shallowRef<boolean>(false)
 
@@ -20,19 +20,17 @@ const settings = computed(() => {
 <template>
   <HoverCard
     :interactive="true"
-
     trigger="click"
     animation="shift-toward"
-    theme="base clean popover">
-    <HoverCardTrigger
-      as-child
-      class="relative overflow-hidden">
+    theme="base clean popover"
+  >
+    <HoverCardTrigger class="relative overflow-hidden" as-child>
       <LazySummonerIcon
-
         v-if="summoner"
+        class="rounded-full"
         size="c-10"
         :summoner
-        class="rounded-full" />
+      />
     </HoverCardTrigger>
 
     <HoverCardContent class="flex h-fit w-64! flex-col overflow-hidden">
@@ -41,9 +39,11 @@ const settings = computed(() => {
         <SummonerIcon class="size-11 rounded-lg" />
         <div class="flex flex-col">
           <SummonerName
-            class="text-xxl! text-bc/90 dst truncate pl-1 leading-none font-semibold" />
+            class="text-xxl! text-bc/90 dst truncate pl-1 leading-none font-semibold"
+          />
           <SummonerTag
-            class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
+            class="pl-1 align-bottom leading-none italic [&_svg]:pt-px"
+          />
         </div>
       </div>
 
@@ -55,7 +55,8 @@ const settings = computed(() => {
 
           <span
             v-if="as().inbox?.messages?.length"
-            class="absolute right-4 font-mono text-sm opacity-60">
+            class="absolute right-4 font-mono text-sm opacity-60"
+          >
             {{ as().inbox.messages.filter((m) => !m.read).length }}
           </span>
         </PopoverItem>
@@ -67,35 +68,26 @@ const settings = computed(() => {
         <PopoverItem
           v-if="as().user"
           class="h-10"
-          @click="navigateTo('/settings/account')">
+          @click="navigateTo('/settings/account')"
+        >
           <icon name="at" />
           Account
         </PopoverItem>
 
-        <PopoverItem
-          class="h-10"
-          @click="navigateTo('/settings')">
+        <PopoverItem class="h-10" @click="navigateTo('/settings')">
           <icon name="gear" />
           Settings
         </PopoverItem>
 
         <div>
-          <div
-            v-for="theme, i in themes"
-            :key="i"
-            :data-theme="theme.name">
-            <Label
-              base="btn"
-              size="c-9"
-              class="relative p-0!"
-              variant="base">
+          <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
+            <Label class="relative p-0!" base="btn" size="c-9" variant="base">
               <input
                 v-model="as().settings.theme"
+                class="peer hidden"
                 type=""
-                class="peer hidden" />
-              <Icon
-                name="theme.icon"
-                class="text-bc absolute" />
+              >
+              <Icon class="text-bc absolute" name="theme.icon" />
             </Label>
           </div>
         </div>
@@ -103,18 +95,12 @@ const settings = computed(() => {
 
       <DropdownMenuSeparator />
       <div class="px-1 pb-1">
-        <PopoverItem
-          v-if="as().user"
-          class="h-9">
-          <icon
-            name="log-out"
-            @click="useSignOut()" />
+        <PopoverItem v-if="as().user" class="h-9">
+          <icon name="log-out" @click="useSignOut()" />
           Log out
         </PopoverItem>
 
-        <PopoverItem
-          v-else
-          @click="navigateTo('/login')">
+        <PopoverItem v-else @click="navigateTo('/login')">
           <icon name="log-in" />
           Log in
         </PopoverItem>

@@ -24,8 +24,7 @@ function bumpChampion(
   const e = map[role][championId]
 
   e.games++
-  if (win)
-    e.win!++
+  if (win) e.win!++
 
   e.avgTimestamp
     = ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
@@ -45,22 +44,19 @@ export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
 
     for (const d of data.value) {
       const player = d.player
-      if (!player)
-        continue
+      if (!player) continue
 
       const teamId = player.teamId
       const win = player.win
       const gameDuration = d.match.gameDuration
 
       for (const p of d.match.participants) {
-        if (p.puuid === player.puuid)
-          continue
+        if (p.puuid === player.puuid) continue
 
         const target = p.teamId === teamId ? team : enemy
         const role = normalizeRole(p.role)
 
-        if (win === 'remake')
-          continue
+        if (win === 'remake') continue
         bumpChampion(target, role, p.championId, win, gameDuration)
       }
     }

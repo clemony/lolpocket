@@ -141,11 +141,9 @@ const options = {
 function calculateImagePositions() {
   nextTick(() => {
     const chart = chartRef.value?.chart
-    if (!chart)
-      return
+    if (!chart) return
     const xScale = chart.scales.x
-    if (!xScale)
-      return
+    if (!xScale) return
 
     imagePositions.value = data.value.labels.map((label) => {
       console.log('💠 - nextTick - label:', label)
@@ -164,15 +162,9 @@ onMounted(() => {
 
 <template>
   <div
-    class="
-      border-shadow-sm relative grid h-150 min-h-150 w-210 place-items-center
-      pt-4
-    ">
-    <Bar
-      id="championAnalysis"
-      ref="chartRef"
-      :options="options"
-      :data="data" />
+    class="border-shadow-sm relative grid h-150 min-h-150 w-210 place-items-center pt-4"
+  >
+    <Bar id="championAnalysis" ref="chartRef" :options="options" :data="data" />
 
     <!-- Overlay images using absolute positioning -->
     <div
@@ -183,12 +175,14 @@ onMounted(() => {
         left: `${pos.x - 16}px`,
         width: '32px',
         height: '32px',
-      }">
+      }"
+    >
       <div class="size-[32px] overflow-hidden rounded-lg">
         <ChampionIcon
           :id="champions[idx].championId"
+          class="size-full scale-115"
           :alt="pos.label"
-          class="size-full scale-115" />
+        />
       </div>
     </div>
   </div>

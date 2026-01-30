@@ -28,7 +28,8 @@ const forwarded = useForwardProps(props)
         '',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </DropdownMenuTrigger>
 </template>

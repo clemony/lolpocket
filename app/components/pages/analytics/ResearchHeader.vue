@@ -30,19 +30,12 @@ const timeLeft = computed(() => {
             ? `Update available in ${timeLeft}`
             : 'Update Data'
         "
+        class="dr-30 btn btn-square not-disabled:btn-neutral absolute -right-1 bottom-0 size-7 justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md transition-colors hover:opacity-100 disabled:pointer-events-none! disabled:cursor-default disabled:opacity-90!"
         as="button"
-        class="
-          dr-30 btn btn-square not-disabled:btn-neutral absolute -right-1 bottom-0
-          size-7 justify-self-end rounded-full p-0 opacity-80
-          backdrop-blur-md transition-colors hover:opacity-100
-          disabled:pointer-events-none! disabled:cursor-default
-          disabled:opacity-90!
-        "
         :disabled="timeLeft !== '1:40'"
-        @click="fetchData()">
-        <icon
-          name="ion:sync-sharp"
-          class="text-nc size-4.5" />
+        @click="fetchData()"
+      >
+        <icon class="text-nc size-4.5" name="ion:sync-sharp" />
       </Motion>
     </SummonerIcon>
 

@@ -5,21 +5,24 @@ import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })
 
-const props = withDefaults(defineProps<
-  TabsIndicatorProps & {
-    class?: HTMLAttributes['class']
-    indicatorClass?: HTMLAttributes['class']
-    orientation?: 'horizontal' | 'vertical'
-    on?: ButtonVariants['on']
-    base?: ButtonVariants['base']
-    hover?: ButtonVariants['hover']
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
+const props = withDefaults(
+  defineProps<
+    TabsIndicatorProps & {
+      class?: HTMLAttributes['class']
+      indicatorClass?: HTMLAttributes['class']
+      orientation?: 'horizontal' | 'vertical'
+      on?: ButtonVariants['on']
+      base?: ButtonVariants['base']
+      hover?: ButtonVariants['hover']
+      size?: ButtonVariants['size']
+      variant?: ButtonVariants['variant']
+    }
+  >(),
+  {
+    orientation: 'horizontal',
+    variant: 'base',
   }
->(), {
-  orientation: 'horizontal',
-  variant: 'base'
-})
+)
 const forwarded = reactiveOmit(props, 'class')
 
 const variants = {
@@ -56,18 +59,21 @@ const variants = {
       :class="
         cn(
           'absolute top-0 size-full rounded-lg transition-all',
-          props.orientation === 'vertical' ? '!top-0 left-1 w-full' : 'py-0.5',
+          props.orientation === 'vertical' ? 'top-0! left-1 w-full' : 'py-0.5',
           props.class,
         )
-      ">
+      "
+    >
       <motion.div
         :class="
-          cn('text-bc size-full min-w-0! shadow-sm',
-             buttonVariants({ base, variant, size, hover, on }),
-             'fx-0 rounded-lg',
-             indicatorClass,
+          cn(
+            'text-bc size-full min-w-0! shadow-sm',
+            buttonVariants({ base, variant, size, hover, on }),
+            'fx-0 rounded-lg',
+            indicatorClass,
           )
-        " />
+        "
+      />
     </motion.div>
   </TabsIndicator>
 </template>

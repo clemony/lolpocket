@@ -16,7 +16,8 @@ const forwarded = useForwardProps(delegated)
   <ListboxContent
     v-bind="forwarded"
     :autofocus="false"
-    :class="cn('gap-1 py-1', props.class)">
+    :class="cn('gap-1 py-1', props.class)"
+  >
     <slot />
   </ListboxContent>
 </template>

@@ -15,8 +15,7 @@ const checked = shallowRef<boolean>(false)
 const inputRef = useTemplateRef('inputRef')
 
 function handleCheck(e) {
-  if (e === true)
-    inputRef.value.focusInput()
+  if (e === true) inputRef.value.focusInput()
 }
 function onBlur() {}
 </script>
@@ -26,16 +25,15 @@ function onBlur() {}
   <FormField
     v-slot="{ validate, value, errorMessage, componentField }"
     :name="modelValue"
-    as-child>
+    as-child
+  >
     <Element
+      class="hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent py-2"
       base="btn"
       size="auto"
       hover="outline"
       variant="ghost"
-      class="
-        hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent
-        py-2
-      ">
+    >
       <FormItem class="w-full">
         <FormLabel class="flex w-full cursor-pointer items-center gap-2">
           <!-- Checkbox -->
@@ -45,11 +43,12 @@ function onBlur() {}
                 v-model:model-value="checked"
                 :class="
                   cn('transition-colors duration-200', {
-                    '!ring-domination bg-domination/10 border-domination':
+                    'ring-domination! bg-domination/10 border-domination':
                       errorMessage,
                   })
                 "
-                @update:model-value="handleCheck($event)" />
+                @update:model-value="handleCheck($event)"
+              />
             </FormControl>
 
             <span class="text-bc font-semibold">
@@ -59,27 +58,33 @@ function onBlur() {}
 
           <InputGroup
             :class="
-              cn('bg-b1! relative flex h-11 grow items-center gap-4 self-center')
-            ">
+              cn(
+                'bg-b1! relative flex h-11 grow items-center gap-4 self-center',
+              )
+            "
+          >
             <FormControl as-child>
               <InputGroupInput
-                ref="inputRef"
                 v-bind="componentField"
+                ref="inputRef"
                 v-model="modelValue"
-                :value="value"
                 class="grow"
+                :value="value"
                 placeholder="Please describe briefly..."
-                @blur="checked ? validate() : null" />
+                @blur="checked ? validate() : null"
+              />
             </FormControl>
 
             <!--  /*  {
                     @input="e => handleChange({ ...value, reason: e.target.value })" 'ring ring-domination': reasonError } */     -->
             <FormMessage
               v-if="errorMessage"
-              class="text-domination absolute z-10" />
+              class="text-domination absolute z-10"
+            />
             <InputGroupClear
               type="button"
-              @clear:input="componentField.modelValue = null" />
+              @clear-input="componentField.modelValue = null"
+            />
 
             <InputGroupAddon
               v-tippy="{
@@ -91,13 +96,15 @@ function onBlur() {}
                 theme: errorMessage ? 'error' : 'neutral',
                 placement: 'right',
               }"
+              class="pointer-events-auto! z-2! cursor-help!"
               align="inline-end"
-              class="pointer-events-auto! z-2! cursor-help!">
+            >
               <icon
                 name="error"
                 :class="
                   cn('text-bc/30 size-5', { 'text-domination': errorMessage })
-                " />
+                "
+              />
             </InputGroupAddon>
           </InputGroup>
         </FormLabel>

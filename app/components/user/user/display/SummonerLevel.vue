@@ -24,7 +24,7 @@ const levelVariants = tv({
   variants: {
     variant: {
       badge:
-        'badge badge-sm badge-neutral text-xxs bg-neutral/75 bottom-0.5 backdrop-blur',
+        'badge badge-neutral bg-neutral/75 badge-sm text-xxs bottom-0.5 backdrop-blur-sm',
     },
   },
 })
@@ -41,9 +41,7 @@ const summonerLevel = computed(() => {
 </script>
 
 <template>
-  <Primitive
-    :as="el"
-    :class="cn(levelVariants({ variant }), className)">
+  <Primitive :as="el" :class="cn(levelVariants({ variant }), className)">
     {{ !noTag ? "lv. " : null }}{{ summonerLevel || "0" || "" }}
   </Primitive>
 </template>

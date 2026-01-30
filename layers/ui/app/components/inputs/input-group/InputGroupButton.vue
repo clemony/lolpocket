@@ -19,7 +19,8 @@ const props = withDefaults(defineProps<InputGroupButtonProps>(), {
         inputGroupButtonVariants({ size: props.size, variant: props.variant }),
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Button>
 </template>

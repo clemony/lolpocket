@@ -16,14 +16,16 @@ const props = defineProps<
     :as="as"
     :as-child="asChild"
     :class="
-      cn('text-bc/70 ring-bc/60 flex h-8 shrink-0 flex-nowrap items-center rounded-md px-2 text-sm font-medium text-nowrap ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
-         `
+      cn(
+        'text-bc/70 ring-bc/60 flex h-8 shrink-0 flex-nowrap items-center rounded-md px-2 text-sm font-medium text-nowrap ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
+        `
           group-data-[collapsible=icon]:-mt-8
           group-data-[collapsible=icon]:opacity-0
         `,
-         props.class,
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

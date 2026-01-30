@@ -8,30 +8,25 @@ console.log('💠 - ms:', ms().filter.patch)
       v-model:model-value="ms().filter.patch"
       class="flex h-28 w-full rounded-lg"
       :min="25.01"
-      :max="ds().currentPatch"
-      :step="0.01">
+      :max="parseInt(patchIndex[0])"
+      :step="0.01"
+    >
       <NumberFieldDecrement
-        class="
-          relative grid h-full max-w-10 shrink-0 place-items-center *:size-6
-        ">
-        <icon
-          name="left"
-          class="dst size-6" />
+        class="relative grid h-full max-w-10 shrink-0 place-items-center *:size-6"
+      >
+        <icon class="size-6 dst" name="left" />
       </NumberFieldDecrement>
 
       <NumberFieldContent class="size-full grow">
         <NumberFieldInput
-          class="
-            text-xxs dst size-full border-0 font-bold
-            shadow-none inset-shadow-none
-          " />
+          class="size-full border-0 text-xxs font-bold shadow-none inset-shadow-none dst"
+        />
       </NumberFieldContent>
 
       <NumberFieldIncrement
-        class="relative grid size-full max-w-10 shrink-0 place-items-center">
-        <icon
-          name="right"
-          class="dst size-6" />
+        class="relative grid size-full max-w-10 shrink-0 place-items-center"
+      >
+        <icon class="size-6 dst" name="right" />
       </NumberFieldIncrement>
     </NumberField>
   </div>

@@ -9,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 definePageMeta({
   title: 'pockets',
@@ -18,10 +18,13 @@ definePageMeta({
   order: 3,
 })
 
-const { summoner } = useSummonerInject()
-watch(() => summoner.value, (v) => {
-  console.log('💠 - watch - newVal:', v)
-})
+const { summoner } = storeToRefs(s_session())
+watch(
+  () => summoner.value,
+  (v) => {
+    console.log('💠 - watch - newVal:', v)
+  }
+)
 </script>
 
 <template>
@@ -38,7 +41,8 @@ watch(() => summoner.value, (v) => {
         )"
         :key="pocket.key"
         :pocket
-        @click="navigateTo(`/pocket/${pocket.key}`)" />
+        @click="navigateTo(`/pocket/${pocket.key}`)"
+      />
     </div>
   </div>
 </template>

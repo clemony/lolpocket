@@ -6,8 +6,7 @@ const { k, v } = defineProps<{
 </script>
 
 <template>
-  <div
-    class="flex flex-col items-center gap-2">
+  <div class="flex flex-col items-center gap-2">
     <slot />
   </div>
 </template>

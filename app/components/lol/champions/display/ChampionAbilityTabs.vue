@@ -11,8 +11,7 @@ const champion = await import(`#shared/records/champions/${k}.ts`)
 const loaded = ref(false)
 const champAbilities = computed(() => {
   console.log('🌱 - champion:', champion)
-  if (!champion)
-    return null
+  if (!champion) return null
 
   return champion.default.abilities
 })
@@ -38,53 +37,47 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
   keyDown.value = false
 })
 
-const gridCols = computed(
-  () => `grid grid-cols-${champAbilities.value.length}`,
-)
+const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
 </script>
 
 <template>
   <menu
     :class="
       cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)
-    ">
+    "
+  >
     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
+      class="group aspect-square h-auto w-full cursor-pointer! overflow-hidden border-0 p-0 transition-transform duration-300 **:pointer-events-none hover:scale-110"
       base="btn"
       variant="neutral"
       size="sq-14"
       :value="i"
-      class="
-        group aspect-square h-auto w-full cursor-pointer! overflow-hidden
-        border-0 p-0 transition-transform duration-300 **:pointer-events-none
-        hover:scale-110
-      "
       :class="{
         'scale-110 hover:scale-115': selectedAbility === ability.key,
-      }">
+      }"
+    >
       <input
         v-model="selectedAbility"
+        class="peer hidden"
         :value="i"
         type="radio"
         name="selected-ability"
-        class="peer hidden"
-        @change="emit('update:ability', selectedAbility)" />
+        @change="emit('update:ability', selectedAbility)"
+      >
 
       <Img
+        class="pointer-events-none size-full opacity-70 contrast-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
         :src="ability.icon"
         alt="passive icon"
-        class="
-          pointer-events-none size-full opacity-70 contrast-80 grayscale
-          transition duration-300 group-hover:opacity-100
-          group-hover:contrast-100 group-hover:grayscale-0
-        "
         :class="{
           'opacity-100 contrast-100 grayscale-0': selectedAbility,
           'animate-in fade-in duration-500': loaded,
           'animate-out fade-out-50 duration-500': loaded,
         }"
-        @load="loaded = true" />
+        @load="loaded = true"
+      />
     </Label>
   </menu>
 </template>

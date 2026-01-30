@@ -23,48 +23,48 @@ function handleSplash(e: string) {
   <section class="flex size-full flex-wrap gap-x-4 pt-3">
     <button
       :class="cn('-ml-3', currentSplash ? inactiveClass : '', cardClass)"
-      @click="currentSplash = null">
+      @click="currentSplash = null"
+    >
       <SplashCard
-        hover
         class="w-36"
+        hover
         :skin-url="top().splash?.replace('uncentered', 'tile')"
         :text="top().name"
-        :alt="`${as().account?.name ?? null}'s Most Played`" />
+        :alt="`${as().account?.name ?? null}'s Most Played`"
+      />
       <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="dst text-xl font-semibold">
           Automatic
         </h4>
         <p>Displays your most played champion in recent games.</p>
 
-        <ActiveTick
-          v-if="!currentSplash"
-          class="mt-2 h-6" />
+        <ActiveTick v-if="!currentSplash" class="mt-2 h-6" />
       </div>
     </button>
 
     <LazySplashSelectPanel
       v-model:open="isOpen"
-      :class="cn(!currentSplash ? inactiveClass : ' w-full', cardClass)"
+      :class="cn(!currentSplash ? inactiveClass : 'w-full', cardClass)"
       @update:splash="(e) => handleSplash(e)"
-      @dialog:close="isOpen = false">
+      @dialog:close="isOpen = false"
+    >
       <SplashCard
         class="w-36"
         :text="skinNameFromUrl(as().account?.splash) ?? ''"
         :skin-url="as().account?.splash"
-        :alt="`${as().account?.name ?? null}'s splash`" />
+        :alt="`${as().account?.name ?? null}'s splash`"
+      />
       <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="dst text-xl font-semibold">
           Custom
         </h4>
         <p class="w-full min-w-56">
           <span class="italic">Never played a champ?</span>
-          <br />
+          <br>
           Np. You're a Yuumi main now.
         </p>
 
-        <ActiveTick
-          v-if="currentSplash"
-          class="mt-2 h-6" />
+        <ActiveTick v-if="currentSplash" class="mt-2 h-6" />
       </div>
     </LazySplashSelectPanel>
   </section>

@@ -1,4 +1,8 @@
-export function useChampionItemStats(matches: Ref<MatchData[]>, puuid: string, championId: number) {
+export function useChampionItemStats(
+  matches: Ref<MatchData[]>,
+  puuid: string,
+  championId: number
+) {
   return computed(() => {
     const single: Record<number, StatDetail> = {}
 
@@ -6,12 +10,10 @@ export function useChampionItemStats(matches: Ref<MatchData[]>, puuid: string, c
       const p = match.participants.find(
         p => p.puuid === puuid && p.championId === championId
       )
-      if (!p)
-        continue
+      if (!p) continue
 
       for (const itemId of Object.values(p.items)) {
-        if (!itemId || p.win === 'remake')
-          continue
+        if (!itemId || p.win === 'remake') continue
         bumpStat(single, itemId as number, p.win)
       }
     }

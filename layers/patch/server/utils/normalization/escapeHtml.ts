@@ -8,6 +8,6 @@ export function escapeHtml(text: string): string {
         '\'': '&#039;',
         '<': '&lt;',
         '>': '&gt;',
-      })[ch]!,
+      })[ch]!
   )
 }

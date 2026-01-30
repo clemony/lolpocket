@@ -24,49 +24,38 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
         'line-clamp-1 flex grow items-center gap-1 text-sm opacity-80',
         className,
       )
-    ">
+    "
+  >
     <template v-if="c?.length">
       <span
         v-for="champion in championsTxt"
         :key="champion"
-        class="group/champion">
-        {{ ix().champNameByKey(champion) }}
+        class="group/champion"
+      >
+        {{ champNameByKey(champion) }}
         <span class="group-last/champion:hidden">,&thinsp;</span>
       </span>
-      <span
-        v-if="c.length > 5"
-        class="tracking-wider">
+      <span v-if="c.length > 5" class="tracking-wider">
         +{{ c.length - 4 }}...
       </span>
     </template>
-    <span
-      v-else
-      class="text-bc/60 italic">No champions</span>
+    <span v-else class="text-bc/60 italic">No champions</span>
   </div>
 
-  <div
-    v-else
-    :class="cn('avatar-group -space-x-5', className)">
+  <div v-else :class="cn('avatar-group -space-x-5', className)">
     <template v-if="champions?.length">
-      <template
-        v-for="(champion, i) in champions"
-        :key="champion">
-        <div
-          v-if="i < 3"
-          class="avatar bg-b1 size-fit">
+      <template v-for="(champion, i) in champions" :key="champion">
+        <div v-if="i < 3" class="avatar size-fit bg-b1">
           <ChampionIcon
-            :id="ix().champIdByKey(champion)"
-            class="border-bc size-11 rounded-full shadow-sm shadow-black" />
+            :id="champIdByKey(champion)"
+            class="size-11 rounded-full border-bc shadow-sm shadow-black"
+          />
         </div>
       </template>
     </template>
-    <Placeholder
-      v-else
-      class="mr-1 size-11 rounded-full"></Placeholder>
-    <div
-      v-if="champions?.length > 3"
-      class="avatar avatar-placeholder">
-      <div class="bg-neutral text-neutral-content w-11 text-sm">
+    <Placeholder v-else class="mr-1 size-11 rounded-full" />
+    <div v-if="champions?.length > 3" class="avatar avatar-placeholder">
+      <div class="w-11 bg-neutral text-sm text-neutral-content">
         <span>+99</span>
       </div>
     </div>

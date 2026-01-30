@@ -6,11 +6,8 @@ const { from, gold } = defineProps<{
 </script>
 
 <template>
-  <div
-    v-if="from"
-    class="mt-1">
-    <div
-      class="divider divider-start text-xxs! after:h-px">
+  <div v-if="from" class="mt-1">
+    <div class="divider divider-start text-xxs! after:h-px">
       RECIPE
     </div>
 
@@ -18,32 +15,29 @@ const { from, gold } = defineProps<{
       <div
         v-for="(item, i) in from"
         :key="i"
+        class="flex items-center gap-3"
         :title="`${item.name} ‑ ${item.gold}g`"
-        class="flex items-center gap-3">
+      >
         <Item
           :id="item.id"
-          class="
-            hover-ring ring-neutral/60 size-10 overflow-hidden rounded-lg
-            shadow-sm
-          " />
+          class="hover-ring ring-neutral/60 size-10 overflow-hidden rounded-lg shadow-sm"
+        />
 
         <icon
           v-if="i !== from.length - 1"
+          class="size-3.5 opacity-80"
           name="dasIcons:plus"
-          class="size-3.5 opacity-80" />
+        />
       </div>
 
-      <div
-        v-if="gold"
-        class="flex items-center">
-        <icon
-          name="dasIcons:plus"
-          class="size-3.5 opacity-80" />
+      <div v-if="gold" class="flex items-center">
+        <icon class="size-3.5 opacity-80" name="dasIcons:plus" />
 
         <img
+          class="mr-1 ml-3 size-4.25 opacity-80"
           src="/img/icons/gold-coin.webp"
           alt="coin"
-          class="mr-1 ml-3 size-4.25 opacity-80" />
+        >
         {{ gold }}
       </div>
     </div>

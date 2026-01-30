@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-import {
-  markRead,
-  sortedMessages,
-  toggleRead,
-  trashMsg,
-} from './inbox-management'
+import { markRead, sortedMessages, toggleRead } from './inbox-management'
 
 defineOptions({
   meta: {
@@ -30,8 +25,9 @@ defineOptions({
       <template #subheader>
         <div class="px-3">
           <Input
+            class="input bg-b1! mb-3 h-12"
             placeholder="Search messages..."
-            class="input bg-b1! mb-3 h-12" />
+          />
         </div>
       </template>
     </SidebarHeaderWrapper>
@@ -42,37 +38,35 @@ defineOptions({
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"
           :class="
-            cn('group/msg border-b-b3 flex w-full flex-col items-start gap-2 border-b p-4 leading-tight whitespace-nowrap last:border-b-0',
-               {
-                 ' bg-b1/80 ': !message.read,
-                 'bg-transparent hover:bg-sidebar-accent opacity-70':
-                   message.read,
-               },
+            cn(
+              'group/msg border-b-b3 flex w-full flex-col items-start gap-2 border-b p-4 leading-tight whitespace-nowrap last:border-b-0',
+              {
+                'bg-b1/80': !message.read,
+                'hover:bg-sidebar-accent bg-transparent opacity-70':
+                  message.read,
+              },
             )
-          ">
+          "
+        >
           <Dialog>
             <DialogTrigger
               class="grid size-full justify-items-start"
-              @click="markRead(message.id)">
+              @click="markRead(message.id)"
+            >
               <div class="flex w-full items-center justify-between gap-2">
                 <span class="text-bc/60 text-sm font-medium">
                   {{ message.from.name }}
                 </span>
 
                 <span
-                  class="
-                    text-bc/80 relative flex h-5 items-center justify-self-end
-                    text-xs *:absolute *:right-4 *:transition-opacity
-                    *:duration-200 *:first:opacity-0
-                    group-hover/msg:*:first:opacity-100
-                    group-hover/msg:*:last:pointer-events-none
-                    group-hover/msg:*:last:opacity-0
-                  ">
+                  class="text-bc/80 relative flex h-5 items-center justify-self-end text-xs *:absolute *:right-4 *:transition-opacity *:duration-200 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:pointer-events-none group-hover/msg:*:last:opacity-0"
+                >
                   <span class="flex size-fit gap-1">
                     <Button
                       :variant="!message.read ? 'neutral' : 'ghost'"
                       size="6"
-                      @click.stop="toggleRead(message.id)">
+                      @click.stop="toggleRead(message.id)"
+                    >
                       {{ message.read ? "Mark Unread" : "Mark Read" }}
                     </Button>
 
@@ -86,14 +80,13 @@ defineOptions({
                   cn('py-1 text-lg font-bold tracking-tight', {
                     'opacity-70': message.read,
                   })
-                ">
+                "
+              >
                 {{ message.title }}
               </span>
               <span
-                class="
-                  line-clamp-2 w-[260px] text-start text-sm
-                  whitespace-break-spaces
-                ">
+                class="line-clamp-2 w-[260px] text-start text-sm whitespace-break-spaces"
+              >
                 {{ message.content }}
               </span>
             </DialogTrigger>
@@ -103,9 +96,7 @@ defineOptions({
         </div>
       </template>
 
-      <div
-        v-else
-        class="grid h-44 w-full place-items-center">
+      <div v-else class="grid h-44 w-full place-items-center">
         <span class="dst overflow-hidden text-sm text-nowrap">
           {{ `No mail right now!` }}
         </span>

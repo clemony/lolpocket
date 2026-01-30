@@ -13,16 +13,16 @@
  * --continue Errors will not abort the script sequence.
  */
 
-import fs from "node:fs"
-import process from "node:process"
-import { resolvePath } from "../resolvePath"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import process from 'node:process'
 
-const SAVE_FILE = resolvePath("./champions/.savepoint.json")
+const SAVE_FILE = resolve('./layers/patch/server/champions/.savepoint.json')
 const args = process.argv.slice(2)
-const RESET = args.includes("--reset")
-const LIST = args.includes("--list")
-const CONTINUE_ON_ERROR = args.includes("--continue")
-const FRESH = args.includes("--fresh")
+const RESET = args.includes('--reset')
+const LIST = args.includes('--list')
+const CONTINUE_ON_ERROR = args.includes('--continue')
+const FRESH = args.includes('--fresh')
 
 interface Results {
   failed: string[]
@@ -33,8 +33,9 @@ interface Results {
 function getSavepoint(): string[] {
   if (fs.existsSync(SAVE_FILE)) {
     try {
-      return JSON.parse(fs.readFileSync(SAVE_FILE, "utf-8"))
-    } catch {
+      return JSON.parse(fs.readFileSync(SAVE_FILE, 'utf-8'))
+    }
+    catch {
       return []
     }
   }
@@ -63,13 +64,14 @@ async function run(
 
   try {
     console.log(`\n⏳ Running: ${label}`)
-    await import(resolvePath(modulePath))
+    await import(resolve(modulePath))
     console.log(`✅ Finished: ${label}`)
 
     completed.push(label)
     setSavepoint(completed)
     results.success.push(label)
-  } catch (err) {
+  }
+  catch (err) {
     console.error(`❌ Failed: ${label}`, err)
     results.failed.push(label)
     if (!CONTINUE_ON_ERROR) throw err
@@ -78,31 +80,31 @@ async function run(
 
 export async function championUpdate() {
   const pipeline: [string, string][] = [
-    ["fetch:champions", "./champions/fetch/champions.ts"],
-    ["fetch:icons", "./champions/fetch/icons.ts"],
-    ["generate:champions", "./champions/build/champions.ts"],
-    ["generate:champion-index", "./champions/build/index.ts"],
-    ["generate:champions-lite", "./champions/build/lite.ts"],
-    ["generate:champions-titles", "./champions/build/titles.ts"],
-    //["generate:champion-skins", "./champions/build/skins.ts"],
-    ["generate:champion-filter", "./champions/build/filter.ts"],
-    // ['generate:max-stats', './generate-max-stats.ts'],
+    ['fetch:champions', './layers/patch/server/champions/fetch/champions.ts'],
+    ['fetch:icons', './layers/patch/server/champions/fetch/icons.ts'],
+    ['generate:champions', './layers/patch/server/champions/build/champions.ts'],
+    ['generate:champion-index', './layers/patch/server/champions/build/index.ts'],
+    ['generate:champions-lite', './layers/patch/server/champions/build/lite.ts'],
+    ['generate:champions-titles', './layers/patch/server/champions/build/titles.ts'],
+    // ["generate:champion-skins", "./layers/patch/server/champions/build/skins.ts"],
+    ['generate:champion-filter', './layers/patch/server/champions/build/filter.ts'],
+    // ['generate:max-stats', './layers/patch/server/generate-max-stats.ts'],
   ]
 
   if (LIST) {
-    console.log("📋 Pipeline order:")
+    console.log('📋 Pipeline order:')
     pipeline.forEach(([label]) => console.log(` - ${label}`))
     const completed = getSavepoint()
     console.log(
-      completed.length ?
-        `\n💾 Current savepoint: ${completed.join(", ")}`
-      : "\n💾 No savepoint found."
+      completed.length
+        ? `\n💾 Current savepoint: ${completed.join(', ')}`
+        : '\n💾 No savepoint found.'
     )
     return
   }
 
   if (RESET) {
-    console.log("🔄 Reset flag detected — clearing savepoint.")
+    console.log('🔄 Reset flag detected — clearing savepoint.')
     clearSavepoint()
   }
 
@@ -115,17 +117,19 @@ export async function championUpdate() {
     }
 
     clearSavepoint()
-    console.log("\n🎉 All scripts completed successfully!")
-  } catch {
-    console.error("\n🔥 Script sequence aborted.")
-  } finally {
-    console.log("\n📊 Summary:")
+    console.log('\n🎉 All scripts completed successfully!')
+  }
+  catch {
+    console.error('\n🔥 Script sequence aborted.')
+  }
+  finally {
+    console.log('\n📊 Summary:')
     if (results.success.length)
-      console.log(` ✅ Success: ${results.success.join(", ")}`)
+      console.log(` ✅ Success: ${results.success.join(', ')}`)
     if (results.skipped.length)
-      console.log(` ⏭️  Skipped: ${results.skipped.join(", ")}`)
+      console.log(` ⏭️  Skipped: ${results.skipped.join(', ')}`)
     if (results.failed.length)
-      console.log(` ❌ Failed: ${results.failed.join(", ")}`)
+      console.log(` ❌ Failed: ${results.failed.join(', ')}`)
   }
 }
 

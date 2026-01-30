@@ -49,8 +49,7 @@ export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
   for (const { player, timeline } of matches) {
     const win = player.win
 
-    if (!timeline)
-      continue
+    if (!timeline) continue
 
     const order = timeline?.skills.order
     const prio = timeline?.skills.priority.join('>') as PriorityKey
@@ -60,19 +59,16 @@ export function aggregateSkills(matches: MatchPlayerData[]): AggregatedSkills {
       priority[prio] = { games: 0, win: 0 }
     }
     priority[prio].games++
-    if (win)
-      priority[prio].win++
+    if (win) priority[prio].win++
 
     for (let i = 0; i < order.length; i++) {
       const level = i + 1
       const skill = SKILL_BY_INDEX[order[i]]
-      if (!skill)
-        continue
+      if (!skill) continue
 
       const s = byLevel[level][skill]
       s.games++
-      if (win)
-        s.win++
+      if (win) s.win++
     }
   }
 

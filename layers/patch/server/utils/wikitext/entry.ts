@@ -8,7 +8,7 @@ export function normalizeResult(result: string | TemplateResult): string {
 
 export async function handleWikiText(
   wikitext: string,
-  vars = new Map<string, string>(),
+  vars = new Map<string, string>()
 ): Promise<string> {
   const text = preProcess(wikitext)
   const resolved = resolveTemplates(text, 0, vars)

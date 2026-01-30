@@ -42,9 +42,7 @@ const props = defineProps<{
     <div class="flex gap-2">
       <icon name="solar:running-bold" />
 
-      <icon
-        name="arcticons:shadow-fight-2"
-        class="size-7 stroke-3" />
+      <icon class="size-7 stroke-3" name="arcticons:shadow-fight-2" />
     </div>
     killing spree
 

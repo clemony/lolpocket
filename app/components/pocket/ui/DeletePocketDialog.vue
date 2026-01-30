@@ -15,16 +15,13 @@ function handleDelete() {
 <template>
   <Dialog>
     <DialogTrigger :class="cn('', className)">
-      <slot></slot>
+      <slot />
     </DialogTrigger>
 
     <MotionDialogContent class="flex flex-col justify-between pb-8">
       <DialogClose
-        class="
-          hover:ring-b3 focus:ring-b3 absolute top-5 right-6 grid size-8
-          cursor-pointer place-items-center rounded-lg opacity-60 hover:opacity-100
-          hover:ring focus:ring
-        ">
+        class="hover:ring-b3 focus:ring-b3 absolute top-5 right-6 grid size-8 cursor-pointer place-items-center rounded-lg opacity-60 hover:opacity-100 hover:ring focus:ring"
+      >
         <icon name="x-sm" />
       </DialogClose>
 
@@ -40,20 +37,20 @@ function handleDelete() {
 
       <div class="mt-6 flex w-full grow items-center justify-between">
         <Label
-          class="
-            text-bc/60 hover:text-bc flex cursor-pointer items-center gap-3
-            text-sm underline-offset-2 hover:underline
-          ">
+          class="text-bc/60 hover:text-bc flex cursor-pointer items-center gap-3 text-sm underline-offset-2 hover:underline"
+        >
           <input
             v-model="as().settings.instant_trash"
+            class="peer checkbox checkbox-sm checkbox-neutral"
             type="checkbox"
-            class="peer checkbox checkbox-sm checkbox-neutral" />
+          >
           Don't show this again.
         </Label>
 
         <DialogClose
           class="btn btn-lg btn-neutral justify-start! pr-9 pl-7"
-          @click="handleDelete()">
+          @click="handleDelete()"
+        >
           <icon name="trash" />
           Send to Trash
         </DialogClose>

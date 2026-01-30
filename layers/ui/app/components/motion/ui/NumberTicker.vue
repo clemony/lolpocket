@@ -58,7 +58,7 @@ const stopIsInViewWatcher = watch(
       stopIsInViewWatcher()
     }
   },
-  { immediate: true },
+  { immediate: true }
 )
 
 watch(
@@ -67,14 +67,15 @@ watch(
     if (hasBeenInView.value) {
       transitionValue.value = props.direction === 'down' ? 0 : newVal
     }
-  },
+  }
 )
 </script>
 
 <template>
   <span
     ref="spanRef"
-    :class="cn('text-bc inline-block tabular-nums', props.class)">
+    :class="cn('text-bc inline-block tabular-nums', props.class)"
+  >
     {{ output }}
   </span>
 </template>

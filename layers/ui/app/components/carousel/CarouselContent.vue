@@ -12,10 +12,9 @@ const { carouselRef, orientation } = useCarousel()
 </script>
 
 <template>
-  <div
-    ref="carouselRef"
-    class="overflow-hidden">
+  <div ref="carouselRef" class="overflow-hidden">
     <div
+      v-bind="$attrs"
       :class="
         cn(
           'flex',
@@ -23,7 +22,7 @@ const { carouselRef, orientation } = useCarousel()
           props.class,
         )
       "
-      v-bind="$attrs">
+    >
       <slot />
     </div>
   </div>

@@ -17,15 +17,12 @@ watch(
   () => forwarded.value.modelValue,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-  },
+  }
 )
 </script>
 
 <template>
-  <SliderRoot
-    as-child
-    :class="props.class"
-    v-bind="forwarded">
+  <SliderRoot v-bind="forwarded" as-child :class="props.class">
     <slot />
   </SliderRoot>
 </template>

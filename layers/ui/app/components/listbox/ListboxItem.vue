@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
+import type { ListboxItemProps } from 'reka-ui'
 import { ListboxItem, useForwardPropsEmits } from 'reka-ui'
 
 interface Props extends ListboxItemProps {
@@ -23,10 +23,11 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
 
 <template>
   <ListboxItem
+    class="outline-0! outline-offset-0!"
     v-bind="forwardedProps"
     as-child
     :autofocus="false"
-    class="outline-0! outline-offset-0!">
+  >
     <Button
       :variant
       :size
@@ -34,10 +35,12 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
       :on
       :base
       :class="
-        cn('relative w-full justify-start capitalize outline-offset-0! duration-0! focus:outline-1',
-           props.class,
+        cn(
+          'relative w-full justify-start capitalize outline-offset-0! duration-0! focus:outline-1',
+          props.class,
         )
-      ">
+      "
+    >
       <slot />
     </Button>
   </ListboxItem>

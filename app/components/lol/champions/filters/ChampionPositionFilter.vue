@@ -15,40 +15,36 @@ const {
 </script>
 
 <template>
-  <Listbox
-    v-model:model-value="cs().filters.position"
-    :multiple="false">
+  <Listbox v-model:model-value="cs().filters.position" :multiple="false">
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
         :class="
-          cn('relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap items-center items-start gap-3 gap-y-3 py-0',
-             className,
+          cn(
+            'relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap items-center items-start gap-3 gap-y-3 py-0',
+            className,
           )
-        ">
+        "
+      >
         <Button
           v-if="cs().filters.position && clear"
+          class="order-first hover:*:opacity-100"
           :variant
           :hover
           :size="size[0]"
-          class="order-first hover:*:opacity-100"
-          @click="cs().filters.position = null">
-          <icon
-            name="x"
-            class="size-4" />
+          @click="cs().filters.position = null"
+        >
+          <icon class="size-4" name="x" />
         </Button>
 
         <BaseListboxItem
-          v-for="position in championPositions.filter((p) => p.name !== 'All')"
+          v-for="position in mapPositions.filter((p) => p.name !== 'All')"
           :key="position.name"
-          class="fx-0 bg-transparent"
+          class="bg-transparent fx-0"
           :value="position.name"
-          as-child>
-          <PositionBadge
-            :variant
-            :size="size[1]"
-            :position>
-          </PositionBadge>
+          as-child
+        >
+          <PositionBadge :variant :size="size[1]" :position />
         </BaseListboxItem>
       </TransitionSlideLeft>
     </ListboxContent>

@@ -1,3 +1,5 @@
+type SortDirection = 'asc' | 'desc'
+
 export const safeObject = <T extends object>(v?: T | null): T => (v ?? {}) as T
 
 export function indexBy<T, K extends PropertyKey>(

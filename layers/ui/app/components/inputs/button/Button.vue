@@ -27,7 +27,8 @@ const props = withDefaults(defineProps<Props>(), {
         props.class,
       )
     "
-    :autofocus="false">
+    :autofocus="false"
+  >
     <slot />
   </Primitive>
 </template>

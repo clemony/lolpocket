@@ -16,11 +16,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ContextMenuItem
     v-bind="forwarded"
     :class="
-      cn('focus:border-b3 focus:bg-b3/80 focus:text-bc relative flex cursor-default items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-         inset && 'pl-8',
-         props.class,
+      cn(
+        'focus:border-b3 focus:bg-b3/80 focus:text-bc relative flex cursor-default items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        inset && 'pl-8',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ContextMenuItem>
 </template>

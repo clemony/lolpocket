@@ -18,8 +18,7 @@ const {
 }>()
 
 const tagValue = computed<ItemTag>(() => {
-  if (typeof tag !== 'string')
-    return tag
+  if (typeof tag !== 'string') return tag
 
   return itemTags.find(t => t.id === tag)
 })
@@ -44,11 +43,9 @@ const tagValue = computed<ItemTag>(() => {
     "
     :style="{
       backgroundColor: `${(is().filters.tags.length && is().filters.tags.includes(tagValue.id)) || active ? tagValue.color : 'transparent'}`,
-    }">
+    }"
+  >
     {{ tagValue.name }}
-    <icon
-      v-if="clear"
-      name="x"
-      class="size-4 text-white **:stroke-[2.6]" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </Button>
 </template>

@@ -21,7 +21,7 @@ ChartJS.register(
   LineElement,
   CategoryScale,
   PointElement,
-  LinearScale,
+  LinearScale
 )
 
 const styles = getComputedStyle(document.documentElement)
@@ -70,8 +70,5 @@ const options = {
 </script>
 
 <template>
-  <Line
-    :data="data"
-    :options="options"
-    class="z-1" />
+  <Line class="z-1" :data="data" :options="options" />
 </template>

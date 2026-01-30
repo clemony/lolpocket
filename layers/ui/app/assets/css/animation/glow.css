@@ -1,0 +1,91 @@
+@theme {
+  --animate-gradient: animate-gradient 5s ease infinite;
+  @keyframes animate-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@utility glow {
+  background: linear-gradient(
+    137deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 40%,
+    rgba(175, 212, 150, 0.7) 60%,
+    rgba(165, 226, 229, 0.7) 80%
+  );
+  background-size: 200% 200%;
+  animation: var(--animate-gradient);
+}
+
+.glow-blue {
+  background: linear-gradient(
+    137deg,
+    var(--color-ah) 0%,
+    var(--color-b1) 20%,
+    var(--color-challenger) 30%,
+    var(--color-resolve) 60%
+  );
+  background-size: 1000% 1000%;
+  animation: var(--animate-gradient) 5s ease infinite;
+}
+
+.animated-gradient {
+  animation: animateBg 5s linear infinite;
+  background-size: 200% 500%;
+  animation-direction: alternate-reverse;
+  background-repeat: repeat;
+}
+@keyframes animateBg {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.gradient {
+  background: linear-gradient(
+    125deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 40%,
+    rgba(135, 170, 206, 0.6) 50%,
+    rgba(175, 212, 150, 0.7) 64%,
+    rgba(165, 226, 229, 0.7) 78%,
+    rgba(174, 220, 242, 0.7) 100%
+  );
+  background-size: 480%;
+  transition: all 0.5s ease-in-out;
+}
+
+.gradient[data-path='Precision'] {
+  background-position: 0%;
+}
+
+.gradient[data-path='Domination'] {
+  background-position: 28%;
+}
+
+.gradient[data-path='Sorcery'] {
+  background-position: 50%;
+}
+
+.gradient[data-path='Resolve'] {
+  background-position: 75%;
+}
+
+.gradient[data-path='Inspiration'] {
+  background-position: 100%;
+}

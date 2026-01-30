@@ -2,9 +2,7 @@
 import type { TabsListProps } from 'reka-ui'
 import { TabsList } from 'reka-ui'
 
-const props = defineProps<
-  TabsListProps & { class?: HTMLAttributes['class'] }
->()
+const props = defineProps<TabsListProps & { class?: HTMLAttributes['class'] }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -14,9 +12,7 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <TabsList
-    v-bind="delegatedProps"
-    :class="cn('tabs-lift tabs', props.class)">
+  <TabsList v-bind="delegatedProps" :class="cn('tabs-lift tabs', props.class)">
     <slot />
   </TabsList>
 </template>

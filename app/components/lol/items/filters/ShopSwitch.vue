@@ -7,14 +7,10 @@ const { class: className, label = true } = defineProps<{
 
 <template>
   <label :class="cn('flex cursor-pointer items-center gap-3', className)">
-    <span
-      v-if="label === true"
-      class="text-bc/90 font-semibold">
+    <span v-if="label === true" class="text-bc/90 font-semibold">
       {{ is().filters.purchasable ? "Purchasable" : "All Items" }}
     </span>
 
-    <Switch
-      v-model:model-value="is().filters.purchasable"
-      class="dst"></Switch>
+    <Switch v-model:model-value="is().filters.purchasable" class="dst" />
   </label>
 </template>

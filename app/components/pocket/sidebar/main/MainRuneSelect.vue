@@ -18,7 +18,7 @@ const {
 const HeadingTip = resolveComponent('HeadingTip')
 const pocket = computed(() => p)
 const mainSet = computed(() =>
-  pocket.value.runes.find(s => s.id === pocket.value._runes),
+  pocket.value.runes.find(s => s.id === pocket.value._runes)
 )
 
 const open = ref(false)
@@ -27,42 +27,38 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Select
-    v-model:model-value="pocket._runes"
-    v-model:open="open">
+  <Select v-model:model-value="pocket._runes" v-model:open="open">
     <slot :open />
     <LazySelectContent
+      class="w-(--reka-select-trigger-width) min-w-54 p-0"
       :side
       :side-offset
       :align
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-(--reka-select-trigger-width) min-w-54 p-0">
+    >
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Runes
 
           <Button
+            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             variant="ghost"
             size="8"
             title="Clear main runes"
-            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
-            @click="pocket._runes === ''">
-            <icon
-              name="backspace"
-              class="size-5 **:stroke-2" />
+            @click="pocket._runes === ''"
+          >
+            <icon class="size-5 **:stroke-2" name="backspace" />
           </Button>
         </SelectLabel>
         <SelectItem
           v-for="set in pocket.runes"
           :key="set.id"
           class="h-14 p-0!"
-          :value="set.id">
-          <KeystoneAndPath
-            :set="set"
-            x-class="size-8"
-            k-class="scale-130" />
+          :value="set.id"
+        >
+          <KeystoneAndPath :set="set" x-class="size-8" k-class="scale-130" />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

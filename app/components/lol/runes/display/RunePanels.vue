@@ -13,9 +13,7 @@ const tabListClass
 
 <template>
   <div class="flex gap-16 px-12">
-    <div
-      class="flex flex-col gap-8"
-      :data-path="selectedPath">
+    <div class="flex flex-col gap-8" :data-path="selectedPath">
       <Transition
         enter-active-class="transition-all duration-500"
         enter-from-class="opacity-0 -translate-y-2"
@@ -23,16 +21,16 @@ const tabListClass
         leave-active-class="transition-all duration-500"
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in">
-        <RunesBlurb
-          :current-path="selectedPath"
-          layout-id="path1" />
+        mode="out-in"
+      >
+        <RunesBlurb :current-path="selectedPath" layout-id="path1" />
       </Transition>
 
       <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
-          :data-path="selectedPath" />
+          :data-path="selectedPath"
+        />
 
         <div :class="tabListClass">
           <label
@@ -43,24 +41,24 @@ const tabListClass
             :class="{
               'bg-b1/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':
                 path === selectedPath,
-            }">
+            }"
+          >
             <input
               v-model="selectedPath"
+              class="hidden"
               type="radio"
               :value="path"
-              class="hidden"
-              name="selected-primary" />
+              name="selected-primary"
+            >
 
             <Img
+              class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
               :src="`/img/runes/${path}.webp`"
               :alt="`${path} icon`"
-              class="
-                z-10 h-9 w-auto brightness-90 grayscale transition-all
-                duration-300 [&_img]:drop-shadow-sm
-              "
               :class="{
                 'brightness-100 grayscale-0': path === selectedPath,
-              }" />
+              }"
+            />
           </label>
         </div>
       </div>

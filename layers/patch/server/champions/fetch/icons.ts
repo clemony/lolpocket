@@ -1,10 +1,12 @@
 // look for missing champion icons by comparing local ids to community dragon ids
 
-import { Buffer } from "node:buffer"
-import fs from "node:fs"
-import path from "node:path"
-import sharp from "sharp"
-const iconsDir = path.resolve("./public/img/champions")
+import { championIndex } from '#layers/patch/shared/constants'
+import { Buffer } from 'node:buffer'
+import fs from 'node:fs'
+import path from 'node:path'
+import sharp from 'sharp'
+
+const iconsDir = path.resolve('./public/img/champions')
 
 // cdn path for latest champion metadata
 
@@ -14,16 +16,16 @@ export async function fetchMissingChampionIcons() {
   const localIds = new Set(
     fs
       .readdirSync(iconsDir)
-      .filter((f) => f.endsWith(".webp"))
-      .map((f) => Number(f.split(".")[0]))
+      .filter(f => f.endsWith('.webp'))
+      .map(f => Number(f.split('.')[0]))
   )
 
   const champs = championIndex
   // find champions missing from local set
-  const missing = champs.filter((c) => !localIds.has(c.id))
+  const missing = champs.filter(c => !localIds.has(c.id))
 
   if (missing.length === 0) {
-    console.log("🌟 all champion icons present")
+    console.log('🌟 all champion icons present')
     return
   }
 
@@ -49,7 +51,7 @@ export async function fetchMissingChampionIcons() {
       // crop + convert
       const img = sharp(buf)
       const { width, height } = await img.metadata()
-      if (!width || !height) throw new Error("bad dimensions")
+      if (!width || !height) throw new Error('bad dimensions')
 
       const left = Math.floor((width - 100) / 2)
       const top = Math.floor((height - 100) / 2)
@@ -63,7 +65,8 @@ export async function fetchMissingChampionIcons() {
 
       // nuke the png
       fs.unlinkSync(pngPath)
-    } catch (err) {
+    }
+    catch (err) {
       console.error(`❌ error on ${champ.name} (${champ.id})`, err)
     }
   }

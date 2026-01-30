@@ -8,11 +8,10 @@ const props = defineProps<{
   <span
     role="presentation"
     aria-hidden="true"
-    :class="cn('flex size-9 items-center justify-center', props.class)">
+    :class="cn('flex size-9 items-center justify-center', props.class)"
+  >
     <slot>
-      <icon
-        name="more"
-        class="size-4" />
+      <icon class="size-4" name="more" />
     </slot>
     <span class="sr-only">More</span>
   </span>

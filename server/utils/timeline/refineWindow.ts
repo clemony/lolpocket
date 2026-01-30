@@ -1,4 +1,4 @@
-import { itemRecipe } from '#layers/patch/constants'
+import { itemRecipe } from '#layers/patch/shared/constants'
 
 export function refineWindow(
   window: { events: ItemEvent[], timestamp: number },
@@ -23,8 +23,7 @@ export function refineWindow(
       refined.push(ev)
       continue
     }
-    if (ev.action !== 'ADD')
-      continue
+    if (ev.action !== 'ADD') continue
 
     const id = ev.id
     const count = ev.count ?? 1

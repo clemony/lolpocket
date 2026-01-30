@@ -33,24 +33,26 @@ const summoner = computed(() => s)
         buttonVariants({ base, variant, size, hover, on }),
         className,
       )
-    ">
+    "
+  >
     <SummonerIcon class="size-11.5 rounded-full" />
 
     <div class="flex size-full flex-col justify-center gap-0.5">
       <div class="flex items-center justify-between">
         <SummonerName
+          class="text-xxl text-bc/94 font-serif leading-none font-bold drop-shadow-sm"
           as="h1"
-          class="
-            text-xxl text-bc/94 font-serif leading-none font-bold drop-shadow-sm
-          " />
+        />
         <slot />
       </div>
       <div
         :class="
-          cn('inline-flex w-full items-center gap-4 leading-none font-normal lowercase *:align-bottom',
-             { 'justify-between': fullWidth },
+          cn(
+            'inline-flex w-full items-center gap-4 leading-none font-normal lowercase *:align-bottom',
+            { 'justify-between': fullWidth },
           )
-        ">
+        "
+      >
         <SummonerTag :summoner />
 
         <SummonerRegion :region-id="summoner.region" />

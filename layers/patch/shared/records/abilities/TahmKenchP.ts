@@ -1,0 +1,23 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:10 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "P",
+  "name": "An Acquired Taste",
+  "affects": "Self",
+  "blurb": "Innate:  Tahm Kench's  basic attacks and  Tongue Lash deal bonus magic damage based on his bonus health, and apply a  stack of An Acquired Taste against  champions that stacks up to a cap.",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4.5% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire one by one every 0.67 seconds when the duration ends.</p>"
+    },
+    {
+      "description": "Tongue Lash and Devour gain additional effects against enemies with 3 stacks, consuming them all."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/p",
+  "notes": "The passive bonus damage applies to turrets.\nWhen An Acquired Taste is applied by  Tongue Lash, the damage is dealt as an additional instance of damage (as opposed to bonus damage when applied by basic attacks).\nThis causes effects like  Bone Plating and  Bloodletter's Curse's Vile Decay to be applied twice.",
+  "spellEffects": "Proc",
+  "targeting": "Passive"
+}
+  export default ability

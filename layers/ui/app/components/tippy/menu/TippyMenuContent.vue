@@ -8,9 +8,7 @@ onMounted(() => el.value && ctx?.setContent(el.value))
 </script>
 
 <template>
-  <div
-    ref="contentEl"
-    class="tippy-content">
+  <div ref="contentEl" class="tippy-content">
     <slot />
   </div>
 </template>

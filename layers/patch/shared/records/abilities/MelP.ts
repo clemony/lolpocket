@@ -1,0 +1,28 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:54 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "P",
+  "name": "Searing Brilliance",
+  "affects": "Self, Enemies",
+  "blurb": "Innate - Overwhelm:  Mel's damaging  basic attacks and  abilities apply a  stack of Overwhelm to enemies hit for a few seconds, stacking infinitely. Each stack stores magic damage; if the total stored damage would kill the target, the next stack will consume them all to detonate the damage.",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Mel's basic attacks and abilities apply a stack of Overwhelm for each instance of damage they deal to enemies for 5 seconds, refreshing on subsequent damage instances and stacking infinitely.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overwhelm:</span> Store 50 / 60 / 70 / 80 (based on Golden Eclipse's rank) (+ 10% AP) magic damage on the affected enemy with the first stack, reduced[ to 60% ][ to 30 / 36 / 42 / 48 (based on Golden Eclipse's rank) (+ 6% AP) ]against minions. For each stack, store an additional 2 / 3 / 4 / 5 (based on Golden Eclipse's rank) (+ 0.75% AP) magic damage on the target. If the total post-mitigation damage stored exceeds the target's current health and shields, the next stack applied against them will consume them all to deal the stored damage.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Searing Brilliance:</span> Mel's ability casts each generate 3 stacks of Searing Brilliance for 5 seconds, refreshing on subsequent casts and stacking up to 9 times. Her next basic attack consumes all stacks of Searing Brilliance to additionally fire an equal number of blazing projectiles at the target. Each projectile deals 8 - 50 (based on level) (+ 5% AP) magic damage, for a total possible damage of 72 - 450 (based on level) (+ 45% AP) at maximum stacks.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/p",
+  "notes": "The first stack also benefits from the per-stack bonus stored damage.\nA threshold indicator for the currently stored damage is placed on a target's health bar, as well as a mark above their head, while any Overwhelm stacks are active. These are visible to Mel and her target(s).\nWhenever  Golden Eclipse's damage would put them below Overwhelm's threshold, the mark will darken and glow more prominently.\nThis does not take into account effects that would amplify the damage such as  Coup de Grace.\nJust before Overwhelm stacks are consumed, targets have 5 additional stacks applied to them.(bug)\nThese stacks are consumed immediately.\nOverwhelm stacks will not be consumed against  Tryndamere's  Undying Rage.",
+  "projectile": "TRUE",
+  "spellEffects": "proc",
+  "spellshieldable": "false",
+  "targeting": "Passive"
+}
+  export default ability

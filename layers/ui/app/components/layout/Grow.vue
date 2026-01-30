@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <span class="pointer-events-none grow"></span>
+  <span class="pointer-events-none grow" />
 </template>
 
 <style scoped></style>

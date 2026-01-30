@@ -8,17 +8,13 @@ const pocket = computed(() => props.pocket)
 </script>
 
 <template>
-  <PopoverItem
-    class=""
-    @click="duplicateItemSet(props.set, props.pocket.key)">
+  <PopoverItem class="" @click="duplicateItemSet(props.set, props.pocket.key)">
     <icon name="copy" />
     Duplicate
   </PopoverItem>
 
   <HoverCard>
-    <HoverCardTrigger
-      as-child
-      class="w-full">
+    <HoverCardTrigger class="w-full" as-child>
       <PopoverItem class="relative w-full">
         <!--         <span class="size-4.5 relative grid place-items-center">
           <icon
@@ -28,30 +24,24 @@ const pocket = computed(() => props.pocket)
         <icon name="arrow-curve-right" />
         Copy to Pocket
 
-        <icon
-          name="right"
-          class="absolute right-1 size-4 opacity-50" />
+        <icon class="absolute right-1 size-4 opacity-50" name="right" />
       </PopoverItem>
     </HoverCardTrigger>
 
     <LazyHoverCardContent
+      class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
       side="right"
-      class="
-        grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1
-        py-1.5
-      "
-      align="start">
+      align="start"
+    >
       <PopoverItem
         v-for="friendlyPocket in ps().pockets.filter(
           (p) => p.key !== pocket.key,
         )"
         :key="friendlyPocket.key"
         class="w-full"
-        @click="copyItemSetToPocket(friendlyPocket, props.set)">
-        <PocketIcon
-          :pocket
-          size="sm"
-          class="size-6 rounded-full" />
+        @click="copyItemSetToPocket(friendlyPocket, props.set)"
+      >
+        <PocketIcon class="size-6 rounded-full" :pocket size="sm" />
         <span class="truncate">
           {{ friendlyPocket.name }}
         </span>

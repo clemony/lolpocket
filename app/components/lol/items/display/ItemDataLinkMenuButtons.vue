@@ -22,15 +22,12 @@ const { id, name } = defineProps<{
   </label> -->
     <a
       v-tippy="'Official Wiki'"
-      class="
-        hover:bgneutral btn btn-square btn-ghost btn-sm hover:*:text-nc size-7
-      "
+      class="hover:bgneutral btn btn-square btn-ghost btn-sm hover:*:text-nc size-7"
       :href="wikiLink(name)"
       target="_blank"
-      alt="link to league wiki">
-      <icon
-        name="link-lg"
-        class="dst size-4" />
+      alt="link to league wiki"
+    >
+      <icon class="dst size-4" name="link-lg" />
     </a>
   </div>
 </template>

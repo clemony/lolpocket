@@ -1,8 +1,8 @@
 import {
-    fetchAccountByPuuid,
-    fetchRegionByPuuid,
-    fetchSummonerByPuuid,
-    resolveAccountByEither,
+  fetchAccountByPuuid,
+  fetchRegionByPuuid,
+  fetchSummonerByPuuid,
+  resolveAccountByEither,
 } from '#server/api'
 
 export default defineEventHandler(async (event) => {

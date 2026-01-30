@@ -51,7 +51,11 @@ const out = [
 ]
 
 const y = computed(() =>
-  lower.includes(k) ? `30%` : mid.includes(k) ? '20%' : '40%',
+  lower.includes(k)
+    ? `30%`
+    : mid.includes(k)
+      ? '20%'
+      : '40%'
 )
 /* , {'translate-y-10': } */
 const x = computed(() => (left.includes(k) ? '70%' : '50%'))
@@ -61,11 +65,12 @@ const x = computed(() => (left.includes(k) ? '70%' : '50%'))
   <Img
     :src="src || getSplash(k ?? id, type)"
     :ratio
-
     :class="
-      cn('overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
-         className,
+      cn(
+        'overflow-hidden rounded-lg object-cover shadow-sm drop-shadow-sm select-none',
+        className,
       )
     "
-    :alt="`${k}-Splash`" />
+    :alt="`${k}-Splash`"
+  />
 </template>

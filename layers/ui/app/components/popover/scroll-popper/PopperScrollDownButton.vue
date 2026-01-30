@@ -7,14 +7,14 @@ const props = defineProps<{
 <template>
   <button
     :class="
-      cn('bg-b1 absolute bottom-0 left-0 z-10 flex w-[calc(100%-16px)] cursor-default items-center justify-center rounded-b-xl py-1',
-         props.class,
+      cn(
+        'bg-b1 absolute bottom-0 left-0 z-10 flex w-[calc(100%-16px)] cursor-default items-center justify-center rounded-b-xl py-1',
+        props.class,
       )
-    ">
+    "
+  >
     <slot>
-      <icon
-        name="down"
-        class="ml-5.25 size-6" />
+      <icon class="ml-5.25 size-6" name="down" />
     </slot>
   </button>
 </template>

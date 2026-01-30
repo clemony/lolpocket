@@ -16,7 +16,8 @@ const { class: className } = defineProps<{
     :animate="{ opacity: 1 }"
     :exit="{ opacity: 0 }"
     :class="cn('', className)"
-    :transition="{ duration: 0.4, type: 'spring', bounce: 0.35 }">
+    :transition="{ duration: 0.4, type: 'spring', bounce: 0.35 }"
+  >
     <slot />
   </motion.div>
 </template>

@@ -7,14 +7,16 @@ const { color } = defineProps<{
 <template>
   <span class="indicator-item size-[7px]! translate-x-0.75 -translate-y-0.75">
     <span
+      class="status absolute size-[7px]! animate-ping"
       :style="{
         backgroundColor: `var(--color-${color})`,
       }"
-      class="status absolute size-[7px]! animate-ping" />
+    />
     <span
+      class="status absolute size-[7px]!"
       :style="{
         backgroundColor: `var(--color-${color})`,
       }"
-      class="status absolute size-[7px]!" />
+    />
   </span>
 </template>

@@ -11,7 +11,7 @@ const emit = defineEmits(['update:popover'])
 <template>
   <div class="flex w-full flex-col">
     <ContrastGhostButton
-      class="rounded-lg pl-2.5 text-sm btn-sm"
+      class="btn-sm rounded-lg pl-2.5 text-sm"
       @click="removeItemFromSet(props.pocket, props.set, props.item)"
     >
       <icon name="f7:delete-right" />
@@ -19,7 +19,7 @@ const emit = defineEmits(['update:popover'])
     </ContrastGhostButton>
 
     <ContrastGhostButton
-      class="rounded-lg pl-2.5 text-sm btn-sm"
+      class="btn-sm rounded-lg pl-2.5 text-sm"
       @click="emit('update:popover', 'data')"
     >
       <icon name="bi:clipboard-data" />

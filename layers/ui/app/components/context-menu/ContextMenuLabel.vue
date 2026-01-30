@@ -22,7 +22,8 @@ const delegatedProps = computed(() => {
         inset && 'pl-8',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ContextMenuLabel>
 </template>

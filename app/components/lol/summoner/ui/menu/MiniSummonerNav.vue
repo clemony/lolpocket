@@ -14,32 +14,25 @@ const { childRoutes, links, summoner } = defineProps<{
       <NavMenuHeader>
         <template #icon>
           <div class="relative">
-            <SummonerIcon
-              :summoner
-              class="rounded-field size-11 size-full"></SummonerIcon>
+            <SummonerIcon class="rounded-field size-11 size-full" :summoner />
             <SummonerLevel
-              class="
-                bg-neutral text-nc absolute -bottom-1.5 z-1 rounded-full pt-px
-                text-sm
-              " />
+              class="bg-neutral text-nc absolute -bottom-1.5 z-1 rounded-full pt-px text-sm"
+            />
           </div>
         </template>
         <template #content>
           <div class="flex w-full flex-col gap-1 py-1">
             <p
-              class="
-                inline-flex flex-nowrap items-center justify-between gap-2
-                text-nowrap
-              ">
+              class="inline-flex flex-nowrap items-center justify-between gap-2 text-nowrap"
+            >
               <SummonerName
+                class="truncate font-serif leading-none font-bold"
                 as="h4"
-                class="truncate font-serif leading-none font-bold" />
+              />
             </p>
             <p
-              class="
-                flex inline-flex w-full items-center justify-between gap-2
-                align-bottom text-sm **:leading-none [&_svg]:size-3
-              ">
+              class="flex inline-flex w-full items-center justify-between gap-2 align-bottom text-sm **:leading-none [&_svg]:size-3"
+            >
               <SummonerTag />
 
               <SummonerRegion />
@@ -55,12 +48,14 @@ const { childRoutes, links, summoner } = defineProps<{
         :key="item.name"
         variant="ghost"
         :item="item"
-        @click="navigateTo(links[item.name])">
+        @click="navigateTo(links[item.name])"
+      >
         <template #icon>
           <Icon
-            :name="String(item.meta?.icon)"
             class="absolute size-5.5 place-self-center object-center"
-            :class="cn('', item.meta?.iconStyle ?? null)" />
+            :name="String(item.meta?.icon)"
+            :class="cn('', item.meta?.iconStyle ?? null)"
+          />
         </template>
 
         <template #content>

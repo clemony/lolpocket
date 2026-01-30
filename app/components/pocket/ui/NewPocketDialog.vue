@@ -10,7 +10,7 @@ watch(
   () => tags.value,
   (newVal) => {
     console.log(newVal)
-  },
+  }
 )
 
 function clearForm() {
@@ -51,27 +51,27 @@ defineExpose({
       <div class="field-box grid size-full gap-4">
         <IconPopover
           v-model:selected-icon="selectedIcon"
+          class="size-30 cursor-pointer place-self-center"
           side="right"
           :side-offset="70"
           align="start"
           :align-offset="-136"
-          class="size-30 cursor-pointer place-self-center"
-          @update:selected-icon="(e) => (selectedIcon = e)" />
+          @update:selected-icon="(e) => (selectedIcon = e)"
+        />
 
         <div
-          class="
-            [&_label]:text-md flex size-full flex-col justify-start gap-6 px-0.5
-            pt-4
-          ">
+          class="[&_label]:text-md flex size-full flex-col justify-start gap-6 px-0.5 pt-4"
+        >
           <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
               <div class="grow">
                 <input
                   v-model="name"
+                  class="text-md size-full"
                   type="text"
                   name="pocket-name"
                   placeholder="Pocket Name"
-                  class="text-md size-full" />
+                >
               </div>
 
               <span class="flex gap-2">
@@ -79,23 +79,18 @@ defineExpose({
 
                 <RandomButton
                   v-tippy="'No brain? Meet Button.'"
-                  @click.stop="name = generateName()" />
+                  @click.stop="name = generateName()"
+                />
               </span>
             </div>
 
-            <TagsInput
-              v-model="tags"
-              class="mt-6 flex-col p-2">
+            <TagsInput v-model="tags" class="mt-6 flex-col p-2">
               <div
-                class="
-                  *:text-md flex w-full flex-row flex-wrap justify-start gap-2
-                ">
+                class="*:text-md flex w-full flex-row flex-wrap justify-start gap-2"
+              >
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
-                    <TagsInputItem
-                      v-for="tag in tags"
-                      :key="tag"
-                      :value="tag">
+                    <TagsInputItem v-for="tag in tags" :key="tag" :value="tag">
                       <TagsInputItemDelete>
                         <TagsInputItemText />
                       </TagsInputItemDelete>
@@ -119,11 +114,10 @@ defineExpose({
               </div>
 
               <TagsInputInput
+                class="text-md min-h-10 w-full rounded-md border-0 focus:border-0"
                 placeholder="optional"
-                class="
-                  text-md min-h-10 w-full rounded-md border-0 focus:border-0
-                "
-                name="pocket-tags " />
+                name="pocket-tags "
+              />
             </TagsInput>
           </div>
 
@@ -135,9 +129,10 @@ defineExpose({
 
       <DialogFooter class="mt-1 justify-start">
         <button
-          type="submit"
           class="btn text-md! btn-md btn-neutral px-6 font-medium!"
-          @click="submitForm">
+          type="submit"
+          @click="submitForm"
+        >
           Create
         </button>
       </DialogFooter>

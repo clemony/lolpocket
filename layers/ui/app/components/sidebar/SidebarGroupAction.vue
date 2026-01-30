@@ -16,12 +16,14 @@ const props = defineProps<
     :as="as"
     :as-child="asChild"
     :class="
-      cn('hover:text-sidebar-bc hover:bg-b3 text-bc ring-bc/60 absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 ring outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
-         `after:absolute after:-inset-2 md:after:hidden`,
-         'group-data-[collapsible=icon]:hidden',
-         props.class,
+      cn(
+        'hover:text-sidebar-bc hover:bg-b3 text-bc ring-bc/60 absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 ring outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
+        `after:absolute after:-inset-2 md:after:hidden`,
+        'group-data-[collapsible=icon]:hidden',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

@@ -1,8 +1,7 @@
 export function useMatchChampions(puuid: string, matches: MatchData[]) {
   console.log('matches: ', matches)
   console.log('puuid: ', puuid)
-  if (!puuid)
-    return
+  if (!puuid) return
 
   const championStats = new Map<
     number,
@@ -35,13 +34,12 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
     matches.forEach((match, index) => {
       const player = match.participants.find(p => p.puuid === puuid)
       const champ = player?.championId
-      if (!champ)
-        return
+      if (!champ) return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
           id: champ,
-          name: ix().champNameById(champ),
+          name: champNameById(champ),
           assists: 0,
           deaths: 0,
           gamePatches: [],
@@ -89,7 +87,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
         const avgDeaths = stats.deaths / stats.games
         const avgAssists = stats.assists / stats.games
         const champion = computed(() => {
-          return ix().championByKey(ix().champKeyById(championId))
+          return championByKey(champKeyById(championId))
         })
 
         return {
@@ -99,7 +97,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
           avgKp: Number((avgKP * 100).toFixed(2)),
           bayesianWinrate,
           champion: stats.name,
-          championId: championId,
+          championId,
           gamePatches: stats.gamePatches,
           games: stats.games,
           kda: Number(kda.toFixed(2)),

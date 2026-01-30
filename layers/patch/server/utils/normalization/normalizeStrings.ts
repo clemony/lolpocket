@@ -1,8 +1,7 @@
 import { toValidIdentifier } from './validateIdentifier'
 
 export function normalize(value: unknown): string {
-  if (typeof value !== 'string' || !value.trim())
-    return ''
+  if (typeof value !== 'string' || !value.trim()) return ''
 
   let str = value.replace(/_/g, ' ')
   str = str.replace(/per_second/gi, '/ s')
@@ -19,8 +18,7 @@ export function normalizeArray(input: unknown): string[] {
 }
 
 export function normalizeName(input: string): string {
-  if (typeof input !== 'string')
-    return ''
+  if (typeof input !== 'string') return ''
 
   // Remove unwanted punctuation
   const cleaned = toValidIdentifier(input.replace(/\(.*\)/g, ''))
@@ -31,8 +29,7 @@ export function normalizeName(input: string): string {
     .filter(Boolean) // Remove empty strings
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
 
-  if (capitalizedWords.length === 0)
-    return ''
+  if (capitalizedWords.length === 0) return ''
 
   // Lowercase the first letter of the entire string
   return capitalizedWords.join('')

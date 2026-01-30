@@ -15,9 +15,10 @@ onMounted(() => {
 <template>
   <div class="flex gap-3">
     <PocketIcon
+      class="rounded-md **:rounded-md"
       :pocket="pocket"
       :url="pocket.icon"
-      class="rounded-md **:rounded-md" />
+    />
 
     <div class="flex flex-col gap-3">
       <h5 class="pt-0.5 text-lg! leading-none tracking-tight">
@@ -36,11 +37,7 @@ onMounted(() => {
         <Grow />
 
         <NuxtLink :to="`/pocket/${pocket.key}`">
-          <Button
-            ref="viewButton"
-            variant="outline"
-            size="sm"
-            class="">
+          <Button ref="viewButton" class="" variant="outline" size="sm">
             View
           </Button>
         </NuxtLink>
@@ -49,6 +46,4 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

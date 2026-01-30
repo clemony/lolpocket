@@ -1,10 +1,8 @@
-
-
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
-  const runes = computed(() => ix().runes)
+  const runes = computed(() => runeIndex)
 
   const playerKeystone = computed(() =>
-    ix().runeById(player.value.perks.keystone)
+    runeById(player.value.perks.keystone)
   )
 
   const playerPaths = runeToPath[player.value?.runes?.secondary] ?? null
@@ -24,15 +22,13 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
 
   const getPrimarySlots = (set: ComputedRef<any>) =>
     computed(() => {
-      if (!set.value?.[0]?.path)
-        return []
+      if (!set.value?.[0]?.path) return []
       return Object.values(runes.value?.[set.value[0].path] ?? {}).slice(1, 4)
     })
 
   const getSecondarySlots = (set: ComputedRef<any>) =>
     computed(() => {
-      if (!set.value?.[1]?.path)
-        return []
+      if (!set.value?.[1]?.path) return []
       return Object.values(runes.value?.[set.value[1].path] ?? {}).slice(1, 4)
     })
 

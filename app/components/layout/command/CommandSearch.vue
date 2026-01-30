@@ -21,23 +21,25 @@ watchEffect(() => {
 <template>
   <button
     v-tippy="'Search'"
+    class=""
     :class="
-      cn('group hover:ringneutral/50 border-b4/60 bg-b1/50 z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center self-center rounded-xl border pr-2 pl-2.75 text-sm text-nowrap inset-shadow-xs transition-colors duration-150 hover:ring-1',
-         props.class,
+      cn(
+        'group hover:ringneutral/50 border-b4/60 bg-b1/50 z-1 mx-1 flex h-8 w-20 cursor-text! flex-nowrap items-center self-center rounded-xl border pr-2 pl-2.75 text-sm text-nowrap inset-shadow-xs transition-colors duration-150 hover:ring-1',
+        props.class,
       )
     "
-    class=""
-    @click.stop="ui().commandOpen = true">
+    @click.stop="ui().commandOpen = true"
+  >
     <span class="relative -left-0.25 grid size-5 place-items-center">
       <icon
+        class="dst size-4.75 shrink-0 opacity-60"
         name="weui:search-filled"
-        class="dst size-4.75 shrink-0 opacity-60" />
+      />
     </span>
 
     <span
-      class="
-        text-bc/60 mt-px grow truncate text-left font-medium tracking-tight
-      ">
+      class="text-bc/60 mt-px grow truncate text-left font-medium tracking-tight"
+    >
       <slot />
     </span>
 

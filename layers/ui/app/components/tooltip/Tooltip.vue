@@ -1,16 +1,55 @@
 <script setup lang="ts">
+const { side = 'top', arrow = true, class: className, icon, img, text } = defineProps<{
+  class?: HTMLAttributes['class']
+  text?: string
+  img?: string
+  icon?: string
+  arrow?: boolean
+  side?: Side
+}>()
+
+const open = ref(false)
+const anchor = ref({ x: 0, y: 0 })
+
+const reference = computed(() => ({
+  getBoundingClientRect: () =>
+    ({
+      width: 0,
+      bottom: anchor.value.y,
+      height: 0,
+      left: anchor.value.x,
+      right: anchor.value.x,
+      top: anchor.value.y,
+      ...anchor.value
+    } as DOMRect)
+}))
 </script>
 
 <template>
-  <Tooltip
-    arrow
-    :ui="{
-      content: cn(
-      'animate-none',
-      'py-0.75 px-2 transition-discrete text-[0.9rem] text-nc font-medium   flex items-center ring-neutral h-max max-h-80 max-w-104 border-tint-neutral/30 inset-shadow-white/10 bg-neutral/86 text-nc gap-1 backdrop-blur-sm p-0 shadow-sm rounded-lg ring cursor-default select-none pointer-events-auto'),
-      arrow: 'scale-y-100 scale-x-100 ',
-    }"
+  <UTooltip
+    :open="open"
+    :reference="reference"
+    :arrow
+    :content="{ side, sideOffset: 14, updatePositionStrategy: 'always' }"
   >
-    <slot />
-  </Tooltip>
+    <div
+      :class="cn('', className)"
+      @pointerenter="open = true"
+      @pointerleave="open = false"
+      @pointermove="(ev: PointerEvent) => {
+        anchor.x = ev.clientX
+        anchor.y = ev.clientY
+      }"
+    >
+      <slot />
+    </div>
+
+    <template #content>
+      <slot name="content">
+        <Img v-if="img" loading-type="spinner" :src="img" :alt="`${text}-icon`" class="size-5 rounded-full" />
+        <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
+        {{ text }}
+      </slot>
+    </template>
+  </UTooltip>
 </template>

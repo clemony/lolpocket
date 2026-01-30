@@ -9,12 +9,9 @@ const isOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <LazyPopoverContent
-    align="start"
-    class="px-3 py-2">
-    <PopoverArrow
-      variant="base"
-      class="*:last:fill-b1" /><!--
+  <LazyPopoverContent class="px-3 py-2" align="start">
+    <PopoverArrow class="*:last:fill-b1" variant="base" />
+    <!--
       :summoner="state.summoner.value" -->
     hi wtf
     <!--     <SummonerCardSmall

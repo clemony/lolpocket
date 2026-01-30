@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const {
-  api,
   class: className,
   size = '9',
   tooltipPlacement = 'bottom',
@@ -9,7 +8,6 @@ const {
   warning,
 } = defineProps<{
   class?: HTMLAttributes['class']
-  api: SummonerApi
   sidebar?: boolean
   warning?: boolean
   variant?: ButtonVariants['variant']
@@ -28,17 +26,24 @@ const tippy = {
 // @todo finish scripts block and report
 
 const btnClass = 'fx-0!'
+const { summoner } = storeToRefs(s_session())
 </script>
 
 <template>
   <div
-    :class="cn('grid auto-cols-fr grid-flow-col grid-rows-2 items-center gap-x-1 gap-y-1.5', className)">
+    :class="
+      cn(
+        'grid auto-cols-fr grid-flow-col grid-rows-2 items-center gap-x-1 gap-y-1.5',
+        className,
+      )
+    "
+  >
     <UpdateSummoner
       v-if="update"
-      :api
-      class="**:text-nc! col-span-4!"
+      class="col-span-4! **:text-nc!"
       variant="neutral"
-      :size />
+      :size
+    />
 
     <Tooltip text="Report">
       <Button
@@ -47,19 +52,14 @@ const btnClass = 'fx-0!'
         tabindex="-1"
         :class="btnClass"
         :variant
-        :summoner="api?.summoner">
-        <icon
-          name="warning"
-          class="size-5.5" />
+        :summoner="summoner"
+      >
+        <icon class="size-5.5" name="warning" />
       </Button>
     </Tooltip>
 
     <Tooltip text="Block">
-      <BlockButton
-        :class="btnClass"
-        :size
-        :variant
-        :summoner="api?.summoner" />
+      <BlockButton :class="btnClass" :size :variant :summoner="summoner" />
     </Tooltip>
 
     <Tooltip text="Message">
@@ -67,13 +67,15 @@ const btnClass = 'fx-0!'
         :class="btnClass"
         :size
         :variant
-        :summoner="api?.summoner" />
+        :summoner="summoner"
+      />
     </Tooltip>
 
     <FollowButton
       :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-1', btnClass)"
       :variant
       :size
-      :summoner="api?.summoner" />
+      :summoner="summoner"
+    />
   </div>
 </template>

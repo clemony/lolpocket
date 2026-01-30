@@ -12,19 +12,19 @@ const props = defineProps<
 >()
 const delegatedProps = reactiveOmit(
   props,
-  'class' /* 'variant', 'base', 'size' */,
+  'class' /* 'variant', 'base', 'size' */
 )
 const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <SliderTrack
-    :class="
-      cn(tabListVariants({ color, orientation, size }), props.class)
-    "
-    v-bind="forwarded">
+    v-bind="forwarded"
+    :class="cn(tabListVariants({ color, orientation, size }), props.class)"
+  >
     <SliderRange
-      class="bg-neutral absolute h-full data-[orientation=vertical]:w-full" />
+      class="bg-neutral absolute h-full data-[orientation=vertical]:w-full"
+    />
     <slot />
   </SliderTrack>
 </template>

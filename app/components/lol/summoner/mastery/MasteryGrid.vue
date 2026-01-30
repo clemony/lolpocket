@@ -35,12 +35,10 @@ const prevRows = shallowRef<ChampionStatsAndMastery[]>([])
 watch(
   () => champions,
   (next) => {
-    if (!gridApi.value)
-      return
+    if (!gridApi.value) return
 
     const prev = prevRows.value
-    if (prev === next)
-      return
+    if (prev === next) return
 
     const prevMap = new Map(prev.map(r => [r.championId, r]))
     const nextMap = new Map(next.map(r => [r.championId, r]))
@@ -50,14 +48,12 @@ watch(
     const remove: ChampionStatsAndMastery[] = []
 
     for (const row of next) {
-      if (!prevMap.has(row.championId))
-        add.push(row)
+      if (!prevMap.has(row.championId)) add.push(row)
       else update.push(row)
     }
 
     for (const row of prev) {
-      if (!nextMap.has(row.championId))
-        remove.push(row)
+      if (!nextMap.has(row.championId)) remove.push(row)
     }
 
     if (add.length || update.length || remove.length) {
@@ -70,7 +66,9 @@ watch(
   { flush: 'post' }
 )
 
-const gridOptions: GridOptions<Partial<ChampionStatsAndMastery> & Partial<ChampionMastery>> = {
+const gridOptions: GridOptions<
+  Partial<ChampionStatsAndMastery> & Partial<ChampionMastery>
+> = {
   ...globalGridOptions,
   hidePaddedHeaderRows: true,
   animateRows: true,
@@ -79,12 +77,14 @@ const gridOptions: GridOptions<Partial<ChampionStatsAndMastery> & Partial<Champi
   defaultColDef: {
     initialHide: false,
     minWidth: 50,
-    cellClass: 'items-center px-0 text-center! justify-center h-full! flex self-center font-semibold',
+    cellClass:
+      'items-center px-0 text-center! justify-center h-full! flex self-center font-semibold',
     cellClassRules: {
       'opacity-10': params => params.value === 0 || params.value === '0',
     },
     flex: 1,
-    headerClass: 'p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8',
+    headerClass:
+      'p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8',
     sortingOrder: ['desc', 'asc', null],
     wrapHeaderText: true,
   },
@@ -95,7 +95,10 @@ const gridOptions: GridOptions<Partial<ChampionStatsAndMastery> & Partial<Champi
   rowHeight: 50,
 }
 
-const colDefs: (ColDef<ChampionStatsAndMastery> | ColGroupDef<ChampionStatsAndMastery>)[] = useStatGrid()
+const colDefs: (
+  | ColDef<ChampionStatsAndMastery>
+  | ColGroupDef<ChampionStatsAndMastery>
+)[] = useStatGrid()
 
 function onGridReady(params: GridReadyEvent) {
   gridApi.value = params.api
@@ -123,11 +126,10 @@ ModuleRegistry.registerModules([
 <template>
   <AgGridVue
     v-if="champions"
-    data-theme="neutral line"
     class="mx-auto min-h-screen w-full self-start"
+    data-theme="neutral line"
     :tooltip-show-delay="100"
     :grid-options="gridOptions"
-
     :theme="theme"
     dom-layout="autoHeight"
     :column-defs="colDefs"

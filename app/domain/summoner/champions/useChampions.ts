@@ -13,7 +13,7 @@ export function useChampions({
     )
 
     for (const p of playerMatches) {
-      const champ = ix().champNameById(p.championId)
+      const champ = champNameById(p.championId)
       counts[champ] = (counts[champ] || 0) + 1
     }
 
@@ -25,7 +25,7 @@ export function useChampions({
     if (champ) {
       return {
         key: champ,
-        name: ix().champNameByKey(champ),
+        name: champNameByKey(champ),
         splash: getSplash(champ, 'centered'),
       }
     }

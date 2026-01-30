@@ -16,11 +16,7 @@ const variants: Record<string, Record<string, string | number>> = {
 </script>
 
 <template>
-  <Motion
-    as-child
-    :variants="variants">
-    <icon
-      name="right"
-      :class="cn('shrink-0 stroke-[1.2]', className)" />
+  <Motion as-child :variants="variants">
+    <icon name="right" :class="cn('shrink-0 stroke-[1.2]', className)" />
   </Motion>
 </template>

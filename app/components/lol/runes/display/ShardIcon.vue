@@ -1,19 +1,34 @@
 <script lang="ts" setup>
-const { id, class: className, color } = defineProps<{
+const {
+  id,
+  class: className,
+  color,
+} = defineProps<{
   class?: HTMLAttributes['class']
   id: string | number
   color?: boolean
 }>()
+
+/* :data-color="shardRegistry.sh[shardById[id]]." */
 </script>
 
 <template>
   <Icon
-    :data-color="shardColor[id]"
+
     :name="`shard:${id}`"
-    :class="cn('dxs drop-shadow-black/30',
-               {
-                 '!size-4.5': ![5011, 5010, 5007].includes(typeof id === 'string' ? parseInt(id) : id),
-                 '!size-3.75': [5011, 5010, 5007].includes(typeof id === 'string' ? parseInt(id) : id),
-               },
-               className)" />
+    :class="
+      cn(
+        'dxs drop-shadow-black/30',
+        {
+          'size-4.5!': ![5011, 5010, 5007].includes(
+            typeof id === 'string' ? parseInt(id) : id,
+          ),
+          'size-3.75!': [5011, 5010, 5007].includes(
+            typeof id === 'string' ? parseInt(id) : id,
+          ),
+        },
+        className,
+      )
+    "
+  />
 </template>

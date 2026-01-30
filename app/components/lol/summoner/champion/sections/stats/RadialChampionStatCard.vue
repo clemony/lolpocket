@@ -8,7 +8,9 @@ const { title, icon } = defineProps<{
 </script>
 
 <template>
-  <div class="relative grid aspect-square size-44 place-items-center select-none">
+  <div
+    class="relative grid aspect-square size-44 place-items-center select-none"
+  >
     <div
       class="radial-progress dss absolute aspect-square"
       :style="{
@@ -17,7 +19,8 @@ const { title, icon } = defineProps<{
         '--thickness': '0.6rem',
       }"
       :aria-valuenow="value"
-      role="progressbar">
+      role="progressbar"
+    >
       <div class="absolute -translate-y-1 place-self-center leading-7">
         <div class="text-xs font-medium">
           {{ title }}

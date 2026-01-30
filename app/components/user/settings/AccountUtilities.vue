@@ -8,15 +8,13 @@ const classObject
 </script>
 
 <template>
-  <div
-    class="relative grid h-fit w-full px-2 py-3 *:w-full **:text-sm">
-    <SheetClose
-      :class="classObject"
-      @click="navigateTo('/about')">
+  <div class="relative grid h-fit w-full px-2 py-3 *:w-full **:text-sm">
+    <SheetClose :class="classObject" @click="navigateTo('/about')">
       <IconWrapper>
         <icon
+          class="absolute top-0 -left-0.5 size-5.75"
           name="solar:cat-outline"
-          class="absolute top-0 -left-0.5 size-5.75" />
+        />
       </IconWrapper>
       About & Cats
     </SheetClose>
@@ -24,21 +22,15 @@ const classObject
     <LazySettingsSheet>
       <SheetClose :class="classObject">
         <IconWrapper>
-          <icon
-            name="gear-solid"
-            class="dst size-4.75 opacity-60" />
+          <icon class="dst size-4.75 opacity-60" name="gear-solid" />
         </IconWrapper>
         Settings
       </SheetClose>
     </LazySettingsSheet>
 
-    <SheetClose
-      :class="classObject"
-      @click="useSignOut()">
+    <SheetClose :class="classObject" @click="useSignOut()">
       <IconWrapper>
-        <icon
-          name="mdi:sign-out"
-          class="dst absolute left-0.25 size-4.75" />
+        <icon class="dst absolute left-0.25 size-4.75" name="mdi:sign-out" />
       </IconWrapper>
       Sign Out
     </SheetClose>
@@ -49,7 +41,8 @@ const classObject
 
     <LazyAdminSheet
       v-if="useSupabaseUser().value.role === 'admin'"
+      class="pointer-events-none absolute -right-46 bottom-4"
       :account="account"
-      class="pointer-events-none absolute -right-46 bottom-4" />
+    />
   </div>
 </template>

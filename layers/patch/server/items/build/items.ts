@@ -1,34 +1,37 @@
-import fs from "node:fs"
-import path from "node:path"
-import stripTags from "striptags"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import stripTags from 'striptags'
+import { markUpdate } from '../../misc/markUpdate'
 import {
   formatStats,
   handleWikiText,
-  i_DIR,
   ludensPreProcess,
-  markUpdate,
   normalizeItemData,
   stripEmpty,
-} from "../../utils"
+} from '../../utils'
 
 // server
-const itemLiteOutput = path.resolve(`${i_DIR}raw/items-lite.json`)
-const tagsOutput = path.resolve(`${i_DIR}raw/unique-tags.json`)
-const ranksOutput = path.resolve(`${i_DIR}raw/unique-ranks.json`)
+const itemLiteOutput = resolve(`./layers/patch/server/items/raw/items-lite.json`)
+const tagsOutput = resolve(`./layers/patch/server/items/raw/unique-tags.json`)
+const ranksOutput = resolve(`./layers/patch/server/items/raw/unique-ranks.json`)
 
 // shared
-const outputIndex = path.resolve("./layers/domain/constants/items/item-index.ts")
-const outputLitePath = path.resolve("./layers/domain/records/items-lite.ts")
-const itemOutputDir = path.resolve("./layers/domain/records/items/")
+const outputIndex = resolve(
+  './layers/patch/shared/constants/items/itemIndex.ts'
+)
+const outputLitePath = resolve(
+  './layers/patch/shared/records/itemsLite.ts'
+)
+const itemOutputDir = resolve('./layers/patch/shared/records/items/')
 
 // input
-const maPath = path.resolve(`${i_DIR}raw/items.json`)
-const ddPath = path.resolve(`${i_DIR}raw/dd-items.json`)
-const ddItems = JSON.parse(fs.readFileSync(ddPath, "utf-8"))
-const maItems = JSON.parse(fs.readFileSync(maPath, "utf-8"))
+const maPath = resolve(`./layers/patch/server/items/raw/items.json`)
+const ddPath = resolve(`./layers/patch/server/items/raw/dd-items.json`)
+const ddItems = JSON.parse(fs.readFileSync(ddPath, 'utf-8'))
+const maItems = JSON.parse(fs.readFileSync(maPath, 'utf-8'))
 const fullData = mergeItems(maItems, ddItems)
 
-const index: Record<string, ItemIndex> = {}
+const index: Record<string, Index> = {}
 const simplified: Record<string, ItemLite> = {}
 const uniqueTags = new Set<string>()
 const uniqueRanks = new Set<string>()
@@ -69,9 +72,9 @@ function mergeItems(
       name: ddItem.name,
       description: ddItem.description,
 
+      gold: ddItem.gold ?? maItem?.gold,
       // DD structural truth
       maps: ddItem.maps ?? maItem?.maps,
-      gold: ddItem.gold ?? maItem?.gold,
 
       // Recipes only if MA knows them
       buildsFrom: expandIds(maItem?.buildsFrom),
@@ -89,7 +92,7 @@ async function buildItems() {
       console.warn(`⚠️ skipping item ${id} — missing name`)
       continue
     }
-    //if (item.id === 2146) continue
+    // if (item.id === 2146) continue
 
     const sharedVars = new Map<string, string>()
 
@@ -97,29 +100,30 @@ async function buildItems() {
     const { maps, rank, tags } = normalizeItemData(item)
 
     // Collect unique metadata
-    tags.forEach((t) => uniqueTags.add(t))
-    rank.forEach((r) => uniqueRanks.add(r))
+    tags.forEach(t => uniqueTags.add(t))
+    rank.forEach(r => uniqueRanks.add(r))
 
     index[id] = {
       id: item.id,
-      key: "item",
+      key: 'item',
       name: item.name,
     }
 
     // Enrich the "lite" output
     simplified[id] = stripEmpty({
       id: item.id,
-      key: "item",
+      key: 'item',
       name: item.name,
       aka: item?.nicknames,
-      maps,
-      recipe:
-        item.buildsFrom?.length ?
-          item.buildsFrom?.flatMap((i: { id: number }) => i.id)
-        : item.specialRecipe ? [item.specialRecipe]
-        : null,
       gold: item.gold,
-      rank: rank?.[0] ?? "",
+      maps,
+      rank: rank?.[0] ?? '',
+      recipe:
+        item.buildsFrom?.length
+          ? item.buildsFrom?.flatMap((i: { id: number }) => i.id)
+          : item.specialRecipe
+            ? [item.specialRecipe]
+            : null,
       stats,
       tags,
     })
@@ -144,10 +148,10 @@ async function buildItems() {
       (item.passives ?? []).map(async (p: any) => {
         const { stats, ...rest } = p
 
-        const text =
-          item.id === 6655 && p.effects?.includes("Shot Charges") ?
-            ludensPreProcess(p.effects)
-          : p.effects
+        const text
+          = item.id === 6655 && p.effects?.includes('Shot Charges')
+            ? ludensPreProcess(p.effects)
+            : p.effects
 
         return {
           ...rest,
@@ -157,32 +161,34 @@ async function buildItems() {
     )
 
     const {
-      iconOverlay,
-      tier,
-      shop,
       icon,
-      simpleDescription,
+      iconOverlay,
       mythic,
+      shop,
+      simpleDescription,
+      tier,
       ...rest
     } = item
 
-    const description = stripTags(stripTags(item.description, "<br>"), "", "\n")
-      .replace(/^\n\n/, "")
-      .replace(/\n\n\n\n/g, "\n\n")
+    const description = stripTags(stripTags(item.description, '<br>'), '', '\n')
+      .replace(/^\n\n/, '')
+      .replace(/\n\n\n\n/g, '\n\n')
 
     const cleanedItem = stripEmpty({
       ...rest,
       active: expandedActive,
-      passives: expandedPassives,
       description,
       maps,
+      passives: expandedPassives,
       rank: rank?.[0],
       stats: stats ?? [],
     })
 
     fs.writeFileSync(
-      path.resolve(itemOutputDir, `${item.id}.ts`),
+      resolve(itemOutputDir, `${item.id}.ts`),
       `// ${markUpdate()}
+      import type { Item } from "#shared/types"
+
       const item: Item =  ${JSON.stringify(cleanedItem, null, 2)}
 export default item`
     )
@@ -192,12 +198,14 @@ export default item`
   fs.writeFileSync(
     outputIndex,
     `// ${markUpdate()}
+import type { Index } from "#shared/types"
 
-export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`
+export const itemIndex: Index[] = ${JSON.stringify(Object.values(index), null, 2)}`
   )
   fs.writeFileSync(
     outputLitePath,
     `// ${markUpdate()}
+import type { ItemLite } from "#shared/types"
 
 export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
@@ -214,6 +222,6 @@ export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified),
 
 buildItems()
 
-console.log("✅ items-lite.json written")
-console.log("📁 individual item files written to ./server/data/items/")
-console.log("🔖 unique-tags.json and unique-ranks.json written")
+console.log('✅ items-lite.json written')
+console.log('📁 individual item files written to ./server/data/items/')
+console.log('🔖 unique-tags.json and unique-ranks.json written')

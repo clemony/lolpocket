@@ -15,9 +15,7 @@ const forwarded = useForwardPropsEmits(delegated, emit)
 </script>
 
 <template>
-  <ListboxItem
-    v-bind="forwarded"
-    :class="cn('', props.class)">
+  <ListboxItem v-bind="forwarded" :class="cn('', props.class)">
     <slot />
   </ListboxItem>
 </template>

@@ -28,11 +28,13 @@ const delegatedProps = computed(() => {
   <Label
     v-bind="delegatedProps"
     :class="
-      cn('group/label text-md leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-         labelVariants({ base, variant, size, hover, on }),
-         props.class,
+      cn(
+        'group/label text-md leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+        labelVariants({ base, variant, size, hover, on }),
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Label>
 </template>

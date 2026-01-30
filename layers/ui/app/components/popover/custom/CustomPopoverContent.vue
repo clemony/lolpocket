@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useForwardProps } from 'reka-ui'
-
 defineOptions({
   inheritAttrs: false,
 })
@@ -23,11 +21,13 @@ const emit = defineEmits(['interact-outside'])
     :align="props.align"
     :side="props.side"
     :class="
-      cn('bgneutral/86 border-accent! text-nc/80 rounded-xl! border backdrop-blur-lg backdrop-brightness-175',
-         props.class,
+      cn(
+        'bgneutral/86 border-accent! text-nc/80 rounded-xl! border backdrop-blur-lg backdrop-brightness-175',
+        props.class,
       )
     "
-    @interact-outside="emit('interact-outside')">
+    @interact-outside="emit('interact-outside')"
+  >
     <slot />
   </PopoverContent>
 </template>

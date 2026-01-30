@@ -1,7 +1,5 @@
 import type { ConcreteComponent } from 'vue'
 
-
-
 export const SECTION_IDS = [
   'summary',
   'spells',

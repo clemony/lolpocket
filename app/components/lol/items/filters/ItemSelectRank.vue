@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const ranks = computed (() => Object.keys(itemRankColor))
+const ranks = computed(() => Object.keys(itemRankColor))
 console.log('🌱 - ranks:', ranks)
 function onClick(rank: string): void {
-  if (rank === is().filters.rank)
-    is().filters.rank = null
+  if (rank === is().filters.rank) is().filters.rank = null
 }
 </script>
 
@@ -12,16 +11,18 @@ function onClick(rank: string): void {
     <Label
       v-for="rank in Object.keys(itemRankColor)"
       :key="rank"
+      class="justify-start gap-4! pl-3! capitalize shadow-none"
       variant="ghost"
       size="sm"
-      class="justify-start gap-4! pl-3! capitalize shadow-none">
+    >
       <input
         v-model="is().filters.rank"
+        class="peer hidden"
         type="radio"
         name="item-rank"
         :value="rank"
-        class="peer hidden"
-        @click="onClick(rank)" />
+        @click="onClick(rank)"
+      >
 
       <span class="grow">
         {{ rank }}
@@ -38,8 +39,9 @@ function onClick(rank: string): void {
       </span> -->
       <icon
         v-if="is().filters.rank === rank"
+        class="dst size-6"
         name="tick-sm"
-        class="dst size-6" />
+      />
     </Label>
   </div>
 </template>

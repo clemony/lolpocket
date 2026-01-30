@@ -21,40 +21,35 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="
-        data-[state=open]:animate-in data-[state=closed]:animate-out
-        data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0
-        z-50 grid place-items-center overflow-y-auto bg-black/80
-      ">
+      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-black/80"
+    >
       <DialogContent
+        v-bind="forwarded"
         :class="
-          cn('border-border bg-b1 relative z-50 my-8 grid w-full max-w-lg gap-4 border p-6 shadow-lg duration-200 sm:rounded-lg md:w-full',
-             props.class,
+          cn(
+            'border-border bg-b1 relative z-50 my-8 grid w-full max-w-lg gap-4 border p-6 shadow-lg duration-200 sm:rounded-lg md:w-full',
+            props.class,
           )
         "
-        v-bind="forwarded"
         @pointer-down-outside="
           (event) => {
-            const originalEvent = event.detail.originalEvent;
-            const target = originalEvent.target as HTMLElement;
+            const originalEvent = event.detail.originalEvent
+            const target = originalEvent.target as HTMLElement
             if (
               originalEvent.offsetX > target.clientWidth
               || originalEvent.offsetY > target.clientHeight
             ) {
-              event.preventDefault();
+              event.preventDefault()
             }
           }
-        ">
+        "
+      >
         <slot />
 
         <DialogClose
-          class="
-            hover:bg-b3 absolute top-4 right-4 rounded-md p-0.5
-            transition-colors
-          ">
-          <icon
-            name="x-sm"
-            class="size-4" />
+          class="hover:bg-b3 absolute top-4 right-4 rounded-md p-0.5 transition-colors"
+        >
+          <icon class="size-4" name="x-sm" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

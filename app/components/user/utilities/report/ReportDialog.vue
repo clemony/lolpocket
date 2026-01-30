@@ -29,8 +29,7 @@ const {
 
 const onSubmit = handleSubmit((values) => {
   console.log('🌱 - values:', values)
-  if (!comment.content.content.length)
-    return console.log('🚫 Error')
+  if (!comment.content.content.length) return console.log('🚫 Error')
   const content_text = extractReadableText(comment.content.content[0])
   console.log('🌱 - onSubmit - contentText:', content_text)
 
@@ -53,76 +52,55 @@ const onSubmit = handleSubmit((values) => {
   return validated
 })
 
-defineExpose({
-
-})
+defineExpose({})
 </script>
 
 <template>
   <Dialog
     v-model:open="ts().reportOpen"
     :modal="true"
-    @update:open="!ts().reportOpen ? resetForm() : null">
-    <slot
-      v-if="button"
-      :report="ts().report()">
+    @update:open="!ts().reportOpen ? resetForm() : null"
+  >
+    <slot v-if="button" :report="ts().report()">
       <DialogTrigger as-child>
-        <Button
-          size="auto"
-          variant="link"
-          class="text-xs">
+        <Button class="text-xs" size="auto" variant="link">
           Report
         </Button>
       </DialogTrigger>
     </slot>
     <LazyDialogContent class="h-max max-w-172 px-7 pt-8">
       <DialogHeader>
-        <DialogTitle> Report Card </DialogTitle>
+        <DialogTitle>Report Card</DialogTitle>
         <DialogDescription class="text-bc text-sm">
           Report offensive, negative, or disruptive content. Please fill out the
           form to clarify and give additional context.
         </DialogDescription>
       </DialogHeader>
 
-      <form
-        class="mt-2 grid auto-rows-max gap-1"
-        @submit="onSubmit">
+      <form class="mt-2 grid auto-rows-max gap-1" @submit="onSubmit">
         <!-- option checkbox items -->
-        <template
-          v-for="option in reportOptions"
-          :key="option.id">
-          <CheckboxItemField
-            v-if="option?.id !== 'other'"
-            :values
-            :option />
+        <template v-for="option in reportOptions" :key="option.id">
+          <CheckboxItemField v-if="option?.id !== 'other'" :values :option />
 
-          <InputOptionField
-            v-else
-            :values
-            :option />
+          <InputOptionField v-else :values :option />
         </template>
 
         <!-- separator  -->
         <Separator class="my-4 opacity-70" />
         <TextAreaField
           placeholder="Any comments, context, or messages to clarify the situation?"
-          optional />
+          optional
+        />
         <DialogFooter class="flex w-full items-center">
           <TransitionScalePop
             v-if="errorBag?.options?.length"
-            class="
-              text-shade-domination/8 mr-2 flex items-center gap-2 text-sm
-              leading-none
-            ">
+            class="text-shade-domination/8 mr-2 flex items-center gap-2 text-sm leading-none"
+          >
             <icon
+              class="text-shade-domination/8 inline size-4.5 align-bottom font-medium"
               name="error"
-              class="
-                text-shade-domination/8 inline size-4.5 align-bottom font-medium
-              " />
-            <span
-              v-for="(reason, i) in errorBag.options"
-              :key="i"
-              class="">
+            />
+            <span v-for="(reason, i) in errorBag.options" :key="i" class="">
               {{ reason }}
             </span>
           </TransitionScalePop>
@@ -130,7 +108,8 @@ defineExpose({
             size="9"
             type="submit"
             variant="neutral"
-            @click.stop.prevent="validate()">
+            @click.stop.prevent="validate()"
+          >
             Submit Report
           </Button>
         </DialogFooter>

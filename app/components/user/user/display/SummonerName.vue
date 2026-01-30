@@ -14,11 +14,9 @@ const {
   }
 >()
 const name = computed(() => {
-  if (summoner)
-    return summoner.name
+  if (summoner) return summoner.name
   if (as()?.user)
     return (as()?.account?.name || as()?.account?.username) ?? 'Summoner'
-
   else return null
 })
 </script>
@@ -27,7 +25,8 @@ const name = computed(() => {
   <Primitive
     v-if="name"
     :as="el"
-    :class="cn('truncate align-baseline', className)">
+    :class="cn('truncate align-baseline', className)"
+  >
     {{ name ?? null }}
   </Primitive>
 </template>

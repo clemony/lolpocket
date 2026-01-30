@@ -52,26 +52,31 @@ onMounted(() => {
   <main
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
-    :class="cn('', props.class)">
+    :class="cn('', props.class)"
+  >
     <article class="dst container mx-auto max-w-250 min-w-190 p-6">
       <header class="dst mb-6 text-start tracking-tight">
         <span class="text-md">
-          404 | <span class=""> This page looks afk</span>
+          404 |
+          <span class="">This page looks afk</span>
         </span>
-        <br />
+        <br>
 
-        <span class="text-xxs/14 font-serif font-bold">In place of content, I offer you a cat fact.</span>
+        <span class="text-xxs/14 font-serif font-bold">
+          In place of content, I offer you a cat fact.
+        </span>
       </header>
 
       <section
-        class="
-          relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28
-          **:text-pretty
-        ">
+        class="relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28 **:text-pretty"
+      >
         <div class="flex flex-col gap-3">
           <p class="dst mt-1">
             <!-- #{{catFact.num}}  -->
-            {{ catFact.num }}<span class="text-[5rem] font-bold tracking-tight"> {{ catFact.title }}</span>
+            {{ catFact.num }}
+            <span class="text-[5rem] font-bold tracking-tight">
+              {{ catFact.title }}
+            </span>
           </p>
           <p class="leading-7">
             {{ catFact.text }}
@@ -80,13 +85,9 @@ onMounted(() => {
       </section>
 
       <footer
-        class="
-           flex items-center gap-1 text-end text-sm italic *:flex
-          *:items-end *:gap-2
-        ">
-        <icon
-          name="la:flag-usa"
-          class="size-5" />
+        class="flex items-center gap-1 text-end text-sm italic *:flex *:items-end *:gap-2"
+      >
+        <icon class="size-5" name="la:flag-usa" />
         <p class="text-bc/70 text-xs">
           Brought to you by
         </p>

@@ -15,8 +15,7 @@ const {
 
 const statValue = computed<StatIndex>(() => {
   console.log('🌱 - stat:', stat)
-  if (typeof stat !== 'string')
-    return stat
+  if (typeof stat !== 'string') return stat
 
   return statIndex[stat]
 })
@@ -34,14 +33,12 @@ const statValue = computed<StatIndex>(() => {
     :class="
       cn(
         'text-bc/90 dxs w-fit px-3 font-medium capitalize shadow-xs',
-        { '  order-first text-white': active, 'pr-2': active && clear },
+        { 'order-first text-white': active, 'pr-2': active && clear },
         className,
       )
-    ">
+    "
+  >
     {{ statValue.name }}
-    <icon
-      v-if="clear"
-      name="x"
-      class="size-4 text-white **:stroke-[2.6]" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </Button>
 </template>

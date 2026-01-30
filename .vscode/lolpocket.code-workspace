@@ -6,24 +6,25 @@
     },
   ],
   "settings": {
-    "css.customData": ["./tailwind-custom-data.json"],
+     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnType": false, // required
+  "editor.formatOnPaste": true, // optional
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "vs-code-prettier-eslint.prettierLast": false ,
+
     "vscode_custom_css.imports": ["file:///Users/caitlin/.vscode/vscode.css"],
     "tailwindCSS.includeLanguages": {
       "vue": "html",
       "plaintext": "html",
     },
     "css.lint.unknownAtRules": "ignore",
-    "editor.formatOnType": false,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSaveMode": "file",
-    "files.autoSave": "onFocusChange",
-    "vs-code-prettier-eslint.prettierLast": false,
     "eslint.enable": true,
-    "tailwindCSS.experimental.configFile": "../app/ui/css/tailwind.css",
+    "tailwindCSS.experimental.configFile": "./layers/ui/app/assets/css/tailwind.css",
 
     // Disable the default formatter, use eslint instead
-    "prettier.enable": false,
-    "editor.formatOnSave": false,
+    //"prettier.enable": false,
     // Auto fix
     "editor.codeActionsOnSave": {
       "source.fixAll": "always",

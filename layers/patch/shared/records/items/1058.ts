@@ -1,0 +1,62 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Needlessly Large Rod",
+  "id": 1058,
+  "rank": "Basic",
+  "buildsInto": [
+    {
+      "id": 3128,
+      "name": "Deathfire Grasp",
+      "gold": 2900
+    },
+    {
+      "id": 3102,
+      "name": "Banshee's Veil",
+      "gold": 3000
+    },
+    {
+      "id": 3157,
+      "name": "Zhonya's Hourglass",
+      "gold": 3250
+    },
+    {
+      "id": 4645,
+      "name": "Shadowflame",
+      "gold": 3200
+    },
+    {
+      "id": 4403,
+      "name": "The Golden Spatula",
+      "gold": 7187
+    },
+    {
+      "id": 3089,
+      "name": "Rabadon's Deathcap",
+      "gold": 3500
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": true,
+  "removed": false,
+  "nicknames": [
+    "nlr"
+  ],
+  "stats": {
+    "abilityPower": 65
+  },
+  "description": "65 Ability Power\n\n",
+  "gold": {
+    "base": 1200,
+    "total": 1200,
+    "sell": 840
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}
+export default item

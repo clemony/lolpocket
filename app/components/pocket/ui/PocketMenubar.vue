@@ -23,13 +23,13 @@ useIntersectionObserver(
   ([entry]) => {
     activeHeader.value = entry.isIntersecting ? 'all' : 'pinned'
   },
-  { threshold: 0 },
+  { threshold: 0 }
 )
 const set = computed(() =>
-  pocket.value?.runes.find(s => s.id === pocket.value._runes),
+  pocket.value?.runes.find(s => s.id === pocket.value._runes)
 )
 const spells = computed(() =>
-  pocket.value.spells.find(s => s.id === pocket.value._spells),
+  pocket.value.spells.find(s => s.id === pocket.value._spells)
 )
 const dlClass
   = 'size-3.5  opacity-70 **:stroke-[2.3]  group-hover/subitem:opacity-100'
@@ -144,7 +144,7 @@ const menu: MenubarGroup[] = [
                 get: () => pocket.value._champion,
                 optionIcon: k =>
                   h(ChampionIcon, { class: 'size-6 rounded-md', k }),
-                optionName: k => ix().champNameByKey(k),
+                optionName: k => champNameByKey(k),
                 options: pocket.value.champions,
                 set: v => (pocket.value._champion = v),
               }),
@@ -169,7 +169,7 @@ const menu: MenubarGroup[] = [
                 optionIcon: k =>
                   h(Icon, { name: `i-lol-${k}`, class: '!size-4 mx-1' }),
                 optionName: k => k,
-                options: championPositions.map(p => p.name),
+                options: mapPositions.map(p => p.name),
                 set: v => (pocket.value._role = v),
               }),
             ],
@@ -198,7 +198,7 @@ const menu: MenubarGroup[] = [
             shortcut: {
               component: h(MiniItemAvatars, {
                 set: pocket.value.items.find(
-                  s => s.id === pocket.value._items,
+                  s => s.id === pocket.value._items
                 ),
               }),
             },
@@ -212,7 +212,7 @@ const menu: MenubarGroup[] = [
             shortcut: {
               component: h(MiniSpellAvatars, {
                 set: pocket.value.spells.find(
-                  s => s.id === pocket.value._spells,
+                  s => s.id === pocket.value._spells
                 ),
               }),
             },
@@ -245,31 +245,20 @@ console.log('🌱 - menu:', menu)
 
 <template>
   <Menubar class="z-1 -ml-4 h-11 w-fit self-end pb-2.5">
-    <MenubarMenu
-      v-for="group in menu"
-      :key="group.name"
-      :value="group.name"
-    >
-      <MenubarTrigger
-        as-child
-        class="hover:bg-transparent"
-      >
+    <MenubarMenu v-for="group in menu" :key="group.name" :value="group.name">
+      <MenubarTrigger class="hover:bg-transparent" as-child>
         <Button
+          class="rounded-lg px-4 capitalize open:brightness-98"
           variant="link"
           on="secondary"
           size="sm"
-          class="rounded-lg px-4 capitalize open:brightness-98"
         >
           {{ group.name }}
         </Button>
       </MenubarTrigger>
       <LazyMenubarContent
         :side-offset="2"
-        :class="
-          cn('w-64 **:capitalize',
-             group.class,
-          )
-        "
+        :class="cn('w-64 **:capitalize', group.class)"
       >
         <AutoMenuContent
           v-for="item in group.items"

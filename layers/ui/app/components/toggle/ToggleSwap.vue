@@ -35,7 +35,7 @@ watch(
   () => currentVariant.value,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-  },
+  }
 )
 
 onMounted(() => {
@@ -59,7 +59,8 @@ onMounted(() => {
         props.class,
       )
     "
-    @update:model-value="emit('update:model-value', modelValue)">
+    @update:model-value="emit('update:model-value', modelValue)"
+  >
     <div class="relative flex size-full flex-nowrap items-center gap-2">
       <div
         :class="
@@ -71,16 +72,20 @@ onMounted(() => {
               duration-350 group-hover:scale-[110]
             `,
           )
-        "></div>
+        "
+      />
 
       <span
         :class="
-          cn('mx-auto flex inline-block! flex-nowrap items-center gap-1 text-nowrap whitespace-nowrap transition-all duration-350 group-hover:translate-x-12 group-hover:opacity-0',
+          cn(
+            'mx-auto flex inline-block! flex-nowrap items-center gap-1 text-nowrap whitespace-nowrap transition-all duration-350 group-hover:translate-x-12 group-hover:opacity-0',
           )
-        ">
+        "
+      >
         <icon
+          class="inline size-3.5! align-[-1.5px]"
           :name="currentVariant?.icon"
-          class="inline size-3.5! align-[-1.5px]" />
+        />
         {{ currentVariant?.text }}
       </span>
     </div>
@@ -95,11 +100,13 @@ onMounted(() => {
             group-hover:translate-x-0 group-hover:opacity-100
           `,
         )
-      ">
+      "
+    >
       <span class="flex items-center gap-1 whitespace-nowrap">
         <icon
+          class="inline size-3.5! align-[-1.5px]"
           :name="oppositeVariant?.icon"
-          class="inline size-3.5! align-[-1.5px]" />
+        />
         {{ oppositeVariant?.text }}
       </span>
     </div>

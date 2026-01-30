@@ -54,23 +54,20 @@ const cardStyle = computed(() => ({
     class="relative size-full rounded-lg"
     :style="containerStyle"
   >
-    <div
-      class="absolute size-full"
-      :style="layer0"
-    >
+    <div class="absolute size-full" :style="layer0">
       <div
-        class="absolute top-2 right-10 z-0 flex h-[95%] w-[45%] rounded-xl bg-b1/90 px-8 pt-7 shadow-md shadow-black/5"
+        class="bg-b1/90 absolute top-2 right-10 z-0 flex h-[95%] w-[45%] rounded-xl px-8 pt-7 shadow-md shadow-black/5"
         :style="containerStyle"
       >
         <div
           class="grid h-fit w-full grid-cols-1 justify-start justify-items-start gap-3"
         >
-          <p class="font-medium tracking-tight dst">
+          <p class="dst font-medium tracking-tight">
             New Pocket
           </p>
 
           <div
-            class="h-6 w-32 rounded-sm border border-b3 bg-b1 shadow-sm inset-shadow-xs shadow-black/8"
+            class="border-b3 bg-b1 h-6 w-32 rounded-sm border shadow-sm inset-shadow-xs shadow-black/8"
             :style="layer0"
           />
 
@@ -83,19 +80,19 @@ const cardStyle = computed(() => ({
             :style="layer0"
           >
             <div
-              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3"
+              class="badge bg-b1 badge-md text-md ring-b3 z-10 shadow-md ring shadow-black/10"
             >
               #&#x202F;jungle
             </div>
 
             <div
-              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3"
+              class="badge bg-b1 badge-md text-md ring-b3 z-10 shadow-md ring shadow-black/10"
             >
               #&#x202F;support
             </div>
 
             <div
-              class="z-10 badge bg-b1 badge-md text-md shadow-md ring shadow-black/10 ring-b3"
+              class="badge bg-b1 badge-md text-md ring-b3 z-10 shadow-md ring shadow-black/10"
             >
               #&#x202F;marksman
             </div>
@@ -108,12 +105,12 @@ const cardStyle = computed(() => ({
             <div
               v-for="index in 3"
               :key="index"
-              class="btn aspect-square rounded-md border-b3 bg-b2 shadow-md shadow-black/10 btn-lg"
+              class="btn border-b3 bg-b2 btn-lg aspect-square rounded-md shadow-md shadow-black/10"
             />
           </div>
 
           <div
-            class="absolute right-5 bottom-6 z-10 badge badge-neutral bg-neutral badge-md text-md shadow-pretty ring shadow-black/10 ring-b3"
+            class="badge badge-neutral bg-neutral badge-md text-md shadow-pretty ring-b3 absolute right-5 bottom-6 z-10 ring shadow-black/10"
           >
             Create
           </div>
@@ -121,18 +118,15 @@ const cardStyle = computed(() => ({
       </div>
 
       <div
-        class="align-end absolute top-23 left-9 flex h-10 w-54 items-center justify-between rounded-lg border border-b3 bg-b1 px-3 shadow-pretty shadow-b3/70 select-none"
+        class="align-end border-b3 bg-b1 shadow-pretty shadow-b3/70 absolute top-23 left-9 flex h-10 w-54 items-center justify-between rounded-lg border px-3 select-none"
         :style="layerBase"
       >
         <span class="dst">Pocket Name</span>
 
         <div
-          class="btn pointer-events-none aspect-square px-0.5 shadow-sm btn-xs"
+          class="btn btn-xs pointer-events-none aspect-square px-0.5 shadow-sm"
         >
-          <icon
-            name="tick-sm"
-            class="size-5 dst"
-          />
+          <icon class="dst size-5" name="tick-sm" />
         </div>
       </div>
 

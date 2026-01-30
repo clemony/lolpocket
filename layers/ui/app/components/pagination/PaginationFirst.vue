@@ -7,7 +7,7 @@ const props = withDefaults(
   defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(),
   {
     asChild: true,
-  },
+  }
 )
 
 const delegatedProps = computed(() => {
@@ -19,13 +19,9 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationFirst v-bind="delegatedProps">
-    <button
-      :class="cn('btn btn-square btn-ghost btn-sm', props.class)"
-      v>
+    <button :class="cn('btn btn-square btn-ghost btn-sm', props.class)" v>
       <slot>
-        <icon
-          name="left-pipe"
-          class="size-4 shrink-0 opacity-80" />
+        <icon class="size-4 shrink-0 opacity-80" name="left-pipe" />
       </slot>
     </button>
   </PaginationFirst>

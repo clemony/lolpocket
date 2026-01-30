@@ -1,0 +1,127 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:14 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Blighted Quiver",
+  "affects": "Enemies",
+  "blurb": "Passive:  Varus'  basic attacks deal bonus magic damage and apply a  stack of Blight, up to 3. His  abilities detonate all Blight stacks on enemies hit to apply new effects.",
+  "castTime": "none",
+  "cooldown": "40",
+  "cost": "0",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Magic Damage",
+          "modifiers": [
+            {
+              "values": "6 / 14 / 22 / 30 / 38"
+            },
+            {
+              "unit": "% AP",
+              "values": "35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Blight:</span> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Magic Damage per Stack",
+          "modifiers": [
+            {
+              "unit": "%  of the target's maximum health",
+              "values": "3 / 3.5 / 4 / 4.5 / 5"
+            },
+            {
+              "unit": "% per 100 AP",
+              "values": "1.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Bonus Magic Damage at Max Stacks",
+          "modifiers": [
+            {
+              "unit": "%  of the target's maximum health",
+              "values": "9 / 10.5 / 12 / 13.5 / 15"
+            },
+            {
+              "unit": "% per 100 AP",
+              "values": "4.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Maximum Bonus Magic Damage per Stack",
+          "modifiers": [
+            {
+              "unit": "%  of the target's maximum health",
+              "values": "4.5 / 5.25 / 6 / 6.75 / 7.5"
+            },
+            {
+              "unit": "% per 100 AP",
+              "values": "2.25"
+            }
+          ]
+        },
+        {
+          "attribute": "Maximum Bonus Magic Damage at Max Stacks",
+          "modifiers": [
+            {
+              "unit": "%  of the target's maximum health",
+              "values": "13.5 / 15.75 / 18 / 20.25 / 22.5"
+            },
+            {
+              "unit": "% per 100 AP",
+              "values": "6.75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.</p>",
+      "leveling": [
+        {
+          "attribute": "Active Minimum Magic Damage",
+          "modifiers": [
+            {
+              "unit": "% of target's missing health",
+              "values": "6 / 8 / 10 / 12 / 14"
+            }
+          ]
+        },
+        {
+          "attribute": "Active Maximum Magic Damage",
+          "modifiers": [
+            {
+              "unit": "% of target's missing health",
+              "values": "9 / 12 / 15 / 18 / 21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "If Varus does not cast Piercing Arrow, Blighted Quiver can be recast after 1 second within the duration, and does so automatically afterwards or when he dies. Blighted Quiver can be cast during the first 0.85 seconds of Piercing Arrow's charge, and will be placed on full cooldown after the charge ends even if Piercing Arrow is not recast."
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Varus ends Blighted Quiver and places it on a 1-second cooldown.</p>"
+    },
+    {
+      "description": "Blighted Quiver's active and recast can both be used while affected by cast-inhibiting crowd control."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/w",
+  "notes": "The monster damage cap is also increased by 0% : 50% (based on  Piercing Arrow's charge time) if the stacks were consumed with  Piercing Arrow.\n Spell shield will not block the  on-hit damage but will block the consumption damage if the target is hit by his abilities.\nBlighted Quiver will not apply stacks nor deal  on-hit damage if blocked by  blind,  block or  dodge effects.\nThe consumption damage will not be blocked.\nBlighted Quiver's active damage is dealt after the damage of  Piercing Arrow.\nBlighted Quiver does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThe attacks do not affect  structures nor  wards.",
+  "spellEffects": "Proc",
+  "spellshieldable": "Special",
+  "targeting": "Auto"
+}
+  export default ability

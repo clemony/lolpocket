@@ -39,7 +39,8 @@ onMounted(() => {
           enter: ['-100%', 0],
           leave: ['100%', 0],
         }
-    ">
+    "
+  >
     <slot />
   </div>
 </template>

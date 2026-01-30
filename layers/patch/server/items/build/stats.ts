@@ -1,6 +1,6 @@
-import fs from "node:fs"
-import path from "node:path"
-import { i_DIR, markUpdate } from "../../utils"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
 
 interface Item {
   id: number
@@ -8,15 +8,17 @@ interface Item {
   stats: Record<string, number>
 }
 
-const itemsPath = path.resolve(`${i_DIR}raw/items-lite.json`)
-const outputPath = path.resolve("./layers/domain/constants/items/item-stat-index.ts")
-const itemsRaw = fs.readFileSync(itemsPath, "utf-8")
-const items: Item[] = JSON.parse(itemsRaw)
+const itemsPath = resolve(`./layers/patch/server/items/raw/items-lite.json`)
+const outputPath = resolve(
+  './layers/patch/shared/constants/items/itemStatRecord.ts'
+)
+
+const items: Item[] = JSON.parse(fs.readFileSync(itemsPath, 'utf-8'))
 
 const statIndex: Record<number, Record<string, number>> = {}
 const statKeys = new Set<string>()
 
-for (const item of items) {
+for (const item of Object.values(items)) {
   const { id, stats } = item
 
   if (stats && Object.keys(stats).length > 0) {
@@ -30,7 +32,7 @@ for (const item of items) {
 // Generate StatRecord interface based on collected keys
 const sortedStatKeys = [...statKeys].sort()
 const statRecordInterface = `export interface StatRecord {
-${sortedStatKeys.map((k) => `  ${JSON.stringify(k)}?: number;`).join("\n")}
+${sortedStatKeys.map(k => `  ${JSON.stringify(k)}?: number;`).join('\n')}
 }`
 
 const output = `// ${markUpdate()}
@@ -43,5 +45,5 @@ export const itemStatRecord: Record<number, StatRecord> = ${JSON.stringify(statI
 fs.writeFileSync(outputPath, output)
 
 console.log(
-  "✅ item stat record and StatRecord interface written successfully."
+  '✅ item stat record and StatRecord interface written successfully.'
 )

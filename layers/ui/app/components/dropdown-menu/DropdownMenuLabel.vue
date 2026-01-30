@@ -15,11 +15,13 @@ const forwarded = useForwardProps(delegatedProps)
   <DropdownMenuLabel
     v-bind="forwarded"
     :class="
-      cn('text-bc/50 flex items-center px-2 py-1.5 text-sm font-semibold [&_svg]:size-4.25 [&_svg]:opacity-60',
-         inset && 'pl-9',
-         props.class,
+      cn(
+        'text-bc/50 flex items-center px-2 py-1.5 text-sm font-semibold [&_svg]:size-4.25 [&_svg]:opacity-60',
+        inset && 'pl-9',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </DropdownMenuLabel>
 </template>

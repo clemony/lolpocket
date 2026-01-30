@@ -1,0 +1,57 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Jak'Sho, The Protean",
+  "id": 6665,
+  "rank": "Legendary",
+  "buildsFrom": [
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    },
+    {
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
+    },
+    {
+      "id": 1057,
+      "name": "Negatron Cloak",
+      "gold": 850
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "Jak'Sho, The Protean"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Voidborn Resilience",
+      "effects": "Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat."
+    }
+  ],
+  "stats": {
+    "armor": 45,
+    "health": 350,
+    "magicResistance": 45
+  },
+  "description": "350 Health\n45 Armor\n45 Magic Resist\n\nVoidborn Resilience\nAfter 5 seconds of champion combat, increase your bonus Armor and Magic Resist by 30% until end of combat.\n\n",
+  "gold": {
+    "base": 650,
+    "total": 3200,
+    "sell": 2240
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}
+export default item

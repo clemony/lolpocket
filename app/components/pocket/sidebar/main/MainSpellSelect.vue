@@ -19,7 +19,7 @@ const HeadingTip = resolveComponent('HeadingTip')
 
 const pocket = computed(() => p)
 const selectedSet = computed(() =>
-  pocket.value.spells?.find(s => s.id === pocket.value._spells),
+  pocket.value.spells?.find(s => s.id === pocket.value._spells)
 )
 const open = ref(false)
 
@@ -29,21 +29,15 @@ const keyClass
 </script>
 
 <template>
-  <Select
-    v-model:model-value="pocket._spells"
-    v-model:open="open">
+  <Select v-model:model-value="pocket._spells" v-model:open="open">
     <slot>
       <VarSelectTrigger
+        class="relative grid size-max place-items-center overflow-hidden py-4 **:pointer-events-none"
         variant="ghost"
-        class="
-          relative grid size-max place-items-center overflow-hidden py-4
-          **:pointer-events-none
-        ">
-        <SpellSetDuo
-          :set="selectedSet"
-          :class="cn('', className)" />
+      >
+        <SpellSetDuo :set="selectedSet" :class="cn('', className)" />
         <!--        <icon
-            name="select"
+            name="up-down"
             class=" size-4 absolute right-1.5" /> -->
         <!--  <div class=" @6xl:block @6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden flex flex-col overflow-hidden leading-5">
             <h3
@@ -61,36 +55,35 @@ const keyClass
 
     <!-- content -->
     <LazySelectContent
+      class="w-(--reka-select-trigger-width) min-w-54 p-0"
       :side
       :side-offset
       :align
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-(--reka-select-trigger-width) min-w-54 p-0">
+    >
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Spells
 
           <Button
+            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             variant="ghost"
             size="8"
             title="Clear main spells"
-            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
-            @click="pocket._spells === ''">
-            <icon
-              name="backspace"
-              class="size-5 **:stroke-2" />
+            @click="pocket._spells === ''"
+          >
+            <icon class="size-5 **:stroke-2" name="backspace" />
           </Button>
         </SelectLabel>
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
           class="group/select flex-nowrap *:flex *:items-center"
-          :value="set.id">
-          <IndexIcon
-            :item="spells[set.d]"
-            class="mr-1" />
+          :value="set.id"
+        >
+          <IndexIcon class="mr-1" :item="spells[set.d]" />
           <IndexIcon :item="spells[set.f]" />
         </SelectItem>
       </SelectGroup>

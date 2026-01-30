@@ -18,15 +18,12 @@ const variants = {
 </script>
 
 <template>
-  <li
-    :variants="variants"
-    initial="hidden"
-    animate="visible"
-    exit="hidden">
+  <li :variants="variants" initial="hidden" animate="visible" exit="hidden">
     <Label
       class="btn-ghost-dark group"
       :class="cn('', className)"
-      @click="console.log('click')">
+      @click="console.log('click')"
+    >
       <slot />
     </Label>
   </li>

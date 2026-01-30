@@ -3,11 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const state = useSummonerInject()
-const roleStats = await useMatchRoles(
-  state.summoner.value.puuid,
-  state.matches,
-)
+const roleStats = await useMatchRoles(s_session().summoner.puuid, s_matches().matches)
 </script>
 
 <template>
@@ -15,7 +11,8 @@ const roleStats = await useMatchRoles(
     <FilterLabel
       v-model="ms().filter.role"
       :active="ms().filter.role !== 'ALL'"
-      @click="ms().filter.role = 'ALL'">
+      @click="ms().filter.role = 'ALL'"
+    >
       {{
         ms().filter.role !== "ALL"
           ? roleStats.find((r) => r.role === ms().filter.role).name
@@ -23,22 +20,23 @@ const roleStats = await useMatchRoles(
       }}
     </FilterLabel>
 
-    <TabsList
-      class="grid h-14 w-full grid-cols-6">
+    <TabsList class="grid h-14 w-full grid-cols-6">
       <TabsTrigger
         v-for="role in roleStats"
         :key="role.role"
         v-tippy="{
           content: `${role.name} - ${role.games} game${role.games > 1 ? 's' : ''}`,
         }"
+        class=""
         :disabled="!role.games"
         :value="role.role"
-        class="">
+      >
         <span class="relative grid size-5.5 place-items-center">
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-            class="dst peer-checked:text-nc h-5 w-auto shrink-0"
-            :class="{ 'text-bc/80!': role.name === 'ALL' }" />
+            class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
+            :class="{ 'text-bc/80!': role.name === 'ALL' }"
+          />
         </span>
       </TabsTrigger>
 

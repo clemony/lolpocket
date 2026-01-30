@@ -8,10 +8,7 @@ const { name, text, value } = defineProps<{
 
 <template>
   <div class="flex min-w-30 items-center p-1.5">
-    <div
-      v-for="i in value.length"
-      :key="i"
-      class="flex w-fit flex-col pr-3">
+    <div v-for="i in value.length" :key="i" class="flex w-fit flex-col pr-3">
       <h6 class="text-sm!">
         {{ name[i] }}
       </h6>

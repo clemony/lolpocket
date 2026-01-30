@@ -1,4 +1,4 @@
-import type { ZonedDateTime } from '@internationalized/date' // your existing imports
+// your existing imports
 import type { DateRange } from 'reka-ui'
 // date-range.ts
 import {
@@ -6,16 +6,14 @@ import {
   getLocalTimeZone,
   isSameDay,
   toCalendarDateTime,
-  toZoned
-
+  toZoned,
 } from '@internationalized/date'
 
 export function dateInRange(
   absTimestamp: number,
   range: DateRange | null | undefined
 ) {
-  if (!range)
-    return true
+  if (!range) return true
 
   const tz = getLocalTimeZone()
 
@@ -24,8 +22,7 @@ export function dateInRange(
   const ep = range.end ? toZoned(toCalendarDateTime(range.end), tz) : null
 
   // no start & no end → always match
-  if (!sp && !ep)
-    return true
+  if (!sp && !ep) return true
 
   const md = fromAbsolute(absTimestamp, tz)
 
@@ -35,10 +32,8 @@ export function dateInRange(
   }
 
   // normal range
-  if (sp && md.compare(sp) < 0)
-    return false
-  if (ep && md.compare(ep) > 0)
-    return false
+  if (sp && md.compare(sp) < 0) return false
+  if (ep && md.compare(ep) > 0) return false
 
   return true
 }

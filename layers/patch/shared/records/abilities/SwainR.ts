@@ -1,0 +1,45 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:09 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "R",
+  "name": "Demonflare",
+  "width": "60",
+  "affects": "Enemies",
+  "blurb": "Active: Swain emits a nova of soulfire that deals magic damage to nearby enemies and applies a  slow that decays over a brief moment.",
+  "castTime": "0.25",
+  "cooldown": "120",
+  "cost": "100",
+  "damageType": "Magic damage",
+  "effectRadius": "675",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "150 / 250 / 350"
+            },
+            {
+              "unit": "% AP",
+              "values": "50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Swain can move during Demonflare's cast time."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
+  "notes": "Swain can move during Demonflare's cast time.\nDemonflare counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDemonflare passes through champions. Effects like  Yasuo's  Wind Wall and  Braum's  Unbreakable will block the portion of the nova they intercept.\nDemonflare will fire from wherever Swain is at the end of the cast time.\nDemonflare will fire twice if cast moments before the end of Demonic Ascension.(bug)[2]",
+  "projectile": "TRUE",
+  "speed": "3000",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "True",
+  "targeting": "Auto"
+}
+  export default ability

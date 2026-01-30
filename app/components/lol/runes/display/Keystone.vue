@@ -1,15 +1,19 @@
 <script lang="ts" setup>
+import { Tooltip, TooltipXL } from '#components'
+
 const {
   id,
+  side,
   class: className,
-  dataSize = 'lg',
-  noTip = false,
+  loadingType,
+  size = 'lg',
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | null
   loadedClass?: HTMLAttributes['class']
-  dataSize?: TooltipSize
-  noTip?: boolean
+  loadingType?: LoadingStyle
+  size?: TooltipSize
+  side?: Side
 }>()
 const loaded = ref(false)
 const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
@@ -23,34 +27,33 @@ watch(
         loaded.value = true
       }
     })
-  },
+  }
 )
+
+const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
 </script>
 
 <template>
-  <label
-    :data-id="id"
-    :data-type="noTip ? null : 'rune' "
-    :data-size="noTip ? null : dataSize"
-    :data-interactive="dataSize === 'lg' ? true : false"
-    :class="
-      cn('hover-3d relative grid aspect-square size-full h-20 place-items-center', className,
-      )
-    ">
-    <img
+  <component :is="component" :side :size :text="size === 'sm' ? runeNameById(id) : ''" :img="`/img/runes/${id}.webp`">
+    <Img
       v-if="id"
       :key="id"
       ref="imgEl"
-
+      :loading-type
       :src="`/img/runes/${id}.webp`"
       :alt="runeNameById(id)"
       :class="
-        cn('size-full object-contain', {
+        cn('size-full aspect-square shrink-0 object-contain', {
           'scale-105 drop-shadow-sm drop-shadow-black/40': loaded,
-        })
+        }, className)
       "
-      @load="loaded = true" />
+      @load="loaded = true"
+    >
+      <slot />
+    </Img>
 
-    <slot />
-  </label>
+    <template v-if="size === 'lg'" #content>
+      <RuneTooltip :id />
+    </template>
+  </component>
 </template>

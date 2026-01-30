@@ -18,14 +18,11 @@ watchEffect(() => {
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger
-      class="btn btn-square btn-neutral relative flex items-center">
-      <icon
-        name="search-bold"
-        class="text-nc -mt-px size-4.5 shrink-0" />
+      class="btn btn-square btn-neutral relative flex items-center"
+    >
+      <icon class="text-nc -mt-px size-4.5 shrink-0" name="search-bold" />
 
-      <StatusIndicator
-        v-if="hasData"
-        class="-top-0.5 -right-0.25" />
+      <StatusIndicator v-if="hasData" class="-top-0.5 -right-0.25" />
     </PopoverTrigger>
 
     <CustomPopoverContent
@@ -34,15 +31,14 @@ watchEffect(() => {
       align="end"
       :side-offset="2"
       side="bottom"
-      @open-auto-focus.prevent>
+      @open-auto-focus.prevent
+    >
       <ItemSearch
+        class="border-neutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4"
         placeholder="Type or click a suggestion"
-        class="
-          border-neutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13
-          w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4
-        "
         set-focus
-        @update:query="(e) => e" />
+        @update:query="(e) => e"
+      />
 
       <div class="grid overflow-hidden">
         <!--   <div class="size-full border-r border-r-accent overflow-y-auto max-h-115">
@@ -52,9 +48,7 @@ watchEffect(() => {
           <LazyItemCommandTags />
         </div> -->
         <div class="relative size-full h-117 overflow-hidden">
-          <div
-            as="div"
-            class="absolute inset-0 top-0 left-0 overflow-y-scroll">
+          <div class="absolute inset-0 top-0 left-0 overflow-y-scroll" as="div">
             <div>
               <LazyItemCommandTypes />
 

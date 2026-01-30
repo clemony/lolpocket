@@ -10,30 +10,33 @@ const {
 }>()
 
 const winrate = computed(() =>
-  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0,
+  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0
 )
 
-const payload = computed (() => {
+const payload = computed(() => {
   return {
-    title: entry ? `${entry?.tier?.toLowerCase()} ${entry?.division}` : 'Unranked',
+    title:
+      entry ? `${entry?.tier?.toLowerCase()} ${entry?.division}` : 'Unranked',
     data: {
       lp: `${entry?.lp ?? 0} LP`,
       wins: `${entry ? entry.wins : 0}W  ${entry ? entry.losses : 0}L`,
-      wr: `${winrate.value}% WR`
+      wr: `${winrate.value}% WR`,
     },
-    img: `/img/crests/mini/${entry?.tier?.toLowerCase() || 'unranked'}.webp`
+    img: `/img/crests/mini/${entry?.tier?.toLowerCase() || 'unranked'}.webp`,
   }
 })
 </script>
 
 <template>
-  <Tooltip
-    arrow
-    variant="neutral"
-    :content="{ side: 'top' }">
+  <Tooltip arrow class="max-w-32!" :content="{ side: 'top' }">
     <Card
       :class="
-        cn('ring-bc/60 flex w-full flex-col items-center pt-1 select-none hover:ring', className) ">
+        cn(
+          'flex w-full flex-col items-center pt-1 ring-bc/60 select-none hover:ring',
+          className,
+        )
+      "
+    >
       <span class="text-xs! font-bold">
         {{ title }}
       </span>
@@ -42,30 +45,40 @@ const payload = computed (() => {
         <!-- crest -->
         <img
           v-if="!entry"
+          class="size-14 object-contain opacity-40 drop-shadow-sm saturate-0"
           alt="unranked"
           src="/img/crests/unranked.webp"
-          class="size-14 object-contain opacity-40 drop-shadow-sm saturate-0" />
+        >
 
         <img
           v-else
+          class="size-14 object-contain drop-shadow-sm drop-shadow-black/30"
           :alt="entry?.tier?.toLowerCase()"
           :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
-          class="size-14 object-contain drop-shadow-sm drop-shadow-black/30" />
+        >
       </div>
 
       <div
         :class="
-          cn('flex w-full flex-col items-center justify-center gap-px overflow-hidden px-2 pb-2 **:leading-4 **:font-medium', { 'opacity-40': !entry }) ">
+          cn(
+            'flex w-full flex-col items-center justify-center gap-px overflow-hidden px-2 pb-2 **:leading-4 **:font-medium',
+            { 'opacity-40': !entry },
+          )
+        "
+      >
         <span class="text-xs! font-semibold capitalize">
-          {{ entry ? `${entry?.tier?.toLowerCase()} ${entry?.division}` : "Unranked" }}
+          {{
+            entry
+              ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
+              : "Unranked"
+          }}
         </span>
         <!--       <span class="text-xxs! font-semibold capitalize">
       </span> -->
         <span
+          class="mt-px inline-flex gap-1 align-baseline text-xxs! text-nowrap decoration-dotted hover:underline"
           :data-type="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="text-xxs! mt-px inline-flex gap-1 align-baseline text-nowrap decoration-dotted hover:underline">
-
-        </span>
+        />
       </div>
     </Card>
     <template #content>

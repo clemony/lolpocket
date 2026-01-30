@@ -18,6 +18,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <TabsContent
+    v-bind="delegatedProps"
     :class="cn('tab-content z-0', props.class)"
     :style="{
       '--tabcontent-radius-ss': props.radius,
@@ -25,7 +26,7 @@ const delegatedProps = computed(() => {
       '--tabcontent-radius-es': props.radius,
       '--tabcontent-radius-ee': props.radius,
     }"
-    v-bind="delegatedProps">
+  >
     <slot />
   </TabsContent>
 </template>

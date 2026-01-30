@@ -8,7 +8,14 @@ const { class: className, simple } = defineProps<{
 <template>
   <div
     :data-style="simple ? 'simple' : 'full'"
-    :class="cn('relative flex h-34 w-full items-center overflow-hidden', { 'h-28! ': simple }, className)">
+    :class="
+      cn(
+        'relative flex h-34 w-full items-center overflow-hidden',
+        { 'h-28!': simple },
+        className,
+      )
+    "
+  >
     <slot />
   </div>
 </template>

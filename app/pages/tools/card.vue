@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ZoomableEvent } from 'vue-zoomable'
 import VueZoomable from 'vue-zoomable'
 import 'vue-zoomable/dist/style.css'
 
@@ -42,16 +41,15 @@ onMounted(() => {
 const img = useImage()
 const splash = computed(
   () =>
-    'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg',
+    'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg'
 )
 console.log('💠 - card.splash:', card.splash)
 </script>
 
 <template>
   <div
-    class="
-      relative grid size-full items-center justify-center overflow-hidden
-    ">
+    class="relative grid size-full items-center justify-center overflow-hidden"
+  >
     <!--
 
       <div class="px-1 dst">
@@ -86,43 +84,37 @@ console.log('💠 - card.splash:', card.splash)
     <VueZoomable
       v-model:zoom="zoom"
       v-model:pan="pan"
+      class="relative grid h-screen w-full place-items-center overflow-hidden"
       selector="#pocket-card"
       :min-zoom="0.5"
       :max-zoom="2"
       :wheel-zoom-step="0.01"
-      class="relative grid h-screen w-full place-items-center overflow-hidden">
+    >
       <div
-        id="pocket-card"
         ref="pocketCardRef"
-        class="
-          rounded-box border-b3/70 shadow-smooth relative aspect-square size-300
-          border object-contain inset-shadow-sm
-        "
+        class="relative aspect-square size-300 rounded-box border border-b3/70 object-contain shadow-smooth inset-shadow-sm"
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
-        }">
+        }"
+      >
         <div
-          class="
-            mask-right-100 size-full overflow-hidden rounded-2xl transition-all
-            duration-500
-          "
-          :class="{ grayscale: card.filter === 'grayscale' }">
+          class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
+          :class="{ grayscale: card.filter === 'grayscale' }"
+        >
           <div
+            class="size-full bg-cover mask-top"
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
               backgroundPositionX: `${card.align}%`,
             }"
-            class="size-full bg-cover mask-top" />
+          />
         </div>
 
         <div
-          class="
-            absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr]
-            px-16 pt-28
-          ">
-          <div
-            class="flex flex-col **:select-none">
+          class="absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr] px-16 pt-28"
+        >
+          <div class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
                 class="text-5xl dst tracking-tight pl-3"
@@ -135,14 +127,12 @@ console.log('💠 - card.splash:', card.splash)
                 class="text-6xl tracking-tight drop-shadow-sm"
                 :style="{ fontFamily: card.font[0] }"
                 :class="fontClass1">
-                {{ ix().champNameByKey(card.champion) ?? '' }}
+                {{ champNameByKey(card.champion) ?? '' }}
               </h1>
             </div> -->
 
             <div class="mt-20 h-auto space-y-12">
-              <template
-                v-for="(set, i) in card.items"
-                :key="i">
+              <template v-for="(set, i) in card.items" :key="i">
                 <template
                   v-if="
                     set
@@ -151,7 +141,8 @@ console.log('💠 - card.splash:', card.splash)
                       && set !== null
                       && card.items[0] !== undefined
                       && card.items[0] !== null
-                  ">
+                  "
+                >
                   <!-- CompleteItemSets
                     :set="card.items[i]"
                     :pocket="pocket" /> -->

@@ -1,13 +1,12 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../../resolvePath"
-import { markUpdate } from "../../utils/markUpdate"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
 
-const outputFile = path.resolve(
-  "./layers/domain/constants/champions/champion-to-title.ts"
+const outputFile = resolve(
+  './layers/patch/shared/constants/champions/championToTitle.ts'
 )
-const dataPath = resolvePath("./champions/raw/champions-raw.json")
-const champs = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
+const dataPath = resolve('./layers/patch/server/champions/raw/champions-raw.json')
+const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   Champion
 >

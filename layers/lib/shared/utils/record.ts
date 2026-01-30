@@ -1,6 +1,8 @@
+type SortDirection = 'asc' | 'desc'
+
 export function sortRecordBy<
   T extends Record<K, string | number>,
-  K extends keyof T
+  K extends keyof T,
 >(
   record: Record<string, T>,
   prop: K,

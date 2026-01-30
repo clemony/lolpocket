@@ -6,7 +6,7 @@ const props = withDefaults(
   defineProps<ListboxRootProps & { class?: HTMLAttributes['class'] }>(),
   {
     modelValue: '',
-  },
+  }
 )
 
 const emits = defineEmits<ListboxRootEmits>()
@@ -46,8 +46,7 @@ function filterItems() {
   for (const [id, value] of allItems.value) {
     const score = contains(value, filterState.search)
     filterState.filtered.items.set(id, score ? 1 : 0)
-    if (score)
-      itemCount++
+    if (score) itemCount++
   }
 
   // Check which groups have at least 1 item shown
@@ -71,7 +70,7 @@ watch(
   () => filterState.search,
   () => {
     filterItems()
-  },
+  }
 )
 </script>
 
@@ -79,10 +78,12 @@ watch(
   <ListboxRoot
     v-bind="forwarded"
     :class="
-      cn('flex size-full flex-col overflow-hidden rounded-lg bg-b1/94 text-bc backdrop-blur-md',
-         props.class,
+      cn(
+        'bg-b1/94 text-bc flex size-full flex-col overflow-hidden rounded-lg backdrop-blur-md',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ListboxRoot>
 </template>

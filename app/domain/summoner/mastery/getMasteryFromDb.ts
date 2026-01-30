@@ -1,5 +1,3 @@
-import { lpdb } from '~/stores'
-
 const now = () => Date.now()
 
 export async function getMastery(puuid: string, championId: number) {

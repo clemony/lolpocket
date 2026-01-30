@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { Easing } from 'motion-v'
-import { AnimatePresence, motion } from 'motion-v'
-
 useSeoMeta({
   title: '[title]',
   description: '[description]',
@@ -12,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 definePageMeta({
   title: 'match history',
@@ -26,18 +23,24 @@ const open = shallowRef<boolean>(true)
 
 <template>
   <div
-    :class="cn('relative z-auto mx-auto flex h-fit min-h-screen w-full max-w-[1400px] gap-14 px-24 pt-8 pb-44', { 'flex-col max-w-308': !open })">
-    <TransitionSlide
+    :class="
+      cn(
+        'relative z-auto mx-auto flex h-fit min-h-screen w-full max-w-[1400px] gap-14 px-24 pt-8 pb-44',
+        { 'max-w-308 flex-col': !open },
+      )
+    "
+  >
+    <div
+      class="z-auto flex w-full max-w-110 origin-right flex-col items-center gap-y-6"
       group
-      :offset=" {
+      :offset="{
         enter: [0, '10%'],
         leave: [0, '10%'],
-      } "
-      class="z-auto flex w-full max-w-110 origin-right flex-col items-center gap-y-6">
-      <MatchHistoryMenu @open="e => open = e" />
-      <MatchHistoryAside
-        v-if="open" />
-    </TransitionSlide>
-    <MatchList />
+      }"
+    >
+      <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
+      <MatchHistoryAside v-if="open" />
+    </div>
+    <LazyMatchList />
   </div>
 </template>

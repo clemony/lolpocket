@@ -1,15 +1,17 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../resolvePath"
-import { checkUpdate, markUpdate, stripEmpty } from "../utils"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../misc/markUpdate'
+import { checkUpdate, stripEmpty } from '../utils'
 
-const dataPath = resolvePath("./spells/raw/summoner-spells.json")
-const outputPath = path.resolve("./layers/domain/constants/misc/spells.ts")
+const dataPath = resolve('./layers/patch/server/spells/raw/summoner-spells.json')
+const outputPath = resolve(
+  './layers/patch/shared/constants/misc/spells.ts'
+)
 
 async function buildSpellIndex() {
-  const needsUpdate = await checkUpdate("spell")
+  const needsUpdate = await checkUpdate('spell')
   if (!needsUpdate) {
-    console.log("no update found locally; fetching...")
+    console.log('no update found locally; fetching...')
     // await fetchSpells() // call your handler
   }
   function n(num: string): number {
@@ -18,19 +20,19 @@ async function buildSpellIndex() {
   function i(num: string): number {
     return Number.parseInt(num)
   }
-  const raw: any[] = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
+  const raw: any[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
   const spells: Record<number, Spell> = raw.reduce(
     (acc, spell) => {
       const charge = n(spell.maxAmmo) > 0
       acc[Number(spell.key)] = {
         id: Number(spell.key),
         name: spell.name,
-        description: spell.description,
         cd: charge ? null : spell.cooldown,
-        range: spell.range,
         charges: charge ? n(spell.maxAmmo) : null,
-        recharge: charge ? spell.cooldown : null,
+        description: spell.description,
         level: spell.summonerLevel,
+        range: spell.range,
+        recharge: charge ? spell.cooldown : null,
       }
       return stripEmpty(acc)
     },
@@ -39,13 +41,16 @@ async function buildSpellIndex() {
 
   fs.writeFileSync(
     outputPath,
-    `// ${markUpdate()}\n\nexport const spells: Record<number, Spell> = ${JSON.stringify(
+    `// ${markUpdate()}
+    import type { Spell } from "#shared/types"
+
+    export const spells: Record<number, Spell> = ${JSON.stringify(
       spells,
       null,
       2
     )
-      .replace(/"(\d+)"/g, "$1")
-      .replace(/"(.+)":/g, "$1:")}`
+      .replace(/"(\d+)"/g, '$1')
+      .replace(/"(.+)":/g, '$1:')}`
   )
 }
 

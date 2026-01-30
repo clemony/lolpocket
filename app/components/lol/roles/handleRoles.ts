@@ -8,11 +8,4 @@ export const roles = [
   'tiny carrot',
 ]
 
-export const positions = [
-  'all',
-  'top',
-  'jungle',
-  'middle',
-  'bottom',
-  'support',
-]
+export const positions = ['all', 'top', 'jungle', 'middle', 'bottom', 'support']

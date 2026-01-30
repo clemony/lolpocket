@@ -30,17 +30,14 @@ const entries = [
     <PatchNumberField />
 
     <div class="w-full">
-      <Tabs
-        v-model:model-value="tabs"
-        class="max-w-100">
-        <TabsList
-
-          class="*:text-md! grid-cols-3">
+      <Tabs v-model:model-value="tabs" class="max-w-100">
+        <TabsList class="*:text-md! grid-cols-3">
           <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"
             :value="tab.value"
-            contrast>
+            contrast
+          >
             {{ tab.name }}
           </TabsTrigger>
 

@@ -26,8 +26,7 @@ const pocket = computed(() => p)
 const select = ref('All')
 
 const color = computed(
-  () =>
-    championPositions.find(p => p.name === pocket?.value?._role).twColor,
+  () => mapPositions.find(p => p.name === pocket?.value?._role).twColor
 ).value
 
 const gradientClass = computed(() => `bg-${color} bg-clip-text `)
@@ -37,65 +36,65 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Select
-    v-model:model-value="pocket._role"
-    v-model:open="open">
+  <Select v-model:model-value="pocket._role" v-model:open="open">
     <SelectTrigger as-child>
       <Button
+        class="relative grid size-20 place-items-center overflow-hidden **:pointer-events-none"
         variant="ghost"
-        class="
-          relative grid size-20 place-items-center overflow-hidden
-          **:pointer-events-none
-        ">
+      >
         <div class="grid size-12! place-items-center">
           <component
             :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
+            class="absolute z-2 size-7! dst"
             :style="{
-              color: championPositions.find(
-                (p) => p.name === pocket?._role,
-              ).color,
+              color: mapPositions.find((p) => p.name === pocket?._role)
+                .color,
             }"
-            class="dst absolute z-2 size-7!" />
+          />
         </div>
         <!--
         <icon
-          name="select"
+          name="up-down"
           class=" size-4 absolute right-1.5" /> -->
       </Button>
     </SelectTrigger>
     <LazySelectContent
+      class="w-(--reka-select-trigger-width) min-w-54 p-0"
       :side
       :side-offset
       :align
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-(--reka-select-trigger-width) min-w-54 p-0">
+    >
       <div class="flex items-center gap-3 p-2">
         <component
           :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
+          class="size-6! dst"
           :style="{
-            color: championPositions.find((p) => p.name === pocket?._role)
+            color: mapPositions.find((p) => p.name === pocket?._role)
               .color,
           }"
-          class="dst size-6!" />
+        />
         <h3
           v-memo="[pocket._role]"
           :class="
             cn('truncate', {
               'dst': pocket._role,
-              '!font-normal  opacity-10': !pocket._role,
+              'font-normal! opacity-10': !pocket._role,
             })
-          ">
+          "
+        >
           {{ pocket._role || "Role" }}
         </h3>
       </div>
       <SelectSeparator class="mb-2" />
       <SelectGroup>
         <SelectItem
-          v-for="position in championPositions"
+          v-for="position in mapPositions"
           :key="position.name"
-          :value="position.name">
+          :value="position.name"
+        >
           <PositionBadge :position="position.name" />
         </SelectItem>
       </SelectGroup>

@@ -13,8 +13,7 @@ const {
 /* const { matches } = useSummoner(as().account?.puuid) */
 
 const timeline = computed(() => {
-  if (!summoner)
-    return null
+  if (!summoner) return null
 
   return useChampionWinrateTimeline(summoner.puuid, matches, championName)
 })
@@ -22,12 +21,11 @@ watch(
   () => timeline.value,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-  },
+  }
 )
 
 const data = computed(() => {
-  if (!timeline.value)
-    return
+  if (!timeline.value) return
 
   return {
     datasets: [
@@ -96,30 +94,25 @@ const options = {
 
 const range = computed(() => {
   const spans = timeline.value.map(p => p.span)
-  if (!spans.length)
-    return ''
+  if (!spans.length) return ''
   return `Weeks ${spans[0]} - ${spans[spans.length - 1]}`
 })
 </script>
 
 <template>
   <div
-    class="
-      stats rounded-box border-b3 bg-b1 shadow-warm-soft relative h-54 w-full border
-      px-5
-    ">
+    class="stats rounded-box border-b3 bg-b1 shadow-warm-soft relative h-54 w-full border px-5"
+  >
     <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>
 
-      <div class="text-xlfont-semibold dst"></div>
+      <div class="text-xlfont-semibold dst" />
 
-      <div class="stat-desc text-md"></div>
+      <div class="stat-desc text-md" />
     </div>
 
-    <LineChart
-      :data="data"
-      :options="options" />
+    <LineChart :data="data" :options="options" />
   </div>
 </template>

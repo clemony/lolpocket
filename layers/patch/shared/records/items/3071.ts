@@ -1,0 +1,63 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Black Cleaver",
+  "id": 3071,
+  "rank": "Legendary",
+  "buildsFrom": [
+    {
+      "id": 3044,
+      "name": "Phage",
+      "gold": 1100
+    },
+    {
+      "id": 3067,
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    {
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "bc"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Carve",
+      "effects": "Dealing physical damage to an enemy champion applies a stack of <i>Carve</i> for 6 seconds, stacking up to 5 times. Each stack inflicts 6% armor reduction, up to 30% armor at 5 stacks."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Fervor",
+      "effects": "Dealing physical damage grants you 20 <b>bonus</b> movement speed for 2 seconds."
+    }
+  ],
+  "stats": {
+    "attackDamage": 40,
+    "health": 400,
+    "abilityHaste": 20
+  },
+  "description": "40 Attack Damage\n400 Health\n20 Ability Haste\n\nCarve\nDealing physical damage to champions reduces their Armor by 6% for 6 seconds. (stacks 5 times).\n\nFervor\nDealing physical damage grants 20 Move Speed for 2 seconds.",
+  "gold": {
+    "base": 225,
+    "total": 3000,
+    "sell": 2100
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}
+export default item

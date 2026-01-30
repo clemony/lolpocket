@@ -14,9 +14,7 @@ const champion = computed(() => championData.default)
 
 <template>
   <div class="z-auto size-full">
-    <NuxtLayout
-      name="tab"
-      :champion>
+    <NuxtLayout name="tab" :champion>
       <NuxtPage :champion />
     </NuxtLayout>
   </div>

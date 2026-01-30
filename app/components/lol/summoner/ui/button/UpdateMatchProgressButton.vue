@@ -18,27 +18,32 @@ const {
   placement?: Side
   tip?: boolean
 }>()
-
-const { loadNewer, summoner } = useSummonerInject()
+const { summoner } = storeToRefs(s_session())
 
 const {
   cooldown,
   isLoading,
   throttled: update,
 } = throttleFunction(
-  () => loadNewer(),
+  () => s_matches().loadNewer(),
   120_000,
-  summoner.value.puuid,
-  'match-refresh',
+  summoner?.value.puuid,
+  'match-refresh'
 )
 
-const tippy = computed(() =>
-  !cooldown.value?.seconds
-    ? summoner.value.lastMatchUpdate
-      ? `Last updated ${summoner.value.lastMatchUpdate}`
-      : 'Not updated yet'
-    : `${cooldown.value?.seconds} cd`,
-)
+async function loadNew() {
+  const message = await s_matches().loadNewer()
+  console.log('🥸 - message - message:', message)
+}
+const tippy = computed(() => {
+  return (
+    !cooldown.value?.seconds
+      ? summoner?.value?.lastMatchUpdate
+        ? `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
+        : 'Not updated yet'
+      : `${cooldown.value?.seconds} cd`
+  )
+})
 </script>
 
 <template>
@@ -49,74 +54,67 @@ const tippy = computed(() =>
       cn(
         'p-0',
         {
-          'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
+          'pointer-events-none btn-active cursor-not-allowed bg-b2/80':
             cooldown,
         },
         className,
       )
     "
-    @click="update()">
+    @click="update()"
+  >
     <TransitionScalePop class="relative grid size-full overflow-hidden">
       <span
         v-if="!cooldown"
         :class="
-          cn('flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
-             { 'text-xs': size === 'xs' },
+          cn(
+            'flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
+            { 'text-xs': size === 'xs' },
           )
-        ">
-        <icon
-          v-if="showIcon"
-          name="reset"
-          class="mr-3 -ml-2 size-5" />
+        "
+      >
+        <icon v-if="showIcon" class="mr-3 -ml-2 size-5" name="reset" />
         <span class="text-sm">
           {{
-            typeof text === "string"
-              ? text
-              : typeof text === "boolean"
-                ? "update"
-                : ""
+            typeof text === "string" ? text
+            : typeof text === "boolean" ? "update"
+              : ""
           }}
         </span>
       </span>
       <div
         v-if="cooldown"
         :class="
-          cn('pointer-events-none z-0 grid size-full grid-rows-2 place-items-center gap-1.5 overflow-hidden p-2 *:overflow-hidden',
-             { 'gap-0': size === 'xs' },
+          cn(
+            'pointer-events-none z-0 grid size-full grid-rows-2 place-items-center gap-1.5 overflow-hidden p-2 *:overflow-hidden',
+            { 'gap-0': size === 'xs' },
           )
-        ">
+        "
+      >
         <div
           v-if="size !== 'xs'"
-          class="
-         dst inline w-full grid-flow-col grid-cols-2
-            items-center justify-between pr-0.25 text-end align-bottom text-xs
-            font-semibold text-nowrap
-          ">
+          class="inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-xs font-semibold text-nowrap dst"
+        >
           <span :class="cn('text-sm font-bold')">
             {{ cooldown?.formatted }}
           </span>
-          <span> cd </span>
+          <span>cd</span>
         </div>
 
         <Progress
-          :model-value="cooldown?.percent"
           class="bg-transparent"
+          :model-value="cooldown?.percent"
           :class="
-            cn('border-b4 bg-b3 relative h-2.75 w-full scale-y-60 rounded-xs border',
-               { 'h-2.5 mt-1.5': size === 'xs' },
+            cn(
+              'relative h-2.75 w-full scale-y-60 rounded-xs border border-b4 bg-b3',
+              { 'mt-1.5 h-2.5': size === 'xs' },
             )
           "
           :value="cooldown?.percent"
-          :max="100">
-          <ProgressIndicator
-            class="bg-transparent!"
-            :value="cooldown?.percent">
+          :max="100"
+        >
+          <ProgressIndicator class="bg-transparent!" :value="cooldown?.percent">
             <motion.div
-              class="
-                after:from-neutral after:via-neutral/80 after:to-neutral relative h-full
-                origin-right after:absolute after:inset-0 after:top-0
-                after:right-0 after:size-full after:bg-red-500
-              "
+              class="relative h-full origin-right after:absolute after:inset-0 after:top-0 after:right-0 after:size-full after:bg-red-500 after:from-neutral after:via-neutral/80 after:to-neutral"
               :initial="{
                 scaleX: 1,
                 width: '100%',
@@ -126,7 +124,8 @@ const tippy = computed(() =>
               }"
               :transition="{
                 ease: 'linear',
-              }"></motion.div>
+              }"
+            />
           </ProgressIndicator>
         </Progress>
       </div>

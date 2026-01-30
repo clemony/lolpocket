@@ -1,0 +1,42 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Refillable Potion",
+  "id": 2031,
+  "rank": "Consumable",
+  "buildsInto": [
+    {
+      "id": 2033,
+      "name": "Corrupting Potion",
+      "gold": 500
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "consumable",
+    "Green Potion"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "effects": "Holds charges that refill upon visiting the shop."
+    }
+  ],
+  "stats": {},
+  "description": "Active (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
+  "gold": {
+    "base": 150,
+    "total": 150,
+    "sell": 60
+  },
+  "maps": [
+    11,
+    12,
+    21
+  ]
+}
+export default item

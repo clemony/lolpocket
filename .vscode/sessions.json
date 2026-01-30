@@ -1,5 +1,5 @@
 {
-  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v11/terminal-keeper.json",
   "theme": "tribe",
   "active": "default",
   "activateOnStartup": true,
@@ -7,38 +7,32 @@
   "sessions": {
     "default": [
       {
-        "name": "hello",
-        "autoExecuteCommands": true,
-        "icon": "person",
-        "color": "terminal.ansiGreen",
-        "commands": ["echo hello"]
+        "name": "nuxt dev",
+        "icon": "nuxt-logo",
+        "color": "terminal.ansiBrightGreen",
+        "commands": [
+          "nuxt dev"
+        ]
       },
       [
         {
-          "name": "docker:ros",
-          "commands": [""]
-        },
-        {
-          "name": "docker:k8s",
-          "commands": [""]
+          "name": "typecheck",
+          "color": "terminal.ansiBrightBlue",
+          "commands": [
+            "pnpm exec nuxt typecheck"
+          ]
         }
       ],
       [
         {
-          "name": "docker:nats",
-          "commands": [""]
-        },
-        {
-          "name": "docker:fleet",
-          "commands": [""]
+          "name": "eslint",
+          "icon": "nuxtr-settings",
+          "color": "terminal.ansiBrightCyan",
+          "commands": [
+            "pnpm exec eslint-config-inspector"
+          ]
         }
       ]
-    ],
-    "saved-session": [
-      {
-        "name": "connect",
-        "commands": [""]
-      }
     ]
   }
 }

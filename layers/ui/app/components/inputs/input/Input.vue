@@ -21,11 +21,11 @@ const props = withDefaults(
   {
     placeholder: '',
     size: 'default',
-  },
+  }
 )
 const emits = defineEmits<{
   (e: 'update:modelValue', payload: string): void
-  (e: 'clear:input', payload: string): void
+  (e: 'clearInput', payload: string): void
 }>()
 
 const modelValue = useVModel(props, 'modelValue', emits, {
@@ -41,8 +41,7 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 function focusInput() {
-  if (!focused.value)
-    focused.value = true
+  if (!focused.value) focused.value = true
 }
 defineExpose({
   focusInput,
@@ -52,10 +51,11 @@ defineExpose({
 
 <template>
   <label
+    v-bind="forwarded"
     :id="props.id"
     for="input"
-    v-bind="forwarded"
-    :class="cn(inputVariants({ size: props.size, variant }), props.class)">
+    :class="cn(inputVariants({ size: props.size, variant }), props.class)"
+  >
     <slot />
     <input
       ref="inputRef"
@@ -63,9 +63,15 @@ defineExpose({
       name="inputRef"
       :placeholder
       autocomplete="off"
-      :class="cn('placeholder:text-sm placeholder:italic focus:placeholder:opacity-0', props.inputClass)"
+      :class="
+        cn(
+          'placeholder:text-sm placeholder:italic focus:placeholder:opacity-0',
+          props.inputClass,
+        )
+      "
       @keydown.stop
-      @keydown.enter.prevent />
+      @keydown.enter.prevent
+    >
     <slot name="2" />
 
     <slot name="3" />

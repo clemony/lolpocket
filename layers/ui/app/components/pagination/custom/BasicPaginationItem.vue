@@ -14,7 +14,7 @@ const props = withDefaults(
   {
     shape: 'square',
     size: 'sm',
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class', 'size', 'isActive')
@@ -22,9 +22,10 @@ const delegatedProps = reactiveOmit(props, 'class', 'size', 'isActive')
 
 <template>
   <PaginationListItem
-    data-slot="pagination-item"
     v-bind="delegatedProps"
-    :class="cn(props.class)">
+    data-slot="pagination-item"
+    :class="cn(props.class)"
+  >
     <slot />
   </PaginationListItem>
 </template>

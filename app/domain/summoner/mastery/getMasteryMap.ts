@@ -1,5 +1,3 @@
-
-
 export async function getMasteryMap(puuid: string, region: string) {
   const list = await getOrFetchAllMastery(puuid, region)
 

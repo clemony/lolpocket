@@ -1,31 +1,39 @@
-import fs from "node:fs"
-import path from "node:path"
-import process from "node:process"
-import { c_DIR } from "../.."
+import { roundDecimal } from '#layers/lib/shared/utils'
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
+import { markUpdate } from '../../misc/markUpdate'
 import {
-    markUpdate,
-    normalize,
-    normalizeAbility,
-    normalizeArray,
-    stripEmpty,
-} from "../../utils"
+  normalize,
+  normalizeAbility,
+  normalizeArray,
+  stripEmpty,
+} from '../../utils'
+
+export interface RawSkin {
+  id: number
+  name?: string
+  uncenteredSplashPath: string
+}
 
 // ---------- Args & flags ----------
 const args = process.argv.slice(2)
-const RESUME = args.includes("--resume")
-const FRESH = args.includes("--fresh")
-const SCRIPT_KEY = "generate-champions"
+const RESUME = args.includes('--resume')
+const FRESH = args.includes('--fresh')
+const SCRIPT_KEY = 'generate-champions'
 
 // ---------- File paths ----------
-/* const dataPathM = resolvePath("./champions/raw/champions-raw-meraki.json") */
-const dataPathD = path.resolve(`${c_DIR}raw/champions-raw-data-dragon.json`)
-const outputDir = path.resolve("./layers/domain/records/champions/")
-const outputMergedRaw = path.resolve(`${c_DIR}raw/champions-raw.json`)
-const savepointPath = path.resolve(`${c_DIR}raw/.generate-champions-save.json`)
-const outputAbilities = path.resolve("./layers/domain/records/abilities/")
+const dataPathD = path.resolve(`./layers/patch/server/champions/raw/champions-raw-data-dragon.json`)
+const outputDir = path.resolve('./layers/patch/shared/records/champions/')
+const outputMergedRaw = path.resolve(`./layers/patch/server/champions/raw/champions-raw.json`)
+const savepointPath = path.resolve(`./layers/patch/server/champions/raw/.generate-champions-save.json`)
+const outputAbilities = path.resolve('./layers/patch/shared/records/abilities/')
+const outputAbilityId = path.resolve(
+  './layers/patch/shared/constants/champions/abilityIdToName.ts'
+)
 const urlMA = fs.readFileSync(
-  path.resolve(`${c_DIR}raw/champions.json`),
-  "utf-8"
+  path.resolve(`./layers/patch/server/champions/raw/champions.json`),
+  'utf-8'
 )
 
 // ---------- Ensure output dirs ----------
@@ -33,12 +41,13 @@ fs.mkdirSync(outputDir, { recursive: true })
 fs.mkdirSync(path.dirname(savepointPath), { recursive: true })
 
 // type
-interface BuildChampion extends Omit<Champion, "abilities"> {
-  abilities: Record<"P" | "Q" | "W" | "E" | "R", Ability[]>
+interface BuildChampion extends Omit<Champion, 'abilities'> {
+  abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+  skins: Record<string, RawSkin>
 }
 
 const dragonData: Record<string, any> = JSON.parse(
-  fs.readFileSync(dataPathD, "utf-8")
+  fs.readFileSync(dataPathD, 'utf-8')
 )
 
 const championsMergedRaw: Record<string, any> = {}
@@ -50,9 +59,10 @@ const merakiData: Record<string, BuildChampion> = JSON.parse(urlMA)
 let savepoints: Record<string, string[]> = {}
 if (fs.existsSync(savepointPath)) {
   try {
-    savepoints = JSON.parse(fs.readFileSync(savepointPath, "utf-8"))
-  } catch {
-    console.warn("⚠️ Failed to load savepoint, starting fresh.")
+    savepoints = JSON.parse(fs.readFileSync(savepointPath, 'utf-8'))
+  }
+  catch {
+    console.warn('⚠️ Failed to load savepoint, starting fresh.')
   }
 }
 
@@ -61,6 +71,10 @@ if (FRESH) savepoints[SCRIPT_KEY] = []
 const completed = new Set<string>(RESUME ? savepoints[SCRIPT_KEY] || [] : [])
 
 const abilityIdToName: Record<string, string> = {}
+
+const fullSkins: Record<string, Skin[]> = {}
+const primarySkins: Record<string, Skin> = {}
+const tileSkins: Record<string, string> = {}
 
 // ---------- Champion processing ----------
 for (const [key, champ] of Object.entries(merakiData)) {
@@ -82,12 +96,12 @@ for (const [key, champ] of Object.entries(merakiData)) {
 
   try {
     // ---------- Merge abilities ----------
-    const abilityOrder: Array<"P" | "Q" | "W" | "E" | "R"> = [
-      "P",
-      "Q",
-      "W",
-      "E",
-      "R",
+    const abilityOrder: Array<'P' | 'Q' | 'W' | 'E' | 'R'> = [
+      'P',
+      'Q',
+      'W',
+      'E',
+      'R',
     ]
 
     const mergedAbilities: any[] = []
@@ -96,10 +110,11 @@ for (const [key, champ] of Object.entries(merakiData)) {
       const abilityGroup = champ.abilities[slot] || []
       for (const ability of abilityGroup) {
         let riotAbility
-        if (slot === "P") {
+        if (slot === 'P') {
           riotAbility = riotChamp.passive
-        } else {
-          const spells = ["Q", "W", "E", "R"].indexOf(slot)
+        }
+        else {
+          const spells = ['Q', 'W', 'E', 'R'].indexOf(slot)
           riotAbility = riotChamp.spells?.[spells] || {}
         }
 
@@ -107,13 +122,13 @@ for (const [key, champ] of Object.entries(merakiData)) {
           ...ability,
           key: slot,
           maxCharges:
-            Number.isFinite(riotAbility?.maxammo) ?
-              Number(riotAbility.maxammo)
-            : null,
+            Number.isFinite(riotAbility?.maxammo)
+              ? Number(riotAbility.maxammo)
+              : null,
           maxRank:
-            typeof riotAbility?.maxrank === "number" ?
-              riotAbility.maxrank
-            : null,
+            typeof riotAbility?.maxrank === 'number'
+              ? riotAbility.maxrank
+              : null,
           riotCooldown:
             Array.isArray(riotAbility?.cooldown) ? riotAbility.cooldown : [],
           riotCost: Array.isArray(riotAbility?.cost) ? riotAbility.cost : [],
@@ -136,30 +151,62 @@ for (const [key, champ] of Object.entries(merakiData)) {
       fs.writeFileSync(
         abilityFile,
         `// ${markUpdate()}
+  import type { Ability } from "#shared/types"
 
-const ability: Ability = ${JSON.stringify(stripEmpty(ability), null, 2)}
-export default ability
+  const ability: Ability = ${JSON.stringify(stripEmpty(ability), null, 2)}
+  export default ability
 `
       )
     }
 
     // ---------- Filter stats safely ----------
-    const filteredStats = Object.fromEntries(
-      Object.entries(champ.stats || {})
-        .filter(([k]) => !k.startsWith("aram") && !k.startsWith("urf"))
-        .map(([k, val]) => {
-          if (!val || typeof val !== "object") return [k, { flat: 0 }]
-          const cleaned = Object.fromEntries(
-            Object.entries(val)
-              .filter(([, v]) => v !== 0 && v != null)
-              .map(([kk, vv]) => [
-                kk,
-                typeof vv === "number" ? Number(vv.toFixed(3)) : vv,
-              ])
-          )
-          return [k, Object.keys(cleaned).length > 0 ? cleaned : { flat: 0 }]
-        })
-    )
+    const stats = champ.stats ?? {}
+
+    const baseStats: Record<string, number> = {}
+    const statsPerLevel: Record<string, number> = {}
+
+    for (const [key, value] of Object.entries(dragonData[champ.key].stats)) {
+      if (value == null || value === 0)
+        continue
+      const normalizedKey = key
+        .replace('spellblock', 'magicResist')
+        .replace('attackdamage', 'attackDamage')
+        .replace('attackspeed', 'attackSpeed')
+        .replace('hpregen', 'hpRegen')
+        .replace('mpregen', 'mpRegen')
+        .replace('attackrange', 'attackRange')
+
+      if (key.endsWith('perlevel')) {
+        const baseKey = normalizedKey.replace(/perlevel$/, '')
+        statsPerLevel[baseKey] = roundDecimal(Number(value))
+      }
+      else {
+        baseStats[normalizedKey] = roundDecimal(Number(value))
+      }
+    }
+    /*     const skins: RawSkin[] = champ.skins || []
+
+    const allSkins = skins
+      .filter(skin => skin.splashPath && skin.loadScreenPath)
+      .map((skin) => {
+        return {
+          id: String(cleanImageNum(skin.tilePath)),
+          key: String(cleanImageLink(skin.splashPath)),
+          name: String(skin.name),
+          load: String(cleanImageLink(skin.loadScreenPath)),
+        }
+      })
+
+    const allTile = skins
+      .filter(skin => skin.tilePath)
+      .map(skin => String(cleanImageLink(skin.tilePath)))
+
+    if (allSkins.length > 0) {
+      fullSkins[key] = allSkins
+    }
+    if (allTile.length > 0) {
+      tileSkins[key] = allTile[0]
+    } */
 
     // ---------- Build normalized champion ----------
     const champData = {
@@ -182,13 +229,14 @@ export default ability
       releaseDate: champ.releaseDate,
       resource: normalize(champ.resource),
       roles: normalizeArray(champ.roles),
-      stats: filteredStats,
+      stats: baseStats,
+      statsPerLevel,
     }
 
     championsMergedRaw[key] = Object.fromEntries(
       Object.entries(champData).filter(
         ([, v]) =>
-          v != null && v !== "" && !(Array.isArray(v) && v.length === 0)
+          v != null && v !== '' && !(Array.isArray(v) && v.length === 0)
       )
     )
 
@@ -196,13 +244,13 @@ export default ability
     const outputTsPath = path.join(outputDir, `${key}.ts`)
     fs.writeFileSync(
       outputTsPath,
-      `// ${markUpdate()}\n\nconst champion: Champion = ${JSON.stringify(stripEmpty(champData), null, 2)}\nexport default champion`
+      `// ${markUpdate()}
+  import type { Champion } from '#shared/types'
+
+  const champion: Champion = ${JSON.stringify(stripEmpty(champData), null, 2)}\nexport default champion`
     )
 
     // ---------- Write individual champion file ----------
-    const outputAbilityId = path.resolve(
-      "./layers/domain/constants/champions/ability-id-to-name.ts"
-    )
     fs.writeFileSync(
       outputAbilityId,
       `// ${markUpdate()}\n\nexport const abilityIdToName: Record<string, string> = ${JSON.stringify(abilityIdToName, null, 2)}`
@@ -219,7 +267,8 @@ export default ability
       JSON.stringify(championsMergedRaw, null, 2)
     )
     console.log(`✅ Processed ${key}`)
-  } catch (err) {
+  }
+  catch (err) {
     console.error(`❌ Failed processing ${key}`, err)
     if (!RESUME) throw err
   }
@@ -228,4 +277,4 @@ export default ability
 // ---------- Clean savepoint ----------
 delete savepoints[SCRIPT_KEY]
 fs.writeFileSync(savepointPath, JSON.stringify(savepoints, null, 2))
-console.log("🎉 Cleared savepoint for generate-champions")
+console.log('🎉 Cleared savepoint for generate-champions')

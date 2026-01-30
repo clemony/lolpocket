@@ -1,0 +1,63 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "Q",
+  "name": "Shock Blast",
+  "width": "140",
+  "affects": "Enemies",
+  "blurb": "Active:  Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or max range, dealing physical damage to nearby enemies.",
+  "castTime": "0.2143",
+  "cooldown": "16 / 14 / 12 / 10 / 8 / 6",
+  "cost": "40",
+  "damageType": "Physical damage",
+  "effectRadius": "170 / 250 /  160 / 250",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "80 / 126 / 172 / 218 / 264 / 310"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "140"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">If the bolt passes through Acceleration Gate, it becomes supercharged:</span> increasing its damage by 40% as well as its speed, range and explosion radius.</p>",
+      "leveling": [
+        {
+          "attribute": "Increased Damage",
+          "modifiers": [
+            {
+              "values": "112 / 176.4 / 240.8 / 305.2 / 369.6 / 434"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "196"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Shock Blast deals 50 bonus physical damage to monsters."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nUpon touching  Acceleration Gate, the enhanced missile gains its remaining range equal to [ 1600 units - travelled distance of the standard missile ].\nThis means that the range of the enhanced Shock Blast is always the same, regardless of how early or late it interacted with Acceleration Gate.\nSupercharging the Shock Blast as soon as possible, however, will improve its average speed significantly.\nFor this, Jayce must stand inside or very close to the Acceleration Gate, or place it very close to himself right after Shock Blast's cast time.\nShock Blast's effect radius is centered around the location of the missile as it collides.\nShock Blast will always damage the enemy it collided with, even if it is so large that it is outside the effect radius.\nThe non-enhanced Shock Blast detonation has a slightly smaller sight radius than the radius in which it deals damage.(note)",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "speed": "1450 / 2350",
+  "spellEffects": "aoe",
+  "spellshieldable": "true",
+  "targeting": "Direction"
+}
+  export default ability

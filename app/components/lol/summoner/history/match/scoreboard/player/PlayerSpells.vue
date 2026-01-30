@@ -8,17 +8,13 @@ const { class: className, player } = defineProps<{
 <template>
   <div
     class=""
-    :class="cn('items-between flex shrink-0 flex-col gap-1.5', className)">
-    <img
+    :class="cn('items-between flex shrink-0 flex-col gap-1.5', className)"
+  >
+    <Spell
       v-for="spell in player?.spells"
+      :id="spell"
       :key="spell"
-      :data-id="spell"
-      data-type="spell"
-      :alt="String(spell)"
-      :src="`/img/spells/${spell}.webp`"
-      class="
-        ring-bc/60 size-6.5 rounded-md shadow-sm drop-shadow-sm transition-all
-        duration-300 hover:scale-105 hover:ring
-      " />
+      class="ring-bc/60 size-6.5 rounded-md   transition-all duration-300 hover:scale-105 hover:ring"
+    />
   </div>
 </template>

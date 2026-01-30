@@ -38,9 +38,7 @@ const variants = {
 <template>
   <ContextMenuPortal>
     <AnimatePresence>
-      <ContextMenuContent
-        as-child
-        v-bind="forwarded">
+      <ContextMenuContent v-bind="forwarded" as-child>
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -52,10 +50,12 @@ const variants = {
           }"
           exit="hidden"
           :class="
-            cn('text-popover-bc border-b4/60 bg-b1/90 z-50 min-w-32 overflow-hidden rounded-lg border p-1 shadow-md backdrop-blur-md',
-               props.class,
+            cn(
+              'text-popover-bc border-b4/60 bg-b1/90 z-50 min-w-32 overflow-hidden rounded-lg border p-1 shadow-md backdrop-blur-md',
+              props.class,
             )
-          ">
+          "
+        >
           <slot />
         </motion.div>
       </ContextMenuContent>

@@ -8,7 +8,8 @@ const { id, name } = defineProps<{
 <template>
   <Image
     v-if="name !== ''"
-    :image="`https://ddragon.leagueoflegends.com/cdn/${ds().currentPatch}/img/items/${id}.png`"
+    class="aspect-square size-full rounded-lg"
+    :image="`https://ddragon.leagueoflegends.com/cdn/${patchIndex[0]}/img/items/${id}.png`"
     :alt="`${name} Image`"
-    class="aspect-square size-full rounded-lg" />
+  />
 </template>

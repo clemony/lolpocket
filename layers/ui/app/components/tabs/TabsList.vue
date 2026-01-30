@@ -2,17 +2,20 @@
 import type { TabsListProps } from 'reka-ui'
 import { TabsList } from 'reka-ui'
 
-const props = withDefaults(defineProps<
-  TabsListProps & {
-    class?: HTMLAttributes['class']
-    color?: TabListVariants['color']
-    orientation?: TabListVariants['orientation']
-    size?: TabListVariants['size']
+const props = withDefaults(
+  defineProps<
+    TabsListProps & {
+      class?: HTMLAttributes['class']
+      color?: TabListVariants['color']
+      orientation?: TabListVariants['orientation']
+      size?: TabListVariants['size']
+    }
+  >(),
+  {
+    orientation: 'horizontal',
+    size: '9',
   }
->(), {
-  orientation: 'horizontal',
-  size: '9'
-})
+)
 
 const forwarded = reactiveOmit(props, 'class')
 </script>
@@ -21,8 +24,13 @@ const forwarded = reactiveOmit(props, 'class')
   <TabsList
     v-bind="forwarded"
     :class="
-      cn(tabListVariants({ color, size, orientation }), 'relative rounded-xl!', props.class)
-    ">
+      cn(
+        tabListVariants({ color, size, orientation }),
+        'relative rounded-xl!',
+        props.class,
+      )
+    "
+  >
     <slot />
   </TabsList>
 </template>

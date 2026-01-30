@@ -1,15 +1,13 @@
 <script lang="ts" setup>
 const {
-  api,
+  variant = 'ghost',
   base = 'btn',
   class: className,
   hover = 'base',
   on = 'base',
   size,
-  variant = 'ghost',
 } = defineProps<{
   class?: HTMLAttributes['class']
-  api: SummonerApi
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
   base?: ButtonVariants['base']
@@ -17,49 +15,48 @@ const {
   hover?: ButtonVariants['hover']
 }>()
 
-const summoner = computed (() => toValue(api?.summoner))
+const summoner = computed(() => s_session().summoner)
 
 const open = shallowRef<boolean>(false)
 
 function handleBlock() {
   open.value = false
   ui().blockDialog = true
-}
+} /*
+    animation="shift-toward"
+    theme="base clean no-arrow"
+  */
 </script>
 
 <template>
-  <tippy
-    v-if="api"
-    :interactive="true"
-    animation="shift-toward"
-    theme="base clean no-arrow">
+  <UPopover
+    v-if="summoner" mode="hover"
+  >
     <Button
       size="11"
+      :hover
+      :variant
+      :base
+      :on
       :class="
-        cn('relative inline-flex gap-2 overflow-hidden p-0 leading-6',
-           buttonVariants({ size, hover, variant, base, on }),
-           { 'btn-active': open,
-             'w-full-pl-0 rounded-full': !size,
-           },
-           className,
+        cn(
+          'relative inline-flex gap-2 overflow-hidden p-0 leading-6',
+          { 'btn-active': open, 'w-full-pl-0 rounded-full': !size },
+          className,
         )
-      ">
-      <SummonerName
-        :summoner
-        class="truncate text-xl font-bold" />
+      "
+    >
+      <SummonerName class="truncate text-xl font-bold" :summoner />
 
-      <SummonerTag
-        :summoner
-        class="truncate font-medium" />
+      <SummonerTag class="truncate font-medium" :summoner />
       <LazySummonerIcon
-        v-if="summoner"
+        class="ml-4 size-9 rounded-full shadow-sm drop-shadow-sm"
         :summoner
-        class="ml-4 size-9 rounded-full shadow-sm drop-shadow-sm" />
+      />
     </Button>
     <template #content>
-      <SummonerCard :api />
+      <SummonerCard />
     </template>
-  </tippy>
-  <LazyBlockDialog
-    :summoner />
+  </UPopover>
+  <LazyBlockDialog :summoner />
 </template>

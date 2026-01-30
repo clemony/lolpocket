@@ -15,27 +15,26 @@ const {
 </script>
 
 <template>
-  <Listbox
-    v-model:model-value="cs().filters.resource"
-    :multiple="false">
+  <Listbox v-model:model-value="cs().filters.resource" :multiple="false">
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
         :class="
-          cn('relative z-1 flex max-h-60 w-full flex-col flex-wrap items-start gap-x-7 gap-y-3 py-0',
-             className,
+          cn(
+            'relative z-1 flex max-h-60 w-full flex-col flex-wrap items-start gap-x-7 gap-y-3 py-0',
+            className,
           )
-        ">
+        "
+      >
         <Button
           v-if="cs().filters.resource && clear"
+          class="order-first hover:*:opacity-100"
           :variant
           :hover
           :size="size[0]"
-          class="order-first hover:*:opacity-100"
-          @click="cs().filters.resource = null">
-          <icon
-            name="x"
-            class="size-4" />
+          @click="cs().filters.resource = null"
+        >
+          <icon class="size-4" name="x" />
         </Button>
 
         <BaseListboxItem
@@ -43,13 +42,9 @@ const {
           :key="resource.name"
           class="fx-0 bg-transparent"
           :value="resource.name"
-          as-child>
-          <ResourceBadge
-            as="label"
-            :variant
-            :size="size[1]"
-            :resource>
-          </ResourceBadge>
+          as-child
+        >
+          <ResourceBadge as="label" :variant :size="size[1]" :resource />
         </BaseListboxItem>
       </TransitionSlideLeft>
     </ListboxContent>

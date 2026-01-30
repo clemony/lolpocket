@@ -3,12 +3,13 @@ import type { ToastRootEmits, ToastRootProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
 import { ToastRoot, useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<ToastRootProps & {
-
-  class?: HTMLAttributes['class']
-  onOpenChange?: ((value: boolean) => void) | undefined
-  variant?: ToastVariants['variant']
-}>()
+const props = defineProps<
+  ToastRootProps & {
+    class?: HTMLAttributes['class']
+    onOpenChange?: ((value: boolean) => void) | undefined
+    variant?: ToastVariants['variant']
+  }
+>()
 
 const emits = defineEmits<ToastRootEmits>()
 
@@ -21,7 +22,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ToastRoot
     v-bind="forwarded"
     :class="cn(toastVariants({ variant }), props.class)"
-    @update:open="onOpenChange">
+    @update:open="onOpenChange"
+  >
     <slot />
   </ToastRoot>
 </template>

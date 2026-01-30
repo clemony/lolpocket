@@ -18,31 +18,26 @@ Chart.register(
   LineElement,
   PointElement,
   RadialLinearScale,
-  Filler,
+  Filler
 )
 
 const rawKeys = Object.keys(champion.attributeRatings)
 const normalizedKeys = rawKeys.map((val, index) => {
-  if (index === 5)
-    return ['Ability', 'Reliance']
+  if (index === 5) return ['Ability', 'Reliance']
   return val.charAt(0).toUpperCase() + val.slice(1)
 })
 const rawValues = Object.values(champion.attributeRatings)
 const normalizedValues = rawValues.map((val: number, index) => {
-  if (index !== 5)
-    return val
+  if (index !== 5) return val
 
-  if (val < 20)
-    return 0
-  if (val < 50)
-    return 1
-  if (val < 70)
-    return 2
+  if (val < 20) return 0
+  if (val < 50) return 1
+  if (val < 70) return 2
   return 3
 })
 console.log(
   '💠 - Object.values(champion.attributeRatings):',
-  Object.values(champion.attributeRatings),
+  Object.values(champion.attributeRatings)
 )
 const data = {
   datasets: [
@@ -106,20 +101,13 @@ const options = {
 </script>
 
 <template>
-  <div class="relative m-0 w-full justify-self-center bg-b3/30 pt-6 pb-0!">
+  <div class="bg-b3/30 relative m-0 w-full justify-self-center pt-6 pb-0!">
     <div
-      class="
-        absolute top-5 left-6 text-md font-bold tracking-tight text-bc/50
-        drop-shadow-sm
-      "
+      class="text-md text-bc/50 absolute top-5 left-6 font-bold tracking-tight drop-shadow-sm"
     >
       Champion Attributes
     </div>
 
-    <Radar
-      :data="data"
-      :options="options"
-      class="drop-shadow-sm"
-    />
+    <Radar class="drop-shadow-sm" :data="data" :options="options" />
   </div>
 </template>

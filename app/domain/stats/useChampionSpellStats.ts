@@ -29,8 +29,7 @@ export function pickBestSpellSet(
   minGames = 5
 ): Record<number, StatDetail> | null {
   const bestPair = pickBestGeneric(pairs, minGames)
-  if (!bestPair)
-    return null
+  if (!bestPair) return null
 
   return expandSpellPairRecord(bestPair)
 }
@@ -49,10 +48,9 @@ export function useChampionSpellStats(source: Ref<MatchPlayerData[]>) {
 
     for (const match of source.value) {
       const p = match.player
-      if (!p || p.win === 'remake')
-        continue
+      if (!p || p.win === 'remake') continue
 
-      const [s1, s2] = Object.values(p.spells) as [number , number]
+      const [s1, s2] = Object.values(p.spells) as [number, number]
 
       bumpStat(single, s1, p.win)
       bumpStat(single, s2, p.win)

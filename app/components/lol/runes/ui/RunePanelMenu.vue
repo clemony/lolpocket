@@ -35,13 +35,10 @@ function handleDelete() {
 
     <button
       v-tippy="'Delete Current Set'"
-      class="
-        b3/4 btn btn-ghost btn-sm *:dst hover:bg-b3/5 rounded-lg hover:border
-      "
-      @click="handleDelete()">
-      <icon
-        name="trash"
-        class="text-nc size-5 shrink-0 opacity-70" />
+      class="b3/4 btn btn-ghost btn-sm *:dst hover:bg-b3/5 rounded-lg hover:border"
+      @click="handleDelete()"
+    >
+      <icon class="text-nc size-5 shrink-0 opacity-70" name="trash" />
     </button>
   </div>
 </template>

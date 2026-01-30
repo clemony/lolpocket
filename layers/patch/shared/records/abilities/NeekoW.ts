@@ -1,0 +1,68 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:56 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Shapesplitter",
+  "affects": "Self",
+  "blurb": "Passive:  Neeko's  basic attacks  on-hit generate  stacks of Shapesplitter. At 2 stacks, her next basic attack will consume them all to become  non-projectile, deal bonus magic damage, and briefly grant her  bonus move speed.",
+  "castTime": "none",
+  "cooldown": "16 / 15 / 14 / 13 / 12",
+  "cost": "0",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Magic Damage",
+          "modifiers": [
+            {
+              "values": "30 / 65 / 100 / 135 / 170"
+            },
+            {
+              "unit": "% AP",
+              "values": "60"
+            }
+          ]
+        },
+        {
+          "attribute": "Bonus Movement Speed",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "10 / 17.5 / 25 / 32.5 / 40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Movement Speed",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "20 / 25 / 30 / 35 / 40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "The clone lasts for 3 seconds, moves a fixed distance in the target direction, and is untargetable to allies and for the first 0.5 seconds of its lifespan to enemies. If the clone takes damage, it will disappear prematurely after 0.5 seconds.Casting an ability, summoner spell, item active, or starting a channel causes the clone to stop moving. Additionally, the clone plays the casting animations for Blooming Burst and Tangle-Barbs as well as Pop Blossom's visual effects whenever Neeko casts them. The clone will also play the animation of her next expression or Recall for a set duration that overrides its original duration and will become unable to move while doing so."
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Neeko sends her clone to the target location if it is not playing an expression or Recall animation.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/w",
+  "notes": "The empowered attack will not trigger against  wards and jungle plants.\nThe damage done by the empowered attack is attributed to  Inherent Glamour in the Death Recap.(bug)\nUsing a basic attack  breaks stealth at the start of the attack windup.\nRecasting Shapesplitter does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nOnce spawned with a  disguise, the clone cannot lose the disguise.\nWhen mimicking the animation of  Blooming Burst and  Tangle-Barbs while disguised, the clone will play the disguise unit's first and third ability animation respectively.\nWhen mimicking the animation of Blooming Burst, the clone will turn toward Blooming Burst's target location unless it was ordered to move within the last 0.5 seconds, in which case it will not change its facing direction.(bug)\nWhen mimicking the animation of Tangle-Barbs, the clone will always face to the east.(bug)\nIf Shapesplitter is cast during  Pop Blossom's delay, the clone will also mimic the ability by displaying the VFX for its area of effect. The copied VFX is only visible to enemies, and only while they have  sight of Neeko.(note)\nWhen Neeko forces her clone to play an expression or  Recall animation, she modifies its duration based on the animation played.\nJoke - 8 seconds.\nDance - 8 seconds.\nTaunt - 4.25 seconds.\nLaugh - 3 seconds.\nToggle - Plays the Joke expression but for the clone only.\n Recall - 8 seconds.\n Empowered Recall - 4 seconds.\nWhile playing an expression or recall animation, the clone cannot move via pathing, even if it is affected by a  forced action.\nThe clone is special-cased to not apply  Frozen Heart's Winter's Caress after the clone's base duration (3 seconds) has elapsed.\nThis effect can still apply before that, including if the clone disappears prior to the base duration elapsing.(note)\nThe clone will sometimes not disappear prematurely after 0.5 seconds.(bug)\nBoth Neeko and the clone use the same running animation.\nWhen passing near a jungle camp for the first time, Neeko will wave at the camp. The clone will likewise wave at nearby camps every time it is spawned, which can override the running animation and allow players to recognize the clone.(bug)\nThe clone can still be targeted by allied  auto-targeted effects (e.g.  Heal,  Celestial Blessing).\nThe clone benefits from allied  Speed Shrine, despite being  untargetable to allies.(note)",
+  "projectile": "FALSE",
+  "spellEffects": "Proc",
+  "targeting": "Direction / Location",
+  "targetRange": "900"
+}
+  export default ability

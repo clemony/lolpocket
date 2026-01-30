@@ -20,17 +20,18 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <MenubarRadioItem
     v-bind="forwarded"
     :class="
-      cn('focus:bg-b2 focus:text-bc relative flex cursor-default items-center gap-3 rounded-md px-4 py-1.5 text-sm font-medium outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-         props.class,
+      cn(
+        'focus:bg-b2 focus:text-bc relative flex cursor-default items-center gap-3 rounded-md px-4 py-1.5 text-sm font-medium outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        props.class,
       )
-    ">
+    "
+  >
     <span
       id="indicator"
-      class="order-first flex size-4 items-center justify-center">
+      class="order-first flex size-4 items-center justify-center"
+    >
       <MenubarItemIndicator>
-        <icon
-          name="circle-big-dot"
-          class="dst size-4 fill-current" />
+        <icon class="dst size-4 fill-current" name="circle-big-dot" />
       </MenubarItemIndicator>
     </span>
 

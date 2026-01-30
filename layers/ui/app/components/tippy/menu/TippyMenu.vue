@@ -23,8 +23,7 @@ provide<TippyContext>(tippyContextKey, {
 })
 
 watch([triggerRef, contentRef], ([trigger, content]) => {
-  if (trigger && content)
-    (instance.value as any)?.setContent(trigger, content)
+  if (trigger && content) (instance.value as any)?.setContent(trigger, content)
 })
 </script>
 

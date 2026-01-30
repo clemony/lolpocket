@@ -2,12 +2,11 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const { allies, filter, loading, setFilter, summoner, whenReady } = useSummonerInject()
 
 const allyModel = ref<string>(null)
-await whenReady()
 /* const filterAllies = computed (() => filter?.value?.ally ? allies?.allies.filter(a => filter.value?.ally === a?.puuid) : allies?.allies) */
 const winrateFormula = ref('absolute')
+const { allies } = storeToRefs(s_champion())
 </script>
 
 <template>
@@ -17,15 +16,16 @@ const winrateFormula = ref('absolute')
       :highlight-on-hover="false"
       :multiple="false"
       selection-behavior="toggle"
-      @update:model-value="setFilter('ally', allyModel)"
-      @entry-focus.prevent>
+      @update:model-value="s_matches().setFilter('ally', allyModel)"
+      @entry-focus.prevent
+    >
       <ListboxContent as-child>
-        <SlideInTopOutBottom
-          class="h-max max-h-100 w-full overflow-y-scroll overscroll-auto py-2">
-          <template
-            v-if="!loading && allies.sort((a, b) => b.games - a.games)">
+        <div
+          class="h-max max-h-100 w-full overflow-y-scroll overscroll-auto py-2"
+        >
+          <template v-if="!s_matches().loading">
             <ListboxItem
-              v-for="ally in allies"
+              v-for="ally in allies?.sort((a, b) => b.games - a.games)"
               :key="ally.name"
               :value="ally.puuid"
               size="12"
@@ -33,13 +33,22 @@ const winrateFormula = ref('absolute')
               base="btn"
               variant="ghost"
               hover="secondary"
-              :class="cn('group/ally dst w-full gap-3 pr-4 pl-3 duration-0! **:font-medium **:normal-case focus:outline-0', { hidden: filter?.ally && filter?.ally !== ally.puuid })">
+              :class="
+                cn(
+                  'group/ally w-full gap-3 pr-4 pl-3 dst duration-0! **:font-medium **:normal-case focus:outline-0',
+                  { hidden: s_matches().filter?.ally && s_matches().filter?.ally !== ally.puuid },
+                )
+              "
+            >
               <SummonerIcon
                 class="size-8 rounded-full shadow-sm drop-shadow-sm"
                 :icon-id="ally.icon"
-                :alt="`${ally.name}'s Icon`" />
+                :alt="`${ally.name}'s Icon`"
+              />
 
-              <span class="inline-flex w-50 max-w-50 gap-1 truncate overflow-hidden align-baseline leading-4">
+              <span
+                class="inline-flex w-50 max-w-50 gap-1 truncate overflow-hidden align-baseline leading-4"
+              >
                 <span class="inline truncate align-baseline">
                   {{ ally.name }}
                 </span>
@@ -47,9 +56,12 @@ const winrateFormula = ref('absolute')
                   #{{ ally.tag }}
                 </span>
                 <Icon
-                  v-if="ally === allies.sort((a, b) => b.synergy - a.synergy)[0]"
+                  v-if="
+                    ally === allies.sort((a, b) => b.synergy - a.synergy)[0]
+                  "
+                  class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!"
                   name="ion:star"
-                  class="dst **:text-bc/80! ml-1 inline size-3.5 align-bottom" />
+                />
               </span>
 
               <div class="w-24 text-end text-sm whitespace-nowrap">
@@ -61,14 +73,13 @@ const winrateFormula = ref('absolute')
               </div>
 
               <Element
-                v-if="filter?.ally === ally.name"
+                v-if=" s_matches().filter?.ally === ally.name"
+                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/ally:animate-heartbeat"
                 base="btn"
                 wrapper-class=""
                 size="c-6"
-                class="bg-b2! group-hover/ally:animate-heartbeat pointer-events-none absolute top-0.5 left-1 z-5 p-0 opacity-80 backdrop-blur-sm">
-                <Icons
-                  name="heroicons:x-circle-16-solid"
-                  class="size-5.25!" />
+              >
+                <Icons class="size-5.25!" name="heroicons:x-circle-16-solid" />
               </Element>
             </ListboxItem>
           </template>
@@ -77,23 +88,20 @@ const winrateFormula = ref('absolute')
             <div
               v-for="i in 5"
               :key="i"
-              class="
-              btn-ghost pointer-events-none ml-3 grid
-              w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60
-            ">
+              class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost"
+            >
               <Skeleton class="size-8.5 rounded-full" />
 
               <Skeleton class="h-9 w-full" />
             </div>
           </template>
           <div
-            v-if="filter?.ally"
-            class="mx-4 flex gap-4 justify-self-end text-xs">
-            <span class="self-end opacity-50">
-              ...filtered
-            </span>
+            v-if=" s_matches().filter?.ally"
+            class="mx-4 flex gap-4 justify-self-end text-xs"
+          >
+            <span class="self-end opacity-50">...filtered</span>
           </div>
-        </SlideInTopOutBottom>
+        </div>
       </ListboxContent>
     </Listbox>
   </div>

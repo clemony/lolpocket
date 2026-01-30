@@ -6,14 +6,13 @@ const { class: className, simple } = defineProps<{
 </script>
 
 <template>
-  <ChampStatRowWrapper
-    :simple
-    class="items-center justify-center">
+  <ChampStatRowWrapper class="items-center justify-center" :simple>
     <Element
+      class="text-bc/70 fx-0 text-xs font-medium"
       base="btn"
       size="7"
-      class="text-bc/70 fx-0 text-xs font-medium"
-      variant="base">
+      variant="base"
+    >
       No data
     </Element>
   </ChampStatRowWrapper>

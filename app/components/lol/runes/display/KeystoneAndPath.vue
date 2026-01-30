@@ -13,7 +13,7 @@ const { set } = defineProps<{
       <img
         v-if="set?.keystone"
         c
-        :title="String(ix().runeNameById(set?.keystone))"
+        :title="String(runeNameById(set?.keystone))"
         :alt="set?.keystone.toString()"
         :src="`/img/runes/${set?.primary?.path}/${set?.keystone}.webp`"
         :class="
@@ -21,25 +21,29 @@ const { set } = defineProps<{
             'absolute -right-2 w-14! shrink-0 justify-self-end! drop-shadow-sm',
             kClass,
           )
-        " />
+        "
+      >
 
       <Placeholder
         v-else
+        class=""
         :class="
-          cn('bg-b2/80 size-11 shrink-0 justify-end rounded-full', xClass)
+          cn('size-11 shrink-0 justify-end rounded-full bg-b2/80', xClass)
         "
-        class="" />
+      />
     </span>
     <img
       v-if="set?.secondary?.path"
       :title="set?.secondary?.path"
       :alt="set?.secondary?.path"
       :src="`/img/paths/${set?.secondary?.path}.webp`"
-      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
+      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)"
+    >
     <Placeholder
       v-else
       :class="
-        cn('bg-b2/80 size-11 shrink-0 justify-start rounded-full', xClass)
-      " />
+        cn('size-11 shrink-0 justify-start rounded-full bg-b2/80', xClass)
+      "
+    />
   </div>
 </template>

@@ -10,12 +10,11 @@ console.log('💠 - patch - patch:', patch)
 
 <template>
   <div class="flex size-full items-center gap-2 p-2">
-    <template
-      v-for="(p, i) in patch.value"
-      :key="i">
+    <template v-for="(p, i) in patch.value" :key="i">
       <div
         v-if="i <= 2"
-        class="badge badge-ghost border-b3/60! badge-sm border">
+        class="badge badge-ghost border-b3/60! badge-sm border"
+      >
         {{ p }}
       </div>
     </template>
@@ -31,10 +30,7 @@ console.log('💠 - patch - patch:', patch)
         </div>
 
         <ul class="space-y-2">
-          <li
-            v-for="p in patch.value"
-            :key="p as string"
-            class="pl-3">
+          <li v-for="p in patch.value" :key="p as string" class="pl-3">
             {{ p }}
           </li>
         </ul>

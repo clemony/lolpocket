@@ -52,7 +52,7 @@ onBeforeMount(() => {
   if (cs().filters === defaultFilters) {
     console.log(
       '🌱 - cs().filters === defaultFilters:',
-      cs().filters === defaultFilters,
+      cs().filters === defaultFilters
     )
   }
   loaded.value = true
@@ -66,26 +66,27 @@ onBeforeMount(() => {
     :initial="loaded ? 'loaded' : 'unloaded'"
     :animate="loaded ? 'loaded' : 'unloaded'"
     exit="unloaded"
-    layout="position">
+    layout="position"
+  >
     <Popover v-model:open="open">
       <PopoverTrigger
         v-bind="$attrs"
         :class="
-          cn('target group ring-bc/50 ring-offset-b1 relative grid aspect-square size-full cursor-context-menu! rounded-lg transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
-             className,
+          cn(
+            'target group ring-bc/50 ring-offset-b1 relative grid aspect-square size-full cursor-context-menu! rounded-lg transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
+            className,
           )
         "
-        tabindex="0">
+        tabindex="0"
+      >
         <ChampionIcon
-          :k
           class="size-full"
+          :k
           role="button"
-          @loaded="loaded = true" />
+          @loaded="loaded = true"
+        />
       </PopoverTrigger>
-      <PocketChampionMenu
-        v-if="open"
-        :pocket
-        :k />
+      <PocketChampionMenu v-if="open" :pocket :k />
     </Popover>
   </motion.div>
 </template>

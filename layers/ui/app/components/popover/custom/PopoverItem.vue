@@ -28,7 +28,8 @@ const {
         `,
         className,
       )
-    ">
+    "
+  >
     <slot />
   </Button>
 </template>

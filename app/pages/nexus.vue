@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Virtualizer, VList } from 'virtua/vue'
 import { heyGoodJob } from '~/domain/lp/ui/good-job'
 
 const sizes = [20, 40, 180, 77]
@@ -29,7 +28,7 @@ definePageMeta({
   icon: 'nexus',
   listClass: '!size-5.75 **:stroke-[1.6]',
   order: 1,
-  path: '/nexus'
+  path: '/nexus',
 })
 </script>
 
@@ -41,9 +40,10 @@ definePageMeta({
 
     <div class="mx-auto flex w-1/5 items-center gap-3 space-y-2">
       <Button
-        variant="neutral"
         class="ml-auto pr-4 pl-2.5 font-normal"
-        @click="toasty()">
+        variant="neutral"
+        @click="toasty()"
+      >
         <icon name="add" />
         toast
       </Button>

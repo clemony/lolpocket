@@ -12,7 +12,7 @@ const props = withDefaults(
   >(),
   {
     as: 'div',
-  },
+  }
 )
 
 const tippyBox = useTemplateRef<HTMLElement>('tippyBox')
@@ -26,10 +26,11 @@ useTippy(tippyBox, {
 
 <template>
   <Primitive
-    ref="tippyBox"
     v-bind="forwarded"
+    ref="tippyBox"
     :as="as"
-    :class="cn('', props.class)">
+    :class="cn('', props.class)"
+  >
     <slot />
 
     <div ref="tippy">

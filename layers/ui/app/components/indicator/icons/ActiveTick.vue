@@ -7,10 +7,9 @@ const { class: className } = defineProps<{
 <template>
   <transition-fade
     group
-    :class="cn('flex items-center gap-3 font-medium italic', className)">
-    <Button
-      variant="neutral"
-      class="size-5.25 rounded-full p-0!">
+    :class="cn('flex items-center gap-3 font-medium italic', className)"
+  >
+    <Button class="size-5.25 rounded-full p-0!" variant="neutral">
       <Tick class="size-6.5 stroke-[1.4]" />
     </Button>
     Active

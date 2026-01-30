@@ -27,7 +27,8 @@ const sharpArrow
     trigger="click"
     :arrow="roundArrow + roundArrow"
     :placement="placement"
-    :offset="offset">
+    :offset="offset"
+  >
     <slot />
   </tippy>
 </template>

@@ -20,7 +20,8 @@ const forwarded = useForwardProps(delegatedProps)
         'flex flex-col items-center gap-2 rounded-md p-2 text-center',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </StepperTrigger>
 </template>

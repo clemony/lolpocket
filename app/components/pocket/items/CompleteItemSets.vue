@@ -7,10 +7,8 @@ const props = defineProps<{
 
 <template>
   <div
-    class="
-      p-i-c rounded-box shadow-smooth h-auto w-fit px-6 pt-4 pb-5
-      shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none
-    ">
+    class="p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none"
+  >
     <div class="w-full justify-start">
       <!--  <span
         class="text-xldst font-medium"
@@ -21,21 +19,15 @@ const props = defineProps<{
       <template v-if="set && set.items.length">
         <template v-for="(item, i) in set.items">
           <template v-if="i < 6">
-            <div
-              :key="i"
-              class="size-20 rounded-xl *:rounded-xl">
+            <div :key="i" class="size-20 rounded-xl *:rounded-xl">
               <div class="size-full overflow-hidden rounded-lg">
-                <div
-                  v-if="item === 0"
-                  class="bg-b3 aspect-square size-full" />
+                <div v-if="item === 0" class="aspect-square size-full bg-b3" />
 
                 <img
-                  :alt="ix().itemNameById(item)"
+                  class="inset-shadow-rounded shadow-rounded aspect-square size-full bg-b3 shadow-black inset-shadow-black"
+                  :alt="itemNameById(item)"
                   :src="`/img/items/${item}.webp`"
-                  class="
-                    inset-shadow-rounded shadow-rounded bg-b3 aspect-square
-                    size-full shadow-black inset-shadow-black
-                  " />
+                >
               </div>
             </div>
           </template>

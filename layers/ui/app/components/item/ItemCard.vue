@@ -15,7 +15,7 @@ const props = withDefaults(
   >(),
   {
     as: 'div',
-  },
+  }
 )
 </script>
 
@@ -24,7 +24,8 @@ const props = withDefaults(
     data-slot="item"
     :as="as"
     :as-child="asChild"
-    :class="cn(itemVariants({ variant, size }), props.class)">
+    :class="cn(itemVariants({ variant, size }), props.class)"
+  >
     <slot />
   </Primitive>
 </template>

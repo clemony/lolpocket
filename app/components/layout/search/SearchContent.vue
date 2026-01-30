@@ -14,11 +14,11 @@ const user = useSupabaseUser()
 
 const { contains } = useFilter({ sensitivity: 'base' })
 const pages = computed(() =>
-  router.getRoutes().filter(p => contains(String(p.name), query)),
+  router.getRoutes().filter(p => contains(String(p.name), query))
 )
 
 const items = computed(() =>
-  pages.value.filter(r => !r.meta?.search && r.path.split('/').length === 2),
+  pages.value.filter(r => !r.meta?.search && r.path.split('/').length === 2)
 )
 const groups = computed(() => {
   const g = shallowRef([])
@@ -44,19 +44,19 @@ const groups = computed(() => {
       :key="item.name"
       class="p-0"
       :value="item.path"
-      as-child>
+      as-child
+    >
       <BtnLink
+        class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
         size="md"
         variant="link"
-        class="
-          size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal
-          capitalize
-        "
-        :to="item.path">
+        :to="item.path"
+      >
         <Icon
           v-if="item.meta?.icon"
           :class="item.meta?.iconClass"
-          :name="String(item.meta?.icon)" />
+          :name="String(item.meta?.icon)"
+        />
         {{ item.meta?.title || item.name }}
       </BtnLink>
     </ComboboxItem>
@@ -64,25 +64,26 @@ const groups = computed(() => {
     <ComboboxGroup
       v-for="group in groups"
       :key="group.name"
-      :heading="group.name">
+      :heading="group.name"
+    >
       <ComboboxItem
         v-for="item in group.items"
         :key="item.name"
         class="p-0"
         :value="item.path"
-        as-child>
+        as-child
+      >
         <BtnLink
+          class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
           size="md"
           variant="link"
-          class="
-            size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal
-            capitalize
-          "
-          :to="item.path">
+          :to="item.path"
+        >
           <Icon
             v-if="item.meta?.icon"
             :class="item.meta?.iconClass"
-            :name="item.meta?.icon" />
+            :name="item.meta?.icon"
+          />
           {{ item.meta?.title || item.name }}
         </BtnLink>
       </ComboboxItem>

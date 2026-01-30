@@ -20,13 +20,12 @@ const { allGroups, filterState } = useCommand()
 const id = useId()
 
 const isRender = computed(() =>
-  !filterState.search ? true : filterState.filtered.groups.has(id),
+  !filterState.search ? true : filterState.filtered.groups.has(id)
 )
 
 provideCommandGroupContext({ id })
 onMounted(() => {
-  if (!allGroups.value.has(id))
-    allGroups.value.set(id, new Set())
+  if (!allGroups.value.has(id)) allGroups.value.set(id, new Set())
 })
 onUnmounted(() => {
   allGroups.value.delete(id)
@@ -38,14 +37,17 @@ onUnmounted(() => {
     v-bind="delegatedProps"
     :id="id"
     :class="
-      cn('overflow-hidden p-1 text-bc **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-bc/50',
-         props.class,
+      cn(
+        'text-bc **:[[cmdk-group-heading]]:text-bc/50 overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium',
+        props.class,
       )
     "
-    :hidden="isRender ? undefined : true">
+    :hidden="isRender ? undefined : true"
+  >
     <ListboxGroupLabel
       v-if="heading"
-      class="px-2 py-1.5 text-sm font-medium text-bc/50">
+      class="text-bc/50 px-2 py-1.5 text-sm font-medium"
+    >
       {{ heading }}
     </ListboxGroupLabel>
 

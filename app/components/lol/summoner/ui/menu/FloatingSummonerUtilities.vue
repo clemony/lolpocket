@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 
-const { api, champion, pocket } = defineProps<{
-  api: SummonerApi
+const { champion, pocket } = defineProps<{
   pocket?: Pocket
   champion?: Champion
 }>()
@@ -11,30 +10,32 @@ const route = useRoute()
 
 const target = useTemplateRef('target')
 
-onClickOutside(target, event => open.value = false)
-const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.puuid === as().account.puuid)
+onClickOutside(target, event => (open.value = false))
+const isSummoner = computed(
+  () => as().account.puuid && s_session().summoner?.puuid === as().account.puuid
+)
 </script>
 
 <template>
   <Button
     v-if="isSummoner"
+    class="duration-0!"
     data-theme="mini-tip neutral line"
     data-placement="left"
     data-type="Profile Settings"
     size="c-14"
-    class="duration-0!"
     hover="neutral"
     variant="floating"
-    @click="open = true">
-    <Icon
-      name="gear"
-      class="**:stroke-[1.7]" />
+    @click="open = true"
+  >
+    <Icon class="**:stroke-[1.7]" name="gear" />
   </Button>
   <Teleport to="body">
     <AnimatePresence>
       <motion.div
         v-if="open && isSummoner"
         ref="target"
+        class="fixed inset-y-0 right-0 z-40"
         :initial="{ x: 303 }"
         :animate="{ x: 0 }"
         :exit="{ x: 303 }"
@@ -44,38 +45,35 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
           stiffness: 280,
           damping: 32,
         }"
-        class="fixed inset-y-0 right-0 z-40">
+      >
         <motion.div
           id="sidebar"
-          ref="sidebar"
-          class="absolute inset-y-0 right-0 z-50 h-[99vh] max-h-screen w-100 min-w-100! self-center
-   pr-2">
-          <div class="border-b3 bg-b1/90 grid size-full overflow-hidden rounded-xl border pr-3 pl-6 drop-shadow-md drop-shadow-black/12 backdrop-blur-md">
+          class="absolute inset-y-0 right-0 z-50 h-[99vh] max-h-screen w-100 min-w-100! self-center pr-2"
+        >
+          <div
+            class="grid size-full overflow-hidden rounded-xl border border-b3 bg-b1/90 pr-3 pl-6 drop-shadow-md drop-shadow-black/12 backdrop-blur-md"
+          >
             <!-- handle -->
             <div
-              class="
-          pointer-events-auto absolute left-0 z-2 my-auto grid h-32 w-8
-          place-items-center self-center
-        ">
-              <span class="border-b3 bg-tint-b3/50 h-full w-3 rounded-full border" />
+              class="pointer-events-auto absolute left-0 z-2 my-auto grid h-32 w-8 place-items-center self-center"
+            >
+              <span
+                class="h-full w-3 rounded-full border border-b3 bg-tint-b3/50"
+              />
             </div>
 
             <div class="size-full overflow-y-auto">
               <h2>Profile Settings</h2>
-              <form
-                class="w-full space-y-12"
-                @submit.prevent>
+              <form class="w-full space-y-12" @submit.prevent>
                 <fieldset class="mb-10 w-full space-y-6">
                   <div class="leading-4">
-                    <Label
-                      as="legend"
-                      class="mb-2 text-xl font-semibold">
+                    <Label class="mb-2 text-xl font-semibold" as="legend">
                       Summoner Splash
                     </Label>
 
                     <p class="label text-wrap">
-                      Automatically display your top played champion in recent games, or
-                      choose a custom splash.
+                      Automatically display your top played champion in recent
+                      games, or choose a custom splash.
                     </p>
                   </div>
                   <ProfileSplashOptions />
@@ -83,9 +81,9 @@ const isSummoner = computed (() => as().account.puuid && api?.summoner.value?.pu
 
                 <fieldset class="space-y-6">
                   <div class="leading-4">
-                    <Label
-                      as="legend"
-                      class="mb-2 text-xl font-semibold">Title</Label>
+                    <Label class="mb-2 text-xl font-semibold" as="legend">
+                      Title
+                    </Label>
                     <p class="label text-wrap">
                       Display a title from an earned Badge.
                     </p>

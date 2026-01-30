@@ -1,0 +1,27 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:02 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "P",
+  "name": "Leverage",
+  "affects": "Allies, Enemies",
+  "blurb": "Innate:  Renata's basic attacks apply a mark that lasts a few seconds and expires when attacking a new enemy. If the enemy was unmarked, this also deals bonus magic damage based on the target's maximum health.",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Renata's basic attacks are empowered to apply a mark that lasts 6 seconds, refreshes on subsequent hits and expires when attacking a new enemy. If the enemy was unmarked, the attack also deals bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health.</p>"
+    },
+    {
+      "description": "Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal additional bonus magic damage equal to 1% - 2% (based on level) (+ 2% per 100 AP) of the target's maximum health."
+    },
+    {
+      "description": "Leverage's damage is capped at 150 against epic monsters."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/p",
+  "notes": "Spell shield will not block the mark's application.\nPENDING FOR TEST:: Interaction with mark consumption\nThe mark's consumption by an ally respects  enchantment redirection.",
+  "spellEffects": "proc",
+  "spellshieldable": "special",
+  "targeting": "Passive"
+}
+  export default ability

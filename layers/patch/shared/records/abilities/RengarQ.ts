@@ -1,0 +1,45 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:02 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "Q",
+  "name": "Savagery",
+  "affects": "Self",
+  "blurb": "Active:  Rengar gains  bonus attack speed for his next two  basic attacks. His next basic attack deals bonus physical damage and will  critically strike, dealing increased damage based on his  critical strike chance.",
+  "castTime": "none",
+  "cooldown": "0.25",
+  "cost": "0",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar empowers his next two basic attacks within 3 seconds to gain 40% bonus attack speed. His first attack has an uncancellable windup, gains 25 bonus range, and deals bonus physical damage. The attack will critically strike for ((31.25% + 22.5%) critical strike chance + 30%) AD bonus physical damage. Against structures, Savagery's damage is reduced by 40% and can also critically strike.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Physical Damage",
+          "modifiers": [
+            {
+              "values": "30 / 60 / 90 / 120 / 150"
+            },
+            {
+              "tooltip": "Scaling per rank:\n0 / 3.75 / 7.5 / 11.25 / 15% AD",
+              "unit": "% AD",
+              "values": "0 - 15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Savagery's damage is modified to deal 30 - 235 (based on level) (+ 30% AD) bonus physical damage. Rengar gains 50% - 101% (based on level) bonus attack speed for 5 seconds.</p>"
+    },
+    {
+      "description": "Savagery resets Rengar's basic attack timer."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/q",
+  "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThe  critical strike modifier scales up to 75% of the  critical damage champions usually have, based on Rengar's  critical strike chance.\nSavagery's empowered attack is not consumed against jungle plants.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal (the bonus damage cannot).\nCasting Savagery does not  break stealth.\nAgainst structures, the damage is calculated differently when the user has sources of  bonus critical damage. If the Basic attack damage against structures is:\nPhysical and  Infinity Edge is not equipped: Basic attack + Savagery bonus * 0.6.\nPhysical and  Infinity Edge is equipped: Basic attack + (Savagery bonus -  0.4 * AD) * 0.6. Infinity Edge's bonus is subtracted from the calculations.\nMagic and  Infinity Edge is not equipped: (Basic attack + Savagery bonus * 0.6) * 1.75. The damage is increased by the total critical damage modifier.\nMagic and  Infinity Edge is equipped: (Basic attack + (Savagery bonus -  0.4 * AD) * 0.6) * (1.75 +  0.4). Infinity Edge's bonus is subtracted from the calculations and the damage is increased by the total critical damage modifier.",
+  "spellEffects": "Special",
+  "spellshieldable": "True",
+  "targeting": "Auto"
+}
+  export default ability

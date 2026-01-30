@@ -17,16 +17,15 @@ const {
     :value="option.id"
     :unchecked-value="false"
     as-child
-    :name>
+    :name
+  >
     <Element
+      class="hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent py-2"
       base="btn"
       size="auto"
       hover="outline"
       variant="ghost"
-      class="
-        hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent
-        py-2
-      ">
+    >
       <FormItem as-child>
         <FormLabel class="w-full cursor-pointer">
           <FormControl class="mt-0.5 self-start">
@@ -45,17 +44,14 @@ const {
             </h5>
 
             <!-- not other -->
-            <ul
-              v-if="option.id !== 'other'"
-              class="text-balanced w-full pr-3">
-              <component
-                :is="option.component"
-                v-if="option?.component" />
+            <ul v-if="option.id !== 'other'" class="text-balanced w-full pr-3">
+              <component :is="option.component" v-if="option?.component" />
               <template v-else-if="option?.description">
                 <li
                   v-for="(str, ix) in option.description"
                   :key="ix"
-                  class="text-balanced w-full pl-3 text-sm! leading-6">
+                  class="text-balanced w-full pl-3 text-sm! leading-6"
+                >
                   &bull;&ensp;{{ str }}
                 </li>
               </template>

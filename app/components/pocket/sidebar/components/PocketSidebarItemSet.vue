@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { AnimatePresence, motion } from 'motion-v'
-import { PopoverAnchor, PopoverContent, PopoverPortal } from 'reka-ui'
+import { PopoverContent, PopoverPortal } from 'reka-ui'
 
 const { pocket, set } = defineProps<{
   pocket: Pocket
@@ -55,32 +55,27 @@ const hovered = ref(false)
 <template>
   <Popover
     v-model:open="hovered"
-    @click="navigateTo(`/pocket/${pocket.key}/items`)">
+    @click="navigateTo(`/pocket/${pocket.key}/items`)"
+  >
     <PopoverTrigger
-      class="
-        items-between border-b3/50! bg-b2/80 pointer-events-auto z-1! flex
-        size-20 cursor-pointer flex-wrap justify-between gap-0.75! rounded-lg
-        border p-1.5 backdrop-blur-md hover:z-2!
-      ">
+      class="items-between border-b3/50! bg-b2/80 pointer-events-auto z-1! flex size-20 cursor-pointer flex-wrap justify-between gap-0.75! rounded-lg border p-1.5 backdrop-blur-md hover:z-2!"
+    >
       <template v-if="set.items && set.items?.length">
-        <template
-          v-for="(item, i) in set.items"
-          :key="item">
+        <template v-for="(item, i) in set.items" :key="item">
           <Item
             v-if="i < 4"
             :id="item"
-            class="pointer-events-none size-7.5 rounded-lg"></Item>
+            class="pointer-events-none size-7.5 rounded-lg"
+          />
         </template>
       </template>
     </PopoverTrigger>
 
     <PopoverPortal>
       <AnimatePresence>
-        <PopoverContent
-          :side-offset="-60"
-          align="start"
-          as-child>
+        <PopoverContent :side-offset="-60" align="start" as-child>
           <motion.div
+            class="border-b3/50 bg-b2/90 shadow-smooth grid items-center overflow-hidden border backdrop-blur-md"
             initial="closed"
             animate="open"
             :variants="variants"
@@ -88,17 +83,14 @@ const hovered = ref(false)
             :transition="{
               delay: 0.2,
             }"
-            class="
-              border-b3/50 bg-b2/90 shadow-smooth grid items-center overflow-hidden
-              border backdrop-blur-md
-            "
             :style="{
               transformOrigin: 'var(--reka-popover-content-transform-origin)',
             }"
             @focusin="hovered = true"
             @focusout="hovered = false"
             @mouseenter="hovered = true"
-            @mouseleave="hovered = false">
+            @mouseleave="hovered = false"
+          >
             <div class="flex w-full items-center pb-2">
               <span class="grow font-medium tracking-tight capitalize">
                 {{ set.name }}
@@ -106,7 +98,8 @@ const hovered = ref(false)
 
               <button
                 class="btn btn-square btn-ghost btn-sm"
-                @click="deleteItemSet(pocket, set)">
+                @click="deleteItemSet(pocket, set)"
+              >
                 <icon name="trash" />
               </button>
             </div>
@@ -118,7 +111,8 @@ const hovered = ref(false)
               animate="open"
               exit="closed"
               :variants="setWrapperVariants"
-              :transition="{ delay: 0.3, ease: 'easeOut' }">
+              :transition="{ delay: 0.3, ease: 'easeOut' }"
+            >
               <motion.div
                 v-for="item in set.items"
                 :key="item"
@@ -126,13 +120,12 @@ const hovered = ref(false)
                 initial="closed"
                 animate="open"
                 exit="closed"
-                :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }">
+                :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }"
+              >
                 <Item
                   :id="item"
-                  class="
-                    pointer-events-none size-full rounded-lg shadow-sm
-                    drop-shadow-sm
-                  "></Item>
+                  class="pointer-events-none size-full rounded-lg shadow-sm drop-shadow-sm"
+                />
               </motion.div>
             </motion.div>
           </motion.div>

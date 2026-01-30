@@ -22,11 +22,12 @@ function onStateChange(state: string) {
 
 <template>
   <DialogOverlay
+    v-bind="delegatedProps"
     ref="overlay"
     data-slot="sheet-overlay"
     :class="cn('fixed inset-0 z-40 bg-black/80', props.class)"
-    v-bind="delegatedProps"
-    @update:state="onStateChange">
+    @update:state="onStateChange"
+  >
     <slot />
   </DialogOverlay>
 </template>

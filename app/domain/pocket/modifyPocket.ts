@@ -2,10 +2,8 @@
 
 export function removeChampion(champion, pocket) {
   const find = pocket.champions.findIndex(c => c === champion)
-  if (find !== -1)
-    pocket.champions.splice(find, 1)
-  if (champion === pocket._champion)
-    pocket._champion = ''
+  if (find !== -1) pocket.champions.splice(find, 1)
+  if (champion === pocket._champion) pocket._champion = ''
 }
 
 // RUNES
@@ -26,7 +24,6 @@ export function deleteRuneSet(pocket, set) {
 
 export function removeSpellSet(pocket, set) {
   const a = pocket.spells.sets.findIndex(s => s === set)
-  if (!a)
-    return
+  if (!a) return
   pocket.spells.sets.splice(a, 1)
 }

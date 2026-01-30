@@ -1,0 +1,47 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:06 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Rune Prison",
+  "affects": "Enemies",
+  "blurb": "Active:  Ryze seizes the target enemy, dealing magic damage and briefly  slowing them.",
+  "castTime": "0.25",
+  "cooldown": "11 / 10.5 / 10 / 9.5 / 9",
+  "cost": "50 / 60 / 70 / 80 / 90",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze seizes the target enemy, dealing magic damage and slowing them by 50% for 1.5 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "60 / 90 / 120 / 150 / 180"
+            },
+            {
+              "unit": "% AP",
+              "values": "70"
+            },
+            {
+              "unit": "% bonus mana",
+              "values": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Flux Bonus:</span> The target is rooted instead of slowed.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/w",
+  "notes": "Rune Prison can be buffered 0.5 seconds before it comes off cooldown.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+  "resource": "Mana",
+  "spellEffects": "Single target",
+  "spellshieldable": "True",
+  "targeting": "Unit",
+  "targetRange": "550"
+}
+  export default ability

@@ -11,7 +11,7 @@ const props = withDefaults(
   >(),
   {
     size: 'default',
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class', 'size')
@@ -20,6 +20,7 @@ const forwarded = useForwardProps(delegatedProps)
 
 <template>
   <PaginationPrev
+    v-bind="forwarded"
     data-slot="pagination-previous"
     :class="
       cn(
@@ -28,11 +29,10 @@ const forwarded = useForwardProps(delegatedProps)
         props.class,
       )
     "
-    v-bind="forwarded">
+  >
     <slot>
       <icon name="left" />
-      <span
-        class="hidden sm:block">Previous</span>
+      <span class="hidden sm:block">Previous</span>
     </slot>
   </PaginationPrev>
 </template>

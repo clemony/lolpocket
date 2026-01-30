@@ -25,18 +25,13 @@ const inboxes: Record<string, InboxType> = {
       <div class="flex w-full items-center justify-between">
         <DropdownMenu
           v-model:open="ui().sidebarStates.inboxDropdown"
-          class="z-0">
+          class="z-0"
+        >
           <DropdownMenuTrigger
+            class="disabled:**:text-bc data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:inset-shadow-xxs flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:shadow-xs"
             :disabled="!dropdown"
-            class="
-              disabled:**:text-bc data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:inset-shadow-xxs flex h-[35.5px]
-              w-fit items-center
-              justify-between px-2
-              disabled:opacity-100 disabled:hover:border-transparent
-              disabled:hover:bg-transparent disabled:hover:shadow-none
-              disabled:hover:drop-shadow-none data-[state=open]:shadow-xs
-            "
-            as-child>
+            as-child
+          >
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
               <h2 class="dst font-bold">
@@ -49,17 +44,14 @@ const inboxes: Record<string, InboxType> = {
           </DropdownMenuPopContent>
         </DropdownMenu>
 
-        <Tabs
-          v-model:model-value="tabs"
-          class="z-1">
-          <TabsList
-
-            class="h-9 grid-cols-3">
+        <Tabs v-model:model-value="tabs" class="z-1">
+          <TabsList class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"
               :key="item.name"
               class="h-full px-3"
-              :value="item.component">
+              :value="item.component"
+            >
               <icon :name="item.icon.name" />
             </TabsTrigger>
             <TabIndicator class="bg-b1" />
@@ -72,7 +64,7 @@ const inboxes: Record<string, InboxType> = {
     </div>
 
     <div class="size-full px-0">
-      <component :is="tabs"></component>
+      <component :is="tabs" />
     </div>
   </div>
 </template>

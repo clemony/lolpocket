@@ -18,14 +18,13 @@ const cookie = useSupabaseCookieRedirect()
 
 <template>
   <div
-    class="
-      bg-tint-b2/40 flex min-h-svh flex-col items-center justify-center gap-6
-      p-6 md:p-10
-    ">
+    class="bg-tint-b2/40 flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10"
+  >
     <div class="-mt-16 flex w-full max-w-md flex-col gap-16">
       <NuxtLink
+        class="flex w-full items-center justify-center gap-3 self-center px-2"
         to="/"
-        class="flex w-full items-center justify-center gap-3 self-center px-2">
+      >
         <h2>lolpocket</h2>
       </NuxtLink>
 
@@ -34,9 +33,7 @@ const cookie = useSupabaseCookieRedirect()
           <div class="h-6 w-full overflow-hidden px-px text-sm font-medium">
             {{ loadingText[Math.floor(progress / 25)] || loadingText.at(-1) }}
           </div>
-          <Progress
-            :value="progress"
-            :max="100" />
+          <Progress :value="progress" :max="100" />
         </div>
       </div>
     </div>

@@ -4,21 +4,14 @@
   <main class="h-screen w-screen! overflow-y-auto">
     <!-- header -->
     <header
-      class="
-        border-b3 bg-b1/80 sticky top-0 z-2 flex shrink-0 items-center gap-2
-        border-b p-4 backdrop-blur-lg
-      ">
-      <Button
-        variant="neutral"
-        class="text-xxs size-7 font-bold">
+      class="border-b3 bg-b1/80 sticky top-0 z-2 flex shrink-0 items-center gap-2 border-b p-4 backdrop-blur-lg"
+    >
+      <Button class="text-xxs size-7 font-bold" variant="neutral">
         LP
       </Button>
 
       <span class="opacity-70">|</span>
-      <Button
-        variant="link"
-        size="md"
-        @click="navigateTo('/nexus')">
+      <Button variant="link" size="md" @click="navigateTo('/nexus')">
         Nexus
       </Button>
     </header>
@@ -26,10 +19,7 @@
       <slot />
     </div>
     <!-- toaster -->
-    <Toast
-      position="top-right"
-      :expand="true"
-      :duration="Infinity" />
+    <Toast position="top-right" :expand="true" :duration="Infinity" />
   </main>
   <!-- loading -->
   <NuxtLoadingIndicator
@@ -43,5 +33,6 @@
         var(--color-n2),
         var(--color-neutral) 100%
       );
-    " />
+    "
+  />
 </template>

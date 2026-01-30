@@ -28,9 +28,8 @@ watch(
   () => mv,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-    if (newVal)
-      currentValue.value = mv
-  },
+    if (newVal) currentValue.value = mv
+  }
 )
 onMounted(() => {
   currentValue.value ? (currentValue.value = mv) : (currentValue.value = 'All')
@@ -40,50 +39,48 @@ onMounted(() => {
 <template>
   <Select
     v-model:model-value="currentValue"
-    @update:model-value="emit('update:select', currentValue)">
+    @update:model-value="emit('update:select', currentValue)"
+  >
     <SelectTrigger
       :class="
         cn(
           buttonVariants({ size, variant, hover: 'input' }),
           `
-            group/s fx-0 hover:ring-bc/50 relative w-44 justify-start
-            inset-shadow-xs transition-all duration-200 hover:ring
+            group/s relative w-44 justify-start inset-shadow-xs transition-all
+            duration-200 fx-0 hover:ring hover:ring-bc/50
           `,
           className,
         )
       "
-      :position="currentValue">
+      :position="currentValue"
+    >
       <component
         :is="`i-lol-${currentValue}`"
-        :class="cn('text-bc! dst size-4.5! shrink-0')" />
+        :class="cn('size-4.5! shrink-0 text-bc! dst')"
+      />
 
       <SelectValue placeholder="all" />
       <icon
-        name="select"
-        class="
-          group-hover/s:text-bc! absolute right-1.5 size-4 opacity-50
-          group-hover/s:opacity-100
-        " />
+        class="absolute right-1.5 size-4 opacity-50 group-hover/s:text-bc! group-hover/s:opacity-100"
+        name="up-down"
+      />
     </SelectTrigger>
     <LazySelectContent
+      class="top-[calc(var(--reka-select-trigger-height)+2px)] w-(--reka-select-trigger-width)!"
       :side="side"
       :side-offset="sideOffset"
       :align="align"
       :align-offset="alignOffset"
       position="popper"
-      class="
-        top-[calc(var(--reka-select-trigger-height)+2px)]
-        w-(--reka-select-trigger-width)!
-      ">
+    >
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem
-          v-for="position in championPositions"
+          v-for="position in mapPositions"
           :key="position.name"
-          :value="position.name">
-          <PositionBadge
-            :position="position.name"
-            active />
+          :value="position.name"
+        >
+          <PositionBadge :position="position.name" active />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

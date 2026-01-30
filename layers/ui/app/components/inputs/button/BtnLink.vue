@@ -19,7 +19,7 @@ const props = withDefaults(
     on: 'btn',
     size: '11',
     variant: 'link',
-  },
+  }
 )
 
 const delegated = omitUIProps(props)
@@ -28,6 +28,7 @@ const forwarded = useForwardProps(delegated)
 
 <template>
   <NuxtLink
+    v-bind="forwarded"
     exact-active-class="btn-active"
     trailing-slash="remove"
     no-prefetch
@@ -39,7 +40,7 @@ const forwarded = useForwardProps(delegated)
         props.class,
       )
     "
-    v-bind="forwarded">
+  >
     <slot />
   </NuxtLink>
 </template>

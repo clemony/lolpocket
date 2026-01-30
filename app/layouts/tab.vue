@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import { summonerSections } from '~/components/lol/summoner/champion/summonerSections'
-
-const { api, champion, pocket } = defineProps<{
-  api?: SummonerApi
+const { champion, pocket } = defineProps<{
   pocket?: Pocket
   champion?: Champion
 }>()
@@ -43,23 +40,32 @@ function onScroll(e: Event) {
     isScrollingFast.value = false
   }, 100)
 }
-
-const { registerAll } = useScrollSectionsProvider(
+/*
+ const { registerAll } = useScrollSectionsProvider(
   scrollRef,
   scrollY,
 )
 
 onMounted(() => {
   registerAll(summonerSections.map(s => s.id))
-})
+}) */
 
-const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champion ? getSplash(champion.key, 'uncentered') : getRandomBg())
+const bg = computed(() =>
+  route.path.match(/\/summoner/)
+    ? s_data().splash
+    : pocket
+      ? pocket.icon
+      : champion
+        ? getSplash(champion.key, 'uncentered')
+        : getRandomBg()
+)
 </script>
 
 <template>
   <div
     id="app"
-    class="relative w-screen max-w-screen overflow-x-hidden overflow-y-hidden">
+    class="relative w-screen max-w-screen overflow-x-hidden overflow-y-hidden"
+  >
     <!-- navbar -->
     <Navbar />
     <!-- sidebar -->
@@ -70,74 +76,59 @@ const bg = computed (() => api ? api.splash.value : pocket ? pocket.icon : champ
       <BgSplash :src="bg" />
     </div>
 
-    <BgSplash
-      :src="bg"
-      class="mask-b-from-30% mask-b-to-70%" />
+    <BgSplash class="mask-b-from-30% mask-b-to-70%" :src="bg" />
 
     <!-- Header block -->
     <div
-      class="
-        pointer-events-none z-0 grid size-full h-70 max-h-70 min-h-70
-        grid-cols-2
-      ">
+      class="pointer-events-none z-0 grid size-full h-70 max-h-70 min-h-70 grid-cols-2"
+    >
       <div
-        class="
-          w-40% z-0 flex size-full grow flex-col items-start justify-center
-          pt-16 pl-68 *:z-0
-        ">
-        <SummonerHeader
-          v-if="api"
-          :summoner="api.summoner.value" />
-        <PocketHeader
-          v-else-if="pocket"
-          :pocket />
-        <ChampionHeader
-          v-else-if="champion"
-          :champion />
+        class="w-40% z-0 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-0"
+      >
+        <SummonerHeader v-if="route.path.match(/\/summoner/)" />
+        <PocketHeader v-else-if="pocket" :pocket />
+        <ChampionHeader v-else-if="champion" :champion />
       </div>
     </div>
 
-    <!-- Scrollable content -->
+    <!-- Scrollable content
+      @scroll="onScroll" -->
     <div
       id="scrollRef"
       ref="scrollRef"
-      :style="{ overflowAnchor: 'none' }"
       class="absolute inset-0 top-0 size-full h-screen max-w-screen overflow-auto pt-70"
-      @scroll="onScroll">
+      :style="{ overflowAnchor: 'none' }"
+    >
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
-        class="
-          pointer-events-none sticky -top-70 z-16 flex h-15 min-h-15 w-full
-          items-end gap-4 overflow-hidden pl-66
-        ">
-        <Separator class="bg-b3/60 absolute bottom-0 left-0 z-0 w-full" />
+        class="pointer-events-none sticky -top-70 z-16 flex h-15 min-h-15 w-full items-end gap-4 overflow-hidden pl-66"
+      >
+        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
         <SummonerChampionNavTabs
-          v-if="route.fullPath.match(/\/summoner\/.+/)" />
-        <NavFileTabs
-          v-else />
+          v-if="route.fullPath.match(/\/summoner\/.+/)"
+        />
+        <NavFileTabs v-else />
       </div>
 
       <!-- Context wrapper -->
       <div
-        class="bg-b1 relative z-auto -mt-px flex min-h-screen w-screen max-w-screen flex-col">
+        class="relative z-auto -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1"
+      >
         <!-- page -->
-        <slot :api />
+        <slot />
       </div>
       <SiteFooter />
     </div>
-  </div>
-  <div class="fixed top-0 right-8 z-20 flex h-15 w-56 items-center gap-3">
-    <LazySummonerDropdown
-      v-if="api"
-      :api />
+    <div class="fixed top-0 right-8 z-20 flex h-15 w-56 items-center gap-3">
+      <LazySummonerDropdown />
 
-    <PocketMenubar
-      v-else-if="pocket" />
-  </div>
-  <div class="fixed right-24 bottom-24 z-4 grid gap-4">
-    <FloatingSummonerUtilities
-      v-if="route.path.match(/\/summoner\/.+/)"
-      :api />
-    <UpFAB />
+      <PocketMenubar v-if="pocket" />
+    </div>
+    <div class="fixed right-24 bottom-24 z-4 grid gap-4">
+      <FloatingSummonerUtilities
+        v-if="route.path.match(/\/summoner\/.+/)"
+      />
+      <UpFAB />
+    </div>
   </div>
 </template>

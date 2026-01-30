@@ -26,21 +26,12 @@ function handleClick(i) {
 
     <button
       v-tippy="'Add Rune Set'"
-      class="
-        group grid h-full w-14 cursor-pointer place-items-center rounded-l-none
-        rounded-r-xl p-0
-      "
+      class="group grid h-full w-14 cursor-pointer place-items-center rounded-l-none rounded-r-xl p-0"
     >
       <div
-        class="
-          grid size-6 place-items-center rounded-lg border border-transparent
-          group-hover:border-b3/60 group-hover:bg-b2/80
-        "
+        class="group-hover:border-b3/60 group-hover:bg-b2/80 grid size-6 place-items-center rounded-lg border border-transparent"
       >
-        <icon
-          name="add"
-          class="text-bc/60 group-hover:text-bc"
-        />
+        <icon class="text-bc/60 group-hover:text-bc" name="add" />
       </div>
     </button>
   </div>

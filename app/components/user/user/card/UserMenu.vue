@@ -14,17 +14,17 @@ const props = withDefaults(
     interactive: true,
     placement: 'top',
     theme: 'b-mention',
-  },
+  }
 )
 
 const forward = reactiveOmit(props, 'class')
 const open = shallowRef<boolean>(false)
 const user = await useSupabaseUser()
-const isAdmin = computed(
-  () => user?.value?.app_metadata?.user_role === 'admin',
-)
+const isAdmin = computed(() => user?.value?.app_metadata?.user_role === 'admin')
 const img = useImage()
-const splash = computed (() => img(props.author?.splash.replace('centered', 'uncentered')))
+const splash = computed(() =>
+  img(props.author?.splash.replace('centered', 'uncentered'))
+)
 const tag = ref(false)
 </script>
 
@@ -35,27 +35,29 @@ const tag = ref(false)
     animation="shift-toward"
     :offset="[0, 12]"
     :duration="150"
-    :delay="500">
+    :delay="500"
+  >
     <Button
+      class="hover-ring pointer-events-auto z-4 rounded-full"
       base="btn"
       size="c-9"
       variant="neutral"
-      class="hover-ring pointer-events-auto z-4 rounded-full"
       :disabled="!props.comment.uuid"
-      @click.stop>
+      @click.stop
+    >
       <UserAvatar
+        class="pointer-events-none absolute self-center"
         :comment
         :author
         size="c-9"
-        class="pointer-events-none absolute self-center" />
+      />
     </Button>
     <template #content>
       <div
-        class="
-         tippy-content pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg
-      [&_button]:px-2
-        ">
+        class="tippy-content pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2"
+      >
         <div
+          class="relative z-0 h-28 w-full overflow-hidden rounded-t-lg"
           :style="{
             background: `url(${splash})`,
             backgroundSize: '114%',
@@ -63,37 +65,37 @@ const tag = ref(false)
             backgroundRepeat: 'no-repeat',
           }"
           :alt="`${author?.name}'s Splash`"
-          class="relative z-0 h-28 w-full overflow-hidden rounded-t-lg">
+        >
           <Badge
-            size="6"
             class="absolute top-2 right-2 gap-0 rounded-lg text-xs! font-medium opacity-76"
-            variant="neutral">
-            <Icon
-              name="lp:cxp"
-              class="text-nc size-3" />
+            size="6"
+            variant="neutral"
+          >
+            <Icon class="text-nc size-3" name="lp:cxp" />
             {{ author?.level }}
           </Badge>
         </div>
-        <div class="bg-b1 absolute top-18 left-2 grid size-20 place-items-center rounded-lg p-1.5">
-          <UserAvatar
-            :author
-            :comment
-            class="size-full rounded-lg" />
+        <div
+          class="bg-b1 absolute top-18 left-2 grid size-20 place-items-center rounded-lg p-1.5"
+        >
+          <UserAvatar class="size-full rounded-lg" :author :comment />
         </div>
         <div class="flex items-center gap-3 px-2 pb-2">
-          <div class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
+          <div
+            class="inline flex-wrap justify-between space-x-2 pl-22 align-middle"
+          >
             <h2 class="dst inline font-serif text-xl! leading-3">
-              {{ props.author?.name || author?.username || "Mysterious Summoner" }}
+              {{
+                props.author?.name || author?.username || "Mysterious Summoner"
+              }}
             </h2>
             <span
               v-if="props.author?.tag || tag"
+              class="pb-1 align-middle leading-4"
               :data-role="comment.uuid === 'defnotclem' ? 'mod' : null"
-              class="pb-1 align-middle leading-4">
-              <icon
-                name="hash"
-                class="inline size-3.5 pb-0.5" />{{
-                  props.author?.tag || tag
-                }}
+            >
+              <icon class="inline size-3.5 pb-0.5" name="hash" />
+              {{ props.author?.tag || tag }}
             </span>
           </div>
         </div>
@@ -104,9 +106,7 @@ const tag = ref(false)
             View Profile
           </PopoverItem>
           <PopoverItem>
-            <Icons
-              name="heart"
-              class="size-4" />
+            <Icons class="size-4" name="heart" />
             Follow
           </PopoverItem>
         </div>
@@ -115,18 +115,12 @@ const tag = ref(false)
           <!--    <FollowButton /> -->
 
           <PopoverItem>
-            <Icons
-              name="lucide:bell-ring"
-              class="size-4.5!" />
+            <Icons class="size-4.5!" name="lucide:bell-ring" />
             Report
           </PopoverItem>
         </div>
-        <Separator
-          v-if="isAdmin"
-          :size="1" />
-        <LazyCommentModMenu
-          v-if="isAdmin"
-          v-bind="forward" />
+        <Separator v-if="isAdmin" :size="1" />
+        <LazyCommentModMenu v-if="isAdmin" v-bind="forward" />
       </div>
     </template>
   </tippy>

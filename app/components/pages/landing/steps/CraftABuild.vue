@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-/* const shuffled = [...ix().champions.sort(() => 0.5 - Math.random())]
+/* const shuffled = [...champions.sort(() => 0.5 - Math.random())]
 const selectedChamps = computed (() => {
-  console.log('💠 - selectedChamps - ix().champions:', ix().champions)
+  console.log('💠 - selectedChamps - champions:', champions)
   return shuffled.slice(0, 6)
 })
  */
-const currentItems = ref<ItemIndex[]>()
+const currentItems = ref<Index[]>()
 
 const champModel = ref<number>(null)
 const champComplete = ref(false)
@@ -14,37 +14,37 @@ const isChampVisible = ref(true)
 const itemModel = [
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<ItemIndex>(null),
+    item: ref<Index>(null),
     visible: ref(false),
   },
 ]
 
-const itemIndex = ref(0)
+const item = ref(0)
 
 function setTimer(timer, i?, item?) {
   // getRandomItems()
@@ -57,33 +57,31 @@ function setTimer(timer, i?, item?) {
     else if (timer === 'item') {
       itemModel[i].item.value = item
       itemModel[i].visible.value = false
-      getRandom(ix().items)
-      itemIndex[i + 1].visible.value = true
+      getRandom(itemIndex)
+      item[i + 1].visible.value = true
     }
   }, 2000)
 }
 
 onMounted(async () => {
-  currentItems.value = getRandom(ix().items)
+  currentItems.value = getRandom(itemIndex)
 })
 </script>
 
 <template>
   <div
-    class="relative flex size-full flex-col items-center justify-center gap-6">
+    class="relative flex size-full flex-col items-center justify-center gap-6"
+  >
     <div class="absolute top-5 flex h-16 gap-4">
       <div
         v-if="champModel && champComplete"
-        v-tippy="ix().champNameById(champModel)"
-        class="
-          animate-in slide-in-from-bottom-10 hover:ring-neutral hover:ring-offset-b2 size-16
-          rounded-lg shadow-sm drop-shadow-sm transition-all
-          duration-400 hover:scale-110 hover:ring-1
-          hover:ring-offset-2
-        ">
+        v-tippy="champNameById(champModel)"
+        class="animate-in slide-in-from-bottom-10 size-16 rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 hover:scale-110 hover:ring-1 hover:ring-neutral hover:ring-offset-2 hover:ring-offset-b2"
+      >
         <ChampionIcon
           :id="champModel"
-          class="size-16 overflow-hidden rounded-lg" />
+          class="size-16 overflow-hidden rounded-lg"
+        />
       </div>
       <!--
       <template v-for="(item, i) in itemModel">
@@ -97,18 +95,17 @@ onMounted(async () => {
 
     <template v-if="isChampVisible">
       <Transition name="puff">
-        <p
-          v-if="!champModel"
-          class="f-sb f-tt text-lg">
+        <p v-if="!champModel" class="f-sb f-tt text-lg">
           Select a Champion...
         </p>
       </Transition>
 
       <transition-slide
+        class="flex items-center justify-center gap-4"
         group
         :offset="[8, 0]"
         :duration="1000"
-        class="flex items-center justify-center gap-4">
+      >
         <!--  <template v-for="champion in selectedChamps" :key="champion.name">
           <ChampionIcon v-if="champModel ? champion === champModel : selectedChamps.includes(champion)" :id="champion.id" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-200 hover:ring-offset-2 hover:ring-offset-b2" :class="{ hidden: champModel !== null && champion !== champModel }">
             <input v-model="champModel" name="champion" type="radio" class="peer hidden" :value="champion" @change="setTimer('champ')" />
@@ -123,23 +120,20 @@ onMounted(async () => {
       </transition-slide>
     </template>
 
-    <template v-if="itemModel[itemIndex].visible">
+    <template v-if="itemModel[item].visible">
       <Transition name="puff">
-        <p
-          v-if="!itemModel[itemIndex].item"
-          class="f-sb f-tt text-lg">
+        <p v-if="!itemModel[item].item" class="f-sb f-tt text-lg">
           Select your first item...
         </p>
       </Transition>
 
       <transition-slide
+        class="flex items-center justify-center gap-4"
         group
         :offset="[8, 0]"
         :duration="1000"
-        class="flex items-center justify-center gap-4">
-        <template
-          v-for="item in currentItems"
-          :key="item.name">
+      >
+        <template v-for="i, x in currentItems" :key="i.name">
           <!--     <label
             v-if="
               item.id
@@ -154,18 +148,20 @@ onMounted(async () => {
                 && item !== itemModel[itemIndex].item,
             }"> -->
           <input
-            v-model="itemModel[itemIndex].item"
+            v-model="itemModel[x].item"
+            class="peer hidden"
             name="item"
             type="radio"
-            class="peer hidden"
             :value="item"
-            @change="setTimer('item', itemIndex, item)" />
+            @change="setTimer('item', item, item)"
+          >
 
           <div class="size-16 overflow-hidden rounded-lg">
             <img
-              :alt="item.name"
-              :src="`/img/items/${item.id}.webp`"
-              class="s size-full" />
+              class="s size-full"
+              :alt="i.name"
+              :src="`/img/items/${i.id}.webp`"
+            >
           </div>
           <!--   </label> -->
 

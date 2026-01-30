@@ -1,14 +1,6 @@
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
-  $meta: {
-    name: 'lib',
-  },
+  $meta: { name: 'lib' },
+  modules: ['@vueuse/nuxt', 'motion-v/nuxt'],
 
-/*   imports: {
-    dirs: [join(currentDir, './app')]
-  }, */
 })

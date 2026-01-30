@@ -1,7 +1,7 @@
 export function parseTemplates(
   depth: number,
   MAX_DEPTH: number,
-  state: { str: string, i: number },
+  state: { str: string, i: number }
 ) {
   let template = ''
   const params: string[] = []

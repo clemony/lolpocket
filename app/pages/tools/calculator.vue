@@ -1,15 +1,5 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import {
-  ListboxContent,
-  ListboxFilter,
-  ListboxGroup,
-  ListboxGroupLabel,
-  ListboxItem,
-  ListboxItemIndicator,
-  ListboxRoot,
-  SplitterPanel as ResizablePanel,
-} from 'reka-ui'
+import { SplitterPanel as ResizablePanel } from 'reka-ui'
 
 definePageMeta({
   name: 'calculator',
@@ -24,29 +14,26 @@ console.log('💠 - is().calculatorSets:', is().calculatorSet)
 </script>
 
 <template>
-  <ResizablePanelGroup
-    class="size-full"
-    direction="horizontal">
+  <ResizablePanelGroup class="size-full" direction="horizontal">
     <ResizablePanel
+      class="relative flex size-full flex-col pt-26"
       :default-size="50"
-      class="relative flex size-full flex-col pt-26">
+    >
       <Collapsible
+        class="grid basis-1 items-center p-14"
         group
         :offset="{ enter: [0, 16], leave: [0, 16] }"
-        class="grid basis-1 items-center p-14">
+      >
         <div class="relative">
-          <CalculatorSet
-            :num="1"
-            :set="is().calculatorSet" />
+          <CalculatorSet :num="1" :set="is().calculatorSet" />
           <CollapsibleTrigger
-            class="btn btn-square btn-ghost absolute top-0 right-0">
+            class="btn btn-square btn-ghost absolute top-0 right-0"
+          >
             hi
           </CollapsibleTrigger>
         </div>
         <CollapsibleContent class="CollapsibleContent pt-14">
-          <CalculatorSet
-            :num="2"
-            :set="is().calculatorSet2" />
+          <CalculatorSet :num="2" :set="is().calculatorSet2" />
         </CollapsibleContent>
       </Collapsible>
 
@@ -57,7 +44,8 @@ console.log('💠 - is().calculatorSets:', is().calculatorSet)
     <ResizableHandle />
 
     <ResizablePanel
-      class="relative flex h-full justify-center overflow-y-auto pt-8">
+      class="relative flex h-full justify-center overflow-y-auto pt-8"
+    >
       <DraggableItemList />
     </ResizablePanel>
   </ResizablePanelGroup>

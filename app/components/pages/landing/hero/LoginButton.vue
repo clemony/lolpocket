@@ -10,15 +10,17 @@ const viewLogin = ref(false)
 <template>
   <div class="mt-4 flex w-full justify-end px-2">
     <Label
+      class="hover:bgneutral hover:text-nc font-sans!"
       :button="true"
       variant="outline"
       size="12"
-      class="hover:bgneutral hover:text-nc font-sans!">
+    >
       <input
         v-model="viewLogin"
-        type="checkbox"
         class="peer hidden"
-        @change="emit('update:login', viewLogin)" />
+        type="checkbox"
+        @change="emit('update:login', viewLogin)"
+      >
       {{ viewLogin ? "Log In" : "Back" }}
     </Label>
   </div>

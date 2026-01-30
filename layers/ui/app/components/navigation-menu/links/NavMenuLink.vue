@@ -25,7 +25,8 @@ const {
         'flex size-full flex-col items-start justify-center py-2',
         className,
       )
-    ">
+    "
+  >
     <slot />
   </Button>
 </template>

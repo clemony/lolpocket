@@ -20,10 +20,8 @@ export async function fetchRankedByPuuid(puuid: string, region: string) {
       wins: entry.wins,
     }
 
-    if (entry.queueType === 'RANKED_SOLO_5x5')
-      ranked.solo = processed
-    if (entry.queueType === 'RANKED_FLEX_SR')
-      ranked.flex = processed
+    if (entry.queueType === 'RANKED_SOLO_5x5') ranked.solo = processed
+    if (entry.queueType === 'RANKED_FLEX_SR') ranked.flex = processed
   }
 
   return { ranked }

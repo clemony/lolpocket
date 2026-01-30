@@ -19,8 +19,7 @@ export function confidence(value: number, k = 5) {
 }
 
 export function mode(nums: number[]): number | null {
-  if (!nums.length)
-    return null
+  if (!nums.length) return null
 
   const freq = new Map<number, number>()
   let maxCount = 0
@@ -67,8 +66,7 @@ export function roundInt(v: number, total: number, decimals = 1) {
 
 // wilson score lower bound for winrate confidence
 export function wilsonLowerBound(wins: number, games: number, z = 1.96) {
-  if (games === 0)
-    return 0
+  if (games === 0) return 0
 
   const p = wins / games
   const denom = 1 + (z * z) / games

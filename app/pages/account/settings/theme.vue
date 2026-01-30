@@ -22,19 +22,20 @@ function handleChange(theme) {
     :multiple="false"
     selection-behavior="replace"
     @entry-focus.prevent
-    @update:model-value="handleChange(as().settings.theme)">
+    @update:model-value="handleChange(as().settings.theme)"
+  >
     <ListboxContent class="grid w-fit grid-cols-2 gap-x-14 gap-y-10">
       <ListboxItem
         v-for="theme in themes"
         :key="theme.name"
+        class="group/label grid size-full h-max items-center border-transparent!"
         :value="theme.name"
-        class="
-          group/label grid size-full h-max items-center border-transparent!
-        ">
+      >
         <ThemeCard
           class=""
           :theme="theme"
-          :active-theme="as().settings.theme" />
+          :active-theme="as().settings.theme"
+        />
       </ListboxItem>
     </ListboxContent>
   </ListboxRoot>

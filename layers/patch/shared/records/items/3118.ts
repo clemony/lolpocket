@@ -1,0 +1,58 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Malignance",
+  "id": 3118,
+  "rank": "Legendary",
+  "buildsFrom": [
+    {
+      "id": 3802,
+      "name": "Lost Chapter",
+      "gold": 1200
+    },
+    {
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "burn"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Scorn",
+      "effects": "Gain 20 ultimate haste."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Hatefog",
+      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation)."
+    }
+  ],
+  "stats": {
+    "abilityPower": 90,
+    "mana": 600,
+    "abilityHaste": 15
+  },
+  "description": "90 Ability Power\n600 Mana\n15 Ability Haste\n\nScorn\nGain 20 Ultimate Ability Haste.\n\nHatefog\nDamaging a champion with your Ultimate burns the ground beneath them for 3s, dealing magic damage per second and reducing their Magic Resist. \n",
+  "gold": {
+    "base": 650,
+    "total": 2700,
+    "sell": 1890
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}
+export default item

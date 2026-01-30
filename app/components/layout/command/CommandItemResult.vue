@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { activeItem: mv, item } = defineProps<{
-  item: ItemIndex
+  item: Index
   activeItem: number | null
 }>()
 
@@ -15,17 +15,19 @@ onMounted(() => {
   <CommandResult>
     <input
       v-model="modelValue"
-      type="radio"
       class="peer hidden"
+      type="radio"
       name="item-popover"
       :value="item.id"
-      @change="emit('update:modelValue', modelValue)" />
+      @change="emit('update:modelValue', modelValue)"
+    >
 
     <Item
       :id="item.id"
+      class="size-7 rounded-full"
       :item="item"
       :alt="item.id"
-      class="size-7 rounded-full" />
+    />
     {{ item.name }}
   </CommandResult>
 </template>

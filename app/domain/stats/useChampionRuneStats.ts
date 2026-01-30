@@ -1,5 +1,3 @@
-
-
 function makeRunePageKey(r: PlayerRunes) {
   return [r.keystone, ...r.primary.runes, '|', ...r.secondary.runes].join('-')
 }
@@ -34,8 +32,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
 
     for (const match of source.value) {
       const p = match.player
-      if (!p || p.win === 'remake')
-        continue
+      if (!p || p.win === 'remake') continue
 
       bumpStat(keystone, p.runes.keystone, p.win)
 
@@ -59,8 +56,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
       const secondaryPath = pathNameById(r.secondary.path)
 
       // enforce path constraints (defensive)
-      if (primaryPath === secondaryPath)
-        continue
+      if (primaryPath === secondaryPath) continue
 
       const key = makeRunePageKey(r)
 
@@ -80,8 +76,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
       }
 
       pages[key] ? pages[key].games++ : null
-      if (p.win)
-        pages[key] ? pages[key].win++ : null
+      if (p.win) pages[key] ? pages[key].win++ : null
     }
 
     for (const bucket of [
@@ -109,8 +104,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
     for (const page of allPages) {
       page.winrate = Math.round((page.win / page.games) * 1000) / 10
       page.pickrate = Math.round((page.games / totalMatches) * 1000) / 10
-      if (page.games < 5)
-        continue
+      if (page.games < 5) continue
 
       const s = scorePage(page)
       if (s > bestScore) {

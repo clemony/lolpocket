@@ -1,4 +1,3 @@
-
 // server/riot/account/getByPuuid.ts
 import { riotFetch } from '#server/api'
 

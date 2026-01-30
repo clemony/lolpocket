@@ -21,9 +21,8 @@ const { scrollTop } = useScrollInject()
     size="c-14"
     variant="floating"
     :class="cn('duration-0!', className)"
-    @click="scrollTop()">
-    <icon
-      name="arrow-up"
-      class="transition-opacity duration-200" />
+    @click="scrollTop()"
+  >
+    <icon class="transition-opacity duration-200" name="arrow-up" />
   </Button>
 </template>

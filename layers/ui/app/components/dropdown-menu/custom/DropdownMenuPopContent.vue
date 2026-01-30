@@ -48,10 +48,7 @@ const wrapperVariants = {
 </script>
 
 <template>
-  <DropdownMenuContent
-    as-child
-    :align="align"
-    v-bind="$attrs">
+  <DropdownMenuContent v-bind="$attrs" as-child :align="align">
     <motion.div
       :variants="variants"
       initial="hidden"
@@ -63,10 +60,12 @@ const wrapperVariants = {
         bounce: 0.2,
       }"
       :class="
-        cn('border-b3! bg-b1/94 text-bc z-50 w-(--reka-dropdown-menu-trigger-width) rounded-lg! border p-1 shadow-md drop-shadow-md backdrop-blur-lg outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
-           className,
+        cn(
+          'border-b3! bg-b1/94 text-bc z-50 w-(--reka-dropdown-menu-trigger-width) rounded-lg! border p-1 shadow-md drop-shadow-md backdrop-blur-lg outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
+          className,
         )
-      ">
+      "
+    >
       <slot />
     </motion.div>
   </DropdownMenuContent>

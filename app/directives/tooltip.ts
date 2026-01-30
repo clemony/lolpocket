@@ -24,10 +24,8 @@ type TooltipBinding
 
 export const vTooltip: Directive<HTMLElement, TooltipBinding> = {
   mounted(el, binding) {
-    if (binding.value === false)
-      return
-    if (!binding.value)
-      return
+    if (binding.value === false) return
+    if (!binding.value) return
 
     const value
       = typeof binding.value === 'string'
@@ -36,37 +34,24 @@ export const vTooltip: Directive<HTMLElement, TooltipBinding> = {
             type: 'default', // 👈 default tooltip type
           }
         : binding.value
-    if (!value)
-      return
+    if (!value) return
 
     // required
 
     // optional props → dataset
     el.dataset.type = value.type ?? 'default'
-    if (value.id != null)
-      el.dataset.id = String(value.id)
-    if (value.theme)
-      el.dataset.theme = value.theme
-    if (value.class)
-      el.dataset.class = value.class
-    if (value.name)
-      el.dataset.name = value.name
-    if (value.tag)
-      el.dataset.tag = value.tag
-    if (value.icon)
-      el.dataset.icon = value.icon
-    if (value.img)
-      el.dataset.img = value.img
-    if (value.text)
-      el.dataset.text = value.text
-    if (value.size)
-      el.dataset.size = value.size
-    if (value.map != null)
-      el.dataset.map = String(value.map)
-    if (value.delay != null)
-      el.dataset.delay = String(value.delay)
-    if (value.interactive)
-      el.dataset.interactive = 'true'
+    if (value.id != null) el.dataset.id = String(value.id)
+    if (value.theme) el.dataset.theme = value.theme
+    if (value.class) el.dataset.class = value.class
+    if (value.name) el.dataset.name = value.name
+    if (value.tag) el.dataset.tag = value.tag
+    if (value.icon) el.dataset.icon = value.icon
+    if (value.img) el.dataset.img = value.img
+    if (value.text) el.dataset.text = value.text
+    if (value.size) el.dataset.size = value.size
+    if (value.map != null) el.dataset.map = String(value.map)
+    if (value.delay != null) el.dataset.delay = String(value.delay)
+    if (value.interactive) el.dataset.interactive = 'true'
 
     // payload (NOT dataset)
     if (value.payload !== undefined) {
@@ -75,8 +60,7 @@ export const vTooltip: Directive<HTMLElement, TooltipBinding> = {
   },
 
   updated(el, binding) {
-    if (binding.value === false)
-      return
+    if (binding.value === false) return
     // allow reactive updates
     if (
       typeof binding.value !== 'string'

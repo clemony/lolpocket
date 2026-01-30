@@ -17,8 +17,7 @@ export function useChampionRoleStats(
   )
 
   for (const match of player) {
-    if (ix().champNameById(match.championId) !== championName)
-      continue
+    if (champNameById(match.championId) !== championName) continue
 
     const role = match.role || 'UNKNOWN'
     if (!grouped[role]) {

@@ -7,13 +7,9 @@
   "files.autoSave": "onFocusChange", // optional but recommended
   "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
 
-  // enable ESLint to validate Vue files
-  "eslint.validate": ["vue"],
 
-  // enable ESLint to fix tailwind classes on save
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
+  "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/nuxt/lolpocket/layers/ui/app/assets/css/tailwind.css",
+
   "typescript.tsdk": "node_modules/typescript/lib",
   "exportall.config.folderListener": [
     "/app/composables",
@@ -37,7 +33,7 @@
     "/layers/domain/records/runes"
   ],
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -48,5 +44,53 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "iconify.annotations": false
+  "iconify.annotations": true,
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in your IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off", "fixable": true },
+    { "rule": "format/*", "severity": "off", "fixable": true },
+    { "rule": "*-indent", "severity": "off", "fixable": true },
+    { "rule": "*-spacing", "severity": "off", "fixable": true },
+    { "rule": "*-spaces", "severity": "off", "fixable": true },
+    { "rule": "*-order", "severity": "off", "fixable": true },
+    { "rule": "*-dangle", "severity": "off", "fixable": true },
+    { "rule": "*-newline", "severity": "off", "fixable": true },
+    { "rule": "*quotes", "severity": "off", "fixable": true },
+    { "rule": "*semi", "severity": "off", "fixable": true }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ]
 }

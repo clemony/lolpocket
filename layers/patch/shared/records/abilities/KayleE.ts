@@ -1,0 +1,68 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "E",
+  "name": "Starfire Spellblade",
+  "affects": "Self, Enemies",
+  "blurb": "Passive:  Kayle deals bonus magic damage on-hit.",
+  "castTime": "none",
+  "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
+  "cost": "0",
+  "damageType": "Magic damage",
+  "effectRadius": "350",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kayle deals bonus magic damage on-hit.</p>",
+      "leveling": [
+        {
+          "attribute": "Passive Damage",
+          "modifiers": [
+            {
+              "values": "15 / 20 / 25 / 30 / 35"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "10"
+            },
+            {
+              "unit": "% AP",
+              "values": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Magic Damage",
+          "modifiers": [
+            {
+              "unit": "%  of target's missing health",
+              "values": "8 / 8.5 / 9 / 9.5 / 10"
+            },
+            {
+              "unit": "% per 100 AP",
+              "values": "1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Aflame Bonus:</span> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.</p>"
+    },
+    {
+      "description": "Starfire Spellblade resets Kayle's basic attack timer. Starfire Spellblade does not deal bonus damage against structures."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/e",
+  "notes": "Details\n\nStarfire Spellblade deals:\nThe physical damage part of both the attack and the explosion deals  basic damage.\n Proc damage for the passive's  on-hit effect.\n Spell damage for the active's  on-hit effect.\nAll damage dealt to secondary targets by the explosion is additionally tagged as  area damage.\nThe active's effect shares the same cast instance with the triggering attack (exception:  Muramana, see Interactions & Other).\nParry interactions:\n Blind: The main target will never receive damage, but the secondary targets will receive the active's spell damage.\n Block: Blocking will always negate all damage. Keep in mind that if a secondary target is outside of  Spirit's Refuge's zone, they won't block damage.\n Dodge: Dodging will always negate all damage.\nPENDING FOR TEST:: All parry interactions are marked for retesting because of patch V11.1 changes.\nInteractions & Other\n\nWhile the active's effect is up, a circle is visible to Kayle, indicating her  range, however, this circle only takes into account  Divine Ascent's effect on her range, not other sources such as  Rapid Firecannon.\nThe increased range (with the item's effect included) will be  675 prior to ascending to Transcendent, after which it's  725.\nTo clarify the description, Starfire Spellblade can behave both as a  ranged and  melee attack based on how far the target is prior to Kayle ascending to  Arisen, after which the attack will be always using ranged standards.\nIf the target is 200 units away or closer, the attack will be considered melee. This also uses her melee animations, not utilizing projectiles even after ascending.\nIf the target is over 200 units, the attack will be considered ranged.\nTo further expand on this: Using the ranged empowered attack will change Kayle's range type to ranged while the projectile is alive. This means that if the target could outrun the projectile, Kayle would be stuck on being ranged, although the bonuses from the active are not kept. While it's unlikely to be on this temporary ranged state for longer than half a seconds during a normal playthrough, it is possible to achieve few seconds when specific conditions are met.\nKeep in mind that while on-hit effects will be applied to all targets in the explosion,  on-attack effects are only applied once per basic attack, not per target hit.\nSingle-use on-hits, such as  Spellblade, will be applied to the main target.\nIf the main target died prior to the projectile reaching them, or if it was a jungle plant, the effects will be applied to the closest target from the explosion's center.\n Guinsoo's Rageblade's Phantom Hit can only be applied to the main target.\nDespite being one cast instance, Starfire Spellblade triggers  Muramana's Shock twice on each target, dealing normal bonus damage after the basic attack and increased bonus damage after the spell, totalling at ( 5.2% /  4.2%) maximum mana bonus physical damage.",
+  "projectile": "TRUE",
+  "spellEffects": "Special",
+  "spellshieldable": "true",
+  "targeting": "Auto"
+}
+  export default ability

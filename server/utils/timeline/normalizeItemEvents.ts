@@ -1,4 +1,3 @@
-
 export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
   // group raw events by timestamp (stable order)
   const byTs = new Map<number, any[]>()
@@ -25,12 +24,10 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
     const undos: any[] = []
 
     for (const ev of group) {
-      if (ev.type === 'ITEM_PURCHASED')
-        purchases.push(ev.itemId ?? ev.afterId)
+      if (ev.type === 'ITEM_PURCHASED') purchases.push(ev.itemId ?? ev.afterId)
       else if (ev.type === 'ITEM_OBTAINED')
         obtained.push(ev.itemId ?? ev.afterId)
-      else if (ev.type === 'ITEM_UNDO')
-        undos.push(ev)
+      else if (ev.type === 'ITEM_UNDO') undos.push(ev)
       //
       // PHASE 2 — SUPPORT ITEM SYNTHETIC UPGRADES
       //
@@ -72,16 +69,14 @@ export function normalizeItemEvents(events: any[]): ItemEventGroup[] {
     // undo removes last entry matching beforeId
     for (const undo of undos) {
       const ref = undo.beforeId
-      if (!ref)
-        continue
+      if (!ref) continue
       const idx = findLastIndex(
         rawOut,
         r =>
           (r.action === 'ADD' && r.id === ref)
           || (r.action === 'UPGRADE' && r.to === ref)
       )
-      if (idx !== -1)
-        rawOut.splice(idx, 1)
+      if (idx !== -1) rawOut.splice(idx, 1)
     }
   }
 

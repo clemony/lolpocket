@@ -1,5 +1,4 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="w-full">
@@ -11,11 +10,9 @@
       within sets and between them. Select
 
       <icon
+        class="drop-shadow-text text-bc mx-1 mb-1.5 inline-block size-4 shrink-0 **:stroke-[1.8]"
         name="gg:check-o"
-        class="
-          drop-shadow-text text-bc mx-1 mb-1.5 inline-block size-4 shrink-0
-          **:stroke-[1.8]
-        " />
+      />
 
       a set and
 
@@ -24,11 +21,9 @@
       <span class="px-1 text-lg">+</span>
 
       <icon
+        class="drop-shadow-text text-bc mr-1 mb-0.5 inline-block size-4.5 shrink-0 scale-x-105 scale-y-95"
         name="ph:mouse-left-click-fill"
-        class="
-          drop-shadow-text text-bc mr-1 mb-0.5 inline-block size-4.5
-          shrink-0 scale-x-105 scale-y-95
-        " />
+      />
 
       an item from the main list to quick add. Drag entire sets to reorder set
       list.

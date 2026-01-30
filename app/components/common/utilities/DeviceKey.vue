@@ -5,5 +5,8 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <span :class="cn('opacity-50', className)">{{ getDeviceKey() }}<slot /></span>
+  <span :class="cn('opacity-50', className)">
+    {{ getDeviceKey() }}
+    <slot />
+  </span>
 </template>

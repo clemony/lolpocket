@@ -1,0 +1,34 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Super Mech Armor",
+  "id": 1511,
+  "rank": "Special",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Super Mech Armor",
+      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 7% of this minion's <b>maximum</b> health as pre-mitigation damage."
+    }
+  ],
+  "stats": {},
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    30,
+    35
+  ]
+}
+export default item

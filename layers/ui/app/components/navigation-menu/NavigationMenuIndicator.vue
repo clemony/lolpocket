@@ -31,11 +31,13 @@ const forwarded = useForwardProps(delegatedProps)
 
   <NavigationMenuIndicator
     :class="
-      cn('absolute top-full z-100 mt-px flex h-[10px] w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) items-end justify-center overflow-hidden to-98% mask-b-from-97% transition-[all,transform_250ms_ease] data-[state=hidden]:opacity-0',
-         props.class,
+      cn(
+        'absolute top-full z-100 mt-px flex h-[10px] w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) items-end justify-center overflow-hidden to-98% mask-b-from-97% transition-[all,transform_250ms_ease] data-[state=hidden]:opacity-0',
+        props.class,
       )
     "
-    as-child>
+    as-child
+  >
     <motion.div
       :initial="{
         opacity: 0,
@@ -52,12 +54,11 @@ const forwarded = useForwardProps(delegatedProps)
       :transition="{
         type: 'spring',
         bounce: 0.25,
-      }">
+      }"
+    >
       <div
-        class="
-          border-b4/70 bg-b1/94 relative top-[70%] size-4
-          rotate-45 border
-        " />
+        class="border-b4/70 bg-b1/94 relative top-[70%] size-4 rotate-45 border"
+      />
     </motion.div>
   </NavigationMenuIndicator>
 </template>

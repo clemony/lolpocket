@@ -100,8 +100,5 @@ const options = {
 </script>
 
 <template>
-  <Bar
-    :id="props.chartId"
-    :options="options"
-    :data="data" />
+  <Bar :id="props.chartId" :options="options" :data="data" />
 </template>

@@ -1,0 +1,28 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:18 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Rampant Growth",
+  "affects": "Self, Enemies",
+  "blurb": "Active:  Zyra plants a Seed at the target location that remains for a while. Enemy  champions can step on the seed to destroy it and become briefly  revealed.",
+  "castTime": "none",
+  "cooldown": "0",
+  "cost": "0",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zyra plants a Seed at the target location that remains for 60 seconds and grants sight over the surrounding area, though decreasing in radius after 1 second. After 1.5 seconds, enemy champions can destroy the Seed by stepping on it, which reveals them for 2 seconds.</p>"
+    },
+    {
+      "description": "Zyra periodically stocks a Seed charge, up to a maximum of 2. Killing an enemy generates 35% charge toward a Seed, increased to 100% for large enemies and whenever scoring an enemy champion takedown."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/w",
+  "notes": "This ability always employs Quick cast.\nUpon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.",
+  "rechargeRate": "18 / 16 / 14 / 12 / 10",
+  "resource": "Other",
+  "spellshieldable": "false",
+  "targeting": "Location",
+  "targetRange": "850"
+}
+  export default ability

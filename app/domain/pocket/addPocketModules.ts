@@ -48,8 +48,7 @@ export function addSpellSet(pocket: Pocket | string) {
 
 export function addRuneSet(pocket: Pocket | string) {
   const p = pType(pocket)
-  if (p.runes.length >= 10)
-    return 'Max amount of rune sets reached!'
+  if (p.runes.length >= 10) return 'Max amount of rune sets reached!'
 
   let set = <RuneSet[]>[]
   set = p.runes

@@ -3,12 +3,10 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const { stats, summoner } = usePlayerStatsInject()
+const { stats } = storeToRefs(s_champion())
 console.log('🥸 - stats:', stats)
 </script>
 
 <template>
-  <div
-    :class="cn('', className)">
-  </div>
+  <div :class="cn('', className)" />
 </template>

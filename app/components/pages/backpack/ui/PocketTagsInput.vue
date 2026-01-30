@@ -11,7 +11,7 @@ watch(
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
     console.log('💠 - watch - newVajljljljl:', ps().tags)
-  },
+  }
 )
 
 function deleteTag(tag: string) {
@@ -33,63 +33,56 @@ function deleteTag(tag: string) {
 <template>
   <ListboxRoot
     v-model:model-value="tags"
+    class="overflow-hidden"
     multiple
     :highlight-on-hover="false"
-    class="overflow-hidden"
     @entry-focus="null"
     @highlight="null"
-    @entry-focus.stop.prevent>
+    @entry-focus.stop.prevent
+  >
     <ListboxContent class="w-full space-y-3">
       <!-- custom tags -->
 
       <Collapsible
         v-model:open="ui().toggles.backpack.tags"
         :disabled="false"
-        :class="cn('space-y-1 px-3 pb-3', paddingClass)">
+        :class="cn('space-y-1 px-3 pb-3', paddingClass)"
+      >
         <CollapsibleTrigger as-child>
-          <Button
-            as="button"
-            variant="ghost"
-            class="w-full"
-            size="md">
+          <Button class="w-full" as="button" variant="ghost" size="md">
             <span
-              class="
-                grow text-lg font-semibold tracking-normal capitalize opacity-40
-                duration-0
-              ">
+              class="grow text-lg font-semibold tracking-normal capitalize opacity-40 duration-0"
+            >
               Tags
             </span>
             <CaretRotate />
           </Button>
         </CollapsibleTrigger>
 
-        <CollapsibleContent
-          menu
-          class="CollapsibleContent space-y-1">
+        <CollapsibleContent class="CollapsibleContent space-y-1" menu>
           <ListboxGroup class="relative flex flex-col justify-start gap-y-1">
             <div
               v-for="item in ps().tags"
               :key="item"
-              class="
-                group/tag grid h-9! w-full grid-cols-[1fr_min-content]
-                items-center justify-self-start p-0 pr-2
-              ">
+              class="group/tag grid h-9! w-full grid-cols-[1fr_min-content] items-center justify-self-start p-0 pr-2"
+            >
               <!-- list item -->
               <ListboxItem
-                as-child
                 class="group/bt size-full grow cursor-pointer p-0"
-                :value="item">
+                as-child
+                :value="item"
+              >
                 <Button
                   size="md"
                   variant="ghost"
                   :class="
-                    cn('text-bc/80 hover:bg-b2/60 hover:text-bc size-full items-center justify-start gap-px! rounded-lg px-3 duration-0 hover:inset-shadow-none',
-                       { 'btn-active !bg-b2/20': tags.includes(item) },
+                    cn(
+                      'text-bc/80 hover:bg-b2/60 hover:text-bc size-full items-center justify-start gap-px! rounded-lg px-3 duration-0 hover:inset-shadow-none',
+                      { 'btn-active bg-b2/20!': tags.includes(item) },
                     )
-                  ">
-                  <icon
-                    name="hash"
-                    class="size-3.5!" />
+                  "
+                >
+                  <icon class="size-3.5!" name="hash" />
                   <span class="w-full truncate font-medium">
                     {{ item }}
                   </span>
@@ -99,12 +92,10 @@ function deleteTag(tag: string) {
               <!-- delete tag -->
               <Button
                 v-tippy="'Delete Tag'"
+                class="btn-square not-hover:**:text-bc/60 h-9 opacity-0 duration-0 group-hover/tag:opacity-100"
                 variant="ghost"
-                class="
-                  btn-square not-hover:**:text-bc/60 h-9 opacity-0 duration-0
-                  group-hover/tag:opacity-100
-                "
-                @click="deleteTag(item)">
+                @click="deleteTag(item)"
+              >
                 <icon name="x-sm" />
               </Button>
             </div>
@@ -112,41 +103,31 @@ function deleteTag(tag: string) {
           <!-- tag input -->
 
           <Button
+            class="group focus-within:border-neutral/60 flex w-full flex-nowrap items-center gap-3! justify-self-center px-3 py-0 text-sm duration-0 focus-within:[&_input]:placeholder:opacity-0"
             as="div"
             variant="base"
             hover="outline"
-            class="
-              group focus-within:border-neutral/60 flex w-full flex-nowrap items-center
-              gap-3! justify-self-center px-3 py-0 text-sm
-              duration-0
-              focus-within:[&_input]:placeholder:opacity-0
-            ">
+          >
             <span class="bg-b1 z-1 grid h-full w-4.5 place-items-center">
-              <icon
-                name="tag"
-                class="size-4.5 opacity-50" />
+              <icon class="size-4.5 opacity-50" name="tag" />
             </span>
             <input
               v-model="newTag"
+              class="size-full grow rounded-none transition-all duration-300 placeholder:italic"
               placeholder="create new tag..."
-              class="
-                size-full grow rounded-none transition-all duration-300
-                placeholder:italic
-              "
               @keydown.enter="
                 () => {
-                  (ps().tags.push(newTag), (newTag = ''));
+                  ;(ps().tags.push(newTag), (newTag = ''))
                 }
-              " />
+              "
+            >
 
             <Button
+              class="btn-square size-6 duration-0 group-has-placeholder-shown:opacity-0"
               variant="ghost"
               size="8"
-              class="
-                btn-square size-6 duration-0
-                group-has-placeholder-shown:opacity-0
-              "
-              @click="newTag = ''">
+              @click="newTag = ''"
+            >
               <icon name="x-sm" />
             </Button>
           </Button>

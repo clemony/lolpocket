@@ -29,7 +29,7 @@ export type FormatFn<T> = (args: T) => string | TemplateResult
 
 export type SimpleFormatFn = (
   result: string,
-  params?: string[],
+  params?: string[]
 ) => string | TemplateResult
 
 export type FormatMap = Partial<ComplexFormatMap> & {
@@ -37,7 +37,7 @@ export type FormatMap = Partial<ComplexFormatMap> & {
 }
 
 export type ComplexFormatMap = {
-  [K in FormatMapArgs['type']]: FormatFn<Extract<FormatMapArgs, { type: K }>>;
+  [K in FormatMapArgs['type']]: FormatFn<Extract<FormatMapArgs, { type: K }>>
 }
 
 export const templateUnits: Record<string, string> = {
@@ -85,8 +85,7 @@ export const formatMap: FormatMap = {
     return `<img src="/img/icons/gold-coin.webp" class="inline-icon" />${result}`
   },
   icon: (result) => {
-    if (!result)
-      return '[Missing icon]'
+    if (!result) return '[Missing icon]'
     const iconSrc = `/img/icons/${normalizeName(result)}.webp`
     return `<img src="${iconSrc}" class="tip-icon" />${result}`
   },
@@ -108,16 +107,14 @@ export const formatMap: FormatMap = {
     const match = cleanRange.match(/^(\d+)\s?to\s?(\d+)$/)
 
     const min: string = valueRange.length ? valueRange[0] : match?.[1] || ''
-    const max: string = valueRange.length
-      ? valueRange[valueRange.length - 1]
-      : match?.[2] || ''
+    const max: string
+      = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] || ''
 
     const html: string
       = min && max
         ? `${min}${suffix} – ${max}${suffix}`
         : `${cleanRange}${suffix}`
-    if (html)
-      return `${html} (based on ${basedOn})`
+    if (html) return `${html} (based on ${basedOn})`
     return ''
   },
   rd: ({ depth, input }) => {
@@ -150,18 +147,14 @@ export const formatMap: FormatMap = {
 
     const tipParams = Object.fromEntries(paramPairs)
 
-    if (plainTips.has(subject.toLowerCase()))
-      return subject
-    if (deleteTips.has(subject.toLowerCase()))
-      return ''
+    if (plainTips.has(subject.toLowerCase())) return subject
+    if (deleteTips.has(subject.toLowerCase())) return ''
 
     const showIcon = !tipParams.noimg && !tipParams.icononly
     const showLabel = !tipParams.icononly && !tipParams.nolink
     const iconSrc = `/img/icons/${normalizeName(subject)}.webp`
 
-    const iconHTML = showIcon
-      ? `<img src="${iconSrc}" class="tip-icon" />`
-      : ''
+    const iconHTML = showIcon ? `<img src="${iconSrc}" class="tip-icon" />` : ''
     const labelHTML = showLabel ? label : ''
     return `${iconHTML}${labelHTML}`
   },

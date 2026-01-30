@@ -6,15 +6,13 @@ const { src } = defineProps<{
 const videoRef = useTemplateRef<HTMLMediaElement>('videoRef')
 
 function canPlay() {
-  if (!videoRef.value)
-    return
+  if (!videoRef.value) return
 
   videoRef.value.play()
 }
 
 function reload() {
-  if (!videoRef.value)
-    return
+  if (!videoRef.value) return
 
   videoRef.value.load()
 }
@@ -23,6 +21,7 @@ function reload() {
 <template>
   <video
     ref="videoRef"
+    class="size-full overflow-hidden object-cover"
     autoplay
     b2
     loop
@@ -30,11 +29,9 @@ function reload() {
     disableremoteplayback
     controlslist=" nodownload "
     playsinline
-    class="size-full overflow-hidden object-cover"
     @canplay="canPlay()"
-    @error="reload()">
-    <source
-      :src="src"
-      type="video/webm" />
+    @error="reload()"
+  >
+    <source :src="src" type="video/webm">
   </video>
 </template>

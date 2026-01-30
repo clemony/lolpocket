@@ -9,4 +9,4 @@ export async function fetchMasteries(puuid: string, region: string) {
   return riotFetch<MasteryReturn[]>(key, url)
 }
 
-export { }
+export {}

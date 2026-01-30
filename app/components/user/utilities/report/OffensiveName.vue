@@ -19,11 +19,13 @@ const classes = 'text-balanced pl-3 text-sm/6'
         placement: 'right',
         offset: [0, 24],
       }"
-      class="
-        text-bc cursor-help font-medium underline decoration-dotted opacity-60
-        hover:decoration-solid hover:opacity-100
-      ">Riot Games</strong>
-    or <strong class="font-medium">lolpocket</strong>.
+      class="text-bc cursor-help font-medium underline decoration-dotted opacity-60 hover:decoration-solid hover:opacity-100"
+    >
+      Riot Games
+    </strong>
+    or
+    <strong class="font-medium">lolpocket</strong>
+    .
   </li>
   <li :class="classes">
     &bull;&ensp;Contain personally identifying information.

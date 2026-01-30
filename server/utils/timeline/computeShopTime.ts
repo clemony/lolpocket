@@ -13,9 +13,6 @@ export const SHOP_BOUNDS = {
   },
 }
 
-
-
-
 function isInShopArea(pos: { x: number, y: number }, teamId: 100 | 200) {
   const b = teamId === 100 ? SHOP_BOUNDS.BLUE : SHOP_BOUNDS.RED
   return (

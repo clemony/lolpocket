@@ -1,0 +1,31 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Ghostcrawlers",
+  "id": 223005,
+  "rank": "Boots",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "active": [
+    {
+      "unique": true,
+      "name": "Wall Walk",
+      "effects": "Become ghostly for 6 seconds, ignoring terrain collision until you basic attack or cast an ability. While inside terrain, gain 300 <b>bonus</b> movement speed."
+    }
+  ],
+  "stats": {
+    "flatMovespeed": 70
+  },
+  "description": "70 Move Speed\n\nWall Walk (0s)\nGain the ability to walk through walls for 6 seconds. While inside walls, gain 300 move speed. Casting a spell or attacking will end this effect.",
+  "gold": {
+    "base": 500,
+    "total": 500,
+    "sell": 350
+  },
+  "maps": [
+    30
+  ]
+}
+export default item

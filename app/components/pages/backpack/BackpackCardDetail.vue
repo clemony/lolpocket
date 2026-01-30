@@ -11,16 +11,13 @@ const bg = computed(() => {
 </script>
 
 <template>
-  <div
-    v-if="pocket"
-    class="flex flex-1 flex-col"
-  >
+  <div v-if="pocket" class="flex flex-1 flex-col">
     <!-- header -->
     <div class="flex items-start p-4">
       <div class="flex items-start gap-4 text-sm">
         <PocketIcon
-          :src="pocket.icon"
           class="aspect-square size-16 rounded-full"
+          :src="pocket.icon"
         />
         <div class="grid gap-px">
           <div class="text-md/4 font-semibold">
@@ -36,31 +33,20 @@ const bg = computed(() => {
 
           <div class="line-clamp-1 text-sm/4 capitalize">
             <span class="font-medium">Role:</span>
-            <template
-              v-for="role in pocket.roles"
-              :key="role"
-            >
+            <template v-for="role in pocket.roles" :key="role">
               {{ role }}
             </template>
           </div>
         </div>
       </div>
       <div
-        class="
-          ml-auto text-sm text-bc/60 *:flex *:items-center *:justify-end *:gap-2
-        "
+        class="text-bc/60 ml-auto text-sm *:flex *:items-center *:justify-end *:gap-2"
       >
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
         </p>
-        <p
-          v-if="pocket.updated"
-          v-tippy="'Last Updated'"
-        >
-          <icon
-            name="reset"
-            class="size-3.5 opacity-70"
-          />
+        <p v-if="pocket.updated" v-tippy="'Last Updated'">
+          <icon class="size-3.5 opacity-70" name="reset" />
           Patch {{ pocket.updated }}
         </p>
       </div>
@@ -68,12 +54,9 @@ const bg = computed(() => {
     <Separator />
 
     <!-- content -->
-    <div class="border-y border-y-b4 bg-black">
+    <div class="border-y-b4 border-y bg-black">
       <div
-        class="
-          relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-position-[170%_55%]
-          bg-no-repeat inset-shadow-sm inset-shadow-black/20 before:z-0
-        "
+        class="relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-position-[170%_55%] bg-no-repeat inset-shadow-sm inset-shadow-black/20 before:z-0"
         :style="bg"
       />
     </div>
@@ -88,20 +71,13 @@ const bg = computed(() => {
           />
           <div class="flex items-center">
             <Label
-              html-for="mute"
               class="flex items-center gap-2 text-sm font-normal"
+              html-for="mute"
             >
-              <Switch
-                id="mute"
-                aria-label="Mute thread"
-              />
+              <Switch id="mute" aria-label="Mute thread" />
               Mute comment notifications
             </Label>
-            <Button
-              type="button"
-              size="sm"
-              class="ml-auto"
-            >
+            <Button class="ml-auto" type="button" size="sm">
               Send
             </Button>
           </div>
@@ -109,10 +85,7 @@ const bg = computed(() => {
       </form>
     </div>
   </div>
-  <div
-    v-else
-    class="grid size-full justify-center text-center text-bc/60"
-  >
+  <div v-else class="text-bc/60 grid size-full justify-center text-center">
     <span class="translate-y-1/4">No pocket selected</span>
   </div>
 </template>

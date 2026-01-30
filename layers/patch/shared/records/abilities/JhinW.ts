@@ -1,0 +1,70 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Deadly Flourish",
+  "width": "90",
+  "affects": "Enemies",
+  "blurb": "Passive: Enemy champions that trigger a  Lotus Trap, or take damage from  Jhin or his allies, are marked with  Caught Out for a few seconds.",
+  "castTime": "0.75",
+  "cooldown": "12",
+  "cost": "50 / 55 / 60 / 65 / 70",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "70 / 105 / 140 / 175 / 210"
+            },
+            {
+              "unit": "% AD",
+              "values": "50"
+            }
+          ]
+        },
+        {
+          "attribute": "Minion Damage",
+          "modifiers": [
+            {
+              "values": "52.5 / 78.75 / 105 / 131.25 / 157.5"
+            },
+            {
+              "unit": "% AD",
+              "values": "37.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Hitting a marked champion roots them for a duration and grants Jhin Every Moment Matters' bonus movement speed.",
+      "leveling": [
+        {
+          "attribute": "Root Duration",
+          "modifiers": [
+            {
+              "unit": " seconds",
+              "values": "1.25 / 1.5 / 1.75 / 2 / 2.25"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/w",
+  "notes": "Applies  spell damage to the enemy champion and  area damage to all other enemy units.\nThe Caught Out mark only appears if Deadly Flourish can potentially  root the target, and will not if the ability's cooldown is longer than 4 seconds or isn't ranked up.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe ability will not preserve the caster's facing direction when using  Flash and similar effects.\nUniquely, Deadly Flourish is special-cased to be  intercepted by valid counters because it looks like a blockable missile, even though it functionally is not a missile.\nWhile  disguised as a non-champion,  Neeko cannot be affected by Deadly Flourish.(bug)",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "spellEffects": "Special",
+  "spellshieldable": "True",
+  "targeting": "Direction"
+}
+  export default ability

@@ -16,10 +16,8 @@ const route = useRoute()
   <main class="z-auto min-h-screen w-full">
     <div :class="cn('z-auto w-full grow space-y-6 px-22 pb-16', className)">
       <div
-        class="
-          bg-b1 sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5
-          pt-12
-        ">
+        class="bg-b1 sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 pt-12"
+      >
         <slot name="header">
           <h1 class="dst text-5xl font-bold">
             {{ title || route.meta?.title || route.name }}
@@ -32,8 +30,7 @@ const route = useRoute()
             </p>
           </slot>
           <div class="relative grid size-px self-end">
-            <div
-              class="absolute bottom-2 size-max place-self-end">
+            <div class="absolute bottom-2 size-max place-self-end">
               <slot name="right" />
             </div>
           </div>

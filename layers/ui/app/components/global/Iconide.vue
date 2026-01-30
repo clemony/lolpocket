@@ -4,11 +4,18 @@ const { name, class: className } = defineProps<{
   name: string
 }>()
 
-const alias = computed (() => !name.match(':') ? `lucide:${name}` : name)
+const alias = computed(() => (!name.match(':') ? `lucide:${name}` : name))
 </script>
 
 <template>
   <Icon
     name="tabler:star"
-    :class="cn('', { '!scale-96 **:stroke-[1.3]': name.match(/teenyicons/) }, className)" />
+    :class="
+      cn(
+        '',
+        { 'scale-96! **:stroke-[1.3]': name.match(/teenyicons/) },
+        className,
+      )
+    "
+  />
 </template>

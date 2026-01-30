@@ -1,17 +1,17 @@
-import fs from "node:fs"
-import path from "node:path"
-import { c_DIR, normalize } from "../../utils"
+import fs from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { normalize } from '../../utils'
 
-const inputPath = path.resolve(`${c_DIR}raw/champions-raw.json`)
-const outputPath = path.resolve(`${c_DIR}raw/unique-ability-resources.json`)
+const inputPath = resolve(`./layers/patch/server/champions/raw/champions-raw.json`)
+const outputPath = resolve(`./layers/patch/server/champions/raw/unique-ability-resources.json`)
 
-const championsRaw = fs.readFileSync(inputPath, "utf-8")
+const championsRaw = fs.readFileSync(inputPath, 'utf-8')
 const champions = JSON.parse(championsRaw) as Champion[]
 
 const uniqueResources = new Set<string>()
 
 for (const champ of Object.values(champions)) {
-  if (!champ?.abilities || typeof champ.abilities !== "object") continue
+  if (!champ?.abilities || typeof champ.abilities !== 'object') continue
 
   for (const slot of Object.values(champ.abilities)) {
     if (!Array.isArray(slot)) continue
@@ -28,7 +28,7 @@ for (const champ of Object.values(champions)) {
 // Sort alphabetically for readability
 const sortedResources = [...uniqueResources].sort()
 
-fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+fs.mkdirSync(dirname(outputPath), { recursive: true })
 fs.writeFileSync(outputPath, JSON.stringify(sortedResources, null, 2))
 
 console.log(`✅ Wrote unique ability resources to ${outputPath}`)

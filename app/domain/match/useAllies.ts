@@ -16,8 +16,7 @@ export function useAllies(
 
   for (const match of toValue(matches)) {
     const player = match.participants.find(p => p.puuid === puuid)
-    if (!player)
-      continue
+    if (!player) continue
 
     const teammates = match.participants.filter(
       p => p.teamId === player.teamId && p.puuid !== puuid
@@ -34,8 +33,7 @@ export function useAllies(
       }
 
       s.games++
-      if (player.win)
-        s.wins++
+      if (player.win) s.wins++
 
       teammateStats.set(ally.puuid, s)
     }

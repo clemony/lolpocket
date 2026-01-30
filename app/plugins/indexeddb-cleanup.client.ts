@@ -1,8 +1,7 @@
 import { maybeRunCleanup } from '~/composables'
 
 export default defineNuxtPlugin(() => {
-  if (!process.client)
-    return
+  /* if (!import.meta.client) return */
 
   // Always run once immediately (logged-out cleanup)
   maybeRunCleanup()
@@ -12,8 +11,7 @@ export default defineNuxtPlugin(() => {
   stop = watch(
     () => as().account?.puuid,
     (puuid) => {
-      if (!puuid)
-        return
+      if (!puuid) return
 
       maybeRunCleanup(puuid)
 

@@ -15,11 +15,9 @@ const winrateDiff = computed(() => {
     <div class="stat items-center">
       <div class="stat-figure">
         <div
-          class="
-            relative grid size-8 place-items-center font-mono leading-none
-            font-bold tracking-wide
-          ">
-          <span class="absolute right-1.5 object-center text-5xl"> S+ </span>
+          class="relative grid size-8 place-items-center font-mono leading-none font-bold tracking-wide"
+        >
+          <span class="absolute right-1.5 object-center text-5xl">S+</span>
         </div>
       </div>
 
@@ -39,13 +37,12 @@ const winrateDiff = computed(() => {
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div
-          class="
-            relative grid size-8 place-items-center leading-none font-black!
-            tracking-wider
-          ">
+          class="relative grid size-8 place-items-center leading-none font-black! tracking-wider"
+        >
           <icon
+            class="text-bc dst -mt-0.5 size-8"
             name="teenyicons:heart-circle-solid"
-            class="text-bc dst -mt-0.5 size-8" />
+          />
         </div>
       </div>
 
@@ -67,15 +64,14 @@ const winrateDiff = computed(() => {
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div
-          class="
-            online avatar relative grid size-16 place-items-center rounded-full
-            shadow-md drop-shadow-sm
-          ">
+          class="online avatar relative grid size-16 place-items-center rounded-full shadow-md drop-shadow-sm"
+        >
           <div class="absolute size-20 overflow-hidden rounded-full">
             <ChampionIcon
               :id="champion.championId"
+              class="size-full scale-109 object-center"
               :alt="champion.champion"
-              class="size-full scale-109 object-center" />
+            />
           </div>
         </div>
       </div>

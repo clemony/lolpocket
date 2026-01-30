@@ -39,15 +39,13 @@ export function matchMsg(msgId: string, index?: boolean): InboxMessage {
 
 export function markRead(msgId) {
   const msg = matchMsg(msgId)
-  if (msg)
-    msg.read = true
+  if (msg) msg.read = true
 }
 
 export function toggleRead(msgId) {
   const msg = matchMsg(msgId)
 
-  if (msg)
-    msg.read = !msg.read
+  if (msg) msg.read = !msg.read
 }
 
 export function trashMsg(msgId) {

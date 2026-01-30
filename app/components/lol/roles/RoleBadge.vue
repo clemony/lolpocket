@@ -9,8 +9,7 @@ const { class: className, role: rl } = defineProps<{
 }>()
 
 const role = computed(() => {
-  if (typeof rl !== 'string')
-    return rl
+  if (typeof rl !== 'string') return rl
 
   return championRoles.find(p => p.name === (rl ?? 'All'))
 })
@@ -35,16 +34,15 @@ const role = computed(() => {
     "
     :style="{
       backgroundColor: `${(cs().filters.role && cs().filters.role === role.name) || active ? role.color : 'transparent'}`,
-    }">
+    }"
+  >
     <Element size="icon-sm">
       <component
         :is="`i-lol-${role?.name.toLowerCase()}`"
-        :class="cn('dst absolute size-4.25! shrink-0', role?.class)" />
+        :class="cn('dst absolute size-4.25! shrink-0', role?.class)"
+      />
     </Element>
     {{ role.name }}
-    <icon
-      v-if="clear"
-      name="x"
-      class="size-4 text-white **:stroke-[2.6]" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </Button>
 </template>

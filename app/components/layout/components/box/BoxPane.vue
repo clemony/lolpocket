@@ -9,11 +9,9 @@ defineProps<MailListProps>()
 const selected = defineModel<string>('selected', { required: false })
 
 function getBadgeVariantFromLabel(label: string) {
-  if (['work'].includes(label.toLowerCase()))
-    return 'default'
+  if (['work'].includes(label.toLowerCase())) return 'default'
 
-  if (['personal'].includes(label.toLowerCase()))
-    return 'outline'
+  if (['personal'].includes(label.toLowerCase())) return 'outline'
 
   return 'secondary'
 }
@@ -24,11 +22,13 @@ function getBadgeVariantFromLabel(label: string) {
     v-for="item of items"
     :key="item.id"
     :class="
-      cn('hover:bg-b2/50 flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all',
-         selected === item.id && 'bg-b2/30',
+      cn(
+        'hover:bg-b2/50 flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all',
+        selected === item.id && 'bg-b2/30',
       )
     "
-    @click="selected = item.id">
+    @click="selected = item.id"
+  >
     <div class="flex w-full flex-col gap-1">
       <div class="flex items-center">
         <div class="flex items-center gap-2">
@@ -37,7 +37,8 @@ function getBadgeVariantFromLabel(label: string) {
           </div>
           <span
             v-if="!item.read"
-            class="flex size-2 rounded-full bg-blue-600" />
+            class="flex size-2 rounded-full bg-blue-600"
+          />
         </div>
         <div
           :class="
@@ -45,7 +46,8 @@ function getBadgeVariantFromLabel(label: string) {
               'ml-auto text-sm',
               selected === item.id ? 'text-bc' : 'text-bc/60',
             )
-          ">
+          "
+        >
           12 minutes ago
         </div>
       </div>
@@ -61,7 +63,8 @@ function getBadgeVariantFromLabel(label: string) {
       <Badge
         v-for="label of item.labels"
         :key="label"
-        :variant="getBadgeVariantFromLabel(label)">
+        :variant="getBadgeVariantFromLabel(label)"
+      >
         {{ label }}
       </Badge>
     </div>

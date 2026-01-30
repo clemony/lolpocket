@@ -4,25 +4,29 @@ const { rank, winrate } = defineProps<{
   rank: string
 }>()
 
-const color1 = computed(() => getComputedStyle(document.documentElement).getPropertyValue(
-  `--color-${rank}`,
-))
+const color1 = computed(() =>
+  getComputedStyle(document.documentElement).getPropertyValue(`--color-${rank}`)
+)
 
 const data = computed(() => {
   return {
-    datasets: [{ backgroundColor: [
-      cssVar('--color-b3'),
-      color1.value
-    ], data: [100 - winrate, winrate], label: 'Recent winrate in percentage' }],
-    labels: ['Loss', 'Win']
+    datasets: [
+      {
+        backgroundColor: [cssVar('--color-b3'), color1.value],
+        data: [100 - winrate, winrate],
+        label: 'Recent winrate in percentage',
+      },
+    ],
+    labels: ['Loss', 'Win'],
   }
 })
 </script>
 
 <template>
   <Donut
+    class="size-24"
     :data
     gauge
     aria-label="Recent winrate in percentage"
-    class="size-24" />
+  />
 </template>

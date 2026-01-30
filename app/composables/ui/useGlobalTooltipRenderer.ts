@@ -10,7 +10,8 @@ const state = reactive<{ requests: RenderRequest[] }>({ requests: [] })
 
 const TooltipRoot = defineComponent({
   setup() {
-    return () => state.requests.map(r => h(r.component, { ...r.props, key: r.props.id }))
+    return () =>
+      state.requests.map(r => h(r.component, { ...r.props, key: r.props.id }))
   },
 })
 
@@ -44,8 +45,7 @@ export function useGlobalTooltipRenderer() {
       return container
     },
     unmount(container?: HTMLDivElement) {
-      if (!container)
-        return
+      if (!container) return
 
       const idx = state.requests.findIndex(r => r.container === container)
       if (idx !== -1) {

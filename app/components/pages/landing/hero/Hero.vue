@@ -40,15 +40,12 @@ onMounted(() => {
 
 <template>
   <div
-    class="
-      relative top-0 left-0 z-0 h-screen w-full overflow-hidden *:z-0
-      *:size-full
-    "
-    :class="{ sticky: visible }">
+    class="relative top-0 left-0 z-0 h-screen w-full overflow-hidden *:z-0 *:size-full"
+    :class="{ sticky: visible }"
+  >
     <motion.div
-      class="
-        top-0 z-0 grid h-screen w-full items-start justify-start overflow-hidden
-      ">
+      class="top-0 z-0 grid h-screen w-full items-start justify-start overflow-hidden"
+    >
       <!--   :style="{ transform: `translate(0, -${prog}%)` }" -->
       <div class="relative h-screen w-screen">
         <video-background
@@ -63,16 +60,15 @@ onMounted(() => {
             height: '100vh',
           }"
           @load="videoRef.player.play()"
-          @error="console.log('error')" />
+          @error="console.log('error')"
+        />
       </div>
     </motion.div>
 
     <div
       ref="welcome"
-      class="
-        from-b1 absolute inset-0 top-0 left-0 z-1 grid grid-cols-2
-        place-items-center bg-linear-to-r from-25% to-transparent to-90%
-      ">
+      class="from-b1 absolute inset-0 top-0 left-0 z-1 grid grid-cols-2 place-items-center bg-linear-to-r from-25% to-transparent to-90%"
+    >
       <div class="justify-self-start pl-44">
         <div class="relative grid size-full w-140 max-w-140 items-center">
           <LolpocketDefinition>
@@ -80,10 +76,12 @@ onMounted(() => {
               variant="outline"
               size="12"
               :class="
-                cn('border-b3 hover:bg-neutral hover:text-nc pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden text-sm shadow-xs transition-all duration-200',
+                cn(
+                  'border-b3 hover:bg-neutral hover:text-nc pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden text-sm shadow-xs transition-all duration-200',
                 )
               "
-              @click="navigateTo('/login')">
+              @click="navigateTo('/login')"
+            >
               Sign in
             </Button>
           </LolpocketDefinition>
@@ -91,9 +89,7 @@ onMounted(() => {
 
         <div class="absolute bottom-5 grid w-full justify-center self-end">
           <div class="grid place-items-center">
-            <icon
-              name="down"
-              class="size-9 opacity-30" />
+            <icon class="size-9 opacity-30" name="down" />
           </div>
         </div>
       </div>

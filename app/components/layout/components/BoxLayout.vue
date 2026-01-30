@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { SplitterPanel as ResizablePanel } from 'reka-ui'
-import type { LinkProp, Mail } from './box/mails'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -15,8 +14,9 @@ const route = useRoute()
   <TooltipProvider :delay-duration="0">
     <ResizablePanelGroup
       id="resize-panel-group-1"
+      class="h-full max-h-[calc(100vh-45px)] items-stretch"
       direction="horizontal"
-      class="h-full max-h-[calc(100vh-45px)] items-stretch">
+    >
       <ResizablePanel
         id="resize-panel-1"
         :default-size="17"
@@ -32,12 +32,11 @@ const route = useRoute()
           )
         "
         @expand="emit('toggle:collapse', true)"
-        @collapse="emit('toggle:collapse', false)">
+        @collapse="emit('toggle:collapse', false)"
+      >
         <slot name="nav" />
       </ResizablePanel>
-      <ResizableHandle
-        id="resize-handle-1"
-        with-handle />
+      <ResizableHandle id="resize-handle-1" with-handle />
       <ResizablePanel>
         <slot />
       </ResizablePanel>

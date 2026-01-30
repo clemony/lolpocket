@@ -10,35 +10,25 @@ const props = defineProps<{
 <template>
   <Select class="group">
     <SelectTrigger
-      class="
-        ml-2 max-w-54 border-b3 bg-b1 shadow-none ring inset-shadow-xs
-        ring-b3/80
-      "
+      class="border-b3 bg-b1 ring-b3/80 ml-2 max-w-54 shadow-none ring inset-shadow-xs"
     >
-      <SelectValue
-        placeholder="Aa"
-        as-child
-        class="p-0"
-      >
+      <SelectValue class="p-0" placeholder="Aa" as-child>
         <!--
           :style="{ fontFamily: props.card.font[props.model] }" -->
-        <div class="items-center align-text-bottom text-lg font-medium dst">
+        <div class="dst items-center align-text-bottom text-lg font-medium">
           {{ props.model === 0 ? "Title Font" : "Accent Font" }}
         </div>
       </SelectValue>
     </SelectTrigger>
 
-    <SelectContent
-      align="end"
-      class="rounded-xl"
-    >
+    <SelectContent class="rounded-xl" align="end">
       <SelectGroup>
         <SelectItem
           v-for="font in fonts.sort()"
           :key="font.id"
+          class="dst text-lg"
           :value="font.id"
           :style="{ fontFamily: font.id }"
-          class="text-lg dst"
         >
           {{ font.display }}
         </SelectItem>

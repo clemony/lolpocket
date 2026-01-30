@@ -7,44 +7,33 @@ function reset() {
 </script>
 
 <template>
-  <ScrollArea
-    as="div"
-    class="relative">
+  <ScrollArea class="relative" as="div">
     <div class="mask-right-sm size-fit">
       <TransitionSlide
+        class="mask-left-sm mt-3 flex max-w-160 grow flex-nowrap gap-3 overflow-x-auto px-10 pt-2 pb-4"
         :offset="['100%', 0]"
         group
-        class="
-          mask-left-sm mt-3 flex max-w-160 grow flex-nowrap gap-3
-          overflow-x-auto px-10 pt-2 pb-4
-        ">
+      >
         <button
           class="text-xlrounded-md! btn btn-square btn-sm font-normal"
-          :class="{ hidden: !filters.role }">
-          <icon
-            name="x-sm"
-            class="stroke-[1.3]"
-            @click="reset()" />
+          :class="{ hidden: !filters.role }"
+        >
+          <icon class="stroke-[1.3]" name="x-sm" @click="reset()" />
         </button>
 
         <label
           v-for="(role, i) in championRoles"
           :key="`${role.name}${i}`"
-          class="
-            has-checked:!bgneutral has-checked:!borderneutral
-            has-checked:!shadowneutral/20 btn rounded-lg-2! border-b2 bg-b2/20!
-            text-md! btn-sm hover:border-b3! hover:bg-b3/40! has-checked:text-nc! mr-0
-            rounded-md font-medium tracking-normal capitalize shadow-sm
-            shadow-black/7 transition-all duration-300 checked:shadow-sm!
-            hover:scale-110 hover:drop-shadow-sm
-          "
-          :class="{ hidden: filters.role && role.name !== filters.role }">
+          class="has-checked:!bgneutral has-checked:!borderneutral has-checked:!shadowneutral/20 btn rounded-lg-2! border-b2 bg-b2/20! text-md! btn-sm hover:border-b3! hover:bg-b3/40! has-checked:text-nc! mr-0 rounded-md font-medium tracking-normal capitalize shadow-sm shadow-black/7 transition-all duration-300 checked:shadow-sm! hover:scale-110 hover:drop-shadow-sm"
+          :class="{ hidden: filters.role && role.name !== filters.role }"
+        >
           <input
             v-model="filters.role"
             class="peer hidden"
             :value="role.name"
             type="radio"
-            name="championClass" />
+            name="championClass"
+          >
           {{ role.name }}
         </label>
       </TransitionSlide>
@@ -54,18 +43,16 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="bg-b1 absolute top-2 -left-4 grid h-13 w-6 place-items-center">
-      <icon
-        name="left"
-        class="z-1 size-6 shrink-0" />
+      class="bg-b1 absolute top-2 -left-4 grid h-13 w-6 place-items-center"
+    >
+      <icon class="z-1 size-6 shrink-0" name="left" />
     </div>
 
     <div
       v-if="!filters.role"
-      class="bg-b1 absolute top-2 -right-4 grid h-13 w-6 place-items-center">
-      <icon
-        name="right"
-        class="size-6" />
+      class="bg-b1 absolute top-2 -right-4 grid h-13 w-6 place-items-center"
+    >
+      <icon class="size-6" name="right" />
     </div>
   </ScrollArea>
 </template>

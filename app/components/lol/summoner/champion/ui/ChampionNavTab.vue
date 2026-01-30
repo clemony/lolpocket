@@ -2,7 +2,6 @@
 import { motion } from 'motion-v'
 
 const { class: className } = defineProps<{
-
   routeName: string
   class?: HTMLAttributes['class']
   justifyStart?: boolean
@@ -16,28 +15,39 @@ const route = useRoute()
     role="tab"
     tabindex="0"
     :class="
-      cn('group/tab tabs-lift tabs tabs-lg pointer-events-auto relative flex w-max min-w-42 grow origin-bottom cursor-pointer items-start self-end border-b-0! transition-none *:pointer-events-none')">
+      cn(
+        'group/tab tabs-lift tabs tabs-lg pointer-events-auto relative flex w-max min-w-42 grow origin-bottom cursor-pointer items-start self-end border-b-0! transition-none *:pointer-events-none',
+      )
+    "
+  >
     <FakeTab />
 
     <div
       :class="
-        cn('tab absolute bottom-0! left-0 w-full grow origin-bottom border-b-0!',
-           {
-             'tab-active': routeName === route.name || (routeName === 'summoner-region-slug-champions' && route.name === 'summoner-region-slug-champion_key'),
-           },
+        cn(
+          'tab absolute bottom-0! left-0 w-full grow origin-bottom border-b-0!',
+          {
+            'tab-active':
+              routeName === route.name
+              || (routeName === 'summoner-region-slug-champions'
+                && route.name === 'summoner-region-slug-champion_key'),
+          },
         )
-      " />
+      "
+    />
 
     <motion.div
       :class="
-        cn('d text-bc/90 z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
-           {
-             'opacity-60': routeName !== route.name,
-             'opacity-100': routeName === route.name,
-             'justify-start! px-0! min-w-32': justifyStart,
-           },
+        cn(
+          'd text-bc/90 z-3 flex h-10 w-full grow flex-nowrap items-center justify-center text-sm font-medium capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
+          {
+            'opacity-60': routeName !== route.name,
+            'opacity-100': routeName === route.name,
+            'min-w-32 justify-start! px-0!': justifyStart,
+          },
         )
-      ">
+      "
+    >
       <slot>
         {{ routeName }}
       </slot>

@@ -5,9 +5,7 @@ import { ListboxItemIndicator } from 'reka-ui'
 <template>
   <ListboxItemIndicator class="absolute right-2 self-center">
     <slot>
-      <icon
-        name="tick-sm"
-        class="size-6" />
+      <icon class="size-6" name="tick-sm" />
     </slot>
   </ListboxItemIndicator>
 </template>

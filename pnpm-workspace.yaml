@@ -3,8 +3,11 @@ shellEmulator: true
 
 trustPolicy: no-downgrade
 
+overrides:
+  chokidar: 3.5.3
+  semver: 7.5.4
+
 onlyBuiltDependencies:
-  - '@morev/vue-transitions'
   - '@parcel/watcher'
   - '@tailwindcss/oxide'
   - esbuild

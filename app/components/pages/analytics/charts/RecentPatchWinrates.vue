@@ -21,7 +21,7 @@ const patchStats = computed(() => {
     stats.winrate = (stats.wins / stats.games) * 100
   })
 
-  const allPatches = ds().patchList
+  const allPatches = patchIndex.map(p => Number.parseInt(p))
 
   // Step 3: Ensure every patch exists in `patchMap`
   const filledPatches = allPatches.map(patch => ({
@@ -106,11 +106,9 @@ const range = computed(() => {
 
 <template>
   <div
-    class="
-      stats rounded-box border-b3 bg-b1 shadow-warm-soft relative h-62 w-full border
-      px-5
-    ">
-    <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
+    class="stats relative h-62 w-full rounded-box border border-b3 bg-b1 px-5 shadow-warm-soft"
+  >
+    <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>
@@ -124,9 +122,7 @@ const range = computed(() => {
       </div>
     </div>
 
-    <LineChart
-      :data="data"
-      :options="options" />
+    <LineChart :data="data" :options="options" />
 
     <NoDataOverlay v-if="!userMatchData.length" />
   </div>

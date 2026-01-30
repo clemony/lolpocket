@@ -8,11 +8,8 @@ const { class: className, to } = defineProps<{
 <template>
   <NuxtLink
     :to="to"
-    :class="
-      cn('cursor-pointer underline-offset-2 hover:underline',
-         className,
-      )
-    ">
+    :class="cn('cursor-pointer underline-offset-2 hover:underline', className)"
+  >
     <slot />
   </NuxtLink>
 </template>

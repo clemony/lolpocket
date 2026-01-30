@@ -35,31 +35,27 @@ const forwarded = useForwardProps(props)
 
 <template>
   <Element
-
     v-bind="forwarded"
     :class="
-      cn(
-        elementVariants({ base, variant, hover, on, size }),
-        props.class,
-      )
-    ">
+      cn(elementVariants({ base, variant, hover, on, size }), props.class)
+    "
+  >
     <img
+      v-bind="$attrs"
       :key="src"
       decoding="async"
       loading="lazy"
       :src
       placeholder-class=""
-      v-bind="$attrs"
       :alt="alt"
       :class="
-        cn('size-full shrink-0 translate-z-0 object-center',
-           {
-             'opacity-100 ': loaded,
-             'opacity-0': !loaded,
-           },
-        )
+        cn('size-full shrink-0 translate-z-0 object-center', {
+          'opacity-100': loaded,
+          'opacity-0': !loaded,
+        })
       "
-      @load="onLoad()" />
+      @load="onLoad()"
+    >
     <slot />
   </Element>
 </template>

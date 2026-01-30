@@ -9,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 definePageMeta({
   layout: false,
@@ -21,15 +21,12 @@ const route = useRoute('pocket')
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 const mainSet = computed(() =>
-  pocket.value.runes.find(s => s.id === pocket.value._runes),
+  pocket.value.runes.find(s => s.id === pocket.value._runes)
 )
 
 const selectedSet = computed(() => {
-  const s = pocket.value.spells?.find(
-    s => s.id === pocket.value._spells,
-  )
-  if (!s)
-    return null
+  const s = pocket.value.spells?.find(s => s.id === pocket.value._spells)
+  if (!s) return null
   const { id, ...rest } = s
   return rest
 })
@@ -38,15 +35,12 @@ const selectedSet = computed(() => {
 <template>
   <NuxtLayout
     v-if="pocket && route.name !== 'pocket-core'"
+    class="bg-b1 z-auto grid min-h-screen w-4/5 justify-self-center px-14"
     name="tab"
     :pocket
-    class="bg-b1 z-auto grid min-h-screen w-4/5 justify-self-center px-14">
-    <NuxtPage
-      v-if="pocket"
-      :pocket="pocket" />
+  >
+    <NuxtPage v-if="pocket" :pocket="pocket" />
   </NuxtLayout>
 
-  <NuxtPage
-    v-else
-    :pocket="pocket" />
+  <NuxtPage v-else :pocket="pocket" />
 </template>

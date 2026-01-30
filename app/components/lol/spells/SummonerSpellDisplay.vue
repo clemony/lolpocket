@@ -26,8 +26,7 @@ const imgArr = [
 </script>
 
 <template>
-  <div
-    class="l border-b3 bg-b2 flex h-auto items-center gap-2 p-2 shadow-sm">
+  <div class="l border-b3 bg-b2 flex h-auto items-center gap-2 p-2 shadow-sm">
     <Popover>
       <PopoverTrigger class="">
         <!--       <img
@@ -48,7 +47,8 @@ const imgArr = [
         :model="0"
         :pocket="pocket"
         :is-menu-open="isOpen"
-        @update:model="update($event, 0)" />
+        @update:model="update($event, 0)"
+      />
     </Popover>
 
     <Popover>
@@ -71,7 +71,8 @@ const imgArr = [
         :model="1"
         :pocket="pocket"
         :is-menu-open="isOpen"
-        @update:model="update($event, 1)" />
+        @update:model="update($event, 1)"
+      />
     </Popover>
   </div>
 </template>

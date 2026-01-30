@@ -1,0 +1,44 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:49 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "E",
+  "name": "Swirlseed",
+  "width": "120",
+  "affects": "Enemies",
+  "blurb": "Active:  Lillia lobs a seed at the target area that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain, dealing magic damage to enemies in a cone,  slowing and  revealing them for a short time.",
+  "castTime": "0.4",
+  "cooldown": "12",
+  "cost": "70",
+  "damageType": "Magic damage",
+  "effectRadius": "150",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia lobs a seed at the target location that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain while on the ground, dealing magic damage to enemies in a cone, slowing them by 40% for 3 seconds and revealing them for 2 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "60 / 85 / 110 / 135 / 160"
+            },
+            {
+              "unit": "% AP",
+              "values": "50"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/e",
+  "notes": "Swirlseed's origin is determined from Lillia's position at the start of cast, the rolling direction is determined from Lillia's position at the end of cast (when the projectile is created, not when the seed starts rolling).\n Spell shield does not prevent the seed from detonating thus striking nearby targets.\n Projectile destroying effects will still make the rolling seed detonate upon colliding with them, but not when the initial arcing missile is destroyed.\nIf  Braum's  Unbreakable blocks the initial projectile, it is destroyed and deals 0 damage to him, as well as not triggering the cone-shaped area of effect.\nThe spot at which the seed will collide with terrain is highlighted while it is rolling.\nCollision indicator",
+  "projectile": "SPECIAL",
+  "resource": "Mana",
+  "speed": "5000 / 1400",
+  "spellEffects": "aoe",
+  "spellshieldable": "special",
+  "targeting": "Location",
+  "targetRange": "700 / Global"
+}
+  export default ability

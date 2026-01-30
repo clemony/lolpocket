@@ -13,27 +13,22 @@ const { chartMode, option } = buildAllyChart(points, colorMap)
 const chart = useTemplateRef<EChartsType>('chart')
 
 function onMagicTypeChanged(e: { currentType: string }) {
-  chartMode.value = e.currentType === 'line'
-    ? 'bubble'
-    : 'heatmap'
+  chartMode.value = e.currentType === 'line' ? 'bubble' : 'heatmap'
   console.log('🥸 - chartMode:', chartMode)
   console.log('🥸 - options:', option)
 }
 </script>
 
 <template>
-  <Card
-    class="grid w-fit gap-8 px-8 pt-10 pb-8">
-    <div
-      ref="chart"
-      class="h-140 w-270">
+  <Card class="grid w-fit gap-8 px-8 pt-10 pb-8">
+    <div ref="chart" class="h-140 w-270">
       <VChart
-        theme="theme"
-
         class="size-full"
+        theme="theme"
         :option
         autoresize
-        @magictypechanged="onMagicTypeChanged" />
+        @magictypechanged="onMagicTypeChanged"
+      />
     </div>
   </Card>
 </template>

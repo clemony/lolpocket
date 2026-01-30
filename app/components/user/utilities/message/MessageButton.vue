@@ -13,13 +13,8 @@ const {
 </script>
 
 <template>
-  <Button
-    :class="cn('', className)"
-    :variant="variant"
-    :size="size">
-    <icon
-      name="lucide:send"
-      class="" />
+  <Button :class="cn('', className)" :variant="variant" :size="size">
+    <icon class="" name="lucide:send" />
     <span class="**:capitalize">
       <slot />
     </span>

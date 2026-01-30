@@ -1,10 +1,8 @@
 <script lang="ts" setup>
 import type {
   ColDef,
-  ColGroupDef,
   GridApi,
   GridOptions,
-  GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
 import {
@@ -187,7 +185,7 @@ watch(
   (newVal) => {
     if (newVal && gridApi.value)
       gridApi.value.setGridOption('rowData', [...championList.value])
-  },
+  }
 )
 
 ModuleRegistry.registerModules([
@@ -206,14 +204,12 @@ ModuleRegistry.registerModules([
 
 <template>
   <AgGridVue
+    class="champion-grid border-shadow-sm stat-grid bg-b1 size-full! min-w-full shadow-black/3! drop-shadow-black/3!"
     :initial-state="cs().dbChampionGridState"
-    class="
-      champion-grid border-shadow-sm stat-grid bg-b1 size-full! min-w-full
-      shadow-black/3! drop-shadow-black/3!
-    "
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
     :tooltip-show-delay="400"
-    @grid-ready="onGridReady"></AgGridVue>
+    @grid-ready="onGridReady"
+  />
 </template>

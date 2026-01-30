@@ -11,43 +11,45 @@ const {
 
 const color1 = computed(() => {
   return getComputedStyle(document.documentElement).getPropertyValue(
-    `--color-${entry?.tier ?? 'b3'}`,
+    `--color-${entry?.tier ?? 'b3'}`
   )
 })
 const colors = [cssVar('--color-b3'), color1.value]
 
 const winrate = computed(() =>
-  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0,
+  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0
 )
 </script>
 
 <template>
-  <div
-    :class="
-      cn('field-box h-36 w-full pt-1!', className) ">
+  <div :class="cn('field-box h-36 w-full pt-1!', className)">
     <span class="field-legend">
       {{ `Ranked ${title}` }}
     </span>
     <div
-      class="grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden">
+      class="grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden"
+    >
       <div class="mt-0.5 grid place-items-center overflow-hidden">
         <!-- crest -->
         <img
           v-if="!entry"
+          class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0"
           alt="unranked"
           src="/img/crests/unranked.webp"
-          class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0" />
+        >
 
         <img
           v-else
+          class="size-28 object-contain drop-shadow-md drop-shadow-black/30"
           :alt="entry?.tier?.toLowerCase()"
           :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
-          class="size-28 object-contain drop-shadow-md drop-shadow-black/30" />
+        >
       </div>
 
       <div class="relative grid size-full place-items-center">
         <div
-          class="relative grid size-21 place-items-center overflow-hidden rounded-lg">
+          class="relative grid size-21 place-items-center overflow-hidden rounded-lg"
+        >
           <DonutSkeleton class="dst absolute size-21" />
 
           <div
@@ -59,10 +61,9 @@ const winrate = computed(() =>
                 `--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`,
               ),
             }"
-            role="progressbar">
-            <span
-              v-if="entry"
-              class="text-bc dst font-medium">
+            role="progressbar"
+          >
+            <span v-if="entry" class="text-bc dst font-medium">
               {{ winrate.toFixed(1).replace(".0", "") }}%
             </span>
           </div>
@@ -71,8 +72,12 @@ const winrate = computed(() =>
 
       <div
         :class="
-          cn('flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium',
-             { 'opacity-40': !entry }) ">
+          cn(
+            'flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium',
+            { 'opacity-40': !entry },
+          )
+        "
+      >
         <p class="capitalize">
           {{
             entry
@@ -87,10 +92,8 @@ const winrate = computed(() =>
 
         <p
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="
-            flex items-center justify-end gap-1 text-end text-xs text-nowrap
-            decoration-dotted underline-offset-2 hover:underline
-          ">
+          class="flex items-center justify-end gap-1 text-end text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline"
+        >
           <span>{{ entry ? entry.wins : 0 }}W</span>
 
           <span>{{ entry ? entry.losses : 0 }}L</span>

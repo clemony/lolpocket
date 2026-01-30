@@ -11,33 +11,40 @@ const { match, player } = defineProps<{
       <Keystone
         :id="player.runes.keystone"
         :key="player.runes.keystone"
+        class="tippy absolute z-1 size-13"
         :data-id="player.runes.keystone"
         data-type="rune"
-        class="tippy absolute z-1 size-13" />
+      />
     </div>
     <Rune
-      v-for="rune in player.runes.primary.runes.concat(player.runes.secondary.runes)"
+      v-for="rune in player.runes.primary.runes.concat(
+        player.runes.secondary.runes,
+      )"
       :id="rune"
       :key="rune"
+      class="tippy size-10"
       :data-id="rune"
       data-type="rune"
-      class="tippy size-10" />
+    />
   </Card>
   <Card
-    class="flex h-20 shrink-0 flex-col items-center justify-center gap-1 rounded-lg p-2">
+    class="flex h-20 shrink-0 flex-col items-center justify-center gap-1 rounded-lg p-2"
+  >
     <Element
       v-for="shard in player.runes.shards"
       :key="shard"
+      class="grid shrink-0 place-items-center"
       :data-id="shard"
       data-type="shard"
       size="sq-5"
-      class="grid shrink-0 place-items-center">
+    >
       <Img
         :id="shard"
+        class="absolute shrink-0 justify-self-center"
         size="5"
         :src="`/img/shards/${shard}.webp`"
         alt="icon"
-        class="absolute shrink-0 justify-self-center" />
+      />
     </Element>
   </Card>
 </template>

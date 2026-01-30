@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { CalendarDate } from '@internationalized/date'
 import type {
   DateRange,
   RangeCalendarRootEmits,
   RangeCalendarRootProps,
 } from 'reka-ui'
-import { getLocalTimeZone, isToday, today } from '@internationalized/date'
+import { getLocalTimeZone, today } from '@internationalized/date'
 import { RangeCalendarRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
@@ -31,34 +30,30 @@ const dateRange = ref({
   <RangeCalendarRoot
     v-slot="{ grid, weekDays }"
     v-model:model-value="dateRange"
+    v-bind="forwarded"
     :class="cn('rounded-lg p-3', props.class)"
-    v-bind="forwarded">
+  >
     <RangeCalendarHeader class="px-2">
       <RangeCalendarPrevButton />
       <RangeCalendarHeading />
       <RangeCalendarNextButton />
     </RangeCalendarHeader>
 
-    <div
-      class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
-      <RangeCalendarGrid
-        v-for="month in grid"
-        :key="month.value.toString()">
+    <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
+      <RangeCalendarGrid v-for="month in grid" :key="month.value.toString()">
         <RangeCalendarGridHead>
           <RangeCalendarGridRow>
             <RangeCalendarHeadCell
               v-for="day in weekDays"
               :key="day"
-              class="w-11">
+              class="w-11"
+            >
               {{ day }}
             </RangeCalendarHeadCell>
           </RangeCalendarGridRow>
         </RangeCalendarGridHead>
 
-        <slot
-          :month
-          :grid
-          :week-days />
+        <slot :month :grid :week-days />
       </RangeCalendarGrid>
     </div>
   </RangeCalendarRoot>

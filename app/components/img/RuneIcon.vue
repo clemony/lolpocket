@@ -21,17 +21,19 @@ const {
         elementVariants({ size }),
         className,
       )
-    ">
+    "
+  >
     <img
       :src="`/img/runes/${id}.webp`"
-      :alt="ix().runeNameById(id)"
+      :alt="runeNameById(id)"
       :class="
         cn('absolute top-0 left-0 size-full self-center object-contain', {
           'scale-110': keystoneIndex.includes(id),
-          ' rounded-full inset-ring inset-ring-black/80':
+          'rounded-full inset-ring inset-ring-black/80':
             !keystoneIndex.includes(id),
         })
-      " />
+      "
+    >
     <slot />
   </Element>
 </template>

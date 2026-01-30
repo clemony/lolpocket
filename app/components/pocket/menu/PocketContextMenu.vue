@@ -26,14 +26,14 @@ onMounted(async () => {
 
     <ContextMenuPortal>
       <ContextMenuContent
-        class="
-          context-menu pointer-events-auto z-999 h-max w-74 text-sm **:text-sm
-        "
-        @interact-outside="emit('update:grid')">
+        class="context-menu pointer-events-auto z-999 h-max w-74 text-sm **:text-sm"
+        @interact-outside="emit('update:grid')"
+      >
         <ContextMenuItem
+          class="[&_svg]:stroke-2"
           icon="basil:add-outline"
           icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0"
-          class="[&_svg]:stroke-2">
+        >
           New Pocket
           <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
         </ContextMenuItem>
@@ -46,22 +46,16 @@ onMounted(async () => {
           <ContextMenuPortal>
             <ContextMenuSubContent>
               <ContextMenuRadioGroup v-model="sort">
-                <ContextMenuRadioItem
-                  value="id"
-                  @select.prevent>
+                <ContextMenuRadioItem value="id" @select.prevent>
                   By Item ID
                   <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
                 </ContextMenuRadioItem>
 
-                <ContextMenuRadioItem
-                  value="az"
-                  @select.prevent>
+                <ContextMenuRadioItem value="az" @select.prevent>
                   Alphabetically
                 </ContextMenuRadioItem>
 
-                <ContextMenuRadioItem
-                  value="price"
-                  @select.prevent>
+                <ContextMenuRadioItem value="price" @select.prevent>
                   Price
                 </ContextMenuRadioItem>
               </ContextMenuRadioGroup>
@@ -104,15 +98,11 @@ onMounted(async () => {
             <ContextMenuShortcut>⌘R</ContextMenuShortcut>
           </ContextMenuItem>
 
-          <ContextMenuItem
-            inset
-            disabled>
+          <ContextMenuItem inset disabled>
             Pin
           </ContextMenuItem>
 
-          <ContextMenuItem
-            inset
-            disabled>
+          <ContextMenuItem inset disabled>
             Archive
           </ContextMenuItem>
 

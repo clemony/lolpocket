@@ -9,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 
 definePageMeta({
@@ -19,18 +19,12 @@ definePageMeta({
   keepalive: true,
   order: 1,
 })
+const { summoner } = storeToRefs(s_session())
 
-const { champions, filteredMatches, mastery: m, summoner } = useSummonerInject()
-
-const awaitMastery: ChampionMastery[] = await m()
-const data = useChampionStats(filteredMatches, summoner.value.puuid)
-
-const summary = await getMasterySummary(summoner.value.puuid)
-
-const championData = computed (() =>
-  data.value.map(c => ({
+const championData = computed(() =>
+  s_data().champions.map(c => ({
     ...c,
-    ...awaitMastery.find(a => a.championId === c.championId)
+    ...s_data().mastery.find(a => a.championId === c.championId),
   }))
 )
 </script>
@@ -50,10 +44,6 @@ const championData = computed (() =>
       </div>
     </div>
 
-    <MasteryGrid
-      v-if="data"
-      :champions="championData"
-      :summoner
-    />
+    <MasteryGrid v-if="championData" :champions="championData" :summoner />
   </div>
 </template>

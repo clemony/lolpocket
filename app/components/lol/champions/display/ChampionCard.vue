@@ -6,5 +6,5 @@ const { id, class: className } = defineProps<{
 </script>
 
 <template>
-  <div></div>
+  <div />
 </template>

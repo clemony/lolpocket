@@ -36,10 +36,8 @@ watch(items, (newItemSets) => {
 
 <template>
   <div
-    class="
-      overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1
-      pb-33
-    ">
+    class="overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1 pb-33"
+  >
     <div
       v-draggable="[
         pocket.items,
@@ -62,8 +60,9 @@ watch(items, (newItemSets) => {
           'filter': '.item',
         },
       ]"
+      class="z-0 flex w-full flex-col gap-8 pt-6"
       group
-      class="z-0 flex w-full flex-col gap-8 pt-6">
+    >
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->
@@ -72,17 +71,17 @@ watch(items, (newItemSets) => {
           v-for="set in pocket.items"
           :key="set.name"
           :pocket="pocket"
-          :set="set" />
+          :set="set"
+        />
       </template>
     </div>
 
     <Button
-      variant="outline"
       class="border-b3/40 h-22 w-full rounded-xl"
-      @click="pocket.items.push(newItemSet())">
-      <icon
-        name="add"
-        class="transition-opacity duration-200" />
+      variant="outline"
+      @click="pocket.items.push(newItemSet())"
+    >
+      <icon class="transition-opacity duration-200" name="add" />
     </Button>
   </div>
 </template>

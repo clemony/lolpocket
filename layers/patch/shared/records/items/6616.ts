@@ -1,0 +1,53 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "name": "Staff of Flowing Water",
+  "id": 6616,
+  "rank": "Legendary",
+  "buildsFrom": [
+    {
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    {
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "nami"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Rapids",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds."
+    }
+  ],
+  "stats": {
+    "abilityPower": 35,
+    "healAndShieldPower": 10,
+    "manaRegen": 125,
+    "abilityHaste": 15
+  },
+  "description": "35 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+  "gold": {
+    "base": 800,
+    "total": 2250,
+    "sell": 1575
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}
+export default item

@@ -6,14 +6,20 @@ const props = defineProps<{
   on?: ButtonVariants['on']
   hover?: ButtonVariants['hover']
   base?: ButtonVariants['base']
-}
->()
+}>()
 </script>
 
 <template>
   <div
     v-bind="props"
-    :class="cn('group/el', elementVariants({ base, variant, on, size, hover }), props.class)">
+    :class="
+      cn(
+        'group/el',
+        elementVariants({ base, variant, on, size, hover }),
+        props.class,
+      )
+    "
+  >
     <slot />
   </div>
 </template>

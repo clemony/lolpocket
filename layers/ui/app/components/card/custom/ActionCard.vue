@@ -22,42 +22,40 @@ const {
 
 <template>
   <Card
+    class=""
     :as="as"
     :for="title"
-    class=""
     :class="
-      cn('grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2 rounded-xl pt-8 pb-6 *:px-7 **:text-start',
-         { 'hover:!bg-b2/60 hover-ring': hover },
-         className,
+      cn(
+        'grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2 rounded-xl pt-8 pb-6 *:px-7 **:text-start',
+        { 'hover:bg-b2/60! hover-ring': hover },
+        className,
       )
-    ">
+    "
+  >
     <CardTitle class="text-xlself-start dst">
       <slot name="title">
         {{ title }}
       </slot>
     </CardTitle>
     <CardDescription
-      class="inline self-start align-baseline leading-6 text-pretty opacity-70">
+      class="inline self-start align-baseline leading-6 text-pretty opacity-70"
+    >
       <slot name="text">
         {{ text }}
       </slot>
     </CardDescription>
-    <p
-      v-if="button"
-      class="flex w-full items-center justify-end px-6.75">
-      <Button
-        variant="neutral"
-        class="hover-ring">
+    <p v-if="button" class="flex w-full items-center justify-end px-6.75">
+      <Button class="hover-ring" variant="neutral">
         {{ button }}
       </Button>
     </p>
-    <p
-      v-else
-      class="mt-2 flex items-center gap-4 font-medium italic">
+    <p v-else class="mt-2 flex items-center gap-4 font-medium italic">
       <Switch
-        :id="title"
         v-bind="$attrs"
-        class="hover-ring pointer-events-auto!" />
+        :id="title"
+        class="hover-ring pointer-events-auto!"
+      />
       <slot />
     </p>
   </Card>

@@ -1,4 +1,3 @@
-import { description } from 'valibot'
 import { contactLP } from '../contact/lp-email'
 
 /* Last Updated: {{insert date}}

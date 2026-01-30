@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
-import { AnimatePresence, motion } from 'motion-v'
+import { motion } from 'motion-v'
 import {
   DialogClose,
   DialogContent,
@@ -52,7 +52,8 @@ const overlayInitialState = {
   <DialogPortal>
     <DialogOverlay
       class="blur-0! fixed inset-0 isolate z-50 bg-black/70"
-      :class="{ 'invisible opacity-0': props.noOverlay }">
+      :class="{ 'invisible opacity-0': props.noOverlay }"
+    >
       <motion.div
         class="overlay"
         :initial="overlayInitialState"
@@ -61,17 +62,20 @@ const overlayInitialState = {
           ease: 'easeOut',
           duration: 0.3,
         }"
-        :exit="overlayInitialState" />
+        :exit="overlayInitialState"
+      />
     </DialogOverlay>
 
     <DialogContent
-      as-child
       v-bind="forwarded"
+      as-child
       :class="
-        cn('data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] bg-b1 fixed top-1/2 left-1/2 isolate z-50 translate-[-50%] gap-4 border px-10 py-8 shadow-lg data-[state=closed]:duration-200 sm:rounded-xl',
-           props.class,
+        cn(
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] bg-b1 fixed top-1/2 left-1/2 isolate z-50 translate-[-50%] gap-4 border px-10 py-8 shadow-lg data-[state=closed]:duration-200 sm:rounded-xl',
+          props.class,
         )
-      ">
+      "
+    >
       <Motion
         class="modal-container"
         :initial="dialogInitialState"
@@ -81,19 +85,15 @@ const overlayInitialState = {
           bounce: 0.35,
           duration: 0.3,
         }"
-        :exit="dialogInitialState">
+        :exit="dialogInitialState"
+      >
         <slot />
 
         <DialogClose
           v-if="props.noButton"
-          class="
-            ring-offset-background focus:ringneutral absolute top-4 right-4
-            rounded-sm opacity-70 transition-opacity hover:opacity-100
-            focus:ring focus:outline-none disabled:pointer-events-none
-          ">
-          <icon
-            name="x-sm"
-            class="size-6" />
+          class="ring-offset-background focus:ringneutral absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring focus:outline-none disabled:pointer-events-none"
+        >
+          <icon class="size-6" name="x-sm" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

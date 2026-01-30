@@ -12,7 +12,7 @@ const searchQuery = ref('')
 const fuse = ref<Fuse<any> | null>(null)
 
 watch(
-  () => ix().champions,
+  () => championIndex,
   (newChampions) => {
     if (newChampions && newChampions.length > 0) {
       fuse.value = new Fuse(newChampions, {
@@ -22,14 +22,13 @@ watch(
       })
     }
   },
-  { immediate: true },
+  { immediate: true }
 )
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return ix().champions || []
+    return championIndex || []
   }
-  if (!fuse.value)
-    return []
+  if (!fuse.value) return []
   const results = fuse.value.search(searchQuery.value)
   return results.map(result => result.item)
 })
@@ -43,5 +42,6 @@ watch(searchResult, (newSearchResults) => {
     v-model="searchQuery"
     placeholder="Search Champions..."
     :class="cn('m-0 size-full border-0 py-0 pl-8 shadow-none', props.class)"
-    @update:model-value="emit('update:input', searchQuery)" />
+    @update:model-value="emit('update:input', searchQuery)"
+  />
 </template>

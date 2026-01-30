@@ -18,7 +18,8 @@ const forwarded = useForwardProps(delegatedProps)
         'group flex flex-1 list-none items-center justify-center gap-x-1',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </NavigationMenuList>
 </template>

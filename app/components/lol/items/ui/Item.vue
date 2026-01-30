@@ -1,62 +1,46 @@
 <script setup lang="ts">
+import { Tooltip, TooltipXL } from '#components'
+
 const {
   id,
-  title,
+  side = 'top',
   class: className,
   loadingType,
   map,
-  placement = 'top',
-  size,
-  tip = true,
-  tooltipSize = 'lg',
-  variant
+  size = 'lg',
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
   loadingType?: LoadingStyle
-  size?: ButtonVariants['size']
-  title?: string
   map?: number
-  variant?: ButtonVariants['variant']
-  tooltipSize?: TooltipSize
-  tip?: boolean
-  placement?: string
+  size?: TooltipSize
+  side?: Side
 }>()
 
 const loaded = shallowRef<boolean>(false)
-
-/*
-      v-tooltip="tip === true ? {
-        id,
-        interactive: tooltipSize === 'lg',
-        map,
-        placement,
-        size: tooltipSize,
-        type: 'item',
-      } : false" */
+const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
 </script>
 
 <template>
-  <Tooltip
-    size="lg"
-    variant="neutral"
-    arrow>
+  <TooltipXL arrow :side>
     <Img
       :size
-      :variant
       :class="
-        cn({ 'opacity-96 shadow-sm shadow-black/30  p-0! drop-shadow-sm ': id && loaded },
-           className,
+        cn(
+          {
+            'p-0! opacity-96 shadow-sm shadow-black/30 drop-shadow-sm':
+              id && loaded,
+          },
+          className,
         )
       "
       :src="`/img/items/${id}.webp`"
       :alt="itemNameById(id)"
       :loading-type
-      @load="loaded = true" />
+      @load="loaded = true"
+    />
     <template #content>
-      <ItemTooltip
-        :id
-        :map />
+      <ItemTooltip :id :map />
     </template>
-  </Tooltip>
+  </TooltipXL>
 </template>

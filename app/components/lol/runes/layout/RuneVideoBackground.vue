@@ -35,8 +35,9 @@ onMounted(async () => {
       ref="video"
       :src="runeVideo"
       :class="
-        cn('absolute inset-0 top-0 left-0 z-0 size-full bg-cover opacity-15 brightness-380 contrast-400 grayscale',
-           className,
+        cn(
+          'absolute inset-0 top-0 left-0 z-0 size-full bg-cover opacity-15 brightness-380 contrast-400 grayscale',
+          className,
         )
       "
     />

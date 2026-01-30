@@ -12,6 +12,7 @@ const { class: className } = defineProps<{
 
 <template>
   <motion.div
+    class="relative grid size-5 place-items-center overflow-hidden"
     v-bind="$attrs"
     :initial="{ maxWidth: 0, opacity: 0.6 }"
     :animate="{ maxWidth: '100%', opacity: 1 }"
@@ -19,9 +20,7 @@ const { class: className } = defineProps<{
     :transition="{
       duration: 0.5,
     }"
-    class="relative grid size-5 place-items-center overflow-hidden">
-    <icon
-      name="tick"
-      :class="cn('dst absolute size-5 shrink-0', className)" />
+  >
+    <icon name="tick" :class="cn('dst absolute size-5 shrink-0', className)" />
   </motion.div>
 </template>

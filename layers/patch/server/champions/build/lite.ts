@@ -1,14 +1,16 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../../resolvePath"
-import { markUpdate, normalize, normalizeArray } from "../../utils"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
+import { normalize, normalizeArray } from '../../utils'
 
-const dataPath = resolvePath("./champions/raw/champions-raw.json")
-const outputLite = path.resolve("./layers/domain/records/champions-lite.ts")
-const outputRoles = resolvePath("./champions/raw/unique-roles.json")
-const outputPositions = resolvePath("./champions/raw/unique-positions.json")
+const dataPath = resolve('./layers/patch/server/champions/raw/champions-raw.json')
+const outputLite = resolve(
+  './layers/patch/shared/records/champions-lite.ts'
+)
+const outputRoles = resolve('./layers/patch/server/champions/raw/unique-roles.json')
+const outputPositions = resolve('./layers/patch/server/champions/raw/unique-positions.json')
 
-const champions = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
+const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   ChampionLite
 >
@@ -22,10 +24,10 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
     id,
     key,
     name,
-    attackType = "",
+    attackType = '',
     attributeRatings = {},
     positions = [],
-    resource = "",
+    resource = '',
     roles = [],
     stats = {},
   } = champ as ChampionLite
@@ -34,8 +36,8 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
 
   const normalizedPositions = normalizeArray(positions)
   const normalizedRoles = normalizeArray(roles)
-  normalizedPositions.forEach((tag) => uniquePositions.add(tag))
-  normalizedRoles.forEach((rank) => uniqueRoles.add(rank))
+  normalizedPositions.forEach(tag => uniquePositions.add(tag))
+  normalizedRoles.forEach(rank => uniqueRoles.add(rank))
 
   acc[key] = {
     id,
@@ -44,11 +46,11 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
     attackType: normalize(attackType),
     attributeRatings,
     positions: normalizedPositions,
-    resource: normalize(resource?.replace("_", " ")),
+    resource: normalize(resource?.replace('_', ' ')),
     roles: normalizedRoles,
     stats: Object.fromEntries(
       Object.entries(stats)
-        .filter(([key]) => !key.startsWith("aram") && !key.startsWith("urf"))
+        .filter(([key]) => !key.startsWith('aram') && !key.startsWith('urf'))
         .map(([key, val]) => [
           key,
           Object.fromEntries(Object.entries(val).filter(([, v]) => v !== 0)),
@@ -63,11 +65,12 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
 fs.writeFileSync(
   outputLite,
   `// ${markUpdate()}
+import type { ChampionLite } from "#shared/types"
 
 export const championsLite: ChampionLite[] = ${JSON.stringify(Object.values(championsLite), null, 2)}`
 )
 
-console.log("Writing roles:", [...uniqueRoles])
+console.log('Writing roles:', [...uniqueRoles])
 
 // Write unique lists for dev use
 fs.writeFileSync(outputRoles, JSON.stringify([...uniqueRoles].sort(), null, 2))

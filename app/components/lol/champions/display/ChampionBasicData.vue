@@ -6,7 +6,7 @@ const { champion } = defineProps<{
 
 <template>
   <div class="grid px-5">
-    <div class="col-start-1"></div>
+    <div class="col-start-1" />
 
     <div>
       <ChampionAttributes :champion="champion" />

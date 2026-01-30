@@ -1,9 +1,5 @@
 import type { AllyDataPoint, CollisionValue } from '..'
-import {
-  buildCollisionGroups,
-  buildCollisionIndexMap,
-  radiusFromGames,
-} from '..'
+import { radiusFromGames } from '..'
 
 export type PointKey = string
 
@@ -15,10 +11,8 @@ function edgeFalloff(value: number, min: number, max: number) {
 const BIAS_PX = 16
 
 function edgeBias(value: number, min: number, max: number) {
-  if (value <= min)
-    return min + BIAS_PX
-  if (value >= max)
-    return max - BIAS_PX
+  if (value <= min) return min + BIAS_PX
+  if (value >= max) return max - BIAS_PX
   return value
 }
 
@@ -26,9 +20,11 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
   const out: AllyDataPoint[] = []
 
   for (const ally of allies) {
-    for (const champ of Object.values(ally.champions) as [string,  AllyStatDetail]) {
-      if (!champ.games || !champ.winrate)
-        continue
+  /*   for (const champ of Object.values(ally.champions) as [
+      string,
+      AllyStatDetail,
+    ]) {
+      if (!champ.games || !champ.winrate) continue
 
       out.push({
         allyPuuid: ally.puuid,
@@ -41,7 +37,7 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
         games: champ.games,
         winrate: champ.winrate,
       } as AllyStatDetail)
-    }
+    } */
   }
 
   return out
@@ -64,8 +60,7 @@ export function separateValue(
 
   const { id, count, index, maxRadius } = group
 
-  if (count <= 1)
-    return base
+  if (count <= 1) return base
 
   const rotation = groupAngle(id)
   const angle = rotation + (index / count) * Math.PI * 2

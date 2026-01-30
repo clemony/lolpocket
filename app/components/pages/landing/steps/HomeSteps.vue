@@ -63,31 +63,30 @@ const steps = [
 
 <template>
   <motion.div
-    class="
-      border-b2/30 bg-b1 [&_hr]:bg-b2 relative z-1 w-full border-t px-18 pt-46
-      pb-6 [&_hr]:mx-16
-    "
+    class="border-b2/30 bg-b1 [&_hr]:bg-b2 relative z-1 w-full border-t px-18 pt-46 pb-6 [&_hr]:mx-16"
     :initial="{ boxShadow: '0 0 0 0 #00000000' }"
-    :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
+    :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }"
+  >
     <ul class="timeline timeline-vertical timeline-snap-icon">
       <li
         v-for="(step, i) in steps"
         :key="i"
         class="group relative"
-        :class="cn('', { '!grid-cols-1 !justify-start !-left-20': lessThan })">
+        :class="cn('', { '-left-20! grid-cols-1! justify-start!': lessThan })"
+      >
         <div
           class="timeline-middle z-2 scale-110 rounded-full drop-shadow-sm"
-          :class="{ 'bg-b2': isShown[i] && !isShown?.[i].value }">
+          :class="{ 'bg-b2': isShown[i] && !isShown?.[i].value }"
+        >
           <Motion
             as-child
             :animate="{ scale: isShown[i] && !isShown?.[i].value ? 0 : 1.1 }"
             :transition="{
               type: 'spring',
               bounce: 0.5,
-            }">
-            <icon
-              name="check-fill"
-              class="text-bc/80 size-5" />
+            }"
+          >
+            <icon class="text-bc/80 size-5" name="check-fill" />
           </Motion>
         </div>
 
@@ -95,9 +94,9 @@ const steps = [
           :initial="{
             opacity: 0,
             transform:
-              isEven(i) && greaterOrEqual
-                ? 'translateX(-30%)'
-                : 'translateX(30%)',
+              isEven(i) && greaterOrEqual ? 'translateX(-30%)' : (
+                'translateX(30%)'
+              ),
           }"
           :while-in-view="{
             opacity: [0.4, 1],
@@ -114,12 +113,14 @@ const steps = [
             bounce: 0.2,
           }"
           :class="
-            cn('relative mb-10 grid w-full max-w-160 justify-start pb-44 will-change-[transform,opacity] group-last:ml-16',
-               isEven(i) && greaterOrEqual
-                 ? 'timeline-start  md:text-end'
-                 : 'timeline-end',
+            cn(
+              'relative mb-10 grid w-full max-w-160 justify-start pb-44 will-change-[transform,opacity] group-last:ml-16',
+              isEven(i) && greaterOrEqual
+                ? 'timeline-start md:text-end'
+                : 'timeline-end',
             )
-          ">
+          "
+        >
           <p class="dst py-2 font-mono text-lg italic">
             Step {{ i }}
           </p>
@@ -133,31 +134,23 @@ const steps = [
           </p>
 
           <div
-            class="
-              bg-b2/40 shadow-warm-2 relative mt-10 h-90 w-full overflow-hidden
-              rounded-xl shadow-black/4 drop-shadow-sm
-            ">
-            <component
-              :is="step.component"
-              :scroll-prog="scrollProg" />
+            class="bg-b2/40 shadow-warm-2 relative mt-10 h-90 w-full overflow-hidden rounded-xl shadow-black/4 drop-shadow-sm"
+          >
+            <component :is="step.component" :scroll-prog="scrollProg" />
           </div>
         </motion.div>
 
         <motion.hr
           v-if="scrollProg"
-          class="
-            bg/b2! relative mt-2! grid w-0.75! items-start overflow-hidden
-            rounded-full! group-last:hidden
-          ">
+          class="bg/b2! relative mt-2! grid w-0.75! items-start overflow-hidden rounded-full! group-last:hidden"
+        >
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
+            class="bg-neutral/70! absolute -top-1.5 -left-16 size-full origin-top overflow-hidden! rounded-full! group-last:hidden starting:scale-y-0"
             :style="{
               scaleY: progress[i] || 0,
             }"
-            class="
-              bg-neutral/70! absolute -top-1.5 -left-16 size-full origin-top
-              overflow-hidden! rounded-full! group-last:hidden starting:scale-y-0
-            "></motion.hr>
+          />
         </motion.hr>
       </li>
     </ul>

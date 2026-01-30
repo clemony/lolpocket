@@ -60,24 +60,17 @@ const { stop } = useIntersectionObserver(hero, ([entry], observerElement) => {
 <template>
   <div
     ref="homeWrapper"
-    class="
-      home-wrapper relative size-full w-full overflow-x-hidden overflow-y-scroll
-    ">
-    <Hero
-      :progress="stepProgress"
-      :visible="heroVisible" />
+    class="home-wrapper relative size-full w-full overflow-x-hidden overflow-y-scroll"
+  >
+    <Hero :progress="stepProgress" :visible="heroVisible" />
 
     <div
       ref="hero"
-      class="
-        pointer-events-none absolute left-0 size-px overflow-hidden
-        bg-transparent
-      " />
+      class="pointer-events-none absolute left-0 size-px overflow-hidden bg-transparent"
+    />
 
     <div ref="steps">
-      <LazyHomeSteps
-        :scroll-ref="homeWrapper"
-        :scroll-prog="stepProgress" />
+      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" />
     </div>
 
     <div ref="home">

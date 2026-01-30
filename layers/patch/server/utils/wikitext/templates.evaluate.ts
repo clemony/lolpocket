@@ -3,7 +3,6 @@ import { formatMap } from './formatMap'
 import { resolveTemplates } from './templates.resolve'
 import {
   evalAp,
-  evalRange,
   evaluateExpressions,
   evaluateMathExpression,
   tryEval,
@@ -20,16 +19,14 @@ export function evaluateTemplates(
   template: string,
   params: string[],
   depth: number,
-  vars: Map<string, string>,
+  vars: Map<string, string>
 ): TemplateResult {
   const fullyResolvedParams = params.map((p) => {
     const result = resolveTemplates(p, depth + 1, vars)
     return result.html
   })
 
-  const evaluatedParams = fullyResolvedParams.map(p =>
-    evaluateExpressions(p),
-  )
+  const evaluatedParams = fullyResolvedParams.map(p => evaluateExpressions(p))
 
   const wrap = (html: string, isLevelScaling = false): TemplateResult => ({
     html,
@@ -39,8 +36,7 @@ export function evaluateTemplates(
   switch (template) {
     case '#vardefineecho': {
       const [key = '', value = ''] = evaluatedParams
-      if (key)
-        vars.set(key, value)
+      if (key) vars.set(key, value)
       return wrap(value)
     }
 
@@ -61,15 +57,14 @@ export function evaluateTemplates(
           .map((p) => {
             const [k, ...v] = p.split('=')
             return [k.trim(), v.join('=').replace(/'''/g, '').trim()]
-          }),
+          })
       )
 
       const values
-        = evaluatedParams.find(p => /^\d+(?:\.\d+)?(?:;[\d.]+)+$/.test(p))
-          ?? ''
+        = evaluatedParams.find(p => /^\d+(?:\.\d+)?(?:;[\d.]+)+$/.test(p)) ?? ''
       const levels
         = evaluatedParams.find(p =>
-          /^\d+(?:\s?to\s?\d+)?(?:\s?for\s?\d+)?$/.test(p),
+          /^\d+(?:\s?to\s?\d+)?(?:\s?for\s?\d+)?$/.test(p)
         ) ?? ''
 
       const type = named.type || ''
@@ -89,8 +84,7 @@ export function evaluateTemplates(
 
     case 'ap': {
       const [expr] = evaluatedParams
-      if (!expr)
-        return wrap('')
+      if (!expr) return wrap('')
 
       if (!expr.includes('x')) {
         const result = tryEval(expr)
@@ -121,9 +115,8 @@ export function evaluateTemplates(
     case 'as': {
       const units = ['ad']
       const last = evaluatedParams[evaluatedParams.length - 1]?.toLowerCase()
-      const body = units.includes(last)
-        ? evaluatedParams.slice(0, -1)
-        : evaluatedParams
+      const body
+        = units.includes(last) ? evaluatedParams.slice(0, -1) : evaluatedParams
 
       const pieces = body.map((param) => {
         const resolved = resolveTemplates(param, depth + 1, vars)
@@ -196,8 +189,7 @@ export function evaluateTemplates(
     case 'rutngt': {
       const raw = evaluatedParams[0]
       const value = Number.parseFloat(raw)
-      if (Number.isNaN(value))
-        return wrap(raw)
+      if (Number.isNaN(value)) return wrap(raw)
 
       const ticks = Math.ceil(value / 0.033)
       const rounded = (ticks * 0.033).toFixed(3)
@@ -206,7 +198,7 @@ export function evaluateTemplates(
 
     default: {
       return wrap(
-        `{{${escapeHtml(template)}|${params.map(escapeHtml).join('|')}}}`,
+        `{{${escapeHtml(template)}|${params.map(escapeHtml).join('|')}}}`
       )
     }
   }

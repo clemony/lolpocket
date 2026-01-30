@@ -1,0 +1,312 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:07 PM CST
+  import type { Champion } from '#shared/types'
+
+  const champion: Champion = {
+  "id": 147,
+  "key": "Seraphine",
+  "name": "Seraphine",
+  "title": "The Starry-Eyed Songstress",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Stage Presence",
+      "affects": "Self, Allies, Enemies",
+      "blurb": "Innate - Echo:  Seraphine's  basic ability casts generate  stacks of Echo. At max stacks, her next basic ability consumes them all to cast twice in quick succession.",
+      "damageType": "Magic damage",
+      "effectRadius": "800",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Echo:</span> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.</p>"
+        },
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p>"
+        },
+        {
+          "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
+      "notes": "Echo Details:\n\nEcho's current stacks are represented by a counter under Seraphine's health bar, visible to all players. The last stack is highlighted to indicate that an Echo cast is ready.\nSeraphine's basic abilities alternate their icons between 3 different ones each, depending on the current amount of stacks she has.\nThe additional cast must complete for Echo stacks to be consumed; if the cast time does not finish or does not begin at all, or if the ability fails to cast when there is not enough  mana, Seraphine will keep her stacks.\nThe additional cast does not affect the  cooldown of the mimicked ability.\nThe additional cast counts as a separate cast instance for the purpose of e.g.  Electrocute or  Conqueror.\nHarmony Details:\n\nNotes orbit at a radius of 100 from the center of their holder and they fire from this location.\nThe empowered attack can  critically strike.\nThe empowered attack will not trigger and Notes will not be consumed against  wards or jungle plants.\nNotes are fired one after another with a short delay.\nSeraphine can grant Notes to more than 4 allied champions.\nHarmony does not grant Notes to  clones.\nHarmony grants Notes even if the ally is  untargetable.\nThe Notes will fire from allies regardless of how far they are away from Seraphine.\nSeraphine gains a faint blue attack range indicator when there are Notes present.\nOther Details:\n\nSeraphine, while alive, will play music if there is at least one ally champion nearby.\nThis is audible to Seraphine and all allied champions that are in range of Harmony, indicative of if they can receive a Note or not.",
+      "projectile": "TRUE",
+      "speed": "3000",
+      "spellEffects": "proc",
+      "spellshieldable": "false",
+      "targeting": "Passive"
+    },
+    {
+      "key": "Q",
+      "name": "High Note",
+      "affects": "Enemies",
+      "blurb": "Active:  Seraphine hurls a soundwave to the target location that quickly expands upon arrival, dealing magic damage to enemies within based on their missing health.",
+      "castTime": "0.25",
+      "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
+      "cost": "60 / 70 / 80 / 90 / 100",
+      "damageType": "Magic damage",
+      "effectRadius": "350",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine hurls a soundwave to the target location that upon arrival expands in a radius over 0.4 seconds, dealing magic damage to enemies within the area.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Against champions and monsters, the damage is increased by 0% - 75% (based on target's missing health).",
+          "leveling": [
+            {
+              "attribute": "Maximum Enhanced Damage",
+              "modifiers": [
+                {
+                  "values": "105 / 148.75 / 192.5 / 236.25 / 280"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "87.5"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/q",
+      "notes": "High Note uses a modified icon for the  second and  third stack of  Stage Presence.\nThe maximum damage of High Note uses a  cosmetic critical strike.\nHigh Note will fire from wherever Seraphine is at the end of the cast time.\nThe impact delay depends solely on the missile speed. It is 0 seconds to 0.75 seconds (after end of cast time) within the standard cast radius, but can be increased further by Seraphine being moved away from the cast location during the cast time.\nThe area of effect is covered via expansion in seven distinct rings and targets can only be hit once.\nThe range indicator for the target range has a radius of 950 units, but the center of High Note can only be cast up to 900 units. The area indicator shows the proper 350 area of effect radius and cast location.",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "speed": "1300 / 875",
+      "spellEffects": "spellaoe",
+      "spellshieldable": "true",
+      "targeting": "Location",
+      "targetRange": "900"
+    },
+    {
+      "key": "W",
+      "name": "Surround Sound",
+      "affects": "Self, Allies",
+      "blurb": "Active:  Seraphine  shields herself and nearby allied champions for a short time. She also gains a burst of  movement speed and grants allies  bonus movement speed.",
+      "castTime": "0.25",
+      "cooldown": "22",
+      "cost": "70 / 75 / 80 / 85 / 90",
+      "effectRadius": "800",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.</p>",
+          "leveling": [
+            {
+              "attribute": "Shield Strength",
+              "modifiers": [
+                {
+                  "values": "60 / 80 / 100 / 120 / 140"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "If Seraphine already had a shield at the time of cast, Surround Sound will pulse after the duration, healing herself and nearby allied champions.",
+          "leveling": [
+            {
+              "attribute": "Heal",
+              "modifiers": [
+                {
+                  "unit": "% of target's missing health",
+                  "values": "8 / 10 / 12 / 14 / 16"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Surround Sound's shield and bonus movement speed can stack up to 2 times. Seraphine can move during Surround Sound's cast time."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/w",
+      "notes": "Surround Sound uses a modified icon for the  second and  third stack of  Stage Presence.\nSurround Sound's effects are gained at the start of the cast time.\nSeraphine can move during the cast time.\nCasting Surround Sound again during the pulse's delay refreshes the delay.\nThe heal will be canceled and the indicator will disappear upon Seraphine dying.\nOnce the pulse delay ends, the heal occurs instantly on Seraphine and all nearby allied champions.\nThere is a missile that flows through all allied champions which can be blocked by  Wind Wall, without affecting the heal however.\nSurround Sound will affect  untargetable allies.",
+      "projectile": "SPECIAL",
+      "resource": "Mana",
+      "targeting": "Auto"
+    },
+    {
+      "key": "E",
+      "name": "Beat Drop",
+      "width": "140",
+      "affects": "Enemies",
+      "blurb": "Active:  Seraphine fires a heavy soundwave in the target direction that deals magic damage and briefly  slows enemies hit.",
+      "castTime": "0.25",
+      "cooldown": "11 / 10.5 / 10 / 9.5 / 9",
+      "cost": "60",
+      "damageType": "Magic damage",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "50"
+                }
+              ]
+            },
+            {
+              "attribute": "Minion Damage",
+              "modifiers": [
+                {
+                  "values": "49 / 70 / 91 / 112 / 133"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "35"
+                }
+              ]
+            },
+            {
+              "attribute": "Disable Duration",
+              "modifiers": [
+                {
+                  "unit": " seconds",
+                  "values": "1.1 / 1.2 / 1.3 / 1.4 / 1.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Enemies that are already slowed are also rooted for the same duration."
+        },
+        {
+          "description": "Enemies that are immobilized or grounded are also stunned for the same duration."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/e",
+      "notes": "Beat Drop will only be empowered from  slows,  immobilizes, and  grounding effects applied by herself or her allies.\nBeat Drop uses a modified icon for the  second and  third stack of  Stage Presence.\nBeat Drop may still be empowered even if the disable ends shortly after the ability hits.\nThe  root and the  stun cannot apply at the same time.\nThe root will only apply if the target is  slowed and not  immobilized or  grounded.\nThe stun will apply as normal; it does not consider if the target is  slowed.\nThe root will be overridden by the stun if the target is hit by Beat Drop again while they were rooted by it.\nA quarter note will appear next to an enemy  champion while they are  slowed and two quarter notes tied will appear if they are  immobilized or  grounded.\nThis indicates if Beat Drop will apply an additional crowd control effect if it strikes the target.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "speed": "1200",
+      "spellEffects": "spellaoe",
+      "spellshieldable": "true",
+      "targeting": "Direction",
+      "targetRange": "1300"
+    },
+    {
+      "key": "R",
+      "name": "Encore",
+      "width": "320",
+      "affects": "Enemies",
+      "blurb": "Active:  Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, briefly  charming,  slowing, and  revealing them.",
+      "castTime": "0.5 / 0.5",
+      "cooldown": "160 / 140 / 120",
+      "cost": "100",
+      "damageType": "Magic damage",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "150 / 200 / 250"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "40"
+                }
+              ]
+            },
+            {
+              "attribute": "Disable Duration",
+              "modifiers": [
+                {
+                  "unit": " seconds",
+                  "values": "1.25 / 1.5 / 1.75"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Encore's projectile resets its remaining travel distance whenever it hits an allied or enemy champion, excluding Seraphine. Allied champions hit gain 4 Notes."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/r",
+      "notes": "Encore has two cast times. Both last 0.5 seconds. The wave will always project after the first cast time, and the second cast time only serves as a  lock out for Seraphine.\nSeraphine cannot buffer casts during the first cast time, but she may do so during the second cast time.\n Clones also count for Encore's extension.\nEncore will not extend on enemy champions that are  untargetable, but will do so for allied champions.\nIf Encore's projectile is negated via  spell shield, this will also prevent it from resetting its travel distance.\nThis ability will cast from wherever the caster is at the end of the cast time.\nEncore fires from Seraphine's location at the end of the initial cast time.\nThere is no limit as to how many times the wave can extend.\nEach Encore cast cannot extend from the same  champion more than once.\nPENDING FOR TEST::  Champions that died, clearing marker buffs",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "speed": "1600",
+      "spellEffects": "spellaoe",
+      "spellshieldable": "true",
+      "targeting": "Direction",
+      "targetRange": "1200"
+    }
+  ],
+  "adaptiveType": "Magic damage",
+  "attackType": "Ranged",
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 3,
+    "mobility": 1,
+    "utility": 2,
+    "abilityReliance": 100,
+    "difficulty": 1
+  },
+  "patchLastChanged": "25.20",
+  "positions": [
+    "Bottom",
+    "Support"
+  ],
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  },
+  "releaseDate": "2020-10-29",
+  "resource": "Mana",
+  "roles": [
+    "Burst",
+    "Enchanter",
+    "Mage",
+    "Support"
+  ],
+  "stats": {
+    "hp": 570,
+    "mp": 360,
+    "movespeed": 330,
+    "armor": 26,
+    "magicResist": 30,
+    "attackRange": 525,
+    "hpRegen": 6.5,
+    "mpRegen": 11.5,
+    "attackDamage": 50,
+    "attackSpeed": 0.7
+  },
+  "statsPerLevel": {
+    "hp": 95,
+    "mp": 40,
+    "armor": 4.2,
+    "magicResist": 1.3,
+    "hpRegen": 0.6,
+    "mpRegen": 1,
+    "attackDamage": 3,
+    "attackSpeed": 2
+  }
+}
+export default champion

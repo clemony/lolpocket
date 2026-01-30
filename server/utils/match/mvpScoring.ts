@@ -17,8 +17,7 @@ export function normalizeStat(players: MvpStats[], role: string, key: string) {
 
   return (player: MvpStats) => {
     const val = Number(player[key]) || 0
-    if (max === min)
-      return max === 0 ? 0 : 0.5
+    if (max === min) return max === 0 ? 0 : 0.5
     return (val - min) / (max - min)
   }
 }
@@ -79,8 +78,7 @@ export function calculateMvpScores(raw: any) {
     const rolePlayers = players.filter(
       p => String(p.role)?.toUpperCase() === role
     )
-    if (!rolePlayers.length)
-      continue
+    if (!rolePlayers.length) continue
 
     for (const stat in roleWeights[role]) {
       if (!(stat in rolePlayers[0])) {
@@ -114,8 +112,7 @@ export function calculateMvpScores(raw: any) {
     const rolePlayers = players.filter(
       p => String(p.role)?.toUpperCase() === role
     )
-    if (!rolePlayers.length)
-      continue
+    if (!rolePlayers.length) continue
 
     const roleValues = rolePlayers.map(p => scores[p.puuid])
     const min = Math.min(...roleValues)

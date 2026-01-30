@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+@import '../theme.css';
+@import 'tippy.js/dist/svg-arrow.css';
+
+@import 'tippy.js/animations/shift-toward-subtle.css';
+@import 'tippy.js/animations/shift-toward.css';
+
+@utility tippy-box {
+  @apply !z-70 grid w-auto rounded-xl border p-0 shadow-md drop-shadow-[1px_1px_2px_#0000006] backdrop-blur-md;
+
+  .tippy-content {
+    @apply z-1! w-full rounded-lg;
+  }
+
+  &[data-inertia][data-state='visible'] {
+    transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
+  }
+
+  &[data-theme~='sidebar'] {
+    .tippy-content {
+      @apply top-0 left-0 !m-0 !h-screen w-full !p-0;
+    }
+  }
+
+  &[data-theme~='mini-tip'] {
+    @apply shadow-sm drop-shadow-sm **:select-none;
+    .tippy-content {
+      @apply !w-fit overflow-hidden *:w-fit *:overflow-hidden;
+    }
+  }
+
+  .tippy-content:not([data-theme='clean']):not([data-theme='mini-tip']) {
+    @apply inline-block px-3 py-1 text-sm font-medium whitespace-pre **:text-sm;
+  }
+
+  &[data-theme~='clean'],
+  &[data-theme~='mini-tip'] {
+    @apply p-0!;
+    .tippy-content {
+      @apply m-0 !p-0;
+    }
+  }
+
+  /* default / contrast */
+  &[data-theme~='neutral'] {
+    @apply border border-tint-neutral/30 bg-neutral/86 text-nc inset-shadow-white/10 backdrop-blur-md **:text-nc;
+
+    .tippy-content {
+      @apply max-h-80 !overflow-hidden text-nc **:text-nc;
+    }
+
+    .tippy-svg-arrow > svg:first-child {
+      @apply mask-b-from-58% mask-b-to-61% stroke-tint-neutral/30 stroke-1 opacity-86 **:!fill-neutral **:!text-neutral;
+    }
+  }
+
+  /* base color */
+  &[data-theme~='base'],
+  &[data-theme~='b-mention'] {
+    @apply border-b3/80 bg-b1/80 text-bc text-bc/90 **:text-bc;
+
+    .tippy-content {
+      @apply backdrop-blur-md **:text-bc;
+    }
+    & > .tippy-svg-arrow > svg:first-child {
+      @apply mask-b-from-55% mask-b-to-56% **:fill-b1/95 **:text-b3;
+    }
+  }
+
+  /* blur transparent */
+  &[data-theme~='blur'] {
+    @apply border-0 bg-transparent p-0 text-bc/80 shadow-none;
+
+    & > .tippy-svg-arrow {
+      @apply hidden;
+    }
+  }
+
+  /* arrows */
+  &[data-placement^='bottom'] > .tippy-svg-arrow,
+  &[data-placement^='top'] > .tippy-svg-arrow,
+  &[data-placement^='left'] > .tippy-svg-arrow,
+  &[data-placement^='right'] > .tippy-svg-arrow,
+  &[data-side^='right'],
+  &[data-side^='left'],
+  &[data-side^='bottom'],
+  &[data-side^='top'] {
+    @apply !z-991 *:!z-91;
+  }
+
+  &[data-placement^='right'] > .tippy-svg-arrow > svg {
+    @apply !-top-px !right-[calc(50%-0.5px)];
+  }
+  &[data-placement^='left'] > .tippy-svg-arrow > svg {
+    @apply !-top-px !left-[calc(50%-0.5px)];
+  }
+  &[data-placement^='bottom'] > .tippy-svg-arrow > svg {
+    @apply size-[20px] !translate-y-1/2;
+  }
+  &[data-placement^='top'] > .tippy-svg-arrow > svg {
+    @apply !top-1/2 !left-0 size-[20px];
+  }
+
+  &[data-theme~='mini-tip']&[data-sid^='right'],
+  &[data-theme~='mini-tip']&[data-sid^='left'],
+  &[data-theme~='mini-tip']&[data-placemen^='right'],
+  &[data-theme~='mini-tip']&[data-placemen^='left'] {
+    @apply flex py-0 *:flex *:items-center;
+    .tippy-content {
+      @apply w-full self-center pt-1.5 pb-0 text-pretty;
+    }
+    > .tippy-svg-arrow > svg {
+      @apply !-top-[6.75px] !size-[30px] mask-b-from-55% mask-b-to-59%;
+    }
+
+    &[data-placement='right'],
+    &[data-side='right'] {
+      @apply border-l-0;
+      > .tippy-svg-arrow > svg {
+        @apply !right-[calc(50%-6px)];
+      }
+    }
+    &[data-placement='left'],
+    &[data-side='left'] {
+      @apply border-r-0;
+      > .tippy-svg-arrow > svg {
+        @apply !left-[calc(50%-6px)];
+      }
+    }
+    &[data-theme~='multi-line'] > .tippy-svg-arrow > svg {
+      @apply !size-[20px];
+    }
+
+    &[data-theme~='multi-line']&[data-placement='right'] > .tippy-svg-arrow > svg {
+      @apply !-top-px !right-[calc(50%-1px)];
+    }
+
+    &[data-theme~='multi-line']&[data-placement~='left'] > .tippy-svg-arrow > svg {
+      @apply !-top-px !left-[calc(50%-1px)];
+    }
+  }
+
+  &[data-theme~='popover']&[data-placement~='bottom'] > .tippy-svg-arrow > svg {
+    @apply !bottom-[calc(50%-6px)] !-left-1.5 size-[30px]!;
+  }
+
+  &[data-theme~='popover']&[data-placement~='bottom'] > .tippy-svg-arrow.popover-arrow > svg {
+    @apply !bottom-[calc(50%+6px)] !-left-1.5 size-[30px]! text-red-500!;
+  }
+
+  &[data-theme~='one'],
+  &[data-theme~='line'] {
+    @apply h-8 max-h-8 border-l-0 py-0;
+    .tippy-content {
+      @apply w-full self-center pt-1.5 pb-0 text-pretty;
+    }
+
+    &[data-placement='right'] > .tippy-svg-arrow > svg {
+      @apply !-top-[6.5px] !right-[calc(50%-6px)] !size-[29px] mask-b-from-55% mask-b-to-59%;
+    }
+
+    &[data-placement='left'] > .tippy-svg-arrow > svg {
+      @apply !-top-[6.5px] !left-[calc(50%-6px)] !size-[29px] mask-b-from-54% mask-b-to-55%;
+    }
+  }
+
+  &[data-theme~='no-arrow'] {
+    & > .tippy-svg-arrow {
+      @apply invisible absolute! hidden! size-0! opacity-0;
+    }
+  }
+}
+
+.tippy-box[data-state='hidden'] {
+  opacity: 0;
+}
+
+.tippy-box[data-state='visible'] {
+  opacity: 1;
+}
+
+.tippy-box[data-state='visible'] {
+  animation: shift-toward 140ms cubic-bezier(0.28, 0.93, 0.75, 1.38) forwards;
+}

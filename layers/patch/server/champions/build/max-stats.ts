@@ -1,7 +1,3 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../../resolvePath"
-
 // const dataPath = path.resolve('scripts/data/champions-lite.json')
 // const championsLite = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 

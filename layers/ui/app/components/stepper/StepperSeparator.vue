@@ -24,5 +24,6 @@ const forwarded = useForwardProps(delegatedProps)
         'group-data-[state=completed]:bg-bc',
         props.class,
       )
-    " />
+    "
+  />
 </template>

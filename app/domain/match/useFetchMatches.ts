@@ -1,8 +1,6 @@
 export async function useFetchMatches(summoner: Summoner) {
-  if (!summoner.puuid)
-    throw new Error('puuid is null')
-  if (!summoner.region)
-    throw new Error('region is null')
+  if (!summoner.puuid) throw new Error('puuid is null')
+  if (!summoner.region) throw new Error('region is null')
 
   const { getAllMatchIdsForPuuid, getMatchesForSummoner } = useIndexedDB()
 
@@ -25,9 +23,12 @@ export async function useFetchMatches(summoner: Summoner) {
     if (hasRanked) {
       ;(async () => {
         try {
-        const res = await $fetch<{ ranked: Summoner['ranked'] }>('/api/v4/league/entries/byPuuid', {
-            params: { puuid: summoner.puuid, region: summoner.region },
-          })
+          const res = await $fetch<{ ranked: Summoner['ranked'] }>(
+            '/api/v4/league/entries/byPuuid',
+            {
+              params: { puuid: summoner.puuid, region: summoner.region },
+            }
+          )
 
           ss().mergeRanked(summoner.puuid, res.ranked)
         }

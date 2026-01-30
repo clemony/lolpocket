@@ -57,9 +57,12 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   },
   {
     children: [
-
       { field: 'stats.deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
-      { field: 'stats.assists', headerName: 'Assists', headerTooltip: 'Assists' },
+      {
+        field: 'stats.assists',
+        headerName: 'Assists',
+        headerTooltip: 'Assists',
+      },
       { field: 'stats.kda', headerName: 'KDA', headerTooltip: 'KDA' },
       {
         field: 'stats.kp',
@@ -106,15 +109,14 @@ async function onGridReady(params: GridReadyEvent) {
 watch(
   () => '',
   (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  },
+    if (newVal && gridApi.value) gridApi.value.setGridOption('rowData', [])
+  }
 )
 
 /* onMounted (async () => {
   if (params.img) {
     ix().loadTitles()
-    champKey.value = await ix().champKeyById(params.data.id)
+    champKey.value = await champKeyById(params.data.id)
   }
 })
  */
@@ -139,15 +141,11 @@ const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
   <AgGridVue
     v-if="match"
     ref="masteryGrid"
-    class="
-      mastery-grid sticky top-20 h-screen min-h-screen w-full pt-20
-      [&_.ag-center-cols-viewport]:mx-auto
-      [&_.ag-center-cols-viewport]:max-w-[1100px]
-      [&_.ag-header-container]:mx-auto
-    "
+    class="mastery-grid sticky top-20 h-screen min-h-screen w-full pt-20 [&_.ag-center-cols-viewport]:mx-auto [&_.ag-center-cols-viewport]:max-w-[1100px] [&_.ag-header-container]:mx-auto"
     :tooltip-show-delay="400"
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
-    @grid-ready="onGridReady" />
+    @grid-ready="onGridReady"
+  />
 </template>

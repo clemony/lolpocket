@@ -1,20 +1,16 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
-const mainSet = computed(() =>
-  pocket.runes.find(s => s.id === pocket._runes),
-)
+const mainSet = computed(() => pocket.runes.find(s => s.id === pocket._runes))
 </script>
 
 <template>
   <VarSelectTrigger
+    class="relative grid size-max place-items-center overflow-hidden **:pointer-events-none"
     variant="ghost"
-    class="
-      relative grid size-max place-items-center overflow-hidden
-      **:pointer-events-none
-    ">
+  >
     <RuneAndPathImg
       placement="left"
       variant="ghost"
@@ -25,10 +21,9 @@ const mainSet = computed(() =>
           hover:shadow-black/4
         `)
       "
-      :set="mainSet" />
+      :set="mainSet"
+    />
 
-    <icon
-      name="select"
-      class="absolute right-1.5 size-4" />
+    <icon class="absolute right-1.5 size-4" name="up-down" />
   </VarSelectTrigger>
 </template>

@@ -14,12 +14,14 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <CalendarCell
+    v-bind="forwardedProps"
     :class="
-      cn('text-md [&:has([data-selected])]:bg-b2 [&:has([data-selected][data-outside-view])]:bg-b2/50 relative size-9 p-0 text-center focus-within:relative focus-within:z-20 [&:has([data-selected])]:rounded-md',
-         props.class,
+      cn(
+        'text-md [&:has([data-selected])]:bg-b2 [&:has([data-selected][data-outside-view])]:bg-b2/50 relative size-9 p-0 text-center focus-within:relative focus-within:z-20 [&:has([data-selected])]:rounded-md',
+        props.class,
       )
     "
-    v-bind="forwardedProps">
+  >
     <slot />
   </CalendarCell>
 </template>

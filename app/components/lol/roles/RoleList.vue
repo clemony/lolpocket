@@ -15,10 +15,10 @@ const originalOrder = ref([...rolesList.value])
 
 const sortedRoles = computed(() => {
   const checked = rolesList.value.filter(role =>
-    useArrayIncludes(pocket.value.roles, role),
+    useArrayIncludes(pocket.value.roles, role)
   )
   const unchecked = rolesList.value.filter(
-    role => !useArrayIncludes(pocket.value.roles, role),
+    role => !useArrayIncludes(pocket.value.roles, role)
   )
   return [...checked, ...unchecked]
 })
@@ -47,39 +47,36 @@ function handleReset() {
     champions, or in place of them.
   </p>
 
-  <transition-slide
-    tag="form"
-    group
-    class="gap-2 filter">
+  <transition-slide class="gap-2 filter" tag="form" group>
     <input
       class="filter-reset peer btn bg-b1 text-bc text-3xl font-normal!"
       type="checkbox"
       name="roles"
       aria-label="x"
-      @click="pocket.roles = [null]" />
+      @click="pocket.roles = [null]"
+    >
 
     <label
       v-for="role in sortedRoles"
       :key="role"
+      class="has-checked:!bgneutral btn bg-b1 has-checked:text-nc has-checked:btn-neutral! flex gap-3 rounded-lg! text-sm capitalize peer-not-checked:first-of-type:-ml-2"
       :for="role"
-      class="
-        has-checked:!bgneutral btn bg-b1 has-checked:text-nc has-checked:btn-neutral! flex gap-3
-        rounded-lg! text-sm capitalize
-        peer-not-checked:first-of-type:-ml-2
-      ">
+    >
       <input
         :id="role"
         v-model="pocket.roles"
+        class="peer hidden"
         type="checkbox"
         name="roles"
-        class="peer hidden"
         :value="role"
-        @change="moveToTop(role)" />
+        @change="moveToTop(role)"
+      >
 
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
         class="dst peer-checked:text-nc h-4.5 w-auto shrink-0"
-        :class="{ 'size-5': role === 'jungle' }" />
+        :class="{ 'size-5': role === 'jungle' }"
+      />
       {{ role }}
     </label>
   </transition-slide>

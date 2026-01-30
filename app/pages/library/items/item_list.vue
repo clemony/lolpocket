@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-import type {
-  ColDef,
-  GridApi,
-  GridOptions,
-  GridPreDestroyedEvent,
-  GridReadyEvent,
-} from 'ag-grid-community'
+import type { GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -218,10 +212,8 @@ const colDefs = [
     headerName: 'Magic Pen',
     valueGetter: (params) => {
       const stats = params.data?.stats ?? {}
-      if (stats.mpen !== null)
-        return `${stats.percentMagicPenetration}%`
-      if (stats.mpenflat !== null)
-        return `${stats.flatMagicPenetration}`
+      if (stats.mpen !== null) return `${stats.percentMagicPenetration}%`
+      if (stats.mpenflat !== null) return `${stats.flatMagicPenetration}`
       return ''
     },
   },
@@ -266,10 +258,8 @@ const colDefs = [
     headerName: 'Move Speed',
     valueGetter: (params) => {
       const stats = params.data?.stats ?? {}
-      if (stats.ms !== null)
-        return `${stats.percentMovespeed}%`
-      if (stats.msflat !== null)
-        return `${stats.flatMovespeed}`
+      if (stats.ms !== null) return `${stats.percentMovespeed}%`
+      if (stats.msflat !== null) return `${stats.flatMovespeed}`
       return ''
     },
   },
@@ -305,9 +295,8 @@ async function onGridReady(params: GridReadyEvent) {
 watch(
   () => is().filtered,
   (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  },
+    if (newVal && gridApi.value) gridApi.value.setGridOption('rowData', [])
+  }
 )
 
 ModuleRegistry.registerModules([
@@ -327,11 +316,12 @@ ModuleRegistry.registerModules([
 <template>
   <div>
     <AgGridVue
+      class="stat-grid h-full grow pt-16"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      class="stat-grid h-full grow pt-16"
       :tooltip-show-delay="400"
-      @grid-ready="onGridReady"></AgGridVue>
+      @grid-ready="onGridReady"
+    />
   </div>
 </template>

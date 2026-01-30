@@ -5,8 +5,9 @@
     <MenubarMenu>
       <MenubarTrigger>
         <icon
+          class="text-bc/60 group-hover:text-bc size-6"
           name="ph:floppy-disk"
-          class="text-bc/60 group-hover:text-bc size-6" />
+        />
       </MenubarTrigger>
 
       <MenubarContent>
@@ -23,21 +24,20 @@
     <MenubarMenu>
       <MenubarTrigger>
         <icon
+          class="text-bc/60 group-hover:text-bc size-6"
           name="ph:upload-simple"
-          class="text-bc/60 group-hover:text-bc size-6" />
+        />
       </MenubarTrigger>
 
-      <MenubarContent></MenubarContent>
+      <MenubarContent />
     </MenubarMenu>
 
     <MenubarMenu>
       <MenubarTrigger>
-        <icon
-          name="reset"
-          class="text-bc/60 group-hover:text-bc size-5.25" />
+        <icon class="text-bc/60 group-hover:text-bc size-5.25" name="reset" />
       </MenubarTrigger>
 
-      <MenubarContent></MenubarContent>
+      <MenubarContent />
     </MenubarMenu>
   </Menubar>
 </template>

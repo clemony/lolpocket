@@ -1,9 +1,0 @@
-export const colorDict: Record<number, string> = {
-  5001: "var(--color-resolve)",
-  5005: "var(--color-precision)",
-  5007: "var(--color-inspiration)",
-  5008: "var(--color-sorcery)",
-  5010: "var(--color-inspiration)",
-  5011: "var(--color-resolve)",
-  5013: "var(--color-inspiration)",
-}

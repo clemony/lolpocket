@@ -20,7 +20,7 @@ const props = withDefaults(
     on: 'secondary',
     size: '8',
     variant: 'ghost',
-  },
+  }
 )
 const delegatedProps = reactiveOmit(
   props,
@@ -29,7 +29,7 @@ const delegatedProps = reactiveOmit(
   'hover',
   'on',
   'size',
-  'variant',
+  'variant'
 )
 
 const forwarded = useForwardProps(delegatedProps)
@@ -38,11 +38,12 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <DropdownMenuSubTrigger
     v-bind="forwarded"
-    :class="cn(buttonVariants({ base, hover, on, size, variant }), props.class)">
+    :class="
+      cn(buttonVariants({ base, hover, on, size, variant }), props.class)
+    "
+  >
     <slot />
 
-    <icon
-      name="right"
-      class="ml-auto size-4" />
+    <icon class="ml-auto size-4" name="right" />
   </DropdownMenuSubTrigger>
 </template>

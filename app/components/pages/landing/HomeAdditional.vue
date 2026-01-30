@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import { itemVariants, wrapperVariants } from './variants'
+import { itemVariants } from './variants'
 
 const { progressY } = defineProps<{
   progressY: number
@@ -35,23 +35,21 @@ const data = [
 <template>
   <div
     ref="wrapper"
-    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center">
+    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center"
+  >
     <div
-      class="
-        bgneutral text-nc z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2
-        items-center gap-10 overflow-hidden rounded-3xl px-10
-      ">
+      class="bgneutral text-nc z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2 items-center gap-10 overflow-hidden rounded-3xl px-10"
+    >
       <div
-        class="
-          wp-77% relative grid size-full justify-items-center overflow-hidden
-          py-20
-        ">
+        class="wp-77% relative grid size-full justify-items-center overflow-hidden py-20"
+      >
         <motion.h2
+          class="text-xs4 absolute h-full pr-14"
           :style="{
             transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
           }"
-          class="text-xs4 absolute h-full pr-14"
-          :transition="{ type: 'inertia' }">
+          :transition="{ type: 'inertia' }"
+        >
           Additional Tools.
         </motion.h2>
       </div>
@@ -61,6 +59,7 @@ const data = [
           v-for="(item, i) in data"
           :key="item.title"
           :ref="`item${i}`"
+          class=""
           :variants="itemVariants"
           initial="hidden"
           while-in-view="visible"
@@ -72,12 +71,13 @@ const data = [
           :in-view-options="{
             amount: 0.8,
           }"
-          class="">
+        >
           <div class="mb-5 flex w-full items-center gap-5">
             <icon
               v-if="item.icon"
+              class="text-nc size-7 justify-self-center stroke-[0.5]"
               :name="item.icon"
-              class="text-nc size-7 justify-self-center stroke-[0.5]" />
+            />
 
             <h3 class="text-nc grow text-3xl! font-semibold!">
               {{ item.title }}
@@ -86,7 +86,8 @@ const data = [
 
           <p
             class="text-nc text-lg/loose font-light text-pretty"
-            v-html="item.text" />
+            v-html="item.text"
+          />
         </motion.div>
       </div>
     </div>

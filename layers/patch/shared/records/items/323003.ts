@@ -1,0 +1,17 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "id": 323003,
+  "name": "Archangel's Staff",
+  "description": "70 Ability Power\n600 Mana\n25 Ability Haste\n\nAwe\nGain Ability Power equal to 1% bonus Mana.\n\nManaflow (8s, max 5 charges)\nLanding Abilities grants 9.5 max Mana (doubled vs. champions).\nTransforms into Seraph's Embrace at 360 max Mana.",
+  "gold": {
+    "base": 450,
+    "total": 2900,
+    "sell": 2030
+  },
+  "maps": [
+    11
+  ]
+}
+export default item

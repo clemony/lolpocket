@@ -23,9 +23,7 @@ function handleChange() {
 </script>
 
 <template>
-  <Listbox
-    v-model:model-value="is().filters.tags"
-    :multiple="true">
+  <Listbox v-model:model-value="is().filters.tags" :multiple="true">
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
@@ -34,17 +32,17 @@ function handleChange() {
             'relative z-1 flex w-full flex-wrap items-center gap-3 py-0',
             className,
           )
-        ">
+        "
+      >
         <Button
           v-if="is().filters.tags.length && clear"
+          class="order-first hover:*:opacity-100"
           :variant
           :hover
           :size="size[0]"
-          class="order-first hover:*:opacity-100"
-          @click="is().filters.tags.length = 0">
-          <icon
-            name="x"
-            class="size-4" />
+          @click="is().filters.tags.length = 0"
+        >
+          <icon class="size-4" name="x" />
         </Button>
 
         <!--  <BaseListboxItem

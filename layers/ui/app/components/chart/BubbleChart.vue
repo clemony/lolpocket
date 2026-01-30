@@ -143,8 +143,5 @@ const options = {
 </script>
 
 <template>
-  <Bubble
-    :data="data"
-    :options="options"
-    :plugins="[customPlugin]" />
+  <Bubble :data="data" :options="options" :plugins="[customPlugin]" />
 </template>

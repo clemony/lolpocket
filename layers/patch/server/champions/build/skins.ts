@@ -1,15 +1,17 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../../resolvePath"
-import { cleanImageLink, cleanImageNum } from "../../utils"
-import { markUpdate } from "../../utils/markUpdate"
+import fs from 'node:fs'
+import { basename, join, resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
+import { cleanImageLink, cleanImageNum } from '../../utils'
 
-/* const championsPath = resolvePath("./champions/raw/champions-raw-meraki.json") */
-const outputFull = path.resolve("./layers/domain/constants/champions/skin-index.ts")
-const outputTile = path.resolve(
-  "./layers/domain/constants/champions/champion-key-to-tile.ts"
+const outputFull = resolve(
+  './layers/patch/shared/constants/champions/skin-index.ts'
 )
-const outputBase = path.resolve("./layers/domain/constants/champions/skins-base.ts")
+const outputTile = resolve(
+  './layers/patch/shared/constants/champions/championKeyToTile.ts'
+)
+const outputBase = resolve(
+  './layers/patch/shared/constants/champions/skins-base.ts'
+)
 
 export interface RawSkin {
   name?: string
@@ -18,22 +20,23 @@ export interface RawSkin {
   tilePath: string
   uncenteredSplashPath: string
 }
-const dataDirectoryM = resolvePath("./champions/raw/champions")
+const dataDirectoryM = resolve('./layers/patch/server/champions/raw/champions')
 
 // ---------- Load raw Meraki data from directory ----------
 const champions: Record<string, any> = {}
 const filenames = fs
   .readdirSync(dataDirectoryM)
-  .filter((f) => f.endsWith(".json"))
+  .filter(f => f.endsWith('.json'))
 
 for (const filename of filenames) {
-  const key = path.basename(filename, ".json")
+  const key = basename(filename, '.json')
   try {
-    const raw = fs.readFileSync(path.join(dataDirectoryM, filename), "utf-8")
+    const raw = fs.readFileSync(join(dataDirectoryM, filename), 'utf-8')
     const parsed: any = JSON.parse(raw)
 
     champions[key] = parsed
-  } catch (err) {
+  }
+  catch (err) {
     console.warn(`⚠️ Failed to parse Meraki file ${filename}`, err)
   }
 }
@@ -71,7 +74,7 @@ for (const key in champions) {
   }
  */
   const allSkins = skins
-    .filter((skin) => skin.splashPath && skin.loadScreenPath)
+    .filter(skin => skin.splashPath && skin.loadScreenPath)
     .map((skin) => {
       return {
         id: String(cleanImageNum(skin.tilePath)),
@@ -82,8 +85,8 @@ for (const key in champions) {
     })
 
   const allTile = skins
-    .filter((skin) => skin.tilePath)
-    .map((skin) => String(cleanImageLink(skin.tilePath)))
+    .filter(skin => skin.tilePath)
+    .map(skin => String(cleanImageLink(skin.tilePath)))
 
   if (allSkins.length > 0) {
     fullSkins[key] = allSkins
@@ -95,6 +98,7 @@ for (const key in champions) {
 
 // 🟢 Write new files after comparison
 const fullSkinsTs = `// ${markUpdate()}
+import type { Skin } from "#shared/types"
  export const skinIndex: Record<string, Skin[]> = ${JSON.stringify(fullSkins, null, 2)}`
 
 fs.writeFileSync(outputFull, fullSkinsTs)

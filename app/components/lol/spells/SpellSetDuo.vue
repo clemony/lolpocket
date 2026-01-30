@@ -5,8 +5,7 @@ const { class: className, set: s } = defineProps<{
 }>()
 
 const set = computed(() => {
-  if (!s)
-    return null
+  if (!s) return null
   const { id, ...rest } = s
   return rest
 })
@@ -15,10 +14,12 @@ const set = computed(() => {
 <template>
   <div
     :class="
-      cn('relative grid aspect-square size-12 place-items-center rounded-full',
-         className,
+      cn(
+        'relative grid aspect-square size-12 place-items-center rounded-full',
+        className,
       )
-    ">
+    "
+  >
     <IndexIcon
       v-for="(spell, i) in set"
       :key="i"
@@ -28,6 +29,7 @@ const set = computed(() => {
         cn('pointer-events-none absolute size-full rounded-full', {
           '-mask-linear-55 mask-linear-from-40% mask-linear-to-58%': i === 'f',
         })
-      " />
+      "
+    />
   </div>
 </template>

@@ -7,8 +7,7 @@ export interface ChampionMasteryResponse {
 
 export async function fetchSummonerMastery(puuid: string, region: string) {
   console.log('🥸 - fetchSummonerMastery - puuid:', puuid)
-  if (!puuid)
-    throw new Error('Missing puuid for mastery fetch')
+  if (!puuid) throw new Error('Missing puuid for mastery fetch')
 
   const TWO_HOURS = 1000 * 60 * 60 * 2
 

@@ -10,8 +10,7 @@ const {
 }>()
 
 const icon = computed(() => {
-  if (author?.icon)
-    return getSummonerIcon(author?.icon)
+  if (author?.icon) return getSummonerIcon(author?.icon)
   else return 'lp-ui:oh-no'
 })
 </script>
@@ -22,20 +21,21 @@ const icon = computed(() => {
     base="btn"
     variant="neutral"
     :class="
-      cn('shrink-0 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
-         className,
+      cn(
+        'shrink-0 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
+        className,
       )
-    ">
+    "
+  >
     <Icon
       :name="String(icon)"
       alt="summoner icon"
       :class="
-        cn('pointer-events-none size-full [&_img]:scale-115',
-           {
-             '!size-9 place-self-center **:text-nc ': icon === 'i-ui-oh-no',
-           },
-        )
-      " />
+        cn('pointer-events-none size-full [&_img]:scale-115', {
+          '**:text-nc size-9! place-self-center': icon === 'i-ui-oh-no',
+        })
+      "
+    />
 
     <slot />
   </Element>

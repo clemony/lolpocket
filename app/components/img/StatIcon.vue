@@ -5,7 +5,7 @@ const { class: className, stat: s } = defineProps<{
 }>()
 
 const stat = computed<StatIndex>(() =>
-  typeof s !== 'string' ? s : statIndex[s],
+  typeof s !== 'string' ? s : statIndex[s]
 )
 </script>
 
@@ -20,10 +20,11 @@ const stat = computed<StatIndex>(() =>
           'scale-115': ['manaRegen', 'healthRegen', 'goldPer10'].includes(
             stat?.id,
           ),
-          'scale-94 mt-px': ['armor', 'movespeed'].includes(stat?.id),
-          'scale-90 mt-px': stat.id === 'health',
+          'mt-px scale-94': ['armor', 'movespeed'].includes(stat?.id),
+          'mt-px scale-90': stat.id === 'health',
         },
         className,
       )
-    " />
+    "
+  />
 </template>

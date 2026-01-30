@@ -22,7 +22,7 @@ const props = withDefaults(
     sideOffset: 0,
     align: 'center',
     scaleStart: 0.6,
-  },
+  }
 )
 const emits = defineEmits<PopoverContentEmits>()
 
@@ -72,11 +72,9 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent
-        as-child
-        :align="align"
-        v-bind="forwarded">
+      <PopoverContent v-bind="forwarded" as-child :align="align">
         <motion.div
+          v-bind="{ forwarded }"
           :variants="variants"
           initial="hidden"
           animate="visible"
@@ -86,24 +84,26 @@ const wrapperVariants = {
             duration: 0.3,
             bounce: 0.2,
           }"
-          v-bind="{ forwarded }"
           :class="
-            cn('border-b3! bg-b1/90 text-bc z-50 w-72 rounded-lg border p-4 shadow-md drop-shadow-md backdrop-blur-md outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
-               props.class,
+            cn(
+              'border-b3! bg-b1/90 text-bc z-50 w-72 rounded-lg border p-4 shadow-md drop-shadow-md backdrop-blur-md outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
+              props.class,
             )
-          ">
+          "
+        >
           <motion.div
+            class="size-full"
             v-bind="$attrs"
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"
             exit="hidden"
-            class="size-full"
             :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }">
+            }"
+          >
             <slot />
           </motion.div>
           <PopoverArrow
@@ -113,7 +113,8 @@ const wrapperVariants = {
             exit="arrowHidden"
             :class="
               cn('text-b1/99 absolute z-53! scale-y-90', props.arrowClass)
-            " />
+            "
+          />
         </motion.div>
       </PopoverContent>
     </AnimatePresence>

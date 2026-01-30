@@ -10,7 +10,7 @@ import {
   TooltipComponent,
   VisualMapComponent,
 } from 'echarts/components'
-import { init, registerTheme, use } from 'echarts/core'
+import { use } from 'echarts/core'
 import { AxisBreak } from 'echarts/features'
 import { CanvasRenderer } from 'echarts/renderers'
 

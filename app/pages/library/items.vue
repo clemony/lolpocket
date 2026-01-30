@@ -25,9 +25,8 @@ onMounted(() => {
       </template>
 
       <ItemRankFilter
-        class="
-          bg-b1 sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] pt-5 pb-6
-        " />
+        class="bg-b1 sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] pt-5 pb-6"
+      />
       <LazyNuxtPage />
     </LayoutAsideSplit>
 
@@ -35,10 +34,9 @@ onMounted(() => {
       <Tabs
         v-model:model-value="tabs"
         class="**:pointer-events-auto"
-        @update:model-value="navigateTo(tabs)">
-        <TabsList
-
-          class="grid h-10 w-80 max-w-120 grid-cols-2">
+        @update:model-value="navigateTo(tabs)"
+      >
+        <TabsList class="grid h-10 w-80 max-w-120 grid-cols-2">
           <TabsTrigger value="/library/items">
             Grid
           </TabsTrigger>

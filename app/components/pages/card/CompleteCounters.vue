@@ -61,14 +61,16 @@ const itemsLength = computed(() => {
 
 <template>
   <div
-    class="-ml-1.5 flex w-full items-center justify-evenly gap-7 **:select-none">
+    class="-ml-1.5 flex w-full items-center justify-evenly gap-7 **:select-none"
+  >
     <slot />
 
     <div
       v-tippy="
         `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
       "
-      class="flex items-center gap-1.5">
+      class="flex items-center gap-1.5"
+    >
       <i-no-champ class="dst size-8.5 opacity-80" />
 
       <span class="dst font-medium">{{ championsLength }}</span>
@@ -76,7 +78,8 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
-      class="flex items-center gap-3">
+      class="flex items-center gap-3"
+    >
       <i-roles-all class="dst size-5 opacity-80" />
 
       <span class="dst font-medium">{{ rolesLength }}</span>
@@ -84,10 +87,9 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${spellsLength ? spellsLength : 'no'} spells`"
-      class="flex items-center gap-2">
-      <icon
-        name="game-icons:fire-spell-cast"
-        class="dst size-6 opacity-70" />
+      class="flex items-center gap-2"
+    >
+      <icon class="dst size-6 opacity-70" name="game-icons:fire-spell-cast" />
 
       <span class="dst font-medium">{{ spellsLength }}</span>
     </div>
@@ -99,10 +101,9 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`"
-      class="flex items-center gap-2.5">
-      <icon
-        name="bow"
-        class="dst size-6" />
+      class="flex items-center gap-2.5"
+    >
+      <icon class="dst size-6" name="bow" />
 
       <span class="dst font-medium">{{ itemsLength }}</span>
     </div>

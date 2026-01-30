@@ -25,12 +25,8 @@ const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>
-  <Popover
-    v-model:open="isOpen"
-    @click.stop.prevent>
-    <ItemDisplayTrigger
-      v-if="props.type === 'image'"
-      :item-id="itemId" />
+  <Popover v-model:open="isOpen" @click.stop.prevent>
+    <ItemDisplayTrigger v-if="props.type === 'image'" :item-id="itemId" />
 
     <CustomPopoverContent
       class=""
@@ -42,16 +38,15 @@ const { filtered, filters, setFilter } = useItemFilter()
       "
       align="start"
       :side-offset="props.sideOffset"
-      @open-auto-focus.prevent>
+      @open-auto-focus.prevent
+    >
       <ItemSearch
+        class="borderneutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4"
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
-        class="
-          borderneutral/30 bg-accent! **:text-nc! sticky top-0 left-0 z-2 h-13
-          w-full rounded-t-lg border-4 shadow-none [&_svg]:size-4
-        "
         set-focus
-        @update:query="(e) => e" />
+        @update:query="(e) => e"
+      />
 
       <div class="z-0 size-full">
         <LazyItemCommandTags />
@@ -60,7 +55,8 @@ const { filtered, filters, setFilter } = useItemFilter()
           <div
             v-if="
               filters.rank === '' && !filters.stats.length && !filters.query
-            ">
+            "
+          >
             <LazyItemCommandTypes />
 
             <Separator class="bg-accent mt-3 mb-1.5" />
@@ -69,15 +65,15 @@ const { filtered, filters, setFilter } = useItemFilter()
           </div>
         </TransitionExpand>
 
-        <TransitionExpand
-          tag="div"
-          class="flex w-full justify-center">
+        <TransitionExpand class="flex w-full justify-center" tag="div">
           <div
             v-if="filters.rank !== '' || filters.stats.length || filters.query"
-            class="z-0 flex! flex-wrap justify-center gap-1.5 p-4">
+            class="z-0 flex! flex-wrap justify-center gap-1.5 p-4"
+          >
             <LazyCalculatorFilteredItems
               class="z-0 size-15!"
-              @update:item="handleItem($event)" />
+              @update:item="handleItem($event)"
+            />
           </div>
         </TransitionExpand>
       </div>

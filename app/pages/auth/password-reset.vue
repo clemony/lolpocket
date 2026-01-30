@@ -28,31 +28,31 @@ function handleReset() {
             <Label html-for="email">Email</Label>
             <Input
               id="email"
-              type="email"
               class="h-12"
+              type="email"
               placeholder="m@example.com"
-              required />
+              required
+            />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
+              class="h-14 w-full font-medium"
               variant="neutral"
               size="12"
               type="submit"
-              class="h-14 w-full font-medium"
-              @click="handleReset()">
+              @click="handleReset()"
+            >
               Send Reset Link
             </Button>
 
             <Button
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
               as="a"
               variant="link"
               size="12"
               hover="link"
-              class="
-                underline-offset-1.5 h-14 w-full justify-center gap-3
-                justify-self-start
-              "
-              @click="navigateTo('/login')">
+              @click="navigateTo('/login')"
+            >
               Remembered it? Log in
             </Button>
           </div>

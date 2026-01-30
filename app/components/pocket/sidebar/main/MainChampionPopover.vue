@@ -18,7 +18,7 @@ const {
 
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
 
 const open = ref(false)
@@ -27,66 +27,62 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Select
-    v-model:model-value="pocket._champion"
-    v-model:open="open">
+  <Select v-model:model-value="pocket._champion" v-model:open="open">
     <slot :open>
       <SelectTrigger as-child>
         <Button
+          class="*:transition-scale relative grid size-20 place-items-center overflow-hidden *:duration-300 **:pointer-events-none hover:*:scale-110"
           variant="ghost"
-          class="
-            *:transition-scale relative grid size-20 place-items-center
-            overflow-hidden *:duration-300 **:pointer-events-none
-            hover:*:scale-110
-          ">
+        >
           <icon
             v-if="!pocket?._champion"
+            class="size-10 text-bc/20"
             name="lp:champ"
-            class="text-bc/20 size-10" />
+          />
           <ChampionIcon
             v-else
             v-memo="[pocket._champion]"
             class="size-14 rounded-full"
-            :k="pocket._champion" />
+            :k="pocket._champion"
+          />
 
           <!--           <icon
-            name="select"
+            name="up-down"
             class=" size-4 absolute right-1.5" /> -->
         </Button>
       </SelectTrigger>
     </slot>
     <LazySelectContent
+      class="w-(--reka-select-trigger-width) min-w-54 p-0"
       :reference="trigger"
       :align
       :side
-      class="w-(--reka-select-trigger-width) min-w-54 p-0">
+    >
       <div class="flex gap-3">
-        <ChampionIcon
-          :k="pocket._champion"
-          class="size-12" />
+        <ChampionIcon class="size-12" :k="pocket._champion" />
         <div class="k flex flex-col gap-1">
           <h3
             v-memo="[pocket._champion]"
             :class="
               cn('truncate leading-7', {
                 'dss group-hover/c:underline': pocket._champion,
-                '!font-normal  opacity-10': !pocket._champion,
+                'font-normal! opacity-10': !pocket._champion,
               })
-            ">
-            {{ ix().champNameByKey(pocket._champion) || "Champion" }}
+            "
+          >
+            {{ champNameByKey(pocket._champion) || "Champion" }}
           </h3>
 
           <p
             v-memo="[pocket._champion]"
             :class="
-              cn('text-md truncate leading-none italic', {
+              cn('truncate text-md leading-none italic', {
                 'font-medium': pocket._champion,
-                '!font-normal  opacity-20': !pocket._champion,
+                'font-normal! opacity-20': !pocket._champion,
               })
-            ">
-            {{
-              ix().getChampionTitle(pocket._champion) || "None Selected"
-            }}
+            "
+          >
+            {{ championToTitle[pocket._champion] || "None Selected" }}
           </p>
         </div>
       </div>
@@ -94,12 +90,11 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
         v-for="champion in pocket.champions"
         :key="champion"
         class="*:flex *:items-center *:gap-3"
-        :value="champion">
-        <ChampionIcon
-          :k="champion"
-          class="size-12" />
+        :value="champion"
+      >
+        <ChampionIcon class="size-12" :k="champion" />
         <span class="font-medium">
-          {{ ix().champNameByKey(champion) }}
+          {{ champNameByKey(champion) }}
         </span>
       </SelectItem>
     </LazySelectContent>

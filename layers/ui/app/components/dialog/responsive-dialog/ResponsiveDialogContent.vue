@@ -29,8 +29,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <FadeDialogContent
     v-if="isDesktop"
+    v-bind="forwarded"
     :class="cn('', props.class)"
-    v-bind="forwarded">
+  >
     <slot />
   </FadeDialogContent>
 </template>

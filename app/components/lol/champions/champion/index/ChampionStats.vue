@@ -47,10 +47,11 @@ const open = ref(false)
 const level = ref([1])
 
 const { resolveStat } = useChampionStatGrowth(computed(() => level.value[0]))
+/*
 const scalingStats = computed(() =>
   Object.entries(champion.stats).filter(
-    ([key]) => !ignoredStatKeys.includes(key),
-  ),
+    ([key]) => !ignoredStatKeys.includes(key)
+  )
 )
 
 const resolvedScalingStats = computed(() => {
@@ -65,27 +66,26 @@ const resolvedScalingStats = computed(() => {
         modifier: isCritDmg ? modifier : undefined,
         ratio: isAttackSpeed ? ratio : undefined,
         roundTo: 2,
-        type: isAttackSpeed
-          ? 'attackSpeed'
-          : isCritDmg
-            ? 'criticalStrikeDamage'
-            : undefined,
+        type:
+          isAttackSpeed
+            ? 'attackSpeed'
+            : isCritDmg
+              ? 'criticalStrikeDamage'
+              : undefined,
       })
 
-      if (resolved !== null)
-        acc[key] = resolved
+      if (resolved !== null) acc[key] = resolved
 
       return acc
     },
     {} as Record<
       string,
       { min: number | null, current: number | string, max: number | null }
-    >,
+    >
   )
 })
 const filteredStats = computed(() => {
-  if (!resolvedScalingStats.value)
-    return
+  if (!resolvedScalingStats.value) return
 
   const stats = Object.entries(champion.stats).map(([k, v]) => {
     const val = resolvedScalingStats.value[k]
@@ -105,7 +105,7 @@ const filteredStats = computed(() => {
       stats: stats
         .filter(s => defaultStats.includes(s.id))
         .sort(
-          (a, b) => defaultStats.indexOf(a.id) - defaultStats.indexOf(b.id),
+          (a, b) => defaultStats.indexOf(a.id) - defaultStats.indexOf(b.id)
         ),
     },
     more: [
@@ -121,7 +121,7 @@ const filteredStats = computed(() => {
           .filter(s => attackPriority.includes(s.id))
           .sort(
             (a, b) =>
-              attackPriority.indexOf(a.id) - attackPriority.indexOf(b.id),
+              attackPriority.indexOf(a.id) - attackPriority.indexOf(b.id)
           ),
       },
       {
@@ -130,40 +130,25 @@ const filteredStats = computed(() => {
       },
     ],
   }
-})
+}) */
 </script>
 
 <template>
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
-    class="
-      group/cl flex flex-col gap-6 px-0 open:h-auto
-      open:overflow-visible!
-    "
+    class="group/cl flex flex-col gap-6 px-0 open:h-auto open:overflow-visible!"
   >
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
-        class="
-          group/tr flex h-16 min-h-16 w-full cursor-pointer items-center
-          justify-between px-5
-        "
+        class="group/tr flex h-16 min-h-16 w-full cursor-pointer items-center justify-between px-5"
       >
-        <h3
-          class="underline-offset-3 dst group-hover/tr:underline"
-        >
+        <h3 class="underline-offset-3 dst group-hover/tr:underline">
           Stats
         </h3>
         <CaretFlip />
       </div>
       <div
-        class="
-          group-data-[state=open]/cl:animate-in
-          group-data-[state=open]/cl:fade-in-0
-          group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full
-          flex-col items-start px-5 pb-2
-          duration-300
-          group-closed/cl:hidden
-        "
+        class="group-data-[state=open]/cl:animate-in group-data-[state=open]/cl:fade-in-0 group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full flex-col items-start px-5 pb-2 duration-300 group-closed/cl:hidden"
         @click.stop
       >
         <span class="w-full text-start">
@@ -184,18 +169,12 @@ const filteredStats = computed(() => {
             <span class="absolute text-xs! font-semibold">{{ level[0] }}</span>
           </Slider>
           <div
-            class="
-              absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18
-              justify-evenly pr-4 pl-5.5
-            "
+            class="absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18 justify-evenly pr-4 pl-5.5"
           >
             <button
               v-for="i in 18"
               :key="i"
-              class="
-                relative grid size-full cursor-pointer transition-all
-                duration-200 hover:**:font-bold hover:**:opacity-100
-              "
+              class="relative grid size-full cursor-pointer transition-all duration-200 hover:**:font-bold hover:**:opacity-100"
               @click="level[0] = i"
             >
               <div
@@ -207,7 +186,7 @@ const filteredStats = computed(() => {
                 <span
                   :class="
                     cn('scale-y-50 self-start! opacity-50', {
-                      'scale-y-80 translate-y-0.5': [1, 6, 11, 16, 18].includes(
+                      'translate-y-0.5 scale-y-80': [1, 6, 11, 16, 18].includes(
                         i,
                       ),
                     })
@@ -217,10 +196,7 @@ const filteredStats = computed(() => {
                 </span>
                 <span
                   v-if="[1, 6, 11, 16, 18].includes(i)"
-                  class="
-                    absolute translate-y-4.5 items-end self-end
-                    justify-self-center text-xs tabular-nums
-                  "
+                  class="absolute translate-y-4.5 items-end self-end justify-self-center text-xs tabular-nums"
                 >
                   {{ i }}
                 </span>
@@ -231,33 +207,28 @@ const filteredStats = computed(() => {
       </div>
     </CollapsibleTrigger>
     <CollapsibleContent
-      class="
-        z-1 flex h-fit w-full flex-col gap-2 pb-2
-        open:overflow-visible!
-      "
+      class="z-1 flex h-fit w-full flex-col gap-2 pb-2 open:overflow-visible!"
     >
       <div
         :class="
-          cn('field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
-             { 'max-h-0 opacity-0 hidden invisible': open },
+          cn(
+            'field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
+            { 'invisible hidden max-h-0 opacity-0': open },
           )
         "
       >
-        <ChampionStat
+        <!--  <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
           :key="stat.name"
           :i
           :length="scalingStats.length"
           :stat
-        />
+        /> -->
       </div>
 
-      <Collapsible
-        v-model:open="open"
-        class="w-full"
-      >
+      <Collapsible v-model:open="open" class="w-full">
         <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
-          <div
+          <!--  <div
             v-for="(group, ix) in filteredStats.more"
             :key="ix"
             class="field-box pt-3"
@@ -282,13 +253,10 @@ const filteredStats = computed(() => {
                 :stat
               />
             </div>
-          </div>
+          </div> -->
         </CollapsibleContent>
         <CollapsibleTrigger class="w-full">
-          <LessOrMore
-            :open
-            class="w-[98%] justify-self-center"
-          />
+          <LessOrMore class="w-[98%] justify-self-center" :open />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>

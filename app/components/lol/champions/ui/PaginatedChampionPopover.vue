@@ -1,15 +1,16 @@
 <script lang="ts" setup>
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
 
 const searchQuery = ref<string>('')
-const search = useSearch(ix().champions, searchQuery)
-const results = computed (() => search.value.length ? search.value : ix().champions)
+const search = useSearch(championIndex, searchQuery)
+const results = computed(() =>
+  search.value.length ? search.value : championIndex
+)
 function handleChampions(champion: string) {
-  if (pocket.champions.includes(champion))
-    return
+  if (pocket.champions.includes(champion)) return
 
   pocket.champions.push(champion)
 }
@@ -18,8 +19,7 @@ const itemsPerPage = 8
 const currentPage = ref(1)
 
 const pagedSearchItems = computed(() => {
-  if (!results.value)
-    return null
+  if (!results.value) return null
   const start = (currentPage.value - 1) * itemsPerPage
   return results.value.slice(start, start + itemsPerPage)
 })
@@ -34,78 +34,73 @@ const open = ref(false)
 watch(
   () => results.value.length,
   (newVal) => {
-    if (newVal)
-      currentPage.value = 1
-  },
+    if (newVal) currentPage.value = 1
+  }
 )
 </script>
 
 <template>
   <Popover v-model:open="open">
-    <PopoverTrigger
-      as-child
-      class="group/collapse">
+    <PopoverTrigger class="group/collapse" as-child>
       <Button
         variant="btn"
         hover="btn"
         :class="
-          cn('transition-[colors, opacity] ring-bc/60 open:btn-active hover:text-bc/60 relative aspect-square h-auto w-full overflow-hidden p-0 duration-300 open:ring-2 hover:ring hover:inset-shadow-xs',
-             { 'shadow-sm drop-shadow-sm ': pocket._champion },
+          cn(
+            'transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-bc/60 duration-300 open:btn-active open:ring-2 hover:text-bc/60 hover:ring hover:inset-shadow-xs',
+            { 'shadow-sm drop-shadow-sm': pocket._champion },
           )
-        ">
+        "
+      >
         <icon
           v-if="!pocket?._champion"
+          class="size-10 text-bc/20"
           name="lp:champ"
-          class="text-bc/20 size-10" />
+        />
         <Champion
           v-else
           v-memo="pocket._champion"
           class="*:scale-160"
-          :src="getSplash(pocket._champion, 'tile')" />
+          :src="getSplash(pocket._champion, 'tile')"
+        />
         <div
           :class="
-            cn('bg-neutral/60 absolute inset-0 grid size-full items-end justify-center p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
-               { 'bg-b2 **:text-bc/40': !pocket._champion },
+            cn(
+              'absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
+              { 'bg-b2 **:text-bc/40': !pocket._champion },
             )
-          ">
-          <CaretFlip
-            class="text-nc! size-8 opacity-80 drop-shadow-sm"
-            fill />
+          "
+        >
+          <CaretFlip class="size-8 text-nc! opacity-80 drop-shadow-sm" fill />
         </div>
       </Button>
     </PopoverTrigger>
     <LazyPopPopoverContent
+      class="p-0"
       align="start"
       :side-offset="-10"
       :align-offset="-2"
       arrow-class="translate-y-0"
-      class="p-0">
+    >
       <div
-        class="
-          group/txt relative flex h-12 w-full shrink-0 items-center gap-3 px-3
-        ">
+        class="group/txt relative flex h-12 w-full shrink-0 items-center gap-3 px-3"
+      >
         <icon name="search" />
         <input
           v-model="searchQuery"
-          class="
-            size-full pr-4 text-sm transition-all duration-200
-            placeholder:italic
-          "
+          class="size-full pr-4 text-sm transition-all duration-200 placeholder:italic"
           placeholder="Search All Champions..."
           @keydown.stop
-          @keydown.enter.prevent />
+          @keydown.enter.prevent
+        >
 
         <Button
+          class="absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown/txt:opacity-0"
           variant="ghost"
           size="8"
-          class="
-            btn-square absolute top-3 right-2 size-6 shrink-0 opacity-100
-            group-has-placeholder-shown/txt:opacity-0
-          "
-          @click="searchQuery = ''">
-          <icon
-            name="x-sm"
-            class="size-4 **:stroke-[1.5]" />
+          @click="searchQuery = ''"
+        >
+          <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
         </Button>
       </div>
 
@@ -116,22 +111,25 @@ watch(
           <LazyLabel
             v-for="result in pagedSearchItems"
             :key="result.key"
+            class="justify-start duration-0"
             variant="ghost"
             size="sm"
-            class="justify-start duration-0">
+          >
             <input
               v-model="pocket._champion"
-              type="radio"
               class="peer hidden"
+              type="radio"
               :value="result.key"
-              @change="handleChampions(result.key)" />
+              @change="handleChampions(result.key)"
+            >
 
             <span class="size-8">
               <LazyChampionIcon
                 :id="result.id"
-                :alt="result.name"
                 class="pointer-events-none size-8 rounded-lg"
-                hydrate-on-visible />
+                :alt="result.name"
+                hydrate-on-visible
+              />
             </span>
             {{ result.name }}
           </LazyLabel>
@@ -140,54 +138,51 @@ watch(
         <span v-else-if="searchQuery && !results">
           No champions found :&lpar;
         </span>
-        <div
-          v-else
-          class="grid w-full grid-flow-row grid-cols-3 gap-2 px-1">
+        <div v-else class="grid w-full grid-flow-row grid-cols-3 gap-2 px-1">
           <PopoverClose as-child>
             <Button
+              class="hover-ring aspect-square h-auto w-full border-b3 bg-b2 hover:bg-b3/80!"
               variant="btn"
               title="Clear main champion"
-              class="
-                hover-ring border-b3 bg-b2 hover:bg-b3/80! aspect-square h-auto
-                w-full
-              "
-              @click="pocket._champion = ''">
-              <icon
-                name="lp:champ"
-                class="text-bc/20 size-7" />
+              @click="pocket._champion = ''"
+            >
+              <icon class="size-7 text-bc/20" name="lp:champ" />
             </Button>
           </PopoverClose>
           <ChampionIcon
             v-for="champion in pagedItems"
-            :id="ix().champIdByKey(champion)"
+            :id="champIdByKey(champion)"
             :key="champion"
+            class="hover-ring aspect-square h-auto w-full cursor-pointer rounded-lg"
             as="label"
-            class="
-              hover-ring aspect-square h-auto w-full cursor-pointer rounded-lg
-            "
-            @click="open = false">
+            @click="open = false"
+          >
             <input
               v-model="pocket._champion"
+              class="peer hidden"
               type="radio"
               :value="champion"
-              class="peer hidden" />
+            >
           </ChampionIcon>
         </div>
         <Pagination
           v-model:page="currentPage"
+          class="mx-0 max-w-220 justify-center justify-self-start pt-2"
           :total="pocket.champions.length"
           :default-page="1"
           :sibling-count="1"
           :show-edges="false"
           :items-per-page="itemsPerPage"
-          class="mx-0 max-w-220 justify-center justify-self-start pt-2">
+        >
           <PaginationContent>
             <PaginationPrev
+              class="btn-square size-8 disabled:opacity-40"
               size="8"
-              class="btn-square size-8 disabled:opacity-40" />
+            />
             <PaginationNext
+              class="btn-square size-8 disabled:opacity-40"
               size="8"
-              class="btn-square size-8 disabled:opacity-40" />
+            />
           </PaginationContent>
         </Pagination>
       </div>

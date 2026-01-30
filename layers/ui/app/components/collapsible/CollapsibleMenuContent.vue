@@ -17,12 +17,13 @@ const props = defineProps<
       cn(
         'relative flex h-max w-full',
         {
-          'after:w-px after:z-0 after:h-[calc(100%-12px)]  after:absolute after:left-3  py-px after:top-[6px] after:bg-b3/60 px-6':
+          'after:bg-b3/60 px-6 py-px after:absolute after:top-2 after:left-3 after:z-0 after:h-[calc(100%-12px)] after:w-px':
             !trigger,
         },
         props.class,
       )
-    ">
+    "
+  >
     <div class="grow">
       <slot />
     </div>

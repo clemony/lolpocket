@@ -1,11 +1,5 @@
 import type { EChartsOption } from 'echarts'
-import { heatmap, scatterChart } from '~/assets/URI'
-import {
-  allyHeatMapOptions,
-  buildAllyBubbleOptions,
-  buildAllyBubbleSeries,
-  buildAllyHeatmapSeries,
-} from '.'
+import { buildAllyBubbleOptions, buildAllyBubbleSeries } from '.'
 
 export interface AllyDataPoint {
   allyPuuid: string

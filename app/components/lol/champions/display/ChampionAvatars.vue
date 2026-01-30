@@ -5,7 +5,7 @@ const { pocket } = defineProps<{
 const l = computed(() => pocket.champions.length > 5).value
 
 const group = computed(() =>
-  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5),
+  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5)
 )
 </script>
 
@@ -14,28 +14,24 @@ const group = computed(() =>
     <Element
       v-for="champion in group"
       :key="champion"
+      class="bg-b1 fx-0 z-1 size-22! border-0"
       size="c-10"
       variant="base"
-      class="bg-b1 fx-0 z-1 size-22! border-0">
-      <ChampionIcon
-        :k="champion"
-        class="size-18! rounded-full" />
+    >
+      <ChampionIcon class="size-18! rounded-full" :k="champion" />
     </Element>
     <Element
       v-if="l"
+      class="bg-b1 fx-0 relative z-1 grid size-22! place-items-center rounded-full border-0"
       variant="base"
       size="c-10"
-      class="
-        bg-b1 fx-0 relative z-1 grid size-22! place-items-center
-        rounded-full border-0
-      ">
+    >
       <Element
+        class="size-18! *:transition-all *:duration-300"
         size="c-10"
         variant="neutral"
-        class="size-18! *:transition-all *:duration-300">
-        <icon
-          name="up"
-          class="group-closed:opacity-0 absolute" />
+      >
+        <icon class="group-closed:opacity-0 absolute" name="up" />
         <h3 class="group-open:text-transparent group-open:opacity-0">
           +{{ pocket.champions.length - 4 }}
         </h3>

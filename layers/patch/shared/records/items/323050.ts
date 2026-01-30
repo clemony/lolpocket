@@ -1,0 +1,17 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "id": 323050,
+  "name": "Zeke's Convergence",
+  "description": "350 Health\n30 Armor\n30 Magic Resist\n10 Ability Haste\n\nFrostfire Tempest\nCasting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic damage per second to enemy champions and Slows them by 30%.",
+  "gold": {
+    "base": 800,
+    "total": 2300,
+    "sell": 1610
+  },
+  "maps": [
+    11
+  ]
+}
+export default item

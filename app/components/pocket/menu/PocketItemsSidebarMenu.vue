@@ -8,27 +8,23 @@ const { pocket } = defineProps<{
   <div class="flex w-full px-3">
     <div
       v-if="pocket?.items && pocket?.items?.length"
-      class="flex w-full flex-wrap gap-3.5 py-3">
-      <Placeholder
-        v-for="set in pocket.items"
+      class="flex w-full flex-wrap gap-3.5 py-3"
+    >
+      <!--       <Placeholder
         :key="set.name"
-        class="
-          hover:ringneutral/40 items-between border-b3/50! pointer-events-auto flex
-          size-20 cursor-pointer flex-wrap justify-between gap-0.75!
-          border p-1.5 hover:ring-2
-        "
-        @click="navigateTo(`/pocket/${pocket.key}/items`)">
+        class="hover:ringneutral/40 items-between border-b3/50! pointer-events-auto flex size-20 cursor-pointer flex-wrap justify-between gap-0.75! border p-1.5 hover:ring-2"
+        @click="navigateTo(`/pocket/${pocket.key}/items`)"
+      >
         <template v-if="set.items && set.items?.length">
-          <template
-            v-for="(item, i) in set.items"
-            :key="item">
+          <template v-for="(item, i) in set.items" :key="item">
             <Item
               v-if="i < 4"
               :id="item"
-              class="pointer-events-none size-7.5 rounded-lg"></Item>
+              class="pointer-events-none size-7.5 rounded-lg"
+            />
           </template>
         </template>
-      </Placeholder>
+      </Placeholder> -->
     </div>
 
     <!-- <button v-tippy="'Add Item Set'" class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0" @click="newItemSet(pocket.key)">

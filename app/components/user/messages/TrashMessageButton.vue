@@ -12,9 +12,8 @@ const { class: className, message } = defineProps<{
     v-tippy="'Send to Trash'"
     :variant="!message.read ? 'neutral' : 'ghost'"
     size="6"
-    @click.stop="trashMsg(message.id)">
-    <icon
-      name="ph:trash-bold"
-      class="pointer-events-none size-3.5" />
+    @click.stop="trashMsg(message.id)"
+  >
+    <icon class="pointer-events-none size-3.5" name="ph:trash-bold" />
   </Button>
 </template>

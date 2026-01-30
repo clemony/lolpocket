@@ -18,5 +18,6 @@ const delegatedProps = computed(() => {
 <template>
   <DropdownMenuSeparator
     v-bind="delegatedProps"
-    :class="cn('bg-b3/80 -mx-1 my-1 h-px shrink-0', props.class)" />
+    :class="cn('bg-b3/80 -mx-1 my-1 h-px shrink-0', props.class)"
+  />
 </template>

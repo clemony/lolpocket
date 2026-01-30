@@ -1,4 +1,3 @@
-
 export interface MenubarGroup {
   name: string
   class?: string

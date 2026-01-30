@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-const { class: className, effect, variants } = defineProps<{
+const {
+  class: className,
+  effect,
+  variants,
+} = defineProps<{
   effect: AbilityEffect
   variants?: any
   damageType?: string
@@ -18,18 +22,19 @@ const { class: className, effect, variants } = defineProps<{
         },
         className,
       )
-    ">
-    <div
-      :class="variants?.description"
-      v-html="effect.description" />
+    "
+  >
+    <div :class="variants?.description" v-html="effect.description" />
 
     <div
       v-if="effect.leveling?.[0] && effect.leveling?.[0].attribute"
-      class="flex w-full flex-col gap-3">
+      class="flex w-full flex-col gap-3"
+    >
       <div
         v-for="attribute in effect.leveling"
         :key="attribute.attribute"
-        :class="variants?.attributeWrapper">
+        :class="variants?.attributeWrapper"
+      >
         <div :class="variants?.attributeContent">
           <p class="text-sm! text-wrap">
             {{ attribute.attribute }}:
@@ -47,18 +52,23 @@ const { class: className, effect, variants } = defineProps<{
               :class="
                 cn(
                   {
-                    'hover:bg-b2 pb-0.5 decoration-bc/40 hover:*:decoration-bc ':
+                    'hover:bg-b2 decoration-bc/40 hover:*:decoration-bc pb-0.5':
                       attribute.modifiers?.[1].tooltip,
                   },
                   variants?.attributeBadge,
                 )
-              ">+&thinsp;
+              "
+            >
+              +&thinsp;
               <span
                 :class="{
                   'decoration-bc/40 underline decoration-dotted underline-offset-2':
                     attribute.modifiers?.[1].tooltip,
-                }">
-                {{ attribute.modifiers?.[1].values }} </span>{{ attribute.modifiers?.[1].unit }}
+                }"
+              >
+                {{ attribute.modifiers?.[1].values }}
+              </span>
+              {{ attribute.modifiers?.[1].unit }}
             </span>
           </p>
         </div>

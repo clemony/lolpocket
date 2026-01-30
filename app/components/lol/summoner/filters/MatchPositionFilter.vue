@@ -1,56 +1,41 @@
 <script lang="ts" setup>
-const { class: className, color, orientation = 'horizontal', size = '10' } = defineProps<{
+const {
+  class: className,
+  color,
+  orientation = 'horizontal',
+  size = '10',
+} = defineProps<{
   class?: HTMLAttributes['class']
   color?: TabListVariants['color']
   size?: TabListVariants['size']
   orientation?: DataOrientation
 }>()
-const { filter, matches, setFilter, summoner } = useSummonerInject()
-
+const { summoner } = storeToRefs(s_session())
 const roles = computed(() => {
-  if (!matches.value || !summoner?.value)
-    return
+  if (!s_matches().matches || !summoner?.value) return
 
-  return useMatchRoles(summoner?.value?.puuid, matches)
+  const matchRoles = useMatchRoles(summoner?.value?.puuid, s_matches().matches)
+
+  return mapPositions.map((p) => {
+    const find = matchRoles?.find(r => r.name === p.name)
+    return {
+      ...p,
+      disabled: p.name === 'all' ? false : !find?.games
+    }
+  })
 })
 
 const roleModel = computed({
-  get: () => filter?.value?.role,
-  set: val => setFilter('role', val),
+  get: () => s_matches().filter?.role,
+  set: val => s_matches().setFilter('role', val),
 })
 </script>
 
 <template>
-  <Tabs
+  <UTabs
     v-model:model-value="roleModel"
+    :items="roles"
+    value-key="name"
     default-value="all"
-    as-child
-    :class="cn('w-full', { '': orientation === 'vertical' })"
-    :orientation>
-    <TabsList
-      :class="cn(tabListVariants({ color, size }), className)">
-      <TabIndicator class="z-0" />
-
-      <TabsTrigger
-        value="all"
-        class="**:text-bc! grid! place-items-center"
-        :disabled="!matches">
-        <Icon
-          name="role:all"
-          class="dst mb-px size-5.5 shrink-0" />
-      </TabsTrigger>
-      <TabsTrigger
-        v-for="role in roles"
-        :key="role.name"
-        :value="role.role"
-        class="**:text-bc! grid! place-items-center"
-        :disabled="!role.games">
-        <Icon
-          :name="`role:${role.role}`"
-          class="dst mb-px size-5.5 shrink-0" />
-      </TabsTrigger>
-    </TabsList>
-
-    <slot />
-  </Tabs>
+  />
 </template>

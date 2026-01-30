@@ -9,20 +9,17 @@ const { k, pocket: p } = defineProps<
 >()
 
 const pocket = computed(() => p)
-const name = computed(() => ix().champNameByKey(k))
+const name = computed(() => champNameByKey(k))
 </script>
 
 <template>
   <PopoverContent
+    class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5"
     align="start"
-    class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5">
-    <PopoverItem
-      class="hover:bg-b3/60"
-      @click="navigateTo(`/champions/${k}`)">
+  >
+    <PopoverItem class="hover:bg-b3/60" @click="navigateTo(`/champions/${k}`)">
       <span class="relative grid size-4.5 place-items-center">
-        <ChampionIcon
-          :k
-          class="absolute size-5.5" />
+        <ChampionIcon class="absolute size-5.5" :k />
       </span>
       {{ name }}'s profile
     </PopoverItem>
@@ -30,39 +27,42 @@ const name = computed(() => ix().champNameByKey(k))
     <PopoverItem
       class="hover:bg-b3/60"
       for="champion-add-or-remove-from-pocket"
-      as="label">
+      as="label"
+    >
       <icon :name="pocket.champions.includes(k) ? 'minus' : 'add'" />
       <input
         v-model="pocket.champions"
+        class="peer hidden"
         :aria-label="name"
         type="checkbox"
         name="champion-add-or-remove-from-pocket"
         :value="k"
-        class="peer hidden" />
-      <span class="peer-checked:hidden"> Add to pocket </span>
-      <span class="peer-not-checked:hidden"> Remove from pocket </span>
+      >
+      <span class="peer-checked:hidden">Add to pocket</span>
+      <span class="peer-not-checked:hidden">Remove from pocket</span>
     </PopoverItem>
 
     <PopoverItem
       as="label"
-      :class="
-        cn('disabled hover:bg-b3/60 has-disabled:opacity-100')
-      "
-      @click="pocket._champion = k">
+      :class="cn('disabled hover:bg-b3/60 has-disabled:opacity-100')"
+      @click="pocket._champion = k"
+    >
       <icon
         name="star"
         :class="
-          cn('dst ml-px size-4! **:stroke-[2.8]',
-             { 'fill-precision': pocket._champion === k },
-          )
-        " />
+          cn('dst ml-px size-4! **:stroke-[2.8]', {
+            'fill-precision': pocket._champion === k,
+          })
+        "
+      />
       <input
         v-model="pocket.champions"
+        class="peer hidden"
         :disabled="pocket.champions.includes(k)"
         :aria-label="name"
         type="checkbox"
         :value="k"
-        class="peer hidden" />
+      >
       {{ pocket._champion === k ? "Main champion" : "Set main champion" }}
     </PopoverItem>
   </PopoverContent>

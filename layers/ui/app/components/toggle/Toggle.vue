@@ -17,7 +17,7 @@ const props = withDefaults(
     disabled: false,
     size: 'sq-10',
     variant: 'outline',
-  },
+  }
 )
 
 const emits = defineEmits<ToggleEmits>()
@@ -41,7 +41,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         toggleVariants({ variant, size, base, hover, on }),
         props.class,
       )
-    ">
+    "
+  >
     <slot :model-value />
   </Toggle>
 </template>

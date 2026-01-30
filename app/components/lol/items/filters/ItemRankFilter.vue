@@ -30,17 +30,17 @@ function handleUpdate() {
     group
     :class="
       cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)
-    ">
+    "
+  >
     <Button
       v-if="is().filters.rank && clear"
+      class="order-first hover:*:opacity-100"
       :variant
       :hover
       :size="size[0]"
-      class="order-first hover:*:opacity-100"
-      @click="is().filters.rank = null">
-      <icon
-        name="x"
-        class="size-4" />
+      @click="is().filters.rank = null"
+    >
+      <icon class="size-4" name="x" />
     </Button>
 
     <Label
@@ -51,19 +51,19 @@ function handleUpdate() {
       :hover="is().filters.rank === rank ? 'btn' : hover"
       :variant="is().filters.rank === rank ? 'neutral' : variant"
       :class="
-        cn('hover:text-bc order-2 px-5 text-sm font-medium! shadow-none',
-           { 'order-1 ': is().filters.rank === rank },
-        )
+        cn('hover:text-bc order-2 px-5 text-sm font-medium! shadow-none', {
+          'order-1': is().filters.rank === rank,
+        })
       "
-      @click="
-        is().filters.rank === rank ? (is().filters.rank = null) : null
-      ">
+      @click="is().filters.rank === rank ? (is().filters.rank = null) : null"
+    >
       <input
         v-model="is().filters.rank"
         class="peer absolute hidden"
         type="radio"
         :value="rank"
-        name="item-types" />
+        name="item-types"
+      >
       {{ rank }}
     </Label>
   </TransitionSlideLeft>

@@ -14,8 +14,7 @@ export function saveNotification(
 
   list.unshift(item)
 
-  if (list.length > 20)
-    list.pop()
+  if (list.length > 20) list.pop()
 
   return item
 }

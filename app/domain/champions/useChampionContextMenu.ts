@@ -9,7 +9,7 @@ export function useChampionContextMenu() {
   const show = (
     event: MouseEvent,
     /* target: HTMLElement, */ champion: string,
-    pocket: Pocket,
+    pocket: Pocket
   ) => {
     event.preventDefault()
 
@@ -22,8 +22,7 @@ export function useChampionContextMenu() {
 
       // Mount a Vue component into the container
       const vnode = h(PocketChampionMenu, { k: champion, pocket }) || null
-      if (vnode)
-        render(vnode, container)
+      if (vnode) render(vnode, container)
 
       singleton = tippy(document.body, {
         appendTo: document.body,

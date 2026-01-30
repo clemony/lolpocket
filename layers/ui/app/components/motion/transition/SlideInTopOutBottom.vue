@@ -29,7 +29,8 @@ const {
           enter: [0, '100%'],
           leave: [0, '-100%'],
         }
-    ">
+    "
+  >
     <slot />
   </transition-slide>
 </template>

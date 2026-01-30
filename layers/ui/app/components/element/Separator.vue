@@ -19,7 +19,7 @@ const props = withDefaults(
   >(),
   {
     color: 'base',
-  },
+  }
 )
 
 const separatorVariants = tv({
@@ -29,7 +29,7 @@ const separatorVariants = tv({
     size: 0,
   },
   slots: {
-    label: '!text-xxs font-medium whitespace-nowrap select-none',
+    label: 'text-xxs! font-medium whitespace-nowrap select-none',
     separator: 'flex-1 shrink-0 bg-current',
     wrapper: 'relative flex w-full shrink-0 items-center',
   },
@@ -83,12 +83,13 @@ const { label, separator, wrapper } = styles
       cn(
         wrapper(),
         props.orientation === 'vertical'
-          ? 'flex-col justify-center h-full w-px'
-          : 'flex-row items-center w-full h-px',
+          ? 'h-full w-px flex-col justify-center'
+          : 'h-px w-full flex-row items-center',
         props.class,
         'pointer-events-none',
       )
-    ">
+    "
+  >
     <!-- First separator -->
     <Separator
       v-bind="delegatedProps"
@@ -96,14 +97,13 @@ const { label, separator, wrapper } = styles
       :class="
         cn(
           separator(),
-          props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
+          props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full',
         )
-      " />
+      "
+    />
 
     <!-- Label -->
-    <span
-      v-if="props.label"
-      :class="cn(label(), labelClass)">
+    <span v-if="props.label" :class="cn(label(), labelClass)">
       {{ props.label }}
     </span>
 
@@ -115,9 +115,10 @@ const { label, separator, wrapper } = styles
       :class="
         cn(
           separator(),
-          props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
+          props.orientation === 'vertical' ? 'h-full w-px' : 'h-px w-full',
         )
-      " />
+      "
+    />
     <slot />
   </div>
 </template>

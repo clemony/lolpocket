@@ -17,17 +17,18 @@ const delegatedProps = reactiveOmit(props, 'class')
   <ComboboxGroup
     v-bind="delegatedProps"
     :class="
-      cn('text-bc **:[[cmdk-group-heading]]:text-bc/50 overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium',
-         props.class,
+      cn(
+        'text-bc **:[[cmdk-group-heading]]:text-bc/50 overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium',
+        props.class,
       )
-    ">
+    "
+  >
     <ComboboxLabel
       v-if="heading"
-      class="
-        text-bc/50 flex items-center gap-2 px-2 py-1.5 text-sm font-medium
-        capitalize
-      ">
-      <slot name="icon" />{{ heading }}
+      class="text-bc/50 flex items-center gap-2 px-2 py-1.5 text-sm font-medium capitalize"
+    >
+      <slot name="icon" />
+      {{ heading }}
     </ComboboxLabel>
     <slot />
   </ComboboxGroup>

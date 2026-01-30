@@ -1,16 +1,19 @@
-import fs from "node:fs"
-import path from "node:path"
-import { resolvePath } from "../../resolvePath"
-import { markUpdate } from "../../utils/markUpdate"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
 
-const outputFile = path.resolve("./layers/domain/constants/champion-index.ts")
-const outputRoles = path.resolve("./layers/domain/constants/champ-key-to-role.ts")
-const dataPath = resolvePath("./champions/raw/champions-raw.json")
+const outputFile = resolve(
+  './layers/patch/shared/constants/champions/championIndex.ts'
+)
+const outputRoles = resolve(
+  './layers/patch/shared/constants/champions/champKeyToRole.ts'
+)
+const dataPath = resolve('./layers/patch/server/champions/raw/champions-raw.json')
 
-const champs = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
+const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 // Extract id, name, and path
-const index: { id: number; key: string; name: string }[] = []
+const index: { id: number, key: string, name: string }[] = []
 const roleIndex: Record<string, string> = {}
 for (const champ in champs) {
   const champion = champs[champ]
@@ -29,8 +32,9 @@ for (const key in champs) {
 }
 // Create the TypeScript content
 const output = `// ${markUpdate()}
+import type { Index } from "#shared/types"
 
-export const championIndex: ChampionIndex[] = ${JSON.stringify(index, null, 2)}
+export const championIndex: Index[] = ${JSON.stringify(index, null, 2)}
 `
 
 // Create the TypeScript content

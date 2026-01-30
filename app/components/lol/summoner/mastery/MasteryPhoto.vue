@@ -4,25 +4,32 @@ const { champion, championId } = defineProps<{
   championId?: number
 }>()
 
-const name = computed(() => ix().champNameById(champion?.championId ?? championId))
+const name = computed(() =>
+  champNameById(champion?.championId ?? championId)
+)
 const id = computed(() => champion?.championId ?? championId)
 const level = computed(() =>
-  champion?.level >= 10 ? 10 : champion?.level ? champion.level : 0,
+  champion?.level >= 10
+    ? 10
+    : champion?.level
+      ? champion.level
+      : 0
 )
 </script>
 
 <template>
   <SplashCard
-    :alt="name"
-    :skin-url="getSplash(ix().champKeyById(id), 'tile')"
     class="group/photo pb-0.5"
+    :alt="name"
+    :skin-url="getSplash(champKeyById(id), 'tile')"
   >
     <template #banner>
       <Img
         :src="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
         :alt="level.toString()"
         :class="
-          cn('absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
+          cn(
+            'absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
           )
         "
       />
@@ -36,10 +43,7 @@ const level = computed(() =>
     </template> -->
 
     <div
-      class="
-        relative flex size-full h-12 flex-col justify-center overflow-hidden
-        px-0.75 pt-0.25 pb-1 *:leading-none
-      "
+      class="relative flex size-full h-12 flex-col justify-center overflow-hidden px-0.75 pt-0.25 pb-1 *:leading-none"
     >
       <div class="flex items-end gap-1.5">
         <h2 class="text-xl font-semibold dst">
@@ -57,10 +61,7 @@ const level = computed(() =>
             class="relative size-4 overflow-hidden rounded-full shadow-sm dst"
           >
             <i-lol-cm-mastery-token
-              class="
-                absolute grid size-full scale-105 place-items-center
-                object-center
-              "
+              class="absolute grid size-full scale-105 place-items-center object-center"
             />
           </span>
           {{ champion?.totalPoints?.toLocaleString() ?? 0 }}

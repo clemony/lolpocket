@@ -7,7 +7,7 @@ const props = withDefaults(
   defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(),
   {
     asChild: true,
-  },
+  }
 )
 
 const delegatedProps = computed(() => {
@@ -21,9 +21,7 @@ const delegatedProps = computed(() => {
   <PaginationLast v-bind="delegatedProps">
     <button :class="cn('btn btn-square btn-ghost btn-sm', props.class)">
       <slot>
-        <icon
-          name="right-pipe"
-          class="size-4" />
+        <icon class="size-4" name="right-pipe" />
       </slot>
     </button>
   </PaginationLast>

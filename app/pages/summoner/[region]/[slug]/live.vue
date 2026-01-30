@@ -9,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 definePageMeta({
   key: 'l',

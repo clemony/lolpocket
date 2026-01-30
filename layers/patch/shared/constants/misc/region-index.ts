@@ -1,0 +1,18 @@
+export const regionIndex = {
+  br1: 'Brazil',
+  eun1: 'Europe Nordic & East',
+  euw1: 'Europe West',
+  jp1: 'Japan',
+  kr: 'Korea',
+  la1: 'Latin America North',
+  la2: 'Latin America South',
+  na1: 'North America',
+  oc1: 'Oceania',
+  ph2: 'Philippines',
+  ru: 'Russia',
+  sg2: 'Singapore',
+  th2: 'Thailand',
+  tr1: 'Turkey',
+  tw2: 'Taiwan',
+  vn2: 'Vietnam',
+}

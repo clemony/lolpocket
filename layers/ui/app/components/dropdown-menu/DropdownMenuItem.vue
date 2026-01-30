@@ -20,7 +20,7 @@ const props = withDefaults(
     on: 'secondary',
     size: '8',
     variant: 'ghost',
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -34,11 +34,12 @@ const forwarded = useForwardProps(delegatedProps)
     :class="
       cn(
         buttonVariants({ base, hover, on, size, variant }),
-        inset && '!pl-8',
+        inset && 'pl-8!',
         'group/menu-item justify-start px-2 text-sm',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </DropdownMenuItem>
 </template>

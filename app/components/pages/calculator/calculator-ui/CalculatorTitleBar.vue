@@ -5,8 +5,9 @@
     <div class="flex h-7 w-full items-center gap-3 overflow-hidden text-lg">
       1
       <icon
+        class="size-7 shrink-0"
         name="material-symbols-light:compare-arrows"
-        class="size-7 shrink-0" />
+      />
       2
     </div>
   </div>

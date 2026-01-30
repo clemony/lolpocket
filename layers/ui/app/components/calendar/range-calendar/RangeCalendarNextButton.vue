@@ -14,6 +14,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <RangeCalendarNext
+    v-bind="forwardedProps"
     :class="
       cn(
         buttonVariants({ variant: 'outline', size: 'sq-10' }),
@@ -21,11 +22,9 @@ const forwardedProps = useForwardProps(delegatedProps)
         props.class,
       )
     "
-    v-bind="forwardedProps">
+  >
     <slot>
-      <icon
-        name="right"
-        class="size-4" />
+      <icon class="size-4" name="right" />
     </slot>
   </RangeCalendarNext>
 </template>

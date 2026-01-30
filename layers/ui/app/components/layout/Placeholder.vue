@@ -15,14 +15,16 @@ const { as = 'label', class: className } = defineProps<
 
 <template>
   <Primitive
-    :as="as"
     v-bind="$attrs"
+    :as="as"
     :class="
-      cn('group/placeholder btn btn-square pointer-events-none aspect-square size-full items-center justify-center gap-2 self-center p-0!',
-         labelVariants({ variant, size, hover }),
-         className,
+      cn(
+        'group/placeholder btn btn-square pointer-events-none aspect-square size-full items-center justify-center gap-2 self-center p-0!',
+        labelVariants({ variant, size, hover }),
+        className,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

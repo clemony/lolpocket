@@ -4,37 +4,34 @@ const { class: className } = defineProps<{
   view: 'enemy' | 'team'
 }>()
 
-const { duos } = usePlayerStatsInject()
+const { duos } = storeToRefs(s_champion())
 </script>
 
 <template>
-  <div
-    :class="cn('flex flex-col gap-3', className)">
+  <div :class="cn('flex flex-col gap-3', className)">
     <template v-if="duos?.[view]">
-      <ChampStatRow
-        v-for="role, i in duos[view]"
-        :key="i">
+      <ChampStatRow v-for="(role, i) in duos[view]" :key="i">
         <ChampStatLabel
           separator
           type="synergy"
-          :icon="[`role:${roleKey[i]}`, 'size-8 dst']" />
+          :icon="[`role:${roleKey[i]}`, 'size-8 dst']"
+        />
         <ChampStatRowWrapper
           v-if="role && role?.length"
-          :class="cn('', className)">
+          :class="cn('', className)"
+        >
           <ChampStatObjectWrapper
             v-for="c in role"
             :id="c.championId"
             :key="c.championId"
             type="synergy"
-            :stat="c">
-            <ChampionIcon
-              :id="c.championId"
-              class="size-15" />
+            :stat="c"
+          >
+            <ChampionIcon :id="c.championId" class="size-15" />
           </ChampStatObjectWrapper>
         </ChampStatRowWrapper>
 
-        <NoItemData
-          v-else />
+        <NoItemData v-else />
       </ChampStatRow>
     </template>
   </div>

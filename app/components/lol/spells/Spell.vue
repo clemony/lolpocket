@@ -1,20 +1,18 @@
 <script lang="ts" setup>
+import { Tooltip, TooltipXL } from '#components'
+
 const {
   id,
-  title,
+  side = 'top',
   class: className,
-  loadingType = 'spinner',
-  size = 'sq-14',
-  tip,
-  variant
+  loadingType,
+  size = 'sm',
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | undefined
   loadingType?: LoadingStyle
-  size?: ButtonVariants['size']
-  title?: string
-  variant?: ButtonVariants['variant']
-  tip?: string | null
+  size?: TooltipSize
+  side?: Side
 }>()
 
 const loaded = ref(false)
@@ -22,37 +20,24 @@ const loaded = ref(false)
 watch(
   () => id,
   (newVal) => {
-    if (newVal)
-      loaded.value = false
-  },
+    if (newVal) loaded.value = false
+  }
 )
 
-const tps = computed (() => {
-  if (tip === null)
-    return null
-  const a = tip?.split(', ')
-  return {
-    placement: a?.filter(s => tooltipPlacements.includes(s))[0] || 'top',
-    size: a?.filter(s => tooltipSizes.includes(s))[0] || 'lg',
-  }
-})
+const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
 </script>
 
 <template>
-  <Img
-    v-if="id"
-    :size
-    :variant
-    :data-id="id"
-    :data-placement="tps?.placement"
-    :data-size="tps?.size"
-    :data-interactive="tps?.size === 'lg' ? true : false"
-    :data-type="!tps ? null : 'spell'"
-    :title="!tps && title ? title : !tps ? spellNameById(id) : null"
-    :class="
-      cn({ ' shadow-sm drop-shadow-sm  shadow-black/30': loaded }, className)"
-    :loading-type
-    :alt="spells[id].name"
-    :src="`/img/spells/${id}.webp`"
-    @load="loaded = true" />
+  <component :is="component" :text="size === 'sm' ? spells[id].name : ''" :img="`/img/spells/${id}.webp`" :side>
+    <Img
+      v-if="id"
+      :class="
+        cn({ 'size-14 shadow-sm shadow-black/30 drop-shadow-sm': loaded }, className)
+      "
+      :loading-type
+      :alt="spells[id].name"
+      :src="`/img/spells/${id}.webp`"
+      @load="loaded = true"
+    />
+  </component>
 </template>

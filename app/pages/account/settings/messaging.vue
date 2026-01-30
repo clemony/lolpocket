@@ -12,13 +12,9 @@ definePageMeta({
   <form class="w-full space-y-12">
     <!-- username -->
 
-    <fieldset
-      id="username"
-      class="space-y-6">
+    <fieldset id="username" class="space-y-6">
       <div class="leading-4">
-        <Label
-          as="legend"
-          class="text-xlfont-semibold mb-2">Username</Label>
+        <Label class="text-xlfont-semibold mb-2" as="legend">Username</Label>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in

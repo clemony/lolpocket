@@ -25,12 +25,14 @@ const { arrow } = popoverContentVariants({
     :class="cn('dst translate-y-px opacity-90 invert', arrow(), props.class)"
     :height="10"
     :width="16"
-    rounded />
+    rounded
+  />
 
   <HoverCardArrow
+    v-bind="forwarded"
     :height="10"
     :width="16"
-    v-bind="forwarded"
     :class="cn('z-50 w-64 overflow-hidden outline-none', arrow(), props.class)"
-    rounded />
+    rounded
+  />
 </template>

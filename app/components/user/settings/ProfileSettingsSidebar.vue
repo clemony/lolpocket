@@ -21,12 +21,18 @@ const inactiveClass
 <template>
   <Sheet>
     <SheetTrigger
-      class="group/edit absolute top-15 right-0 grid h-70 w-1/2 origin-left cursor-pointer place-items-end overflow-hidden p-6 after:absolute after:top-0 after:left-0 after:h-full after:w-[200%] after:bg-linear-to-r after:from-transparent after:via-transparent after:via-60% after:to-black/70 after:transition-all after:duration-400 hover:after:-translate-x-1/2">
+      class="group/edit absolute top-15 right-0 grid h-70 w-1/2 origin-left cursor-pointer place-items-end overflow-hidden p-6 after:absolute after:top-0 after:left-0 after:h-full after:w-[200%] after:bg-linear-to-r after:from-transparent after:via-transparent after:via-60% after:to-black/70 after:transition-all after:duration-400 hover:after:-translate-x-1/2"
+    >
       <div class="flex h-fit items-center gap-3">
-        <span class="z-2 mt-0.5 text-sm leading-none font-medium text-white/80 opacity-0 transition-opacity duration-400 group-hover/edit:opacity-100">Edit Profile</span>
+        <span
+          class="z-2 mt-0.5 text-sm leading-none font-medium text-white/80 opacity-0 transition-opacity duration-400 group-hover/edit:opacity-100"
+        >
+          Edit Profile
+        </span>
         <Icon
+          class="z-2 size-6.5 translate-y-0 text-white/60"
           name="gear-solid"
-          class="z-2 size-6.5 translate-y-0 text-white/60" />
+        />
       </div>
     </SheetTrigger>
     <DialogPortal>
@@ -41,32 +47,35 @@ const inactiveClass
             :transition="{
               duration: 0.3,
               ease: 'easeOut',
-            }">
+            }"
+          >
             <SheetHeader>
               <SheetTitle>Are you absolutely sure?</SheetTitle>
               <SheetDescription>
-                This action cannot be undone. This will permanently delete your account
-                and remove your data from our servers.
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
               </SheetDescription>
 
               <button
-                :class="cn('-ml-3', currentSplash ? inactiveClass : '', cardClass)"
-                @click="currentSplash = null">
+                :class="
+                  cn('-ml-3', currentSplash ? inactiveClass : '', cardClass)
+                "
+                @click="currentSplash = null"
+              >
                 <SplashCard
-                  hover
                   class="w-36"
+                  hover
                   :skin-url="top().splash?.replace('uncentered', 'tile')"
                   :text="top().name"
-                  :alt="`${as().account?.name ?? null}'s Most Played`" />
+                  :alt="`${as().account?.name ?? null}'s Most Played`"
+                />
                 <div class="flex h-full flex-col gap-4 pt-3">
                   <h4 class="dst text-xl font-semibold">
                     Automatic
                   </h4>
                   <p>Displays your most played champion in recent games.</p>
 
-                  <ActiveTick
-                    v-if="!currentSplash"
-                    class="mt-2 h-6" />
+                  <ActiveTick v-if="!currentSplash" class="mt-2 h-6" />
                 </div>
               </button>
             </SheetHeader>

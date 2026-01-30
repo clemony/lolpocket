@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LayoutGroup, motion } from 'motion-v'
+import { LayoutGroup } from 'motion-v'
 import { VueDraggable } from 'vue-draggable-plus'
 
 useSeoMeta({
@@ -12,7 +12,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 
 useSeoMeta({
@@ -25,7 +25,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterDescription: '[twitter:description]',
   twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]'
+  twitterTitle: '[twitter:title]',
 })
 
 definePageMeta({
@@ -36,7 +36,7 @@ definePageMeta({
 
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
 
 const isDragging = ref(false)
@@ -46,7 +46,7 @@ function onStart() {
 }
 
 const source = computed(() =>
-  cs().filtered.filter(r => !pocket.champions.includes(r)),
+  cs().filtered.filter(r => !pocket.champions.includes(r))
 )
 
 // shallowRef prevents Vue from deeply tracking reorder mutations
@@ -64,8 +64,7 @@ watch(source, syncRendered, { deep: true, immediate: true })
 function onEnd(e) {
   isDragging.value = false
   const { newIndex, oldIndex } = e
-  if (oldIndex === newIndex)
-    return
+  if (oldIndex === newIndex) return
 
   const moved = rendered.value.splice(oldIndex, 1)[0]
   rendered.value.splice(newIndex, 0, moved)
@@ -75,8 +74,7 @@ function onEnd(e) {
 }
 
 watch(source, () => {
-  if (!isDragging.value)
-    syncRendered()
+  if (!isDragging.value) syncRendered()
 })
 
 function onAdd(e) {
@@ -95,23 +93,21 @@ function showContextMenu(e: MouseEvent, champion: string) {
 <template>
   <div class="inset-0 z-auto pt-12">
     <div
-      class="
-        bg-b1/98 sticky -top-56 z-2 w-full items-center space-y-6 pt-10 pb-6
-        backdrop-blur-sm">
+      class="bg-b1/98 sticky -top-56 z-2 w-full items-center space-y-6 pt-10 pb-6 backdrop-blur-sm"
+    >
       <div class="flex items-center gap-8 px-1">
         <h1 class="capitalize">
           Champions
         </h1>
         <ChampionQuote
           v-once
-          class="
-            grow text-end text-sm font-normal text-nowrap whitespace-nowrap
-            italic
-          " />
+          class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic"
+        />
         <InputGroupPopover
           v-model:model-value="cs().filters.query"
           class="max-w-140"
-          @clear:input="cs().filters.query = ''">
+          @clear-input="cs().filters.query = ''"
+        >
           <ChampFilterPopoverContent />
         </InputGroupPopover>
       </div>
@@ -121,6 +117,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
     <div class="z-auto mx-auto flex w-full gap-8">
       <VueDraggable
         v-model="rendered"
+        class="inset-0 grid h-fit w-full auto-rows-max grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-between gap-4 p-1 pb-44"
         :group="{
           name: 'champions',
           pull: 'clone',
@@ -134,21 +131,18 @@ function showContextMenu(e: MouseEvent, champion: string) {
         drag-class="champion-icon-ghost-class"
         ghost-class="champion-icon-ghost-class"
         layout="position"
-        class="
-          inset-0 grid h-fit w-full auto-rows-max
-          grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-between gap-4
-          p-1 pb-44
-        "
         @start="onStart()"
         @end="onEnd($event)"
-        @add="onAdd($event)">
+        @add="onAdd($event)"
+      >
         <LayoutGroup>
           <AnimatePresence mode="sync">
             <PocketChampion
               v-for="champion in rendered"
               :key="champion"
               :k="champion"
-              :pocket />
+              :pocket
+            />
           </AnimatePresence>
         </LayoutGroup>
       </VueDraggable>

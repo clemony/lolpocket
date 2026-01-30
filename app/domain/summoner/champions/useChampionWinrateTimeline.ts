@@ -8,15 +8,14 @@ export interface TimeSeriesStat {
 export function useChampionWinrateTimeline(
   puuid: string,
   matches: MatchData[],
-  championName: string,
+  championName: string
 ): TimeSeriesStat[] {
   const grouped: Record<string, TimeSeriesStat> = {}
   console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
 
   for (const match of matches) {
     const player = match.participants.find(p => p.puuid === puuid)
-    if (ix().champNameById(player.championId) !== championName)
-      continue
+    if (champNameById(player.championId) !== championName) continue
 
     const date = new Date(match.gameEndTimestamp)
     const year = date.getUTCFullYear()
@@ -34,11 +33,10 @@ export function useChampionWinrateTimeline(
     }
 
     grouped[key].games++
-    if (player.win)
-      grouped[key].wins++
+    if (player.win) grouped[key].wins++
     console.log(
       '💠 - useChampionWinrateTimeline - grouped[key].wins:',
-      grouped[key].wins,
+      grouped[key].wins
     )
   }
 

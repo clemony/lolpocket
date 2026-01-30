@@ -5,17 +5,16 @@ const props = withDefaults(
   }>(),
   {
     tip: 'Clear',
-  },
+  }
 )
 </script>
 
 <template>
   <button
     v-tippy="props.tip"
-    class="btn btn-square btn-sm size-6 rounded-md shadow-sm">
-    <icon
-      name="x-sm"
-      class="size-5.5 shrink-0" />
+    class="btn btn-square btn-sm size-6 rounded-md shadow-sm"
+  >
+    <icon class="size-5.5 shrink-0" name="x-sm" />
   </button>
 </template>
 

@@ -17,10 +17,9 @@ const {
     :class="cn('', className)"
     :variant="variant"
     :size="size"
-    @click="ui().blockDialog = true">
-    <icon
-      name="lucide:ban"
-      class="" />
+    @click="ui().blockDialog = true"
+  >
+    <icon class="" name="lucide:ban" />
     <span>
       <slot />
     </span>

@@ -14,6 +14,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <CalendarCellTrigger
+    v-bind="forwardedProps"
     :class="
       cn(
         buttonVariants({ variant: 'ghost' }),
@@ -43,7 +44,7 @@ const forwardedProps = useForwardProps(delegatedProps)
         props.class,
       )
     "
-    v-bind="forwardedProps">
+  >
     <slot />
   </CalendarCellTrigger>
 </template>

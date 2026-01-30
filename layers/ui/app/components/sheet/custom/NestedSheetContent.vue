@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
-import {
-  DialogClose,
-  DialogContent,
-  DialogOverlay,
-  DialogPortal,
-  useForwardPropsEmits,
-} from 'reka-ui'
+import { DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
 
 interface SheetContentProps extends DialogContentProps {
   side?: SheetVariants['side']
@@ -29,6 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogContent
+      v-bind="{ ...forwarded, ...$attrs }"
       :class="
         cn(
           'border-l-accent/30! w-116 min-w-116 pt-26 drop-shadow-sm',
@@ -36,7 +31,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           props.class,
         )
       "
-      v-bind="{ ...forwarded, ...$attrs }">
+    >
       <slot />
     </DialogContent>
   </DialogPortal>

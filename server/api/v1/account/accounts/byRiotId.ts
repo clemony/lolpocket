@@ -1,4 +1,3 @@
-
 // server/riot/account/getByRiotId.ts
 import { riotFetch } from '#server/api'
 

@@ -1,0 +1,50 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Parallel Convergence",
+  "blurb": "Passive:  Ekko's basic attacks deal bonus magic damage against a low-health target, increased based on their missing health.",
+  "castTime": "0.25",
+  "cooldown": "22 / 20 / 18 / 16 / 14",
+  "cost": "30 / 35 / 40 / 45 / 50",
+  "damageType": "Magic damage",
+  "effectRadius": "375",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Ekko's basic attacks deal bonus magic damage equal to 3% (+ 3% per 100 AP) of the target's missing health against enemies below 30% of their maximum health. The damage has a minimum threshold of 15 and is capped at 150 against minions and monsters.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ekko creates an afterimage of himself that, after 2 seconds, bats a device to the target location and grants sight of the area for 2.5 seconds. After travelling over 1.25 seconds, the device expands into a chronosphere that lasts for 1.5 seconds and which slows enemies within by 40%.</p>"
+    },
+    {
+      "description": "If Ekko enters the sphere before it expires, it detonates to grant him a shield for 2 seconds and stun enemies within for 2.25 seconds.",
+      "leveling": [
+        {
+          "attribute": "Shield Strength",
+          "modifiers": [
+            {
+              "values": "100 / 120 / 140 / 160 / 180"
+            },
+            {
+              "unit": "% AP",
+              "values": "150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enemies can see the indicator for Parallel Convergence 2 seconds after casting."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/w",
+  "notes": "The passive will proc with the attack that triggers the final stack of  Resonance if it reduces a target's health below the 30% threshold.\nEkko can detonate the expansion even while  untargetable (i.e.  Chronobreak's dash), but not if he is  resurrecting.\nParallel Convergence will continue to  slow enemies even if its expansion is detonated.",
+  "projectile": "FALSE",
+  "resource": "Mana",
+  "spellEffects": "proc",
+  "spellshieldable": "True",
+  "targeting": "Location",
+  "targetRange": "1600"
+}
+  export default ability

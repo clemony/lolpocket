@@ -9,8 +9,7 @@ const { class: className, resource: p } = defineProps<{
 }>()
 
 const resource = computed(() => {
-  if (typeof p !== 'string')
-    return p
+  if (typeof p !== 'string') return p
 
   return abilityResources.find(p => p.name === (p ?? 'All'))
 })
@@ -32,7 +31,7 @@ const resource = computed(() => {
         'text-bc/90 w-fit gap-2! px-5 text-sm! font-medium!',
         {
           //
-          'hover:**:text-bc hover:text-bc order-first ':
+          'hover:**:text-bc hover:text-bc order-first':
             active
             || (cs().filters.resource && cs().filters.resource === resource.name),
           //
@@ -49,16 +48,14 @@ const resource = computed(() => {
     "
     :style="{
       backgroundColor: `${(cs().filters.resource && cs().filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
-    }">
+    }"
+  >
     <!--    <Icon
       v-if="resource?.icon"
       :name="resource?.icon"
       :class="cn('!size-4  dst shrink-0', resource?.class)" /> -->
 
     {{ resource?.title || resource.name }}
-    <icon
-      v-if="clear"
-      name="x"
-      class="size-4 text-white **:stroke-[2.6]" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </Button>
 </template>

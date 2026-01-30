@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { useDebounceFn } from '@vueuse/core'
-import { safeParse, string } from 'valibot'
-
 defineOptions({
   inheritAttrs: false,
 })
@@ -76,30 +73,27 @@ watch([query, tag, selectedRegion], runSearch) */
       )
     "
     @update:model-value="(e) => (query = e)"
-    @clear:input="clear()">
-    <icon
-      name="search"
-      class="size-4.5!" />
+    @clear-input="clear()"
+  >
+    <icon class="size-4.5!" name="search" />
     <template #2>
       <SearchTagInput
         :tag
         @focus:return="focused = true"
-        @update:tag="(e) => (tag = e)" />
+        @update:tag="(e) => (tag = e)"
+      />
       <SearchRegion
         :present="tag.length > 0"
         :region
-        @update:region="(e) => (region = e)" />
-      <DeviceKey
-        v-if="!query"
-        class="mr-2">
+        @update:region="(e) => (region = e)"
+      />
+      <DeviceKey v-if="!query" class="mr-2">
         K
       </DeviceKey>
     </template>
   </Input>
 
   <TransitionScalePop>
-    <slot
-      :focused
-      :query />
+    <slot :focused :query />
   </TransitionScalePop>
 </template>

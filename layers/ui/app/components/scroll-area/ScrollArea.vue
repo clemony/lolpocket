@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ScrollAreaRootProps, ScrollAreaViewportProps } from 'reka-ui'
+import type { ScrollAreaRootProps } from 'reka-ui'
 import { ScrollAreaCorner, ScrollAreaRoot, ScrollAreaViewport } from 'reka-ui'
 import ScrollBar from './ScrollBar.vue'
 
@@ -19,14 +19,12 @@ const delegatedProps = reactiveOmit(props, 'class', 'scrollbarClass')
 <template>
   <ScrollAreaRoot
     v-bind="delegatedProps"
-    :class="cn('relative overflow-hidden', props.rootClass)">
-    <ScrollAreaViewport
-      :class="cn('size-full', props.class)">
+    :class="cn('relative overflow-hidden', props.rootClass)"
+  >
+    <ScrollAreaViewport :class="cn('size-full', props.class)">
       <slot />
     </ScrollAreaViewport>
-    <ScrollBar
-      v-if="!props.stripped"
-      :class="cn('', scrollbar)" />
+    <ScrollBar v-if="!props.stripped" :class="cn('', scrollbar)" />
     <ScrollAreaCorner />
   </ScrollAreaRoot>
 </template>

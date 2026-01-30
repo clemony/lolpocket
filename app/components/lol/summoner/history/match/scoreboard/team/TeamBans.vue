@@ -7,8 +7,6 @@ const { class: className, team } = defineProps<{
 
 <template>
   <div class="flex h-full w-fit translate-y-px items-center justify-end gap-4">
-    <Icon
-      name="x"
-      class="mr-1 size-4 translate-y-px opacity-50 **:stroke-3" />
+    <Icon class="mr-1 size-4 translate-y-px opacity-50 **:stroke-3" name="x" />
   </div>
 </template>

@@ -8,18 +8,16 @@ export interface RoleStats {
 
 export function useMatchRoles(
   puuid: string,
-  matches: Ref<MatchData[]>
+  matches: MatchData[]
 ): RoleStats[] {
-  if (!matches)
-    return
+  if (!matches) return
 
   const roleStatsMap = new Map<string, { games: number, wins: number }>()
 
   for (const match of toValue(matches)) {
     const player = match.participants.find(p => p.puuid === puuid)
     const role = player.role
-    if (!roleKey.includes(role))
-      continue
+    if (!roleKey.includes(role)) continue
 
     if (!roleStatsMap.has(role)) {
       roleStatsMap.set(role, { games: 0, wins: 0 })
@@ -27,8 +25,7 @@ export function useMatchRoles(
 
     const stats = roleStatsMap.get(role)!
     stats.games++
-    if (player.win)
-      stats.wins++
+    if (player.win) stats.wins++
   }
 
   const roles = computed(() => {

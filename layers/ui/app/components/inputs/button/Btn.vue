@@ -6,11 +6,9 @@ const props = defineProps<{
 
 <template>
   <label
-    class="
-      btn text-md btn-ghost btn-lg relative cursor-pointer justify-start
-      font-medium
-    "
-    :class="cn('', props.class)">
+    class="btn text-md btn-ghost btn-lg relative cursor-pointer justify-start font-medium"
+    :class="cn('', props.class)"
+  >
     <slot />
   </label>
 </template>

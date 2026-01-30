@@ -1,25 +1,42 @@
-import fs from "node:fs"
-import path from "node:path"
-import { i_DIR, markUpdate, normalizeArray } from "../../utils"
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { markUpdate } from '../../misc/markUpdate'
+import { normalizeArray } from '../../utils'
 
-const dataPath = path.resolve(`${i_DIR}raw/items-lite.json`)
-const raw = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
+const dataPath = resolve(`./layers/patch/server/items/raw/items-lite.json`)
+const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   any
 >
 
-const outputTag = path.resolve("./layers/domain/constants/items/tag-to-item.ts")
-const outputMap = path.resolve("./layers/domain/constants/items/map-to-item.ts")
-const outputPrice = path.resolve("./layers/domain/constants/items/item-price.ts")
-const outputRank = path.resolve("./layers/domain/constants/items/rank-to-item.ts")
-
-const outputItemRank = path.resolve("./layers/domain/constants/items/item-rank.ts")
-const outputStat = path.resolve("./layers/domain/constants/items/stat-to-item.ts")
-const outputUnpurchasable = path.resolve(
-  "./layers/domain/constants/items/unpurchasable-items.ts"
+const outputTag = resolve(
+  './layers/patch/shared/constants/items/tagToItem.ts'
 )
-const outputRecipe = path.resolve("./layers/domain/constants/items/item-recipe.ts")
-const outputAka = path.resolve("./layers/domain/constants/items/item-aka.ts")
+const outputMap = resolve(
+  './layers/patch/shared/constants/items/mapToItem.ts'
+)
+const outputPrice = resolve(
+  './layers/patch/shared/constants/items/itemPrice.ts'
+)
+const outputRank = resolve(
+  './layers/patch/shared/constants/items/rankToItem.ts'
+)
+
+const outputItemRank = resolve(
+  './layers/patch/shared/constants/items/itemRank.ts'
+)
+const outputStat = resolve(
+  './layers/patch/shared/constants/items/statToItem.ts'
+)
+const outputUnpurchasable = resolve(
+  './layers/patch/shared/constants/items/unpurchasableItems.ts'
+)
+const outputRecipe = resolve(
+  './layers/patch/shared/constants/items/itemRecipe.ts'
+)
+const outputAka = resolve(
+  './layers/patch/shared/constants/items/itemAka.ts'
+)
 
 const itemsById: Record<number, ItemLite> = {}
 const itemRecipe = {} as Record<number, number[]>
@@ -34,13 +51,13 @@ const unpurchasableItems = [] as number[]
 const akaLookup: Record<string, number> = {}
 
 for (const item of Object.values(raw)) {
-  const { id, maps, purchasable, rank, stats, tags, recipe, aka, gold } = item
+  const { id, aka, gold, maps, purchasable, rank, recipe, stats, tags } = item
 
   itemsById[id] = item
   itemRank[id] = rank
   itemRecipe[id] = recipe
   itemPrice[id] = gold.total
-  console.log("🥸 - itemRecipe:", itemRecipe)
+  console.log('🥸 - itemRecipe:', itemRecipe)
   for (const r of normalizeArray(rank)) {
     if (!rankToItem[r]) rankToItem[r] = []
     rankToItem[r].push(id)

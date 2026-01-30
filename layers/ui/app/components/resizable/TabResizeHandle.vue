@@ -17,23 +17,18 @@ const tabs = ref()
 
 <template>
   <Label
+    class="tab flex cursor-pointer! flex-nowrap items-center gap-2 before:opacity-90"
     role="tab"
-    class="
-      tab flex cursor-pointer! flex-nowrap items-center gap-2 before:opacity-90
-    "
     :class="props.active ? tabStyles.activeClass : ''"
-    :style="props.active ? tabStyles.activeStyle : ''">
+    :style="props.active ? tabStyles.activeStyle : ''"
+  >
     <span
       v-if="props.active"
-      class="absolute bottom-0 flex h-1 w-[116%] justify-between">
+      class="absolute bottom-0 flex h-1 w-[116%] justify-between"
+    >
       <span
-        v-for="index in 2"
-        :key="index"
-        class="
-          size-3.5 rotate-40
-          bg-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] shadow-md
-          shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)]
-        "></span>
+        class="size-3.5 rotate-40 bg-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] shadow-md shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)]"
+      />
     </span>
 
     <slot />

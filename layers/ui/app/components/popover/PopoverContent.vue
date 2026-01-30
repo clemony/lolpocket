@@ -16,7 +16,7 @@ const props = withDefaults(
     sideOffset: 8,
     align: 'center',
     dataTheme: 'base',
-  },
+  }
 )
 
 const emits = defineEmits<PopoverContentEmits>()
@@ -31,14 +31,14 @@ provide('popoverVariant', props.variant)
 <template>
   <PopoverPortal :to="props.to">
     <PopoverContent
+      v-bind="{ forwarded }"
       :id="props.id"
-      ref="content"
       :align
       :data-theme="props.dataTheme"
       :side-offset
-      v-bind="{ forwarded }"
       :class="cn(base(), props.class)"
-      @close-auto-focus.prevent>
+      @close-auto-focus.prevent
+    >
       <slot />
     </PopoverContent>
   </PopoverPortal>

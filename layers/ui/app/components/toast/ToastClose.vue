@@ -13,20 +13,18 @@ const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <ToastClose
-    v-bind="delegatedProps"
-    as-child>
+  <ToastClose v-bind="delegatedProps" as-child>
     <Button
-      variant="ghost"
       v-bind="$attrs"
+      variant="ghost"
       :class="
-        cn('btn-square absolute top-2.5 -right-1 size-8! *:opacity-50 hover:*:opacity-100',
-           props.class,
+        cn(
+          'btn-square absolute top-2.5 -right-1 size-8! *:opacity-50 hover:*:opacity-100',
+          props.class,
         )
-      ">
-      <icon
-        name="x"
-        class="size-4 **:stroke-[1.7]" />
+      "
+    >
+      <icon class="size-4 **:stroke-[1.7]" name="x" />
     </Button>
   </ToastClose>
 </template>

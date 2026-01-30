@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Fuse from 'fuse.js'
 import { motion } from 'motion-v'
 
 const props = withDefaults(
@@ -12,7 +11,7 @@ const props = withDefaults(
   }>(),
   {
     placeholder: 'Search Items...',
-  },
+  }
 )
 
 const emit = defineEmits(['update:query'])
@@ -106,8 +105,9 @@ watchEffect(() => {
 <template>
   <motion.div
     :class="
-      cn('bgneutral/84 btn btn-circle text-nc btn-neutral relative flex items-center rounded-full border',
-         props.class,
+      cn(
+        'bgneutral/84 btn btn-circle text-nc btn-neutral relative flex items-center rounded-full border',
+        props.class,
       )
     "
     :variants="variants"
@@ -117,34 +117,36 @@ watchEffect(() => {
       ease: 'easeOut',
     }"
     while-hover="expanded"
-    :animate="searchQuery !== null ? 'expanded' : 'collapsed'">
+    :animate="searchQuery !== null ? 'expanded' : 'collapsed'"
+  >
     <motion.div :variants="inputVariants">
       <slot>
         <Input
           v-model="searchQuery"
-          type="text"
           class="m-0 size-full border-0 py-0 pl-5 shadow-none"
+          type="text"
           :placeholder="props.placeholder"
-          @clear:input="searchQuery = ''" />
+          @clear-input="searchQuery = ''"
+        />
       </slot>
     </motion.div>
 
     <button
+      class="btn btn-circle btn-ghost btn-xs hover:bg-b3/40 pointer-events-auto absolute top-1.5 left-1.5 z-2"
       :disabled="searchQuery === null"
-      class="
-        btn btn-circle btn-ghost btn-xs hover:bg-b3/40 pointer-events-auto absolute
-        top-1.5 left-1.5 z-2
-      "
-      @click="clearFilters">
+      @click="clearFilters"
+    >
       <icon
         v-if="searchQuery"
+        class="text-bc/70 dst absolute size-5.5 shrink-0"
         name="x-sm"
-        class="text-bc/70 dst absolute size-5.5 shrink-0" />
+      />
 
       <icon
         v-else
+        class="text-bc/70 dst absolute size-4.75 shrink-0"
         name="search"
-        class="text-bc/70 dst absolute size-4.75 shrink-0" />
+      />
     </button>
   </motion.div>
 </template>

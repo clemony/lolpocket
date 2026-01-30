@@ -23,17 +23,16 @@ const {
 <template>
   <div class="w-max">
     <Button
+      v-bind="$attrs"
       :size
       :hover
-      v-bind="$attrs"
       :class="cn('gap-1!', className)"
       :variant
-      @click="navigateTo(to)">
+      @click="navigateTo(to)"
+    >
       {{ content }}
 
-      <icon
-        name="link-2"
-        class="size-4.5 **:stroke-2" />
+      <icon class="size-4.5 **:stroke-2" name="link-2" />
     </Button>
   </div>
 </template>

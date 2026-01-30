@@ -20,6 +20,7 @@ const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
 
 <template>
   <Primitive
+    v-bind="$attrs"
     data-slot="sidebar-menu-button"
     data-sidebar="menu-button"
     :data-size="size"
@@ -27,7 +28,7 @@ const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
     :class="cn(sidebarMenuButtonVariants({ variant, size }), props.class)"
     :as="as"
     :as-child="asChild"
-    v-bind="$attrs">
+  >
     <slot />
   </Primitive>
 </template>

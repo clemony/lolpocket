@@ -7,10 +7,7 @@
     Search by Item Category
   </p>
 
-  <div
-    group
-    class="flex flex-col px-1.5"
-    :appear="false">
+  <div class="flex flex-col px-1.5" group :appear="false">
     <!--     <label v-for="type in itemTypes" :key="type" class="w-full rounded-md hover:bg-accent capitalize py-1.5 pl-8 has-checked:hidden">
       <input v-model="filters.rank" type="radio" name="item-types" class="peer hidden" :value="type" @change="console.log(filters.rank)" />
       {{ type }}

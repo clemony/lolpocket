@@ -12,34 +12,30 @@ const { filtered, filters, setFilter } = useItemFilter()
 
     <CollapsibleContent class="CollapsibleContent">
       <AnimatePresence
+        class="z-0 mb-2 flex flex-col px-1.5"
         multiple
         as="div"
         unwrap-element
-        class="z-0 mb-2 flex flex-col px-1.5"
-        :appear="false">
-        <Motion
-          v-for="stat in statIndex"
-          :key="stat.id"
-          as="div">
+        :appear="false"
+      >
+        <Motion v-for="stat in statIndex" :key="stat.id" as="div">
           <label
             v-if="!filters.stats.includes(stat.id)"
-            class="
-              hover:bg-accent flex w-full rounded-md py-1.5 pr-2.5 pl-8
-              capitalize
-            ">
+            class="hover:bg-accent flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize"
+          >
             <input
               v-model="filters.stats"
+              class="peer hidden"
               type="checkbox"
               name="item-types"
-              class="peer hidden"
-              :value="stat" />
+              :value="stat"
+            >
 
             <span class="grow">{{ stat.name }}</span>
 
             <div
-              class="
-                badge rounded-field border-accent bg-b1/90 text-xs! tracking-wide
-              ">
+              class="badge rounded-field border-accent bg-b1/90 text-xs! tracking-wide"
+            >
               <span class="text-bc dst">{{ stat.abbr[0] }}</span>
             </div>
           </label>

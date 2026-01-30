@@ -16,10 +16,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <TagsInputRoot
     v-bind="forwarded"
     :class="
-      cn('text-md focus-within:ring-neutral/60 flex flex-wrap items-center gap-2 rounded-lg px-4 py-3 focus-within:ring-1',
-         props.class,
+      cn(
+        'text-md focus-within:ring-neutral/60 flex flex-wrap items-center gap-2 rounded-lg px-4 py-3 focus-within:ring-1',
+        props.class,
       )
-    ">
+    "
+  >
     <slot />
   </TagsInputRoot>
 </template>

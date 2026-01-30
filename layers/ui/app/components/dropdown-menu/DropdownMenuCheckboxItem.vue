@@ -23,15 +23,15 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <DropdownMenuCheckboxItem
     v-bind="forwarded"
     :class="
-      cn('focus:textneutral-bc focus:bg-b2 relative flex cursor-default items-center rounded-sm py-1.5 pr-8 pl-10 text-sm transition-colors outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
-         props.class,
+      cn(
+        'focus:textneutral-bc focus:bg-b2 relative flex cursor-default items-center rounded-sm py-1.5 pr-8 pl-10 text-sm transition-colors outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        props.class,
       )
-    ">
+    "
+  >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon
-          name="tick-sm"
-          class="size-4" />
+        <icon class="size-4" name="tick-sm" />
       </DropdownMenuItemIndicator>
     </span>
 

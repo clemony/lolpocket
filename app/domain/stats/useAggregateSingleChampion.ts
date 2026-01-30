@@ -1,7 +1,8 @@
-export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerData[]>) {
+export function useAggregateSingleChampion(
+  matchData: ComputedRef<MatchPlayerData[]>
+) {
   return computed<ChampionStats | null>(() => {
-    if (!matchData.value?.length)
-      return null
+    if (!matchData.value?.length) return null
 
     const acc: ChampionStats = {
       championId: matchData.value[0].player.championId,
@@ -23,16 +24,14 @@ export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerDat
 
     for (const m of matchData.value) {
       const row = m.player
-      if (!row)
-        continue
+      if (!row) continue
 
       // role
       const roleKey = normalizeRole(row.role)
       const roleStat = getRoleStat(acc.role.stats, roleKey)
 
       roleStat.games++
-      if (row.win && row.win !== 'remake')
-        roleStat.win++
+      if (row.win && row.win !== 'remake') roleStat.win++
 
       applyParticipantStats(acc, row)
       bumpFromPlayerStats(acc, row)
@@ -81,7 +80,7 @@ export function useAggregateSingleChampion(matchData: ComputedRef<MatchPlayerDat
           )
         : 0
 
-    for (const stat of Object.values(acc.role.stats) as StatValues) {
+    for (const stat of Object.values(acc.role.stats)) {
       stat.winrate
         = stat.games ? Math.round((stat.win / stat.games) * 1000) / 10 : 0
       stat.pickrate = Math.round((stat.games / acc.games) * 1000) / 10

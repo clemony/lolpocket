@@ -45,27 +45,27 @@ const variants: Record<string, Record<string, string | number>> = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="
-        data-[state=open]:animate-in data-[state=closed]:animate-out
-        data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0
-        isolate z-50 bg-black/80
-      "
-      :class="{ 'invisible opacity-0': props.noOverlay }">
+      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 isolate z-50 bg-black/80"
+      :class="{ 'invisible opacity-0': props.noOverlay }"
+    >
       <Motion
         class="overlay"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"
-        :exit="{ opacity: 0 }" />
+        :exit="{ opacity: 0 }"
+      />
     </DialogOverlay>
 
     <DialogContent
-      as-child
       v-bind="forwarded"
+      as-child
       :class="
-        cn('data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] bg-b1 fixed top-1/2 left-1/2 isolate z-50 max-w-160 translate-[-50%] gap-4 border px-10 py-8 shadow-lg data-[state=closed]:duration-200 sm:rounded-xl',
-           props.class,
+        cn(
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:slide-out-to-bottom-[48%] bg-b1 fixed top-1/2 left-1/2 isolate z-50 max-w-160 translate-[-50%] gap-4 border px-10 py-8 shadow-lg data-[state=closed]:duration-200 sm:rounded-xl',
+          props.class,
         )
-      ">
+      "
+    >
       <Motion
         class="modal-container"
         :variants="variants"
@@ -76,19 +76,15 @@ const variants: Record<string, Record<string, string | number>> = {
         initial="dialogInitialState"
         animate="dialogOpenState"
         exit="dialogInitialState"
-        :style="{ transformPerspective: 500 }">
+        :style="{ transformPerspective: 500 }"
+      >
         <slot />
 
         <DialogClose
           v-if="props.noButton"
-          class="
-            ring-offset-background focus:ringneutral absolute top-4 right-4
-            rounded-sm opacity-70 transition-opacity hover:opacity-100
-            focus:ring focus:outline-none disabled:pointer-events-none
-          ">
-          <icon
-            name="x-sm"
-            class="size-6" />
+          class="ring-offset-background focus:ringneutral absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring focus:outline-none disabled:pointer-events-none"
+        >
+          <icon class="size-6" name="x-sm" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

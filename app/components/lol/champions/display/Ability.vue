@@ -6,7 +6,7 @@ const {
   id,
   class: className,
   dataSize = 'lg',
-  noTip = false
+  noTip = false,
 } = defineProps<{
   class?: HTMLAttributes['class']
   ckey?: string
@@ -19,11 +19,9 @@ const {
 
 const loaded = ref(false)
 
-const champ = computed(() =>
-  cid ? ix().champKeyById(cid) : ckey
-)
+const champ = computed(() => (cid ? champKeyById(cid) : ckey))
 
-const ability = computed (() => id || `${champ.value}${akey}`)
+const ability = computed(() => id || `${champ.value}${akey}`)
 </script>
 
 <template>
@@ -34,19 +32,20 @@ const ability = computed (() => id || `${champ.value}${akey}`)
     :data-interactive="dataSize === 'lg' ? true : false"
     :data-type="noTip ? null : 'ability'"
     :class="
-      cn('relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
-         { ' shadow-sm drop-shadow-sm  shadow-black/30 ': loaded },
-         className,
+      cn(
+        'relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
+        { 'shadow-sm shadow-black/30 drop-shadow-sm': loaded },
+        className,
       )
-    ">
-    <Spinner
-      v-if="!loaded"
-      class="absolute z-0" />
+    "
+  >
+    <Spinner v-if="!loaded" class="absolute z-0" />
     <img
+      class="size-full shrink-0"
       :alt="ability"
       :src="`/img/abilities/${ability}.webp`"
-      class="size-full shrink-0"
-      @load="loaded = true" />
+      @load="loaded = true"
+    >
     <slot />
   </label>
 </template>

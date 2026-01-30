@@ -23,8 +23,7 @@ function update(e) {
 const editableRef = ref<string>()
 
 function activateEdit(e: MouseEvent, editFn: () => void) {
-  if ((e.target as HTMLElement)?.closest('button'))
-    return
+  if ((e.target as HTMLElement)?.closest('button')) return
   editFn()
 }
 
@@ -37,8 +36,8 @@ onMounted(async () => {
   <!-- -->
   <EditableRoot
     v-if="pocket && modelValue"
-    ref="editableRef"
     v-slot="{ isEditing, edit }"
+    ref="editableRef"
     v-model:model-value="pocket.name"
     :max-length="25"
     :select-on-focus="true"
@@ -48,82 +47,65 @@ onMounted(async () => {
     name="name"
     submit-mode="both"
     :class="
-      cn('group/edit rounded-box focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1 flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden border border-transparent px-2.5 py-0',
-         wrapperClass,
+      cn(
+        'group/edit rounded-box focus-within:border-b3 focus-within:bg-b1 hover:border-b3 hover:bg-b1 flex h-14 w-160 max-w-160 cursor-text items-center justify-between overflow-hidden border border-transparent px-2.5 py-0',
+        wrapperClass,
       )
     "
     as-child
-    @update:model-value="modelValue = $event">
+    @update:model-value="modelValue = $event"
+  >
     <!-- Name Input/Preview -->
     <button
-      class="
-        relative flex w-160 w-full items-center justify-between gap-2 truncate
-        pr-20
-      "
-      @click="(e) => activateEdit(e, edit)">
+      class="relative flex w-160 w-full items-center justify-between gap-2 truncate pr-20"
+      @click="(e) => activateEdit(e, edit)"
+    >
       <EditableArea class="w-160 overflow-hidden">
         <div
-          class="
-            *:dst w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap
-            **:truncate **:tracking-tight
-          ">
+          class="*:dst w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap **:truncate **:tracking-tight"
+        >
           <EditablePreview :class="cn('', className)">
             {{ pocket.name || "Pocket" }}
           </EditablePreview>
 
           <EditableInput
             :class="cn('text-bc/30', className)"
-            spellcheck="false" />
+            spellcheck="false"
+          />
         </div>
       </EditableArea>
 
       <!-- Icon Buttons -->
       <div
-        class="
-          pointer-events-none absolute right-3 flex h-full w-10 max-w-10
-          min-w-10 items-center justify-end
-        "
-        :class="cn('', buttonClass)">
+        class="pointer-events-none absolute right-3 flex h-full w-10 max-w-10 min-w-10 items-center justify-end"
+        :class="cn('', buttonClass)"
+      >
         <!-- Show edit icon only when not editing -->
         <EditableEditTrigger
           v-show="!isEditing"
+          class="pointer-events-auto opacity-0 transition-opacity group-hover/edit:opacity-100"
           as="button"
-          class="
-            pointer-events-auto opacity-0 transition-opacity
-            group-hover/edit:opacity-100
-          ">
-          <icon
-            name="edit"
-            class="text-bc/50 mr-2 size-4" />
+        >
+          <icon class="text-bc/50 mr-2 size-4" name="edit" />
         </EditableEditTrigger>
 
         <!-- Show action icons when editing -->
         <div
           v-show="isEditing"
-          class="
-            pointer-events-auto absolute flex items-center justify-end gap-1
-            px-1
-          ">
+          class="pointer-events-auto absolute flex items-center justify-end gap-1 px-1"
+        >
           <button
-            class="
-              btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40!
-              hover:inset-shadow-xxs
-            "
-            @click="pocket.name = generateName()">
-            <icon
-              name="shuffle"
-              class="dst size-3" />
+            class="btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40! hover:inset-shadow-xxs"
+            @click="pocket.name = generateName()"
+          >
+            <icon class="dst size-3" name="shuffle" />
           </button>
 
           <button
-            class="
-              btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40!
-              hover:inset-shadow-xxs
-            "
-            @click="modelValue = ''">
-            <icon
-              name="x-sm"
-              class="dst" />
+            class="btn btn-square btn-ghost btn-xs hover:border-b3/80 hover:bg-b3/40! hover:inset-shadow-xxs"
+            @click="modelValue = ''"
+          >
+            <icon class="dst" name="x-sm" />
           </button>
         </div>
       </div>

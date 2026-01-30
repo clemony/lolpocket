@@ -12,30 +12,31 @@ const loaded = ref<boolean>(false)
 <template>
   <TransitionSlideLeft
     v-if="championKeys"
-    group
     class="scrollbar-hidden grid size-full justify-start gap-6 overflow-y-auto"
+    group
     :class="{
       'grid-cols-[1fr_420px]': selectedChampion,
       'grid-cols-[1fr_0px]': !selectedChampion,
-    }">
+    }"
+  >
     <TransitionSlideLeft
+      class="scrollbar-hidden flex size-full flex-wrap justify-start overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8"
       group
-      class="
-        scrollbar-hidden flex size-full flex-wrap justify-start
-        overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8
-      "
-      :class="{ '': loaded }">
+      :class="{ '': loaded }"
+    >
       <label
         v-for="key in championKeys"
         :key="key"
-        :data-state="filteredKeys.includes(key) ? 'visible' : 'hidden'"
         class="group flex grow p-1 data-[state=hidden]:hidden"
-        @click="selectedChampion = key">
+        :data-state="filteredKeys.includes(key) ? 'visible' : 'hidden'"
+        @click="selectedChampion = key"
+      >
         <LibraryChampionCard
           v-show="key"
-          :champ-key="key"
           class="h-78 max-w-62 min-w-56"
-          @loaded="loaded = true" />
+          :champ-key="key"
+          @loaded="loaded = true"
+        />
       </label>
 
       <div class="h-78 w-58 grow" />
@@ -43,22 +44,19 @@ const loaded = ref<boolean>(false)
 
     <div
       v-if="selectedChampion"
-      group
       class="relative size-full overflow-hidden"
+      group
       :class="{
         'max-w-0': !selectedChampion,
         'max-w-full': selectedChampion,
-      }">
+      }"
+    >
       <div class="absolute inset-0 top-1 left-0 mb-4">
         <button
-          class="
-            group/btn btn btn-circle btn-ghost absolute top-3 left-3 z-2
-            border-none
-          "
-          @click="selectedChampion = null">
-          <icon
-            name="x-sm"
-            class="text-white/70" />
+          class="group/btn btn btn-circle btn-ghost absolute top-3 left-3 z-2 border-none"
+          @click="selectedChampion = null"
+        >
+          <icon class="text-white/70" name="x-sm" />
         </button>
 
         <ChampionData :champion-key="selectedChampion" />

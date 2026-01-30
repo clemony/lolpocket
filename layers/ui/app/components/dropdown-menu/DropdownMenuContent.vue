@@ -21,7 +21,7 @@ const props = withDefaults(
     sideOffset: 4,
     animation: 'shift-toward',
     theme: 'base, clean',
-  },
+  }
 )
 const emits = defineEmits<DropdownMenuContentEmits>()
 
@@ -38,7 +38,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       :data-placement="forwarded.side"
       :data-animation="props.animation"
       :class="cn('tippy-box', props.class)"
-      @close-auto-focus.prevent>
+      @close-auto-focus.prevent
+    >
       <slot />
     </DropdownMenuContent>
   </DropdownMenuPortal>

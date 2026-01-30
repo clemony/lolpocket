@@ -5,11 +5,18 @@ import {
   Chart,
   DoughnutController,
   RadialLinearScale,
-  Tooltip
+  Tooltip,
 } from 'chart.js'
 import { Doughnut } from 'vue-chartjs'
 
-const { class: className, cutout, data, gauge, noTooltip, overlap } = defineProps<{
+const {
+  class: className,
+  cutout,
+  data,
+  gauge,
+  noTooltip,
+  overlap,
+} = defineProps<{
   data: ChartData<'doughnut', number[], string>
   overlap?: boolean
   class?: HTMLAttributes['class']
@@ -33,8 +40,7 @@ const chartOptions = computed<ChartOptions<'doughnut'>>(() => ({
       roundedCornersFor: overlap ? 0 : null,
     },
   },
-  plugins: {
-  },
+  plugins: {},
   responsive: true,
   spacing: gauge ? -4 : 2,
 }))
@@ -46,5 +52,6 @@ const chartOptions = computed<ChartOptions<'doughnut'>>(() => ({
     :options="chartOptions"
     :aria-label="data.labels"
     role="img"
-    :class="className" />
+    :class="className"
+  />
 </template>

@@ -6,27 +6,24 @@ const { class: className, player } = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('flex gap-2', className)">
-    <Badge
-      v-if="player.stats.kills + player.stats.assists / player.stats.deaths === Infinity"
-      variant="base"
-      size="4"
-      class="text-badge-xs dark:font-bld border-ad dark:bg-ad/70 dark:text-b1 light:bg-tint-ad/10 light:font-semibold! light:text-white px-2!">
-      <Icons
-        size="3.5"
-        name="proicons:infinity"
-        class="dst dark:text-b1 light:text-white mt-[0.04em] size-4.5 **:stroke-[2.2]" />
-      <span class="tracking-wide">kda</span>
-    </Badge>
+  <div :class="cn('flex items-center gap-1', className)">
+    <UBadge
+      v-if="player.stats.kills + player.stats.assists / player.stats.deaths
+        === Infinity"
+      :ui="{ leadingIcon: 'scale-120 **:stroke-[1.8] ml-px' }"
+      label="kda"
+      icon="proicons:infinity"
+      color="ad"
+      size="xs"
+      class=""
+    />
 
-    <span
-      v-else
-      class="text-badge-xs opacity-60">
-      {{ player.stats.kda }} <span>kda</span>
-    </span>
+    <Tooltip v-else arrow text="KDA" class="badge-tooltip-hover">
+      {{ player.stats.kda }}&VeryThinSpace;:&VeryThinSpace;1
+    </Tooltip>
 
-    <span class="text-badge-xs opacity-60">
-      {{ player.stats.kp }} kp
-    </span>
+    <Tooltip arrow text="Kill participation" class="badge-tooltip-hover">
+      {{ player.stats.kp }}%
+    </Tooltip>
   </div>
 </template>

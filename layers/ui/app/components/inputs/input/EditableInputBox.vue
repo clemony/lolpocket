@@ -18,35 +18,29 @@ const modelValue = ref(props.modelValue)
 
 <template>
   <EditableRoot
+    class="group w-fit p-0"
     :auto-resize="true"
     :select-on-focus="true"
     :model-value="props.modelValue"
-    class="group w-fit p-0"
-    :class="cn('', props.class)">
+    :class="cn('', props.class)"
+  >
     <EditableArea
-      class="
-        group text-md relative flex h-fit w-auto flex-nowrap items-center gap-0!
-        p-0! font-medium capitalize
-      ">
+      class="group text-md relative flex h-fit w-auto flex-nowrap items-center gap-0! p-0! font-medium capitalize"
+    >
       <EditablePreview class="w-fit! p-0!" />
 
-      <EditableInput
-        :spellcheck="false"
-        class="w-auto!" />
+      <EditableInput class="w-auto!" :spellcheck="false" />
 
       <EditableEditTrigger
-        class="
-          edit-trigger pointer-events-none absolute right-0 w-fit p-0
-          group-hover:opacity-100
-        ">
-        <icon
-          name="mingcute:edit-line"
-          class="size-3.5 shrink-0 opacity-85" />
+        class="edit-trigger pointer-events-none absolute right-0 w-fit p-0 group-hover:opacity-100"
+      >
+        <icon class="size-3.5 shrink-0 opacity-85" name="mingcute:edit-line" />
       </EditableEditTrigger>
 
       <RandomButton
         class="btn-ghost absolute right-0 hidden group-focus-within:block"
-        @click="modelValue = generateName()" />
+        @click="modelValue = generateName()"
+      />
     </EditableArea>
   </EditableRoot>
 </template>

@@ -1,0 +1,15 @@
+// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+      import type { Item } from "#shared/types"
+
+      const item: Item =  {
+  "id": 6677,
+  "name": "Rageknife",
+  "description": "25% Attack Speed\n\n\nWrath: Attacks apply 20 magic damage On-Hit.Seething Strike: Basic attacks grant 5% Attack Speed, stacking up to 3 times for a maximum of  Attack Speed.",
+  "gold": {
+    "base": 600,
+    "purchasable": false,
+    "total": 1100,
+    "sell": 770
+  }
+}
+export default item

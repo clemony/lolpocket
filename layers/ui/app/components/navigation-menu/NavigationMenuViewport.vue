@@ -33,10 +33,11 @@ const variants = {
   <div :class="cn('absolute top-full left-0 grid justify-center')">
     <AnimatePresence>
       <NavigationMenuViewport
+        v-bind="forwarded"
         ref="target"
         :align="props.align"
-        v-bind="forwarded"
-        as-child>
+        as-child
+      >
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -47,10 +48,12 @@ const variants = {
             height: 'var(--reka-navigation-menu-viewport-height)',
           }"
           :class="
-            cn('border-b4/70 bg-b1/92 text-bc relative grid items-center justify-center overflow-hidden rounded-xl border bg-blend-screen shadow-lg shadow-black/10 backdrop-blur-md',
-               props.class,
+            cn(
+              'border-b4/70 bg-b1/92 text-bc relative grid items-center justify-center overflow-hidden rounded-xl border bg-blend-screen shadow-lg shadow-black/10 backdrop-blur-md',
+              props.class,
             )
-          ">
+          "
+        >
           <slot />
         </motion.div>
       </NavigationMenuViewport>

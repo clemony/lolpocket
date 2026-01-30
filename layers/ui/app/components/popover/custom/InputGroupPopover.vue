@@ -4,7 +4,7 @@ const { class: className, modelValue: mv } = defineProps<{
   modelValue?: string
 }>()
 
-const emit = defineEmits(['clear:input'])
+const emit = defineEmits(['clearInput'])
 const modelValue = computed(() => mv)
 </script>
 
@@ -13,21 +13,13 @@ const modelValue = computed(() => mv)
     <PopoverTrigger :class="cn('w-full cursor-text', className)">
       <InputGroup class="h-12">
         <InputGroupAddon>
-          <icon
-            name="search"
-            class="size-4.5 opacity-50" />
+          <icon class="size-4.5 opacity-50" name="search" />
         </InputGroupAddon>
-        <InputGroupInput
-          v-model:model-value="modelValue"
-          @focus.prevent />
+        <InputGroupInput v-model:model-value="modelValue" @focus.prevent />
 
-        <InputGroupClear
-          class="mr-6"
-          @clear:input="emit('clear:input')" />
+        <InputGroupClear class="mr-6" @clear-input="emit('clearInput')" />
         <InputGroupAddon align="inline-end">
-          <icon
-            name="filter"
-            class="mr-2 size-4.5 opacity-50" />
+          <icon class="mr-2 size-4.5 opacity-50" name="filter" />
         </InputGroupAddon>
       </InputGroup>
     </PopoverTrigger>

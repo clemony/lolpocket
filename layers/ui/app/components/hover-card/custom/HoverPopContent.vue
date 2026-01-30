@@ -2,13 +2,12 @@
 import type { HoverCardContentProps } from 'reka-ui'
 import { motion } from 'motion-v'
 import { HoverCardContent, HoverCardPortal, useForwardProps } from 'reka-ui'
-import { computed } from 'vue'
 
 const props = withDefaults(
   defineProps<HoverCardContentProps & { class?: HTMLAttributes['class'] }>(),
   {
     sideOffset: 4,
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -48,10 +47,9 @@ const wrapperVariants = {
 <template>
   <HoverCardPortal>
     <AnimatePresence>
-      <HoverCardContent
-        as-child
-        v-bind="forwarded">
+      <HoverCardContent v-bind="forwarded" as-child>
         <motion.div
+          v-bind="{ forwarded }"
           :variants="variants"
           initial="hidden"
           animate="visible"
@@ -61,23 +59,25 @@ const wrapperVariants = {
             duration: 0.2,
             bounce: 0.3,
           }"
-          v-bind="{ forwarded }"
           :class="
-            cn('border-b3! bg-b1/94 text-bc z-50 w-72 rounded-lg border p-2 shadow-md drop-shadow-md backdrop-blur-lg outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
-               props.class,
+            cn(
+              'border-b3! bg-b1/94 text-bc z-50 w-72 rounded-lg border p-2 shadow-md drop-shadow-md backdrop-blur-lg outline-none group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
+              props.class,
             )
-          ">
+          "
+        >
           <motion.div
+            class="size-full"
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"
             exit="hidden"
-            class="size-full"
             :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }">
+            }"
+          >
             <slot />
           </motion.div>
         </motion.div>

@@ -1,0 +1,71 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:16 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "W",
+  "name": "Spirit Cleave",
+  "affects": "Self, Enemies",
+  "angle": "80°",
+  "blurb": "Active:  Yone cleaves his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit based on their maximum health.",
+  "castTime": "0.5 : 0.19 (based on bonus attack speed)",
+  "cooldown": "14",
+  "cost": "0",
+  "damageType": "Other damage",
+  "effectRadius": "600",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p>",
+      "leveling": [
+        {
+          "attribute": "Total Mixed Damage",
+          "modifiers": [
+            {
+              "values": "10 / 20 / 30 / 40 / 50"
+            },
+            {
+              "tooltip": "Scaling per rank:\n8 / 9 / 10 / 11 / 12% of target's maximum health",
+              "unit": "% of target's maximum health",
+              "values": "8 - 12"
+            }
+          ]
+        },
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "5 / 10 / 15 / 20 / 25"
+            },
+            {
+              "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% of target's maximum health",
+              "unit": "% of target's maximum health",
+              "values": "4 - 6"
+            }
+          ]
+        },
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "5 / 10 / 15 / 20 / 25"
+            },
+            {
+              "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% of target's maximum health",
+              "unit": "% of target's maximum health",
+              "values": "4 - 6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "If this hits an enemy, Yone grants himself a shield for 40 - 90 (based on level) (+ 65% bonus AD) for 1.5 seconds, increased by 100% if it hits a champion and by 50% for each subsequent champion hit."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/w",
+  "notes": "This ability always employs Quick cast.\nDespite Spirit Cleave generally hitting targets'  edge range, it cannot hit targets whose center is behind him.\nThis behaviour is common with missiles, however some cone spells such as this one also do it.\nSpirit Cleave will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\n Spell shield does not prevent Yone from receiving and/or increasing the  shield.\nThe shield's amount will also increase for each  clone hit.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSpirit Cleave will not preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will cast in the caster's new facing direction at the end of the cast time.\nWhile casting Spirit Cleave, Yone's facing direction cannot be shifted by displacements (eg.  Vault,  Last Breath).\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)",
+  "projectile": "FALSE",
+  "spellEffects": "aoe",
+  "spellshieldable": "true",
+  "targeting": "Direction"
+}
+  export default ability

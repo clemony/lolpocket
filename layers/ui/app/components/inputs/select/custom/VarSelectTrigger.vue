@@ -28,7 +28,8 @@ const forwarded = useForwardProps(delegatedProps)
         buttonVariants({ variant, hover, on, size, base }),
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </SelectTrigger>
 </template>

@@ -1,4 +1,4 @@
-import type { EChartsOption, ScatterSeriesOption } from 'echarts'
+import type { ScatterSeriesOption } from 'echarts'
 import type { AllyDataPoint } from '..'
 import {
   buildCollisionGroups,

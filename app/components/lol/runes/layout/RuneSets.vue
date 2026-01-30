@@ -44,7 +44,7 @@ const primaryColor = computedAsync(() => {})
               class="drop-shadow-softer shrink-0 h-10 w-auto object-contain transition-all duration-200 hover:drop-shadow-sm" />
           </div>
         </div>
-        <icon name="select" class="size-5 justify-self-end mr-2" />
+        <icon name="up-down" class="size-5 justify-self-end mr-2" />
       </DropdownMenuTrigger>
       <DropdownMenuContent class="w-[var(--radix-dropdown-menu-trigger-width)] pr-0">
         <DropdownMenuItem

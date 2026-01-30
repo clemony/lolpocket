@@ -1,0 +1,21 @@
+// Updated Patch 16.1 - 01/29/2026 04:27:14 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "P",
+  "name": "Phenomenal Evil Power",
+  "affects": "Self",
+  "blurb": "Innate:  Veigar generates a  stack of Phenomenal Evil for each enemy  champion hit by his  abilities, and more stacks when he scores an enemy champion  takedown.",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Veigar generates a stack of Phenomenal Evil for each enemy champion hit by his abilities, and 5 stacks whenever he scores an enemy champion takedown.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Phenomenal Evil:</span> For each stack, Veigar gains 1 ability power.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/p",
+  "notes": "The two effects stack, granting 6 stacks for each enemy champion taken down by an ability, 7 with  Baleful Strike.\nVeigar's abilities do not have to deal damage nor affect their targets to grant a stack.",
+  "targeting": "Passive"
+}
+  export default ability

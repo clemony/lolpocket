@@ -5,11 +5,10 @@ import { parseTemplates } from './templates.parse'
 export function resolveTemplates(
   str: string,
   depth: number = 0,
-  vars: Map<string, string>,
+  vars: Map<string, string>
 ): TemplateResult {
   const MAX_DEPTH = 20
-  if (depth > MAX_DEPTH)
-    return { html: str, isLevelScaling: false }
+  if (depth > MAX_DEPTH) return { html: str, isLevelScaling: false }
 
   const state = { i: 0, str }
   const output: TemplateResult[] = []

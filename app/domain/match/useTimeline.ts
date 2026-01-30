@@ -34,8 +34,7 @@ export function useTimeline() {
     await putMatchTimeline(matchId, payload)
 
     const player = players[puuid]
-    if (!player)
-      throw new Error(`timeline missing for puuid: ${puuid}`)
+    if (!player) throw new Error(`timeline missing for puuid: ${puuid}`)
 
     return player
   }

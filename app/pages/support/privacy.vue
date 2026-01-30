@@ -24,14 +24,13 @@ definePageMeta({
       <div
         v-for="(policy, a) in privacyPolicy.filter((p) => p !== p[0])"
         :key="a"
-        class="grid auto-rows-max gap-4">
+        class="grid auto-rows-max gap-4"
+      >
         <h3>
           {{ policy?.title }}
         </h3>
         <template v-if="policy.description">
-          <p
-            v-for="(item, b) in policy.description"
-            :key="b">
+          <p v-for="(item, b) in policy.description" :key="b">
             {{ item }}
           </p>
         </template>
@@ -39,19 +38,13 @@ definePageMeta({
           <div
             v-for="(section, b) in policy.sections"
             :key="b"
-            class="grid auto-rows-max gap-4">
-            <span
-              class="text-md/7 align-middle"
-              v-html="section.title" />
+            class="grid auto-rows-max gap-4"
+          >
+            <span class="text-md/7 align-middle" v-html="section.title" />
             <ol
-              class="
-                grid list-outside list-[upper-roman] gap-6 pl-6 leading-5
-                text-pretty marker:w-12 marker:justify-start marker:pr-6
-                marker:text-start
-              ">
-              <li
-                v-for="(item, c) in section.description"
-                :key="c">
+              class="grid list-outside list-[upper-roman] gap-6 pl-6 leading-5 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start"
+            >
+              <li v-for="(item, c) in section.description" :key="c">
                 {{ item }}
               </li>
             </ol>

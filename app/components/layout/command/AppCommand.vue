@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { ListboxVirtualizer } from 'reka-ui'
-
 const query = ref<string>('')
 const tag = ref<string>('')
 const region = shallowRef<keyof typeof regionIndex>('na1')
@@ -24,15 +22,13 @@ function navigate(url: string) {
 </script>
 
 <template>
-  <Dialog
-    v-model:open="ui().commandOpen"
-    class=""
-    :modal="true">
+  <Dialog v-model:open="ui().commandOpen" class="" :modal="true">
     <slot />
     <LazyDialogContent class="fixed top-1/3! mt-0! translate-y-0! p-0">
       <HiddenDialogHeader
         title="search lolpocket"
-        desc="search pages, pockets, items, champions, summoners, & more" />
+        desc="search pages, pockets, items, champions, summoners, & more"
+      />
 
       <Command :highlight-on-hover="true">
         <!--  <Input
@@ -45,7 +41,7 @@ function navigate(url: string) {
             rounded-b-none! border-b-b3 ring-0! outline-0!
           "
           @update:model-value="(e) => (query = e)"
-          @clear:input="clear()">
+          @clearInput="clear()">
           <icon
             name="search"
             class="size-4.5!" />

@@ -1,40 +1,39 @@
 <script setup lang="ts">
 definePageMeta({
-  keepalive: true,
   layout: false,
   search: 'hidden',
 })
 
-// get route so we can detect puuid or slug
 const route = useRoute()
 
-const params = ref<Identifier>(null)
+const session = useSummonerSession()
 
-// pass the ref, not the value
-const api = useSummonerProvider()
+onBeforeMount(async () => {
+  const identifier = extractIdentifierFromRoute(route)
+  console.log('🥸 - identifier:', identifier)
+  if (!identifier) return
 
-watch(() => api.summoner.value, (newVal) => {
-  if (!newVal)
-    return
-  if (!route.params.puuid)
-    return
+  const summoner = await resolveSummoner(identifier)
+  session.setSummoner(summoner)
 
-  navigateTo({
-    name: 'summoner-region-slug',
-    params: {
-      region: newVal.region.toLowerCase(),
-      slug: `${newVal.name.toLowerCase()}_${newVal.tag.toLowerCase()}`
-    },
-    replace: true
-  })
-})
+  if (session.summoner) {
+    s_data().getMastery()
+    s_data().getTimelines()
+  }
 
-watch(() => route.params?.champion_key, (v) => {
-  if (v && v.length)
-    ui().openChampionTab = String(v)
+  if (route.params.puuid) {
+    navigateTo({
+      name: 'summoner-region-slug',
+      params: {
+        region: summoner.region.toLowerCase(),
+        slug: `${summoner.name.toLowerCase()}_${summoner.tag.toLowerCase()}`,
+      },
+      replace: true,
+    })
+  }
 })
 </script>
 
 <template>
-  <NuxtPage :api />
+  <NuxtPage />
 </template>

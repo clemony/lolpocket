@@ -20,7 +20,6 @@ import {
   RowSelectionModule,
   ValidationModule,
 } from 'ag-grid-community'
-import { AgGridVue } from 'ag-grid-vue3'
 
 definePageMeta({
   name: 'Champion Stats',
@@ -66,21 +65,19 @@ const gridOptions: GridOptions<ChampionLite> = {
 watch(
   () => cs().championGridLevel,
   (newVal) => {
-    if (newVal)
-      gridApi.value.refreshCells()
-  },
+    if (newVal) gridApi.value.refreshCells()
+  }
 )
 
 watch(
   () => cs().championGridType,
   (newVal) => {
-    if (newVal)
-      gridApi.value.refreshCells()
-  },
+    if (newVal) gridApi.value.refreshCells()
+  }
 )
 
 const { resolveStat } = useChampionStatGrowth(
-  computed(() => cs().championGridLevel),
+  computed(() => cs().championGridLevel)
 )
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
@@ -108,7 +105,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
     pinned: 'left',
     sortable: false,
   },
-
+  /*
   {
     headerName: 'Health',
     valueGetter: params => resolveStat(params.data.stats?.health),
@@ -149,7 +146,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
         type: 'attackSpeed',
       })
     },
-  },
+  }, */
   /*    { headerName: 'Crit',
 cellClass: 'number-cell justify-end',
 groupId: 'crit',
@@ -169,7 +166,7 @@ valueGetter: params => params.data.stats?.critperLevel,
 hide: true },
   ] }, */
 
-  {
+  /*  {
     flex: 1,
     headerName: 'Range',
     valueGetter: params => params.data.stats?.attackRange.flat,
@@ -177,7 +174,7 @@ hide: true },
   {
     headerName: 'Move Speed',
     valueGetter: params => params.data.stats?.movespeed.flat,
-  },
+  }, */
   {
     minWidth: 90,
     colId: 'resource',
@@ -256,9 +253,8 @@ function onGridPreDestroyed(params: GridPreDestroyedEvent) {
 watch(
   () => '',
   (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  },
+    if (newVal && gridApi.value) gridApi.value.setGridOption('rowData', [])
+  }
 )
 
 ModuleRegistry.registerModules([

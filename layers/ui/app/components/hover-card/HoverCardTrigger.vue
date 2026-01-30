@@ -27,7 +27,8 @@ const forwarded = useForwardProps(delegatedProps)
         `justify-start px-2`,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </HoverCardTrigger>
 </template>

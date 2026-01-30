@@ -18,7 +18,8 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <ListboxContent
     v-bind="forwarded"
-    :class="cn('max-h-100 overflow-x-hidden overflow-y-auto', props.class)">
+    :class="cn('max-h-100 overflow-x-hidden overflow-y-auto', props.class)"
+  >
     <div role="presentation">
       <slot />
     </div>

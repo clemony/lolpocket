@@ -1,6 +1,7 @@
 import type { ColDef, ColGroupDef } from 'ag-grid-community'
 import { perGameFormatter, perGameGetter, statGetter } from '.'
-  '#components'
+
+('#components')
 
 const TableChampion = resolveComponent('TableChampion')
 const GridLastPlayed = resolveComponent('GridLastPlayed')
@@ -32,7 +33,7 @@ export function useStatGrid() {
   }
 
   const numericPerGameColumn = <K extends keyof ChampionStatsAndMastery>(
-    field: K,
+    f: K,
     headerName: string,
     tooltip: string,
     className = 'text-center'
@@ -40,15 +41,15 @@ export function useStatGrid() {
     width: 56,
     cellClass: className,
     cellDataType: 'number',
-    field: field as string,
+    field: f,
     headerName,
     headerTooltip: tooltip,
-    valueFormatter: perGameFormatter(field),
-    valueGetter: perGameGetter(field),
+    valueFormatter: perGameFormatter(f),
+    valueGetter: perGameGetter(f),
   })
 
   const plainNumber = <K extends keyof ChampionStatsAndMastery>(
-    field: K,
+    f: K,
     headerName: string,
     tooltip: string,
     className = 'text-center'
@@ -56,13 +57,13 @@ export function useStatGrid() {
     width: 60,
     cellClass: className,
     cellDataType: 'number',
-    field: field as string,
+    field: f,
     headerName,
     headerTooltip: tooltip,
   })
 
   const averagedNumber = <K extends keyof ChampionStatsAndMastery>(
-    field: K,
+    f: K,
     headerName: string,
     tooltip: string,
     className = 'text-center'
@@ -70,10 +71,10 @@ export function useStatGrid() {
     width: 60,
     cellClass: className,
     cellDataType: 'number',
-    field: field as string,
+    field: f,
     headerName,
     headerTooltip: tooltip,
-    valueGetter: statGetter(field),
+    valueGetter: statGetter(f),
   })
 
   /*   @click="${handleNav(params.data.championId)}"

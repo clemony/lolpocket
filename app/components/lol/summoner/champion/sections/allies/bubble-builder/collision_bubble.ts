@@ -15,16 +15,14 @@ export function buildCollisionGroups(
   const used = new Set<number>()
 
   for (let i = 0; i < points.length; i++) {
-    if (used.has(i))
-      continue
+    if (used.has(i)) continue
 
     const a = points[i]
     const group = [a]
     used.add(i)
 
     for (let j = i + 1; j < points.length; j++) {
-      if (used.has(j))
-        continue
+      if (used.has(j)) continue
       const b = points[j]
 
       if (

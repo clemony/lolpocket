@@ -24,8 +24,11 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <SliderThumb
     v-for="(_, key) in context.modelValue"
+    v-bind="forwarded"
     :key="key"
     :variant
-    :class="cn(buttonVariants({ base, variant, size, hover, on }), props.class)"
-    v-bind="forwarded" />
+    :class="
+      cn(buttonVariants({ base, variant, size, hover, on }), props.class)
+    "
+  />
 </template>

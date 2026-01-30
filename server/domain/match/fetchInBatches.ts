@@ -1,4 +1,3 @@
-
 export async function fetchInBatches(ids: string[], region: string) {
   const concurrency = 10
   const results: MatchData[] = []

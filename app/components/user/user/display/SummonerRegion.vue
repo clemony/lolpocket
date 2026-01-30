@@ -17,8 +17,7 @@ const {
 >()
 
 const region = computed(() => {
-  if (!summoner && !as()?.account)
-    return null
+  if (!summoner && !as()?.account) return null
 
   if (summoner?.region) {
     return summoner.region
@@ -33,15 +32,11 @@ const region = computed(() => {
   <Primitive
     v-if="region"
     :as="el"
-    :class="cn('inline leading-none lowercase antialiased', className)">
-    <icon
-      v-show="!noIcon"
-      name="at"
-      class="dst inline size-3.25" />
+    :class="cn('inline leading-none lowercase antialiased', className)"
+  >
+    <icon v-show="!noIcon" class="dst inline size-3.25" name="at" />
     {{ region }}
   </Primitive>
 
-  <span
-    v-else
-    :class="cn('', className)">Runeterra</span>
+  <span v-else :class="cn('', className)">Runeterra</span>
 </template>

@@ -20,7 +20,7 @@ export function evaluateExpressions(str: string): string {
     (expr) => {
       const result = tryEval(expr.trim())
       return result !== null ? result : expr
-    },
+    }
   )
 }
 
@@ -32,8 +32,7 @@ export function evalRange(expr: string): string {
   const [start, end] = expr.split(/\s+to\s+/)
   const startVal = tryEval(start.trim())
   const endVal = tryEval(end.trim())
-  if (startVal && endVal)
-    return `${startVal} – ${endVal}`
+  if (startVal && endVal) return `${startVal} – ${endVal}`
   return expr
 }
 

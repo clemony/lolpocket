@@ -21,21 +21,19 @@ const variants = {
   <NavigationMenuItem class="size-full max-w-full">
     <NavMenuLink as-child>
       <Button
-        class="
-          flex h-11 w-full flex-row flex-nowrap items-start justify-start gap-6
-          overflow-hidden
-        "
-        :variant="variant">
+        class="flex h-11 w-full flex-row flex-nowrap items-start justify-start gap-6 overflow-hidden"
+        :variant="variant"
+      >
         <div
-          class="
-            grid h-full w-4.75 shrink-0 place-items-center place-self-center
-          ">
+          class="grid h-full w-4.75 shrink-0 place-items-center place-self-center"
+        >
           <slot name="icon" />
         </div>
 
         <motion.div
+          class="text-md w-full overflow-hidden font-medium"
           :variants="variants"
-          class="text-md w-full overflow-hidden font-medium">
+        >
           <slot name="content" />
         </motion.div>
       </Button>

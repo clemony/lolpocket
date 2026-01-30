@@ -15,7 +15,7 @@ const img1 = /\/img\//
 const classes = 'size-full shrink-0'
 const teenyicons = /teenyicons:/
 const teeny = computed(() =>
-  name.match(teenyicons) ? '!scale-96 **:stroke-[1.3]' : '',
+  name.match(teenyicons) ? '!scale-96 **:stroke-[1.3]' : ''
 )
 </script>
 
@@ -24,12 +24,14 @@ const teeny = computed(() =>
     :is="name"
     v-if="name.match(svg)"
     role="img"
-    :class="cn('', classes, className)" />
+    :class="cn('', classes, className)"
+  />
   <Img
     v-else-if="name.match(img) || name.match(img1)"
     :src="name"
     alt="icon"
-    :class="cn('', classes, className)" />
+    :class="cn('', classes, className)"
+  />
   <icon
     v-else
     role="img"
@@ -38,5 +40,6 @@ const teeny = computed(() =>
     :style="{
       objectFit: 'cover',
       scale: iconScale,
-    }" />
+    }"
+  />
 </template>

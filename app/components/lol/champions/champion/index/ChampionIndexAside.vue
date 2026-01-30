@@ -10,10 +10,8 @@ const wrapperClass
 
 <template>
   <aside
-    class="
-      scrollbar-hidden sticky top-0 flex w-120 shrink-0 flex-col gap-10
-      overflow-y-auto px-1 py-22
-    ">
+    class="scrollbar-hidden sticky top-0 flex w-120 shrink-0 flex-col gap-10 overflow-y-auto px-1 py-22"
+  >
     <menu class="space-y-2">
       <h3 class="dst mb-4">
         Abilities
@@ -25,53 +23,47 @@ const wrapperClass
         size="xl"
         :class="
           cn('justify-start gap-4! rounded-xl', {
-            'btn-active !bg-tint-b2/70 drop-shadow-sm drop-shadow-black/6':
+            'btn-active bg-tint-b2/70! drop-shadow-sm drop-shadow-black/6':
               route.hash === `#${ability.key}`,
           })
         "
         :to="{ path: route.path, hash: `#${ability.key}` }"
-        variant="ghost">
+        variant="ghost"
+      >
         <span
-          class="size-10 overflow-hidden rounded-lg shadow-sm drop-shadow-sm">
-          <Img
-            :src="ability.icon"
-            :alt="ability.name" />
+          class="size-10 overflow-hidden rounded-lg shadow-sm drop-shadow-sm"
+        >
+          <Img :src="ability.icon" :alt="ability.name" />
         </span>
         {{ ability.name }}
       </BtnLink>
     </menu>
 
-    <ChampionStats
-      v-if="champion?.stats"
-      :champion />
+    <ChampionStats v-if="champion?.stats" :champion />
 
     <Collapsible
       v-model:open="ui().collapseStates.championInfo[1]"
-      class="field-box data">
+      class="field-box data"
+    >
       <CollapsibleTrigger
-        class="
-          open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between
-          px-5 open:border-b
-        ">
+        class="open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between px-5 open:border-b"
+      >
         <h3>Data</h3>
 
         <CaretFlip />
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <LazyChampionAsideData
-          :champion
-          :wrapper-class />
+        <LazyChampionAsideData :champion :wrapper-class />
       </CollapsibleContent>
     </Collapsible>
 
     <Collapsible
       v-model:open="ui().collapseStates.championInfo[2]"
-      class="field-box">
+      class="field-box"
+    >
       <CollapsibleTrigger
-        class="
-          open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between
-          px-5 open:border-b
-        ">
+        class="open:border-b-b3 flex h-16 min-h-16 w-full items-center justify-between px-5 open:border-b"
+      >
         <h3>Bio</h3>
 
         <CaretFlip />

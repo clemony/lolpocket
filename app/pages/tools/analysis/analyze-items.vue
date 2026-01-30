@@ -41,9 +41,8 @@ definePageMeta({
 
     <div class="size-full overflow-hidden">
       <div
-        class="
-          grid w-full grid-cols-4 place-items-center gap-10 overflow-hidden pb-2
-        ">
+        class="grid w-full grid-cols-4 place-items-center gap-10 overflow-hidden pb-2"
+      >
         <!--         <PocketPickItem
           :patch-games="ms().patchGames"
           :item-num="0"
@@ -76,9 +75,8 @@ definePageMeta({
       </div>
 
       <div
-        class="
-          grid w-full grid-cols-2 place-items-center gap-x-10 overflow-hidden
-        ">
+        class="grid w-full grid-cols-2 place-items-center gap-x-10 overflow-hidden"
+      >
         <ResearchItemChart />
 
         <ResearchItemList />

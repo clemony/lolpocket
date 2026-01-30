@@ -20,20 +20,15 @@ const [scope, animate] = useAnimate()
 
 function onStateChange(state: string) {
   const el = scope.value as HTMLElement
-  if (!el)
-    return
+  if (!el) return
 
   let closedX = 0
   let closedY = 0
 
-  if (props.side === 'left')
-    closedX = -40
-  if (props.side === 'right')
-    closedX = 40
-  if (props.side === 'top')
-    closedY = -40
-  if (props.side === 'bottom')
-    closedY = 40
+  if (props.side === 'left') closedX = -40
+  if (props.side === 'right') closedX = 40
+  if (props.side === 'top') closedY = -40
+  if (props.side === 'bottom') closedY = 40
 
   if (state === 'open') {
     animate(el, { opacity: 1, x: 0, y: 0 }, { duration: 0.28 })
@@ -46,6 +41,7 @@ function onStateChange(state: string) {
 
 <template>
   <DialogContent
+    v-bind="{ ...forwarded, ...$attrs }"
     ref="scope"
     :class="
       cn(
@@ -54,9 +50,9 @@ function onStateChange(state: string) {
         props.class,
       )
     "
-    v-bind="{ ...forwarded, ...$attrs }"
     @update:state="onStateChange"
-    @open-auto-focus.stop>
+    @open-auto-focus.stop
+  >
     <slot />
   </DialogContent>
 </template>

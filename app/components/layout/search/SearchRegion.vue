@@ -16,32 +16,21 @@ const region = ref('')
 onMounted(() => (region.value = r))
 watch(
   () => r,
-  newVal => (region.value = newVal),
+  newVal => (region.value = newVal)
 )
 </script>
 
 <template>
-  <Presence
-    :present
-    class="opacity-0 data-[present=true]:opacity-100">
-    <LazyPopover
-      @close-auto-focus.prevent
-      @click.stop>
-      <PopoverTrigger
-        no-arrow
-        as-child
-        class="grid items-center">
+  <Presence class="opacity-0 data-[present=true]:opacity-100" :present>
+    <LazyPopover @close-auto-focus.prevent @click.stop>
+      <PopoverTrigger class="grid items-center" no-arrow as-child>
         <Button
+          class="text-bc/60 *:first:text-bc/60 z-1 flex w-14 flex-nowrap items-center text-sm! tracking-[0.5px] text-nowrap lowercase"
           variant="ghost"
           size="sm"
-          class="
-            text-bc/60 *:first:text-bc/60 z-1 flex w-14 flex-nowrap items-center
-            text-sm! tracking-[0.5px] text-nowrap lowercase
-          ">
+        >
           <span class="relative -mr-1 grid place-items-center">
-            <icon
-              name="at"
-              class="mt-px size-3.25!" />
+            <icon class="mt-px size-3.25!" name="at" />
           </span>
           {{ region || "" }}
         </Button>

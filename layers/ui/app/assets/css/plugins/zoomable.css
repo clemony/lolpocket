@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import '../theme';
+
+.controll {
+  @apply !flex scale-75 flex-row items-start !bg-b2/40 opacity-0;
+}
+
+#v-zoomable-control-btns {
+  @apply absolute -top-12 -right-px flex h-fit items-start !border-0 !border-none !border-transparent bg-transparent;
+}
+.controll__item--circle {
+  @apply hidden;
+}
+
+.controll__zoom-in {
+  @apply order-1;
+}
+.controll__zoom-out {
+  @apply order-2;
+}

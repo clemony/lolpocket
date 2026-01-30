@@ -32,8 +32,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
       const { data, patch } = match
 
       Object.values(data.items).forEach((itemId: number) => {
-        if (!itemId || itemId === 0)
-          return
+        if (!itemId || itemId === 0) return
 
         if (!itemStats.has(itemId)) {
           itemStats.set(itemId, {
@@ -76,7 +75,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
           bayesianWinrate,
           gamePatches: stats.gamePatches,
           games: stats.games,
-          item: ix().itemNameById(itemId),
+          item: itemNameById(itemId),
           loss: stats.losses,
           matchIndexes: stats.matchIndexes,
           win: stats.wins,

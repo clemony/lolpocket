@@ -4,14 +4,13 @@ import { vDraggable } from 'vue-draggable-plus'
 
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
 
 function onSpill(e: DraggableEvent) {
   console.log('🌱 - onSpill - e:', e)
   const a = pocket.champions.findIndex(c => c === e.data.key)
-  if (a)
-    pocket.champions.splice(a, 1)
+  if (a) pocket.champions.splice(a, 1)
 }
 </script>
 
@@ -39,34 +38,27 @@ function onSpill(e: DraggableEvent) {
           onSpill,
         },
       ]"
-      class="
-        absolute inset-0 grid h-36
-        grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center
-        overflow-x-scroll overflow-y-hidden py-2
-      ">
+      class="absolute inset-0 grid h-36 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center overflow-x-scroll overflow-y-hidden py-2"
+    >
       <template v-if="pocket.champions.length">
         <Card
           v-for="champion in pocket.champions"
           :id="champion"
           :key="champion"
-          class="
-            relative grid h-36 w-[170px] shrink-0 place-items-center
-            overflow-hidden shadow-sm inset-shadow-sm shadow-black/10
-            inset-shadow-black/10 drop-shadow-sm
-          ">
+          class="relative grid h-36 w-[170px] shrink-0 place-items-center overflow-hidden shadow-sm inset-shadow-sm shadow-black/10 inset-shadow-black/10 drop-shadow-sm"
+        >
           <Champion
+            class="absolute size-[260%] translate-y-[16%] object-center"
             :k="champion"
             type="centered"
-            class="absolute size-[260%] translate-y-[16%] object-center" />
+          />
         </Card>
       </template>
       <div
         v-else
-        class="undraggable grid size-full place-items-center select-none">
-        <Badge
-          size="12"
-          class="pointer-events-none absolute"
-          variant="outline">
+        class="undraggable grid size-full place-items-center select-none"
+      >
+        <Badge class="pointer-events-none absolute" size="12" variant="outline">
           Pocket is championless.
         </Badge>
       </div>

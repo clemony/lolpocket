@@ -2,24 +2,22 @@
 // @todo fix usermatchdata
 const userMatchData = []
 const patchGames = computed(() =>
-  userMatchData.filter(g => g.patch === ms().filter.patch),
+  userMatchData.filter(g => g.patch === ms().filter.patch)
 )
-
+/*
 const { matches, summoner } = useSummonerInject()
 
-const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
+const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value) */
 </script>
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="border-shadow bg-b1 inset-shadow-xxs h-160 max-h-160 w-full">
+    <div class="border-shadow h-160 max-h-160 w-full bg-b1 inset-shadow-xxs">
       <div class="size-full overflow-hidden!">
         <div class="oveflow-y-auto size-full">
           <div
-            class="
-              flex w-full items-center gap-4 px-2 pt-3 pb-1 text-sm tracking-wide
-              capitalize opacity-60
-            ">
+            class="flex w-full items-center gap-4 px-2 pt-3 pb-1 text-sm tracking-wide capitalize opacity-60"
+          >
             <span class="grow pl-2">{{ ms().filter.patch }} Items</span>
 
             <APDtooltip>Absolute</APDtooltip>
@@ -27,19 +25,14 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
             <BayesianTooltip>Weighted</BayesianTooltip>
           </div>
 
-          <template
-            v-for="entry in bayesianItems"
-            :key="entry.item?.id">
+          <!--           <template v-for="entry in bayesianItems" :key="entry.item?.id">
             <div
               v-if="entry"
-              class="
-                border-b-b2 grid
-                w-full
-                grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b py-3
-              ">
-              <div />
+              class="border-b-b2 grid w-full grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b py-3"
+            >
+              <div /> -->
 
-              <!--
+          <!--
 @fixme
 <div
                 class="
@@ -60,11 +53,12 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
                 </span>
               </div> -->
 
-              <div>
+          <!--  <div>
                 <img
                   class="size-10 rounded-xl"
                   :alt="entry.item?.id"
-                  :src="`/img/items/${entry.item?.id}.webp`" />
+                  :src="`/img/items/${entry.item?.id}.webp`"
+                >
               </div>
 
               <div class="list-col-grow -space-y-1">
@@ -85,7 +79,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value)
                 {{ entry.bayesianWinrate.toFixed(1) }}%
               </div>
             </div>
-          </template>
+          </template> -->
         </div>
       </div>
     </div>

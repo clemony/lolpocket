@@ -14,7 +14,7 @@ const props = withDefaults(
   {
     sideOffset: 4,
     align: 'center',
-  },
+  }
 )
 const emits = defineEmits<PopoverContentEmits>()
 
@@ -57,10 +57,9 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent
-        :side-offset="-12"
-        as-child>
+      <PopoverContent :side-offset="-12" as-child>
         <motion.div
+          v-bind="{ forwarded }"
           :variants="variants"
           initial="hidden"
           animate="visible"
@@ -70,26 +69,29 @@ const wrapperVariants = {
             duration: 0.3,
             bounce: 0.2,
           }"
-          v-bind="{ forwarded }"
           :class="
-            cn('border-black-30! bg-black-22/94 z-50 size-max rounded-xl border shadow-md drop-shadow-md backdrop-blur-lg outline-none **:not-[&_.icon]:**:text-white/80 not-[.icon]:text-white/80 group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
+            cn(
+              'border-black-30! bg-black-22/94 z-50 size-max rounded-xl border shadow-md drop-shadow-md backdrop-blur-lg outline-none **:not-[&_.icon]:**:text-white/80 not-[.icon]:text-white/80 group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
             )
-          ">
+          "
+        >
           <PopoverArrow
-            class="icon translate-y-0.25 text-black/80! **:text-black/80!" />
+            class="icon translate-y-0.25 text-black/80! **:text-black/80!"
+          />
 
           <motion.div
+            class=""
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"
             exit="hidden"
             :class="cn('size-full overflow-y-auto p-4', props.class)"
-            class=""
             :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }">
+            }"
+          >
             <slot />
           </motion.div>
         </motion.div>

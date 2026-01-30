@@ -7,13 +7,13 @@ const open = ref<boolean>(false)
 
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key)),
+  ps().getPocket(String(route.params.pocket_key))
 ).value
 
 const l = computed(() => pocket.champions.length > 5).value
 
 const groups = computed(() =>
-  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5),
+  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5)
 )
 
 const variants = {
@@ -41,6 +41,7 @@ const itemVariants = {
       <CollapsibleContent>
         <motion.div
           ref="target"
+          class="flex h-[40vh] max-h-full flex-col-reverse overflow-auto rounded-3xl mask-y-from-90% mask-y-to-100% py-4"
           :variants
           initial="closed"
           animate="open"
@@ -50,67 +51,62 @@ const itemVariants = {
             staggerChildren: 0.1,
             type: 'spring',
           }"
-          class="
-            flex h-[40vh] max-h-full flex-col-reverse overflow-auto rounded-3xl
-            mask-y-from-90% mask-y-to-100% py-4
-          ">
+        >
           <Button
             v-for="(champion, i) in pocket.champions"
             :key="champion"
             v-tippy="{
-              content: ix().champNameByKey(champion),
+              content: champNameByKey(champion),
               theme: 'base',
               placement: 'left',
             }"
+            class="bg-b1 fx-0 grid size-22! place-items-center border-0"
             variant="base"
             shape="circle"
             :style="{
               zIndex: `-${i}`,
             }"
             as-child
-            class="bg-b1 fx-0 grid size-22! place-items-center border-0">
+          >
             <motion.div
               :variants="itemVariants"
               :transition="{
                 bounce: 0.15,
                 type: 'spring',
-              }">
-              <ChampionIcon
-                :k="champion"
-                class="size-18! rounded-full" />
+              }"
+            >
+              <ChampionIcon class="size-18! rounded-full" :k="champion" />
             </motion.div>
           </Button>
         </motion.div>
       </CollapsibleContent>
       <CollapsibleTrigger as-child>
         <div
-          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10">
+          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10"
+        >
           <template v-if="!open">
             <Element
               v-for="champion in groups"
               :key="champion"
+              class="bg-b1 fx-0 z-1 grid size-22! place-items-center border-0"
               variant="base"
               shape="circle"
-              class="bg-b1 fx-0 z-1 grid size-22! place-items-center border-0">
-              <ChampionIcon
-                :k="champion"
-                class="size-18! rounded-full" />
+            >
+              <ChampionIcon class="size-18! rounded-full" :k="champion" />
             </Element>
           </template>
           <Element
             v-if="l"
+            class="bg-b1 fx-0 relative z-1 grid size-22! place-items-center border-0"
             variant="base"
             shape="circle"
-            class="
-              bg-b1 fx-0 relative z-1 grid size-22! place-items-center border-0
-            ">
+          >
             <Element
+              class="size-18! *:transition-all *:duration-300"
               shape="circle"
               variant="neutral"
-              class="size-18! *:transition-all *:duration-300">
-              <icon
-                name="up"
-                class="group-closed:opacity-0 absolute" />
+            >
+              <icon class="group-closed:opacity-0 absolute" name="up" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>

@@ -1,0 +1,27 @@
+// Updated Patch 16.1 - 01/29/2026 04:26:59 PM CST
+  import type { Ability } from "#shared/types"
+
+  const ability: Ability = {
+  "key": "P",
+  "name": "Clockwork Windup",
+  "affects": "Enemies, Self",
+  "blurb": "Innate:  Orianna is accompanied by  The Ball, which she commands with her  abilities. The Ball attaches to Orianna when she approaches it, and snaps back to her when she moves too far away. The Ball incurs a  brief cooldown on Orianna's abilities whenever it moves.",
+  "damageType": "Magic damage",
+  "effectRadius": "1290 / 1355 / 135",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - The Ball:</span> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Clockwork Winding:</span> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p>"
+    },
+    {
+      "description": "See Pets for more details about The Ball."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/p",
+  "notes": "Clockwork Winding's stack count can be seen in Orianna's buff bar.\nThe Ball will not incur its global cooldown from a  Command: Protect cast that is used on a target already attached to it.\nThe attacks do not deal the bonus damage against  structures.\n Runaan's Hurricane's extra bolts will cause Clockwork Winding to reset its stacks, as she hits targets other than her latest one  on-hit.(note)",
+  "spellEffects": "Proc",
+  "targeting": "Passive"
+}
+  export default ability

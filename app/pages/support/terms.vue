@@ -21,19 +21,19 @@ definePageMeta({
 
       <SettingsLayout
         title="Data"
-        description="Where the raw data on lolpockets comes from. Raw data is processed and calculated by lolpocket's own algorithms and functions.">
+        description="Where the raw data on lolpockets comes from. Raw data is processed and calculated by lolpocket's own algorithms and functions."
+      >
         <ol
-          class="
-            list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty
-            marker:w-12 marker:justify-start marker:pr-6 marker:text-start
-          ">
+          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start"
+        >
           <li>
             <b>Riot's</b>
             public
             <InlineLink
               to="https://wiki.leagueoflegends.com/en-us/"
               title="https://wiki.leagueoflegends.com/en-us/"
-              external>
+              external
+            >
               API
             </InlineLink>
             .
@@ -43,7 +43,8 @@ definePageMeta({
             <InlineLink
               to="https://wiki.leagueoflegends.com/en-us/"
               title="https://wiki.leagueoflegends.com/en-us/"
-              external>
+              external
+            >
               League of Legends Wiki
             </InlineLink>
             , written and maintained by players.
@@ -52,7 +53,8 @@ definePageMeta({
             <InlineLink
               to="https://www.riotgames.com/en/legal"
               title="https://www.riotgames.com/en/legal"
-              external>
+              external
+            >
               Official Data Dragon
             </InlineLink>
           </li>
@@ -60,7 +62,8 @@ definePageMeta({
             <InlineLink
               to="https://www.communitydragon.org"
               title="https://www.communitydragon.org"
-              external>
+              external
+            >
               Community Dragon
             </InlineLink>
             , an open source, community driven, public CDN.
@@ -69,12 +72,11 @@ definePageMeta({
       </SettingsLayout>
       <SettingsLayout
         title="Riot Policies"
-        description="About Riot data and asset usage.">
+        description="About Riot data and asset usage."
+      >
         <ol
-          class="
-            list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty
-            marker:w-12 marker:justify-start marker:pr-6 marker:text-start
-          ">
+          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start"
+        >
           <li>
             {{ riotDisclaimer }}
           </li>
@@ -87,7 +89,8 @@ definePageMeta({
               class="italic"
               to="https://www.riotgames.com/en/legal"
               title="https://www.riotgames.com/en/legal"
-              external>
+              external
+            >
               Legal Jibber Jabber
             </InlineLink>
             and
@@ -95,7 +98,8 @@ definePageMeta({
               class="italic"
               to="https://www.riotgames.com/en/terms-of-service"
               title="https://www.riotgames.com/en/terms-of-service"
-              external>
+              external
+            >
               Terms of Serivce.
             </InlineLink>
           </li>
