@@ -1,98 +1,62 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const { champions } = storeToRefs(s_data())
 
 const cModel = shallowRef<string>(null)
-const champs = computed(() => {
-  return champions?.value
-    ?.values()
-    .toArray()
-    .sort((a, b) => b.games - a.games)
-})
 </script>
 
 <template>
-  <Listbox
-    v-model:model-value="cModel"
-    :multiple="false"
-    selection-behavior="toggle"
-    @update:model-value="() => {
-      s_matches().setFilter('champion', cModel)
-      console.log('hihihi', s_matches().filter)
-    }"
-    @entry-focus.prevent
-  >
-    <ListboxContent
-      :class="
-        cn(
-          'field-box h-fit max-h-98 w-full gap-0 space-y-4 overflow-y-scroll px-2 py-4',
-          { 'pb-3': cModel },
-        )
-      "
+  <UCard variant="muted" :ui="{ body: ' flex flex-col gap-1 ', root: 'p-2' }">
+    <motion.div
+      layout="position" class="size-full" :transition="{
+        ease: 'easeInOut',
+        staggerChildren: 0.1 }"
     >
-      <div class="grid h-fit w-full gap-1.5" group>
-        <ListboxItem
-          v-for="champion in champs"
-          :key="champion?.championId"
-          :value="champion.championName"
-          variant="ghost"
-          hover="secondary"
-          size="14"
-          :class="
-            cn(
-              'peer group/c relative w-full gap-4! rounded-xl focus-visible:outline-0',
-              { hidden: cModel && cModel !== champion.championName },
-            )
-          "
-        >
-          <ChampionIcon
-            :id="champion.championId"
-            class="size-12 items-center overflow-hidden rounded-full shadow-sm drop-shadow-sm"
-            :alt="champion.championName"
-          />
+      <UButton
+        v-for="item in champions.values()"
+        :key="item.championId"
+        variant="ghost"
+        color="primary"
+        :ui="{
+          base: 'flex fx-0 pr-2 justify-between items-center',
+        }"
+        size="xl" :for="item.championName" as="label" class="" @update:model-value="() => {
+          s_matches().setFilter('champion', cModel)
+          console.log('hihihi', s_matches().filter)
+        }"
+      >
+        <UUser
+          :name="item.championName"
+          :description="`${item.kda} kda`"
+          :ui="{
+            wrapper: 'text-start items-center',
+            avatar: 'size-11',
+          }"
+          :avatar="{
+            src: `/img/champions/${item.championId}.webp`,
+            icon: 'lol:champ',
+          }"
+        />
 
-          <div class="grid grow gap-1 font-medium dst">
-            <p class="self-end text-md!">
-              {{ champion.championName }}
-            </p>
+        <div class="flex items-center gap-2 w-max">
+          <div class="grid grid-rows-2 py-1.5 text-xs text-end ">
+            <span class="text-nowrap ">
+              {{ item.wins }} win
+            </span>
 
-            <p :class="cn('text-sm text-nowrap normal-case')">
-              {{ champion.kda }}
-              kda
-            </p>
-          </div>
-
-          <div
-            class="z-0 grid w-22 shrink-0 justify-end gap-1 text-sm dst *:text-end"
-          >
-            <p class="text-nowrap normal-case">
-              {{ champion.wins }} win
-            </p>
-
-            <p class="text-nowrap normal-case">
-              {{ champion.games - champion.wins }} loss
+            <p class="text-nowrap ">
+              {{ Number(item.games) - Number(item.wins) }} loss
             </p>
           </div>
           <div
-            class="z-0 grid w-16 shrink-0 place-items-center justify-end justify-self-end"
+            class="z-0 grid w-16 shrink-0 place-items-center justify-end"
           >
-            <ChampWinrate :champion="champion" />
+            <ChampWinrate :champion="item" />
           </div>
-
-          <Element
-            v-if="cModel === champion.championName"
-            class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/c:animate-heartbeat"
-            base="btn"
-            wrapper-class=""
-            size="c-6"
-          >
-            <Icons class="size-5.25!" name="heroicons:x-circle-16-solid" />
-          </Element>
-        </ListboxItem>
-        <div v-if="cModel" class="mx-4 flex gap-4 justify-self-end text-xs">
-          <span class="self-end opacity-50">...filtered</span>
         </div>
-        <LilKrug v-if="!champs?.length" />
-      </div>
-    </ListboxContent>
-  </Listbox>
+      </UButton>
+      <LilKrug v-if="!champions?.length" />
+    </motion.div>
+  </UCard>
 </template>

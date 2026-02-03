@@ -83,7 +83,8 @@ onMounted(() => {
           variant="ghost"
           hover="inset"
           :disabled="!editor?.can()?.undo()"
-          size="sq-7"
+          square
+          size="xs"
           @click="editor.commands.undo()"
         >
           <icon
@@ -96,7 +97,8 @@ onMounted(() => {
           variant="ghost"
           hover="inset"
           :disabled="!editor?.can()?.redo()"
-          size="sq-7"
+          square
+          size="xs"
           @click="editor.commands.redo()"
         >
           <icon

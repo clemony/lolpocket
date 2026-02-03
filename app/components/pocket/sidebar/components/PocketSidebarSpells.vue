@@ -27,7 +27,7 @@ const pocket = computed(() =>
           class="size-16"
           :current-value="set.f"
           @update:spell="(e) => (set.f = e)" /> -->
-        <span class="flex items-center gap-1">
+        <!--       <span class="flex items-center gap-1">
           <Button class="inline" variant="link">
             <h5>{{ set.d }}</h5>
           </Button>
@@ -36,10 +36,10 @@ const pocket = computed(() =>
           <Button class="inline" variant="link">
             <h5>{{ set.f }}</h5>
           </Button>
-        </span>
+        </span> -->
       </div>
 
-      <Button class="self-end" variant="neutral" @click="addSpellSet(pocket)">
+      <Button class="self-end" color="neutral" @click="addSpellSet(pocket)">
         <icon name="add" />
         Add spell set
       </Button>

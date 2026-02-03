@@ -31,15 +31,13 @@ const open = shallowRef<boolean>(false) */
     align="start"
   >
     <!--  -->
-    <Button
-      class="bg-transparent! duration-0! disabled:pointer-events-none"
-      base="btn"
-      size="sq-12"
-      on="inset"
-      hover="inset"
-    >
-      <icon class="size-4.5" name="calendar" />
-    </Button>
+    <UButton
+      icon="calendar"
+      :ui="{ leadingIcon: 'size-4.5' }"
+      variant="inset"
+      size="lg"
+      color="transparent"
+    />
 
     <!-- calendar -->
     <!-- <template #content>

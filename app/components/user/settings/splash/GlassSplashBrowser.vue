@@ -118,7 +118,6 @@ const btnClass
               :key="item.key"
               class="gap-6 text-white"
               :value="item.key"
-              variant="link"
             >
               <ChampionIcon
                 :id="item.id"
@@ -155,7 +154,7 @@ const btnClass
 
         <!-- else -->
         <div v-else class="grid size-full place-items-end p-6">
-          <Badge class="font-medium **:text-sm" variant="neutral">
+          <Badge class="font-medium **:text-sm" color="neutral">
             Select or search a champion...
           </Badge>
         </div>
@@ -164,7 +163,7 @@ const btnClass
       <div class="pointer-events-auto fixed top-6 right-6 z-20 flex gap-3">
         <Button
           v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
-          size="c-8"
+          class="rounded-full size-8"
           :class="btnClass"
           variant="outline"
         >
@@ -173,7 +172,7 @@ const btnClass
 
         <Button
           v-tippy="{ content: 'Randomize', placement: 'top' }"
-          size="c-8"
+          class="rounded-full size-8"
           :class="btnClass"
           variant="outline"
         >
@@ -181,7 +180,7 @@ const btnClass
         </Button>
 
         <DialogClose as-child>
-          <Button size="c-8" :class="btnClass" variant="outline">
+          <Button class="rounded-full size-8" :class="btnClass" variant="outline">
             <icon class="size-5.5 text-white **:stroke-[1.7]" name="x" />
           </Button>
         </DialogClose>

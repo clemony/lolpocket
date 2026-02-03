@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Scarlet Allegiance",
-      "effects": "If your <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal and <img src=\"/img/icons/omnivamp.webp\" class=\"tip-icon\" />omnivamp sum to at least 30%, gain 500 <b>bonus</b> health and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself equal to 10% of the damage that enemy champions in a 525 units radius around you take from all sources."
+      "effects": "If your <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal and <img src=\"/img/icons/omnivamp.webp\" class=\"tip-icon\" />omnivamp sum to at least 30%, gain 500 <b>bonus</b> health and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself equal to 10% of the damage that enemy champions in a 525 units radius around you take from all sources."
     }
   ],
   "stats": {

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -34,13 +34,13 @@
       "unique": true,
       "mythic": false,
       "name": "Hypershot",
-      "effects": "Dealing ability damage to a champion with a champion ability at 600 or more units away from the cast position marks them for 6 seconds, <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon\" />revealing them and increasing your damage dealt to them by 10%."
+      "effects": "Dealing ability damage to a champion with a champion ability at 600 or more units away from the cast position marks them for 6 seconds, <img src=\"/img/icons/standard-sight.webp\" class=\"tip-icon light:invert\" />revealing them and increasing your damage dealt to them by 10%."
     },
     {
       "unique": true,
       "mythic": false,
       "name": "Focus",
-      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> mark to enemy champions within the area for 3 seconds.",
+      "effects": "Upon triggering <i>Hypershot</i>, grant <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the area 1400 units around the target for 2 seconds and apply <i>Hypershot's</i> mark to enemy champions within the area for 3 seconds.",
       "cooldown": "30"
     }
   ],

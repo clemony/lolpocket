@@ -1,13 +1,5 @@
-import type { ClassValue } from 'clsx'
-import { clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-
 export const tooltipPlacements = ['top', 'bottom', 'left', 'right']
 export const tooltipSizes = ['default', 'md', 'lg']
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
 
 export function closeAndNav(link: string) {
   ui().sidebarOpen = false
@@ -101,10 +93,4 @@ export function createNoise(str: string) {
     h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24)
   }
   return (h >>> 0) / 4294967295 // 0 → 1
-}
-
-export function cssVar(name: string) {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(name)
-    .trim()
 }

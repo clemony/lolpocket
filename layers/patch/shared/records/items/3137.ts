@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Life From Death",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing you and allied champions hit for 100 (+20% AP).",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healing you and allied champions hit for 100 (+20% AP).",
       "cooldown": "60"
     }
   ],

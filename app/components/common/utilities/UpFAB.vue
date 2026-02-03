@@ -2,7 +2,6 @@
 const {
   class: className,
   placement = 'left',
-  theme = 'base',
 } = defineProps<{
   class?: HTMLAttributes['class']
   placement?: Side
@@ -13,16 +12,17 @@ const { scrollTop } = useScrollInject()
 </script>
 
 <template>
-  <Button
-    v-tooltip="'Top'"
-    data-theme="neutral mini-tip line"
-    :data-placement="placement"
-    hover="neutral"
-    size="c-14"
-    variant="floating"
-    :class="cn('duration-0!', className)"
-    @click="scrollTop()"
+  <Tooltip
+    text="Top"
+    :side="placement"
   >
-    <icon class="transition-opacity duration-200" name="arrow-up" />
-  </Button>
+    <UButton
+      icon="arrow-up"
+      size="xl"
+      square
+      variant="solid"
+      :class="cn('rounded-full', className)"
+      @click="scrollTop()"
+    />
+  </Tooltip>
 </template>

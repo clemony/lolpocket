@@ -24,7 +24,6 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="pagination-previous"
     :class="
       cn(
-        buttonVariants({ variant: 'ghost', size }),
         `gap-1 px-2.5 sm:pr-2.5`,
         props.class,
       )

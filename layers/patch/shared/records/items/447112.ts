@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
       "unique": true,
       "mythic": false,
       "name": "Cannibalize",
-      "effects": "If you or the allied champion on your team score a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion, you are both <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 18% of the taken down target's <b>maximum</b> health."
+      "effects": "If you or the allied champion on your team score a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion, you are both <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healed for 18% of the taken down target's <b>maximum</b> health."
     }
   ],
   "stats": {

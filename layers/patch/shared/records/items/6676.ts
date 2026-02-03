@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -35,7 +35,7 @@
       "unique": true,
       "mythic": false,
       "name": "Death",
-      "effects": "If you deal post-mitigation damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />execute them."
+      "effects": "If you deal post-mitigation damage that would leave a champion below 5% of their <b>maximum</b> health, <img src=\"/img/icons/execute.webp\" class=\"tip-icon \" />execute them."
     },
     {
       "unique": true,

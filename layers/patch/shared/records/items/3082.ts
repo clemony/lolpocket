@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -42,7 +42,7 @@
       "unique": true,
       "mythic": false,
       "name": "Rock Solid",
-      "effects": "Every first incoming instance of post-mitigation <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each."
+      "effects": "Every first incoming instance of post-mitigation <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon \" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each."
     }
   ],
   "stats": {

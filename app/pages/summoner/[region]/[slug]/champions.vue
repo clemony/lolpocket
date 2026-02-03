@@ -13,11 +13,13 @@ useSeoMeta({
 })
 
 definePageMeta({
-  title: 'champions',
+  title: 'Champions',
+  description: 'Discover in depth champion data for every one played.',
   icon: 'i-lol-mastery',
   iconStyle: 'scale-90 -mb-0.25',
   keepalive: true,
   order: 1,
+  slug: 'champions',
 })
 const { summoner } = storeToRefs(s_session())
 

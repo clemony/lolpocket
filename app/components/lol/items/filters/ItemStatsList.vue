@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 const {
+  variant = 'ghost',
   class: className,
   icons,
   indicator = true,
   labels,
-  variant = 'ghost',
   wrapperClass,
 } = defineProps<{
   icons?: boolean
   labels?: boolean
   class?: HTMLAttributes['class']
   variant?: ButtonVariants['variant']
-  on?: ButtonVariants['on']
+
   wrapperClass?: HTMLAttributes['class']
   indicator?: boolean
 }>()
@@ -53,7 +53,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
             :style="{
               backgroundColor: `${is().filters.stats.includes(stat.id) ? stat.color : ''}`,
             }"
-            :hover="!indicator && !is().filters.stats.includes(stat.id) ? 'btn' : 'none'"
+
             :value="stat.id">
             <span
               v-if="icons">

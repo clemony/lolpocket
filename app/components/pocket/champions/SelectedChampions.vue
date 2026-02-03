@@ -58,7 +58,7 @@ function onSpill(e: DraggableEvent) {
         v-else
         class="undraggable grid size-full place-items-center select-none"
       >
-        <Badge class="pointer-events-none absolute" size="12" variant="outline">
+        <Badge class="pointer-events-none absolute" size="lg" variant="outline">
           Pocket is championless.
         </Badge>
       </div>

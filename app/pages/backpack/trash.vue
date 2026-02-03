@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'trash',
+  title: 'Trash',
   icon: 'trash',
   listClass: '**:stroke-[1.8] size-5.25',
   order: 3,
+  path: '/backpack/trash',
 })
 
 /*

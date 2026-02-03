@@ -17,7 +17,7 @@ const pocket = computed(() =>
           class="pointer-events-auto w-max min-w-54 rounded-xl"
           variant="ghost"
           hover="base"
-          size="12"
+          size="lg"
         >
           <h1 class="text-xxs dst font-bold! tracking-tight text-nowrap">
             {{ pocket.name }}

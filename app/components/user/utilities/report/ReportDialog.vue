@@ -63,9 +63,9 @@ defineExpose({})
   >
     <slot v-if="button" :report="ts().report()">
       <DialogTrigger as-child>
-        <Button class="text-xs" size="auto" variant="link">
+        <button class="text-xs  hover:underline ">
           Report
-        </Button>
+        </button>
       </DialogTrigger>
     </slot>
     <LazyDialogContent class="h-max max-w-172 px-7 pt-8">
@@ -105,9 +105,9 @@ defineExpose({})
             </span>
           </TransitionScalePop>
           <Button
-            size="9"
+            size="sm"
             type="submit"
-            variant="neutral"
+            color="neutral"
             @click.stop.prevent="validate()"
           >
             Submit Report

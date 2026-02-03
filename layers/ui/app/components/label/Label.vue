@@ -6,9 +6,9 @@ interface Props extends LabelProps {
   base?: LabelVariants['base']
   class?: HTMLAttributes['class']
   hover?: LabelVariants['hover']
-  on?: ButtonVariants['on']
-  size?: LabelVariants['size']
+
   variant?: LabelVariants['variant']
+  size?: LabelVariants['size']
 }
 
 const props = defineProps<
@@ -30,7 +30,7 @@ const delegatedProps = computed(() => {
     :class="
       cn(
         'group/label text-md leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-        labelVariants({ base, variant, size, hover, on }),
+        labelVariants({ base, variant, size, hover }),
         props.class,
       )
     "

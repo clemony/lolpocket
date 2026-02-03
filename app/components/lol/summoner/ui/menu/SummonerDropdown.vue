@@ -1,18 +1,15 @@
 <script lang="ts" setup>
 const {
   variant = 'ghost',
-  base = 'btn',
+
   class: className,
-  hover = 'base',
-  on = 'base',
+
   size,
 } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
-  base?: ButtonVariants['base']
-  on?: ButtonVariants['on']
-  hover?: ButtonVariants['hover']
+
 }>()
 
 const summoner = computed(() => s_session().summoner)
@@ -30,30 +27,26 @@ function handleBlock() {
 
 <template>
   <UPopover
-    v-if="summoner" mode="hover"
+    v-if="summoner" mode="hover" :content="{ sideOffset: 4 }"
   >
-    <Button
-      size="11"
-      :hover
-      :variant
-      :base
-      :on
-      :class="
-        cn(
-          'relative inline-flex gap-2 overflow-hidden p-0 leading-6',
-          { 'btn-active': open, 'w-full-pl-0 rounded-full': !size },
-          className,
-        )
-      "
+    <UButton
+      size="md"
+      color="muted"
+      variant="ghost"
+      :ui="{
+        base: 'w-74 rounded-lg px-4 justify-between hover:bg-primary/70',
+      }"
     >
-      <SummonerName class="truncate text-xl font-bold" :summoner />
+      <span class="inline-flex gap-2 align-baseline items-center">
+        <SummonerName class="truncate text-xl font-bold" :summoner />
 
-      <SummonerTag class="truncate font-medium" :summoner />
+        <SummonerTag class="truncate font-medium" :summoner />
+      </span>
       <LazySummonerIcon
-        class="ml-4 size-9 rounded-full shadow-sm drop-shadow-sm"
+        class="ml-2 size-7! rounded-full shadow-sm drop-shadow-sm"
         :summoner
       />
-    </Button>
+    </UButton>
     <template #content>
       <SummonerCard />
     </template>

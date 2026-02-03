@@ -24,8 +24,8 @@ const shortcuts = [
 <template>
   <Popover>
     <PopoverTrigger
-      ref="triggerEl"
-      size="sq-7"
+      square
+      size="xs"
       variant="ghost"
       on="inset"
       hover="inset"
@@ -38,8 +38,7 @@ const shortcuts = [
     </PopoverTrigger>
 
     <LazyPopoverContent
-      ref="target"
-      class="tippy-box w-58 -translate-x-2 rounded-xl px-0 pt-px pb-1"
+      class="  w-58 -translate-x-2 rounded-xl px-0 pt-px pb-1"
       data-theme="base"
       align="start"
     >

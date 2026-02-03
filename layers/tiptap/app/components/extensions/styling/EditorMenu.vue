@@ -43,7 +43,7 @@ const menu = [
         v-if="!item.name"
         variant="ghost"
         hover="inset"
-        size="sq-9"
+        square class="size-9"
         @click="item.action()"
       >
         <icon
@@ -65,9 +65,3 @@ const menu = [
     </template>
   </div>
 </template>
-
-<style>
-#tippy-2 {
-  background-color: transparent;
-}
-</style>

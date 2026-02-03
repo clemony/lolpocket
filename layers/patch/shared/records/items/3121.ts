@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
       "unique": true,
       "mythic": false,
       "name": "Everlasting",
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing, or <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing if you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon\" />melee, an enemy champion grants a 100 (+4.5% <b>current</b> mana) <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds (8 second cooldown). The shield's strength is increased by 80% if there is more than one enemy champion within 1200 units."
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />Immobilizing, or <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slowing if you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon \" />melee, an enemy champion grants a 100 (+4.5% <b>current</b> mana) <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for 3 seconds (8 second cooldown). The shield's strength is increased by 80% if there is more than one enemy champion within 1200 units."
     }
   ],
   "stats": {

@@ -38,7 +38,6 @@ const { isCollapsed, pinned } = defineProps<{
           <BtnLink
             class="text-md flex grow items-center justify-start gap-3! px-2 duration-0!"
             variant="ghost"
-            :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
           >
             <PocketIcon

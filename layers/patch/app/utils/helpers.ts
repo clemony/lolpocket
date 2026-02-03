@@ -72,6 +72,10 @@ export function pathNameById(id: number) {
   return pathIndex.find(p => p.id === id)?.name
 }
 
+export function pathIdByName(name: string) {
+  return pathIndex.find(p => p.name === name)?.id
+}
+
 // misc
 
 export const spellNameById = (id: number) => spells[id]?.name

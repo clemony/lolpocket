@@ -38,7 +38,7 @@ const colorChip
       v-if="as().settings.theme === theme.name"
       class="relative grid aspect-square place-items-center rounded-full"
       size="sm"
-      variant="neutral"
+      color="neutral"
     >
       <icon class="absolute size-6 **:stroke-3" name="tick" />
     </Button>

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import type { BadgeProps } from '@nuxt/ui'
+import type { VariantProps } from 'tailwind-variants'
+import { OnClickOutside } from '@vueuse/components'
+
 const { id, class: className } = defineProps<{
   id: number
   class?: HTMLAttributes['class']
@@ -24,93 +28,63 @@ watchEffect(async () => {
     console.error(e)
   }
 })
+
+const toast = useToast()
+const spell = computed(() => spells[id])
+function close() {
+  toast.remove(`rune-${id}`)
+}
 </script>
 
 <template>
-  <div
+  <OnClickOutside
     v-if="rune"
     :class="
       cn(
-        'relative flex size-full max-h-80 cursor-default flex-col justify-center py-3',
+        'relative flex size-full cursor-default flex-col justify-center pb-3',
         className,
       )
     "
+    @trigger="close()"
   >
-    <div class="flex size-full items-center gap-4 px-4 **:select-none">
-      <button
-        :title="rune.tier === 0 ? 'Keystone' : null"
-        :class="
-          cn('group/s relative size-12 shrink-0', {
-            '[&_img]:size-14 [&_img]:-translate-y-1': rune.tier === 0,
-            '[&_img]:size-12': rune.tier !== 0,
-          })
-        "
-      >
-        <span class="absolute top-0 left-0 grid size-full place-items-center">
-          <Img
-            v-if="rune"
-            :key="rune.name"
-            loading-type="spinner"
-            :src="`/img/runes/${rune.id}.webp`"
-            :alt="`${rune.name} Image`"
-            :class="
-              cn(`
-              pointer-events-none absolute top-0 left-0 size-full rounded-full
-              object-contain shadow-sm inset-shadow-sm drop-shadow-sm
-            `)
-            "
-          />
-        </span>
-        <icon
-          v-if="rune.tier === 0"
-          class="**:text-g/90 group-hover/s:animate-heartbeat group-hover/s:drop-shadow-g absolute bottom-0 left-0 size-3.5 group-hover/s:drop-shadow-md group-hover/s:delay-400"
-          name="star-fill"
-        />
-      </button>
+    <div
+      class="flex size-full py-2 items-center gap-2 px-3 **:select-none  "
+    >
+      <Img
+        v-if="rune"
+        :key="rune.name"
+        loading-type="spinner"
+        :src="`/img/runes/${rune.id}.webp`"
+        :alt="`${rune.name} Image`"
+        :class="cn(' size-12 shrink-0 *:scale-110 *:object-contain rounded-full shadow-sm drop-shadow-sm', {
+          '[&_img]:size-14 [&_img]:-translate-y-1': rune.tier === 0,
+          '[&_img]:size-12': rune.tier !== 0,
+        })"
+      />
 
-      <div class="flex size-full flex-col justify-center gap-0.5">
-        <div class="flex items-center justify-between">
-          <h4 class="dst grow text-lg leading-none font-bold">
-            {{ rune.name }}
-          </h4>
-          <a
-            :key="rune.id"
-            :title="`Official LoL Wiki - ${rune.name}`"
-            :href="wikiLink(rune.name)"
-            target="_blank"
-            alt="link to league wiki"
-          >
-            <img
-              class="size-5 shrink-0 rounded-sm"
-              src="/img/logos/wiki.webp"
-              alt="wiki"
-            >
-          </a>
-        </div>
-
-        <div class="flex w-full items-center gap-3">
-          <Element size="sq-4">
-            <span class="size-4.5">
-              <img
-                class="dst shrink-0 object-contain"
-                :src="`/img/paths/${rune.path}.webp`"
-                :alt="rune.path"
-              >
-            </span>
-          </Element>
-
-          <span class="grow text-sm font-medium italic">{{ rune.path }}</span>
-        </div>
-      </div>
+      <h2 class="dst grow text-xl leading-none font-bold tracking-tight text-bc/80">
+        {{ rune.name }}
+      </h2>
     </div>
 
-    <Separator class="px-4" color="neutral" :size="2" />
-
+    <USeparator class="mb-3" color="nc" />
     <div
       :key="rune.id"
-      class="flex size-full max-h-full max-w-full flex-col justify-between gap-8 overflow-y-scroll px-4.5"
+      class="flex size-full max-h-full max-w-full flex-col w-full  gap-3 overflow-y-scroll px-4"
     >
-      <span class="text-pretty whitespace-pre-line" v-html="rune.description" />
+      <div class="flex gap-2 items-center">
+        <UBadge size="sm" :color="rune.tier === 0 ? 'gold' : 'b2'" :trailing-icon="rune.tier === 0 ? 'lucide:key' : 'lucide:diamond'" :label=" rune.tier === 0 ? 'Keystone' : `Slot ${rune.tier} - ${rune.tierLabel}` " />
+
+        <UBadge
+          size="sm"
+          :color="(rune.path.toLowerCase() as BadgeProps['color'])"
+          :label="rune.path"
+          :ui="{ trailingIcon: 'scale-110 translate-x-0.5 text-white' }"
+          :trailing-icon="`path:${rune.path}`"
+        />
+      </div>
+
+      <span class="text-pretty whitespace-pre-line text-2 font-medium" v-html="rune.description" />
     </div>
-  </div>
+  </OnClickOutside>
 </template>

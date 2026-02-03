@@ -36,7 +36,7 @@ const role = computed(() => {
       backgroundColor: `${(cs().filters.role && cs().filters.role === role.name) || active ? role.color : 'transparent'}`,
     }"
   >
-    <Element size="icon-sm">
+    <Element square size="sm">
       <component
         :is="`i-lol-${role?.name.toLowerCase()}`"
         :class="cn('dst absolute size-4.25! shrink-0', role?.class)"

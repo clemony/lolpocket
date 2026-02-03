@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -12,7 +12,7 @@
     {
       "unique": true,
       "name": "Unbreakable",
-      "effects": "Gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 300 (+100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration."
+      "effects": "Gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for 300 (+100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration."
     }
   ],
   "stats": {

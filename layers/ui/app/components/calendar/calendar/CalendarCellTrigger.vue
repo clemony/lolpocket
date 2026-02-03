@@ -17,7 +17,6 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        buttonVariants({ variant: 'ghost' }),
         'size-9 p-0 font-normal',
         `
           [&[data-today]:not([data-selected])]:bg-b2

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -34,7 +34,7 @@
       "unique": true,
       "mythic": false,
       "name": "Ichorshield",
-      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for up to 165 – 315 (based on level), which lasts until destroyed."
+      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for up to 165 – 315 (based on level), which lasts until destroyed."
     }
   ],
   "stats": {

@@ -74,7 +74,7 @@ onMounted(() => {
           <LolpocketDefinition>
             <Button
               variant="outline"
-              size="12"
+              size="lg"
               :class="
                 cn(
                   'border-b3 hover:bg-neutral hover:text-nc pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden text-sm shadow-xs transition-all duration-200',

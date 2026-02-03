@@ -15,14 +15,6 @@ const toggleReply = useToggle(replying)
 const toggleEdit = useToggle(editing)
 
 const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
-
-const buttonProps = {
-  base: 'btn' as ButtonVariants['base'],
-  hover: 'link' as ButtonVariants['hover'],
-  on: 'link' as ButtonVariants['on'],
-  size: 'max' as ButtonVariants['size'],
-  variant: 'link' as ButtonVariants['variant'],
-}
 </script>
 
 <template>
@@ -42,7 +34,6 @@ const buttonProps = {
         <template v-if="comment && comment.is_author">
           <Toggle
             v-model:model-value="editing"
-            v-bind="buttonProps"
             :class="btnClass"
             @update:model-value="(e) => emit('update:edit-model', e)"
           >
@@ -56,7 +47,6 @@ const buttonProps = {
           />
 
           <Button
-            v-bind="buttonProps"
             :class="btnClass"
             :disabled="!comment.is_author"
             @click="() => removeComment(comment, 'user')"
@@ -67,9 +57,6 @@ const buttonProps = {
 
         <Button
           v-if="!comment.is_author"
-          v-bind="buttonProps"
-          :class="btnClass"
-          @click="emit('click:report')"
         >
           Report
         </Button>
@@ -82,7 +69,6 @@ const buttonProps = {
 
         <Toggle
           v-model:model-value="replying"
-          v-bind="buttonProps"
           :class="btnClass"
           @update:model-value="(e) => emit('update:reply-model', e)"
         >

@@ -84,7 +84,7 @@ function onOpen() {
       >
         <Button
           class="group/trig ease-spring-bouncy z-2 size-6.5! scale-0 overflow-hidden rounded-full opacity-0 transition-all duration-200 group-open/pop:scale-100 group-open/pop:opacity-100 group-hover/set:scale-100 group-hover/set:opacity-100"
-          variant="neutral"
+          color="neutral"
           shape="square"
         >
           <icon class="text-nc! absolute size-4 shrink-0" name="more" />
@@ -129,7 +129,7 @@ function onOpen() {
         <div class="size-full">
           <Button
             class="group/x hover-ring ease-spring-bouncy absolute -top-2 -right-2.5 z-2 grid size-6.5! scale-0 place-items-center overflow-hidden rounded-full opacity-0 transition-all duration-200 group-open/x:scale-100 group-open/x:opacity-100 group-hover/x:scale-100 group-hover/x:opacity-100"
-            variant="neutral"
+            color="neutral"
             shape="square"
             @click="removeItemFromSet(pocket, itemSet, item)"
           >

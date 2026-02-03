@@ -45,7 +45,7 @@ useIntersectionObserver(
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           class="fx-0 size-full"
-          variant="base"
+          color="default"
           tabindex="-1"
           hover="btn"
         >
@@ -55,7 +55,7 @@ useIntersectionObserver(
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           class="fx-0 size-full"
-          variant="base"
+          color="default"
           tabindex="-1"
           hover="btn"
         >
@@ -65,7 +65,7 @@ useIntersectionObserver(
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           class="fx-0 size-full"
-          variant="base"
+          color="default"
           tabindex="-1"
           hover="btn"
         >
@@ -79,7 +79,7 @@ useIntersectionObserver(
             placement: 'bottom',
           }"
           class="fx-0 size-full"
-          variant="base"
+          color="default"
           tabindex="-1"
           hover="btn"
         >

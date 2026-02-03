@@ -3,9 +3,8 @@ import type { Editor } from '@tiptap/vue-3'
 import { isTextSelection } from '@tiptap/core'
 import { BubbleMenu } from '@tiptap/vue-3/menus'
 
-const { editor, theme = 'base' } = defineProps<{
+const { editor, } = defineProps<{
   editor: Editor | null
-  theme?: TippyTheme
 }>()
 
 const forceShow = ref(false)
@@ -68,7 +67,7 @@ function toggleListType() {
     data-inertia
     :get-reference-client-rect="virtualRect || undefined"
     :data-theme="theme"
-    :class="cn('tippy-box px-1.5')"
+    :class="cn('px-1.5')"
     :options="{ placement: 'top', offset: 8 }"
   >
     <EditorMenu :editor />
@@ -79,7 +78,7 @@ function toggleListType() {
     :editor
     data-inertia
     :data-theme="theme"
-    :class="cn('tippy-box px-1.5')"
+    :class="cn(' px-1.5')"
     :should-show="
       () => editor?.isActive('bulletList') || editor?.isActive('orderedList')
     "
@@ -87,7 +86,7 @@ function toggleListType() {
     :options="{ placement: 'top-start', offset: 8 }"
   >
     <div class="bubble-menu">
-      <Button variant="outline" on="inset" size="sq-10" @click="toggleListType">
+      <Button variant="outline" on="inset" square @click="toggleListType">
         Toggle list type
       </Button>
     </div>

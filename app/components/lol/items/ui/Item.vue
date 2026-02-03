@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tooltip, TooltipXL } from '#components'
+import ItemTooltip from '#components'
 
 const {
   id,
@@ -7,28 +7,43 @@ const {
   class: className,
   loadingType,
   map,
-  size = 'lg',
 } = defineProps<{
   id: number | null
   class?: HTMLAttributes['class']
   loadingType?: LoadingStyle
   map?: number
-  size?: TooltipSize
   side?: Side
 }>()
 
 const loaded = shallowRef<boolean>(false)
-const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
+
+const toast = useToast()
+function showToast() {
+  if (!toast.toasts.value.find(t => t.id === `item-${id}`)) {
+    toast.add({
+      id: `item-${id}`,
+      description: h(ItemTooltip, { id, map }),
+      duration: 0,
+      ui: {
+        root: 'p-0!'
+      }
+    })
+  }
+}
 </script>
 
 <template>
-  <TooltipXL arrow :side>
+  <Tooltip
+    :text="itemNameById(id)"
+    trailing-icon="i"
+    :img="`/img/items/${id}.webp`" :side
+  >
     <Img
-      :size
+      role="button"
       :class="
         cn(
           {
-            'p-0! opacity-96 shadow-sm shadow-black/30 drop-shadow-sm':
+            'p-0! opacity-96 shadow-sm shadow-black/30 drop-shadow-sm rounded-lg':
               id && loaded,
           },
           className,
@@ -37,10 +52,8 @@ const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
       :src="`/img/items/${id}.webp`"
       :alt="itemNameById(id)"
       :loading-type
+      @click.stop="showToast()"
       @load="loaded = true"
     />
-    <template #content>
-      <ItemTooltip :id :map />
-    </template>
-  </TooltipXL>
+  </Tooltip>
 </template>

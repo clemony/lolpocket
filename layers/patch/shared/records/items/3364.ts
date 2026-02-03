@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
   "active": [
     {
       "unique": false,
-      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper-drone.webp\" class=\"tip-icon\" />Sweeper Drone that escorts you for the next 8 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />visible.",
+      "effects": "Consume one charge to summon a <img src=\"/img/icons/sweeper-drone.webp\" class=\"tip-icon \" />Sweeper Drone that escorts you for the next 8 seconds, detecting nearby enemies that are not <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />visible.",
       "range": 0
     }
   ],

@@ -13,8 +13,8 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
     >
       <Button
         class="pr-4"
-        variant="neutral"
-        size="12"
+        color="neutral"
+        size="lg"
         @click="pocket.items.push(newItemSet())"
       >
         <icon class="size-4.5" name="add" />
@@ -31,9 +31,9 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
       <Button
         v-if="is().filters.rank"
         class="pr-2"
-        variant="neutral"
+        color="neutral"
         hover="btn"
-        size="8"
+        size="sm"
         @click="is().filters.rank = null"
       >
         {{ is().filters.rank }}

@@ -147,9 +147,8 @@ watch(
 <template>
   <Popover>
     <PopoverTrigger
-      ref="triggerEl"
       class="size-7"
-      size="sq"
+      square
       variant="ghost"
       on="inset"
       hover="inset"
@@ -162,8 +161,7 @@ watch(
     </PopoverTrigger>
 
     <LazyPopoverContent
-      ref="target"
-      class="tippy-box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
+      class=" relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
       data-theme="base"
       align="start"
     >
@@ -229,7 +227,7 @@ watch(
                 {{ group.name }}
               </TooltipContent>
             </Tooltip>
-            <TabIndicator class="*:bg-neutral/80!" variant="neutral" />
+            <TabIndicator class="*:bg-neutral/80!" color="neutral" />
           </TabsList>
         </Tabs>
       </div>

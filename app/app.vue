@@ -12,28 +12,31 @@ useHead({
   ],
 })
 
-onMounted(() => {
-  document.documentElement.setAttribute(
-    'data-theme',
-    as()?.settings?.theme ?? 'daylight'
-  )
-})
+const scrollRef = useState<HTMLElement | null>('scrollRef', () => null)
 </script>
 
 <template>
-  <UApp>
-    <NuxtLayout>
-      <NuxtPage />
-      <LazyAppCommand />
+  <UApp
+    id="app"
 
-      <LazyReportDialog
-        v-if="as().user && as().account"
-        :comment="ts().reportComment"
-      />
-      <!-- loading -->
-      <ClientOnly>
-        <NuxtLoadingIndicator
-          style="
+    ref="scrollRef"
+    :style="{ overflowAnchor: 'none' }"
+    :ui="{ base: ' bg-b1!' }"
+    :toaster="{
+      position: 'top-right',
+      class: 'translate-y-15 ',
+    }"
+  >
+    <NuxtPage />
+    <LazyAppCommand />
+
+    <LazyReportDialog
+      v-if="as().user && as().account"
+      :comment="ts().reportComment"
+    />
+    <!-- loading -->
+    <NuxtLoadingIndicator
+      style="
             height: 5px;
             background: repeating-linear-gradient(
               to right,
@@ -42,8 +45,6 @@ onMounted(() => {
               var(--color-neutral) 100%
             );
           "
-        />
-      </ClientOnly>
-    </NuxtLayout>
+    />
   </UApp>
 </template>

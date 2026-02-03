@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -20,7 +20,7 @@
       "unique": true,
       "mythic": false,
       "name": "Void Explosion",
-      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 magic damage (+15% AP) (+3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters.",
+      "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 magic damage (+15% AP) (+3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon light:invert\" />monsters.",
       "cooldown": "10"
     },
     {
@@ -33,7 +33,7 @@
     {
       "unique": true,
       "name": "Ward",
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon \" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "range": 600
     }
   ],

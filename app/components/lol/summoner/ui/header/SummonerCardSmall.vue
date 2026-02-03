@@ -4,17 +4,15 @@ import { Primitive } from 'reka-ui'
 
 const {
   fullWidth,
-  base = 'none',
-  class: className,
-  hover = 'none',
-  on = 'none',
   variant = 'none',
+
+  class: className,
+
 } = defineProps<
   PrimitiveProps & {
-    on?: ButtonVariants['on']
-    base?: ButtonVariants['base']
+
     class?: HTMLAttributes['class']
-    hover?: ButtonVariants['hover']
+
     size?: ButtonVariants['size']
     variant?: ButtonVariants['variant']
     fullWidth?: boolean
@@ -30,7 +28,7 @@ const summoner = computed(() => s)
     :class="
       cn(
         'flex w-full items-center gap-3.5',
-        buttonVariants({ base, variant, size, hover, on }),
+
         className,
       )
     "

@@ -70,7 +70,7 @@ const keyClass
           <Button
             class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             variant="ghost"
-            size="8"
+            size="sm"
             title="Clear main spells"
             @click="pocket._spells === ''"
           >

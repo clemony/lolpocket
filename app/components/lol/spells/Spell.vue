@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import { Tooltip, TooltipXL } from '#components'
+import SpellTooltip from '#components'
 
 const {
   id,
   side = 'top',
   class: className,
   loadingType,
-  size = 'sm',
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | undefined
   loadingType?: LoadingStyle
-  size?: TooltipSize
   side?: Side
 }>()
 
@@ -24,20 +22,36 @@ watch(
   }
 )
 
-const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
+const toast = useToast()
+function showToast() {
+  if (!toast.toasts.value.find(t => t.id === `spell-${id}`)) {
+    toast.add({
+      id: `spell-${id}`,
+      description: h(SpellTooltip, { id }),
+      duration: 0
+    })
+  }
+}
 </script>
 
 <template>
-  <component :is="component" :text="size === 'sm' ? spells[id].name : ''" :img="`/img/spells/${id}.webp`" :side>
+  <Tooltip
+    :text="spells[id]?.name"
+    trailing-icon="i"
+    :img="`/img/spells/${id}.webp`"
+    :side
+  >
     <Img
       v-if="id"
+      role="button"
       :class="
         cn({ 'size-14 shadow-sm shadow-black/30 drop-shadow-sm': loaded }, className)
       "
       :loading-type
       :alt="spells[id].name"
       :src="`/img/spells/${id}.webp`"
+      @click.stop="showToast()"
       @load="loaded = true"
     />
-  </component>
+  </Tooltip>
 </template>

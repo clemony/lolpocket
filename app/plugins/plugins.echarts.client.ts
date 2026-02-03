@@ -1,6 +1,6 @@
 // plugins/echarts.client.ts
 import { defineNuxtPlugin } from '#app'
-import { HeatmapChart, ScatterChart } from 'echarts/charts'
+import { HeatmapChart, PieChart, ScatterChart } from 'echarts/charts'
 import {
   DataZoomComponent,
   GridComponent,
@@ -19,6 +19,7 @@ export default defineNuxtPlugin(() => {
 
   use([
     CanvasRenderer,
+    PieChart,
     AxisBreak,
     TitleComponent,
     HeatmapChart,

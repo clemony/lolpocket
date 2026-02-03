@@ -105,7 +105,7 @@ function deleteTag(tag: string) {
           <Button
             class="group focus-within:border-neutral/60 flex w-full flex-nowrap items-center gap-3! justify-self-center px-3 py-0 text-sm duration-0 focus-within:[&_input]:placeholder:opacity-0"
             as="div"
-            variant="base"
+            color="default"
             hover="outline"
           >
             <span class="bg-b1 z-1 grid h-full w-4.5 place-items-center">
@@ -125,7 +125,7 @@ function deleteTag(tag: string) {
             <Button
               class="btn-square size-6 duration-0 group-has-placeholder-shown:opacity-0"
               variant="ghost"
-              size="8"
+              size="sm"
               @click="newTag = ''"
             >
               <icon name="x-sm" />

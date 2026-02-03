@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
       "unique": true,
       "mythic": false,
       "name": "Salvage the Wreckage",
-      "effects": "Casting an ability has a 0% – 100% (based on critical strike chance) chance to grant you or your ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 3 seconds that absorbs 70 – 210 (based on level) (+25% <b>bonus</b> AD) (+15% AP) damage."
+      "effects": "Casting an ability has a 0% – 100% (based on critical strike chance) chance to grant you or your ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for 3 seconds that absorbs 70 – 210 (based on level) (+25% <b>bonus</b> AD) (+15% AP) damage."
     }
   ],
   "stats": {

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -22,13 +22,13 @@
       "unique": true,
       "mythic": false,
       "name": "Polarity",
-      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit."
+      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon \" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit."
     },
     {
       "unique": true,
       "mythic": false,
       "name": "Dynamo",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon\" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health."
+      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon \" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health."
     }
   ],
   "stats": {

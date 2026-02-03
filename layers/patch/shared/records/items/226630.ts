@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -15,7 +15,7 @@
     {
       "unique": true,
       "name": "Thirsting Slash",
-      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit."
+      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit."
     }
   ],
   "stats": {

@@ -10,6 +10,7 @@ const props = defineProps<Props>()
 const emit = defineEmits(['loaded'])
 
 interface Props {
+  variant?: ElementVariants['variant']
   alt: string
   as?: AsTag | string
   base?: ElementVariants['base']
@@ -18,7 +19,6 @@ interface Props {
   on?: ElementVariants['on']
   size?: ElementVariants['size']
   src: string | null
-  variant?: ElementVariants['variant']
 }
 
 /* skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40 */
@@ -34,7 +34,7 @@ const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <Element
+  <div
     v-bind="forwarded"
     :class="
       cn(elementVariants({ base, variant, hover, on, size }), props.class)
@@ -57,5 +57,5 @@ const forwarded = useForwardProps(props)
       @load="onLoad()"
     >
     <slot />
-  </Element>
+  </div>
 </template>

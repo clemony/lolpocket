@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface InputGroupButtonProps {
+  variant?: ButtonVariants['variant']
   class?: HTMLAttributes['class']
   size?: InputGroupButtonVariants['size']
-  variant?: ButtonVariants['variant']
 }
 
 const props = withDefaults(defineProps<InputGroupButtonProps>(), {
@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<InputGroupButtonProps>(), {
     :variant="props.variant"
     :class="
       cn(
-        inputGroupButtonVariants({ size: props.size, variant: props.variant }),
+        inputGroupButtonVariants({ size: props.size }),
         props.class,
       )
     "

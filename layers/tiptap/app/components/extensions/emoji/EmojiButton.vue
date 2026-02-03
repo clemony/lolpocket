@@ -15,7 +15,7 @@ const {
 <template>
   <Button
     :id="index"
-    size="sq-10"
+    square
     variant="ghost"
     hover="inset"
     tabindex="0"

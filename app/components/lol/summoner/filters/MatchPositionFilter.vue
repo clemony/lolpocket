@@ -1,13 +1,9 @@
 <script lang="ts" setup>
 const {
   class: className,
-  color,
   orientation = 'horizontal',
-  size = '10',
 } = defineProps<{
   class?: HTMLAttributes['class']
-  color?: TabListVariants['color']
-  size?: TabListVariants['size']
   orientation?: DataOrientation
 }>()
 const { summoner } = storeToRefs(s_session())

@@ -11,10 +11,8 @@ const { player } = defineProps<{
   >
     <!-- keystone -->
     <div class="bg-b1 z-2 grid size-4 place-items-center rounded-full">
-      <Button
-        class="bg-neutral/80 z-2 aspect-square p-0! transition-all duration-300 hover:scale-110"
-        variant="neutral"
-        size="c-4"
+      <div
+        class="bg-neutral/80 bg-neutral size-4 rounded-full z-2 aspect-square p-0! transition-all duration-300 hover:scale-110"
         data-type="rune"
         :data-id="player?.runes?.keystone"
       >
@@ -23,15 +21,13 @@ const { player } = defineProps<{
           :src="`/img/runes/${player?.runes.keystone}.webp`"
           :alt="runeNameById(player?.runes.keystone)"
         >
-      </Button>
+      </div>
     </div>
     <!-- path -->
     <div class="bg-b1 z-1 mt-0.5 grid size-4 place-items-center rounded-full">
       <Button
-        class="bg-neutral/80 z-1 aspect-square p-0! transition-all duration-300 hover:scale-110"
-        variant="neutral"
+        class="bg-neutral/80 z-1 aspect-square p-0! transition-all duration-300 hover:scale-110 bg-neutral size-4 rounded-full"
         data-type="path"
-        size="c-4"
         :style="{
           '--path': `${pathColorByName(pathNameById(player?.runes?.secondary?.path))}`,
         }"

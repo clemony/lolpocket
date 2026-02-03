@@ -46,10 +46,11 @@ const groups = computed(() => {
       :value="item.path"
       as-child
     >
+      <!--
+        variant="link" -->
       <BtnLink
         class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
         size="md"
-        variant="link"
         :to="item.path"
       >
         <Icon
@@ -73,10 +74,11 @@ const groups = computed(() => {
         :value="item.path"
         as-child
       >
+        <!--
+          variant="link" -->
         <BtnLink
           class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
           size="md"
-          variant="link"
           :to="item.path"
         >
           <Icon

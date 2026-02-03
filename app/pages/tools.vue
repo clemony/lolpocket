@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'LPTs',
+  title: 'Tools',
   icon: 'lucide:wrench',
   search: 'children',
 })

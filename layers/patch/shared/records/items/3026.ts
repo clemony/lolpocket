@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Rebirth",
-      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.webp\" class=\"tip-icon\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable, <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends)."
+      "effects": "Upon taking lethal damage, enter <img src=\"/img/icons/resurrection.webp\" class=\"tip-icon light:invert\" />resurrection for 4 seconds, during which you are <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon \" />invulnerable, <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon \" />untargetable, and unable to act, and afterwards <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for 50% of <b>base</b> health and restore 100% of <b>maximum</b> mana (300 second cooldown, starts after resurrection ends)."
     }
   ],
   "stats": {

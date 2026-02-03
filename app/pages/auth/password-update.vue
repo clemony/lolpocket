@@ -41,24 +41,23 @@ function handleReset() {
           <div class="grid w-full gap-y-2">
             <Button
               class="h-14 w-full font-medium"
-              variant="neutral"
-              size="12"
+              color="neutral"
+              size="lg"
               type="submit"
               @click="handleReset()"
             >
               Reset Password
             </Button>
 
-            <Button
-              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
+            <button
+              class="underline-offset-1.5 hover:underline h-14 w-full justify-center gap-3 justify-self-start"
               as="a"
-              variant="link"
-              size="12"
+              size="lg"
               hover="link"
               @click="navigateTo('/login')"
             >
               Remembered it? Log in
-            </Button>
+            </button>
           </div>
         </div>
       </div>

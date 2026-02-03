@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Winter's Caress",
-      "effects": "<img src=\"/img/icons/cripple.webp\" class=\"tip-icon\" />Cripples the attack speed of enemy champions within 700 units by 20%."
+      "effects": "<img src=\"/img/icons/cripple.webp\" class=\"tip-icon \" />Cripples the attack speed of enemy champions within 700 units by 20%."
     }
   ],
   "stats": {

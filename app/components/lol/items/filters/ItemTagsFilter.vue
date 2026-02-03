@@ -1,15 +1,15 @@
 <script setup lang="ts">
 const {
+  variant = 'ghost',
   class: className,
   clear = true,
-  hover = 'btn',
+
   size = ['sq-12', '12'],
-  variant = 'ghost',
 } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size'][]
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+
   clear?: boolean
 }>()
 
@@ -38,8 +38,8 @@ function handleChange() {
           v-if="is().filters.tags.length && clear"
           class="order-first hover:*:opacity-100"
           :variant
-          :hover
-          :size="size[0]"
+
+          size="sm"
           @click="is().filters.tags.length = 0"
         >
           <icon class="size-4" name="x" />
@@ -54,7 +54,7 @@ function handleChange() {
           <ItemTagButton
             as="label"
             :variant
-            :size="size[1]"
+            size="sm"
             :tag>
           </ItemTagButton>
         </BaseListboxItem> -->

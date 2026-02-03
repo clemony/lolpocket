@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -29,7 +29,7 @@
     {
       "unique": true,
       "name": "Purify",
-      "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon\" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon\" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon\" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon\" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon\" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal the target for 100 – 250 (based on target's level).",
+      "effects": "Remove all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon \" />Airborne, <img src=\"/img/icons/blind.webp\" class=\"tip-icon \" />Blind, <img src=\"/img/icons/disarm.webp\" class=\"tip-icon \" />Disarm, <img src=\"/img/icons/nearsight.webp\" class=\"tip-icon \" />Nearsight, and <img src=\"/img/icons/suppression.webp\" class=\"tip-icon \" />Suppression) from yourself or the target allied champion and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal the target for 100 – 250 (based on target's level).",
       "range": 0
     }
   ],

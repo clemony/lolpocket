@@ -1,8 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'Spellbook',
-  title: 'Spellbook',
+  title: 'Spells',
   icon: 'teenyicons:book-outline',
+
+  description: 'Learn magic in the summoner spellbook.',
   listClass: '**:stroke-[2.6]',
   path: '/library/spells',
   searchKeys: [

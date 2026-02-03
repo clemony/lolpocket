@@ -36,7 +36,7 @@ const props = defineProps<{
     v-tippy="props.tip"
     class="text-xlw-full! group/button text-bc/80 relative grid place-items-center justify-start px-3 font-medium tracking-tight hover:inset-shadow-sm"
     variant="ghost"
-    size="12"
+    size="lg"
   >
     <icon
       class="absolute left-[11px] m-auto size-4.5 scale-x-100 opacity-70 transition-all duration-500 group-hover/button:scale-x-0 group-hover/button:opacity-0"

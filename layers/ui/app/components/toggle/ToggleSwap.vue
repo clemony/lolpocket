@@ -4,16 +4,12 @@ import type { ToggleProps } from 'reka-ui'
 interface ToggleItem {
   icon: string
   text: string
-  variant: ToggleVariants['variant']
 }
 
 const props = defineProps<
   ToggleProps & {
     items?: ToggleItem[]
     class?: HTMLAttributes['class']
-    size?: ToggleVariants['size']
-    base?: ToggleVariants['base']
-    hover?: ToggleVariants['hover']
     value: boolean
   }
 >()
@@ -50,7 +46,6 @@ onMounted(() => {
     as="button"
     :class="
       cn(
-        toggleVariants({ variant: currentVariant?.variant, size, base, hover }),
         `
           group data-[state=on]:bg-neutral/90 hover:data-[state=on]:**:text-bc relative w-max cursor-pointer
           overflow-hidden rounded-full border px-3 py-0!
@@ -65,7 +60,6 @@ onMounted(() => {
       <div
         :class="
           cn(
-            toggleVariants({ variant: oppositeVariant?.variant }),
             `
               absolute -left-4 size-2 shrink-0 -translate-x-4 scale-100
               rounded-full p-0! shadow-none drop-shadow-xs transition-all
@@ -93,7 +87,6 @@ onMounted(() => {
     <div
       :class="
         cn(
-          toggleVariants({ variant: oppositeVariant?.variant }),
           `
             absolute top-0 z-10 flex size-full translate-x-24 items-center
             justify-center gap-2 opacity-0 transition-all duration-350

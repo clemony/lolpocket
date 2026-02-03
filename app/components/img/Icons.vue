@@ -12,7 +12,6 @@ const props = withDefaults(
   {
     base: 'btn',
     size: 'sq-4',
-    variant: 'none',
   }
 )
 </script>
@@ -21,12 +20,7 @@ const props = withDefaults(
   <Element
     :class="
       cn(
-        'p-0!',
-        buttonVariants({
-          base: props.base,
-          variant: props.variant,
-          size: props.size,
-        }),
+        'p-0! size-4.5 grid place-items-center *:absolute relative',
         props.wrapperClass,
       )
     "

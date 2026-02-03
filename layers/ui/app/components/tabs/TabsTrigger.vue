@@ -6,7 +6,6 @@ const props = withDefaults(
   defineProps<
     TabsTriggerProps & {
       value?: string | number | null
-      on?: TabsTriggerVariants['on']
       class?: HTMLAttributes['class']
     }
   >(),
@@ -22,7 +21,6 @@ const forwarded = useForwardProps(delegatedProps)
   <TabsTrigger
     v-bind="forwarded"
     :value="props.value"
-    :on
     :class="cn('group/tt z-1 size-full', props.class)"
   >
     <slot />

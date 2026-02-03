@@ -21,7 +21,8 @@ onMounted(() => {
     :disabled="!comment.uuid || comment.is_author"
     type="single"
     variant="ghost"
-    size="sq-5"
+    class="size-5"
+
     :on="!comment.uuid ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
@@ -45,11 +46,9 @@ onMounted(() => {
       </ToggleGroupItem>
     </label>
     <Element
-      variant="none"
-      size="6"
       :class="
         cn(
-          'text-xxs relative grid place-items-center px-2 leading-3 lining-nums tabular-nums opacity-50 select-none',
+          'text-xxs size-6 relative grid place-items-center px-2 leading-3 lining-nums tabular-nums opacity-50 select-none',
           { 'font-medium opacity-100': vote },
         )
       "

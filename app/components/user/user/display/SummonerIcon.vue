@@ -3,7 +3,6 @@ const {
   alt,
   class: className,
   iconId,
-  size,
   summoner,
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -16,12 +15,11 @@ const {
 
 <template>
   <Img
-    :size
-    variant="neutral"
+    color="neutral"
     :src="getSummonerIcon(iconId || summoner?.icon || as().account.icon)"
     alt="summoner icon"
     :class="
-      cn('pointer-events-none grid place-items-center p-0!', className)
+      cn('', className)
     "
   />
 </template>

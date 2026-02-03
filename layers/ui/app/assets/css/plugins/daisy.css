@@ -1,6 +1,47 @@
 @import 'tailwindcss';
-@plugin "daisyui";
 @reference '../theme.css';
+
+
+@plugin "daisyui"{
+  themes: false;
+  styled: true;
+  exclude: 'rootcolor', 'rootscrollgutter';
+}
+
+
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: 'true';
+    --radius-selector: 0.4rem;
+  --radius-box: 1rem;
+  --radius-field: 0.55rem;
+  --depth: 0.5;
+  --noise: 0.2;
+
+
+  --tabs-height: 30px;
+  --tab-radius-min: 0.65rem !important;
+  --tab-paddings: 4px 20px !important;
+  --tab-border-color: var(--color-b3) !important;
+  --tab-border-colors: var(--color-b3) !important;
+}
+
+@utility btn {
+  @apply duration-0;
+}
+
+@utility tabs {
+  &.tabs-md {
+  --tabs-height: 30px;
+  }
+.tab {
+  --tab-radius-min: 0.65rem !important;
+  --tab-paddings: 4px 20px !important;
+  --tab-border-color: var(--color-b3) !important;
+  --tab-border-colors: var(--color-b3) !important;
+  text-transform: capitalize;
+}
+}
 
 @utility fx-0 {
   --noise: 0;
@@ -11,6 +52,7 @@
   --noise: 0.7;
   --depth: 1;
 }
+
 
 /* tooltip */
 
@@ -43,7 +85,7 @@
 }
 
 @utility text-area {
-  &:hover,
+  &,
   &:focus-within {
     @apply ring-1 ring-bc/60;
   }
@@ -65,18 +107,13 @@
 }
 
 @utility badge-default {
-  @apply border-b4/70 bg-b1/94 text-bc backdrop-blur-sm;
+  @apply border-b3 bg-b1/94 text-bc backdrop-blur-sm;
 }
 
 /* chkbx */
 
-@utility checkbox {
-  &::before {
-    clip-path: polygon(26.6% 50%, 46.6% 66.6%, 73.3% 33.3%);
-  }
-}
 @utility checkbox-neutral {
-  @apply border-b4 inset-shadow-none;
+  @apply border-b3 inset-shadow-none;
 }
 @utility checkbox-sm {
   @apply rounded-[3.5px];
@@ -84,12 +121,6 @@
 
 @utility checkbox-xs {
   @apply rounded-[3.5px];
-}
-
-/*  btn */
-
-@utility btn {
-  @apply items-center gap-3 bg-transparent px-3 text-md font-normal;
 }
 
 /* chat */
@@ -108,6 +139,7 @@
   }
 }
 
+
 @layer components {
   /* field  */
 
@@ -116,12 +148,12 @@
   }
 
   .field-legend {
-    @apply absolute -top-5 left-5.5 fieldset-legend max-h-12 max-w-64 text-md;
+    @apply absolute -top-5 left-5.5 fieldset-legend font-medium max-h-12 max-w-64 text-md;
   }
 
   .field-box {
     background-image: url('--assets/icons/ui/noise.svg');
-    @apply relative overflow-visible rounded-xl border border-b3/60 bg-primary bg-size-[160px] bg-repeat text-sm shadow-warm-soft drop-shadow-xs **:select-none;
+    @apply relative overflow-visible rounded-xl border border-b3/60 bg-muted bg-size-[160px] bg-repeat text-sm shadow-warm-soft drop-shadow-xs **:select-none;
   }
 
   /* progress */
@@ -161,54 +193,6 @@
       @apply drop-shadow-[1px_0px_0px_#00000020];
     }
   }
-}
-
-/* config */
-
-@plugin "daisyui" {
-  root: ':root';
-  themes: lofi;
-  styled: true;
-}
-
-@plugin "daisyui/theme" {
-  name: 'lofi';
-  default: true;
-  prefersdark: true, false;
-  color-scheme: dark, light;
-  styled: true;
-
-  --color-base-100: var(--b1);
-  --color-base-200: var(--b2);
-  --color-base-300: var(--b3);
-  --color-base-content: var(--bc);
-  --color-primary: var(--neutral) !important;
-  --color-primary-content: var(--nc);
-  --color-secondary: var(--neutral) !important;
-  --color-secondary-content: var(--nc);
-  --color-accent: var(--neutral) !important;
-  --color-accent-content: var(--nc);
-  --color-neutral: var(--neutral) !important;
-  --color-neutral-content: var(--nc);
-  --color-info: var(--sorcery);
-  --color-info-content: #000000;
-  --color-success: var(--resolve);
-  --color-success-content: #000000;
-  --color-warning: var(--precision);
-  --color-warning-content: #000000;
-  --color-error: var(--domination);
-  --color-error-content: #000000;
-  --input-color: var(--color-b3);
-  --tabcontent-radius-ss: var(--rounded-xl);
-  --tabcontent-radius-se: var(--rounded-xl);
-  --tabcontent-radius-es: var(--rounded-xl);
-  --tabcontent-radius-ee: var(--rounded-xl);
-
-  --radius-selector: 0.4rem;
-  --radius-box: 1rem;
-  --radius-field: 0.55rem;
-  --depth: 1;
-  --noise: 0.8;
 }
 
 .tabs-lift-start {
@@ -275,7 +259,7 @@
         );
 
         &:before {
-          content: '';
+          content: ' ';
           display: block;
           position: absolute;
           height: var(--tab-corner-height);

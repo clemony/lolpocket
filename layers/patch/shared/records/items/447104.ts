@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Fill the Soul",
-      "effects": "Gain a charge each time you or champions within 800 units cast an ability, up to 30. At maximum charges, gain 100 – 250 (based on level) ability power and 15% – 25% (based on %) <b>bonus</b> movement speed for the rest of the round, as well as a 400 – 750 (based on level) <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that lasts until destroyed. Charges are reset every round and between each phase in a round."
+      "effects": "Gain a charge each time you or champions within 800 units cast an ability, up to 30. At maximum charges, gain 100 – 250 (based on level) ability power and 15% – 25% (based on %) <b>bonus</b> movement speed for the rest of the round, as well as a 400 – 750 (based on level) <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that lasts until destroyed. Charges are reset every round and between each phase in a round."
     }
   ],
   "stats": {

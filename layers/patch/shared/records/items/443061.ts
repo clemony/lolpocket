@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Atrophy",
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon\" />champions have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+33% of immobilizing effect's duration)."
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />Immobilizing effects against <img src=\"/img/icons/champions.webp\" class=\"tip-icon \" />champions have a 0% – 100% (based on critical strike chance) chance to increase in duration by 0.25 seconds (+33% of immobilizing effect's duration)."
     }
   ],
   "stats": {

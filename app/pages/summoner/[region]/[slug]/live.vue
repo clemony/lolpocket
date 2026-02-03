@@ -12,11 +12,11 @@ useSeoMeta({
   twitterTitle: '[twitter:title]',
 })
 definePageMeta({
-  key: 'l',
-  title: 'live',
-  icon: 'mingcute:sound-line-line',
+  title: 'Live Match',
+  icon: 'lucide:rss',
   iconStyle: '',
   order: 4,
+  slug: 'live',
 })
 </script>
 

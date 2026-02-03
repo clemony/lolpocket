@@ -2,7 +2,7 @@
 const {
   class: className,
   position: pos,
-  size = '7',
+  size = 'xs',
 } = defineProps<{
   class?: HTMLAttributes['class']
   position: MapPosition | string | null

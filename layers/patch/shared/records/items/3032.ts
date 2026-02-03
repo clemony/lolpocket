@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -40,7 +40,7 @@
       "unique": true,
       "mythic": false,
       "name": "Flurry",
-      "effects": "Launching a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit and 2 seconds if the attack <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strikes)."
+      "effects": "Launching a basic attack against an enemy champion grants you 30% <b>bonus</b> attack speed for 6 seconds (30 second cooldown, reduced by 1 second <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit and 2 seconds if the attack <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critically strikes)."
     }
   ],
   "stats": {

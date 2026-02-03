@@ -8,20 +8,22 @@ const { class: className } = defineProps<{
 const emit = defineEmits(['scroll-top'])
 
 const { filteredMatches, loading, loadingOlder, loadMessage, matches } = storeToRefs(s_matches())
+console.log('🥸 - filteredMatches:', filteredMatches)
 
 watch(() => filteredMatches.value, (v) => {
   console.log('💠 - watch - newVal:', v)
 })
 const scrollRef = useState<HTMLElement>('scrollRef')
+console.log('🥸 - scrollRef:', scrollRef)
 const hasMatches = computed(() => s_matches().filteredMatches?.length > 0)
 </script>
 
 <template>
-  <div
+  <TransitionSlideLeft
     group
     :class="
       cn(
-        '@container flex w-full max-w-260 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2',
+        '@container h-max flex w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2',
         className,
       )
     "
@@ -33,7 +35,8 @@ const hasMatches = computed(() => s_matches().filteredMatches?.length > 0)
         <Button
           variant="ghost"
           hover="btn"
-          size="sq-7"
+          square
+          size="xs"
           @click="loadMessage = ''"
         >
           <Icon
@@ -62,18 +65,25 @@ const hasMatches = computed(() => s_matches().filteredMatches?.length > 0)
     </div>
 
     <!-- virtualized rows -->
-    <Virtualizer
+    <UScrollArea
       v-else
       v-slot="{ item }"
       :scroll-ref="scrollRef"
-      :data="toValue(filteredMatches)"
-      :item-size="118"
+      :items="toValue(filteredMatches)"
+      :virtualize="{
+        estimateSize: 108,
+        gap: 12,
+      }"
       :start-margin="220"
       :shift="loadingOlder"
       :buffer-size="2000"
+      :ui="{
+        viewport: 'w-full h-max',
+        root: 'w-full h-max',
+      }"
     >
       <MatchCard :key="item.matchId" :match="item" />
-    </Virtualizer>
+    </UScrollArea>
 
     <div v-if="matches?.length" class="grid h-32 place-items-center">
       <Button class="group/c" variant="ghost" @click="s_matches().loadOlder()">
@@ -93,5 +103,5 @@ const hasMatches = computed(() => s_matches().filteredMatches?.length > 0)
         load older matches
       </Button>
     </div>
-  </div>
+  </TransitionSlideLeft>
 </template>

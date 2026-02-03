@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -39,7 +39,7 @@
       "unique": true,
       "mythic": false,
       "name": "Defy",
-      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon\" />heals you for 75% <b>bonus</b> AD over 2 seconds."
+      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon \" />heals you for 75% <b>bonus</b> AD over 2 seconds."
     }
   ],
   "stats": {

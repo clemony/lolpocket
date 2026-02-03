@@ -58,12 +58,12 @@ function getBadgeVariantFromLabel(label: string) {
     </div>
     <div class="text-bc/60 line-clamp-2 text-sm">
       {{ item.text.substring(0, 300) }}
-    </div>
+    </div><!--
+        :variant="getBadgeVariantFromLabel(label)" -->
     <div class="flex items-center gap-2">
       <Badge
         v-for="label of item.labels"
         :key="label"
-        :variant="getBadgeVariantFromLabel(label)"
       >
         {{ label }}
       </Badge>

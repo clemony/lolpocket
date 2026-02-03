@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -31,7 +31,7 @@
       "unique": true,
       "mythic": false,
       "name": "Opening Barrage",
-      "effects": "After casting your ultimate ability, your next 3 basic attacks within 8 seconds gain 50% <b>bonus</b> attack speed and will <img src=\"/img/icons/critically-strike.webp\" class=\"tip-icon\" />critically strike for {{critical damage|50|50|50}} <b>bonus</b> damage. If an attack would have already critically struck, it instead critically strikes for {{critical damage|100|100|100}} <b>bonus</b> damage and deals <b>bonus</b> true damage equal to 10% of the triggering attack's damage.",
+      "effects": "After casting your ultimate ability, your next 3 basic attacks within 8 seconds gain 50% <b>bonus</b> attack speed and will <img src=\"/img/icons/critically-strike.webp\" class=\"tip-icon \" />critically strike for {{critical damage|50|50|50}} <b>bonus</b> damage. If an attack would have already critically struck, it instead critically strikes for {{critical damage|100|100|100}} <b>bonus</b> damage and deals <b>bonus</b> true damage equal to 10% of the triggering attack's damage.",
       "cooldown": 45
     }
   ],

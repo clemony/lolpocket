@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -41,7 +41,7 @@
     {
       "unique": true,
       "name": "Time Stop",
-      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon\" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon\" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon \" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon \" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon \" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
     }
   ],
   "stats": {

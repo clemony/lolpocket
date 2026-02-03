@@ -1,6 +1,6 @@
 export const itemRankColor = {
   Epic: 'var(--color-platinum)',
-  Legendary: 'var(--color-as)',
+  Legendary: 'var(--color-legendary)',
   Special: 'var(--color-master)',
   Trinket: 'var(--color-precision)',
 }

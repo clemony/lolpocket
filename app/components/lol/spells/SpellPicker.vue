@@ -19,7 +19,7 @@ onMounted(() => (selected.value = props.currentValue))
     >
       <Button
         class="hover:ring-b4 relative grid size-16 place-items-center overflow-hidden p-0 hover:ring"
-        variant="secondary"
+        color="secondary"
         :class="{ 'shadow-sm drop-shadow-sm': selected !== '' }"
       >
         <icon

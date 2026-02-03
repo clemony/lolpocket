@@ -1,12 +1,11 @@
 {
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnType": false, // required
   "editor.formatOnPaste": true, // optional
   "editor.formatOnSave": true, // optional
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
   "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
-
 
   "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/nuxt/lolpocket/layers/ui/app/assets/css/tailwind.css",
 
@@ -44,13 +43,13 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "iconify.annotations": true,
+  "iconify.annotations": false,
   // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
+  "prettier.enable": true,
 
   // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
+    "source.fixAll.eslint": "always",
     "source.organizeImports": "never"
   },
 
@@ -92,5 +91,9 @@
     "scss",
     "pcss",
     "postcss"
+  ],
+  "iconify.customAliasesJsonPaths": [
+    "./layers/ui/app/assets/icons/symbols.json",
+    "./layers/ui/app/assets/icons/img.json"
   ]
 }

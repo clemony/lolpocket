@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -24,7 +24,7 @@
     {
       "unique": true,
       "name": "Mana Made Real",
-      "effects": "For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />healing, and <img src=\"/img/icons/shielding.webp\" class=\"tip-icon\" />shielding; and your basic ability cooldowns progress 30% faster."
+      "effects": "For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing, and <img src=\"/img/icons/shielding.webp\" class=\"tip-icon \" />shielding; and your basic ability cooldowns progress 30% faster."
     }
   ],
   "stats": {

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Enduring Focus",
-      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0 – 5 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0 – 3.75) health for 8 seconds, refreshing on subsequent champion damage taken. Area of effect, damage over time, or proc damage taken trigger this effect with the <img src=\"/img/icons/ranged.webp\" class=\"tip-icon\" />ranged values."
+      "effects": "After taking damage from a champion, gain <b>bonus</b> health regeneration per second equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0 – 5 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0 – 3.75) health for 8 seconds, refreshing on subsequent champion damage taken. Area of effect, damage over time, or proc damage taken trigger this effect with the <img src=\"/img/icons/ranged.webp\" class=\"tip-icon \" />ranged values."
     },
     {
       "unique": true,

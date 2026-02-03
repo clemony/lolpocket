@@ -16,10 +16,10 @@ const numberModel = computed({
     as-child
     @update:model-value="(e) => s_matches().setFilter('amount', e)"
   >
-    <ButtonGroup class="flex max-w-34 gap-0!" orientation="horizontal">
+    <!--     <ButtonGroup class="flex max-w-34 gap-0!" orientation="horizontal">
       <NumberFieldDecrement class="fx-0!" size="sq-8" variant="base" />
       <NumberFieldInput class="text-sm" variant="base" size="8" />
       <NumberFieldIncrement class="fx-0!" size="sq-8" variant="base" />
-    </ButtonGroup>
+    </ButtonGroup> -->
   </NumberField>
 </template>

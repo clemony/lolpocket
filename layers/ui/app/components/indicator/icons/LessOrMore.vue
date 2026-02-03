@@ -7,7 +7,6 @@ const { class: className, open } = defineProps<{
 
 <template>
   <Button
-    variant="link"
     :class="
       cn(
         'mt-2 inline px-2 text-end text-xs opacity-50 hover:opacity-100',

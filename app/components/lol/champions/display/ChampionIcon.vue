@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Tooltip, TooltipXL } from '#components'
+import ChampionTooltip from '#components'
 
 const {
   id,
@@ -7,14 +7,12 @@ const {
   class: className,
   k,
   loadingType,
-  size = 'sm'
 } = defineProps<{
   class?: HTMLAttributes['class']
   k?: string
   id?: number
   side?: Side
   loadingType?: LoadingStyle
-  size?: TooltipSize
 }>()
 const emit = defineEmits(['loaded'])
 
@@ -28,12 +26,27 @@ function onLoad() {
   loaded.value = true
   emit('loaded')
 }
-const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
+const toast = useToast()
+function showToast() {
+  if (!toast.toasts.value.find(t => t.id === `champion-${id}`)) {
+    toast.add({
+      id: `champion-${id}`,
+      description: h(ChampionTooltip, { id: champId.value }),
+      duration: 0,
+      ui: {
+        root: 'p-0!'
+      }
+    })
+  }
+}
 </script>
 
 <template>
-  <Tooltip :text="size === 'sm' ? champNameById(champId) : ''" :img="`/img/champions/${champId}.webp`" :side>
+  <Tooltip
+    trailing-icon="i" :text="champNameById(champId)" :img="`/img/champions/${champId}.webp`" :side
+  >
     <Img
+      role="button"
       :src="`/img/champions/${champId}.webp`"
       :class="
         cn(
@@ -42,6 +55,7 @@ const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
         )
       "
       :alt="`${champNameById(champId)} icon`"
+      @click.stop="showToast()"
       @loaded="onLoad"
     >
       <Icon

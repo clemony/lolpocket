@@ -34,7 +34,7 @@ const { class: className, pathClass } = defineProps<{
 
       <Element
         v-memo="[set.secondary.path]"
-        variant="base"
+        color="default"
         :class="
           cn(
             'border-b3/90 group-hover/btn:bg-tint-b2/40! absolute -right-1.5 bottom-0 grid size-7 place-items-center overflow-hidden rounded-full border shadow-xs transition-all duration-250 *:transition-opacity *:duration-200 after:absolute after:inset-0 after:z-1 after:bg-black/70 after:opacity-0',

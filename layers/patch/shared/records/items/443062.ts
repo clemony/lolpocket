@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Patronage",
-      "effects": "Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round."
+      "effects": "Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round."
     }
   ],
   "stats": {

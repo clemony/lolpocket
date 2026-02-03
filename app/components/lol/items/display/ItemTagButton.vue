@@ -6,7 +6,7 @@ const {
   as,
   class: className,
   clear,
-  size = '8',
+  size = 'sm',
   tag,
 } = defineProps<{
   class?: HTMLAttributes['class']

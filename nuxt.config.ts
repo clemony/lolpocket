@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@vueuse/nuxt',
     '@nuxt/eslint',
+    '@nuxtjs/color-mode',
     '@morev/vue-transitions/nuxt',
     '@nuxt/ui',
     'motion-v/nuxt',
@@ -69,6 +70,13 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
 
+  colorMode: {
+    componentName: 'ColorScheme',
+    dataValue: 'theme',
+    fallback: 'light',
+    globalName: '__NUXT_COLOR_MODE__',
+    preference: 'system',
+  },
   eslint: {
     config: {
       autoInit: false,

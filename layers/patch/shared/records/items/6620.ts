@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Soul Siphon",
-      "effects": "Gain 35% of pre-mitigation damage dealt to champions as <i>Soul Charges</i>, up to 80 – 250 (based on level). <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shielding.webp\" class=\"tip-icon\" />shielding an allied champion <i>(excluding yourself)</i> consumes all charges to heal them equal to the consumed amount."
+      "effects": "Gain 35% of pre-mitigation damage dealt to champions as <i>Soul Charges</i>, up to 80 – 250 (based on level). <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />Healing or <img src=\"/img/icons/shielding.webp\" class=\"tip-icon \" />shielding an allied champion <i>(excluding yourself)</i> consumes all charges to heal them equal to the consumed amount."
     }
   ],
   "stats": {

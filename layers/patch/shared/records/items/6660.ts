@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -40,7 +40,7 @@
       "unique": true,
       "mythic": false,
       "name": "Immolate",
-      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions and 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon\" />monsters. This executes minions that would be killed by one more tick of damage."
+      "effects": "Taking or dealing damage activates this passive for 3 seconds. Deal 15 magic damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions and 200% against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon light:invert\" />monsters. This executes minions that would be killed by one more tick of damage."
     }
   ],
   "stats": {

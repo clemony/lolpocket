@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -33,7 +33,7 @@
       "unique": true,
       "mythic": false,
       "name": "Ever Rising Moon",
-      "effects": "Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4%) of target's <b>maximum</b> health and grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />160 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />80) (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) <b>bonus</b> AD) for 2 seconds.",
+      "effects": "Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4%) of target's <b>maximum</b> health and grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />160 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />80) (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20%) <b>bonus</b> AD) for 2 seconds.",
       "cooldown": "6"
     }
   ],

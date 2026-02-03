@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -41,7 +41,7 @@
     {
       "unique": true,
       "name": "Wraith Step",
-      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />15%) <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon\" />ghosting for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds."
+      "effects": "Gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />20% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />15%) <b>bonus</b> movement speed and <img src=\"/img/icons/ghosted.webp\" class=\"tip-icon \" />ghosting for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />6 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds."
     }
   ],
   "stats": {

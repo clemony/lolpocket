@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -12,7 +12,7 @@
     {
       "unique": true,
       "name": "Vigilance",
-      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash to the current location of your ally and upon completion grant both yourself and the ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs 100 – 250 (based on level) (+100% of your AP) (+10% of your <b>bonus</b> health) damage for 5 seconds. <b>Can be used even while the ally is dead.</b>"
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon \" />Dash to the current location of your ally and upon completion grant both yourself and the ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs 100 – 250 (based on level) (+100% of your AP) (+10% of your <b>bonus</b> health) damage for 5 seconds. <b>Can be used even while the ally is dead.</b>"
     }
   ],
   "stats": {

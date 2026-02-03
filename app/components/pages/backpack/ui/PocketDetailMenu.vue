@@ -113,11 +113,11 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
     <Separator class="mx-2 h-6" orientation="vertical" />
 
     <!-- more -->
-    <DropdownMenu>
-      <DropdownMenuTrigger class="size-11" variant="neutral">
+    <UDropdownMenu>
+      <UButton class="size-11" color="neutral">
         <icon name="more-vertical" />
-      </DropdownMenuTrigger>
-      <DropdownMenuContent class="w-64" align="end">
+      </UButton>
+      <!-- <DropdownMenuContent class="w-64" align="end">
         <DropdownMenuItem>
           <icon name="copy" />
           Create Pocket Copy
@@ -126,8 +126,8 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
           <icon name="open" />
           Open in New Tab
         </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </DropdownMenuContent> -->
+    </UDropdownMenu>
   </div>
   <Separator />
 </template>

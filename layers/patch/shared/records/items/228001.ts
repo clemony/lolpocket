@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -20,7 +20,7 @@
       "unique": true,
       "mythic": false,
       "name": "Vendetta",
-      "effects": "Take 30% reduced damage from your <i>Nemesis</i> and reduce their <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon\" />tenacity by 20% while they are within 700 units of you."
+      "effects": "Take 30% reduced damage from your <i>Nemesis</i> and reduce their <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon light:invert\" />tenacity by 20% while they are within 700 units of you."
     }
   ],
   "active": [

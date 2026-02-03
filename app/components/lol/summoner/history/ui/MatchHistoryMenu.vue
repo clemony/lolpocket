@@ -20,23 +20,25 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
   >
     <Toggle
       v-model:model-value="open"
-      class="bg-transparent! fx-0 on:bg-transparent! hover:on:fx-1"
+      class="bg-transparent! fx-0 on:bg-transparent! hover:fx-1"
       on="inset"
       hover="inset"
-      size="sq-12"
+      square
+      size="lg"
       variant="ghost"
       @update:model-value="emit('open', open)"
     >
       <Icon class="" :name="open ? 'left-to-line' : 'right-to-line'" />
     </Toggle>
 
-    <UPopover v-bind="tippyMenu">
+    <UPopover>
       <Button
-        class="bg-transparent! fx-0 aria-expanded:btn-active on:bg-transparent! hover:on:fx-1"
+        class="bg-transparent! fx-0 aria-expanded:btn-active on:bg-transparent! hover:fx-1"
         variant="ghost"
         on="inset"
         hover="inset"
-        size="sq-12"
+        square
+        size="lg"
       >
         <Icon class="" name="ic:baseline-menu" />
       </Button>
@@ -51,7 +53,8 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
     >
       <Button
         class="bg-transparent! duration-0! disabled:pointer-events-none"
-        size="sq-12"
+        square
+        size="lg"
         hover="inset"
         :disabled="s_matches().filterEmpty()"
         :variant="s_matches().filterEmpty() ? 'ghost' : 'inset'"
@@ -71,12 +74,13 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
       hover="inset"
       :api
       placement="top"
-      size="sq-12"
+      square
+size="lg"
     /> -->
 
     <InputGroup
       class="h-12 max-h-12 grow transition-all duration-300"
-      size="12"
+      size="lg"
     >
       <InputGroupSearch class="[&_svg]:size-5" />
       <InputGroupInput

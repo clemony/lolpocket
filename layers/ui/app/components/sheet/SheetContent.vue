@@ -4,7 +4,7 @@ import { useAnimate } from 'motion-v'
 import { DialogContent, useForwardPropsEmits } from 'reka-ui'
 
 interface SheetContentProps extends DialogContentProps {
-  side?: SheetVariants['side']
+  side?: Side
   class?: HTMLAttributes['class']
 }
 
@@ -46,7 +46,6 @@ function onStateChange(state: string) {
     :class="
       cn(
         'z-55 h-screen max-h-screen overflow-hidden drop-shadow-sm drop-shadow-black/20',
-        sheetVariants({ side }),
         props.class,
       )
     "

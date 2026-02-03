@@ -54,8 +54,8 @@ onBeforeRouteLeave(() => {
       <div class="grid w-full gap-y-2">
         <Button
           class="col-span-full w-full font-medium"
-          variant="neutral"
-          size="12"
+          color="neutral"
+          size="lg"
           type="submit"
         >
           Sign up with Email
@@ -64,24 +64,21 @@ onBeforeRouteLeave(() => {
         <div
           class="flex size-full items-center justify-center gap-3 *:align-baseline"
         >
-          <Button
-            class="underline-offset-1.5 max-w-fit justify-center justify-self-start"
+          <button
+            class="hover:underline max-w-fit justify-center justify-self-start"
             as="a"
-            variant="link"
-            size="12"
+            size="lg"
             hover="link"
             @click="navigateTo('/login')"
           >
             Logging in?
-          </Button>
+          </button>
 
           <span class="text-sm opacity-50">or</span>
           <Button
-            class="underline-offset-1.5 max-w-fit justify-center justify-self-end"
+            class="underline-offset-1.5 hover:underline  max-w-fit justify-center justify-self-end"
             as="a"
-            variant="link"
-            size="12"
-            hover="link"
+            size="lg"
             @click="navigateTo('/password-reset')"
           >
             Forgot Password?

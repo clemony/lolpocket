@@ -159,7 +159,7 @@ onMounted(() => {
     </fieldset>
 
     <div class="flex justify-start">
-      <Button variant="neutral" @click.prevent @click="accountUpdate({})">
+      <Button color="neutral" @click.prevent @click="accountUpdate({})">
         Update account
       </Button>
     </div>

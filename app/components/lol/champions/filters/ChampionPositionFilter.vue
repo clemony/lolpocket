@@ -1,16 +1,12 @@
 <script setup lang="ts">
 const {
+  variant = 'ghost',
   class: className,
   clear = false,
-  hover = 'btn',
-  size = ['sq-8', '8'],
-  variant = 'ghost',
 } = defineProps<{
   class?: HTMLAttributes['class']
   clear?: boolean
-  size?: ButtonVariants['size'][]
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
 }>()
 </script>
 
@@ -30,8 +26,8 @@ const {
           v-if="cs().filters.position && clear"
           class="order-first hover:*:opacity-100"
           :variant
-          :hover
-          :size="size[0]"
+          square
+          size="sm"
           @click="cs().filters.position = null"
         >
           <icon class="size-4" name="x" />
@@ -44,7 +40,7 @@ const {
           :value="position.name"
           as-child
         >
-          <PositionBadge :variant :size="size[1]" :position />
+          <PositionBadge :variant size="sm" :position />
         </BaseListboxItem>
       </TransitionSlideLeft>
     </ListboxContent>

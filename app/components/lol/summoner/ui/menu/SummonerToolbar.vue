@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const {
+  variant = 'outline',
   class: className,
-  size = '9',
+  size = 'md',
   tooltipPlacement = 'bottom',
   update,
-  variant = 'border',
   warning,
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -16,7 +16,7 @@ const {
   tooltipPlacement?: Side
 }>()
 
-const tippy = {
+const menu = {
   contentClass: 'font-medium capitalize',
   delay: [0, 0],
   offset: [0, 16],
@@ -41,7 +41,7 @@ const { summoner } = storeToRefs(s_session())
     <UpdateSummoner
       v-if="update"
       class="col-span-4! **:text-nc!"
-      variant="neutral"
+      color="neutral"
       :size
     />
 
@@ -73,7 +73,7 @@ const { summoner } = storeToRefs(s_session())
 
     <FollowButton
       :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-1', btnClass)"
-      :variant
+
       :size
       :summoner="summoner"
     />

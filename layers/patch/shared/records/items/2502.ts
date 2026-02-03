@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Anguish",
-      "effects": "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself equal to 250% of the post-mitigation damage dealt."
+      "effects": "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself equal to 250% of the post-mitigation damage dealt."
     }
   ],
   "stats": {

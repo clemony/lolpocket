@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Scour",
-      "effects": "<img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />Critical strikes inflict a bleed on the target for 2 seconds, dealing <b>bonus</b> physical damage equal to 5 – 20 (based on level) plus 6.25% of the pre-mitigation critical strike instance every 0.5 seconds, as well as applies a 7% <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow for the same duration. The bleed's damage is affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strike modifiers and stacks infinitely; the slow stacks up to 35%."
+      "effects": "<img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />Critical strikes inflict a bleed on the target for 2 seconds, dealing <b>bonus</b> physical damage equal to 5 – 20 (based on level) plus 6.25% of the pre-mitigation critical strike instance every 0.5 seconds, as well as applies a 7% <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow for the same duration. The bleed's damage is affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critical strike modifiers and stacks infinitely; the slow stacks up to 35%."
     }
   ],
   "stats": {

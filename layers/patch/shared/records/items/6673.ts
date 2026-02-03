@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -25,7 +25,7 @@
       "unique": true,
       "mythic": false,
       "name": "Lifeline",
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />400 – 700 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />320 – 560) damage for 3 seconds.",
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />400 – 700 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />320 – 560) damage for 3 seconds.",
       "cooldown": "90"
     }
   ],

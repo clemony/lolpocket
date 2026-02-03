@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -18,7 +18,7 @@
     {
       "unique": true,
       "name": "Trinket",
-      "effects": "Consume a charge to place an invisible <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon\" />Totem Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area for 90 – 120 (based on average champion level) seconds.",
+      "effects": "Consume a charge to place an invisible <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon \" />Totem Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area for 90 – 120 (based on average champion level) seconds.",
       "range": 600
     }
   ],

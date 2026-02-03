@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Call Lightning",
-      "effects": "Automatically river summon a storm cloud above you, which strikes a lightning bolt at your current location after 1.5 seconds to deal 135 – 230 (based on level) magic damage (+30% <b>bonus</b> AD) (+50% AP) (+10% of target's <b>maximum</b> health) magic damage to enemies within the area and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow them by 30% for 2 seconds. If you are within the lightning strike, gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield equal to 14% of your <b>maximum</b> health (+75% AP) for 2 seconds.",
+      "effects": "Automatically river summon a storm cloud above you, which strikes a lightning bolt at your current location after 1.5 seconds to deal 135 – 230 (based on level) magic damage (+30% <b>bonus</b> AD) (+50% AP) (+10% of target's <b>maximum</b> health) magic damage to enemies within the area and <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow them by 30% for 2 seconds. If you are within the lightning strike, gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield equal to 14% of your <b>maximum</b> health (+75% AP) for 2 seconds.",
       "cooldown": "16"
     },
     {

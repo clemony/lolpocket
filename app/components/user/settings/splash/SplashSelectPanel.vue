@@ -144,7 +144,7 @@ function reset() {
           </transition-slide>
 
           <div v-else class="grid size-full place-items-end p-6">
-            <Badge class="font-medium **:text-sm" variant="neutral">
+            <Badge class="font-medium **:text-sm" color="neutral">
               Select or search a champion...
             </Badge>
           </div>

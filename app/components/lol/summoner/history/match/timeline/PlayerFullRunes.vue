@@ -11,7 +11,7 @@ const { match, player } = defineProps<{
       <Keystone
         :id="player.runes.keystone"
         :key="player.runes.keystone"
-        class="tippy absolute z-1 size-13"
+        class="absolute z-1 size-13"
         :data-id="player.runes.keystone"
         data-type="rune"
       />
@@ -22,7 +22,7 @@ const { match, player } = defineProps<{
       )"
       :id="rune"
       :key="rune"
-      class="tippy size-10"
+      class="size-10"
       :data-id="rune"
       data-type="rune"
     />
@@ -33,15 +33,14 @@ const { match, player } = defineProps<{
     <Element
       v-for="shard in player.runes.shards"
       :key="shard"
-      class="grid shrink-0 place-items-center"
+      class="grid size-5 shrink-0 place-items-center"
       :data-id="shard"
       data-type="shard"
-      size="sq-5"
     >
       <Img
         :id="shard"
         class="absolute shrink-0 justify-self-center"
-        size="5"
+        size="xs"
         :src="`/img/shards/${shard}.webp`"
         alt="icon"
       />

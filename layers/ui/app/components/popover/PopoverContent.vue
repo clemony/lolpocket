@@ -8,7 +8,7 @@ const props = withDefaults(
       class?: HTMLAttributes['class']
       id?: string
       to?: string
-      variant?: PopoverContentVariants['variant']
+      variant?: any
       dataTheme?: string
     }
   >(),
@@ -23,7 +23,6 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-const { base } = popoverContentVariants({ variant: props.variant || 'base' })
 
 provide('popoverVariant', props.variant)
 </script>
@@ -36,7 +35,7 @@ provide('popoverVariant', props.variant)
       :align
       :data-theme="props.dataTheme"
       :side-offset
-      :class="cn(base(), props.class)"
+      :class="cn(props.class)"
       @close-auto-focus.prevent
     >
       <slot />

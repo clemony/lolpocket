@@ -25,14 +25,15 @@ defineExpose({ onKeyDown }) */
 <template>
   <div
     ref="target"
-    class="tippy-box grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
+    class=" grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
     data-theme="base"
   >
     <template v-if="items.length">
       <Button
         v-for="(item, index) in items"
         :key="index"
-        size="sq-8"
+        size="sm"
+        square
         variant="ghost"
         hover="inset"
         tabindex="0"

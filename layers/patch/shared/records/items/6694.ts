@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Bitter Cold",
-      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows them by 30% for 1 second."
+      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slows them by 30% for 1 second."
     }
   ],
   "stats": {

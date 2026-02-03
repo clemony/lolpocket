@@ -38,8 +38,7 @@ const results = computed(() => {
         data-type="Back to all champions"
         data-placement="right"
         data-them="neutral mini-tip line"
-        variant="none"
-        size="5"
+        size="xs"
         @click="navigateTo({ name: 'summoner-region-slug-champions' })"
       >
         <span class="font-semibold capitalize opacity-40">
@@ -87,7 +86,7 @@ const results = computed(() => {
         </h6>
 
         <div class="relative w-full">
-          <InputGroup class="px-1.5" variant="input" size="9">
+          <InputGroup class="px-1.5" variant="outline" size="sm">
             <InputGroupSearch />
             <InputGroupInput v-model:model-value="filter" />
             <InputGroupClear size="sq-6" />
@@ -108,7 +107,7 @@ const results = computed(() => {
                 <ListboxItem
                   class="hover-on:underline w-fit gap-2 rounded-xl pr-6 pl-2.5 font-medium on:no-underline"
                   :value="champKeyById(k.championId)"
-                  size="8"
+                  size="sm"
                   variant="link"
                   on="neutral"
                 >
@@ -125,14 +124,13 @@ const results = computed(() => {
           <Separator class="absolute bottom-0 opacity-80" />
         </div>
         <label class="w-full cursor-pointer">
-          <Button
-            class="w-fit justify-start rounded-xl pr-8 text-sm"
-            variant="link"
-            size="9"
+          <button
+            class="w-fit justify-start hover:underline rounded-xl pr-8 text-sm"
+            size="sm"
           >
             <Icon class="size-3.5 **:stroke-[2.2]" name="arrow-left" />
             <span>Champion list</span>
-          </Button>
+          </button>
         </label>
       </div>
     </div>

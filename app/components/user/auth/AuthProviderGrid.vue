@@ -6,8 +6,8 @@
       v-for="provider in authProviders"
       :key="provider"
       class="grid! w-full place-items-center [&_svg]:opacity-80"
-      size="14"
-      variant="border"
+      size="xl"
+      variant="outline"
       hover="inset"
       @click="useSignIn(provider)"
     >

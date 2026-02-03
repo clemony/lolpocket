@@ -1,57 +1,79 @@
 <script setup lang="ts">
-import type { ChartData, ChartOptions } from 'chart.js'
-import {
-  ArcElement,
-  Chart,
-  DoughnutController,
-  RadialLinearScale,
-  Tooltip,
-} from 'chart.js'
-import { Doughnut } from 'vue-chartjs'
+import type { EChartsOption, PieSeriesOption } from 'echarts'
+import VChart from 'vue-echarts'
 
 const {
   class: className,
-  cutout,
+  cutout = '80%',
   data,
-  gauge,
-  noTooltip,
-  overlap,
+  gauge = false,
+  overlap = false,
+  tooltip = false,
 } = defineProps<{
-  data: ChartData<'doughnut', number[], string>
-  overlap?: boolean
-  class?: HTMLAttributes['class']
+  data: {
+    labels: string[]
+    datasets: {
+      data: number[]
+      backgroundColor?: string[]
+    }[]
+  }
+  class?: string
   cutout?: string
   gauge?: boolean
-  noTooltip?: boolean
+  tooltip?: boolean
+  overlap?: boolean
 }>()
-Chart.defaults.datasets.doughnut.borderRadius = 100
-Chart.defaults.datasets.doughnut.borderJoinStyle = 'round'
-Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 
-Chart.register(Tooltip, DoughnutController, ArcElement, RadialLinearScale)
+const series = computed<PieSeriesOption>(() => ({
+  type: 'pie',
 
-const chartOptions = computed<ChartOptions<'doughnut'>>(() => ({
-  cutout: cutout || '80%',
-  elements: {
-    arc: {
-      backgroundColor: 'rgba(0,0,0,0)',
-      borderColor: 'rgba(0,0,0,0)',
-      hoverOffset: 1,
-      roundedCornersFor: overlap ? 0 : null,
-    },
+  endAngle: gauge ? 0 : 450,
+  // donut
+  radius: [cutout, '100%'],
+  // gauge mode (half donut)
+  startAngle: gauge ? 180 : 90,
+
+  avoidLabelOverlap: true,
+  silent: tooltip === false,
+
+  itemStyle: {
+    borderRadius: 100,
   },
-  plugins: {},
-  responsive: true,
-  spacing: gauge ? -4 : 2,
+  padAngle: overlap ? 0 : 2,
+
+  emphasis: {
+    scale: true,
+    scaleSize: 2,
+  },
+
+  bottom: 1,
+  left: 1,
+  right: 1,
+  top: 1,
+
+  data: data.labels.map((label, i) => ({
+    name: label,
+    itemStyle: {
+      color: data.datasets[0].backgroundColor?.[i],
+    },
+    value: data.datasets[0].data[i],
+  })),
+}))
+
+const option = computed<EChartsOption>(() => ({
+  series: [series.value],
+  tooltip: {
+    formatter: '{b}: {c}',
+    show: tooltip,
+    trigger: 'item',
+  },
 }))
 </script>
 
 <template>
-  <Doughnut
-    :data
-    :options="chartOptions"
-    :aria-label="data.labels"
-    role="img"
-    :class="className"
+  <VChart
+    :option="option"
+    autoresize
+    :class="cn(className)"
   />
 </template>

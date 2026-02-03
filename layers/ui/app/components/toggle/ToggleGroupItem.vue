@@ -5,32 +5,16 @@ import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 const props = defineProps<
   ToggleGroupItemProps & {
     class?: HTMLAttributes['class']
-    variant?: ToggleGroupVariants['variant']
-    size?: ToggleGroupVariants['size']
-    on?: ToggleGroupVariants['on']
   }
 >()
-
-const context = inject<ToggleGroupVariants>('toggleGroup')
-const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props
-  return delegated
-})
-
-const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <ToggleGroupItem
-    v-bind="forwarded"
+    :value
     :class="
       cn(
         'group/toggle',
-        toggleVariants({
-          variant: context?.variant || variant,
-          size: context?.size || size,
-          on: context?.on || on,
-        }),
         props.class,
       )
     "

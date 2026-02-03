@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  icon: 'book',
+  title: 'Library',
+  icon: 'lucide:book-marked',
   order: 8,
-  search: 'children',
+  search: 'children'
 })
 </script>
 

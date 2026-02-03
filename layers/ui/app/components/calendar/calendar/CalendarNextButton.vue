@@ -17,7 +17,6 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        buttonVariants({ variant: 'outline' }),
         `size-7 bg-transparent p-0 opacity-50 hover:opacity-100`,
         props.class,
       )

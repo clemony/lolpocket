@@ -40,8 +40,8 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
   <Popover v-model:open="isOpen">
     <!-- trigger -->
     <PopoverTrigger
-      ref="triggerEl"
-      size="sq-7"
+      square
+      size="xs"
       variant="ghost"
       on="inset"
       hover="inset"
@@ -55,7 +55,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
 
     <LazyPopoverContent
       ref="target"
-      class="tippy-box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
+      class="box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
       data-theme="base"
       align="start"
     >
@@ -150,7 +150,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
                 "
               />
             </TabsTrigger>
-            <TabIndicator class="bg-b2!" variant="neutral" />
+            <TabIndicator class="bg-b2!" color="neutral" />
           </TabsList>
         </Tabs>
       </div>

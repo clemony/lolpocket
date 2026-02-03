@@ -43,7 +43,7 @@ watch(
   <Popover v-model:open="open">
     <PopoverTrigger class="group/collapse" as-child>
       <Button
-        variant="btn"
+
         hover="btn"
         :class="
           cn(
@@ -97,7 +97,7 @@ watch(
         <Button
           class="absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown/txt:opacity-0"
           variant="ghost"
-          size="8"
+          size="sm"
           @click="searchQuery = ''"
         >
           <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
@@ -142,9 +142,9 @@ watch(
           <PopoverClose as-child>
             <Button
               class="hover-ring aspect-square h-auto w-full border-b3 bg-b2 hover:bg-b3/80!"
-              variant="btn"
+
               title="Clear main champion"
-              @click="pocket._champion = ''"
+              @click="pocket._champion"
             >
               <icon class="size-7 text-bc/20" name="lp:champ" />
             </Button>
@@ -177,11 +177,11 @@ watch(
           <PaginationContent>
             <PaginationPrev
               class="btn-square size-8 disabled:opacity-40"
-              size="8"
+              size="sm"
             />
             <PaginationNext
               class="btn-square size-8 disabled:opacity-40"
-              size="8"
+              size="sm"
             />
           </PaginationContent>
         </Pagination>

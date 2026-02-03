@@ -1,17 +1,15 @@
 @import 'tailwindcss';
-@custom-variant on {
-  @apply btn-active;
-}
 
-@custom-variant open {
-  @apply btn-active;
-}
+@custom-variant dark (&:where([data-theme=light], [data-theme=light] *));
+@custom-variant dark (&:where([data-theme=dim], [data-theme=dim] *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 /* Element-level data states */
 @custom-variant open (&[data-state="open"]);
-@custom-variant hover-open (&[data-state="open"]:hover);
+@custom-variant focus (&:focus-visible);
+@custom-variant hover-open (&[data-state="open"]);
 @custom-variant closed (&[data-state="closed"]);
-@custom-variant hover-closed (&[data-state="closed"]:hover);
+@custom-variant hover-closed (&[data-state="closed"]);
 @custom-variant active (&[data-state="active"]);
 @custom-variant selected (&[data-state="selected"]);
 
@@ -19,6 +17,8 @@
       &[data-state="on"],
       &[data-state="checked"],
       &[data-state="active"],
+      &:focus-visible,
+      &:hover,
       &[data-state="open"]
     );
 @custom-variant off (
@@ -26,3 +26,12 @@
       &[data-state="unchecked"],
       &[data-state="closed"]
    );
+
+/* @utility on {
+  @apply on:btn-active;
+}
+
+@utility open {
+  @apply btn-active;
+}
+ */

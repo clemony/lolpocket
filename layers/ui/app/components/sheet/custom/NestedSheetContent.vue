@@ -3,7 +3,7 @@ import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
 
 interface SheetContentProps extends DialogContentProps {
-  side?: SheetVariants['side']
+  side?: Side
   class?: HTMLAttributes['class']
 }
 
@@ -27,7 +27,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       :class="
         cn(
           'border-l-accent/30! w-116 min-w-116 pt-26 drop-shadow-sm',
-          sheetVariants({ side }),
           props.class,
         )
       "

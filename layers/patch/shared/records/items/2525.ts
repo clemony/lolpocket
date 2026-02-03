@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -25,7 +25,7 @@
       "unique": true,
       "mythic": false,
       "name": "Lifeline",
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, gain 200 <b>bonus</b> health for 5 seconds and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal yourself for 200 – 400 (based on level) (+250% <b>bonus</b> armor) (+250% <b>bonus</b> magic resistance) over the same duration, during which you also gain 15% increased size, 10% <b>bonus</b> movement speed, and 25% <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon\" />tenacity."
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, gain 200 <b>bonus</b> health for 5 seconds and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself for 200 – 400 (based on level) (+250% <b>bonus</b> armor) (+250% <b>bonus</b> magic resistance) over the same duration, during which you also gain 15% increased size, 10% <b>bonus</b> movement speed, and 25% <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon light:invert\" />tenacity."
     }
   ],
   "stats": {

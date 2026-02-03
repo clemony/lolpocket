@@ -249,7 +249,6 @@ console.log('🌱 - menu:', menu)
       <MenubarTrigger class="hover:bg-transparent" as-child>
         <Button
           class="rounded-lg px-4 capitalize open:brightness-98"
-          variant="link"
           on="secondary"
           size="sm"
         >

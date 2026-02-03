@@ -45,7 +45,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
           <Button
             class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             variant="ghost"
-            size="8"
+            size="sm"
             title="Clear main runes"
             @click="pocket._runes === ''"
           >

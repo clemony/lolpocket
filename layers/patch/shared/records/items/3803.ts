@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -50,7 +50,7 @@
       "unique": true,
       "mythic": false,
       "name": "Eternity",
-      "effects": "Restore mana equal to 10% of pre-mitigation damage taken from champions, and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second."
+      "effects": "Restore mana equal to 10% of pre-mitigation damage taken from champions, and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for an amount equal to 25% of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 20 per second."
     }
   ],
   "stats": {

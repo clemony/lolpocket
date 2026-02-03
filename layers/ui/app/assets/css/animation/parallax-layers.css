@@ -34,7 +34,7 @@
   }
 
   .layer.front::after {
-    content: '';
+    content: ' ';
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 50% 40%, #ffffff33, transparent 60%);

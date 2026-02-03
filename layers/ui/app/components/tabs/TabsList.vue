@@ -6,14 +6,9 @@ const props = withDefaults(
   defineProps<
     TabsListProps & {
       class?: HTMLAttributes['class']
-      color?: TabListVariants['color']
-      orientation?: TabListVariants['orientation']
-      size?: TabListVariants['size']
     }
   >(),
   {
-    orientation: 'horizontal',
-    size: '9',
   }
 )
 
@@ -25,7 +20,6 @@ const forwarded = reactiveOmit(props, 'class')
     v-bind="forwarded"
     :class="
       cn(
-        tabListVariants({ color, size, orientation }),
         'relative rounded-xl!',
         props.class,
       )

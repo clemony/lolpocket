@@ -12,7 +12,7 @@ const open = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <IconHeader class="gap-6">
+  <IconHeader>
     <template #icon>
       <SummonerIcon
         class="pointer-events-none size-20 rounded-full transition-all duration-500 ease-in-out group-open/icon:brightness-40 group-hover/icon:brightness-40"
@@ -27,7 +27,7 @@ const open = shallowRef<boolean>(false)
     <!-- header name -->
     <template #title>
       <SummonerName
-        class="overflow-y-visible font-serif text-[31.200000000000003px]/15 text-bc/94 drop-shadow-sm"
+        class="overflow-y-visible font-normal! font-display text-[36px]/15 text-bc/94 "
         as="h1"
         :summoner
       />

@@ -19,13 +19,12 @@ const isSummoner = computed(
 <template>
   <Button
     v-if="isSummoner"
-    class="duration-0!"
+    class="duration-0 rounded-full"
     data-theme="mini-tip neutral line"
     data-placement="left"
     data-type="Profile Settings"
-    size="c-14"
+    size="xl"
     hover="neutral"
-    variant="floating"
     @click="open = true"
   >
     <Icon class="**:stroke-[1.7]" name="gear" />

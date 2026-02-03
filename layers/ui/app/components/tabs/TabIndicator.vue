@@ -11,16 +11,14 @@ const props = withDefaults(
       class?: HTMLAttributes['class']
       indicatorClass?: HTMLAttributes['class']
       orientation?: 'horizontal' | 'vertical'
-      on?: ButtonVariants['on']
-      base?: ButtonVariants['base']
-      hover?: ButtonVariants['hover']
+
       size?: ButtonVariants['size']
       variant?: ButtonVariants['variant']
     }
   >(),
   {
+    variant: 'inset',
     orientation: 'horizontal',
-    variant: 'base',
   }
 )
 const forwarded = reactiveOmit(props, 'class')
@@ -68,7 +66,7 @@ const variants = {
         :class="
           cn(
             'text-bc size-full min-w-0! shadow-sm',
-            buttonVariants({ base, variant, size, hover, on }),
+
             'fx-0 rounded-lg',
             indicatorClass,
           )

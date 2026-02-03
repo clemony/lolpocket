@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
       "unique": true,
       "mythic": false,
       "name": "Peppermint",
-      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP)."
+      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP)."
     }
   ],
   "stats": {

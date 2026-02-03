@@ -4,8 +4,7 @@
   <Select v-model:model-value="is().filters.tags" :multiple="true">
     <VarSelectTrigger
       class="indicator open:not-on:bg-tint-b2/40! relative open:inset-shadow-sm"
-      :variant="is().filters.tags.length ? 'neutral' : 'outline'"
-      size="12"
+      size="lg"
       shape="square"
     >
       <StatusIndicator

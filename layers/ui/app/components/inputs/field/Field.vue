@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <div
     data-slot="field"
-    :class="cn(fieldVariants({ orientation: props.orientation }), props.class)"
+    :class="cn(props.class)"
   >
     <slot />
   </div>

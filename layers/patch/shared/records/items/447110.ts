@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Relentless",
-      "effects": "Casting an ability <img src=\"/img/icons/basic-attack-reset.webp\" class=\"tip-icon\" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5 seconds."
+      "effects": "Casting an ability <img src=\"/img/icons/basic-attack-reset.webp\" class=\"tip-icon \" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5 seconds."
     }
   ],
   "stats": {

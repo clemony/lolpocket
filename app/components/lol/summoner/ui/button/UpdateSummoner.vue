@@ -3,8 +3,7 @@ const props = withDefaults(
   defineProps<{
     placement?: Side
     size?: ButtonVariants['size']
-    on?: ButtonVariants['on']
-    hover?: ButtonVariants['hover']
+
     variant?: ButtonVariants['variant']
   }>(),
   {
@@ -46,8 +45,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
     <Button
       :variant
       :size
-      :hover
-      :on
+
       :class="
         cn(
           {

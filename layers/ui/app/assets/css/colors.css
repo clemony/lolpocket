@@ -3,7 +3,6 @@
 
 @theme {
   --color-discord: oklch(58% 52 274);
-  --color-b4: var(--b4);
   --color-all-roles: oklch(37% 0 0);
   --color-win: oklch(80% 19% 214);
 
@@ -122,44 +121,3 @@
   --color-s-minus: var(--color-diamond);
 }
 
-[data-role='support'] {
-  &.role-bg {
-    @apply bg-inspiration;
-  }
-}
-
-[data-role='middle'] {
-  &.role-bg {
-    @apply bg-sorcery;
-  }
-}
-
-[data-role='bottom'] {
-  @apply !bg-precision;
-}
-[data-role='top'] {
-  &.role-bg {
-    @apply bg-domination;
-  }
-}
-[data-role='jungle'] {
-  &.role-bg {
-    @apply bg-resolve;
-  }
-}
-
-&[data-color='5001'],
-&[data-color='5011'],
-&[data-color='5013'] {
-  @apply **:text-resolve;
-}
-&[data-color='5005'] {
-  @apply **:text-precision;
-}
-&[data-color='5007'],
-&[data-color='5010'] {
-  @apply **:text-inspiration!;
-}
-&[data-color='5008'] {
-  @apply text-sorcery!;
-}

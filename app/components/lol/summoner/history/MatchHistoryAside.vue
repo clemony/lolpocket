@@ -13,7 +13,7 @@ onMounted(() => {
   <div
     :class="
       cn(
-        'inset-y-0 grid h-fit max-h-dvh w-110 max-w-110 origin-top auto-rows-max items-start gap-8 overflow-y-auto px-1 pt-2 *:w-108',
+        ' grid  h-max w-110 max-w-110 origin-top auto-rows-max items-start gap-8   px-1 pt-2 *:w-108',
         className,
       )
     "

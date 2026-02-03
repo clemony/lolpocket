@@ -5,10 +5,8 @@ import { useForwardProps } from 'reka-ui'
 const props = withDefaults(
   defineProps<
     NuxtLinkProps & {
-      base?: ButtonVariants['base']
       class?: HTMLAttributes['class']
-      hover?: ButtonVariants['hover']
-      on?: ButtonVariants['on']
+
       size?: ButtonVariants['size']
       variant?: ButtonVariants['variant']
     }
@@ -17,8 +15,7 @@ const props = withDefaults(
     base: 'btn',
     hover: 'link',
     on: 'btn',
-    size: '11',
-    variant: 'link',
+    size: 'md',
   }
 )
 
@@ -36,7 +33,6 @@ const forwarded = useForwardProps(delegated)
     :class="
       cn(
         'overflow-hidden capitalize duration-50',
-        buttonVariants({ base, hover, on, size, variant }),
         props.class,
       )
     "

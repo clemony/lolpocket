@@ -3,12 +3,10 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 interface Props extends PrimitiveProps {
-  base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
-  hover?: ButtonVariants['hover']
-  on?: ButtonVariants['on']
-  size?: ButtonVariants['size']
+
   variant?: ButtonVariants['variant']
+  size?: ButtonVariants['size']
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,7 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
     :class="
       cn(
         'group/button group/btn',
-        buttonVariants({ base, variant, size, hover, on }),
+
         props.class,
       )
     "

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -29,7 +29,7 @@
       "unique": true,
       "mythic": false,
       "name": "Coordinated Fire",
-      "effects": "Abilities that <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application)."
+      "effects": "Abilities that <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilize enemy champions mark them for 5 seconds. Allied champions that damage marked enemies consume the mark to deal 10% of the target's <b>current</b> health <b>bonus</b> magic damage (9 second cooldown per target, starts upon mark application)."
     }
   ],
   "stats": {

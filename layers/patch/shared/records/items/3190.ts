@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -29,7 +29,7 @@
     {
       "unique": true,
       "name": "Devotion",
-      "effects": "Grants you and allied champions within 850 units a <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield for 200 – 360 (based on target's level) that decays over 2.5 seconds."
+      "effects": "Grants you and allied champions within 850 units a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for 200 – 360 (based on target's level) that decays over 2.5 seconds."
     }
   ],
   "stats": {

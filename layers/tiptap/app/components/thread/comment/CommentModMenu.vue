@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import type { TippyOptions } from 'vue-tippy'
-
-const props = withDefaults(defineProps<TippyOptions>(), {})
-
 const open = shallowRef<boolean>(false)
 </script>
 
 <template>
   <div class="px-1">
-    <tippy
+    <Tooltip
       class="flex w-full flex-col gap-1"
-      v-bind="props"
       placement="right"
       animation="shift-toward-subtle"
       :delay="300"
@@ -19,7 +14,7 @@ const open = shallowRef<boolean>(false)
     >
       <Button
         class="w-full grow justify-between pr-2 pl-7!"
-        size="8"
+        size="sm"
         base="btn"
         variant="ghost"
       >
@@ -49,6 +44,6 @@ const open = shallowRef<boolean>(false)
           </div>
         </div>
       </template>
-    </tippy>
+    </Tooltip>
   </div>
 </template>

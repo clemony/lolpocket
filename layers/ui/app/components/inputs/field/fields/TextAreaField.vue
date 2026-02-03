@@ -27,7 +27,7 @@ const {
         class="group/label mb-3 flex w-min cursor-help items-center text-xl font-bold"
       >
         <slot>{{ title }}</slot>
-        <Element v-if="optional" size="icon-sm">
+        <Element v-if="optional" size="sm">
           <icon
             class="size-3.5 -translate-x-4 -translate-y-1 opacity-50 transition-opacity duration-300 **:stroke-[1.5] group-hover/label:opacity-100"
             name="lucide:asterisk"

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <PopoverContent update-position-strategy="always" variant="input">
+  <PopoverContent update-position-strategy="always" variant="outline">
     <InputGroup
       class="h-12 rounded-b-none border-x-0 border-t-0 pr-2 hover:ring-0"
     >
@@ -17,7 +17,7 @@
     <div
       class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]"
     >
-      <div ref="scrollArea" class="overflow-auto">
+      <div class="overflow-auto">
         <div
           class="flex grid w-full auto-rows-auto items-start gap-1 pt-4 pb-7 pl-4"
         >
@@ -25,7 +25,8 @@
             Champion Role
             <Button
               v-if="cs().filters.role"
-              size="sq-6"
+              size="xs"
+              class="size-6"
               variant="outline"
               @click="cs().filters.role = null"
             >
@@ -42,9 +43,10 @@
               Map Position
               <Button
                 v-if="cs().filters.position !== 'all'"
-                size="sq-6"
+                size="xs"
+                class="size-6"
                 variant="outline"
-                @click="cs().filters.position = 'all'"
+                @click="cs().filters.position"
               >
                 <icon class="size-4" name="x" />
               </Button>
@@ -53,7 +55,8 @@
               Ability Resource
               <Button
                 v-if="cs().filters.resource"
-                size="sq-6"
+                size="xs"
+                class="size-6"
                 variant="outline"
                 @click="cs().filters.resource = null"
               >
@@ -84,7 +87,7 @@
           </ButtonGroup>
         </ToggleGroup>
         <Grow class="max-w-14" />
-        <Button variant="neutral" size="sq-9" @click="cs().clearFilters()">
+        <Button color="neutral" size="sm" @click="cs().clearFilters()">
           <icon class="size-4" name="reset" />
         </Button>
       </div>

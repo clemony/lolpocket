@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Guiding Light",
-      "effects": "Upon casting your ultimate, you <i>Transcend</i> for 9 seconds. While <i>Transcended</i>, increase your <b>maximum</b> health by 12.5% and cause you and all allies within 1200 units to <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 3% of your <b>maximum</b> health upon you <i>Transcending</i> and every 3 seconds thereafter, for a total healing of 12% of your <b>maximum</b> health.",
+      "effects": "Upon casting your ultimate, you <i>Transcend</i> for 9 seconds. While <i>Transcended</i>, increase your <b>maximum</b> health by 12.5% and cause you and all allies within 1200 units to <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for 3% of your <b>maximum</b> health upon you <i>Transcending</i> and every 3 seconds thereafter, for a total healing of 12% of your <b>maximum</b> health.",
       "cooldown": "30"
     }
   ],

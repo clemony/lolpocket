@@ -3,6 +3,8 @@ const { mastery } = defineProps<{
   mastery?: ChampionMastery
 }>()
 
+const headerClass = 'sticky sticky! -top-55 z-5 col-start-2 flex h-31 w-[104%] w-full translate-y-0 items-center bg-b1 pt-11 opacity-100 bg-blend-screen backdrop-blur-sm transition-[transform,_opacity] duration-200 select-none not-first:mt-20 not-first:mb-10 first:mt-10 first:mb-6!'
+const layoutClass = 'col-start-2 w-full max-w-full overflow-x-hidden pb-2'
 const activeClass = ''
 
 const inActiveClass = '' // '-translate-y-full opacity-0 backdrop-blur-none border-transparent ring-transparent bg-transparent transition-[transform,_opacity] duration-1000! ease-out '
@@ -20,7 +22,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="summary"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'summary' && activeIndex > 0
             ? inActiveClass
             : activeClass,
@@ -29,7 +31,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
     >
       <h1>Summary</h1>
     </div>
-    <PlayerChampionSummary :mastery :class="cn('layout-class')" />
+    <PlayerChampionSummary :mastery :class="cn(layoutClass)" />
 
     <!-- spells -->
 
@@ -37,7 +39,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="spells"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'spells' && activeIndex > 1 ? inActiveClass : activeClass,
         )
       "
@@ -45,7 +47,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       <h1>Summoner Spells</h1>
     </div>
 
-    <ChampionSpellStats :class="cn('layout-class')" />
+    <ChampionSpellStats :class="cn(layoutClass)" />
 
     <!--   -->
 
@@ -55,14 +57,14 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="items"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'items' && activeIndex > 2 ? inActiveClass : activeClass,
         )
       "
     >
       <h1>Items</h1>
     </div>
-    <ChampionItemStats :class="cn('layout-class')" />
+    <ChampionItemStats :class="cn(layoutClass)" />
 
     <!-- runes -->
 
@@ -70,14 +72,14 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="runes"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'runes' && activeIndex > 3 ? inActiveClass : activeClass,
         )
       "
     >
       <h1>Runes</h1>
     </div>
-    <ChampionRuneStats :class="cn('layout-class')" />
+    <ChampionRuneStats :class="cn(layoutClass)" />
 
     <!-- skills -->
 
@@ -85,14 +87,14 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="skills"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'skills' && activeIndex > 4 ? inActiveClass : activeClass,
         )
       "
     >
       <h1>Abilities</h1>
     </div>
-    <ChampionSkillStats :class="cn('layout-class', '')" />
+    <ChampionSkillStats :class="cn(layoutClass, '')" />
 
     <!-- pairings -->
 
@@ -120,7 +122,7 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
         </TabsList>
       </Tabs>
     </div>
-    <ChampionDuoStats :view="duoView" :class="cn('layout-class')" />
+    <ChampionDuoStats :view="duoView" :class="cn(layoutClass)" />
 
     <!-- allies -->
 
@@ -128,44 +130,27 @@ const duoView = shallowRef<'enemy' | 'team'>('team')
       id="allies"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'allies' && activeIndex > 6 ? inActiveClass : activeClass,
         )
       "
     >
       <h1>Allies</h1>
     </div>
-    <ChampionAllyStats :class="cn('layout-class')" />
+    <ChampionAllyStats :class="cn(layoutClass)" />
     <!-- allies -->
 
     <div
       id="stats"
       :class="
         cn(
-          'header-class',
+          headerClass,
           activeId !== 'stats' && activeIndex > 7 ? inActiveClass : activeClass,
         )
       "
     >
       <h1>Match Stats</h1>
     </div>
-    <ChampionMatchStats :class="cn('layout-class')" />
+    <ChampionMatchStats :class="cn(layoutClass)" />
   </div>
 </template>
-
-<style scoped>
-@reference '~/ui/css/tailwind.css';
-@reference 'tailwindcss';
-
-.layout-class {
-  @apply col-start-2 w-full max-w-full overflow-x-hidden pb-2;
-}
-
-.header-class {
-  @apply sticky sticky! -top-55 z-5 col-start-2 flex h-31 w-[104%] w-full translate-y-0 items-center bg-b1 pt-11 opacity-100 bg-blend-screen backdrop-blur-sm transition-[transform,_opacity] duration-200 select-none not-first:mt-20 not-first:mb-10 first:mt-10 first:mb-6!;
-}
-
-.separator-class {
-  @apply mt-22 -mb-16;
-}
-</style>

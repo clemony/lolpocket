@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -20,7 +20,7 @@
       "unique": true,
       "mythic": false,
       "name": "Going Sledding",
-      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5 seconds and 50 – 230 (based on your level) hp <b>bonus</b> health for 2.5 seconds.",
+      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilizing an enemy champion causes you and the most wounded allied champion within 1500 units to gain 20% <b>bonus</b> movement speed decaying over 2.5 seconds and 50 – 230 (based on your level) hp <b>bonus</b> health for 2.5 seconds.",
       "cooldown": "30"
     },
     {
@@ -33,7 +33,7 @@
     {
       "unique": true,
       "name": "Ward",
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon \" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "range": 600
     }
   ],

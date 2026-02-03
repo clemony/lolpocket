@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -33,14 +33,14 @@
       "unique": true,
       "mythic": false,
       "name": "Sacrifice",
-      "effects": "While your <i>Worthy</i> ally is tethered to you and you are above 30% of your <b>maximum</b> health, redirect 12% of the pre-mitigation physical damage and magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal for 10% of the post-mitigation damage dealt by your <i>Worthy</i> ally to champions."
+      "effects": "While your <i>Worthy</i> ally is tethered to you and you are above 30% of your <b>maximum</b> health, redirect 12% of the pre-mitigation physical damage and magic damage damage they take to you as the respective damage type. Additionally, you <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal for 10% of the post-mitigation damage dealt by your <i>Worthy</i> ally to champions."
     }
   ],
   "active": [
     {
       "unique": true,
       "name": "Pledge",
-      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b>.",
+      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon \" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b>.",
       "range": 0
     }
   ],

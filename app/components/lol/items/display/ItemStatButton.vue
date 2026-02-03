@@ -3,7 +3,7 @@ const {
   active,
   class: className,
   clear,
-  size = '8',
+  size = 'sm',
   stat,
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -24,7 +24,6 @@ const statValue = computed<StatIndex>(() => {
 <template>
   <Button
     v-if="statValue"
-    :variant="active ? 'base' : 'btn'"
     :size
     hover="btn"
     :style="{

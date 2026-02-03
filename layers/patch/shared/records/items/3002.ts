@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -25,7 +25,7 @@
       "unique": true,
       "mythic": false,
       "name": "Lead the Way",
-      "effects": "While moving, generate 7 stacks of <i>Momentum</i> every 0.25 seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75 seconds of moving. At <b>maximum</b> stacks, you leave behind a path briefly that grants 15% of your <b>total</b> movement speed as <b>bonus</b> movement speed to allied champions within. Basic attacks consume all stacks. If you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon\" />melee and at <b>maximum</b> stacks, your next basic attack <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows the target by 50% for 1 second."
+      "effects": "While moving, generate 7 stacks of <i>Momentum</i> every 0.25 seconds, granting up to 20 <b>bonus</b> movement speed at 100 stacks after 3.75 seconds of moving. At <b>maximum</b> stacks, you leave behind a path briefly that grants 15% of your <b>total</b> movement speed as <b>bonus</b> movement speed to allied champions within. Basic attacks consume all stacks. If you are <img src=\"/img/icons/melee.webp\" class=\"tip-icon \" />melee and at <b>maximum</b> stacks, your next basic attack <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slows the target by 50% for 1 second."
     }
   ],
   "stats": {

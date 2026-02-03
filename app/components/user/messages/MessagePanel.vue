@@ -63,8 +63,6 @@ defineOptions({
                 >
                   <span class="flex size-fit gap-1">
                     <Button
-                      :variant="!message.read ? 'neutral' : 'ghost'"
-                      size="6"
                       @click.stop="toggleRead(message.id)"
                     >
                       {{ message.read ? "Mark Unread" : "Mark Read" }}

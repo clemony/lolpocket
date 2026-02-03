@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'backpack',
+  title: 'Backpack',
   icon: 'backpack',
   layout: 'tab-mini',
   order: 4,
@@ -25,27 +25,27 @@ const pinned = computed(() =>
       @collapse="isCollapsed = false">
       <template #nav> -->
   <div class="flex size-full h-16 w-full items-center border-b p-1">
-    <DropdownMenu>
-      <DropdownMenuTrigger
+    <UDropdownMenu>
+      <UButton
         class="group data-[state=open]:fx-noise open:border-b3/80 w-full justify-start gap-3! pr-5 pl-4.5 open:shadow-sm open:inset-shadow-xs open:shadow-black/8 hover:bg-transparent"
         variant="ghost"
         hover="base"
-        size="12"
-      >
+        size="lg">
         <SummonerIcon class="size-7 rounded-full" />
         <span
-          class="dst w-full items-center truncate text-xl font-semibold *:first:capitalize"
-        >
+          class="dst w-full items-center truncate text-xl font-semibold *:first:capitalize">
           <SummonerName class="inline" />
           's Backpack
         </span>
-        <icon name="up-down" :class="cn('text-bc/60 size-4.5')" />
-      </DropdownMenuTrigger>
-      <LazyDropdownMenuContent>
+        <icon
+          name="up-down"
+          :class="cn('text-bc/60 size-4.5')" />
+      </UButton>
+      <!--       <LazyDropdownMenuContent>
         <DropdownMenuItem>Edit pins</DropdownMenuItem>
         <DropdownMenuItem>Edit tags</DropdownMenuItem>
-      </LazyDropdownMenuContent>
-    </DropdownMenu>
+      </LazyDropdownMenuContent> -->
+    </UDropdownMenu>
   </div>
   <!--         <BoxNav
           :is-collapsed

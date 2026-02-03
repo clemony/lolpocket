@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -22,7 +22,7 @@
       "unique": true,
       "mythic": false,
       "name": "Shared Riches",
-      "effects": "Grants a <b>Shared Riches</b> charge every 20 seconds, up to 3 charges. When an allied champion is within 1050 units of you, consume a charge in the following ways:<br>• Kill a minion by any means, granting you <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />15 and the nearest allied champion kill <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />gold. Damaging a minion <b>below</b> (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />50% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />30%) of its <b>maximum</b> health with a basic attack will <img src=\"/img/icons/execute.webp\" class=\"tip-icon\" />execute it, if any charges are available.<br>• Damage an enemy champion or structure with a basic attack or ability, granting you <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />22 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20). A charge may be consumed this way only once per attack or ability."
+      "effects": "Grants a <b>Shared Riches</b> charge every 20 seconds, up to 3 charges. When an allied champion is within 1050 units of you, consume a charge in the following ways:<br>• Kill a minion by any means, granting you <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />15 and the nearest allied champion kill <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />gold. Damaging a minion <b>below</b> (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />50% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />30%) of its <b>maximum</b> health with a basic attack will <img src=\"/img/icons/execute.webp\" class=\"tip-icon \" />execute it, if any charges are available.<br>• Damage an enemy champion or structure with a basic attack or ability, granting you <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />22 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20). A charge may be consumed this way only once per attack or ability."
     },
     {
       "unique": true,

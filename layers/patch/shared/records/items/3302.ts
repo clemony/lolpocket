@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -35,7 +35,7 @@
       "unique": true,
       "mythic": false,
       "name": "Juxtaposition",
-      "effects": "Basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit against champions alternate between <i>Light</i> and <i>Dark</i> hits, each one granting a bonus for 5 seconds that stacks up to 3 times. <i>Light</i> hits grant 1 – 14 (based on level) <b>bonus</b> armor and <b>bonus</b> magic resistance while <i>Dark</i> hits grant 10% armor penetration and magic penetration, for a total of 1 – 14 (based on level) <b>bonus</b> resistances and 30% resistances penetration at maximum stacks of each."
+      "effects": "Basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit against champions alternate between <i>Light</i> and <i>Dark</i> hits, each one granting a bonus for 5 seconds that stacks up to 3 times. <i>Light</i> hits grant 1 – 14 (based on level) <b>bonus</b> armor and <b>bonus</b> magic resistance while <i>Dark</i> hits grant 10% armor penetration and magic penetration, for a total of 1 – 14 (based on level) <b>bonus</b> resistances and 30% resistances penetration at maximum stacks of each."
     }
   ],
   "stats": {

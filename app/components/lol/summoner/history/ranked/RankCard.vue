@@ -22,83 +22,83 @@ const winrate = computed(() =>
 </script>
 
 <template>
-  <div :class="cn('field-box h-36 w-full pt-1!', className)">
-    <span class="field-legend">
+  <UCard
+    variant="field" :ui="{
+      root: cn('h-36  ', className),
+      body: ' place-items-center  h-36 grid grid-cols-[1.1fr_1fr_1fr]  w-full' }"
+  >
+    <template #header>
       {{ `Ranked ${title}` }}
-    </span>
-    <div
-      class="grid size-full grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden"
-    >
-      <div class="mt-0.5 grid place-items-center overflow-hidden">
-        <!-- crest -->
-        <img
-          v-if="!entry"
-          class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0"
-          alt="unranked"
-          src="/img/crests/unranked.webp"
-        >
+    </template>
+    <div class="mt-0.5 grid place-items-center overflow-hidden">
+      <!-- crest -->
+      <img
+        v-if="!entry"
+        class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0"
+        alt="unranked"
+        src="/img/crests/unranked.webp"
+      >
 
-        <img
-          v-else
-          class="size-28 object-contain drop-shadow-md drop-shadow-black/30"
-          :alt="entry?.tier?.toLowerCase()"
-          :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
-        >
-      </div>
+      <img
+        v-else
+        class="size-28 object-contain drop-shadow-md drop-shadow-black/30"
+        :alt="entry?.tier?.toLowerCase()"
+        :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
+      >
+    </div>
 
-      <div class="relative grid size-full place-items-center">
+    <div class="relative grid size-full place-items-center">
+      <div
+        class="relative grid size-21 place-items-center overflow-hidden rounded-lg"
+      >
+        <DonutSkeleton class="dst absolute size-21" />
+
         <div
-          class="relative grid size-21 place-items-center overflow-hidden rounded-lg"
+          class="radial-progress dss absolute"
+          :style="{
+            '--value': winrate,
+            '--size': '5.25rem',
+            'color': cssVar(
+              `--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`,
+            ),
+          }"
+          role="progressbar"
         >
-          <DonutSkeleton class="dst absolute size-21" />
-
-          <div
-            class="radial-progress dss absolute"
-            :style="{
-              '--value': winrate,
-              '--size': '5.25rem',
-              'color': cssVar(
-                `--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`,
-              ),
-            }"
-            role="progressbar"
-          >
-            <span v-if="entry" class="text-bc dst font-medium">
-              {{ winrate.toFixed(1).replace(".0", "") }}%
-            </span>
-          </div>
+          <span v-if="entry" class="text-bc dst font-medium">
+            {{ winrate.toFixed(1).replace(".0", "") }}%
+          </span>
         </div>
       </div>
-
-      <div
-        :class="
-          cn(
-            'flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium',
-            { 'opacity-40': !entry },
-          )
-        "
-      >
-        <p class="capitalize">
-          {{
-            entry
-              ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
-              : "Unranked"
-          }}
-        </p>
-
-        <p class="text-lg font-semibold capitalize">
-          {{ entry?.lp ?? 0 }} LP
-        </p>
-
-        <p
-          v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="flex items-center justify-end gap-1 text-end text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline"
-        >
-          <span>{{ entry ? entry.wins : 0 }}W</span>
-
-          <span>{{ entry ? entry.losses : 0 }}L</span>
-        </p>
-      </div>
     </div>
-  </div>
+
+    <div
+      :class="
+        cn(
+          'flex flex-col justify-between overflow-hidden py-3 text-end font-medium',
+          { 'opacity-40': !entry },
+        )
+      "
+    >
+      <span class="capitalize">
+        {{
+          entry
+            ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
+            : "Unranked"
+        }}
+      </span>
+
+      <span class="text-lg font-semibold capitalize">
+        {{ entry?.lp ?? 0 }} LP
+      </span>
+
+      <span
+        v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
+        class="flex items-center justify-end gap-1 text-end text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline"
+      >
+        <span>{{ entry ? entry.wins : 0 }}W</span>
+
+        <span>{{ entry ? entry.losses : 0 }}L</span>
+      </span>
+    </div>
+  </UCard>
 </template>

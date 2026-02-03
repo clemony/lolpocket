@@ -17,13 +17,12 @@ const route = useRoute()
       :img="getSummonerIcon(player.icon)"
       side="right"
     >
-      <BtnLink
-        size="5"
-        variant="link"
+      <NuxtLink
+        size="xs"
         :to="`/summoner/${player.puuid}`"
         :class="
           cn(
-            'flex size-full items-center gap-2 overflow-hidden text-xs font-medium tracking-tight text-nowrap normal-case',
+            'flex size-full items-center gap-2 overflow-hidden text-xs font-medium tracking-tight hover:underline text-nowrap normal-case',
             {
               'col-start-1': player.teamId === 100,
               'col-start-2': player.teamId === 200,
@@ -36,13 +35,13 @@ const route = useRoute()
           v-if="player"
           :id="player?.championId"
           side="left"
-          class=" size-5 rounded-xs"
+          class=" size-5 rounded-sm"
         />
 
         <span class="truncate">
           {{ player.name }}
         </span>
-      </BtnLink>
+      </NuxtLink>
     </Tooltip>
   </div>
 </template>

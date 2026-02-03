@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -29,7 +29,7 @@
       "unique": true,
       "mythic": false,
       "name": "Noxian Haste",
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />8%) <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same cast instance only once every 4 seconds."
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Healing, <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielding or buffing an ally, damaging abilities against champions, and using summoner spells grants you (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />10% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />8%) <b>bonus</b> movement speed for 4 seconds. This can be triggered from the same cast instance only once every 4 seconds."
     }
   ],
   "stats": {

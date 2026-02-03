@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -24,7 +24,7 @@
       "unique": true,
       "mythic": false,
       "name": "Dream Maker",
-      "effects": "Every 8 seconds, you gain a <i>Blue Dream Bubble</i> and a <i>Purple Dream Bubble</i>. Granting a <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield to an allied champion <i>(excluding yourself)</i> causes you to blow both of your <i>Dream Bubbles</i> to them, empowering them for 3 seconds. The <i>Blue Bubble</i> reduces the next instance of non-<img src=\"/img/icons/minion.webp\" class=\"tip-icon\" />minion damage they take by 75 – 255 (based on your level) and the <i>Purple Bubble</i> grants them 50 – 170 (based on your level) <b>bonus</b> magic damage on-hit on their next basic attack."
+      "effects": "Every 8 seconds, you gain a <i>Blue Dream Bubble</i> and a <i>Purple Dream Bubble</i>. Granting a <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield to an allied champion <i>(excluding yourself)</i> causes you to blow both of your <i>Dream Bubbles</i> to them, empowering them for 3 seconds. The <i>Blue Bubble</i> reduces the next instance of non-<img src=\"/img/icons/minion.webp\" class=\"tip-icon light:invert\" />minion damage they take by 75 – 255 (based on your level) and the <i>Purple Bubble</i> grants them 50 – 170 (based on your level) <b>bonus</b> magic damage on-hit on their next basic attack."
     },
     {
       "unique": true,
@@ -36,7 +36,7 @@
     {
       "unique": true,
       "name": "Ward",
-      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon\" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon \" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area. Charges refill upon visiting the shop.",
       "range": 600
     }
   ],

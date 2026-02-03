@@ -6,17 +6,11 @@ import { computed, provide } from 'vue'
 const props = defineProps<
   ToggleGroupRootProps & {
     class?: HTMLAttributes['class']
-    variant?: ToggleGroupVariants['variant']
-    size?: ToggleGroupVariants['size']
-    on?: ToggleGroupVariants['on']
   }
 >()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
 provide('toggleGroup', {
-  on: props.on,
-  size: props.size,
-  variant: props.variant,
 })
 
 const delegatedProps = computed(() => {
@@ -32,6 +26,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="cn('flex items-center justify-center gap-1', props.class)"
   >
-    <slot :variant :size :on />
+    <slot />
   </ToggleGroupRoot>
 </template>

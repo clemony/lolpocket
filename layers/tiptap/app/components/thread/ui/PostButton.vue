@@ -1,17 +1,17 @@
 <script setup lang="ts">
 const {
+  variant = 'neutral',
   cancellable,
   change,
-  hover = 'opacity',
+
   icon: i,
   save,
-  variant = 'neutral',
 } = defineProps<{
   save?: boolean
   change?: boolean
   cancellable?: boolean
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+
   icon?: string
 }>()
 
@@ -29,8 +29,8 @@ const iconic = computed(() => {
 </script>
 
 <template>
-  <Button class="pr-6 pl-5 font-semibold" :variant size="sm" :hover>
-    <Element size="icon-sm">
+  <Button class="pr-6 pl-5 font-semibold" size="sm">
+    <Element size="sm">
       <Icon
         :name="iconic"
         :class="

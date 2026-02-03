@@ -7,10 +7,10 @@ export const themes = [
     quote: 'If you can smile, you can be the light.',
   },
   {
+    color: 'var(--b1)',
     id: 'theme-dawn',
     name: 'dawn',
     champion: 'Leona',
-    color: 'var(--b1)',
     icon: 'ph:mountains',
     quote: 'The dawn has arrived. The day is upon us.',
   },

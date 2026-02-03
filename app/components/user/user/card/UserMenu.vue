@@ -1,19 +1,12 @@
 <script lang="ts" setup>
-import type { TippyOptions } from 'vue-tippy'
-
 const props = withDefaults(
-  defineProps<
-    TippyOptions & {
-      class?: HTMLAttributes['class']
-      comment: CommentData
-      author: AccountData | null
-    }
+  defineProps<{
+    class?: HTMLAttributes['class']
+    comment: CommentData
+    author: AccountData | null
+  }
   >(),
   {
-    arrow: popoverArrow,
-    interactive: true,
-    placement: 'top',
-    theme: 'b-mention',
   }
 )
 
@@ -29,7 +22,7 @@ const tag = ref(false)
 </script>
 
 <template>
-  <tippy
+  <Tooltip
     v-model:open="open"
     v-bind="forward"
     animation="shift-toward"
@@ -38,23 +31,22 @@ const tag = ref(false)
     :delay="500"
   >
     <Button
-      class="hover-ring pointer-events-auto z-4 rounded-full"
+      class="hover-ring pointer-events-auto z-4 rounded-full size-9"
       base="btn"
-      size="c-9"
-      variant="neutral"
+      color="neutral"
       :disabled="!props.comment.uuid"
       @click.stop
     >
       <UserAvatar
         class="pointer-events-none absolute self-center"
         :comment
-        :author
+        :author="props.author"
         size="c-9"
       />
     </Button>
     <template #content>
       <div
-        class="tippy-content pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2"
+        class=" pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2"
       >
         <div
           class="relative z-0 h-28 w-full overflow-hidden rounded-t-lg"
@@ -67,9 +59,8 @@ const tag = ref(false)
           :alt="`${author?.name}'s Splash`"
         >
           <Badge
-            class="absolute top-2 right-2 gap-0 rounded-lg text-xs! font-medium opacity-76"
-            size="6"
-            variant="neutral"
+            class="size-6 absolute top-2 right-2 gap-0 rounded-lg text-xs! font-medium opacity-76"
+            color="neutral"
           >
             <Icon class="text-nc size-3" name="lp:cxp" />
             {{ author?.level }}
@@ -123,5 +114,5 @@ const tag = ref(false)
         <LazyCommentModMenu v-if="isAdmin" v-bind="forward" />
       </div>
     </template>
-  </tippy>
+  </Tooltip>
 </template>

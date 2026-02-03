@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const {
+  variant = 'ghost',
   class: className,
   clear = false,
-  hover = 'btn',
+
   size = ['sq-8', '8'],
-  variant = 'ghost',
 } = defineProps<{
   class?: HTMLAttributes['class']
   clear?: boolean
   size?: ButtonVariants['size'][]
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+
 }>()
 </script>
 
@@ -30,8 +30,8 @@ const {
           v-if="cs().filters.role && clear"
           class="order-first hover:*:opacity-100"
           :variant
-          :hover
-          :size="size[0]"
+
+          size="sm"
           @click="cs().filters.role = null"
         >
           <icon class="size-4" name="x" />
@@ -44,7 +44,7 @@ const {
           :value="role.name"
           as-child
         >
-          <RoleBadge as="label" :variant :size="size[1]" :role />
+          <RoleBadge as="label" :variant size="sm" :role />
         </BaseListboxItem>
       </TransitionSlideLeft>
     </ListboxContent>

@@ -72,7 +72,7 @@ watch(
         <Button
           class="btn-square absolute top-2.5 right-1 size-6 shrink-0 opacity-100 group-has-placeholder-shown:opacity-0"
           variant="ghost"
-          size="8"
+          size="sm"
           @click="newTag = ''"
         >
           <icon class="size-4 **:stroke-[1.5]" name="x-sm" />

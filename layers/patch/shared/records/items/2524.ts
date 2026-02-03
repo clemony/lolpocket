@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Fanfare",
-      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy champion empowers you with <i>Fanfare</i> for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />8 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds, granting you 20 <b>bonus</b> movement speed. While empowered, you and nearby allied champions also gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />30 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20)% <b>bonus</b> attack speed."
+      "effects": "<img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />Slowing or <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilizing an enemy champion empowers you with <i>Fanfare</i> for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />8 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />4) seconds, granting you 20 <b>bonus</b> movement speed. While empowered, you and nearby allied champions also gain (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />30 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20)% <b>bonus</b> attack speed."
     }
   ],
   "stats": {

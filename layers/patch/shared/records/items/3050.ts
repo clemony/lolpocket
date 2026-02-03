@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -39,7 +39,7 @@
       "unique": true,
       "mythic": false,
       "name": "Frostfire Tempest",
-      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25 seconds to enemies within 350 units and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowing them by 30% (45 second cooldown, starts on ultimate cast)."
+      "effects": "Upon casting your ultimate ability, you summon a storm of flame and ice around you for 5 seconds, dealing 7.5 magic damage every 0.25 seconds to enemies within 350 units and <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slowing them by 30% (45 second cooldown, starts on ultimate cast)."
     }
   ],
   "stats": {

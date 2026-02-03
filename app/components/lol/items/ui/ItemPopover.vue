@@ -22,7 +22,7 @@ const isOpen = ref<boolean>(false)
     <PopoverTrigger
       v-bind="$attrs"
       ref="trigger"
-      variant="neutral"
+      color="neutral"
       :class="cn('group/item rounded-lg', className)"
     >
       <Item

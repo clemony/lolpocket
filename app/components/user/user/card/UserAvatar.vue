@@ -2,7 +2,6 @@
 const {
   author,
   class: className,
-  size = 'c-9',
 } = defineProps<{
   class?: HTMLAttributes['class']
   author?: Summoner | null
@@ -17,12 +16,11 @@ const icon = computed(() => {
 
 <template>
   <Element
-    :size
     base="btn"
-    variant="neutral"
+    color="neutral"
     :class="
       cn(
-        'shrink-0 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
+        'shrink-0 rounded-full size-9 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
         className,
       )
     "

@@ -1,13 +1,15 @@
 <script lang="ts" setup>
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const { champion, pocket } = defineProps<{
   pocket?: Pocket
   champion?: Champion
+  navItem?: NavigationMenuItem
 }>()
 
 const route = useRoute()
 
-const scrollRef = useState<HTMLElement | null>('scrollRef', () => null)
-
+const scrollRef = useState<HTMLElement>('scrollRef')
 const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 
 const isScrolling = useState('isScrolling', () => ref(false))
@@ -62,72 +64,50 @@ const bg = computed(() =>
 </script>
 
 <template>
-  <div
-    id="app"
-    class="relative w-screen max-w-screen overflow-x-hidden overflow-y-hidden"
-  >
-    <!-- navbar -->
-    <Navbar />
-    <!-- sidebar -->
-    <AppSidebar />
-
-    <!-- bg -->
-    <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash :src="bg" />
-    </div>
-
-    <BgSplash class="mask-b-from-30% mask-b-to-70%" :src="bg" />
-
-    <!-- Header block -->
-    <div
-      class="pointer-events-none z-0 grid size-full h-70 max-h-70 min-h-70 grid-cols-2"
-    >
-      <div
-        class="w-40% z-0 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-0"
-      >
-        <SummonerHeader v-if="route.path.match(/\/summoner/)" />
-        <PocketHeader v-else-if="pocket" :pocket />
-        <ChampionHeader v-else-if="champion" :champion />
-      </div>
-    </div>
-
-    <!-- Scrollable content
-      @scroll="onScroll" -->
-    <div
-      id="scrollRef"
-      ref="scrollRef"
-      class="absolute inset-0 top-0 size-full h-screen max-w-screen overflow-auto pt-70"
-      :style="{ overflowAnchor: 'none' }"
-    >
-      <!-- Sticky Tabs (now ABOVE parent header) -->
-      <div
-        class="pointer-events-none sticky -top-70 z-16 flex h-15 min-h-15 w-full items-end gap-4 overflow-hidden pl-66"
-      >
-        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
-        <SummonerChampionNavTabs
-          v-if="route.fullPath.match(/\/summoner\/.+/)"
-        />
-        <NavFileTabs v-else />
-      </div>
-
-      <!-- Context wrapper -->
-      <div
-        class="relative z-auto -mt-px flex min-h-screen w-screen max-w-screen flex-col bg-b1"
-      >
-        <!-- page -->
-        <slot />
-      </div>
-      <SiteFooter />
-    </div>
-    <div class="fixed top-0 right-8 z-20 flex h-15 w-56 items-center gap-3">
-      <LazySummonerDropdown />
-
+  <div class="contents">
+    <Navbar :nav-item>
       <PocketMenubar v-if="pocket" />
+    </Navbar>
+    <!-- bg -->
+    <div
+      class="pointer-events-none relative z-0 overflow-hidden grid w-screen h-95 ">
+      <BgSplash
+        class=""
+        :src="bg" />
+      <UContainer
+        class=" z-0 grid  items-center   py-16 ">
+        <SummonerHeader v-if="route.path.match(/\/summoner/)" />
+        <PocketHeader
+          v-else-if="pocket"
+          :pocket />
+        <ChampionHeader
+          v-else-if="champion"
+          :champion />
+      </UContainer>
     </div>
+    <!-- Scrollable content @scroll="onScroll"
+-->
+    <!-- Sticky Tabs  -->
+    <div
+      class="pointer-events-none sticky justify-start -mt-15 top-0 z-16 flex h-15  w-screen items-end gap-4 overflow-hidden pl-20">
+      <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/40" />
+      <UContainer>
+        <SummonerChampionNavTabs
+          v-if="route.fullPath.match(/\/summoner\/.+/)" />
+        <NavFileTabs v-else />
+      </UContainer>
+    </div>
+    <UMain
+      class="bg-b1 ">
+      <!-- page -->
+      <UContainer>
+        <slot />
+      </UContainer>
+    </UMain>
+    <SiteFooter />
     <div class="fixed right-24 bottom-24 z-4 grid gap-4">
       <FloatingSummonerUtilities
-        v-if="route.path.match(/\/summoner\/.+/)"
-      />
+        v-if="route.path.match(/\/summoner\/.+/)" />
       <UpFAB />
     </div>
   </div>

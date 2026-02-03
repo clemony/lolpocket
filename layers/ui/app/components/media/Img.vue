@@ -3,8 +3,6 @@ import type { ImgHTMLAttributes } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
     alt: ImgHTMLAttributes['alt']
     ratio?: number
     src: ImgHTMLAttributes['src']
@@ -19,7 +17,6 @@ const props = withDefaults(
     format: 'webp',
     loading: 'lazy',
     ratio: 1,
-    variant: 'none',
   }
 )
 
@@ -28,16 +25,10 @@ const emit = defineEmits(['load'])
 
 <template>
   <div
-    :class="
-      cn(
-        buttonVariants({
-          base: 'btn',
-          variant: props.variant,
-          size: props.size,
-        }),
-        'relative inset-0 grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
-        props.class,
-      )
+    :class=" cn(
+      'relative grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
+      props.class,
+    )
     "
   >
     <NuxtImg
@@ -55,7 +46,7 @@ const emit = defineEmits(['load'])
         :decoding="props.decoding"
         :class="
           cn(
-            'size-full shrink-0 opacity-0 transition-[opacity,transform] duration-400',
+            'size-full pointer-events-none  shrink-0 opacity-0 transition-[opacity,transform] duration-400',
             {
               'animate-in fade-in translate-z-0 opacity-100 transition-all duration-400':
                 isLoaded,
@@ -68,7 +59,7 @@ const emit = defineEmits(['load'])
         v-else
         :class="
           cn(
-            'animate-in fade-in grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500',
+            'animate-in pointer-events-none absolute top-0 left-0 inset-0 fade-in grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500',
             {
               'animate-out fade-out opacity-0 transition-all duration-500':
                 isLoaded,
@@ -84,7 +75,7 @@ const emit = defineEmits(['load'])
           <Spinner />
         </span>
 
-        <Skeleton v-else class="size-full" />
+        <USkeleton v-else class="size-full inset-0 grow" />
       </div>
     </NuxtImg>
     <slot />

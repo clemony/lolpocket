@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,13 +19,13 @@
       "unique": true,
       "mythic": false,
       "name": "Resonate",
-      "effects": "Basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit deal 10 magic damage (+2% of your <b>bonus</b> health) <b>bonus</b> magic damage."
+      "effects": "Basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit deal 10 magic damage (+2% of your <b>bonus</b> health) <b>bonus</b> magic damage."
     },
     {
       "unique": true,
       "mythic": false,
       "name": "Rumble",
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing an enemy champion generates 25 stacks of <i>Reverberation</i> for 10 seconds, stacking up to 100 times and refreshing <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit as well as on subsequent immobilizations. At <b>maximum</b> stacks and upon <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing an enemy, your on-hit effects are applied to them 3 times."
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />Immobilizing an enemy champion generates 25 stacks of <i>Reverberation</i> for 10 seconds, stacking up to 100 times and refreshing <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit as well as on subsequent immobilizations. At <b>maximum</b> stacks and upon <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilizing an enemy, your on-hit effects are applied to them 3 times."
     }
   ],
   "stats": {

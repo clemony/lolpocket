@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -11,7 +11,7 @@
   "active": [
     {
       "unique": false,
-      "effects": "Summons a mist over the target location for 5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area in a 375 radius and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon\" />revealing enemy <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon\" />traps within for 3 seconds.",
+      "effects": "Summons a mist over the target location for 5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the area in a 375 radius and <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon \" />revealing enemy <img src=\"/img/icons/stealthed-trap.webp\" class=\"tip-icon \" />traps within for 3 seconds.",
       "range": 800
     }
   ],

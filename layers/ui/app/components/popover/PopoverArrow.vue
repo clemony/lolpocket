@@ -5,33 +5,26 @@ import { PopoverArrow, useForwardProps } from 'reka-ui'
 const props = defineProps<
   PopoverArrowProps & {
     class?: HTMLAttributes['class']
-    variant?: PopoverContentVariants['variant']
+    variant?: any
   }
 >()
 
-const injectedVariant
-  = inject<PopoverContentVariants['variant']>('popoverVariant')
-
 const delegatedProps = reactiveOmit(props, 'class', 'variant')
 const forwarded = useForwardProps(delegatedProps)
-
-const { arrow } = popoverContentVariants({
-  variant: injectedVariant || props.variant || 'base',
-})
 </script>
 
 <template>
   <PopoverArrow
     v-bind="forwarded"
     :class="
-      cn('dxs z-0 translate-y-px opacity-20 invert', arrow(), props.class)
+      cn('dxs z-0 translate-y-px opacity-20 invert', props.class)
     "
     :height="9"
     :width="18"
   />
   <PopoverArrow
     v-bind="forwarded"
-    :class="cn('z-50 overflow-hidden outline-none', arrow(), props.class)"
+    :class="cn('z-50 overflow-hidden outline-none', props.class)"
     :height="9"
     :width="18"
   />

@@ -55,6 +55,7 @@ export function baseVariants() {
         states: 'open:btn-active active:btn-active on:btn-active',
       },
 
+      color: {},
       // hover
       hover: {
         hidden: 'hidden',
@@ -78,7 +79,6 @@ export function baseVariants() {
         secondary:
           'px-3 hover:border-b3! hover:bg-tint-b3/45! hover:shadow-xs hover:inset-shadow-xs hover:shadow-black/5 hover:inset-shadow-black/2',
       },
-
       // active
       on: {
         base: 'shadow-black/4 fx-0 open:border-b3/80! open:bg-b1! open:shadow-sm on:border-b3/80! on:bg-b1! on:shadow-sm',
@@ -107,7 +107,7 @@ export function baseVariants() {
     },
   })
 }
-export const buttonVariants = tv({
+export const buttonVariants2 = tv({
   extend: baseVariants(),
 
   variants: {
@@ -174,7 +174,7 @@ export const kbdVariants = tv({
   },
   extend: baseVariants(),
 })
-export type ButtonVariants = VariantProps<typeof buttonVariants>
+export type ButtonVariants = VariantProps<typeof buttonVariants2>
 export type SelectVariants = VariantProps<typeof selectVariants>
 export type ElementVariants = VariantProps<typeof elementVariants>
 export type LabelVariants = VariantProps<typeof labelVariants>

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Reinforced Armor",
-      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />Turret basic attacks are modified to deal 14% – 8% (based on turret type) of this minion's <b>maximum</b> health as pre-mitigation damage."
+      "effects": "<img src=\"/img/icons/turret.webp\" class=\"tip-icon \" />Turret basic attacks are modified to deal 14% – 8% (based on turret type) of this minion's <b>maximum</b> health as pre-mitigation damage."
     },
     {
       "unique": true,

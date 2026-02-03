@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,14 +13,14 @@
       "unique": true,
       "mythic": false,
       "name": "Accretion",
-      "effects": "Basic attacks on-hit and <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />immobilizing effects against enemy champions generate 1 and 5 stacks of <i>Accretion</i>, respectively, up to 50. For each <i>Accretion</i> stack, gain 10% <b>base</b> health regeneration, up to 500% <b>base</b> health regeneration at <b>maximum</b> stacks. Additionally, for every 10 <i>Accretion</i> stacks, gain 20% increased size, up to 100% at <b>maximum</b> stacks. Stacks are reset every round and between each phase in a round."
+      "effects": "Basic attacks on-hit and <img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />immobilizing effects against enemy champions generate 1 and 5 stacks of <i>Accretion</i>, respectively, up to 50. For each <i>Accretion</i> stack, gain 10% <b>base</b> health regeneration, up to 500% <b>base</b> health regeneration at <b>maximum</b> stacks. Additionally, for every 10 <i>Accretion</i> stacks, gain 20% increased size, up to 100% at <b>maximum</b> stacks. Stacks are reset every round and between each phase in a round."
     }
   ],
   "active": [
     {
       "unique": true,
       "name": "Dark Star",
-      "effects": "Summon a black hole at the target location after a 0.5-second delay that lasts for 2 (+0.1 per 100 <b>bonus</b> health) seconds. Enemies within are dealt 30 – 100 (based on level) magic damage (+5% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slowed by 30%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon\" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second."
+      "effects": "Summon a black hole at the target location after a 0.5-second delay that lasts for 2 (+0.1 per 100 <b>bonus</b> health) seconds. Enemies within are dealt 30 – 100 (based on level) magic damage (+5% of user's <b>maximum</b> health) magic damage every second, <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slowed by 30%, and <img src=\"/img/icons/kinematics.webp\" class=\"tip-icon \" />dragged inward until they reach the horizon at the center. Additionally, for each enemy champion inside the black hole, generate 1 stack of <i>Accretion</i> per second."
     }
   ],
   "stats": {

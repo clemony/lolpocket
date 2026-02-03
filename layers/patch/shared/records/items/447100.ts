@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Blur",
-      "effects": "Basic attacks on-hit reduce the remaining cooldowns of your abilities and spells with <img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />dashes and/or <img src=\"/img/icons/blink.webp\" class=\"tip-icon\" />blinks by 12%, modified to 4% for your ultimate ability."
+      "effects": "Basic attacks on-hit reduce the remaining cooldowns of your abilities and spells with <img src=\"/img/icons/dash.webp\" class=\"tip-icon \" />dashes and/or <img src=\"/img/icons/blink.webp\" class=\"tip-icon \" />blinks by 12%, modified to 4% for your ultimate ability."
     }
   ],
   "stats": {

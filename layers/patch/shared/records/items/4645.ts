@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -25,7 +25,7 @@
       "unique": true,
       "mythic": false,
       "name": "Cinderbloom",
-      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health."
+      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health."
     }
   ],
   "stats": {

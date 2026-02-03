@@ -18,93 +18,90 @@ const settings = computed(() => {
 </script>
 
 <template>
-  <HoverCard
-    :interactive="true"
-    trigger="click"
+  <UPopover
+    arrow
     animation="shift-toward"
-    theme="base clean popover"
   >
-    <HoverCardTrigger class="relative overflow-hidden" as-child>
+    <UButton class="relative overflow-hidden">
       <LazySummonerIcon
         v-if="summoner"
-        class="rounded-full"
-        size="c-10"
+        class="rounded-full size-10"
         :summoner
       />
-    </HoverCardTrigger>
+    </UButton>
 
-    <HoverCardContent class="flex h-fit w-64! flex-col overflow-hidden">
-      <HoverCardArrow />
-      <div class="flex items-center gap-3 p-2">
-        <SummonerIcon class="size-11 rounded-lg" />
-        <div class="flex flex-col">
-          <SummonerName
-            class="text-xxl! text-bc/90 dst truncate pl-1 leading-none font-semibold"
-          />
-          <SummonerTag
-            class="pl-1 align-bottom leading-none italic [&_svg]:pt-px"
-          />
-        </div>
-      </div>
-
-      <DropdownMenuSeparator class="mt-0 mb-1" />
-      <div class="w-full px-1">
-        <PopoverItem class="h-10">
-          <icon name="mail" />
-          Inbox
-
-          <span
-            v-if="as().inbox?.messages?.length"
-            class="absolute right-4 font-mono text-sm opacity-60"
-          >
-            {{ as().inbox.messages.filter((m) => !m.read).length }}
-          </span>
-        </PopoverItem>
-      </div>
-
-      <DropdownMenuSeparator class="my-1" />
-
-      <div class="w-full px-1">
-        <PopoverItem
-          v-if="as().user"
-          class="h-10"
-          @click="navigateTo('/settings/account')"
-        >
-          <icon name="at" />
-          Account
-        </PopoverItem>
-
-        <PopoverItem class="h-10" @click="navigateTo('/settings')">
-          <icon name="gear" />
-          Settings
-        </PopoverItem>
-
-        <div>
-          <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
-            <Label class="relative p-0!" base="btn" size="c-9" variant="base">
-              <input
-                v-model="as().settings.theme"
-                class="peer hidden"
-                type=""
-              >
-              <Icon class="text-bc absolute" name="theme.icon" />
-            </Label>
+    <template #content>
+      <div class="flex h-fit w-64! flex-col overflow-hidden">
+        <div class="flex items-center gap-3 p-2">
+          <SummonerIcon class="size-11 rounded-lg" />
+          <div class="flex flex-col">
+            <SummonerName
+              class="text-xxl! text-bc/90 dst truncate pl-1 leading-none font-semibold"
+            />
+            <SummonerTag
+              class="pl-1 align-bottom leading-none italic [&_svg]:pt-px"
+            />
           </div>
         </div>
       </div>
+    </template>
+    <DropdownMenuSeparator class="mt-0 mb-1" />
+    <div class="w-full px-1">
+      <PopoverItem class="h-10">
+        <icon name="mail" />
+        Inbox
 
-      <DropdownMenuSeparator />
-      <div class="px-1 pb-1">
-        <PopoverItem v-if="as().user" class="h-9">
-          <icon name="log-out" @click="useSignOut()" />
-          Log out
-        </PopoverItem>
+        <span
+          v-if="as().inbox?.messages?.length"
+          class="absolute right-4 font-mono text-sm opacity-60"
+        >
+          {{ as().inbox.messages.filter((m) => !m.read).length }}
+        </span>
+      </PopoverItem>
+    </div>
 
-        <PopoverItem v-else @click="navigateTo('/login')">
-          <icon name="log-in" />
-          Log in
-        </PopoverItem>
+    <DropdownMenuSeparator class="my-1" />
+
+    <div class="w-full px-1">
+      <PopoverItem
+        v-if="as().user"
+        class="h-10"
+        @click="navigateTo('/settings/account')"
+      >
+        <icon name="at" />
+        Account
+      </PopoverItem>
+
+      <PopoverItem class="h-10" @click="navigateTo('/settings')">
+        <icon name="gear" />
+        Settings
+      </PopoverItem>
+
+      <div>
+        <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
+          <Label class="relative p-0!" base="btn" size="c-9" color="default">
+            <input
+              v-model="as().settings.theme"
+              class="peer hidden"
+              type=""
+            >
+            <Icon class="text-bc absolute" name="theme.icon" />
+          </Label>
+        </div>
       </div>
-    </HoverCardContent>
-  </HoverCard>
+    </div>
+
+    <DropdownMenuSeparator />
+    <div class="px-1 pb-1">
+      <PopoverItem v-if="as().user" class="h-9">
+        <icon name="log-out" @click="useSignOut()" />
+        Log out
+      </PopoverItem>
+
+      <PopoverItem v-else @click="navigateTo('/login')">
+        <icon name="log-in" />
+        Log in
+      </PopoverItem>
+    </div>
+  </UPopover>
 </template>

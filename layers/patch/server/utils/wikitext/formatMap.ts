@@ -2,9 +2,9 @@ import type { TemplateResult } from './templates.evaluate'
 
 /* eslint-disable no-eval */
 export interface PpInput {
+  color?: string
   key?: string
   key1?: string
-  color?: string
   levels: string
   type: string
   values: string // from raw param[0], possibly cleaned
@@ -62,6 +62,48 @@ const plainTips = new Set([
 ])
 
 const deleteTips = new Set(['on-attack'])
+
+const invert = [
+  'tenacity',
+  'targeting-forgiveness',
+  'ward',
+  'takedown',
+  'summoner-spell',
+  'standard-sight',
+  'spell-shield',
+  'sight',
+  'shield',
+  'selection-radius',
+  'revival',
+  'resurrection',
+  'range',
+  'pathing-radius',
+  'pathing-radius',
+  'movement-speed',
+  'monsters',
+  'minions',
+  'minion',
+  'mana',
+  'magic-resist',
+  'life-steal',
+  'league-of-legends',
+  'health',
+  'health-regeneration',
+  'heal',
+  'heal-power',
+  'gameplay-radius',
+  'enchantment-redirection',
+  'death',
+  'critical-strike-chance',
+  'cooldown-reduction',
+  'champion',
+  'attack-speed',
+  'attack-damage',
+  'armor',
+  'armor-penetration',
+  'additive-stacking',
+  '40px-Tellstones_King\'s_Gambit_icon',
+]
 
 function normalizeName(str: string) {
   let name = str.toLowerCase()
@@ -154,7 +196,7 @@ export const formatMap: FormatMap = {
     const showLabel = !tipParams.icononly && !tipParams.nolink
     const iconSrc = `/img/icons/${normalizeName(subject)}.webp`
 
-    const iconHTML = showIcon ? `<img src="${iconSrc}" class="tip-icon" />` : ''
+    const iconHTML = showIcon ? `<img src="${iconSrc}" class="tip-icon ${invert.includes(normalizeName(subject)) ? 'light:invert' : ''}" />` : ''
     const labelHTML = showLabel ? label : ''
     return `${iconHTML}${labelHTML}`
   },

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Lightshield Strike",
-      "effects": "Your next basic attack against a champion is empowered to <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critically strike for 160% damage and <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal you for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />100% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />50%) <b>base</b> AD (+6% of your <b>missing</b> health) (10 second cooldown per target). Excess healing beyond <b>maximum</b> health is converted to <b>bonus</b> health for 8 seconds."
+      "effects": "Your next basic attack against a champion is empowered to <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critically strike for 160% damage and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal you for (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />100% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />50%) <b>base</b> AD (+6% of your <b>missing</b> health) (10 second cooldown per target). Excess healing beyond <b>maximum</b> health is converted to <b>bonus</b> health for 8 seconds."
     }
   ],
   "stats": {

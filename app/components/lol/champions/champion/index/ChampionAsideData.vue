@@ -113,10 +113,9 @@ const damageType = computed(() =>
       <p>Last Changed</p>
       <tippy :tag="null" :interactive="true">
         <BtnLink
-          class="decoration-bc/40 hover:decoration-bc gap-1! px-0 font-medium underline underline-offset-3 opacity-80 hover:opacity-100"
+          class="decoration-bc/40 hover:underline hover:decoration-bc gap-1! px-0 font-medium underline underline-offset-3 opacity-80 hover:opacity-100"
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
-          variant="link"
         >
           Patch {{ champion.patchLastChanged }}
           <template #content>

@@ -11,25 +11,19 @@ const group = computed(() =>
 
 <template>
   <div class="group z-11 flex flex-col -space-y-10">
-    <Element
+    <div
       v-for="champion in group"
       :key="champion"
-      class="bg-b1 fx-0 z-1 size-22! border-0"
-      size="c-10"
-      variant="base"
+      class="bg-b1 fx-0 z-1 size-22! border-0 rounded-full"
     >
       <ChampionIcon class="size-18! rounded-full" :k="champion" />
-    </Element>
+    </div>
     <Element
       v-if="l"
-      class="bg-b1 fx-0 relative z-1 grid size-22! place-items-center rounded-full border-0"
-      variant="base"
-      size="c-10"
+      class="bg-b1 fx-0 relative z-1 grid size-22! rounded-full place-items-center rounded-full border-0"
     >
       <Element
-        class="size-18! *:transition-all *:duration-300"
-        size="c-10"
-        variant="neutral"
+        class="size-18! *:transition-all *:duration-300  rounded-full "
       >
         <icon class="group-closed:opacity-0 absolute" name="up" />
         <h3 class="group-open:text-transparent group-open:opacity-0">

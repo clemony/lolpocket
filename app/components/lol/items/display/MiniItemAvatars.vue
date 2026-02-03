@@ -24,7 +24,7 @@ const { class: className, set } = defineProps<{
       </div>
     </div>
   </div>
-  <Element v-if="set.items.length > 3" class="-ml-2" size="c-6">
+  <Element v-if="set.items.length > 3" class="-ml-2 size-6 rounded-full">
     <icon
       class="absolute size-3.5 translate-y-2.75 place-self-center **:stroke-[2.5]"
       name="more"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'about',
+  title: 'About',
   icon: 'lucide:message-circle-question-mark',
   path: '/support/about',
 })

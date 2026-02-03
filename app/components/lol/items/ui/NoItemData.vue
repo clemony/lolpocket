@@ -10,8 +10,8 @@ const { class: className, simple } = defineProps<{
     <Element
       class="text-bc/70 fx-0 text-xs font-medium"
       base="btn"
-      size="7"
-      variant="base"
+      size="xs"
+      color="default"
     >
       No data
     </Element>

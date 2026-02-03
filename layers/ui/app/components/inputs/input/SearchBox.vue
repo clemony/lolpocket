@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 const {
-  class: className,
-  hover = 'input',
-  size = '11',
   variant = 'input',
+  class: className,
+
+  size = '11',
 } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+
 }>()
 
 const keys = useMagicKeys()
@@ -21,9 +21,6 @@ watch(metaK, (v) => {
 
 <template>
   <Button
-    :variant
-    :size
-    :hover
     :class="
       cn(
         'bg-b1/60 ring-b1 cursor-text gap-2! overflow-hidden pr-2 transition-all duration-300 hover:ring',

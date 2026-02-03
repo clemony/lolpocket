@@ -6,14 +6,10 @@
     <header
       class="border-b3 bg-b1/80 sticky top-0 z-2 flex shrink-0 items-center gap-2 border-b p-4 backdrop-blur-lg"
     >
-      <Button class="text-xxs size-7 font-bold" variant="neutral">
-        LP
-      </Button>
-
       <span class="opacity-70">|</span>
-      <Button variant="link" size="md" @click="navigateTo('/nexus')">
+      <button variant="link" size="md" @click="navigateTo('/nexus')">
         Nexus
-      </Button>
+      </button>
     </header>
     <div class="relative flex size-full flex-1 flex-col gap-4">
       <slot />

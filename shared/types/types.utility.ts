@@ -10,3 +10,11 @@ export interface ParseState {
 }
 
 export type SortDirection = 'asc' | 'desc'
+
+export interface ContactAddress {
+  address: string
+  class?: Record<string, string>
+  external?: boolean
+  icon?: string
+  label: string
+}

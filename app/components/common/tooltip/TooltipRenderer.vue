@@ -95,11 +95,11 @@ function iconSource(type: string, id: string) {
 
     <!--  <template v-else> IMG -->
 
+    <!--       :size="size === 'md' ? 'c-8' : 'c-5'" -->
     <Img
       v-if="id && type"
       :src="iconSource(type, id)"
       loading-type="spinner"
-      :size="size === 'md' ? 'c-8' : 'c-5'"
       :alt="`${name || itemName(type, id)} Image`"
       :class="
         cn(

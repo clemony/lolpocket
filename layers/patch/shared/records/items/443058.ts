@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Immovable as the Earth",
-      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.webp\" class=\"tip-icon\" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance."
+      "effects": "Increase your <b>total</b> armor by 20% armor. Additionally, basic attacks that hit you have a chance of being <img src=\"/img/icons/block.webp\" class=\"tip-icon \" />blocked equal to 5% per 200 <b>total</b> armor, up to a maximum of 50% chance."
     }
   ],
   "stats": {

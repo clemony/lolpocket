@@ -21,8 +21,8 @@ const props = withDefaults(
   {
     side: 'right',
     as: 'button',
-    size: '12',
-    variant: 'default',
+    size: 'lg',
+
   }
 )
 

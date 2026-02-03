@@ -5,22 +5,11 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = withDefaults(
-  defineProps<{
+const props
+  = defineProps<{
     class?: HTMLAttributes['class']
     summoner?: MaybeRef<Summoner>
-    size?: ToggleVariants['size']
-    variant?: ToggleVariants['variant']
-    base?: ToggleVariants['base']
-    on?: ToggleVariants['on']
-    hover?: ToggleVariants['hover']
-  }>(),
-  {
-    base: 'btn',
-    on: 'floating',
-    variant: 'floating',
-  }
-)
+  }>()
 
 const forwarded = useForwardProps(props)
 const puuid = computed(() => toValue(props.summoner)?.puuid)
@@ -37,9 +26,6 @@ const puuid = computed(() => toValue(props.summoner)?.puuid)
         v-if="puuid"
         v-bind="forwarded"
         :value="puuid"
-        :class="
-          cn('', toggleVariants({ variant, on, size, base }), props.class)
-        "
       >
         <Icon
           :name="

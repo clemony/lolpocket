@@ -5,18 +5,16 @@ import { NumberFieldDecrement, useForwardProps } from 'reka-ui'
 const props = withDefaults(
   defineProps<
     NumberFieldDecrementProps & {
-      base?: ButtonVariants['base']
       class?: HTMLAttributes['class']
-      hover?: ButtonVariants['hover']
+
       size?: ButtonVariants['size']
       variant?: ButtonVariants['variant']
     }
   >(),
   {
+    variant: 'inset',
     base: 'btn',
     hover: 'neutral',
-    size: 'sq-9',
-    variant: 'base',
   }
 )
 
@@ -31,7 +29,6 @@ const forwarded = useForwardProps(delegatedProps)
     :class="
       cn(
         'cursor-pointer disabled:cursor-not-allowed disabled:opacity-20',
-        buttonVariants({ base, variant, size, hover }),
         props.class,
       )
     "

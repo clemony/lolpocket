@@ -5,9 +5,7 @@ import { injectSliderRootContext, SliderThumb, useForwardProps } from 'reka-ui'
 const props = defineProps<
   SliderThumbProps & {
     class?: HTMLAttributes['class']
-    on?: ButtonVariants['on']
-    base?: ButtonVariants['base']
-    hover?: ButtonVariants['hover']
+
     size?: ButtonVariants['size']
     variant?: ButtonVariants['variant']
   }
@@ -28,7 +26,7 @@ const forwarded = useForwardProps(delegatedProps)
     :key="key"
     :variant
     :class="
-      cn(buttonVariants({ base, variant, size, hover, on }), props.class)
+      cn(props.class)
     "
   />
 </template>

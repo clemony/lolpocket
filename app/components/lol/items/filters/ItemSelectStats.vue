@@ -4,8 +4,8 @@
   <Select v-model:model-value="is().filters.stats" :multiple="true">
     <VarSelectTrigger
       class="indicator open:not-on:bg-tint-b2/40! relative open:inset-shadow-sm"
-      :variant="is().filters.stats.length ? 'neutral' : 'outline'"
-      size="sq-12"
+      square
+      size="lg"
     >
       <StatusIndicator
         v-if="is().filters.stats.length"
@@ -22,7 +22,7 @@
     <SelectContent
       class="top-[calc(var(--reka-select-trigger-height)+2px)] w-74 -translate-x-63"
     >
-      <ItemStatsList class="flex-row *:w-fit" icons variant="btn" labels />
+      <ItemStatsList class="flex-row *:w-fit" icons labels />
     </SelectContent>
   </Select>
 </template>

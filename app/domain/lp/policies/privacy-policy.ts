@@ -1,4 +1,4 @@
-import { contactLP } from '../contact/lp-email'
+import { contactInfo } from '../contact/contactInfo'
 
 /* Last Updated: {{insert date}}
 Effective Date: {{insert date}} */
@@ -130,7 +130,7 @@ export const privacyPolicy: PolicyItem[] = [
         ],
       },
       {
-        title: `To make a request, contact: <a class="cursor-help hover:underline font-semibold ">${contactLP.privacy.address}</a>`,
+        title: `To make a request, contact: <a class="cursor-help hover:underline font-semibold ">${contactInfo.privacy.address}</a>`,
       },
     ],
   },

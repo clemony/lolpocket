@@ -24,7 +24,6 @@ const { summoner } = defineProps<{
             You can manage any summoners you've blocked in
             <BtnLink
               class="text-bc/70 hover:text-bc inline underline decoration-dotted hover:decoration-solid"
-              variant="link"
               to="/settings/account#blocked-users"
             >
               Account Settings
@@ -40,7 +39,7 @@ const { summoner } = defineProps<{
           Are you sure you want to block {{ summoner.name }}?
         </span>
 
-        <Button class="ml-4 px-5" variant="error">
+        <Button class="ml-4 px-5" color="domination">
           <icon class="size-4.5 **:stroke-[2.2]" name="ban" />
           Block
         </Button>

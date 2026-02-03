@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'pockets',
-  icon: 'folder',
+  title: 'Pockets',
+  icon: 'lucide:folder',
   listClass: ' size-4.75',
   order: 1,
+  path: '/backpack/pockets',
 })
 
 const selected = ref<Pocket>(null)
@@ -18,26 +19,32 @@ const selected = ref<Pocket>(null)
             <ButtonGroup>
               <Button
                 class="ml-auto pl-2.5 font-normal"
-                variant="neutral"
-                @click="addPocket()"
-              >
+                color="neutral"
+                @click="addPocket()">
                 <icon name="add" />
                 add pocket
               </Button>
               <ButtonGroupSeparator class="" />
               <Popover>
-                <PopoverTrigger size="sq-10" variant="neutral">
-                  <Icon class="size-4" name="down" />
+                <PopoverTrigger
+                  square
+                  color="neutral">
+                  <Icon
+                    class="size-4"
+                    name="down" />
                 </PopoverTrigger>
                 <PopoverContent
                   class="w-45 py-1"
-                  variant="neutral"
+                  color="neutral"
                   align="end"
-                  :side-offset="1"
-                >
+                  :side-offset="1">
                   <PopoverClose as-child>
-                    <PopoverItem size="8" @click="addPocket(true)">
-                      <Icon class="size-4" name="lucide:sparkles" />
+                    <PopoverItem
+                      size="sm"
+                      @click="addPocket(true)">
+                      <Icon
+                        class="size-4"
+                        name="lucide:sparkles" />
                       Randomize
                     </PopoverItem>
                   </PopoverClose>
@@ -60,10 +67,14 @@ const selected = ref<Pocket>(null)
               :pocket
               :selected
               @dblclick="navigateTo(`/pocket/${pocket.key}`)"
-              @click="selected = pocket"
-            />
-            <Button v-tippy="'Add Pocket'" class="h-38 w-full" variant="ghost">
-              <icon class="size-7 **:stroke-[1.5]" name="add" />
+              @click="selected = pocket" />
+            <Button
+              v-tippy="'Add Pocket'"
+              class="h-38 w-full"
+              variant="ghost">
+              <icon
+                class="size-7 **:stroke-[1.5]"
+                name="add" />
             </Button>
           </TransitionScalePop>
         </BoxPanelCenter>

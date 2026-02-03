@@ -41,11 +41,6 @@ const variants = {
     ref="sidebar"
     class="fixed inset-y-0 left-0 z-40 h-screen w-px"
   >
-    <LpLogo
-      :class="
-        cn('absolute top-3 left-3 z-80', { 'pointer-events-none': open })
-      "
-    />
     <motion.div
       class="absolute inset-y-0 left-0 z-50 h-screen max-h-screen w-100 self-center"
       :variants="variants"
@@ -87,7 +82,7 @@ const variants = {
         <!-- search buttton -->
 
         <SearchBox
-          variant="input"
+          variant="outline"
           :class="
             cn('fx-0 justify-between *:first:gap-3', {
               'max-w-11! [&_svg]:size-5.5 [&_svg]:opacity-100': !open,
@@ -135,7 +130,6 @@ const variants = {
         <!-- summoner menu -->
 
         <tippy
-          ref="tippy"
           :inline-positioning="true"
           animation="shift-toward-subtle"
           :arrow="false"

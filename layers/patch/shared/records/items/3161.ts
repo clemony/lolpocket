@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -36,7 +36,7 @@
       "unique": true,
       "mythic": false,
       "name": "Focused Will",
-      "effects": "Dealing ability damage with a non-innate ability generates a stack for 6 seconds, stacking up to 4 times and up to once per cast instance per second and every second for damage over time abilities. For each stack, your non-<img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon\" />basic damage dealt by non-items gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks."
+      "effects": "Dealing ability damage with a non-innate ability generates a stack for 6 seconds, stacking up to 4 times and up to once per cast instance per second and every second for damage over time abilities. For each stack, your non-<img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon \" />basic damage dealt by non-items gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks."
     }
   ],
   "stats": {

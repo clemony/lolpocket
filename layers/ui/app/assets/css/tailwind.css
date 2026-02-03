@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 @import './preflight.css';
-@import './components.css';
 @import './fonts.css';
-@import './theme.css';
 @import './colors.css';
+@import './theme.css';
+@import './components.css';
 @import './custom-variants.css';
 @import './utilities.css';
 @import './color-utilities.css';
@@ -13,4 +13,9 @@
 @import './animation/index.css';
 @import './attrs.css';
 
-@source "../components/" @source "~/app/components/";
+
+
+/*
+@source "../components/";
+ @source "~/app/components/";
+ */

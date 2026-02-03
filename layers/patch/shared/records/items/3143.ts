@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -25,14 +25,14 @@
       "unique": true,
       "mythic": false,
       "name": "Resilience",
-      "effects": "Reduces incoming damage from <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strikes by 30%."
+      "effects": "Reduces incoming damage from <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critical strikes by 30%."
     }
   ],
   "active": [
     {
       "unique": true,
       "name": "Humility",
-      "effects": "Unleash a shockwave around you that <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows nearby enemies by 70% for 2 seconds.",
+      "effects": "Unleash a shockwave around you that <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slows nearby enemies by 70% for 2 seconds.",
       "range": 0
     }
   ],

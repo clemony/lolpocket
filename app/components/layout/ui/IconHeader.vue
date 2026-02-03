@@ -15,7 +15,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
   <motion.div
     :class="
       cn(
-        'absolute flex h-20 w-fit max-w-220 -translate-x-3 flex-nowrap items-center gap-6',
+        'absolute flex h-20 w-fit max-w-220 gap-6 pl-20 flex-nowrap select-none items-center gap-6',
         className,
       )
     "

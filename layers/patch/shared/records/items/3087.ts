@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,13 +30,13 @@
       "unique": true,
       "mythic": false,
       "name": "Electrospark",
-      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon\" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85 magic damage against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack)."
+      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85 magic damage against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack)."
     },
     {
       "unique": true,
       "mythic": false,
       "name": "Electroshock",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark's</i> cooldown."
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark's</i> cooldown."
     }
   ],
   "stats": {

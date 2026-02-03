@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Nightstalker",
-      "effects": "Your abilities deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0% – 70% (based on target's missing health) /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0% – 70% (based on target's missing health)) hp (based on target's <b>missing</b> health) increased damage against enemy champions. Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them renders you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon\" />untargetable for 1.5 seconds, which ends prematurely if you perform an action that <img src=\"/img/icons/break-stealth.webp\" class=\"tip-icon\" />breaks stealth."
+      "effects": "Your abilities deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />0% – 70% (based on target's missing health) /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />0% – 70% (based on target's missing health)) hp (based on target's <b>missing</b> health) increased damage against enemy champions. Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them renders you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon \" />untargetable for 1.5 seconds, which ends prematurely if you perform an action that <img src=\"/img/icons/break-stealth.webp\" class=\"tip-icon \" />breaks stealth."
     }
   ],
   "stats": {

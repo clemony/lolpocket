@@ -107,7 +107,7 @@ function handleAdd() {
           <CarouselItem
             :class="
               cn(
-                'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:hover:opacity-100',
+                'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100',
               )
             "
           >
@@ -124,7 +124,7 @@ function handleAdd() {
             >
               <Button
                 class="grid h-22 w-40 place-items-center"
-                variant="base"
+                color="default"
                 hover="btn"
                 :disabled="pocket.runes.length >= 10"
                 @click="handleAdd()"

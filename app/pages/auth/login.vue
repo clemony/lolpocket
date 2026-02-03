@@ -56,22 +56,21 @@ const password = ref('')
       <div class="w-full space-y-2">
         <Button
           class="w-full font-medium"
-          variant="neutral"
-          size="12"
+          color="neutral"
+          size="lg"
           type="submit"
         >
           Login
         </Button>
-        <Button
-          class="underline-offset-1.5 w-full justify-center"
+        <button
+          class=" hover:underline  underline-offset-1.5 w-full justify-center"
           as="a"
-          variant="link"
-          size="12"
+          size="lg"
           hover="link"
           @click="navigateTo('/sign-up')"
         >
           Signing up?
-        </Button>
+        </button>
       </div>
     </div>
   </SingleCard>

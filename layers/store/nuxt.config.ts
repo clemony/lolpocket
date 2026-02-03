@@ -2,6 +2,7 @@ export default defineNuxtConfig({
   $meta: { name: 'store' },
 
   modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxtjs/supabase'],
+
   /*  nitro: {
     cloudflare: {
       deployConfig: true,

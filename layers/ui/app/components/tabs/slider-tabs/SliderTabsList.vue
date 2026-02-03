@@ -5,9 +5,6 @@ import { SliderRange, SliderTrack, useForwardProps } from 'reka-ui'
 const props = defineProps<
   SliderTrackProps & {
     class?: HTMLAttributes['class']
-    color?: TabListVariants['color']
-    orientation?: TabListVariants['orientation']
-    size?: TabListVariants['size']
   }
 >()
 const delegatedProps = reactiveOmit(
@@ -20,7 +17,6 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <SliderTrack
     v-bind="forwarded"
-    :class="cn(tabListVariants({ color, orientation, size }), props.class)"
   >
     <SliderRange
       class="bg-neutral absolute h-full data-[orientation=vertical]:w-full"

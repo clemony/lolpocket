@@ -28,7 +28,7 @@ const { allies } = storeToRefs(s_champion())
               v-for="ally in allies?.sort((a, b) => b.games - a.games)"
               :key="ally.name"
               :value="ally.puuid"
-              size="12"
+              size="lg"
               data-type="Great Teamwork"
               base="btn"
               variant="ghost"
@@ -74,10 +74,8 @@ const { allies } = storeToRefs(s_champion())
 
               <Element
                 v-if=" s_matches().filter?.ally === ally.name"
-                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 backdrop-blur-sm group-hover/ally:animate-heartbeat"
+                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 size-6 rounded-full backdrop-blur-sm group-hover/ally:animate-heartbeat"
                 base="btn"
-                wrapper-class=""
-                size="c-6"
               >
                 <Icons class="size-5.25!" name="heroicons:x-circle-16-solid" />
               </Element>

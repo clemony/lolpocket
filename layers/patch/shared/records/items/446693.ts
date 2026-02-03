@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -15,7 +15,7 @@
     {
       "unique": true,
       "name": "Sandswipe",
-      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon\" />Dash to 150 units beyond the target enemy champion's location, and upon completing the dash, deal 12% (+5% per 100 <b>bonus</b> AD) of target's <b>maximum</b> health <b>bonus</b> physical damage to the target. You then deal 20% increased damage to the target for the next 3 seconds.",
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon \" />Dash to 150 units beyond the target enemy champion's location, and upon completing the dash, deal 12% (+5% per 100 <b>bonus</b> AD) of target's <b>maximum</b> health <b>bonus</b> physical damage to the target. You then deal 20% increased damage to the target for the next 3 seconds.",
       "range": 0
     }
   ],

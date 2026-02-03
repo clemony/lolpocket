@@ -12,10 +12,12 @@ useSeoMeta({
   twitterTitle: '[twitter:title]',
 })
 definePageMeta({
-  title: 'pockets',
-  icon: '',
+  title: 'Pockets',
+  description: 'Configure your publically available pockets in one spot.',
+  icon: 'lucide:folder',
   listClass: '**:stroke-[1.6]',
   order: 3,
+  slug: 'pockets',
 })
 
 const { summoner } = storeToRefs(s_session())

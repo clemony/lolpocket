@@ -11,8 +11,8 @@ const headerHeight = 400
 const toast = useToast()
 function toasty() {
   toast.add({
-    title: `Created Toast!`,
     color: 'domination',
+    title: `Created Toast!`,
     description: `There’s something strangely evocative about the smell of burnt toast. You can probably remember the last time you suddenly detected it and dashed for the grill.
 
 But did you know there’s a part of your brain specifically dedicated to smelling burnt toast?
@@ -23,7 +23,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
 }
 definePageMeta({
   id: '8e12b21b-2f27-43b0-b7e7-77c49bbe972d',
-  name: 'nexus',
+  title: 'Nexus',
   abbr: 'Nx',
   icon: 'nexus',
   listClass: '!size-5.75 **:stroke-[1.6]',
@@ -41,9 +41,8 @@ definePageMeta({
     <div class="mx-auto flex w-1/5 items-center gap-3 space-y-2">
       <Button
         class="ml-auto pr-4 pl-2.5 font-normal"
-        variant="neutral"
-        @click="toasty()"
-      >
+        color="neutral"
+        @click="toasty()">
         <icon name="add" />
         toast
       </Button>
@@ -88,5 +87,7 @@ definePageMeta({
     <SiteFooter />
   </div> -->
     </div>
+
+    <ColorMode />
   </div>
 </template>

@@ -26,6 +26,10 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'motion-v/nuxt',
   ],
+  vueTransitions: {
+    // The same options as in the plugin itself.
+    // You will get an autocomplete using Nuxt 3.
+  },
 
   components: [
     {
@@ -44,12 +48,6 @@ export default defineNuxtConfig({
   },
 
   // UI
-  colorMode: {
-    componentName: 'ColorScheme',
-    fallback: 'light',
-    globalName: '__NUXT_COLOR_MODE__',
-    preference: 'system',
-  },
   fonts: {
     families: [
       {
@@ -70,6 +68,12 @@ export default defineNuxtConfig({
         provider: 'fontsource',
         styles: ['normal'],
         weights: [300, 400, 500],
+      },
+      {
+        name: 'DM Serif Display',
+        provider: 'fontsource',
+        styles: ['normal', 'italic'],
+        weights: [400],
       },
     ],
   },

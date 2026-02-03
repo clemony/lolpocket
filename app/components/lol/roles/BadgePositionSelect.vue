@@ -4,12 +4,12 @@ import { SelectTrigger } from 'reka-ui'
 const {
   side,
   sideOffset,
+  variant = 'outline',
   align,
   alignOffset,
   class: className,
   modelValue: mv,
   size = '12',
-  variant = 'input',
 } = defineProps<{
   class?: HTMLAttributes['class']
   modelValue: string | null
@@ -44,7 +44,6 @@ onMounted(() => {
     <SelectTrigger
       :class="
         cn(
-          buttonVariants({ size, variant, hover: 'input' }),
           `
             group/s relative w-44 justify-start inset-shadow-xs transition-all
             duration-200 fx-0 hover:ring hover:ring-bc/50

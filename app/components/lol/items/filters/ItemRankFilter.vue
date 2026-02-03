@@ -1,15 +1,15 @@
 <script setup lang="ts">
 const {
+  color = 'primary',
   class: className,
   clear = true,
-  hover = 'neutral',
+
   size = ['sq-12', '12'],
-  variant = 'btn',
 } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size'][]
-  variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+  color?: ButtonVariants['color']
+
   clear?: boolean
 }>()
 // @todo fixthis
@@ -35,9 +35,9 @@ function handleUpdate() {
     <Button
       v-if="is().filters.rank && clear"
       class="order-first hover:*:opacity-100"
-      :variant
-      :hover
-      :size="size[0]"
+      :color
+
+      size="sm"
       @click="is().filters.rank = null"
     >
       <icon class="size-4" name="x" />
@@ -46,10 +46,10 @@ function handleUpdate() {
     <Label
       v-for="rank in Object.keys(itemRankColor)"
       :key="rank"
-      :size="size[1]"
+      size="sm"
       base="btn"
-      :hover="is().filters.rank === rank ? 'btn' : hover"
-      :variant="is().filters.rank === rank ? 'neutral' : variant"
+
+      :color="is().filters.rank === rank ? 'neutral' : color"
       :class="
         cn('hover:text-bc order-2 px-5 text-sm font-medium! shadow-none', {
           'order-1': is().filters.rank === rank,

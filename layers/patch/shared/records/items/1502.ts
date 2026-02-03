@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -12,7 +12,7 @@
     {
       "unique": true,
       "mythic": false,
-      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage."
+      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage."
     }
   ],
   "stats": {},

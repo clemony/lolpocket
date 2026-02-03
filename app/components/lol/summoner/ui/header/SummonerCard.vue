@@ -35,7 +35,7 @@ console.log('🥸 - top:', top)
     >
       <Badge
         class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-b1/50 pl-1.5 text-xxs! font-semibold! text-bc/70 backdrop-blur-lg"
-        size="5"
+        size="xs"
       >
         <span class="relative grid size-3 place-items-center">
           <Icon
@@ -69,11 +69,12 @@ console.log('🥸 - top:', top)
     </div>
 
     <div class="w-full px-3 py-2">
+      <!--
       <div class="grid grid-cols-2 gap-2.5">
         <RankCardMini title="Solo/Duo" :entry="summoner?.ranked?.solo" />
 
         <RankCardMini title="Flex" :entry="summoner?.ranked?.flex" />
-      </div>
+      </div> -->
       <div class="grid w-full grid-cols-3 place-items-center">
         <div
           v-for="(c, i) in top"
@@ -92,10 +93,10 @@ console.log('🥸 - top:', top)
     </div>
     <Separator class="bg-b3" />
 
-    <SummonerToolbar
+    <!--    <SummonerToolbar
       class="px-1.5 py-2"
       warning
       update
-    />
+    /> -->
   </div>
 </template>

@@ -48,7 +48,7 @@ const settingsData = [
     </fieldset>
 
     <div class="flex justify-start">
-      <Button variant="neutral">
+      <Button color="neutral">
         Update account
       </Button>
     </div>

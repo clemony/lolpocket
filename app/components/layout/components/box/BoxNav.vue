@@ -16,11 +16,12 @@ const route = useRoute()
     :data-collapsed="isCollapsed"
   >
     <nav class="grid w-full gap-1 px-2 data-[collapsed=true]:justify-center">
+      <!--
+        :size="isCollapsed ? 'icon' : '11'" -->
       <BtnLink
         v-for="link of links"
         :key="link.name"
         :to="{ name: link.name }"
-        :size="isCollapsed ? 'icon' : '11'"
         variant="ghost"
         :class="
           cn('text-md rounded-md font-medium! capitalize', {

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -41,7 +41,7 @@
     {
       "unique": true,
       "name": "Breaking Shockwave",
-      "effects": "Deal 80% AD physical damage to enemies in a 450 radius centered around you and <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting."
+      "effects": "Deal 80% AD physical damage to enemies in a 450 radius centered around you and <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting."
     }
   ],
   "stats": {

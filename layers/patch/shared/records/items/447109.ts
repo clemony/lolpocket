@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Watch Them Fall",
-      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon\" />Immobilizing or <img src=\"/img/icons/ground.webp\" class=\"tip-icon\" />grounding an enemy champion summons a comet above them that lands at their current location after 1 second, dealing 50 – 150 (based on level) magic damage (+40% AP) (+4% of your <b>maximum</b> health) magic damage to enemies within the area (6 second cooldown per target per cast instance)."
+      "effects": "<img src=\"/img/icons/immobilize.webp\" class=\"tip-icon \" />Immobilizing or <img src=\"/img/icons/ground.webp\" class=\"tip-icon \" />grounding an enemy champion summons a comet above them that lands at their current location after 1 second, dealing 50 – 150 (based on level) magic damage (+40% AP) (+4% of your <b>maximum</b> health) magic damage to enemies within the area (6 second cooldown per target per cast instance)."
     }
   ],
   "stats": {

@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -27,7 +27,7 @@
     {
       "unique": true,
       "name": "Intervention",
-      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healed for 150 – 350 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
+      "effects": "Call upon a 550-radius beam of light to strike upon the target location after 2.5 seconds, granting <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the area for the duration. Allies within the area are <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healed for 150 – 350 (based on target's level), while enemy champions within take 10% of target's <b>maximum</b> health as true damage. <b>Can be used while dead.</b>",
       "range": 5500
     }
   ],

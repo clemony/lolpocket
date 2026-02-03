@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -19,7 +19,7 @@
       "unique": true,
       "mythic": false,
       "name": "Consonance",
-      "effects": "While you or any allied champion you granted a <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shield to in the last 3 seconds is in combat with champions, each second, you heal the most wounded and nearest allied champion for 0.8% of your <b>bonus</b> mana."
+      "effects": "While you or any allied champion you granted a <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield to in the last 3 seconds is in combat with champions, each second, you heal the most wounded and nearest allied champion for 0.8% of your <b>bonus</b> mana."
     }
   ],
   "stats": {

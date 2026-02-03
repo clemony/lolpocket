@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -30,7 +30,7 @@
       "unique": true,
       "mythic": false,
       "name": "Annul",
-      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon\" />spell shield that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions)."
+      "effects": "Grants a <img src=\"/img/icons/spell-shield.webp\" class=\"tip-icon light:invert\" />spell shield that blocks the next hostile ability (40 second cooldown, timer restarts upon taking damage from champions)."
     }
   ],
   "stats": {

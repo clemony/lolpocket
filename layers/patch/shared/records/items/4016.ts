@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -20,7 +20,7 @@
     {
       "unique": true,
       "name": "Promise",
-      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon\" />tether between you and them."
+      "effects": "Make a <i>Promise</i> to the target allied champion, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon \" />tether between you and them."
     }
   ],
   "stats": {

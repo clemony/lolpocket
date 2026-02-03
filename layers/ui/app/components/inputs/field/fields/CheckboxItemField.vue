@@ -22,7 +22,6 @@ const {
     <Element
       class="hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent py-2"
       base="btn"
-      size="auto"
       hover="outline"
       variant="ghost"
     >

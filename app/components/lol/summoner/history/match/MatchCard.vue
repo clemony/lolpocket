@@ -12,13 +12,20 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="field-box match-card mb-8 w-full rounded-xl">
+  <UCard
+    color="muted" :ui="{
+      body: 'p-0! match-card grow w-full ',
+    }" class=""
+  >
     <UCollapsible
       v-if="player"
       v-model:open="isOpen"
+      :ui="{
+        root: ' group/collapse relative p-0!',
+      }"
       :class="
         cn(
-          'collapse-class group/collapse relative',
+          'collapse-class',
           player?.win === 'remake' ? 'from-b3 before:border-b3'
           : player?.win === true
             ? 'from-inspiration/80 before:border-inspiration'
@@ -38,5 +45,5 @@ const isOpen = ref(false)
 
       <LazyMatchContent :match :player />
     </UCollapsible>
-  </div>
+  </UCard>
 </template>

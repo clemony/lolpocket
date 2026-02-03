@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Drain",
-      "effects": "Restore 1 mana every second. Dealing damage to an enemy champion increases the restoration to 2 mana for the next 5 seconds. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon\" />heal for 45% of the value instead."
+      "effects": "Restore 1 mana every second. Dealing damage to an enemy champion increases the restoration to 2 mana for the next 5 seconds. If you cannot gain mana, <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />heal for 45% of the value instead."
     },
     {
       "unique": true,

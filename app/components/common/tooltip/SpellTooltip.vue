@@ -1,24 +1,31 @@
 <script setup lang="ts">
+import { OnClickOutside } from '@vueuse/components'
+
 const { id, class: className } = defineProps<{
   id: number
   class?: HTMLAttributes['class']
 }>()
 
+const toast = useToast()
 const spell = computed(() => spells[id])
+function close() {
+  toast.remove(`spell-${id}`)
+}
 </script>
 
 <template>
-  <div
+  <OnClickOutside
     v-if="spell"
     :key="spell.id"
     :class="
       cn(
-        'relative flex size-full flex-col justify-center overflow-hidden py-3',
+        'relative flex size-full flex-col justify-center overflow-hidden ',
         className,
       )
     "
+    @trigger="close()"
   >
-    <div class="flex w-full items-center gap-4 px-4 **:select-none">
+    <div class="flex w-full items-center gap-4 = **:select-none">
       <Spell
         :id="spell.id"
         class="size-10 shrink-0 bg-transparent!"
@@ -28,10 +35,10 @@ const spell = computed(() => spells[id])
 
       <div class="flex size-full flex-col justify-center gap-1">
         <div class="flex items-center justify-between">
-          <h2 class="dst grow text-lg! leading-none">
+          <h2 class="dst grow text-xl leading-none">
             {{ spell.name }}
           </h2>
-          <a
+          <!--          <a
             :key="spell.id"
             :title="`Official LoL Wiki - ${spell.name}`"
             :href="wikiLink(spell.name)"
@@ -43,46 +50,44 @@ const spell = computed(() => spells[id])
               src="/img/logos/wiki.webp"
               alt="wiki"
             >
-          </a>
+          </a> -->
         </div>
 
         <div
-          class="flex w-full items-center justify-start gap-4 *:flex *:w-fit *:items-center *:gap-0.25"
+          class="flex w-full *:first:-ml-1 **:font-medium *:leading-4 *:align-baseline **:text-sm items-center justify-start gap-4 *:inline-flex *:w-fit *:items-center *:gap-1 "
         >
-          <span
-            v-if="spell.cd || spell.recharge"
-            class="font-medium"
-            :title="spell.cd ? 'Cooldown' : 'Recharge'"
+          <Tooltip
+            v-if="spell?.cd || spell?.recharge"
+            class="badge-tooltip-hover"
+            :text="spell?.cd ? 'Cooldown' : 'Recharge'"
           >
-            <Icons class="inline size-3" name="stat:abilityHaste" />
-            {{ spell.cd || spell.recharge }}s
-          </span>
-          <span v-if="spell.charges" class="font-medium" title="Charges">
-            <Icons
-              class="absolute inline size-5.25 **:stroke-[1.3]"
-              size="4"
-              wrapper-class="w-fit relative grid place-items-center"
-              :name="`lp:charge-${spell.charges}`"
+            <Icon class="inline size-3.25 **:stroke-[2.6]" name="hugeicons:hourglass" />
+            {{ spell.cd || spell.recharge }}
+          </Tooltip>
+          <Tooltip v-if="spell?.charges" text="charges" class="badge-tooltip-hover">
+            <Icon
+              class="inline size-3.25 **:stroke-[2.2]"
+              :name="`charge-${spell.charges}`"
             />
             {{ spell.charges }}
-          </span>
-          <span v-if="spell.range" class="font-medium" title="Range">
-            <Icons class="inline size-3" name="stat:rangeCenter" />
+          </Tooltip>
+          <Tooltip v-if="spell.range" text="Range" class="badge-tooltip-hover">
+            <Icon class="inline size-3.75 translate-y-[0.45px] **:stroke-[2.2]" name="stat:rangeCenter" />
             {{ spell.range }}
-          </span>
+          </Tooltip>
         </div>
       </div>
     </div>
 
-    <Separator class="w-full px-4" color="neutral" :size="3" />
+    <USeparator class="w-full  my-2" color="b3" />
 
     <div
       :key="spell.id"
-      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto px-4.5"
+      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto "
     >
-      <span class="text-pretty whitespace-pre-line">
+      <span class="text-pretty font-medium whitespace-pre-line">
         {{ spell.description }}
       </span>
     </div>
-  </div>
+  </OnClickOutside>
 </template>

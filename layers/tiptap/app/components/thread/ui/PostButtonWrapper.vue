@@ -10,7 +10,7 @@ const props = defineProps<{
   change?: boolean
   cancellable?: boolean
   variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
+
 }>()
 
 const emit = defineEmits(['comment:post'])
@@ -21,9 +21,9 @@ interface PostTypes {
   id: string
   name?: string
   author?: string
-  hover?: ButtonVariants['hover']
-  icon?: string
+
   variant?: ButtonVariants['variant']
+  icon?: string
 }
 
 const postTypes: PostTypes[] = [
@@ -43,10 +43,10 @@ const user = await useSupabaseUser()
 
 <template>
   <ButtonGroup v-if="user?.app_metadata?.user_role === 'admin'" ref="groupRef">
-    <PostButton
+    <!--  <PostButton
       :variant="postTypes[select].variant"
       :icon="postTypes[select].icon"
-      :hover="postTypes[select].hover"
+
       @click.stop="emit('comment:post', postTypes[select].author ?? null)"
     >
       <span v-if="postTypes[select].name">{{ postTypes[select].name }}</span>
@@ -54,9 +54,6 @@ const user = await useSupabaseUser()
     <ButtonGroupSeparator />
     <Select v-model="select">
       <VarSelectTrigger
-        :variant="postTypes[select].variant ?? 'neutral'"
-        :hover="postTypes[select].hover ?? 'opacity'"
-        size="sq-9"
       >
         <icon class="size-4" name="down" />
       </VarSelectTrigger>
@@ -66,7 +63,7 @@ const user = await useSupabaseUser()
           {{ item.id }}
         </SelectItem>
       </SelectContent>
-    </Select>
+    </Select> -->
   </ButtonGroup>
 
   <PostButton v-else v-bind="forwardedProps" />

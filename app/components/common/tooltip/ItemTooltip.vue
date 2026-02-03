@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { OnClickOutside } from '@vueuse/components'
+
 const { id, map } = defineProps<{
   id: number
   map?: number
@@ -20,6 +22,7 @@ watchEffect(async () => {
     item.value = module.default
 
     status.value = 'success'
+    console.log('🥸 - item:', item.value.stats)
   }
   catch (e) {
     status.value = 'error'
@@ -44,6 +47,7 @@ const filteredInto = computed(() => {
 const has = computed(() => {
   const a = []
   if (item.value?.requiredChampion) a.push('reqChamp')
+  if (item.value?.description) a.push('description')
   if (item.value?.passives) a.push('passives')
   if (item.value?.active?.[0]) a.push('actives')
   if (item.value?.buildsFrom) a.push('buildsFrom')
@@ -51,13 +55,19 @@ const has = computed(() => {
   return a
 })
 
-const el = useTemplateRef<HTMLDivElement>('el')
+const toast = useToast()
+const spell = computed(() => spells[id])
+function close() {
+  toast.remove(`item-${id}`)
+}
 </script>
 
 <template>
-  <div class="grid h-max w-full grid-cols-[0.74fr_1fr] gap-2">
+  <OnClickOutside
+    class="grid h-max w-full" @trigger="close()"
+  >
     <div
-      class="col-start-1 flex max-h-68 w-full flex-col gap-1 overflow-hidden pt-5 pb-1.5 pl-3"
+      class="flex max-h-68 w-full grid grid-cols-[0.8fr_1fr] gap-4 overflow-hidden pt-5 pb-1.5 pl-3"
     >
       <div
         class="flex max-h-full shrink-0 flex-col items-center justify-center overflow-hidden"
@@ -84,11 +94,29 @@ const el = useTemplateRef<HTMLDivElement>('el')
         <span
           class="text-xxs font-normal text-nc italic opacity-90"
           :style="{
-            color: itemRankColor?.[rank],
+            color: itemRankColor[rank],
           }"
         >
           {{ itemRank[id] }}
         </span>
+        <div class="flex w-full flex-col">
+          <!-- separator -->
+          <Separator class="my-1 w-full" color="neutral" />
+          <!-- PRICE -->
+          <span class="inline-flex w-full shrink-0 justify-between text-sm">
+            Buy
+            <figure class="inline-flex gap-1.5 text-xs font-medium">
+              <Icon
+                class="inline size-3.5 self-center opacity-80 **:text-g!"
+                name="lol:gold"
+                alt="item price"
+              />
+              <figcaption>
+                {{ itemPrice[id] }}
+              </figcaption>
+            </figure>
+          </span>
+        </div>
       </div>
       <div class="flex size-full shrink flex-col">
         <!-- separator -->
@@ -105,26 +133,6 @@ const el = useTemplateRef<HTMLDivElement>('el')
         />
       </div>
 
-      <div
-        v-if="!has.length" class="flex w-full flex-col"
-      >
-        <!-- separator -->
-        <Separator class="my-1 w-full" color="neutral" />
-        <!-- PRICE -->
-        <span class="inline-flex w-full shrink-0 justify-between text-sm">
-          Buy
-          <figure class="inline-flex gap-1.5 text-xs font-medium">
-            <Icon
-              class="inline size-3.5 self-center opacity-80 **:text-g!"
-              name="lol:gold"
-              alt="item price"
-            />
-            <figcaption>
-              {{ itemPrice[id] }}
-            </figcaption>
-          </figure>
-        </span>
-      </div>
       <!--
         <a
           v-if="name"
@@ -138,12 +146,14 @@ const el = useTemplateRef<HTMLDivElement>('el')
             class="" />
         </a> -->
     </div>
-    <div class="max-h-64 w-full overflow-y-auto text-xs">
+    <div
+      v-if="has?.length" class="max-h-64 w-full overflow-y-auto text-xs"
+    >
       <div
         class="relative col-start-2 flex w-full flex-col overflow-x-hidden overflow-y-scroll p-3"
       >
         <span
-          v-if="!item?.stats && item?.noEffects"
+          v-if="!item?.stats"
           class="whitespace-pre-line"
           v-html="item?.description"
         />
@@ -237,5 +247,5 @@ const el = useTemplateRef<HTMLDivElement>('el')
         </template>
       </div>
     </div>
-  </div>
+  </OnClickOutside>
 </template>

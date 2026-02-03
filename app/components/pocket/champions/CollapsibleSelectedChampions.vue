@@ -61,7 +61,7 @@ const itemVariants = {
               placement: 'left',
             }"
             class="bg-b1 fx-0 grid size-22! place-items-center border-0"
-            variant="base"
+            color="default"
             shape="circle"
             :style="{
               zIndex: `-${i}`,
@@ -89,7 +89,7 @@ const itemVariants = {
               v-for="champion in groups"
               :key="champion"
               class="bg-b1 fx-0 z-1 grid size-22! place-items-center border-0"
-              variant="base"
+              color="default"
               shape="circle"
             >
               <ChampionIcon class="size-18! rounded-full" :k="champion" />
@@ -98,13 +98,13 @@ const itemVariants = {
           <Element
             v-if="l"
             class="bg-b1 fx-0 relative z-1 grid size-22! place-items-center border-0"
-            variant="base"
+            color="default"
             shape="circle"
           >
             <Element
               class="size-18! *:transition-all *:duration-300"
               shape="circle"
-              variant="neutral"
+              color="neutral"
             >
               <icon class="group-closed:opacity-0 absolute" name="up" />
               <h3 class="group-open:text-transparent group-open:opacity-0">

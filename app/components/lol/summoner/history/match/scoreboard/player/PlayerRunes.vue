@@ -26,11 +26,11 @@ const keystone = computed(() =>
       class="size-7.5 transition-all duration-300 hover:scale-120"
     />
 
-    <Element
-      class="relative grid shrink-0 place-items-center transition-all duration-300 hover:scale-120"
+    <div
+      class="relative size-6 anchor  transition-all duration-300 hover:scale-120"
       :data-id="s?.name"
       data-type="path"
-      size="c-6"
+      @click.stop
     >
       <img
         v-if="s?.name"
@@ -38,6 +38,6 @@ const keystone = computed(() =>
         :alt="s?.name"
         :src="`/img/paths/${s?.name}.webp`"
       >
-    </Element>
+    </div>
   </div>
 </template>

@@ -59,7 +59,6 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
                   'h-full self-center rounded-full': isCollapsed,
                 })
               "
-              :size="isCollapsed ? 'sq-11' : '12'"
             >
               <SummonerIcon
                 :class="

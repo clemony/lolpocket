@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Boundless Vitality",
-      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration by 25%."
+      "effects": "Increases all <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healing and <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielding received as well as <img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />health regeneration by 25%."
     }
   ],
   "stats": {

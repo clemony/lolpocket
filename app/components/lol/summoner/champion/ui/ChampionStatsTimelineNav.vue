@@ -35,14 +35,13 @@ const prev = computed(() => {
       progress
       :current="progressOverall" /> -->
 
-    <Button
+    <button
       v-for="(item, i) in summonerSections"
       :key="i"
-      variant="link"
       as="a"
       :class="
         cn(
-          'flex items-center justify-start px-0 text-bc/50 duration-0 hover:text-bc',
+          'flex items-center hover:underline justify-start px-0 text-bc/50 duration-0 hover:text-bc',
           { 'text-bc': item.id === activeId },
         )
       "
@@ -67,6 +66,6 @@ const prev = computed(() => {
       >
         {{ item.name }}
       </span>
-    </Button>
+    </button>
   </menu>
 </template>

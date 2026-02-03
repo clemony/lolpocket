@@ -7,7 +7,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
 <template>
   <PopoverContent
     update-position-strategy="always"
-    variant="input"
+    variant="outline"
     @open-auto-focus.prevent
   >
     <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
@@ -30,10 +30,9 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
         >
           <Button
             v-if="is().filters.stats.length"
-            class="absolute top-7 right-6"
-            size="sq-6"
-            hover="btn"
+            class="absolute top-7 right-6 size-6"
             variant="outline"
+            square
             @click="is().filters.stats.length = 0"
           >
             <icon class="size-4" name="x" />
@@ -54,8 +53,9 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               Item Tier
               <Button
                 v-if="is().filters.rank"
-                size="sq-6"
+                class="  size-6"
                 variant="outline"
+                square
                 @click="is().filters.rank = null"
               >
                 <icon class="size-4" name="x" />
@@ -65,9 +65,9 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               Categories
               <Button
                 v-if="is().filters.tags.length"
-                size="sq-6"
+                class="  size-6"
                 variant="outline"
-                hover="neutral"
+                square
                 @click="is().filters.tags.length = 0"
               >
                 <icon class="size-4" name="x" />
@@ -77,14 +77,12 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               class="max-h-56 flex-col flex-wrap items-start"
               :clear="false"
               hover="btn"
-              :size="['sq-8', '8']"
               variant="ghost"
             />
             <!-- tags -->
             <ItemTagsFilter
               class="max-h-56 w-9/10 flex-col flex-wrap items-start gap-y-3"
               :clear="false"
-              :size="['sq-8', '8']"
             />
           </div>
         </div>
@@ -97,7 +95,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
 
         <Grow class="max-w-14" />
         <ShopToggle class="border-b4/60! border" size="sq-9" />
-        <Button variant="neutral" size="sq-9" @click="is().clearFilters()">
+        <Button color="neutral" square size="sm" @click="is().clearFilters()">
           <icon class="size-4" name="reset" />
         </Button>
       </div>

@@ -12,35 +12,42 @@ useSeoMeta({
   twitterTitle: '[twitter:title]',
 })
 definePageMeta({
-  title: 'match history',
+  title: 'Match History',
+  description: 'Browse through your matches with deep search tools.',
   icon: 'history',
   listClass: '**:stroke-[1.6]',
   order: 0,
+  slug: '',
 })
 
 const open = shallowRef<boolean>(true)
 </script>
 
 <template>
-  <div
-    :class="
-      cn(
-        'relative z-auto mx-auto flex h-fit min-h-screen w-full max-w-[1400px] gap-14 px-24 pt-8 pb-44',
-        { 'max-w-308 flex-col': !open },
-      )
-    "
-  >
-    <div
-      class="z-auto flex w-full max-w-110 origin-right flex-col items-center gap-y-6"
-      group
-      :offset="{
-        enter: [0, '10%'],
-        leave: [0, '10%'],
-      }"
-    >
-      <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
-      <MatchHistoryAside v-if="open" />
-    </div>
-    <LazyMatchList />
-  </div>
+  <UPage
+    :ui="{
+      root: 'relative z-auto w-full pl-23 flex flex-row pt-8 pb-44',
+      left: 'lg:col-span-3',
+      right: 'hidden',
+      center: 'lg:col-span-7 lg:col-start-4',
+    } ">
+    <template #left>
+      <UPageAside
+        :ui="{
+          root: 'scrollbar-hidden z-auto ',
+          container: 'flex w-full origin-right flex-col items-center gap-y-6',
+        }"
+        group
+        :offset="{
+          enter: [0, '10%'],
+          leave: [0, '10%'],
+        }">
+        <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
+        <MatchHistoryAside v-if="open" />
+      </UPageAside>
+    </template>
+    <UPageBody>
+      <LazyMatchList />
+    </UPageBody>
+  </UPage>
 </template>

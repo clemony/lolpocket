@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Tooltip, TooltipXL } from '#components'
+import RuneTooltip from '#components'
 
 const {
   id,
@@ -15,15 +15,38 @@ const {
   side?: Side
 }>()
 const loaded = ref(false)
-const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
 
 const img = `/img/runes/${runeToPath[id]}/${id}.webp`
-const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
+
+const toast = useToast()
+function showToast() {
+  if (!toast.toasts.value.find(t => t.id === `rune-${id}`)) {
+    toast.add({
+      id: `rune-${id}`,
+      actions: [
+        {
+          variant: 'link',
+          external: true,
+          label: 'wiki',
+          size: 'sm',
+          target: '_blank',
+          to: wikiLink(runeNameById(id)),
+          trailingIcon: 'link'
+        }
+      ],
+      description: h(RuneTooltip, { id }),
+      duration: 0,
+      ui: {
+        root: 'p-0!'
+      }
+    })
+  }
+}
 </script>
 
 <template>
-  <component
-    :is="component" :side :text="runeNameById(id)" :img="`/img/runes/${id}.webp`"
+  <Tooltip
+    trailing-icon="i" :side :text="runeNameById(id)" :img="`/img/runes/${id}.webp`"
     :class="
       cn(
         'relative grid aspect-square size-17 h-full place-items-center overflow-hidden rounded-full border border-b2 bg-b2/30 p-0 transition-all duration-300',
@@ -39,7 +62,7 @@ const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
     <Img
       v-if="id"
       :key="id"
-      ref="imgEl"
+      role="button"
       :src="img"
       :loading-type
       :alt="runeNameById(id)"
@@ -48,7 +71,8 @@ const component = computed (() => size === 'sm' ? Tooltip : TooltipXL)
           'scale-108': loaded,
         })
       "
+      @click.stop="showToast()"
       @load="loaded = true"
     />
-  </component>
+  </Tooltip>
 </template>

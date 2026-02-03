@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -28,7 +28,7 @@
       "unique": true,
       "mythic": false,
       "name": "Rapids",
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds."
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds."
     }
   ],
   "stats": {

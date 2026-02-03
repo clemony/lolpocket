@@ -53,7 +53,7 @@
       <ItemMapFilter v-model:model-value="is().filters.map" class="w-full" />
     </div>
 
-    <Button class="" size="12" variant="neutral" @click="is().clearFilters()">
+    <Button class="" size="lg" color="neutral" @click="is().clearFilters()">
       Reset Filters
     </Button>
   </div>

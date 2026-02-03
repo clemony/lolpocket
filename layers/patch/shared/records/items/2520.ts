@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 01/29/2026 04:28:49 PM CST
+// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
       import type { Item } from "#shared/types"
 
       const item: Item =  {
@@ -35,7 +35,7 @@
       "unique": true,
       "mythic": false,
       "name": "Sabotage",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon\" />takedown against an enemy champion within 3 seconds of damaging them grants you <i>Sabotage</i> for 90 seconds, empowering your next basic attack against a <img src=\"/img/icons/turret.webp\" class=\"tip-icon\" />turret or epic <img src=\"/img/icons/monster.webp\" class=\"tip-icon\" />monster to consume the effect to deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />300 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />240) (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20) per 1 lethality) <b>bonus</b> true damage over 3 seconds."
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them grants you <i>Sabotage</i> for 90 seconds, empowering your next basic attack against a <img src=\"/img/icons/turret.webp\" class=\"tip-icon \" />turret or epic <img src=\"/img/icons/monster.webp\" class=\"tip-icon \" />monster to consume the effect to deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />300 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />240) (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20) per 1 lethality) <b>bonus</b> true damage over 3 seconds."
     }
   ],
   "stats": {
