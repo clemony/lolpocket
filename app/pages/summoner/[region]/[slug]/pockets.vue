@@ -43,8 +43,7 @@ watch(
         )"
         :key="pocket.key"
         :pocket
-        @click="navigateTo(`/pocket/${pocket.key}`)"
-      />
+        @click="navigateTo(`/pocket/${pocket.key}`)" />
     </div>
   </div>
 </template>

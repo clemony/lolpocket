@@ -25,9 +25,9 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
     key,
     name,
     attackType = '',
+    resource = '',
     attributeRatings = {},
     positions = [],
-    resource = '',
     roles = [],
     stats = {},
   } = champ as ChampionLite

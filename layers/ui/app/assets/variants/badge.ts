@@ -1,21 +1,22 @@
 export default {
   badge: {
     slots: {
-      base: 'w-fit border'
+      base: 'w-fit border  flex dxs  items-center'
     },
     variants: {
       color: {
         ad: '',
-        b2: '',
-        domination: '',
+        dom: '',
         gold: '',
-        inspiration: '',
-        muted: '',
+        insp: '',
         neutral: '',
-        precision: '',
-        primary: '',
-        resolve: '',
-        sorcery: '',
+        p0: '',
+        p1: '',
+        p2: '',
+        p3: '',
+        pre: '',
+        res: '',
+        sorc: '',
       },
       variant: {
         solid: '',
@@ -24,31 +25,31 @@ export default {
       },
       size: {
         lg: {
-          base: 'text-sm px-2 py-1 gap-1.5 rounded-md',
+          base: 'text-sm px-2 py-1 gap-1.5 rounded-lg',
           leadingAvatarSize: '2xs',
           leadingIcon: 'size-5',
           trailingIcon: 'size-5'
         },
         md: {
-          base: 'text-xs px-2 py-1 gap-1 rounded-md',
+          base: 'text-xs px-2 py-1 gap-1 rounded-lg',
           leadingAvatarSize: '3xs',
           leadingIcon: 'size-4',
           trailingIcon: 'size-4'
         },
         sm: {
-          base: 'text-xs/3.5 px-1.5 py-1 gap-1 rounded-md',
+          base: 'text-xs/4 px-2 py-0.75 gap-1.5  rounded-lg',
           leadingAvatarSize: '3xs',
           leadingIcon: 'size-3.5 **:stroke-[2.4]',
           trailingIcon: 'size-3.5 **:stroke-[2.4]'
         },
         xl: {
-          base: 'text-base px-2.5 py-1 gap-1.5 rounded-md',
+          base: 'text-pc px-2.5 py-1 gap-1.5 rounded-lg',
           leadingAvatarSize: '2xs',
           leadingIcon: 'size-6',
           trailingIcon: 'size-6'
         },
         xs: {
-          base: 'text-[10px]/3 px-1.5 py-0.5 gap-1 rounded-md',
+          base: 'text-[10px]/3.5 px-1.5 py-0.5   gap-1.5 rounded-lg',
           leadingAvatarSize: '3xs',
           leadingIcon: 'size-3.5 **:stroke-[2.4]',
           trailingIcon: 'size-3.5 **:stroke-[2.4]'
@@ -65,78 +66,114 @@ export default {
         class: 'border-ad dark:font-bold light:font-semibold text-white   light:bg-ad/70 dark:bg-ad/90'
       },
       {
-        color: 'muted',
+        color: 'p0',
         variant: 'solid',
-        class: 'border-b2 text-bc font-semibold   bg-muted '
+        class: 'border-p3 border text-pc font-medium ring-p2  bg-p0 '
       },
       {
-        color: 'b2',
+        color: 'p1',
         variant: 'solid',
-        class: 'border-b3 text-bc  font-semibold   bg-b2 '
+        class: 'border-p3 border text-pc font-medium ring-p2  bg-p1 '
       },
       {
-        color: 'precision',
+        color: 'p2',
         variant: 'solid',
-        class: 'border-precision  font-semibold text-white bg-precision'
+        class: 'border-p3 text-pc  font-semibold   bg-p2 '
       },
+      {
+        color: 'p3',
+        variant: 'outline',
+        class: 'border-p3 text-pc font-medium '
+      },
+
+      // neutral
+
+      {
+        color: 'neutral',
+        variant: 'solid',
+        class: 'border-n2 border noise text-nc font-semibold ring-n3 bg-n0/85 '
+      },
+
+      // dom
+      {
+        color: 'dom',
+        variant: 'solid',
+        class: 'border-dom  font-semibold text-white bg-dom'
+      },
+      {
+        color: 'dom',
+        variant: 'soft',
+        class: 'border-dom/50  font-semibold text-pc/70   bg-dom/40 '
+      },
+
+      // sorc
+      {
+        color: 'sorc',
+        variant: 'soft',
+        class: 'border-sorc/50 noise font-semibold text-pc/70   bg-sorc/40 '
+      },
+      {
+        color: 'sorc',
+        variant: 'solid',
+        class: 'border-sorc font-semibold text-white bg-sorc'
+      },
+
+      // insp
+      {
+        color: 'insp',
+        variant: 'solid',
+        class: 'border-insp   font-semibold text-insp-content bg-insp '
+      },
+
+      {
+        color: 'insp',
+        variant: 'outline',
+        class: 'border-insp-offset/40 text-pc   font-semibold '
+      },
+      {
+        color: 'insp',
+        variant: 'soft',
+        class: 'border-p3 ring-insp/40 border font-semibold text-pc   bg-insp-content/50 noise '
+      },
+
+      // pre
+      {
+        color: 'pre',
+        variant: 'soft',
+        class: 'border-pre/50  font-semibold text-pc/70   bg-pre/40 '
+      },
+      {
+        color: 'pre',
+        variant: 'solid',
+        class: 'border-pre  font-semibold text-white bg-pre'
+      },
+
+      // gold
       {
         color: 'gold',
         variant: 'solid',
         class: 'border-g  font-semibold text-white **:text-white bg-g/80'
       },
       {
-        color: 'domination',
-        variant: 'solid',
-        class: 'border-domination  font-semibold text-white bg-domination'
-      },
-      {
-        color: 'sorcery',
-        variant: 'solid',
-        class: 'border-sorcery  font-semibold text-white bg-sorcery'
-      },
-      {
-        color: 'resolve',
-        variant: 'solid',
-        class: 'border-resolve  font-medium text-white bg-resolve'
-      },
-      {
-        color: 'inspiration',
-        variant: 'solid',
-        class: 'border-inspiration  font-semibold text-white bg-inspiration'
-      },
-      {
-        color: 'precision',
-        variant: 'soft',
-        class: 'border-precision/50  font-semibold text-bc/70   bg-precision/40 '
-      },
-      {
         color: 'gold',
         variant: 'soft',
-        class: 'border-g/50  font-semibold text-bc/70   bg-g/40 '
+        class: 'border-g/50  font-semibold text-pc/70   bg-g/40 '
+      },
+
+      // res
+      {
+        color: 'res',
+        variant: 'soft',
+        class: 'border-res/50  font-medium text-pc/70   bg-res/40 '
       },
       {
-        color: 'domination',
-        variant: 'soft',
-        class: 'border-domination/50  font-semibold text-bc/70   bg-domination/40 '
+        color: 'res',
+        variant: 'solid',
+        class: 'border-res  font-medium text-white bg-res'
       },
-      {
-        color: 'sorcery',
-        variant: 'soft',
-        class: 'border-sorcery/50 noise font-semibold text-bc/70   bg-sorcery/40 '
-      },
-      {
-        color: 'resolve',
-        variant: 'soft',
-        class: 'border-resolve/50  font-medium text-bc/70   bg-resolve/40 '
-      },
-      {
-        color: 'inspiration',
-        variant: 'soft',
-        class: 'border-inspiration/50  font-semibold text-bc/70   bg-inspiration/40 '
-      }
     ],
     defaultVariants: {
-      color: 'muted',
+      color: 'p1',
       variant: 'solid'
     }
   }

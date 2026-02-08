@@ -1,48 +1,48 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Swiftmarch",
-  "id": 3170,
-  "rank": "Boots",
-  "buildsFrom": [
+const item: Item = {
+  id: 3170,
+  name: 'Swiftmarch',
+  nicknames: [
+    'boots'
+  ],
+  description: '65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.',
+  noEffects: false,
+  rank: 'Boots',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 3009,
-      "name": "Boots of Swiftness",
-      "gold": 1000
+      id: 3009,
+      name: 'Boots of Swiftness',
+      gold: 1000
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "boots"
+  gold: {
+    base: 0,
+    sell: 700,
+    total: 1000
+  },
+  maps: [
+    11
   ],
-  "passives": [
+  passives: [
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Fleetfooted",
-      "effects": "Gain 40% slow resist."
+      name: 'Fleetfooted',
+      effects: 'Gain 40% slow resist.',
+      mythic: false,
+      unique: true
     },
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Noxian Fervor",
-      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon \" />adaptive force equal to 5% of your <b>total</b> movement speed."
+      name: 'Noxian Fervor',
+      effects: 'Gain <img src="/img/icons/adaptive-force.webp" class="tip-icon " />adaptive force equal to 5% of your <b>total</b> movement speed.',
+      mythic: false,
+      unique: true
     }
   ],
-  "stats": {
-    "flatMovespeed": 65
-  },
-  "description": "65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.",
-  "gold": {
-    "base": 0,
-    "total": 1000,
-    "sell": 700
-  },
-  "maps": [
-    11
-  ]
+  stats: {
+    flatMovespeed: 65
+  }
 }
 export default item

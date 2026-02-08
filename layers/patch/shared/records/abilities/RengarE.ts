@@ -1,54 +1,54 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:02 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Bola Strike",
-  "width": "140",
-  "affects": "Enemies",
-  "blurb": "Active:  Rengar throws a bola in the target direction that deals  physical damage and briefly  slows the first enemy hit,  revealing them for a short time.",
-  "castTime": "0.25 / None",
-  "cooldown": "0.25",
-  "cost": "0",
-  "damageType": "Physical damage",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Bola Strike',
+  width: '140',
+  affects: 'Enemies',
+  blurb: 'Active:  Rengar throws a bola in the target direction that deals  physical damage and briefly  slows the first enemy hit,  revealing them for a short time.',
+  castTime: '0.25 / None',
+  cooldown: '0.25',
+  cost: '0',
+  damageType: 'Physical damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/e',
+  notes: 'If Rengar casts  Savagery and/or  Battle Roar during Bola Strike\'s cast time, he will buffer them and cast them when Bola Strike completes.\nThis ability will cast from wherever the caster is at the end of the cast time.\nBola Strike\'s end point will not move in relation to Rengar if he moves during the cast time.',
+  projectile: 'TRUE',
+  speed: '1500',
+  spellEffects: 'spell',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '1000',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar throws a bola in the target direction that deals physical damage to the first enemy hit and slows them for 1.75 seconds, as well as revealing them for 2 seconds and granting sight of a 150-unit radius around them for the same duration.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Rengar throws a bola in the target direction that deals physical damage to the first enemy hit and slows them for 1.75 seconds, as well as revealing them for 2 seconds and granting sight of a 150-unit radius around them for the same duration.</p>',
+      leveling: [
         {
-          "attribute": "Physical Damage",
-          "modifiers": [
+          attribute: 'Physical Damage',
+          modifiers: [
             {
-              "values": "55 / 100 / 145 / 190 / 235"
+              values: '55 / 100 / 145 / 190 / 235'
             },
             {
-              "unit": "% bonus AD",
-              "values": "80"
+              unit: '% bonus AD',
+              values: '80'
             }
           ]
         },
         {
-          "attribute": "Slow",
-          "modifiers": [
+          attribute: 'Slow',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 45 / 60 / 75 / 90"
+              unit: '%',
+              values: '30 / 45 / 60 / 75 / 90'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Bola Strike's damage is modified to deal 50 - 305 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Ferocity Bonus:</span> Bola Strike\'s damage is modified to deal 50 - 305 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/e",
-  "notes": "If Rengar casts  Savagery and/or  Battle Roar during Bola Strike's cast time, he will buffer them and cast them when Bola Strike completes.\nThis ability will cast from wherever the caster is at the end of the cast time.\nBola Strike's end point will not move in relation to Rengar if he moves during the cast time.",
-  "projectile": "TRUE",
-  "speed": "1500",
-  "spellEffects": "spell",
-  "spellshieldable": "True",
-  "targeting": "Direction",
-  "targetRange": "1000"
+  ]
 }
-  export default ability
+export default ability

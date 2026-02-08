@@ -22,8 +22,7 @@ const teams = computed(() => {
         v-for="(player, i) in teams.blue"
         :key="i"
         :match
-        :player="player"
-      />
+        :player="player" />
     </div>
     <!-- red Stats -->
 
@@ -35,8 +34,7 @@ const teams = computed(() => {
         v-for="(player, i) in teams.red"
         :key="i"
         :match
-        :player="player"
-      />
+        :player="player" />
     </div>
   </div>
   <!--

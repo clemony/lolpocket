@@ -1,9 +1,9 @@
 // look for missing champion icons by comparing local ids to community dragon ids
 
-import { championIndex } from '#layers/patch/shared/constants'
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
+import { championIndex } from '#layers/patch/shared/constants'
 import sharp from 'sharp'
 
 const iconsDir = path.resolve('./public/img/champions')

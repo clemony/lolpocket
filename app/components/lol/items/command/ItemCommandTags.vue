@@ -7,24 +7,23 @@ const searchInput = ref([])
   <transition-slide
     class="z-1 flex h-auto w-full flex-wrap items-center px-4 *:select-none"
     group
-    tag="div"
-  >
-    <template v-for="query in searchInput" :key="query">
+    tag="div">
+    <template
+      v-for="query in searchInput"
+      :key="query">
       <button
         v-if="query !== ''"
-        class="f btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!"
-        :appear="false"
-      >
+        class="f btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
+        :appear="false">
         {{ query }}
       </button>
     </template>
 
     <button
       v-if="filters.tags && filters.tags !== null"
-      class="f btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!"
+      class="f btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
       :appear="false"
-      @click="filters.tags = null"
-    >
+      @click="filters.tags = null">
       {{ filters.tags }}
 
       <icon name="x-sm" />
@@ -33,15 +32,13 @@ const searchInput = ref([])
     <label
       v-for="stat in filters.stats"
       :key="stat"
-      class="btn bg-b2/97 btn-xs mt-4 gap-2 rounded-md text-sm! font-normal!"
-      :appear="false"
-    >
+      class="btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
+      :appear="false">
       <input
         v-model="filters.tags"
         class="peer hidden"
         type="checkbox"
-        :value="stat"
-      >
+        :value="stat">
       {{ statIndex[stat].abbr[0] }}
 
       <icon name="x-sm" />

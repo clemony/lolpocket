@@ -21,13 +21,14 @@ const props = defineProps<{
 Chart.register(PolarAreaController, ArcElement, RadialLinearScale, Tooltip)
 
 const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
+  maintainAspectRatio: false,
+  responsive: true,
   elements: {
     arc: {
       borderWidth: 0,
       hoverOffset: 4,
     },
   },
-  maintainAspectRatio: false,
   plugins: {
     legend: {
       display: false,
@@ -36,7 +37,6 @@ const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
       enabled: !props.noTooltip,
     },
   },
-  responsive: true,
   scales: {
     r: {
       grid: {
@@ -56,6 +56,5 @@ const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
     :options="chartOptions"
     :aria-label="aria"
     role="img"
-    :class="cn('max-h-200', props.class)"
-  />
+    :class="cn('max-h-200', props.class)" />
 </template>

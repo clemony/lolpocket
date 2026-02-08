@@ -23,8 +23,7 @@ const isRender = computed(
   <Primitive
     v-if="isRender"
     v-bind="delegatedProps"
-    :class="cn('py-6 text-center text-sm', props.class)"
-  >
+    :class="cn('py-6 text-center text-sm', props.class)">
     <slot />
   </Primitive>
 </template>

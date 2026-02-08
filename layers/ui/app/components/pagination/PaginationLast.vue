@@ -21,7 +21,9 @@ const delegatedProps = computed(() => {
   <PaginationLast v-bind="delegatedProps">
     <button :class="cn('btn btn-square btn-ghost btn-sm', props.class)">
       <slot>
-        <icon class="size-4" name="right-pipe" />
+        <icon
+          class="size-4"
+          name="right-pipe" />
       </slot>
     </button>
   </PaginationLast>

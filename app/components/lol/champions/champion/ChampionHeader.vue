@@ -10,15 +10,19 @@ const { champion, class: className } = defineProps<{
 </script>
 
 <template>
-  <IconHeader class="gap-6" text-wrapper="gap-px pt-px">
+  <IconHeader
+    class="gap-6"
+    text-wrapper="gap-px pt-px">
     <template #icon>
       <div class="-ml-2 size-20">
-        <ChampionIcon :id="champion.id" class="size-20 rounded-full" />
+        <Champion
+          :id="champion.id"
+          class="size-20 rounded-full" />
       </div>
     </template>
     <!-- header name -->
     <template #title>
-      <h1 class="text-bc/94 text-[2.8rem] leading-none drop-shadow-sm">
+      <h1 class="text-[2.8rem] leading-none text-pc/94 drop-shadow-sm">
         {{ champion.name }}
       </h1>
     </template>

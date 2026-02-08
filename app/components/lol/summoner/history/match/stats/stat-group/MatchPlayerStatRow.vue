@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  class: className,
   color,
+  class: className,
   match,
   stat,
 } = defineProps<{
@@ -18,19 +18,16 @@ const highest = computed(
 
 <template>
   <div
-    class="match-row group-not-last/row:border-b3/50! border-b group-last/row:border-transparent"
-    :style="{ '--stat-color': color }"
-  >
+    class="match-row border-b group-not-last/row:border-p3/50! group-last/row:border-transparent"
+    :style="{ '--stat-color': color }">
     <div
       class="match-cell inline-flex! justify-start bg-transparent! px-2 text-left opacity-80 hover:underline hover:opacity-100"
       :data-type="stat[1].name"
       data-placement="left"
-      data-theme="mini-tip neutral line"
-    >
+      data-theme="mini-tip neutral line">
       <div
         class="relative w-full justify-start truncate text-left"
-        :class="cn('pl-5', { 'pl-10': stat[1].group === 'kills' })"
-      >
+        :class="cn('pl-5', { 'pl-10': stat[1].group === 'kills' })">
         <slot />
         {{ stat[1].name }}
       </div>
@@ -48,8 +45,7 @@ const highest = computed(
         cn('match-cell group/stat', {
           'match-null': player.stats?.[stat[0]] === 0,
         })
-      "
-    >
+      ">
       <div
         v-if="player.stats?.[stat[0]] === highest && highest > 0"
         :style="{
@@ -60,11 +56,10 @@ const highest = computed(
         }"
         :class="
           cn({
-            'text-bc/0! badge absolute origin-center place-self-center border-0! drop-shadow-none saturate-120 transition-all duration-300 group-hover/stat:scale-500':
+            'text-pc/0! badge absolute origin-center place-self-center border-0! drop-shadow-none saturate-120 transition-all duration-300 group-hover/stat:scale-500':
               player.stats?.[stat[0]] === highest && highest > 0,
           })
-        "
-      >
+        ">
         {{ player.stats?.[stat[0]]?.toLocaleString() }}{{ stat[1]?.unit }}
       </div>
 

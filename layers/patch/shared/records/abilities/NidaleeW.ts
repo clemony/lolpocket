@@ -1,64 +1,64 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:57 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Pounce",
-  "affects": "Enemies",
-  "blurb": "Passive: Killing an enemy or using Pounce's  Hunted bonus will  reduce Pounce's cooldown.",
-  "castTime": "none",
-  "cooldown": "13 / 12 / 11 / 10 / 9",
-  "cost": "30 / 35 / 40 / 45 / 50",
-  "damageType": "Magic damage",
-  "effectRadius": "200 / 250",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Pounce',
+  affects: 'Enemies',
+  blurb: 'Passive: Killing an enemy or using Pounce\'s  Hunted bonus will  reduce Pounce\'s cooldown.',
+  castTime: 'none',
+  cooldown: '13 / 12 / 11 / 10 / 9',
+  cost: '30 / 35 / 40 / 45 / 50',
+  damageType: 'Magic damage',
+  effectRadius: '200 / 250',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w',
+  notes: 'This ability always employs Quick cast.\nPounce will not receive the reduced cooldown if the target becomes  Hunted mid-air.\nCasting Pounce on a Hunted target will extend the remaining duration of their  Hunted debuff by 1.5 seconds, up to the original duration.',
+  spellEffects: 'Area of effect',
+  spellshieldable: 'True',
+  targeting: 'Direction / Unit',
+  targetRange: '375 / 750',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Killing an enemy while in Cougar Form or using Pounce\'s Hunt bonus reduces Pounce\'s current cooldown to a minimum value.</p>',
+      leveling: [
         {
-          "attribute": "Reduced Cooldown",
-          "modifiers": [
+          attribute: 'Reduced Cooldown',
+          modifiers: [
             {
-              "unit": " seconds",
-              "values": "3 / 2.5 / 2 / 1.5"
+              unit: ' seconds',
+              values: '3 / 2.5 / 2 / 1.5'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "55 / 100 / 145 / 190"
+              values: '55 / 100 / 145 / 190'
             },
             {
-              "unit": "% bonus AD",
-              "values": "50"
+              unit: '% bonus AD',
+              values: '50'
             },
             {
-              "unit": "% AP",
-              "values": "30"
+              unit: '% AP',
+              values: '30'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She will leap to the front of the target.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She will leap to the front of the target.</p>'
     },
     {
-      "description": "Takedown and Aspect of the Cougar can be cast during the dash."
+      description: 'Takedown and Aspect of the Cougar can be cast during the dash.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
-  "notes": "This ability always employs Quick cast.\nPounce will not receive the reduced cooldown if the target becomes  Hunted mid-air.\nCasting Pounce on a Hunted target will extend the remaining duration of their  Hunted debuff by 1.5 seconds, up to the original duration.",
-  "spellEffects": "Area of effect",
-  "spellshieldable": "True",
-  "targeting": "Direction / Unit",
-  "targetRange": "375 / 750"
+  ]
 }
-  export default ability
+export default ability

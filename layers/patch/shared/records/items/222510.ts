@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 222510,
-  "name": "Dusk and Dawn",
-  "description": "300 Health\n70 Ability Power\n20 Ability Haste\n25% Attack Speed\n\nSpellblade (0s)\nAfter using an Ability, your next Attack deals  bonus magic damage On-Hit and applies On-Hit effects an additional time.",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1750
+const item: Item = {
+  id: 222510,
+  name: 'Dusk and Dawn',
+  description: '300 Health\n70 Ability Power\n20 Ability Haste\n25% Attack Speed\n\nSpellblade (0s)\nAfter using an Ability, your next Attack deals  bonus magic damage On-Hit and applies On-Hit effects an additional time.',
+  gold: {
+    base: 2500,
+    sell: 1750,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

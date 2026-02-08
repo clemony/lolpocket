@@ -38,14 +38,16 @@ const menu = [
 
 <template>
   <div class="z-66! flex w-max flex-nowrap items-center gap-1 px-1 py-1.5">
-    <template v-for="(item, i) in menu" :key="i">
+    <template
+      v-for="(item, i) in menu"
+      :key="i">
       <Button
         v-if="!item.name"
         variant="ghost"
         hover="inset"
-        square class="size-9"
-        @click="item.action()"
-      >
+        square
+        class="size-9"
+        @click="item.action()">
         <icon
           :name="item.icon"
           :class="
@@ -53,15 +55,13 @@ const menu = [
               'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon),
               'size-4': item.icon === 'lucide:underline, bold',
             })
-          "
-        />
+          " />
       </Button>
       <Separator
         v-if="item.name === 'separator'"
-        class="bg-b3 h-[11px]"
+        class="h-[11px] bg-p3"
         :size="2"
-        orientation="vertical"
-      />
+        orientation="vertical" />
     </template>
   </div>
 </template>

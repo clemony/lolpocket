@@ -14,25 +14,23 @@ const { childRoutes, links, summoner } = defineProps<{
       <NavMenuHeader>
         <template #icon>
           <div class="relative">
-            <SummonerIcon class="rounded-field size-11 size-full" :summoner />
+            <SummonerIcon
+              class="size-11 size-full rounded-field"
+              :summoner />
             <SummonerLevel
-              class="bg-neutral text-nc absolute -bottom-1.5 z-1 rounded-full pt-px text-sm"
-            />
+              class="absolute -bottom-1.5 z-1 rounded-full bg-neutral pt-px text-sm text-nc" />
           </div>
         </template>
         <template #content>
           <div class="flex w-full flex-col gap-1 py-1">
             <p
-              class="inline-flex flex-nowrap items-center justify-between gap-2 text-nowrap"
-            >
+              class="inline-flex flex-nowrap items-center justify-between gap-2 text-nowrap">
               <SummonerName
                 class="truncate font-serif leading-none font-bold"
-                as="h4"
-              />
+                as="h4" />
             </p>
             <p
-              class="flex inline-flex w-full items-center justify-between gap-2 align-bottom text-sm **:leading-none [&_svg]:size-3"
-            >
+              class="flex inline-flex w-full items-center justify-between gap-2 align-bottom text-sm **:leading-none [&_svg]:size-3">
               <SummonerTag />
 
               <SummonerRegion />
@@ -48,14 +46,12 @@ const { childRoutes, links, summoner } = defineProps<{
         :key="item.name"
         variant="ghost"
         :item="item"
-        @click="navigateTo(links[item.name])"
-      >
+        @click="navigateTo(links[item.name])">
         <template #icon>
           <Icon
             class="absolute size-5.5 place-self-center object-center"
             :name="String(item.meta?.icon)"
-            :class="cn('', item.meta?.iconStyle ?? null)"
-          />
+            :class="cn('', item.meta?.iconStyle ?? null)" />
         </template>
 
         <template #content>

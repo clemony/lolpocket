@@ -101,7 +101,7 @@ export const useSummonerStore = defineStore(
       })
 
       const ranked = await $fetch<{ ranked: Summoner['ranked'] }>(
-        '/api/v4/league/entries/byPuuid',
+        '/riot/v4/league/entries/byPuuid',
         { params: { puuid: base.puuid, region: base.region } }
       )
 
@@ -146,7 +146,6 @@ export const useSummonerStore = defineStore(
 
       cache.value[puuid] = { ...s, ...patch }
       bump(puuid)
-      useSummonerStore().$persist
     }
 
     return {

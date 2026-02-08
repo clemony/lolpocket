@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 223137,
-  "name": "Cryptbloom",
-  "description": "60 Ability Power\n30% Magic Penetration\n15 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1250
+const item: Item = {
+  id: 223137,
+  name: 'Cryptbloom',
+  description: '60 Ability Power\n30% Magic Penetration\n15 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

@@ -8,8 +8,7 @@ const pocket = ref(props.pocket)
 
 <template>
   <div
-    class="*:text-md flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start *:py-3 *:text-left **:pointer-events-auto"
-  >
+    class="flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start *:py-3 *:text-left *:text-md **:pointer-events-auto">
     <button class="group btn btn-ghost btn-lg" @click="duplicatePocket(pocket)">
       <span>Duplicate</span>
     </button>
@@ -23,12 +22,9 @@ const pocket = ref(props.pocket)
     </button>
 
     <button
-      class="group btn btn-ghost btn-lg cursor-pointer"
-      @click="deletePocket(pocket)"
-    >
+      class="group btn cursor-pointer btn-ghost btn-lg"
+      @click="deletePocket(pocket)">
       Send Pocket to Trash
     </button>
   </div>
 </template>
-
-<style scoped></style>

@@ -1,54 +1,47 @@
 <script setup lang="ts">
 const {
-  variant = 'ghost',
+  variant = "ghost",
   class: className,
   clear = false,
 
-  size = ['sq-8', '8'],
+  size = ["sq-8", "8"],
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   clear?: boolean
-  size?: ButtonVariants['size'][]
-  variant?: ButtonVariants['variant']
-
+  size?: ButtonVariants["size"][]
+  variant?: ButtonVariants["variant"]
 }>()
 </script>
 
 <template>
   <Listbox v-model:model-value="cs().filters.role" :multiple="false">
     <ListboxContent as-child>
-      <TransitionSlideLeft
+      <TransitionSlide
         group
         :class="
           cn(
             'relative z-1 flex max-h-64 w-9/10 w-full flex-col flex-wrap items-center items-start gap-2 gap-y-3 py-0',
-            className,
+            className
           )
-        "
-      >
+        ">
         <Button
           v-if="cs().filters.role && clear"
           class="order-first hover:*:opacity-100"
           :variant
-
           size="sm"
-          @click="cs().filters.role = null"
-        >
+          @click="cs().filters.role = null">
           <icon class="size-4" name="x" />
         </Button>
 
         <BaseListboxItem
           v-for="role in championRoles"
           :key="role.name"
-          class="fx-0 bg-transparent"
+          class="bg-transparent fx-0"
           :value="role.name"
-          as-child
-        >
+          as-child>
           <RoleBadge as="label" :variant size="sm" :role />
         </BaseListboxItem>
-      </TransitionSlideLeft>
+      </TransitionSlide>
     </ListboxContent>
   </Listbox>
 </template>
-
-<style scoped></style>

@@ -19,19 +19,19 @@ const forwarded = useForwardProps(delegatedProps)
 
 <template>
   <div
-    class="border-b-b3/65 flex items-center border-b px-3"
-    cmdk-input-wrapper
-  >
-    <icon class="mr-2 size-4 shrink-0 opacity-50" name="search" />
+    class="flex items-center border-b border-b-p3/65 px-3"
+    cmdk-input-wrapper>
+    <icon
+      class="mr-2 size-4 shrink-0 opacity-50"
+      name="search" />
 
     <ListboxFilter
       v-bind="{ ...forwarded, ...$attrs }"
       :class="
         cn(
-          'placeholder:text-bc/50 flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none disabled:cursor-not-allowed disabled:opacity-50',
+          'flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-pc/50 disabled:cursor-not-allowed disabled:opacity-50',
           props.class,
         )
-      "
-    />
+      " />
   </div>
 </template>

@@ -56,8 +56,7 @@ function onKeyDown(event: KeyboardEvent) {
     role="button"
     aria-roledescription="carousel"
     tabindex="0"
-    @keydown="onKeyDown"
-  >
+    @keydown="onKeyDown">
     <slot
       :can-scroll-next
       :can-scroll-prev
@@ -65,7 +64,6 @@ function onKeyDown(event: KeyboardEvent) {
       :carousel-ref
       :orientation
       :scroll-next
-      :scroll-prev
-    />
+      :scroll-prev />
   </div>
 </template>

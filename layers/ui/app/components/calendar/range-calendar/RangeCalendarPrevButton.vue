@@ -20,10 +20,11 @@ const forwardedProps = useForwardProps(delegatedProps)
         `size-8 bg-transparent p-0 opacity-50 hover:opacity-100`,
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon class="size-4" name="left" />
+      <icon
+        class="size-4"
+        name="left" />
     </slot>
   </RangeCalendarPrev>
 </template>

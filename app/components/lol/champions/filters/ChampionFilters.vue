@@ -19,15 +19,16 @@ const query = ref<string>(null)
 
 <template>
   <menu
-    class="absolute inset-x-0 top-16 z-1 flex h-32 flex-col gap-5 overflow-hidden bg-b1 px-8 pt-11"
-  >
+    class="absolute inset-x-0 top-16 z-1 flex h-32 flex-col gap-5 overflow-hidden bg-p0 px-8 pt-11">
     <div class="flex items-center gap-10">
       <div class="relative flex grow items-center gap-6">
         <ExpandSearch
           class="absolute left-0 max-w-60 btn-neutral **:[&_svg]:opacity-96!"
-          @update:reset="filters.query = null"
-        >
-          <input v-model="filters.query" class="size-full" type="text">
+          @update:reset="filters.query = null">
+          <input
+            v-model="filters.query"
+            class="size-full"
+            type="text">
         </ExpandSearch>
 
         <h1 class="mr-1 text-5xl! tracking-tight">
@@ -36,8 +37,7 @@ const query = ref<string>(null)
 
         <ChampionQuote
           class="flex items-center px-2 pt-1 font-serif text-md tracking-wide text-nowrap dst"
-          as="p"
-        />
+          as="p" />
       </div>
 
       <!--     <NumberField id="level" v-model:model-value="cs().championGridLevel" :min="1" :max="18">

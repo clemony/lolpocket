@@ -1,18 +1,18 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:58 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Berserker Rage",
-  "affects": "Self",
-  "blurb": "Innate:  Olaf gains  bonus attack speed and  life steal based on his missing health.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Berserker Rage',
+  affects: 'Self',
+  blurb: 'Innate:  Olaf gains  bonus attack speed and  life steal based on his missing health.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p',
+  notes: 'No additional details.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",
-  "notes": "No additional details.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

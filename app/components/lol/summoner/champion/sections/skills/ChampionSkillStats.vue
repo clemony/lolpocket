@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const { skills } = storeToRefs(s_champion())
@@ -10,7 +10,7 @@ const ckey = computed(() => String(route.params.champion_key))
 </script>
 
 <template>
-  <div :class="cn('', className)">
+  <UPageSection title="Abilities" :class="cn('', className)">
     <ChampionSkillPriority
       v-for="(set, i) in Object.entries(skills.priority)"
       :key="i"
@@ -18,12 +18,10 @@ const ckey = computed(() => String(route.params.champion_key))
       simple
       separator
       :title="i + 1"
-      :set
-    />
+      :set />
 
     <Card
-      class="mt-16 flex h-full w-fit items-center justify-center gap-3 self-end p-8"
-    >
+      class="mt-16 flex h-full w-fit items-center justify-center gap-3 self-end p-8">
       <div class="-mt-1 grid grid-cols-1 grid-rows-5 gap-2">
         <div
           v-for="(k, i) in ['Q', 'W', 'E', 'R']"
@@ -31,8 +29,7 @@ const ckey = computed(() => String(route.params.champion_key))
           class=""
           :style="{
             gridRowStart: i + 2,
-          }"
-        >
+          }">
           <Ability class="size-11" :akey="k" :ckey />
         </div>
       </div>
@@ -42,8 +39,7 @@ const ckey = computed(() => String(route.params.champion_key))
           <div
             v-for="(_, i) in skills.byLevel"
             :key="i"
-            class="grid size-12 place-items-center text-sm font-medium"
-          >
+            class="grid size-12 place-items-center text-sm font-medium">
             {{ i }}
           </div>
         </div>
@@ -51,8 +47,7 @@ const ckey = computed(() => String(route.params.champion_key))
           <div
             v-for="(level, i) in skills.byLevel"
             :key="i"
-            class="grid grid-rows-4 place-items-center gap-2"
-          >
+            class="grid grid-rows-4 place-items-center gap-2">
             <div
               v-for="(ability, k) in level"
               :key="k"
@@ -61,25 +56,23 @@ const ckey = computed(() => String(route.params.champion_key))
           ${ability.pickrate}% pickrate`"
               :class="
                 cn(
-                  'flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-b2/40 text-xs! leading-none select-none',
+                  'flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-p2/40 text-xs! leading-none select-none',
                   {
                     'text-transparent': ability.winrate === 0,
                     'bg-neutral/90 text-nc shadow-sm dss':
                       ability.winrate !== 0,
-                  },
+                  }
                 )
-              "
-            >
+              ">
               <span
                 :class="
                   cn('font-semibold brightness-110 saturate-150', {
                     'text-inspiration': ability.winrate >= 51,
                     'text-domination':
                       ability.winrate <= 49 && ability.winrate !== 0,
-                    'text-b3': ability.winrate < 51 && ability.winrate > 49,
+                    'text-p3': ability.winrate < 51 && ability.winrate > 49,
                   })
-                "
-              >
+                ">
                 {{ ability.winrate }}
               </span>
               <!--  <span class="font-medium! opacity-80">{{ ability.games }}</span> -->
@@ -88,5 +81,5 @@ const ckey = computed(() => String(route.params.champion_key))
         </div>
       </div>
     </Card>
-  </div>
+  </UPageSection>
 </template>

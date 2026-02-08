@@ -1,91 +1,91 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Chain Vest",
-  "id": 1031,
-  "rank": "Epic",
-  "buildsFrom": [
+const item: Item = {
+  id: 1031,
+  name: 'Chain Vest',
+  description: '40 Armor\n\n',
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1029,
-      "name": "Cloth Armor",
-      "gold": 300
+      id: 1029,
+      name: 'Cloth Armor',
+      gold: 300
     }
   ],
-  "buildsInto": [
+  buildsInto: [
     {
-      "id": 323075,
-      "name": "Thornmail",
-      "gold": 2650
+      id: 323075,
+      name: 'Thornmail',
+      gold: 2650
     },
     {
-      "id": 6662,
-      "name": "Iceborn Gauntlet",
-      "gold": 2900
+      id: 6662,
+      name: 'Iceborn Gauntlet',
+      gold: 2900
     },
     {
-      "id": 3068,
-      "name": "Sunfire Aegis",
-      "gold": 2700
+      id: 3068,
+      name: 'Sunfire Aegis',
+      gold: 2700
     },
     {
-      "id": 2502,
-      "name": "Unending Despair",
-      "gold": 2800
+      id: 2502,
+      name: 'Unending Despair',
+      gold: 2800
     },
     {
-      "id": 3002,
-      "name": "Trailblazer",
-      "gold": 2400
+      id: 3002,
+      name: 'Trailblazer',
+      gold: 2400
     },
     {
-      "id": 323109,
-      "name": "Knight's Vow",
-      "gold": 2900
+      id: 323109,
+      name: 'Knight\'s Vow',
+      gold: 2900
     },
     {
-      "id": 3075,
-      "name": "Thornmail",
-      "gold": 2450
+      id: 3075,
+      name: 'Thornmail',
+      gold: 2450
     },
     {
-      "id": 3109,
-      "name": "Knight's Vow",
-      "gold": 2300
+      id: 3109,
+      name: 'Knight\'s Vow',
+      gold: 2300
     },
     {
-      "id": 323002,
-      "name": "Trailblazer",
-      "gold": 2600
+      id: 323002,
+      name: 'Trailblazer',
+      gold: 2600
     },
     {
-      "id": 3742,
-      "name": "Dead Man's Plate",
-      "gold": 2900
+      id: 3742,
+      name: 'Dead Man\'s Plate',
+      gold: 2900
     },
     {
-      "id": 6665,
-      "name": "Jak'Sho, The Protean",
-      "gold": 3200
+      id: 6665,
+      name: 'Jak\'Sho, The Protean',
+      gold: 3200
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": true,
-  "removed": false,
-  "stats": {
-    "armor": 40
+  gold: {
+    base: 500,
+    sell: 560,
+    total: 800
   },
-  "description": "40 Armor\n\n",
-  "gold": {
-    "base": 500,
-    "total": 800,
-    "sell": 560
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  stats: {
+    armor: 40
+  }
 }
 export default item

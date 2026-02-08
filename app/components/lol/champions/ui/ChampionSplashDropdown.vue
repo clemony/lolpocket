@@ -3,25 +3,22 @@ const { champion } = defineProps<{
   champion: string
 }>()
 
-// @todo FIX
+// todo FIX
 </script>
 
 <template>
   <Popover>
     <PopoverTrigger
-      class="btn btn-circle btn-ghost hover:border-b3 hover:bg-b2 size-11"
-    >
+      class="btn btn-circle size-11 btn-ghost hover:border-p3 hover:bg-p2">
       <div
         v-if="champion"
         :key="champion"
         class="size-8 overflow-hidden rounded-full"
-        :class="{}"
-      >
+        :class="{}">
         <Image
           class="size-8! scale-114"
           :image="`/img/champion/${champion}.webp`"
-          :alt="champion"
-        />
+          :alt="champion" />
       </div>
     </PopoverTrigger>
 
@@ -29,8 +26,7 @@ const { champion } = defineProps<{
       class="grid w-fit min-w-90 grid-cols-4 gap-2"
       align="start"
       :side-offset="6"
-      :align-offset="-12"
-    >
+      :align-offset="-12">
       <!-- <Label v-for="splash in ix().skins" :key="splash.name">
         <PopoverClose as-child>
           <Champion :url="getSplash(splash.tilePath)" class="size-20 min-h-20 shadow-sm drop-shadow-sm" />
@@ -41,5 +37,3 @@ const { champion } = defineProps<{
     </PopoverContent>
   </Popover>
 </template>
-
-<style scoped></style>

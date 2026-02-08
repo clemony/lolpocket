@@ -17,36 +17,33 @@ const StatTip = resolveComponent('StatTip')
       theme="blur"
       :content="h(StatTip, { stat })"
       :offset="[-6, -3]"
-      :arrow="false"
-    >
+      :arrow="false">
       <span
         :class="
           cn(`
             text-start text-sm font-medium text-nowrap lowercase
             underline-offset-2 group-hover:underline
           `)
-        "
-      >
+        ">
         {{ stat.abbr || stat?.key || stat.name }}
       </span>
 
       <div
-        class="opacity-80 **:inline-block **:text-md! **:font-semibold **:text-bc **:tabular-nums"
-      >
+        class="opacity-80 **:inline-block **:text-md! **:font-semibold **:text-pc **:tabular-nums">
         <NumberTicker
           v-if="stat?.values.current && stat?.id !== 'criticalStrikeDamage'"
-          :value="Number(stat?.values.current)"
-        />
+          :value="Number(stat?.values.current)" />
 
-        <span v-else-if="stat.values.flat" class="">
+        <span
+          v-else-if="stat.values.flat"
+          class="">
           {{ stat.values.flat }}
         </span>
 
         <span v-else>0</span>
         <span
           v-if="['criticalStrikeDamage', 'attackSpeed'].includes(stat?.id)"
-          class="inline font-mono"
-        >
+          class="inline font-mono">
           &thinsp;%
         </span>
       </div>
@@ -58,7 +55,6 @@ const StatTip = resolveComponent('StatTip')
           ? ![length - 1, length - 2].includes(i)
           : length - 1 !== i
       "
-      class="bg-b3/30"
-    />
+      class="bg-p3/30" />
   </div>
 </template>

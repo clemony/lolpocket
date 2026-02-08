@@ -15,11 +15,10 @@ const { as = 'div', class: className } = defineProps<
     :as="as"
     :class="
       cn(
-        'rounded-box border-b3/60 bg-b1 text-bc border p-4 shadow-sm shadow-black/8 drop-shadow-sm drop-shadow-black/4',
+        'rounded-box border border-p3/60 bg-p0 p-4 text-pc shadow-sm shadow-black/8 drop-shadow-sm drop-shadow-black/4',
         className,
       )
-    "
-  >
+    ">
     <slot />
   </Primitive>
 </template>

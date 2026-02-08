@@ -1,54 +1,54 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Unending Despair",
-  "id": 2502,
-  "rank": "Legendary",
-  "buildsFrom": [
+const item: Item = {
+  id: 2502,
+  name: 'Unending Despair',
+  description: '400 Health\n50 Armor\n15 Ability Haste\n\nAnguish\nEvery 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of the damage dealt.',
+  noEffects: false,
+  rank: 'Legendary',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1031,
-      "name": "Chain Vest",
-      "gold": 800
+      id: 1031,
+      name: 'Chain Vest',
+      gold: 800
     },
     {
-      "id": 3067,
-      "name": "Kindlegem",
-      "gold": 800
+      id: 3067,
+      name: 'Kindlegem',
+      gold: 800
     },
     {
-      "id": 1028,
-      "name": "Ruby Crystal",
-      "gold": 400
+      id: 1028,
+      name: 'Ruby Crystal',
+      gold: 400
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "passives": [
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Anguish",
-      "effects": "Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself equal to 250% of the post-mitigation damage dealt."
-    }
-  ],
-  "stats": {
-    "armor": 50,
-    "health": 400,
-    "abilityHaste": 15
+  gold: {
+    base: 800,
+    sell: 1960,
+    total: 2800
   },
-  "description": "400 Health\n50 Armor\n15 Ability Haste\n\nAnguish\nEvery 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of the damage dealt.",
-  "gold": {
-    "base": 800,
-    "total": 2800,
-    "sell": 1960
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  passives: [
+    {
+      name: 'Anguish',
+      effects: 'Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src="/img/icons/heal.webp" class="tip-icon light:invert" />heal yourself equal to 250% of the post-mitigation damage dealt.',
+      mythic: false,
+      unique: true
+    }
+  ],
+  stats: {
+    abilityHaste: 15,
+    armor: 50,
+    health: 400
+  }
 }
 export default item

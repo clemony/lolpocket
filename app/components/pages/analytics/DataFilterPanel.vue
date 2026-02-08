@@ -22,7 +22,7 @@ const entries = [
 </script>
 
 <template>
-  <div class="bg-b2/40 flex w-full items-center px-6 pt-16 pb-4">
+  <div class="flex w-full items-center bg-p2/40 px-6 pt-16 pb-4">
     <h1 class="dst">
       Champion Analysis
     </h1>
@@ -30,14 +30,15 @@ const entries = [
     <PatchNumberField />
 
     <div class="w-full">
-      <Tabs v-model:model-value="tabs" class="max-w-100">
-        <TabsList class="*:text-md! grid-cols-3">
+      <Tabs
+        v-model:model-value="tabs"
+        class="max-w-100">
+        <TabsList class="grid-cols-3 *:text-md!">
           <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"
             :value="tab.value"
-            contrast
-          >
+            contrast>
             {{ tab.name }}
           </TabsTrigger>
 

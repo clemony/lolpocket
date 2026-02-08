@@ -3,7 +3,7 @@ const { class: className, tag: t } = defineProps<{
   tag: string
   class?: HTMLAttributes['class']
 }>()
-const emit = defineEmits(['focus:return', 'update:tag'])
+const emit = defineEmits(['focusReturn', 'update:tag'])
 const tag = ref('')
 
 onMounted(() => (tag.value = t))
@@ -21,10 +21,11 @@ watch(
         { 'opacity-100!': tag.length },
         className,
       )
-    "
-  >
+    ">
     <span class="relative -mr-1 grid place-items-center">
-      <icon class="size-3.5 opacity-60" name="hash" />
+      <icon
+        class="size-3.5 opacity-60"
+        name="hash" />
     </span>
 
     <input
@@ -34,7 +35,6 @@ watch(
       placeholder="tag"
       :maxlength="5"
       @input="emit('update:tag', tag)"
-      @keydown.delete="!tag.length ? emit('focus:return') : null"
-    >
+      @keydown.delete="!tag.length ? emit('focusReturn') : null">
   </div>
 </template>

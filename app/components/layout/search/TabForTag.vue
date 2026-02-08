@@ -5,9 +5,10 @@
     <span class="flex items-center">
       Press&nbsp;
       <span
-        class="badge border-b4/80 mx-1 gap-1.5 rounded-md! border shadow-black/6"
-      >
-        <icon class="inline shrink-0 align-middle" name="tab" />
+        class="border-b4/80 mx-1 badge gap-1.5 rounded-md! border shadow-black/6">
+        <icon
+          class="inline shrink-0 align-middle"
+          name="tab" />
         tab
       </span>
       &nbsp;to add a summoner tag.

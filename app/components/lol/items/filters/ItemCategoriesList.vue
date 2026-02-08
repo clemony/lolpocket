@@ -2,7 +2,7 @@
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }
-// @todo FIx this for ag grid rfresh
+// todo FIx this for ag grid rfresh
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }
@@ -12,15 +12,13 @@ function handleChange() {
   <Listbox
     v-model:model-value="is().filters.tags"
     :multiple="true"
-    @entry-focus.prevent
-  >
+    @entry-focus.prevent>
     <ListboxContent class="w-full" @entry-focus.prevent @highlight.prevent>
       <ListboxItem
         v-for="tag in itemTags"
         :key="tag.id"
         as-child
-        :value="tag.id"
-      >
+        :value="tag.id">
         {{ tag.name }}
 
         <ListboxItemIndicator />
@@ -28,5 +26,3 @@ function handleChange() {
     </ListboxContent>
   </Listbox>
 </template>
-
-<style scoped></style>

@@ -3,9 +3,9 @@ export default {
     variants: {
       color: {
         default: '',
-        muted: '',
         neutral: '',
-        secondary: '',
+        p1: '',
+        p2: '',
       },
       variant: {
         solid: '',
@@ -26,29 +26,29 @@ export default {
     base: 'inline-flex items-center justify-center px-1 rounded-sm font-medium font-sans uppercase',
     compoundVariants: [
       {
-        color: 'muted',
+        color: 'p1',
         variant: 'solid',
-        class: 'text-inverted bg-muted'
+        class: 'text-n0 bg-p1'
       },
       {
-        color: 'muted',
+        color: 'p1',
         variant: 'outline',
-        class: 'ring ring-inset ring-muted/50 text-muted'
+        class: 'ring ring-inset ring-p1/50 text-p1'
       },
       {
-        color: 'muted',
+        color: 'p1',
         variant: 'soft',
-        class: 'text-muted bg-muted/10'
+        class: 'text-p1 bg-p1/10'
       },
       {
-        color: 'muted',
+        color: 'p1',
         variant: 'subtle',
-        class: 'text-muted ring ring-inset ring-muted/25 bg-muted/10'
+        class: 'text-p1 ring ring-inset ring-p1/25 bg-p1/10'
       },
       {
         color: 'neutral',
         variant: 'solid',
-        class: 'text-inverted bg-inverted'
+        class: 'text-n0 bg-n0'
       },
       {
         color: 'neutral',

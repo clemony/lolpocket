@@ -1,7 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Tabs class="w-[400px]" default-value="account">
+  <Tabs
+    class="w-[400px]"
+    default-value="account">
     <TabsList>
       <TabsTrigger value="account">
         Champions

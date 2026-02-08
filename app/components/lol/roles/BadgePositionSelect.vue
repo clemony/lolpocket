@@ -39,30 +39,26 @@ onMounted(() => {
 <template>
   <Select
     v-model:model-value="currentValue"
-    @update:model-value="emit('update:select', currentValue)"
-  >
+    @update:model-value="emit('update:select', currentValue)">
     <SelectTrigger
       :class="
         cn(
           `
             group/s relative w-44 justify-start inset-shadow-xs transition-all
-            duration-200 fx-0 hover:ring hover:ring-bc/50
+            duration-200 fx-0 hover:ring hover:ring-pc/50
           `,
           className,
         )
       "
-      :position="currentValue"
-    >
+      :position="currentValue">
       <component
         :is="`i-lol-${currentValue}`"
-        :class="cn('size-4.5! shrink-0 text-bc! dst')"
-      />
+        :class="cn('size-4.5! shrink-0 text-pc! dst')" />
 
       <SelectValue placeholder="all" />
       <icon
-        class="absolute right-1.5 size-4 opacity-50 group-hover/s:text-bc! group-hover/s:opacity-100"
-        name="up-down"
-      />
+        class="absolute right-1.5 size-4 opacity-50 group-hover/s:text-pc! group-hover/s:opacity-100"
+        name="up-down" />
     </SelectTrigger>
     <LazySelectContent
       class="top-[calc(var(--reka-select-trigger-height)+2px)] w-(--reka-select-trigger-width)!"
@@ -70,16 +66,16 @@ onMounted(() => {
       :side-offset="sideOffset"
       :align="align"
       :align-offset="alignOffset"
-      position="popper"
-    >
+      position="popper">
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem
           v-for="position in mapPositions"
           :key="position.name"
-          :value="position.name"
-        >
-          <PositionBadge :position="position.name" active />
+          :value="position.name">
+          <PositionBadge
+            :position="position.name"
+            active />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

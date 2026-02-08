@@ -20,13 +20,11 @@ const puuid = computed(() => toValue(props.summoner)?.puuid)
     <Tooltip
       :text="
         as().settings.favorite_summoners.includes(puuid) ? 'Unfollow' : 'Follow'
-      "
-    >
+      ">
       <ToggleGroupItem
         v-if="puuid"
         v-bind="forwarded"
-        :value="puuid"
-      >
+        :value="puuid">
         <Icon
           :name="
             as().settings.favorite_summoners.includes(puuid)
@@ -35,10 +33,9 @@ const puuid = computed(() => toValue(props.summoner)?.puuid)
           "
           :class="
             cn(
-              'group-not-on/toggle:text-bc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination size-8.5 **:stroke-[0.7]',
+              'size-8.5 **:stroke-[0.7] group-not-on/toggle:text-pc/90 group-on/toggle:animate-heartbeat group-on/toggle:text-domination',
             )
-          "
-        />
+          " />
       </ToggleGroupItem>
     </Tooltip>
   </ToggleGroup>

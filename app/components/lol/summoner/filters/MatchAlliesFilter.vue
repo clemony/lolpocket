@@ -1,106 +1,95 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const allyModel = ref<string>(null)
-/* const filterAllies = computed (() => filter?.value?.ally ? allies?.allies.filter(a => filter.value?.ally === a?.puuid) : allies?.allies) */
-const winrateFormula = ref('absolute')
+const store = useMatchFilters()
+const { filter } = storeToRefs(store)
+
+const model = computed({
+  get: () => filter?.value.ally,
+  set: (val) => store.setFilter("ally", val),
+})
 const { allies } = storeToRefs(s_champion())
 </script>
 
 <template>
-  <div :class="cn('field-box w-108 max-w-108 px-2 py-3', className)">
-    <Listbox
-      v-model:model-value="allyModel"
-      :highlight-on-hover="false"
-      :multiple="false"
-      selection-behavior="toggle"
-      @update:model-value="s_matches().setFilter('ally', allyModel)"
-      @entry-focus.prevent
-    >
-      <ListboxContent as-child>
-        <div
-          class="h-max max-h-100 w-full overflow-y-scroll overscroll-auto py-2"
-        >
-          <template v-if="!s_matches().loading">
-            <ListboxItem
-              v-for="ally in allies?.sort((a, b) => b.games - a.games)"
-              :key="ally.name"
-              :value="ally.puuid"
-              size="lg"
-              data-type="Great Teamwork"
-              base="btn"
-              variant="ghost"
-              hover="secondary"
-              :class="
-                cn(
-                  'group/ally w-full gap-3 pr-4 pl-3 dst duration-0! **:font-medium **:normal-case focus:outline-0',
-                  { hidden: s_matches().filter?.ally && s_matches().filter?.ally !== ally.puuid },
-                )
-              "
-            >
-              <SummonerIcon
-                class="size-8 rounded-full shadow-sm drop-shadow-sm"
-                :icon-id="ally.icon"
-                :alt="`${ally.name}'s Icon`"
-              />
+  <UCard variant="p1" :ui="{ root: 'p-0' }">
+    <Listbox v-model:model-value="model" :multiple="false">
+      <ListboxContent class="h-100 max-h-100 w-full overflow-auto px-1.5 py-2">
+        <template v-if="!s_matches().loading">
+          <template
+            v-for="(item, ix) in allies?.sort((a, b) => b.games - a.games)"
+            :key="item.name">
+            <ListboxItem as-child :value="item.puuid">
+              <UButton
+                variant="ghost"
+                color="p0"
+                :avatar="{
+                  src: getSummonerIcon(item.icon),
+                  icon: 'lol:champ',
+                }"
+                :ui="{
+                  base: cn('w-full items-center pr-2', {
+                    'grayscale opacity-74': model && item.puuid !== model,
+                  }),
+                  leadingAvatar: 'size-11',
+                }"
+                size="xl">
+                <div
+                  class="grid grow grid-cols-2 items-center justify-start gap-px py-3.5 text-start *:not-first:text-xs *:even:justify-end *:even:justify-self-end *:even:text-end">
+                  <span class="text-sm font-semibold">
+                    {{ item.name }}
+                  </span>
 
-              <span
-                class="inline-flex w-50 max-w-50 gap-1 truncate overflow-hidden align-baseline leading-4"
-              >
-                <span class="inline truncate align-baseline">
-                  {{ ally.name }}
-                </span>
-                <span class="inline align-baseline text-xs opacity-50">
-                  #{{ ally.tag }}
-                </span>
-                <Icon
+                  <template v-if="model && model !== item.puuid">
+                    <Placeholder
+                      v-for="i in 3"
+                      :key="i"
+                      size="xs"
+                      class="w-12" />
+                  </template>
+
+                  <template v-else>
+                    <span> {{ item.win }} win </span>
+                    <span> #{{ item.tag }} </span>
+                    <span>
+                      {{ Number(item.games) - Number(item.win) }} loss
+                    </span>
+                  </template>
+                </div>
+                <div
+                  class="z-0 grid w-14 shrink-0 place-items-center justify-end">
+                  <ChampWinrate :ally="item" />
+                </div>
+              </UButton>
+            </ListboxItem>
+
+            <USeparator
+              v-if="ix !== allies?.length - 1"
+              color="p0"
+              class="opacity-80" />
+          </template>
+        </template>
+
+        <template v-else>
+          <div
+            v-for="i in 5"
+            :key="i"
+            class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
+            <Skeleton class="size-8.5 rounded-full" />
+
+            <Skeleton class="h-9 w-full" />
+          </div>
+        </template>
+
+        <!--              <Icon
                   v-if="
                     ally === allies.sort((a, b) => b.synergy - a.synergy)[0]
                   "
-                  class="ml-1 inline size-3.5 align-bottom dst **:text-bc/80!"
-                  name="ion:star"
-                />
-              </span>
-
-              <div class="w-24 text-end text-sm whitespace-nowrap">
-                {{ ally.games }} played
-              </div>
-
-              <div class="w-12 text-end text-sm">
-                {{ ally.winrate }}%
-              </div>
-
-              <Element
-                v-if=" s_matches().filter?.ally === ally.name"
-                class="pointer-events-none absolute top-0.5 left-1 z-5 bg-b2! p-0 opacity-80 size-6 rounded-full backdrop-blur-sm group-hover/ally:animate-heartbeat"
-                base="btn"
-              >
-                <Icons class="size-5.25!" name="heroicons:x-circle-16-solid" />
-              </Element>
-            </ListboxItem>
-          </template>
-
-          <template v-else>
-            <div
-              v-for="i in 5"
-              :key="i"
-              class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost"
-            >
-              <Skeleton class="size-8.5 rounded-full" />
-
-              <Skeleton class="h-9 w-full" />
-            </div>
-          </template>
-          <div
-            v-if=" s_matches().filter?.ally"
-            class="mx-4 flex gap-4 justify-self-end text-xs"
-          >
-            <span class="self-end opacity-50">...filtered</span>
-          </div>
-        </div>
+                  class="ml-1 inline size-3.5 align-bottom dst **:text-pc/80!"
+                  name="ion:star" /> -->
       </ListboxContent>
     </Listbox>
-  </div>
+  </UCard>
 </template>

@@ -26,9 +26,14 @@ const data = computed(() => {
   return props.data
 })
 const options = {
+  color: styles.getPropertyValue('--colorneutral'),
   backgroundColor: styles.getPropertyValue('--colorneutral'),
   barThickness: 32,
-  color: styles.getPropertyValue('--colorneutral'),
+  maintainAspectRatio: false,
+  maxBarThickness: 32,
+  minBarLength: 4,
+  responsive: true,
+  skipNull: false,
   elements: {
     bar: {
       borderRadius: 4,
@@ -36,25 +41,21 @@ const options = {
       // categoryPercentage: 0.1,
     },
   },
-  maintainAspectRatio: false,
-  maxBarThickness: 32,
-  minBarLength: 4,
   plugins: {
     tooltip: {
       titleMarginBottom: 0,
+      caretPadding: 20,
+      displayColors: false,
+      enabled: true,
+      intersect: false,
       callbacks: {
         label: (context) => {
           const dataPoint = context.raw
           return `${dataPoint.toFixed(2)}% winrate`
         },
       },
-      caretPadding: 20,
-      displayColors: false,
-      enabled: true,
-      intersect: false,
     },
   },
-  responsive: true,
   scales: {
     x: {
       grid: {
@@ -64,7 +65,7 @@ const options = {
         display: false,
       },
       border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
+        color: `${styles.getPropertyValue('--color-p2')}`,
       },
       ticks: {
         display: false,
@@ -73,32 +74,34 @@ const options = {
     y: {
       grid: {
         // display: false,
-        color: `${styles.getPropertyValue('--color-b2')}`,
+        color: `${styles.getPropertyValue('--color-p2')}`,
         drawTicks: false,
       },
       beginAtZero: true,
-      border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
-      },
       max: 100,
       min: 0,
+      border: {
+        color: `${styles.getPropertyValue('--color-p2')}`,
+      },
       ticks: {
         callback(value, index, ticks) {
           return `${value}%`
         },
         display: true,
+        padding: 12,
+        stepSize: 20,
         font: {
           size: 16,
         },
-        padding: 12,
-        stepSize: 20,
       },
     },
   },
-  skipNull: false,
 }
 </script>
 
 <template>
-  <Bar :id="props.chartId" :options="options" :data="data" />
+  <Bar
+    :id="props.chartId"
+    :options="options"
+    :data="data" />
 </template>

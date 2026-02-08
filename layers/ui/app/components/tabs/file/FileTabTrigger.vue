@@ -27,8 +27,7 @@ const forwarded = useForwardProps(delegatedProps)
         'data-[state=active]:tab-active tab gap-2 border-b-transparent! text-sm font-medium *:flex-nowrap *:text-nowrap',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </TabsTrigger>
 </template>

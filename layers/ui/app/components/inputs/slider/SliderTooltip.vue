@@ -11,8 +11,7 @@ const sliderValue = ref([50])
       v-model="sliderValue"
       class="relative flex h-5 w-[200px] touch-none items-center select-none"
       :max="100"
-      :step="1"
-    >
+      :step="1">
       <SliderTrack class="bg-blackA10 relative h-1 grow rounded-full">
         <SliderRange class="absolute h-full rounded-full bg-white" />
       </SliderTrack>
@@ -21,15 +20,13 @@ const sliderValue = ref([50])
         <TooltipTrigger as-child>
           <SliderThumb
             class="shadow-blackA7 hover:bg-violet3 focus:shadow-blackA8 block size-5 rounded-[10px] bg-white shadow-[0_2px_10px] focus:shadow-[0_0_0_5px] focus:outline-none"
-            aria-label="Volume"
-          />
+            aria-label="Volume" />
         </TooltipTrigger>
 
         <TooltipPortal>
           <TooltipContent
-            class="bg-card text-foreground border-muted rounded-sm border px-2 py-1 text-xs font-semibold"
-            :side-offset="6"
-          >
+            class="bg-card text-foreground rounded-sm border border-p1 px-2 py-1 text-xs font-semibold"
+            :side-offset="6">
             {{ sliderValue[0] }}
           </TooltipContent>
         </TooltipPortal>

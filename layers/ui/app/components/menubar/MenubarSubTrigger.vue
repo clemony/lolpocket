@@ -16,17 +16,15 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'group focus:bg-b2 focus:text-bc data-disabled:bg-b2/60! data-[state=open]:bg-b2 data-[state=open]:text-bc flex cursor-default items-center gap-3 rounded-lg py-1.5 pr-2 pl-2.5 text-sm font-medium outline-none select-none data-disabled:pr-2.75 data-disabled:opacity-60',
+        'group flex cursor-default items-center gap-3 rounded-lg py-1.5 pr-2 pl-2.5 text-sm font-medium outline-none select-none focus:bg-p2 focus:text-pc data-disabled:bg-p2/60! data-disabled:pr-2.75 data-disabled:opacity-60 data-[state=open]:bg-p2 data-[state=open]:text-pc',
         inset && 'pl-10 in-[.menu-group]:pl-8.5',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
 
     <icon
       class="ml-auto size-4 opacity-50 group-data-disabled:hidden"
-      name="right"
-    />
+      name="right" />
   </MenubarSubTrigger>
 </template>

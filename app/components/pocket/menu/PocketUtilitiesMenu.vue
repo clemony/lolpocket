@@ -10,8 +10,8 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 async function testSaveAllPockets() {
   await $fetch('/supabase/updatePockets', {
-    body: { pockets: ps().pockets },
     method: 'POST',
+    body: { pockets: ps().pockets },
   })
 
   console.log('🌱 - all pockets sent!')
@@ -26,13 +26,11 @@ async function testSaveAllPockets() {
         size="md"
         hover="ghost"
         :class="
-          cn('btn-square hover:bg-b3! mb-1 self-end', { 'btn-active': isOpen })
-        "
-      >
+          cn('mb-1 btn-square self-end hover:bg-p3!', { 'btn-active': isOpen })
+        ">
         <icon
           class="opacity-60 group-hover/drop:opacity-80 group-data-[state=open]/drop:opacity-80"
-          name="more"
-        />
+          name="more" />
       </Button>
     </PopoverTrigger>
 
@@ -41,44 +39,68 @@ async function testSaveAllPockets() {
       arrow-class="hidden"
       align="start"
       :side-offset="-18"
-      :align-offset="-4"
-    >
+      :align-offset="-4">
       <Button
         class="h-9! rounded-md"
         variant="ghost"
         size="sm"
-        @click="testSaveAllPockets()"
-      >
+        @click="testSaveAllPockets()">
         sync
       </Button>
 
-      <Button class="h-9! rounded-md" variant="ghost" size="sm">
-        <icon class="size-4.5" name="send" />
+      <Button
+        class="h-9! rounded-md"
+        variant="ghost"
+        size="sm">
+        <icon
+          class="size-4.5"
+          name="send" />
         Share
       </Button>
 
-      <Button class="h-9! rounded-md" variant="ghost" size="sm">
-        <icon class="dst" name="hugeicons:image-download" />
+      <Button
+        class="h-9! rounded-md"
+        variant="ghost"
+        size="sm">
+        <icon
+          class="dst"
+          name="hugeicons:image-download" />
         Download Pocket Card
       </Button>
 
-      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
-      <Label class="mb-1 px-3 py-2" variant="label">
-        <icon class="dst size-4.5" name="export" />
+      <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
+      <Label
+        class="mb-1 px-3 py-2"
+        variant="label">
+        <icon
+          class="size-4.5 dst"
+          name="export" />
         Export to League Client
       </Label>
-      <Button class="h-9! rounded-md pl-10.75!" variant="ghost" size="sm">
+      <Button
+        class="h-9! rounded-md pl-10.75!"
+        variant="ghost"
+        size="sm">
         Items & Champions
       </Button>
 
-      <Button class="h-9! rounded-md pl-10.75!" variant="ghost" size="sm">
+      <Button
+        class="h-9! rounded-md pl-10.75!"
+        variant="ghost"
+        size="sm">
         Runes
       </Button>
 
-      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
-      <Button class="h-9! rounded-md" variant="ghost" size="sm" as-child>
+      <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
+      <Button
+        class="h-9! rounded-md"
+        variant="ghost"
+        size="sm"
+        as-child>
         <DeletePocketDialog :pocket="pocket">
-          <icon class="dst size-4.5" name="trash" />
+          <icon
+            class="size-4.5 dst"
+            name="trash" />
           Delete Pocket
         </DeletePocketDialog>
       </Button>

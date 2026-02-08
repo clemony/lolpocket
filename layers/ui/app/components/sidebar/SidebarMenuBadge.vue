@@ -10,7 +10,7 @@ const props = defineProps<{
     data-sidebar="menu-badge"
     :class="
       cn(
-        'text-bc pointer-events-none absolute right-1 flex h-5 min-w-5 items-center justify-center rounded-md px-1 text-sm font-medium tabular-nums select-none',
+        'pointer-events-none absolute right-1 flex h-5 min-w-5 items-center justify-center rounded-md px-1 text-sm font-medium text-pc tabular-nums select-none',
         `
           peer-hover/menu-button:text-sidebar-bc
           peer-data-[active=true]/menu-button:text-sidebar-bc
@@ -21,8 +21,7 @@ const props = defineProps<{
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

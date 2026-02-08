@@ -17,12 +17,16 @@ setInterval(() => {
   minuteBucket = 0
 }, 120_000)
 
+async function waitForCapacity() {
+  // eslint-disable-next-line no-unmodified-loop-condition
+  while (secondBucket >= MAX_PER_SECOND || minuteBucket >= MAX_PER_TWO_MIN) {
+    await new Promise(r => setTimeout(r, 50))
+  }
+}
+
 export function scheduleJob<T>(job: () => Promise<T>): Promise<T> {
   return limit(async () => {
-    // wait until we have capacity
-    while (secondBucket >= MAX_PER_SECOND || minuteBucket >= MAX_PER_TWO_MIN) {
-      await new Promise(r => setTimeout(r, 50))
-    }
+    await waitForCapacity()
 
     secondBucket++
     minuteBucket++

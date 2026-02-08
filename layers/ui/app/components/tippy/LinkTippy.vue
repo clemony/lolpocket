@@ -4,12 +4,12 @@ defineOptions({
 })
 
 const {
+  variant = 'link',
   class: className,
   content,
   hover,
   size = 'md',
   to,
-  variant = 'link',
 } = defineProps<{
   class?: HTMLAttributes['class']
   to?: string
@@ -28,11 +28,12 @@ const {
       :hover
       :class="cn('gap-1!', className)"
       :variant
-      @click="navigateTo(to)"
-    >
+      @click="navigateTo(to)">
       {{ content }}
 
-      <icon class="size-4.5 **:stroke-2" name="link-2" />
+      <icon
+        class="size-4.5 **:stroke-2"
+        name="link-2" />
     </Button>
   </div>
 </template>

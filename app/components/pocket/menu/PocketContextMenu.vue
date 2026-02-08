@@ -3,18 +3,18 @@ const props = defineProps<{
   pocketData?: Pocket
 }>()
 
-const emit = defineEmits(['update:grid'])
+const emit = defineEmits(["update:grid"])
 const pocket = computedAsync(() => props.pocketData)
 
 // console.log('💠 - pocket:', pocket)
 // const { userFolders } = useUserFolders()
 
-const sort = ref('id')
+const sort = ref("id")
 
 onMounted(async () => {
   const a = ref(props.pocketData)
   await a
-  console.log('💠 - onMounted - a:', a)
+  console.log("💠 - onMounted - a:", a)
 })
 </script>
 
@@ -27,13 +27,11 @@ onMounted(async () => {
     <ContextMenuPortal>
       <ContextMenuContent
         class="context-menu pointer-events-auto z-999 h-max w-74 text-sm **:text-sm"
-        @interact-outside="emit('update:grid')"
-      >
+        @interact-outside="emit('update:grid')">
         <ContextMenuItem
           class="[&_svg]:stroke-2"
           icon="basil:add-outline"
-          icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0"
-        >
+          icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0">
           New Pocket
           <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
         </ContextMenuItem>
@@ -116,5 +114,3 @@ onMounted(async () => {
     </ContextMenuPortal>
   </ContextMenu>
 </template>
-
-<style scoped></style>

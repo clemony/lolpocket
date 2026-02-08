@@ -2,7 +2,7 @@
 const { comment } = defineProps<{
   comment?: CommentData
 }>()
-const emit = defineEmits(['comment:vote'])
+const emit = defineEmits(["comment:vote"])
 const vote = ref<number>(0)
 const calculatedVotes = computed(() => {
   let a = comment.score + vote.value
@@ -22,7 +22,6 @@ onMounted(() => {
     type="single"
     variant="ghost"
     class="size-5"
-
     :on="!comment.uuid ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
@@ -30,41 +29,35 @@ onMounted(() => {
       (val) => {
         if (!val) vote = 0
       }
-    "
-  >
+    ">
     <label
       class="grid size-7 cursor-pointer place-items-center has-disabled:cursor-not-allowed"
       for="downvote"
       :disabled="!comment.uuid"
-      aria-label="downvote"
-    >
+      aria-label="downvote">
       <ToggleGroupItem name="downvote" :value="-1">
         <icon
-          class="group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:stroke-[4] absolute size-3.5 -scale-y-100 opacity-40 **:stroke-2 group-disabled/toggle:opacity-20"
-          name="mynaui:arrow-up"
-        />
+          class="absolute size-3.5 -scale-y-100 opacity-40 **:stroke-2 group-disabled/toggle:opacity-20 group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:stroke-[4]"
+          name="mynaui:arrow-up" />
       </ToggleGroupItem>
     </label>
     <Element
       :class="
         cn(
-          'text-xxs size-6 relative grid place-items-center px-2 leading-3 lining-nums tabular-nums opacity-50 select-none',
-          { 'font-medium opacity-100': vote },
+          'relative grid size-6 place-items-center px-2 text-2xs leading-3 lining-nums tabular-nums opacity-50 select-none',
+          { 'font-medium opacity-100': vote }
         )
-      "
-    >
+      ">
       {{ calculatedVotes }}
     </Element>
     <label
       class="grid size-7 cursor-pointer place-items-center has-disabled:cursor-not-allowed"
       for="upvote"
-      aria-label="upvote"
-    >
+      aria-label="upvote">
       <ToggleGroupItem name="upvote" :value="1">
         <icon
-          class="group-disabled-not-on/toggle:opacity-20 group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:**:stroke-[4] absolute size-3.5 opacity-40 **:stroke-2"
-          name="mynaui:arrow-up"
-        />
+          class="group-disabled-not-on/toggle:opacity-20 absolute size-3.5 opacity-40 **:stroke-2 group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:**:stroke-[4]"
+          name="mynaui:arrow-up" />
       </ToggleGroupItem>
     </label>
   </ToggleGroup>

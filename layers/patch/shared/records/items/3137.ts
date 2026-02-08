@@ -1,55 +1,55 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Cryptbloom",
-  "id": 3137,
-  "rank": "Legendary",
-  "buildsFrom": [
+const item: Item = {
+  id: 3137,
+  name: 'Cryptbloom',
+  description: '75 Ability Power\n30% Magic Penetration\n20 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.',
+  noEffects: false,
+  rank: 'Legendary',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 4630,
-      "name": "Blighting Jewel",
-      "gold": 1100
+      id: 4630,
+      name: 'Blighting Jewel',
+      gold: 1100
     },
     {
-      "id": 3108,
-      "name": "Fiendish Codex",
-      "gold": 850
+      id: 3108,
+      name: 'Fiendish Codex',
+      gold: 850
     },
     {
-      "id": 3108,
-      "name": "Fiendish Codex",
-      "gold": 850
+      id: 3108,
+      name: 'Fiendish Codex',
+      gold: 850
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "passives": [
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Life From Death",
-      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healing you and allied champions hit for 100 (+20% AP).",
-      "cooldown": "60"
-    }
-  ],
-  "stats": {
-    "abilityPower": 75,
-    "percentMagicPenetration": 30,
-    "abilityHaste": 20
+  gold: {
+    base: 200,
+    sell: 2100,
+    total: 3000
   },
-  "description": "75 Ability Power\n30% Magic Penetration\n20 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
-  "gold": {
-    "base": 200,
-    "total": 3000,
-    "sell": 2100
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  passives: [
+    {
+      name: 'Life From Death',
+      cooldown: '60',
+      effects: 'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon light:invert" />takedown against an enemy champion while alive and within 3 seconds of damaging them summons a nova that radiates from the location of their death over 1.75 seconds, <img src="/img/icons/heal.webp" class="tip-icon light:invert" />healing you and allied champions hit for 100 (+20% AP).',
+      mythic: false,
+      unique: true
+    }
+  ],
+  stats: {
+    abilityHaste: 20,
+    abilityPower: 75,
+    percentMagicPenetration: 30
+  }
 }
 export default item

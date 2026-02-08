@@ -54,8 +54,7 @@ defineExpose({
     v-bind="forwarded"
     :id="props.id"
     for="input"
-    :class="cn(inputVariants({ size: props.size, variant }), props.class)"
-  >
+    :class="cn(inputVariants({ size: props.size, variant }), props.class)">
     <slot />
     <input
       ref="inputRef"
@@ -70,8 +69,7 @@ defineExpose({
         )
       "
       @keydown.stop
-      @keydown.enter.prevent
-    >
+      @keydown.enter.prevent>
     <slot name="2" />
 
     <slot name="3" />

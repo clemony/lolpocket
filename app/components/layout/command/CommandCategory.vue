@@ -35,20 +35,20 @@ const contentVariants = {
 </script>
 
 <template>
-  <Collapsible :default-open="true" :disabled="results.length <= 0">
+  <Collapsible
+    :default-open="true"
+    :disabled="results.length <= 0">
     <CollapsibleTrigger as-child>
       <button
         class="g group sticky top-0 left-0 z-1 flex h-10 w-full cursor-pointer items-center gap-3 px-6 font-medium backdrop-blur-md"
         :variants="variants"
         initial="hidden"
         animate="visible"
-        exit="hidden"
-      >
+        exit="hidden">
         <div class="absolute top-0 left-0 z-0 size-full backdrop-blur-md" />
 
         <span
-          class="tldr-20 text-bc/40 group-hover:text-bc/80 group-hover:**:text-bc/60 z-1 flex items-center gap-3 capitalize"
-        >
+          class="tldr-20 z-1 flex items-center gap-3 text-pc/40 capitalize group-hover:text-pc/80 group-hover:**:text-pc/60">
           <slot name="icon" />
           {{ name }}
         </span>
@@ -59,7 +59,9 @@ const contentVariants = {
           {{ results.length ?? "no results" }}
         </Badge>
 
-        <PlusMinusExpand v-if="results.length" class="text-bc!" />
+        <PlusMinusExpand
+          v-if="results.length"
+          class="text-pc!" />
       </button>
     </CollapsibleTrigger>
 
@@ -70,23 +72,20 @@ const contentVariants = {
       :variants="contentVariants"
       initial="hidden"
       animate="visible"
-      exit="exit"
-    >
+      exit="exit">
       <CollapsibleContent
         class="CollapsibleContent before:bg-black-30/64 mx-7 mb-1 before:absolute before:top-2.5 before:left-0 before:w-px"
         :class="{
           'before:h-[calc(100%-36px)]': results.length > 3,
           'before:h-[calc(100%-4px)]': results.length <= 3,
-        }"
-      >
+        }">
         <ul
           class="relative ml-2 flex flex-col pr-7 pl-2"
           :transition="{
             staggerChildren: 0.5,
             type: 'spring',
             bounce: 0.2,
-          }"
-        >
+          }">
           <slot />
         </ul>
       </CollapsibleContent>

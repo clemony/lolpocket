@@ -60,13 +60,13 @@ export const allyHeatMapOptions: EChartsOption = {
     name: 'Winrate',
     nameGap: 30,
     nameLocation: 'center',
+    data: Array.from({ length: 21 }, (_, i) => `${i * 5}%`),
     axisLabel: {
       alignMinLabel: 'left',
     },
     axisTick: {
       show: true,
     },
-    data: Array.from({ length: 21 }, (_, i) => `${i * 5}%`),
 
     type: 'category',
   },
@@ -76,13 +76,13 @@ export const allyHeatMapOptions: EChartsOption = {
     nameTextStyle: {
       align: 'right',
     },
+    data: Array.from({ length: 11 }, (_, i) => i),
+    type: 'category',
     axisLabel: {
       // showMinLabel: false
     },
     axisTick: {
       show: true,
     },
-    data: Array.from({ length: 11 }, (_, i) => i),
-    type: 'category',
   },
 }

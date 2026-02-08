@@ -25,8 +25,7 @@ const runeStyle = computed(() => {
         runeStyle,
         className,
       )
-    "
-  >
+    ">
     <Img
       v-if="item"
       :src="
@@ -35,7 +34,6 @@ const runeStyle = computed(() => {
           : `/img/champions/${item.id}.webp`
       "
       :alt="item.name"
-      :class="cn('size-full', keystoneStyle)"
-    />
+      :class="cn('size-full', keystoneStyle)" />
   </div>
 </template>

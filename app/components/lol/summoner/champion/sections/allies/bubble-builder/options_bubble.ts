@@ -8,18 +8,18 @@ export function buildAllyBubbleOptions(
       name: 'Winrate',
       nameGap: 30,
       nameLocation: 'center',
+      max: 100,
+      min: 0,
+      type: 'value',
       axisLabel: {
         alignMinLabel: 'left',
       },
       axisTick: {
         show: true,
       },
-      max: 100,
-      min: 0,
       splitLine: {
         show: false,
       },
-      type: 'value',
     },
     yAxis: {
       name: 'Delta',
@@ -38,6 +38,9 @@ export function buildAllyBubbleOptions(
         },
       ],
 
+      max: 100,
+      min: -100,
+      type: 'value',
       axisLabel: {
         // showMinLabel: false
       },
@@ -46,22 +49,19 @@ export function buildAllyBubbleOptions(
       },
       breakArea: {
         expandOnClick: true,
-        itemStyle: {
-          borderColor: cssVar('--color-b3'),
-          color: cssVar('--color-b3'),
-        },
         show: true,
         zigzagAmplitude: 0,
         zigzagMaxSpan: 20,
         zigzagMinSpan: 4,
         zigzagZ: 0,
+        itemStyle: {
+          color: cssVar('--color-p3'),
+          borderColor: cssVar('--color-p3'),
+        },
       },
-      max: 100,
-      min: -100,
       splitLine: {
         showMaxLine: false,
       },
-      type: 'value',
     },
   }
 }

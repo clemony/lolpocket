@@ -61,6 +61,7 @@ export const useAccountsStore = defineStore(
   {
     persist: {
       key: 'accountsStore',
+      storage: piniaPluginPersistedstate.localStorage(),
       // optional custom serializer for Maps
       serializer: {
         deserialize: (str) => {
@@ -77,7 +78,6 @@ export const useAccountsStore = defineStore(
           })
         },
       },
-      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

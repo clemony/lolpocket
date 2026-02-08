@@ -19,7 +19,11 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
 
 <template>
   <div class="relative grow pl-1">
-    <slot :editing :replying :toggle-edit :toggle-reply />
+    <slot
+      :editing
+      :replying
+      :toggle-edit
+      :toggle-reply />
 
     <div
       :class="
@@ -28,50 +32,43 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
           { 'pl-6.5': editing },
           className,
         )
-      "
-    >
+      ">
       <template v-if="!comment.removed">
         <template v-if="comment && comment.is_author">
           <Toggle
             v-model:model-value="editing"
             :class="btnClass"
-            @update:model-value="(e) => emit('update:edit-model', e)"
-          >
+            @update:model-value="(e) => emit('update:edit-model', e)">
             {{ !editing ? "Edit" : "Cancel" }}
           </Toggle>
 
           <Icons
             class="absolute size-4"
             wrapper-class="relative grid size-2 place-items-center opacity-40"
-            name="slash"
-          />
+            name="slash" />
 
           <Button
             :class="btnClass"
             :disabled="!comment.is_author"
-            @click="() => removeComment(comment, 'user')"
-          >
+            @click="() => removeComment(comment, 'user')">
             Remove
           </Button>
         </template>
 
         <Button
-          v-if="!comment.is_author"
-        >
+          v-if="!comment.is_author">
           Report
         </Button>
 
         <Icons
           class="absolute size-4"
           wrapper-class="relative grid size-2 place-items-center opacity-40"
-          name="slash"
-        />
+          name="slash" />
 
         <Toggle
           v-model:model-value="replying"
           :class="btnClass"
-          @update:model-value="(e) => emit('update:reply-model', e)"
-        >
+          @update:model-value="(e) => emit('update:reply-model', e)">
           {{ !replying ? "Reply" : "Cancel" }}
         </Toggle>
       </template>

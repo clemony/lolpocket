@@ -2,13 +2,17 @@ import { defineStore } from 'pinia'
 
 export const useSummonerChampion = defineStore('summonerChampion', () => {
   const { summoner } = storeToRefs(s_session())
-  const { filteredMatches } = storeToRefs(s_matches())
+  const { filteredMatches } = storeToRefs(useMatchFilters())
   const { mastery: m, timelines } = storeToRefs(s_data())
 
   const id = toValue(summoner.value?.puuid)
 
   const route = useRoute()
-  const championId = computed(() => champIdByKey(String(route.params.champion_key)))
+  const champion = computed(() => ({
+    id: champIdByKey(String(route.params.champion_key)),
+    key: String(route.params.champion_key),
+    name: champNameByKey(String(route.params.champion_key)),
+  }))
 
   const matchData = computed<MatchPlayerData[]>(() => {
     if (!timelines.value?.length) return []
@@ -18,7 +22,7 @@ export const useSummonerChampion = defineStore('summonerChampion', () => {
         m.participants.some(
           p =>
             p.puuid === id
-            && p.championId === championId.value
+            && p.championId === champion.value.id
         )
       )
       .map((m) => {
@@ -58,8 +62,8 @@ export const useSummonerChampion = defineStore('summonerChampion', () => {
   })
 
   const spells = computed<SpellStats>(() => {
-    if (!id) return null
-    return useChampionSpellStats(matchData).value
+    if (!matchData) return null
+    return useChampionSpellStats(matchData)?.value
   })
 
   const stats = computed<ChampionStats>(() => {
@@ -68,12 +72,13 @@ export const useSummonerChampion = defineStore('summonerChampion', () => {
   })
 
   const mastery = computed<ChampionMastery>(() => {
-    if (!championId.value || !mastery) return null
-    return m.value?.find(c => c?.championId === championId?.value)
+    if (!champion.value.id || !mastery) return null
+    return m.value?.find(c => c?.championId === champion.value?.id)
   })
 
   return {
     allies,
+    champion,
     duos,
     items,
     mastery,

@@ -22,13 +22,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="
       cn(
         {
-          'border-b3/80 text-md file:text-md placeholder:text-bc/50 focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:font-medium focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50':
+          'border-p3/80 text-md file:text-md placeholder:text-pc/50 focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 shadow-sm transition-colors file:border-0 file:bg-transparent file:font-medium focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50':
             props.styled,
         },
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ComboboxInput>
 </template>

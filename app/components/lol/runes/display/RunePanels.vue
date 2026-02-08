@@ -3,12 +3,12 @@ const props = defineProps<{
   pocket?: Pocket
 }>()
 
-const selectedPath = ref('Resolve')
+const selectedPath = ref("Resolve")
 
 const { pathList } = await useRunes()
 
-const tabListClass
-  = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  overflow-hidden rounded-xl border border-b1/20 py-3  z-20 absolute flex items-center '
+const tabListClass =
+  "bg-p0/45  shadow-smooth h-18 w-120 justify-evenly gap-5  overflow-hidden rounded-xl border border-p0/20 py-3  z-20 absolute flex items-center "
 </script>
 
 <template>
@@ -21,16 +21,14 @@ const tabListClass
         leave-active-class="transition-all duration-500"
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in"
-      >
+        mode="out-in">
         <RunesBlurb :current-path="selectedPath" layout-id="path1" />
       </Transition>
 
-      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
+      <div class="relative h-18 w-120 rounded-xl shadow-smooth">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
-          :data-path="selectedPath"
-        />
+          :data-path="selectedPath" />
 
         <div :class="tabListClass">
           <label
@@ -39,17 +37,15 @@ const tabListClass
             v-tippy="path"
             class="grid aspect-square size-14 place-items-center rounded-full"
             :class="{
-              'bg-b1/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':
+              'bg-p0/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':
                 path === selectedPath,
-            }"
-          >
+            }">
             <input
               v-model="selectedPath"
               class="hidden"
               type="radio"
               :value="path"
-              name="selected-primary"
-            >
+              name="selected-primary" />
 
             <Img
               class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
@@ -57,13 +53,10 @@ const tabListClass
               :alt="`${path} icon`"
               :class="{
                 'brightness-100 grayscale-0': path === selectedPath,
-              }"
-            />
+              }" />
           </label>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped></style>

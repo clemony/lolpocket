@@ -1,10 +1,6 @@
 import type { ColDef, ColGroupDef } from 'ag-grid-community'
+import { GridLastPlayed, GridMasteryPoints, MasteryBadge, TableChampion } from '#components'
 import { perGameFormatter, perGameGetter, statGetter } from '.'
-
-const GridLastPlayed = resolveComponent('GridLastPlayed')
-const GridMasteryPoints = resolveComponent('GridMasteryPoints')
-const MasteryBadge = resolveComponent('MasteryBadge')
-const TableChampion = resolveComponent('TableChampion')
 
 export function useChampionStatGrid() {
   const killStats = [
@@ -121,16 +117,16 @@ export function useChampionStatGrid() {
     width: 90,
     cellDataType: 'number',
     cellRenderer: GridMasteryPoints,
+    colId: 'points',
+    field: 'totalPoints',
+    headerName: 'Level',
+    headerTooltip: 'Level & Points',
     cellRendererParams: {
       level: params => params.data?.level,
       pointsSinceLevel: params => params.data?.pointsSinceLevel,
       pointsUntilLevel: params => params.data?.pointsUntilLevel,
       totalPoints: params => params.data?.totalPoints,
     },
-    colId: 'points',
-    field: 'totalPoints',
-    headerName: 'Level',
-    headerTooltip: 'Level & Points',
   }
 
   const badgeColumn: ColDef<ChampionStatsAndMastery> = {

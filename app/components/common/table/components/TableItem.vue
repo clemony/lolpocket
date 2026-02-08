@@ -8,16 +8,12 @@ const props = defineProps<{
   <div
     v-if="props.params.value"
     v-tippy="props.params.value.name"
-    class="ti-container"
-  >
+    class="ti-container">
     <div class="ti-wrapper">
       <img
         class="size-full"
         :alt="props.params.value.name"
-        :src="`/img/items/${props.params.value.id}.webp`"
-      >
+        :src="`/img/items/${props.params.value.id}.webp`" />
     </div>
   </div>
 </template>
-
-<style scoped></style>

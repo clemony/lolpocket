@@ -17,8 +17,8 @@ export async function addPocket(randomize?: boolean) {
       ps().pockets.push(p)
 
       toast.add({
-        title: `Created ${p.name}!`,
         color: 'neutral',
+        title: `Created ${p.name}!`,
         description: `${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}`,
         icon: 'tick',
       })

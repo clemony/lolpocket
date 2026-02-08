@@ -6,7 +6,7 @@ export async function fetchInBatches(ids: string[], region: string) {
     Array.from({ length: Math.ceil(ids.length / concurrency) }, (_, i) =>
       Promise.all(
         ids.slice(i * concurrency, (i + 1) * concurrency).map(id =>
-          $fetch('/api/v5/match/matchById', {
+          $fetch<MatchReturn>('/riot/v5/match/matchById', {
             params: { id, region },
           }).catch((error) => {
             console.error(`Error fetching match ${id}:`, error)

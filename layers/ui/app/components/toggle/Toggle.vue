@@ -23,8 +23,7 @@ const emits = defineEmits<ToggleEmits>()
         'group/toggle',
         props.class,
       )
-    "
-  >
+    ">
     <slot :model-value />
   </Toggle>
 </template>

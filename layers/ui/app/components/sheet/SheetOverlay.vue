@@ -26,8 +26,7 @@ function onStateChange(state: string) {
     ref="overlay"
     data-slot="sheet-overlay"
     :class="cn('fixed inset-0 z-40 bg-black/80', props.class)"
-    @update:state="onStateChange"
-  >
+    @update:state="onStateChange">
     <slot />
   </DialogOverlay>
 </template>

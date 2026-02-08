@@ -53,7 +53,7 @@ const searchResult = computed(() => {
   const results = fuse.value.search(searchQuery.value)
   return results.map(result => result.item)
 })
-// @todo result filter
+// todo result filter
 watch(searchResult, (newSearchResults) => {
   filters.result = Object.values(newSearchResults)
   if (route.path==='/items/stats') {
@@ -106,7 +106,7 @@ watchEffect(() => {
   <motion.div
     :class="
       cn(
-        'bgneutral/84 btn btn-circle text-nc btn-neutral relative flex items-center rounded-full border',
+        'bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
         props.class,
       )
     "
@@ -117,8 +117,7 @@ watchEffect(() => {
       ease: 'easeOut',
     }"
     while-hover="expanded"
-    :animate="searchQuery !== null ? 'expanded' : 'collapsed'"
-  >
+    :animate="searchQuery !== null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
         <Input
@@ -126,27 +125,23 @@ watchEffect(() => {
           class="m-0 size-full border-0 py-0 pl-5 shadow-none"
           type="text"
           :placeholder="props.placeholder"
-          @clear-input="searchQuery = ''"
-        />
+          @clear-input="searchQuery = ''" />
       </slot>
     </motion.div>
 
     <button
-      class="btn btn-circle btn-ghost btn-xs hover:bg-b3/40 pointer-events-auto absolute top-1.5 left-1.5 z-2"
+      class="btn pointer-events-auto absolute top-1.5 left-1.5 z-2 btn-circle btn-ghost btn-xs hover:bg-p3/40"
       :disabled="searchQuery === null"
-      @click="clearFilters"
-    >
+      @click="clearFilters">
       <icon
         v-if="searchQuery"
-        class="text-bc/70 dst absolute size-5.5 shrink-0"
-        name="x-sm"
-      />
+        class="absolute size-5.5 shrink-0 text-pc/70 dst"
+        name="x-sm" />
 
       <icon
         v-else
-        class="text-bc/70 dst absolute size-4.75 shrink-0"
-        name="search"
-      />
+        class="absolute size-4.75 shrink-0 text-pc/70 dst"
+        name="search" />
     </button>
   </motion.div>
 </template>

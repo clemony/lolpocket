@@ -23,8 +23,7 @@ const selectedEmailData = computed(() =>
         'flex h-[52px] items-center justify-center',
         isCollapsed ? 'h-[52px]' : 'px-2',
       )
-    "
-  >
+    ">
     <Select v-model="selectedEmail">
       <SelectTrigger
         aria-label="Select account"
@@ -36,11 +35,12 @@ const selectedEmailData = computed(() =>
                 isCollapsed,
             },
           )
-        "
-      >
+        ">
         <SelectValue placeholder="Select an account">
           <div class="flex items-center gap-3">
-            <icon class="size-4" :name="selectedEmailData!.icon" />
+            <icon
+              class="size-4"
+              :name="selectedEmailData!.icon" />
             <span v-if="!isCollapsed">
               {{ selectedEmailData!.label }}
             </span>
@@ -51,12 +51,12 @@ const selectedEmailData = computed(() =>
         <SelectItem
           v-for="account of accounts"
           :key="account.email"
-          :value="account.email"
-        >
+          :value="account.email">
           <div
-            class="[&_svg]:text-bc flex items-center gap-3 [&_svg]:size-4 [&_svg]:shrink-0"
-          >
-            <icon class="size-4" :name="account.icon" />
+            class="flex items-center gap-3 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-pc">
+            <icon
+              class="size-4"
+              :name="account.icon" />
             {{ account.email }}
           </div>
         </SelectItem>

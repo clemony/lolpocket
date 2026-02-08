@@ -1,1088 +1,1088 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { ItemLite } from "#shared/types"
+import type { ItemLite } from '#shared/types'
 
 export const itemsLite: ItemLite[] = [
   {
-    "id": 1001,
-    "key": "item",
-    "name": "Boots",
-    "gold": {
-      "base": 300,
-      "total": 300,
-      "sell": 210
+    id: 1001,
+    key: 'item',
+    name: 'Boots',
+    rank: 'Boots',
+    gold: {
+      base: 300,
+      sell: 210,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "stats": {
-      "flatMovespeed": 25
+    stats: {
+      flatMovespeed: 25
     }
   },
   {
-    "id": 1004,
-    "key": "item",
-    "name": "Faerie Charm",
-    "gold": {
-      "base": 200,
-      "total": 200,
-      "sell": 140
+    id: 1004,
+    key: 'item',
+    name: 'Faerie Charm',
+    rank: 'Basic',
+    gold: {
+      base: 200,
+      sell: 140,
+      total: 200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "manaRegen": 50
+    stats: {
+      manaRegen: 50
     },
-    "tags": [
-      "Mage",
-      "Support"
+    tags: [
+      'Mage',
+      'Support'
     ]
   },
   {
-    "id": 1006,
-    "key": "item",
-    "name": "Rejuvenation Bead",
-    "gold": {
-      "base": 300,
-      "total": 300,
-      "sell": 120
+    id: 1006,
+    key: 'item',
+    name: 'Rejuvenation Bead',
+    rank: 'Basic',
+    gold: {
+      base: 300,
+      sell: 120,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "healthRegen": 100
+    stats: {
+      healthRegen: 100
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 1011,
-    "key": "item",
-    "name": "Giant's Belt",
-    "gold": {
-      "base": 500,
-      "total": 900,
-      "sell": 630
+    id: 1011,
+    key: 'item',
+    name: 'Giant\'s Belt',
+    rank: 'Epic',
+    gold: {
+      base: 500,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028
     ],
-    "stats": {
-      "health": 350
+    stats: {
+      health: 350
     },
-    "tags": [
-      "Fighter",
-      "Mage",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Mage',
+      'Tank'
     ]
   },
   {
-    "id": 1018,
-    "key": "item",
-    "name": "Cloak of Agility",
-    "gold": {
-      "base": 600,
-      "total": 600,
-      "sell": 420
+    id: 1018,
+    key: 'item',
+    name: 'Cloak of Agility',
+    rank: 'Basic',
+    gold: {
+      base: 600,
+      sell: 420,
+      total: 600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "criticalStrikeChance": 15
+    stats: {
+      criticalStrikeChance: 15
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 1026,
-    "key": "item",
-    "name": "Blasting Wand",
-    "gold": {
-      "base": 850,
-      "total": 850,
-      "sell": 595
+    id: 1026,
+    key: 'item',
+    name: 'Blasting Wand',
+    rank: 'Basic',
+    gold: {
+      base: 850,
+      sell: 595,
+      total: 850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "abilityPower": 45
+    stats: {
+      abilityPower: 45
     },
-    "tags": [
-      "Mage",
-      "Support"
+    tags: [
+      'Mage',
+      'Support'
     ]
   },
   {
-    "id": 1027,
-    "key": "item",
-    "name": "Sapphire Crystal",
-    "aka": [
-      "blue"
+    id: 1027,
+    key: 'item',
+    name: 'Sapphire Crystal',
+    rank: 'Basic',
+    aka: [
+      'blue'
     ],
-    "gold": {
-      "base": 300,
-      "total": 300,
-      "sell": 210
+    gold: {
+      base: 300,
+      sell: 210,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "mana": 300
+    stats: {
+      mana: 300
     },
-    "tags": [
-      "Mage",
-      "Tank"
+    tags: [
+      'Mage',
+      'Tank'
     ]
   },
   {
-    "id": 1028,
-    "key": "item",
-    "name": "Ruby Crystal",
-    "aka": [
-      "red"
+    id: 1028,
+    key: 'item',
+    name: 'Ruby Crystal',
+    rank: 'Basic',
+    aka: [
+      'red'
     ],
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 280
+    gold: {
+      base: 400,
+      sell: 280,
+      total: 400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "health": 150
+    stats: {
+      health: 150
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 1029,
-    "key": "item",
-    "name": "Cloth Armor",
-    "gold": {
-      "base": 300,
-      "total": 300,
-      "sell": 210
+    id: 1029,
+    key: 'item',
+    name: 'Cloth Armor',
+    rank: 'Basic',
+    gold: {
+      base: 300,
+      sell: 210,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "armor": 15
+    stats: {
+      armor: 15
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 1031,
-    "key": "item",
-    "name": "Chain Vest",
-    "gold": {
-      "base": 500,
-      "total": 800,
-      "sell": 560
+    id: 1031,
+    key: 'item',
+    name: 'Chain Vest',
+    rank: 'Epic',
+    gold: {
+      base: 500,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1029
     ],
-    "stats": {
-      "armor": 40
+    stats: {
+      armor: 40
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Tank'
     ]
   },
   {
-    "id": 1033,
-    "key": "item",
-    "name": "Null-Magic Mantle",
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 280
+    id: 1033,
+    key: 'item',
+    name: 'Null-Magic Mantle',
+    rank: 'Basic',
+    gold: {
+      base: 400,
+      sell: 280,
+      total: 400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "magicResistance": 20
+    stats: {
+      magicResistance: 20
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 1035,
-    "key": "item",
-    "name": "Emberknife",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 350,
-      "sell": 140
+    id: 1035,
+    key: 'item',
+    name: 'Emberknife',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 140,
+      total: 350
     }
   },
   {
-    "id": 1036,
-    "key": "item",
-    "name": "Long Sword",
-    "gold": {
-      "base": 350,
-      "total": 350,
-      "sell": 245
+    id: 1036,
+    key: 'item',
+    name: 'Long Sword',
+    rank: 'Basic',
+    gold: {
+      base: 350,
+      sell: 245,
+      total: 350
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "attackDamage": 10
+    stats: {
+      attackDamage: 10
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 1037,
-    "key": "item",
-    "name": "Pickaxe",
-    "gold": {
-      "base": 875,
-      "total": 875,
-      "sell": 613
+    id: 1037,
+    key: 'item',
+    name: 'Pickaxe',
+    rank: 'Basic',
+    gold: {
+      base: 875,
+      sell: 613,
+      total: 875
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "attackDamage": 25
+    stats: {
+      attackDamage: 25
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 1038,
-    "key": "item",
-    "name": "B. F. Sword",
-    "aka": [
-      "bf"
+    id: 1038,
+    key: 'item',
+    name: 'B. F. Sword',
+    rank: 'Basic',
+    aka: [
+      'bf'
     ],
-    "gold": {
-      "base": 1300,
-      "total": 1300,
-      "sell": 910
+    gold: {
+      base: 1300,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "attackDamage": 40
+    stats: {
+      attackDamage: 40
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 1039,
-    "key": "item",
-    "name": "Hailblade",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 350,
-      "sell": 140
+    id: 1039,
+    key: 'item',
+    name: 'Hailblade',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 140,
+      total: 350
     }
   },
   {
-    "id": 1040,
-    "key": "item",
-    "name": "Obsidian Edge",
-    "gold": {
-      "base": 350,
-      "total": 350,
-      "sell": 140
+    id: 1040,
+    key: 'item',
+    name: 'Obsidian Edge',
+    gold: {
+      base: 350,
+      sell: 140,
+      total: 350
     }
   },
   {
-    "id": 1042,
-    "key": "item",
-    "name": "Dagger",
-    "gold": {
-      "base": 250,
-      "total": 250,
-      "sell": 175
+    id: 1042,
+    key: 'item',
+    name: 'Dagger',
+    rank: 'Basic',
+    gold: {
+      base: 250,
+      sell: 175,
+      total: 250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "attackSpeed": 10
+    stats: {
+      attackSpeed: 10
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 1043,
-    "key": "item",
-    "name": "Recurve Bow",
-    "gold": {
-      "base": 450,
-      "total": 700,
-      "sell": 490
+    id: 1043,
+    key: 'item',
+    name: 'Recurve Bow',
+    rank: 'Epic',
+    gold: {
+      base: 450,
+      sell: 490,
+      total: 700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1042
     ],
-    "stats": {
-      "attackSpeed": 15
+    stats: {
+      attackSpeed: 15
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 1052,
-    "key": "item",
-    "name": "Amplifying Tome",
-    "aka": [
-      "amptome",
-      "book"
+    id: 1052,
+    key: 'item',
+    name: 'Amplifying Tome',
+    rank: 'Basic',
+    aka: [
+      'amptome',
+      'book'
     ],
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 280
+    gold: {
+      base: 400,
+      sell: 280,
+      total: 400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "abilityPower": 20
+    stats: {
+      abilityPower: 20
     },
-    "tags": [
-      "Mage",
-      "Support"
+    tags: [
+      'Mage',
+      'Support'
     ]
   },
   {
-    "id": 1053,
-    "key": "item",
-    "name": "Vampiric Scepter",
-    "gold": {
-      "base": 550,
-      "total": 900,
-      "sell": 630
+    id: 1053,
+    key: 'item',
+    name: 'Vampiric Scepter',
+    rank: 'Epic',
+    gold: {
+      base: 550,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036
     ],
-    "stats": {
-      "attackDamage": 15,
-      "lifesteal": 7
+    stats: {
+      attackDamage: 15,
+      lifesteal: 7
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 1054,
-    "key": "item",
-    "name": "Doran's Shield",
-    "aka": [
-      "dshield"
+    id: 1054,
+    key: 'item',
+    name: 'Doran\'s Shield',
+    rank: 'Starter',
+    aka: [
+      'dshield'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Starter",
-    "stats": {
-      "health": 110,
-      "healthRegen": 4
+    stats: {
+      health: 110,
+      healthRegen: 4
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Onhit effects'
     ]
   },
   {
-    "id": 1055,
-    "key": "item",
-    "name": "Doran's Blade",
-    "aka": [
-      "dblade"
+    id: 1055,
+    key: 'item',
+    name: 'Doran\'s Blade',
+    rank: 'Starter',
+    aka: [
+      'dblade'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Starter",
-    "stats": {
-      "attackDamage": 10,
-      "health": 80,
-      "omnivamp": 2.5
+    stats: {
+      attackDamage: 10,
+      health: 80,
+      omnivamp: 2.5
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Lifesteal vamp"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 1056,
-    "key": "item",
-    "name": "Doran's Ring",
-    "aka": [
-      "dring"
+    id: 1056,
+    key: 'item',
+    name: 'Doran\'s Ring',
+    rank: 'Starter',
+    aka: [
+      'dring'
     ],
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 160
+    gold: {
+      base: 400,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Starter",
-    "stats": {
-      "abilityPower": 18,
-      "health": 90
+    stats: {
+      abilityPower: 18,
+      health: 90
     },
-    "tags": [
-      "Mage",
-      "Mana and reg",
-      "Onhit effects"
+    tags: [
+      'Mage',
+      'Mana and reg',
+      'Onhit effects'
     ]
   },
   {
-    "id": 1057,
-    "key": "item",
-    "name": "Negatron Cloak",
-    "gold": {
-      "base": 450,
-      "total": 850,
-      "sell": 595
+    id: 1057,
+    key: 'item',
+    name: 'Negatron Cloak',
+    rank: 'Epic',
+    gold: {
+      base: 450,
+      sell: 595,
+      total: 850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1033
     ],
-    "stats": {
-      "magicResistance": 45
+    stats: {
+      magicResistance: 45
     },
-    "tags": [
-      "Fighter",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 1058,
-    "key": "item",
-    "name": "Needlessly Large Rod",
-    "aka": [
-      "nlr"
+    id: 1058,
+    key: 'item',
+    name: 'Needlessly Large Rod',
+    rank: 'Basic',
+    aka: [
+      'nlr'
     ],
-    "gold": {
-      "base": 1200,
-      "total": 1200,
-      "sell": 840
+    gold: {
+      base: 1200,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "abilityPower": 65
+    stats: {
+      abilityPower: 65
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 1082,
-    "key": "item",
-    "name": "Dark Seal",
-    "aka": [
-      "Noxian"
+    id: 1082,
+    key: 'item',
+    name: 'Dark Seal',
+    rank: 'Starter',
+    aka: [
+      'Noxian'
     ],
-    "gold": {
-      "base": 350,
-      "total": 350,
-      "sell": 140
+    gold: {
+      base: 350,
+      sell: 140,
+      total: 350
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Starter",
-    "stats": {
-      "abilityPower": 15,
-      "health": 50
+    stats: {
+      abilityPower: 15,
+      health: 50
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 1083,
-    "key": "item",
-    "name": "Cull",
-    "aka": [
-      "dblade"
+    id: 1083,
+    key: 'item',
+    name: 'Cull',
+    rank: 'Starter',
+    aka: [
+      'dblade'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Starter",
-    "stats": {
-      "attackDamage": 7
+    stats: {
+      attackDamage: 7
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Lifesteal vamp",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Lifesteal vamp',
+      'Onhit effects'
     ]
   },
   {
-    "id": 1090,
-    "key": "item",
-    "name": "Quest: Top",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 1090,
+    key: 'item',
+    name: 'Quest: Top',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1091,
-    "key": "item",
-    "name": "Quest: Mid",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 1091,
+    key: 'item',
+    name: 'Quest: Mid',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1092,
-    "key": "item",
-    "name": "Quest: Bot",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 1092,
+    key: 'item',
+    name: 'Quest: Bot',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1093,
-    "key": "item",
-    "name": "Quest: Support",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 1093,
+    key: 'item',
+    name: 'Quest: Support',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1094,
-    "key": "item",
-    "name": "Quest: Jungle",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 1094,
+    key: 'item',
+    name: 'Quest: Jungle',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1101,
-    "key": "item",
-    "name": "Scorchclaw Pup",
-    "aka": [
-      "jungle",
-      "red",
-      "cat",
-      "kitty",
-      "meow"
+    id: 1101,
+    key: 'item',
+    name: 'Scorchclaw Pup',
+    rank: 'Starter',
+    aka: [
+      'jungle',
+      'red',
+      'cat',
+      'kitty',
+      'meow'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 0
+    gold: {
+      base: 450,
+      sell: 0,
+      total: 450
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Starter",
-    "stats": {},
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Lifesteal vamp"
+    stats: {},
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 1102,
-    "key": "item",
-    "name": "Gustwalker Hatchling",
-    "aka": [
-      "jungle",
-      "blue",
-      "dog",
-      "doggo",
-      "woof"
+    id: 1102,
+    key: 'item',
+    name: 'Gustwalker Hatchling',
+    rank: 'Starter',
+    aka: [
+      'jungle',
+      'blue',
+      'dog',
+      'doggo',
+      'woof'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 0
+    gold: {
+      base: 450,
+      sell: 0,
+      total: 450
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Starter",
-    "stats": {},
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Lifesteal vamp"
+    stats: {},
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 1103,
-    "key": "item",
-    "name": "Mosstomper Seedling",
-    "aka": [
-      "jungle",
-      "green",
-      "salamander",
-      "lizard",
-      "frog"
+    id: 1103,
+    key: 'item',
+    name: 'Mosstomper Seedling',
+    rank: 'Starter',
+    aka: [
+      'jungle',
+      'green',
+      'salamander',
+      'lizard',
+      'frog'
     ],
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 0
+    gold: {
+      base: 450,
+      sell: 0,
+      total: 450
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Starter",
-    "stats": {},
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Lifesteal vamp"
+    stats: {},
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 1104,
-    "key": "item",
-    "name": "Eye of the Herald",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1104,
+    key: 'item',
+    name: 'Eye of the Herald',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1105,
-    "key": "item",
-    "name": "Mosstomper Seedling",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    id: 1105,
+    key: 'item',
+    name: 'Mosstomper Seedling',
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 1106,
-    "key": "item",
-    "name": "Gustwalker Hatchling",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    id: 1106,
+    key: 'item',
+    name: 'Gustwalker Hatchling',
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 1107,
-    "key": "item",
-    "name": "Scorchclaw Pup",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
+    id: 1107,
+    key: 'item',
+    name: 'Scorchclaw Pup',
+    gold: {
+      base: 450,
+      sell: 180,
+      total: 450
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 1111,
-    "key": "item",
-    "name": "Jarvan I's",
-    "gold": {
-      "base": 300,
-      "purchasable": false,
-      "total": 300,
-      "sell": 210
+    id: 1111,
+    key: 'item',
+    name: 'Jarvan I\'s',
+    rank: 'Special',
+    gold: {
+      base: 300,
+      purchasable: false,
+      sell: 210,
+      total: 300
     },
-    "maps": [
+    maps: [
       12
     ],
-    "rank": "Special",
-    "stats": {
-      "armor": 25,
-      "attackSpeed": 25,
-      "flatMagicPenetration": 12,
-      "magicResistance": 20,
-      "flatMovespeed": 100,
-      "abilityHaste": 10,
-      "tenacity": 30
+    stats: {
+      abilityHaste: 10,
+      armor: 25,
+      attackSpeed: 25,
+      flatMagicPenetration: 12,
+      flatMovespeed: 100,
+      magicResistance: 20,
+      tenacity: 30
     }
   },
   {
-    "id": 1200,
-    "key": "item",
-    "name": "Top Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1200,
+    key: 'item',
+    name: 'Top Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1201,
-    "key": "item",
-    "name": "Mid Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1201,
+    key: 'item',
+    name: 'Mid Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1202,
-    "key": "item",
-    "name": "Bot Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1202,
+    key: 'item',
+    name: 'Bot Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1203,
-    "key": "item",
-    "name": "Support Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1203,
+    key: 'item',
+    name: 'Support Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1204,
-    "key": "item",
-    "name": "Jungle Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1204,
+    key: 'item',
+    name: 'Jungle Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1206,
-    "key": "item",
-    "name": "Mid Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1206,
+    key: 'item',
+    name: 'Mid Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1207,
-    "key": "item",
-    "name": "Bot Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1207,
+    key: 'item',
+    name: 'Bot Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1208,
-    "key": "item",
-    "name": "Support Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1208,
+    key: 'item',
+    name: 'Support Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1209,
-    "key": "item",
-    "name": "Jungle Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1209,
+    key: 'item',
+    name: 'Jungle Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1220,
-    "key": "item",
-    "name": "Unleashed Teleport",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1220,
+    key: 'item',
+    name: 'Unleashed Teleport',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1221,
-    "key": "item",
-    "name": "Top Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1221,
+    key: 'item',
+    name: 'Top Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1222,
-    "key": "item",
-    "name": "Top Lane Quest",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1222,
+    key: 'item',
+    name: 'Top Lane Quest',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1500,
-    "key": "item",
-    "name": "Penetrating Bullets",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1500,
+    key: 'item',
+    name: 'Penetrating Bullets',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {
-      "armorPenetration": 30
+    stats: {
+      armorPenetration: 30
     }
   },
   {
-    "id": 1501,
-    "key": "item",
-    "name": "Fortification",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1501,
+    key: 'item',
+    name: 'Fortification',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1091,243 +1091,243 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1502,
-    "key": "item",
-    "name": "Reinforced Armor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1502,
+    key: 'item',
+    name: 'Reinforced Armor',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1503,
-    "key": "item",
-    "name": "Warden's Eye",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1503,
+    key: 'item',
+    name: 'Warden\'s Eye',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1504,
-    "key": "item",
-    "name": "Vanguard",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1504,
+    key: 'item',
+    name: 'Vanguard',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 1505,
-    "key": "item",
-    "name": "Reinforced Armor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1505,
+    key: 'item',
+    name: 'Reinforced Armor',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ]
   },
   {
-    "id": 1506,
-    "key": "item",
-    "name": "Reinforced Armor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1506,
+    key: 'item',
+    name: 'Reinforced Armor',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1507,
-    "key": "item",
-    "name": "Overcharged",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1507,
+    key: 'item',
+    name: 'Overcharged',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1508,
-    "key": "item",
-    "name": "Anti-tower Socks",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1508,
+    key: 'item',
+    name: 'Anti-tower Socks',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1509,
-    "key": "item",
-    "name": "Gusto",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1509,
+    key: 'item',
+    name: 'Gusto',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1510,
-    "key": "item",
-    "name": "Phreakish Gusto",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1510,
+    key: 'item',
+    name: 'Phreakish Gusto',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1511,
-    "key": "item",
-    "name": "Super Mech Armor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1511,
+    key: 'item',
+    name: 'Super Mech Armor',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1512,
-    "key": "item",
-    "name": "Super Mech Power Field",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1512,
+    key: 'item',
+    name: 'Super Mech Power Field',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1515,
-    "key": "item",
-    "name": "Turret Plating",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1515,
+    key: 'item',
+    name: 'Turret Plating',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 1516,
-    "key": "item",
-    "name": "Structure Bounty",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1516,
+    key: 'item',
+    name: 'Structure Bounty',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1335,16 +1335,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1517,
-    "key": "item",
-    "name": "Structure Bounty",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1517,
+    key: 'item',
+    name: 'Structure Bounty',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1352,16 +1352,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1518,
-    "key": "item",
-    "name": "Structure Bounty",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1518,
+    key: 'item',
+    name: 'Structure Bounty',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1369,16 +1369,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1519,
-    "key": "item",
-    "name": "Structure Bounty",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1519,
+    key: 'item',
+    name: 'Structure Bounty',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1386,34 +1386,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1520,
-    "key": "item",
-    "name": "OvererchargedHA",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1520,
+    key: 'item',
+    name: 'OvererchargedHA',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
-  },
-  {
-    "id": 1521,
-    "key": "item",
-    "name": "Fortification",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
-    },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1422,16 +1404,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1522,
-    "key": "item",
-    "name": "Tower Power-Up",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1521,
+    key: 'item',
+    name: 'Fortification',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -1440,718 +1422,736 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 1523,
-    "key": "item",
-    "name": "Overcharged",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1522,
+    key: 'item',
+    name: 'Tower Power-Up',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
+      11,
+      12,
+      21,
+      30,
+      35
+    ]
+  },
+  {
+    id: 1523,
+    key: 'item',
+    name: 'Overcharged',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
+    },
+    maps: [
       11,
       12,
       21
     ]
   },
   {
-    "id": 1524,
-    "key": "item",
-    "name": "Overgrowth",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 1524,
+    key: 'item',
+    name: 'Overgrowth',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ]
   },
   {
-    "id": 2002,
-    "key": "item",
-    "name": "Enhanced Recall",
-    "gold": {
-      "base": 60,
-      "purchasable": false,
-      "total": 60,
-      "sell": 42
+    id: 2002,
+    key: 'item',
+    name: 'Enhanced Recall',
+    gold: {
+      base: 60,
+      purchasable: false,
+      sell: 42,
+      total: 60
     }
   },
   {
-    "id": 2003,
-    "key": "item",
-    "name": "Health Potion",
-    "aka": [
-      "consumable",
-      "red"
+    id: 2003,
+    key: 'item',
+    name: 'Health Potion',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'red'
     ],
-    "gold": {
-      "base": 50,
-      "total": 50,
-      "sell": 20
+    gold: {
+      base: 50,
+      sell: 20,
+      total: 50
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Health and reg"
+    stats: {},
+    tags: [
+      'Health and reg'
     ]
   },
   {
-    "id": 2010,
-    "key": "item",
-    "name": "Total Biscuit of Everlasting Will",
-    "aka": [
-      "kleptomancy"
+    id: 2010,
+    key: 'item',
+    name: 'Total Biscuit of Everlasting Will',
+    rank: 'Special',
+    aka: [
+      'kleptomancy'
     ],
-    "gold": {
-      "base": 50,
-      "purchasable": false,
-      "total": 50,
-      "sell": 5
+    gold: {
+      base: 50,
+      purchasable: false,
+      sell: 5,
+      total: 50
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2015,
-    "key": "item",
-    "name": "Kircheis Shard",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 700,
-      "sell": 490
+    id: 2015,
+    key: 'item',
+    name: 'Kircheis Shard',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 490,
+      total: 700
     }
   },
   {
-    "id": 2019,
-    "key": "item",
-    "name": "Steel Sigil",
-    "aka": [
-      "Bloodstone"
+    id: 2019,
+    key: 'item',
+    name: 'Steel Sigil',
+    rank: 'Epic',
+    aka: [
+      'Bloodstone'
     ],
-    "gold": {
-      "base": 150,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 150,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1029,
       1036,
       1029
     ],
-    "stats": {
-      "armor": 30,
-      "attackDamage": 15
+    stats: {
+      armor: 30,
+      attackDamage: 15
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 2020,
-    "key": "item",
-    "name": "The Brutalizer",
-    "aka": [
-      "Bloodstone"
+    id: 2020,
+    key: 'item',
+    name: 'The Brutalizer',
+    rank: 'Epic',
+    aka: [
+      'Bloodstone'
     ],
-    "gold": {
-      "base": 212,
-      "total": 1337,
-      "sell": 936
+    gold: {
+      base: 212,
+      sell: 936,
+      total: 1337
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       2022,
       1037
     ],
-    "stats": {
-      "attackDamage": 25,
-      "lethality": 5,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 25,
+      lethality: 5
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 2021,
-    "key": "item",
-    "name": "Tunneler",
-    "aka": [
-      "drill"
+    id: 2021,
+    key: 'item',
+    name: 'Tunneler',
+    rank: 'Epic',
+    aka: [
+      'drill'
     ],
-    "gold": {
-      "base": 400,
-      "total": 1150,
-      "sell": 805
+    gold: {
+      base: 400,
+      sell: 805,
+      total: 1150
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1028
     ],
-    "stats": {
-      "attackDamage": 15,
-      "health": 250
+    stats: {
+      attackDamage: 15,
+      health: 250
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 2022,
-    "key": "item",
-    "name": "Glowing Mote",
-    "aka": [
-      "haste"
+    id: 2022,
+    key: 'item',
+    name: 'Glowing Mote',
+    rank: 'Basic',
+    aka: [
+      'haste'
     ],
-    "gold": {
-      "base": 250,
-      "total": 250,
-      "sell": 175
+    gold: {
+      base: 250,
+      sell: 175,
+      total: 250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Basic",
-    "stats": {
-      "abilityHaste": 5
+    stats: {
+      abilityHaste: 5
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 2031,
-    "key": "item",
-    "name": "Refillable Potion",
-    "aka": [
-      "consumable",
-      "Green Potion"
+    id: 2031,
+    key: 'item',
+    name: 'Refillable Potion',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'Green Potion'
     ],
-    "gold": {
-      "base": 150,
-      "total": 150,
-      "sell": 60
+    gold: {
+      base: 150,
+      sell: 60,
+      total: 150
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Health and reg"
+    stats: {},
+    tags: [
+      'Health and reg'
     ]
   },
   {
-    "id": 2033,
-    "key": "item",
-    "name": "Corrupting Potion",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 500,
-      "sell": 200
+    id: 2033,
+    key: 'item',
+    name: 'Corrupting Potion',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 200,
+      total: 500
     },
-    "maps": [
+    maps: [
       11,
       21
     ]
   },
   {
-    "id": 2049,
-    "key": "item",
-    "name": "Guardian's Amulet",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
+    id: 2049,
+    key: 'item',
+    name: 'Guardian\'s Amulet',
+    rank: 'Starter',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Starter",
-    "stats": {
-      "abilityPower": 20,
-      "healAndShieldPower": 15,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 20,
+      healAndShieldPower: 15
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 2050,
-    "key": "item",
-    "name": "Guardian's Shroud",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
+    id: 2050,
+    key: 'item',
+    name: 'Guardian\'s Shroud',
+    rank: 'Starter',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Starter",
-    "stats": {
-      "abilityPower": 35,
-      "health": 300,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 35,
+      health: 300
     },
-    "tags": [
-      "Mage",
-      "Tank"
+    tags: [
+      'Mage',
+      'Tank'
     ]
   },
   {
-    "id": 2051,
-    "key": "item",
-    "name": "Guardian's Horn",
-    "aka": [
-      "Golden Arm of Kobe",
-      "Golden Bicep of Kobe",
-      "Horn",
-      "Horn of the ManWolf",
-      "ManWolf"
+    id: 2051,
+    key: 'item',
+    name: 'Guardian\'s Horn',
+    rank: 'Starter',
+    aka: [
+      'Golden Arm of Kobe',
+      'Golden Bicep of Kobe',
+      'Horn',
+      'Horn of the ManWolf',
+      'ManWolf'
     ],
-    "gold": {
-      "base": 950,
-      "total": 950,
-      "sell": 665
+    gold: {
+      base: 950,
+      sell: 665,
+      total: 950
     },
-    "maps": [
+    maps: [
       11,
       12,
       35
     ],
-    "rank": "Starter",
-    "stats": {
-      "health": 150,
-      "healthRegen": 20
+    stats: {
+      health: 150,
+      healthRegen: 20
     },
-    "tags": [
-      "Fighter",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 2052,
-    "key": "item",
-    "name": "Poro-Snax",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 2052,
+    key: 'item',
+    name: 'Poro-Snax',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2055,
-    "key": "item",
-    "name": "Control Ward",
-    "aka": [
-      "consumable",
-      "orange",
-      "pink"
+    id: 2055,
+    key: 'item',
+    name: 'Control Ward',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'orange',
+      'pink'
     ],
-    "gold": {
-      "base": 75,
-      "total": 75,
-      "sell": 30
+    gold: {
+      base: 75,
+      sell: 30,
+      total: 75
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2056,
-    "key": "item",
-    "name": "Stealth Ward",
-    "gold": {
-      "base": 40,
-      "purchasable": false,
-      "total": 40,
-      "sell": 16
+    id: 2056,
+    key: 'item',
+    name: 'Stealth Ward',
+    gold: {
+      base: 40,
+      purchasable: false,
+      sell: 16,
+      total: 40
     }
   },
   {
-    "id": 2065,
-    "key": "item",
-    "name": "Shurelya's Battlesong",
-    "aka": [
-      "shurelya",
-      "reverie"
+    id: 2065,
+    key: 'item',
+    name: 'Shurelya\'s Battlesong',
+    rank: 'Legendary',
+    aka: [
+      'shurelya',
+      'reverie'
     ],
-    "gold": {
-      "base": 400,
-      "total": 2200,
-      "sell": 1540
+    gold: {
+      base: 400,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3113,
       4642
     ],
-    "stats": {
-      "abilityPower": 50,
-      "manaRegen": 125,
-      "percentMovespeed": 4,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 50,
+      manaRegen: 125,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Support",
-      "Movement"
+    tags: [
+      'Support',
+      'Movement'
     ]
   },
   {
-    "id": 2138,
-    "key": "item",
-    "name": "Elixir of Iron",
-    "aka": [
-      "consumable",
-      "orange",
-      "white"
+    id: 2138,
+    key: 'item',
+    name: 'Elixir of Iron',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'orange',
+      'white'
     ],
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 200
+    gold: {
+      base: 500,
+      sell: 200,
+      total: 500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Health and reg",
-      "Movement"
+    stats: {},
+    tags: [
+      'Health and reg',
+      'Movement'
     ]
   },
   {
-    "id": 2139,
-    "key": "item",
-    "name": "Elixir of Sorcery",
-    "aka": [
-      "consumable",
-      "blue"
+    id: 2139,
+    key: 'item',
+    name: 'Elixir of Sorcery',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'blue'
     ],
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 200
+    gold: {
+      base: 500,
+      sell: 200,
+      total: 500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Ability power",
-      "Mana and reg",
-      "Onhit effects"
+    stats: {},
+    tags: [
+      'Ability power',
+      'Mana and reg',
+      'Onhit effects'
     ]
   },
   {
-    "id": 2140,
-    "key": "item",
-    "name": "Elixir of Wrath",
-    "aka": [
-      "consumable",
-      "red"
+    id: 2140,
+    key: 'item',
+    name: 'Elixir of Wrath',
+    rank: 'Consumable',
+    aka: [
+      'consumable',
+      'red'
     ],
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 200
+    gold: {
+      base: 500,
+      sell: 200,
+      total: 500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Attack damage",
-      "Lifesteal vamp"
+    stats: {},
+    tags: [
+      'Attack damage',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 2141,
-    "key": "item",
-    "name": "Cappa Juice",
-    "gold": {
-      "base": 300,
-      "total": 300,
-      "sell": 300
+    id: 2141,
+    key: 'item',
+    name: 'Cappa Juice',
+    rank: 'Consumable',
+    gold: {
+      base: 300,
+      sell: 300,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2142,
-    "key": "item",
-    "name": "Juice of Power",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 500
+    id: 2142,
+    key: 'item',
+    name: 'Juice of Power',
+    rank: 'Consumable',
+    gold: {
+      base: 500,
+      sell: 500,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Attack damage",
-      "Ability power"
+    stats: {},
+    tags: [
+      'Attack damage',
+      'Ability power'
     ]
   },
   {
-    "id": 2143,
-    "key": "item",
-    "name": "Juice of Vitality",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 500
+    id: 2143,
+    key: 'item',
+    name: 'Juice of Vitality',
+    rank: 'Consumable',
+    gold: {
+      base: 500,
+      sell: 500,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {},
-    "tags": [
-      "Health and reg"
+    stats: {},
+    tags: [
+      'Health and reg'
     ]
   },
   {
-    "id": 2144,
-    "key": "item",
-    "name": "Juice of Haste",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 500
+    id: 2144,
+    key: 'item',
+    name: 'Juice of Haste',
+    rank: 'Consumable',
+    gold: {
+      base: 500,
+      sell: 500,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2145,
-    "key": "item",
-    "name": "Lucky Dice",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 2145,
+    key: 'item',
+    name: 'Lucky Dice',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2146,
-    "key": "item",
-    "name": "Enhanced Lucky Dice",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 2146,
+    key: 'item',
+    name: 'Enhanced Lucky Dice',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2150,
-    "key": "item",
-    "name": "Elixir of Skill",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 2150,
+    key: 'item',
+    name: 'Elixir of Skill',
+    rank: 'Consumable',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2151,
-    "key": "item",
-    "name": "Elixir of Avarice",
-    "gold": {
-      "base": 50,
-      "purchasable": false,
-      "total": 50,
-      "sell": 20
+    id: 2151,
+    key: 'item',
+    name: 'Elixir of Avarice',
+    rank: 'Consumable',
+    gold: {
+      base: 50,
+      purchasable: false,
+      sell: 20,
+      total: 50
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2152,
-    "key": "item",
-    "name": "Elixir of Force",
-    "gold": {
-      "base": 50,
-      "purchasable": false,
-      "total": 50,
-      "sell": 20
+    id: 2152,
+    key: 'item',
+    name: 'Elixir of Force',
+    rank: 'Consumable',
+    gold: {
+      base: 50,
+      purchasable: false,
+      sell: 20,
+      total: 50
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 2161,
-    "key": "item",
-    "name": "Bandle Juice of Power",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 1000
+    id: 2161,
+    key: 'item',
+    name: 'Bandle Juice of Power',
+    gold: {
+      base: 1000,
+      sell: 1000,
+      total: 1000
     },
-    "maps": [
+    maps: [
       35
     ]
   },
   {
-    "id": 2162,
-    "key": "item",
-    "name": "Bandle Juice of Vitality",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 1000
+    id: 2162,
+    key: 'item',
+    name: 'Bandle Juice of Vitality',
+    gold: {
+      base: 1000,
+      sell: 1000,
+      total: 1000
     },
-    "maps": [
+    maps: [
       35
     ]
   },
   {
-    "id": 2163,
-    "key": "item",
-    "name": "Bandle Juice of Haste",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 1000
+    id: 2163,
+    key: 'item',
+    name: 'Bandle Juice of Haste',
+    gold: {
+      base: 1000,
+      sell: 1000,
+      total: 1000
     },
-    "maps": [
+    maps: [
       35
     ]
   },
   {
-    "id": 2403,
-    "key": "item",
-    "name": "Minion Dematerializer",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 2403,
+    key: 'item',
+    name: 'Minion Dematerializer',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -2159,734 +2159,734 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 2420,
-    "key": "item",
-    "name": "Seeker's Armguard",
-    "aka": [
-      "zhg",
-      "zonyas",
-      "zhonyas"
+    id: 2420,
+    key: 'item',
+    name: 'Seeker\'s Armguard',
+    rank: 'Epic',
+    aka: [
+      'zhg',
+      'zonyas',
+      'zhonyas'
     ],
-    "gold": {
-      "base": 500,
-      "total": 1600,
-      "sell": 640
+    gold: {
+      base: 500,
+      sell: 640,
+      total: 1600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1029,
       1052
     ],
-    "stats": {
-      "abilityPower": 40,
-      "armor": 25
+    stats: {
+      abilityPower: 40,
+      armor: 25
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 2421,
-    "key": "item",
-    "name": "Shattered Armguard",
-    "gold": {
-      "base": 500,
-      "total": 1600,
-      "sell": 640
+    id: 2421,
+    key: 'item',
+    name: 'Shattered Armguard',
+    rank: 'Epic',
+    gold: {
+      base: 500,
+      sell: 640,
+      total: 1600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1029,
       1052
     ],
-    "stats": {
-      "abilityPower": 40,
-      "armor": 25
+    stats: {
+      abilityPower: 40,
+      armor: 25
     }
   },
   {
-    "id": 2422,
-    "key": "item",
-    "name": "Slightly Magical Footwear",
-    "gold": {
-      "base": 300,
-      "purchasable": false,
-      "total": 300,
-      "sell": 90
+    id: 2422,
+    key: 'item',
+    name: 'Slightly Magical Footwear',
+    rank: 'Special',
+    gold: {
+      base: 300,
+      purchasable: false,
+      sell: 90,
+      total: 300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Special",
-    "stats": {
-      "flatMovespeed": 25
+    stats: {
+      flatMovespeed: 25
     }
   },
   {
-    "id": 2501,
-    "key": "item",
-    "name": "Overlord's Bloodmail",
-    "gold": {
-      "base": 1000,
-      "total": 3300,
-      "sell": 2310
+    id: 2501,
+    key: 'item',
+    name: 'Overlord\'s Bloodmail',
+    rank: 'Legendary',
+    gold: {
+      base: 1000,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2021,
       2021
     ],
-    "stats": {
-      "attackDamage": 30,
-      "health": 550
+    stats: {
+      attackDamage: 30,
+      health: 550
     },
-    "tags": [
-      "Fighter",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Tank'
     ]
   },
   {
-    "id": 2502,
-    "key": "item",
-    "name": "Unending Despair",
-    "gold": {
-      "base": 800,
-      "total": 2800,
-      "sell": 1960
+    id: 2502,
+    key: 'item',
+    name: 'Unending Despair',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1031,
       3067,
       1028
     ],
-    "stats": {
-      "armor": 50,
-      "health": 400,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armor: 50,
+      health: 400
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 2503,
-    "key": "item",
-    "name": "Blackfire Torch",
-    "aka": [
-      "bft"
+    id: 2503,
+    key: 'item',
+    name: 'Blackfire Torch',
+    rank: 'Legendary',
+    aka: [
+      'bft'
     ],
-    "gold": {
-      "base": 700,
-      "total": 2800,
-      "sell": 1960
+    gold: {
+      base: 700,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3802,
       2508
     ],
-    "stats": {
-      "abilityPower": 80,
-      "mana": 600,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 80,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 2504,
-    "key": "item",
-    "name": "Kaenic Rookern",
-    "gold": {
-      "base": 800,
-      "total": 2900,
-      "sell": 2030
+    id: 2504,
+    key: 'item',
+    name: 'Kaenic Rookern',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3211,
       1057
     ],
-    "stats": {
-      "health": 400,
-      "healthRegen": 100,
-      "magicResistance": 80
+    stats: {
+      health: 400,
+      healthRegen: 100,
+      magicResistance: 80
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 2508,
-    "key": "item",
-    "name": "Fated Ashes",
-    "gold": {
-      "base": 500,
-      "total": 900,
-      "sell": 630
+    id: 2508,
+    key: 'item',
+    name: 'Fated Ashes',
+    rank: 'Epic',
+    gold: {
+      base: 500,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052
     ],
-    "stats": {
-      "abilityPower": 30
+    stats: {
+      abilityPower: 30
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 2510,
-    "key": "item",
-    "name": "Dusk and Dawn",
-    "aka": [
-      "Spellblade"
+    id: 2510,
+    key: 'item',
+    name: 'Dusk and Dawn',
+    rank: 'Legendary',
+    aka: [
+      'Spellblade'
     ],
-    "gold": {
-      "base": 300,
-      "total": 3100,
-      "sell": 2170
+    gold: {
+      base: 300,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3057,
       1026,
       3067,
       1042
     ],
-    "stats": {
-      "abilityPower": 70,
-      "attackSpeed": 25,
-      "health": 300,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 70,
+      attackSpeed: 25,
+      health: 300
     },
-    "tags": [
-      "Onhit effects"
+    tags: [
+      'Onhit effects'
     ]
   },
   {
-    "id": 2512,
-    "key": "item",
-    "name": "Fiendhunter Bolts",
-    "gold": {
-      "base": 850,
-      "total": 2650,
-      "sell": 1855
+    id: 2512,
+    key: 'item',
+    name: 'Fiendhunter Bolts',
+    rank: 'Legendary',
+    gold: {
+      base: 850,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3086,
       3144
     ],
-    "stats": {
-      "attackSpeed": 40,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 4
+    stats: {
+      attackSpeed: 40,
+      criticalStrikeChance: 25,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman",
-      "Movement"
+    tags: [
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 2517,
-    "key": "item",
-    "name": "Endless Hunger",
-    "gold": {
-      "base": 1075,
-      "total": 3000,
-      "sell": 2100
+    id: 2517,
+    key: 'item',
+    name: 'Endless Hunger',
+    rank: 'Legendary',
+    gold: {
+      base: 1075,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3133,
       1037
     ],
-    "stats": {
-      "attackDamage": 60,
-      "omnivamp": 5,
-      "tenacity": 20
+    stats: {
+      attackDamage: 60,
+      omnivamp: 5,
+      tenacity: 20
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 2520,
-    "key": "item",
-    "name": "Bastionbreaker",
-    "aka": [
-      "lethality"
+    id: 2520,
+    key: 'item',
+    name: 'Bastionbreaker',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 863,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 863,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2020,
       3134
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 22,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 55,
+      lethality: 22
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 2522,
-    "key": "item",
-    "name": "Actualizer",
-    "gold": {
-      "base": 1050,
-      "total": 3100,
-      "sell": 2170
+    id: 2522,
+    key: 'item',
+    name: 'Actualizer',
+    rank: 'Legendary',
+    gold: {
+      base: 1050,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3802,
       1026
     ],
-    "stats": {
-      "abilityPower": 90,
-      "mana": 300,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 90,
+      mana: 300
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 2523,
-    "key": "item",
-    "name": "Hexoptics C44",
-    "gold": {
-      "base": 275,
-      "total": 2800,
-      "sell": 1960
+    id: 2523,
+    key: 'item',
+    name: 'Hexoptics C44',
+    rank: 'Legendary',
+    gold: {
+      base: 275,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       6670,
       1036
     ],
-    "stats": {
-      "attackDamage": 50,
-      "criticalStrikeChance": 25
+    stats: {
+      attackDamage: 50,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 2524,
-    "key": "item",
-    "name": "Bandlepipes",
-    "gold": {
-      "base": 500,
-      "total": 2000,
-      "sell": 1400
+    id: 2524,
+    key: 'item',
+    name: 'Bandlepipes',
+    rank: 'Legendary',
+    gold: {
+      base: 500,
+      sell: 1400,
+      total: 2000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1029,
       1033
     ],
-    "stats": {
-      "armor": 20,
-      "health": 200,
-      "magicResistance": 20,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armor: 20,
+      health: 200,
+      magicResistance: 20
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 2525,
-    "key": "item",
-    "name": "Protoplasm Harness",
-    "gold": {
-      "base": 800,
-      "total": 2500,
-      "sell": 1750
+    id: 2525,
+    key: 'item',
+    name: 'Protoplasm Harness',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1011
     ],
-    "stats": {
-      "health": 600,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      health: 600
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 2526,
-    "key": "item",
-    "name": "Whispering Circlet",
-    "aka": [
-      "tear"
+    id: 2526,
+    key: 'item',
+    name: 'Whispering Circlet',
+    rank: 'Legendary',
+    aka: [
+      'tear'
     ],
-    "gold": {
-      "base": 850,
-      "total": 2250,
-      "sell": 1575
+    gold: {
+      base: 850,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3114,
       1028,
       3070
     ],
-    "stats": {
-      "healAndShieldPower": 8,
-      "health": 200,
-      "mana": 300,
-      "manaRegen": 75
+    stats: {
+      healAndShieldPower: 8,
+      health: 200,
+      mana: 300,
+      manaRegen: 75
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 2530,
-    "key": "item",
-    "name": "Diadem of Songs",
-    "gold": {
-      "base": 2250,
-      "purchasable": false,
-      "total": 2250,
-      "sell": 1575
+    id: 2530,
+    key: 'item',
+    name: 'Diadem of Songs',
+    rank: 'Legendary',
+    gold: {
+      base: 2250,
+      purchasable: false,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2526
     ],
-    "stats": {
-      "healAndShieldPower": 8,
-      "health": 200,
-      "mana": 1000,
-      "manaRegen": 100
+    stats: {
+      healAndShieldPower: 8,
+      health: 200,
+      mana: 1000,
+      manaRegen: 100
     }
   },
   {
-    "id": 3001,
-    "key": "item",
-    "name": "Evenshroud",
-    "gold": {
-      "base": 850,
-      "purchasable": false,
-      "total": 2300,
-      "sell": 1610
+    id: 3001,
+    key: 'item',
+    name: 'Evenshroud',
+    gold: {
+      base: 850,
+      purchasable: false,
+      sell: 1610,
+      total: 2300
     }
   },
   {
-    "id": 3002,
-    "key": "item",
-    "name": "Trailblazer",
-    "gold": {
-      "base": 800,
-      "total": 2400,
-      "sell": 1680
+    id: 3002,
+    key: 'item',
+    name: 'Trailblazer',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 1680,
+      total: 2400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3066,
       1031
     ],
-    "stats": {
-      "armor": 40,
-      "health": 250,
-      "percentMovespeed": 4
+    stats: {
+      armor: 40,
+      health: 250,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Support",
-      "Tank"
+    tags: [
+      'Support',
+      'Tank'
     ]
   },
   {
-    "id": 3003,
-    "key": "item",
-    "name": "Archangel's Staff",
-    "aka": [
-      "aa",
-      "seraph's embrace",
-      "tear"
+    id: 3003,
+    key: 'item',
+    name: 'Archangel\'s Staff',
+    rank: 'Legendary',
+    aka: [
+      'aa',
+      'seraph\'s embrace',
+      'tear'
     ],
-    "gold": {
-      "base": 450,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 450,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3070,
       3802,
       3108
     ],
-    "stats": {
-      "abilityPower": 70,
-      "mana": 600,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 70,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3004,
-    "key": "item",
-    "name": "Manamune",
-    "aka": [
-      "Muramana",
-      "tear"
+    id: 3004,
+    key: 'item',
+    name: 'Manamune',
+    rank: 'Legendary',
+    aka: [
+      'Muramana',
+      'tear'
     ],
-    "gold": {
-      "base": 1100,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 1100,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3070,
       3133,
       1036
     ],
-    "stats": {
-      "attackDamage": 35,
-      "mana": 500,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 35,
+      mana: 500
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3005,
-    "key": "item",
-    "name": "Ghostcrawlers",
-    "gold": {
-      "base": 700,
-      "total": 1000,
-      "sell": 700
+    id: 3005,
+    key: 'item',
+    name: 'Ghostcrawlers',
+    gold: {
+      base: 700,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       21
     ]
   },
   {
-    "id": 3006,
-    "key": "item",
-    "name": "Berserker's Greaves",
-    "aka": [
-      "boots",
-      "zerker"
+    id: 3006,
+    key: 'item',
+    name: 'Berserker\'s Greaves',
+    rank: 'Boots',
+    aka: [
+      'boots',
+      'zerker'
     ],
-    "gold": {
-      "base": 300,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 300,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001,
       1042,
       1042
     ],
-    "stats": {
-      "attackSpeed": 25,
-      "flatMovespeed": 45
+    stats: {
+      attackSpeed: 25,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3009,
-    "key": "item",
-    "name": "Boots of Swiftness",
-    "aka": [
-      "swifties"
+    id: 3009,
+    key: 'item',
+    name: 'Boots of Swiftness',
+    rank: 'Boots',
+    aka: [
+      'swifties'
     ],
-    "gold": {
-      "base": 700,
-      "total": 1000,
-      "sell": 700
+    gold: {
+      base: 700,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001
     ],
-    "stats": {
-      "flatMovespeed": 55
+    stats: {
+      flatMovespeed: 55
     }
   },
   {
-    "id": 3010,
-    "key": "item",
-    "name": "Symbiotic Soles",
-    "gold": {
-      "base": 600,
-      "purchasable": false,
-      "total": 900,
-      "sell": 630
+    id: 3010,
+    key: 'item',
+    name: 'Symbiotic Soles',
+    gold: {
+      base: 600,
+      purchasable: false,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       21
     ]
   },
   {
-    "id": 3011,
-    "key": "item",
-    "name": "Chemtech Putrifier",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 1900,
-      "sell": 1330
+    id: 3011,
+    key: 'item',
+    name: 'Chemtech Putrifier',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 1330,
+      total: 1900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -2894,1797 +2894,1797 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 3012,
-    "key": "item",
-    "name": "Chalice of Blessing",
-    "gold": {
-      "base": 300,
-      "purchasable": false,
-      "total": 900,
-      "sell": 630
+    id: 3012,
+    key: 'item',
+    name: 'Chalice of Blessing',
+    gold: {
+      base: 300,
+      purchasable: false,
+      sell: 630,
+      total: 900
     }
   },
   {
-    "id": 3013,
-    "key": "item",
-    "name": "Synchronized Souls",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 900,
-      "sell": 630
+    id: 3013,
+    key: 'item',
+    name: 'Synchronized Souls',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       21
     ]
   },
   {
-    "id": 3020,
-    "key": "item",
-    "name": "Sorcerer's Shoes",
-    "aka": [
-      "boots",
-      "sorcs"
+    id: 3020,
+    key: 'item',
+    name: 'Sorcerer\'s Shoes',
+    rank: 'Boots',
+    aka: [
+      'boots',
+      'sorcs'
     ],
-    "gold": {
-      "base": 800,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 800,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001
     ],
-    "stats": {
-      "flatMagicPenetration": 12,
-      "flatMovespeed": 45
+    stats: {
+      flatMagicPenetration: 12,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3023,
-    "key": "item",
-    "name": "Lifewell Pendant",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 1050,
-      "sell": 735
+    id: 3023,
+    key: 'item',
+    name: 'Lifewell Pendant',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 735,
+      total: 1050
     }
   },
   {
-    "id": 3024,
-    "key": "item",
-    "name": "Glacial Buckler",
-    "gold": {
-      "base": 50,
-      "total": 900,
-      "sell": 630
+    id: 3024,
+    key: 'item',
+    name: 'Glacial Buckler',
+    rank: 'Epic',
+    gold: {
+      base: 50,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1029,
       1027,
       2022
     ],
-    "stats": {
-      "armor": 25,
-      "mana": 300,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      armor: 25,
+      mana: 300
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3026,
-    "key": "item",
-    "name": "Guardian Angel",
-    "aka": [
-      "ga"
+    id: 3026,
+    key: 'item',
+    name: 'Guardian Angel',
+    rank: 'Legendary',
+    aka: [
+      'ga'
     ],
-    "gold": {
-      "base": 800,
-      "total": 3200,
-      "sell": 1280
+    gold: {
+      base: 800,
+      sell: 1280,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2019,
       1038
     ],
-    "stats": {
-      "armor": 45,
-      "attackDamage": 55
+    stats: {
+      armor: 45,
+      attackDamage: 55
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3031,
-    "key": "item",
-    "name": "Infinity Edge",
-    "aka": [
-      "ie"
+    id: 3031,
+    key: 'item',
+    name: 'Infinity Edge',
+    rank: 'Legendary',
+    aka: [
+      'ie'
     ],
-    "gold": {
-      "base": 725,
-      "total": 3500,
-      "sell": 2450
+    gold: {
+      base: 725,
+      sell: 2450,
+      total: 3500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1038,
       1037,
       1018
     ],
-    "stats": {
-      "attackDamage": 75,
-      "criticalStrikeChance": 25,
-      "criticalStrikeDamage": 30
+    stats: {
+      attackDamage: 75,
+      criticalStrikeChance: 25,
+      criticalStrikeDamage: 30
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 3032,
-    "key": "item",
-    "name": "Yun Tal Wildarrows",
-    "aka": [
-      "arrow",
-      "yuntal"
+    id: 3032,
+    key: 'item',
+    name: 'Yun Tal Wildarrows',
+    rank: 'Legendary',
+    aka: [
+      'arrow',
+      'yuntal'
     ],
-    "gold": {
-      "base": 850,
-      "total": 3100,
-      "sell": 2170
+    gold: {
+      base: 850,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1038,
       3144,
       1036
     ],
-    "stats": {
-      "attackDamage": 50,
-      "attackSpeed": 40
+    stats: {
+      attackDamage: 50,
+      attackSpeed: 40
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 3033,
-    "key": "item",
-    "name": "Mortal Reminder",
-    "aka": [
-      "grievous",
-      "grievous wounds"
+    id: 3033,
+    key: 'item',
+    name: 'Mortal Reminder',
+    rank: 'Legendary',
+    aka: [
+      'grievous',
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 150,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 150,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3123,
       3035,
       1018
     ],
-    "stats": {
-      "armorPenetration": 30,
-      "attackDamage": 35,
-      "criticalStrikeChance": 25
+    stats: {
+      armorPenetration: 30,
+      attackDamage: 35,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 3035,
-    "key": "item",
-    "name": "Last Whisper",
-    "aka": [
-      "lw"
+    id: 3035,
+    key: 'item',
+    name: 'Last Whisper',
+    rank: 'Epic',
+    aka: [
+      'lw'
     ],
-    "gold": {
-      "base": 750,
-      "total": 1450,
-      "sell": 1015
+    gold: {
+      base: 750,
+      sell: 1015,
+      total: 1450
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1036
     ],
-    "stats": {
-      "armorPenetration": 18,
-      "attackDamage": 20
+    stats: {
+      armorPenetration: 18,
+      attackDamage: 20
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3036,
-    "key": "item",
-    "name": "Lord Dominik's Regards",
-    "aka": [
-      "lw",
-      "ldr",
-      "doms"
+    id: 3036,
+    key: 'item',
+    name: 'Lord Dominik\'s Regards',
+    rank: 'Legendary',
+    aka: [
+      'lw',
+      'ldr',
+      'doms'
     ],
-    "gold": {
-      "base": 550,
-      "total": 3300,
-      "sell": 2310
+    gold: {
+      base: 550,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3035,
       6670
     ],
-    "stats": {
-      "armorPenetration": 35,
-      "attackDamage": 35,
-      "criticalStrikeChance": 25
+    stats: {
+      armorPenetration: 35,
+      attackDamage: 35,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 3039,
-    "key": "item",
-    "name": "Atma's Reckoning",
-    "gold": {
-      "base": 500,
-      "total": 2900,
-      "sell": 2030
+    id: 3039,
+    key: 'item',
+    name: 'Atma\'s Reckoning',
+    gold: {
+      base: 500,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       12,
       21
     ]
   },
   {
-    "id": 3040,
-    "key": "item",
-    "name": "Seraph's Embrace",
-    "gold": {
-      "base": 2900,
-      "purchasable": false,
-      "total": 2900,
-      "sell": 2030
+    id: 3040,
+    key: 'item',
+    name: 'Seraph\'s Embrace',
+    rank: 'Legendary',
+    gold: {
+      base: 2900,
+      purchasable: false,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3003
     ],
-    "stats": {
-      "abilityPower": 70,
-      "mana": 1000,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 70,
+      mana: 1000
     }
   },
   {
-    "id": 3041,
-    "key": "item",
-    "name": "Mejai's Soulstealer",
-    "aka": [
-      "book"
+    id: 3041,
+    key: 'item',
+    name: 'Mejai\'s Soulstealer',
+    rank: 'Legendary',
+    aka: [
+      'book'
     ],
-    "gold": {
-      "base": 1150,
-      "total": 1500,
-      "sell": 1050
+    gold: {
+      base: 1150,
+      sell: 1050,
+      total: 1500
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1082
     ],
-    "stats": {
-      "abilityPower": 20,
-      "health": 100
+    stats: {
+      abilityPower: 20,
+      health: 100
     },
-    "tags": [
-      "Mage",
-      "Movement"
+    tags: [
+      'Mage',
+      'Movement'
     ]
   },
   {
-    "id": 3042,
-    "key": "item",
-    "name": "Muramana",
-    "gold": {
-      "base": 2900,
-      "purchasable": false,
-      "total": 2900,
-      "sell": 2030
+    id: 3042,
+    key: 'item',
+    name: 'Muramana',
+    rank: 'Legendary',
+    gold: {
+      base: 2900,
+      purchasable: false,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3004
     ],
-    "stats": {
-      "attackDamage": 35,
-      "mana": 1000,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 35,
+      mana: 1000
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3044,
-    "key": "item",
-    "name": "Phage",
-    "aka": [
-      "mallet"
+    id: 3044,
+    key: 'item',
+    name: 'Phage',
+    rank: 'Epic',
+    aka: [
+      'mallet'
     ],
-    "gold": {
-      "base": 350,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 350,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       1036
     ],
-    "stats": {
-      "attackDamage": 15,
-      "health": 200
+    stats: {
+      attackDamage: 15,
+      health: 200
     },
-    "tags": [
-      "Fighter",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Tank'
     ]
   },
   {
-    "id": 3046,
-    "key": "item",
-    "name": "Phantom Dancer",
-    "aka": [
-      "pd"
+    id: 3046,
+    key: 'item',
+    name: 'Phantom Dancer',
+    rank: 'Legendary',
+    aka: [
+      'pd'
     ],
-    "gold": {
-      "base": 950,
-      "total": 2650,
-      "sell": 1855
+    gold: {
+      base: 950,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1042,
       3086,
       1042
     ],
-    "stats": {
-      "attackSpeed": 65,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 10
+    stats: {
+      attackSpeed: 65,
+      criticalStrikeChance: 25,
+      percentMovespeed: 10
     },
-    "tags": [
-      "Marksman",
-      "Movement"
+    tags: [
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 3047,
-    "key": "item",
-    "name": "Plated Steelcaps",
-    "aka": [
-      "boots",
-      "ninja tabi"
+    id: 3047,
+    key: 'item',
+    name: 'Plated Steelcaps',
+    rank: 'Boots',
+    aka: [
+      'boots',
+      'ninja tabi'
     ],
-    "gold": {
-      "base": 600,
-      "total": 1200,
-      "sell": 840
+    gold: {
+      base: 600,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001,
       1029
     ],
-    "stats": {
-      "armor": 25,
-      "flatMovespeed": 45
+    stats: {
+      armor: 25,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3050,
-    "key": "item",
-    "name": "Zeke's Convergence",
-    "aka": [
-      "haroldandkumar"
+    id: 3050,
+    key: 'item',
+    name: 'Zeke\'s Convergence',
+    rank: 'Legendary',
+    aka: [
+      'haroldandkumar'
     ],
-    "gold": {
-      "base": 700,
-      "total": 2200,
-      "sell": 1540
+    gold: {
+      base: 700,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1029,
       1033
     ],
-    "stats": {
-      "armor": 25,
-      "health": 300,
-      "magicResistance": 25,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      armor: 25,
+      health: 300,
+      magicResistance: 25
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3051,
-    "key": "item",
-    "name": "Hearthbound Axe",
-    "aka": [
-      "blue arrow"
+    id: 3051,
+    key: 'item',
+    name: 'Hearthbound Axe',
+    rank: 'Epic',
+    aka: [
+      'blue arrow'
     ],
-    "gold": {
-      "base": 250,
-      "total": 1200,
-      "sell": 840
+    gold: {
+      base: 250,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1042,
       1036
     ],
-    "stats": {
-      "attackDamage": 20,
-      "attackSpeed": 20
+    stats: {
+      attackDamage: 20,
+      attackSpeed: 20
     },
-    "tags": [
-      "Fighter",
-      "Movement",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Movement',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3053,
-    "key": "item",
-    "name": "Sterak's Gage",
-    "aka": [
-      "juggernaut",
-      "primal",
-      "shield",
-      "sterak's cage"
+    id: 3053,
+    key: 'item',
+    name: 'Sterak\'s Gage',
+    rank: 'Legendary',
+    aka: [
+      'juggernaut',
+      'primal',
+      'shield',
+      'sterak\'s cage'
     ],
-    "gold": {
-      "base": 775,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 775,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       2021,
       1028
     ],
-    "stats": {
-      "health": 400,
-      "tenacity": 20
+    stats: {
+      health: 400,
+      tenacity: 20
     },
-    "tags": [
-      "Fighter",
-      "Attack damage"
+    tags: [
+      'Fighter',
+      'Attack damage'
     ]
   },
   {
-    "id": 3057,
-    "key": "item",
-    "name": "Sheen",
-    "aka": [
-      "Jimmy Neutron"
+    id: 3057,
+    key: 'item',
+    name: 'Sheen',
+    rank: 'Epic',
+    aka: [
+      'Jimmy Neutron'
     ],
-    "gold": {
-      "base": 650,
-      "total": 900,
-      "sell": 630
+    gold: {
+      base: 650,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       2022
     ],
-    "stats": {
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Mage",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Mage',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3065,
-    "key": "item",
-    "name": "Spirit Visage",
-    "aka": [
-      "sv"
+    id: 3065,
+    key: 'item',
+    name: 'Spirit Visage',
+    rank: 'Legendary',
+    aka: [
+      'sv'
     ],
-    "gold": {
-      "base": 650,
-      "total": 2700,
-      "sell": 1890
+    gold: {
+      base: 650,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3211,
       3067
     ],
-    "stats": {
-      "health": 400,
-      "healthRegen": 100,
-      "magicResistance": 50,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      health: 400,
+      healthRegen: 100,
+      magicResistance: 50
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3066,
-    "key": "item",
-    "name": "Winged Moonplate",
-    "aka": [
-      "chaps",
-      "pants",
-      "leggings",
-      "zoomin"
+    id: 3066,
+    key: 'item',
+    name: 'Winged Moonplate',
+    rank: 'Epic',
+    aka: [
+      'chaps',
+      'pants',
+      'leggings',
+      'zoomin'
     ],
-    "gold": {
-      "base": 400,
-      "total": 800,
-      "sell": 560
+    gold: {
+      base: 400,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028
     ],
-    "stats": {
-      "health": 200,
-      "percentMovespeed": 4
+    stats: {
+      health: 200,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Tank",
-      "Movement"
+    tags: [
+      'Tank',
+      'Movement'
     ]
   },
   {
-    "id": 3067,
-    "key": "item",
-    "name": "Kindlegem",
-    "gold": {
-      "base": 150,
-      "total": 800,
-      "sell": 560
+    id: 3067,
+    key: 'item',
+    name: 'Kindlegem',
+    rank: 'Epic',
+    gold: {
+      base: 150,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       2022
     ],
-    "stats": {
-      "health": 200,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      health: 200
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Mage",
-      "Tank",
-      "Support"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Mage',
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3068,
-    "key": "item",
-    "name": "Sunfire Aegis",
-    "aka": [
-      "burn",
-      "sunborn",
-      "sunfire"
+    id: 3068,
+    key: 'item',
+    name: 'Sunfire Aegis',
+    rank: 'Legendary',
+    aka: [
+      'burn',
+      'sunborn',
+      'sunfire'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 2700,
-      "sell": 1890
+    gold: {
+      base: 1000,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       6660,
       1031
     ],
-    "stats": {
-      "armor": 50,
-      "health": 350,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      armor: 50,
+      health: 350
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3070,
-    "key": "item",
-    "name": "Tear of the Goddess",
-    "aka": [
-      "archangel's staff",
-      "Seraph's embrace",
-      "Winter's approach",
-      "Fimbulwinter",
-      "Muramana",
-      "Manamune"
+    id: 3070,
+    key: 'item',
+    name: 'Tear of the Goddess',
+    rank: 'Starter',
+    aka: [
+      'archangel\'s staff',
+      'Seraph\'s embrace',
+      'Winter\'s approach',
+      'Fimbulwinter',
+      'Muramana',
+      'Manamune'
     ],
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 280
+    gold: {
+      base: 400,
+      sell: 280,
+      total: 400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Starter",
-    "stats": {
-      "mana": 240
+    stats: {
+      mana: 240
     },
-    "tags": [
-      "Marksman",
-      "Mage"
+    tags: [
+      'Marksman',
+      'Mage'
     ]
   },
   {
-    "id": 3071,
-    "key": "item",
-    "name": "Black Cleaver",
-    "aka": [
-      "bc"
+    id: 3071,
+    key: 'item',
+    name: 'Black Cleaver',
+    rank: 'Legendary',
+    aka: [
+      'bc'
     ],
-    "gold": {
-      "base": 225,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 225,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3044,
       3067,
       1037
     ],
-    "stats": {
-      "attackDamage": 40,
-      "health": 400,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 40,
+      health: 400
     },
-    "tags": [
-      "Fighter",
-      "Onhit effects",
-      "Armor pen",
-      "Movement"
+    tags: [
+      'Fighter',
+      'Onhit effects',
+      'Armor pen',
+      'Movement'
     ]
   },
   {
-    "id": 3072,
-    "key": "item",
-    "name": "Bloodthirster",
-    "aka": [
-      "bt",
-      "healsword"
+    id: 3072,
+    key: 'item',
+    name: 'Bloodthirster',
+    rank: 'Legendary',
+    aka: [
+      'bt',
+      'healsword'
     ],
-    "gold": {
-      "base": 325,
-      "total": 3400,
-      "sell": 2380
+    gold: {
+      base: 325,
+      sell: 2380,
+      total: 3400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1038,
       1037,
       1053
     ],
-    "stats": {
-      "attackDamage": 80,
-      "lifesteal": 15
+    stats: {
+      attackDamage: 80,
+      lifesteal: 15
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 3073,
-    "key": "item",
-    "name": "Experimental Hexplate",
-    "gold": {
-      "base": 500,
-      "total": 3000,
-      "sell": 2100
+    id: 3073,
+    key: 'item',
+    name: 'Experimental Hexplate',
+    rank: 'Legendary',
+    gold: {
+      base: 500,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2021,
       3044,
       1042
     ],
-    "stats": {
-      "attackDamage": 40,
-      "attackSpeed": 20,
-      "health": 450
+    stats: {
+      attackDamage: 40,
+      attackSpeed: 20,
+      health: 450
     },
-    "tags": [
-      "Fighter",
-      "Ability haste",
-      "Movement"
+    tags: [
+      'Fighter',
+      'Ability haste',
+      'Movement'
     ]
   },
   {
-    "id": 3074,
-    "key": "item",
-    "name": "Ravenous Hydra",
-    "aka": [
-      "rav hydra"
+    id: 3074,
+    key: 'item',
+    name: 'Ravenous Hydra',
+    rank: 'Legendary',
+    aka: [
+      'rav hydra'
     ],
-    "gold": {
-      "base": 150,
-      "total": 3300,
-      "sell": 2310
+    gold: {
+      base: 150,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3077,
       1053,
       3133
     ],
-    "stats": {
-      "attackDamage": 65,
-      "lifesteal": 12,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 65,
+      lifesteal: 12
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 3075,
-    "key": "item",
-    "name": "Thornmail",
-    "aka": [
-      "grievous wounds"
+    id: 3075,
+    key: 'item',
+    name: 'Thornmail',
+    rank: 'Legendary',
+    aka: [
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 450,
-      "total": 2450,
-      "sell": 1715
+    gold: {
+      base: 450,
+      sell: 1715,
+      total: 2450
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3076,
       1031,
       1028
     ],
-    "stats": {
-      "armor": 75,
-      "health": 150
+    stats: {
+      armor: 75,
+      health: 150
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3076,
-    "key": "item",
-    "name": "Bramble Vest",
-    "aka": [
-      "grievous wounds"
+    id: 3076,
+    key: 'item',
+    name: 'Bramble Vest',
+    rank: 'Epic',
+    aka: [
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 200,
-      "total": 800,
-      "sell": 560
+    gold: {
+      base: 200,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1029,
       1029
     ],
-    "stats": {
-      "armor": 30
+    stats: {
+      armor: 30
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3077,
-    "key": "item",
-    "name": "Tiamat",
-    "gold": {
-      "base": 500,
-      "total": 1200,
-      "sell": 840
+    id: 3077,
+    key: 'item',
+    name: 'Tiamat',
+    rank: 'Epic',
+    gold: {
+      base: 500,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1036
     ],
-    "stats": {
-      "attackDamage": 20
+    stats: {
+      attackDamage: 20
     },
-    "tags": [
-      "Fighter",
-      "Tank",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Tank',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3078,
-    "key": "item",
-    "name": "Trinity Force",
-    "aka": [
-      "Spellblade",
-      "triforce",
-      "tons of damage",
-      "33333"
+    id: 3078,
+    key: 'item',
+    name: 'Trinity Force',
+    rank: 'Legendary',
+    aka: [
+      'Spellblade',
+      'triforce',
+      'tons of damage',
+      '33333'
     ],
-    "gold": {
-      "base": 133,
-      "total": 3333,
-      "sell": 2333
+    gold: {
+      base: 133,
+      sell: 2333,
+      total: 3333
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3057,
       3044,
       3051
     ],
-    "stats": {
-      "attackDamage": 36,
-      "attackSpeed": 30,
-      "health": 333,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 36,
+      attackSpeed: 30,
+      health: 333
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Movement"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 3082,
-    "key": "item",
-    "name": "Warden's Mail",
-    "gold": {
-      "base": 400,
-      "total": 1000,
-      "sell": 700
+    id: 3082,
+    key: 'item',
+    name: 'Warden\'s Mail',
+    rank: 'Epic',
+    gold: {
+      base: 400,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1029,
       1029
     ],
-    "stats": {
-      "armor": 40
+    stats: {
+      armor: 40
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3083,
-    "key": "item",
-    "name": "Warmog's Armor",
-    "gold": {
-      "base": 500,
-      "total": 3100,
-      "sell": 2170
+    id: 3083,
+    key: 'item',
+    name: 'Warmog\'s Armor',
+    rank: 'Legendary',
+    gold: {
+      base: 500,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1011,
       1011,
       3801
     ],
-    "stats": {
-      "health": 1000,
-      "healthRegen": 100
+    stats: {
+      health: 1000,
+      healthRegen: 100
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3084,
-    "key": "item",
-    "name": "Heartsteel",
-    "aka": [
-      "Quest",
-      "Steal",
-      "Boy Band",
-      "BoyBand"
+    id: 3084,
+    key: 'item',
+    name: 'Heartsteel',
+    rank: 'Legendary',
+    aka: [
+      'Quest',
+      'Steal',
+      'Boy Band',
+      'BoyBand'
     ],
-    "gold": {
-      "base": 400,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 400,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1011,
       3801,
       1011
     ],
-    "stats": {
-      "health": 900,
-      "healthRegen": 100
+    stats: {
+      health: 900,
+      healthRegen: 100
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3085,
-    "key": "item",
-    "name": "Runaan's Hurricane",
-    "gold": {
-      "base": 850,
-      "total": 2650,
-      "sell": 1855
+    id: 3085,
+    key: 'item',
+    name: 'Runaan\'s Hurricane',
+    rank: 'Legendary',
+    gold: {
+      base: 850,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3086,
       3144
     ],
-    "stats": {
-      "attackSpeed": 40,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 4
+    stats: {
+      attackSpeed: 40,
+      criticalStrikeChance: 25,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman",
-      "Onhit effects",
-      "Movement"
+    tags: [
+      'Marksman',
+      'Onhit effects',
+      'Movement'
     ]
   },
   {
-    "id": 3086,
-    "key": "item",
-    "name": "Zeal",
-    "gold": {
-      "base": 350,
-      "total": 1200,
-      "sell": 840
+    id: 3086,
+    key: 'item',
+    name: 'Zeal',
+    rank: 'Epic',
+    gold: {
+      base: 350,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1018,
       1042
     ],
-    "stats": {
-      "attackSpeed": 15,
-      "criticalStrikeChance": 15,
-      "percentMovespeed": 4
+    stats: {
+      attackSpeed: 15,
+      criticalStrikeChance: 15,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman",
-      "Movement"
+    tags: [
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 3087,
-    "key": "item",
-    "name": "Statikk Shiv",
-    "gold": {
-      "base": 450,
-      "total": 2700,
-      "sell": 1890
+    id: 3087,
+    key: 'item',
+    name: 'Statikk Shiv',
+    rank: 'Legendary',
+    gold: {
+      base: 450,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3144,
       6690,
       1037
     ],
-    "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 30,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 45,
+      attackSpeed: 30,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3089,
-    "key": "item",
-    "name": "Rabadon's Deathcap",
-    "aka": [
-      "banksys",
-      "dc",
-      "dcap",
-      "hat",
-      "witchcap",
-      "wooglets"
+    id: 3089,
+    key: 'item',
+    name: 'Rabadon\'s Deathcap',
+    rank: 'Legendary',
+    aka: [
+      'banksys',
+      'dc',
+      'dcap',
+      'hat',
+      'witchcap',
+      'wooglets'
     ],
-    "gold": {
-      "base": 1100,
-      "total": 3500,
-      "sell": 2450
+    gold: {
+      base: 1100,
+      sell: 2450,
+      total: 3500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1058,
       1058
     ],
-    "stats": {
-      "abilityPower": 130
+    stats: {
+      abilityPower: 130
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3091,
-    "key": "item",
-    "name": "Wit's End",
-    "gold": {
-      "base": 550,
-      "total": 2800,
-      "sell": 1960
+    id: 3091,
+    key: 'item',
+    name: 'Wit\'s End',
+    rank: 'Legendary',
+    gold: {
+      base: 550,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1043,
       1057,
       1043
     ],
-    "stats": {
-      "attackSpeed": 50,
-      "magicResistance": 45,
-      "tenacity": 20
+    stats: {
+      attackSpeed: 50,
+      magicResistance: 45,
+      tenacity: 20
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3094,
-    "key": "item",
-    "name": "Rapid Firecannon",
-    "aka": [
-      "canon",
-      "gun",
-      "rapidfire",
-      "rfc"
+    id: 3094,
+    key: 'item',
+    name: 'Rapid Firecannon',
+    rank: 'Legendary',
+    aka: [
+      'canon',
+      'gun',
+      'rapidfire',
+      'rfc'
     ],
-    "gold": {
-      "base": 850,
-      "total": 2650,
-      "sell": 1855
+    gold: {
+      base: 850,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3086,
       3144
     ],
-    "stats": {
-      "attackSpeed": 35,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 4
+    stats: {
+      attackSpeed: 35,
+      criticalStrikeChance: 25,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman",
-      "Movement"
+    tags: [
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 3095,
-    "key": "item",
-    "name": "Stormrazor",
-    "gold": {
-      "base": 500,
-      "total": 3000,
-      "sell": 2100
+    id: 3095,
+    key: 'item',
+    name: 'Stormrazor',
+    gold: {
+      base: 500,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       12
     ]
   },
   {
-    "id": 3097,
-    "key": "item",
-    "name": "Stormrazor",
-    "aka": [
-      "energize",
-      "Windblade"
+    id: 3097,
+    key: 'item',
+    name: 'Stormrazor',
+    rank: 'Legendary',
+    aka: [
+      'energize',
+      'Windblade'
     ],
-    "gold": {
-      "base": 700,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 700,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1038,
       1018,
       3144
     ],
-    "stats": {
-      "attackDamage": 50,
-      "attackSpeed": 20,
-      "criticalStrikeChance": 25
+    stats: {
+      attackDamage: 50,
+      attackSpeed: 20,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3100,
-    "key": "item",
-    "name": "Lich Bane",
-    "aka": [
-      "Spellblade"
+    id: 3100,
+    key: 'item',
+    name: 'Lich Bane',
+    rank: 'Legendary',
+    aka: [
+      'Spellblade'
     ],
-    "gold": {
-      "base": 250,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 250,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3057,
       3113,
       1026
     ],
-    "stats": {
-      "abilityPower": 100,
-      "percentMovespeed": 4,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 100,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Mage",
-      "Onhit effects"
+    tags: [
+      'Mage',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3102,
-    "key": "item",
-    "name": "Banshee's Veil",
-    "aka": [
-      "bv",
-      "spellshield",
-      "spell shield"
+    id: 3102,
+    key: 'item',
+    name: 'Banshee\'s Veil',
+    rank: 'Legendary',
+    aka: [
+      'bv',
+      'spellshield',
+      'spell shield'
     ],
-    "gold": {
-      "base": 200,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 200,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1058,
       4632
     ],
-    "stats": {
-      "abilityPower": 105,
-      "magicResistance": 40
+    stats: {
+      abilityPower: 105,
+      magicResistance: 40
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3105,
-    "key": "item",
-    "name": "Aegis of the Legion",
-    "gold": {
-      "base": 400,
-      "total": 1100,
-      "sell": 770
+    id: 3105,
+    key: 'item',
+    name: 'Aegis of the Legion',
+    gold: {
+      base: 400,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       35
     ]
   },
   {
-    "id": 3107,
-    "key": "item",
-    "name": "Redemption",
-    "aka": [
-      "burn"
+    id: 3107,
+    key: 'item',
+    name: 'Redemption',
+    rank: 'Legendary',
+    aka: [
+      'burn'
     ],
-    "gold": {
-      "base": 850,
-      "total": 2300,
-      "sell": 1610
+    gold: {
+      base: 850,
+      sell: 1610,
+      total: 2300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3108,
       3114
     ],
-    "stats": {
-      "abilityPower": 30,
-      "healAndShieldPower": 10,
-      "manaRegen": 100,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 30,
+      healAndShieldPower: 10,
+      manaRegen: 100
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3108,
-    "key": "item",
-    "name": "Fiendish Codex",
-    "aka": [
-      "book"
+    id: 3108,
+    key: 'item',
+    name: 'Fiendish Codex',
+    rank: 'Epic',
+    aka: [
+      'book'
     ],
-    "gold": {
-      "base": 200,
-      "total": 850,
-      "sell": 595
+    gold: {
+      base: 200,
+      sell: 595,
+      total: 850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       2022
     ],
-    "stats": {
-      "abilityPower": 25,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 25
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3109,
-    "key": "item",
-    "name": "Knight's Vow",
-    "aka": [
-      "kv"
+    id: 3109,
+    key: 'item',
+    name: 'Knight\'s Vow',
+    rank: 'Legendary',
+    aka: [
+      'kv'
     ],
-    "gold": {
-      "base": 400,
-      "total": 2300,
-      "sell": 1610
+    gold: {
+      base: 400,
+      sell: 1610,
+      total: 2300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1031,
       1006
     ],
-    "stats": {
-      "armor": 40,
-      "health": 200,
-      "healthRegen": 100,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      armor: 40,
+      health: 200,
+      healthRegen: 100
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3110,
-    "key": "item",
-    "name": "Frozen Heart",
-    "aka": [
-      "fh"
+    id: 3110,
+    key: 'item',
+    name: 'Frozen Heart',
+    rank: 'Legendary',
+    aka: [
+      'fh'
     ],
-    "gold": {
-      "base": 600,
-      "total": 2500,
-      "sell": 1750
+    gold: {
+      base: 600,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3082,
       3024
     ],
-    "stats": {
-      "armor": 75,
-      "mana": 400,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      armor: 75,
+      mana: 400
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3111,
-    "key": "item",
-    "name": "Mercury's Treads",
-    "aka": [
-      "boots",
-      "mercs"
+    id: 3111,
+    key: 'item',
+    name: 'Mercury\'s Treads',
+    rank: 'Boots',
+    aka: [
+      'boots',
+      'mercs'
     ],
-    "gold": {
-      "base": 550,
-      "total": 1250,
-      "sell": 875
+    gold: {
+      base: 550,
+      sell: 875,
+      total: 1250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001,
       1033
     ],
-    "stats": {
-      "magicResistance": 20,
-      "flatMovespeed": 45,
-      "tenacity": 30
+    stats: {
+      flatMovespeed: 45,
+      magicResistance: 20,
+      tenacity: 30
     }
   },
   {
-    "id": 3112,
-    "key": "item",
-    "name": "Guardian's Orb",
-    "gold": {
-      "base": 950,
-      "total": 950,
-      "sell": 665
+    id: 3112,
+    key: 'item',
+    name: 'Guardian\'s Orb',
+    rank: 'Starter',
+    gold: {
+      base: 950,
+      sell: 665,
+      total: 950
     },
-    "maps": [
+    maps: [
       11,
       12,
       35
     ],
-    "rank": "Starter",
-    "stats": {
-      "abilityPower": 50,
-      "health": 150
+    stats: {
+      abilityPower: 50,
+      health: 150
     },
-    "tags": [
-      "Mage",
-      "Tank",
-      "Support",
-      "Mana and reg"
+    tags: [
+      'Mage',
+      'Tank',
+      'Support',
+      'Mana and reg'
     ]
   },
   {
-    "id": 3113,
-    "key": "item",
-    "name": "Aether Wisp",
-    "aka": [
-      "spooky ghost"
+    id: 3113,
+    key: 'item',
+    name: 'Aether Wisp',
+    rank: 'Epic',
+    aka: [
+      'spooky ghost'
     ],
-    "gold": {
-      "base": 500,
-      "total": 900,
-      "sell": 630
+    gold: {
+      base: 500,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052
     ],
-    "stats": {
-      "abilityPower": 30,
-      "percentMovespeed": 4
+    stats: {
+      abilityPower: 30,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Mage",
-      "Movement"
+    tags: [
+      'Mage',
+      'Movement'
     ]
   },
   {
-    "id": 3114,
-    "key": "item",
-    "name": "Forbidden Idol",
-    "gold": {
-      "base": 400,
-      "total": 600,
-      "sell": 420
+    id: 3114,
+    key: 'item',
+    name: 'Forbidden Idol',
+    rank: 'Epic',
+    gold: {
+      base: 400,
+      sell: 420,
+      total: 600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1004
     ],
-    "stats": {
-      "healAndShieldPower": 8,
-      "manaRegen": 50
+    stats: {
+      healAndShieldPower: 8,
+      manaRegen: 50
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3115,
-    "key": "item",
-    "name": "Nashor's Tooth",
-    "aka": [
-      "nashors"
+    id: 3115,
+    key: 'item',
+    name: 'Nashor\'s Tooth',
+    rank: 'Legendary',
+    aka: [
+      'nashors'
     ],
-    "gold": {
-      "base": 500,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 500,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1043,
       1026,
       3108
     ],
-    "stats": {
-      "abilityPower": 80,
-      "attackSpeed": 50,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 80,
+      attackSpeed: 50
     },
-    "tags": [
-      "Marksman",
-      "Mage",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Mage',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3116,
-    "key": "item",
-    "name": "Rylai's Crystal Scepter",
-    "aka": [
-      "rylais"
+    id: 3116,
+    key: 'item',
+    name: 'Rylai\'s Crystal Scepter',
+    rank: 'Legendary',
+    aka: [
+      'rylais'
     ],
-    "gold": {
-      "base": 450,
-      "total": 2600,
-      "sell": 1820
+    gold: {
+      base: 450,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1026,
       1011,
       1052
     ],
-    "stats": {
-      "abilityPower": 65,
-      "health": 400
+    stats: {
+      abilityPower: 65,
+      health: 400
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3117,
-    "key": "item",
-    "name": "Mobility Boots",
-    "gold": {
-      "base": 700,
-      "purchasable": false,
-      "total": 1000,
-      "sell": 700
+    id: 3117,
+    key: 'item',
+    name: 'Mobility Boots',
+    gold: {
+      base: 700,
+      purchasable: false,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -4692,1566 +4692,1566 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 3118,
-    "key": "item",
-    "name": "Malignance",
-    "aka": [
-      "burn"
+    id: 3118,
+    key: 'item',
+    name: 'Malignance',
+    rank: 'Legendary',
+    aka: [
+      'burn'
     ],
-    "gold": {
-      "base": 650,
-      "total": 2700,
-      "sell": 1890
+    gold: {
+      base: 650,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3802,
       1026
     ],
-    "stats": {
-      "abilityPower": 90,
-      "mana": 600,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 90,
+      mana: 600
     },
-    "tags": [
-      "Mage",
-      "Ability haste"
+    tags: [
+      'Mage',
+      'Ability haste'
     ]
   },
   {
-    "id": 3119,
-    "key": "item",
-    "name": "Winter's Approach",
-    "aka": [
-      "Fimbulwinter",
-      "tear"
+    id: 3119,
+    key: 'item',
+    name: 'Winter\'s Approach',
+    rank: 'Legendary',
+    aka: [
+      'Fimbulwinter',
+      'tear'
     ],
-    "gold": {
-      "base": 300,
-      "total": 2400,
-      "sell": 1680
+    gold: {
+      base: 300,
+      sell: 1680,
+      total: 2400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3070,
       1011,
       3067
     ],
-    "stats": {
-      "health": 550,
-      "mana": 500,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      health: 550,
+      mana: 500
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3121,
-    "key": "item",
-    "name": "Fimbulwinter",
-    "gold": {
-      "base": 2400,
-      "purchasable": false,
-      "total": 2400,
-      "sell": 1680
+    id: 3121,
+    key: 'item',
+    name: 'Fimbulwinter',
+    rank: 'Legendary',
+    gold: {
+      base: 2400,
+      purchasable: false,
+      sell: 1680,
+      total: 2400
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3119
     ],
-    "stats": {
-      "health": 550,
-      "mana": 1000,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      health: 550,
+      mana: 1000
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3123,
-    "key": "item",
-    "name": "Executioner's Calling",
-    "aka": [
-      "grievous",
-      "grievous wounds"
+    id: 3123,
+    key: 'item',
+    name: 'Executioner\'s Calling',
+    rank: 'Epic',
+    aka: [
+      'grievous',
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 450,
-      "total": 800,
-      "sell": 560
+    gold: {
+      base: 450,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036
     ],
-    "stats": {
-      "attackDamage": 15
+    stats: {
+      attackDamage: 15
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3124,
-    "key": "item",
-    "name": "Guinsoo's Rageblade",
-    "gold": {
-      "base": 1025,
-      "total": 3000,
-      "sell": 2100
+    id: 3124,
+    key: 'item',
+    name: 'Guinsoo\'s Rageblade',
+    rank: 'Legendary',
+    gold: {
+      base: 1025,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1052,
       1043,
       1037
     ],
-    "stats": {
-      "abilityPower": 30,
-      "attackDamage": 30,
-      "attackSpeed": 25
+    stats: {
+      abilityPower: 30,
+      attackDamage: 30,
+      attackSpeed: 25
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3128,
-    "key": "item",
-    "name": "Deathfire Grasp",
-    "gold": {
-      "base": 850,
-      "total": 2900,
-      "sell": 2030
+    id: 3128,
+    key: 'item',
+    name: 'Deathfire Grasp',
+    gold: {
+      base: 850,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       21
     ]
   },
   {
-    "id": 3131,
-    "key": "item",
-    "name": "Sword of the Divine",
-    "gold": {
-      "base": 800,
-      "total": 2300,
-      "sell": 1610
+    id: 3131,
+    key: 'item',
+    name: 'Sword of the Divine',
+    gold: {
+      base: 800,
+      sell: 1610,
+      total: 2300
     },
-    "maps": [
+    maps: [
       21
     ]
   },
   {
-    "id": 3133,
-    "key": "item",
-    "name": "Caulfield's Warhammer",
-    "gold": {
-      "base": 100,
-      "total": 1050,
-      "sell": 735
+    id: 3133,
+    key: 'item',
+    name: 'Caulfield\'s Warhammer',
+    rank: 'Epic',
+    gold: {
+      base: 100,
+      sell: 735,
+      total: 1050
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       2022,
       1036
     ],
-    "stats": {
-      "attackDamage": 20,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 20
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3134,
-    "key": "item",
-    "name": "Serrated Dirk",
-    "aka": [
-      "lethality"
+    id: 3134,
+    key: 'item',
+    name: 'Serrated Dirk',
+    rank: 'Epic',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 300,
-      "total": 1000,
-      "sell": 700
+    gold: {
+      base: 300,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1036
     ],
-    "stats": {
-      "attackDamage": 20,
-      "lethality": 10
+    stats: {
+      attackDamage: 20,
+      lethality: 10
     },
-    "tags": [
-      "Assassin",
-      "Armor pen"
+    tags: [
+      'Assassin',
+      'Armor pen'
     ]
   },
   {
-    "id": 3135,
-    "key": "item",
-    "name": "Void Staff",
-    "gold": {
-      "base": 1050,
-      "total": 3000,
-      "sell": 2100
+    id: 3135,
+    key: 'item',
+    name: 'Void Staff',
+    rank: 'Legendary',
+    gold: {
+      base: 1050,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       4630,
       1026
     ],
-    "stats": {
-      "abilityPower": 95,
-      "percentMagicPenetration": 40
+    stats: {
+      abilityPower: 95,
+      percentMagicPenetration: 40
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3137,
-    "key": "item",
-    "name": "Cryptbloom",
-    "gold": {
-      "base": 200,
-      "total": 3000,
-      "sell": 2100
+    id: 3137,
+    key: 'item',
+    name: 'Cryptbloom',
+    rank: 'Legendary',
+    gold: {
+      base: 200,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       4630,
       3108,
       3108
     ],
-    "stats": {
-      "abilityPower": 75,
-      "percentMagicPenetration": 30,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 75,
+      percentMagicPenetration: 30
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3139,
-    "key": "item",
-    "name": "Mercurial Scimitar",
-    "aka": [
-      "merc scim",
-      "qss",
-      "quicksilver sash",
-      "silvermere dawn"
+    id: 3139,
+    key: 'item',
+    name: 'Mercurial Scimitar',
+    rank: 'Legendary',
+    aka: [
+      'merc scim',
+      'qss',
+      'quicksilver sash',
+      'silvermere dawn'
     ],
-    "gold": {
-      "base": 125,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 125,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3140,
       1037,
       1053
     ],
-    "stats": {
-      "attackDamage": 50,
-      "lifesteal": 10,
-      "magicResistance": 35
+    stats: {
+      attackDamage: 50,
+      lifesteal: 10,
+      magicResistance: 35
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Movement"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Movement'
     ]
   },
   {
-    "id": 3140,
-    "key": "item",
-    "name": "Quicksilver Sash",
-    "aka": [
-      "qss",
-      "mercurial scimitar",
-      "silvermere dawn"
+    id: 3140,
+    key: 'item',
+    name: 'Quicksilver Sash',
+    rank: 'Epic',
+    aka: [
+      'qss',
+      'mercurial scimitar',
+      'silvermere dawn'
     ],
-    "gold": {
-      "base": 900,
-      "total": 1300,
-      "sell": 910
+    gold: {
+      base: 900,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1033
     ],
-    "stats": {
-      "magicResistance": 30
+    stats: {
+      magicResistance: 30
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3142,
-    "key": "item",
-    "name": "Youmuu's Ghostblade",
-    "aka": [
-      "lethality",
-      "haste"
+    id: 3142,
+    key: 'item',
+    name: 'Youmuu\'s Ghostblade',
+    rank: 'Legendary',
+    aka: [
+      'lethality',
+      'haste'
     ],
-    "gold": {
-      "base": 675,
-      "total": 2800,
-      "sell": 1960
+    gold: {
+      base: 675,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3134,
       6690,
       1036
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 18,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 55,
+      lethality: 18,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Assassin",
-      "Movement"
+    tags: [
+      'Assassin',
+      'Movement'
     ]
   },
   {
-    "id": 3143,
-    "key": "item",
-    "name": "Randuin's Omen",
-    "gold": {
-      "base": 800,
-      "total": 2700,
-      "sell": 1890
+    id: 3143,
+    key: 'item',
+    name: 'Randuin\'s Omen',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3082,
       1011
     ],
-    "stats": {
-      "armor": 75,
-      "health": 350
+    stats: {
+      armor: 75,
+      health: 350
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3144,
-    "key": "item",
-    "name": "Scout's Slingshot",
-    "gold": {
-      "base": 100,
-      "total": 600,
-      "sell": 420
+    id: 3144,
+    key: 'item',
+    name: 'Scout\'s Slingshot',
+    rank: 'Epic',
+    gold: {
+      base: 100,
+      sell: 420,
+      total: 600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1042,
       1042
     ],
-    "stats": {
-      "attackSpeed": 20
+    stats: {
+      attackSpeed: 20
     },
-    "tags": [
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3145,
-    "key": "item",
-    "name": "Hextech Alternator",
-    "aka": [
-      "revolver",
-      "pewpew"
+    id: 3145,
+    key: 'item',
+    name: 'Hextech Alternator',
+    rank: 'Epic',
+    aka: [
+      'revolver',
+      'pewpew'
     ],
-    "gold": {
-      "base": 300,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 300,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1052
     ],
-    "stats": {
-      "abilityPower": 45
+    stats: {
+      abilityPower: 45
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3146,
-    "key": "item",
-    "name": "Hextech Gunblade",
-    "gold": {
-      "base": 600,
-      "total": 3000,
-      "sell": 2100
+    id: 3146,
+    key: 'item',
+    name: 'Hextech Gunblade',
+    rank: 'Legendary',
+    gold: {
+      base: 600,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1053,
       3145,
       1052
     ],
-    "stats": {
-      "abilityPower": 80,
-      "attackDamage": 40,
-      "omnivamp": 10
+    stats: {
+      abilityPower: 80,
+      attackDamage: 40,
+      omnivamp: 10
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3147,
-    "key": "item",
-    "name": "Haunting Guise",
-    "aka": [
-      "mask"
+    id: 3147,
+    key: 'item',
+    name: 'Haunting Guise',
+    rank: 'Epic',
+    aka: [
+      'mask'
     ],
-    "gold": {
-      "base": 500,
-      "total": 1300,
-      "sell": 910
+    gold: {
+      base: 500,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1028
     ],
-    "stats": {
-      "abilityPower": 30,
-      "health": 200
+    stats: {
+      abilityPower: 30,
+      health: 200
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3152,
-    "key": "item",
-    "name": "Hextech Rocketbelt",
-    "aka": [
-      "protobelt",
-      "rocket belt"
+    id: 3152,
+    key: 'item',
+    name: 'Hextech Rocketbelt',
+    rank: 'Legendary',
+    aka: [
+      'protobelt',
+      'rocket belt'
     ],
-    "gold": {
-      "base": 300,
-      "total": 2650,
-      "sell": 1855
+    gold: {
+      base: 300,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3145,
       3108,
       1028
     ],
-    "stats": {
-      "abilityPower": 70,
-      "health": 300,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 70,
+      health: 300
     },
-    "tags": [
-      "Mage",
-      "Movement"
+    tags: [
+      'Mage',
+      'Movement'
     ]
   },
   {
-    "id": 3153,
-    "key": "item",
-    "name": "Blade of The Ruined King",
-    "aka": [
-      "brk",
-      "bork",
-      "botrk",
-      "mist"
+    id: 3153,
+    key: 'item',
+    name: 'Blade of The Ruined King',
+    rank: 'Legendary',
+    aka: [
+      'brk',
+      'bork',
+      'botrk',
+      'mist'
     ],
-    "gold": {
-      "base": 725,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 725,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1053,
       1043,
       1037
     ],
-    "stats": {
-      "attackDamage": 40,
-      "attackSpeed": 25,
-      "lifesteal": 10
+    stats: {
+      attackDamage: 40,
+      attackSpeed: 25,
+      lifesteal: 10
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3155,
-    "key": "item",
-    "name": "Hexdrinker",
-    "gold": {
-      "base": 200,
-      "total": 1300,
-      "sell": 910
+    id: 3155,
+    key: 'item',
+    name: 'Hexdrinker',
+    rank: 'Epic',
+    gold: {
+      base: 200,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1033,
       1036
     ],
-    "stats": {
-      "attackDamage": 25,
-      "magicResistance": 25
+    stats: {
+      attackDamage: 25,
+      magicResistance: 25
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3156,
-    "key": "item",
-    "name": "Maw of Malmortius",
-    "gold": {
-      "base": 750,
-      "total": 3100,
-      "sell": 2170
+    id: 3156,
+    key: 'item',
+    name: 'Maw of Malmortius',
+    rank: 'Legendary',
+    gold: {
+      base: 750,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3155,
       3133
     ],
-    "stats": {
-      "attackDamage": 60,
-      "magicResistance": 40,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 60,
+      magicResistance: 40
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3157,
-    "key": "item",
-    "name": "Zhonya's Hourglass",
-    "aka": [
-      "zhg",
-      "zonyas",
-      "zhonyas",
-      "Witchcap",
-      "Wooglets"
+    id: 3157,
+    key: 'item',
+    name: 'Zhonya\'s Hourglass',
+    rank: 'Legendary',
+    aka: [
+      'zhg',
+      'zonyas',
+      'zhonyas',
+      'Witchcap',
+      'Wooglets'
     ],
-    "gold": {
-      "base": 450,
-      "total": 3250,
-      "sell": 2275
+    gold: {
+      base: 450,
+      sell: 2275,
+      total: 3250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1058,
       2420
     ],
-    "stats": {
-      "abilityPower": 105,
-      "armor": 50
+    stats: {
+      abilityPower: 105,
+      armor: 50
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3158,
-    "key": "item",
-    "name": "Ionian Boots of Lucidity",
-    "gold": {
-      "base": 350,
-      "total": 900,
-      "sell": 630
+    id: 3158,
+    key: 'item',
+    name: 'Ionian Boots of Lucidity',
+    rank: 'Boots',
+    gold: {
+      base: 350,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       1001,
       2022
     ],
-    "stats": {
-      "flatMovespeed": 45,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3161,
-    "key": "item",
-    "name": "Spear of Shojin",
-    "gold": {
-      "base": 675,
-      "total": 3100,
-      "sell": 2170
+    id: 3161,
+    key: 'item',
+    name: 'Spear of Shojin',
+    rank: 'Legendary',
+    gold: {
+      base: 675,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       2021,
       1028
     ],
-    "stats": {
-      "attackDamage": 45,
-      "health": 450
+    stats: {
+      attackDamage: 45,
+      health: 450
     },
-    "tags": [
-      "Fighter",
-      "Ability haste"
+    tags: [
+      'Fighter',
+      'Ability haste'
     ]
   },
   {
-    "id": 3165,
-    "key": "item",
-    "name": "Morellonomicon",
-    "aka": [
-      "forbidden book",
-      "grievous",
-      "grievous wounds",
-      "last shadow",
-      "nmst"
+    id: 3165,
+    key: 'item',
+    name: 'Morellonomicon',
+    rank: 'Legendary',
+    aka: [
+      'forbidden book',
+      'grievous',
+      'grievous wounds',
+      'last shadow',
+      'nmst'
     ],
-    "gold": {
-      "base": 400,
-      "total": 2850,
-      "sell": 1995
+    gold: {
+      base: 400,
+      sell: 1995,
+      total: 2850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3916,
       1026,
       3067
     ],
-    "stats": {
-      "abilityPower": 75,
-      "health": 350,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 75,
+      health: 350
     },
-    "tags": [
-      "Mage",
-      "Support"
+    tags: [
+      'Mage',
+      'Support'
     ]
   },
   {
-    "id": 3170,
-    "key": "item",
-    "name": "Swiftmarch",
-    "aka": [
-      "boots"
+    id: 3170,
+    key: 'item',
+    name: 'Swiftmarch',
+    rank: 'Boots',
+    aka: [
+      'boots'
     ],
-    "gold": {
-      "base": 0,
-      "total": 1000,
-      "sell": 700
+    gold: {
+      base: 0,
+      sell: 700,
+      total: 1000
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       3009
     ],
-    "stats": {
-      "flatMovespeed": 65
+    stats: {
+      flatMovespeed: 65
     }
   },
   {
-    "id": 3171,
-    "key": "item",
-    "name": "Crimson Lucidity",
-    "aka": [
-      "boots"
+    id: 3171,
+    key: 'item',
+    name: 'Crimson Lucidity',
+    rank: 'Boots',
+    aka: [
+      'boots'
     ],
-    "gold": {
-      "base": 0,
-      "total": 900,
-      "sell": 630
+    gold: {
+      base: 0,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       3158
     ],
-    "stats": {
-      "flatMovespeed": 45,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3172,
-    "key": "item",
-    "name": "Gunmetal Greaves",
-    "gold": {
-      "base": 0,
-      "total": 1100,
-      "sell": 770
+    id: 3172,
+    key: 'item',
+    name: 'Gunmetal Greaves',
+    rank: 'Legendary',
+    gold: {
+      base: 0,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3006
     ],
-    "stats": {
-      "attackSpeed": 50,
-      "percentMovespeed": 10,
-      "abilityHaste": 30,
-      "tenacity": 20
+    stats: {
+      abilityHaste: 30,
+      attackSpeed: 50,
+      percentMovespeed: 10,
+      tenacity: 20
     },
-    "tags": [
-      "Marksman",
-      "Fighter"
+    tags: [
+      'Marksman',
+      'Fighter'
     ]
   },
   {
-    "id": 3173,
-    "key": "item",
-    "name": "Chainlaced Crushers",
-    "aka": [
-      "boots"
+    id: 3173,
+    key: 'item',
+    name: 'Chainlaced Crushers',
+    rank: 'Boots',
+    aka: [
+      'boots'
     ],
-    "gold": {
-      "base": 0,
-      "total": 1250,
-      "sell": 875
+    gold: {
+      base: 0,
+      sell: 875,
+      total: 1250
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       3111
     ],
-    "stats": {
-      "magicResistance": 30,
-      "flatMovespeed": 45,
-      "tenacity": 30
+    stats: {
+      flatMovespeed: 45,
+      magicResistance: 30,
+      tenacity: 30
     }
   },
   {
-    "id": 3174,
-    "key": "item",
-    "name": "Armored Advance",
-    "aka": [
-      "boots"
+    id: 3174,
+    key: 'item',
+    name: 'Armored Advance',
+    rank: 'Boots',
+    aka: [
+      'boots'
     ],
-    "gold": {
-      "base": 0,
-      "total": 1200,
-      "sell": 840
+    gold: {
+      base: 0,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       3047
     ],
-    "stats": {
-      "armor": 35,
-      "flatMovespeed": 45
+    stats: {
+      armor: 35,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3175,
-    "key": "item",
-    "name": "Spellslinger's Shoes",
-    "aka": [
-      "boots"
+    id: 3175,
+    key: 'item',
+    name: 'Spellslinger\'s Shoes',
+    rank: 'Boots',
+    aka: [
+      'boots'
     ],
-    "gold": {
-      "base": 0,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 0,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Boots",
-    "recipe": [
+    recipe: [
       3020
     ],
-    "stats": {
-      "flatMagicPenetration": 18,
-      "flatMovespeed": 45
+    stats: {
+      flatMagicPenetration: 18,
+      flatMovespeed: 45
     }
   },
   {
-    "id": 3176,
-    "key": "item",
-    "name": "Forever Forward",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 900,
-      "sell": 630
+    id: 3176,
+    key: 'item',
+    name: 'Forever Forward',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 3177,
-    "key": "item",
-    "name": "Guardian's Blade",
-    "aka": [
-      "dblade"
+    id: 3177,
+    key: 'item',
+    name: 'Guardian\'s Blade',
+    rank: 'Starter',
+    aka: [
+      'dblade'
     ],
-    "gold": {
-      "base": 950,
-      "total": 950,
-      "sell": 665
+    gold: {
+      base: 950,
+      sell: 665,
+      total: 950
     },
-    "maps": [
+    maps: [
       11,
       12,
       35
     ],
-    "rank": "Starter",
-    "stats": {
-      "attackDamage": 30,
-      "health": 150,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 30,
+      health: 150
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin',
+      'Tank'
     ]
   },
   {
-    "id": 3179,
-    "key": "item",
-    "name": "Umbral Glaive",
-    "aka": [
-      "lethality"
+    id: 3179,
+    key: 'item',
+    name: 'Umbral Glaive',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 750,
-      "total": 2800,
-      "sell": 1960
+    gold: {
+      base: 750,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3134,
       3133
     ],
-    "stats": {
-      "attackDamage": 60,
-      "lethality": 18,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 60,
+      lethality: 18
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 3181,
-    "key": "item",
-    "name": "Hullbreaker",
-    "aka": [
-      "ahoy",
-      "hull",
-      "pirate",
-      "yarrr"
+    id: 3181,
+    key: 'item',
+    name: 'Hullbreaker',
+    rank: 'Legendary',
+    aka: [
+      'ahoy',
+      'hull',
+      'pirate',
+      'yarrr'
     ],
-    "gold": {
-      "base": 175,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 175,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2021,
       3066,
       1037
     ],
-    "stats": {
-      "attackDamage": 40,
-      "health": 500,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 40,
+      health: 500,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 3184,
-    "key": "item",
-    "name": "Guardian's Hammer",
-    "aka": [
-      "dblade"
+    id: 3184,
+    key: 'item',
+    name: 'Guardian\'s Hammer',
+    rank: 'Starter',
+    aka: [
+      'dblade'
     ],
-    "gold": {
-      "base": 950,
-      "total": 950,
-      "sell": 665
+    gold: {
+      base: 950,
+      sell: 665,
+      total: 950
     },
-    "maps": [
+    maps: [
       11,
       12,
       35
     ],
-    "rank": "Starter",
-    "stats": {
-      "attackDamage": 25,
-      "health": 150,
-      "lifesteal": 5
+    stats: {
+      attackDamage: 25,
+      health: 150,
+      lifesteal: 5
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 3190,
-    "key": "item",
-    "name": "Locket of the Iron Solari",
-    "gold": {
-      "base": 700,
-      "total": 2200,
-      "sell": 1540
+    id: 3190,
+    key: 'item',
+    name: 'Locket of the Iron Solari',
+    rank: 'Legendary',
+    gold: {
+      base: 700,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1029,
       1033
     ],
-    "stats": {
-      "armor": 25,
-      "health": 200,
-      "magicResistance": 25,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      armor: 25,
+      health: 200,
+      magicResistance: 25
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3193,
-    "key": "item",
-    "name": "Gargoyle Stoneplate",
-    "gold": {
-      "base": 1350,
-      "purchasable": false,
-      "total": 3150,
-      "sell": 2205
+    id: 3193,
+    key: 'item',
+    name: 'Gargoyle Stoneplate',
+    gold: {
+      base: 1350,
+      purchasable: false,
+      sell: 2205,
+      total: 3150
     }
   },
   {
-    "id": 3211,
-    "key": "item",
-    "name": "Spectre's Cowl",
-    "aka": [
-      "hat",
-      "ghost"
+    id: 3211,
+    key: 'item',
+    name: 'Spectre\'s Cowl',
+    rank: 'Epic',
+    aka: [
+      'hat',
+      'ghost'
     ],
-    "gold": {
-      "base": 150,
-      "total": 1250,
-      "sell": 875
+    gold: {
+      base: 150,
+      sell: 875,
+      total: 1250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       1033,
       1006
     ],
-    "stats": {
-      "health": 200,
-      "healthRegen": 100,
-      "magicResistance": 35
+    stats: {
+      health: 200,
+      healthRegen: 100,
+      magicResistance: 35
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 3222,
-    "key": "item",
-    "name": "Mikael's Blessing",
-    "aka": [
-      "crucible",
-      "michael",
-      "mikael"
+    id: 3222,
+    key: 'item',
+    name: 'Mikael\'s Blessing',
+    rank: 'Legendary',
+    aka: [
+      'crucible',
+      'michael',
+      'mikael'
     ],
-    "gold": {
-      "base": 900,
-      "total": 2300,
-      "sell": 1610
+    gold: {
+      base: 900,
+      sell: 1610,
+      total: 2300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       3114
     ],
-    "stats": {
-      "healAndShieldPower": 12,
-      "health": 250,
-      "manaRegen": 100,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      healAndShieldPower: 12,
+      health: 250,
+      manaRegen: 100
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3302,
-    "key": "item",
-    "name": "Terminus",
-    "aka": [
-      "bow",
-      "sentinel"
+    id: 3302,
+    key: 'item',
+    name: 'Terminus',
+    rank: 'Legendary',
+    aka: [
+      'bow',
+      'sentinel'
     ],
-    "gold": {
-      "base": 1100,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 1100,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3051,
       1043
     ],
-    "stats": {
-      "attackDamage": 30,
-      "attackSpeed": 35
+    stats: {
+      attackDamage: 30,
+      attackSpeed: 35
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Onhit effects",
-      "Armor pen",
-      "Magic pen"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Onhit effects',
+      'Armor pen',
+      'Magic pen'
     ]
   },
   {
-    "id": 3330,
-    "key": "item",
-    "name": "Scarecrow Effigy",
-    "aka": [
-      "yellow",
-      "totem",
-      "trinket"
+    id: 3330,
+    key: 'item',
+    name: 'Scarecrow Effigy',
+    rank: 'Trinket',
+    aka: [
+      'yellow',
+      'totem',
+      'trinket'
     ],
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3340,
-    "key": "item",
-    "name": "Stealth Ward",
-    "aka": [
-      "yellow",
-      "sweeper",
-      "totem",
-      "trinket"
+    id: 3340,
+    key: 'item',
+    name: 'Stealth Ward',
+    rank: 'Trinket',
+    aka: [
+      'yellow',
+      'sweeper',
+      'totem',
+      'trinket'
     ],
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3348,
-    "key": "item",
-    "name": "Arcane Sweeper",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3348,
+    key: 'item',
+    name: 'Arcane Sweeper',
+    rank: 'Trinket',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3349,
-    "key": "item",
-    "name": "Lucent Singularity",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3349,
+    key: 'item',
+    name: 'Lucent Singularity',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 3363,
-    "key": "item",
-    "name": "Farsight Alteration",
-    "aka": [
-      "blue",
-      "totem",
-      "trinket"
+    id: 3363,
+    key: 'item',
+    name: 'Farsight Alteration',
+    rank: 'Trinket',
+    aka: [
+      'blue',
+      'totem',
+      'trinket'
     ],
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21
     ],
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3364,
-    "key": "item",
-    "name": "Oracle Lens",
-    "aka": [
-      "red",
-      "lens",
-      "spinny",
-      "sweeper",
-      "totem",
-      "trinket"
+    id: 3364,
+    key: 'item',
+    name: 'Oracle Lens',
+    rank: 'Trinket',
+    aka: [
+      'red',
+      'lens',
+      'spinny',
+      'sweeper',
+      'totem',
+      'trinket'
     ],
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3398,
-    "key": "item",
-    "name": "Small Party Favor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3398,
+    key: 'item',
+    name: 'Small Party Favor',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 3399,
-    "key": "item",
-    "name": "Party Favor",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3399,
+    key: 'item',
+    name: 'Party Favor',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     }
   },
   {
-    "id": 3400,
-    "key": "item",
-    "name": "Your Cut",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3400,
+    key: 'item',
+    name: 'Your Cut',
+    rank: 'Special',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Special",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3430,
-    "key": "item",
-    "name": "Rite Of Ruin",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 3430,
+    key: 'item',
+    name: 'Rite Of Ruin',
+    rank: 'Legendary',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "abilityPower": 50,
-      "criticalStrikeChance": 25,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 50,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3504,
-    "key": "item",
-    "name": "Ardent Censer",
-    "aka": [
-      "censer"
+    id: 3504,
+    key: 'item',
+    name: 'Ardent Censer',
+    rank: 'Legendary',
+    aka: [
+      'censer'
     ],
-    "gold": {
-      "base": 700,
-      "total": 2200,
-      "sell": 1540
+    gold: {
+      base: 700,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3113,
       3114
     ],
-    "stats": {
-      "abilityPower": 45,
-      "healAndShieldPower": 10,
-      "manaRegen": 125,
-      "percentMovespeed": 4
+    stats: {
+      abilityPower: 45,
+      healAndShieldPower: 10,
+      manaRegen: 125,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Support",
-      "Attack speed"
+    tags: [
+      'Support',
+      'Attack speed'
     ]
   },
   {
-    "id": 3508,
-    "key": "item",
-    "name": "Essence Reaver",
-    "aka": [
-      "er",
-      "Spellblade"
+    id: 3508,
+    key: 'item',
+    name: 'Essence Reaver',
+    rank: 'Legendary',
+    aka: [
+      'er',
+      'Spellblade'
     ],
-    "gold": {
-      "base": 350,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 350,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3057,
       3133,
       1018
     ],
-    "stats": {
-      "attackDamage": 50,
-      "criticalStrikeChance": 25,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 50,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman",
-      "Mana and reg",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Mana and reg',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3513,
-    "key": "item",
-    "name": "Eye of the Herald",
-    "aka": [
-      "Herald's Eye"
+    id: 3513,
+    key: 'item',
+    name: 'Eye of the Herald',
+    rank: 'Trinket',
+    aka: [
+      'Herald\'s Eye'
     ],
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "rank": "Trinket",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3599,
-    "key": "item",
-    "name": "Kalista's Black Spear",
-    "aka": [
-      "spear"
+    id: 3599,
+    key: 'item',
+    name: 'Kalista\'s Black Spear',
+    rank: 'Starter',
+    aka: [
+      'spear'
     ],
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "rank": "Starter",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3600,
-    "key": "item",
-    "name": "Kalista's Black Spear",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 3600,
+    key: 'item',
+    name: 'Kalista\'s Black Spear',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -6260,1093 +6260,1093 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 3742,
-    "key": "item",
-    "name": "Dead Man's Plate",
-    "aka": [
-      "dmp",
-      "dreadnought",
-      "gangplank",
-      "juggernaut"
+    id: 3742,
+    key: 'item',
+    name: 'Dead Man\'s Plate',
+    rank: 'Legendary',
+    aka: [
+      'dmp',
+      'dreadnought',
+      'gangplank',
+      'juggernaut'
     ],
-    "gold": {
-      "base": 900,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 900,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3066,
       1028,
       1031
     ],
-    "stats": {
-      "armor": 55,
-      "health": 350,
-      "percentMovespeed": 4
+    stats: {
+      armor: 55,
+      health: 350,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Fighter",
-      "Tank"
+    tags: [
+      'Fighter',
+      'Tank'
     ]
   },
   {
-    "id": 3748,
-    "key": "item",
-    "name": "Titanic Hydra",
-    "aka": [
-      "beefer",
-      "juggernaut"
+    id: 3748,
+    key: 'item',
+    name: 'Titanic Hydra',
+    rank: 'Legendary',
+    aka: [
+      'beefer',
+      'juggernaut'
     ],
-    "gold": {
-      "base": 50,
-      "total": 3300,
-      "sell": 2310
+    gold: {
+      base: 50,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3077,
       2021,
       1011
     ],
-    "stats": {
-      "attackDamage": 40,
-      "health": 600
+    stats: {
+      attackDamage: 40,
+      health: 600
     },
-    "tags": [
-      "Fighter",
-      "Tank",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Tank',
+      'Onhit effects'
     ]
   },
   {
-    "id": 3801,
-    "key": "item",
-    "name": "Crystalline Bracer",
-    "gold": {
-      "base": 100,
-      "total": 800,
-      "sell": 560
+    id: 3801,
+    key: 'item',
+    name: 'Crystalline Bracer',
+    rank: 'Epic',
+    gold: {
+      base: 100,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       1006
     ],
-    "stats": {
-      "health": 200,
-      "healthRegen": 100
+    stats: {
+      health: 200,
+      healthRegen: 100
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 3802,
-    "key": "item",
-    "name": "Lost Chapter",
-    "aka": [
-      "mana book"
+    id: 3802,
+    key: 'item',
+    name: 'Lost Chapter',
+    rank: 'Epic',
+    aka: [
+      'mana book'
     ],
-    "gold": {
-      "base": 250,
-      "total": 1200,
-      "sell": 840
+    gold: {
+      base: 250,
+      sell: 840,
+      total: 1200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1027,
       2022
     ],
-    "stats": {
-      "abilityPower": 40,
-      "mana": 300,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 40,
+      mana: 300
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3803,
-    "key": "item",
-    "name": "Catalyst of Aeons",
-    "aka": [
-      "protector"
+    id: 3803,
+    key: 'item',
+    name: 'Catalyst of Aeons',
+    rank: 'Epic',
+    aka: [
+      'protector'
     ],
-    "gold": {
-      "base": 200,
-      "total": 1300,
-      "sell": 910
+    gold: {
+      base: 200,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       1028,
       1027
     ],
-    "stats": {
-      "health": 300,
-      "mana": 375
+    stats: {
+      health: 300,
+      mana: 375
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 3814,
-    "key": "item",
-    "name": "Edge of Night",
-    "aka": [
-      "eon",
-      "lethality",
-      "spellshield",
-      "spell shield"
+    id: 3814,
+    key: 'item',
+    name: 'Edge of Night',
+    rank: 'Legendary',
+    aka: [
+      'eon',
+      'lethality',
+      'spellshield',
+      'spell shield'
     ],
-    "gold": {
-      "base": 850,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 850,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3134,
       2021
     ],
-    "stats": {
-      "attackDamage": 50,
-      "health": 250,
-      "lethality": 15
+    stats: {
+      attackDamage: 50,
+      health: 250,
+      lethality: 15
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 3850,
-    "key": "item",
-    "name": "Spellthief's Edge",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3850,
+    key: 'item',
+    name: 'Spellthief\'s Edge',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3851,
-    "key": "item",
-    "name": "Frostfang",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3851,
+    key: 'item',
+    name: 'Frostfang',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3853,
-    "key": "item",
-    "name": "Shard of True Ice",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3853,
+    key: 'item',
+    name: 'Shard of True Ice',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3854,
-    "key": "item",
-    "name": "Steel Shoulderguards",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3854,
+    key: 'item',
+    name: 'Steel Shoulderguards',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3855,
-    "key": "item",
-    "name": "Runesteel Spaulders",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3855,
+    key: 'item',
+    name: 'Runesteel Spaulders',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3857,
-    "key": "item",
-    "name": "Pauldrons of Whiterock",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3857,
+    key: 'item',
+    name: 'Pauldrons of Whiterock',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3858,
-    "key": "item",
-    "name": "Relic Shield",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3858,
+    key: 'item',
+    name: 'Relic Shield',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3859,
-    "key": "item",
-    "name": "Targon's Buckler",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3859,
+    key: 'item',
+    name: 'Targon\'s Buckler',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3860,
-    "key": "item",
-    "name": "Bulwark of the Mountain",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3860,
+    key: 'item',
+    name: 'Bulwark of the Mountain',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3862,
-    "key": "item",
-    "name": "Spectral Sickle",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3862,
+    key: 'item',
+    name: 'Spectral Sickle',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3863,
-    "key": "item",
-    "name": "Harrowing Crescent",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3863,
+    key: 'item',
+    name: 'Harrowing Crescent',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3864,
-    "key": "item",
-    "name": "Black Mist Scythe",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3864,
+    key: 'item',
+    name: 'Black Mist Scythe',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     }
   },
   {
-    "id": 3865,
-    "key": "item",
-    "name": "World Atlas",
-    "aka": [
-      "Map"
+    id: 3865,
+    key: 'item',
+    name: 'World Atlas',
+    rank: 'Starter',
+    aka: [
+      'Map'
     ],
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 160
+    gold: {
+      base: 400,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Starter",
-    "stats": {
-      "goldPer10": 3,
-      "health": 30,
-      "healthRegen": 25,
-      "manaRegen": 25
+    stats: {
+      goldPer10: 3,
+      health: 30,
+      healthRegen: 25,
+      manaRegen: 25
     },
-    "tags": [
-      "Support",
-      "Mage"
+    tags: [
+      'Support',
+      'Mage'
     ]
   },
   {
-    "id": 3866,
-    "key": "item",
-    "name": "Runic Compass",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3866,
+    key: 'item',
+    name: 'Runic Compass',
+    rank: 'Epic',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       3865
     ],
-    "stats": {
-      "goldPer10": 5,
-      "health": 100,
-      "healthRegen": 50,
-      "manaRegen": 50
+    stats: {
+      goldPer10: 5,
+      health: 100,
+      healthRegen: 50,
+      manaRegen: 50
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3867,
-    "key": "item",
-    "name": "Bounty of Worlds",
-    "gold": {
-      "base": 400,
-      "purchasable": false,
-      "total": 400,
-      "sell": 160
+    id: 3867,
+    key: 'item',
+    name: 'Bounty of Worlds',
+    rank: 'Legendary',
+    gold: {
+      base: 400,
+      purchasable: false,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3866
     ],
-    "stats": {
-      "goldPer10": 5,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 5,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3869,
-    "key": "item",
-    "name": "Celestial Opposition",
-    "gold": {
-      "base": 0,
-      "total": 400,
-      "sell": 160
+    id: 3869,
+    key: 'item',
+    name: 'Celestial Opposition',
+    rank: 'Legendary',
+    gold: {
+      base: 0,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3867
     ],
-    "stats": {
-      "goldPer10": 9,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 9,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3870,
-    "key": "item",
-    "name": "Dream Maker",
-    "aka": [
-      "Plushie",
-      "plushie"
+    id: 3870,
+    key: 'item',
+    name: 'Dream Maker',
+    rank: 'Legendary',
+    aka: [
+      'Plushie',
+      'plushie'
     ],
-    "gold": {
-      "base": 0,
-      "total": 400,
-      "sell": 160
+    gold: {
+      base: 0,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3867
     ],
-    "stats": {
-      "goldPer10": 9,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 9,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3871,
-    "key": "item",
-    "name": "Zaz'Zak's Realmspike",
-    "gold": {
-      "base": 0,
-      "total": 400,
-      "sell": 160
+    id: 3871,
+    key: 'item',
+    name: 'Zaz\'Zak\'s Realmspike',
+    rank: 'Legendary',
+    gold: {
+      base: 0,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3867
     ],
-    "stats": {
-      "goldPer10": 9,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 9,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3876,
-    "key": "item",
-    "name": "Solstice Sleigh",
-    "gold": {
-      "base": 0,
-      "total": 400,
-      "sell": 160
+    id: 3876,
+    key: 'item',
+    name: 'Solstice Sleigh',
+    rank: 'Legendary',
+    gold: {
+      base: 0,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3867
     ],
-    "stats": {
-      "goldPer10": 9,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 9,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3877,
-    "key": "item",
-    "name": "Bloodsong",
-    "aka": [
-      "Spellblade"
+    id: 3877,
+    key: 'item',
+    name: 'Bloodsong',
+    rank: 'Legendary',
+    aka: [
+      'Spellblade'
     ],
-    "gold": {
-      "base": 0,
-      "total": 400,
-      "sell": 160
+    gold: {
+      base: 0,
+      sell: 160,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3867
     ],
-    "stats": {
-      "goldPer10": 9,
-      "health": 200,
-      "healthRegen": 75,
-      "manaRegen": 75
+    stats: {
+      goldPer10: 9,
+      health: 200,
+      healthRegen: 75,
+      manaRegen: 75
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 3901,
-    "key": "item",
-    "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3901,
+    key: 'item',
+    name: '<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3902,
-    "key": "item",
-    "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3902,
+    key: 'item',
+    name: '<rarityLegendary>Death\'s Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3903,
-    "key": "item",
-    "name": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 3903,
+    key: 'item',
+    name: '<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       30,
       35
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 3916,
-    "key": "item",
-    "name": "Oblivion Orb",
-    "aka": [
-      "grievous",
-      "grievous wounds"
+    id: 3916,
+    key: 'item',
+    name: 'Oblivion Orb',
+    rank: 'Epic',
+    aka: [
+      'grievous',
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 400,
-      "total": 800,
-      "sell": 560
+    gold: {
+      base: 400,
+      sell: 560,
+      total: 800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052
     ],
-    "stats": {
-      "abilityPower": 25
+    stats: {
+      abilityPower: 25
     },
-    "tags": [
-      "Mage",
-      "Support"
+    tags: [
+      'Mage',
+      'Support'
     ]
   },
   {
-    "id": 4003,
-    "key": "item",
-    "name": "Lifeline",
-    "aka": [
-      "lethality"
+    id: 4003,
+    key: 'item',
+    name: 'Lifeline',
+    rank: 'Epic',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 475,
-      "total": 1600,
-      "sell": 1120
+    gold: {
+      base: 475,
+      sell: 1120,
+      total: 1600
     },
-    "maps": [
+    maps: [
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       6690,
       1036
     ],
-    "stats": {
-      "attackDamage": 25,
-      "lethality": 5,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 25,
+      lethality: 5,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 4004,
-    "key": "item",
-    "name": "Spectral Cutlass",
-    "gold": {
-      "base": 200,
-      "total": 2800,
-      "sell": 1960
+    id: 4004,
+    key: 'item',
+    name: 'Spectral Cutlass',
+    gold: {
+      base: 200,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       12,
       21,
       35
     ]
   },
   {
-    "id": 4005,
-    "key": "item",
-    "name": "Imperial Mandate",
-    "aka": [
-      "banner of command",
-      "flag"
+    id: 4005,
+    key: 'item',
+    name: 'Imperial Mandate',
+    rank: 'Legendary',
+    aka: [
+      'banner of command',
+      'flag'
     ],
-    "gold": {
-      "base": 500,
-      "total": 2250,
-      "sell": 1575
+    gold: {
+      base: 500,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3108,
       4642
     ],
-    "stats": {
-      "abilityPower": 60,
-      "manaRegen": 125,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 60,
+      manaRegen: 125
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 4010,
-    "key": "item",
-    "name": "Bloodletter's Curse",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 4010,
+    key: 'item',
+    name: 'Bloodletter\'s Curse',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 4011,
-    "key": "item",
-    "name": "Sword of Blossoming Dawn",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 4011,
+    key: 'item',
+    name: 'Sword of Blossoming Dawn',
+    rank: 'Legendary',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "abilityPower": 45,
-      "healAndShieldPower": 12,
-      "health": 200,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 45,
+      healAndShieldPower: 12,
+      health: 200
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 4012,
-    "key": "item",
-    "name": "Sin Eater",
-    "gold": {
-      "base": 3000,
-      "total": 3000,
-      "sell": 2100
+    id: 4012,
+    key: 'item',
+    name: 'Sin Eater',
+    gold: {
+      base: 3000,
+      sell: 2100,
+      total: 3000
     }
   },
   {
-    "id": 4013,
-    "key": "item",
-    "name": "Lightning Braid",
-    "gold": {
-      "base": 3000,
-      "total": 3000,
-      "sell": 2100
+    id: 4013,
+    key: 'item',
+    name: 'Lightning Braid',
+    gold: {
+      base: 3000,
+      sell: 2100,
+      total: 3000
     }
   },
   {
-    "id": 4014,
-    "key": "item",
-    "name": "Frozen Mallet",
-    "gold": {
-      "base": 3000,
-      "purchasable": false,
-      "total": 3000,
-      "sell": 2100
+    id: 4014,
+    key: 'item',
+    name: 'Frozen Mallet',
+    gold: {
+      base: 3000,
+      purchasable: false,
+      sell: 2100,
+      total: 3000
     }
   },
   {
-    "id": 4015,
-    "key": "item",
-    "name": "Perplexity",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 4015,
+    key: 'item',
+    name: 'Perplexity',
+    rank: 'Legendary',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "abilityPower": 60,
-      "armorPenetration": 22,
-      "percentMagicPenetration": 30,
-      "percentMovespeed": 5
+    stats: {
+      abilityPower: 60,
+      armorPenetration: 22,
+      percentMagicPenetration: 30,
+      percentMovespeed: 5
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 4016,
-    "key": "item",
-    "name": "Wordless Promise",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 4016,
+    key: 'item',
+    name: 'Wordless Promise',
+    rank: 'Legendary',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "abilityPower": 50,
-      "healAndShieldPower": 25,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 50,
+      healAndShieldPower: 25
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 4017,
-    "key": "item",
-    "name": "Hellfire Hatchet",
-    "aka": [
-      "burn"
+    id: 4017,
+    key: 'item',
+    name: 'Hellfire Hatchet',
+    rank: 'Legendary',
+    aka: [
+      'burn'
     ],
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "attackDamage": 35,
-      "lethality": 12
+    stats: {
+      attackDamage: 35,
+      lethality: 12
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 4401,
-    "key": "item",
-    "name": "Force of Nature",
-    "aka": [
-      "fon"
+    id: 4401,
+    key: 'item',
+    name: 'Force of Nature',
+    rank: 'Legendary',
+    aka: [
+      'fon'
     ],
-    "gold": {
-      "base": 750,
-      "total": 2800,
-      "sell": 1960
+    gold: {
+      base: 750,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1057,
       1028,
       3066
     ],
-    "stats": {
-      "health": 400,
-      "magicResistance": 55,
-      "percentMovespeed": 4
+    stats: {
+      health: 400,
+      magicResistance: 55,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 4402,
-    "key": "item",
-    "name": "Innervating Locket",
-    "gold": {
-      "base": 600,
-      "total": 2950,
-      "sell": 2065
+    id: 4402,
+    key: 'item',
+    name: 'Innervating Locket',
+    gold: {
+      base: 600,
+      sell: 2065,
+      total: 2950
     },
-    "maps": [
+    maps: [
       21
     ]
   },
   {
-    "id": 4403,
-    "key": "item",
-    "name": "The Golden Spatula",
-    "gold": {
-      "base": 687,
-      "total": 7187,
-      "sell": 5031
+    id: 4403,
+    key: 'item',
+    name: 'The Golden Spatula',
+    gold: {
+      base: 687,
+      sell: 5031,
+      total: 7187
     },
-    "maps": [
+    maps: [
       21
     ]
   },
   {
-    "id": 4628,
-    "key": "item",
-    "name": "Horizon Focus",
-    "aka": [
-      "lock on",
-      "snipe"
+    id: 4628,
+    key: 'item',
+    name: 'Horizon Focus',
+    rank: 'Legendary',
+    aka: [
+      'lock on',
+      'snipe'
     ],
-    "gold": {
-      "base": 600,
-      "total": 2700,
-      "sell": 1890
+    gold: {
+      base: 600,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3108,
       3108,
       1052
     ],
-    "stats": {
-      "abilityPower": 75,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 75
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 4629,
-    "key": "item",
-    "name": "Cosmic Drive",
-    "aka": [
-      "cooldown hat"
+    id: 4629,
+    key: 'item',
+    name: 'Cosmic Drive',
+    rank: 'Legendary',
+    aka: [
+      'cooldown hat'
     ],
-    "gold": {
-      "base": 450,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 450,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       3113,
       3108
     ],
-    "stats": {
-      "abilityPower": 70,
-      "health": 350,
-      "percentMovespeed": 4,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 70,
+      health: 350,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Mage",
-      "Movement"
+    tags: [
+      'Mage',
+      'Movement'
     ]
   },
   {
-    "id": 4630,
-    "key": "item",
-    "name": "Blighting Jewel",
-    "aka": [
-      "pen",
-      "purple"
+    id: 4630,
+    key: 'item',
+    name: 'Blighting Jewel',
+    rank: 'Epic',
+    aka: [
+      'pen',
+      'purple'
     ],
-    "gold": {
-      "base": 700,
-      "total": 1100,
-      "sell": 770
+    gold: {
+      base: 700,
+      sell: 770,
+      total: 1100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052
     ],
-    "stats": {
-      "abilityPower": 25,
-      "percentMagicPenetration": 13
+    stats: {
+      abilityPower: 25,
+      percentMagicPenetration: 13
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 4632,
-    "key": "item",
-    "name": "Verdant Barrier",
-    "aka": [
-      "necklace"
+    id: 4632,
+    key: 'item',
+    name: 'Verdant Barrier',
+    rank: 'Epic',
+    aka: [
+      'necklace'
     ],
-    "gold": {
-      "base": 400,
-      "total": 1600,
-      "sell": 1120
+    gold: {
+      base: 400,
+      sell: 1120,
+      total: 1600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1052,
       1033,
       1052
     ],
-    "stats": {
-      "abilityPower": 40,
-      "magicResistance": 25
+    stats: {
+      abilityPower: 40,
+      magicResistance: 25
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 4633,
-    "key": "item",
-    "name": "Riftmaker",
-    "aka": [
-      "velkoz"
+    id: 4633,
+    key: 'item',
+    name: 'Riftmaker',
+    rank: 'Legendary',
+    aka: [
+      'velkoz'
     ],
-    "gold": {
-      "base": 950,
-      "total": 3100,
-      "sell": 2170
+    gold: {
+      base: 950,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3147,
       3108
     ],
-    "stats": {
-      "abilityPower": 70,
-      "health": 350,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 70,
+      health: 350
     },
-    "tags": [
-      "Mage",
-      "Lifesteal vamp"
+    tags: [
+      'Mage',
+      'Lifesteal vamp'
     ]
   },
   {
-    "id": 4635,
-    "key": "item",
-    "name": "Leeching Leer",
-    "gold": {
-      "base": 465,
-      "purchasable": false,
-      "total": 1265,
-      "sell": 886
+    id: 4635,
+    key: 'item',
+    name: 'Leeching Leer',
+    gold: {
+      base: 465,
+      purchasable: false,
+      sell: 886,
+      total: 1265
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -7354,16 +7354,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 4636,
-    "key": "item",
-    "name": "Night Harvester",
-    "gold": {
-      "base": 815,
-      "purchasable": false,
-      "total": 2765,
-      "sell": 1936
+    id: 4636,
+    key: 'item',
+    name: 'Night Harvester',
+    gold: {
+      base: 815,
+      purchasable: false,
+      sell: 1936,
+      total: 2765
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -7371,16 +7371,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 4637,
-    "key": "item",
-    "name": "Demonic Embrace",
-    "gold": {
-      "base": 850,
-      "purchasable": false,
-      "total": 3000,
-      "sell": 2100
+    id: 4637,
+    key: 'item',
+    name: 'Demonic Embrace',
+    gold: {
+      base: 850,
+      purchasable: false,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -7388,978 +7388,978 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 4638,
-    "key": "item",
-    "name": "Watchful Wardstone",
-    "gold": {
-      "base": 1100,
-      "total": 1100,
-      "sell": 770
+    id: 4638,
+    key: 'item',
+    name: 'Watchful Wardstone',
+    gold: {
+      base: 1100,
+      sell: 770,
+      total: 1100
     }
   },
   {
-    "id": 4641,
-    "key": "item",
-    "name": "Stirring Wardstone",
-    "gold": {
-      "base": 350,
-      "purchasable": false,
-      "total": 350,
-      "sell": 140
+    id: 4641,
+    key: 'item',
+    name: 'Stirring Wardstone',
+    gold: {
+      base: 350,
+      purchasable: false,
+      sell: 140,
+      total: 350
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 4642,
-    "key": "item",
-    "name": "Bandleglass Mirror",
-    "aka": [
-      "yordle"
+    id: 4642,
+    key: 'item',
+    name: 'Bandleglass Mirror',
+    rank: 'Epic',
+    aka: [
+      'yordle'
     ],
-    "gold": {
-      "base": 50,
-      "total": 900,
-      "sell": 630
+    gold: {
+      base: 50,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1004,
       1052,
       2022
     ],
-    "stats": {
-      "abilityPower": 20,
-      "manaRegen": 100,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 20,
+      manaRegen: 100
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 4643,
-    "key": "item",
-    "name": "Vigilant Wardstone",
-    "gold": {
-      "base": 1200,
-      "total": 2300,
-      "sell": 1610
+    id: 4643,
+    key: 'item',
+    name: 'Vigilant Wardstone',
+    gold: {
+      base: 1200,
+      sell: 1610,
+      total: 2300
     }
   },
   {
-    "id": 4644,
-    "key": "item",
-    "name": "Crown of the Shattered Queen",
-    "gold": {
-      "base": 465,
-      "purchasable": false,
-      "total": 2865,
-      "sell": 2006
+    id: 4644,
+    key: 'item',
+    name: 'Crown of the Shattered Queen',
+    gold: {
+      base: 465,
+      purchasable: false,
+      sell: 2006,
+      total: 2865
     }
   },
   {
-    "id": 4645,
-    "key": "item",
-    "name": "Shadowflame",
-    "gold": {
-      "base": 900,
-      "total": 3200,
-      "sell": 2240
+    id: 4645,
+    key: 'item',
+    name: 'Shadowflame',
+    rank: 'Legendary',
+    gold: {
+      base: 900,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3145,
       1058
     ],
-    "stats": {
-      "abilityPower": 110,
-      "flatMagicPenetration": 15
+    stats: {
+      abilityPower: 110,
+      flatMagicPenetration: 15
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 4646,
-    "key": "item",
-    "name": "Stormsurge",
-    "gold": {
-      "base": 800,
-      "total": 2800,
-      "sell": 1960
+    id: 4646,
+    key: 'item',
+    name: 'Stormsurge',
+    rank: 'Legendary',
+    gold: {
+      base: 800,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3145,
       3113
     ],
-    "stats": {
-      "abilityPower": 90,
-      "flatMagicPenetration": 15,
-      "percentMovespeed": 6
+    stats: {
+      abilityPower: 90,
+      flatMagicPenetration: 15,
+      percentMovespeed: 6
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 6029,
-    "key": "item",
-    "name": "Ironspike Whip",
-    "gold": {
-      "base": 225,
-      "purchasable": false,
-      "total": 1100,
-      "sell": 770
+    id: 6029,
+    key: 'item',
+    name: 'Ironspike Whip',
+    gold: {
+      base: 225,
+      purchasable: false,
+      sell: 770,
+      total: 1100
     }
   },
   {
-    "id": 6032,
-    "key": "item",
-    "name": "Stat Bonus",
-    "gold": {
-      "base": 750,
-      "total": 750,
-      "sell": 375
+    id: 6032,
+    key: 'item',
+    name: 'Stat Bonus',
+    gold: {
+      base: 750,
+      sell: 375,
+      total: 750
     },
-    "maps": [
+    maps: [
       12
     ]
   },
   {
-    "id": 6035,
-    "key": "item",
-    "name": "Silvermere Dawn",
-    "gold": {
-      "base": 425,
-      "purchasable": false,
-      "total": 3000,
-      "sell": 2100
+    id: 6035,
+    key: 'item',
+    name: 'Silvermere Dawn',
+    gold: {
+      base: 425,
+      purchasable: false,
+      sell: 2100,
+      total: 3000
     }
   },
   {
-    "id": 6333,
-    "key": "item",
-    "name": "Death's Dance",
-    "aka": [
-      "dd"
+    id: 6333,
+    key: 'item',
+    name: 'Death\'s Dance',
+    rank: 'Legendary',
+    aka: [
+      'dd'
     ],
-    "gold": {
-      "base": 275,
-      "total": 3300,
-      "sell": 2310
+    gold: {
+      base: 275,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2019,
       1037,
       3133
     ],
-    "stats": {
-      "armor": 50,
-      "attackDamage": 60,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armor: 50,
+      attackDamage: 60
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 6609,
-    "key": "item",
-    "name": "Chempunk Chainsword",
-    "aka": [
-      "grievous",
-      "grievous wounds"
+    id: 6609,
+    key: 'item',
+    name: 'Chempunk Chainsword',
+    rank: 'Legendary',
+    aka: [
+      'grievous',
+      'grievous wounds'
     ],
-    "gold": {
-      "base": 350,
-      "total": 3100,
-      "sell": 2170
+    gold: {
+      base: 350,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3123,
       1011,
       3133
     ],
-    "stats": {
-      "attackDamage": 45,
-      "health": 450,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 45,
+      health: 450
     },
-    "tags": [
-      "Fighter",
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Assassin'
     ]
   },
   {
-    "id": 6610,
-    "key": "item",
-    "name": "Sundered Sky",
-    "gold": {
-      "base": 500,
-      "total": 3100,
-      "sell": 2170
+    id: 6610,
+    key: 'item',
+    name: 'Sundered Sky',
+    rank: 'Legendary',
+    gold: {
+      base: 500,
+      sell: 2170,
+      total: 3100
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2021,
       3133,
       1028
     ],
-    "stats": {
-      "attackDamage": 45,
-      "health": 400,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 45,
+      health: 400
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 6616,
-    "key": "item",
-    "name": "Staff of Flowing Water",
-    "aka": [
-      "nami"
+    id: 6616,
+    key: 'item',
+    name: 'Staff of Flowing Water',
+    rank: 'Legendary',
+    aka: [
+      'nami'
     ],
-    "gold": {
-      "base": 800,
-      "total": 2250,
-      "sell": 1575
+    gold: {
+      base: 800,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3108,
       3114
     ],
-    "stats": {
-      "abilityPower": 35,
-      "healAndShieldPower": 10,
-      "manaRegen": 125,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 35,
+      healAndShieldPower: 10,
+      manaRegen: 125
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 6617,
-    "key": "item",
-    "name": "Moonstone Renewer",
-    "aka": [
-      "yuumi"
+    id: 6617,
+    key: 'item',
+    name: 'Moonstone Renewer',
+    rank: 'Legendary',
+    aka: [
+      'yuumi'
     ],
-    "gold": {
-      "base": 500,
-      "total": 2200,
-      "sell": 1540
+    gold: {
+      base: 500,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       4642
     ],
-    "stats": {
-      "abilityPower": 25,
-      "health": 200,
-      "manaRegen": 125,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 25,
+      health: 200,
+      manaRegen: 125
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 6620,
-    "key": "item",
-    "name": "Echoes of Helia",
-    "aka": [
-      "spooky cup"
+    id: 6620,
+    key: 'item',
+    name: 'Echoes of Helia',
+    rank: 'Legendary',
+    aka: [
+      'spooky cup'
     ],
-    "gold": {
-      "base": 500,
-      "total": 2200,
-      "sell": 1540
+    gold: {
+      base: 500,
+      sell: 1540,
+      total: 2200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       4642
     ],
-    "stats": {
-      "abilityPower": 35,
-      "health": 200,
-      "manaRegen": 125,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 35,
+      health: 200,
+      manaRegen: 125
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 6621,
-    "key": "item",
-    "name": "Dawncore",
-    "aka": [
-      "dawncore"
+    id: 6621,
+    key: 'item',
+    name: 'Dawncore',
+    rank: 'Legendary',
+    aka: [
+      'dawncore'
     ],
-    "gold": {
-      "base": 450,
-      "total": 2500,
-      "sell": 1750
+    gold: {
+      base: 450,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1026,
       3114,
       3114
     ],
-    "stats": {
-      "abilityPower": 45,
-      "healAndShieldPower": 16,
-      "manaRegen": 100
+    stats: {
+      abilityPower: 45,
+      healAndShieldPower: 16,
+      manaRegen: 100
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 6630,
-    "key": "item",
-    "name": "Goredrinker",
-    "gold": {
-      "base": 200,
-      "purchasable": false,
-      "total": 3200,
-      "sell": 2240
+    id: 6630,
+    key: 'item',
+    name: 'Goredrinker',
+    gold: {
+      base: 200,
+      purchasable: false,
+      sell: 2240,
+      total: 3200
     }
   },
   {
-    "id": 6631,
-    "key": "item",
-    "name": "Stridebreaker",
-    "aka": [
-      "kneecapper",
-      "whipchain"
+    id: 6631,
+    key: 'item',
+    name: 'Stridebreaker',
+    rank: 'Legendary',
+    aka: [
+      'kneecapper',
+      'whipchain'
     ],
-    "gold": {
-      "base": 750,
-      "total": 3300,
-      "sell": 2310
+    gold: {
+      base: 750,
+      sell: 2310,
+      total: 3300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3077,
       3044,
       1042
     ],
-    "stats": {
-      "attackDamage": 40,
-      "attackSpeed": 25,
-      "health": 450
+    stats: {
+      attackDamage: 40,
+      attackSpeed: 25,
+      health: 450
     },
-    "tags": [
-      "Fighter",
-      "Movement"
+    tags: [
+      'Fighter',
+      'Movement'
     ]
   },
   {
-    "id": 6632,
-    "key": "item",
-    "name": "Divine Sunderer",
-    "gold": {
-      "base": 700,
-      "purchasable": false,
-      "total": 3450,
-      "sell": 2415
+    id: 6632,
+    key: 'item',
+    name: 'Divine Sunderer',
+    gold: {
+      base: 700,
+      purchasable: false,
+      sell: 2415,
+      total: 3450
     }
   },
   {
-    "id": 6653,
-    "key": "item",
-    "name": "Liandry's Torment",
-    "aka": [
-      "last shadow",
-      "ls",
-      "burn"
+    id: 6653,
+    key: 'item',
+    name: 'Liandry\'s Torment',
+    rank: 'Legendary',
+    aka: [
+      'last shadow',
+      'ls',
+      'burn'
     ],
-    "gold": {
-      "base": 800,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 800,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3147,
       2508
     ],
-    "stats": {
-      "abilityPower": 60,
-      "health": 300
+    stats: {
+      abilityPower: 60,
+      health: 300
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 6655,
-    "key": "item",
-    "name": "Luden's Echo",
-    "gold": {
-      "base": 450,
-      "total": 2750,
-      "sell": 1925
+    id: 6655,
+    key: 'item',
+    name: 'Luden\'s Echo',
+    rank: 'Legendary',
+    gold: {
+      base: 450,
+      sell: 1925,
+      total: 2750
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3802,
       3145
     ],
-    "stats": {
-      "abilityPower": 100,
-      "mana": 600,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      abilityPower: 100,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 6656,
-    "key": "item",
-    "name": "Everfrost",
-    "gold": {
-      "base": 465,
-      "purchasable": false,
-      "total": 2865,
-      "sell": 2006
+    id: 6656,
+    key: 'item',
+    name: 'Everfrost',
+    gold: {
+      base: 465,
+      purchasable: false,
+      sell: 2006,
+      total: 2865
     }
   },
   {
-    "id": 6657,
-    "key": "item",
-    "name": "Rod of Ages",
-    "aka": [
-      "RoA"
+    id: 6657,
+    key: 'item',
+    name: 'Rod of Ages',
+    rank: 'Legendary',
+    aka: [
+      'RoA'
     ],
-    "gold": {
-      "base": 450,
-      "total": 2600,
-      "sell": 1820
+    gold: {
+      base: 450,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1026,
       3803
     ],
-    "stats": {
-      "abilityPower": 45,
-      "health": 350,
-      "mana": 500
+    stats: {
+      abilityPower: 45,
+      health: 350,
+      mana: 500
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 6660,
-    "key": "item",
-    "name": "Bami's Cinder",
-    "aka": [
-      "fire"
+    id: 6660,
+    key: 'item',
+    name: 'Bami\'s Cinder',
+    rank: 'Epic',
+    aka: [
+      'fire'
     ],
-    "gold": {
-      "base": 250,
-      "total": 900,
-      "sell": 630
+    gold: {
+      base: 250,
+      sell: 630,
+      total: 900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1028,
       2022
     ],
-    "stats": {
-      "health": 150,
-      "abilityHaste": 5
+    stats: {
+      abilityHaste: 5,
+      health: 150
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 6662,
-    "key": "item",
-    "name": "Iceborn Gauntlet",
-    "aka": [
-      "Spellblade",
-      "ibg",
-      "frostfire",
-      "frozen",
-      "frozen gauntlet"
+    id: 6662,
+    key: 'item',
+    name: 'Iceborn Gauntlet',
+    rank: 'Legendary',
+    aka: [
+      'Spellblade',
+      'ibg',
+      'frostfire',
+      'frozen',
+      'frozen gauntlet'
     ],
-    "gold": {
-      "base": 800,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 800,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3057,
       1028,
       1031
     ],
-    "stats": {
-      "armor": 50,
-      "health": 300,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armor: 50,
+      health: 300
     },
-    "tags": [
-      "Fighter",
-      "Tank",
-      "Onhit effects"
+    tags: [
+      'Fighter',
+      'Tank',
+      'Onhit effects'
     ]
   },
   {
-    "id": 6664,
-    "key": "item",
-    "name": "Hollow Radiance",
-    "aka": [
-      "catastrophe"
+    id: 6664,
+    key: 'item',
+    name: 'Hollow Radiance',
+    rank: 'Legendary',
+    aka: [
+      'catastrophe'
     ],
-    "gold": {
-      "base": 650,
-      "total": 2800,
-      "sell": 1960
+    gold: {
+      base: 650,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       6660,
       3211
     ],
-    "stats": {
-      "health": 400,
-      "healthRegen": 100,
-      "magicResistance": 40,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      health: 400,
+      healthRegen: 100,
+      magicResistance: 40
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 6665,
-    "key": "item",
-    "name": "Jak'Sho, The Protean",
-    "aka": [
-      "Jak'Sho, The Protean"
+    id: 6665,
+    key: 'item',
+    name: 'Jak\'Sho, The Protean',
+    rank: 'Legendary',
+    aka: [
+      'Jak\'Sho, The Protean'
     ],
-    "gold": {
-      "base": 650,
-      "total": 3200,
-      "sell": 2240
+    gold: {
+      base: 650,
+      sell: 2240,
+      total: 3200
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1011,
       1031,
       1057
     ],
-    "stats": {
-      "armor": 45,
-      "health": 350,
-      "magicResistance": 45
+    stats: {
+      armor: 45,
+      health: 350,
+      magicResistance: 45
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 6667,
-    "key": "item",
-    "name": "Radiant Virtue",
-    "gold": {
-      "base": 600,
-      "purchasable": false,
-      "total": 2600,
-      "sell": 1820
+    id: 6667,
+    key: 'item',
+    name: 'Radiant Virtue',
+    gold: {
+      base: 600,
+      purchasable: false,
+      sell: 1820,
+      total: 2600
     }
   },
   {
-    "id": 6670,
-    "key": "item",
-    "name": "Noonquiver",
-    "gold": {
-      "base": 350,
-      "total": 1300,
-      "sell": 910
+    id: 6670,
+    key: 'item',
+    name: 'Noonquiver',
+    rank: 'Epic',
+    gold: {
+      base: 350,
+      sell: 910,
+      total: 1300
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036,
       1018
     ],
-    "stats": {
-      "attackDamage": 15,
-      "criticalStrikeChance": 20
+    stats: {
+      attackDamage: 15,
+      criticalStrikeChance: 20
     },
-    "tags": [
-      "Marksman",
-      "Onhit effects"
+    tags: [
+      'Marksman',
+      'Onhit effects'
     ]
   },
   {
-    "id": 6671,
-    "key": "item",
-    "name": "Galeforce",
-    "gold": {
-      "base": 650,
-      "purchasable": false,
-      "total": 3500,
-      "sell": 2450
+    id: 6671,
+    key: 'item',
+    name: 'Galeforce',
+    gold: {
+      base: 650,
+      purchasable: false,
+      sell: 2450,
+      total: 3500
     }
   },
   {
-    "id": 6672,
-    "key": "item",
-    "name": "Kraken Slayer",
-    "aka": [
-      "Kraken Slayer"
+    id: 6672,
+    key: 'item',
+    name: 'Kraken Slayer',
+    rank: 'Legendary',
+    aka: [
+      'Kraken Slayer'
     ],
-    "gold": {
-      "base": 325,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 325,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       6690,
       3051,
       1043
     ],
-    "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 40,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 45,
+      attackSpeed: 40,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 6673,
-    "key": "item",
-    "name": "Immortal Shieldbow",
-    "gold": {
-      "base": 825,
-      "total": 3000,
-      "sell": 2100
+    id: 6673,
+    key: 'item',
+    name: 'Immortal Shieldbow',
+    rank: 'Legendary',
+    gold: {
+      base: 825,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       6670
     ],
-    "stats": {
-      "attackDamage": 55,
-      "criticalStrikeChance": 25
+    stats: {
+      attackDamage: 55,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman",
-      "Health and reg"
+    tags: [
+      'Marksman',
+      'Health and reg'
     ]
   },
   {
-    "id": 6675,
-    "key": "item",
-    "name": "Navori Flickerblade",
-    "aka": [
-      "crit shojin"
+    id: 6675,
+    key: 'item',
+    name: 'Navori Flickerblade',
+    rank: 'Legendary',
+    aka: [
+      'crit shojin'
     ],
-    "gold": {
-      "base": 950,
-      "total": 2650,
-      "sell": 1855
+    gold: {
+      base: 950,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1042,
       3086,
       1042
     ],
-    "stats": {
-      "attackSpeed": 40,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 4
+    stats: {
+      attackSpeed: 40,
+      criticalStrikeChance: 25,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 6676,
-    "key": "item",
-    "name": "The Collector",
-    "aka": [
-      "deathblade",
-      "gun",
-      "lethality"
+    id: 6676,
+    key: 'item',
+    name: 'The Collector',
+    rank: 'Legendary',
+    aka: [
+      'deathblade',
+      'gun',
+      'lethality'
     ],
-    "gold": {
-      "base": 525,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 525,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       3134,
       1018
     ],
-    "stats": {
-      "attackDamage": 50,
-      "criticalStrikeChance": 25,
-      "lethality": 10
+    stats: {
+      attackDamage: 50,
+      criticalStrikeChance: 25,
+      lethality: 10
     },
-    "tags": [
-      "Marksman",
-      "Assassin"
+    tags: [
+      'Marksman',
+      'Assassin'
     ]
   },
   {
-    "id": 6677,
-    "key": "item",
-    "name": "Rageknife",
-    "gold": {
-      "base": 600,
-      "purchasable": false,
-      "total": 1100,
-      "sell": 770
+    id: 6677,
+    key: 'item',
+    name: 'Rageknife',
+    gold: {
+      base: 600,
+      purchasable: false,
+      sell: 770,
+      total: 1100
     }
   },
   {
-    "id": 6690,
-    "key": "item",
-    "name": "Rectrix",
-    "gold": {
-      "base": 425,
-      "total": 775,
-      "sell": 543
+    id: 6690,
+    key: 'item',
+    name: 'Rectrix',
+    rank: 'Epic',
+    gold: {
+      base: 425,
+      sell: 543,
+      total: 775
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Epic",
-    "recipe": [
+    recipe: [
       1036
     ],
-    "stats": {
-      "attackDamage": 15,
-      "percentMovespeed": 4
+    stats: {
+      attackDamage: 15,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Assassin",
-      "Fighter"
+    tags: [
+      'Assassin',
+      'Fighter'
     ]
   },
   {
-    "id": 6691,
-    "key": "item",
-    "name": "Duskblade of Draktharr",
-    "gold": {
-      "base": 900,
-      "purchasable": false,
-      "total": 2950,
-      "sell": 2065
+    id: 6691,
+    key: 'item',
+    name: 'Duskblade of Draktharr',
+    gold: {
+      base: 900,
+      purchasable: false,
+      sell: 2065,
+      total: 2950
     }
   },
   {
-    "id": 6692,
-    "key": "item",
-    "name": "Eclipse",
-    "aka": [
-      "lethality"
+    id: 6692,
+    key: 'item',
+    name: 'Eclipse',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 625,
-      "total": 2900,
-      "sell": 2030
+    gold: {
+      base: 625,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3133,
       1037,
       1036
     ],
-    "stats": {
-      "attackDamage": 60,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      attackDamage: 60
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 6693,
-    "key": "item",
-    "name": "Prowler's Claw",
-    "gold": {
-      "base": 800,
-      "purchasable": false,
-      "total": 2850,
-      "sell": 1995
+    id: 6693,
+    key: 'item',
+    name: 'Prowler\'s Claw',
+    gold: {
+      base: 800,
+      purchasable: false,
+      sell: 1995,
+      total: 2850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -8367,261 +8367,261 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 6694,
-    "key": "item",
-    "name": "Serylda's Grudge",
-    "aka": [
-      "slow"
+    id: 6694,
+    key: 'item',
+    name: 'Serylda\'s Grudge',
+    rank: 'Legendary',
+    aka: [
+      'slow'
     ],
-    "gold": {
-      "base": 500,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 500,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3133,
       3035
     ],
-    "stats": {
-      "armorPenetration": 35,
-      "attackDamage": 45,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armorPenetration: 35,
+      attackDamage: 45
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6695,
-    "key": "item",
-    "name": "Serpent's Fang",
-    "aka": [
-      "lethality"
+    id: 6695,
+    key: 'item',
+    name: 'Serpent\'s Fang',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 625,
-      "total": 2500,
-      "sell": 1750
+    gold: {
+      base: 625,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3134,
       1037
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 15
+    stats: {
+      attackDamage: 55,
+      lethality: 15
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6696,
-    "key": "item",
-    "name": "Axiom Arc",
-    "gold": {
-      "base": 363,
-      "total": 2750,
-      "sell": 1925
+    id: 6696,
+    key: 'item',
+    name: 'Axiom Arc',
+    rank: 'Legendary',
+    gold: {
+      base: 363,
+      sell: 1925,
+      total: 2750
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2020,
       3133
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 18,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 55,
+      lethality: 18
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6697,
-    "key": "item",
-    "name": "Hubris",
-    "aka": [
-      "lethality"
+    id: 6697,
+    key: 'item',
+    name: 'Hubris',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 950,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 950,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       21
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3134,
       3133
     ],
-    "stats": {
-      "attackDamage": 60,
-      "lethality": 18,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 60,
+      lethality: 18
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6698,
-    "key": "item",
-    "name": "Profane Hydra",
-    "aka": [
-      "lethality"
+    id: 6698,
+    key: 'item',
+    name: 'Profane Hydra',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 313,
-      "total": 2850,
-      "sell": 1995
+    gold: {
+      base: 313,
+      sell: 1995,
+      total: 2850
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3077,
       2020
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 18,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 55,
+      lethality: 18
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6699,
-    "key": "item",
-    "name": "Voltaic Cyclosword",
-    "aka": [
-      "lethality"
+    id: 6699,
+    key: 'item',
+    name: 'Voltaic Cyclosword',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 963,
-      "total": 3000,
-      "sell": 2100
+    gold: {
+      base: 963,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       2020,
       1036,
       1036
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 18,
-      "abilityHaste": 10
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 55,
+      lethality: 18
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 6700,
-    "key": "item",
-    "name": "Shield of the Rakkor",
-    "gold": {
-      "base": 800,
-      "purchasable": false,
-      "total": 2675,
-      "sell": 1873
+    id: 6700,
+    key: 'item',
+    name: 'Shield of the Rakkor',
+    gold: {
+      base: 800,
+      purchasable: false,
+      sell: 1873,
+      total: 2675
     }
   },
   {
-    "id": 6701,
-    "key": "item",
-    "name": "Opportunity",
-    "aka": [
-      "lethality"
+    id: 6701,
+    key: 'item',
+    name: 'Opportunity',
+    rank: 'Legendary',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 475,
-      "total": 2700,
-      "sell": 1890
+    gold: {
+      base: 475,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       1037,
       3134,
       1036
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 18
+    stats: {
+      attackDamage: 55,
+      lethality: 18
     },
-    "tags": [
-      "Assassin",
-      "Movement"
+    tags: [
+      'Assassin',
+      'Movement'
     ]
   },
   {
-    "id": 6702,
-    "key": "item",
-    "name": "Scouting Ahead",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 6702,
+    key: 'item',
+    name: 'Scouting Ahead',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       35
     ]
   },
   {
-    "id": 7050,
-    "key": "item",
-    "name": "Gangplank Placeholder",
-    "gold": {
-      "base": 0,
-      "purchasable": false,
-      "total": 0,
-      "sell": 0
+    id: 7050,
+    key: 'item',
+    name: 'Gangplank Placeholder',
+    gold: {
+      base: 0,
+      purchasable: false,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -8630,16 +8630,16 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 8001,
-    "key": "item",
-    "name": "Anathema's Chains",
-    "gold": {
-      "base": 800,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 8001,
+    key: 'item',
+    name: 'Anathema\'s Chains',
+    gold: {
+      base: 800,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
@@ -8647,4948 +8647,4948 @@ export const itemsLite: ItemLite[] = [
     ]
   },
   {
-    "id": 8010,
-    "key": "item",
-    "name": "Bloodletter's Curse",
-    "gold": {
-      "base": 750,
-      "total": 2900,
-      "sell": 2030
+    id: 8010,
+    key: 'item',
+    name: 'Bloodletter\'s Curse',
+    rank: 'Legendary',
+    gold: {
+      base: 750,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3147,
       3108
     ],
-    "stats": {
-      "abilityPower": 65,
-      "health": 400,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      abilityPower: 65,
+      health: 400
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 8020,
-    "key": "item",
-    "name": "Abyssal Mask",
-    "gold": {
-      "base": 1000,
-      "total": 2650,
-      "sell": 1855
+    id: 8020,
+    key: 'item',
+    name: 'Abyssal Mask',
+    rank: 'Legendary',
+    gold: {
+      base: 1000,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11,
       12,
       21,
       35
     ],
-    "rank": "Legendary",
-    "recipe": [
+    recipe: [
       3067,
       1057
     ],
-    "stats": {
-      "health": 350,
-      "magicResistance": 45,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      health: 350,
+      magicResistance: 45
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 9168,
-    "key": "item",
-    "name": "Locked Weapon Slot",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9168,
+    key: 'item',
+    name: 'Locked Weapon Slot',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9171,
-    "key": "item",
-    "name": "Cyclonic Slicers",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9171,
+    key: 'item',
+    name: 'Cyclonic Slicers',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9172,
-    "key": "item",
-    "name": "YuumiBot",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9172,
+    key: 'item',
+    name: 'YuumiBot',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9173,
-    "key": "item",
-    "name": "Radiant Field",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9173,
+    key: 'item',
+    name: 'Radiant Field',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9174,
-    "key": "item",
-    "name": "Statikk Sword",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9174,
+    key: 'item',
+    name: 'Statikk Sword',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9175,
-    "key": "item",
-    "name": "Lioness's Lament",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9175,
+    key: 'item',
+    name: 'Lioness\'s Lament',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9176,
-    "key": "item",
-    "name": "Gatling Bunny-Guns",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9176,
+    key: 'item',
+    name: 'Gatling Bunny-Guns',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9177,
-    "key": "item",
-    "name": "Searing Shortbow",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9177,
+    key: 'item',
+    name: 'Searing Shortbow',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9178,
-    "key": "item",
-    "name": "The Annihilator",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9178,
+    key: 'item',
+    name: 'The Annihilator',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9179,
-    "key": "item",
-    "name": "Battle Bunny Crossbow",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9179,
+    key: 'item',
+    name: 'Battle Bunny Crossbow',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9180,
-    "key": "item",
-    "name": "UwU Blaster",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9180,
+    key: 'item',
+    name: 'UwU Blaster',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9181,
-    "key": "item",
-    "name": "Vortex Glove",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9181,
+    key: 'item',
+    name: 'Vortex Glove',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9183,
-    "key": "item",
-    "name": "Blade-o-rang",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9183,
+    key: 'item',
+    name: 'Blade-o-rang',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9184,
-    "key": "item",
-    "name": "Bunny Mega-Blast",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9184,
+    key: 'item',
+    name: 'Bunny Mega-Blast',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9185,
-    "key": "item",
-    "name": "Anti-Shark Sea Mine",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9185,
+    key: 'item',
+    name: 'Anti-Shark Sea Mine',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9187,
-    "key": "item",
-    "name": "T.I.B.B.E.R.S",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9187,
+    key: 'item',
+    name: 'T.I.B.B.E.R.S',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9188,
-    "key": "item",
-    "name": "Ani-Mines",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9188,
+    key: 'item',
+    name: 'Ani-Mines',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9189,
-    "key": "item",
-    "name": "Final City Transit",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9189,
+    key: 'item',
+    name: 'Final City Transit',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9190,
-    "key": "item",
-    "name": "Echoing Batblades",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9190,
+    key: 'item',
+    name: 'Echoing Batblades',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9192,
-    "key": "item",
-    "name": "Paw Print Poisoner",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9192,
+    key: 'item',
+    name: 'Paw Print Poisoner',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9193,
-    "key": "item",
-    "name": "Iceblast Armor",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9193,
+    key: 'item',
+    name: 'Iceblast Armor',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9271,
-    "key": "item",
-    "name": "Unceasing Cyclone",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9271,
+    key: 'item',
+    name: 'Unceasing Cyclone',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9272,
-    "key": "item",
-    "name": "YuumiBot_Final_FINAL",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9272,
+    key: 'item',
+    name: 'YuumiBot_Final_FINAL',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9273,
-    "key": "item",
-    "name": "Explosive Embrace",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9273,
+    key: 'item',
+    name: 'Explosive Embrace',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9274,
-    "key": "item",
-    "name": "Prumbis's Electrocarver",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9274,
+    key: 'item',
+    name: 'Prumbis\'s Electrocarver',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9275,
-    "key": "item",
-    "name": "Enveloping Light",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9275,
+    key: 'item',
+    name: 'Enveloping Light',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9276,
-    "key": "item",
-    "name": "Double Bun-Bun Barrage",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9276,
+    key: 'item',
+    name: 'Double Bun-Bun Barrage',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9277,
-    "key": "item",
-    "name": "Evolved Embershot",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9277,
+    key: 'item',
+    name: 'Evolved Embershot',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9278,
-    "key": "item",
-    "name": "Animapocalypse",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9278,
+    key: 'item',
+    name: 'Animapocalypse',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9279,
-    "key": "item",
-    "name": "Bunny Prime Ballista",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9279,
+    key: 'item',
+    name: 'Bunny Prime Ballista',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9280,
-    "key": "item",
-    "name": "OwO Blaster",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9280,
+    key: 'item',
+    name: 'OwO Blaster',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9281,
-    "key": "item",
-    "name": "Tempest's Gauntlet",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9281,
+    key: 'item',
+    name: 'Tempest\'s Gauntlet',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9283,
-    "key": "item",
-    "name": "Quad-o-rang",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9283,
+    key: 'item',
+    name: 'Quad-o-rang',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9284,
-    "key": "item",
-    "name": "Rapid Rabbit Raindown",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9284,
+    key: 'item',
+    name: 'Rapid Rabbit Raindown',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9285,
-    "key": "item",
-    "name": "Neverending Mobstomper",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9285,
+    key: 'item',
+    name: 'Neverending Mobstomper',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9287,
-    "key": "item",
-    "name": "T.I.B.B.E.R.S (B.E.E.G Edition)",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9287,
+    key: 'item',
+    name: 'T.I.B.B.E.R.S (B.E.E.G Edition)',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9288,
-    "key": "item",
-    "name": "Jinx's Tri-Namite",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9288,
+    key: 'item',
+    name: 'Jinx\'s Tri-Namite',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9289,
-    "key": "item",
-    "name": "FC Limited Express",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9289,
+    key: 'item',
+    name: 'FC Limited Express',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9290,
-    "key": "item",
-    "name": "Vayne's Chromablades",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9290,
+    key: 'item',
+    name: 'Vayne\'s Chromablades',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9292,
-    "key": "item",
-    "name": "Bearfoot Chem-Dispenser",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9292,
+    key: 'item',
+    name: 'Bearfoot Chem-Dispenser',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9293,
-    "key": "item",
-    "name": "Deep Freeze",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9293,
+    key: 'item',
+    name: 'Deep Freeze',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9300,
-    "key": "item",
-    "name": "Meow Meow",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9300,
+    key: 'item',
+    name: 'Meow Meow',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9301,
-    "key": "item",
-    "name": "Shield Slam",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9301,
+    key: 'item',
+    name: 'Shield Slam',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9302,
-    "key": "item",
-    "name": "Sound Wave",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9302,
+    key: 'item',
+    name: 'Sound Wave',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9303,
-    "key": "item",
-    "name": "Pillory Swipe",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9303,
+    key: 'item',
+    name: 'Pillory Swipe',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9304,
-    "key": "item",
-    "name": "Steel Tempest",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9304,
+    key: 'item',
+    name: 'Steel Tempest',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9305,
-    "key": "item",
-    "name": "Tentacle Slam",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9305,
+    key: 'item',
+    name: 'Tentacle Slam',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9306,
-    "key": "item",
-    "name": "Winged Dagger",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9306,
+    key: 'item',
+    name: 'Winged Dagger',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9307,
-    "key": "item",
-    "name": "Guiding Hex",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9307,
+    key: 'item',
+    name: 'Guiding Hex',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9308,
-    "key": "item",
-    "name": "Bunny Hop",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9308,
+    key: 'item',
+    name: 'Bunny Hop',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9400,
-    "key": "item",
-    "name": "Battle Cat Barrage",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9400,
+    key: 'item',
+    name: 'Battle Cat Barrage',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9401,
-    "key": "item",
-    "name": "Light of the Lion",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9401,
+    key: 'item',
+    name: 'Light of the Lion',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9402,
-    "key": "item",
-    "name": "Anima Echo",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9402,
+    key: 'item',
+    name: 'Anima Echo',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9403,
-    "key": "item",
-    "name": "Savage Slice",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9403,
+    key: 'item',
+    name: 'Savage Slice',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9404,
-    "key": "item",
-    "name": "Wandering Storms",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9404,
+    key: 'item',
+    name: 'Wandering Storms',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9405,
-    "key": "item",
-    "name": "Grizzly Smash",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9405,
+    key: 'item',
+    name: 'Grizzly Smash',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9406,
-    "key": "item",
-    "name": "Lover's Ricochet",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9406,
+    key: 'item',
+    name: 'Lover\'s Ricochet',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9407,
-    "key": "item",
-    "name": "Hopped-Up Hex",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9407,
+    key: 'item',
+    name: 'Hopped-Up Hex',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 9408,
-    "key": "item",
-    "name": "Carrot Crash",
-    "gold": {
-      "base": 0,
-      "total": 0,
-      "sell": 0
+    id: 9408,
+    key: 'item',
+    name: 'Carrot Crash',
+    gold: {
+      base: 0,
+      sell: 0,
+      total: 0
     },
-    "maps": [
+    maps: [
       33
     ]
   },
   {
-    "id": 123430,
-    "key": "item",
-    "name": "Rite of Ruin",
-    "gold": {
-      "base": 650,
-      "total": 3000,
-      "sell": 2100
+    id: 123430,
+    key: 'item',
+    name: 'Rite of Ruin',
+    gold: {
+      base: 650,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       12
     ]
   },
   {
-    "id": 124011,
-    "key": "item",
-    "name": "Sword of Blossoming Dawn",
-    "gold": {
-      "base": 550,
-      "total": 2350,
-      "sell": 1645
+    id: 124011,
+    key: 'item',
+    name: 'Sword of Blossoming Dawn',
+    gold: {
+      base: 550,
+      sell: 1645,
+      total: 2350
     },
-    "maps": [
+    maps: [
       12
     ]
   },
   {
-    "id": 126697,
-    "key": "item",
-    "name": "Hubris",
-    "gold": {
-      "base": 900,
-      "total": 2950,
-      "sell": 2065
+    id: 126697,
+    key: 'item',
+    name: 'Hubris',
+    gold: {
+      base: 900,
+      sell: 2065,
+      total: 2950
     },
-    "maps": [
+    maps: [
       12,
       35
     ]
   },
   {
-    "id": 220000,
-    "key": "item",
-    "name": "Stat Bonus",
-    "gold": {
-      "base": 750,
-      "total": 750,
-      "sell": 375
+    id: 220000,
+    key: 'item',
+    name: 'Stat Bonus',
+    rank: 'Consumable',
+    gold: {
+      base: 750,
+      sell: 375,
+      total: 750
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220001,
-    "key": "item",
-    "name": "Legendary Fighter Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220001,
+    key: 'item',
+    name: 'Legendary Fighter Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220002,
-    "key": "item",
-    "name": "Legendary Marksman Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220002,
+    key: 'item',
+    name: 'Legendary Marksman Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220003,
-    "key": "item",
-    "name": "Legendary Assassin Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220003,
+    key: 'item',
+    name: 'Legendary Assassin Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220004,
-    "key": "item",
-    "name": "Legendary Mage Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220004,
+    key: 'item',
+    name: 'Legendary Mage Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220005,
-    "key": "item",
-    "name": "Legendary Tank Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220005,
+    key: 'item',
+    name: 'Legendary Tank Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220006,
-    "key": "item",
-    "name": "Legendary Support Item",
-    "gold": {
-      "base": 2000,
-      "total": 2000,
-      "sell": 2000
+    id: 220006,
+    key: 'item',
+    name: 'Legendary Support Item',
+    rank: 'Consumable',
+    gold: {
+      base: 2000,
+      sell: 2000,
+      total: 2000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220007,
-    "key": "item",
-    "name": "Prismatic Item",
-    "gold": {
-      "base": 4000,
-      "total": 4000,
-      "sell": 4000
+    id: 220007,
+    key: 'item',
+    name: 'Prismatic Item',
+    rank: 'Consumable',
+    gold: {
+      base: 4000,
+      sell: 4000,
+      total: 4000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Consumable",
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 220008,
-    "key": "item",
-    "name": "Anvil Voucher",
-    "gold": {
-      "base": 750,
-      "purchasable": false,
-      "total": 750,
-      "sell": 0
+    id: 220008,
+    key: 'item',
+    name: 'Anvil Voucher',
+    gold: {
+      base: 750,
+      purchasable: false,
+      sell: 0,
+      total: 750
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 220009,
-    "key": "item",
-    "name": "Gold Stat Anvil Voucher",
-    "gold": {
-      "base": 750,
-      "purchasable": false,
-      "total": 750,
-      "sell": 0
+    id: 220009,
+    key: 'item',
+    name: 'Gold Stat Anvil Voucher',
+    gold: {
+      base: 750,
+      purchasable: false,
+      sell: 0,
+      total: 750
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 220010,
-    "key": "item",
-    "name": "Prismatic Stat Voucher",
-    "gold": {
-      "base": 750,
-      "purchasable": false,
-      "total": 750,
-      "sell": 0
+    id: 220010,
+    key: 'item',
+    name: 'Prismatic Stat Voucher',
+    gold: {
+      base: 750,
+      purchasable: false,
+      sell: 0,
+      total: 750
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 220011,
-    "key": "item",
-    "name": "Bravery Voucher",
-    "gold": {
-      "base": 750,
-      "purchasable": false,
-      "total": 750,
-      "sell": 0
+    id: 220011,
+    key: 'item',
+    name: 'Bravery Voucher',
+    gold: {
+      base: 750,
+      purchasable: false,
+      sell: 0,
+      total: 750
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 221011,
-    "key": "item",
-    "name": "Giant's Belt",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
+    id: 221011,
+    key: 'item',
+    name: 'Giant\'s Belt',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
     }
   },
   {
-    "id": 221026,
-    "key": "item",
-    "name": "Blasting Wand",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
+    id: 221026,
+    key: 'item',
+    name: 'Blasting Wand',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 221031,
-    "key": "item",
-    "name": "Chain Vest",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
+    id: 221031,
+    key: 'item',
+    name: 'Chain Vest',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
     }
   },
   {
-    "id": 221038,
-    "key": "item",
-    "name": "B. F. Sword",
-    "gold": {
-      "base": 1300,
-      "total": 1300,
-      "sell": 910
+    id: 221038,
+    key: 'item',
+    name: 'B. F. Sword',
+    gold: {
+      base: 1300,
+      sell: 910,
+      total: 1300
     }
   },
   {
-    "id": 221043,
-    "key": "item",
-    "name": "Recurve Bow",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
+    id: 221043,
+    key: 'item',
+    name: 'Recurve Bow',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
     }
   },
   {
-    "id": 221053,
-    "key": "item",
-    "name": "Vampiric Scepter",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
+    id: 221053,
+    key: 'item',
+    name: 'Vampiric Scepter',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
     }
   },
   {
-    "id": 221057,
-    "key": "item",
-    "name": "Negatron Cloak",
-    "gold": {
-      "base": 450,
-      "purchasable": false,
-      "total": 450,
-      "sell": 315
+    id: 221057,
+    key: 'item',
+    name: 'Negatron Cloak',
+    gold: {
+      base: 450,
+      purchasable: false,
+      sell: 315,
+      total: 450
     }
   },
   {
-    "id": 221058,
-    "key": "item",
-    "name": "Needlessly Large Rod",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 0
+    id: 221058,
+    key: 'item',
+    name: 'Needlessly Large Rod',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 0,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222022,
-    "key": "item",
-    "name": "Glowing Mote",
-    "gold": {
-      "base": 250,
-      "purchasable": false,
-      "total": 250,
-      "sell": 175
+    id: 222022,
+    key: 'item',
+    name: 'Glowing Mote',
+    gold: {
+      base: 250,
+      purchasable: false,
+      sell: 175,
+      total: 250
     }
   },
   {
-    "id": 222051,
-    "key": "item",
-    "name": "Guardian's Horn",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
+    id: 222051,
+    key: 'item',
+    name: 'Guardian\'s Horn',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222065,
-    "key": "item",
-    "name": "Shurelya's Battlesong",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 222065,
+    key: 'item',
+    name: 'Shurelya\'s Battlesong',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222141,
-    "key": "item",
-    "name": "Cappa Juice",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 500
+    id: 222141,
+    key: 'item',
+    name: 'Cappa Juice',
+    gold: {
+      base: 500,
+      sell: 500,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222502,
-    "key": "item",
-    "name": "Unending Despair",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222502,
+    key: 'item',
+    name: 'Unending Despair',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222503,
-    "key": "item",
-    "name": "Blackfire Torch",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 222503,
+    key: 'item',
+    name: 'Blackfire Torch',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222504,
-    "key": "item",
-    "name": "Kaenic Rookern",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 222504,
+    key: 'item',
+    name: 'Kaenic Rookern',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222510,
-    "key": "item",
-    "name": "Dusk and Dawn",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222510,
+    key: 'item',
+    name: 'Dusk and Dawn',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222512,
-    "key": "item",
-    "name": "Fiendhunter Bolts",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 222512,
+    key: 'item',
+    name: 'Fiendhunter Bolts',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222517,
-    "key": "item",
-    "name": "Endless Hunger",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222517,
+    key: 'item',
+    name: 'Endless Hunger',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222522,
-    "key": "item",
-    "name": "Actualizer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222522,
+    key: 'item',
+    name: 'Actualizer',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222523,
-    "key": "item",
-    "name": "Hexoptics C44",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222523,
+    key: 'item',
+    name: 'Hexoptics C44',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222524,
-    "key": "item",
-    "name": "Bandlepipes",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222524,
+    key: 'item',
+    name: 'Bandlepipes',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222525,
-    "key": "item",
-    "name": "Protoplasm Harness",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 222525,
+    key: 'item',
+    name: 'Protoplasm Harness',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222526,
-    "key": "item",
-    "name": "Whispering Circlet",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 222526,
+    key: 'item',
+    name: 'Whispering Circlet',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 222530,
-    "key": "item",
-    "name": "Diadem of Songs",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 222530,
+    key: 'item',
+    name: 'Diadem of Songs',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223001,
-    "key": "item",
-    "name": "Evenshroud",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 223001,
+    key: 'item',
+    name: 'Evenshroud',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 223002,
-    "key": "item",
-    "name": "Trailblazer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 223002,
+    key: 'item',
+    name: 'Trailblazer',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 223003,
-    "key": "item",
-    "name": "Archangel's Staff",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223003,
+    key: 'item',
+    name: 'Archangel\'s Staff',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223004,
-    "key": "item",
-    "name": "Manamune",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223004,
+    key: 'item',
+    name: 'Manamune',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223005,
-    "key": "item",
-    "name": "Ghostcrawlers",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
+    id: 223005,
+    key: 'item',
+    name: 'Ghostcrawlers',
+    rank: 'Boots',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Boots",
-    "stats": {
-      "flatMovespeed": 70
+    stats: {
+      flatMovespeed: 70
     }
   },
   {
-    "id": 223006,
-    "key": "item",
-    "name": "Berserker's Greaves",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
+    id: 223006,
+    key: 'item',
+    name: 'Berserker\'s Greaves',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223009,
-    "key": "item",
-    "name": "Boots of Swiftness",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
+    id: 223009,
+    key: 'item',
+    name: 'Boots of Swiftness',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223011,
-    "key": "item",
-    "name": "Chemtech Putrifier",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 1900,
-      "sell": 1330
+    id: 223011,
+    key: 'item',
+    name: 'Chemtech Putrifier',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 1330,
+      total: 1900
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223020,
-    "key": "item",
-    "name": "Sorcerer's Shoes",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
+    id: 223020,
+    key: 'item',
+    name: 'Sorcerer\'s Shoes',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223026,
-    "key": "item",
-    "name": "Guardian Angel",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223026,
+    key: 'item',
+    name: 'Guardian Angel',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223031,
-    "key": "item",
-    "name": "Infinity Edge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223031,
+    key: 'item',
+    name: 'Infinity Edge',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223032,
-    "key": "item",
-    "name": "Yun Tal Wildarrows",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223032,
+    key: 'item',
+    name: 'Yun Tal Wildarrows',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223033,
-    "key": "item",
-    "name": "Mortal Reminder",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223033,
+    key: 'item',
+    name: 'Mortal Reminder',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223036,
-    "key": "item",
-    "name": "Lord Dominik's Regards",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223036,
+    key: 'item',
+    name: 'Lord Dominik\'s Regards',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223039,
-    "key": "item",
-    "name": "Atma's Reckoning",
-    "aka": [
-      "wreckoning"
+    id: 223039,
+    key: 'item',
+    name: 'Atma\'s Reckoning',
+    rank: 'Legendary',
+    aka: [
+      'wreckoning'
     ],
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
-      30
-    ],
-    "rank": "Legendary",
-    "stats": {
-      "criticalStrikeChance": 20,
-      "health": 700
-    },
-    "tags": [
-      "Fighter"
-    ]
-  },
-  {
-    "id": 223040,
-    "key": "item",
-    "name": "Seraph's Embrace",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223042,
-    "key": "item",
-    "name": "Muramana",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223046,
-    "key": "item",
-    "name": "Phantom Dancer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223047,
-    "key": "item",
-    "name": "Plated Steelcaps",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223050,
-    "key": "item",
-    "name": "Zeke's Convergence",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223053,
-    "key": "item",
-    "name": "Sterak's Gage",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223057,
-    "key": "item",
-    "name": "Sheen",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    }
-  },
-  {
-    "id": 223065,
-    "key": "item",
-    "name": "Spirit Visage",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223067,
-    "key": "item",
-    "name": "Kindlegem",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
-    }
-  },
-  {
-    "id": 223068,
-    "key": "item",
-    "name": "Sunfire Aegis",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223071,
-    "key": "item",
-    "name": "Black Cleaver",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223072,
-    "key": "item",
-    "name": "Bloodthirster",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223073,
-    "key": "item",
-    "name": "Experimental Hexplate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223074,
-    "key": "item",
-    "name": "Ravenous Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223075,
-    "key": "item",
-    "name": "Thornmail",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223078,
-    "key": "item",
-    "name": "Trinity Force",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223084,
-    "key": "item",
-    "name": "Heartsteel",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223085,
-    "key": "item",
-    "name": "Runaan's Hurricane",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223087,
-    "key": "item",
-    "name": "Statikk Shiv",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223089,
-    "key": "item",
-    "name": "Rabadon's Deathcap",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223091,
-    "key": "item",
-    "name": "Wit's End",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223094,
-    "key": "item",
-    "name": "Rapid Firecannon",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223095,
-    "key": "item",
-    "name": "Stormrazor",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223100,
-    "key": "item",
-    "name": "Lich Bane",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223102,
-    "key": "item",
-    "name": "Banshee's Veil",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223105,
-    "key": "item",
-    "name": "Aegis of the Legion",
-    "gold": {
-      "base": 500,
-      "purchasable": false,
-      "total": 500,
-      "sell": 350
-    }
-  },
-  {
-    "id": 223107,
-    "key": "item",
-    "name": "Redemption",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223109,
-    "key": "item",
-    "name": "Knight's Vow",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223110,
-    "key": "item",
-    "name": "Frozen Heart",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223111,
-    "key": "item",
-    "name": "Mercury's Treads",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223112,
-    "key": "item",
-    "name": "Guardian's Orb",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223115,
-    "key": "item",
-    "name": "Nashor's Tooth",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223116,
-    "key": "item",
-    "name": "Rylai's Crystal Scepter",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223118,
-    "key": "item",
-    "name": "Malignance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223119,
-    "key": "item",
-    "name": "Winter's Approach",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223121,
-    "key": "item",
-    "name": "Fimbulwinter",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223124,
-    "key": "item",
-    "name": "Guinsoo's Rageblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223135,
-    "key": "item",
-    "name": "Void Staff",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223137,
-    "key": "item",
-    "name": "Cryptbloom",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223139,
-    "key": "item",
-    "name": "Mercurial Scimitar",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223142,
-    "key": "item",
-    "name": "Youmuu's Ghostblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223143,
-    "key": "item",
-    "name": "Randuin's Omen",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223146,
-    "key": "item",
-    "name": "Hextech Gunblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223152,
-    "key": "item",
-    "name": "Hextech Rocketbelt",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223153,
-    "key": "item",
-    "name": "Blade of The Ruined King",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223156,
-    "key": "item",
-    "name": "Maw of Malmortius",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223157,
-    "key": "item",
-    "name": "Zhonya's Hourglass",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223158,
-    "key": "item",
-    "name": "Ionian Boots of Lucidity",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 350
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223161,
-    "key": "item",
-    "name": "Spear of Shojin",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223165,
-    "key": "item",
-    "name": "Morellonomicon",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223172,
-    "key": "item",
-    "name": "Zephyr",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223177,
-    "key": "item",
-    "name": "Guardian's Blade",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223181,
-    "key": "item",
-    "name": "Hullbreaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223184,
-    "key": "item",
-    "name": "Guardian's Hammer",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 223185,
-    "key": "item",
-    "name": "Guardian's Dirk",
-    "gold": {
-      "base": 500,
-      "total": 500,
-      "sell": 250
-    },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Starter",
-    "stats": {
-      "attackDamage": 25,
-      "lethality": 11,
-      "abilityHaste": 10
+    stats: {
+      criticalStrikeChance: 20,
+      health: 700
     },
-    "tags": [
-      "Fighter",
-      "Assassin"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 223190,
-    "key": "item",
-    "name": "Locket of the Iron Solari",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223040,
+    key: 'item',
+    name: 'Seraph\'s Embrace',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223193,
-    "key": "item",
-    "name": "Gargoyle Stoneplate",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 223042,
+    key: 'item',
+    name: 'Muramana',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223046,
+    key: 'item',
+    name: 'Phantom Dancer',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223047,
+    key: 'item',
+    name: 'Plated Steelcaps',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223050,
+    key: 'item',
+    name: 'Zeke\'s Convergence',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223053,
+    key: 'item',
+    name: 'Sterak\'s Gage',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223057,
+    key: 'item',
+    name: 'Sheen',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 223222,
-    "key": "item",
-    "name": "Mikael's Blessing",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223065,
+    key: 'item',
+    name: 'Spirit Visage',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223302,
-    "key": "item",
-    "name": "Terminus",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223067,
+    key: 'item',
+    name: 'Kindlegem',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
+    }
+  },
+  {
+    id: 223068,
+    key: 'item',
+    name: 'Sunfire Aegis',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223504,
-    "key": "item",
-    "name": "Ardent Censer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223071,
+    key: 'item',
+    name: 'Black Cleaver',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223508,
-    "key": "item",
-    "name": "Essence Reaver",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223072,
+    key: 'item',
+    name: 'Bloodthirster',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223742,
-    "key": "item",
-    "name": "Dead Man's Plate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223073,
+    key: 'item',
+    name: 'Experimental Hexplate',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223748,
-    "key": "item",
-    "name": "Titanic Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223074,
+    key: 'item',
+    name: 'Ravenous Hydra',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 223814,
-    "key": "item",
-    "name": "Edge of Night",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223075,
+    key: 'item',
+    name: 'Thornmail',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224004,
-    "key": "item",
-    "name": "Spectral Cutlass",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223078,
+    key: 'item',
+    name: 'Trinity Force',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223084,
+    key: 'item',
+    name: 'Heartsteel',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223085,
+    key: 'item',
+    name: 'Runaan\'s Hurricane',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223087,
+    key: 'item',
+    name: 'Statikk Shiv',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223089,
+    key: 'item',
+    name: 'Rabadon\'s Deathcap',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223091,
+    key: 'item',
+    name: 'Wit\'s End',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223094,
+    key: 'item',
+    name: 'Rapid Firecannon',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223095,
+    key: 'item',
+    name: 'Stormrazor',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223100,
+    key: 'item',
+    name: 'Lich Bane',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223102,
+    key: 'item',
+    name: 'Banshee\'s Veil',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223105,
+    key: 'item',
+    name: 'Aegis of the Legion',
+    gold: {
+      base: 500,
+      purchasable: false,
+      sell: 350,
+      total: 500
+    }
+  },
+  {
+    id: 223107,
+    key: 'item',
+    name: 'Redemption',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223109,
+    key: 'item',
+    name: 'Knight\'s Vow',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223110,
+    key: 'item',
+    name: 'Frozen Heart',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223111,
+    key: 'item',
+    name: 'Mercury\'s Treads',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223112,
+    key: 'item',
+    name: 'Guardian\'s Orb',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223115,
+    key: 'item',
+    name: 'Nashor\'s Tooth',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223116,
+    key: 'item',
+    name: 'Rylai\'s Crystal Scepter',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223118,
+    key: 'item',
+    name: 'Malignance',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223119,
+    key: 'item',
+    name: 'Winter\'s Approach',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223121,
+    key: 'item',
+    name: 'Fimbulwinter',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223124,
+    key: 'item',
+    name: 'Guinsoo\'s Rageblade',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223135,
+    key: 'item',
+    name: 'Void Staff',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223137,
+    key: 'item',
+    name: 'Cryptbloom',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223139,
+    key: 'item',
+    name: 'Mercurial Scimitar',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223142,
+    key: 'item',
+    name: 'Youmuu\'s Ghostblade',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223143,
+    key: 'item',
+    name: 'Randuin\'s Omen',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223146,
+    key: 'item',
+    name: 'Hextech Gunblade',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223152,
+    key: 'item',
+    name: 'Hextech Rocketbelt',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223153,
+    key: 'item',
+    name: 'Blade of The Ruined King',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223156,
+    key: 'item',
+    name: 'Maw of Malmortius',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223157,
+    key: 'item',
+    name: 'Zhonya\'s Hourglass',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223158,
+    key: 'item',
+    name: 'Ionian Boots of Lucidity',
+    gold: {
+      base: 500,
+      sell: 350,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223161,
+    key: 'item',
+    name: 'Spear of Shojin',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223165,
+    key: 'item',
+    name: 'Morellonomicon',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223172,
+    key: 'item',
+    name: 'Zephyr',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223177,
+    key: 'item',
+    name: 'Guardian\'s Blade',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223181,
+    key: 'item',
+    name: 'Hullbreaker',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223184,
+    key: 'item',
+    name: 'Guardian\'s Hammer',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 223185,
+    key: 'item',
+    name: 'Guardian\'s Dirk',
+    rank: 'Starter',
+    gold: {
+      base: 500,
+      sell: 250,
+      total: 500
+    },
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "attackDamage": 50,
-      "lethality": 15,
-      "percentMovespeed": 4
+    stats: {
+      abilityHaste: 10,
+      attackDamage: 25,
+      lethality: 11
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Fighter',
+      'Assassin'
     ]
   },
   {
-    "id": 224005,
-    "key": "item",
-    "name": "Imperial Mandate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223190,
+    key: 'item',
+    name: 'Locket of the Iron Solari',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224401,
-    "key": "item",
-    "name": "Force of Nature",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 224403,
-    "key": "item",
-    "name": "The Golden Spatula",
-    "aka": [
-      "spatch",
-      "urf",
-      "manatee",
-      "Quest",
-      "Urf's Champion",
-      "burn"
-    ],
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
-    },
-    "maps": [
-      30
-    ],
-    "rank": "Special",
-    "stats": {
-      "abilityPower": 125,
-      "armor": 40,
-      "attackDamage": 90,
-      "attackSpeed": 60,
-      "criticalStrikeChance": 25,
-      "health": 350,
-      "healthRegen": 200,
-      "magicResistance": 40,
-      "mana": 350,
-      "manaRegen": 200,
-      "percentMovespeed": 10,
-      "abilityHaste": 20,
-      "omnivamp": 15
+    id: 223193,
+    key: 'item',
+    name: 'Gargoyle Stoneplate',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 224628,
-    "key": "item",
-    "name": "Horizon Focus",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223222,
+    key: 'item',
+    name: 'Mikael\'s Blessing',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224629,
-    "key": "item",
-    "name": "Cosmic Drive",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223302,
+    key: 'item',
+    name: 'Terminus',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224633,
-    "key": "item",
-    "name": "Riftmaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223504,
+    key: 'item',
+    name: 'Ardent Censer',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224636,
-    "key": "item",
-    "name": "Night Harvester",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    }
-  },
-  {
-    "id": 224637,
-    "key": "item",
-    "name": "Demonic Embrace",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    }
-  },
-  {
-    "id": 224644,
-    "key": "item",
-    "name": "Crown of the Shattered Queen",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    }
-  },
-  {
-    "id": 224645,
-    "key": "item",
-    "name": "Shadowflame",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223508,
+    key: 'item',
+    name: 'Essence Reaver',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 224646,
-    "key": "item",
-    "name": "Stormsurge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223742,
+    key: 'item',
+    name: 'Dead Man\'s Plate',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226035,
-    "key": "item",
-    "name": "Silvermere Dawn",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
-    }
-  },
-  {
-    "id": 226333,
-    "key": "item",
-    "name": "Death's Dance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223748,
+    key: 'item',
+    name: 'Titanic Hydra',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226609,
-    "key": "item",
-    "name": "Chempunk Chainsword",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 223814,
+    key: 'item',
+    name: 'Edge of Night',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226610,
-    "key": "item",
-    "name": "Sundered Sky",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 224004,
+    key: 'item',
+    name: 'Spectral Cutlass',
+    rank: 'Legendary',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 226616,
-    "key": "item",
-    "name": "Staff of Flowing Water",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 226617,
-    "key": "item",
-    "name": "Moonstone Renewer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 226620,
-    "key": "item",
-    "name": "Echoes of Helia",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 226621,
-    "key": "item",
-    "name": "Dawncore",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
-    },
-    "maps": [
-      30
-    ]
-  },
-  {
-    "id": 226630,
-    "key": "item",
-    "name": "Goredrinker",
-    "aka": [
-      "slurp"
-    ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
-    },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    stats: {
+      attackDamage: 50,
+      lethality: 15,
+      percentMovespeed: 4
+    },
+    tags: [
+      'Assassin'
+    ]
+  },
+  {
+    id: 224005,
+    key: 'item',
+    name: 'Imperial Mandate',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224401,
+    key: 'item',
+    name: 'Force of Nature',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224403,
+    key: 'item',
+    name: 'The Golden Spatula',
+    rank: 'Special',
+    aka: [
+      'spatch',
+      'urf',
+      'manatee',
+      'Quest',
+      'Urf\'s Champion',
+      'burn'
+    ],
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
+    },
+    maps: [
+      30
+    ],
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 125,
+      armor: 40,
+      attackDamage: 90,
+      attackSpeed: 60,
+      criticalStrikeChance: 25,
+      health: 350,
+      healthRegen: 200,
+      magicResistance: 40,
+      mana: 350,
+      manaRegen: 200,
+      omnivamp: 15,
+      percentMovespeed: 10
+    }
+  },
+  {
+    id: 224628,
+    key: 'item',
+    name: 'Horizon Focus',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224629,
+    key: 'item',
+    name: 'Cosmic Drive',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224633,
+    key: 'item',
+    name: 'Riftmaker',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224636,
+    key: 'item',
+    name: 'Night Harvester',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    }
+  },
+  {
+    id: 224637,
+    key: 'item',
+    name: 'Demonic Embrace',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    }
+  },
+  {
+    id: 224644,
+    key: 'item',
+    name: 'Crown of the Shattered Queen',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    }
+  },
+  {
+    id: 224645,
+    key: 'item',
+    name: 'Shadowflame',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 224646,
+    key: 'item',
+    name: 'Stormsurge',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226035,
+    key: 'item',
+    name: 'Silvermere Dawn',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
+    }
+  },
+  {
+    id: 226333,
+    key: 'item',
+    name: 'Death\'s Dance',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226609,
+    key: 'item',
+    name: 'Chempunk Chainsword',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226610,
+    key: 'item',
+    name: 'Sundered Sky',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226616,
+    key: 'item',
+    name: 'Staff of Flowing Water',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226617,
+    key: 'item',
+    name: 'Moonstone Renewer',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226620,
+    key: 'item',
+    name: 'Echoes of Helia',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226621,
+    key: 'item',
+    name: 'Dawncore',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
+    },
+    maps: [
+      30
+    ]
+  },
+  {
+    id: 226630,
+    key: 'item',
+    name: 'Goredrinker',
+    rank: 'Special',
+    aka: [
+      'slurp'
+    ],
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
+    },
+    maps: [
+      30
+    ],
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 55,
-      "health": 400,
-      "abilityHaste": 20,
-      "omnivamp": 10
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 55,
+      health: 400,
+      omnivamp: 10
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 226631,
-    "key": "item",
-    "name": "Stridebreaker",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226631,
+    key: 'item',
+    name: 'Stridebreaker',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226632,
-    "key": "item",
-    "name": "Divine Sunderer",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 226632,
+    key: 'item',
+    name: 'Divine Sunderer',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 226653,
-    "key": "item",
-    "name": "Liandry's Anguish",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226653,
+    key: 'item',
+    name: 'Liandry\'s Anguish',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226655,
-    "key": "item",
-    "name": "Luden's Echo",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226655,
+    key: 'item',
+    name: 'Luden\'s Echo',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226656,
-    "key": "item",
-    "name": "Everfrost",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 226656,
+    key: 'item',
+    name: 'Everfrost',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 226657,
-    "key": "item",
-    "name": "Rod of Ages",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226657,
+    key: 'item',
+    name: 'Rod of Ages',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226662,
-    "key": "item",
-    "name": "Iceborn Gauntlet",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226662,
+    key: 'item',
+    name: 'Iceborn Gauntlet',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226664,
-    "key": "item",
-    "name": "Hollow Radiance",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226664,
+    key: 'item',
+    name: 'Hollow Radiance',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226665,
-    "key": "item",
-    "name": "Jak'Sho, The Protean",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226665,
+    key: 'item',
+    name: 'Jak\'Sho, The Protean',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226667,
-    "key": "item",
-    "name": "Radiant Virtue",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 226667,
+    key: 'item',
+    name: 'Radiant Virtue',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 226671,
-    "key": "item",
-    "name": "Galeforce",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 226671,
+    key: 'item',
+    name: 'Galeforce',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 226672,
-    "key": "item",
-    "name": "Kraken Slayer",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226672,
+    key: 'item',
+    name: 'Kraken Slayer',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226673,
-    "key": "item",
-    "name": "Immortal Shieldbow",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226673,
+    key: 'item',
+    name: 'Immortal Shieldbow',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226675,
-    "key": "item",
-    "name": "Navori Flickerblades",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226675,
+    key: 'item',
+    name: 'Navori Flickerblades',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226676,
-    "key": "item",
-    "name": "The Collector",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226676,
+    key: 'item',
+    name: 'The Collector',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226691,
-    "key": "item",
-    "name": "Duskblade of Draktharr",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 226691,
+    key: 'item',
+    name: 'Duskblade of Draktharr',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     }
   },
   {
-    "id": 226692,
-    "key": "item",
-    "name": "Eclipse",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226692,
+    key: 'item',
+    name: 'Eclipse',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226693,
-    "key": "item",
-    "name": "Prowler's Claw",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 226693,
+    key: 'item',
+    name: 'Prowler\'s Claw',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226694,
-    "key": "item",
-    "name": "Serylda's Grudge",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226694,
+    key: 'item',
+    name: 'Serylda\'s Grudge',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226695,
-    "key": "item",
-    "name": "Serpent's Fang",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226695,
+    key: 'item',
+    name: 'Serpent\'s Fang',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226696,
-    "key": "item",
-    "name": "Axiom Arc",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226696,
+    key: 'item',
+    name: 'Axiom Arc',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226697,
-    "key": "item",
-    "name": "Hubris",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226697,
+    key: 'item',
+    name: 'Hubris',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226698,
-    "key": "item",
-    "name": "Profane Hydra",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226698,
+    key: 'item',
+    name: 'Profane Hydra',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226699,
-    "key": "item",
-    "name": "Voltaic Cyclosword",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226699,
+    key: 'item',
+    name: 'Voltaic Cyclosword',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 226701,
-    "key": "item",
-    "name": "Opportunity",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 226701,
+    key: 'item',
+    name: 'Opportunity',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228001,
-    "key": "item",
-    "name": "Anathema's Chains",
-    "aka": [
-      "Helia",
-      "Vendetta",
-      "hel",
-      "healia",
-      "heal"
+    id: 228001,
+    key: 'item',
+    name: 'Anathema\'s Chains',
+    rank: 'Legendary',
+    aka: [
+      'Helia',
+      'Vendetta',
+      'hel',
+      'healia',
+      'heal'
     ],
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Legendary",
-    "stats": {
-      "health": 650,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      health: 650
     },
-    "tags": [
-      "Tank",
-      "Support"
+    tags: [
+      'Tank',
+      'Support'
     ]
   },
   {
-    "id": 228002,
-    "key": "item",
-    "name": "Wooglet's Witchcap",
-    "aka": [
-      "Quest",
-      "Deathcap"
+    id: 228002,
+    key: 'item',
+    name: 'Wooglet\'s Witchcap',
+    rank: 'Special',
+    aka: [
+      'Quest',
+      'Deathcap'
     ],
-    "gold": {
-      "base": 6000,
-      "total": 6000,
-      "sell": 4200
+    gold: {
+      base: 6000,
+      sell: 4200,
+      total: 6000
     },
-    "maps": [
+    maps: [
       12,
       30
     ],
-    "rank": "Special",
-    "stats": {
-      "abilityPower": 300,
-      "armor": 50,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 300,
+      armor: 50
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 228003,
-    "key": "item",
-    "name": "Deathblade",
-    "gold": {
-      "base": 9000,
-      "purchasable": false,
-      "total": 9000,
-      "sell": 6300
+    id: 228003,
+    key: 'item',
+    name: 'Deathblade',
+    gold: {
+      base: 9000,
+      purchasable: false,
+      sell: 6300,
+      total: 9000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228004,
-    "key": "item",
-    "name": "Adaptive Helm",
-    "gold": {
-      "base": 6000,
-      "purchasable": false,
-      "total": 6000,
-      "sell": 4200
+    id: 228004,
+    key: 'item',
+    name: 'Adaptive Helm',
+    gold: {
+      base: 6000,
+      purchasable: false,
+      sell: 4200,
+      total: 6000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228005,
-    "key": "item",
-    "name": "Obsidian Cleaver",
-    "gold": {
-      "base": 3000,
-      "purchasable": false,
-      "total": 3000,
-      "sell": 2100
+    id: 228005,
+    key: 'item',
+    name: 'Obsidian Cleaver',
+    gold: {
+      base: 3000,
+      purchasable: false,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228006,
-    "key": "item",
-    "name": "Sanguine Blade",
-    "gold": {
-      "base": 3000,
-      "purchasable": false,
-      "total": 3000,
-      "sell": 2100
+    id: 228006,
+    key: 'item',
+    name: 'Sanguine Blade',
+    gold: {
+      base: 3000,
+      purchasable: false,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228008,
-    "key": "item",
-    "name": "Runeglaive",
-    "gold": {
-      "base": 9000,
-      "purchasable": false,
-      "total": 9000,
-      "sell": 6300
+    id: 228008,
+    key: 'item',
+    name: 'Runeglaive',
+    gold: {
+      base: 9000,
+      purchasable: false,
+      sell: 6300,
+      total: 9000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228009,
-    "key": "item",
-    "name": "Multitool",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 228009,
+    key: 'item',
+    name: 'Multitool',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 228020,
-    "key": "item",
-    "name": "Abyssal Mask",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 228020,
+    key: 'item',
+    name: 'Abyssal Mask',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 322065,
-    "key": "item",
-    "name": "Shurelya's Battlesong",
-    "gold": {
-      "base": 800,
-      "total": 2600,
-      "sell": 1820
+    id: 322065,
+    key: 'item',
+    name: 'Shurelya\'s Battlesong',
+    gold: {
+      base: 800,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 322526,
-    "key": "item",
-    "name": "Whispering Circlet",
-    "gold": {
-      "base": 850,
-      "total": 2250,
-      "sell": 1575
+    id: 322526,
+    key: 'item',
+    name: 'Whispering Circlet',
+    gold: {
+      base: 850,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 322530,
-    "key": "item",
-    "name": "Diadem of Songs",
-    "gold": {
-      "base": 2250,
-      "purchasable": false,
-      "total": 2250,
-      "sell": 1575
+    id: 322530,
+    key: 'item',
+    name: 'Diadem of Songs',
+    gold: {
+      base: 2250,
+      purchasable: false,
+      sell: 1575,
+      total: 2250
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323002,
-    "key": "item",
-    "name": "Trailblazer",
-    "gold": {
-      "base": 1000,
-      "total": 2600,
-      "sell": 1820
+    id: 323002,
+    key: 'item',
+    name: 'Trailblazer',
+    gold: {
+      base: 1000,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323003,
-    "key": "item",
-    "name": "Archangel's Staff",
-    "gold": {
-      "base": 450,
-      "total": 2900,
-      "sell": 2030
+    id: 323003,
+    key: 'item',
+    name: 'Archangel\'s Staff',
+    gold: {
+      base: 450,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323004,
-    "key": "item",
-    "name": "Manamune",
-    "gold": {
-      "base": 1100,
-      "total": 2900,
-      "sell": 2030
+    id: 323004,
+    key: 'item',
+    name: 'Manamune',
+    gold: {
+      base: 1100,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323040,
-    "key": "item",
-    "name": "Seraph's Embrace",
-    "gold": {
-      "base": 2900,
-      "purchasable": false,
-      "total": 2900,
-      "sell": 2030
+    id: 323040,
+    key: 'item',
+    name: 'Seraph\'s Embrace',
+    gold: {
+      base: 2900,
+      purchasable: false,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323042,
-    "key": "item",
-    "name": "Muramana",
-    "gold": {
-      "base": 2900,
-      "purchasable": false,
-      "total": 2900,
-      "sell": 2030
+    id: 323042,
+    key: 'item',
+    name: 'Muramana',
+    gold: {
+      base: 2900,
+      purchasable: false,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323050,
-    "key": "item",
-    "name": "Zeke's Convergence",
-    "gold": {
-      "base": 800,
-      "total": 2300,
-      "sell": 1610
+    id: 323050,
+    key: 'item',
+    name: 'Zeke\'s Convergence',
+    gold: {
+      base: 800,
+      sell: 1610,
+      total: 2300
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323070,
-    "key": "item",
-    "name": "Tear of the Goddess",
-    "gold": {
-      "base": 400,
-      "total": 400,
-      "sell": 280
+    id: 323070,
+    key: 'item',
+    name: 'Tear of the Goddess',
+    gold: {
+      base: 400,
+      sell: 280,
+      total: 400
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323075,
-    "key": "item",
-    "name": "Thornmail",
-    "gold": {
-      "base": 650,
-      "total": 2650,
-      "sell": 1855
+    id: 323075,
+    key: 'item',
+    name: 'Thornmail',
+    gold: {
+      base: 650,
+      sell: 1855,
+      total: 2650
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323107,
-    "key": "item",
-    "name": "Redemption",
-    "gold": {
-      "base": 1000,
-      "total": 2800,
-      "sell": 1960
+    id: 323107,
+    key: 'item',
+    name: 'Redemption',
+    gold: {
+      base: 1000,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323109,
-    "key": "item",
-    "name": "Knight's Vow",
-    "gold": {
-      "base": 1000,
-      "total": 2900,
-      "sell": 2030
+    id: 323109,
+    key: 'item',
+    name: 'Knight\'s Vow',
+    gold: {
+      base: 1000,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323110,
-    "key": "item",
-    "name": "Frozen Heart",
-    "gold": {
-      "base": 800,
-      "total": 2700,
-      "sell": 1890
+    id: 323110,
+    key: 'item',
+    name: 'Frozen Heart',
+    gold: {
+      base: 800,
+      sell: 1890,
+      total: 2700
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323119,
-    "key": "item",
-    "name": "Winter's Approach",
-    "gold": {
-      "base": 300,
-      "total": 2400,
-      "sell": 1680
+    id: 323119,
+    key: 'item',
+    name: 'Winter\'s Approach',
+    gold: {
+      base: 300,
+      sell: 1680,
+      total: 2400
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323121,
-    "key": "item",
-    "name": "Fimbulwinter",
-    "gold": {
-      "base": 2400,
-      "purchasable": false,
-      "total": 2400,
-      "sell": 1680
+    id: 323121,
+    key: 'item',
+    name: 'Fimbulwinter',
+    gold: {
+      base: 2400,
+      purchasable: false,
+      sell: 1680,
+      total: 2400
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323190,
-    "key": "item",
-    "name": "Locket of the Iron Solari",
-    "gold": {
-      "base": 1100,
-      "total": 2600,
-      "sell": 1820
+    id: 323190,
+    key: 'item',
+    name: 'Locket of the Iron Solari',
+    gold: {
+      base: 1100,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323222,
-    "key": "item",
-    "name": "Mikael's Blessing",
-    "gold": {
-      "base": 1000,
-      "total": 2800,
-      "sell": 1960
+    id: 323222,
+    key: 'item',
+    name: 'Mikael\'s Blessing',
+    gold: {
+      base: 1000,
+      sell: 1960,
+      total: 2800
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 323504,
-    "key": "item",
-    "name": "Ardent Censer",
-    "gold": {
-      "base": 700,
-      "total": 2600,
-      "sell": 1820
+    id: 323504,
+    key: 'item',
+    name: 'Ardent Censer',
+    gold: {
+      base: 700,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 324005,
-    "key": "item",
-    "name": "Imperial Mandate",
-    "gold": {
-      "base": 600,
-      "total": 2750,
-      "sell": 1925
+    id: 324005,
+    key: 'item',
+    name: 'Imperial Mandate',
+    gold: {
+      base: 600,
+      sell: 1925,
+      total: 2750
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 326616,
-    "key": "item",
-    "name": "Staff of Flowing Water",
-    "gold": {
-      "base": 750,
-      "total": 2600,
-      "sell": 1820
+    id: 326616,
+    key: 'item',
+    name: 'Staff of Flowing Water',
+    gold: {
+      base: 750,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 326617,
-    "key": "item",
-    "name": "Moonstone Renewer",
-    "gold": {
-      "base": 800,
-      "total": 2900,
-      "sell": 2030
+    id: 326617,
+    key: 'item',
+    name: 'Moonstone Renewer',
+    gold: {
+      base: 800,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 326620,
-    "key": "item",
-    "name": "Echoes of Helia",
-    "gold": {
-      "base": 900,
-      "total": 2600,
-      "sell": 1820
+    id: 326620,
+    key: 'item',
+    name: 'Echoes of Helia',
+    gold: {
+      base: 900,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 326621,
-    "key": "item",
-    "name": "Dawncore",
-    "gold": {
-      "base": 850,
-      "total": 2900,
-      "sell": 2030
+    id: 326621,
+    key: 'item',
+    name: 'Dawncore',
+    gold: {
+      base: 850,
+      sell: 2030,
+      total: 2900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 326657,
-    "key": "item",
-    "name": "Rod of Ages",
-    "gold": {
-      "base": 450,
-      "total": 2600,
-      "sell": 1820
+    id: 326657,
+    key: 'item',
+    name: 'Rod of Ages',
+    gold: {
+      base: 450,
+      sell: 1820,
+      total: 2600
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 328020,
-    "key": "item",
-    "name": "Abyssal Mask",
-    "gold": {
-      "base": 1200,
-      "total": 2850,
-      "sell": 1995
+    id: 328020,
+    key: 'item',
+    name: 'Abyssal Mask',
+    gold: {
+      base: 1200,
+      sell: 1995,
+      total: 2850
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 443054,
-    "key": "item",
-    "name": "Darksteel Talons",
-    "aka": [
-      "bloodrazor",
-      "kitae"
+    id: 443054,
+    key: 'item',
+    name: 'Darksteel Talons',
+    rank: 'Special',
+    aka: [
+      'bloodrazor',
+      'kitae'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 55,
-      "attackSpeed": 50,
-      "percentMovespeed": 5
+    stats: {
+      armor: 55,
+      attackSpeed: 50,
+      percentMovespeed: 5
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443055,
-    "key": "item",
-    "name": "Fulmination",
-    "aka": [
-      "energize"
+    id: 443055,
+    key: 'item',
+    name: 'Fulmination',
+    rank: 'Special',
+    aka: [
+      'energize'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 55,
-      "attackSpeed": 45,
-      "percentMovespeed": 15
+    stats: {
+      attackDamage: 55,
+      attackSpeed: 45,
+      percentMovespeed: 15
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 443056,
-    "key": "item",
-    "name": "Demon King's Crown",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443056,
+    key: 'item',
+    name: 'Demon King\'s Crown',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 443058,
-    "key": "item",
-    "name": "Shield of Molten Stone",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443058,
+    key: 'item',
+    name: 'Shield of Molten Stone',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 100,
-      "health": 300
+    stats: {
+      armor: 100,
+      health: 300
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443059,
-    "key": "item",
-    "name": "Cloak of Starry Night",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443059,
+    key: 'item',
+    name: 'Cloak of Starry Night',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 300,
-      "magicResistance": 100
+    stats: {
+      health: 300,
+      magicResistance: 100
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443060,
-    "key": "item",
-    "name": "Sword of the Divine",
-    "aka": [
-      "sotd"
+    id: 443060,
+    key: 'item',
+    name: 'Sword of the Divine',
+    rank: 'Special',
+    aka: [
+      'sotd'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "criticalStrikeChance": 50
+    stats: {
+      criticalStrikeChance: 50
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 443061,
-    "key": "item",
-    "name": "Force Of Entropy",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443061,
+    key: 'item',
+    name: 'Force Of Entropy',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "criticalStrikeChance": 25,
-      "health": 900,
-      "abilityHaste": 30
+    stats: {
+      abilityHaste: 30,
+      criticalStrikeChance: 25,
+      health: 900
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443062,
-    "key": "item",
-    "name": "Sanguine Gift",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443062,
+    key: 'item',
+    name: 'Sanguine Gift',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 80,
-      "healAndShieldPower": 15,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 80,
+      healAndShieldPower: 15
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 443063,
-    "key": "item",
-    "name": "Eleisa's Miracle",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443063,
+    key: 'item',
+    name: 'Eleisa\'s Miracle',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 50,
-      "magicResistance": 50,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      armor: 50,
+      magicResistance: 50
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 443064,
-    "key": "item",
-    "name": "Talisman Of Ascension",
-    "aka": [
-      "Support",
-      "Economy",
-      "Gold"
+    id: 443064,
+    key: 'item',
+    name: 'Talisman Of Ascension',
+    rank: 'Special',
+    aka: [
+      'Support',
+      'Economy',
+      'Gold'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 443069,
-    "key": "item",
-    "name": "Hamstringer",
-    "aka": [
-      "bleed"
+    id: 443069,
+    key: 'item',
+    name: 'Hamstringer',
+    rank: 'Special',
+    aka: [
+      'bleed'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 45,
-      "attackSpeed": 40,
-      "criticalStrikeChance": 25
+    stats: {
+      attackDamage: 45,
+      attackSpeed: 40,
+      criticalStrikeChance: 25
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 443079,
-    "key": "item",
-    "name": "Turbo Chemtank",
-    "aka": [
-      "catastrophe"
+    id: 443079,
+    key: 'item',
+    name: 'Turbo Chemtank',
+    rank: 'Special',
+    aka: [
+      'catastrophe'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 600
+    stats: {
+      health: 600
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443080,
-    "key": "item",
-    "name": "Twin Mask",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443080,
+    key: 'item',
+    name: 'Twin Mask',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 443081,
-    "key": "item",
-    "name": "Hexbolt Companion",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443081,
+    key: 'item',
+    name: 'Hexbolt Companion',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 75,
-      "health": 500
+    stats: {
+      attackSpeed: 75,
+      health: 500
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 443083,
-    "key": "item",
-    "name": "Warmog's Armor",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443083,
+    key: 'item',
+    name: 'Warmog\'s Armor',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 443090,
-    "key": "item",
-    "name": "Reaper's Toll",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443090,
+    key: 'item',
+    name: 'Reaper\'s Toll',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 50,
-      "percentMovespeed": 5
+    stats: {
+      attackSpeed: 50,
+      percentMovespeed: 5
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 443193,
-    "key": "item",
-    "name": "Gargoyle Stoneplate",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 443193,
+    key: 'item',
+    name: 'Gargoyle Stoneplate',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 65,
-      "magicResistance": 65,
-      "percentMovespeed": 10,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      armor: 65,
+      magicResistance: 65,
+      percentMovespeed: 10
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 444636,
-    "key": "item",
-    "name": "Night Harvester",
-    "aka": [
-      "dark",
-      "scythe"
+    id: 444636,
+    key: 'item',
+    name: 'Night Harvester',
+    rank: 'Special',
+    aka: [
+      'dark',
+      'scythe'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 90,
-      "health": 300,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 90,
+      health: 300
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 444637,
-    "key": "item",
-    "name": "Demonic Embrace",
-    "aka": [
-      "helmet"
+    id: 444637,
+    key: 'item',
+    name: 'Demonic Embrace',
+    rank: 'Special',
+    aka: [
+      'helmet'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 80,
-      "health": 700
+    stats: {
+      abilityPower: 80,
+      health: 700
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 444644,
-    "key": "item",
-    "name": "Crown of the Shattered Queen",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 444644,
+    key: 'item',
+    name: 'Crown of the Shattered Queen',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 85,
-      "health": 350,
-      "mana": 600,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 85,
+      health: 350,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 446632,
-    "key": "item",
-    "name": "Divine Sunderer",
-    "aka": [
-      "Spellblade",
-      "devourer"
+    id: 446632,
+    key: 'item',
+    name: 'Divine Sunderer',
+    rank: 'Special',
+    aka: [
+      'Spellblade',
+      'devourer'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 55,
-      "health": 350,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 55,
+      health: 350
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 446656,
-    "key": "item",
-    "name": "Everfrost",
-    "aka": [
-      "GLP",
-      "hose",
-      "supersoaker"
+    id: 446656,
+    key: 'item',
+    name: 'Everfrost',
+    rank: 'Special',
+    aka: [
+      'GLP',
+      'hose',
+      'supersoaker'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 100,
-      "health": 250,
-      "mana": 600,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      abilityPower: 100,
+      health: 250,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 446667,
-    "key": "item",
-    "name": "Radiant Virtue",
-    "aka": [
-      "rv"
+    id: 446667,
+    key: 'item',
+    name: 'Radiant Virtue',
+    rank: 'Special',
+    aka: [
+      'rv'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 35,
-      "healAndShieldPower": 12,
-      "health": 400,
-      "magicResistance": 35
+    stats: {
+      armor: 35,
+      healAndShieldPower: 12,
+      health: 400,
+      magicResistance: 35
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 446671,
-    "key": "item",
-    "name": "Galeforce",
-    "aka": [
-      "squallrider"
+    id: 446671,
+    key: 'item',
+    name: 'Galeforce',
+    rank: 'Special',
+    aka: [
+      'squallrider'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 65,
-      "attackSpeed": 30,
-      "criticalStrikeChance": 25,
-      "percentMovespeed": 6
+    stats: {
+      attackDamage: 65,
+      attackSpeed: 30,
+      criticalStrikeChance: 25,
+      percentMovespeed: 6
     },
-    "tags": [
-      "Marksman"
+    tags: [
+      'Marksman'
     ]
   },
   {
-    "id": 446691,
-    "key": "item",
-    "name": "Duskblade of Draktharr",
-    "aka": [
-      "lethality"
+    id: 446691,
+    key: 'item',
+    name: 'Duskblade of Draktharr',
+    rank: 'Special',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 50,
-      "lethality": 20,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 50,
+      lethality: 20
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 446693,
-    "key": "item",
-    "name": "Prowler's Claw",
-    "aka": [
-      "lethality"
+    id: 446693,
+    key: 'item',
+    name: 'Prowler\'s Claw',
+    rank: 'Special',
+    aka: [
+      'lethality'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 55,
-      "lethality": 22,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      attackDamage: 55,
+      lethality: 22
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 447100,
-    "key": "item",
-    "name": "Mirage Blade",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447100,
+    key: 'item',
+    name: 'Mirage Blade',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 60,
-      "percentMovespeed": 6
+    stats: {
+      attackSpeed: 60,
+      percentMovespeed: 6
     }
   },
   {
-    "id": 447101,
-    "key": "item",
-    "name": "Gambler's Blade",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447101,
+    key: 'item',
+    name: 'Gambler\'s Blade',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 70,
-      "percentMovespeed": 8,
-      "abilityHaste": 40
+    stats: {
+      abilityHaste: 40,
+      attackSpeed: 70,
+      percentMovespeed: 8
     }
   },
   {
-    "id": 447102,
-    "key": "item",
-    "name": "Reality Fracture",
-    "aka": [
-      "Kevins"
+    id: 447102,
+    key: 'item',
+    name: 'Reality Fracture',
+    rank: 'Special',
+    aka: [
+      'Kevins'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 80,
-      "attackSpeed": 40,
-      "health": 300
+    stats: {
+      abilityPower: 80,
+      attackSpeed: 40,
+      health: 300
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447103,
-    "key": "item",
-    "name": "Hemomancer's Helm",
-    "aka": [
-      "Omnivamp"
+    id: 447103,
+    key: 'item',
+    name: 'Hemomancer\'s Helm',
+    rank: 'Special',
+    aka: [
+      'Omnivamp'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 70,
-      "abilityHaste": 30,
-      "omnivamp": 15
+    stats: {
+      abilityHaste: 30,
+      attackDamage: 70,
+      omnivamp: 15
     },
-    "tags": [
-      "Fighter"
+    tags: [
+      'Fighter'
     ]
   },
   {
-    "id": 447104,
-    "key": "item",
-    "name": "Innervating Locket",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447104,
+    key: 'item',
+    name: 'Innervating Locket',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 70,
-      "health": 200,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 70,
+      health: 200
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447105,
-    "key": "item",
-    "name": "Empyrean Promise",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447105,
+    key: 'item',
+    name: 'Empyrean Promise',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 70,
-      "healAndShieldPower": 18,
-      "manaRegen": 125,
-      "abilityHaste": 30
+    stats: {
+      abilityHaste: 30,
+      abilityPower: 70,
+      healAndShieldPower: 18,
+      manaRegen: 125
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447106,
-    "key": "item",
-    "name": "Dragonheart",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447106,
+    key: 'item',
+    name: 'Dragonheart',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {}
+    stats: {}
   },
   {
-    "id": 447107,
-    "key": "item",
-    "name": "Decapitator",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447107,
+    key: 'item',
+    name: 'Decapitator',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 50,
-      "percentMovespeed": 8
+    stats: {
+      attackSpeed: 50,
+      percentMovespeed: 8
     }
   },
   {
-    "id": 447108,
-    "key": "item",
-    "name": "Runecarver",
-    "aka": [
-      "energize"
+    id: 447108,
+    key: 'item',
+    name: 'Runecarver',
+    rank: 'Special',
+    aka: [
+      'energize'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 80,
-      "percentMovespeed": 4,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 80,
+      percentMovespeed: 4
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447109,
-    "key": "item",
-    "name": "Cruelty",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447109,
+    key: 'item',
+    name: 'Cruelty',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 80,
-      "armor": 30,
-      "magicResistance": 30
+    stats: {
+      abilityPower: 80,
+      armor: 30,
+      magicResistance: 30
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447110,
-    "key": "item",
-    "name": "Moonflair Spellblade",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447110,
+    key: 'item',
+    name: 'Moonflair Spellblade',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 85,
-      "health": 400,
-      "tenacity": 30
+    stats: {
+      abilityPower: 85,
+      health: 400,
+      tenacity: 30
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447111,
-    "key": "item",
-    "name": "Overlord's Bloodmail",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 447111,
+    key: 'item',
+    name: 'Overlord\'s Bloodmail',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       30
     ]
   },
   {
-    "id": 447112,
-    "key": "item",
-    "name": "Flesheater",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447112,
+    key: 'item',
+    name: 'Flesheater',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 500,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      health: 500
     }
   },
   {
-    "id": 447113,
-    "key": "item",
-    "name": "Detonation Orb",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447113,
+    key: 'item',
+    name: 'Detonation Orb',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 90,
-      "flatMagicPenetration": 12,
-      "mana": 600,
-      "abilityHaste": 20
+    stats: {
+      abilityHaste: 20,
+      abilityPower: 90,
+      flatMagicPenetration: 12,
+      mana: 600
     },
-    "tags": [
-      "Mage"
+    tags: [
+      'Mage'
     ]
   },
   {
-    "id": 447114,
-    "key": "item",
-    "name": "Reverberation",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447114,
+    key: 'item',
+    name: 'Reverberation',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 35,
-      "attackSpeed": 40,
-      "magicResistance": 35
+    stats: {
+      armor: 35,
+      attackSpeed: 40,
+      magicResistance: 35
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 447115,
-    "key": "item",
-    "name": "Regicide",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447115,
+    key: 'item',
+    name: 'Regicide',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackDamage": 60,
-      "lethality": 15,
-      "percentMovespeed": 8
+    stats: {
+      attackDamage: 60,
+      lethality: 15,
+      percentMovespeed: 8
     },
-    "tags": [
-      "Assassin"
+    tags: [
+      'Assassin'
     ]
   },
   {
-    "id": 447116,
-    "key": "item",
-    "name": "Kinkou Jitte",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447116,
+    key: 'item',
+    name: 'Kinkou Jitte',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 400,
-      "abilityHaste": 30
+    stats: {
+      abilityHaste: 30,
+      health: 400
     },
-    "tags": [
-      "Assassin",
-      "Fighter",
-      "Mage"
+    tags: [
+      'Assassin',
+      'Fighter',
+      'Mage'
     ]
   },
   {
-    "id": 447118,
-    "key": "item",
-    "name": "Pyromancer's Cloak",
-    "aka": [
-      "burn"
+    id: 447118,
+    key: 'item',
+    name: 'Pyromancer\'s Cloak',
+    rank: 'Special',
+    aka: [
+      'burn'
     ],
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 400,
-      "abilityHaste": 15
+    stats: {
+      abilityHaste: 15,
+      health: 400
     },
-    "tags": [
-      "Fighter",
-      "Marksman",
-      "Mage"
+    tags: [
+      'Fighter',
+      'Marksman',
+      'Mage'
     ]
   },
   {
-    "id": 447119,
-    "key": "item",
-    "name": "Lightning Rod",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447119,
+    key: 'item',
+    name: 'Lightning Rod',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "armor": 30,
-      "health": 500,
-      "magicResistance": 30,
-      "percentMovespeed": 8
+    stats: {
+      armor: 30,
+      health: 500,
+      magicResistance: 30,
+      percentMovespeed: 8
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 447120,
-    "key": "item",
-    "name": "Diamond-Tipped Spear",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447120,
+    key: 'item',
+    name: 'Diamond-Tipped Spear',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 30
+    stats: {
+      attackSpeed: 30
     },
-    "tags": [
-      "Marksman",
-      "Mage"
+    tags: [
+      'Marksman',
+      'Mage'
     ]
   },
   {
-    "id": 447121,
-    "key": "item",
-    "name": "Twilight's Edge",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447121,
+    key: 'item',
+    name: 'Twilight\'s Edge',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "abilityPower": 100,
-      "attackDamage": 70
+    stats: {
+      abilityPower: 100,
+      attackDamage: 70
     },
-    "tags": [
-      "Marksman",
-      "Mage"
+    tags: [
+      'Marksman',
+      'Mage'
     ]
   },
   {
-    "id": 447122,
-    "key": "item",
-    "name": "Black Hole Gauntlet",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447122,
+    key: 'item',
+    name: 'Black Hole Gauntlet',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "health": 900,
-      "abilityHaste": 25
+    stats: {
+      abilityHaste: 25,
+      health: 900
     },
-    "tags": [
-      "Tank"
+    tags: [
+      'Tank'
     ]
   },
   {
-    "id": 447123,
-    "key": "item",
-    "name": "Puppeteer",
-    "gold": {
-      "base": 1000,
-      "total": 1000,
-      "sell": 400
+    id: 447123,
+    key: 'item',
+    name: 'Puppeteer',
+    rank: 'Special',
+    gold: {
+      base: 1000,
+      sell: 400,
+      total: 1000
     },
-    "maps": [
+    maps: [
       30
     ],
-    "rank": "Special",
-    "recipe": [
+    recipe: [
       220007
     ],
-    "stats": {
-      "attackSpeed": 30,
-      "healAndShieldPower": 15,
-      "manaRegen": 150,
-      "abilityHaste": 40
+    stats: {
+      abilityHaste: 40,
+      attackSpeed: 30,
+      healAndShieldPower: 15,
+      manaRegen: 150
     },
-    "tags": [
-      "Support"
+    tags: [
+      'Support'
     ]
   },
   {
-    "id": 663039,
-    "key": "item",
-    "name": "Atma's Reckoning",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 663039,
+    key: 'item',
+    name: 'Atma\'s Reckoning',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663056,
-    "key": "item",
-    "name": "Demon King's Crown",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 663056,
+    key: 'item',
+    name: 'Demon King\'s Crown',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663058,
-    "key": "item",
-    "name": "Shield of Molten Stone",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 663058,
+    key: 'item',
+    name: 'Shield of Molten Stone',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663059,
-    "key": "item",
-    "name": "Cloak of Starry Night",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 663059,
+    key: 'item',
+    name: 'Cloak of Starry Night',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663060,
-    "key": "item",
-    "name": "Sword of the Divine",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 663060,
+    key: 'item',
+    name: 'Sword of the Divine',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663064,
-    "key": "item",
-    "name": "Veigar's Talisman of Ascension",
-    "gold": {
-      "base": 900,
-      "total": 900,
-      "sell": 0
+    id: 663064,
+    key: 'item',
+    name: 'Veigar\'s Talisman of Ascension',
+    gold: {
+      base: 900,
+      sell: 0,
+      total: 900
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663146,
-    "key": "item",
-    "name": "Hextech Gunblade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 663146,
+    key: 'item',
+    name: 'Hextech Gunblade',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663172,
-    "key": "item",
-    "name": "Zephyr",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 663172,
+    key: 'item',
+    name: 'Zephyr',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 663193,
-    "key": "item",
-    "name": "Gargoyle Stoneplate",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 663193,
+    key: 'item',
+    name: 'Gargoyle Stoneplate',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 664011,
-    "key": "item",
-    "name": "Sword of Blossoming Dawn",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1250
+    id: 664011,
+    key: 'item',
+    name: 'Sword of Blossoming Dawn',
+    gold: {
+      base: 2500,
+      sell: 1250,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 664403,
-    "key": "item",
-    "name": "The Golden Spatula",
-    "gold": {
-      "base": 2500,
-      "purchasable": false,
-      "total": 2500,
-      "sell": 1750
+    id: 664403,
+    key: 'item',
+    name: 'The Golden Spatula',
+    gold: {
+      base: 2500,
+      purchasable: false,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 664644,
-    "key": "item",
-    "name": "Crown of the Shattered Queen",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 664644,
+    key: 'item',
+    name: 'Crown of the Shattered Queen',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 667101,
-    "key": "item",
-    "name": "Gambler's Blade",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 0
+    id: 667101,
+    key: 'item',
+    name: 'Gambler\'s Blade',
+    gold: {
+      base: 2500,
+      sell: 0,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 667109,
-    "key": "item",
-    "name": "Cruelty",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 667109,
+    key: 'item',
+    name: 'Cruelty',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 667112,
-    "key": "item",
-    "name": "Flesheater",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1000
+    id: 667112,
+    key: 'item',
+    name: 'Flesheater',
+    gold: {
+      base: 2500,
+      sell: 1000,
+      total: 2500
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 667666,
-    "key": "item",
-    "name": "The Collector",
-    "gold": {
-      "base": 525,
-      "total": 3000,
-      "sell": 2100
+    id: 667666,
+    key: 'item',
+    name: 'The Collector',
+    gold: {
+      base: 525,
+      sell: 2100,
+      total: 3000
     },
-    "maps": [
+    maps: [
       11
     ]
   },
   {
-    "id": 994403,
-    "key": "item",
-    "name": "Golden Spatula",
-    "gold": {
-      "base": 2500,
-      "total": 2500,
-      "sell": 1750
+    id: 994403,
+    key: 'item',
+    name: 'Golden Spatula',
+    gold: {
+      base: 2500,
+      sell: 1750,
+      total: 2500
     },
-    "maps": [
+    maps: [
       12
     ]
   }

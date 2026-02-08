@@ -18,64 +18,59 @@ const supportUpgrade = computed(() => {
 
 <template>
   <ul
-    class="timeline relative mx-0 flex min-h-40 w-full flex-wrap items-center justify-around gap-y-3"
-  >
+    class="timeline relative mx-0 flex min-h-40 w-full flex-wrap items-center justify-around gap-y-3">
     <li
       v-for="(eventGroup, i) in timeline?.items"
       :key="i"
-      class="max-w-1/3 grow grid-rows-[51px_14px_24px] items-center"
-    >
-      <hr v-if="i !== 0" class="bg-b3/60">
+      class="max-w-1/3 grow grid-rows-[51px_14px_24px] items-center">
+      <hr
+        v-if="i !== 0"
+        class="bg-p3/60">
       <div
-        class="timeline-start timeline-box mx-3 flex h-full items-center gap-2.25 justify-self-center"
-      >
-        <template v-for="(event, ix) in eventGroup?.events" :key="ix">
+        class="timeline-start mx-3 flex h-full items-center gap-2.25 justify-self-center timeline-box">
+        <template
+          v-for="(event, ix) in eventGroup?.events"
+          :key="ix">
           <div
             v-if="
               event.action === 'UPGRADE'
                 || event.action === 'S1_UPGRADE'
                 || event.action === 'S2_UPGRADE'
             "
-            class="relative size-12"
-          >
+            class="relative size-12">
             <Item
               :id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
               class="size-12"
-              :map="match.mapId"
-            />
+              :map="match.mapId" />
 
             <template
               v-if="
                 event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'
-              "
-            >
+              ">
               <Item
                 :id="event.from"
                 :key="event.from"
-                class="border-b1 ring-b1 absolute  size-5.5  -top-1 -left-1.5 rounded-full border ring-1"
+                class="absolute -top-1 -left-1.5 size-5.5 rounded-full border border-p0 ring-1 ring-p0"
                 :map="match.mapId"
-                data-type="item"
-              />
+                data-type="item" />
 
               <Item
                 v-if="event.action === 'S2_UPGRADE'"
                 :id="3867"
                 :key="3867"
-                class="border-b1  size-5.5  ring-b1 absolute -top-1 -left-1.5 ml-[10px] rounded-full border ring-1"
-                :map="match.mapId"
-              />
+                class="absolute -top-1 -left-1.5 ml-[10px] size-5.5 rounded-full border border-p0 ring-1 ring-p0"
+                :map="match.mapId" />
             </template>
             <template v-else>
               <Item
                 v-for="(item, idx) in event.from"
                 :id="item"
                 :key="item"
-                class="border-b1  size-5.5 ring-b1 absolute -top-1 -left-1.5 rounded-full border ring-1"
+                class="absolute -top-1 -left-1.5 size-5.5 rounded-full border border-p0 ring-1 ring-p0"
                 :map="match.mapId"
                 :style="{
                   marginLeft: `${10 * idx}px`,
-                }"
-              />
+                }" />
             </template>
           </div>
 
@@ -84,40 +79,40 @@ const supportUpgrade = computed(() => {
           <div
             v-else-if="event.action === 'ADD'"
             :key="event.id"
-            class="relative size-12"
-          >
-            <Item :id="event.id" :map="match.mapId" class="size-12" />
+            class="relative size-12">
+            <Item
+              :id="event.id"
+              :map="match.mapId"
+              class="size-12" />
             <div
               v-if="event.count > 1"
-              class="border-b1 bg-neutral text-nc absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 font-semibold"
-              variant="neutral"
-            >
+              class="absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 border-p0 bg-neutral font-semibold text-nc"
+              variant="neutral">
               {{ event.count }}
             </div>
           </div>
         </template>
       </div>
 
-      <div class="timeline-middle relative z-1 grid w-full place-items-center">
+      <div class="relative z-1 timeline-middle grid w-full place-items-center">
         <Icons
-          class="dss size-7"
+          class="size-7 dss"
           size="sq-4"
-          wrapper-class="z-2 bg-tint-b2/40 absolute "
-          name="dot"
-        />
+          wrapper-class="z-2 bg-tint-p2/40 absolute "
+          name="dot" />
       </div>
 
       <div
-        class="timeline-end border-b3 bg-b1 text-bc dxs relative mt-2 grid place-items-center justify-self-center rounded-md border px-1.5 text-[0.86rem]! font-bold"
-      >
+        class="relative timeline-end mt-2 grid place-items-center justify-self-center rounded-md border border-p3 bg-p0 px-1.5 text-[0.86rem]! font-bold text-pc dxs">
         <Icon
-          class="text-b1 **:stroke-b3 absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61%"
-          name="tabler:caret-caret-uped"
-        />
+          class="absolute -top-3 mx-auto size-5! mask-b-from-60% mask-b-to-61% text-p0 **:stroke-p3"
+          name="tabler:caret-caret-uped" />
 
         {{ formatHMS(eventGroup.timestamp) }}
       </div>
-      <hr v-if="i !== timeline?.items.length - 1" class="bg-b3/60">
+      <hr
+        v-if="i !== timeline?.items.length - 1"
+        class="bg-p3/60">
     </li>
     <li class="grow" />
   </ul>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
+const store = useMatchFilters()
+const { filter } = storeToRefs(store)
+
 const queueModel = computed({
-  get: () => s_matches().filter?.queue,
-  set: val => s_matches().setFilter('queue', val),
-})
-watch(() => s_matches().filter, (v) => {
-  console.log('💠 - watch - newVal:', v)
+  get: () => filter?.value.queue,
+  set: val => store.setFilter('queue', val),
 })
 const queues = [
   {
@@ -27,5 +27,9 @@ const queues = [
 </script>
 
 <template>
-  <UTabs v-model:model-value="queueModel" class="h-9 w-full" :default-value="0" :items="queues" />
+  <UTabs
+    v-model:model-value="queueModel"
+    class="h-10 w-full"
+    :default-value="0"
+    :items="queues" />
 </template>

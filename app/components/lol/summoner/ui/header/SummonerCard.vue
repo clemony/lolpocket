@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const { mastery, splash } = storeToRefs(s_data())
 const { summoner } = storeToRefs(s_session())
 const img = useImage()
 const bg = computed(
-  () => splash?.value.replace('uncentered', 'tile') ?? getRandomBg()
+  () => splash?.value.replace("uncentered", "tile") ?? getRandomBg()
 )
 const top = computed(() => {
   if (!mastery.value) return
@@ -15,14 +15,11 @@ const top = computed(() => {
     .sort((a, b) => b.totalPoints - a.totalPoints)
     .slice(0, 3)
 })
-console.log('🥸 - top:', top)
+console.log("🥸 - top:", top)
 </script>
 
 <template>
-  <div
-    v-if="summoner"
-    class="w-74! p-0!"
-  >
+  <div v-if="summoner" class="w-74! p-0!">
     <div
       :style="{
         background: `url(${img(bg)})`,
@@ -31,29 +28,25 @@ console.log('🥸 - top:', top)
         backgroundRepeat: 'no-repeat',
       }"
       class="relative z-0 mb-10 h-22 w-full overflow-hidden rounded-t-lg"
-      :alt="`${summoner?.name}'s Splash`"
-    >
+      :alt="`${summoner?.name}'s Splash`">
       <Badge
-        class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-b1/50 pl-1.5 text-xxs! font-semibold! text-bc/70 backdrop-blur-lg"
-        size="xs"
-      >
+        class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-p0/50 pl-1.5 text-2xs! font-semibold! text-pc/70 backdrop-blur-lg"
+        size="xs">
         <span class="relative grid size-3 place-items-center">
           <Icon
-            class="absolute size-4.25! shrink-0 -translate-y-0.5 **:stroke-[3.8] **:text-bc/70!"
-            name="up"
-          />
+            class="absolute size-4.25! shrink-0 -translate-y-0.5 **:stroke-[3.8] **:text-pc/70!"
+            name="up" />
 
           <Icon
-            class="absolute size-3.5! shrink-0 translate-y-0.5 **:stroke-[2.8] **:text-bc/70!"
-            name="up"
-          />
+            class="absolute size-3.5! shrink-0 translate-y-0.5 **:stroke-[2.8] **:text-pc/70!"
+            name="up" />
         </span>
         {{ summoner?.level }}
       </Badge>
     </div>
 
     <div class="absolute top-8 flex h-24 w-full items-end px-2">
-      <div class="grid size-20 place-items-center rounded-full bg-b1 p-1.5">
+      <div class="grid size-20 place-items-center rounded-full bg-p0 p-1.5">
         <SummonerIcon class="size-full rounded-full" :summoner />
       </div>
 
@@ -79,19 +72,17 @@ console.log('🥸 - top:', top)
         <div
           v-for="(c, i) in top"
           :key="i"
-          class="flex w-full flex-col items-center -space-y-2"
-        >
-          <ChampionIcon :id="c.championId" class="rounded-full" />
+          class="flex w-full flex-col items-center -space-y-2">
+          <Champion :id="c.championId" class="rounded-full" />
           <span
-            class="badge border-none badge-neutral bg-neutral/80 px-1.5 badge-sm text-xxs font-semibold text-nc!"
-          >
+            class="badge border-none badge-neutral bg-neutral/80 px-1.5 badge-sm text-2xs font-semibold text-nc!">
             <Icon class="size-3.5 **:text-nc!" name="lol:mastery" />
             {{ c.level }}
           </span>
         </div>
       </div>
     </div>
-    <Separator class="bg-b3" />
+    <Separator class="bg-p3" />
 
     <!--    <SummonerToolbar
       class="px-1.5 py-2"

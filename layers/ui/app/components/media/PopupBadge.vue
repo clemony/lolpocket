@@ -17,11 +17,10 @@ const props = withDefaults(
 <template>
   <AnimatePresence>
     <motion.span
-      class="indicator-item badge badge-sm top-1 right-1 rounded-full px-1.75 font-mono text-xs"
+      class="indicator-item top-1 right-1 badge rounded-full px-1.75 font-mono text-xs badge-sm"
       v-bind="$attrs"
       :animate="{ scale: [0, 1] }"
-      :transition="{ delay: props.delay, type: 'spring' }"
-    >
+      :transition="{ delay: props.delay, type: 'spring' }">
       <slot />
     </motion.span>
   </AnimatePresence>

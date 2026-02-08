@@ -19,9 +19,8 @@ const delegatedProps = reactiveOmit(props, 'class')
     :orientation="props.orientation"
     :class="
       cn(
-        'bg-b3 relative m-0! self-stretch data-[orientation=vertical]:h-auto',
+        'relative m-0! self-stretch bg-p3 data-[orientation=vertical]:h-auto',
         props.class,
       )
-    "
-  />
+    " />
 </template>

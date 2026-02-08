@@ -21,8 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
   <TabsTrigger
     v-bind="forwarded"
     :value="props.value"
-    :class="cn('group/tt z-1 size-full', props.class)"
-  >
+    :class="cn('group/tt z-1 size-full', props.class)">
     <slot />
   </TabsTrigger>
 </template>

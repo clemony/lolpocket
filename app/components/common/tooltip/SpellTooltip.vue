@@ -19,23 +19,21 @@ function close() {
     :key="spell.id"
     :class="
       cn(
-        'relative flex size-full flex-col justify-center overflow-hidden ',
+        'relative flex size-full flex-col justify-center overflow-hidden',
         className,
       )
     "
-    @trigger="close()"
-  >
-    <div class="flex w-full items-center gap-4 = **:select-none">
+    @trigger="close()">
+    <div class="= flex w-full items-center gap-4 **:select-none">
       <Spell
         :id="spell.id"
         class="size-10 shrink-0 bg-transparent!"
         no-tip
-        :alt="`${spell.name} Image`"
-      />
+        :alt="`${spell.name} Image`" />
 
       <div class="flex size-full flex-col justify-center gap-1">
         <div class="flex items-center justify-between">
-          <h2 class="dst grow text-xl leading-none">
+          <h2 class="grow text-xl leading-none dst">
             {{ spell.name }}
           </h2>
           <!--          <a
@@ -54,38 +52,46 @@ function close() {
         </div>
 
         <div
-          class="flex w-full *:first:-ml-1 **:font-medium *:leading-4 *:align-baseline **:text-sm items-center justify-start gap-4 *:inline-flex *:w-fit *:items-center *:gap-1 "
-        >
+          class="flex w-full items-center justify-start gap-4 *:inline-flex *:w-fit *:items-center *:gap-1 *:align-baseline *:leading-4 **:text-sm **:font-medium *:first:-ml-1">
           <Tooltip
             v-if="spell?.cd || spell?.recharge"
             class="badge-tooltip-hover"
-            :text="spell?.cd ? 'Cooldown' : 'Recharge'"
-          >
-            <Icon class="inline size-3.25 **:stroke-[2.6]" name="hugeicons:hourglass" />
+            :text="spell?.cd ? 'Cooldown' : 'Recharge'">
+            <Icon
+              class="inline size-3.25 **:stroke-[2.6]"
+              name="hugeicons:hourglass" />
             {{ spell.cd || spell.recharge }}
           </Tooltip>
-          <Tooltip v-if="spell?.charges" text="charges" class="badge-tooltip-hover">
+          <Tooltip
+            v-if="spell?.charges"
+            text="charges"
+            class="badge-tooltip-hover">
             <Icon
               class="inline size-3.25 **:stroke-[2.2]"
-              :name="`charge-${spell.charges}`"
-            />
+              :name="`charge-${spell.charges}`" />
             {{ spell.charges }}
           </Tooltip>
-          <Tooltip v-if="spell.range" text="Range" class="badge-tooltip-hover">
-            <Icon class="inline size-3.75 translate-y-[0.45px] **:stroke-[2.2]" name="stat:rangeCenter" />
+          <Tooltip
+            v-if="spell.range"
+            text="Range"
+            class="badge-tooltip-hover">
+            <Icon
+              class="inline size-3.75 translate-y-[0.45px] **:stroke-[2.2]"
+              name="stat:rangeCenter" />
             {{ spell.range }}
           </Tooltip>
         </div>
       </div>
     </div>
 
-    <USeparator class="w-full  my-2" color="b3" />
+    <USeparator
+      class="my-2 w-full"
+      color="p3" />
 
     <div
       :key="spell.id"
-      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto "
-    >
-      <span class="text-pretty font-medium whitespace-pre-line">
+      class="flex h-max w-full max-w-105 flex-col justify-between gap-8 overflow-y-auto">
+      <span class="font-medium text-pretty whitespace-pre-line">
         {{ spell.description }}
       </span>
     </div>

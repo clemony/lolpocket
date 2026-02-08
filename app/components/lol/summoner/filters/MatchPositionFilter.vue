@@ -6,7 +6,11 @@ const {
   class?: HTMLAttributes['class']
   orientation?: DataOrientation
 }>()
+
 const { summoner } = storeToRefs(s_session())
+const store = useMatchFilters()
+const { filter } = storeToRefs(store)
+
 const roles = computed(() => {
   if (!s_matches().matches || !summoner?.value) return
 
@@ -22,16 +26,16 @@ const roles = computed(() => {
 })
 
 const roleModel = computed({
-  get: () => s_matches().filter?.role,
-  set: val => s_matches().setFilter('role', val),
+  get: () => filter?.value.role,
+  set: val => store.setFilter('role', val),
 })
 </script>
 
 <template>
   <UTabs
     v-model:model-value="roleModel"
+    class="h-10 w-full"
     :items="roles"
     value-key="name"
-    default-value="all"
-  />
+    default-value="all" />
 </template>

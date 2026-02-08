@@ -13,11 +13,11 @@ defineNuxtLink({
   externalRelAttribute: 'noreferrer',
   prefetch: true,
   prefetchedClass: '',
+  trailingSlash: 'remove',
   prefetchOn: {
     interaction: true,
     visibility: false,
   },
-  trailingSlash: 'remove',
 })
 </script>
 
@@ -30,8 +30,7 @@ defineNuxtLink({
         className,
       )
     "
-    :to="to"
-  >
+    :to="to">
     <span>
       <slot />
     </span>

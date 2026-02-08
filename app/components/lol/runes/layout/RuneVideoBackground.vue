@@ -23,7 +23,7 @@ const runeVideo = computed(() => {
   }`
 })
 
-const video = ref(null)
+const video = ref<any>(null)
 onMounted(async () => {
   video.value.player.play()
 })
@@ -39,8 +39,7 @@ onMounted(async () => {
           'absolute inset-0 top-0 left-0 z-0 size-full bg-cover opacity-15 brightness-380 contrast-400 grayscale',
           className,
         )
-      "
-    />
+      " />
 
     <div class="absolute inset-0 top-0 left-0 flex justify-end">
       <slot />

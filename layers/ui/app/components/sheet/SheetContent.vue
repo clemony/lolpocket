@@ -50,8 +50,7 @@ function onStateChange(state: string) {
       )
     "
     @update:state="onStateChange"
-    @open-auto-focus.stop
-  >
+    @open-auto-focus.stop>
     <slot />
   </DialogContent>
 </template>

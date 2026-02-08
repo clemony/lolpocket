@@ -24,8 +24,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ToggleGroupRoot
     v-bind="forwarded"
-    :class="cn('flex items-center justify-center gap-1', props.class)"
-  >
+    :class="cn('flex items-center justify-center gap-1', props.class)">
     <slot />
   </ToggleGroupRoot>
 </template>

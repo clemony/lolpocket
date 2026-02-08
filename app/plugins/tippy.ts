@@ -16,22 +16,16 @@ export default defineNuxtPlugin((nuxtApp) => {
       appendTo: () => document.body,
       component: 'tippy',
       componentSingleton: 'tippyton',
+      directive: 'tippy', // => v-tippy
       defaultProps: {
         hideOnClick: false,
         allowHTML: true,
         animation: 'shift-toward-subtle',
-        aria: {
-          content: 'auto',
-          expanded: 'auto',
-        },
         arrow: popoverArrow,
-        delay: [200, 0],
-        duration: [150],
         flip: true,
         followCursor: false,
         inertia: true,
         interactiveBorder: 2,
-        offset: [0, 8],
         placement: 'top',
         /*         popperOptions: {
           modifiers: [
@@ -46,9 +40,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         role: 'tooltip',
         showOnCreate: false,
         theme: 'base',
+        aria: {
+          content: 'auto',
+          expanded: 'auto',
+        },
+        delay: [200, 0],
+        duration: [150],
+        offset: [0, 8],
         // trigger: 'click',
       },
-      directive: 'tippy', // => v-tippy
     }
   )
 })

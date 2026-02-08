@@ -15,23 +15,21 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
   <motion.div
     :class="
       cn(
-        'absolute flex h-20 w-fit max-w-220 gap-6 pl-20 flex-nowrap select-none items-center gap-6',
+        'absolute flex h-20 w-fit max-w-220 flex-nowrap items-center gap-6 pl-20 select-none',
         className,
       )
     "
     :style="{
       /*  y, */
       opacity,
-    }"
-  >
+    }">
     <!-- icon -->
 
     <div class="relative grid size-20 place-items-center">
       <slot name="icon" />
     </div>
     <div
-      :class="cn('flex w-full flex-col justify-center gap-1.5', textWrapper)"
-    >
+      :class="cn('flex w-full flex-col justify-center gap-1.5', textWrapper)">
       <!-- header name -->
       <div class="flex max-h-12 w-full items-center gap-8">
         <slot name="title" />
@@ -39,8 +37,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
 
       <!-- header sub-text -->
       <div
-        class="dst **:text-md inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase"
-      >
+        class="inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst **:text-md">
         <slot name="subheader" />
       </div>
     </div>

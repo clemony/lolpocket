@@ -9,22 +9,20 @@ const { class: className } = defineProps<{
   <span
     :class="
       cn(
-        'dst grid size-6! shrink-0 place-items-center rounded-full shadow-xs',
+        'grid size-6! shrink-0 place-items-center rounded-full shadow-xs dst',
         className,
       )
     "
     :style="{
       backgroundColor: tag.color,
-    }"
-  >
+    }">
     <component
       :is="tag.icon"
       v-if="tag.icon"
       :class="
-        cn('dst absolute size-3.75! text-white/95', {
+        cn('absolute size-3.75! text-white/95 dst', {
           'size-4.25!': tag.name !== 'Movement',
         })
-      "
-    />
+      " />
   </span>
 </template>

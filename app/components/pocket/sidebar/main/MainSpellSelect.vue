@@ -29,13 +29,16 @@ const keyClass
 </script>
 
 <template>
-  <Select v-model:model-value="pocket._spells" v-model:open="open">
+  <Select
+    v-model:model-value="pocket._spells"
+    v-model:open="open">
     <slot>
       <VarSelectTrigger
         class="relative grid size-max place-items-center overflow-hidden py-4 **:pointer-events-none"
-        variant="ghost"
-      >
-        <SpellSetDuo :set="selectedSet" :class="cn('', className)" />
+        variant="ghost">
+        <SpellSetDuo
+          :set="selectedSet"
+          :class="cn('', className)" />
         <!--        <icon
             name="up-down"
             class=" size-4 absolute right-1.5" /> -->
@@ -61,29 +64,30 @@ const keyClass
       :align
       :reference="trigger"
       :align-offset
-      position="popper"
-    >
+      position="popper">
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Spells
 
           <Button
-            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
+            class="aspect-square btn-square *:opacity-60 hover:*:opacity-100"
             variant="ghost"
             size="sm"
             title="Clear main spells"
-            @click="pocket._spells === ''"
-          >
-            <icon class="size-5 **:stroke-2" name="backspace" />
+            @click="pocket._spells === ''">
+            <icon
+              class="size-5 **:stroke-2"
+              name="backspace" />
           </Button>
         </SelectLabel>
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
           class="group/select flex-nowrap *:flex *:items-center"
-          :value="set.id"
-        >
-          <IndexIcon class="mr-1" :item="spells[set.d]" />
+          :value="set.id">
+          <IndexIcon
+            class="mr-1"
+            :item="spells[set.d]" />
           <IndexIcon :item="spells[set.f]" />
         </SelectItem>
       </SelectGroup>

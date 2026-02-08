@@ -17,7 +17,9 @@ console.log('🌱 - box:', box)
 </script>
 
 <template>
-  <span v-if="box" :class="cn('text-bc/70 ml-auto')">
+  <span
+    v-if="box"
+    :class="cn('ml-auto text-pc/70')">
     {{ box || 0 }}
   </span>
 </template>

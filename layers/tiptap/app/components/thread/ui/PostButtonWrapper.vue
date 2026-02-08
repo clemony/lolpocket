@@ -42,7 +42,9 @@ const user = await useSupabaseUser()
 </script>
 
 <template>
-  <ButtonGroup v-if="user?.app_metadata?.user_role === 'admin'" ref="groupRef">
+  <ButtonGroup
+    v-if="user?.app_metadata?.user_role === 'admin'"
+    ref="groupRef">
     <!--  <PostButton
       :variant="postTypes[select].variant"
       :icon="postTypes[select].icon"
@@ -66,5 +68,7 @@ const user = await useSupabaseUser()
     </Select> -->
   </ButtonGroup>
 
-  <PostButton v-else v-bind="forwardedProps" />
+  <PostButton
+    v-else
+    v-bind="forwardedProps" />
 </template>

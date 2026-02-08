@@ -3,7 +3,7 @@ import { iconSetQuartzLight, themeQuartz } from 'ag-grid-community'
 export const masteryGridTheme = themeQuartz
   .withPart(iconSetQuartzLight)
   .withParams({
-    // oddRowBackgroundColor: 'var(--b2) / 60%',
+    // oddRowBackgroundColor: 'var(--p2) / 60%',
     sidePanelBorder: true,
     widgetContainerHorizontalPadding: 9,
     widgetContainerVerticalPadding: 5,

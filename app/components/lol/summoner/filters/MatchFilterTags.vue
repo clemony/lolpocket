@@ -4,7 +4,7 @@ const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-/* // @fixme what */
+/* // fixme what */
 </script>
 
 <template>

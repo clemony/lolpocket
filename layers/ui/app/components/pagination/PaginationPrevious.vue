@@ -27,8 +27,7 @@ const forwarded = useForwardProps(delegatedProps)
         `gap-1 px-2.5 sm:pr-2.5`,
         props.class,
       )
-    "
-  >
+    ">
     <slot>
       <icon name="left" />
       <span class="hidden sm:block">Previous</span>

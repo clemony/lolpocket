@@ -16,13 +16,11 @@ const pocket = computed(() =>
       <div
         v-for="set in pocket.spells"
         :key="set.id"
-        class="flex items-center gap-3"
-      >
+        class="flex items-center gap-3">
         <SpellPicker
           class="size-16"
           :current-value="spells[set.d].name"
-          @update:spell="(e) => (set.d = e)"
-        />
+          @update:spell="(e) => (set.d = e)" />
         <!--         <SpellPicker
           class="size-16"
           :current-value="set.f"
@@ -39,7 +37,10 @@ const pocket = computed(() =>
         </span> -->
       </div>
 
-      <Button class="self-end" color="neutral" @click="addSpellSet(pocket)">
+      <Button
+        class="self-end"
+        color="neutral"
+        @click="addSpellSet(pocket)">
         <icon name="add" />
         Add spell set
       </Button>

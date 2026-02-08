@@ -1,48 +1,48 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:02 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Full Tilt",
-  "affects": "Self, Allies, Enemies",
-  "blurb": "Active:  Rell empowers herself and an allied  champion with bonus movement speed for a few seconds, which is increased when moving towards the empowered ally or an enemy champion.",
-  "castTime": "none",
-  "cooldown": "14 / 13 / 12 / 11 / 10",
-  "cost": "40",
-  "damageType": "Magic damage",
-  "effectRadius": "300 / 2200 / 1600",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Full Tilt',
+  affects: 'Self, Allies, Enemies',
+  blurb: 'Active:  Rell empowers herself and an allied  champion with bonus movement speed for a few seconds, which is increased when moving towards the empowered ally or an enemy champion.',
+  castTime: 'none',
+  cooldown: '14 / 13 / 12 / 11 / 10',
+  cost: '40',
+  damageType: 'Magic damage',
+  effectRadius: '300 / 2200 / 1600',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/e',
+  notes: 'If  Shattering Strike hits more than one enemy, the Full Tilt explosion will be centered around the unit with the lowest Spawn ID.\n"Spawn ID" is an unofficial abbreviation to describe the spawn order for all units at the beginning of games.',
+  resource: 'Mana',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'true',
+  targeting: 'Unit / Auto',
+  targetRange: '1200',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed, increased to 25% while facing the empowered ally or a visible enemy champion.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed, increased to 25% while facing the empowered ally or a visible enemy champion.</p>'
     },
     {
-      "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage. The damage based on the target's health is capped at 150 - 300 (based on level) against monsters and structures.",
-      "leveling": [
+      description: 'Additionally, Rell\'s next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage. The damage based on the target\'s health is capped at 150 - 300 (based on level) against monsters and structures.',
+      leveling: [
         {
-          "attribute": "Bonus Magic Damage",
-          "modifiers": [
+          attribute: 'Bonus Magic Damage',
+          modifiers: [
             {
-              "unit": "%  of target's maximum health",
-              "values": "5 / 5.5 / 6 / 6.5 / 7"
+              unit: '%  of target\'s maximum health',
+              values: '5 / 5.5 / 6 / 6.5 / 7'
             },
             {
-              "unit": "% per 100 AP",
-              "values": "3"
+              unit: '% per 100 AP',
+              values: '3'
             }
           ]
         }
       ]
     },
     {
-      "description": "If cast without a valid target, or self-cast, Full Tilt will automatically target the closest allied champion in range."
+      description: 'If cast without a valid target, or self-cast, Full Tilt will automatically target the closest allied champion in range.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/e",
-  "notes": "If  Shattering Strike hits more than one enemy, the Full Tilt explosion will be centered around the unit with the lowest Spawn ID.\n\"Spawn ID\" is an unofficial abbreviation to describe the spawn order for all units at the beginning of games.",
-  "resource": "Mana",
-  "spellEffects": "spellaoe",
-  "spellshieldable": "true",
-  "targeting": "Unit / Auto",
-  "targetRange": "1200"
+  ]
 }
-  export default ability
+export default ability

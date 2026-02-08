@@ -1,64 +1,64 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "R",
-  "name": "Summon: Tibbers",
-  "affects": "Enemies / Tibbers",
-  "blurb": "Active:  Annie summons her bear  Tibbers, dealing magic damage to enemies in the area.",
-  "castTime": "0.25 / None",
-  "cooldown": "130 / 115 / 100",
-  "cost": "100",
-  "damageType": "Magic damage",
-  "effectRadius": "250 /  350",
-  "effects": [
+const ability: Ability = {
+  key: 'R',
+  name: 'Summon: Tibbers',
+  affects: 'Enemies / Tibbers',
+  blurb: 'Active:  Annie summons her bear  Tibbers, dealing magic damage to enemies in the area.',
+  castTime: '0.25 / None',
+  cooldown: '130 / 115 / 100',
+  cost: '100',
+  damageType: 'Magic damage',
+  effectRadius: '250 /  350',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/r',
+  notes: 'Only the initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade.\nRecasting the ability does, however, count as casting an ultimate ability for the purposes of  Experimental Hexplate\'s Overdrive and similar effects.(bug)\nPENDING FOR TEST: What about  Force Pulse\'s?\nThe active deals  area damage.\nTibbers will  blink back next to Annie if he gets too far away.\nRecasting Summon: Tibbers does not interrupt  Recall\'s channel.',
+  resource: 'Mana',
+  spellEffects: 'special',
+  spellshieldable: 'True',
+  targeting: 'Location',
+  targetRange: '600',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Annie gains magic penetration.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Annie gains magic penetration.</p>',
+      leveling: [
         {
-          "attribute": "Magic Penetration",
-          "modifiers": [
+          attribute: 'Magic Penetration',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "10 / 15 / 20"
+              unit: '%',
+              values: '10 / 15 / 20'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.</p>',
+      leveling: [
         {
-          "attribute": "Initial Magic Damage",
-          "modifiers": [
+          attribute: 'Initial Magic Damage',
+          modifiers: [
             {
-              "values": "150 / 275 / 400"
+              values: '150 / 275 / 400'
             },
             {
-              "unit": "% AP",
-              "values": "75"
+              unit: '% AP',
+              values: '75'
             }
           ]
         }
       ]
     },
     {
-      "description": "Tibbers then remains on the field as a controllable pet for up to 45 seconds."
+      description: 'Tibbers then remains on the field as a controllable pet for up to 45 seconds.'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Annie directs Tibbers to the target location.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Annie directs Tibbers to the target location.</p>'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Summon:</span> Tibbers' recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Summon:</span> Tibbers\' recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/r",
-  "notes": "Only the initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade.\nRecasting the ability does, however, count as casting an ultimate ability for the purposes of  Experimental Hexplate's Overdrive and similar effects.(bug)\nPENDING FOR TEST: What about  Force Pulse's?\nThe active deals  area damage.\nTibbers will  blink back next to Annie if he gets too far away.\nRecasting Summon: Tibbers does not interrupt  Recall's channel.",
-  "resource": "Mana",
-  "spellEffects": "special",
-  "spellshieldable": "True",
-  "targeting": "Location",
-  "targetRange": "600"
+  ]
 }
-  export default ability
+export default ability

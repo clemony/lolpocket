@@ -68,8 +68,7 @@ function toggleListType() {
     :get-reference-client-rect="virtualRect || undefined"
     :data-theme="theme"
     :class="cn('px-1.5')"
-    :options="{ placement: 'top', offset: 8 }"
-  >
+    :options="{ placement: 'top', offset: 8 }">
     <EditorMenu :editor />
   </BubbleMenu>
 
@@ -78,15 +77,18 @@ function toggleListType() {
     :editor
     data-inertia
     :data-theme="theme"
-    :class="cn(' px-1.5')"
+    :class="cn('px-1.5')"
     :should-show="
       () => editor?.isActive('bulletList') || editor?.isActive('orderedList')
     "
     :get-reference-client-rect="virtualRect || undefined"
-    :options="{ placement: 'top-start', offset: 8 }"
-  >
+    :options="{ placement: 'top-start', offset: 8 }">
     <div class="bubble-menu">
-      <Button variant="outline" on="inset" square @click="toggleListType">
+      <Button
+        variant="outline"
+        on="inset"
+        square
+        @click="toggleListType">
         Toggle list type
       </Button>
     </div>

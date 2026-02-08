@@ -1,24 +1,24 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:01 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Fey Feathers",
-  "affects": "Self",
-  "blurb": "Innate: Periodically,  Rakan generates a  shield that regenerates out of combat if not broken.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Fey Feathers',
+  affects: 'Self',
+  blurb: 'Innate: Periodically,  Rakan generates a  shield that regenerates out of combat if not broken.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p',
+  notes: 'Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p>'
     },
     {
-      "description": "Rakan's basic attacks and ability hits reduce Fey Feathers' cooldown by 1 second for each enemy champion hit."
+      description: 'Rakan\'s basic attacks and ability hits reduce Fey Feathers\' cooldown by 1 second for each enemy champion hit.'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lover's Leap:</span> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate - Lover\'s Leap:</span> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator\'s Recall completes.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
-  "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

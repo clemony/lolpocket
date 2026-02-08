@@ -12,64 +12,45 @@ export const SECTION_IDS = [
 
 export type SectionId = (typeof SECTION_IDS)[number]
 
-export interface ScrollSection {
-  id: string
-  name: string
-  class?: string
-  component?: string | ConcreteComponent
-  icon?: string
-}
-export const summonerSections: ScrollSection[] = [
+export const summonerSections = [
   {
-    id: 'summary',
-    name: 'summary',
-    class: '**:stroke-[2]',
-    component: 'PlayerChampionSummary',
     icon: 'infinity',
+    label: 'Summary',
+    to: '#summary',
   },
   {
-    id: 'spells',
-    name: 'Summoner Spells',
-    class: 'size-4.5 opacity-80',
-    component: 'ChampionSpellStats',
     icon: 'role:mage',
+    label: 'Summoner Spells',
+    to: '#spells',
   },
   {
-    id: 'items',
-    name: 'items',
-    component: 'ChampionItemStats',
     icon: 'lol:regen',
+    label: 'Items',
+    to: '#items',
   },
   {
-    id: 'runes',
-    name: 'runes',
-    class: 'size-5! fill-bc active:fill-nc',
-    component: 'ChampionRuneStats',
     icon: 'lol:runes',
+    label: 'Runes',
+    to: '#runes',
   },
   {
-    id: 'skills',
-    name: 'Abilities',
-    component: 'ChampionSkillStats',
     icon: 'fluent-mdl2:venn-diagram',
+    label: 'Abilities',
+    to: '#skills',
   },
   {
-    id: 'duos',
-    name: 'Synergy & Counters',
     icon: 'fluent-mdl2:venn-diagram',
+    label: 'Synergy & Counters',
+    to: '#duos',
   },
   {
-    id: 'allies',
-    name: 'allies',
-    class: 'size-6',
-    component: 'ChampionAllyStats',
     icon: 'heart-sm-outline',
+    label: 'Allies',
+    to: '#allies',
   },
   {
-    id: 'stats',
-    name: 'Match Stats',
-    class: 'size-4.5 **:stroke-[1.8]',
-    component: 'ChampionMatchStats',
     icon: 'tabler:chart-arcs',
+    label: 'Match Stats',
+    to: '#stats',
   },
 ]

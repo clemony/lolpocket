@@ -18,12 +18,12 @@ const {
 
 const menu = {
   contentClass: 'font-medium capitalize',
-  delay: [0, 0],
-  offset: [0, 16],
   placement: tooltipPlacement,
   theme: 'mini-tip base',
+  delay: [0, 0],
+  offset: [0, 16],
 }
-// @todo finish scripts block and report
+// todo finish scripts block and report
 
 const btnClass = 'fx-0!'
 const { summoner } = storeToRefs(s_session())
@@ -36,14 +36,12 @@ const { summoner } = storeToRefs(s_session())
         'grid auto-cols-fr grid-flow-col grid-rows-2 items-center gap-x-1 gap-y-1.5',
         className,
       )
-    "
-  >
+    ">
     <UpdateSummoner
       v-if="update"
       class="col-span-4! **:text-nc!"
       color="neutral"
-      :size
-    />
+      :size />
 
     <Tooltip text="Report">
       <Button
@@ -52,14 +50,19 @@ const { summoner } = storeToRefs(s_session())
         tabindex="-1"
         :class="btnClass"
         :variant
-        :summoner="summoner"
-      >
-        <icon class="size-5.5" name="warning" />
+        :summoner="summoner">
+        <icon
+          class="size-5.5"
+          name="warning" />
       </Button>
     </Tooltip>
 
     <Tooltip text="Block">
-      <BlockButton :class="btnClass" :size :variant :summoner="summoner" />
+      <BlockButton
+        :class="btnClass"
+        :size
+        :variant
+        :summoner="summoner" />
     </Tooltip>
 
     <Tooltip text="Message">
@@ -67,15 +70,13 @@ const { summoner } = storeToRefs(s_session())
         :class="btnClass"
         :size
         :variant
-        :summoner="summoner"
-      />
+        :summoner="summoner" />
     </Tooltip>
 
     <FollowButton
       :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-1', btnClass)"
 
       :size
-      :summoner="summoner"
-    />
+      :summoner="summoner" />
   </div>
 </template>

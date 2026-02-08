@@ -1,32 +1,32 @@
-export const contactInfo: Record<string, ContactAddress> = {
+export const contactInfo: Record<string, NavInfo> = {
   contact: {
-    address: 'contact@lolpocket.com',
     label: 'contact',
+    to: 'contact@lolpocket.com',
   },
   discord: {
-    address: 'https://discord.gg/Jzuu7bYTZY',
-    class: {
-      icon: 'size-8'
-    },
     external: true,
     icon: 'prime:discord',
     label: 'Discord',
+    to: 'https://discord.gg/Jzuu7bYTZY',
+    ui: {
+      leadingIcon: 'size-8'
+    },
   },
   github: {
-    address: 'https://github.com/clemony/lolpocket',
-    class: {
-      icon: 'size-9'
-    },
     external: true,
     icon: 'prime:github',
     label: 'Github',
+    to: 'https://github.com/clemony/lolpocket',
+    ui: {
+      leadingIcon: 'size-9'
+    },
   },
   privacy: {
-    address: 'support@lolpocket.com',
     label: 'privacy',
+    to: 'support@lolpocket.com',
   },
   support: {
-    address: 'support@lolpocket.com',
     label: 'support',
+    to: 'support@lolpocket.com',
   },
 }

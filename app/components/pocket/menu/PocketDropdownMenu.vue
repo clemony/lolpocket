@@ -10,7 +10,7 @@ const pocket = ref(props.pocket)
   <DropdownMenuItem @click="duplicatePocket(pocket)">
     <icon class="size-5" name="teenyicons:layers-subtract-outline" />
 
-    <span class="text-md -ml-px">Duplicate</span>
+    <span class="-ml-px text-md">Duplicate</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>
@@ -29,11 +29,8 @@ const pocket = ref(props.pocket)
 
   <DropdownMenuItem
     class="text-md! font-medium"
-    @click="deletePocket(pocket.key)"
-  >
+    @click="deletePocket(pocket.key)">
     <icon class="size-5" name="x-folder" />
     Send to Trash
   </DropdownMenuItem>
 </template>
-
-<style scoped></style>

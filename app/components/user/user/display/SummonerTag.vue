@@ -30,13 +30,17 @@ const tag = computed(() => {
   <Primitive
     v-if="tag"
     :as="el"
-    :class="cn('inline leading-none antialiased', className)"
-  >
+    :class="cn('inline leading-none antialiased', className)">
     <span class="max-size-3.25 relative inline size-3.25 overflow-hidden">
-      <icon v-if="!noTag" class="-mr-1 inline size-3.5" name="lucide:hash" />
+      <icon
+        v-if="!noTag"
+        class="-mr-1 inline size-3.5"
+        name="lucide:hash" />
     </span>
     {{ tag }}
   </Primitive>
 
-  <span v-else :class="cn('', className)">Disconnected</span>
+  <span
+    v-else
+    :class="cn('', className)">Disconnected</span>
 </template>

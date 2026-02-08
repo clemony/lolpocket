@@ -21,7 +21,7 @@ interface Props {
   src: string | null
 }
 
-/* skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40 */
+/* skeleton size-full bg-blend-screen rounded-lg bg-p3 border-p3 inset-shadow-5 inset-shadow-xs border !opacity-40 */
 
 const loaded = ref(false)
 
@@ -38,8 +38,7 @@ const forwarded = useForwardProps(props)
     v-bind="forwarded"
     :class="
       cn(elementVariants({ base, variant, hover, on, size }), props.class)
-    "
-  >
+    ">
     <img
       v-bind="$attrs"
       :key="src"
@@ -54,8 +53,7 @@ const forwarded = useForwardProps(props)
           'opacity-0': !loaded,
         })
       "
-      @load="onLoad()"
-    >
+      @load="onLoad()">
     <slot />
   </div>
 </template>

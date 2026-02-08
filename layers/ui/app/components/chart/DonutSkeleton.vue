@@ -7,5 +7,7 @@ const {
 </script>
 
 <template>
-  <Icon name="lucide:circle" :class="cn('text-b3 size-full ', className)" />
+  <Icon
+    name="lucide:circle"
+    :class="cn('size-full text-p3', className)" />
 </template>

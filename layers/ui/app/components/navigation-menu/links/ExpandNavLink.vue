@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
 
-const { size, variant } = defineProps<{
+const { variant, size } = defineProps<{
   variant?: any
   size?: any
 }>()
@@ -22,18 +22,15 @@ const variants = {
     <NavMenuLink as-child>
       <Button
         class="flex h-11 w-full flex-row flex-nowrap items-start justify-start gap-6 overflow-hidden"
-        :variant="variant"
-      >
+        :variant="variant">
         <div
-          class="grid h-full w-4.75 shrink-0 place-items-center place-self-center"
-        >
+          class="grid h-full w-4.75 shrink-0 place-items-center place-self-center">
           <slot name="icon" />
         </div>
 
         <motion.div
-          class="text-md w-full overflow-hidden font-medium"
-          :variants="variants"
-        >
+          class="w-full overflow-hidden text-md font-medium"
+          :variants="variants">
           <slot name="content" />
         </motion.div>
       </Button>

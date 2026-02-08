@@ -218,7 +218,14 @@ export function useChampionItemTimelineStats(
     }
 
     return {
+      boots: sortTimedByPickrate(out.boots),
+      early: sortTimedByPickrate(out.early),
+      legendary,
+      starting: sortTimedByPickrate(startingItemSets)?.[0]?.[1],
+      support: sortTimedByPickrate(out.support),
+      trinket: sortTimedByPickrate(out.trinket),
       best: {
+        slots,
         byWinrate: sortTimedByWinrate(allLegendaries),
         core: {
           games:
@@ -247,14 +254,7 @@ export function useChampionItemTimelineStats(
               ) / 10
               : 0,
         },
-        slots,
       },
-      boots: sortTimedByPickrate(out.boots),
-      early: sortTimedByPickrate(out.early),
-      legendary,
-      starting: sortTimedByPickrate(startingItemSets)?.[0]?.[1],
-      support: sortTimedByPickrate(out.support),
-      trinket: sortTimedByPickrate(out.trinket),
     }
   })
 }

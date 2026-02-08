@@ -16,9 +16,8 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'text-md min-h-5 flex-1 bg-transparent px-1 focus:outline-none',
+        'min-h-5 flex-1 bg-transparent px-1 text-md focus:outline-none',
         props.class,
       )
-    "
-  />
+    " />
 </template>

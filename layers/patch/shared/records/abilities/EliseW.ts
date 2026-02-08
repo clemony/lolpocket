@@ -1,49 +1,49 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Skittering Frenzy",
-  "affects": "Spiderlings, Self",
-  "blurb": "Passive:  Elise's Spiderlings gain permanent  bonus attack speed.",
-  "castTime": "none",
-  "cooldown": "12",
-  "cost": "60 / 70 / 80 / 90 / 100",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Skittering Frenzy',
+  affects: 'Spiderlings, Self',
+  blurb: 'Passive:  Elise\'s Spiderlings gain permanent  bonus attack speed.',
+  castTime: 'none',
+  cooldown: '12',
+  cost: '60 / 70 / 80 / 90 / 100',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/w',
+  notes: 'This bonus attack speed can surpass the attack speed cap.',
+  targeting: 'Auto',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Elise's Spiderlings gain bonus attack speed.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Elise\'s Spiderlings gain bonus attack speed.</p>',
+      leveling: [
         {
-          "attribute": "Spiderling Bonus Attack Speed",
-          "modifiers": [
+          attribute: 'Spiderling Bonus Attack Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "5 / 10 / 15 / 20 / 25"
+              unit: '%',
+              values: '5 / 10 / 15 / 20 / 25'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise and her Spiderlings gain bonus attack speed for 3 seconds.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Elise and her Spiderlings gain bonus attack speed for 3 seconds.</p>',
+      leveling: [
         {
-          "attribute": "Bonus Attack Speed",
-          "modifiers": [
+          attribute: 'Bonus Attack Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "60 / 75 / 90 / 105 / 120"
+              unit: '%',
+              values: '60 / 75 / 90 / 105 / 120'
             }
           ]
         }
       ]
     },
     {
-      "description": "Skittering Frenzy resets Elise's basic attack timer. Elise loses Skittering Frenzy immediately when she switches to Human Form."
+      description: 'Skittering Frenzy resets Elise\'s basic attack timer. Elise loses Skittering Frenzy immediately when she switches to Human Form.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/w",
-  "notes": "This bonus attack speed can surpass the attack speed cap.",
-  "targeting": "Auto"
+  ]
 }
-  export default ability
+export default ability

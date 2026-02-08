@@ -1,26 +1,28 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const { runes } = storeToRefs(s_champion())
 
-const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
+const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
 </script>
 
 <template>
-  <div v-if="runes" :class="cn('flex flex-col items-center gap-6', className)">
+  <UPageSection
+    v-if="runes"
+    title="Runes"
+    :class="cn('flex flex-col items-center gap-6', className)">
     <div v-if="runes.best" class="mb-10 w-full space-y-4">
       <ChampionRuneSet page="best" />
       <div class="flex w-full items-center justify-end self-end select-none">
         <div
           class="inline-flex items-center gap-1 text-xs font-medium"
           :data-type="
-            runes.usedFallback
-              ? `*Based on limited data (${runes.best.games} games)`
+            runes.usedFallback ?
+              `*Based on limited data (${runes.best.games} games)`
               : null
-          "
-        >
+          ">
           Highest performing rune set
           <Icon class="inline size-3.5" name="info" />
         </div>
@@ -33,15 +35,14 @@ const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
         :key="path.id"
         :runes="runes?.primary"
         :keystones="runes?.keystone"
-        :path
-      />
+        :path />
     </div>
     <!--  <div :class="cn(gridClass, 'relative')">
       <Separator class="absolute z-0 w-full opacity-90" />
       <div
         v-for="path in pathRecord"
         :key="path.id"
-        class="z-1 grid size-12 place-items-center rounded-full bg-b1">
+        class="z-1 grid size-12 place-items-center rounded-full bg-p0">
         <Button
           data-type="path"
           :data-id="path.name"
@@ -66,12 +67,11 @@ const gridClass = 'grid w-full grid-cols-5 gap-2 place-items-center  '
         v-for="path in pathRecord"
         :key="path.id"
         :runes="runes?.secondary"
-        :path
-      />
+        :path />
     </div>
 
     <div :class="cn(gridClass, 'overflow-hidden')">
       <LazyChampionShardWinrates :shards="runes?.shards" />
     </div>
-  </div>
+  </UPageSection>
 </template>

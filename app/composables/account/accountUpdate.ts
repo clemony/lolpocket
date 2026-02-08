@@ -13,14 +13,12 @@ export async function accountUpdate(account) {
   else {
     as().account = Object.assign(as().account, data)
     toast.add({
-      title: 'Welcome back!',
       color: 'neutral',
+      title: 'Welcome back!',
       description: `Great to see you, ${
         as().account?.name ?? as().account?.username ?? 'Summoner'
       }!`,
       icon: 'tick',
     })
-
-    ps().$persist
   }
 }

@@ -11,12 +11,11 @@ const props = defineProps<
   <MenubarLabel
     :class="
       cn(
-        'text-bc/40 dst px-2 pt-1.5 text-sm font-semibold',
+        'px-2 pt-1.5 text-sm font-semibold text-pc/40 dst',
         inset && 'pl-8',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </MenubarLabel>
 </template>

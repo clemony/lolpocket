@@ -10,31 +10,29 @@ const inboxes: Record<string, InboxType> = {
   news: {
     name: 'News',
     component: 'NewsView',
+    value: 0,
     icon: {
       name: 'lucide:newspaper',
       class: '**:stroke-[1.5] ',
     },
-    value: 0,
   },
 }
 </script>
 
 <template>
   <div class="size-full">
-    <div :class="cn('border-b-b3/80 w-full gap-0 border-b px-3', className)">
+    <div :class="cn('w-full gap-0 border-b border-b-p3/80 px-3', className)">
       <div class="flex w-full items-center justify-between">
         <DropdownMenu
           v-model:open="ui().sidebarStates.inboxDropdown"
-          class="z-0"
-        >
+          class="z-0">
           <DropdownMenuTrigger
-            class="disabled:**:text-bc data-[state=open]:border-b3 data-[state=open]:bg-b3/50! data-[state=open]:inset-shadow-xxs flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:shadow-xs"
+            class="flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:**:text-pc disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:border-p3 data-[state=open]:bg-p3/50! data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs"
             :disabled="!dropdown"
-            as-child
-          >
+            as-child>
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
-              <h2 class="dst font-bold">
+              <h2 class="font-bold dst">
                 {{ title }}
               </h2>
             </SidebarMenuButton>
@@ -44,17 +42,18 @@ const inboxes: Record<string, InboxType> = {
           </DropdownMenuPopContent>
         </DropdownMenu>
 
-        <Tabs v-model:model-value="tabs" class="z-1">
+        <Tabs
+          v-model:model-value="tabs"
+          class="z-1">
           <TabsList class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"
               :key="item.name"
               class="h-full px-3"
-              :value="item.component"
-            >
+              :value="item.component">
               <icon :name="item.icon.name" />
             </TabsTrigger>
-            <TabIndicator class="bg-b1" />
+            <TabIndicator class="bg-p0" />
           </TabsList>
         </Tabs>
       </div>

@@ -27,8 +27,7 @@ const delegatedProps = reactiveOmit(props, 'class', 'size', 'isActive')
     square
     :class="
       props.class
-    "
-  >
+    ">
     <slot />
   </PaginationListItem>
 </template>

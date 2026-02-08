@@ -16,20 +16,16 @@ const route = useRoute()
     data-theme="mini-tip neutral no-arrow"
     @click="
       navigateTo(
-        `/summoner/${route.params.region}/${route.params.slug}/${champKeyById(params.data.championId)}`,
+        `/summoner/${route.params.region}/${route.params.slug}/${champKeyById(params.data.championId)}`
       )
-    "
-  >
+    ">
     <img
       class="size-13 rounded-full shadow-sm drop-shadow-sm"
       :src="`/img/champions/${params.data.championId}.webp`"
-      :alt="`${champNameById(params.data.championId)}-icon`"
-    >
-    <h4 class="dst text-start leading-none font-semibold">
+      :alt="`${champNameById(params.data.championId)}-icon`" />
+    <h4 class="text-start leading-none font-semibold dst">
       {{ champNameById(params.data.championId) }}
     </h4>
     <Icon class="size-3.5 opacity-40 group-hover/btn:opacity-100" name="open" />
   </Button>
 </template>
-
-<style scoped></style>

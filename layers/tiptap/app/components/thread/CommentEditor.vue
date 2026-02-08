@@ -17,6 +17,9 @@ const emit = defineEmits<{
 
 const editor = useEditor({
   content: props.modelValue ?? null,
+  onUpdate: ({ editor }) => {
+    emit('update:modelValue', editor.getJSON())
+  },
   extensions: [
     StarterKit,
     CharacterCount.configure({ limit: 2000 }),
@@ -32,9 +35,6 @@ const editor = useEditor({
       // suggestion: emojiSuggestions,
     }),
   ],
-  onUpdate: ({ editor }) => {
-    emit('update:modelValue', editor.getJSON())
-  },
 })
 
 // helper for handling refs
@@ -54,30 +54,36 @@ onMounted(() => {
     ref="target"
     :class="
       cn(
-        'group/text border-b3/80 focus-within:ring-bc/60 relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200',
+        'group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border border-p3/80 p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200 focus-within:ring-pc/60',
         props.class,
       )
     "
-    @dblclick="editor?.commands.selectAll()"
-  >
+    @dblclick="editor?.commands.selectAll()">
     <div class="w-full grow p-2 pr-12">
       <EditorContent
         id="editor"
-        class="text-md mr-12 w-full grow border-0 outline-0!"
-        :editor="editor"
-      />
-      <BubbleMenu v-if="editor" :editor />
+        class="mr-12 w-full grow border-0 text-md outline-0!"
+        :editor="editor" />
+      <BubbleMenu
+        v-if="editor"
+        :editor />
     </div>
 
     <div class="flex items-center justify-between">
       <div class="flex items-end gap-1 self-end">
-        <EmojiMenu v-if="editor" :editor />
-        <MentionTabMenu v-if="editor" :mention-data :editor />
-        <EditorExtrasMenu v-if="editor" :editor />
+        <EmojiMenu
+          v-if="editor"
+          :editor />
+        <MentionTabMenu
+          v-if="editor"
+          :mention-data
+          :editor />
+        <EditorExtrasMenu
+          v-if="editor"
+          :editor />
         <Separator
           class="mr-1 ml-0.75 h-4 self-center"
-          orientation="vertical"
-        />
+          orientation="vertical" />
         <Button
           class="disabled:opacity-30"
           variant="ghost"
@@ -85,12 +91,10 @@ onMounted(() => {
           :disabled="!editor?.can()?.undo()"
           square
           size="xs"
-          @click="editor.commands.undo()"
-        >
+          @click="editor.commands.undo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
-            name="lucide:undo"
-          />
+            name="lucide:undo" />
         </Button>
         <Button
           class="disabled:opacity-30"
@@ -99,16 +103,17 @@ onMounted(() => {
           :disabled="!editor?.can()?.redo()"
           square
           size="xs"
-          @click="editor.commands.redo()"
-        >
+          @click="editor.commands.redo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
-            name="lucide:redo"
-          />
+            name="lucide:redo" />
         </Button>
       </div>
       <div class="flex items-center gap-6">
-        <CharacterCounter v-if="editor" :editor :limit="2000" />
+        <CharacterCounter
+          v-if="editor"
+          :editor
+          :limit="2000" />
 
         <slot :editor />
       </div>

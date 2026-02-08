@@ -25,24 +25,21 @@ const forwarded = useForwardProps(delegatedProps)
         'ContextMenuArrow pointer-events-none absolute z-3 grid place-items-center will-change-[position,opacity]',
         props.class,
       )
-    "
-  >
+    ">
     <div
       :class="
         cn(
           'absolute -top-0.5 grid size-8 place-items-center mask-b-from-68% mask-b-to-69%',
           props.iconClass,
         )
-      "
-    >
+      ">
       <icon
         name="ion:caret-up-sharp"
         :class="
           cn(
-            'text-b1/91 *:stroke-b4 size-8! mask-b-from-70% mask-b-to-90% stroke-6 drop-shadow-xs drop-shadow-black/30 text-shadow-sm',
+            '*:stroke-b4 size-8! mask-b-from-70% mask-b-to-90% stroke-6 text-p0/91 drop-shadow-xs drop-shadow-black/30 text-shadow-sm',
           )
-        "
-      />
+        " />
     </div>
   </ContextMenuArrow>
 </template>

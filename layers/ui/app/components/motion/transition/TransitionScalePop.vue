@@ -22,8 +22,7 @@ const {
     :class="cn(className)"
     :mode="mode"
     :origin="origin"
-    :scale="scale"
-  >
+    :scale="scale">
     <slot />
   </transition-scale>
 </template>

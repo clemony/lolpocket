@@ -11,22 +11,28 @@ const { item } = defineProps<{ item: MenubarItem }>()
   <!-- separator -->
   <MenubarSeparator
     v-if="item.name === 'separator'"
-    class="bg-b3/60 mt-0.75 mb-0.5"
-  />
+    class="mt-0.75 mb-0.5 bg-p3/60" />
 
   <!-- checkbox -->
-  <AutoMenuCheckboxItem v-else-if="item.type === 'checkbox'" :item />
+  <AutoMenuCheckboxItem
+    v-else-if="item.type === 'checkbox'"
+    :item />
   <!-- radio -->
   <AutoMenuRadioGroup
     v-else-if="item.type === 'radio'"
-    :item="item as MenubarRadioGroup"
-  />
+    :item="item as MenubarRadioGroup" />
 
   <!-- submenu -->
-  <AutoSubMenu v-else-if="item.type === 'submenu'" :item />
+  <AutoSubMenu
+    v-else-if="item.type === 'submenu'"
+    :item />
 
   <!-- group -->
-  <AutoMenuGroup v-else-if="item.type === 'group'" :item />
+  <AutoMenuGroup
+    v-else-if="item.type === 'group'"
+    :item />
 
-  <AutoMenuItem v-else :item />
+  <AutoMenuItem
+    v-else
+    :item />
 </template>

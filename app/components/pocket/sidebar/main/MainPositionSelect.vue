@@ -36,12 +36,13 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Select v-model:model-value="pocket._role" v-model:open="open">
+  <Select
+    v-model:model-value="pocket._role"
+    v-model:open="open">
     <SelectTrigger as-child>
       <Button
         class="relative grid size-20 place-items-center overflow-hidden **:pointer-events-none"
-        variant="ghost"
-      >
+        variant="ghost">
         <div class="grid size-12! place-items-center">
           <component
             :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
@@ -49,8 +50,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
             :style="{
               color: mapPositions.find((p) => p.name === pocket?._role)
                 .color,
-            }"
-          />
+            }" />
         </div>
         <!--
         <icon
@@ -65,8 +65,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :align
       :reference="trigger"
       :align-offset
-      position="popper"
-    >
+      position="popper">
       <div class="flex items-center gap-3 p-2">
         <component
           :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
@@ -74,8 +73,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
           :style="{
             color: mapPositions.find((p) => p.name === pocket?._role)
               .color,
-          }"
-        />
+          }" />
         <h3
           v-memo="[pocket._role]"
           :class="
@@ -83,8 +81,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
               'dst': pocket._role,
               'font-normal! opacity-10': !pocket._role,
             })
-          "
-        >
+          ">
           {{ pocket._role || "Role" }}
         </h3>
       </div>
@@ -93,8 +90,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
         <SelectItem
           v-for="position in mapPositions"
           :key="position.name"
-          :value="position.name"
-        >
+          :value="position.name">
           <PositionBadge :position="position.name" />
         </SelectItem>
       </SelectGroup>

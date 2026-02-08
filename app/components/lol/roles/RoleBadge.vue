@@ -23,9 +23,9 @@ const role = computed(() => {
     :size
     :class="
       cn(
-        'text-bc/90 w-fit pr-6 pl-4 text-sm! font-medium! capitalize',
+        'w-fit pr-6 pl-4 text-sm! font-medium! text-pc/90 capitalize',
         {
-          'hover:**:text-bc hover:text-bc order-first text-white':
+          'hover:**:text-pc hover:text-pc order-first text-white':
             active || (cs().filters.role && cs().filters.role === role.name),
           'pr-3': active && clear,
         },
@@ -34,15 +34,18 @@ const role = computed(() => {
     "
     :style="{
       backgroundColor: `${(cs().filters.role && cs().filters.role === role.name) || active ? role.color : 'transparent'}`,
-    }"
-  >
-    <Element square size="sm">
+    }">
+    <Element
+      square
+      size="sm">
       <component
         :is="`i-lol-${role?.name.toLowerCase()}`"
-        :class="cn('dst absolute size-4.25! shrink-0', role?.class)"
-      />
+        :class="cn('absolute size-4.25! shrink-0 dst', role?.class)" />
     </Element>
     {{ role.name }}
-    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
+    <icon
+      v-if="clear"
+      class="size-4 text-white **:stroke-[2.6]"
+      name="x" />
   </Button>
 </template>

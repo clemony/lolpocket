@@ -19,8 +19,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <RangeCalendarRoot
     v-slot="{ grid, weekDays }"
     v-bind="forwarded"
-    :class="cn('p-3', props.class)"
-  >
+    :class="cn('p-3', props.class)">
     <RangeCalendarHeader>
       <RangeCalendarPrevButton />
       <RangeCalendarHeading />
@@ -28,10 +27,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     </RangeCalendarHeader>
 
     <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
-      <RangeCalendarGrid v-for="month in grid" :key="month.value.toString()">
+      <RangeCalendarGrid
+        v-for="month in grid"
+        :key="month.value.toString()">
         <RangeCalendarGridHead>
           <RangeCalendarGridRow>
-            <RangeCalendarHeadCell v-for="day in weekDays" :key="day">
+            <RangeCalendarHeadCell
+              v-for="day in weekDays"
+              :key="day">
               {{ day }}
             </RangeCalendarHeadCell>
           </RangeCalendarGridRow>
@@ -40,19 +43,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           <RangeCalendarGridRow
             v-for="(weekDates, index) in month.rows"
             :key="`weekDate-${index}`"
-            class="mt-2 w-full"
-          >
+            class="mt-2 w-full">
             <RangeCalendarCell
               v-for="weekDate in weekDates"
               :key="weekDate.toString()"
               class="group indicator"
-              :date="weekDate"
-            >
+              :date="weekDate">
               <RangeCalendarCellTrigger
                 class="peer"
                 :day="weekDate"
-                :month="month.value"
-              />
+                :month="month.value" />
               <span
                 v-if="isToday(weekDate, getLocalTimeZone())"
                 :class="
@@ -63,12 +63,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
                       group-has-not-data-[selected]:to-neutral
                     `,
                     `
-                      group-has-data-[selected]:from-b1
                       group-has-data-[selected]:to-b4
+                      group-has-data-[selected]:from-p0
                     `,
                   )
-                "
-              />
+                " />
             </RangeCalendarCell>
           </RangeCalendarGridRow>
         </RangeCalendarGridBody>

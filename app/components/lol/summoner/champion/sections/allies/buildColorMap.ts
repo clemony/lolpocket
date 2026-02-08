@@ -9,7 +9,7 @@ export function getAllyColorMap(data: AllyDataPoint[]) {
     '#a3be8c',
     '#abd2b5',
     '#df9372',
-    '#e3a3b1',
+    '#e3a3p0',
   ]
 
   const map = new Map<string, string>()

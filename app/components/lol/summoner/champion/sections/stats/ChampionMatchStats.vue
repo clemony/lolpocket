@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const { stats } = storeToRefs(s_champion())
-console.log('🥸 - stats:', stats)
+console.log("🥸 - stats:", stats)
 </script>
 
 <template>
-  <div :class="cn('', className)" />
+  <UPageSection title="Match" :class="cn('', className)" />
 </template>

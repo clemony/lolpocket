@@ -27,15 +27,14 @@ const props = withDefaults(
     :data-active="isActive"
     :class="
       cn(
-        'hover:text-sidebar-bc hover:bg-b3 on:text-sidebar-bc on:bg-b3 [&>svg]:text-sidebar-bc text-bc ring-bc/60 flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 ring outline-hidden focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0',
-        'data-[active=true]:text-sidebar-bc data-[active=true]:bg-b3',
+        'hover:text-sidebar-bc on:text-sidebar-bc [&>svg]:text-sidebar-bc flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-pc ring ring-pc/60 outline-hidden hover:bg-p3 focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 on:bg-p3 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0',
+        'data-[active=true]:text-sidebar-bc data-[active=true]:bg-p3',
         size === 'sm' && 'text-sm',
         size === 'md' && 'text-md',
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </Primitive>
 </template>

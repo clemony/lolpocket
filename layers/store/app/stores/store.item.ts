@@ -36,7 +36,7 @@ export const useItemStore = defineStore(
       filters.value.query = ''
       filters.value.rank = null
       filters.value.stats.length = 0
-      filters.value.tags.length - 0
+      filters.value.tags.length = 0
     }
 
     // --- FILTER LOGIC ---
@@ -148,8 +148,8 @@ export const useItemStore = defineStore(
   {
     persist: {
       key: 'itemStore',
-      pick: ['itemGridApi'],
       storage: piniaPluginPersistedstate.localStorage(),
+      pick: ['itemGridApi'],
     },
   }
 )

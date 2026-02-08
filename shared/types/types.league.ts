@@ -37,11 +37,11 @@ export interface Spell {
 }
 
 export interface StatIndex {
+  color?: string
   id: string
   key?: string
   name: string
   abbr?: string
-  color?: string
   description: string
   group?: string
   icon?: string

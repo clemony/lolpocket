@@ -5,36 +5,31 @@ const { summoner } = defineProps<{
 </script>
 
 <template>
-  <Dialog v-model:open="ui().blockDialog">
-    <DialogTrigger as-child>
+  <UModal v-model:open="ui().blockDialog" :title="`Block ${summoner.name}?`">
+    <UButton as-child>
       <slot />
-    </DialogTrigger>
-    <DialogContent>
-      <DialogHeader>
-        <DialogTitle class="text-xxl">
-          Block {{ summoner.name }}?
-        </DialogTitle>
-        <DialogDescription class="text-bc mt-3 space-y-4 leading-7">
-          <p>
-            Blocking this summoner will remove them from your follow list and
-            from search results. This user will also no longer be able to
-            message you, comment, or react to your pockets or profile.
-          </p>
-          <p>
-            You can manage any summoners you've blocked in
-            <BtnLink
-              class="text-bc/70 hover:text-bc inline underline decoration-dotted hover:decoration-solid"
-              to="/settings/account#blocked-users"
-            >
-              Account Settings
-            </BtnLink>
-          </p>
-        </DialogDescription>
-      </DialogHeader>
+    </UButton>
+    <template #description>
+      <div class="mt-3 space-y-4 leading-7 text-pc">
+        <p>
+          Blocking this summoner will remove them from your follow list and from
+          search results. This user will also no longer be able to message you,
+          comment, or react to your pockets or profile.
+        </p>
+        <p>
+          You can manage any summoners you've blocked in
+          <BtnLink
+            class="inline text-pc/70 underline decoration-dotted hover:text-pc hover:decoration-solid"
+            to="/settings/account#blocked-users">
+            Account Settings
+          </BtnLink>
+        </p>
+      </div>
+    </template>
 
-      <DialogFooter
-        class="mt-4 flex w-full grow flex-row! items-center justify-between gap-10"
-      >
+    <template #footer>
+      <div
+        class="mt-4 flex w-full grow flex-row! items-center justify-between gap-10">
         <span class="text-sm italic opacity-60">
           Are you sure you want to block {{ summoner.name }}?
         </span>
@@ -43,7 +38,7 @@ const { summoner } = defineProps<{
           <icon class="size-4.5 **:stroke-[2.2]" name="ban" />
           Block
         </Button>
-      </DialogFooter>
-    </DialogContent>
-  </Dialog>
+      </div>
+    </template>
+  </UModal>
 </template>

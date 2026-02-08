@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { buildAllyBubbleData, getAllyColorMap } from '.'
+import { buildAllyBubbleData, getAllyColorMap } from "."
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const { allies, stats } = storeToRefs(s_champion())
@@ -12,7 +12,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
 </script>
 
 <template>
-  <div :class="cn('flex flex-col gap-8', className)">
+  <UPageSection title="Allies" :class="cn('flex flex-col gap-8', className)">
     <LazyAllyBubbleChart :points :color-map />
 
     <table class="table max-w-220 select-none">
@@ -28,8 +28,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           <th>Winrate</th>
           <th
             class="hover:underline"
-            data-type="Percent winrate change when on team."
-          >
+            data-type="Percent winrate change when on team.">
             Delta*
           </th>
           <th>Avg. Match Duration</th>
@@ -42,16 +41,14 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         class="group/collapse"
         :style="{ '--ally-color': colorMap.get(v.puuid) }"
         :default-open="false"
-        as="tbody"
-      >
+        as="tbody">
         <tr
           :class="
             cn(
-              'w-full! rounded-md *:leading-none group-open/collapse:bg-b2/60 hover:bg-b2/60 group-open/collapse:hover:bg-b2',
-              '',
+              'w-full! rounded-md *:leading-none group-open/collapse:bg-p2/60 hover:bg-p2/60 group-open/collapse:hover:bg-p2',
+              ''
             )
-          "
-        >
+          ">
           <td>
             <CollapsibleTrigger class="size-full h-12! justify-center">
               <CaretRotate direction="right" />
@@ -59,8 +56,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           </td>
           <td class="h-full! text-start!">
             <CollapsibleTrigger
-              class="inline-flex h-12! justify-start align-baseline"
-            >
+              class="inline-flex h-12! justify-start align-baseline">
               <Icon class="text-(--ally-color)!" name="round" />
               <span class="font-semibold">{{ v?.name }}</span>
               <span class="text-xs font-medium opacity-60">#{{ v?.tag }}</span>
@@ -91,14 +87,13 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         <CollapsibleContent
           v-for="(c, i) in v.champions"
           :key="c.championId"
-          class="CollapsibleContent w-full hover:bg-b2/30"
-          as="tr"
-        >
+          class="CollapsibleContent w-full hover:bg-p2/30"
+          as="tr">
           <th class="font-semibold">
             <span>{{ i + 1 }}</span>
           </th>
           <td class="flex h-12! items-center gap-4">
-            <ChampionIcon :id="c.championId" class="size-10 rounded-md" />
+            <Champion :id="c.championId" class="size-10 rounded-md" />
             {{ c.championName }}
           </td>
           <td>{{ c?.games }}</td>
@@ -110,5 +105,5 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         </CollapsibleContent>
       </Collapsible>
     </table>
-  </div>
+  </UPageSection>
 </template>

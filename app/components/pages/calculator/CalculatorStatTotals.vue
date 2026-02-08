@@ -50,8 +50,7 @@ const set2 = computed(() => is().calculatorSet2)
   <div class="w-full overflow-hidden">
     <!-- head -->
     <div
-      class="btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center py-2 *:text-sm"
-    >
+      class="btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center py-2 *:text-sm">
       <div class="col-start-2 font-medium dst">
         STAT
       </div>
@@ -60,7 +59,9 @@ const set2 = computed(() => is().calculatorSet2)
         {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
-      <div v-if="is().isComparing" class="justify-center font-medium dst">
+      <div
+        v-if="is().isComparing"
+        class="justify-center font-medium dst">
         2
       </div>
     </div>
@@ -69,7 +70,7 @@ const set2 = computed(() => is().calculatorSet2)
       <LayoutGroup>
         <!--  <motion.label
           :key="stat.id"
-          class="border-t-b3/60 border-b-b3/55 bg-b1 last:border-b-b3! hover:border-y-b3/80 hover:bg-b1/50 sticky top-0 left-0 z-1 grid cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b py-3 *:justify-start first:border-t hover:border-y"
+          class="border-t-p3/60 border-b-p3/55 bg-p0 last:border-b-p3! hover:border-y-p3/80 hover:bg-p0/50 sticky top-0 left-0 z-1 grid cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b py-3 *:justify-start first:border-t hover:border-y"
           :layout="true"
         >
 
@@ -88,34 +89,32 @@ const set2 = computed(() => is().calculatorSet2)
           />
         </motion.label> -->
 
-        <template v-for="stat in statIndex" :key="stat.id">
+        <template
+          v-for="stat in statIndex"
+          :key="stat.id">
           <motion.label
             v-if="!checkedStats.includes(stat)"
-            class="grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b border-b-b3/40 py-3.5 first:border-t first:border-t-b3 hover:bg-b2/60 has-checked:hidden"
-            :layout="true"
-          >
+            class="grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b border-b-p3/40 py-3.5 first:border-t first:border-t-p3 hover:bg-p2/60 has-checked:hidden"
+            :layout="true">
             <input
               v-model="checkedStats"
               class="peer absolute hidden"
               type="checkbox"
-              :value="stat"
-            >
+              :value="stat">
 
             <StatRowContents
               :stat="stat"
               :item-stats="stats"
-              :item-stats2="stats2"
-            />
+              :item-stats2="stats2" />
           </motion.label>
         </template>
       </LayoutGroup>
     </div>
 
     <div
-      class="z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center border-y border-y-b3/50 py-2 *:text-sm"
-    >
+      class="z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center border-y border-y-p3/50 py-2 *:text-sm">
       <div class="ml-4 justify-center">
-        <i-ui-gold class="size-6 text-bc/80" />
+        <i-ui-gold class="size-6 text-pc/80" />
       </div>
 
       <div class="col-start-2 font-medium dst">
@@ -126,7 +125,9 @@ const set2 = computed(() => is().calculatorSet2)
         {{ totalCost }}
       </div>
 
-      <div v-if="is().isComparing" class="justify-center font-medium dst">
+      <div
+        v-if="is().isComparing"
+        class="justify-center font-medium dst">
         {{ totalCost2 }}
       </div>
     </div>

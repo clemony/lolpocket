@@ -33,7 +33,6 @@ export function transformMatchData(raw: any): MatchData {
       },
 
       items: {
-        role: p.roleBoundItem ?? 0,
         slots: [
           p.item0 ?? 0,
           p.item1 ?? 0,
@@ -42,6 +41,7 @@ export function transformMatchData(raw: any): MatchData {
           p.item4 ?? 0,
           p.item5 ?? 0,
         ],
+        role: p.roleBoundItem ?? 0,
         trinket: p.item6 ?? 0,
       },
 

@@ -8,8 +8,8 @@ defineOptions({
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   side: 'left',
-  collapsible: 'offcanvas',
   variant: 'sidebar',
+  collapsible: 'offcanvas',
 })
 
 const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
@@ -22,11 +22,10 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     data-slot="sidebar"
     :class="
       cn(
-        'bg-tint-b2/40 text-bc flex h-full w-(--sidebar-width) flex-col',
+        'flex h-full w-(--sidebar-width) flex-col bg-tint-p2/40 text-pc',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 
@@ -34,18 +33,16 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     v-else-if="isMobile"
     v-bind="$attrs"
     :open="openMobile"
-    @update:open="setOpenMobile"
-  >
+    @update:open="setOpenMobile">
     <SheetContent
-      class="bg-sidebar text-bc w-(--sidebar-width) p-0 [&>button]:hidden"
+      class="bg-sidebar w-(--sidebar-width) p-0 text-pc [&>button]:hidden"
       data-sidebar="sidebar"
       data-slot="sidebar"
       data-mobile="true"
       :side="side"
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
-      }"
-    >
+      }">
       <SheetHeader class="sr-only">
         <SheetTitle>Sidebar</SheetTitle>
         <SheetDescription>Displays the mobile sidebar.</SheetDescription>
@@ -58,13 +55,12 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
 
   <div
     v-else
-    class="group peer text-bc hidden md:block"
+    class="group peer hidden text-pc md:block"
     data-slot="sidebar"
     :data-state="state"
     :data-collapsible="state === 'collapsed' ? collapsible : ''"
     :data-variant="variant"
-    :data-side="side"
-  >
+    :data-side="side">
     <!-- This is what handles the sidebar gap on desktop  -->
     <div
       :class="
@@ -76,8 +72,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
             ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]'
             : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)',
         )
-      "
-    />
+      " />
     <div
       v-bind="$attrs"
       :class="
@@ -89,15 +84,13 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
           // Adjust the padding for floating and inset variants.
           variant === 'floating' || variant === 'inset'
             ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
-            : 'border-b3 group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border group-data-[side=right]:border',
+            : 'border-p3 group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border group-data-[side=right]:border',
           props.class,
         )
-      "
-    >
+      ">
       <div
-        class="bg-sidebar/90 border-b3 flex size-full flex-col backdrop-blur-lg group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
-        data-sidebar="sidebar"
-      >
+        class="bg-sidebar/90 flex size-full flex-col border-p3 backdrop-blur-lg group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
+        data-sidebar="sidebar">
         <slot />
       </div>
     </div>

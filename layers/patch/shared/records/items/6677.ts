@@ -1,15 +1,15 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 6677,
-  "name": "Rageknife",
-  "description": "25% Attack Speed\n\n\nWrath: Attacks apply 20 magic damage On-Hit.Seething Strike: Basic attacks grant 5% Attack Speed, stacking up to 3 times for a maximum of  Attack Speed.",
-  "gold": {
-    "base": 600,
-    "purchasable": false,
-    "total": 1100,
-    "sell": 770
+const item: Item = {
+  id: 6677,
+  name: 'Rageknife',
+  description: '25% Attack Speed\n\n\nWrath: Attacks apply 20 magic damage On-Hit.Seething Strike: Basic attacks grant 5% Attack Speed, stacking up to 3 times for a maximum of  Attack Speed.',
+  gold: {
+    base: 600,
+    purchasable: false,
+    sell: 770,
+    total: 1100
   }
 }
 export default item

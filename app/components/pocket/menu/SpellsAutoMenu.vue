@@ -6,8 +6,7 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
 <template>
   <MenubarRadioGroup v-model:model-value="pocket._spells">
     <MenubarLabel
-      class="before:bg-b1/30 sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur-sm before:absolute before:top-0 before:left-0 before:z-1 before:mix-blend-lighten"
-    >
+      class="sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur-sm before:absolute before:top-0 before:left-0 before:z-1 before:bg-p0/30 before:mix-blend-lighten">
       <span class="isolate z-2">Default Spells</span>
     </MenubarLabel>
 
@@ -15,11 +14,14 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
       v-for="(set, i) in pocket.spells"
       :key="i"
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
-      :value="set.id"
-    >
-      <IndexIcon class="size-6" :item="spells[set.d]" />
+      :value="set.id">
+      <IndexIcon
+        class="size-6"
+        :item="spells[set.d]" />
 
-      <IndexIcon class="size-6" :item="spells[set.f]" />
+      <IndexIcon
+        class="size-6"
+        :item="spells[set.f]" />
       <Grow />
     </MenubarRadioItem>
   </MenubarRadioGroup>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const {
+  variant = 'shadow',
   class: className,
   size = 'md',
   summoner,
-  variant = 'shadow',
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: MaybeRef<Summoner>
@@ -17,9 +17,10 @@ const {
     :class="cn('', className)"
     :variant="variant"
     :size="size"
-    @click="ui().blockDialog = true"
-  >
-    <icon class="" name="lucide:ban" />
+    @click="ui().blockDialog = true">
+    <icon
+      class=""
+      name="lucide:ban" />
     <span>
       <slot />
     </span>

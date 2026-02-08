@@ -24,13 +24,14 @@ const forwarded = useForwardProps(delegatedProps)
     data-slot="pagination-next"
     :class="
       cn(
-        'btn-square aspect-square gap-1',
+        'aspect-square btn-square gap-1',
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon class="size-4" name="right" />
+      <icon
+        class="size-4"
+        name="right" />
     </slot>
   </PaginationNext>
 </template>

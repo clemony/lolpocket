@@ -19,15 +19,13 @@ onMounted(() => {
       type="radio"
       name="item-popover"
       :value="item.id"
-      @change="emit('update:modelValue', modelValue)"
-    >
+      @change="emit('update:modelValue', modelValue)">
 
     <Item
       :id="item.id"
       class="size-7 rounded-full"
       :item="item"
-      :alt="item.id"
-    />
+      :alt="item.id" />
     {{ item.name }}
   </CommandResult>
 </template>

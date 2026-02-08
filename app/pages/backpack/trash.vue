@@ -28,7 +28,9 @@ definePageMeta({
 
 <template>
   <button class="btn bg-domination text-sm font-medium text-white">
-    <icon class="size-5 text-white" name="nimbus:fire" />
+    <icon
+      class="size-5 text-white"
+      name="nimbus:fire" />
 
     <span class="pt-px">Delete All</span>
   </button>

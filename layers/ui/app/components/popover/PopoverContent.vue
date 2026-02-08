@@ -36,8 +36,7 @@ provide('popoverVariant', props.variant)
       :data-theme="props.dataTheme"
       :side-offset
       :class="cn(props.class)"
-      @close-auto-focus.prevent
-    >
+      @close-auto-focus.prevent>
       <slot />
     </PopoverContent>
   </PopoverPortal>

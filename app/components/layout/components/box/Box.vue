@@ -26,8 +26,12 @@ const today = new Date()
         <Tooltip>
           <!-- size="icon"  -->
           <TooltipTrigger as-child>
-            <Button variant="ghost" :disabled="!mail">
-              <icon class="size-4.75 **:stroke-2" name="pin" />
+            <Button
+              variant="ghost"
+              :disabled="!mail">
+              <icon
+                class="size-4.75 **:stroke-2"
+                name="pin" />
               <span class="sr-only">Pin</span>
             </Button>
           </TooltipTrigger>
@@ -90,19 +94,19 @@ const today = new Date()
             <div class="grid min-w-[250px] gap-1">
               <Button class="justify-start font-normal" variant="ghost">
                 Later today
-                <span class="text-bc/60 ml-auto">3:00pm</span>
+                <span class="text-pc/60 ml-auto">3:00pm</span>
               </Button>
               <Button class="justify-start font-normal" variant="ghost">
                 Tomorrow
-                <span class="text-bc/60 ml-auto">1 day</span>
+                <span class="text-pc/60 ml-auto">1 day</span>
               </Button>
               <Button class="justify-start font-normal" variant="ghost">
                 This weekend
-                <span class="text-bc/60 ml-auto">2 days</span>
+                <span class="text-pc/60 ml-auto">2 days</span>
               </Button>
               <Button class="justify-start font-normal" variant="ghost">
                 Next week
-                <span class="text-bc/60 ml-auto">5 days</span>
+                <span class="text-pc/60 ml-auto">5 days</span>
               </Button>
             </div>
           </div>
@@ -151,7 +155,9 @@ const today = new Date()
       </DropdownMenu>
     </div> -->
       <Separator />
-      <div v-if="mail" class="flex flex-1 flex-col">
+      <div
+        v-if="mail"
+        class="flex flex-1 flex-col">
         <div class="flex items-start p-4">
           <div class="flex items-start gap-4 text-sm">
             <PocketIcon class="aspect-square size-17 rounded-full" />
@@ -168,7 +174,9 @@ const today = new Date()
               </div>
             </div>
           </div>
-          <div v-if="mail.date" class="text-bc/60 ml-auto text-sm">
+          <div
+            v-if="mail.date"
+            class="ml-auto text-sm text-pc/60">
             1/12/2046
           </div>
         </div>
@@ -180,16 +188,22 @@ const today = new Date()
         <div class="p-4">
           <form>
             <div class="grid gap-4">
-              <Textarea class="p-4" :placeholder="`Reply ${mail.name}...`" />
+              <Textarea
+                class="p-4"
+                :placeholder="`Reply ${mail.name}...`" />
               <div class="flex items-center">
                 <Label
                   class="flex items-center gap-2 text-sm font-normal"
-                  html-for="mute"
-                >
-                  <Switch id="mute" aria-label="Mute thread" />
+                  html-for="mute">
+                  <Switch
+                    id="mute"
+                    aria-label="Mute thread" />
                   Mute this thread
                 </Label>
-                <Button class="ml-auto" type="button" size="sm">
+                <Button
+                  class="ml-auto"
+                  type="button"
+                  size="sm">
                   Send
                 </Button>
               </div>
@@ -197,7 +211,9 @@ const today = new Date()
           </form>
         </div>
       </div>
-      <div v-else class="text-bc/60 p-8 text-center">
+      <div
+        v-else
+        class="p-8 text-center text-pc/60">
         No message selected
       </div>
     </div>

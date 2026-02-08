@@ -31,10 +31,11 @@ const forwarded = useForwardProps(delegatedProps)
         'cursor-pointer disabled:cursor-not-allowed disabled:opacity-20',
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon class="size-4" name="minus" />
+      <icon
+        class="size-4"
+        name="minus" />
     </slot>
   </NumberFieldDecrement>
 </template>

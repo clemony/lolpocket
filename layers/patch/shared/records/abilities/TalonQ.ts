@@ -1,59 +1,59 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:10 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "Q",
-  "name": "Noxian Diplomacy",
-  "affects": "Enemies",
-  "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon instead  critically strikes the target.",
-  "castTime": "None / 100% of Talon's windup time (0.198 at base attack speed)",
-  "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
-  "cost": "40",
-  "damageType": "Physical damage",
-  "effects": [
+const ability: Ability = {
+  key: 'Q',
+  name: 'Noxian Diplomacy',
+  affects: 'Enemies',
+  blurb: 'Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon instead  critically strikes the target.',
+  castTime: 'None / 100% of Talon\'s windup time (0.198 at base attack speed)',
+  cooldown: '8 / 7.5 / 7 / 6.5 / 6',
+  cost: '40',
+  damageType: 'Physical damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/q',
+  notes: 'Talon will track the target if they change locations with the ranged version of Noxian Diplomacy, landing at an offset of 100 units before reaching them.\nHe will dash to the target\'s previous location while still dealing damage if the target is too far away or moves beyond 800 units.\nWhen cast in close range, Noxian Diplomacy deals its damage at the completion of the cast time, rather than at the dash\'s completion.\nThe damage will be dealt even if Talon\'s dash is interrupted, so long as the cast time is completed.\nTalon will be ordered to basic attack the target at the end of the dash.\nWhile  grounded or  rooted, Noxian Diplomacy can only be cast within close range.\nTalon will still dash to the target in both cases.\nNoxian Diplomacy will also grant the heal if the target dies upon Talon\'s completion of the dash.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis only applies to the close dash attack.',
+  resource: 'Mana',
+  speed: '1400',
+  spellEffects: 'spell',
+  spellshieldable: 'True',
+  targeting: 'Unit',
+  targetRange: '575 /  170',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 30%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 30%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.</p>',
+      leveling: [
         {
-          "attribute": "Physical Damage",
-          "modifiers": [
+          attribute: 'Physical Damage',
+          modifiers: [
             {
-              "values": "65 / 85 / 105 / 125 / 145"
+              values: '65 / 85 / 105 / 125 / 145'
             },
             {
-              "unit": "% bonus AD",
-              "values": "100"
+              unit: '% bonus AD',
+              values: '100'
             }
           ]
         },
         {
-          "attribute": "Critical Physical Damage",
-          "modifiers": [
+          attribute: 'Critical Physical Damage',
+          modifiers: [
             {
-              "values": "97.5 / 127.5 / 157.5 / 187.5 / 217.5"
+              values: '97.5 / 127.5 / 157.5 / 187.5 / 217.5'
             },
             {
-              "unit": "% bonus AD",
-              "values": "150"
+              unit: '% bonus AD',
+              values: '150'
             }
           ]
         }
       ]
     },
     {
-      "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 55 (based on level) and the ability's cooldown is reduced by 50%."
+      description: 'If Noxian Diplomacy kills the target, Talon heals for 9 - 55 (based on level) and the ability\'s cooldown is reduced by 50%.'
     },
     {
-      "description": "Noxian Diplomacy resets Talon's basic attack timer. Shadow Assault can be cast during the dash."
+      description: 'Noxian Diplomacy resets Talon\'s basic attack timer. Shadow Assault can be cast during the dash.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/q",
-  "notes": "Talon will track the target if they change locations with the ranged version of Noxian Diplomacy, landing at an offset of 100 units before reaching them.\nHe will dash to the target's previous location while still dealing damage if the target is too far away or moves beyond 800 units.\nWhen cast in close range, Noxian Diplomacy deals its damage at the completion of the cast time, rather than at the dash's completion.\nThe damage will be dealt even if Talon's dash is interrupted, so long as the cast time is completed.\nTalon will be ordered to basic attack the target at the end of the dash.\nWhile  grounded or  rooted, Noxian Diplomacy can only be cast within close range.\nTalon will still dash to the target in both cases.\nNoxian Diplomacy will also grant the heal if the target dies upon Talon's completion of the dash.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis only applies to the close dash attack.",
-  "resource": "Mana",
-  "speed": "1400",
-  "spellEffects": "spell",
-  "spellshieldable": "True",
-  "targeting": "Unit",
-  "targetRange": "575 /  170"
+  ]
 }
-  export default ability
+export default ability

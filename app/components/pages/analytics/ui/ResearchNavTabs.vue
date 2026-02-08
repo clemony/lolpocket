@@ -11,8 +11,7 @@ onMounted(() => {
   <Tabs
     v-model:model-value="researchNav"
     class="w-full"
-    @update:model-value="(e) => navigateTo(e.toString())"
-  >
+    @update:model-value="(e) => navigateTo(e.toString())">
     <TabsList class="grid w-full grid-cols-2">
       <TabsTrigger value="/research/champions">
         Champions

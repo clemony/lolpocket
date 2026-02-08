@@ -25,6 +25,5 @@ const data = computed(() =>
         'aspect-square size-16 shrink-0 drop-shadow-sm drop-shadow-black/40',
         className,
       )
-    "
-  >
+    ">
 </template>

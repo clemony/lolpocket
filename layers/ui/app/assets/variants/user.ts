@@ -1,9 +1,9 @@
 export default {
   user: {
     slots: {
-      name: 'font-medium',
+      name: 'font-semibold text-pc',
       avatar: 'shrink-0',
-      description: 'text-muted',
+      description: 'text-n5',
       root: 'relative group/user',
       wrapper: ''
     },
@@ -18,8 +18,8 @@ export default {
       },
       size: {
         '2xl': {
-          name: 'text-base',
-          description: 'text-base',
+          name: 'text-pc text-md',
+          description: 'text-pc text-xs',
           root: 'gap-3'
         },
         '2xs': {
@@ -30,7 +30,7 @@ export default {
         },
         '3xl': {
           name: 'text-lg',
-          description: 'text-base',
+          description: 'text-pc',
           root: 'gap-3'
         },
         '3xs': {
@@ -47,7 +47,8 @@ export default {
         'md': {
           name: 'text-sm',
           description: 'text-xs',
-          root: 'gap-2'
+          root: 'gap-2',
+          wrapper: '*:leading-4.5'
         },
         'sm': {
           name: 'text-xs',
@@ -55,8 +56,8 @@ export default {
           root: 'gap-2'
         },
         'xl': {
-          name: 'text-base',
-          description: 'text-sm',
+          name: 'text-pc',
+          description: 'text-xs',
           root: 'gap-2.5'
         },
         'xs': {
@@ -78,7 +79,7 @@ export default {
           ],
           avatar: 'transform transition-transform duration-200 group-hover/user:scale-115 group-has-focus-visible/user:scale-115',
           description: [
-            'peer-hover:text-toned peer-focus-visible:text-toned',
+            'peer-hover:text-n3 peer-focus-visible:text-n3',
             'transition-colors'
           ]
         }

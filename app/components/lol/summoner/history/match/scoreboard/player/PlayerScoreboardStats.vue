@@ -11,24 +11,25 @@ const heal = computed(() => {
 
 <template>
   <div
-    class="mx-1 h-full w-24 max-w-24 p-1 font-medium *:text-xs *:tracking-tight **:leading-none"
-  >
+    class="mx-1 h-full w-24 max-w-24 p-1 font-medium *:text-xs *:tracking-tight **:leading-none">
     <tippy
       class="flex items-center gap-2 truncate text-nowrap hover:underline"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm"
-    >
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="text-domination dst absolute size-3.25" name="el:fire" />
+        <icon
+          class="absolute size-3.25 text-domination dst"
+          name="el:fire" />
       </span>
       {{ player.stats.totalDamage.toLocaleString() }}
     </tippy>
 
     <tippy
       class="mt-2.25 flex items-center gap-2 truncate text-nowrap hover:underline"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm"
-    >
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="text-inspiration dst size-2.75" name="oi:plus" />
+        <icon
+          class="size-2.75 text-inspiration dst"
+          name="oi:plus" />
       </span>
       {{ Math.round(heal).toLocaleString() }}
 
@@ -52,10 +53,11 @@ const heal = computed(() => {
 
     <div
       class="mt-2 flex items-center gap-2.25 truncate text-nowrap hover:underline"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm"
-    >
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="dst size-3.25 text-[#C2A76E]!" name="ph:shield-fill" />
+        <icon
+          class="size-3.25 text-[#C2A76E]! dst"
+          name="ph:shield-fill" />
       </span>
       {{ Math.round(player.stats.totalDamageTaken).toLocaleString() }}
     </div>

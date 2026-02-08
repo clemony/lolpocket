@@ -15,8 +15,7 @@ const forwarded = useForwardPropsEmits(props, emits)
 <template>
   <NavigationMenuLink
     v-bind="forwarded"
-    :class="cn('relative cursor-pointer', props.class)"
-  >
+    :class="cn('relative cursor-pointer', props.class)">
     <slot />
   </NavigationMenuLink>
 </template>

@@ -7,9 +7,9 @@ const {
   runes: Record<number, StatDetail>
   keystones?: Record<number, StatDetail>
   path: Path
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
-// @todo fix
+// todo fix
 const loaded = ref(false)
 </script>
 
@@ -17,21 +17,19 @@ const loaded = ref(false)
   <div
     :class="
       cn(
-        'relative flex size-full max-w-60 min-w-40 flex-col gap-6 rounded-lg border border-b3 px-2 py-6 **:cursor-default',
+        'relative flex size-full max-w-60 min-w-40 flex-col gap-6 rounded-lg border border-p3 px-2 py-6 **:cursor-default',
         { 'order-last': path.name === 'Inspiration' },
-        className,
+        className
       )
-    "
-  >
+    ">
     <div
       v-if="keystones"
       :class="
         cn(
           'z-2 flex w-full grow items-center justify-around',
-          path.slots[0].runes.length === 4 ? '' : 'gap-4',
+          path.slots[0].runes.length === 4 ? '' : 'gap-4'
         )
-      "
-    >
+      ">
       <div
         v-for="keystone in path.slots[0].runes"
         :key="keystone.id"
@@ -39,8 +37,7 @@ const loaded = ref(false)
         :data-id="keystone.id"
         data-type="rune"
         :data-interactive="true"
-        data-size="lg"
-      >
+        data-size="lg">
         <Keystone
           :id="keystone.id"
           :class="
@@ -50,32 +47,27 @@ const loaded = ref(false)
                 'opacity-100 grayscale-0': keystones?.[keystone.id],
                 'scale-90': !keystones?.[keystone.id],
               },
-              path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3',
+              path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3'
             )
-          "
-        />
+          " />
 
         <WinrateIndicator
           v-if="keystones?.[keystone.id]"
-          :value="keystones?.[keystone.id]?.winrate"
-        />
+          :value="keystones?.[keystone.id]?.winrate" />
         <span
           v-if="keystones?.[keystone.id]"
-          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm"
-        >
+          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
           {{ keystones[keystone.id].winrate }}
         </span>
       </div>
     </div>
     <div
       class="z-2 grid size-full place-items-center gap-y-4 self-end"
-      :data-path="path.name"
-    >
+      :data-path="path.name">
       <div
         v-for="(slot, i) in path.slots.filter((s) => s.tier !== 0)"
         :key="i"
-        class="z-1 grid w-full grid-cols-3 place-items-center gap-4"
-      >
+        class="z-1 grid w-full grid-cols-3 place-items-center gap-4">
         <!--  <div
           :key="rune.id"
           class="relative grid size-12 place-items-center"
@@ -113,7 +105,7 @@ const loaded = ref(false)
           />
           <span
             v-if="runes?.[rune.id]"
-            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-xxs leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm"
+            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm"
             :class="cn('')"
           >
             {{ runes[rune.id].winrate }}

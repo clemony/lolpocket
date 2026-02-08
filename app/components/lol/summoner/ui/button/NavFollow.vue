@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 
-const { class: className, variant = 'shadow' } = defineProps<{
+const { variant = 'shadow', class: className } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
   variant?: any
@@ -35,7 +35,9 @@ const variants = {
 </script>
 
 <template>
-  <NavigationMenuItem class="ml-px overflow-hidden p-0" as-child>
+  <NavigationMenuItem
+    class="ml-px overflow-hidden p-0"
+    as-child>
     <!-- <MButton
       label
       :variant="variant"
@@ -63,7 +65,7 @@ const variants = {
           name="ph:heart-straight-fill"
           :class="
             cn(
-              'text-b4 dst drop-shadow-b2 group-hover/follow:text-tint-domination/40 absolute size-5.5 drop-shadow-sm transition-all duration-300 group-hover/follow:scale-120 group-hover/follow:opacity-90',
+              'text-b4 dst drop-shadow-p2 group-hover/follow:text-tint-domination/40 absolute size-5.5 drop-shadow-sm transition-all duration-300 group-hover/follow:scale-120 group-hover/follow:opacity-90',
               {
                 'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
                   isFollowed,

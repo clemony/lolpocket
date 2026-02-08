@@ -17,13 +17,12 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'bg-b2',
+        'bg-p2',
         // Disabled
-        'group-data-[disabled]:bg-b2 group-data-disabled:opacity-50',
+        'group-data-disabled:opacity-50 group-data-[disabled]:bg-p2',
         // Completed
         'group-data-[state=completed]:bg-bc',
         props.class,
       )
-    "
-  />
+    " />
 </template>

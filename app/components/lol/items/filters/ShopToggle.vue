@@ -9,18 +9,15 @@
       theme: 'base',
       placement: 'top-end',
     }"
-    class="group/tog off:bg-tint-b2/40! off:inset-shadow-sm relative *:transition-opacity *:duration-100"
+    class="group/tog relative *:transition-opacity *:duration-100 off:bg-tint-p2/40! off:inset-shadow-sm"
     variant="outline"
     on="neutral"
-    size="12"
-  >
+    size="12">
     <icon
-      class="group-on/tog:opacity-0 absolute size-4.5 **:stroke-2"
-      name="infinity"
-    />
+      class="absolute size-4.5 **:stroke-2 group-on/tog:opacity-0"
+      name="infinity" />
     <icon
-      class="group-on/tog:opacity-100 group-off/tog:opacity-0 absolute size-4.75"
-      name="tag"
-    />
+      class="absolute size-4.75 group-on/tog:opacity-100 group-off/tog:opacity-0"
+      name="tag" />
   </Toggle>
 </template>

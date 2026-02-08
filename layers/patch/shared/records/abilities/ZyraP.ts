@@ -1,25 +1,25 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:18 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Garden of Thorns",
-  "affects": "Self",
-  "blurb": "Innate:  Zyra's Seeds can be turned into plants by hitting them with her basic abilities. Enemy  champions can step over a Seed to destroy it.",
-  "effectRadius": "900",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Garden of Thorns',
+  affects: 'Self',
+  blurb: 'Innate:  Zyra\'s Seeds can be turned into plants by hitting them with her basic abilities. Enemy  champions can step over a Seed to destroy it.',
+  effectRadius: '900',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/p',
+  notes: 'PENDING FOR TEST:: The pattern/probability of Garden of Thorns spawning one seed or two.\nZyra tries to plant Seeds in brush and not on top of walls.\nZyra tries not to plant Seeds too close together and at different angles.\nZyra does not plant any Seeds if she is concealed within a brush (unless there is an enemy ward in it, in which case it takes her a little longer to plant the Seed) or when there is no room for additional ones.\nZyra does not plant any Seeds if she is within  1400 units of the coordinate points (400, 400) or (14000, 14000), which are roughly at the center of the fountains on  Summoner\'s Rift.\nThese same coordinates may not hold as fountain positions on other maps (e.g. on the  Arena map, the Magma Chamber area overlaps with the second exclusion radius) and may prompt the implementation of this behaviour to be changed in the future.(bug)\nZyra tries to plant Seeds close to an enemy near her.\nPENDING FOR TEST:: Zyra tries to plant Seeds under enemy structures only if she is in basic attack range of them.\nPENDING FOR TEST:: Zyra tries to plant Seeds on the other side of the wall she is facing and/or standing right next to.\nPENDING FOR TEST:: Zyra tries to plant Seeds in the direction she is facing and/or moving.\nZyra tries to plant Seeds near jungle path entrances.\nPENDING FOR TEST:: Zyra tries to plant Seeds behind herself when she is walking through the river and there are no jungle path entrances near her.\nZyra tries to plant Seeds between herself and the enemy champion she has vision of (or is heading towards her) in a 45° angle to the left or to the right depending on where on lane she is standing.\nZyra tries to plant Seeds against the inner walls of epic monster pits ( Dragon,  Rift Herald,  Baron Nashor)\nZyra has a hidden passive that grants her 10% increased size for 33 seconds after having  Leona\'s  Sunlight applied to her.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.</p>'
     },
     {
-      "description": "After 1 second, enemy champions can destroy Seeds by moving on top of them."
+      description: 'After 1 second, enemy champions can destroy Seeds by moving on top of them.'
     },
     {
-      "description": "Zyra can only have a total of 8 Seeds planted at a time, preserving Seeds spawned by Rampant Growth over Seeds spawned by Garden of Thorns."
+      description: 'Zyra can only have a total of 8 Seeds planted at a time, preserving Seeds spawned by Rampant Growth over Seeds spawned by Garden of Thorns.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/p",
-  "notes": "PENDING FOR TEST:: The pattern/probability of Garden of Thorns spawning one seed or two.\nZyra tries to plant Seeds in brush and not on top of walls.\nZyra tries not to plant Seeds too close together and at different angles.\nZyra does not plant any Seeds if she is concealed within a brush (unless there is an enemy ward in it, in which case it takes her a little longer to plant the Seed) or when there is no room for additional ones.\nZyra does not plant any Seeds if she is within  1400 units of the coordinate points (400, 400) or (14000, 14000), which are roughly at the center of the fountains on  Summoner's Rift.\nThese same coordinates may not hold as fountain positions on other maps (e.g. on the  Arena map, the Magma Chamber area overlaps with the second exclusion radius) and may prompt the implementation of this behaviour to be changed in the future.(bug)\nZyra tries to plant Seeds close to an enemy near her.\nPENDING FOR TEST:: Zyra tries to plant Seeds under enemy structures only if she is in basic attack range of them.\nPENDING FOR TEST:: Zyra tries to plant Seeds on the other side of the wall she is facing and/or standing right next to.\nPENDING FOR TEST:: Zyra tries to plant Seeds in the direction she is facing and/or moving.\nZyra tries to plant Seeds near jungle path entrances.\nPENDING FOR TEST:: Zyra tries to plant Seeds behind herself when she is walking through the river and there are no jungle path entrances near her.\nZyra tries to plant Seeds between herself and the enemy champion she has vision of (or is heading towards her) in a 45° angle to the left or to the right depending on where on lane she is standing.\nZyra tries to plant Seeds against the inner walls of epic monster pits ( Dragon,  Rift Herald,  Baron Nashor)\nZyra has a hidden passive that grants her 10% increased size for 33 seconds after having  Leona's  Sunlight applied to her.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

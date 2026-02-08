@@ -17,9 +17,8 @@ const pocket = computed(() =>
           class="pointer-events-auto w-max min-w-54 rounded-xl"
           variant="ghost"
           hover="base"
-          size="lg"
-        >
-          <h1 class="text-xxs dst font-bold! tracking-tight text-nowrap">
+          size="lg">
+          <h1 class="text-2xs font-bold! tracking-tight text-nowrap dst">
             {{ pocket.name }}
           </h1>
         </PopoverTrigger>
@@ -29,21 +28,18 @@ const pocket = computed(() =>
           sticky="always"
           side="bottom"
           :side-offset="0"
-          position-strategy="absolute"
-        >
+          position-strategy="absolute">
           <Input
             v-model="pocket.name"
             class="field-sizing-content size-full **:font-bold **:tracking-tight"
             size="header"
-            @clear-input="pocket.name = ''"
-          >
+            @clear-input="pocket.name = ''">
             <template #2>
               <Button
                 class="btn-square size-7"
                 title="No brain? Meet button."
                 variant="ghost"
-                @click="pocket.name = generateName()"
-              >
+                @click="pocket.name = generateName()">
                 <icon class="size-3.5" name="shuffle" />
               </Button>
             </template>
@@ -62,5 +58,3 @@ const pocket = computed(() =>
     </template>
   </IconHeader>
 </template>
-
-<style scoped></style>

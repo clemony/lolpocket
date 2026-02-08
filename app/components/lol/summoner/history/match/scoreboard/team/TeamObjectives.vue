@@ -41,18 +41,16 @@ const objs = [
   <div
     :class="
       cn(
-        '**:text-bc grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold',
+        'grid shrink-0 auto-cols-fr grid-flow-col justify-center gap-3 **:font-semibold **:text-pc',
         className,
       )
-    "
-  >
+    ">
     <div
       v-for="obj in objs"
       :key="obj.name"
       class="flex w-9 items-center gap-1"
-      :data-type="`${obj.name} kills`"
-    >
-      <div class="size-4.5 anchor">
+      :data-type="`${obj.name} kills`">
+      <div class="anchor size-4.5">
         <Img
           :alt="`${obj.name} icon`"
           :src="`/img/scoreboard/${obj.name.toLowerCase()}-${team.teamId}.webp`"
@@ -62,8 +60,7 @@ const objs = [
               '-translate-y-px': obj.name === 'Grub',
               'size-3.75': obj.name === 'Baron',
             })
-          "
-        />
+          " />
       </div>
 
       <span :class="{ '-ml-1.25': obj.name === 'Tower' }">

@@ -35,8 +35,7 @@ function handleReset() {
               class="h-12"
               type="password"
               required
-              @clear-input="password = ''"
-            />
+              @clear-input="password = ''" />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
@@ -44,18 +43,16 @@ function handleReset() {
               color="neutral"
               size="lg"
               type="submit"
-              @click="handleReset()"
-            >
+              @click="handleReset()">
               Reset Password
             </Button>
 
             <button
-              class="underline-offset-1.5 hover:underline h-14 w-full justify-center gap-3 justify-self-start"
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start hover:underline"
               as="a"
               size="lg"
               hover="link"
-              @click="navigateTo('/login')"
-            >
+              @click="navigateTo('/login')">
               Remembered it? Log in
             </button>
           </div>

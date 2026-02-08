@@ -54,14 +54,13 @@ const tippy = computed(() => {
       cn(
         'p-0',
         {
-          'pointer-events-none btn-active cursor-not-allowed bg-b2/80':
+          'pointer-events-none btn-active cursor-not-allowed bg-p2/80':
             cooldown,
         },
         className,
       )
     "
-    @click="update()"
-  >
+    @click="update()">
     <TransitionScalePop class="relative grid size-full overflow-hidden">
       <span
         v-if="!cooldown"
@@ -70,9 +69,11 @@ const tippy = computed(() => {
             'flex items-center place-self-center font-semibold antialiased opacity-68 group-hover/load:opacity-100',
             { 'text-xs': size === 'xs' },
           )
-        "
-      >
-        <icon v-if="showIcon" class="mr-3 -ml-2 size-5" name="reset" />
+        ">
+        <icon
+          v-if="showIcon"
+          class="mr-3 -ml-2 size-5"
+          name="reset" />
         <span class="text-sm">
           {{
             typeof text === "string" ? text
@@ -88,12 +89,10 @@ const tippy = computed(() => {
             'pointer-events-none z-0 grid size-full grid-rows-2 place-items-center gap-1.5 overflow-hidden p-2 *:overflow-hidden',
             { 'gap-0': size === 'xs' },
           )
-        "
-      >
+        ">
         <div
           v-if="size !== 'xs'"
-          class="inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-xs font-semibold text-nowrap dst"
-        >
+          class="inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-xs font-semibold text-nowrap dst">
           <span :class="cn('text-sm font-bold')">
             {{ cooldown?.formatted }}
           </span>
@@ -105,14 +104,15 @@ const tippy = computed(() => {
           :model-value="cooldown?.percent"
           :class="
             cn(
-              'relative h-2.75 w-full scale-y-60 rounded-xs border border-b4 bg-b3',
+              'border-b4 relative h-2.75 w-full scale-y-60 rounded-xs border bg-p3',
               { 'mt-1.5 h-2.5': size === 'xs' },
             )
           "
           :value="cooldown?.percent"
-          :max="100"
-        >
-          <ProgressIndicator class="bg-transparent!" :value="cooldown?.percent">
+          :max="100">
+          <ProgressIndicator
+            class="bg-transparent!"
+            :value="cooldown?.percent">
             <motion.div
               class="relative h-full origin-right after:absolute after:inset-0 after:top-0 after:right-0 after:size-full after:bg-red-500 after:from-neutral after:via-neutral/80 after:to-neutral"
               :initial="{
@@ -124,8 +124,7 @@ const tippy = computed(() => {
               }"
               :transition="{
                 ease: 'linear',
-              }"
-            />
+              }" />
           </ProgressIndicator>
         </Progress>
       </div>

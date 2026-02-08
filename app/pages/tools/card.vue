@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import VueZoomable from 'vue-zoomable'
-import 'vue-zoomable/dist/style.css'
+import VueZoomable from "vue-zoomable"
+import "vue-zoomable/dist/style.css"
 
 const { card } = defineProps<{
   card: any
 }>()
 
 definePageMeta({
-  name: 'card',
-  title: 'Card Builder',
-  icon: 'lucide:square-pen',
-  path: '/tools/card',
+  name: "card",
+  title: "Card Builder",
+  icon: "lucide:square-pen",
+  path: "/tools/card",
 })
 
-// @todo nuxt bg here
+// todo nuxt bg here
 
 /* const fontClass1 = computed (() => {
   const a = fonts.find(f => f.id===card.font[0])
@@ -41,15 +41,14 @@ onMounted(() => {
 const img = useImage()
 const splash = computed(
   () =>
-    'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg'
+    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg"
 )
-console.log('💠 - card.splash:', card.splash)
+console.log("💠 - card.splash:", card.splash)
 </script>
 
 <template>
   <div
-    class="relative grid size-full items-center justify-center overflow-hidden"
-  >
+    class="relative grid size-full items-center justify-center overflow-hidden">
     <!--
 
       <div class="px-1 dst">
@@ -66,7 +65,7 @@ console.log('💠 - card.splash:', card.splash)
             </template>
           </template>
 
-          <Placeholder v-else class="size-21 bg-b3/70 p-2.5">
+          <Placeholder v-else class="size-21 bg-p3/70 p-2.5">
             <i-no-champ class="opacity-10  dst" />
           </Placeholder>
         </div>
@@ -88,32 +87,27 @@ console.log('💠 - card.splash:', card.splash)
       selector="#pocket-card"
       :min-zoom="0.5"
       :max-zoom="2"
-      :wheel-zoom-step="0.01"
-    >
+      :wheel-zoom-step="0.01">
       <div
         ref="pocketCardRef"
-        class="relative aspect-square size-300 rounded-box border border-b3/70 object-contain shadow-smooth inset-shadow-sm"
+        class="relative aspect-square size-300 rounded-box border border-p3/70 object-contain shadow-smooth inset-shadow-sm"
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
-        }"
-      >
+        }">
         <div
           class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
-          :class="{ grayscale: card.filter === 'grayscale' }"
-        >
+          :class="{ grayscale: card.filter === 'grayscale' }">
           <div
             class="size-full bg-cover mask-top"
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
               backgroundPositionX: `${card.align}%`,
-            }"
-          />
+            }" />
         </div>
 
         <div
-          class="absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr] px-16 pt-28"
-        >
+          class="absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr] px-16 pt-28">
           <div class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
@@ -135,14 +129,13 @@ console.log('💠 - card.splash:', card.splash)
               <template v-for="(set, i) in card.items" :key="i">
                 <template
                   v-if="
-                    set
-                      && set !== undefined
-                      && card.items.length
-                      && set !== null
-                      && card.items[0] !== undefined
-                      && card.items[0] !== null
-                  "
-                >
+                    set &&
+                      set !== undefined &&
+                      card.items.length &&
+                      set !== null &&
+                      card.items[0] !== undefined &&
+                      card.items[0] !== null
+                  ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"
                     :pocket="pocket" /> -->
@@ -157,5 +150,3 @@ console.log('💠 - card.splash:', card.splash)
     <BasicCardSettings :pocket="pocket" /> -->
   </div>
 </template>
-
-<style scoped></style>

@@ -40,18 +40,17 @@ const timeline: PlayerTimeline = await getTimeline(
 
 <template>
   <LazyCollapsibleContent
-    class="relative h-205 w-full p-0 text-sm **:select-none"
-  >
+    class="relative h-205 w-full p-0 text-sm **:select-none">
     <Tabs
       v-model:model-value="modelValue"
-      class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-b3)_70%,transparent_30%)]"
-    >
+      class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-p3)_70%,transparent_30%)]">
       <FileTabsList class="relative h-9 w-[98%] gap-x-1 overflow-x-hidden">
-        <template v-for="(tab, i) in tabs" :key="i">
+        <template
+          v-for="(tab, i) in tabs"
+          :key="i">
           <FileTabTrigger
-            class="on:field-box e on:dark:bg-tint-b1/1 on:light:bg-tint-b2/60 z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium"
-            :value="tab.name"
-          >
+            class="on:field-box e z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-p0/1 on:light:bg-tint-p2/60"
+            :value="tab.name">
             {{ tab.name }}
           </FileTabTrigger>
         </template>
@@ -60,23 +59,20 @@ const timeline: PlayerTimeline = await getTimeline(
 
       <div
         v-if="tabs[modelValue].name === 'Statistics'"
-        class="from-b2-light to-b2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b"
-      />
+        class="from-p2-light to-p2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b" />
       <div
         :class="
           cn(
             'field-box tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none',
             { 'rounded-tl-none': modelValue === 'Scoreboard' },
           )
-        "
-      >
+        ">
         <component
           :is="tabs[modelValue].component"
           v-if="tabs[modelValue].component"
           :match="match"
           :player
-          :timeline
-        />
+          :timeline />
       </div>
     </Tabs>
   </LazyCollapsibleContent>

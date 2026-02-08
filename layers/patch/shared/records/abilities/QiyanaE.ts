@@ -1,44 +1,44 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:00 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Audacity",
-  "affects": "Enemies, Self",
-  "blurb": "Active:  Qiyana  dashes toward the target enemy and deals physical damage upon arrival.",
-  "castTime": "none",
-  "cooldown": "11 / 10 / 9 / 8 / 7",
-  "cost": "40 / 45 / 50 / 55 / 60",
-  "damageType": "Physical damage",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Audacity',
+  affects: 'Enemies, Self',
+  blurb: 'Active:  Qiyana  dashes toward the target enemy and deals physical damage upon arrival.',
+  castTime: 'none',
+  cooldown: '11 / 10 / 9 / 8 / 7',
+  cost: '40 / 45 / 50 / 55 / 60',
+  damageType: 'Physical damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/e',
+  notes: 'Audacity only damages targets if within 250 range upon completion of the dash.',
+  resource: 'Mana',
+  speed: '600 + 100% movement speed',
+  spellEffects: 'Single',
+  spellshieldable: 'True',
+  targeting: 'Unit',
+  targetRange: '650',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.</p>',
+      leveling: [
         {
-          "attribute": "Physical Damage",
-          "modifiers": [
+          attribute: 'Physical Damage',
+          modifiers: [
             {
-              "values": "50 / 90 / 130 / 170 / 210"
+              values: '50 / 90 / 130 / 170 / 210'
             },
             {
-              "unit": "% bonus AD",
-              "values": "50"
+              unit: '% bonus AD',
+              values: '50'
             }
           ]
         }
       ]
     },
     {
-      "description": "Qiyana can cast any of her abilities during the dash."
+      description: 'Qiyana can cast any of her abilities during the dash.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/e",
-  "notes": "Audacity only damages targets if within 250 range upon completion of the dash.",
-  "resource": "Mana",
-  "speed": "600 + 100% movement speed",
-  "spellEffects": "Single",
-  "spellshieldable": "True",
-  "targeting": "Unit",
-  "targetRange": "650"
+  ]
 }
-  export default ability
+export default ability

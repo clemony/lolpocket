@@ -15,8 +15,7 @@ const props = defineProps<{
         'group/el',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

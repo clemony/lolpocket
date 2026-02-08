@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+@import './daisy.css';
 @import './preflight.css';
 @import './fonts.css';
-@import './colors.css';
+@import './color/index.css';
 @import './theme.css';
 @import './components.css';
 @import './custom-variants.css';
 @import './utilities.css';
-@import './color-utilities.css';
 @import './classes.css';
 @import './plugins/index.css';
 @import './animation/index.css';

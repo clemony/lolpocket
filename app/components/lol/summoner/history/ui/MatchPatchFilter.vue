@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 const patchModel = shallowRef<number>(null)
+const store = useMatchFilters()
 
 const p = computed(() => {
-  return new Set(s_matches().filteredMatches.map(m =>
+  return new Set(store.filteredMatches.map(m =>
     m.gamePatch.toString().replace(/(\d\d?\.\d\d?)\..+/, '$1'))).values()
 })
 </script>
@@ -19,12 +20,13 @@ const p = computed(() => {
   :arrow="false"
   >
   <Button
-    class="w-full justify-between bg-b1! text-sm hover:bg-b1! hover:ring hover:ring-bc/60 hover:fx-0"
-    variant="outline"
-  >
-    {{ s_matches().filter?.patch ?? "Select Patch" }}
+    class="w-full justify-between bg-p0! text-sm hover:bg-p0! hover:ring hover:ring-pc/60 hover:fx-0"
+    variant="outline">
+    {{ store.filter?.patch ?? "Select Patch" }}
 
-    <Icon class="size-4" name="up-down" />
+    <Icon
+      class="size-4"
+      name="up-down" />
   </Button>
 <!--   <template #content>
     <div class="px-1.5 py-2">
@@ -35,7 +37,7 @@ const p = computed(() => {
           type="radio"
           name="patch-radio"
           :value="patch"
-          @update:model-value="s_matches().setFilter('patch', patchModel)"
+          @update:model-value="store.setFilter('patch', patchModel)"
         >
         {{ patch }}
       </PopoverItem>

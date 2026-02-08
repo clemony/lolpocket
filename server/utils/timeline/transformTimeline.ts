@@ -1,5 +1,5 @@
-import { normalizeItemEvents } from './normalizeItemEvents'
-import { toDeathEvent } from './toDeathEvent'
+import { normalizeItemEvents } from "./normalizeItemEvents"
+import { toDeathEvent } from "./toDeathEvent"
 
 export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
   const matchId = raw.metadata.matchId
@@ -15,7 +15,7 @@ export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
   const allEvents = raw.info.frames.flatMap((f: any) => f.events || [])
 
   const isKillEvent = (e: any) =>
-    e.type === 'CHAMPION_KILL' || e.type === 'CHAMPION_SPECIAL_KILL'
+    e.type === "CHAMPION_KILL" || e.type === "CHAMPION_SPECIAL_KILL"
 
   const FIFTEEN_MIN = 15 * 60 * 1000
 
@@ -44,24 +44,26 @@ export function transformTimeline(raw: any): Record<string, PlayerTimeline> {
     const assists = allEvents
       .filter(
         (e: any) =>
-          isKillEvent(e)
-          && Array.isArray(e.assistingParticipantIds)
-          && e.assistingParticipantIds.includes(id)
+          isKillEvent(e) &&
+          Array.isArray(e.assistingParticipantIds) &&
+          e.assistingParticipantIds.includes(id)
       )
       .map(toDeathEvent)
 
     const deathsBefore15 = deaths.filter(
-      d => d.timestamp < FIFTEEN_MIN
+      (d: { timestamp: number }) => d.timestamp < FIFTEEN_MIN
     ).length
-    const killsBefore15 = kills.filter(k => k.timestamp < FIFTEEN_MIN).length
+    const killsBefore15 = kills.filter(
+      (k: { timestamp: number }) => k.timestamp < FIFTEEN_MIN
+    ).length
     const assistsBefore15 = assists.filter(
-      a => a.timestamp < FIFTEEN_MIN
+      (a: { timestamp: number }) => a.timestamp < FIFTEEN_MIN
     ).length
 
     // SKILLS
     const skillOrder = allEvents
-      .filter((e: any) => e.type === 'SKILL_LEVEL_UP' && e.participantId === id)
-      .map(e => e.skillSlot)
+      .filter((e: any) => e.type === "SKILL_LEVEL_UP" && e.participantId === id)
+      .map((e: { skillSlot: any }) => e.skillSlot)
 
     const priority = skillPriority(skillOrder)
 

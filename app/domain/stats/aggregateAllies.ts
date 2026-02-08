@@ -33,13 +33,13 @@ function bumpAlly(
       name: ally.name,
       puuid: ally.puuid,
       avgTimestamp: 0,
-      champions: {},
       delta: 0,
       games: 0,
       icon: String(ally.icon),
       synergy: 0,
       tag: ally.tag,
       win: 0,
+      champions: {},
     }
   }
 

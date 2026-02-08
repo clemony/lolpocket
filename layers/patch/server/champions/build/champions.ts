@@ -1,7 +1,7 @@
-import { roundDecimal } from '#layers/lib/shared/utils'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import { roundDecimal } from '#layers/lib/shared/utils'
 import { markUpdate } from '../../misc/markUpdate'
 import {
   normalize,
@@ -222,15 +222,15 @@ for (const [key, champ] of Object.entries(merakiData)) {
       lore: champ.lore,
       patchLastChanged: champ.patchLastChanged,
       positions: normalizeArray(champ.positions),
-      price: {
-        blueEssence: champ.price?.blueEssence ?? null,
-        rp: champ.price?.rp ?? null,
-      },
       releaseDate: champ.releaseDate,
       resource: normalize(champ.resource),
       roles: normalizeArray(champ.roles),
       stats: baseStats,
       statsPerLevel,
+      price: {
+        blueEssence: champ.price?.blueEssence ?? null,
+        rp: champ.price?.rp ?? null,
+      },
     }
 
     championsMergedRaw[key] = Object.fromEntries(

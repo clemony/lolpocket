@@ -32,10 +32,14 @@ const region = computed(() => {
   <Primitive
     v-if="region"
     :as="el"
-    :class="cn('inline leading-none lowercase antialiased', className)"
-  >
-    <icon v-show="!noIcon" class="dst inline size-3.25" name="at" />&#x202F;{{ region }}
+    :class="cn('inline leading-none lowercase antialiased', className)">
+    <icon
+      v-show="!noIcon"
+      class="inline size-3.25 dst"
+      name="at" />&#x202F;{{ region }}
   </Primitive>
 
-  <span v-else :class="cn('', className)">Runeterra</span>
+  <span
+    v-else
+    :class="cn('', className)">Runeterra</span>
 </template>

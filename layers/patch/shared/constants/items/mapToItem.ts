@@ -1,7 +1,7 @@
 // Updated Patch 16.1 - 01/27/2026 02:33:25 PM CST
 
 export const mapToItem: Record<number, number[]> = {
-  "11": [
+  11: [
     1001,
     1004,
     1006,
@@ -313,7 +313,7 @@ export const mapToItem: Record<number, number[]> = {
     667112,
     667666
   ],
-  "12": [
+  12: [
     1001,
     1004,
     1006,
@@ -561,7 +561,7 @@ export const mapToItem: Record<number, number[]> = {
     228002,
     994403
   ],
-  "21": [
+  21: [
     1001,
     1004,
     1006,
@@ -811,7 +811,7 @@ export const mapToItem: Record<number, number[]> = {
     8010,
     8020
   ],
-  "30": [
+  30: [
     1500,
     1501,
     1502,
@@ -1048,7 +1048,7 @@ export const mapToItem: Record<number, number[]> = {
     447122,
     447123
   ],
-  "33": [
+  33: [
     9168,
     9171,
     9172,
@@ -1109,7 +1109,7 @@ export const mapToItem: Record<number, number[]> = {
     9407,
     9408
   ],
-  "35": [
+  35: [
     1001,
     1004,
     1006,

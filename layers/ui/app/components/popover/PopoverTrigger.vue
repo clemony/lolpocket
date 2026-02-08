@@ -27,8 +27,7 @@ const forwarded = useForwardProps(delegatedProps)
         '',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </PopoverTrigger>
 </template>

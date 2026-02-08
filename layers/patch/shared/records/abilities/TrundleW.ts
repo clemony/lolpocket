@@ -1,44 +1,44 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:12 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Frozen Domain",
-  "affects": "Self",
-  "blurb": "Active:  Trundle coats the target location in ice for a period. While he is within the area, he gains  bonus attack speed,  bonus movement speed, and increased  healing from all sources.",
-  "castTime": "none",
-  "cooldown": "18 / 17 / 16 / 15 / 14",
-  "cost": "40",
-  "effectRadius": "775",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Frozen Domain',
+  affects: 'Self',
+  blurb: 'Active:  Trundle coats the target location in ice for a period. While he is within the area, he gains  bonus attack speed,  bonus movement speed, and increased  healing from all sources.',
+  castTime: 'none',
+  cooldown: '18 / 17 / 16 / 15 / 14',
+  cost: '40',
+  effectRadius: '775',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/w',
+  notes: 'No additional details.',
+  resource: 'Mana',
+  targeting: 'Location',
+  targetRange: '750',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.</p>',
+      leveling: [
         {
-          "attribute": "Bonus Attack Speed",
-          "modifiers": [
+          attribute: 'Bonus Attack Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 45 / 60 / 75 / 90"
+              unit: '%',
+              values: '30 / 45 / 60 / 75 / 90'
             }
           ]
         },
         {
-          "attribute": "Bonus Movement Speed",
-          "modifiers": [
+          attribute: 'Bonus Movement Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "20 / 28 / 36 / 44 / 52"
+              unit: '%',
+              values: '20 / 28 / 36 / 44 / 52'
             }
           ]
         }
       ]
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/w",
-  "notes": "No additional details.",
-  "resource": "Mana",
-  "targeting": "Location",
-  "targetRange": "750"
+  ]
 }
-  export default ability
+export default ability

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { OnClickOutside } from '@vueuse/components'
+import { OnClickOutside } from "@vueuse/components"
 
 const { id, map } = defineProps<{
   id: number
@@ -10,48 +10,47 @@ const name = computed(() => itemNameById(id))
 const rank = computed(() => itemRank[id])
 
 const item = shallowRef<Item | null>(null)
-const status = shallowRef<'idle' | 'loading' | 'success' | 'error'>('idle')
+const status = shallowRef<"idle" | "loading" | "success" | "error">("idle")
 
 watchEffect(async () => {
   if (!id) return
 
-  status.value = 'loading'
+  status.value = "loading"
   try {
     const module = await import(`#layers/patch/shared/records/items/${id}.ts`)
-    console.log('🥸 - module:', module)
+    console.log("🥸 - module:", module)
     item.value = module.default
 
-    status.value = 'success'
-    console.log('🥸 - item:', item.value.stats)
-  }
-  catch (e) {
-    status.value = 'error'
+    status.value = "success"
+    console.log("🥸 - item:", item.value.stats)
+  } catch (e) {
+    status.value = "error"
     console.error(e)
   }
 })
 
 const filteredFrom = computed(() => {
   if (!item.value || !item.value?.buildsFrom) return null
-  return item.value?.buildsFrom?.filter(i =>
+  return item.value?.buildsFrom?.filter((i) =>
     map ? mapToItem[map].includes(i.id) : i
   )
 })
 
 const filteredInto = computed(() => {
   if (!item.value || !item.value?.buildsInto) return null
-  return item.value?.buildsInto?.filter(i =>
+  return item.value?.buildsInto?.filter((i) =>
     map ? mapToItem[map].includes(i.id) : i
   )
 })
 
 const has = computed(() => {
   const a = []
-  if (item.value?.requiredChampion) a.push('reqChamp')
-  if (item.value?.description) a.push('description')
-  if (item.value?.passives) a.push('passives')
-  if (item.value?.active?.[0]) a.push('actives')
-  if (item.value?.buildsFrom) a.push('buildsFrom')
-  if (item.value?.buildsInto) a.push('buildsInto')
+  if (item.value?.requiredChampion) a.push("reqChamp")
+  if (item.value?.description) a.push("description")
+  if (item.value?.passives) a.push("passives")
+  if (item.value?.active?.[0]) a.push("actives")
+  if (item.value?.buildsFrom) a.push("buildsFrom")
+  if (item.value?.buildsInto) a.push("buildsInto")
   return a
 })
 
@@ -63,54 +62,41 @@ function close() {
 </script>
 
 <template>
-  <OnClickOutside
-    class="grid h-max w-full" @trigger="close()"
-  >
+  <OnClickOutside class="grid h-max w-full" @trigger="close()">
     <div
-      class="flex max-h-68 w-full grid grid-cols-[0.8fr_1fr] gap-4 overflow-hidden pt-5 pb-1.5 pl-3"
-    >
-      <div
-        class="flex max-h-full shrink-0 flex-col items-center justify-center overflow-hidden"
-      >
+      class="flex max-h-88 w-full flex-col gap-4 overflow-hidden pt-5 pb-1.5 pl-3">
+      <div class="flex shrink-0 items-center gap-4 overflow-hidden">
         <!-- IMG -->
 
         <Img
           v-if="id"
-          class="size-12"
+          class="size-12 rounded-lg"
           :src="`/img/items/${id}.webp`"
           :tip="false"
           loading-type="spinner"
-          :alt="`${name} Image`"
-        />
+          :alt="`${name} Image`" />
         <!-- NAME / LINK -->
 
-        <h5
-          class="mt-2 inline-flex justify-center self-center text-center! text-md! leading-5 font-semibold! text-wrap"
-        >
-          {{ name }}
-        </h5>
+        <div class="grow pr-12">
+          <h4 class="mt-2 text-lg! leading-5 font-semibold! text-nowrap">
+            {{ name }}
+          </h4>
 
-        <!-- RANK -->
-        <span
-          class="text-xxs font-normal text-nc italic opacity-90"
-          :style="{
-            color: itemRankColor[rank],
-          }"
-        >
-          {{ itemRank[id] }}
-        </span>
-        <div class="flex w-full flex-col">
-          <!-- separator -->
-          <Separator class="my-1 w-full" color="neutral" />
-          <!-- PRICE -->
           <span class="inline-flex w-full shrink-0 justify-between text-sm">
-            Buy
+            <!-- RANK -->
+            <span
+              class="text-2xs font-medium text-n5 italic opacity-90"
+              :style="{
+                color: itemRankColor[rank],
+              }">
+              {{ itemRank[id] }}
+            </span>
+            <!-- PRICE -->
             <figure class="inline-flex gap-1.5 text-xs font-medium">
               <Icon
                 class="inline size-3.5 self-center opacity-80 **:text-g!"
                 name="lol:gold"
-                alt="item price"
-              />
+                alt="item price" />
               <figcaption>
                 {{ itemPrice[id] }}
               </figcaption>
@@ -118,19 +104,18 @@ function close() {
           </span>
         </div>
       </div>
+
       <div class="flex size-full shrink flex-col">
         <!-- separator -->
         <Separator
           v-if="item?.stats && Object.entries(item?.stats).length"
           class="mb-2 w-full"
-          color="neutral"
-        />
+          color="neutral" />
         <!-- STATS -->
 
         <LazyItemStats
           v-if="item?.stats && Object.entries(item?.stats).length"
-          :stats="item?.stats"
-        />
+          :stats="item?.stats" />
       </div>
 
       <!--
@@ -146,17 +131,13 @@ function close() {
             class="" />
         </a> -->
     </div>
-    <div
-      v-if="has?.length" class="max-h-64 w-full overflow-y-auto text-xs"
-    >
+    <div v-if="has?.length" class="max-h-64 w-full overflow-y-auto text-xs">
       <div
-        class="relative col-start-2 flex w-full flex-col overflow-x-hidden overflow-y-scroll p-3"
-      >
+        class="relative col-start-2 flex w-full flex-col overflow-x-hidden overflow-y-scroll p-3">
         <span
           v-if="!item?.stats"
           class="whitespace-pre-line"
-          v-html="item?.description"
-        />
+          v-html="item?.description" />
         <!-- REQ CHAMP -->
         <div v-if="item?.requiredChampion">
           <i>
@@ -173,8 +154,7 @@ function close() {
             :key="i"
             :class="{ 'mt-2': i !== 0 }"
             :data="passive"
-            type="Passive"
-          />
+            type="Passive" />
         </template>
 
         <!-- ACTIVES -->
@@ -187,7 +167,10 @@ function close() {
 
         <template v-if="item?.buildsFrom">
           <Separator class="my-3.5 h-px" label="RECIPE" color="neutral" />
-          <div :class="cn('flex gap-1   ', { 'flex-col gap-3 ': item.buildsFrom.length > 2 })">
+          <div
+            :class="
+              cn('flex gap-1', { 'flex-col gap-3': item.buildsFrom.length > 2 })
+            ">
             <div class="flex items-center gap-1">
               <template v-for="(fromItem, i) in filteredFrom" :key="i">
                 <Img
@@ -195,23 +178,17 @@ function close() {
                   :alt="fromItem.name"
                   loading-type="spinner"
                   :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
-                  class="size-8 rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80"
-                />
+                  class="size-8 rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80" />
 
                 <Icon
                   v-if="i !== item.buildsFrom.length - 1"
                   class="size-3.5"
-                  name="add"
-                />
+                  name="add" />
               </template>
             </div>
-            <div v-if="item?.gold?.total" class="flex items-center gap-1 ">
+            <div v-if="item?.gold?.total" class="flex items-center gap-1">
               <Icon class="size-3.5" name="add" />
-              <Icon
-                class="size-3.5 text-g/90"
-                name="lol:gold"
-                alt="coin"
-              />
+              <Icon class="size-3.5 text-g/90" name="lol:gold" alt="coin" />
               {{ item.gold?.base }}
             </div>
           </div>
@@ -223,16 +200,14 @@ function close() {
           <Separator
             class="mt-3.5 mb-3.75 h-px"
             label="BUILDS INTO"
-            color="neutral"
-          />
+            color="n5" />
 
           <div
             :class="
-              cn('group grid w-full grid-cols-5 place-items-center gap-2', {
+              cn('group grid w-full grid-cols-7 place-items-center gap-2', {
                 'justify-start': item.buildsInto.length > 7,
               })
-            "
-          >
+            ">
             <Img
               v-for="(buildItem, i) in filteredInto"
               :id="buildItem.id"
@@ -241,8 +216,7 @@ function close() {
               :alt="buildItem.name"
               loading-type="spinner"
               :title="`${buildItem.name} ‑ ${buildItem.gold}g`"
-              class="size-full rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80"
-            />
+              class="size-full rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80" />
           </div>
         </template>
       </div>

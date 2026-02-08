@@ -14,7 +14,9 @@ const {
 
 <template>
   <div :class="cn('', className)">
-    <p v-if="subheading" class="pb-0.5 text-sm leading-none italic opacity-50">
+    <p
+      v-if="subheading"
+      class="pb-0.5 text-sm leading-none italic opacity-50">
       {{ subheading }}
     </p>
     <h3 class="leading-none">

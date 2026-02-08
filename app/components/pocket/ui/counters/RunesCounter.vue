@@ -15,8 +15,8 @@ if (pocket.value.runes.length === 1) {
       const a = Object.values(set.value[0].runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r !== null)
-          return b1
+          const p0 = a.filter(r => r !== null)
+          return p0
         }
       }
       return b.length ? b.length : 0

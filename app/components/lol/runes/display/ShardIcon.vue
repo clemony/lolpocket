@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
+  color,
   id,
   class: className,
-  color,
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: string | number
@@ -29,6 +29,5 @@ const {
         },
         className,
       )
-    "
-  />
+    " />
 </template>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const {
+  variant = 'shadow',
   class: className,
   size = 'md',
   summoner,
-  variant = 'shadow',
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: MaybeRef<Summoner> | Partial<Summoner>
@@ -13,8 +13,13 @@ const {
 </script>
 
 <template>
-  <Button :class="cn('', className)" :variant="variant" :size="size">
-    <icon class="" name="lucide:send" />
+  <Button
+    :class="cn('', className)"
+    :variant="variant"
+    :size="size">
+    <icon
+      class=""
+      name="lucide:send" />
     <span class="**:capitalize">
       <slot />
     </span>

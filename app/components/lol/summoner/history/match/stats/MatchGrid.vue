@@ -32,19 +32,19 @@ const gridApi = shallowRef<GridApi | null>(null)
 
 const gridOptions: GridOptions<Player> = {
   columnHoverHighlight: false,
+  rowData: match.participants,
+  rowHeight: 38,
+  tooltipShowMode: 'whenTruncated',
   defaultColDef: {
     initialHide: false,
     minWidth: 66,
     autoHeaderHeight: true,
-    cellClass: [''],
     flex: 1,
+    wrapHeaderText: false,
+    cellClass: [''],
     headerClass: ['sticky top-0'],
     sortingOrder: ['desc', 'asc', null],
-    wrapHeaderText: false,
   },
-  rowData: match.participants,
-  rowHeight: 38,
-  tooltipShowMode: 'whenTruncated',
 }
 
 const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
@@ -56,6 +56,7 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
       `${params.riotIdGameName} #${params.riotIdTagline}`,
   },
   {
+    headerName: '',
     children: [
       { field: 'stats.deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
       {
@@ -70,9 +71,10 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
         headerTooltip: 'Kill Participation',
       },
     ],
-    headerName: '',
   },
   {
+    headerName: 'Damage',
+    headerTooltip: 'Damage',
     children: [
       {
         field: 'stats.totalDamage',
@@ -85,10 +87,10 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
         headerTooltip: 'Team Dmg %',
       },
     ],
-    headerName: 'Damage',
-    headerTooltip: 'Damage',
   },
   {
+    headerName: 'Teamplay',
+    headerTooltip: 'Teamplay',
     children: [
       {
         field: 'stats.effectiveHealingAndShielding',
@@ -96,8 +98,6 @@ const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
         headerTooltip: 'Effective Healing & Shielding',
       },
     ],
-    headerName: 'Teamplay',
-    headerTooltip: 'Teamplay',
   },
 ]
 
@@ -146,6 +146,5 @@ const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
-    @grid-ready="onGridReady"
-  />
+    @grid-ready="onGridReady" />
 </template>

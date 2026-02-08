@@ -50,10 +50,11 @@ export function toggleRead(msgId) {
 
 export function trashMsg(msgId) {
   const msg = matchMsg(msgId)
-  if (msg) {
-    msg.trash
+/*  fixme
+if (msg) {
+msg.trash
     msg.dateTrashed = Date.now()
-  }
+  } */
 }
 
 export function trashAllRead() {

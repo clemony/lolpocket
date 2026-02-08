@@ -27,6 +27,7 @@ export function refineWindow(
 
     const id = ev.id
     const count = ev.count ?? 1
+    if (id == null) continue
 
     // Handle stackables normally
     if (STACKABLE.has(id)) {
@@ -49,7 +50,9 @@ export function refineWindow(
     }
 
     // Check if every recipe component appears in priorAdds
-    const canUpgrade = recipe.every(comp => priorCounts.get(comp) > 0)
+    const canUpgrade = recipe.every(
+      (comp: number) => (priorCounts.get(comp) ?? 0) > 0
+    )
 
     if (!canUpgrade) {
       // Bought whole item → ADD

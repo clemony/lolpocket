@@ -35,8 +35,7 @@ const forwarded = useForwardProps(delegated)
         'overflow-hidden capitalize duration-50',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </NuxtLink>
 </template>

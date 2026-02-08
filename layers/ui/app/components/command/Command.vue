@@ -20,6 +20,7 @@ const allGroups = ref<Map<string, Set<string>>>(new Map())
 
 const { contains } = useFilter({ sensitivity: 'base' })
 const filterState = reactive({
+  search: '',
   filtered: {
     /** The count of all visible items. */
     count: 0,
@@ -28,7 +29,6 @@ const filterState = reactive({
     /** Map from visible item id to its search score. */
     items: new Map() as Map<string, number>,
   },
-  search: '',
 })
 
 function filterItems() {
@@ -79,11 +79,10 @@ watch(
     v-bind="forwarded"
     :class="
       cn(
-        'bg-b1/94 text-bc flex size-full flex-col overflow-hidden rounded-lg backdrop-blur-md',
+        'flex size-full flex-col overflow-hidden rounded-lg bg-p0/94 text-pc backdrop-blur-md',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ListboxRoot>
 </template>

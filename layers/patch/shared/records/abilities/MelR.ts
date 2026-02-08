@@ -1,69 +1,69 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:54 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "R",
-  "name": "Golden Eclipse",
-  "affects": "Enemies",
-  "blurb": "Passive:  Overwhelm stores more damage.",
-  "castTime": "0.75",
-  "cooldown": "120 / 100 / 80",
-  "cost": "100",
-  "damageType": "Magic damage",
-  "effects": [
+const ability: Ability = {
+  key: 'R',
+  name: 'Golden Eclipse',
+  affects: 'Enemies',
+  blurb: 'Passive:  Overwhelm stores more damage.',
+  castTime: '0.75',
+  cooldown: '120 / 100 / 80',
+  cost: '100',
+  damageType: 'Magic damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/r',
+  notes: 'Golden Eclipse can be cast even if all affected targets are  untargetable.(note)\nGolden Eclipse does not deal damage to enemies that are  untargetable by the time the cast time completes.\nGolden Eclipse cannot be cast if none of the affected targets are in Mel\'s realm ( Death Realm).\nGolden Eclipse will only deal damage to targets in Mel\'s realm at the end of the cast.\nWhenever Golden Eclipse\'s damage would put a target below  Overwhelm\'s threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.\nGolden Eclipse sets the duration of  Overwhelm stacks to 0.75 seconds if they would run out during the cast time.',
+  resource: 'Mana',
+  spellEffects: 'spell',
+  spellshieldable: 'true',
+  targeting: 'Auto',
+  targetRange: 'Global',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Overwhelm stacks store more damage.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Overwhelm stacks store more damage.</p>',
+      leveling: [
         {
-          "attribute": "Increased Stored Damage",
-          "modifiers": [
+          attribute: 'Increased Stored Damage',
+          modifiers: [
             {
-              "values": "10 / 20 / 30"
+              values: '10 / 20 / 30'
             }
           ]
         },
         {
-          "attribute": "Stored Damage Increase per Stack",
-          "modifiers": [
+          attribute: 'Stored Damage Increase per Stack',
+          modifiers: [
             {
-              "values": "1 / 2 / 3"
+              values: '1 / 2 / 3'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Mel unleashes a radiant blast on all enemies affected by Overwhelm, dealing magic damage to each. Enemies are also revealed for 1 second from the start of the cast time.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "100 / 150 / 200"
+              values: '100 / 150 / 200'
             },
             {
-              "unit": "% AP",
-              "values": "30"
+              unit: '% AP',
+              values: '30'
             },
             {
-              "tooltip": "Scaling per rank:\n4 / 7 / 10 (+ 3.5% AP) per Overwhelm stack on the target",
-              "unit": " (+ 3.5% AP) per Overwhelm stack on the target",
-              "values": "4 - 10"
+              tooltip: 'Scaling per rank:\n4 / 7 / 10 (+ 3.5% AP) per Overwhelm stack on the target',
+              unit: ' (+ 3.5% AP) per Overwhelm stack on the target',
+              values: '4 - 10'
             }
           ]
         }
       ]
     },
     {
-      "description": "An enemy champion affected by Overwhelm is required to cast this ability. The target does not have to be visible to be hit by this ability."
+      description: 'An enemy champion affected by Overwhelm is required to cast this ability. The target does not have to be visible to be hit by this ability.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Mel/ability-icon/r",
-  "notes": "Golden Eclipse can be cast even if all affected targets are  untargetable.(note)\nGolden Eclipse does not deal damage to enemies that are  untargetable by the time the cast time completes.\nGolden Eclipse cannot be cast if none of the affected targets are in Mel's realm ( Death Realm).\nGolden Eclipse will only deal damage to targets in Mel's realm at the end of the cast.\nWhenever Golden Eclipse's damage would put a target below  Overwhelm's threshold, it will use a  different icon.\nGolden Eclipse will display the number of total stacks affecting all enemy champions in the HUD.\nGolden Eclipse sets the duration of  Overwhelm stacks to 0.75 seconds if they would run out during the cast time.",
-  "resource": "Mana",
-  "spellEffects": "spell",
-  "spellshieldable": "true",
-  "targeting": "Auto",
-  "targetRange": "Global"
+  ]
 }
-  export default ability
+export default ability

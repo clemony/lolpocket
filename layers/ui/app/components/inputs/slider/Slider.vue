@@ -29,14 +29,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         'relative flex w-full touch-none items-center select-none data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5 data-[orientation=vertical]:flex-col',
         props.class,
       )
-    "
-  >
+    ">
     <SliderTrack
-      class="bg-tint-b3/20 relative h-1.5 w-full grow overflow-hidden rounded-full data-[orientation=vertical]:w-1.5"
-    >
+      class="relative h-1.5 w-full grow overflow-hidden rounded-full bg-tint-p3/20 data-[orientation=vertical]:w-1.5">
       <SliderRange
-        class="bg-neutral absolute h-full data-[orientation=vertical]:w-full"
-      />
+        class="absolute h-full bg-neutral data-[orientation=vertical]:w-full" />
     </SliderTrack>
 
     <SliderThumb
@@ -44,11 +41,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       :key="key"
       :class="
         cn(
-          'border-neutral bg-b1 ring-offset-b1 focus-visible:ring-neutral block size-4 cursor-pointer rounded-full border-2 shadow-xs shadow-black/10 drop-shadow-sm transition-colors focus-visible:ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+          'block size-4 cursor-pointer rounded-full border-2 border-neutral bg-p0 shadow-xs shadow-black/10 ring-offset-p0 drop-shadow-sm transition-colors focus-visible:ring focus-visible:ring-neutral focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
           props.thumbClass,
         )
-      "
-    >
+      ">
       <slot />
     </SliderThumb>
   </SliderRoot>

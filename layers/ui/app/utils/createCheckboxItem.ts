@@ -23,6 +23,7 @@ export function createCheckboxItem({
     name: computed(name),
     checkboxType,
     icon: computed(() => ({ name: icon(), class: iconClass })),
+    type: 'checkbox' as const,
     model: {
       get,
       set,
@@ -30,7 +31,6 @@ export function createCheckboxItem({
         return get()
       },
     },
-    type: 'checkbox' as const,
   }
 }
 
@@ -48,14 +48,14 @@ export function createRadioGroupItem<T extends string | number>(config: {
       typeof config.name === 'function' ? config.name() : config.name
     ),
     inset: config.inset,
+    optionIcon: config.optionIcon,
+    optionName: config.optionName,
+    options: config.options,
+    type: 'radio',
     model: {
       get: config.get,
       set: config.set,
       valueOf: config.get,
     },
-    optionIcon: config.optionIcon,
-    optionName: config.optionName,
-    options: config.options,
-    type: 'radio',
   } as MenubarRadioGroup
 }

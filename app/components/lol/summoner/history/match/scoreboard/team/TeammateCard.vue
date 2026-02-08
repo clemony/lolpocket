@@ -7,34 +7,37 @@ const { match, player } = defineProps<{
 const bars = computed(() => {
   return [
     {
-      color: 'domination',
-      class: 'hover:bg-domination-200! hover:text-bc! hover:ring-offset-domination-200!  hover:ring-domination-300!',
-      icon: ['lol:scoreboard-sword', '-translate-y-px size-4 opacity-100'],
+      color: "domination",
+      class:
+        "hover:bg-domination-200! hover:text-pc! hover:ring-offset-domination-200!  hover:ring-domination-300!",
       max: match.participants
-        .map(p => p.stats.totalDamage)
+        .map((p) => p.stats.totalDamage)
         .sort((a, b) => b - a)[0],
-      tip: 'Total Damage Dealt to Champions',
+      tip: "Total Damage Dealt to Champions",
       value: player.stats.totalDamage,
+      icon: ["lol:scoreboard-sword", "-translate-y-px size-4 opacity-100"],
     },
     {
-      color: 'precision',
-      class: 'hover:bg-precision-200! hover:text-bc! hover:ring-offset-precision-200!  hover:ring-precision-400!',
-      icon: ['stat:armor'],
+      color: "precision",
+      class:
+        "hover:bg-precision-200! hover:text-pc! hover:ring-offset-precision-200!  hover:ring-precision-400!",
       max: match.participants
-        .map(p => p.stats.totalDamageTaken)
+        .map((p) => p.stats.totalDamageTaken)
         .sort((a, b) => b - a)[0],
-      tip: 'Total Damage Taken by Champions',
+      tip: "Total Damage Taken by Champions",
       value: player.stats.totalDamageTaken,
+      icon: ["stat:armor"],
     },
     {
-      color: 'resolve',
-      class: 'hover:bg-resolve-100! bg-blend-hue hover:text-bc! hover:ring-offset-resolve-100! hover:ring-resolve-200!',
-      icon: ['stat:health'],
+      color: "resolve",
+      class:
+        "hover:bg-resolve-100! bg-blend-hue hover:text-pc! hover:ring-offset-resolve-100! hover:ring-resolve-200!",
       max: match.participants
-        .map(p => p.stats.effectiveHealingAndShielding)
+        .map((p) => p.stats.effectiveHealingAndShielding)
         .sort((a, b) => b - a)[0],
-      tip: 'Effective Healing & Shielding',
+      tip: "Effective Healing & Shielding",
       value: player.stats.effectiveHealingAndShielding,
+      icon: ["stat:health"],
     },
   ]
 })
@@ -45,40 +48,35 @@ const bars = computed(() => {
     v-if="player"
     :class="
       cn(
-        'relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none dark:border-b3/70 dark:bg-b2/60 light:border-transparent! light:bg-b1/80! light:shadow-none! light:drop-shadow-none!',
+        'relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none dark:border-p3/70 dark:bg-p2/60 light:border-transparent! light:bg-p0/80! light:shadow-none! light:drop-shadow-none!'
       )
-    "
-  >
+    ">
     <!-- champion -->
 
     <div class="flex w-18 items-center">
-      <ChampionIcon
+      <Champion
         :id="player?.championId"
         class="z-0 size-10 rounded-full transition-all duration-300 hover:scale-105"
         :data-id="player?.championId"
         data-type="champion"
-        alt="champion-icon"
-      />
+        alt="champion-icon" />
       <ScoreboardCardRunes :player />
     </div>
     <!-- name and tag -->
     <div
-      class="flex h-fit w-full max-w-26 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap @min-700:max-w-32"
-    >
+      class="flex h-fit w-full max-w-26 grow flex-col justify-center gap-0.5 overflow-hidden text-nowrap whitespace-nowrap @min-700:max-w-32">
       <div
         class="inline-flex items-center gap-1 leading-4"
         data-type="player"
         :data-name="player.name"
         :data-tag="player.tag"
-        :data-icon="player.icon"
-      >
+        :data-icon="player.icon">
         <h4 class="truncate text-sm/4 font-semibold text-nowrap">
           {{ player.name }}
         </h4>
 
         <span
-          class="hidden grow items-center gap-0! text-xxs/4 font-medium opacity-50 @min-700:inline-flex"
-        >
+          class="hidden grow items-center gap-0! text-2xs/4 font-medium opacity-50 @min-700:inline-flex">
           <Icon class="inline size-3.25" name="hash" />
           {{ player.tag }}
         </span>
@@ -100,9 +98,7 @@ const bars = computed(() => {
       <ScoreboardStatPanel class="" :player />
     </div>
     <!-- PROGRESS STAT ROW -->
-    <div
-      class="grid w-full max-w-52 grid-cols-3 items-center gap-3"
-    >
+    <div class="grid w-full max-w-52 grid-cols-3 items-center gap-3">
       <TeammateStatProgressBars
         v-for="(s, i) in bars"
         :key="i"
@@ -111,13 +107,12 @@ const bars = computed(() => {
         :class="s.class"
         :color="s.color"
         :icon="s.icon"
-        :tip="s.tip"
-      />
+        :tip="s.tip" />
     </div>
 
     <ScoreboardCardItems class="" :player :is-s-r="match?.mapId === 11" />
 
-    <div class="flex h-fit w-5 gap-1 flex-col items-end @min-700:w-16">
+    <div class="flex h-fit w-5 flex-col items-end gap-1 @min-700:w-16">
       <!-- minions -->
       <PlayerCS :player />
       <!-- gold -->
@@ -131,12 +126,12 @@ const bars = computed(() => {
         class="round-wrapper size-6"
         :style="{
           zIndex: i,
-        }"
-      >
+        }">
         <Spell
           :id="spell"
-          :class="cn('img-active z-1 size-5 rounded-full', { 'no-img': !spell })"
-        />
+          :class="
+            cn('img-active z-1 size-5 rounded-full', { 'no-img': !spell })
+          " />
       </div>
     </div>
   </Card>

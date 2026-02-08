@@ -29,8 +29,7 @@ useTippy(tippyBox, {
     v-bind="forwarded"
     ref="tippyBox"
     :as="as"
-    :class="cn('', props.class)"
-  >
+    :class="cn('', props.class)">
     <slot />
 
     <div ref="tippy">

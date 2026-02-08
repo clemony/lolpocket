@@ -39,19 +39,21 @@ watch(
   <Popover v-model:open="open">
     <slot>
       <PopoverTrigger as-child>
-        <Button variant="ghost" :class="cn('size-11', { 'btn-active': open })">
+        <Button
+          variant="ghost"
+          :class="cn('size-11', { 'btn-active': open })">
           <icon name="tag" />
         </Button>
       </PopoverTrigger>
     </slot>
     <LazyPopPopoverContent
       class="grid max-h-70 w-54 -translate-y-5 auto-rows-max justify-center p-0"
-      side="bottom"
-    >
+      side="bottom">
       <div
-        class="group relative flex h-10 w-54 w-full items-center gap-3 px-3 pt-2"
-      >
-        <icon class="size-5 opacity-50" name="lucide:tags" />
+        class="group relative flex h-10 w-54 w-full items-center gap-3 px-3 pt-2">
+        <icon
+          class="size-5 opacity-50"
+          name="lucide:tags" />
         <input
           v-model="newTag"
           class="h-10 w-full pr-4 text-sm transition-all duration-200 placeholder:italic focus:placeholder:opacity-0"
@@ -66,22 +68,21 @@ watch(
               }
               newTag = '' // reset → shows full list again
             }
-          "
-        >
+          ">
 
         <Button
-          class="btn-square absolute top-2.5 right-1 size-6 shrink-0 opacity-100 group-has-placeholder-shown:opacity-0"
+          class="absolute top-2.5 right-1 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown:opacity-0"
           variant="ghost"
           size="sm"
-          @click="newTag = ''"
-        >
-          <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
+          @click="newTag = ''">
+          <icon
+            class="size-4 **:stroke-[1.5]"
+            name="x-sm" />
         </Button>
       </div>
       <Separator />
       <div
-        class="grid max-h-55 max-w-54 overflow-x-hidden overflow-y-auto px-0.5 pt-1 pb-2"
-      >
+        class="grid max-h-55 max-w-54 overflow-x-hidden overflow-y-auto px-0.5 pt-1 pb-2">
         <!-- tags -->
         <Label
           v-for="item in filteredTags"
@@ -89,16 +90,16 @@ watch(
           class="w-full max-w-52 justify-start gap-2.5 pl-3.25 text-start"
           variant="ghost"
           size="sm"
-          @select.prevent
-        >
+          @select.prevent>
           <input
             v-model="pocket.tags"
-            class="checkbox checkbox-sm checkbox-neutral checked:bg-neutral/80 shadow-xs drop-shadow-xs"
+            class="checkbox checkbox-sm checkbox-neutral shadow-xs drop-shadow-xs checked:bg-neutral/80"
             :value="item"
             type="checkbox"
-            :checked="pocket.tags.includes(item)"
-          >
-          <icon class="text-bc/80 size-3.75!" name="hash" />
+            :checked="pocket.tags.includes(item)">
+          <icon
+            class="size-3.75! text-pc/80"
+            name="hash" />
           <span class="-ml-2.5 w-full truncate">
             {{ item }}
           </span>
@@ -106,11 +107,10 @@ watch(
 
         <div
           v-if="!filteredTags.length"
-          class="grid w-full place-items-center py-6"
-        >
+          class="grid w-full place-items-center py-6">
           <div class="w-fit justify-start space-y-1">
             <p class="flex items-center gap-3">
-              <span class="badge border-b4/80 text-xs shadow-sm drop-shadow-xs">
+              <span class="border-b4/80 badge text-xs shadow-sm drop-shadow-xs">
                 ENTER
               </span>
               to

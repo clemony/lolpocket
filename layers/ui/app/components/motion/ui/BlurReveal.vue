@@ -49,7 +49,9 @@ function getAnimate() {
 </script>
 
 <template>
-  <div ref="container" :class="props.class">
+  <div
+    ref="container"
+    :class="props.class">
     <Motion
       v-for="(child, index) in children"
       :key="index"
@@ -61,8 +63,7 @@ function getAnimate() {
         duration: props.duration,
         ease: 'easeInOut',
         delay: props.delay * Number(index),
-      }"
-    >
+      }">
       <component :is="child" />
     </Motion>
   </div>

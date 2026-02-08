@@ -7,8 +7,7 @@ const props = defineProps<{
 
 <template>
   <div
-    class="p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none"
-  >
+    class="p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none">
     <div class="w-full justify-start">
       <!--  <span
         class="text-xldst font-medium"
@@ -21,13 +20,12 @@ const props = defineProps<{
           <template v-if="i < 6">
             <div :key="i" class="size-20 rounded-xl *:rounded-xl">
               <div class="size-full overflow-hidden rounded-lg">
-                <div v-if="item === 0" class="aspect-square size-full bg-b3" />
+                <div v-if="item === 0" class="aspect-square size-full bg-p3" />
 
                 <img
-                  class="inset-shadow-rounded shadow-rounded aspect-square size-full bg-b3 shadow-black inset-shadow-black"
+                  class="inset-shadow-rounded shadow-rounded aspect-square size-full bg-p3 shadow-black inset-shadow-black"
                   :alt="itemNameById(item)"
-                  :src="`/img/items/${item}.webp`"
-                >
+                  :src="`/img/items/${item}.webp`" />
               </div>
             </div>
           </template>
@@ -38,5 +36,3 @@ const props = defineProps<{
   <!--     <div class="badge badgeneutral badge-xl absolute !py-5 px-7 rounded-2xl bgneutral/80 backdrop-blur-md shadow-smooth drop-shadow-md -top-8 left-0 border borderneutral ring ring-1 ringneutral ring-offset-1 ring-offsetneutral/60">
     </div> -->
 </template>
-
-<style scoped></style>

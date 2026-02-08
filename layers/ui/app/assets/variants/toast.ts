@@ -15,16 +15,17 @@ export default {
     variants: {
       color: {
         default: {
-          description: 'text-bc',
-          icon: 'text-bc',
-          root: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-bc/60 bg-b1/90 ring-b3/70'
+          description: 'text-pc',
+          icon: 'text-pc',
+          root: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-pc/60 bg-p0/90 ring-p3/70'
         },
 
         neutral: {
           description: 'text-nc',
           icon: 'text-nc',
-          root: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-nc bg-neutral/90 ring-muted-700'
-        }
+          root: 'focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-nc bg-neutral/90 ring-p1-700'
+        },
+        dom: {}
       },
     },
     defaultVariants: {

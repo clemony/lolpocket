@@ -35,16 +35,16 @@ export interface PathSlot {
 }
 
 export interface PathIndex {
+  color: string
   id: number
   name: PathName
-  color: string
   tooltip: string
 }
 
 export interface Shard {
+  color: string
   id: number
   name: string
-  color: string
   description: string
 }
 

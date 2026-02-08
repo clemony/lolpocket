@@ -1,37 +1,8 @@
-import type { ColDef, ColGroupDef } from 'ag-grid-community'
+import type { ColDef } from 'ag-grid-community'
+import { GridLastPlayed, GridMasteryPoints, MasteryBadge, TableChampion } from '#components'
 import { perGameFormatter, perGameGetter, statGetter } from '.'
 
-('#components')
-
-const TableChampion = resolveComponent('TableChampion')
-const GridLastPlayed = resolveComponent('GridLastPlayed')
-const GridMasteryPoints = resolveComponent('GridMasteryPoints')
-const MasteryBadge = resolveComponent('MasteryBadge')
-
 export function useStatGrid() {
-  const killStats = [
-    { bold: true, field: 'kills', label: 'Total', tooltip: 'Kills' },
-  ] as const
-
-  const killGroup: ColGroupDef = {
-    children: killStats.map((s, i) => ({
-      width: 56,
-      cellClass: 'text-center',
-      cellDataType: 'number',
-      columnGroupShow: i === 0 ? undefined : 'open',
-      field: s.field,
-      headerClass:
-        'h-8! max-h-8! min-h-8! row-span-1! -translate-y-1 row-start-2! text-start [&_.ag-header-cell-resize]:after:-translate-y-3!',
-      headerName: s.label,
-      headerTooltip: s.tooltip,
-      valueFormatter: perGameFormatter(s.field),
-      valueGetter: perGameGetter(s.field),
-      wrapHeaderText: false,
-    })),
-    headerName: 'Kills',
-    openByDefault: false,
-  }
-
   const numericPerGameColumn = <K extends keyof ChampionStatsAndMastery>(
     f: K,
     headerName: string,
@@ -123,16 +94,16 @@ export function useStatGrid() {
     width: 90,
     cellDataType: 'number',
     cellRenderer: GridMasteryPoints,
+    colId: 'points',
+    field: 'totalPoints',
+    headerName: 'Level',
+    headerTooltip: 'Level & Points',
     cellRendererParams: {
       level: params => params.data?.level,
       pointsSinceLevel: params => params.data?.pointsSinceLevel,
       pointsUntilLevel: params => params.data?.pointsUntilLevel,
       totalPoints: params => params.data?.totalPoints,
     },
-    colId: 'points',
-    field: 'totalPoints',
-    headerName: 'Level',
-    headerTooltip: 'Level & Points',
   }
 
   const badgeColumn: ColDef<ChampionStatsAndMastery> = {
@@ -158,7 +129,7 @@ export function useStatGrid() {
   }
 
   const spacerColumn = {
-    flex: 2,
+    flex: 1,
     headerName: '',
     sortable: false,
     suppressMovable: true,

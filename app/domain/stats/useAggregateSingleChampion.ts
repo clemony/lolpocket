@@ -7,13 +7,13 @@ export function useAggregateSingleChampion(
     const acc: ChampionStats = {
       championId: matchData.value[0].player.championId,
       championName: champNameById(matchData.value[0].player.championId),
-      gamePatches: [],
       games: 0,
       losses: 0,
+      wins: 0,
+      gamePatches: [],
       role: {
         stats: {} as Record<string, StatDetail>,
       },
-      wins: 0,
 
       csPerMin: 0,
       // other

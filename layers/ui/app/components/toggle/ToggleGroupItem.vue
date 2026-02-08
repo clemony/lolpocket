@@ -17,8 +17,7 @@ const props = defineProps<
         'group/toggle',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ToggleGroupItem>
 </template>

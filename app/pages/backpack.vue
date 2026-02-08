@@ -20,26 +20,26 @@ const pinned = computed(() =>
       :accounts
       :mails
       class="space-y-2"
-      @toggle:collapse="(e) => (isCollapsed = !e)"
+      @toggleCollapse="(e) => (isCollapsed = !e)"
       @expand="isCollapsed = true"
       @collapse="isCollapsed = false">
       <template #nav> -->
   <div class="flex size-full h-16 w-full items-center border-b p-1">
     <UDropdownMenu>
       <UButton
-        class="group data-[state=open]:fx-noise open:border-b3/80 w-full justify-start gap-3! pr-5 pl-4.5 open:shadow-sm open:inset-shadow-xs open:shadow-black/8 hover:bg-transparent"
+        class="group data-[state=open]:fx-noise w-full justify-start gap-3! pr-5 pl-4.5 open:border-p3/80 open:shadow-sm open:inset-shadow-xs open:shadow-black/8 hover:bg-transparent"
         variant="ghost"
         hover="base"
         size="lg">
         <SummonerIcon class="size-7 rounded-full" />
         <span
-          class="dst w-full items-center truncate text-xl font-semibold *:first:capitalize">
+          class="w-full items-center truncate text-xl font-semibold dst *:first:capitalize">
           <SummonerName class="inline" />
           's Backpack
         </span>
         <icon
           name="up-down"
-          :class="cn('text-bc/60 size-4.5')" />
+          :class="cn('size-4.5 text-pc/60')" />
       </UButton>
       <!--       <LazyDropdownMenuContent>
         <DropdownMenuItem>Edit pins</DropdownMenuItem>

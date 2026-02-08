@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { markRead, sortedMessages, toggleRead } from './inbox-management'
+import { markRead, sortedMessages, toggleRead } from "./inbox-management"
 
 defineOptions({
   meta: {
-    name: 'Inbox',
-    badge: computed(() => as().inbox.messages.filter(m => !m.read).length)
+    name: "Inbox",
+    badge: computed(() => as().inbox.messages.filter((m) => !m.read).length)
       .value,
-    class: '**:stroke-1.5',
-    icon: 'lucide:mail',
+    class: "**:stroke-1.5",
+    icon: "lucide:mail",
   },
 })
 </script>
@@ -25,9 +25,8 @@ defineOptions({
       <template #subheader>
         <div class="px-3">
           <Input
-            class="input bg-b1! mb-3 h-12"
-            placeholder="Search messages..."
-          />
+            class="input mb-3 h-12 bg-p0!"
+            placeholder="Search messages..." />
         </div>
       </template>
     </SidebarHeaderWrapper>
@@ -39,32 +38,27 @@ defineOptions({
           :key="`${message.date}-${i}`"
           :class="
             cn(
-              'group/msg border-b-b3 flex w-full flex-col items-start gap-2 border-b p-4 leading-tight whitespace-nowrap last:border-b-0',
+              'group/msg flex w-full flex-col items-start gap-2 border-b border-b-p3 p-4 leading-tight whitespace-nowrap last:border-b-0',
               {
-                'bg-b1/80': !message.read,
+                'bg-p0/80': !message.read,
                 'hover:bg-sidebar-accent bg-transparent opacity-70':
                   message.read,
-              },
+              }
             )
-          "
-        >
+          ">
           <Dialog>
-            <DialogTrigger
+            <UButton
               class="grid size-full justify-items-start"
-              @click="markRead(message.id)"
-            >
+              @click="markRead(message.id)">
               <div class="flex w-full items-center justify-between gap-2">
-                <span class="text-bc/60 text-sm font-medium">
+                <span class="text-sm font-medium text-pc/60">
                   {{ message.from.name }}
                 </span>
 
                 <span
-                  class="text-bc/80 relative flex h-5 items-center justify-self-end text-xs *:absolute *:right-4 *:transition-opacity *:duration-200 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:pointer-events-none group-hover/msg:*:last:opacity-0"
-                >
+                  class="relative flex h-5 items-center justify-self-end text-xs text-pc/80 *:absolute *:right-4 *:transition-opacity *:duration-200 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:pointer-events-none group-hover/msg:*:last:opacity-0">
                   <span class="flex size-fit gap-1">
-                    <Button
-                      @click.stop="toggleRead(message.id)"
-                    >
+                    <Button @click.stop="toggleRead(message.id)">
                       {{ message.read ? "Mark Unread" : "Mark Read" }}
                     </Button>
 
@@ -78,16 +72,14 @@ defineOptions({
                   cn('py-1 text-lg font-bold tracking-tight', {
                     'opacity-70': message.read,
                   })
-                "
-              >
+                ">
                 {{ message.title }}
               </span>
               <span
-                class="line-clamp-2 w-[260px] text-start text-sm whitespace-break-spaces"
-              >
+                class="line-clamp-2 w-[260px] text-start text-sm whitespace-break-spaces">
                 {{ message.content }}
               </span>
-            </DialogTrigger>
+            </UButton>
 
             <LazyMessage :message />
           </Dialog>
@@ -95,7 +87,7 @@ defineOptions({
       </template>
 
       <div v-else class="grid h-44 w-full place-items-center">
-        <span class="dst overflow-hidden text-sm text-nowrap">
+        <span class="overflow-hidden text-sm text-nowrap dst">
           {{ `No mail right now!` }}
         </span>
       </div>

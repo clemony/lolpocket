@@ -10,7 +10,7 @@ const props = defineProps<{
 
 <template>
   <!--   <Select class="group">
-    <SelectTrigger v-tippy="props.tip" :no-arrow="true" class=" aspect-square h-auto shadow-none btn btn-ghost btn-lg btn-square hover:bg-b3/80 rounded-xl gap-0 data-[state=open]:bg-b3/80">
+    <SelectTrigger v-tippy="props.tip" :no-arrow="true" class=" aspect-square h-auto shadow-none btn btn-ghost btn-lg btn-square hover:bg-p3/80 rounded-xl gap-0 data-[state=open]:bg-p3/80">
       <SelectValue placeholder="Aa" as-child>
         <div :style="{ backgroundColor: props.pocket.card.color }" class="text-xxl  dst font-medium">
           <icon name="  proicons:background-color" class="size-6" />
@@ -29,5 +29,3 @@ const props = defineProps<{
   </Select> -->
   h
 </template>
-
-<style scoped></style>

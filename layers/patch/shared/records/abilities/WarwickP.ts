@@ -1,21 +1,21 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:15 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Eternal Hunger",
-  "affects": "Self",
-  "blurb": "Innate:  Warwick deals bonus magic damage on-hit.",
-  "damageType": "Magic damage",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Eternal Hunger',
+  affects: 'Self',
+  blurb: 'Innate:  Warwick deals bonus magic damage on-hit.',
+  damageType: 'Magic damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/p',
+  notes: 'Eternal Hunger does not affect:\nstructures\nwards (except  effigies),\nJungle plants,\n Gangplank\'s  kegs\nEternal Hunger does affect:\n Illaoi\'s  Tentacles [2] (bug)\nPENDING FOR TEST: Other units with modified health behaviour.',
+  spellEffects: 'Proc',
+  spellshieldable: 'False',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Warwick deals 6 - 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.</p>\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health."
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Warwick deals 6 - 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.</p>\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/p",
-  "notes": "Eternal Hunger does not affect:\nstructures\nwards (except  effigies),\nJungle plants,\n Gangplank's  kegs\nEternal Hunger does affect:\n Illaoi's  Tentacles [2] (bug)\nPENDING FOR TEST: Other units with modified health behaviour.",
-  "spellEffects": "Proc",
-  "spellshieldable": "False",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

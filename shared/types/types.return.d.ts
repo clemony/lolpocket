@@ -20,7 +20,7 @@ interface ThreadReturn {
 }
 
 interface UserProfileResponse {
+  settings: Settings | null
   account: Account | null
   pockets: Pocket[] | null
-  settings: Settings | null
 }

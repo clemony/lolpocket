@@ -1,56 +1,56 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:55 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "Q",
-  "name": "Obliterate",
-  "width": "90 - 150",
-  "affects": "Enemies",
-  "blurb": "Active:  Mordekaiser smashes the area in the target direction, dealing magic damage to enemies within,  increased if it hits only one enemy.",
-  "castTime": "0.5",
-  "cooldown": "8 / 7 / 6 / 5 / 4",
-  "cost": "0",
-  "damageType": "Magic damage",
-  "effects": [
+const ability: Ability = {
+  key: 'Q',
+  name: 'Obliterate',
+  width: '90 - 150',
+  affects: 'Enemies',
+  blurb: 'Active:  Mordekaiser smashes the area in the target direction, dealing magic damage to enemies within,  increased if it hits only one enemy.',
+  castTime: '0.5',
+  cooldown: '8 / 7 / 6 / 5 / 4',
+  cost: '0',
+  damageType: 'Magic damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q',
+  notes: 'This ability always employs Quick cast.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe ability will cast to wherever the caster\'s cursor was at the start of cast time.\nIf Mordekaiser\'s location changes during the cast time, the visual effects of Obliterate will be divided into three sections: one forming toward the caster\'s cursor at the start of the cast, one forming toward the original cast direction, and one following Mordekaiser\'s facing direction. Only the first will portray the spell\'s effect accurately.(bug)[2]\nApplies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate\'s damage against isolated enemies at:\nRank 1: 104 : 162.5 (based on level) (+ 156% bonus AD) (+ 91% AP)\nRank 2: 155.25 : 216 (based on level) (+ 162% bonus AD) (+ 94.5% AP)\nRank 3: 210 : 273 (based on level) (+ 168% bonus AD) (+ 98% AP)\nRank 4: 268.25 : 333.5 (based on level) (+ 174% bonus AD) (+ 101.5% AP)\nRank 5: 330 : 397.5 (based on level) (+ 180% bonus AD) (+ 105% AP)',
+  projectile: 'FALSE',
+  spellEffects: 'special',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Mordekaiser strikes his mace down in a line in the target direction, dealing magic damage to enemies within, increased if only one enemy is hit.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Mordekaiser strikes his mace down in a line in the target direction, dealing magic damage to enemies within, increased if only one enemy is hit.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45"
+              values: '0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45'
             },
             {
-              "values": "80 / 115 / 150 / 185 / 220"
+              values: '80 / 115 / 150 / 185 / 220'
             },
             {
-              "unit": "% bonus AD",
-              "values": "120"
+              unit: '% bonus AD',
+              values: '120'
             },
             {
-              "unit": "% AP",
-              "values": "70"
+              unit: '% AP',
+              values: '70'
             }
           ]
         },
         {
-          "attribute": "Damage Increase",
-          "modifiers": [
+          attribute: 'Damage Increase',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 35 / 40 / 45 / 50"
+              unit: '%',
+              values: '30 / 35 / 40 / 45 / 50'
             }
           ]
         }
       ]
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q",
-  "notes": "This ability always employs Quick cast.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe ability will cast to wherever the caster's cursor was at the start of cast time.\nIf Mordekaiser's location changes during the cast time, the visual effects of Obliterate will be divided into three sections: one forming toward the caster's cursor at the start of the cast, one forming toward the original cast direction, and one following Mordekaiser's facing direction. Only the first will portray the spell's effect accurately.(bug)[2]\nApplies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate's damage against isolated enemies at:\nRank 1: 104 : 162.5 (based on level) (+ 156% bonus AD) (+ 91% AP)\nRank 2: 155.25 : 216 (based on level) (+ 162% bonus AD) (+ 94.5% AP)\nRank 3: 210 : 273 (based on level) (+ 168% bonus AD) (+ 98% AP)\nRank 4: 268.25 : 333.5 (based on level) (+ 174% bonus AD) (+ 101.5% AP)\nRank 5: 330 : 397.5 (based on level) (+ 180% bonus AD) (+ 105% AP)",
-  "projectile": "FALSE",
-  "spellEffects": "special",
-  "spellshieldable": "True",
-  "targeting": "Direction"
+  ]
 }
-  export default ability
+export default ability

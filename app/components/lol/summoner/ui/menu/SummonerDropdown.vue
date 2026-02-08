@@ -27,25 +27,28 @@ function handleBlock() {
 
 <template>
   <UPopover
-    v-if="summoner" mode="hover" :content="{ sideOffset: 4 }"
-  >
+    v-if="summoner"
+    mode="hover"
+    :content="{ sideOffset: 4 }">
     <UButton
       size="md"
-      color="muted"
+      color="p1"
       variant="ghost"
       :ui="{
-        base: 'w-74 rounded-lg px-4 justify-between hover:bg-primary/70',
-      }"
-    >
-      <span class="inline-flex gap-2 align-baseline items-center">
-        <SummonerName class="truncate text-xl font-bold" :summoner />
+        base: 'w-74 rounded-lg px-4 justify-between hover:bg-p0/70',
+      }">
+      <span class="inline-flex items-center gap-2 align-baseline">
+        <SummonerName
+          class="truncate text-xl font-bold"
+          :summoner />
 
-        <SummonerTag class="truncate font-medium" :summoner />
+        <SummonerTag
+          class="truncate font-medium"
+          :summoner />
       </span>
       <LazySummonerIcon
         class="ml-2 size-7! rounded-full shadow-sm drop-shadow-sm"
-        :summoner
-      />
+        :summoner />
     </UButton>
     <template #content>
       <SummonerCard />

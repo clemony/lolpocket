@@ -1,5 +1,5 @@
 export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
-  // @todo probably fix
+  // todo probably fix
 
   const player = filteredMatches.map(m => ({
     data: m.participants.find(p => p.puuid === as().account.puuid),
@@ -36,12 +36,12 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
 
         if (!itemStats.has(itemId)) {
           itemStats.set(itemId, {
-            gamePatches: [],
             games: 0,
             losses: 0,
-            matchIndexes: [],
             winrate: 0,
             wins: 0,
+            gamePatches: [],
+            matchIndexes: [],
           })
         }
 

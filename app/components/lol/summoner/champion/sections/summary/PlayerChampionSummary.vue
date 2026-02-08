@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { class: className, mastery } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   mastery?: ChampionMastery
 }>()
 
@@ -13,26 +13,26 @@ const champKey = computed(() => String(route.params?.champion_key))
 const progress = computed(() => {
   if (mastery.pointsUntilLevel <= 0) {
     return 100
-  }
-  else {
+  } else {
     return Math.round(
-      (mastery.pointsSinceLevel
-        / (mastery.pointsSinceLevel + mastery.pointsUntilLevel))
-      * 100
+      (mastery.pointsSinceLevel /
+        (mastery.pointsSinceLevel + mastery.pointsUntilLevel)) *
+        100
     )
   }
 })
 </script>
 
 <template>
-  <div :class="cn('grid w-full max-w-full gap-6 overflow-hidden', className)">
+  <UPageSection
+    title="Summary"
+    :class="cn('grid w-full max-w-full gap-6 overflow-hidden', className)">
     <!-- RUNES -->
     <ChampionRuneSet />
 
     <!-- SPELLS AND SKILLS -->
     <div
-      class="grid w-full grid-cols-[0.7fr_1fr_1fr] items-center justify-start gap-10"
-    >
+      class="grid w-full grid-cols-[0.7fr_1fr_1fr] items-center justify-start gap-10">
       <BestChampionSpellSet />
       <ChampionSkillPriority />
 
@@ -62,8 +62,7 @@ const progress = computed(() => {
       <ChampionItemRow
         v-if="items?.best?.core"
         simple
-        :data="items?.best?.core?.items"
-      >
+        :data="items?.best?.core?.items">
         <ChampStatLabel title="Core" :stat="items?.best?.core" />
       </ChampionItemRow>
 
@@ -71,8 +70,7 @@ const progress = computed(() => {
         v-for="(slot, i) in items?.best?.slots"
         :key="i"
         class="grow"
-        simple
-      >
+        simple>
         <ChampStatLabel :title="`Slot ${Number(i) + 4}`" :stat="slot[1]" />
         <ChampStatRowWrapper v-if="slot[0]" class="justify-center">
           <Item :id="slot[0]" class="size-15" />
@@ -80,5 +78,5 @@ const progress = computed(() => {
         <NoItemData v-else />
       </ChampStatRow>
     </div>
-  </div>
+  </UPageSection>
 </template>

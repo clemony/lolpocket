@@ -1,0 +1,35 @@
+<script lang="ts" setup>
+const {
+  side = "right",
+  class: className,
+  link,
+  summoner,
+} = defineProps<{
+  summoner: Summoner | Player
+  class?: HTMLAttributes["class"]
+  side?: Side
+  link?: boolean
+}>()
+</script>
+
+<template>
+  <Tooltip
+    :key="summoner?.puuid"
+    :ui="{ trailingIcon: 'inline align-bottom leading-none' }"
+    :disabled="!summoner"
+    :text="`${summoner?.name} #${summoner?.tag}`"
+    :img="getSummonerIcon(summoner?.icon)"
+    trailing-icon="i-chain"
+    :side
+    :side-offset="['right', 'left'].includes(side) ? 28 : 14">
+    <span
+      :class="
+        cn(
+          'inline-flex items-center gap-1 align-baseline hover:underline',
+          className
+        )
+      ">
+      <slot />
+    </span>
+  </Tooltip>
+</template>

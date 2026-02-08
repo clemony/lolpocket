@@ -14,8 +14,7 @@ const props = defineProps<{
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ul>
 </template>

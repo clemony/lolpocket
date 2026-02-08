@@ -3,5 +3,3 @@
 <template>
   <span class="pointer-events-none grow" />
 </template>
-
-<style scoped></style>

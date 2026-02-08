@@ -13,8 +13,8 @@ export const itemVariants = {
     transform: 'translateY(-40px)',
   },
   visible: {
-    opacity: [0.4, 1],
     transform: 'translateY(0)',
+    opacity: [0.4, 1],
   },
 }
 

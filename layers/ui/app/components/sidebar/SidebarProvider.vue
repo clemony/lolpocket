@@ -93,8 +93,7 @@ provideSidebarContext({
           'group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full',
           props.class,
         )
-      "
-    >
+      ">
       <slot />
     </div>
   </TooltipProvider>

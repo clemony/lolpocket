@@ -20,13 +20,11 @@ const { canScrollPrev, orientation, scrollPrev } = useCarousel()
       )
     "
     variant="outline"
-    @click="scrollPrev"
-  >
+    @click="scrollPrev">
     <slot>
       <icon
         class="text-current opacity-60 group-hover/carobtn:opacity-100"
-        name="left"
-      />
+        name="left" />
 
       <span class="sr-only">Previous Slide</span>
     </slot>

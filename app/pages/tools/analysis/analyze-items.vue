@@ -29,20 +29,19 @@ definePageMeta({
   </div> -->
 
   <div class="size-full px-14">
-    <div class="border-b-b3 mb-8 w-full border-b pt-10 pb-8">
-      <h1 class="dst pb-2 text-4xl font-semibold">
+    <div class="mb-8 w-full border-b border-b-p3 pt-10 pb-8">
+      <h1 class="pb-2 text-4xl font-semibold dst">
         Item Data
       </h1>
 
-      <p class="text-bc/70 font-medium">
+      <p class="font-medium text-pc/70">
         Your best items during patch {{ ms().filter.patch }}
       </p>
     </div>
 
     <div class="size-full overflow-hidden">
       <div
-        class="grid w-full grid-cols-4 place-items-center gap-10 overflow-hidden pb-2"
-      >
+        class="grid w-full grid-cols-4 place-items-center gap-10 overflow-hidden pb-2">
         <!--         <PocketPickItem
           :patch-games="ms().patchGames"
           :item-num="0"
@@ -64,19 +63,18 @@ definePageMeta({
           title="☆ Rising Star" /> -->
       </div>
 
-      <div class="border-b-b3 mb-10 w-full border-b pt-26 pb-10">
-        <h1 class="dst pb-2 text-4xl font-semibold">
+      <div class="mb-10 w-full border-b border-b-p3 pt-26 pb-10">
+        <h1 class="pb-2 text-4xl font-semibold dst">
           Winrates & Playrates
         </h1>
 
-        <p class="text-bc/70 font-medium">
+        <p class="font-medium text-pc/70">
           How are your most played be doing well left right ->
         </p>
       </div>
 
       <div
-        class="grid w-full grid-cols-2 place-items-center gap-x-10 overflow-hidden"
-      >
+        class="grid w-full grid-cols-2 place-items-center gap-x-10 overflow-hidden">
         <ResearchItemChart />
 
         <ResearchItemList />

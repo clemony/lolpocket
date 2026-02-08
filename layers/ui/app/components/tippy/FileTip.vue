@@ -4,21 +4,18 @@ const { stat } = defineProps<{
   value?: Record<string, number>
 }>()
 
-const pClass = 'justify-between w-full flex items-center gap-10'
+const pClass = "justify-between w-full flex items-center gap-10"
 </script>
 
 <template>
   <div
-    class="rounded-tl-0 tabs-lift tabs border-b3 bg-b1/94 tabs-xs max-w-64 rounded-tr-lg rounded-b-lg border drop-shadow-none"
-  >
+    class="rounded-tl-0 tabs-lift tabs max-w-64 rounded-tr-lg rounded-b-lg border border-p3 bg-p0/94 tabs-xs drop-shadow-none">
     <div
-      class="tab-active tab -ml-[0.5px] flex -translate-y-[17.6px] items-center gap-1"
-    >
+      class="tab-active tab -ml-[0.5px] flex -translate-y-[17.6px] items-center gap-1">
       <Icon
         v-if="stat.icon"
         class="size-3.5! -translate-x-1"
-        :name="stat.icon"
-      />
+        :name="stat.icon" />
       <span class="-translate-x-1">
         {{ stat.name }}
       </span>
@@ -27,8 +24,7 @@ const pClass = 'justify-between w-full flex items-center gap-10'
     <div class="tab-content -mt-5 px-2.5 py-2">
       <p
         v-if="stat.description"
-        class="inline-block py-3 text-sm text-wrap whitespace-normal"
-      >
+        class="inline-block py-3 text-sm text-wrap whitespace-normal">
         {{ stat.description }}
       </p>
       <template v-if="stat.values?.min === stat.values?.max">
@@ -60,10 +56,3 @@ const pClass = 'justify-between w-full flex items-center gap-10'
     </div>
   </div>
 </template>
-
-<style scoped>
-.tab {
-  --tab-radius-min: 0.4rem !important;
-  --tab-paddings: 2px 12px !important;
-}
-</style>

@@ -40,8 +40,8 @@ export function buildAllyBubbleSeries(
 
     return [
       {
-        name: `${ally.allyName} #${ally.allyTag}`,
         color,
+        name: `${ally.allyName} #${ally.allyTag}`,
         data: items.map((d) => {
           const group = collisionMap.get(`${d.allyPuuid}-${d.championId}`)!
           return {

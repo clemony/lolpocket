@@ -1,35 +1,35 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Sword of the Divine",
-  "id": 443060,
-  "rank": "Special",
-  "specialRecipe": 220007,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "sotd"
+const item: Item = {
+  id: 443060,
+  name: 'Sword of the Divine',
+  nicknames: [
+    'sotd'
   ],
-  "passives": [
+  description: '110 Adaptive Force\n50% Critical Strike Chance\n\nExcoriate\nEach Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.',
+  noEffects: false,
+  rank: 'Special',
+  removed: false,
+  specialRecipe: 220007,
+  gold: {
+    base: 1000,
+    sell: 400,
+    total: 1000
+  },
+  maps: [
+    30
+  ],
+  passives: [
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Excoriate",
-      "effects": "Gain a random amount of <b>bonus</b> critical strike damage that scales up to 50% of your critical strike chance, with the value of this amount changing every 0.25 seconds."
+      name: 'Excoriate',
+      effects: 'Gain a random amount of <b>bonus</b> critical strike damage that scales up to 50% of your critical strike chance, with the value of this amount changing every 0.25 seconds.',
+      mythic: false,
+      unique: true
     }
   ],
-  "stats": {
-    "criticalStrikeChance": 50
-  },
-  "description": "110 Adaptive Force\n50% Critical Strike Chance\n\nExcoriate\nEach Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strike Chance.",
-  "gold": {
-    "base": 1000,
-    "total": 1000,
-    "sell": 400
-  },
-  "maps": [
-    30
-  ]
+  stats: {
+    criticalStrikeChance: 50
+  }
 }
 export default item

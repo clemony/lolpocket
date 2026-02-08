@@ -47,8 +47,8 @@ export const useUiStore = defineStore(
   {
     persist: {
       key: 'tempStore',
-      pick: ['collapseStates', 'sidebarStates', 'openChampionTab'],
       storage: piniaPluginPersistedstate.sessionStorage(),
+      pick: ['collapseStates', 'sidebarStates', 'openChampionTab'],
     },
   }
 )

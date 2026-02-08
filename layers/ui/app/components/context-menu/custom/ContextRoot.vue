@@ -32,7 +32,11 @@ function updateOpen(value: boolean) {
 </script>
 
 <template>
-  <ContextMenuRoot v-bind="forwarded" v-model:open="open">
-    <slot :open="open" :update-open="updateOpen" />
+  <ContextMenuRoot
+    v-bind="forwarded"
+    v-model:open="open">
+    <slot
+      :open="open"
+      :update-open="updateOpen" />
   </ContextMenuRoot>
 </template>

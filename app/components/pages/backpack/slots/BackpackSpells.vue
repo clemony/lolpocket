@@ -18,7 +18,6 @@ const spells = computed(() => {
       v-for="spell in spells"
       :key="spell"
       class="size-6 rounded-full shadow-sm drop-shadow-sm"
-      :src="`/img/spells/${spell}.webp`"
-    >
+      :src="`/img/spells/${spell}.webp`">
   </div>
 </template>

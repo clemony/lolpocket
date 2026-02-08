@@ -9,24 +9,24 @@
 
 .shift-toward-subtle {
   transition: transform 100ms ease-out;
-  &[data-state='delayed-open'][data-placement^='bottom'],
-  &[data-state='delayed-open'][data-placement^='top'] {
+  &[data-state="delayed-open"][data-placement^="bottom"],
+  &[data-state="delayed-open"][data-placement^="top"] {
     transform: translateY(0px);
   }
-  &[data-state='delayed-open'][data-placement^='left'],
-  &[data-state='delayed-open'][data-placement^='right'] {
+  &[data-state="delayed-open"][data-placement^="left"],
+  &[data-state="delayed-open"][data-placement^="right"] {
     transform: translateX(0px);
   }
-  &[data-state='closed'][data-placement^='top'] {
+  &[data-state="closed"][data-placement^="top"] {
     transform: translateY(-5px);
   }
-  &[data-state='closed'][data-placement^='bottom'] {
+  &[data-state="closed"][data-placement^="bottom"] {
     transform: translateY(5px);
   }
-  &[data-state='closed'][data-placement^='left'] {
+  &[data-state="closed"][data-placement^="left"] {
     transform: translatex(5px);
   }
-  &[data-state='closed'][data-placement^='right'] {
+  &[data-state="closed"][data-placement^="right"] {
     transform: translateX(-5px);
   }
 }
@@ -69,46 +69,6 @@
 }
 
 .parallax.photo:hover {
-  @apply ring ring-b3 drop-shadow-md;
+  @apply ring ring-p3 drop-shadow-md;
   transform: perspective(800px) rotateX(10deg) rotateY(10deg);
-}
-
-@theme {
-  --animate-hue: rainbow 4s steps(36) infinite;
-
-  @keyframes rainbow {
-    from {
-      -webkit-filter: hue-rotate(10deg);
-      filter: hue-rotate(10deg);
-    }
-    to {
-      -webkit-filter: hue-rotate(360deg);
-      filter: hue-rotate(360deg);
-    }
-  }
-}
-
-/* Animated Gradient - Wave Motion */
-
-@keyframes gradient-wave-custom {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animated-gradient {
-  background: linear-gradient(
-    -45deg,
-    var(--color-challenger),
-    var(--color-diamond),
-    var(--color-ah),
-    var(--color-inspiration)
-  );
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
 }

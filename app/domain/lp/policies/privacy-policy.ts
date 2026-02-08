@@ -130,7 +130,7 @@ export const privacyPolicy: PolicyItem[] = [
         ],
       },
       {
-        title: `To make a request, contact: <a class="cursor-help hover:underline font-semibold ">${contactInfo.privacy.address}</a>`,
+        title: `To make a request, contact: <a class="cursor-help hover:underline font-semibold ">${contactInfo.privacy.to}</a>`,
       },
     ],
   },

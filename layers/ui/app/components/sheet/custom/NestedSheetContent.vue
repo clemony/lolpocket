@@ -26,11 +26,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       v-bind="{ ...forwarded, ...$attrs }"
       :class="
         cn(
-          'border-l-accent/30! w-116 min-w-116 pt-26 drop-shadow-sm',
+          'w-116 min-w-116 border-l-accent/30! pt-26 drop-shadow-sm',
           props.class,
         )
-      "
-    >
+      ">
       <slot />
     </DialogContent>
   </DialogPortal>

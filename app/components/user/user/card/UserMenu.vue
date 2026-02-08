@@ -28,26 +28,22 @@ const tag = ref(false)
     animation="shift-toward"
     :offset="[0, 12]"
     :duration="150"
-    :delay="500"
-  >
+    :delay="500">
     <Button
-      class="hover-ring pointer-events-auto z-4 rounded-full size-9"
+      class="hover-ring pointer-events-auto z-4 size-9 rounded-full"
       base="btn"
       color="neutral"
       :disabled="!props.comment.uuid"
-      @click.stop
-    >
+      @click.stop>
       <UserAvatar
         class="pointer-events-none absolute self-center"
         :comment
         :author="props.author"
-        size="c-9"
-      />
+        size="c-9" />
     </Button>
     <template #content>
       <div
-        class=" pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2"
-      >
+        class="pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2">
         <div
           class="relative z-0 h-28 w-full overflow-hidden rounded-t-lg"
           :style="{
@@ -56,26 +52,27 @@ const tag = ref(false)
             backgroundPositionY: '10%',
             backgroundRepeat: 'no-repeat',
           }"
-          :alt="`${author?.name}'s Splash`"
-        >
+          :alt="`${author?.name}'s Splash`">
           <Badge
-            class="size-6 absolute top-2 right-2 gap-0 rounded-lg text-xs! font-medium opacity-76"
-            color="neutral"
-          >
-            <Icon class="text-nc size-3" name="lp:cxp" />
+            class="absolute top-2 right-2 size-6 gap-0 rounded-lg text-xs! font-medium opacity-76"
+            color="neutral">
+            <Icon
+              class="size-3 text-nc"
+              name="lp:cxp" />
             {{ author?.level }}
           </Badge>
         </div>
         <div
-          class="bg-b1 absolute top-18 left-2 grid size-20 place-items-center rounded-lg p-1.5"
-        >
-          <UserAvatar class="size-full rounded-lg" :author :comment />
+          class="absolute top-18 left-2 grid size-20 place-items-center rounded-lg bg-p0 p-1.5">
+          <UserAvatar
+            class="size-full rounded-lg"
+            :author
+            :comment />
         </div>
         <div class="flex items-center gap-3 px-2 pb-2">
           <div
-            class="inline flex-wrap justify-between space-x-2 pl-22 align-middle"
-          >
-            <h2 class="dst inline font-serif text-xl! leading-3">
+            class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
+            <h2 class="inline font-serif text-xl! leading-3 dst">
               {{
                 props.author?.name || author?.username || "Mysterious Summoner"
               }}
@@ -83,9 +80,10 @@ const tag = ref(false)
             <span
               v-if="props.author?.tag || tag"
               class="pb-1 align-middle leading-4"
-              :data-role="comment.uuid === 'defnotclem' ? 'mod' : null"
-            >
-              <icon class="inline size-3.5 pb-0.5" name="hash" />
+              :data-role="comment.uuid === 'defnotclem' ? 'mod' : null">
+              <icon
+                class="inline size-3.5 pb-0.5"
+                name="hash" />
               {{ props.author?.tag || tag }}
             </span>
           </div>
@@ -97,7 +95,9 @@ const tag = ref(false)
             View Profile
           </PopoverItem>
           <PopoverItem>
-            <Icons class="size-4" name="heart" />
+            <Icons
+              class="size-4"
+              name="heart" />
             Follow
           </PopoverItem>
         </div>
@@ -106,12 +106,18 @@ const tag = ref(false)
           <!--    <FollowButton /> -->
 
           <PopoverItem>
-            <Icons class="size-4.5!" name="lucide:bell-ring" />
+            <Icons
+              class="size-4.5!"
+              name="lucide:bell-ring" />
             Report
           </PopoverItem>
         </div>
-        <Separator v-if="isAdmin" :size="1" />
-        <LazyCommentModMenu v-if="isAdmin" v-bind="forward" />
+        <Separator
+          v-if="isAdmin"
+          :size="1" />
+        <LazyCommentModMenu
+          v-if="isAdmin"
+          v-bind="forward" />
       </div>
     </template>
   </Tooltip>

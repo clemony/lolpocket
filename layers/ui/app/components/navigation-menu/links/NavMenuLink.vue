@@ -2,10 +2,10 @@
 import { navigationMenuTriggerStyle } from '../navmenuvariantindex'
 
 const {
+  variant,
   class: className,
   shape,
   size,
-  variant,
 } = defineProps<{
   class?: HTMLAttributes['class']
   shape?: Shape
@@ -25,8 +25,7 @@ const {
         'flex size-full flex-col items-start justify-center py-2',
         className,
       )
-    "
-  >
+    ">
     <slot />
   </Button>
 </template>

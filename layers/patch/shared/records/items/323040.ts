@@ -1,17 +1,17 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 323040,
-  "name": "Seraph's Embrace",
-  "description": "70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.",
-  "gold": {
-    "base": 2900,
-    "purchasable": false,
-    "total": 2900,
-    "sell": 2030
+const item: Item = {
+  id: 323040,
+  name: 'Seraph\'s Embrace',
+  description: '70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.',
+  gold: {
+    base: 2900,
+    purchasable: false,
+    sell: 2030,
+    total: 2900
   },
-  "maps": [
+  maps: [
     11
   ]
 }

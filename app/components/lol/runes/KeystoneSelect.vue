@@ -4,13 +4,13 @@ const { runes, selected } = defineProps<{
   selected: number | null
 }>()
 
-const emit = defineEmits(['update:rune'])
+const emit = defineEmits(["update:rune"])
 const selectedRune = ref<number>(null)
 
 watch(
   () => selectedRune.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+    console.log("💠 - watch - newVal:", newVal)
   }
 )
 
@@ -24,16 +24,13 @@ watch(
 
 <template>
   <div
-    class="shadow-warm relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4"
-    title="Keystone"
-  >
+    class="relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm"
+    title="Keystone">
     <div
-      class="rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-26"
-    >
+      class="absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26">
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"
-        :data-path="runes[0].path"
-      />
+        :data-path="runes[0].path" />
     </div>
 
     <RadioGroup
@@ -41,13 +38,10 @@ watch(
       :class="
         cn(
           'relative flex size-full items-center justify-around rounded-xl **:select-none',
-          `
-            grid-cols-${runes.length ?? 3}
-          `,
+          `grid-cols-${runes.length ?? 3}`
         )
       "
-      @update:model-value="emit('update:rune', selectedRune)"
-    >
+      @update:model-value="emit('update:rune', selectedRune)">
       <!--   <Label
         v-for="rune in runes"
         :key="rune.id"
@@ -55,7 +49,7 @@ watch(
         :for="rune.id"
         class=" rounded-full opacity-75 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer tldr-30  grid place-items-center shrink-0 size-22 aspect-square"
         :class="cn(
-          { 'to-b1/40 rounded-full  opacity-100 scale-115  grayscale-0': selectedRune===rune.id }, ``,
+          { 'to-p0/40 rounded-full  opacity-100 scale-115  grayscale-0': selectedRune===rune.id }, ``,
         )">
         <RadioGroupItem
           :id="rune.id"
@@ -81,5 +75,3 @@ watch(
       </div> -->
   </div>
 </template>
-
-<style scoped></style>

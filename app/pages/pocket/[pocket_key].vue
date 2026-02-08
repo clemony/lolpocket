@@ -35,12 +35,15 @@ const selectedSet = computed(() => {
 <template>
   <NuxtLayout
     v-if="pocket && route.name !== 'pocket-core'"
-    class="bg-b1 z-auto grid min-h-screen w-4/5 justify-self-center px-14"
+    class="z-auto grid min-h-screen w-4/5 justify-self-center bg-p0 px-14"
     name="tab"
-    :pocket
-  >
-    <NuxtPage v-if="pocket" :pocket="pocket" />
+    :pocket>
+    <NuxtPage
+      v-if="pocket"
+      :pocket="pocket" />
   </NuxtLayout>
 
-  <NuxtPage v-else :pocket="pocket" />
+  <NuxtPage
+    v-else
+    :pocket="pocket" />
 </template>

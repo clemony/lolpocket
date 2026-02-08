@@ -60,18 +60,16 @@ const variants = {
           props.orientation === 'vertical' ? 'top-0! left-1 w-full' : 'py-0.5',
           props.class,
         )
-      "
-    >
+      ">
       <motion.div
         :class="
           cn(
-            'text-bc size-full min-w-0! shadow-sm',
+            'size-full min-w-0! text-pc shadow-sm',
 
-            'fx-0 rounded-lg',
+            'rounded-lg fx-0',
             indicatorClass,
           )
-        "
-      />
+        " />
     </motion.div>
   </TabsIndicator>
 </template>

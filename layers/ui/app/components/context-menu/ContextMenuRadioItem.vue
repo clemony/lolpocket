@@ -24,11 +24,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'focus:textneutral-bc focus:bg-b2 relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-sm outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        'focus:textneutral-bc relative flex cursor-default items-center gap-3 rounded-sm px-2 py-1.5 text-sm outline-none select-none focus:bg-p2 data-disabled:pointer-events-none data-disabled:opacity-50',
         props.class,
       )
-    "
-  >
+    ">
     <span class="left-2 flex size-4.5 items-center justify-center">
       <ContextMenuItemIndicator>
         <icon name="dot" />

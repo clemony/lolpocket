@@ -12,13 +12,11 @@ const { class: className, stats } = defineProps<{
         'inline align-middle text-sm leading-0 font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight',
         className,
       )
-    "
-  >
+    ">
     {{ stats.kills }}
     /
     <span
-      class="light:text-shade-domination/30 dark:text-tint-domination/20 dark:saturate-150"
-    >
+      class="dark:text-tint-domination/20 dark:saturate-150 light:text-shade-domination/30">
       {{ stats.deaths }}
     </span>
     /

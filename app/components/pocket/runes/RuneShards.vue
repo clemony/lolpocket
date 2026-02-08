@@ -22,8 +22,7 @@ const set = computed(() => s)
           }"
           :for="tier.label"
           as="label"
-          label
-        >
+          label>
           <input
             v-model="set.shards[tier.tier]"
             class="peer hidden"
@@ -31,12 +30,9 @@ const set = computed(() => s)
             :value="shard.id"
             :aria-label="shard.name"
             :name="tier.label"
-            @change="console.log(set)"
-          >
+            @change="console.log(set)" />
         </Shard>
       </template>
     </div>
   </div>
 </template>
-
-<style scoped></style>

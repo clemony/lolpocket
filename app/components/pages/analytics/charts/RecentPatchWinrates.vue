@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const userMatchData = []
 
-// @todo usermatchdata
+// todo usermatchdata
 
 const patchStats = computed(() => {
   const patchMap = new Map<
@@ -34,6 +34,7 @@ const patchStats = computed(() => {
 })
 
 const data = computed(() => ({
+  labels: patchStats.value.map(p => p.patch),
   datasets: [
     {
       data: patchStats.value.map(p => p.winrate ?? 0),
@@ -42,7 +43,6 @@ const data = computed(() => ({
       data: patchStats.value.map(p => p.games ?? 0),
     },
   ],
-  labels: patchStats.value.map(p => p.patch),
 }))
 
 const options = {
@@ -85,11 +85,11 @@ const options = {
       grid: {
         display: false,
       },
+      max: 100,
+      min: 0,
       border: {
         display: false,
       },
-      max: 100,
-      min: 0,
       ticks: {
         display: false,
       },
@@ -106,9 +106,8 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats relative h-62 w-full rounded-box border border-b3 bg-b1 px-5 shadow-warm-soft"
-  >
-    <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
+    class="stats relative h-62 w-full rounded-box border border-p3 bg-p0 px-5 shadow-warm-soft">
+    <div class="pointer-events-none absolute top-6 left-6 z-0 text-pc">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>
@@ -122,7 +121,9 @@ const range = computed(() => {
       </div>
     </div>
 
-    <LineChart :data="data" :options="options" />
+    <LineChart
+      :data="data"
+      :options="options" />
 
     <NoDataOverlay v-if="!userMatchData.length" />
   </div>

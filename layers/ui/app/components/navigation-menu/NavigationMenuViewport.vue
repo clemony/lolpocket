@@ -36,8 +36,7 @@ const variants = {
         v-bind="forwarded"
         ref="target"
         :align="props.align"
-        as-child
-      >
+        as-child>
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -49,11 +48,10 @@ const variants = {
           }"
           :class="
             cn(
-              'border-b4/70 bg-b1/92 text-bc relative grid items-center justify-center overflow-hidden rounded-xl border bg-blend-screen shadow-lg shadow-black/10 backdrop-blur-md',
+              'border-b4/70 relative grid items-center justify-center overflow-hidden rounded-xl border bg-p0/92 text-pc bg-blend-screen shadow-lg shadow-black/10 backdrop-blur-md',
               props.class,
             )
-          "
-        >
+          ">
           <slot />
         </motion.div>
       </NavigationMenuViewport>

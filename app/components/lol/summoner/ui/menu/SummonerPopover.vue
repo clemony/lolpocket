@@ -9,8 +9,12 @@ const isOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <LazyPopoverContent class="px-3 py-2" align="start">
-    <PopoverArrow class="*:last:fill-b1" variant="base" />
+  <LazyPopoverContent
+    class="px-3 py-2"
+    align="start">
+    <PopoverArrow
+      class="*:last:fill-p0"
+      variant="base" />
     <!--
       :summoner="state.summoner.value" -->
     hi wtf
@@ -23,7 +27,7 @@ const isOpen = shallowRef<boolean>(false)
       class=" [&_h1]:!text-3xl group/b pl-1 *:justify-between *:not-first:py-1.5 ">
       <icon
         name="arrow-ne"
-        class="text-bc/50 group-hover/b:text-bc -translate-y-px translate-x-1" />
+        class="text-pc/50 group-hover/b:text-pc -translate-y-px translate-x-1" />
     </SummonerCardSmall> -->
     <Separator class="-mx-3 my-2 justify-self-center" />
     <!--     <SummonerToolbar

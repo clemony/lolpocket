@@ -42,8 +42,7 @@ function handleInputGroupAddonClick(e: MouseEvent) {
         props.class,
       )
     "
-    @click="handleInputGroupAddonClick"
-  >
+    @click="handleInputGroupAddonClick">
     <slot />
   </Primitive>
 </template>

@@ -5,7 +5,7 @@
     <!--  <button
       v-if="!ui().sidebarExpanded"
       v-tippy="!ui().sidebarExpanded ? `Search ${getDeviceKey()} K` : null"
-      class="btn absolute !h-10 !w-9 border-b3 hover:ring-neutral/50 flex pointer-events-none cursor-pointer items-center btn-square opacity-0 h-0 !py-0 btn-neutral !bg-neutral/85 hover:ring-1 group inset-shadow-xs"
+      class="btn absolute !h-10 !w-9 border-p3 hover:ring-neutral/50 flex pointer-events-none cursor-pointer items-center btn-square opacity-0 h-0 !py-0 btn-neutral !bg-neutral/85 hover:ring-1 group inset-shadow-xs"
       :class="{ '!pointer-events-auto top-18 left-3.75': !ui().sidebarExpanded }"
       :animate="{
         opacity: [0, 1],

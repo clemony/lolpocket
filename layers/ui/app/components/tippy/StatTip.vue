@@ -9,20 +9,20 @@ const pClass = 'justify-between w-full flex items-center gap-10'
 
 <template>
   <div
-    class="field-box border-b3 bg-b1/80 w-54 border px-3.5 pt-4 pb-2 bg-blend-screen drop-shadow-none"
-  >
+    class="field-box w-54 border border-p3 bg-p0/80 px-3.5 pt-4 pb-2 bg-blend-screen drop-shadow-none">
     <div
-      class="field-legend dst -ml-2 flex items-center gap-1! text-sm text-shadow-sm"
-    >
-      <Icon v-if="stat.icon" class="size-3.5!" :name="stat.icon" />
+      class="field-legend -ml-2 flex items-center gap-1! text-sm dst text-shadow-sm">
+      <Icon
+        v-if="stat.icon"
+        class="size-3.5!"
+        :name="stat.icon" />
       {{ stat.name }}
     </div>
 
     <div class="">
       <p
         v-if="stat.description"
-        class="inline-block py-3 text-sm text-wrap whitespace-normal"
-      >
+        class="inline-block py-3 text-sm text-wrap whitespace-normal">
         {{ stat.description }}
       </p>
       <template v-if="!stat.values?.max">

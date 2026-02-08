@@ -12,13 +12,11 @@ const route = useRoute()
   <BtnLink
     v-if="to && to"
     :disabled="route?.path.match(to.path)"
-    :to="{ name: to?.name }"
-  >
+    :to="{ name: to?.name }">
     <slot>
       <Icon
         :name="String(to.meta?.icon)"
-        :class="cn('size-5.5', to?.meta?.navClass)"
-      />
+        :class="cn('size-5.5', to?.meta?.navClass)" />
       <span>{{ to.meta?.title || to.name }}</span>
     </slot>
   </BtnLink>

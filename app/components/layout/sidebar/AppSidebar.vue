@@ -39,8 +39,7 @@ const variants = {
   <div
     id="sidebar"
     ref="sidebar"
-    class="fixed inset-y-0 left-0 z-40 h-screen w-px"
-  >
+    class="fixed inset-y-0 left-0 z-40 h-screen w-px">
     <motion.div
       class="absolute inset-y-0 left-0 z-50 h-screen max-h-screen w-100 self-center"
       :variants="variants"
@@ -50,19 +49,17 @@ const variants = {
         duration: 0.3,
         type: 'spring',
         bounce: 0.2,
-      }"
-    >
+      }">
       <motion.div
         :class="
           cn(
-            'border-b3 bg-b1/80 grid size-full auto-rows-max grid-cols-1 items-center justify-start gap-y-3 overflow-hidden border px-2.75 pt-17 pb-3 backdrop-blur-md',
+            'grid size-full auto-rows-max grid-cols-1 items-center justify-start gap-y-3 overflow-hidden border border-p3 bg-p0/80 px-2.75 pt-17 pb-3 backdrop-blur-md',
           )
-        "
-      >
+        ">
         <!--  <div
         class="
           flex h-screen w-full flex-col items-center gap-y-3 border-r
-          border-r-b3/80 pt-3
+          border-r-p3/80 pt-3
         ">
       <BtnLink
           v-for="pocket in ps().pockets.filter((p) =>
@@ -84,11 +81,10 @@ const variants = {
         <SearchBox
           variant="outline"
           :class="
-            cn('fx-0 justify-between *:first:gap-3', {
+            cn('justify-between fx-0 *:first:gap-3', {
               'max-w-11! [&_svg]:size-5.5 [&_svg]:opacity-100': !open,
             })
-          "
-        />
+          " />
 
         <BtnLink
           :class="
@@ -97,9 +93,10 @@ const variants = {
             })
           "
           :to="{ name: 'nexus' }"
-          @click="close()"
-        >
-          <icon class="size-6 **:stroke-[1.5]" name="nexus" />
+          @click="close()">
+          <icon
+            class="size-6 **:stroke-[1.5]"
+            name="nexus" />
           Nexus
         </BtnLink>
 
@@ -112,14 +109,12 @@ const variants = {
             })
           "
           :to="{ path: `/summoner/${as().account.puuid}` }"
-          @click="close()"
-        >
+          @click="close()">
           <icon name="history" />
           Summoner Profile
         </BtnLink>
         <div
-          class="scrollbar-hidden pointer-events-auto relative flex size-full flex-col overflow-hidden pt-3"
-        >
+          class="pointer-events-auto relative scrollbar-hidden flex size-full flex-col overflow-hidden pt-3">
           <!-- summoner linkies -->
 
           <LazyNavPanel />
@@ -137,8 +132,7 @@ const variants = {
           :interactive="true"
           :tag="null"
           trigger="click focus"
-          theme="base clean sidebar-dropdown"
-        >
+          theme="base clean sidebar-dropdown">
           <Button
             variant="ghost"
             hover="outline"
@@ -146,23 +140,22 @@ const variants = {
             on="btn"
             :class="
               cn(
-                'aria-expanded:btn-active aria-expanded:border-b3 aria-expanded:bg-b2/60! absolute inset-x-0 bottom-0 h-16 w-full justify-between border-transparent px-4 backdrop-blur-sm aria-expanded:shadow-sm aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4',
+                'absolute inset-x-0 bottom-0 h-16 w-full justify-between border-transparent px-4 backdrop-blur-sm aria-expanded:btn-active aria-expanded:border-p3 aria-expanded:bg-p2/60! aria-expanded:shadow-sm aria-expanded:inset-shadow-sm aria-expanded:inset-shadow-black/4',
                 { 'px-3': !open },
               )
-            "
-          >
+            ">
             <div class="flex items-center gap-3">
               <SummonerIcon class="size-11 rounded-lg" />
               <SummonerName
-                class="text-bc/90 dst truncate pl-1 leading-none font-semibold"
-                as="h3"
-              />
+                class="truncate pl-1 leading-none font-semibold text-pc/90 dst"
+                as="h3" />
               <SummonerTag
-                class="pl-1 align-bottom leading-none italic [&_svg]:pt-px"
-              />
+                class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
             </div>
 
-            <icon class="size-4" name="up-down" />
+            <icon
+              class="size-4"
+              name="up-down" />
           </Button>
           <template #content>
             <SidebarUser v-if="as().user" />

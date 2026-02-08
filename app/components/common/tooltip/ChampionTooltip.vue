@@ -34,26 +34,27 @@ function close() {
 
 <template>
   <OnClickOutside
-    v-if="item" class="flex w-full flex-col justify-self-center  " @trigger="close()"
-  >
-    <div class="flex h-fit w-full gap-4  ">
+    v-if="item"
+    class="flex w-full flex-col justify-self-center"
+    @trigger="close()">
+    <div class="flex h-fit w-full gap-4">
       <!-- IMG -->
 
-      <ChampionIcon
+      <Champion
         v-if="item"
         :id="item.id"
         class="size-13"
-        :alt="`${item.name} Image`"
-      />
+        :alt="`${item.name} Image`" />
 
-      <div class="flex w-full flex-col ">
+      <div class="flex w-full flex-col">
         <div
           class="flex w-full items-center justify-between gap-1"
-          :style="{ '--position-color': position?.color }"
-        >
+          :style="{ '--position-color': position?.color }">
           <!-- NAME / LINK -->
-          <a v-if="item.name" :href="`/champions/${item.key}`">
-            <h2 class="leading-4 text-xl font-semibold">
+          <a
+            v-if="item.name"
+            :href="`/champions/${item.key}`">
+            <h2 class="text-xl leading-4 font-semibold">
               {{ item.name }}
             </h2>
           </a>
@@ -72,16 +73,20 @@ function close() {
           </a> -->
         </div>
 
-        <span class="grow text-sm font-normal  italic">
+        <span class="grow text-sm font-normal italic">
           {{ championToTitle[item?.key] }}
         </span>
       </div>
     </div>
 
-    <div class="relative grid w-full auto-rows-auto overflow-y-auto  pb-2">
+    <div class="relative grid w-full auto-rows-auto overflow-y-auto pb-2">
       <!-- component OF -->
 
-      <Separator :size="4" label="ABILITIES" placement="end" color="neutral" />
+      <Separator
+        :size="4"
+        label="ABILITIES"
+        placement="end"
+        color="neutral" />
     </div>
   </OnClickOutside>
 </template>

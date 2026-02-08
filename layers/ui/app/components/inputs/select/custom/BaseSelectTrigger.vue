@@ -21,23 +21,20 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'group/select ring-offset-b1 data-[placeholder]:text-b2-bc focus:ring-b2 relative flex h-11 w-full cursor-pointer items-center justify-between rounded-lg bg-transparent pr-8 text-start text-sm whitespace-nowrap transition-all duration-200 focus:ring-1 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate',
+        'group/select data-[placeholder]:text-p2-bc relative flex h-11 w-full cursor-pointer items-center justify-between rounded-lg bg-transparent pr-8 text-start text-sm whitespace-nowrap ring-offset-p0 transition-all duration-200 focus:ring-1 focus:ring-p2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:truncate',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
 
     <SelectIcon
       v-if="!noArrow"
       class="absolute right-3 justify-self-end"
       :class="{ hidden: props.noArrow }"
-      as-child
-    >
+      as-child>
       <icon
         name="up-down"
-        :class="cn('absolute right-0 size-4 shrink-0 opacity-50', iconClass)"
-      />
+        :class="cn('absolute right-0 size-4 shrink-0 opacity-50', iconClass)" />
     </SelectIcon>
   </SelectTrigger>
 </template>

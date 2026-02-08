@@ -10,7 +10,9 @@ const props = defineProps<{
       <slot />
     </span>
 
-    <icon class="size-3.5" name="ph:info" />
+    <icon
+      class="size-3.5"
+      name="ph:info" />
 
     <template #content>
       <b>WP</b>

@@ -12,9 +12,9 @@ const data = computed(() => {
   return {
     datasets: [
       {
-        backgroundColor: [cssVar('--color-b3'), color1.value],
-        data: [100 - winrate, winrate],
         label: 'Recent winrate in percentage',
+        backgroundColor: [cssVar('--color-p3'), color1.value],
+        data: [100 - winrate, winrate],
       },
     ],
     labels: ['Loss', 'Win'],
@@ -27,6 +27,5 @@ const data = computed(() => {
     class="size-24"
     :data
     gauge
-    aria-label="Recent winrate in percentage"
-  />
+    aria-label="Recent winrate in percentage" />
 </template>

@@ -17,8 +17,7 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
 <template>
   <div
     class="border-box flex h-15 items-center px-2"
-    :class="cn('', { 'pointer-events-none opacity-50': isDisabled })"
-  >
+    :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
     <div class="flex items-center gap-2">
       <!-- pin -->
       <Label
@@ -27,20 +26,24 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-b2/30': pinned,
+            'bg-p2/30': pinned,
           })
-        "
-      >
+        ">
         <input
           v-if="pocket && pocket?.key"
           v-model="ps().pinned"
           class="peer hidden"
           :value="pocket.key"
-          type="checkbox"
-        >
-        <icon v-if="!pinned" class="size-4.75 **:stroke-2" name="pin" />
+          type="checkbox">
+        <icon
+          v-if="!pinned"
+          class="size-4.75 **:stroke-2"
+          name="pin" />
 
-        <icon v-else class="size-4.75 **:stroke-2" name="unpin" />
+        <icon
+          v-else
+          class="size-4.75 **:stroke-2"
+          name="unpin" />
       </Label>
 
       <!-- archive -->
@@ -50,17 +53,15 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="ps().archive.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-b2/30': pinned,
+            'bg-p2/30': pinned,
           })
-        "
-      >
+        ">
         <input
           v-if="pocket && pocket?.key"
           v-model="ps().pinned"
           class="peer hidden"
           :value="pocket.key"
-          type="checkbox"
-        >
+          type="checkbox">
         <icon name="archive" />
       </Label>
 
@@ -71,14 +72,15 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         :variant="ps().trash.includes(pocket?.key) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-b2/30': pinned,
+            'bg-p2/30': pinned,
           })
-        "
-      >
+        ">
         <icon name="trash" />
       </Button>
 
-      <Separator class="mx-1 h-6" orientation="vertical" />
+      <Separator
+        class="mx-1 h-6"
+        orientation="vertical" />
 
       <!-- tags -->
 
@@ -88,15 +90,17 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         v-if="pocket && pocket?.key"
         class="size-11"
         :to="`/pocket/${pocket.key}`"
-        variant="ghost"
-      >
+        variant="ghost">
         <icon name="edit-line" />
       </BtnLink>
     </div>
 
     <div class="ml-auto flex items-center gap-2">
       <!-- share -->
-      <Button v-tippy="'Share'" class="size-11" variant="ghost">
+      <Button
+        v-tippy="'Share'"
+        class="size-11"
+        variant="ghost">
         <icon name="send" />
       </Button>
 
@@ -105,16 +109,19 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
         v-tippy="'Export to LoL'"
         class="size-11"
         :disabled="!as().account.puuid"
-        variant="ghost"
-      >
+        variant="ghost">
         <icon name="export" />
       </Button>
     </div>
-    <Separator class="mx-2 h-6" orientation="vertical" />
+    <Separator
+      class="mx-2 h-6"
+      orientation="vertical" />
 
     <!-- more -->
     <UDropdownMenu>
-      <UButton class="size-11" color="neutral">
+      <UButton
+        class="size-11"
+        color="neutral">
         <icon name="more-vertical" />
       </UButton>
       <!-- <DropdownMenuContent class="w-64" align="end">

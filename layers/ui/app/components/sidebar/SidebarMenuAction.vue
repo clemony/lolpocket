@@ -21,7 +21,7 @@ const props = withDefaults(
     data-sidebar="menu-action"
     :class="
       cn(
-        'hover:text-sidebar-bc hover:bg-b3 peer-hover/menu-button:text-sidebar-bc text-bc ring-bc/60 absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 ring outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
+        'hover:text-sidebar-bc peer-hover/menu-button:text-sidebar-bc absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-pc ring ring-pc/60 outline-hidden transition-transform hover:bg-p3 focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
         `after:absolute after:-inset-2 md:after:hidden`,
         'peer-data-[size=sm]/menu-button:top-1',
         'peer-data-[size=default]/menu-button:top-1.5',
@@ -33,8 +33,7 @@ const props = withDefaults(
       )
     "
     :as="as"
-    :as-child="asChild"
-  >
+    :as-child="asChild">
     <slot />
   </Primitive>
 </template>

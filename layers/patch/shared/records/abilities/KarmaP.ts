@@ -1,18 +1,18 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Gathering Fire",
-  "affects": "Self",
-  "blurb": "Innate:  Mantra's current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma's damaging abilities.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Gathering Fire',
+  affects: 'Self',
+  blurb: 'Innate:  Mantra\'s current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma\'s damaging abilities.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/p',
+  notes: 'Inner Flame /  Soulflare reduces  Mantra\'s cooldown per champion hit by either damage instance (up to a maximum total reduction of 40 seconds if 5 enemy champions are hit by both instances of damage).\n Focused Resolve /  Renewal reduces  Mantra\'s cooldown when initially cast and again after the duration for the tether has expired (for a total reduction of 8 seconds).',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Mantra's current cooldown is reduced by 4 seconds for each enemy champion hit by Karma's damaging abilities.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Mantra\'s current cooldown is reduced by 4 seconds for each enemy champion hit by Karma\'s damaging abilities.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/p",
-  "notes": "Inner Flame /  Soulflare reduces  Mantra's cooldown per champion hit by either damage instance (up to a maximum total reduction of 40 seconds if 5 enemy champions are hit by both instances of damage).\n Focused Resolve /  Renewal reduces  Mantra's cooldown when initially cast and again after the duration for the tether has expired (for a total reduction of 8 seconds).",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

@@ -26,15 +26,15 @@ const open = shallowRef<boolean>(true)
 <template>
   <UPage
     :ui="{
-      root: 'relative z-auto w-full pl-23 flex flex-row pt-8 pb-44',
+      root: 'relative z-auto w-full pl-23 flex flex-row pt-8 mb-44',
       left: 'lg:col-span-3',
-      right: 'hidden',
-      center: 'lg:col-span-7 lg:col-start-4',
+      right: 'hidden ',
+      center: 'lg:col-span-7 lg:col-start-4  ',
     } ">
     <template #left>
       <UPageAside
         :ui="{
-          root: 'scrollbar-hidden z-auto ',
+          root: 'scrollbar-hidden z-auto inset-y-0 top-0 bottom-0',
           container: 'flex w-full origin-right flex-col items-center gap-y-6',
         }"
         group

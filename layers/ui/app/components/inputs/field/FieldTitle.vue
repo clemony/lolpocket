@@ -14,8 +14,7 @@ const props = defineProps<{
         'flex w-fit items-center gap-2 text-lg/snug font-semibold group-data-[disabled=true]/field:opacity-50',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

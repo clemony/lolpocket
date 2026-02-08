@@ -68,8 +68,8 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
 
           keystone: r.keystone,
           primaryPath,
-          primaryRunes: [...r.primary.runes],
           secondaryPath,
+          primaryRunes: [...r.primary.runes],
           secondaryRunes: [...r.secondary.runes],
           shards: [...r.shards],
         }

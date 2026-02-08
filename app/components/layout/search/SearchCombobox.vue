@@ -16,14 +16,15 @@ const query = ref('')
         class="input"
         :class="
           cn(
-            'group focus-within:ring-offset-b2 relative flex size-full w-full items-center py-0 focus-within:border-transparent! focus-within:ring-offset-1 focus:border-transparent! has-[&_input]:placeholder-shown:*:last:opacity-0',
+            'group relative flex size-full w-full items-center py-0 focus-within:border-transparent! focus-within:ring-offset-1 focus-within:ring-offset-p2 focus:border-transparent! has-[&_input]:placeholder-shown:*:last:opacity-0',
             className,
           )
-        "
-      >
+        ">
         <slot />
       </ComboboxTrigger>
     </ComboboxAnchor>
-    <LazySearchContent class="w-(--reka-combobox-trigger-width)" :query />
+    <LazySearchContent
+      class="w-(--reka-combobox-trigger-width)"
+      :query />
   </Combobox>
 </template>

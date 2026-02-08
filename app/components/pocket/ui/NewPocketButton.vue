@@ -11,9 +11,12 @@
     }"
     class="relative h-8 w-10 gap-0! rounded-md pl-1 font-normal"
     variant="ghost"
-    hover="outline"
-  >
-    <icon class="size-3 **:stroke-[1.9]" name="add" />
-    <icon class="size-3.75 **:stroke-[1.8]" name="folder" />
+    hover="outline">
+    <icon
+      class="size-3 **:stroke-[1.9]"
+      name="add" />
+    <icon
+      class="size-3.75 **:stroke-[1.8]"
+      name="folder" />
   </Button>
 </template>

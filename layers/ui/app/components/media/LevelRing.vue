@@ -12,12 +12,10 @@ const props = defineProps<{
       :animate="{ opacity: 1 }"
       :exit="{ opacity: 0 }"
       :transition="{ duration: 0.1 }"
-      :class="cn('size-full object-cover', props.class)"
-    >
+      :class="cn('size-full object-cover', props.class)">
       <video-background
         class="aspect-square size-full object-cover"
-        src="/video/level-ring.webm"
-      />
+        src="/video/level-ring.webm" />
     </motion.div>
   </AnimatePresence>
 </template>

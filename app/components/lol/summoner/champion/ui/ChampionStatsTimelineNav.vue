@@ -1,22 +1,18 @@
 <script lang="ts" setup>
-import type { ShallowRef } from 'vue'
-import { useRouteHash } from '@vueuse/router'
-import { summonerSections } from '~/components/lol/summoner/champion/summonerSections'
+import { useRouteHash } from "@vueuse/router"
+import type { ShallowRef } from "vue"
+import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
 
 const section = useRouteHash()
 const { activeId, activeIndex } = useScrollSectionsInject()
 watch(
   () => activeIndex.value,
   (v) => {
-    console.log('💠 - watch - newVal:', v)
+    console.log("💠 - watch - newVal:", v)
   }
 )
 
-const map = computedOnce(() => {
-  return summonerSections.map(s => s.id)
-}).value
-console.log('🥸 - map:', map)
-const next = computed(() => {
+/* const next = computed(() => {
   if (activeIndex.value === map.length - 1) return `#${map[0]}`
   return `#${map[activeIndex.value + 1]}`
 })
@@ -24,7 +20,7 @@ const next = computed(() => {
 const prev = computed(() => {
   if (activeIndex.value === 0) return `#${map[map.length - 1]}`
   return `#${map[activeIndex.value - 1]}`
-})
+}) */
 </script>
 
 <template>
@@ -35,14 +31,14 @@ const prev = computed(() => {
       progress
       :current="progressOverall" /> -->
 
-    <button
+    <!--   <button
       v-for="(item, i) in summonerSections"
       :key="i"
       as="a"
       :class="
         cn(
-          'flex items-center hover:underline justify-start px-0 text-bc/50 duration-0 hover:text-bc',
-          { 'text-bc': item.id === activeId },
+          'flex items-center hover:underline justify-start px-0 text-pc/50 duration-0 hover:text-pc',
+          { 'text-pc': item.id === activeId },
         )
       "
       size="12"
@@ -66,6 +62,6 @@ const prev = computed(() => {
       >
         {{ item.name }}
       </span>
-    </button>
+    </button> -->
   </menu>
 </template>

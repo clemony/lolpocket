@@ -16,6 +16,5 @@ const alias = computed(() => (!name.match(':') ? `lucide:${name}` : name))
         { 'scale-96! **:stroke-[1.3]': name.match(/teenyicons/) },
         className,
       )
-    "
-  />
+    " />
 </template>

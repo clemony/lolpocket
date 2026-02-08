@@ -22,18 +22,17 @@ const hasOneRune = computed (() => {
 <template>
   <div class="relative size-22">
     <div
-      class="shadow-outline from-b1/90 to-b1/40 ring-b2 relative z-0 mt-1.5 grid aspect-square size-20 place-items-center overflow-visible rounded-full bg-linear-to-br ring-1 shadow-black/15 backdrop-blur-md"
-    >
+      class="shadow-outline relative z-0 mt-1.5 grid aspect-square size-20 place-items-center overflow-visible rounded-full bg-linear-to-br from-p0/90 to-p0/40 ring-1 shadow-black/15 ring-p2 backdrop-blur-md">
       <!--  <img v-if="primary.runes[0]" :src="`/img/runes/${primary.path}/${primary.runes[0].name.replace(/\s/g, '')}.webp`" class="object-contain h-16 drop-shadow-sm opacity-98" />
  -->
       <!-- no keystone -->
 
-      <!-- <i-rune-icon v-else class="size-10 text-bc/60 dst" /> -->
+      <!-- <i-rune-icon v-else class="size-10 text-pc/60 dst" /> -->
     </div>
 
     <!-- secondary -->
-    <!--   <div v-if="secondary.path && hasOneRune.length" class="shadow-outline shadow-black/15 absolute -right-4 -bottom-1  grid aspect-square size-10 place-items-center  rounded-full  transition-all duration-500 bg-gradient-to-br from-b2 to-b3 ring-1 ring-b2">
-      <div class="from-b1/90 to-b1/40 grid size-full place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
+    <!--   <div v-if="secondary.path && hasOneRune.length" class="shadow-outline shadow-black/15 absolute -right-4 -bottom-1  grid aspect-square size-10 place-items-center  rounded-full  transition-all duration-500 bg-gradient-to-br from-p2 to-p3 ring-1 ring-p2">
+      <div class="from-p0/90 to-p0/40 grid size-full place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
         <img :src="`/img/runes/${secondary.path}.webp`" class=" shrink-0 h-6.5 w-auto object-contain transition-all duration-200 dst" />
       </div>
     </div> -->

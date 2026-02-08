@@ -16,39 +16,44 @@ const setClass = ' gap-5 '
 </script>
 
 <template>
-  <ChampStatRow v-if="page" simple>
-    <ChampStatLabel title="Runes" :stat="page" />
-    <ChampStatRowWrapper v-if="runes?.best" simple :class="setClass">
+  <ChampStatRow
+    v-if="page"
+    simple>
+    <ChampStatLabel
+      title="Runes"
+      :stat="page" />
+    <ChampStatRowWrapper
+      v-if="runes?.best"
+      simple
+      :class="setClass">
       <Keystone
         :id="page.keystone"
         class="size-18 contrast-105"
-        :data-text="bestTip"
-      />
+        :data-text="bestTip" />
 
       <Rune
         v-for="rune in page.primaryRunes"
         :id="rune"
         :key="rune"
         class="size-14"
-        :data-text="bestTip"
-      />
+        :data-text="bestTip" />
 
       <Rune
         v-for="rune in page.secondaryRunes"
         :id="rune"
         :key="rune"
         class="size-14"
-        :data-text="bestTip"
-      />
+        :data-text="bestTip" />
 
       <Shard
         v-for="shard in page.shards"
         :id="shard"
         :key="shard"
         size="c-12"
-        variant="neutral"
-      />
+        variant="neutral" />
     </ChampStatRowWrapper>
-    <NoItemData v-else simple />
+    <NoItemData
+      v-else
+      simple />
   </ChampStatRow>
 </template>

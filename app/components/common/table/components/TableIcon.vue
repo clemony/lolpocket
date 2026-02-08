@@ -7,5 +7,3 @@ const props = defineProps<{
 <template>
   <div class="grid size-full place-items-center" />
 </template>
-
-<style scoped></style>

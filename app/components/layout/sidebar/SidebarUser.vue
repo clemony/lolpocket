@@ -28,8 +28,7 @@ const target = shallowRef<HTMLButtonElement>(null)
 
       <span
         v-if="as().inbox?.messages?.length"
-        class="absolute right-4 font-mono text-sm opacity-60"
-      >
+        class="absolute right-4 font-mono text-sm opacity-60">
         {{ as().inbox.messages.filter((m) => !m.read).length }}
       </span>
     </PopoverItem>
@@ -39,8 +38,7 @@ const target = shallowRef<HTMLButtonElement>(null)
     <PopoverItem
       v-if="as().user"
       class="h-10"
-      @click="closeAndNavigate('/settings/account')"
-    >
+      @click="closeAndNavigate('/settings/account')">
       <icon name="at" />
       Account
     </PopoverItem>
@@ -52,37 +50,33 @@ const target = shallowRef<HTMLButtonElement>(null)
       animation="shift-toward-subtle"
       :arrow="false"
       :interactive="true"
-      theme="base clean"
-    >
+      theme="base clean">
       <PopoverItem
-        class="group/t aria-expanded:btn-active aria-expanded:border-b3/60 aria-expanded:bg-b2/80 aria-expanded:fx-1 h-10 w-full"
-        @click="closeAndNavigate('/settings')"
-      >
-        <icon class="size-4.75!" name="gear" />
+        class="group/t h-10 w-full aria-expanded:btn-active aria-expanded:border-p3/60 aria-expanded:bg-p2/80 aria-expanded:fx-1"
+        @click="closeAndNavigate('/settings')">
+        <icon
+          class="size-4.75!"
+          name="gear" />
         Settings
 
         <icon
           class="absolute right-3 size-3.5 opacity-50 group-open:opacity-60 group-hover:opacity-60"
-          name="right"
-        />
+          name="right" />
       </PopoverItem>
 
       <template #content>
         <div
           class="h-fit max-h-46 -translate-x-4 translate-y-2 p-0!"
           side="right"
-          align="end"
-        >
+          align="end">
           <PopoverItem
             v-for="child in settings"
             :key="child.path"
-            class="h-10 capitalize"
-          >
+            class="h-10 capitalize">
             <icon
               :name="String(child.meta?.icon)"
               :class="cn('', child.meta?.listClass)"
-              @click="navigateTo(child.path)"
-            />
+              @click="navigateTo(child.path)" />
             {{ child.meta?.title || child.name }}
           </PopoverItem>
         </div>
@@ -91,12 +85,18 @@ const target = shallowRef<HTMLButtonElement>(null)
 
     <DropdownMenuSeparator />
     <div class="px-1">
-      <PopoverItem v-if="as().user" class="h-9">
-        <icon name="log-out" @click="useSignOut()" />
+      <PopoverItem
+        v-if="as().user"
+        class="h-9">
+        <icon
+          name="log-out"
+          @click="useSignOut()" />
         Log out
       </PopoverItem>
 
-      <PopoverItem v-else @click="navigateTo('/login')">
+      <PopoverItem
+        v-else
+        @click="navigateTo('/login')">
         <icon name="log-in" />
         Log in
       </PopoverItem>

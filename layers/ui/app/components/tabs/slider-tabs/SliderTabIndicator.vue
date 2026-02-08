@@ -27,6 +27,5 @@ const forwarded = useForwardProps(delegatedProps)
     :variant
     :class="
       cn(props.class)
-    "
-  />
+    " />
 </template>

@@ -14,8 +14,7 @@ const { class: className, simple } = defineProps<{
         { 'h-28!': simple },
         className,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

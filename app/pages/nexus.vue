@@ -1,34 +1,34 @@
 <script lang="ts" setup>
-import { heyGoodJob } from '~/domain/lp/ui/good-job'
+import { heyGoodJob } from "~/domain/lp/ui/good-job"
 
 const sizes = [20, 40, 180, 77]
 
 const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4])
 
-console.log('🥸 - findSummoner - acc():', acc().accounts)
+console.log("🥸 - findSummoner - acc():", acc().accounts)
 const headerHeight = 400
 
 const toast = useToast()
 function toasty() {
   toast.add({
-    color: 'domination',
+    color: "dom",
     title: `Created Toast!`,
     description: `There’s something strangely evocative about the smell of burnt toast. You can probably remember the last time you suddenly detected it and dashed for the grill.
 
 But did you know there’s a part of your brain specifically dedicated to smelling burnt toast?
 
 In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral seizures that worked by zapping particular nerve cells with electrical probes. One of his patients was a woman with epilepsy who smelled burnt toast whenever she was about to have a seizure. ${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}!`,
-    icon: 'x',
+    icon: "x",
   })
 }
 definePageMeta({
-  id: '8e12b21b-2f27-43b0-b7e7-77c49bbe972d',
-  title: 'Nexus',
-  abbr: 'Nx',
-  icon: 'nexus',
-  listClass: '!size-5.75 **:stroke-[1.6]',
+  id: "8e12p21b-2f27-43b0-b7e7-77c49bbe972d",
+  title: "Nexus",
+  abbr: "Nx",
+  icon: "nexus",
+  listClass: "!size-5.75 **:stroke-[1.6]",
   order: 1,
-  path: '/nexus',
+  path: "/nexus",
 })
 </script>
 
@@ -46,16 +46,12 @@ definePageMeta({
         <icon name="add" />
         toast
       </Button>
-      <Button @click="accountFetch()">
-        fetch user datasss
-      </Button>
+      <Button @click="accountFetch()"> fetch user datasss </Button>
       <Button @click="console.log('summoner:', ss().cache)">
         resolve the slug
       </Button>
 
-      <Button @click="useSignOut()">
-        sign out
-      </Button>
+      <Button @click="useSignOut()"> sign out </Button>
 
       <!--       <Button
         @click="() => {
@@ -68,7 +64,7 @@ definePageMeta({
       </Button>
     </div>
 
-    <Separator class="bg-b3/60 w-full" />
+    <Separator class="bg-p3/60 w-full" />
     <div class="w-full grid grid-cols-2">
       <div class="tabs tabs-lift-start !space-x-0 !gap-0 w-200 h-200">
         <a class="tab size-24">Advanced</a>
@@ -87,7 +83,12 @@ definePageMeta({
     <SiteFooter />
   </div> -->
     </div>
-
+    <!--
+    <UButton
+      icon="i-mingcute-loading-fill"
+      :ui="{
+        leadingIcon: 'animate-spin duration-200  repeat-infinite',
+      }" /> -->
     <ColorMode />
   </div>
 </template>

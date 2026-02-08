@@ -36,11 +36,10 @@ const h1Visibility = {
 </script>
 
 <template>
-  <div class="[&_svg]:text-bc relative grid size-full translate-y-20 gap-8">
+  <div class="relative grid size-full translate-y-20 gap-8 [&_svg]:text-pc">
     <div class="relative grid h-20 w-100 items-end">
       <motion.div
-        class="ws-nowrap relative flex size-full origin-bottom-left items-center font-bold drop-shadow-sm **:text-6xl"
-      >
+        class="ws-nowrap relative flex size-full origin-bottom-left items-center font-bold drop-shadow-sm **:text-6xl">
         <h1>l</h1>
 
         <motion.h1
@@ -51,8 +50,7 @@ const h1Visibility = {
             duration: 0.4,
             delay: 2,
             ease: 'linear',
-          }"
-        >
+          }">
           ol
         </motion.h1>
 
@@ -66,19 +64,17 @@ const h1Visibility = {
             delay: 2,
             ease: 'linear',
           }"
-          animate="animate"
-        >
+          animate="animate">
           ocket
         </motion.h1>
       </motion.div>
     </div>
 
     <motion.div
-      class="text-bc grid w-140 shrink-0 space-y-3 justify-self-start"
+      class="grid w-140 shrink-0 space-y-3 justify-self-start text-pc"
       :initial="{ opacity: 0, transform: 'translateY(10%)' }"
       :animate="{ opacity: 1, transform: 'translateY(0)' }"
-      :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }"
-    >
+      :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }">
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="text-5xl!">
           lolpocket
@@ -100,7 +96,7 @@ const h1Visibility = {
 
         <p>
           so you can focus on the
-          <span class="text-xxl mt-4 ml-1 font-bold">win.</span>
+          <span class="mt-4 ml-1 text-xxl font-bold">win.</span>
         </p>
       </div>
 

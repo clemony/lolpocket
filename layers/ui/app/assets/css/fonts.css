@@ -34,7 +34,7 @@
   }
 
   h6 {
-    @apply flex gap-3 text-bc/50;
+    @apply flex gap-3 text-pc/50;
   }
 
   h1,

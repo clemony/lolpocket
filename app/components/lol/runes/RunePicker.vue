@@ -25,20 +25,18 @@ function handleChange(slotTier: number, selectedKey: number) {
 onMounted(() => {
   currentRunes.value = set ?? [0, 0, 0]
 })
-// @todo fix
+// todo fix
 function openInfo(rune: number) {}
 </script>
 
 <template>
   <div
-    class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none"
-  >
+    class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none">
     <template v-if="runes">
       <div
         v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
         :key="i"
-        class="flex h-16 w-full cursor-pointer justify-evenly gap-3"
-      >
+        class="flex h-16 w-full cursor-pointer justify-evenly gap-3">
         v-for="rune in slot"
         :key="rune.id"
         class="rune-hover size-fit items-center justify-stretch rounded-full"
@@ -85,12 +83,13 @@ function openInfo(rune: number) {}
       </div> -->
       </div>
     </template>
-    <div v-else class="grid size-full grid-cols-3 gap-y-14">
+    <div
+      v-else
+      class="grid size-full grid-cols-3 gap-y-14">
       <Placeholder
         v-for="i in 9"
         :key="i"
-        class="size-18 place-self-center rounded-full"
-      />
+        class="size-18 place-self-center rounded-full" />
     </div>
   </div>
 </template>

@@ -22,25 +22,24 @@ const pocket = computed(() =>
             <Champion
               class="aspect-square h-auto w-full max-w-80 inset-shadow-sm inset-shadow-black/20 *:scale-[130%]"
               :k="pocket._champion"
-              type="tile"
-            />
+              type="tile" />
           </HoverCardTrigger>
           <HoverCardContent
-            class="open:animate-in open:fade-in closed:fade-out closed:animate-out h-[calc(var(--reka-hover-card-trigger-height)+3px)] w-[calc(var(--reka-hover-card-trigger-width)+3px)] -translate-x-0.75 -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] border-b3 shadow-none drop-shadow-none"
+            class="open:animate-in open:fade-in closed:fade-out closed:animate-out h-[calc(var(--reka-hover-card-trigger-height)+3px)] w-[calc(var(--reka-hover-card-trigger-width)+3px)] -translate-x-0.75 -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] border-p3 shadow-none drop-shadow-none"
             align="start"
-            side="bottom"
-          />
+            side="bottom" />
         </HoverCard>
         <ChampionAbilityTabs :k="pocket._champion" />
       </div>
 
       <div
-        class="grid-rows-max grid h-fit w-full place-items-center pt-20.5 *:w-full"
-      >
+        class="grid-rows-max grid h-fit w-full place-items-center pt-20.5 *:w-full">
         <MainRuneSelect :pocket>
           <CoreRuneTrigger :pocket />
         </MainRuneSelect>
-        <MainSpellSelect class="size-14" :pocket />
+        <MainSpellSelect
+          class="size-14"
+          :pocket />
       </div>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">

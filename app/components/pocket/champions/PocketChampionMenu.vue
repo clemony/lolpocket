@@ -15,20 +15,22 @@ const name = computed(() => champNameByKey(k))
 <template>
   <PopoverContent
     class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5"
-    align="start"
-  >
-    <PopoverItem class="hover:bg-b3/60" @click="navigateTo(`/champions/${k}`)">
+    align="start">
+    <PopoverItem
+      class="hover:bg-p3/60"
+      @click="navigateTo(`/champions/${k}`)">
       <span class="relative grid size-4.5 place-items-center">
-        <ChampionIcon class="absolute size-5.5" :k />
+        <Champion
+          class="absolute size-5.5"
+          :k />
       </span>
       {{ name }}'s profile
     </PopoverItem>
     <DropdownMenuSeparator class="mt-1.25 mb-1" />
     <PopoverItem
-      class="hover:bg-b3/60"
+      class="hover:bg-p3/60"
       for="champion-add-or-remove-from-pocket"
-      as="label"
-    >
+      as="label">
       <icon :name="pocket.champions.includes(k) ? 'minus' : 'add'" />
       <input
         v-model="pocket.champions"
@@ -36,33 +38,29 @@ const name = computed(() => champNameByKey(k))
         :aria-label="name"
         type="checkbox"
         name="champion-add-or-remove-from-pocket"
-        :value="k"
-      >
+        :value="k">
       <span class="peer-checked:hidden">Add to pocket</span>
       <span class="peer-not-checked:hidden">Remove from pocket</span>
     </PopoverItem>
 
     <PopoverItem
       as="label"
-      :class="cn('disabled hover:bg-b3/60 has-disabled:opacity-100')"
-      @click="pocket._champion = k"
-    >
+      :class="cn('disabled hover:bg-p3/60 has-disabled:opacity-100')"
+      @click="pocket._champion = k">
       <icon
         name="star"
         :class="
-          cn('dst ml-px size-4! **:stroke-[2.8]', {
+          cn('ml-px size-4! dst **:stroke-[2.8]', {
             'fill-precision': pocket._champion === k,
           })
-        "
-      />
+        " />
       <input
         v-model="pocket.champions"
         class="peer hidden"
         :disabled="pocket.champions.includes(k)"
         :aria-label="name"
         type="checkbox"
-        :value="k"
-      >
+        :value="k">
       {{ pocket._champion === k ? "Main champion" : "Set main champion" }}
     </PopoverItem>
   </PopoverContent>

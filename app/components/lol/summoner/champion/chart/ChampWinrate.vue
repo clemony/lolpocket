@@ -1,35 +1,70 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  champion: ChampionStats
+const {
+  hideZero,
+  ally,
+  champion,
+  class: className,
+  entry,
+} = defineProps<{
+  champion?: ChampionStats
+  ally?: AllyStatDetail
+  entry?: RankedEntry
+  class?: HTMLAttributes["class"]
+  hideZero?: boolean
 }>()
 
-const a = computed(() => {
-  return (props.champion.wins / props.champion.games) * 100
-})
-
-const data = computed (() => {
+const obj = computed(() => ({
+  games: champion?.games || ally?.games,
+  win: champion?.wins || ally?.win,
+  wr:
+    champion ? (champion?.wins / champion?.games) * 100
+    : entry ? (entry.wins / (entry.wins + entry.losses)) * 100
+    : ally ? (ally?.win / ally?.games) * 100
+    : null,
+}))
+const data = computed(() => {
   return {
-    datasets: [{
-      backgroundColor: [cssVar(`--color-${a.value >= 51 ? 'win' : a.value <= 49 ? 'domination' : 'silver'}`), cssVar('--color-b3')],
-      data: [props.champion.wins, props.champion.games]
-    }],
-    labels: ['win', 'loss'],
+    datasets: [
+      {
+        backgroundColor: [
+          entry ?
+            cssVar(`--color-${entry?.tier ?? "p3"}`)
+          : cssVar(
+              `--color-${
+                obj.value.wr >= 51 ? "win"
+                : obj.value.wr <= 49 ? "domination"
+                : "silver"
+              }`
+            ),
+          cssVar("--color-p3"),
+        ],
+        data: [obj.value.win, obj.value.games],
+      },
+    ],
+    labels: ["win", "loss"],
   }
 })
 </script>
 
 <template>
-  <div class="relative grid  size-12  shrink-0 place-items-center rounded-lg">
-    <DonutSkeleton v-if="!champion" class="absolute size-full" />
-    <div class="size-11">
-      <Donut
-        overlap
-        cutout="82%"
-        :data
-      />
+  <div
+    :class="
+      cn(
+        'relative grid size-12 shrink-0 place-items-center rounded-lg',
+        className
+      )
+    ">
+    <DonutSkeleton v-if="!champion || !obj.wr" class="absolute size-full" />
+    <div class="size-[94%]">
+      <Donut overlap cutout="82%" :data />
     </div>
-    <span class="text-xxs! text-bc dst absolute font-medium">
-      {{ a.toFixed(1).replace(".0", "") }}
+    <span
+      :class="
+        cn('absolute text-2xs! font-medium text-pc dst', {
+          'opacity-0': hideZero && (!obj.wr || obj.wr === 0),
+        })
+      ">
+      {{ obj.wr ? obj.wr.toFixed(1).replace(".0", "") : 0 }}
     </span>
   </div>
 </template>

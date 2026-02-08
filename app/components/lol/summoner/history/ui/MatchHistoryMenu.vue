@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(['open'])
+const emit = defineEmits(["open"])
+
+const store = useMatchFilters()
 
 const open = shallowRef<boolean>(true)
-const asideRef = useTemplateRef<HTMLElement>('asideRef')
+const asideRef = useTemplateRef<HTMLElement>("asideRef")
 </script>
 
 <template>
@@ -14,32 +16,29 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
     ref="asideRef"
     :class="
       cn(
-        'z-2 flex h-20 w-full max-w-110 flex-nowrap items-center gap-3 overflow-hidden bg-b1/94 px-1 backdrop-blur-md transition-all duration-300',
+        'z-2 flex h-20 w-full max-w-110 flex-nowrap items-center gap-3 overflow-hidden bg-p0/94 px-1 backdrop-blur-md transition-all duration-300'
       )
-    "
-  >
+    ">
     <Toggle
       v-model:model-value="open"
-      class="bg-transparent! fx-0 on:bg-transparent! hover:fx-1"
+      class="bg-transparent! fx-0 hover:fx-1 on:bg-transparent!"
       on="inset"
       hover="inset"
       square
       size="lg"
       variant="ghost"
-      @update:model-value="emit('open', open)"
-    >
+      @update:model-value="emit('open', open)">
       <Icon class="" :name="open ? 'left-to-line' : 'right-to-line'" />
     </Toggle>
 
     <UPopover>
       <Button
-        class="bg-transparent! fx-0 aria-expanded:btn-active on:bg-transparent! hover:fx-1"
+        class="bg-transparent! fx-0 hover:fx-1 aria-expanded:btn-active on:bg-transparent!"
         variant="ghost"
         on="inset"
         hover="inset"
         square
-        size="lg"
-      >
+        size="lg">
         <Icon class="" name="ic:baseline-menu" />
       </Button>
       <template #content>
@@ -49,21 +48,18 @@ const asideRef = useTemplateRef<HTMLElement>('asideRef')
 
     <Tooltip
       class="size-fit"
-      :text="s_matches().filterEmpty() ? 'No filters applied' : 'Clear filters'"
-    >
+      :text="store.filterEmpty() ? 'No filters applied' : 'Clear filters'">
       <Button
         class="bg-transparent! duration-0! disabled:pointer-events-none"
         square
         size="lg"
         hover="inset"
-        :disabled="s_matches().filterEmpty()"
-        :variant="s_matches().filterEmpty() ? 'ghost' : 'inset'"
-        @click="s_matches().clearFilters()"
-      >
+        :disabled="store.filterEmpty()"
+        :variant="store.filterEmpty() ? 'ghost' : 'inset'"
+        @click="store.clearFilters()">
         <Icon
           class="in-disabled:opacity-40"
-          name="ic:baseline-filter-list-off"
-        />
+          name="ic:baseline-filter-list-off" />
       </Button>
     </Tooltip>
     <!--     <PatchDateRange v-if="api" :api /> -->
@@ -80,15 +76,13 @@ size="lg"
 
     <InputGroup
       class="h-12 max-h-12 grow transition-all duration-300"
-      size="lg"
-    >
+      size="lg">
       <InputGroupSearch class="[&_svg]:size-5" />
       <InputGroupInput
         input-class="placeholder:opacity-0! focus:placeholder:opacity-100!"
         placeholder="Search match history..."
-        @update:model-value="(e) => (s_matches().query = e)"
-      />
-      <InputGroupClear />
+        @update:model-value="(e) => (store.query = e)" />
+      <InputClear />
     </InputGroup>
   </div>
 </template>

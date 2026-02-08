@@ -6,8 +6,7 @@
       1
       <icon
         class="size-7 shrink-0"
-        name="material-symbols-light:compare-arrows"
-      />
+        name="material-symbols-light:compare-arrows" />
       2
     </div>
   </div>

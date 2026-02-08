@@ -57,6 +57,7 @@ export function buildAllyChart(
         top: 10,
         z: 20,
       },
+      series: bubbleSeries,
       dataZoom: [
         {
           end: 100,
@@ -64,8 +65,8 @@ export function buildAllyChart(
           moveOnMouseWheel: false,
           start: 0,
           type: 'inside',
-          xAxisIndex: [0],
           zoomOnMouseWheel: true,
+          xAxisIndex: [0],
         },
         {
           end: 100,
@@ -73,22 +74,23 @@ export function buildAllyChart(
           moveOnMouseWheel: false,
           start: 0,
           type: 'inside',
-          yAxisIndex: [0],
           zoomOnMouseWheel: true,
+          yAxisIndex: [0],
         },
       ],
       legend: {
         width: 165,
         right: 20,
         show: true,
+        top: 54,
         textStyle: {
           fontWeight: 550,
           opacity: 0.8,
         },
-        top: 54,
       },
-      series: bubbleSeries,
       toolbox: {
+        right: 74,
+        top: 0,
         feature: {
           dataView: {
             // optionToContent: '',
@@ -98,8 +100,6 @@ export function buildAllyChart(
             show: true,
           },
         },
-        right: 74,
-        top: 0,
       },
       tooltip: {
         backgroundColor: 'transparent',

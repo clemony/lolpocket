@@ -1,44 +1,44 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:17 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Living Shadow",
-  "affects": "Self",
-  "blurb": "Passive: Whenever  Zed and his  Shadows hit an ability on the same target, he restores  energy.",
-  "castTime": "none",
-  "cooldown": "20 / 19 / 18 / 17 / 16",
-  "cost": "40 / 35 / 30 / 25 / 20",
-  "effectRadius": "2000 / Global",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Living Shadow',
+  affects: 'Self',
+  blurb: 'Passive: Whenever  Zed and his  Shadows hit an ability on the same target, he restores  energy.',
+  castTime: 'none',
+  cooldown: '20 / 19 / 18 / 17 / 16',
+  cost: '40 / 35 / 30 / 25 / 20',
+  effectRadius: '2000 / Global',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w',
+  notes: 'Zed gains a buff for 5.25 seconds that indicates and determines the duration in which he may recast Living Shadow.\nThe buff is granted briefly after Living Shadow is cast.\nIf cast at minimum distance, the buff and the Shadow\'s individual durations will effectively start at the same time.\nIf cast at greater than the minimum distance, then the buff\'s duration will start before the Shadow\'s duration.\nThe passive is available while the ability has not been learned. It will grant the  energy refund strength at rank 1.\nThe  energy refund is not granted if the mimicked ability is blocked by a  spell shield.\nLiving Shadow\'s recast can be queued to cast while the Shadow is dashing; the recast will occur once it has been placed.\nLiving Shadow cannot be recast while  grounded or  rooted.\nIf Living Shadow is recast during  Razor Shuriken\'s cast, Zed will instantly release the shuriken from the cast location of  Razor Shuriken while still remaining in cast time. Once he has swapped places, he will then throw the shuriken that the  Shadow would have thrown instead.\nZed will cast  Razor Shuriken as he normally would from the new location, but over the remaining cast time and towards the same point of cast.\nThe  Shadow will not throw a shuriken from its new location, but will continue to play the cast animation for  Razor Shuriken.\nThis special interaction does not occur with the swap recast of  Death Mark; the recast will be buffered if used during  Razor Shuriken\'s cast.\nZed will swap places with the  Shadow by all means if he buffers Living Shadow\'s recast during its dash.(note)\nLiving Shadow cannot be recast while Zed is marking his target with  Death Mark, but may still be recast if it was buffered.(bug)\nIf Zed casts Living Shadow while a non- Death Mark Shadow is already present, the previous Shadow will instantly disappear.\nIf a  Shadow expires while in the cast time of  Razor Shuriken, the mimicked cast will be cancelled.\n Shadows will cast  Shadow Slash independently of being in  Razor Shuriken\'s cast time or not.(note)\n Shadows spawned from Living Shadow may sometimes last for up to an additional 0.25 seconds.(bug)\n Shadows will not disappear when Zed dies.(bug)',
+  resource: 'Energy',
+  speed: '2500',
+  targeting: 'Location / Auto',
+  targetRange: '650',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p>',
+      leveling: [
         {
-          "attribute": "Energy Restored",
-          "modifiers": [
+          attribute: 'Energy Restored',
+          modifiers: [
             {
-              "values": "30 / 35 / 40 / 45 / 50"
+              values: '30 / 35 / 40 / 45 / 50'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p>'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Shadow Swap:</span> Zed and the Shadow blink to swap places.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Recast - Shadow Swap:</span> Zed and the Shadow blink to swap places.</p>'
     },
     {
-      "description": "If an ability is cast while the Shadow is dashing, it will cast that ability once it has been placed. See Pets for more details about Shadows."
+      description: 'If an ability is cast while the Shadow is dashing, it will cast that ability once it has been placed. See Pets for more details about Shadows.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
-  "notes": "Zed gains a buff for 5.25 seconds that indicates and determines the duration in which he may recast Living Shadow.\nThe buff is granted briefly after Living Shadow is cast.\nIf cast at minimum distance, the buff and the Shadow's individual durations will effectively start at the same time.\nIf cast at greater than the minimum distance, then the buff's duration will start before the Shadow's duration.\nThe passive is available while the ability has not been learned. It will grant the  energy refund strength at rank 1.\nThe  energy refund is not granted if the mimicked ability is blocked by a  spell shield.\nLiving Shadow's recast can be queued to cast while the Shadow is dashing; the recast will occur once it has been placed.\nLiving Shadow cannot be recast while  grounded or  rooted.\nIf Living Shadow is recast during  Razor Shuriken's cast, Zed will instantly release the shuriken from the cast location of  Razor Shuriken while still remaining in cast time. Once he has swapped places, he will then throw the shuriken that the  Shadow would have thrown instead.\nZed will cast  Razor Shuriken as he normally would from the new location, but over the remaining cast time and towards the same point of cast.\nThe  Shadow will not throw a shuriken from its new location, but will continue to play the cast animation for  Razor Shuriken.\nThis special interaction does not occur with the swap recast of  Death Mark; the recast will be buffered if used during  Razor Shuriken's cast.\nZed will swap places with the  Shadow by all means if he buffers Living Shadow's recast during its dash.(note)\nLiving Shadow cannot be recast while Zed is marking his target with  Death Mark, but may still be recast if it was buffered.(bug)\nIf Zed casts Living Shadow while a non- Death Mark Shadow is already present, the previous Shadow will instantly disappear.\nIf a  Shadow expires while in the cast time of  Razor Shuriken, the mimicked cast will be cancelled.\n Shadows will cast  Shadow Slash independently of being in  Razor Shuriken's cast time or not.(note)\n Shadows spawned from Living Shadow may sometimes last for up to an additional 0.25 seconds.(bug)\n Shadows will not disappear when Zed dies.(bug)",
-  "resource": "Energy",
-  "speed": "2500",
-  "targeting": "Location / Auto",
-  "targetRange": "650"
+  ]
 }
-  export default ability
+export default ability

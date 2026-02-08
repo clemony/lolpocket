@@ -14,10 +14,11 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <TagsInputItemDelete
     v-bind="forwarded"
-    :class="cn('mr-1 flex rounded-sm bg-transparent', props.class)"
-  >
+    :class="cn('mr-1 flex rounded-sm bg-transparent', props.class)">
     <slot>
-      <icon class="size-4" name="x-sm" />
+      <icon
+        class="size-4"
+        name="x-sm" />
     </slot>
   </TagsInputItemDelete>
 </template>

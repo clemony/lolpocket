@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/core'
-import type { EmojiItem } from '@tiptap/extension-emoji'
+import type { Editor } from "@tiptap/core"
+import type { EmojiItem } from "@tiptap/extension-emoji"
 
 const { editor } = defineProps<{
   editor: Editor | null
 }>()
 
-const query = shallowRef<string>('')
+const query = shallowRef<string>("")
 
 const search = useSearch(editor.storage.emoji.emojis, query, {
-  keys: ['shortcodes', 'tags'],
+  keys: ["shortcodes", "tags"],
 })
 
 const results = computed(() =>
-  search.value.length
-    ? search.value
-    : [...editor.storage.emoji.emojis].splice(0, 20)
+  search.value.length ?
+    search.value
+  : [...editor.storage.emoji.emojis].splice(0, 20)
 )
 
 const selectedIndex = ref(0)
@@ -23,64 +23,64 @@ const selectedIndex = ref(0)
 
 const groups = [
   {
-    name: 'Search Results',
-    class: '!size-4.5',
-    icon: 'search',
+    name: "Search Results",
+    class: "!size-4.5",
+    icon: "search",
   },
   {
-    keywords: ['face'],
-    name: 'Face',
-    class: '!size-4.5 **:stroke-[1.9]',
-    icon: 'smile',
+    keywords: ["face"],
+    name: "Face",
+    class: "!size-4.5 **:stroke-[1.9]",
+    icon: "smile",
   },
   //
   {
     keywords: [],
-    name: 'People & Body',
-    class: '**:stroke-[2.1]',
-    groups: ['people & body'],
-    icon: 'user',
+    name: "People & Body",
+    class: "**:stroke-[2.1]",
+    icon: "user",
+    groups: ["people & body"],
   },
   {
     keywords: [],
-    name: 'Animals & Nature',
-    class: 'size-5.5 ',
-    groups: ['animals & nature'],
-    icon: 'cat',
+    name: "Animals & Nature",
+    class: "size-5.5 ",
+    icon: "cat",
+    groups: ["animals & nature"],
   },
   {
     keywords: [],
-    name: 'Food & Drink',
-    class: '**:stroke-[2]',
-    groups: ['food & drink'],
-    icon: 'lucide:coffee',
+    name: "Food & Drink",
+    class: "**:stroke-[2]",
+    icon: "lucide:coffee",
+    groups: ["food & drink"],
   },
   {
     keywords: [],
-    name: 'Travel & Places',
-    groups: ['travel & places'],
-    icon: 'lucide:plane',
+    name: "Travel & Places",
+    icon: "lucide:plane",
+    groups: ["travel & places"],
   },
   {
     keywords: [],
-    name: 'Activities',
-    groups: ['activities'],
-    icon: 'lucide-lab:ice-skate',
+    name: "Activities",
+    icon: "lucide-lab:ice-skate",
+    groups: ["activities"],
   },
   {
     keywords: [],
-    name: 'Objects',
-    class: '**:stroke-[1.5] translate-x-0.5',
-    groups: ['objects'],
-    icon: 'lucide-lab:bottle-spray',
+    name: "Objects",
+    class: "**:stroke-[1.5] translate-x-0.5",
+    icon: "lucide-lab:bottle-spray",
+    groups: ["objects"],
   },
 
   {
     // no key or group
-    keywords: ['regional'],
-    name: 'Symbols & Miscellaneous',
-    groups: ['symbols', 'github', 'components', 'flags'],
-    icon: 'and',
+    keywords: ["regional"],
+    name: "Symbols & Miscellaneous",
+    icon: "and",
+    groups: ["symbols", "github", "components", "flags"],
   },
 ]
 
@@ -97,22 +97,22 @@ const filter = computed(() => {
 
   if (group?.keywords?.length) {
     group?.keywords.forEach((k) => {
-      emoji.value.push(...emojiArray.filter(e => e.tags.includes(k)))
+      emoji.value.push(...emojiArray.filter((e) => e.tags.includes(k)))
     })
   }
 
   if (group?.groups?.length) {
-    group.groups.forEach(k =>
-      emoji.value.push(...emojiArray.filter(e => e.group.includes(k)))
+    group.groups.forEach((k) =>
+      emoji.value.push(...emojiArray.filter((e) => e.group.includes(k)))
     )
   }
 
-  if (group?.name === 'Symbols & Miscellaneous') {
+  if (group?.name === "Symbols & Miscellaneous") {
     emoji.value.push(
       ...emojiArray
-        .filter(e => !e.tags?.length && !e.group?.length)
-        .filter(e => !e.tags.includes('Face'))
-        .concat(...emojiArray.filter(e => e.group.includes('github')))
+        .filter((e) => !e.tags?.length && !e.group?.length)
+        .filter((e) => !e.tags.includes("Face"))
+        .concat(...emojiArray.filter((e) => e.group.includes("github")))
     )
   }
 
@@ -129,7 +129,7 @@ watch(
 watch(
   () => query.value,
   (newVal) => {
-    if (newVal === '' && tab.value !== 0) tab.value = 1
+    if (newVal === "" && tab.value !== 0) tab.value = 1
   }
 )
 
@@ -152,75 +152,63 @@ watch(
       variant="ghost"
       on="inset"
       hover="inset"
-      @click.stop
-    >
+      @click.stop>
       <icon
         class="mt-px size-4.25! opacity-70 transition-all duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90"
-        name="smile"
-      />
+        name="smile" />
     </PopoverTrigger>
 
     <LazyPopoverContent
-      class=" relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
+      class="relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
       data-theme="base"
-      align="start"
-    >
+      align="start">
       <div
-        class="from-b1 absolute top-0 z-1 w-full overflow-hidden bg-linear-to-b from-6% to-transparent to-30% px-2 pt-2 pb-1.5"
-      >
+        class="absolute top-0 z-1 w-full overflow-hidden bg-linear-to-b from-p0 from-6% to-transparent to-30% px-2 pt-2 pb-1.5">
         <InputGroup
-          class="bg-brightness-104 border-b3/80 bg-b1/74! h-11 w-full rounded-xl bg-blend-screen shadow-xs shadow-black/4 backdrop-blur-sm"
-        >
+          class="bg-brightness-104 h-11 w-full rounded-xl border-p3/80 bg-p0/74! bg-blend-screen shadow-xs shadow-black/4 backdrop-blur-sm">
           <InputGroupSearch />
           <InputGroupInput v-model:model-value="query" />
-          <InputGroupClear
+          <InputClear
             @clear-input="
               () => {
                 query = ''
                 tab = 1
               }
-            "
-          />
+            " />
         </InputGroup>
       </div>
-      <TransitionSlideLeft class="size-full overflow-auto" :invert>
+      <TransitionSlide class="size-full overflow-auto" :invert>
         <div
           :key="tab"
-          class="grid w-full grid-cols-[repeat(auto-fill,minmax(24px,1fr))] justify-between gap-x-1 gap-y-0.5 overflow-auto px-2 pt-14 pb-18"
-        >
+          class="grid w-full grid-cols-[repeat(auto-fill,minmax(24px,1fr))] justify-between gap-x-1 gap-y-0.5 overflow-auto px-2 pt-14 pb-18">
           <EmojiButton
             v-for="(item, index) in filter"
             :key="index"
             :item
             :index
             @click="editor.chain().focus().setEmoji(item.name).run()"
-            @mousedown.prevent="selectedIndex = index"
-          />
+            @mousedown.prevent="selectedIndex = index" />
         </div>
-      </TransitionSlideLeft>
+      </TransitionSlide>
 
       <div
-        class="from-b1 absolute bottom-0 w-full bg-linear-to-t from-12% to-transparent to-40% px-2 pb-2"
-      >
+        class="absolute bottom-0 w-full bg-linear-to-t from-p0 from-12% to-transparent to-40% px-2 pb-2">
         <Tabs
           v-model:model-value="tab"
-          class="bg-brightness-104 border-b3/80 bg-b1/70 flex h-9 w-full items-center rounded-xl border px-1 bg-blend-screen shadow-md shadow-black/4 backdrop-blur-sm"
-          as="div"
-        >
+          class="bg-brightness-104 flex h-9 w-full items-center rounded-xl border border-p3/80 bg-p0/70 px-1 bg-blend-screen shadow-md shadow-black/4 backdrop-blur-sm"
+          as="div">
           <TabsList class="w-full justify-stretch" variant="none" size="md">
             <Tooltip v-for="(group, i) in groups" :key="i">
               <TooltipTrigger as-child>
                 <TabsTrigger
-                  class="group/btn on:*:opacity-100 on:**:text-nc h-7 *:opacity-40 hover:*:opacity-90"
+                  class="group/btn h-7 *:opacity-40 hover:*:opacity-90 on:*:opacity-100 on:**:text-nc"
                   :disabled="group.name === 'Search Results' && !query.length"
-                  :value="i"
-                >
+                  :value="i">
                   <icon
                     :name="group.icon"
                     :class="
-                      cn('dxs absolute size-5 **:stroke-[1.7]', group.class)
-                    "
-                  />
+                      cn('absolute size-5 dxs **:stroke-[1.7]', group.class)
+                    " />
                 </TabsTrigger>
               </TooltipTrigger>
               <TooltipContent side="bottom" :side-offset="8">

@@ -9,8 +9,7 @@ const props = defineProps<{
 <template>
   <kbd
     data-slot="kbd-group"
-    :class="cn('inline-flex items-center gap-1', props.class)"
-  >
+    :class="cn('inline-flex items-center gap-1', props.class)">
     <slot />
   </kbd>
 </template>

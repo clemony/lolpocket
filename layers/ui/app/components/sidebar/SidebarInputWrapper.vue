@@ -5,7 +5,7 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <label :class="cn('input bg-b1 relative mt-2 h-12 rounded-lg', className)">
+  <label :class="cn('input relative mt-2 h-12 rounded-lg bg-p0', className)">
     <slot />
   </label>
 </template>

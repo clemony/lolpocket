@@ -12,7 +12,9 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <TabsList v-bind="delegatedProps" :class="cn('tabs-lift tabs', props.class)">
+  <TabsList
+    v-bind="delegatedProps"
+    :class="cn('tabs-lift tabs', props.class)">
     <slot />
   </TabsList>
 </template>

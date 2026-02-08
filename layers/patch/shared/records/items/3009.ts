@@ -1,52 +1,52 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Boots of Swiftness",
-  "id": 3009,
-  "rank": "Boots",
-  "buildsFrom": [
+const item: Item = {
+  id: 3009,
+  name: 'Boots of Swiftness',
+  nicknames: [
+    'swifties'
+  ],
+  description: '55 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 25%.',
+  noEffects: false,
+  rank: 'Boots',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1001,
-      "name": "Boots",
-      "gold": 300
+      id: 1001,
+      name: 'Boots',
+      gold: 300
     }
   ],
-  "buildsInto": [
+  buildsInto: [
     {
-      "id": 3170,
-      "name": "Swiftmarch",
-      "gold": 1000
+      id: 3170,
+      name: 'Swiftmarch',
+      gold: 1000
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "swifties"
-  ],
-  "passives": [
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Fleetfooted",
-      "effects": "Gain 25% slow resist."
-    }
-  ],
-  "stats": {
-    "flatMovespeed": 55
+  gold: {
+    base: 700,
+    sell: 700,
+    total: 1000
   },
-  "description": "55 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 25%.",
-  "gold": {
-    "base": 700,
-    "total": 1000,
-    "sell": 700
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  passives: [
+    {
+      name: 'Fleetfooted',
+      effects: 'Gain 25% slow resist.',
+      mythic: false,
+      unique: true
+    }
+  ],
+  stats: {
+    flatMovespeed: 55
+  }
 }
 export default item

@@ -1,5 +1,5 @@
 <script lang="ts" setup></script>
 
 <template>
-  <ContextMenuSeparator class="bg-b3/15" />
+  <ContextMenuSeparator class="bg-p3/15" />
 </template>

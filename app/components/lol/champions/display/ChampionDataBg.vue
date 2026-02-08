@@ -18,44 +18,44 @@ const {
 
 const bg = [
   {
+    color: 'p2',
     name: 'Charge',
-    color: 'b2',
   },
   {
+    color: 'hp',
     name: 'Current health',
-    color: 'hp',
   },
   {
-    name: 'Energy',
     color: 'energy',
+    name: 'Energy',
   },
   {
-    name: 'Fury',
     color: 'ad',
+    name: 'Fury',
   },
   {
-    name: 'Grit',
     color: 'armor',
+    name: 'Grit',
   },
   {
+    color: 'hp',
     name: 'Health',
-    color: 'hp',
   },
   {
+    color: 'mana',
     name: 'Mana',
-    color: 'mana',
   },
   {
+    color: 'mana',
     name: 'Mana / s',
-    color: 'mana',
   },
   {
-    name: 'Maximum health',
     color: 'hp',
+    name: 'Maximum health',
   },
   {
-    name: 'none',
     color: 'v',
+    name: 'none',
   },
 ]
 </script>
@@ -64,15 +64,13 @@ const bg = [
   <Primitive
     v-bind="$attrs"
     :as="as"
-    :class="cn('relative overflow-hidden bg-transparent', className)"
-  >
+    :class="cn('relative overflow-hidden bg-transparent', className)">
     <span
       class="absolute top-0 left-0 size-full border border-transparent"
       :style="{
         backgroundColor: `var(--color-${bg.find((p) => p.name === name).color})`,
         opacity,
-      }"
-    />
+      }" />
 
     <slot />
   </Primitive>

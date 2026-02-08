@@ -44,8 +44,7 @@ const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
   <menu
     :class="
       cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)
-    "
-  >
+    ">
     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
@@ -56,16 +55,14 @@ const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
       :value="i"
       :class="{
         'scale-110 hover:scale-115': selectedAbility === ability.key,
-      }"
-    >
+      }">
       <input
         v-model="selectedAbility"
         class="peer hidden"
         :value="i"
         type="radio"
         name="selected-ability"
-        @change="emit('update:ability', selectedAbility)"
-      >
+        @change="emit('update:ability', selectedAbility)">
 
       <Img
         class="pointer-events-none size-full opacity-70 contrast-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
@@ -76,8 +73,7 @@ const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
           'animate-in fade-in duration-500': loaded,
           'animate-out fade-out-50 duration-500': loaded,
         }"
-        @load="loaded = true"
-      />
+        @load="loaded = true" />
     </Label>
   </menu>
 </template>

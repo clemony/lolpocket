@@ -3,7 +3,7 @@ const props = defineProps<{
   pocket?: Pocket
 }>()
 
-const emit = defineEmits(['update:selected'])
+const emit = defineEmits(["update:selected"])
 
 const pocket = ref(props.pocket)
 /*
@@ -41,5 +41,3 @@ function handleClick() {
     </button> -->
   </div>
 </template>
-
-<style scoped></style>

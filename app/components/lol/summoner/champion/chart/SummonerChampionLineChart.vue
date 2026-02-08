@@ -28,6 +28,7 @@ const data = computed(() => {
   if (!timeline.value) return
 
   return {
+    labels: timeline?.value?.map(p => p.span),
     datasets: [
       {
         data: timeline?.value?.map(p => p.winrate),
@@ -36,7 +37,6 @@ const data = computed(() => {
         data: timeline?.value?.map(p => p.games),
       },
     ],
-    labels: timeline?.value?.map(p => p.span),
   }
 })
 
@@ -67,16 +67,16 @@ const options = {
         display: true,
         text: 'Winrate (%)',
       },
-      border: {
-        display: true,
-      },
       max: 100,
       min: 0,
       position: 'left',
+      type: 'linear',
+      border: {
+        display: true,
+      },
       ticks: {
         display: true,
       },
-      type: 'linear',
     },
     y1: {
       grid: {
@@ -101,9 +101,8 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats rounded-box border-b3 bg-b1 shadow-warm-soft relative h-54 w-full border px-5"
-  >
-    <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
+    class="stats relative h-54 w-full rounded-box border border-p3 bg-p0 px-5 shadow-warm-soft">
+    <div class="pointer-events-none absolute top-6 left-6 z-0 text-pc">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}
       </div>
@@ -113,6 +112,8 @@ const range = computed(() => {
       <div class="stat-desc text-md" />
     </div>
 
-    <LineChart :data="data" :options="options" />
+    <LineChart
+      :data="data"
+      :options="options" />
   </div>
 </template>

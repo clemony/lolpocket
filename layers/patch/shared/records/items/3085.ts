@@ -1,49 +1,49 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Runaan's Hurricane",
-  "id": 3085,
-  "rank": "Legendary",
-  "buildsFrom": [
+const item: Item = {
+  id: 3085,
+  name: 'Runaan\'s Hurricane',
+  description: '40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nWind\'s Fury\nAttacks fire bolts at 2 additional enemies near the target.\nEach bolt deals physical damage and applies On-Hit effects.',
+  noEffects: false,
+  rank: 'Legendary',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 3086,
-      "name": "Zeal",
-      "gold": 1200
+      id: 3086,
+      name: 'Zeal',
+      gold: 1200
     },
     {
-      "id": 3144,
-      "name": "Scout's Slingshot",
-      "gold": 600
+      id: 3144,
+      name: 'Scout\'s Slingshot',
+      gold: 600
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": false,
-  "removed": false,
-  "passives": [
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Wind's Fury",
-      "effects": "Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 55% AD physical damage. Bolts apply <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit effects and are affected by <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critical strike modifiers."
-    }
-  ],
-  "stats": {
-    "attackSpeed": 40,
-    "criticalStrikeChance": 25,
-    "percentMovespeed": 4
+  gold: {
+    base: 850,
+    sell: 1855,
+    total: 2650
   },
-  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nWind's Fury\nAttacks fire bolts at 2 additional enemies near the target.\nEach bolt deals physical damage and applies On-Hit effects.",
-  "gold": {
-    "base": 850,
-    "total": 2650,
-    "sell": 1855
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  passives: [
+    {
+      name: 'Wind\'s Fury',
+      effects: 'Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 55% AD physical damage. Bolts apply <img src="/img/icons/on-hit.webp" class="tip-icon " />on-hit effects and are affected by <img src="/img/icons/critical-strike.webp" class="tip-icon " />critical strike modifiers.',
+      mythic: false,
+      unique: true
+    }
+  ],
+  stats: {
+    attackSpeed: 40,
+    criticalStrikeChance: 25,
+    percentMovespeed: 4
+  }
 }
 export default item

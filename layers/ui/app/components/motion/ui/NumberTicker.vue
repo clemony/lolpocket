@@ -74,8 +74,7 @@ watch(
 <template>
   <span
     ref="spanRef"
-    :class="cn('text-bc inline-block tabular-nums', props.class)"
-  >
+    :class="cn('inline-block text-pc tabular-nums', props.class)">
     {{ output }}
   </span>
 </template>

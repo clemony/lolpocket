@@ -17,17 +17,15 @@ const forwarded = useForwardProps(delegatedProps)
   <PopoverArrow
     v-bind="forwarded"
     :class="
-      cn('dxs z-0 translate-y-px opacity-20 invert', props.class)
+      cn('z-0 translate-y-px opacity-20 dxs invert', props.class)
     "
     :height="9"
-    :width="18"
-  />
+    :width="18" />
   <PopoverArrow
     v-bind="forwarded"
     :class="cn('z-50 overflow-hidden outline-none', props.class)"
     :height="9"
-    :width="18"
-  />
+    :width="18" />
 
   <!--  <PopoverArrow
     v-bind="forwarded"

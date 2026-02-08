@@ -6,9 +6,8 @@ const props = defineProps<{
 
 <template>
   <SelectTrigger
-    class="btn-depth border-b3/70 h-12 rounded-xl px-4 shadow-none inset-shadow-none"
-    :class="cn('', props.class)"
-  >
+    class="btn-depth h-12 rounded-xl border-p3/70 px-4 shadow-none inset-shadow-none"
+    :class="cn('', props.class)">
     <slot />
   </SelectTrigger>
 </template>

@@ -19,25 +19,13 @@ const keystone = computed(() =>
         'mx-2 -mt-px flex size-full w-max shrink-0 flex-col place-items-center gap-1',
         className,
       )
-    "
-  >
+    ">
     <Keystone
       :id="keystone?.id"
-      class="size-7.5 transition-all duration-300 hover:scale-120"
-    />
+      class="size-7.5 transition-all duration-300 hover:scale-120" />
 
-    <div
-      class="relative size-6 anchor  transition-all duration-300 hover:scale-120"
-      :data-id="s?.name"
-      data-type="path"
-      @click.stop
-    >
-      <img
-        v-if="s?.name"
-        class="dst h-4.75 w-auto place-self-center"
-        :alt="s?.name"
-        :src="`/img/paths/${s?.name}.webp`"
-      >
-    </div>
+    <Path
+      class="size-6 transition-all duration-300 hover:scale-120"
+      :name="s?.name" />
   </div>
 </template>

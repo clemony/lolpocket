@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 222503,
-  "name": "Blackfire Torch",
-  "description": "60 Ability Power\n600 Mana\n20 Ability Haste\n\nBaleful Blaze\nDealing damage with Abilities causes enemies to burn. This damage increases to Monsters.\n\nBlackfire\nFor each enemy Champion, Epic Monster, and Large Monster affected by your Baleful Blaze, gain Ability Power. ",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1250
+const item: Item = {
+  id: 222503,
+  name: 'Blackfire Torch',
+  description: '60 Ability Power\n600 Mana\n20 Ability Haste\n\nBaleful Blaze\nDealing damage with Abilities causes enemies to burn. This damage increases to Monsters.\n\nBlackfire\nFor each enemy Champion, Epic Monster, and Large Monster affected by your Baleful Blaze, gain Ability Power. ',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

@@ -10,14 +10,18 @@ definePageMeta({
 })
 
 const labelClass
-  = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
+  = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-p2 [&_h5]:font-semibold [&_h5]:text-pc/70'
 </script>
 
 <template>
-  <form class="w-full space-y-12" @submit.prevent>
+  <form
+    class="w-full space-y-12"
+    @submit.prevent>
     <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
-        <Label class="text-xlfont-semibold mb-2" as="legend">
+        <Label
+          class="text-xlfont-semibold mb-2"
+          as="legend">
           Summoner Splash
         </Label>
 
@@ -31,7 +35,9 @@ const labelClass
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label class="mb-2 text-xl font-semibold" as="legend">Title</Label>
+        <Label
+          class="mb-2 text-xl font-semibold"
+          as="legend">Title</Label>
         <p class="label text-wrap">
           Display a title from an earned Badge.
         </p>
@@ -40,7 +46,9 @@ const labelClass
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label class="mb-2 text-xl font-semibold" as="legend">
+        <Label
+          class="mb-2 text-xl font-semibold"
+          as="legend">
           Hide Profile Elements
         </Label>
 
@@ -59,8 +67,7 @@ const labelClass
             lies
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="hover-ring pointer-events-auto!"
-            />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
         <h5>Ranked Solo/Duo</h5>
@@ -70,8 +77,7 @@ const labelClass
             {{ as().settings.show_solo ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_solo"
-              class="hover-ring pointer-events-auto!"
-            />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
 
@@ -82,8 +88,7 @@ const labelClass
             {{ as().settings.show_flex ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_flex"
-              class="hover-ring pointer-events-auto!"
-            />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
 
@@ -94,8 +99,7 @@ const labelClass
             {{ as().settings.show_allies ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_allies"
-              class="hover-ring pointer-events-auto!"
-            />
+              class="hover-ring pointer-events-auto!" />
           </p>
         </label>
       </div>

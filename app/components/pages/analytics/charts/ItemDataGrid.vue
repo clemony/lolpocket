@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// @todo fix usermatchdata
+// todo fix usermatchdata
 const userMatchData = []
 const patchGames = computed(() =>
   userMatchData.filter(g => g.patch === ms().filter.patch)
@@ -12,12 +12,11 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value) */
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="border-shadow h-160 max-h-160 w-full bg-b1 inset-shadow-xxs">
+    <div class="border-shadow h-160 max-h-160 w-full bg-p0 inset-shadow-xxs">
       <div class="size-full overflow-hidden!">
         <div class="oveflow-y-auto size-full">
           <div
-            class="flex w-full items-center gap-4 px-2 pt-3 pb-1 text-sm tracking-wide capitalize opacity-60"
-          >
+            class="flex w-full items-center gap-4 px-2 pt-3 pb-1 text-sm tracking-wide capitalize opacity-60">
             <span class="grow pl-2">{{ ms().filter.patch }} Items</span>
 
             <APDtooltip>Absolute</APDtooltip>
@@ -28,12 +27,12 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value) */
           <!--           <template v-for="entry in bayesianItems" :key="entry.item?.id">
             <div
               v-if="entry"
-              class="border-b-b2 grid w-full grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b py-3"
+              class="border-b-p2 grid w-full grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b py-3"
             >
               <div /> -->
 
           <!--
-@fixme
+fixme
 <div
                 class="
                   flex w-fit self-center rounded-xl border border-black/10
@@ -42,7 +41,7 @@ const { bayesianItems } = useMatchItems(summoner.value.puuid, matches.value) */
                 "
                 :style="{
                   'backgroundColor': `color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}) 70%, transparent)`,
-                  'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-b100) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
+                  'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-p000) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
                 }">
                 <span
                   class="

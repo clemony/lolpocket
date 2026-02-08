@@ -11,8 +11,7 @@ const roleStats = await useMatchRoles(s_session().summoner.puuid, s_matches().ma
     <FilterLabel
       v-model="ms().filter.role"
       :active="ms().filter.role !== 'ALL'"
-      @click="ms().filter.role = 'ALL'"
-    >
+      @click="ms().filter.role = 'ALL'">
       {{
         ms().filter.role !== "ALL"
           ? roleStats.find((r) => r.role === ms().filter.role).name
@@ -29,14 +28,12 @@ const roleStats = await useMatchRoles(s_session().summoner.puuid, s_matches().ma
         }"
         class=""
         :disabled="!role.games"
-        :value="role.role"
-      >
+        :value="role.role">
         <span class="relative grid size-5.5 place-items-center">
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
             class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
-            :class="{ 'text-bc/80!': role.name === 'ALL' }"
-          />
+            :class="{ 'text-pc/80!': role.name === 'ALL' }" />
         </span>
       </TabsTrigger>
 

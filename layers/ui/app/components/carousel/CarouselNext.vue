@@ -20,13 +20,11 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
       )
     "
     variant="outline"
-    @click="scrollNext"
-  >
+    @click="scrollNext">
     <slot>
       <icon
         class="text-current opacity-60 group-hover/carobtn:opacity-100"
-        name="right"
-      />
+        name="right" />
 
       <span class="sr-only">Next Slide</span>
     </slot>

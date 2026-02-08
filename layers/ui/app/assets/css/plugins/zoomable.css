@@ -2,7 +2,7 @@
 @import '../theme';
 
 .controll {
-  @apply !flex scale-75 flex-row items-start !bg-b2/40 opacity-0;
+  @apply !flex scale-75 flex-row items-start !bg-p2/40 opacity-0;
 }
 
 #v-zoomable-control-btns {

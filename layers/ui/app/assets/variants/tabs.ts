@@ -21,12 +21,12 @@ export default {
     },
     compoundVariants: [
       {
-        color: 'muted',
+        color: 'p1',
         variant: 'pill',
         class: {
-          indicator: 'bg-primary border-b3',
-          list: 'bg-muted noise border-b3/80 ',
-          trigger: 'data-[state=active]:text-bc focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted  '
+          indicator: 'bg-p0 border-p3',
+          list: 'bg-p1 noise border-p3/80 ',
+          trigger: 'data-[state=active]:text-pc focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1  '
         }
       },
       {
@@ -34,13 +34,13 @@ export default {
         variant: 'pill',
         class: {
           indicator: 'bg-neutral/90 border-nc/60 noise',
-          list: 'bg-muted noise border-b3/80 ',
-          trigger: 'text-bc focus-visible:outline-2  focus-visible:outline-offset-2 focus-visible:outline-muted data-[state=active]:text-nc active:hover:**:text-bc data-[state=active]:**:text-nc'
+          list: 'bg-p1 noise border-p3/80 ',
+          trigger: 'text-pc focus-visible:outline-2  focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-nc active:hover:**:text-pc data-[state=active]:**:text-nc'
         }
       },
     ],
     defaultVariants: {
-      color: 'muted',
+      color: 'p1',
       variant: 'pill'
     }
   },

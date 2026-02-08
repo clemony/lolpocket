@@ -67,8 +67,7 @@ const pathHovered = ref('')
     <div class="relative h-18 w-full pr-2 pl-1">
       <div
         v-if="pathHovered"
-        class="absolute size-full items-center justify-between gap-3"
-      >
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           v-if="pathHovered"
           :key="pathHovered"
@@ -77,24 +76,24 @@ const pathHovered = ref('')
               'animate-in fade-in blur-in-50 zoom-in-120': pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered,
             })
-          "
-        >
+          ">
           {{ pathHovered }}
         </h1>
         <p
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('dst pt-1 pr-2 text-end font-medium duration-600', {
+            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
               'animate-in fade-in': pathHovered,
               'animate-out fade-out': !pathHovered,
             })
-          "
-        >
+          ">
           {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
         </p>
       </div>
-      <div v-else class="absolute size-full items-center justify-between gap-3">
+      <div
+        v-else
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           key="default"
           class="dst"
@@ -103,18 +102,16 @@ const pathHovered = ref('')
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': pathHovered,
             })
-          "
-        >
+          ">
           Runes
         </h1>
         <p
           :class="
-            cn('dst pt-1 pr-2 text-end font-medium duration-600', {
+            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
               'animate-in fade-in': !pathHovered,
               'animate-out fade-out': pathHovered,
             })
-          "
-        >
+          ">
           Select your path.
         </p>
       </div>
@@ -123,8 +120,7 @@ const pathHovered = ref('')
       class="flex max-h-160 items-center justify-center gap-1.5"
       :transition="{
         delayChildren: 0.2,
-      }"
-    >
+      }">
       <motion.button
         v-for="(path, i) in pathIndex"
         :key="path.name"
@@ -144,12 +140,10 @@ const pathHovered = ref('')
         }"
         @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
-        @hover-end="pathHovered = ''"
-      >
+        @hover-end="pathHovered = ''">
         <Icon
           class="z-2 size-20! text-white/30!"
-          :name="`i-path-${path.name.toLowerCase()}`"
-        />
+          :name="`i-path-${path.name.toLowerCase()}`" />
       </motion.button>
     </motion.div>
   </div>

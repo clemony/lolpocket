@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 .module-ghost {
-  @apply size-full rounded-xl bg-b2/20 inset-shadow-sm;
+  @apply size-full rounded-xl bg-p2/20 inset-shadow-sm;
 }
 
 .module-ghost::before {
@@ -10,7 +10,7 @@
 .module-drag {
   @apply w-full border-transparent !bg-transparent !opacity-97;
   .module-bg {
-    @apply border-b2 bg-b1 shadow-smooth transition-all duration-300;
+    @apply border-p2 bg-p0 shadow-smooth transition-all duration-300;
   }
 }
 
@@ -20,14 +20,14 @@
 .item-set-ghost,
 .item-set-fallback,
 .item-set-chosen {
-  @apply h-fit w-full cursor-pointer items-center gap-2 rounded-box border border-b2 bg-b2/30 opacity-70 shadow-xs;
+  @apply h-fit w-full cursor-pointer items-center gap-2 rounded-box border border-p2 bg-p2/30 opacity-70 shadow-xs;
 }
 
 /* item set item */
 
 .item-set-icon {
-  border-color: var(--color-b2);
-  background-color: --alpha(var(--bg-b2) / 30%);
+  border-color: var(--color-p2);
+  background-color: --alpha(var(--bg-p2) / 30%);
   overflow: hidden;
   aspect-ratio: square;
   width: var(--spacing) * 18;
@@ -39,20 +39,20 @@
 
 .draggable-icon-ghost,
 .draggable-icon-fallback {
-  @apply aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
+  @apply aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-p2 bg-p2/30 opacity-70 shadow-xs;
 }
 
 .draggable-icon-fallback-80px,
 .draggable-icon-ghost-80px,
 .item-set-item-chosen-80px {
-  @apply aspect-square !size-[78px] cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-b2 bg-b2/30 opacity-70 shadow-xs;
+  @apply aspect-square !size-[78px] cursor-pointer items-center justify-center gap-2 self-center overflow-hidden rounded-lg border border-p2 bg-p2/30 opacity-70 shadow-xs;
 }
 /* spell set */
 
 .spell-set-ghost,
 .spell-set-drag,
 .spell-set-chosen {
-  @apply h-20 w-98 rounded-box border-b3/60 !bg-b2/40;
+  @apply h-20 w-98 rounded-box border-p3/60 !bg-p2/40;
 }
 
 /* role */
@@ -67,7 +67,7 @@
   width: 170px;
   min-width: 170px;
   max-width: 170px;
-  border: 1px solid var(--color-b3);
+  border: 1px solid var(--color-p3);
   height: calc(var(--spacing) * 36);
   max-height: calc(var(--spacing) * 36);
   overflow: hidden;

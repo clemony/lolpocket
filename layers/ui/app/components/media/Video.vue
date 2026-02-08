@@ -23,15 +23,16 @@ function reload() {
     ref="videoRef"
     class="size-full overflow-hidden object-cover"
     autoplay
-    b2
+    p2
     loop
     disablepictureinpicture
     disableremoteplayback
     controlslist=" nodownload "
     playsinline
     @canplay="canPlay()"
-    @error="reload()"
-  >
-    <source :src="src" type="video/webm">
+    @error="reload()">
+    <source
+      :src="src"
+      type="video/webm">
   </video>
 </template>

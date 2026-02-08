@@ -6,7 +6,7 @@ const { remaining, start } = useCountdown(countdownSeconds, {
     time.value = false
   },
 })
-// @todo fix usermatchdata
+// todo fix usermatchdata
 async function fetchData() {
   const userMatchData = [] // this not const was removed ok
   // handleUserMatchData(matchArray)
@@ -30,17 +30,18 @@ const timeLeft = computed(() => {
             ? `Update available in ${timeLeft}`
             : 'Update Data'
         "
-        class="dr-30 btn btn-square not-disabled:btn-neutral absolute -right-1 bottom-0 size-7 justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md transition-colors hover:opacity-100 disabled:pointer-events-none! disabled:cursor-default disabled:opacity-90!"
+        class="dr-30 btn absolute -right-1 bottom-0 btn-square size-7 justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md transition-colors not-disabled:btn-neutral hover:opacity-100 disabled:pointer-events-none! disabled:cursor-default disabled:opacity-90!"
         as="button"
         :disabled="timeLeft !== '1:40'"
-        @click="fetchData()"
-      >
-        <icon class="text-nc size-4.5" name="ion:sync-sharp" />
+        @click="fetchData()">
+        <icon
+          class="size-4.5 text-nc"
+          name="ion:sync-sharp" />
       </Motion>
     </SummonerIcon>
 
     <div class="flex flex-col items-center justify-center">
-      <SummonerName class="text-xxl dst truncate leading-none font-semibold" />
+      <SummonerName class="truncate text-xxl leading-none font-semibold dst" />
 
       <p class="left-2 mt-2.5">
         #

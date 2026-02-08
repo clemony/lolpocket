@@ -12,7 +12,6 @@ const forwarded = useForwardPropsEmits(props, emits)
   <CollapsibleRoot v-bind="forwarded">
     <slot
       :open="forwarded.open"
-      :toggle="() => emits('update:open', !forwarded.open)"
-    />
+      :toggle="() => emits('update:open', !forwarded.open)" />
   </CollapsibleRoot>
 </template>

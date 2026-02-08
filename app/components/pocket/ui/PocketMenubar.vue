@@ -50,6 +50,7 @@ const menu: MenubarGroup[] = [
       {
         name: 'Download...',
         inset: true,
+        type: 'submenu',
         items: [
           {
             name: 'PNG',
@@ -67,7 +68,6 @@ const menu: MenubarGroup[] = [
             shortcut: { class: dlClass, icon: 'download' },
           },
         ],
-        type: 'submenu',
       },
       { name: 'separator' },
       {
@@ -87,23 +87,23 @@ const menu: MenubarGroup[] = [
       { name: 'separator' },
       {
         name: 'Pinned',
-        icon: { name: 'pin', class: '**:stroke-[1.8]' },
         items: ps()
           .pockets
           .filter(p => ps().pinned.includes(p.key))
           .sort((a, b) => a.name.localeCompare(b.name)),
         pocket: true,
         type: 'submenu',
+        icon: { name: 'pin', class: '**:stroke-[1.8]' },
       },
       {
         name: 'All',
-        icon: { name: 'folders' },
         items: ps()
           .pockets
           .filter(p => !ps().pinned.includes(p.key))
           .sort((a, b) => a.name.localeCompare(b.name)),
         pocket: true,
         type: 'submenu',
+        icon: { name: 'folders' },
       },
       { name: 'separator' },
       {
@@ -133,11 +133,13 @@ const menu: MenubarGroup[] = [
       { name: 'separator' },
       {
         name: 'core',
+        type: 'group',
         items: [
           {
             name: 'champion',
-            class: { content: 'w-62' },
             inset: true,
+            type: 'submenu',
+            class: { content: 'w-62' },
             items: [
               createRadioGroupItem({
                 name: 'Core Champion',
@@ -155,13 +157,13 @@ const menu: MenubarGroup[] = [
                 k: pocket.value._champion,
               }),
             },
-            type: 'submenu',
           },
 
           {
             name: 'role',
-            class: { content: 'w-52' },
             inset: true,
+            type: 'submenu',
+            class: { content: 'w-52' },
             items: [
               createRadioGroupItem({
                 name: 'Main Role',
@@ -174,13 +176,13 @@ const menu: MenubarGroup[] = [
               }),
             ],
             shortcut: { text: pocket.value._role || '' },
-            type: 'submenu',
           },
           {
             name: 'runes',
-            class: { content: 'w-70' },
             component: RunesAutoMenu,
             inset: true,
+            type: 'submenu',
+            class: { content: 'w-70' },
             shortcut: {
               component: h(RuneAndPathImg, {
                 class: 'size-7 rounded-full',
@@ -188,13 +190,13 @@ const menu: MenubarGroup[] = [
                 set: unref(set),
               }),
             },
-            type: 'submenu',
           },
           {
             name: 'items',
-            class: { content: 'w-56' },
             component: ItemsAutoMenu,
             inset: true,
+            type: 'submenu',
+            class: { content: 'w-56' },
             shortcut: {
               component: h(MiniItemAvatars, {
                 set: pocket.value.items.find(
@@ -202,13 +204,13 @@ const menu: MenubarGroup[] = [
                 ),
               }),
             },
-            type: 'submenu',
           },
           {
             name: 'spells',
-            class: { content: 'w-38' },
             component: SpellsAutoMenu,
             inset: true,
+            type: 'submenu',
+            class: { content: 'w-38' },
             shortcut: {
               component: h(MiniSpellAvatars, {
                 set: pocket.value.spells.find(
@@ -216,10 +218,8 @@ const menu: MenubarGroup[] = [
                 ),
               }),
             },
-            type: 'submenu',
           },
         ],
-        type: 'group',
       },
 
       { name: 'separator' },
@@ -245,25 +245,27 @@ console.log('🌱 - menu:', menu)
 
 <template>
   <Menubar class="z-1 -ml-4 h-11 w-fit self-end pb-2.5">
-    <MenubarMenu v-for="group in menu" :key="group.name" :value="group.name">
-      <MenubarTrigger class="hover:bg-transparent" as-child>
+    <MenubarMenu
+      v-for="group in menu"
+      :key="group.name"
+      :value="group.name">
+      <MenubarTrigger
+        class="hover:bg-transparent"
+        as-child>
         <Button
           class="rounded-lg px-4 capitalize open:brightness-98"
           on="secondary"
-          size="sm"
-        >
+          size="sm">
           {{ group.name }}
         </Button>
       </MenubarTrigger>
       <LazyMenubarContent
         :side-offset="2"
-        :class="cn('w-64 **:capitalize', group.class)"
-      >
+        :class="cn('w-64 **:capitalize', group.class)">
         <AutoMenuContent
           v-for="item in group.items"
           :key="item.name.toString()"
-          :item
-        />
+          :item />
       </LazyMenubarContent>
     </MenubarMenu>
 

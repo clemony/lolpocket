@@ -55,11 +55,9 @@ console.log('🥸 - summoner?.value:', summoner?.value)
           'shrink-0 [&_svg]:size-4.25',
         )
       "
-      @click="loadNew()"
-    >
+      @click="loadNew()">
       <TransitionScalePop
-        class="relative grid size-full place-items-center overflow-hidden"
-      >
+        class="relative grid size-full place-items-center overflow-hidden">
         <Icon
           v-if="!cooldown"
           name="reset"
@@ -68,8 +66,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
               'size-5 opacity-100 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
               { 'animate-rotate': isLoading },
             )
-          "
-        />
+          " />
 
         <div
           v-if="cooldown"
@@ -81,8 +78,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
             '--thickness': '4px',
           }"
           :aria-valuenow="cooldown?.percent"
-          role="progressbar"
-        >
+          role="progressbar">
           <span class="absolute place-self-center text-xs font-semibold">
             {{ cooldown?.seconds }}
           </span>

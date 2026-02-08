@@ -1,21 +1,21 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:51 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Granite Shield",
-  "affects": "Self",
-  "blurb": "Innate:  Malphite  shields himself equal to a portion of his maximum health, which refreshes after a few seconds without taking damage.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Granite Shield',
+  affects: 'Self',
+  blurb: 'Innate:  Malphite  shields himself equal to a portion of his maximum health, which refreshes after a few seconds without taking damage.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/p',
+  notes: 'Malphite\'s increased size is affected by his base armor and growth, but also reduced by  Black Cleaver. His increased size does not consider  Thunderclap\'s bonus armor.\nThe bonus will become a size reduction if Malphite is dropped to negative armor values.\nGranite Shield does not refresh its cooldown from damage that is mitigated by  shields.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Shard of the Monolith:</span> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate - Shard of the Monolith:</span> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.</p>'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Granite Shield:</span> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and replenishes to full strength after a few seconds of not taking damage.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate - Granite Shield:</span> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and replenishes to full strength after a few seconds of not taking damage.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/p",
-  "notes": "Malphite's increased size is affected by his base armor and growth, but also reduced by  Black Cleaver. His increased size does not consider  Thunderclap's bonus armor.\nThe bonus will become a size reduction if Malphite is dropped to negative armor values.\nGranite Shield does not refresh its cooldown from damage that is mitigated by  shields.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

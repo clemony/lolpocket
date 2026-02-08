@@ -46,10 +46,10 @@ const wrapperVariants = {
   visible: {
     opacity: 1,
     scale: 1,
+    visibility: 'visible',
     transition: {
       delay: 0.2,
     },
-    visibility: 'visible',
   },
 }
 </script>
@@ -57,7 +57,9 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent :side-offset="-12" as-child>
+      <PopoverContent
+        :side-offset="-12"
+        as-child>
         <motion.div
           v-bind="{ forwarded }"
           :variants="variants"
@@ -73,11 +75,9 @@ const wrapperVariants = {
             cn(
               'border-black-30! bg-black-22/94 z-50 size-max rounded-xl border shadow-md drop-shadow-md backdrop-blur-lg outline-none **:not-[&_.icon]:**:text-white/80 not-[.icon]:text-white/80 group-data-[state=hidden]:**:opacity-0 group-data-[state=visible]:**:opacity-100',
             )
-          "
-        >
+          ">
           <PopoverArrow
-            class="icon translate-y-0.25 text-black/80! **:text-black/80!"
-          />
+            class="icon translate-y-0.25 text-black/80! **:text-black/80!" />
 
           <motion.div
             class=""
@@ -90,8 +90,7 @@ const wrapperVariants = {
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }"
-          >
+            }">
             <slot />
           </motion.div>
         </motion.div>

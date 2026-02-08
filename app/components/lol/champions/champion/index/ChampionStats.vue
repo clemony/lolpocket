@@ -136,12 +136,10 @@ const filteredStats = computed(() => {
 <template>
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
-    class="group/cl flex flex-col gap-6 px-0 open:h-auto open:overflow-visible!"
-  >
+    class="group/cl flex flex-col gap-6 px-0 open:h-auto open:overflow-visible!">
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
-        class="group/tr flex h-16 min-h-16 w-full cursor-pointer items-center justify-between px-5"
-      >
+        class="group/tr flex h-16 min-h-16 w-full cursor-pointer items-center justify-between px-5">
         <h3 class="underline-offset-3 dst group-hover/tr:underline">
           Stats
         </h3>
@@ -149,8 +147,7 @@ const filteredStats = computed(() => {
       </div>
       <div
         class="group-data-[state=open]/cl:animate-in group-data-[state=open]/cl:fade-in-0 group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:animate-out -mt-3 flex w-full flex-col items-start px-5 pb-2 duration-300 group-closed/cl:hidden"
-        @click.stop
-      >
+        @click.stop>
         <span class="w-full text-start">
           {{ champion.name }} lv. {{ level[0] }}
         </span>
@@ -164,25 +161,21 @@ const filteredStats = computed(() => {
             :max="18"
             :step="1"
             :min-steps-between-thumbs="1"
-            :min="1"
-          >
+            :min="1">
             <span class="absolute text-xs! font-semibold">{{ level[0] }}</span>
           </Slider>
           <div
-            class="absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18 justify-evenly pr-4 pl-5.5"
-          >
+            class="absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18 justify-evenly pr-4 pl-5.5">
             <button
               v-for="i in 18"
               :key="i"
               class="relative grid size-full cursor-pointer transition-all duration-200 hover:**:font-bold hover:**:opacity-100"
-              @click="level[0] = i"
-            >
+              @click="level[0] = i">
               <div
                 :class="cn('absolute grid self-start!')"
                 :style="{
                   transform: `translateX(${((i - 1) / 18) * 100}%)`,
-                }"
-              >
+                }">
                 <span
                   :class="
                     cn('scale-y-50 self-start! opacity-50', {
@@ -190,14 +183,12 @@ const filteredStats = computed(() => {
                         i,
                       ),
                     })
-                  "
-                >
+                  ">
                   |
                 </span>
                 <span
                   v-if="[1, 6, 11, 16, 18].includes(i)"
-                  class="absolute translate-y-4.5 items-end self-end justify-self-center text-xs tabular-nums"
-                >
+                  class="absolute translate-y-4.5 items-end self-end justify-self-center text-xs tabular-nums">
                   {{ i }}
                 </span>
               </div>
@@ -207,16 +198,14 @@ const filteredStats = computed(() => {
       </div>
     </CollapsibleTrigger>
     <CollapsibleContent
-      class="z-1 flex h-fit w-full flex-col gap-2 pb-2 open:overflow-visible!"
-    >
+      class="z-1 flex h-fit w-full flex-col gap-2 pb-2 open:overflow-visible!">
       <div
         :class="
           cn(
             'field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
             { 'invisible hidden max-h-0 opacity-0': open },
           )
-        "
-      >
+        ">
         <!--  <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
           :key="stat.name"
@@ -226,7 +215,9 @@ const filteredStats = computed(() => {
         /> -->
       </div>
 
-      <Collapsible v-model:open="open" class="w-full">
+      <Collapsible
+        v-model:open="open"
+        class="w-full">
         <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
           <!--  <div
             v-for="(group, ix) in filteredStats.more"
@@ -256,7 +247,9 @@ const filteredStats = computed(() => {
           </div> -->
         </CollapsibleContent>
         <CollapsibleTrigger class="w-full">
-          <LessOrMore class="w-[98%] justify-self-center" :open />
+          <LessOrMore
+            class="w-[98%] justify-self-center"
+            :open />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>

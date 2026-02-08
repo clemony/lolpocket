@@ -1,18 +1,18 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:15 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Crimson Pact",
-  "affects": "Self",
-  "blurb": "Innate:  Vladimir gains  ability power based on his bonus health, and  bonus health based on his ability power.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Crimson Pact',
+  affects: 'Self',
+  blurb: 'Innate:  Vladimir gains  ability power based on his bonus health, and  bonus health based on his ability power.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p',
+  notes: 'Crimson Pact only affects Vladimir\'s maximum health and will not increase Vladimir\'s current health to prevent Vladimir from restoring health whenever his ability power fluctuates.\nThe only exception is purchasing applicable items while inside the fountain, which will restore health equal to the bonus gained.\nVladimir\'s current health can decrease to match his maximum health if Crimson Pact\'s bonus health is lost.\nCrimson Pact\'s bonus ability power  stacks multiplicatively with other sources of % ability power but its bonus health  stacks additively with other sources of bonus health. With  Rabadon\'s Deathcap\'s Magical Opus, the total is (30% AP + 4.3329% bonus health) bonus ability power and (208% AP + 1.59984% bonus health) bonus health.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",
-  "notes": "Crimson Pact only affects Vladimir's maximum health and will not increase Vladimir's current health to prevent Vladimir from restoring health whenever his ability power fluctuates.\nThe only exception is purchasing applicable items while inside the fountain, which will restore health equal to the bonus gained.\nVladimir's current health can decrease to match his maximum health if Crimson Pact's bonus health is lost.\nCrimson Pact's bonus ability power  stacks multiplicatively with other sources of % ability power but its bonus health  stacks additively with other sources of bonus health. With  Rabadon's Deathcap's Magical Opus, the total is (30% AP + 4.3329% bonus health) bonus ability power and (208% AP + 1.59984% bonus health) bonus health.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

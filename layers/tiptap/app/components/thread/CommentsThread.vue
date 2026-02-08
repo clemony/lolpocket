@@ -24,8 +24,7 @@ onMounted(() => {
         v-slot="{ editor }"
         v-model="newComment"
         class="min-h-36"
-        :mention-data="getLeagueMentionData()"
-      >
+        :mention-data="getLeagueMentionData()">
         <PostButton
           :editor
           :new-comment
@@ -35,34 +34,31 @@ onMounted(() => {
               editor.commands.clearContent()
               editor.commands.blur()
             }
-          "
-        />
+          " />
       </CommentEditor>
     </div>
     <div
-      class="mt-8 inline-flex w-full items-center justify-end gap-2 px-1 align-bottom"
-    >
+      class="mt-8 inline-flex w-full items-center justify-end gap-2 px-1 align-bottom">
       <span class="mt-0.5 text-sm opacity-60">Sort by:</span>
       <SortThread
         v-model:model-value="sortBy"
         :disabled="!thread?.length"
-        @update:model-value="updateSort()"
-      />
+        @update:model-value="updateSort()" />
     </div>
 
     <div
       v-if="thread && thread?.length"
       :key="thread?.length"
-      class="grid h-max auto-rows-max"
-    >
+      class="grid h-max auto-rows-max">
       <CommentItem
         v-for="comment in thread.filter((t) => !t.parent_id)"
         :key="comment.id"
-        :comment="comment"
-      />
+        :comment="comment" />
     </div>
 
-    <div v-else class="grid h-44 w-full place-items-center">
+    <div
+      v-else
+      class="grid h-44 w-full place-items-center">
       <p>No comments yet. Be the first!</p>
     </div>
   </div>

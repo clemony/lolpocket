@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const { class: className, modelValue: mv } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   modelValue?: string
 }>()
 
-const emit = defineEmits(['clearInput'])
+const emit = defineEmits(["clearInput"])
 const modelValue = computed(() => mv)
 </script>
 
@@ -17,7 +17,7 @@ const modelValue = computed(() => mv)
         </InputGroupAddon>
         <InputGroupInput v-model:model-value="modelValue" @focus.prevent />
 
-        <InputGroupClear class="mr-6" @clear-input="emit('clearInput')" />
+        <InputClear class="mr-6" @clear-input="emit('clearInput')" />
         <InputGroupAddon align="inline-end">
           <icon class="mr-2 size-4.5 opacity-50" name="filter" />
         </InputGroupAddon>

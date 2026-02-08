@@ -24,8 +24,7 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </Label>
 </template>

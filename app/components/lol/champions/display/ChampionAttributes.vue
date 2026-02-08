@@ -40,13 +40,13 @@ console.log(
   Object.values(champion.attributeRatings)
 )
 const data = {
+  labels: normalizedKeys,
   datasets: [
     {
       data: normalizedValues,
       label: 'My First Dataset',
     },
   ],
-  labels: normalizedKeys,
 }
 
 const options = {
@@ -82,11 +82,11 @@ const options = {
       title: {
         align: 'start',
       },
+      backgroundColor: `color-mix(in oklch, ${cssVar('--color-p3')} 40%, #00000000 60%)`,
+      beginAtZero: true,
       angleLines: {
         display: false,
       },
-      backgroundColor: `color-mix(in oklch, ${cssVar('--color-b3')} 40%, #00000000 60%)`,
-      beginAtZero: true,
       pointLabels: {
         font: {
           weight: 'bold' as const,
@@ -101,13 +101,15 @@ const options = {
 </script>
 
 <template>
-  <div class="bg-b3/30 relative m-0 w-full justify-self-center pt-6 pb-0!">
+  <div class="relative m-0 w-full justify-self-center bg-p3/30 pt-6 pb-0!">
     <div
-      class="text-md text-bc/50 absolute top-5 left-6 font-bold tracking-tight drop-shadow-sm"
-    >
+      class="absolute top-5 left-6 text-md font-bold tracking-tight text-pc/50 drop-shadow-sm">
       Champion Attributes
     </div>
 
-    <Radar class="drop-shadow-sm" :data="data" :options="options" />
+    <Radar
+      class="drop-shadow-sm"
+      :data="data"
+      :options="options" />
   </div>
 </template>

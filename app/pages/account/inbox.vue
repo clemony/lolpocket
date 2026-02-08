@@ -39,14 +39,12 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
 <template>
   <BoxLayout
     :is-collapsed
-    @toggle:collapse="(e) => (isCollapsed = !e)"
+    @toggle-collapse="(e) => (isCollapsed = !e)"
     @expand="isCollapsed = true"
-    @collapse="isCollapsed = false"
-  >
+    @collapse="isCollapsed = false">
     <template #nav>
       <div
-        class="flex size-full h-16 w-full items-center justify-center border-b p-1"
-      >
+        class="flex size-full h-16 w-full items-center justify-center border-b p-1">
         <Popover>
           <PopoverTrigger as-child>
             <Button
@@ -58,33 +56,28 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
                   'w-full': !isCollapsed,
                   'h-full self-center rounded-full': isCollapsed,
                 })
-              "
-            >
+              ">
               <SummonerIcon
                 :class="
                   cn('size-full rounded-full', {
                     'size-7': !isCollapsed,
                     'size-10': isCollapsed,
                   })
-                "
-              />
+                " />
               <span
                 v-show="!isCollapsed"
-                class="dst grow items-center text-xl font-semibold *:first:capitalize"
-              >
+                class="grow items-center text-xl font-semibold dst *:first:capitalize">
                 <SummonerName class="inline" />
                 's Inbox
               </span>
               <icon
                 v-show="!isCollapsed"
                 name="up-down"
-                :class="cn('text-bc/60 size-4.5')"
-              />
+                :class="cn('size-4.5 text-pc/60')" />
             </Button>
           </PopoverTrigger>
           <LazyPopoverContent
-            class="w-(--reka-popover-trigger-width) min-w-64 space-y-1 p-1.5"
-          >
+            class="w-(--reka-popover-trigger-width) min-w-64 space-y-1 p-1.5">
             <InboxDropdownMenu />
           </LazyPopoverContent>
         </Popover>
@@ -95,8 +88,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
           route.matched[0].children.sort(
             (a, b) => Number(a.meta?.order) - Number(b.meta?.order),
           )
-        "
-      />
+        " />
 
       <Separator />
 

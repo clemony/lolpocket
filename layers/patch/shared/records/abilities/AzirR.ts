@@ -1,76 +1,76 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "R",
-  "name": "Emperor's Divide",
-  "affects": "Enemies",
-  "blurb": "Active:  Azir summons a wall of soldiers that charges forward, dealing magic damage and  knocking back enemies hit.",
-  "castTime": "0.5",
-  "cooldown": "120 / 105 / 90",
-  "cost": "100",
-  "damageType": "Magic damage",
-  "effectRadius": "125",
-  "effects": [
+const ability: Ability = {
+  key: 'R',
+  name: 'Emperor\'s Divide',
+  affects: 'Enemies',
+  blurb: 'Active:  Azir summons a wall of soldiers that charges forward, dealing magic damage and  knocking back enemies hit.',
+  castTime: '0.5',
+  cooldown: '120 / 105 / 90',
+  cost: '100',
+  damageType: 'Magic damage',
+  effectRadius: '125',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/r',
+  notes: 'The soldier units are spawned only 175 units behind Azir, but do not control the  knock back directly. Each comes with a missile that travels the same path and conveys the damage and knockback effect.\nThe furthest area (from 325 to 175 units behind Azir) is covered by a separate set of missiles with the same effects.\nAll of the soldiers and their missiles will end the charge prematurely when one encounters  Wind Wall /  Unbreakable /  Blade Whirl /  Rebuttal or upon colliding with terrain that they cannot charge through.\nThe charge starts at 0.25 seconds into the cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nWhen the dash of the soldiers comes to a halt, all not-yet-affected enemies on top of the soldiers\' landing locations (125 radius) are also knocked back.\nEmperor\'s Divide will not be canceled if Azir dies during the cast time.\nWhile the soldiers are charging forward, the wall is not impassable terrain.\nThis means enemies that are immune to  airborne effects can pass through the wall while its moving.\nThe wall will count as terrain for the purposes of \'into terrain\' effects (e.g.  Condemn,  Dredge Line,  Heroic Charge). This will only affect enemies, allies will pass through the wall in all circumstances, even if knocked into it by an enemy.',
+  projectile: 'SPECIAL',
+  resource: 'Mana',
+  speed: '1000 / 1400',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '400 / -325',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.</p>',
+      leveling: [
         {
-          "attribute": "Width",
-          "modifiers": [
+          attribute: 'Width',
+          modifiers: [
             {
-              "unit": " soldiers",
-              "values": "6 / 7 / 8"
+              unit: ' soldiers',
+              values: '6 / 7 / 8'
             }
           ]
         },
         {
-          "attribute": "Width (charge)",
-          "modifiers": [
+          attribute: 'Width (charge)',
+          modifiers: [
             {
-              "values": "620 / 720 / 820"
+              values: '620 / 720 / 820'
             }
           ]
         },
         {
-          "attribute": "Width (impassable wall)",
-          "modifiers": [
+          attribute: 'Width (impassable wall)',
+          modifiers: [
             {
-              "values": "750 / 850 / 950"
+              values: '750 / 850 / 950'
             }
           ]
         }
       ]
     },
     {
-      "description": "Enemies impacted by the charge are dealt magic damage and knocked away over 1 second to a line 650 units in front of Azir.",
-      "leveling": [
+      description: 'Enemies impacted by the charge are dealt magic damage and knocked away over 1 second to a line 650 units in front of Azir.',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "200 / 400 / 600"
+              values: '200 / 400 / 600'
             },
             {
-              "unit": "% AP",
-              "values": "75"
+              unit: '% AP',
+              values: '75'
             }
           ]
         }
       ]
     },
     {
-      "description": "Upon finishing their charge, the soldiers stand as a wall for 5 seconds, acting as impassible terrain against enemies and granting sight of their surroundings. Azir and his allies can move through these soldiers."
+      description: 'Upon finishing their charge, the soldiers stand as a wall for 5 seconds, acting as impassible terrain against enemies and granting sight of their surroundings. Azir and his allies can move through these soldiers.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/r",
-  "notes": "The soldier units are spawned only 175 units behind Azir, but do not control the  knock back directly. Each comes with a missile that travels the same path and conveys the damage and knockback effect.\nThe furthest area (from 325 to 175 units behind Azir) is covered by a separate set of missiles with the same effects.\nAll of the soldiers and their missiles will end the charge prematurely when one encounters  Wind Wall /  Unbreakable /  Blade Whirl /  Rebuttal or upon colliding with terrain that they cannot charge through.\nThe charge starts at 0.25 seconds into the cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nWhen the dash of the soldiers comes to a halt, all not-yet-affected enemies on top of the soldiers' landing locations (125 radius) are also knocked back.\nEmperor's Divide will not be canceled if Azir dies during the cast time.\nWhile the soldiers are charging forward, the wall is not impassable terrain.\nThis means enemies that are immune to  airborne effects can pass through the wall while its moving.\nThe wall will count as terrain for the purposes of 'into terrain' effects (e.g.  Condemn,  Dredge Line,  Heroic Charge). This will only affect enemies, allies will pass through the wall in all circumstances, even if knocked into it by an enemy.",
-  "projectile": "SPECIAL",
-  "resource": "Mana",
-  "speed": "1000 / 1400",
-  "spellEffects": "spellaoe",
-  "spellshieldable": "True",
-  "targeting": "Direction",
-  "targetRange": "400 / -325"
+  ]
 }
-  export default ability
+export default ability

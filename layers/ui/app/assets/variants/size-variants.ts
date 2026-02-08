@@ -36,10 +36,10 @@ export function buildSizeVariants() {
   }
 
   Object.assign(sVariants, {
-    'c': [gc, 'rounded-full'],
     'icon': 'grid aspect-square relative place-items-center size-4.5 *:absolute',
     'icon-sm':
       'grid aspect-square relative place-items-center size-4 *:absolute',
+    'c': [gc, 'rounded-full'],
     'sq': [gc, 'rounded-lg'],
   })
 

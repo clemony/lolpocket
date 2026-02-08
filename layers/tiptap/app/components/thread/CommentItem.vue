@@ -4,7 +4,7 @@ const { comment, depth, parentHovered } = defineProps<{
   depth?: number
   parentHovered?: boolean
 }>()
-const emit = defineEmits(['trigger-hovered'])
+const emit = defineEmits(['triggerHovered'])
 
 const replies = ts().getChildComments(comment.thread_id, comment.id)
 const hovered = ref<boolean>(false)
@@ -30,30 +30,26 @@ useTooltips(container) */
 
     <button
       v-if="replies"
-      ref="target"
       class="group/tree absolute inset-y-0 top-3 bottom-2.25 left-5 z-2 grid w-4 shrink-0 grow items-center pt-19 pb-5.25 transition-all duration-300"
       @mouseenter="hovered = true"
       @mouseleave="hovered = false"
       @focusin="hovered = true"
-      @focusout="hovered = false"
-    >
+      @focusout="hovered = false">
       <Separator
         orientation="vertical"
         :class="
           cn(
-            'border-shade-b3/10 group-hover/tree:border-shade-b3/20 rounded-bl-lg border-l bg-transparent transition-colors duration-200',
-            { 'border-shade-b3/20!': hovered },
+            'rounded-bl-lg border-l border-shade-p3/10 bg-transparent transition-colors duration-200 group-hover/tree:border-shade-p3/20',
+            { 'border-shade-p3/20!': hovered },
           )
-        "
-      />
+        " />
     </button>
     <Collapsible
       :id="comment.id"
       v-slot="{ open }"
       :default-open="!comment?.removed"
       :disabled="!replies?.length"
-      :class="cn('z-auto h-max py-2', { 'ml-12': depth })"
-    >
+      :class="cn('z-auto h-max py-2', { 'ml-12': depth })">
       <!-- child trigger
       v-element-hover="" -->
 
@@ -61,30 +57,27 @@ useTooltips(container) */
         v-if="!replies?.length && depth"
         :class="
           cn(
-            'border-b-b3 hover:border-shade-b3/20 pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b',
-            { 'border-shade-b3/20!': parentHovered },
+            'pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b border-b-p3 hover:border-shade-p3/20',
+            { 'border-shade-p3/20!': parentHovered },
           )
         "
-        @mouseenter="emit('trigger-hovered', true)"
-        @mouseleave="emit('trigger-hovered', false)"
-        @focusin="emit('trigger-hovered', true)"
-        @focusout="emit('trigger-hovered', false)"
-      />
+        @mouseenter="emit('triggerHovered', true)"
+        @mouseleave="emit('triggerHovered', false)"
+        @focusin="emit('triggerHovered', true)"
+        @focusout="emit('triggerHovered', false)" />
       <div class="relative w-full">
         <!-- comment toolbar -->
         <CommentToolbar
           v-slot="{ toggleEdit, editing, toggleReply, replying }"
           :comment
-          :hovered="computed(() => hovered)"
-        >
+          :hovered="computed(() => hovered)">
           <!-- header -->
 
           <CommentHeader
             :comment
             :author
             :has-replies="!!replies?.length"
-            :open
-          >
+            :open>
             <UserMenu :author :comment />
           </CommentHeader>
 
@@ -92,17 +85,14 @@ useTooltips(container) */
           <UpdateComment
             v-if="comment?.content && comment?.is_author && editing"
             :comment
-            @close="toggleEdit"
-          />
+            @close="toggleEdit" />
 
           <!-- render comment -->
 
           <div
             v-else-if="!editing"
-            ref="container"
             class="tiptap py-2 pl-12.5"
-            v-html="comment?.html ?? renderedHtml"
-          />
+            v-html="comment?.html ?? renderedHtml" />
 
           <!-- reply -->
           <ReplyComment v-if="replying" :comment @close="toggleReply" />
@@ -113,16 +103,14 @@ useTooltips(container) */
 
       <CollapsibleContent
         v-if="replies?.length"
-        class="relative flex w-full items-center"
-      >
+        class="relative flex w-full items-center">
         <div class="relative grid grow auto-rows-auto">
           <CommentItem
             v-for="reply in replies"
             :key="reply.id"
             :comment="reply"
             :depth="(depth ?? 0) + 1"
-            @trigger-hovered="(e) => hovered === e"
-          />
+            @trigger-hovered="(e) => hovered === e" />
         </div>
       </CollapsibleContent>
 
@@ -130,22 +118,20 @@ useTooltips(container) */
 
       <CollapsibleTrigger
         v-if="replies?.length"
-        class="text-bc/30 hover:text-bc relative ml-5 px-5 text-xs hover:underline"
+        class="relative ml-5 px-5 text-xs text-pc/30 hover:text-pc hover:underline"
         size="8"
         :parent-hovered="hovered"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
         @focusin="hovered = true"
-        @focusout="hovered = false"
-      >
+        @focusout="hovered = false">
         <span
           :class="
             cn(
-              'border-shade-b3/10 dst hover:border-shade-b3/20 absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b transition-colors duration-200',
-              { 'border-shade-b3/25!': hovered },
+              'absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b border-shade-p3/10 dst transition-colors duration-200 hover:border-shade-p3/20',
+              { 'border-shade-p3/25!': hovered },
             )
-          "
-        />
+          " />
         {{ open ? "Collapse" : `${replies?.length} replies...` }}
       </CollapsibleTrigger>
     </Collapsible>

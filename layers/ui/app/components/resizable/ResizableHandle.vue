@@ -28,16 +28,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :hit-area-margins="{ coarse: 14, fine: 14 }"
     :class="
       cn(
-        'group border-b2 bg-b3/80 focus-visible:ring-b2 relative flex w-px items-center justify-center after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:outline-none data-[orientation=vertical]:h-px data-[orientation=vertical]:w-full data-[orientation=vertical]:after:left-0 data-[orientation=vertical]:after:h-1 data-[orientation=vertical]:after:w-full data-[orientation=vertical]:after:translate-x-0 data-[orientation=vertical]:after:-translate-y-1/2 [&[data-orientation=vertical]>div]:rotate-90',
+        'group relative flex w-px items-center justify-center border-p2 bg-p3/80 after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:ring-1 focus-visible:ring-p2 focus-visible:ring-offset-1 focus-visible:outline-none data-[orientation=vertical]:h-px data-[orientation=vertical]:w-full data-[orientation=vertical]:after:left-0 data-[orientation=vertical]:after:h-1 data-[orientation=vertical]:after:w-full data-[orientation=vertical]:after:translate-x-0 data-[orientation=vertical]:after:-translate-y-1/2 [&[data-orientation=vertical]>div]:rotate-90',
         props.class,
       )
-    "
-  >
+    ">
     <template v-if="props.withHandle">
       <div
-        class="border-b3 bg-b1 dst z-10 flex h-6 w-5 items-center justify-center rounded-sm border"
-      >
-        <icon class="size-4 opacity-50" name="radix-icons:drag-handle-dots-2" />
+        class="z-10 flex h-6 w-5 items-center justify-center rounded-sm border border-p3 bg-p0 dst">
+        <icon
+          class="size-4 opacity-50"
+          name="radix-icons:drag-handle-dots-2" />
       </div>
     </template>
 

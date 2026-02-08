@@ -1,7 +1,7 @@
 // Updated Patch 16.1 - 01/29/2026 04:29:52 PM CST
 
 export const pathIds: Record<string, number[]> = {
-  "8000": [
+  8000: [
     8005,
     8008,
     8021,
@@ -16,7 +16,7 @@ export const pathIds: Record<string, number[]> = {
     8017,
     8299
   ],
-  "8100": [
+  8100: [
     8112,
     8128,
     9923,
@@ -30,7 +30,7 @@ export const pathIds: Record<string, number[]> = {
     8105,
     8106
   ],
-  "8200": [
+  8200: [
     8214,
     8229,
     8230,
@@ -44,7 +44,7 @@ export const pathIds: Record<string, number[]> = {
     8232,
     8236
   ],
-  "8300": [
+  8300: [
     8351,
     8360,
     8369,
@@ -58,7 +58,7 @@ export const pathIds: Record<string, number[]> = {
     8410,
     8316
   ],
-  "8400": [
+  8400: [
     8437,
     8439,
     8465,

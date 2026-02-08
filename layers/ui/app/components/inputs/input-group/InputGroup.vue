@@ -23,8 +23,7 @@ const props = withDefaults(
     v-bind="props"
     data-slot="input-group"
     role="group"
-    :class="cn(inputGroupVariants({ size, variant, hover }), props.class)"
-  >
+    :class="cn(inputGroupVariants({ size, variant, hover }), props.class)">
     <slot />
   </Primitive>
 </template>

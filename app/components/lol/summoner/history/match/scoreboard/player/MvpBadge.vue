@@ -11,15 +11,14 @@ const { match, player } = defineProps<{
       v-if="player.lpScore.score === 1 || player.lpScore.ace"
       :class="
         cn(
-          'text-xxs! dark:text-b1 light:text-white h-4.5! gap-px px-1.5! font-bold tracking-wide shadow-xs **:leading-0',
+          'h-4.5! gap-px px-1.5! text-2xs! font-bold tracking-wide shadow-xs **:leading-0 dark:text-p0 light:text-white',
           {
-            'light:border-g/40 light:bg-as dark:bg-precision dark:border-precision/60':
+            'dark:border-precision/60 dark:bg-precision light:border-g/40 light:bg-as':
               player.lpScore.mvp,
-            'bg-domination border-shade-domination/3': player.lpScore.ace,
-          },
+            'border-shade-domination/3 bg-domination': player.lpScore.ace,
+          }
         )
-      "
-    >
+      ">
       {{ player.lpScore.mvp ? "MVP" : "ACE" }}
     </Badge>
 

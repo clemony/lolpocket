@@ -1,7 +1,7 @@
 export async function accountFetch() {
   const progress = ref<number>(0)
   const toast = useToast()
-  const { account, pockets, settings } = await $fetch<UserProfileResponse>(
+  const { settings, account, pockets } = await $fetch<UserProfileResponse>(
     '/api/supabase/fetch/account',
     {
       headers: useRequestHeaders(['cookie']),
@@ -35,7 +35,6 @@ export async function accountFetch() {
     Object.assign(as().account, summoner)
   }
   progress.value = 90
-  as().$persist
   progress.value = 100
 
   toast.add({
@@ -45,8 +44,6 @@ export async function accountFetch() {
     }!`,
     icon: 'party',
   })
-
-  ps().$persist
 
   return { progress }
 }

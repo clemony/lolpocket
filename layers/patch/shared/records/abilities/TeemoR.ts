@@ -1,102 +1,102 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:11 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "R",
-  "name": "Noxious Trap",
-  "affects": "Enemies",
-  "blurb": "Active:  Teemo tosses a poisonous mushroom to the target location that becomes  stealthed and lasts for a while. It will bounce forward upon landing on another mushroom.",
-  "castTime": "0.25",
-  "collisionRadius": "160 / 150",
-  "cooldown": "0.25",
-  "cost": "75 / 55 / 35",
-  "damageType": "Magic damage",
-  "effectRadius": "450",
-  "effects": [
+const ability: Ability = {
+  key: 'R',
+  name: 'Noxious Trap',
+  affects: 'Enemies',
+  blurb: 'Active:  Teemo tosses a poisonous mushroom to the target location that becomes  stealthed and lasts for a while. It will bounce forward upon landing on another mushroom.',
+  castTime: '0.25',
+  collisionRadius: '160 / 150',
+  cooldown: '0.25',
+  cost: '75 / 55 / 35',
+  damageType: 'Magic damage',
+  effectRadius: '450',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r',
+  notes: 'The bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap\'s explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap\'s damage is determined when it detonates and not when planted, meaning if Teemo\'s  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.',
+  projectile: 'TRUE',
+  rechargeRate: '35 / 30 / 25',
+  resource: 'Mana',
+  spellEffects: 'aoedot',
+  spellshieldable: 'Special',
+  targeting: 'Location',
+  targetRange: '600 / 675 / 750 / 825 / 900',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p>',
+      leveling: [
         {
-          "attribute": "Bounce Distance Cap",
-          "modifiers": [
+          attribute: 'Bounce Distance Cap',
+          modifiers: [
             {
-              "values": "350 / 450 / 550"
+              values: '350 / 450 / 550'
             }
           ]
         }
       ]
     },
     {
-      "description": "Teemo periodically stocks a Noxious Trap charge, up to a maximum amount.",
-      "leveling": [
+      description: 'Teemo periodically stocks a Noxious Trap charge, up to a maximum amount.',
+      leveling: [
         {
-          "attribute": "Maximum Charges",
-          "modifiers": [
+          attribute: 'Maximum Charges',
+          modifiers: [
             {
-              "values": "3 / 4 / 5"
+              values: '3 / 4 / 5'
             }
           ]
         }
       ]
     },
     {
-      "description": "The mushroom will explode upon enemy contact, inflicting poison to nearby enemies and slowing them for 4 seconds, as well as revealing them.",
-      "leveling": [
+      description: 'The mushroom will explode upon enemy contact, inflicting poison to nearby enemies and slowing them for 4 seconds, as well as revealing them.',
+      leveling: [
         {
-          "attribute": "Slow",
-          "modifiers": [
+          attribute: 'Slow',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 40 / 50"
+              unit: '%',
+              values: '30 / 40 / 50'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage per Tick",
-          "modifiers": [
+          attribute: 'Magic Damage per Tick',
+          modifiers: [
             {
-              "values": "50 / 81.25 / 112.5"
+              values: '50 / 81.25 / 112.5'
             },
             {
-              "unit": "% AP",
-              "values": "12.5"
+              unit: '% AP',
+              values: '12.5'
             }
           ]
         },
         {
-          "attribute": "Total Magic Damage",
-          "modifiers": [
+          attribute: 'Total Magic Damage',
+          modifiers: [
             {
-              "values": "200 / 325 / 450"
+              values: '200 / 325 / 450'
             },
             {
-              "unit": "% AP",
-              "values": "50"
+              unit: '% AP',
+              values: '50'
             }
           ]
         }
       ]
     },
     {
-      "description": "A mushroom has 6 maximum health and can only be damaged by champion basic attacks (2 damage from ranged and 3 from melee)."
+      description: 'A mushroom has 6 maximum health and can only be damaged by champion basic attacks (2 damage from ranged and 3 from melee).'
     },
     {
-      "description": "See Pets for more details about mushroom traps."
+      description: 'See Pets for more details about mushroom traps.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
-  "notes": "The bounce can occur an indefinite amount of times while Teemo is alive. If Teemo dies before Noxious Trap bounces on another, the trap will disappear.\n Rift Scuttler will not trigger Noxious Trap's explosion if it is not being attacked.\nEnemies who step on multiple Noxious Traps will only refresh the duration of the damage over time and slow.\nNoxious Trap's damage is determined when it detonates and not when planted, meaning if Teemo's  ability power changes, the scaling is also altered to affect the active damage of all Noxious Traps so long as they do not explode.\n Spell shield will prevent the damage over time and slow for all units but will not prevent the detonation itself.",
-  "projectile": "TRUE",
-  "rechargeRate": "35 / 30 / 25",
-  "resource": "Mana",
-  "spellEffects": "aoedot",
-  "spellshieldable": "Special",
-  "targeting": "Location",
-  "targetRange": "600 / 675 / 750 / 825 / 900"
+  ]
 }
-  export default ability
+export default ability

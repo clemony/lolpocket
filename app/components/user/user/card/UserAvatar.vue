@@ -20,11 +20,10 @@ const icon = computed(() => {
     color="neutral"
     :class="
       cn(
-        'shrink-0 rounded-full size-9 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
+        'size-9 shrink-0 overflow-hidden rounded-full shadow-sm shadow-black/15 drop-shadow-sm drop-shadow-black/15',
         className,
       )
-    "
-  >
+    ">
     <Icon
       :name="String(icon)"
       alt="summoner icon"
@@ -32,8 +31,7 @@ const icon = computed(() => {
         cn('pointer-events-none size-full [&_img]:scale-115', {
           '**:text-nc size-9! place-self-center': icon === 'i-ui-oh-no',
         })
-      "
-    />
+      " />
 
     <slot />
   </Element>

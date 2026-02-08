@@ -32,10 +32,11 @@ const forwarded = useForwardProps(delegatedProps)
 
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon class="size-4" name="add" />
+      <icon
+        class="size-4"
+        name="add" />
     </slot>
   </NumberFieldIncrement>
 </template>

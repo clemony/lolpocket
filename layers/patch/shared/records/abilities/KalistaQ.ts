@@ -1,46 +1,46 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "Q",
-  "name": "Pierce",
-  "width": "80",
-  "affects": "Enemies",
-  "blurb": "Active:  Kalista throws a spear in the target direction that deals physical damage to the first enemy hit.",
-  "castTime": "0.25",
-  "cooldown": "9",
-  "cost": "60 / 65 / 70 / 75 / 80",
-  "damageType": "Physical damage",
-  "effects": [
+const ability: Ability = {
+  key: 'Q',
+  name: 'Pierce',
+  width: '80',
+  affects: 'Enemies',
+  blurb: 'Active:  Kalista throws a spear in the target direction that deals physical damage to the first enemy hit.',
+  castTime: '0.25',
+  cooldown: '9',
+  cost: '60 / 65 / 70 / 75 / 80',
+  damageType: 'Physical damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/q',
+  notes: 'This ability will cast from wherever the caster is at the end of the cast time.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '2400',
+  spellEffects: 'Single target',
+  spellshieldable: 'True',
+  targeting: 'Direction',
+  targetRange: '1200',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.</p>',
+      leveling: [
         {
-          "attribute": "Physical Damage",
-          "modifiers": [
+          attribute: 'Physical Damage',
+          modifiers: [
             {
-              "values": "10 / 75 / 140 / 205 / 270"
+              values: '10 / 75 / 140 / 205 / 270'
             },
             {
-              "unit": "% AD",
-              "values": "105"
+              unit: '% AD',
+              values: '105'
             }
           ]
         }
       ]
     },
     {
-      "description": "If Pierce kills the target, the spear continues onward to transfer all of the target's Rend stacks to the next enemy it hits. This can repeat indefinitely until the spear reaches its maximum range."
+      description: 'If Pierce kills the target, the spear continues onward to transfer all of the target\'s Rend stacks to the next enemy it hits. This can repeat indefinitely until the spear reaches its maximum range.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/q",
-  "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
-  "projectile": "TRUE",
-  "resource": "Mana",
-  "speed": "2400",
-  "spellEffects": "Single target",
-  "spellshieldable": "True",
-  "targeting": "Direction",
-  "targetRange": "1200"
+  ]
 }
-  export default ability
+export default ability

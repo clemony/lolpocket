@@ -7,17 +7,15 @@ const { class: className, value } = defineProps<{
 
 <template>
   <span
-    class="bg-b1 absolute -top-1.75 -right-1.75 grid size-5.75 place-items-center rounded-full"
-  >
+    class="absolute -top-1.75 -right-1.75 grid size-5.75 place-items-center rounded-full bg-p0">
     <Icon
       name="tabler:circle-filled"
       :class="
-        cn('dss size-4', {
+        cn('size-4 dss', {
           'text-challenger brightness-95': value >= 51,
           'text-domination': value <= 49,
-          'text-bc/20': value < 51 && value > 49,
+          'text-pc/20': value < 51 && value > 49,
         })
-      "
-    />
+      " />
   </span>
 </template>

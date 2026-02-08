@@ -15,8 +15,7 @@ const { modelValue: selectedMap } = defineProps<{
             :class="{
               'size-5!': selectedMap === 12 || selectedMap === 11,
               'size-6!': selectedMap === 30,
-            }"
-          />
+            }" />
         </span>
         <span class="grow">
           {{ mapNameById(selectedMap) }}
@@ -26,20 +25,20 @@ const { modelValue: selectedMap } = defineProps<{
 
     <SelectContent
       v-once
-      class="w-[calc(var(--reka-select-trigger-width)+2px)] px-0"
-    >
+      class="w-[calc(var(--reka-select-trigger-width)+2px)] px-0">
       <SelectGroup class="px-0">
-        <SelectLabel class="w-full border-b border-b-b3/60">
+        <SelectLabel class="w-full border-b border-b-p3/60">
           <span class="opacity-50">Select a Map...</span>
         </SelectLabel>
         <SelectGroup class="size-full space-y-1 p-0.5">
-          <SelectItem class="mt-1 rounded-md py-2" :value="0">
+          <SelectItem
+            class="mt-1 rounded-md py-2"
+            :value="0">
             <div class="flex items-center gap-3 font-medium">
               <span class="relative grid size-5 place-items-center">
                 <icon
                   class="-ml-0.25 size-6 opacity-60"
-                  name="stash:infinity-solid"
-                />
+                  name="stash:infinity-solid" />
               </span>
               All
             </div>
@@ -48,8 +47,7 @@ const { modelValue: selectedMap } = defineProps<{
             v-for="map in [11, 12, 30]"
             :key="map"
             class="rounded-md py-2"
-            :value="map"
-          >
+            :value="map">
             <div class="flex items-center gap-3 font-medium">
               <span class="relative grid size-5 place-items-center">
                 <component
@@ -58,8 +56,7 @@ const { modelValue: selectedMap } = defineProps<{
                   :class="{
                     'size-5!': map === 12 || map === 11,
                     'size-6!': map === 30,
-                  }"
-                />
+                  }" />
               </span>
               {{ mapNameById(map) }}
             </div>

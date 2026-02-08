@@ -1,4 +1,4 @@
-import { riotFetch } from '#server/api'
+import { riotFetch } from '#server/api/riot'
 import { serverToRegion } from '#server/domain'
 
 // https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/P84Ak9qWwk2epueCD7ZeGQeqIXSiJnNAc_-EoqEWj1jT7uODKXTGY1rpvSO7ePL9XyygjZOvb0Jm2A/ids?queue=440&start=0&count=20&api_key= {API KEY}

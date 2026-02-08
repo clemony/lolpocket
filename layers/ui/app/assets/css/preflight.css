@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @reference './theme.css';
 
 @layer base {
@@ -10,7 +10,7 @@
   }
 
   * {
-    @apply border-b3 decoration-from-font underline-offset-2;
+    @apply border-p3 decoration-from-font underline-offset-2;
   }
   img {
     @apply select-none;
@@ -18,14 +18,14 @@
   html,
   body,
   #app {
-    scrollbar-color: --alpha(var(--color-b3) / 40%) transparent;
+    scrollbar-color: --alpha(var(--color-p3) / 40%) transparent;
     scrollbar-width: thin;
     font-family: var(--font-sans);
-    @apply relative h-screen w-screen text-md text-bc selection:bg-neutral/80 selection:text-nc;
+    @apply text-md text-pc selection:bg-neutral/80 selection:text-nc;
   }
 
   input,
-  input:where(:not([type='button'], [type='reset'], [type='submit'])),
+  input:where(:not([type="button"], [type="reset"], [type="submit"])),
   select,
   textarea,
   .reset-input {
@@ -34,10 +34,5 @@
 
   html {
     font-size: 12px;
-  }
-
-  html,
-  body {
-    @apply overflow-x-hidden;
   }
 }

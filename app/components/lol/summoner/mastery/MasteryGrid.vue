@@ -74,25 +74,25 @@ const gridOptions: GridOptions<
   animateRows: true,
   colResizeDefault: 'shift',
   columnHoverHighlight: false,
+  getRowId: p => String(p.data.championId),
+  rowHeight: 50,
   defaultColDef: {
     initialHide: false,
     minWidth: 50,
     cellClass:
       'items-center px-0 text-center! justify-center h-full! flex self-center font-semibold',
-    cellClassRules: {
-      'opacity-10': params => params.value === 0 || params.value === '0',
-    },
     flex: 1,
     headerClass:
       'p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8',
-    sortingOrder: ['desc', 'asc', null],
     wrapHeaderText: true,
+    cellClassRules: {
+      'opacity-10': params => params.value === 0 || params.value === '0',
+    },
+    sortingOrder: ['desc', 'asc', null],
   },
-  getRowId: p => String(p.data.championId),
   rowClassRules: {
     'opacity-0': () => false,
   },
-  rowHeight: 50,
 }
 
 const colDefs: (
@@ -133,6 +133,5 @@ ModuleRegistry.registerModules([
     :theme="theme"
     dom-layout="autoHeight"
     :column-defs="colDefs"
-    @grid-ready="onGridReady"
-  />
+    @grid-ready="onGridReady" />
 </template>

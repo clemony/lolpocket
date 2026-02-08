@@ -19,8 +19,9 @@ const { class: className } = defineProps<{
     :exit="{ opacity: 0 }"
     :transition="{
       duration: 0.5,
-    }"
-  >
-    <icon name="tick" :class="cn('dst absolute size-5 shrink-0', className)" />
+    }">
+    <icon
+      name="tick"
+      :class="cn('absolute size-5 shrink-0 dst', className)" />
   </motion.div>
 </template>

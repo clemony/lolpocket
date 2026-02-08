@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const {
-  variant = 'ghost',
+  variant = "ghost",
   class: className,
   clear = true,
 
-  size = ['sq-12', '12'],
+  size = ["sq-12", "12"],
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  size?: ButtonVariants['size'][]
-  variant?: ButtonVariants['variant']
+  class?: HTMLAttributes["class"]
+  size?: ButtonVariants["size"][]
+  variant?: ButtonVariants["variant"]
 
   clear?: boolean
 }>()
@@ -16,7 +16,7 @@ const {
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }
-// @todo FIx this for ag grid rfresh
+// todo FIx this for ag grid rfresh
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }
@@ -25,23 +25,20 @@ function handleChange() {
 <template>
   <Listbox v-model:model-value="is().filters.tags" :multiple="true">
     <ListboxContent as-child>
-      <TransitionSlideLeft
+      <TransitionSlide
         group
         :class="
           cn(
             'relative z-1 flex w-full flex-wrap items-center gap-3 py-0',
-            className,
+            className
           )
-        "
-      >
+        ">
         <Button
           v-if="is().filters.tags.length && clear"
           class="order-first hover:*:opacity-100"
           :variant
-
           size="sm"
-          @click="is().filters.tags.length = 0"
-        >
+          @click="is().filters.tags.length = 0">
           <icon class="size-4" name="x" />
         </Button>
 
@@ -58,9 +55,7 @@ function handleChange() {
             :tag>
           </ItemTagButton>
         </BaseListboxItem> -->
-      </TransitionSlideLeft>
+      </TransitionSlide>
     </ListboxContent>
   </Listbox>
 </template>
-
-<style scoped></style>

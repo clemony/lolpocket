@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  ability,
   color,
+  ability,
   defaultOpen = true,
   size,
 } = defineProps<{
@@ -39,46 +39,55 @@ const variants = [
 </script>
 
 <template>
-  <Collapsible :id="ability.key" :default-open :class="collapsible()">
+  <Collapsible
+    :id="ability.key"
+    :default-open
+    :class="collapsible()">
     <CollapsibleTrigger
       :class="trigger()"
-      :size="size as CollapsibleTriggerVariants['size']"
-    >
+      :size="size as CollapsibleTriggerVariants['size']">
       <div :class="iconWrapper()">
-        <Img :src="ability.icon" :alt="ability.name" />
+        <Img
+          :src="ability.icon"
+          :alt="ability.name" />
       </div>
 
       <div class="flex grow flex-col justify-center gap-2">
-        <h2 v-if="ability?.name" :class="title()">
+        <h2
+          v-if="ability?.name"
+          :class="title()">
           {{ ability.name }}
         </h2>
-        <AbilityStats v-if="size !== 'sm'" :class="statsWrapper()" :ability />
+        <AbilityStats
+          v-if="size !== 'sm'"
+          :class="statsWrapper()"
+          :ability />
       </div>
       <CaretFlip />
     </CollapsibleTrigger>
-    <CollapsibleContent v-if="ability" :class="content()">
+    <CollapsibleContent
+      v-if="ability"
+      :class="content()">
       <div
         id="content"
-        class="mr-px flex size-full flex-col items-start gap-3 px-5 py-4"
-      >
+        class="mr-px flex size-full flex-col items-start gap-3 px-5 py-4">
         <AbilityStats
           v-if="size === 'sm'"
           :ability
-          :class="cn(statsWrapper(), 'grid w-full grid-cols-1')"
-        />
+          :class="cn(statsWrapper(), 'grid w-full grid-cols-1')" />
         <AbilityDescription
           v-for="(effect, i) in ability.effects"
           :key="i"
           :variants
-          :effect="effect"
-        />
+          :effect="effect" />
 
-        <Collapsible v-if="ability.notes && size !== 'sm'" class="w-full">
+        <Collapsible
+          v-if="ability.notes && size !== 'sm'"
+          class="w-full">
           <CollapsibleContent :class="cn(notesContent())">
             {{ ability.notes }}
             <CollapsibleTrigger
-              class="ability-header flex w-full flex-nowrap justify-between px-3"
-            >
+              class="ability-header flex w-full flex-nowrap justify-between px-3">
               <icon name="add" />
             </CollapsibleTrigger>
           </CollapsibleContent>

@@ -18,7 +18,7 @@ export interface MatchData {
 export interface MatchFilter {
   ally?: string | null
   amount?: number
-  champion?: string | null
+  champion?: number | null
   date?: MaybeRef<DateRange>
   ignoreRole?: boolean
   patch?: number | null

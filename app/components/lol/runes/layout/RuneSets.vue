@@ -22,11 +22,11 @@ const primaryColor = computedAsync(() => {})
   <div class="flex h-full flex-col gap-4">
     <!--  <DropdownMenu>
       <DropdownMenuTrigger
-        class="rounded-lg   gap-4 cursor-pointer  p-3 hover:border-b3 hover:shadow-warm-2 hover:shadow-black/6 hover:shadow-inset-sm transition-all duration-300  border-transparent items-center    h-fit  justify-start  data-[state=open]:border-b3 group grid grid-cols-3">
+        class="rounded-lg   gap-4 cursor-pointer  p-3 hover:border-p3 hover:shadow-warm-2 hover:shadow-black/6 hover:shadow-inset-sm transition-all duration-300  border-transparent items-center    h-fit  justify-start  data-[state=open]:border-p3 group grid grid-cols-3">
         <div
           class="relative  shadow-outline shadow-black/19 grid aspect-square size-19  place-items-center items-center rounded-full " :style="{
             background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.primary.path.toLowerCase()}))` }">
-          <div class="from-b1/90 to-b1/40 grid place-items-center rounded-full bg-gradient-to-br size-full backdrop-blur-md overflow-hidden">
+          <div class="from-p0/90 to-p0/40 grid place-items-center rounded-full bg-gradient-to-br size-full backdrop-blur-md overflow-hidden">
             <div class="p-2 ">
               <img
                 :src="selectedSet.primary.runes[0].name==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
@@ -38,7 +38,7 @@ const primaryColor = computedAsync(() => {})
         <div
           class="relative  shadow-outline shadow-black/15 grid aspect-square size-19 place-items-center items-center rounded-full  " :style="{
             background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.secondary.path.toLowerCase()}))` }">
-          <div class="from-b1/90 to-b1/40 grid size-19 place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
+          <div class="from-p0/90 to-p0/40 grid size-19 place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
             <img
               :src="selectedSet.secondary.path==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.secondary.path}.webp`"
               class="drop-shadow-softer shrink-0 h-10 w-auto object-contain transition-all duration-200 hover:drop-shadow-sm" />

@@ -69,23 +69,19 @@ function handleAdd() {
 
 <template>
   <div
-    class="z-auto flex size-full max-h-full flex-col items-center -space-y-6 overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-400"
-  >
+    class="z-auto flex size-full max-h-full flex-col items-center -space-y-6 overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-400">
     <!-- thumbnails -->
     <Carousel
-      class="bg-b1/60 sticky -top-10 z-1 flex w-full shrink items-center justify-center gap-2 mask-x-from-transparent mask-x-from-0% mask-x-to-black mask-x-to-10% py-4 backdrop-blur-md"
+      class="sticky -top-10 z-1 flex w-full shrink items-center justify-center gap-2 bg-p0/60 mask-x-from-transparent mask-x-from-0% mask-x-to-black mask-x-to-10% py-4 backdrop-blur-md"
       :opts="{ loop: true }"
       :plugins="[WheelGesturesPlugin()]"
-      @init-api="(val) => (emblaThumbnailApi = val)"
-    >
+      @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
         class="scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto scroll-smooth"
-        as-child
-      >
+        as-child>
         <TransitionScalePop
           class="flex w-fit items-center gap-2 px-32 py-0"
-          group
-        >
+          group>
           <CarouselItem
             v-for="(thumbSet, index) in pocket.runes"
             :key="index"
@@ -95,9 +91,10 @@ function handleAdd() {
                 index === selectedIndex ? '' : 'opacity-50',
               )
             "
-            @click="onThumbClick(index)"
-          >
-            <Card class="h-22 w-40" as-child>
+            @click="onThumbClick(index)">
+            <Card
+              class="h-22 w-40"
+              as-child>
               <KeystoneAndPath :set="thumbSet" />
             </Card>
           </CarouselItem>
@@ -109,8 +106,7 @@ function handleAdd() {
               cn(
                 'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100',
               )
-            "
-          >
+            ">
             <Card
               v-tippy="{
                 content:
@@ -120,15 +116,13 @@ function handleAdd() {
                 theme: 'basic',
                 arrow: false,
               }"
-              as-child
-            >
+              as-child>
               <Button
                 class="grid h-22 w-40 place-items-center"
                 color="default"
                 hover="btn"
                 :disabled="pocket.runes.length >= 10"
-                @click="handleAdd()"
-              >
+                @click="handleAdd()">
                 <icon name="add" />
               </Button>
             </Card>
@@ -142,26 +136,21 @@ function handleAdd() {
       class="size-full"
       :plugins="[WheelGesturesPlugin()]"
       :opts="{ loop: true, align: 'center' }"
-      @init-api="(val) => (emblaMainApi = val)"
-    >
+      @init-api="(val) => (emblaMainApi = val)">
       <CarouselPrevious
         class="sticky left-10"
-        @click="emblaMainApi.scrollPrev()"
-      />
+        @click="emblaMainApi.scrollPrev()" />
       <CarouselNext
         class="sticky! left-[calc(100%-60px)]"
-        @click="emblaMainApi.scrollNext()"
-      />
+        @click="emblaMainApi.scrollNext()" />
       <CarouselContent>
         <CarouselItem
           v-for="(set, index) in pocket.runes"
           :key="index"
-          class="size-full pb-14"
-        >
+          class="size-full pb-14">
           <PocketRunesLayout
             :set="set"
-            @update:slide="emblaMainApi.scrollNext()"
-          />
+            @update:slide="emblaMainApi.scrollNext()" />
         </CarouselItem>
       </CarouselContent>
     </Carousel>

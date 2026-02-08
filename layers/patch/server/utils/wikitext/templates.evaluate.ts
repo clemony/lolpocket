@@ -75,8 +75,8 @@ export function evaluateTemplates(
       const html
         = formatMap.pp?.({
           depth,
-          input: { key, key1, color, levels, type, values },
           type: 'pp',
+          input: { color, key, key1, levels, type, values },
         }) ?? ''
 
       return wrap(typeof html === 'string' ? html : (html?.html ?? ''), true)
@@ -136,12 +136,12 @@ export function evaluateTemplates(
 
       const html = formatMap.rd?.({
         depth,
+        type: 'rd',
         input: {
           isPp,
           melee: evaluateExpressions(meleeRaw),
           ranged: evaluateExpressions(rangedRaw),
         },
-        type: 'rd',
       })
       return wrap(typeof html === 'string' ? html : (html?.html ?? ''))
     }

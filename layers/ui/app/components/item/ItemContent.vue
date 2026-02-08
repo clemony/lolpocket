@@ -14,8 +14,7 @@ const props = defineProps<{
         'flex flex-1 flex-col gap-1 [&+[data-slot=item-content]]:flex-none',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

@@ -37,22 +37,21 @@ const forwardedProps = useForwardProps(delegatedProps)
         `,
         // Outside months
         `
-          data-outside-view:text-bc/50 [&[data-outside-view][data-selected]]:bg-b2/50
-          [&[data-outside-view][data-selected]]:text-bc/50
-          data-outside-view:opacity-50
+          data-outside-view:text-pc/50 data-outside-view:opacity-50
+          [&[data-outside-view][data-selected]]:bg-p2/50
+          [&[data-outside-view][data-selected]]:text-pc/50
           [&[data-outside-view][data-selected]]:opacity-30
         `,
         // Disabled
         `
-          data-disabled:text-bc/50 data-disabled:opacity-50
+          data-disabled:text-pc/50 data-disabled:opacity-50
           hover:data-disabled:bg-transparent
         `,
         // Unavailable
         'data-unavailable:text-domination data-unavailable:line-through',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </RangeCalendarCellTrigger>
 </template>

@@ -30,11 +30,11 @@ export const useAccountStore = defineStore(
     }
 
     return {
+      settings,
       account,
       clearAccount,
       inbox,
       sb,
-      settings,
       user,
     }
   },

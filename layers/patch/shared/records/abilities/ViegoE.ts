@@ -1,57 +1,57 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:15 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Harrowed Path",
-  "width": "500 / 500",
-  "affects": "Self",
-  "blurb": "Active:  Viego sends a spectre in the target direction that creates a trail of mist in its wake for a period. If it hits terrain, the mist is spread further around either side.",
-  "castTime": "none",
-  "cooldown": "14 / 12 / 10 / 8 / 6",
-  "cost": "0",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Harrowed Path',
+  width: '500 / 500',
+  affects: 'Self',
+  blurb: 'Active:  Viego sends a spectre in the target direction that creates a trail of mist in its wake for a period. If it hits terrain, the mist is spread further around either side.',
+  castTime: 'none',
+  cooldown: '14 / 12 / 10 / 8 / 6',
+  cost: '0',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/e',
+  notes: 'Spectral Maw\'s recast does not incur the 1 second cooldown for regaining the stealth and instead prevents the stealth from being gained until the dash ends, resetting the cooldown if it is active.\nThe cooldown is not reset if it was incurred by basic attacking a large monster, but is however reset from it being incurred by  Spectral Maw\'s channel.\nThe bonus movement speed and camouflage are granted by the same buff.\nViego will enter camouflage even while  Recalling.\nViego can cast Harrowed Path during the cast time of any ability or spell.\nHarrowed Path will follow Viego into  Mordekaiser\'s  Death Realm\nRanking up Harrowed Path while the effect is already active will still immediately improve the bonuses it grants.\nHarrowed Path can interact with player-generated terrain.\nUsing a basic attack breaks the stealth at the start of the attack windup.\nThe stealth regain timer is refreshed from basic attacks at the start of their attack windup.\nViego can benefit from an enemy\'s Harrowed Path.\nPENDING FOR TEST:: Enemy\'s Harrowed Path grant Viego his ability\'s bonus or the enemy\'s.',
+  projectile: 'FALSE',
+  speed: '1600 / 1200',
+  targeting: 'Direction',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.</p>'
     },
     {
-      "description": "While inside the mist, Viego gains bonus attack speed. If he does not attack or cast abilities, he also gains bonus movement speed and camouflage.",
-      "leveling": [
+      description: 'While inside the mist, Viego gains bonus attack speed. If he does not attack or cast abilities, he also gains bonus movement speed and camouflage.',
+      leveling: [
         {
-          "attribute": "Bonus Attack Speed",
-          "modifiers": [
+          attribute: 'Bonus Attack Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 35 / 40 / 45 / 50"
+              unit: '%',
+              values: '30 / 35 / 40 / 45 / 50'
             }
           ]
         },
         {
-          "attribute": "Bonus Movement Speed",
-          "modifiers": [
+          attribute: 'Bonus Movement Speed',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "25 / 27.5 / 30 / 32.5 / 35"
+              unit: '%',
+              values: '25 / 27.5 / 30 / 32.5 / 35'
             },
             {
-              "unit": "% per 100 AP",
-              "values": "4"
+              unit: '% per 100 AP',
+              values: '4'
             }
           ]
         }
       ]
     },
     {
-      "description": "Declaring a basic attack or casting an ability will break the camouflage and remove the bonus movement speed, preventing Viego from gaining them again for 1 second, increased to 2 seconds if he attacked a large monster. This duration refreshes on subsequent attacks and ability casts."
+      description: 'Declaring a basic attack or casting an ability will break the camouflage and remove the bonus movement speed, preventing Viego from gaining them again for 1 second, increased to 2 seconds if he attacked a large monster. This duration refreshes on subsequent attacks and ability casts.'
     },
     {
-      "description": "Harrowed Path can be cast during any of Viego's abilities. Viego cannot gain the camouflage nor bonus movement speed from Harrowed Path for 1 second if he casted it during Spectral Maw's channel or started the channel while the mist was active."
+      description: 'Harrowed Path can be cast during any of Viego\'s abilities. Viego cannot gain the camouflage nor bonus movement speed from Harrowed Path for 1 second if he casted it during Spectral Maw\'s channel or started the channel while the mist was active.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/e",
-  "notes": "Spectral Maw's recast does not incur the 1 second cooldown for regaining the stealth and instead prevents the stealth from being gained until the dash ends, resetting the cooldown if it is active.\nThe cooldown is not reset if it was incurred by basic attacking a large monster, but is however reset from it being incurred by  Spectral Maw's channel.\nThe bonus movement speed and camouflage are granted by the same buff.\nViego will enter camouflage even while  Recalling.\nViego can cast Harrowed Path during the cast time of any ability or spell.\nHarrowed Path will follow Viego into  Mordekaiser's  Death Realm\nRanking up Harrowed Path while the effect is already active will still immediately improve the bonuses it grants.\nHarrowed Path can interact with player-generated terrain.\nUsing a basic attack breaks the stealth at the start of the attack windup.\nThe stealth regain timer is refreshed from basic attacks at the start of their attack windup.\nViego can benefit from an enemy's Harrowed Path.\nPENDING FOR TEST:: Enemy's Harrowed Path grant Viego his ability's bonus or the enemy's.",
-  "projectile": "FALSE",
-  "speed": "1600 / 1200",
-  "targeting": "Direction"
+  ]
 }
-  export default ability
+export default ability

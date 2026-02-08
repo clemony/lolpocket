@@ -1,50 +1,50 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:13 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Spinning Slash",
-  "affects": "Enemies",
-  "blurb": "Active:  Tryndamere  dashes to the target location, dealing physical damage and generating  Fury per enemy hit.",
-  "castTime": "none",
-  "cooldown": "12 / 11 / 10 / 9 / 8",
-  "cost": "0",
-  "damageType": "Physical damage",
-  "effectRadius": "225",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Spinning Slash',
+  affects: 'Enemies',
+  blurb: 'Active:  Tryndamere  dashes to the target location, dealing physical damage and generating  Fury per enemy hit.',
+  castTime: 'none',
+  cooldown: '12 / 11 / 10 / 9 / 8',
+  cost: '0',
+  damageType: 'Physical damage',
+  effectRadius: '225',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e',
+  notes: 'Spinning Slash\'s  Fury generation stacks additively with  Battle Fury\'s Fury generation on kill.\nKilling an minion with Spinning Slash grants 12 Fury (2 Fury from enemy hit + 10 Fury from the kill).\nKilling an champion with Spinning Slash grants 15 Fury (5 Fury from champion hit + 10 Fury from the kill).\nThere is no cooldown on Fury generation on kill with Spinning Slash.\nSpinning Slash has no minimum dash range.\n Flash will interrupt the  dash but Spinning Slash will deal damage to enemies at the new location instantly.\nEnemies already hit by Spinning Slash cannot be damaged more than once.\nTo ensure Spinning Slash deals damage when dashing away from an enemy champion, Tryndamere needs to move r-35 units towards the enemy beyond the distance he can basic attack at, where r represents the enemy\'s radius and 35 is the distance in units beyond Tryndamere\'s basic attack range that Spinning Slash can reach.\nThe cooldown reduction upon  critically striking triggers on  wards and jungle plants.\nThe cooldown reduction upon  critically striking triggers even if the attack is  blocked.\nPENDING FOR TEST:: Cooldown reduction on  critical strike interaction with parrying effects ( dodge,  blind).',
+  spellEffects: 'aoe',
+  spellshieldable: 'True',
+  targeting: 'Location',
+  targetRange: '660',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p>',
+      leveling: [
         {
-          "attribute": "Physical Damage",
-          "modifiers": [
+          attribute: 'Physical Damage',
+          modifiers: [
             {
-              "values": "75 / 105 / 135 / 165 / 195"
+              values: '75 / 105 / 135 / 165 / 195'
             },
             {
-              "unit": "% bonus AD",
-              "values": "130"
+              unit: '% bonus AD',
+              values: '130'
             },
             {
-              "unit": "% AP",
-              "values": "80"
+              unit: '% AP',
+              values: '80'
             }
           ]
         }
       ]
     },
     {
-      "description": "Critical strikes on-hit reduce Spinning Slash's current cooldown by 0.75 seconds, doubled to 1.5 seconds against champions."
+      description: 'Critical strikes on-hit reduce Spinning Slash\'s current cooldown by 0.75 seconds, doubled to 1.5 seconds against champions.'
     },
     {
-      "description": "Bloodlust and Undying Rage can be cast during the dash."
+      description: 'Bloodlust and Undying Rage can be cast during the dash.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e",
-  "notes": "Spinning Slash's  Fury generation stacks additively with  Battle Fury's Fury generation on kill.\nKilling an minion with Spinning Slash grants 12 Fury (2 Fury from enemy hit + 10 Fury from the kill).\nKilling an champion with Spinning Slash grants 15 Fury (5 Fury from champion hit + 10 Fury from the kill).\nThere is no cooldown on Fury generation on kill with Spinning Slash.\nSpinning Slash has no minimum dash range.\n Flash will interrupt the  dash but Spinning Slash will deal damage to enemies at the new location instantly.\nEnemies already hit by Spinning Slash cannot be damaged more than once.\nTo ensure Spinning Slash deals damage when dashing away from an enemy champion, Tryndamere needs to move r-35 units towards the enemy beyond the distance he can basic attack at, where r represents the enemy's radius and 35 is the distance in units beyond Tryndamere's basic attack range that Spinning Slash can reach.\nThe cooldown reduction upon  critically striking triggers on  wards and jungle plants.\nThe cooldown reduction upon  critically striking triggers even if the attack is  blocked.\nPENDING FOR TEST:: Cooldown reduction on  critical strike interaction with parrying effects ( dodge,  blind).",
-  "spellEffects": "aoe",
-  "spellshieldable": "True",
-  "targeting": "Location",
-  "targetRange": "660"
+  ]
 }
-  export default ability
+export default ability

@@ -37,12 +37,11 @@ const emit = defineEmits(['update:set'])
     filter=".no-drag"
     :class="
       cn(
-        'group field-box relative grid size-full w-150 grid-cols-6 items-center justify-center gap-4 place-self-center p-4',
+        'field-box group relative grid size-full w-150 grid-cols-6 items-center justify-center gap-4 place-self-center p-4',
         { '': props.split, '': !props.split },
         props.class,
       )
-    "
-  >
+    ">
     <ItemCommand
       v-for="(itemId, i) in set"
       :key="itemId"
@@ -50,7 +49,6 @@ const emit = defineEmits(['update:set'])
       :set-index="Number(i)"
       :item-id="itemId"
       type="image"
-      @update:set="(e) => emit('update:set', e)"
-    />
+      @update:set="(e) => emit('update:set', e)" />
   </div>
 </template>

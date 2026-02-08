@@ -1,6 +1,5 @@
 export const useSummonerMatches = defineStore('summonerMatches', () => {
   const session = useSummonerSession()
-  const { summoner } = storeToRefs(s_session())
   const id = toValue(session.summoner?.puuid)
   const region = toValue(session.summoner?.region)
 
@@ -16,15 +15,6 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
   const cursor = ref(0)
   const newestTs = ref<number | null>(null)
   const loadMessage = ref<string | null>(null)
-
-  const {
-    clearFilters,
-    filter,
-    filteredMatches,
-    filterEmpty,
-    query,
-    setFilter,
-  } = useMatchFilters(matches, id)
 
   function reset() {
     matches.value = []
@@ -60,14 +50,7 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
 
     loading.value = true
     try {
-      const res = await $fetch<MatchReturn>(`/api/v5/match/newer`, {
-        query: {
-          puuid: id,
-          region,
-          since: newestTs.value ?? 0,
-        },
-      })
-
+      const res = await await fetchNewerMatches(id, cursor.value, region)
       if (res.matches.length) {
         await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
@@ -102,13 +85,7 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
 
     loadingOlder.value = true
     try {
-      const res = await $fetch<MatchReturn>(`/api/v5/match/older`, {
-        query: {
-          puuid: id,
-          cursor: cursor.value,
-          region,
-        },
-      })
+      const res = await fetchOlderMatches(id, cursor.value, region)
 
       if (!res.matches.length) {
         endOfHistory.value = true
@@ -150,13 +127,6 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
     loadNewer,
     loadOlder,
     matches,
-
-    clearFilters,
-    filter,
-    filteredMatches,
-    filterEmpty,
-    query,
-    setFilter,
 
     timelines
   }

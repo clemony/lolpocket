@@ -1,130 +1,130 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Fiendish Codex",
-  "id": 3108,
-  "rank": "Epic",
-  "buildsFrom": [
+const item: Item = {
+  id: 3108,
+  name: 'Fiendish Codex',
+  nicknames: [
+    'book'
+  ],
+  description: '25 Ability Power\n10 Ability Haste\n\n',
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1052,
-      "name": "Amplifying Tome",
-      "gold": 400
+      id: 1052,
+      name: 'Amplifying Tome',
+      gold: 400
     },
     {
-      "id": 2022,
-      "name": "Glowing Mote",
-      "gold": 250
+      id: 2022,
+      name: 'Glowing Mote',
+      gold: 250
     }
   ],
-  "buildsInto": [
+  buildsInto: [
     {
-      "id": 323003,
-      "name": "Archangel's Staff",
-      "gold": 2900
+      id: 323003,
+      name: 'Archangel\'s Staff',
+      gold: 2900
     },
     {
-      "id": 3128,
-      "name": "Deathfire Grasp",
-      "gold": 2900
+      id: 3128,
+      name: 'Deathfire Grasp',
+      gold: 2900
     },
     {
-      "id": 3115,
-      "name": "Nashor's Tooth",
-      "gold": 2900
+      id: 3115,
+      name: 'Nashor\'s Tooth',
+      gold: 2900
     },
     {
-      "id": 123430,
-      "name": "Rite of Ruin",
-      "gold": 3000
+      id: 123430,
+      name: 'Rite of Ruin',
+      gold: 3000
     },
     {
-      "id": 3003,
-      "name": "Archangel's Staff",
-      "gold": 2900
+      id: 3003,
+      name: 'Archangel\'s Staff',
+      gold: 2900
     },
     {
-      "id": 4628,
-      "name": "Horizon Focus",
-      "gold": 2700
+      id: 4628,
+      name: 'Horizon Focus',
+      gold: 2700
     },
     {
-      "id": 3137,
-      "name": "Cryptbloom",
-      "gold": 3000
+      id: 3137,
+      name: 'Cryptbloom',
+      gold: 3000
     },
     {
-      "id": 3107,
-      "name": "Redemption",
-      "gold": 2300
+      id: 3107,
+      name: 'Redemption',
+      gold: 2300
     },
     {
-      "id": 324005,
-      "name": "Imperial Mandate",
-      "gold": 2750
+      id: 324005,
+      name: 'Imperial Mandate',
+      gold: 2750
     },
     {
-      "id": 3152,
-      "name": "Hextech Rocketbelt",
-      "gold": 2650
+      id: 3152,
+      name: 'Hextech Rocketbelt',
+      gold: 2650
     },
     {
-      "id": 326616,
-      "name": "Staff of Flowing Water",
-      "gold": 2600
+      id: 326616,
+      name: 'Staff of Flowing Water',
+      gold: 2600
     },
     {
-      "id": 4636,
-      "name": "Night Harvester",
-      "gold": 2765
+      id: 4636,
+      name: 'Night Harvester',
+      gold: 2765
     },
     {
-      "id": 4005,
-      "name": "Imperial Mandate",
-      "gold": 2250
+      id: 4005,
+      name: 'Imperial Mandate',
+      gold: 2250
     },
     {
-      "id": 4629,
-      "name": "Cosmic Drive",
-      "gold": 3000
+      id: 4629,
+      name: 'Cosmic Drive',
+      gold: 3000
     },
     {
-      "id": 4633,
-      "name": "Riftmaker",
-      "gold": 3100
+      id: 4633,
+      name: 'Riftmaker',
+      gold: 3100
     },
     {
-      "id": 6616,
-      "name": "Staff of Flowing Water",
-      "gold": 2250
+      id: 6616,
+      name: 'Staff of Flowing Water',
+      gold: 2250
     },
     {
-      "id": 8010,
-      "name": "Bloodletter's Curse",
-      "gold": 2900
+      id: 8010,
+      name: 'Bloodletter\'s Curse',
+      gold: 2900
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": true,
-  "removed": false,
-  "nicknames": [
-    "book"
-  ],
-  "stats": {
-    "abilityPower": 25,
-    "abilityHaste": 10
+  gold: {
+    base: 200,
+    sell: 595,
+    total: 850
   },
-  "description": "25 Ability Power\n10 Ability Haste\n\n",
-  "gold": {
-    "base": 200,
-    "total": 850,
-    "sell": 595
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  stats: {
+    abilityHaste: 10,
+    abilityPower: 25
+  }
 }
 export default item

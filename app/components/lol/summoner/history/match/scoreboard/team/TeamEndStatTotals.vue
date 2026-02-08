@@ -9,21 +9,19 @@ const { class: className, team } = defineProps<{
   <div
     :class="
       cn(
-        'border-y-neutral/16! border-l-neutral/16! border-r-b3! shadow-warm-soft inset-shadow-xxs mb-1.25 w-full overflow-hidden rounded-xl border bg-linear-to-r to-transparent px-3',
+        'mb-1.25 w-full overflow-hidden rounded-xl border border-y-neutral/16! border-r-p3! border-l-neutral/16! bg-linear-to-r to-transparent px-3 shadow-warm-soft inset-shadow-xxs',
         {
           'from-inspiration/60': team.teamId === 100,
           'from-domination/60': team.teamId === 200,
         },
         className,
       )
-    "
-  >
+    ">
     <div
-      class="inline-flex h-8 w-full items-center justify-between gap-8 align-baseline"
-    >
+      class="inline-flex h-8 w-full items-center justify-between gap-8 align-baseline">
       <!-- WIN / LOSS -->
       <div :class="cn('flex items-center gap-4')">
-        <h3 class="dst text-xl leading-none font-bold text-white/86">
+        <h3 class="text-xl leading-none font-bold text-white/86 dst">
           {{ team.win ? "WIN" : "LOSS" }}
         </h3>
 
@@ -39,8 +37,7 @@ const { class: className, team } = defineProps<{
                   team.teamId === 200,
               },
             )
-          "
-        >
+          ">
           {{ team.teamId === 100 ? "Blue" : "Red" }}
         </span>
       </div>
@@ -56,26 +53,23 @@ const { class: className, team } = defineProps<{
           cn(
             'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold',
           )
-        "
-      >
+        ">
         <Icon
           name="lol:gold"
           :class="
-            cn('dst inline size-4', {
+            cn('inline size-4 dst', {
               'text-inspiration! brightness-80 saturate-125':
                 team.teamId === 100,
               'text-domination! brightness-90': team.teamId === 200,
             })
-          "
-        />
+          " />
         {{ roundDecimal(team.gold / 1000) }}K
       </span>
 
       <!-- KDA -->
       <KDA
-        class="text-md align-baseline leading-none opacity-90"
-        :stats="team"
-      />
+        class="align-baseline text-md leading-none opacity-90"
+        :stats="team" />
     </div>
   </div>
 </template>

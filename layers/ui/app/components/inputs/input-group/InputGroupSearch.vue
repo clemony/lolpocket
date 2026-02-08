@@ -5,7 +5,12 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <InputGroupAddon size="8" :class="cn('', className)" align="inline-start">
-    <Icon class="size-4 opacity-40" name="search" />
+  <InputGroupAddon
+    size="8"
+    :class="cn('', className)"
+    align="inline-start">
+    <Icon
+      class="size-4 opacity-40"
+      name="search" />
   </InputGroupAddon>
 </template>

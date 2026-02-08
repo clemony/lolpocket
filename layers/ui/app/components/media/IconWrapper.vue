@@ -7,14 +7,12 @@ const props = defineProps<{
 
 <template>
   <div
-    class="relative grid size-5 shrink-0 place-items-center overflow-visible!"
-  >
+    class="relative grid size-5 shrink-0 place-items-center overflow-visible!">
     <Icon
       v-if="props.name"
       class="absolute shrink-0"
       :name="props.name"
-      :class="cn('dst size-5', props.class)"
-    />
+      :class="cn('size-5 dst', props.class)" />
 
     <slot />
   </div>

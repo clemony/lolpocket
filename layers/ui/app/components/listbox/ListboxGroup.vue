@@ -13,7 +13,9 @@ const forwarded = useForwardProps(delegated)
 </script>
 
 <template>
-  <ListboxGroup v-bind="forwarded" :class="cn('', props.class)">
+  <ListboxGroup
+    v-bind="forwarded"
+    :class="cn('', props.class)">
     <slot />
   </ListboxGroup>
 </template>

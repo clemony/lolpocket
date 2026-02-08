@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 326617,
-  "name": "Moonstone Renewer",
-  "description": "35 Ability Power\n400 Health\n20 Ability Haste\n150% Base Mana Regen\n\nStarlit Grace\nHealing or shielding an ally chains the effect to another ally (excluding yourself), healing 30% or shielding 35% of the original amount.",
-  "gold": {
-    "base": 800,
-    "total": 2900,
-    "sell": 2030
+const item: Item = {
+  id: 326617,
+  name: 'Moonstone Renewer',
+  description: '35 Ability Power\n400 Health\n20 Ability Haste\n150% Base Mana Regen\n\nStarlit Grace\nHealing or shielding an ally chains the effect to another ally (excluding yourself), healing 30% or shielding 35% of the original amount.',
+  gold: {
+    base: 800,
+    sell: 2030,
+    total: 2900
   },
-  "maps": [
+  maps: [
     11
   ]
 }

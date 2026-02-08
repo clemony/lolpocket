@@ -35,8 +35,7 @@ const { toggleSidebar } = useSidebar()
         props.class,
       )
     "
-    @click="toggleSidebar"
-  >
+    @click="toggleSidebar">
     <slot />
   </button>
 </template>

@@ -33,8 +33,7 @@ const delegatedProps = computed(() => {
         labelVariants({ base, variant, size, hover }),
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </Label>
 </template>

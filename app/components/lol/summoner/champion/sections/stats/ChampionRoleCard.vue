@@ -41,13 +41,13 @@ const { stats } = defineProps<{
           <Icons
             size="sq-4"
             :name="`role:${r}`"
-            :color="stats?.role[r]?.games ? `var(--color-${r})` : 'var(--color-b3)'"
+            :color="stats?.role[r]?.games ? `var(--color-${r})` : 'var(--color-p3)'"
             class="size-6 self-center dst" />
           <Progress
-            class="h-3 transition-all duration-200 group-hover/bar:ring group-hover/bar:ring-bc/20"
+            class="h-3 transition-all duration-200 group-hover/bar:ring group-hover/bar:ring-pc/20"
             :color="`var(--color-${r})`"
             :model-value="stats?.role[r]?.winrate || 0" />
-          <div :class="cn('w-10 overflow-hidden text-end text-xxs!', { 'text-bc/50': !stats?.role[r]?.games })">
+          <div :class="cn('w-10 overflow-hidden text-end text-2xs!', { 'text-pc/50': !stats?.role[r]?.games })">
             {{ stats?.role[r]?.games ?? 0 }}
           </div>
         </div>

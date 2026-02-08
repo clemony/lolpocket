@@ -10,21 +10,23 @@ const champKey = computed(() => String(route.params?.champion_key))
     <RadialChampionStatCard
       v-if="stats?.winrate"
       :value="stats?.winrate"
-      title="Winrate"
-    />
+      title="Winrate" />
 
     <div class="grid size-full max-w-64 min-w-46 grid-rows-2 overflow-hidden">
       <!-- KDA -->
       <SimpleChampionStatCard
         title="KDA"
         :subtitle="`Average ratio of ${stats?.kda} ${stats?.kda > 3 ? '' : ''}`"
-        :icon="['lol:melee', 'size-6.5']"
-      >
+        :icon="['lol:melee', 'size-6.5']">
         <span class="flex flex-nowrap items-center">
           {{ stats?.kills.average }}
-          <Icons class="size-7" name="slash" />
+          <Icons
+            class="size-7"
+            name="slash" />
           {{ stats?.deaths.average }}
-          <Icons class="size-7" name="slash" />
+          <Icons
+            class="size-7"
+            name="slash" />
           {{ stats?.assists.average }}
         </span>
       </SimpleChampionStatCard>
@@ -33,8 +35,7 @@ const champKey = computed(() => String(route.params?.champion_key))
       <SimpleChampionStatCard
         title="Damage Dealt"
         :subtitle="`${stats?.damagePercentage.average}% of team's damage`"
-        :icon="['lol:scoreboard-sword', 'size-7.5 -translate-y-0.5']"
-      >
+        :icon="['lol:scoreboard-sword', 'size-7.5 -translate-y-0.5']">
         <span class="flex flex-nowrap items-center">
           {{ stats?.totalDamage.average.toLocaleString() }}
         </span>
@@ -50,8 +51,7 @@ const champKey = computed(() => String(route.params?.champion_key))
         data-theme="neutral mini-tip line"
         title="Healing & Shielding"
         :subtitle="`Heal ${stats?.totalAllyHealing.average.toLocaleString()} / Shield ${stats?.totalAllyShielding.average.toLocaleString()}`"
-        :icon="['stat:healAndShieldPower', 'size-6.5 ']"
-      >
+        :icon="['stat:healAndShieldPower', 'size-6.5 ']">
         <span class="flex flex-nowrap items-center">
           {{
             (
@@ -67,8 +67,7 @@ const champKey = computed(() => String(route.params?.champion_key))
         v-if="stats?.role.mostPlayed === 'support'"
         title="Vision Score"
         :subtitle="`Average of ${stats?.visionScorePerMin} / min`"
-        :icon="['role:support', 'size-9 -translate-y-1 translate-x-0.25']"
-      >
+        :icon="['role:support', 'size-9 -translate-y-1 translate-x-0.25']">
         <span class="flex flex-nowrap items-center">
           {{ stats?.visionScore.average }}
         </span>
@@ -78,8 +77,7 @@ const champKey = computed(() => String(route.params?.champion_key))
         v-if="stats?.role.mostPlayed !== 'support'"
         title="Total Minions Farmed"
         :subtitle="`Average of ${stats?.csPerMin} / min`"
-        :icon="['lol:minion', 'size-7 ']"
-      >
+        :icon="['lol:minion', 'size-7 ']">
         <span class="flex flex-nowrap items-center">
           {{
             Math.round(
@@ -96,8 +94,7 @@ const champKey = computed(() => String(route.params?.champion_key))
         v-if="champKeyToRole[champKey] === 'Tank'"
         title="Damage Taken"
         :subtitle="`${stats?.damageTakenPercentage.average}% of team's damage soaked`"
-        :icon="['lol:armor', 'size-7 ']"
-      >
+        :icon="['lol:armor', 'size-7 ']">
         <span class="flex flex-nowrap items-center">
           {{ stats?.totalDamageTaken.average }}
         </span>
@@ -111,8 +108,7 @@ const champKey = computed(() => String(route.params?.champion_key))
         data-type="Heals or shields that saved an ally from the brink of death"
         title="Lives Saved"
         subtitle="Perfect heals & shields."
-        :icon="['ability:revive', 'size-6.5 ']"
-      >
+        :icon="['ability:revive', 'size-6.5 ']">
         <span class="flex flex-nowrap items-center">
           {{ stats?.allySaves.average }}
         </span>
@@ -122,8 +118,7 @@ const champKey = computed(() => String(route.params?.champion_key))
     <RadialChampionStatCard
       v-if="stats?.kp"
       :value="stats?.kp.average"
-      title="Participation"
-    />
+      title="Participation" />
 
     <!--       <RoleDonut
         v-if="stats?.role"

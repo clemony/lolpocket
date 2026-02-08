@@ -17,11 +17,10 @@ console.log('🥸 - bans:', bans)
   <div
     :class="
       cn(
-        'match-row border-b3/50! grid w-full grid-flow-col grid-cols-[2.14fr_repeat(10,1fr)]! place-items-center border-b',
+        'match-row grid w-full grid-flow-col grid-cols-[2.14fr_repeat(10,1fr)]! place-items-center border-b border-p3/50!',
         { 'h-12 border-b-transparent!': k === 'bans' },
       )
-    "
-  >
+    ">
     <div
       :data-type="v.name"
       data-placement="left"
@@ -34,17 +33,18 @@ console.log('🥸 - bans:', bans)
             '': k === 'bans',
           },
         )
-      "
-    >
+      ">
       <div
-        class="relative w-full justify-start truncate pl-5 text-left text-xs capitalize"
-      >
+        class="relative w-full justify-start truncate pl-5 text-left text-xs capitalize">
         {{ v.name }}
       </div>
     </div>
 
     <template v-if="k === 'bans'">
-      <ChampionBan v-for="champion in bans" :id="champion" :key="champion" />
+      <ChampionBan
+        v-for="champion in bans"
+        :id="champion"
+        :key="champion" />
     </template>
     <template v-else>
       <div
@@ -52,7 +52,7 @@ console.log('🥸 - bans:', bans)
         :key="team.teamId"
         :class="
           cn(
-            'match-cell hover:bg-b3/30 z-0 size-full items-center last-of-type:border-0! hover:z-3',
+            'match-cell z-0 size-full items-center last-of-type:border-0! hover:z-3 hover:bg-p3/30',
             team?.[k] === 0 ? 'match-null' : '',
             i === 0 && k === 'bans' ? 'col-span-5 col-start-2'
             : k === 'bans' ? 'col-span-5 col-start-7'
@@ -60,9 +60,10 @@ console.log('🥸 - bans:', bans)
                 : 'col-start-9',
             {},
           )
-        "
-      >
-        <div v-if="k === 'teamId'" class="font-semibold capitalize">
+        ">
+        <div
+          v-if="k === 'teamId'"
+          class="font-semibold capitalize">
           {{ matchTeams[team.teamId]?.name }} team
         </div>
         <MatchOutcome
@@ -71,16 +72,14 @@ console.log('🥸 - bans:', bans)
           :style="{
             color: `color-mix(in lch, ${matchTeams[team.teamId].color} 97%, black 3%)`,
           }"
-          :stats="team"
-        />
+          :stats="team" />
 
         <KDA
           v-else-if="k === 'kda'"
           class="text-sm font-bold"
           data-type="Team KDA"
           data-placement="top"
-          :stats="team"
-        />
+          :stats="team" />
 
         <span
           v-else
@@ -95,8 +94,7 @@ console.log('🥸 - bans:', bans)
               'badge text-xs drop-shadow-none saturate-120':
                 team?.[k] === highest && highest > 0,
             })
-          "
-        >
+          ">
           {{ team?.[k]?.toLocaleString() }}{{ v?.unit }}
         </span>
       </div>

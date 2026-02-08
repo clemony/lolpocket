@@ -1,69 +1,69 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'About',
-  icon: 'lucide:message-circle-question-mark',
-  path: '/support/about',
+  title: "About",
+  icon: "lucide:message-circle-question-mark",
+  path: "/support/about",
 })
 
 const icons = [
   {
-    name: 'Vue',
-    icon: 'fontisto:vuejs',
-    link: 'https://vuejs.org',
+    name: "Vue",
+    icon: "fontisto:vuejs",
+    link: "https://vuejs.org",
   },
   {
-    name: 'DaisyUI',
-    icon: 'simple-icons:daisyui',
-    link: 'https://v5.daisyui.com',
+    name: "DaisyUI",
+    icon: "simple-icons:daisyui",
+    link: "https://v5.daisyui.com",
   },
   {
-    name: 'Typescript',
-    icon: 'file-icons:typescript',
-    link: '',
+    name: "Typescript",
+    icon: "file-icons:typescript",
+    link: "",
   },
   {
-    name: 'VSCode',
-    icon: 'codicon:vscode-insiders',
-    link: '',
+    name: "VSCode",
+    icon: "codicon:vscode-insiders",
+    link: "",
   },
   {
-    name: 'TailwindCSS',
-    icon: 'simple-icons:tailwindcss',
-    link: 'https://tailwindcss.com',
+    name: "TailwindCSS",
+    icon: "simple-icons:tailwindcss",
+    link: "https://tailwindcss.com",
   },
   {
-    name: 'Iconify',
-    icon: 'simple-icons:iconify',
-    link: 'https://iconify.design',
+    name: "Iconify",
+    icon: "simple-icons:iconify",
+    link: "https://iconify.design",
   },
   {
-    name: 'Eslint',
-    icon: 'teenyicons:eslint-outline',
-    link: '',
+    name: "Eslint",
+    icon: "teenyicons:eslint-outline",
+    link: "",
   },
   {
-    name: 'shadcn-ui',
-    icon: 'simple-icons:shadcnui',
-    link: 'https://www.shadcn-vue.com',
+    name: "shadcn-ui",
+    icon: "simple-icons:shadcnui",
+    link: "https://www.shadcn-vue.com",
   },
   {
-    name: 'Nuxt',
-    icon: 'cib:nuxt-js',
-    link: 'https://nuxt.com',
+    name: "Nuxt",
+    icon: "cib:nuxt-js",
+    link: "https://nuxt.com",
   },
   {
-    name: 'Vite',
-    icon: 'tabler:brand-vite',
-    link: 'https://vite.dev',
+    name: "Vite",
+    icon: "tabler:brand-vite",
+    link: "https://vite.dev",
   },
 ]
 
-const hoverClass = 'r'
+const hoverClass = "r"
 
 const faq = [
   {
-    a: '',
-    q: 'Where going?',
+    a: "",
+    q: "Where going?",
   },
 ]
 </script>
@@ -72,8 +72,7 @@ const faq = [
   <div class="grid h-screen w-full place-items-center px-18">
     <div class="mx-auto -mt-15 flex w-180 flex-col items-center gap-6">
       <div
-        class="mockup-code text-md text-nc relative grid w-full grid-cols-[20px_1fr] gap-x-14 **:font-mono"
-      >
+        class="mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-md text-nc **:font-mono">
         <div class="col-start-1 grid items-center gap-y-1 pl-6">
           <div v-for="index in 10" :key="index" class="grid items-center">
             {{ index }}
@@ -134,10 +133,9 @@ const faq = [
         </div>
 
         <NuxtLink
-          class="**:text-nc absolute right-6 bottom-6 flex items-center gap-1 font-mono italic underline underline-offset-2 hover:underline"
+          class="absolute right-6 bottom-6 flex items-center gap-1 font-mono italic underline underline-offset-2 **:text-nc hover:underline"
           to="https://github.com/clemony/lolpocket"
-          external
-        >
+          external>
           <Icon name="github" />
 
           <Icon name="at" />
@@ -147,17 +145,15 @@ const faq = [
 
       <div class="field-box mt-26 px-4 py-3">
         <div
-          class="*:dst pointer-events-auto flex items-center justify-evenly gap-5 **:size-6"
-        >
+          class="pointer-events-auto flex items-center justify-evenly gap-5 *:dst **:size-6">
           <tippy
             v-for="icon in icons"
             :key="icon.name"
             tag="button"
-            content-tag="div"
-          >
+            content-tag="div">
             <template #default>
               <a :href="icon.link" :target="icon.link ? '_blank' : ''">
-                <icon class="dst size-6 shrink-0" :name="icon.icon" />
+                <icon class="size-6 shrink-0 dst" :name="icon.icon" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
@@ -165,19 +161,18 @@ const faq = [
             <template #content>
               <div class="flex items-center gap-2">
                 {{ icon.name }}
-                <icon v-if="icon.link" class="text-nc size-3.5" name="link" />
+                <icon v-if="icon.link" class="size-3.5 text-nc" name="link" />
               </div>
             </template>
           </tippy>
 
           <icon
             class="brightness-80 contrast-200 grayscale"
-            name="logos:pinia"
-          />
+            name="logos:pinia" />
         </div>
       </div>
 
-      <div class="dst mt-6 flex flex-col items-center px-4 tracking-tight">
+      <div class="mt-6 flex flex-col items-center px-4 tracking-tight dst">
         <p class="text-center">
           <i>Lolpockets</i>
 
@@ -189,7 +184,7 @@ const faq = [
           <i>or</i>
 
           opinions of
-          <br>
+          <br />
           Riot Games
           <i>or</i>
 
@@ -197,21 +192,20 @@ const faq = [
           <i>or</i>
 
           managing Riot Games properties.
-          <br>
+          <br />
 
           Riot Games, and
           <u>all</u>
 
           associated properties are trademarks or registered trademarks of
-          <br>
+          <br />
         </p>
 
         <p class="mt-1">
           <a
             class="flex items-center gap-1 hover:underline"
             href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar"
-            target="_blank"
-          >
+            target="_blank">
             <b>Riot Games, Inc</b>
 
             <icon class="mb-0.5 size-4" name="link" />
@@ -222,5 +216,3 @@ const faq = [
     </div>
   </div>
 </template>
-
-<style scoped></style>

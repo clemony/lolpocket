@@ -18,8 +18,7 @@ const props = defineProps<{
         `,
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </fieldset>
 </template>

@@ -19,8 +19,7 @@ const forwarded = useForwardProps(delegatedProps)
         'data-[state=active]:ring-ring ring-offset-background btn flex h-7 items-center rounded-md px-2 font-medium data-[state=active]:ring-2 data-[state=active]:ring-offset-2',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </TagsInputItem>
 </template>

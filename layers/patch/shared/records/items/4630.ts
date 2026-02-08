@@ -1,51 +1,51 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Blighting Jewel",
-  "id": 4630,
-  "rank": "Epic",
-  "buildsFrom": [
+const item: Item = {
+  id: 4630,
+  name: 'Blighting Jewel',
+  nicknames: [
+    'pen',
+    'purple'
+  ],
+  description: '25 Ability Power\n13% Magic Penetration\n\n',
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1052,
-      "name": "Amplifying Tome",
-      "gold": 400
+      id: 1052,
+      name: 'Amplifying Tome',
+      gold: 400
     }
   ],
-  "buildsInto": [
+  buildsInto: [
     {
-      "id": 3135,
-      "name": "Void Staff",
-      "gold": 3000
+      id: 3135,
+      name: 'Void Staff',
+      gold: 3000
     },
     {
-      "id": 3137,
-      "name": "Cryptbloom",
-      "gold": 3000
+      id: 3137,
+      name: 'Cryptbloom',
+      gold: 3000
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": true,
-  "removed": false,
-  "nicknames": [
-    "pen",
-    "purple"
-  ],
-  "stats": {
-    "abilityPower": 25,
-    "percentMagicPenetration": 13
+  gold: {
+    base: 700,
+    sell: 770,
+    total: 1100
   },
-  "description": "25 Ability Power\n13% Magic Penetration\n\n",
-  "gold": {
-    "base": 700,
-    "total": 1100,
-    "sell": 770
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  stats: {
+    abilityPower: 25,
+    percentMagicPenetration: 13
+  }
 }
 export default item

@@ -24,18 +24,15 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
     v-model:model-value="is().filters.stats"
     class="h-120 max-h-90 w-full overflow-y-scroll overscroll-auto px-1.5"
     :multiple="true"
-    @entry-focus.prevent
-  >
+    @entry-focus.prevent>
     <ListboxContent :class="cn(wrapperClass)">
       <ListboxGroup
         v-for="(group, i) in groups"
         :key="i"
-        :class="cn({ 'row-span-2': group === 'physical' })"
-      >
+        :class="cn({ 'row-span-2': group === 'physical' })">
         <ListboxGroupLabel
           v-if="labels"
-          class="text-bc/90 mb-1 pl-0 text-sm! font-semibold capitalize"
-        >
+          class="mb-1 pl-0 text-sm! font-semibold text-pc/90 capitalize">
           {{ group }}
         </ListboxGroupLabel>
 

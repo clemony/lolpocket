@@ -23,8 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         'flex size-full data-[panel-group-direction=vertical]:flex-col',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </SplitterGroup>
 </template>

@@ -27,24 +27,23 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Select v-model:model-value="pocket._champion" v-model:open="open">
+  <Select
+    v-model:model-value="pocket._champion"
+    v-model:open="open">
     <slot :open>
       <SelectTrigger as-child>
         <Button
           class="*:transition-scale relative grid size-20 place-items-center overflow-hidden *:duration-300 **:pointer-events-none hover:*:scale-110"
-          variant="ghost"
-        >
+          variant="ghost">
           <icon
             v-if="!pocket?._champion"
-            class="size-10 text-bc/20"
-            name="lp:champ"
-          />
-          <ChampionIcon
+            class="size-10 text-pc/20"
+            name="lp:champ" />
+          <Champion
             v-else
             v-memo="[pocket._champion]"
             class="size-14 rounded-full"
-            :k="pocket._champion"
-          />
+            :k="pocket._champion" />
 
           <!--           <icon
             name="up-down"
@@ -56,10 +55,11 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       class="w-(--reka-select-trigger-width) min-w-54 p-0"
       :reference="trigger"
       :align
-      :side
-    >
+      :side>
       <div class="flex gap-3">
-        <ChampionIcon class="size-12" :k="pocket._champion" />
+        <Champion
+          class="size-12"
+          :k="pocket._champion" />
         <div class="k flex flex-col gap-1">
           <h3
             v-memo="[pocket._champion]"
@@ -68,8 +68,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
                 'dss group-hover/c:underline': pocket._champion,
                 'font-normal! opacity-10': !pocket._champion,
               })
-            "
-          >
+            ">
             {{ champNameByKey(pocket._champion) || "Champion" }}
           </h3>
 
@@ -80,8 +79,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
                 'font-medium': pocket._champion,
                 'font-normal! opacity-20': !pocket._champion,
               })
-            "
-          >
+            ">
             {{ championToTitle[pocket._champion] || "None Selected" }}
           </p>
         </div>
@@ -90,9 +88,10 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
         v-for="champion in pocket.champions"
         :key="champion"
         class="*:flex *:items-center *:gap-3"
-        :value="champion"
-      >
-        <ChampionIcon class="size-12" :k="champion" />
+        :value="champion">
+        <Champion
+          class="size-12"
+          :k="champion" />
         <span class="font-medium">
           {{ champNameByKey(champion) }}
         </span>

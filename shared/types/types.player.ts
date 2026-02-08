@@ -87,7 +87,7 @@ export interface PlayerRunes {
 }
 
 export interface PlayerItems {
-  role: number
   slots: [number, number, number, number, number, number]
+  role: number
   trinket: number
 }

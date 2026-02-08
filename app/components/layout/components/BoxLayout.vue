@@ -5,7 +5,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
   isCollapsed: boolean
 }>()
-const emit = defineEmits(['toggle:collapse'])
+const emit = defineEmits(['toggleCollapse'])
 
 const route = useRoute()
 </script>
@@ -15,8 +15,7 @@ const route = useRoute()
     <ResizablePanelGroup
       id="resize-panel-group-1"
       class="h-full max-h-[calc(100vh-45px)] items-stretch"
-      direction="horizontal"
-    >
+      direction="horizontal">
       <ResizablePanel
         id="resize-panel-1"
         :default-size="17"
@@ -31,12 +30,13 @@ const route = useRoute()
             className,
           )
         "
-        @expand="emit('toggle:collapse', true)"
-        @collapse="emit('toggle:collapse', false)"
-      >
+        @expand="emit('toggleCollapse', true)"
+        @collapse="emit('toggleCollapse', false)">
         <slot name="nav" />
       </ResizablePanel>
-      <ResizableHandle id="resize-handle-1" with-handle />
+      <ResizableHandle
+        id="resize-handle-1"
+        with-handle />
       <ResizablePanel>
         <slot />
       </ResizablePanel>

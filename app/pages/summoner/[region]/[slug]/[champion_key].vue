@@ -8,14 +8,31 @@ definePageMeta({
 </script>
 
 <template>
-  <div
-    :class="
-      cn(
-        'relative z-auto mx-auto grid h-fit min-h-screen w-full max-w-[1280px] grid-cols-[260px_1fr] gap-x-1 pb-44',
-      )
-    "
-  >
-    <SummonerChampionAside />
-    <SummonerChampionMain />
-  </div>
+  <UPage :class="cn('z-auto pb-44')">
+    <template #left>
+      <UPageAside
+        class="grid h-fit auto-rows-max items-start gap-3 overflow-y-auto px-1 **:select-none">
+        <SummonerChampionAside />
+      </UPageAside>
+    </template>
+
+    <UPageBody class="z-auto">
+      <!-- stats -->
+      <PlayerChampionSummary id="summary" />
+      <!-- spells -->
+      <ChampionSpellStats id="spells" />
+      <!-- items -->
+      <ChampionItemStats id="items" />
+      <!-- runes -->
+      <ChampionRuneStats id="runes" />
+      <!-- skills -->
+      <ChampionSkillStats id="skills" />
+      <!-- pairings -->
+      <ChampionDuoStats id="duos" />
+      <!-- allies -->
+      <ChampionAllyStats id="allies" />
+      <!-- match -->
+      <ChampionMatchStats id="stats" />
+    </UPageBody>
+  </UPage>
 </template>

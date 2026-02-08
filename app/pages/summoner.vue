@@ -24,17 +24,20 @@ onBeforeMount(async () => {
   if (route.params.puuid) {
     navigateTo({
       name: 'summoner-region-slug',
+      replace: true,
       params: {
         region: summoner.region.toLowerCase(),
         slug: `${summoner.name.toLowerCase()}_${summoner.tag.toLowerCase()}`,
       },
-      replace: true,
     })
   }
 })
 const { summoner } = storeToRefs(s_session())
 const navItem = computed(() => ({
   id: 'current-summoner',
+  icon: '',
+  label: summoner.value?.name,
+  to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
   avatar: {
     src: getSummonerIcon(summoner.value?.icon)
   },
@@ -64,9 +67,6 @@ const navItem = computed(() => ({
       to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`
     },
   ],
-  icon: '',
-  label: summoner.value?.name,
-  to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
   ui: {
     linkLeadingAvatar: 'shadow-xs opacity-90 size-5.5 border border-neutral/60'
   },

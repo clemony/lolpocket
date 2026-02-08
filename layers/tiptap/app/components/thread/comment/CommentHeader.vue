@@ -21,39 +21,39 @@ const {
 
 <template>
   <div
-    class="pointer-events-none relative flex h-14 w-full grow items-center justify-start gap-2.5 pr-3 pl-12 select-none"
-  >
+    class="pointer-events-none relative flex h-14 w-full grow items-center justify-start gap-2.5 pr-3 pl-12 select-none">
     <div class="absolute left-0 flex size-9 flex-col items-center gap-2">
       <slot />
       <CollapsibleTrigger
         class="pointer-events-auto size-5 disabled:opacity-0"
-        :disabled="!hasReplies"
-      >
+        :disabled="!hasReplies">
         <CaretFlip
           :class="
-            cn('text-bc/40 hover:text-bc/90! -translate-x-px', {
-              'text-bc/90!': hovered,
+            cn('-translate-x-px text-pc/40 hover:text-pc/90!', {
+              'text-pc/90!': hovered,
             })
-          "
-        />
+          " />
       </CollapsibleTrigger>
     </div>
-    <div class="flex-col" @click.stop>
+    <div
+      class="flex-col"
+      @click.stop>
       <button
         class="inline-flex cursor-pointer space-y-0.5 align-bottom hover:*:first:underline"
-        @click="`/summoner/${author.puuid}`"
-      >
+        @click="`/summoner/${author.puuid}`">
         <span
           :class="
             cn('inline text-lg! leading-none font-semibold', {
-              'text-md! text-bc/60': comment.removed,
+              'text-md! text-pc/60': comment.removed,
             })
-          "
-        >
+          ">
           {{ author?.username || "Mysterious Summoner" }}
         </span>
         <span class="ml-1 inline-flex align-bottom text-sm leading-none">
-          <icon v-if="author?.tag" class="mt-0.5 inline size-3" name="hash" />
+          <icon
+            v-if="author?.tag"
+            class="mt-0.5 inline size-3"
+            name="hash" />
           {{ author?.tag }}
         </span>
       </button>
@@ -70,18 +70,15 @@ const {
             placement: 'top-start',
             followCursor: true,
           }"
-          class="inline self-start text-[0.85rem]!"
-        >
+          class="inline self-start text-[0.85rem]!">
           <span class="opacity-40">-&thinsp;</span>
           <span
-            class="pointer-events-auto mr-1.5 opacity-50 hover:underline hover:opacity-100"
-          >
+            class="pointer-events-auto mr-1.5 opacity-50 hover:underline hover:opacity-100">
             {{ parseISOStringToDate(comment.updated) }}
           </span>
           <icon
             class="inline size-3 align-[-0.017em] opacity-40"
-            name="edit-line"
-          />
+            name="edit-line" />
         </span>
       </div>
     </div>

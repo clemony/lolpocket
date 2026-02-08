@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 323109,
-  "name": "Knight's Vow",
-  "description": "300 Health\n50 Armor\n10 Ability Haste\n150% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.",
-  "gold": {
-    "base": 1000,
-    "total": 2900,
-    "sell": 2030
+const item: Item = {
+  id: 323109,
+  name: 'Knight\'s Vow',
+  description: '300 Health\n50 Armor\n10 Ability Haste\n150% Base Health Regen\n\nSacrifice\nWhile near your Worthy ally, take 12% of the damage they receive and heal for 10% of the damage they deal to champions.Pledge (0s)\nDesignate an ally as Worthy.',
+  gold: {
+    base: 1000,
+    sell: 2030,
+    total: 2900
   },
-  "maps": [
+  maps: [
     11
   ]
 }

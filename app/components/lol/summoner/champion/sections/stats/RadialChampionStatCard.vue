@@ -9,18 +9,16 @@ const { title, icon } = defineProps<{
 
 <template>
   <div
-    class="relative grid aspect-square size-44 place-items-center select-none"
-  >
+    class="relative grid aspect-square size-44 place-items-center select-none">
     <div
-      class="radial-progress dss absolute aspect-square"
+      class="radial-progress absolute aspect-square dss"
       :style="{
         '--value': value,
         '--size': '11rem',
         '--thickness': '0.6rem',
       }"
       :aria-valuenow="value"
-      role="progressbar"
-    >
+      role="progressbar">
       <div class="absolute -translate-y-1 place-self-center leading-7">
         <div class="text-xs font-medium">
           {{ title }}

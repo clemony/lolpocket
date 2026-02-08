@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from "vue"
 
 const props = defineProps<{
   title: string
   description: string
   noContent?: boolean
-  contentClass?: HTMLAttributes['class']
+  contentClass?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -32,5 +32,3 @@ const props = defineProps<{
     </CardContent>
   </Card>
 </template>
-
-<style scoped></style>

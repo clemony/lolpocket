@@ -19,7 +19,7 @@ function handleDelete() {
   })
 } */
 
-// @todo MOVE
+// todo MOVE
 </script>
 
 <template>
@@ -35,12 +35,9 @@ function handleDelete() {
 
     <button
       v-tippy="'Delete Current Set'"
-      class="b3/4 btn btn-ghost btn-sm *:dst hover:bg-b3/5 rounded-lg hover:border"
-      @click="handleDelete()"
-    >
-      <icon class="text-nc size-5 shrink-0 opacity-70" name="trash" />
+      class="p3/4 btn rounded-lg btn-ghost btn-sm *:dst hover:border hover:bg-p3/5"
+      @click="handleDelete()">
+      <icon class="size-5 shrink-0 text-nc opacity-70" name="trash" />
     </button>
   </div>
 </template>
-
-<style scoped></style>

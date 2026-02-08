@@ -18,11 +18,11 @@ export function useChampionStats(
       map.set(id, {
         championId: id,
         championName: champNameById(id),
-        gamePatches: [],
         games: 0,
         kda: 0,
         losses: 0,
         wins: 0,
+        gamePatches: [],
         ...initFromSchema(AGGREGATED_STAT_SCHEMA),
       })
     }

@@ -1,15 +1,15 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Champions',
-  description: 'A detailed record of champions and their stats.',
-  icon: 'lol:champ',
-  listClass: '!size-5.5',
-  navClass: 'size-5.5 ',
-  path: '/library/champions',
+  title: "Champions",
+  description: "A detailed record of champions and their stats.",
+  icon: "lol:champ",
+  listClass: "!size-5.5",
+  navClass: "size-5.5 ",
+  path: "/library/champions",
 })
 // const { filters, setFilter, filtered } = useItemFilter()
 
-const tabs = ref('grid')
+const tabs = ref("grid")
 </script>
 
 <template>
@@ -17,10 +17,9 @@ const tabs = ref('grid')
     <Tabs
       v-model:model-value="tabs"
       class="relative flex size-full flex-col px-8"
-      as="div"
-    >
+      as="div">
       <!-- <ChampionFilters>
-        <TabsList  class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
+        <TabsList  class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-p3/70 bg-p2">
           <TabsTrigger
             value="grid"
             :class="{ '!text-nc': tabs==='grid' }">
@@ -50,5 +49,3 @@ const tabs = ref('grid')
     </Tabs>
   </div>
 </template>
-
-<style scoped></style>

@@ -14,18 +14,19 @@ const group = computed(() =>
     <div
       v-for="champion in group"
       :key="champion"
-      class="bg-b1 fx-0 z-1 size-22! border-0 rounded-full"
-    >
-      <ChampionIcon class="size-18! rounded-full" :k="champion" />
+      class="z-1 size-22! rounded-full border-0 bg-p0 fx-0">
+      <Champion
+        class="size-18! rounded-full"
+        :k="champion" />
     </div>
     <Element
       v-if="l"
-      class="bg-b1 fx-0 relative z-1 grid size-22! rounded-full place-items-center rounded-full border-0"
-    >
+      class="relative z-1 grid size-22! place-items-center rounded-full border-0 bg-p0 fx-0">
       <Element
-        class="size-18! *:transition-all *:duration-300  rounded-full "
-      >
-        <icon class="group-closed:opacity-0 absolute" name="up" />
+        class="size-18! rounded-full *:transition-all *:duration-300">
+        <icon
+          class="absolute group-closed:opacity-0"
+          name="up" />
         <h3 class="group-open:text-transparent group-open:opacity-0">
           +{{ pocket.champions.length - 4 }}
         </h3>

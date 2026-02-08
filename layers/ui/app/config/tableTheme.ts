@@ -1,7 +1,7 @@
 import { iconSetQuartzLight, themeQuartz } from 'ag-grid-community'
 
 export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
-  // oddRowBackgroundColor: 'var(--b2) / 60%',
+  // oddRowBackgroundColor: 'var(--p2) / 60%',
   sidePanelBorder: true,
   // chromeBackgroundColor: "#654D4D",
   widgetContainerHorizontalPadding: 9,
@@ -13,14 +13,14 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
   cellTextColor: 'var(--bc)',
   checkboxCheckedBackgroundColor: 'var(--neutral)/0.8',
   checkboxCheckedBorderColor: 'var(--neutral)',
-  checkboxCheckedShapeColor: 'var(--b1)',
+  checkboxCheckedShapeColor: 'var(--p0)',
   checkboxIndeterminateBackgroundColor: '#1C3043',
   checkboxIndeterminateBorderColor: '#1F3A4F',
-  checkboxIndeterminateShapeColor: 'var(--b1)',
+  checkboxIndeterminateShapeColor: 'var(--p0)',
   checkboxUncheckedBackgroundColor: 'transparent',
   checkboxUncheckedBorderColor: 'var(--neutral)',
   columnBorder: false,
-  columnHoverColor: 'color-mix(in oklch, var(--b2) 30%, transparent)',
+  columnHoverColor: 'color-mix(in oklch, var(--p2) 30%, transparent)',
   fontFamily: 'var(--font-sans), system ui',
   fontSize: '12px',
   headerBackgroundColor: 'transparent',

@@ -10,13 +10,13 @@ export const useMatchStore = defineStore('matchStore', () => {
     ally: null,
     amount: null,
     champion: null,
+    patch: null,
+    queue: null,
+    role: 'ALL',
     date: {
       end: null,
       start: null,
     },
-    patch: null,
-    queue: null,
-    role: 'ALL',
   })
 
   function clearFilter() {
@@ -24,13 +24,13 @@ export const useMatchStore = defineStore('matchStore', () => {
       ally: null,
       amount: null,
       champion: null,
+      patch: null,
+      queue: null,
+      role: 'ALL',
       date: {
         end: null,
         start: null,
       },
-      patch: null,
-      queue: null,
-      role: 'ALL',
     })
   }
 

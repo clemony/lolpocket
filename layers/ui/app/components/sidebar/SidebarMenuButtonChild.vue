@@ -5,16 +5,16 @@ import type { SidebarMenuButtonVariants } from './sidebar-index'
 import { sidebarMenuButtonVariants } from './sidebar-index'
 
 export interface SidebarMenuButtonProps extends PrimitiveProps {
+  variant?: SidebarMenuButtonVariants['variant']
   class?: HTMLAttributes['class']
   isActive?: boolean
   size?: SidebarMenuButtonVariants['size']
-  variant?: SidebarMenuButtonVariants['variant']
 }
 
 const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
+  variant: 'default',
   as: 'button',
   size: 'default',
-  variant: 'default',
 })
 </script>
 
@@ -27,8 +27,7 @@ const props = withDefaults(defineProps<SidebarMenuButtonProps>(), {
     :data-active="isActive"
     :class="cn(sidebarMenuButtonVariants({ variant, size }), props.class)"
     :as="as"
-    :as-child="asChild"
-  >
+    :as-child="asChild">
     <slot />
   </Primitive>
 </template>

@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 223153,
-  "name": "Blade of The Ruined King",
-  "description": "30 Attack Damage\n20% Attack Speed\n10% Life Steal\n\nMist's Edge\nAttacks apply an additional enemy current Health physical damage On-Hit.\n\nClawing Shadows (0s)\nAttacking a champion 3 times Slows them.",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1250
+const item: Item = {
+  id: 223153,
+  name: 'Blade of The Ruined King',
+  description: '30 Attack Damage\n20% Attack Speed\n10% Life Steal\n\nMist\'s Edge\nAttacks apply an additional enemy current Health physical damage On-Hit.\n\nClawing Shadows (0s)\nAttacking a champion 3 times Slows them.',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

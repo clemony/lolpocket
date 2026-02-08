@@ -35,21 +35,17 @@ const data = [
 <template>
   <div
     ref="wrapper"
-    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center"
-  >
+    class="relative z-2 h-[80vh] w-full items-center justify-center bg-p0">
     <div
-      class="bgneutral text-nc z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2 items-center gap-10 overflow-hidden rounded-3xl px-10"
-    >
+      class="bgneutral z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2 items-center gap-10 overflow-hidden rounded-3xl px-10 text-nc">
       <div
-        class="wp-77% relative grid size-full justify-items-center overflow-hidden py-20"
-      >
+        class="wp-77% relative grid size-full justify-items-center overflow-hidden py-20">
         <motion.h2
           class="text-xs4 absolute h-full pr-14"
           :style="{
             transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
           }"
-          :transition="{ type: 'inertia' }"
-        >
+          :transition="{ type: 'inertia' }">
           Additional Tools.
         </motion.h2>
       </div>
@@ -70,24 +66,21 @@ const data = [
           }"
           :in-view-options="{
             amount: 0.8,
-          }"
-        >
+          }">
           <div class="mb-5 flex w-full items-center gap-5">
             <icon
               v-if="item.icon"
-              class="text-nc size-7 justify-self-center stroke-[0.5]"
-              :name="item.icon"
-            />
+              class="size-7 justify-self-center stroke-[0.5] text-nc"
+              :name="item.icon" />
 
-            <h3 class="text-nc grow text-3xl! font-semibold!">
+            <h3 class="grow text-3xl! font-semibold! text-nc">
               {{ item.title }}
             </h3>
           </div>
 
           <p
-            class="text-nc text-lg/loose font-light text-pretty"
-            v-html="item.text"
-          />
+            class="text-lg/loose font-light text-pretty text-nc"
+            v-html="item.text" />
         </motion.div>
       </div>
     </div>

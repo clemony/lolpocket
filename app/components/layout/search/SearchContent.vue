@@ -44,20 +44,17 @@ const groups = computed(() => {
       :key="item.name"
       class="p-0"
       :value="item.path"
-      as-child
-    >
+      as-child>
       <!--
         variant="link" -->
       <BtnLink
         class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
         size="md"
-        :to="item.path"
-      >
+        :to="item.path">
         <Icon
           v-if="item.meta?.icon"
           :class="item.meta?.iconClass"
-          :name="String(item.meta?.icon)"
-        />
+          :name="String(item.meta?.icon)" />
         {{ item.meta?.title || item.name }}
       </BtnLink>
     </ComboboxItem>
@@ -65,27 +62,23 @@ const groups = computed(() => {
     <ComboboxGroup
       v-for="group in groups"
       :key="group.name"
-      :heading="group.name"
-    >
+      :heading="group.name">
       <ComboboxItem
         v-for="item in group.items"
         :key="item.name"
         class="p-0"
         :value="item.path"
-        as-child
-      >
+        as-child>
         <!--
           variant="link" -->
         <BtnLink
           class="size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal capitalize"
           size="md"
-          :to="item.path"
-        >
+          :to="item.path">
           <Icon
             v-if="item.meta?.icon"
             :class="item.meta?.iconClass"
-            :name="item.meta?.icon"
-          />
+            :name="item.meta?.icon" />
           {{ item.meta?.title || item.name }}
         </BtnLink>
       </ComboboxItem>

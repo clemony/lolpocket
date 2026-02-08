@@ -13,8 +13,7 @@ const wrapperVariants = {
     :variants="wrapperVariants"
     while-hover="visible"
     initial="hidden"
-    exit="hidden"
-  >
+    exit="hidden">
     <slot />
   </motion.label>
 </template>

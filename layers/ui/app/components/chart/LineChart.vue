@@ -32,6 +32,8 @@ const data = computed(() => {
 
 const options = {
   clip: 10,
+  maintainAspectRatio: false,
+  responsive: true,
   elements: {
     line: {
       borderWidth: 1.5,
@@ -53,7 +55,6 @@ const options = {
       bottom: props.options.layout.padding.bottom,
     },
   },
-  maintainAspectRatio: false,
   plugins: {
     tooltip: {
       titleMarginBottom: 0,
@@ -65,10 +66,12 @@ const options = {
       intersect: false,
     },
   },
-  responsive: true,
 }
 </script>
 
 <template>
-  <Line class="z-1" :data="data" :options="options" />
+  <Line
+    class="z-1"
+    :data="data"
+    :options="options" />
 </template>

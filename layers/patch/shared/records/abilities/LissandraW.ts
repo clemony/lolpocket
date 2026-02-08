@@ -1,49 +1,49 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:50 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Ring of Frost",
-  "affects": "Enemies",
-  "blurb": "Active:  Lissandra freezes nearby enemies, dealing magic damage and briefly  rooting them.",
-  "castTime": "none",
-  "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-  "cost": "40",
-  "damageType": "Magic damage",
-  "effectRadius": "275",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Ring of Frost',
+  affects: 'Enemies',
+  blurb: 'Active:  Lissandra freezes nearby enemies, dealing magic damage and briefly  rooting them.',
+  castTime: 'none',
+  cooldown: '10 / 9.5 / 9 / 8.5 / 8',
+  cost: '40',
+  damageType: 'Magic damage',
+  effectRadius: '275',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/w',
+  notes: 'No additional information.',
+  resource: 'Mana',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'True',
+  targeting: 'Auto',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "70 / 105 / 140 / 175 / 210"
+              values: '70 / 105 / 140 / 175 / 210'
             },
             {
-              "unit": "% AP",
-              "values": "70"
+              unit: '% AP',
+              values: '70'
             }
           ]
         },
         {
-          "attribute": "Root Duration",
-          "modifiers": [
+          attribute: 'Root Duration',
+          modifiers: [
             {
-              "unit": " seconds",
-              "values": "1.25 / 1.35 / 1.45 / 1.55 / 1.65"
+              unit: ' seconds',
+              values: '1.25 / 1.35 / 1.45 / 1.55 / 1.65'
             }
           ]
         }
       ]
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/w",
-  "notes": "No additional information.",
-  "resource": "Mana",
-  "spellEffects": "spellaoe",
-  "spellshieldable": "True",
-  "targeting": "Auto"
+  ]
 }
-  export default ability
+export default ability

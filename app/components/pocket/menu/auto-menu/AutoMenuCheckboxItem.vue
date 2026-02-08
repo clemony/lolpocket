@@ -13,13 +13,11 @@ const modelProxy = computed({
   <MenubarCheckboxItem
     as="label"
     :checkbox-type="item.checkboxType"
-    :inset="item.inset"
-  >
+    :inset="item.inset">
     <icon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
       :name="getIcon(item.icon)?.name"
-      :class="cn('size-4.5', getIcon(item.icon)?.class)"
-    />
+      :class="cn('size-4.5', getIcon(item.icon)?.class)" />
     {{ item.name }}
   </MenubarCheckboxItem>
 </template>

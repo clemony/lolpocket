@@ -23,8 +23,7 @@ const props = defineProps<
         collapsibleTriggerVariants({ hover, on, size, base, variant }),
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </CollapsibleTrigger>
 </template>

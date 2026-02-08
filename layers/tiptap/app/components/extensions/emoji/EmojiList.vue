@@ -25,9 +25,8 @@ defineExpose({ onKeyDown }) */
 <template>
   <div
     ref="target"
-    class=" grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
-    data-theme="base"
-  >
+    class="grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
+    data-theme="base">
     <template v-if="items.length">
       <Button
         v-for="(item, index) in items"
@@ -39,18 +38,19 @@ defineExpose({ onKeyDown }) */
         tabindex="0"
         :class="
           cn(
-            'text-xxl focus:bg-b2/80 focus:ring-b3 rounded-md focus:ring',
+            'rounded-md text-xxl focus:bg-p2/80 focus:ring focus:ring-p3',
             `
               index-${index}
             `,
           )
         "
-        @click="command(item)"
-      >
+        @click="command(item)">
         <span class="dss drop-shadow-black/20">{{ item.emoji }}</span>
       </Button>
     </template>
-    <div v-else class="justify-center">
+    <div
+      v-else
+      class="justify-center">
       No result
     </div>
   </div>

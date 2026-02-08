@@ -17,26 +17,31 @@ const { champions } = defineProps<{
 const styles = getComputedStyle(document.documentElement)
 ChartJS.defaults.color = styles.getPropertyValue('--colorneutral')
 ChartJS.defaults.font.weight = 400
-ChartJS.defaults.scale.grid.color = cssVar('--color-b3')
+ChartJS.defaults.scale.grid.color = cssVar('--color-p3')
 
 ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 
 const data = computed(() => ({
+  labels: champions.map(c => c.champion ?? ''),
   datasets: [
     {
       data: champions.map(c => c.winrate ?? 0),
     },
   ],
-  labels: champions.map(c => c.champion ?? ''),
 }))
 
 const chartRef = ref<any>(null)
 const imagePositions = ref<{ x: number, label: string }[]>([])
 
 const options = {
+  color: cssVar('--colorneutral'),
   backgroundColor: cssVar('--colorneutral'),
   barThickness: 32,
-  color: cssVar('--colorneutral'),
+  maintainAspectRatio: false,
+  maxBarThickness: 32,
+  minBarLength: 4,
+  responsive: true,
+  skipNull: false,
   elements: {
     bar: {
       borderRadius: 4,
@@ -52,9 +57,6 @@ const options = {
       top: 40,
     },
   },
-  maintainAspectRatio: false,
-  maxBarThickness: 32,
-  minBarLength: 4,
   plugins: {
     tooltip: {
       titleFont: {
@@ -62,10 +64,17 @@ const options = {
       },
       titleMarginBottom: -3,
       titleSpacing: 0,
+      bodySpacing: -5,
+      caretPadding: 20,
+      cornerRadius: 10,
+      displayColors: false,
+      enabled: true,
+      footerSpacing: 0,
+      intersect: false,
+      padding: 10,
       bodyFont: {
         size: 14,
       },
-      bodySpacing: -5,
       callbacks: {
         title: (context) => {
           const index = context[0].dataIndex
@@ -80,22 +89,14 @@ const options = {
           const winrate = champion.winrate
 
           return [
-            ` ${winrate.toFixed(0)}%　winrate`,
-            ` ${champion.kda ?? 'N/A'} 　kda`,
-            ` ${Math.round(champion.avgKp) ?? 'N/A'}% 　kp`,
+            ` ${winrate.toFixed(0)}%&#x3000;winrate`,
+            ` ${champion.kda ?? 'N/A'}&hairsp;%&#x3000;kda`,
+            ` ${Math.round(champion.avgKp) ?? 'N/A'}%&hairsp;&#x3000;kp`,
           ]
         },
       },
-      caretPadding: 20,
-      cornerRadius: 10,
-      displayColors: false,
-      enabled: true,
-      footerSpacing: 0,
-      intersect: false,
-      padding: 10,
     },
   },
-  responsive: true,
   scales: {
     x: {
       grid: {
@@ -105,7 +106,7 @@ const options = {
         display: false,
       },
       border: {
-        color: `${cssVar('--color-b2')}`,
+        color: `${cssVar('--color-p2')}`,
       },
       ticks: {
         display: false,
@@ -116,25 +117,24 @@ const options = {
         drawTicks: false,
       },
       beginAtZero: true,
-      border: {
-        color: `${cssVar('--color-b2')}`,
-      },
       max: 100,
       min: 0,
+      border: {
+        color: `${cssVar('--color-p2')}`,
+      },
       ticks: {
         callback(value, index, ticks) {
           return `${value}%`
         },
         display: true,
+        padding: 12,
+        stepSize: 20,
         font: {
           size: 11,
         },
-        padding: 12,
-        stepSize: 20,
       },
     },
   },
-  skipNull: false,
 }
 
 // calculate image positions after chart is rendered
@@ -162,9 +162,12 @@ onMounted(() => {
 
 <template>
   <div
-    class="border-shadow-sm relative grid h-150 min-h-150 w-210 place-items-center pt-4"
-  >
-    <Bar id="championAnalysis" ref="chartRef" :options="options" :data="data" />
+    class="border-shadow-sm relative grid h-150 min-h-150 w-210 place-items-center pt-4">
+    <Bar
+      id="championAnalysis"
+      ref="chartRef"
+      :options="options"
+      :data="data" />
 
     <!-- Overlay images using absolute positioning -->
     <div
@@ -175,14 +178,12 @@ onMounted(() => {
         left: `${pos.x - 16}px`,
         width: '32px',
         height: '32px',
-      }"
-    >
+      }">
       <div class="size-[32px] overflow-hidden rounded-lg">
-        <ChampionIcon
+        <Champion
           :id="champions[idx].championId"
           class="size-full scale-115"
-          :alt="pos.label"
-        />
+          :alt="pos.label" />
       </div>
     </div>
   </div>

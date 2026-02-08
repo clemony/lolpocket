@@ -24,16 +24,16 @@ export function matchFilters(
 
   const matchesChampion
     = !champion
-      || champion === ''
-      || champNameById(player.championId) === champion
+      || champion === null
+      || player.championId === champion
 
   const matchesPlayer
-    = !ally || match.participants.some(p => p.puuid === ally)
+    = !ally || ally === '' || match.participants.some(p => p.puuid === ally)
 
   const matchesRole
-    = ignoreRole || !role || role === 'ALL' || player.role === role
+    = ignoreRole || !role || role === 'all' || player.role === role
 
-  const matchesDate = dateInRange(match.gameEndTimestamp, toValue(date))
+  const matchesDate = (!toValue(date).end && !toValue(date).start) || dateInRange(match.gameEndTimestamp, toValue(date))
 
   return (
     matchesPatch

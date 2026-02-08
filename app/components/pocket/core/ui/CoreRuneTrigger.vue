@@ -9,21 +9,21 @@ const mainSet = computed(() => pocket.runes.find(s => s.id === pocket._runes))
 <template>
   <VarSelectTrigger
     class="relative grid size-max place-items-center overflow-hidden **:pointer-events-none"
-    variant="ghost"
-  >
+    variant="ghost">
     <RuneAndPathImg
       placement="left"
       variant="ghost"
       :class="
         cn(`
-          group/btn fx-0 pointer-events-auto! z-10 size-20
-          cursor-pointer! rounded-full **:pointer-events-none hover:shadow-sm
+          group/btn pointer-events-auto! z-10 size-20 cursor-pointer!
+          rounded-full fx-0 **:pointer-events-none hover:shadow-sm
           hover:shadow-black/4
         `)
       "
-      :set="mainSet"
-    />
+      :set="mainSet" />
 
-    <icon class="absolute right-1.5 size-4" name="up-down" />
+    <icon
+      class="absolute right-1.5 size-4"
+      name="up-down" />
   </VarSelectTrigger>
 </template>

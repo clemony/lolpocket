@@ -1,80 +1,80 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Aether Wisp",
-  "id": 3113,
-  "rank": "Epic",
-  "buildsFrom": [
+const item: Item = {
+  id: 3113,
+  name: 'Aether Wisp',
+  nicknames: [
+    'spooky ghost'
+  ],
+  description: '30 Ability Power\n4% Move Speed\n\n',
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  specialRecipe: 0,
+  buildsFrom: [
     {
-      "id": 1052,
-      "name": "Amplifying Tome",
-      "gold": 400
+      id: 1052,
+      name: 'Amplifying Tome',
+      gold: 400
     }
   ],
-  "buildsInto": [
+  buildsInto: [
     {
-      "id": 123430,
-      "name": "Rite of Ruin",
-      "gold": 3000
+      id: 123430,
+      name: 'Rite of Ruin',
+      gold: 3000
     },
     {
-      "id": 322065,
-      "name": "Shurelya's Battlesong",
-      "gold": 2600
+      id: 322065,
+      name: 'Shurelya\'s Battlesong',
+      gold: 2600
     },
     {
-      "id": 4646,
-      "name": "Stormsurge",
-      "gold": 2800
+      id: 4646,
+      name: 'Stormsurge',
+      gold: 2800
     },
     {
-      "id": 3504,
-      "name": "Ardent Censer",
-      "gold": 2200
+      id: 3504,
+      name: 'Ardent Censer',
+      gold: 2200
     },
     {
-      "id": 2065,
-      "name": "Shurelya's Battlesong",
-      "gold": 2200
+      id: 2065,
+      name: 'Shurelya\'s Battlesong',
+      gold: 2200
     },
     {
-      "id": 3100,
-      "name": "Lich Bane",
-      "gold": 2900
+      id: 3100,
+      name: 'Lich Bane',
+      gold: 2900
     },
     {
-      "id": 323504,
-      "name": "Ardent Censer",
-      "gold": 2600
+      id: 323504,
+      name: 'Ardent Censer',
+      gold: 2600
     },
     {
-      "id": 4629,
-      "name": "Cosmic Drive",
-      "gold": 3000
+      id: 4629,
+      name: 'Cosmic Drive',
+      gold: 3000
     }
   ],
-  "specialRecipe": 0,
-  "noEffects": true,
-  "removed": false,
-  "nicknames": [
-    "spooky ghost"
-  ],
-  "stats": {
-    "abilityPower": 30,
-    "percentMovespeed": 4
+  gold: {
+    base: 500,
+    sell: 630,
+    total: 900
   },
-  "description": "30 Ability Power\n4% Move Speed\n\n",
-  "gold": {
-    "base": 500,
-    "total": 900,
-    "sell": 630
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  stats: {
+    abilityPower: 30,
+    percentMovespeed: 4
+  }
 }
 export default item

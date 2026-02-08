@@ -26,14 +26,20 @@ watch(
 <template>
   <div class="relative size-full max-w-screen">
     <div class="fixed top-0 left-15 z-12 flex h-15 w-56 items-center">
-      <icon class="-mx-1 size-6.5 stroke-2" name="" />
+      <icon
+        class="-mx-1 size-6.5 stroke-2"
+        name="" />
       <PocketMenubar />
     </div>
     <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
-      <BgSplash size="full" :src="pocket.icon" />
+      <BgSplash
+        size="full"
+        :src="pocket.icon" />
     </div>
 
-    <BgSplash size="full" :src="pocket.icon" />
+    <BgSplash
+      size="full"
+      :src="pocket.icon" />
 
     <!-- Header block -->
     <div
@@ -41,13 +47,11 @@ watch(
         cn(
           'pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden',
         )
-      "
-    >
+      ">
       <div
-        class="w-40% z-1 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-1"
-      >
+        class="w-40% z-1 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-1">
         <BlurReveal>
-          <h1 class="dst text-[3.4rem]!">
+          <h1 class="text-[3.4rem]! dst">
             {{ pocket.name }}
           </h1>
         </BlurReveal>
@@ -62,18 +66,16 @@ watch(
           'absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto pt-[70vh]',
           {},
         )
-      "
-    >
+      ">
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
-        class="pointer-events-none sticky -top-[70vh] z-13 flex h-15 min-h-15 w-full items-end gap-4 overflow-hidden pl-66"
-      >
-        <Separator class="bg-b3/60 absolute bottom-0 left-0 z-0 w-full" />
+        class="pointer-events-none sticky -top-[70vh] z-13 flex h-15 min-h-15 w-full items-end gap-4 overflow-hidden pl-66">
+        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-p3/60" />
         <NavFileTabs />
       </div>
 
       <!-- Context wrapper -->
-      <div class="bg-b1 relative z-1 -mt-px min-h-screen w-screen max-w-screen">
+      <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-p0">
         <CoreContent />
 
         <!--    <div class="mt-12 flex w-full flex-col items-center pb-54">

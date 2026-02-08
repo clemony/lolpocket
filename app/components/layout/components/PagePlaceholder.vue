@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 interface CatFact {
   title: string
@@ -9,34 +9,34 @@ interface CatFact {
 }
 const facts: CatFact[] = [
   {
-    title: 'Cats are good communicators.',
+    title: "Cats are good communicators.",
     num: 1,
-    text: 'Cats have a unique “vocabulary” with their owners! Unlike dogs, who tend to bark similarly at everyone, cats develop distinct meows and sounds specifically for their humms. They rarely meow at other cats!',
+    text: "Cats have a unique “vocabulary” with their owners! Unlike dogs, who tend to bark similarly at everyone, cats develop distinct meows and sounds specifically for their humms. They rarely meow at other cats!",
   },
   {
-    title: 'Cats are wizards.',
+    title: "Cats are wizards.",
     num: 2,
-    text: 'A cat’s purr has healing properties. The frequency of a cat’s purr (between 25 and 150 Hz) has been shown to promote bone growth and healing in both cats and humms. Some scientists believe this might be why cats recover from injuries so quickly!',
+    text: "A cat’s purr has healing properties. The frequency of a cat’s purr (between 25 and 150 Hz) has been shown to promote bone growth and healing in both cats and humms. Some scientists believe this might be why cats recover from injuries so quickly!",
   },
   {
-    title: 'Cats are birds.',
+    title: "Cats are birds.",
     num: 3,
-    text: 'Cats can “chirp” and “chatter.” If you’ve ever seen a cat staring at birds through a window, you might hear them making little chirping or chattering noises. This is thought to be a mix of excitement and frustration—or even an instinctual hunting technique!',
+    text: "Cats can “chirp” and “chatter.” If you’ve ever seen a cat staring at birds through a window, you might hear them making little chirping or chattering noises. This is thought to be a mix of excitement and frustration—or even an instinctual hunting technique!",
   },
   {
-    title: 'Cats have pro nap game.',
+    title: "Cats have pro nap game.",
     num: 4,
-    text: 'Cats spend about 70% of their lives sleeping. On average, cats sleep 12–16 hours a day, but some can snooze for up to 20 hours! They’re basically professional nappers.',
+    text: "Cats spend about 70% of their lives sleeping. On average, cats sleep 12–16 hours a day, but some can snooze for up to 20 hours! They’re basically professional nappers.",
   },
   {
-    title: 'Cats are aliens.',
+    title: "Cats are aliens.",
     num: 5,
-    text: 'Their whiskers are super sensitive. A cat’s whiskers aren’t just for looks—they help them sense their surroundings, detect changes in the air, and even determine if they can fit through a space!',
+    text: "Their whiskers are super sensitive. A cat’s whiskers aren’t just for looks—they help them sense their surroundings, detect changes in the air, and even determine if they can fit through a space!",
   },
   {
-    title: 'Boops are good',
+    title: "Boops are good",
     num: 6,
-    text: 'Cats “headbutt” you as a sign of love. When a cat bumps their head against you, they’re marking you with their scent as part of their family. It’s a big compliment in cat language!',
+    text: "Cats “headbutt” you as a sign of love. When a cat bumps their head against you, they’re marking you with their scent as part of their family. It’s a big compliment in cat language!",
   },
 ]
 
@@ -44,7 +44,7 @@ const catFact = ref<CatFact>()
 
 onMounted(() => {
   catFact.value = getRandom(facts)
-  console.log('💠 - onMounted - catFact:', catFact.value)
+  console.log("💠 - onMounted - catFact:", catFact.value)
 })
 </script>
 
@@ -52,27 +52,24 @@ onMounted(() => {
   <main
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
-    :class="cn('', props.class)"
-  >
-    <article class="dst container mx-auto max-w-250 min-w-190 p-6">
-      <header class="dst mb-6 text-start tracking-tight">
+    :class="cn('', props.class)">
+    <article class="container mx-auto max-w-250 min-w-190 p-6 dst">
+      <header class="mb-6 text-start tracking-tight dst">
         <span class="text-md">
           404 |
           <span class="">This page looks afk</span>
         </span>
-        <br>
+        <br />
 
-        <span class="text-xxs/14 font-serif font-bold">
+        <span class="font-serif text-2xs/14 font-bold">
           In place of content, I offer you a cat fact.
         </span>
       </header>
 
       <section
-        class="relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28 **:text-pretty"
-      >
+        class="relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28 **:text-pretty">
         <div class="flex flex-col gap-3">
-          <p class="dst mt-1">
-            <!-- #{{catFact.num}}  -->
+          <p class="mt-1 dst">
             {{ catFact.num }}
             <span class="text-[5rem] font-bold tracking-tight">
               {{ catFact.title }}
@@ -85,25 +82,14 @@ onMounted(() => {
       </section>
 
       <footer
-        class="flex items-center gap-1 text-end text-sm italic *:flex *:items-end *:gap-2"
-      >
+        class="flex items-center gap-1 text-end text-sm italic *:flex *:items-end *:gap-2">
         <icon class="size-5" name="la:flag-usa" />
-        <p class="text-bc/70 text-xs">
-          Brought to you by
-        </p>
+        <p class="text-xs text-pc/70">Brought to you by</p>
         <p class="font-semibold italic antialiased opacity-70">
           Paws for Progress, 2028.
         </p>
-        <p class="text-xss text-bc/70">
-          Refresh in peace.
-        </p>
+        <p class="text-xss text-pc/70">Refresh in peace.</p>
       </footer>
     </article>
   </main>
 </template>
-
-<style scoped>
-.container {
-  max-width: 800px;
-}
-</style>

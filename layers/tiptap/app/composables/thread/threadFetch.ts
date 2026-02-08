@@ -2,8 +2,8 @@ export async function fetchThread(thread_id: string) {
   const { authors, comments } = await $fetch<ThreadReturn>(
     '/api/supabase/fetch/thread',
     {
-      body: { thread_id },
       method: 'POST',
+      body: { thread_id },
     }
   )
 

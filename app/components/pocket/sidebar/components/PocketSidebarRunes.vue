@@ -13,8 +13,7 @@ function handleClick(i) {
   <div class="z-0 flex w-full pl-3">
     <div
       v-if="pocket?.runes && pocket?.runes?.length"
-      class="flex w-full flex-wrap gap-6.5 py-3"
-    >
+      class="flex w-full flex-wrap gap-6.5 py-3">
       <!--    <RuneSetButton
         v-for="(set, i) in pocket.runes"
         :key="i"
@@ -26,12 +25,12 @@ function handleClick(i) {
 
     <button
       v-tippy="'Add Rune Set'"
-      class="group grid h-full w-14 cursor-pointer place-items-center rounded-l-none rounded-r-xl p-0"
-    >
+      class="group grid h-full w-14 cursor-pointer place-items-center rounded-l-none rounded-r-xl p-0">
       <div
-        class="group-hover:border-b3/60 group-hover:bg-b2/80 grid size-6 place-items-center rounded-lg border border-transparent"
-      >
-        <icon class="text-bc/60 group-hover:text-bc" name="add" />
+        class="grid size-6 place-items-center rounded-lg border border-transparent group-hover:border-p3/60 group-hover:bg-p2/80">
+        <icon
+          class="text-pc/60 group-hover:text-pc"
+          name="add" />
       </div>
     </button>
   </div>

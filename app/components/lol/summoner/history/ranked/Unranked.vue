@@ -9,35 +9,30 @@ const props = defineProps<{
   <div
     :class="
       cn(
-        'border-b3/40 bg-b2/30 h-42 max-h-42 w-120 max-w-120 py-0 drop-shadow-xs',
+        'h-42 max-h-42 w-120 max-w-120 border-p3/40 bg-p2/30 py-0 drop-shadow-xs',
         props.class,
       )
     "
-    :title="`Ranked ${props.title}`"
-  >
+    :title="`Ranked ${props.title}`">
     <div
-      class="grid size-full h-42 grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden"
-    >
+      class="grid size-full h-42 grid-cols-[1.1fr_1fr_1fr] place-items-center content-center overflow-hidden">
       <div class="mt-0.5 grid place-items-center overflow-hidden">
         <!-- crest -->
         <img
           class="size-25 object-contain opacity-40 drop-shadow-sm saturate-0"
           alt="unranked"
-          src="/img/crests/unranked.webp"
-        >
+          src="/img/crests/unranked.webp">
       </div>
 
       <div class="relative grid size-full place-items-center">
         <div
-          class="relative mt-1 grid size-21 place-items-center overflow-hidden rounded-lg"
-        >
+          class="relative mt-1 grid size-21 place-items-center overflow-hidden rounded-lg">
           <DonutSkeleton class="absolute size-21" />
         </div>
       </div>
 
       <div
-        class="dst **:text-bc/30 flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium"
-      >
+        class="flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium dst **:text-pc/30">
         <p class="capitalize">
           Unranked
         </p>
@@ -48,8 +43,7 @@ const props = defineProps<{
 
         <p
           v-tippy="`0 total`"
-          class="hover:border-b-bc flex items-center justify-end gap-1 border-b border-b-transparent text-end text-xs text-nowrap"
-        >
+          class="hover:border-b-bc flex items-center justify-end gap-1 border-b border-b-transparent text-end text-xs text-nowrap">
           <span>0W</span>
 
           <span>0L</span>

@@ -1,73 +1,73 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "W",
-  "name": "Spirit of Dread",
-  "affects": "Self, Enemies",
-  "blurb": "Active:  Hecarim continually deals magic damage to nearby enemies for a short time.",
-  "castTime": "none",
-  "cooldown": "14",
-  "cost": "50 / 55 / 60 / 65 / 70",
-  "damageType": "Magic damage",
-  "effectRadius": "525",
-  "effects": [
+const ability: Ability = {
+  key: 'W',
+  name: 'Spirit of Dread',
+  affects: 'Self, Enemies',
+  blurb: 'Active:  Hecarim continually deals magic damage to nearby enemies for a short time.',
+  castTime: 'none',
+  cooldown: '14',
+  cost: '50 / 55 / 60 / 65 / 70',
+  damageType: 'Magic damage',
+  effectRadius: '525',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/w',
+  notes: 'The healing cap against minions accounts for every single one regardless of how many are present and/or affected by Spirit of Dread at the time of cast.',
+  resource: 'Mana',
+  spellEffects: 'AoeDoT',
+  spellshieldable: 'False',
+  targeting: 'Auto',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage Per Tick",
-          "modifiers": [
+          attribute: 'Magic Damage Per Tick',
+          modifiers: [
             {
-              "values": "20 / 30 / 40 / 50 / 60"
+              values: '20 / 30 / 40 / 50 / 60'
             },
             {
-              "unit": "% AP",
-              "values": "20"
+              unit: '% AP',
+              values: '20'
             }
           ]
         },
         {
-          "attribute": "Total Magic Damage",
-          "modifiers": [
+          attribute: 'Total Magic Damage',
+          modifiers: [
             {
-              "values": "100 / 150 / 200 / 250 / 300"
+              values: '100 / 150 / 200 / 250 / 300'
             },
             {
-              "unit": "% AP",
-              "values": "100"
+              unit: '% AP',
+              values: '100'
             }
           ]
         }
       ]
     },
     {
-      "description": "While active, Hecarim gains bonus armor and bonus magic resistance and is healed for 25% of the post-mitigation damage dealt to enemies within the area from all sources, halved to 12.5% for damage dealt by allies. The healing is capped against minions and monsters.",
-      "leveling": [
+      description: 'While active, Hecarim gains bonus armor and bonus magic resistance and is healed for 25% of the post-mitigation damage dealt to enemies within the area from all sources, halved to 12.5% for damage dealt by allies. The healing is capped against minions and monsters.',
+      leveling: [
         {
-          "attribute": "Bonus Resistances",
-          "modifiers": [
+          attribute: 'Bonus Resistances',
+          modifiers: [
             {
-              "values": "5 / 10 / 15 / 20 / 25"
+              values: '5 / 10 / 15 / 20 / 25'
             }
           ]
         },
         {
-          "attribute": "Capped Healing",
-          "modifiers": [
+          attribute: 'Capped Healing',
+          modifiers: [
             {
-              "values": "120 / 150 / 180 / 210 / 240"
+              values: '120 / 150 / 180 / 210 / 240'
             }
           ]
         }
       ]
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/w",
-  "notes": "The healing cap against minions accounts for every single one regardless of how many are present and/or affected by Spirit of Dread at the time of cast.",
-  "resource": "Mana",
-  "spellEffects": "AoeDoT",
-  "spellshieldable": "False",
-  "targeting": "Auto"
+  ]
 }
-  export default ability
+export default ability

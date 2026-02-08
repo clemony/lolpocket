@@ -18,8 +18,7 @@ const props = defineProps<{
         'data-[variant=label]:',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </legend>
 </template>

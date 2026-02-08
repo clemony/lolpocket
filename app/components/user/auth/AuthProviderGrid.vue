@@ -2,19 +2,17 @@
 
 <template>
   <div class="grid grid-cols-3 gap-4">
-    <Button
+    <UButton
       v-for="provider in authProviders"
       :key="provider"
-      class="grid! w-full place-items-center [&_svg]:opacity-80"
-      size="xl"
+      size="lg"
       variant="outline"
-      hover="inset"
-      @click="useSignIn(provider)"
-    >
-      <icon
-        :name="provider"
-        :class="cn('absolute mx-auto size-5.5 place-self-center')"
-      />
-    </Button>
+      color="p3"
+      :ui="{
+        base: 'w-full',
+        leadingIcon: 'opacity-80 absolute mx-auto size-5.5 place-self-center',
+      }"
+      :icon="provider"
+      @click="useSignIn(provider)" />
   </div>
 </template>

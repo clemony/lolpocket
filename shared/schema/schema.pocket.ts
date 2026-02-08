@@ -51,19 +51,10 @@ export const pocketSchema = v.object({
 
   // main set
   _champion: v.nullish(v.string('champion key not a string')),
-  _items: v.fallback(
-    v.pipe(v.string(), v.uuid('item set uuid malformed')),
-    null
-  ),
+  _items: v.nullish(v.pipe(v.string(), v.uuid('item set uuid malformed'))),
   _role: v.fallback(v.string('role missing'), 'All'),
-  _runes: v.fallback(
-    v.pipe(v.string(), v.uuid('rune set uuid malformed')),
-    null
-  ),
-  _spells: v.fallback(
-    v.pipe(v.string(), v.uuid('spell set uuid malformed')),
-    null
-  ),
+  _runes: v.nullish(v.pipe(v.string(), v.uuid('rune set uuid malformed'))),
+  _spells: v.nullish(v.pipe(v.string(), v.uuid('spell set uuid malformed'))),
 
   // arrays
   champions: v.nullish(v.array(v.string())),

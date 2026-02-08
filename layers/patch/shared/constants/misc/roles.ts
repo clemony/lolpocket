@@ -1,39 +1,39 @@
 export interface ChampionRole {
+  color: string
   name: string
   class?: string
-  color: string
   icon?: string
 }
 
 export const championRoles: ChampionRole[] = [
   // mage
   {
-    name: 'Artillery',
     color: 'var(--color-onhit)',
+    name: 'Artillery',
   },
   {
-    name: 'Burst',
     color: 'var(--color-mr)',
+    name: 'Burst',
   },
   {
-    name: 'Mage',
     color: 'var(--color-sorcery)',
+    name: 'Mage',
     icon: '',
   },
   //
   {
-    name: 'Battlemage',
     color: 'var(--color-mpen)',
+    name: 'Battlemage',
     icon: '',
   },
   {
-    name: 'Enchanter',
     color: 'var(--color-enchanter)',
+    name: 'Enchanter',
     icon: '',
   },
   {
-    name: 'Specialist',
     color: 'var(--color-platinum)',
+    name: 'Specialist',
     icon: '',
   },
   /*   {
@@ -44,56 +44,56 @@ export const championRoles: ChampionRole[] = [
 
   // ad
   {
+    color: 'var(--color-apen)',
     name: 'Assassin',
     class: '!size-4',
-    color: 'var(--color-apen)',
   },
   {
+    color: 'var(--color-precision)',
     name: 'Marksman',
     class: '!size-4.5 -translate-x-px',
-    color: 'var(--color-precision)',
   },
   {
+    color: 'var(--color-ad)',
     name: 'Fighter',
     class: '!size-4',
-    color: 'var(--color-ad)',
   },
   {
-    name: 'Skirmisher',
     color: 'var(--color-fighter)',
+    name: 'Skirmisher',
     icon: '',
   },
   //
   {
-    name: 'Juggernaut',
     color: 'var(--color-vamp)',
+    name: 'Juggernaut',
     icon: '',
   },
   {
-    name: 'Diver',
     color: 'var(--color-iron)',
+    name: 'Diver',
     icon: '',
   },
 
   // utility
   {
-    name: 'Catcher',
     color: 'var(--color-hp)',
+    name: 'Catcher',
     icon: '',
   },
   {
-    name: 'Tank',
     color: 'var(--color-silver)',
+    name: 'Tank',
     icon: '',
   },
   {
-    name: 'Vanguard',
     color: 'var(--color-vanguard)',
+    name: 'Vanguard',
     icon: '',
   },
   {
-    name: 'Warden',
     color: 'var(--color-warden)',
+    name: 'Warden',
     icon: '',
   },
 ]

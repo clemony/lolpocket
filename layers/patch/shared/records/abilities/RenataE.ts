@@ -1,59 +1,59 @@
 // Updated Patch 16.1 - 01/29/2026 04:27:02 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "E",
-  "name": "Loyalty Program",
-  "width": "220",
-  "affects": "Allies, Ememies",
-  "blurb": "Active:  Renata sends out two chemtech rockets that strike targets around her, then converge into a single missile that explodes at the target location.",
-  "castTime": "0.25",
-  "cooldown": "14 / 13 / 12 / 11 / 10",
-  "cost": "70 / 80 / 90 / 100 / 110",
-  "damageType": "Magic damage",
-  "effectRadius": "325 / 225",
-  "effects": [
+const ability: Ability = {
+  key: 'E',
+  name: 'Loyalty Program',
+  width: '220',
+  affects: 'Allies, Ememies',
+  blurb: 'Active:  Renata sends out two chemtech rockets that strike targets around her, then converge into a single missile that explodes at the target location.',
+  castTime: '0.25',
+  cooldown: '14 / 13 / 12 / 11 / 10',
+  cost: '70 / 80 / 90 / 100 / 110',
+  damageType: 'Magic damage',
+  effectRadius: '325 / 225',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/e',
+  notes: 'Spell shield will block either the rockets while they are in-flight or their explosion.\nThis ability will cast from wherever the caster is at the start of the cast time.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '1450',
+  spellEffects: 'spellaoe',
+  spellshieldable: 'special',
+  targeting: 'Location',
+  targetRange: '800',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Renata sends out chemtech rockets from either side of her that instantly strike targets around her. After 0.429 seconds they converge and travel to the target location as a single missile, striking targets along its path and exploding upon reaching the target location.</p>'
     },
     {
-      "description": "Renata and allies struck are granted a shield for 3 seconds and enemies struck are dealt magic damage and slowed by 30% for 2 seconds.",
-      "leveling": [
+      description: 'Renata and allies struck are granted a shield for 3 seconds and enemies struck are dealt magic damage and slowed by 30% for 2 seconds.',
+      leveling: [
         {
-          "attribute": "Magic Damage",
-          "modifiers": [
+          attribute: 'Magic Damage',
+          modifiers: [
             {
-              "values": "65 / 95 / 125 / 155 / 185"
+              values: '65 / 95 / 125 / 155 / 185'
             },
             {
-              "unit": "% AP",
-              "values": "55"
+              unit: '% AP',
+              values: '55'
             }
           ]
         },
         {
-          "attribute": "Shield Strength",
-          "modifiers": [
+          attribute: 'Shield Strength',
+          modifiers: [
             {
-              "values": "50 / 65 / 80 / 95 / 110"
+              values: '50 / 65 / 80 / 95 / 110'
             },
             {
-              "unit": "% AP",
-              "values": "50"
+              unit: '% AP',
+              values: '50'
             }
           ]
         }
       ]
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/e",
-  "notes": "Spell shield will block either the rockets while they are in-flight or their explosion.\nThis ability will cast from wherever the caster is at the start of the cast time.",
-  "projectile": "TRUE",
-  "resource": "Mana",
-  "speed": "1450",
-  "spellEffects": "spellaoe",
-  "spellshieldable": "special",
-  "targeting": "Location",
-  "targetRange": "800"
+  ]
 }
-  export default ability
+export default ability

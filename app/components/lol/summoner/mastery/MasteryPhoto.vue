@@ -21,8 +21,7 @@ const level = computed(() =>
   <SplashCard
     class="group/photo pb-0.5"
     :alt="name"
-    :skin-url="getSplash(champKeyById(id), 'tile')"
-  >
+    :skin-url="getSplash(champKeyById(id), 'tile')">
     <template #banner>
       <Img
         :src="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
@@ -31,8 +30,7 @@ const level = computed(() =>
           cn(
             'absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
           )
-        "
-      />
+        " />
     </template>
 
     <!--     <template #crest>
@@ -43,8 +41,7 @@ const level = computed(() =>
     </template> -->
 
     <div
-      class="relative flex size-full h-12 flex-col justify-center overflow-hidden px-0.75 pt-0.25 pb-1 *:leading-none"
-    >
+      class="relative flex size-full h-12 flex-col justify-center overflow-hidden px-0.75 pt-0.25 pb-1 *:leading-none">
       <div class="flex items-end gap-1.5">
         <h2 class="text-xl font-semibold dst">
           {{ name }}
@@ -58,11 +55,9 @@ const level = computed(() =>
       <div class="h-3 items-center text-nowrap">
         <p class="absolute flex items-center gap-1 text-xs font-medium">
           <span
-            class="relative size-4 overflow-hidden rounded-full shadow-sm dst"
-          >
+            class="relative size-4 overflow-hidden rounded-full shadow-sm dst">
             <i-lol-cm-mastery-token
-              class="absolute grid size-full scale-105 place-items-center object-center"
-            />
+              class="absolute grid size-full scale-105 place-items-center object-center" />
           </span>
           {{ champion?.totalPoints?.toLocaleString() ?? 0 }}
         </p>

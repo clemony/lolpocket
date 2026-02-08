@@ -18,12 +18,11 @@ const delegatedProps = computed(() => {
     v-bind="delegatedProps"
     :class="
       cn(
-        'text-bc/50 flex items-center gap-2 px-2 py-1.5 text-sm font-semibold',
+        'flex items-center gap-2 px-2 py-1.5 text-sm font-semibold text-pc/50',
         inset && 'pl-8',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </ContextMenuLabel>
 </template>

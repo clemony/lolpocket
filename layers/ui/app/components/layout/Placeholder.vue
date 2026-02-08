@@ -1,30 +1,15 @@
 <script setup lang="ts">
-import type { AsTag, PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PlaceholderVariants } from '#layers/ui/app/assets/variants'
+import { placeholderVariants } from '#layers/ui/app/assets/variants'
 
-const { as = 'label', class: className } = defineProps<
-  PrimitiveProps & {
-    class?: HTMLAttributes['class']
-    variant?: LabelVariants['variant']
-    size?: LabelVariants['size']
-    hover?: LabelVariants['hover']
-    as?: AsTag | string
-  }
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+  color?: PlaceholderVariants['color']
+  size?: PlaceholderVariants['size']
+}
 >()
 </script>
 
 <template>
-  <Primitive
-    v-bind="$attrs"
-    :as="as"
-    :class="
-      cn(
-        'group/placeholder btn btn-square pointer-events-none aspect-square size-full items-center justify-center gap-2 self-center p-0!',
-        labelVariants({ variant, size, hover }),
-        className,
-      )
-    "
-  >
-    <slot />
-  </Primitive>
+  <span :class="cn(placeholderVariants({ color, size }), className)" />
 </template>

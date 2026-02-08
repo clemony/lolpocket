@@ -93,21 +93,18 @@ function showContextMenu(e: MouseEvent, champion: string) {
 <template>
   <div class="inset-0 z-auto pt-12">
     <div
-      class="bg-b1/98 sticky -top-56 z-2 w-full items-center space-y-6 pt-10 pb-6 backdrop-blur-sm"
-    >
+      class="sticky -top-56 z-2 w-full items-center space-y-6 bg-p0/98 pt-10 pb-6 backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
         <h1 class="capitalize">
           Champions
         </h1>
         <ChampionQuote
           v-once
-          class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic"
-        />
+          class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic" />
         <InputGroupPopover
           v-model:model-value="cs().filters.query"
           class="max-w-140"
-          @clear-input="cs().filters.query = ''"
-        >
+          @clear-input="cs().filters.query = ''">
           <ChampFilterPopoverContent />
         </InputGroupPopover>
       </div>
@@ -133,16 +130,14 @@ function showContextMenu(e: MouseEvent, champion: string) {
         layout="position"
         @start="onStart()"
         @end="onEnd($event)"
-        @add="onAdd($event)"
-      >
+        @add="onAdd($event)">
         <LayoutGroup>
           <AnimatePresence mode="sync">
             <PocketChampion
               v-for="champion in rendered"
               :key="champion"
               :k="champion"
-              :pocket
-            />
+              :pocket />
           </AnimatePresence>
         </LayoutGroup>
       </VueDraggable>

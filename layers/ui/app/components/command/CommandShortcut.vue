@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <span :class="cn('text-bc/60 ml-auto text-xs tracking-widest', props.class)">
+  <span :class="cn('ml-auto text-xs tracking-widest text-pc/60', props.class)">
     <slot />
   </span>
 </template>

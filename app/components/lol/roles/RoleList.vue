@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { roles } from './handleRoles'
+import { roles } from "./handleRoles"
 
 const props = defineProps<{
   pocket: Pocket
@@ -14,17 +14,17 @@ const rolesList = ref([...roles.sort((a, b) => a.localeCompare(b))])
 const originalOrder = ref([...rolesList.value])
 
 const sortedRoles = computed(() => {
-  const checked = rolesList.value.filter(role =>
+  const checked = rolesList.value.filter((role) =>
     useArrayIncludes(pocket.value.roles, role)
   )
   const unchecked = rolesList.value.filter(
-    role => !useArrayIncludes(pocket.value.roles, role)
+    (role) => !useArrayIncludes(pocket.value.roles, role)
   )
   return [...checked, ...unchecked]
 })
 
 function moveToTop(role: string) {
-  const index = rolesList.value.findIndex(r => r === role)
+  const index = rolesList.value.findIndex((r) => r === role)
   if (index !== -1) {
     const [removed] = rolesList.value.splice(index, 1) // Remove role
     rolesList.value.unshift(removed) // Add it to the top
@@ -47,21 +47,19 @@ function handleReset() {
     champions, or in place of them.
   </p>
 
-  <transition-slide class="gap-2 filter" tag="form" group>
+  <transition-slide class="filter gap-2" tag="form" group>
     <input
-      class="filter-reset peer btn bg-b1 text-bc text-3xl font-normal!"
+      class="filter-reset peer btn bg-p0 text-3xl font-normal! text-pc"
       type="checkbox"
       name="roles"
       aria-label="x"
-      @click="pocket.roles = [null]"
-    >
+      @click="pocket.roles = [null]" />
 
     <label
       v-for="role in sortedRoles"
       :key="role"
-      class="has-checked:!bgneutral btn bg-b1 has-checked:text-nc has-checked:btn-neutral! flex gap-3 rounded-lg! text-sm capitalize peer-not-checked:first-of-type:-ml-2"
-      :for="role"
-    >
+      class="has-checked:!bgneutral btn flex gap-3 rounded-lg! bg-p0 text-sm capitalize peer-not-checked:first-of-type:-ml-2 has-checked:text-nc has-checked:btn-neutral!"
+      :for="role">
       <input
         :id="role"
         v-model="pocket.roles"
@@ -69,17 +67,13 @@ function handleReset() {
         type="checkbox"
         name="roles"
         :value="role"
-        @change="moveToTop(role)"
-      >
+        @change="moveToTop(role)" />
 
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
-        class="dst peer-checked:text-nc h-4.5 w-auto shrink-0"
-        :class="{ 'size-5': role === 'jungle' }"
-      />
+        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc"
+        :class="{ 'size-5': role === 'jungle' }" />
       {{ role }}
     </label>
   </transition-slide>
 </template>
-
-<style scoped></style>

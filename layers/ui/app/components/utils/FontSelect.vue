@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { fonts } from '~~/layers/ui/app/components/utils/fonts'
+import { fonts } from "~~/layers/ui/app/components/utils/fonts"
 
 const props = defineProps<{
   model: number
@@ -10,12 +10,11 @@ const props = defineProps<{
 <template>
   <Select class="group">
     <SelectTrigger
-      class="border-b3 bg-b1 ring-b3/80 ml-2 max-w-54 shadow-none ring inset-shadow-xs"
-    >
+      class="ml-2 max-w-54 border-p3 bg-p0 shadow-none ring inset-shadow-xs ring-p3/80">
       <SelectValue class="p-0" placeholder="Aa" as-child>
         <!--
           :style="{ fontFamily: props.card.font[props.model] }" -->
-        <div class="dst items-center align-text-bottom text-lg font-medium">
+        <div class="items-center align-text-bottom text-lg font-medium dst">
           {{ props.model === 0 ? "Title Font" : "Accent Font" }}
         </div>
       </SelectValue>
@@ -26,15 +25,12 @@ const props = defineProps<{
         <SelectItem
           v-for="font in fonts.sort()"
           :key="font.id"
-          class="dst text-lg"
+          class="text-lg dst"
           :value="font.id"
-          :style="{ fontFamily: font.id }"
-        >
+          :style="{ fontFamily: font.id }">
           {{ font.display }}
         </SelectItem>
       </SelectGroup>
     </SelectContent>
   </Select>
 </template>
-
-<style scoped></style>

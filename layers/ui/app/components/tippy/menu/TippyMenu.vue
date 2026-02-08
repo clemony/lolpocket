@@ -9,8 +9,8 @@ const props = withDefaults(defineProps<TippyOptions>(), {
   animation: 'shift-toward',
   duration: 150,
   interactive: true,
-  offset: [0, 14] as any,
   placement: 'bottom',
+  offset: [0, 14] as any,
 })
 
 const triggerRef = ref<HTMLElement>()

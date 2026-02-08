@@ -1,49 +1,49 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Fulmination",
-  "id": 443055,
-  "rank": "Special",
-  "specialRecipe": 220007,
-  "noEffects": false,
-  "removed": false,
-  "nicknames": [
-    "energize"
+const item: Item = {
+  id: 443055,
+  name: 'Fulmination',
+  nicknames: [
+    'energize'
   ],
-  "passives": [
+  description: '55 Attack Damage\n45% Attack Speed\n15% Move Speed\n\nPolarity\nOn Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. \n\nDynamo\nEnergized Attacks deal an additional magic damage based on the Target\'s Current Health.',
+  noEffects: false,
+  rank: 'Special',
+  removed: false,
+  specialRecipe: 220007,
+  gold: {
+    base: 1000,
+    sell: 400,
+    total: 1000
+  },
+  maps: [
+    30
+  ],
+  passives: [
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Energized",
-      "effects": "Moving and basic attacking generates <i>Energize</i> stacks, up to 100."
+      name: 'Energized',
+      effects: 'Moving and basic attacking generates <i>Energize</i> stacks, up to 100.',
+      mythic: false,
+      unique: true
     },
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Polarity",
-      "effects": "Your <img src=\"/img/icons/energized.webp\" class=\"tip-icon \" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit."
+      name: 'Polarity',
+      effects: 'Your <img src="/img/icons/energized.webp" class="tip-icon " />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.',
+      mythic: false,
+      unique: true
     },
     {
-      "unique": true,
-      "mythic": false,
-      "name": "Dynamo",
-      "effects": "When fully <img src=\"/img/icons/energized.webp\" class=\"tip-icon \" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target's <b>current</b> health."
+      name: 'Dynamo',
+      effects: 'When fully <img src="/img/icons/energized.webp" class="tip-icon " />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 13% of the target\'s <b>current</b> health.',
+      mythic: false,
+      unique: true
     }
   ],
-  "stats": {
-    "attackDamage": 55,
-    "attackSpeed": 45,
-    "percentMovespeed": 15
-  },
-  "description": "55 Attack Damage\n45% Attack Speed\n15% Move Speed\n\nPolarity\nOn Attack, if the target is different from the target you most recently triggered an Energized Attack on, ready Energize. \n\nDynamo\nEnergized Attacks deal an additional magic damage based on the Target's Current Health.",
-  "gold": {
-    "base": 1000,
-    "total": 1000,
-    "sell": 400
-  },
-  "maps": [
-    30
-  ]
+  stats: {
+    attackDamage: 55,
+    attackSpeed: 45,
+    percentMovespeed: 15
+  }
 }
 export default item

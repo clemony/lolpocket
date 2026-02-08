@@ -9,20 +9,17 @@ const open = shallowRef<boolean>(true)
 <template>
   <Collapsible
     v-model:open="open"
-    class="match-data-table z-auto grid h-max w-full auto-rows-auto px-2 pb-0.5 **:text-xs"
-  >
+    class="match-data-table z-auto grid h-max w-full auto-rows-auto px-2 pb-0.5 **:text-xs">
     <!-- sticky header -->
 
     <CollapsibleTrigger class="contents w-full">
       <div
-        class="sticky top-11 left-0 z-2 mb-0.5 -ml-1 grid h-6 w-full grid-cols-[2.14fr_10fr] items-center"
-      >
+        class="sticky top-11 left-0 z-2 mb-0.5 -ml-1 grid h-6 w-full grid-cols-[2.14fr_10fr] items-center">
         <div
-          class="text-bc/80 inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap capitalize saturate-110"
+          class="inline-flex items-center gap-2 rounded-lg px-2 text-sm! leading-5 font-semibold text-nowrap text-pc/80 capitalize saturate-110"
           :style="{
             color: `color-mix(in lch, ${group.color} 80%, black 20%)`,
-          }"
-        >
+          }">
           <Icon
             :style="{
               color: `color-mix(in lch, ${group.color} 90%, black 10%)`,
@@ -33,26 +30,22 @@ const open = shallowRef<boolean>(true)
                 'transition-rotate size-4 duration-200 **:stroke-[3.6]',
                 open ? 'rotate-0' : 'rotate-180',
               )
-            "
-          />
+            " />
           {{ group.name }}
         </div>
       </div>
 
       <div
-        class="pointer-events-none relative z-0 -mt-3.25 flex w-full gap-2 overflow-hidden"
-      >
+        class="pointer-events-none relative z-0 -mt-3.25 flex w-full gap-2 overflow-hidden">
         <div
-          class="invisible h-0.5 w-fit gap-2 py-1 pl-10 text-sm font-semibold text-nowrap capitalize opacity-0"
-        >
+          class="invisible h-0.5 w-fit gap-2 py-1 pl-10 text-sm font-semibold text-nowrap capitalize opacity-0">
           {{ group.name }}
         </div>
         <Separator
           class="h-0.5 w-full"
           :style="{
             backgroundColor: `color-mix(in lch, ${group.color} 30%, transparent 70%)`,
-          }"
-        />
+          }" />
       </div>
     </CollapsibleTrigger>
 
@@ -61,18 +54,21 @@ const open = shallowRef<boolean>(true)
         (s) => s[1].group === group.name,
       )"
       :key="k"
-      class="group/row z-auto h-fit w-full p-px"
-    >
+      class="group/row z-auto h-fit w-full p-px">
       <!-- collapsible stats -->
-      <TableStatCollapsible v-if="k && k === 'kills'" :match :group :k :v />
+      <TableStatCollapsible
+        v-if="k && k === 'kills'"
+        :match
+        :group
+        :k
+        :v />
       <!-- regular stats -->
       <MatchPlayerStatRow
         v-else
         :key="k"
         :match
         :color="group.color"
-        :stat="[k, v]"
-      />
+        :stat="[k, v]" />
     </CollapsibleContent>
   </Collapsible>
 </template>

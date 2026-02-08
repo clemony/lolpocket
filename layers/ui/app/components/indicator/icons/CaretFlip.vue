@@ -11,19 +11,17 @@ const { class: className, fill } = defineProps<{
     name="caret-up"
     :class="
       cn(
-        'transition-rotate text-bc/60 duration-150 group-data-[state=open]/collapse:-rotate-180',
+        'transition-rotate text-pc/60 duration-150 group-data-[state=open]/collapse:-rotate-180',
         className,
       )
-    "
-  />
+    " />
   <icon
     v-else
     name="up"
     :class="
       cn(
-        'transition-rotate text-bc/60 group-hover/collapse:text-bc/100! duration-150 group-hover/collapse:**:stroke-[2.5] group-data-[state=open]/collapse:-rotate-180',
+        'transition-rotate text-pc/60 duration-150 group-hover/collapse:text-pc/100! group-hover/collapse:**:stroke-[2.5] group-data-[state=open]/collapse:-rotate-180',
         className,
       )
-    "
-  />
+    " />
 </template>

@@ -29,14 +29,12 @@ const emit = defineEmits(['load'])
       'relative grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
       props.class,
     )
-    "
-  >
+    ">
     <NuxtImg
       v-slot="{ src: source, isLoaded, imgAttrs }"
       :src="props.src"
       :format="props.format"
-      custom
-    >
+      custom>
       <img
         v-if="isLoaded"
         v-bind="imgAttrs"
@@ -46,36 +44,35 @@ const emit = defineEmits(['load'])
         :decoding="props.decoding"
         :class="
           cn(
-            'size-full pointer-events-none  shrink-0 opacity-0 transition-[opacity,transform] duration-400',
+            'pointer-events-none size-full shrink-0 opacity-0 transition-[opacity,transform] duration-400',
             {
               'animate-in fade-in translate-z-0 opacity-100 transition-all duration-400':
                 isLoaded,
             },
           )
         "
-        @load="emit('load')"
-      >
+        @load="emit('load')">
       <div
         v-else
         :class="
           cn(
-            'animate-in pointer-events-none absolute top-0 left-0 inset-0 fade-in grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500',
+            'animate-in fade-in pointer-events-none absolute inset-0 top-0 left-0 grid size-full shrink-0 place-items-center rounded-lg transition-all duration-500',
             {
               'animate-out fade-out opacity-0 transition-all duration-500':
                 isLoaded,
             },
           )
         "
-        alt="placeholder"
-      >
+        alt="placeholder">
         <span
           v-if="props.loadingType === 'spinner'"
-          class="grid size-full shrink-0 place-items-center"
-        >
+          class="grid size-full shrink-0 place-items-center">
           <Spinner />
         </span>
 
-        <USkeleton v-else class="size-full inset-0 grow" />
+        <USkeleton
+          v-else
+          class="inset-0 size-full grow" />
       </div>
     </NuxtImg>
     <slot />

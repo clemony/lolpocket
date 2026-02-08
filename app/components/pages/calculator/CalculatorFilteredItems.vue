@@ -15,13 +15,11 @@ const { filtered, filters, setFilter } = useItemFilter()
   <PopoverClose
     v-for="item in filtered"
     :key="item"
-    :class="cn('', props.class)"
-  >
+    :class="cn('', props.class)">
     <Item
       :id="item"
       class="size-full"
       basic
-      @click="emit('update:item', item)"
-    />
+      @click="emit('update:item', item)" />
   </PopoverClose>
 </template>

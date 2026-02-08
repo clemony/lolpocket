@@ -27,8 +27,7 @@ definePageMeta({
   <SeparatorLayout
     class="overflow-hidden!"
     description="Manage your account settings and set display preferences."
-    title="Settings"
-  >
+    title="Settings">
     <LayoutAsideSplit>
       <template #aside>
         <SettingsNav />

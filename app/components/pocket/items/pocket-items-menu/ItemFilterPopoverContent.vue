@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const scrollArea = useTemplateRef<HTMLElement>('scrollArea')
+const scrollArea = useTemplateRef<HTMLElement>("scrollArea")
 
 onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
 </script>
@@ -8,33 +8,29 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
   <PopoverContent
     update-position-strategy="always"
     variant="outline"
-    @open-auto-focus.prevent
-  >
+    @open-auto-focus.prevent>
     <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
       <InputGroupAddon>
         <icon class="size-4.5 opacity-50" name="search" />
       </InputGroupAddon>
       <InputGroupInput v-model="is().filters.query" />
-      <InputGroupClear class="mr-6" @clear-input="is().filters.query = ''" />
+      <InputClear class="mr-6" @clear-input="is().filters.query = ''" />
 
       <InputGroupAddon align="inline-end">
         <icon class="mr-2 size-4.5 opacity-50" name="filter" />
       </InputGroupAddon>
     </InputGroup>
     <div
-      class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]"
-    >
+      class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]">
       <div ref="scrollArea" class="overflow-auto">
         <div
-          class="relative grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5"
-        >
+          class="relative grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5">
           <Button
             v-if="is().filters.stats.length"
             class="absolute top-7 right-6 size-6"
             variant="outline"
             square
-            @click="is().filters.stats.length = 0"
-          >
+            @click="is().filters.stats.length = 0">
             <icon class="size-4" name="x" />
           </Button>
           <ItemStatsList
@@ -42,22 +38,19 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
             wrapper-class="flex-wrap pr-8 gap-x-6 max-h-106 flex flex-col gap-y-0"
             icons
             :indicator="false"
-            labels
-          />
+            labels />
           <Separator
-            class="-mx-6 w-[calc(100%+var(--spacing)*12)] -translate-x-6 -translate-y-3"
-          />
+            class="-mx-6 w-[calc(100%+var(--spacing)*12)] -translate-x-6 -translate-y-3" />
 
           <div class="grid w-full grid-cols-[0.6fr_1fr] gap-x-12 gap-y-1 pr-8">
             <Label class="popover-button-label">
               Item Tier
               <Button
                 v-if="is().filters.rank"
-                class="  size-6"
+                class="size-6"
                 variant="outline"
                 square
-                @click="is().filters.rank = null"
-              >
+                @click="is().filters.rank = null">
                 <icon class="size-4" name="x" />
               </Button>
             </Label>
@@ -65,11 +58,10 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               Categories
               <Button
                 v-if="is().filters.tags.length"
-                class="  size-6"
+                class="size-6"
                 variant="outline"
                 square
-                @click="is().filters.tags.length = 0"
-              >
+                @click="is().filters.tags.length = 0">
                 <icon class="size-4" name="x" />
               </Button>
             </Label>
@@ -77,19 +69,16 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               class="max-h-56 flex-col flex-wrap items-start"
               :clear="false"
               hover="btn"
-              variant="ghost"
-            />
+              variant="ghost" />
             <!-- tags -->
             <ItemTagsFilter
               class="max-h-56 w-9/10 flex-col flex-wrap items-start gap-y-3"
-              :clear="false"
-            />
+              :clear="false" />
           </div>
         </div>
       </div>
       <div
-        class="border-l-b3 sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l pt-3 pb-2 pb-3"
-      >
+        class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 pt-3 pb-2 pb-3">
         <ItemMapRadio />
         <!-- shop -->
 

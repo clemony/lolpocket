@@ -34,26 +34,26 @@ defineExpose({
 /* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
 const filteredChamps = ref([])
-// @todo
+// todo
 const gridApi = shallowRef<GridApi | null>(null)
 /* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
 
 const gridOptions: GridOptions<ChampionLite> = {
   columnHoverHighlight: true,
+  rowData: filteredChamps.value,
   defaultColDef: {
     initialHide: false,
     minWidth: 66,
     autoHeaderHeight: true,
-    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
     flex: 1,
+    wrapHeaderText: true,
+    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
     headerClass: ['champion-grid-header', 'h-full', 'items-end'],
     sortingOrder: ['desc', 'asc', null],
-    wrapHeaderText: true,
   },
   defaultColGroupDef: {
     suppressStickyLabel: true,
   },
-  rowData: filteredChamps.value,
   rowSelection: {
     checkboxes: false,
     enableClickSelection: true,
@@ -158,10 +158,10 @@ valueGetter: (params) => {
       return (params.data.stats?.crit + params.data.stats?.critperLevel)) * 100 / 100
     } },
     { columnGroupShow: 'open',
-cellClass: 'hidden-cell bg-b2/40 number-cell justify-end',
+cellClass: 'hidden-cell bg-p2/40 number-cell justify-end',
 maxWidth: 60,
 headerName: '🡱',
-headerClass: 'bg-b2/40',
+headerClass: 'bg-p2/40',
 valueGetter: params => params.data.stats?.critperLevel,
 hide: true },
   ] }, */
@@ -275,7 +275,7 @@ ModuleRegistry.registerModules([
   <article class="relative h-full grow overflow-y-auto">
     <!--  <AgGridVue
       v-if="filtered"
-      class="!size-full stat-grid champion-grid mt-38 border-t border-t-b3/40 "
+      class="!size-full stat-grid champion-grid mt-38 border-t border-t-p3/40 "
       :tooltip-show-delay="400"
       :initial-state="cs().dbChampionGridState"
       :grid-options="gridOptions"

@@ -14,17 +14,14 @@ const mainSet = computed(() =>
   <SelectTrigger as-child>
     <Button
       class="relative grid size-20 place-items-center overflow-hidden **:pointer-events-none"
-      variant="ghost"
-    >
+      variant="ghost">
       <RuneAndPathImg
         class="group/btn pointer-events-auto! z-10 size-16! cursor-pointer! rounded-full fx-0 **:pointer-events-none hover:shadow-sm hover:shadow-black/4"
         placement="left"
         variant="ghost"
-        :set="mainSet"
-      />
+        :set="mainSet" />
       <div
-        class="@6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden shrink flex-col overflow-hidden @6xl:flex"
-      >
+        class="@6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden shrink flex-col overflow-hidden @6xl:flex">
         <h3
           v-memo="[mainSet]"
           :class="
@@ -32,8 +29,7 @@ const mainSet = computed(() =>
               'dss group-hover/c:underline': mainSet?.keystone,
               'font-normal! opacity-10': !mainSet?.keystone,
             })
-          "
-        >
+          ">
           {{ runeNameById(mainSet?.keystone) || "Keystone" }}
         </h3>
 
@@ -44,8 +40,7 @@ const mainSet = computed(() =>
               'font-medium': mainSet?.secondary?.path,
               'font-normal! opacity-20': !mainSet?.secondary?.path,
             })
-          "
-        >
+          ">
           {{ mainSet?.secondary.path || "Secondary Path" }}
         </p>
       </div>

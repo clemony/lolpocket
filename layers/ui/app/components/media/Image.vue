@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 defineOptions({
   inheritAttrs: false,
@@ -8,12 +8,12 @@ defineOptions({
 const props = defineProps<{
   image: string
   alt: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   imgClass?: string
   quality?: number
 }>()
 
-const emit = defineEmits(['loaded'])
+const emit = defineEmits(["loaded"])
 </script>
 
 <template>
@@ -26,8 +26,7 @@ const emit = defineEmits(['loaded'])
       :alt="props.alt"
       :class="cn('size-full', props.class)"
       :custom="true"
-      @load="emit('loaded')"
-    >
+      @load="emit('loaded')">
       <!-- Show the actual image when loaded -->
 
       <AnimatePresence class="size-full" multiple as="div" mode="popLayout">
@@ -38,15 +37,13 @@ const emit = defineEmits(['loaded'])
           :transition="{
             duration: 0.3,
             ease: 'easeIn',
-          }"
-        >
+          }">
           <img
             v-bind="imgAttrs"
             alt="img"
             :img-attrs="{ ...imgAttrs, loading: 'lazy' }"
             :class="cn('size-full', props.imgClass)"
-            :src="src"
-          >
+            :src="src" />
         </motion.div>
         <!-- Show a placeholder while loading -->
         <Motion
@@ -56,13 +53,10 @@ const emit = defineEmits(['loaded'])
             duration: 0.3,
             ease: 'easeOut',
           }"
-          as-child
-        >
+          as-child>
           <Skeleton :class="cn('size-full', props.class)" alt="placeholder" />
         </Motion>
       </AnimatePresence>
     </NuxtImg>
   </LayoutGroup>
 </template>
-
-<style scoped></style>

@@ -7,6 +7,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Aatrox',
     name: 'Aatrox',
     attackType: 'Melee',
+    resource: 'Blood well',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -19,7 +20,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Blood well',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -32,6 +32,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ahri',
     name: 'Ahri',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -44,7 +45,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Burst',
@@ -57,6 +57,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Akali',
     name: 'Akali',
     attackType: 'Melee',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -70,7 +71,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Energy',
     roles: [
       'Assassin'
     ],
@@ -81,6 +81,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Akshan',
     name: 'Akshan',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 1,
       control: 1,
@@ -93,7 +94,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -105,6 +105,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Alistar',
     name: 'Alistar',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -117,7 +118,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -130,6 +130,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ambessa',
     name: 'Ambessa',
     attackType: 'Melee',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -142,7 +143,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Energy',
     roles: [
       'Assassin',
       'Diver',
@@ -156,6 +156,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Amumu',
     name: 'Amumu',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -169,7 +170,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -182,6 +182,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Anivia',
     name: 'Anivia',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -194,7 +195,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage',
@@ -207,6 +207,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Annie',
     name: 'Annie',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -219,7 +220,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage',
@@ -232,6 +232,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Aphelios',
     name: 'Aphelios',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -244,7 +245,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -255,6 +255,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ashe',
     name: 'Ashe',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 3,
@@ -268,7 +269,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman',
       'Support'
@@ -280,6 +280,7 @@ export const championsLite: ChampionLite[] = [
     key: 'AurelionSol',
     name: 'Aurelion Sol',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -292,7 +293,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage'
@@ -304,6 +304,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Aurora',
     name: 'Aurora',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -317,7 +318,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Burst',
@@ -330,6 +330,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Azir',
     name: 'Azir',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -342,7 +343,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman',
@@ -355,6 +355,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Bard',
     name: 'Bard',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -367,7 +368,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Mage',
@@ -380,6 +380,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Belveth',
     name: 'Bel\'Veth',
     attackType: 'Melee',
+    resource: 'None',
     attributeRatings: {
       abilityReliance: 0,
       control: 2,
@@ -392,7 +393,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'None',
     roles: [
       'Fighter',
       'Skirmisher'
@@ -404,6 +404,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Blitzcrank',
     name: 'Blitzcrank',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -416,7 +417,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Support',
@@ -429,6 +429,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Brand',
     name: 'Brand',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -443,7 +444,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage',
@@ -456,6 +456,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Braum',
     name: 'Braum',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -468,7 +469,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -481,6 +481,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Briar',
     name: 'Briar',
     attackType: 'Melee',
+    resource: 'Frenzy',
     attributeRatings: {
       abilityReliance: 10,
       control: 3,
@@ -493,7 +494,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Frenzy',
     roles: [
       'Assassin',
       'Diver',
@@ -506,6 +506,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Caitlyn',
     name: 'Caitlyn',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -518,7 +519,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -529,6 +529,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Camille',
     name: 'Camille',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 40,
       control: 2,
@@ -542,7 +543,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -555,6 +555,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Cassiopeia',
     name: 'Cassiopeia',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -567,7 +568,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage'
@@ -579,6 +579,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Chogath',
     name: 'Cho\'Gath',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -591,7 +592,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Specialist',
@@ -604,6 +604,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Corki',
     name: 'Corki',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -616,7 +617,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -628,6 +628,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Darius',
     name: 'Darius',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -640,7 +641,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -653,6 +653,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Diana',
     name: 'Diana',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -666,7 +667,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -679,6 +679,7 @@ export const championsLite: ChampionLite[] = [
     key: 'DrMundo',
     name: 'Dr. Mundo',
     attackType: 'Melee',
+    resource: 'Health',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -691,7 +692,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Health',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -704,6 +704,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Draven',
     name: 'Draven',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -716,7 +717,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -727,6 +727,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ekko',
     name: 'Ekko',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -740,7 +741,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Mage'
@@ -752,6 +752,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Elise',
     name: 'Elise',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -764,7 +765,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -777,6 +777,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Evelynn',
     name: 'Evelynn',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -789,7 +790,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Mage'
@@ -801,6 +801,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ezreal',
     name: 'Ezreal',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -813,7 +814,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -825,6 +825,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Fiddlesticks',
     name: 'Fiddlesticks',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -837,7 +838,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Specialist',
@@ -850,6 +850,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Fiora',
     name: 'Fiora',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -862,7 +863,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -875,6 +875,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Fizz',
     name: 'Fizz',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -887,7 +888,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter'
@@ -899,6 +899,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Galio',
     name: 'Galio',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -912,7 +913,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Tank',
@@ -925,6 +925,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Gangplank',
     name: 'Gangplank',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -937,7 +938,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Specialist'
@@ -949,6 +949,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Garen',
     name: 'Garen',
     attackType: 'Melee',
+    resource: 'None',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -961,7 +962,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'None',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -974,6 +974,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Gnar',
     name: 'Gnar',
     attackType: 'Ranged',
+    resource: 'Rage',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -986,7 +987,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Rage',
     roles: [
       'Fighter',
       'Specialist',
@@ -999,6 +999,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Gragas',
     name: 'Gragas',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -1013,7 +1014,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Mage',
@@ -1026,6 +1026,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Graves',
     name: 'Graves',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -1038,7 +1039,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman',
       'Specialist'
@@ -1050,6 +1050,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Gwen',
     name: 'Gwen',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 50,
       control: 1,
@@ -1063,7 +1064,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -1076,6 +1076,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Hecarim',
     name: 'Hecarim',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -1088,7 +1089,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -1101,6 +1101,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Heimerdinger',
     name: 'Heimerdinger',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -1115,7 +1116,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Specialist',
@@ -1128,6 +1128,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Hwei',
     name: 'Hwei',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -1141,7 +1142,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage',
@@ -1154,6 +1154,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Illaoi',
     name: 'Illaoi',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -1166,7 +1167,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -1179,6 +1179,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Irelia',
     name: 'Irelia',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -1192,7 +1193,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -1205,6 +1205,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ivern',
     name: 'Ivern',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 3,
@@ -1217,7 +1218,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Mage',
@@ -1230,6 +1230,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Janna',
     name: 'Janna',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -1242,7 +1243,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -1255,6 +1255,7 @@ export const championsLite: ChampionLite[] = [
     key: 'JarvanIV',
     name: 'Jarvan IV',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -1267,7 +1268,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -1280,6 +1280,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Jax',
     name: 'Jax',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -1293,7 +1294,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -1306,6 +1306,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Jayce',
     name: 'Jayce',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 1,
@@ -1319,7 +1320,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Fighter',
@@ -1332,6 +1332,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Jhin',
     name: 'Jhin',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -1344,7 +1345,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Mage',
@@ -1357,6 +1357,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Jinx',
     name: 'Jinx',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 2,
@@ -1369,7 +1370,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -1380,6 +1380,7 @@ export const championsLite: ChampionLite[] = [
     key: 'KSante',
     name: 'K\'Sante',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 3,
@@ -1392,7 +1393,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Skirmisher',
@@ -1406,6 +1406,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kaisa',
     name: 'Kai\'Sa',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -1418,7 +1419,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -1430,6 +1430,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kalista',
     name: 'Kalista',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -1442,7 +1443,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -1453,6 +1453,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Karma',
     name: 'Karma',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -1467,7 +1468,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Enchanter',
@@ -1481,6 +1481,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Karthus',
     name: 'Karthus',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -1493,7 +1494,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage'
@@ -1505,6 +1505,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kassadin',
     name: 'Kassadin',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 1,
@@ -1517,7 +1518,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Mage'
@@ -1529,6 +1529,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Katarina',
     name: 'Katarina',
     attackType: 'Melee',
+    resource: 'None',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -1541,7 +1542,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'None',
     roles: [
       'Assassin',
       'Mage'
@@ -1553,6 +1553,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kayle',
     name: 'Kayle',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -1565,7 +1566,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman',
@@ -1578,6 +1578,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kayn',
     name: 'Kayn',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -1590,7 +1591,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -1603,6 +1603,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kennen',
     name: 'Kennen',
     attackType: 'Ranged',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -1615,7 +1616,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Energy',
     roles: [
       'Mage',
       'Marksman',
@@ -1628,6 +1628,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Khazix',
     name: 'Kha\'Zix',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -1640,7 +1641,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin'
     ],
@@ -1651,6 +1651,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kindred',
     name: 'Kindred',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -1663,7 +1664,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -1674,6 +1674,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Kled',
     name: 'Kled',
     attackType: 'Melee',
+    resource: 'Courage',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -1686,7 +1687,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Courage',
     roles: [
       'Fighter',
       'Skirmisher',
@@ -1699,6 +1699,7 @@ export const championsLite: ChampionLite[] = [
     key: 'KogMaw',
     name: 'Kog\'Maw',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -1711,7 +1712,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -1723,6 +1723,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Leblanc',
     name: 'LeBlanc',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -1735,7 +1736,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Burst',
@@ -1748,6 +1748,7 @@ export const championsLite: ChampionLite[] = [
     key: 'LeeSin',
     name: 'Lee Sin',
     attackType: 'Melee',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -1760,7 +1761,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Energy',
     roles: [
       'Assassin',
       'Diver',
@@ -1773,6 +1773,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Leona',
     name: 'Leona',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -1785,7 +1786,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -1798,6 +1798,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Lillia',
     name: 'Lillia',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -1810,7 +1811,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Mage',
@@ -1823,6 +1823,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Lissandra',
     name: 'Lissandra',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -1835,7 +1836,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage'
@@ -1847,6 +1847,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Lucian',
     name: 'Lucian',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -1859,7 +1860,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -1871,6 +1871,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Lulu',
     name: 'Lulu',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -1883,7 +1884,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -1896,6 +1896,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Lux',
     name: 'Lux',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -1909,7 +1910,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Burst',
@@ -1923,6 +1923,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Malphite',
     name: 'Malphite',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -1937,7 +1938,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Tank',
@@ -1950,6 +1950,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Malzahar',
     name: 'Malzahar',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -1962,7 +1963,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Battlemage',
@@ -1975,6 +1975,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Maokai',
     name: 'Maokai',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -1988,7 +1989,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -2001,6 +2001,7 @@ export const championsLite: ChampionLite[] = [
     key: 'MasterYi',
     name: 'Master Yi',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -2013,7 +2014,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -2026,6 +2026,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Mel',
     name: 'Mel',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -2039,7 +2040,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage',
@@ -2052,6 +2052,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Milio',
     name: 'Milio',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -2064,7 +2065,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -2077,6 +2077,7 @@ export const championsLite: ChampionLite[] = [
     key: 'MissFortune',
     name: 'Miss Fortune',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 1,
@@ -2089,7 +2090,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -2101,6 +2101,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Mordekaiser',
     name: 'Mordekaiser',
     attackType: 'Melee',
+    resource: 'Shield',
     attributeRatings: {
       abilityReliance: 80,
       control: 1,
@@ -2113,7 +2114,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Shield',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -2126,6 +2126,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Morgana',
     name: 'Morgana',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -2139,7 +2140,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Mage',
@@ -2152,6 +2152,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Naafiri',
     name: 'Naafiri',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 70,
       control: 1,
@@ -2164,7 +2165,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter'
@@ -2176,6 +2176,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nami',
     name: 'Nami',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -2188,7 +2189,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -2201,6 +2201,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nasus',
     name: 'Nasus',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -2213,7 +2214,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -2226,6 +2226,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nautilus',
     name: 'Nautilus',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -2238,7 +2239,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -2251,6 +2251,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Neeko',
     name: 'Neeko',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -2264,7 +2265,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Catcher',
@@ -2278,6 +2278,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nidalee',
     name: 'Nidalee',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 1,
@@ -2290,7 +2291,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Mage',
@@ -2303,6 +2303,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nilah',
     name: 'Nilah',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 25,
       control: 1,
@@ -2315,7 +2316,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -2328,6 +2328,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nocturne',
     name: 'Nocturne',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -2340,7 +2341,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter'
@@ -2352,6 +2352,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Nunu',
     name: 'Nunu & Willump',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 2,
@@ -2364,7 +2365,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Tank',
@@ -2377,6 +2377,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Olaf',
     name: 'Olaf',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -2389,7 +2390,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -2402,6 +2402,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Orianna',
     name: 'Orianna',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -2414,7 +2415,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage',
@@ -2427,6 +2427,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ornn',
     name: 'Ornn',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 60,
       control: 3,
@@ -2439,7 +2440,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Tank',
@@ -2452,6 +2452,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Pantheon',
     name: 'Pantheon',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -2467,7 +2468,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -2480,6 +2480,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Poppy',
     name: 'Poppy',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -2493,7 +2494,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Tank',
@@ -2506,6 +2506,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Pyke',
     name: 'Pyke',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 50,
       control: 3,
@@ -2518,7 +2519,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Catcher',
@@ -2531,6 +2531,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Qiyana',
     name: 'Qiyana',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 70,
       control: 2,
@@ -2543,7 +2544,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter'
@@ -2555,6 +2555,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Quinn',
     name: 'Quinn',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -2567,7 +2568,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman',
@@ -2580,6 +2580,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Rakan',
     name: 'Rakan',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 3,
@@ -2592,7 +2593,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Support'
@@ -2604,6 +2604,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Rammus',
     name: 'Rammus',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -2616,7 +2617,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Tank',
@@ -2629,6 +2629,7 @@ export const championsLite: ChampionLite[] = [
     key: 'RekSai',
     name: 'Rek\'Sai',
     attackType: 'Melee',
+    resource: 'Rage',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -2641,7 +2642,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Rage',
     roles: [
       'Diver',
       'Fighter',
@@ -2654,6 +2654,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Rell',
     name: 'Rell',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 85,
       control: 3,
@@ -2666,7 +2667,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -2679,6 +2679,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Renata',
     name: 'Renata Glasc',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 80,
       control: 3,
@@ -2691,7 +2692,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -2704,6 +2704,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Renekton',
     name: 'Renekton',
     attackType: 'Melee',
+    resource: 'Fury',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -2716,7 +2717,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Fury',
     roles: [
       'Diver',
       'Fighter',
@@ -2729,6 +2729,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Rengar',
     name: 'Rengar',
     attackType: 'Melee',
+    resource: 'Ferocity',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -2742,7 +2743,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Ferocity',
     roles: [
       'Assassin',
       'Diver',
@@ -2755,6 +2755,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Riven',
     name: 'Riven',
     attackType: 'Melee',
+    resource: 'None',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -2767,7 +2768,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'None',
     roles: [
       'Assassin',
       'Fighter',
@@ -2780,6 +2780,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Rumble',
     name: 'Rumble',
     attackType: 'Melee',
+    resource: 'Heat',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -2793,7 +2794,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Heat',
     roles: [
       'Battlemage',
       'Fighter',
@@ -2806,6 +2806,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ryze',
     name: 'Ryze',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -2818,7 +2819,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Fighter',
@@ -2831,6 +2831,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Samira',
     name: 'Samira',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -2843,7 +2844,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -2855,6 +2855,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sejuani',
     name: 'Sejuani',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -2867,7 +2868,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Tank',
@@ -2880,6 +2880,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Senna',
     name: 'Senna',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -2893,7 +2894,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Marksman',
@@ -2906,6 +2906,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Seraphine',
     name: 'Seraphine',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -2919,7 +2920,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Enchanter',
@@ -2933,6 +2933,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sett',
     name: 'Sett',
     attackType: 'Melee',
+    resource: 'Grit',
     attributeRatings: {
       abilityReliance: 40,
       control: 2,
@@ -2945,7 +2946,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Grit',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -2958,6 +2958,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Shaco',
     name: 'Shaco',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -2971,7 +2972,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin'
     ],
@@ -2982,6 +2982,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Shen',
     name: 'Shen',
     attackType: 'Melee',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -2995,7 +2996,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Energy',
     roles: [
       'Tank',
       'Warden'
@@ -3007,6 +3007,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Shyvana',
     name: 'Shyvana',
     attackType: 'Melee',
+    resource: 'Fury',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -3019,7 +3020,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Fury',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3032,6 +3032,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Singed',
     name: 'Singed',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3044,7 +3045,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Specialist',
@@ -3057,6 +3057,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sion',
     name: 'Sion',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 3,
@@ -3069,7 +3070,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Tank',
@@ -3082,6 +3082,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sivir',
     name: 'Sivir',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -3094,7 +3095,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -3105,6 +3105,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Skarner',
     name: 'Skarner',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 45,
       control: 3,
@@ -3118,7 +3119,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3132,6 +3132,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Smolder',
     name: 'Smolder',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -3146,7 +3147,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman'
@@ -3158,6 +3158,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sona',
     name: 'Sona',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -3170,7 +3171,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -3183,6 +3183,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Soraka',
     name: 'Soraka',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3195,7 +3196,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -3208,6 +3208,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Swain',
     name: 'Swain',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3222,7 +3223,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage',
@@ -3235,6 +3235,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Sylas',
     name: 'Sylas',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 70,
       control: 1,
@@ -3248,7 +3249,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Burst',
@@ -3262,6 +3262,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Syndra',
     name: 'Syndra',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3274,7 +3275,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage'
@@ -3286,6 +3286,7 @@ export const championsLite: ChampionLite[] = [
     key: 'TahmKench',
     name: 'Tahm Kench',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -3299,7 +3300,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Support',
       'Tank',
@@ -3312,6 +3312,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Taliyah',
     name: 'Taliyah',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3325,7 +3326,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage',
@@ -3338,6 +3338,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Talon',
     name: 'Talon',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 1,
@@ -3350,7 +3351,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin'
     ],
@@ -3361,6 +3361,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Taric',
     name: 'Taric',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 2,
@@ -3374,7 +3375,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Support',
@@ -3388,6 +3388,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Teemo',
     name: 'Teemo',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -3402,7 +3403,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Marksman',
@@ -3415,6 +3415,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Thresh',
     name: 'Thresh',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 75,
       control: 3,
@@ -3427,7 +3428,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Support',
@@ -3440,6 +3440,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Tristana',
     name: 'Tristana',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -3453,7 +3454,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -3465,6 +3465,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Trundle',
     name: 'Trundle',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 1,
@@ -3478,7 +3479,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3491,6 +3491,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Tryndamere',
     name: 'Tryndamere',
     attackType: 'Melee',
+    resource: 'Fury',
     attributeRatings: {
       abilityReliance: 10,
       control: 1,
@@ -3503,7 +3504,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Fury',
     roles: [
       'Assassin',
       'Fighter',
@@ -3516,6 +3516,7 @@ export const championsLite: ChampionLite[] = [
     key: 'TwistedFate',
     name: 'Twisted Fate',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 65,
       control: 2,
@@ -3530,7 +3531,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage',
@@ -3543,6 +3543,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Twitch',
     name: 'Twitch',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 0,
       control: 1,
@@ -3556,7 +3557,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -3568,6 +3568,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Udyr',
     name: 'Udyr',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -3581,7 +3582,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3594,6 +3594,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Urgot',
     name: 'Urgot',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -3606,7 +3607,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3619,6 +3619,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Varus',
     name: 'Varus',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -3631,7 +3632,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage',
@@ -3644,6 +3644,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Vayne',
     name: 'Vayne',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 0,
       control: 2,
@@ -3657,7 +3658,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Marksman'
@@ -3669,6 +3669,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Veigar',
     name: 'Veigar',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -3682,7 +3683,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage'
@@ -3694,6 +3694,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Velkoz',
     name: 'Vel\'Koz',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -3707,7 +3708,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage',
@@ -3720,6 +3720,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Vex',
     name: 'Vex',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -3732,7 +3733,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage'
@@ -3744,6 +3744,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Vi',
     name: 'Vi',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 3,
@@ -3756,7 +3757,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Diver',
@@ -3769,6 +3769,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Viego',
     name: 'Viego',
     attackType: 'Melee',
+    resource: 'None',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -3781,7 +3782,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'None',
     roles: [
       'Assassin',
       'Fighter',
@@ -3794,6 +3794,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Viktor',
     name: 'Viktor',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -3806,7 +3807,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Battlemage',
       'Mage'
@@ -3818,6 +3818,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Vladimir',
     name: 'Vladimir',
     attackType: 'Ranged',
+    resource: 'Crimson rush',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -3831,7 +3832,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Crimson rush',
     roles: [
       'Battlemage',
       'Fighter',
@@ -3844,6 +3844,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Volibear',
     name: 'Volibear',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -3857,7 +3858,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -3870,6 +3870,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Warwick',
     name: 'Warwick',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -3883,7 +3884,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -3896,6 +3896,7 @@ export const championsLite: ChampionLite[] = [
     key: 'MonkeyKing',
     name: 'Wukong',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -3909,7 +3910,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -3922,6 +3922,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Xayah',
     name: 'Xayah',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 3,
@@ -3934,7 +3935,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -3945,6 +3945,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Xerath',
     name: 'Xerath',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -3958,7 +3959,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage',
@@ -3971,6 +3971,7 @@ export const championsLite: ChampionLite[] = [
     key: 'XinZhao',
     name: 'Xin Zhao',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -3983,7 +3984,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Jungle'
     ],
-    resource: 'Mana',
     roles: [
       'Diver',
       'Fighter',
@@ -3996,6 +3996,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Yasuo',
     name: 'Yasuo',
     attackType: 'Melee',
+    resource: 'Flow',
     attributeRatings: {
       abilityReliance: 20,
       control: 2,
@@ -4010,7 +4011,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Flow',
     roles: [
       'Assassin',
       'Fighter',
@@ -4023,6 +4023,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Yone',
     name: 'Yone',
     attackType: 'Melee',
+    resource: 'Flow',
     attributeRatings: {
       abilityReliance: 45,
       control: 2,
@@ -4036,7 +4037,6 @@ export const championsLite: ChampionLite[] = [
       'Middle',
       'Top'
     ],
-    resource: 'Flow',
     roles: [
       'Assassin',
       'Fighter',
@@ -4049,6 +4049,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Yorick',
     name: 'Yorick',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 55,
       control: 2,
@@ -4061,7 +4062,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Fighter',
       'Juggernaut',
@@ -4074,6 +4074,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Yunara',
     name: 'Yunara',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 35,
       control: 1,
@@ -4086,7 +4087,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -4097,6 +4097,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Yuumi',
     name: 'Yuumi',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 1,
@@ -4109,7 +4110,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Enchanter',
       'Mage',
@@ -4122,6 +4122,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zaahen',
     name: 'Zaahen',
     attackType: 'Melee',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 30,
       control: 2,
@@ -4134,7 +4135,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Top'
     ],
-    resource: 'Mana',
     roles: [
       'Assassin',
       'Fighter',
@@ -4147,6 +4147,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zac',
     name: 'Zac',
     attackType: 'Melee',
+    resource: 'Health',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -4161,7 +4162,6 @@ export const championsLite: ChampionLite[] = [
       'Support',
       'Top'
     ],
-    resource: 'Health',
     roles: [
       'Fighter',
       'Tank',
@@ -4174,6 +4174,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zed',
     name: 'Zed',
     attackType: 'Melee',
+    resource: 'Energy',
     attributeRatings: {
       abilityReliance: 55,
       control: 1,
@@ -4187,7 +4188,6 @@ export const championsLite: ChampionLite[] = [
       'Jungle',
       'Middle'
     ],
-    resource: 'Energy',
     roles: [
       'Assassin'
     ],
@@ -4198,6 +4198,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zeri',
     name: 'Zeri',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 35,
       control: 2,
@@ -4210,7 +4211,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Bottom'
     ],
-    resource: 'Mana',
     roles: [
       'Marksman'
     ],
@@ -4221,6 +4221,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Ziggs',
     name: 'Ziggs',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 90,
       control: 2,
@@ -4234,7 +4235,6 @@ export const championsLite: ChampionLite[] = [
       'Bottom',
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Artillery',
       'Mage'
@@ -4246,6 +4246,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zilean',
     name: 'Zilean',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -4258,7 +4259,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Mage',
       'Specialist',
@@ -4271,6 +4271,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zoe',
     name: 'Zoe',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 2,
@@ -4283,7 +4284,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Middle'
     ],
-    resource: 'Mana',
     roles: [
       'Burst',
       'Mage',
@@ -4296,6 +4296,7 @@ export const championsLite: ChampionLite[] = [
     key: 'Zyra',
     name: 'Zyra',
     attackType: 'Ranged',
+    resource: 'Mana',
     attributeRatings: {
       abilityReliance: 100,
       control: 3,
@@ -4308,7 +4309,6 @@ export const championsLite: ChampionLite[] = [
     positions: [
       'Support'
     ],
-    resource: 'Mana',
     roles: [
       'Catcher',
       'Mage',

@@ -21,14 +21,15 @@ function onMagicTypeChanged(e: { currentType: string }) {
 
 <template>
   <Card class="grid w-fit gap-8 px-8 pt-10 pb-8">
-    <div ref="chart" class="h-140 w-270">
+    <div
+      ref="chart"
+      class="h-140 w-270">
       <VChart
         class="size-full"
         theme="theme"
         :option
         autoresize
-        @magictypechanged="onMagicTypeChanged"
-      />
+        @magictypechanged="onMagicTypeChanged" />
     </div>
   </Card>
 </template>

@@ -6,6 +6,7 @@ export const itemsLite: ItemLite[] = [
     id: 1001,
     key: 'item',
     name: 'Boots',
+    rank: 'Boots',
     gold: {
       base: 300,
       sell: 210,
@@ -17,7 +18,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     stats: {
       flatMovespeed: 25
     }
@@ -26,6 +26,7 @@ export const itemsLite: ItemLite[] = [
     id: 1004,
     key: 'item',
     name: 'Faerie Charm',
+    rank: 'Basic',
     gold: {
       base: 200,
       sell: 140,
@@ -37,7 +38,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       manaRegen: 50
     },
@@ -50,6 +50,7 @@ export const itemsLite: ItemLite[] = [
     id: 1006,
     key: 'item',
     name: 'Rejuvenation Bead',
+    rank: 'Basic',
     gold: {
       base: 300,
       sell: 120,
@@ -61,7 +62,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       healthRegen: 100
     },
@@ -73,6 +73,7 @@ export const itemsLite: ItemLite[] = [
     id: 1011,
     key: 'item',
     name: 'Giant\'s Belt',
+    rank: 'Epic',
     gold: {
       base: 500,
       sell: 630,
@@ -84,7 +85,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028
     ],
@@ -101,6 +101,7 @@ export const itemsLite: ItemLite[] = [
     id: 1018,
     key: 'item',
     name: 'Cloak of Agility',
+    rank: 'Basic',
     gold: {
       base: 600,
       sell: 420,
@@ -112,7 +113,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       criticalStrikeChance: 15
     },
@@ -124,6 +124,7 @@ export const itemsLite: ItemLite[] = [
     id: 1026,
     key: 'item',
     name: 'Blasting Wand',
+    rank: 'Basic',
     gold: {
       base: 850,
       sell: 595,
@@ -135,7 +136,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       abilityPower: 45
     },
@@ -148,6 +148,7 @@ export const itemsLite: ItemLite[] = [
     id: 1027,
     key: 'item',
     name: 'Sapphire Crystal',
+    rank: 'Basic',
     aka: [
       'blue'
     ],
@@ -162,7 +163,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       mana: 300
     },
@@ -175,6 +175,7 @@ export const itemsLite: ItemLite[] = [
     id: 1028,
     key: 'item',
     name: 'Ruby Crystal',
+    rank: 'Basic',
     aka: [
       'red'
     ],
@@ -189,7 +190,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       health: 150
     },
@@ -206,6 +206,7 @@ export const itemsLite: ItemLite[] = [
     id: 1029,
     key: 'item',
     name: 'Cloth Armor',
+    rank: 'Basic',
     gold: {
       base: 300,
       sell: 210,
@@ -217,7 +218,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       armor: 15
     },
@@ -234,6 +234,7 @@ export const itemsLite: ItemLite[] = [
     id: 1031,
     key: 'item',
     name: 'Chain Vest',
+    rank: 'Epic',
     gold: {
       base: 500,
       sell: 560,
@@ -245,7 +246,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1029
     ],
@@ -263,6 +263,7 @@ export const itemsLite: ItemLite[] = [
     id: 1033,
     key: 'item',
     name: 'Null-Magic Mantle',
+    rank: 'Basic',
     gold: {
       base: 400,
       sell: 280,
@@ -274,7 +275,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       magicResistance: 20
     },
@@ -302,6 +302,7 @@ export const itemsLite: ItemLite[] = [
     id: 1036,
     key: 'item',
     name: 'Long Sword',
+    rank: 'Basic',
     gold: {
       base: 350,
       sell: 245,
@@ -313,7 +314,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       attackDamage: 10
     },
@@ -327,6 +327,7 @@ export const itemsLite: ItemLite[] = [
     id: 1037,
     key: 'item',
     name: 'Pickaxe',
+    rank: 'Basic',
     gold: {
       base: 875,
       sell: 613,
@@ -338,7 +339,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       attackDamage: 25
     },
@@ -352,6 +352,7 @@ export const itemsLite: ItemLite[] = [
     id: 1038,
     key: 'item',
     name: 'B. F. Sword',
+    rank: 'Basic',
     aka: [
       'bf'
     ],
@@ -366,7 +367,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       attackDamage: 40
     },
@@ -401,6 +401,7 @@ export const itemsLite: ItemLite[] = [
     id: 1042,
     key: 'item',
     name: 'Dagger',
+    rank: 'Basic',
     gold: {
       base: 250,
       sell: 175,
@@ -412,7 +413,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       attackSpeed: 10
     },
@@ -426,6 +426,7 @@ export const itemsLite: ItemLite[] = [
     id: 1043,
     key: 'item',
     name: 'Recurve Bow',
+    rank: 'Epic',
     gold: {
       base: 450,
       sell: 490,
@@ -437,7 +438,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1042
     ],
@@ -454,6 +454,7 @@ export const itemsLite: ItemLite[] = [
     id: 1052,
     key: 'item',
     name: 'Amplifying Tome',
+    rank: 'Basic',
     aka: [
       'amptome',
       'book'
@@ -469,7 +470,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       abilityPower: 20
     },
@@ -482,6 +482,7 @@ export const itemsLite: ItemLite[] = [
     id: 1053,
     key: 'item',
     name: 'Vampiric Scepter',
+    rank: 'Epic',
     gold: {
       base: 550,
       sell: 630,
@@ -493,7 +494,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036
     ],
@@ -511,6 +511,7 @@ export const itemsLite: ItemLite[] = [
     id: 1054,
     key: 'item',
     name: 'Doran\'s Shield',
+    rank: 'Starter',
     aka: [
       'dshield'
     ],
@@ -524,7 +525,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Starter',
     stats: {
       health: 110,
       healthRegen: 4
@@ -542,6 +542,7 @@ export const itemsLite: ItemLite[] = [
     id: 1055,
     key: 'item',
     name: 'Doran\'s Blade',
+    rank: 'Starter',
     aka: [
       'dblade'
     ],
@@ -555,7 +556,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Starter',
     stats: {
       attackDamage: 10,
       health: 80,
@@ -572,6 +572,7 @@ export const itemsLite: ItemLite[] = [
     id: 1056,
     key: 'item',
     name: 'Doran\'s Ring',
+    rank: 'Starter',
     aka: [
       'dring'
     ],
@@ -585,7 +586,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Starter',
     stats: {
       abilityPower: 18,
       health: 90
@@ -600,6 +600,7 @@ export const itemsLite: ItemLite[] = [
     id: 1057,
     key: 'item',
     name: 'Negatron Cloak',
+    rank: 'Epic',
     gold: {
       base: 450,
       sell: 595,
@@ -611,7 +612,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1033
     ],
@@ -628,6 +628,7 @@ export const itemsLite: ItemLite[] = [
     id: 1058,
     key: 'item',
     name: 'Needlessly Large Rod',
+    rank: 'Basic',
     aka: [
       'nlr'
     ],
@@ -642,7 +643,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       abilityPower: 65
     },
@@ -654,6 +654,7 @@ export const itemsLite: ItemLite[] = [
     id: 1082,
     key: 'item',
     name: 'Dark Seal',
+    rank: 'Starter',
     aka: [
       'Noxian'
     ],
@@ -665,7 +666,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Starter',
     stats: {
       abilityPower: 15,
       health: 50
@@ -678,6 +678,7 @@ export const itemsLite: ItemLite[] = [
     id: 1083,
     key: 'item',
     name: 'Cull',
+    rank: 'Starter',
     aka: [
       'dblade'
     ],
@@ -689,7 +690,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Starter',
     stats: {
       attackDamage: 7
     },
@@ -755,6 +755,7 @@ export const itemsLite: ItemLite[] = [
     id: 1101,
     key: 'item',
     name: 'Scorchclaw Pup',
+    rank: 'Starter',
     aka: [
       'jungle',
       'red',
@@ -771,7 +772,6 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Starter',
     stats: {},
     tags: [
       'Fighter',
@@ -786,6 +786,7 @@ export const itemsLite: ItemLite[] = [
     id: 1102,
     key: 'item',
     name: 'Gustwalker Hatchling',
+    rank: 'Starter',
     aka: [
       'jungle',
       'blue',
@@ -802,7 +803,6 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Starter',
     stats: {},
     tags: [
       'Fighter',
@@ -817,6 +817,7 @@ export const itemsLite: ItemLite[] = [
     id: 1103,
     key: 'item',
     name: 'Mosstomper Seedling',
+    rank: 'Starter',
     aka: [
       'jungle',
       'green',
@@ -833,7 +834,6 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Starter',
     stats: {},
     tags: [
       'Fighter',
@@ -898,6 +898,7 @@ export const itemsLite: ItemLite[] = [
     id: 1111,
     key: 'item',
     name: 'Jarvan I\'s',
+    rank: 'Special',
     gold: {
       base: 300,
       purchasable: false,
@@ -907,7 +908,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       12
     ],
-    rank: 'Special',
     stats: {
       abilityHaste: 10,
       armor: 25,
@@ -1054,6 +1054,7 @@ export const itemsLite: ItemLite[] = [
     id: 1500,
     key: 'item',
     name: 'Penetrating Bullets',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1067,7 +1068,6 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {
       armorPenetration: 30
     }
@@ -1094,6 +1094,7 @@ export const itemsLite: ItemLite[] = [
     id: 1502,
     key: 'item',
     name: 'Reinforced Armor',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1107,13 +1108,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1503,
     key: 'item',
     name: 'Warden\'s Eye',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1127,7 +1128,6 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
@@ -1161,6 +1161,7 @@ export const itemsLite: ItemLite[] = [
     id: 1506,
     key: 'item',
     name: 'Reinforced Armor',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1174,13 +1175,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1507,
     key: 'item',
     name: 'Overcharged',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1194,13 +1195,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1508,
     key: 'item',
     name: 'Anti-tower Socks',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1214,13 +1215,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1509,
     key: 'item',
     name: 'Gusto',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1234,13 +1235,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1510,
     key: 'item',
     name: 'Phreakish Gusto',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1254,13 +1255,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1511,
     key: 'item',
     name: 'Super Mech Armor',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1274,13 +1275,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1512,
     key: 'item',
     name: 'Super Mech Power Field',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1294,13 +1295,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 1515,
     key: 'item',
     name: 'Turret Plating',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1314,7 +1315,6 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
@@ -1486,6 +1486,7 @@ export const itemsLite: ItemLite[] = [
     id: 2003,
     key: 'item',
     name: 'Health Potion',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'red'
@@ -1500,7 +1501,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Health and reg'
@@ -1510,6 +1510,7 @@ export const itemsLite: ItemLite[] = [
     id: 2010,
     key: 'item',
     name: 'Total Biscuit of Everlasting Will',
+    rank: 'Special',
     aka: [
       'kleptomancy'
     ],
@@ -1526,7 +1527,6 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
@@ -1544,6 +1544,7 @@ export const itemsLite: ItemLite[] = [
     id: 2019,
     key: 'item',
     name: 'Steel Sigil',
+    rank: 'Epic',
     aka: [
       'Bloodstone'
     ],
@@ -1558,7 +1559,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1029,
       1036,
@@ -1576,6 +1576,7 @@ export const itemsLite: ItemLite[] = [
     id: 2020,
     key: 'item',
     name: 'The Brutalizer',
+    rank: 'Epic',
     aka: [
       'Bloodstone'
     ],
@@ -1590,7 +1591,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       2022,
       1037
@@ -1608,6 +1608,7 @@ export const itemsLite: ItemLite[] = [
     id: 2021,
     key: 'item',
     name: 'Tunneler',
+    rank: 'Epic',
     aka: [
       'drill'
     ],
@@ -1622,7 +1623,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1028
@@ -1639,6 +1639,7 @@ export const itemsLite: ItemLite[] = [
     id: 2022,
     key: 'item',
     name: 'Glowing Mote',
+    rank: 'Basic',
     aka: [
       'haste'
     ],
@@ -1653,7 +1654,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Basic',
     stats: {
       abilityHaste: 5
     },
@@ -1670,6 +1670,7 @@ export const itemsLite: ItemLite[] = [
     id: 2031,
     key: 'item',
     name: 'Refillable Potion',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'Green Potion'
@@ -1684,7 +1685,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Health and reg'
@@ -1709,6 +1709,7 @@ export const itemsLite: ItemLite[] = [
     id: 2049,
     key: 'item',
     name: 'Guardian\'s Amulet',
+    rank: 'Starter',
     gold: {
       base: 500,
       sell: 250,
@@ -1717,7 +1718,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Starter',
     stats: {
       abilityHaste: 20,
       abilityPower: 20,
@@ -1731,6 +1731,7 @@ export const itemsLite: ItemLite[] = [
     id: 2050,
     key: 'item',
     name: 'Guardian\'s Shroud',
+    rank: 'Starter',
     gold: {
       base: 500,
       sell: 250,
@@ -1739,7 +1740,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Starter',
     stats: {
       abilityHaste: 15,
       abilityPower: 35,
@@ -1754,6 +1754,7 @@ export const itemsLite: ItemLite[] = [
     id: 2051,
     key: 'item',
     name: 'Guardian\'s Horn',
+    rank: 'Starter',
     aka: [
       'Golden Arm of Kobe',
       'Golden Bicep of Kobe',
@@ -1771,7 +1772,6 @@ export const itemsLite: ItemLite[] = [
       12,
       35
     ],
-    rank: 'Starter',
     stats: {
       health: 150,
       healthRegen: 20
@@ -1786,6 +1786,7 @@ export const itemsLite: ItemLite[] = [
     id: 2052,
     key: 'item',
     name: 'Poro-Snax',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -1799,13 +1800,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 2055,
     key: 'item',
     name: 'Control Ward',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'orange',
@@ -1819,7 +1820,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
@@ -1837,6 +1837,7 @@ export const itemsLite: ItemLite[] = [
     id: 2065,
     key: 'item',
     name: 'Shurelya\'s Battlesong',
+    rank: 'Legendary',
     aka: [
       'shurelya',
       'reverie'
@@ -1852,7 +1853,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3113,
       4642
@@ -1872,6 +1872,7 @@ export const itemsLite: ItemLite[] = [
     id: 2138,
     key: 'item',
     name: 'Elixir of Iron',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'orange',
@@ -1887,7 +1888,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Health and reg',
@@ -1898,6 +1898,7 @@ export const itemsLite: ItemLite[] = [
     id: 2139,
     key: 'item',
     name: 'Elixir of Sorcery',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'blue'
@@ -1912,7 +1913,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Ability power',
@@ -1924,6 +1924,7 @@ export const itemsLite: ItemLite[] = [
     id: 2140,
     key: 'item',
     name: 'Elixir of Wrath',
+    rank: 'Consumable',
     aka: [
       'consumable',
       'red'
@@ -1938,7 +1939,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Attack damage',
@@ -1949,6 +1949,7 @@ export const itemsLite: ItemLite[] = [
     id: 2141,
     key: 'item',
     name: 'Cappa Juice',
+    rank: 'Consumable',
     gold: {
       base: 300,
       sell: 300,
@@ -1958,13 +1959,13 @@ export const itemsLite: ItemLite[] = [
       11,
       12
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 2142,
     key: 'item',
     name: 'Juice of Power',
+    rank: 'Consumable',
     gold: {
       base: 500,
       sell: 500,
@@ -1973,7 +1974,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Attack damage',
@@ -1984,6 +1984,7 @@ export const itemsLite: ItemLite[] = [
     id: 2143,
     key: 'item',
     name: 'Juice of Vitality',
+    rank: 'Consumable',
     gold: {
       base: 500,
       sell: 500,
@@ -1992,7 +1993,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {},
     tags: [
       'Health and reg'
@@ -2002,6 +2002,7 @@ export const itemsLite: ItemLite[] = [
     id: 2144,
     key: 'item',
     name: 'Juice of Haste',
+    rank: 'Consumable',
     gold: {
       base: 500,
       sell: 500,
@@ -2010,13 +2011,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 2145,
     key: 'item',
     name: 'Lucky Dice',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -2026,13 +2027,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 2146,
     key: 'item',
     name: 'Enhanced Lucky Dice',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -2042,13 +2043,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 2150,
     key: 'item',
     name: 'Elixir of Skill',
+    rank: 'Consumable',
     gold: {
       base: 0,
       purchasable: false,
@@ -2061,13 +2062,13 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 2151,
     key: 'item',
     name: 'Elixir of Avarice',
+    rank: 'Consumable',
     gold: {
       base: 50,
       purchasable: false,
@@ -2080,13 +2081,13 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 2152,
     key: 'item',
     name: 'Elixir of Force',
+    rank: 'Consumable',
     gold: {
       base: 50,
       purchasable: false,
@@ -2099,7 +2100,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
@@ -2162,6 +2162,7 @@ export const itemsLite: ItemLite[] = [
     id: 2420,
     key: 'item',
     name: 'Seeker\'s Armguard',
+    rank: 'Epic',
     aka: [
       'zhg',
       'zonyas',
@@ -2178,7 +2179,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1029,
@@ -2196,6 +2196,7 @@ export const itemsLite: ItemLite[] = [
     id: 2421,
     key: 'item',
     name: 'Shattered Armguard',
+    rank: 'Epic',
     gold: {
       base: 500,
       sell: 640,
@@ -2207,7 +2208,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1029,
@@ -2222,6 +2222,7 @@ export const itemsLite: ItemLite[] = [
     id: 2422,
     key: 'item',
     name: 'Slightly Magical Footwear',
+    rank: 'Special',
     gold: {
       base: 300,
       purchasable: false,
@@ -2234,7 +2235,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Special',
     stats: {
       flatMovespeed: 25
     }
@@ -2243,6 +2243,7 @@ export const itemsLite: ItemLite[] = [
     id: 2501,
     key: 'item',
     name: 'Overlord\'s Bloodmail',
+    rank: 'Legendary',
     gold: {
       base: 1000,
       sell: 2310,
@@ -2254,7 +2255,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2021,
       2021
@@ -2272,6 +2272,7 @@ export const itemsLite: ItemLite[] = [
     id: 2502,
     key: 'item',
     name: 'Unending Despair',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 1960,
@@ -2283,7 +2284,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1031,
       3067,
@@ -2302,6 +2302,7 @@ export const itemsLite: ItemLite[] = [
     id: 2503,
     key: 'item',
     name: 'Blackfire Torch',
+    rank: 'Legendary',
     aka: [
       'bft'
     ],
@@ -2316,7 +2317,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3802,
       2508
@@ -2334,6 +2334,7 @@ export const itemsLite: ItemLite[] = [
     id: 2504,
     key: 'item',
     name: 'Kaenic Rookern',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 2030,
@@ -2345,7 +2346,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3211,
       1057
@@ -2363,6 +2363,7 @@ export const itemsLite: ItemLite[] = [
     id: 2508,
     key: 'item',
     name: 'Fated Ashes',
+    rank: 'Epic',
     gold: {
       base: 500,
       sell: 630,
@@ -2374,7 +2375,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052
     ],
@@ -2389,6 +2389,7 @@ export const itemsLite: ItemLite[] = [
     id: 2510,
     key: 'item',
     name: 'Dusk and Dawn',
+    rank: 'Legendary',
     aka: [
       'Spellblade'
     ],
@@ -2402,7 +2403,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3057,
       1026,
@@ -2423,6 +2423,7 @@ export const itemsLite: ItemLite[] = [
     id: 2512,
     key: 'item',
     name: 'Fiendhunter Bolts',
+    rank: 'Legendary',
     gold: {
       base: 850,
       sell: 1855,
@@ -2433,7 +2434,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3086,
       3144
@@ -2452,6 +2452,7 @@ export const itemsLite: ItemLite[] = [
     id: 2517,
     key: 'item',
     name: 'Endless Hunger',
+    rank: 'Legendary',
     gold: {
       base: 1075,
       sell: 2100,
@@ -2462,7 +2463,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3133,
       1037
@@ -2480,6 +2480,7 @@ export const itemsLite: ItemLite[] = [
     id: 2520,
     key: 'item',
     name: 'Bastionbreaker',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -2493,7 +2494,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       2020,
       3134
@@ -2511,6 +2511,7 @@ export const itemsLite: ItemLite[] = [
     id: 2522,
     key: 'item',
     name: 'Actualizer',
+    rank: 'Legendary',
     gold: {
       base: 1050,
       sell: 2170,
@@ -2521,7 +2522,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3802,
       1026
@@ -2539,6 +2539,7 @@ export const itemsLite: ItemLite[] = [
     id: 2523,
     key: 'item',
     name: 'Hexoptics C44',
+    rank: 'Legendary',
     gold: {
       base: 275,
       sell: 1960,
@@ -2549,7 +2550,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       6670,
@@ -2567,6 +2567,7 @@ export const itemsLite: ItemLite[] = [
     id: 2524,
     key: 'item',
     name: 'Bandlepipes',
+    rank: 'Legendary',
     gold: {
       base: 500,
       sell: 1400,
@@ -2577,7 +2578,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1029,
@@ -2597,6 +2597,7 @@ export const itemsLite: ItemLite[] = [
     id: 2525,
     key: 'item',
     name: 'Protoplasm Harness',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 1750,
@@ -2607,7 +2608,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1011
@@ -2624,6 +2624,7 @@ export const itemsLite: ItemLite[] = [
     id: 2526,
     key: 'item',
     name: 'Whispering Circlet',
+    rank: 'Legendary',
     aka: [
       'tear'
     ],
@@ -2637,7 +2638,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3114,
       1028,
@@ -2657,6 +2657,7 @@ export const itemsLite: ItemLite[] = [
     id: 2530,
     key: 'item',
     name: 'Diadem of Songs',
+    rank: 'Legendary',
     gold: {
       base: 2250,
       purchasable: false,
@@ -2668,7 +2669,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       2526
     ],
@@ -2694,6 +2694,7 @@ export const itemsLite: ItemLite[] = [
     id: 3002,
     key: 'item',
     name: 'Trailblazer',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 1680,
@@ -2705,7 +2706,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3066,
       1031
@@ -2724,6 +2724,7 @@ export const itemsLite: ItemLite[] = [
     id: 3003,
     key: 'item',
     name: 'Archangel\'s Staff',
+    rank: 'Legendary',
     aka: [
       'aa',
       'seraph\'s embrace',
@@ -2740,7 +2741,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3070,
       3802,
@@ -2759,6 +2759,7 @@ export const itemsLite: ItemLite[] = [
     id: 3004,
     key: 'item',
     name: 'Manamune',
+    rank: 'Legendary',
     aka: [
       'Muramana',
       'tear'
@@ -2774,7 +2775,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3070,
       3133,
@@ -2809,6 +2809,7 @@ export const itemsLite: ItemLite[] = [
     id: 3006,
     key: 'item',
     name: 'Berserker\'s Greaves',
+    rank: 'Boots',
     aka: [
       'boots',
       'zerker'
@@ -2824,7 +2825,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001,
       1042,
@@ -2839,6 +2839,7 @@ export const itemsLite: ItemLite[] = [
     id: 3009,
     key: 'item',
     name: 'Boots of Swiftness',
+    rank: 'Boots',
     aka: [
       'swifties'
     ],
@@ -2853,7 +2854,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001
     ],
@@ -2923,6 +2923,7 @@ export const itemsLite: ItemLite[] = [
     id: 3020,
     key: 'item',
     name: 'Sorcerer\'s Shoes',
+    rank: 'Boots',
     aka: [
       'boots',
       'sorcs'
@@ -2938,7 +2939,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001
     ],
@@ -2962,6 +2962,7 @@ export const itemsLite: ItemLite[] = [
     id: 3024,
     key: 'item',
     name: 'Glacial Buckler',
+    rank: 'Epic',
     gold: {
       base: 50,
       sell: 630,
@@ -2973,7 +2974,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1029,
       1027,
@@ -2993,6 +2993,7 @@ export const itemsLite: ItemLite[] = [
     id: 3026,
     key: 'item',
     name: 'Guardian Angel',
+    rank: 'Legendary',
     aka: [
       'ga'
     ],
@@ -3004,7 +3005,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       2019,
       1038
@@ -3023,6 +3023,7 @@ export const itemsLite: ItemLite[] = [
     id: 3031,
     key: 'item',
     name: 'Infinity Edge',
+    rank: 'Legendary',
     aka: [
       'ie'
     ],
@@ -3037,7 +3038,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1038,
       1037,
@@ -3056,6 +3056,7 @@ export const itemsLite: ItemLite[] = [
     id: 3032,
     key: 'item',
     name: 'Yun Tal Wildarrows',
+    rank: 'Legendary',
     aka: [
       'arrow',
       'yuntal'
@@ -3071,7 +3072,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1038,
       3144,
@@ -3089,6 +3089,7 @@ export const itemsLite: ItemLite[] = [
     id: 3033,
     key: 'item',
     name: 'Mortal Reminder',
+    rank: 'Legendary',
     aka: [
       'grievous',
       'grievous wounds'
@@ -3104,7 +3105,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3123,
       3035,
@@ -3123,6 +3123,7 @@ export const itemsLite: ItemLite[] = [
     id: 3035,
     key: 'item',
     name: 'Last Whisper',
+    rank: 'Epic',
     aka: [
       'lw'
     ],
@@ -3137,7 +3138,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1036
@@ -3156,6 +3156,7 @@ export const itemsLite: ItemLite[] = [
     id: 3036,
     key: 'item',
     name: 'Lord Dominik\'s Regards',
+    rank: 'Legendary',
     aka: [
       'lw',
       'ldr',
@@ -3172,7 +3173,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3035,
       6670
@@ -3204,6 +3204,7 @@ export const itemsLite: ItemLite[] = [
     id: 3040,
     key: 'item',
     name: 'Seraph\'s Embrace',
+    rank: 'Legendary',
     gold: {
       base: 2900,
       purchasable: false,
@@ -3216,7 +3217,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3003
     ],
@@ -3230,6 +3230,7 @@ export const itemsLite: ItemLite[] = [
     id: 3041,
     key: 'item',
     name: 'Mejai\'s Soulstealer',
+    rank: 'Legendary',
     aka: [
       'book'
     ],
@@ -3241,7 +3242,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       1082
     ],
@@ -3258,6 +3258,7 @@ export const itemsLite: ItemLite[] = [
     id: 3042,
     key: 'item',
     name: 'Muramana',
+    rank: 'Legendary',
     gold: {
       base: 2900,
       purchasable: false,
@@ -3270,7 +3271,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3004
     ],
@@ -3290,6 +3290,7 @@ export const itemsLite: ItemLite[] = [
     id: 3044,
     key: 'item',
     name: 'Phage',
+    rank: 'Epic',
     aka: [
       'mallet'
     ],
@@ -3304,7 +3305,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       1036
@@ -3322,6 +3322,7 @@ export const itemsLite: ItemLite[] = [
     id: 3046,
     key: 'item',
     name: 'Phantom Dancer',
+    rank: 'Legendary',
     aka: [
       'pd'
     ],
@@ -3336,7 +3337,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1042,
       3086,
@@ -3356,6 +3356,7 @@ export const itemsLite: ItemLite[] = [
     id: 3047,
     key: 'item',
     name: 'Plated Steelcaps',
+    rank: 'Boots',
     aka: [
       'boots',
       'ninja tabi'
@@ -3371,7 +3372,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001,
       1029
@@ -3385,6 +3385,7 @@ export const itemsLite: ItemLite[] = [
     id: 3050,
     key: 'item',
     name: 'Zeke\'s Convergence',
+    rank: 'Legendary',
     aka: [
       'haroldandkumar'
     ],
@@ -3399,7 +3400,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1029,
@@ -3420,6 +3420,7 @@ export const itemsLite: ItemLite[] = [
     id: 3051,
     key: 'item',
     name: 'Hearthbound Axe',
+    rank: 'Epic',
     aka: [
       'blue arrow'
     ],
@@ -3434,7 +3435,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1042,
@@ -3454,6 +3454,7 @@ export const itemsLite: ItemLite[] = [
     id: 3053,
     key: 'item',
     name: 'Sterak\'s Gage',
+    rank: 'Legendary',
     aka: [
       'juggernaut',
       'primal',
@@ -3471,7 +3472,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       2021,
@@ -3490,6 +3490,7 @@ export const itemsLite: ItemLite[] = [
     id: 3057,
     key: 'item',
     name: 'Sheen',
+    rank: 'Epic',
     aka: [
       'Jimmy Neutron'
     ],
@@ -3504,7 +3505,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       2022
     ],
@@ -3522,6 +3522,7 @@ export const itemsLite: ItemLite[] = [
     id: 3065,
     key: 'item',
     name: 'Spirit Visage',
+    rank: 'Legendary',
     aka: [
       'sv'
     ],
@@ -3536,7 +3537,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3211,
       3067
@@ -3555,6 +3555,7 @@ export const itemsLite: ItemLite[] = [
     id: 3066,
     key: 'item',
     name: 'Winged Moonplate',
+    rank: 'Epic',
     aka: [
       'chaps',
       'pants',
@@ -3572,7 +3573,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028
     ],
@@ -3589,6 +3589,7 @@ export const itemsLite: ItemLite[] = [
     id: 3067,
     key: 'item',
     name: 'Kindlegem',
+    rank: 'Epic',
     gold: {
       base: 150,
       sell: 560,
@@ -3600,7 +3601,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       2022
@@ -3622,6 +3622,7 @@ export const itemsLite: ItemLite[] = [
     id: 3068,
     key: 'item',
     name: 'Sunfire Aegis',
+    rank: 'Legendary',
     aka: [
       'burn',
       'sunborn',
@@ -3638,7 +3639,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       6660,
       1031
@@ -3656,6 +3656,7 @@ export const itemsLite: ItemLite[] = [
     id: 3070,
     key: 'item',
     name: 'Tear of the Goddess',
+    rank: 'Starter',
     aka: [
       'archangel\'s staff',
       'Seraph\'s embrace',
@@ -3675,7 +3676,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Starter',
     stats: {
       mana: 240
     },
@@ -3688,6 +3688,7 @@ export const itemsLite: ItemLite[] = [
     id: 3071,
     key: 'item',
     name: 'Black Cleaver',
+    rank: 'Legendary',
     aka: [
       'bc'
     ],
@@ -3702,7 +3703,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3044,
       3067,
@@ -3724,6 +3724,7 @@ export const itemsLite: ItemLite[] = [
     id: 3072,
     key: 'item',
     name: 'Bloodthirster',
+    rank: 'Legendary',
     aka: [
       'bt',
       'healsword'
@@ -3739,7 +3740,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1038,
       1037,
@@ -3757,6 +3757,7 @@ export const itemsLite: ItemLite[] = [
     id: 3073,
     key: 'item',
     name: 'Experimental Hexplate',
+    rank: 'Legendary',
     gold: {
       base: 500,
       sell: 2100,
@@ -3768,7 +3769,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2021,
       3044,
@@ -3789,6 +3789,7 @@ export const itemsLite: ItemLite[] = [
     id: 3074,
     key: 'item',
     name: 'Ravenous Hydra',
+    rank: 'Legendary',
     aka: [
       'rav hydra'
     ],
@@ -3803,7 +3804,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3077,
       1053,
@@ -3822,6 +3822,7 @@ export const itemsLite: ItemLite[] = [
     id: 3075,
     key: 'item',
     name: 'Thornmail',
+    rank: 'Legendary',
     aka: [
       'grievous wounds'
     ],
@@ -3836,7 +3837,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3076,
       1031,
@@ -3854,6 +3854,7 @@ export const itemsLite: ItemLite[] = [
     id: 3076,
     key: 'item',
     name: 'Bramble Vest',
+    rank: 'Epic',
     aka: [
       'grievous wounds'
     ],
@@ -3868,7 +3869,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1029,
       1029
@@ -3884,6 +3884,7 @@ export const itemsLite: ItemLite[] = [
     id: 3077,
     key: 'item',
     name: 'Tiamat',
+    rank: 'Epic',
     gold: {
       base: 500,
       sell: 840,
@@ -3895,7 +3896,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1036
@@ -3913,6 +3913,7 @@ export const itemsLite: ItemLite[] = [
     id: 3078,
     key: 'item',
     name: 'Trinity Force',
+    rank: 'Legendary',
     aka: [
       'Spellblade',
       'triforce',
@@ -3930,7 +3931,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3057,
       3044,
@@ -3952,6 +3952,7 @@ export const itemsLite: ItemLite[] = [
     id: 3082,
     key: 'item',
     name: 'Warden\'s Mail',
+    rank: 'Epic',
     gold: {
       base: 400,
       sell: 700,
@@ -3963,7 +3964,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1029,
       1029
@@ -3979,6 +3979,7 @@ export const itemsLite: ItemLite[] = [
     id: 3083,
     key: 'item',
     name: 'Warmog\'s Armor',
+    rank: 'Legendary',
     gold: {
       base: 500,
       sell: 2170,
@@ -3990,7 +3991,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1011,
       1011,
@@ -4008,6 +4008,7 @@ export const itemsLite: ItemLite[] = [
     id: 3084,
     key: 'item',
     name: 'Heartsteel',
+    rank: 'Legendary',
     aka: [
       'Quest',
       'Steal',
@@ -4025,7 +4026,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1011,
       3801,
@@ -4043,6 +4043,7 @@ export const itemsLite: ItemLite[] = [
     id: 3085,
     key: 'item',
     name: 'Runaan\'s Hurricane',
+    rank: 'Legendary',
     gold: {
       base: 850,
       sell: 1855,
@@ -4054,7 +4055,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3086,
       3144
@@ -4074,6 +4074,7 @@ export const itemsLite: ItemLite[] = [
     id: 3086,
     key: 'item',
     name: 'Zeal',
+    rank: 'Epic',
     gold: {
       base: 350,
       sell: 840,
@@ -4085,7 +4086,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1018,
       1042
@@ -4104,6 +4104,7 @@ export const itemsLite: ItemLite[] = [
     id: 3087,
     key: 'item',
     name: 'Statikk Shiv',
+    rank: 'Legendary',
     gold: {
       base: 450,
       sell: 1890,
@@ -4115,7 +4116,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3144,
       6690,
@@ -4135,6 +4135,7 @@ export const itemsLite: ItemLite[] = [
     id: 3089,
     key: 'item',
     name: 'Rabadon\'s Deathcap',
+    rank: 'Legendary',
     aka: [
       'banksys',
       'dc',
@@ -4154,7 +4155,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1058,
       1058
@@ -4170,6 +4170,7 @@ export const itemsLite: ItemLite[] = [
     id: 3091,
     key: 'item',
     name: 'Wit\'s End',
+    rank: 'Legendary',
     gold: {
       base: 550,
       sell: 1960,
@@ -4181,7 +4182,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1043,
       1057,
@@ -4202,6 +4202,7 @@ export const itemsLite: ItemLite[] = [
     id: 3094,
     key: 'item',
     name: 'Rapid Firecannon',
+    rank: 'Legendary',
     aka: [
       'canon',
       'gun',
@@ -4219,7 +4220,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3086,
       3144
@@ -4251,6 +4251,7 @@ export const itemsLite: ItemLite[] = [
     id: 3097,
     key: 'item',
     name: 'Stormrazor',
+    rank: 'Legendary',
     aka: [
       'energize',
       'Windblade'
@@ -4265,7 +4266,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       1038,
       1018,
@@ -4285,6 +4285,7 @@ export const itemsLite: ItemLite[] = [
     id: 3100,
     key: 'item',
     name: 'Lich Bane',
+    rank: 'Legendary',
     aka: [
       'Spellblade'
     ],
@@ -4299,7 +4300,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3057,
       3113,
@@ -4319,6 +4319,7 @@ export const itemsLite: ItemLite[] = [
     id: 3102,
     key: 'item',
     name: 'Banshee\'s Veil',
+    rank: 'Legendary',
     aka: [
       'bv',
       'spellshield',
@@ -4335,7 +4336,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1058,
       4632
@@ -4365,6 +4365,7 @@ export const itemsLite: ItemLite[] = [
     id: 3107,
     key: 'item',
     name: 'Redemption',
+    rank: 'Legendary',
     aka: [
       'burn'
     ],
@@ -4379,7 +4380,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3108,
       3114
@@ -4398,6 +4398,7 @@ export const itemsLite: ItemLite[] = [
     id: 3108,
     key: 'item',
     name: 'Fiendish Codex',
+    rank: 'Epic',
     aka: [
       'book'
     ],
@@ -4412,7 +4413,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       2022
@@ -4429,6 +4429,7 @@ export const itemsLite: ItemLite[] = [
     id: 3109,
     key: 'item',
     name: 'Knight\'s Vow',
+    rank: 'Legendary',
     aka: [
       'kv'
     ],
@@ -4443,7 +4444,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1031,
@@ -4464,6 +4464,7 @@ export const itemsLite: ItemLite[] = [
     id: 3110,
     key: 'item',
     name: 'Frozen Heart',
+    rank: 'Legendary',
     aka: [
       'fh'
     ],
@@ -4478,7 +4479,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3082,
       3024
@@ -4497,6 +4497,7 @@ export const itemsLite: ItemLite[] = [
     id: 3111,
     key: 'item',
     name: 'Mercury\'s Treads',
+    rank: 'Boots',
     aka: [
       'boots',
       'mercs'
@@ -4512,7 +4513,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001,
       1033
@@ -4527,6 +4527,7 @@ export const itemsLite: ItemLite[] = [
     id: 3112,
     key: 'item',
     name: 'Guardian\'s Orb',
+    rank: 'Starter',
     gold: {
       base: 950,
       sell: 665,
@@ -4537,7 +4538,6 @@ export const itemsLite: ItemLite[] = [
       12,
       35
     ],
-    rank: 'Starter',
     stats: {
       abilityPower: 50,
       health: 150
@@ -4553,6 +4553,7 @@ export const itemsLite: ItemLite[] = [
     id: 3113,
     key: 'item',
     name: 'Aether Wisp',
+    rank: 'Epic',
     aka: [
       'spooky ghost'
     ],
@@ -4567,7 +4568,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052
     ],
@@ -4584,6 +4584,7 @@ export const itemsLite: ItemLite[] = [
     id: 3114,
     key: 'item',
     name: 'Forbidden Idol',
+    rank: 'Epic',
     gold: {
       base: 400,
       sell: 420,
@@ -4595,7 +4596,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1004
     ],
@@ -4611,6 +4611,7 @@ export const itemsLite: ItemLite[] = [
     id: 3115,
     key: 'item',
     name: 'Nashor\'s Tooth',
+    rank: 'Legendary',
     aka: [
       'nashors'
     ],
@@ -4625,7 +4626,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1043,
       1026,
@@ -4646,6 +4646,7 @@ export const itemsLite: ItemLite[] = [
     id: 3116,
     key: 'item',
     name: 'Rylai\'s Crystal Scepter',
+    rank: 'Legendary',
     aka: [
       'rylais'
     ],
@@ -4660,7 +4661,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1026,
       1011,
@@ -4695,6 +4695,7 @@ export const itemsLite: ItemLite[] = [
     id: 3118,
     key: 'item',
     name: 'Malignance',
+    rank: 'Legendary',
     aka: [
       'burn'
     ],
@@ -4709,7 +4710,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3802,
       1026
@@ -4728,6 +4728,7 @@ export const itemsLite: ItemLite[] = [
     id: 3119,
     key: 'item',
     name: 'Winter\'s Approach',
+    rank: 'Legendary',
     aka: [
       'Fimbulwinter',
       'tear'
@@ -4743,7 +4744,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3070,
       1011,
@@ -4762,6 +4762,7 @@ export const itemsLite: ItemLite[] = [
     id: 3121,
     key: 'item',
     name: 'Fimbulwinter',
+    rank: 'Legendary',
     gold: {
       base: 2400,
       purchasable: false,
@@ -4774,7 +4775,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3119
     ],
@@ -4791,6 +4791,7 @@ export const itemsLite: ItemLite[] = [
     id: 3123,
     key: 'item',
     name: 'Executioner\'s Calling',
+    rank: 'Epic',
     aka: [
       'grievous',
       'grievous wounds'
@@ -4806,7 +4807,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036
     ],
@@ -4823,6 +4823,7 @@ export const itemsLite: ItemLite[] = [
     id: 3124,
     key: 'item',
     name: 'Guinsoo\'s Rageblade',
+    rank: 'Legendary',
     gold: {
       base: 1025,
       sell: 2100,
@@ -4834,7 +4835,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1052,
       1043,
@@ -4881,6 +4881,7 @@ export const itemsLite: ItemLite[] = [
     id: 3133,
     key: 'item',
     name: 'Caulfield\'s Warhammer',
+    rank: 'Epic',
     gold: {
       base: 100,
       sell: 735,
@@ -4892,7 +4893,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       2022,
@@ -4912,6 +4912,7 @@ export const itemsLite: ItemLite[] = [
     id: 3134,
     key: 'item',
     name: 'Serrated Dirk',
+    rank: 'Epic',
     aka: [
       'lethality'
     ],
@@ -4926,7 +4927,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1036
@@ -4944,6 +4944,7 @@ export const itemsLite: ItemLite[] = [
     id: 3135,
     key: 'item',
     name: 'Void Staff',
+    rank: 'Legendary',
     gold: {
       base: 1050,
       sell: 2100,
@@ -4955,7 +4956,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       4630,
       1026
@@ -4972,6 +4972,7 @@ export const itemsLite: ItemLite[] = [
     id: 3137,
     key: 'item',
     name: 'Cryptbloom',
+    rank: 'Legendary',
     gold: {
       base: 200,
       sell: 2100,
@@ -4983,7 +4984,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       4630,
       3108,
@@ -5002,6 +5002,7 @@ export const itemsLite: ItemLite[] = [
     id: 3139,
     key: 'item',
     name: 'Mercurial Scimitar',
+    rank: 'Legendary',
     aka: [
       'merc scim',
       'qss',
@@ -5019,7 +5020,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3140,
       1037,
@@ -5040,6 +5040,7 @@ export const itemsLite: ItemLite[] = [
     id: 3140,
     key: 'item',
     name: 'Quicksilver Sash',
+    rank: 'Epic',
     aka: [
       'qss',
       'mercurial scimitar',
@@ -5056,7 +5057,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1033
     ],
@@ -5073,6 +5073,7 @@ export const itemsLite: ItemLite[] = [
     id: 3142,
     key: 'item',
     name: 'Youmuu\'s Ghostblade',
+    rank: 'Legendary',
     aka: [
       'lethality',
       'haste'
@@ -5088,7 +5089,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3134,
       6690,
@@ -5108,6 +5108,7 @@ export const itemsLite: ItemLite[] = [
     id: 3143,
     key: 'item',
     name: 'Randuin\'s Omen',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 1890,
@@ -5119,7 +5120,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3082,
       1011
@@ -5136,6 +5136,7 @@ export const itemsLite: ItemLite[] = [
     id: 3144,
     key: 'item',
     name: 'Scout\'s Slingshot',
+    rank: 'Epic',
     gold: {
       base: 100,
       sell: 420,
@@ -5147,7 +5148,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1042,
       1042
@@ -5164,6 +5164,7 @@ export const itemsLite: ItemLite[] = [
     id: 3145,
     key: 'item',
     name: 'Hextech Alternator',
+    rank: 'Epic',
     aka: [
       'revolver',
       'pewpew'
@@ -5179,7 +5180,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1052
@@ -5195,6 +5195,7 @@ export const itemsLite: ItemLite[] = [
     id: 3146,
     key: 'item',
     name: 'Hextech Gunblade',
+    rank: 'Legendary',
     gold: {
       base: 600,
       sell: 2100,
@@ -5205,7 +5206,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       1053,
       3145,
@@ -5224,6 +5224,7 @@ export const itemsLite: ItemLite[] = [
     id: 3147,
     key: 'item',
     name: 'Haunting Guise',
+    rank: 'Epic',
     aka: [
       'mask'
     ],
@@ -5238,7 +5239,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1028
@@ -5255,6 +5255,7 @@ export const itemsLite: ItemLite[] = [
     id: 3152,
     key: 'item',
     name: 'Hextech Rocketbelt',
+    rank: 'Legendary',
     aka: [
       'protobelt',
       'rocket belt'
@@ -5270,7 +5271,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3145,
       3108,
@@ -5290,6 +5290,7 @@ export const itemsLite: ItemLite[] = [
     id: 3153,
     key: 'item',
     name: 'Blade of The Ruined King',
+    rank: 'Legendary',
     aka: [
       'brk',
       'bork',
@@ -5307,7 +5308,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1053,
       1043,
@@ -5328,6 +5328,7 @@ export const itemsLite: ItemLite[] = [
     id: 3155,
     key: 'item',
     name: 'Hexdrinker',
+    rank: 'Epic',
     gold: {
       base: 200,
       sell: 910,
@@ -5339,7 +5340,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1033,
@@ -5359,6 +5359,7 @@ export const itemsLite: ItemLite[] = [
     id: 3156,
     key: 'item',
     name: 'Maw of Malmortius',
+    rank: 'Legendary',
     gold: {
       base: 750,
       sell: 2170,
@@ -5370,7 +5371,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3155,
       3133
@@ -5390,6 +5390,7 @@ export const itemsLite: ItemLite[] = [
     id: 3157,
     key: 'item',
     name: 'Zhonya\'s Hourglass',
+    rank: 'Legendary',
     aka: [
       'zhg',
       'zonyas',
@@ -5408,7 +5409,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1058,
       2420
@@ -5425,6 +5425,7 @@ export const itemsLite: ItemLite[] = [
     id: 3158,
     key: 'item',
     name: 'Ionian Boots of Lucidity',
+    rank: 'Boots',
     gold: {
       base: 350,
       sell: 630,
@@ -5436,7 +5437,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Boots',
     recipe: [
       1001,
       2022
@@ -5450,6 +5450,7 @@ export const itemsLite: ItemLite[] = [
     id: 3161,
     key: 'item',
     name: 'Spear of Shojin',
+    rank: 'Legendary',
     gold: {
       base: 675,
       sell: 2170,
@@ -5461,7 +5462,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       2021,
@@ -5480,6 +5480,7 @@ export const itemsLite: ItemLite[] = [
     id: 3165,
     key: 'item',
     name: 'Morellonomicon',
+    rank: 'Legendary',
     aka: [
       'forbidden book',
       'grievous',
@@ -5498,7 +5499,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3916,
       1026,
@@ -5518,6 +5518,7 @@ export const itemsLite: ItemLite[] = [
     id: 3170,
     key: 'item',
     name: 'Swiftmarch',
+    rank: 'Boots',
     aka: [
       'boots'
     ],
@@ -5529,7 +5530,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Boots',
     recipe: [
       3009
     ],
@@ -5541,6 +5541,7 @@ export const itemsLite: ItemLite[] = [
     id: 3171,
     key: 'item',
     name: 'Crimson Lucidity',
+    rank: 'Boots',
     aka: [
       'boots'
     ],
@@ -5552,7 +5553,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Boots',
     recipe: [
       3158
     ],
@@ -5565,6 +5565,7 @@ export const itemsLite: ItemLite[] = [
     id: 3172,
     key: 'item',
     name: 'Gunmetal Greaves',
+    rank: 'Legendary',
     gold: {
       base: 0,
       sell: 770,
@@ -5575,7 +5576,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3006
     ],
@@ -5594,6 +5594,7 @@ export const itemsLite: ItemLite[] = [
     id: 3173,
     key: 'item',
     name: 'Chainlaced Crushers',
+    rank: 'Boots',
     aka: [
       'boots'
     ],
@@ -5605,7 +5606,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Boots',
     recipe: [
       3111
     ],
@@ -5619,6 +5619,7 @@ export const itemsLite: ItemLite[] = [
     id: 3174,
     key: 'item',
     name: 'Armored Advance',
+    rank: 'Boots',
     aka: [
       'boots'
     ],
@@ -5630,7 +5631,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Boots',
     recipe: [
       3047
     ],
@@ -5643,6 +5643,7 @@ export const itemsLite: ItemLite[] = [
     id: 3175,
     key: 'item',
     name: 'Spellslinger\'s Shoes',
+    rank: 'Boots',
     aka: [
       'boots'
     ],
@@ -5654,7 +5655,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Boots',
     recipe: [
       3020
     ],
@@ -5681,6 +5681,7 @@ export const itemsLite: ItemLite[] = [
     id: 3177,
     key: 'item',
     name: 'Guardian\'s Blade',
+    rank: 'Starter',
     aka: [
       'dblade'
     ],
@@ -5694,7 +5695,6 @@ export const itemsLite: ItemLite[] = [
       12,
       35
     ],
-    rank: 'Starter',
     stats: {
       abilityHaste: 15,
       attackDamage: 30,
@@ -5711,6 +5711,7 @@ export const itemsLite: ItemLite[] = [
     id: 3179,
     key: 'item',
     name: 'Umbral Glaive',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -5725,7 +5726,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3134,
       3133
@@ -5743,6 +5743,7 @@ export const itemsLite: ItemLite[] = [
     id: 3181,
     key: 'item',
     name: 'Hullbreaker',
+    rank: 'Legendary',
     aka: [
       'ahoy',
       'hull',
@@ -5759,7 +5760,6 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       2021,
       3066,
@@ -5778,6 +5778,7 @@ export const itemsLite: ItemLite[] = [
     id: 3184,
     key: 'item',
     name: 'Guardian\'s Hammer',
+    rank: 'Starter',
     aka: [
       'dblade'
     ],
@@ -5791,7 +5792,6 @@ export const itemsLite: ItemLite[] = [
       12,
       35
     ],
-    rank: 'Starter',
     stats: {
       attackDamage: 25,
       health: 150,
@@ -5807,6 +5807,7 @@ export const itemsLite: ItemLite[] = [
     id: 3190,
     key: 'item',
     name: 'Locket of the Iron Solari',
+    rank: 'Legendary',
     gold: {
       base: 700,
       sell: 1540,
@@ -5818,7 +5819,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1029,
@@ -5850,6 +5850,7 @@ export const itemsLite: ItemLite[] = [
     id: 3211,
     key: 'item',
     name: 'Spectre\'s Cowl',
+    rank: 'Epic',
     aka: [
       'hat',
       'ghost'
@@ -5865,7 +5866,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       1033,
@@ -5884,6 +5884,7 @@ export const itemsLite: ItemLite[] = [
     id: 3222,
     key: 'item',
     name: 'Mikael\'s Blessing',
+    rank: 'Legendary',
     aka: [
       'crucible',
       'michael',
@@ -5900,7 +5901,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       3114
@@ -5919,6 +5919,7 @@ export const itemsLite: ItemLite[] = [
     id: 3302,
     key: 'item',
     name: 'Terminus',
+    rank: 'Legendary',
     aka: [
       'bow',
       'sentinel'
@@ -5934,7 +5935,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3051,
       1043
@@ -5955,6 +5955,7 @@ export const itemsLite: ItemLite[] = [
     id: 3330,
     key: 'item',
     name: 'Scarecrow Effigy',
+    rank: 'Trinket',
     aka: [
       'yellow',
       'totem',
@@ -5972,13 +5973,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Trinket',
     stats: {}
   },
   {
     id: 3340,
     key: 'item',
     name: 'Stealth Ward',
+    rank: 'Trinket',
     aka: [
       'yellow',
       'sweeper',
@@ -5994,13 +5995,13 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Trinket',
     stats: {}
   },
   {
     id: 3348,
     key: 'item',
     name: 'Arcane Sweeper',
+    rank: 'Trinket',
     gold: {
       base: 0,
       purchasable: false,
@@ -6010,7 +6011,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Trinket',
     stats: {}
   },
   {
@@ -6028,6 +6028,7 @@ export const itemsLite: ItemLite[] = [
     id: 3363,
     key: 'item',
     name: 'Farsight Alteration',
+    rank: 'Trinket',
     aka: [
       'blue',
       'totem',
@@ -6043,13 +6044,13 @@ export const itemsLite: ItemLite[] = [
       12,
       21
     ],
-    rank: 'Trinket',
     stats: {}
   },
   {
     id: 3364,
     key: 'item',
     name: 'Oracle Lens',
+    rank: 'Trinket',
     aka: [
       'red',
       'lens',
@@ -6067,7 +6068,6 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Trinket',
     stats: {}
   },
   {
@@ -6096,6 +6096,7 @@ export const itemsLite: ItemLite[] = [
     id: 3400,
     key: 'item',
     name: 'Your Cut',
+    rank: 'Special',
     gold: {
       base: 0,
       purchasable: false,
@@ -6109,13 +6110,13 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Special',
     stats: {}
   },
   {
     id: 3430,
     key: 'item',
     name: 'Rite Of Ruin',
+    rank: 'Legendary',
     gold: {
       base: 2500,
       sell: 1250,
@@ -6124,7 +6125,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       abilityHaste: 15,
       abilityPower: 50,
@@ -6138,6 +6138,7 @@ export const itemsLite: ItemLite[] = [
     id: 3504,
     key: 'item',
     name: 'Ardent Censer',
+    rank: 'Legendary',
     aka: [
       'censer'
     ],
@@ -6152,7 +6153,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3113,
       3114
@@ -6172,6 +6172,7 @@ export const itemsLite: ItemLite[] = [
     id: 3508,
     key: 'item',
     name: 'Essence Reaver',
+    rank: 'Legendary',
     aka: [
       'er',
       'Spellblade'
@@ -6187,7 +6188,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3057,
       3133,
@@ -6208,6 +6208,7 @@ export const itemsLite: ItemLite[] = [
     id: 3513,
     key: 'item',
     name: 'Eye of the Herald',
+    rank: 'Trinket',
     aka: [
       'Herald\'s Eye'
     ],
@@ -6217,13 +6218,13 @@ export const itemsLite: ItemLite[] = [
       sell: 0,
       total: 0
     },
-    rank: 'Trinket',
     stats: {}
   },
   {
     id: 3599,
     key: 'item',
     name: 'Kalista\'s Black Spear',
+    rank: 'Starter',
     aka: [
       'spear'
     ],
@@ -6239,7 +6240,6 @@ export const itemsLite: ItemLite[] = [
       30,
       35
     ],
-    rank: 'Starter',
     stats: {}
   },
   {
@@ -6263,6 +6263,7 @@ export const itemsLite: ItemLite[] = [
     id: 3742,
     key: 'item',
     name: 'Dead Man\'s Plate',
+    rank: 'Legendary',
     aka: [
       'dmp',
       'dreadnought',
@@ -6280,7 +6281,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3066,
       1028,
@@ -6300,6 +6300,7 @@ export const itemsLite: ItemLite[] = [
     id: 3748,
     key: 'item',
     name: 'Titanic Hydra',
+    rank: 'Legendary',
     aka: [
       'beefer',
       'juggernaut'
@@ -6315,7 +6316,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3077,
       2021,
@@ -6335,6 +6335,7 @@ export const itemsLite: ItemLite[] = [
     id: 3801,
     key: 'item',
     name: 'Crystalline Bracer',
+    rank: 'Epic',
     gold: {
       base: 100,
       sell: 560,
@@ -6346,7 +6347,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       1006
@@ -6364,6 +6364,7 @@ export const itemsLite: ItemLite[] = [
     id: 3802,
     key: 'item',
     name: 'Lost Chapter',
+    rank: 'Epic',
     aka: [
       'mana book'
     ],
@@ -6378,7 +6379,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1027,
@@ -6397,6 +6397,7 @@ export const itemsLite: ItemLite[] = [
     id: 3803,
     key: 'item',
     name: 'Catalyst of Aeons',
+    rank: 'Epic',
     aka: [
       'protector'
     ],
@@ -6411,7 +6412,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       1028,
@@ -6429,6 +6429,7 @@ export const itemsLite: ItemLite[] = [
     id: 3814,
     key: 'item',
     name: 'Edge of Night',
+    rank: 'Legendary',
     aka: [
       'eon',
       'lethality',
@@ -6446,7 +6447,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3134,
       2021
@@ -6596,6 +6596,7 @@ export const itemsLite: ItemLite[] = [
     id: 3865,
     key: 'item',
     name: 'World Atlas',
+    rank: 'Starter',
     aka: [
       'Map'
     ],
@@ -6607,7 +6608,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Starter',
     stats: {
       goldPer10: 3,
       health: 30,
@@ -6623,6 +6623,7 @@ export const itemsLite: ItemLite[] = [
     id: 3866,
     key: 'item',
     name: 'Runic Compass',
+    rank: 'Epic',
     gold: {
       base: 400,
       purchasable: false,
@@ -6632,7 +6633,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Epic',
     recipe: [
       3865
     ],
@@ -6650,6 +6650,7 @@ export const itemsLite: ItemLite[] = [
     id: 3867,
     key: 'item',
     name: 'Bounty of Worlds',
+    rank: 'Legendary',
     gold: {
       base: 400,
       purchasable: false,
@@ -6659,7 +6660,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3866
     ],
@@ -6677,6 +6677,7 @@ export const itemsLite: ItemLite[] = [
     id: 3869,
     key: 'item',
     name: 'Celestial Opposition',
+    rank: 'Legendary',
     gold: {
       base: 0,
       sell: 160,
@@ -6685,7 +6686,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3867
     ],
@@ -6703,6 +6703,7 @@ export const itemsLite: ItemLite[] = [
     id: 3870,
     key: 'item',
     name: 'Dream Maker',
+    rank: 'Legendary',
     aka: [
       'Plushie',
       'plushie'
@@ -6715,7 +6716,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3867
     ],
@@ -6733,6 +6733,7 @@ export const itemsLite: ItemLite[] = [
     id: 3871,
     key: 'item',
     name: 'Zaz\'Zak\'s Realmspike',
+    rank: 'Legendary',
     gold: {
       base: 0,
       sell: 160,
@@ -6741,7 +6742,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3867
     ],
@@ -6759,6 +6759,7 @@ export const itemsLite: ItemLite[] = [
     id: 3876,
     key: 'item',
     name: 'Solstice Sleigh',
+    rank: 'Legendary',
     gold: {
       base: 0,
       sell: 160,
@@ -6767,7 +6768,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3867
     ],
@@ -6785,6 +6785,7 @@ export const itemsLite: ItemLite[] = [
     id: 3877,
     key: 'item',
     name: 'Bloodsong',
+    rank: 'Legendary',
     aka: [
       'Spellblade'
     ],
@@ -6796,7 +6797,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       11
     ],
-    rank: 'Legendary',
     recipe: [
       3867
     ],
@@ -6871,6 +6871,7 @@ export const itemsLite: ItemLite[] = [
     id: 3916,
     key: 'item',
     name: 'Oblivion Orb',
+    rank: 'Epic',
     aka: [
       'grievous',
       'grievous wounds'
@@ -6886,7 +6887,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052
     ],
@@ -6902,6 +6902,7 @@ export const itemsLite: ItemLite[] = [
     id: 4003,
     key: 'item',
     name: 'Lifeline',
+    rank: 'Epic',
     aka: [
       'lethality'
     ],
@@ -6915,7 +6916,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       6690,
       1036
@@ -6948,6 +6948,7 @@ export const itemsLite: ItemLite[] = [
     id: 4005,
     key: 'item',
     name: 'Imperial Mandate',
+    rank: 'Legendary',
     aka: [
       'banner of command',
       'flag'
@@ -6963,7 +6964,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3108,
       4642
@@ -6994,6 +6994,7 @@ export const itemsLite: ItemLite[] = [
     id: 4011,
     key: 'item',
     name: 'Sword of Blossoming Dawn',
+    rank: 'Legendary',
     gold: {
       base: 2500,
       sell: 1250,
@@ -7002,7 +7003,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       abilityHaste: 15,
       abilityPower: 45,
@@ -7048,6 +7048,7 @@ export const itemsLite: ItemLite[] = [
     id: 4015,
     key: 'item',
     name: 'Perplexity',
+    rank: 'Legendary',
     gold: {
       base: 2500,
       sell: 1250,
@@ -7056,7 +7057,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       abilityPower: 60,
       armorPenetration: 22,
@@ -7071,6 +7071,7 @@ export const itemsLite: ItemLite[] = [
     id: 4016,
     key: 'item',
     name: 'Wordless Promise',
+    rank: 'Legendary',
     gold: {
       base: 2500,
       sell: 1250,
@@ -7079,7 +7080,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       abilityHaste: 25,
       abilityPower: 50,
@@ -7093,6 +7093,7 @@ export const itemsLite: ItemLite[] = [
     id: 4017,
     key: 'item',
     name: 'Hellfire Hatchet',
+    rank: 'Legendary',
     aka: [
       'burn'
     ],
@@ -7104,7 +7105,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       attackDamage: 35,
       lethality: 12
@@ -7117,6 +7117,7 @@ export const itemsLite: ItemLite[] = [
     id: 4401,
     key: 'item',
     name: 'Force of Nature',
+    rank: 'Legendary',
     aka: [
       'fon'
     ],
@@ -7131,7 +7132,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1057,
       1028,
@@ -7176,6 +7176,7 @@ export const itemsLite: ItemLite[] = [
     id: 4628,
     key: 'item',
     name: 'Horizon Focus',
+    rank: 'Legendary',
     aka: [
       'lock on',
       'snipe'
@@ -7191,7 +7192,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3108,
       3108,
@@ -7209,6 +7209,7 @@ export const itemsLite: ItemLite[] = [
     id: 4629,
     key: 'item',
     name: 'Cosmic Drive',
+    rank: 'Legendary',
     aka: [
       'cooldown hat'
     ],
@@ -7223,7 +7224,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       3113,
@@ -7244,6 +7244,7 @@ export const itemsLite: ItemLite[] = [
     id: 4630,
     key: 'item',
     name: 'Blighting Jewel',
+    rank: 'Epic',
     aka: [
       'pen',
       'purple'
@@ -7259,7 +7260,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052
     ],
@@ -7275,6 +7275,7 @@ export const itemsLite: ItemLite[] = [
     id: 4632,
     key: 'item',
     name: 'Verdant Barrier',
+    rank: 'Epic',
     aka: [
       'necklace'
     ],
@@ -7289,7 +7290,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1052,
       1033,
@@ -7307,6 +7307,7 @@ export const itemsLite: ItemLite[] = [
     id: 4633,
     key: 'item',
     name: 'Riftmaker',
+    rank: 'Legendary',
     aka: [
       'velkoz'
     ],
@@ -7321,7 +7322,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3147,
       3108
@@ -7415,6 +7415,7 @@ export const itemsLite: ItemLite[] = [
     id: 4642,
     key: 'item',
     name: 'Bandleglass Mirror',
+    rank: 'Epic',
     aka: [
       'yordle'
     ],
@@ -7429,7 +7430,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1004,
       1052,
@@ -7469,6 +7469,7 @@ export const itemsLite: ItemLite[] = [
     id: 4645,
     key: 'item',
     name: 'Shadowflame',
+    rank: 'Legendary',
     gold: {
       base: 900,
       sell: 2240,
@@ -7480,7 +7481,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3145,
       1058
@@ -7497,6 +7497,7 @@ export const itemsLite: ItemLite[] = [
     id: 4646,
     key: 'item',
     name: 'Stormsurge',
+    rank: 'Legendary',
     gold: {
       base: 800,
       sell: 1960,
@@ -7508,7 +7509,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3145,
       3113
@@ -7561,6 +7561,7 @@ export const itemsLite: ItemLite[] = [
     id: 6333,
     key: 'item',
     name: 'Death\'s Dance',
+    rank: 'Legendary',
     aka: [
       'dd'
     ],
@@ -7575,7 +7576,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2019,
       1037,
@@ -7594,6 +7594,7 @@ export const itemsLite: ItemLite[] = [
     id: 6609,
     key: 'item',
     name: 'Chempunk Chainsword',
+    rank: 'Legendary',
     aka: [
       'grievous',
       'grievous wounds'
@@ -7609,7 +7610,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3123,
       1011,
@@ -7629,6 +7629,7 @@ export const itemsLite: ItemLite[] = [
     id: 6610,
     key: 'item',
     name: 'Sundered Sky',
+    rank: 'Legendary',
     gold: {
       base: 500,
       sell: 2170,
@@ -7640,7 +7641,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2021,
       3133,
@@ -7659,6 +7659,7 @@ export const itemsLite: ItemLite[] = [
     id: 6616,
     key: 'item',
     name: 'Staff of Flowing Water',
+    rank: 'Legendary',
     aka: [
       'nami'
     ],
@@ -7673,7 +7674,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3108,
       3114
@@ -7692,6 +7692,7 @@ export const itemsLite: ItemLite[] = [
     id: 6617,
     key: 'item',
     name: 'Moonstone Renewer',
+    rank: 'Legendary',
     aka: [
       'yuumi'
     ],
@@ -7706,7 +7707,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       4642
@@ -7725,6 +7725,7 @@ export const itemsLite: ItemLite[] = [
     id: 6620,
     key: 'item',
     name: 'Echoes of Helia',
+    rank: 'Legendary',
     aka: [
       'spooky cup'
     ],
@@ -7739,7 +7740,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       4642
@@ -7758,6 +7758,7 @@ export const itemsLite: ItemLite[] = [
     id: 6621,
     key: 'item',
     name: 'Dawncore',
+    rank: 'Legendary',
     aka: [
       'dawncore'
     ],
@@ -7772,7 +7773,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1026,
       3114,
@@ -7802,6 +7802,7 @@ export const itemsLite: ItemLite[] = [
     id: 6631,
     key: 'item',
     name: 'Stridebreaker',
+    rank: 'Legendary',
     aka: [
       'kneecapper',
       'whipchain'
@@ -7817,7 +7818,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3077,
       3044,
@@ -7848,6 +7848,7 @@ export const itemsLite: ItemLite[] = [
     id: 6653,
     key: 'item',
     name: 'Liandry\'s Torment',
+    rank: 'Legendary',
     aka: [
       'last shadow',
       'ls',
@@ -7864,7 +7865,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3147,
       2508
@@ -7881,6 +7881,7 @@ export const itemsLite: ItemLite[] = [
     id: 6655,
     key: 'item',
     name: 'Luden\'s Echo',
+    rank: 'Legendary',
     gold: {
       base: 450,
       sell: 1925,
@@ -7892,7 +7893,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3802,
       3145
@@ -7921,6 +7921,7 @@ export const itemsLite: ItemLite[] = [
     id: 6657,
     key: 'item',
     name: 'Rod of Ages',
+    rank: 'Legendary',
     aka: [
       'RoA'
     ],
@@ -7935,7 +7936,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1026,
       3803
@@ -7953,6 +7953,7 @@ export const itemsLite: ItemLite[] = [
     id: 6660,
     key: 'item',
     name: 'Bami\'s Cinder',
+    rank: 'Epic',
     aka: [
       'fire'
     ],
@@ -7967,7 +7968,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1028,
       2022
@@ -7984,6 +7984,7 @@ export const itemsLite: ItemLite[] = [
     id: 6662,
     key: 'item',
     name: 'Iceborn Gauntlet',
+    rank: 'Legendary',
     aka: [
       'Spellblade',
       'ibg',
@@ -8002,7 +8003,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3057,
       1028,
@@ -8023,6 +8023,7 @@ export const itemsLite: ItemLite[] = [
     id: 6664,
     key: 'item',
     name: 'Hollow Radiance',
+    rank: 'Legendary',
     aka: [
       'catastrophe'
     ],
@@ -8037,7 +8038,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       6660,
       3211
@@ -8056,6 +8056,7 @@ export const itemsLite: ItemLite[] = [
     id: 6665,
     key: 'item',
     name: 'Jak\'Sho, The Protean',
+    rank: 'Legendary',
     aka: [
       'Jak\'Sho, The Protean'
     ],
@@ -8070,7 +8071,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1011,
       1031,
@@ -8100,6 +8100,7 @@ export const itemsLite: ItemLite[] = [
     id: 6670,
     key: 'item',
     name: 'Noonquiver',
+    rank: 'Epic',
     gold: {
       base: 350,
       sell: 910,
@@ -8111,7 +8112,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036,
       1018
@@ -8140,6 +8140,7 @@ export const itemsLite: ItemLite[] = [
     id: 6672,
     key: 'item',
     name: 'Kraken Slayer',
+    rank: 'Legendary',
     aka: [
       'Kraken Slayer'
     ],
@@ -8154,7 +8155,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       6690,
       3051,
@@ -8173,6 +8173,7 @@ export const itemsLite: ItemLite[] = [
     id: 6673,
     key: 'item',
     name: 'Immortal Shieldbow',
+    rank: 'Legendary',
     gold: {
       base: 825,
       sell: 2100,
@@ -8184,7 +8185,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       6670
@@ -8202,6 +8202,7 @@ export const itemsLite: ItemLite[] = [
     id: 6675,
     key: 'item',
     name: 'Navori Flickerblade',
+    rank: 'Legendary',
     aka: [
       'crit shojin'
     ],
@@ -8216,7 +8217,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1042,
       3086,
@@ -8235,6 +8235,7 @@ export const itemsLite: ItemLite[] = [
     id: 6676,
     key: 'item',
     name: 'The Collector',
+    rank: 'Legendary',
     aka: [
       'deathblade',
       'gun',
@@ -8251,7 +8252,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       3134,
@@ -8282,6 +8282,7 @@ export const itemsLite: ItemLite[] = [
     id: 6690,
     key: 'item',
     name: 'Rectrix',
+    rank: 'Epic',
     gold: {
       base: 425,
       sell: 543,
@@ -8293,7 +8294,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Epic',
     recipe: [
       1036
     ],
@@ -8321,6 +8321,7 @@ export const itemsLite: ItemLite[] = [
     id: 6692,
     key: 'item',
     name: 'Eclipse',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8335,7 +8336,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3133,
       1037,
@@ -8370,6 +8370,7 @@ export const itemsLite: ItemLite[] = [
     id: 6694,
     key: 'item',
     name: 'Serylda\'s Grudge',
+    rank: 'Legendary',
     aka: [
       'slow'
     ],
@@ -8384,7 +8385,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3133,
       3035
@@ -8402,6 +8402,7 @@ export const itemsLite: ItemLite[] = [
     id: 6695,
     key: 'item',
     name: 'Serpent\'s Fang',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8416,7 +8417,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3134,
       1037
@@ -8433,6 +8433,7 @@ export const itemsLite: ItemLite[] = [
     id: 6696,
     key: 'item',
     name: 'Axiom Arc',
+    rank: 'Legendary',
     gold: {
       base: 363,
       sell: 1925,
@@ -8444,7 +8445,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2020,
       3133
@@ -8462,6 +8462,7 @@ export const itemsLite: ItemLite[] = [
     id: 6697,
     key: 'item',
     name: 'Hubris',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8474,7 +8475,6 @@ export const itemsLite: ItemLite[] = [
       11,
       21
     ],
-    rank: 'Legendary',
     recipe: [
       3134,
       3133
@@ -8492,6 +8492,7 @@ export const itemsLite: ItemLite[] = [
     id: 6698,
     key: 'item',
     name: 'Profane Hydra',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8506,7 +8507,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3077,
       2020
@@ -8524,6 +8524,7 @@ export const itemsLite: ItemLite[] = [
     id: 6699,
     key: 'item',
     name: 'Voltaic Cyclosword',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8538,7 +8539,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       2020,
       1036,
@@ -8568,6 +8568,7 @@ export const itemsLite: ItemLite[] = [
     id: 6701,
     key: 'item',
     name: 'Opportunity',
+    rank: 'Legendary',
     aka: [
       'lethality'
     ],
@@ -8582,7 +8583,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       1037,
       3134,
@@ -8650,6 +8650,7 @@ export const itemsLite: ItemLite[] = [
     id: 8010,
     key: 'item',
     name: 'Bloodletter\'s Curse',
+    rank: 'Legendary',
     gold: {
       base: 750,
       sell: 2030,
@@ -8661,7 +8662,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3147,
       3108
@@ -8679,6 +8679,7 @@ export const itemsLite: ItemLite[] = [
     id: 8020,
     key: 'item',
     name: 'Abyssal Mask',
+    rank: 'Legendary',
     gold: {
       base: 1000,
       sell: 1855,
@@ -8690,7 +8691,6 @@ export const itemsLite: ItemLite[] = [
       21,
       35
     ],
-    rank: 'Legendary',
     recipe: [
       3067,
       1057
@@ -9516,6 +9516,7 @@ export const itemsLite: ItemLite[] = [
     id: 220000,
     key: 'item',
     name: 'Stat Bonus',
+    rank: 'Consumable',
     gold: {
       base: 750,
       sell: 375,
@@ -9524,13 +9525,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220001,
     key: 'item',
     name: 'Legendary Fighter Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9539,13 +9540,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220002,
     key: 'item',
     name: 'Legendary Marksman Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9554,13 +9555,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220003,
     key: 'item',
     name: 'Legendary Assassin Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9569,13 +9570,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220004,
     key: 'item',
     name: 'Legendary Mage Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9584,13 +9585,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220005,
     key: 'item',
     name: 'Legendary Tank Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9599,13 +9600,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220006,
     key: 'item',
     name: 'Legendary Support Item',
+    rank: 'Consumable',
     gold: {
       base: 2000,
       sell: 2000,
@@ -9614,13 +9615,13 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
     id: 220007,
     key: 'item',
     name: 'Prismatic Item',
+    rank: 'Consumable',
     gold: {
       base: 4000,
       sell: 4000,
@@ -9629,7 +9630,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Consumable',
     stats: {}
   },
   {
@@ -10039,6 +10039,7 @@ export const itemsLite: ItemLite[] = [
     id: 223005,
     key: 'item',
     name: 'Ghostcrawlers',
+    rank: 'Boots',
     gold: {
       base: 500,
       sell: 350,
@@ -10047,7 +10048,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Boots',
     stats: {
       flatMovespeed: 70
     }
@@ -10174,6 +10174,7 @@ export const itemsLite: ItemLite[] = [
     id: 223039,
     key: 'item',
     name: 'Atma\'s Reckoning',
+    rank: 'Legendary',
     aka: [
       'wreckoning'
     ],
@@ -10185,7 +10186,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       criticalStrikeChance: 20,
       health: 700
@@ -10897,6 +10897,7 @@ export const itemsLite: ItemLite[] = [
     id: 223185,
     key: 'item',
     name: 'Guardian\'s Dirk',
+    rank: 'Starter',
     gold: {
       base: 500,
       sell: 250,
@@ -10905,7 +10906,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Starter',
     stats: {
       abilityHaste: 10,
       attackDamage: 25,
@@ -11035,6 +11035,7 @@ export const itemsLite: ItemLite[] = [
     id: 224004,
     key: 'item',
     name: 'Spectral Cutlass',
+    rank: 'Legendary',
     gold: {
       base: 2500,
       sell: 1250,
@@ -11043,7 +11044,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       attackDamage: 50,
       lethality: 15,
@@ -11083,6 +11083,7 @@ export const itemsLite: ItemLite[] = [
     id: 224403,
     key: 'item',
     name: 'The Golden Spatula',
+    rank: 'Special',
     aka: [
       'spatch',
       'urf',
@@ -11099,7 +11100,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     stats: {
       abilityHaste: 20,
       abilityPower: 125,
@@ -11320,6 +11320,7 @@ export const itemsLite: ItemLite[] = [
     id: 226630,
     key: 'item',
     name: 'Goredrinker',
+    rank: 'Special',
     aka: [
       'slurp'
     ],
@@ -11331,7 +11332,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -11664,6 +11664,7 @@ export const itemsLite: ItemLite[] = [
     id: 228001,
     key: 'item',
     name: 'Anathema\'s Chains',
+    rank: 'Legendary',
     aka: [
       'Helia',
       'Vendetta',
@@ -11679,7 +11680,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Legendary',
     stats: {
       abilityHaste: 20,
       health: 650
@@ -11693,6 +11693,7 @@ export const itemsLite: ItemLite[] = [
     id: 228002,
     key: 'item',
     name: 'Wooglet\'s Witchcap',
+    rank: 'Special',
     aka: [
       'Quest',
       'Deathcap'
@@ -11706,7 +11707,6 @@ export const itemsLite: ItemLite[] = [
       12,
       30
     ],
-    rank: 'Special',
     stats: {
       abilityHaste: 20,
       abilityPower: 300,
@@ -12158,6 +12158,7 @@ export const itemsLite: ItemLite[] = [
     id: 443054,
     key: 'item',
     name: 'Darksteel Talons',
+    rank: 'Special',
     aka: [
       'bloodrazor',
       'kitae'
@@ -12170,7 +12171,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12187,6 +12187,7 @@ export const itemsLite: ItemLite[] = [
     id: 443055,
     key: 'item',
     name: 'Fulmination',
+    rank: 'Special',
     aka: [
       'energize'
     ],
@@ -12198,7 +12199,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12215,6 +12215,7 @@ export const itemsLite: ItemLite[] = [
     id: 443056,
     key: 'item',
     name: 'Demon King\'s Crown',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12223,7 +12224,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12233,6 +12233,7 @@ export const itemsLite: ItemLite[] = [
     id: 443058,
     key: 'item',
     name: 'Shield of Molten Stone',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12241,7 +12242,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12257,6 +12257,7 @@ export const itemsLite: ItemLite[] = [
     id: 443059,
     key: 'item',
     name: 'Cloak of Starry Night',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12265,7 +12266,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12281,6 +12281,7 @@ export const itemsLite: ItemLite[] = [
     id: 443060,
     key: 'item',
     name: 'Sword of the Divine',
+    rank: 'Special',
     aka: [
       'sotd'
     ],
@@ -12292,7 +12293,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12307,6 +12307,7 @@ export const itemsLite: ItemLite[] = [
     id: 443061,
     key: 'item',
     name: 'Force Of Entropy',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12315,7 +12316,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12332,6 +12332,7 @@ export const itemsLite: ItemLite[] = [
     id: 443062,
     key: 'item',
     name: 'Sanguine Gift',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12340,7 +12341,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12357,6 +12357,7 @@ export const itemsLite: ItemLite[] = [
     id: 443063,
     key: 'item',
     name: 'Eleisa\'s Miracle',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12365,7 +12366,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12382,6 +12382,7 @@ export const itemsLite: ItemLite[] = [
     id: 443064,
     key: 'item',
     name: 'Talisman Of Ascension',
+    rank: 'Special',
     aka: [
       'Support',
       'Economy',
@@ -12395,7 +12396,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12405,6 +12405,7 @@ export const itemsLite: ItemLite[] = [
     id: 443069,
     key: 'item',
     name: 'Hamstringer',
+    rank: 'Special',
     aka: [
       'bleed'
     ],
@@ -12416,7 +12417,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12433,6 +12433,7 @@ export const itemsLite: ItemLite[] = [
     id: 443079,
     key: 'item',
     name: 'Turbo Chemtank',
+    rank: 'Special',
     aka: [
       'catastrophe'
     ],
@@ -12444,7 +12445,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12459,6 +12459,7 @@ export const itemsLite: ItemLite[] = [
     id: 443080,
     key: 'item',
     name: 'Twin Mask',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12467,7 +12468,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12477,6 +12477,7 @@ export const itemsLite: ItemLite[] = [
     id: 443081,
     key: 'item',
     name: 'Hexbolt Companion',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12485,7 +12486,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12514,6 +12514,7 @@ export const itemsLite: ItemLite[] = [
     id: 443090,
     key: 'item',
     name: 'Reaper\'s Toll',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12522,7 +12523,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12538,6 +12538,7 @@ export const itemsLite: ItemLite[] = [
     id: 443193,
     key: 'item',
     name: 'Gargoyle Stoneplate',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12546,7 +12547,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12564,6 +12564,7 @@ export const itemsLite: ItemLite[] = [
     id: 444636,
     key: 'item',
     name: 'Night Harvester',
+    rank: 'Special',
     aka: [
       'dark',
       'scythe'
@@ -12576,7 +12577,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12593,6 +12593,7 @@ export const itemsLite: ItemLite[] = [
     id: 444637,
     key: 'item',
     name: 'Demonic Embrace',
+    rank: 'Special',
     aka: [
       'helmet'
     ],
@@ -12604,7 +12605,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12620,6 +12620,7 @@ export const itemsLite: ItemLite[] = [
     id: 444644,
     key: 'item',
     name: 'Crown of the Shattered Queen',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12628,7 +12629,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12646,6 +12646,7 @@ export const itemsLite: ItemLite[] = [
     id: 446632,
     key: 'item',
     name: 'Divine Sunderer',
+    rank: 'Special',
     aka: [
       'Spellblade',
       'devourer'
@@ -12658,7 +12659,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12675,6 +12675,7 @@ export const itemsLite: ItemLite[] = [
     id: 446656,
     key: 'item',
     name: 'Everfrost',
+    rank: 'Special',
     aka: [
       'GLP',
       'hose',
@@ -12688,7 +12689,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12706,6 +12706,7 @@ export const itemsLite: ItemLite[] = [
     id: 446667,
     key: 'item',
     name: 'Radiant Virtue',
+    rank: 'Special',
     aka: [
       'rv'
     ],
@@ -12717,7 +12718,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12735,6 +12735,7 @@ export const itemsLite: ItemLite[] = [
     id: 446671,
     key: 'item',
     name: 'Galeforce',
+    rank: 'Special',
     aka: [
       'squallrider'
     ],
@@ -12746,7 +12747,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12764,6 +12764,7 @@ export const itemsLite: ItemLite[] = [
     id: 446691,
     key: 'item',
     name: 'Duskblade of Draktharr',
+    rank: 'Special',
     aka: [
       'lethality'
     ],
@@ -12775,7 +12776,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12792,6 +12792,7 @@ export const itemsLite: ItemLite[] = [
     id: 446693,
     key: 'item',
     name: 'Prowler\'s Claw',
+    rank: 'Special',
     aka: [
       'lethality'
     ],
@@ -12800,7 +12801,6 @@ export const itemsLite: ItemLite[] = [
       sell: 400,
       total: 1000
     },
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12817,6 +12817,7 @@ export const itemsLite: ItemLite[] = [
     id: 447100,
     key: 'item',
     name: 'Mirage Blade',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12825,7 +12826,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12838,6 +12838,7 @@ export const itemsLite: ItemLite[] = [
     id: 447101,
     key: 'item',
     name: 'Gambler\'s Blade',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12846,7 +12847,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12860,6 +12860,7 @@ export const itemsLite: ItemLite[] = [
     id: 447102,
     key: 'item',
     name: 'Reality Fracture',
+    rank: 'Special',
     aka: [
       'Kevins'
     ],
@@ -12871,7 +12872,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12888,6 +12888,7 @@ export const itemsLite: ItemLite[] = [
     id: 447103,
     key: 'item',
     name: 'Hemomancer\'s Helm',
+    rank: 'Special',
     aka: [
       'Omnivamp'
     ],
@@ -12899,7 +12900,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12916,6 +12916,7 @@ export const itemsLite: ItemLite[] = [
     id: 447104,
     key: 'item',
     name: 'Innervating Locket',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12924,7 +12925,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12941,6 +12941,7 @@ export const itemsLite: ItemLite[] = [
     id: 447105,
     key: 'item',
     name: 'Empyrean Promise',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12949,7 +12950,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12967,6 +12967,7 @@ export const itemsLite: ItemLite[] = [
     id: 447106,
     key: 'item',
     name: 'Dragonheart',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12975,7 +12976,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -12985,6 +12985,7 @@ export const itemsLite: ItemLite[] = [
     id: 447107,
     key: 'item',
     name: 'Decapitator',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -12993,7 +12994,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13006,6 +13006,7 @@ export const itemsLite: ItemLite[] = [
     id: 447108,
     key: 'item',
     name: 'Runecarver',
+    rank: 'Special',
     aka: [
       'energize'
     ],
@@ -13017,7 +13018,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13034,6 +13034,7 @@ export const itemsLite: ItemLite[] = [
     id: 447109,
     key: 'item',
     name: 'Cruelty',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13042,7 +13043,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13059,6 +13059,7 @@ export const itemsLite: ItemLite[] = [
     id: 447110,
     key: 'item',
     name: 'Moonflair Spellblade',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13067,7 +13068,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13097,6 +13097,7 @@ export const itemsLite: ItemLite[] = [
     id: 447112,
     key: 'item',
     name: 'Flesheater',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13105,7 +13106,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13118,6 +13118,7 @@ export const itemsLite: ItemLite[] = [
     id: 447113,
     key: 'item',
     name: 'Detonation Orb',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13126,7 +13127,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13144,6 +13144,7 @@ export const itemsLite: ItemLite[] = [
     id: 447114,
     key: 'item',
     name: 'Reverberation',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13152,7 +13153,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13169,6 +13169,7 @@ export const itemsLite: ItemLite[] = [
     id: 447115,
     key: 'item',
     name: 'Regicide',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13177,7 +13178,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13194,6 +13194,7 @@ export const itemsLite: ItemLite[] = [
     id: 447116,
     key: 'item',
     name: 'Kinkou Jitte',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13202,7 +13203,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13220,6 +13220,7 @@ export const itemsLite: ItemLite[] = [
     id: 447118,
     key: 'item',
     name: 'Pyromancer\'s Cloak',
+    rank: 'Special',
     aka: [
       'burn'
     ],
@@ -13231,7 +13232,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13249,6 +13249,7 @@ export const itemsLite: ItemLite[] = [
     id: 447119,
     key: 'item',
     name: 'Lightning Rod',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13257,7 +13258,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13275,6 +13275,7 @@ export const itemsLite: ItemLite[] = [
     id: 447120,
     key: 'item',
     name: 'Diamond-Tipped Spear',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13283,7 +13284,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13299,6 +13299,7 @@ export const itemsLite: ItemLite[] = [
     id: 447121,
     key: 'item',
     name: 'Twilight\'s Edge',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13307,7 +13308,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13324,6 +13324,7 @@ export const itemsLite: ItemLite[] = [
     id: 447122,
     key: 'item',
     name: 'Black Hole Gauntlet',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13332,7 +13333,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],
@@ -13348,6 +13348,7 @@ export const itemsLite: ItemLite[] = [
     id: 447123,
     key: 'item',
     name: 'Puppeteer',
+    rank: 'Special',
     gold: {
       base: 1000,
       sell: 400,
@@ -13356,7 +13357,6 @@ export const itemsLite: ItemLite[] = [
     maps: [
       30
     ],
-    rank: 'Special',
     recipe: [
       220007
     ],

@@ -40,13 +40,14 @@ const gridOptions: GridOptions<any[]> = {
   // autoSizeStrategy: ,
   // scaleUpToFitGridWidth: true,
   columnHoverHighlight: false,
+  rowData: championList.value,
   defaultColDef: {
     // autoHeaderHeight: true,
     // wrapHeaderText: true,
     initialHide: false,
     minWidth: 50,
-    cellClass: ['champion-grid-cell'],
     flex: 1,
+    cellClass: ['champion-grid-cell'],
     headerClass: ['champion-grid-header', 'text-center'],
     sortingOrder: ['desc', 'asc', null],
     /*     headerComponentParams: {
@@ -58,7 +59,6 @@ const gridOptions: GridOptions<any[]> = {
   defaultColGroupDef: {
     suppressStickyLabel: true,
   },
-  rowData: championList.value,
   rowSelection: {
     checkboxes: false,
     enableClickSelection: true,
@@ -204,12 +204,11 @@ ModuleRegistry.registerModules([
 
 <template>
   <AgGridVue
-    class="champion-grid border-shadow-sm stat-grid bg-b1 size-full! min-w-full shadow-black/3! drop-shadow-black/3!"
+    class="border-shadow-sm champion-grid stat-grid size-full! min-w-full bg-p0 shadow-black/3! drop-shadow-black/3!"
     :initial-state="cs().dbChampionGridState"
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
     :tooltip-show-delay="400"
-    @grid-ready="onGridReady"
-  />
+    @grid-ready="onGridReady" />
 </template>

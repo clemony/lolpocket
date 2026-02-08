@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 323110,
-  "name": "Frozen Heart",
-  "description": "75 Armor\n500 Mana\n25 Ability Haste\n\nWinter's Caress\nReduce the Attack Speed of nearby champions by 20%.",
-  "gold": {
-    "base": 800,
-    "total": 2700,
-    "sell": 1890
+const item: Item = {
+  id: 323110,
+  name: 'Frozen Heart',
+  description: '75 Armor\n500 Mana\n25 Ability Haste\n\nWinter\'s Caress\nReduce the Attack Speed of nearby champions by 20%.',
+  gold: {
+    base: 800,
+    sell: 1890,
+    total: 2700
   },
-  "maps": [
+  maps: [
     11
   ]
 }

@@ -14,5 +14,5 @@ export const getDirectParentRoute = computed(() => {
 
 export function getParentRoute() {
   const route = useRoute()
-  route.matched[route.matched.length - 2]
+  return route.matched[route.matched.length - 2]
 }

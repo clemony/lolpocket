@@ -57,19 +57,19 @@
   /* base color */
   &[data-theme~='base'],
   &[data-theme~='b-mention'] {
-    @apply border-b3/80 bg-b1/80 text-bc text-bc/90 **:text-bc;
+    @apply border-p3/80 bg-p0/80 text-pc text-pc/90 **:text-pc;
 
     .tippy-content {
-      @apply backdrop-blur-md **:text-bc;
+      @apply backdrop-blur-md **:text-pc;
     }
     & > .tippy-svg-arrow > svg:first-child {
-      @apply mask-b-from-55% mask-b-to-56% **:fill-b1/95 **:text-b3;
+      @apply mask-b-from-55% mask-b-to-56% **:fill-p0/95 **:text-p3;
     }
   }
 
   /* blur transparent */
   &[data-theme~='blur'] {
-    @apply border-0 bg-transparent p-0 text-bc/80 shadow-none;
+    @apply border-0 bg-transparent p-0 text-pc/80 shadow-none;
 
     & > .tippy-svg-arrow {
       @apply hidden;

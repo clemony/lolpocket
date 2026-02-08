@@ -1,28 +1,28 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:58 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Call of the Freljord",
-  "affects": "Self, Allies",
-  "blurb": "Innate: When  Nunu and  Willump deal damage against an enemy  champion, large  monster or  structure, they and a nearby allied champion gain Call of the Freljord for a few seconds, prioritizing the ally with  highest attack speed.",
-  "damageType": "Physical damage",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Call of the Freljord',
+  affects: 'Self, Allies',
+  blurb: 'Innate: When  Nunu and  Willump deal damage against an enemy  champion, large  monster or  structure, they and a nearby allied champion gain Call of the Freljord for a few seconds, prioritizing the ally with  highest attack speed.',
+  damageType: 'Physical damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p',
+  notes: 'The splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump\'s location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nEnemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn\'t present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord\'s maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.',
+  onTargetCdStatic: '10',
+  spellEffects: 'periodic',
+  targeting: 'Passive',
+  targetRange: '1000 / 700',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> When Nunu and Willump deal damage against an enemy champion, large monster or structure, they and a nearby allied champion gain Call of the Freljord for 4 seconds, prioritizing the ally with highest attack speed.</p>'
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Call of the Freljord:</span> Gain 20% bonus attack speed and 10% bonus movement speed. Willump's basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Call of the Freljord:</span> Gain 20% bonus attack speed and 10% bonus movement speed. Willump\'s basic attacks additionally deal 30% AD physical damage to secondary targets in a cone in front of him.</p>'
     },
     {
-      "description": "Nunu and Willump cannot trigger Call of the Freljord from the same enemy again for a time. Successive triggers of Call of the Freljord while it is active will extend the duration by 4 seconds."
+      description: 'Nunu and Willump cannot trigger Call of the Freljord from the same enemy again for a time. Successive triggers of Call of the Freljord while it is active will extend the duration by 4 seconds.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/p",
-  "notes": "The splash damage will critically strike when the basic attack does, but will not deal any bonus damage.\nCall of the Freljord range to be shared with allies is based on Nunu and Willump's location.\nIf no ally is prioritized based on their stats, it will be given to the one closest to them.\nEnemies that can trigger Call of the Freljord have a marker overhead.\nThis marker isn't present on inhibitors or the nexus (because they cannot hold buffs and debuffs including the one that hosts this VFX), but they still trigger Call of the Freljord when attacked.\nCall of the Freljord's maximum remaining duration is 44 seconds.\nThe buff has no cap for its maximum total duration.",
-  "onTargetCdStatic": "10",
-  "spellEffects": "periodic",
-  "targeting": "Passive",
-  "targetRange": "1000 / 700"
+  ]
 }
-  export default ability
+export default ability

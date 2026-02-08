@@ -23,12 +23,10 @@ const patch = computed(() =>
       }
     `
     "
-    class="grid size-full grid-cols-[1fr_20px] items-center justify-end justify-items-end py-2 text-end text-sm!"
-  >
+    class="grid size-full grid-cols-[1fr_20px] items-center justify-end justify-items-end py-2 text-end text-sm!">
     {{ useDateFormat(params.data.lastPlayed, "M/DD/YY").value }}
     <Icon
       class="col-start-2 -mt-0.25 size-3.5 opacity-60 **:stroke-[2.8]"
-      name="lucide:calendar"
-    />
+      name="lucide:calendar" />
   </div>
 </template>

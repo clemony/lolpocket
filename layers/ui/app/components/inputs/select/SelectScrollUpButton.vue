@@ -20,10 +20,11 @@ const forwarded = useForwardProps(delegatedProps)
         'sticky top-0 flex cursor-default items-center justify-center py-1',
         props.class,
       )
-    "
-  >
+    ">
     <slot>
-      <icon class="size-4" name="up" />
+      <icon
+        class="size-4"
+        name="up" />
     </slot>
   </SelectScrollUpButton>
 </template>

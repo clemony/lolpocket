@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { CalendarDate } from '@internationalized/date'
-import type { DateRange } from 'reka-ui'
+import type { CalendarDate } from "@internationalized/date"
 import {
   fromAbsolute,
   getLocalTimeZone,
   isToday,
   today,
-} from '@internationalized/date'
+} from "@internationalized/date"
+import type { DateRange } from "reka-ui"
 
 /* const { matches, setFilter } = api
 const date = ref({
@@ -26,18 +26,13 @@ const open = shallowRef<boolean>(false) */
 </script>
 
 <template>
-  <UPopover
-    class="p-1"
-    align="start"
-  >
+  <UPopover class="p-1" align="start">
     <!--  -->
     <UButton
       icon="calendar"
       :ui="{ leadingIcon: 'size-4.5' }"
-      variant="inset"
       size="lg"
-      color="transparent"
-    />
+      color="transparent" />
 
     <!-- calendar -->
     <!-- <template #content>
@@ -76,7 +71,7 @@ const open = shallowRef<boolean>(false) */
                 :class="
                   cn('peer w-full', {
                     '': isToday(weekDate, getLocalTimeZone()),
-                    'border-3! bg-resolve! text-white! selected:border-bc!':
+                    'border-3! bg-resolve! text-white! selected:border-pc!':
                       isPatchDay(weekDate as CalendarDate),
                   })
                 "
@@ -93,7 +88,7 @@ const open = shallowRef<boolean>(false) */
                     '',
 
                     {
-                      'group-has-not-data-selected:from-neutral/30 group-has-not-data-selected:to-neutral group-has-data-selected:from-b1 group-has-data-selected:to-b4':
+                      'group-has-not-data-selected:from-neutral/30 group-has-not-data-selected:to-neutral group-has-data-selected:from-p0 group-has-data-selected:to-b4':
                         isToday(weekDate, getLocalTimeZone()),
                     },
                   )

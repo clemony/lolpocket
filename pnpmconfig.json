@@ -5,13 +5,13 @@
   },
   "customCommands": [
     {
-      "name": "Full Build",
       "command": "build && test && lint",
-      "description": "Complete build process with tests and linting"
+      "description": "Complete build process with tests and linting",
+      "name": "Full Build"
     }
   ],
   "settings": {
-    "showNotifications": true,
-    "autoInstallOnOpen": false
+    "autoInstallOnOpen": false,
+    "showNotifications": true
   }
 }

@@ -17,8 +17,7 @@
           before:from-40% before:to-black/50 before:to-70%
         `,
       )
-    "
-  >
+    ">
     <slot />
   </div>
 </template>

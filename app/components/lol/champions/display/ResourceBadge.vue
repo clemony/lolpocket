@@ -28,10 +28,10 @@ const resource = computed(() => {
     :size
     :class="
       cn(
-        'text-bc/90 w-fit gap-2! px-5 text-sm! font-medium!',
+        'w-fit gap-2! px-5 text-sm! font-medium! text-pc/90',
         {
           //
-          'hover:**:text-bc hover:text-bc order-first':
+          'hover:**:text-pc hover:text-pc order-first':
             active
             || (cs().filters.resource && cs().filters.resource === resource.name),
           //
@@ -48,14 +48,16 @@ const resource = computed(() => {
     "
     :style="{
       backgroundColor: `${(cs().filters.resource && cs().filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
-    }"
-  >
+    }">
     <!--    <Icon
       v-if="resource?.icon"
       :name="resource?.icon"
       :class="cn('!size-4  dst shrink-0', resource?.class)" /> -->
 
     {{ resource?.title || resource.name }}
-    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
+    <icon
+      v-if="clear"
+      class="size-4 text-white **:stroke-[2.6]"
+      name="x" />
   </Button>
 </template>

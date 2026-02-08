@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 323070,
-  "name": "Tear of the Goddess",
-  "description": "240 Mana\n\nManaflow (8s, max 4 charges)\nLanding Abilities grants 6.5 max Mana (doubled vs. champions), up to 360.\n\nHelping Hand\nAttacks deal an additional 5 physical damage to minions.",
-  "gold": {
-    "base": 400,
-    "total": 400,
-    "sell": 280
+const item: Item = {
+  id: 323070,
+  name: 'Tear of the Goddess',
+  description: '240 Mana\n\nManaflow (8s, max 4 charges)\nLanding Abilities grants 6.5 max Mana (doubled vs. champions), up to 360.\n\nHelping Hand\nAttacks deal an additional 5 physical damage to minions.',
+  gold: {
+    base: 400,
+    sell: 280,
+    total: 400
   },
-  "maps": [
+  maps: [
     11
   ]
 }

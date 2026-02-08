@@ -1,137 +1,137 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:48 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "R",
-  "name": "Needlework",
-  "width": "240 to 30",
-  "affects": "Enemies",
-  "blurb": "First Cast:  Gwen launches a needle in the target direction that deals magic damage and  slows enemies hit. Needlework can be recast up to two more times.",
-  "castTime": "0.25 / 0.5",
-  "cooldown": "120 / 100 / 80",
-  "cost": "100",
-  "damageType": "Magic damage",
-  "effects": [
+const ability: Ability = {
+  key: 'R',
+  name: 'Needlework',
+  width: '240 to 30',
+  affects: 'Enemies',
+  blurb: 'First Cast:  Gwen launches a needle in the target direction that deals magic damage and  slows enemies hit. Needlework can be recast up to two more times.',
+  castTime: '0.25 / 0.5',
+  cooldown: '120 / 100 / 80',
+  cost: '100',
+  damageType: 'Magic damage',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/r',
+  notes: 'Dying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast\'s cast time is 0.25 seconds, and the second and third\'s cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen\'s location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.',
+  projectile: 'TRUE',
+  resource: 'Mana',
+  speed: '1800',
+  spellEffects: 'aoe',
+  spellshieldable: 'special',
+  targeting: 'Direction',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them for 1.5 seconds.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Active:</span> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them for 1.5 seconds.</p>',
+      leveling: [
         {
-          "attribute": "Magic Damage per Needle",
-          "modifiers": [
+          attribute: 'Magic Damage per Needle',
+          modifiers: [
             {
-              "values": "35 / 65 / 95"
+              values: '35 / 65 / 95'
             },
             {
-              "unit": "% AP",
-              "values": "10"
+              unit: '% AP',
+              values: '10'
             }
           ]
         },
         {
-          "attribute": "Damage with A Thousand Cuts",
-          "modifiers": [
+          attribute: 'Damage with A Thousand Cuts',
+          modifiers: [
             {
-              "values": "35 / 65 / 95"
+              values: '35 / 65 / 95'
             },
             {
-              "unit": "% AP",
-              "values": "10"
+              unit: '% AP',
+              values: '10'
             },
             {
-              "unit": "% (+ 0.6% per 100 AP) of the target's maximum health",
-              "values": "1"
+              unit: '% (+ 0.6% per 100 AP) of the target\'s maximum health',
+              values: '1'
             }
           ]
         },
         {
-          "attribute": "Slow",
-          "modifiers": [
+          attribute: 'Slow',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "30 / 45 / 60"
+              unit: '%',
+              values: '30 / 45 / 60'
             }
           ]
         }
       ]
     },
     {
-      "description": "Needlework can be recast twice more within 8 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Each subsequent cast refreshes the duration and increases the number of needles launched by 2. Needle hits beyond the first apply a slow against each individual target.",
-      "leveling": [
+      description: 'Needlework can be recast twice more within 8 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Each subsequent cast refreshes the duration and increases the number of needles launched by 2. Needle hits beyond the first apply a slow against each individual target.',
+      leveling: [
         {
-          "attribute": "Subsequent Slow",
-          "modifiers": [
+          attribute: 'Subsequent Slow',
+          modifiers: [
             {
-              "unit": "%",
-              "values": "15 / 20 / 25"
+              unit: '%',
+              values: '15 / 20 / 25'
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.</p>",
-      "leveling": [
+      description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Gwen mimics the first cast\'s effects, while barraging three needles on the second cast and five on the third cast.</p>',
+      leveling: [
         {
-          "attribute": "Second Cast Total Damage",
-          "modifiers": [
+          attribute: 'Second Cast Total Damage',
+          modifiers: [
             {
-              "values": "105 / 195 / 285"
+              values: '105 / 195 / 285'
             },
             {
-              "unit": "% AP",
-              "values": "30"
+              unit: '% AP',
+              values: '30'
             },
             {
-              "unit": "% (+ 1.8% per 100 AP) of the target's maximum health",
-              "values": "3"
+              unit: '% (+ 1.8% per 100 AP) of the target\'s maximum health',
+              values: '3'
             }
           ]
         },
         {
-          "attribute": "Third Cast Total Damage",
-          "modifiers": [
+          attribute: 'Third Cast Total Damage',
+          modifiers: [
             {
-              "values": "175 / 325 / 475"
+              values: '175 / 325 / 475'
             },
             {
-              "unit": "% AP",
-              "values": "50"
+              unit: '% AP',
+              values: '50'
             },
             {
-              "unit": "% (+ 3% per 100 AP) of the target's maximum health",
-              "values": "5"
+              unit: '% (+ 3% per 100 AP) of the target\'s maximum health',
+              values: '5'
             }
           ]
         },
         {
-          "attribute": "Maximum Total Damage",
-          "modifiers": [
+          attribute: 'Maximum Total Damage',
+          modifiers: [
             {
-              "values": "315 / 585 / 855"
+              values: '315 / 585 / 855'
             },
             {
-              "unit": "% AP",
-              "values": "90"
+              unit: '% AP',
+              values: '90'
             },
             {
-              "unit": "% (+ 5.4% per 100 AP) of the target's maximum health",
-              "values": "9"
+              unit: '% (+ 5.4% per 100 AP) of the target\'s maximum health',
+              values: '9'
             }
           ]
         }
       ]
     },
     {
-      "description": "Gwen can move during Needlework's cast times."
+      description: 'Gwen can move during Needlework\'s cast times.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/r",
-  "notes": "Dying during the cast time will prevent the remaining needles of the cast from being launched.\nThe first cast's cast time is 0.25 seconds, and the second and third's cast times are each 0.5 seconds. Gwen launches the needles during the cast times.\nFor the second cast, the first needle launches 0.264 seconds after the start of the cast, the second needle launches after 0.132 seconds, and the third needle launches 0.231 seconds after the first.\nFor the third cast, the first needle launches 0.264 seconds after the start of the cast. Each additional needle launches 0.066 seconds seconds after the previous one.\nThe needles of each cast will fire based on Gwen's location at 0.264 seconds into each cast time (in case of the first cast, this is at the end of the cast time).\nThe needles fire from 100 units behind the cast location.\nThe width of all needle missiles decreases with their distance travelled, forming an approximately triangular missile hitbox.\nNeedles of the same cast all travel the same line at a slight delay after one another. The visual origins are offset (by 70 and 110 units to either side from the center missile spawn location), but the actual hitting missiles all follow the central line.\n Spell shield blocks only one needle.",
-  "projectile": "TRUE",
-  "resource": "Mana",
-  "speed": "1800",
-  "spellEffects": "aoe",
-  "spellshieldable": "special",
-  "targeting": "Direction"
+  ]
 }
-  export default ability
+export default ability

@@ -25,7 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
     <div :class="cn('grid size-8 absolute mask-b-from-68% mask-b-to-69% -top-0.5  place-items-center  ', props.iconClass)">
       <icon
         name="ion:caret-up-sharp"
-        :class="cn('!size-8 mask-b-from-70% mask-b-to-90% text-b1/91 stroke-6 text-shadow-sm *:stroke-b4 drop-shadow-xs drop-shadow-black/30 ')" />
+        :class="cn('!size-8 mask-b-from-70% mask-b-to-90% text-p0/91 stroke-6 text-shadow-sm *:stroke-b4 drop-shadow-xs drop-shadow-black/30 ')" />
     </div>
   </NavigationMenuIndicator> -->
 
@@ -36,8 +36,7 @@ const forwarded = useForwardProps(delegatedProps)
         props.class,
       )
     "
-    as-child
-  >
+    as-child>
     <motion.div
       :initial="{
         opacity: 0,
@@ -54,11 +53,9 @@ const forwarded = useForwardProps(delegatedProps)
       :transition="{
         type: 'spring',
         bounce: 0.25,
-      }"
-    >
+      }">
       <div
-        class="border-b4/70 bg-b1/94 relative top-[70%] size-4 rotate-45 border"
-      />
+        class="border-b4/70 relative top-[70%] size-4 rotate-45 border bg-p0/94" />
     </motion.div>
   </NavigationMenuIndicator>
 </template>

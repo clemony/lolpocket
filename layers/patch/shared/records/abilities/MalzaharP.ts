@@ -1,21 +1,21 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:52 PM CST
-  import type { Ability } from "#shared/types"
+import type { Ability } from '#shared/types'
 
-  const ability: Ability = {
-  "key": "P",
-  "name": "Void Shift",
-  "affects": "Self",
-  "blurb": "Innate: Periodically,  Malzahar gains Void Shift until he takes non- minion damage or negates a  crowd control effect, to which it then lingers for a brief time before expiring.",
-  "effects": [
+const ability: Ability = {
+  key: 'P',
+  name: 'Void Shift',
+  affects: 'Self',
+  blurb: 'Innate: Periodically,  Malzahar gains Void Shift until he takes non- minion damage or negates a  crowd control effect, to which it then lingers for a brief time before expiring.',
+  icon: 'https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/p',
+  notes: 'Void Shift will not resist allied  crowd control nor will it be deactivated by them.\nVoid Shift will not mitigate  true damage but the buff will still be consumed.\nIt does not deactivate against the  Nexus Obelisk.\n Shields will take priority over Void Shift, but the buff is always consumed, even if the shield fully mitigates the damage. (bug)\nHowever, if Malzahar has a  spell shield and is hit by an effect that isn\'t negated by the spell shield, then if the  shield fully mitigates the damage, Void Shift will not be consumed.\n Spell shields take priority over Void Shift for abilities that contain a  crowd control effect.\nIf the hostile ability does not contain a  crowd control effect, then both Void Shift and the spell shield break simultaneously. (bug)\nVoid Shift will specifically not deactivate if Malzahar eats  Honeyfruit or is within a hostile  Frozen Heart passive aura.\nVoid Shift will prevent  Chum the Waters from attaching to him.',
+  targeting: 'Passive',
+  effects: [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction.</p>"
+      description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction.</p>'
     },
     {
-      "description": "Void Shift's cooldown refreshes whenever Malzahar takes non- minion damage or is affected by a crowd control effect, and resets upon respawning."
+      description: 'Void Shift\'s cooldown refreshes whenever Malzahar takes non- minion damage or is affected by a crowd control effect, and resets upon respawning.'
     }
-  ],
-  "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/p",
-  "notes": "Void Shift will not resist allied  crowd control nor will it be deactivated by them.\nVoid Shift will not mitigate  true damage but the buff will still be consumed.\nIt does not deactivate against the  Nexus Obelisk.\n Shields will take priority over Void Shift, but the buff is always consumed, even if the shield fully mitigates the damage. (bug)\nHowever, if Malzahar has a  spell shield and is hit by an effect that isn't negated by the spell shield, then if the  shield fully mitigates the damage, Void Shift will not be consumed.\n Spell shields take priority over Void Shift for abilities that contain a  crowd control effect.\nIf the hostile ability does not contain a  crowd control effect, then both Void Shift and the spell shield break simultaneously. (bug)\nVoid Shift will specifically not deactivate if Malzahar eats  Honeyfruit or is within a hostile  Frozen Heart passive aura.\nVoid Shift will prevent  Chum the Waters from attaching to him.",
-  "targeting": "Passive"
+  ]
 }
-  export default ability
+export default ability

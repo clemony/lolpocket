@@ -16,11 +16,10 @@ const {
   <div
     :class="
       cn(
-        'text-bc/60 pointer-events-none inline self-end text-xs! select-none',
+        'pointer-events-none inline self-end text-xs! text-pc/60 select-none',
         className,
       )
-    "
-  >
+    ">
     {{ editor.storage.characterCount.characters() }}
     <template v-if="limit">
       &nbsp;/&nbsp;

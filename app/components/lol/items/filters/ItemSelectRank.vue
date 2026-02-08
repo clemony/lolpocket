@@ -13,16 +13,14 @@ function onClick(rank: string): void {
       :key="rank"
       class="justify-start gap-4! pl-3! capitalize shadow-none"
       variant="ghost"
-      size="sm"
-    >
+      size="sm">
       <input
         v-model="is().filters.rank"
         class="peer hidden"
         type="radio"
         name="item-rank"
         :value="rank"
-        @click="onClick(rank)"
-      >
+        @click="onClick(rank)">
 
       <span class="grow">
         {{ rank }}
@@ -39,9 +37,8 @@ function onClick(rank: string): void {
       </span> -->
       <icon
         v-if="is().filters.rank === rank"
-        class="dst size-6"
-        name="tick-sm"
-      />
+        class="size-6 dst"
+        name="tick-sm" />
     </Label>
   </div>
 </template>

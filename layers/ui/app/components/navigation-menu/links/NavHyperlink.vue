@@ -24,14 +24,19 @@ const component = computed(() => (nuxt ? NuxtLink : NavigationMenuLink))
     :is="component"
     :class="
       cn(
-        'text-bc/70 hover:text-bc flex items-center text-sm font-medium underline-offset-2 hover:underline',
+        'flex items-center text-sm font-medium text-pc/70 underline-offset-2 hover:text-pc hover:underline',
         className,
       )
     "
-    @click="navigateTo(to)"
-  >
-    <icon v-if="at" class="size-3.75" name="at" />
-    <icon v-if="hash" class="size-3.75" name="hash" />
+    @click="navigateTo(to)">
+    <icon
+      v-if="at"
+      class="size-3.75"
+      name="at" />
+    <icon
+      v-if="hash"
+      class="size-3.75"
+      name="hash" />
     <slot />
   </component>
 </template>

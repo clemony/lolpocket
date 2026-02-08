@@ -19,9 +19,13 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationFirst v-bind="delegatedProps">
-    <button :class="cn('btn btn-square btn-ghost btn-sm', props.class)" v>
+    <button
+      :class="cn('btn btn-square btn-ghost btn-sm', props.class)"
+      v>
       <slot>
-        <icon class="size-4 shrink-0 opacity-80" name="left-pipe" />
+        <icon
+          class="size-4 shrink-0 opacity-80"
+          name="left-pipe" />
       </slot>
     </button>
   </PaginationFirst>

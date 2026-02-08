@@ -2,10 +2,6 @@ import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 export const abilityVariants = tv({
-  defaultVariants: {
-    color: 'base',
-    size: 'lg',
-  },
   slots: {
     title: 'grow justify-start text-start tracking-tight',
     //
@@ -27,13 +23,13 @@ export const abilityVariants = tv({
   variants: {
     color: {
       base: {
-        attributeBadge: 'border-b3 bg-b1 bg-b2/10 **:text-bc',
+        attributeBadge: 'border-p3 bg-p0 bg-p2/10 **:text-pc',
         attributeContent:
-          'chat-bubble bg-b1 drop-shadow-xs drop-shadow-black/4',
+          'chat-bubble bg-p0 drop-shadow-xs drop-shadow-black/4',
         attributeWrapper: 'chat-start chat',
         collapsible: 'field-box',
-        statsWrapper: '[&_svg]:text-bc/80',
-        trigger: 'border-b-b3 data-[state=open]:border-b',
+        statsWrapper: '[&_svg]:text-pc/80',
+        trigger: 'border-b-p3 data-[state=open]:border-b',
       },
       neutral: {
         collapsible: '',
@@ -62,6 +58,10 @@ export const abilityVariants = tv({
         trigger: 'px-0',
       },
     },
+  },
+  defaultVariants: {
+    color: 'base',
+    size: 'lg',
   },
 })
 

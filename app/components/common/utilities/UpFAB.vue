@@ -14,15 +14,14 @@ const { scrollTop } = useScrollInject()
 <template>
   <Tooltip
     text="Top"
-    :side="placement"
-  >
+    :side="placement">
     <UButton
       icon="arrow-up"
       size="xl"
-      square
+      color="p0"
+      rounded
       variant="solid"
-      :class="cn('rounded-full', className)"
-      @click="scrollTop()"
-    />
+      :ui="{ base: cn('bg-p0/60 backdrop-blur-md', className) }"
+      @click="scrollTop()" />
   </Tooltip>
 </template>

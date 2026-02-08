@@ -22,7 +22,10 @@ watch(
 </script>
 
 <template>
-  <SliderRoot v-bind="forwarded" as-child :class="props.class">
+  <SliderRoot
+    v-bind="forwarded"
+    as-child
+    :class="props.class">
     <slot />
   </SliderRoot>
 </template>

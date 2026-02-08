@@ -10,16 +10,12 @@ async function clear() {
     class="h-60 cursor-default"
     as="div"
     button="Clear Matches"
-    @click="clear()"
-  >
-    <template #title>
-      Clear Local Match Data
-    </template>
+    @click="clear()">
+    <template #title> Clear Local Match Data </template>
     <template #text>
       Remove
       <tippy
-        class="underline-dotted rounded-tiny hover:bg-neutral/96 hover:text-nc cursor-help underline transition-colors duration-200"
-      >
+        class="underline-dotted rounded-tiny cursor-help underline transition-colors duration-200 hover:bg-neutral/96 hover:text-nc">
         stored data
         <template #content>
           <ul class="list-disc p-3 not-first:mt-2">
@@ -37,17 +33,15 @@ async function clear() {
       </tippy>
       from your browser's cache. If you're having issues updating matches, try
       this button ↘︎ or
-      <ResponsiveDialog>
-        <ResponsiveDialogTrigger
-          class="relative inline-flex h-4! w-24 origin-center items-center justify-center self-center overflow-visible! align-baseline"
-        >
+      <UModal>
+        <UButton
+          class="relative inline-flex h-4! w-24 origin-center items-center justify-center self-center overflow-visible! align-baseline">
           <span
-            class="absolute mt-0.5 h-6! w-24 text-center font-medium underline transition-all duration-200 hover:font-bold"
-          >
+            class="absolute mt-0.5 h-6! w-24 text-center font-medium underline transition-all duration-200 hover:font-bold">
             contact me.
           </span>
-        </ResponsiveDialogTrigger>
-      </ResponsiveDialog>
+        </UButton>
+      </UModal>
     </template>
   </ActionCard>
 </template>

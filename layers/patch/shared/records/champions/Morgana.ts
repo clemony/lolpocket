@@ -1,307 +1,307 @@
 // Updated Patch 16.1 - 01/29/2026 04:26:56 PM CST
-  import type { Champion } from '#shared/types'
+import type { Champion } from '#shared/types'
 
-  const champion: Champion = {
-  "id": 25,
-  "key": "Morgana",
-  "name": "Morgana",
-  "title": "The Fallen",
-  "abilities": [
+const champion: Champion = {
+  id: 25,
+  key: 'Morgana',
+  name: 'Morgana',
+  title: 'The Fallen',
+  adaptiveType: 'Magic damage',
+  attackType: 'Ranged',
+  patchLastChanged: '25.21',
+  releaseDate: '2009-02-21',
+  resource: 'Mana',
+  abilities: [
     {
-      "key": "P",
-      "name": "Soul Siphon",
-      "affects": "Self",
-      "blurb": "Innate:  Morgana  heals herself for a portion of the damage dealt by her abilities against  champions, large  minions, and medium and large  monsters.",
-      "effects": [
+      key: 'P',
+      name: 'Soul Siphon',
+      affects: 'Self',
+      blurb: 'Innate:  Morgana  heals herself for a portion of the damage dealt by her abilities against  champions, large  minions, and medium and large  monsters.',
+      icon: 'https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/p',
+      notes: 'No additional details.',
+      targeting: 'Passive',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters.</p>'
         }
-      ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/p",
-      "notes": "No additional details.",
-      "targeting": "Passive"
+      ]
     },
     {
-      "key": "Q",
-      "name": "Dark Binding",
-      "width": "140",
-      "affects": "Enemies",
-      "blurb": "Active:  Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and  roots them for a \"short time\".",
-      "castTime": "0.25",
-      "cooldown": "10",
-      "cost": "50 / 55 / 60 / 65 / 70",
-      "damageType": "Magic damage",
-      "effects": [
+      key: 'Q',
+      name: 'Dark Binding',
+      width: '140',
+      affects: 'Enemies',
+      blurb: 'Active:  Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and  roots them for a "short time".',
+      castTime: '0.25',
+      cooldown: '10',
+      cost: '50 / 55 / 60 / 65 / 70',
+      damageType: 'Magic damage',
+      icon: 'https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/q',
+      notes: 'This ability will cast from wherever the caster is at the start of the cast time.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1200',
+      spellEffects: 'Single target',
+      spellshieldable: 'True',
+      targeting: 'Direction',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "80 / 135 / 190 / 245 / 300"
+                  values: '80 / 135 / 190 / 245 / 300'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "90"
+                  unit: '% AP',
+                  values: '90'
                 }
               ]
             },
             {
-              "attribute": "Root Duration",
-              "modifiers": [
+              attribute: 'Root Duration',
+              modifiers: [
                 {
-                  "unit": " seconds",
-                  "values": "2 / 2.25 / 2.5 / 2.75 / 3"
+                  unit: ' seconds',
+                  values: '2 / 2.25 / 2.5 / 2.75 / 3'
                 }
               ]
             }
           ]
         }
-      ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/q",
-      "notes": "This ability will cast from wherever the caster is at the start of the cast time.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "1200",
-      "spellEffects": "Single target",
-      "spellshieldable": "True",
-      "targeting": "Direction"
+      ]
     },
     {
-      "key": "W",
-      "name": "Tormented Shadow",
-      "affects": "Enemies",
-      "blurb": "Passive: Tormented Shadow's current cooldown is  reduced whenever  Soul Siphon triggers.",
-      "castTime": "0.25",
-      "cooldown": "12",
-      "cost": "70 / 80 / 90 / 100 / 110",
-      "damageType": "Magic damage",
-      "effectRadius": "280",
-      "effects": [
+      key: 'W',
+      name: 'Tormented Shadow',
+      affects: 'Enemies',
+      blurb: 'Passive: Tormented Shadow\'s current cooldown is  reduced whenever  Soul Siphon triggers.',
+      castTime: '0.25',
+      cooldown: '12',
+      cost: '70 / 80 / 90 / 100 / 110',
+      damageType: 'Magic damage',
+      effectRadius: '280',
+      icon: 'https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/w',
+      notes: 'Damage from multiple Tormented Shadows does not stack.',
+      resource: 'Mana',
+      spellEffects: 'aoedot',
+      spellshieldable: 'False',
+      targeting: 'Location',
+      targetRange: '900',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tormented Shadow's current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Passive:</span> Tormented Shadow\'s current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction.</p>'
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds thereafter, increased by 0% - 100% (based on target's missing health). Tormented Shadow deals 170% damage against monsters.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds thereafter, increased by 0% - 100% (based on target\'s missing health). Tormented Shadow deals 170% damage against monsters.</p>',
+          leveling: [
             {
-              "attribute": "Minimum Damage Per Tick",
-              "modifiers": [
+              attribute: 'Minimum Damage Per Tick',
+              modifiers: [
                 {
-                  "values": "9 / 15.5 / 22 / 28.5 / 35"
+                  values: '9 / 15.5 / 22 / 28.5 / 35'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "10"
+                  unit: '% AP',
+                  values: '10'
                 }
               ]
             },
             {
-              "attribute": "Maximum Damage Per Tick",
-              "modifiers": [
+              attribute: 'Maximum Damage Per Tick',
+              modifiers: [
                 {
-                  "values": "18 / 31 / 44 / 57 / 70"
+                  values: '18 / 31 / 44 / 57 / 70'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "20"
+                  unit: '% AP',
+                  values: '20'
                 }
               ]
             },
             {
-              "attribute": "Minimum Total Damage",
-              "modifiers": [
+              attribute: 'Minimum Total Damage',
+              modifiers: [
                 {
-                  "values": "90 / 155 / 220 / 285 / 350"
+                  values: '90 / 155 / 220 / 285 / 350'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "100"
+                  unit: '% AP',
+                  values: '100'
                 }
               ]
             },
             {
-              "attribute": "Maximum Total Damage",
-              "modifiers": [
+              attribute: 'Maximum Total Damage',
+              modifiers: [
                 {
-                  "values": "180 / 310 / 440 / 570 / 700"
+                  values: '180 / 310 / 440 / 570 / 700'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "200"
+                  unit: '% AP',
+                  values: '200'
                 }
               ]
             }
           ]
         }
-      ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/w",
-      "notes": "Damage from multiple Tormented Shadows does not stack.",
-      "resource": "Mana",
-      "spellEffects": "aoedot",
-      "spellshieldable": "False",
-      "targeting": "Location",
-      "targetRange": "900"
+      ]
     },
     {
-      "key": "E",
-      "name": "Black Shield",
-      "affects": "Self, Allies",
-      "blurb": "Active:  Morgana  shields the target allied champion or herself for a few seconds, which absorbs magic damage and grants  crowd control immunity while the shield holds.",
-      "castTime": "none",
-      "cooldown": "26 / 23.5 / 21 / 18.5 / 16",
-      "cost": "80",
-      "effects": [
+      key: 'E',
+      name: 'Black Shield',
+      affects: 'Self, Allies',
+      blurb: 'Active:  Morgana  shields the target allied champion or herself for a few seconds, which absorbs magic damage and grants  crowd control immunity while the shield holds.',
+      castTime: 'none',
+      cooldown: '26 / 23.5 / 21 / 18.5 / 16',
+      cost: '80',
+      icon: 'https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/e',
+      notes: 'Black Shield will not resist self nor allied  crowd control (including e.g. an allied  Tempered Fate).\nBlack Shield will not resist  nearsight.\nBlack Shield negates  crowd control effects before any magic damage is absorbed; even if the shield is broken by an enemy dealing enough damage, its associated disables will not apply. Shield-destroying effects bypass this however, since they destroy the shield before applying their effects.\nAlthough not considered a crowd control effect, Black Shield is special-cased to block  Illaoi\'s  Test of Spirit\'s spirit pull.\nBlack Shield takes priority over other sources of  crowd control immunity and those that grant immunity to specific types of crowd control ( displacement immunity and  slow immunity).\n Spell shield will take priority over Black Shield.\nBlack Shield will always take priority over regular  shields. If used in conjunction with Lifeline, the most recently-applied one will have priority however.\nBlack Shield has a  forgiveness radius of 175 units.',
+      resource: 'Mana',
+      targeting: 'Unit',
+      targetRange: '800',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.</p>',
+          leveling: [
             {
-              "attribute": "Magic Shield Strength",
-              "modifiers": [
+              attribute: 'Magic Shield Strength',
+              modifiers: [
                 {
-                  "values": "100 / 155 / 210 / 265 / 320"
+                  values: '100 / 155 / 210 / 265 / 320'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "70"
+                  unit: '% AP',
+                  values: '70'
                 }
               ]
             }
           ]
         }
-      ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/e",
-      "notes": "Black Shield will not resist self nor allied  crowd control (including e.g. an allied  Tempered Fate).\nBlack Shield will not resist  nearsight.\nBlack Shield negates  crowd control effects before any magic damage is absorbed; even if the shield is broken by an enemy dealing enough damage, its associated disables will not apply. Shield-destroying effects bypass this however, since they destroy the shield before applying their effects.\nAlthough not considered a crowd control effect, Black Shield is special-cased to block  Illaoi's  Test of Spirit's spirit pull.\nBlack Shield takes priority over other sources of  crowd control immunity and those that grant immunity to specific types of crowd control ( displacement immunity and  slow immunity).\n Spell shield will take priority over Black Shield.\nBlack Shield will always take priority over regular  shields. If used in conjunction with Lifeline, the most recently-applied one will have priority however.\nBlack Shield has a  forgiveness radius of 175 units.",
-      "resource": "Mana",
-      "targeting": "Unit",
-      "targetRange": "800"
+      ]
     },
     {
-      "key": "R",
-      "name": "Soul Shackles",
-      "affects": "Enemies",
-      "blurb": "Active:  Morgana latches chains of energy onto nearby enemy champions, dealing magic damage and forming a  tether between herself and each target for a short time, during which the targets are  revealed and  slowed, and Morgana gains  bonus movement speed.",
-      "castTime": "0.35",
-      "cooldown": "120 / 110 / 100",
-      "cost": "100",
-      "damageType": "Magic damage",
-      "effectRadius": "625",
-      "effects": [
+      key: 'R',
+      name: 'Soul Shackles',
+      affects: 'Enemies',
+      blurb: 'Active:  Morgana latches chains of energy onto nearby enemy champions, dealing magic damage and forming a  tether between herself and each target for a short time, during which the targets are  revealed and  slowed, and Morgana gains  bonus movement speed.',
+      castTime: '0.35',
+      cooldown: '120 / 110 / 100',
+      cost: '100',
+      damageType: 'Magic damage',
+      effectRadius: '625',
+      icon: 'https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/r',
+      notes: 'Spell shield will block the tether\'s application and initial damage but not the aftereffects of one already applied.\nMorgana will turn to face southeast upon casting Soul Shackles.\nA circle indicator for Soul Shackles\' maximum tether range is visible to Morgana and her tethered targets only.',
+      projectile: 'FALSE',
+      resource: 'Mana',
+      spellEffects: 'aoe',
+      spellshieldable: 'Special',
+      targeting: 'Proximity',
+      tetherRadius: '625',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "200 / 275 / 350"
+                  values: '200 / 275 / 350'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "80"
+                  unit: '% AP',
+                  values: '80'
                 }
               ]
             },
             {
-              "attribute": "Total Magic Damage",
-              "modifiers": [
+              attribute: 'Total Magic Damage',
+              modifiers: [
                 {
-                  "values": "400 / 550 / 700"
+                  values: '400 / 550 / 700'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "160"
+                  unit: '% AP',
+                  values: '160'
                 }
               ]
             },
             {
-              "attribute": "Bonus Movement Speed",
-              "modifiers": [
+              attribute: 'Bonus Movement Speed',
+              modifiers: [
                 {
-                  "unit": "%",
-                  "values": "20 / 40 / 60"
+                  unit: '%',
+                  values: '20 / 40 / 60'
                 }
               ]
             }
           ]
         },
         {
-          "description": "If a target does not break their tether by the end of its duration, they are dealt the same magic damage again and become stunned for a duration, during which they are revealed.",
-          "leveling": [
+          description: 'If a target does not break their tether by the end of its duration, they are dealt the same magic damage again and become stunned for a duration, during which they are revealed.',
+          leveling: [
             {
-              "attribute": "Stun Duration",
-              "modifiers": [
+              attribute: 'Stun Duration',
+              modifiers: [
                 {
-                  "unit": " seconds",
-                  "values": "1.5 / 1.75 / 2"
+                  unit: ' seconds',
+                  values: '1.5 / 1.75 / 2'
                 }
               ]
             }
           ]
         },
         {
-          "description": "An enemy champion within 575 units is required to cast this ability. The target does not have to be visible to be tethered by this ability."
+          description: 'An enemy champion within 575 units is required to cast this ability. The target does not have to be visible to be tethered by this ability.'
         }
-      ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/r",
-      "notes": "Spell shield will block the tether's application and initial damage but not the aftereffects of one already applied.\nMorgana will turn to face southeast upon casting Soul Shackles.\nA circle indicator for Soul Shackles' maximum tether range is visible to Morgana and her tethered targets only.",
-      "projectile": "FALSE",
-      "resource": "Mana",
-      "spellEffects": "aoe",
-      "spellshieldable": "Special",
-      "targeting": "Proximity",
-      "tetherRadius": "625"
+      ]
     }
   ],
-  "adaptiveType": "Magic damage",
-  "attackType": "Ranged",
-  "attributeRatings": {
-    "damage": 2,
-    "toughness": 1,
-    "control": 3,
-    "mobility": 1,
-    "utility": 2,
-    "abilityReliance": 100,
-    "difficulty": 1
+  attributeRatings: {
+    abilityReliance: 100,
+    control: 3,
+    damage: 2,
+    difficulty: 1,
+    mobility: 1,
+    toughness: 1,
+    utility: 2
   },
-  "patchLastChanged": "25.21",
-  "positions": [
-    "Middle",
-    "Support"
+  positions: [
+    'Middle',
+    'Support'
   ],
-  "price": {
-    "blueEssence": 675,
-    "rp": 585
+  price: {
+    blueEssence: 675,
+    rp: 585
   },
-  "releaseDate": "2009-02-21",
-  "resource": "Mana",
-  "roles": [
-    "Catcher",
-    "Mage",
-    "Support"
+  roles: [
+    'Catcher',
+    'Mage',
+    'Support'
   ],
-  "stats": {
-    "hp": 630,
-    "mp": 340,
-    "movespeed": 335,
-    "armor": 25,
-    "magicResist": 30,
-    "attackRange": 450,
-    "hpRegen": 5.5,
-    "mpRegen": 11,
-    "attackDamage": 56,
-    "attackSpeed": 0.6
+  stats: {
+    armor: 25,
+    attackDamage: 56,
+    attackRange: 450,
+    attackSpeed: 0.6,
+    hp: 630,
+    hpRegen: 5.5,
+    magicResist: 30,
+    movespeed: 335,
+    mp: 340,
+    mpRegen: 11
   },
-  "statsPerLevel": {
-    "hp": 104,
-    "mp": 60,
-    "armor": 4.2,
-    "magicResist": 1.3,
-    "hpRegen": 0.4,
-    "mpRegen": 0.4,
-    "attackDamage": 3.5,
-    "attackSpeed": 1.5
+  statsPerLevel: {
+    armor: 4.2,
+    attackDamage: 3.5,
+    attackSpeed: 1.5,
+    hp: 104,
+    hpRegen: 0.4,
+    magicResist: 1.3,
+    mp: 60,
+    mpRegen: 0.4
   }
 }
 export default champion

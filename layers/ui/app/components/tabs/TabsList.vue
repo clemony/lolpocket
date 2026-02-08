@@ -23,8 +23,7 @@ const forwarded = reactiveOmit(props, 'class')
         'relative rounded-xl!',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </TabsList>
 </template>

@@ -23,16 +23,16 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <NavigationMenuTrigger
     v-bind="forwarded"
-    :class="cn(navigationMenuTriggerStyle(), 'group', props.class)"
-  >
+    :class="cn(navigationMenuTriggerStyle(), 'group', props.class)">
     <slot />
 
-    <span v-if="props.arrow" class="relative size-5 max-w-5 min-w-5">
+    <span
+      v-if="props.arrow"
+      class="relative size-5 max-w-5 min-w-5">
       <icon
         class="absolute top-px ml-1 size-4.5 shrink-0 transition duration-300 group-data-[state=open]:rotate-180"
         name="up"
-        aria-hidden="true"
-      />
+        aria-hidden="true" />
     </span>
 
     <slot name="right" />

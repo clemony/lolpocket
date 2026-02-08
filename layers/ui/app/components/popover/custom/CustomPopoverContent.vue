@@ -22,12 +22,11 @@ const emit = defineEmits(['interact-outside'])
     :side="props.side"
     :class="
       cn(
-        'bgneutral/86 border-accent! text-nc/80 rounded-xl! border backdrop-blur-lg backdrop-brightness-175',
+        'bgneutral/86 rounded-xl! border border-accent! text-nc/80 backdrop-blur-lg backdrop-brightness-175',
         props.class,
       )
     "
-    @interact-outside="emit('interact-outside')"
-  >
+    @interact-outside="emit('interact-outside')">
     <slot />
   </PopoverContent>
 </template>

@@ -38,16 +38,14 @@ onUnmounted(() => {
     :id="id"
     :class="
       cn(
-        'text-bc **:[[cmdk-group-heading]]:text-bc/50 overflow-hidden p-1 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium',
+        'overflow-hidden p-1 text-pc **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-sm **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-pc/50',
         props.class,
       )
     "
-    :hidden="isRender ? undefined : true"
-  >
+    :hidden="isRender ? undefined : true">
     <ListboxGroupLabel
       v-if="heading"
-      class="text-bc/50 px-2 py-1.5 text-sm font-medium"
-    >
+      class="px-2 py-1.5 text-sm font-medium text-pc/50">
       {{ heading }}
     </ListboxGroupLabel>
 

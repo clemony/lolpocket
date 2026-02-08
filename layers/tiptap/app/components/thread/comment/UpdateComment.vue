@@ -12,8 +12,7 @@ const emit = defineEmits(['close'])
     <CommentEditor
       v-slot="{ editor }"
       :mention-data="getLeagueMentionData()"
-      @loaded="(e) => e.commands.setContent(comment.content)"
-    >
+      @loaded="(e) => e.commands.setContent(comment.content)">
       <PostButton
         cancellable
         :change="editor?.can()?.undo() && !editor?.isEmpty"
@@ -29,8 +28,7 @@ const emit = defineEmits(['close'])
             editor.commands.blur()
             emit('close')
           }
-        "
-      />
+        " />
     </CommentEditor>
   </div>
 </template>

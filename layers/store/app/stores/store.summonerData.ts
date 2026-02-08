@@ -2,7 +2,8 @@ import { defineStore } from 'pinia'
 
 export const useSummonerData = defineStore('summonerData', () => {
   const { summoner } = storeToRefs(s_session())
-  const { filteredMatches, matches } = storeToRefs(useSummonerMatches())
+  const { matches } = storeToRefs(useSummonerMatches())
+  const { filteredMatches } = storeToRefs(useMatchFilters())
 
   const id = toValue(summoner.value?.puuid)
   const region = toValue(summoner.value?.region)

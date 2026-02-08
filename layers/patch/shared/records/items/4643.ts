@@ -1,14 +1,14 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 4643,
-  "name": "Vigilant Wardstone",
-  "description": "250 Health\n20 Ability Haste\n25 Armor\n30 Magic Resist\n\nArcane Cache\nThis item can store up to 3 purchased Control Wards.\n\nBehold\nIncrease your Stealth Ward and Control Ward placement caps by 1.",
-  "gold": {
-    "base": 1200,
-    "total": 2300,
-    "sell": 1610
+const item: Item = {
+  id: 4643,
+  name: 'Vigilant Wardstone',
+  description: '250 Health\n20 Ability Haste\n25 Armor\n30 Magic Resist\n\nArcane Cache\nThis item can store up to 3 purchased Control Wards.\n\nBehold\nIncrease your Stealth Ward and Control Ward placement caps by 1.',
+  gold: {
+    base: 1200,
+    sell: 1610,
+    total: 2300
   }
 }
 export default item

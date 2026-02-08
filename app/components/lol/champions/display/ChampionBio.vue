@@ -8,11 +8,11 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
 <template>
   <div class="flex flex-col gap-6 px-6 pt-7 pb-3">
     <div class="flex items-end justify-between gap-4">
-      <h1 class="dst font-serif">
+      <h1 class="font-serif dst">
         {{ champion.fullName || champion.name }}
       </h1>
 
-      <p class="dst grow text-lg text-wrap uppercase">
+      <p class="grow text-lg text-wrap uppercase dst">
         {{ champion.title }}
       </p>
     </div>
@@ -21,20 +21,20 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
       {{ champion.lore }}
     </p>
 
-    <Separator class="bg-b3 mb-0 shadow-none" />
+    <Separator class="mb-0 bg-p3 shadow-none" />
 
     <div class="flex flex-nowrap items-center justify-between gap-6">
-      <ValueFormatter class="text-sm font-medium" :array="champion.roles" />
+      <ValueFormatter
+        class="text-sm font-medium"
+        :array="champion.roles" />
 
       <ValueFormatter
-        class="role-bg badge border-b4/30 badge-lg mb-1 w-fit shrink-0"
+        class="role-bg border-b4/30 mb-1 badge w-fit shrink-0 badge-lg"
         :array="champion.positions"
-        :data-role="champion.positions[0].toLowerCase()"
-      >
+        :data-role="champion.positions[0].toLowerCase()">
         <component
           :is="`i-roles-${champion.positions[0].toLowerCase()}`"
-          class="-mt-1 mr-2 size-4"
-        />
+          class="-mt-1 mr-2 size-4" />
       </ValueFormatter>
     </div>
   </div>

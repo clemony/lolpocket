@@ -12,8 +12,7 @@ const replyContent = ref<Doc>(null)
     <CommentEditor
       v-slot="{ editor }"
       v-model="replyContent"
-      :mention-data="getLeagueMentionData()"
-    >
+      :mention-data="getLeagueMentionData()">
       <PostButton
         cancellable
         :change="!editor?.isEmpty"
@@ -24,8 +23,7 @@ const replyContent = ref<Doc>(null)
             editor.commands.blur()
             emit('close')
           }
-        "
-      />
+        " />
     </CommentEditor>
   </div>
 </template>

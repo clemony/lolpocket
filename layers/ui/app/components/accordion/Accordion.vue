@@ -9,7 +9,9 @@ const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
-  <AccordionRoot v-bind="forwarded" data-slot="accordion">
+  <AccordionRoot
+    v-bind="forwarded"
+    data-slot="accordion">
     <slot />
   </AccordionRoot>
 </template>

@@ -25,8 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
         'group/select',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </SelectTrigger>
 </template>

@@ -31,13 +31,15 @@ const statValue = computed<StatIndex>(() => {
     }"
     :class="
       cn(
-        'text-bc/90 dxs w-fit px-3 font-medium capitalize shadow-xs',
+        'w-fit px-3 font-medium text-pc/90 capitalize shadow-xs dxs',
         { 'order-first text-white': active, 'pr-2': active && clear },
         className,
       )
-    "
-  >
+    ">
     {{ statValue.name }}
-    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
+    <icon
+      v-if="clear"
+      class="size-4 text-white **:stroke-[2.6]"
+      name="x" />
   </Button>
 </template>

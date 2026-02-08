@@ -9,28 +9,24 @@ defineOptions({
 
 const { class: className, value } = defineProps<{
   value: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(['update:path'])
+const emit = defineEmits(["update:path"])
 </script>
 
 <template>
   <TabsTrigger
     class="group relative aspect-square size-15 shrink-0 place-self-center rounded-full disabled:pointer-events-none"
     :value="value"
-    :class="cn('', className)"
-  >
+    :class="cn('', className)">
     <div class="relative grid size-full place-items-center">
       <img
-        class="dst absolute z-10 h-9 w-auto shrink-0 brightness-90 grayscale transition-all duration-300 group-data-[state=active]:brightness-100 group-data-[state=active]:grayscale-0"
+        class="absolute z-10 h-9 w-auto shrink-0 brightness-90 dst grayscale transition-all duration-300 group-data-[state=active]:brightness-100 group-data-[state=active]:grayscale-0"
         :src="`/img/paths/${value}.webp`"
-        :alt="`${value} icon`"
-      >
+        :alt="`${value} icon`" />
     </div>
 
     <slot />
   </TabsTrigger>
 </template>
-
-<style scoped></style>

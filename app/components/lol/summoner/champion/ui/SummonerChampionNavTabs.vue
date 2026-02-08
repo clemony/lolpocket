@@ -34,10 +34,9 @@ function navigate() {
     role="tablist"
     :class="
       cn(
-        'relative translate-x-10 z-3 flex h-15 w-fit items-end  border-b-0! transition-none *:select-none **:text-sm',
+        'relative z-3 flex h-15 w-fit translate-x-10 items-end border-b-0! transition-none *:select-none **:text-sm',
       )
-    "
-  >
+    ">
     <ChampionNavTab
       v-for="(item, i) in filteredItems"
       :key="i"
@@ -47,16 +46,14 @@ function navigate() {
           name: item.name,
           params: { champion_key: ui().openChampionTab },
         })
-      "
-    >
+      ">
       <Icon
         v-if="
           route.name === 'summoner-region-slug-champion_key'
             && item.name === 'summoner-region-slug-champions'
         "
         class="absolute -left-6 size-3.75 **:stroke-[2.4]"
-        name="left"
-      />
+        name="left" />
       {{ item.title }}
     </ChampionNavTab>
   </motion.nav>

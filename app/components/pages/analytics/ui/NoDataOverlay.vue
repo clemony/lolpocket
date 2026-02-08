@@ -12,10 +12,9 @@ const props = withDefaults(
 <template>
   <transition-slide class="pointer-events-none relative size-full">
     <div
-      class="rounded-box absolute top-0 left-0 grid size-full place-items-center bg-black/40"
-      v-bind="$attrs"
-    >
-      <div class="badge badge-xl text-sm opacity-90 shadow-lg">
+      class="absolute top-0 left-0 grid size-full place-items-center rounded-box bg-black/40"
+      v-bind="$attrs">
+      <div class="badge text-sm badge-xl opacity-90 shadow-lg">
         {{ props.text }}
       </div>
     </div>

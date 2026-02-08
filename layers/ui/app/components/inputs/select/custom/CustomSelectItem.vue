@@ -12,11 +12,10 @@ const props = defineProps<{
     :value="props.value"
     :class="
       cn(
-        'btn-depth data-[state=highlighted]:bg-tint-b2/60 rounded-lg',
+        'btn-depth rounded-lg data-[state=highlighted]:bg-tint-p2/60',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </SelectItem>
 </template>

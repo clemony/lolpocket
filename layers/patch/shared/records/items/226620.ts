@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 226620,
-  "name": "Echoes of Helia",
-  "description": "40 Ability Power\n300 Health\n30 Ability Haste\n150% Base Mana Regen\n\n\nSoul Siphon: Damaging a champion grants a Soul Shard. Healing or Shielding an ally consumes all Soul Shards to restore Health and deals magic damage per Shard to the nearest enemy champion.\n",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1250
+const item: Item = {
+  id: 226620,
+  name: 'Echoes of Helia',
+  description: '40 Ability Power\n300 Health\n30 Ability Haste\n150% Base Mana Regen\n\n\nSoul Siphon: Damaging a champion grants a Soul Shard. Healing or Shielding an ally consumes all Soul Shards to restore Health and deals magic damage per Shard to the nearest enemy champion.\n',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

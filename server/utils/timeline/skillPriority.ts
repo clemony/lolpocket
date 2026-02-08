@@ -17,13 +17,13 @@ export function skillPriority(skillOrder: number[]) {
     .sort((a, b) => a[1]! - b[1]!)
 
   // highest-priority single skill (same as before)
-  const primary
-    = skillsHitFive.length > 0
-      ? skillsHitFive[0][0]
-      : ([1, 2, 3] as Skill[]).sort((a, b) => {
-          if (counts[b] !== counts[a]) return counts[b] - counts[a]
-          return skillOrder.lastIndexOf(a) - skillOrder.lastIndexOf(b)
-        })[0]
+  const primary =
+    skillsHitFive.length > 0 ?
+      skillsHitFive?.[0]?.[0]
+    : ([1, 2, 3] as Skill[]).sort((a, b) => {
+        if (counts[b] !== counts[a]) return counts[b] - counts[a]
+        return skillOrder.lastIndexOf(a) - skillOrder.lastIndexOf(b)
+      })[0]
 
   // NEW: full priority ranking
   const skillRanking = ([1, 2, 3] as Skill[]).sort((a, b) => {
@@ -43,9 +43,9 @@ export function skillPriority(skillOrder: number[]) {
   })
 
   return [primary, skillRanking[1], skillRanking[2]]
-    .join(',')
-    .replace('1', 'Q')
-    .replace('2', 'W')
-    .replace('3', 'E')
-    .split(',')
+    .join(",")
+    .replace("1", "Q")
+    .replace("2", "W")
+    .replace("3", "E")
+    .split(",")
 }

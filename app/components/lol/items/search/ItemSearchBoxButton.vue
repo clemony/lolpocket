@@ -11,16 +11,14 @@ const props = defineProps<{
     :class="{
       'opacity-0': props.isOpen,
       'bgneutral/83 border-accent text-nc': props.contrast,
-      'border-b3/70 bg-b1/60 text-bc/50': !props.contrast,
-    }"
-  >
+      'border-p3/70 bg-p0/60 text-pc/50': !props.contrast,
+    }">
     <icon
-      class="text-bc dst z-1 size-5 shrink-0 opacity-60"
+      class="z-1 size-5 shrink-0 text-pc opacity-60 dst"
       name="search"
-      :class="{ 'text-nc opacity-90': props.contrast }"
-    />
+      :class="{ 'text-nc opacity-90': props.contrast }" />
 
-    <div class="dst z-0 grow pt-0.5 text-left">
+    <div class="z-0 grow pt-0.5 text-left dst">
       Search Items...
     </div>
 

@@ -44,9 +44,9 @@ export default defineEventHandler(
         = settingsParse.success ? settingsParse.output : getEmptySettings()
 
       return {
+        settings: userSettings,
         account: userAccount,
         pockets: userPockets,
-        settings: userSettings,
       }
     }
     catch (err) {

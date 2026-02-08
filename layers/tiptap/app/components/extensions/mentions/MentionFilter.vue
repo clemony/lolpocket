@@ -84,13 +84,13 @@ onClickOutside(target, (event) => {
         'tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden p-0!',
         { 'max-h-50 min-w-44': items.length },
       )
-    "
-  >
+    ">
     <SlideInTopOutBottom
       ref="target"
-      class="tippy-content h-full overflow-y-auto p-1.5!"
-    >
-      <div v-if="items.length" class="flex h-max w-full flex-col">
+      class="tippy-content h-full overflow-y-auto p-1.5!">
+      <div
+        v-if="items.length"
+        class="flex h-max w-full flex-col">
         <PopoverItem
           v-for="(item, index) in items"
           :id="index"
@@ -99,7 +99,7 @@ onClickOutside(target, (event) => {
           :value="item"
           :class="
             cn(
-              'focus:bg-b2/60 pr-8 transition-discrete',
+              'pr-8 transition-discrete focus:bg-p2/60',
               `
                 index-${index}
               `,
@@ -108,20 +108,21 @@ onClickOutside(target, (event) => {
           @mousedown.prevent="
             selectedIndex = index
             update()
-          "
-        >
-          <IndexIcon class="size-6 rounded-full!" :item />
+          ">
+          <IndexIcon
+            class="size-6 rounded-full!"
+            :item />
           {{ item.name }}
         </PopoverItem>
       </div>
-      <div v-else class="eslf-center grid size-full place-items-center">
+      <div
+        v-else
+        class="eslf-center grid size-full place-items-center">
         <span
-          class="inline-flex -translate-x-0.25 items-center gap-0.75 align-middle"
-        >
+          class="inline-flex -translate-x-0.25 items-center gap-0.75 align-middle">
           <icon
             class="-mt-[0.5px] inline size-3.5 align-middle **:stroke-[2.2]"
-            name="ban"
-          />
+            name="ban" />
           No result
         </span>
       </div>

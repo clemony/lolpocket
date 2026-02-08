@@ -13,8 +13,7 @@ const props = defineProps<{
   <div
     data-slot="item-media"
     :data-variant="props.variant"
-    :class="cn(itemMediaVariants({ variant }), props.class)"
-  >
+    :class="cn(itemMediaVariants({ variant }), props.class)">
     <slot />
   </div>
 </template>

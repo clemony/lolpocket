@@ -13,7 +13,6 @@ const { item } = defineProps<{
     <AutoMenuContent
       v-for="(subitem, i) in item.items"
       :key="i"
-      :item="subitem"
-    />
+      :item="subitem" />
   </MenubarGroup>
 </template>

@@ -1,45 +1,45 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "name": "Seraph's Embrace",
-  "id": 3040,
-  "rank": "Legendary",
-  "specialRecipe": 3003,
-  "noEffects": false,
-  "removed": false,
-  "passives": [
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Awe",
-      "effects": "Grants ability power equal to 2% <b>bonus</b> mana."
-    },
-    {
-      "unique": true,
-      "mythic": false,
-      "name": "Lifeline",
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for 3 seconds that absorbs damage equal to 18% <b>maximum</b> mana for 3 seconds.",
-      "cooldown": "90"
-    }
-  ],
-  "stats": {
-    "abilityPower": 70,
-    "mana": 1000,
-    "abilityHaste": 25
+const item: Item = {
+  id: 3040,
+  name: 'Seraph\'s Embrace',
+  description: '70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.',
+  noEffects: false,
+  rank: 'Legendary',
+  removed: false,
+  specialRecipe: 3003,
+  gold: {
+    base: 2900,
+    purchasable: false,
+    sell: 2030,
+    total: 2900
   },
-  "description": "70 Ability Power\n1000 Mana\n25 Ability Haste\n\nAwe\nGain  Ability Power.\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% grants a  Shield for 3 seconds.",
-  "gold": {
-    "base": 2900,
-    "purchasable": false,
-    "total": 2900,
-    "sell": 2030
-  },
-  "maps": [
+  maps: [
     11,
     12,
     21,
     35
-  ]
+  ],
+  passives: [
+    {
+      name: 'Awe',
+      effects: 'Grants ability power equal to 2% <b>bonus</b> mana.',
+      mythic: false,
+      unique: true
+    },
+    {
+      name: 'Lifeline',
+      cooldown: '90',
+      effects: 'If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src="/img/icons/shield.webp" class="tip-icon light:invert" />shield for 3 seconds that absorbs damage equal to 18% <b>maximum</b> mana for 3 seconds.',
+      mythic: false,
+      unique: true
+    }
+  ],
+  stats: {
+    abilityHaste: 25,
+    abilityPower: 70,
+    mana: 1000
+  }
 }
 export default item

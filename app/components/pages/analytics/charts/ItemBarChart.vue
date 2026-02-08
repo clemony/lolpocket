@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// @todo fix usermatchdata
+// todo fix usermatchdata
 
 /* const { matches, summoner } = useSummonerInject() */
 /*
@@ -70,10 +70,9 @@ const itemImages = new Map<number, HTMLImageElement>()
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="border-shadow size-full max-h-160 bg-b1 inset-shadow-xxs">
+    <div class="border-shadow size-full max-h-160 bg-p0 inset-shadow-xxs">
       <div
-        class="relative flex size-full flex-col overflow-hidden rounded-box bg-b1 px-4 pt-4 pb-5"
-      >
+        class="relative flex size-full flex-col overflow-hidden rounded-box bg-p0 px-4 pt-4 pb-5">
         <div class="-ml-6 size-full justify-self-end pt-4">
         <!--   <BubbleChart :data="data" /> -->
         </div>

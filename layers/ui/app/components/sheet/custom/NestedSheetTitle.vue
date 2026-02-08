@@ -4,10 +4,11 @@ import { VisuallyHidden } from 'reka-ui'
 
 <template>
   <div
-    class="bg-b1/90 absolute top-0 left-0 z-1 flex w-full items-center p-4 backdrop-blur-md"
-  >
+    class="absolute top-0 left-0 z-1 flex w-full items-center bg-p0/90 p-4 backdrop-blur-md">
     <DialogClose class="focus:outline-none">
-      <icon class="dst size-6" name="arrow-left" />
+      <icon
+        class="size-6 dst"
+        name="arrow-left" />
     </DialogClose>
 
     <Grow />

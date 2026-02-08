@@ -1,16 +1,18 @@
 // eslint.config.mjs
 import antfu from "@antfu/eslint-config"
 import css from "@eslint/css"
+import tsPlugin from "@typescript-eslint/eslint-plugin"
+import tsParser from "@typescript-eslint/parser"
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss"
 import pluginJsonc from "eslint-plugin-jsonc"
 import pluginVue from "eslint-plugin-vue"
-import { globalIgnores } from "eslint/config"
 import jsoncParser from "jsonc-eslint-parser"
-import { tailwind4 } from "tailwind-csstree"
 import eslintParserVue from "vue-eslint-parser"
+import withNuxt from "./.nuxt/eslint.config.mjs"
 
 const customGroups = [
   {
+    groupName: "pinned",
     elementNamePattern: [
       "name",
       "id",
@@ -20,187 +22,220 @@ const customGroups = [
       "color",
       "variant",
       "variants",
+      "extends",
+      "files",
+      "formatters",
+      "language",
+      "languageOptions",
+      "settings",
     ],
-    groupName: "pinned",
+  },
+  {
+    groupName: "structural",
+    elementValuePattern: [
+      "^\\[", // array literal
+      "^\\{", // object literal
+    ],
   },
 ]
 
-export default antfu({
-  "better-tailwindcss": {
-    extends: [eslintPluginBetterTailwindcss.configs.recommended],
-    rules: {
-      "better-tailwindcss/enforce-canonical-classes": [
-        "warn",
-        {
-          collapse: true,
-          logical: true,
-          rootFontSize: 12,
-        },
-      ],
-      "better-tailwindcss/enforce-consistent-important-position": [
-        "warn",
-        { position: "recommended" },
-      ],
-      // correctness only — no formatting
-
-      "better-tailwindcss/enforce-consistent-line-wrapping": "off",
-      "better-tailwindcss/no-unknown-classes": "off",
-      "better-tailwindcss/no-unregistered-classes": "off",
-    },
-    settings: {
-      /*       callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
-      detectComponentClasses: true,
-      tags: ["style", "ui"], */
-      entryPoint: "./layers/ui/app/assets/css/tailwind.css",
-    },
-
-    files: ["**/*.vue"],
-
-    languageOptions: {
-      parser: eslintParserVue,
-    },
-  },
-  css: {
-    extends: ["css"],
-    files: ["**/*.css", "**/*.vue"],
-    formatters: {
-      css: "prettier",
-    },
-    language: "css/css",
-    languageOptions: {
-      customSyntax: tailwind4,
-    },
-    plugins: {
-      css,
-    },
-    rules: {
-      "css/no-duplicate-imports": "error",
-    },
-    settings: {
-      callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
-      detectComponentClasses: true,
-    },
-  },
-  jsonc: {
-    overrides: {
-      files: ["*.json", "*.jsonc"],
-      formatters: {
-        jsonc: "prettier",
-      },
+export default withNuxt(
+  antfu(
+    {
+      files: ["**/*.ts", "**/*.tsx"],
       languageOptions: {
-        parser: jsoncParser,
+        parser: tsParser,
+        parserOptions: {
+          sourceType: "module",
+          ecmaVersion: "latest",
+          project: false,
+        },
       },
-      plugins: {},
+      plugins: {
+        "@typescript-eslint": tsPlugin,
+      },
+    },
+    {
+      stylistic: false,
+      ignores: [
+        "./dist",
+        "./node_modules",
+        "./schema",
+        "./.vscode",
+        "./.nuxt",
+        "./.notes",
+        "./supabase",
+        "./shared/records",
+        "./public",
+        "**/raw/**",
+        ".save.json",
+      ],
+      /* ---------- JSONC ---------- */
+
+      jsonc: {
+        languageOptions: {
+          parser: jsoncParser,
+        },
+        overrides: {
+          "jsonc/sort-keys": [
+            "error",
+            {
+              pathPattern: "^$",
+              order: ["name", "version", "private", "publishConfig", "scripts"],
+            },
+            {
+              pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
+              order: { type: "asc" },
+            },
+            {
+              pathPattern: ".*",
+              order: { type: "asc" },
+            },
+          ],
+          //"jsonc/valid-jsonc": "error",
+        },
+        plugins: { pluginJsonc },
+      },
+      plugins: { vue: pluginVue },
+
+      /* ---------- VUE ---------- */
+
+      vue: {
+        overrides: {
+          "vue/html-closing-bracket-newline": [
+            "error",
+            {
+              multiline: "never",
+              singleline: "never",
+              selfClosingTag: { multiline: "never", singleline: "never" },
+            },
+          ],
+
+          "vue/html-self-closing": "off",
+
+          "vue/multiline-html-element-content-newline": "error",
+          "vue/no-unused-properties": "off",
+          "vue/no-unused-refs": "off",
+          "vue/no-unused-vars": "off",
+          "vue/no-v-text-v-html-on-component": "off",
+          "vue/operator-linebreak": "off",
+
+          "vue/padding-line-between-tags": "off",
+          "vue/require-typed-ref": "warn",
+          "vue/padding-line-between-blocks": ["error", "always"],
+        },
+      },
+      jsdoc: {},
+    },
+
+    /* ---------- TAILWIND ---------- */
+
+    {
+      extends: [eslintPluginBetterTailwindcss.configs.recommended],
+
+      settings: {
+        "better-tailwindcss": {
+          detectComponentClasses: true,
+          entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+          callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
+          attributes: [
+            "class",
+            "className",
+            "content",
+            "variant",
+            "base",
+            "root",
+            "trailingIcon",
+            "trailing",
+            "leading",
+          ],
+          tags: ["style", "ui"],
+        },
+      },
       rules: {
-        "jsonc/sort-keys": [
-          "error",
+        "better-tailwindcss/enforce-canonical-classes": "off" /* [
+          "warn",
           {
-            order: ["name", "version", "private", "publishConfig", "scripts"],
-            pathPattern: "^$",
+            collapse: true,
+            logical: true,
+            rootFontSize: 12,
           },
+        ], */,
+        "better-tailwindcss/enforce-consistent-important-position": [
+          "warn",
+          { position: "recommended" },
+        ],
+
+        "better-tailwindcss/enforce-consistent-line-wrapping": "off",
+        "better-tailwindcss/no-unknown-classes": "off",
+        "better-tailwindcss/no-unnecessary-whitespace": "error",
+        "better-tailwindcss/no-unregistered-classes": "off",
+      },
+
+      files: ["**/*.vue", "**/*.ts"],
+
+      languageOptions: {
+        parser: eslintParserVue,
+      },
+    },
+
+    /* ---------- CSS ---------- */
+
+    {
+      extends: [css.configs.recommended],
+      files: ["**/*.css"],
+      language: "css/css",
+      plugins: { css },
+      rules: {
+        "css/no-invalid-at-rules": "error",
+        "css/no-duplicate-imports": "error",
+      },
+    }
+  )
+)
+  .override(
+    "antfu/perfectionist/setup",
+    {
+      files: ["**/*.{js,ts,jsx,tsx}"],
+      rules: {
+        "perfectionist/sort-exports": "warn",
+      },
+    },
+    {
+      rules: {
+        /* ---------- PERFECTIONIST ---------- */
+        "perfectionist/sort-imports": [
+          "warn",
+          { newlinesBetween: 0, order: "asc", type: "natural" },
+        ],
+
+        "perfectionist/sort-interfaces": [
+          "warn",
           {
-            order: { type: "asc" },
-            pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
-          },
-          {
-            order: { type: "asc" },
-            pathPattern: ".*",
+            customGroups,
+            order: "asc",
+            partitionByNewLine: true,
+            type: "natural",
+            fallbackSort: { order: "asc", type: "natural" },
+            groups: ["pinned", "unknown"],
           },
         ],
-        "jsonc/valid-jsonc": "error",
+        "perfectionist/sort-objects": [
+          "warn",
+          {
+            customGroups,
+            order: "asc",
+            partitionByNewLine: true,
+            type: "natural",
+            fallbackSort: { order: "asc", type: "natural" },
+            groups: ["pinned", "unknown", "structural"],
+          },
+        ],
       },
-    },
-  },
-  plugins: {
-    "better-tailwindcss": eslintPluginBetterTailwindcss,
-    jsonc: pluginJsonc,
-  },
-  vue: {
-    overrides: {
-      "vue/html-closing-bracket-newline": [
-        "error",
-        {
-          multiline: "never",
-          selfClosingTag: { multiline: "never", singleline: "never" },
-          singleline: "never",
-        },
-      ],
-
-      "vue/html-self-closing": "off",
-
-      "vue/max-attributes-per-line": [
-        "error",
-        {
-          multiline: { max: 1 },
-          singleline: { max: 1 },
-        },
-      ],
-
-      "vue/multiline-html-element-content-newline": "error",
-      "vue/no-unused-properties": "off",
-      "vue/no-unused-refs": "off",
-      "vue/no-unused-vars": "off",
-      "vue/no-v-text-v-html-on-component": "off",
-
-      "vue/padding-line-between-blocks": ["error", "always"],
-      "vue/padding-line-between-tags": "off",
-      "vue/require-typed-ref": "warn",
-    },
-  },
-})
-  /* ---------- IGNORES---------- */
-  .prepend([
-    globalIgnores([
-      "./dist",
-      "./node_modules",
-      "./schema",
-      "./.vscode",
-      "./.nuxt",
-      "./.notes",
-      "./supabase",
-      "./shared/records",
-      "./public",
-      "**/raw/**",
-      ".save.json",
-    ]),
-  ])
-  /* ---------- PERFECTIONIST ---------- */
-  .override("antfu/perfectionist/setup", {
-    rules: {
-      "perfectionist/sort-imports": [
-        "warn",
-        { newlinesBetween: 0, order: "asc", type: "natural" },
-      ],
-
-      "perfectionist/sort-interfaces": [
-        "warn",
-        {
-          customGroups,
-          fallbackSort: { order: "asc", type: "natural" },
-          groups: ["pinned", "unknown"],
-          order: "asc",
-          partitionByNewLine: true,
-          type: "natural",
-        },
-      ],
-
-      "perfectionist/sort-objects": [
-        "warn",
-        {
-          customGroups,
-          fallbackSort: { order: "asc", type: "natural" },
-          groups: ["pinned", "unknown"],
-          order: "asc",
-          partitionByNewLine: true,
-          type: "natural",
-        },
-      ],
-    },
-  })
+    }
+  )
   .overrideRules({
-    "css/no-invalid-at-rules": "error",
     "antfu/if-newline": "off",
-    "css/no-duplicate-imports": "error",
     "no-console": "off",
     "no-irregular-whitespace": "off",
     "no-undef": "off",
@@ -208,6 +243,36 @@ export default antfu({
     "no-unused-vars": "off",
     "style/comma-dangle": "off",
     "style/eol-last": "off",
+    "ts/no-unused-expressions": "off",
     "unused-imports/no-unused-imports": "off",
     "unused-imports/no-unused-vars": "off",
+    "command/command": "off",
   })
+  .override(
+    "antfu/regexp/rules",
+    {
+      files: ["**/*.{js,ts,jsx,tsx}"],
+      rules: {
+        "regexp/no-legacy-features": "error",
+      },
+    },
+    {
+      rules: {
+        "regexp/no-legacy-features": "off",
+      },
+    }
+  )
+  .override(
+    "antfu/jsdoc/rules",
+    {
+      files: ["**/*.{js,ts,jsx,tsx}"],
+      rules: {
+        "jsdoc/check-access": "warn",
+      },
+    },
+    {
+      rules: {
+        "jsdoc/check-access": "off",
+      },
+    }
+  )

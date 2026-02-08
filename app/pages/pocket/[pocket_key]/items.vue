@@ -53,8 +53,7 @@ const tabValues = [
         <ItemsHeader />
         <div class="sticky -top-44 z-2 w-full self-start">
           <div
-            class="scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible overflow-y-auto pr-2"
-          >
+            class="scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible overflow-y-auto pr-2">
             <ItemSets :pocket="pocket" />
           </div>
         </div>

@@ -25,14 +25,15 @@ watch(
 </script>
 
 <template>
-  <main id="container" class="z-auto mx-auto flex gap-28">
+  <main
+    id="container"
+    class="z-auto mx-auto flex gap-28">
     <ChampionIndexAside :champion />
     <article class="z-auto flex h-max w-full grow flex-col gap-10 py-22 pb-16">
       <ChampionAbility
         v-for="ability in champion.abilities"
         :key="ability.key"
-        :ability
-      />
+        :ability />
     </article>
     <AbilityNav :champion />
   </main>

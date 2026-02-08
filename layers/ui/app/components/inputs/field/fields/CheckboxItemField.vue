@@ -17,14 +17,12 @@ const {
     :value="option.id"
     :unchecked-value="false"
     as-child
-    :name
-  >
+    :name>
     <Element
-      class="hover:border-b3/50! hover:bg-b2/40 hover:fx-1 w-full border border-transparent py-2"
+      class="w-full border border-transparent py-2 hover:border-p3/50! hover:bg-p2/40 hover:fx-1"
       base="btn"
       hover="outline"
-      variant="ghost"
-    >
+      variant="ghost">
       <FormItem as-child>
         <FormLabel class="w-full cursor-pointer">
           <FormControl class="mt-0.5 self-start">
@@ -38,19 +36,22 @@ const {
               @update:model-value="handleChange" /> -->
           </FormControl>
           <FormDescription class="grid h-max w-full auto-rows-max gap-1">
-            <h5 class="text-bc flex w-full items-center gap-4 font-semibold">
+            <h5 class="flex w-full items-center gap-4 font-semibold text-pc">
               {{ option.name }}
             </h5>
 
             <!-- not other -->
-            <ul v-if="option.id !== 'other'" class="text-balanced w-full pr-3">
-              <component :is="option.component" v-if="option?.component" />
+            <ul
+              v-if="option.id !== 'other'"
+              class="text-balanced w-full pr-3">
+              <component
+                :is="option.component"
+                v-if="option?.component" />
               <template v-else-if="option?.description">
                 <li
                   v-for="(str, ix) in option.description"
                   :key="ix"
-                  class="text-balanced w-full pl-3 text-sm! leading-6"
-                >
+                  class="text-balanced w-full pl-3 text-sm! leading-6">
                   &bull;&ensp;{{ str }}
                 </li>
               </template>

@@ -26,16 +26,19 @@ const {
           index-${index}
         `,
       )
-    "
-  >
-    <span v-if="item.emoji" class="dst drop-shadow-black/10">
+    ">
+    <span
+      v-if="item.emoji"
+      class="dst drop-shadow-black/10">
       {{ item.emoji }}
     </span>
     <span
       v-else-if="item.fallbackImage"
-      class="dss size-6 drop-shadow-black/10"
-    >
-      <img class="object-contain" :alt="item.name" :src="item.fallbackImage">
+      class="size-6 dss drop-shadow-black/10">
+      <img
+        class="object-contain"
+        :alt="item.name"
+        :src="item.fallbackImage">
     </span>
   </Button>
 </template>

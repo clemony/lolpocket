@@ -8,9 +8,9 @@ export function throttleFunction<T extends (...args: any[]) => any>(
   const now = () => Date.now()
 
   const timeRemaining = computed(() => {
-    const e = entry.value
+    const e = /* entry.value */ 0
     if (!e) return 0
-    return Math.max(0, e.wait - (now() - e.timestamp))
+    return 0 // Math.max(0, e.wait - (now() - e.timestamp))
   })
   if (!cds()) return
 

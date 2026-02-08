@@ -36,6 +36,5 @@ const forwarded = useForwardPropsEmits(delegated)
         props.class,
       )
     "
-    @update:model-value="(e) => emit('update:model-value', e)"
-  />
+    @update:model-value="(e) => emit('update:model-value', e)" />
 </template>

@@ -50,8 +50,7 @@ const itemVariants = {
             delayChildren: 0.2,
             staggerChildren: 0.1,
             type: 'spring',
-          }"
-        >
+          }">
           <Button
             v-for="(champion, i) in pocket.champions"
             :key="champion"
@@ -60,53 +59,53 @@ const itemVariants = {
               theme: 'base',
               placement: 'left',
             }"
-            class="bg-b1 fx-0 grid size-22! place-items-center border-0"
+            class="grid size-22! place-items-center border-0 bg-p0 fx-0"
             color="default"
             shape="circle"
             :style="{
               zIndex: `-${i}`,
             }"
-            as-child
-          >
+            as-child>
             <motion.div
               :variants="itemVariants"
               :transition="{
                 bounce: 0.15,
                 type: 'spring',
-              }"
-            >
-              <ChampionIcon class="size-18! rounded-full" :k="champion" />
+              }">
+              <Champion
+                class="size-18! rounded-full"
+                :k="champion" />
             </motion.div>
           </Button>
         </motion.div>
       </CollapsibleContent>
       <CollapsibleTrigger as-child>
         <div
-          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10"
-        >
+          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10">
           <template v-if="!open">
             <Element
               v-for="champion in groups"
               :key="champion"
-              class="bg-b1 fx-0 z-1 grid size-22! place-items-center border-0"
+              class="z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
               color="default"
-              shape="circle"
-            >
-              <ChampionIcon class="size-18! rounded-full" :k="champion" />
+              shape="circle">
+              <Champion
+                class="size-18! rounded-full"
+                :k="champion" />
             </Element>
           </template>
           <Element
             v-if="l"
-            class="bg-b1 fx-0 relative z-1 grid size-22! place-items-center border-0"
+            class="relative z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
             color="default"
-            shape="circle"
-          >
+            shape="circle">
             <Element
               class="size-18! *:transition-all *:duration-300"
               shape="circle"
-              color="neutral"
-            >
-              <icon class="group-closed:opacity-0 absolute" name="up" />
+              color="neutral">
+              <icon
+                class="absolute group-closed:opacity-0"
+                name="up" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>

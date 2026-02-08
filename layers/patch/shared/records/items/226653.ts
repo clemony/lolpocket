@@ -1,16 +1,16 @@
 // Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-      import type { Item } from "#shared/types"
+import type { Item } from '#shared/types'
 
-      const item: Item =  {
-  "id": 226653,
-  "name": "Liandry's Anguish",
-  "description": "50 Ability Power\n250 Health\n\nTorment\nDamaging Abilities Burn enemies for 2% max Health magic damage per second for 3 seconds.\n\nSuffering\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 6%.",
-  "gold": {
-    "base": 2500,
-    "total": 2500,
-    "sell": 1250
+const item: Item = {
+  id: 226653,
+  name: 'Liandry\'s Anguish',
+  description: '50 Ability Power\n250 Health\n\nTorment\nDamaging Abilities Burn enemies for 2% max Health magic damage per second for 3 seconds.\n\nSuffering\nFor each second in combat with enemy champions, deal 2% bonus damage, up to 6%.',
+  gold: {
+    base: 2500,
+    sell: 1250,
+    total: 2500
   },
-  "maps": [
+  maps: [
     30
   ]
 }

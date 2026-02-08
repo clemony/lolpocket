@@ -22,19 +22,21 @@ function navigate() {
 </script>
 
 <template>
-  <li :variants="variants" initial="hidden" animate="visible" exit="hidden">
+  <li
+    :variants="variants"
+    initial="hidden"
+    animate="visible"
+    exit="hidden">
     <button
       class="btn-ghost-dark group"
       :class="cn('', className)"
       @focus="navigate()"
-      @click="navigate()"
-    >
+      @click="navigate()">
       <slot />
 
       <icon
         class="tldr-20 -ml-1 size-3.5 justify-self-end opacity-0 group-hover:opacity-100"
-        name="link"
-      />
+        name="link" />
     </button>
   </li>
 </template>

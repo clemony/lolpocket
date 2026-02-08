@@ -9,11 +9,10 @@ const props = defineProps<{
     position="popper"
     :class="
       cn(
-        'border-b2 bg-b1/80! w-(--reka-select-trigger-width)! rounded-xl! backdrop-blur-lg',
+        'w-(--reka-select-trigger-width)! rounded-xl! border-p2 bg-p0/80! backdrop-blur-lg',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </SelectContent>
 </template>

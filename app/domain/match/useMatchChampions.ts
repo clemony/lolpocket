@@ -42,14 +42,14 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
           name: champNameById(champ),
           assists: 0,
           deaths: 0,
-          gamePatches: [],
           games: 0,
           killParticipation: 0,
           kills: 0,
           losses: 0,
-          matchIndexes: [],
           winrate: 0,
           wins: 0,
+          gamePatches: [],
+          matchIndexes: [],
         })
       }
 

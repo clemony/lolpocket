@@ -21,17 +21,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'focus:bg-b2 focus:text-bc relative flex cursor-default items-center gap-3 rounded-md px-4 py-1.5 text-sm font-medium outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50',
+        'relative flex cursor-default items-center gap-3 rounded-md px-4 py-1.5 text-sm font-medium outline-none select-none focus:bg-p2 focus:text-pc data-disabled:pointer-events-none data-disabled:opacity-50',
         props.class,
       )
-    "
-  >
+    ">
     <span
       id="indicator"
-      class="order-first flex size-4 items-center justify-center"
-    >
+      class="order-first flex size-4 items-center justify-center">
       <MenubarItemIndicator>
-        <icon class="dst size-4 fill-current" name="circle-big-dot" />
+        <icon
+          class="size-4 fill-current dst"
+          name="circle-big-dot" />
       </MenubarItemIndicator>
     </span>
 

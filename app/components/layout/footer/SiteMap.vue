@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
-  group: any
+  group: Record<string, NavigationMenuItem>
 }>()
 const listClass
   = 'flex flex-col gap-3 w-80 h-full  [&_li]:px-1 [&_li]:drop-shadow-sm'
@@ -11,17 +13,22 @@ const itemClass
 </script>
 
 <template>
-  <ul
-    v-for="nav, i in group"
-    :key="i">
-    <h1 class="capitalize dss">
-      {{ nav.meta?.title || nav?.name }}
-    </h1>
-    <li
-      v-for="item in nav.items"
-      :key="item?.name"
-      :class="cn('capitalize', itemClass)">
-      {{ item?.meta?.title || item?.name }}
-    </li>
-  </ul>
+  <div class="grid auto-rows-max gap-6">
+    <menu
+      v-for="nav, i in group"
+      :key="i">
+      <h2 class="mb-1 capitalize dss">
+        {{ nav.label }}
+      </h2>
+      <UButton
+        v-for="item in nav.children"
+        :key="item?.label"
+        size="sm"
+        :to="item?.to"
+        variant="link"
+        :class="cn('capitalize', itemClass)">
+        {{ item?.label }}
+      </UButton>
+    </menu>
+  </div>
 </template>
