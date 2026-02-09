@@ -58,7 +58,7 @@ const value = computed(() => {
           <div class="pointer-events-none absolute inset-0 z-10">
             <div
               class="mastery-bar-outline-glow mastery-bar-edge-prism absolute inset-0"
-              :data-level="mastery.level >= 10 ? 10 : mastery.level" />
+              :data-level="(mastery.level ?? 0) >= 10 ? 10 : (mastery.level ?? 0)" />
           </div>
 
           <!-- FILL -->
@@ -67,7 +67,7 @@ const value = computed(() => {
             :style="{ width: `${value}%` }">
             <div
               class="mastery-gradient-progress animate-prism after:border-b4 absolute inset-0 rounded-[2px] after:absolute after:right-0 after:z-3 after:size-full after:rounded-r-[2px] after:border after:inset-shadow-sm"
-              :data-level="mastery.level >= 10 ? 10 : mastery.level">
+              :data-level="(mastery.level ?? 0) >= 10 ? 10 : (mastery.level ?? 0)">
               <!-- SHEEN -->
               <div class="mastery-bar-sheen absolute inset-0" />
 

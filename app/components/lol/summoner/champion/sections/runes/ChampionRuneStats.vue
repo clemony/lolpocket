@@ -21,7 +21,7 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
           :data-type="
             runes.usedFallback ?
               `*Based on limited data (${runes.best.games} games)`
-              : null
+            : null
           ">
           Highest performing rune set
           <Icon class="inline size-3.5" name="info" />
@@ -43,7 +43,7 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
         v-for="path in pathRecord"
         :key="path.id"
         class="z-1 grid size-12 place-items-center rounded-full bg-p0">
-        <Button
+       <UButton
           data-type="path"
           :data-id="path.name"
           base="btn"
@@ -58,7 +58,7 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
               'size-3.75': path.name === 'Domination',
               'contrast-100 brightness-160': path.name === 'Domination' && !used.includes(path.name),
               'size-4.25': path.name === 'Sorcery' })" />
-        </Button>
+        </UButton>
       </div>
     </div>
  -->

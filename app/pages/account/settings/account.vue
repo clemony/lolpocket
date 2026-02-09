@@ -1,94 +1,61 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'account',
-  description: 'Manage your account settings and login settings.',
-  icon: 'at',
-  path: '/settings/account',
-  search: 'user',
+  title: "account",
+  description: "Manage your account settings and login settings.",
+  icon: "at",
+  path: "/settings/account",
+  search: "user",
   /*   middleware: 'confirm-auth', */
 })
 
 const userProviders = await computedAsync(() =>
-  Object.values(as().user.app_metadata.providers)
+  Object.values(as().user?.app_metadata?.providers ?? {})
 )
-const email = shallowRef<string>(null)
-const username = shallowRef<string>(null)
+const email = shallowRef<string | null>(null)
+const username = shallowRef<string | null>(null)
 onMounted(() => {
-  email.value = as().user.email
-  username.value = as().account.username
+  email.value = as().user?.email ?? null
+  username.value = as().account?.username ?? null
 })
 </script>
 
 <template>
-  <form
-    class="flex w-full flex-col gap-6"
-    @submit.prevent>
+  <UForm class="flex w-full flex-col gap-6" @submit.prevent>
     <!-- username -->
-    <FormItem>
-      <FieldTitle>Username</FieldTitle>
-      <InputGroup class="px-3">
-        <InputGroupAddon>
-          <icon name="user" />
-        </InputGroupAddon>
-        <InputGroupInput
-          v-model:model-value="username"
-          class="**:text-md!"
-          @blur="validateField(usernameSchema)" />
-      </InputGroup>
-
-      <FieldDescription>
-        Used to identify you and your account. Your main display name if you
-        haven't connected a Riot account.
-      </FieldDescription>
-    </FormItem>
+    <UFormField
+      title="Username"
+      description="Used to identify you and your account. Your main display name if you
+        haven't connected a Riot account.">
+      <UInput
+        icon="i-user"
+        @blur="validateField(usernameSchema)"
+        v-model:model-value="username" />
+    </UFormField>
 
     <!-- email -->
 
-    <FormItem>
-      <FieldTitle>Email</FieldTitle>
-      <InputGroup class="px-3">
-        <InputGroupAddon>
-          <Icon
-            class=""
-            name="mail" />
-        </InputGroupAddon>
-        <InputGroupInput
-          v-model:model-value="email"
-          class="**:text-mdd!"
-          @blur="validateField(emailSchema)" />
-        <InputGroupAddon
-          v-if="!as().user.email_confirmed_at"
-          v-tippy="'verified!'"
-          class="aspect-square scale-90 rounded-full dst"
-          color="neutral"
-          align="inline-end"
-          hover="neutral"
-          size="6">
-          <Icon
-            class="absolute size-4.25 **:stroke-[3.3]"
-            name="tick" />
-        </InputGroupAddon>
-        <InputGroupAddon
-          v-else
-          v-tippy="{
-            content: `Check your inbox! Verification email sent at ${as().user.email_change_sent_at}.`,
-            offset: [0, 12],
-          }"
-          class="rounded-md border-p3/60"
-          size="6"
-          align="inline-end"
-          variant="base">
-          <icon
-            class="size-3.5"
-            name="refresh" />
-          pending...
-        </InputGroupAddon>
-      </InputGroup>
-
-      <FieldDescription>
-        Receive password reset and update messages.
-      </FieldDescription>
-    </FormItem>
+    <UFormField
+      title="Email"
+      description="Receive password reset and update messages."
+      icon="mail">
+      <UInput v-model:model-value="email" @blur="validateField(emailSchema)">
+        <template #trailing>
+          <InputClear @clear-input="is().filters.query = ''" />
+          <Tooltip v-if="!as().user?.email_confirmed_at" text="Verified!">
+            <UBadge icon="i-tick" size="xs" color="neutral">
+              pending...
+            </UBadge>
+          </Tooltip>
+          <Tooltip
+            v-else
+            :text="`Check your inbox! Verification email sent at ${as().user?.email_change_sent_at}.`">
+            <UBadge icon="i-refresh" size="xs" variant="outline">
+              pending...
+            </UBadge>
+          </Tooltip>
+        </template>
+      </UInput>
+    </UFormField>
 
     <!-- connected accounts -->
 
@@ -128,11 +95,9 @@ onMounted(() => {
                   class="text-sm">
                   Connected
                 </span>
-                <span
-                  v-else
-                  class="text-sm opacity-60">Not Connected</span>
+                <span v-else class="text-sm opacity-60">Not Connected</span>
 
-                <Switch
+                <USwitch
                   class="switch -mt-0.25 scale-90 dst data-[state=checked]:ring data-[state=checked]:ring-white/60"
                   name="toggle-provider"
                   :model-value="userProviders?.includes(provider.name)" />
@@ -145,33 +110,22 @@ onMounted(() => {
 
     <!-- username -->
 
-    <fieldset
-      id="blocked-users"
-      class="space-y-6">
+    <fieldset id="blocked-users" class="space-y-6">
       <div class="leading-4">
-        <h4
-          class="mb-2 text-xl font-semibold"
-          as="legend">
-          Blocked Users
-        </h4>
+        <h4 class="mb-2 text-xl font-semibold" as="legend">Blocked Users</h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in
           game name if a Riot account is connected.
         </p>
       </div>
-      <Input
-        type="text"
-        placeholder="Username" />
+      <UInput type="text" placeholder="Username" />
     </fieldset>
 
     <div class="flex justify-start">
-      <Button
-        color="neutral"
-        @click.prevent
-        @click="accountUpdate({})">
+      <UButton color="neutral" @click.prevent @click="accountUpdate({})">
         Update account
-      </Button>
+      </UButton>
     </div>
-  </form>
+  </UForm>
 </template>

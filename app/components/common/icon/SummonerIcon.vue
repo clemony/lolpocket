@@ -8,13 +8,16 @@ const {
   iconId?: number | string | null
   summoner?: Summoner | Partial<Summoner>
   alt?: string
-  size?: ButtonVariants["size"]
 }>()
+
+const resolvedIcon = computed(() =>
+  iconId ?? summoner?.icon ?? as().account?.icon ?? 0
+)
 </script>
 
 <template>
   <Img
-    :src="getSummonerIcon(iconId || summoner?.icon || as().account.icon)"
+    :src="getSummonerIcon(resolvedIcon)"
     alt="summoner icon"
     :class="cn('pointer-events-none', className)" />
 </template>

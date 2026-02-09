@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui';
+
 const { class: className, role: rl } = defineProps<{
   class?: HTMLAttributes['class']
   role: ChampionRole | string | null
   noLabel?: boolean
-  size?: ButtonVariants['size']
+  size?: ButtonProps['size']
   active?: boolean
   clear?: boolean
 }>()
@@ -16,7 +18,7 @@ const role = computed(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     v-if="role"
     variant="outline"
     hover="btn"
@@ -47,5 +49,5 @@ const role = computed(() => {
       v-if="clear"
       class="size-4 text-white **:stroke-[2.6]"
       name="x" />
-  </Button>
+  </UButton>
 </template>

@@ -138,7 +138,7 @@ const pathHovered = ref('')
           backgroundPosition: '50% 50%',
           backgroundSize: 'cover',
         }"
-        @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
+        @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name)"
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">
         <Icon

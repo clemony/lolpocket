@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const tags = ref([])
+const tags = ref<string[]>([])
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const tags = ref([])
     v-model:open="ui().toggles.backpack.positions"
     :class="cn('px-3')">
     <CollapsibleTrigger as-child>
-      <Button
+     <UButton
         class="w-full"
         as="button"
         variant="ghost"
@@ -19,7 +19,7 @@ const tags = ref([])
           Position
         </span>
         <CaretRotate />
-      </Button>
+      </UButton>
     </CollapsibleTrigger>
     <CollapsibleContent
       class="CollapsibleContent relative flex flex-col justify-center gap-y-3.75 py-2! pr-18 pl-4">

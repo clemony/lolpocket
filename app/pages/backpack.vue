@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'Backpack',
-  icon: 'backpack',
-  layout: 'tab-mini',
+  title: "Backpack",
+  icon: "backpack",
+  layout: "tab-mini",
   order: 4,
-  redirect: '/backpack/pockets',
+  redirect: "/backpack/pockets",
 })
 const isCollapsed = ref(false)
 const route = useRoute()
 const pinned = computed(() =>
-  ps().pockets.filter(p => ps().pinned.includes(p.key))
+  ps().pockets.filter((p) => ps().pinned.includes(p.key))
 )
 </script>
 
@@ -37,9 +37,7 @@ const pinned = computed(() =>
           <SummonerName class="inline" />
           's Backpack
         </span>
-        <icon
-          name="up-down"
-          :class="cn('size-4.5 text-pc/60')" />
+        <icon name="up-down" :class="cn('size-4.5 text-pc/60')" />
       </UButton>
       <!--       <LazyDropdownMenuContent>
         <DropdownMenuItem>Edit pins</DropdownMenuItem>
@@ -67,18 +65,18 @@ const pinned = computed(() =>
   <!-- tags -->
   <!--         <div class="flex flex-col gap-4 px-0 pb-1">
           <template v-if="isCollapsed">
-            <Popover>
-              <PopoverTrigger as-child>
-                <Button
+            <UPopover
+              <UButton as-child>
+               <UButton
                   variant="ghost"
                   size="icon">
                   <icon name="tag" />
-                </Button>
-              </PopoverTrigger>
+                </UButton>
+              </UButton>
               <PopoverContent>
                 <PocketTagsInput />
               </PopoverContent>
-            </Popover>
+            </UPopover>
           </template>
           <PocketTagsInput v-else />
         </div>
@@ -88,18 +86,18 @@ const pinned = computed(() =>
   <!-- roles -->
   <!--         <div class="flex flex-col gap-4 px-0 pb-1">
           <template v-if="isCollapsed">
-            <Popover>
-              <PopoverTrigger as-child>
-                <Button
+            <UPopover
+              <UButton as-child>
+               <UButton
                   variant="ghost"
                   size="icon">
                   <Icon name="role:all" />
-                </Button>
-              </PopoverTrigger>
+                </UButton>
+              </UButton>
               <PopoverContent>
                 <BackpackRoleFilter />
               </PopoverContent>
-            </Popover>
+            </UPopover>
           </template>
           <BackpackRoleFilter v-else />
         </div>

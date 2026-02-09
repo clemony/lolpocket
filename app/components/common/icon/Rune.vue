@@ -13,9 +13,11 @@ const {
   side?: Side
 }>()
 const loaded = ref(false)
+const runeName = computed(() => (id ? runeNameById(id) : undefined))
 
 const toast = useToast()
 function showToast() {
+  if (!id) return
   if (!toast.toasts.value.find(t => t.id === `rune-${id}`)) {
     toast.add({
       id: `rune-${id}`,
@@ -28,7 +30,7 @@ function showToast() {
           label: 'wiki',
           size: 'sm',
           target: '_blank',
-          to: wikiLink(runeNameById(id)),
+          to: runeName.value ? wikiLink(runeName.value) : '',
           trailingIcon: 'link'
         }
       ],
@@ -44,8 +46,8 @@ function showToast() {
   <Tooltip
     trailing-icon="i"
     :side
-    :text="runeNameById(id)"
-    :img="`/img/runes/${id}.webp`"
+    :text="runeName ?? ''"
+    :img="id ? `/img/runes/${id}.webp` : undefined"
     :class="
       cn(
         'relative grid aspect-square size-17 h-full place-items-center overflow-hidden rounded-full border border-p2 bg-p2/30 p-0 transition-all duration-300',
@@ -63,7 +65,7 @@ function showToast() {
       role="button"
       :src="`/img/runes/${id}.webp`"
       :loading-type
-      :alt="runeNameById(id)"
+      :alt="runeName ?? 'rune icon'"
       :class="
         cn('size-full rounded-full transition-all duration-300', {
           'scale-108': loaded,

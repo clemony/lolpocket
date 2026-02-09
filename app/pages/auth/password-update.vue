@@ -38,14 +38,14 @@ function handleReset() {
               @clear-input="password = ''" />
           </div>
           <div class="grid w-full gap-y-2">
-            <Button
+           <UButton
               class="h-14 w-full font-medium"
               color="neutral"
               size="lg"
               type="submit"
               @click="handleReset()">
               Reset Password
-            </Button>
+            </UButton>
 
             <button
               class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start hover:underline"

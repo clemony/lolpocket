@@ -10,11 +10,15 @@ const isOpen = ref(false)
 const currentSplash = computed(() => as().account?.splash ?? null)
 
 const { getMatchesForSummoner } = useIndexedDB()
-const matchData = await getMatchesForSummoner(as().account.puuid)
-const { top } = useChampions({ puuid: as().account.puuid, matches: matchData })
+const accountPuuid = computed(() => as().account?.puuid ?? '')
+const matchData = accountPuuid.value
+  ? await getMatchesForSummoner(accountPuuid.value)
+  : []
+const { top } = useChampions({ puuid: accountPuuid.value, matches: matchData })
 
 function handleSplash(e: string) {
-  as().account.splash = e
+  const account = as().account
+  if (account) account.splash = e
   isOpen.value = false
 }
 </script>
@@ -27,8 +31,8 @@ function handleSplash(e: string) {
       <SplashCard
         class="w-36"
         hover
-        :skin-url="top().splash?.replace('uncentered', 'tile')"
-        :text="top().name"
+        :skin-url="top()?.splash?.replace('uncentered', 'tile') ?? null"
+        :text="top()?.name ?? ''"
         :alt="`${as().account?.name ?? null}'s Most Played`" />
       <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="text-xl font-semibold dst">
@@ -49,8 +53,8 @@ function handleSplash(e: string) {
       @dialog:close="isOpen = false">
       <SplashCard
         class="w-36"
-        :text="skinNameFromUrl(as().account?.splash) ?? ''"
-        :skin-url="as().account?.splash"
+        :text="skinNameFromUrl(as().account?.splash ?? '') ?? ''"
+        :skin-url="as().account?.splash ?? null"
         :alt="`${as().account?.name ?? null}'s splash`" />
       <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="text-xl font-semibold dst">

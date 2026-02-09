@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import type { MenubarRadioGroup } from '~/components/pocket/menu/types.menubar'
+import type { MenubarRadioGroup } from "~/components/pocket/menu/types.menubar"
 
 const { item } = defineProps<{ item: MenubarRadioGroup }>()
 
 const modelProxy = computed({
   get: () => item.model?.valueOf(),
-  set: v => item.model?.set(v),
+  set: (v) => {
+    if (item.model) item.model.set(v as any)
+  },
 })
 </script>
 

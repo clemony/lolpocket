@@ -2,17 +2,19 @@
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
+const pocketChampions = computed(() => pocket.value?.champions ?? [])
 
-const searchQuery = ref<string>('')
+const searchQuery = ref<string>("")
 const search = useSearch(championIndex, searchQuery)
 const results = computed(() =>
   search.value.length ? search.value : championIndex
 )
-function handleChampions(champion: string) {
-  if (pocket.champions.includes(champion)) return
+function handleChampions(champion?: string) {
+  if (!champion || !pocket.value) return
+  if (pocketChampions.value.includes(champion)) return
 
-  pocket.champions.push(champion)
+  pocket.value.champions?.push(champion)
 }
 
 const itemsPerPage = 8
@@ -26,7 +28,7 @@ const pagedSearchItems = computed(() => {
 
 const pagedItems = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return pocket.champions.slice(start, start + itemsPerPage)
+  return pocketChampions.value.slice(start, start + itemsPerPage)
 })
 
 const open = ref(false)
@@ -40,17 +42,12 @@ watch(
 </script>
 
 <template>
-  <Popover v-model:open="open">
-    <PopoverTrigger
-      class="group/collapse"
-      as-child>
-      <Button
-
-        hover="btn"
+  <UPopover v-if="pocket" v-model:open="open">
+    <UButton
         :class="
           cn(
-            'transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-pc/60 duration-300 open:btn-active open:ring-2 hover:text-pc/60 hover:ring hover:inset-shadow-xs',
-            { 'shadow-sm drop-shadow-sm': pocket._champion },
+            'group/collapse transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-pc/60 duration-300 open:btn-active open:ring-2 hover:text-pc/60 hover:ring hover:inset-shadow-xs',
+            { 'shadow-sm drop-shadow-sm': pocket?._champion }
           )
         ">
         <icon
@@ -59,23 +56,20 @@ watch(
           name="lp:champ" />
         <Champion
           v-else
-          v-memo="pocket._champion"
+          v-memo="pocket?._champion"
           class="*:scale-160"
-          :src="getSplash(pocket._champion, 'tile')" />
+          :src="pocket?._champion ? getSplash(pocket._champion, 'tile') : undefined" />
         <div
           :class="
             cn(
               'absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
-              { 'bg-p2 **:text-pc/40': !pocket._champion },
+              { 'bg-p2 **:text-pc/40': !pocket?._champion }
             )
           ">
-          <CaretFlip
-            class="size-8 text-nc! opacity-80 drop-shadow-sm"
-            fill />
+          <CaretFlip class="size-8 text-nc! opacity-80 drop-shadow-sm" fill />
         </div>
-      </Button>
-    </PopoverTrigger>
-    <LazyPopPopoverContent
+    </UButton>
+    <div
       class="p-0"
       align="start"
       :side-offset="-10"
@@ -89,17 +83,15 @@ watch(
           class="size-full pr-4 text-sm transition-all duration-200 placeholder:italic"
           placeholder="Search All Champions..."
           @keydown.stop
-          @keydown.enter.prevent>
+          @keydown.enter.prevent />
 
-        <Button
+       <UButton
           class="absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown/txt:opacity-0"
           variant="ghost"
           size="sm"
           @click="searchQuery = ''">
-          <icon
-            class="size-4 **:stroke-[1.5]"
-            name="x-sm" />
-        </Button>
+          <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
+        </UButton>
       </div>
 
       <Separator />
@@ -117,7 +109,7 @@ watch(
               class="peer hidden"
               type="radio"
               :value="result.key"
-              @change="handleChampions(result.key)">
+              @change="handleChampions(result.key)" />
 
             <span class="size-8">
               <LazyChampionIcon
@@ -133,20 +125,15 @@ watch(
         <span v-else-if="searchQuery && !results">
           No champions found :&lpar;
         </span>
-        <div
-          v-else
-          class="grid w-full grid-flow-row grid-cols-3 gap-2 px-1">
-          <PopoverClose as-child>
-            <Button
+        <div v-else class="grid w-full grid-flow-row grid-cols-3 gap-2 px-1">
+ <!--          <PopoverClose as-child>
+           <UButton
               class="hover-ring aspect-square h-auto w-full border-p3 bg-p2 hover:bg-p3/80!"
-
               title="Clear main champion"
-              @click="pocket._champion">
-              <icon
-                class="size-7 text-pc/20"
-                name="lp:champ" />
-            </Button>
-          </PopoverClose>
+              @click="pocket?._champion">
+              <icon class="size-7 text-pc/20" name="lp:champ" />
+            </UButton>
+          </PopoverClose> -->
           <Champion
             v-for="champion in pagedItems"
             :id="champIdByKey(champion)"
@@ -158,13 +145,13 @@ watch(
               v-model="pocket._champion"
               class="peer hidden"
               type="radio"
-              :value="champion">
+              :value="champion" />
           </Champion>
         </div>
         <Pagination
           v-model:page="currentPage"
           class="mx-0 max-w-220 justify-center justify-self-start pt-2"
-          :total="pocket.champions.length"
+          :total="pocketChampions.length"
           :default-page="1"
           :sibling-count="1"
           :show-edges="false"
@@ -179,6 +166,6 @@ watch(
           </PaginationContent>
         </Pagination>
       </div>
-    </LazyPopPopoverContent>
-  </Popover>
+    </div>
+  </UPopover>
 </template>

@@ -3,6 +3,8 @@ const { class: className, shards } = defineProps<{
   shards: ShardStats
   class?: HTMLAttributes["class"]
 }>()
+
+const shardStat = (ix: number, id: number) => (shards as any)?.[ix]?.[id]
 </script>
 
 <template>
@@ -17,36 +19,36 @@ const { class: className, shards } = defineProps<{
           :id="shard.id"
           size="c-12"
           :icon-class="{
-            'opacity-50': !shards[ix as ShardSlot]?.[shard.id]?.games,
+            'opacity-50': !shardStat(ix as number, shard.id)?.games,
           }"
           :data-placement="
             i === 0 ? 'left'
             : i === 2 ? 'right'
             : 'top'
           "
-          :data-size="shards[ix as ShardSlot]?.[shard.id]?.games ? 'md' : 'sm'"
+          :data-size="shardStat(ix as number, shard.id)?.games ? 'md' : 'sm'"
           :data-text="
-            shards[ix as ShardSlot]?.[shard.id]?.games ?
-              `${shards[ix as ShardSlot]?.[shard.id]?.games} game${shards[ix as ShardSlot]?.[shard.id]?.games > 1 ? 's' : ''} - ${shards[ix as ShardSlot]?.[shard.id]?.winrate}% WR`
+            shardStat(ix as number, shard.id)?.games ?
+              `${shardStat(ix as number, shard.id)?.games} game${shardStat(ix as number, shard.id)?.games > 1 ? 's' : ''} - ${shardStat(ix as number, shard.id)?.winrate}% WR`
             : ''
           "
           :class="
             cn('transition-transform duration-200 hover:scale-110', {
-              'border border-nc!': shards[ix as ShardSlot]?.[shard.id],
-              'scale-90': !shards[ix as ShardSlot]?.[shard.id],
+              'border border-nc!': shardStat(ix as number, shard.id),
+              'scale-90': !shardStat(ix as number, shard.id),
             })
           "
-          :variant="shards[ix as ShardSlot]?.[shard.id] ? 'neutral' : 'base'" />
+          :variant="shardStat(ix as number, shard.id) ? 'neutral' : 'base'" />
         <WinrateIndicator
           v-if="
-            shards[ix as ShardSlot]?.[shard.id] &&
-            shards[ix]?.[shard.id]?.winrate
+            shardStat(ix as number, shard.id) &&
+            shardStat(ix as number, shard.id)?.winrate
           "
-          :value="shards[ix]?.[shard.id]?.winrate" />
+          :value="shardStat(ix as number, shard.id)?.winrate ?? 0" />
         <span
-          v-if="shards[ix as ShardSlot]?.[shard.id]"
+          v-if="shardStat(ix as number, shard.id)"
           class="absolute -bottom-2 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70! px-1.5 py-0.5 align-middle text-2xs! leading-none font-bold text-nc/80! shadow-sm dss backdrop-blur-sm">
-          {{ shards[ix]?.[shard.id].winrate }}
+          {{ shardStat(ix as number, shard.id)?.winrate }}
         </span>
       </div>
     </div>

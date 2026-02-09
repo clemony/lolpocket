@@ -6,11 +6,17 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:selected'])
 
-const pocket = ref(props.pocket)
+const pocket = toRef(props, 'pocket')
+const primarySet = computed(() => pocket.value?.spells?.[0])
+const spellIds = computed(() => [
+  primarySet.value?.d ?? null,
+  primarySet.value?.f ?? null,
+])
 
-function update(event, i) {
-  console.log(event)
-  pocket.value.spells[i] = event
+function update(event: number, i: number) {
+  if (!primarySet.value) return
+  if (i === 0) primarySet.value.d = event
+  if (i === 1) primarySet.value.f = event
 }
 
 const imgArr = [
@@ -27,8 +33,8 @@ const imgArr = [
 
 <template>
   <div class="l flex h-auto items-center gap-2 border-p3 bg-p2 p-2 shadow-sm">
-    <Popover>
-      <PopoverTrigger class="">
+    <UPopover>
+      <UButton class="">
         <!--       <img
         v-if="!pocket.spells[0] || !pocket.spells[0].name || pocket.spells[0].name==='empty' || pocket.spells[0].name===undefined"
         :src="getRandom(imgArr)"
@@ -41,17 +47,15 @@ const imgArr = [
  -->
         class=" rounded-full overflow-hidden grayscale-0 transition-all
         duration-500" />
-      </PopoverTrigger>
+      </UButton>
 
       <SpellPicker
-        :model="0"
-        :pocket="pocket"
-        :is-menu-open="isOpen"
-        @update:model="update($event, 0)" />
-    </Popover>
+        :current-value="spellIds[0] ?? undefined"
+        @update:spell="update($event, 0)" />
+    </UPopover>
 
-    <Popover>
-      <PopoverTrigger class="">
+    <UPopover>
+      <UButton class="">
         <!--  <img
         v-if="!pocket.spells[1] || !pocket.spells[1].name || pocket.spells[1].name==='empty' || pocket.spells[1].name===undefined"
         :src="getRandom(imgArr)"
@@ -64,13 +68,11 @@ const imgArr = [
 
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
       /> -->
-      </PopoverTrigger>
+      </UButton>
 
       <SpellPicker
-        :model="1"
-        :pocket="pocket"
-        :is-menu-open="isOpen"
-        @update:model="update($event, 1)" />
-    </Popover>
+        :current-value="spellIds[1] ?? undefined"
+        @update:spell="update($event, 1)" />
+    </UPopover>
   </div>
 </template>

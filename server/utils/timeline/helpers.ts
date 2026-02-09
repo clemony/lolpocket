@@ -8,7 +8,8 @@ export function stripTs(ev: any) {
 
 export function findLastIndex<T>(arr: T[], pred: (v: T) => boolean) {
   for (let i = arr.length - 1; i >= 0; i--) {
-    if (pred(arr[i])) return i
+    const value = arr[i]
+    if (value !== undefined && pred(value)) return i
   }
   return -1
 }

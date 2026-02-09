@@ -1,10 +1,11 @@
+//
 // factories/menubarItem.ts
 
-import type { MenubarRadioGroup } from '~/components/pocket/menu/types.menubar'
+import type { MenubarRadioGroup } from "~/components/pocket/menu/types.menubar"
 
 export interface CheckboxItemFactory {
   name: () => string
-  checkboxType?: 'tick' | 'tick-end' | 'switch' | 'checkbox'
+  checkboxType?: "tick" | "tick-end" | "switch" | "checkbox"
   get: () => boolean
   icon: () => string
   iconClass?: string
@@ -13,7 +14,7 @@ export interface CheckboxItemFactory {
 
 export function createCheckboxItem({
   name,
-  checkboxType = 'tick-end',
+  checkboxType = "tick-end",
   get,
   icon,
   iconClass,
@@ -23,7 +24,7 @@ export function createCheckboxItem({
     name: computed(name),
     checkboxType,
     icon: computed(() => ({ name: icon(), class: iconClass })),
-    type: 'checkbox' as const,
+    type: "checkbox" as const,
     model: {
       get,
       set,
@@ -45,17 +46,17 @@ export function createRadioGroupItem<T extends string | number>(config: {
 }) {
   return {
     name: computed(() =>
-      typeof config.name === 'function' ? config.name() : config.name
+      typeof config.name === "function" ? config.name() : config.name
     ),
     inset: config.inset,
     optionIcon: config.optionIcon,
     optionName: config.optionName,
     options: config.options,
-    type: 'radio',
+    type: "radio",
     model: {
       get: config.get,
       set: config.set,
       valueOf: config.get,
     },
-  } as MenubarRadioGroup
+  } as unknown as MenubarRadioGroup
 }

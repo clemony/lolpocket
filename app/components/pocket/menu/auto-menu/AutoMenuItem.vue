@@ -9,7 +9,7 @@ const { item } = defineProps<{
 <template>
   <!-- item -->
   <MenubarItem
-    :key="item.name.toString()"
+    :key="(item.name ?? item.key ?? '').toString()"
     class="group/item truncate"
     :inset="item.inset"
     @click="item.key ? navigateTo(`/pocket/${item.key}`) : null">
@@ -20,10 +20,10 @@ const { item } = defineProps<{
       :src="String(item?.icon)" />
     <Icon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
-      :name="getIcon(item.icon)?.name"
+      :name="getIcon(item.icon)?.name ?? ''"
       :class="cn('size-4.5', getIcon(item.icon)?.class)" />
     <span class="truncate">
-      {{ item.name }}
+      {{ item.name ?? '' }}
     </span>
 
     <MenubarShortcut

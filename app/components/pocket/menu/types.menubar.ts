@@ -9,16 +9,16 @@ export interface MenubarItemModel {
   set: (v: boolean | string) => void
   valueOf: () => boolean | string
 }
-export type MenubarItemType
-  = | MenubarItem
-    | MenubarSubItem
-    | MenubarPocket
-    | MenubarRadioGroup
+export type MenubarItemType =
+  | MenubarItem
+  | MenubarSubItem
+  | MenubarPocket
+  | MenubarRadioGroup
 
 export interface MenubarItem {
   key?: string
   name?: string | ComputedRef<string>
-  checkboxType?: 'tick' | 'switch' | 'checkbox' | 'tick-end'
+  checkboxType?: "tick" | "switch" | "checkbox" | "tick-end"
   class?: Record<string, string>
   click?: () => void
   component?: Component
@@ -35,13 +35,13 @@ export interface MenubarItem {
     class?: string
   }
   type?:
-    | 'checkbox'
-    | 'radioItem'
-    | 'radio'
-    | 'submenu'
-    | 'separator'
-    | 'pocket'
-    | 'group'
+    | "checkbox"
+    | "radioItem"
+    | "radio"
+    | "submenu"
+    | "separator"
+    | "pocket"
+    | "group"
   value?: string
 }
 
@@ -59,7 +59,7 @@ export interface MenubarPocket extends Pocket {
     class?: string
     component?: Component
   }
-  type?: 'checkbox' | 'radioItem' | 'radio' | 'submenu' | 'separator' | 'pocket'
+  type?: "checkbox" | "radioItem" | "radio" | "submenu" | "separator" | "pocket"
   value?: string
 }
 

@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import type { SelectTriggerProps } from 'reka-ui'
+import type { ButtonProps } from '@nuxt/ui'
 import { reactiveOmit } from '@vueuse/core'
+import type { SelectTriggerProps } from 'reka-ui'
 import { SelectTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
   SelectTriggerProps & {
     class?: HTMLAttributes['class']
 
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
+    size?: ButtonProps['size']
+    variant?: ButtonProps['variant']
   }
 >()
 

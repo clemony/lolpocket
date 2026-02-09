@@ -51,7 +51,7 @@ export function formatTimeAgo(
   }
 }
 
-export function formatHMS(ms) {
+export function formatHMS(ms: number) {
   const hours = Math.floor((ms / 3600000) % 24)
 
   const minutes = Math.floor((ms / 60000) % 60)
@@ -68,7 +68,7 @@ export function msToMin(ms: number) {
   return Math.floor((ms / 60) % 60)
 }
 
-export function secondsToTime(ms) {
+export function secondsToTime(ms: number) {
   const hours = Math.floor((ms / 3600) % 24)
 
   const minutes = Math.floor((ms / 60) % 60)

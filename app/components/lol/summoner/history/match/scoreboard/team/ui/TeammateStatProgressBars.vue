@@ -19,7 +19,7 @@ const target = useTemplateRef<HTMLElement>('target')
     <div class="progress-label w-full">
       <Icons
         wrapper-class="size-3"
-        :name="icon[0]"
+        :name="icon[0] ?? ''"
         :class="cn('inline size-3.5 opacity-70', icon[1])" />
       <span>
         {{

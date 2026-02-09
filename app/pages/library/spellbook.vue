@@ -22,7 +22,9 @@ definePageMeta({
 })
 
 const selectedSpellId = ref(1)
-const selectedSpell = computed(() => spells[selectedSpellId.value])
+const selectedSpell = computed(() =>
+  spells[selectedSpellId.value] ?? spells[0]!
+)
 </script>
 
 <template>

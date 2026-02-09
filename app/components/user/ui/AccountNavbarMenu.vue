@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { themes } from '~/domain/lp/ui/theme'
+import { themes } from "~/domain/lp/ui/theme"
 
 const summoner = computed(() => as().account)
 
@@ -8,19 +8,23 @@ const open = shallowRef<boolean>(false)
 const router = useRouter()
 
 const settings = computed(() => {
-  return router
-    .getRoutes()
-    .filter(r => r.path === '/settings')[0]
-    .children
-    .filter(r => r.path !== '/settings/account')
+  const settingsRoute = router.getRoutes().find((r) => r.path === "/settings")
+  return (settingsRoute?.children ?? [])
+    .filter((r) => r.path !== "/settings/account")
     .sort()
+})
+
+const themeModel = computed({
+  get: () => as().settings?.theme ?? "",
+  set: (value) => {
+    const settings = as().settings
+    if (settings) settings.theme = value
+  },
 })
 </script>
 
 <template>
-  <UPopover
-    arrow
-    animation="shift-toward">
+  <UPopover arrow animation="shift-toward">
     <UButton class="relative overflow-hidden">
       <LazySummonerIcon
         v-if="summoner"
@@ -50,7 +54,7 @@ const settings = computed(() => {
         <span
           v-if="as().inbox?.messages?.length"
           class="absolute right-4 font-mono text-sm opacity-60">
-          {{ as().inbox.messages.filter((m) => !m.read).length }}
+          {{ as().inbox?.messages?.filter((m) => !m.read).length ?? 0 }}
         </span>
       </PopoverItem>
     </div>
@@ -66,30 +70,16 @@ const settings = computed(() => {
         Account
       </PopoverItem>
 
-      <PopoverItem
-        class="h-10"
-        @click="navigateTo('/settings')">
+      <PopoverItem class="h-10" @click="navigateTo('/settings')">
         <icon name="gear" />
         Settings
       </PopoverItem>
 
       <div>
-        <div
-          v-for="(theme, i) in themes"
-          :key="i"
-          :data-theme="theme.name">
-          <Label
-            class="relative p-0!"
-            base="btn"
-            size="c-9"
-            color="default">
-            <input
-              v-model="as().settings.theme"
-              class="peer hidden"
-              type="">
-            <Icon
-              class="absolute text-pc"
-              name="theme.icon" />
+        <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
+          <Label class="relative p-0!" base="btn" size="c-9" >
+            <input v-model="themeModel" class="peer hidden" type="" />
+            <Icon class="absolute text-pc" :name="theme.icon" />
           </Label>
         </div>
       </div>
@@ -97,21 +87,15 @@ const settings = computed(() => {
 
     <DropdownMenuSeparator />
     <div class="px-1 pb-1">
-      <PopoverItem
-        v-if="as().user"
-        class="h-9">
-        <icon
-          name="log-out"
-          @click="useSignOut()" />
+      <PopoverItem v-if="as().user" class="h-9">
+        <icon name="log-out" @click="useSignOut()" />
         Log out
       </PopoverItem>
 
-      <PopoverItem
-        v-else
-        @click="navigateTo('/login')">
+      <PopoverItem v-else @click="navigateTo('/login')">
         <icon name="log-in" />
         Log in
       </PopoverItem>
-    </div>
-  </UPopover>
+    </div> </UPopover
+  >>
 </template>

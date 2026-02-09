@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div v-if="pocket">
     <!--     <NuxtLink :to="`/pocket/${pocket.key}/card`">
-      <Btn :class="{ 'btn-active [&_span]:border-p0 [&_span]:inset-shadow-black/16 [&_span]:bg-p0/60  border-r-p2': route.name === 'card' }">
+      <UButton :class="{ 'btn-active [&_span]:border-p0 [&_span]:inset-shadow-black/16 [&_span]:bg-p0/60  border-r-p2': route.name === 'card' }">
         <slot />
 
         <span>
@@ -20,7 +20,7 @@ const route = useRoute()
 
         <icon name="vaadin:health-card" />
         Card
-      </Btn>
+      </UButton>
     </NuxtLink> -->
   </div>
 </template>

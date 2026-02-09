@@ -54,7 +54,7 @@ function itemName(type: string, id: string) {
     : type === "champion" ? champNameById(Number.parseFloat(id))
     : type === "rune" ? runeNameById(Number.parseFloat(id))
     : type === "spell" ? spellNameById(Number.parseFloat(id))
-    : type === "shard" ? shardById(Number.parseFloat(id)).description
+    : type === "shard" ? shardById(Number.parseFloat(id))?.description
     : type === "path" ? id
     : type === "ability" ? abilityNameById(id)
     : null

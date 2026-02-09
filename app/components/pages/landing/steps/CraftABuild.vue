@@ -5,59 +5,63 @@ const selectedChamps = computed (() => {
   return shuffled.slice(0, 6)
 })
  */
-const currentItems = ref<Index[]>()
+const currentItems = ref<Index[]>([])
 
-const champModel = ref<number>(null)
+const champModel = ref<number | null>(null)
 const champComplete = ref(false)
 const isChampVisible = ref(true)
 
 const itemModel = [
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref<Index>(null),
+    item: ref<Index | null>(null),
     visible: ref(false),
   },
 ]
 
 const item = ref(0)
 
-function setTimer(timer, i?, item?) {
+function setTimer(timer: "champ" | "item", i?: number, itemValue?: Index) {
   // getRandomItems()
   setTimeout(() => {
     if (timer === "champ") {
       isChampVisible.value = false
       champComplete.value = true
-      itemModel[0].visible.value = true
+      const first = itemModel[0]
+      if (first) first.visible.value = true
     } else if (timer === "item") {
-      itemModel[i].item.value = item
+      if (i === undefined) return
+      if (!itemModel[i]) return
+      itemModel[i].item.value = itemValue ?? null
       itemModel[i].visible.value = false
       getRandom(itemIndex)
-      item[i + 1].visible.value = true
+      const next = itemModel[i + 1]
+      if (next) next.visible.value = true
     }
   }, 2000)
 }
@@ -113,9 +117,9 @@ onMounted(async () => {
       </transition-slide>
     </template>
 
-    <template v-if="itemModel[item].visible">
+    <template v-if="itemModel[item]?.visible">
       <Transition name="puff">
-        <p v-if="!itemModel[item].item" class="f-sb f-tt text-lg">
+        <p v-if="!itemModel[item]?.item" class="f-sb f-tt text-lg">
           Select your first item...
         </p>
       </Transition>
@@ -140,12 +144,12 @@ onMounted(async () => {
                 && item !== itemModel[itemIndex].item,
             }"> -->
           <input
-            v-model="itemModel[x].item"
+            v-model="itemModel[x]?.item"
             class="peer hidden"
             name="item"
             type="radio"
             :value="item"
-            @change="setTimer('item', item, item)" />
+            @change="setTimer('item', x, i)" />
 
           <div class="size-16 overflow-hidden rounded-lg">
             <img

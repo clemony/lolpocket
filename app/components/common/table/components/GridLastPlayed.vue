@@ -5,9 +5,17 @@ const { params } = defineProps<{
   params: any
 }>()
 
-const patch = computed(() =>
-  getPatchForDate(fromAbsolute(params.data.lastPlayed, getLocalTimeZone()))
-)
+const patch = computed(() => {
+  if (!params?.data?.lastPlayed) return null
+  return getPatchForDate(fromAbsolute(params.data.lastPlayed, getLocalTimeZone()))
+})
+const patchBadge = computed(() => {
+  if (!patch.value) return ''
+  return patchIndex?.[0]?.match?.(patch.value) ? ' 🟢'
+    : patchIndex?.[1]?.match?.(patch.value) ? ' 🟡'
+      : patchIndex?.[2] === patch.value ? ' 🟠'
+        : ' 🔴'
+})
 </script>
 
 <template>
@@ -15,12 +23,7 @@ const patch = computed(() =>
     v-if="params.data.lastPlayed"
     v-tooltip="
       `${useDateFormat(params.data.lastPlayed, 'h:mm a').value}
-    Patch ${patch} ${
-        patchIndex[0].match(patch) ? ' 🟢'
-        : patchIndex[1].match(patch) ? ' 🟡'
-          : patchIndex[2] === patch ? ' 🟠'
-            : ' 🔴'
-      }
+    Patch ${patch ?? ''}${patchBadge}
     `
     "
     class="grid size-full grid-cols-[1fr_20px] items-center justify-end justify-items-end py-2 text-end text-sm!">

@@ -27,7 +27,7 @@ const strokeOffset = computed(
 
 // unique mask id (important!)
 const _uid = crypto.randomUUID()
-const mastery = computed(() => (props.mastery >= 10 ? 10 : props.mastery))
+const mastery = computed(() => (props.mastery ?? 0) >= 10 ? 10 : (props.mastery ?? 0))
 </script>
 
 <template>

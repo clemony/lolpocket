@@ -13,13 +13,23 @@ const props
 
 const forwarded = useForwardProps(props)
 const puuid = computed(() => toValue(props.summoner)?.puuid)
+const favorites = computed({
+  get: () => as().settings?.favorite_summoners ?? [],
+  set: (value) => {
+    const settings = as().settings
+    if (settings) settings.favorite_summoners = value
+  },
+})
+const isFavorited = computed(() =>
+  puuid.value ? favorites.value.includes(puuid.value) : false
+)
 </script>
 
 <template>
-  <ToggleGroup v-model:model-value="as().settings.favorite_summoners">
+  <ToggleGroup v-model:model-value="favorites">
     <Tooltip
       :text="
-        as().settings.favorite_summoners.includes(puuid) ? 'Unfollow' : 'Follow'
+        isFavorited ? 'Unfollow' : 'Follow'
       ">
       <ToggleGroupItem
         v-if="puuid"
@@ -27,7 +37,7 @@ const puuid = computed(() => toValue(props.summoner)?.puuid)
         :value="puuid">
         <Icon
           :name="
-            as().settings.favorite_summoners.includes(puuid)
+            isFavorited
               ? 'heart-sm'
               : 'heart-sm-outline'
           "

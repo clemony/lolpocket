@@ -8,7 +8,7 @@ const s = computed(() =>
 )
 
 const keystone = computed(() =>
-  runeIndex.find(r => r.id === player.runes.keystone)
+  runeIndex.find(r => r.id === player.runes?.keystone)
 )
 </script>
 
@@ -21,7 +21,7 @@ const keystone = computed(() =>
       )
     ">
     <Keystone
-      :id="keystone?.id"
+      :id="keystone?.id ?? null"
       class="size-7.5 transition-all duration-300 hover:scale-120" />
 
     <Path

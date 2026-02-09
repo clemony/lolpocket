@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EmojiItem } from '@tiptap/extension-emoji'
+import type { EmojiItem } from '@tiptap/extension-emoji';
 
 const {
   class: className,
@@ -13,7 +13,7 @@ const {
 </script>
 
 <template>
-  <Button
+ <UButton
     :id="index"
     square
     variant="ghost"
@@ -40,5 +40,5 @@ const {
         :alt="item.name"
         :src="item.fallbackImage">
     </span>
-  </Button>
+  </UButton>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { AsTag } from 'reka-ui'
+import type { ButtonProps } from '@nuxt/ui';
+import type { AsTag } from 'reka-ui';
 
 const {
   active,
@@ -13,11 +14,11 @@ const {
   tag: ItemTag | string
   as?: AsTag | string
   active?: boolean
-  size?: ButtonVariants['size']
+  size?: ButtonProps['size']
   clear?: boolean
 }>()
 
-const tagValue = computed<ItemTag>(() => {
+const tagValue = computed<ItemTag | undefined>(() => {
   if (typeof tag !== 'string') return tag
 
   return itemTags.find(t => t.id === tag)
@@ -25,7 +26,7 @@ const tagValue = computed<ItemTag>(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     v-if="tagValue"
     variant="outline"
     hover="btn"
@@ -42,12 +43,12 @@ const tagValue = computed<ItemTag>(() => {
       )
     "
     :style="{
-      backgroundColor: `${(is().filters.tags.length && is().filters.tags.includes(tagValue.id)) || active ? tagValue.color : 'transparent'}`,
+      backgroundColor: `${(is().filters.tags.length && tagValue?.id && is().filters.tags.includes(tagValue.id)) || active ? tagValue?.color : 'transparent'}`,
     }">
     {{ tagValue.name }}
     <icon
       v-if="clear"
       class="size-4 text-white **:stroke-[2.6]"
       name="x" />
-  </Button>
+  </UButton>
 </template>

@@ -48,7 +48,7 @@ const colDefs = [
     minWidth: 61,
     width: 61,
     cellClass: '!py-1 !pr-1 !ml-0',
-    cellRenderer: params =>
+    cellRenderer: (params: { value: string }) =>
       `<img src="/img/items/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`,
     field: 'id',
     headerName: '',
@@ -205,7 +205,7 @@ const colDefs = [
   {
     cellDataType: 'text',
     headerName: 'Magic Pen',
-    valueGetter: (params) => {
+    valueGetter: (params: { data?: any }) => {
       const stats = params.data?.stats ?? {}
       if (stats.mpen !== null) return `${stats.percentMagicPenetration}%`
       if (stats.mpenflat !== null) return `${stats.flatMagicPenetration}`
@@ -251,7 +251,7 @@ const colDefs = [
   {
     cellDataType: 'text',
     headerName: 'Move Speed',
-    valueGetter: (params) => {
+    valueGetter: (params: { data?: any }) => {
       const stats = params.data?.stats ?? {}
       if (stats.ms !== null) return `${stats.percentMovespeed}%`
       if (stats.msflat !== null) return `${stats.flatMovespeed}`
@@ -286,7 +286,7 @@ async function onGridReady(params: GridReadyEvent) {
   gridApi.value = params.api
   is().itemGridApi = gridApi.value
 
-  const columns = gridApi.value.getColumns()
+  const columns = gridApi.value.getColumns() ?? []
   columns.forEach((col) => {
     // col.addEventListener('visibleChanged', listener)
   })

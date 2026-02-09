@@ -27,39 +27,39 @@ definePageMeta({
           <li>
             <b>Riot's</b>
             public
-            <InlineLink
+            <NuxtLink class="inline hover:underline"
               to="https://wiki.leagueoflegends.com/en-us/"
               title="https://wiki.leagueoflegends.com/en-us/"
               external>
               API
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
             .
           </li>
           <li>
             The Official
-            <InlineLink
+            <NuxtLink class="inline hover:underline"
               to="https://wiki.leagueoflegends.com/en-us/"
               title="https://wiki.leagueoflegends.com/en-us/"
               external>
               League of Legends Wiki
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
             , written and maintained by players.
           </li>
           <li>
-            <InlineLink
+            <NuxtLink class="inline hover:underline"
               to="https://www.riotgames.com/en/legal"
               title="https://www.riotgames.com/en/legal"
               external>
               Official Data Dragon
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
           </li>
           <li>
-            <InlineLink
+            <NuxtLink class="inline hover:underline"
               to="https://www.communitydragon.org"
               title="https://www.communitydragon.org"
               external>
               Community Dragon
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
             , an open source, community driven, public CDN.
           </li>
         </ol>
@@ -77,21 +77,19 @@ definePageMeta({
             <b>Riot's</b>
             policies on use of their assets and game data is expanded upon in
             their
-            <InlineLink
-              class="italic"
+            <NuxtLink class="inline hover:underline italic"
               to="https://www.riotgames.com/en/legal"
               title="https://www.riotgames.com/en/legal"
               external>
               Legal Jibber Jabber
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
             and
-            <InlineLink
-              class="italic"
+            <NuxtLink class="inline hover:underline italic"
               to="https://www.riotgames.com/en/terms-of-service"
               title="https://www.riotgames.com/en/terms-of-service"
               external>
               Terms of Serivce.
-            </InlineLink>
+            </NuxtLink class="inline hover:underline" >
           </li>
         </ol>
       </SettingsLayout>

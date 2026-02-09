@@ -1,97 +1,100 @@
-import type { GridApi } from 'ag-grid-community'
-import { defineStore } from 'pinia'
+//
+import type { GridApi } from "ag-grid-community"
+import { defineStore } from "pinia"
 
 export interface ItemFilter {
   map: number
   purchasable: boolean
   query: string
-  rank: string
-  stats: string[] | null
+  rank: string | null
+  stats: string[]
   tags: string[]
 }
 
 export const useItemStore = defineStore(
-  'itemStore',
+  "itemStore",
   () => {
     // --- FILTER STATE ---
     const filters = ref<ItemFilter>({
       map: 11,
       purchasable: true,
-      query: '',
+      query: "",
       rank: null,
       stats: [],
       tags: [],
     })
 
     const defaultFilterLength = computed<number>(
-      () => mapToItem[11].filter(i => !unpurchasableItems.includes(i)).length
+      () =>
+        (mapToItem[11] ?? []).filter((i) => !unpurchasableItems.includes(i))
+          .length
     )
-    console.log('🌱 - defaultFilterLength:', defaultFilterLength)
+    console.log("🌱 - defaultFilterLength:", defaultFilterLength)
     // --- HELPERS ---
 
     function clearFilters() {
-      console.log('🌱 - clearFilters - newFilters:')
+      console.log("🌱 - clearFilters - newFilters:")
       filters.value.map = 11
       filters.value.purchasable = true
-      filters.value.query = ''
+      filters.value.query = ""
       filters.value.rank = null
       filters.value.stats.length = 0
       filters.value.tags.length = 0
     }
 
     // --- FILTER LOGIC ---
-    const queryRef = computed(() => filters.value.query || '')
+    const queryRef = computed(() => filters.value.query || "")
 
     const debouncedQuery = refDebounced(queryRef, 200)
 
     const filtered = computed(() => {
       const query = debouncedQuery.value.toLowerCase()
-      const allIds = itemIndex.map(i => i.id)
+      const allIds = itemIndex.map((i) => i.id)
       let matchedIds: Set<number> = new Set(allIds)
 
       // alias map: stats that should be treated as equivalent
       const statAliases: Record<string, string[]> = {
         flatMagicPenetration: [
-          'flatMagicPenetration',
-          'percentMagicPenetration',
+          "flatMagicPenetration",
+          "percentMagicPenetration",
         ],
-        flatMovespeed: ['flatMovespeed', 'percentMovespeed'],
+        flatMovespeed: ["flatMovespeed", "percentMovespeed"],
         percentMagicPenetration: [
-          'flatMagicPenetration',
-          'percentMagicPenetration',
+          "flatMagicPenetration",
+          "percentMagicPenetration",
         ],
-        percentMovespeed: ['flatMovespeed', 'percentMovespeed'],
+        percentMovespeed: ["flatMovespeed", "percentMovespeed"],
       }
 
       if (filters.value.stats.length > 0) {
         for (const stat of filters.value.stats) {
           const equivalentStats = statAliases[stat] ?? [stat]
-          const ids = equivalentStats.flatMap(s => statToItem[s] ?? [])
-          matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
+          const ids = equivalentStats.flatMap((s) => statToItem[s] ?? [])
+          matchedIds = new Set(ids.filter((id) => matchedIds.has(id)))
         }
       }
 
       if (filters.value.tags.length > 0) {
         for (const tag of filters.value.tags) {
           const ids = tagToItem[String(tag)] ?? []
-          matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
+          matchedIds = new Set(ids.filter((id) => matchedIds.has(id)))
         }
       }
 
-      if (filters.value.rank && filters.value.rank !== 'all') {
+      if (filters.value.rank && filters.value.rank !== "all") {
         const rankIds = rankToItem[filters.value.rank] ?? []
-        matchedIds = new Set(rankIds.filter(id => matchedIds.has(id)))
+        matchedIds = new Set(rankIds.filter((id) => matchedIds.has(id)))
       }
 
       if (filters.value.map && filters.value.map !== 0) {
         const mapIds = mapToItem[filters.value.map] ?? []
-        matchedIds = new Set(mapIds.filter(id => matchedIds.has(id)))
+        matchedIds = new Set(mapIds.filter((id) => matchedIds.has(id)))
       }
 
       if (filters.value.purchasable === true) {
         const unpurchasableSet = new Set(unpurchasableItems)
         matchedIds = new Set(
-          [...matchedIds].filter(id => !unpurchasableSet.has(id))
+          [...matchedIds].filter((id) => !unpurchasableSet.has(id))
         )
       }
 
@@ -114,25 +117,11 @@ export const useItemStore = defineStore(
       return Array.from(matchedIds)
     })
 
-    const isComparing = ref()
+    const isComparing = ref<boolean>(false)
     const itemGridApi = shallowRef<GridApi | null>(null)
 
-    const calculatorSet = ref<CalculatorSet>([
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-    ])
-    const calculatorSet2 = ref<CalculatorSet>([
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-    ])
+    const calculatorSet = ref<CalculatorSet>([0, 0, 0, 0, 0, 0])
+    const calculatorSet2 = ref<CalculatorSet>([0, 0, 0, 0, 0, 0])
 
     return {
       itemGridApi,
@@ -147,9 +136,9 @@ export const useItemStore = defineStore(
   },
   {
     persist: {
-      key: 'itemStore',
+      key: "itemStore",
       storage: piniaPluginPersistedstate.localStorage(),
-      pick: ['itemGridApi'],
+      pick: ["itemGridApi"],
     },
   }
 )

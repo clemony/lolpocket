@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { WithClassAsProps } from './interface'
-import { useCarousel } from './useCarousel'
+import type { WithClassAsProps } from './interface';
+import { useCarousel } from './useCarousel';
 
 const props = defineProps<WithClassAsProps>()
 
@@ -8,7 +8,7 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
 </script>
 
 <template>
-  <Button
+ <UButton
     :disabled="!canScrollNext"
     :class="
       cn(
@@ -28,5 +28,5 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
 
       <span class="sr-only">Next Slide</span>
     </slot>
-  </Button>
+  </UButton>
 </template>

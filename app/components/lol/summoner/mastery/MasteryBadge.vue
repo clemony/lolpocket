@@ -12,7 +12,7 @@ const {
 }>()
 
 const data = computed(() =>
-  params?.data ? params?.data.level : level || mastery.level
+  params?.data ? params?.data.level : level ?? mastery?.level ?? 0
 )
 </script>
 

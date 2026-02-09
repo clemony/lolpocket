@@ -1,3 +1,4 @@
+//
 export interface ChampionPairStats {
   enemy: PairedChampionStat[][]
   team: PairedChampionStat[][]
@@ -18,16 +19,17 @@ function bumpChampion(
   if (!map[role][championId]) {
     map[role][championId] = createEmptyChampionStat(
       championId,
-      champNameById(championId)
+      champNameById(championId) ?? ""
     )
   }
   const e = map[role][championId]
 
   e.games++
-  if (win) e.win!++
+  e.win ??= 0
+  if (win === true) e.win++
 
-  e.avgTimestamp
-    = ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
+  e.avgTimestamp =
+    ((e.avgTimestamp ?? 0) * (e.games - 1) + gameDuration) / e.games
 }
 
 export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
@@ -40,7 +42,7 @@ export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
       return { enemy: [], team: [] }
     }
 
-    const totalWins = data.value.filter(d => d.player.win).length
+    const totalWins = data.value.filter((d) => d.player.win === true).length
 
     for (const d of data.value) {
       const player = d.player
@@ -56,7 +58,7 @@ export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
         const target = p.teamId === teamId ? team : enemy
         const role = normalizeRole(p.role)
 
-        if (win === 'remake') continue
+        if (win === "remake") continue
         bumpChampion(target, role, p.championId, win, gameDuration)
       }
     }
@@ -69,7 +71,7 @@ export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
       //  winrate, pickrate, raw synergy
       for (const role of Object.keys(group) as RoleKey[]) {
         for (const c of Object.values(group[role])) {
-          c.delta = winDelta(c.win, c.games, totalWins, totalGames)
+          c.delta = winDelta(c.win ?? 0, c.games, totalWins, totalGames)
         }
       }
 
@@ -77,13 +79,13 @@ export function aggregateDuos(data: Ref<MatchPlayerData[]>) {
         const champs = Object.values(group[role])
         // const maxAbs = Math.max(...champs.map((c) => Math.abs(c.synergy))) || 1
         for (const c of champs) {
-          c.winrate = roundDecimalToPercent(c.win!, c.games)
+          c.winrate = roundDecimalToPercent(c.win ?? 0, c.games)
           // c.synergy = synergyScore(c.delta, maxAbs)
           c.delta = c.delta ? Math.round(c.delta * 1000) / 10 : 0
         }
 
         out.push(
-          champs.filter(c => c.games >= 1).sort((a, b) => b.games - a.games)
+          champs.filter((c) => c.games >= 1).sort((a, b) => b.games - a.games)
         )
       }
 

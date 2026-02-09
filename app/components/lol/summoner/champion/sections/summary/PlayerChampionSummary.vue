@@ -11,12 +11,12 @@ const route = useRoute()
 const champKey = computed(() => String(route.params?.champion_key))
 
 const progress = computed(() => {
-  if (mastery.pointsUntilLevel <= 0) {
+  if ((mastery?.pointsUntilLevel ?? 0) <= 0) {
     return 100
   } else {
     return Math.round(
-      (mastery.pointsSinceLevel /
-        (mastery.pointsSinceLevel + mastery.pointsUntilLevel)) *
+      ((mastery?.pointsSinceLevel ?? 0) /
+        ((mastery?.pointsSinceLevel ?? 0) + (mastery?.pointsUntilLevel ?? 0))) *
         100
     )
   }

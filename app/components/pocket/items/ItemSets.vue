@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { vDraggable } from 'vue-draggable-plus'
+import { vDraggable } from 'vue-draggable-plus';
 
 const props = defineProps<{
   pocket: Pocket
@@ -73,14 +73,14 @@ watch(items, (newItemSets) => {
       </template>
     </div>
 
-    <Button
+   <UButton
       class="h-22 w-full rounded-xl border-p3/40"
       variant="outline"
-      @click="pocket.items.push(newItemSet())">
+      @click="pocket.items?.push(newItemSet())">
       <icon
         class="transition-opacity duration-200"
         name="add" />
-    </Button>
+    </UButton>
   </div>
 </template>
 

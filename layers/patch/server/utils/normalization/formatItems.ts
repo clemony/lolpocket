@@ -16,6 +16,7 @@ export function formatStats(
 
   for (const statName in stats) {
     const stat = stats[statName]
+    if (!stat) continue
     const value
       = stat.flat
         || stat.percent

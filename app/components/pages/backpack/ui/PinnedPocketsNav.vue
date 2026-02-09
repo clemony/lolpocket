@@ -11,20 +11,14 @@ const { isCollapsed, pinned } = defineProps<{
     v-model:open="ui().toggles.backpack.pinned"
     class="px-3 pb-2 data-[collapsed=true]:py-2"
     :data-collapsed="isCollapsed">
-    <CollapsibleTrigger
-      class="group/collapse"
-      as-child>
-      <Button
-        class="w-full"
-        as="button"
-        variant="ghost"
-        size="md">
+    <CollapsibleTrigger class="group/collapse" as-child>
+      <UButton class="w-full" as="button" variant="ghost" size="md">
         <span
           class="grow text-lg font-semibold tracking-normal capitalize opacity-40">
           Pinned Pockets
         </span>
         <CaretRotate />
-      </Button>
+      </UButton>
     </CollapsibleTrigger>
 
     <CollapsibleContent
@@ -36,7 +30,7 @@ const { isCollapsed, pinned } = defineProps<{
           v-for="link of pinned"
           :key="link.name"
           class="group/tag flex max-h-9 w-full flex-nowrap items-center py-1 pr-2">
-          <BtnLink
+          <UButton
             class="flex grow items-center justify-start gap-3! px-2 text-md duration-0!"
             variant="ghost"
             :to="`/${link.key}`">
@@ -45,12 +39,10 @@ const { isCollapsed, pinned } = defineProps<{
               size="sm"
               :src="link.icon" />
 
-            <span
-              v-show="!isCollapsed"
-              class="font-medium capitalize">
+            <span v-show="!isCollapsed" class="font-medium capitalize">
               {{ link.name }}
             </span>
-          </BtnLink>
+          </UButton>
           <Label
             v-show="!isCollapsed"
             v-tippy="'Unpin'"
@@ -58,14 +50,12 @@ const { isCollapsed, pinned } = defineProps<{
             for="toggle-pin"
             variant="ghost"
             @click.stop>
-            <icon
-              class="absolute size-4 **:stroke-[1.84]"
-              name="pin" />
+            <icon class="absolute size-4 **:stroke-[1.84]" name="pin" />
             <input
               v-model="ps().pinned"
               class="peer hidden"
               name="toggle-pin"
-              type="checkbox">
+              type="checkbox" />
             <icon
               class="absolute size-4 opacity-0 **:stroke-[1.84]"
               name="unpin" />
@@ -75,19 +65,14 @@ const { isCollapsed, pinned } = defineProps<{
     </CollapsibleContent>
   </Collapsible>
 
-  <nav
-    v-else
-    class="flex flex-col items-center justify-center gap-1">
-    <BtnLink
+  <nav v-else class="flex flex-col items-center justify-center gap-1">
+    <UButton
       v-for="link of pinned"
       :key="link.name"
       class="size-12"
       :to="`/${link.key}`"
       variant="ghost">
-      <PocketIcon
-        class="size-9 rounded-full"
-        size="sm"
-        :src="link.icon" />
-    </BtnLink>
+      <PocketIcon class="size-9 rounded-full" size="sm" :src="link.icon" />
+    </UButton>
   </nav>
 </template>

@@ -16,12 +16,13 @@ watchEffect(() => {
   emit('update:open', isOpen.value)
 })
 
-const set = computed(() => set)
-function handleItem(e) {
-  set.value[props.setIndex] = e
-  emit('update:set', set.value)
+const setRef = computed(() => props.set)
+function handleItem(e: number) {
+  if (props.setIndex == null || !setRef.value) return
+  setRef.value[props.setIndex] = e
+  emit('update:set', setRef.value)
 }
-const { filtered, filters, setFilter } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter() as any
 </script>
 
 <template>
@@ -30,7 +31,7 @@ const { filtered, filters, setFilter } = useItemFilter()
     @click.stop.prevent>
     <ItemDisplayTrigger
       v-if="props.type === 'image'"
-      :item-id="itemId" />
+      :item-id="itemId ?? null" />
 
     <CustomPopoverContent
       class=""
@@ -79,5 +80,5 @@ const { filtered, filters, setFilter } = useItemFilter()
         </TransitionExpand>
       </div>
     </CustomPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

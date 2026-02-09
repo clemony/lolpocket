@@ -33,7 +33,7 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
           className,
         )
       ">
-      <template v-if="!comment.removed">
+      <template v-if="comment && !comment.removed">
         <template v-if="comment && comment.is_author">
           <Toggle
             v-model:model-value="editing"
@@ -47,18 +47,18 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
             wrapper-class="relative grid size-2 place-items-center opacity-40"
             name="slash" />
 
-          <Button
+         <UButton
             :class="btnClass"
             :disabled="!comment.is_author"
             @click="() => removeComment(comment, 'user')">
             Remove
-          </Button>
+          </UButton>
         </template>
 
-        <Button
+       <UButton
           v-if="!comment.is_author">
           Report
-        </Button>
+        </UButton>
 
         <Icons
           class="absolute size-4"
@@ -73,7 +73,7 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
         </Toggle>
       </template>
       <Grow />
-      <CommentVotes :comment />
+      <CommentVotes v-if="comment" :comment />
     </div>
   </div>
 </template>

@@ -7,8 +7,11 @@ const { class: className, summoner } = defineProps<{
 // todo hookup to supbase with public data &  useSummoner
 const text = computed(() => {
   console.log("💠 -as().account:", as().account)
-  as().account.title = "Pocket Pet"
-  return as().account?.title ?? "Pocket Player"
+  const account = as().account
+  if (account && !account.title) {
+    account.title = "Pocket Pet"
+  }
+  return account?.title ?? "Pocket Player"
 })
 console.log("💠 - text:", text)
 </script>

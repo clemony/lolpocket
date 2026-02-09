@@ -8,7 +8,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <Button
+  <UButton
     v-tooltip="'View extended champion data'"
     class="group/btn my-auto flex h-14 w-full cursor-pointer items-center justify-start gap-3 self-center bg-transparent py-0"
     variant="ghost"
@@ -27,5 +27,5 @@ const route = useRoute()
       {{ champNameById(params.data.championId) }}
     </h4>
     <Icon class="size-3.5 opacity-40 group-hover/btn:opacity-100" name="open" />
-  </Button>
+  </UButton>
 </template>

@@ -5,7 +5,13 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = ref(props.pocket)
+const pocket = toRef(props, 'pocket')
+const pocketRoles = computed<string[]>({
+  get: () => pocket.value.roles ?? [],
+  set: (value) => {
+    pocket.value.roles = value
+  },
+})
 
 const to = ref([])
 
@@ -15,10 +21,10 @@ const originalOrder = ref([...rolesList.value])
 
 const sortedRoles = computed(() => {
   const checked = rolesList.value.filter((role) =>
-    useArrayIncludes(pocket.value.roles, role)
+    useArrayIncludes(pocketRoles, role)
   )
   const unchecked = rolesList.value.filter(
-    (role) => !useArrayIncludes(pocket.value.roles, role)
+    (role) => !useArrayIncludes(pocketRoles, role)
   )
   return [...checked, ...unchecked]
 })
@@ -27,7 +33,7 @@ function moveToTop(role: string) {
   const index = rolesList.value.findIndex((r) => r === role)
   if (index !== -1) {
     const [removed] = rolesList.value.splice(index, 1) // Remove role
-    rolesList.value.unshift(removed) // Add it to the top
+    if (removed) rolesList.value.unshift(removed) // Add it to the top
   }
 }
 
@@ -53,7 +59,7 @@ function handleReset() {
       type="checkbox"
       name="roles"
       aria-label="x"
-      @click="pocket.roles = [null]" />
+      @click="pocketRoles = []" />
 
     <label
       v-for="role in sortedRoles"
@@ -62,7 +68,7 @@ function handleReset() {
       :for="role">
       <input
         :id="role"
-        v-model="pocket.roles"
+        v-model="pocketRoles"
         class="peer hidden"
         type="checkbox"
         name="roles"

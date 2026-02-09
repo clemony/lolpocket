@@ -8,7 +8,11 @@ const { champKey, class: className } = defineProps<{
 const emit = defineEmits(["loaded"])
 
 const loaded = ref(false)
-const img = computed(() => getSplash(champKey, "load"))
+const img = computed(() => (champKey ? getSplash(champKey, "load") : undefined))
+const champName = computed(() => {
+  if (!champKey) return ''
+  return hyphenateChampionName(champNameByKey(champKey ?? '') ?? '')
+})
 
 watchEffect(() => {
   if (loaded.value) emit("loaded", loaded.value)
@@ -53,7 +57,7 @@ watchEffect(() => {
     <div
       v-show="champKey"
       class="hover:ringneutral/60 bgneutral/50 pointer-events-none absolute inset-0 grid items-end justify-start overflow-hidden rounded-xl px-3.5 py-4 text-left text-6xl leading-none font-bold tracking-tighter text-wrap break-all hyphens-manual whitespace-break-spaces text-nc opacity-0 transition-all duration-300 group-hover:opacity-100 hover:ring-offset-2 hover:ring-offset-p0/95">
-      {{ hyphenateChampionName(champNameByKey(champKey)) }}
+      {{ champName }}
     </div>
 
     <div

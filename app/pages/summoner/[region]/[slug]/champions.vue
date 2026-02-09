@@ -24,10 +24,20 @@ definePageMeta({
 const { summoner } = storeToRefs(s_session())
 
 const championData = computed(() =>
-  s_data().champions.map((c) => ({
-    ...c,
-    ...s_data().mastery.find((a) => a.championId === c.championId),
-  }))
+  (s_data().champions ?? []).map((c) => {
+    const mastery = s_data().mastery?.find(
+      (a) => a.championId === c.championId
+    )
+    return {
+      ...c,
+      ...(mastery ?? {
+        puuid: summoner.value?.puuid ?? "",
+        championId: c.championId,
+        pointsSinceLevel: 0,
+        pointsUntilLevel: 0,
+      }),
+    }
+  })
 )
 </script>
 
@@ -41,7 +51,10 @@ const championData = computed(() =>
     </UPageHeader>
 
     <UPageBody>
-      <MasteryGrid v-if="championData" :champions="championData" :summoner />
+      <MasteryGrid
+        v-if="championData"
+        :champions="championData"
+        :summoner="summoner ?? undefined" />
     </UPageBody>
   </UPage>
 </template>

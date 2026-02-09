@@ -8,7 +8,7 @@ const pocket = ref(props.pocket)
 
 function handleDelete() {
   rs().selectedRuneSet = 0
-  deleteRuneSet(props.pocket, props.set)
+  if (props.set) deleteRuneSet(props.pocket, props.set)
 }
 
 /* function handleNewSet() {

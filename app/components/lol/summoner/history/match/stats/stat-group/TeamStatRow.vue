@@ -11,6 +11,9 @@ const bans = computedOnce(() => {
   return teams.flatMap(t => t.bans)
 })
 console.log('🥸 - bans:', bans)
+
+const teamValue = (team: MatchTeam, key: string) =>
+  (team as unknown as Record<string, number | string | undefined>)[key]
 </script>
 
 <template>
@@ -53,7 +56,7 @@ console.log('🥸 - bans:', bans)
         :class="
           cn(
             'match-cell z-0 size-full items-center last-of-type:border-0! hover:z-3 hover:bg-p3/30',
-            team?.[k] === 0 ? 'match-null' : '',
+            teamValue(team, k) === 0 ? 'match-null' : '',
             i === 0 && k === 'bans' ? 'col-span-5 col-start-2'
             : k === 'bans' ? 'col-span-5 col-start-7'
               : i === 0 ? 'col-start-4'
@@ -64,13 +67,13 @@ console.log('🥸 - bans:', bans)
         <div
           v-if="k === 'teamId'"
           class="font-semibold capitalize">
-          {{ matchTeams[team.teamId]?.name }} team
+          {{ matchTeams[team.teamId as 100 | 200]?.name }} team
         </div>
         <MatchOutcome
           v-else-if="k === 'win'"
           class="justify-self-start text-sm!"
           :style="{
-            color: `color-mix(in lch, ${matchTeams[team.teamId].color} 97%, black 3%)`,
+            color: `color-mix(in lch, ${matchTeams[team.teamId as 100 | 200]?.color} 97%, black 3%)`,
           }"
           :stats="team" />
 
@@ -85,17 +88,17 @@ console.log('🥸 - bans:', bans)
           v-else
           :style="{
             backgroundColor:
-              team?.[k] === highest && highest > 0
-                ? `color-mix(in lch, ${matchTeams[team.teamId].color} 30%, transparent 70%)`
+              (team as any)?.[k] === highest && highest > 0
+                ? `color-mix(in lch, ${matchTeams[team.teamId as 100 | 200]?.color} 30%, transparent 70%)`
                 : 'transparent',
           }"
           :class="
             cn({
               'badge text-xs drop-shadow-none saturate-120':
-                team?.[k] === highest && highest > 0,
+                teamValue(team, k) === highest && highest > 0,
             })
           ">
-          {{ team?.[k]?.toLocaleString() }}{{ v?.unit }}
+          {{ teamValue(team, k)?.toLocaleString() }}{{ v?.unit }}
         </span>
       </div>
     </template>

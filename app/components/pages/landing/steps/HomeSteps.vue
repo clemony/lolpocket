@@ -4,33 +4,38 @@ import { Motion, motion } from "motion-v"
 
 const { scrollProg, scrollRef } = defineProps<{
   scrollRef: HTMLElement
-  scrollProg: MotionValue
+  scrollProg: MotionValue<number>
 }>()
 
-const progressRef = useMotionValue(scrollProg)
+const progressRef = scrollProg
 const { greaterOrEqual, lessThan } = useBreakpoint("x1024")
 const progress = [
-  useTransform(progressRef.get(), [0.1, 0.3], ["0%", "110%"]),
-  useTransform(progressRef.get(), [0.3, 0.5], ["0%", "110%"]),
-  useTransform(progressRef.get(), [0.5, 0.7], ["0%", "110%"]),
-]
+  useTransform(progressRef, [0.1, 0.3], ["0%", "110%"]),
+  useTransform(progressRef, [0.3, 0.5], ["0%", "110%"]),
+  useTransform(progressRef, [0.5, 0.7], ["0%", "110%"]),
+] as const
 
-const isShown = [ref(false), ref(false), ref(false), ref(false)]
+const isShown = [
+  ref(false),
+  ref(false),
+  ref(false),
+  ref(false),
+] as [Ref<boolean>, Ref<boolean>, Ref<boolean>, Ref<boolean>]
 
 useMotionValueEvent(progress[0], "change", (latest) => {
-  latest === "0%" ? (isShown[0].value = false) : (isShown[0].value = true)
+  isShown[0].value = latest !== "0%"
 })
 
 useMotionValueEvent(progress[1], "change", (latest) => {
-  latest === "0%" ? (isShown[1].value = false) : (isShown[1].value = true)
+  isShown[1].value = latest !== "0%"
 })
 
 useMotionValueEvent(progress[2], "change", (latest) => {
-  latest === "0%" ? (isShown[2].value = false) : (isShown[2].value = true)
+  isShown[2].value = latest !== "0%"
 })
 
 useMotionValueEvent(progress[2], "change", (latest) => {
-  latest === "110%" ? (isShown[3].value = true) : (isShown[3].value = false)
+  isShown[3].value = latest === "110%"
 })
 
 const steps = [
@@ -74,10 +79,10 @@ const steps = [
         :class="cn('', { '-left-20! grid-cols-1! justify-start!': lessThan })">
         <div
           class="z-2 timeline-middle scale-110 rounded-full drop-shadow-sm"
-          :class="{ 'bg-p2': isShown[i] && !isShown?.[i].value }">
+          :class="{ 'bg-p2': isShown[i]?.value }">
           <Motion
             as-child
-            :animate="{ scale: isShown[i] && !isShown?.[i].value ? 0 : 1.1 }"
+            :animate="{ scale: isShown[i]?.value ? 0 : 1.1 }"
             :transition="{
               type: 'spring',
               bounce: 0.5,
@@ -138,7 +143,7 @@ const steps = [
           v-if="scrollProg"
           class="bg/p2! relative mt-2! grid w-0.75! items-start overflow-hidden rounded-full! group-last:hidden">
           <motion.hr
-            v-if="isShown[i] && isShown?.[i].value"
+            v-if="isShown[i]?.value"
             class="absolute -top-1.5 -left-16 size-full origin-top overflow-hidden! rounded-full! bg-neutral/70! group-last:hidden starting:scale-y-0"
             :style="{
               scaleY: progress[i] || 0,

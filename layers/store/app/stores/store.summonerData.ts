@@ -1,6 +1,7 @@
-import { defineStore } from 'pinia'
+//
+import { defineStore } from "pinia"
 
-export const useSummonerData = defineStore('summonerData', () => {
+export const useSummonerData = defineStore("summonerData", () => {
   const { summoner } = storeToRefs(s_session())
   const { matches } = storeToRefs(useSummonerMatches())
   const { filteredMatches } = storeToRefs(useMatchFilters())
@@ -9,32 +10,33 @@ export const useSummonerData = defineStore('summonerData', () => {
   const region = toValue(summoner.value?.region)
 
   const account = computed<Account | null>(() => {
-    if (!id) return null
-    return acc().getByPuuid(summoner.value.puuid)
+    const puuid = summoner.value?.puuid
+    if (!puuid) return null
+    return acc().getByPuuid(puuid)
   })
 
   const { getAllTimelinesForPuuid } = useTimeline()
 
   const timelines = shallowRef<PlayerTimeline[] | null>([])
 
-  async function getTimelines() {
-    if (!id) return null
+  async function getTimelines(): Promise<void> {
+    if (!id) return
     timelines.value = await getAllTimelinesForPuuid(id)
   }
 
   const mastery = shallowRef<ChampionMastery[] | null>([])
 
-  async function getMastery() {
-    if (!id) return null
+  async function getMastery(): Promise<void> {
+    if (!id || !region) return
     mastery.value = await getOrFetchAllMastery(id, region)
   }
 
-  const champions = computed<ChampionStats[]>(() => {
+  const champions = computed<ChampionStats[] | null>(() => {
     if (!id) return null
     return useChampionStats(matches, filteredMatches, id).value
   })
 
-  const allies = computed<AllyStatDetail[]>(() => {
+  const allies = computed<AllyStatDetail[] | null>(() => {
     if (!id) return null
     return aggregateAllies(filteredMatches, id).value
   })
@@ -42,9 +44,14 @@ export const useSummonerData = defineStore('summonerData', () => {
   const splash = computed(() => {
     if (account.value?.splash) return account.value.splash
 
-    const first = champKeyById(champions.value[0].championId)
+    const first = champKeyById(champions.value?.[0]?.championId ?? 0)
     if (!first) return null
-    else if (first) return getSplash(first, 'uncentered', getRandom(skinIndex[first]))
+    else if (first)
+      return getSplash(
+        first,
+        "uncentered",
+        getRandom(skinIndex[first] ?? [])
+      )
 
     return null
   })

@@ -11,6 +11,7 @@ const model = computed({
   set: (val) => store.setFilter("ally", val),
 })
 const { allies } = storeToRefs(s_champion())
+const alliesList = computed(() => (allies.value ?? []).sort((a, b) => b.games - a.games))
 </script>
 
 <template>
@@ -19,9 +20,9 @@ const { allies } = storeToRefs(s_champion())
       <ListboxContent class="h-100 max-h-100 w-full overflow-auto px-1.5 py-2">
         <template v-if="!s_matches().loading">
           <template
-            v-for="(item, ix) in allies?.sort((a, b) => b.games - a.games)"
+          v-for="(item, ix) in alliesList"
             :key="item.name">
-            <ListboxItem as-child :value="item.puuid">
+            <ListboxItem as-child :value="item.puuid ?? ''">
               <UButton
                 variant="ghost"
                 color="p0"
@@ -66,7 +67,7 @@ const { allies } = storeToRefs(s_champion())
             </ListboxItem>
 
             <USeparator
-              v-if="ix !== allies?.length - 1"
+              v-if="ix !== alliesList.length - 1"
               color="p0"
               class="opacity-80" />
           </template>

@@ -44,7 +44,8 @@ const shard = computed(() =>
       )
     ">
     <ShardIcon
-      :id
+      v-if="id !== null"
+      :id="id"
       :class="iconClass" />
     <slot />
   </Label>

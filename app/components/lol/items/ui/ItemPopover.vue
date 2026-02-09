@@ -21,7 +21,7 @@ const isOpen = ref<boolean>(false)
   <Popover
     v-slot="open"
     v-model:open="isOpen">
-    <PopoverTrigger
+    <UButton
       v-bind="$attrs"
       ref="trigger"
       color="neutral"
@@ -34,7 +34,7 @@ const isOpen = ref<boolean>(false)
         <LazyPrismaticShine v-if="isOpen || isHovered" />
       </Item>
       <slot :open />
-    </PopoverTrigger>
+    </UButton>
 
     <LazyPopperPopoverContent
       class="max-h-140 w-100! min-w-110 px-0 py-2 inset-shadow-xs"
@@ -43,5 +43,5 @@ const isOpen = ref<boolean>(false)
         v-if="open"
         :id="id" />
     </LazyPopperPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

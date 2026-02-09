@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Primitive } from 'reka-ui'
+import { Primitive } from 'reka-ui';
 
 const { class: className, pathClass } = defineProps<{
   class?: HTMLAttributes['class']
@@ -31,7 +31,7 @@ const { class: className, pathClass } = defineProps<{
 
       <Element
         v-memo="[set.secondary.path]"
-        color="default"
+
         :class="
           cn(
             'absolute -right-1.5 bottom-0 grid size-7 place-items-center overflow-hidden rounded-full border border-p3/90 shadow-xs transition-all duration-250 *:transition-opacity *:duration-200 group-hover/btn:bg-tint-p2/40! after:absolute after:inset-0 after:z-1 after:bg-black/70 after:opacity-0',

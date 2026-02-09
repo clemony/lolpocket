@@ -1,18 +1,19 @@
+//
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => runeIndex)
 
   const playerKeystone = computed(() =>
-    runeById(player.value.perks.keystone)
+    runeById(player?.value?.perks?.keystone ?? 0)
   )
 
-  const playerPaths = runeToPath[player.value?.runes?.secondary] ?? null
+  const playerPaths = runeToPath[player?.value?.runes?.secondary ?? 0] ?? null
 
   const pathList = [
-    'Precision',
-    'Domination',
-    'Sorcery',
-    'Resolve',
-    'Inspiration',
+    "Precision",
+    "Domination",
+    "Sorcery",
+    "Resolve",
+    "Inspiration",
   ]
 
   /*   const getKeystones = (set: ComputedRef<any>) =>

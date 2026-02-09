@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { deletePocket } from "~/domain/pocket/deletePocket"
+import { duplicatePocket } from "~/domain/pocket/duplicate"
+
 const props = defineProps<{
   pocket: Pocket
 }>()

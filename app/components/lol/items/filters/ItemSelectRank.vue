@@ -2,7 +2,7 @@
 const ranks = computed(() => Object.keys(itemRankColor))
 console.log('🌱 - ranks:', ranks)
 function onClick(rank: string): void {
-  if (rank === is().filters.rank) is().filters.rank = null
+  if (rank === is().filters.rank) is().filters.rank = ''
 }
 </script>
 

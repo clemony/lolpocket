@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { OnClickOutside } from '@vueuse/components'
+import { OnClickOutside } from "@vueuse/components"
 
 const { id } = defineProps<{
   id: number
 }>()
 
-const item = ref<Champion>(null)
+const item = ref<Champion | null>(null)
 
 watchEffect(async () => {
   if (!id) return
@@ -15,15 +15,14 @@ watchEffect(async () => {
       `#layers/patch/shared/records/champions/${champKeyById(id)}.ts`
     )
     item.value = module.default || null
-  }
-  catch (err) {
+  } catch (err) {
     console.error(`Failed to load champion for ${id}`, err)
     item.value = null
   }
 })
 
 const position = computed(() =>
-  mapPositions.find(p => p.name === String(item.value?.positions[0]))
+  mapPositions.find((p) => p.name === String(item.value?.positions[0]))
 )
 
 const toast = useToast()
@@ -51,9 +50,7 @@ function close() {
           class="flex w-full items-center justify-between gap-1"
           :style="{ '--position-color': position?.color }">
           <!-- NAME / LINK -->
-          <a
-            v-if="item.name"
-            :href="`/champions/${item.key}`">
+          <a v-if="item.name" :href="`/champions/${item.key}`">
             <h2 class="text-xl leading-4 font-semibold">
               {{ item.name }}
             </h2>
@@ -82,11 +79,7 @@ function close() {
     <div class="relative grid w-full auto-rows-auto overflow-y-auto pb-2">
       <!-- component OF -->
 
-      <Separator
-        :size="4"
-        label="ABILITIES"
-        placement="end"
-        color="neutral" />
+      <Separator :size="4" label="ABILITIES" placement="end" color="neutral" />
     </div>
   </OnClickOutside>
 </template>

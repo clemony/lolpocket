@@ -5,12 +5,13 @@ import { vDraggable } from 'vue-draggable-plus'
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
+const champions = computed(() => pocket.value?.champions ?? [])
 
 function onSpill(e: DraggableEvent) {
   console.log('🌱 - onSpill - e:', e)
-  const a = pocket.champions.findIndex(c => c === e.data.key)
-  if (a) pocket.champions.splice(a, 1)
+  const a = champions.value.findIndex(c => c === e.data.key)
+  if (a >= 0) champions.value.splice(a, 1)
 }
 </script>
 
@@ -18,7 +19,7 @@ function onSpill(e: DraggableEvent) {
   <div class="relative inset-x-1 h-36 overflow-x-hidden">
     <TransitionScalePop
       v-draggable="[
-        pocket.champions,
+        champions,
         {
           group: {
             name: 'champions',
@@ -39,9 +40,9 @@ function onSpill(e: DraggableEvent) {
         },
       ]"
       class="absolute inset-0 grid h-36 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center overflow-x-scroll overflow-y-hidden py-2">
-      <template v-if="pocket.champions.length">
+      <template v-if="champions.length">
         <Card
-          v-for="champion in pocket.champions"
+          v-for="champion in champions"
           :id="champion"
           :key="champion"
           class="relative grid h-36 w-[170px] shrink-0 place-items-center overflow-hidden shadow-sm inset-shadow-sm shadow-black/10 inset-shadow-black/10 drop-shadow-sm">

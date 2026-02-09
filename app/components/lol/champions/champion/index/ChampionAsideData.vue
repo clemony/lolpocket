@@ -6,12 +6,12 @@ const { champion, wrapperClass } = defineProps<{
 
 const resource = computed(() =>
   abilityResources.find(
-    r => r.name.toLowerCase() === champion?.resource.toLowerCase()
+    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase()
   )
 )
 
 const damageType = computed(() =>
-  damageTypes.find(d => d.type === champion.adaptiveType)
+  damageTypes.find((d) => d.type === champion.adaptiveType)
 )
 </script>
 
@@ -93,9 +93,7 @@ const damageType = computed(() =>
           </p>
         </div>
         <div>
-          <Icon
-            class="mr-1 size-4.5! shrink-0! text-gold dst"
-            name="lp:rp" />
+          <Icon class="mr-1 size-4.5! shrink-0! text-gold dst" name="lp:rp" />
           <p class="font-medium">
             {{ champion.price.rp }}
             <span class="pr-0.5 text-xs font-medium">RP</span>
@@ -106,10 +104,8 @@ const damageType = computed(() =>
 
     <div :class="wrapperClass">
       <p>Last Changed</p>
-      <tippy
-        :tag="null"
-        :interactive="true">
-        <BtnLink
+      <tippy :tag="null" :interactive="true">
+        <UButton
           class="decoration-bc/40 hover:decoration-bc gap-1! px-0 font-medium underline underline-offset-3 opacity-80 hover:underline hover:opacity-100"
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`">
@@ -122,14 +118,12 @@ const damageType = computed(() =>
                 name="link" />
             </p>
           </template>
-        </BtnLink>
+        </UButton>
       </tippy>
     </div>
 
     <div class="flex h-12 w-full items-center justify-between">
-      <p class="opacity-50">
-        Release Date
-      </p>
+      <p class="opacity-50">Release Date</p>
       <p class="font-medium">
         {{ useDateFormat(champion.releaseDate, "MMMM D, YYYY") }}
       </p>

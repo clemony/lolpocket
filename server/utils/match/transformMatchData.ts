@@ -1,27 +1,28 @@
+//
 export function transformMatchData(raw: any): MatchData {
   const teamTotal = (sKey: string, teamId: number) => {
     return raw.info.participants
-      .filter(p => p.teamId === teamId)
-      .map(p => p[sKey])
-      .reduce((s, v) => s + v, 0)
+      .filter((p: any) => p.teamId === teamId)
+      .map((p: any) => p[sKey])
+      .reduce((s: number, v: number) => s + v, 0)
   }
-  const teamGold = {
-    100: teamTotal('goldEarned', 100),
-    200: teamTotal('goldEarned', 200),
+  const teamGold: Record<number, number> = {
+    100: teamTotal("goldEarned", 100),
+    200: teamTotal("goldEarned", 200),
   }
-  const teamVision = {
-    100: teamTotal('visionScore', 100),
-    200: teamTotal('visionScore', 200),
+  const teamVision: Record<number, number> = {
+    100: teamTotal("visionScore", 100),
+    200: teamTotal("visionScore", 200),
   }
 
   const participants: Player[] = raw.info.participants.map(
     (p: any): Player => ({
-      name: p.riotIdGameName ?? '',
+      name: p.riotIdGameName ?? "",
       puuid: p.puuid,
       championId: p.championId,
       icon: p.profileIcon,
-      role: p.teamPosition.toLowerCase().replace('utility', 'support'),
-      tag: p.riotIdTagline ?? '',
+      role: p.teamPosition.toLowerCase().replace("utility", "support"),
+      tag: p.riotIdTagline ?? "",
       teamId: p.teamId,
 
       // placeholder, will overwrite after MVP calculation
@@ -79,7 +80,7 @@ export function transformMatchData(raw: any): MatchData {
         kda: roundDecimal(p.challenges?.kda) ?? 0,
         kills: p.kills,
         kp: roundDecimalToPercent(p.challenges?.killParticipation, 1) ?? 0,
-        timeSpentDead: p.totalTimeSpentDead ?? '',
+        timeSpentDead: p.totalTimeSpentDead ?? "",
 
         damagePercentage:
           roundDecimalToPercent(p.challenges?.teamDamagePercentage, 1) ?? 0,
@@ -97,8 +98,8 @@ export function transformMatchData(raw: any): MatchData {
         ccDuration: p.timeCCingOthers ?? 0,
         damageSelfMitigated: p.damageSelfMitigated ?? 0,
         damageTakenPercentage:
-          roundDecimalToPercent(p.challenges?.damageTakenOnTeamPercentage, 1)
-          ?? 0,
+          roundDecimalToPercent(p.challenges?.damageTakenOnTeamPercentage, 1) ??
+          0,
         // defense
         totalDamageTaken: p.totalDamageTaken ?? 0,
 
@@ -111,10 +112,10 @@ export function transformMatchData(raw: any): MatchData {
 
         allyJungleMinions: p.totalAllyJungleMinionsKilled ?? 0,
         csPerMin: roundDecimal(
-          (p.totalMinionsKilled
-            + p.totalAllyJungleMinionsKilled
-            + p.totalEnemyJungleMinionsKilled)
-          / (raw.info.gameDuration / 60)
+          (p.totalMinionsKilled +
+            p.totalAllyJungleMinionsKilled +
+            p.totalEnemyJungleMinionsKilled) /
+            (raw.info.gameDuration / 60)
         ),
         enemyJungleMinions: p.totalEnemyJungleMinionsKilled ?? 0,
         firstTowerAssist: p.challenges.firstTowerAssist ?? false,
@@ -122,26 +123,28 @@ export function transformMatchData(raw: any): MatchData {
         // farming
         goldEarned: p.goldEarned ?? 0,
         goldPerMin: roundDecimal(p.challenges.goldPerMinute) ?? 0,
-        goldShare: roundDecimalToPercent(p.goldEarned, teamGold[p.teamId]) ?? 0,
+        goldShare:
+          roundDecimalToPercent(p.goldEarned, teamGold[p.teamId ?? 0] ?? 0) ?? 0,
         minionsKilled: p.totalMinionsKilled ?? 0,
         objectivesStolen: p.objectivesStolen ?? 0,
         totalCs:
-          p.totalMinionsKilled
-          + p.totalAllyJungleMinionsKilled
-          + p.totalEnemyJungleMinionsKilled,
+          p.totalMinionsKilled +
+          p.totalAllyJungleMinionsKilled +
+          p.totalEnemyJungleMinionsKilled,
         turretsKilled: p.turretKills ?? 0,
 
         controlWardsPlaced: p.challenges?.controlWardsPlaced ?? 0,
         // vision
         visionScore: p.visionScore ?? 0,
         visionShare:
-          roundDecimalToPercent(p.visionScore, teamVision[p.teamId]) ?? 0,
+          roundDecimalToPercent(p.visionScore, teamVision[p.teamId ?? 0] ?? 0) ??
+          0,
         wardsKilled: p.wardsKilled ?? 0,
         wardsPlaced: p.wardsPlaced ?? 0,
       },
 
       //
-      win: raw.info.gameDuration < 147 ? 'remake' : (p.win ?? false),
+      win: raw.info.gameDuration < 147 ? "remake" : (p.win ?? false),
     })
   )
 
@@ -170,10 +173,12 @@ getTakedownsInAllLanesEarlyJungleAsLaner
   // continue mapping
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(
-      p => p.teamId === team.teamId
+      (p) => p.teamId === team.teamId
     )
 
-    const tp = raw.info.participants.filter(p => p.teamId === team.teamId)
+    const tp = raw.info.participants.filter(
+      (p: any) => p.teamId === team.teamId
+    )
 
     return {
       assists:
@@ -190,7 +195,7 @@ getTakedownsInAllLanesEarlyJungleAsLaner
       riftHerald: team.objectives?.riftHerald.kills ?? 0,
       tower: team.objectives?.tower.kills ?? 0,
 
-      bans: team.bans.map(b => b.championId ?? 0),
+      bans: team.bans.map((b: any) => b.championId ?? 0),
       teamId: team.teamId ?? 0,
       win: team.win ?? false,
     }
@@ -199,7 +204,7 @@ getTakedownsInAllLanesEarlyJungleAsLaner
   return {
     gameDuration: raw.info.gameDuration / 60,
     gameEndTimestamp: raw.info.gameEndTimestamp,
-    gamePatch: normalizePatch(raw.info.gameVersion),
+    gamePatch: normalizePatchNumber(raw.info.gameVersion),
     mapId: raw.info.mapId ?? 11,
     matchId: raw.metadata.matchId,
     participantIds: raw.metadata.participants,

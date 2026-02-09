@@ -7,7 +7,7 @@ const { id, class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const rune = shallowRef<Rune>(null)
+const rune = shallowRef<Rune | null>(null)
 const status = shallowRef<"idle" | "loading" | "success" | "error">("idle")
 
 watchEffect(async () => {

@@ -1,5 +1,7 @@
+//
+import { type MaybeRef, unref } from "vue"
 function makeRunePageKey(r: PlayerRunes) {
-  return [r.keystone, ...r.primary.runes, '|', ...r.secondary.runes].join('-')
+  return [r.keystone, ...r.primary.runes, "|", ...r.secondary.runes].join("-")
 }
 
 function scorePage(p: RunePageStats) {
@@ -15,8 +17,9 @@ export function pickBestShard(
   return res ? Number(Object.keys(res)[0]) : null
 }
 
-export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
+export function useChampionRuneStats(source: MaybeRef<MatchPlayerData[]>) {
   return computed(() => {
+    const matches = unref(source) ?? []
     const keystone: Record<number, StatDetail> = {}
     const primary: Record<number, StatDetail> = {}
     const secondary: Record<number, StatDetail> = {}
@@ -28,11 +31,11 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
       2: {},
     }
 
-    const totalMatches = source.value?.length
+    const totalMatches = matches.length
 
-    for (const match of source.value) {
+    for (const match of matches) {
       const p = match.player
-      if (!p || p.win === 'remake') continue
+      if (!p || p.win === "remake") continue
 
       bumpStat(keystone, p.runes.keystone, p.win)
 
@@ -46,7 +49,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
 
       //  slot-aware shard aggregation
       p.runes.shards.forEach((shardId, slot) => {
-        if (p.win !== 'remake')
+        if (p.win !== "remake")
           bumpStat(shards[slot as ShardSlot], shardId, p.win)
       })
 
@@ -56,6 +59,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
       const secondaryPath = pathNameById(r.secondary.path)
 
       // enforce path constraints (defensive)
+      if (!primaryPath || !secondaryPath) continue
       if (primaryPath === secondaryPath) continue
 
       const key = makeRunePageKey(r)
@@ -75,8 +79,9 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
         }
       }
 
-      pages[key] ? pages[key].games++ : null
-      if (p.win) pages[key] ? pages[key].win++ : null
+      pages[key].games++
+      pages[key].win ??= 0
+      if (p.win) pages[key].win++
     }
 
     for (const bucket of [
@@ -89,7 +94,8 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
     ]) {
       for (const key in bucket) {
         const s = bucket[key]
-        s.winrate = Math.round((s.win / s.games) * 1000) / 10
+        if (!s) continue
+        s.winrate = Math.round(((s.win ?? 0) / s.games) * 1000) / 10
         s.pickrate = Math.round((s.games / totalMatches) * 1000) / 10
       }
     }
@@ -102,7 +108,7 @@ export function useChampionRuneStats(source: Ref<MatchPlayerData[]>) {
 
     // 1️⃣ Primary pass: enforce sample-size guard
     for (const page of allPages) {
-      page.winrate = Math.round((page.win / page.games) * 1000) / 10
+      page.winrate = Math.round(((page.win ?? 0) / page.games) * 1000) / 10
       page.pickrate = Math.round((page.games / totalMatches) * 1000) / 10
       if (page.games < 5) continue
 

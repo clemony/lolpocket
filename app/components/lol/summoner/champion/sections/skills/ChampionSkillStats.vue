@@ -7,12 +7,17 @@ const { skills } = storeToRefs(s_champion())
 
 const route = useRoute()
 const ckey = computed(() => String(route.params.champion_key))
+const skillPriority = computed(() => skills.value?.priority ?? {})
+const skillByLevel = computed(() => skills.value?.byLevel ?? [])
+const skillPriorityEntries = computed(
+  () => Object.entries(skillPriority.value) as OrderedStatEntry[]
+)
 </script>
 
 <template>
   <UPageSection title="Abilities" :class="cn('', className)">
     <ChampionSkillPriority
-      v-for="(set, i) in Object.entries(skills.priority)"
+      v-for="(set, i) in skillPriorityEntries"
       :key="i"
       class="w-fit"
       simple
@@ -37,7 +42,7 @@ const ckey = computed(() => String(route.params.champion_key))
       <div class="grid auto-rows-min items-center">
         <div class="grid grid-cols-18 gap-2">
           <div
-            v-for="(_, i) in skills.byLevel"
+            v-for="(_, i) in skillByLevel"
             :key="i"
             class="grid size-12 place-items-center text-sm font-medium">
             {{ i }}
@@ -45,7 +50,7 @@ const ckey = computed(() => String(route.params.champion_key))
         </div>
         <div class="grid grid-cols-18 gap-2 overflow-hidden rounded-lg">
           <div
-            v-for="(level, i) in skills.byLevel"
+            v-for="(level, i) in skillByLevel"
             :key="i"
             class="grid grid-rows-4 place-items-center gap-2">
             <div
@@ -58,22 +63,22 @@ const ckey = computed(() => String(route.params.champion_key))
                 cn(
                   'flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-p2/40 text-xs! leading-none select-none',
                   {
-                    'text-transparent': ability.winrate === 0,
+                    'text-transparent': (ability.winrate ?? 0) === 0,
                     'bg-neutral/90 text-nc shadow-sm dss':
-                      ability.winrate !== 0,
+                      (ability.winrate ?? 0) !== 0,
                   }
                 )
               ">
               <span
                 :class="
                   cn('font-semibold brightness-110 saturate-150', {
-                    'text-inspiration': ability.winrate >= 51,
+                    'text-inspiration': (ability.winrate ?? 0) >= 51,
                     'text-domination':
-                      ability.winrate <= 49 && ability.winrate !== 0,
-                    'text-p3': ability.winrate < 51 && ability.winrate > 49,
+                      (ability.winrate ?? 0) <= 49 && (ability.winrate ?? 0) !== 0,
+                    'text-p3': (ability.winrate ?? 0) < 51 && (ability.winrate ?? 0) > 49,
                   })
                 ">
-                {{ ability.winrate }}
+                {{ ability.winrate ?? 0 }}
               </span>
               <!--  <span class="font-medium! opacity-80">{{ ability.games }}</span> -->
             </div>

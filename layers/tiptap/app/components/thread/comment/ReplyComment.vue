@@ -4,7 +4,7 @@ const { comment } = defineProps<{
 }>()
 const emit = defineEmits(['close'])
 
-const replyContent = ref<Doc>(null)
+const replyContent = ref<Doc | null>(null)
 </script>
 
 <template>
@@ -18,9 +18,10 @@ const replyContent = ref<Doc>(null)
         :change="!editor?.isEmpty"
         @click.stop="
           () => {
+            if (!comment.thread_id || !replyContent) return
             postComment(replyContent, comment.thread_id, comment.id)
-            editor.commands.clearContent()
-            editor.commands.blur()
+            editor?.commands.clearContent()
+            editor?.commands.blur()
             emit('close')
           }
         " />

@@ -1,3 +1,4 @@
+//
 export function pickBest<K extends string | number>(
   stats: Record<K, StatDetail>,
   minGames = 5
@@ -19,7 +20,7 @@ export function pickBestGeneric<K extends string | number>(
   for (const [key, s] of entries) {
     if (s.games < minGames) continue
 
-    const score = s.winrate ?? s.win / s.games
+    const score = s.winrate ?? (s.win ?? 0) / s.games
     if (score > bestScore) {
       bestScore = score
       bestKey = key
@@ -30,7 +31,7 @@ export function pickBestGeneric<K extends string | number>(
   // 2️⃣ fallback
   if (!bestStat) {
     for (const [key, s] of entries) {
-      const score = s.winrate ?? s.win / s.games
+      const score = s.winrate ?? (s.win ?? 0) / s.games
       if (score > bestScore) {
         bestScore = score
         bestKey = key

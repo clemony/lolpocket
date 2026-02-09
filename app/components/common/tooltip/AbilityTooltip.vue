@@ -3,7 +3,7 @@ const { id } = defineProps<{
   id: string
 }>()
 
-const item = ref<Ability>(null)
+const item = ref<Ability | null>(null)
 watchEffect(async () => {
   if (!id) return
 
@@ -47,7 +47,7 @@ const champ = computed(() => {
           </a>
 
           <a
-            v-if="id"
+            v-if="champ"
             :title="`Official LoL Wiki - ${champ}`"
             target="_blank"
             :href="wikiLink(champ)">

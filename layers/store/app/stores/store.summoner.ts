@@ -1,7 +1,8 @@
-import { defineStore } from 'pinia'
+//
+import { defineStore } from "pinia"
 
 export const useSummonerStore = defineStore(
-  'summoner',
+  "summoner",
   () => {
     const hydrated = ref<boolean>(false)
     const MAX_CACHE = 100
@@ -26,7 +27,7 @@ export const useSummonerStore = defineStore(
     const resolveByPuuid = (puuid?: string | null) =>
       puuid ? (cache.value[puuid] ?? null) : null
 
-    const resolveBySlug = (region, name, tag) => {
+    const resolveBySlug = (region: string, name: string, tag: string) => {
       if (!Object.keys(index.value).length) {
         rebuildIndex()
       }
@@ -54,9 +55,9 @@ export const useSummonerStore = defineStore(
 
     const evictIfNeeded = () => {
       const keys = Object.keys(cache.value)
-      if (keys.length <= MAX_CACHE) return
+      if (!keys.length || keys.length <= MAX_CACHE) return
 
-      let oldest = keys[0]
+      let oldest = keys[0]!
       for (const id of keys) {
         if ((meta.value[id] ?? 0) < (meta.value[oldest] ?? 0)) oldest = id
       }
@@ -82,26 +83,26 @@ export const useSummonerStore = defineStore(
       name?: string
       tag?: string
       force?: boolean
-    }): Promise<Summoner> => {
+    }): Promise<Summoner | null> => {
       const { name, puuid, force, region, tag } = args
-      if (!puuid && !region && !name && !tag) return
+      if (!puuid && !region && !name && !tag) return null
 
-      console.log('🥸 - index:', index)
+      console.log("🥸 - index:", index)
       let existing: Summoner | null = null
 
       if (puuid) existing = resolveByPuuid(puuid)
       else if (region && name && tag)
         existing = resolveBySlug(region, name, tag)
-      console.log('🥸 - ensureSummoner - existing:', existing)
+      console.log("🥸 - ensureSummoner - existing:", existing)
 
       if (existing && !force && !isStale(existing.puuid)) return existing
 
-      const base = await $fetch<Summoner>('/api/summonerAccount', {
+      const base = await $fetch<Summoner>("/api/summonerAccount", {
         params: args,
       })
 
-      const ranked = await $fetch<{ ranked: Summoner['ranked'] }>(
-        '/riot/v4/league/entries/byPuuid',
+      const ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
+        "/riot/v4/league/entries/byPuuid",
         { params: { puuid: base.puuid, region: base.region } }
       )
 
@@ -118,14 +119,14 @@ export const useSummonerStore = defineStore(
       if (!puuid) return
 
       const hit = resolveByPuuid(puuid)
-      console.log('🥸 - resolveOrFetch - hit:', hit)
+      console.log("🥸 - resolveOrFetch - hit:", hit)
       if (hit) return hit
       return await ensureSummoner({ puuid })
     }
 
     const mergeRanked = (
-      puuid: Summoner['puuid'],
-      ranked: Summoner['ranked']
+      puuid: Summoner["puuid"],
+      ranked: Summoner["ranked"]
     ) => {
       const s = cache.value[puuid]
       if (!s) return
@@ -137,7 +138,7 @@ export const useSummonerStore = defineStore(
       cache.value = {}
       meta.value = {}
       index.value = {}
-      localStorage.removeItem('summonerStore')
+      localStorage.removeItem("summonerStore")
     }
 
     const patchSummoner = (puuid: string, patch: Partial<Summoner>) => {
@@ -168,7 +169,7 @@ export const useSummonerStore = defineStore(
   },
   {
     persist: {
-      key: 'summonerStore',
+      key: "summonerStore",
       afterHydrate: (ctx) => {
         ctx.store.rebuildIndex()
         ctx.store.hydrated = true

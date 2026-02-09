@@ -51,7 +51,7 @@ const inboxes: Record<string, InboxType> = {
               :key="item.name"
               class="h-full px-3"
               :value="item.component">
-              <icon :name="item.icon.name" />
+              <icon :name="item.icon?.name ?? ''" />
             </TabsTrigger>
             <TabIndicator class="bg-p0" />
           </TabsList>

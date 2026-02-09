@@ -4,7 +4,7 @@ const { championKeys, filteredKeys } = defineProps<{
   championKeys: string[]
 }>()
 
-const selectedChampion = ref<string>(null)
+const selectedChampion = ref<string | null>(null)
 const loaded = ref<boolean>(false)
 </script>
 

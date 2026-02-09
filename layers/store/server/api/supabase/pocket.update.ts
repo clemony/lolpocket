@@ -6,7 +6,10 @@ export default defineEventHandler(async (event) => {
   const { client, user } = await createSupabaseClient(event)
   if (!user) return
   const body = await readBody<Pocket>(event)
-  console.log('🚀 pocket raw:', JSON.stringify(body.items[0].id, null, 2))
+  console.log(
+    '🚀 pocket raw:',
+    JSON.stringify(body.items?.[0]?.id ?? null, null, 2)
+  )
   const parsed = v.safeParse(pocketSchema, body)
   if (!parsed.success) {
     console.log('📎 - data:', parsed.issues)

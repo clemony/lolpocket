@@ -14,14 +14,16 @@ const { command, editor, items } = defineProps<{
 }>()
 
 const selectedIndex = ref(0)
-const selectedItem = computed<Index>(() => items[selectedIndex.value])
+const selectedItem = computed<Index | undefined>(() =>
+  items[selectedIndex.value]
+)
 
 function update() {
   if (!selectedItem.value) return
   command({
     'data-id': selectedItem.value.id,
-    'data-key': selectedItem.value.key,
-    'data-name': selectedItem.value.name,
+    'data-key': String(selectedItem.value.key ?? ''),
+    'data-name': String(selectedItem.value.name ?? ''),
   })
   exitSuggestion(editor.view, 'suggestion' as any)
 }
@@ -51,7 +53,7 @@ const { activate, deactivate, hasFocus } = useFocusTrap(target, {
   isKeyForward: e => e.key === 'ArrowDown',
 })
 
-watch(arrowdown, (v) => {
+watch(() => arrowdown?.value ?? false, (v) => {
   if (v && !hasFocus.value) {
     activationKey.value = '.index-0'
     nextTick(() => {
@@ -60,7 +62,7 @@ watch(arrowdown, (v) => {
   }
 })
 
-watch(arrowup, (v) => {
+watch(() => arrowup?.value ?? false, (v) => {
   if (v && !hasFocus.value) {
     activationKey.value = `.index-${items.length - 1}`
     console.log('🌱 - activationKey.value :', activationKey.value)

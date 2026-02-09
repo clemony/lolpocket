@@ -7,6 +7,9 @@ const model = computed({
   get: () => filter?.value.champion,
   set: (val) => store.setFilter("champion", val),
 })
+const championList = computed(() =>
+  Array.from(champions.value?.values?.() ?? [])
+)
 
 watch(
   () => filter.value.champion,
@@ -22,7 +25,7 @@ watch(
       <ListboxContent
         class="overscroll-default grid h-100 max-h-100 w-full overflow-auto p-1.5">
         <template
-          v-for="(item, ix) in champions.values()"
+        v-for="(item, ix) in championList"
           :key="item.championId">
           <ListboxItem as-child :value="item.championId">
             <UButton
@@ -63,11 +66,11 @@ watch(
             </UButton>
           </ListboxItem>
           <USeparator
-            v-if="ix !== champions?.length - 1"
+            v-if="ix !== championList.length - 1"
             color="p0"
             class="opacity-80" />
         </template>
-        <LilKrug v-if="!champions?.length" />
+        <LilKrug v-if="!championList.length" />
       </ListboxContent>
     </Listbox>
   </UCard>

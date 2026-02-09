@@ -9,8 +9,16 @@ const { class: className, pocket: p } = defineProps<{
 // todo be not dumb
 
 const pocket = computed(() => p).value
+const favorites = computed({
+  get: () => as().settings?.favorite_pockets ?? [],
+  set: (value: string[]) => {
+    const settings = as().settings
+    if (settings) settings.favorite_pockets = value
+  },
+})
+
 function handleLike() {
-  return as().settings.favorite_pockets.includes(pocket.key)
+  return favorites.value.includes(pocket.key)
     ? pocket.likes + 1
     : pocket.likes - 1
 }
@@ -26,9 +34,9 @@ function handleLike() {
     "
     variant="outline">
     <input
-      v-model="as().settings.favorite_pockets"
+      v-model="favorites"
       class="peer hidden"
-      :disabled="pocket.uuid === as().account.puuid"
+      :disabled="pocket.uuid === as().account?.puuid"
       type="checkbox"
       :value="pocket.key"
       @change="handleLike()">

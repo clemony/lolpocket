@@ -11,9 +11,17 @@ const {
   color?: string
 }>()
 
-const highest = computed(
-  () => match.participants.map(p => p.stats[stat[0]]).sort((a, b) => b - a)[0]
-)
+const statKey = computed(() => stat[0] as keyof PlayerStats)
+const statNumber = (value: PlayerStats[keyof PlayerStats] | undefined) => {
+  if (typeof value === 'number') return value
+  return value ? 1 : 0
+}
+const highest = computed(() => {
+  const key = statKey.value
+  return match.participants
+    .map(p => statNumber(p.stats?.[key]))
+    .sort((a, b) => b - a)[0]
+})
 </script>
 
 <template>
@@ -43,28 +51,28 @@ const highest = computed(
       :data-tag="stat[1].name"
       :class="
         cn('match-cell group/stat', {
-          'match-null': player.stats?.[stat[0]] === 0,
+          'match-null': statNumber(player.stats?.[statKey]) === 0,
         })
       ">
       <div
-        v-if="player.stats?.[stat[0]] === highest && highest > 0"
+        v-if="statNumber(player.stats?.[statKey]) === highest && highest > 0"
         :style="{
           backgroundColor:
-            player.stats?.[stat[0]] === highest && highest > 0
+            statNumber(player.stats?.[statKey]) === highest && highest > 0
               ? `color-mix(in lch, ${color} 30%, transparent 70%)`
               : 'transparent',
         }"
         :class="
           cn({
             'text-pc/0! badge absolute origin-center place-self-center border-0! drop-shadow-none saturate-120 transition-all duration-300 group-hover/stat:scale-500':
-              player.stats?.[stat[0]] === highest && highest > 0,
+              statNumber(player.stats?.[statKey]) === highest && highest > 0,
           })
         ">
-        {{ player.stats?.[stat[0]]?.toLocaleString() }}{{ stat[1]?.unit }}
+        {{ statNumber(player.stats?.[statKey])?.toLocaleString() }}{{ stat[1]?.unit }}
       </div>
 
       <span class="absolute place-self-center">
-        {{ player.stats?.[stat[0]]?.toLocaleString() }}{{ stat[1]?.unit }}
+        {{ statNumber(player.stats?.[statKey])?.toLocaleString() }}{{ stat[1]?.unit }}
       </span>
     </div>
   </div>

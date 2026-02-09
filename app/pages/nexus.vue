@@ -17,7 +17,7 @@ function toasty() {
 
 But did you know there’s a part of your brain specifically dedicated to smelling burnt toast?
 
-In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral seizures that worked by zapping particular nerve cells with electrical probes. One of his patients was a woman with epilepsy who smelled burnt toast whenever she was about to have a seizure. ${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}!`,
+In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral seizures that worked by zapping particular nerve cells with electrical probes. One of his patients was a woman with epilepsy who smelled burnt toast whenever she was about to have a seizure. ${getRandom(heyGoodJob)}!`,
     icon: "x",
   })
 }
@@ -39,21 +39,21 @@ definePageMeta({
     </header>
 
     <div class="mx-auto flex w-1/5 items-center gap-3 space-y-2">
-      <Button
+      <UButton
         class="ml-auto pr-4 pl-2.5 font-normal"
         color="neutral"
         @click="toasty()">
         <icon name="add" />
         toast
-      </Button>
-      <Button @click="accountFetch()"> fetch user datasss </Button>
-      <Button @click="console.log('summoner:', ss().cache)">
+      </UButton>
+      <UButton @click="accountFetch()"> fetch user datasss </UButton>
+      <UButton @click="console.log('summoner:', ss().cache)">
         resolve the slug
-      </Button>
+      </UButton>
 
-      <Button @click="useSignOut()"> sign out </Button>
+      <UButton @click="useSignOut()"> sign out </UButton>
 
-      <!--       <Button
+      <!--       <UButton
         @click="() => {
           toast({
             title: 'Scheduled: Catch up',
@@ -61,7 +61,7 @@ definePageMeta({
           });
         }">
         Add to calendar
-      </Button>
+      </UButton>
     </div>
 
     <Separator class="bg-p3/60 w-full" />
@@ -83,12 +83,5 @@ definePageMeta({
     <SiteFooter />
   </div> -->
     </div>
-    <!--
-    <UButton
-      icon="i-mingcute-loading-fill"
-      :ui="{
-        leadingIcon: 'animate-spin duration-200  repeat-infinite',
-      }" /> -->
-    <ColorMode />
   </div>
 </template>

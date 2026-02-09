@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const patchModel = shallowRef<number>(null)
+const patchModel = shallowRef<number | undefined>(undefined)
 const store = useMatchFilters()
 
 const p = computed(() => {
@@ -19,7 +19,7 @@ const p = computed(() => {
   :interactive="true"
   :arrow="false"
   >
-  <Button
+ <UButton
     class="w-full justify-between bg-p0! text-sm hover:bg-p0! hover:ring hover:ring-pc/60 hover:fx-0"
     variant="outline">
     {{ store.filter?.patch ?? "Select Patch" }}
@@ -27,7 +27,7 @@ const p = computed(() => {
     <Icon
       class="size-4"
       name="up-down" />
-  </Button>
+  </UButton>
 <!--   <template #content>
     <div class="px-1.5 py-2">
       <PopoverItem v-for="patch in p" :key="patch">

@@ -4,16 +4,12 @@ const { champion, championId } = defineProps<{
   championId?: number
 }>()
 
-const name = computed(() =>
-  champNameById(champion?.championId ?? championId)
-)
-const id = computed(() => champion?.championId ?? championId)
+const id = computed(() => champion?.championId ?? championId ?? 0)
+const name = computed(() => champNameById(id.value))
 const level = computed(() =>
-  champion?.level >= 10
+  champion?.level && champion.level >= 10
     ? 10
-    : champion?.level
-      ? champion.level
-      : 0
+    : champion?.level ?? 0
 )
 </script>
 
@@ -21,7 +17,7 @@ const level = computed(() =>
   <SplashCard
     class="group/photo pb-0.5"
     :alt="name"
-    :skin-url="getSplash(champKeyById(id), 'tile')">
+    :skin-url="getSplash(champKeyById(id) ?? '', 'tile')">
     <template #banner>
       <Img
         :src="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"

@@ -4,7 +4,7 @@ const { match: m } = defineProps<{
 }>()
 
 const { summoner } = storeToRefs(s_session())
-const player = computed<Player>(() => {
+const player = computed<Player | undefined>(() => {
   return m?.participants.find(p => p.puuid === summoner.value?.puuid)
 })
 

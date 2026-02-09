@@ -5,7 +5,7 @@ export const useThreadStore = defineStore(
   () => {
     const threads = ref<Record<string, Record<string, CommentData>>>({})
     const children = ref<Record<string, Record<string, string[]>>>({})
-    const reportComment = ref<CommentData>(null)
+    const reportComment = ref<CommentData | null>(null)
     const reportOpen = shallowRef<boolean>(false)
 
     const toggleOpen = useToggle(reportOpen)
@@ -18,13 +18,13 @@ export const useThreadStore = defineStore(
       commentId: string
     ) {
       if (!children.value[threadId]) children.value[threadId] = {}
-      const list = children.value[threadId][parentId] ?? []
+      const list = children.value[threadId]?.[parentId] ?? []
 
       if (!list.includes(commentId)) list.push(commentId)
 
       list.sort((a, b) => {
-        const A = threads.value[threadId][a]
-        const B = threads.value[threadId][b]
+        const A = threads.value[threadId]?.[a]
+        const B = threads.value[threadId]?.[b]
         return (B?.score ?? 0) - (A?.score ?? 0)
       })
 
@@ -67,7 +67,9 @@ export const useThreadStore = defineStore(
     function getChildComments(threadId: string, parentId: string | null) {
       const pid = parentId ?? 'root'
       const ids = children.value[threadId]?.[pid] ?? []
-      return ids.map(id => threads.value[threadId][id])
+      return ids
+        .map(id => threads.value[threadId]?.[id])
+        .filter((item): item is CommentData => Boolean(item))
     }
 
     function getSortedRootComments(threadId: string, sortBy: 'best' | 'new') {
@@ -75,10 +77,12 @@ export const useThreadStore = defineStore(
       if (!thread) return []
 
       const rootIds = children.value[threadId]?.root ?? []
-      const items = rootIds.map(id => thread[id]).filter(Boolean)
+      const items = rootIds
+        .map(id => thread[id])
+        .filter((item): item is CommentData => Boolean(item))
 
       if (sortBy === 'best') {
-        items.sort((a, b) => b.score - a.score)
+        items.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
       }
       else if (sortBy === 'new') {
         items.sort(

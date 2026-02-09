@@ -1,3 +1,4 @@
+//
 export function sortTimedByWinratePickrate(
   record: Record<number, StatDetail>
 ): OrderedTimedStatEntry[] {
@@ -44,7 +45,7 @@ export function sortTimedByTime(
   record: OrderedTimedStatEntry[]
 ): OrderedTimedStatEntry[] {
   return record.sort(([, a], [, b]) => {
-    return a.avgTimestamp - b.avgTimestamp
+    return (a.avgTimestamp ?? 0) - (b.avgTimestamp ?? 0)
   })
 }
 

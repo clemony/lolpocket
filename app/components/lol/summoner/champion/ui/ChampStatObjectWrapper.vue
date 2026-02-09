@@ -23,7 +23,7 @@ const {
       <slot />
       <WinrateIndicator
         v-if="!simple && stat?.games"
-        :value="stat?.winrate" />
+        :value="stat?.winrate ?? 0" />
     </div>
 
     <ChampStatValues

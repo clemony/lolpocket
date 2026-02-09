@@ -13,16 +13,17 @@ const {
   hideZero?: boolean
 }>()
 
-const obj = computed(() => ({
-  games: champion?.games || ally?.games,
-  win: champion?.wins || ally?.win,
-  wr:
-    champion ? (champion?.wins / champion?.games) * 100
+const obj = computed(() => {
+  const games = champion?.games ?? ally?.games ?? 0
+  const win = champion?.wins ?? ally?.win ?? 0
+  const wr = champion ? (champion.wins / champion.games) * 100
     : entry ? (entry.wins / (entry.wins + entry.losses)) * 100
-    : ally ? (ally?.win / ally?.games) * 100
-    : null,
-}))
+    : ally ? ((ally.win ?? 0) / (ally.games ?? 1)) * 100
+    : null
+  return { games, win, wr }
+})
 const data = computed(() => {
+  const wr = obj.value.wr ?? 0
   return {
     datasets: [
       {
@@ -31,14 +32,14 @@ const data = computed(() => {
             cssVar(`--color-${entry?.tier ?? "p3"}`)
           : cssVar(
               `--color-${
-                obj.value.wr >= 51 ? "win"
-                : obj.value.wr <= 49 ? "domination"
+                wr >= 51 ? "win"
+                : wr <= 49 ? "domination"
                 : "silver"
               }`
             ),
           cssVar("--color-p3"),
         ],
-        data: [obj.value.win, obj.value.games],
+        data: [obj.value.win ?? 0, obj.value.games ?? 0],
       },
     ],
     labels: ["win", "loss"],

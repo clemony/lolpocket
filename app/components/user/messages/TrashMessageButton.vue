@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { trashMsg } from './inbox-management'
+import { trashMsg } from './inbox-management';
 
 const { class: className, message } = defineProps<{
   class?: HTMLAttributes['class']
@@ -8,7 +8,7 @@ const { class: className, message } = defineProps<{
 </script>
 
 <template>
-  <Button
+ <UButton
     v-tippy="'Send to Trash'"
     class="size-6"
     :color="!message.read ? 'neutral' : 'transparent'"
@@ -16,5 +16,5 @@ const { class: className, message } = defineProps<{
     <icon
       class="pointer-events-none size-3.5"
       name="ph:trash-bold" />
-  </Button>
+  </UButton>
 </template>

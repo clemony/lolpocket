@@ -13,7 +13,7 @@ const { class: className, simple } = defineProps<{
       class="text-xs font-medium text-pc/70 fx-0"
       base="btn"
       size="xs"
-      color="default">
+      >
       No data
     </Element>
   </ChampStatRowWrapper>

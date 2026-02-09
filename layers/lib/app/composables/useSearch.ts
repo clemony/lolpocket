@@ -16,8 +16,8 @@ export function useSearch<T>(
     () => unref(source),
     (val) => {
       fuse.value = new Fuse(val, {
-        keys: opt.keys,
-        ...opt.options,
+        keys: opt?.keys,
+        ...opt?.options,
         threshold: 0.3,
       })
     },
@@ -25,7 +25,7 @@ export function useSearch<T>(
   )
 
   const results = computed(() => {
-    const res = fuse.value?.search(query.value)
+    const res = fuse.value?.search(query.value) ?? []
 
     return res.map(r => r.item)
   })
@@ -47,8 +47,8 @@ export function useMatchedSearch<T>(
     () => unref(source),
     (val) => {
       fuse.value = new Fuse(val, {
-        keys: opt.keys,
-        ...opt.options,
+        keys: opt?.keys,
+        ...opt?.options,
 
         includeMatches: true,
         threshold: 0.3,
@@ -58,7 +58,7 @@ export function useMatchedSearch<T>(
   )
 
   const results = computed(() => {
-    const res = fuse.value?.search(query.value)
+    const res = fuse.value?.search(query.value) ?? []
     console.log('🥸 - useSearch - res:', res)
 
     return res.reverse()
@@ -81,8 +81,8 @@ export function useLogicalSearch<T>(
     () => unref(source),
     (val) => {
       fuse.value = new Fuse(val, {
-        keys: opt.keys,
-        ...opt.options,
+        keys: opt?.keys,
+        ...opt?.options,
         threshold: 0.3,
       })
     },
@@ -90,7 +90,7 @@ export function useLogicalSearch<T>(
   )
 
   const results = computed(() => {
-    const res = fuse.value?.search(query.value)
+    const res = fuse.value?.search(query.value) ?? []
     console.log('🥸 - useSearch - res:', res)
 
     return res.reverse()

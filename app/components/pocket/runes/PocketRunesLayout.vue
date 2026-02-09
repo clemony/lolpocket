@@ -7,7 +7,7 @@ const emit = defineEmits(['update:slide'])
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
 
 const set = computed(() => s).value
 const pathList = pathIndex.map(p => p.name)
@@ -21,21 +21,21 @@ function handlePath1() {
 
   const index = pathList.findIndex(p => p === set.secondary?.path)
   if (set.primary?.path === set.secondary.path)
-    set.secondary.path = pathList[index === 4 ? 0 : index + 1]
+    set.secondary.path = pathList[index === 4 ? 0 : index + 1] ?? set.secondary.path
 }
 
 function handlePath2() {
   set.secondary.runes = []
 }
 
-function handlePathUpdate(e) {
+function handlePathUpdate(e: { primary: string; secondary: string }) {
   set.primary.path = e.primary
   set.secondary.path = e.secondary
 }
 
 function handleDelete() {
   emit('update:slide')
-  deleteRuneSet(pocket, set)
+  if (pocket.value) deleteRuneSet(pocket.value, set)
 }
 </script>
 
@@ -69,9 +69,10 @@ function handleDelete() {
         </Tabs>
 
         <Keystones
+          v-if="pocket"
           :set="set"
           :pocket="pocket"
-          :runes="primaryRunes.slots[0]?.runes" />
+          :runes="primaryRunes.slots?.[0]?.runes ?? []" />
 
         <LazyRunePicker
           v-if="primaryRunes"
@@ -83,20 +84,20 @@ function handleDelete() {
 
         <div
           class="absolute bottom-50 -left-24 mb-4 flex flex-col flex-nowrap items-center gap-5 px-1">
-          <Button
+         <UButton
             class="size-11 h-full rounded-full shadow-sm shadow-black/6"
             variant="outline"
             title="Delete Set"
             @click="handleDelete()">
             <icon name="trash" />
-          </Button>
-          <Button
+          </UButton>
+         <UButton
             class="size-11 h-full rounded-full shadow-sm shadow-black/6"
             variant="outline"
             title="Reset set runes"
             @click="resetRunes(set)">
             <icon name="reset" />
-          </Button>
+          </UButton>
         </div>
       </div>
       <PathPicker
@@ -123,6 +124,7 @@ function handleDelete() {
           :path="set.secondary.path" />
 
         <RuneShards
+          v-if="pocket"
           :pocket="pocket"
           :set />
       </div>

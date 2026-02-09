@@ -1,3 +1,4 @@
+//
 export function useChampionStats(
   matches: Ref<MatchData[]>,
   filteredMatches: Ref<MatchData[]>,
@@ -7,9 +8,8 @@ export function useChampionStats(
     const allChampionIds = new Set<number>()
 
     for (const match of matches.value) {
-      const row = match.participants.find(p => p.puuid === puuid)
-      if (row)
-        allChampionIds.add(row.championId)
+      const row = match.participants.find((p) => p.puuid === puuid)
+      if (row) allChampionIds.add(row.championId)
     }
 
     const map = new Map<number, ChampionStats>()
@@ -17,7 +17,7 @@ export function useChampionStats(
     for (const id of allChampionIds) {
       map.set(id, {
         championId: id,
-        championName: champNameById(id),
+        championName: champNameById(id) ?? "",
         games: 0,
         kda: 0,
         losses: 0,
@@ -28,8 +28,8 @@ export function useChampionStats(
     }
 
     for (const match of filteredMatches.value) {
-      const row = match.participants.find(p => p.puuid === puuid)
-      if (!row || row.win === 'remake') continue
+      const row = match.participants.find((p) => p.puuid === puuid)
+      if (!row || row.win === "remake") continue
 
       const acc = map.get(row.championId)
       if (!acc) continue // defensive, should never happen
@@ -37,11 +37,12 @@ export function useChampionStats(
       applyParticipantStats(acc, row)
       acc.gamePatches?.push(match.gamePatch)
 
-      acc.kda
-        = Math.round(
-          (((acc.kills as StatAverage).total
-            + (acc.assists as StatAverage).total)
-          / Math.max(1, (acc.deaths as StatAverage).total)) * 100
+      acc.kda =
+        Math.round(
+          (((acc.kills as StatAverage).total +
+            (acc.assists as StatAverage).total) /
+            Math.max(1, (acc.deaths as StatAverage).total)) *
+            100
         ) / 100
 
       for (const key of Object.keys(AGGREGATED_STAT_SCHEMA) as Array<
@@ -52,6 +53,6 @@ export function useChampionStats(
       }
     }
 
-    return [...sortMapBy(map, 'games').values()]
+    return [...sortMapBy(map, "games").values()]
   })
 }

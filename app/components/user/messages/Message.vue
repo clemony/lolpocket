@@ -53,7 +53,7 @@ const { message } = defineProps<{
         </label>
       </form>
       <article class="size-full p-4 pt-6">
-        <textarea
+        <UTextarea
           class="text-mdd btn textarea size-full bg-p0/40 text-start backdrop-blur-lg"
           :value="message.content"
           readonly />

@@ -8,7 +8,10 @@ const store = useMatchFilters()
 const { filter } = storeToRefs(store)
 
 const { summoner } = storeToRefs(s_session())
-const roleStats = await useMatchRoles(summoner.value.puuid, matches.value)
+const roleStats = await useMatchRoles(
+  summoner.value?.puuid ?? '',
+  matches.value
+)
 
 const roleModel = computed({
   get: () => filter.value.role,
@@ -19,7 +22,7 @@ const roleModel = computed({
 <template>
   <div class="w-full">
     <div class="mb-2 -ml-1 flex items-center">
-      <Button
+     <UButton
         class="gap-2 place-self-center rounded-lg px-2.5 text-md font-medium"
         size="sm"
         variant="ghost"
@@ -27,7 +30,7 @@ const roleModel = computed({
         @click="store.clearFilters()">
         {{
           ms().filter.role !== "ALL" ?
-            roleStats.find((r) => r.role === ms().filter.role).name
+            roleStats.find((r) => r.role === ms().filter.role)?.name
             : "Position"
         }}
 
@@ -35,7 +38,7 @@ const roleModel = computed({
           v-if="ms().filter.role !== 'ALL'"
           class="-mt-px shrink-0"
           name="x-sm" />
-      </Button>
+      </UButton>
     </div>
 
     <div class="h-15 w-full justify-start overflow-hidden px-2">

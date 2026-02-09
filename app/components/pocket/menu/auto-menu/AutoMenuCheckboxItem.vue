@@ -3,8 +3,8 @@ import type { MenubarItem } from '~/components/pocket/menu/types.menubar'
 
 const { item } = defineProps<{ item: MenubarItem }>()
 const modelProxy = computed({
-  get: () => item.model.valueOf(),
-  set: v => item.model.set(v),
+  get: () => item.model?.valueOf() ?? false,
+  set: v => item.model?.set(v),
 })
 </script>
 
@@ -16,7 +16,7 @@ const modelProxy = computed({
     :inset="item.inset">
     <icon
       v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
-      :name="getIcon(item.icon)?.name"
+      :name="getIcon(item.icon)?.name ?? ''"
       :class="cn('size-4.5', getIcon(item.icon)?.class)" />
     {{ item.name }}
   </MenubarCheckboxItem>

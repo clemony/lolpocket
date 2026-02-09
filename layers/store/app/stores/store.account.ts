@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
 export const useAccountStore = defineStore(
-  'as',
+  "as",
   () => {
     const user = useSupabaseUser()
     const sb = ref<Account>()
@@ -12,13 +12,16 @@ export const useAccountStore = defineStore(
     const ss = useSummonerStore()
 
     watch(
-      () => ss.cache[account.value?.puuid ?? ''],
+      () =>
+        (ss.cache.value as Record<string, Summoner> | undefined)?.[
+          account.value?.puuid ?? ""
+        ],
       (update) => {
         if (!update || !account.value) return
 
         if (
-          !account.value.lastDataUpdate
-          || update.lastDataUpdate > account.value.lastDataUpdate
+          !account.value.lastDataUpdate ||
+          update.lastDataUpdate > account.value.lastDataUpdate
         ) {
           Object.assign(account.value, update)
         }
@@ -26,7 +29,7 @@ export const useAccountStore = defineStore(
     )
 
     function clearAccount() {
-      Object.assign(account.value, getEmptyAccount())
+      account.value = getEmptyAccount() as unknown as AccountData
     }
 
     return {
@@ -40,7 +43,7 @@ export const useAccountStore = defineStore(
   },
   {
     persist: {
-      key: 'accountStore',
+      key: "accountStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
   }

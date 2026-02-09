@@ -46,7 +46,7 @@ const { childRoutes, links, summoner } = defineProps<{
         :key="item.name"
         variant="ghost"
         :item="item"
-        @click="navigateTo(links[item.name])">
+        @click="item.name && links?.[String(item.name)] ? navigateTo(links[String(item.name)]) : null">
         <template #icon>
           <Icon
             class="absolute size-5.5 place-self-center object-center"

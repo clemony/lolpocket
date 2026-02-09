@@ -8,7 +8,7 @@ interface Section {
 }
 
 export interface ScrollSectionsApi {
-  activeId: Ref<string>
+  activeId: Ref<string | null>
   activeIndex: Ref<number>
   registerAll: (ids: readonly string[]) => void
 }
@@ -35,7 +35,7 @@ export function useScrollSectionsProvider(
       .filter(Boolean) as Section[]
 
     measure()
-    if (!activeId.value) activeId.value = sections.value[0]?.id
+    if (!activeId.value) activeId.value = sections.value[0]?.id ?? null
   }
 
   function measure() {
@@ -88,11 +88,7 @@ export function useScrollSectionsProvider(
 }
 
 export function useScrollSectionsInject() {
-  const api: ScrollSectionsApi = inject<{
-    activeId
-    activeIndex
-    registerAll
-  }>(ScrollSectionsKey)
+  const api = inject<ScrollSectionsApi | undefined>(ScrollSectionsKey)
 
   if (!api) throw new Error('No ScrollSections provider found')
 

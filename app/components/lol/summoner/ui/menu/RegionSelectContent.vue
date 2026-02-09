@@ -2,6 +2,7 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
+const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
 </script>
 
 <template>
@@ -17,7 +18,7 @@ const { class: className } = defineProps<{
 
     <SelectGroup class="">
       <SelectItem
-        v-for="region in Object.keys(regionIndex)"
+        v-for="region in regions"
         :key="region"
         class="flex items-center gap-3 py-1.5 text-nowrap"
         :value="region">

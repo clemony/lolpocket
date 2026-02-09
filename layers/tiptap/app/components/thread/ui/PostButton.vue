@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui/runtime/components/Button.d.vue.js'
+
 const {
   variant = 'neutral',
   cancellable,
@@ -10,7 +12,7 @@ const {
   save?: boolean
   change?: boolean
   cancellable?: boolean
-  variant?: ButtonVariants['variant']
+  variant?: ButtonProps['variant']
 
   icon?: string
 }>()
@@ -29,7 +31,7 @@ const iconic = computed(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     class="pr-6 pl-5 font-semibold"
     size="sm">
     <Element size="sm">
@@ -46,5 +48,5 @@ const iconic = computed(() => {
           : "Post"
       }}
     </slot>
-  </Button>
+  </UButton>
 </template>

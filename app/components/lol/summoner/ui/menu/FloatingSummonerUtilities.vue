@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from 'motion-v';
 
 const { champion, pocket } = defineProps<{
   pocket?: Pocket
@@ -11,13 +11,14 @@ const route = useRoute()
 const target = useTemplateRef('target')
 
 onClickOutside(target, event => (open.value = false))
-const isSummoner = computed(
-  () => as().account.puuid && s_session().summoner?.puuid === as().account.puuid
-)
+const isSummoner = computed(() => {
+  const account = as().account
+  return !!account?.puuid && s_session().summoner?.puuid === account.puuid
+})
 </script>
 
 <template>
-  <Button
+ <UButton
     v-if="isSummoner"
     class="rounded-full duration-0"
     data-theme="mini-tip neutral line"
@@ -29,7 +30,7 @@ const isSummoner = computed(
     <Icon
       class="**:stroke-[1.7]"
       name="gear" />
-  </Button>
+  </UButton>
   <Teleport to="body">
     <AnimatePresence>
       <motion.div

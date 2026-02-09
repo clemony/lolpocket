@@ -8,7 +8,7 @@ const pocket = computed(() => {
 })
 
 const spells = computed(() => {
-  return pocket.value.spells[0]
+  return pocket.value.spells?.[0]
 })
 </script>
 

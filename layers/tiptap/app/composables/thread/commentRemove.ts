@@ -15,6 +15,10 @@ export async function removeComment(
     sendErrorToast()
   }
   else {
+    if (!data.thread_id) {
+      sendErrorToast()
+      return
+    }
     ts().setComment(data.thread_id, data)
     console.log('📎 - removeComment - data:', data)
     toast.add({

@@ -7,7 +7,7 @@ const { id, map } = defineProps<{
 }>()
 
 const name = computed(() => itemNameById(id))
-const rank = computed(() => itemRank[id])
+const rank = computed(() => itemRank[id] as keyof typeof itemRankColor | undefined)
 
 const item = shallowRef<Item | null>(null)
 const status = shallowRef<"idle" | "loading" | "success" | "error">("idle")
@@ -22,7 +22,7 @@ watchEffect(async () => {
     item.value = module.default
 
     status.value = "success"
-    console.log("🥸 - item:", item.value.stats)
+    console.log("🥸 - item:", item.value?.stats)
   } catch (e) {
     status.value = "error"
     console.error(e)
@@ -32,14 +32,14 @@ watchEffect(async () => {
 const filteredFrom = computed(() => {
   if (!item.value || !item.value?.buildsFrom) return null
   return item.value?.buildsFrom?.filter((i) =>
-    map ? mapToItem[map].includes(i.id) : i
+    map ? mapToItem[map]?.includes(i.id) : i
   )
 })
 
 const filteredInto = computed(() => {
   if (!item.value || !item.value?.buildsInto) return null
   return item.value?.buildsInto?.filter((i) =>
-    map ? mapToItem[map].includes(i.id) : i
+    map ? mapToItem[map]?.includes(i.id) : i
   )
 })
 
@@ -87,7 +87,7 @@ function close() {
             <span
               class="text-2xs font-medium text-n5 italic opacity-90"
               :style="{
-                color: itemRankColor[rank],
+                color: rank ? itemRankColor[rank] : undefined,
               }">
               {{ itemRank[id] }}
             </span>

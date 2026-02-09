@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   variant = 'ghost',
   class: className,
@@ -10,7 +12,7 @@ const {
   icons?: boolean
   labels?: boolean
   class?: HTMLAttributes['class']
-  variant?: ButtonVariants['variant']
+  variant?: ButtonProps['variant']
 
   wrapperClass?: HTMLAttributes['class']
   indicator?: boolean

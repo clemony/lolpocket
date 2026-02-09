@@ -69,7 +69,10 @@ const { stop } = useIntersectionObserver(hero, ([entry], observerElement) => {
       class="pointer-events-none absolute left-0 size-px overflow-hidden bg-transparent" />
 
     <div ref="steps">
-      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" />
+      <LazyHomeSteps
+        v-if="homeWrapper"
+        :scroll-ref="homeWrapper"
+        :scroll-prog="stepProgress" />
     </div>
 
     <div ref="home">

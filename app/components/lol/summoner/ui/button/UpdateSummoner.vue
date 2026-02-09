@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
+
 const props = withDefaults(
   defineProps<{
     placement?: Side
-    size?: ButtonVariants['size']
-
-    variant?: ButtonVariants['variant']
+  variant?: ButtonProps['variant']
+  size?: ButtonProps['size']
   }>(),
   {
     hover: 'neutral',
@@ -12,16 +13,15 @@ const props = withDefaults(
   }
 )
 const { summoner } = storeToRefs(s_session())
-const {
-  cooldown,
-  isLoading,
-  throttled: update,
-} = throttleFunction(
+const throttle = throttleFunction(
   () => s_matches().loadNewer(),
   120_000,
-  summoner?.value.puuid,
+  summoner?.value?.puuid ?? '',
   'match-refresh'
 )
+const cooldown = computed(() => throttle?.cooldown?.value ?? null)
+const isLoading = computed(() => throttle?.isLoading?.value ?? false)
+const update = throttle?.throttled ?? (() => {})
 
 async function loadNew() {
   const message = await s_matches().loadNewer()
@@ -42,7 +42,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
 
 <template>
   <Tooltip :text="tippy ?? null">
-    <Button
+   <UButton
       :variant
       :size
 
@@ -84,6 +84,6 @@ console.log('🥸 - summoner?.value:', summoner?.value)
           </span>
         </div>
       </TransitionScalePop>
-    </Button>
+    </UButton>
   </Tooltip>
 </template>

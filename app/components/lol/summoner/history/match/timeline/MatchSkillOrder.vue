@@ -11,7 +11,7 @@ const championData = await import(
 const champion = computed(() => championData.default)
 
 const abilities = computed(() =>
-  champion.value.abilities.filter((a) => a.key !== "P")
+  champion.value.abilities.filter((a: { key: string }) => a.key !== "P")
 )
 
 const skillOrder = computed(() => [
@@ -26,11 +26,11 @@ const skillOrder = computed(() => [
       class="flex h-20 w-max shrink-0 place-items-center gap-2 rounded-xl px-4 py-3">
       <div
         v-for="(ability, i) in abilities
-          ?.filter((a) => a.key !== 'R')
+          ?.filter((a: { key: string }) => a.key !== 'R')
           .sort(
-            (a, b) =>
-              timeline?.skills?.priority?.indexOf(a.key) -
-              timeline?.skills?.priority.indexOf(b.key)
+            (a: { key: string }, b: { key: string }) =>
+              (timeline?.skills?.priority?.indexOf(a.key) ?? 0) -
+              (timeline?.skills?.priority?.indexOf(b.key) ?? 0)
           )"
         :key="i"
         class="tippy relative size-12"

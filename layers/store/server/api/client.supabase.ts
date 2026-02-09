@@ -1,6 +1,7 @@
+import type { H3Event } from 'h3'
 import { serverSupabaseClient } from '#supabase/server'
 
-export async function createSupabaseClient(event) {
+export async function createSupabaseClient(event: H3Event) {
   const client = await serverSupabaseClient(event)
   const { data, error } = await client.auth.getUser()
 
@@ -14,7 +15,7 @@ export async function createSupabaseClient(event) {
   }
 }
 
-export async function requireUser(event) {
+export async function requireUser(event: H3Event) {
   const { client, user } = await createSupabaseClient(event)
   return { client, user }
 }

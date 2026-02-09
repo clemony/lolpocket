@@ -175,15 +175,6 @@ export default defineNuxtConfig({
       sourcemap: false,
     },
   },
-  /*   hooks: {
-    "vite:extendConfig": function (config) {
-      const plugin = tailwindcss()
-
-      if (config.plugins) {
-        ;(config.plugins as unknown[]).push(plugin as unknown)
-      }
-    },
-  }, */
 
   compatibilityDate: "2025-07-18",
   devServer: {

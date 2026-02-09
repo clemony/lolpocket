@@ -30,8 +30,8 @@ export function evaluateMathExpression(expression: string): string {
 
 export function evalRange(expr: string): string {
   const [start, end] = expr.split(/\s+to\s+/)
-  const startVal = tryEval(start.trim())
-  const endVal = tryEval(end.trim())
+  const startVal = start ? tryEval(start.trim()) : null
+  const endVal = end ? tryEval(end.trim()) : null
   if (startVal && endVal) return `${startVal} – ${endVal}`
   return expr
 }

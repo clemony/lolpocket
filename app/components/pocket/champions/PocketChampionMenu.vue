@@ -9,6 +9,12 @@ const { k, pocket: p } = defineProps<
 >()
 
 const pocket = computed(() => p)
+const pocketChampions = computed({
+  get: () => pocket.value.champions ?? [],
+  set: (v: string[]) => {
+    pocket.value.champions = v
+  },
+})
 const name = computed(() => champNameByKey(k))
 </script>
 
@@ -31,9 +37,9 @@ const name = computed(() => champNameByKey(k))
       class="hover:bg-p3/60"
       for="champion-add-or-remove-from-pocket"
       as="label">
-      <icon :name="pocket.champions.includes(k) ? 'minus' : 'add'" />
+      <icon :name="pocketChampions.includes(k) ? 'minus' : 'add'" />
       <input
-        v-model="pocket.champions"
+        v-model="pocketChampions"
         class="peer hidden"
         :aria-label="name"
         type="checkbox"
@@ -55,9 +61,9 @@ const name = computed(() => champNameByKey(k))
           })
         " />
       <input
-        v-model="pocket.champions"
+        v-model="pocketChampions"
         class="peer hidden"
-        :disabled="pocket.champions.includes(k)"
+        :disabled="pocketChampions.includes(k)"
         :aria-label="name"
         type="checkbox"
         :value="k">

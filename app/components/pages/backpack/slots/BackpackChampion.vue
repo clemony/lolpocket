@@ -8,7 +8,7 @@ const pocket = computed(() => {
 })
 
 const champion = computed(() => {
-  return pocket.value.champions[0] ?? null
+  return pocket.value.champions?.[0] ?? null
 })
 </script>
 

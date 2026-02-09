@@ -14,6 +14,7 @@ const runeStyle = computed(() => {
     return '!rounded-full inset-ring inset-ring-black/80'
   return null
 })
+const iconType = computed(() => item?.key ?? '')
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const runeStyle = computed(() => {
     <Img
       v-if="item"
       :src="
-        ['item', 'rune', 'spell'].includes(item?.key)
+        ['item', 'rune', 'spell'].includes(iconType)
           ? `/img/${item.key}s/${item.id}.webp`
           : `/img/champions/${item.id}.webp`
       "

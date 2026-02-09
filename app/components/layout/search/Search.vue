@@ -4,22 +4,22 @@ defineOptions({
 })
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(['update:search', 'update:focus'])
+const emit = defineEmits(["update:search", "update:focus"])
 
-const query = ref('')
-const tag = ref('')
-const region = shallowRef<keyof typeof regionIndex>('na1')
-const queryName = useTemplateRef<HTMLElement>('queryName')
+const query = ref("")
+const tag = ref("")
+const region = shallowRef<keyof typeof regionIndex>("na1")
+const queryName = useTemplateRef<HTMLElement>("queryName")
 
 const { focused } = useFocus(queryName)
 
 function clear() {
-  query.value = ''
-  tag.value = ''
-  emit('update:search', { search: { query, tag } })
+  query.value = ""
+  tag.value = ""
+  emit("update:search", { search: { query, tag } })
 }
 
 const errors = ref<Record<string, string | null>>({
@@ -61,23 +61,21 @@ watch([query, tag, selectedRegion], runSearch) */
 </script>
 
 <template>
-  <Input
+  <UInput
     ref="queryName"
     v-model:model-value="query"
     type="text"
+    icon="i-search"
     placeholder="Search..."
     :class="
       cn(
         'peer relative flex field-sizing-content w-auto min-w-36 grow',
-        className,
+        className
       )
     "
-    @update:model-value="(e) => (query = e)"
-    @clear-input="clear()">
-    <icon
-      class="size-4.5!"
-      name="search" />
-    <template #2>
+    @update:model-value="(e) => (query = e)">
+    <template #trailing>
+      <InputClear @clear-input="clear()" />
       <SearchTagInput
         :tag
         @focus-return="focused = true"
@@ -86,17 +84,12 @@ watch([query, tag, selectedRegion], runSearch) */
         :present="tag.length > 0"
         :region
         @update:region="(e) => (region = e)" />
-      <DeviceKey
-        v-if="!query"
-        class="mr-2">
-        K
-      </DeviceKey>
+      <UKbd v-if="!query" value="meta" />
+      <UKbd v-if="!query" value="K" class="mr-2" />
     </template>
-  </Input>
+  </UInput>
 
-  <TransitionScalePop>
-    <slot
-      :focused
-      :query />
-  </TransitionScalePop>
+  <div v-auto-animate>
+    <slot :focused :query />
+  </div>
 </template>

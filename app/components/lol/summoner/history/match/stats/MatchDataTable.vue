@@ -24,7 +24,7 @@ const { match } = defineProps<{
       :key="p.puuid"
       class="z-2 grid size-16 place-items-center rounded-xl border border-pc/16"
       :style="{
-        backgroundColor: `color-mix(in lch, ${matchTeams[p.teamId].color} 50%, transparent 50%)`,
+        backgroundColor: `color-mix(in lch, ${matchTeams[p.teamId as 100 | 200]?.color ?? 'transparent'} 50%, transparent 50%)`,
       }">
       <Champion
         :id="p.championId"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import { ProgressIndicator } from 'reka-ui'
+import { motion } from 'motion-v';
+import { ProgressIndicator } from 'reka-ui';
 
 const {
   class: className,
@@ -20,16 +20,15 @@ const {
 }>()
 const { summoner } = storeToRefs(s_session())
 
-const {
-  cooldown,
-  isLoading,
-  throttled: update,
-} = throttleFunction(
+const throttle = throttleFunction(
   () => s_matches().loadNewer(),
   120_000,
-  summoner?.value.puuid,
+  summoner?.value?.puuid ?? '',
   'match-refresh'
 )
+const cooldown = computed(() => throttle?.cooldown?.value ?? null)
+const isLoading = computed(() => throttle?.isLoading?.value ?? false)
+const update = throttle?.throttled ?? (() => {})
 
 async function loadNew() {
   const message = await s_matches().loadNewer()
@@ -47,7 +46,7 @@ const tippy = computed(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     v-tippy="{ content: tip ? tippy : null, theme: 'neutral' }"
     :shape
     :class="
@@ -130,5 +129,5 @@ const tippy = computed(() => {
       </div>
       <slot />
     </TransitionScalePop>
-  </Button>
+  </UButton>
 </template>

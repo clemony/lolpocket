@@ -5,24 +5,24 @@ const { comment } = defineProps<{
 const emit = defineEmits(["comment:vote"])
 const vote = ref<number>(0)
 const calculatedVotes = computed(() => {
-  let a = comment.score + vote.value
-  if (comment.is_author) a = a - 1
+  let a = (comment?.score ?? 0) + vote.value
+  if (comment?.is_author) a = a - 1
   return a
 })
 
 onMounted(() => {
-  if (comment.is_author) vote.value = 1
+  if (comment?.is_author) vote.value = 1
 })
 </script>
 
 <template>
   <ToggleGroup
     v-model:model-value="vote"
-    :disabled="!comment.uuid || comment.is_author"
+    :disabled="!comment?.uuid || comment?.is_author"
     type="single"
     variant="ghost"
     class="size-5"
-    :on="!comment.uuid ? 'inset' : 'neutral'"
+    :on="!comment?.uuid ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
     @update:model-value="
@@ -33,7 +33,7 @@ onMounted(() => {
     <label
       class="grid size-7 cursor-pointer place-items-center has-disabled:cursor-not-allowed"
       for="downvote"
-      :disabled="!comment.uuid"
+      :disabled="!comment?.uuid"
       aria-label="downvote">
       <ToggleGroupItem name="downvote" :value="-1">
         <icon

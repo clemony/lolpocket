@@ -13,7 +13,7 @@ const {
 </script>
 
 <template>
-  <Button
+ <UButton
     :class="cn('', className)"
     :variant="variant"
     :size="size">
@@ -23,5 +23,5 @@ const {
     <span class="**:capitalize">
       <slot />
     </span>
-  </Button>
+  </UButton>
 </template>

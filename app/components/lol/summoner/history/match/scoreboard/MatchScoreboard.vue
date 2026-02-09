@@ -9,13 +9,15 @@ const teams = computed(() => {
     red: match.participants.filter(p => p.teamId === 200),
   }
 })
+const teamBlue = computed(() => match.teams?.[0])
+const teamRed = computed(() => match.teams?.[1])
 </script>
 
 <template>
   <div class="grid w-full gap-3 px-3 pt-4">
     <!-- Blue Stats -->
     <div class="grid w-full auto-rows-max place-items-center gap-y-2">
-      <TeamEndStatTotals :team="match.teams[0]" />
+      <TeamEndStatTotals v-if="teamBlue" :team="teamBlue" />
       <!--   teammate -->
 
       <TeammateCard
@@ -27,7 +29,7 @@ const teams = computed(() => {
     <!-- red Stats -->
 
     <div class="grid w-full auto-rows-max place-items-center gap-y-1.75">
-      <TeamEndStatTotals :team="match.teams[1]" />
+      <TeamEndStatTotals v-if="teamRed" :team="teamRed" />
       <!--   teammate -->
 
       <TeammateCard

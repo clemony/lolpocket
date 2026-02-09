@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/vue-3'
 import Emoji, { emojis } from '@tiptap/extension-emoji'
 import { CharacterCount } from '@tiptap/extensions'
 import StarterKit from '@tiptap/starter-kit'
+import type { Editor } from '@tiptap/vue-3'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
 
 const props = defineProps<{
@@ -38,14 +38,14 @@ const editor = useEditor({
 })
 
 // helper for handling refs
-const target = shallowRef<HTMLElement>(null)
+const target = shallowRef<HTMLElement | null>(null)
 const { focused } = useFocus(target)
 watch(focused, (focused) => {
-  if (focused) editor.value.commands.focus()
+  if (focused) editor.value?.commands.focus()
 })
 
 onMounted(() => {
-  emit('loaded', editor.value)
+  if (editor.value) emit('loaded', editor.value)
 })
 </script>
 
@@ -84,30 +84,30 @@ onMounted(() => {
         <Separator
           class="mr-1 ml-0.75 h-4 self-center"
           orientation="vertical" />
-        <Button
+       <UButton
           class="disabled:opacity-30"
           variant="ghost"
           hover="inset"
           :disabled="!editor?.can()?.undo()"
           square
           size="xs"
-          @click="editor.commands.undo()">
+          @click="editor?.commands.undo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
             name="lucide:undo" />
-        </Button>
-        <Button
+        </UButton>
+       <UButton
           class="disabled:opacity-30"
           variant="ghost"
           hover="inset"
           :disabled="!editor?.can()?.redo()"
           square
           size="xs"
-          @click="editor.commands.redo()">
+          @click="editor?.commands.redo()">
           <icon
             class="size-4 opacity-60 group-hover/button:opacity-100"
             name="lucide:redo" />
-        </Button>
+        </UButton>
       </div>
       <div class="flex items-center gap-6">
         <CharacterCounter

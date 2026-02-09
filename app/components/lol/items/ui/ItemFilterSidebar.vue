@@ -2,16 +2,15 @@
 
 <template>
   <div class="flex h-full flex-col gap-8 py-4">
-    <InputGroup class="h-12">
-      <InputGroupAddon>
-        <icon class="size-4.5 opacity-50" name="search" />
-      </InputGroupAddon>
-      <InputGroupInput
-        v-model="is().filters.query"
-        class="peer"
-        placeholder="search" />
-      <InputClear @clear-input="is().filters.query = ''" />
-    </InputGroup>
+    <UInput
+      icon="i-search"
+      v-model:model-value="is().filters.query"
+      class="peer"
+      placeholder="search">
+      <template #trailing>
+        <InputClear @clear-input="is().filters.query = ''" />
+      </template>
+    </UInput>
 
     <!-- stats -->
     <Collapsible v-slot="{ open }" :default-open="true">
@@ -48,8 +47,8 @@
       <ItemMapFilter v-model:model-value="is().filters.map" class="w-full" />
     </div>
 
-    <Button class="" size="lg" color="neutral" @click="is().clearFilters()">
+    <UButton class="" size="lg" color="neutral" @click="is().clearFilters()">
       Reset Filters
-    </Button>
+    </UButton>
   </div>
 </template>

@@ -1,43 +1,41 @@
 <script setup lang="ts">
-import { LayoutGroup } from 'motion-v'
-import { VueDraggable } from 'vue-draggable-plus'
+import { LayoutGroup } from "motion-v"
+import { VueDraggable } from "vue-draggable-plus"
 
 useSeoMeta({
-  title: '[title]',
-  description: '[description]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogTitle: '[og:title]',
-  ogUrl: '[og:url]',
-  twitterCard: 'summary',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]',
+  title: "[title]",
+  description: "[description]",
+  ogDescription: "[og:description]",
+  ogImage: "[og:image]",
+  ogTitle: "[og:title]",
+  ogUrl: "[og:url]",
+  twitterCard: "summary",
+  twitterDescription: "[twitter:description]",
+  twitterImage: "[twitter:image]",
+  twitterTitle: "[twitter:title]",
 })
 
 useSeoMeta({
-  title: '[title]',
-  description: '[description]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogTitle: '[og:title]',
-  ogUrl: '[og:url]',
-  twitterCard: 'summary',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]',
+  title: "[title]",
+  description: "[description]",
+  ogDescription: "[og:description]",
+  ogImage: "[og:image]",
+  ogTitle: "[og:title]",
+  ogUrl: "[og:url]",
+  twitterCard: "summary",
+  twitterDescription: "[twitter:description]",
+  twitterImage: "[twitter:image]",
+  twitterTitle: "[twitter:title]",
 })
 
 definePageMeta({
-  name: 'pocket-champions',
-  title: 'champions',
+  name: "pocket-champions",
+  title: "champions",
   order: 1,
 })
 
 const route = useRoute()
-const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-).value
+const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 const isDragging = ref(false)
 
@@ -45,9 +43,12 @@ function onStart() {
   isDragging.value = true
 }
 
-const source = computed(() =>
-  cs().filtered.filter(r => !pocket.champions.includes(r))
-)
+const source = computed(() => {
+  const champions = pocket.value?.champions ?? []
+  return cs()
+    .filtered.filter((r): r is string => Boolean(r))
+    .filter((r) => !champions.includes(r))
+})
 
 // shallowRef prevents Vue from deeply tracking reorder mutations
 const rendered = shallowRef<string[]>([])
@@ -61,12 +62,14 @@ const syncRendered = useDebounceFn(() => {
 
 watch(source, syncRendered, { deep: true, immediate: true })
 
-function onEnd(e) {
+function onEnd(e: { newIndex?: number; oldIndex?: number }) {
   isDragging.value = false
   const { newIndex, oldIndex } = e
+  if (newIndex == null || oldIndex == null) return
   if (oldIndex === newIndex) return
 
   const moved = rendered.value.splice(oldIndex, 1)[0]
+  if (!moved) return
   rendered.value.splice(newIndex, 0, moved)
 
   // update the real store order here:
@@ -77,16 +80,18 @@ watch(source, () => {
   if (!isDragging.value) syncRendered()
 })
 
-function onAdd(e) {
-  console.log('🌱 - onAdd - e:', e)
-  pocket.champions.splice(e.oldIndex, 1)
+function onAdd(e: { oldIndex?: number }) {
+  console.log("🌱 - onAdd - e:", e)
+  if (e.oldIndex == null) return
+  pocket.value?.champions?.splice(e.oldIndex, 1)
   cs().reorder(rendered.value.sort())
 }
 
 const { show } = useChampionContextMenu()
 
 function showContextMenu(e: MouseEvent, champion: string) {
-  show(e, champion, pocket)
+  if (!pocket.value) return
+  show(e, champion, pocket.value)
 }
 </script>
 
@@ -95,9 +100,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
     <div
       class="sticky -top-56 z-2 w-full items-center space-y-6 bg-p0/98 pt-10 pb-6 backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
-        <h1 class="capitalize">
-          Champions
-        </h1>
+        <h1 class="capitalize">Champions</h1>
         <ChampionQuote
           v-once
           class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic" />
@@ -132,12 +135,12 @@ function showContextMenu(e: MouseEvent, champion: string) {
         @end="onEnd($event)"
         @add="onAdd($event)">
         <LayoutGroup>
-          <AnimatePresence mode="sync">
+          <AnimatePresence v-if="pocket" mode="sync">
             <PocketChampion
               v-for="champion in rendered"
               :key="champion"
               :k="champion"
-              :pocket />
+              :pocket="pocket" />
           </AnimatePresence>
         </LayoutGroup>
       </VueDraggable>

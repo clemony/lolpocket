@@ -36,9 +36,9 @@ function showToast() {
 
 <template>
   <Tooltip
-    :text="spells[id]?.name"
+    :text="id ? spells[id]?.name : ''"
     trailing-icon="i"
-    :img="`/img/spells/${id}.webp`"
+    :img="id ? `/img/spells/${id}.webp` : undefined"
     :side>
     <Img
       v-if="id"
@@ -53,7 +53,7 @@ function showToast() {
         )
       "
       :loading-type
-      :alt="spells[id].name"
+      :alt="spells[id]?.name || 'spell icon'"
       :src="`/img/spells/${id}.webp`"
       @click.stop="showToast()"
       @load="loaded = true" />

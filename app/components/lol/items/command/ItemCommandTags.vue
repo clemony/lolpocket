@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const { filtered, filters, setFilter } = useItemFilter()
-const searchInput = ref([])
+const { filtered, filters, setFilter } = useItemFilter() as any
+const searchInput = ref<string[]>([])
 </script>
 
 <template>
@@ -23,7 +23,7 @@ const searchInput = ref([])
       v-if="filters.tags && filters.tags !== null"
       class="f btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
       :appear="false"
-      @click="filters.tags = null">
+      @click="filters.tags = []">
       {{ filters.tags }}
 
       <icon name="x-sm" />
@@ -39,7 +39,7 @@ const searchInput = ref([])
         class="peer hidden"
         type="checkbox"
         :value="stat">
-      {{ statIndex[stat].abbr[0] }}
+      {{ statIndex[stat]?.abbr?.[0] ?? '' }}
 
       <icon name="x-sm" />
     </label>

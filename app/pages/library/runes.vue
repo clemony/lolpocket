@@ -10,7 +10,7 @@ definePageMeta({
 })
 
 const selectedPath = ref<number>(830)
-const selectedRune = ref<number>(null)
+const selectedRune = ref<number | null>(null)
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const selectedRune = ref<number>(null)
       <RunesBlurb
         v-if="selectedPath"
         :key="selectedPath"
-        :current-path="pathRecord[selectedPath]?.name" />
+        :current-path="pathRecord[selectedPath]?.name ?? null" />
 
       <Tabs v-model:model-value="selectedPath">
         <TabsList

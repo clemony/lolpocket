@@ -17,6 +17,7 @@ const loaded = ref(false)
 
 const toast = useToast()
 function showToast() {
+  if (!id) return
   if (!toast.toasts.value.find(t => t.id === `rune-${id}`)) {
     toast.add({
       id: `rune-${id}`,
@@ -34,8 +35,8 @@ function showToast() {
   <Tooltip
     trailing-icon="i"
     :side
-    :text="runeNameById(id)"
-    :img="`/img/runes/${id}.webp`">
+    :text="id ? runeNameById(id) : ''"
+    :img="id ? `/img/runes/${id}.webp` : undefined">
     <Img
       v-if="id"
       :key="id"

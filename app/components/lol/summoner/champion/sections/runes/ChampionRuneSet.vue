@@ -7,10 +7,10 @@ const page = computed(() => {
   if (!runes.value?.best) return null
   return runes.value?.best
 })
-const bestTip = computed(
-  () =>
-    `${runes.value.best.games} game${runes.value.best.games > 1 ? 's' : ''} - ${runes.value.best.winrate}% WR`
-)
+const bestTip = computed(() => {
+  if (!page.value) return ''
+  return `${page.value.games} game${page.value.games > 1 ? 's' : ''} - ${page.value.winrate}% WR`
+})
 
 const setClass = ' gap-5 '
 </script>
@@ -48,7 +48,7 @@ const setClass = ' gap-5 '
       <Shard
         v-for="shard in page.shards"
         :id="shard"
-        :key="shard"
+        :key="String(shard)"
         size="c-12"
         variant="neutral" />
     </ChampStatRowWrapper>

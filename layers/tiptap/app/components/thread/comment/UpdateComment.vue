@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { Editor } from '@tiptap/vue-3'
 const { comment } = defineProps<{
   comment: CommentData
 }>()
@@ -12,20 +13,21 @@ const emit = defineEmits(['close'])
     <CommentEditor
       v-slot="{ editor }"
       :mention-data="getLeagueMentionData()"
-      @loaded="(e) => e.commands.setContent(comment.content)">
+      @loaded="(e: Editor) => e.commands.setContent(comment.content)">
       <PostButton
         cancellable
         :change="editor?.can()?.undo() && !editor?.isEmpty"
         save
         @click.stop="
           () => {
+            if (!comment.thread_id) return
             updateComment(
-              editor.getJSON() as Doc,
+              editor?.getJSON() as Doc,
               comment.thread_id,
               comment.id,
             )
-            editor.commands.clearContent()
-            editor.commands.blur()
+            editor?.commands.clearContent()
+            editor?.commands.blur()
             emit('close')
           }
         " />

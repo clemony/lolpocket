@@ -1,10 +1,11 @@
+//
 export function createCalculatorSet() {
   /*   is.calculatorSets.push([
 0,0,0,0,0,0
   ])
  */
 }
-function sortType(array) {
+function sortType(array: Array<{ value: number; name: string }>) {
   array.sort((a, b) => a.value - b.value)
 
   // sort by name

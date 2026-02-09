@@ -91,7 +91,7 @@ const bg = computed(() =>
       </UContainer>
       <div class="fixed right-24 bottom-24 z-4 grid gap-4">
         <FloatingSummonerUtilities v-if="route.path.match(/\/summoner\/.+/)" />
-        <UpFAB />
+        <ToTop />
       </div>
     </UMain>
     <SiteFooter />

@@ -64,15 +64,16 @@ function reset() {
               <icon class="size-3.5 stroke-[1.5] dst" name="shuffle" />
             </button>
 
-            <Input v-model:model-value="searchQuery" class="-mt-px h-11">
-              <icon name="search" />
-            </Input>
-            <Button
+            <UInput
+              v-model:model-value="searchQuery"
+              class="-mt-px h-11"
+              icon="search" />
+           <UButton
               v-tippy="{ content: 'Close', placement: 'top' }"
               variant="ghost"
               shape="square">
               <icon class="absolute size-4 shrink-0 dst" name="x" />
-            </Button>
+            </UButton>
           </header>
 
           <Listbox
@@ -85,7 +86,7 @@ function reset() {
               <ListboxItem
                 v-for="item in result"
                 :key="item.key"
-                :value="item.key"
+                :value="item.key ?? ''"
                 variant="ghost"
                 :class="
                   cn('w-full overflow-hidden', {

@@ -3,18 +3,27 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const roleStats = await useMatchRoles(s_session().summoner.puuid, s_matches().matches)
+const roleStats = await useMatchRoles(
+  s_session().summoner?.puuid ?? '',
+  s_matches().matches
+)
+const roleModel = computed({
+  get: () => ms().filter.role ?? 'ALL',
+  set: (value: string) => {
+    ms().filter.role = value
+  },
+})
 </script>
 
 <template>
-  <Tabs v-model:model-value="ms().filter.role">
+  <Tabs v-model:model-value="roleModel">
     <FilterLabel
-      v-model="ms().filter.role"
-      :active="ms().filter.role !== 'ALL'"
-      @click="ms().filter.role = 'ALL'">
+      v-model="roleModel"
+      :active="roleModel !== 'ALL'"
+      @click="roleModel = 'ALL'">
       {{
-        ms().filter.role !== "ALL"
-          ? roleStats.find((r) => r.role === ms().filter.role).name
+        roleModel !== "ALL"
+          ? roleStats.find((r) => r.role === roleModel)?.name
           : "Position"
       }}
     </FilterLabel>

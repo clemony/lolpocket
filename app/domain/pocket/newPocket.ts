@@ -1,26 +1,27 @@
+//
 export function newPocket(): Pocket {
   return {
     // data
     key: crypto.randomUUID(),
     name: generateName(),
-    ouuid: as().account.uuid,
-    uuid: as().account.uuid,
+    ouuid: as().account?.uuid ?? "",
+    uuid: as().account?.uuid ?? "",
 
     // info
     guide: [],
-    icon: '',
+    icon: "",
 
     //
     _champion: null,
     _items: null,
-    _role: 'All',
+    _role: "All",
     _runes: null,
     _spells: null,
 
     // sets
     champions: [],
     items: [newItemSet()],
-    roles: ['all'],
+    roles: ["all"],
     runes: [newRuneSet()],
     spells: [newSpellSet()],
 

@@ -4,7 +4,10 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(["update:grid"])
-const pocket = computedAsync(() => props.pocketData)
+import { deletePocket } from "~/domain/pocket/deletePocket"
+import { duplicatePocket } from "~/domain/pocket/duplicate"
+
+const pocket = computed(() => props.pocketData)
 
 // console.log('💠 - pocket:', pocket)
 // const { userFolders } = useUserFolders()
@@ -19,11 +22,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <ContextMenu>
-    <ContextMenuTrigger class="">
+  <UContextMenu>
+    <UButton class="">
       <slot />
-    </ContextMenuTrigger>
-
+    </UButton>
+    <!--
     <ContextMenuPortal>
       <ContextMenuContent
         class="context-menu pointer-events-auto z-999 h-max w-74 text-sm **:text-sm"
@@ -33,7 +36,9 @@ onMounted(async () => {
           icon="basil:add-outline"
           icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0">
           New Pocket
-          <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
+          <ContextMenuShortcut>
+            <UKbd value="meta" /> <UKbd value="P"
+          /></ContextMenuShortcut>
         </ContextMenuItem>
 
         <ContextMenuSeparator />
@@ -43,7 +48,7 @@ onMounted(async () => {
 
           <ContextMenuPortal>
             <ContextMenuSubContent>
-              <ContextMenuRadioGroup v-model="sort">
+              <ContextMenuURadioGroup v-model="sort">
                 <ContextMenuRadioItem value="id" @select.prevent>
                   By Item ID
                   <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
@@ -56,19 +61,19 @@ onMounted(async () => {
                 <ContextMenuRadioItem value="price" @select.prevent>
                   Price
                 </ContextMenuRadioItem>
-              </ContextMenuRadioGroup>
+              </ContextMenuURadioGroup>
             </ContextMenuSubContent>
           </ContextMenuPortal>
-        </ContextMenuSub>
+        </ContextMenuSub> -->
 
-        <template v-if="props.pocketData">
-          <!-- <ContextMenuSub v-if="as().userFolders.length">
+    <!--    <template v-if="pocket">
+        <ContextMenuSub v-if="as().userFolders.length">
           <ContextMenuSubTrigger text-value="Move to Folder">
             Move to Folder
           </ContextMenuSubTrigger>
           <ContextMenuPortal>
             <ContextMenuSubContent class="w-48">
-              <ContextMenuRadioGroup :model-value="pocket.location.folder">
+              <ContextMenuURadioGroup :model-value="pocket.location.folder">
                 <ContextMenuLabel inset>
                   Folders
                 </ContextMenuLabel>
@@ -77,40 +82,34 @@ onMounted(async () => {
                    <ContextMenuRadioItem v-for="folder in as().userFolders" :key="folder.key" :value="folder.key">
                 {{ folder.name }}
               </ContextMenuRadioItem>
-              </ContextMenuRadioGroup>
+              </ContextMenuURadioGroup>
             </ContextMenuSubContent>
           </ContextMenuPortal>
         </ContextMenuSub> -->
 
-          <ContextMenuSeparator />
+    <!--   <ContextMenuSeparator />
 
           <ContextMenuItem>
-            <NuxtLink :to="`/pocket/${pocket.key}/`">
-              Edit
-            </NuxtLink>
+            <NuxtLink :to="`/pocket/${pocket?.key}/`"> Edit </NuxtLink>
           </ContextMenuItem>
 
-          <ContextMenuItem @click="duplicatePocket(pocket)">
+          <ContextMenuItem @click="pocket ? duplicatePocket(pocket) : null">
             Duplicate
 
             <ContextMenuShortcut>⌘R</ContextMenuShortcut>
           </ContextMenuItem>
 
-          <ContextMenuItem inset disabled>
-            Pin
-          </ContextMenuItem>
+          <ContextMenuItem inset disabled> Pin </ContextMenuItem>
 
-          <ContextMenuItem inset disabled>
-            Archive
-          </ContextMenuItem>
+          <ContextMenuItem inset disabled> Archive </ContextMenuItem>
 
           <ContextMenuSeparator />
 
-          <ContextMenuItem @click="deletePocket(pocket.key)">
+          <ContextMenuItem @click="pocket ? deletePocket(pocket.key) : null">
             Delete
           </ContextMenuItem>
         </template>
       </ContextMenuContent>
-    </ContextMenuPortal>
-  </ContextMenu>
+    </ContextMenuPortal> -->
+  </UContextMenu>
 </template>

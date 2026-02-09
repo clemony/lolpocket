@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import type { TabsIndicatorProps } from 'reka-ui'
+import type { ButtonProps } from '@nuxt/ui'
 import { motion } from 'motion-v'
+import type { TabsIndicatorProps } from 'reka-ui'
 import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })
@@ -12,12 +13,12 @@ const props = withDefaults(
       indicatorClass?: HTMLAttributes['class']
       orientation?: 'horizontal' | 'vertical'
 
-      size?: ButtonVariants['size']
-      variant?: ButtonVariants['variant']
+      size?: ButtonProps['size']
+      variant?: ButtonProps['variant']
     }
   >(),
   {
-    variant: 'inset',
+    variant: 'solid',
     orientation: 'horizontal',
   }
 )

@@ -1,11 +1,12 @@
-import type { ScatterSeriesOption } from 'echarts'
-import type { AllyDataPoint } from '..'
+//
+import type { ScatterSeriesOption } from "echarts"
+import type { AllyDataPoint } from ".."
 import {
   buildCollisionGroups,
   buildCollisionIndexMap,
   separateValue,
   sizeFromMax,
-} from '..'
+} from ".."
 
 export function groupByAlly(points: AllyDataPoint[]) {
   const map = new Map<string, AllyDataPoint[]>()
@@ -38,6 +39,8 @@ export function buildAllyBubbleSeries(
     const ally = items[0]
     const color = colorMap.get(puuid)
 
+    if (!ally) return []
+
     return [
       {
         color,
@@ -49,8 +52,8 @@ export function buildAllyBubbleSeries(
             symbolKeepAspect: true,
 
             value: [
-              separateValue(d.winrate, 'x', points, group),
-              separateValue(d.delta, 'y', points, group),
+              separateValue(d.winrate, "x", points, group),
+              separateValue(d.delta, "y", points, group),
               d.games,
             ],
             ...d,
@@ -71,7 +74,7 @@ export function buildAllyBubbleSeries(
             (params.data as AllyDataPoint).games,
             maxChampionGames.value
           ),
-        type: 'scatter',
+        type: "scatter",
       },
     ]
   })

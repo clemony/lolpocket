@@ -1,59 +1,67 @@
 <script lang="ts" setup>
-import Fuse from 'fuse.js'
+import Fuse from "fuse.js";
 
 const { class: className, pocket: p } = defineProps<{
-  class?: HTMLAttributes['class']
-  pocket: Pocket
+  class?: HTMLAttributes["class"]
+  pocket?: Pocket
 }>()
 
 const pocket = computed(() => p)
+const pocketTags = computed<string[]>({
+  get: () => pocket.value?.tags ?? [],
+  set: (value) => {
+    if (pocket.value) pocket.value.tags = value
+  },
+})
+
+function ensurePocketTags() {
+  if (!pocket.value) return null
+  if (!pocket.value.tags) pocket.value.tags = []
+  return pocket.value.tags
+}
 
 const tags = ref<string[]>([]) // global pool of tags
-const newTag = ref<string>('')
+const newTag = ref<string>("")
 
 // Fuzzy search setup
 const fuse = computed(() => new Fuse(tags.value, { threshold: 0.3 }))
 
 // Matches while typing
 const matches = computed(() =>
-  newTag.value.trim() ? fuse.value.search(newTag.value).map(r => r.item) : []
+  newTag.value.trim() ? fuse.value.search(newTag.value).map((r) => r.item) : []
 )
 
 const filteredTags = computed(() => {
   const q = newTag.value.trim().toLowerCase()
   if (!q) return ps().tags
-  return ps().tags.filter(tag => tag.toLowerCase().includes(q))
+  return ps().tags.filter((tag) => tag.toLowerCase().includes(q))
 })
 const open = ref(false)
 
 watch(
   () => open.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+    console.log("💠 - watch - newVal:", newVal)
   }
 )
 </script>
 
 <template>
   <!-- tag -->
-  <Popover v-model:open="open">
+  <UPopover v-model:open="open">
     <slot>
-      <PopoverTrigger as-child>
-        <Button
-          variant="ghost"
-          :class="cn('size-11', { 'btn-active': open })">
+      <UButton as-child>
+        <UButton variant="ghost" :class="cn('size-11', { 'btn-active': open })">
           <icon name="tag" />
-        </Button>
-      </PopoverTrigger>
+        </UButton>
+      </UButton>
     </slot>
     <LazyPopPopoverContent
       class="grid max-h-70 w-54 -translate-y-5 auto-rows-max justify-center p-0"
       side="bottom">
       <div
         class="group relative flex h-10 w-54 w-full items-center gap-3 px-3 pt-2">
-        <icon
-          class="size-5 opacity-50"
-          name="lucide:tags" />
+        <icon class="size-5 opacity-50" name="lucide:tags" />
         <input
           v-model="newTag"
           class="h-10 w-full pr-4 text-sm transition-all duration-200 placeholder:italic focus:placeholder:opacity-0"
@@ -62,23 +70,22 @@ watch(
           @keydown.enter.prevent="
             () => {
               const tag = newTag.trim().toLowerCase()
-              if (tag && !pocket.tags.includes(tag)) {
-                pocket.tags.push(tag)
-                ps().tags.push(tag)
+              const tags = ensurePocketTags()
+              if (tag && tags && !tags.includes(tag)) {
+                tags.push(tag)
+                if (!ps().tags.includes(tag)) ps().tags.push(tag)
               }
               newTag = '' // reset → shows full list again
             }
-          ">
+          " />
 
-        <Button
+       <UButton
           class="absolute top-2.5 right-1 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown:opacity-0"
           variant="ghost"
           size="sm"
           @click="newTag = ''">
-          <icon
-            class="size-4 **:stroke-[1.5]"
-            name="x-sm" />
-        </Button>
+          <icon class="size-4 **:stroke-[1.5]" name="x-sm" />
+        </UButton>
       </div>
       <Separator />
       <div
@@ -92,14 +99,12 @@ watch(
           size="sm"
           @select.prevent>
           <input
-            v-model="pocket.tags"
+            v-model="pocketTags"
             class="checkbox checkbox-sm checkbox-neutral shadow-xs drop-shadow-xs checked:bg-neutral/80"
             :value="item"
             type="checkbox"
-            :checked="pocket.tags.includes(item)">
-          <icon
-            class="size-3.75! text-pc/80"
-            name="hash" />
+            :checked="pocketTags.includes(item)" />
+          <icon class="size-3.75! text-pc/80" name="hash" />
           <span class="-ml-2.5 w-full truncate">
             {{ item }}
           </span>
@@ -120,5 +125,5 @@ watch(
         </div>
       </div>
     </LazyPopPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

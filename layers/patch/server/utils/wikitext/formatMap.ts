@@ -119,14 +119,14 @@ export const formatMap: FormatMap = {
     const dedupedSuffix = suffix
 
       .split(/\s+/)
-      .filter(word => !value.includes(word))
+      .filter((word: string) => !value.includes(word))
       .join(' ')
     return `${value}${dedupedSuffix ? ` ${dedupedSuffix}` : ''}`
   },
-  g: (result) => {
+  g: (result: string) => {
     return `<img src="/img/icons/gold-coin.webp" class="inline-icon" />${result}`
   },
-  icon: (result) => {
+  icon: (result: string) => {
     if (!result) return '[Missing icon]'
     const iconSrc = `/img/icons/${normalizeName(result)}.webp`
     return `<img src="${iconSrc}" class="tip-icon" />${result}`
@@ -136,11 +136,11 @@ export const formatMap: FormatMap = {
 
     const basedOn = type || key1 || key || 'level'
     let cleanRange = ''
-    if (levels.includes('for')) {
-      cleanRange = levels.split('for')[0].trim()
+    if (levels?.includes('for')) {
+      cleanRange = levels.split('for')[0]?.trim() ?? ''
     }
     else {
-      cleanRange = levels.trim()
+      cleanRange = levels?.trim() ?? ''
     }
 
     const suffix: string = key === '%' ? '%' : ''
@@ -148,9 +148,9 @@ export const formatMap: FormatMap = {
 
     const match = cleanRange.match(/^(\d+)\s?to\s?(\d+)$/)
 
-    const min: string = valueRange.length ? valueRange[0] : match?.[1] || ''
-    const max: string
-      = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] || ''
+    const min = valueRange.length ? valueRange[0] : match?.[1] ?? ''
+    const max
+      = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] ?? ''
 
     const html: string
       = min && max

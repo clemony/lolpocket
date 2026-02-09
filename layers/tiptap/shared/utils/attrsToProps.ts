@@ -1,4 +1,6 @@
-export function attrsToProps(attrs) {
+export function attrsToProps(
+  attrs: Record<string, string | undefined>
+) {
   return {
     id: attrs['data-id'],
     key: attrs['data-key'],

@@ -4,8 +4,9 @@ import { markRead, sortedMessages, toggleRead } from "./inbox-management"
 defineOptions({
   meta: {
     name: "Inbox",
-    badge: computed(() => as().inbox.messages.filter((m) => !m.read).length)
-      .value,
+    badge: computed(
+      () => (as().inbox?.messages ?? []).filter((m) => !m.read).length
+    ).value,
     class: "**:stroke-1.5",
     icon: "lucide:mail",
   },
@@ -58,9 +59,9 @@ defineOptions({
                 <span
                   class="relative flex h-5 items-center justify-self-end text-xs text-pc/80 *:absolute *:right-4 *:transition-opacity *:duration-200 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:pointer-events-none group-hover/msg:*:last:opacity-0">
                   <span class="flex size-fit gap-1">
-                    <Button @click.stop="toggleRead(message.id)">
+                    <UButton @click.stop="toggleRead(message.id)">
                       {{ message.read ? "Mark Unread" : "Mark Read" }}
-                    </Button>
+                    </UButton>
 
                     <TrashMessageButton :message />
                   </span>

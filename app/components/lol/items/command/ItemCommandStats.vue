@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { filtered, filters, setFilter } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter() as any
 </script>
 
 <template>
@@ -29,13 +29,13 @@ const { filtered, filters, setFilter } = useItemFilter()
               class="peer hidden"
               type="checkbox"
               name="item-types"
-              :value="stat">
+              :value="stat.id">
 
             <span class="grow">{{ stat.name }}</span>
 
             <div
               class="badge rounded-field border-accent bg-p0/90 text-xs! tracking-wide">
-              <span class="text-pc dst">{{ stat.abbr[0] }}</span>
+              <span class="text-pc dst">{{ stat.abbr?.[0] ?? '' }}</span>
             </div>
           </label>
         </Motion>

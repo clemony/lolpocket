@@ -1,6 +1,10 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
+  variant?: ButtonProps['variant']
+  size?: ButtonProps['size']
 }>()
 
 const emit = defineEmits(["open"])
@@ -32,7 +36,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
     </Toggle>
 
     <UPopover>
-      <Button
+      <UButton
         class="bg-transparent! fx-0 hover:fx-1 aria-expanded:btn-active on:bg-transparent!"
         variant="ghost"
         on="inset"
@@ -40,7 +44,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
         square
         size="lg">
         <Icon class="" name="ic:baseline-menu" />
-      </Button>
+      </UButton>
       <template #content>
         <AdvancedMatchFilters />
       </template>
@@ -49,18 +53,18 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
     <Tooltip
       class="size-fit"
       :text="store.filterEmpty() ? 'No filters applied' : 'Clear filters'">
-      <Button
+      <UButton
         class="bg-transparent! duration-0! disabled:pointer-events-none"
         square
         size="lg"
         hover="inset"
         :disabled="store.filterEmpty()"
-        :variant="store.filterEmpty() ? 'ghost' : 'inset'"
+        :variant="store.filterEmpty() ? 'ghost' : 'inset' as ButtonProps['variant']"
         @click="store.clearFilters()">
         <Icon
           class="in-disabled:opacity-40"
           name="ic:baseline-filter-list-off" />
-      </Button>
+      </UButton>
     </Tooltip>
     <!--     <PatchDateRange v-if="api" :api /> -->
     <!--     <UpdateSummoner
@@ -74,15 +78,15 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
 size="lg"
     /> -->
 
-    <InputGroup
-      class="h-12 max-h-12 grow transition-all duration-300"
-      size="lg">
-      <InputGroupSearch class="[&_svg]:size-5" />
-      <InputGroupInput
-        input-class="placeholder:opacity-0! focus:placeholder:opacity-100!"
-        placeholder="Search match history..."
-        @update:model-value="(e) => (store.query = e)" />
-      <InputClear />
-    </InputGroup>
+    <UInput
+      icon="i-search"
+      v-model:model-value="is().filters.query"
+      class="peer"
+      placeholder="Search match history...">
+      <template #trailing>
+        <InputClear @update:model-value="(e: string) => (store.query = e)" />
+      </template>
+    </UInput>
+    />
   </div>
 </template>

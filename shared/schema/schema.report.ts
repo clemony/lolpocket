@@ -18,7 +18,8 @@ const customOptionSchema = v.pipe(
   })
 )
 
-export const reportSchema = v.object({
+export const reportSchema = v.pipe(
+  v.object({
   reporterUid: v.fallback(v.string(), ''),
   //
   options: v.pipe(
@@ -43,4 +44,13 @@ export const reportSchema = v.object({
   }),
   //
   message: v.optional(v.string()),
-})
+  }),
+  v.forward(
+    v.partialCheck(
+      [['options'], ['message']],
+      input => input.options?.includes('other') && !input.message?.trim(),
+      'Please provide a brief description.'
+    ),
+    ['message']
+  )
+)

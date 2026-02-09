@@ -7,7 +7,7 @@ const { class: className } = defineProps<{
 
 const { allies, stats } = storeToRefs(s_champion())
 
-const points = computed(() => buildAllyBubbleData(allies.value))
+const points = computed(() => buildAllyBubbleData(allies.value ?? []))
 const colorMap = computed(() => getAllyColorMap(points.value))
 </script>
 
@@ -39,7 +39,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         v-for="v in allies"
         :key="v.puuid"
         class="group/collapse"
-        :style="{ '--ally-color': colorMap.get(v.puuid) }"
+        :style="{ '--ally-color': colorMap.get(v.puuid ?? '') ?? '' }"
         :default-open="false"
         as="tbody">
         <tr
@@ -79,7 +79,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           </td>
           <td>
             <CollapsibleTrigger class="size-full h-12! justify-end">
-              {{ secondsToTime(v?.avgTimestamp) }}
+              {{ secondsToTime(v?.avgTimestamp ?? 0) }}
             </CollapsibleTrigger>
           </td>
         </tr>
@@ -101,7 +101,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
             {{ c?.winrate }}
           </td>
           <td>{{ c?.delta }}</td>
-          <td>{{ secondsToTime(c?.avgTimestamp) }}</td>
+          <td>{{ secondsToTime(c?.avgTimestamp ?? 0) }}</td>
         </CollapsibleContent>
       </Collapsible>
     </table>

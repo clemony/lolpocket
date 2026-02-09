@@ -16,7 +16,11 @@ const { class: className, stats } = defineProps<{
         {{ `${v}${statIndex[k]?.unit ?? ""}` }}
       </span>
       <span>
-        {{ ["HSP", "APEN", "MPEN"].includes(statIndex[k].key) ? statIndex[k].abbr : statIndex[k].name }}
+        {{
+          ["HSP", "APEN", "MPEN"].includes(statIndex[k]?.key ?? '')
+            ? statIndex[k]?.abbr
+            : statIndex[k]?.name
+        }}
       </span>
 
       <!--       <span class="relative h-px w-4 place-items-center *:absolute">

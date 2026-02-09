@@ -31,13 +31,13 @@ const StatTip = resolveComponent('StatTip')
       <div
         class="opacity-80 **:inline-block **:text-md! **:font-semibold **:text-pc **:tabular-nums">
         <NumberTicker
-          v-if="stat?.values.current && stat?.id !== 'criticalStrikeDamage'"
-          :value="Number(stat?.values.current)" />
+          v-if="stat?.values?.current && stat?.id !== 'criticalStrikeDamage'"
+          :value="Number(stat?.values?.current)" />
 
         <span
-          v-else-if="stat.values.flat"
+          v-else-if="stat.values?.flat"
           class="">
-          {{ stat.values.flat }}
+          {{ stat.values?.flat }}
         </span>
 
         <span v-else>0</span>

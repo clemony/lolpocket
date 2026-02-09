@@ -1,32 +1,12 @@
-// delete
+export function deletePocket(pocket: Pocket | string) {
+  const key = typeof pocket === "string" ? pocket : pocket.key
+  if (!key) return
 
-export function deletePocket(pocket) {
-  const route = useRoute()
-  const inPocket = route.path === `/pocket/${pocket.key}`
+  if (!ps().trash.includes(key)) ps().trash.push(key)
 
-  pocket.location.folder = 'trash'
+  const pinnedIndex = ps().pinned.indexOf(key)
+  if (pinnedIndex !== -1) ps().pinned.splice(pinnedIndex, 1)
 
-  if (inPocket) {
-    navigateTo('/backpack')
-  }
-
-  if (as().settings.ping_delete_pocket) {
-    const toast = useToast()
-    const newPocketToast = toast.add({
-      title: `Pocket ${pocket.name} sent to trash.`,
-      /*       action: {
-        label: "Restore?",
-        // onClick: () => navigateTo({ path: `/${newPocket.key}` }),
-      }, */
-      description: 'You can restore it for up to 30 days.',
-      duration: 7000,
-    })
-
-    const vars: Record<string, string> = {
-      pocketKey: pocket.key,
-      pocketName: pocket.name,
-    }
-
-    saveNotification('deletePocket', vars)
-  }
+  const archiveIndex = ps().archive.indexOf(key)
+  if (archiveIndex !== -1) ps().archive.splice(archiveIndex, 1)
 }

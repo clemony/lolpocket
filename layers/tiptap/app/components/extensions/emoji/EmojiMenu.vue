@@ -8,14 +8,14 @@ const { editor } = defineProps<{
 
 const query = shallowRef<string>("")
 
-const search = useSearch(editor.storage.emoji.emojis, query, {
+const emojiList = computed(() => editor?.storage.emoji.emojis ?? [])
+
+const search = useSearch(emojiList, query, {
   keys: ["shortcodes", "tags"],
 })
 
 const results = computed(() =>
-  search.value.length ?
-    search.value
-  : [...editor.storage.emoji.emojis].splice(0, 20)
+  search.value.length ? search.value : [...emojiList.value].splice(0, 20)
 )
 
 const selectedIndex = ref(0)
@@ -89,6 +89,7 @@ const tab = shallowRef<number>(1)
 const filter = computed(() => {
   const emoji = ref<EmojiItem[]>([])
   const group = groups[tab.value]
+  if (!editor) return null
   const emojiArray = filterEmoji(editor)
 
   if (!group) return null
@@ -103,7 +104,7 @@ const filter = computed(() => {
 
   if (group?.groups?.length) {
     group.groups.forEach((k) =>
-      emoji.value.push(...emojiArray.filter((e) => e.group.includes(k)))
+      emoji.value.push(...emojiArray.filter((e) => e.group?.includes(k)))
     )
   }
 
@@ -112,7 +113,7 @@ const filter = computed(() => {
       ...emojiArray
         .filter((e) => !e.tags?.length && !e.group?.length)
         .filter((e) => !e.tags.includes("Face"))
-        .concat(...emojiArray.filter((e) => e.group.includes("github")))
+        .concat(...emojiArray.filter((e) => e.group?.includes("github")))
     )
   }
 
@@ -145,8 +146,8 @@ watch(
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger
+  <UPopover>
+    <UButton
       class="size-7"
       square
       variant="ghost"
@@ -156,7 +157,7 @@ watch(
       <icon
         class="mt-px size-4.25! opacity-70 transition-all duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90"
         name="smile" />
-    </PopoverTrigger>
+    </UButton>
 
     <LazyPopoverContent
       class="relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs"
@@ -176,6 +177,16 @@ watch(
               }
             " />
         </InputGroup>
+
+        <UInput
+          icon="i-search"
+          v-model:model-value="is().filters.query"
+          class="peer"
+          placeholder="search">
+          <template #trailing>
+            <InputClear @clear-input="is().filters.query = ''" />
+          </template>
+        </UInput>
       </div>
       <TransitionSlide class="size-full overflow-auto" :invert>
         <div
@@ -186,7 +197,7 @@ watch(
             :key="index"
             :item
             :index
-            @click="editor.chain().focus().setEmoji(item.name).run()"
+            @click="editor?.chain().focus().setEmoji(item.name).run()"
             @mousedown.prevent="selectedIndex = index" />
         </div>
       </TransitionSlide>
@@ -220,5 +231,5 @@ watch(
         </Tabs>
       </div>
     </LazyPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

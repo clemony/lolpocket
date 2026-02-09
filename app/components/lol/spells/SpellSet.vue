@@ -1,29 +1,28 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  set: object
+  set: SpellSet
   pocket: Pocket
   setIndex: number
   class?: HTMLAttributes['class']
 }>()
 
-const pocket = computed(() => {
-  return props.pocket
-})
+const pocket = computed(() => props.pocket)
+const setRef = computed(() => props.set)
 
-const set = computed(() => {
-  return props.set
-})
-function handleSpells(e, i) {
-  set.value[i] = e.name
+const spellIds = computed(() => [setRef.value.d, setRef.value.f])
+
+function handleSpells(e: number, i: number) {
+  if (i === 0) setRef.value.d = e
+  if (i === 1) setRef.value.f = e
 }
 </script>
 
 <template>
   <div class="flex w-full items-center gap-4">
     <LazySpellPicker
-      v-for="(spell, i) in props.set"
+      v-for="(spell, i) in spellIds"
       :key="i"
-      :selected-spell="spell"
+      :current-value="spell"
       :class="cn('size-16 rounded-lg border border-p3/60', props.class)"
       @update:spell="handleSpells($event, i)" />
 

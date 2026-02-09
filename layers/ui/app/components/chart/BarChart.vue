@@ -1,107 +1,118 @@
 <script lang="ts" setup>
-import {
-  BarElement,
-  CategoryScale,
-  Chart,
-  LinearScale,
-  Title,
-  Tooltip,
-} from 'chart.js'
-import { Bar } from 'vue-chartjs'
+import type { BarSeriesOption, EChartsOption } from "echarts"
+import VChart from "vue-echarts"
 
 const props = defineProps<{
-  data: any
+  data: {
+    labels: string[]
+    datasets: {
+      data: number[]
+      backgroundColor?: string[] | string
+    }[]
+  }
   chartId?: string
 }>()
 
 const styles = getComputedStyle(document.documentElement)
 
-Chart.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
-Chart.defaults.color = styles.getPropertyValue('--colorneutral')
-Chart.defaults.font.family = styles.getPropertyValue('--font-sans')
-Chart.defaults.font.weight = 400
-Chart.defaults.font.size = 16
-
-const data = computed(() => {
-  return props.data
-})
-const options = {
-  color: styles.getPropertyValue('--colorneutral'),
-  backgroundColor: styles.getPropertyValue('--colorneutral'),
-  barThickness: 32,
-  maintainAspectRatio: false,
-  maxBarThickness: 32,
-  minBarLength: 4,
-  responsive: true,
-  skipNull: false,
-  elements: {
-    bar: {
+const series = computed<BarSeriesOption>(() => {
+  const dataset = props.data.datasets?.[0]
+  const fallbackColor = styles.getPropertyValue("--colorneutral")
+  return {
+    type: "bar",
+    data: dataset?.data ?? [],
+    barWidth: 32,
+    barMaxWidth: 32,
+    barMinHeight: 4,
+    itemStyle: {
       borderRadius: 4,
-      // barPercentage: 0.1,
-      // categoryPercentage: 0.1,
+      color: (params) => {
+        if (Array.isArray(dataset?.backgroundColor)) {
+          return dataset?.backgroundColor?.[params.dataIndex] ?? fallbackColor
+        }
+        return dataset?.backgroundColor ?? fallbackColor
+      },
+    },
+  }
+})
+
+const option = computed<EChartsOption>(() => ({
+  color: [styles.getPropertyValue("--colorneutral")],
+  grid: {
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    containLabel: true,
+  },
+  tooltip: {
+    show: true,
+    trigger: "item",
+    padding: 12,
+    backgroundColor: styles.getPropertyValue("--colorneutral"),
+    textStyle: {
+      color: styles.getPropertyValue("--color-p2"),
+      fontFamily: styles.getPropertyValue("--font-sans"),
+      fontSize: 16,
+      fontWeight: 400,
+    },
+    formatter: (params) => {
+      const value =
+        Array.isArray(params) ?
+          Number(params[0]?.value ?? 0)
+        : Number(params.value ?? 0)
+      return `${value.toFixed(2)}% winrate`
     },
   },
-  plugins: {
-    tooltip: {
-      titleMarginBottom: 0,
-      caretPadding: 20,
-      displayColors: false,
-      enabled: true,
-      intersect: false,
-      callbacks: {
-        label: (context) => {
-          const dataPoint = context.raw
-          return `${dataPoint.toFixed(2)}% winrate`
-        },
+  xAxis: {
+    type: "category",
+    data: props.data.labels,
+    axisLabel: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLine: {
+      lineStyle: {
+        color: styles.getPropertyValue("--color-p2"),
+      },
+    },
+    splitLine: {
+      show: false,
+    },
+  },
+  yAxis: {
+    type: "value",
+    min: 0,
+    max: 100,
+    interval: 20,
+    axisLabel: {
+      show: true,
+      padding: 12,
+      formatter: "{value}%",
+      fontSize: 16,
+      fontFamily: styles.getPropertyValue("--font-sans"),
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLine: {
+      lineStyle: {
+        color: styles.getPropertyValue("--color-p2"),
+      },
+    },
+    splitLine: {
+      show: true,
+      lineStyle: {
+        color: styles.getPropertyValue("--color-p2"),
       },
     },
   },
-  scales: {
-    x: {
-      grid: {
-        display: false,
-      },
-      title: {
-        display: false,
-      },
-      border: {
-        color: `${styles.getPropertyValue('--color-p2')}`,
-      },
-      ticks: {
-        display: false,
-      },
-    },
-    y: {
-      grid: {
-        // display: false,
-        color: `${styles.getPropertyValue('--color-p2')}`,
-        drawTicks: false,
-      },
-      beginAtZero: true,
-      max: 100,
-      min: 0,
-      border: {
-        color: `${styles.getPropertyValue('--color-p2')}`,
-      },
-      ticks: {
-        callback(value, index, ticks) {
-          return `${value}%`
-        },
-        display: true,
-        padding: 12,
-        stepSize: 20,
-        font: {
-          size: 16,
-        },
-      },
-    },
-  },
-}
+  series: [series.value],
+}))
 </script>
 
 <template>
-  <Bar
-    :id="props.chartId"
-    :options="options"
-    :data="data" />
+  <VChart :id="props.chartId" :option="option" autoresize />
 </template>

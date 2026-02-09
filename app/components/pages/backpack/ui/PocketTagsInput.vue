@@ -5,7 +5,7 @@ const { paddingClass } = defineProps<{
   paddingClass?: HTMLAttributes['class']
 }>()
 const newTag = ref('')
-const tags = ref([])
+const tags = ref<string[]>([])
 watch(
   () => tags.value,
   (newVal) => {
@@ -17,14 +17,15 @@ watch(
 function deleteTag(tag: string) {
   const a = ps().tags.findIndex(t => t === tag)
 
-  if (a) {
+  if (a !== -1) {
     ps().tags.splice(a, 1)
     ps()
       .pockets
       .map(p => p.tags)
       .forEach((set) => {
+        if (!set) return
         const a = set.findIndex(t => t === tag)
-        set.splice(a, 1)
+        if (a !== -1) set.splice(a, 1)
       })
   }
 }
@@ -47,7 +48,7 @@ function deleteTag(tag: string) {
         :disabled="false"
         :class="cn('space-y-1 px-3 pb-3', paddingClass)">
         <CollapsibleTrigger as-child>
-          <Button
+         <UButton
             class="w-full"
             as="button"
             variant="ghost"
@@ -57,7 +58,7 @@ function deleteTag(tag: string) {
               Tags
             </span>
             <CaretRotate />
-          </Button>
+          </UButton>
         </CollapsibleTrigger>
 
         <CollapsibleContent
@@ -73,7 +74,7 @@ function deleteTag(tag: string) {
                 class="group/bt size-full grow cursor-pointer p-0"
                 as-child
                 :value="item">
-                <Button
+               <UButton
                   size="md"
                   variant="ghost"
                   :class="
@@ -88,25 +89,25 @@ function deleteTag(tag: string) {
                   <span class="w-full truncate font-medium">
                     {{ item }}
                   </span>
-                </Button>
+                </UButton>
               </ListboxItem>
 
               <!-- delete tag -->
-              <Button
+             <UButton
                 v-tippy="'Delete Tag'"
                 class="btn-square h-9 opacity-0 duration-0 not-hover:**:text-pc/60 group-hover/tag:opacity-100"
                 variant="ghost"
                 @click="deleteTag(item)">
                 <icon name="x-sm" />
-              </Button>
+              </UButton>
             </div>
           </ListboxGroup>
           <!-- tag input -->
 
-          <Button
+         <UButton
             class="group flex w-full flex-nowrap items-center gap-3! justify-self-center px-3 py-0 text-sm duration-0 focus-within:border-neutral/60 focus-within:[&_input]:placeholder:opacity-0"
             as="div"
-            color="default"
+
             hover="outline">
             <span class="z-1 grid h-full w-4.5 place-items-center bg-p0">
               <icon
@@ -123,14 +124,14 @@ function deleteTag(tag: string) {
                 }
               ">
 
-            <Button
+           <UButton
               class="btn-square size-6 duration-0 group-has-placeholder-shown:opacity-0"
               variant="ghost"
               size="sm"
               @click="newTag = ''">
               <icon name="x-sm" />
-            </Button>
-          </Button>
+            </UButton>
+          </UButton>
         </CollapsibleContent>
       </Collapsible>
     </ListboxContent>

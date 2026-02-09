@@ -1,16 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Select
-    v-model:model-value="is().filters.tags"
-    :multiple="true">
+  <Select v-model:model-value="is().filters.tags" :multiple="true">
     <VarSelectTrigger
       class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-p2/40!"
       size="lg"
       shape="square">
-      <StatusIndicator
+      <UChip
         v-if="is().filters.tags.length"
-        color="master"
+        color="p2"
         :class="
           cn('absolute transition-opacity', {
             'animate-in fade-in zoom-in': is().filters.tags.length,

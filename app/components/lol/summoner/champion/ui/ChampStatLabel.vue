@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {
-  statLabels,
-  statLabelsWithSynergy,
-  statLabelsWithTime,
-} from './stat-labels'
+    statLabels,
+    statLabelsWithSynergy,
+    statLabelsWithTime,
+} from './stat-labels';
 
 const {
   title,
@@ -32,6 +32,12 @@ const labels = computed(() =>
       ? statLabelsWithSynergy
       : statLabels
 )
+
+const avgTimestampLabel = computed(() => {
+  const ts = (stat as StatDetail | undefined)?.avgTimestamp
+  if (!ts) return ''
+  return `${(ts / 1000 / 60).toFixed(2).replace('.', ':')} acquired`
+})
 </script>
 
 <template>
@@ -42,7 +48,7 @@ const labels = computed(() =>
         className,
       )
     ">
-    <Button
+   <UButton
       class="z-2 size-full flex-col items-start justify-between! gap-0 p-2!"
       variant="ghost"
       :data-type="
@@ -50,7 +56,7 @@ const labels = computed(() =>
           ? `${stat?.winrate}% winrate
         ${stat?.games} games
         ${stat?.pickrate}% pickrate
-        ${(stat as StatDetail)?.avgTimestamp ? `${((stat as StatDetail)?.avgTimestamp / 1000 / 60).toFixed(2).replace('.', ':')} acquired` : ''}`
+        ${avgTimestampLabel}`
           : null
       "
       hover="inset">
@@ -75,7 +81,7 @@ const labels = computed(() =>
           </template>
         </template>
       </h4>
-      <div v-else-if="icon">
+      <div v-else-if="icon?.[0]">
         <Icon
           :name="icon[0]"
           :class="cn('', icon[1])" />
@@ -105,6 +111,6 @@ const labels = computed(() =>
           </span>
         </div>
       </div>
-    </Button>
+    </UButton>
   </div>
 </template>

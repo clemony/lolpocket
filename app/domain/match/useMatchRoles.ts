@@ -1,3 +1,4 @@
+//
 export interface RoleStats {
   name: string
   games: number
@@ -10,12 +11,13 @@ export function useMatchRoles(
   puuid: string,
   matches: MatchData[]
 ): RoleStats[] {
-  if (!matches) return
+  if (!matches) return []
 
-  const roleStatsMap = new Map<string, { games: number, wins: number }>()
+  const roleStatsMap = new Map<string, { games: number; wins: number }>()
 
   for (const match of toValue(matches)) {
-    const player = match.participants.find(p => p.puuid === puuid)
+    const player = match.participants.find((p) => p.puuid === puuid)
+    if (!player) continue
     const role = player.role
     if (!roleKey.includes(role)) continue
 

@@ -2,8 +2,10 @@
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
-const mainSet = computed(() => pocket.runes.find(s => s.id === pocket._runes))
+)
+const mainSet = computed(() =>
+  pocket.value?.runes?.find(s => s.id === pocket.value?._runes)
+)
 </script>
 
 <template>
@@ -11,6 +13,7 @@ const mainSet = computed(() => pocket.runes.find(s => s.id === pocket._runes))
     class="relative grid size-max place-items-center overflow-hidden **:pointer-events-none"
     variant="ghost">
     <RuneAndPathImg
+      v-if="mainSet"
       placement="left"
       variant="ghost"
       :class="

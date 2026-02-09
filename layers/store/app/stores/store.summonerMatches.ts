@@ -1,10 +1,11 @@
-export const useSummonerMatches = defineStore('summonerMatches', () => {
+//
+export const useSummonerMatches = defineStore("summonerMatches", () => {
   const session = useSummonerSession()
   const id = toValue(session.summoner?.puuid)
   const region = toValue(session.summoner?.region)
 
-  const { getCursor, getMatchesForSummoner, putMatchData, setCursor }
-    = useIndexedDB()
+  const { getCursor, getMatchesForSummoner, putMatchData, setCursor } =
+    useIndexedDB()
 
   const matches = ref<MatchData[]>([])
   const timelines = shallowRef<PlayerTimeline[]>([])
@@ -54,11 +55,10 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
       if (res.matches.length) {
         await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
-        newestTs.value = res.newestTimestamp
+        newestTs.value = res.newestTimestamp ?? null
         loadMessage.value = `Loaded ${res.matches.length} new matches!`
-      }
-      else {
-        loadMessage.value = 'No new matches found!'
+      } else {
+        loadMessage.value = "No new matches found!"
       }
 
       if (res.cursor != null) {
@@ -67,19 +67,13 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
       }
 
       ss().patchSummoner(id, { lastMatchUpdate: Date.now() })
-    }
-    finally {
+    } finally {
       loading.value = false
     }
   }
 
   async function loadOlder() {
-    if (
-      !id
-      || !region
-      || loadingOlder.value
-      || endOfHistory.value
-    ) {
+    if (!id || !region || loadingOlder.value || endOfHistory.value) {
       return
     }
 
@@ -101,8 +95,7 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
       }
 
       if (res.done) endOfHistory.value = true
-    }
-    finally {
+    } finally {
       loadingOlder.value = false
     }
   }
@@ -128,6 +121,6 @@ export const useSummonerMatches = defineStore('summonerMatches', () => {
     loadOlder,
     matches,
 
-    timelines
+    timelines,
   }
 })

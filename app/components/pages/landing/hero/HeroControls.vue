@@ -4,6 +4,13 @@ const { isVisible } = defineProps<{
 }>()
 
 const isPlaying = ref(true)
+const motion = computed({
+  get: () => as().settings?.motion ?? false,
+  set: (v: boolean) => {
+    const settings = as().settings
+    if (settings) settings.motion = v
+  },
+})
 </script>
 
 <template>
@@ -11,24 +18,18 @@ const isPlaying = ref(true)
     class="pointer-events-auto z-2 flex size-full items-end justify-end gap-3 pr-5 pb-5 opacity-0 transition-opacity duration-500"
     :class="{ 'opacity-100': isVisible, 'opacity-0': !isVisible }">
     <div class="flex items-center gap-2">
-      <HoverBtnSm :tip="isPlaying ? 'Pause' : 'Play'">
-        <icon
-          v-if="isPlaying"
-          class="shrink-0 opacity-60"
-          name="pause" />
+      <HoverUButtonSm :tip="isPlaying ? 'Pause' : 'Play'">
+        <icon v-if="isPlaying" class="shrink-0 opacity-60" name="pause" />
 
-        <icon
-          v-else
-          class="size-4 shrink-0 opacity-60"
-          name="play" />
-      </HoverBtnSm>
+        <icon v-else class="size-4 shrink-0 opacity-60" name="play" />
+      </HoverUButtonSm>
 
       <div class="grid w-26 items-center">
         <label
           v-show="!isPlaying"
           :class="
             cn(
-              'align-end mt-px overflow-hidden text-sm font-semibold text-pc/60',
+              'align-end mt-px overflow-hidden text-sm font-semibold text-pc/60'
             )
           ">
           Paused
@@ -37,11 +38,9 @@ const isPlaying = ref(true)
 
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
-          <HoverBtnSm tip="Options">
-            <icon
-              class="size-4 shrink-0 opacity-50"
-              name="gear-solid" />
-          </HoverBtnSm>
+          <HoverUButtonSm tip="Options">
+            <icon class="size-4 shrink-0 opacity-50" name="gear-solid" />
+          </HoverUButtonSm>
         </DropdownMenuTrigger>
 
         <ContrastDropdownContent
@@ -54,15 +53,13 @@ const isPlaying = ref(true)
             <icon
               class="shrink-0 opacity-90"
               :name="
-                as().settings.motion
-                  ? 'ph:video-camera-fill'
-                  : 'ph:video-camera-slash'
+                motion ? 'ph:video-camera-fill' : 'ph:video-camera-slash'
               " />
-            {{ as().settings.motion ? "Motion On" : "Motion Off" }}
+            {{ motion ? "Motion On" : "Motion Off" }}
             <Grow />
 
-            <Switch
-              v-model="as().settings.motion as boolean"
+            <USwitch
+              v-model="motion"
               class="border-b4/50 scale-85 justify-self-end from-lime-400/90 to-ah/90 to-60% inset-shadow-xs data-[state=checked]:bg-linear-to-br data-[state=unchecked]:bg-p3/40" />
           </div>
         </ContrastDropdownContent>

@@ -8,7 +8,8 @@ const selected = ref('P')
 
 const ability = computed(() => {
   if (a) return a
-  else return Object.values(abilities[selected.value])[0] as Ability
+  const list = abilities ?? []
+  return list.find(ab => ab.key === selected.value) ?? list[0]
 })
 
 watch(

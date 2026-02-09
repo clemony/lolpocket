@@ -14,7 +14,7 @@ const {
 }>()
 const loaded = ref(false)
 
-const path = computed (() => name || pathNameById(id))
+const path = computed(() => name || (id ? pathNameById(id) : undefined))
 </script>
 
 <template>

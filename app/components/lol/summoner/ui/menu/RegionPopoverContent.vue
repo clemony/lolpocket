@@ -8,7 +8,8 @@ const { class: className } = defineProps<{
 }>()
 
 const emit = defineEmits(['update:model-value'])
-const modelValue = ref(as().account.region)
+const modelValue = ref(as().account?.region)
+const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
 </script>
 
 <template>
@@ -27,8 +28,8 @@ const modelValue = ref(as().account.region)
         <Label class="px-4 text-pc/50">Select Region...</Label>
       </div>
 
-      <Button
-        v-for="region in Object.keys(regionIndex)"
+     <UButton
+        v-for="region in regions"
         :key="region"
         size="sm"
         variant="ghost"
@@ -56,7 +57,7 @@ const modelValue = ref(as().account.region)
         <icon
           v-if="region === modelValue"
           name="tick-sm" />
-      </Button>
+      </UButton>
     </div>
   </LazyPopoverContent>
 </template>

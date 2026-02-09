@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { toTypedSchema } from "@vee-validate/valibot"
+import type { FormSubmitEvent } from "@nuxt/ui"
 import { parse } from "valibot"
-import { useForm } from "vee-validate"
+import type { ReportOption } from "./reportOptions"
 import { reportOptions } from "./reportOptions"
 
 const { button, comment } = defineProps<{
@@ -9,50 +9,52 @@ const { button, comment } = defineProps<{
   button?: boolean
 }>()
 
-const {
-  validate,
-  errorBag,
-  errors,
-  handleSubmit,
-  isFieldDirty,
-  resetForm,
-  values,
-} = useForm({
-  validationSchema: toTypedSchema(reportSchema),
-  initialValues: {
-    reporterUid: as().account.puuid,
-    comment,
-    message: "",
-    options: [],
+const form = ref()
+
+const state = reactive({
+  reporterUid: as().account?.puuid ?? "",
+  options: [] as string[],
+  message: "",
+  // keep comment shape aligned to reportSchema so UForm can validate
+  comment: {
+    author_id: comment.uuid,
+    comment_id: comment.id,
+    reporter_id: as().account?.puuid ?? "",
+    content_text: undefined as string | undefined,
+    created: comment.created,
   },
 })
 
-const onSubmit = handleSubmit((values) => {
-  console.log("🌱 - values:", values)
+const options = computed<ReportOption[]>(() => reportOptions.filter(Boolean))
+
+const formErrors = computed(
+  () =>
+    (form.value?.errors?.value ?? []) as { path?: string; message?: string }[]
+)
+
+async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
   if (!comment.content.content.length) return console.log("🚫 Error")
-  const content_text = extractReadableText(comment.content.content[0])
-  console.log("🌱 - onSubmit - contentText:", content_text)
+
+  const content_text = extractReadableText(comment.content)
 
   const payload = {
-    ...values,
+    ...event.data,
     comment: {
-      id: comment.id,
-      uuid: comment.uuid,
+      ...event.data.comment,
       content_text,
-      created: comment.created,
     },
   }
 
-  const validated = parse(reportSchema, payload)
+  parse(reportSchema, payload)
+
   const toast = useToast()
   toast.add({
     title: "You submitted the following values:",
     description: "",
   })
-  return validated
-})
 
-defineExpose({})
+  return
+}
 </script>
 
 <template>
@@ -61,46 +63,76 @@ defineExpose({})
     title="Report Card"
     description="Report offensive, negative, or disruptive content. Please fill out the form to clarify and give additional context."
     :modal="true"
-    @update:open="!ts().reportOpen ? resetForm() : null">
+    @update:open="!ts().reportOpen ? form?.clear() : null">
     <slot v-if="button" :report="ts().report()">
       <UButton as-child>
         <button class="text-xs hover:underline">Report</button>
       </UButton>
     </slot>
+
     <template #content>
       <div class="h-max max-w-172 px-7 pt-8">
-        <UForm class="mt-2 grid auto-rows-max gap-1" @submit="onSubmit">
-          <!-- option checkbox items -->
-          <template v-for="option in reportOptions" :key="option.id">
-            <CheckboxItemField v-if="option?.id !== 'other'" :values :option />
+        <UForm
+          ref="form"
+          :state="state"
+          :schema="reportSchema"
+          class="mt-2 grid auto-rows-max gap-1"
+          @submit="onSubmit">
+          <!--           <UFormField name="options">
 
-            <InputOptionField v-else :values :option />
+        <UCheckboxGroup  v-model="state.options" :items="options"
+
+<template #description>
+        <UInput
+          ref="inputRef"
+          class="grow"
+          v-model:model-value="message"
+          placeholder="Please describe briefly..." >
+          <template #trailing>
+            <InputClear type="button" @clear-input="" />
           </template>
+        </UInput>
+</template>
+          </UCheckboxGroup>
+          </UFormField>
+ -->
+          <UFormField v-slot="{ error }" name="message">
+            <InputOptionField
+              v-model="state.options"
+              v-model:message="state.message"
+              :option="options.find((option) => option.id === 'other')!"
+              :error="typeof error === 'string' ? error : undefined" />
+          </UFormField>
 
-          <!-- separator  -->
           <Separator class="my-4 opacity-70" />
-          <TextAreaField
-            placeholder="Any comments, context, or messages to clarify the situation?"
-            optional />
-          <DialogFooter class="flex w-full items-center">
-            <TransitionScalePop
-              v-if="errorBag?.options?.length"
+
+          <UFormField label="Message" hint="optional">
+            optional
+            <UTextarea
+              placeholder="Any comments, context, or messages to clarify the situation?"
+              optional />
+          </UFormField>
+          <div class="flex w-full items-center">
+            <div
+              v-auto-animate
+              v-if="formErrors.find((e) => e.path === 'options')"
               class="mr-2 flex items-center gap-2 text-sm leading-none text-shade-domination/8">
               <icon
                 class="inline size-4.5 align-bottom font-medium text-shade-domination/8"
                 name="error" />
-              <span v-for="(reason, i) in errorBag.options" :key="i" class="">
-                {{ reason }}
+              <span
+                v-for="(reason, i) in formErrors.filter(
+                  (e) => e.path === 'options'
+                )"
+                :key="i">
+                {{ reason.message }}
               </span>
-            </TransitionScalePop>
-            <Button
-              size="sm"
-              type="submit"
-              color="neutral"
-              @click.stop.prevent="validate()">
+            </div>
+
+            <UButton size="sm" type="submit" color="neutral">
               Submit Report
-            </Button>
-          </DialogFooter>
+            </UButton>
+          </div>
         </UForm>
       </div>
     </template>

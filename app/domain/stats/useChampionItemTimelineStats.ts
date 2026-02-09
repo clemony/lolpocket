@@ -1,3 +1,4 @@
+//
 export interface ItemSlotOrder {
   best?: {
     core?: {
@@ -43,10 +44,10 @@ export function useChampionItemTimelineStats(
     for (const m of matchData.value) {
       if (!m.player || !m.timeline) continue
       const win = m.player.win
-      if (win === null || win === 'remake') continue
+      if (win === null || win === "remake") continue
 
       const finalItems = getFinalItems(m.player.items)
-      const supportItem = finalItems.find(id => SUPPORT_LEGENDARIES.has(id))
+      const supportItem = finalItems.find((id) => SUPPORT_LEGENDARIES.has(id))
       const acquireTimes = getItemAcquireTimes(
         m.timeline,
         finalItems,
@@ -62,19 +63,20 @@ export function useChampionItemTimelineStats(
       const setItems = [...new Set(startingItems)].sort((a, b) => a - b)
       if (!setItems.length) continue
 
-      const key = setItems.join(',')
+      const key = setItems.join(",")
 
-      const stat
-        = startingItemSets[key]
-          ?? (startingItemSets[key] = {
-            games: 0,
-            items: setItems,
-            pickrate: 0,
-            win: 0,
-            winrate: 0,
-          })
+      const stat =
+        startingItemSets[key] ??
+        (startingItemSets[key] = {
+          games: 0,
+          items: setItems,
+          pickrate: 0,
+          win: 0,
+          winrate: 0,
+        })
 
       stat.games++
+      stat.win ??= 0
       if (win) stat.win++
 
       for (const [id, ts] of acquireTimes) {
@@ -88,6 +90,7 @@ export function useChampionItemTimelineStats(
       })
 
       for (const { id, ts } of classified) {
+        if (ts == null) continue
         if (isTrinket(id)) {
           bumpStatDetail(out.trinket, id, win, ts)
           continue
@@ -108,19 +111,20 @@ export function useChampionItemTimelineStats(
         }
       }
 
-      const legendaryBySlot = new Map<number, { id: number, ts: number }>()
+      const legendaryBySlot = new Map<number, { id: number; ts: number }>()
 
       for (const item of classified) {
+        if (item.ts == null) continue
         if (!isLegendary(item.id)) continue
         if (SUPPORT_LEGENDARIES.has(item.id)) continue
 
         const slotKey = getLegendarySlotKey(item.id)
-
         const existing = legendaryBySlot.get(slotKey)
+        const current = { id: item.id, ts: item.ts }
 
         // Keep earliest acquisition for that slot
-        if (!existing || item.ts < existing.ts) {
-          legendaryBySlot.set(slotKey, item)
+        if (!existing || current.ts < existing.ts) {
+          legendaryBySlot.set(slotKey, current)
         }
       }
 
@@ -143,7 +147,7 @@ export function useChampionItemTimelineStats(
       allLegendaries,
     ]) {
       for (const stat of Object.values(bucket)) {
-        stat.winrate = Math.round((stat.win / stat.games) * 1000) / 10
+        stat.winrate = Math.round(((stat.win ?? 0) / stat.games) * 1000) / 10
         stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
       }
     }
@@ -155,7 +159,7 @@ export function useChampionItemTimelineStats(
     }
 
     const support = sortTimedByWinratePickrate(out?.support)
-    console.log('🥸 - useChampionItemTimelineStats - support:', support)
+    console.log("🥸 - useChampionItemTimelineStats - support:", support)
     const boot = sortTimedByWinratePickrate(out?.boots)
 
     const supportPickrateSum = support.reduce(
@@ -174,22 +178,25 @@ export function useChampionItemTimelineStats(
     const core: OrderedTimedStatEntry[] = []
 
     if (isSupport && support.length) {
-      core.push(support[0])
+      const first = support[0]
+      if (first) core.push(first)
     }
 
     if (isBoot && boot.length) {
-      core.push(boot[0])
+      const first = boot[0]
+      if (first) core.push(first)
     }
 
     // fill remaining slots from legendary
     for (let i = 0; i < legendary.length && core.length < 3; i++) {
       const slot = legendary[i]
       if (!slot?.length) continue
-      core.push(slot[0])
+      const first = slot[0]
+      if (first) core.push(first)
     }
     const sortedCore = sortTimedByTime(core)
 
-    const excluded = new Set<number>(sortedCore.flatMap(i => i[0]))
+    const excluded = new Set<number>(sortedCore.flatMap((i) => i[0]))
     const slots: OrderedTimedStatEntry[] = []
 
     let slotIndex = isSupport ? 1 : 2
@@ -212,9 +219,9 @@ export function useChampionItemTimelineStats(
     }
 
     for (const stat of Object.values(startingItemSets)) {
-      stat.winrate = Math.round((stat.win / stat.games) * 1000) / 10
-      stat.pickrate
-        = Math.round((stat.games / matchData.value.length) * 1000) / 10
+      stat.winrate = Math.round(((stat.win ?? 0) / stat.games) * 1000) / 10
+      stat.pickrate =
+        Math.round((stat.games / matchData.value.length) * 1000) / 10
     }
 
     return {
@@ -229,30 +236,30 @@ export function useChampionItemTimelineStats(
         byWinrate: sortTimedByWinrate(allLegendaries),
         core: {
           games:
-            core.length
-              ? Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.games ?? 0), 0)
-                  / core.length)
-                * 10
+            core.length ?
+              Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.games ?? 0), 0) /
+                  core.length) *
+                  10
               ) / 10
-              : 0,
+            : 0,
           items: sortedCore,
           pickrate:
-            core.length
-              ? Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.pickrate ?? 0), 0)
-                  / core.length)
-                * 10
+            core.length ?
+              Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.pickrate ?? 0), 0) /
+                  core.length) *
+                  10
               ) / 10
-              : 0,
+            : 0,
           winrate:
-            core.length
-              ? Math.round(
-                (core.reduce((ac, [, s]) => ac + (s.winrate ?? 0), 0)
-                  / core.length)
-                * 10
+            core.length ?
+              Math.round(
+                (core.reduce((ac, [, s]) => ac + (s.winrate ?? 0), 0) /
+                  core.length) *
+                  10
               ) / 10
-              : 0,
+            : 0,
         },
       },
     }

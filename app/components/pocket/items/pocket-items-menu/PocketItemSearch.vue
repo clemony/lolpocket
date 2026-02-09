@@ -18,7 +18,7 @@ const emit = defineEmits(['update:query'])
 
 const route = useRoute()
 
-const searchQuery = ref('')
+const searchQuery = ref<string | undefined>('')
 /*
 watchEffect(() => {
   emit('update:query', searchQuery.value)
@@ -97,8 +97,8 @@ const inputVariants = {
 const { clearFilters, filters, setFilter } = useItemFilter()
 
 watchEffect(() => {
-  if (searchQuery.value === '' || searchQuery.value === undefined)
-    searchQuery.value = null
+  if (searchQuery.value === '')
+    searchQuery.value = undefined
 })
 </script>
 
@@ -117,7 +117,7 @@ watchEffect(() => {
       ease: 'easeOut',
     }"
     while-hover="expanded"
-    :animate="searchQuery !== null ? 'expanded' : 'collapsed'">
+    :animate="searchQuery !== undefined ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
         <Input
@@ -131,7 +131,7 @@ watchEffect(() => {
 
     <button
       class="btn pointer-events-auto absolute top-1.5 left-1.5 z-2 btn-circle btn-ghost btn-xs hover:bg-p3/40"
-      :disabled="searchQuery === null"
+      :disabled="searchQuery === undefined"
       @click="clearFilters">
       <icon
         v-if="searchQuery"

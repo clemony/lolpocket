@@ -10,7 +10,11 @@ const pocket = computed(() => props.pocket)
 <template>
   <PopoverItem
     class=""
-    @click="duplicateItemSet(props.set, props.pocket.key)">
+    @click="
+      props.set && props.pocket ?
+        duplicateItemSet(props.set, props.pocket.key)
+      : null
+    ">
     <icon name="copy" />
     Duplicate
   </PopoverItem>
@@ -40,11 +44,11 @@ const pocket = computed(() => props.pocket)
       align="start">
       <PopoverItem
         v-for="friendlyPocket in ps().pockets.filter(
-          (p) => p.key !== pocket.key,
+          (p) => p.key !== pocket?.key,
         )"
         :key="friendlyPocket.key"
         class="w-full"
-        @click="copyItemSetToPocket(friendlyPocket, props.set)">
+        @click="props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null">
         <PocketIcon
           class="size-6 rounded-full"
           :pocket
@@ -63,12 +67,12 @@ const pocket = computed(() => props.pocket)
 
   <DropdownMenuSeparator />
 
-  <PopoverItem @click="resetItems(set)">
+  <PopoverItem @click="props.set ? resetItems(props.set) : null">
     <icon name="reset" />
     Reset Items
   </PopoverItem>
 
-  <PopoverItem @click="deleteItemSet(pocket, set)">
+  <PopoverItem @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
     <icon name="trash" />
     Delete Set
   </PopoverItem>

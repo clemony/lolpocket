@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useUiStore = defineStore(
   'UiStore',
   () => {
-    const openChampionTab = ref<string>(null)
+    const openChampionTab = ref<string | null>(null)
     const sidebarStates = {
       inboxDropdown: ref<boolean>(false),
     }

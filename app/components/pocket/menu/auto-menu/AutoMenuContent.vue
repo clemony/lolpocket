@@ -2,7 +2,7 @@
 import type {
   MenubarItem,
   MenubarRadioGroup,
-} from '~/components/pocket/menu/types.menubar'
+} from "~/components/pocket/menu/types.menubar"
 
 const { item } = defineProps<{ item: MenubarItem }>()
 </script>
@@ -14,25 +14,17 @@ const { item } = defineProps<{ item: MenubarItem }>()
     class="mt-0.75 mb-0.5 bg-p3/60" />
 
   <!-- checkbox -->
-  <AutoMenuCheckboxItem
-    v-else-if="item.type === 'checkbox'"
-    :item />
+  <AutoMenuCheckboxItem v-else-if="item.type === 'checkbox'" :item />
   <!-- radio -->
-  <AutoMenuRadioGroup
+  <AutoMenuURadioGroup
     v-else-if="item.type === 'radio'"
     :item="item as MenubarRadioGroup" />
 
   <!-- submenu -->
-  <AutoSubMenu
-    v-else-if="item.type === 'submenu'"
-    :item />
+  <AutoSubMenu v-else-if="item.type === 'submenu'" :item />
 
   <!-- group -->
-  <AutoMenuGroup
-    v-else-if="item.type === 'group'"
-    :item />
+  <AutoMenuGroup v-else-if="item.type === 'group'" :item />
 
-  <AutoMenuItem
-    v-else
-    :item />
+  <AutoMenuItem v-else :item />
 </template>

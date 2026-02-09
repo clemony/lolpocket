@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   variant = "ghost",
   class: className,
@@ -7,8 +9,8 @@ const {
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
-  size?: ButtonVariants["size"][]
-  variant?: ButtonVariants["variant"]
+  size?: ButtonProps["size"][]
+  variant?: ButtonProps["variant"]
 }>()
 </script>
 
@@ -23,7 +25,7 @@ const {
             className
           )
         ">
-        <Button
+       <UButton
           v-if="cs().filters.resource && clear"
           class="order-first hover:*:opacity-100"
           :variant
@@ -31,7 +33,7 @@ const {
           size="sm"
           @click="cs().filters.resource = null">
           <icon class="size-4" name="x" />
-        </Button>
+        </UButton>
 
         <BaseListboxItem
           v-for="resource in abilityResources"

@@ -1,7 +1,11 @@
 export default defineNuxtConfig({
-  $meta: { name: 'store' },
+  $meta: { name: "store" },
 
-  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxtjs/supabase'],
+  modules: [
+    "@pinia/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+    "@nuxtjs/supabase",
+  ],
 
   /*  nitro: {
     cloudflare: {
@@ -24,4 +28,8 @@ export default defineNuxtConfig({
     },
   }, */
 
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
 })

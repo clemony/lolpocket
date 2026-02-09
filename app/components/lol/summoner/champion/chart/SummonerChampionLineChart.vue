@@ -25,16 +25,18 @@ watch(
 )
 
 const data = computed(() => {
-  if (!timeline.value) return
+  if (!timeline.value) {
+    return { labels: [], datasets: [{ data: [] }, { data: [] }] }
+  }
 
   return {
-    labels: timeline?.value?.map(p => p.span),
+    labels: timeline.value.map(p => p.span),
     datasets: [
       {
-        data: timeline?.value?.map(p => p.winrate),
+        data: timeline.value.map(p => p.winrate),
       },
       {
-        data: timeline?.value?.map(p => p.games),
+        data: timeline.value.map(p => p.games),
       },
     ],
   }
@@ -49,7 +51,7 @@ const options = {
   plugins: {
     tooltip: {
       callbacks: {
-        label: (context) => {
+        label: (context: any) => {
           const val = context.raw
           return context.datasetIndex === 0
             ? `${val.toFixed(2)}% winrate`
@@ -93,7 +95,7 @@ const options = {
 }
 
 const range = computed(() => {
-  const spans = timeline.value.map(p => p.span)
+  const spans = timeline.value?.map(p => p.span) ?? []
   if (!spans.length) return ''
   return `Weeks ${spans[0]} - ${spans[spans.length - 1]}`
 })

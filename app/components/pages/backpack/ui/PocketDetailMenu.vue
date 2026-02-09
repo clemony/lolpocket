@@ -11,7 +11,8 @@ const pocket = computed(() => {
   return pocketKey ? ps().getPocket(pocketKey) : null
 })
 
-const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
+const pocketKeySafe = computed(() => pocket.value?.key ?? '')
+const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
 </script>
 
 <template>
@@ -34,23 +35,17 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
           v-model="ps().pinned"
           class="peer hidden"
           :value="pocket.key"
-          type="checkbox">
-        <icon
-          v-if="!pinned"
-          class="size-4.75 **:stroke-2"
-          name="pin" />
+          type="checkbox" />
+        <icon v-if="!pinned" class="size-4.75 **:stroke-2" name="pin" />
 
-        <icon
-          v-else
-          class="size-4.75 **:stroke-2"
-          name="unpin" />
+        <icon v-else class="size-4.75 **:stroke-2" name="unpin" />
       </Label>
 
       <!-- archive -->
       <Label
         v-tippy="'Move to archive'"
         base="btn"
-        :variant="ps().archive.includes(pocket?.key) ? 'outline' : 'ghost'"
+        :variant="ps().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned,
@@ -61,67 +56,58 @@ const pinned = computed(() => ps().pinned.includes(pocket.value?.key))
           v-model="ps().pinned"
           class="peer hidden"
           :value="pocket.key"
-          type="checkbox">
+          type="checkbox" />
         <icon name="archive" />
       </Label>
 
       <!-- trash -->
-      <Button
+     <UButton
         v-tippy="'Move to trash'"
         base="btn"
-        :variant="ps().trash.includes(pocket?.key) ? 'outline' : 'ghost'"
+        :variant="ps().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned,
           })
         ">
         <icon name="trash" />
-      </Button>
+      </UButton>
 
-      <Separator
-        class="mx-1 h-6"
-        orientation="vertical" />
+      <Separator class="mx-1 h-6" orientation="vertical" />
 
       <!-- tags -->
 
-      <PocketTagsDropdown :pocket />
+      <PocketTagsDropdown :pocket="pocket ?? undefined" />
       <!-- edit -->
-      <BtnLink
+      <UButton
         v-if="pocket && pocket?.key"
         class="size-11"
         :to="`/pocket/${pocket.key}`"
         variant="ghost">
         <icon name="edit-line" />
-      </BtnLink>
+      </UButton>
     </div>
 
     <div class="ml-auto flex items-center gap-2">
       <!-- share -->
-      <Button
-        v-tippy="'Share'"
-        class="size-11"
-        variant="ghost">
+      <UButton v-tippy="'Share'" class="size-11" variant="ghost">
         <icon name="send" />
-      </Button>
+      </UButton>
 
       <!-- export -->
-      <Button
+     <UButton
         v-tippy="'Export to LoL'"
         class="size-11"
-        :disabled="!as().account.puuid"
+        :disabled="!as().account?.puuid"
         variant="ghost">
         <icon name="export" />
-      </Button>
+      </UButton>
     </div>
-    <Separator
-      class="mx-2 h-6"
-      orientation="vertical" />
+    <Separator class="mx-2 h-6" orientation="vertical" />
 
     <!-- more -->
     <UDropdownMenu>
-      <UButton
-        class="size-11"
-        color="neutral">
+      <UButton class="size-11" color="neutral">
         <icon name="more-vertical" />
       </UButton>
       <!-- <DropdownMenuContent class="w-64" align="end">

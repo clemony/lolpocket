@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 
-const checkedStats = ref([])
+const checkedStats = ref<StatIndex[]>([])
 
-const stats = ref([])
-const stats2 = ref([])
+const stats = ref<Record<string, number>>({})
+const stats2 = ref<Record<string, number>>({})
 
 function mergeItemStats(set: number[]) {
   const mergedStats: Record<string, number> = {}
@@ -24,7 +24,7 @@ function mergeItemStats(set: number[]) {
 const totalCost = ref<number>()
 const totalCost2 = ref<number>()
 
-function getTotalCost(set) {
+function getTotalCost(set: Array<{ buy?: number | null }>) {
   return set.reduce((sum, item) => sum + (item.buy || 0), 0)
 }
 const set1 = computed(() => is().calculatorSet)

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/vue-3'
+import type { Editor } from "@tiptap/vue-3"
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -7,23 +7,23 @@ const { editor } = defineProps<{
 
 const shortcuts = [
   {
-    key: 'at',
-    description: 'Mention or tag other lolpocket users.',
+    key: "at",
+    description: "Mention or tag other lolpocket users.",
   },
   {
-    key: 'picon:colon',
-    description: 'Search and insert emoji.',
+    key: "picon:colon",
+    description: "Search and insert emoji.",
   },
   {
-    key: 'hash',
-    description: 'Search and insert champion or item badges.',
+    key: "hash",
+    description: "Search and insert champion or item badges.",
   },
 ]
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger
+  <UPopover>
+    <UButton
       square
       size="xs"
       variant="ghost"
@@ -33,7 +33,7 @@ const shortcuts = [
       <icon
         class="size-5! opacity-60 transition-all duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90"
         name="i" />
-    </PopoverTrigger>
+    </UButton>
 
     <LazyPopoverContent
       class="w-58 -translate-x-2 rounded-xl px-0 pt-px pb-1"
@@ -49,17 +49,10 @@ const shortcuts = [
         </thead>
         <tbody class="pr-0">
           <!-- row -->
-          <tr
-            v-for="(item, i) in shortcuts"
-            :key="i"
-            class="py-0 pr-0">
+          <tr v-for="(item, i) in shortcuts" :key="i" class="py-0 pr-0">
             <th class="grid items-start py-2 pt-4">
-              <Kbd
-                class=""
-                size="sq-6">
-                <icon
-                  class="absolute size-3.5 opacity-90"
-                  :name="item.key" />
+              <Kbd class="" size="sq-6">
+                <icon class="absolute size-3.5 opacity-90" :name="item.key" />
               </Kbd>
             </th>
             <td class="py-2 pr-0 text-sm/5">
@@ -69,5 +62,5 @@ const shortcuts = [
         </tbody>
       </table>
     </LazyPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

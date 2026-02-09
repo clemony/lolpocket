@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Presence } from 'reka-ui'
+import { Presence } from "reka-ui";
 
 const {
   class: className,
@@ -7,43 +7,34 @@ const {
   region: r,
 } = defineProps<{
   region: keyof typeof regionIndex
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   present?: boolean
 }>()
-const emit = defineEmits(['update:region'])
-const region = ref('')
+const emit = defineEmits(["update:region"])
+const region = ref("")
 
 onMounted(() => (region.value = r))
 watch(
   () => r,
-  newVal => (region.value = newVal)
+  (newVal) => (region.value = newVal)
 )
 </script>
 
 <template>
-  <Presence
-    class="opacity-0 data-[present=true]:opacity-100"
-    :present>
-    <LazyPopover
-      @close-auto-focus.prevent
-      @click.stop>
-      <PopoverTrigger
-        class="grid items-center"
-        no-arrow
-        as-child>
-        <Button
-          class="z-1 flex w-14 flex-nowrap items-center text-sm! tracking-[0.5px] text-nowrap text-pc/60 lowercase *:first:text-pc/60"
-          variant="ghost"
-          size="sm">
-          <span class="relative -mr-1 grid place-items-center">
-            <icon
-              class="mt-px size-3.25!"
-              name="at" />
-          </span>
-          {{ region || "" }}
-        </Button>
-      </PopoverTrigger>
+  <LazyUPopover @close-auto-focus.prevent @click.stop>
+    <UButton class="grid items-center" no-arrow as-child>
+      <UButton
+        class="z-1 flex w-14 flex-nowrap items-center text-sm! tracking-[0.5px] text-nowrap text-pc/60 lowercase *:first:text-pc/60"
+        variant="ghost"
+        size="sm">
+        <span class="relative -mr-1 grid place-items-center">
+          <icon class="mt-px size-3.25!" name="at" />
+        </span>
+        {{ region || "" }}
+      </UButton>
+    </UButton>
+    <template #content>
       <LazyRegionPopoverContent @update:model-value="(e) => (region = e)" />
-    </LazyPopover>
-  </Presence>
+    </template>
+  </LazyUPopover>
 </template>

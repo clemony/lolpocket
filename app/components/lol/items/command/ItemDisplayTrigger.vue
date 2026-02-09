@@ -5,9 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <PopoverTrigger
-    class="size-20"
-    @click.stop>
+  <UButton class="size-20" @click.stop>
     <button
       class="group/b hover:ringneutral/40 data-[state=open]:ringneutral/40 pointer-events-none! size-full rounded-lg open:ring open:inset-shadow-sm hover:ring hover:inset-shadow-sm"
       :class="{
@@ -15,11 +13,11 @@ const props = defineProps<{
           itemId,
       }">
       <LazyItem
-        v-if="itemId ?? ''"
+        v-if="itemId"
         :id="props.itemId"
-        :key="props.itemId"
+        :key="String(props.itemId)"
         class="pointer-events-none! shrink-0 overflow-hidden rounded-field **:pointer-events-none"
-        :alt="itemNameById(itemId)"
+        :alt="itemId ? itemNameById(itemId) : 'item'"
         basic />
 
       <div
@@ -30,5 +28,5 @@ const props = defineProps<{
           name="search" />
       </div>
     </button>
-  </PopoverTrigger>
+  </UButton>
 </template>

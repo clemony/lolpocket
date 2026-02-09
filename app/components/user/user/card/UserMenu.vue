@@ -16,7 +16,11 @@ const user = await useSupabaseUser()
 const isAdmin = computed(() => user?.value?.app_metadata?.user_role === 'admin')
 const img = useImage()
 const splash = computed(() =>
-  img(props.author?.splash.replace('centered', 'uncentered'))
+  img(
+    props.author?.splash
+      ? props.author.splash.replace('centered', 'uncentered')
+      : ''
+  )
 )
 const tag = ref(false)
 </script>
@@ -29,7 +33,7 @@ const tag = ref(false)
     :offset="[0, 12]"
     :duration="150"
     :delay="500">
-    <Button
+   <UButton
       class="hover-ring pointer-events-auto z-4 size-9 rounded-full"
       base="btn"
       color="neutral"
@@ -40,7 +44,7 @@ const tag = ref(false)
         :comment
         :author="props.author"
         size="c-9" />
-    </Button>
+    </UButton>
     <template #content>
       <div
         class="pointer-events-auto relative z-100 mb-1 w-74 overflow-hidden rounded-t-lg [&_button]:px-2">

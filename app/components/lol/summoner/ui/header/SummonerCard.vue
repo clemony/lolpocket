@@ -7,12 +7,12 @@ const { mastery, splash } = storeToRefs(s_data())
 const { summoner } = storeToRefs(s_session())
 const img = useImage()
 const bg = computed(
-  () => splash?.value.replace("uncentered", "tile") ?? getRandomBg()
+  () => splash?.value?.replace("uncentered", "tile") ?? getRandomBg()
 )
 const top = computed(() => {
   if (!mastery.value) return
   return [...mastery.value]
-    .sort((a, b) => b.totalPoints - a.totalPoints)
+    .sort((a, b) => (b.totalPoints ?? 0) - (a.totalPoints ?? 0))
     .slice(0, 3)
 })
 console.log("🥸 - top:", top)

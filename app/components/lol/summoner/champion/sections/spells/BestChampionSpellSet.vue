@@ -2,8 +2,12 @@
 const { spells } = storeToRefs(s_champion())
 
 const best = computed(() => {
-  if (!spells.value.best) return null
-  return Object.entries(spells.value?.best)
+  if (!spells.value?.best) return null
+  return Object.entries(spells.value.best) as OrderedStatEntry[]
+})
+const firstStat = computed<StatDetail | undefined>(() => {
+  if (!best.value?.length) return undefined
+  return best.value[0]?.[1]
 })
 </script>
 
@@ -13,7 +17,7 @@ const best = computed(() => {
     simple>
     <ChampStatLabel
       title="Spells"
-      :stat="Object.values(spells.best)[0]" />
+      :stat="firstStat" />
     <ChampStatRowWrapper v-if="best">
       <ChampStatObjectWrapper
         v-for="[k, v] in best"

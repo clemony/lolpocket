@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
 import { SelectTrigger } from 'reka-ui'
 
 const {
@@ -14,25 +15,25 @@ const {
   class?: HTMLAttributes['class']
   modelValue: string | null
   side?: Side
-  size?: ButtonVariants['size']
-  variant?: ButtonVariants['variant']
+  size?: ButtonProps['size']
+  variant?: ButtonProps['variant']
   sideOffset?: number
   align?: Align
   alignOffset?: number
 }>()
 
 const emit = defineEmits(['update:select'])
-const currentValue = shallowRef<string>(null)
+const currentValue = shallowRef<string>('All')
 
 watch(
   () => mv,
   (newVal) => {
     console.log('💠 - watch - newVal:', newVal)
-    if (newVal) currentValue.value = mv
+    if (newVal) currentValue.value = mv ?? 'All'
   }
 )
 onMounted(() => {
-  currentValue.value ? (currentValue.value = mv) : (currentValue.value = 'All')
+  currentValue.value = mv ?? 'All'
 })
 </script>
 

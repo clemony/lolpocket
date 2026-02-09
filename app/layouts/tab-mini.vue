@@ -53,7 +53,7 @@ useScrollProvider(el)
       <SiteFooter />
     </div>
     <div class="fixed right-24 bottom-24 z-4 grid gap-4">
-      <UpFAB />
+      <ToTop />
     </div>
   </div>
 </template>

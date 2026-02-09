@@ -11,7 +11,7 @@ const open = shallowRef<boolean>(false)
       :delay="300"
       :offset="[0, -2]"
       :arrow="false">
-      <Button
+     <UButton
         class="w-full grow justify-between pr-2 pl-7!"
         size="sm"
         base="btn"
@@ -20,7 +20,7 @@ const open = shallowRef<boolean>(false)
         <icon
           class="size-4 opacity-60 group-on:opacity-100"
           name="right" />
-      </Button>
+      </UButton>
 
       <template #content>
         <div class="grid w-54 px-0 py-1 pt-2 **:text-sm [&_button]:px-2">

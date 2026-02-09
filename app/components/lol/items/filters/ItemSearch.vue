@@ -41,7 +41,7 @@ const searchQuery = ref('')
 
     <button
       class="btn absolute right-2 btn-square btn-ghost btn-sm"
-      @click="searchQuery = null">
+      @click="searchQuery = ''">
       <icon
         class="shrink-0"
         name="x-sm" />

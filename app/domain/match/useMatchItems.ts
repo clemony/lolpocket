@@ -1,8 +1,9 @@
+//
 export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
   // todo probably fix
 
-  const player = filteredMatches.map(m => ({
-    data: m.participants.find(p => p.puuid === as().account.puuid),
+  const player = filteredMatches.map((m) => ({
+    data: m.participants.find((p) => p.puuid === puuid),
     patch: m.gamePatch,
   }))
 
@@ -31,6 +32,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
     player.forEach((match, index) => {
       const { data, patch } = match
 
+      if (!data) return
       Object.values(data.items).forEach((itemId: number) => {
         if (!itemId || itemId === 0) return
 
@@ -58,24 +60,24 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
       (sum, s) => sum + s.games,
       0
     )
-    const globalWinrate
-      = [...itemStats.values()].reduce((sum, s) => sum + s.wins, 0)
-        / totalGames || 0
+    const globalWinrate =
+      [...itemStats.values()].reduce((sum, s) => sum + s.wins, 0) /
+        totalGames || 0
 
     bayesianItems.value = [...itemStats.entries()]
       .map(([itemId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate
-          = ((1 - confidence) * globalWinrate
-            + confidence * (stats.wins / stats.games))
-          * 100
+        const bayesianWinrate =
+          ((1 - confidence) * globalWinrate +
+            confidence * (stats.wins / stats.games)) *
+          100
 
         return {
           bayesianWinrate,
           gamePatches: stats.gamePatches,
           games: stats.games,
-          item: itemNameById(itemId),
+        item: itemNameById(itemId) ?? "",
           loss: stats.losses,
           matchIndexes: stats.matchIndexes,
           win: stats.wins,

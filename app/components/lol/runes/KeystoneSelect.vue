@@ -5,7 +5,8 @@ const { runes, selected } = defineProps<{
 }>()
 
 const emit = defineEmits(["update:rune"])
-const selectedRune = ref<number>(null)
+const selectedRune = ref<number | null>(null)
+const pathName = computed(() => runes?.[0]?.path)
 
 watch(
   () => selectedRune.value,
@@ -30,10 +31,10 @@ watch(
       class="absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26">
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"
-        :data-path="runes[0].path" />
+        :data-path="pathName" />
     </div>
 
-    <RadioGroup
+    <URadioGroup
       v-model:model-value="selectedRune"
       :class="
         cn(
@@ -51,7 +52,7 @@ watch(
         :class="cn(
           { 'to-p0/40 rounded-full  opacity-100 scale-115  grayscale-0': selectedRune===rune.id }, ``,
         )">
-        <RadioGroupItem
+        <URadioGroupItem
           :id="rune.id"
           :value="rune.id"
           class="hidden peer" />
@@ -68,7 +69,7 @@ watch(
           class="h-19 w-auto  drop-shadow-sm  pointer-events-none  shrink-0 absolute contrast-150 brightness-90 opacity-100  group-hover/r:opacity-0 duration-400 transition-all "
           :class="{ 'opacity-0': selectedRune===rune.id }" />
       </Label> -->
-    </RadioGroup>
+    </URadioGroup>
     <!--
       <div  class="size-full grid grid-cols-3 py-4">
         <Placeholder v-for="i in 3" :key="i" class="size-18 rounded-full place-self-center" />

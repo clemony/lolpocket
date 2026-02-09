@@ -7,7 +7,7 @@ const props = defineProps<{
 
 const item = ref(0)
 
-async function handleItem(e) {
+async function handleItem(e: number) {
   nextTick()
   item.value = e
 }

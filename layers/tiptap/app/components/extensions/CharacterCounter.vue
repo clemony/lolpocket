@@ -20,7 +20,7 @@ const {
         className,
       )
     ">
-    {{ editor.storage.characterCount.characters() }}
+    {{ editor?.storage.characterCount.characters() ?? 0 }}
     <template v-if="limit">
       &nbsp;/&nbsp;
     </template>

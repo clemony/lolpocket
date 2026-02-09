@@ -22,7 +22,7 @@ definePageMeta({
         :description="privacyPolicy[0].description.join()">
       </SettingsLayout> -->
       <div
-        v-for="(policy, a) in privacyPolicy.filter((p) => p !== p[0])"
+        v-for="(policy, a) in privacyPolicy.slice(1)"
         :key="a"
         class="grid auto-rows-max gap-4">
         <h3>

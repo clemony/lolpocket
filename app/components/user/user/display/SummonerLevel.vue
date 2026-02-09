@@ -34,7 +34,7 @@ const summonerLevel = computed(() => {
   if (summoner) {
     return summoner.level
   } else {
-    return as().account.level
+    return as().account?.level ?? 0
   }
 })
 </script>

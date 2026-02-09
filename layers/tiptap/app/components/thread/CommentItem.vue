@@ -6,7 +6,10 @@ const { comment, depth, parentHovered } = defineProps<{
 }>()
 const emit = defineEmits(['triggerHovered'])
 
-const replies = ts().getChildComments(comment.thread_id, comment.id)
+const replies = computed(() => {
+  if (!comment.thread_id) return []
+  return ts().getChildComments(comment.thread_id, comment.id)
+})
 const hovered = ref<boolean>(false)
 const renderedHtml = computed(() => {
   if (!comment.content) return null
@@ -15,10 +18,11 @@ const renderedHtml = computed(() => {
 const author = computedAsync(async () => {
   if (comment.removed) return null
   const a = acc().getByUuid(comment.uuid)
+  if (!a) return null
   return {
     ...a,
-    ...(await ss().resolveByPuuid(a?.puuid)),
-  }
+    ...(await ss().resolveByPuuid(a.puuid)),
+  } as AccountData
 }, null)
 /* const container = useTemplateRef<HTMLElement>('container')
 useTooltips(container) */

@@ -65,19 +65,19 @@ const gridOptions: GridOptions<ChampionLite> = {
 watch(
   () => cs().championGridLevel,
   (newVal) => {
-    if (newVal) gridApi.value.refreshCells()
+    if (newVal && gridApi.value) gridApi.value.refreshCells()
   }
 )
 
 watch(
   () => cs().championGridType,
   (newVal) => {
-    if (newVal) gridApi.value.refreshCells()
+    if (newVal && gridApi.value) gridApi.value.refreshCells()
   }
 )
 
 const { resolveStat } = useChampionStatGrowth(
-  computed(() => cs().championGridLevel)
+  computed(() => cs().championGridLevel ?? 1)
 )
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
@@ -187,48 +187,51 @@ hide: true },
     minWidth: 90,
     flex: 1.5,
     headerName: 'Position',
-    valueGetter: params => params.data.positions?.[0] ?? '',
+    valueGetter: params => params.data?.positions?.[0] ?? '',
   },
   {
     minWidth: 90,
     flex: 1.5,
     headerName: 'Role',
-    valueGetter: params => params.data.roles?.[0] ?? '',
+    valueGetter: params => params.data?.roles?.[0] ?? '',
   },
   {
     headerName: 'Ability Reliance',
-    valueGetter: params => params.data.attributeRatings.abilityReliance,
+    valueGetter: params => params.data?.attributeRatings?.abilityReliance ?? 0,
   },
 
   {
     headerName: 'Control',
-    valueGetter: params => params.data.attributeRatings.control,
+    valueGetter: params => params.data?.attributeRatings?.control ?? 0,
   },
   {
     headerName: 'Damage',
-    valueGetter: params => params.data.attributeRatings.damage,
+    valueGetter: params => params.data?.attributeRatings?.damage ?? 0,
   },
 
   {
     headerName: 'Difficulty',
-    valueGetter: params => params.data.attributeRatings.difficulty,
+    valueGetter: params => params.data?.attributeRatings?.difficulty ?? 0,
   },
 
   {
     headerName: 'Mobility',
-    valueGetter: params => params.data.attributeRatings.mobility,
+    valueGetter: params => params.data?.attributeRatings?.mobility ?? 0,
   },
 
   {
     headerName: 'Tough- ness',
-    valueGetter: params => params.data.attributeRatings.toughness,
+    valueGetter: params => params.data?.attributeRatings?.toughness ?? 0,
   },
   {
     headerName: 'Utility',
-    valueGetter: params => params.data.attributeRatings.utility,
+    valueGetter: params => params.data?.attributeRatings?.utility ?? 0,
   },
 ]
-const listener = event => cs().dbChampionStatListKey++
+const listener = (event: any) => {
+  void event
+  cs().dbChampionStatListKey++
+}
 
 async function onGridReady(params: GridReadyEvent) {
   await params.api
@@ -236,17 +239,18 @@ async function onGridReady(params: GridReadyEvent) {
   cs().championGridApi = gridApi.value
 
   const columns = gridApi.value.getColumns()
-  columns.forEach((col) => {
-    col.addEventListener('visibleChanged', listener)
+  columns?.forEach((col) => {
+    col.addEventListener('visibleChanged', listener as any)
   })
 }
 
 function onGridPreDestroyed(params: GridPreDestroyedEvent) {
+  if (!gridApi.value) return
   cs().dbChampionGridState = gridApi.value.getState()
 
   const columns = gridApi.value.getColumns()
-  columns.forEach((col) => {
-    col.removeEventListener('visibleChanged', listener)
+  columns?.forEach((col) => {
+    col.removeEventListener('visibleChanged', listener as any)
   })
 }
 

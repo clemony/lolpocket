@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/vue-3'
+import type { Editor } from '@tiptap/vue-3';
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -7,30 +7,30 @@ const { editor } = defineProps<{
 
 const menu = [
   {
-    action: () => editor.commands.toggleBold(),
+    action: () => editor?.commands.toggleBold(),
     icon: 'bold',
   },
   {
-    action: () => editor.commands.toggleItalic(),
+    action: () => editor?.commands.toggleItalic(),
     icon: 'italic',
   },
   {
-    action: () => editor.commands.toggleUnderline(),
+    action: () => editor?.commands.toggleUnderline(),
     icon: 'lucide:underline',
   },
   {
-    action: () => editor.commands.toggleStrike(),
+    action: () => editor?.commands.toggleStrike(),
     icon: 'strikethrough',
   },
   {
     name: 'separator',
   },
   {
-    action: () => editor.commands.toggleHeading({ level: 1 }),
+    action: () => editor?.commands.toggleHeading({ level: 1 }),
     icon: 'h1',
   },
   {
-    action: () => editor.commands.toggleHeading({ level: 2 }),
+    action: () => editor?.commands.toggleHeading({ level: 2 }),
     icon: 'h2',
   },
 ]
@@ -41,22 +41,22 @@ const menu = [
     <template
       v-for="(item, i) in menu"
       :key="i">
-      <Button
+     <UButton
         v-if="!item.name"
         variant="ghost"
         hover="inset"
         square
         class="size-9"
-        @click="item.action()">
+        @click="item.action?.()">
         <icon
-          :name="item.icon"
+          :name="item.icon ?? ''"
           :class="
             cn('', {
-              'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon),
+              'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon ?? ''),
               'size-4': item.icon === 'lucide:underline, bold',
             })
           " />
-      </Button>
+      </UButton>
       <Separator
         v-if="item.name === 'separator'"
         class="h-[11px] bg-p3"

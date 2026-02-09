@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { card: c } = defineProps<{
-  card: Card
+  card: Card | null
 }>()
 const emit = defineEmits([
   "download",
@@ -8,7 +8,19 @@ const emit = defineEmits([
   "update:color",
   "update:filter",
 ])
-const card = computed(() => c)
+const card = computed<Card | null>(() => c ?? null)
+const cardFont0 = computed({
+  get: () => card.value?.font?.[0] ?? "",
+  set: (value: string) => {
+    if (card.value) card.value.font[0] = value
+  },
+})
+const cardFont1 = computed({
+  get: () => card.value?.font?.[1] ?? "",
+  set: (value: string) => {
+    if (card.value) card.value.font[1] = value
+  },
+})
 const align = ref("0")
 const color = ref<string>()
 const filter = ref<string>()
@@ -23,6 +35,7 @@ watch(
 
 <template>
   <div
+    v-if="card"
     class="absolute top-16 left-0 z-1 flex h-14 w-full items-center gap-2 rounded-none border-x-2 border-b border-x-p3/30 border-b-p3/80 bg-p2/40 px-5.25 py-1 shadow-none backdrop-blur-md before:absolute before:top-0 before:left-0 before:z-0 before:size-full before:bg-p0/60">
     <LazyChampionDropdown
       :disabled="!card.champion"
@@ -58,14 +71,14 @@ watch(
         name="streamline:rainbow" />
     </label>
 
-    <Popover>
-      <PopoverTrigger>
+    <UPopover>
+      <UButton>
         <button v-tippy="'Background Align'" class="btn btn-square btn-ghost">
           <icon
             class="size-5.5 shrink-0 dst"
             name="ph:arrows-out-line-horizontal" />
         </button>
-      </PopoverTrigger>
+      </UButton>
 
       <PopoverContent
         class="PopoverContent w-44 border border-p3"
@@ -79,21 +92,21 @@ watch(
           min="0"
           max="100" />
       </PopoverContent>
-    </Popover>
+    </UPopover>
 
-    <FontSelect
-      v-model:model-value="card.font[0]"
+    <!--     <FontSelect
+      v-model:model-value="cardFont0"
       tip="Title Font"
       :card
       :model="0"
-      @update:model-value="(e) => (card.font[0] = e)" />
+      @update:model-value="(e: string) => (cardFont0.value = e)" />
 
     <FontSelect
-      v-model:model-value="card.font[1]"
+      v-model:model-value="cardFont1"
       tip="Text Font"
       :card
       :model="1"
-      @update:model-value="(e) => (card.font[1] = e)" />
+      @update:model-value="(e: string) => (cardFont1.value = e)" /> -->
 
     <button v-tippy="'Add Note'" class="btn btn-square btn-ghost">
       <icon class="size-5.5 dst" name="iconoir:text" />

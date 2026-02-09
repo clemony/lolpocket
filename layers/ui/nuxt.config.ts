@@ -27,6 +27,11 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
   ],
 
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
+
   components: [
     {
       global: true,

@@ -1,37 +1,38 @@
-import { defineStore } from 'pinia'
+//
+import { defineStore } from "pinia"
 
-export const useMatchStore = defineStore('matchStore', () => {
-  const summonerSearch = ref(null)
+export const useMatchStore = defineStore("matchStore", () => {
+  const summonerSearch = ref<string | null>(null)
 
   const championTabsQueue = ref<number>(0)
 
   // match filters
   const filter = ref<MatchFilter>({
     ally: null,
-    amount: null,
+    amount: undefined,
     champion: null,
-    patch: null,
-    queue: null,
-    role: 'ALL',
+    patch: undefined,
+    queue: undefined,
+    role: "ALL",
     date: {
-      end: null,
-      start: null,
+      end: undefined,
+      start: undefined,
     },
   })
 
   function clearFilter() {
-    filter.value = Object.assign(filter, {
+    filter.value = {
       ally: null,
-      amount: null,
+      amount: undefined,
       champion: null,
-      patch: null,
-      queue: null,
-      role: 'ALL',
+      patch: undefined,
+      queue: undefined,
+      role: "ALL",
       date: {
-        end: null,
-        start: null,
+        end: undefined,
+        start: undefined,
       },
-    })
+    }
   }
 
   const seasonTotals = ref()

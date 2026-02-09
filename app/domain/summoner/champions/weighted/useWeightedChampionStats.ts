@@ -1,4 +1,5 @@
-export function useBayesianChampionStats(matches: MatchData[], puuid) {
+//
+export function useBayesianChampionStats(matches: MatchData[], puuid: string) {
   /*  const statsList = Object.values(useChampionStats(puuid, null))
   const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
   const globalWinrate

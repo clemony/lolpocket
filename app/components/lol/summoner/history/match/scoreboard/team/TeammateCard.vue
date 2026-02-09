@@ -11,10 +11,10 @@ const bars = computed(() => {
       class:
         "hover:bg-domination-200! hover:text-pc! hover:ring-offset-domination-200!  hover:ring-domination-300!",
       max: match.participants
-        .map((p) => p.stats.totalDamage)
-        .sort((a, b) => b - a)[0],
+        .map((p) => p.stats?.totalDamage ?? 0)
+        .sort((a, b) => b - a)[0] ?? 0,
       tip: "Total Damage Dealt to Champions",
-      value: player.stats.totalDamage,
+      value: player.stats?.totalDamage ?? 0,
       icon: ["lol:scoreboard-sword", "-translate-y-px size-4 opacity-100"],
     },
     {
@@ -22,10 +22,10 @@ const bars = computed(() => {
       class:
         "hover:bg-precision-200! hover:text-pc! hover:ring-offset-precision-200!  hover:ring-precision-400!",
       max: match.participants
-        .map((p) => p.stats.totalDamageTaken)
-        .sort((a, b) => b - a)[0],
+        .map((p) => p.stats?.totalDamageTaken ?? 0)
+        .sort((a, b) => b - a)[0] ?? 0,
       tip: "Total Damage Taken by Champions",
-      value: player.stats.totalDamageTaken,
+      value: player.stats?.totalDamageTaken ?? 0,
       icon: ["stat:armor"],
     },
     {
@@ -33,10 +33,10 @@ const bars = computed(() => {
       class:
         "hover:bg-resolve-100! bg-blend-hue hover:text-pc! hover:ring-offset-resolve-100! hover:ring-resolve-200!",
       max: match.participants
-        .map((p) => p.stats.effectiveHealingAndShielding)
-        .sort((a, b) => b - a)[0],
+        .map((p) => p.stats?.effectiveHealingAndShielding ?? 0)
+        .sort((a, b) => b - a)[0] ?? 0,
       tip: "Effective Healing & Shielding",
-      value: player.stats.effectiveHealingAndShielding,
+      value: player.stats?.effectiveHealingAndShielding ?? 0,
       icon: ["stat:health"],
     },
   ]
@@ -86,7 +86,7 @@ const bars = computed(() => {
       <div class="flex items-center gap-2 leading-4">
         <MvpBadge :match :player />
         <span class="text-xs opacity-50">
-          {{ player.lpScore.score }}
+          {{ player.lpScore?.score ?? 0 }}
         </span>
       </div>
     </div>

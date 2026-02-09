@@ -23,7 +23,10 @@ const { subtitle, title, icon, value } = defineProps<{
           </slot>
         </span>
         <div class="grid size-3 place-items-center">
-          <Icon v-if="icon" :name="icon[0]" :class="cn(icon[1], 'absolute')" />
+          <Icon
+            v-if="icon?.[0]"
+            :name="icon[0]"
+            :class="cn(icon[1], 'absolute')" />
         </div>
       </div>
       <div class="stat-desc text-xs! leading-none">

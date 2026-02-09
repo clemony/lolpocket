@@ -21,6 +21,7 @@ useHead({
 })
 
 const scrollRef = useState<HTMLElement | null>("scrollRef", () => null)
+const reportComment = computed(() => ts().reportComment ?? undefined)
 
 /*     :style="{ overflowAnchor: 'none' }" */
 </script>
@@ -40,8 +41,8 @@ const scrollRef = useState<HTMLElement | null>("scrollRef", () => null)
       <NuxtPage />
     </NuxtLayout>
     <LazyReportDialog
-      v-if="as().user && as().account"
-      :comment="ts().reportComment" />
+      v-if="as().user && as().account && reportComment"
+      :comment="reportComment" />
     <!-- loading -->
     <NuxtLoadingIndicator
       style="

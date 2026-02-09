@@ -12,7 +12,7 @@ const store = useMatchFilters()
 const { filter } = storeToRefs(store)
 
 const roles = computed(() => {
-  if (!s_matches().matches || !summoner?.value) return
+  if (!s_matches().matches || !summoner?.value) return []
 
   const matchRoles = useMatchRoles(summoner?.value?.puuid, s_matches().matches)
 
@@ -26,8 +26,8 @@ const roles = computed(() => {
 })
 
 const roleModel = computed({
-  get: () => filter?.value.role,
-  set: val => store.setFilter('role', val),
+  get: () => filter?.value.role ?? 'all',
+  set: val => store.setFilter('role', val ?? 'all'),
 })
 </script>
 

@@ -1,3 +1,4 @@
+//
 export function bumpStatDetail(
   map: Record<number, StatDetail>,
   itemId: number,
@@ -10,11 +11,12 @@ export function bumpStatDetail(
 
   const s = map[itemId]
   s.games++
+  s.win ??= 0
   if (win) s.win++
 
   if (timestamp != null) {
-    s.avgTimestamp
-      = ((s.avgTimestamp ?? 0) * (s.games - 1) + timestamp) / s.games
+    s.avgTimestamp =
+      ((s.avgTimestamp ?? 0) * (s.games - 1) + timestamp) / s.games
   }
 }
 
@@ -24,14 +26,17 @@ export function bumpAverage(stat: StatAverage, value?: number) {
 }
 
 export function bumpStat(
-  map: Record<number, StatDetail>,
+  map: Record<string, StatDetail> | Record<number, StatDetail>,
   id: string | number,
   win: boolean
 ) {
-  if (!map[id]) {
-    map[id] = { games: 0, win: 0 }
+  const key = String(id)
+  const target = map as Record<string, StatDetail>
+  if (!target[key]) {
+    target[key] = { games: 0, win: 0 }
   }
 
-  map[id].games++
-  if (win) map[id].win++
+  target[key].games++
+  target[key].win ??= 0
+  if (win) target[key].win++
 }

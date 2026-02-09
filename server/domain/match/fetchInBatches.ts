@@ -1,4 +1,7 @@
-export async function fetchInBatches(ids: string[], region: string) {
+export async function fetchInBatches(
+  ids: string[],
+  region: string
+): Promise<MatchData[]> {
   const concurrency = 10
   const results: MatchData[] = []
 
@@ -13,7 +16,12 @@ export async function fetchInBatches(ids: string[], region: string) {
             return null
           })
         )
-      ).then(batch => results.push(...batch.filter(Boolean))))
+      ).then((batch) => {
+        const matches = batch
+          .filter((item): item is MatchReturn => Boolean(item))
+          .flatMap(item => item.matches ?? [])
+        results.push(...matches)
+      }))
   )
 
   return results

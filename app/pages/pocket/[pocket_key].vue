@@ -20,12 +20,14 @@ definePageMeta({
 const route = useRoute('pocket')
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
-const mainSet = computed(() =>
-  pocket.value.runes.find(s => s.id === pocket.value._runes)
-)
+const mainSet = computed(() => {
+  const runes = pocket.value?.runes
+  if (!runes || !pocket.value?._runes) return null
+  return runes.find(s => s.id === pocket.value?._runes) ?? null
+})
 
 const selectedSet = computed(() => {
-  const s = pocket.value.spells?.find(s => s.id === pocket.value._spells)
+  const s = pocket.value?.spells?.find(s => s.id === pocket.value?._spells)
   if (!s) return null
   const { id, ...rest } = s
   return rest

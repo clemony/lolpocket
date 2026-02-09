@@ -20,7 +20,7 @@ const clem = [
 
 const showClem = ref("/img/cat/clem1.webp")
 
-const photoBox = useTemplateRef("photoBox")
+const photoBox = ref<HTMLElement | null>(null)
 const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
 </script>
 
@@ -33,14 +33,16 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
     <template #content>
       <div
         class="top-[10%] w-190 max-w-190! translate-y-1/4 rounded-xl! px-16 pb-10">
-        <Carousel
+        <div
           ref="photoBox"
-          :opts="{ loop: true }"
-          :class="
-            cn(
-              `relative max-h-full w-full focus-visible:outline-0 **:focus-visible:outline-0`
-            )
-          ">
+          class="relative max-h-full w-full focus-visible:outline-0 **:focus-visible:outline-0">
+          <Carousel
+            :opts="{ loop: true }"
+            :class="
+              cn(
+                `relative max-h-full w-full focus-visible:outline-0 **:focus-visible:outline-0`
+              )
+            ">
           <CarouselContent>
             <CarouselItem v-for="(img, i) in clem" :key="i">
               <div>
@@ -82,7 +84,8 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
                 !isFullscreen ? '-right-14' : 'right-10'
               )
             " />
-        </Carousel>
+          </Carousel>
+        </div>
       </div>
     </template>
   </UModal>

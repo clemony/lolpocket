@@ -8,6 +8,7 @@ const { editor, mentionData } = defineProps<{
 
 const isOpen = shallowRef<boolean>(false)
 function insertMention(item: Index) {
+  if (!editor) return
   editor
     .chain()
     .insertContent({
@@ -37,9 +38,9 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
 </script>
 
 <template>
-  <Popover v-model:open="isOpen">
+  <UPopover v-model:open="isOpen">
     <!-- trigger -->
-    <PopoverTrigger
+    <UButton
       square
       size="xs"
       variant="ghost"
@@ -49,7 +50,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
       <icon
         class="size-4! opacity-60 transition-all duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90"
         name="hash" />
-    </PopoverTrigger>
+    </UButton>
 
     <LazyPopoverContent
       ref="target"
@@ -71,6 +72,16 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
               }
             " />
         </InputGroup>
+
+        <UInput
+          icon="i-search"
+          v-model:model-value="is().filters.query"
+          class="peer"
+          placeholder="search">
+          <template #trailing>
+            <InputClear @clear-input="is().filters.query = ''" />
+          </template>
+        </UInput>
       </div>
       <TransitionSlide
         ref="gridWrapper"
@@ -93,7 +104,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
           </template>
           <template v-else>
             <IndexIcon
-              v-for="item in groups[tab].items"
+              v-for="item in groups[tab]?.items ?? []"
               :key="item.id"
               v-tippy="{ content: item.name, theme: 'base', placement: 'top' }"
               :item
@@ -140,5 +151,5 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
         </Tabs>
       </div>
     </LazyPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

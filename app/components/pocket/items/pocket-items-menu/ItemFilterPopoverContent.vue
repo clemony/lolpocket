@@ -1,38 +1,34 @@
 <script setup lang="ts">
-const scrollArea = useTemplateRef<HTMLElement>("scrollArea")
+const UScrollArea = useTemplateRef<HTMLElement>("UScrollArea")
 
-onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
+onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
 </script>
 
 <template>
-  <PopoverContent
-    update-position-strategy="always"
-    variant="outline"
-    @open-auto-focus.prevent>
-    <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
-      <InputGroupAddon>
-        <icon class="size-4.5 opacity-50" name="search" />
-      </InputGroupAddon>
-      <InputGroupInput v-model="is().filters.query" />
-      <InputClear class="mr-6" @clear-input="is().filters.query = ''" />
-
-      <InputGroupAddon align="inline-end">
-        <icon class="mr-2 size-4.5 opacity-50" name="filter" />
-      </InputGroupAddon>
-    </InputGroup>
+  <div>
+    <UInput
+      icon="i-search"
+      v-model:model-value="is().filters.query"
+      class="peer"
+      placeholder="search">
+      <template #trailing>
+        <UButton size="xs" square icon="filter" />
+        <InputClear @clear-input="is().filters.query = ''" />
+      </template>
+    </UInput>
     <div
       class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]">
-      <div ref="scrollArea" class="overflow-auto">
+      <div ref="UScrollArea" class="overflow-auto">
         <div
           class="relative grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5">
-          <Button
+         <UButton
             v-if="is().filters.stats.length"
             class="absolute top-7 right-6 size-6"
             variant="outline"
             square
             @click="is().filters.stats.length = 0">
             <icon class="size-4" name="x" />
-          </Button>
+          </UButton>
           <ItemStatsList
             class="gap-3.5 *:w-max *:gap-2.5! *:pr-6 *:pl-4"
             wrapper-class="flex-wrap pr-8 gap-x-6 max-h-106 flex flex-col gap-y-0"
@@ -45,25 +41,25 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
           <div class="grid w-full grid-cols-[0.6fr_1fr] gap-x-12 gap-y-1 pr-8">
             <Label class="popover-button-label">
               Item Tier
-              <Button
+             <UButton
                 v-if="is().filters.rank"
                 class="size-6"
                 variant="outline"
                 square
                 @click="is().filters.rank = null">
                 <icon class="size-4" name="x" />
-              </Button>
+              </UButton>
             </Label>
             <Label class="popover-button-label">
               Categories
-              <Button
+             <UButton
                 v-if="is().filters.tags.length"
                 class="size-6"
                 variant="outline"
                 square
                 @click="is().filters.tags.length = 0">
                 <icon class="size-4" name="x" />
-              </Button>
+              </UButton>
             </Label>
             <ItemRankFilter
               class="max-h-56 flex-col flex-wrap items-start"
@@ -84,10 +80,10 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
 
         <Grow class="max-w-14" />
         <ShopToggle class="border-b4/60! border" size="sq-9" />
-        <Button color="neutral" square size="sm" @click="is().clearFilters()">
+        <UButton color="neutral" square size="sm" @click="is().clearFilters()">
           <icon class="size-4" name="reset" />
-        </Button>
+        </UButton>
       </div>
     </div>
-  </PopoverContent>
+  </div>
 </template>

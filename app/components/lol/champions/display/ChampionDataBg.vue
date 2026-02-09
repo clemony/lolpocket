@@ -68,7 +68,7 @@ const bg = [
     <span
       class="absolute top-0 left-0 size-full border border-transparent"
       :style="{
-        backgroundColor: `var(--color-${bg.find((p) => p.name === name).color})`,
+        backgroundColor: `var(--color-${bg.find((p) => p.name === name)?.color ?? 'p0'})`,
         opacity,
       }" />
 

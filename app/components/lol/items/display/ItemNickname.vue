@@ -6,11 +6,11 @@ const { item } = defineProps<{
 
 <template>
   <p
-    v-if="item.nicknames.length"
+    v-if="item?.nicknames?.length"
     class="ml-0.5 text-xs italic">
     a.k.a.
     <span
-      v-for="(name, index) in item.nicknames"
+      v-for="(name, index) in item?.nicknames ?? []"
       :key="index">{{ name }}</span>
   </p>
 </template>

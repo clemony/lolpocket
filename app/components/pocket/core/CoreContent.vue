@@ -2,26 +2,32 @@
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
+const championKey = computed(() => pocket.value?._champion ?? null)
+const championTitle = computed(() =>
+  championKey.value ? championToTitle[championKey.value] : undefined
+)
 </script>
 
 <template>
-  <div class="inset-0 z-auto grid grid-cols-[1fr_2.5fr] gap-22">
+  <div
+    v-if="pocket"
+    class="inset-0 z-auto grid grid-cols-[1fr_2.5fr] gap-22">
     <div class="grid w-full grid-cols-[2.5fr_1fr] gap-4 pt-22">
       <div class="flex w-full flex-col gap-3">
         <div class="mb-2 h-16">
           <h1 class="leading-10 tracking-tight dst">
-            {{ pocket._champion }}
+            {{ championKey }}
           </h1>
           <div class="text-lg font-medium italic">
-            {{ championToTitle[pocket._champion] }}
+            {{ championTitle }}
           </div>
         </div>
         <HoverCard>
           <HoverCardTrigger>
             <Champion
               class="aspect-square h-auto w-full max-w-80 inset-shadow-sm inset-shadow-black/20 *:scale-[130%]"
-              :k="pocket._champion"
+              :k="championKey ?? undefined"
               type="tile" />
           </HoverCardTrigger>
           <HoverCardContent
@@ -29,7 +35,7 @@ const pocket = computed(() =>
             align="start"
             side="bottom" />
         </HoverCard>
-        <ChampionAbilityTabs :k="pocket._champion" />
+        <ChampionAbilityTabs :k="championKey ?? undefined" />
       </div>
 
       <div

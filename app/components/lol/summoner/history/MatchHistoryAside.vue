@@ -18,12 +18,12 @@ onMounted(() => {
       )
     ">
     <RankCard
-      v-if="as().settings?.show_solo"
+      v-if="as().settings?.show_solo && summoner?.ranked?.solo"
       title="Solo/Duo"
       :entry="summoner?.ranked?.solo" />
 
     <RankCard
-      v-if="as().settings?.show_flex"
+      v-if="as().settings?.show_flex && summoner?.ranked?.flex"
       title="Flex"
       :entry="summoner?.ranked?.flex" />
 

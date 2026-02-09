@@ -2,8 +2,8 @@
 const isCollapsed = ref(false)
 const route = useRoute()
 definePageMeta({
-  name: 'Inbox',
-  icon: 'mail',
+  name: "Inbox",
+  icon: "mail",
 })
 /*
 const selectedMail = ref<string | undefined>(props.mails[0].id)
@@ -39,15 +39,15 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
 <template>
   <BoxLayout
     :is-collapsed
-    @toggle-collapse="(e) => (isCollapsed = !e)"
+    @toggle-collapse="(e: boolean) => (isCollapsed = !e)"
     @expand="isCollapsed = true"
     @collapse="isCollapsed = false">
     <template #nav>
       <div
         class="flex size-full h-16 w-full items-center justify-center border-b p-1">
-        <Popover>
-          <PopoverTrigger as-child>
-            <Button
+        <UPopover>
+          <UButton as-child>
+           <UButton
               variant="ghost"
               hover="base"
               on="base"
@@ -74,19 +74,19 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
                 v-show="!isCollapsed"
                 name="up-down"
                 :class="cn('size-4.5 text-pc/60')" />
-            </Button>
-          </PopoverTrigger>
+            </UButton>
+          </UButton>
           <LazyPopoverContent
             class="w-(--reka-popover-trigger-width) min-w-64 space-y-1 p-1.5">
             <InboxDropdownMenu />
           </LazyPopoverContent>
-        </Popover>
+        </UPopover>
       </div>
       <BoxNav
         :is-collapsed
         :links="
-          route.matched[0].children.sort(
-            (a, b) => Number(a.meta?.order) - Number(b.meta?.order),
+          (route.matched[0]?.children ?? []).sort(
+            (a, b) => Number(a.meta?.order) - Number(b.meta?.order)
           )
         " />
 

@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import type {
-  MenubarItem,
-  MenubarItemType,
-} from '~/components/pocket/menu/types.menubar'
+import type { MenubarItem } from '~/components/pocket/menu/types.menubar'
 
 const { class: className, item } = defineProps<{
   item: MenubarItem
@@ -18,7 +15,7 @@ const { class: className, item } = defineProps<{
       :class="cn('group/trig', item?.class?.trigger)">
       <icon
         v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
-        :name="getIcon(item.icon)?.name"
+        :name="getIcon(item.icon)?.name ?? ''"
         :class="cn('size-4.5', getIcon(item.icon)?.class)" />
       <span class="truncate">
         {{ item.name }}
@@ -49,10 +46,10 @@ const { class: className, item } = defineProps<{
         v-if="item.component" />
       <!-- subitem -->
       <AutoMenuContent
-        v-for="(subitem, i) in item.items"
+        v-for="(subitem, i) in item.items ?? []"
         v-else
         :key="i"
-        :item="subitem as MenubarItemType" />
+        :item="subitem as MenubarItem" />
     </LazyMenubarSubContent>
   </MenubarSub>
 </template>

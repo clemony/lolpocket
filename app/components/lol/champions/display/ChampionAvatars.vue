@@ -2,10 +2,11 @@
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
-const l = computed(() => pocket.champions.length > 5).value
+const champs = computed(() => pocket.champions ?? [])
+const l = computed(() => champs.value.length > 5).value
 
 const group = computed(() =>
-  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5)
+  l ? champs.value.slice(0, 4) : champs.value.slice(0, 5)
 )
 </script>
 
@@ -28,7 +29,7 @@ const group = computed(() =>
           class="absolute group-closed:opacity-0"
           name="up" />
         <h3 class="group-open:text-transparent group-open:opacity-0">
-          +{{ pocket.champions.length - 4 }}
+          +{{ champs.length - 4 }}
         </h3>
       </Element>
     </Element>

@@ -33,22 +33,22 @@ export const sortedMessages = computed(() => {
   )
 })
 
-export function matchMsg(msgId: string, index?: boolean): InboxMessage {
-  return as().inbox.messages.find(m => m.id === msgId)
+export function matchMsg(msgId: string): InboxMessage | undefined {
+  return as().inbox?.messages?.find(m => m.id === msgId)
 }
 
-export function markRead(msgId) {
+export function markRead(msgId: string) {
   const msg = matchMsg(msgId)
   if (msg) msg.read = true
 }
 
-export function toggleRead(msgId) {
+export function toggleRead(msgId: string) {
   const msg = matchMsg(msgId)
 
   if (msg) msg.read = !msg.read
 }
 
-export function trashMsg(msgId) {
+export function trashMsg(msgId: string) {
   const msg = matchMsg(msgId)
 /*  fixme
 if (msg) {
@@ -58,7 +58,7 @@ msg.trash
 }
 
 export function trashAllRead() {
-  const a = as().inbox.messages.filter(m => m.read === true)
+  const a = as().inbox?.messages?.filter(m => m.read === true) ?? []
   a.forEach((m) => {
     trashMsg(m.id)
   })

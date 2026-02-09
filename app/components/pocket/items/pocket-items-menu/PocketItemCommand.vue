@@ -1,32 +1,27 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   sideOffset?: number
   type?: string
   hasData?: boolean
 }>()
 
-const emit = defineEmits(['update:open'])
+const emit = defineEmits(["update:open"])
 
 const isOpen = ref(false)
 const hasData = computed(() => props.hasData)
 watchEffect(() => {
-  emit('update:open', isOpen.value)
+  emit("update:open", isOpen.value)
 })
 </script>
 
 <template>
-  <Popover v-model:open="isOpen">
-    <PopoverTrigger
-      class="btn relative flex btn-square items-center btn-neutral">
-      <icon
-        class="-mt-px size-4.5 shrink-0 text-nc"
-        name="search-bold" />
+  <UPopover v-model:open="isOpen">
+    <UButton class="btn relative flex btn-square items-center btn-neutral">
+      <icon class="-mt-px size-4.5 shrink-0 text-nc" name="search-bold" />
 
-      <StatusIndicator
-        v-if="hasData"
-        class="-top-0.5 -right-0.25" />
-    </PopoverTrigger>
+      <UChip v-if="hasData" class="-top-0.5 -right-0.25" />
+    </UButton>
 
     <CustomPopoverContent
       class=""
@@ -49,9 +44,7 @@ watchEffect(() => {
           <LazyItemCommandTags />
         </div> -->
         <div class="relative size-full h-117 overflow-hidden">
-          <div
-            class="absolute inset-0 top-0 left-0 overflow-y-scroll"
-            as="div">
+          <div class="absolute inset-0 top-0 left-0 overflow-y-scroll" as="div">
             <div>
               <LazyItemCommandTypes />
 
@@ -63,5 +56,5 @@ watchEffect(() => {
         </div>
       </div>
     </CustomPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

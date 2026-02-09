@@ -100,7 +100,7 @@ export interface AllyStatDetail extends Identifier, StatDetail {
 export interface ChampionRuneStats {
   keystone: Record<number, StatDetail>
   all: RunePageStats[]
-  best: RunePageStats
+  best: RunePageStats | null
   primary: Record<number, StatDetail>
   secondary: Record<number, StatDetail>
   shards: ShardStats
@@ -113,7 +113,7 @@ export interface RunePageStats extends StatDetail {
   primaryRunes: number[]
   secondaryPath: string
   secondaryRunes: number[]
-  shards: number[]
+  shards: Array<number | null>
 }
 
 export type RunePageKey = string

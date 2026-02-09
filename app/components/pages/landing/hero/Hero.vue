@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { motion } from "motion-v"
-import { heroDisplays } from "~/domain/riot/media/video"
+import { motion } from "motion-v";
+import { heroDisplays } from "~/domain/riot/media/video";
 
 const { progress: p, visible } = defineProps<{
   progress: any
   visible: boolean
 }>()
 
-const video = heroDisplays[0]
+const video =
+  heroDisplays[0] ?? { url: "", class: "" }
 const videoRef = ref<any>()
 const prog = ref(0)
 
@@ -68,7 +69,7 @@ onMounted(() => {
       <div class="justify-self-start pl-44">
         <div class="relative grid size-full w-140 max-w-140 items-center">
           <LolpocketDefinition>
-            <Button
+           <UButton
               variant="outline"
               size="lg"
               :class="
@@ -78,7 +79,7 @@ onMounted(() => {
               "
               @click="navigateTo('/login')">
               Sign in
-            </Button>
+            </UButton>
           </LolpocketDefinition>
         </div>
 

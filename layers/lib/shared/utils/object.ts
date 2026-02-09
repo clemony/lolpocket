@@ -35,6 +35,9 @@ export function isJSON(str: string): boolean {
   }
 }
 
-export function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value)
+export function getKeyByValue<T extends Record<PropertyKey, unknown>>(
+  object: T,
+  value: T[keyof T]
+) {
+  return Object.keys(object).find(key => object[key as keyof T] === value)
 }

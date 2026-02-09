@@ -26,7 +26,7 @@ definePageMeta({
     <TransitionScalePop
       v-else
       class="grid h-[30vh] w-full place-items-center">
-      <Button
+     <UButton
         class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         variant="outline"
         size="sm"
@@ -35,7 +35,7 @@ definePageMeta({
         <icon
           class="size-3.5"
           name="reset" />
-      </Button>
+      </UButton>
     </TransitionScalePop>
   </main>
 </template>

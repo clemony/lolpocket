@@ -1,10 +1,10 @@
 export function normalizePatchNumber(patch: string): number {
   const [major, minor] = patch.split('.').map(Number)
-  const formattedMinor = minor.toString().padStart(2, '0')
+  const formattedMinor = String(minor ?? 0).padStart(2, '0')
   return Number.parseFloat(`${major}.${formattedMinor}`)
 }
 
-export function normalizePatch(rawPatch) {
+export function normalizePatch(rawPatch: string) {
   return rawPatch.split('.').slice(0, 2).join('.')
 }
 

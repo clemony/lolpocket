@@ -10,8 +10,6 @@ const MatchBuild = resolveComponent('MatchBuild')
 const MatchDataTable = resolveComponent('MatchDataTable')
 const MatchScoreboard = resolveComponent('MatchScoreboard')
 
-const modelValue = ref<string>('Scoreboard')
-
 const tabs = {
   Scoreboard: {
     name: 'Scoreboard',
@@ -27,11 +25,13 @@ const tabs = {
     name: 'Build',
     component: MatchBuild,
   },
-}
+} as const
+
+const modelValue = ref<keyof typeof tabs>('Scoreboard')
 
 const { getTimeline } = useTimeline()
 
-const timeline: PlayerTimeline = await getTimeline(
+const timeline: PlayerTimeline | null = await getTimeline(
   match.matchId,
   match.regionId,
   player.puuid
@@ -58,7 +58,7 @@ const timeline: PlayerTimeline = await getTimeline(
       </FileTabsList>
 
       <div
-        v-if="tabs[modelValue].name === 'Statistics'"
+        v-if="tabs[modelValue]?.name === 'Statistics'"
         class="from-p2-light to-p2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b" />
       <div
         :class="

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { EmojiItem } from '@tiptap/extension-emoji'
-import type { Editor } from '@tiptap/vue-3'
+import type { EmojiItem } from '@tiptap/extension-emoji';
+import type { Editor } from '@tiptap/vue-3';
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -28,7 +28,7 @@ defineExpose({ onKeyDown }) */
     class="grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
     data-theme="base">
     <template v-if="items.length">
-      <Button
+     <UButton
         v-for="(item, index) in items"
         :key="index"
         size="sm"
@@ -46,7 +46,7 @@ defineExpose({ onKeyDown }) */
         "
         @click="command(item)">
         <span class="dss drop-shadow-black/20">{{ item.emoji }}</span>
-      </Button>
+      </UButton>
     </template>
     <div
       v-else

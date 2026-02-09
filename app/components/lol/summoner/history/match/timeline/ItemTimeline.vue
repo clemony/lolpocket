@@ -39,7 +39,7 @@ const supportUpgrade = computed(() => {
             "
             class="relative size-12">
             <Item
-              :id="event.action === 'S2_UPGRADE' ? supportUpgrade : event.to"
+              :id="event.action === 'S2_UPGRADE' ? (supportUpgrade ?? null) : (event.to ?? null)"
               class="size-12"
               :map="match.mapId" />
 
@@ -48,8 +48,8 @@ const supportUpgrade = computed(() => {
                 event.action === 'S1_UPGRADE' || event.action === 'S2_UPGRADE'
               ">
               <Item
-                :id="event.from"
-                :key="event.from"
+                :id="event.from ?? null"
+                :key="event.from ?? ix"
                 class="absolute -top-1 -left-1.5 size-5.5 rounded-full border border-p0 ring-1 ring-p0"
                 :map="match.mapId"
                 data-type="item" />
@@ -64,7 +64,7 @@ const supportUpgrade = computed(() => {
             <template v-else>
               <Item
                 v-for="(item, idx) in event.from"
-                :id="item"
+                :id="item ?? null"
                 :key="item"
                 class="absolute -top-1 -left-1.5 size-5.5 rounded-full border border-p0 ring-1 ring-p0"
                 :map="match.mapId"
@@ -81,11 +81,11 @@ const supportUpgrade = computed(() => {
             :key="event.id"
             class="relative size-12">
             <Item
-              :id="event.id"
+              :id="event.id ?? null"
               :map="match.mapId"
               class="size-12" />
             <div
-              v-if="event.count > 1"
+              v-if="(event.count ?? 0) > 1"
               class="absolute -right-1 -bottom-1 grid size-6 place-items-center rounded-full border-2 border-p0 bg-neutral font-semibold text-nc"
               variant="neutral">
               {{ event.count }}

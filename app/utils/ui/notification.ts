@@ -1,3 +1,4 @@
+//
 export function saveNotification(
   template: string,
   vars: Record<string, string>
@@ -10,7 +11,8 @@ export function saveNotification(
     vars,
   }
 
-  const list = as().inbox.notifications
+  const list = as().inbox?.notifications
+  if (!list) return item
 
   list.unshift(item)
 

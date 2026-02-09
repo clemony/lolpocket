@@ -8,12 +8,13 @@ const open = ref<boolean>(false)
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
 
-const l = computed(() => pocket.champions.length > 5).value
+const champions = computed(() => pocket.value?.champions ?? [])
+const l = computed(() => champions.value.length > 5)
 
 const groups = computed(() =>
-  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5)
+  l.value ? champions.value.slice(0, 4) : champions.value.slice(0, 5)
 )
 
 const variants = {
@@ -51,8 +52,8 @@ const itemVariants = {
             staggerChildren: 0.1,
             type: 'spring',
           }">
-          <Button
-            v-for="(champion, i) in pocket.champions"
+         <UButton
+            v-for="(champion, i) in champions"
             :key="champion"
             v-tippy="{
               content: champNameByKey(champion),
@@ -60,7 +61,7 @@ const itemVariants = {
               placement: 'left',
             }"
             class="grid size-22! place-items-center border-0 bg-p0 fx-0"
-            color="default"
+
             shape="circle"
             :style="{
               zIndex: `-${i}`,
@@ -76,7 +77,7 @@ const itemVariants = {
                 class="size-18! rounded-full"
                 :k="champion" />
             </motion.div>
-          </Button>
+          </UButton>
         </motion.div>
       </CollapsibleContent>
       <CollapsibleTrigger as-child>
@@ -87,7 +88,7 @@ const itemVariants = {
               v-for="champion in groups"
               :key="champion"
               class="z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
-              color="default"
+
               shape="circle">
               <Champion
                 class="size-18! rounded-full"
@@ -97,7 +98,7 @@ const itemVariants = {
           <Element
             v-if="l"
             class="relative z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
-            color="default"
+
             shape="circle">
             <Element
               class="size-18! *:transition-all *:duration-300"
@@ -107,7 +108,7 @@ const itemVariants = {
                 class="absolute group-closed:opacity-0"
                 name="up" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
-                +{{ pocket.champions.length - 4 }}
+                +{{ champions.length - 4 }}
               </h3>
             </Element>
           </Element>

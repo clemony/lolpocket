@@ -1,3 +1,4 @@
+//
 // duplicate
 
 export function deepCopy<T>(obj: T): T {
@@ -10,7 +11,7 @@ export function duplicatePocket(original: Pocket): Pocket {
   newPocket.key = crypto.randomUUID()
   newPocket.name = `${original.name} (copy)`
 
-  newPocket.ouuid = as().account.uuid
+  newPocket.ouuid = as().account?.uuid ?? ""
 
   ps().pockets.push(newPocket)
   return newPocket
@@ -21,7 +22,7 @@ export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
   const pocket = <Pocket>ps().getPocket(target)
 
   newSet.id = crypto.randomUUID()
-  pocket.runes.push(newSet)
+  if (pocket?.runes) pocket.runes.push(newSet)
   return newSet
 }
 
@@ -31,6 +32,6 @@ export function duplicateItemSet(original: ItemSet, target: string): ItemSet {
 
   newSet.name = `${original.name} (copy)`
   newSet.id = crypto.randomUUID()
-  pocket.items.push(newSet)
+  if (pocket?.items) pocket.items.push(newSet)
   return newSet
 }

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui';
+
 const {
   class: className,
   position: pos,
@@ -7,7 +9,7 @@ const {
   class?: HTMLAttributes['class']
   position: MapPosition | string | null
   noLabel?: boolean
-  size?: ButtonVariants['size']
+  size?: ButtonProps['size']
   active?: boolean
   clear?: boolean
 }>()
@@ -21,7 +23,7 @@ const position = computed(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     v-if="position"
     variant="outline"
     hover="btn"
@@ -51,5 +53,5 @@ const position = computed(() => {
       v-if="clear"
       class="size-4 text-white **:stroke-[2.6]"
       name="x" />
-  </Button>
+  </UButton>
 </template>

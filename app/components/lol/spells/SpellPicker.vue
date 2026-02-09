@@ -2,26 +2,28 @@
 const props = defineProps<{
   alignOffset?: number
   class?: HTMLAttributes['class']
-  currentValue?: string
+  currentValue?: number
 }>()
 const emit = defineEmits(['update:spell'])
 
-const selected = ref('')
+const selected = ref<number | null>(null)
 
-onMounted(() => (selected.value = props.currentValue))
+onMounted(() => {
+  if (props.currentValue != null) selected.value = props.currentValue
+})
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger
+  <UPopover>
+    <UButton
       :class="cn('group/trig w-full p-0', props.class)"
       @click.stop.prevent>
-      <Button
+     <UButton
         class="hover:ring-b4 relative grid size-16 place-items-center overflow-hidden p-0 hover:ring"
-        color="secondary"
-        :class="{ 'shadow-sm drop-shadow-sm': selected !== '' }">
+        color="p2"
+        :class="{ 'shadow-sm drop-shadow-sm': selected !== null }">
         <icon
-          v-if="selected === ''"
+          v-if="selected == null"
           class="size-6.5 opacity-20"
           name="tabler:flame"
           alt="no summoner spell chosen" />
@@ -29,10 +31,10 @@ onMounted(() => (selected.value = props.currentValue))
         <Img
           v-else
           class="size-16"
-          :alt="selected"
+          :alt="String(selected)"
           :src="`/img/spells/${selected}.webp`" />
-      </Button>
-    </PopoverTrigger>
+      </UButton>
+    </UButton>
 
     <PopPopoverContent
       class="size-fit"
@@ -43,26 +45,26 @@ onMounted(() => (selected.value = props.currentValue))
       <div class="grid grid-cols-3 place-content-evenly gap-3">
         <label
           v-for="ss in spells"
-          :key="ss.name"
+          :key="ss.id"
           class="size-16 cursor-pointer! rounded-lg shadow-sm transition-[colors,opacity] duration-400 hover:ring-2 hover:ring-pc/60 disabled:opacity-70 disabled:inset-shadow-sm disabled:grayscale"
           as="label"
           :title="ss.name.toString()"
-          :disabled="selected === ss.name">
+          :disabled="selected === ss.id">
           <input
             id="spells"
             v-model="selected"
             class="hidden"
             type="radio"
-            :value="ss.name"
-            :disabled="selected === ss.name"
-            @change="emit('update:spell', ss.name)">
+            :value="ss.id"
+            :disabled="selected === ss.id"
+            @change="emit('update:spell', ss.id)">
 
           <Img
             class="size-full rounded-lg"
-            :src="`/img/spells/${ss.name}.webp`"
+            :src="`/img/spells/${ss.id}.webp`"
             :alt="ss.name.toString()" />
         </label>
       </div>
     </PopPopoverContent>
-  </Popover>
+  </UPopover>
 </template>

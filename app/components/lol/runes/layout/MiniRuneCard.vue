@@ -22,7 +22,7 @@ const {
     <div
       class="flex h-fit w-full max-w-full shrink flex-nowrap items-center justify-between">
       <Keystone
-        v-for="keystone in path.slots[0].runes"
+        v-for="keystone in path.slots?.[0]?.runes ?? []"
         :id="keystone.id"
         :key="keystone.id"
         :data-id="keystone.id"
@@ -31,7 +31,7 @@ const {
           cn(
             'tippy z-1 max-w-16 min-w-12 opacity-70 grayscale **:shrink',
             { 'opacity-100 grayscale-0': selections?.includes(keystone.id) },
-            path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3',
+            (path.slots?.[0]?.runes?.length ?? 0) === 4 ? 'basis-1/4' : 'basis-1/3',
           )
         " />
     </div>
@@ -39,7 +39,7 @@ const {
       class="grid size-full place-items-center gap-5 self-end"
       :data-path="path.name">
       <div
-        v-for="(slot, i) in path.slots.filter((s) => s.tier !== 0)"
+        v-for="(slot, i) in (path.slots ?? []).filter((s) => s.tier !== 0)"
         :key="i"
         class="z-1 grid w-full grid-cols-3 place-items-center gap-4">
         <Rune

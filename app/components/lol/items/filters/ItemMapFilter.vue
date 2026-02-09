@@ -18,7 +18,7 @@ const { modelValue: selectedMap } = defineProps<{
             }" />
         </span>
         <span class="grow">
-          {{ mapNameById(selectedMap) }}
+          {{ mapNameById(selectedMap ?? 0) }}
         </span>
       </slot>
     </SelectTrigger>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { limit, path, runes, set } = defineProps<{
   set: number[]
-  runes: any // Path
+  runes: Path | null
   path: string | undefined
   limit?: boolean
 }>()
@@ -10,6 +10,9 @@ const emit = defineEmits<{
 }>()
 
 const currentRunes = ref<number[]>([])
+const slots = computed(() =>
+  (runes?.slots ?? []).filter((r: { tier?: number }) => r.tier !== 0)
+)
 
 const currentSet = computed(() => [
   currentRunes.value[0],
@@ -34,53 +37,28 @@ function openInfo(rune: number) {}
     class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none">
     <template v-if="runes">
       <div
-        v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
+        v-for="(slot, i) in slots"
         :key="i"
         class="flex h-16 w-full cursor-pointer justify-evenly gap-3">
-        v-for="rune in slot"
-        :key="rune.id"
-        class="rune-hover size-fit items-center justify-stretch rounded-full"
-        theme="basic"
-        :arrow="false"
-        placement="bottom"
-        :interactive="true"
-        >
-
-        <!--  <Rune
+        <Rune
+          v-for="rune in slot.runes ?? []"
           :id="rune.id"
+          :key="rune.id"
           :class="
             cn('cursor-pointer opacity-75 grayscale', {
               'scale-110 opacity-94 grayscale-0':
                 currentSet.includes(rune.id),
             })
-          "
-        >      <input
-              v-model="currentSet[i]"
-              class="peer hidden"
-              :value="rune.id"
-              type="radio"
-              :name="`tier-${i}`"
-              @change="handleChange(i, rune.id)"
-            >
-        </Rune>
-
-        <template #content>
-          <Button
-            class="flex items-center"
-            variant="link"
-            size="sm"
-            @click="openInfo(rune.id)"
+          ">
+          <input
+            :checked="currentRunes[i] === Number(rune.id)"
+            class="peer hidden"
+            :value="Number(rune.id)"
+            type="radio"
+            :name="`tier-${i}`"
+            @change="handleChange(Number(i), Number(rune.id))"
           >
-            {{ rune.name }}
-            <span class="relative grid size-4 place-items-center">
-              <icon
-                class="absolute mb-0.75 size-4.5 shrink-0"
-                name="streamline:information-circle"
-              />
-            </span>
-          </Button>
-        </template>
-      </div> -->
+        </Rune>
       </div>
     </template>
     <div

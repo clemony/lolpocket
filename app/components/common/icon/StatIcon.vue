@@ -4,14 +4,14 @@ const { class: className, stat: s } = defineProps<{
   stat: StatIndex | string
 }>()
 
-const stat = computed<StatIndex>(() =>
+const stat = computed<StatIndex | undefined>(() =>
   typeof s !== 'string' ? s : statIndex[s]
 )
 </script>
 
 <template>
   <Icon
-    v-if="stat"
+    v-if="stat?.icon"
     :name="stat.icon"
     :class="
       cn(

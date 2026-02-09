@@ -12,10 +12,8 @@ const wrapperClass =
   <aside
     class="sticky top-0 scrollbar-hidden flex w-120 shrink-0 flex-col gap-10 overflow-y-auto px-1 py-22">
     <menu class="space-y-2">
-      <h3 class="mb-4 dst">
-        Abilities
-      </h3>
-      <BtnLink
+      <h3 class="mb-4 dst">Abilities</h3>
+      <UButton
         v-for="ability in champion.abilities"
         :key="ability.name"
         as="li"
@@ -33,7 +31,7 @@ const wrapperClass =
           <Img :src="ability.icon" :alt="ability.name" />
         </span>
         {{ ability.name }}
-      </BtnLink>
+      </UButton>
     </menu>
 
     <ChampionStats v-if="champion?.stats" :champion />

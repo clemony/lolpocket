@@ -1,8 +1,8 @@
-export function isEven(n) {
+export function isEven(n: number) {
   return n % 2 === 0
 }
 
-export function isOdd(n) {
+export function isOdd(n: number) {
   return Math.abs(n % 2) === 1
 }
 
@@ -23,7 +23,7 @@ export function mode(nums: number[]): number | null {
 
   const freq = new Map<number, number>()
   let maxCount = 0
-  let result = nums[0]
+  let result = nums[0]!
 
   for (const n of nums) {
     const count = (freq.get(n) ?? 0) + 1
@@ -39,7 +39,9 @@ export function mode(nums: number[]): number | null {
 }
 
 export function coerceNumber(v: unknown, fallback = 0) {
-  return Number.isFinite(+v) ? +v : fallback
+  if (typeof v === 'number' && Number.isFinite(v)) return v
+  if (typeof v === 'string' && Number.isFinite(Number(v))) return Number(v)
+  return fallback
 }
 
 export function safeDivide(a: number, b: number, fallback = 0) {
@@ -48,7 +50,7 @@ export function safeDivide(a: number, b: number, fallback = 0) {
 
 export const clamp01 = (v: number) => Math.min(1, Math.max(0, v))
 
-export function getRandomInt(max) {
+export function getRandomInt(max: number) {
   return Math.floor(Math.random() * max)
 }
 

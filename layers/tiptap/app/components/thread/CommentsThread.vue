@@ -2,8 +2,8 @@
 const { threadId } = defineProps<{
   threadId: UUID
 }>()
-const thread = ref<CommentData[]>(null)
-const newComment = ref<Doc>(null)
+const thread = ref<CommentData[] | null>(null)
+const newComment = ref<Doc | null>(null)
 const sortBy = shallowRef<'best' | 'new'>('best')
 
 function updateSort() {
@@ -30,6 +30,7 @@ onMounted(() => {
           :new-comment
           @click="
             () => {
+              if (!newComment) return
               postComment(newComment, threadId)
               editor.commands.clearContent()
               editor.commands.blur()

@@ -19,7 +19,7 @@ const prio = computed(() => {
   if (!skills.value) return
   if (set) return set
   return Object.entries(skills.value.priority).sort(
-    (a, b) => b[1].winrate - a[1].winrate
+    (a, b) => (b[1]?.winrate ?? 0) - (a[1]?.winrate ?? 0)
   )[0]
 })
 </script>

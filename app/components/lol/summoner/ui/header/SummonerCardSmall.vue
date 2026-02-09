@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
@@ -13,8 +14,8 @@ const {
 
     class?: HTMLAttributes['class']
 
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
+    size?: ButtonProps['size']
+    variant?: ButtonProps['variant']
     fullWidth?: boolean
   }
 >()

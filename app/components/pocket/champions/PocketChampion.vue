@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 /* const hover = shallowRef<boolean>(false)
 const debounced = refDebounced(hover, 400)
@@ -19,7 +19,7 @@ const {
   k,
   pocket: p,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   k: string
   pocket: Pocket
 }>()
@@ -40,20 +40,20 @@ const variants = {
     scale: 0.8,
   },
 }
-const defaultFilters = {
-  attackType: null,
-  position: null,
-  query: '',
-  resource: null,
-  role: null,
-  sort: 'az',
-}
+const isDefaultFilters = computed(() => {
+  const f = cs().filters
+  return (
+    !f.attackType?.length &&
+    !f.position &&
+    f.query === "" &&
+    !f.resource &&
+    !f.role &&
+    f.sort === "az"
+  )
+})
 onBeforeMount(() => {
-  if (cs().filters === defaultFilters) {
-    console.log(
-      '🌱 - cs().filters === defaultFilters:',
-      cs().filters === defaultFilters
-    )
+  if (isDefaultFilters.value) {
+    console.log("🌱 - cs().filters === defaultFilters:", isDefaultFilters.value)
   }
   loaded.value = true
 })
@@ -67,26 +67,19 @@ onBeforeMount(() => {
     :animate="loaded ? 'loaded' : 'unloaded'"
     exit="unloaded"
     layout="position">
-    <Popover v-model:open="open">
-      <PopoverTrigger
+    <UPopover v-model:open="open">
+      <UButton
         v-bind="$attrs"
         :class="
           cn(
             'target group relative grid aspect-square size-full cursor-context-menu! rounded-lg ring-pc/50 ring-offset-p0 transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring hover:ring-2 focus:ring focus:ring-offset-3',
-            className,
+            className
           )
         "
         tabindex="0">
-        <Champion
-          class="size-full"
-          :k
-          role="button"
-          @loaded="loaded = true" />
-      </PopoverTrigger>
-      <PocketChampionMenu
-        v-if="open"
-        :pocket
-        :k />
-    </Popover>
+        <Champion class="size-full" :k role="button" @loaded="loaded = true" />
+      </UButton>
+      <PocketChampionMenu v-if="open" :pocket :k />
+    </UPopover>
   </motion.div>
 </template>

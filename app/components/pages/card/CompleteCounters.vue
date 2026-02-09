@@ -3,26 +3,24 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = ref(props.pocket)
+const pocket = toRef(props, "pocket")
 
 const championsLength = computed(() => {
-  return pocket.value.champions.length
+  return pocket.value.champions?.length ?? 0
 })
 
 const rolesLength = computed(() => {
-  return pocket.value.roles.length ?? 0
+  return pocket.value.roles?.length ?? 0
 })
 
 const spellsLength = computed(() => {
-  return pocket.value.spells.length
+  return pocket.value.spells?.length ?? 0
 })
 
 const itemsLength = computed(() => {
-  if (pocket.value.items.length === 1 && !pocket.value.items[0].items.length) {
-    return 0
-  } else {
-    return pocket.value.items.length
-  }
+  const items = pocket.value.items ?? []
+  if (items.length === 1 && !items[0]?.items?.length) return 0
+  return items.length
 })
 /* const runeSetsLength = computed (() => {
   if (pocket.value.runes.length === 1) {
@@ -65,7 +63,7 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="
-        `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
+        `${championsLength ? championsLength : 'no'} pocket pick${championsLength === 1 ? '' : 's'}`
       "
       class="flex items-center gap-1.5">
       <i-no-champ class="size-8.5 opacity-80 dst" />

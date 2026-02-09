@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui';
+
 const {
   color = "primary",
   class: className,
@@ -7,8 +9,8 @@ const {
   size = ["sq-12", "12"],
 } = defineProps<{
   class?: HTMLAttributes["class"]
-  size?: ButtonVariants["size"][]
-  color?: ButtonVariants["color"]
+  size?: ButtonProps["size"][]
+  color?: ButtonProps["color"]
 
   clear?: boolean
 }>()
@@ -31,14 +33,14 @@ function handleUpdate() {
     :class="
       cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)
     ">
-    <Button
+   <UButton
       v-if="is().filters.rank && clear"
       class="order-first hover:*:opacity-100"
       :color
       size="sm"
-      @click="is().filters.rank = null">
+      @click="is().filters.rank = ''">
       <icon class="size-4" name="x" />
-    </Button>
+    </UButton>
 
     <Label
       v-for="rank in Object.keys(itemRankColor)"
@@ -51,7 +53,7 @@ function handleUpdate() {
           'order-1': is().filters.rank === rank,
         })
       "
-      @click="is().filters.rank === rank ? (is().filters.rank = null) : null">
+      @click="is().filters.rank === rank ? (is().filters.rank = '') : null">
       <input
         v-model="is().filters.rank"
         class="peer absolute hidden"

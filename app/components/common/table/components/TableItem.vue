@@ -5,9 +5,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div
+  <Tooltip
     v-if="props.params.value"
-    v-tippy="props.params.value.name"
+    :text="props.params.value.name"
     class="ti-container">
     <div class="ti-wrapper">
       <img
@@ -15,5 +15,5 @@ const props = defineProps<{
         :alt="props.params.value.name"
         :src="`/img/items/${props.params.value.id}.webp`" />
     </div>
-  </div>
+  </Tooltip>
 </template>

@@ -1,8 +1,18 @@
+//
 export async function resolveSummoner(
   identifier: Identifier
 ): Promise<Summoner> {
-  if (identifier.puuid)
-    return ss().resolveOrFetch(identifier.puuid)
+  if (identifier.puuid) {
+    const resolved = await ss().resolveOrFetch(identifier.puuid)
+    if (!resolved) {
+      throw new Error("Unable to resolve summoner")
+    }
+    return resolved
+  }
+
+  if (!identifier.region || !identifier.name || !identifier.tag) {
+    throw new Error("Invalid summoner identifier")
+  }
 
   const hit = ss().resolveBySlug(
     identifier.region,
@@ -12,5 +22,9 @@ export async function resolveSummoner(
 
   if (hit) return hit
 
-  return ss().ensureSummoner(identifier)
+  const found = await ss().ensureSummoner(identifier)
+  if (!found) {
+    throw new Error("Unable to resolve summoner")
+  }
+  return found
 }

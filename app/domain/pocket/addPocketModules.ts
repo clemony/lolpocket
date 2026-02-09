@@ -1,3 +1,4 @@
+//
 // --- Pocket Factory ---
 
 export function newItemSet(): ItemSet {
@@ -20,11 +21,11 @@ export function newRuneSet(): RuneSet {
     id: crypto.randomUUID(),
     keystone: null,
     primary: {
-      path: '',
+      path: "",
       runes: [0, 0, 0],
     },
     secondary: {
-      path: '',
+      path: "",
       runes: [0, 0],
     },
     shards: [0, 0, 0],
@@ -40,7 +41,9 @@ export function resetRuneSet(set: RuneSet): RuneSet {
 
 export function addSpellSet(pocket: Pocket | string) {
   let set = <SpellSet[]>[]
-  set = pType(pocket).spells
+  const p = pType(pocket)
+  if (!p?.spells) return
+  set = p.spells
   const a = getDeepDefaults(SpellSetSchema)
   a.id = crypto.randomUUID()
   set.push(a)
@@ -48,7 +51,8 @@ export function addSpellSet(pocket: Pocket | string) {
 
 export function addRuneSet(pocket: Pocket | string) {
   const p = pType(pocket)
-  if (p.runes.length >= 10) return 'Max amount of rune sets reached!'
+  if (!p?.runes) return
+  if (p.runes.length >= 10) return "Max amount of rune sets reached!"
 
   let set = <RuneSet[]>[]
   set = p.runes

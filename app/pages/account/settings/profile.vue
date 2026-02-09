@@ -1,27 +1,25 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'profile settings',
+  title: "profile settings",
   description:
-    'Set your public profile display settings and hide your annoyances.',
-  icon: 'user-cog',
-  path: '/settings/profile',
-  search: 'user',
+    "Set your public profile display settings and hide your annoyances.",
+  icon: "user-cog",
+  path: "/settings/profile",
+  search: "user",
   /* middleware: 'confirm-auth', */
 })
 
-const labelClass
-  = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-p2 [&_h5]:font-semibold [&_h5]:text-pc/70'
+const labelClass =
+  "w-full h-16 border-b flex justify-between items-center pr-1 !border-b-p2 [&_h5]:font-semibold [&_h5]:text-pc/70"
+
+const settings = computed(() => as().settings)
 </script>
 
 <template>
-  <form
-    class="w-full space-y-12"
-    @submit.prevent>
+  <form v-if="settings" class="w-full space-y-12" @submit.prevent>
     <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
-        <Label
-          class="text-xlfont-semibold mb-2"
-          as="legend">
+        <Label class="text-xlfont-semibold mb-2" as="legend">
           Summoner Splash
         </Label>
 
@@ -35,20 +33,14 @@ const labelClass
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label
-          class="mb-2 text-xl font-semibold"
-          as="legend">Title</Label>
-        <p class="label text-wrap">
-          Display a title from an earned Badge.
-        </p>
+        <Label class="mb-2 text-xl font-semibold" as="legend">Title</Label>
+        <p class="label text-wrap">Display a title from an earned Badge.</p>
       </div>
     </fieldset>
 
     <fieldset class="space-y-6">
       <div class="leading-4">
-        <Label
-          class="mb-2 text-xl font-semibold"
-          as="legend">
+        <Label class="mb-2 text-xl font-semibold" as="legend">
           Hide Profile Elements
         </Label>
 
@@ -65,8 +57,8 @@ const labelClass
 
           <p class="mt-2 flex items-center gap-4 font-medium italic">
             lies
-            <Switch
-              v-model:model-value="as().settings.show_solo"
+            <USwitch
+              v-model:model-value="settings.show_solo"
               class="hover-ring pointer-events-auto!" />
           </p>
         </label>
@@ -74,9 +66,9 @@ const labelClass
 
         <label :class="labelClass">
           <p class="mt-2 flex items-center gap-4 font-medium italic">
-            {{ as().settings.show_solo ? "Visible" : "Hidden" }}
-            <Switch
-              v-model:model-value="as().settings.show_solo"
+            {{ settings?.show_solo ? "Visible" : "Hidden" }}
+            <USwitch
+              v-model:model-value="settings.show_solo"
               class="hover-ring pointer-events-auto!" />
           </p>
         </label>
@@ -85,9 +77,9 @@ const labelClass
           <h5>Ranked Flex</h5>
 
           <p class="mt-2 flex items-center gap-4 font-medium italic">
-            {{ as().settings.show_flex ? "Visible" : "Hidden" }}
-            <Switch
-              v-model:model-value="as().settings.show_flex"
+            {{ settings?.show_flex ? "Visible" : "Hidden" }}
+            <USwitch
+              v-model:model-value="settings.show_flex"
               class="hover-ring pointer-events-auto!" />
           </p>
         </label>
@@ -96,9 +88,9 @@ const labelClass
           <h5>Ally Filters</h5>
 
           <p class="mt-2 flex items-center gap-4 font-medium italic">
-            {{ as().settings.show_allies ? "Visible" : "Hidden" }}
-            <Switch
-              v-model:model-value="as().settings.show_allies"
+            {{ settings?.show_allies ? "Visible" : "Hidden" }}
+            <USwitch
+              v-model:model-value="settings.show_allies"
               class="hover-ring pointer-events-auto!" />
           </p>
         </label>
@@ -106,9 +98,7 @@ const labelClass
     </fieldset>
 
     <div class="flex justify-start">
-      <Button color="neutral">
-        Update account
-      </Button>
+      <UButton color="neutral"> Update account </UButton>
     </div>
   </form>
 </template>

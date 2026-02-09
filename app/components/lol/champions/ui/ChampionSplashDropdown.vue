@@ -7,8 +7,8 @@ const { champion } = defineProps<{
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger
+  <UPopover>
+    <UButton
       class="btn btn-circle size-11 btn-ghost hover:border-p3 hover:bg-p2">
       <div
         v-if="champion"
@@ -20,7 +20,7 @@ const { champion } = defineProps<{
           :image="`/img/champion/${champion}.webp`"
           :alt="champion" />
       </div>
-    </PopoverTrigger>
+    </UButton>
 
     <PopoverContent
       class="grid w-fit min-w-90 grid-cols-4 gap-2"
@@ -35,5 +35,5 @@ const { champion } = defineProps<{
         <input v-model="pocket.card.splash" type="radio" :value="splash.splashPath" class="peer hidden" />
       </Label> -->
     </PopoverContent>
-  </Popover>
+  </UPopover>
 </template>

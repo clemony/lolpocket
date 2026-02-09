@@ -27,7 +27,7 @@ definePageMeta({
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
+)
 
 const tabs = ref('items')
 
@@ -49,7 +49,7 @@ const tabValues = [
 <template>
   <div class="z-auto size-full min-h-screen pt-22">
     <div class="z-auto flex w-full gap-16">
-      <div class="z-auto w-2/5">
+      <div v-if="pocket" class="z-auto w-2/5">
         <ItemsHeader />
         <div class="sticky -top-44 z-2 w-full self-start">
           <div

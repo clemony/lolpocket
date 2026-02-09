@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { CarouselApi } from '~~/layers/ui/app/components/carousel/interface'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import type { CarouselApi } from '~~/layers/ui/app/components/carousel/interface'
 
 useSeoMeta({
   title: '[title]',
@@ -27,8 +27,8 @@ definePageMeta({
 const route = useRoute('pocket-runes')
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
-).value
-console.log('🌱 - pocket:', pocket.runes[0])
+)
+console.log('🌱 - pocket:', pocket.value?.runes?.[0])
 
 const emblaMainApi = ref<CarouselApi>()
 const emblaThumbnailApi = ref<CarouselApi>()
@@ -61,9 +61,11 @@ watch(
 )
 
 function handleAdd() {
-  const l = pocket.runes.length - 1
-  addRuneSet(pocket)
-  emblaMainApi.value.scrollTo(l)
+  const runes = pocket.value?.runes
+  if (!runes || !pocket.value) return
+  const l = runes.length - 1
+  addRuneSet(pocket.value)
+  emblaMainApi.value?.scrollTo(l)
 }
 </script>
 
@@ -83,7 +85,7 @@ function handleAdd() {
           class="flex w-fit items-center gap-2 px-32 py-0"
           group>
           <CarouselItem
-            v-for="(thumbSet, index) in pocket.runes"
+            v-for="(thumbSet, index) in pocket?.runes ?? []"
             :key="index"
             :class="
               cn(
@@ -110,21 +112,21 @@ function handleAdd() {
             <Card
               v-tippy="{
                 content:
-                  pocket.runes.length >= 10
+                  (pocket?.runes?.length ?? 0) >= 10
                     ? 'Max amount of sets reached'
                     : 'Add rune set',
                 theme: 'basic',
                 arrow: false,
               }"
               as-child>
-              <Button
+             <UButton
                 class="grid h-22 w-40 place-items-center"
-                color="default"
+
                 hover="btn"
-                :disabled="pocket.runes.length >= 10"
+                :disabled="(pocket?.runes?.length ?? 0) >= 10"
                 @click="handleAdd()">
                 <icon name="add" />
-              </Button>
+              </UButton>
             </Card>
           </CarouselItem>
         </TransitionScalePop>
@@ -139,18 +141,18 @@ function handleAdd() {
       @init-api="(val) => (emblaMainApi = val)">
       <CarouselPrevious
         class="sticky left-10"
-        @click="emblaMainApi.scrollPrev()" />
+        @click="emblaMainApi?.scrollPrev()" />
       <CarouselNext
         class="sticky! left-[calc(100%-60px)]"
-        @click="emblaMainApi.scrollNext()" />
+        @click="emblaMainApi?.scrollNext()" />
       <CarouselContent>
         <CarouselItem
-          v-for="(set, index) in pocket.runes"
+          v-for="(set, index) in pocket?.runes ?? []"
           :key="index"
           class="size-full pb-14">
           <PocketRunesLayout
             :set="set"
-            @update:slide="emblaMainApi.scrollNext()" />
+            @update:slide="emblaMainApi?.scrollNext()" />
         </CarouselItem>
       </CarouselContent>
     </Carousel>

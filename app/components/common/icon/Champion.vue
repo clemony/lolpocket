@@ -19,6 +19,9 @@ const emit = defineEmits(['loaded'])
 const champId = computed(() =>
   k ? champIdByKey(k) : id
 )
+const champName = computed(() =>
+  champId.value ? champNameById(champId.value) : ''
+)
 
 const loaded = ref(false)
 
@@ -28,6 +31,7 @@ function onLoad() {
 }
 const toast = useToast()
 function showToast() {
+  if (!champId.value) return
   if (!toast.toasts.value.find(t => t.id === `champion-${id}`)) {
     toast.add({
       id: `champion-${id}`,
@@ -44,19 +48,19 @@ function showToast() {
 <template>
   <Tooltip
     trailing-icon="i"
-    :text="champNameById(champId)"
-    :img="`/img/champions/${champId}.webp`"
+    :text="champName"
+    :img="champId ? `/img/champions/${champId}.webp` : undefined"
     :side>
     <Img
       role="button"
-      :src="`/img/champions/${champId}.webp`"
+      :src="champId ? `/img/champions/${champId}.webp` : undefined"
       :class="
         cn(
           'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
           className,
         )
       "
-      :alt="`${champNameById(champId)} icon`"
+      :alt="champName ? `${champName} icon` : 'champion icon'"
       @click.stop="showToast()"
       @loaded="onLoad">
       <Icon

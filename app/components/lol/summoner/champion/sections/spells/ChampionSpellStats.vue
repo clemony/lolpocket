@@ -6,19 +6,23 @@ const { class: className } = defineProps<{
 const { spells } = storeToRefs(s_champion())
 
 const allSpells = computed<OrderedStatEntry[]>(() => {
-  const singles = spells.value.single
+  const singles = spells.value?.single ?? []
   const map = singles.map((s) => s[0])
-  const all = Object.values(spells).filter(
-    (s) =>
-      (s?.id < 30 && s?.id !== 13 && !map.includes(s?.id.toString())) ||
-      s?.id === 2201 ||
-      s?.id === 32
-  )
+  const all = Object.values(spells.value ?? {}).filter((s) => {
+    if (!s || typeof (s as any).id !== "number") return false
+    return (
+      ((s as any).id < 30 &&
+        (s as any).id !== 13 &&
+        !map.includes((s as any).id.toString())) ||
+      (s as any).id === 2201 ||
+      (s as any).id === 32
+    )
+  }) as StatDetail[]
   return singles.concat(
     all.map((s) => {
       return [
-        s?.id.toString(),
-        { games: null, pickrate: null, winrate: null },
+        (s as any).id.toString(),
+        { games: 0, pickrate: 0, winrate: 0 },
       ] as OrderedStatEntry
     })
   )

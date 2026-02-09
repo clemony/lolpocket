@@ -1,5 +1,6 @@
-export const tooltipPlacements = ['top', 'bottom', 'left', 'right']
-export const tooltipSizes = ['default', 'md', 'lg']
+//
+export const tooltipPlacements = ["top", "bottom", "left", "right"]
+export const tooltipSizes = ["default", "md", "lg"]
 
 export function closeAndNav(link: string) {
   ui().sidebarOpen = false
@@ -16,7 +17,7 @@ export function getIcon(
 
 export function useMotionPolicy() {
   const reduced = usePreferredReducedMotion()
-  return computed(() => reduced.value !== 'reduce')
+  return computed(() => reduced.value !== "reduce")
 }
 
 export function rafThrottle<T extends (...args: any[]) => void>(fn: T): T {
@@ -34,19 +35,21 @@ export function rafThrottle<T extends (...args: any[]) => void>(fn: T): T {
 export function omitUIProps<T extends Record<string, any>>(props: T) {
   return reactiveOmit(
     props,
-    'class',
-    'variant',
-    'size',
-    'on',
-    'base',
-    'hover'
+    "class",
+    "variant",
+    "size",
+    "on",
+    "base",
+    "hover"
   ) as unknown as Omit<
     T,
-    'class' | 'variant' | 'size' | 'on' | 'base' | 'hover'
+    "class" | "variant" | "size" | "on" | "base" | "hover"
   >
 }
 
-export function useBreakpoint(breakpoint) {
+type BreakpointKey = "x0" | "x640" | "x1024" | "x1280"
+
+export function useBreakpoint(breakpoint: BreakpointKey) {
   const breakpoints = useBreakpoints({
     x0: 0, // optional
     x640: 640,
@@ -76,13 +79,13 @@ export interface Scroll {
 }
 
 export function scrollToTop() {
-  window.scrollTo({ behavior: 'smooth', top: 0 })
+  window.scrollTo({ behavior: "smooth", top: 0 })
 }
 
 export function scrollContainerToTop(container: HTMLElement | null) {
-  console.log('hi')
+  console.log("hi")
   nextTick(() => {
-    container?.scrollTo({ behavior: 'smooth', top: 0 })
+    container?.scrollTo({ behavior: "smooth", top: 0 })
   })
 }
 

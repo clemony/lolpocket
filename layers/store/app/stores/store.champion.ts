@@ -1,8 +1,9 @@
-import type { GridApi, GridState } from 'ag-grid-community'
-import { defineStore } from 'pinia'
+//
+import type { GridApi, GridState } from "ag-grid-community"
+import { defineStore } from "pinia"
 
 export interface ChampionFilter {
-  attackType: string | null
+  attackType: string[]
   position: string
   query: string
   resource: string | null
@@ -10,40 +11,40 @@ export interface ChampionFilter {
   sort: string
 }
 
-export const useChampStore = defineStore('ChampStore', () => {
-  const championSplashDropdown = ref(null)
+export const useChampStore = defineStore("ChampStore", () => {
+  const championSplashDropdown = ref<HTMLElement | null>(null)
 
-  const dbChampionGridState = shallowRef<GridState>(null)
+  const dbChampionGridState = shallowRef<GridState | null>(null)
   const championGridApi = shallowRef<GridApi | null>(null)
   const dbChampionStatListKey = ref(0)
   const championGridLevel = ref(1)
-  const championGridType = ref<'calculated' | 'base' | 'growth'>('calculated')
+  const championGridType = ref<"calculated" | "base" | "growth">("calculated")
 
   // --- FILTER STATE ---
   const filters = ref<ChampionFilter>({
-    attackType: null,
-    position: 'all',
-    query: '',
+    attackType: [],
+    position: "all",
+    query: "",
     resource: null,
     role: null,
-    sort: 'az',
+    sort: "az",
   })
 
   // --- HELPERS ---
 
   function clearFilters() {
     filters.value = {
-      attackType: null,
-      position: 'all',
-      query: '',
+      attackType: [],
+      position: "all",
+      query: "",
       resource: null,
       role: null,
-      sort: 'az',
+      sort: "az",
     }
   }
 
   // --- FILTER LOGIC ---
-  const queryRef = computed(() => filters.value.query || '')
+  const queryRef = computed(() => filters.value.query || "")
   const debouncedQuery = refDebounced(queryRef, 200)
   const order = ref<string[]>([])
 
@@ -54,35 +55,35 @@ export const useChampStore = defineStore('ChampStore', () => {
   const filtered = computed(() => {
     const query = debouncedQuery.value.toLowerCase()
 
-    const all = championIndex.map(i => i.id)
+    const all = championIndex.map((i) => i.id)
     let matched: Set<number> = new Set(all)
 
-    if (filters.value.attackType?.length > 0) {
+    if (filters.value.attackType.length > 0) {
       for (const stat of filters.value.attackType) {
         const ids = rangeToChamp[stat] ?? []
-        matched = new Set(ids.filter(id => matched.has(id)))
+        matched = new Set(ids.filter((id) => matched.has(id)))
       }
     }
 
-    if (filters.value.role && filters.value.role !== 'all') {
+    if (filters.value.role && filters.value.role !== "all") {
       const rolesIds = roleToChamp[filters.value.role] ?? []
-      matched = new Set(rolesIds.filter(id => matched.has(id)))
+      matched = new Set(rolesIds.filter((id) => matched.has(id)))
     }
 
-    if (filters.value.position && filters.value.position !== 'all') {
+    if (filters.value.position && filters.value.position !== "all") {
       const positionsIds = positionToChamp[filters.value.position] ?? []
-      matched = new Set(positionsIds.filter(id => matched.has(id)))
+      matched = new Set(positionsIds.filter((id) => matched.has(id)))
     }
 
     if (filters.value.resource && filters.value.resource !== null) {
       const resourceIds = resourceToChamp[filters.value.resource] ?? []
-      matched = new Set(resourceIds.filter(id => matched.has(id)))
+      matched = new Set(resourceIds.filter((id) => matched.has(id)))
     }
 
     if (query) {
       matched = new Set(
         [...matched].filter((id) => {
-          const champion: Index = championById(id)
+          const champion = championById(id)
           if (!champion) return false
 
           const name = champion.name.toLowerCase()
@@ -91,20 +92,20 @@ export const useChampStore = defineStore('ChampStore', () => {
       )
     }
 
-    const array = Array.from(matched).map(
-      id => championIndex.find(c => c.id === id).key
-    )
+    const array = Array.from(matched)
+      .map((id) => championIndex.find((c) => c.id === id)?.key)
+      .filter((key): key is string => Boolean(key))
 
     if (filters.value.sort) {
-      filters.value.sort === 'az' ? array.sort() : array.sort().reverse()
+      filters.value.sort === "az" ? array.sort() : array.sort().reverse()
     }
 
     if (order.value.length) {
       const orderMap = new Map(order.value.map((k, i) => [k, i]))
       array.sort((a, b) =>
-        filters.value.sort === 'az'
-          ? (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
-          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
+        filters.value.sort === "az" ?
+          (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
+        : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
       )
     }
 

@@ -2,7 +2,7 @@
 import type { NavigationMenuItem } from "@nuxt/ui"
 
 const { copied, copy, isSupported, text } = useClipboard({
-  source: contactInfo.support.to,
+  source: contactInfo.support?.to ?? '',
 })
 
 const copyMsg = computed(() => {
@@ -14,19 +14,27 @@ const links = computed(() =>
   router.getRoutes().filter((r) => r.name === "docs")
 )
 
-const contactLinks = [contactInfo.github, contactInfo.discord]
+const contactLinks = computed(() =>
+  [contactInfo.github, contactInfo.discord].filter(
+    (link): link is NonNullable<typeof link> => Boolean(link)
+  )
+)
 
-const nav = computed<Record<string, NavigationMenuItem>>(() => {
-  return {
-    center: [
-      buildRoute("/backpack") as NavigationMenuItem,
-      buildRoute("/tools") as NavigationMenuItem,
-    ],
-    left: [
-      buildRoute("/nexus") as NavigationMenuItem,
-      buildRoute("/library") as NavigationMenuItem,
-    ],
-  }
+const nav = computed(() => {
+  const center: Record<string, NavigationMenuItem> = {}
+  const left: Record<string, NavigationMenuItem> = {}
+
+  const backpack = buildRoute("/backpack")
+  const tools = buildRoute("/tools")
+  const nexus = buildRoute("/nexus")
+  const library = buildRoute("/library")
+
+  if (backpack) center.backpack = backpack as NavigationMenuItem
+  if (tools) center.tools = tools as NavigationMenuItem
+  if (nexus) left.nexus = nexus as NavigationMenuItem
+  if (library) left.library = library as NavigationMenuItem
+
+  return { center, left }
 })
 </script>
 
@@ -90,7 +98,7 @@ const nav = computed<Record<string, NavigationMenuItem>>(() => {
               size="xl"
               color="neutral"
               variant="link"
-              :ui="{ leadingIcon: link.ui.leadingIcon }"
+              :ui="{ leadingIcon: link.ui?.leadingIcon }"
               external
               :to="link.to"
               target="_blank" />
@@ -108,7 +116,7 @@ const nav = computed<Record<string, NavigationMenuItem>>(() => {
               <template #content>
                 <div class="flex flex-col gap-1 p-2">
                   <span class="-mx-2 badge badge-neutral text-md italic">
-                    {{ contactInfo.contact.to }}
+                    {{ contactInfo.contact?.to }}
                   </span>
 
                   <span class="flex items-center gap-1 text-xs">

@@ -1,7 +1,8 @@
+//
 export type SpellStat = Record<string | number, StatDetail>
 
 export interface SpellStats {
-  best: Record<string, StatDetail>
+  best: Record<number, StatDetail> | null
   pairs: Record<string, StatDetail>
   single: OrderedStatEntry[]
 }
@@ -14,12 +15,16 @@ export function expandSpellPairRecord(
   pair: Record<string, StatDetail>
 ): Record<number, StatDetail> {
   const result: Record<number, StatDetail> = {}
+  const out = result as Record<string, StatDetail>
 
-  const [[key, stat]] = Object.entries(pair)
-  const [a, b] = key.split('-').map(Number)
+  const entry = Object.entries(pair)[0]
+  if (!entry) return result
+  const [key, stat] = entry
+  const [a, b] = key.split("-").map(Number)
+  if (!Number.isFinite(a) || !Number.isFinite(b)) return result
 
-  result[a] = stat
-  result[b] = stat
+  out[String(a)] = stat
+  out[String(b)] = stat
 
   return result
 }
@@ -41,14 +46,14 @@ export function useChampionSpellStats(source: Ref<MatchPlayerData[]>) {
     const single: Record<number, StatDetail> = {}
     const pairs: Record<string, StatDetail> = {}
 
-    const totalMatches = source.value?.length
+    const totalMatches = source.value?.length ?? 0
     if (!totalMatches) {
-      return { best: {}, pairs: {}, single: [] }
+      return { best: null, pairs: {}, single: [] }
     }
 
     for (const match of source.value) {
       const p = match.player
-      if (!p || p.win === 'remake') continue
+      if (!p || p.win === "remake") continue
 
       const [s1, s2] = Object.values(p.spells) as [number, number]
 
@@ -62,7 +67,7 @@ export function useChampionSpellStats(source: Ref<MatchPlayerData[]>) {
     // winrate + pickrate
     for (const bucket of [single, pairs]) {
       for (const stat of Object.values(bucket)) {
-        stat.winrate = Math.round((stat.win / stat.games) * 1000) / 10
+        stat.winrate = Math.round(((stat.win ?? 0) / stat.games) * 1000) / 10
         stat.pickrate = Math.round((stat.games / totalMatches) * 1000) / 10
       }
     }

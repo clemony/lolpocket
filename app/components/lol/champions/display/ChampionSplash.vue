@@ -14,6 +14,11 @@ const {
   type?: SplashType
   class?: HTMLAttributes['class']
 }>()
+const splashKey = computed<string | number | null>(() => (k ?? id ?? null))
+const splashType = computed<SplashType>(() => type ?? 'centered')
+const splashSrc = computed(() =>
+  src || (splashKey.value ? getSplash(splashKey.value, splashType.value) : undefined)
+)
 
 const lower = [
   'Seraphine',
@@ -50,20 +55,23 @@ const out = [
   'Yone',
 ]
 
+const key = computed(() => k ?? (id != null ? String(id) : ''))
 const y = computed(() =>
-  lower.includes(k)
+  key.value && lower.includes(key.value)
     ? `30%`
-    : mid.includes(k)
+    : key.value && mid.includes(key.value)
       ? '20%'
       : '40%'
 )
 /* , {'translate-y-10': } */
-const x = computed(() => (left.includes(k) ? '70%' : '50%'))
+const x = computed(() =>
+  key.value && left.includes(key.value) ? '70%' : '50%'
+)
 </script>
 
 <template>
   <Img
-    :src="src || getSplash(k ?? id, type)"
+    :src="splashSrc"
     :ratio
     :class="
       cn(

@@ -40,7 +40,7 @@ const {
       @click.stop>
       <button
         class="inline-flex cursor-pointer space-y-0.5 align-bottom hover:*:first:underline"
-        @click="`/summoner/${author.puuid}`">
+        @click="author?.puuid && navigateTo(`/summoner/${author.puuid}`)">
         <span
           :class="
             cn('inline text-lg! leading-none font-semibold', {

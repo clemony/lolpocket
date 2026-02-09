@@ -1,13 +1,16 @@
 <script setup lang="ts">
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 const route = useRoute()
-const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
+const pocket = ref<Pocket | undefined>(
+  ps().getPocket(String(route.params.pocket_key))
+)
 </script>
 
 <template>
   <MenubarRadioGroup
+    v-if="pocket"
     v-model:model-value="pocket._runes"
     :class="cn('', className)">
     <MenubarLabel
@@ -20,22 +23,12 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
       :key="i"
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
-      <Rune
-        :id="Number(set.keystone)"
-        class="size-6! *:scale-130" />
-      <template
-        v-for="ix in 4"
-        :key="ix">
-        <Rune
-          :id="Number(set.primary.runes[ix - 1])"
-          class="size-6!" />
+      <Rune :id="Number(set.keystone)" class="size-6! *:scale-130" />
+      <template v-for="ix in 4" :key="ix">
+        <Rune :id="Number(set.primary.runes[ix - 1])" class="size-6!" />
       </template>
-      <template
-        v-for="ix in 3"
-        :key="ix">
-        <Rune
-          :id="Number(set.secondary.runes[ix - 1])"
-          class="size-6!" />
+      <template v-for="ix in 3" :key="ix">
+        <Rune :id="Number(set.secondary.runes[ix - 1])" class="size-6!" />
       </template>
       <Grow />
     </MenubarRadioItem>

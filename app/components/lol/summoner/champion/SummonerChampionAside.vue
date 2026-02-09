@@ -11,7 +11,7 @@ console.log("🥸 - param:", param)
 const filter = shallowRef<string>("")
 
 const sorted = computed(() =>
-  sortAbc(Array.from(champions.value.values()), "championName")
+  sortAbc(Array.from(champions.value?.values?.() ?? []), "championName")
 )
 
 const search = useSearch(sorted.value, filter, { keys: ["championName"] })
@@ -20,6 +20,9 @@ const results = computed(() => {
   if (search.value.length) return search.value
   else return sorted.value
 })
+const champTitle = computed(() =>
+  champion.value?.key ? championToTitle[champion.value.key] : undefined
+)
 
 const nav = [
   {
@@ -39,7 +42,7 @@ const nav = [
     <UUser
       :avatar="{ src: `/img/champions/${champion?.id}.webp` }"
       :name="champion?.name"
-      :description="championToTitle[champion?.key]" />
+      :description="champTitle" />
   </div>
 
   <div class="mt-14 flex w-full flex-col">
@@ -56,7 +59,7 @@ const nav = [
     <div class="mt-4 flex w-full flex-col gap-3">
       <Separator class="mb-2 h-px" />
       <h6 class="-mb-1 pl-2 text-sm capitalize opacity-60">
-        {{ summoner.name }}'s Champions
+        {{ summoner?.name }}'s Champions
       </h6>
 
       <div class="relative w-full">
@@ -75,7 +78,7 @@ const nav = [
               v-for="k in results"
               :key="k.championId"
               class="w-full"
-              :value="champKeyById(k.championId)"
+              :value="champKeyById(k.championId) ?? ''"
               as="label">
               <UButton
                 :on="param === champKeyById(k.championId)"

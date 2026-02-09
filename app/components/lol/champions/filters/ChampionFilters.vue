@@ -13,8 +13,8 @@ const route = useRoute()
   })
   cs().championGridApi.setGridOption('columnDefs', updatedCols)
 } */
-const { filtered, filters, setFilter } = useItemFilter()
-const query = ref<string>(null)
+const { filtered, filters, setFilter } = useItemFilter() as any
+const query = ref<string | null>(null)
 </script>
 
 <template>

@@ -1,3 +1,4 @@
+//
 interface RoleStats {
   games: number
   losses: number
@@ -12,14 +13,18 @@ export function useChampionRoleStats(
 ): RoleStats[] {
   const grouped: Record<string, RoleStats> = {}
 
-  const player = filteredMatches.map(m =>
-    m.participants.find(p => p.puuid === as().account.puuid)
+  const accountPuuid = as().account?.puuid
+  if (!accountPuuid) return []
+
+  const player = filteredMatches.map((m) =>
+    m.participants.find((p) => p.puuid === accountPuuid)
   )
 
   for (const match of player) {
+    if (!match) continue
     if (champNameById(match.championId) !== championName) continue
 
-    const role = match.role || 'UNKNOWN'
+    const role = match.role || "UNKNOWN"
     if (!grouped[role]) {
       grouped[role] = {
         games: 0,
@@ -36,6 +41,7 @@ export function useChampionRoleStats(
 
   for (const role in grouped) {
     const r = grouped[role]
+    if (!r) continue
     r.winrate = (r.wins / r.games) * 100
   }
 

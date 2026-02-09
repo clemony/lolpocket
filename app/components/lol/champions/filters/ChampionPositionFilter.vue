@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   variant = "ghost",
   class: className,
@@ -6,7 +8,7 @@ const {
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
-  variant?: ButtonVariants["variant"]
+  variant?: ButtonProps["variant"]
 }>()
 </script>
 
@@ -21,15 +23,15 @@ const {
             className
           )
         ">
-        <Button
+       <UButton
           v-if="cs().filters.position && clear"
           class="order-first hover:*:opacity-100"
           :variant
           square
           size="sm"
-          @click="cs().filters.position = null">
+          @click="cs().filters.position = ''">
           <icon class="size-4" name="x" />
-        </Button>
+        </UButton>
 
         <BaseListboxItem
           v-for="position in mapPositions.filter((p) => p.name !== 'All')"

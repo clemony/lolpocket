@@ -2,7 +2,7 @@
 const { championKey } = defineProps<{
   championKey: string
 }>()
-const champion = ref<Champion>(null)
+const champion = ref<Champion | null>(null)
 
 const tabs = ref('abilities')
 </script>

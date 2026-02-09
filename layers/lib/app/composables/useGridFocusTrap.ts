@@ -60,14 +60,14 @@ export function useGridFocusTrap<T>(
   // Auto-activate trap on first arrow key press
   const { arrowdown, arrowup } = useMagicKeys()
 
-  watch(arrowdown, (v) => {
+  watch(() => arrowdown?.value ?? false, (v) => {
     if (v && !hasFocus.value) {
       activationKey.value = '.index-0'
       nextTick(() => activate())
     }
   })
 
-  watch(arrowup, (v) => {
+  watch(() => arrowup?.value ?? false, (v) => {
     if (v && !hasFocus.value) {
       activationKey.value = `.index-${items.value.length - 1}`
       nextTick(() => activate())

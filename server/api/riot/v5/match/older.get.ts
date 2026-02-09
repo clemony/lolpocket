@@ -1,11 +1,15 @@
+//
 // /server/api/matches/older.get.ts
-import { idsByPuuid, matchById } from '#server/domain'
+import { idsByPuuid, matchById } from "#server/domain"
 
 export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const puuid = getQuery(event).puuid as string
   const cursor = Number(getQuery(event).cursor || 0)
   const region = getQuery(event).region as string
-  const queue = getQuery(event).queue
+  const queueQuery = getQuery(event).queue
+  const queue = Array.isArray(queueQuery) ? queueQuery[0] : queueQuery
+  const normalizedQueue =
+    typeof queue === "string" || typeof queue === "number" ? queue : undefined
 
   const batchSize = 20
   const results: MatchData[] = []
@@ -14,14 +18,14 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
   const ids = await idsByPuuid({
     puuid,
     count: batchSize,
-    queue,
+    queue: normalizedQueue,
     region,
     start: cursor,
   })
 
   if (!ids.length) {
     // no more matches at all
-    console.log('🥸 - ids.length:', ids.length)
+    console.log("🥸 - ids.length:", ids.length)
     return { cursor, done: true, matches: [] }
   }
 

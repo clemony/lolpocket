@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   variant = "ghost",
   class: className,
@@ -8,8 +10,8 @@ const {
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
-  size?: ButtonVariants["size"][]
-  variant?: ButtonVariants["variant"]
+  variant?: ButtonProps['variant']
+  size?: ButtonProps['size']
 }>()
 </script>
 
@@ -24,14 +26,14 @@ const {
             className
           )
         ">
-        <Button
+       <UButton
           v-if="cs().filters.role && clear"
           class="order-first hover:*:opacity-100"
           :variant
           size="sm"
           @click="cs().filters.role = null">
           <icon class="size-4" name="x" />
-        </Button>
+        </UButton>
 
         <BaseListboxItem
           v-for="role in championRoles"

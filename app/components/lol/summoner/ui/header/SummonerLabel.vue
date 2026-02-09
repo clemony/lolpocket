@@ -1,5 +1,10 @@
 <script lang="ts" setup>
 const summoner = await ss().resolveByPuuid(as().account?.puuid)
+const accountRoute = computed(() => {
+  const account = as().account
+  if (!account?.region || !account?.name || !account?.tag) return null
+  return `/summoner/${account.region}/${account.name}_${account.tag}`
+})
 </script>
 
 <template>
@@ -9,7 +14,7 @@ const summoner = await ss().resolveByPuuid(as().account?.puuid)
     as-child>
     <NuxtLink
       class="flex size-full w-full items-center justify-start gap-3"
-      :to="`/summoner/${as().account.region}/${as().account.name}_${as().account.tag}`">
+      :to="accountRoute ?? '/'">
       <SummonerIcon class="size-11.5 shrink-0 rounded-full" />
 
       <div class="flex w-full flex-col justify-end gap-px">

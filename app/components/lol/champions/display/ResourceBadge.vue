@@ -1,29 +1,31 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
+
 const { class: className, resource: p } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   resource: AbilityResource | string | null
   noLabel?: boolean
-  size?: ButtonVariants['size']
+  variant?: ButtonProps['variant']
+  size?: ButtonProps['size']
   active?: boolean
   clear?: boolean
 }>()
 
 const resource = computed(() => {
-  if (typeof p !== 'string') return p
-
-  return abilityResources.find(p => p.name === (p ?? 'All'))
-})
+  if (typeof p !== "string") return p
+  return abilityResources.find((r) => r.name === (p ?? "All"))
+})/*
+    :active="
+      resource.name === 'None' && (active || cs().filters.resource === 'None') ?
+        'outline'
+      : 'none'
+    " */
 </script>
 
 <template>
-  <Button
+  <UButton
     v-if="resource"
     variant="ghost"
-    :active="
-      resource.name === 'None' && (active || cs().filters.resource === 'None')
-        ? 'outline'
-        : 'none'
-    "
     hover="btn"
     :size
     :class="
@@ -31,19 +33,19 @@ const resource = computed(() => {
         'w-fit gap-2! px-5 text-sm! font-medium! text-pc/90',
         {
           //
-          'hover:**:text-pc hover:text-pc order-first':
-            active
-            || (cs().filters.resource && cs().filters.resource === resource.name),
+          'order-first hover:text-pc hover:**:text-pc':
+            active ||
+            (cs().filters.resource && cs().filters.resource === resource.name),
           //
           'text-white **:text-white':
-            (active
-              || (cs().filters.resource
-                && cs().filters.resource === resource.name))
-            && resource.name !== 'None',
+            (active ||
+              (cs().filters.resource &&
+                cs().filters.resource === resource.name)) &&
+            resource.name !== 'None',
           //
           'pr-3': active && clear,
         },
-        className,
+        className
       )
     "
     :style="{
@@ -55,9 +57,6 @@ const resource = computed(() => {
       :class="cn('!size-4  dst shrink-0', resource?.class)" /> -->
 
     {{ resource?.title || resource.name }}
-    <icon
-      v-if="clear"
-      class="size-4 text-white **:stroke-[2.6]"
-      name="x" />
-  </Button>
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
+  </UButton>
 </template>

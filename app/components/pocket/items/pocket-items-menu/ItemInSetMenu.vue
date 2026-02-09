@@ -12,7 +12,11 @@ const emit = defineEmits(['update:popover'])
   <div class="flex w-full flex-col">
     <ContrastGhostButton
       class="rounded-lg pl-2.5 text-sm btn-sm"
-      @click="removeItemFromSet(props.pocket, props.set, props.item)">
+      @click="
+        props.pocket && props.set ?
+          removeItemFromSet(props.pocket, props.set, props.item)
+        : null
+      ">
       <icon name="f7:delete-right" />
       Remove Item
     </ContrastGhostButton>

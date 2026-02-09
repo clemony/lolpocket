@@ -32,7 +32,7 @@ const pan = ref<Record<string, number>>({ x: 0, y: 0 })
 const isMenuOpen = ref<boolean>(true)
 const isSettingsOpen = ref<boolean>(true)
 
-const pocketCardRef = ref<HTMLDivElement>(null)
+const pocketCardRef = ref<HTMLDivElement | null>(null)
 
 onMounted(() => {
   ps().pocketCardRef = pocketCardRef.value

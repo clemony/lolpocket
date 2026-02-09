@@ -31,9 +31,9 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
       <ValueFormatter
         class="role-bg border-b4/30 mb-1 badge w-fit shrink-0 badge-lg"
         :array="champion.positions"
-        :data-role="champion.positions[0].toLowerCase()">
+        :data-role="champion.positions?.[0]?.toLowerCase()">
         <component
-          :is="`i-roles-${champion.positions[0].toLowerCase()}`"
+          :is="`i-roles-${champion.positions?.[0]?.toLowerCase()}`"
           class="-mt-1 mr-2 size-4" />
       </ValueFormatter>
     </div>

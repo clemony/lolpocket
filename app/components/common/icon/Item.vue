@@ -19,6 +19,7 @@ const loaded = shallowRef<boolean>(false)
 
 const toast = useToast()
 function showToast() {
+  if (!id) return
   if (!toast.toasts.value.find(t => t.id === `item-${id}`)) {
     toast.add({
       id: `item-${id}`,
@@ -34,9 +35,9 @@ function showToast() {
 
 <template>
   <Tooltip
-    :text="itemNameById(id)"
+    :text="id ? itemNameById(id) : ''"
     trailing-icon="i"
-    :img="`/img/items/${id}.webp`"
+    :img="id ? `/img/items/${id}.webp` : undefined"
     :side>
     <Img
       role="button"
@@ -50,8 +51,8 @@ function showToast() {
           className,
         )
       "
-      :src="`/img/items/${id}.webp`"
-      :alt="itemNameById(id)"
+      :src="id ? `/img/items/${id}.webp` : undefined"
+      :alt="id ? itemNameById(id) : 'item icon'"
       :loading-type
       @click.stop="showToast()"
       @load="loaded = true" />

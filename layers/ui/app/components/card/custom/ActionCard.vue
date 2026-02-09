@@ -5,7 +5,7 @@ defineOptions({
 
 const {
   title,
-  as = 'label',
+  as = "label",
   button,
   class: className,
   hover,
@@ -14,7 +14,7 @@ const {
   title?: string
   text?: string
   button?: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   hover?: boolean
   as?: string
 }>()
@@ -28,8 +28,8 @@ const {
     :class="
       cn(
         'grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2 rounded-xl pt-8 pb-6 *:px-7 **:text-start',
-        { 'hover:bg-p2/60! hover-ring': hover },
-        className,
+        { 'hover-ring hover:bg-p2/60!': hover },
+        className
       )
     ">
     <CardTitle class="text-xlself-start dst">
@@ -43,19 +43,13 @@ const {
         {{ text }}
       </slot>
     </CardDescription>
-    <p
-      v-if="button"
-      class="flex w-full items-center justify-end px-6.75">
-      <Button
-        class="hover-ring"
-        color="neutral">
+    <p v-if="button" class="flex w-full items-center justify-end px-6.75">
+      <UButton class="hover-ring" color="neutral">
         {{ button }}
-      </Button>
+      </UButton>
     </p>
-    <p
-      v-else
-      class="mt-2 flex items-center gap-4 font-medium italic">
-      <Switch
+    <p v-else class="mt-2 flex items-center gap-4 font-medium italic">
+      <USwitch
         v-bind="$attrs"
         :id="title"
         class="hover-ring pointer-events-auto!" />

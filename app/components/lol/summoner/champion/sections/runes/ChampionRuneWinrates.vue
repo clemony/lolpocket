@@ -11,6 +11,9 @@ const {
 }>()
 // todo fix
 const loaded = ref(false)
+const keystoneRunes = computed(() => path.slots?.[0]?.runes ?? [])
+const keystoneCount = computed(() => keystoneRunes.value.length)
+const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
 </script>
 
 <template>
@@ -27,11 +30,11 @@ const loaded = ref(false)
       :class="
         cn(
           'z-2 flex w-full grow items-center justify-around',
-          path.slots[0].runes.length === 4 ? '' : 'gap-4'
+          keystoneCount === 4 ? '' : 'gap-4'
         )
       ">
       <div
-        v-for="keystone in path.slots[0].runes"
+        v-for="keystone in keystoneRunes"
         :key="keystone.id"
         class="relative grid size-12"
         :data-id="keystone.id"
@@ -47,17 +50,17 @@ const loaded = ref(false)
                 'opacity-100 grayscale-0': keystones?.[keystone.id],
                 'scale-90': !keystones?.[keystone.id],
               },
-              path.slots[0].runes.length === 4 ? 'basis-1/4' : 'basis-1/3'
+              keystoneCount === 4 ? 'basis-1/4' : 'basis-1/3'
             )
           " />
 
         <WinrateIndicator
           v-if="keystones?.[keystone.id]"
-          :value="keystones?.[keystone.id]?.winrate" />
+          :value="keystones?.[keystone.id]?.winrate ?? 0" />
         <span
           v-if="keystones?.[keystone.id]"
           class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
-          {{ keystones[keystone.id].winrate }}
+          {{ keystones[keystone.id]?.winrate }}
         </span>
       </div>
     </div>
@@ -65,7 +68,7 @@ const loaded = ref(false)
       class="z-2 grid size-full place-items-center gap-y-4 self-end"
       :data-path="path.name">
       <div
-        v-for="(slot, i) in path.slots.filter((s) => s.tier !== 0)"
+        v-for="(slot, i) in tierSlots"
         :key="i"
         class="z-1 grid w-full grid-cols-3 place-items-center gap-4">
         <!--  <div

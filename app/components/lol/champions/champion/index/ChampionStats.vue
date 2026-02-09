@@ -4,49 +4,51 @@ const { champion } = defineProps<{
 }>()
 
 const ignoredStatKeys = [
-  'acquisitionRadius',
-  'selectionRadius',
-  'pathingRadius',
-  'gameplayRadius',
-  'attackCastTime',
-  'attackTotalTime',
-  'attackDelayOffset',
-  'attackSpeedRatio',
-  'criticalStrikeDamageModifier',
+  "acquisitionRadius",
+  "selectionRadius",
+  "pathingRadius",
+  "gameplayRadius",
+  "attackCastTime",
+  "attackTotalTime",
+  "attackDelayOffset",
+  "attackSpeedRatio",
+  "criticalStrikeDamageModifier",
 ]
 
 const attackPriority = [
-  'attackDamage',
-  'attackRange',
-  'attackSpeed',
-  'attackDelayOffset',
-  'attackSpeedRatio',
-  'attackCastTime',
-  'criticalStrikeDamage',
-  'attackTotalTime',
+  "attackDamage",
+  "attackRange",
+  "attackSpeed",
+  "attackDelayOffset",
+  "attackSpeedRatio",
+  "attackCastTime",
+  "criticalStrikeDamage",
+  "attackTotalTime",
 ]
 
 const basicStats = [
-  'health',
-  'healthRegen',
-  'mana',
-  'manaRegen',
-  'armor',
-  'magicResistance',
-  'movespeed',
+  "health",
+  "healthRegen",
+  "mana",
+  "manaRegen",
+  "armor",
+  "magicResistance",
+  "movespeed",
 ]
 
 const defaultStats = [
   ...basicStats.slice(0, -1),
-  'attackDamage',
-  'attackRange',
-  'attackSpeed',
-  'movespeed',
+  "attackDamage",
+  "attackRange",
+  "attackSpeed",
+  "movespeed",
 ]
 const open = ref(false)
 const level = ref([1])
 
-const { resolveStat } = useChampionStatGrowth(computed(() => level.value[0]))
+const { resolveStat } = useChampionStatGrowth(
+  computed(() => level.value[0] ?? 1)
+)
 /*
 const scalingStats = computed(() =>
   Object.entries(champion.stats).filter(
@@ -140,9 +142,7 @@ const filteredStats = computed(() => {
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
         class="group/tr flex h-16 min-h-16 w-full cursor-pointer items-center justify-between px-5">
-        <h3 class="underline-offset-3 dst group-hover/tr:underline">
-          Stats
-        </h3>
+        <h3 class="underline-offset-3 dst group-hover/tr:underline">Stats</h3>
         <CaretFlip />
       </div>
       <div
@@ -152,7 +152,7 @@ const filteredStats = computed(() => {
           {{ champion.name }} lv. {{ level[0] }}
         </span>
         <div class="relative mt-5 mb-1 h-12 w-full">
-          <Slider
+          <USlider
             v-model:model-value="level"
             class="z-1"
             thumb-class="size-6  shadow-none drop-shadow-none !overflow-visible  grid place-items-center relative border-0  focus-visible:!ring-1 ring ring-b4 focus-visible:!ring-neutral focus-visible:!ring-offset-2"
@@ -163,7 +163,7 @@ const filteredStats = computed(() => {
             :min-steps-between-thumbs="1"
             :min="1">
             <span class="absolute text-xs! font-semibold">{{ level[0] }}</span>
-          </Slider>
+          </USlider>
           <div
             class="absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18 justify-evenly pr-4 pl-5.5">
             <button
@@ -180,7 +180,7 @@ const filteredStats = computed(() => {
                   :class="
                     cn('scale-y-50 self-start! opacity-50', {
                       'translate-y-0.5 scale-y-80': [1, 6, 11, 16, 18].includes(
-                        i,
+                        i
                       ),
                     })
                   ">
@@ -203,7 +203,7 @@ const filteredStats = computed(() => {
         :class="
           cn(
             'field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
-            { 'invisible hidden max-h-0 opacity-0': open },
+            { 'invisible hidden max-h-0 opacity-0': open }
           )
         ">
         <!--  <ChampionStat
@@ -215,9 +215,7 @@ const filteredStats = computed(() => {
         /> -->
       </div>
 
-      <Collapsible
-        v-model:open="open"
-        class="w-full">
+      <Collapsible v-model:open="open" class="w-full">
         <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
           <!--  <div
             v-for="(group, ix) in filteredStats.more"
@@ -247,9 +245,7 @@ const filteredStats = computed(() => {
           </div> -->
         </CollapsibleContent>
         <CollapsibleTrigger class="w-full">
-          <LessOrMore
-            class="w-[98%] justify-self-center"
-            :open />
+          <LessOrMore class="w-[98%] justify-self-center" :open />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>

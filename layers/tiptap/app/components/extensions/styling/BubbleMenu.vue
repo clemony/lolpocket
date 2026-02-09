@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/vue-3'
-import { isTextSelection } from '@tiptap/core'
-import { BubbleMenu } from '@tiptap/vue-3/menus'
+import { isTextSelection } from '@tiptap/core';
+import type { Editor } from '@tiptap/vue-3';
+import { BubbleMenu } from '@tiptap/vue-3/menus';
 
 const { editor, } = defineProps<{
   editor: Editor | null
@@ -84,13 +84,13 @@ function toggleListType() {
     :get-reference-client-rect="virtualRect || undefined"
     :options="{ placement: 'top-start', offset: 8 }">
     <div class="bubble-menu">
-      <Button
+     <UButton
         variant="outline"
         on="inset"
         square
         @click="toggleListType">
         Toggle list type
-      </Button>
+      </UButton>
     </div>
   </BubbleMenu>
 </template>

@@ -33,7 +33,10 @@ export function matchFilters(
   const matchesRole
     = ignoreRole || !role || role === 'all' || player.role === role
 
-  const matchesDate = (!toValue(date).end && !toValue(date).start) || dateInRange(match.gameEndTimestamp, toValue(date))
+  const dateValue = toValue(date)
+  const matchesDate
+    = (!dateValue?.end && !dateValue?.start)
+      || dateInRange(match.gameEndTimestamp, dateValue)
 
   return (
     matchesPatch

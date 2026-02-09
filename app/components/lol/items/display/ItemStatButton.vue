@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   active,
   class: className,
@@ -9,11 +11,11 @@ const {
   class?: HTMLAttributes['class']
   stat: StatIndex | string
   active?: boolean
-  size?: ButtonVariants['size']
+  size?: ButtonProps['size']
   clear?: boolean
 }>()
 
-const statValue = computed<StatIndex>(() => {
+const statValue = computed<StatIndex | undefined>(() => {
   console.log('🌱 - stat:', stat)
   if (typeof stat !== 'string') return stat
 
@@ -22,7 +24,7 @@ const statValue = computed<StatIndex>(() => {
 </script>
 
 <template>
-  <Button
+ <UButton
     v-if="statValue"
     :size
     hover="btn"
@@ -41,5 +43,5 @@ const statValue = computed<StatIndex>(() => {
       v-if="clear"
       class="size-4 text-white **:stroke-[2.6]"
       name="x" />
-  </Button>
+  </UButton>
 </template>

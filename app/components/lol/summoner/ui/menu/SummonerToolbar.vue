@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '@nuxt/ui'
+
 const {
   variant = 'outline',
   class: className,
@@ -10,8 +12,8 @@ const {
   class?: HTMLAttributes['class']
   sidebar?: boolean
   warning?: boolean
-  variant?: ButtonVariants['variant']
-  size?: ButtonVariants['size']
+  variant?: ButtonProps['variant']
+  size?: ButtonProps['size']
   update?: boolean
   tooltipPlacement?: Side
 }>()
@@ -44,7 +46,7 @@ const { summoner } = storeToRefs(s_session())
       :size />
 
     <Tooltip text="Report">
-      <Button
+     <UButton
         v-if="warning"
         :size
         tabindex="-1"
@@ -54,11 +56,12 @@ const { summoner } = storeToRefs(s_session())
         <icon
           class="size-5.5"
           name="warning" />
-      </Button>
+      </UButton>
     </Tooltip>
 
     <Tooltip text="Block">
       <BlockButton
+        v-if="summoner"
         :class="btnClass"
         :size
         :variant
@@ -67,6 +70,7 @@ const { summoner } = storeToRefs(s_session())
 
     <Tooltip text="Message">
       <MessageButton
+        v-if="summoner"
         :class="btnClass"
         :size
         :variant
@@ -74,6 +78,7 @@ const { summoner } = storeToRefs(s_session())
     </Tooltip>
 
     <FollowButton
+      v-if="summoner"
       :class="cn('[&_svg]:size-9.5! [&_svg]:**:stroke-1', btnClass)"
 
       :size

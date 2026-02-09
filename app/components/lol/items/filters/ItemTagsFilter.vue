@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui';
+
 const {
   variant = "ghost",
   class: className,
@@ -7,8 +9,8 @@ const {
   size = ["sq-12", "12"],
 } = defineProps<{
   class?: HTMLAttributes["class"]
-  size?: ButtonVariants["size"][]
-  variant?: ButtonVariants["variant"]
+  size?: ButtonProps["size"][]
+  variant?: ButtonProps["variant"]
 
   clear?: boolean
 }>()
@@ -33,14 +35,14 @@ function handleChange() {
             className
           )
         ">
-        <Button
+       <UButton
           v-if="is().filters.tags.length && clear"
           class="order-first hover:*:opacity-100"
           :variant
           size="sm"
           @click="is().filters.tags.length = 0">
           <icon class="size-4" name="x" />
-        </Button>
+        </UButton>
 
         <!--  <BaseListboxItem
           v-for="tag in itemTags"

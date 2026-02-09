@@ -1,21 +1,24 @@
 <script lang="ts" setup>
-import { Virtualizer } from 'virtua/vue'
+import { Virtualizer } from "virtua/vue";
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(['scroll-top'])
+const emit = defineEmits(["scroll-top"])
 
 const store = useMatchFilters()
 const { baseFiltered, filteredMatches } = storeToRefs(store)
 
 const { loading, loadingOlder, loadMessage, matches } = storeToRefs(s_matches())
 
-watch(() => baseFiltered.value, (v) => {
-  console.log('💠 - watch - newVal:', v)
-})
-const scrollRef = useState<HTMLElement>('scrollRef')
+watch(
+  () => baseFiltered.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
+const scrollRef = useState<HTMLElement>("scrollRef")
 const hasMatches = computed(() => filteredMatches.value?.length > 0)
 </script>
 
@@ -25,18 +28,14 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     :class="
       cn(
         '@container flex h-max w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2',
-        className,
+        className
       )
     ">
-    <LazyAlert
-      v-if="loadMessage"
-      class="w-full">
-      <Icon
-        class="translate-y-1.75 **:stroke-[2.2]"
-        name="reset" />
+    <LazyAlert v-if="loadMessage" class="w-full">
+      <Icon class="translate-y-1.75 **:stroke-[2.2]" name="reset" />
       <AlertTitle class="flex size-full items-center justify-between">
         {{ loadMessage }}
-        <Button
+       <UButton
           variant="ghost"
           hover="btn"
           square
@@ -45,14 +44,12 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
           <Icon
             class="size-3.75 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100"
             name="x" />
-        </Button>
+        </UButton>
       </AlertTitle>
     </LazyAlert>
 
     <!-- loading skeleton -->
-    <div
-      v-if="loading"
-      class="flex w-full flex-col gap-8">
+    <div v-if="loading" class="flex w-full flex-col gap-8">
       <Skeleton
         v-for="i in 12"
         :key="i"
@@ -67,7 +64,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     </div>
 
     <!-- virtualized rows -->
-    <UScrollArea
+    <UUScrollArea
       v-else
       v-slot="{ item }"
       v-auto-animate
@@ -81,23 +78,13 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
         viewport: 'w-full h-max',
         root: 'w-full h-max',
       }">
-      <MatchCard
-        :key="item.matchId"
-        :match="item" />
-    </UScrollArea>
+      <MatchCard :key="item.matchId" :match="item" />
+    </UUScrollArea>
 
-    <div
-      v-if="matches?.length"
-      class="grid h-32 place-items-center">
-      <UButton
-        class="group/c"
-        variant="ghost"
-        @click="s_matches().loadOlder()">
+    <div v-if="matches?.length" class="grid h-32 place-items-center">
+      <UButton class="group/c" variant="ghost" @click="s_matches().loadOlder()">
         <div class="grid size-5 place-items-center *:absolute">
-          <Icon
-            v-if="loading"
-            class="translate-y-px"
-            name="lp-ui:rain" />
+          <Icon v-if="loading" class="translate-y-px" name="lp-ui:rain" />
           <template v-else>
             <Icon
               class="translate-y-0.75 opacity-0 transition-all duration-200 group-hover/c:opacity-100"
