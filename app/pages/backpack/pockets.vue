@@ -16,15 +16,15 @@ const selected = ref<Pocket | null>(null)
       <template #center>
         <BoxPanelCenter title="Pockets">
           <template #tabs>
-            <UButtonGroup>
-             <UButton
+            <ToggleGroup>
+              <UButton
                 class="ml-auto pl-2.5 font-normal"
                 color="neutral"
                 @click="addPocket()">
                 <icon name="add" />
                 add pocket
               </UButton>
-              <UButtonGroupSeparator class="" />
+              <ToggleGroupSeparator class="" />
               <UPopover>
                 <UButton square color="neutral">
                   <Icon class="size-4" name="down" />
@@ -35,14 +35,14 @@ const selected = ref<Pocket | null>(null)
                   align="end"
                   :side-offset="1">
                   <PopoverClose as-child>
-                    <PopoverItem size="sm" @click="addPocket(true)">
+                    <UButton size="sm" @click="addPocket(true)">
                       <Icon class="size-4" name="lucide:sparkles" />
                       Randomize
-                    </PopoverItem>
+                    </UButton>
                   </PopoverClose>
                 </PopoverContent>
               </UPopover>
-            </UButtonGroup>
+            </ToggleGroup>
           </template>
 
           <TransitionScalePop class="flex size-full flex-col gap-6 px-4">
@@ -69,7 +69,7 @@ const selected = ref<Pocket | null>(null)
       <template #right>
         <div class="flex h-full flex-col">
           <PocketDetailMenu :pocket-key="selected?.key ?? null" />
-          <BackpackCardDetail v-if="selected" :pocket="selected" />
+          <!--           <BackpackCardDetail v-if="selected" :pocket="selected" /> -->
         </div>
       </template>
     </BoxPage>

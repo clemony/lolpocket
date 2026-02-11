@@ -3,7 +3,7 @@ export const tooltipPlacements = ["top", "bottom", "left", "right"]
 export const tooltipSizes = ["default", "md", "lg"]
 
 export function closeAndNav(link: string) {
-  ui().sidebarOpen = false
+  session().sidebarOpen = false
   navigateTo(link)
 }
 

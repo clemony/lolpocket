@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "input",
@@ -16,19 +16,19 @@ const keys = useMagicKeys()
 /* const metaK: Record<string, boolean> = keys["Meta+K"]
 
 watch(metaK, (v) => {
-  if (v && !ui().commandOpen) ui().commandOpen = true
+  if (v && !session().commandOpen) session().commandOpen = true
 }) */
 </script>
 
 <template>
- <UButton
+  <UButton
     :class="
       cn(
         'cursor-text gap-2! overflow-hidden bg-p0/60 pr-2 ring-p0 transition-all duration-300 hover:ring',
         className
       )
     "
-    @click="ui().commandOpen = true">
+    @click="session().commandOpen = true">
     <span class="flex items-center gap-2">
       <icon class="size-4.25 opacity-40 dst" name="search" />
       <span class="mr-3 text-md! opacity-60">Search</span>

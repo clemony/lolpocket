@@ -3,25 +3,16 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 const view = shallowRef<"enemy" | "team">("team")
-const { duos } = storeToRefs(s_champion())
+const { duos } = storeToRefs(sChampion())
+
+const items = [{ label: "Synergy" }, { label: "Counter" }]
 </script>
 
 <template>
   <UPageSection
     title="Synergy & Counters"
     :class="cn('flex flex-col gap-3', className)">
-    <Tabs v-model:model-value="view">
-      <TabsList class="w-44">
-        <TabsTrigger value="team">
-          Synergy
-        </TabsTrigger>
-
-        <TabsTrigger value="enemy">
-          Counter
-        </TabsTrigger>
-        <TabIndicator />
-      </TabsList>
-    </Tabs>
+    <UTabs v-model:model-value="view" class="w-44" :items />
     <template v-if="duos?.[view]">
       <ChampStatRow v-for="(role, i) in duos[view]" :key="i">
         <ChampStatLabel

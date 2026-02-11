@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PopoverContentProps } from 'reka-ui'
+import type { PopoverContentProps } from 'reka-ui';
 
 const { k, pocket: p } = defineProps<
   PopoverContentProps & {
@@ -22,7 +22,7 @@ const name = computed(() => champNameByKey(k))
   <PopoverContent
     class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5"
     align="start">
-    <PopoverItem
+    <UButton
       class="hover:bg-p3/60"
       @click="navigateTo(`/champions/${k}`)">
       <span class="relative grid size-4.5 place-items-center">
@@ -31,9 +31,9 @@ const name = computed(() => champNameByKey(k))
           :k />
       </span>
       {{ name }}'s profile
-    </PopoverItem>
-    <DropdownMenuSeparator class="mt-1.25 mb-1" />
-    <PopoverItem
+    </UButton>
+    <USeparator class="mt-1.25 mb-1" />
+    <UButton
       class="hover:bg-p3/60"
       for="champion-add-or-remove-from-pocket"
       as="label">
@@ -47,9 +47,9 @@ const name = computed(() => champNameByKey(k))
         :value="k">
       <span class="peer-checked:hidden">Add to pocket</span>
       <span class="peer-not-checked:hidden">Remove from pocket</span>
-    </PopoverItem>
+    </UButton>
 
-    <PopoverItem
+    <UButton
       as="label"
       :class="cn('disabled hover:bg-p3/60 has-disabled:opacity-100')"
       @click="pocket._champion = k">
@@ -68,6 +68,6 @@ const name = computed(() => champNameByKey(k))
         type="checkbox"
         :value="k">
       {{ pocket._champion === k ? "Main champion" : "Set main champion" }}
-    </PopoverItem>
+    </UButton>
   </PopoverContent>
 </template>

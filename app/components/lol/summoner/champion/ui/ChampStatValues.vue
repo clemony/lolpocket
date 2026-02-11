@@ -39,7 +39,7 @@ const {
         cn(
           Math.sign((stat as PairedChampionStat)?.delta) === -1 ?
             '-ml-1.25'
-          : '-ml-1.75'
+            : '-ml-1.75'
         )
       ">
       <span class="text-2xs! font-medium! text-pc/90!">

@@ -1,58 +1,57 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const props = withDefaults(
   defineProps<{
     placement?: Side
-  variant?: ButtonProps['variant']
-  size?: ButtonProps['size']
+    variant?: ButtonProps["variant"]
+    size?: ButtonProps["size"]
   }>(),
   {
-    hover: 'neutral',
-    placement: 'bottom',
+    hover: "neutral",
+    placement: "bottom",
   }
 )
-const { summoner } = storeToRefs(s_session())
+const { summoner } = storeToRefs(sSession())
 const throttle = throttleFunction(
-  () => s_matches().loadNewer(),
+  () => sMatches().loadNewer(),
   120_000,
-  summoner?.value?.puuid ?? '',
-  'match-refresh'
+  summoner?.value?.puuid ?? "",
+  "match-refresh"
 )
 const cooldown = computed(() => throttle?.cooldown?.value ?? null)
 const isLoading = computed(() => throttle?.isLoading?.value ?? false)
 const update = throttle?.throttled ?? (() => {})
 
 async function loadNew() {
-  const message = await s_matches().loadNewer()
-  console.log('🥸 - message - message:', message)
+  const message = await sMatches().loadNewer()
+  console.log("🥸 - message - message:", message)
 }
 const tippy = computed(() => {
   return (
-    !cooldown.value?.seconds
-      ? summoner?.value?.lastMatchUpdate
-        ? `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
-        : 'Not updated yet'
-      : `${cooldown.value?.seconds} cd`
+    !cooldown.value?.seconds ?
+      summoner?.value?.lastMatchUpdate ?
+        `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
+      : "Not updated yet"
+    : `${cooldown.value?.seconds} cd`
   )
 })
 
-console.log('🥸 - summoner?.value:', summoner?.value)
+console.log("🥸 - summoner?.value:", summoner?.value)
 </script>
 
 <template>
   <Tooltip :text="tippy ?? null">
-   <UButton
+    <UButton
       :variant
       :size
-
       :class="
         cn(
           {
             'pointer-events-none btn-active cursor-not-allowed duration-0!':
               cooldown,
           },
-          'shrink-0 [&_svg]:size-4.25',
+          'shrink-0 [&_svg]:size-4.25'
         )
       "
       @click="loadNew()">
@@ -64,7 +63,7 @@ console.log('🥸 - summoner?.value:', summoner?.value)
           :class="
             cn(
               'size-5 opacity-100 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
-              { 'animate-rotate': isLoading },
+              { 'animate-rotate': isLoading }
             )
           " />
 

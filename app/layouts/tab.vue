@@ -53,7 +53,7 @@ onMounted(() => {
 }) */
 
 const bg = computed(() =>
-  route.path.match(/\/summoner/) ? s_data().splash
+  route.path.match(/\/summoner/) ? sData().splash
   : pocket ? pocket.icon
   : champion ? getSplash(champion.key, "uncentered")
   : getRandomBg()

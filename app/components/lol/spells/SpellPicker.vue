@@ -18,7 +18,7 @@ onMounted(() => {
     <UButton
       :class="cn('group/trig w-full p-0', props.class)"
       @click.stop.prevent>
-     <UButton
+      <UButton
         class="hover:ring-b4 relative grid size-16 place-items-center overflow-hidden p-0 hover:ring"
         color="p2"
         :class="{ 'shadow-sm drop-shadow-sm': selected !== null }">

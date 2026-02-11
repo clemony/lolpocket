@@ -4,9 +4,9 @@ defineOptions({
 })
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
-const { summoner } = storeToRefs(s_session())
+const { summoner } = storeToRefs(sSession())
 
 const open = shallowRef<boolean>(false)
 </script>

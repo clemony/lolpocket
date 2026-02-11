@@ -24,7 +24,7 @@ const statValue = computed<StatIndex | undefined>(() => {
 </script>
 
 <template>
- <UButton
+  <UButton
     v-if="statValue"
     :size
     hover="btn"

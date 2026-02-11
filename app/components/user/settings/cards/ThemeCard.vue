@@ -6,45 +6,36 @@ const {
 } = defineProps<{
   theme: any
   activeTheme: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const colorChip
-  = 'aspect-square inset-shadow-sm drop-shadow-xs size-9 flex items-center justify-center rounded-md shadow-sm'
+const colorChip =
+  "aspect-square inset-shadow-sm drop-shadow-xs size-9 flex items-center justify-center rounded-md shadow-sm"
 </script>
 
 <template>
-  <Card
+  <UCard
     :value="theme.name"
     :data-theme="theme.name"
     :class="
       cn(
         'theme-${theme.name}',
-        `
-          group/theme hover-ring relative grid size-full! max-h-90 max-w-82
-          cursor-pointer grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] items-center
-          justify-center gap-5 overflow-hidden rounded-lg bg-p0 px-6 py-4
-          text-pc shadow-sm shadow-black/16 drop-shadow-xs select-none
-        `,
+        `group/theme hover-ring relative grid size-full! max-h-90 max-w-82 cursor-pointer grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] items-center justify-center gap-5 overflow-hidden rounded-lg bg-p0 px-6 py-4 text-pc shadow-sm shadow-black/16 drop-shadow-xs select-none`,
         {
           'border-pc group-hover/label:ring group-hover/label:ring-offset-1':
             theme.name === activeTheme,
         },
-        className,
+        className
       )
     ">
-   <UButton
+    <UButton
       v-if="as().settings?.theme === theme.name"
       class="relative grid aspect-square place-items-center rounded-full"
       size="sm"
       color="neutral">
-      <icon
-        class="absolute size-6 **:stroke-3"
-        name="tick" />
+      <icon class="absolute size-6 **:stroke-3" name="tick" />
     </UButton>
-    <div
-      v-else
-      class="" />
+    <div v-else class="" />
     <div class="hidden h-32 w-full pt-3 pr-2 pl-1 -indent-1 md:block">
       <h4 class="leading-8 font-bold capitalize">
         {{ theme.name }}
@@ -73,5 +64,5 @@ const colorChip
         lolpocket theme
       </p>
     </div>
-  </Card>
+  </UCard>
 </template>

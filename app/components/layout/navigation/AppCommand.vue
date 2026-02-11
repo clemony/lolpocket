@@ -31,10 +31,6 @@ const focus = ref<HTMLElement>()
   pages: true,
 })
  */
-function navigate(url: string) {
-  ui().commandOpen = false
-  navigateTo(url)
-}
 </script>
 
 <template>

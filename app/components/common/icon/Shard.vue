@@ -1,31 +1,22 @@
 <script setup lang="ts">
 const {
   id,
-  variant = 'base',
-  base = 'btn',
   class: className,
-  dataPlacement = 'top',
+  dataPlacement = "top",
   dataSize,
   dataText,
   iconClass,
-  on,
-  size = 'c-10',
 } = defineProps<{
   id: number | null
   dataSize?: TooltipSize
   dataPlacement?: string
   dataText?: string
-  class?: HTMLAttributes['class']
-  iconClass?: HTMLAttributes['class']
-  variant?: LabelVariants['variant']
-  hover?: LabelVariants['hover']
-  base?: LabelVariants['base']
-  size?: LabelVariants['size']
-  on?: LabelVariants['on']
+  class?: HTMLAttributes["class"]
+  iconClass?: HTMLAttributes["class"]
 }>()
 
 const shard = computed(() =>
-  shardRegistry.flatMap(o => o.shards).find(s => s.id === id)
+  shardRegistry.flatMap((o) => o.shards).find((s) => s.id === id)
 )
 </script>
 
@@ -36,17 +27,8 @@ const shard = computed(() =>
     :data-size
     :data-text
     :data-placement
-    :class="
-      cn(
-        'relative',
-        labelVariants({ base, on, hover, size, variant }),
-        className,
-      )
-    ">
-    <ShardIcon
-      v-if="id !== null"
-      :id="id"
-      :class="iconClass" />
+    :class="cn('anchor rounded-full', className)">
+    <ShardIcon v-if="id !== null" :id="id" :class="iconClass" />
     <slot />
   </Label>
 </template>

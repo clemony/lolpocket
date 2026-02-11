@@ -69,7 +69,7 @@ onMounted(() => {
       <div class="justify-self-start pl-44">
         <div class="relative grid size-full w-140 max-w-140 items-center">
           <LolpocketDefinition>
-           <UButton
+            <UButton
               variant="outline"
               size="lg"
               :class="

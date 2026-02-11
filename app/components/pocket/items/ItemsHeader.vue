@@ -2,7 +2,9 @@
 
 <template>
   <div class="w-full">
-    <h2 class="">Item Sets</h2>
+    <h2 class="">
+      Item Sets
+    </h2>
     <p class="inline-block leading-6 tracking-tight">
       Drag items from the list at the right. Items are draggable & re-orderable
       within sets and between them. Select

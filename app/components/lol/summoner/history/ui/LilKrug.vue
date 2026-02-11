@@ -3,7 +3,6 @@
 <template>
   <div
     class="grid w-full shrink-0 grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center gap-5 px-4">
-    $1UButton$2 $1UButton$2
     <UButton
       class="pointer-events-none rounded-full text-pc/40"
       wrapper-class="bg-p2!"
@@ -12,15 +11,15 @@
 
     <div
       class="flex flex-col justify-center gap-2 py-px font-medium opacity-60 dst">
-      <Element class="h-3 w-26" color="p2" base="btn" />
+      <Placeholder class="h-3 w-26" color="p2" base="btn" />
 
-      <Element class="h-3 w-18" color="p2" base="btn" />
+      <Placeholder class="h-3 w-18" color="p2" base="btn" />
     </div>
 
     <div class="flex grow flex-col items-end justify-center px-3 text-sm">
-      <p class="items-center font-medium text-nowrap dst" />
+      <Placeholder class="items-center font-medium text-nowrap dst" />
 
-      <p class="items-center font-medium text-nowrap dst" />
+      <Placeholder class="items-center font-medium text-nowrap dst" />
     </div>
 
     <DonutSkeleton class="size-14 opacity-50 dst" thickness="4px" label="" />

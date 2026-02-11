@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import type { LabelProps } from 'reka-ui'
-import { Label } from 'reka-ui'
+import type { LabelProps } from "reka-ui"
+import { Label } from "reka-ui"
 
 interface Props extends LabelProps {
-  base?: LabelVariants['base']
-  class?: HTMLAttributes['class']
-  hover?: LabelVariants['hover']
-
-  variant?: LabelVariants['variant']
-  size?: LabelVariants['size']
+  class?: HTMLAttributes["class"]
 }
 
 const props = defineProps<
   Props & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
   }
 >()
 
@@ -30,8 +25,7 @@ const delegatedProps = computed(() => {
     :class="
       cn(
         'group/label text-md leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-        labelVariants({ base, variant, size, hover }),
-        props.class,
+        props.class
       )
     ">
     <slot />

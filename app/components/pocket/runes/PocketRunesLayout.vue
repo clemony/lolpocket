@@ -84,14 +84,14 @@ function handleDelete() {
 
         <div
           class="absolute bottom-50 -left-24 mb-4 flex flex-col flex-nowrap items-center gap-5 px-1">
-         <UButton
+          <UButton
             class="size-11 h-full rounded-full shadow-sm shadow-black/6"
             variant="outline"
             title="Delete Set"
             @click="handleDelete()">
             <icon name="trash" />
           </UButton>
-         <UButton
+          <UButton
             class="size-11 h-full rounded-full shadow-sm shadow-black/6"
             variant="outline"
             title="Reset set runes"

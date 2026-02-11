@@ -39,5 +39,7 @@ watch(
         " />
       dfddfd
     </UButton>
-  </LazyIconUPopover
+    </LazyIconUPopover
+    </template>
+  </lazyiconpopover>
 </template>

@@ -3,8 +3,8 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { mastery, splash } = storeToRefs(s_data())
-const { summoner } = storeToRefs(s_session())
+const { mastery, splash } = storeToRefs(sData())
+const { summoner } = storeToRefs(sSession())
 const img = useImage()
 const bg = computed(
   () => splash?.value?.replace("uncentered", "tile") ?? getRandomBg()
@@ -29,7 +29,7 @@ console.log("🥸 - top:", top)
       }"
       class="relative z-0 mb-10 h-22 w-full overflow-hidden rounded-t-lg"
       :alt="`${summoner?.name}'s Splash`">
-      <Badge
+      <UBadge
         class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-p0/50 pl-1.5 text-2xs! font-semibold! text-pc/70 backdrop-blur-lg"
         size="xs">
         <span class="relative grid size-3 place-items-center">
@@ -42,7 +42,7 @@ console.log("🥸 - top:", top)
             name="up" />
         </span>
         {{ summoner?.level }}
-      </Badge>
+      </UBadge>
     </div>
 
     <div class="absolute top-8 flex h-24 w-full items-end px-2">

@@ -3,7 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { runes } = storeToRefs(s_champion())
+const { runes } = storeToRefs(sChampion())
 
 const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
 </script>

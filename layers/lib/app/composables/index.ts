@@ -10,5 +10,5 @@ export * from './useCooldown'
 export * from './useDownloadFile'
 export * from './useGridFocusTrap'
 export * from './useSearch'
-export * from './useSmartShortCut'
 export * from './useThrottledFn'
+

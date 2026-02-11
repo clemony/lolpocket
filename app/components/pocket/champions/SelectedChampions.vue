@@ -1,16 +1,14 @@
 <script lang="ts" setup>
-import type { DraggableEvent } from 'vue-draggable-plus'
-import { vDraggable } from 'vue-draggable-plus'
+import type { DraggableEvent } from "vue-draggable-plus"
+import { vDraggable } from "vue-draggable-plus"
 
 const route = useRoute()
-const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-)
+const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 const champions = computed(() => pocket.value?.champions ?? [])
 
 function onSpill(e: DraggableEvent) {
-  console.log('🌱 - onSpill - e:', e)
-  const a = champions.value.findIndex(c => c === e.data.key)
+  console.log("🌱 - onSpill - e:", e)
+  const a = champions.value.findIndex((c) => c === e.data.key)
   if (a >= 0) champions.value.splice(a, 1)
 }
 </script>
@@ -41,7 +39,7 @@ function onSpill(e: DraggableEvent) {
       ]"
       class="absolute inset-0 grid h-36 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center overflow-x-scroll overflow-y-hidden py-2">
       <template v-if="champions.length">
-        <Card
+        <UCard
           v-for="champion in champions"
           :id="champion"
           :key="champion"
@@ -50,17 +48,17 @@ function onSpill(e: DraggableEvent) {
             class="absolute size-[260%] translate-y-[16%] object-center"
             :k="champion"
             type="centered" />
-        </Card>
+        </UCard>
       </template>
       <div
         v-else
         class="undraggable grid size-full place-items-center select-none">
-        <Badge
+        <UBadge
           class="pointer-events-none absolute"
           size="lg"
           variant="outline">
           Pocket is championless.
-        </Badge>
+        </UBadge>
       </div>
     </TransitionScalePop>
   </div>

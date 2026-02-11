@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { items, stats } = storeToRefs(s_champion())
+const { items, stats } = storeToRefs(sChampion())
 const route = useRoute()
 
 const champKey = computed(() => String(route.params?.champion_key))
@@ -43,13 +43,9 @@ const statsSafe = computed(() => {
         :icon="['lol:melee', 'size-6.5']">
         <span class="flex flex-nowrap items-center">
           {{ statsSafe.killsAvg }}
-          <Icons
-            class="size-7"
-            name="slash" />
+          <Icons class="size-7" name="slash" />
           {{ statsSafe.deathsAvg }}
-          <Icons
-            class="size-7"
-            name="slash" />
+          <Icons class="size-7" name="slash" />
           {{ statsSafe.assistsAvg }}
         </span>
       </SimpleChampionStatCard>
@@ -78,8 +74,7 @@ const statsSafe = computed(() => {
         <span class="flex flex-nowrap items-center">
           {{
             (
-              statsSafe.totalAllyHealingAvg
-              + statsSafe.totalAllyShieldingAvg
+              statsSafe.totalAllyHealingAvg + statsSafe.totalAllyShieldingAvg
             ).toLocaleString()
           }}
         </span>
@@ -104,9 +99,8 @@ const statsSafe = computed(() => {
         <span class="flex flex-nowrap items-center">
           {{
             Math.round(
-              (statsSafe.minionsKilledAvg
-                + statsSafe.neutralMinionsKilledAvg)
-                * 10,
+              (statsSafe.minionsKilledAvg + statsSafe.neutralMinionsKilledAvg) *
+                10
             ) / 10
           }}
         </span>

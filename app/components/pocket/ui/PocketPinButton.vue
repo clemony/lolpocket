@@ -1,12 +1,14 @@
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui"
+
 const {
   class: className,
   pocket: p,
-  size,
+  size = "2xs",
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   pocket: Pocket
-  size: LabelVariants['size']
+  size: ButtonProps["size"]
 }>()
 
 const pocket = computed(() => p)
@@ -27,7 +29,7 @@ const pocket = computed(() => p)
     :class="
       cn(
         'group/pin pointer-events-auto size-7! rounded-full *:absolute *:mt-px *:size-4.25',
-        className,
+        className
       )
     ">
     <!--     <input

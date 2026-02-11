@@ -1,30 +1,29 @@
 <script lang="ts" setup>
-import { ListboxContent, ListboxGroup, ListboxRoot } from 'reka-ui'
+import { ListboxContent, ListboxGroup, ListboxRoot } from "reka-ui"
 
 const { paddingClass } = defineProps<{
-  paddingClass?: HTMLAttributes['class']
+  paddingClass?: HTMLAttributes["class"]
 }>()
-const newTag = ref('')
+const newTag = ref("")
 const tags = ref<string[]>([])
 watch(
   () => tags.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-    console.log('💠 - watch - newVajljljljl:', ps().tags)
+    console.log("💠 - watch - newVal:", newVal)
+    console.log("💠 - watch - newVajljljljl:", ps().tags)
   }
 )
 
 function deleteTag(tag: string) {
-  const a = ps().tags.findIndex(t => t === tag)
+  const a = ps().tags.findIndex((t) => t === tag)
 
   if (a !== -1) {
     ps().tags.splice(a, 1)
     ps()
-      .pockets
-      .map(p => p.tags)
+      .pockets.map((p) => p.tags)
       .forEach((set) => {
         if (!set) return
-        const a = set.findIndex(t => t === tag)
+        const a = set.findIndex((t) => t === tag)
         if (a !== -1) set.splice(a, 1)
       })
   }
@@ -44,15 +43,11 @@ function deleteTag(tag: string) {
       <!-- custom tags -->
 
       <Collapsible
-        v-model:open="ui().toggles.backpack.tags"
+        v-model:open="session().toggles.backpack.tags"
         :disabled="false"
         :class="cn('space-y-1 px-3 pb-3', paddingClass)">
         <CollapsibleTrigger as-child>
-         <UButton
-            class="w-full"
-            as="button"
-            variant="ghost"
-            size="md">
+          <UButton class="w-full" as="button" variant="ghost" size="md">
             <span
               class="grow text-lg font-semibold tracking-normal capitalize opacity-40 duration-0">
               Tags
@@ -61,9 +56,7 @@ function deleteTag(tag: string) {
           </UButton>
         </CollapsibleTrigger>
 
-        <CollapsibleContent
-          class="CollapsibleContent space-y-1"
-          menu>
+        <CollapsibleContent class="CollapsibleContent space-y-1" menu>
           <ListboxGroup class="relative flex flex-col justify-start gap-y-1">
             <div
               v-for="item in ps().tags"
@@ -74,18 +67,16 @@ function deleteTag(tag: string) {
                 class="group/bt size-full grow cursor-pointer p-0"
                 as-child
                 :value="item">
-               <UButton
+                <UButton
                   size="md"
                   variant="ghost"
                   :class="
                     cn(
                       'size-full items-center justify-start gap-px! rounded-lg px-3 text-pc/80 duration-0 hover:bg-p2/60 hover:text-pc hover:inset-shadow-none',
-                      { 'btn-active bg-p2/20!': tags.includes(item) },
+                      { 'btn-active bg-p2/20!': tags.includes(item) }
                     )
                   ">
-                  <icon
-                    class="size-3.5!"
-                    name="hash" />
+                  <icon class="size-3.5!" name="hash" />
                   <span class="w-full truncate font-medium">
                     {{ item }}
                   </span>
@@ -93,7 +84,7 @@ function deleteTag(tag: string) {
               </ListboxItem>
 
               <!-- delete tag -->
-             <UButton
+              <UButton
                 v-tippy="'Delete Tag'"
                 class="btn-square h-9 opacity-0 duration-0 not-hover:**:text-pc/60 group-hover/tag:opacity-100"
                 variant="ghost"
@@ -104,15 +95,12 @@ function deleteTag(tag: string) {
           </ListboxGroup>
           <!-- tag input -->
 
-         <UButton
+          <UButton
             class="group flex w-full flex-nowrap items-center gap-3! justify-self-center px-3 py-0 text-sm duration-0 focus-within:border-neutral/60 focus-within:[&_input]:placeholder:opacity-0"
             as="div"
-
             hover="outline">
             <span class="z-1 grid h-full w-4.5 place-items-center bg-p0">
-              <icon
-                class="size-4.5 opacity-50"
-                name="tag" />
+              <icon class="size-4.5 opacity-50" name="tag" />
             </span>
             <input
               v-model="newTag"
@@ -122,9 +110,9 @@ function deleteTag(tag: string) {
                 () => {
                   ;(ps().tags.push(newTag), (newTag = ''))
                 }
-              ">
+              " />
 
-           <UButton
+            <UButton
               class="btn-square size-6 duration-0 group-has-placeholder-shown:opacity-0"
               variant="ghost"
               size="sm"

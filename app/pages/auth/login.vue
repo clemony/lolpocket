@@ -11,7 +11,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UCard>
+  <NuxtLayout layout="card">
     <AuthForm type="logIn" />
-  </UCard>
+  </NuxtLayout>
 </template>

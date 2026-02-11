@@ -1,41 +1,43 @@
 <script lang="ts" setup>
-const {
-  class: className,
-  orientation = 'horizontal',
-} = defineProps<{
-  class?: HTMLAttributes['class']
+const { class: className, orientation = "horizontal" } = defineProps<{
+  class?: HTMLAttributes["class"]
   orientation?: DataOrientation
 }>()
 
-const { summoner } = storeToRefs(s_session())
-const store = useMatchFilters()
+const { summoner } = storeToRefs(sSession())
+const store = matchFilter()
 const { filter } = storeToRefs(store)
 
 const roles = computed(() => {
-  if (!s_matches().matches || !summoner?.value) return []
+  if (!sMatches().matches || !summoner?.value) return []
 
-  const matchRoles = useMatchRoles(summoner?.value?.puuid, s_matches().matches)
+  const matchRoles = useMatchRoles(summoner?.value?.puuid, sMatches().matches)
 
   return mapPositions.map((p) => {
-    const find = matchRoles?.find(r => r.name === p.name)
+    const find = matchRoles?.find((r) => r.name === p.label)
     return {
       ...p,
-      disabled: p.name === 'all' ? false : !find?.games
+      disabled: p.label === "all" ? false : !find?.games,
     }
   })
 })
 
 const roleModel = computed({
-  get: () => filter?.value.role ?? 'all',
-  set: val => store.setFilter('role', val ?? 'all'),
+  get: () => filter?.value.role ?? "all",
+  set: (val) => store.setFilter("role", val ?? "all"),
 })
 </script>
 
 <template>
   <UTabs
     v-model:model-value="roleModel"
-    class="h-10 w-full"
+    color="transparent"
+    size="sm"
+    :ui="{
+      root: 'h-10 w-full',
+      label: 'hidden',
+    }"
     :items="roles"
-    value-key="name"
+    value-key="label"
     default-value="all" />
 </template>

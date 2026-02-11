@@ -56,8 +56,7 @@ function openInfo(rune: number) {}
             :value="Number(rune.id)"
             type="radio"
             :name="`tier-${i}`"
-            @change="handleChange(Number(i), Number(rune.id))"
-          >
+            @change="handleChange(Number(i), Number(rune.id))">
         </Rune>
       </div>
     </template>

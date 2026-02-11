@@ -65,7 +65,9 @@ const nav = computed(() => {
           :ui="{ base: 'shrink-0' }"
           color="neutral"
           size="xl">
-          <h1 class="shrink-0 text-4xl leading-none font-bold">LP</h1>
+          <h1 class="shrink-0 text-4xl leading-none font-bold">
+            LP
+          </h1>
         </UButton>
 
         <p class="text-xs leading-4.5">

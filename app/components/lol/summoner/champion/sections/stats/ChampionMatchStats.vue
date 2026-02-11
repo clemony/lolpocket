@@ -3,7 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { stats } = storeToRefs(s_champion())
+const { stats } = storeToRefs(sChampion())
 console.log("🥸 - stats:", stats)
 </script>
 

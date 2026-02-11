@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 const { scrollY } = useScrollInject()
 
@@ -7,25 +7,25 @@ const { scrollY } = useScrollInject()
 
 const items = [
   {
-    name: 'summoner-region-slug',
-    title: 'Match History',
+    name: "summoner-region-slug",
+    title: "Match History",
   },
-  { name: 'summoner-region-slug-champions', title: 'Champions' },
+  { name: "summoner-region-slug-champions", title: "Champions" },
 
-  { name: 'summoner-region-slug-pockets', title: 'Pockets' },
-  { name: 'summoner-region-slug-live', title: 'Live' },
+  { name: "summoner-region-slug-pockets", title: "Pockets" },
+  { name: "summoner-region-slug-live", title: "Live" },
 ]
 const filteredItems = computed(() =>
-  !ui().openChampionTab
-    ? items.filter(i => i.name !== 'summoner-region-slug-champion_key')
-    : items
+  !session().openChampionTab ?
+    items.filter((i) => i.name !== "summoner-region-slug-champion_key")
+  : items
 )
 
 const route = useRoute()
 function navigate() {
-  if (route.name === 'summoner-region-slug-champion_key')
-    navigateTo({ name: 'summoner-region-slug-champions' })
-  ui().openChampionTab = null
+  if (route.name === "summoner-region-slug-champion_key")
+    navigateTo({ name: "summoner-region-slug-champions" })
+  session().openChampionTab = null
 }
 </script>
 
@@ -34,7 +34,7 @@ function navigate() {
     role="tablist"
     :class="
       cn(
-        'relative z-3 flex h-15 w-fit translate-x-10 items-end border-b-0! transition-none *:select-none **:text-sm',
+        'relative z-3 flex h-15 w-fit translate-x-10 items-end border-b-0! transition-none *:select-none **:text-sm'
       )
     ">
     <ChampionNavTab
@@ -44,13 +44,13 @@ function navigate() {
       @click="
         navigateTo({
           name: item.name,
-          params: { champion_key: ui().openChampionTab },
+          params: { champion_key: session().openChampionTab },
         })
       ">
       <Icon
         v-if="
-          route.name === 'summoner-region-slug-champion_key'
-            && item.name === 'summoner-region-slug-champions'
+          route.name === 'summoner-region-slug-champion_key' &&
+          item.name === 'summoner-region-slug-champions'
         "
         class="absolute -left-6 size-3.75 **:stroke-[2.4]"
         name="left" />

@@ -10,9 +10,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Card class="flex flex-col pt-2 pb-3">
-    <CardHeader class="w-full grow">
-      <CardTitle class="drop-shadow-text flex items-center gap-6">
+  <UCard class="flex flex-col pt-2 pb-3">
+    <template #header>
+      <div class="drop-shadow-text flex items-center gap-6">
         <slot name="header-icon" />
 
         <h4 class="grow items-center capitalize">
@@ -20,15 +20,13 @@ const props = defineProps<{
         </h4>
 
         <slot name="header-badge" />
-      </CardTitle>
+      </div
 
-      <CardDescription>
-        {{ props.description }}
-      </CardDescription>
-    </CardHeader>
+   <div>
+      {{ props.description }}
+      </div>
+    </template>
 
-    <CardContent :class="cn('h-fit w-full px-8', props.contentClass)">
-      <slot />
-    </CardContent>
-  </Card>
+    <slot />
+  </UCard>
 </template>

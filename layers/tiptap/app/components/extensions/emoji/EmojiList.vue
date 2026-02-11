@@ -28,7 +28,7 @@ defineExpose({ onKeyDown }) */
     class="grid min-w-54 grid-cols-5 gap-x-1 gap-y-0.5 p-2"
     data-theme="base">
     <template v-if="items.length">
-     <UButton
+      <UButton
         v-for="(item, index) in items"
         :key="index"
         size="sm"

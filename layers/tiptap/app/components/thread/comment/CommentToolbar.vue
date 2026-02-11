@@ -47,7 +47,7 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
             wrapper-class="relative grid size-2 place-items-center opacity-40"
             name="slash" />
 
-         <UButton
+          <UButton
             :class="btnClass"
             :disabled="!comment.is_author"
             @click="() => removeComment(comment, 'user')">
@@ -55,7 +55,7 @@ const btnClass = 'disabled:hidden inline px-1 align-bottom text-xs opacity-50'
           </UButton>
         </template>
 
-       <UButton
+        <UButton
           v-if="!comment.is_author">
           Report
         </UButton>

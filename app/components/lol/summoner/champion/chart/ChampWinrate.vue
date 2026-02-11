@@ -16,7 +16,8 @@ const {
 const obj = computed(() => {
   const games = champion?.games ?? ally?.games ?? 0
   const win = champion?.wins ?? ally?.win ?? 0
-  const wr = champion ? (champion.wins / champion.games) * 100
+  const wr =
+    champion ? (champion.wins / champion.games) * 100
     : entry ? (entry.wins / (entry.wins + entry.losses)) * 100
     : ally ? ((ally.win ?? 0) / (ally.games ?? 1)) * 100
     : null
@@ -51,7 +52,7 @@ const data = computed(() => {
   <div
     :class="
       cn(
-        'relative grid size-12 shrink-0 place-items-center rounded-lg',
+        'relative grid size-11 shrink-0 place-items-center rounded-lg',
         className
       )
     ">
@@ -61,7 +62,7 @@ const data = computed(() => {
     </div>
     <span
       :class="
-        cn('absolute text-2xs! font-medium text-pc dst', {
+        cn('absolute text-3xs! font-medium text-pc dst', {
           'opacity-0': hideZero && (!obj.wr || obj.wr === 0),
         })
       ">

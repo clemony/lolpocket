@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { deletePocket } from "~/domain/pocket/deletePocket"
-import { duplicatePocket } from "~/domain/pocket/duplicate"
+import { deletePocket } from "~/domain/pocket/deletePocket";
+import { duplicatePocket } from "~/domain/pocket/duplicate";
 
 const props = defineProps<{
   pocket: Pocket
@@ -28,7 +28,7 @@ const pocket = ref(props.pocket)
     <span>Share Pocket Card</span>
   </DropdownMenuItem>
 
-  <DropdownMenuSeparator />
+  <USeparator />
 
   <DropdownMenuItem
     class="text-md! font-medium"

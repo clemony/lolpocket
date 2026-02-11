@@ -1,0 +1,53 @@
+@theme {
+  --nord-50: oklch(0.956 0.007 247.87);
+  --nord-100: oklch(0.922 0.012 247.94);
+  --nord-200: oklch(0.845 0.024 246.07);
+  --nord-300: oklch(0.765 0.037 250.93);
+  --nord-400: oklch(0.689 0.042 253.11);
+  --nord-500: oklch(0.612 0.042 257);
+  --nord-600: oklch(0.535 0.039 259.37);
+  --nord-700: oklch(0.453 0.037 264.98);
+  --nord-800: oklch(0.38 0.027 259.16);
+  --nord-900: oklch(0.302 0.019 254.8);
+  --nord-950: oklch(0.257 0.016 252.41);
+}
+
+:root {
+  .dim {
+    --ui-bg: var(--nord-900);
+    --ui-bg-muted: var(--nord-800);
+    --ui-bg-elevated: var(--nord-700);
+    --ui-bg-accented: var(--nord-600);
+    --ui-bg-inverted: var(--nord-200);
+
+    --ui-text: var(--nord-100);
+    --ui-text-highlighted: var(--nord-50);
+    --ui-text-inverted: var(--nord-900);
+    --ui-text-muted: var(--nord-200);
+    --ui-text-dimmed: var(--nord-300);
+    --ui-text-toned: var(--nord-400);
+    --ui-text-accented: var(--nord-500);
+
+    --ui-border: var(--nord-600);
+    --ui-border-muted: var(--nord-700);
+    --ui-border-accented: var(--nord-500);
+    --ui-border-inverted: var(--nord-200);
+
+    --ui-p0: var(--nord-900);
+    --ui-p2: var(--nord-800);
+    --ui-p2: var(--nord-700);
+    --ui-p3: var(--nord-600);
+    --ui-p4: var(--nord-500);
+    --ui-p5: var(--nord-400);
+    --ui-pc: var(--nord-100);
+
+    --ui-n5: var(--nord-400);
+    --ui-n4: var(--nord-300);
+    --ui-n3: var(--nord-200);
+    --ui-n2: var(--nord-100);
+    --ui-n1: var(--nord-50);
+    --ui-n0: var(--nord-0);
+    --ui-neutral: var(--nord-50);
+    --ui-nc: var(--nord-800);
+  }
+}

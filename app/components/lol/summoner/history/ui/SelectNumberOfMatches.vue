@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-const matchStore = useSummonerMatches()
-const { matches } = storeToRefs(matchStore)
-const store = useMatchFilters()
+const { matches } = storeToRefs(sMatches())
+const store = matchFilter()
 const { filter } = storeToRefs(store)
 
 const blocks = computed(() => Math.round(matches.value.length / 20))
@@ -20,10 +19,10 @@ const numberModel = computed({
     @update:model-value="
       (e: number | null) => store.setFilter('amount', e ?? undefined)
     ">
-    <!--     <UButtonGroup class="flex max-w-34 gap-0!" orientation="horizontal">
+    <!--     <ToggleGroup class="flex max-w-34 gap-0!" orientation="horizontal">
       <NumberFieldDecrement class="fx-0!" size="sq-8" variant="base" />
       <NumberFieldInput class="text-sm" variant="base" size="8" />
       <NumberFieldIncrement class="fx-0!" size="sq-8" variant="base" />
-    </UButtonGroup> -->
+    </ToggleGroup> -->
   </UInputNumber>
 </template>

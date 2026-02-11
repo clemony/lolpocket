@@ -3,8 +3,8 @@
 <template>
   <div class="flex h-full flex-col gap-8 py-4">
     <UInput
-      icon="i-search"
       v-model:model-value="is().filters.query"
+      icon="i-search"
       class="peer"
       placeholder="search">
       <template #trailing>

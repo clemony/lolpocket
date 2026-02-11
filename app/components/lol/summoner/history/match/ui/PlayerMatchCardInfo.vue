@@ -13,9 +13,7 @@ const { match, player } = defineProps<{
         :id="player?.championId"
         class="transition-scale size-15 duration-300 hover:scale-105" />
       <!--  spells -->
-      <PlayerSpells
-        class="ml-2 shrink-0"
-        :player="player" />
+      <PlayerSpells class="ml-2 shrink-0" :player="player" />
 
       <!-- runes -->
       <PlayerRunes :player="player" />
@@ -23,9 +21,7 @@ const { match, player } = defineProps<{
       <!-- grow -->
       <Grow />
       <!--   kda -->
-      <PlayerKDA
-        :match
-        :player="player" />
+      <PlayerKDA :match :player="player" />
     </div>
 
     <!-- items -->
@@ -39,12 +35,14 @@ const { match, player } = defineProps<{
         :key="`${item}${i}`"
         :map="match.mapId"
         placement="bottom"
+        :disabled="!item || item === 0"
         :class="
-          cn('img-active size-9', {
-            'no-img': !item,
-            'img-loss': !player.win,
+          cn('size-9 ring-neutral/60 transition-all duration-300 hover:ring', {
+            ' pointer-events-none border border-pc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border':
+              !item,
+            ' bg-dom/16! after:border-dom/20 after:mix-blend-hue': !player.win,
             'opacity-90': !player.win && !item,
-            'img-win': player.win,
+            'bg-insp/16! after:border-insp/20': player.win,
           })
         " />
 

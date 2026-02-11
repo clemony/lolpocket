@@ -79,7 +79,7 @@ watch(
             }
           " />
 
-       <UButton
+        <UButton
           class="absolute top-2.5 right-1 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown:opacity-0"
           variant="ghost"
           size="sm"

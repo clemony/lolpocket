@@ -8,22 +8,22 @@ const pocket = computed(() => props.pocket)
 </script>
 
 <template>
-  <PopoverItem
+  <UButton
     class=""
     @click="
       props.set && props.pocket ?
         duplicateItemSet(props.set, props.pocket.key)
-      : null
+        : null
     ">
     <icon name="copy" />
     Duplicate
-  </PopoverItem>
+  </UButton>
 
-  <HoverCard>
-    <HoverCardTrigger
+  <UPopover mode="hover">
+    <UButton
       class="w-full"
       as-child>
-      <PopoverItem class="relative w-full">
+      <UButton class="relative w-full">
         <!--         <span class="size-4.5 relative grid place-items-center">
           <icon
             name="material-symbols-light:how-to-vote"
@@ -35,45 +35,46 @@ const pocket = computed(() => props.pocket)
         <icon
           class="absolute right-1 size-4 opacity-50"
           name="right" />
-      </PopoverItem>
-    </HoverCardTrigger>
+      </UButton>
+    </UButton>
+    <template #content>
+      <div
+        class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
+        side="right"
+        align="start">
+        <UButton
+          v-for="friendlyPocket in ps().pockets.filter(
+            (p) => p.key !== pocket?.key,
+          )"
+          :key="friendlyPocket.key"
+          class="w-full"
+          @click="props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null">
+          <PocketIcon
+            class="size-6 rounded-full"
+            :pocket
+            size="sm" />
+          <span class="truncate">
+            {{ friendlyPocket.name }}
+          </span>
+        </UButton>
+      </div>
+    </template>
+  </UPopover>
 
-    <LazyHoverCardContent
-      class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
-      side="right"
-      align="start">
-      <PopoverItem
-        v-for="friendlyPocket in ps().pockets.filter(
-          (p) => p.key !== pocket?.key,
-        )"
-        :key="friendlyPocket.key"
-        class="w-full"
-        @click="props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null">
-        <PocketIcon
-          class="size-6 rounded-full"
-          :pocket
-          size="sm" />
-        <span class="truncate">
-          {{ friendlyPocket.name }}
-        </span>
-      </PopoverItem>
-    </LazyHoverCardContent>
-  </HoverCard>
-
-  <PopoverItem @click="''">
+  <UButton @click="''">
     <icon name="panel-dash" />
     New Pocket with Set
-  </PopoverItem>
+  </UButton>
 
-  <DropdownMenuSeparator />
+  <USeparator />
 
-  <PopoverItem @click="props.set ? resetItems(props.set) : null">
+  <UButton @click="props.set ? resetItems(props.set) : null">
     <icon name="reset" />
     Reset Items
-  </PopoverItem>
+  </UButton>
 
-  <PopoverItem @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
+  <UButton @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
     <icon name="trash" />
     Delete Set
-  </PopoverItem>
+  </UButton>
 </template>

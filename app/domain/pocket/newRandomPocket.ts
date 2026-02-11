@@ -22,8 +22,9 @@ export function newRandomPocket(): Pocket {
     const set = [1, 2, 3].filter((n) => n !== getRandomInt(3) + 1)
 
     const path1 = pathRecord[i1]
-    const path2 = path1
-      ? Object.values(pathRecord).filter((p) => p.id !== path1.id)[i2]
+    const path2 =
+      path1 ?
+        Object.values(pathRecord).filter((p) => p.id !== path1.id)[i2]
       : undefined
 
     if (!path1) return a
@@ -39,8 +40,12 @@ export function newRandomPocket(): Pocket {
     const [s0, s1] = set
     if (s0 == null || s1 == null) return a
     a.secondary.runes = [
-      getRandom(path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? []),
-      getRandom(path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? []),
+      getRandom(
+        path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? []
+      ),
+      getRandom(
+        path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? []
+      ),
     ]
     return a
   }).value
@@ -58,7 +63,7 @@ export function newRandomPocket(): Pocket {
     return a
   }).value
 
-  const role = getRandom(mapPositions.map((p) => p.name))
+  const role = getRandom(mapPositions.map((p) => p.label))
   const icon = computed(() => {
     const skinSets = Object.values(skinIndex)
     const a = skinSets[getRandomInt(skinSets.length)]

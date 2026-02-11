@@ -8,7 +8,7 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
 </script>
 
 <template>
- <UButton
+  <UButton
     :disabled="!canScrollNext"
     :class="
       cn(

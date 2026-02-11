@@ -41,7 +41,7 @@ onMounted(() => {
           name="mynaui:arrow-up" />
       </ToggleGroupItem>
     </label>
-    <Element
+    <div
       :class="
         cn(
           'relative grid size-6 place-items-center px-2 text-2xs leading-3 lining-nums tabular-nums opacity-50 select-none',
@@ -49,7 +49,7 @@ onMounted(() => {
         )
       ">
       {{ calculatedVotes }}
-    </Element>
+    </div>
     <label
       class="grid size-7 cursor-pointer place-items-center has-disabled:cursor-not-allowed"
       for="upvote"

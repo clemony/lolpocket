@@ -64,7 +64,9 @@ const logInOpen = shallowRef<boolean>(false)
         <div class="flex w-full justify-center">
           <LpLogo />
         </div>
-        <h3 class="mt-2 mb-10 w-full text-center dst">Log in</h3>
+        <h3 class="mt-2 mb-10 w-full text-center dst">
+          Log in
+        </h3>
 
         <AuthForm type="logIn" />
       </template>

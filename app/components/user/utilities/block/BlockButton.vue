@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const {
-  variant = 'shadow',
+  variant = "shadow",
   class: className,
-  size = 'md',
+  size = "md",
   summoner,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   summoner: MaybeRef<Summoner>
   variant?: any
   size?: any
@@ -13,14 +13,12 @@ const {
 </script>
 
 <template>
- <UButton
+  <UButton
     :class="cn('', className)"
     :variant="variant"
     :size="size"
-    @click="ui().blockDialog = true">
-    <icon
-      class=""
-      name="lucide:ban" />
+    @click="session().blockDialog = true">
+    <icon class="" name="lucide:ban" />
     <span>
       <slot />
     </span>

@@ -11,10 +11,10 @@
 @layer utilities {
   .tiptap {
     [data-type="deleted-comment"] {
-      @apply text-pc/40 !italic;
+      @apply text-[var(--color-pc)]/40 !italic;
     }
     [data-type="champion"] {
-      @apply text-pc/80 italic;
+      @apply text-[var(--color-pc)]/80 italic;
     }
 
     [data-role="mod"],
@@ -41,31 +41,31 @@
     }
 
     [data-path="precision"] {
-      @apply bg-precision/34 hover:bg-precision/70;
+      @apply bg-[var(--color-pre)]/34 hover:bg-[var(--color-pre)]/70;
     }
 
     [data-tier="epic"],
     [data-path="inspiration"] {
-      @apply bg-inspiration/33 hover:bg-inspiration/70;
+      @apply bg-[var(--color-insp)]/33 hover:bg-[var(--color-insp)]/70;
     }
 
     [data-path="sorcery"] {
-      @apply bg-sorcery/28 hover:bg-sorcery/70;
+      @apply bg-[var(--color-sorc)]/28 hover:bg-[var(--color-sorc)]/70;
     }
 
     [data-path="domination"] {
-      @apply bg-domination/26 hover:bg-domination/70;
+      @apply bg-[var(--color-dom)]/26 hover:bg-[var(--color-dom)]/70;
     }
 
     [data-path="resolve"] {
-      @apply bg-resolve/30 hover:bg-resolve/70;
+      @apply bg-[var(--color-res)]/30 hover:bg-[var(--color-res)]/70;
     }
 
     [data-role="top"] {
-      @apply bg-domination/33 hover:bg-domination/70;
+      @apply bg-[var(--color-dom)]/33 hover:bg-[var(--color-dom)]/70;
     }
     [data-role="middle"] {
-      @apply bg-sorcery/33 hover:bg-sorcery/70;
+      @apply bg-[var(--color-sorc)]/33 hover:bg-[var(--color-sorc)]/70;
     }
 
     [data-role="mod"],
@@ -74,10 +74,10 @@
     }
 
     [data-role="jungle"] {
-      @apply bg-resolve/32 hover:bg-resolve/70;
+      @apply bg-[var(--color-res)]/32 hover:bg-[var(--color-res)]/70;
     }
     [data-role="support"] {
-      @apply bg-inspiration/36 hover:bg-inspiration/70;
+      @apply bg-[var(--color-insp)]/36 hover:bg-[var(--color-insp)]/70;
     }
   }
 }

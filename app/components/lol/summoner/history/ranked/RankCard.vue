@@ -6,13 +6,13 @@ const {
 } = defineProps<{
   entry: RankedEntry
   title?: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
 <template>
   <UCard
-    variant="field"
+    color="p1"
     :ui="{
       root: cn('h-36', className),
       body: ' place-items-center  h-36 grid grid-cols-[1.1fr_1fr_1fr]  w-full',
@@ -26,13 +26,13 @@ const {
         v-if="!entry"
         class="size-24 object-contain opacity-40 drop-shadow-sm saturate-0"
         alt="unranked"
-        src="/img/crests/unranked.webp">
+        src="/img/crests/unranked.webp" />
 
       <img
         v-else
         class="size-28 object-contain drop-shadow-md drop-shadow-black/30"
         :alt="entry?.tier?.toLowerCase()"
-        :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`">
+        :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`" />
     </div>
 
     <div class="relative grid size-full place-items-center">
@@ -43,13 +43,13 @@ const {
       :class="
         cn(
           'flex flex-col justify-between overflow-hidden py-3 text-end font-medium',
-          { 'opacity-40': !entry },
+          { 'opacity-40': !entry }
         )
       ">
       <span class="capitalize">
         {{
-          entry
-            ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
+          entry ?
+            `${entry?.tier?.toLowerCase()} ${entry?.division}`
             : "Unranked"
         }}
       </span>

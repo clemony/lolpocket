@@ -1,6 +1,6 @@
+import type { AccountData, Settings } from "#shared/types"
 //
 import { getEmptyAccount, getEmptySettings } from "#shared/schema"
-import type { AccountData, Settings } from "#shared/types"
 
 export async function accountFetch() {
   const progress = ref<number>(0)

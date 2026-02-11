@@ -31,7 +31,7 @@ const payload = computed(() => {
 
 <template>
   <!--   <Tooltip arrow :ui="{ content: 'max-w-32!' }" side="top" :content="h(DataTooltip, { payload })"> -->
-  <Card
+  <UCard
     :class="
       cn(
         'flex w-full flex-col items-center pt-1 ring-pc/60 select-none hover:ring',
@@ -68,7 +68,7 @@ const payload = computed(() => {
         {{
           entry ?
             `${entry?.tier?.toLowerCase()} ${entry?.division}`
-          : "Unranked"
+            : "Unranked"
         }}
       </span>
       <!--       <span class="text-2xs! font-semibold capitalize">
@@ -77,6 +77,6 @@ const payload = computed(() => {
         class="mt-px inline-flex gap-1 align-baseline text-2xs! text-nowrap decoration-dotted hover:underline"
         :data-type="`${entry ? entry?.wins + entry?.losses : 0} total`" />
     </div>
-  </Card>
+  </UCard>
   <!--   </Tooltip> -->
 </template>

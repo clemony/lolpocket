@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @layer components {
   /* MATCH DATA TABLE */
   .match-data-table {
@@ -9,29 +10,11 @@
       @apply relative grid size-full items-center justify-center truncate overflow-hidden rounded-md bg-transparent! px-0 text-center align-middle text-xs! leading-9 font-semibold tracking-tight whitespace-nowrap capitalize *:text-xs! **:font-semibold last-of-type:border-transparent hover:bg-p3/30!;
     }
     .match-null {
-      @apply font-light text-pc/30 **:text-pc/15;
+      @apply font-light text-[var(--color-pc)]/30 **:text-[var(--color-pc)]/15;
     }
   }
 
   .stat-label {
     @apply pl-px text-2xs leading-4 font-medium opacity-60;
-  }
-
-  /* PLAYER MATCH CARD ITEMS */
-  .player-items {
-    .img-active {
-      @apply ring-pc/60 transition-all duration-300 hover:ring!;
-    }
-    .no-img {
-      @apply pointer-events-none border border-pc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border;
-    }
-
-    .img-loss {
-      @apply bg-domination/16! after:border-domination/20 after:mix-blend-hue;
-    }
-
-    .img-win {
-      @apply bg-inspiration/16! after:border-inspiration/20;
-    }
   }
 }

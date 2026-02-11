@@ -68,7 +68,7 @@ function reset() {
               v-model:model-value="searchQuery"
               class="-mt-px h-11"
               icon="search" />
-           <UButton
+            <UButton
               v-tippy="{ content: 'Close', placement: 'top' }"
               variant="ghost"
               shape="square">
@@ -131,9 +131,9 @@ function reset() {
             </transition-slide>
 
             <div v-else class="grid size-full place-items-end p-6">
-              <Badge class="font-medium **:text-sm" color="neutral">
+              <UBadge class="font-medium **:text-sm" color="neutral">
                 Select or search a champion...
-              </Badge>
+              </UBadge>
             </div>
           </transition-fade>
         </article>

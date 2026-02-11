@@ -11,7 +11,7 @@ const open = shallowRef<boolean>(false)
       :delay="300"
       :offset="[0, -2]"
       :arrow="false">
-     <UButton
+      <UButton
         class="w-full grow justify-between pr-2 pl-7!"
         size="sm"
         base="btn"
@@ -25,26 +25,26 @@ const open = shallowRef<boolean>(false)
       <template #content>
         <div class="grid w-54 px-0 py-1 pt-2 **:text-sm [&_button]:px-2">
           <div class="flex flex-col gap-1 pr-1 pl-1.25">
-            <PopoverItem>
+            <UButton>
               <Icons
                 class="size-3.75!"
                 name="ban" />
               Remove Comment
-            </PopoverItem>
-            <PopoverItem>
+            </UButton>
+            <UButton>
               <Icons
                 class="size-3.75!"
                 name="lucide:pencil-line" />
               Edit Message
-            </PopoverItem>
+            </UButton>
           </div>
           <Separator :size="1" />
           <div class="pr-1 pl-1.25">
-            <PopoverItem>
+            <UButton>
               <Icons name="tabler:hammer" />
 
               Timeout User
-            </PopoverItem>
+            </UButton>
           </div>
         </div>
       </template>

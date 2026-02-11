@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./themes.css";
 
 @theme {
   --color-discord: oklch(58% 52 274);

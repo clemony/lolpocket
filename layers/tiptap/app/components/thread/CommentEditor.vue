@@ -84,7 +84,7 @@ onMounted(() => {
         <Separator
           class="mr-1 ml-0.75 h-4 self-center"
           orientation="vertical" />
-       <UButton
+        <UButton
           class="disabled:opacity-30"
           variant="ghost"
           hover="inset"
@@ -96,7 +96,7 @@ onMounted(() => {
             class="size-4 opacity-60 group-hover/button:opacity-100"
             name="lucide:undo" />
         </UButton>
-       <UButton
+        <UButton
           class="disabled:opacity-30"
           variant="ghost"
           hover="inset"

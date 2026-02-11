@@ -35,7 +35,7 @@ function handleChange() {
             className
           )
         ">
-       <UButton
+        <UButton
           v-if="is().filters.tags.length && clear"
           class="order-first hover:*:opacity-100"
           :variant

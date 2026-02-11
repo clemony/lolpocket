@@ -23,18 +23,18 @@ const championTitle = computed(() =>
             {{ championTitle }}
           </div>
         </div>
-        <HoverCard>
-          <HoverCardTrigger>
+        <UPopover mode="hover">
+          <UButton>
             <Champion
               class="aspect-square h-auto w-full max-w-80 inset-shadow-sm inset-shadow-black/20 *:scale-[130%]"
               :k="championKey ?? undefined"
               type="tile" />
-          </HoverCardTrigger>
-          <HoverCardContent
+          </UButton>
+          <div
             class="open:animate-in open:fade-in closed:fade-out closed:animate-out h-[calc(var(--reka-hover-card-trigger-height)+3px)] w-[calc(var(--reka-hover-card-trigger-width)+3px)] -translate-x-0.75 -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] border-p3 shadow-none drop-shadow-none"
             align="start"
             side="bottom" />
-        </HoverCard>
+        </UPopover>
         <ChampionAbilityTabs :k="championKey ?? undefined" />
       </div>
 
@@ -56,26 +56,6 @@ const championTitle = computed(() =>
         <div class="text-lg font-medium italic" />
       </div>
       <div class="grid grid-cols-3 gap-8">
-        <!--        <Card>
-          <CardContent class="p-6">
-            <CardTitle>Games Played</CardTitle>
-            <CardDescription></CardDescription>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent>
-            <CardTitle>Player Winrate</CardTitle>
-            <CardDescription></CardDescription>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent>
-            <CardTitle></CardTitle>
-            <CardDescription></CardDescription>
-          </CardContent>
-        </Card> -->
       </div>
     </div>
   </div>

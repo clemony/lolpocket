@@ -43,47 +43,47 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
                 `relative max-h-full w-full focus-visible:outline-0 **:focus-visible:outline-0`
               )
             ">
-          <CarouselContent>
-            <CarouselItem v-for="(img, i) in clem" :key="i">
-              <div>
-                <Card
+            <CarouselContent>
+              <CarouselItem v-for="(img, i) in clem" :key="i">
+                <div>
+                  </UCard
                   :key="showClem"
                   class="relative mx-auto flex aspect-square max-h-screen items-center justify-center overflow-hidden rounded-xl border-0 bg-black p-0 shadow-sm inset-shadow-sm shadow-black/18 inset-shadow-black/15 drop-shadow-sm drop-shadow-black/18 focus-visible:outline-0">
                   <img
                     :src="img.url"
                     alt="clem"
                     :class="cn('m-auto size-full rounded-lg', img.class)" />
-                </Card>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <Tooltip
-            :text="isFullscreen ? 'Exit fullscreen' : 'Fullscreen'"
-            side="bottom">
-            <UButton
-              class="absolute top-4 right-4 grid btn-square place-items-center"
-              variant="ghost"
-              color="neutral"
-              square
-              :icon="isFullscreen ? 'exit-fullscreen' : 'fullscreen'"
-              @click="toggle()" />
-          </Tooltip>
-          <CarouselPrevious
-            :variant="!isFullscreen ? 'ghost' : 'neutral'"
-            :class="
-              cn(
-                `size-12 rounded-lg *:size-6`,
-                !isFullscreen ? '-left-14' : 'left-10'
-              )
-            " />
-          <CarouselNext
-            :variant="!isFullscreen ? 'ghost' : 'neutral'"
-            :class="
-              cn(
-                `size-12 rounded-lg *:size-6`,
-                !isFullscreen ? '-right-14' : 'right-10'
-              )
-            " />
+                  </UCard>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <Tooltip
+              :text="isFullscreen ? 'Exit fullscreen' : 'Fullscreen'"
+              side="bottom">
+              <UButton
+                class="absolute top-4 right-4 grid btn-square place-items-center"
+                variant="ghost"
+                color="neutral"
+                square
+                :icon="isFullscreen ? 'exit-fullscreen' : 'fullscreen'"
+                @click="toggle()" />
+            </Tooltip>
+            <CarouselPrevious
+              :variant="!isFullscreen ? 'ghost' : 'neutral'"
+              :class="
+                cn(
+                  `size-12 rounded-lg *:size-6`,
+                  !isFullscreen ? '-left-14' : 'left-10'
+                )
+              " />
+            <CarouselNext
+              :variant="!isFullscreen ? 'ghost' : 'neutral'"
+              :class="
+                cn(
+                  `size-12 rounded-lg *:size-6`,
+                  !isFullscreen ? '-right-14' : 'right-10'
+                )
+              " />
           </Carousel>
         </div>
       </div>

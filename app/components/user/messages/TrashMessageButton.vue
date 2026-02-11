@@ -8,7 +8,7 @@ const { class: className, message } = defineProps<{
 </script>
 
 <template>
- <UButton
+  <UButton
     v-tippy="'Send to Trash'"
     class="size-6"
     :color="!message.read ? 'neutral' : 'transparent'"

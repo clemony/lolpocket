@@ -21,7 +21,7 @@ async function testSaveAllPockets() {
 <template>
   <UPopover v-model:open="isOpen">
     <UButton as-child>
-     <UButton
+      <UButton
         variant="ghost"
         size="md"
         hover="ghost"
@@ -40,7 +40,7 @@ async function testSaveAllPockets() {
       align="start"
       :side-offset="-18"
       :align-offset="-4">
-     <UButton
+      <UButton
         class="h-9! rounded-md"
         variant="ghost"
         size="sm"

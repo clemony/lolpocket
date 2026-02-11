@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v';
+import { motion } from "motion-v"
 
 const { champion, pocket } = defineProps<{
   pocket?: Pocket
@@ -8,17 +8,17 @@ const { champion, pocket } = defineProps<{
 const open = shallowRef<boolean>(false)
 const route = useRoute()
 
-const target = useTemplateRef('target')
+const target = useTemplateRef("target")
 
-onClickOutside(target, event => (open.value = false))
+onClickOutside(target, (event) => (open.value = false))
 const isSummoner = computed(() => {
   const account = as().account
-  return !!account?.puuid && s_session().summoner?.puuid === account.puuid
+  return !!account?.puuid && sSession().summoner?.puuid === account.puuid
 })
 </script>
 
 <template>
- <UButton
+  <UButton
     v-if="isSummoner"
     class="rounded-full duration-0"
     data-theme="mini-tip neutral line"
@@ -27,9 +27,7 @@ const isSummoner = computed(() => {
     size="xl"
     hover="neutral"
     @click="open = true">
-    <Icon
-      class="**:stroke-[1.7]"
-      name="gear" />
+    <Icon class="**:stroke-[1.7]" name="gear" />
   </UButton>
   <Teleport to="body">
     <AnimatePresence>
@@ -60,14 +58,10 @@ const isSummoner = computed(() => {
 
             <div class="size-full overflow-y-auto">
               <h2>Profile Settings</h2>
-              <form
-                class="w-full space-y-12"
-                @submit.prevent>
+              <form class="w-full space-y-12" @submit.prevent>
                 <fieldset class="mb-10 w-full space-y-6">
                   <div class="leading-4">
-                    <Label
-                      class="mb-2 text-xl font-semibold"
-                      as="legend">
+                    <Label class="mb-2 text-xl font-semibold" as="legend">
                       Summoner Splash
                     </Label>
 
@@ -81,9 +75,7 @@ const isSummoner = computed(() => {
 
                 <fieldset class="space-y-6">
                   <div class="leading-4">
-                    <Label
-                      class="mb-2 text-xl font-semibold"
-                      as="legend">
+                    <Label class="mb-2 text-xl font-semibold" as="legend">
                       Title
                     </Label>
                     <p class="label text-wrap">

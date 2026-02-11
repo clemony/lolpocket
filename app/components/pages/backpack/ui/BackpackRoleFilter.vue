@@ -6,14 +6,10 @@ const tags = ref<string[]>([])
   <!-- position tags -->
 
   <Collapsible
-    v-model:open="ui().toggles.backpack.positions"
+    v-model:open="session().toggles.backpack.positions"
     :class="cn('px-3')">
     <CollapsibleTrigger as-child>
-     <UButton
-        class="w-full"
-        as="button"
-        variant="ghost"
-        size="md">
+      <UButton class="w-full" as="button" variant="ghost" size="md">
         <span
           class="grow text-lg font-semibold tracking-normal capitalize opacity-40 duration-0">
           Position
@@ -25,9 +21,9 @@ const tags = ref<string[]>([])
       class="CollapsibleContent relative flex flex-col justify-center gap-y-3.75 py-2! pr-18 pl-4">
       <label
         v-for="position in mapPositions"
-        :key="position.name"
+        :key="position.label"
         class="group/btn badge flex h-6.5! h-9 w-fit cursor-pointer items-center gap-1.5 rounded-lg pr-2.5 pl-1.5 badge-lg font-medium ring-pc/60 ring-offset-p0 duration-0 hover:ring hover:ring-offset-2"
-        for="position.name"
+        for="position.label"
         :style="{
           backgroundColor: position.color,
           borderColor: position.color,
@@ -35,21 +31,21 @@ const tags = ref<string[]>([])
         <input
           v-model="tags"
           class="checkbox checkbox-xs rounded-full border-0 bg-p0 text-white fx-0 checked:bg-p0"
-          name="position.name"
+          name="position.label"
           type="checkbox"
-          :value="position.name"
+          :value="position.label"
           :style="{
             backgroundColor:
-              tags.includes(position.name) ? 'transparent' : 'var(--color-p0)',
+              tags.includes(position.label) ? 'transparent' : 'var(--color-p0)',
             borderColor: position.color,
-          }">
+          }" />
 
         <component
-          :is="`i-lol-${position.name}`"
+          :is="`i-lol-${position.label}`"
           :class="cn('ml-1 size-3.5 text-white dst')" />
 
         <span class="text-white">
-          {{ position.name }}
+          {{ position.label }}
         </span>
       </label>
     </CollapsibleContent>

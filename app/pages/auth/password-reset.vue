@@ -1,32 +1,32 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'Reset Password',
-  title: 'Forgot password?',
-  alias: '/auth/password-reset',
-  description: 'Np. They\'re free. We\'ll get you a new one.',
-  icon: 'key',
+  name: "Reset Password",
+  title: "Forgot password?",
+  alias: "/auth/password-reset",
+  description: "Np. They're free. We'll get you a new one.",
+  icon: "key",
 })
 
-const password = ref('')
+const password = ref("")
 
 function handleReset() {
   const toast = useToast()
   toast.add({
-    title: 'Password reset link sent!',
+    title: "Password reset link sent!",
     description:
-      'Check your email for a message from the customer support lolpocat.',
+      "Check your email for a message from the customer support lolpocat.",
   })
 }
 </script>
 
 <template>
-  <SingleCard>
+  <NuxtLayout layout="card">
     <form>
       <div class="grid gap-6">
         <div class="grid gap-6">
           <div class="grid gap-2">
             <Label html-for="email">Email</Label>
-            <Input
+            <UInput
               id="email"
               class="h-12"
               type="email"
@@ -34,7 +34,7 @@ function handleReset() {
               required />
           </div>
           <div class="grid w-full gap-y-2">
-           <UButton
+            <UButton
               class="h-14 w-full font-medium"
               color="neutral"
               size="lg"
@@ -55,5 +55,5 @@ function handleReset() {
         </div>
       </div>
     </form>
-  </SingleCard>
+  </NuxtLayout>
 </template>

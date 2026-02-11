@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
-import { useForwardProps } from 'reka-ui'
+import type { ButtonProps } from '@nuxt/ui';
+import { useForwardProps } from 'reka-ui';
 
 defineOptions({
   inheritAttrs: false,
@@ -43,7 +43,7 @@ const user = await useSupabaseUser()
 </script>
 
 <template>
-  <UButtonGroup
+  <ToggleGroup
     v-if="user?.app_metadata?.user_role === 'admin'"
     ref="groupRef">
     <!--  <PostButton
@@ -54,7 +54,7 @@ const user = await useSupabaseUser()
     >
       <span v-if="postTypes[select].name">{{ postTypes[select].name }}</span>
     </PostButton>
-    <UButtonGroupSeparator />
+    <ToggleGroupSeparator />
     <Select v-model="select">
       <VarSelectTrigger
       >
@@ -67,7 +67,7 @@ const user = await useSupabaseUser()
         </SelectItem>
       </SelectContent>
     </Select> -->
-  </UButtonGroup>
+  </ToggleGroup>
 
   <PostButton
     v-else

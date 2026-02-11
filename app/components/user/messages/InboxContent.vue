@@ -1,19 +1,19 @@
 <script lang="ts" setup>
 const { title, class: className } = defineProps<{
   title: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   dropdown?: boolean
 }>()
 
-const tabs = ref('MessageView')
+const tabs = ref("MessageView")
 const inboxes: Record<string, InboxType> = {
   news: {
-    name: 'News',
-    component: 'NewsView',
+    name: "News",
+    component: "NewsView",
     value: 0,
     icon: {
-      name: 'lucide:newspaper',
-      class: '**:stroke-[1.5] ',
+      name: "lucide:newspaper",
+      class: "**:stroke-[1.5] ",
     },
   },
 }
@@ -24,7 +24,7 @@ const inboxes: Record<string, InboxType> = {
     <div :class="cn('w-full gap-0 border-b border-b-p3/80 px-3', className)">
       <div class="flex w-full items-center justify-between">
         <DropdownMenu
-          v-model:open="ui().sidebarStates.inboxDropdown"
+          v-model:open="session().sidebarStates.inboxDropdown"
           class="z-0">
           <DropdownMenuTrigger
             class="flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:**:text-pc disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:border-p3 data-[state=open]:bg-p3/50! data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs"
@@ -42,9 +42,7 @@ const inboxes: Record<string, InboxType> = {
           </DropdownMenuPopContent>
         </DropdownMenu>
 
-        <Tabs
-          v-model:model-value="tabs"
-          class="z-1">
+        <Tabs v-model:model-value="tabs" class="z-1">
           <TabsList class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"

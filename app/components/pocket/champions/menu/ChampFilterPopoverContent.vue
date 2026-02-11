@@ -3,8 +3,8 @@
 <template>
   <PopoverContent update-position-strategy="always" variant="outline">
     <UInput
-      icon="i-search"
       v-model:model-value="cs().filters.query"
+      icon="i-search"
       class="peer"
       placeholder="search">
       <template #trailing>
@@ -18,7 +18,7 @@
           class="flex grid w-full auto-rows-auto items-start gap-1 pt-4 pb-7 pl-4">
           <Label class="popover-button-label">
             Champion Role
-           <UButton
+            <UButton
               v-if="cs().filters.role"
               size="xs"
               class="size-6"
@@ -34,7 +34,7 @@
           <div class="grid w-full grid-cols-[0.56fr_1fr] gap-y-1 pr-8">
             <Label class="popover-button-label">
               Map Position
-             <UButton
+              <UButton
                 v-if="cs().filters.position !== 'all'"
                 size="xs"
                 class="size-6"
@@ -45,7 +45,7 @@
             </Label>
             <Label class="popover-button-label">
               Ability Resource
-             <UButton
+              <UButton
                 v-if="cs().filters.resource"
                 size="xs"
                 class="size-6"
@@ -66,14 +66,14 @@
           class="gap-0"
           type="single"
           as-child>
-          <UButtonGroup orientation="vertical">
+          <ToggleGroup orientation="vertical">
             <ToggleGroupItem size="sq-9" value="az">
               <icon class="size-5" name="qlementine-icons:sort-alpha-asc-16" />
             </ToggleGroupItem>
             <ToggleGroupItem size="sq-9" value="za">
               <icon class="size-5" name="qlementine-icons:sort-alpha-desc-16" />
             </ToggleGroupItem>
-          </UButtonGroup>
+          </ToggleGroup>
         </ToggleGroup>
         <Grow class="max-w-14" />
         <UButton color="neutral" size="sm" @click="cs().clearFilters()">

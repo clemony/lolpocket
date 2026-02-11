@@ -43,5 +43,6 @@ const isOpen = ref<boolean>(false)
         v-if="open"
         :id="id" />
     </LazyPopperPopoverContent>
-  </UPopover>
+    </UPopover>
+  </popover>
 </template>

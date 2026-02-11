@@ -80,5 +80,6 @@ const { filtered, filters, setFilter } = useItemFilter() as any
         </TransitionExpand>
       </div>
     </CustomPopoverContent>
-  </UPopover>
+    </UPopover>
+  </popover>
 </template>

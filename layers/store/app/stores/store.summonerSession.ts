@@ -1,4 +1,4 @@
-export const useSummonerSession = defineStore('summonerSession', () => {
+export const sSession = defineStore("summonerSession", () => {
   const summoner = shallowRef<Summoner | null>(null)
   const ready = ref(false)
 

@@ -1,39 +1,39 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
-import { SelectTrigger } from 'reka-ui'
+import type { ButtonProps } from "@nuxt/ui"
+import { SelectTrigger } from "reka-ui"
 
 const {
   side,
   sideOffset,
-  variant = 'outline',
+  variant = "outline",
   align,
   alignOffset,
   class: className,
   modelValue: mv,
-  size = '12',
+  size = "12",
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   modelValue: string | null
   side?: Side
-  size?: ButtonProps['size']
-  variant?: ButtonProps['variant']
+  size?: ButtonProps["size"]
+  variant?: ButtonProps["variant"]
   sideOffset?: number
   align?: Align
   alignOffset?: number
 }>()
 
-const emit = defineEmits(['update:select'])
-const currentValue = shallowRef<string>('All')
+const emit = defineEmits(["update:select"])
+const currentValue = shallowRef<string>("All")
 
 watch(
   () => mv,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-    if (newVal) currentValue.value = mv ?? 'All'
+    console.log("💠 - watch - newVal:", newVal)
+    if (newVal) currentValue.value = mv ?? "All"
   }
 )
 onMounted(() => {
-  currentValue.value = mv ?? 'All'
+  currentValue.value = mv ?? "All"
 })
 </script>
 
@@ -44,11 +44,8 @@ onMounted(() => {
     <SelectTrigger
       :class="
         cn(
-          `
-            group/s relative w-44 justify-start inset-shadow-xs transition-all
-            duration-200 fx-0 hover:ring hover:ring-pc/50
-          `,
-          className,
+          `group/s relative w-44 justify-start inset-shadow-xs transition-all duration-200 fx-0 hover:ring hover:ring-pc/50`,
+          className
         )
       "
       :position="currentValue">
@@ -72,11 +69,9 @@ onMounted(() => {
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem
           v-for="position in mapPositions"
-          :key="position.name"
-          :value="position.name">
-          <PositionBadge
-            :position="position.name"
-            active />
+          :key="position.label"
+          :value="position.label">
+          <PositionBadge :position="position.label" active />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

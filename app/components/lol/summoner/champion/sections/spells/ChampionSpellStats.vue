@@ -3,7 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { spells } = storeToRefs(s_champion())
+const { spells } = storeToRefs(sChampion())
 
 const allSpells = computed<OrderedStatEntry[]>(() => {
   const singles = spells.value?.single ?? []

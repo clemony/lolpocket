@@ -24,13 +24,13 @@ const shardStat = (ix: number, id: number) => (shards as any)?.[ix]?.[id]
           :data-placement="
             i === 0 ? 'left'
             : i === 2 ? 'right'
-            : 'top'
+              : 'top'
           "
           :data-size="shardStat(ix as number, shard.id)?.games ? 'md' : 'sm'"
           :data-text="
             shardStat(ix as number, shard.id)?.games ?
               `${shardStat(ix as number, shard.id)?.games} game${shardStat(ix as number, shard.id)?.games > 1 ? 's' : ''} - ${shardStat(ix as number, shard.id)?.winrate}% WR`
-            : ''
+              : ''
           "
           :class="
             cn('transition-transform duration-200 hover:scale-110', {
@@ -42,7 +42,7 @@ const shardStat = (ix: number, id: number) => (shards as any)?.[ix]?.[id]
         <WinrateIndicator
           v-if="
             shardStat(ix as number, shard.id) &&
-            shardStat(ix as number, shard.id)?.winrate
+              shardStat(ix as number, shard.id)?.winrate
           "
           :value="shardStat(ix as number, shard.id)?.winrate ?? 0" />
         <span

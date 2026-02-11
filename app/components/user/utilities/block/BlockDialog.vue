@@ -5,7 +5,9 @@ const { summoner } = defineProps<{
 </script>
 
 <template>
-  <UModal v-model:open="ui().blockDialog" :title="`Block ${summoner.name}?`">
+  <UModal
+    v-model:open="session().blockDialog"
+    :title="`Block ${summoner.name}?`">
     <UButton as-child>
       <slot />
     </UButton>
@@ -34,7 +36,7 @@ const { summoner } = defineProps<{
           Are you sure you want to block {{ summoner.name }}?
         </span>
 
-        <UButton class="ml-4 px-5" color="domination">
+        <UButton class="ml-4 px-5" color="dom">
           <icon class="size-4.5 **:stroke-[2.2]" name="ban" />
           Block
         </UButton>

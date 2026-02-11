@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --primary-0: oklch(100% 0 68);
+  --primary-50: oklch(97% 0 68);
+  --primary-100: oklch(95% 0 68);
+  --primary-200: oklch(92% 0 68);
+  --primary-300: oklch(85% 0 68);
+  --primary-350: oklch(78% 0 68);
+  --primary-400: oklch(69.367% 0 68);
+  --primary-425: oklch(64.256% 0 68);
+  --primary-450: oklch(60% 0 68);
+  --primary-475: oklch(58% 0 68);
+  --primary-500: oklch(54.256% 0 68);
+  --primary-600: oklch(43.444% 0 68);
+  --primary-700: oklch(36.433% 0 68);
+  --primary-800: oklch(27.022% 0 68);
+  --primary-900: oklch(20.811% 0 68);
+  --primary-950: oklch(14.1% 0 68);
+}
+
+:root {
+  --ui-bg: var(--primary-0);
+  --ui-bg-muted: var(--primary-50);
+  --ui-bg-elevated: var(--primary-100);
+  --ui-bg-accented: var(--primary-300);
+  --ui-bg-inverted: var(--primary-900);
+
+  --ui-text: var(--primary-900);
+  --ui-text-highlighted: var(--primary-950);
+  --ui-text-inverted: var(--primary-300);
+  --ui-text-muted: var(--primary-500);
+  --ui-text-dimmed: var(--primary-600);
+  --ui-text-toned: var(--primary-700);
+  --ui-text-accented: var(--primary-800);
+
+  --ui-border: var(--primary-300);
+  --ui-border-muted: var(--primary-200);
+  --ui-border-accented: var(--primary-400);
+  --ui-border-inverted: var(--primary-900);
+
+  --ui-p0: var(--primary-0);
+  --ui-p1: var(--primary-50);
+  --ui-p2: var(--primary-100);
+  --ui-p3: var(--primary-200);
+  --ui-p4: var(--primary-300);
+  --ui-p5: var(--primary-350);
+  --ui-pc: var(--primary-950);
+
+  --ui-n5: var(--primary-500);
+  --ui-n4: var(--primary-600);
+  --ui-n3: var(--primary-700);
+  --ui-n2: var(--primary-800);
+  --ui-n1: var(--primary-900);
+  --ui-n0: var(--primary-950);
+  --ui-neutral: var(--primary-950);
+  --ui-nc: var(--primary-300);
+
+  .dark {
+    --ui-bg: var(--primary-900);
+    --ui-bg-muted: var(--primary-800);
+    --ui-bg-elevated: var(--primary-700);
+    --ui-bg-accented: var(--primary-600);
+    --ui-bg-inverted: var(--primary-100);
+
+    --ui-text: var(--primary-300);
+    --ui-text-highlighted: var(--primary-100);
+    --ui-text-inverted: var(--primary-900);
+    --ui-text-muted: var(--primary-400);
+    --ui-text-dimmed: var(--primary-500);
+    --ui-text-toned: var(--primary-600);
+    --ui-text-accented: var(--primary-700);
+
+    --ui-border: var(--primary-600);
+    --ui-border-muted: var(--primary-700);
+    --ui-border-accented: var(--primary-500);
+    --ui-border-inverted: var(--primary-300);
+
+    --ui-p0: var(--primary-900);
+    --ui-p2: var(--primary-800);
+    --ui-p3: var(--primary-700);
+    --ui-p3: var(--primary-600);
+    --ui-p4: var(--primary-500);
+    --ui-p5: var(--primary-475);
+    --ui-pc: var(--primary-300);
+
+    --ui-n5: var(--primary-450);
+    --ui-n4: var(--primary-425);
+    --ui-n3: var(--primary-400);
+    --ui-n2: var(--primary-350);
+    --ui-n1: var(--primary-300);
+    --ui-n0: var(--primary-200);
+    --ui-neutral: var(--primary-100);
+    --ui-nc: var(--primary-950);
+  }
+}

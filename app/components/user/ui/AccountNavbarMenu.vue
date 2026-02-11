@@ -45,9 +45,9 @@ const themeModel = computed({
         </div>
       </div>
     </template>
-    <DropdownMenuSeparator class="mt-0 mb-1" />
+    <USeparator class="mt-0 mb-1" />
     <div class="w-full px-1">
-      <PopoverItem class="h-10">
+      <UButton class="h-10">
         <icon name="mail" />
         Inbox
 
@@ -56,28 +56,28 @@ const themeModel = computed({
           class="absolute right-4 font-mono text-sm opacity-60">
           {{ as().inbox?.messages?.filter((m) => !m.read).length ?? 0 }}
         </span>
-      </PopoverItem>
+      </UButton>
     </div>
 
-    <DropdownMenuSeparator class="my-1" />
+    <USeparator class="my-1" />
 
     <div class="w-full px-1">
-      <PopoverItem
+      <UButton
         v-if="as().user"
         class="h-10"
         @click="navigateTo('/settings/account')">
         <icon name="at" />
         Account
-      </PopoverItem>
+      </UButton>
 
-      <PopoverItem class="h-10" @click="navigateTo('/settings')">
+      <UButton class="h-10" @click="navigateTo('/settings')">
         <icon name="gear" />
         Settings
-      </PopoverItem>
+      </UButton>
 
       <div>
         <div v-for="(theme, i) in themes" :key="i" :data-theme="theme.name">
-          <Label class="relative p-0!" base="btn" size="c-9" >
+          <Label class="relative p-0!" base="btn" size="c-9">
             <input v-model="themeModel" class="peer hidden" type="" />
             <Icon class="absolute text-pc" :name="theme.icon" />
           </Label>
@@ -85,17 +85,17 @@ const themeModel = computed({
       </div>
     </div>
 
-    <DropdownMenuSeparator />
+    <USeparator />
     <div class="px-1 pb-1">
-      <PopoverItem v-if="as().user" class="h-9">
+      <UButton v-if="as().user" class="h-9">
         <icon name="log-out" @click="useSignOut()" />
         Log out
-      </PopoverItem>
+      </UButton>
 
-      <PopoverItem v-else @click="navigateTo('/login')">
+      <UButton v-else @click="navigateTo('/login')">
         <icon name="log-in" />
         Log in
-      </PopoverItem>
-    </div> </UPopover
-  >>
+      </UButton>
+    </div>
+  </UPopover>>
 </template>

@@ -12,7 +12,7 @@ const { class: className, player } = defineProps<{
     <UBadge
       v-if="
         player.stats.kills + player.stats.assists / player.stats.deaths ===
-        Infinity
+          Infinity
       "
       :ui="{ leadingIcon: 'scale-120 **:stroke-[1.8] ml-px' }"
       label="kda"

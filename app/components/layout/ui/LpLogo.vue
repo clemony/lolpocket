@@ -1,18 +1,14 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
 <template>
-  <Tooltip
-    side="bottom"
-    text="Nexus"
-    :side-offset="16">
+  <Tooltip side="bottom" text="Nexus" :side-offset="16">
     <UButton
-
       :to="{ name: 'nexus' }"
-      :class="cn('group/logo', className)"
+      :class="cn('group/logo anchor', className)"
       color="neutral"
       variant="solid"
       square

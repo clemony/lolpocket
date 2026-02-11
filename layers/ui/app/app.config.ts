@@ -1,5 +1,6 @@
-import { appConfig } from '~~/layers/ui/app/assets/appConfig'
-
+import { icon } from "./assets"
+import * as ui from "./theme/index"
 export default defineAppConfig({
-  ...appConfig
+  icon,
+  ui,
 })

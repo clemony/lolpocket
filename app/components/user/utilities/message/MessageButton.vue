@@ -13,7 +13,7 @@ const {
 </script>
 
 <template>
- <UButton
+  <UButton
     :class="cn('', className)"
     :variant="variant"
     :size="size">

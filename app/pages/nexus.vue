@@ -46,12 +46,16 @@ definePageMeta({
         <icon name="add" />
         toast
       </UButton>
-      <UButton @click="accountFetch()"> fetch user datasss </UButton>
+      <UButton @click="accountFetch()">
+        fetch user datasss
+      </UButton>
       <UButton @click="console.log('summoner:', ss().cache)">
         resolve the slug
       </UButton>
 
-      <UButton @click="useSignOut()"> sign out </UButton>
+      <UButton @click="useSignOut()">
+        sign out
+      </UButton>
 
       <!--       <UButton
         @click="() => {

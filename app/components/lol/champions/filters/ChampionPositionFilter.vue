@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
@@ -23,7 +23,7 @@ const {
             className
           )
         ">
-       <UButton
+        <UButton
           v-if="cs().filters.position && clear"
           class="order-first hover:*:opacity-100"
           :variant
@@ -34,10 +34,10 @@ const {
         </UButton>
 
         <BaseListboxItem
-          v-for="position in mapPositions.filter((p) => p.name !== 'All')"
-          :key="position.name"
+          v-for="position in mapPositions.filter((p) => p.label !== 'All')"
+          :key="position.label"
           class="bg-transparent fx-0"
-          :value="position.name"
+          :value="position.label"
           as-child>
           <PositionBadge :variant size="sm" :position />
         </BaseListboxItem>

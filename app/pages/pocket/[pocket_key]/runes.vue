@@ -94,11 +94,11 @@ function handleAdd() {
               )
             "
             @click="onThumbClick(index)">
-            <Card
+            <UCard
               class="h-22 w-40"
               as-child>
               <KeystoneAndPath :set="thumbSet" />
-            </Card>
+            </UCard>
           </CarouselItem>
 
           <!-- add button -->
@@ -109,7 +109,7 @@ function handleAdd() {
                 'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100',
               )
             ">
-            <Card
+            <UCard
               v-tippy="{
                 content:
                   (pocket?.runes?.length ?? 0) >= 10
@@ -119,7 +119,7 @@ function handleAdd() {
                 arrow: false,
               }"
               as-child>
-             <UButton
+              <UButton
                 class="grid h-22 w-40 place-items-center"
 
                 hover="btn"
@@ -127,7 +127,7 @@ function handleAdd() {
                 @click="handleAdd()">
                 <icon name="add" />
               </UButton>
-            </Card>
+            </UCard>
           </CarouselItem>
         </TransitionScalePop>
       </CarouselContent>

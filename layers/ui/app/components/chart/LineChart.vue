@@ -1,28 +1,8 @@
 <script lang="ts" setup>
-import {
-  CategoryScale,
-  Chart as ChartJS,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-} from 'chart.js'
-import { Line } from 'vue-chartjs'
-
 const props = defineProps<{
   data: any
   options?: any
 }>()
-
-ChartJS.register(
-  Title,
-  Tooltip,
-  LineElement,
-  CategoryScale,
-  PointElement,
-  LinearScale
-)
 
 const styles = getComputedStyle(document.documentElement)
 
@@ -37,14 +17,14 @@ const options = {
   elements: {
     line: {
       borderWidth: 1.5,
-      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
-      cubicInterpolationMode: 'default' as const,
+      borderColor: `${styles.getPropertyValue("--colorneutral")}`,
+      cubicInterpolationMode: "default" as const,
       tension: 0.35,
     },
     point: {
       borderWidth: 1.5,
-      backgroundColor: `${styles.getPropertyValue('--colorneutral')}`,
-      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
+      backgroundColor: `${styles.getPropertyValue("--colorneutral")}`,
+      borderColor: `${styles.getPropertyValue("--colorneutral")}`,
       hitRadius: 6,
       hoverRadius: 4,
       radius: 2,
@@ -70,8 +50,5 @@ const options = {
 </script>
 
 <template>
-  <Line
-    class="z-1"
-    :data="data"
-    :options="options" />
+  <Line class="z-1" :data="data" :options="options" />
 </template>

@@ -11,7 +11,9 @@ async function clear() {
     as="div"
     button="Clear Matches"
     @click="clear()">
-    <template #title> Clear Local Match Data </template>
+    <template #title>
+      Clear Local Match Data
+    </template>
     <template #text>
       Remove
       <tippy

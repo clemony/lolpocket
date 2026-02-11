@@ -1,6 +1,6 @@
+import type { AccountData } from "#shared/types"
 //
 import { getEmptyAccount } from "#shared/schema"
-import type { AccountData } from "#shared/types"
 
 export async function accountUpdate(account: Partial<AccountData>) {
   const data = await $fetch("/api/supabase/update/account", {

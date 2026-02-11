@@ -1,29 +1,11 @@
 <script lang="ts" setup>
-import {
-  Chart,
-  Filler,
-  LineElement,
-  PointElement,
-  RadarController,
-  RadialLinearScale,
-} from 'chart.js'
-import { Radar } from 'vue-chartjs'
-
 const { champion } = defineProps<{
   champion: Champion
 }>()
 
-Chart.register(
-  RadarController,
-  LineElement,
-  PointElement,
-  RadialLinearScale,
-  Filler
-)
-
 const rawKeys = Object.keys(champion.attributeRatings)
 const normalizedKeys = rawKeys.map((val, index) => {
-  if (index === 5) return ['Ability', 'Reliance']
+  if (index === 5) return ["Ability", "Reliance"]
   return val.charAt(0).toUpperCase() + val.slice(1)
 })
 const rawValues = Object.values(champion.attributeRatings)
@@ -36,7 +18,7 @@ const normalizedValues = rawValues.map((val: number, index) => {
   return 3
 })
 console.log(
-  '💠 - Object.values(champion.attributeRatings):',
+  "💠 - Object.values(champion.attributeRatings):",
   Object.values(champion.attributeRatings)
 )
 const data = {
@@ -44,7 +26,7 @@ const data = {
   datasets: [
     {
       data: normalizedValues,
-      label: 'My First Dataset',
+      label: "My First Dataset",
     },
   ],
 }
@@ -53,19 +35,19 @@ const options = {
   elements: {
     line: {
       borderWidth: 1,
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      borderCapStyle: 'round' as const,
-      borderColor: 'rgb(0, 0, 0)',
-      borderJoinStyle: 'round' as const,
-      fill: 'origin',
+      backgroundColor: "rgba(0, 0, 0, 0.6)",
+      borderCapStyle: "round" as const,
+      borderColor: "rgb(0, 0, 0)",
+      borderJoinStyle: "round" as const,
+      fill: "origin",
       spanGaps: true,
       tension: 0.1,
     },
     point: {
-      borderColor: '#000',
-      pointBackgroundColor: '#000',
-      pointHoverBackgroundColor: '#000',
-      pointHoverBorderColor: 'rgb(255, 99, 132)',
+      borderColor: "#000",
+      pointBackgroundColor: "#000",
+      pointHoverBackgroundColor: "#000",
+      pointHoverBorderColor: "rgb(255, 99, 132)",
       pointRadius: 1,
     },
   },
@@ -80,16 +62,16 @@ const options = {
         display: false,
       },
       title: {
-        align: 'start',
+        align: "start",
       },
-      backgroundColor: `color-mix(in oklch, ${cssVar('--color-p3')} 40%, #00000000 60%)`,
+      backgroundColor: `color-mix(in oklch, ${cssVar("--color-p3")} 40%, #00000000 60%)`,
       beginAtZero: true,
       angleLines: {
         display: false,
       },
       pointLabels: {
         font: {
-          weight: 'bold' as const,
+          weight: "bold" as const,
         },
       },
       ticks: {
@@ -107,9 +89,6 @@ const options = {
       Champion Attributes
     </div>
 
-    <Radar
-      class="drop-shadow-sm"
-      :data="data"
-      :options="options" />
+    <Radar class="drop-shadow-sm" :data="data" :options="options" />
   </div>
 </template>

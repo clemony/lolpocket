@@ -44,30 +44,30 @@ watch(
 <template>
   <UPopover v-if="pocket" v-model:open="open">
     <UButton
+      :class="
+        cn(
+          'group/collapse transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-pc/60 duration-300 open:btn-active open:ring-2 hover:text-pc/60 hover:ring hover:inset-shadow-xs',
+          { 'shadow-sm drop-shadow-sm': pocket?._champion }
+        )
+      ">
+      <icon
+        v-if="!pocket?._champion"
+        class="size-10 text-pc/20"
+        name="lp:champ" />
+      <Champion
+        v-else
+        v-memo="pocket?._champion"
+        class="*:scale-160"
+        :src="pocket?._champion ? getSplash(pocket._champion, 'tile') : undefined" />
+      <div
         :class="
           cn(
-            'group/collapse transition-[colors, opacity] relative aspect-square h-auto w-full overflow-hidden p-0 ring-pc/60 duration-300 open:btn-active open:ring-2 hover:text-pc/60 hover:ring hover:inset-shadow-xs',
-            { 'shadow-sm drop-shadow-sm': pocket?._champion }
+            'absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
+            { 'bg-p2 **:text-pc/40': !pocket?._champion }
           )
         ">
-        <icon
-          v-if="!pocket?._champion"
-          class="size-10 text-pc/20"
-          name="lp:champ" />
-        <Champion
-          v-else
-          v-memo="pocket?._champion"
-          class="*:scale-160"
-          :src="pocket?._champion ? getSplash(pocket._champion, 'tile') : undefined" />
-        <div
-          :class="
-            cn(
-              'absolute inset-0 grid size-full items-end justify-center bg-neutral/60 p-1 opacity-0 transition-opacity duration-300 group-open/collapse:opacity-100 group-hover/collapse:opacity-100',
-              { 'bg-p2 **:text-pc/40': !pocket?._champion }
-            )
-          ">
-          <CaretFlip class="size-8 text-nc! opacity-80 drop-shadow-sm" fill />
-        </div>
+        <CaretFlip class="size-8 text-nc! opacity-80 drop-shadow-sm" fill />
+      </div>
     </UButton>
     <div
       class="p-0"
@@ -85,7 +85,7 @@ watch(
           @keydown.stop
           @keydown.enter.prevent />
 
-       <UButton
+        <UButton
           class="absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100 group-has-placeholder-shown/txt:opacity-0"
           variant="ghost"
           size="sm"
@@ -126,7 +126,7 @@ watch(
           No champions found :&lpar;
         </span>
         <div v-else class="grid w-full grid-flow-row grid-cols-3 gap-2 px-1">
- <!--          <PopoverClose as-child>
+          <!--          <PopoverClose as-child>
            <UButton
               class="hover-ring aspect-square h-auto w-full border-p3 bg-p2 hover:bg-p3/80!"
               title="Clear main champion"

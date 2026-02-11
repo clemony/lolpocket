@@ -28,7 +28,7 @@ const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
         <Label class="px-4 text-pc/50">Select Region...</Label>
       </div>
 
-     <UButton
+      <UButton
         v-for="region in regions"
         :key="region"
         size="sm"

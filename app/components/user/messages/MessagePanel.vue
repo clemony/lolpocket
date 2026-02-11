@@ -25,7 +25,7 @@ defineOptions({
       </template>
       <template #subheader>
         <div class="px-3">
-          <Input
+          <UInput
             class="input mb-3 h-12 bg-p0!"
             placeholder="Search messages..." />
         </div>

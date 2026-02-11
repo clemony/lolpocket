@@ -3,7 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { skills } = storeToRefs(s_champion())
+const { skills } = storeToRefs(sChampion())
 
 const route = useRoute()
 const ckey = computed(() => String(route.params.champion_key))
@@ -25,7 +25,7 @@ const skillPriorityEntries = computed(
       :title="i + 1"
       :set />
 
-    <Card
+    <UCard
       class="mt-16 flex h-full w-fit items-center justify-center gap-3 self-end p-8">
       <div class="-mt-1 grid grid-cols-1 grid-rows-5 gap-2">
         <div
@@ -74,8 +74,11 @@ const skillPriorityEntries = computed(
                   cn('font-semibold brightness-110 saturate-150', {
                     'text-inspiration': (ability.winrate ?? 0) >= 51,
                     'text-domination':
-                      (ability.winrate ?? 0) <= 49 && (ability.winrate ?? 0) !== 0,
-                    'text-p3': (ability.winrate ?? 0) < 51 && (ability.winrate ?? 0) > 49,
+                      (ability.winrate ?? 0) <= 49 &&
+                      (ability.winrate ?? 0) !== 0,
+                    'text-p3':
+                      (ability.winrate ?? 0) < 51 &&
+                      (ability.winrate ?? 0) > 49,
                   })
                 ">
                 {{ ability.winrate ?? 0 }}
@@ -85,6 +88,6 @@ const skillPriorityEntries = computed(
           </div>
         </div>
       </div>
-    </Card>
+    </UCard>
   </UPageSection>
 </template>

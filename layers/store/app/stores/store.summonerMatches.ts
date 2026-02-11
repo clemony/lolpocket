@@ -1,8 +1,9 @@
 //
-export const useSummonerMatches = defineStore("summonerMatches", () => {
-  const session = useSummonerSession()
-  const id = toValue(session.summoner?.puuid)
-  const region = toValue(session.summoner?.region)
+export const sMatches = defineStore("summonerMatches", () => {
+  const { summoner } = storeToRefs(sSession())
+  const sum = toValue(summoner)
+  const id = sum?.puuid
+  const region = sum?.region
 
   const { getCursor, getMatchesForSummoner, putMatchData, setCursor } =
     useIndexedDB()
@@ -37,7 +38,7 @@ export const useSummonerMatches = defineStore("summonerMatches", () => {
   }
 
   watch(
-    () => session.summoner?.puuid,
+    () => sum?.puuid,
     async (next, prev) => {
       if (!next || next === prev) return
       reset()

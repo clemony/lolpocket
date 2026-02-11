@@ -33,7 +33,7 @@ function handleUpdate() {
     :class="
       cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)
     ">
-   <UButton
+    <UButton
       v-if="is().filters.rank && clear"
       class="order-first hover:*:opacity-100"
       :color

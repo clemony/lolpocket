@@ -51,7 +51,7 @@ watch(
     <TransitionScalePop
       v-if="is().filtered.length < is().defaultFilterLength"
       class="z-2 grid w-full place-items-center pt-32">
-     <UButton
+      <UButton
         class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         variant="outline"
         size="sm"

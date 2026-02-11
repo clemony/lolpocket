@@ -1,11 +1,11 @@
 <script lang="ts" setup>
+import { deletePocket } from "~/domain/pocket/deletePocket"
+import { duplicatePocket } from "~/domain/pocket/duplicate"
 const props = defineProps<{
   pocketData?: Pocket
 }>()
 
 const emit = defineEmits(["update:grid"])
-import { deletePocket } from "~/domain/pocket/deletePocket"
-import { duplicatePocket } from "~/domain/pocket/duplicate"
 
 const pocket = computed(() => props.pocketData)
 

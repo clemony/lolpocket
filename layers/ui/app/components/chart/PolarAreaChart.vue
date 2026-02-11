@@ -1,26 +1,16 @@
 <script setup lang="ts">
-import type { ChartData, ChartOptions } from 'chart.js'
-import {
-  ArcElement,
-  Chart,
-  PolarAreaController,
-  RadialLinearScale,
-  Tooltip,
-} from 'chart.js'
-import { PolarArea } from 'vue-chartjs'
+import type { RecordEntry, RecordEntryArrayItem } from "fuse.js"
 
 const props = defineProps<{
   labels?: string[]
-  data: ChartData<'polarArea', number[], string>
+  data: any
   aria?: string
   overlap?: boolean
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   noTooltip?: boolean
 }>()
 
-Chart.register(PolarAreaController, ArcElement, RadialLinearScale, Tooltip)
-
-const chartOptions = computed<ChartOptions<'polarArea'>>(() => ({
+const chartOptions = computed<any>(() => ({
   maintainAspectRatio: false,
   responsive: true,
   elements: {

@@ -11,7 +11,7 @@ const {
 </script>
 
 <template>
-  <Card
+  <UCard
     :data-path="path.name"
     :class="
       cn(
@@ -56,5 +56,5 @@ const {
           " />
       </div>
     </div>
-  </Card>
+  </UCard>
 </template>

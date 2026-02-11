@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { EChartsType } from 'echarts'
-import VChart from 'vue-echarts'
-import type { AllyDataPoint } from '.'
-import { buildAllyChart } from '.'
+import type { EChartsType } from 'echarts';
+import VChart from 'vue-echarts';
+import type { AllyDataPoint } from '.';
+import { buildAllyChart } from '.';
 
 const { colorMap, points } = defineProps<{
   points: AllyDataPoint[]
@@ -20,7 +20,7 @@ function onMagicTypeChanged(e: { currentType: string }) {
 </script>
 
 <template>
-  <Card class="grid w-fit gap-8 px-8 pt-10 pb-8">
+  <UCard class="grid w-fit gap-8 px-8 pt-10 pb-8">
     <div
       ref="chart"
       class="h-140 w-270">
@@ -31,5 +31,5 @@ function onMagicTypeChanged(e: { currentType: string }) {
         autoresize
         @magictypechanged="onMagicTypeChanged" />
     </div>
-  </Card>
+  </UCard>
 </template>

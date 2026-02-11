@@ -13,7 +13,7 @@ const {
 </script>
 
 <template>
- <UButton
+  <UButton
     :id="index"
     square
     variant="ghost"

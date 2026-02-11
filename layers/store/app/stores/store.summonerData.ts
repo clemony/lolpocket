@@ -1,10 +1,10 @@
 //
 import { defineStore } from "pinia"
 
-export const useSummonerData = defineStore("summonerData", () => {
-  const { summoner } = storeToRefs(s_session())
-  const { matches } = storeToRefs(useSummonerMatches())
-  const { filteredMatches } = storeToRefs(useMatchFilters())
+export const sData = defineStore("summonerData", () => {
+  const { summoner } = storeToRefs(sSession())
+  const { matches } = storeToRefs(sMatches())
+  const { filteredMatches } = storeToRefs(matchFilter())
 
   const id = toValue(summoner.value?.puuid)
   const region = toValue(summoner.value?.region)
@@ -47,11 +47,7 @@ export const useSummonerData = defineStore("summonerData", () => {
     const first = champKeyById(champions.value?.[0]?.championId ?? 0)
     if (!first) return null
     else if (first)
-      return getSplash(
-        first,
-        "uncentered",
-        getRandom(skinIndex[first] ?? [])
-      )
+      return getSplash(first, "uncentered", getRandom(skinIndex[first] ?? []))
 
     return null
   })

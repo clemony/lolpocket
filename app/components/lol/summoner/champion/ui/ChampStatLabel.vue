@@ -48,7 +48,7 @@ const avgTimestampLabel = computed(() => {
         className,
       )
     ">
-   <UButton
+    <UButton
       class="z-2 size-full flex-col items-start justify-between! gap-0 p-2!"
       variant="ghost"
       :data-type="

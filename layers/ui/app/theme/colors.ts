@@ -1,0 +1,17 @@
+export const colors: string[] = [
+  "p0",
+  "p1",
+  "p2",
+  "p3",
+  "p4",
+  "n0",
+  "ad",
+  "neutral",
+  "nc",
+  "insp",
+  "res",
+  "dom",
+  "pre",
+  "sorc",
+  "transparent",
+]

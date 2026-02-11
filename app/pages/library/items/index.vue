@@ -26,7 +26,7 @@ definePageMeta({
     <TransitionScalePop
       v-else
       class="grid h-[30vh] w-full place-items-center">
-     <UButton
+      <UButton
         class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
         variant="outline"
         size="sm"

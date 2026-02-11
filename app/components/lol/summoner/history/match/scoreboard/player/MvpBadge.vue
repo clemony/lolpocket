@@ -7,7 +7,7 @@ const { match, player } = defineProps<{
 
 <template>
   <div class="flex w-10 items-center">
-    <Badge
+    <UBadge
       v-if="player.lpScore.score === 1 || player.lpScore.ace"
       :class="
         cn(
@@ -20,7 +20,7 @@ const { match, player } = defineProps<{
         )
       ">
       {{ player.lpScore.mvp ? "MVP" : "ACE" }}
-    </Badge>
+    </UBadge>
 
     <div v-else class="text-xs! leading-0 font-normal">
       {{ player.lpScore.score }}{{ formatNumberPosition(player.lpScore.rank) }}

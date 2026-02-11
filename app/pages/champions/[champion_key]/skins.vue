@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import '@ui/css/plugins/embla.css'
-import type { CarouselApi } from '~~/layers/ui/app/components/carousel/interface'
-import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import "@ui/css/plugins/embla.css"
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
+import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
 
 const { champion } = defineProps<{
   champion: Champion
 }>()
 
 definePageMeta({
-  name: 'champion_skins',
-  title: 'skins',
+  name: "champion_skins",
+  title: "skins",
   level: 4,
   order: 3,
-  path: '/champions/:champion_key/skins',
+  path: "/champions/:champion_key/skins",
 })
 
 const emblaMainApi = ref<CarouselApi>()
 const emblaThumbnailApi = ref<CarouselApi>()
-const carouselOrientation = ref<'horizontal' | 'vertical'>('horizontal')
+const carouselOrientation = ref<"horizontal" | "vertical">("horizontal")
 const selectedIndex = ref(0)
 
 function onSelect() {
@@ -68,21 +68,20 @@ const skins = computed(() => skinIndex[champion.key])
             :class="
               cn(
                 'hover:ring-b4 cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring',
-                index === selectedIndex
-                  ? 'ring-pc/40 ring-offset-p0 pointer-events-none opacity-100 ring ring-offset-5'
-                  : 'opacity-80',
+                index === selectedIndex ?
+                  'pointer-events-none opacity-100 ring ring-pc/40 ring-offset-5 ring-offset-p0'
+                  : 'opacity-80'
               )
             ">
-            <Card
+            <UCard
               class="h-38 overflow-hidden rounded-xl! border-0 p-0! shadow-sm shadow-black/20 drop-shadow-sm drop-shadow-black/20">
-              <CardContent
-                class="relative flex items-center justify-center p-0">
+              <div class="relative flex items-center justify-center p-0">
                 <Img
                   class="inset-0 -mt-10 size-full object-cover"
                   :alt="skin.name"
                   :src="getSplash(champion.key, 'tile', skin)" />
-              </CardContent>
-            </Card>
+              </div>
+            </UCard>
           </div>
         </CarouselItem>
       </CarouselContent>
@@ -99,9 +98,9 @@ const skins = computed(() => skinIndex[champion.key])
           :key="index"
           class="rounded-xl!">
           <div class="embla__slide p-2">
-            <Card
+            <UCard
               class="embla__parallax rounded-xl! border-0 shadow-sm shadow-black/20 drop-shadow-sm drop-shadow-black/20">
-              <CardContent
+              <div
                 class="embla__parallax__layer p-0 after:absolute after:size-full after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)]">
                 <Img
                   class="embla__slide__img embla__parallax__img"
@@ -112,8 +111,8 @@ const skins = computed(() => skinIndex[champion.key])
                   class="absolute bottom-4 left-6 grid w-max place-items-center rounded-full bg-black/70 px-5 py-1 text-lg font-medium text-white/80 italic opacity-90 backdrop-blur-sm">
                   {{ skin.name }}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </UCard>
           </div>
         </CarouselItem>
       </CarouselContent>

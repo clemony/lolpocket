@@ -21,13 +21,11 @@ definePageMeta({
   order: 1,
   slug: "champions",
 })
-const { summoner } = storeToRefs(s_session())
+const { summoner } = storeToRefs(sSession())
 
 const championData = computed(() =>
-  (s_data().champions ?? []).map((c) => {
-    const mastery = s_data().mastery?.find(
-      (a) => a.championId === c.championId
-    )
+  (sData().champions ?? []).map((c) => {
+    const mastery = sData().mastery?.find((a) => a.championId === c.championId)
     return {
       ...c,
       ...(mastery ?? {

@@ -1,9 +1,6 @@
 import fs from "node:fs"
 import path, { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
-//
-import tailwindcss from "@tailwindcss/vite"
-
 const _dir = dirname(fileURLToPath(import.meta.url))
 
 const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
@@ -19,13 +16,7 @@ const customCollections = fs
 
 export default defineNuxtConfig({
   $meta: { name: "ui" },
-  modules: [
-    "@vueuse/nuxt",
-    "@nuxt/ui",
-    "@nuxt/image",
-    "@nuxtjs/color-mode",
-    "motion-v/nuxt",
-  ],
+  modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/icon"],
 
   typescript: {
     strict: true,
@@ -86,8 +77,11 @@ export default defineNuxtConfig({
     theme: {
       colors: [
         "p0",
+        "p1",
         "p2",
         "p3",
+        "p4",
+        "n0",
         "ad",
         "neutral",
         "nc",
@@ -100,14 +94,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  /* hooks: {
-    "vite:extendConfig": function (config) {
-      const plugin = tailwindcss()
-
-      if (config.plugins) {
-        ;(config.plugins as unknown[]).push(plugin as unknown)
-      }
-    },
-  }, */
 })

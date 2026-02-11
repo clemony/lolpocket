@@ -4,7 +4,7 @@ const { class: className, mastery } = defineProps<{
   mastery?: ChampionMastery
 }>()
 
-const { items } = storeToRefs(s_champion())
+const { items } = storeToRefs(sChampion())
 
 const route = useRoute()
 

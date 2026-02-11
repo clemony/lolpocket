@@ -25,13 +25,13 @@ const modelProxy = computed({
       :key="option"
       class="z-0 [&_#indicator]:order-last"
       :value="option">
-      <!--      <Element size="icon">
+      <!--      <div size="icon">
         <component
           :is="item.optionIcon(option)"
           v-if="item.optionIcon"
           class="absolute"
         />
-      </Element> -->
+      </div> -->
       <span class="grow">
         {{ item.optionName ? item.optionName(option) : option }}
       </span>

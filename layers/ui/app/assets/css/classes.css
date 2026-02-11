@@ -1,7 +1,46 @@
 @import "tailwindcss";
-@reference './theme.css';
 
 @layer components {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-xxl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-sm font-semibold flex gap-3 text-[var(--color-pc)]/50;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold dst;
+  }
+  h4 {
+    @apply font-semibold dst;
+  }
+  p {
+    @apply leading-5 antialiased;
+  }
+
+  span {
+    @apply antialiased;
+  }
+
   .dropdown-label-class {
     @apply -mb-2 text-2xs! font-[900] tracking-normal uppercase opacity-50;
   }
@@ -9,7 +48,7 @@
     @apply inline h-fit rounded-sm px-1 align-bottom text-2xs/3.5 font-semibold text-nowrap opacity-80 ring-neutral/80 hover:bg-neutral/90 hover:text-nc hover:opacity-100 hover:ring hover:ring-offset-2 hover:ring-offset-neutral/90 hover:drop-shadow-xs;
   }
   .popover-button-label {
-    @apply my-2 h-6 w-full cursor-pointer items-center justify-between pr-4 !text-sm font-semibold whitespace-nowrap text-pc/90;
+    @apply my-2 h-6 w-full cursor-pointer items-center justify-between pr-4 !text-sm font-semibold whitespace-nowrap text-[var(--color-pc)]/90;
   }
 
   .text-badge-xs {
@@ -27,7 +66,7 @@
   /* images */
 
   .img-active {
-    @apply bg-p3/60 ring-pc/60 transition-all duration-200 hover:ring;
+    @apply bg-p3/60 ring-[var(--color-pc)]/60 transition-all duration-200 hover:ring;
   }
   .no-img {
     @apply pointer-events-none border border-p3;

@@ -7,8 +7,8 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
 <template>
   <div>
     <UInput
-      icon="i-search"
       v-model:model-value="is().filters.query"
+      icon="i-search"
       class="peer"
       placeholder="search">
       <template #trailing>
@@ -21,7 +21,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
       <div ref="UScrollArea" class="overflow-auto">
         <div
           class="relative grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5">
-         <UButton
+          <UButton
             v-if="is().filters.stats.length"
             class="absolute top-7 right-6 size-6"
             variant="outline"
@@ -41,7 +41,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
           <div class="grid w-full grid-cols-[0.6fr_1fr] gap-x-12 gap-y-1 pr-8">
             <Label class="popover-button-label">
               Item Tier
-             <UButton
+              <UButton
                 v-if="is().filters.rank"
                 class="size-6"
                 variant="outline"
@@ -52,7 +52,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
             </Label>
             <Label class="popover-button-label">
               Categories
-             <UButton
+              <UButton
                 v-if="is().filters.tags.length"
                 class="size-6"
                 variant="outline"

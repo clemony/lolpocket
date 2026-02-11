@@ -84,7 +84,7 @@ function toggleListType() {
     :get-reference-client-rect="virtualRect || undefined"
     :options="{ placement: 'top-start', offset: 8 }">
     <div class="bubble-menu">
-     <UButton
+      <UButton
         variant="outline"
         on="inset"
         square

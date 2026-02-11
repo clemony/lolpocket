@@ -2,10 +2,10 @@
 import { defineStore } from "pinia"
 import { unref } from "vue"
 
-export const useSummonerChampion = defineStore("summonerChampion", () => {
-  const { summoner } = storeToRefs(s_session())
-  const { filteredMatches } = storeToRefs(useMatchFilters())
-  const { mastery: m, timelines } = storeToRefs(s_data())
+export const sChampion = defineStore("summonerChampion", () => {
+  const { summoner } = storeToRefs(sSession())
+  const { filteredMatches } = storeToRefs(matchFilter())
+  const { mastery: m, timelines } = storeToRefs(sData())
 
   const id = toValue(summoner.value?.puuid)
 

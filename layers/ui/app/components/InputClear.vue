@@ -3,7 +3,7 @@ import type { ButtonProps } from "@nuxt/ui"
 
 const {
   class: className,
-  size = "2xs",
+  size = "3xs",
   variant = "solid",
 } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -20,7 +20,7 @@ const emit = defineEmits(["clearInput"])
     :variant
     icon="i-x"
     :ui="{
-      leadingIcon: 'size-4 opacity-70',
+      leadingIcon: 'opacity-70',
       base: cn(
         'pointer-events-auto peer-has-placeholder-shown:opacity-0',
         className

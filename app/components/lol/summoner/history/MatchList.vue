@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Virtualizer } from "virtua/vue";
+import { Virtualizer } from "virtua/vue"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -7,10 +7,10 @@ const { class: className } = defineProps<{
 
 const emit = defineEmits(["scroll-top"])
 
-const store = useMatchFilters()
+const store = matchFilter()
 const { baseFiltered, filteredMatches } = storeToRefs(store)
 
-const { loading, loadingOlder, loadMessage, matches } = storeToRefs(s_matches())
+const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 
 watch(
   () => baseFiltered.value,
@@ -31,22 +31,12 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
         className
       )
     ">
-    <LazyAlert v-if="loadMessage" class="w-full">
-      <Icon class="translate-y-1.75 **:stroke-[2.2]" name="reset" />
-      <AlertTitle class="flex size-full items-center justify-between">
-        {{ loadMessage }}
-       <UButton
-          variant="ghost"
-          hover="btn"
-          square
-          size="xs"
-          @click="loadMessage = ''">
-          <Icon
-            class="size-3.75 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100"
-            name="x" />
-        </UButton>
-      </AlertTitle>
-    </LazyAlert>
+    <LazyUAlert
+      v-if="loadMessage"
+      icon="reset"
+      class="w-full"
+      :title="loadMessage"
+      @click="loadMessage = ''" />
 
     <!-- loading skeleton -->
     <div v-if="loading" class="flex w-full flex-col gap-8">
@@ -64,7 +54,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     </div>
 
     <!-- virtualized rows -->
-    <UUScrollArea
+    <UScrollArea
       v-else
       v-slot="{ item }"
       v-auto-animate
@@ -79,10 +69,10 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
         root: 'w-full h-max',
       }">
       <MatchCard :key="item.matchId" :match="item" />
-    </UUScrollArea>
+    </UScrollArea>
 
     <div v-if="matches?.length" class="grid h-32 place-items-center">
-      <UButton class="group/c" variant="ghost" @click="s_matches().loadOlder()">
+      <UButton class="group/c" variant="ghost" @click="sMatches().loadOlder()">
         <div class="grid size-5 place-items-center *:absolute">
           <Icon v-if="loading" class="translate-y-px" name="lp-ui:rain" />
           <template v-else>

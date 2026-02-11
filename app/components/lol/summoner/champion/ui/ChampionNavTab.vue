@@ -37,7 +37,7 @@ const route = useRoute()
     <motion.div
       :class="
         cn(
-          'd z-3 flex h-10 w-full grow -translate-y-1 flex-nowrap items-center justify-center text-sm font-medium text-pc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
+          'd relative z-3 flex h-10 w-full grow -translate-y-1 flex-nowrap items-center justify-center self-end text-sm font-medium text-pc/90 capitalize transition-[opacity,transform] duration-100 ease-out group-hover/tab:underline',
           {
             'opacity-60': routeName !== route.name,
             'opacity-100': routeName === route.name,

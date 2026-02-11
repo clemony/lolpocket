@@ -9,6 +9,7 @@ const {
   text,
   trailingIcon,
   ui,
+  disabled,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   text?: string
@@ -19,6 +20,7 @@ const {
   side?: Side
   sideOffset?: number
   trailingIcon?: string
+  disabled?: boolean
 }>()
 
 const open = ref(false)
@@ -40,6 +42,7 @@ const reference = computed(() => ({
 
 <template>
   <UTooltip
+    :disabled
     :open="open"
     :reference="reference"
     :arrow
@@ -75,7 +78,7 @@ const reference = computed(() => ({
             :name="trailingIcon"
             :class="
               cn(
-                'ml-2 inline size-3.5 translate-y-0.5 text-nc',
+                'ml-2 inline size-3.5 translate-y-0.75 text-nc',
                 { 'scale-120': trailingIcon === 'i' },
                 ui?.trailingIcon
               )

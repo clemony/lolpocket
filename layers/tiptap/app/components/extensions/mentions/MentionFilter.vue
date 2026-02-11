@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { exitSuggestion, SuggestionPluginKey } from '@tiptap/suggestion'
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
+import { exitSuggestion, SuggestionPluginKey } from '@tiptap/suggestion';
+import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
 
 const { command, editor, items } = defineProps<{
   class?: HTMLAttributes['class']
@@ -93,7 +93,7 @@ onClickOutside(target, (event) => {
       <div
         v-if="items.length"
         class="flex h-max w-full flex-col">
-        <PopoverItem
+        <UButton
           v-for="(item, index) in items"
           :id="index"
           :key="index"
@@ -115,7 +115,7 @@ onClickOutside(target, (event) => {
             class="size-6 rounded-full!"
             :item />
           {{ item.name }}
-        </PopoverItem>
+        </UButton>
       </div>
       <div
         v-else

@@ -46,7 +46,9 @@ const inactiveClass =
           :text="top()?.name"
           :alt="`${as().account?.name ?? null}'s Most Played`" />
         <div class="flex h-full flex-col gap-4 pt-3">
-          <h4 class="text-xl font-semibold dst">Automatic</h4>
+          <h4 class="text-xl font-semibold dst">
+            Automatic
+          </h4>
           <p>Displays your most played champion in recent games.</p>
 
           <ActiveTick v-if="!currentSplash" class="mt-2 h-6" />

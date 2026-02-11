@@ -60,10 +60,10 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
       <!-- search input -->
       <div
         class="absolute top-0 z-1 w-full overflow-hidden bg-linear-to-b from-p0 from-4% to-transparent to-80% px-2 pt-2 pb-1.5">
-        <InputGroup
+        <UInputGroup
           class="bg-brightness-104 h-11 w-full rounded-xl border-p3/80 bg-p0/74! bg-blend-screen shadow-xs shadow-black/4 backdrop-blur-sm">
-          <InputGroupSearch />
-          <InputGroupInput v-model:model-value="query" />
+          <UInputGroupSearch />
+          <UInputGroupInput v-model:model-value="query" />
           <InputClear
             @clear-input="
               () => {
@@ -71,11 +71,11 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
                 tab = 1
               }
             " />
-        </InputGroup>
+        </UInputGroup>
 
         <UInput
-          icon="i-search"
           v-model:model-value="is().filters.query"
+          icon="i-search"
           class="peer"
           placeholder="search">
           <template #trailing>

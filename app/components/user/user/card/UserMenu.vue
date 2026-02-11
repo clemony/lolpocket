@@ -33,7 +33,7 @@ const tag = ref(false)
     :offset="[0, 12]"
     :duration="150"
     :delay="500">
-   <UButton
+    <UButton
       class="hover-ring pointer-events-auto z-4 size-9 rounded-full"
       base="btn"
       color="neutral"
@@ -57,14 +57,14 @@ const tag = ref(false)
             backgroundRepeat: 'no-repeat',
           }"
           :alt="`${author?.name}'s Splash`">
-          <Badge
+          <UBadge
             class="absolute top-2 right-2 size-6 gap-0 rounded-lg text-xs! font-medium opacity-76"
             color="neutral">
             <Icon
               class="size-3 text-nc"
               name="lp:cxp" />
             {{ author?.level }}
-          </Badge>
+          </UBadge>
         </div>
         <div
           class="absolute top-18 left-2 grid size-20 place-items-center rounded-lg bg-p0 p-1.5">
@@ -95,26 +95,26 @@ const tag = ref(false)
 
         <Separator :size="1" />
         <div class="flex flex-col gap-1 px-1">
-          <PopoverItem class="pl-7.5!">
+          <UButton class="pl-7.5!">
             View Profile
-          </PopoverItem>
-          <PopoverItem>
+          </UButton>
+          <UButton>
             <Icons
               class="size-4"
               name="heart" />
             Follow
-          </PopoverItem>
+          </UButton>
         </div>
         <Separator :size="1" />
         <div class="flex flex-col gap-1 px-1">
           <!--    <FollowButton /> -->
 
-          <PopoverItem>
+          <UButton>
             <Icons
               class="size-4.5!"
               name="lucide:bell-ring" />
             Report
-          </PopoverItem>
+          </UButton>
         </div>
         <Separator
           v-if="isAdmin"

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const { summoner } = storeToRefs(s_session())
+const { summoner } = storeToRefs(sSession())
 onMounted(() => {
-  useMatchFilters().clearFilters()
+  matchFilter().clearFilters()
 })
 </script>
 
@@ -14,7 +14,7 @@ onMounted(() => {
     :class="
       cn(
         'grid h-max w-110 max-w-110 origin-top auto-rows-max items-start gap-6 px-1 pt-2 *:w-108',
-        className,
+        className
       )
     ">
     <RankCard

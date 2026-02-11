@@ -15,7 +15,7 @@ const emit = defineEmits(['update:popover'])
       @click="
         props.pocket && props.set ?
           removeItemFromSet(props.pocket, props.set, props.item)
-        : null
+          : null
       ">
       <icon name="f7:delete-right" />
       Remove Item

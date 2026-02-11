@@ -79,7 +79,7 @@ function close() {
           :label="
             rune.tier === 0 ?
               'Keystone'
-            : `Slot ${rune.tier} - ${rune.tierLabel}`
+              : `Slot ${rune.tier} - ${rune.tierLabel}`
           " />
 
         <UBadge

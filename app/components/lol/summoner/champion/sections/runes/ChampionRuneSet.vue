@@ -1,31 +1,24 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
-const { runes } = storeToRefs(s_champion())
+const { runes } = storeToRefs(sChampion())
 const page = computed(() => {
   if (!runes.value?.best) return null
   return runes.value?.best
 })
 const bestTip = computed(() => {
-  if (!page.value) return ''
-  return `${page.value.games} game${page.value.games > 1 ? 's' : ''} - ${page.value.winrate}% WR`
+  if (!page.value) return ""
+  return `${page.value.games} game${page.value.games > 1 ? "s" : ""} - ${page.value.winrate}% WR`
 })
 
-const setClass = ' gap-5 '
+const setClass = " gap-5 "
 </script>
 
 <template>
-  <ChampStatRow
-    v-if="page"
-    simple>
-    <ChampStatLabel
-      title="Runes"
-      :stat="page" />
-    <ChampStatRowWrapper
-      v-if="runes?.best"
-      simple
-      :class="setClass">
+  <ChampStatRow v-if="page" simple>
+    <ChampStatLabel title="Runes" :stat="page" />
+    <ChampStatRowWrapper v-if="runes?.best" simple :class="setClass">
       <Keystone
         :id="page.keystone"
         class="size-18 contrast-105"
@@ -52,8 +45,6 @@ const setClass = ' gap-5 '
         size="c-12"
         variant="neutral" />
     </ChampStatRowWrapper>
-    <NoItemData
-      v-else
-      simple />
+    <NoItemData v-else simple />
   </ChampStatRow>
 </template>

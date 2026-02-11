@@ -9,7 +9,7 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
     class="relative sticky -top-55 z-1 flex w-full flex-col items-center gap-4 pt-4 before:absolute before:top-0 before:-left-1 before:box-content before:size-full before:border-4 before:border-p0 before:bg-p0/96 before:backdrop-blur-sm">
     <div
       class="flex h-14 w-full flex-nowrap items-center justify-start gap-4 pr-1.5">
-     <UButton
+      <UButton
         class="pr-4"
         color="neutral"
         size="lg"
@@ -19,43 +19,44 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
           name="add" />
         Set
       </UButton>
-      <InputGroupUPopover
+      <UInputGroupUPopover
         <LazyItemFilterPopoverContent />
-      </InputGroupUPopover
-    </div>
+      </UInputGroupUPopover
+      </div>
 
-    <TransitionSlide
-      class="scrollbar-none flex w-full flex-wrap justify-start gap-4 overflow-x-auto">
-     <UButton
-        v-if="is().filters.rank"
-        class="pr-2"
-        color="neutral"
-        hover="btn"
-        size="sm"
-        @click="is().filters.rank = null">
-        {{ is().filters.rank }}
-        <icon
-          class="size-4 **:stroke-[2.1]"
-          name="x" />
-      </UButton>
-      <template v-if="is().filters.tags.length">
-        <ItemTagButton
-          v-for="(tag, i) in is().filters.tags"
-          :key="tag"
-          clear
-          :active="true"
-          :tag
-          @click="is().filters.tags.splice(i, 1)" />
-      </template>
-      <template v-if="is().filters.stats.length">
-        <ItemStatButton
-          v-for="(stat, i) in is().filters.stats"
-          :key="stat"
-          clear
-          active
-          :stat
-          @click="is().filters.stats.splice(i, 1)" />
-      </template>
-    </TransitionSlide>
+      <TransitionSlide
+        class="scrollbar-none flex w-full flex-wrap justify-start gap-4 overflow-x-auto">
+        <UButton
+          v-if="is().filters.rank"
+          class="pr-2"
+          color="neutral"
+          hover="btn"
+          size="sm"
+          @click="is().filters.rank = null">
+          {{ is().filters.rank }}
+          <icon
+            class="size-4 **:stroke-[2.1]"
+            name="x" />
+        </UButton>
+        <template v-if="is().filters.tags.length">
+          <ItemTagButton
+            v-for="(tag, i) in is().filters.tags"
+            :key="tag"
+            clear
+            :active="true"
+            :tag
+            @click="is().filters.tags.splice(i, 1)" />
+        </template>
+        <template v-if="is().filters.stats.length">
+          <ItemStatButton
+            v-for="(stat, i) in is().filters.stats"
+            :key="stat"
+            clear
+            active
+            :stat
+            @click="is().filters.stats.splice(i, 1)" />
+        </template>
+      </TransitionSlide>
+    </div>
   </div>
 </template>

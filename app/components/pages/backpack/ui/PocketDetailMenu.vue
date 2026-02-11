@@ -61,7 +61,7 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
       </Label>
 
       <!-- trash -->
-     <UButton
+      <UButton
         v-tippy="'Move to trash'"
         base="btn"
         :variant="ps().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'"
@@ -95,7 +95,7 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
       </UButton>
 
       <!-- export -->
-     <UButton
+      <UButton
         v-tippy="'Export to LoL'"
         class="size-11"
         :disabled="!as().account?.puuid"

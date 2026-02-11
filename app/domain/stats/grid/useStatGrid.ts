@@ -1,3 +1,8 @@
+import type {
+  ColDef,
+  ValueFormatterParams,
+  ValueGetterParams,
+} from "ag-grid-community"
 //
 import {
   GridLastPlayed,
@@ -5,11 +10,6 @@ import {
   MasteryBadge,
   TableChampion,
 } from "#components"
-import type {
-  ColDef,
-  ValueFormatterParams,
-  ValueGetterParams,
-} from "ag-grid-community"
 import { perGameFormatter, perGameGetter, statGetter } from "."
 
 export function useStatGrid() {

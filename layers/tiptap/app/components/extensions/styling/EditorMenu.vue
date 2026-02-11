@@ -41,7 +41,7 @@ const menu = [
     <template
       v-for="(item, i) in menu"
       :key="i">
-     <UButton
+      <UButton
         v-if="!item.name"
         variant="ghost"
         hover="inset"

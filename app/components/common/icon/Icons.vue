@@ -1,32 +1,23 @@
 <script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
     name: string
-    wrapperClass?: HTMLAttributes['class']
-    size?: ElementVariants['size']
-    variant?: ElementVariants['variant']
-    base?: ElementVariants['base']
+    wrapperClass?: HTMLAttributes["class"]
     color?: string
   }>(),
-  {
-    base: 'btn',
-    size: 'sq-4',
-  }
+  {}
 )
 </script>
 
 <template>
-  <Element
+  <span
     :class="
       cn(
-        'relative grid size-4.5 place-items-center p-0! *:absolute',
-        props.wrapperClass,
+        'anchor relative grid size-4.5 place-items-center p-0! *:absolute',
+        props.wrapperClass
       )
     ">
-    <Icon
-      :color
-      :name="props.name"
-      :class="cn('', props.class)" />
-  </Element>
+    <Icon :color :name="props.name" :class="cn('', props.class)" />
+  </span>
 </template>

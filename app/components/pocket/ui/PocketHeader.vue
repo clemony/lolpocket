@@ -29,13 +29,13 @@ const pocket = computed(() =>
           side="bottom"
           :side-offset="0"
           position-strategy="absolute">
-          <Input
+          <UInput
             v-model="pocket.name"
             class="field-sizing-content size-full **:font-bold **:tracking-tight"
-            size="header"
+            size="xl"
             @clear-input="pocket.name = ''">
-            <template #2>
-             <UButton
+            <template #trailing>
+              <UButton
                 class="btn-square size-7"
                 title="No brain? Meet button."
                 variant="ghost"
@@ -43,10 +43,10 @@ const pocket = computed(() =>
                 <icon class="size-3.5" name="shuffle" />
               </UButton>
             </template>
-          </Input>
+          </UInput>
         </LazyPopoverContent>
       </UPopover>
-      <PocketPinButton class="" :pocket="pocket" size="sq-8" />
+      <PocketPinButton class="" :pocket="pocket" square size="sm" />
     </template>
 
     <!-- header sub-text -->

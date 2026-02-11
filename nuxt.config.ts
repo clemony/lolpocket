@@ -13,7 +13,6 @@ export default defineNuxtConfig({
       "#layers/lib/app/composables",
       "#layers/lib/shared/composables",
       "#layers/patch/shared/constants",
-      "#layers/ui/app/assets/variants*",
       "#layers/ui/app/config",
     ],
   },
@@ -30,12 +29,10 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@vueuse/nuxt",
     "@nuxt/eslint",
-    "@nuxtjs/color-mode",
     "@nuxt/ui",
     "motion-v/nuxt",
     "@nuxt/devtools",
     "@formkit/auto-animate/nuxt",
-
     "@nuxtjs/i18n",
   ],
 
@@ -43,18 +40,6 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
-    sharedTsConfig: {
-      compilerOptions: {
-        pretty: true,
-        skipLibCheck: true,
-      },
-    },
-    tsConfig: {
-      compilerOptions: {
-        pretty: true,
-        skipLibCheck: true,
-      },
-    },
   },
 
   components: [
@@ -79,12 +64,12 @@ export default defineNuxtConfig({
     preference: "system",
   },
   ssr: true,
-  eslint: {
+  /*   eslint: {
     config: {
       autoInit: false,
       standalone: false,
     },
-  },
+  }, */
   nitro: {
     imports: {
       dirs: [
@@ -108,12 +93,6 @@ export default defineNuxtConfig({
     },
     typescript: {
       strict: true,
-      tsConfig: {
-        compilerOptions: {
-          pretty: true,
-          skipLibCheck: true,
-        },
-      },
     },
   },
   pinia: { storesDirs: ["#layers/store/app/stores"] },
@@ -157,7 +136,7 @@ export default defineNuxtConfig({
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
-    types: "#layers/store/shared/types/database.types.ts",
+    // types: "#layers/store/shared/types/database.types.ts",
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
     redirectOptions: {
@@ -168,7 +147,7 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    // @ts-expect-error
+    // @ts-expect-error until plugin updates
     plugins: [tailwindcss()],
     clearScreen: false,
     build: {
@@ -182,7 +161,7 @@ export default defineNuxtConfig({
     https: false,
     port: 8080,
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   experimental: {
     extractAsyncDataHandlers: true,
     nitroAutoImports: true,

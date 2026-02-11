@@ -22,7 +22,7 @@ watchEffect(async () => {
 })
 
 const position = computed(() =>
-  mapPositions.find((p) => p.name === String(item.value?.positions[0]))
+  mapPositions.find((p) => p.label === String(item.value?.positions[0]))
 )
 
 const toast = useToast()

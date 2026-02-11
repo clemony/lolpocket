@@ -3,13 +3,13 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const { matches } = storeToRefs(s_matches())
-const store = useMatchFilters()
+const { matches } = storeToRefs(sMatches())
+const store = matchFilter()
 const { filter } = storeToRefs(store)
 
-const { summoner } = storeToRefs(s_session())
+const { summoner } = storeToRefs(sSession())
 const roleStats = await useMatchRoles(
-  summoner.value?.puuid ?? '',
+  summoner.value?.puuid ?? "",
   matches.value
 )
 
@@ -22,7 +22,7 @@ const roleModel = computed({
 <template>
   <div class="w-full">
     <div class="mb-2 -ml-1 flex items-center">
-     <UButton
+      <UButton
         class="gap-2 place-self-center rounded-lg px-2.5 text-md font-medium"
         size="sm"
         variant="ghost"
@@ -31,7 +31,7 @@ const roleModel = computed({
         {{
           ms().filter.role !== "ALL" ?
             roleStats.find((r) => r.role === ms().filter.role)?.name
-            : "Position"
+          : "Position"
         }}
 
         <icon

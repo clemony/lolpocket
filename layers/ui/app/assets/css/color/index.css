@@ -1,5 +1,2 @@
-@import './color-utilities.css';
-@import './colors.css';
-@import './palette.css';
-@import './root.css';
-@import './themes.css';
+@import "./attrs.css";
+@import "./colors.css";

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
-  variant?: ButtonProps['variant']
-  size?: ButtonProps['size']
+  variant?: ButtonProps["variant"]
+  size?: ButtonProps["size"]
 }>()
 
 const emit = defineEmits(["open"])
 
-const store = useMatchFilters()
+const store = matchFilter()
 
 const open = shallowRef<boolean>(true)
 const asideRef = useTemplateRef<HTMLElement>("asideRef")
@@ -59,7 +59,9 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
         size="lg"
         hover="inset"
         :disabled="store.filterEmpty()"
-        :variant="store.filterEmpty() ? 'ghost' : 'inset' as ButtonProps['variant']"
+        :variant="
+          store.filterEmpty() ? 'ghost' : ('inset' as ButtonProps['variant'])
+        "
         @click="store.clearFilters()">
         <Icon
           class="in-disabled:opacity-40"
@@ -79,8 +81,8 @@ size="lg"
     /> -->
 
     <UInput
-      icon="i-search"
       v-model:model-value="is().filters.query"
+      icon="i-search"
       class="peer"
       placeholder="Search match history...">
       <template #trailing>

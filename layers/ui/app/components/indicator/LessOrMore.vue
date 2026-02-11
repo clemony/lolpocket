@@ -6,7 +6,7 @@ const { class: className, open } = defineProps<{
 </script>
 
 <template>
- <UButton
+  <UButton
     :class="
       cn(
         'mt-2 inline px-2 text-end text-xs opacity-50 hover:opacity-100',

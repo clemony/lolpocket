@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
@@ -13,13 +13,13 @@ const {
   variant?: ButtonProps["variant"]
 }>()
 
-const summoner = computed(() => s_session().summoner)
+const summoner = computed(() => sSession().summoner)
 
 const open = shallowRef<boolean>(false)
 
 function handleBlock() {
   open.value = false
-  ui().blockDialog = true
+  session().blockDialog = true
 } /*
     animation="shift-toward"
     theme="base clean no-arrow"

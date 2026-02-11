@@ -1,13 +1,13 @@
 // stores/cooldown.ts
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
 interface CooldownEntry {
   timestamp: number
   wait: number
 }
 
-export const useCooldownStore = defineStore(
-  'cooldown',
+export const cds = defineStore(
+  "cooldown",
   () => {
     const cooldowns = ref<Record<string, CooldownEntry>>({})
 

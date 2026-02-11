@@ -3,74 +3,76 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const store = useMatchFilters()
+const store = matchFilter()
 const { filter } = storeToRefs(store)
 
 const model = computed({
   get: () => filter?.value.ally,
   set: (val) => store.setFilter("ally", val),
 })
-const { allies } = storeToRefs(s_champion())
-const alliesList = computed(() => (allies.value ?? []).sort((a, b) => b.games - a.games))
+const { allies } = storeToRefs(sChampion())
+const alliesList = computed(() =>
+  (allies.value ?? []).sort((a, b) => b.games - a.games)
+)
 </script>
 
 <template>
-  <UCard variant="p1" :ui="{ root: 'p-0' }">
+  <div :ui="{ root: 'p-0' }">
     <Listbox v-model:model-value="model" :multiple="false">
-      <ListboxContent class="h-100 max-h-100 w-full overflow-auto px-1.5 py-2">
-        <template v-if="!s_matches().loading">
-          <template
-          v-for="(item, ix) in alliesList"
-            :key="item.name">
-            <ListboxItem as-child :value="item.puuid ?? ''">
-              <UButton
-                variant="ghost"
-                color="p0"
+      <ListboxContent
+        class="h-100 max-h-100 w-full space-y-1.5 overflow-auto overscroll-contain! px-1.5 py-2">
+        <template v-if="!sMatches().loading">
+          <ListboxItem
+            v-for="(item, ix) in alliesList"
+            :key="item.name"
+            as-child
+            :value="item.puuid ?? ''">
+            <UButton
+              variant="ghost"
+              :ui="{
+                base: cn(
+                  'grid w-full max-w-full grid-cols-[5fr_repeat(2,1fr)] items-center overflow-hidden px-2 py-0',
+                  {
+                    'opacity-74 grayscale': model && item.puuid !== model,
+                  }
+                ),
+              }"
+              size="2xl">
+              <UUser
+                size="lg"
+                :name="item.name"
+                :description="`#${item.tag}`"
+                :ui="{
+                  root: 'w-fit overflow-hidden justify-self-start ',
+                  wrapper: 'text-start items-center',
+                }"
                 :avatar="{
                   src: getSummonerIcon(item.icon),
                   icon: 'lol:champ',
-                }"
-                :ui="{
-                  base: cn('w-full items-center pr-2', {
-                    'grayscale opacity-74': model && item.puuid !== model,
-                  }),
-                  leadingAvatar: 'size-11',
-                }"
-                size="xl">
-                <div
-                  class="grid grow grid-cols-2 items-center justify-start gap-px py-3.5 text-start *:not-first:text-xs *:even:justify-end *:even:justify-self-end *:even:text-end">
-                  <span class="text-sm font-semibold">
-                    {{ item.name }}
+                }" />
+
+              <div
+                class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
+                <template v-if="model && model !== item.puuid">
+                  <Placeholder
+                    v-for="i in 2"
+                    :key="i"
+                    size="xs"
+                    class="w-12 last:mt-2" />
+                </template>
+                <template v-else>
+                  <span> {{ item.win }} win </span>
+                  <span>
+                    {{ Number(item.games) - Number(item.win) }} loss
                   </span>
-
-                  <template v-if="model && model !== item.puuid">
-                    <Placeholder
-                      v-for="i in 3"
-                      :key="i"
-                      size="xs"
-                      class="w-12" />
-                  </template>
-
-                  <template v-else>
-                    <span> {{ item.win }} win </span>
-                    <span> #{{ item.tag }} </span>
-                    <span>
-                      {{ Number(item.games) - Number(item.win) }} loss
-                    </span>
-                  </template>
-                </div>
-                <div
-                  class="z-0 grid w-14 shrink-0 place-items-center justify-end">
-                  <ChampWinrate :ally="item" />
-                </div>
-              </UButton>
-            </ListboxItem>
-
-            <USeparator
-              v-if="ix !== alliesList.length - 1"
-              color="p0"
-              class="opacity-80" />
-          </template>
+                </template>
+              </div>
+              <div
+                class="relative z-0 col-start-3 grid w-14 shrink-0 place-items-center justify-end justify-self-end">
+                <ChampWinrate :ally="item" />
+              </div>
+            </UButton>
+          </ListboxItem>
         </template>
 
         <template v-else>
@@ -92,5 +94,5 @@ const alliesList = computed(() => (allies.value ?? []).sort((a, b) => b.games - 
                   name="ion:star" /> -->
       </ListboxContent>
     </Listbox>
-  </UCard>
+  </div>
 </template>

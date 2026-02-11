@@ -90,7 +90,7 @@ const primaryColor = computedAsync(() => {})
           </label>
         </DropdownMenuItem>
 
-        <DropdownMenuSeparator />
+        <USeparator />
         <DropdownMenuItem
           class=""
           @click="newRuneSet(pocket.key)">

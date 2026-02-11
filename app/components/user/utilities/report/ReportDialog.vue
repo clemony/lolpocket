@@ -53,7 +53,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     description: "",
   })
 
-  return
+  
 }
 </script>
 
@@ -66,7 +66,9 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     @update:open="!ts().reportOpen ? form?.clear() : null">
     <slot v-if="button" :report="ts().report()">
       <UButton as-child>
-        <button class="text-xs hover:underline">Report</button>
+        <button class="text-xs hover:underline">
+          Report
+        </button>
       </UButton>
     </slot>
 
@@ -97,7 +99,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
           </UFormField>
  -->
           <UFormField v-slot="{ error }" name="message">
-            <InputOptionField
+            <UInputOptionField
               v-model="state.options"
               v-model:message="state.message"
               :option="options.find((option) => option.id === 'other')!"
@@ -114,8 +116,8 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
           </UFormField>
           <div class="flex w-full items-center">
             <div
-              v-auto-animate
               v-if="formErrors.find((e) => e.path === 'options')"
+              v-auto-animate
               class="mr-2 flex items-center gap-2 text-sm leading-none text-shade-domination/8">
               <icon
                 class="inline size-4.5 align-bottom font-medium text-shade-domination/8"

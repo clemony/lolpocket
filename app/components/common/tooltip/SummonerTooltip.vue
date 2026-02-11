@@ -22,14 +22,6 @@ const {
     trailing-icon="i-chain"
     :side
     :side-offset="['right', 'left'].includes(side) ? 28 : 14">
-    <span
-      :class="
-        cn(
-          'inline-flex items-center gap-1 align-baseline hover:underline',
-          className
-        )
-      ">
-      <slot />
-    </span>
+    <slot />
   </Tooltip>
 </template>

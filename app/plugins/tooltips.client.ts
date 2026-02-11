@@ -1,6 +1,7 @@
+import type { Placement } from "@floating-ui/dom"
+import type { VNodeRef } from "vue"
 //
 import { defineNuxtPlugin } from "#app"
-import type { Placement } from "@floating-ui/dom"
 import {
   arrow,
   autoUpdate,
@@ -9,11 +10,10 @@ import {
   shift,
   useFloating,
 } from "@floating-ui/vue"
-import type { VNodeRef } from "vue"
 import { createApp, h, markRaw, nextTick, shallowRef } from "vue"
+import { tooltipPayloadRegistry } from "~/utils/tooltipPayload"
 // import TooltipArrow from "~/base/tooltip/TooltipArrow.vue"
 import MiniTip from "../components/common/tooltip/TooltipRenderer.vue"
-import { tooltipPayloadRegistry } from "~/utils/tooltipPayload"
 
 export default defineNuxtPlugin(() => {
   if (typeof window === "undefined") return

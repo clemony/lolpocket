@@ -18,7 +18,7 @@ const role = computed(() => {
 </script>
 
 <template>
- <UButton
+  <UButton
     v-if="role"
     variant="outline"
     hover="btn"

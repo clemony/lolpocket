@@ -8,6 +8,13 @@
   "files.autoSave": "onFocusChange", // optional but recommended
 
   "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/nuxt/lolpocket/layers/ui/app/assets/css/tailwind.css",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
 
   "typescript.tsdk": "node_modules/typescript/lib",
   "exportall.config.folderListener": [

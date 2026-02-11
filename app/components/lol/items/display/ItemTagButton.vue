@@ -26,7 +26,7 @@ const tagValue = computed<ItemTag | undefined>(() => {
 </script>
 
 <template>
- <UButton
+  <UButton
     v-if="tagValue"
     variant="outline"
     hover="btn"

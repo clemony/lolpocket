@@ -29,9 +29,9 @@ const dateRange = ref({
 <template>
   <RangeCalendarRoot
     v-slot="{ grid, weekDays }"
-    @update:model-value="(e) => (dateRange = e)"
     v-bind="forwarded"
-    :class="cn('rounded-lg p-3', props.class)">
+    :class="cn('rounded-lg p-3', props.class)"
+    @update:model-value="(e) => (dateRange = e)">
     <RangeCalendarHeader class="px-2">
       <RangeCalendarPrevButton />
       <RangeCalendarHeading />

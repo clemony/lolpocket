@@ -1,3 +1,4 @@
+import type { Account, Settings } from "#shared/types"
 import {
   accountSchema,
   getEmptyAccount,
@@ -5,7 +6,6 @@ import {
   pocketSchema,
   settingsSchema,
 } from "#shared/schema"
-import type { Account, Settings } from "#shared/types"
 import * as v from "valibot"
 import { createSupabaseClient } from "../client.supabase"
 

@@ -17,7 +17,7 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
 <template>
   <ListboxItem
     v-bind="forwardedProps"
-    class="outline-0! outline-offset-0!"
+    class="h-fit w-full outline-0! outline-offset-0!"
     :autofocus="false">
     <slot />
   </ListboxItem>

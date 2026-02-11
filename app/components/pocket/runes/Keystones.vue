@@ -16,9 +16,9 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
 <template>
   <Tabs
     :model-value="set.keystone ?? undefined"
-    @update:model-value="(v) => (set.keystone = v == null ? null : Number(v))"
     class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden"
-    as="div">
+    as="div"
+    @update:model-value="(v) => (set.keystone = v == null ? null : Number(v))">
     <TabsList
       v-if="runes"
       mode="in-out"

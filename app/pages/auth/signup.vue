@@ -18,7 +18,7 @@ onBeforeRouteLeave(() => {
 </script>
 
 <template>
-  <UCard>
+  <NuxtLayout layout="card">
     <AuthForm type="signUp" />
-  </UCard>
+  </NuxtLayout>
 </template>

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
 
-const { champion, stats } = storeToRefs(s_champion())
-const { summoner } = storeToRefs(s_session())
-const { champions } = storeToRefs(s_data())
-const { mastery } = storeToRefs(s_champion())
+const { champion, stats } = storeToRefs(sChampion())
+const { summoner } = storeToRefs(sSession())
+const { champions } = storeToRefs(sData())
+const { mastery } = storeToRefs(sChampion())
 
 const param = useRouteParams("champion_key")
 console.log("🥸 - param:", param)

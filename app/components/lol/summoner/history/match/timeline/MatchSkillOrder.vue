@@ -22,7 +22,7 @@ const skillOrder = computed(() => [
 
 <template>
   <div class="flex w-170 items-center justify-between">
-    <Card
+    <UCard
       class="flex h-20 w-max shrink-0 place-items-center gap-2 rounded-xl px-4 py-3">
       <div
         v-for="(ability, i) in abilities
@@ -58,10 +58,10 @@ const skillOrder = computed(() => [
           order: i === 1 ? 2 : 4,
         }"
         name="right" />
-    </Card>
+    </UCard>
     <slot />
   </div>
-  <Card class="flex h-38 w-170 gap-4 rounded-xl px-4 py-3">
+  <UCard class="flex h-38 w-170 gap-4 rounded-xl px-4 py-3">
     <div
       v-if="abilities"
       class="grid shrink-0 grid-cols-[0.7fr_1fr] place-items-center gap-1.25">
@@ -109,5 +109,5 @@ const skillOrder = computed(() => [
         </div>
       </div>
     </div>
-  </Card>
+  </UCard>
 </template>

@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import ItemTooltip from '#components'
+import ItemTooltip from "#components"
 
 const {
   id,
-  side = 'top',
+  side = "top",
   class: className,
   loadingType,
   map,
+  disabled,
 } = defineProps<{
   id: number | null
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   loadingType?: LoadingStyle
   map?: number
   side?: Side
+  disabled?: boolean
 }>()
 
 const loaded = shallowRef<boolean>(false)
@@ -20,14 +22,14 @@ const loaded = shallowRef<boolean>(false)
 const toast = useToast()
 function showToast() {
   if (!id) return
-  if (!toast.toasts.value.find(t => t.id === `item-${id}`)) {
+  if (!toast.toasts.value.find((t) => t.id === `item-${id}`)) {
     toast.add({
       id: `item-${id}`,
       description: h(ItemTooltip, { id, map }),
       duration: 0,
       ui: {
-        root: 'p-0!'
-      }
+        root: "p-0!",
+      },
     })
   }
 }
@@ -35,8 +37,9 @@ function showToast() {
 
 <template>
   <Tooltip
+    :disabled
     :text="id ? itemNameById(id) : ''"
-    trailing-icon="i"
+    trailing-icon="i-right-click"
     :img="id ? `/img/items/${id}.webp` : undefined"
     :side>
     <Img
@@ -48,7 +51,7 @@ function showToast() {
             ' opacity-96 shadow-sm  shadow-black/30 drop-shadow-sm ':
               id && loaded,
           },
-          className,
+          className
         )
       "
       :src="id ? `/img/items/${id}.webp` : undefined"

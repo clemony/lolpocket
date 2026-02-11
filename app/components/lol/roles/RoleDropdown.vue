@@ -17,7 +17,7 @@ const pocketRoles = computed<string[]>({
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-     <UButton
+      <UButton
         class="hover:bgneutral/50 top-1.5 right-2 flex aspect-square size-10 rounded-lg px-1"
         variant="ghost">
         <component
@@ -50,7 +50,7 @@ const pocketRoles = computed<string[]>({
         </label>
       </DropdownMenuItem>
 
-      <DropdownMenuSeparator />
+      <USeparator />
 
       <DropdownMenuItem v-for="role in roles" :key="role" class="">
         <label class="flex gap-4 text-sm hover:bg-p2/60!" :for="role">

@@ -1,14 +1,10 @@
 // eslint.config.mjs
 import antfu from "@antfu/eslint-config"
-import css from "@eslint/css"
-import tsPlugin from "@typescript-eslint/eslint-plugin"
-import tsParser from "@typescript-eslint/parser"
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss"
 import pluginJsonc from "eslint-plugin-jsonc"
 import pluginVue from "eslint-plugin-vue"
 import jsoncParser from "jsonc-eslint-parser"
 import eslintParserVue from "vue-eslint-parser"
-import withNuxt from "./.nuxt/eslint.config.mjs"
 
 const customGroups = [
   {
@@ -39,22 +35,7 @@ const customGroups = [
   },
 ]
 
-export default withNuxt(
-  antfu(
-    {
-      files: ["**/*.ts", "**/*.tsx"],
-      languageOptions: {
-        parser: tsParser,
-        parserOptions: {
-          sourceType: "module",
-          ecmaVersion: "latest",
-          project: false,
-        },
-      },
-      plugins: {
-        "@typescript-eslint": tsPlugin,
-      },
-    },
+export default  antfu(
     {
       stylistic: false,
       ignores: [
@@ -125,7 +106,6 @@ export default withNuxt(
           "vue/padding-line-between-blocks": ["error", "always"],
         },
       },
-      jsdoc: {},
     },
 
     /* ---------- TAILWIND ---------- */
@@ -172,27 +152,7 @@ export default withNuxt(
         "better-tailwindcss/no-unregistered-classes": "off",
       },
 
-      files: ["**/*.vue", "**/*.ts"],
-
-      languageOptions: {
-        parser: eslintParserVue,
-      },
-    },
-
-    /* ---------- CSS ---------- */
-
-    {
-      extends: [css.configs.recommended],
-      files: ["**/*.css"],
-      language: "css/css",
-      plugins: { css },
-      rules: {
-        "css/no-invalid-at-rules": "error",
-        "css/no-duplicate-imports": "error",
-      },
-    }
-  )
-)
+    })
   .override(
     "antfu/perfectionist/setup",
     {
@@ -204,10 +164,7 @@ export default withNuxt(
     {
       rules: {
         /* ---------- PERFECTIONIST ---------- */
-        "perfectionist/sort-imports": [
-          "warn",
-          { newlinesBetween: 0, order: "asc", type: "natural" },
-        ],
+
 
         "perfectionist/sort-interfaces": [
           "warn",
@@ -243,10 +200,10 @@ export default withNuxt(
     "no-unused-vars": "off",
     "style/comma-dangle": "off",
     "style/eol-last": "off",
-    "ts/no-unused-expressions": "off",
     "unused-imports/no-unused-imports": "off",
     "unused-imports/no-unused-vars": "off",
     "command/command": "off",
+    "perfectionist/sort-imports":  "off",
   })
   .override(
     "antfu/regexp/rules",
@@ -259,20 +216,6 @@ export default withNuxt(
     {
       rules: {
         "regexp/no-legacy-features": "off",
-      },
-    }
-  )
-  .override(
-    "antfu/jsdoc/rules",
-    {
-      files: ["**/*.{js,ts,jsx,tsx}"],
-      rules: {
-        "jsdoc/check-access": "warn",
-      },
-    },
-    {
-      rules: {
-        "jsdoc/check-access": "off",
       },
     }
   )

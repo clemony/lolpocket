@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
-const target = useTemplateRef<HTMLElement>('target')
+const target = useTemplateRef<HTMLElement>("target")
 
 const open = ref<boolean>(false)
 
 const route = useRoute()
-const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-)
+const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 const champions = computed(() => pocket.value?.champions ?? [])
 const l = computed(() => champions.value.length > 5)
@@ -26,12 +24,12 @@ const itemVariants = {
   closed: {
     opacity: 0,
     scale: 0.4,
-    transform: 'translateY(100%)',
+    transform: "translateY(100%)",
   },
   open: {
     opacity: 1,
     scale: 1,
-    transform: 'translateY(0)',
+    transform: "translateY(0)",
   },
 }
 </script>
@@ -52,7 +50,7 @@ const itemVariants = {
             staggerChildren: 0.1,
             type: 'spring',
           }">
-         <UButton
+          <UButton
             v-for="(champion, i) in champions"
             :key="champion"
             v-tippy="{
@@ -61,7 +59,6 @@ const itemVariants = {
               placement: 'left',
             }"
             class="grid size-22! place-items-center border-0 bg-p0 fx-0"
-
             shape="circle"
             :style="{
               zIndex: `-${i}`,
@@ -73,9 +70,7 @@ const itemVariants = {
                 bounce: 0.15,
                 type: 'spring',
               }">
-              <Champion
-                class="size-18! rounded-full"
-                :k="champion" />
+              <Champion class="size-18! rounded-full" :k="champion" />
             </motion.div>
           </UButton>
         </motion.div>
@@ -84,34 +79,28 @@ const itemVariants = {
         <div
           class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10">
           <template v-if="!open">
-            <Element
+            <div
               v-for="champion in groups"
               :key="champion"
               class="z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
-
               shape="circle">
-              <Champion
-                class="size-18! rounded-full"
-                :k="champion" />
-            </Element>
+              <Champion class="size-18! rounded-full" :k="champion" />
+            </div>
           </template>
-          <Element
+          <div
             v-if="l"
             class="relative z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
-
             shape="circle">
-            <Element
+            <div
               class="size-18! *:transition-all *:duration-300"
               shape="circle"
               color="neutral">
-              <icon
-                class="absolute group-closed:opacity-0"
-                name="up" />
+              <icon class="absolute group-closed:opacity-0" name="up" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ champions.length - 4 }}
               </h3>
-            </Element>
-          </Element>
+            </div>
+          </div>
         </div>
       </CollapsibleTrigger>
     </Collapsible>

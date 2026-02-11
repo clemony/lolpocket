@@ -26,7 +26,7 @@ const {
             className
           )
         ">
-       <UButton
+        <UButton
           v-if="cs().filters.role && clear"
           class="order-first hover:*:opacity-100"
           :variant

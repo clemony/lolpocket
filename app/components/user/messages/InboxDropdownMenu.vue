@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { inboxUnreadFilter } from "./inbox-management"
-import { testMessage } from "./test-message"
+import { inboxUnreadFilter } from "./inbox-management";
+import { testMessage } from "./test-message";
 </script>
 
 <template>
@@ -11,34 +11,36 @@ import { testMessage } from "./test-message"
     <USwitch v-model:model-value="inboxUnreadFilter" name="inbox-switch" />
   </Label>
 
-  <DropdownMenuSeparator class="my-1.5" />
+  <USeparator class="my-1.5" />
 
-  <div class="px-2 pt-1 text-sm font-semibold opacity-50">Tools</div>
-  <PopoverItem @click="as().inbox?.messages?.push(testMessage)">
+  <div class="px-2 pt-1 text-sm font-semibold opacity-50">
+    Tools
+  </div>
+  <UButton @click="as().inbox?.messages?.push(testMessage)">
     <icon class="size-4.5" name="hugeicons:test-tube-01" />
     Send Test Message
-  </PopoverItem>
-  <PopoverItem>
+  </UButton>
+  <UButton>
     <IconWrapper>
       <icon class="" name="fluent:mail-all-read-16-regular" />
     </IconWrapper>
     Mark all as Read
-  </PopoverItem>
+  </UButton>
 
-  <PopoverItem>
+  <UButton>
     <IconWrapper>
       <icon class="" name="fluent:mail-all-16-regular" />
     </IconWrapper>
     Mark all as Unread
-  </PopoverItem>
+  </UButton>
 
-  <DropdownMenuSeparator class="my-1.5" />
+  <USeparator class="my-1.5" />
 
-  <PopoverItem>
+  <UButton>
     <IconWrapper>
       <icon class="-mt-1 -ml-1! size-4" name="trash" />
       <span class="absolute -right-1 -bottom-1.5 text-lg opacity-70">🡭</span>
     </IconWrapper>
     Trash all Read Messages
-  </PopoverItem>
+  </UButton>
 </template>

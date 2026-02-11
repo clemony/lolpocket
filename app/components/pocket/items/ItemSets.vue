@@ -73,7 +73,7 @@ watch(items, (newItemSets) => {
       </template>
     </div>
 
-   <UButton
+    <UButton
       class="h-22 w-full rounded-xl border-p3/40"
       variant="outline"
       @click="pocket.items?.push(newItemSet())">

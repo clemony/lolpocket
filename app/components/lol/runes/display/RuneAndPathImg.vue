@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Primitive } from 'reka-ui';
+import { Primitive } from "reka-ui"
 
 const { class: className, pathClass } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   set: RuneSet
-  pathClass?: HTMLAttributes['class']
+  pathClass?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -13,7 +13,7 @@ const { class: className, pathClass } = defineProps<{
     :class="
       cn(
         'padding-0 group/btn grid size-20 shrink-0 place-items-center overflow-visible! dss drop-shadow-black/4',
-        className,
+        className
       )
     ">
     <div class="absolute inset-0 grid place-items-center overflow-visible">
@@ -22,21 +22,20 @@ const { class: className, pathClass } = defineProps<{
         v-memo="[set.keystone]"
         class="absolute h-auto! w-full! shrink-0 place-self-center opacity-97 drop-shadow-md drop-shadow-black/30"
         :alt="set.keystone.toString()"
-        :src="`/img/runes/${set.primary.path}/${set.keystone}.webp`">
+        :src="`/img/runes/${set.primary.path}/${set.keystone}.webp`" />
 
       <Icon
         v-else
         class="absolute size-9! shrink-0 text-pc/30 opacity-60"
         name="lp:runes" />
 
-      <Element
+      <div
         v-memo="[set.secondary.path]"
-
         :class="
           cn(
             'absolute -right-1.5 bottom-0 grid size-7 place-items-center overflow-hidden rounded-full border border-p3/90 shadow-xs transition-all duration-250 *:transition-opacity *:duration-200 group-hover/btn:bg-tint-p2/40! after:absolute after:inset-0 after:z-1 after:bg-black/70 after:opacity-0',
             { 'after:bg-transparent': !set.secondary.path },
-            pathClass,
+            pathClass
           )
         ">
         <img
@@ -44,7 +43,7 @@ const { class: className, pathClass } = defineProps<{
           class="absolute h-max! w-4.5! shrink-0"
           :title="set.secondary.path"
           :alt="set.secondary.path"
-          :src="`/img/paths/${set.secondary.path}.webp`">
+          :src="`/img/paths/${set.secondary.path}.webp`" />
 
         <Icon
           v-else
@@ -58,7 +57,7 @@ const { class: className, pathClass } = defineProps<{
               'text-white': set.secondary,
             })
           " />
-      </Element>
+      </div>
     </div>
   </Primitive>
 </template>

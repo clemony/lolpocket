@@ -6,28 +6,28 @@ const { match, player } = defineProps<{
   player: Player
   match: MatchData
 }>()
-const MatchBuild = resolveComponent('MatchBuild')
-const MatchDataTable = resolveComponent('MatchDataTable')
-const MatchScoreboard = resolveComponent('MatchScoreboard')
+const MatchBuild = resolveComponent("MatchBuild")
+const MatchDataTable = resolveComponent("MatchDataTable")
+const MatchScoreboard = resolveComponent("MatchScoreboard")
 
 const tabs = {
   Scoreboard: {
-    name: 'Scoreboard',
+    name: "Scoreboard",
     component: MatchScoreboard,
   },
   Statistics: {
-    name: 'Statistics',
+    name: "Statistics",
     component: MatchDataTable,
   },
 
   //
   Build: {
-    name: 'Build',
+    name: "Build",
     component: MatchBuild,
   },
 } as const
 
-const modelValue = ref<keyof typeof tabs>('Scoreboard')
+const modelValue = ref<keyof typeof tabs>("Scoreboard")
 
 const { getTimeline } = useTimeline()
 
@@ -45,11 +45,9 @@ const timeline: PlayerTimeline | null = await getTimeline(
       v-model:model-value="modelValue"
       class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-p3)_70%,transparent_30%)]">
       <FileTabsList class="relative h-9 w-[98%] gap-x-1 overflow-x-hidden">
-        <template
-          v-for="(tab, i) in tabs"
-          :key="i">
+        <template v-for="(tab, i) in tabs" :key="i">
           <FileTabTrigger
-            class="on:field-box e z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium on:dark:bg-tint-p0/1 on:light:bg-tint-p2/60"
+            class="on:field-box e on:dark:bg-tint-p0/1 on:light:bg-tint-p2/60 z-5 h-full min-w-38 shrink-0 cursor-pointer border-b-0 px-3 font-medium"
             :value="tab.name">
             {{ tab.name }}
           </FileTabTrigger>
@@ -63,8 +61,8 @@ const timeline: PlayerTimeline | null = await getTimeline(
       <div
         :class="
           cn(
-            'field-box tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! p-0 inset-shadow-none',
-            { 'rounded-tl-none': modelValue === 'Scoreboard' },
+            'tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! bg-p0 p-0 inset-shadow-none',
+            { 'rounded-tl-none': modelValue === 'Scoreboard' }
           )
         ">
         <component

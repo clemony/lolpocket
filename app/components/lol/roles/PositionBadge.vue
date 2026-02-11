@@ -1,29 +1,29 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui';
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   class: className,
   position: pos,
-  size = 'xs',
+  size = "xs",
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   position: MapPosition | string | null
   noLabel?: boolean
-  size?: ButtonProps['size']
+  size?: ButtonProps["size"]
   active?: boolean
   clear?: boolean
 }>()
-console.log('🌱 - p:', pos)
+console.log("🌱 - p:", pos)
 
 const position = computed(() => {
-  if (typeof pos !== 'string') return pos
+  if (typeof pos !== "string") return pos
 
-  return mapPositions.find(p => p.name === String(pos))
+  return mapPositions.find((p) => p.label === String(pos))
 })
 </script>
 
 <template>
- <UButton
+  <UButton
     v-if="position"
     variant="outline"
     hover="btn"
@@ -33,25 +33,20 @@ const position = computed(() => {
         'w-fit gap-2.5! rounded-lg text-sm! font-medium! text-pc/90 capitalize',
         {
           'order-first text-white hover:text-pc hover:**:text-pc':
-            active
-            || (cs().filters.position && cs().filters.position === position.name),
+            active ||
+            (cs().filters.position && cs().filters.position === position.label),
           'pr-3': active && clear,
         },
-        className,
+        className
       )
     "
     :style="{
-      backgroundColor: `${(cs().filters.position && cs().filters.position === position.name) || active ? position.color : 'transparent'}`,
+      backgroundColor: `${(cs().filters.position && cs().filters.position === position.label) || active ? position.color : 'transparent'}`,
     }">
-    <RoleIcon
-      class="text-white"
-      :position="position.name" />
+    <RoleIcon class="text-white" :position="position.label" />
     <slot>
-      {{ position.name }}
+      {{ position.label }}
     </slot>
-    <icon
-      v-if="clear"
-      class="size-4 text-white **:stroke-[2.6]"
-      name="x" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </UButton>
 </template>

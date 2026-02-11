@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 const props = withDefaults(
   defineProps<{
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
     placeholder?: string
-    inputClass?: HTMLAttributes['class']
+    inputClass?: HTMLAttributes["class"]
     setFocus?: boolean
     dark?: boolean
   }>(),
   {
-    placeholder: 'Search Items...',
+    placeholder: "Search Items...",
   }
 )
 
-const emit = defineEmits(['update:query'])
+const emit = defineEmits(["update:query"])
 
 const route = useRoute()
 
-const searchQuery = ref<string | undefined>('')
+const searchQuery = ref<string | undefined>("")
 /*
 watchEffect(() => {
   emit('update:query', searchQuery.value)
@@ -71,15 +71,15 @@ function handleReset() {
  */
 const variants = {
   collapsed: {
-    borderRadius: '100%',
+    borderRadius: "100%",
     gap: 0,
     padding: 0,
   },
   expanded: {
-    width: '220px',
-    borderRadius: '1.2rem',
-    gap: '10px',
-    padding: '10px',
+    width: "220px",
+    borderRadius: "1.2rem",
+    gap: "10px",
+    padding: "10px",
   },
 }
 
@@ -89,7 +89,7 @@ const inputVariants = {
     opacity: 0,
   },
   expanded: {
-    width: '200px',
+    width: "200px",
     opacity: 100,
   },
 }
@@ -97,8 +97,7 @@ const inputVariants = {
 const { clearFilters, filters, setFilter } = useItemFilter()
 
 watchEffect(() => {
-  if (searchQuery.value === '')
-    searchQuery.value = undefined
+  if (searchQuery.value === "") searchQuery.value = undefined
 })
 </script>
 
@@ -107,7 +106,7 @@ watchEffect(() => {
     :class="
       cn(
         'bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
-        props.class,
+        props.class
       )
     "
     :variants="variants"
@@ -120,7 +119,7 @@ watchEffect(() => {
     :animate="searchQuery !== undefined ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
-        <Input
+        <UInput
           v-model="searchQuery"
           class="m-0 size-full border-0 py-0 pl-5 shadow-none"
           type="text"

@@ -25,7 +25,7 @@ const {
             className
           )
         ">
-       <UButton
+        <UButton
           v-if="cs().filters.resource && clear"
           class="order-first hover:*:opacity-100"
           :variant

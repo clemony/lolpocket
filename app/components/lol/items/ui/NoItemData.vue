@@ -12,8 +12,7 @@ const { class: className, simple } = defineProps<{
     <Element
       class="text-xs font-medium text-pc/70 fx-0"
       base="btn"
-      size="xs"
-      >
+      size="xs">
       No data
     </Element>
   </ChampStatRowWrapper>
