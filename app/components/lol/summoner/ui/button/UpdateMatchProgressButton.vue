@@ -74,7 +74,7 @@ const tippy = computed(() => {
           {{
             typeof text === "string" ? text
             : typeof text === "boolean" ? "update"
-            : ""
+              : ""
           }}
         </span>
       </span>
@@ -88,7 +88,7 @@ const tippy = computed(() => {
         ">
         <div
           v-if="size !== 'xs'"
-          class="inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-xs font-semibold text-nowrap dst">
+          class="dst inline w-full grid-flow-col grid-cols-2 items-center justify-between pr-0.25 text-end align-bottom text-xs font-semibold text-nowrap">
           <span :class="cn('text-sm font-bold')">
             {{ cooldown?.formatted }}
           </span>

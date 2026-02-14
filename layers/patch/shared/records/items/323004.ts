@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 323004,
-  name: 'Manamune',
-  description: '35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.',
-  gold: {
-    base: 1100,
-    sell: 2030,
-    total: 2900
+      const item: Item =  {
+  "id": 323004,
+  "name": "Manamune",
+  "description": "35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.",
+  "gold": {
+    "base": 1100,
+    "purchasable": true,
+    "total": 2900,
+    "sell": 2030
   },
-  maps: [
+  "maps": [
     11
   ]
 }

@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import { removeSpellSet } from "~/domain/pocket/modifyPocket"
+
 const props = defineProps<{
   set: SpellSet
   pocket: Pocket
   setIndex: number
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const pocket = computed(() => props.pocket)
@@ -33,7 +35,7 @@ function handleSpells(e: number, i: number) {
       class="trash-button group/btn btn btn-square btn-ghost btn-xs"
       @click="removeSpellSet(pocket, props.set)">
       <icon
-        class="size-5 shrink-0 text-pc/50 dst group-hover/btn:text-pc/100"
+        class="size-5 shrink-0 text-pc/50 ds-2xs group-hover/btn:text-pc/100"
         name="trash" />
     </button>
   </div>

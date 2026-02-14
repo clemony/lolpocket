@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { ability, class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   ability: Ability
 }>()
 </script>
@@ -8,13 +8,13 @@ const { ability, class: className } = defineProps<{
 <template>
   <div
     v-if="
-      ability
-        && (ability.resource
-          || ability.cooldown?.length
-          || ability.rechargeRate
-          || ability.cost?.length
-          || ability.effectRadius
-          || ability.targetRange)
+      ability &&
+        (ability.resource ||
+          ability.cooldown?.length ||
+          ability.rechargeRate ||
+          ability.cost?.length ||
+          ability.effectRadius ||
+          ability.targetRange)
     "
     :class="cn('', className)">
     <div
@@ -22,7 +22,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2"
       title="Cooldown">
       <Icon
-        class="mt-px inline size-3 shrink-0 text-black dst"
+        class="dst mt-px inline size-3 shrink-0 text-black"
         name="stat:abilityHaste" />
       {{ ability.cooldown }}
     </div>
@@ -33,7 +33,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2"
         title="Max Charges">
         <Icon
-          class="-mt-px inline size-7 dst *:stroke-[1.3]"
+          class="-mt-px inline size-7 ds-2xs *:stroke-[1.3]"
           :name="`stat:charge-${ability.maxCharges}`" />
 
         <span>{{ ability.maxCharges }}</span>
@@ -44,7 +44,7 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2"
         title="Recharge Rate">
         <icon
-          class="-mt-px size-7 dst *:stroke-[1.3]"
+          class="-mt-px size-7 ds-2xs *:stroke-[1.3]"
           name="mynaui:battery-charging" />
         {{ ability.rechargeRate }}
       </div>
@@ -57,7 +57,7 @@ const { ability, class: className } = defineProps<{
       :name="ability.resource">
       <Icon
         :name="`stat:${ability.resource.replace(/\s/g, '-').toLowerCase()}`"
-        :class="cn('size-3.25 dst')" />
+        :class="cn('size-3.25 ds-2xs')" />
       {{ ability.cost }}
     </div>
 
@@ -67,7 +67,7 @@ const { ability, class: className } = defineProps<{
       title="Effect Radius">
       <span class="relative size-3 justify-start">
         <Icon
-          class="absolute -top-0.5 size-3.25 dst"
+          class="dst absolute -top-0.5 size-3.25"
           name="stat:gameplayRadius" />
       </span>
       {{ ability.effectRadius }}
@@ -77,9 +77,7 @@ const { ability, class: className } = defineProps<{
       v-if="ability.targetRange"
       class="flex items-center gap-2"
       title="Range">
-      <Icon
-        class="size-4 dst"
-        name="stat:rangeCenter" />
+      <Icon class="dst size-4" name="stat:rangeCenter" />
       {{ ability.targetRange }}
     </div>
   </div>

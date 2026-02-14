@@ -22,7 +22,7 @@ const tags = ref<string[]>([])
       <label
         v-for="position in mapPositions"
         :key="position.label"
-        class="group/btn badge flex h-6.5! h-9 w-fit cursor-pointer items-center gap-1.5 rounded-lg pr-2.5 pl-1.5 badge-lg font-medium ring-pc/60 ring-offset-p0 duration-0 hover:ring hover:ring-offset-2"
+        class="group/btn badge flex h-6.5 w-fit cursor-pointer items-center gap-1.5 rounded-lg pr-2.5 pl-1.5 badge-lg font-medium ring-pc/60 ring-offset-p0 duration-0 hover:ring hover:ring-offset-2"
         for="position.label"
         :style="{
           backgroundColor: position.color,
@@ -42,7 +42,7 @@ const tags = ref<string[]>([])
 
         <component
           :is="`i-lol-${position.label}`"
-          :class="cn('ml-1 size-3.5 text-white dst')" />
+          :class="cn('ml-1 size-3.5 text-white ds-2xs')" />
 
         <span class="text-white">
           {{ position.label }}

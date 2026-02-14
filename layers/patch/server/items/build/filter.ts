@@ -1,45 +1,39 @@
-import fs from 'node:fs'
-import { resolve } from 'node:path'
-import { markUpdate } from '../../misc/markUpdate'
-import { normalizeArray } from '../../utils'
+import fs from "node:fs"
+import { resolve } from "node:path"
+import { markUpdate } from "../../misc/markUpdate"
+import { normalizeArray } from "../../utils"
 
-const dataPath = resolve(`./layers/patch/server/items/raw/items-lite.json`)
-const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
+const dataPath = resolve(`./layers/patch/server/items/raw/items-merged.json`)
+const raw = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
   string,
   any
 >
 
-const outputTag = resolve(
-  './layers/patch/shared/constants/items/tagToItem.ts'
-)
-const outputMap = resolve(
-  './layers/patch/shared/constants/items/mapToItem.ts'
-)
+const outputTag = resolve("./layers/patch/shared/constants/items/tagToItem.ts")
+const outputMap = resolve("./layers/patch/shared/constants/items/mapToItem.ts")
 const outputPrice = resolve(
-  './layers/patch/shared/constants/items/itemPrice.ts'
+  "./layers/patch/shared/constants/items/itemPrice.ts"
 )
 const outputRank = resolve(
-  './layers/patch/shared/constants/items/rankToItem.ts'
+  "./layers/patch/shared/constants/items/rankToItem.ts"
 )
 
 const outputItemRank = resolve(
-  './layers/patch/shared/constants/items/itemRank.ts'
+  "./layers/patch/shared/constants/items/itemRank.ts"
 )
 const outputStat = resolve(
-  './layers/patch/shared/constants/items/statToItem.ts'
+  "./layers/patch/shared/constants/items/statToItem.ts"
 )
 const outputUnpurchasable = resolve(
-  './layers/patch/shared/constants/items/unpurchasableItems.ts'
+  "./layers/patch/shared/constants/items/unpurchasableItems.ts"
 )
 const outputRecipe = resolve(
-  './layers/patch/shared/constants/items/itemRecipe.ts'
+  "./layers/patch/shared/constants/items/itemRecipe.ts"
 )
-const outputAka = resolve(
-  './layers/patch/shared/constants/items/itemAka.ts'
-)
+const outputAka = resolve("./layers/patch/shared/constants/items/itemAka.ts")
 
-const itemsById: Record<number, ItemLite> = {}
-const itemRecipe = {} as Record<number, number[]>
+const itemsById: Record<number, Item> = {}
+const itemRecipe = {} as Record<string, number[]>
 const mapToItem = {} as Record<number, number[]>
 const itemPrice = {} as Record<number, number>
 const itemRank = {} as Record<number, string>
@@ -51,13 +45,13 @@ const unpurchasableItems = [] as number[]
 const akaLookup: Record<string, number> = {}
 
 for (const item of Object.values(raw)) {
-  const { id, aka, gold, maps, purchasable, rank, recipe, stats, tags } = item
+  const { id, aka, gold, maps, rank, recipe, stats, tags } = item
 
   itemsById[id] = item
   itemRank[id] = rank
   itemRecipe[id] = recipe
-  itemPrice[id] = gold.total
-  console.log('🥸 - itemRecipe:', itemRecipe)
+  itemPrice[id] = gold?.total
+  console.log("🥸 - itemRecipe:", itemRecipe)
   for (const r of normalizeArray(rank)) {
     if (!rankToItem[r]) rankToItem[r] = []
     rankToItem[r].push(id)
@@ -78,7 +72,7 @@ for (const item of Object.values(raw)) {
     statToItem[stat].push(id)
   }
 
-  if (purchasable === false) {
+  if (gold?.purchasable === false) {
     unpurchasableItems.push(id)
   }
 
@@ -92,7 +86,7 @@ fs.writeFileSync(
   outputRecipe,
   `// ${markUpdate()}
 
-export const itemRecipe: Record<number, number[]> = ${JSON.stringify(itemRecipe, null, 2)}`
+export const itemRecipe: Record<string, number[] | null> = ${JSON.stringify(itemRecipe, null, 2)}`
 )
 
 // Output filters

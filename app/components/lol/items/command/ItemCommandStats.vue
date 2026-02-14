@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { filtered, filters, setFilter } = useItemFilter() as any
+const { filtered, filters } = is() as any
 </script>
 
 <template>
@@ -17,10 +17,7 @@ const { filtered, filters, setFilter } = useItemFilter() as any
         as="div"
         unwrap-element
         :appear="false">
-        <Motion
-          v-for="stat in statIndex"
-          :key="stat.id"
-          as="div">
+        <Motion v-for="stat in statIndex" :key="stat.id" as="div">
           <label
             v-if="!filters.stats.includes(stat.id)"
             class="flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize hover:bg-accent">
@@ -29,13 +26,13 @@ const { filtered, filters, setFilter } = useItemFilter() as any
               class="peer hidden"
               type="checkbox"
               name="item-types"
-              :value="stat.id">
+              :value="stat.id" />
 
             <span class="grow">{{ stat.name }}</span>
 
             <div
               class="badge rounded-field border-accent bg-p0/90 text-xs! tracking-wide">
-              <span class="text-pc dst">{{ stat.abbr?.[0] ?? '' }}</span>
+              <span class="dst text-pc">{{ stat.abbr?.[0] ?? "" }}</span>
             </div>
           </label>
         </Motion>

@@ -1,34 +1,35 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 447105,
-  name: 'Empyrean Promise',
-  description: '70 Ability Power\n18% Heal and Shield Power\n30 Ability Haste\n125% Base Mana Regen\n\nACTIVE (0s)\nVigilance\nTeleport to your ally and grant  shield for 5s when landing. Can be used when Ally is downed.',
-  noEffects: false,
-  rank: 'Special',
-  removed: false,
-  specialRecipe: 220007,
-  active: [
+      const item: Item =  {
+  "name": "Empyrean Promise",
+  "id": 447105,
+  "rank": "Special",
+  "specialRecipe": 220007,
+  "noEffects": false,
+  "removed": false,
+  "active": [
     {
-      name: 'Vigilance',
-      effects: '<img src="/img/icons/dash.webp" class="tip-icon " />Dash to the current location of your ally and upon completion grant both yourself and the ally a <img src="/img/icons/shield.webp" class="tip-icon light:invert" />shield that absorbs 100 – 250 (based on level) (+100% of your AP) (+10% of your <b>bonus</b> health) damage for 5 seconds. <b>Can be used even while the ally is dead.</b>',
-      unique: true
+      "unique": true,
+      "name": "Vigilance",
+      "effects": "<img src=\"/img/icons/dash.webp\" class=\"tip-icon \" />Dash to the current location of your ally and upon completion grant both yourself and the ally a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs 100 – 250 (based on level) (+100% of your AP) (+10% of your <b>bonus</b> health) damage for 5 seconds. <b>Can be used even while the ally is dead.</b>"
     }
   ],
-  gold: {
-    base: 1000,
-    sell: 400,
-    total: 1000
+  "stats": {
+    "abilityPower": 70,
+    "healAndShieldPower": 18,
+    "manaRegen": 125,
+    "abilityHaste": 30
   },
-  maps: [
+  "description": "70 Ability Power\n18% Heal and Shield Power\n30 Ability Haste\n125% Base Mana Regen\n\nACTIVE (0s)\nVigilance\nTeleport to your ally and grant  shield for 5s when landing. Can be used when Ally is downed.",
+  "gold": {
+    "base": 1000,
+    "purchasable": true,
+    "total": 1000,
+    "sell": 400
+  },
+  "maps": [
     30
-  ],
-  stats: {
-    abilityHaste: 30,
-    abilityPower: 70,
-    healAndShieldPower: 18,
-    manaRegen: 125
-  }
+  ]
 }
 export default item

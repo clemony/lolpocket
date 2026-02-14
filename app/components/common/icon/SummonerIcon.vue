@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSummonerIcon } from "~/domain/utils/img"
+
 const {
   class: className,
   iconId,
@@ -10,8 +12,8 @@ const {
   alt?: string
 }>()
 
-const resolvedIcon = computed(() =>
-  iconId ?? summoner?.icon ?? as().account?.icon ?? 0
+const resolvedIcon = computed(
+  () => iconId ?? summoner?.icon ?? user().account?.icon ?? 0
 )
 </script>
 

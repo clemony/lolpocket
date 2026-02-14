@@ -34,9 +34,9 @@
   --ui-text-toned: var(--primary-700);
   --ui-text-accented: var(--primary-800);
 
-  --ui-border: var(--primary-300);
-  --ui-border-muted: var(--primary-200);
-  --ui-border-accented: var(--primary-400);
+  --ui-border: var(--primary-200);
+  --ui-border-muted: var(--primary-100);
+  --ui-border-accented: var(--primary-300);
   --ui-border-inverted: var(--primary-900);
 
   --ui-p0: var(--primary-0);

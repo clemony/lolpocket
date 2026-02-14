@@ -33,12 +33,6 @@
   --color-warning: var(--ui-pre);
   --color-error: var(--ui-dom);
 
-  --color-precision: var(--ui-pre);
-  --color-domination: var(--ui-dom);
-  --color-sorcery: var(--ui-sorc);
-  --color-resolve: var(--ui-res);
-  --color-inspiration: var(--ui-insp);
-
   --color-pre: var(--ui-pre);
   --color-dom: var(--ui-dom);
   --color-sorc: var(--ui-sorc);

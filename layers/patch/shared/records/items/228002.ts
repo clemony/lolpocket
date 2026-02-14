@@ -1,46 +1,47 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 228002,
-  name: 'Wooglet\'s Witchcap',
-  nicknames: [
-    'Quest',
-    'Deathcap'
+      const item: Item =  {
+  "name": "Wooglet's Witchcap",
+  "id": 228002,
+  "rank": "Special",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "Quest",
+    "Deathcap"
   ],
-  description: '300 Ability Power\n50 Armor\n20 Ability Haste\n\nMagical Opus\nIncreases your total Ability Power by 50%.\n\nRequires Augment: Quest: Wooglet\'s Witchcap\n\nTime Stop\nEnter Stasis for 2.5 seconds.',
-  noEffects: false,
-  rank: 'Special',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+  "passives": [
     {
-      name: 'Stasis',
-      effects: 'Put yourself in <img src="/img/icons/stasis.webp" class="tip-icon " />stasis for 2.5 seconds, rendering you <img src="/img/icons/untargetable.webp" class="tip-icon " />untargetable and <img src="/img/icons/invulnerable.webp" class="tip-icon " />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.',
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Magical Opus",
+      "effects": "Increase your ability power by 50%."
     }
   ],
-  gold: {
-    base: 6000,
-    sell: 4200,
-    total: 6000
+  "active": [
+    {
+      "unique": true,
+      "name": "Stasis",
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon \" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon \" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon \" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
+    }
+  ],
+  "stats": {
+    "abilityPower": 300,
+    "armor": 50,
+    "abilityHaste": 20
   },
-  maps: [
+  "description": "300 Ability Power\n50 Armor\n20 Ability Haste\n\nMagical Opus\nIncreases your total Ability Power by 50%.\n\nRequires Augment: Quest: Wooglet's Witchcap\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
+  "gold": {
+    "base": 6000,
+    "purchasable": true,
+    "total": 6000,
+    "sell": 4200
+  },
+  "maps": [
     12,
     30
-  ],
-  passives: [
-    {
-      name: 'Magical Opus',
-      effects: 'Increase your ability power by 50%.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 20,
-    abilityPower: 300,
-    armor: 50
-  }
+  ]
 }
 export default item

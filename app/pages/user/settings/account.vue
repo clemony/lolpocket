@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { providers } from "~/domain/lp/external/authProviders"
+
 definePageMeta({
   title: "Account",
   description: "Manage your account settings and login settings.",
@@ -9,13 +11,13 @@ definePageMeta({
 })
 
 const userProviders = await computedAsync(() =>
-  Object.values(as().user?.app_metadata?.providers ?? {})
+  Object.values(user().user?.app_metadata?.providers ?? {})
 )
 const email = shallowRef<string | null>(null)
 const username = shallowRef<string | null>(null)
 onMounted(() => {
-  email.value = as().user?.email ?? null
-  username.value = as().account?.username ?? null
+  email.value = user().user?.email ?? null
+  username.value = user().account?.username ?? null
 })
 </script>
 
@@ -41,14 +43,14 @@ onMounted(() => {
       <UInput v-model:model-value="email" @blur="validateField(emailSchema)">
         <template #trailing>
           <InputClear @clear-input="is().filters.query = ''" />
-          <Tooltip v-if="!as().user?.email_confirmed_at" text="Verified!">
+          <Tooltip v-if="!user().user?.email_confirmed_at" text="Verified!">
             <UBadge icon="i-tick" size="xs" color="neutral">
               pending...
             </UBadge>
           </Tooltip>
           <Tooltip
             v-else
-            :text="`Check your inbox! Verification email sent at ${as().user?.email_change_sent_at}.`">
+            :text="`Check your inbox! Verification email sent at ${user().user?.email_change_sent_at}.`">
             <UBadge icon="i-refresh" size="xs" variant="outline">
               pending...
             </UBadge>
@@ -81,8 +83,8 @@ onMounted(() => {
                 <Icon
                   :name="String(provider.icon)"
                   :class="
-                    cn('size-10.5 dst', {
-                      'text-domination': provider.name === 'riot',
+                    cn('size-10.5 ds-2xs', {
+                      'text-dom': provider.name === 'riot',
                       'scale-90': provider.name === 'google',
                     })
                   " />
@@ -92,11 +94,11 @@ onMounted(() => {
             <USwitch
               :ui="{ label: 'order-first' }"
               :label="
-                userProviders?.includes(provider.name) ? 'Connected' : (
-                  'Not Connected'
-                )
+                userProviders?.includes(provider.name)
+                  ? 'Connected'
+                  : 'Not Connected'
               "
-              class="switch -mt-0.25 scale-90 dst data-[state=checked]:ring data-[state=checked]:ring-white/60"
+              class="switch -mt-0.25 scale-90 ds-2xs data-[state=checked]:ring data-[state=checked]:ring-white/60"
               :model-value="userProviders?.includes(provider.name)" />
           </UCard>
         </Label>

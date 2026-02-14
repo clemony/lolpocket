@@ -5,7 +5,10 @@ const sizes = [20, 40, 180, 77]
 
 const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4])
 
-console.log("🥸 - findSummoner - acc():", acc().accounts)
+console.log(
+  "🥸 - findSummoner - summonerAccounts():",
+  summonerAccounts().accounts
+)
 const headerHeight = 400
 
 const toast = useToast()
@@ -49,7 +52,7 @@ definePageMeta({
       <UButton @click="accountFetch()">
         fetch user datasss
       </UButton>
-      <UButton @click="console.log('summoner:', ss().cache)">
+      <UButton @click="console.log('summoner:', sSummoner().cache)">
         resolve the slug
       </UButton>
 

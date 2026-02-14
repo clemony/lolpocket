@@ -1,6 +1,6 @@
 export default {
   slots: {
-    base: "w-fit border  flex dxs  items-center",
+    base: "w-fit border  flex ds-xs  items-center",
   },
   variants: {
     color: {
@@ -16,6 +16,7 @@ export default {
       pre: "",
       res: "",
       sorc: "",
+      transparent: "",
     },
     variant: {
       solid: "",
@@ -53,6 +54,12 @@ export default {
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]",
       },
+      "2xs": {
+        base: "text-[10px]/3 px-1 py-0   gap-1 rounded-md",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-3.5 **:stroke-[2.4]",
+        trailingIcon: "size-3.5 **:stroke-[2.4]",
+      },
     },
     square: {
       true: "",
@@ -63,7 +70,7 @@ export default {
       color: "ad",
       variant: "solid",
       class:
-        "border-ad dark:font-bold light:font-semibold text-white   light:bg-ad/70 dark:bg-ad/90",
+        "border-ad dark:font-bold light:font-semibold text-white **:text-white  light:bg-ad/70 dark:bg-ad/90",
     },
     {
       color: "p0",
@@ -84,6 +91,11 @@ export default {
       color: "p3",
       variant: "outline",
       class: "border-p3 text-pc font-medium ",
+    },
+    {
+      color: "transparent",
+      variant: "ghost",
+      class: "border-none ring-none shadow-none fx-0 text-pc  ",
     },
 
     // neutral

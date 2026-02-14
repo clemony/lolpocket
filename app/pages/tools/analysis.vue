@@ -6,9 +6,6 @@ definePageMeta({
   path: "/tools/analysis",
   search: "hidden",
 })
-
-const q = computed(() => ms().analysisQueueSelect)
-const p = computed(() => ms().analysisPatchSelect)
 </script>
 
 <template>

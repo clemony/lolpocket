@@ -1,3 +1,6 @@
+import { bumpStat } from "~/domain/stats/helpers/bumpValues"
+import { pickBest } from "~/domain/stats/helpers/pickBest"
+
 //
 export function useChampionItemStats(
   matches: Ref<MatchData[]>,

@@ -1,3 +1,15 @@
+import { bumpAverage } from "~/domain/stats/helpers/bumpValues"
+import {
+  getRoleStat,
+  normalizeRole,
+} from "~/domain/stats/helpers/normalizeRole"
+import { sortEntriesByPickrate } from "~/domain/stats/helpers/sortEntries"
+import { AGGREGATED_STAT_SCHEMA } from "~/domain/stats/stats/aggregatedStatSchema"
+import { applyParticipantStats } from "~/domain/stats/stats/applyParticipantStats"
+import { bumpFromPlayerStats } from "~/domain/stats/stats/bumpPlayerStats"
+import { finalizeStatAverage } from "~/domain/stats/stats/finalizeStatAverage"
+import { initFromSchema } from "~/domain/stats/stats/initFromSchema"
+
 //
 export function useAggregateSingleChampion(
   matchData: ComputedRef<MatchPlayerData[]>
@@ -12,8 +24,8 @@ export function useAggregateSingleChampion(
       championId: first.championId,
       championName: champNameById(first.championId) ?? "",
       games: 0,
-      losses: 0,
-      wins: 0,
+      loss: 0,
+      win: 0,
       gamePatches: [],
       role: {
         stats: {} as Record<string, StatDetail>,
@@ -69,26 +81,23 @@ export function useAggregateSingleChampion(
           10
       ) / 10
 
-    acc.winrate = acc.games ? Math.round((acc.wins / acc.games) * 1000) / 10 : 0
+    acc.winrate = acc.games ? Math.round((acc.win / acc.games) * 1000) / 10 : 0
     if (acc.gameTime) {
       acc.gameTime.average = acc.games ? acc.gameTime.average / 60 : 0
     }
 
-    acc.visionScorePerMin =
-      acc.games ?
-        Number.parseFloat(
+    acc.visionScorePerMin = acc.games
+      ? Number.parseFloat(
           (
-            (((acc.visionScore?.average ?? 0) /
-              (acc.gameTime?.average ?? 1)) *
+            (((acc.visionScore?.average ?? 0) / (acc.gameTime?.average ?? 1)) *
               10) /
             10
           ).toFixed(1)
         )
       : 0
 
-    acc.csPerMin =
-      acc.games ?
-        Number.parseFloat(
+    acc.csPerMin = acc.games
+      ? Number.parseFloat(
           (
             ((acc.minionsKilled?.average ?? 0) +
               (acc.neutralMinionsKilled?.average ?? 0)) /
@@ -98,9 +107,8 @@ export function useAggregateSingleChampion(
       : 0
 
     for (const stat of Object.values(acc.role?.stats ?? {})) {
-      const wins = stat.win ?? 0
-      stat.winrate =
-        stat.games ? Math.round((wins / stat.games) * 1000) / 10 : 0
+      const win = stat.win ?? 0
+      stat.winrate = stat.games ? Math.round((win / stat.games) * 1000) / 10 : 0
       stat.pickrate = Math.round((stat.games / acc.games) * 1000) / 10
     }
     const mostPlayed = sortEntriesByPickrate(acc.role?.stats ?? {})[0]

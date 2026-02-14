@@ -63,11 +63,11 @@ watch(
         @change="emit('update:filter', filter)" />
 
       <icon
-        class="swap-off size-5.5 dst peer-disabled:text-pc/20"
+        class="swap-off size-5.5 ds-2xs peer-disabled:text-pc/20"
         name="hugeicons:monocle" />
 
       <icon
-        class="swap-on size-6 dst peer-disabled:text-pc/20"
+        class="swap-on size-6 ds-2xs peer-disabled:text-pc/20"
         name="streamline:rainbow" />
     </label>
 
@@ -75,7 +75,7 @@ watch(
       <UButton>
         <button v-tippy="'Background Align'" class="btn btn-square btn-ghost">
           <icon
-            class="size-5.5 shrink-0 dst"
+            class="dst size-5.5 shrink-0"
             name="ph:arrows-out-line-horizontal" />
         </button>
       </UButton>
@@ -109,7 +109,7 @@ watch(
       @update:model-value="(e: string) => (cardFont1.value = e)" /> -->
 
     <button v-tippy="'Add Note'" class="btn btn-square btn-ghost">
-      <icon class="size-5.5 dst" name="iconoir:text" />
+      <icon class="dst size-5.5" name="iconoir:text" />
     </button>
 
     <Grow />
@@ -117,28 +117,28 @@ watch(
     <Separator class="mx-3 h-5/6 bg-p2" orientation="vertical" />
 
     <button v-tippy="'Share'" class="btn btn-square btn-ghost">
-      <icon class="size-5.5 dst" name="share" />
+      <icon class="dst size-5.5" name="share" />
     </button>
 
     <button
       v-tippy="'Download Image'"
       class="btn btn-square btn-ghost"
       @click="emit('download')">
-      <icon class="size-5.5 dst" name="iconoir:download" />
+      <icon class="dst size-5.5" name="iconoir:download" />
     </button>
 
     <Separator class="mx-3 h-5/6 bg-p2" orientation="vertical" />
 
     <button class="control-btn btn btn-square btn-ghost">
-      <icon class="size-5.5 dst" name="ph:arrows-in-simple-light" />
+      <icon class="dst size-5.5" name="ph:arrows-in-simple-light" />
     </button>
 
     <button class="btn btn-square btn-ghost">
-      <icon class="size-5.5 dst" name="iconoir:zoom-in" />
+      <icon class="dst size-5.5" name="iconoir:zoom-in" />
     </button>
 
     <button class="btn btn-square btn-ghost">
-      <icon class="size-5.5 dst" name="iconoir:zoom-out" />
+      <icon class="dst size-5.5" name="iconoir:zoom-out" />
     </button>
   </div>
 </template>

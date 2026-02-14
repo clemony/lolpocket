@@ -1,22 +1,23 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 220007,
-  name: 'Prismatic Item',
-  description: 'Active - Consume: Automatically open a semi-random selection for a Prismatic item.',
-  noEffects: false,
-  rank: 'Consumable',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 4000,
-    sell: 4000,
-    total: 4000
+      const item: Item =  {
+  "name": "Prismatic Item",
+  "id": 220007,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "stats": {},
+  "description": "Active - Consume: Automatically open a semi-random selection for a Prismatic item.",
+  "gold": {
+    "base": 4000,
+    "purchasable": true,
+    "total": 4000,
+    "sell": 4000
   },
-  maps: [
+  "maps": [
     30
-  ],
-  stats: {}
+  ]
 }
 export default item

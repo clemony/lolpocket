@@ -15,7 +15,7 @@
       class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]">
       <div class="overflow-auto">
         <div
-          class="flex grid w-full auto-rows-auto items-start gap-1 pt-4 pb-7 pl-4">
+          class="grid w-full auto-rows-auto items-start gap-1 pt-4 pb-7 pl-4">
           <Label class="popover-button-label">
             Champion Role
             <UButton
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div
-        class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 pt-3 pb-2 pb-3">
+        class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 py-3">
         <ToggleGroup
           v-model:model-value="cs().filters.sort"
           class="gap-0"

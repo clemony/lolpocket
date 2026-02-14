@@ -46,7 +46,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
                 class="size-6"
                 variant="outline"
                 square
-                @click="is().filters.rank = null">
+                @click="is().filters.rank = ''">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
@@ -74,7 +74,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
         </div>
       </div>
       <div
-        class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 pt-3 pb-2 pb-3">
+        class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 py-3">
         <ItemMapRadio />
         <!-- shop -->
 

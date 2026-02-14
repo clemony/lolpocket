@@ -10,7 +10,7 @@ const props = defineProps<{
     class="p-i-c h-auto w-fit rounded-box px-6 pt-4 pb-5 shadow-smooth shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none">
     <div class="w-full justify-start">
       <!--  <span
-        class="text-xldst font-medium"
+        class="text-xlds-2xs font-medium"
         :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span> -->
     </div>
 

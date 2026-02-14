@@ -1,6 +1,9 @@
 //
 // --- Pocket Factory ---
 
+import { generateName } from "~/domain/pocket/generateStrings"
+import { pType } from "~/domain/utils/pType"
+
 export function newItemSet(): ItemSet {
   return {
     id: crypto.randomUUID(),

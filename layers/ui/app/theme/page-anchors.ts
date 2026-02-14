@@ -3,8 +3,8 @@ export default {
     root: "",
     list: "",
     item: "relative",
-    link: "group text-sm flex items-center gap-1.5 py-1 focus-visible:outline-primary",
-    linkLeading: "rounded-md p-1 inline-flex ring-inset ring",
+    link: "group text-sm flex items-center gap-1.5 py-1 focus-visible:outline-neutral",
+    linkLeading: "rounded-lg p-1.5 inline-flex ring-inset   ring",
     linkLeadingIcon: "size-4 shrink-0",
     linkLabel: "truncate",
     linkLabelExternalIcon: "size-3 absolute top-0 text-dimmed",
@@ -12,13 +12,13 @@ export default {
   variants: {
     active: {
       true: {
-        link: "text-primary font-semibold",
-        linkLeading: "bg-primary ring-primary text-inverted",
+        link: "text-neutral font-semibold",
+        linkLeading: "bg-neutral ring-neutral text-nc **:text-nc",
       },
       false: {
         link: ["text-muted hover:text-default font-medium"],
         linkLeading: [
-          "bg-elevated/50 ring-accented text-dimmed group-hover:bg-primary group-hover:ring-primary group-hover:text-inverted",
+          "bg-p1 ring-p3 text-n4 group-hover:bg-neutral group-hover:ring-neutral group-hover:text-nc",
         ],
       },
     },

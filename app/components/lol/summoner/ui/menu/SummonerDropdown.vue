@@ -46,7 +46,7 @@ function handleBlock() {
     </UButton>
     <template #content>
       <SummonerCard />
-    </template> </UPopover
-  >>
+    </template>
+  </UPopover>>
   <LazyBlockDialog v-if="summoner" :summoner="summoner" />
 </template>

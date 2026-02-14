@@ -28,7 +28,7 @@ const chain = computed(() => getRouteChain(route.fullPath))
 </script>
 
 <template>
-  <Breadcrumb v-if="!route.path.match(/summoner.*/)" class="z-11">
+  <UBreadcrumb v-if="!route.path.match(/summoner.*/)" class="z-11">
     <BreadcrumbList :key="route.fullPath" class="px-3">
       <div
         v-if="
@@ -65,5 +65,5 @@ const chain = computed(() => getRouteChain(route.fullPath))
         </template>
       </template>
     </BreadcrumbList>
-  </Breadcrumb>
+  </UBreadcrumb>
 </template>

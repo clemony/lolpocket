@@ -19,9 +19,7 @@ const menu = shallowRef(RunePanelMenu)
 
 const route = useRoute()
 
-onMounted(async () => {
-  await rs().selectedRuneSet
-}) /*
+onMounted(async () => {}) /*
     v-tippy="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
 /*
 const bgStyle = computed (() => {

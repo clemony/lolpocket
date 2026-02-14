@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 const { class: className, textWrapper } = defineProps<{
-  class?: HTMLAttributes['class']
-  textWrapper?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
+  textWrapper?: HTMLAttributes["class"]
 }>()
 
 const { scrollY } = useScrollInject()
-const y = useTransform(scrollY, [0, 198], ['0', '20%'])
+const y = useTransform(scrollY, [0, 198], ["0", "20%"])
 const opacity = useTransform(scrollY, [0, 198], [1, 0])
 </script>
 
@@ -16,7 +16,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
     :class="
       cn(
         'absolute flex h-20 w-fit max-w-220 flex-nowrap items-center gap-6 pl-20 select-none',
-        className,
+        className
       )
     "
     :style="{
@@ -37,7 +37,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
 
       <!-- header sub-text -->
       <div
-        class="inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase dst **:text-md">
+        class="inline-flex flex-nowrap gap-2 font-normal text-nowrap lowercase ds-2xs **:text-md">
         <slot name="subheader" />
       </div>
     </div>

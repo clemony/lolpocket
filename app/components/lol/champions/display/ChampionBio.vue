@@ -8,11 +8,11 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
 <template>
   <div class="flex flex-col gap-6 px-6 pt-7 pb-3">
     <div class="flex items-end justify-between gap-4">
-      <h1 class="font-serif dst">
+      <h1 class="dst font-serif">
         {{ champion.fullName || champion.name }}
       </h1>
 
-      <p class="grow text-lg text-wrap uppercase dst">
+      <p class="dst grow text-lg text-wrap uppercase">
         {{ champion.title }}
       </p>
     </div>

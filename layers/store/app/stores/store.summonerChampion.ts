@@ -1,6 +1,17 @@
 //
 import { defineStore } from "pinia"
 import { unref } from "vue"
+import { aggregateAllies } from "~/domain/stats/aggregateAllies"
+import type { ChampionPairStats } from "~/domain/stats/aggregateDuos"
+import { aggregateDuos } from "~/domain/stats/aggregateDuos"
+import type { AggregatedSkills } from "~/domain/stats/aggregateSkills"
+import { aggregateSkills } from "~/domain/stats/aggregateSkills"
+import { useAggregateSingleChampion } from "~/domain/stats/useAggregateSingleChampion"
+import type { ItemSlotOrder } from "~/domain/stats/useChampionItemTimelineStats"
+import { useChampionItemTimelineStats } from "~/domain/stats/useChampionItemTimelineStats"
+import { useChampionRuneStats } from "~/domain/stats/useChampionRuneStats"
+import type { SpellStats } from "~/domain/stats/useChampionSpellStats"
+import { useChampionSpellStats } from "~/domain/stats/useChampionSpellStats"
 
 export const sChampion = defineStore("summonerChampion", () => {
   const { summoner } = storeToRefs(sSession())

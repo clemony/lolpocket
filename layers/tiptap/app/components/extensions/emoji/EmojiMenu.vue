@@ -218,7 +218,7 @@ watch(
                   <icon
                     :name="group.icon"
                     :class="
-                      cn('absolute size-5 dxs **:stroke-[1.7]', group.class)
+                      cn('absolute size-5 ds-xs **:stroke-[1.7]', group.class)
                     " />
                 </TabsTrigger>
               </TooltipTrigger>

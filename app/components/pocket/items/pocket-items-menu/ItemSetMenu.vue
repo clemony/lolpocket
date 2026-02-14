@@ -1,4 +1,11 @@
 <script lang="ts" setup>
+import { duplicateItemSet } from "~/domain/pocket/duplicate"
+import {
+  copyItemSetToPocket,
+  deleteItemSet,
+  resetItems,
+} from "~/domain/pocket/handleItems"
+
 const props = defineProps<{
   set?: ItemSet
   pocket?: Pocket
@@ -11,8 +18,8 @@ const pocket = computed(() => props.pocket)
   <UButton
     class=""
     @click="
-      props.set && props.pocket ?
-        duplicateItemSet(props.set, props.pocket.key)
+      props.set && props.pocket
+        ? duplicateItemSet(props.set, props.pocket.key)
         : null
     ">
     <icon name="copy" />
@@ -20,9 +27,7 @@ const pocket = computed(() => props.pocket)
   </UButton>
 
   <UPopover mode="hover">
-    <UButton
-      class="w-full"
-      as-child>
+    <UButton class="w-full" as-child>
       <UButton class="relative w-full">
         <!--         <span class="size-4.5 relative grid place-items-center">
           <icon
@@ -32,9 +37,7 @@ const pocket = computed(() => props.pocket)
         <icon name="arrow-curve-right" />
         Copy to Pocket
 
-        <icon
-          class="absolute right-1 size-4 opacity-50"
-          name="right" />
+        <icon class="absolute right-1 size-4 opacity-50" name="right" />
       </UButton>
     </UButton>
     <template #content>
@@ -44,15 +47,14 @@ const pocket = computed(() => props.pocket)
         align="start">
         <UButton
           v-for="friendlyPocket in ps().pockets.filter(
-            (p) => p.key !== pocket?.key,
+            (p) => p.key !== pocket?.key
           )"
           :key="friendlyPocket.key"
           class="w-full"
-          @click="props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null">
-          <PocketIcon
-            class="size-6 rounded-full"
-            :pocket
-            size="sm" />
+          @click="
+            props.set ? copyItemSetToPocket(friendlyPocket, props.set) : null
+          ">
+          <PocketIcon class="size-6 rounded-full" :pocket size="sm" />
           <span class="truncate">
             {{ friendlyPocket.name }}
           </span>
@@ -73,7 +75,8 @@ const pocket = computed(() => props.pocket)
     Reset Items
   </UButton>
 
-  <UButton @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
+  <UButton
+    @click="props.set && pocket ? deleteItemSet(pocket, props.set) : null">
     <icon name="trash" />
     Delete Set
   </UButton>

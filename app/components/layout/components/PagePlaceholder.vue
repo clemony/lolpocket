@@ -53,8 +53,8 @@ onMounted(() => {
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
     :class="cn('', props.class)">
-    <article class="container mx-auto max-w-250 min-w-190 p-6 dst">
-      <header class="mb-6 text-start tracking-tight dst">
+    <article class="dst container mx-auto max-w-250 min-w-190 p-6">
+      <header class="dst mb-6 text-start tracking-tight">
         <span class="text-md">
           404 |
           <span class="">This page looks afk</span>
@@ -69,7 +69,7 @@ onMounted(() => {
       <section
         class="relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28 **:text-pretty">
         <div class="flex flex-col gap-3">
-          <p class="mt-1 dst">
+          <p class="dst mt-1">
             {{ catFact.num }}
             <span class="text-[5rem] font-bold tracking-tight">
               {{ catFact.title }}

@@ -13,7 +13,7 @@ export function useChampionRoleStats(
 ): RoleStats[] {
   const grouped: Record<string, RoleStats> = {}
 
-  const accountPuuid = as().account?.puuid
+  const accountPuuid = user().account?.puuid
   if (!accountPuuid) return []
 
   const player = filteredMatches.map((m) =>

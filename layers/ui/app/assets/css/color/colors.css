@@ -19,10 +19,10 @@
 
   /* position */
   --color-top: var(--color-domination);
-  --color-jungle: var(--color-resolve);
-  --color-middle: var(--color-sorcery);
-  --color-bottom: var(--color-precision);
-  --color-support: var(--color-inspiration);
+  --color-jungle: var(--color-res);
+  --color-middle: var(--color-sorc);
+  --color-bottom: var(--color-pre);
+  --color-support: var(--color-insp);
 
   --color-onhit: oklch(75% 27% 10deg);
   --color-vamp: oklch(58% 22% 17deg);
@@ -66,7 +66,7 @@
   --success: var(--color-success);
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
-  --resolve: var(--color-resolve);
+  --res: var(--color-res);
   --mpen: var(--color-mpen);
   --onhit: var(--color-onhit);
   --burst: var(--color-burst);
@@ -104,10 +104,10 @@
   --support: var(--color-support);
 
   /* attributes */
-  --color-utility: var(--color-inspiration);
-  --color-mobility: var(--color-precision);
-  --color-toughness: var(--color-resolve);
-  --color-control: var(--color-sorcery);
+  --color-utility: var(--color-insp);
+  --color-mobility: var(--color-pre);
+  --color-toughness: var(--color-res);
+  --color-control: var(--color-sorc);
   --color-damage: var(--color-domination);
 
   --color-s-plus: var(--color-challenger);

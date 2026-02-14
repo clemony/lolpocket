@@ -1,44 +1,45 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 1103,
-  name: 'Mosstomper Seedling',
-  nicknames: [
-    'jungle',
-    'green',
-    'salamander',
-    'lizard',
-    'frog'
+      const item: Item =  {
+  "name": "Mosstomper Seedling",
+  "id": 1103,
+  "rank": "Starter",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "jungle",
+    "green",
+    "salamander",
+    "lizard",
+    "frog"
   ],
-  description: 'Jungle Companions\nSummon a Jungle Pet that assists you against monsters.\n\nMosstomper\'s Courage\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest. ',
-  noEffects: false,
-  rank: 'Starter',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 450,
-    sell: 0,
-    total: 450
-  },
-  maps: [
-    11,
-    21
-  ],
-  passives: [
+  "passives": [
     {
-      name: 'Jungle Companions',
-      effects: 'Summon a <i>Mosstomper Seedling</i> companion to assist you in combat against monsters.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Jungle Companions",
+      "effects": "Summon a <i>Mosstomper Seedling</i> companion to assist you in combat against monsters."
     },
     {
-      name: 'Mosstomper\'s Courage',
-      effects: 'Feed your companion enough treats to evolve it and upgrade your <img src="/img/icons/smite.webp" class="tip-icon" />Smite. Upon the companion reaching its final evolution, this item is consumed, granting you the {{bi|Mosstomper&#039;s Courage|Mosstomper&#039;s Courage}} buff.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Mosstomper's Courage",
+      "effects": "Feed your companion enough treats to evolve it and upgrade your <img src=\"/img/icons/smite.webp\" class=\"tip-icon\" />Smite. Upon the companion reaching its final evolution, this item is consumed, granting you the {{bi|Mosstomper&#039;s Courage|Mosstomper&#039;s Courage}} buff."
     }
   ],
-  stats: {}
+  "stats": {},
+  "description": "Jungle Companions\nSummon a Jungle Pet that assists you against monsters.\n\nMosstomper's Courage\nThe companion grows as you hunt monsters, empowering your Smite. When fully grown, it completes your Jungle Quest. ",
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 450,
+    "sell": 0
+  },
+  "maps": [
+    11,
+    21
+  ]
 }
 export default item

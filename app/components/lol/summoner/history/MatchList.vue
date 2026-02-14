@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { Virtualizer } from "virtua/vue"
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
@@ -8,17 +6,10 @@ const { class: className } = defineProps<{
 const emit = defineEmits(["scroll-top"])
 
 const store = matchFilter()
-const { baseFiltered, filteredMatches } = storeToRefs(store)
+const { filteredMatches } = storeToRefs(store)
 
 const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 
-watch(
-  () => baseFiltered.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  }
-)
-const scrollRef = useState<HTMLElement>("scrollRef")
 const hasMatches = computed(() => filteredMatches.value?.length > 0)
 </script>
 

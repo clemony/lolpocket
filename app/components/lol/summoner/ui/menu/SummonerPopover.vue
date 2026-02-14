@@ -1,20 +1,16 @@
 <script setup lang="ts">
 const { puuid, class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   puuid: string
 }>()
 const isOpen = shallowRef<boolean>(false)
 
-/* const state = useSummonerProvider(puuid) */
+/* const state = summonerProvider(puuid) */
 </script>
 
 <template>
-  <LazyPopoverContent
-    class="px-3 py-2"
-    align="start">
-    <PopoverArrow
-      class="*:last:fill-p0"
-      variant="base" />
+  <LazyPopoverContent class="px-3 py-2" align="start">
+    <PopoverArrow class="*:last:fill-p0" variant="base" />
     <!--
       :summoner="state.summoner.value" -->
     hi wtf

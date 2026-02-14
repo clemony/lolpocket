@@ -1,52 +1,53 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 6694,
-  name: 'Serylda\'s Grudge',
-  nicknames: [
-    'slow'
-  ],
-  description: '45 Attack Damage\n35% Armor Penetration\n15 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Serylda's Grudge",
+  "id": 6694,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3133,
-      name: 'Caulfield\'s Warhammer',
-      gold: 1050
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
     },
     {
-      id: 3035,
-      name: 'Last Whisper',
-      gold: 1450
+      "id": 3035,
+      "name": "Last Whisper",
+      "gold": 1450
     }
   ],
-  gold: {
-    base: 500,
-    sell: 2100,
-    total: 3000
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "slow"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Bitter Cold",
+      "effects": "Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slows them by 30% for 1 second."
+    }
+  ],
+  "stats": {
+    "armorPenetration": 35,
+    "attackDamage": 45,
+    "abilityHaste": 15
   },
-  maps: [
+  "description": "45 Attack Damage\n35% Armor Penetration\n15 Ability Haste\n\nBitter Cold\nDamaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 3000,
+    "sell": 2100
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Bitter Cold',
-      effects: 'Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src="/img/icons/slow.webp" class="tip-icon " />slows them by 30% for 1 second.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 15,
-    armorPenetration: 35,
-    attackDamage: 45
-  }
+  ]
 }
 export default item

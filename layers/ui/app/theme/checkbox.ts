@@ -1,30 +1,24 @@
-import { colors } from "./colors"
-
 export default {
   slots: {
-    root: "relative flex items-start",
+    root: "relative flex items-start group/x **:cursor-pointer",
     container: "flex items-center",
-    base: "rounded-sm ring ring-inset ring-accented overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-2",
-    indicator: "flex items-center justify-center size-full text-inverted",
-    icon: "shrink-0 size-full",
+    base: "rounded-sm ring-1 before:hidden overflow-visible! focus-visible:outline-0   focus-visible:focus-ring before:rounded-md!",
+    indicator: "flex items-center justify-center size-full rounded-[inherit] ",
+    icon: "shrink-0 **:stroke-[2.14] size-full",
     wrapper: "w-full",
-    label: "block font-medium text-default",
-    description: "text-muted",
+    label: "block font-medium text-pc group-hover/x:underline",
+    description: "text-n4",
   },
   variants: {
     color: {
-      ...Object.fromEntries(
-        (colors || []).map((color: string) => [
-          color,
-          {
-            base: `focus-visible:outline-${color}`,
-            indicator: `bg-${color}`,
-          },
-        ])
-      ),
+      primary: {
+        base: "bg-p1 ring-p4/60 on:ring-neutral not-on:focus-visible:ring-p4/60",
+        indicator: "bg-neutral",
+        icon: "text-p1! **:text-p1",
+      },
       neutral: {
-        base: "focus-visible:outline-inverted",
-        indicator: "bg-inverted",
+        base: "bg-neutral border-neutral",
+        indicator: " text-nc **:text-nc",
       },
     },
     variant: {
@@ -94,23 +88,11 @@ export default {
     },
   },
   compoundVariants: [
-    { size: "xs", variant: "card", class: { root: "p-2.5" } },
-    { size: "sm", variant: "card", class: { root: "p-3" } },
-    { size: "md", variant: "card", class: { root: "p-3.5" } },
-    { size: "lg", variant: "card", class: { root: "p-4" } },
-    { size: "xl", variant: "card", class: { root: "p-4.5" } },
-    ...(colors || []).map((color: string) => ({
-      color,
-      variant: "card",
-      class: {
-        root: `has-data-[state=checked]:border-${color}`,
-      },
-    })),
     {
       color: "neutral",
       variant: "card",
       class: {
-        root: "has-data-[state=checked]:border-inverted",
+        root: "has-data-[state=checked]:border-neutral",
       },
     },
     {

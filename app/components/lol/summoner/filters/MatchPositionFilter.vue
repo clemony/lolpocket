@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useMatchRoles } from "~/domain/match/useMatchRoles"
+
 const { class: className, orientation = "horizontal" } = defineProps<{
   class?: HTMLAttributes["class"]
   orientation?: DataOrientation
@@ -31,11 +33,11 @@ const roleModel = computed({
 <template>
   <UTabs
     v-model:model-value="roleModel"
-    color="transparent"
     size="sm"
     :ui="{
       root: 'h-10 w-full',
       label: 'hidden',
+      leadingIcon: 'size-4.5',
     }"
     :items="roles"
     value-key="label"

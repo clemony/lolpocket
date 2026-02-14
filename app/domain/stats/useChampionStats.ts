@@ -1,3 +1,8 @@
+import { AGGREGATED_STAT_SCHEMA } from "~/domain/stats/stats/aggregatedStatSchema"
+import { applyParticipantStats } from "~/domain/stats/stats/applyParticipantStats"
+import { finalizeStatAverage } from "~/domain/stats/stats/finalizeStatAverage"
+import { initFromSchema } from "~/domain/stats/stats/initFromSchema"
+
 //
 export function useChampionStats(
   matches: Ref<MatchData[]>,
@@ -20,8 +25,8 @@ export function useChampionStats(
         championName: champNameById(id) ?? "",
         games: 0,
         kda: 0,
-        losses: 0,
-        wins: 0,
+        loss: 0,
+        win: 0,
         gamePatches: [],
         ...initFromSchema(AGGREGATED_STAT_SCHEMA),
       })

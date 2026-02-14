@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { roleKey } from "~/domain/stats/helpers/normalizeRole"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
@@ -18,7 +20,7 @@ const items = [{ label: "Synergy" }, { label: "Counter" }]
         <ChampStatLabel
           separator
           type="synergy"
-          :icon="[`role:${roleKey[i]}`, 'size-8 dst']" />
+          :icon="[`role:${roleKey[i]}`, 'size-8 ds-2xs']" />
         <ChampStatRowWrapper
           v-if="role && role?.length"
           :class="cn('', className)">
@@ -32,7 +34,7 @@ const items = [{ label: "Synergy" }, { label: "Counter" }]
           </ChampStatObjectWrapper>
         </ChampStatRowWrapper>
 
-        <NoItemData v-else />
+        <NoRowData v-else />
       </ChampStatRow>
     </template>
   </UPageSection>

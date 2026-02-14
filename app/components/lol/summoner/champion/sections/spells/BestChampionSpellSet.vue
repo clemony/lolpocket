@@ -26,6 +26,6 @@ const firstStat = computed<StatDetail | undefined>(() => {
           " />
       </ChampStatObjectWrapper>
     </ChampStatRowWrapper>
-    <NoItemData v-else simple />
+    <NoRowData v-else simple />
   </ChampStatRow>
 </template>

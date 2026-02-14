@@ -1,51 +1,78 @@
 <script lang="ts" setup>
-definePageMeta({
-  title: 'Items',
-  description: 'A full list of items and stat details.',
-  icon: 'lol:regen',
-  navClass: 'size-5',
-  path: '/library/items',
-})
+import { LibraryItemGrid } from "#components"
+import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
 
-const route = useRoute()
+definePageMeta({
+  title: "Items",
+  description: "A full list of items and stat details.",
+  icon: "i-ability-melee",
+  navClass: "size-5",
+})
 
 const quote = computed(() => getRandom(itemQuotes))
-const tabs = ref('/library/items')
 
-onMounted(() => {
-  tabs.value = route.path
-})
+const ranks = computed<ArrayOrNested<TabsItem>>(() => [
+  {
+    value: "",
+    label: is().filters.rank === "" ? "All" : "",
+    icon: is().filters.rank === "" ? "" : "i-x",
+    slot: "all" as const,
+    ui: {
+      trigger:
+        "not-active:bg-p1  not-active:sh-xs active:w-max active:px-5  border-neutral border hover:not-active:border-p4/60 hover:not-active:bg-p2 transition-colors duration-50 hover:not-active:iss-xs not-active:noise not-active:border-p3/80  mr-2 not-active:ring not-active:anchor group/t",
+      label: "",
+      leadingIcon:
+        "size-3.5 **:stroke-[2.6] text-pc opacity-60 transition-all duration-50 group-hover/t:opacity-100",
+    },
+  },
+  ...Object.keys(rankToItem).map((k) => ({
+    value: k,
+    label: k,
+  })),
+])
+
+const tabModel = shallowRef<Component>(LibraryItemGrid)
+
+const open = shallowRef<boolean>(true)
 </script>
 
 <template>
-  <SeparatorLayout :description="quote">
-    <LayoutAsideSplit full-width>
-      <template #aside>
-        <ItemFilterSidebar />
-      </template>
-
-      <ItemRankFilter
-        class="sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-p0 pt-5 pb-6" />
-      <LazyNuxtPage />
-    </LayoutAsideSplit>
-
-    <template #right>
-      <Tabs
-        v-model:model-value="tabs"
-        class="**:pointer-events-auto"
-        @update:model-value="navigateTo(tabs)">
-        <TabsList class="grid h-10 w-80 max-w-120 grid-cols-2">
-          <TabsTrigger value="/library/items">
-            Grid
-          </TabsTrigger>
-
-          <TabsTrigger value="/library/items/list">
-            List
-          </TabsTrigger>
-
-          <TabIndicator />
-        </TabsList>
-      </Tabs>
+  <UPage v-auto-animate class="pl-1">
+    <template #left>
+      <UPageAside>
+        <ItemFilterSidebar @update-tab="(e) => (tabModel = e)" />
+      </UPageAside>
     </template>
-  </SeparatorLayout>
+    <UPageHeader title="Items" :description="quote" headline="Library">
+      <template #headline>
+        <div class="flex items-center gap-1">
+          <UButton
+            size="2xs"
+            square
+            variant="ghost"
+            :icon="open ? 'i-collapse' : 'i-expand'" />
+          <span>Library</span>
+        </div>
+      </template>
+      <template #links>
+      </template>
+    </UPageHeader>
+    <UPageBody>
+      <div
+        class="sticky top-15 z-2 -mt-4 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
+        <UTabs
+          v-model:model-value="is().filters.rank"
+          :items="ranks"
+          size="sm"
+          variant="ghost"
+          color="neutral"
+          :ui="{
+            root: 'w-max ',
+            indicator: 'duration-150',
+            trigger: 'w-max px-5',
+          }" />
+      </div>
+      <component :is="tabModel" />
+    </UPageBody>
+  </UPage>
 </template>

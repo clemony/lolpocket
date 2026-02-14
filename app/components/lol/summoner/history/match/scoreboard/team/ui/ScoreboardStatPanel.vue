@@ -18,7 +18,7 @@ const { class: className, player } = defineProps<{
       label="kda"
       icon="proicons:infinity"
       :color="'ad' as BadgeProps['color']"
-      size="xs"
+      size="2xs"
       class="" />
 
     <Tooltip v-else arrow text="KDA" class="badge-tooltip-hover">

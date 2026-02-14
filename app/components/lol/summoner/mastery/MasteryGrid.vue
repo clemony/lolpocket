@@ -5,7 +5,7 @@ import type {
   GridApi,
   GridOptions,
   GridReadyEvent,
-} from 'ag-grid-community'
+} from "ag-grid-community"
 import {
   CellStyleModule,
   ClientSideRowModelApiModule,
@@ -20,8 +20,9 @@ import {
   RowStyleModule,
   TooltipModule,
   ValidationModule,
-} from 'ag-grid-community'
-import { AgGridVue } from 'ag-grid-vue3'
+} from "ag-grid-community"
+import { AgGridVue } from "ag-grid-vue3"
+import { useStatGrid } from "~/domain/stats/grid"
 
 const { champions } = defineProps<{
   champions: ChampionStatsAndMastery[]
@@ -40,8 +41,8 @@ watch(
     const prev = prevRows.value
     if (prev === next) return
 
-    const prevMap = new Map(prev.map(r => [r.championId, r]))
-    const nextMap = new Map(next.map(r => [r.championId, r]))
+    const prevMap = new Map(prev.map((r) => [r.championId, r]))
+    const nextMap = new Map(next.map((r) => [r.championId, r]))
 
     const add: ChampionStatsAndMastery[] = []
     const update: ChampionStatsAndMastery[] = []
@@ -58,12 +59,12 @@ watch(
 
     if (add.length || update.length || remove.length) {
       gridApi.value.applyTransaction({ add, remove, update })
-      gridApi.value.refreshClientSideRowModel('sort')
+      gridApi.value.refreshClientSideRowModel("sort")
     }
 
     prevRows.value = next
   },
-  { flush: 'post' }
+  { flush: "post" }
 )
 
 const gridOptions: GridOptions<
@@ -72,26 +73,26 @@ const gridOptions: GridOptions<
   ...globalGridOptions,
   hidePaddedHeaderRows: true,
   animateRows: true,
-  colResizeDefault: 'shift',
+  colResizeDefault: "shift",
   columnHoverHighlight: false,
-  getRowId: p => String(p.data.championId),
+  getRowId: (p) => String(p.data.championId),
   rowHeight: 50,
   defaultColDef: {
     initialHide: false,
     minWidth: 50,
     cellClass:
-      'items-center px-0 text-center! justify-center h-full! flex self-center font-semibold',
+      "items-center px-0 text-center! justify-center h-full! flex self-center font-semibold",
     flex: 1,
     headerClass:
-      'p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8',
+      "p-0! [&_.ag-header-cell-text]:text-center! [&_.ag-header-cell-text]:mx-auto! h-8",
     wrapHeaderText: true,
     cellClassRules: {
-      'opacity-10': params => params.value === 0 || params.value === '0',
+      "opacity-10": (params) => params.value === 0 || params.value === "0",
     },
-    sortingOrder: ['desc', 'asc', null],
+    sortingOrder: ["desc", "asc", null],
   },
   rowClassRules: {
-    'opacity-0': () => false,
+    "opacity-0": () => false,
   },
 }
 

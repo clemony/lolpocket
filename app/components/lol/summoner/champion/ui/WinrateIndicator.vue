@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { class: className, value } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   value: number
 }>()
 </script>
@@ -11,9 +11,9 @@ const { class: className, value } = defineProps<{
     <Icon
       name="tabler:circle-filled"
       :class="
-        cn('size-4 dss', {
+        cn('size-4 ds-sm', {
           'text-challenger brightness-95': value >= 51,
-          'text-domination': value <= 49,
+          'text-dom': value <= 49,
           'text-pc/20': value < 51 && value > 49,
         })
       " />

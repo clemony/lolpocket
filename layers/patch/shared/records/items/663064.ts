@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 663064,
-  name: 'Veigar\'s Talisman of Ascension',
-  description: 'Gain 100% Extra Experience\n\nOffers no stats, and cannot be sold...\n\n...But will be worth it if you reach Level 30.',
-  gold: {
-    base: 900,
-    sell: 0,
-    total: 900
+      const item: Item =  {
+  "id": 663064,
+  "name": "Veigar's Talisman of Ascension",
+  "description": "Gain 100% Extra Experience\n\nOffers no stats, and cannot be sold...\n\n...But will be worth it if you reach Level 30.",
+  "gold": {
+    "base": 900,
+    "purchasable": true,
+    "total": 900,
+    "sell": 0
   },
-  maps: [
+  "maps": [
     11
   ]
 }

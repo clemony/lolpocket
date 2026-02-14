@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { vDraggable } from "vue-draggable-plus"
+import { removeItemFromSet } from "~/domain/pocket/handleItems"
 
 const { pocket, set: itemSet } = defineProps<{
   pocket: Pocket
@@ -34,59 +35,57 @@ function onOpen() {
         class="field-legend z-0 h-10 max-w-90 min-w-54 cursor-text transition-colors duration-300 *:font-semibold *:tracking-tight open:opacity-0 hover:border-pc/60">
         {{ set.name || "Set name..." }}
       </UButton>
-      <PopoverContent
-        class="w-(--reka-popover-trigger-width) -translate-x-3 -translate-y-[calc(var(--reka-popover-trigger-height)+4px)] bg-transparent p-0 backdrop-blur-none"
-        as-child
-        align="start"
-        @interact-outside="set.name = name">
-        <UInputGroup
-          class="border-b4 field-sizing-content h-7 bg-transparent pr-1">
-          <UInputGroupInput
-            class="peer field-sizing-content w-max bg-transparent font-semibold tracking-tight shadow-none inset-shadow-none"
-            @clear-input="name = ''"
-            @keydown.enter="set.name = name"
-            @blur="set.name = name"
-            @focusout="set.name = name" />
-          <UInputGroupButton
-            class="rounded-full"
-            size="icon-xs"
-            :class="
-              cn('', {
-                'pointer-events-none opacity-0': !name,
-                'pointer-events-auto opacity-100': name,
-              })
-            "
-            variant="ghost"
-            hover="neutral">
-            <icon class="size-3" name="x" />
-          </UInputGroupButton>
-        </UInputGroup>
 
-        <UInput
-          v-model:model-value="name"
-          icon="i-search"
-          placeholder="Set name...">
-          <template #trailing>
-            <InputClear @clear-input="is().filters.query = ''" />
-            <UButton
-              size="2xs"
-              icon="i-shuffle"
-              :ui="{ leadingIcon: 'size-3.5' }" />
-          </template>
-        </UInput>
-      </PopoverContent>
+      <template #content>
+        <div
+          class="w-(--reka-popover-trigger-width) -translate-x-3 -translate-y-[calc(var(--reka-popover-trigger-height)+4px)] bg-transparent p-0 backdrop-blur-none"
+          as-child
+          align="start"
+          @interact-outside="set.name = name">
+          <UInputGroup
+            class="border-b4 field-sizing-content h-7 bg-transparent pr-1">
+            <UInputGroupInput
+              class="peer field-sizing-content w-max bg-transparent font-semibold tracking-tight shadow-none inset-shadow-none"
+              @clear-input="name = ''"
+              @keydown.enter="set.name = name"
+              @blur="set.name = name"
+              @focusout="set.name = name" />
+            <UInputGroupButton
+              class="rounded-full"
+              size="icon-xs"
+              :class="
+                cn('', {
+                  'pointer-events-none opacity-0': !name,
+                  'pointer-events-auto opacity-100': name,
+                })
+              "
+              variant="ghost"
+              hover="neutral">
+              <icon class="size-3" name="x" />
+            </UInputGroupButton>
+          </UInputGroup>
+
+          <UInput
+            v-model:model-value="name"
+            icon="i-search"
+            placeholder="Set name...">
+            <template #trailing>
+              <InputClear @clear-input="is().filters.query = ''" />
+              <UButton
+                size="2xs"
+                icon="i-shuffle"
+                :ui="{ leadingIcon: 'size-3.5' }" />
+            </template>
+          </UInput>
+        </div>
+      </template>
     </UPopover>
-    <UPopover
+    <UPopover>
       <UButton
-      class="group/pop absolute -top-2 -right-1 grid size-6.5 place-items-center">
-      <UButton
-        class="group/trig z-2 size-6.5! scale-0 overflow-hidden rounded-full opacity-0 transition-all duration-200 ease-spring-bouncy group-open/pop:scale-100 group-open/pop:opacity-100 group-hover/set:scale-100 group-hover/set:opacity-100"
+        icon="more"
+        class="group/pop place-items-centergroup/trig absolute -top-2 -right-1 z-2 grid size-6.5 scale-0 overflow-hidden rounded-full opacity-0 transition-all duration-200 ease-spring-bouncy group-open/pop:scale-100 group-open/pop:opacity-100 group-hover/set:scale-100 group-hover/set:opacity-100"
         color="neutral"
-        shape="square">
-        <icon class="absolute size-4 shrink-0 text-nc!" name="more" />
-      </UButton>
-      </UButton>
-
+        square />
       <LazyPopoverContent class="w-64" align="end" :side-offset="1">
         <LazyItemSetMenu :pocket="pocket" :set="itemSet" />
       </LazyPopoverContent>

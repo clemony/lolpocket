@@ -32,7 +32,7 @@ const logInOpen = shallowRef<boolean>(false)
     }"
     :ui="{
       root: cn(
-        'fixed top-0 z-10 flex w-full max-w-screen shrink-0 items-center gap-1 border-b bg-linear-to-r from-transparent to-p0/40 bg-blend-darken backdrop-blur-sm',
+        'fixed top-0 z-10 flex w-full max-w-screen shrink-0 items-center gap-2 border-b bg-linear-to-r from-transparent to-p0/40 bg-blend-darken backdrop-blur-sm',
         {
           'border-0 bg-p0/20!': sum,
         }
@@ -41,7 +41,6 @@ const logInOpen = shallowRef<boolean>(false)
     }">
     <template #left>
       <LpLogo />
-      <BreadcrumbNav />
     </template>
 
     <template #right>
@@ -64,7 +63,7 @@ const logInOpen = shallowRef<boolean>(false)
         <div class="flex w-full justify-center">
           <LpLogo />
         </div>
-        <h3 class="mt-2 mb-10 w-full text-center dst">
+        <h3 class="dst mt-2 mb-10 w-full text-center">
           Log in
         </h3>
 

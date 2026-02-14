@@ -10,7 +10,7 @@ export function getInboxTemplate(item: InboxItem): InboxTemplate {
   if (!factory) {
     console.warn(`Unknown inbox template: ${item.template}`)
     return {
-      title: item.template ?? 'Notification',
+      title: item.template ?? "Notification",
     }
   }
 
@@ -21,22 +21,22 @@ function createInboxTemplateNewPocket(
   vars: Record<string, string>
 ): InboxTemplate {
   return {
-    title: `Pocket <i class="font-semibold text-shade-inspiration/8">${vars.pocketName}</i> created!`,
+    title: `Pocket <i class="font-semibold text-shade-insp/8">${vars.pocketName}</i> created!`,
     action: {
       function: `pocket/${vars.pocketKey}`,
-      text: 'Open Pocket',
-      type: 'navigate',
+      text: "Open Pocket",
+      type: "navigate",
       icon: {
-        name: 'chain',
-        class: 'size-3.5  mb-0.5',
+        name: "chain",
+        class: "size-3.5  mb-0.5",
       },
     },
     badge: {
-      class: '',
-      text: 'Add Pocket',
+      class: "",
+      text: "Add Pocket",
       icon: {
-        name: 'add-sm',
-        class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
+        name: "add-sm",
+        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
       },
     },
   }
@@ -49,19 +49,19 @@ function createInboxTemplateDeletePocket(
     title: `Pocket <i class="font-semibold text-shade-domination/6">${vars.pocketName}</i> sent to trash.`,
     action: {
       function: `backpack/trash`,
-      text: 'Go to trash',
-      type: 'navigate',
+      text: "Go to trash",
+      type: "navigate",
       icon: {
-        name: 'open',
-        class: 'size-3.5  mb-0.5 dst mr-1 ',
+        name: "open",
+        class: "size-3.5  mb-0.5 ds-2xs mr-1 ",
       },
     },
     badge: {
-      class: '',
-      text: 'Delete Pocket',
+      class: "",
+      text: "Delete Pocket",
       icon: {
-        name: 'minus-sm',
-        class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
+        name: "minus-sm",
+        class: " size-4 **:stroke-[1.6] -top-2 -left-2",
       },
     },
   }

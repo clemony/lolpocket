@@ -21,14 +21,8 @@ const shard = computed(() =>
 </script>
 
 <template>
-  <Label
-    data-type="shard"
-    :data-id="shard?.id"
-    :data-size
-    :data-text
-    :data-placement
-    :class="cn('anchor rounded-full', className)">
+  <UTooltip :class="cn('anchor rounded-full', className)">
     <ShardIcon v-if="id !== null" :id="id" :class="iconClass" />
     <slot />
-  </Label>
+  </UTooltip>
 </template>

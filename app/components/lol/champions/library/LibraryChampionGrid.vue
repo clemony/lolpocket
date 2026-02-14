@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import ChampionGridIcon from "#components"
 import type {
   ColDef,
   ColGroupDef,
@@ -6,8 +7,7 @@ import type {
   GridOptions,
   GridPreDestroyedEvent,
   GridReadyEvent,
-} from 'ag-grid-community'
-import ChampionGridIcon from '#components'
+} from "ag-grid-community"
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -19,12 +19,13 @@ import {
   RenderApiModule,
   RowSelectionModule,
   ValidationModule,
-} from 'ag-grid-community'
+} from "ag-grid-community"
+import { useChampionStatGrowth } from "~/domain/champions/useChampionStatGrowth"
 
 definePageMeta({
-  name: 'Champion Stats',
-  icon: 'bi:list-ul',
-  section: 'library',
+  name: "Champion Stats",
+  icon: "bi:list-ul",
+  section: "library",
 })
 
 defineExpose({
@@ -47,9 +48,9 @@ const gridOptions: GridOptions<ChampionLite> = {
     autoHeaderHeight: true,
     flex: 1,
     wrapHeaderText: true,
-    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
-    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
-    sortingOrder: ['desc', 'asc', null],
+    cellClass: ["champion-grid-cell", "!text-right", "!justify-end", "!px-4"],
+    headerClass: ["champion-grid-header", "h-full", "items-end"],
+    sortingOrder: ["desc", "asc", null],
   },
   defaultColGroupDef: {
     suppressStickyLabel: true,
@@ -58,7 +59,7 @@ const gridOptions: GridOptions<ChampionLite> = {
     checkboxes: false,
     enableClickSelection: true,
     headerCheckbox: false,
-    mode: 'multiRow',
+    mode: "multiRow",
   },
 }
 
@@ -85,24 +86,24 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
     maxWidth: 64,
     minWidth: 64,
     width: 64,
-    cellClass: '!py-1 !pr-1 !ml-0',
+    cellClass: "!py-1 !pr-1 !ml-0",
     cellRenderer: ChampionGridIcon,
-    headerName: '　 ',
-    pinned: 'left',
+    headerName: "　 ",
+    pinned: "left",
     sortable: false,
   },
 
   {
     maxWidth: 100,
     minWidth: 80,
-    cellClass: 'font-medium  text-left',
-    cellDataType: 'text',
-    colId: 'champion',
-    field: 'name',
+    cellClass: "font-medium  text-left",
+    cellDataType: "text",
+    colId: "champion",
+    field: "name",
     flex: 1.5,
-    headerClass: '',
-    headerName: 'Champion',
-    pinned: 'left',
+    headerClass: "",
+    headerName: "Champion",
+    pinned: "left",
     sortable: false,
   },
   /*
@@ -177,55 +178,56 @@ hide: true },
   }, */
   {
     minWidth: 90,
-    colId: 'resource',
-    field: 'resource',
+    colId: "resource",
+    field: "resource",
     flex: 1.5,
-    headerName: 'Resource',
+    headerName: "Resource",
   },
 
   {
     minWidth: 90,
     flex: 1.5,
-    headerName: 'Position',
-    valueGetter: params => params.data?.positions?.[0] ?? '',
+    headerName: "Position",
+    valueGetter: (params) => params.data?.positions?.[0] ?? "",
   },
   {
     minWidth: 90,
     flex: 1.5,
-    headerName: 'Role',
-    valueGetter: params => params.data?.roles?.[0] ?? '',
+    headerName: "Role",
+    valueGetter: (params) => params.data?.roles?.[0] ?? "",
   },
   {
-    headerName: 'Ability Reliance',
-    valueGetter: params => params.data?.attributeRatings?.abilityReliance ?? 0,
-  },
-
-  {
-    headerName: 'Control',
-    valueGetter: params => params.data?.attributeRatings?.control ?? 0,
-  },
-  {
-    headerName: 'Damage',
-    valueGetter: params => params.data?.attributeRatings?.damage ?? 0,
+    headerName: "Ability Reliance",
+    valueGetter: (params) =>
+      params.data?.attributeRatings?.abilityReliance ?? 0,
   },
 
   {
-    headerName: 'Difficulty',
-    valueGetter: params => params.data?.attributeRatings?.difficulty ?? 0,
+    headerName: "Control",
+    valueGetter: (params) => params.data?.attributeRatings?.control ?? 0,
+  },
+  {
+    headerName: "Damage",
+    valueGetter: (params) => params.data?.attributeRatings?.damage ?? 0,
   },
 
   {
-    headerName: 'Mobility',
-    valueGetter: params => params.data?.attributeRatings?.mobility ?? 0,
+    headerName: "Difficulty",
+    valueGetter: (params) => params.data?.attributeRatings?.difficulty ?? 0,
   },
 
   {
-    headerName: 'Tough- ness',
-    valueGetter: params => params.data?.attributeRatings?.toughness ?? 0,
+    headerName: "Mobility",
+    valueGetter: (params) => params.data?.attributeRatings?.mobility ?? 0,
+  },
+
+  {
+    headerName: "Tough- ness",
+    valueGetter: (params) => params.data?.attributeRatings?.toughness ?? 0,
   },
   {
-    headerName: 'Utility',
-    valueGetter: params => params.data?.attributeRatings?.utility ?? 0,
+    headerName: "Utility",
+    valueGetter: (params) => params.data?.attributeRatings?.utility ?? 0,
   },
 ]
 const listener = (event: any) => {
@@ -240,7 +242,7 @@ async function onGridReady(params: GridReadyEvent) {
 
   const columns = gridApi.value.getColumns()
   columns?.forEach((col) => {
-    col.addEventListener('visibleChanged', listener as any)
+    col.addEventListener("visibleChanged", listener as any)
   })
 }
 
@@ -250,14 +252,14 @@ function onGridPreDestroyed(params: GridPreDestroyedEvent) {
 
   const columns = gridApi.value.getColumns()
   columns?.forEach((col) => {
-    col.removeEventListener('visibleChanged', listener as any)
+    col.removeEventListener("visibleChanged", listener as any)
   })
 }
 
 watch(
-  () => '',
+  () => "",
   (newVal) => {
-    if (newVal && gridApi.value) gridApi.value.setGridOption('rowData', [])
+    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", [])
   }
 )
 

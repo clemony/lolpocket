@@ -49,7 +49,7 @@ const damageType = computed(() =>
         <span class="font-medium">
           <Icon
             v-if="champion.attackType"
-            class="inline size-4.5! shrink-0 dst **:stroke-0"
+            class="inline size-4.5! shrink-0 ds-2xs **:stroke-0"
             :name="`lp:${champion.attackType.toLowerCase()}`" />
           {{ champion.attackType }}
         </span>
@@ -59,7 +59,7 @@ const damageType = computed(() =>
             v-if="damageType?.icon"
             :name="damageType?.icon"
             :class="
-              cn('absolute size-3.5! shrink-0 dst', {
+              cn('absolute size-3.5! shrink-0 ds-2xs', {
                 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage',
               })
             " />
@@ -73,7 +73,7 @@ const damageType = computed(() =>
       <p class="flex items-center gap-2 font-medium">
         <Icon
           v-if="resource?.icon"
-          class="inline size-3.5! shrink-0 opacity-90 dst"
+          class="dst inline size-3.5! shrink-0 opacity-90"
           :name="resource?.icon" />
         {{ champion.resource }}
       </p>
@@ -85,7 +85,7 @@ const damageType = computed(() =>
         class="flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1 *:text-md">
         <div class="font-medium">
           <Icon
-            class="mr-0.5 size-4.25! shrink-0! text-platinum dst"
+            class="dst mr-0.5 size-4.25! shrink-0! text-platinum"
             name="lp:be" />
           <p>
             {{ champion.price.blueEssence }}
@@ -93,7 +93,7 @@ const damageType = computed(() =>
           </p>
         </div>
         <div>
-          <Icon class="mr-1 size-4.5! shrink-0! text-gold dst" name="lp:rp" />
+          <Icon class="dst mr-1 size-4.5! shrink-0! text-gold" name="lp:rp" />
           <p class="font-medium">
             {{ champion.price.rp }}
             <span class="pr-0.5 text-xs font-medium">RP</span>

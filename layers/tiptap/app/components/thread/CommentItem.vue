@@ -4,11 +4,11 @@ const { comment, depth, parentHovered } = defineProps<{
   depth?: number
   parentHovered?: boolean
 }>()
-const emit = defineEmits(['triggerHovered'])
+const emit = defineEmits(["triggerHovered"])
 
 const replies = computed(() => {
   if (!comment.thread_id) return []
-  return ts().getChildComments(comment.thread_id, comment.id)
+  return threads().getChildComments(comment.thread_id, comment.id)
 })
 const hovered = ref<boolean>(false)
 const renderedHtml = computed(() => {
@@ -17,11 +17,11 @@ const renderedHtml = computed(() => {
 })
 const author = computedAsync(async () => {
   if (comment.removed) return null
-  const a = acc().getByUuid(comment.uuid)
+  const a = summonerAccounts().getByUuid(comment.uuid)
   if (!a) return null
   return {
     ...a,
-    ...(await ss().resolveByPuuid(a.puuid)),
+    ...(await sSummoner().resolveByPuuid(a.puuid)),
   } as AccountData
 }, null)
 /* const container = useTemplateRef<HTMLElement>('container')
@@ -43,8 +43,8 @@ useTooltips(container) */
         orientation="vertical"
         :class="
           cn(
-            'rounded-bl-lg border-l border-shade-p3/10 bg-transparent transition-colors duration-200 group-hover/tree:border-shade-p3/20',
-            { 'border-shade-p3/20!': hovered },
+            'border-shade-p3/10 group-hover/tree:border-shade-p3/20 rounded-bl-lg border-l bg-transparent transition-colors duration-200',
+            { 'border-shade-p3/20!': hovered }
           )
         " />
     </button>
@@ -61,8 +61,8 @@ useTooltips(container) */
         v-if="!replies?.length && depth"
         :class="
           cn(
-            'pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b border-b-p3 hover:border-shade-p3/20',
-            { 'border-shade-p3/20!': parentHovered },
+            'hover:border-shade-p3/20 pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b border-b-p3',
+            { 'border-shade-p3/20!': parentHovered }
           )
         "
         @mouseenter="emit('triggerHovered', true)"
@@ -132,8 +132,8 @@ useTooltips(container) */
         <span
           :class="
             cn(
-              'absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b border-shade-p3/10 dst transition-colors duration-200 hover:border-shade-p3/20',
-              { 'border-shade-p3/25!': hovered },
+              'border-shade-p3/10 hover:border-shade-p3/20 absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b ds-2xs transition-colors duration-200',
+              { 'border-shade-p3/25!': hovered }
             )
           " />
         {{ open ? "Collapse" : `${replies?.length} replies...` }}

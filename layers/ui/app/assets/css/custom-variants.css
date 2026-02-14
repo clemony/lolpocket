@@ -18,12 +18,20 @@
 @custom-variant active (&[data-state="active"]);
 @custom-variant selected (&[data-state="selected"]);
 
+@custom-variant trailing (&[data-slot="trailing"]);
+@custom-variant trail-icon (&[data-slot="trailingIcon"]);
+@custom-variant base (&[data-slot="base"]);
+@custom-variant lead-icon (&[data-slot="leadingIcon"]);
+@custom-variant leading (&[data-slot="leading"]);
+@custom-variant label (&[data-slot="label"]);
+
 @custom-variant on (
       &[data-state="on"],
       &[data-state="checked"],
       &[data-state="active"],
       &:focus-visible,
       &:hover,
+      &:focus,
       &[data-state="open"]
     );
 @custom-variant off (

@@ -1,25 +1,23 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { ButtonProps } from "@nuxt/ui"
+import type { PrimitiveProps } from "reka-ui"
+import { Primitive } from "reka-ui"
 
 const {
   fullWidth,
-  variant = 'none',
+  variant = "none",
 
   class: className,
-
 } = defineProps<
   PrimitiveProps & {
+    class?: HTMLAttributes["class"]
 
-    class?: HTMLAttributes['class']
-
-    size?: ButtonProps['size']
-    variant?: ButtonProps['variant']
+    size?: ButtonProps["size"]
+    variant?: ButtonProps["variant"]
     fullWidth?: boolean
   }
 >()
-const s = await ss().resolveByPuuid(as().account?.puuid)
+const s = await sSummoner().resolveByPuuid(user().account?.puuid)
 const summoner = computed(() => s)
 </script>
 
@@ -30,7 +28,7 @@ const summoner = computed(() => s)
       cn(
         'flex w-full items-center gap-3.5',
 
-        className,
+        className
       )
     ">
     <SummonerIcon class="size-11.5 rounded-full" />
@@ -46,7 +44,7 @@ const summoner = computed(() => s)
         :class="
           cn(
             'inline-flex w-full items-center gap-4 leading-none font-normal lowercase *:align-bottom',
-            { 'justify-between': fullWidth },
+            { 'justify-between': fullWidth }
           )
         ">
         <SummonerTag :summoner />

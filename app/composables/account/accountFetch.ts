@@ -16,27 +16,31 @@ export async function accountFetch() {
   progress.value = 40
 
   if (account) {
-    as().account ??= getEmptyAccount() as unknown as AccountData
-    Object.assign(as().account as AccountData, account as AccountData)
+    user().account ??= getEmptyAccount() as unknown as AccountData
+    Object.assign(user().account as AccountData, account as AccountData)
   } else {
     sendErrorToast("Unable to load account data. Please try logging in again.")
   }
   progress.value = 50
-  as().settings = (settings ?? getEmptySettings()) as Settings
+  user().settings = (settings ?? getEmptySettings()) as Settings
   progress.value = 60
   ps().pockets = pockets ?? []
   progress.value = 70
 
-  // Object.assign(as().account, account)
-  if (account) acc().setAccount(account as AccountData)
+  // Object.assign(user().account, account)
+  if (account) summonerAccounts().setAccount(account as AccountData)
   progress.value = 80
-  console.log("🥸 - findSummoner - acc():", acc().accounts)
+  console.log(
+    "🥸 - findSummoner - summonerAccounts():",
+    summonerAccounts().accounts
+  )
 
-  const summoner =
-    account?.puuid ? await ss().ensureSummoner({ puuid: account.puuid }) : null
+  const summoner = account?.puuid
+    ? await sSummoner().ensureSummoner({ puuid: account.puuid })
+    : null
 
   if (summoner) {
-    Object.assign(as().account as AccountData, summoner)
+    Object.assign(user().account as AccountData, summoner)
   }
   progress.value = 90
   progress.value = 100
@@ -44,7 +48,7 @@ export async function accountFetch() {
   toast.add({
     title: "Welcome back!",
     description: `Great to see you, ${
-      as().account?.name ?? as().account?.username ?? "Summoner"
+      user().account?.name ?? user().account?.username ?? "Summoner"
     }!`,
     icon: "party",
   })

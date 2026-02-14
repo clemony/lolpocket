@@ -111,7 +111,7 @@ console.log("💠 - card.splash:", card.splash)
           <div class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
-                class="text-5xl dst tracking-tight pl-3"
+                class="text-5xl ds-2xs tracking-tight pl-3"
                 :style="{ fontFamily: card.font[1] }"
                 :class="fontClass2">
                 {{ card.champion ? `${card.champion}\'s` : '' }} Pocket

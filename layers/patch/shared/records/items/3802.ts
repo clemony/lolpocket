@@ -1,99 +1,100 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3802,
-  name: 'Lost Chapter',
-  nicknames: [
-    'mana book'
-  ],
-  description: '40 Ability Power\n300 Mana\n10 Ability Haste\n\nEnlighten\nLevelling up restores 20% max Mana over 3 seconds.',
-  noEffects: false,
-  rank: 'Epic',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Lost Chapter",
+  "id": 3802,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      id: 1052,
-      name: 'Amplifying Tome',
-      gold: 400
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
     },
     {
-      id: 1027,
-      name: 'Sapphire Crystal',
-      gold: 300
+      "id": 1027,
+      "name": "Sapphire Crystal",
+      "gold": 300
     },
     {
-      id: 2022,
-      name: 'Glowing Mote',
-      gold: 250
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
     }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 323003,
-      name: 'Archangel\'s Staff',
-      gold: 2900
+      "id": 323003,
+      "name": "Archangel's Staff",
+      "gold": 2900
     },
     {
-      id: 3003,
-      name: 'Archangel\'s Staff',
-      gold: 2900
+      "id": 3003,
+      "name": "Archangel's Staff",
+      "gold": 2900
     },
     {
-      id: 3118,
-      name: 'Malignance',
-      gold: 2700
+      "id": 3118,
+      "name": "Malignance",
+      "gold": 2700
     },
     {
-      id: 2503,
-      name: 'Blackfire Torch',
-      gold: 2800
+      "id": 2503,
+      "name": "Blackfire Torch",
+      "gold": 2800
     },
     {
-      id: 2522,
-      name: 'Actualizer',
-      gold: 3100
+      "id": 2522,
+      "name": "Actualizer",
+      "gold": 3100
     },
     {
-      id: 4644,
-      name: 'Crown of the Shattered Queen',
-      gold: 2865
+      "id": 4644,
+      "name": "Crown of the Shattered Queen",
+      "gold": 2865
     },
     {
-      id: 6655,
-      name: 'Luden\'s Echo',
-      gold: 2750
+      "id": 6655,
+      "name": "Luden's Echo",
+      "gold": 2750
     },
     {
-      id: 6656,
-      name: 'Everfrost',
-      gold: 2865
+      "id": 6656,
+      "name": "Everfrost",
+      "gold": 2865
     }
   ],
-  gold: {
-    base: 250,
-    sell: 840,
-    total: 1200
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "mana book"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Enlighten",
+      "effects": "Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds."
+    }
+  ],
+  "stats": {
+    "abilityPower": 40,
+    "mana": 300,
+    "abilityHaste": 10
   },
-  maps: [
+  "description": "40 Ability Power\n300 Mana\n10 Ability Haste\n\nEnlighten\nLevelling up restores 20% max Mana over 3 seconds.",
+  "gold": {
+    "base": 250,
+    "purchasable": true,
+    "total": 1200,
+    "sell": 840
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Enlighten',
-      effects: 'Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 10,
-    abilityPower: 40,
-    mana: 300
-  }
+  ]
 }
 export default item

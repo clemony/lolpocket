@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useChampionStatGrowth } from "~/domain/champions/useChampionStatGrowth"
+
 const { champion } = defineProps<{
   champion: Champion
 }>()
@@ -142,7 +144,9 @@ const filteredStats = computed(() => {
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
         class="group/tr flex h-16 min-h-16 w-full cursor-pointer items-center justify-between px-5">
-        <h3 class="underline-offset-3 dst group-hover/tr:underline">Stats</h3>
+        <h3 class="underline-offset-3 ds-2xs group-hover/tr:underline">
+          Stats
+        </h3>
         <CaretFlip />
       </div>
       <div

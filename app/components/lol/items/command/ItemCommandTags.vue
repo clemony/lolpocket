@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { filtered, filters, setFilter } = useItemFilter() as any
+const { filtered, filters } = is() as any
 const searchInput = ref<string[]>([])
 </script>
 
@@ -8,9 +8,7 @@ const searchInput = ref<string[]>([])
     class="z-1 flex h-auto w-full flex-wrap items-center px-4 *:select-none"
     group
     tag="div">
-    <template
-      v-for="query in searchInput"
-      :key="query">
+    <template v-for="query in searchInput" :key="query">
       <button
         v-if="query !== ''"
         class="f btn mt-4 gap-2 rounded-md bg-p2/97 text-sm! font-normal! btn-xs"
@@ -38,8 +36,8 @@ const searchInput = ref<string[]>([])
         v-model="filters.tags"
         class="peer hidden"
         type="checkbox"
-        :value="stat">
-      {{ statIndex[stat]?.abbr?.[0] ?? '' }}
+        :value="stat" />
+      {{ statIndex[stat]?.abbr?.[0] ?? "" }}
 
       <icon name="x-sm" />
     </label>

@@ -60,7 +60,7 @@ async function testSaveAllPockets() {
 
       <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
       <Label class="mb-1 px-3 py-2" variant="label">
-        <icon class="size-4.5 dst" name="export" />
+        <icon class="dst size-4.5" name="export" />
         Export to League Client
       </Label>
       <UButton class="h-9! rounded-md pl-10.75!" variant="ghost" size="sm">
@@ -74,7 +74,7 @@ async function testSaveAllPockets() {
       <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
       <UButton class="h-9! rounded-md" variant="ghost" size="sm" as-child>
         <DeletePocketDialog :pocket="pocket">
-          <icon class="size-4.5 dst" name="trash" />
+          <icon class="dst size-4.5" name="trash" />
           Delete Pocket
         </DeletePocketDialog>
       </UButton>

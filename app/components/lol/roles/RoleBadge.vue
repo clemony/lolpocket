@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui';
+import type { ButtonProps } from "@nuxt/ui"
 
 const { class: className, role: rl } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   role: ChampionRole | string | null
   noLabel?: boolean
-  size?: ButtonProps['size']
+  size?: ButtonProps["size"]
   active?: boolean
   clear?: boolean
 }>()
 
 const role = computed(() => {
-  if (typeof rl !== 'string') return rl
+  if (typeof rl !== "string") return rl
 
-  return championRoles.find(p => p.name === (rl ?? 'All'))
+  return championRoles.find((p) => p.name === (rl ?? "All"))
 })
 </script>
 
@@ -31,23 +31,18 @@ const role = computed(() => {
             active || (cs().filters.role && cs().filters.role === role.name),
           'pr-3': active && clear,
         },
-        className,
+        className
       )
     "
     :style="{
       backgroundColor: `${(cs().filters.role && cs().filters.role === role.name) || active ? role.color : 'transparent'}`,
     }">
-    <Element
-      square
-      size="sm">
+    <Element square size="sm">
       <component
         :is="`i-lol-${role?.name.toLowerCase()}`"
-        :class="cn('absolute size-4.25! shrink-0 dst', role?.class)" />
+        :class="cn('absolute size-4.25! shrink-0 ds-2xs', role?.class)" />
     </Element>
     {{ role.name }}
-    <icon
-      v-if="clear"
-      class="size-4 text-white **:stroke-[2.6]"
-      name="x" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </UButton>
 </template>

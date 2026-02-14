@@ -7,6 +7,10 @@ const { summoner } = storeToRefs(sSession())
 onMounted(() => {
   matchFilter().clearFilters()
 })
+
+//user().settings?.show_flex && user().settings?.show_solo &&
+// v-if="summoner?.ranked?.solo"
+// v-if="summoner?.ranked?.flex"
 </script>
 
 <template>
@@ -17,15 +21,9 @@ onMounted(() => {
         className
       )
     ">
-    <RankCard
-      v-if="as().settings?.show_solo && summoner?.ranked?.solo"
-      title="Solo/Duo"
-      :entry="summoner?.ranked?.solo" />
+    <RankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
 
-    <RankCard
-      v-if="as().settings?.show_flex && summoner?.ranked?.flex"
-      title="Flex"
-      :entry="summoner?.ranked?.flex" />
+    <RankCard title="Flex" :entry="summoner?.ranked?.flex" />
 
     <QueueFilters />
 
@@ -33,6 +31,6 @@ onMounted(() => {
 
     <LazyMatchPositionFilter />
 
-    <LazyMatchAlliesFilter v-if="as().settings?.show_allies" />
+    <LazyMatchAlliesFilter v-if="user().settings?.show_allies" />
   </div>
 </template>

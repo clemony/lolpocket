@@ -8,7 +8,7 @@ const {
 } = defineProps<{
   class?: HTMLAttributes["class"]
   pocket: Pocket
-  size: ButtonProps["size"]
+  size?: ButtonProps["size"]
 }>()
 
 const pocket = computed(() => p)

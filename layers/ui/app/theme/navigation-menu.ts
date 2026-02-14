@@ -16,7 +16,7 @@ export default {
     item: "h-10 min-w-0 flex items-center",
     label:
       "h-10 w-full flex text-pc items-center gap-1.5 font-semibold text-xs/5   px-3.5 py-1.5",
-    link: "group relative text-pc h-10 w-full flex items-center gap-1.5  px-3.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2",
+    link: "group relative text-pc h-8 w-full flex items-center gap-1.5  px-3.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2",
     linkLabel: "truncate text-pc",
     linkLabelExternalIcon: "inline-block size-3 align-top text-n5",
     linkLeadingAvatar: "shrink-0 transition-opacity duration-200",

@@ -10,7 +10,7 @@ definePageMeta({
 
 <template>
   <div
-    class="flex size-full min-h-svh flex-col items-center justify-center gap-6 bg-tint-p2/40 p-6 md:p-10">
+    class="bg-tint-p2/40 flex size-full min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
     <Carousel class="relative w-full max-w-xs">
       <CarouselContent>
         <CarouselItem v-for="(_, index) in 5" :key="index">

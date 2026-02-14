@@ -1,35 +1,36 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 1083,
-  name: 'Cull',
-  nicknames: [
-    'dblade'
+      const item: Item =  {
+  "name": "Cull",
+  "id": 1083,
+  "rank": "Starter",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "dblade"
   ],
-  description: '7 Attack Damage\n\nReap\nRestore 3 Health On-Hit.\nKilling minions grants 1 gold, up to 100. Reaching the limit grants another 350 gold.\n',
-  noEffects: false,
-  rank: 'Starter',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 450,
-    sell: 180,
-    total: 450
-  },
-  maps: [
-    11
-  ],
-  passives: [
+  "passives": [
     {
-      name: 'Reap',
-      effects: 'Killing a minion grants an additional <img src="/img/icons/gold-coin.webp" class="inline-icon" />1, up to a <b>maximum</b> of <img src="/img/icons/gold-coin.webp" class="inline-icon" />100.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Reap",
+      "effects": "Killing a minion grants an additional <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />1, up to a <b>maximum</b> of <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />100."
     }
   ],
-  stats: {
-    attackDamage: 7
-  }
+  "stats": {
+    "attackDamage": 7
+  },
+  "description": "7 Attack Damage\n\nReap\nRestore 3 Health On-Hit.\nKilling minions grants 1 gold, up to 100. Reaching the limit grants another 350 gold.\n",
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 450,
+    "sell": 180
+  },
+  "maps": [
+    11
+  ]
 }
 export default item

@@ -14,14 +14,17 @@ export async function accountUpdate(account: Partial<AccountData>) {
   if (!data) {
     sendErrorToast()
   } else {
-    as().account ??= getEmptyAccount() as unknown as AccountData
-    const next = Object.assign(as().account as AccountData, data as AccountData)
-    as().account = next
+    user().account ??= getEmptyAccount() as unknown as AccountData
+    const next = Object.assign(
+      user().account as AccountData,
+      data as AccountData
+    )
+    user().account = next
     toast.add({
       color: "neutral",
       title: "Welcome back!",
       description: `Great to see you, ${
-        as().account?.name ?? as().account?.username ?? "Summoner"
+        user().account?.name ?? user().account?.username ?? "Summoner"
       }!`,
       icon: "tick",
     })

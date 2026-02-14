@@ -59,7 +59,7 @@ const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
           :value="keystones?.[keystone.id]?.winrate ?? 0" />
         <span
           v-if="keystones?.[keystone.id]"
-          class="absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs! leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm">
+          class="border-tint-neutral/50 absolute -bottom-3 z-1 inline-flex justify-self-center rounded-lg border bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs! leading-none font-bold text-nc/80 shadow-sm ds-sm backdrop-blur-sm">
           {{ keystones[keystone.id]?.winrate }}
         </span>
       </div>
@@ -108,7 +108,7 @@ const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
           />
           <span
             v-if="runes?.[rune.id]"
-            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs leading-none font-bold text-nc/80 shadow-sm dss backdrop-blur-sm"
+            class="absolute -bottom-2 z-1 inline-flex rounded-lg border border-tint-neutral/50 bg-neutral/70 px-1.5 py-0.5 align-middle text-2xs leading-none font-bold text-nc/80 shadow-sm ds-sm backdrop-blur-sm"
             :class="cn('')"
           >
             {{ runes[rune.id].winrate }}

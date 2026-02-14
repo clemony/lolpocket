@@ -4,13 +4,13 @@ const { threadId } = defineProps<{
 }>()
 const thread = ref<CommentData[] | null>(null)
 const newComment = ref<Doc | null>(null)
-const sortBy = shallowRef<'best' | 'new'>('best')
+const sortBy = shallowRef<"best" | "new">("best")
 
 function updateSort() {
-  thread.value = ts().getSortedRootComments(threadId, sortBy.value)
+  thread.value = threads().getSortedRootComments(threadId, sortBy.value)
 }
 onMounted(() => {
-  thread.value = ts().getSortedRootComments(threadId, 'best')
+  thread.value = threads().getSortedRootComments(threadId, "best")
 })
 </script>
 
@@ -57,9 +57,7 @@ onMounted(() => {
         :comment="comment" />
     </div>
 
-    <div
-      v-else
-      class="grid h-44 w-full place-items-center">
+    <div v-else class="grid h-44 w-full place-items-center">
       <p>No comments yet. Be the first!</p>
     </div>
   </div>

@@ -14,7 +14,7 @@ const props = defineProps<{
       <SelectValue class="p-0" placeholder="Aa" as-child>
         <!--
           :style="{ fontFamily: props.card.font[props.model] }" -->
-        <div class="items-center align-text-bottom text-lg font-medium dst">
+        <div class="items-center align-text-bottom text-lg font-medium ds-xs">
           {{ props.model === 0 ? "Title Font" : "Accent Font" }}
         </div>
       </SelectValue>
@@ -25,7 +25,7 @@ const props = defineProps<{
         <SelectItem
           v-for="font in fonts.sort()"
           :key="font.id"
-          class="text-lg dst"
+          class="text-lg ds-xs"
           :value="font.id"
           :style="{ fontFamily: font.id }">
           {{ font.display }}

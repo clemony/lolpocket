@@ -5,8 +5,8 @@ const { match } = defineProps<{
 
 const teams = computed(() => {
   return {
-    blue: match.participants.filter(p => p.teamId === 100),
-    red: match.participants.filter(p => p.teamId === 200),
+    blue: match.participants.filter((p) => p.teamId === 100),
+    red: match.participants.filter((p) => p.teamId === 200),
   }
 })
 const teamBlue = computed(() => match.teams?.[0])
@@ -44,7 +44,7 @@ const teamRed = computed(() => match.teams?.[1])
 
     <TeamMatchEndStats
       :team="match.teams[0]"
-      class="mt-3 from-inspiration/60 shadow-warm-soft" />
+      class="mt-3 from-insp/60 shadow-warm-soft" />
 
     <div class="size-full">
       <MatchTeammate
@@ -56,7 +56,7 @@ const teamRed = computed(() => match.teams?.[1])
 
     <TeamMatchEndStats
       :team="match.teams[1]"
-      class="from-domination/60 shadow-warm-soft" />
+      class="from-dom/60 shadow-warm-soft" />
 
     <div class="size-full">
       <MatchTeammate

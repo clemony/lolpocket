@@ -1,3 +1,21 @@
+import { bumpStatDetail } from "~/domain/stats/helpers/bumpValues"
+import {
+  getFinalItems,
+  getItemAcquireTimes,
+  getLegendarySlotKey,
+  isBoots,
+  isLegendary,
+  isTrinket,
+  SUPPORT_LEGENDARIES,
+  TEN_MINUTES,
+} from "~/domain/stats/helpers/normalizeItemTimeline"
+import {
+  sortTimedByPickrate,
+  sortTimedByTime,
+  sortTimedByWinrate,
+  sortTimedByWinratePickrate,
+} from "~/domain/stats/helpers/sortEntries"
+
 //
 export interface ItemSlotOrder {
   best?: {
@@ -235,26 +253,23 @@ export function useChampionItemTimelineStats(
         slots,
         byWinrate: sortTimedByWinrate(allLegendaries),
         core: {
-          games:
-            core.length ?
-              Math.round(
+          games: core.length
+            ? Math.round(
                 (core.reduce((ac, [, s]) => ac + (s.games ?? 0), 0) /
                   core.length) *
                   10
               ) / 10
             : 0,
           items: sortedCore,
-          pickrate:
-            core.length ?
-              Math.round(
+          pickrate: core.length
+            ? Math.round(
                 (core.reduce((ac, [, s]) => ac + (s.pickrate ?? 0), 0) /
                   core.length) *
                   10
               ) / 10
             : 0,
-          winrate:
-            core.length ?
-              Math.round(
+          winrate: core.length
+            ? Math.round(
                 (core.reduce((ac, [, s]) => ac + (s.winrate ?? 0), 0) /
                   core.length) *
                   10

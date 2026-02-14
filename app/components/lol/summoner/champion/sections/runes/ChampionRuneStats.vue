@@ -21,7 +21,7 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
           :data-type="
             runes.usedFallback ?
               `*Based on limited data (${runes.best.games} games)`
-            : null
+              : null
           ">
           Highest performing rune set
           <Icon class="inline size-3.5" name="info" />

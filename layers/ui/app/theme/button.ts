@@ -5,7 +5,7 @@ export default {
     leadingAvatarSize: "",
     leadingIcon: "shrink-0",
     trailingIcon: "shrink-0",
-    base: " overflow-hidden font-medium text-xs inline-flex items-center disabled:cursor-not-allowed   duration-0 aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 cursor-pointer",
+    base: " overflow-hidden font-medium text-xs inline-flex items-center disabled:cursor-not-allowed shrink-0  duration-0 aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 cursor-pointer",
   },
   variants: {
     color: {
@@ -18,50 +18,51 @@ export default {
       transparent: {},
     },
     size: {
+      custom: {},
       "3xs": {
-        base: "px-1.5 h-5 gap-1",
+        base: "px-1.5 h-5! min-w-5! gap-1",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.25 **:stroke-[2.7]",
         trailingIcon: "size-3.5",
       },
       "2xs": {
-        base: "px-2 h-6 gap-2",
+        base: "px-2 h-6! gap-2",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-3.5",
         trailingIcon: "size-3.5",
       },
       lg: {
-        base: "px-3 h-12 gap-2",
+        base: "px-3 h-12! gap-2",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-5",
         trailingIcon: "size-5",
       },
       md: {
-        base: "px-2.5 h-10 gap-1.5",
+        base: "px-2.5 h-10! gap-1.5",
         leadingAvatarSize: "2xs",
-        leadingIcon: "size-5",
+        leadingIcon: "size-4",
         trailingIcon: "size-5",
       },
       sm: {
-        base: "px-2.5 h-8 gap-1.5  ",
+        base: "px-2.5 h-8! gap-1.5  ",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
       },
       xl: {
-        base: "px-3 h-14 gap-2 ",
+        base: "px-3 h-14! gap-2 ",
         leadingAvatarSize: "xs",
         leadingIcon: "size-6",
         trailingIcon: "size-6",
       },
       "2xl": {
-        base: "px-3 h-16 gap-2 ",
+        base: "px-3 h-16! gap-2 ",
         leadingAvatarSize: "xs",
         leadingIcon: "size-6",
         trailingIcon: "size-6",
       },
       xs: {
-        base: "px-2 h-7 gap-1 ",
+        base: "px-2 h-7! min-w-7! gap-1 ",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
@@ -69,18 +70,21 @@ export default {
     },
     square: {
       true: {
-        base: "anchor btn-square",
+        base: "anchor   shrink-0 p-0! *:absolute",
       },
     },
     variant: {
       solid: {
-        base: "btn shadow-sm  hover:inset-shadow-xs active:inset-shadow-xs on:inset-shadow-xs open:inset-shadow-xs focus:inset-shadow-xs focus-visible:inset-shadow-xs",
+        base: "btn shadow-sm  hover:inset-shadow-xs ",
       },
       ghost: {
-        base: "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent  hover:inset-shadow-xs active:inset-shadow-xs on:inset-shadow-xs open:inset-shadow-xs focus:inset-shadow-xs focus-visible:inset-shadow-xs",
+        base: "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent  hover:inset-shadow-xs ",
       },
       outline: {
-        base: "btn btn-outline hover:inset-shadow-xs active:inset-shadow-xs on:inset-shadow-xs open:inset-shadow-xs focus:inset-shadow-xs focus-visible:inset-shadow-xs",
+        base: "btn btn-outline hover:inset-shadow-xs ",
+      },
+      ring: {
+        base: "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent  hover:inset-shadow-xs ",
       },
       link: {
         base: "group/link hover:underline inline-flex",
@@ -153,11 +157,11 @@ export default {
       color: "neutral",
       variant: "solid",
       class: {
-        base: "btn-neutral btn  bg-neutral on:text-nc  on:btn-neutral active:btn-neutral  on:btn-neutral focus-visible:bg-neutral active:bg-neutral",
+        base: "btn-neutral btn font-semibold  bg-neutral on:text-nc  on:btn-neutral active:btn-neutral  on:btn-neutral focus-visible:bg-neutral active:bg-neutral",
         leadingIcon:
-          "group-hover/btn:**:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc ",
+          "group-hover/btn:**:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc text-nc **:text-nc",
         trailingIcon:
-          "group-hover/btn:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc ",
+          "group-hover/btn:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc text-nc **:text-nc",
       },
     },
     {
@@ -169,6 +173,13 @@ export default {
     },
     /* GHOST */
     {
+      color: ["p0", "p1", "p2", "p3"],
+      variant: "ghost",
+      class: {
+        base: "text-pc btn btn-ghost on:backdrop-blur-sm bg-clip-padding on:btn-active on:fx-1 on:btn-active on:border-p3   on:noise    on:bg-p1",
+      },
+    },
+    {
       color: "neutral",
       variant: "ghost",
       class: {
@@ -179,19 +190,20 @@ export default {
           "group-hover/btn:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc ",
       },
     },
+    // RING
+
     {
       color: ["p0", "p1", "p2", "p3"],
-      variant: "ghost",
+      variant: "ring",
       class: {
-        base: "text-pc btn btn-ghost on:backdrop-blur-sm bg-clip-padding on:btn-active on:fx-1 on:btn-active on:border-p3/50 on:ring    on:ring-p3/80 on:bg-p1",
+        base: "text-pc btn btn-ghost on:backdrop-blur-sm bg-clip-padding on:btn-active on:fx-1 on:btn-active on:border-p3 on:ring on:noise  on:ring-pc/50 on:bg-p1",
       },
     },
-    /* LINK */
+    // LINK
     {
-      color: ["p0", "p1", "p2", "p3"],
       variant: "link",
       class: {
-        base: "hover:underline group/link",
+        base: "hover:underline group/link px-0",
         label: "group-hover/link:underline decoration-pc text-pc",
       },
     },
@@ -230,6 +242,13 @@ export default {
       variant: ["solid"],
       class: {
         base: "hover:inset-shadow-xs",
+      },
+    },
+    {
+      size: "2xs",
+      square: true,
+      class: {
+        base: "size-6! anchor",
       },
     },
   ],

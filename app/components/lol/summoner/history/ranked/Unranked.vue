@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   title?: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -10,7 +10,7 @@ const props = defineProps<{
     :class="
       cn(
         'h-42 max-h-42 w-120 max-w-120 border-p3/40 bg-p2/30 py-0 drop-shadow-xs',
-        props.class,
+        props.class
       )
     "
     :title="`Ranked ${props.title}`">
@@ -21,7 +21,7 @@ const props = defineProps<{
         <img
           class="size-25 object-contain opacity-40 drop-shadow-sm saturate-0"
           alt="unranked"
-          src="/img/crests/unranked.webp">
+          src="/img/crests/unranked.webp" />
       </div>
 
       <div class="relative grid size-full place-items-center">
@@ -32,7 +32,7 @@ const props = defineProps<{
       </div>
 
       <div
-        class="flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium dst **:text-pc/30">
+        class="flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium ds-2xs **:text-pc/30">
         <p class="capitalize">
           Unranked
         </p>

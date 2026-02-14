@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ItemTooltip from "#components"
-
 const {
   id,
   side = "top",
@@ -18,46 +16,38 @@ const {
 }>()
 
 const loaded = shallowRef<boolean>(false)
-
-const toast = useToast()
-function showToast() {
-  if (!id) return
-  if (!toast.toasts.value.find((t) => t.id === `item-${id}`)) {
-    toast.add({
-      id: `item-${id}`,
-      description: h(ItemTooltip, { id, map }),
-      duration: 0,
-      ui: {
-        root: "p-0!",
-      },
-    })
-  }
-}
+const swap = shallowRef<boolean>(false)
+function handleSwap() {}
 </script>
 
 <template>
   <Tooltip
-    :disabled
+    :disabled="disabled || swap"
     :text="id ? itemNameById(id) : ''"
     trailing-icon="i-right-click"
     :img="id ? `/img/items/${id}.webp` : undefined"
     :side>
-    <Img
-      role="button"
-      :class="
-        cn(
-          'overflow-hidden rounded-lg',
-          {
-            ' opacity-96 shadow-sm  shadow-black/30 drop-shadow-sm ':
-              id && loaded,
-          },
-          className
-        )
-      "
-      :src="id ? `/img/items/${id}.webp` : undefined"
-      :alt="id ? itemNameById(id) : 'item icon'"
-      :loading-type
-      @click.stop="showToast()"
-      @load="loaded = true" />
+    <UTooltip :disabled="disabled || !swap" :side>
+      <Img
+        role="button"
+        :class="
+          cn(
+            'overflow-hidden rounded-lg',
+            {
+              'opacity-96 shadow-sm shadow-black/30 drop-shadow-sm':
+                id && loaded,
+            },
+            className
+          )
+        "
+        :src="id ? `/img/items/${id}.webp` : undefined"
+        :alt="id ? itemNameById(id) : 'item icon'"
+        :loading-type
+        @click.right="handleSwap()"
+        @load="loaded = true" />
+      <template #content>
+        <ItemTooltip v-if="id && swap" :id />
+      </template>
+    </UTooltip>
   </Tooltip>
 </template>

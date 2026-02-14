@@ -1,66 +1,67 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2020,
-  name: 'The Brutalizer',
-  nicknames: [
-    'Bloodstone'
-  ],
-  description: '25 Attack Damage\n10 Ability Haste\n5 Lethality\n\n',
-  noEffects: true,
-  rank: 'Epic',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "The Brutalizer",
+  "id": 2020,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      id: 2022,
-      name: 'Glowing Mote',
-      gold: 250
+      "id": 2022,
+      "name": "Glowing Mote",
+      "gold": 250
     },
     {
-      id: 1037,
-      name: 'Pickaxe',
-      gold: 875
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
     }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 6696,
-      name: 'Axiom Arc',
-      gold: 2750
+      "id": 6696,
+      "name": "Axiom Arc",
+      "gold": 2750
     },
     {
-      id: 2520,
-      name: 'Bastionbreaker',
-      gold: 3200
+      "id": 2520,
+      "name": "Bastionbreaker",
+      "gold": 3200
     },
     {
-      id: 6698,
-      name: 'Profane Hydra',
-      gold: 2850
+      "id": 6698,
+      "name": "Profane Hydra",
+      "gold": 2850
     },
     {
-      id: 6699,
-      name: 'Voltaic Cyclosword',
-      gold: 3000
+      "id": 6699,
+      "name": "Voltaic Cyclosword",
+      "gold": 3000
     }
   ],
-  gold: {
-    base: 212,
-    sell: 936,
-    total: 1337
+  "specialRecipe": 0,
+  "noEffects": true,
+  "removed": false,
+  "nicknames": [
+    "Bloodstone"
+  ],
+  "stats": {
+    "attackDamage": 25,
+    "lethality": 5,
+    "abilityHaste": 10
   },
-  maps: [
+  "description": "25 Attack Damage\n10 Ability Haste\n5 Lethality\n\n",
+  "gold": {
+    "base": 212,
+    "purchasable": true,
+    "total": 1337,
+    "sell": 936
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  stats: {
-    abilityHaste: 10,
-    attackDamage: 25,
-    lethality: 5
-  }
+  ]
 }
 export default item

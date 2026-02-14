@@ -33,7 +33,7 @@ function close() {
 
       <div class="flex size-full flex-col justify-center gap-1">
         <div class="flex items-center justify-between">
-          <h2 class="grow text-xl leading-none dst">
+          <h2 class="dst grow text-xl leading-none">
             {{ spell.name }}
           </h2>
           <!--          <a

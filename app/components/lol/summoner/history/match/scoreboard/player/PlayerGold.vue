@@ -21,7 +21,7 @@ const {
       size="c-3.5"
       name="lol:gold" />
 
-    <span class="hidden @min-700:flex">
+    <span class="@min-700:flex hidden">
       {{ roundDecimal(player.stats.goldEarned / 1000) }}k
     </span>
 

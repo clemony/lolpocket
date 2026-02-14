@@ -1,6 +1,8 @@
 //
 // CHAMPS
 
+import { newRuneSet } from "~/domain/pocket/addPocketModules"
+
 export function removeChampion(champion: string, pocket: Pocket) {
   if (!pocket.champions) return
   const find = pocket.champions.findIndex((c) => c === champion)

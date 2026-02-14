@@ -11,7 +11,7 @@ const { modelValue: selectedMap } = defineProps<{
         <span class="relative grid size-5 place-items-center">
           <component
             :is="`i-lol-${selectedMap}`"
-            class="absolute shrink-0 opacity-80 dst"
+            class="dst absolute shrink-0 opacity-80"
             :class="{
               'size-5!': selectedMap === 12 || selectedMap === 11,
               'size-6!': selectedMap === 30,
@@ -52,7 +52,7 @@ const { modelValue: selectedMap } = defineProps<{
               <span class="relative grid size-5 place-items-center">
                 <component
                   :is="`i-lol-${map}`"
-                  class="absolute shrink-0 opacity-80 dst"
+                  class="dst absolute shrink-0 opacity-80"
                   :class="{
                     'size-5!': map === 12 || map === 11,
                     'size-6!': map === 30,

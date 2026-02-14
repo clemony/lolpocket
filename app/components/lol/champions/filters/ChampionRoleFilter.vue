@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
@@ -10,8 +10,8 @@ const {
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
-  variant?: ButtonProps['variant']
-  size?: ButtonProps['size']
+  variant?: ButtonProps["variant"]
+  size?: ButtonProps["size"]
 }>()
 </script>
 
@@ -22,7 +22,7 @@ const {
         group
         :class="
           cn(
-            'relative z-1 flex max-h-64 w-9/10 w-full flex-col flex-wrap items-center items-start gap-2 gap-y-3 py-0',
+            'relative z-1 flex max-h-64 w-9/10 flex-col flex-wrap items-center gap-2 gap-y-3 py-0',
             className
           )
         ">

@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui"
+import { contactInfo } from "~/domain/lp/contact/contactInfo"
+import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
 
 const { copied, copy, isSupported, text } = useClipboard({
-  source: contactInfo.support?.to ?? '',
+  source: contactInfo.support?.to ?? "",
 })
 
 const copyMsg = computed(() => {

@@ -5,7 +5,7 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = toRef(props, 'pocket')
+const pocket = toRef(props, "pocket")
 const pocketRoles = computed<string[]>({
   get: () => pocket.value.roles ?? [],
   set: (value) => {
@@ -77,7 +77,7 @@ function handleReset() {
 
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
-        class="h-4.5 w-auto shrink-0 dst peer-checked:text-nc"
+        class="h-4.5 w-auto shrink-0 ds-2xs peer-checked:text-nc"
         :class="{ 'size-5': role === 'jungle' }" />
       {{ role }}
     </label>

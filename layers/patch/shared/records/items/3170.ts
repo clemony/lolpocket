@@ -1,48 +1,49 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3170,
-  name: 'Swiftmarch',
-  nicknames: [
-    'boots'
-  ],
-  description: '65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.',
-  noEffects: false,
-  rank: 'Boots',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Swiftmarch",
+  "id": 3170,
+  "rank": "Boots",
+  "buildsFrom": [
     {
-      id: 3009,
-      name: 'Boots of Swiftness',
-      gold: 1000
+      "id": 3009,
+      "name": "Boots of Swiftness",
+      "gold": 1000
     }
   ],
-  gold: {
-    base: 0,
-    sell: 700,
-    total: 1000
-  },
-  maps: [
-    11
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "boots"
   ],
-  passives: [
+  "passives": [
     {
-      name: 'Fleetfooted',
-      effects: 'Gain 40% slow resist.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Fleetfooted",
+      "effects": "Gain 40% slow resist."
     },
     {
-      name: 'Noxian Fervor',
-      effects: 'Gain <img src="/img/icons/adaptive-force.webp" class="tip-icon " />adaptive force equal to 5% of your <b>total</b> movement speed.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Noxian Fervor",
+      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon \" />adaptive force equal to 5% of your <b>total</b> movement speed."
     }
   ],
-  stats: {
-    flatMovespeed: 65
-  }
+  "stats": {
+    "flatMovespeed": 65
+  },
+  "description": "65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 1000,
+    "sell": 700
+  },
+  "maps": [
+    11
+  ]
 }
 export default item

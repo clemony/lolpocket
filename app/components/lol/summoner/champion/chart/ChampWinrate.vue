@@ -14,17 +14,30 @@ const {
 }>()
 
 const obj = computed(() => {
-  const games = champion?.games ?? ally?.games ?? 0
-  const win = champion?.wins ?? ally?.win ?? 0
-  const wr =
-    champion ? (champion.wins / champion.games) * 100
-    : entry ? (entry.wins / (entry.wins + entry.losses)) * 100
-    : ally ? ((ally.win ?? 0) / (ally.games ?? 1)) * 100
-    : null
-  return { games, win, wr }
+  return (
+    champion ||
+    ally ||
+    entry || {
+      win: 0,
+      loss: 0,
+      wr: 0,
+      games: 0,
+    }
+  )
 })
+
+const wr = computed(() => {
+  if (!obj.value) {
+    return
+  }
+  if (obj.value.win) {
+    const total = obj.value.win + (obj.value?.loss || 0)
+    return roundDecimalToPercent(obj.value.win, total)
+  }
+  return 0
+})
+
 const data = computed(() => {
-  const wr = obj.value.wr ?? 0
   return {
     datasets: [
       {
@@ -33,14 +46,15 @@ const data = computed(() => {
             cssVar(`--color-${entry?.tier ?? "p3"}`)
           : cssVar(
               `--color-${
-                wr >= 51 ? "win"
-                : wr <= 49 ? "domination"
+                !wr.value ? "p3"
+                : wr.value >= 51 ? "win"
+                : wr.value <= 49 ? "domination"
                 : "silver"
               }`
             ),
           cssVar("--color-p3"),
         ],
-        data: [obj.value.win ?? 0, obj.value.games ?? 0],
+        data: [obj.value?.win ?? 0, obj.value?.loss ?? 0],
       },
     ],
     labels: ["win", "loss"],
@@ -56,17 +70,17 @@ const data = computed(() => {
         className
       )
     ">
-    <DonutSkeleton v-if="!champion || !obj.wr" class="absolute size-full" />
+    <DonutSkeleton v-if="!data" class="absolute size-full" />
     <div class="size-[94%]">
       <Donut overlap cutout="82%" :data />
     </div>
     <span
       :class="
-        cn('absolute text-3xs! font-medium text-pc dst', {
-          'opacity-0': hideZero && (!obj.wr || obj.wr === 0),
+        cn('absolute text-3xs! font-medium text-pc ds-2xs', {
+          'opacity-0': hideZero && (!wr || wr === 0),
         })
       ">
-      {{ obj.wr ? obj.wr.toFixed(1).replace(".0", "") : 0 }}
+      {{ wr || 0 }}
     </span>
   </div>
 </template>

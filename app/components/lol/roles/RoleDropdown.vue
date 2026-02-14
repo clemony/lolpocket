@@ -27,7 +27,7 @@ const pocketRoles = computed<string[]>({
           v-tippy="pocketRoles"
           class="drop-shadow-text size-6.5 shrink-0 text-md! text-white/70 focus:outline-0" />
 
-        <i-roles-all-lanes v-else class="size-6 shrink-0 text-white/80 dst" />
+        <i-roles-all-lanes v-else class="dst size-6 shrink-0 text-white/80" />
       </UButton>
     </DropdownMenuTrigger>
 

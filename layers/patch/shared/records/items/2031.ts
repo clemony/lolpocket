@@ -1,42 +1,43 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2031,
-  name: 'Refillable Potion',
-  nicknames: [
-    'consumable',
-    'Green Potion'
-  ],
-  description: 'Active (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.',
-  noEffects: false,
-  rank: 'Consumable',
-  removed: false,
-  specialRecipe: 0,
-  buildsInto: [
+      const item: Item =  {
+  "name": "Refillable Potion",
+  "id": 2031,
+  "rank": "Consumable",
+  "buildsInto": [
     {
-      id: 2033,
-      name: 'Corrupting Potion',
-      gold: 500
+      "id": 2033,
+      "name": "Corrupting Potion",
+      "gold": 500
     }
   ],
-  gold: {
-    base: 150,
-    sell: 60,
-    total: 150
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "consumable",
+    "Green Potion"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "effects": "Holds charges that refill upon visiting the shop."
+    }
+  ],
+  "stats": {},
+  "description": "Active (2 charges)\nRestores 100 Health over 12 seconds. \nRefills upon visiting the shop.",
+  "gold": {
+    "base": 150,
+    "purchasable": true,
+    "total": 150,
+    "sell": 60
   },
-  maps: [
+  "maps": [
     11,
     12,
     21
-  ],
-  passives: [
-    {
-      effects: 'Holds charges that refill upon visiting the shop.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {}
+  ]
 }
 export default item

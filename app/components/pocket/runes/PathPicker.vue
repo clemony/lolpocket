@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
-const emit = defineEmits(['update:paths'])
+const emit = defineEmits(["update:paths"])
 
 const variants = {
   hidden: {
     opacity: 0,
-    transform: 'rotateX(80deg)',
+    transform: "rotateX(80deg)",
   },
   visible: {
     opacity: 1,
-    transform: 'rotateX(0deg)',
+    transform: "rotateX(0deg)",
   },
 }
 const headerVariants = {
@@ -32,7 +32,7 @@ const headerVariants = {
 
 const titleVariants = {
   exit: {
-    letterSpacing: '-0.5em',
+    letterSpacing: "-0.5em",
     opacity: 0,
     transition: {
       duration: 0.8,
@@ -40,11 +40,11 @@ const titleVariants = {
     },
   },
   initial: {
-    letterSpacing: '1em',
+    letterSpacing: "1em",
     opacity: 0,
   },
   visible: {
-    letterSpacing: 'normal',
+    letterSpacing: "normal",
     opacity: 1,
     transition: {
       duration: 0.8,
@@ -56,10 +56,10 @@ const titleVariants = {
 const tooltipVariants = {}
 
 function handleSet(p1: string, p2: string) {
-  emit('update:paths', { primary: p1, secondary: p2 })
+  emit("update:paths", { primary: p1, secondary: p2 })
 }
 
-const pathHovered = ref('')
+const pathHovered = ref("")
 </script>
 
 <template>
@@ -72,7 +72,7 @@ const pathHovered = ref('')
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('dst duration-600', {
+            cn('ds-2xs duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered,
             })
@@ -83,7 +83,7 @@ const pathHovered = ref('')
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
+            cn('pt-1 pr-2 text-end font-medium ds-2xs duration-600', {
               'animate-in fade-in': pathHovered,
               'animate-out fade-out': !pathHovered,
             })
@@ -91,14 +91,12 @@ const pathHovered = ref('')
           {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
         </p>
       </div>
-      <div
-        v-else
-        class="absolute size-full items-center justify-between gap-3">
+      <div v-else class="absolute size-full items-center justify-between gap-3">
         <h1
           key="default"
           class="dst"
           :class="
-            cn('dst duration-600', {
+            cn('ds-2xs duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': pathHovered,
             })
@@ -107,7 +105,7 @@ const pathHovered = ref('')
         </h1>
         <p
           :class="
-            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
+            cn('pt-1 pr-2 text-end font-medium ds-2xs duration-600', {
               'animate-in fade-in': !pathHovered,
               'animate-out fade-out': pathHovered,
             })
@@ -138,7 +136,12 @@ const pathHovered = ref('')
           backgroundPosition: '50% 50%',
           backgroundSize: 'cover',
         }"
-        @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name)"
+        @click="
+          handleSet(
+            path.name,
+            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name
+          )
+        "
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">
         <Icon

@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const { class: className, resource: p } = defineProps<{
   class?: HTMLAttributes["class"]
   resource: AbilityResource | string | null
   noLabel?: boolean
-  variant?: ButtonProps['variant']
-  size?: ButtonProps['size']
+  variant?: ButtonProps["variant"]
+  size?: ButtonProps["size"]
   active?: boolean
   clear?: boolean
 }>()
@@ -14,7 +14,7 @@ const { class: className, resource: p } = defineProps<{
 const resource = computed(() => {
   if (typeof p !== "string") return p
   return abilityResources.find((r) => r.name === (p ?? "All"))
-})/*
+}) /*
     :active="
       resource.name === 'None' && (active || cs().filters.resource === 'None') ?
         'outline'
@@ -54,7 +54,7 @@ const resource = computed(() => {
     <!--    <Icon
       v-if="resource?.icon"
       :name="resource?.icon"
-      :class="cn('!size-4  dst shrink-0', resource?.class)" /> -->
+      :class="cn('!size-4  ds-2xs shrink-0', resource?.class)" /> -->
 
     {{ resource?.title || resource.name }}
     <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />

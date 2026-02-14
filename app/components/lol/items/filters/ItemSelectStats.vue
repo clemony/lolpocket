@@ -3,7 +3,7 @@
 <template>
   <Select v-model:model-value="is().filters.stats" :multiple="true">
     <VarSelectTrigger
-      class="indicator relative open:inset-shadow-sm open:not-on:bg-tint-p2/40!"
+      class="open:not-on:bg-tint-p2/40! indicator relative open:inset-shadow-sm"
       square
       size="lg">
       <UChip

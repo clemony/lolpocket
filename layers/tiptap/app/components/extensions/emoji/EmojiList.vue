@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { EmojiItem } from '@tiptap/extension-emoji';
-import type { Editor } from '@tiptap/vue-3';
+import type { EmojiItem } from "@tiptap/extension-emoji"
+import type { Editor } from "@tiptap/vue-3"
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   items: EmojiItem[]
   editor: Editor | null
   command: (payload: EmojiItem) => any
 }>()
 
-console.log('🌱 - items:', props.items)
+console.log("🌱 - items:", props.items)
 const { command, editor, items } = toRefs(props)
-const target = useTemplateRef<HTMLDivElement>('target')
+const target = useTemplateRef<HTMLDivElement>("target")
 
 /* const { onKeyDown } = useGridFocusTrap(target, {
   columnWidth: 5,
@@ -41,16 +41,14 @@ defineExpose({ onKeyDown }) */
             'rounded-md text-xxl focus:bg-p2/80 focus:ring focus:ring-p3',
             `
               index-${index}
-            `,
+            `
           )
         "
         @click="command(item)">
-        <span class="dss drop-shadow-black/20">{{ item.emoji }}</span>
+        <span class="drop-shadow-black/20 ds-sm">{{ item.emoji }}</span>
       </UButton>
     </template>
-    <div
-      v-else
-      class="justify-center">
+    <div v-else class="justify-center">
       No result
     </div>
   </div>

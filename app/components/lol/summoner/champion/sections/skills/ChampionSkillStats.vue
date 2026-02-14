@@ -61,10 +61,10 @@ const skillPriorityEntries = computed(
           ${ability.pickrate}% pickrate`"
               :class="
                 cn(
-                  'flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden bg-tint-p2/40 text-xs! leading-none select-none',
+                  'bg-tint-p2/40 flex size-11 cursor-default flex-col items-center justify-center gap-px overflow-hidden text-xs! leading-none select-none',
                   {
                     'text-transparent': (ability.winrate ?? 0) === 0,
-                    'bg-neutral/90 text-nc shadow-sm dss':
+                    'bg-neutral/90 text-nc shadow-sm ds-sm':
                       (ability.winrate ?? 0) !== 0,
                   }
                 )
@@ -72,8 +72,8 @@ const skillPriorityEntries = computed(
               <span
                 :class="
                   cn('font-semibold brightness-110 saturate-150', {
-                    'text-inspiration': (ability.winrate ?? 0) >= 51,
-                    'text-domination':
+                    'text-insp': (ability.winrate ?? 0) >= 51,
+                    'text-dom':
                       (ability.winrate ?? 0) <= 49 &&
                       (ability.winrate ?? 0) !== 0,
                     'text-p3':

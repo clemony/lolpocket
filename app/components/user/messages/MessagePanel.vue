@@ -5,7 +5,7 @@ defineOptions({
   meta: {
     name: "Inbox",
     badge: computed(
-      () => (as().inbox?.messages ?? []).filter((m) => !m.read).length
+      () => (user().inbox?.messages ?? []).filter((m) => !m.read).length
     ).value,
     class: "**:stroke-1.5",
     icon: "lucide:mail",
@@ -33,7 +33,7 @@ defineOptions({
     </SidebarHeaderWrapper>
 
     <div class="-mt-4 flex! w-full flex-col items-start gap-0 overflow-hidden">
-      <template v-if="as().inbox?.messages.length">
+      <template v-if="user().inbox?.messages.length">
         <div
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"
@@ -88,7 +88,7 @@ defineOptions({
       </template>
 
       <div v-else class="grid h-44 w-full place-items-center">
-        <span class="overflow-hidden text-sm text-nowrap dst">
+        <span class="dst overflow-hidden text-sm text-nowrap">
           {{ `No mail right now!` }}
         </span>
       </div>

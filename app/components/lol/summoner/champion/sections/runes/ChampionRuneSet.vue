@@ -13,30 +13,27 @@ const bestTip = computed(() => {
 })
 
 const setClass = " gap-5 "
+
+//todo pass stats to the tooltip in key runes shard
 </script>
 
 <template>
   <ChampStatRow v-if="page" simple>
     <ChampStatLabel title="Runes" :stat="page" />
     <ChampStatRowWrapper v-if="runes?.best" simple :class="setClass">
-      <Keystone
-        :id="page.keystone"
-        class="size-18 contrast-105"
-        :data-text="bestTip" />
+      <Keystone :id="page.keystone" class="size-18 contrast-105" />
 
       <Rune
         v-for="rune in page.primaryRunes"
         :id="rune"
         :key="rune"
-        class="size-14"
-        :data-text="bestTip" />
+        class="size-14" />
 
       <Rune
         v-for="rune in page.secondaryRunes"
         :id="rune"
         :key="rune"
-        class="size-14"
-        :data-text="bestTip" />
+        class="size-14" />
 
       <Shard
         v-for="shard in page.shards"
@@ -45,6 +42,6 @@ const setClass = " gap-5 "
         size="c-12"
         variant="neutral" />
     </ChampStatRowWrapper>
-    <NoItemData v-else simple />
+    <NoRowData v-else simple />
   </ChampStatRow>
 </template>

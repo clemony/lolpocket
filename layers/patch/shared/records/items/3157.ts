@@ -1,54 +1,55 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3157,
-  name: 'Zhonya\'s Hourglass',
-  nicknames: [
-    'zhg',
-    'zonyas',
-    'zhonyas',
-    'Witchcap',
-    'Wooglets'
-  ],
-  description: '105 Ability Power\n50 Armor\n\nTime Stop\nEnter Stasis for 2.5 seconds.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+      const item: Item =  {
+  "name": "Zhonya's Hourglass",
+  "id": 3157,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      name: 'Time Stop',
-      effects: 'Put yourself in <img src="/img/icons/stasis.webp" class="tip-icon " />stasis for 2.5 seconds, rendering you <img src="/img/icons/untargetable.webp" class="tip-icon " />untargetable and <img src="/img/icons/invulnerable.webp" class="tip-icon " />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.',
-      unique: true
-    }
-  ],
-  buildsFrom: [
-    {
-      id: 1058,
-      name: 'Needlessly Large Rod',
-      gold: 1200
+      "id": 1058,
+      "name": "Needlessly Large Rod",
+      "gold": 1200
     },
     {
-      id: 2420,
-      name: 'Seeker\'s Armguard',
-      gold: 1600
+      "id": 2420,
+      "name": "Seeker's Armguard",
+      "gold": 1600
     }
   ],
-  gold: {
-    base: 450,
-    sell: 2275,
-    total: 3250
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "zhg",
+    "zonyas",
+    "zhonyas",
+    "Witchcap",
+    "Wooglets"
+  ],
+  "active": [
+    {
+      "unique": true,
+      "name": "Time Stop",
+      "effects": "Put yourself in <img src=\"/img/icons/stasis.webp\" class=\"tip-icon \" />stasis for 2.5 seconds, rendering you <img src=\"/img/icons/untargetable.webp\" class=\"tip-icon \" />untargetable and <img src=\"/img/icons/invulnerable.webp\" class=\"tip-icon \" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items."
+    }
+  ],
+  "stats": {
+    "abilityPower": 105,
+    "armor": 50
   },
-  maps: [
+  "description": "105 Ability Power\n50 Armor\n\nTime Stop\nEnter Stasis for 2.5 seconds.",
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 3250,
+    "sell": 2275
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  stats: {
-    abilityPower: 105,
-    armor: 50
-  }
+  ]
 }
 export default item

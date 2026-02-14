@@ -25,16 +25,16 @@ const settingsData = [
 ]
 
 const username = computed({
-  get: () => as().account?.username ?? "",
+  get: () => user().account?.username ?? "",
   set: (value: string) => {
-    const account = as().account
+    const account = user().account
     if (account) account.username = value
   },
 })
 </script>
 
 <template>
-  <form v-if="as().account" class="w-full space-y-12">
+  <form v-if="user().account" class="w-full space-y-12">
     <!-- username -->
     <UFormField title="" description=""></UFormField>
     <fieldset id="username" class="space-y-6">

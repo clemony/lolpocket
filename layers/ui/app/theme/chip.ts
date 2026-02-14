@@ -1,6 +1,6 @@
 export default {
   slots: {
-    base: "rounded-full ring-none status dst flex items-center shrink-0 justify-center text-n0 font-medium whitespace-nowrap",
+    base: "rounded-full ring-none status ds-2xs flex items-center shrink-0 justify-center text-n0 font-medium whitespace-nowrap",
     root: "relative inline-flex items-center justify-center shrink-0",
   },
   variants: {

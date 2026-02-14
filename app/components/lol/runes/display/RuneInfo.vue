@@ -14,7 +14,7 @@ const isCollapsed = ref("")
 
 // Create a computed property for the rune
 const rune = computed(() => {
-  return props.rune || rs().selectedRune // Fallback to rs().selectedRune if no prop is passed
+  return props.rune // Fallback to rs().selectedRune if no prop is passed
 })
 </script>
 

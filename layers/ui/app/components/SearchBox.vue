@@ -30,7 +30,7 @@ watch(metaK, (v) => {
     "
     @click="session().commandOpen = true">
     <span class="flex items-center gap-2">
-      <icon class="size-4.25 opacity-40 dst" name="search" />
+      <icon class="size-4.25 opacity-40 ds-xs" name="search" />
       <span class="mr-3 text-md! opacity-60">Search</span>
     </span>
     <Kbd

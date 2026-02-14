@@ -7,7 +7,6 @@
 const config = {
   tabWidth: 2,
   bracketSameLine: true,
-  experimentalTernaries: true,
   htmlWhitespaceSensitivity: "css",
   semi: false,
   singleAttributePerLine: false,
@@ -16,10 +15,9 @@ const config = {
   tailwindStylesheet: "./layers/ui/app/assets/css/tailwind.css",
   trailingComma: "es5",
   plugins: [
-/*     "@prettier/plugin-xml",
+    "@prettier/plugin-xml",
     "@svgr/plugin-prettier",
-    "prettier-plugin-two-style-order",
-    "prettier-plugin-tailwindcss", */
+    "prettier-plugin-tailwindcss",
   ],
   tailwindFunctions: ["clsx", "tw", "tv", "cn", "cva"],
 }

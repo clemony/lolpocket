@@ -1,3 +1,6 @@
+import { createEmptyChampionStat } from "~/domain/stats/helpers/createEmptyStat"
+import { synergyScore, winDelta } from "~/domain/stats/helpers/normalizeScore"
+
 //
 function bumpChampion(
   allyEntry: AllyStatDetail,
@@ -21,7 +24,8 @@ function bumpChampion(
 
   c.games++
   c.win ??= 0
-  if (win === true) c.win++
+  c.loss ??= 0
+  win === true ? c.win++ : c.loss++
 
   c.avgTimestamp =
     ((c.avgTimestamp ?? 0) * (c.games - 1) + gameDuration) / c.games
@@ -46,6 +50,7 @@ function bumpAlly(
       synergy: 0,
       tag: ally.tag,
       win: 0,
+      loss: 0,
       champions: {},
     }
   }
@@ -54,7 +59,8 @@ function bumpAlly(
 
   s.games++
   s.win ??= 0
-  if (win === true) s.win++
+  s.loss ??= 0
+  win === true ? s.win++ : s.loss++
 
   s.avgTimestamp =
     ((s.avgTimestamp ?? 0) * (s.games - 1) + gameDuration) / s.games

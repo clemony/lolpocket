@@ -7,13 +7,13 @@ const { match, player } = defineProps<{
 
 <template>
   <div class="flex h-full w-34 shrink-0 items-center gap-2 py-4">
-    <!--     <div :class="cn('h-full w-2 max-w-2 grow rounded-sm', player.win === 'remake' ? 'bg-p3' : player.win ? 'bg-inspiration' : 'bg-domination')" /> -->
+    <!--     <div :class="cn('h-full w-2 max-w-2 grow rounded-sm', player.win === 'remake' ? 'bg-p3' : player.win ? 'bg-insp' : 'bg-dom')" /> -->
     <div
       class="flex size-full flex-col justify-start self-center **:antialiased **:select-none">
       <MatchOutcome
         :class="
           cn(
-            'text-xl! text-white/86', /*  player.win === 'remake' ? 'text-p3' : player.win ? 'text-inspiration' : 'text-domination' */
+            'text-xl! text-white/86' /*  player.win === 'remake' ? 'text-p3' : player.win ? 'text-insp' : 'text-dom' */
           )
         "
         :stats="player" />

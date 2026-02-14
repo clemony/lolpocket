@@ -53,7 +53,7 @@ const progress = computed(() => {
             class="size-15"
           />
         </ChampStatRowWrapper>
-        <NoItemData v-else />
+        <NoRowData v-else />
       </ChampStatRow> -->
     </div>
     <!-- ITEMS -->
@@ -75,7 +75,7 @@ const progress = computed(() => {
         <ChampStatRowWrapper v-if="slot[0]" class="justify-center">
           <Item :id="slot[0]" class="size-15" />
         </ChampStatRowWrapper>
-        <NoItemData v-else />
+        <NoRowData v-else />
       </ChampStatRow>
     </div>
   </UPageSection>

@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-const { filtered, filters, setFilter } = useItemFilter()
+const { filtered, filters } = is()
 </script>
 
 <template>
-  <Select
-    v-model="filters"
-    multiple>
+  <Select v-model="filters" multiple>
     <SelectTrigger class="flex w-80 items-center gap-3">
       <SelectValue placeholder="Filter Stat" />
     </SelectTrigger>
@@ -14,10 +12,7 @@ const { filtered, filters, setFilter } = useItemFilter()
       <SelectGroup>
         <SelectLabel>Stats</SelectLabel>
 
-        <SelectItem
-          v-for="stat in statIndex"
-          :key="stat.id"
-          :value="stat.id">
+        <SelectItem v-for="stat in statIndex" :key="stat.id" :value="stat.id">
           <div class="flex items-center gap-3">
             {{ stat.name }}
           </div>

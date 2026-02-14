@@ -4,11 +4,11 @@ defineOptions({
 })
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(['update:model-value'])
-const modelValue = ref(as().account?.region)
+const emit = defineEmits(["update:model-value"])
+const modelValue = ref(user().account?.region)
 const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
 </script>
 
@@ -18,7 +18,7 @@ const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
     :class="
       cn(
         'h-100 w-86 -translate-x-34 -translate-y-10.25 rounded-lg p-0',
-        className,
+        className
       )
     ">
     <!--  <PopoverArrow /> -->
@@ -37,7 +37,7 @@ const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
         :class="
           cn(
             'flex items-center justify-start gap-3 rounded-md py-1.5 text-sm text-nowrap',
-            { 'btn-active bg-p2/30!': region === modelValue },
+            { 'btn-active bg-p2/30!': region === modelValue }
           )
         ">
         <span class="">
@@ -53,10 +53,8 @@ const regions = Object.keys(regionIndex) as Array<keyof typeof regionIndex>
           v-bind="$attrs"
           type="radio"
           :value="region"
-          @change="emit('update:model-value', modelValue)">
-        <icon
-          v-if="region === modelValue"
-          name="tick-sm" />
+          @change="emit('update:model-value', modelValue)" />
+        <icon v-if="region === modelValue" name="tick-sm" />
       </UButton>
     </div>
   </LazyPopoverContent>

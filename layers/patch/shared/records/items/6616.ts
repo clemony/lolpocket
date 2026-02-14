@@ -1,53 +1,54 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 6616,
-  name: 'Staff of Flowing Water',
-  nicknames: [
-    'nami'
-  ],
-  description: '35 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Staff of Flowing Water",
+  "id": 6616,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3108,
-      name: 'Fiendish Codex',
-      gold: 850
+      "id": 3108,
+      "name": "Fiendish Codex",
+      "gold": 850
     },
     {
-      id: 3114,
-      name: 'Forbidden Idol',
-      gold: 600
+      "id": 3114,
+      "name": "Forbidden Idol",
+      "gold": 600
     }
   ],
-  gold: {
-    base: 800,
-    sell: 1575,
-    total: 2250
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "nami"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Rapids",
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Healing or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds."
+    }
+  ],
+  "stats": {
+    "abilityPower": 35,
+    "healAndShieldPower": 10,
+    "manaRegen": 125,
+    "abilityHaste": 15
   },
-  maps: [
+  "description": "35 Ability Power\n10% Heal and Shield Power\n125% Base Mana Regen\n15 Ability Haste\n\nRapids\nHealing or Shielding an ally grants you both 45 Ability Power for 6 seconds.",
+  "gold": {
+    "base": 800,
+    "purchasable": true,
+    "total": 2250,
+    "sell": 1575
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Rapids',
-      effects: '<img src="/img/icons/heal.webp" class="tip-icon light:invert" />Healing or <img src="/img/icons/shield.webp" class="tip-icon light:invert" />shielding allied champions (<i>excluding yourself</i>) grants you and them 45 ability power for 6 seconds.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 15,
-    abilityPower: 35,
-    healAndShieldPower: 10,
-    manaRegen: 125
-  }
+  ]
 }
 export default item

@@ -1,4 +1,7 @@
-import { maybeRunCleanup } from '~/composables'
+import { maybeRunCleanup } from "~/composables"
+/* This code snippet is defining a Nuxt plugin that performs some cleanup operations based on the
+user's account PUUID (Player Universally Unique Identifier). Here is a breakdown of what the code is
+doing: */
 
 export default defineNuxtPlugin(() => {
   /* if (!import.meta.client) return */
@@ -9,7 +12,7 @@ export default defineNuxtPlugin(() => {
   let stop: (() => void) | undefined
 
   stop = watch(
-    () => as().account?.puuid,
+    () => user().account?.puuid,
     (puuid) => {
       if (!puuid) return
 

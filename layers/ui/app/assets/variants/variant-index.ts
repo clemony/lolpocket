@@ -8,7 +8,7 @@ export function createVariants() {
     border: "border fx-0 shadow-xs font-medium border-shade-p3/6",
     btn: "bg-tint-p2/60 border-p3/60 font-medium text-pc **:text-pc",
     error:
-      "bg-domination hover:bg-domination/80 border-domination font-semibold text-white **:text-white",
+      "bg-dom hover:bg-dom/80 border-dom font-semibold text-white **:text-white",
     floating:
       "pointer-events-auto! fx-0 z-10 cursor-pointer! border-p3 bg-p0/80 shadow-sm  shadow-black/4 backdrop-blur-sm *:opacity-60 hover:*:opacity-80",
     ghost:

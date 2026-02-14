@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import type { CarouselApi } from '~~/layers/ui/app/components/carousel/interface'
-import { motion } from 'motion-v'
-import { reviewVariants } from './variants'
+import { motion } from "motion-v"
+import { reviews } from "~/domain/lp/content/reviews"
+import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
+import { reviewVariants } from "./variants"
 
 const api = ref<CarouselApi>()
 const inView = ref(0)
@@ -18,7 +19,7 @@ computed(() => {
 watchOnce(api, (api) => {
   if (!api) return
 
-  api.on('select', () => {
+  api.on("select", () => {
     inView.value = api.selectedScrollSnap()
   })
 })
@@ -50,7 +51,7 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class="font-serif leading-9 font-black dst">
+            <h1 class="dst font-serif leading-9 font-black">
               “{{ r.title }}”
             </h1>
 
@@ -62,7 +63,7 @@ watchOnce(api, (api) => {
 
               <div>
                 <p
-                  class="mt-5 w-full text-lg text-pc dst [&_u]:decoration-dotted"
+                  class="mt-5 w-full text-lg text-pc ds-2xs [&_u]:decoration-dotted"
                   v-html="r.text" />
 
                 <p
@@ -89,10 +90,7 @@ watchOnce(api, (api) => {
         v-for="i in 2"
         :key="i"
         class="group grid size-5 cursor-pointer place-items-center overflow-hidden rounded-full">
-        <input
-          class="peer hidden"
-          type="radio"
-          :value="i">
+        <input class="peer hidden" type="radio" :value="i" />
 
         <div
           class="tldr-20 group-hover:bg-b4 btn pointer-events-none btn-circle size-2 bg-p3 ring-neutral ring-offset-2 group-hover:ring-1"

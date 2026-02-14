@@ -1,29 +1,29 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Spells',
-  icon: 'teenyicons:book-outline',
+  title: "Spells",
+  icon: "i-basil-book-solid",
 
-  description: 'Learn magic in the summoner spellbook.',
-  listClass: '**:stroke-[2.6]',
-  path: '/library/spells',
+  description: "Bring the petricite!",
+  listClass: "**:stroke-[2.6]",
+  path: "/library/spells",
   searchKeys: [
-    'summoner',
-    'spell',
-    'heal',
-    'barrier',
-    'flash',
-    'ignite',
-    'ghost',
-    'smite',
-    'teleport',
-    'cleanse',
-    'exhaust',
+    "summoner",
+    "spell",
+    "heal",
+    "barrier",
+    "flash",
+    "ignite",
+    "ghost",
+    "smite",
+    "teleport",
+    "cleanse",
+    "exhaust",
   ],
 })
 
 const selectedSpellId = ref(1)
-const selectedSpell = computed(() =>
-  spells[selectedSpellId.value] ?? spells[0]!
+const selectedSpell = computed(
+  () => spells[selectedSpellId.value] ?? spells[0]!
 )
 </script>
 
@@ -47,13 +47,13 @@ const selectedSpell = computed(() =>
               <img
                 class="peer-checked:borderneutral/90 size-22 rounded-lg border border-p3 shadow-sm inset-shadow-sm shadow-black/20"
                 :alt="selectedSpell.name.toString()"
-                :src="`/img/spells/${spell.id}.webp`">
+                :src="`/img/spells/${spell.id}.webp`" />
 
               <input
                 v-model="selectedSpellId"
                 class="peer hidden"
                 type="radio"
-                :value="spell.id">
+                :value="spell.id" />
             </label>
           </div>
         </div>
@@ -108,14 +108,14 @@ const selectedSpell = computed(() =>
               <img
                 class="size-24 rounded-lg shadow-sm shadow-black/20"
                 :alt="selectedSpell.name.toString()"
-                :src="`/img/spells/${selectedSpell.id}.webp`">
+                :src="`/img/spells/${selectedSpell.id}.webp`" />
 
               <div class="items-between grid h-full py-2">
                 <p class="font-medium">
                   Summoner
                 </p>
 
-                <h1 class="text-5xl tracking-tight dst">
+                <h1 class="dst text-5xl tracking-tight">
                   {{ selectedSpell.name }}
                 </h1>
               </div>

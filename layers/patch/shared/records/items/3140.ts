@@ -1,58 +1,59 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3140,
-  name: 'Quicksilver Sash',
-  nicknames: [
-    'qss',
-    'mercurial scimitar',
-    'silvermere dawn'
-  ],
-  description: '30 Magic Resist\n\nQuicksilver\nRemove all crowd control debuffs (excluding Airborne).',
-  noEffects: false,
-  rank: 'Epic',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+      const item: Item =  {
+  "name": "Quicksilver Sash",
+  "id": 3140,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      name: 'Quicksilver',
-      effects: 'Removes all crowd control debuffs (except <img src="/img/icons/airborne.webp" class="tip-icon " />Airborne) from your champion.',
-      unique: true
+      "id": 1033,
+      "name": "Null-Magic Mantle",
+      "gold": 400
     }
   ],
-  buildsFrom: [
+  "buildsInto": [
     {
-      id: 1033,
-      name: 'Null-Magic Mantle',
-      gold: 400
-    }
-  ],
-  buildsInto: [
-    {
-      id: 6035,
-      name: 'Silvermere Dawn',
-      gold: 3000
+      "id": 6035,
+      "name": "Silvermere Dawn",
+      "gold": 3000
     },
     {
-      id: 3139,
-      name: 'Mercurial Scimitar',
-      gold: 3200
+      "id": 3139,
+      "name": "Mercurial Scimitar",
+      "gold": 3200
     }
   ],
-  gold: {
-    base: 900,
-    sell: 910,
-    total: 1300
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "qss",
+    "mercurial scimitar",
+    "silvermere dawn"
+  ],
+  "active": [
+    {
+      "unique": true,
+      "name": "Quicksilver",
+      "effects": "Removes all crowd control debuffs (except <img src=\"/img/icons/airborne.webp\" class=\"tip-icon \" />Airborne) from your champion."
+    }
+  ],
+  "stats": {
+    "magicResistance": 30
   },
-  maps: [
+  "description": "30 Magic Resist\n\nQuicksilver\nRemove all crowd control debuffs (excluding Airborne).",
+  "gold": {
+    "base": 900,
+    "purchasable": true,
+    "total": 1300,
+    "sell": 910
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  stats: {
-    magicResistance: 30
-  }
+  ]
 }
 export default item

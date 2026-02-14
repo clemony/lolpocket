@@ -8,13 +8,13 @@ const data = computed(() => {
   return {
     datasets: [
       {
-        label: 'Games',
+        label: "Games",
         backgroundColor: [
-          cssVar('--color-domination'),
-          cssVar('--color-resolve'),
-          cssVar('--color-sorcery'),
-          cssVar('--color-precision'),
-          cssVar('--color-inspiration'),
+          cssVar("--color-domination"),
+          cssVar("--color-res"),
+          cssVar("--color-sorc"),
+          cssVar("--color-pre"),
+          cssVar("--color-insp"),
         ],
         data: [
           roles?.stats?.top?.games ?? 0,
@@ -25,7 +25,7 @@ const data = computed(() => {
         ],
       },
     ],
-    labels: ['Top', 'Jungle', 'Middle', 'Bottom', 'Support'],
+    labels: ["Top", "Jungle", "Middle", "Bottom", "Support"],
   }
 })
 </script>
@@ -44,7 +44,7 @@ const data = computed(() => {
 
     <Icon
       v-if="roles?.mostPlayed"
-      class="absolute aspect-square size-full max-h-12 min-h-4 dst"
+      class="dst absolute aspect-square size-full max-h-12 min-h-4"
       :name="`role:${roles?.mostPlayed}`"
       :style="{ color: `var(--color-${roles?.mostPlayed})` }" />
   </div>

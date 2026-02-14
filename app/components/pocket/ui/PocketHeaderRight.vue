@@ -8,7 +8,7 @@ const isOpen = shallowRef(false)
 watch(
   () => isOpen.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+    console.log("💠 - watch - newVal:", newVal)
   }
 )
 </script>
@@ -34,12 +34,10 @@ watch(
         :class="
           cn(
             'size-7 text-nc opacity-60 transition-opacity duration-500 group-hover/pop:opacity-100',
-            { 'opacity-100': isOpen },
+            { 'opacity-100': isOpen }
           )
         " />
       dfddfd
     </UButton>
-    </LazyIconUPopover
-    </template>
-  </lazyiconpopover>
+  </LazyIconPopover>
 </template>

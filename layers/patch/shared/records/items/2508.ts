@@ -1,54 +1,55 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2508,
-  name: 'Fated Ashes',
-  description: '30 Ability Power\n\nInflame\nDamaging Abilities deal 15 bonus magic damage over 3 seconds.\nDeals an additional 45 magic damage to monsters.',
-  noEffects: false,
-  rank: 'Epic',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Fated Ashes",
+  "id": 2508,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      id: 1052,
-      name: 'Amplifying Tome',
-      gold: 400
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
     }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 6653,
-      name: 'Liandry\'s Torment',
-      gold: 3000
+      "id": 6653,
+      "name": "Liandry's Torment",
+      "gold": 3000
     },
     {
-      id: 2503,
-      name: 'Blackfire Torch',
-      gold: 2800
+      "id": 2503,
+      "name": "Blackfire Torch",
+      "gold": 2800
     }
   ],
-  gold: {
-    base: 500,
-    sell: 630,
-    total: 900
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Inflame",
+      "effects": "Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15 magic damage. Against monsters, the burn deals 7.5 <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60 magic damage."
+    }
+  ],
+  "stats": {
+    "abilityPower": 30
   },
-  maps: [
+  "description": "30 Ability Power\n\nInflame\nDamaging Abilities deal 15 bonus magic damage over 3 seconds.\nDeals an additional 45 magic damage to monsters.",
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 900,
+    "sell": 630
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Inflame',
-      effects: 'Dealing ability damage burns enemies, causing them to take 2.5 magic damage every 0.5 seconds over 3 seconds, for a total of 15 magic damage. Against monsters, the burn deals 7.5 <b>bonus</b> magic damage per tick, dealing a total of 10 magic damage per tick for up to 60 magic damage.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityPower: 30
-  }
+  ]
 }
 export default item

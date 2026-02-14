@@ -1,17 +1,14 @@
 <script lang="ts" setup>
-const summoner = await ss().resolveByPuuid(as().account?.puuid)
+const summoner = await sSummoner().resolveByPuuid(user().account?.puuid)
 const accountRoute = computed(() => {
-  const account = as().account
+  const account = user().account
   if (!account?.region || !account?.name || !account?.tag) return null
   return `/summoner/${account.region}/${account.name}_${account.tag}`
 })
 </script>
 
 <template>
-  <SidebarMenuButton
-    v-if="summoner"
-    class="h-16 w-full"
-    as-child>
+  <SidebarMenuButton v-if="summoner" class="h-16 w-full" as-child>
     <NuxtLink
       class="flex size-full w-full items-center justify-start gap-3"
       :to="accountRoute ?? '/'">
@@ -21,15 +18,11 @@ const accountRoute = computed(() => {
         <div class="flex items-end gap-3 *:leading-none">
           <SummonerName
             class="font-serif text-xxl! font-bold text-pc/94 drop-shadow-sm" />
-          <SummonerTag
-            class="mb-px"
-            :summoner />
+          <SummonerTag class="mb-px" :summoner />
         </div>
         <div
           class="flex w-full items-center justify-between gap-4 align-middle font-normal lowercase opacity-70">
-          <SummonerRegion
-            class="[&_svg]:size-3"
-            :region-id="summoner.region" />
+          <SummonerRegion class="[&_svg]:size-3" :region-id="summoner.region" />
 
           <SummonerLevel :summoner />
         </div>

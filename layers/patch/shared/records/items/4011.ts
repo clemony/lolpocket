@@ -1,41 +1,42 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 4011,
-  name: 'Sword of Blossoming Dawn',
-  description: '45 Ability Power\n200 Health\n12% Heal and Shield Power\n15 Ability Haste\n\nEffervescence\nGain +1.2% Attack Speed for every 1% Heal and Shield Power you have. \n\nPeppermint\nOn-Hit, heal the lowest health ally champion near you for , prioritizing lower health allies.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
-  },
-  maps: [
-    30
-  ],
-  passives: [
+      const item: Item =  {
+  "name": "Sword of Blossoming Dawn",
+  "id": 4011,
+  "rank": "Legendary",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
     {
-      name: 'Effervescence',
-      effects: 'Gain 1.2% <b>bonus</b> attack speed per 1% <img src="/img/icons/heal-and-shield-power.webp" class="tip-icon" />heal and shield power.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Effervescence",
+      "effects": "Gain 1.2% <b>bonus</b> attack speed per 1% <img src=\"/img/icons/heal-and-shield-power.webp\" class=\"tip-icon\" />heal and shield power."
     },
     {
-      name: 'Peppermint',
-      effects: 'Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src="/img/icons/heal.webp" class="tip-icon light:invert" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP).',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Peppermint",
+      "effects": "Basic attacks on-hit cause the most wounded and nearest allied champion to be <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />healed for 15 – 45 (based on level) (+10% <b>bonus</b> AD) (+7% AP)."
     }
   ],
-  stats: {
-    abilityHaste: 15,
-    abilityPower: 45,
-    healAndShieldPower: 12,
-    health: 200
-  }
+  "stats": {
+    "abilityPower": 45,
+    "healAndShieldPower": 12,
+    "health": 200,
+    "abilityHaste": 15
+  },
+  "description": "45 Ability Power\n200 Health\n12% Heal and Shield Power\n15 Ability Haste\n\nEffervescence\nGain +1.2% Attack Speed for every 1% Heal and Shield Power you have. \n\nPeppermint\nOn-Hit, heal the lowest health ally champion near you for , prioritizing lower health allies.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
+  },
+  "maps": [
+    30
+  ]
 }
 export default item

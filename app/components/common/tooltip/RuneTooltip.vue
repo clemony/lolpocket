@@ -62,7 +62,7 @@ function close() {
         " />
 
       <h2
-        class="grow text-xl leading-none font-bold tracking-tight text-pc/80 dst">
+        class="dst grow text-xl leading-none font-bold tracking-tight text-pc/80">
         {{ rune.name }}
       </h2>
     </div>

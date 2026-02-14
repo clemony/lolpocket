@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v"
 
 defineOptions({
   inheritAttrs: false,
 })
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -22,6 +22,6 @@ const { class: className } = defineProps<{
     }">
     <icon
       name="tick"
-      :class="cn('absolute size-5 shrink-0 dst', className)" />
+      :class="cn('absolute size-5 shrink-0 ds-2xs', className)" />
   </motion.div>
 </template>

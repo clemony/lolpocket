@@ -4,11 +4,11 @@ const { summoner } = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'item analysis',
-  title: 'items',
-  icon: 'fa:shield',
-  parent: '/analysis',
-  path: '/analysis/items',
+  name: "item analysis",
+  title: "items",
+  icon: "fa:shield",
+  parent: "/analysis",
+  path: "/analysis/items",
 })
 </script>
 
@@ -30,13 +30,11 @@ definePageMeta({
 
   <div class="size-full px-14">
     <div class="mb-8 w-full border-b border-b-p3 pt-10 pb-8">
-      <h1 class="pb-2 text-4xl font-semibold dst">
+      <h1 class="dst pb-2 text-4xl font-semibold">
         Item Data
       </h1>
 
-      <p class="font-medium text-pc/70">
-        Your best items during patch {{ ms().filter.patch }}
-      </p>
+      <p class="font-medium text-pc/70"></p>
     </div>
 
     <div class="size-full overflow-hidden">
@@ -64,7 +62,7 @@ definePageMeta({
       </div>
 
       <div class="mb-10 w-full border-b border-b-p3 pt-26 pb-10">
-        <h1 class="pb-2 text-4xl font-semibold dst">
+        <h1 class="dst pb-2 text-4xl font-semibold">
           Winrates & Playrates
         </h1>
 

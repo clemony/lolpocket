@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { hyphenateChampionName } from "~/domain/champions/utils"
+import { getSplash } from "~/domain/utils/img"
 
 const { champKey, class: className } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -10,8 +11,8 @@ const emit = defineEmits(["loaded"])
 const loaded = ref(false)
 const img = computed(() => (champKey ? getSplash(champKey, "load") : undefined))
 const champName = computed(() => {
-  if (!champKey) return ''
-  return hyphenateChampionName(champNameByKey(champKey ?? '') ?? '')
+  if (!champKey) return ""
+  return hyphenateChampionName(champNameByKey(champKey ?? "") ?? "")
 })
 
 watchEffect(() => {

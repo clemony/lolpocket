@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name?: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -12,7 +12,7 @@ const props = defineProps<{
       v-if="props.name"
       class="absolute shrink-0"
       :name="props.name"
-      :class="cn('size-5 dst', props.class)" />
+      :class="cn('size-5 ds-2xs', props.class)" />
 
     <slot />
   </div>

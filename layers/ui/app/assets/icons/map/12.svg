@@ -1,6 +1,10 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56">
-	<style>
-		.s0 { opacity: .97;fill: currentColor }
-	</style>
-	<path id="Path 0" fill-rule="evenodd" class="s0" d="m31.75 0h24.25l-0.06 24.5-30.44 31.58-25.5-0.08 0.24-24.63zm-24.82 34.5l0.07 14.5h14l27.01-25.5-0.01-15.5-13.5 0.07zm-0.93-27.5h6.5c3.57 0 6.52 0.33 6.54 0.75 0.03 0.41-2.9 3.33-13.04 12.25zm43.72 30c0.15 0 0.28 2.92 0.28 13l-13.5 0.01 6.47-6.5c3.56-3.58 6.6-6.51 6.75-6.51z"/>
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12" fill="currentColor">
+            <polygon id="Path" points="15.2410465 3.86071119 20.5714286 3.42857143 20.1392888 8.75895353 8.75895353 20.1392888 3.42857143 20.5714286 3.86071119 15.2410465"></polygon>
+            <polygon id="Rectangle-2" points="4.28571429 4.28571429 9.85714286 4.28571429 7.07142857 7.07142857 4.28571429 9.85714286"></polygon>
+            <polygon id="Rectangle-2" transform="translate(16.9286, 16.5) scale(-1, -1) translate(-16.9286, -16.5)" points="14.1428571 13.7142857 19.7142857 13.7142857 16.9285714 16.5 14.1428571 19.2857143"></polygon>
+        </g>
+    </g>
 </svg>

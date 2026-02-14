@@ -7,6 +7,15 @@
     dim,
     dark;
   styled: true;
+  exclude:
+    rootcolor,
+    navbar,
+    link,
+    toast,
+    skeleton,
+    steps drawersidebar,
+    hero,
+    fileinput;
 }
 
 @plugin "daisyui/theme" {
@@ -148,6 +157,7 @@
 }
 
 @utility btn {
+  --size: 0;
   animation-duration: 0;
   transition-duration: 0;
 
@@ -216,7 +226,7 @@
 /* badge */
 
 @utility badge {
-  @apply box-border flex items-center gap-2 rounded-lg px-2 text-sm shadow-sm shadow-black/2 dst;
+  @apply box-border flex items-center gap-2 rounded-lg px-2 text-sm shadow-sm shadow-black/2 ds-xs;
 }
 
 @utility badge-neutral {

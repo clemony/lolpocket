@@ -14,7 +14,7 @@ export interface Item {
   removed?: boolean | string
   requiedAlly?: string
   requiredChampion?: string
-
+  requiredAlly?: string
   description?: string
   specialRecipe?: string | number
   stats?: Record<string, number>
@@ -47,7 +47,7 @@ export interface ItemGold {
 
 export type ItemRecord = Record<number, ItemLite>
 export type StatArray = number[]
-export type StatKeys = keyof ItemLite['stats']
+export type StatKeys = keyof ItemLite["stats"]
 
 export interface ItemLite {
   id: number

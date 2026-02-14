@@ -2,13 +2,13 @@
 const props = defineProps<{
   set?: CalculatorSet
   index?: any
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   // item?: Item
 }>()
 
-const emit = defineEmits(['update:item'])
+const emit = defineEmits(["update:item"])
 
-const { filtered, filters, setFilter } = useItemFilter()
+const { filtered, filters } = is()
 </script>
 
 <template>

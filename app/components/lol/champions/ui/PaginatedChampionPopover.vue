@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import { getSplash } from "~/domain/utils/img"
+
 const route = useRoute()
-const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-)
+const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 const pocketChampions = computed(() => pocket.value?.champions ?? [])
 
 const searchQuery = ref<string>("")
@@ -58,7 +58,9 @@ watch(
         v-else
         v-memo="pocket?._champion"
         class="*:scale-160"
-        :src="pocket?._champion ? getSplash(pocket._champion, 'tile') : undefined" />
+        :src="
+          pocket?._champion ? getSplash(pocket._champion, 'tile') : undefined
+        " />
       <div
         :class="
           cn(

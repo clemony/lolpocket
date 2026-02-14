@@ -1,3 +1,11 @@
+import {
+  newItemSet,
+  newRuneSet,
+  newSpellSet,
+} from "~/domain/pocket/addPocketModules"
+import { generateName } from "~/domain/pocket/generateStrings"
+import { getSplash } from "~/domain/utils/img"
+
 //
 export function newRandomPocket(): Pocket {
   const itemSet = computed(() => {
@@ -22,9 +30,8 @@ export function newRandomPocket(): Pocket {
     const set = [1, 2, 3].filter((n) => n !== getRandomInt(3) + 1)
 
     const path1 = pathRecord[i1]
-    const path2 =
-      path1 ?
-        Object.values(pathRecord).filter((p) => p.id !== path1.id)[i2]
+    const path2 = path1
+      ? Object.values(pathRecord).filter((p) => p.id !== path1.id)[i2]
       : undefined
 
     if (!path1) return a
@@ -76,8 +83,8 @@ export function newRandomPocket(): Pocket {
     guide: [],
     key: crypto.randomUUID(),
     name: generateName(),
-    ouuid: as().account?.uuid ?? "",
-    uuid: as().account?.uuid ?? "",
+    ouuid: user().account?.uuid ?? "",
+    uuid: user().account?.uuid ?? "",
     icon: "",
 
     //

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getRandomBg } from "~/domain/utils/img"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
@@ -51,7 +53,7 @@ console.log("🥸 - top:", top)
       </div>
 
       <div class="inline items-center gap-3 px-2 pb-2 align-baseline">
-        <span class="font-serif text-xxl! leading-6 font-black dst">
+        <span class="dst font-serif text-xxl! leading-6 font-black">
           {{ summoner?.name || "Summoner" }}
         </span>
         <span v-if="summoner?.tag" class="ml-2 leading-6">

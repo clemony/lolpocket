@@ -9,6 +9,7 @@ const {
   text,
   trailingIcon,
   ui,
+  label,
   disabled,
 } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -21,6 +22,7 @@ const {
   sideOffset?: number
   trailingIcon?: string
   disabled?: boolean
+  label?: string
 }>()
 
 const open = ref(false)
@@ -58,7 +60,9 @@ const reference = computed(() => ({
           anchor.y = ev.clientY
         }
       ">
-      <slot />
+      <slot>
+        <span class="hover:underline">{{ label }}</span>
+      </slot>
     </div>
 
     <template #content>

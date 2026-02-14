@@ -21,7 +21,7 @@ const roleItemId = computed(() => {
   <!-- items -->
   <div
     :class="
-      cn('flex w-fit gap-1 px-2 @min-700:gap-4 @min-700:px-4', className)
+      cn('@min-700:gap-4 @min-700:px-4 flex w-fit gap-1 px-2', className)
     ">
     <div :class="cn('flex shrink-0 items-center -space-x-2 self-center')">
       <div
@@ -34,7 +34,7 @@ const roleItemId = computed(() => {
         <Item
           :id="item"
           :class="
-            cn('img-active size-7.5 rounded-full inset-shadow-xs dark:bg-p0! light:bg-tint-p2/40!', {
+            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full inset-shadow-xs dark:bg-p0!', {
               'no-img': !item,
             })
           " />
@@ -50,7 +50,7 @@ const roleItemId = computed(() => {
             : roleItemId
           "
           :class="
-            cn('img-active size-7.5 rounded-full dark:bg-p0! light:bg-tint-p2/40!', {
+            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full dark:bg-p0!', {
               'no-img': !player.items?.role && !isSR,
               'pointer-events-none brightness-115 contrast-102':
                 !player.items?.role,
@@ -63,7 +63,7 @@ const roleItemId = computed(() => {
         <Item
           :id="player.items?.trinket"
           :class="
-            cn('img-active size-7.5 rounded-full dark:bg-p0! light:bg-tint-p2/40!', {
+            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full dark:bg-p0!', {
               'no-img': !player.items?.trinket,
             })
           " />

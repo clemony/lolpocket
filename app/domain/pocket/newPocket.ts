@@ -1,11 +1,18 @@
+import {
+  newItemSet,
+  newRuneSet,
+  newSpellSet,
+} from "~/domain/pocket/addPocketModules"
+import { generateName } from "~/domain/pocket/generateStrings"
+
 //
 export function newPocket(): Pocket {
   return {
     // data
     key: crypto.randomUUID(),
     name: generateName(),
-    ouuid: as().account?.uuid ?? "",
-    uuid: as().account?.uuid ?? "",
+    ouuid: user().account?.uuid ?? "",
+    uuid: user().account?.uuid ?? "",
 
     // info
     guide: [],

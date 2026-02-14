@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { generateName } from "~/domain/pocket/generateStrings"
+
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
@@ -18,7 +20,7 @@ const pocket = computed(() =>
           variant="ghost"
           hover="base"
           size="lg">
-          <h1 class="text-2xs font-bold! tracking-tight text-nowrap dst">
+          <h1 class="dst text-2xs font-bold! tracking-tight text-nowrap">
             {{ pocket.name }}
           </h1>
         </UButton>

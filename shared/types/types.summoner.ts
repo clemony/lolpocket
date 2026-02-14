@@ -1,22 +1,22 @@
-import type { Account } from '.'
+import type { Account } from "."
 
 export const regionKeys = [
-  'br1',
-  'eun1',
-  'euw1',
-  'jp1',
-  'kr',
-  'la1',
-  'la2',
-  'na1',
-  'oc1',
-  'ph2',
-  'ru',
-  'sg2',
-  'th2',
-  'tr1',
-  'tw2',
-  'vn2',
+  "br1",
+  "eun1",
+  "euw1",
+  "jp1",
+  "kr",
+  "la1",
+  "la2",
+  "na1",
+  "oc1",
+  "ph2",
+  "ru",
+  "sg2",
+  "th2",
+  "tr1",
+  "tw2",
+  "vn2",
 ] as const
 
 export type Region = (typeof regionKeys)[number]
@@ -55,14 +55,14 @@ export interface Summoner {
 export interface RankedEntry {
   name: string
   division: string
-  losses: number
+  loss: number
   lp: number
   queue: string
   tier: string
-  wins: number
+  win: number
 }
 
-export type SkillKey = 'Q' | 'W' | 'E' | 'R'
+export type SkillKey = "Q" | "W" | "E" | "R"
 
 export interface ChampionMastery {
   puuid: string

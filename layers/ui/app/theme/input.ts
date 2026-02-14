@@ -3,12 +3,12 @@ export default {
     leading: "absolute inset-y-0 start-0 flex items-center",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
-    leadingIcon: "shrink-0 text-p5",
+    leadingIcon: "shrink-0 text-n5/80",
     root: "relative inline-flex items-center",
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "w-full rounded-md border-0 appearance-none placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "w-full rounded-md border-0 appearance-none placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 peer",
       "transition-colors input",
     ],
   },
@@ -29,6 +29,8 @@ export default {
       outline: "text-pc bg-default ring ring-inset ring-p3",
       soft: "text-pc bg-p1/50 hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle: "text-pc bg-p1 ring ring-inset ring-p3",
+      "ghost-outline":
+        "text-pc bg-transparent hover:ring-inset ring ring-transparent hover:ring-pc/50 focus:bg-p2 disabled:bg-transparent dark:disabled:bg-transparent",
     },
     fieldGroup: {
       horizontal: {
@@ -51,23 +53,23 @@ export default {
     },
     size: {
       lg: {
-        base: "px-3 py-2 text-sm gap-2",
+        base: "px-3 py-2 text-sm gap-2 h-12 input-lg",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
-        leadingIcon: "size-5",
+        leadingIcon: "size-4",
         trailing: "pe-3",
         trailingIcon: "size-5",
       },
       md: {
-        base: "px-2.5 py-1.5 text-sm gap-1.5",
+        base: "px-2.5 py-0 text-sm gap-1.5 h-10 input-md",
         leading: "ps-2.5",
         leadingAvatarSize: "2xs",
-        leadingIcon: "size-5",
+        leadingIcon: "size-4",
         trailing: "pe-2.5",
         trailingIcon: "size-5",
       },
       sm: {
-        base: "px-2.5 py-1.5 text-xs gap-1.5",
+        base: "px-2.5 py-1.5 text-xs gap-1.5 h-8 input-sm",
         leading: "ps-2.5",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
@@ -75,15 +77,15 @@ export default {
         trailingIcon: "size-4",
       },
       xl: {
-        base: "px-3 py-2 text-base gap-2",
+        base: "px-3 py-0 text-base gap-2 h-14 input-xl",
         leading: "ps-3",
         leadingAvatarSize: "xs",
-        leadingIcon: "size-6",
+        leadingIcon: "size-4",
         trailing: "pe-3",
         trailingIcon: "size-6",
       },
       xs: {
-        base: "px-2 py-1 text-xs gap-1",
+        base: "px-2 py-0 text-xs gap-1 h-7 input-xs",
         leading: "ps-2",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
@@ -96,6 +98,7 @@ export default {
     },
     type: {
       file: "file:me-1.5 file:font-medium file:text-muted file:outline-none",
+      floating: "floating-label",
     },
   },
   compoundVariants: [

@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
-export const useThreadStore = defineStore(
-  'threadStore',
+export const threads = defineStore(
+  "threadStore",
   () => {
     const threads = ref<Record<string, Record<string, CommentData>>>({})
     const children = ref<Record<string, Record<string, string[]>>>({})
@@ -39,7 +39,7 @@ export const useThreadStore = defineStore(
 
       threads.value[threadId][comment.id] = comment
 
-      const pid = comment.parent_id ?? 'root'
+      const pid = comment.parent_id ?? "root"
       insertChild(threadId, pid, comment.id)
     }
 
@@ -52,7 +52,7 @@ export const useThreadStore = defineStore(
 
       for (const c of comments) {
         threads.value[threadId][c.id] = c
-        const pid = c.parent_id ?? 'root'
+        const pid = c.parent_id ?? "root"
         insertChild(threadId, pid, c.id)
       }
     }
@@ -65,26 +65,25 @@ export const useThreadStore = defineStore(
     }
 
     function getChildComments(threadId: string, parentId: string | null) {
-      const pid = parentId ?? 'root'
+      const pid = parentId ?? "root"
       const ids = children.value[threadId]?.[pid] ?? []
       return ids
-        .map(id => threads.value[threadId]?.[id])
+        .map((id) => threads.value[threadId]?.[id])
         .filter((item): item is CommentData => Boolean(item))
     }
 
-    function getSortedRootComments(threadId: string, sortBy: 'best' | 'new') {
+    function getSortedRootComments(threadId: string, sortBy: "best" | "new") {
       const thread = threads.value[threadId]
       if (!thread) return []
 
       const rootIds = children.value[threadId]?.root ?? []
       const items = rootIds
-        .map(id => thread[id])
+        .map((id) => thread[id])
         .filter((item): item is CommentData => Boolean(item))
 
-      if (sortBy === 'best') {
+      if (sortBy === "best") {
         items.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
-      }
-      else if (sortBy === 'new') {
+      } else if (sortBy === "new") {
         items.sort(
           (a, b) =>
             new Date(b.created).getTime() - new Date(a.created).getTime()
@@ -109,7 +108,7 @@ export const useThreadStore = defineStore(
   },
   {
     persist: {
-      key: 'threadStore',
+      key: "threadStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
   }

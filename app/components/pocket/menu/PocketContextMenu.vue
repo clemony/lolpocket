@@ -67,7 +67,7 @@ onMounted(async () => {
         </ContextMenuSub> -->
 
     <!--    <template v-if="pocket">
-        <ContextMenuSub v-if="as().userFolders.length">
+        <ContextMenuSub v-if="user().userFolders.length">
           <ContextMenuSubTrigger text-value="Move to Folder">
             Move to Folder
           </ContextMenuSubTrigger>
@@ -79,7 +79,7 @@ onMounted(async () => {
                 </ContextMenuLabel>
 
                 <ContextMenuSeparator />
-                   <ContextMenuRadioItem v-for="folder in as().userFolders" :key="folder.key" :value="folder.key">
+                   <ContextMenuRadioItem v-for="folder in user().userFolders" :key="folder.key" :value="folder.key">
                 {{ folder.name }}
               </ContextMenuRadioItem>
               </ContextMenuURadioGroup>

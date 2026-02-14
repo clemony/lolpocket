@@ -2,17 +2,17 @@
 const { matches } = defineProps<{
   matches: MatchData[]
 }>()
-console.log('💠 - matches:', matches)
+console.log("💠 - matches:", matches)
 
 definePageMeta({
-  name: 'champion analysis',
-  title: 'champions',
-  icon: 'typcn:user',
-  parent: '/analysis',
-  path: '/analysis/champions',
+  name: "champion analysis",
+  title: "champions",
+  icon: "typcn:user",
+  parent: "/analysis",
+  path: "/analysis/champions",
 })
 
-/* const { bayesianChampions } = await useMatchChampions(as().account.puuid) */
+/* const { bayesianChampions } = await useMatchChampions(user().account.puuid) */
 </script>
 
 <template>

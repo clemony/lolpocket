@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { themes } from "~/domain/lp/ui/theme"
 
-const summoner = computed(() => as().account)
+const summoner = computed(() => user().account)
 
 const open = shallowRef<boolean>(false)
 
@@ -15,9 +15,9 @@ const settings = computed(() => {
 })
 
 const themeModel = computed({
-  get: () => as().settings?.theme ?? "",
+  get: () => user().settings?.theme ?? "",
   set: (value) => {
-    const settings = as().settings
+    const settings = user().settings
     if (settings) settings.theme = value
   },
 })
@@ -38,7 +38,7 @@ const themeModel = computed({
           <SummonerIcon class="size-11 rounded-lg" />
           <div class="flex flex-col">
             <SummonerName
-              class="truncate pl-1 text-xxl! leading-none font-semibold text-pc/90 dst" />
+              class="dst truncate pl-1 text-xxl! leading-none font-semibold text-pc/90" />
             <SummonerTag
               class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
           </div>
@@ -52,9 +52,9 @@ const themeModel = computed({
         Inbox
 
         <span
-          v-if="as().inbox?.messages?.length"
+          v-if="user().inbox?.messages?.length"
           class="absolute right-4 font-mono text-sm opacity-60">
-          {{ as().inbox?.messages?.filter((m) => !m.read).length ?? 0 }}
+          {{ user().inbox?.messages?.filter((m) => !m.read).length ?? 0 }}
         </span>
       </UButton>
     </div>
@@ -63,7 +63,7 @@ const themeModel = computed({
 
     <div class="w-full px-1">
       <UButton
-        v-if="as().user"
+        v-if="user().user"
         class="h-10"
         @click="navigateTo('/settings/account')">
         <icon name="at" />
@@ -87,7 +87,7 @@ const themeModel = computed({
 
     <USeparator />
     <div class="px-1 pb-1">
-      <UButton v-if="as().user" class="h-9">
+      <UButton v-if="user().user" class="h-9">
         <icon name="log-out" @click="useSignOut()" />
         Log out
       </UButton>

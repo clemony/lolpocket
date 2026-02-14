@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { EmojiItem } from '@tiptap/extension-emoji';
+import type { EmojiItem } from "@tiptap/extension-emoji"
 
 const {
   class: className,
   index,
   item,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   item: EmojiItem
   index: number
 }>()
@@ -24,21 +24,16 @@ const {
         'text-4xl',
         `
           index-${index}
-        `,
+        `
       )
     ">
-    <span
-      v-if="item.emoji"
-      class="dst drop-shadow-black/10">
+    <span v-if="item.emoji" class="drop-shadow-black/10 ds-2xs">
       {{ item.emoji }}
     </span>
     <span
       v-else-if="item.fallbackImage"
-      class="size-6 dss drop-shadow-black/10">
-      <img
-        class="object-contain"
-        :alt="item.name"
-        :src="item.fallbackImage">
+      class="size-6 drop-shadow-black/10 ds-sm">
+      <img class="object-contain" :alt="item.name" :src="item.fallbackImage" />
     </span>
   </UButton>
 </template>

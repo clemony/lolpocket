@@ -1,3 +1,5 @@
+import { bumpAverage } from "~/domain/stats/helpers/bumpValues"
+
 //
 export function applyParticipantStats(acc: ChampionStats, row: Player) {
   if (acc.kills) bumpAverage(acc.kills, row.stats.kills)
@@ -6,5 +8,5 @@ export function applyParticipantStats(acc: ChampionStats, row: Player) {
   if (acc.kp) bumpAverage(acc.kp, row.stats.kp)
 
   acc.games += 1
-  row.win ? acc.wins++ : acc.losses++
+  row.win ? acc.win++ : acc.loss++
 }

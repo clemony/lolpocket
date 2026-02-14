@@ -35,124 +35,127 @@ const customGroups = [
   },
 ]
 
-export default  antfu(
-    {
-      stylistic: false,
-      ignores: [
-        "./dist",
-        "./node_modules",
-        "./schema",
-        "./.vscode",
-        "./.nuxt",
-        "./.notes",
-        "./supabase",
-        "./shared/records",
-        "./public",
-        "**/raw/**",
-        ".save.json",
-      ],
-      /* ---------- JSONC ---------- */
+export default antfu(
+  {
+    stylistic: false,
+    ignores: [
+      "./dist",
+      "./node_modules",
+      "./schema",
+      "./.vscode",
+      "./.nuxt",
+      "./.notes",
+      "./supabase",
+      "*.scopesnippet",
+      "./shared/records",
+      "./public",
+      "**/raw/**",
+      ".save.json",
+    ],
+    /* ---------- JSONC ---------- */
 
-      jsonc: {
-        languageOptions: {
-          parser: jsoncParser,
-        },
-        overrides: {
-          "jsonc/sort-keys": [
-            "error",
-            {
-              pathPattern: "^$",
-              order: ["name", "version", "private", "publishConfig", "scripts"],
-            },
-            {
-              pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
-              order: { type: "asc" },
-            },
-            {
-              pathPattern: ".*",
-              order: { type: "asc" },
-            },
-          ],
-          //"jsonc/valid-jsonc": "error",
-        },
-        plugins: { pluginJsonc },
+    jsonc: {
+      languageOptions: {
+        parser: jsoncParser,
       },
-      plugins: { vue: pluginVue },
-
-      /* ---------- VUE ---------- */
-
-      vue: {
-        overrides: {
-          "vue/html-closing-bracket-newline": [
-            "error",
-            {
-              multiline: "never",
-              singleline: "never",
-              selfClosingTag: { multiline: "never", singleline: "never" },
-            },
-          ],
-
-          "vue/html-self-closing": "off",
-
-          "vue/multiline-html-element-content-newline": "error",
-          "vue/no-unused-properties": "off",
-          "vue/no-unused-refs": "off",
-          "vue/no-unused-vars": "off",
-          "vue/no-v-text-v-html-on-component": "off",
-          "vue/operator-linebreak": "off",
-
-          "vue/padding-line-between-tags": "off",
-          "vue/require-typed-ref": "warn",
-          "vue/padding-line-between-blocks": ["error", "always"],
-        },
+      overrides: {
+        "jsonc/sort-keys": [
+          "error",
+          {
+            pathPattern: "^$",
+            order: ["name", "version", "private", "publishConfig", "scripts"],
+          },
+          {
+            pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
+            order: { type: "asc" },
+          },
+          {
+            pathPattern: ".*",
+            order: { type: "asc" },
+          },
+        ],
       },
+      plugins: { pluginJsonc },
     },
 
-    /* ---------- TAILWIND ---------- */
+    /* ---------- VUE ---------- */
 
-    {
-      extends: [eslintPluginBetterTailwindcss.configs.recommended],
-
-      settings: {
-        "better-tailwindcss": {
-          detectComponentClasses: true,
-          entryPoint: "./layers/ui/app/assets/css/tailwind.css",
-          callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
-          attributes: [
-            "class",
-            "className",
-            "content",
-            "variant",
-            "base",
-            "root",
-            "trailingIcon",
-            "trailing",
-            "leading",
-          ],
-          tags: ["style", "ui"],
-        },
-      },
-      rules: {
-        "better-tailwindcss/enforce-canonical-classes": "off" /* [
-          "warn",
+    vue: {
+      overrides: {
+        "vue/html-closing-bracket-newline": [
+          "error",
           {
-            collapse: true,
-            logical: true,
-            rootFontSize: 12,
+            multiline: "never",
+            singleline: "never",
+            selfClosingTag: { multiline: "never", singleline: "never" },
           },
-        ], */,
-        "better-tailwindcss/enforce-consistent-important-position": [
-          "warn",
-          { position: "recommended" },
         ],
 
-        "better-tailwindcss/enforce-consistent-line-wrapping": "off",
-        "better-tailwindcss/no-unknown-classes": "off",
-        "better-tailwindcss/no-unnecessary-whitespace": "error",
-        "better-tailwindcss/no-unregistered-classes": "off",
-      },
+        "vue/html-self-closing": "off",
 
-    })
+        "vue/multiline-html-element-content-newline": "error",
+        "vue/no-unused-properties": "off",
+        "vue/no-unused-refs": "off",
+        "vue/no-unused-vars": "off",
+        "vue/no-v-text-v-html-on-component": "off",
+        "vue/operator-linebreak": "off",
+
+        "vue/padding-line-between-tags": "off",
+        "vue/require-typed-ref": "warn",
+        "vue/padding-line-between-blocks": ["error", "always"],
+      },
+    },
+  },
+
+  /* ---------- TAILWIND ---------- */
+
+  {
+    extends: [eslintPluginBetterTailwindcss.configs.recommended],
+
+    settings: {
+      "better-tailwindcss": {
+        detectComponentClasses: true,
+        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+        callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
+        attributes: [
+          "class",
+          "className",
+          "content",
+          "variant",
+          "base",
+          "root",
+          "trailingIcon",
+          "trailing",
+          "leading",
+        ],
+        tags: ["style", "ui"],
+      },
+    },
+    rules: {
+      "better-tailwindcss/no-unregistered-classes": "off",
+      "better-tailwindcss/enforce-consistent-line-wrapping": "off",
+      "better-tailwindcss/no-unknown-classes": "off",
+      "better-tailwindcss/enforce-canonical-classes": "off" /* [
+        "warn",
+        {
+          collapse: true,
+          logical: true,
+          rootFontSize: 12,
+        },
+      ], */,
+      "better-tailwindcss/enforce-consistent-important-position": "warn",
+      "better-tailwindcss/enforce-shorthand-classes": "warn",
+      "better-tailwindcss/enforce-consistent-variable-syntax": "warn",
+      "better-tailwindcss/no-unnecessary-whitespace": "warn",
+      "better-tailwindcss/no-duplicate-classes": "warn",
+    },
+    files: ["**/*.vue"],
+
+    languageOptions: {
+      parser: eslintParserVue,
+    },
+  }
+)
   .override(
     "antfu/perfectionist/setup",
     {
@@ -164,7 +167,6 @@ export default  antfu(
     {
       rules: {
         /* ---------- PERFECTIONIST ---------- */
-
 
         "perfectionist/sort-interfaces": [
           "warn",
@@ -203,7 +205,7 @@ export default  antfu(
     "unused-imports/no-unused-imports": "off",
     "unused-imports/no-unused-vars": "off",
     "command/command": "off",
-    "perfectionist/sort-imports":  "off",
+    "perfectionist/sort-imports": "off",
   })
   .override(
     "antfu/regexp/rules",

@@ -1,76 +1,76 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3867,
-  name: 'Bounty of Worlds',
-  description: '5 Gold Per 10 Seconds\n75% Base Health Regen\n75% Base Mana Regen\n200 Health\n\nUpgrade \nThis item can be upgraded into Bloodsong, Celestial Opposition, Dream Maker, Zaz\'Zak\'s Realmspike, or Solstice Sleigh for free.Active (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 3866,
-  active: [
+      const item: Item =  {
+  "name": "Bounty of Worlds",
+  "id": 3867,
+  "rank": "Legendary",
+  "buildsInto": [
     {
-      name: 'Ward',
-      effects: 'Consumes a charge to place a <img src="/img/icons/stealth-ward.webp" class="tip-icon " />Stealth Ward at the target location, which grants <img src="/img/icons/sight.webp" class="tip-icon light:invert" />sight of the surrounding area. Charges refill upon visiting the shop.',
-      range: 600,
-      unique: true
+      "id": 3869,
+      "name": "Celestial Opposition",
+      "gold": 400
+    },
+    {
+      "id": 3870,
+      "name": "Dream Maker",
+      "gold": 400
+    },
+    {
+      "id": 3871,
+      "name": "Zaz'Zak's Realmspike",
+      "gold": 400
+    },
+    {
+      "id": 3876,
+      "name": "Solstice Sleigh",
+      "gold": 400
+    },
+    {
+      "id": 3877,
+      "name": "Bloodsong",
+      "gold": 400
     }
   ],
-  buildsInto: [
+  "specialRecipe": 3866,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
     {
-      id: 3869,
-      name: 'Celestial Opposition',
-      gold: 400
+      "unique": true,
+      "mythic": false,
+      "name": "Upgrade",
+      "effects": "You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i><img src=\"/img/icons/bloodsong.webp\" class=\"tip-icon\" />Bloodsong</i>, <i><img src=\"/img/icons/celestial-opposition.webp\" class=\"tip-icon\" />Celestial Opposition</i>, <i><img src=\"/img/icons/dream-maker.webp\" class=\"tip-icon\" />Dream Maker</i>, <i><img src=\"/img/icons/solstice-sleigh.webp\" class=\"tip-icon\" />Solstice Sleigh</i>, or <i><img src=\"/img/icons/zazzaks-realmspike.webp\" class=\"tip-icon\" />Zaz'Zak's Realmspike</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>"
     },
     {
-      id: 3870,
-      name: 'Dream Maker',
-      gold: 400
-    },
-    {
-      id: 3871,
-      name: 'Zaz\'Zak\'s Realmspike',
-      gold: 400
-    },
-    {
-      id: 3876,
-      name: 'Solstice Sleigh',
-      gold: 400
-    },
-    {
-      id: 3877,
-      name: 'Bloodsong',
-      gold: 400
+      "unique": true,
+      "mythic": false,
+      "effects": "Receives diminishing gold from excessive minion kills."
     }
   ],
-  gold: {
-    base: 400,
-    purchasable: false,
-    sell: 160,
-    total: 400
+  "active": [
+    {
+      "unique": true,
+      "name": "Ward",
+      "effects": "Consumes a charge to place a <img src=\"/img/icons/stealth-ward.webp\" class=\"tip-icon \" />Stealth Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area. Charges refill upon visiting the shop.",
+      "range": 600
+    }
+  ],
+  "stats": {
+    "goldPer10": 5,
+    "health": 200,
+    "healthRegen": 75,
+    "manaRegen": 75
   },
-  maps: [
+  "description": "5 Gold Per 10 Seconds\n75% Base Health Regen\n75% Base Mana Regen\n200 Health\n\nUpgrade \nThis item can be upgraded into Bloodsong, Celestial Opposition, Dream Maker, Zaz'Zak's Realmspike, or Solstice Sleigh for free.Active (4 charges)\nPlaces an Invisible Stealth Ward that grants vision.",
+  "gold": {
+    "base": 400,
+    "purchasable": false,
+    "total": 400,
+    "sell": 160
+  },
+  "maps": [
     11
-  ],
-  passives: [
-    {
-      name: 'Upgrade',
-      effects: 'You have completed the support quest and can now upgrade this item, <b>Bounty of Worlds</b>, for free into <i><img src="/img/icons/bloodsong.webp" class="tip-icon" />Bloodsong</i>, <i><img src="/img/icons/celestial-opposition.webp" class="tip-icon" />Celestial Opposition</i>, <i><img src="/img/icons/dream-maker.webp" class="tip-icon" />Dream Maker</i>, <i><img src="/img/icons/solstice-sleigh.webp" class="tip-icon" />Solstice Sleigh</i>, or <i><img src="/img/icons/zazzaks-realmspike.webp" class="tip-icon" />Zaz\'Zak\'s Realmspike</i> by selecting one of them from a custom menu in the HUD or the shop. <i>The upgrade can be done outside the shop using the menu.</i>',
-      mythic: false,
-      unique: true
-    },
-    {
-      effects: 'Receives diminishing gold from excessive minion kills.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    goldPer10: 5,
-    health: 200,
-    healthRegen: 75,
-    manaRegen: 75
-  }
+  ]
 }
 export default item

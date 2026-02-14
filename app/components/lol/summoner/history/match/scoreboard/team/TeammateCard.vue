@@ -5,50 +5,6 @@ const { match, player } = defineProps<{
   player: Player
   match: MatchData
 }>()
-
-const bars = computed<Record<string, BarStat>>(() => {
-  return {
-    dmg: {
-      color: "domination",
-      class:
-        "hover:bg-domination-200! hover:text-pc! hover:ring-offset-domination-200!  hover:ring-domination-300!",
-      max:
-        match.participants
-          .map((p) => p.stats?.totalDamage ?? 0)
-          .sort((a, b) => b - a)[0] ?? 0,
-      tip: "Total Damage Dealt to Champions",
-      value: player.stats?.totalDamage ?? 0,
-      icon: {
-        name: "i-lol-scoreboard-sword",
-        class: "-translate-y-px scale-108 opacity-100",
-      },
-    },
-    def: {
-      color: "precision",
-      class:
-        "hover:bg-precision-200! hover:text-pc! hover:ring-offset-precision-200!  hover:ring-precision-400!",
-      max:
-        match.participants
-          .map((p) => p.stats?.totalDamageTaken ?? 0)
-          .sort((a, b) => b - a)[0] ?? 0,
-      tip: "Total Damage Taken by Champions",
-      value: player.stats?.totalDamageTaken ?? 0,
-      icon: { name: "i-stat-armor" },
-    },
-    heal: {
-      color: "resolve",
-      class:
-        "hover:bg-resolve-100! bg-blend-hue hover:text-pc! hover:ring-offset-resolve-100! hover:ring-resolve-200!",
-      max:
-        match.participants
-          .map((p) => p.stats?.effectiveHealingAndShielding ?? 0)
-          .sort((a, b) => b - a)[0] ?? 0,
-      tip: "Effective Healing & Shielding",
-      value: player.stats?.effectiveHealingAndShielding ?? 0,
-      icon: { name: "i-stat-health" },
-    },
-  }
-})
 </script>
 
 <template>
@@ -108,7 +64,7 @@ const bars = computed<Record<string, BarStat>>(() => {
     </div>
     <!-- PROGRESS STAT ROW -->
     <div class="grid w-full max-w-52 grid-cols-3 items-center gap-3">
-      <TeammateStatProgressBars v-for="(stat, i) in bars" :key="i" :stat />
+      <TeammateStatProgressBars :match :player />
     </div>
 
     <ScoreboardCardItems class="" :player :is-s-r="match?.mapId === 11" />

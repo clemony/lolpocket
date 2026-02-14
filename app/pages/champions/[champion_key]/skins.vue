@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import "@ui/css/plugins/embla.css"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
+import { getSplash } from "~/domain/utils/img"
 import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
 
 const { champion } = defineProps<{
@@ -68,8 +69,8 @@ const skins = computed(() => skinIndex[champion.key])
             :class="
               cn(
                 'hover:ring-b4 cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring',
-                index === selectedIndex ?
-                  'pointer-events-none opacity-100 ring ring-pc/40 ring-offset-5 ring-offset-p0'
+                index === selectedIndex
+                  ? 'pointer-events-none opacity-100 ring ring-pc/40 ring-offset-5 ring-offset-p0'
                   : 'opacity-80'
               )
             ">

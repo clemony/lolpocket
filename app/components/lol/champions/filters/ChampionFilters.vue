@@ -13,7 +13,7 @@ const route = useRoute()
   })
   cs().championGridApi.setGridOption('columnDefs', updatedCols)
 } */
-const { filtered, filters, setFilter } = useItemFilter() as any
+const { filtered, filters, setFilter } = is() as any
 const query = ref<string | null>(null)
 </script>
 
@@ -25,10 +25,7 @@ const query = ref<string | null>(null)
         <ExpandSearch
           class="absolute left-0 max-w-60 btn-neutral **:[&_svg]:opacity-96!"
           @update:reset="filters.query = null">
-          <input
-            v-model="filters.query"
-            class="size-full"
-            type="text">
+          <input v-model="filters.query" class="size-full" type="text" />
         </ExpandSearch>
 
         <h1 class="mr-1 text-5xl! tracking-tight">
@@ -36,7 +33,7 @@ const query = ref<string | null>(null)
         </h1>
 
         <ChampionQuote
-          class="flex items-center px-2 pt-1 font-serif text-md tracking-wide text-nowrap dst"
+          class="dst flex items-center px-2 pt-1 font-serif text-md tracking-wide text-nowrap"
           as="p" />
       </div>
 

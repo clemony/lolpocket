@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useRunes } from "~/domain/match/useRunes"
+
 const props = defineProps<{
   pocket?: Pocket
 }>()

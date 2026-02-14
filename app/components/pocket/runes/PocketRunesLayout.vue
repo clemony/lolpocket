@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import { deleteRuneSet, resetRunes } from "~/domain/pocket/modifyPocket"
+
 const { set: s } = defineProps<{
   set: RuneSet
 }>()
 
-const emit = defineEmits(['update:slide'])
+const emit = defineEmits(["update:slide"])
 const route = useRoute()
-const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-)
+const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 const set = computed(() => s).value
-const pathList = pathIndex.map(p => p.name)
+const pathList = pathIndex.map((p) => p.name)
 
 const primaryRunes = computed(() => pathRecord[set.primary?.path])
 const secondaryRunes = computed(() => pathRecord[set.secondary?.path])
@@ -19,9 +19,10 @@ function handlePath1() {
   // set.primary.runes = []
   set.keystone = null
 
-  const index = pathList.findIndex(p => p === set.secondary?.path)
+  const index = pathList.findIndex((p) => p === set.secondary?.path)
   if (set.primary?.path === set.secondary.path)
-    set.secondary.path = pathList[index === 4 ? 0 : index + 1] ?? set.secondary.path
+    set.secondary.path =
+      pathList[index === 4 ? 0 : index + 1] ?? set.secondary.path
 }
 
 function handlePath2() {
@@ -34,7 +35,7 @@ function handlePathUpdate(e: { primary: string; secondary: string }) {
 }
 
 function handleDelete() {
-  emit('update:slide')
+  emit("update:slide")
   if (pocket.value) deleteRuneSet(pocket.value, set)
 }
 </script>
@@ -47,9 +48,7 @@ function handleDelete() {
       <div
         v-if="set?.primary && primaryRunes"
         class="relative flex w-1/2 max-w-114 min-w-90 flex-col gap-8">
-        <RunesBlurb
-          layout-id="path1"
-          :current-path="set.primary?.path" />
+        <RunesBlurb layout-id="path1" :current-path="set.primary?.path" />
 
         <Tabs
           v-model:model-value="set.primary.path"
@@ -62,9 +61,7 @@ function handleDelete() {
               :title="path"
               :value="path" />
 
-            <TabIndicator
-              class="-ml-0.75 size-16!"
-              round />
+            <TabIndicator class="-ml-0.75 size-16!" round />
           </TabsList>
         </Tabs>
 
@@ -100,15 +97,11 @@ function handleDelete() {
           </UButton>
         </div>
       </div>
-      <PathPicker
-        v-else
-        @update:paths="handlePathUpdate($event)" />
+      <PathPicker v-else @update:paths="handlePathUpdate($event)" />
       <div
         v-if="set?.secondary && secondaryRunes"
         class="flex w-1/2 max-w-114 min-w-90 flex-col gap-7 overflow-hidden">
-        <RunesBlurb
-          layout-id="path2"
-          :current-path="set.secondary?.path" />
+        <RunesBlurb layout-id="path2" :current-path="set.secondary?.path" />
 
         <SecondaryPathTabs
           v-model:model-value="set.secondary.path"
@@ -123,10 +116,7 @@ function handleDelete() {
           :runes="secondaryRunes"
           :path="set.secondary.path" />
 
-        <RuneShards
-          v-if="pocket"
-          :pocket="pocket"
-          :set />
+        <RuneShards v-if="pocket" :pocket="pocket" :set />
       </div>
       <div class="flex h-full w-32 flex-col items-center gap-6 *:rounded-full">
         <Keystone
@@ -143,10 +133,7 @@ function handleDelete() {
           v-for="shard in set.shards"
           :id="shard"
           :key="shard"
-          :class="`
-            size-10 border-p3
-            ${shard === 0 ? `border border-p2! bg-p2/30` : ''}
-          `" />
+          :class="`size-10 border-p3 ${shard === 0 ? `border border-p2! bg-p2/30` : ''} `" />
       </div>
     </TransitionFade>
   </div>

@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 226701,
-  name: 'Opportunity',
-  description: '50 Attack Damage\n15 Lethality\n\nPreparation\nAfter being out of combat with Champions for 8 seconds gain Lethality. This Lethality lasts for 3 seconds after dealing damage to champions.\n\nExtraction\nWhen a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.\n',
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
+      const item: Item =  {
+  "id": 226701,
+  "name": "Opportunity",
+  "description": "50 Attack Damage\n15 Lethality\n\nPreparation\nAfter being out of combat with Champions for 8 seconds gain Lethality. This Lethality lasts for 3 seconds after dealing damage to champions.\n\nExtraction\nWhen a champion that you damaged within 3 seconds dies, gain 200 decaying Move Speed for 1.5 seconds.\n",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
   },
-  maps: [
+  "maps": [
     30
   ]
 }

@@ -1,61 +1,62 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 6662,
-  name: 'Iceborn Gauntlet',
-  nicknames: [
-    'Spellblade',
-    'ibg',
-    'frostfire',
-    'frozen',
-    'frozen gauntlet'
-  ],
-  description: '300 Health\n50 Armor\n15 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit and creates a frost field for 2s that Slows.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Iceborn Gauntlet",
+  "id": 6662,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3057,
-      name: 'Sheen',
-      gold: 900
+      "id": 3057,
+      "name": "Sheen",
+      "gold": 900
     },
     {
-      id: 1028,
-      name: 'Ruby Crystal',
-      gold: 400
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
     },
     {
-      id: 1031,
-      name: 'Chain Vest',
-      gold: 800
+      "id": 1031,
+      "name": "Chain Vest",
+      "gold": 800
     }
   ],
-  gold: {
-    base: 800,
-    sell: 2030,
-    total: 2900
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "Spellblade",
+    "ibg",
+    "frostfire",
+    "frozen",
+    "frozen gauntlet"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Spellblade",
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />25% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />12.5%) (1.5 second cooldown, starts after using the empowered attack)."
+    }
+  ],
+  "stats": {
+    "armor": 50,
+    "health": 300,
+    "abilityHaste": 15
   },
-  maps: [
+  "description": "300 Health\n50 Armor\n15 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit and creates a frost field for 2s that Slows.",
+  "gold": {
+    "base": 800,
+    "purchasable": true,
+    "total": 2900,
+    "sell": 2030
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Spellblade',
-      effects: 'After using an ability, your next basic attack within 10 seconds deals 150% <b>base</b> AD <b>bonus</b> physical damage on-hit and creates a 300 radius frost field for 2 seconds. Enemies within the field are slowed by (<img src="/img/icons/melee.webp" class="inline-icon" />25% /<img src="/img/icons/ranged.webp" class="inline-icon" />12.5%) (1.5 second cooldown, starts after using the empowered attack).',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 15,
-    armor: 50,
-    health: 300
-  }
+  ]
 }
 export default item

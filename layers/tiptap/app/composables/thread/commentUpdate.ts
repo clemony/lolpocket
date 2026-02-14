@@ -9,23 +9,22 @@ export async function updateComment(
     content,
   }
   const { data, error } = await $fetch<CommentReturn>(
-    '/api/supabase/update/comment',
+    "/api/supabase/update/comment",
     {
       body,
-      headers: useRequestHeaders(['cookie']),
-      method: 'POST',
+      headers: useRequestHeaders(["cookie"]),
+      method: "POST",
     }
   )
   if (error) {
     sendErrorToast()
-  }
-  else {
-    ts().setComment(thread_id, data)
+  } else {
+    threads().setComment(thread_id, data)
     toast.add({
-      title: 'Comment Updated',
+      title: "Comment Updated",
       // color: "ghost",
       description: `Successfully updated your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}`,
-      icon: 'chat',
+      icon: "chat",
     })
   }
 }

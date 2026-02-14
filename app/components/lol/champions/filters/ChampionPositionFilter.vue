@@ -19,7 +19,7 @@ const {
         group
         :class="
           cn(
-            'relative z-1 flex max-h-60 w-9/10 w-full flex-col flex-wrap items-center items-start gap-3 gap-y-3 py-0',
+            'relative z-1 flex max-h-60 w-9/10 flex-col flex-wrap items-center gap-3 gap-y-3 py-0',
             className
           )
         ">

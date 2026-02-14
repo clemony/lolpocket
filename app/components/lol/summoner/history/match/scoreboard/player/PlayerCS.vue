@@ -21,7 +21,7 @@ const {
       size="c-3.5"
       name="lol:minion" />
 
-    <span class="hidden @min-700:flex">
+    <span class="@min-700:flex hidden">
       {{ player.stats.totalCs }}
     </span>
 

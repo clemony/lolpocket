@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   active,
   class: className,
   clear,
-  size = 'sm',
+  size = "sm",
   stat,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   stat: StatIndex | string
   active?: boolean
-  size?: ButtonProps['size']
+  size?: ButtonProps["size"]
   clear?: boolean
 }>()
 
 const statValue = computed<StatIndex | undefined>(() => {
-  console.log('🌱 - stat:', stat)
-  if (typeof stat !== 'string') return stat
+  console.log("🌱 - stat:", stat)
+  if (typeof stat !== "string") return stat
 
   return statIndex[stat]
 })
@@ -33,15 +33,12 @@ const statValue = computed<StatIndex | undefined>(() => {
     }"
     :class="
       cn(
-        'w-fit px-3 font-medium text-pc/90 capitalize shadow-xs dxs',
+        'w-fit px-3 font-medium text-pc/90 capitalize shadow-xs ds-xs',
         { 'order-first text-white': active, 'pr-2': active && clear },
-        className,
+        className
       )
     ">
     {{ statValue.name }}
-    <icon
-      v-if="clear"
-      class="size-4 text-white **:stroke-[2.6]"
-      name="x" />
+    <icon v-if="clear" class="size-4 text-white **:stroke-[2.6]" name="x" />
   </UButton>
 </template>

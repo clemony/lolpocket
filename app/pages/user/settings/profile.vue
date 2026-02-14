@@ -12,7 +12,7 @@ definePageMeta({
 const labelClass =
   "w-full h-16 border-b flex justify-between items-center pr-1 !border-b-p2 [&_h5]:font-semibold [&_h5]:text-pc/70"
 
-const settings = computed(() => as().settings)
+const settings = computed(() => user().settings)
 </script>
 
 <template>
@@ -113,20 +113,20 @@ const settings = computed(() => as().settings)
 <!--
       <h1
         id="splash"
-        class="dst font-bold">
+        class="ds-2xs font-bold">
         Profile Splash
       </h1>
 
       <Separator class="my-4" />
       <h1
         id="display"
-        class="dst font-bold">
+        class="ds-2xs font-bold">
         Display Options
       </h1>
       <Separator class="my-4" />
       <h1
         id="display"
-        class="dst font-bold">
+        class="ds-2xs font-bold">
         Stored Data
       </h1>
       <div class="grid gap-10 grid-cols-2 mr-6">

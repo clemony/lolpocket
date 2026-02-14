@@ -59,7 +59,7 @@ const cardStyle = computed(() => ({
         :style="containerStyle">
         <div
           class="grid h-fit w-full grid-cols-1 justify-start justify-items-start gap-3">
-          <p class="font-medium tracking-tight dst">
+          <p class="dst font-medium tracking-tight">
             New Pocket
           </p>
 
@@ -113,7 +113,7 @@ const cardStyle = computed(() => ({
 
         <div
           class="btn pointer-events-none aspect-square px-0.5 shadow-sm btn-xs">
-          <icon class="size-5 dst" name="tick-sm" />
+          <icon class="dst size-5" name="tick-sm" />
         </div>
       </div>
 
@@ -123,7 +123,7 @@ const cardStyle = computed(() => ({
       <!--     <PocketIcon image="/img/champion-centered/Sona_56.webp" class="size-34  left-22 bottom-6 absolute !shadow-md shadow-black/70" :style="layer1" />
    <icon name="teenyicons:chat-solid" class="text-p0 bottom-34 left-6   size-22 absolute z-0  drop-shadow-[10_15px_15px_#00000090]" :style="layerBase"/>
 
-        <div class=" tracking-tight absolute text-md  bottom-38 left-10   dst z-10 font-medium text-center"  :style="layerBase">
+        <div class=" tracking-tight absolute text-md  bottom-38 left-10   ds-2xs z-10 font-medium text-center"  :style="layerBase">
           Choose<br />Icon
           </div> -->
     </div>

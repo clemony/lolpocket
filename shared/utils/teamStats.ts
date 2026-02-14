@@ -1,13 +1,13 @@
-import type { MatchStat } from '#shared/types'
+import type { MatchStat } from "#shared/types"
 
 export const matchTeams = {
   100: {
-    color: 'var(--color-inspiration)',
-    name: 'blue',
+    color: "var(--color-insp)",
+    name: "blue",
   },
   200: {
-    color: 'var(--color-domination)',
-    name: 'red',
+    color: "var(--color-domination)",
+    name: "red",
   },
 }
 
@@ -34,19 +34,19 @@ export const teamStatRegistry: Record<string, MatchStat> = {
     name: "",
   }, */
   bans: {
-    name: 'Bans',
+    name: "Bans",
   },
   gold: {
-    name: 'gold earned',
+    name: "gold earned",
   },
   kda: {
-    name: 'kda',
+    name: "kda",
   },
   teamId: {
-    name: 'Map Designation',
-    group: 'basic',
+    name: "Map Designation",
+    group: "basic",
   },
   win: {
-    name: 'Match outcome',
+    name: "Match outcome",
   },
 }

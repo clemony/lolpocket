@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 223107,
-  name: 'Redemption',
-  description: '0 Health\n15 Ability Haste\n100% Base Mana Regen\n16% Heal and Shield Power\n\nACTIVE (0s)\nIntervention\nTarget an area within. After 2.5 seconds, call down a beam of light to restore Health to allies and damage enemy champions.',
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
+      const item: Item =  {
+  "id": 223107,
+  "name": "Redemption",
+  "description": "0 Health\n15 Ability Haste\n100% Base Mana Regen\n16% Heal and Shield Power\n\nACTIVE (0s)\nIntervention\nTarget an area within. After 2.5 seconds, call down a beam of light to restore Health to allies and damage enemy champions.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
   },
-  maps: [
+  "maps": [
     30
   ]
 }

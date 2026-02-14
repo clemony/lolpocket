@@ -1,50 +1,51 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3156,
-  name: 'Maw of Malmortius',
-  description: '60 Attack Damage\n15 Ability Haste\n40 Magic Resist\n\nLifeline\nTaking magic damage that would reduce your Health below 30% grants a magic damage Shield for 3 seconds and 10% Omnivamp until end of combat.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Maw of Malmortius",
+  "id": 3156,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3155,
-      name: 'Hexdrinker',
-      gold: 1300
+      "id": 3155,
+      "name": "Hexdrinker",
+      "gold": 1300
     },
     {
-      id: 3133,
-      name: 'Caulfield\'s Warhammer',
-      gold: 1050
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
     }
   ],
-  gold: {
-    base: 750,
-    sell: 2170,
-    total: 3100
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Lifeline",
+      "effects": "If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />200 /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />150) magic damage (+(<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />150% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />112.5%) <b>bonus</b> AD) magic damage for 3 seconds. Additionally, triggering this effect grants you 10% omnivamp until the end of combat.",
+      "cooldown": "90"
+    }
+  ],
+  "stats": {
+    "attackDamage": 60,
+    "magicResistance": 40,
+    "abilityHaste": 15
   },
-  maps: [
+  "description": "60 Attack Damage\n15 Ability Haste\n40 Magic Resist\n\nLifeline\nTaking magic damage that would reduce your Health below 30% grants a magic damage Shield for 3 seconds and 10% Omnivamp until end of combat.",
+  "gold": {
+    "base": 750,
+    "purchasable": true,
+    "total": 3100,
+    "sell": 2170
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Lifeline',
-      cooldown: '90',
-      effects: 'If you would take magic damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src="/img/icons/shield.webp" class="tip-icon light:invert" />shield that absorbs (<img src="/img/icons/melee.webp" class="inline-icon" />200 /<img src="/img/icons/ranged.webp" class="inline-icon" />150) magic damage (+(<img src="/img/icons/melee.webp" class="inline-icon" />150% /<img src="/img/icons/ranged.webp" class="inline-icon" />112.5%) <b>bonus</b> AD) magic damage for 3 seconds. Additionally, triggering this effect grants you 10% omnivamp until the end of combat.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 15,
-    attackDamage: 60,
-    magicResistance: 40
-  }
+  ]
 }
 export default item

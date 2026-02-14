@@ -1,15 +1,15 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 1203,
-  name: 'Support Quest',
-  description: 'Upgrade your Support Item to complete your quest. Earn points by damaging enemy champions or turrets, or killing minions while near an ally. Earn points much faster in bot Lane!\n\nRewards\n• Upgraded support item\n• A dedicated slot for control wards\n• Discounted control wards',
-  gold: {
-    base: 0,
-    purchasable: false,
-    sell: 0,
-    total: 0
+      const item: Item =  {
+  "id": 1203,
+  "name": "Support Quest",
+  "description": "Upgrade your Support Item to complete your quest. Earn points by damaging enemy champions or turrets, or killing minions while near an ally. Earn points much faster in bot Lane!\n\nRewards\n• Upgraded support item\n• A dedicated slot for control wards\n• Discounted control wards",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
   }
 }
 export default item

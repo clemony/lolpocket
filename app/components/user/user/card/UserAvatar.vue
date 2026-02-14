@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSummonerIcon } from "~/domain/utils/img"
+
 const { author, class: className } = defineProps<{
   class?: HTMLAttributes["class"]
   author?: Summoner | null

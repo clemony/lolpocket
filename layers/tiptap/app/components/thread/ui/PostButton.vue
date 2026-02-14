@@ -35,7 +35,7 @@ const chosenIcon = computed(() => {
     :label="
       !change && (cancellable || save) ? 'Cancel'
       : save && change ? 'Save'
-      : 'Post'
+        : 'Post'
     "
     :color
     :icon="chosenIcon"

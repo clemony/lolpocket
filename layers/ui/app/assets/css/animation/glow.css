@@ -34,7 +34,7 @@
     var(--color-ah) 0%,
     var(--color-p0) 20%,
     var(--color-challenger) 30%,
-    var(--color-resolve) 60%
+    var(--color-res) 60%
   );
   background-size: 1000% 1000%;
   animation: var(--animate-gradient) 5s ease infinite;
@@ -70,22 +70,22 @@
   transition: all 0.5s ease-in-out;
 }
 
-.gradient[data-path='Precision'] {
+.gradient[data-path="Precision"] {
   background-position: 0%;
 }
 
-.gradient[data-path='Domination'] {
+.gradient[data-path="Domination"] {
   background-position: 28%;
 }
 
-.gradient[data-path='Sorcery'] {
+.gradient[data-path="Sorcery"] {
   background-position: 50%;
 }
 
-.gradient[data-path='Resolve'] {
+.gradient[data-path="Resolve"] {
   background-position: 75%;
 }
 
-.gradient[data-path='Inspiration'] {
+.gradient[data-path="Inspiration"] {
   background-position: 100%;
 }

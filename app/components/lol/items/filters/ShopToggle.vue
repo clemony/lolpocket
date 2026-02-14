@@ -9,7 +9,7 @@
       theme: 'base',
       placement: 'top-end',
     }"
-    class="group/tog relative *:transition-opacity *:duration-100 off:bg-tint-p2/40! off:inset-shadow-sm"
+    class="group/tog off:bg-tint-p2/40! relative *:transition-opacity *:duration-100 off:inset-shadow-sm"
     variant="outline"
     on="neutral"
     size="12">

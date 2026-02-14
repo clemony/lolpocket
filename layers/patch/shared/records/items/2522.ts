@@ -1,47 +1,48 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2522,
-  name: 'Actualizer',
-  description: '90 Ability Power\n300 Mana\n10 Ability Haste\n\nMana Made Real (0s)\nFor 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+      const item: Item =  {
+  "name": "Actualizer",
+  "id": 2522,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      name: 'Mana Made Real',
-      effects: 'For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src="/img/icons/healing.webp" class="tip-icon " />healing, and <img src="/img/icons/shielding.webp" class="tip-icon " />shielding; and your basic ability cooldowns progress 30% faster.',
-      unique: true
-    }
-  ],
-  buildsFrom: [
-    {
-      id: 3802,
-      name: 'Lost Chapter',
-      gold: 1200
+      "id": 3802,
+      "name": "Lost Chapter",
+      "gold": 1200
     },
     {
-      id: 1026,
-      name: 'Blasting Wand',
-      gold: 850
+      "id": 1026,
+      "name": "Blasting Wand",
+      "gold": 850
     }
   ],
-  gold: {
-    base: 1050,
-    sell: 2170,
-    total: 3100
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "active": [
+    {
+      "unique": true,
+      "name": "Mana Made Real",
+      "effects": "For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing, and <img src=\"/img/icons/shielding.webp\" class=\"tip-icon \" />shielding; and your basic ability cooldowns progress 30% faster."
+    }
+  ],
+  "stats": {
+    "abilityPower": 90,
+    "mana": 300,
+    "abilityHaste": 10
   },
-  maps: [
+  "description": "90 Ability Power\n300 Mana\n10 Ability Haste\n\nMana Made Real (0s)\nFor 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
+  "gold": {
+    "base": 1050,
+    "purchasable": true,
+    "total": 3100,
+    "sell": 2170
+  },
+  "maps": [
     11,
     12,
     21
-  ],
-  stats: {
-    abilityHaste: 10,
-    abilityPower: 90,
-    mana: 300
-  }
+  ]
 }
 export default item

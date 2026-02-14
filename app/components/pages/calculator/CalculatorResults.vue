@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-const tab = ref('stats')
+const tab = ref("stats")
 </script>
 
 <template>
   <!--
       <div>
         <button v-tippy="'Add Set'" class="btn btn-ghost top-4  absolute right-5 btn-square z-6" @click="createCalculatorSet()">
-          <icon name="ph:rows-plus-bottom-light" class="dst size-6.5"/>
+          <icon name="ph:rows-plus-bottom-light" class="ds-2xs size-6.5"/>
         </button>
       </div> -->
 
   <div class="size-full px-3 pt-26">
-    <Tabs
-      class=""
-      default-value="stats">
+    <Tabs class="" default-value="stats">
       <TabsList class="grid h-11 w-full max-w-110 grid-cols-3">
         <TabsTrigger value="stats">
           Stat Totals
@@ -30,21 +28,15 @@ const tab = ref('stats')
         <TabIndicator />
       </TabsList>
 
-      <TabsContent
-        class="mt-8 w-full rounded-lg bg-p0"
-        value="stats">
+      <TabsContent class="mt-8 w-full rounded-lg bg-p0" value="stats">
         <LazyCalculatorStatTotals />
       </TabsContent>
 
-      <LazyTabsContent
-        class="m-0"
-        value="effects">
+      <LazyTabsContent class="m-0" value="effects">
         effects
       </LazyTabsContent>
 
-      <LazyTabsContent
-        class="m-0"
-        value="options">
+      <LazyTabsContent class="m-0" value="options">
         <CalculatorMenu />
 
         <LazyCalculatorOptions />

@@ -144,7 +144,7 @@ onMounted(async () => {
                 && item !== itemModel[itemIndex].item,
             }"> -->
           <input
-            v-model="itemModel[x]?.item"
+            v-model="itemModel"
             class="peer hidden"
             name="item"
             type="radio"

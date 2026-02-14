@@ -12,7 +12,7 @@ const target = useTemplateRef("target")
 
 onClickOutside(target, (event) => (open.value = false))
 const isSummoner = computed(() => {
-  const account = as().account
+  const account = user().account
   return !!account?.puuid && sSession().summoner?.puuid === account.puuid
 })
 </script>
@@ -53,7 +53,7 @@ const isSummoner = computed(() => {
             <div
               class="pointer-events-auto absolute left-0 z-2 my-auto grid h-32 w-8 place-items-center self-center">
               <span
-                class="h-full w-3 rounded-full border border-p3 bg-tint-p3/50" />
+                class="bg-tint-p3/50 h-full w-3 rounded-full border border-p3" />
             </div>
 
             <div class="size-full overflow-y-auto">

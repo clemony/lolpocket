@@ -1,3 +1,5 @@
+import type { useChampions } from "~/domain/summoner/champions/useChampions"
+
 export interface BayesianChampion {
   assists: number
   deaths: number

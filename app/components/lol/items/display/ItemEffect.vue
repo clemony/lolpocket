@@ -6,7 +6,7 @@ const {
 } = defineProps<{
   data: Effect
   type: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -15,22 +15,16 @@ const {
     :class="
       cn('w w-full gap-x-1 align-middle leading-normal text-pretty', className)
     ">
-    <span
-      v-if="data.unique"
-      class="tracking-tight text-sorcery! italic">
+    <span v-if="data.unique" class="tracking-tight text-sorc! italic">
       Unique {{ type }}
       <template v-if="!data.name">:&nbsp;</template>
     </span>
 
-    <span
-      v-if="data.name"
-      class="tracking-tight text-sorcery! italic">
+    <span v-if="data.name" class="tracking-tight text-sorc! italic">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 
-    <span
-      v-if="data.effects"
-      v-html="data.effects" />
+    <span v-if="data.effects" v-html="data.effects" />
 
     <div
       v-if="data.cooldown"
@@ -38,11 +32,9 @@ const {
       <img
         class="mt-px size-4"
         src="/img/icons/manaless.webp"
-        alt="cooldown-icon">
+        alt="cooldown-icon" />
       <!-- &nbsp;Cooldown:&nbsp; -->
-      <span
-        class=""
-        v-html="data.cooldown" />
+      <span class="" v-html="data.cooldown" />
       second cooldown
     </div>
   </div>

@@ -1,11 +1,13 @@
 <script lang="ts" setup>
+import { removeItemFromSet } from "~/domain/pocket/handleItems"
+
 const props = defineProps<{
   item: number
   set?: ItemSet
   pocket?: Pocket
 }>()
 
-const emit = defineEmits(['update:popover'])
+const emit = defineEmits(["update:popover"])
 </script>
 
 <template>
@@ -13,8 +15,8 @@ const emit = defineEmits(['update:popover'])
     <ContrastGhostButton
       class="rounded-lg pl-2.5 text-sm btn-sm"
       @click="
-        props.pocket && props.set ?
-          removeItemFromSet(props.pocket, props.set, props.item)
+        props.pocket && props.set
+          ? removeItemFromSet(props.pocket, props.set, props.item)
           : null
       ">
       <icon name="f7:delete-right" />

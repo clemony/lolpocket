@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSplash } from "~/domain/utils/img"
+
 const { champion, championId } = defineProps<{
   champion?: ChampionMastery | null
   championId?: number
@@ -7,9 +9,7 @@ const { champion, championId } = defineProps<{
 const id = computed(() => champion?.championId ?? championId ?? 0)
 const name = computed(() => champNameById(id.value))
 const level = computed(() =>
-  champion?.level && champion.level >= 10
-    ? 10
-    : champion?.level ?? 0
+  champion?.level && champion.level >= 10 ? 10 : (champion?.level ?? 0)
 )
 </script>
 
@@ -24,7 +24,7 @@ const level = computed(() =>
         :alt="level.toString()"
         :class="
           cn(
-            'absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20',
+            'absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm drop-shadow-black/20'
           )
         " />
     </template>
@@ -39,7 +39,7 @@ const level = computed(() =>
     <div
       class="relative flex size-full h-12 flex-col justify-center overflow-hidden px-0.75 pt-0.25 pb-1 *:leading-none">
       <div class="flex items-end gap-1.5">
-        <h2 class="text-xl font-semibold dst">
+        <h2 class="dst text-xl font-semibold">
           {{ name }}
         </h2>
 
@@ -51,7 +51,7 @@ const level = computed(() =>
       <div class="h-3 items-center text-nowrap">
         <p class="absolute flex items-center gap-1 text-xs font-medium">
           <span
-            class="relative size-4 overflow-hidden rounded-full shadow-sm dst">
+            class="dst relative size-4 overflow-hidden rounded-full shadow-sm">
             <i-lol-cm-mastery-token
               class="absolute grid size-full scale-105 place-items-center object-center" />
           </span>
@@ -61,7 +61,7 @@ const level = computed(() =>
 
       <!--  <div class="text-nowrap h-3 items-center  *:transition-all *:duration-200">
         <p class="text-xs flex gap-1 items-center group-hover/photo:-translate-y-full absolute group-hover/photo:opacity-0 font-medium">
-          <span class="size-4 relative overflow-hidden rounded-full dst shadow-sm">
+          <span class="size-4 relative overflow-hidden rounded-full ds-2xs shadow-sm">
             <Icon name="cm-mastery-token class="size-full scale-105 grid place-items-center absolute object-center"" />
           </span>
           {{ champion?.points?.toLocaleString() ?? 0 }}

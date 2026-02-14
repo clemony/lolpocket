@@ -1,17 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3117,
-  name: 'Mobility Boots',
-  description: '25 Move Speed \nWhen out of combat for at least 5 seconds, increase this item\'s effect to 45.',
-  gold: {
-    base: 700,
-    purchasable: false,
-    sell: 700,
-    total: 1000
+      const item: Item =  {
+  "id": 3117,
+  "name": "Mobility Boots",
+  "description": "25 Move Speed \nWhen out of combat for at least 5 seconds, increase this item's effect to 45.",
+  "gold": {
+    "base": 700,
+    "purchasable": false,
+    "total": 1000,
+    "sell": 700
   },
-  maps: [
+  "maps": [
     11,
     12,
     21,

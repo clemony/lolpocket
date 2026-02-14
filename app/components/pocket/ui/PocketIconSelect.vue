@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getSplash } from "~/domain/utils/img"
+
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes["class"]
   pocket: Pocket

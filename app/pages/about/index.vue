@@ -144,7 +144,7 @@ const faq = [
 
       <div class="field-box mt-26 px-4 py-3">
         <div
-          class="pointer-events-auto flex items-center justify-evenly gap-5 *:dst **:size-6">
+          class="pointer-events-auto flex items-center justify-evenly gap-5 *:ds-2xs **:size-6">
           <tippy
             v-for="icon in icons"
             :key="icon.name"
@@ -152,7 +152,7 @@ const faq = [
             content-tag="div">
             <template #default>
               <a :href="icon.link" :target="icon.link ? '_blank' : ''">
-                <icon class="size-6 shrink-0 dst" :name="icon.icon" />
+                <icon class="dst size-6 shrink-0" :name="icon.icon" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
@@ -171,7 +171,7 @@ const faq = [
         </div>
       </div>
 
-      <div class="mt-6 flex flex-col items-center px-4 tracking-tight dst">
+      <div class="dst mt-6 flex flex-col items-center px-4 tracking-tight">
         <p class="text-center">
           <i>Lolpockets</i>
 

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui"
+import { Primitive } from "reka-ui"
 
 const {
-  as: el = 'span',
+  as: el = "span",
   class: className,
   noTag,
   summoner,
 } = defineProps<
   PrimitiveProps & {
     as?: string
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
     summoner?: Summoner | Partial<Summoner>
     noTag?: boolean
   }
@@ -19,9 +19,8 @@ const {
 const tag = computed(() => {
   if (summoner?.tag) {
     return summoner?.tag
-  }
-  else {
-    return as().account?.tag ?? null
+  } else {
+    return user().account?.tag ?? null
   }
 })
 </script>
@@ -32,15 +31,10 @@ const tag = computed(() => {
     :as="el"
     :class="cn('inline leading-none antialiased', className)">
     <span class="max-size-3.25 relative inline size-3.25 overflow-hidden">
-      <icon
-        v-if="!noTag"
-        class="-mr-1 inline size-3.5"
-        name="lucide:hash" />
+      <icon v-if="!noTag" class="-mr-1 inline size-3.5" name="lucide:hash" />
     </span>
     {{ tag }}
   </Primitive>
 
-  <span
-    v-else
-    :class="cn('', className)">Disconnected</span>
+  <span v-else :class="cn('', className)">Disconnected</span>
 </template>

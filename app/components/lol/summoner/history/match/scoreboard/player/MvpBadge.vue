@@ -13,9 +13,9 @@ const { match, player } = defineProps<{
         cn(
           'h-4.5! gap-px px-1.5! text-2xs! font-bold tracking-wide shadow-xs **:leading-0 dark:text-p0 light:text-white',
           {
-            'dark:border-precision/60 dark:bg-precision light:border-g/40 light:bg-as':
+            'dark:border-pre/60 dark:bg-pre light:border-g/40 light:bg-as':
               player.lpScore.mvp,
-            'border-shade-domination/3 bg-domination': player.lpScore.ace,
+            'border-shade-domination/3 bg-dom': player.lpScore.ace,
           }
         )
       ">

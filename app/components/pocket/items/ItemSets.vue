@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { vDraggable } from 'vue-draggable-plus';
+import { vDraggable } from "vue-draggable-plus"
+import { newItemSet } from "~/domain/pocket/addPocketModules"
 
 const props = defineProps<{
   pocket: Pocket
@@ -41,22 +42,22 @@ watch(items, (newItemSets) => {
       v-draggable="[
         pocket.items,
         {
-          'group': {
+          group: {
             name: 'sets',
           },
-          'sort': true,
-          'bubbleScroll': false,
-          'scroll': false,
-          'delay': 0,
-          'animation': 300,
+          sort: true,
+          bubbleScroll: false,
+          scroll: false,
+          delay: 0,
+          animation: 300,
           'force-fallback': true,
-          'fallbackTolerance': 0,
-          'fallbackOnBody': true,
+          fallbackTolerance: 0,
+          fallbackOnBody: true,
           'prevent-on-filter': true,
-          'ghostClass': 'item-set-ghost',
-          'chosenClass': 'item-set-chosen',
-          'dragClass': 'item-set-drag',
-          'filter': '.item',
+          ghostClass: 'item-set-ghost',
+          chosenClass: 'item-set-chosen',
+          dragClass: 'item-set-drag',
+          filter: '.item',
         },
       ]"
       class="z-0 flex w-full flex-col gap-8 pt-6"
@@ -77,9 +78,7 @@ watch(items, (newItemSets) => {
       class="h-22 w-full rounded-xl border-p3/40"
       variant="outline"
       @click="pocket.items?.push(newItemSet())">
-      <icon
-        class="transition-opacity duration-200"
-        name="add" />
+      <icon class="transition-opacity duration-200" name="add" />
     </UButton>
   </div>
 </template>

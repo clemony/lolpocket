@@ -1,16 +1,18 @@
 <script lang="ts" setup>
+import { useChampionWinrateTimeline } from "~/domain/summoner/champions/useChampionWinrateTimeline"
+
 const {
   championName,
   class: className,
   matches,
   summoner,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   summoner?: Summoner
   championName: string
   matches: MatchData[]
 }>()
-/* const { matches } = useSummoner(as().account?.puuid) */
+/* const { matches } = summoner(user().account?.puuid) */
 
 const timeline = computed(() => {
   if (!summoner) return null
@@ -20,7 +22,7 @@ const timeline = computed(() => {
 watch(
   () => timeline.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+    console.log("💠 - watch - newVal:", newVal)
   }
 )
 
@@ -30,13 +32,13 @@ const data = computed(() => {
   }
 
   return {
-    labels: timeline.value.map(p => p.span),
+    labels: timeline.value.map((p) => p.span),
     datasets: [
       {
-        data: timeline.value.map(p => p.winrate),
+        data: timeline.value.map((p) => p.winrate),
       },
       {
-        data: timeline.value.map(p => p.games),
+        data: timeline.value.map((p) => p.games),
       },
     ],
   }
@@ -67,12 +69,12 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Winrate (%)',
+        text: "Winrate (%)",
       },
       max: 100,
       min: 0,
-      position: 'left',
-      type: 'linear',
+      position: "left",
+      type: "linear",
       border: {
         display: true,
       },
@@ -86,17 +88,17 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Games Played',
+        text: "Games Played",
       },
-      position: 'right',
-      type: 'linear',
+      position: "right",
+      type: "linear",
     },
   },
 }
 
 const range = computed(() => {
-  const spans = timeline.value?.map(p => p.span) ?? []
-  if (!spans.length) return ''
+  const spans = timeline.value?.map((p) => p.span) ?? []
+  if (!spans.length) return ""
   return `Weeks ${spans[0]} - ${spans[spans.length - 1]}`
 })
 </script>
@@ -114,8 +116,6 @@ const range = computed(() => {
       <div class="stat-desc text-md" />
     </div>
 
-    <LineChart
-      :data="data"
-      :options="options" />
+    <LineChart :data="data" :options="options" />
   </div>
 </template>

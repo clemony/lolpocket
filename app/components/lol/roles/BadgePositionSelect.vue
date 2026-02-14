@@ -51,7 +51,7 @@ onMounted(() => {
       :position="currentValue">
       <component
         :is="`i-lol-${currentValue}`"
-        :class="cn('size-4.5! shrink-0 text-pc! dst')" />
+        :class="cn('size-4.5! shrink-0 text-pc! ds-2xs')" />
 
       <SelectValue placeholder="all" />
       <icon

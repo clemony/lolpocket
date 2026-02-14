@@ -5,9 +5,9 @@ const { isVisible } = defineProps<{
 
 const isPlaying = ref(true)
 const motion = computed({
-  get: () => as().settings?.motion ?? false,
+  get: () => user().settings?.motion ?? false,
   set: (v: boolean) => {
-    const settings = as().settings
+    const settings = user().settings
     if (settings) settings.motion = v
   },
 })

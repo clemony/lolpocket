@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import RuneTooltip from '#components'
+import RuneTooltip from "#components"
+import { wikiLink } from "~/domain/utils/utils"
 
 const {
   id,
@@ -7,7 +8,7 @@ const {
   class: className,
   loadingType,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   id?: number | null
   loadingType?: LoadingStyle
   side?: Side
@@ -18,25 +19,25 @@ const runeName = computed(() => (id ? runeNameById(id) : undefined))
 const toast = useToast()
 function showToast() {
   if (!id) return
-  if (!toast.toasts.value.find(t => t.id === `rune-${id}`)) {
+  if (!toast.toasts.value.find((t) => t.id === `rune-${id}`)) {
     toast.add({
       id: `rune-${id}`,
       description: h(RuneTooltip, { id }),
       duration: 0,
       actions: [
         {
-          variant: 'link',
+          variant: "link",
           external: true,
-          label: 'wiki',
-          size: 'sm',
-          target: '_blank',
-          to: runeName.value ? wikiLink(runeName.value) : '',
-          trailingIcon: 'link'
-        }
+          label: "wiki",
+          size: "sm",
+          target: "_blank",
+          to: runeName.value ? wikiLink(runeName.value) : "",
+          trailingIcon: "link",
+        },
       ],
       ui: {
-        root: 'p-0!'
-      }
+        root: "p-0!",
+      },
     })
   }
 }
@@ -55,7 +56,7 @@ function showToast() {
           'border border-black/60 shadow-sm inset-shadow-sides shadow-black/20 inset-shadow-black/60 drop-shadow-sm':
             loaded,
         },
-        className,
+        className
       )
     ">
     <slot />

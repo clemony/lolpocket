@@ -1,11 +1,11 @@
-import { apiPath } from '#server/domain'
+import { apiPath } from "#server/domain"
 
 export default defineEventHandler(async (event) => {
   const { puuid, region } = getQuery(event)
   if (!puuid || !region) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Missing puuid or region',
+      statusMessage: "Missing puuid or region",
     })
   }
 
@@ -20,15 +20,15 @@ export default defineEventHandler(async (event) => {
     const processed: RankedEntry = {
       name: entry.leagueId,
       division: entry.rank,
-      losses: entry.losses,
+      loss: entry.losses,
       lp: entry.leaguePoints,
       queue: entry.queueType,
       tier: entry.tier,
-      wins: entry.wins,
+      win: entry.wins,
     }
 
-    if (entry.queueType === 'RANKED_SOLO_5x5') ranked.solo = processed
-    if (entry.queueType === 'RANKED_FLEX_SR') ranked.flex = processed
+    if (entry.queueType === "RANKED_SOLO_5x5") ranked.solo = processed
+    if (entry.queueType === "RANKED_FLEX_SR") ranked.flex = processed
   }
 
   return { ranked }

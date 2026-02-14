@@ -1,3 +1,6 @@
+import { useBayesianChampionStats } from "~/domain/summoner/champions/weighted/useWeightedChampionStats"
+import { getSplash } from "~/domain/utils/img"
+
 //
 export function useChampions({
   puuid,

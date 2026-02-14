@@ -5,7 +5,6 @@ import { defineStore } from "pinia"
 export const matchFilter = defineStore("match-filter", () => {
   const { summoner: s } = storeToRefs(sSession())
   const { matches } = storeToRefs(sMatches())
-  console.log("🥸 - matches:", matches)
 
   const GLOBAL_KEYS = [
     ["participants", "championName"],

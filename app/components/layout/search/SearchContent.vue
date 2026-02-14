@@ -21,7 +21,7 @@ const pages = computed(() =>
 const items = computed(() =>
   pages.value.filter((r) => !r.meta?.search && r.path.split("/").length === 2)
 )
-type RouteGroup = {
+interface RouteGroup {
   name: string
   items: RouteRecordRaw[]
   order?: number

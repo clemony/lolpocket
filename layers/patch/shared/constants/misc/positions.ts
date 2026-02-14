@@ -17,25 +17,25 @@ export const mapPositions = [
   },
 
   {
-    color: "var(--color-resolve)",
+    color: "var(--color-res)",
     label: "jungle",
     icon: "i-role-jungle",
   },
 
   {
-    color: "var(--color-sorcery)",
+    color: "var(--color-sorc)",
     label: "middle",
     icon: "i-role-middle",
   },
 
   {
-    color: "var(--color-precision)",
+    color: "var(--color-pre)",
     label: "bottom",
     icon: "i-role-bottom",
   },
 
   {
-    color: "var(--color-inspiration)",
+    color: "var(--color-insp)",
     label: "support",
     icon: "i-role-support",
   },

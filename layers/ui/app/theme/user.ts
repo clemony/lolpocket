@@ -1,7 +1,7 @@
 export default {
   slots: {
     name: "font-semibold text-pc",
-    avatar: "shrink-0",
+    avatar: "shrink-0 **:text-pc/20 ds-sm sh-sm",
     description: "text-n5",
     root: "relative group/user",
     wrapper: "",

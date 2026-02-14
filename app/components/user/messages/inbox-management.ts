@@ -1,32 +1,32 @@
 export const inboxBox: InboxType[] = [
   {
-    name: 'Messages',
+    name: "Messages",
     icon: {
-      name: 'fluent:mail-16-regular',
-      class: '',
+      name: "fluent:mail-16-regular",
+      class: "",
     },
   },
   {
-    name: 'Trash',
+    name: "Trash",
     icon: {
-      name: 'trash',
-      class: 'size-4.25',
+      name: "trash",
+      class: "size-4.25",
     },
   },
 ]
 
-export const openBox = shallowRef<string>('Messages')
+export const openBox = shallowRef<string>("Messages")
 export const inboxUnreadFilter = shallowRef<boolean>(false)
 
 export const sortedMessages = computed(() => {
-  let box = [...(as().inbox?.messages || [])]
-  box
-    = openBox.value === 'Messages'
-      ? box.filter(m => !m.trash)
-      : openBox.value === 'Trash'
-        ? box.filter(m => m.trash)
+  let box = [...(user().inbox?.messages || [])]
+  box =
+    openBox.value === "Messages"
+      ? box.filter((m) => !m.trash)
+      : openBox.value === "Trash"
+        ? box.filter((m) => m.trash)
         : []
-  box = inboxUnreadFilter.value ? box.filter(m => !m.read) : box
+  box = inboxUnreadFilter.value ? box.filter((m) => !m.read) : box
 
   return box.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -34,7 +34,7 @@ export const sortedMessages = computed(() => {
 })
 
 export function matchMsg(msgId: string): InboxMessage | undefined {
-  return as().inbox?.messages?.find(m => m.id === msgId)
+  return user().inbox?.messages?.find((m) => m.id === msgId)
 }
 
 export function markRead(msgId: string) {
@@ -50,7 +50,7 @@ export function toggleRead(msgId: string) {
 
 export function trashMsg(msgId: string) {
   const msg = matchMsg(msgId)
-/*  fixme
+  /*  fixme
 if (msg) {
 msg.trash
     msg.dateTrashed = Date.now()
@@ -58,7 +58,7 @@ msg.trash
 }
 
 export function trashAllRead() {
-  const a = as().inbox?.messages?.filter(m => m.read === true) ?? []
+  const a = user().inbox?.messages?.filter((m) => m.read === true) ?? []
   a.forEach((m) => {
     trashMsg(m.id)
   })

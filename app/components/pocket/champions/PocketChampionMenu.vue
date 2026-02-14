@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PopoverContentProps } from 'reka-ui';
+import type { PopoverContentProps } from "reka-ui"
 
 const { k, pocket: p } = defineProps<
   PopoverContentProps & {
@@ -22,13 +22,9 @@ const name = computed(() => champNameByKey(k))
   <PopoverContent
     class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5"
     align="start">
-    <UButton
-      class="hover:bg-p3/60"
-      @click="navigateTo(`/champions/${k}`)">
+    <UButton class="hover:bg-p3/60" @click="navigateTo(`/champions/${k}`)">
       <span class="relative grid size-4.5 place-items-center">
-        <Champion
-          class="absolute size-5.5"
-          :k />
+        <Champion class="absolute size-5.5" :k />
       </span>
       {{ name }}'s profile
     </UButton>
@@ -44,7 +40,7 @@ const name = computed(() => champNameByKey(k))
         :aria-label="name"
         type="checkbox"
         name="champion-add-or-remove-from-pocket"
-        :value="k">
+        :value="k" />
       <span class="peer-checked:hidden">Add to pocket</span>
       <span class="peer-not-checked:hidden">Remove from pocket</span>
     </UButton>
@@ -56,8 +52,8 @@ const name = computed(() => champNameByKey(k))
       <icon
         name="star"
         :class="
-          cn('ml-px size-4! dst **:stroke-[2.8]', {
-            'fill-precision': pocket._champion === k,
+          cn('ml-px size-4! ds-2xs **:stroke-[2.8]', {
+            'fill-pre': pocket._champion === k,
           })
         " />
       <input
@@ -66,7 +62,7 @@ const name = computed(() => champNameByKey(k))
         :disabled="pocketChampions.includes(k)"
         :aria-label="name"
         type="checkbox"
-        :value="k">
+        :value="k" />
       {{ pocket._champion === k ? "Main champion" : "Set main champion" }}
     </UButton>
   </PopoverContent>

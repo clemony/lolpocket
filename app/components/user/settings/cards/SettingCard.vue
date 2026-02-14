@@ -20,10 +20,10 @@ const props = defineProps<{
         </h4>
 
         <slot name="header-badge" />
-      </div
+      </div>
 
-   <div>
-      {{ props.description }}
+      <div>
+        {{ props.description }}
       </div>
     </template>
 

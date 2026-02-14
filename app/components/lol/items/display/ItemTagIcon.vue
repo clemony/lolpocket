@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   tag: ItemTag
 }>()
 </script>
@@ -9,8 +9,8 @@ const { class: className } = defineProps<{
   <span
     :class="
       cn(
-        'grid size-6! shrink-0 place-items-center rounded-full shadow-xs dst',
-        className,
+        'grid size-6! shrink-0 place-items-center rounded-full shadow-xs ds-2xs',
+        className
       )
     "
     :style="{
@@ -20,7 +20,7 @@ const { class: className } = defineProps<{
       :is="tag.icon"
       v-if="tag.icon"
       :class="
-        cn('absolute size-3.75! text-white/95 dst', {
+        cn('absolute size-3.75! text-white/95 ds-2xs', {
           'size-4.25!': tag.name !== 'Movement',
         })
       " />

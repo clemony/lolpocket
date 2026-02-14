@@ -4,7 +4,7 @@ const {
   id,
   class: className,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   id: string | number
   color?: boolean
 }>()
@@ -14,20 +14,19 @@ const {
 
 <template>
   <Icon
-
     :name="`shard:${id}`"
     :class="
       cn(
-        'dxs drop-shadow-black/30',
+        'drop-shadow-black/30 ds-xs',
         {
           'size-4.5!': ![5011, 5010, 5007].includes(
-            typeof id === 'string' ? parseInt(id) : id,
+            typeof id === 'string' ? parseInt(id) : id
           ),
           'size-3.75!': [5011, 5010, 5007].includes(
-            typeof id === 'string' ? parseInt(id) : id,
+            typeof id === 'string' ? parseInt(id) : id
           ),
         },
-        className,
+        className
       )
     " />
 </template>

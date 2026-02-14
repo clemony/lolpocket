@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 223033,
-  name: 'Mortal Reminder',
-  description: '30 Attack Damage\n30% Armor Penetration\n25% Critical Strike Chance\n\nSepsis\nDealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.\n\nIf an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.\n\nGrievous Wounds reduces the effectiveness of Healing and Regeneration effects.',
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
+      const item: Item =  {
+  "id": 223033,
+  "name": "Mortal Reminder",
+  "description": "30 Attack Damage\n30% Armor Penetration\n25% Critical Strike Chance\n\nSepsis\nDealing physical damage applies 40% Grievous Wounds to enemy champions for 3 seconds.\n\nIf an enemy heals for more than 60% of their maximum health while continously affected by Grievous Wounds, it is increased to 80% Grievous Wounds.\n\nGrievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
   },
-  maps: [
+  "maps": [
     30
   ]
 }

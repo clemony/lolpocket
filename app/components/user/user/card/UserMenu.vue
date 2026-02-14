@@ -76,7 +76,7 @@ const tag = ref(false)
         <div class="flex items-center gap-3 px-2 pb-2">
           <div
             class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
-            <h2 class="inline font-serif text-xl! leading-3 dst">
+            <h2 class="dst inline font-serif text-xl! leading-3">
               {{
                 props.author?.name || author?.username || "Mysterious Summoner"
               }}

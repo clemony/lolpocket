@@ -15,7 +15,7 @@ const route = useRoute()
         <span>
           <icon
             name="mingcute:layer-fill"
-            class="h-6 opacity-60 w-auto dst shrink-0 peer-checked:text-nc" />
+            class="h-6 opacity-60 w-auto ds-2xs shrink-0 peer-checked:text-nc" />
         </span>
 
         <icon name="vaadin:health-card" />

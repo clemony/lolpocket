@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { class: className, stats } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   stats: Player | MatchTeam
 }>()
 </script>
@@ -8,7 +8,7 @@ const { class: className, stats } = defineProps<{
 <template>
   <h3
     :class="
-      cn('text-start font-bold text-nowrap uppercase dst', className, {
+      cn('text-start font-bold text-nowrap uppercase ds-2xs', className, {
         'text-pc/30': stats?.win === 'remake',
       })
     ">

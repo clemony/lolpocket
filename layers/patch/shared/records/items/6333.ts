@@ -1,63 +1,64 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 6333,
-  name: 'Death\'s Dance',
-  nicknames: [
-    'dd'
-  ],
-  description: '60 Attack Damage\n50 Armor\n15 Ability Haste\n\nIgnore Pain\nA percentage of damage taken is dealt to you over 3 seconds instead.\n\nDefy\nWhen a champion that you damaged within 3 seconds dies, cleanse Ignore Pain\'s remaining damage and restore Health over 2 seconds.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Death's Dance",
+  "id": 6333,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 2019,
-      name: 'Steel Sigil',
-      gold: 1100
+      "id": 2019,
+      "name": "Steel Sigil",
+      "gold": 1100
     },
     {
-      id: 1037,
-      name: 'Pickaxe',
-      gold: 875
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
     },
     {
-      id: 3133,
-      name: 'Caulfield\'s Warhammer',
-      gold: 1050
+      "id": 3133,
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
     }
   ],
-  gold: {
-    base: 275,
-    sell: 2310,
-    total: 3300
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "dd"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Ignore Pain",
+      "effects": "Reduces (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />30% /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />10%) of all post-mitigation physical damage and magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Defy",
+      "effects": "If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain's</i> remaining stored damage and <img src=\"/img/icons/heals.webp\" class=\"tip-icon \" />heals you for 75% <b>bonus</b> AD over 2 seconds."
+    }
+  ],
+  "stats": {
+    "armor": 50,
+    "attackDamage": 60,
+    "abilityHaste": 15
   },
-  maps: [
+  "description": "60 Attack Damage\n50 Armor\n15 Ability Haste\n\nIgnore Pain\nA percentage of damage taken is dealt to you over 3 seconds instead.\n\nDefy\nWhen a champion that you damaged within 3 seconds dies, cleanse Ignore Pain's remaining damage and restore Health over 2 seconds.",
+  "gold": {
+    "base": 275,
+    "purchasable": true,
+    "total": 3300,
+    "sell": 2310
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Ignore Pain',
-      effects: 'Reduces (<img src="/img/icons/melee.webp" class="inline-icon" />30% /<img src="/img/icons/ranged.webp" class="inline-icon" />10%) of all post-mitigation physical damage and magic damage damage received and instead stores the damage to successively take it as true damage over 3 seconds, dealing a third of the stored damage each second.',
-      mythic: false,
-      unique: true
-    },
-    {
-      name: 'Defy',
-      effects: 'If an enemy champion dies within 3 seconds of you damaging them, removes <i>Ignore Pain\'s</i> remaining stored damage and <img src="/img/icons/heals.webp" class="tip-icon " />heals you for 75% <b>bonus</b> AD over 2 seconds.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    abilityHaste: 15,
-    armor: 50,
-    attackDamage: 60
-  }
+  ]
 }
 export default item

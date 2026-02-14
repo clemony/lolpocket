@@ -1,40 +1,89 @@
 <script lang="ts" setup>
 import type { BarStat } from "../types"
 
-const { stat, class: className } = defineProps<{
-  stat: BarStat
+const {
+  match,
+  player,
+  class: className,
+} = defineProps<{
   class?: HTMLAttributes["class"]
+  player: Player
+  match: MatchData
 }>()
 
-const target = useTemplateRef<HTMLElement>("target")
+const stats = computed<Record<string, BarStat>>(() => {
+  return {
+    dmg: {
+      color: "domination",
+      class:
+        "hover:bg-dom-200! hover:text-pc! hover:ring-offset-domination-200!  hover:ring-domination-300!",
+      max:
+        match.participants
+          .map((p) => p.stats?.totalDamage ?? 0)
+          .sort((a, b) => b - a)[0] ?? 0,
+      tip: "Total Damage Dealt to Champions",
+      value: player.stats?.totalDamage ?? 0,
+      icon: {
+        name: "i-lol-scoreboard-sword",
+        class: "-translate-y-px scale-108 opacity-100",
+      },
+    },
+    def: {
+      color: "precision",
+      class:
+        "hover:bg-pre-200! hover:text-pc! hover:ring-offset-pre-200!  hover:ring-pre-400!",
+      max:
+        match.participants
+          .map((p) => p.stats?.totalDamageTaken ?? 0)
+          .sort((a, b) => b - a)[0] ?? 0,
+      tip: "Total Damage Taken by Champions",
+      value: player.stats?.totalDamageTaken ?? 0,
+      icon: { name: "i-stat-armor" },
+    },
+    heal: {
+      color: "resolve",
+      class:
+        "hover:bg-res-100! bg-blend-hue hover:text-pc! hover:ring-offset-res-100! hover:ring-res-200!",
+      max:
+        match.participants
+          .map((p) => p.stats?.effectiveHealingAndShielding ?? 0)
+          .sort((a, b) => b - a)[0] ?? 0,
+      tip: "Effective Healing & Shielding",
+      value: player.stats?.effectiveHealingAndShielding ?? 0,
+      icon: { name: "i-stat-health" },
+    },
+  }
+})
 </script>
 
 <template>
-  <Tooltip
-    :text="stat.tip"
-    arrow
-    :class="
-      cn(
-        'badge-tooltip-hover relative flex grow basis-1/3 flex-col justify-center gap-1 px-1',
-        className
-      )
-    ">
-    <div class="progress-label w-full">
-      <Icon
-        :name="stat.icon?.name ?? ''"
-        :class="cn('inline size-3.5 opacity-70', stat.icon?.class)" />
-      <span>
-        {{
-          stat?.value && roundDecimal(stat?.value / 1000) > 1 ?
-            `${roundDecimal(stat?.value / 1000)}k`
-          : stat?.value && stat?.value < 1000 ? stat?.value
-          : 0
-        }}
-      </span>
+  <Tooltip v-for="stat in stats" :key="stat.color" :text="stat.tip" arrow>
+    <div
+      :class="
+        cn(
+          'relative flex grow basis-1/3 flex-col justify-center gap-1 px-1',
+          stat.class,
+          className
+        )
+      ">
+      <div
+        class="flex w-full shrink-0 items-center gap-1 text-xs leading-4 font-bold *:shrink-0">
+        <Icon
+          :name="stat.icon?.name ?? ''"
+          :class="cn('inline size-3.5 opacity-70', stat.icon?.class)" />
+        <span>
+          {{
+            stat?.value && roundDecimal(stat?.value / 1000) > 1 ?
+              `${roundDecimal(stat?.value / 1000)}k`
+              : stat?.value && stat?.value < 1000 ? stat?.value
+                : 0
+          }}
+        </span>
+      </div>
+      <Progress
+        class="h-1.25 w-full bg-p3"
+        :color="stat?.color"
+        :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />
     </div>
-    <Progress
-      class="h-1.25 w-full bg-p3"
-      :color="stat?.color"
-      :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />
   </Tooltip>
 </template>

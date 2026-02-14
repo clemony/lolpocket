@@ -1,17 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2033,
-  name: 'Corrupting Potion',
-  description: 'Active - Consume: Consumes a charge to restore 100 Health and 75 Mana over 12 seconds. During this time, damaging Abilities and Attacks burn enemy champions for 15 (20 if you cannot gain Mana) magic damage over 3 seconds. Holds up to 3 charges and refills upon visiting the shop.\n\nCorrupting damage is reduced to 50% when triggered by area of effect or periodic damage.',
-  gold: {
-    base: 350,
-    purchasable: false,
-    sell: 200,
-    total: 500
+      const item: Item =  {
+  "id": 2033,
+  "name": "Corrupting Potion",
+  "description": "Active - Consume: Consumes a charge to restore 100 Health and 75 Mana over 12 seconds. During this time, damaging Abilities and Attacks burn enemy champions for 15 (20 if you cannot gain Mana) magic damage over 3 seconds. Holds up to 3 charges and refills upon visiting the shop.\n\nCorrupting damage is reduced to 50% when triggered by area of effect or periodic damage.",
+  "gold": {
+    "base": 350,
+    "purchasable": false,
+    "total": 500,
+    "sell": 200
   },
-  maps: [
+  "maps": [
     11,
     21
   ]

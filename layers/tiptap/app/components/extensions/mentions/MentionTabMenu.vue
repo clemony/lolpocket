@@ -140,7 +140,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
                 :class="
                   cn('', {
                     'size-4.5!': i !== 0,
-                    'size-6.25! dst': i === 3,
+                    'size-6.25! ds-2xs': i === 3,
                     'translate-y-px': [1, 3].includes(i),
                     'size-5!': i === 4,
                   })

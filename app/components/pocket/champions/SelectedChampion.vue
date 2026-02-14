@@ -57,7 +57,7 @@ function handleRemove() {
             :disabled="!open"
             type="checkbox"
             :value="champion.key" />
-          <h1 class="font-bold dss">
+          <h1 class="font-bold ds-sm">
             {{ champion.name }}
           </h1>
 

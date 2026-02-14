@@ -67,7 +67,7 @@ export const sMatches = defineStore("summonerMatches", () => {
         await setCursor(id, cursor.value)
       }
 
-      ss().patchSummoner(id, { lastMatchUpdate: Date.now() })
+      sSummoner().patchSummoner(id, { lastMatchUpdate: Date.now() })
     } finally {
       loading.value = false
     }

@@ -1,24 +1,32 @@
+import type { MapIndex } from "./../../../../shared/types/types.league"
 /* eslint-disable antfu/no-top-level-await */
-import fs from 'node:fs'
-import { $fetch } from 'ofetch'
-import { markUpdate } from '../misc/markUpdate'
+import fs from "node:fs"
+import { $fetch } from "ofetch"
+import { markUpdate } from "../misc/markUpdate"
 
 // FIXME maps and queue together thingy? where they're merged remember that ok
-const url
-  = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/maps.json'
+const url =
+  "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/maps.json"
 
 const rawMapData = await $fetch<any[]>(url)
 
 const cleanedMapData: MapIndex[] = rawMapData
-  .filter(map => map.id !== 0) // skip the "Common" map
-  .map(({ id, name, mapStringId }) => ({ id, name, mapStringId }))
+  .filter((map) => map.id !== 0) // skip the "Common" map
+  .map(({ id, name, mapStringId }) => ({
+    id,
+    name:
+      id === 12 ? "ARAM"
+      : id === 35 ? "Brawl"
+      : name,
+    mapStringId,
+  }))
 
 fs.writeFileSync(
-  './layers/patch/shared/constants/misc/map-index.ts',
+  "./layers/patch/shared/constants/misc/map-index.ts",
   `// ${markUpdate()}
 import type { MapIndex } from "#shared/types"
 
 export const mapIndex: MapIndex[] = ${JSON.stringify(cleanedMapData, null, 2)}`
 )
 
-console.log('✅ Cleaned map data written.')
+console.log("✅ Cleaned map data written.")

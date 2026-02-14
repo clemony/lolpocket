@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSummonerIcon } from "~/domain/utils/img"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
@@ -10,20 +12,23 @@ const model = computed({
   get: () => filter?.value.ally,
   set: (val) => store.setFilter("ally", val),
 })
-const { allies } = storeToRefs(sChampion())
+const { allies } = storeToRefs(sData())
 const alliesList = computed(() =>
   (allies.value ?? []).sort((a, b) => b.games - a.games)
 )
 </script>
 
 <template>
-  <div :ui="{ root: 'p-0' }">
+  <div :ui="{ root: 'p-0' }" class="w-full">
+    <h6 class="px-2">
+      Allies
+    </h6>
     <Listbox v-model:model-value="model" :multiple="false">
       <ListboxContent
-        class="h-100 max-h-100 w-full space-y-1.5 overflow-auto overscroll-contain! px-1.5 py-2">
-        <template v-if="!sMatches().loading">
+        class="border-y-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto border-y px-1.5 py-2">
+        <template v-if="!sMatches().loading && sMatches.length">
           <ListboxItem
-            v-for="(item, ix) in alliesList"
+            v-for="item in alliesList"
             :key="item.name"
             as-child
             :value="item.puuid ?? ''">
@@ -31,51 +36,44 @@ const alliesList = computed(() =>
               variant="ghost"
               :ui="{
                 base: cn(
-                  'grid w-full max-w-full grid-cols-[5fr_repeat(2,1fr)] items-center overflow-hidden px-2 py-0',
+                  'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden px-2',
                   {
                     'opacity-74 grayscale': model && item.puuid !== model,
                   }
                 ),
               }"
-              size="2xl">
+              size="xl">
               <UUser
                 size="lg"
                 :name="item.name"
                 :description="`#${item.tag}`"
                 :ui="{
-                  root: 'w-fit overflow-hidden justify-self-start ',
+                  root: 'grow ',
                   wrapper: 'text-start items-center',
                 }"
                 :avatar="{
                   src: getSummonerIcon(item.icon),
                   icon: 'lol:champ',
                 }" />
-
-              <div
-                class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
-                <template v-if="model && model !== item.puuid">
-                  <Placeholder
-                    v-for="i in 2"
-                    :key="i"
-                    size="xs"
-                    class="w-12 last:mt-2" />
-                </template>
-                <template v-else>
+              <template v-if="item.games">
+                <div
+                  class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
                   <span> {{ item.win }} win </span>
                   <span>
                     {{ Number(item.games) - Number(item.win) }} loss
                   </span>
-                </template>
-              </div>
-              <div
-                class="relative z-0 col-start-3 grid w-14 shrink-0 place-items-center justify-end justify-self-end">
-                <ChampWinrate :ally="item" />
-              </div>
+                </div>
+
+                <ChampWinrate
+                  v-if="item.games"
+                  :ally="item"
+                  class="-translate-y-px" />
+              </template>
             </UButton>
           </ListboxItem>
         </template>
 
-        <template v-else>
+        <template v-else-if="sMatches().loading">
           <div
             v-for="i in 5"
             :key="i"
@@ -86,11 +84,13 @@ const alliesList = computed(() =>
           </div>
         </template>
 
+        <LilKrug v-else />
+
         <!--              <Icon
                   v-if="
                     ally === allies.sort((a, b) => b.synergy - a.synergy)[0]
                   "
-                  class="ml-1 inline size-3.5 align-bottom dst **:text-pc/80!"
+                  class="ml-1 inline size-3.5 align-bottom ds-2xs **:text-pc/80!"
                   name="ion:star" /> -->
       </ListboxContent>
     </Listbox>

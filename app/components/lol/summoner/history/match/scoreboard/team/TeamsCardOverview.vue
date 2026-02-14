@@ -23,7 +23,7 @@ const route = useRoute()
         :ui="{
           label: 'text-pc normal-case',
           base: 'w-full ',
-          leadingAvatar: 'dst',
+          leadingAvatar: 'ds-2xs',
         }"
         :to="`/summoner/${player.puuid}`"
         size="3xs"

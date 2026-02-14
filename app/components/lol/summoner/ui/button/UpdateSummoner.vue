@@ -62,7 +62,7 @@ console.log("🥸 - summoner?.value:", summoner?.value)
           name="reset"
           :class="
             cn(
-              'size-5 opacity-100 dst transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
+              'size-5 opacity-100 ds-2xs transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
               { 'animate-rotate': isLoading }
             )
           " />

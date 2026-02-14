@@ -1,5 +1,6 @@
 //
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
+import { newRandomPocket } from "~/domain/pocket/newRandomPocket"
 import { newPocket } from "./newPocket"
 
 export async function addPocket(randomize?: boolean) {
@@ -21,7 +22,7 @@ export async function addPocket(randomize?: boolean) {
         color: "neutral",
         title: `Created ${p.name}!`,
         description: `${getRandom(heyGoodJob)}, ${
-          as().account?.username || as().account?.name || "Summoner"
+          user().account?.username || user().account?.name || "Summoner"
         }`,
         icon: "tick",
       })

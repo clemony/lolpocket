@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { OnClickOutside } from "@vueuse/components"
-
 const { id, map } = defineProps<{
   id: number
   map?: number
 }>()
 
 const name = computed(() => itemNameById(id))
-const rank = computed(() => itemRank[id] as keyof typeof itemRankColor | undefined)
+const rank = computed(
+  () => itemRank[id] as keyof typeof itemRankColor | undefined
+)
 
 const item = shallowRef<Item | null>(null)
 const status = shallowRef<"idle" | "loading" | "success" | "error">("idle")
@@ -53,16 +53,10 @@ const has = computed(() => {
   if (item.value?.buildsInto) a.push("buildsInto")
   return a
 })
-
-const toast = useToast()
-const spell = computed(() => spells[id])
-function close() {
-  toast.remove(`item-${id}`)
-}
 </script>
 
 <template>
-  <OnClickOutside class="grid h-max w-full" @trigger="close()">
+  <div class="grid h-max w-full">
     <div
       class="flex max-h-88 w-full flex-col gap-4 overflow-hidden pt-5 pb-1.5 pl-3">
       <div class="flex shrink-0 items-center gap-4 overflow-hidden">
@@ -221,5 +215,5 @@ function close() {
         </template>
       </div>
     </div>
-  </OnClickOutside>
+  </div>
 </template>

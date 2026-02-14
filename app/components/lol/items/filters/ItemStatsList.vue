@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
-  variant = 'ghost',
+  variant = "ghost",
   class: className,
   icons,
   indicator = true,
@@ -11,14 +11,14 @@ const {
 } = defineProps<{
   icons?: boolean
   labels?: boolean
-  class?: HTMLAttributes['class']
-  variant?: ButtonProps['variant']
+  class?: HTMLAttributes["class"]
+  variant?: ButtonProps["variant"]
 
-  wrapperClass?: HTMLAttributes['class']
+  wrapperClass?: HTMLAttributes["class"]
   indicator?: boolean
 }>()
 
-const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
+const groups = ["basic", "utility", "spells", "defense", "physical"]
 </script>
 
 <template>
@@ -61,7 +61,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical']
                   color: is().filters.stats.includes(stat.id) ? '#FFFFFF' : stat.color,
                 }"
                 :name="stat.icon"
-                class="dst size-4" />
+                class="ds-2xs size-4" />
             </span>
             {{ stat.name }}
             <ListboxItemIndicator v-if="indicator === true" />

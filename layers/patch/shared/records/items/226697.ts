@@ -1,16 +1,17 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 226697,
-  name: 'Hubris',
-  description: '50 Attack Damage\n18 Lethality\n10 Ability Haste\n\nEminence\nWhen a champion that you have damaged with the last 3 seconds dies, gain 15 Attack Damage for the rest of the round, or until slain. Eminence\'s Attack Damage is permanently increased by 2 each time this triggers.',
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
+      const item: Item =  {
+  "id": 226697,
+  "name": "Hubris",
+  "description": "50 Attack Damage\n18 Lethality\n10 Ability Haste\n\nEminence\nWhen a champion that you have damaged with the last 3 seconds dies, gain 15 Attack Damage for the rest of the round, or until slain. Eminence's Attack Damage is permanently increased by 2 each time this triggers.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
   },
-  maps: [
+  "maps": [
     30
   ]
 }

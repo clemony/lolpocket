@@ -1,12 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Runes',
-  icon: 'lol:runes',
+  title: "Runes",
+  icon: "lol:runes",
 
-  description: 'Rune paths and the runes within them.',
-  listClass: 'size-5.5 !bg-transparent',
-  navClass: 'size-6',
-  path: '/library/runes',
+  description: "Rune paths and the runes within them.",
+  listClass: "size-5.5 !bg-transparent",
+  navClass: "size-6",
 })
 
 const selectedPath = ref<number>(830)
@@ -21,9 +20,7 @@ const selectedRune = ref<number | null>(null)
       v-if="selectedRune"
       class="tldr-80 relative z-0 mt-22 max-h-165 w-114 max-w-114 flex-col"
       :class="{ 'opacity-0': !selectedRune, 'opacity-100': selectedRune }">
-      <RuneTooltip
-        :id="selectedRune"
-        :key="selectedRune" />
+      <RuneTooltip :id="selectedRune" :key="selectedRune" />
 
       <CloseButton
         class="absolute top-0 right-0 shadow-none! btn-ghost"
@@ -31,9 +28,7 @@ const selectedRune = ref<number | null>(null)
         @click="selectedRune = null" />
     </div>
 
-    <transition-fade
-      class="z-1 order-first flex w-114 max-w-114 flex-col gap-8"
-      group>
+    <div class="z-1 order-first flex w-114 max-w-114 flex-col gap-8" group>
       <RunesBlurb
         v-if="selectedPath"
         :key="selectedPath"
@@ -68,7 +63,7 @@ const selectedRune = ref<number | null>(null)
         v-model:selected="selectedRune"
         :runes="pathRecord[selectedPath]?.slots.slice(1)"
         @update:rune="(e) => (selectedRune = e)" /> -->
-    </transition-fade>
+    </div>
   </transition-slide>
 </template>
 

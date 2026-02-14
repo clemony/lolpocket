@@ -40,7 +40,7 @@ const skillOrder = computed(() => [
           order: 1 + Number(i) * 2,
         }">
         <Img
-          class="size-12 rounded-lg shadow-sm dss"
+          class="size-12 rounded-lg shadow-sm ds-sm"
           alt="icon"
           :src="ability.icon" />
         <div
@@ -71,7 +71,7 @@ const skillOrder = computed(() => [
           {{ ability.key }}
         </div>
         <div
-          class="size-7 overflow-hidden rounded-md shadow-sm dss"
+          class="size-7 overflow-hidden rounded-md shadow-sm ds-sm"
           data-type="ability"
           data-placement="left"
           :data-id="`${player.championId}${ability.key}`">

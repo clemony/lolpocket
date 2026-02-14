@@ -1,3 +1,9 @@
+import { fetchSummonerMastery } from "~/domain/summoner/mastery/fetchSummonerMastery"
+import {
+  getAllMastery,
+  getMastery,
+} from "~/domain/summoner/mastery/getMasteryFromDb"
+
 export async function getOrFetchMastery(
   puuid: string,
   region: string,

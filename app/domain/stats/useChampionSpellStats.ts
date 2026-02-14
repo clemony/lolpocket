@@ -1,3 +1,7 @@
+import { bumpStat } from "~/domain/stats/helpers/bumpValues"
+import { pickBestGeneric } from "~/domain/stats/helpers/pickBest"
+import { sortEntriesByPickrate } from "~/domain/stats/helpers/sortEntries"
+
 //
 export type SpellStat = Record<string | number, StatDetail>
 

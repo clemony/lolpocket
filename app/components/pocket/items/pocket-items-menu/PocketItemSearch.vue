@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { motion } from "motion-v"
+import { useItemFilter } from "~/domain/items/useItemFilter"
 
 const props = withDefaults(
   defineProps<{
@@ -134,12 +135,12 @@ watchEffect(() => {
       @click="clearFilters">
       <icon
         v-if="searchQuery"
-        class="absolute size-5.5 shrink-0 text-pc/70 dst"
+        class="dst absolute size-5.5 shrink-0 text-pc/70"
         name="x-sm" />
 
       <icon
         v-else
-        class="absolute size-4.75 shrink-0 text-pc/70 dst"
+        class="dst absolute size-4.75 shrink-0 text-pc/70"
         name="search" />
     </button>
   </motion.div>

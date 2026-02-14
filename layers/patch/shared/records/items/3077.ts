@@ -1,76 +1,77 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3077,
-  name: 'Tiamat',
-  description: '20 Attack Damage\n\nCleave\nAttacks deal physical damage to nearby enemies.\nCrescent\nDeal physical damage to enemies around you.',
-  noEffects: false,
-  rank: 'Epic',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+      const item: Item =  {
+  "name": "Tiamat",
+  "id": 3077,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      name: 'Crescent',
-      effects: 'Deal 75% AD physical damage to enemies within a 450 radius in front of you.',
-      unique: true
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
     }
   ],
-  buildsFrom: [
+  "buildsInto": [
     {
-      id: 1036,
-      name: 'Long Sword',
-      gold: 350
+      "id": 3074,
+      "name": "Ravenous Hydra",
+      "gold": 3300
     },
     {
-      id: 1036,
-      name: 'Long Sword',
-      gold: 350
+      "id": 3748,
+      "name": "Titanic Hydra",
+      "gold": 3300
+    },
+    {
+      "id": 6698,
+      "name": "Profane Hydra",
+      "gold": 2850
+    },
+    {
+      "id": 6631,
+      "name": "Stridebreaker",
+      "gold": 3300
     }
   ],
-  buildsInto: [
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
     {
-      id: 3074,
-      name: 'Ravenous Hydra',
-      gold: 3300
-    },
-    {
-      id: 3748,
-      name: 'Titanic Hydra',
-      gold: 3300
-    },
-    {
-      id: 6698,
-      name: 'Profane Hydra',
-      gold: 2850
-    },
-    {
-      id: 6631,
-      name: 'Stridebreaker',
-      gold: 3300
+      "unique": true,
+      "mythic": false,
+      "name": "Cleave",
+      "effects": "Basic attacks on-hit deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target."
     }
   ],
-  gold: {
-    base: 500,
-    sell: 840,
-    total: 1200
+  "active": [
+    {
+      "unique": true,
+      "name": "Crescent",
+      "effects": "Deal 75% AD physical damage to enemies within a 450 radius in front of you."
+    }
+  ],
+  "stats": {
+    "attackDamage": 20
   },
-  maps: [
+  "description": "20 Attack Damage\n\nCleave\nAttacks deal physical damage to nearby enemies.\nCrescent\nDeal physical damage to enemies around you.",
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 1200,
+    "sell": 840
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Cleave',
-      effects: 'Basic attacks on-hit deal (<img src="/img/icons/melee.webp" class="inline-icon" />40% AD /<img src="/img/icons/ranged.webp" class="inline-icon" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    attackDamage: 20
-  }
+  ]
 }
 export default item

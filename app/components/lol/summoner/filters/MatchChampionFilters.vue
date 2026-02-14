@@ -13,61 +13,55 @@ const championList = computed(() =>
 </script>
 
 <template>
-  <div variant="muted" :ui="{ root: 'p-0' }">
+  <div variant="muted" :ui="{ root: 'p-0' }" class="w-full">
+    <h6 class="px-2">
+      Champions
+    </h6>
     <Listbox v-model:model-value="model" :multiple="false">
       <ListboxContent
-        class="h-100 max-h-100 w-full space-y-1.5 overflow-auto overscroll-contain! px-1.5 py-2">
-        <ListboxItem
-          v-for="item in championList"
-          :key="item.championId"
-          as-child
-          :value="item.championId">
-          <UButton
-            variant="ghost"
-            :ui="{
-              base: cn(
-                'grid w-full max-w-full shrink-0 grid-cols-[5fr_repeat(2,1fr)] items-center overflow-hidden px-2 py-0 hover:bg-p3/40',
-                {
-                  'opacity-74 grayscale': model && item.championId !== model,
-                }
-              ),
-            }"
-            size="2xl">
-            <UUser
-              size="lg"
-              :name="item.championName"
-              :description="item.games ? `${item.kda} kda` : ''"
+        class="border-y-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto border-y px-1.5 py-2">
+        <template v-if="!sMatches().loading && sMatches.length">
+          <ListboxItem
+            v-for="item in championList"
+            :key="item.championId"
+            as-child
+            :value="item.championId">
+            <UButton
+              variant="ring"
               :ui="{
-                root: 'w-fit overflow-hidden justify-self-start ',
-                wrapper: 'text-start items-center',
+                base: cn(
+                  'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden px-2',
+                  {
+                    'opacity-74 grayscale': model && item.championId !== model,
+                  }
+                ), // not-on:rounded-none not-on:border-b-p3/60
               }"
-              :avatar="{
-                src: `/img/champions/${item.championId}.webp`,
-                icon: 'lol:champ',
-              }" />
+              size="xl">
+              <UUser
+                size="lg"
+                :name="item.championName"
+                :description="item.games ? `${item.kda} kda` : ''"
+                :ui="{
+                  root: 'grow',
+                  wrapper: 'text-start items-center',
+                }"
+                :avatar="{
+                  src: `/img/champions/${item.championId}.webp`,
+                  icon: 'lol:champ',
+                }" />
 
-            <div
-              class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
-              <template v-if="model && model !== item.championId">
-                <Placeholder
-                  v-for="i in 2"
-                  :key="i"
-                  size="xs"
-                  class="w-12 last:mt-2" />
+              <template v-if="item.games">
+                <div
+                  class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
+                  <span> {{ item.win }} win </span>
+                  <span> {{ item.loss }} loss </span>
+                </div>
+                <ChampWinrate :champion="item" class="-translate-y-px" />
               </template>
-              <template v-else>
-                <span> {{ item.wins }} win </span>
-                <span> {{ item.losses }} loss </span>
-              </template>
-            </div>
-            <div
-              class="relative z-0 col-start-3 grid w-14 shrink-0 place-items-center justify-end justify-self-end">
-              <ChampWinrate :champion="item" />
-            </div>
-          </UButton>
-        </ListboxItem>
-
-        <LilKrug v-if="!championList.length" />
+            </UButton>
+          </ListboxItem>
+        </template>
+        <LilKrug v-else />
       </ListboxContent>
     </Listbox>
   </div>

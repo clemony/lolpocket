@@ -50,7 +50,7 @@ function navigate() {
       <Icon
         v-if="
           route.name === 'summoner-region-slug-champion_key' &&
-          item.name === 'summoner-region-slug-champions'
+            item.name === 'summoner-region-slug-champions'
         "
         class="absolute -left-6 size-3.75 **:stroke-[2.4]"
         name="left" />

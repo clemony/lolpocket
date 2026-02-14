@@ -1,27 +1,28 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2055,
-  name: 'Control Ward',
-  nicknames: [
-    'consumable',
-    'orange',
-    'pink'
+      const item: Item =  {
+  "name": "Control Ward",
+  "id": 2055,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "consumable",
+    "orange",
+    "pink"
   ],
-  description: 'Consume\nPlaces a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.',
-  noEffects: false,
-  rank: 'Consumable',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 75,
-    sell: 30,
-    total: 75
+  "stats": {},
+  "description": "Consume\nPlaces a Control Ward that grants vision and reveals enemy Stealth Wards, traps and Camouflaged enemies.",
+  "gold": {
+    "base": 75,
+    "purchasable": true,
+    "total": 75,
+    "sell": 30
   },
-  maps: [
+  "maps": [
     11
-  ],
-  stats: {}
+  ]
 }
 export default item

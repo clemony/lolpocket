@@ -9,17 +9,17 @@ const { button, comment } = defineProps<{
   button?: boolean
 }>()
 
-const form = ref()
+const form = useTemplateRef<HTMLFormElement>("form")
 
 const state = reactive({
-  reporterUid: as().account?.puuid ?? "",
+  reporterUid: user().account?.puuid ?? "",
   options: [] as string[],
   message: "",
   // keep comment shape aligned to reportSchema so UForm can validate
   comment: {
     author_id: comment.uuid,
     comment_id: comment.id,
-    reporter_id: as().account?.puuid ?? "",
+    reporter_id: user().account?.puuid ?? "",
     content_text: undefined as string | undefined,
     created: comment.created,
   },
@@ -52,19 +52,17 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     title: "You submitted the following values:",
     description: "",
   })
-
-  
 }
 </script>
 
 <template>
   <UModal
-    v-model:open="ts().reportOpen"
+    v-model:open="threads().reportOpen"
     title="Report Card"
     description="Report offensive, negative, or disruptive content. Please fill out the form to clarify and give additional context."
     :modal="true"
-    @update:open="!ts().reportOpen ? form?.clear() : null">
-    <slot v-if="button" :report="ts().report()">
+    @update:open="!threads().reportOpen ? form?.clear() : null">
+    <slot v-if="button" :report="threads().report()">
       <UButton as-child>
         <button class="text-xs hover:underline">
           Report
@@ -118,9 +116,9 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
             <div
               v-if="formErrors.find((e) => e.path === 'options')"
               v-auto-animate
-              class="mr-2 flex items-center gap-2 text-sm leading-none text-shade-domination/8">
+              class="text-shade-domination/8 mr-2 flex items-center gap-2 text-sm leading-none">
               <icon
-                class="inline size-4.5 align-bottom font-medium text-shade-domination/8"
+                class="text-shade-domination/8 inline size-4.5 align-bottom font-medium"
                 name="error" />
               <span
                 v-for="(reason, i) in formErrors.filter(

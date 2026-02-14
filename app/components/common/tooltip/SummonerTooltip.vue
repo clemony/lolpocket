@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSummonerIcon } from "~/domain/utils/img"
+
 const {
   side = "right",
   class: className,

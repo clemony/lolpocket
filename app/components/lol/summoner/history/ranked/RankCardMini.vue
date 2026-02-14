@@ -12,7 +12,7 @@ const {
 }>()
 
 const winrate = computed(() =>
-  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0
+  entry ? (entry.win / (entry.win + entry.loss)) * 100 : 0
 )
 
 const payload = computed(() => {
@@ -22,7 +22,7 @@ const payload = computed(() => {
     img: `/img/crests/mini/${entry?.tier?.toLowerCase() || "unranked"}.webp`,
     data: {
       lp: `${entry?.lp ?? 0} LP`,
-      wins: `${entry ? entry.wins : 0}W  ${entry ? entry.losses : 0}L`,
+      win: `${entry ? entry.win : 0}W  ${entry ? entry.loss : 0}L`,
       wr: `${winrate.value}% WR`,
     },
   }
@@ -75,7 +75,7 @@ const payload = computed(() => {
       </span> -->
       <span
         class="mt-px inline-flex gap-1 align-baseline text-2xs! text-nowrap decoration-dotted hover:underline"
-        :data-type="`${entry ? entry?.wins + entry?.losses : 0} total`" />
+        :data-type="`${entry ? entry?.win + entry?.loss : 0} total`" />
     </div>
   </UCard>
   <!--   </Tooltip> -->

@@ -5,12 +5,12 @@ export default {
     caption: "sr-only",
     thead: "relative",
     tbody:
-      "isolate [&>tr]:data-[selectable=true]:hover:bg-elevated/50 [&>tr]:data-[selectable=true]:focus-visible:outline-primary",
+      "isolate [&>tr]:data-[selectable=true]:hover:bg-p2/50 [&>tr]:data-[selectable=true]:focus-visible:outline-pc/60",
     tfoot: "relative",
-    tr: "data-[selected=true]:bg-elevated/50",
-    th: "px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&:has([role=checkbox])]:pe-0",
+    tr: "data-[selected=true]:bg-p2/50",
+    th: "px-4 py-3.5 text-sm text-pc text-left rtl:text-right font-semibold [&:has([role=checkbox])]:pe-0",
     td: "p-4 text-sm text-muted whitespace-nowrap [&:has([role=checkbox])]:pe-0",
-    separator: "absolute z-1 left-0 w-full h-px bg-(--ui-border-accented)",
+    separator: "absolute z-1 left-0 w-full h-px bg-p2",
     empty: "py-6 text-center text-sm text-muted",
     loading: "py-6 text-center",
   },
@@ -18,25 +18,25 @@ export default {
     virtualize: {
       false: {
         base: "overflow-clip",
-        tbody: "divide-y divide-default",
+        tbody: "divide-y divide-p2",
       },
     },
     pinned: {
       true: {
-        th: "sticky bg-default/75 z-1",
-        td: "sticky bg-default/75 z-1",
+        th: "sticky bg-p0/75 z-1",
+        td: "sticky bg-p0/75 z-1",
       },
     },
     sticky: {
       true: {
-        thead: "sticky top-0 inset-x-0 bg-default/75 backdrop-blur z-1",
-        tfoot: "sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur z-1",
+        thead: "sticky top-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
+        tfoot: "sticky bottom-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
       },
       header: {
-        thead: "sticky top-0 inset-x-0 bg-default/75 backdrop-blur z-1",
+        thead: "sticky top-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
       },
       footer: {
-        tfoot: "sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur z-1",
+        tfoot: "sticky bottom-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
       },
     },
     loading: {
@@ -91,7 +91,7 @@ export default {
     },
   ],
   defaultVariants: {
-    loadingColor: "primary",
+    loadingColor: "pc/60",
     loadingAnimation: "carousel",
   },
 }

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { deleteRuneSet } from "~/domain/pocket/modifyPocket"
+
 const props = defineProps<{
   pocket: Pocket
   set?: RuneSet
@@ -7,7 +9,6 @@ const props = defineProps<{
 const pocket = ref(props.pocket)
 
 function handleDelete() {
-  rs().selectedRuneSet = 0
   if (props.set) deleteRuneSet(props.pocket, props.set)
 }
 
@@ -35,7 +36,7 @@ function handleDelete() {
 
     <button
       v-tippy="'Delete Current Set'"
-      class="p3/4 btn rounded-lg btn-ghost btn-sm *:dst hover:border hover:bg-p3/5"
+      class="p3/4 btn rounded-lg btn-ghost btn-sm *:ds-2xs hover:border hover:bg-p3/5"
       @click="handleDelete()">
       <icon class="size-5 shrink-0 text-nc opacity-70" name="trash" />
     </button>

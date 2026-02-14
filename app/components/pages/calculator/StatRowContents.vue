@@ -20,24 +20,22 @@ const statValue2 = computed(() => {
 
 const compare = computed(() => {
   if (
-    statValue.value === 0
-    && statValue2.value === 0
-    && statValue2.value !== undefined
+    statValue.value === 0 &&
+    statValue2.value === 0 &&
+    statValue2.value !== undefined
   ) {
     return
   }
   return (
-    statValue.value === statValue2.value
-      ? 0
-      : statValue.value > statValue2.value
-        ? 1
-        : 2
+    statValue.value === statValue2.value ? 0
+    : statValue.value > statValue2.value ? 1
+    : 2
   )
 })
 
 const amount = computed(() => {
-  return compare.value === 1
-    ? statValue.value - statValue2.value
+  return compare.value === 1 ?
+      statValue.value - statValue2.value
     : statValue2.value - statValue.value
 })
 </script>
@@ -46,29 +44,29 @@ const amount = computed(() => {
   <div class="ability-icon col-start-1 ml-5 text-sm!">
     <component
       :is="`i-stats-${stat.icon}`"
-      class="size-4 shrink-0 text-pc opacity-70 dst"
+      class="dst size-4 shrink-0 text-pc opacity-70"
       filled
       :class="{
         'size-4.5':
-          stat.icon === 'mana-regen'
-          || stat.icon === 'hp'
-          || stat.icon === 'gold',
+          stat.icon === 'mana-regen' ||
+          stat.icon === 'hp' ||
+          stat.icon === 'gold',
       }" />
   </div>
 
-  <div class="col-start-2 font-medium dst select-none">
+  <div class="col-start-2 font-medium ds-2xs select-none">
     {{ stat.name }}
   </div>
 
-  <div class="col-start-3 text-sm dst select-none">
+  <div class="col-start-3 text-sm ds-2xs select-none">
     <span class="flex items-center justify-end gap-2">
       <!--
-  <icon name="bi:caret-caret-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
+  <icon name="bi:caret-caret-up" class="text-res stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3.5': compare===1}" /> -->
       {{ statValue > 0 ? statValue : "" }}
 
       <span
         v-if="is().isComparing && compare === 1 && statValue2 !== 0"
-        class="text-resolve">
+        class="text-res">
         +{{ amount }}
       </span>
     </span>
@@ -76,13 +74,13 @@ const amount = computed(() => {
 
   <div
     v-if="is().isComparing"
-    class="col-start-4 font-mono text-sm dst select-none">
+    class="col-start-4 font-mono text-sm ds-2xs select-none">
     <span class="flex items-center justify-end gap-2">
       {{ statValue2 > 0 ? statValue2 : "" }}
-      <!--  <icon name="rivet-icons:arrow-up" class="text-resolve stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare===2}" /> -->
+      <!--  <icon name="rivet-icons:arrow-up" class="text-res stroke-3 opacity-0 size-0" :class="{'opacity-100 size-3': compare===2}" /> -->
       <span
         v-if="is().isComparing && compare === 2 && statValue !== 0"
-        class="text-resolve">
+        class="text-res">
         +{{ amount }}
       </span>
     </span>

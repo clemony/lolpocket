@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {
-    statLabels,
-    statLabelsWithSynergy,
-    statLabelsWithTime,
-} from './stat-labels';
+  statLabels,
+  statLabelsWithSynergy,
+  statLabelsWithTime,
+} from "./stat-labels"
 
 const {
   title,
@@ -14,7 +14,7 @@ const {
   type,
 } = defineProps<{
   stat?: StatDetail | StatDetail | undefined
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   title?: string | number | string[]
   icon?: string[]
   type?: string
@@ -22,21 +22,19 @@ const {
 }>()
 
 const isA = computed(
-  () => typeof title !== 'string' && typeof title !== 'number'
+  () => typeof title !== "string" && typeof title !== "number"
 )
 
 const labels = computed(() =>
-  type === 'time'
-    ? statLabelsWithTime
-    : type === 'synergy'
-      ? statLabelsWithSynergy
-      : statLabels
+  type === "time" ? statLabelsWithTime
+  : type === "synergy" ? statLabelsWithSynergy
+  : statLabels
 )
 
 const avgTimestampLabel = computed(() => {
   const ts = (stat as StatDetail | undefined)?.avgTimestamp
-  if (!ts) return ''
-  return `${(ts / 1000 / 60).toFixed(2).replace('.', ':')} acquired`
+  if (!ts) return ""
+  return `${(ts / 1000 / 60).toFixed(2).replace(".", ":")} acquired`
 })
 </script>
 
@@ -45,15 +43,15 @@ const avgTimestampLabel = computed(() => {
     :class="
       cn(
         'absolute top-0 left-0 z-1 size-full h-[calc(100%+2px)] w-30 max-w-30 min-w-30 border-b border-p0 bg-linear-to-r from-p0 to-p0/45 pr-6 pb-1 leading-none backdrop-blur-sm select-none after:absolute after:top-0 after:left-0 after:z-1 after:size-full after:bg-linear-to-b after:from-p0 after:to-p0/45 in-data-[style=full]:pt-1 in-data-[style=simple]:pt-3',
-        className,
+        className
       )
     ">
     <UButton
       class="z-2 size-full flex-col items-start justify-between! gap-0 p-2!"
       variant="ghost"
       :data-type="
-        stat
-          ? `${stat?.winrate}% winrate
+        stat ?
+          `${stat?.winrate}% winrate
         ${stat?.games} games
         ${stat?.pickrate}% pickrate
         ${avgTimestampLabel}`
@@ -64,7 +62,7 @@ const avgTimestampLabel = computed(() => {
       <h4
         v-if="title"
         :class="
-          cn('leading-5.5 font-bold dst', {
+          cn('leading-5.5 font-bold ds-2xs', {
             'pt-1': !isA,
             'pt-1 text-4xl!': typeof title === 'number',
           })
@@ -73,18 +71,14 @@ const avgTimestampLabel = computed(() => {
           {{ title }}
         </template>
         <template v-else>
-          <template
-            v-for="(str, i) in title"
-            :key="i">
-            <br v-if="i !== 0">
+          <template v-for="(str, i) in title" :key="i">
+            <br v-if="i !== 0" />
             {{ str }}
           </template>
         </template>
       </h4>
       <div v-else-if="icon?.[0]">
-        <Icon
-          :name="icon[0]"
-          :class="cn('', icon[1])" />
+        <Icon :name="icon[0]" :class="cn('', icon[1])" />
       </div>
       <Grow />
       <div

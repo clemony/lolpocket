@@ -15,8 +15,8 @@ const {
 >()
 const name = computed(() => {
   if (summoner) return summoner.name
-  if (as()?.user)
-    return (as()?.account?.name || as()?.account?.username) ?? "Summoner"
+  if (user()?.user)
+    return (user()?.account?.name || user()?.account?.username) ?? "Summoner"
   else return null
 })
 </script>

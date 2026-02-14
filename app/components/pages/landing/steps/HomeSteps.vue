@@ -121,15 +121,15 @@ const steps = [
                 : 'timeline-end'
             )
           ">
-          <p class="py-2 font-mono text-lg italic dst">
+          <p class="dst py-2 font-mono text-lg italic">
             Step {{ i }}
           </p>
 
-          <h2 class="pt-1 dst">
+          <h2 class="dst pt-1">
             {{ step.title }}
           </h2>
 
-          <p class="pt-6 leading-7 dst">
+          <p class="dst pt-6 leading-7">
             {{ step.description }}
           </p>
 

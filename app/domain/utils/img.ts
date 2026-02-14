@@ -1,3 +1,6 @@
+import { bgArt } from "~/domain/riot/media/bg-art"
+import { ckey, formatUrlChampKey } from "~/domain/utils/utils"
+
 //
 export function getSplash(
   keyOrId: string | number,
@@ -14,8 +17,8 @@ export function getSplash(
     return a.length === 1 && key !== "Hwei" ? `0${a}` : a
   }
   const folder = computed(() => {
-    return safeSkin.name === "Original" && key !== "Hwei" ?
-        "base"
+    return safeSkin.name === "Original" && key !== "Hwei"
+      ? "base"
       : `skin${id()}`
   })
 

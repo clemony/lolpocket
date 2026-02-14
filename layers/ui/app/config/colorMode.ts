@@ -1,6 +1,7 @@
 import type { DropdownMenuItem } from "@nuxt/ui"
 
-export const colorModes = ["system", "light", "dim", "dark"]
+export const colorModes: string[] = ["system", "light", "dim", "dark"]
+
 export const colorModeIconClass: Record<string, string> = {
   dark: "**:stroke-[2.3]",
   dim: "scale-120",
@@ -58,3 +59,35 @@ export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
     },
   ]
 })
+
+export interface QuoteData {
+  quote: string
+  source: string
+}
+
+export const modeQuote: Record<string, QuoteData> = {
+  system: {
+    quote: "I do not care at all.",
+    source: "Orrn",
+  },
+  light: {
+    quote: "If you can smile, you can be the light.",
+    source: "Lux",
+  },
+  dawn: {
+    quote: "The dawn has arrived. The day is upon us.",
+    source: "Leona",
+  },
+  dim: {
+    quote: "Dusk approaches. Embrace the night.",
+    source: "Diana",
+  },
+  dark: {
+    quote: "The truth lies in darkness.",
+    source: "Zed",
+  },
+  frost: {
+    quote: "Sometimes icy heart just needs warm smile.",
+    source: "Braum",
+  },
+}

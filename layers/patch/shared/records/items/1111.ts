@@ -1,57 +1,57 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 1111,
-  name: 'Jarvan I\'s',
-  description: '25% Attack Speed\n100 Move Speed\n10 Ability Haste\n12 Magic Penetration\n25 Armor\n20 Magic Resist\n30% Tenacity\n\nJarvan One\nGive you stats and passives from all boots.\n\nRequires Augment: Quest: SneakerHead',
-  noEffects: false,
-  rank: 'Special',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 300,
-    purchasable: false,
-    sell: 210,
-    total: 300
-  },
-  maps: [
-    12
-  ],
-  passives: [
+      const item: Item =  {
+  "name": "Jarvan I's",
+  "id": 1111,
+  "rank": "Special",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
     {
-      name: 'Jarvan One',
-      effects: 'This item gains the stats and passive effects of all Boots items.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Jarvan One",
+      "effects": "This item gains the stats and passive effects of all Boots items."
     },
     {
-      name: 'Fleetfooted',
-      effects: 'Gain 25% slow resist.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Fleetfooted",
+      "effects": "Gain 25% slow resist."
     },
     {
-      name: 'Ionian Insight',
-      effects: 'Gain 10 summoner spell haste.',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Ionian Insight",
+      "effects": "Gain 10 summoner spell haste."
     },
     {
-      name: 'Plating',
-      effects: 'Reduces all incoming <img src="/img/icons/basic-damage.webp" class="tip-icon " />basic damage by 10% (<i>excluding from turret attacks</i>).',
-      mythic: false,
-      unique: true
+      "unique": true,
+      "mythic": false,
+      "name": "Plating",
+      "effects": "Reduces all incoming <img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon \" />basic damage by 10% (<i>excluding from turret attacks</i>)."
     }
   ],
-  stats: {
-    abilityHaste: 10,
-    armor: 25,
-    attackSpeed: 25,
-    flatMagicPenetration: 12,
-    flatMovespeed: 100,
-    magicResistance: 20,
-    tenacity: 30
-  }
+  "stats": {
+    "armor": 25,
+    "attackSpeed": 25,
+    "flatMagicPenetration": 12,
+    "magicResistance": 20,
+    "flatMovespeed": 100,
+    "abilityHaste": 10,
+    "tenacity": 30
+  },
+  "description": "25% Attack Speed\n100 Move Speed\n10 Ability Haste\n12 Magic Penetration\n25 Armor\n20 Magic Resist\n30% Tenacity\n\nJarvan One\nGive you stats and passives from all boots.\n\nRequires Augment: Quest: SneakerHead",
+  "gold": {
+    "base": 300,
+    "purchasable": false,
+    "total": 300,
+    "sell": 210
+  },
+  "maps": [
+    12
+  ]
 }
 export default item

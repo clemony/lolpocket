@@ -20,16 +20,12 @@ useHead({
   ],
 })
 
-const scrollRef = useState<HTMLElement | null>("scrollRef", () => null)
-const reportComment = computed(() => ts().reportComment ?? undefined)
-
-/*     :style="{ overflowAnchor: 'none' }" */
+const reportComment = computed(() => threads().reportComment ?? undefined)
 </script>
 
 <template>
   <UApp
     id="app"
-    ref="scrollRef"
     :locale="locales[locale]"
     :ui="{ base: ' overflow-hidden' }"
     :toaster="{
@@ -41,7 +37,7 @@ const reportComment = computed(() => ts().reportComment ?? undefined)
       <NuxtPage />
     </NuxtLayout>
     <LazyReportDialog
-      v-if="as().user && as().account && reportComment"
+      v-if="user().user && user().account && reportComment"
       :comment="reportComment" />
     <!-- loading -->
     <NuxtLoadingIndicator

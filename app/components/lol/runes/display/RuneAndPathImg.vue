@@ -12,7 +12,7 @@ const { class: className, pathClass } = defineProps<{
   <Primitive
     :class="
       cn(
-        'padding-0 group/btn grid size-20 shrink-0 place-items-center overflow-visible! dss drop-shadow-black/4',
+        'padding-0 group/btn grid size-20 shrink-0 place-items-center overflow-visible! drop-shadow-black/4 ds-sm',
         className
       )
     ">
@@ -33,7 +33,7 @@ const { class: className, pathClass } = defineProps<{
         v-memo="[set.secondary.path]"
         :class="
           cn(
-            'absolute -right-1.5 bottom-0 grid size-7 place-items-center overflow-hidden rounded-full border border-p3/90 shadow-xs transition-all duration-250 *:transition-opacity *:duration-200 group-hover/btn:bg-tint-p2/40! after:absolute after:inset-0 after:z-1 after:bg-black/70 after:opacity-0',
+            'group-hover/btn:bg-tint-p2/40! absolute -right-1.5 bottom-0 grid size-7 place-items-center overflow-hidden rounded-full border border-p3/90 shadow-xs transition-all duration-250 *:transition-opacity *:duration-200 after:absolute after:inset-0 after:z-1 after:bg-black/70 after:opacity-0',
             { 'after:bg-transparent': !set.secondary.path },
             pathClass
           )

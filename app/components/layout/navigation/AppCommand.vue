@@ -38,9 +38,12 @@ const focus = ref<HTMLElement>()
     :is="breakpoints.desktop ? UModal : UDrawer"
     aria-describedby="app-command-search"
     :handle="false">
-    <UButton square :ui="{ base: 'shrink-0' }" color="p0" variant="ghost">
-      <Icon name="search" class="size-5 text-n4 group-hover/btn:text-n0" />
-    </UButton>
+    <UButton
+      icon="search"
+      size="sm"
+      square
+      :ui="{ base: 'shrink-0 rounded-full', leadingIcon: 'size-5' }"
+      variant="ghost" />
     <template #content>
       <UCommandPalette
         virtualize

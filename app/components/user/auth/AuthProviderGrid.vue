@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { authProviders } from "~/domain/lp/external/authProviders"
+</script>
 
 <template>
   <div class="grid grid-cols-3 gap-4">

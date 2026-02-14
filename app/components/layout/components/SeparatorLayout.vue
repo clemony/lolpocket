@@ -18,7 +18,7 @@ const route = useRoute()
       <div
         class="sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-p0 pt-12">
         <slot name="header">
-          <h1 class="text-5xl font-bold dst">
+          <h1 class="dst text-5xl font-bold">
             {{ title || route.meta?.title || route.name }}
           </h1>
         </slot>

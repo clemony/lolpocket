@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-const currentSplash = computed(() => as().account?.splash ?? null)
+import { useChampions } from "~/domain/summoner/champions/useChampions"
+
+const currentSplash = computed(() => user().account?.splash ?? null)
 
 const { getMatchesForSummoner } = useIndexedDB()
-const accountPuuid = computed(() => as().account?.puuid ?? "")
+const accountPuuid = computed(() => user().account?.puuid ?? "")
 const matchData = await getMatchesForSummoner(accountPuuid.value)
 const { top } = useChampions({ puuid: accountPuuid.value, matches: matchData })
 
 function handleSplash(e: string) {
-  const account = as().account
+  const account = user().account
   if (account) account.splash = e
 }
 
@@ -44,9 +46,9 @@ const inactiveClass =
           hover
           :skin-url="top()?.splash?.replace('uncentered', 'tile') ?? null"
           :text="top()?.name"
-          :alt="`${as().account?.name ?? null}'s Most Played`" />
+          :alt="`${user().account?.name ?? null}'s Most Played`" />
         <div class="flex h-full flex-col gap-4 pt-3">
-          <h4 class="text-xl font-semibold dst">
+          <h4 class="dst text-xl font-semibold">
             Automatic
           </h4>
           <p>Displays your most played champion in recent games.</p>

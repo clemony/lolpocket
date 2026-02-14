@@ -1,37 +1,38 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3340,
-  name: 'Stealth Ward',
-  nicknames: [
-    'yellow',
-    'sweeper',
-    'totem',
-    'trinket'
+      const item: Item =  {
+  "name": "Stealth Ward",
+  "id": 3340,
+  "rank": "Trinket",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "yellow",
+    "sweeper",
+    "totem",
+    "trinket"
   ],
-  description: 'Active (170 - 90s, max 2 charges)\nPlaces an Invisible Stealth Ward that grants vision for 90-120 seconds.',
-  noEffects: false,
-  rank: 'Trinket',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+  "active": [
     {
-      name: 'Trinket',
-      effects: 'Consume a charge to place an invisible <img src="/img/icons/totem-ward.webp" class="tip-icon " />Totem Ward at the target location, which grants <img src="/img/icons/sight.webp" class="tip-icon light:invert" />sight of the surrounding area for 90 – 120 (based on average champion level) seconds.',
-      range: 600,
-      unique: true
+      "unique": true,
+      "name": "Trinket",
+      "effects": "Consume a charge to place an invisible <img src=\"/img/icons/totem-ward.webp\" class=\"tip-icon \" />Totem Ward at the target location, which grants <img src=\"/img/icons/sight.webp\" class=\"tip-icon light:invert\" />sight of the surrounding area for 90 – 120 (based on average champion level) seconds.",
+      "range": 600
     }
   ],
-  gold: {
-    base: 0,
-    sell: 0,
-    total: 0
+  "stats": {},
+  "description": "Active (170 - 90s, max 2 charges)\nPlaces an Invisible Stealth Ward that grants vision for 90-120 seconds.",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
   },
-  maps: [
+  "maps": [
     11,
     21
-  ],
-  stats: {}
+  ]
 }
 export default item

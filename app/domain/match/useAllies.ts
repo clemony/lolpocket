@@ -1,3 +1,5 @@
+import type { Teammate } from "~/domain/summoner/types.summoner"
+
 export function useAllies(
   puuid: string,
   matches: MaybeRef<MatchData[]>
@@ -15,11 +17,11 @@ export function useAllies(
   >()
 
   for (const match of toValue(matches)) {
-    const player = match.participants.find(p => p.puuid === puuid)
+    const player = match.participants.find((p) => p.puuid === puuid)
     if (!player) continue
 
     const teammates = match.participants.filter(
-      p => p.teamId === player.teamId && p.puuid !== puuid
+      (p) => p.teamId === player.teamId && p.puuid !== puuid
     )
 
     for (const ally of teammates) {

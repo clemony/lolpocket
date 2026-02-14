@@ -73,9 +73,8 @@ export function useStatGrid() {
       "items-center !flex  [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ",
     headerName: "Champion",
     headerTooltip: "Champion",
-    valueFormatter: (
-      params: ValueFormatterParams<ChampionStatsAndMastery>
-    ) => champNameById(params.data?.championId ?? 0) ?? "",
+    valueFormatter: (params: ValueFormatterParams<ChampionStatsAndMastery>) =>
+      champNameById(params.data?.championId ?? 0) ?? "",
   }
 
   const kpColumn: ColDef<ChampionStatsAndMastery> = {
@@ -92,15 +91,13 @@ export function useStatGrid() {
     width: 90,
     cellClass: "text-center",
     cellDataType: "number",
-    field: "wins",
+    field: "win",
     headerName: "WR",
     headerTooltip: "Winrate",
-    valueFormatter: (
-      p: ValueFormatterParams<ChampionStatsAndMastery>
-    ) => {
+    valueFormatter: (p: ValueFormatterParams<ChampionStatsAndMastery>) => {
       const games = p.data?.games ?? 0
-      const wins = p.data?.wins ?? 0
-      return games ? `${Math.round((wins / games) * 1000) / 10}%` : ""
+      const win = p.data?.win ?? 0
+      return games ? `${Math.round((win / games) * 1000) / 10}%` : ""
     },
   }
 
@@ -167,13 +164,8 @@ export function useStatGrid() {
     ),
     averagedNumber("assists", "Assists", "Assists"),
     kpColumn,
-    plainNumber("wins", "Win", "Wins"),
-    plainNumber(
-      "losses",
-      "Loss",
-      "Losses",
-      "text-center text-shade-domination/15"
-    ),
+    plainNumber("win", "Win", "win"),
+    plainNumber("loss", "Loss", "loss", "text-center text-shade-domination/15"),
     plainNumber("games", "Total Games", "Total Games"),
     winrateColumn,
     masteryPointsColumn,

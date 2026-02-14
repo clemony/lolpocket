@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { wikiLink } from "~/domain/utils/utils"
+
 const { id } = defineProps<{
   id: string
 }>()
@@ -10,8 +12,7 @@ watchEffect(async () => {
   try {
     const module = await import(`#shared/records/abilities/${id}.ts`)
     item.value = module.default || null
-  }
-  catch (err) {
+  } catch (err) {
     console.error(`Failed to load ability for ${id}`, err)
     item.value = null
   }
@@ -24,15 +25,11 @@ const champ = computed(() => {
 </script>
 
 <template>
-  <div
-    v-if="item"
-    class="flex w-full flex-col pt-4 pb-3">
+  <div v-if="item" class="flex w-full flex-col pt-4 pb-3">
     <div class="grid h-fit w-full grid-cols-[36px_1fr] grid-rows-1 gap-4 px-4">
       <!-- IMG -->
 
-      <Ability
-        :id
-        class="min-size-12 size-12 rounded-lg shadow-sm dss" />
+      <Ability :id class="min-size-12 size-12 rounded-lg shadow-sm ds-sm" />
 
       <div class="col-start-2 flex w-full flex-col text-lg">
         <div class="flex w-full justify-between gap-1">
@@ -54,15 +51,13 @@ const champ = computed(() => {
             <img
               class="size-5 shrink-0 rounded-sm"
               src="/img/logos/wiki.webp"
-              alt="wiki">
+              alt="wiki" />
           </a>
         </div>
       </div>
     </div>
     <div class="w-full overflow-y-scroll">
-      <Separator
-        color="neutral"
-        :size="3" />
+      <Separator color="neutral" :size="3" />
       <!--  -->
       <div class="w-full px-4">
         <AbilityStats
@@ -70,9 +65,7 @@ const champ = computed(() => {
           :ability="item" />
       </div>
 
-      <Separator
-        color="neutral"
-        :size="3" />
+      <Separator color="neutral" :size="3" />
       <div class="w-full space-y-3 px-4 pb-4 text-wrap">
         <AbilityDescription
           v-for="(effect, i) in item.effects"

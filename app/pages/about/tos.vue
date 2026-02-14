@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { riotDisclaimer } from '~/domain/riot/riot-disclaimer'
+import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
 
 definePageMeta({
-  name: 'terms',
-  title: 'Terms & Conditions',
-  description: 'Information concerning general app usage.',
-  icon: 'lucide:scale',
-  iconClass: '!**:stroke-1.1',
-  listClass: '**:!stroke-[1.6] scale-130',
+  name: "terms",
+  title: "Terms & Conditions",
+  description: "Information concerning general app usage.",
+  icon: "lucide:scale",
+  iconClass: "!**:stroke-1.1",
+  listClass: "**:!stroke-[1.6] scale-130",
 })
 </script>
 
@@ -32,7 +32,7 @@ definePageMeta({
               title="https://wiki.leagueoflegends.com/en-us/"
               external>
               API
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
             .
           </li>
           <li>
@@ -43,7 +43,7 @@ definePageMeta({
               title="https://wiki.leagueoflegends.com/en-us/"
               external>
               League of Legends Wiki
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
             , written and maintained by players.
           </li>
           <li>
@@ -53,7 +53,7 @@ definePageMeta({
               title="https://www.riotgames.com/en/legal"
               external>
               Official Data Dragon
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink
@@ -62,7 +62,7 @@ definePageMeta({
               title="https://www.communitydragon.org"
               external>
               Community Dragon
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
             , an open source, community driven, public CDN.
           </li>
         </ol>
@@ -86,7 +86,7 @@ definePageMeta({
               title="https://www.riotgames.com/en/legal"
               external>
               Legal Jibber Jabber
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
             and
             <NuxtLink
               class="inline italic hover:underline"
@@ -94,7 +94,7 @@ definePageMeta({
               title="https://www.riotgames.com/en/terms-of-service"
               external>
               Terms of Serivce.
-            </NuxtLink class="inline hover:underline">
+            </NuxtLink>
           </li>
         </ol>
       </SettingsLayout>

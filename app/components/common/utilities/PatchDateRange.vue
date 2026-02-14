@@ -71,7 +71,7 @@ const open = shallowRef<boolean>(false) */
                 :class="
                   cn('peer w-full', {
                     '': isToday(weekDate, getLocalTimeZone()),
-                    'border-3! bg-resolve! text-white! selected:border-pc!':
+                    'border-3! bg-res! text-white! selected:border-pc!':
                       isPatchDay(weekDate as CalendarDate),
                   })
                 "

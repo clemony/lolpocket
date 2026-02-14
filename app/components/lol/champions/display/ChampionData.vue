@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+import { getSplash } from "~/domain/utils/img"
+
 const { championKey } = defineProps<{
   championKey: string
 }>()
 const champion = ref<Champion | null>(null)
 
-const tabs = ref('abilities')
+const tabs = ref("abilities")
 </script>
 
 <template>
@@ -21,7 +23,7 @@ const tabs = ref('abilities')
         :src="getSplash(championKey, 'centered')" />
 
       <header
-        class="absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right *:text-white/86 *:dst *:text-shadow-sm">
+        class="absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right *:text-white/86 *:ds-2xs *:text-shadow-sm">
         <Grow />
 
         <h1 class="text-xs font-bold tracking-tight">
@@ -54,24 +56,16 @@ const tabs = ref('abilities')
         <TabIndicator />
       </TabsList>
 
-      <TabsContent
-        class="max-h-full overflow-y-auto"
-        value="abilities">
-        <AbilityData
-          v-if="champion"
-          :abilities="champion.abilities" />
+      <TabsContent class="max-h-full overflow-y-auto" value="abilities">
+        <AbilityData v-if="champion" :abilities="champion.abilities" />
       </TabsContent>
 
       <TabsContent value="stats">
-        <ChampionBio
-          v-if="champion"
-          :champion="champion" />
+        <ChampionBio v-if="champion" :champion="champion" />
       </TabsContent>
 
       <TabsContent value="bio">
-        <ChampionBasicData
-          v-if="champion"
-          :champion="champion" />
+        <ChampionBasicData v-if="champion" :champion="champion" />
       </TabsContent>
     </Tabs>
   </div>

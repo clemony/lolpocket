@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { RangeCalendarCellTriggerProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
-import { RangeCalendarCellTrigger, useForwardProps } from 'reka-ui'
+import { reactiveOmit } from "@vueuse/core"
+import type { RangeCalendarCellTriggerProps } from "reka-ui"
+import { RangeCalendarCellTrigger, useForwardProps } from "reka-ui"
 
 const props = defineProps<
-  RangeCalendarCellTriggerProps & { class?: HTMLAttributes['class'] }
+  RangeCalendarCellTriggerProps & { class?: HTMLAttributes["class"] }
 >()
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
@@ -48,8 +48,8 @@ const forwardedProps = useForwardProps(delegatedProps)
           hover:data-disabled:bg-transparent
         `,
         // Unavailable
-        'data-unavailable:text-domination data-unavailable:line-through',
-        props.class,
+        'data-unavailable:text-dom data-unavailable:line-through',
+        props.class
       )
     ">
     <slot />

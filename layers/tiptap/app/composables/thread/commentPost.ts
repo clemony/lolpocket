@@ -11,25 +11,24 @@ export async function postComment(
     content,
   }
   const { data, error } = await $fetch<CommentReturn>(
-    '/api/supabase/comment/post',
+    "/api/supabase/comment/post",
     {
       body,
-      headers: useRequestHeaders(['cookie']),
-      method: 'POST',
+      headers: useRequestHeaders(["cookie"]),
+      method: "POST",
     }
   )
 
   if (error) {
     sendErrorToast()
-  }
-  else {
-    ts().setComment(thread_id, data)
+  } else {
+    threads().setComment(thread_id, data)
 
     toast.add({
-      title: 'Comment Posted',
+      title: "Comment Posted",
       // color: "ghost",
       description: `Successfully posted your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}`,
-      icon: 'chat',
+      icon: "chat",
     })
   }
 }

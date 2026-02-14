@@ -7,7 +7,7 @@ const {
   hovered,
   open,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   comment: CommentData
   open: boolean
   author?: AccountData | null
@@ -16,7 +16,7 @@ const {
 }>()
 
 /*      :id=""
-            @click="useNavigateToSummoner()" */
+            @click="useNavigateTosSummoner()" */
 </script>
 
 <template>
@@ -35,9 +35,7 @@ const {
           " />
       </CollapsibleTrigger>
     </div>
-    <div
-      class="flex-col"
-      @click.stop>
+    <div class="flex-col" @click.stop>
       <button
         class="inline-flex cursor-pointer space-y-0.5 align-bottom hover:*:first:underline"
         @click="author?.puuid && navigateTo(`/summoner/${author.puuid}`)">
@@ -50,10 +48,7 @@ const {
           {{ author?.username || "Mysterious Summoner" }}
         </span>
         <span class="ml-1 inline-flex align-bottom text-sm leading-none">
-          <icon
-            v-if="author?.tag"
-            class="mt-0.5 inline size-3"
-            name="hash" />
+          <icon v-if="author?.tag" class="mt-0.5 inline size-3" name="hash" />
           {{ author?.tag }}
         </span>
       </button>

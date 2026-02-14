@@ -6,12 +6,12 @@ export interface ItemFilter {
   map: number
   purchasable: boolean
   query: string
-  rank: string | null
+  rank: string
   stats: string[]
   tags: string[]
 }
 
-export const useItemStore = defineStore(
+export const is = defineStore(
   "itemStore",
   () => {
     // --- FILTER STATE ---
@@ -19,7 +19,7 @@ export const useItemStore = defineStore(
       map: 11,
       purchasable: true,
       query: "",
-      rank: null,
+      rank: "",
       stats: [],
       tags: [],
     })
@@ -37,7 +37,7 @@ export const useItemStore = defineStore(
       filters.value.map = 11
       filters.value.purchasable = true
       filters.value.query = ""
-      filters.value.rank = null
+      filters.value.rank = ""
       filters.value.stats.length = 0
       filters.value.tags.length = 0
     }
@@ -114,7 +114,8 @@ export const useItemStore = defineStore(
         )
       }
  */
-      return Array.from(matchedIds)
+      console.log("🥸 - matchedIds:", matchedIds)
+      return matchedIds.values().toArray()
     })
 
     const isComparing = ref<boolean>(false)

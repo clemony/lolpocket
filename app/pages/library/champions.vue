@@ -5,7 +5,6 @@ definePageMeta({
   icon: "lol:champ",
   listClass: "!size-5.5",
   navClass: "size-5.5 ",
-  path: "/library/champions",
 })
 // const { filters, setFilter, filtered } = useItemFilter()
 

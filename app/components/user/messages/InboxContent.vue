@@ -32,7 +32,7 @@ const inboxes: Record<string, InboxType> = {
             as-child>
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
-              <h2 class="font-bold dst">
+              <h2 class="dst font-bold">
                 {{ title }}
               </h2>
             </SidebarMenuButton>

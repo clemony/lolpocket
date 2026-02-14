@@ -1,34 +1,35 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 224004,
-  name: 'Spectral Cutlass',
-  description: '55 Attack Damage\n21 Lethality\n\nActive - Soul Anchor (0s)\nMark your current location. After 5 seconds, return to that location. You may recast at any point during Soul Anchor\'s duration to return to your marked location early.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  active: [
+      const item: Item =  {
+  "name": "Spectral Cutlass",
+  "id": 224004,
+  "rank": "Legendary",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "active": [
     {
-      name: 'Soul Anchor',
-      cooldown: 45,
-      effects: 'Mark your current location. After 4 seconds, you automatically <img src="/img/icons/blink.webp" class="tip-icon " />blink to the marked location after a 0.5-second delay. <i>Soul Anchor</i> may be recast within its duration to manually blink to the marked location after the same delay (45 second cooldown, starts after the blink).',
-      unique: true
+      "unique": true,
+      "name": "Soul Anchor",
+      "effects": "Mark your current location. After 4 seconds, you automatically <img src=\"/img/icons/blink.webp\" class=\"tip-icon \" />blink to the marked location after a 0.5-second delay. <i>Soul Anchor</i> may be recast within its duration to manually blink to the marked location after the same delay (45 second cooldown, starts after the blink).",
+      "cooldown": 45
     }
   ],
-  gold: {
-    base: 2500,
-    sell: 1250,
-    total: 2500
+  "stats": {
+    "attackDamage": 50,
+    "lethality": 15,
+    "percentMovespeed": 4
   },
-  maps: [
+  "description": "55 Attack Damage\n21 Lethality\n\nActive - Soul Anchor (0s)\nMark your current location. After 5 seconds, return to that location. You may recast at any point during Soul Anchor's duration to return to your marked location early.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
+  },
+  "maps": [
     30
-  ],
-  stats: {
-    attackDamage: 50,
-    lethality: 15,
-    percentMovespeed: 4
-  }
+  ]
 }
 export default item

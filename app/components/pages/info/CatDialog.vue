@@ -46,13 +46,13 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
             <CarouselContent>
               <CarouselItem v-for="(img, i) in clem" :key="i">
                 <div>
-                  </UCard
-                  :key="showClem"
-                  class="relative mx-auto flex aspect-square max-h-screen items-center justify-center overflow-hidden rounded-xl border-0 bg-black p-0 shadow-sm inset-shadow-sm shadow-black/18 inset-shadow-black/15 drop-shadow-sm drop-shadow-black/18 focus-visible:outline-0">
-                  <img
-                    :src="img.url"
-                    alt="clem"
-                    :class="cn('m-auto size-full rounded-lg', img.class)" />
+                  <UCard
+                    :key="showClem"
+                    class="relative mx-auto flex aspect-square max-h-screen items-center justify-center overflow-hidden rounded-xl border-0 bg-black p-0 shadow-sm inset-shadow-sm shadow-black/18 inset-shadow-black/15 drop-shadow-sm drop-shadow-black/18 focus-visible:outline-0">
+                    <img
+                      :src="img.url"
+                      alt="clem"
+                      :class="cn('m-auto size-full rounded-lg', img.class)" />
                   </UCard>
                 </div>
               </CarouselItem>

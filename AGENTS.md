@@ -1,8 +1,10 @@
-## Codex Rules
+# Codex Rules
 
-### Context7 Auto-Use (Global)
+## Context7 Auto-Use (Global)
+
 When a user asks a code-related question, automatically use Context7 for library/API docs, setup, or configuration.
 If a known library is detected, use its libraryId directly (skip resolve-library-id):
+
 - Nuxt 4 -> /websites/nuxt_4_x
 - Vue 3 -> /vuejs/docs
 - Vue Router 4 -> /vuejs/router

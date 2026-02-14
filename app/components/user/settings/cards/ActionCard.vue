@@ -33,7 +33,7 @@ const {
       )
     ">
     <template #header>
-      <div class="self-start text-xl dst">
+      <div class="dst self-start text-xl">
         <slot name="title">
           {{ title }}
         </slot>

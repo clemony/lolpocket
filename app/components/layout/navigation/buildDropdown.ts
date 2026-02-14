@@ -1,8 +1,13 @@
 import type { ArrayOrNested, DropdownMenuItem } from "@nuxt/ui"
+import {
+  externalResources,
+  officialResources,
+} from "~/domain/lp/external/externalResources"
+import { getSummonerIcon } from "~/domain/utils/img"
 
 /* -------------- SETUP -------------- */
 export const buildDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => {
-  const { account } = storeToRefs(as())
+  const { account } = storeToRefs(user())
 
   // const emit = defineEmits(["openLogIn"])
   const inGame = shallowRef<boolean>(true)
@@ -14,18 +19,18 @@ export const buildDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => {
   const mode = useColorMode()
 
   const slugRoot = computed(() => `/summoner/${account.value?.puuid}`)
-  const domains = ["summoner-region-slug", "summoner-region-slug-champions"]
-  const user = useSupabaseUser()
+  const sbu = useSupabaseUser()
 
-  const online = computed(() => user.value?.session_id).value
+  const online = computed(() => sbu.value?.session_id).value
 
   /* -------------- ACCOUNT -------------- */
   const accountLabel: DropdownMenuItem = {
-    label: String(account.value?.name) || "Summoner",
-    slot: "live" as const,
+    label: account.value?.name ?? account.value?.username ?? "Not Connected",
+    slot: "user" as const,
     avatar: {
       size: "xs",
-      src: getSummonerIcon(account.value?.icon),
+      src: getSummonerIcon(account.value?.icon) ?? null,
+      icon: "i-plug",
     },
     ui: {
       item: "px-1",
@@ -34,24 +39,23 @@ export const buildDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => {
   }
 
   /* -------------- PROFILE LINKS -------------- */
-  const profileItems = domains
-    .map<DropdownMenuItem | null>((d) => {
-      const c = routes.find((r) => r.name === d)
-      if (!c) return null
-      return {
-        icon: c.meta?.icon,
-        label: String(c.meta?.title),
-        ui: {
-          itemLeadingIcon:
-            c.meta?.title === "Champions" ?
-              "scale-140"
-            : "scale-110 **:stroke-[2.2]",
-        },
-        to: `${slugRoot.value}/${c.meta?.slug}`,
-        content: { sideOffset: -8 },
-      }
-    })
-    .filter((item): item is DropdownMenuItem => Boolean(item))
+  const history: DropdownMenuItem = {
+    icon: "i-history",
+    label: "Match History",
+    ui: {
+      itemLeadingIcon: "scale-105 **:stroke-[2.2]",
+    },
+    to: `${slugRoot.value}`,
+  }
+
+  const champions: DropdownMenuItem = {
+    icon: "i-lol-champ",
+    ui: {
+      itemLeadingIcon: "scale-100",
+    },
+    label: "Champions",
+    to: `${slugRoot.value}/champions`,
+  }
 
   const inbox: DropdownMenuItem = {
     icon: "i-mail",
@@ -104,46 +108,44 @@ export const buildDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => {
       itemLeadingIcon: "scale-130",
     },
   }
-
   /* -------------- COLOR MODE -------------- */
+  const modes = colorModes
+    .map<DropdownMenuItem | null>((t) => ({
+      checked: mode.preference === t,
+      icon: `i-${t}`,
+      type: "checkbox",
+      label: t,
+      onUpdateChecked(checked: boolean) {
+        mode.preference = t
+      },
+      ui: {
+        item: `${t === "system" ? mode.value : t} btn group/mode  btn-2xl h-16 bg-p0 text-pc relative py-3 **:text-pc noise pl-3`,
+        itemLabel: "capitalize self-start ",
+        itemLeadingIcon: cn(colorModeIconClass[t], "self-start"),
+        itemTrailing:
+          t !== mode.value
+            ? "size-4 bg-p2 self-end rounded-full absolute bottom-2 right-3 ring ring-p3 dst"
+            : "",
+        itemTrailingIcon:
+          "size-4 bg-p2 text-pc  absolute bottom-0 right-3  **:text-pc/60 rounded-full ds-2xs ring ring-pc",
+      },
+    }))
+    .filter((item): item is DropdownMenuItem => Boolean(item))
+
   const colorMode: DropdownMenuItem = {
     children: [
       {
         label: "Theme",
-        class: "dropdown-label-class",
+        class: "dropdown-label-class col-span-2",
       },
-      { type: "separator" },
-      ...colorModes
-        .map<DropdownMenuItem | null>((t) => ({
-          checked: mode.value === t,
-          icon: `i-${t}`,
-          label: t,
-          /*           onSelect(e: Event) {
-            e.preventDefault()
-            mode.preference = t
-          },
-          onUpdateChecked(checked: boolean) {
-            mode.preference = t
-          }, */
-          slot: "theme" as const,
-          ui: {
-            item: `${t}`,
-            itemLabel: "capitalize ",
-            itemLeadingIcon: colorModeIconClass[t],
-            itemTrailing:
-              t !== mode.value ?
-                "size-4 bg-p0 rounded-full ring ring-pc/60 dst"
-              : "",
-            itemTrailingIcon:
-              "size-4 bg-p0 text-pc **:text-pc/60 rounded-full dst ring ring-pc",
-          },
-        }))
-        .filter((item): item is DropdownMenuItem => Boolean(item)),
+      ...modes,
     ],
     icon: "ui:none",
     label: "Theme",
     slot: "colormode" as const,
     ui: {
+      content:
+        "*:*:grid! *:*:grid-cols-2 *:*:grid-rows-[0.5fr_repeat(2,1fr)] *:*:gap-2",
       itemLabel: "justify-between items-center flex",
     },
   }
@@ -177,20 +179,17 @@ export const buildDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => {
       },
     }, */
 
-  const a: ArrayOrNested<DropdownMenuItem> = []
-  const b = [
-    accountLabel.value,
-    inbox,
-    profileItems,
-    support,
-    resources,
-    colorMode,
-    settings,
-    logOut,
-  ]
+  const accountLinks = [history, champions].filter(
+    (item): item is DropdownMenuItem => Boolean(item)
+  )
 
-  b.forEach((item) => {
-    if (item) a.push([item])
-  })
-  return a
+  return [
+    [accountLabel],
+    accountLinks,
+    [inbox],
+    [support, resources],
+    [colorMode],
+    [settings],
+    [logOut],
+  ]
 })

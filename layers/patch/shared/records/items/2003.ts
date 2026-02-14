@@ -1,28 +1,29 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 2003,
-  name: 'Health Potion',
-  nicknames: [
-    'consumable',
-    'red'
+      const item: Item =  {
+  "name": "Health Potion",
+  "id": 2003,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "consumable",
+    "red"
   ],
-  description: 'Consume\nRestores 120 Health over 15 seconds.',
-  noEffects: false,
-  rank: 'Consumable',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 50,
-    sell: 20,
-    total: 50
+  "stats": {},
+  "description": "Consume\nRestores 120 Health over 15 seconds.",
+  "gold": {
+    "base": 50,
+    "purchasable": true,
+    "total": 50,
+    "sell": 20
   },
-  maps: [
+  "maps": [
     11,
     12,
     21
-  ],
-  stats: {}
+  ]
 }
 export default item

@@ -1,7 +1,7 @@
 //
 import { defineStore } from "pinia"
 
-export const useSummonerStore = defineStore(
+export const sSummoner = defineStore(
   "summoner",
   () => {
     const hydrated = ref<boolean>(false)
@@ -39,7 +39,7 @@ export const useSummonerStore = defineStore(
     async function getByRoute() {
       const route = useRoute()
       const [name, tag] = String(route.params.slug).split("_")
-      return await ss().resolveBySlug(
+      return await sSummoner().resolveBySlug(
         name.toLowerCase(),
         String(route.params.region).toLowerCase(),
         tag.toLowerCase()

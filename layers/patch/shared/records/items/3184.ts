@@ -1,31 +1,32 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3184,
-  name: 'Guardian\'s Hammer',
-  nicknames: [
-    'dblade'
+      const item: Item =  {
+  "name": "Guardian's Hammer",
+  "id": 3184,
+  "rank": "Starter",
+  "specialRecipe": 0,
+  "noEffects": true,
+  "removed": false,
+  "nicknames": [
+    "dblade"
   ],
-  description: '25 Attack Damage\n150 Health\n5% Life Steal\n\n',
-  noEffects: true,
-  rank: 'Starter',
-  removed: false,
-  specialRecipe: 0,
-  gold: {
-    base: 950,
-    sell: 665,
-    total: 950
+  "stats": {
+    "attackDamage": 25,
+    "health": 150,
+    "lifesteal": 5
   },
-  maps: [
+  "description": "25 Attack Damage\n150 Health\n5% Life Steal\n\n",
+  "gold": {
+    "base": 950,
+    "purchasable": true,
+    "total": 950,
+    "sell": 665
+  },
+  "maps": [
     11,
     12,
     35
-  ],
-  stats: {
-    attackDamage: 25,
-    health: 150,
-    lifesteal: 5
-  }
+  ]
 }
 export default item

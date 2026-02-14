@@ -1,5 +1,6 @@
 import tailwindcss from "@tailwindcss/vite"
 import process from "node:process"
+import { beasties } from "vite-plugin-beasties"
 
 // repo root
 export default defineNuxtConfig({
@@ -8,7 +9,6 @@ export default defineNuxtConfig({
     dirs: [
       "./shared/types",
       "#shared/schema",
-      "~/domain",
       "#layers/store/app/stores",
       "#layers/lib/app/composables",
       "#layers/lib/shared/composables",
@@ -73,8 +73,8 @@ export default defineNuxtConfig({
   nitro: {
     imports: {
       dirs: [
-        "./shared/types",
-        "./shared/schema",
+        "#shared/types",
+        "#shared/schema",
         "#server/domain",
         "#server/api/riot",
         "#layers/lib/shared/utils",
@@ -147,8 +147,18 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    // @ts-expect-error until plugin updates
-    plugins: [tailwindcss()],
+    plugins: [
+      // @ts-expect-error until plugin updates
+      tailwindcss(),
+      // @ts-expect-error until plugin updates
+      beasties({
+        options: {
+          preload: "swap",
+          pruneSource: true,
+          inlineThreshold: 4000,
+        },
+      }),
+    ],
     clearScreen: false,
     build: {
       sourcemap: false,
@@ -161,7 +171,7 @@ export default defineNuxtConfig({
     https: false,
     port: 8080,
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   experimental: {
     extractAsyncDataHandlers: true,
     nitroAutoImports: true,

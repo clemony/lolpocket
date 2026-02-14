@@ -11,7 +11,7 @@ const { title, icon } = defineProps<{
   <div
     class="relative grid aspect-square size-44 place-items-center select-none">
     <div
-      class="radial-progress absolute aspect-square dss"
+      class="radial-progress absolute aspect-square ds-sm"
       :style="{
         '--value': value,
         '--size': '11rem',

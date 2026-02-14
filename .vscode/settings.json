@@ -99,14 +99,16 @@
     "pcss",
     "postcss"
   ],
-  "iconify.customAliasesJsonPaths": [
-    "./layers/ui/app/assets/icons/icon-symbols.json",
-    "./layers/ui/app/assets/icons/icon-img.json"
-  ],
 
   "editor.codeActions.triggerOnFocusChange": true,
   "iconify.inplace": true,
   "iconify.prefixes": ["i-"],
   "iconify.suffixes": [],
-  "iconify.position": "before"
+  "iconify.position": "before",
+  "docwriter.custom.author": "clem",
+  "docwriter.style": "JSDoc",
+  "docwriter.progress.trackFunctions": true,
+  "docwriter.progress.trackMethods": true,
+  "docwriter.progress.trackClasses": false,
+  "docwriter.progress.trackTypes": false
 }

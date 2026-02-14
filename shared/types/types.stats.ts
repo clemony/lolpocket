@@ -1,12 +1,12 @@
-import type { ChampionMastery, Identifier } from '.'
+import type { ChampionMastery, Identifier } from "."
 
 export interface ChampionStats {
   championId: number
   championName: string
   gamePatches: number[]
   games: number
-  losses: number
-  wins: number
+  loss: number
+  win: number
 
   puuid?: string
   assists?: StatAverage
@@ -66,6 +66,7 @@ export interface StatDetail {
   games: number
   pickrate?: number
   win?: number
+  loss?: number
   winrate?: number
 }
 

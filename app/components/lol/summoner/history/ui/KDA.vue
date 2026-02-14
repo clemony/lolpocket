@@ -16,7 +16,7 @@ const { class: className, stats } = defineProps<{
     {{ stats.kills }}
     /
     <span
-      class="dark:text-tint-domination/20 dark:saturate-150 light:text-shade-domination/30">
+      class="dark:text-tint-domination/20 light:text-shade-domination/30 dark:saturate-150">
       {{ stats.deaths }}
     </span>
     /

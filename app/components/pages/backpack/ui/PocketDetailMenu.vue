@@ -11,7 +11,7 @@ const pocket = computed(() => {
   return pocketKey ? ps().getPocket(pocketKey) : null
 })
 
-const pocketKeySafe = computed(() => pocket.value?.key ?? '')
+const pocketKeySafe = computed(() => pocket.value?.key ?? "")
 const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
 </script>
 
@@ -98,7 +98,7 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
       <UButton
         v-tippy="'Export to LoL'"
         class="size-11"
-        :disabled="!as().account?.puuid"
+        :disabled="!user().account?.puuid"
         variant="ghost">
         <icon name="export" />
       </UButton>

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useTimeline } from "~/domain/match/useTimeline"
+
 defineOptions({
   inheritAttrs: false,
 })

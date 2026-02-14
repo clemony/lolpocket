@@ -14,5 +14,5 @@ const position = computed(() => {
 <template>
   <Icon
     :name="`i-role-${position?.label.toLowerCase()}`"
-    :class="cn('size-4 shrink-0 dst', className)" />
+    :class="cn('size-4 shrink-0 ds-2xs', className)" />
 </template>

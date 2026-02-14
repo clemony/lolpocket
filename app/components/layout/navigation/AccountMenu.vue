@@ -7,6 +7,8 @@ import type {
   DropdownMenuItem,
 } from "@nuxt/ui"
 import { buildDropdown } from "~/components/layout/navigation/buildDropdown"
+import { getSummonerIcon } from "~/domain/utils/img"
+import { icon } from "~~/layers/ui/app/assets/icons/index.icons"
 
 const emit = defineEmits(["openLogIn"])
 const inGame = shallowRef<boolean>(true)
@@ -15,18 +17,17 @@ function checkInGame() {}
 const router = useRouter()
 const routes = router.getRoutes()
 
-const mode = useColorMode()
-const { account } = storeToRefs(as())
+const modeData = useColorMode()
+const { account } = storeToRefs(user())
 const slugRoot = computed(() => `/summoner/${account.value?.puuid}`)
 const domains = ["summoner-region-slug", "summoner-region-slug-champions"]
-const user = useSupabaseUser()
+const sbu = useSupabaseUser()
 
 const navDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => [])
 </script>
 
 <template>
   <UDropdownMenu
-    arrow
     :external-icon="true"
     :content="{ sideOffset: 4 }"
     :items="buildDropdown"
@@ -37,48 +38,32 @@ const navDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => [])
     }"
     @update:open="checkInGame()">
     <UButton
-      :color="(!account?.icon ? 'neutral' : 'p3') as ButtonProps['color']"
+      :color="!account?.icon ? 'neutral' : 'p3'"
       :variant="!account?.icon ? 'solid' : 'ghost'"
-      size="md"
+      size="sm"
+      :avatar="{
+        src: getSummonerIcon(account?.icon) ?? null,
+        size: 'sm',
+        icon: 'i-plug',
+      }"
       square
       :ui="{
-        base: 'shadow-none transition-all ease-out duration-200 size-9.5 p-0.5 shrink-0 rounded-full open:btn-active  open:noise',
-        leadingIcon: cn('', {
-          hidden: account?.icon,
-        }),
-      }">
-      <Icon
-        v-if="!account?.icon"
-        name="i-plug"
-        :class="
-          cn(
-            'size-5 text-nc duration-200 **:stroke-[1.8]',
-            !account?.icon ? 'animate-in fade-in' : 'animate-out fade-out'
-          )
-        " />
-      <SummonerIcon
-        v-else
-        :class="
-          cn(
-            'size-full rounded-full shadow-xs dss',
-            account.icon ? 'animate-in fade-in' : 'animate-out fade-out'
-          )
-        " />
-    </UButton>
+        base: 'shadow-none transition-all ease-out duration-200  shrink-0 rounded-full p-0 open:btn-active  open:noise',
+      }" />
 
-    <template #live-trailing>
+    <template #user-trailing>
       <UBadge
         size="xs"
         :ui="{
           base: cn('mr-2 items-center', inGame ? '' : 'text-pc/50'),
         }"
-        :color="(inGame ? 'neutral' : 'p3') as BadgeProps['color']"
+        :color="inGame ? 'neutral' : 'p3'"
         :variant="inGame ? 'solid' : 'outline'">
         <template #leading>
           <UChip
-            :size="'dot' as ChipProps['size']"
+            size="dot"
             square
-            :color="(inGame ? 'p0' : 'p3') as ChipProps['color']"
+            :color="inGame ? 'p0' : 'p3'"
             inset
             standalone />
         </template>
@@ -86,17 +71,14 @@ const navDropdown = computed<ArrayOrNested<DropdownMenuItem>>(() => [])
       </UBadge>
     </template>
 
-    <!--     <template #theme="{ item }">
-      <UColorModeButton block :label="item.label" />
-    </template> -->
-    <template #colormode>
+    <template #colormode-label>
       Theme
       <UBadge
         size="xs"
-        :ui="{ label: 'capitalize' }"
-        :label="mode.value"
-        :icon="`i-${mode.value}`"
-        :color="'p0' as BadgeProps['color']" />
+        :ui="{ label: 'capitalize text-pc' }"
+        :label="modeData.value"
+        :icon="`i-${modeData.value}`"
+        color="p0" />
     </template>
   </UDropdownMenu>
 </template>

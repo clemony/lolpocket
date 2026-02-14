@@ -1,46 +1,47 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3020,
-  name: 'Sorcerer\'s Shoes',
-  nicknames: [
-    'boots',
-    'sorcs'
-  ],
-  description: '12 Magic Penetration\n45 Move Speed\n\n',
-  noEffects: true,
-  rank: 'Boots',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Sorcerer's Shoes",
+  "id": 3020,
+  "rank": "Boots",
+  "buildsFrom": [
     {
-      id: 1001,
-      name: 'Boots',
-      gold: 300
+      "id": 1001,
+      "name": "Boots",
+      "gold": 300
     }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 3175,
-      name: 'Spellslinger\'s Shoes',
-      gold: 1100
+      "id": 3175,
+      "name": "Spellslinger's Shoes",
+      "gold": 1100
     }
   ],
-  gold: {
-    base: 800,
-    sell: 770,
-    total: 1100
+  "specialRecipe": 0,
+  "noEffects": true,
+  "removed": false,
+  "nicknames": [
+    "boots",
+    "sorcs"
+  ],
+  "stats": {
+    "flatMagicPenetration": 12,
+    "flatMovespeed": 45
   },
-  maps: [
+  "description": "12 Magic Penetration\n45 Move Speed\n\n",
+  "gold": {
+    "base": 800,
+    "purchasable": true,
+    "total": 1100,
+    "sell": 770
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  stats: {
-    flatMagicPenetration: 12,
-    flatMovespeed: 45
-  }
+  ]
 }
 export default item

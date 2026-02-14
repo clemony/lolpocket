@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui"
+import { getRandomBg, getSplash } from "~/domain/utils/img"
 
 const { champion, pocket } = defineProps<{
   pocket?: Pocket
@@ -12,51 +13,14 @@ const route = useRoute()
 const scrollRef = useState<HTMLElement>("scrollRef")
 const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 
-const isScrolling = useState("isScrolling", () => ref(false))
-const isScrollingFast = useState("isScrollingFast", () => ref(false))
-
-let lastScrollTop = 0
-let lastTs = performance.now()
-let scrollTimeout: number | undefined
-
-const FAST_SCROLL_PX_PER_MS = 1.2
-
-function onScroll(e: Event) {
-  const el = e.target as HTMLElement
-  const now = performance.now()
-  const scrollTop = el.scrollTop
-
-  const dy = Math.abs(scrollTop - lastScrollTop)
-  const dt = now - lastTs || 1
-  const velocity = dy / dt
-
-  isScrolling.value = true
-  isScrollingFast.value = velocity > FAST_SCROLL_PX_PER_MS
-
-  lastScrollTop = scrollTop
-  lastTs = now
-
-  clearTimeout(scrollTimeout)
-  scrollTimeout = window.setTimeout(() => {
-    isScrolling.value = false
-    isScrollingFast.value = false
-  }, 100)
-}
-/*
- const { registerAll } = useScrollSectionsProvider(
-  scrollRef,
-  scrollY,
-)
-
-onMounted(() => {
-  registerAll(summonerSections.map(s => s.id))
-}) */
-
 const bg = computed(() =>
-  route.path.match(/\/summoner/) ? sData().splash
-  : pocket ? pocket.icon
-  : champion ? getSplash(champion.key, "uncentered")
-  : getRandomBg()
+  route.path.match(/\/summoner/)
+    ? sData().splash
+    : pocket
+      ? pocket.icon
+      : champion
+        ? getSplash(champion.key, "uncentered")
+        : getRandomBg()
 )
 </script>
 
@@ -72,8 +36,6 @@ const bg = computed(() =>
         <ChampionHeader v-else-if="champion" :champion />
       </UContainer>
     </div>
-    <!-- Scrollable content @scroll="onScroll"
--->
     <!-- Sticky Tabs  -->
     <div
       class="pointer-events-none sticky top-0 z-16 -mt-15 flex h-15 w-screen items-end justify-start gap-4 overflow-hidden pl-20">

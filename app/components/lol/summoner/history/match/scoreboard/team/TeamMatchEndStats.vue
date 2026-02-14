@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { class: className, team } = defineProps<{
   team: MatchTeam
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -10,11 +10,11 @@ const { class: className, team } = defineProps<{
     :class="
       cn(
         'to-tint-p2/40 relative z-1 mx-auto flex h-9 w-[99%] items-center justify-between gap-2 overflow-hidden rounded-xl border border-pc/10 bg-linear-to-r pr-2 pl-5 inset-shadow-xxs',
-        className,
+        className
       )
     ">
     <h3
-      class="text-start text-xl font-bold text-nowrap text-white/86 uppercase dst">
+      class="dst text-start text-xl font-bold text-nowrap text-white/86 uppercase">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
@@ -22,18 +22,16 @@ const { class: className, team } = defineProps<{
         cn(
           'flex w-16 justify-start pl-2 font-bold tracking-wide! brightness-70',
           {
-            'text-inspiration': team.teamId === 100,
-            'text-domination': team.teamId === 200,
-          },
+            'text-insp': team.teamId === 100,
+            'text-dom': team.teamId === 200,
+          }
         )
       ">
       {{ team.teamId === 100 ? "Blue" : "Red" }}
     </div>
 
     <TeamKDA :team="team" />
-    <TeamObjectives
-      :team="team"
-      :team-object="team" />
+    <TeamObjectives :team="team" :team-object="team" />
 
     <div class="mx-4 grid w-35 grid-cols-5 gap-1 px-1">
       <Champion
@@ -46,9 +44,7 @@ const { class: className, team } = defineProps<{
     </div>
 
     <p class="inline-flex items-center justify-end gap-1">
-      <Icon
-        class="inline size-4.5 text-g"
-        name="lp:gold" />
+      <Icon class="inline size-4.5 text-g" name="lp:gold" />
 
       <span
         v-if="team.gold"

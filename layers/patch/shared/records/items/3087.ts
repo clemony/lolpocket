@@ -1,60 +1,61 @@
-// Updated Patch 16.1 - 01/30/2026 09:14:37 PM CST
-import type { Item } from '#shared/types'
+// Updated Patch 16.1 - 02/13/2026 11:21:52 PM CST
+      import type { Item } from "#shared/types"
 
-const item: Item = {
-  id: 3087,
-  name: 'Statikk Shiv',
-  description: '45 Attack Damage\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nAttacks trigger chain lightning On-Hit, dealing magic damage with a cooldown.\n\nElectroshock \nTakedowns within 3 seconds of damaging the target reset Electrospark\'s cooldown.',
-  noEffects: false,
-  rank: 'Legendary',
-  removed: false,
-  specialRecipe: 0,
-  buildsFrom: [
+      const item: Item =  {
+  "name": "Statikk Shiv",
+  "id": 3087,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      id: 3144,
-      name: 'Scout\'s Slingshot',
-      gold: 600
+      "id": 3144,
+      "name": "Scout's Slingshot",
+      "gold": 600
     },
     {
-      id: 6690,
-      name: 'Rectrix',
-      gold: 775
+      "id": 6690,
+      "name": "Rectrix",
+      "gold": 775
     },
     {
-      id: 1037,
-      name: 'Pickaxe',
-      gold: 875
+      "id": 1037,
+      "name": "Pickaxe",
+      "gold": 875
     }
   ],
-  gold: {
-    base: 450,
-    sell: 1890,
-    total: 2700
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Electrospark",
+      "effects": "Your next 3 basic attacks <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85 magic damage against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack)."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Electroshock",
+      "effects": "Scoring a <img src=\"/img/icons/takedown.webp\" class=\"tip-icon light:invert\" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark's</i> cooldown."
+    }
+  ],
+  "stats": {
+    "attackDamage": 45,
+    "attackSpeed": 30,
+    "percentMovespeed": 4
   },
-  maps: [
+  "description": "45 Attack Damage\n30% Attack Speed\n4% Move Speed\n\nElectrospark\nAttacks trigger chain lightning On-Hit, dealing magic damage with a cooldown.\n\nElectroshock \nTakedowns within 3 seconds of damaging the target reset Electrospark's cooldown.",
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 2700,
+    "sell": 1890
+  },
+  "maps": [
     11,
     12,
     21,
     35
-  ],
-  passives: [
-    {
-      name: 'Electrospark',
-      effects: 'Your next 3 basic attacks <img src="/img/icons/on-hit.webp" class="tip-icon " />on-hit within 8 seconds are empowered to deal 60 <b>bonus</b> magic damage, increased to 85 magic damage against non-champions. This bounces to the closest target within 500 units, repeating from the new target to strike up to 5 targets (25 – 10 (based on level) second cooldown, starts after using the first empowered attack).',
-      mythic: false,
-      unique: true
-    },
-    {
-      name: 'Electroshock',
-      effects: 'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon light:invert" />takedown against an enemy champion within 3 seconds of damaging them resets <i>Electrospark\'s</i> cooldown.',
-      mythic: false,
-      unique: true
-    }
-  ],
-  stats: {
-    attackDamage: 45,
-    attackSpeed: 30,
-    percentMovespeed: 4
-  }
+  ]
 }
 export default item

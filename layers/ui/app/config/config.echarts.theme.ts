@@ -10,10 +10,10 @@ const t2 = cssVar("--text-sm")
 
 export const theme = {
   color: [
-    cssVar("--color-inspiration"),
-    cssVar("--color-sorcery"),
-    cssVar("--color-resolve"),
-    cssVar("--color-precision"),
+    cssVar("--color-insp"),
+    cssVar("--color-sorc"),
+    cssVar("--color-res"),
+    cssVar("--color-pre"),
     cssVar("--color-domination"),
     cssVar("--color-fighter"),
     cssVar("--color-enchanter"),
@@ -141,10 +141,10 @@ export const theme = {
   },
   graph: {
     color: [
-      cssVar("--color-inspiration"),
-      cssVar("--color-sorcery"),
-      cssVar("--color-resolve"),
-      cssVar("--color-precision"),
+      cssVar("--color-insp"),
+      cssVar("--color-sorc"),
+      cssVar("--color-res"),
+      cssVar("--color-pre"),
       cssVar("--color-domination"),
       cssVar("--color-fighter"),
       cssVar("--color-enchanter"),

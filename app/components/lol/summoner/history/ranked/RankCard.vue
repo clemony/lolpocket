@@ -4,7 +4,7 @@ const {
   class: className,
   entry,
 } = defineProps<{
-  entry: RankedEntry
+  entry: RankedEntry | undefined
   title?: string
   class?: HTMLAttributes["class"]
 }>()
@@ -12,14 +12,15 @@ const {
 
 <template>
   <UCard
-    color="p1"
+    legend
     :ui="{
-      root: cn('h-36', className),
+      root: cn('relative h-36 overflow-visible', className),
       body: ' place-items-center  h-36 grid grid-cols-[1.1fr_1fr_1fr]  w-full',
     }">
-    <template #header>
+    <span
+      class="field-legend absolute translate-x-3 -translate-y-2.5 place-self-start text-sm font-medium">
       {{ `Ranked ${title}` }}
-    </template>
+    </span>
     <div class="mt-0.5 grid place-items-center overflow-hidden">
       <!-- crest -->
       <img
@@ -36,7 +37,8 @@ const {
     </div>
 
     <div class="relative grid size-full place-items-center">
-      <ChampWinrate :entry class="size-21" hide-zero />
+      <ChampWinrate v-if="entry" :entry class="size-21" />
+      <DonutSkeleton v-else class="size-21" />
     </div>
 
     <div
@@ -59,11 +61,11 @@ const {
       </span>
 
       <span
-        v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
+        v-tippy="`${entry ? entry?.win + entry?.loss : 0} total`"
         class="flex items-center justify-end gap-1 text-end text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline">
-        <span>{{ entry ? entry.wins : 0 }}W</span>
+        <span>{{ entry ? entry.win : 0 }}W</span>
 
-        <span>{{ entry ? entry.losses : 0 }}L</span>
+        <span>{{ entry ? entry.loss : 0 }}L</span>
       </span>
     </div>
   </UCard>

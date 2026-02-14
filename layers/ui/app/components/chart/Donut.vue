@@ -23,41 +23,37 @@ const {
   tooltip?: boolean
   overlap?: boolean
 }>()
+const values = computed(() => data.datasets[0]?.data ?? [])
+const total = computed(() => values.value.reduce((a, b) => a + b, 0))
+const nonZeroCount = computed(() => values.value.filter((v) => v > 0).length)
 
 const series = computed<PieSeriesOption>(() => ({
   type: "pie",
-
   endAngle: gauge ? 0 : 450,
-  // gauge mode (half donut)
   startAngle: gauge ? 180 : 90,
-  // donut
   radius: [cutout, "100%"],
-
-  avoidLabelOverlap: true,
   silent: tooltip === false,
 
-  padAngle: overlap ? 0 : 2,
+  // Avoid artifacts for full/empty rings
+  padAngle:
+    nonZeroCount.value <= 1 ? 0
+    : overlap ? -4
+    : 2,
   itemStyle: {
-    borderRadius: 100,
+    borderRadius: nonZeroCount.value <= 1 ? 0 : 100,
   },
 
-  emphasis: {
-    scale: true,
-    scaleSize: 2,
-  },
+  label: { show: false },
+  labelLine: { show: false },
 
-  bottom: 1,
-  left: 1,
-  right: 1,
-  top: 1,
-
-  data: data.labels.map((label, i) => ({
-    name: label,
-    value: data.datasets[0]?.data[i],
-    itemStyle: {
-      color: data.datasets[0]?.backgroundColor?.[i],
-    },
-  })),
+  data:
+    total.value === 0 ?
+      [{ name: "empty", value: 1, itemStyle: { color: "transparent" } }]
+    : data.labels.map((label, i) => ({
+        name: label,
+        value: values.value[i],
+        itemStyle: { color: data.datasets[0]?.backgroundColor?.[i] },
+      })),
 }))
 
 const option = computed<EChartsOption>(() => ({

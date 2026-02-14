@@ -4,10 +4,10 @@ const { class: className, summoner } = defineProps<{
   summoner?: Summoner | Partial<Summoner>
 }>()
 
-// todo hookup to supbase with public data &  useSummoner
+// todo hookup to supbase with public data &  summoner
 const text = computed(() => {
-  console.log("💠 -as().account:", as().account)
-  const account = as().account
+  console.log("💠 -user().account:", user().account)
+  const account = user().account
   if (account && !account.title) {
     account.title = "Pocket Pet"
   }

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSplash } from "~/domain/utils/img"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
@@ -16,8 +18,8 @@ const search = useSearch(
 
 const result = computed(() => {
   if (search?.value?.length) {
-    return search.value.length ?
-        search.value
+    return search.value.length
+      ? search.value
       : [...championIndex].sort((a, b) => a.name.localeCompare(b.name))
   } else {
     return championIndex
@@ -55,13 +57,13 @@ function reset() {
             <button
               v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
-              <icon class="absolute size-3.75 dst" name="refresh" />
+              <icon class="dst absolute size-3.75" name="refresh" />
             </button>
 
             <button
               v-tippy="{ content: 'Randomize', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
-              <icon class="size-3.5 stroke-[1.5] dst" name="shuffle" />
+              <icon class="dst size-3.5 stroke-[1.5]" name="shuffle" />
             </button>
 
             <UInput
@@ -72,7 +74,7 @@ function reset() {
               v-tippy="{ content: 'Close', placement: 'top' }"
               variant="ghost"
               shape="square">
-              <icon class="absolute size-4 shrink-0 dst" name="x" />
+              <icon class="dst absolute size-4 shrink-0" name="x" />
             </UButton>
           </header>
 

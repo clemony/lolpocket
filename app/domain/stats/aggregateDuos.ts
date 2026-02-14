@@ -1,3 +1,11 @@
+import {
+  buildEmptyRoleObject,
+  createEmptyChampionStat,
+} from "~/domain/stats/helpers/createEmptyStat"
+import type { RoleKey } from "~/domain/stats/helpers/normalizeRole"
+import { normalizeRole } from "~/domain/stats/helpers/normalizeRole"
+import { winDelta } from "~/domain/stats/helpers/normalizeScore"
+
 //
 export interface ChampionPairStats {
   enemy: PairedChampionStat[][]

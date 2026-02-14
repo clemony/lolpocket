@@ -51,17 +51,17 @@ const set2 = computed(() => is().calculatorSet2)
     <!-- head -->
     <div
       class="btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center py-2 *:text-sm">
-      <div class="col-start-2 font-medium dst">
+      <div class="dst col-start-2 font-medium">
         STAT
       </div>
 
-      <div class="justify-center font-medium dst">
+      <div class="dst justify-center font-medium">
         {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="justify-center font-medium dst">
+        class="dst justify-center font-medium">
         2
       </div>
     </div>
@@ -117,17 +117,17 @@ const set2 = computed(() => is().calculatorSet2)
         <i-ui-gold class="size-6 text-pc/80" />
       </div>
 
-      <div class="col-start-2 font-medium dst">
+      <div class="dst col-start-2 font-medium">
         TOTAL GOLD
       </div>
 
-      <div class="justify-center font-medium dst">
+      <div class="dst justify-center font-medium">
         {{ totalCost }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="justify-center font-medium dst">
+        class="dst justify-center font-medium">
         {{ totalCost2 }}
       </div>
     </div>
