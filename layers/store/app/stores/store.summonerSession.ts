@@ -1,3 +1,4 @@
+import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 import { getSummonerIcon } from "~/domain/utils/img"
 
 export const sSession = defineStore("summonerSession", () => {
@@ -14,37 +15,38 @@ export const sSession = defineStore("summonerSession", () => {
     ready.value = true
   }
 
-  const currentSummonerNavItem = computed(() => ({
+  const currentSummonerNav = computed(() => ({
     label: summoner.value?.name,
-    to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
+    to: buildSummonerRootPath(summoner.value),
     avatar: {
       src: getSummonerIcon(summoner.value?.icon),
       icon: "",
     },
+    slot: "summoner" as const,
     children: [
       {
         description: "Fully styled and customizable components for Nuxt.",
         icon: "history",
         label: "Match History",
-        to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
+        to: buildSummonerRootPath(summoner.value),
       },
       {
         description: "Fully styled and customizable components for Nuxt.",
         icon: "lol:champ",
         label: "Champions",
-        to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
+        to: buildSummonerRootPath(summoner.value),
       },
       {
         description: "Fully styled and customizable components for Nuxt.",
         icon: "ui:pocket",
         label: "Pockets",
-        to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
+        to: buildSummonerRootPath(summoner.value),
       },
       {
         description: "Fully styled and customizable components for Nuxt.",
         icon: "live",
         label: "Live Match",
-        to: `/summoner/${summoner.value?.region}/${summoner.value?.name}_${summoner.value?.tag}`,
+        to: buildSummonerRootPath(summoner.value),
       },
     ],
     ui: {
@@ -58,6 +60,6 @@ export const sSession = defineStore("summonerSession", () => {
     reset,
     setSummoner,
     summoner,
-    currentSummonerNavItem,
+    currentSummonerNav,
   }
 })

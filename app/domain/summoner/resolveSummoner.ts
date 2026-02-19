@@ -2,6 +2,7 @@
 export async function resolveSummoner(
   identifier: Identifier
 ): Promise<Summoner> {
+  console.log("🥸 - resolveSummoner - identifier.puuid:", identifier.puuid)
   if (identifier.puuid) {
     const resolved = await sSummoner().resolveOrFetch(identifier.puuid)
     if (!resolved) {

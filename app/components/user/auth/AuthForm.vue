@@ -71,7 +71,7 @@ const formType: Record<string, AuthFormType> = {
     <USeparator color="p2" label="or" class="my-3" />
     <UForm :schema="schema" :state="state" class="space-y-6" @submit="onSubmit">
       <UFormField label="Email" name="email" class="">
-        <UInput v-model="state.email" size="xl" :ui="{ root: 'w-full' }" />
+        <UInput v-model="state.email" size="lg" :ui="{ root: 'w-full' }" />
       </UFormField>
 
       <UFormField label="Password" name="password">
@@ -82,7 +82,7 @@ const formType: Record<string, AuthFormType> = {
         </template>
         <UInput
           v-model="state.password"
-          size="xl"
+          size="lg"
           :ui="{ root: 'w-full' }"
           type="password">
           <template #trailing>
@@ -92,23 +92,22 @@ const formType: Record<string, AuthFormType> = {
       </UFormField>
 
       <UButton
-        class="mt-6 w-full font-medium"
+        class="mt-6 w-full font-semibold"
         color="neutral"
         size="md"
         type="submit">
         {{ formType?.[type]?.submit.label }}
       </UButton>
     </UForm>
-    <div class="flex w-full items-center gap-3">
-      <UButton
+    <div class="flex w-full items-center justify-center gap-3">
+      <ULink
         v-for="(item, i) in formType?.[type]?.swap"
         :key="i"
-        class="grow justify-center hover:underline"
-        size="sm"
-        variant="link"
-        @click="navigateTo(item.to)">
+        underline
+        size="xs"
+        :to="item.to">
         {{ item.label }}
-      </UButton>
+      </ULink>
     </div>
   </div>
 </template>

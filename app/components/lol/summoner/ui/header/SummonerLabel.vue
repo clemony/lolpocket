@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 const summoner = await sSummoner().resolveByPuuid(user().account?.puuid)
 const accountRoute = computed(() => {
   const account = user().account
-  if (!account?.region || !account?.name || !account?.tag) return null
-  return `/summoner/${account.region}/${account.name}_${account.tag}`
+  return buildSummonerRootPath(account)
 })
 </script>
 
@@ -16,15 +16,15 @@ const accountRoute = computed(() => {
 
       <div class="flex w-full flex-col justify-end gap-px">
         <div class="flex items-end gap-3 *:leading-none">
-          <SummonerName
-            class="font-serif text-xxl! font-bold text-pc/94 drop-shadow-sm" />
-          <SummonerTag class="mb-px" :summoner />
+          <h1 class="font-serif text-xxl! font-bold text-pc/94 drop-shadow-sm">
+            {{ summoner?.name }}
+          </h1>
+          <SummonerId :summoner="summoner ?? undefined" type="tag" />
         </div>
         <div
           class="flex w-full items-center justify-between gap-4 align-middle font-normal lowercase opacity-70">
-          <SummonerRegion class="[&_svg]:size-3" :region-id="summoner.region" />
-
-          <SummonerLevel :summoner />
+          <SummonerId :summoner="summoner ?? undefined" type="region" />
+          <SummonerId :summoner="summoner ?? undefined" type="level" />
         </div>
       </div>
 

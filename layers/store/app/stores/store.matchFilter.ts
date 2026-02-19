@@ -5,6 +5,7 @@ import { defineStore } from "pinia"
 export const matchFilter = defineStore("match-filter", () => {
   const { summoner: s } = storeToRefs(sSession())
   const { matches } = storeToRefs(sMatches())
+  console.log("🥸 - matches:", matches)
 
   const GLOBAL_KEYS = [
     ["participants", "championName"],
@@ -45,7 +46,6 @@ export const matchFilter = defineStore("match-filter", () => {
   const baseFiltered = computed<MatchData[]>(() => {
     const arr = matches.value
     const f = filter.value
-    console.log("🥸 - f:", f)
 
     const puuid = s.value?.puuid
     if (!puuid) return arr
@@ -85,9 +85,11 @@ export const matchFilter = defineStore("match-filter", () => {
         const spells = p.spells.map((i) => spellNameById(i))
 
         const outcome =
-          p.win === "remake" ? ["remake", "surrender", "redo"]
-          : p.win ? ["win", "victory"]
-          : ["loss", "lose", "defeat"]
+          p.win === "remake"
+            ? ["remake", "surrender", "redo"]
+            : p.win
+              ? ["win", "victory"]
+              : ["loss", "lose", "defeat"]
 
         return {
           keywords: [

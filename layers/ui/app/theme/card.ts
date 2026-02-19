@@ -7,6 +7,10 @@ export default {
   },
   variants: {
     variant: {
+      link: "",
+      ghost: "",
+      highlight: "",
+      ring: "",
       outline: {
         root: "border text-pc shadow-sm",
       },

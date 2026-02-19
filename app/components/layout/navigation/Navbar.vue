@@ -1,19 +1,6 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui"
-
-const { navItem } = defineProps<{
-  navItem?: NavigationMenuItem
-}>()
 const route = useRoute()
 const sum = computed(() => route.path.match(/summoner.*/))
-const component = "navbar"
-const nav = computed(() => [
-  navItem || {},
-  buildRoute("/library"),
-  buildRoute("/backpack", { merge: "/tools" }),
-  buildRoute("/nexus"),
-])
-
 const logInOpen = shallowRef<boolean>(false)
 </script>
 
@@ -27,28 +14,17 @@ const logInOpen = shallowRef<boolean>(false)
       size: 'md',
       icon: 'lucide:menu',
       ui: {
+        base: 'w-full',
         leadingIcon: 'size-7.5  **:stroke-[1.8] text-pc/60 ',
       },
-    }"
-    :ui="{
-      root: cn(
-        'fixed top-0 z-10 flex w-full max-w-screen shrink-0 items-center gap-2 border-b bg-linear-to-r from-transparent to-p0/40 bg-blend-darken backdrop-blur-sm',
-        {
-          'border-0 bg-p0/20!': sum,
-        }
-      ),
-      right: 'shrink-0',
     }">
     <template #left>
       <LpLogo />
+      <LazyAppCommand />
     </template>
 
     <template #right>
-      <UNavigationMenu
-        :items="nav as NavigationMenuItem[]"
-        :ui="{ list: 'shrink-0', linkLeadingIcon: 'hidden' }" />
-      <LazyAppCommand />
-      <LazyAccountMenu @open-log-in="logInOpen = true" />
+      <NavMenu @open-log-in="logInOpen = true" />
     </template>
 
     <UModal

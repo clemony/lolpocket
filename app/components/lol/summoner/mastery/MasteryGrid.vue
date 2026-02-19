@@ -23,6 +23,8 @@ import {
 } from "ag-grid-community"
 import { AgGridVue } from "ag-grid-vue3"
 import { useStatGrid } from "~/domain/stats/grid"
+import { globalGridOptions } from "~~/layers/ui/app/config/gridOptions.global"
+import { masteryGridTheme } from "~~/layers/ui/app/config/masteryTheme"
 
 const { champions } = defineProps<{
   champions: ChampionStatsAndMastery[]

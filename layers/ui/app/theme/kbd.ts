@@ -13,16 +13,16 @@ export default {
       subtle: "",
     },
     size: {
-      lg: "h-6 min-w-[24px] text-[12px]",
-      md: "h-5 min-w-[20px] text-[11px]",
-      sm: "h-4 min-w-[16px] text-[10px]",
+      lg: "h-6 min-w-unset text-[12px]",
+      md: "h-5 min-w-unset text-[11px]",
+      sm: "h-4 min-w-unset text-[10px]",
     },
     square: {
-      false: "",
-      true: "",
+      false: " px-1 ",
+      true: "aspect-square",
     },
   },
-  base: "inline-flex items-center justify-center px-1 rounded-sm font-medium font-sans uppercase",
+  base: "inline-flex items-center justify-center p-0 rounded-sm font-medium font-sans uppercase",
   compoundVariants: [
     {
       color: "p1",
@@ -52,7 +52,7 @@ export default {
     {
       color: "neutral",
       variant: "outline",
-      class: "ring ring-inset ring-accented text-default bg-default",
+      class: "ring ring-inset ring-p5 text-nc bg-n0",
     },
     {
       color: "neutral",
@@ -65,19 +65,20 @@ export default {
       class: "ring ring-inset ring-accented text-default bg-elevated",
     },
     {
-      class: "size-4 aspect-square",
+      class:
+        "min-w-4 min-h-4 max-w-4 shrink-0 max-h-4 size-4! p-0 gap-0 grid place-items-center aspect-square overflow-hidden",
       size: "sm",
-      square: "true",
+      square: true,
     },
     {
       class: "size-5 aspect-square",
       size: "md",
-      square: "true",
+      square: true,
     },
     {
       class: "size-6 aspect-square",
       size: "lg",
-      square: "true",
+      square: true,
     },
   ],
   defaultVariants: {

@@ -13,13 +13,14 @@ export const sSummoner = defineStore(
     const meta = ref<Record<string, number>>({})
     const index = ref<Record<string, string>>({})
 
-    const makeKey = (r: string, n: string, t: string) =>
-      `${r.toLowerCase()}:${n.toLowerCase()}:${t.toLowerCase()}`
+    const makeKey = (r?: string | null, n?: string | null, t?: string | null) =>
+      `${String(r ?? "").toLowerCase()}:${String(n ?? "").toLowerCase()}:${String(t ?? "").toLowerCase()}`
 
     const rebuildIndex = () => {
       index.value = {}
 
       for (const s of Object.values(cache.value)) {
+        if (!s?.puuid || !s?.region || !s?.name || !s?.tag) continue
         index.value[makeKey(s.region, s.name, s.tag)] = s.puuid
       }
     }
@@ -28,6 +29,7 @@ export const sSummoner = defineStore(
       puuid ? (cache.value[puuid] ?? null) : null
 
     const resolveBySlug = (region: string, name: string, tag: string) => {
+      if (!region || !name || !tag) return null
       if (!Object.keys(index.value).length) {
         rebuildIndex()
       }
@@ -71,6 +73,7 @@ export const sSummoner = defineStore(
     }
 
     const setSummoner = (s: Summoner) => {
+      if (!s?.puuid || !s?.region || !s?.name || !s?.tag) return
       cache.value[s.puuid] = s
       index.value[makeKey(s.region, s.name, s.tag)] = s.puuid
       bump(s.puuid)
@@ -95,16 +98,25 @@ export const sSummoner = defineStore(
         existing = resolveBySlug(region, name, tag)
       console.log("🥸 - ensureSummoner - existing:", existing)
 
-      if (existing && !force && !isStale(existing.puuid)) return existing
+      const hasFullIdentity = Boolean(
+        existing?.puuid && existing?.region && existing?.name && existing?.tag
+      )
+      if (existing && hasFullIdentity && !force && !isStale(existing.puuid))
+        return existing
 
-      const base = await $fetch<Summoner>("/api/summonerAccount", {
+      const base = await $fetch<Summoner>("/api/riot/summoner", {
         params: args,
       })
 
-      const ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
-        "/riot/v4/league/entries/byPuuid",
-        { params: { puuid: base.puuid, region: base.region } }
-      )
+      let ranked: { ranked: Summoner["ranked"] } = { ranked: {} }
+      try {
+        ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
+          "/api/riot/v4/league/entries/puuid",
+          { params: { puuid: base.puuid, region: base.region } }
+        )
+      } catch (err) {
+        console.warn("Failed ranked lookup, continuing with base summoner", err)
+      }
 
       const full = {
         ...base,

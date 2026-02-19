@@ -1,46 +1,6 @@
 @import "tailwindcss";
 
 @layer components {
-  h1 {
-    @apply text-5xl;
-  }
-
-  h2 {
-    @apply text-3xl;
-  }
-
-  h3 {
-    @apply text-xxl;
-  }
-
-  h4 {
-    @apply text-xl;
-  }
-
-  h5 {
-    @apply text-lg;
-  }
-
-  h6 {
-    @apply text-sm font-semibold flex gap-3 text-[var(--color-pc)]/50;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply font-bold ds-2xs;
-  }
-  h4 {
-    @apply font-semibold ds-2xs;
-  }
-  p {
-    @apply leading-5 antialiased;
-  }
-
-  span {
-    @apply antialiased;
-  }
-
   .dropdown-label-class {
     @apply -mb-2 text-2xs! font-[900] tracking-normal uppercase opacity-50;
   }

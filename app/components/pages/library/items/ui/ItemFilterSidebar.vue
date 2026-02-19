@@ -17,18 +17,52 @@ const maps = computed(() =>
 )
 
 const { filters } = storeToRefs(is())
+
+const collapsed = useState<boolean>("collapsed-state")
+
+const closed = computed(() => {
+  if (!collapsed.value) return false
+  return collapsed.value
+})
 </script>
 
 <template>
-  <div class="flex flex-col gap-8">
-    <LibraryItemViewTabs @update-tab="(e) => emit('updateTab', e)" />
-    <div class="floating-label w-full">
+  <div
+    :class="
+      cn('flex flex-col items-center justify-start gap-6', {
+        'gap-3': collapsed,
+      })
+    ">
+    <UModal v-if="collapsed">
+      <Tooltip side="right">
+        <UButton
+          variant="ghost"
+          square
+          icon="i-search"
+          :ui="{ leadingIcon: 'scale-110' }" />
+        <template #content>
+          Search...
+          <UKbd
+            v-for="k in ['meta', 'shift', 'S']"
+            :key="k"
+            size="sm"
+            color="neutral"
+            variant="outline"
+            :value="k"
+            square />
+        </template>
+      </Tooltip>
+    </UModal>
+    <div v-else class="floating-label w-full">
       <span class="text-lg!">Search items...</span>
       <UInput
         v-model:model-value="filters.query"
         icon="i-search"
         floating
-        class="w-full -translate-y-1"
+        :ui="{
+          root: 'w-full max-w-[86%] -translate-y-1',
+          leadingIcon: '**:stroke-[1.8]',
+        }"
         placeholder="Search items...">
         <template #trailing>
           <InputClear v-if="filters.query" @clear-input="filters.query = ''" />
@@ -38,21 +72,7 @@ const { filters } = storeToRefs(is())
     </div>
     <!-- stats -->
 
-    <UCollapsible
-      :ui="{
-        root: 'w-full',
-        content: 'px-1.5  max-h-90',
-      }"
-      :default-open="true">
-      <UButton
-        size="lg"
-        label="Statistics"
-        variant="link"
-        :ui="{ base: 'group w-full justify-between' }">
-        <template #trailing>
-          <PlusMinusExpand />
-        </template>
-      </UButton>
+    <SidebarPoppableCollapse label="Statistics" :closed icon="i-bar-chart">
       <template #content>
         <UCheckboxGroup
           v-model:model-value="filters.stats"
@@ -65,24 +85,10 @@ const { filters } = storeToRefs(is())
           "
           @entry-focus.prevent />
       </template>
-    </UCollapsible>
+    </SidebarPoppableCollapse>
 
     <!-- categories -->
-    <UCollapsible
-      :ui="{
-        root: 'w-full',
-        content: 'px-1.5  max-h-90',
-      }"
-      :default-open="true">
-      <UButton
-        label="Categories"
-        variant="link"
-        size="lg"
-        class="group w-full justify-between">
-        <template #trailing>
-          <PlusMinusExpand />
-        </template>
-      </UButton>
+    <SidebarPoppableCollapse label="Categories" :closed icon="i-tag">
       <template #content>
         <UCheckboxGroup
           v-model:model-value="filters.tags"
@@ -94,20 +100,54 @@ const { filters } = storeToRefs(is())
           :items="itemTags"
           @entry-focus.prevent />
       </template>
-    </UCollapsible>
+    </SidebarPoppableCollapse>
 
     <!-- shop -->
 
-    <USwitch
-      v-model:model-value="filters.purchasable"
-      size="sm"
-      as="label"
-      :label="filters.purchasable ? 'Purchasable' : 'All Items'" />
+    <Tooltip :disabled="!collapsed" text="Purchasable in shop" side="right">
+      <USwitch
+        v-model:model-value="filters.purchasable"
+        size="lg"
+        :ui="
+          collapsed
+            ? {
+                root: '-rotate-90',
+                label: 'hidden',
+              }
+            : {}
+        "
+        :label="filters.purchasable ? 'Purchasable' : 'All Items'" />
+    </Tooltip>
 
     <!-- map -->
-    <UFormField label="Map" class="w-full">
+    <UFormField
+      label="Map"
+      class="w-full"
+      :ui="{ label: collapsed ? 'hidden' : '' }">
       <USelect
         v-model:model-value="filters.map"
+        :content="
+          collapsed
+            ? {
+                position: 'popper',
+                side: 'right',
+                align: 'start',
+              }
+            : {}
+        "
+        :ui="
+          collapsed
+            ? {
+                base: 'aspect-square w-10! before:hidden max-w-10 overflow-hidden',
+                leading: 'max-w-10',
+                content: 'min-w-54 w-54',
+                label: 'hidden',
+                trailing: 'hidden',
+                placeholder: 'hidden',
+                value: 'hidden',
+              }
+            : {}
+        "
         :icon="`i-map-${filters.map}`"
         :items="maps"
         class="w-full"
@@ -120,10 +160,14 @@ const { filters } = storeToRefs(is())
       </USelect>
     </UFormField>
 
-    <UButton
-      color="neutral"
-      icon="reset"
-      label="Reset Filter"
-      @click="is().clearFilters()" />
+    <Tooltip :disabled="!collapsed" text="Reset Filter" side="right">
+      <UButton
+        color="neutral"
+        icon="reset"
+        :block="!collapsed"
+        :square="collapsed === true"
+        label="Reset Filter"
+        @click="is().clearFilters()" />
+    </Tooltip>
   </div>
 </template>

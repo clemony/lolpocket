@@ -8,6 +8,11 @@ const {
   title?: string
   class?: HTMLAttributes["class"]
 }>()
+
+const data = computed(() => {
+  if (!entry) return
+  return [entry.win ?? 0, entry.loss ?? 0]
+})
 </script>
 
 <template>
@@ -37,7 +42,7 @@ const {
     </div>
 
     <div class="relative grid size-full place-items-center">
-      <ChampWinrate v-if="entry" :entry class="size-21" />
+      <ChampWinrate v-if="entry" :entry :size="60" />
       <DonutSkeleton v-else class="size-21" />
     </div>
 
@@ -50,8 +55,8 @@ const {
       ">
       <span class="capitalize">
         {{
-          entry ?
-            `${entry?.tier?.toLowerCase()} ${entry?.division}`
+          entry
+            ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
             : "Unranked"
         }}
       </span>

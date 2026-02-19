@@ -5,12 +5,14 @@ const {
   champion,
   class: className,
   entry,
+  size = 32,
 } = defineProps<{
   champion?: ChampionStats
   ally?: AllyStatDetail
   entry?: RankedEntry
   class?: HTMLAttributes["class"]
   hideZero?: boolean
+  size?: number
 }>()
 
 const obj = computed(() => {
@@ -37,50 +39,29 @@ const wr = computed(() => {
   return 0
 })
 
-const data = computed(() => {
-  return {
-    datasets: [
-      {
-        backgroundColor: [
-          entry ?
-            cssVar(`--color-${entry?.tier ?? "p3"}`)
-          : cssVar(
-              `--color-${
-                !wr.value ? "p3"
-                : wr.value >= 51 ? "win"
-                : wr.value <= 49 ? "domination"
-                : "silver"
-              }`
-            ),
-          cssVar("--color-p3"),
-        ],
-        data: [obj.value?.win ?? 0, obj.value?.loss ?? 0],
-      },
-    ],
-    labels: ["win", "loss"],
-  }
-})
+const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
 </script>
 
 <template>
-  <div
-    :class="
-      cn(
-        'relative grid size-11 shrink-0 place-items-center rounded-lg',
-        className
-      )
-    ">
-    <DonutSkeleton v-if="!data" class="absolute size-full" />
-    <div class="size-[94%]">
-      <Donut overlap cutout="82%" :data />
+  <DonutChart
+    v-if="data"
+    :data
+    :height="size"
+    :radius="80"
+    :pad-angle="-0.1"
+    :arc-width="3"
+    :categories="winLossLabels"
+    :hide-tooltip="true"
+    :hide-legend="true">
+    <div class="text-center">
+      <span
+        :class="
+          cn('text-3xs! font-medium text-pc ds-2xs', {
+            'opacity-0': hideZero && (!wr || wr === 0),
+          })
+        ">
+        {{ wr || 0 }}
+      </span>
     </div>
-    <span
-      :class="
-        cn('absolute text-3xs! font-medium text-pc ds-2xs', {
-          'opacity-0': hideZero && (!wr || wr === 0),
-        })
-      ">
-      {{ wr || 0 }}
-    </span>
-  </div>
+  </DonutChart>
 </template>

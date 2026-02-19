@@ -23,6 +23,7 @@ If a known library is detected, use its libraryId directly (skip resolve-library
 - Apache ECharts -> /apache/echarts-doc
 - Vue ECharts -> /ecomfe/vue-echarts
 - Tailwind Variants -> /websites/tailwind-variants
+- ESLint Better Tailwindcss -> /schoero/eslint-plugin-better-tailwindcss
 - daisyUI -> /websites/daisyui
 
 Always enforce Tailwind v4 and Nuxt UI v4 by including "Tailwind v4" or "Nuxt UI v4" in the Context7 query even when a libraryId is supplied.

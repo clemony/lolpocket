@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {
   side = "top",
-  sideOffset = 14,
+  sideOffset = 16,
   arrow = true,
   class: className,
   icon,
@@ -27,6 +27,35 @@ const {
 
 const open = ref(false)
 const anchor = ref({ x: 0, y: 0 })
+let rafId = 0
+let nextX = 0
+let nextY = 0
+
+function updateAnchor() {
+  anchor.value = { x: nextX, y: nextY }
+  rafId = 0
+}
+
+function onPointerEnter(ev: PointerEvent) {
+  nextX = ev.clientX
+  nextY = ev.clientY
+  anchor.value = { x: nextX, y: nextY }
+  open.value = true
+}
+
+function onPointerLeave() {
+  open.value = false
+}
+
+function onPointerMove(ev: PointerEvent) {
+  nextX = ev.clientX
+  nextY = ev.clientY
+  if (!rafId) rafId = requestAnimationFrame(updateAnchor)
+}
+
+onBeforeUnmount(() => {
+  if (rafId) cancelAnimationFrame(rafId)
+})
 
 const reference = computed(() => ({
   getBoundingClientRect: () =>
@@ -46,20 +75,20 @@ const reference = computed(() => ({
   <UTooltip
     :disabled
     :open="open"
+    :delay-duration="0"
+    :disable-hoverable-content="true"
     :reference="reference"
-    :arrow
     :ui="{ content: 'z-101' }"
-    :content="{ side, sideOffset, updatePositionStrategy: 'always' }">
+    :content="{
+      side,
+      sideOffset,
+      updatePositionStrategy: 'always',
+    }">
     <div
       :class="cn('', className)"
-      @pointerenter="open = true"
-      @pointerleave="open = false"
-      @pointermove="
-        (ev: PointerEvent) => {
-          anchor.x = ev.clientX
-          anchor.y = ev.clientY
-        }
-      ">
+      @pointerenter="onPointerEnter"
+      @pointerleave="onPointerLeave"
+      @pointermove="onPointerMove">
       <slot>
         <span class="hover:underline">{{ label }}</span>
       </slot>

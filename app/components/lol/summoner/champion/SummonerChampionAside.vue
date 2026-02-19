@@ -23,17 +23,19 @@ const results = computed(() => {
 const champTitle = computed(() =>
   champion.value?.key ? championToTitle[champion.value.key] : undefined
 )
+const route = useRoute()
+const routeRoot = computed(() => `/${route.params.region}/${route.params.slug}`)
 
-const nav = [
+const nav = computed(() => [
   {
     label: summoner.value?.name,
-    to: { name: "summoner-region-slug" },
+    to: routeRoot.value,
   },
   {
     label: "Champions",
-    to: { name: "summoner-region-slug-champions" },
+    to: `${routeRoot.value}/champions`,
   },
-]
+])
 </script>
 
 <template>

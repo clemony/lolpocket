@@ -1,6 +1,16 @@
 <script lang="ts" setup>
-const { class: className } = defineProps<{
+import type { ButtonProps } from "@nuxt/ui"
+
+const {
+  class: className,
+  variant = "ghost",
+  color = "neutral",
+  size = "md",
+} = defineProps<{
   class?: HTMLAttributes["class"]
+  variant?: ButtonProps["variant"]
+  color?: ButtonProps["color"]
+  size?: ButtonProps["size"]
 }>()
 </script>
 
@@ -8,19 +18,24 @@ const { class: className } = defineProps<{
   <Tooltip side="bottom" text="Nexus" :side-offset="16">
     <UButton
       :to="{ name: 'nexus' }"
-      :class="cn('group/logo anchor', className)"
-      color="neutral"
-      variant="solid"
+      :ui="{
+        base: cn('group/logo', className),
+        label: cn(
+          'block font-bold transition-opacity duration-200 group-hover/logo:opacity-100',
+          {
+            'text-[1.4rem]': size === 'md',
+          }
+        ),
+        leadingIcon:
+          'opacity-0 absolute  group-hover/logo:opacity-0 transition-opacity duration-200',
+      }"
+      :color
+      :variant
+      :size
+      label="LP"
+      icon="nexus"
       square
-      tabindex="0"
-      size="md">
-      <h5
-        class="w-fit font-bold opacity-100 transition-all duration-300 group-hover/logo:scale-x-0 group-hover/logo:opacity-0">
-        LP
-      </h5>
-      <Icon
-        class="size-5.5 justify-self-center text-nc opacity-0 transition-all duration-300 group-hover/logo:opacity-100"
-        name="nexus" />
+      tabindex="0">
     </UButton>
   </Tooltip>
 </template>

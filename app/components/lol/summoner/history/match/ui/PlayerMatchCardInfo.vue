@@ -34,13 +34,13 @@ const { match, player } = defineProps<{
         :id="item"
         :key="`${item}${i}`"
         :map="match.mapId"
-        placement="bottom"
+        side="bottom"
         :disabled="!item || item === 0"
         :class="
           cn('size-9 ring-neutral/60 transition-all duration-300 hover:ring', {
-            ' pointer-events-none border border-pc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border':
+            'pointer-events-none border border-pc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border':
               !item,
-            ' bg-dom/16! after:border-dom/20 after:mix-blend-hue': !player.win,
+            'bg-dom/16! after:border-dom/20 after:mix-blend-hue': !player.win,
             'opacity-90': !player.win && !item,
             'bg-insp/16! after:border-insp/20': player.win,
           })
@@ -50,7 +50,7 @@ const { match, player } = defineProps<{
         v-if="match.mapId === 11"
         :id="player.items.role"
         :map="match.mapId"
-        placement="bottom"
+        side="bottom"
         :class="
           cn('img-active ml-2 size-9 rounded-full', {
             'no-img': !player.items.role,

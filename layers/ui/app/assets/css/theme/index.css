@@ -1,5 +1,4 @@
 @import "./theme.css";
-@import "./primary.css";
-@import "./dim.css";
+@import "./base.css";
 @import "./accent.css";
 @import "./daisy.css";

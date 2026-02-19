@@ -16,6 +16,10 @@
   box-shadow: --value(--inset-shadow-*);
 }
 
+@utility text-last-* {
+  text-align-last: --value("start", "end", "center", "justify");
+}
+
 @utility focus-ring {
   @apply relative before:absolute;
   &::before {

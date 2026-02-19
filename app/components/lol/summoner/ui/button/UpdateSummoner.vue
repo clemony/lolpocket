@@ -28,16 +28,12 @@ async function loadNew() {
   console.log("🥸 - message - message:", message)
 }
 const tippy = computed(() => {
-  return (
-    !cooldown.value?.seconds ?
-      summoner?.value?.lastMatchUpdate ?
-        `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
+  return !cooldown.value?.seconds
+    ? summoner?.value?.lastMatchUpdate
+      ? `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
       : "Not updated yet"
     : `${cooldown.value?.seconds} cd`
-  )
 })
-
-console.log("🥸 - summoner?.value:", summoner?.value)
 </script>
 
 <template>
@@ -55,8 +51,7 @@ console.log("🥸 - summoner?.value:", summoner?.value)
         )
       "
       @click="loadNew()">
-      <TransitionScalePop
-        class="relative grid size-full place-items-center overflow-hidden">
+      <div class="relative grid size-full place-items-center overflow-hidden">
         <Icon
           v-if="!cooldown"
           name="reset"
@@ -82,7 +77,7 @@ console.log("🥸 - summoner?.value:", summoner?.value)
             {{ cooldown?.seconds }}
           </span>
         </div>
-      </TransitionScalePop>
+      </div>
     </UButton>
   </Tooltip>
 </template>

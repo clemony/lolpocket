@@ -67,8 +67,6 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               <span
                 v-show="!isCollapsed"
                 class="grow items-center text-xl font-semibold ds-2xs *:first:capitalize">
-                <SummonerName class="inline" />
-                's Inbox
               </span>
               <icon
                 v-show="!isCollapsed"

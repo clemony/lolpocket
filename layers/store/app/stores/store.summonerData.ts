@@ -11,8 +11,8 @@ export const sData = defineStore("summonerData", () => {
   const { matches } = storeToRefs(sMatches())
   const { filteredMatches } = storeToRefs(matchFilter())
 
-  const id = toValue(summoner.value?.puuid)
-  const region = toValue(summoner.value?.region)
+  const id = computed(() => summoner.value?.puuid)
+  const region = computed(() => summoner.value?.region)
 
   const account = computed<Account | null>(() => {
     const puuid = summoner.value?.puuid
@@ -25,25 +25,25 @@ export const sData = defineStore("summonerData", () => {
   const timelines = shallowRef<PlayerTimeline[] | null>([])
 
   async function getTimelines(): Promise<void> {
-    if (!id) return
-    timelines.value = await getAllTimelinesForPuuid(id)
+    if (!id.value) return
+    timelines.value = await getAllTimelinesForPuuid(id.value)
   }
 
   const mastery = shallowRef<ChampionMastery[] | null>([])
 
   async function getMastery(): Promise<void> {
-    if (!id || !region) return
-    mastery.value = await getOrFetchAllMastery(id, region)
+    if (!id.value || !region.value) return
+    mastery.value = await getOrFetchAllMastery(id.value, region.value)
   }
 
   const champions = computed<ChampionStats[] | null>(() => {
-    if (!id) return null
-    return useChampionStats(matches, filteredMatches, id).value
+    if (!id.value) return null
+    return useChampionStats(matches, filteredMatches, id.value).value
   })
 
   const allies = computed<AllyStatDetail[] | null>(() => {
-    if (!id) return null
-    return aggregateAllies(filteredMatches, id).value
+    if (!id.value) return null
+    return aggregateAllies(filteredMatches, id.value).value
   })
 
   const splash = computed(() => {

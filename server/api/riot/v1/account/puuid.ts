@@ -1,3 +1,5 @@
+import { riotFetch } from '#server/api/riot/fetch'
+
 // server/riot/account/getByPuuid.ts
 
 // fetch account using puuid

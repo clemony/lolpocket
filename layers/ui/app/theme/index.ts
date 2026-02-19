@@ -1,5 +1,6 @@
 export { default as accordion } from "./accordion"
 export { default as alert } from "./alert"
+export { default as avatar } from "./avatar"
 export { default as avatarGroup } from "./avatar-group"
 export { default as badge } from "./badge"
 export { default as breadcrumb } from "./breadcrumb"
@@ -78,7 +79,6 @@ export { default as tree } from "./tree"
 export { default as user } from "./user"
 
 /*
-export { default as avatar } from "./avatar"
 export { default as inputDate } from "./input-date"
 export { default as slideover } from "./slideover"
 export { default as progress } from "./progress"

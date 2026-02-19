@@ -5,7 +5,7 @@ import type {
   GridApi,
   GridOptions,
   GridReadyEvent,
-} from 'ag-grid-community'
+} from "ag-grid-community"
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -18,14 +18,15 @@ import {
   RowSelectionModule,
   TooltipModule,
   ValidationModule,
-} from 'ag-grid-community'
-import { AgGridVue } from 'ag-grid-vue3'
+} from "ag-grid-community"
+import { AgGridVue } from "ag-grid-vue3"
+import { masteryGridTheme } from "~~/layers/ui/app/config/masteryTheme"
 
 const { match, player } = defineProps<{
   match: MatchData
   player: Player
 }>()
-const ChampionIcon = resolveComponent('ChampionIcon')
+const ChampionIcon = resolveComponent("ChampionIcon")
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
@@ -34,68 +35,68 @@ const gridOptions: GridOptions<Player> = {
   columnHoverHighlight: false,
   rowData: match.participants,
   rowHeight: 38,
-  tooltipShowMode: 'whenTruncated',
+  tooltipShowMode: "whenTruncated",
   defaultColDef: {
     initialHide: false,
     minWidth: 66,
     autoHeaderHeight: true,
     flex: 1,
     wrapHeaderText: false,
-    cellClass: [''],
-    headerClass: ['sticky top-0'],
-    sortingOrder: ['desc', 'asc', null],
+    cellClass: [""],
+    headerClass: ["sticky top-0"],
+    sortingOrder: ["desc", "asc", null],
   },
 }
 
 const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     cellRenderer: ChampionIcon,
-    field: 'championId',
-    headerName: '',
+    field: "championId",
+    headerName: "",
     tooltipValueGetter: (params: any) =>
       `${params.riotIdGameName} #${params.riotIdTagline}`,
   },
   {
-    headerName: '',
+    headerName: "",
     children: [
-      { field: 'stats.deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
+      { field: "stats.deaths", headerName: "Deaths", headerTooltip: "Deaths" },
       {
-        field: 'stats.assists',
-        headerName: 'Assists',
-        headerTooltip: 'Assists',
+        field: "stats.assists",
+        headerName: "Assists",
+        headerTooltip: "Assists",
       },
-      { field: 'stats.kda', headerName: 'KDA', headerTooltip: 'KDA' },
+      { field: "stats.kda", headerName: "KDA", headerTooltip: "KDA" },
       {
-        field: 'stats.kp',
-        headerName: 'Kill Participation',
-        headerTooltip: 'Kill Participation',
+        field: "stats.kp",
+        headerName: "Kill Participation",
+        headerTooltip: "Kill Participation",
       },
     ],
   },
   {
-    headerName: 'Damage',
-    headerTooltip: 'Damage',
+    headerName: "Damage",
+    headerTooltip: "Damage",
     children: [
       {
-        field: 'stats.totalDamage',
-        headerName: 'Damage to Champions',
-        headerTooltip: 'Damage to Champions',
+        field: "stats.totalDamage",
+        headerName: "Damage to Champions",
+        headerTooltip: "Damage to Champions",
       },
       {
-        field: 'stats.damagePercentage',
-        headerName: 'Team Dmg %',
-        headerTooltip: 'Team Dmg %',
+        field: "stats.damagePercentage",
+        headerName: "Team Dmg %",
+        headerTooltip: "Team Dmg %",
       },
     ],
   },
   {
-    headerName: 'Teamplay',
-    headerTooltip: 'Teamplay',
+    headerName: "Teamplay",
+    headerTooltip: "Teamplay",
     children: [
       {
-        field: 'stats.effectiveHealingAndShielding',
-        headerName: 'Effective Healing & Shielding',
-        headerTooltip: 'Effective Healing & Shielding',
+        field: "stats.effectiveHealingAndShielding",
+        headerName: "Effective Healing & Shielding",
+        headerTooltip: "Effective Healing & Shielding",
       },
     ],
   },
@@ -107,9 +108,9 @@ async function onGridReady(params: GridReadyEvent) {
 }
 
 watch(
-  () => '',
+  () => "",
   (newVal) => {
-    if (newVal && gridApi.value) gridApi.value.setGridOption('rowData', [])
+    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", [])
   }
 )
 
@@ -134,7 +135,7 @@ ModuleRegistry.registerModules([
   RenderApiModule,
 ])
 
-const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
+const masteryGrid = useTemplateRef<HTMLElement>("masteryGrid")
 </script>
 
 <template>

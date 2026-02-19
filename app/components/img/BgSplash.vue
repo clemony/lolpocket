@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useTransform } from 'motion-v'
+import { useTransform } from "motion-v"
 
 const {
   class: className,
   slice,
   src: i,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   src: string | null | undefined
   slice?: boolean
 }>()
@@ -23,9 +23,8 @@ const yPx = useTransform(source, [0, 200], [0, 24])
 const bg = computed(() => {
   if (!i) return undefined
   try {
-    return `url('${img(i, { quality: 100 })}')`
-  }
-  catch {
+    return `url('${img("/img/art/prestige-requiem-sona.jpeg", { quality: 100 })}')`
+  } catch {
     return undefined
   }
 })
@@ -42,7 +41,7 @@ const bg = computed(() => {
         }"
         :class="
           cn(
-            'z-0 h-full w-[36%] -translate-x-[30%] -scale-x-100 bg-fixed bg-no-repeat blur-sm duration-100',
+            'z-0 h-full w-[36%] -translate-x-[30%] -scale-x-100 bg-fixed bg-no-repeat blur-sm duration-100'
           )
         " />
       <div
@@ -52,7 +51,7 @@ const bg = computed(() => {
         }"
         :class="
           cn(
-            'absolute right-0 z-0 h-full w-[74%] mask-l-from-98% bg-size-[80%] bg-fixed bg-no-repeat contrast-110 grayscale-10 duration-100',
+            'absolute right-0 z-0 h-full w-[74%] mask-l-from-98% bg-size-[80%] bg-fixed bg-no-repeat contrast-110 grayscale-10 duration-100'
           )
         " />
       <div

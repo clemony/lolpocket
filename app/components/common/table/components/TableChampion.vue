@@ -16,7 +16,7 @@ const route = useRoute()
     data-theme="mini-tip neutral no-arrow"
     @click="
       navigateTo(
-        `/summoner/${route.params.region}/${route.params.slug}/${champKeyById(params.data.championId)}`
+        `/${route.params.region}/${route.params.slug}/${champKeyById(params.data.championId)}`
       )
     ">
     <img

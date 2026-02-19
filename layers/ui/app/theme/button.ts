@@ -5,7 +5,7 @@ export default {
     leadingAvatarSize: "",
     leadingIcon: "shrink-0",
     trailingIcon: "shrink-0",
-    base: " overflow-hidden font-medium text-xs inline-flex items-center disabled:cursor-not-allowed shrink-0  duration-0 aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 cursor-pointer",
+    base: " overflow-hidden font-medium text-sm inline-flex items-center disabled:cursor-not-allowed shrink-0  duration-0 aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 cursor-pointer group/btn",
   },
   variants: {
     color: {
@@ -38,13 +38,13 @@ export default {
         trailingIcon: "size-5",
       },
       md: {
-        base: "px-2.5 h-10! gap-1.5",
+        base: "px-2.5 h-10! gap-1.5  text-sm ",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4",
-        trailingIcon: "size-5",
+        trailingIcon: "size-4 opacity-60 group-hover/btn:opacity-100",
       },
       sm: {
-        base: "px-2.5 h-8! gap-1.5  ",
+        base: "px-2.5 h-8! gap-1.5  text-sm  ",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
@@ -62,7 +62,7 @@ export default {
         trailingIcon: "size-6",
       },
       xs: {
-        base: "px-2 h-7! min-w-7! gap-1 ",
+        base: "px-2 h-7! min-w-7! gap-1  text-sm ",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
@@ -70,7 +70,10 @@ export default {
     },
     square: {
       true: {
-        base: "anchor   shrink-0 p-0! *:absolute",
+        base: "grid place-items-center aspect-square relative  shrink-0 p-0! ",
+        leadingIcon: "absolute",
+        leadingAvatar: "absolute",
+        label: "hidden",
       },
     },
     variant: {
@@ -83,11 +86,15 @@ export default {
       outline: {
         base: "btn btn-outline hover:inset-shadow-xs ",
       },
+
+      highlight: {
+        base: "btn btn-ghost",
+      },
       ring: {
         base: "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent  hover:inset-shadow-xs ",
       },
       link: {
-        base: "group/link hover:underline inline-flex",
+        base: "group/link hover:underline inline-flex text-pc",
         label: "group-hover/link:underline text-start  font-medium",
       },
     },
@@ -96,7 +103,7 @@ export default {
         base: "",
       },
       true: {
-        base: "btn-active",
+        base: " ",
       },
     },
     fieldGroup: {
@@ -164,16 +171,16 @@ export default {
           "group-hover/btn:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc text-nc **:text-nc",
       },
     },
-    {
-      color: ["p1", "p2", "p3"],
-      variant: "outline",
-      class: {
-        base: "text-pc btn bg-p3 border-none btn-outline  bg-transparent shadow-xs  ring-p3",
-      },
-    },
     /* GHOST */
     {
-      color: ["p0", "p1", "p2", "p3"],
+      color: "p0",
+      variant: "ghost",
+      class: {
+        base: "text-pc btn btn-ghost on:backdrop-blur-sm bg-clip-padding on:btn-active  on:btn-active border-transparent border-3 on:ring on:ring-p0   on:fx-1 active:noise on:noise     on:bg-p0/40!",
+      },
+    },
+    {
+      color: ["p1", "p2", "p3"],
       variant: "ghost",
       class: {
         base: "text-pc btn btn-ghost on:backdrop-blur-sm bg-clip-padding on:btn-active on:fx-1 on:btn-active on:border-p3   on:noise    on:bg-p1",
@@ -183,11 +190,27 @@ export default {
       color: "neutral",
       variant: "ghost",
       class: {
-        base: "btn btn-ghost on:text-nc hover:**:text-nc hover:btn-neutral hover:bg-neutral",
+        base: "btn btn-ghost on:btn-neutral active:btn-neutral   ",
         leadingIcon:
           "group-hover/btn:**:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc ",
         trailingIcon:
           "group-hover/btn:**:text-nc group-active/btn:**:text-nc focus-group-visible/btn:**:text-nc ",
+      },
+    },
+    {
+      color: ["p1", "p2", "p3"],
+      variant: "outline",
+      class: {
+        base: "text-pc btn bg-p3 border-none btn-outline  bg-transparent   ring-p3",
+      },
+    },
+    // highlight
+    {
+      variant: "highlight",
+      class: {
+        base: "hover:bg-p2/60 border-0 on:bg-p2/80! justify-start active:bg-p2/80! rounded-md!",
+        label: "grow",
+        leadingIcon: "text-pc **:text-pc",
       },
     },
     // RING
@@ -203,19 +226,68 @@ export default {
     {
       variant: "link",
       class: {
-        base: "hover:underline group/link px-0",
-        label: "group-hover/link:underline decoration-pc text-pc",
+        base: "px-0",
+        label: "  decoration-pc text-pc",
       },
     },
     {
       color: "neutral",
       variant: "link",
       class: {
-        base: "hover:underline group/link",
-        label: "group-hover/link:underline decoration-nc text-nc",
+        base: "",
+        label: " decoration-nc text-nc",
       },
     },
     /* SHAPE */
+    {
+      size: "3xs",
+      square: true,
+      class: {
+        base: "w-5",
+      },
+    },
+    {
+      size: "2xs",
+      square: true,
+      class: {
+        base: "w-6",
+      },
+    },
+    {
+      size: "xs",
+      square: true,
+      class: {
+        base: "w-7",
+      },
+    },
+    {
+      size: "sm",
+      square: true,
+      class: {
+        base: "w-8",
+      },
+    },
+    {
+      size: "md",
+      square: true,
+      class: {
+        base: "w-10",
+      },
+    },
+    {
+      size: "lg",
+      square: true,
+      class: {
+        base: "w-12",
+      },
+    },
+    {
+      size: "xl",
+      square: true,
+      class: {
+        base: "w-14",
+      },
+    },
     {
       class: {
         base: "rounded-lg",

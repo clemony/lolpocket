@@ -58,117 +58,98 @@ const selectedSpell = computed(
           </div>
         </div>
 
-        <!--     <Transition
-          v-if="selectedSpell"
-          enter-active-class="transition-all duration-500"
-          enter-from-class="opacity-0 -translate-y-2"
-          enter-to-class="opacity-100"
-          leave-active-class="transition-all duration-500"
-          leave-from-class="opacity-100 "
-          leave-to-class="opacity-0 -translate-y-2"
-          mode="out-in">
-              <div
-            v-if="selectedSpell.text"
-            :key="selectedSpell.name"
-            class="pl-4.5 pr-3">
-            <p class="font-serif text-lg leading-9 dst">
-              {{ selectedSpell.text }}
-            </p>
+        <div
+          v-if="selectedSpell.description"
+          :key="selectedSpell.name"
+          class="pr-3 pl-4.5">
+          <p class="dst font-serif text-lg leading-9">
+            {{ selectedSpell.description }}
+          </p>
 
-            <p class="italic w-full flex justify-end mt-6 pr-3 font-thin">
-              —
-              <a
-                :href="`https://wiki.leagueoflegends.com/en-us/${selectedSpell.name}`"
-                target="_blank"
-                class="!font-sans underline-offset-2 hover:underline items-center gap-2 flex flex-nowrap">
-                summary from LolWiki
-                <icon
-                  name="link"
-                  class="mb-1 size-4" />
-              </a>
-            </p>
-          </div>
-        </Transition> -->
+          <p class="mt-6 flex w-full justify-end pr-3 font-thin italic">
+            —
+            <a
+              :href="`https://wiki.leagueoflegends.com/en-us/${selectedSpell.name}`"
+              target="_blank"
+              class="flex flex-nowrap items-center gap-2 font-sans! underline-offset-2 hover:underline">
+              summary from LolWiki
+              <icon name="link" class="mb-1 size-4" />
+            </a>
+          </p>
+        </div>
       </div>
 
-      <Transition
-        enter-active-class="transition-all duration-500"
-        enter-from-class="opacity-0 -translate-y-2"
-        enter-to-class="opacity-100"
-        leave-active-class="transition-all duration-500"
-        leave-from-class="opacity-100 "
-        leave-to-class="opacity-0 -translate-y-2"
-        mode="out-in">
+      <div
+        :key="selectedSpell.name"
+        v-auto-animate
+        class="flex w-160 flex-col gap-14 transition-all duration-300">
         <div
-          :key="selectedSpell.name"
-          class="flex w-160 flex-col gap-14 transition-all duration-300">
-          <div
-            class="flex max-h-min w-full flex-col gap-6 rounded-xl border border-p3/80 px-9 pt-7 pb-8 shadow-smooth transition-all duration-300">
-            <div class="i-c flex w-full gap-6">
-              <img
-                class="size-24 rounded-lg shadow-sm shadow-black/20"
-                :alt="selectedSpell.name.toString()"
-                :src="`/img/spells/${selectedSpell.id}.webp`" />
+          class="flex max-h-min w-full flex-col gap-6 rounded-xl border border-p3/80 px-9 pt-7 pb-8 shadow-smooth transition-all duration-300">
+          <div class="i-c flex w-full gap-6">
+            <img
+              class="size-24 rounded-lg shadow-sm shadow-black/20"
+              :alt="selectedSpell.name.toString()"
+              :src="`/img/spells/${selectedSpell.id}.webp`" />
 
-              <div class="items-between grid h-full py-2">
-                <p class="font-medium">
-                  Summoner
-                </p>
+            <div class="items-between grid h-full py-2">
+              <p class="font-medium">
+                Summoner
+              </p>
 
-                <h1 class="dst text-5xl tracking-tight">
-                  {{ selectedSpell.name }}
-                </h1>
-              </div>
+              <h1 class="dst text-5xl tracking-tight">
+                {{ selectedSpell.name }}
+              </h1>
             </div>
-
-            <!--  <p>{{ selectedSpell.description }}</p>
-
-            <ul class="w-74 space-y-3">
-              <li
-                v-if="selectedSpell.cd"
-                class="grid-cols-2 grid gap-3 items-end">
-                <p class="font-semibold tracking-tight">
-                  Cooldown:
-                </p>
-
-                <p class="font-medium">
-                  {{ selectedSpell.cd }} seconds
-                </p>
-              </li>
-
-              <li
-                v-if="selectedSpell.charges"
-                class="grid-cols-2 grid gap-3 items-end">
-                <p class="font-semibold tracking-tight">
-                  Charges:
-                </p>
-
-                <p class="font-medium">
-                  {{ selectedSpell.charges }}
-                </p>
-              </li>
-
-              <li
-                v-if="selectedSpell.recharge"
-                class="grid-cols-2 grid gap-3 items-end">
-                <p class="font-semibold tracking-tight">
-                  Recharge Time:
-                </p>
-
-                <p class="font-medium">
-                  {{ selectedSpell.recharge }} seconds
-                </p>
-              </li>
-            </ul> -->
           </div>
 
-          <div class="w-full rounded-xl bg-black/90 shadow-pretty">
-            <video-background
-              class="aspect-video h-auto w-90 rounded-xl"
-              :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`" />
-          </div>
+          <p>{{ selectedSpell.description }}</p>
+
+          <ul class="w-74 space-y-3">
+            <li
+              v-if="selectedSpell.cd"
+              class="grid grid-cols-2 items-end gap-3">
+              <p class="font-semibold tracking-tight">
+                Cooldown:
+              </p>
+
+              <p class="font-medium">
+                {{ selectedSpell.cd }} seconds
+              </p>
+            </li>
+
+            <li
+              v-if="selectedSpell.charges"
+              class="grid grid-cols-2 items-end gap-3">
+              <p class="font-semibold tracking-tight">
+                Charges:
+              </p>
+
+              <p class="font-medium">
+                {{ selectedSpell.charges }}
+              </p>
+            </li>
+
+            <li
+              v-if="selectedSpell.recharge"
+              class="grid grid-cols-2 items-end gap-3">
+              <p class="font-semibold tracking-tight">
+                Recharge Time:
+              </p>
+
+              <p class="font-medium">
+                {{ selectedSpell.recharge }} seconds
+              </p>
+            </li>
+          </ul>
         </div>
-      </Transition>
+
+        <div class="w-full rounded-xl bg-black/90 shadow-pretty">
+          <video class="aspect-video h-auto w-90 rounded-xl">
+            <source
+              :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`" />
+          </video>
+        </div>
+      </div>
     </div>
   </div>
 </template>

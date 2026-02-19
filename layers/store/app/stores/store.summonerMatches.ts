@@ -1,9 +1,8 @@
 //
 export const sMatches = defineStore("summonerMatches", () => {
   const { summoner } = storeToRefs(sSession())
-  const sum = toValue(summoner)
-  const id = sum?.puuid
-  const region = sum?.region
+  const id = computed(() => summoner.value?.puuid)
+  const region = computed(() => summoner.value?.region)
 
   const { getCursor, getMatchesForSummoner, putMatchData, setCursor } =
     useIndexedDB()
@@ -27,20 +26,24 @@ export const sMatches = defineStore("summonerMatches", () => {
   }
 
   async function loadFromDB() {
-    if (!id) return
+    const puuid = id.value
+    if (!puuid) return
 
-    const local = await getMatchesForSummoner(id)
+    const local = await getMatchesForSummoner(puuid)
+    console.log("🥸 - loadFromDB - local:", local)
     matches.value = local
     newestTs.value = local[0]?.gameEndTimestamp ?? null
 
-    const storedCursor = await getCursor(id)
+    const storedCursor = await getCursor(puuid)
     cursor.value = storedCursor.lastIndex
   }
 
   watch(
-    () => sum?.puuid,
-    async (next, prev) => {
-      if (!next || next === prev) return
+    () => [id.value, region.value] as const,
+    async ([nextId, nextRegion], prev) => {
+      const [prevId, prevRegion] = prev ?? []
+      if (!nextId) return
+      if (nextId === prevId && nextRegion === prevRegion) return
       reset()
       await loadFromDB()
     },
@@ -48,11 +51,13 @@ export const sMatches = defineStore("summonerMatches", () => {
   )
 
   async function loadNewer() {
-    if (!id || !region || loading.value) return
+    const puuid = id.value
+    const regionId = region.value
+    if (!puuid || !regionId || loading.value) return
 
     loading.value = true
     try {
-      const res = await await fetchNewerMatches(id, cursor.value, region)
+      const res = await fetchNewerMatches(puuid, cursor.value, regionId)
       if (res.matches.length) {
         await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
@@ -64,23 +69,25 @@ export const sMatches = defineStore("summonerMatches", () => {
 
       if (res.cursor != null) {
         cursor.value = res.cursor
-        await setCursor(id, cursor.value)
+        await setCursor(puuid, cursor.value)
       }
 
-      sSummoner().patchSummoner(id, { lastMatchUpdate: Date.now() })
+      sSummoner().patchSummoner(puuid, { lastMatchUpdate: Date.now() })
     } finally {
       loading.value = false
     }
   }
 
   async function loadOlder() {
-    if (!id || !region || loadingOlder.value || endOfHistory.value) {
+    const puuid = id.value
+    const regionId = region.value
+    if (!puuid || !regionId || loadingOlder.value || endOfHistory.value) {
       return
     }
 
     loadingOlder.value = true
     try {
-      const res = await fetchOlderMatches(id, cursor.value, region)
+      const res = await fetchOlderMatches(puuid, cursor.value, regionId)
 
       if (!res.matches.length) {
         endOfHistory.value = true
@@ -92,7 +99,7 @@ export const sMatches = defineStore("summonerMatches", () => {
 
       if (res.cursor != null) {
         cursor.value = res.cursor
-        await setCursor(id, cursor.value)
+        await setCursor(puuid, cursor.value)
       }
 
       if (res.done) endOfHistory.value = true
@@ -100,17 +107,6 @@ export const sMatches = defineStore("summonerMatches", () => {
       loadingOlder.value = false
     }
   }
-
-  // 🔑 identity change = explicit reset
-  watch(
-    () => id,
-    async (next, prev) => {
-      if (!next || next === prev) return
-      reset()
-      await loadFromDB()
-    },
-    { immediate: true }
-  )
 
   return {
     endOfHistory,

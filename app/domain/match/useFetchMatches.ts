@@ -6,12 +6,13 @@ export async function useFetchMatches(summoner: Summoner) {
 
   // Get all matches already stored for this summoner
   const existingIds = await getAllMatchIdsForPuuid(summoner.puuid)
+  void existingIds
 
   // Ask server for new matches
   const { matches: newMatches } = await $fetch<MatchReturn>(
-    "/riot/v5/match/batch",
+    "/api/riot/v5/match/newer",
     {
-      params: { puuid: summoner.puuid, existingIds, region: summoner.region },
+      params: { puuid: summoner.puuid, region: summoner.region, since: 0 },
     }
   )
 
@@ -27,7 +28,7 @@ export async function useFetchMatches(summoner: Summoner) {
       ;(async () => {
         try {
           const res = await $fetch<{ ranked: Summoner["ranked"] }>(
-            "/riot/v4/league/entries/byPuuid",
+            "/api/riot/v4/league/entries/puuid",
             {
               params: { puuid: summoner.puuid, region: summoner.region },
             }

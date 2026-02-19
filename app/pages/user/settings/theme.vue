@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ListboxContent, ListboxRoot } from "reka-ui"
-
+import { colorModes } from "#layers/ui/app/config/colorMode"
 definePageMeta({
   title: "Theme",
   description: "Choose your app interface colors.",

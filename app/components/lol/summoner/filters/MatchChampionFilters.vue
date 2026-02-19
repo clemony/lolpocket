@@ -56,7 +56,9 @@ const championList = computed(() =>
                   <span> {{ item.win }} win </span>
                   <span> {{ item.loss }} loss </span>
                 </div>
-                <ChampWinrate :champion="item" class="-translate-y-px" />
+                <div class="size-12">
+                  <ChampWinrate :champion="item" />
+                </div>
               </template>
             </UButton>
           </ListboxItem>

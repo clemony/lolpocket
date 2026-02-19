@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { isTextSelection } from '@tiptap/core';
-import type { Editor } from '@tiptap/vue-3';
-import { BubbleMenu } from '@tiptap/vue-3/menus';
+import { isTextSelection } from "@tiptap/core"
+import type { Editor } from "@tiptap/vue-3"
+import { BubbleMenu } from "@tiptap/vue-3/menus"
 
-const { editor, } = defineProps<{
+const { editor } = defineProps<{
   editor: Editor | null
 }>()
 
@@ -23,8 +23,8 @@ function shouldShow() {
 
     if (forceShow.value) return true
 
-    const isEmptyTextBlock
-      = !doc.textBetween(from, to).length && isTextSelection(state.selection)
+    const isEmptyTextBlock =
+      !doc.textBetween(from, to).length && isTextSelection(state.selection)
 
     if (!view.hasFocus() || empty || isEmptyTextBlock) return false
 
@@ -43,8 +43,7 @@ function triggerBubbleMenu() {
   if (forceShow.value && triggerEl.value) {
     const rect = triggerEl.value.getBoundingClientRect()
     virtualRect.value = () => rect
-  }
-  else {
+  } else {
     virtualRect.value = null
     forceHide.value = true
   }
@@ -53,7 +52,7 @@ function triggerBubbleMenu() {
 function toggleListType() {
   if (!editor) return
   const chain = editor.chain().focus()
-  if (editor.isActive('bulletList')) chain.toggleOrderedList()
+  if (editor.isActive("bulletList")) chain.toggleOrderedList()
   else chain.toggleBulletList()
   chain.run()
 }
@@ -66,7 +65,6 @@ function toggleListType() {
     :should-show="shouldShow()"
     data-inertia
     :get-reference-client-rect="virtualRect || undefined"
-    :data-theme="theme"
     :class="cn('px-1.5')"
     :options="{ placement: 'top', offset: 8 }">
     <EditorMenu :editor />
@@ -76,7 +74,6 @@ function toggleListType() {
     v-if="editor && shouldShow()"
     :editor
     data-inertia
-    :data-theme="theme"
     :class="cn('px-1.5')"
     :should-show="
       () => editor?.isActive('bulletList') || editor?.isActive('orderedList')
@@ -84,11 +81,7 @@ function toggleListType() {
     :get-reference-client-rect="virtualRect || undefined"
     :options="{ placement: 'top-start', offset: 8 }">
     <div class="bubble-menu">
-      <UButton
-        variant="outline"
-        on="inset"
-        square
-        @click="toggleListType">
+      <UButton variant="outline" on="inset" square @click="toggleListType">
         Toggle list type
       </UButton>
     </div>

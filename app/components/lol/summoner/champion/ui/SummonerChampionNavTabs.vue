@@ -6,52 +6,40 @@ const { scrollY } = useScrollInject()
 // const tt = await tabTransform()
 
 const items = [
-  {
-    name: "summoner-region-slug",
-    title: "Match History",
-  },
-  { name: "summoner-region-slug-champions", title: "Champions" },
-
-  { name: "summoner-region-slug-pockets", title: "Pockets" },
-  { name: "summoner-region-slug-live", title: "Live" },
+  { path: "", title: "Match History" },
+  { path: "/champions", title: "Champions" },
+  { path: "/pockets", title: "Pockets" },
+  { path: "/live", title: "Live" },
 ]
-const filteredItems = computed(() =>
-  !session().openChampionTab ?
-    items.filter((i) => i.name !== "summoner-region-slug-champion_key")
-  : items
-)
 
 const route = useRoute()
-function navigate() {
-  if (route.name === "summoner-region-slug-champion_key")
-    navigateTo({ name: "summoner-region-slug-champions" })
-  session().openChampionTab = null
+const routeRoot = computed(() => `/${route.params.region}/${route.params.slug}`)
+const isChampionDetail = computed(() => Boolean(route.params.champion_key))
+
+function isActive(path: string) {
+  if (path === "/champions") {
+    return (
+      route.path === `${routeRoot.value}/champions` || isChampionDetail.value
+    )
+  }
+  return route.path === `${routeRoot.value}${path}`
 }
 </script>
 
 <template>
   <motion.nav
-    role="tablist"
     :class="
       cn(
-        'relative z-3 flex h-15 w-fit translate-x-10 items-end border-b-0! transition-none *:select-none **:text-sm'
+        'relative z-3 flex h-15 w-fit translate-x-10 items-end transition-none *:select-none **:text-sm'
       )
     ">
     <ChampionNavTab
-      v-for="(item, i) in filteredItems"
+      v-for="(item, i) in items"
       :key="i"
-      :route-name="item.name"
-      @click="
-        navigateTo({
-          name: item.name,
-          params: { champion_key: session().openChampionTab },
-        })
-      ">
+      :active="isActive(item.path)"
+      @click="navigateTo(`${routeRoot}${item.path}`)">
       <Icon
-        v-if="
-          route.name === 'summoner-region-slug-champion_key' &&
-            item.name === 'summoner-region-slug-champions'
-        "
+        v-if="isChampionDetail && item.path === '/champions'"
         class="absolute -left-6 size-3.75 **:stroke-[2.4]"
         name="left" />
       {{ item.title }}

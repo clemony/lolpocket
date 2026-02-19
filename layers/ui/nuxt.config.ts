@@ -15,6 +15,14 @@ const customCollections = fs
   }))
 
 export default defineNuxtConfig({
+  icon: {
+    provider: "server",
+    customCollections,
+    size: "18px",
+    serverBundle: {
+      collections: ["lucide"],
+    },
+  },
   $meta: { name: "ui" },
   modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/icon"],
 
@@ -30,14 +38,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  icon: {
-    provider: "server",
-    customCollections,
-    size: "18px",
-    serverBundle: {
-      collections: ["lucide"],
-    },
-  },
 
   // UI
   fonts: {
@@ -91,6 +91,7 @@ export default defineNuxtConfig({
         "pre",
         "sorc",
         "transparent",
+        "default",
       ],
     },
   },

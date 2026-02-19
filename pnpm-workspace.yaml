@@ -8,8 +8,8 @@ overrides:
   semver: 7.5.4
 
 onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
+  - "@parcel/watcher"
+  - "@tailwindcss/oxide"
   - esbuild
   - re2
   - sharp

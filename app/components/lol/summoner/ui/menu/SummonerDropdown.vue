@@ -36,9 +36,11 @@ function handleBlock() {
         base: 'w-74 rounded-lg px-4 justify-between hover:bg-p0/70',
       }">
       <span class="inline-flex items-center gap-2 align-baseline">
-        <SummonerName class="truncate text-xl font-bold" :summoner />
+        <h1 class="truncate text-xl font-bold">
+          {{ summoner?.name }}
+        </h1>
 
-        <SummonerTag class="truncate font-medium" :summoner />
+        <SummonerId type="tag" class="truncate font-medium" :summoner />
       </span>
       <LazySummonerIcon
         class="ml-2 size-7! rounded-full shadow-sm drop-shadow-sm"

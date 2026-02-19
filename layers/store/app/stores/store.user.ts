@@ -9,11 +9,11 @@ export const user = defineStore(
     const settings = ref<Settings>()
     const inbox = ref<Inbox>()
 
-    const ss = sSummoner()
+    const { cache } = storeToRefs(sSummoner())
 
     watch(
       () =>
-        (ss.cache.value as Record<string, Summoner> | undefined)?.[
+        (cache.value as Record<string, Summoner> | undefined)?.[
           account.value?.puuid ?? ""
         ],
       (update) => {

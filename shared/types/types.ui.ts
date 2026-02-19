@@ -1,4 +1,13 @@
-import type { ButtonProps } from "@nuxt/ui"
+import type {
+  AvatarProps,
+  ButtonProps,
+  CardProps,
+  DropdownMenuItem,
+  NavigationMenuItem,
+  TabsItem,
+} from "@nuxt/ui"
+
+import type { Orientation as ChOr } from "vue-chrts/enums"
 
 export type Side = "top" | "right" | "bottom" | "left"
 export type Direction = "left" | "right" | "down" | "up"
@@ -23,9 +32,14 @@ export interface IconObject {
   modifier?: IconObject
 }
 
-/* export type AutoSizeStrategy
-  = | SizeColumnsToFitGridStrategy
-    | SizeColumnsToFitProvidedWidthStrategy
-    | SizeColumnsToContentStrategy */
-
+export type ChartOrientation = ChOr
 export type ChartMode = "scatter" | "heatmap" | "bubble" | "donut"
+
+export interface NavButtonProps extends ButtonProps {
+  value?: string
+  id?: string
+  open?: boolean
+  kbds?: string[]
+  as?: "card" | "button" | "separator"
+  description?: string
+}

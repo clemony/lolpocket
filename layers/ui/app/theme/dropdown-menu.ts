@@ -2,22 +2,13 @@ export default {
   slots: {
     arrow: "fill-p0",
     content: [
-      "min-w-32 shadow-lg shadow-black/8 drop-shadow-sm drop-shadow-black/6 rounded-lg ring  overflow-hidden z-99  origin-(--reka-dropdown-menu-content-transform-origin) flex flex-col select-none   transition-discrete  overflow-hidden bg-transparent",
-
-      //reset
-      "data-[state=open]:animate-none  data-[state=closed]:animate-none",
-      //bottom
-      "data-[state=open]:animate-shift-toward-bottom-enter data-[state=open]:animate-shift-toward-bottom-enter data-[state=open]:animate-in",
-      //left
-      "data-[state=open]:data-[side=left]:animate-shift-toward-left-enter data-[state=closed]:data-[side=left]:animate-shift-toward-left-exit",
-      //right
-      "data-[state=open]:data-[side=right]:animate-shift-toward-right-enter data-[state=closed]:data-[side=right]:animate-shift-toward-right-exit",
+      "min-w-32 shadow-lg shadow-black/8 drop-shadow-sm drop-shadow-black/6 rounded-lg ring  overflow-hidden z-99  origin-(--reka-dropdown-menu-content-transform-origin) flex flex-col select-none    !  overflow-hidden  t",
     ],
     group: "p-1 isolate",
     item: "group relative w-full flex items-center select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemDescription: "truncate text-p1",
     itemLabel: "truncate font-medium",
-    itemLabelExternalIcon: "inline-block size-3.25 align-top text-n5",
+    itemLabelExternalIcon: "inline-block size-2.75 ml-px align-[2px] text-pc",
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
     itemLeadingIcon: "shrink-0",
@@ -28,7 +19,7 @@ export default {
     itemTrailingKbdsSize: "",
     itemWrapper: "flex-1 flex flex-col text-start min-w-0",
     label: "w-full flex items-center font-semibold text-xs opacity-50 ",
-    viewport: "divide-y scroll-py-1 overflow-y-auto flex-1",
+    viewport: "divide-y scroll-py-1 overflow-y-auto flex-1  bg-p0",
   },
   variants: {
     color: {

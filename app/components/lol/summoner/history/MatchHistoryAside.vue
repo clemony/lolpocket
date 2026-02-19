@@ -21,6 +21,7 @@ onMounted(() => {
         className
       )
     ">
+    <UpdateSummoner />
     <RankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
 
     <RankCard title="Flex" :entry="summoner?.ranked?.flex" />

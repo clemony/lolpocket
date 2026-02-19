@@ -1,23 +1,44 @@
 <script lang="ts" setup>
-const colorMode = useColorMode()
+import {
+  colorModeIconClass,
+  colorModes,
+} from "~~/layers/ui/app/config/colorMode"
+
+const emit = defineEmits(["updateMode"])
+
+const m = useColorMode()
+
+const mode = computed(() => {
+  return colorModes.map((c) => ({
+    value: c,
+    icon: `i-${c}`,
+    label: c,
+    ui: {
+      item: cn(
+        "group/mode btn relative h-11 bg-p0 noise py-3 pl-3 text-pc **:text-pc",
+        m.preference === "system" ? m.value : c
+      ),
+    },
+  }))
+})
 </script>
 
 <template>
-  <UTabs
-    v-model:model-value="colorMode.preference"
-    rounded
-    color="neutral"
+  <URadioGroup
+    v-model:model-value="m.preference"
     :ui="{
-      root: 'h-6.5 py-0 px-px',
-      list: 'h-6.5 gap-0  justify-between py-0 px-1 flex justify-evenly items-center bg-transparent! w-30 border-n5/30  ',
-      trigger:
-        'h-full w-auto ring-6 ring-transparent bg-clip-padding hover:bg-p3 hover:inset-shadow-xs rounded-lg border-transparent border-2 aspect-square',
-      indicator:
-        'scale-90 self-center rounded-lg ds-xs h-full w-auto aspect-square ',
-      leadingIcon: 'size-3.75',
+      label: 'capitalize flex gap-2',
     }"
-    value-key="label"
-    :default-value="colorMode.value"
-    orientation="horizontal"
-    @click.stop />
+    indicator="end"
+    variant="card"
+    default-value="system"
+    :items="mode"
+    @update:model-value="user().settings?.theme === m.preference">
+    <template #label="{ item }">
+      <Icon
+        :name="item.icon"
+        :class="cn('size-4', colorModeIconClass[item.label])" />
+      {{ item.label }}
+    </template>
+  </URadioGroup>
 </template>

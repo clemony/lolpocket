@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { modeQuote } from "~~/layers/ui/app/config/colorMode"
+
 const { mode, class: className } = defineProps<{
   mode: string
   class?: HTMLAttributes["class"]
@@ -44,9 +46,7 @@ const quote = computed(() => modeQuote[mode])
       <h4 class="leading-8 font-bold capitalize">
         {{ mode }}
       </h4>
-      <p class="h-9 leading-5 text-pretty italic">
-        '{{ quote?.quote }}'
-      </p>
+      <p class="h-9 leading-5 text-pretty italic">'{{ quote?.quote }}'</p>
       <p class="pr-4 text-end text-sm/4 text-pretty italic opacity-80">
         —{{ quote?.source }}
       </p>
@@ -58,9 +58,7 @@ const quote = computed(() => modeQuote[mode])
       </div>
     </div>
     <div class="mt-3 tracking-wide text-pc opacity-90 *:leading-3.5">
-      <p class="text-[8px] font-semibold uppercase">
-        lolpocket quote
-      </p>
+      <p class="text-[8px] font-semibold uppercase">lolpocket quote</p>
     </div>
   </UCard>
 </template>

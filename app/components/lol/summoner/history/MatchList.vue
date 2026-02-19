@@ -7,6 +7,7 @@ const emit = defineEmits(["scroll-top"])
 
 const store = matchFilter()
 const { filteredMatches } = storeToRefs(store)
+console.log("🥸 - filteredMatches:", filteredMatches)
 
 const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 

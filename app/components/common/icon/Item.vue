@@ -16,38 +16,33 @@ const {
 }>()
 
 const loaded = shallowRef<boolean>(false)
-const swap = shallowRef<boolean>(false)
-function handleSwap() {}
+/* const swap = shallowRef<boolean>(false)
+function handleSwap() {} */
 </script>
 
 <template>
   <Tooltip
-    :disabled="disabled || swap"
+    :disabled="disabled"
     :text="id ? itemNameById(id) : ''"
     trailing-icon="i-right-click"
     :img="id ? `/img/items/${id}.webp` : undefined"
     :side>
-    <UTooltip :disabled="disabled || !swap" :side>
-      <Img
-        role="button"
-        :class="
-          cn(
-            'overflow-hidden rounded-lg',
-            {
-              'opacity-96 shadow-sm shadow-black/30 drop-shadow-sm':
-                id && loaded,
-            },
-            className
-          )
-        "
-        :src="id ? `/img/items/${id}.webp` : undefined"
-        :alt="id ? itemNameById(id) : 'item icon'"
-        :loading-type
-        @click.right="handleSwap()"
-        @load="loaded = true" />
-      <template #content>
-        <ItemTooltip v-if="id && swap" :id />
-      </template>
-    </UTooltip>
+    <!--    <UTooltip :disabled="disabled || !swap" :side> -->
+    <Img
+      :class="
+        cn(
+          'overflow-hidden rounded-lg',
+          {
+            'opacity-96 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
+          },
+          className
+        )
+      "
+      :src="id ? `/img/items/${id}.webp` : undefined"
+      :alt="id ? itemNameById(id) : 'item icon'"
+      :loading-type
+      @load="loaded = true" />
+    <!--
+      @click.right="handleSwap()"   </UTooltip> -->
   </Tooltip>
 </template>

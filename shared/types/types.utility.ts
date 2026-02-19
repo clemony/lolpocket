@@ -9,6 +9,12 @@ export interface ParseState {
   str: string
 }
 
-export type SortDirection = 'asc' | 'desc'
+export type SortDirection = "asc" | "desc"
 
-export type LocaleOptions =  'de' | 'en' | 'fr'
+export type LocaleOptions = "de" | "en" | "fr"
+
+export interface Label {
+  name?: string
+  color?: string
+  value?: string | number
+}

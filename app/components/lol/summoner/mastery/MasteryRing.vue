@@ -7,7 +7,7 @@ const props = withDefaults(
     mastery?: number // your gradient theme
     speed?: number // rotation duration
     particles?: boolean
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
   }>(),
   {
     particles: true,
@@ -27,7 +27,9 @@ const strokeOffset = computed(
 
 // unique mask id (important!)
 const _uid = crypto.randomUUID()
-const mastery = computed(() => (props.mastery ?? 0) >= 10 ? 10 : (props.mastery ?? 0))
+const mastery = computed(() =>
+  (props.mastery ?? 0) >= 10 ? 10 : (props.mastery ?? 0)
+)
 </script>
 
 <template>
@@ -35,7 +37,7 @@ const mastery = computed(() => (props.mastery ?? 0) >= 10 ? 10 : (props.mastery 
     :class="
       cn(
         'mastery-ring mastery-gradient relative inline-block -rotate-90 rounded-full bg-p2',
-        props.class,
+        props.class
       )
     "
     :style="{ width: `${size}px`, height: `${size}px` }">
@@ -100,5 +102,5 @@ const mastery = computed(() => (props.mastery ?? 0) >= 10 ? 10 : (props.mastery 
 </template>
 
 <style scoped>
-@import '#layers/ui/app/assets/css/components/mastery-progress.css';
+@import "#layers/ui/app/assets/css/components/mastery-progress.css";
 </style>

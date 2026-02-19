@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import type { NavigationMenuItem } from "@nuxt/ui"
+import type { ArrayOrNested, NavigationMenuItem, PageLink } from "@nuxt/ui"
 import { contactInfo } from "~/domain/lp/contact/contactInfo"
 import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
+import { backpackNav, libraryNav } from "~/utils/routes"
 
 const { copied, copy, isSupported, text } = useClipboard({
   source: contactInfo.support?.to ?? "",
@@ -22,39 +23,40 @@ const contactLinks = computed(() =>
   )
 )
 
-const nav = computed(() => {
-  const center: Record<string, NavigationMenuItem> = {}
-  const left: Record<string, NavigationMenuItem> = {}
-
-  const backpack = buildRoute("/backpack")
-  const tools = buildRoute("/tools")
-  const nexus = buildRoute("/nexus")
-  const library = buildRoute("/library")
-
-  if (backpack) center.backpack = backpack as NavigationMenuItem
-  if (tools) center.tools = tools as NavigationMenuItem
-  if (nexus) left.nexus = nexus as NavigationMenuItem
-  if (library) left.library = library as NavigationMenuItem
-
-  return { center, left }
-})
+/* const right = computed(() =>
+  backpackNav
+    .filter((c: PageLink) => c?.label === "")
+    .map((l: PageLink) => ({
+      label: l.label,
+    }))
+) */
+const right = computed(() =>
+  ["champions", "items", "runes", "spells"].map((p) => ({
+    label: p,
+    to: `/${p}`,
+  }))
+)
 </script>
 
 <template>
   <UFooter
     :ui="{
-      root: ' bg-secondary before:z-0 before:size-full overflow-hidden relative before:absolute   z-1 *:z-1',
-      top: 'mx-auto',
+      root: ' bg-secondary before:z-0  before:size-full  relative before:absolute z-1 *:z-1',
+      top: 'mx-auto h-90  overflow-hidden',
       bottom:
         'h-20 bg-neutral text-nc max-h-20 min-h-20 border-t-neutral justify-between flex',
     }">
     <template #top>
       <UFooterColumns :ui="{ root: 'w-(--ui-container) mx-auto' }">
         <template #left>
-          <SiteMap :group="nav.left" />
+          <ULink underline to="/nexus" name="Nexus" />
+          <!--      <UPageLinks title="Library" :links="libraryNav" /> -->
         </template>
-        <SiteMap :group="nav.center" />
         <template #right>
+          <UPageLinks
+            :ui="{ title: 'text-2xl font-bold', list: 'capitalize' }"
+            title="Library"
+            :links="right" />
           <LocaleSelect />
         </template>
       </UFooterColumns>
@@ -67,9 +69,7 @@ const nav = computed(() => {
           :ui="{ base: 'shrink-0' }"
           color="neutral"
           size="xl">
-          <h1 class="shrink-0 text-4xl leading-none font-bold">
-            LP
-          </h1>
+          <h1 class="shrink-0 text-4xl leading-none font-bold">LP</h1>
         </UButton>
 
         <p class="text-xs leading-4.5">

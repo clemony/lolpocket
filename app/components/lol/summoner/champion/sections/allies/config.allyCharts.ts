@@ -1,5 +1,5 @@
-import type { EChartsOption } from 'echarts'
-import { buildAllyBubbleOptions, buildAllyBubbleSeries } from '.'
+import type { EChartsOption } from "echarts"
+import { buildAllyBubbleOptions, buildAllyBubbleSeries } from "."
 
 export interface AllyDataPoint {
   allyPuuid: string
@@ -19,13 +19,13 @@ interface AllyChartData {
   option: Ref<EChartsOption>
 }
 
-const magicTypes = ['scatter', 'heatmap'] as const
+const magicTypes = ["scatter", "heatmap"] as const
 
 export function buildAllyChart(
   points: AllyDataPoint[],
   colorMap: Map<string, string>
 ): AllyChartData {
-  const chartMode = ref<ChartMode>('bubble')
+  const chartMode = ref<ChartMode>("bubble")
 
   const maxChampionDelta = computed(() => {
     return {
@@ -53,7 +53,7 @@ export function buildAllyChart(
       },
       title: {
         left: 10,
-        text: 'Ally Delta by Winrate',
+        text: "Ally Delta by Winrate",
         top: 10,
         z: 20,
       },
@@ -64,7 +64,7 @@ export function buildAllyChart(
           minSpan: 10,
           moveOnMouseWheel: false,
           start: 0,
-          type: 'inside',
+          type: "inside",
           zoomOnMouseWheel: true,
           xAxisIndex: [0],
         },
@@ -73,7 +73,7 @@ export function buildAllyChart(
           minSpan: 10,
           moveOnMouseWheel: false,
           start: 0,
-          type: 'inside',
+          type: "inside",
           zoomOnMouseWheel: true,
           yAxisIndex: [0],
         },
@@ -102,7 +102,7 @@ export function buildAllyChart(
         },
       },
       tooltip: {
-        backgroundColor: 'transparent',
+        backgroundColor: "transparent",
         formatter: ({ data }: any) => `
       <ul class="**:text-sm! flex flex-col gap-0 rounded-lg overflow-hidden w-40 max-w-40 bg-neutral/80 backdrop-blur-md text-nc/90 py-2 *:w-full *:px-2 **:not-first:font-medium [&_.stat]:flex [&_.stat]:items-center overflow-hidden [&_.stat]:justify-between [&_.stat]:*:first:font-semibold [&_.stat]:flex-nowrap [&_.stat]:py-0  ">
         <li class="font-bold max-w-full w-full flex"><span class="truncate">${data.allyName}</span><span class="w-fit"> #${data.allyTag}</span></li>
@@ -125,33 +125,3 @@ export function buildAllyChart(
     option,
   }
 }
-
-/*   const heatmapSeries = buildAllyHeatmapSeries(points)
-
-  const activeSeries = computed(() => {
-    switch (chartMode.value) {
-      case "heatmap":
-        return {
-          series: heatmapSeries,
-          option: allyHeatMapOptions,
-        }
-      case "bubble":
-      default:
-        return {
-          series: bubbleSeries,
-          option: buildAllyBubbleOptions(maxChampionDelta.value),
-        }
-    }
-  }) */
-/*  magicType: {
-            show: false,
-            type: ["line", "bar"],
-            title: {
-              line: "Bubble",
-              bar: "Heatmap",
-            },
-            icon: {
-              line: scatterChart,
-              bar: heatmap,
-            },
-          }, */

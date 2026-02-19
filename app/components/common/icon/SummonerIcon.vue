@@ -12,14 +12,17 @@ const {
   alt?: string
 }>()
 
-const resolvedIcon = computed(
-  () => iconId ?? summoner?.icon ?? user().account?.icon ?? 0
-)
+const resolvedIcon = computed(() => iconId ?? summoner?.icon ?? null)
 </script>
 
 <template>
   <Img
-    :src="getSummonerIcon(resolvedIcon)"
+    v-if="resolvedIcon"
+    src="/img/art/prestige-requiem-sona-icon.jpeg"
     alt="summoner icon"
     :class="cn('pointer-events-none', className)" />
+  <!-- "getSummonerIcon(resolvedIcon)" -->
+  <div v-else class="size-full bg-p1">
+    <Icon name="" class="" />
+  </div>
 </template>

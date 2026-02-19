@@ -27,7 +27,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
 definePageMeta({
   id: "8e12p21b-2f27-43b0-b7e7-77c49bbe972d",
   title: "Nexus",
-  abbr: "Nx",
+  layout: "default",
   icon: "nexus",
   listClass: "!size-5.75 **:stroke-[1.6]",
   order: 1,
@@ -36,7 +36,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex size-full flex-col items-center pt-8">
+  <div class="flex size-full flex-col items-center">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>

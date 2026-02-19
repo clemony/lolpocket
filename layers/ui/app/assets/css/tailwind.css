@@ -8,38 +8,6 @@
 @import "./classes.css";
 @import "./animation.css";
 
-@theme inline {
-  --color-p0: var(--ui-p0);
-  --color-p1: var(--ui-p1);
-  --color-p2: var(--ui-p2);
-  --color-p3: var(--ui-p3);
-  --color-p4: var(--ui-p4);
-  --color-p5: var(--ui-p5);
-  --color-pc: var(--ui-pc);
-
-  --color-n5: var(--ui-n5);
-  --color-n4: var(--ui-n4);
-  --color-n3: var(--ui-n3);
-  --color-n2: var(--ui-n2);
-  --color-n1: var(--ui-n1);
-
-  --color-n0: var(--ui-n0);
-  --color-neutral: var(--ui-neutral);
-  --color-nc: var(--ui-nc);
-
-  --color-legendary: var(--ui-legendary);
-  --color-info: var(--ui-sorc);
-  --color-success: var(--ui-res);
-  --color-warning: var(--ui-pre);
-  --color-error: var(--ui-dom);
-
-  --color-pre: var(--ui-pre);
-  --color-dom: var(--ui-dom);
-  --color-sorc: var(--ui-sorc);
-  --color-res: var(--ui-res);
-  --color-insp: var(--ui-insp);
-}
-
 @layer base {
   :root {
     font-size: 12px;
@@ -52,7 +20,8 @@
     @apply border-p3 decoration-from-font underline-offset-2 antialiased;
   }
 
-  img {
+  img,
+  div {
     @apply select-none;
   }
 
@@ -71,5 +40,44 @@
   textarea,
   .reset-input {
     @apply border-transparent ring-0 ring-offset-0 outline-0 focus:ring-0 focus:outline-0;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-xxl;
+  }
+
+  h4 {
+    @apply text-xl font-semibold antialiased ds-2xs select-none;
+  }
+
+  h5 {
+    @apply text-lg antialiased select-none;
+  }
+
+  h6 {
+    @apply flex gap-3 text-sm font-semibold text-[var(--color-pc)]/50 antialiased select-none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold antialiased ds-2xs select-none;
+  }
+  p {
+    @apply leading-5 antialiased;
+  }
+
+  span {
+    @apply antialiased;
   }
 }

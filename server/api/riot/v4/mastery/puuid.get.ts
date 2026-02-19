@@ -1,4 +1,5 @@
 import { apiPath } from '#server/domain'
+import { riotFetch } from '#server/api/riot/fetch'
 
 export default defineEventHandler(async (event) => {
   const { puuid, region } = getQuery(event)

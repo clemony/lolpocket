@@ -63,11 +63,9 @@ const alliesList = computed(() =>
                     {{ Number(item.games) - Number(item.win) }} loss
                   </span>
                 </div>
-
-                <ChampWinrate
-                  v-if="item.games"
-                  :ally="item"
-                  class="-translate-y-px" />
+                <div class="size-12">
+                  <ChampWinrate v-if="item.games" :ally="item" :size="32" />
+                </div>
               </template>
             </UButton>
           </ListboxItem>

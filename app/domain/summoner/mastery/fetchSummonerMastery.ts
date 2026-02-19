@@ -23,7 +23,7 @@ export async function fetchSummonerMastery(puuid: string, region: string) {
   }
 
   const result = await $fetch<ChampionMasteryResponse>(
-    '/riot/v4/mastery/byPuuid',
+    '/api/riot/v4/mastery/puuid',
     {
       query: { puuid, region },
     }

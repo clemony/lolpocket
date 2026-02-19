@@ -5,7 +5,7 @@ export default {
     container: "flex items-center sh-sm  cursor-pointer",
     thumb:
       "group pointer-events-none rounded-full bg-p0 shadow-lg ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center",
-    icon: "absolute shrink-0 group-data-[state=unchecked]:text-dimmed opacity-0 size-10/12",
+    icon: "absolute shrink-0 group-data-[state=unchecked]:text-dimmed opacity-0 size-10/12 ",
     wrapper: "ms-2",
     label: "block cursor-pointer  font-medium leading-none text-pc",
     description: "text-muted",

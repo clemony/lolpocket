@@ -1,12 +1,14 @@
 <script lang="ts" setup>
-import { LibraryItemGrid } from "#components"
+import { LibraryItemGrid, LibraryItemTable } from "#components"
 import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
 
 definePageMeta({
   title: "Items",
+  layout: false,
   description: "A full list of items and stat details.",
   icon: "i-ability-melee",
   navClass: "size-5",
+  path: "/items",
 })
 
 const quote = computed(() => getRandom(itemQuotes))
@@ -33,46 +35,84 @@ const ranks = computed<ArrayOrNested<TabsItem>>(() => [
 
 const tabModel = shallowRef<Component>(LibraryItemGrid)
 
-const open = shallowRef<boolean>(true)
+const tabs = shallowRef<number>(0)
+const tabData = [
+  {
+    value: 0,
+    icon: "i-lucide-layout-grid",
+    component: LibraryItemGrid,
+  },
+  {
+    value: 1,
+    icon: "i-lucide-table-2",
+    component: LibraryItemTable,
+  },
+]
+
+const collapsed = useState("collapsed-state")
+
+watch(
+  () => collapsed.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
 </script>
 
 <template>
-  <UPage v-auto-animate class="pl-1">
-    <template #left>
-      <UPageAside>
-        <ItemFilterSidebar @update-tab="(e) => (tabModel = e)" />
-      </UPageAside>
+  <NuxtLayout name="library-dashboard">
+    <template #sidebar-left-header>
+      <UTabs
+        v-model:model-value="tabs"
+        :orientation="collapsed ? 'vertical' : 'horizontal'"
+        :items="Object.values(tabData)"
+        :size="collapsed ? 'md' : 'sm'"
+        color="neutral"
+        :ui="{
+          root: 'grow',
+        }"
+        :variant="collapsed ? 'outline' : 'pill'"
+        :default-value="tabs" />
     </template>
-    <UPageHeader title="Items" :description="quote" headline="Library">
-      <template #headline>
-        <div class="flex items-center gap-1">
-          <UButton
-            size="2xs"
-            square
-            variant="ghost"
-            :icon="open ? 'i-collapse' : 'i-expand'" />
-          <span>Library</span>
-        </div>
-      </template>
-      <template #links>
-      </template>
-    </UPageHeader>
-    <UPageBody>
-      <div
-        class="sticky top-15 z-2 -mt-4 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
-        <UTabs
-          v-model:model-value="is().filters.rank"
-          :items="ranks"
+    <template #sidebar-left-body>
+      <ItemFilterSidebar :collapsed />
+    </template>
+    <template #quote>
+      {{ quote }}
+    </template>
+
+    <div
+      class="sticky top-15 z-2 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
+      <UTabs
+        v-model:model-value="is().filters.rank"
+        :items="ranks"
+        size="sm"
+        variant="ghost"
+        color="neutral"
+        :ui="{
+          root: 'w-max ',
+          indicator: 'duration-150',
+          trigger: 'w-max px-5',
+        }" />
+    </div>
+    <div v-auto-animate :class="cn('h-max w-full')">
+      <component :is="tabModel" v-if="is().filtered.length" />
+      <div v-else class="grid w-full place-items-center">
+        <UEmpty
           size="sm"
-          variant="ghost"
-          color="neutral"
-          :ui="{
-            root: 'w-max ',
-            indicator: 'duration-150',
-            trigger: 'w-max px-5',
-          }" />
+          icon="i-lucide-package-x"
+          class="translate-y-1/2"
+          title="Sold out"
+          description="Looks like we've found no items for these filters."
+          :actions="[
+            {
+              icon: 'i-lucide-refresh-cw',
+              label: 'Reset',
+              color: 'neutral',
+            },
+          ]"
+          @click="is().clearFilters()" />
       </div>
-      <component :is="tabModel" />
-    </UPageBody>
-  </UPage>
+    </div>
+  </NuxtLayout>
 </template>

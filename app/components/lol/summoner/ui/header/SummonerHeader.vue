@@ -24,20 +24,25 @@ const open = shallowRef<boolean>(false)
     </template>
     <!-- header name -->
     <template #title>
-      <SummonerName
-        class="overflow-y-visible font-display text-[36px]/15 font-normal! text-pc/94"
-        as="h1"
-        :summoner="summoner ?? undefined" />
+      <h1
+        :class="
+          cn(
+            'overflow-y-visible font-display text-[36px]/15 font-normal! text-pc/94',
+            { 'opacity-40': !summoner?.name }
+          )
+        "
+        as="h1">
+        {{ summoner?.name ?? "summoner" }}
+      </h1>
     </template>
 
     <!-- header sub-text -->
 
     <template #subheader>
       <div class="flex items-center gap-4 px-0.5">
-        <SummonerTag :summoner="summoner ?? undefined" />
-        <SummonerRegion :region-id="summoner?.region" />
-
-        <SummonerLevel :summoner="summoner ?? undefined" />
+        <SummonerId :summoner="summoner ?? undefined" type="tag" />
+        <SummonerId :summoner="summoner ?? undefined" type="region" />
+        <SummonerId :summoner="summoner ?? undefined" type="level" />
       </div>
     </template>
   </IconHeader>

@@ -16,7 +16,7 @@ export default {
   drag: "i-lucide-grip-vertical",
   ellipsis: "i-lucide-ellipsis",
   error: "i-lucide-circle-x",
-  external: "i-lucide-arrow-up-right",
+  external: "i-lucide-external-link",
   eye: "i-lucide-eye",
   eyeOff: "i-lucide-eye-off",
   file: "i-lucide-file",

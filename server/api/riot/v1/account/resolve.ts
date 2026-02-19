@@ -10,18 +10,18 @@ export default defineEventHandler(async (event) => {
   if (puuid) {
     const account = await fetchAccountByPuuid(puuid)
     return {
-      name: account.gameName,
+      gameName: account.gameName,
       puuid: account.puuid,
-      tag: account.tagLine,
+      tagLine: account.tagLine,
     }
   }
 
   else if (name && tag) {
     const account = await fetchAccountByRiotId(name, tag)
     return {
-      name: account.gameName,
+      gameName: account.gameName,
       puuid: account.puuid,
-      tag: account.tagLine,
+      tagLine: account.tagLine,
     }
   }
 

@@ -35,9 +35,10 @@ const summoner = computed(() => s)
 
     <div class="flex size-full flex-col justify-center gap-0.5">
       <div class="flex items-center justify-between">
-        <SummonerName
-          class="font-serif text-xxl leading-none font-bold text-pc/94 drop-shadow-sm"
-          as="h1" />
+        <h1
+          class="font-serif text-xxl leading-none font-bold text-pc/94 drop-shadow-sm">
+          {{ summoner?.name }}
+        </h1>
         <slot />
       </div>
       <div
@@ -47,11 +48,9 @@ const summoner = computed(() => s)
             { 'justify-between': fullWidth }
           )
         ">
-        <SummonerTag :summoner />
-
-        <SummonerRegion :region-id="summoner.region" />
-
-        <SummonerLevel :summoner />
+        <SummonerId :summoner="summoner ?? undefined" type="tag" />
+        <SummonerId :summoner="summoner ?? undefined" type="region" />
+        <SummonerId :summoner="summoner ?? undefined" type="level" />
       </div>
     </div>
   </Primitive>

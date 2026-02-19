@@ -1,8 +1,10 @@
+import button from "./button"
+
 export default {
   slots: {
     root: "relative flex items-start group/x **:cursor-pointer",
     container: "flex items-center",
-    base: "rounded-sm ring-1 before:hidden overflow-visible! focus-visible:outline-0   focus-visible:focus-ring before:rounded-md!",
+    base: "rounded-sm ring-1 before:hidden overflow-visible! relative focus-visible:outline-0   focus-visible:focus-ring before:rounded-md!",
     indicator: "flex items-center justify-center size-full rounded-[inherit] ",
     icon: "shrink-0 **:stroke-[2.14] size-full",
     wrapper: "w-full",
@@ -11,6 +13,7 @@ export default {
   },
   variants: {
     color: {
+      ...button.variants.color,
       primary: {
         base: "bg-p1 ring-p4/60 on:ring-neutral not-on:focus-visible:ring-p4/60",
         indicator: "bg-neutral",
@@ -22,6 +25,7 @@ export default {
       },
     },
     variant: {
+      ...button.variants.variant,
       list: {
         root: "",
       },
@@ -46,12 +50,12 @@ export default {
     size: {
       xs: {
         base: "size-3",
-        container: "h-4",
+        container: "h-4 rounded-sm",
         wrapper: "text-xs",
       },
       sm: {
         base: "size-3.5",
-        container: "h-4",
+        container: "h-4 rounded-sm",
         wrapper: "text-xs",
       },
       md: {
@@ -67,7 +71,37 @@ export default {
       xl: {
         base: "size-5",
         container: "h-6",
-        wrapper: "text-base",
+        wrapper: "text-sm",
+      },
+      "2xl": {
+        base: "size-6",
+        container: "h-7",
+        icon: "size-4",
+        wrapper: "text-sm",
+      },
+      "3xl": {
+        base: "size-7 ",
+        container: "h-8",
+        icon: "size-4",
+        wrapper: "text-sm",
+      },
+      "4xl": {
+        base: " size-8  ",
+        container: "h-9",
+        icon: "size-4",
+        wrapper: "text-sm",
+      },
+      "5xl": {
+        base: "size-10",
+        container: "h-11",
+        icon: "size-4",
+        wrapper: "text-sm",
+      },
+      "6xl": {
+        base: "size-12",
+        container: "h-13",
+        icon: "size-5",
+        wrapper: "text-sm",
       },
     },
     required: {
@@ -88,6 +122,7 @@ export default {
     },
   },
   compoundVariants: [
+    ...button.compoundVariants,
     {
       color: "neutral",
       variant: "card",

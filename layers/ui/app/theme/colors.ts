@@ -14,4 +14,5 @@ export const colors: string[] = [
   "pre",
   "sorc",
   "transparent",
+  "default",
 ]

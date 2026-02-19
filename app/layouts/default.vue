@@ -2,7 +2,7 @@
 
 <template>
   <UMain>
-    <UContainer class="relative pt-15">
+    <UContainer class="relative">
       <slot />
     </UContainer>
   </UMain>

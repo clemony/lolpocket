@@ -13,7 +13,7 @@ useHead({
   },
   link: [
     {
-      href: "img/favicon.png",
+      href: "/img/favicon.png",
       rel: "icon",
       type: "image/png",
     },
@@ -40,15 +40,17 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
       v-if="user().user && user().account && reportComment"
       :comment="reportComment" />
     <!-- loading -->
-    <NuxtLoadingIndicator
-      style="
-        height: 5px;
-        background: repeating-linear-gradient(
-          to right,
-          var(--color-n3) 0%,
-          var(--color-n2),
-          var(--color-neutral) 100%
-        );
-      " />
+    <ClientOnly>
+      <NuxtLoadingIndicator
+        style="
+          height: 5px;
+          background: repeating-linear-gradient(
+            to right,
+            var(--color-n3) 0%,
+            var(--color-n2),
+            var(--color-neutral) 100%
+          );
+        " />
+    </ClientOnly>
   </UApp>
 </template>

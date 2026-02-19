@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 const { match } = defineProps<{
   match: MatchData
 }>()
@@ -25,7 +26,7 @@ const route = useRoute()
           base: 'w-full ',
           leadingAvatar: 'ds-2xs',
         }"
-        :to="`/summoner/${player.puuid}`"
+        :to="buildSummonerRootPath(player)"
         size="3xs"
         variant="link"
         @click.stop />

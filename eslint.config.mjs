@@ -120,6 +120,12 @@ export default antfu(
         attributes: [
           "class",
           "className",
+          [
+            "ui",
+            [
+              { match: "objectValues" },
+            ],
+          ],
           "content",
           "variant",
           "base",
@@ -128,7 +134,7 @@ export default antfu(
           "trailing",
           "leading",
         ],
-        tags: ["style", "ui"],
+        tags: ["style"],
       },
     },
     rules: {

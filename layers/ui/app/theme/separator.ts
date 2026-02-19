@@ -23,7 +23,7 @@ export default {
         border: "border-p2",
       },
       p3: {
-        border: "border-p3",
+        border: "border-p3/80",
       },
     },
     size: {
@@ -33,7 +33,7 @@ export default {
     },
   },
   defaultVariants: {
-    color: "p3",
+    color: "p2",
     size: "sm",
   },
 }

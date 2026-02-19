@@ -38,21 +38,26 @@ const focus = ref<HTMLElement>()
     :is="breakpoints.desktop ? UModal : UDrawer"
     aria-describedby="app-command-search"
     :handle="false">
-    <UButton
-      icon="search"
-      size="sm"
-      square
-      :ui="{ base: 'shrink-0 rounded-full', leadingIcon: 'size-5' }"
-      variant="ghost" />
+    <Tooltip :text="`Search ${getDeviceKey()}K`">
+      <UButton
+        icon="search"
+        size="md"
+        square
+        :ui="{
+          base: 'shrink-0 -ml-1 anchor',
+          leadingIcon: 'size-4.5 **:stroke-[2.3] opacity-80',
+        }"
+        variant="ghost" />
+    </Tooltip>
     <template #content>
       <UCommandPalette
         virtualize
         :fuse="{ resultLimit: 1000 }"
         :groups="groups"
-        :ui="{ root: 'max-h-[50vh]' }"
+        :ui="{ root: 'max-h-200' }"
         class="h-80 flex-1">
         <template #footer>
-          <div class="flex items-center justify-between gap-2">
+          <div class="flex h-7 items-center justify-between gap-2">
             <LpLogo class="ml-1 size-5 rounded-sm *:text-[9px]" />
             <div class="flex items-center gap-1">
               <UButton
@@ -73,8 +78,8 @@ const focus = ref<HTMLElement>()
                 class="text-dimmed"
                 size="xs">
                 <template #trailing>
-                  <UKbd value="meta" />
-                  <UKbd value="k" />
+                  <UKbd square size="sm" value="meta" />
+                  <UKbd square size="sm" value="k" />
                 </template>
               </UButton>
             </div>

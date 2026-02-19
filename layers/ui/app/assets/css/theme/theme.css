@@ -5,6 +5,63 @@
   --ui-header-height: 45px;
   --ui-container: 1280px;
   --ui-aside: var(--spacing) * 110;
+
+  /* Chart Fallback Colors */
+  --vis-color0: var(--ui-insp) !important;
+  --vis-color1: var(--ui-res) !important;
+  --vis-color2: var(--ui-pre) !important;
+  --vis-color3: var(--ui-dom) !important;
+  --vis-color4: var(--ui-sorc) !important;
+
+  /* Legend */
+  --vis-legend-item-spacing: 0px !important;
+  --vis-legend-spacing: 16px !important;
+  --vis-legend-label-color: var(--ui-text-muted) !important;
+
+  /* Axis */
+  --vis-axis-grid-color: rgba(0, 0, 0, 0.1) !important;
+  --vis-axis-tick-label-color: var(--ui-text-muted) !important;
+  --vis-axis-label-color: var(--ui-text-muted) !important;
+  --vis-axis-tick-color: var(--ui-text-muted) !important;
+  --vis-axis-domain-line-dasharray: none !important;
+  --vis-axis-tick-label-weight: 400 !important;
+
+  /* Timeline */
+  --vis-timeline-row-even-fill-color: #f9fafb !important;
+  --vis-timeline-row-odd-fill-color: transparent !important;
+  --vis-timeline-label-color: var(--ui-text-muted) !important;
+}
+
+@theme inline {
+  --color-p0: var(--ui-p0);
+  --color-p1: var(--ui-p1);
+  --color-p2: var(--ui-p2);
+  --color-p3: var(--ui-p3);
+  --color-p4: var(--ui-p4);
+  --color-p5: var(--ui-p5);
+  --color-pc: var(--ui-pc);
+
+  --color-n5: var(--ui-n5);
+  --color-n4: var(--ui-n4);
+  --color-n3: var(--ui-n3);
+  --color-n2: var(--ui-n2);
+  --color-n1: var(--ui-n1);
+
+  --color-n0: var(--ui-n0);
+  --color-neutral: var(--ui-neutral);
+  --color-nc: var(--ui-nc);
+
+  --color-legendary: var(--ui-legendary);
+  --color-info: var(--ui-sorc);
+  --color-success: var(--ui-res);
+  --color-warning: var(--ui-pre);
+  --color-error: var(--ui-dom);
+
+  --color-pre: var(--ui-pre);
+  --color-dom: var(--ui-dom);
+  --color-sorc: var(--ui-sorc);
+  --color-res: var(--ui-res);
+  --color-insp: var(--ui-insp);
 }
 
 @theme {
@@ -28,11 +85,13 @@
   --radius-larger: 0.6rem;
   --radius-lg-2: 0.62rem;
 
+  --text-*: initial;
   --text-3xs: 0.78rem;
   --text-2xs: 0.82rem;
   --text-xs: 0.89rem;
   --text-sm: 0.94rem;
-  --text-md: 0.99rem;
+  --text-base: 0.94rem;
+  --text-md: 0.98rem;
   --text-lg: 1.05rem;
   --text-xl: 1.15rem;
   --text-xxl: 1.3rem;
@@ -41,12 +100,10 @@
   --text-5xl: 1.875rem;
   --text-6xl: 2rem;
 
-  --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
+  --shadow-2xs: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;
   --shadow-warm-2: rgba(0, 0, 0, 0.1) 0px 2px 8px;
   --shadow-warm-soft: rgba(0, 0, 0, 0.03) 0px 2px 5px;
-  --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
-  --shadow-mask: 0px 3px 20px 30px #00000024;
   --inset-shadow-sides: inset 0 0 2px 2px rgba(0, 0, 0, 0.06);
   --inset-shadow-sm-reverse: inset -1px -1px 25px 0px rgba(0, 0, 0, 0.04);
   --inset-shadow-shade-sm: inset 0 0px 3px 1px rgba(0, 0, 0, 0.04);
@@ -83,24 +140,24 @@
   --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
   --animate-shift-toward-top-enter: shift-toward-top-enter 120ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
   --animate-shift-toward-top-exit: shift-toward-top-exit 140ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
 
   --animate-shift-toward-bottom-enter: shift-toward-bottom-enter 120ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
   --animate-shift-toward-bottom-exit: shift-toward-bottom-exit 140ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
 
   --animate-shift-toward-left-enter: shift-toward-left-enter 120ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
   --animate-shift-toward-left-exit: shift-toward-left-exit 140ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
 
   --animate-shift-toward-right-enter: shift-toward-right-enter 120ms
-    var(--ease-magnet);
+    var(--ease-in-quint);
   --animate-shift-toward-right-exit: shift-toward-right-exit 140ms
-    ease-var(--ease-magnet);
+    ease-var(--ease-in-quint);
 
   @keyframes shift-toward-bottom-enter {
     from {
@@ -186,8 +243,3 @@
     }
   }
 }
-
-/*
-@theme inline {
-}
- */

@@ -37,9 +37,13 @@ const themeModel = computed({
         <div class="flex items-center gap-3 p-2">
           <SummonerIcon class="size-11 rounded-lg" />
           <div class="flex flex-col">
-            <SummonerName
-              class="dst truncate pl-1 text-xxl! leading-none font-semibold text-pc/90" />
-            <SummonerTag
+            <h1
+              class="dst truncate pl-1 text-xxl! leading-none font-semibold text-pc/90">
+              {{ summoner?.name }}
+            </h1>
+            <SummonerId
+              :summoner="summoner ?? undefined"
+              type="tag"
               class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
           </div>
         </div>

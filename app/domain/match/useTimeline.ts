@@ -16,7 +16,7 @@ export function useTimeline() {
 
     // 2. Fetch full match timeline ONCE
     const players = await $fetch<Record<string, PlayerTimeline>>(
-      "/riot/v5/timeline/timelineByMatchId",
+      "/api/riot/v5/timeline/matchId",
       {
         params: { matchId, region },
       }
@@ -69,7 +69,7 @@ export function useTimeline() {
 
     // Fetch once, store once
     const players = await $fetch<Record<string, PlayerTimeline>>(
-      "/riot/v5/timeline/timelineByMatchId",
+      "/api/riot/v5/timeline/matchId",
       {
         params: { matchId, region },
       }

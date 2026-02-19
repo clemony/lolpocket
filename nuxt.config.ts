@@ -7,13 +7,9 @@ export default defineNuxtConfig({
   imports: {
     global: true,
     dirs: [
-      "./shared/types",
       "#shared/schema",
       "#layers/store/app/stores",
-      "#layers/lib/app/composables",
-      "#layers/lib/shared/composables",
       "#layers/patch/shared/constants",
-      "#layers/ui/app/config",
     ],
   },
 
@@ -34,6 +30,7 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "@formkit/auto-animate/nuxt",
     "@nuxtjs/i18n",
+    "nuxt-charts",
   ],
 
   // app
@@ -114,16 +111,17 @@ export default defineNuxtConfig({
     "/faq": { ssr: false },
     "/faq/**": { ssr: false },
     "/library": { ssr: false },
+    "/:region": { ssr: false },
+    "/:region/**": { ssr: false },
     "/library/**": { ssr: false },
     "/nexus": { ssr: false },
     "/pocket": { ssr: false },
     "/pocket/**": { ssr: false },
-    "/summoner/**": { ssr: false },
     "/tools": { ssr: false },
     "/tools/**": { ssr: false },
   },
   runtimeConfig: {
-    riotApiKey: process.env.NUXT_RIOT_API,
+    RIOT_API_KEY: process.env.NUXT_RIOT_API,
     supabasePooler: process.env.SUPABASE_POOLER,
     public: {
       authRedirect: "",
@@ -147,6 +145,14 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    server: {
+      strictPort: true,
+      hmr: {
+        protocol: "ws",
+        host: "localhost",
+        clientPort: 8080,
+      },
+    },
     plugins: [
       // @ts-expect-error until plugin updates
       tailwindcss(),
@@ -171,7 +177,7 @@ export default defineNuxtConfig({
     https: false,
     port: 8080,
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   experimental: {
     extractAsyncDataHandlers: true,
     nitroAutoImports: true,
