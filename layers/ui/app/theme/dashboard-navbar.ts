@@ -1,11 +1,13 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardNavbarTheme = defineUiTheme({
   slots: {
-    root: 'h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-default px-4 sm:px-6 gap-1.5',
-    left: 'flex items-center gap-1.5 min-w-0',
-    icon: 'shrink-0 size-5 self-center me-1.5',
-    title: 'flex items-center gap-1.5 font-semibold text-highlighted truncate',
+    root: 'flex h-(--ui-header-height) shrink-0 items-center justify-between gap-1.5 border-b border-default px-4 sm:px-6',
+    left: 'flex min-w-0 items-center gap-1.5',
+    icon: 'me-1.5 size-5 shrink-0 self-center',
+    title: 'flex items-center gap-1.5 truncate font-semibold text-highlighted',
     center: 'hidden lg:flex',
-    right: 'flex items-center shrink-0 gap-1.5',
+    right: 'flex shrink-0 items-center gap-1.5',
     toggle: ''
   },
   variants: {
@@ -18,4 +20,6 @@ export default {
       }
     }
   }
-}
+})
+
+export default dashboardNavbarTheme

@@ -1,11 +1,13 @@
-import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
-
-import type { AvatarProps } from "@nuxt/ui"
+import type { AvatarProps, Locale } from "@nuxt/ui"
+import { de, en, es, fr, zh_tw } from "@nuxt/ui/locale"
 import {
   externalResources,
   officialResources,
 } from "~/domain/lp/external/externalResources"
 import { newPocket } from "~/domain/pocket/newPocket"
+import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
+
+export const localeOptions: Locale<any>[] = [de, en, es, fr, zh_tw]
 
 export const libraryList = ["champions", "items", "runes", "spells"]
 

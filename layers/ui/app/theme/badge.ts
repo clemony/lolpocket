@@ -1,6 +1,8 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const badgeTheme = defineUiTheme({
   slots: {
-    base: "w-fit border  flex ds-xs  items-center",
+    base: "flex w-fit items-center border ds-xs",
   },
   variants: {
     color: {
@@ -25,37 +27,37 @@ export default {
     },
     size: {
       lg: {
-        base: "text-sm px-2 py-1 gap-1.5 rounded-lg",
+        base: "gap-1.5 rounded-lg px-2 py-1 text-sm",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-5",
         trailingIcon: "size-5",
       },
       md: {
-        base: "text-xs px-2 py-1 gap-1 rounded-lg",
+        base: "gap-1 rounded-lg px-2 py-1 text-xs",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
       },
       sm: {
-        base: "text-xs/4 px-2 py-0.75 gap-1.5  rounded-lg",
+        base: "gap-1.5 rounded-lg px-2 py-0.75 text-xs/4",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]",
       },
       xl: {
-        base: "text-pc px-2.5 py-1 gap-1.5 rounded-lg",
+        base: "gap-1.5 rounded-lg px-2.5 py-1 text-pc",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-6",
         trailingIcon: "size-6",
       },
       xs: {
-        base: "text-[10px]/3.5 px-1.5 py-0.5   gap-1.5 rounded-lg",
+        base: "gap-1.5 rounded-lg px-1.5 py-0.5 text-[10px]/3.5",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]",
       },
       "2xs": {
-        base: "text-[10px]/3 px-1 py-0   gap-1 rounded-md",
+        base: "gap-1 rounded-md px-1 py-0 text-[10px]/3",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]",
@@ -70,32 +72,32 @@ export default {
       color: "ad",
       variant: "solid",
       class:
-        "border-ad dark:font-bold light:font-semibold text-white **:text-white  light:bg-ad/70 dark:bg-ad/90",
+        "border-ad text-white **:text-white dark:bg-ad/90 dark:font-bold light:bg-ad/70 light:font-semibold",
     },
     {
       color: "p0",
       variant: "solid",
-      class: "border-p3 border text-pc font-medium ring-p2  bg-p0 ",
+      class: "border border-p3 bg-p0 font-medium text-pc ring-p2",
     },
     {
       color: "p1",
       variant: "solid",
-      class: "border-p3 border text-pc font-medium ring-p2  bg-p1 ",
+      class: "border border-p3 bg-p1 font-medium text-pc ring-p2",
     },
     {
       color: "p2",
       variant: "solid",
-      class: "border-p3 text-pc  font-semibold   bg-p2 ",
+      class: "border-p3 bg-p2 font-semibold text-pc",
     },
     {
       color: "p3",
       variant: "outline",
-      class: "border-p3 text-pc font-medium ",
+      class: "border-p3 font-medium text-pc",
     },
     {
       color: "transparent",
       variant: "ghost",
-      class: "border-none ring-none shadow-none fx-0 text-pc  ",
+      class: "ring-none fx-0 border-none text-pc shadow-none",
     },
 
     // neutral
@@ -103,90 +105,92 @@ export default {
     {
       color: "neutral",
       variant: "solid",
-      class: "border-n2 border noise text-nc font-semibold ring-n3 bg-n0/85 ",
+      class: "noise border border-n2 bg-n0/85 font-semibold text-nc ring-n3",
     },
 
     // dom
     {
       color: "dom",
       variant: "solid",
-      class: "border-dom  font-semibold text-white bg-dom",
+      class: "border-dom bg-dom font-semibold text-white",
     },
     {
       color: "dom",
       variant: "soft",
-      class: "border-dom/50  font-semibold text-pc/70   bg-dom/40 ",
+      class: "border-dom/50 bg-dom/40 font-semibold text-pc/70",
     },
 
     // sorc
     {
       color: "sorc",
       variant: "soft",
-      class: "border-sorc/50 noise font-semibold text-pc/70   bg-sorc/40 ",
+      class: "noise border-sorc/50 bg-sorc/40 font-semibold text-pc/70",
     },
     {
       color: "sorc",
       variant: "solid",
-      class: "border-sorc font-semibold text-white bg-sorc",
+      class: "border-sorc bg-sorc font-semibold text-white",
     },
 
     // insp
     {
       color: "insp",
       variant: "solid",
-      class: "border-insp   font-semibold text-insp-content bg-insp ",
+      class: "text-insp-content border-insp bg-insp font-semibold",
     },
 
     {
       color: "insp",
       variant: "outline",
-      class: "border-insp-offset/40 text-pc   font-semibold ",
+      class: "border-insp-offset/40 font-semibold text-pc",
     },
     {
       color: "insp",
       variant: "soft",
       class:
-        "border-p3 ring-insp/40 border font-semibold text-pc   bg-insp-content/50 noise ",
+        "bg-insp-content/50 noise border border-p3 font-semibold text-pc ring-insp/40",
     },
 
     // pre
     {
       color: "pre",
       variant: "soft",
-      class: "border-pre/50  font-semibold text-pc/70   bg-pre/40 ",
+      class: "border-pre/50 bg-pre/40 font-semibold text-pc/70",
     },
     {
       color: "pre",
       variant: "solid",
-      class: "border-pre  font-semibold text-white bg-pre",
+      class: "border-pre bg-pre font-semibold text-white",
     },
 
     // gold
     {
       color: "gold",
       variant: "solid",
-      class: "border-g  font-semibold text-white **:text-white bg-g/80",
+      class: "border-g bg-g/80 font-semibold text-white **:text-white",
     },
     {
       color: "gold",
       variant: "soft",
-      class: "border-g/50  font-semibold text-pc/70   bg-g/40 ",
+      class: "border-g/50 bg-g/40 font-semibold text-pc/70",
     },
 
     // res
     {
       color: "res",
       variant: "soft",
-      class: "border-res/50  font-medium text-pc/70   bg-res/40 ",
+      class: "border-res/50 bg-res/40 font-medium text-pc/70",
     },
     {
       color: "res",
       variant: "solid",
-      class: "border-res  font-medium text-white bg-res",
+      class: "border-res bg-res font-medium text-white",
     },
   ],
   defaultVariants: {
     color: "p1",
     variant: "solid",
   },
-}
+})
+
+export default badgeTheme

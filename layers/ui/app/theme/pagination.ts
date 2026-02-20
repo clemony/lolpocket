@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const paginationTheme = defineUiTheme({
   slots: {
     root: '',
     list: 'flex items-center gap-1',
@@ -10,4 +12,6 @@ export default {
     next: '',
     last: ''
   }
-}
+})
+
+export default paginationTheme

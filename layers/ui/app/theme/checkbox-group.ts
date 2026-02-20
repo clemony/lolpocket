@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const checkboxGroupTheme = defineUiTheme({
   slots: {
     root: "relative",
     fieldset: "flex gap-x-2",
@@ -54,7 +56,7 @@ export default {
     },
     required: {
       true: {
-        legend: "after:content-['*'] after:ms-0.5 after:text-error",
+        legend: "after:ms-0.5 after:text-error after:content-['*']",
       },
     },
     disabled: {
@@ -117,14 +119,14 @@ export default {
       color: "primary",
       variant: "table",
       class: {
-        item: "has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]",
+        item: "has-data-[state=checked]:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10",
       },
     },
     {
       color: "neutral",
       variant: "table",
       class: {
-        item: "has-data-[state=checked]:bg-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]",
+        item: "has-data-[state=checked]:z-[1] has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-elevated",
       },
     },
     {
@@ -140,4 +142,6 @@ export default {
     variant: "list",
     color: "primary",
   },
-}
+})
+
+export default checkboxGroupTheme

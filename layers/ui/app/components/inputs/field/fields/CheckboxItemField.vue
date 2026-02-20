@@ -24,7 +24,7 @@ const items = computed(() => props.items ?? [])
     @update:model-value="emit('update:modelValue', $event as string[])">
     <template #label="{ item }">
       <Element
-        class="w-full border border-transparent py-2 hover:border-p3/50! hover:bg-p2/40 hover:fx-1"
+        class="hover:fx-1 w-full border border-transparent py-2 hover:border-p3/50! hover:bg-p2/40"
         base="btn"
         hover="outline"
         variant="ghost">

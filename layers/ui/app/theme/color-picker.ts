@@ -1,33 +1,35 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const colorPickerTheme = defineUiTheme({
   slots: {
     root: 'data-[disabled]:opacity-75',
     picker: 'flex gap-4',
-    selector: 'rounded-md touch-none',
-    selectorBackground: 'w-full h-full relative rounded-md',
-    selectorThumb: '-translate-y-1/2 -translate-x-1/2 absolute size-4 ring-2 ring-white rounded-full cursor-pointer data-[disabled]:cursor-not-allowed',
-    track: 'w-[8px] relative rounded-md touch-none',
-    trackThumb: 'absolute transform -translate-y-1/2 -translate-x-[4px] rtl:translate-x-[4px] size-4 rounded-full ring-2 ring-white cursor-pointer data-[disabled]:cursor-not-allowed'
+    selector: 'touch-none rounded-md',
+    selectorBackground: 'relative size-full rounded-md',
+    selectorThumb: 'absolute size-4 -translate-1/2 cursor-pointer rounded-full ring-2 ring-white data-[disabled]:cursor-not-allowed',
+    track: 'relative w-[8px] touch-none rounded-md',
+    trackThumb: 'absolute size-4 -translate-x-[4px] -translate-y-1/2 transform cursor-pointer rounded-full ring-2 ring-white data-[disabled]:cursor-not-allowed rtl:translate-x-[4px]'
   },
   variants: {
     size: {
       xs: {
-        selector: 'w-38 h-38',
+        selector: 'size-38',
         track: 'h-38'
       },
       sm: {
-        selector: 'w-40 h-40',
+        selector: 'size-40',
         track: 'h-40'
       },
       md: {
-        selector: 'w-42 h-42',
+        selector: 'size-42',
         track: 'h-42'
       },
       lg: {
-        selector: 'w-44 h-44',
+        selector: 'size-44',
         track: 'h-44'
       },
       xl: {
-        selector: 'w-46 h-46',
+        selector: 'size-46',
         track: 'h-46'
       }
     }
@@ -36,4 +38,6 @@ export default {
   defaultVariants: {
     size: 'md'
   }
-}
+})
+
+export default colorPickerTheme

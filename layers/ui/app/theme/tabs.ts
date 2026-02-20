@@ -1,18 +1,25 @@
-export default {
-  slots: {
-    indicator: "absolute transition-[translate,width] duration-200",
-    list: "relative flex  group p-0",
-    trigger:
-      "group relative  inline-flex items-center min-w-0  font-medium  disabled:cursor-not-allowed disabled:opacity-30 cursor-pointer text-2",
+import { defineUiTheme } from "./defineUiTheme"
 
-    root: "flex items-center gap-0  ",
+const baseVariants = ["solid", "ghost", "link", "outline", "solid"] as const
+const squareVariants = baseVariants.map((v) => `${v}-sq`)
+const nonSquareVariants = [...baseVariants]
+
+export const tabsTheme = defineUiTheme({
+  slots: {
+    indicator:
+      "absolute shrink-0 grow transform-gpu transition-transform duration-200 will-change-transform",
+    list: "group relative flex p-1 ring-0 group-active:ring-0",
+    trigger:
+      "group text-2 relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center font-medium disabled:cursor-not-allowed disabled:opacity-30",
+
+    root: "flex items-center gap-0",
     leadingIcon: "shrink-0",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
     label: "truncate",
     trailingBadge: "shrink-0",
     trailingBadgeSize: "sm",
-    content: "focus:outline-none w-full",
+    content: "w-full focus:outline-none",
   },
   variants: {
     color: {
@@ -21,24 +28,23 @@ export default {
       default: "",
     },
     variant: {
-      pill: {
-        indicator: " shadow-sm shadow-black/6",
-        list: " ring rounded-xl ring-none",
-        trigger: "grow",
+      solid: {
+        indicator: "shadow-sm shadow-black/6",
       },
-
       ghost: {
-        indicator: "  shadow-sm shadow-black/6",
-        list: "group-active:ring ring-none",
-        trigger: "grow",
+        indicator: "shadow-sm shadow-black/6",
       },
       link: {
-        list: "ring-b-0 ring-b-transparent",
+        list: "border-b-0 border-b-transparent",
         indicator:
-          "after:h-0.5 after:w-[75%] grid after:justify-self-center after:absolute after:ring-b after:ring-pc/60 ds-2xs after:bg-p3 -translate-y-1",
+          "grid -translate-y-1 ds-2xs after:absolute after:h-0.5 after:w-[75%] after:justify-self-center after:border-b after:border-pc/60 after:bg-p3",
         trigger: "focus:outline-none on:text-pc",
       },
       outline: {},
+      "solid-sq": {},
+      "outline-sq": {},
+      "ghost-sq": {},
+      ...Object.fromEntries(squareVariants.map((variant) => [variant, {}])),
     },
     rounded: {
       md: {
@@ -59,42 +65,41 @@ export default {
     },
     orientation: {
       horizontal: {
-        list: "h-full px-1 py-0.5 ",
+        list: "h-full",
         indicator:
-          "left-0 w-(--reka-tabs-indicator-size) h-[calc(100%-var(--spacing))] translate-x-(--reka-tabs-indicator-position) self-center",
-        trigger: "justify-center h-full grow",
+          "left-0 h-[calc(100%-var(--spacing))] w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) self-center",
+        trigger: "h-full grow justify-center",
       },
       vertical: {
-        list: "flex-col w-full items-center py-1 grow px-0.5!",
-        trigger:
-          "items-center  h-(--reka-tabs-indicator-size)) justify-self-center   grow",
+        list: "w-max flex-col items-center",
+        trigger: "items-center justify-self-center",
         indicator:
-          "top-0 h-(--reka-tabs-indicator-size) w-full  w-[calc(100%-var(--spacing))]  justify-self-center   translate-y-(--reka-tabs-indicator-position)",
+          "top-0 left-[calc(50%-var(--reka-tabs-indicator-size)/2)] size-(--reka-tabs-indicator-size) translate-y-(--reka-tabs-indicator-position) justify-self-center",
       },
     },
     size: {
       xs: {
-        trigger: "px-2 text-xs gap-1",
+        trigger: "gap-0 p-0",
         leadingIcon: "size-4",
         leadingAvatarSize: "3xs",
       },
       sm: {
-        trigger: "px-2.5 text-xs gap-1.5",
+        trigger: "gap-0 p-0",
         leadingIcon: "size-4",
         leadingAvatarSize: "3xs",
       },
       md: {
-        trigger: "px-3  text-xs gap-1.5",
-        leadingIcon: "size-4.5",
+        trigger: "gap-0 p-0",
+        leadingIcon: "size-4",
         leadingAvatarSize: "2xs",
       },
       lg: {
-        trigger: "px-3 text-sm gap-2",
+        trigger: "gap-0 p-0",
         leadingIcon: "size-5",
         leadingAvatarSize: "2xs",
       },
       xl: {
-        trigger: "px-3 text-md gap-2",
+        trigger: "gap-0 p-0",
         leadingIcon: "size-6",
         leadingAvatarSize: "xs",
       },
@@ -103,129 +108,153 @@ export default {
   compoundVariants: [
     {
       color: "default",
-      variant: "pill",
+      variant: ["solid", "solid-sq"],
       class: {
         indicator: "bg-p0 ring-p3",
-        list: "bg-p1   inset-shadow-xs inset-shadow-black/4  ring-p3/80 ",
+        list: "noise bg-p1 ring inset-shadow-xs ring-p3/80 inset-shadow-black/4",
         trigger:
-          "data-[state=active]:text-pc focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1  ",
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc",
       },
     },
     {
       color: "neutral",
-      variant: "pill",
+      variant: ["solid", "solid-sq"],
       class: {
         indicator:
-          "bg-neutral/90 ring noise ring-p4/80 inset-shadow-xs inset-shadow-p1/10 ",
-        list: "bg-p1   ring-p3/80 ",
+          "noise bg-neutral/90 shadow-xs ring inset-shadow-xs ring-p4/80 inset-shadow-p1/10",
+        list: "noise bg-p2/70 ring ring-p3/60",
         trigger:
-          "text-pc focus-visible:outline-2  focus-visible:outline-offset-2  focus-visible:outline-p1 data-[state=active]:text-nc active:hover:**:text-nc data-[state=active]:**:text-nc hover:text-pc!",
+          "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc",
       },
     },
     /* ghost */
 
     {
       color: "neutral",
-      variant: "ghost",
+      variant: ["ghost", "ghost-sq"],
       class: {
         indicator:
-          "bg-neutral/90 ring-n5/60 inset-shadow-xs inset-shadow-b1/8 noise",
-        list: " ring-0! ring-0! bg-transparent noise-none",
+          "inset-shadow-b1/8 noise bg-neutral/90 inset-shadow-xs ring-n5/60",
+        list: "noise-none bg-transparent",
         trigger:
-          "text-pc  active:text-nc active:**:text-nc   active:hover:**:text-nc hover:text-n4 hover:underline",
+          "text-pc hover:text-n4 hover:underline active:text-nc active:**:text-nc active:hover:**:text-nc",
       },
     },
     /* outline */
     {
       color: "neutral",
-      variant: "outline",
+      variant: ["outline", "outline-sq"],
       class: {
         indicator:
-          "bg-neutral/90 ring noise ring-p4/80 inset-shadow-xs inset-shadow-p1/10 ",
-        list: " rounded-lg  inset-shadow-xs ring-p4/70 ring",
+          "noise bg-neutral/90 ring inset-shadow-xs ring-p4/80 inset-shadow-p1/10",
+        list: "rounded-lg ring inset-shadow-xs ring-p4/70",
         trigger:
-          "text-pc    active:**:text-nc active:text-nc active:hover:**:text-nc! hover:text-pc!",
+          "text-pc hover:text-pc! active:text-nc active:**:text-nc active:hover:**:text-nc!",
       },
       rounded: ["md", "lg", "xl", "full"],
     },
 
+    /* orientation */
+    {
+      orientation: "horizontal",
+      variant: nonSquareVariants,
+      class: {
+        root: "grow",
+      },
+    },
+
+    {
+      variant: squareVariants,
+      orientation: "horizontal",
+      class: {
+        trigger:
+          "grid aspect-square shrink-0 basis-auto place-items-center p-0",
+        indicator: "aspect-square shrink-0 self-center",
+        list: "h-full p-1",
+      },
+    },
+    {
+      variant: squareVariants,
+      orientation: "vertical",
+      class: {
+        trigger:
+          "grid aspect-square shrink-0 basis-auto place-items-center p-0",
+        indicator: "self-center",
+        list: "w-full p-1",
+      },
+    },
     /* size */
-
-    {
-      size: "xs",
-      orientation: "horizontal",
-      class: {
-        root: " h-7 ",
+    ...[
+      ["xs", "size-6", "h-6", "h-7", "w-7", "gap-1 px-2 text-xs"],
+      ["sm", "size-7", "h-7", "h-8", "w-8", "gap-1.5 px-2.5 text-xs"],
+      [
+        "md",
+        "size-9",
+        "h-9",
+        "h-10.5",
+        "w-10.5 max-w-10.5",
+        "gap-1.5 px-3 text-xs",
+      ],
+      ["lg", "size-10", "h-10", "h-12", "w-12", "gap-2 px-3 text-sm"],
+      ["xl", "size-12", "h-12", "h-14", "w-14", "gap-2 px-3 "],
+    ].flatMap(([k, sizeClass, indicateH, hClass, wClass, recClass]) => [
+      {
+        size: k,
+        variant: squareVariants,
+        class: {
+          indicator: sizeClass,
+          trigger: sizeClass,
+        },
       },
-    },
+      {
+        size: k,
+        orientation: "horizontal",
+        class: {
+          indicator: indicateH,
+          root: hClass,
+        },
+      },
+      {
+        size: k,
+        orientation: "vertical",
+        class: {
+          root: wClass,
+        },
+      },
+      {
+        size: k,
+        variant: nonSquareVariants,
+        class: {
+          trigger: recClass,
+        },
+      },
+    ]),
     {
-      size: "sm",
-      orientation: "horizontal",
+      size: "md",
       class: {
-        root: " h-8",
+        indicator: "rounded-lg",
       },
     },
     {
       size: "md",
       orientation: "horizontal",
       class: {
-        root: "h-10",
+        list: "rounded-xl",
       },
     },
     {
-      size: "lg",
-      orientation: "horizontal",
+      size: ["lg", "xl"],
       class: {
-        root: "h-12",
-      },
-    },
-    {
-      size: "xl",
-      orientation: "horizontal",
-      class: {
-        root: "h-14",
-      },
-    },
-
-    {
-      size: "xs",
-      orientation: "vertical",
-      class: {
-        root: " w-7   ",
-      },
-    },
-    {
-      size: "sm",
-      orientation: "vertical",
-      class: {
-        root: "w-8 ",
-      },
-    },
-    {
-      size: "md",
-      orientation: "vertical",
-      class: {
-        root: "w-10",
-      },
-    },
-    {
-      size: "lg",
-      orientation: "vertical",
-      class: {
-        root: "w-12",
-      },
-    },
-    {
-      size: "xl",
-      orientation: "vertical",
-      class: {
-        root: "w-14 ",
+        list: "rounded-xl",
+        indicator: "rounded-lg",
       },
     },
   ],
   defaultVariants: {
     rounded: "lg",
     color: "default",
-    variant: "pill",
+    variant: "solid",
   },
-}
+})
+
+export default tabsTheme

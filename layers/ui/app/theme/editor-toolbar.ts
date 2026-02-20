@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const editorToolbarTheme = defineUiTheme({
   slots: {
     root: 'focus:outline-none',
     base: 'flex items-stretch gap-1.5',
@@ -8,14 +10,16 @@ export default {
   variants: {
     layout: {
       bubble: {
-        base: 'bg-default border border-default rounded-lg p-1'
+        base: 'rounded-lg border border-default bg-default p-1'
       },
       floating: {
-        base: 'bg-default border border-default rounded-lg p-1'
+        base: 'rounded-lg border border-default bg-default p-1'
       },
       fixed: {
         base: ''
       }
     }
   }
-}
+})
+
+export default editorToolbarTheme

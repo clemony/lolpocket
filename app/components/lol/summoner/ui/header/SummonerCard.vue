@@ -77,7 +77,7 @@ console.log("🥸 - top:", top)
           class="flex w-full flex-col items-center -space-y-2">
           <Champion :id="c.championId" class="rounded-full" />
           <span
-            class="badge border-none badge-neutral bg-neutral/80 px-1.5 badge-sm text-2xs font-semibold text-nc!">
+            class="badge border-none bg-neutral/80 px-1.5 badge-sm text-2xs font-semibold text-nc! badge-neutral">
             <Icon class="size-3.5 **:text-nc!" name="lol:mastery" />
             {{ c.level }}
           </span>

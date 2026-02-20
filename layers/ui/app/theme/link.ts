@@ -1,5 +1,7 @@
-export default {
-  base: "focus-visible:outline-primary cursor-pointer",
+import { defineUiTheme } from "./defineUiTheme"
+
+export const linkTheme = defineUiTheme({
+  base: "cursor-pointer focus-visible:outline-primary",
   variants: {
     active: {
       true: "text-pc",
@@ -27,25 +29,27 @@ export default {
     {
       size: "xs",
       underline: true,
-      class: "hover:underline text-xs",
+      class: "text-xs hover:underline",
     },
     {
       size: "sm",
       underline: true,
-      class: "hover:underline text-sm",
+      class: "text-sm hover:underline",
     },
     {
       size: "md",
       underline: true,
-      class: "hover:underline text-md",
+      class: "text-md hover:underline",
     },
     {
       size: "lg",
       underline: true,
-      class: "hover:underline text-lg",
+      class: "text-lg hover:underline",
     },
   ],
   defaultVariants: {
     size: "sm",
   },
-}
+})
+
+export default linkTheme

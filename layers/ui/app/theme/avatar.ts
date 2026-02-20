@@ -1,9 +1,11 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const avatarTheme = defineUiTheme({
   slots: {
-    root: "inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated",
-    image: "h-full w-full rounded-[inherit] object-cover",
-    fallback: "font-medium leading-none text-muted truncate",
-    icon: "text-muted shrink-0",
+    root: "inline-flex shrink-0 items-center justify-center rounded-full bg-elevated align-middle select-none",
+    image: "size-full rounded-[inherit] object-cover",
+    fallback: "truncate leading-none font-medium text-muted",
+    icon: "shrink-0 text-muted",
   },
   variants: {
     size: {
@@ -48,4 +50,6 @@ export default {
   defaultVariants: {
     size: "md",
   },
-}
+})
+
+export default avatarTheme

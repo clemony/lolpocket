@@ -1,17 +1,19 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const editorSuggestionMenuTheme = defineUiTheme({
   slots: {
     content:
-      "min-w-48 max-w-60 max-h-96 bg-default shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-dropdown-menu-content-transform-origin) flex flex-col",
+      "flex max-h-96 max-w-60 min-w-48 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-md bg-default shadow-lg ring ring-default data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
     viewport:
-      "relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1",
-    group: "p-1 isolate",
-    label: "w-full flex items-center font-semibold text-highlighted",
+      "relative flex-1 scroll-py-1 divide-y divide-default overflow-y-auto",
+    group: "isolate p-1",
+    label: "flex w-full items-center font-semibold text-highlighted",
     separator: "-mx-1 my-1 h-px bg-border",
-    item: "group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
-    itemLeadingIcon: "shrink-0 flex items-center justify-center",
+    item: "group relative flex w-full items-start outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    itemLeadingIcon: "flex shrink-0 items-center justify-center",
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
-    itemWrapper: "flex-1 flex flex-col text-start min-w-0",
+    itemWrapper: "flex min-w-0 flex-1 flex-col text-start",
     itemLabel: "truncate",
     itemDescription: "truncate text-muted",
     itemLabelExternalIcon: "inline-block size-3 align-top text-dimmed",
@@ -19,32 +21,32 @@ export default {
   variants: {
     size: {
       xs: {
-        label: "p-1 text-[10px]/3 gap-1",
-        item: "p-1 text-xs gap-1",
+        label: "gap-1 p-1 text-[10px]/3",
+        item: "gap-1 p-1 text-xs",
         itemLeadingIcon: "size-4 text-sm",
         itemLeadingAvatarSize: "3xs",
       },
       sm: {
-        label: "p-1.5 text-[10px]/3 gap-1.5",
-        item: "p-1.5 text-xs gap-1.5",
+        label: "gap-1.5 p-1.5 text-[10px]/3",
+        item: "gap-1.5 p-1.5 text-xs",
         itemLeadingIcon: "size-4 text-sm",
         itemLeadingAvatarSize: "3xs",
       },
       md: {
-        label: "p-1.5 text-xs gap-1.5",
-        item: "p-1.5 text-sm gap-1.5",
+        label: "gap-1.5 p-1.5 text-xs",
+        item: "gap-1.5 p-1.5 text-sm",
         itemLeadingIcon: "size-5 text-base",
         itemLeadingAvatarSize: "2xs",
       },
       lg: {
-        label: "p-2 text-xs gap-2",
-        item: "p-2 text-sm gap-2",
+        label: "gap-2 p-2 text-xs",
+        item: "gap-2 p-2 text-sm",
         itemLeadingIcon: "size-5 text-base",
         itemLeadingAvatarSize: "2xs",
       },
       xl: {
-        label: "p-2 text-sm gap-2",
-        item: "p-2 text-base gap-2",
+        label: "gap-2 p-2 text-sm",
+        item: "gap-2 p-2 text-base",
         itemLeadingIcon: "size-6 text-xl",
         itemLeadingAvatarSize: "xs",
       },
@@ -67,4 +69,6 @@ export default {
   defaultVariants: {
     size: "md",
   },
-}
+})
+
+export default editorSuggestionMenuTheme

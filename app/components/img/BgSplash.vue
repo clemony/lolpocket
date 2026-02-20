@@ -32,9 +32,9 @@ const bg = computed(() => {
 
 <template>
   <div
-    class="absolute inset-0 flex w-screen items-center justify-end overflow-hidden bg-p1 noise">
+    class="noise absolute inset-0 flex w-screen items-center justify-end overflow-hidden bg-p1">
     <div
-      class="before:from-bg-tint-p2/60 pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen flex-nowrap items-center justify-end justify-items-end noise mask-l-from-30% mask-l-to-70% before:absolute before:z-1 before:size-full before:bg-linear-to-r before:from-45% before:to-transparent before:to-75%">
+      class="before:from-bg-tint-p2/60 noise pointer-events-none relative top-0 bottom-32 -mr-14 flex h-full w-screen flex-nowrap items-center justify-end justify-items-end mask-l-from-30% mask-l-to-70% before:absolute before:z-1 before:size-full before:bg-linear-to-r before:from-45% before:to-transparent before:to-75%">
       <div
         :style="{
           backgroundImage: bg,

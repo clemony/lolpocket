@@ -1,7 +1,9 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardPanelTheme = defineUiTheme({
   slots: {
-    root: "relative flex flex-col min-w-0 min-h-svh shrink-0 border-none",
-    body: "flex flex-col gap-4 sm:gap-6 flex-1 overflow-y-auto p-4 sm:p-6",
+    root: "relative flex min-h-svh min-w-0 shrink-0 flex-col border-none",
+    body: "flex flex-1 flex-col gap-4 overflow-y-auto p-4 sm:gap-6 sm:p-6",
     handle: "",
   },
   variants: {
@@ -16,7 +18,7 @@ export default {
     clean: {
       true: {},
       false: {
-        root: " lg:not-last:border-e lg:not-last:border-default",
+        root: "lg:not-last:border-e lg:not-last:border-default",
       },
     },
 
@@ -24,4 +26,6 @@ export default {
       clean: false,
     },
   },
-}
+})
+
+export default dashboardPanelTheme

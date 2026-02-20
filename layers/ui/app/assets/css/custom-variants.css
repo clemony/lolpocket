@@ -11,7 +11,6 @@
 
 /* Element-level data states */
 @custom-variant open (&[data-state="open"]);
-@custom-variant focus (&:focus-visible);
 @custom-variant hover-open (&[data-state="open"]);
 @custom-variant closed (&[data-state="closed"]);
 @custom-variant hover-closed (&[data-state="closed"]);
@@ -28,13 +27,17 @@
 @custom-variant leading (&[data-slot="leading"]);
 @custom-variant label (&[data-slot="label"]);
 
+@custom-variant focus (
+  &:focus-visible,
+      &:focus
+      );
+
 @custom-variant on (
       &[data-state="on"],
       &[data-state="checked"],
       &[data-state="active"],
       &:focus-visible,
       &:hover,
-      &:focus,
       &[data-state="open"]
     );
 @custom-variant off (
@@ -43,11 +46,3 @@
       &[data-state="closed"]
    );
 
-/* @utility on {
-  @apply on:btn-active;
-}
-
-@utility open {
-  @apply btn-active;
-}
- */

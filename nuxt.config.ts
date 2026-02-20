@@ -33,6 +33,10 @@ export default defineNuxtConfig({
     "nuxt-charts",
   ],
 
+  nuxtCharts: {
+    autoImports: false,
+  },
+
   // app
   typescript: {
     strict: true,
@@ -123,6 +127,16 @@ export default defineNuxtConfig({
   runtimeConfig: {
     RIOT_API_KEY: process.env.NUXT_RIOT_API,
     supabasePooler: process.env.SUPABASE_POOLER,
+    i18n: {
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+      domainLocales: {
+        us: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_EN_DOMAIN,
+        zh_tw: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ZH_TW_DOMAIN,
+        es: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ES_DOMAIN,
+        de: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_DE_DOMAIN,
+        fr: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
+      },
+    },
     public: {
       authRedirect: "",
       baseUrl: "",
@@ -189,20 +203,38 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    strategy: "no_prefix",
+    strategy: "prefix_except_default",
+    differentDomains: true,
     defaultLocale: "en",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "lolpocket_i18n",
+    },
     locales: [
-      {
-        code: "de",
-        name: "Deutsch",
-      },
       {
         code: "en",
         name: "English",
+        domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_EN_DOMAIN,
+      },
+      {
+        code: "zh_tw",
+        name: "語言",
+        domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ZH_TW_DOMAIN,
+      },
+      {
+        code: "es",
+        name: "Español",
+        domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ES_DOMAIN,
+      },
+      {
+        code: "de",
+        name: "Deutsch",
+        domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_DE_DOMAIN,
       },
       {
         code: "fr",
         name: "Français",
+        domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
       },
     ],
   },

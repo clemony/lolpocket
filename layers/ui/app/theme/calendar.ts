@@ -1,10 +1,12 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const calendarTheme = defineUiTheme({
   slots: {
     root: "",
     header: "flex items-center justify-between",
-    body: "flex flex-col space-y-4 pt-4 sm:flex-row sm:space-x-4 sm:space-y-0",
-    heading: "text-center font-medium truncate mx-auto",
-    grid: "w-full border-collapse select-none space-y-1 focus:outline-none",
+    body: "flex flex-col space-y-4 pt-4 sm:flex-row sm:space-y-0 sm:space-x-4",
+    heading: "mx-auto truncate text-center font-medium",
+    grid: "w-full border-collapse space-y-1 select-none focus:outline-none",
     gridRow: "grid grid-cols-7 place-items-center",
     gridWeekDaysRow: "mb-1 grid w-full grid-cols-7",
     gridBody: "grid",
@@ -12,7 +14,7 @@ export default {
     headCellWeek: "rounded-md text-muted",
     cell: "relative text-center",
     cellTrigger: [
-      "m-0.5 relative flex items-center justify-center rounded-full whitespace-nowrap focus-visible:ring-2 focus:outline-none data-disabled:text-muted data-unavailable:line-through data-unavailable:text-muted data-unavailable:pointer-events-none data-today:font-semibold data-[outside-view]:text-muted",
+      "relative m-0.5 flex items-center justify-center rounded-full whitespace-nowrap focus:outline-none focus-visible:ring-2 data-disabled:text-muted data-today:font-semibold data-unavailable:pointer-events-none data-unavailable:text-muted data-unavailable:line-through data-[outside-view]:text-muted",
     ],
     cellWeek: "relative text-center text-muted",
   },
@@ -85,4 +87,6 @@ export default {
     color: "primary",
     variant: "solid",
   },
-}
+})
+
+export default calendarTheme

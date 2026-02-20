@@ -1,12 +1,14 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const pageHeroTheme = defineUiTheme({
   slots: {
     root: 'relative isolate',
-    container: 'flex flex-col lg:grid py-24 sm:py-32 lg:py-40 gap-16 sm:gap-y-24',
+    container: 'flex flex-col gap-16 py-24 sm:gap-y-24 sm:py-32 lg:grid lg:py-40',
     wrapper: '',
     header: '',
     headline: 'mb-4',
-    title: 'text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted',
-    description: 'text-lg sm:text-xl/8 text-muted',
+    title: 'text-5xl font-bold tracking-tight text-pretty text-highlighted sm:text-7xl',
+    description: 'text-lg text-muted sm:text-xl/8',
     body: 'mt-10',
     footer: 'mt-10',
     links: 'flex flex-wrap gap-x-6 gap-y-3'
@@ -32,7 +34,7 @@ export default {
     },
     headline: {
       true: {
-        headline: 'font-semibold text-primary flex items-center gap-1.5'
+        headline: 'flex items-center gap-1.5 font-semibold text-primary'
       }
     },
     title: {
@@ -41,4 +43,6 @@ export default {
       }
     }
   }
-}
+})
+
+export default pageHeroTheme

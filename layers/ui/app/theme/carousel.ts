@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const carouselTheme = defineUiTheme({
   slots: {
     root: "relative focus:outline-none",
     viewport: "overflow-hidden",
@@ -10,23 +12,23 @@ export default {
     next: "absolute rounded-full",
     dots: "absolute inset-x-0 -bottom-7 flex flex-wrap items-center justify-center gap-3",
     dot: [
-      "cursor-pointer size-3 bg-accented rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+      "size-3 cursor-pointer rounded-full bg-accented focus:outline-none focus-visible:ring-2 focus-visible:ring-primary",
       //options.theme.transitions && "transition",
     ],
   },
   variants: {
     orientation: {
       vertical: {
-        container: "flex-col -mt-4",
+        container: "-mt-4 flex-col",
         item: "pt-4",
-        prev: "top-4 sm:-top-12 left-1/2 -translate-x-1/2 rotate-90 rtl:-rotate-90",
-        next: "bottom-4 sm:-bottom-12 left-1/2 -translate-x-1/2 rotate-90 rtl:-rotate-90",
+        prev: "top-4 left-1/2 -translate-x-1/2 rotate-90 sm:-top-12 rtl:-rotate-90",
+        next: "bottom-4 left-1/2 -translate-x-1/2 rotate-90 sm:-bottom-12 rtl:-rotate-90",
       },
       horizontal: {
-        container: "flex-row -ms-4",
+        container: "-ms-4 flex-row",
         item: "ps-4",
-        prev: "start-4 sm:-start-12 top-1/2 -translate-y-1/2",
-        next: "end-4 sm:-end-12 top-1/2 -translate-y-1/2",
+        prev: "start-4 top-1/2 -translate-y-1/2 sm:-start-12",
+        next: "end-4 top-1/2 -translate-y-1/2 sm:-end-12",
       },
     },
     active: {
@@ -35,4 +37,6 @@ export default {
       },
     },
   },
-}
+})
+
+export default carouselTheme

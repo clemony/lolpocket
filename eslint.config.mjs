@@ -1,9 +1,10 @@
 // eslint.config.mjs
 import antfu from "@antfu/eslint-config"
+import css from "@eslint/css"
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss"
 import pluginJsonc from "eslint-plugin-jsonc"
-import pluginVue from "eslint-plugin-vue"
-import jsoncParser from "jsonc-eslint-parser"
+import * as jsoncParser from "jsonc-eslint-parser"
+import { tailwind4 } from "tailwind-csstree"
 import eslintParserVue from "vue-eslint-parser"
 
 const customGroups = [
@@ -107,8 +108,27 @@ export default antfu(
     },
   },
 
-  /* ---------- TAILWIND ---------- */
-
+  /* ---------- CSS & TAILWIND ---------- */
+  {
+    files: ["**/*.css"],
+    plugins: {
+      css,
+    },
+    language: "css/css",
+    languageOptions: {
+      customSyntax: tailwind4,
+      tolerant: true,
+    },
+    extends: [eslintPluginBetterTailwindcss.configs.recommended],
+    settings: {
+      "better-tailwindcss": {
+        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+      },
+    },
+    rules: {
+      "better-tailwindcss/enforce-consistent-line-wrapping": "off",
+    },
+  },
   {
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
 
@@ -116,16 +136,19 @@ export default antfu(
       "better-tailwindcss": {
         detectComponentClasses: true,
         entryPoint: "./layers/ui/app/assets/css/tailwind.css",
-        callees: ["cn", "clsx", "cva", "tw", "tv", "defineAppConfig"],
+        callees: [
+          "cn",
+          "clsx",
+          "cva",
+          "tw",
+          "tv",
+          "defineAppConfig",
+          ["defineUiTheme", [{ match: "objectValues" }]],
+        ],
         attributes: [
           "class",
           "className",
-          [
-            "ui",
-            [
-              { match: "objectValues" },
-            ],
-          ],
+          ["ui", [{ match: "objectValues" }]],
           "content",
           "variant",
           "base",
@@ -160,6 +183,37 @@ export default antfu(
     languageOptions: {
       parser: eslintParserVue,
     },
+  },
+  {
+    extends: [eslintPluginBetterTailwindcss.configs.recommended],
+    settings: {
+      "better-tailwindcss": {
+        detectComponentClasses: true,
+        entryPoint: "./layers/ui/app/assets/css/tailwind.css",
+        callees: [
+          "cn",
+          "clsx",
+          "cva",
+          "tw",
+          "tv",
+          "defineAppConfig",
+          ["defineUiTheme", [{ match: "objectValues" }]],
+        ],
+        tags: ["style"],
+      },
+    },
+    rules: {
+      "better-tailwindcss/no-unregistered-classes": "off",
+      "better-tailwindcss/enforce-consistent-line-wrapping": "off",
+      "better-tailwindcss/no-unknown-classes": "off",
+      "better-tailwindcss/enforce-canonical-classes": "off",
+      "better-tailwindcss/enforce-consistent-important-position": "off",
+      "better-tailwindcss/enforce-shorthand-classes": "warn",
+      "better-tailwindcss/enforce-consistent-variable-syntax": "warn",
+      "better-tailwindcss/no-unnecessary-whitespace": "warn",
+      "better-tailwindcss/no-duplicate-classes": "warn",
+    },
+    files: ["layers/ui/app/theme/**/*.ts"],
   }
 )
   .override(

@@ -1,8 +1,10 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardSearchButtonTheme = defineUiTheme({
   slots: {
     base: '',
     label: '',
-    trailing: 'hidden lg:flex items-center gap-0.5 ms-auto'
+    trailing: 'ms-auto hidden items-center gap-0.5 lg:flex'
   },
   variants: {
     collapsed: {
@@ -12,4 +14,6 @@ export default {
       }
     }
   }
-}
+})
+
+export default dashboardSearchButtonTheme

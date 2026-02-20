@@ -3,54 +3,84 @@
 &[data-color="lethality"],
 &[data-color="attackDamage"],
 &[data-color="armorPenetration"] {
-  @apply text-ad! **:text-ad!;
+  @apply
+    text-ad!
+    **:text-ad!
+  ;
 }
 
 &[data-color="armor"],
 &[data-color="attackSpeed"],
 &[data-color="goldPer10"] {
-  @apply text-[var(--color-pre)]! **:text-[var(--color-pre)]!;
+  @apply
+    text-(--color-pre)!
+    **:text-(--color-pre)!
+  ;
 }
 
 &[data-color="criticalStrikeChance"],
 &[data-color="criticalStrikeDamage"],
 &[data-color="lifesteal"] {
-  @apply text-[var(--color-dom)]! **:text-[var(--color-dom)]!;
+  @apply
+    text-(--color-dom)!
+    **:text-(--color-dom)!
+  ;
 }
 
 &[data-color="abilityPower"],
 &[data-color="percentMagicPenetration"],
 &[data-color="flatMagicPenetration"] {
-  @apply text-[var(--color-sorc)]! **:text-[var(--color-sorc)]!;
+  @apply
+    text-(--color-sorc)!
+    **:text-(--color-sorc)!
+  ;
 }
 
 &[data-color="healAndShieldPower"],
 &[data-color="abilityHaste"] {
-  @apply text-hsp! **:text-hsp!;
+  @apply
+    text-hsp!
+    **:text-hsp!
+  ;
 }
 
 &[data-color="health"],
 &[data-color="healthRegen"] {
-  @apply text-hp! **:text-hp!;
+  @apply
+    text-hp!
+    **:text-hp!
+  ;
 }
 
 &[data-color="mana"],
 &[data-color="manaRegen"] {
-  @apply text-mana! **:text-mana!;
+  @apply
+    text-mana!
+    **:text-mana!
+  ;
 }
 
 &[data-color="magicResistance"] {
-  @apply text-mr! **:text-mr!;
+  @apply
+    text-mr!
+    **:text-mr!
+  ;
 }
 
 &[data-color="flatMovespeed"],
 &[data-color="percentMovespeed"],
 &[data-color="tenacity"] {
-  @apply text-silver! **:text-silver!;
+  @apply
+    text-silver!
+    **:text-silver!
+  ;
 }
 
 &[data-color="omnivamp"] {
-  @apply text-vamp! **:text-vamp!;
+  @apply
+    text-vamp!
+    **:text-vamp!
+  ;
 }
 
 :root {
@@ -75,42 +105,42 @@
 
 [data-role="support"] {
   &.role-bg {
-    @apply bg-[var(--color-insp)];
+    @apply bg-(--color-insp);
   }
 }
 
 [data-role="middle"] {
   &.role-bg {
-    @apply bg-[var(--color-sorc)];
+    @apply bg-(--color-sorc);
   }
 }
 
 [data-role="bottom"] {
-  @apply !bg-[var(--color-pre)];
+  @apply bg-(--color-pre)!;
 }
 [data-role="top"] {
   &.role-bg {
-    @apply bg-[var(--color-dom)];
+    @apply bg-(--color-dom);
   }
 }
 [data-role="jungle"] {
   &.role-bg {
-    @apply bg-[var(--color-res)];
+    @apply bg-(--color-res);
   }
 }
 
 &[data-color="5001"],
 &[data-color="5011"],
 &[data-color="5013"] {
-  @apply **:text-[var(--color-res)];
+  @apply **:text-(--color-res);
 }
 &[data-color="5005"] {
-  @apply **:text-[var(--color-pre)];
+  @apply **:text-(--color-pre);
 }
 &[data-color="5007"],
 &[data-color="5010"] {
-  @apply **:text-[var(--color-insp)]!;
+  @apply **:text-(--color-insp)!;
 }
 &[data-color="5008"] {
-  @apply text-[var(--color-sorc)]!;
+  @apply text-(--color-sorc)!;
 }

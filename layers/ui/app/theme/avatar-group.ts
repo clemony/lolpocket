@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const avatarGroupTheme = defineUiTheme({
   slots: {
     root: 'inline-flex flex-row-reverse justify-end',
     base: 'relative rounded-full ring-bg first:me-0'
@@ -6,35 +8,37 @@ export default {
   variants: {
     size: {
       '3xs': {
-        base: 'ring -me-0.5'
+        base: '-me-0.5 ring'
       },
       '2xs': {
-        base: 'ring -me-0.5'
+        base: '-me-0.5 ring'
       },
       'xs': {
-        base: 'ring -me-0.5'
+        base: '-me-0.5 ring'
       },
       'sm': {
-        base: 'ring-2 -me-1.5'
+        base: '-me-1.5 ring-2'
       },
       'md': {
-        base: 'ring-2 -me-1.5'
+        base: '-me-1.5 ring-2'
       },
       'lg': {
-        base: 'ring-2 -me-1.5'
+        base: '-me-1.5 ring-2'
       },
       'xl': {
-        base: 'ring-3 -me-2'
+        base: '-me-2 ring-3'
       },
       '2xl': {
-        base: 'ring-3 -me-2'
+        base: '-me-2 ring-3'
       },
       '3xl': {
-        base: 'ring-3 -me-2'
+        base: '-me-2 ring-3'
       }
     }
   },
   defaultVariants: {
     size: 'md'
   }
-}
+})
+
+export default avatarGroupTheme

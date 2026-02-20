@@ -1,13 +1,15 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const emptyTheme = defineUiTheme({
   slots: {
-    root: "relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0",
-    header: "flex flex-col items-center gap-2 max-w-sm text-center",
-    avatar: "shrink-0 mb-2 bg-transparent",
-    title: "text-highlighted text-pretty font-medium",
-    description: "text-balance text-center",
-    body: "flex flex-col items-center gap-4 max-w-sm",
-    actions: "flex flex-wrap justify-center gap-2 shrink-0",
-    footer: "flex flex-col items-center gap-2 max-w-sm",
+    root: "relative flex min-w-0 flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8",
+    header: "flex max-w-sm flex-col items-center gap-2 text-center",
+    avatar: "mb-2 shrink-0 bg-transparent",
+    title: "font-medium text-pretty text-highlighted",
+    description: "text-center text-balance",
+    body: "flex max-w-sm flex-col items-center gap-4",
+    actions: "flex shrink-0 flex-wrap justify-center gap-2",
+    footer: "flex max-w-sm flex-col items-center gap-2",
   },
   variants: {
     size: {
@@ -64,4 +66,6 @@ export default {
     variant: "outline",
     size: "md",
   },
-}
+})
+
+export default emptyTheme

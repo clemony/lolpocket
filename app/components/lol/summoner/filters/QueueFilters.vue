@@ -30,7 +30,7 @@ const queues = [
   <UTabs
     v-model:model-value="queueModel"
     size="sm"
-    class="h-10 w-full"
+    class="w-full"
     :default-value="0"
     :items="queues" />
 </template>

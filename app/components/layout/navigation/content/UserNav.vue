@@ -43,7 +43,7 @@ const supNav = [
     <UButton
       variant="highlight"
       to="/account/settings"
-      class="flex flex-nowrap items-center justify-between rounded-md p-1.5 hover:bg-p1 hover:noise">
+      class="hover:noise flex flex-nowrap items-center justify-between rounded-md p-1.5 hover:bg-p1">
       <UUser
         :name="account?.name ?? account?.username ?? 'Not Connected'"
         :avatar="{

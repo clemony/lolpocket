@@ -15,7 +15,7 @@ const mode = computed(() => {
     label: c,
     ui: {
       item: cn(
-        "group/mode btn relative h-11 bg-p0 noise py-3 pl-3 text-pc **:text-pc",
+        "group/mode noise btn relative h-11 bg-p0 py-3 pl-3 text-pc **:text-pc",
         m.preference === "system" ? m.value : c
       ),
     },

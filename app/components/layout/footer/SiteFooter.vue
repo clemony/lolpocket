@@ -41,8 +41,8 @@ const right = computed(() =>
 <template>
   <UFooter
     :ui="{
-      root: ' bg-secondary before:z-0  before:size-full  relative before:absolute z-1 *:z-1',
-      top: 'mx-auto h-90  overflow-hidden',
+      root: ' bg-secondary before:z-2   grow flex flex-col  before:size-full  relative before:absolute z-0 *:not-before:z-3',
+      top: 'mx-auto grow  overflow-hidden',
       bottom:
         'h-20 bg-neutral text-nc max-h-20 min-h-20 border-t-neutral justify-between flex',
     }">
@@ -62,78 +62,83 @@ const right = computed(() =>
       </UFooterColumns>
     </template>
     <template #bottom>
-      <UContainer class="flex grow items-center gap-2">
-        <UButton
-          variant="link"
-          square
-          :ui="{ base: 'shrink-0' }"
-          color="neutral"
-          size="xl">
-          <h1 class="shrink-0 text-4xl leading-none font-bold">LP</h1>
-        </UButton>
+      <UFooter class="flex grow items-center gap-2">
+        <template #left>
+          <LpLogo
+            square
+            :ui="{
+              base: 'size-10 shrink-0',
+              label: 'group-not-on/btn:text-nc **:text-nc',
+            }"
+            color="neutral">
+          </LpLogo>
+        </template>
 
         <p class="text-xs leading-4.5">
           {{ riotDisclaimer }}
         </p>
-        <div>
-          <ul class="flex">
-            <li
-              v-for="(link, i) in links"
-              :key="link.name"
-              class="flex items-center gap-1.5">
-              <NuxtLink
-                class="text-xs font-medium underline-offset-2 hover:underline"
-                :to="link.path">
-                {{ link.meta?.title || link.name }}
-              </NuxtLink>
-              <icon
-                v-if="i + 1 !== links.length"
-                class="size-4 text-nc opacity-70"
-                name="slash" />
-            </li>
-          </ul>
-          <ul
-            class="flex shrink-0 items-center justify-end gap-2 justify-self-end *:grid *:place-items-center">
-            <UButton
-              v-for="link in contactLinks"
-              :key="link.label"
-              :icon="link.icon"
-              as="li"
-              size="xl"
-              color="neutral"
-              variant="link"
-              :ui="{ leadingIcon: link.ui?.leadingIcon }"
-              external
-              :to="link.to"
-              target="_blank" />
 
-            <UTooltip color="p0" side="top">
+        <template #right>
+          <div>
+            <ul class="flex">
+              <li
+                v-for="(link, i) in links"
+                :key="link.name"
+                class="flex items-center gap-1.5">
+                <NuxtLink
+                  class="text-xs font-medium underline-offset-2 hover:underline"
+                  :to="link.path">
+                  {{ link.meta?.title || link.name }}
+                </NuxtLink>
+                <icon
+                  v-if="i + 1 !== links.length"
+                  class="size-4 text-nc opacity-70"
+                  name="slash" />
+              </li>
+            </ul>
+            <ul
+              class="flex shrink-0 items-center justify-end gap-2 justify-self-end *:grid *:place-items-center">
               <UButton
-                variant="ghost"
+                v-for="link in contactLinks"
+                :key="link.label"
+                :icon="link.icon"
+                as="li"
+                size="xl"
                 color="neutral"
-                icon="at"
-                rounded
-                :ui="{
-                  leadingIcon: 'text-nc size-6.5 shrink-0 **:stroke-[1.4]',
-                }"
-                @click="copy()" />
-              <template #content>
-                <div class="flex flex-col gap-1 p-2">
-                  <span class="-mx-2 badge badge-neutral text-md italic">
-                    {{ contactInfo.contact?.to }}
-                  </span>
+                variant="link"
+                :ui="{ leadingIcon: link.ui?.leadingIcon }"
+                external
+                :to="link.to"
+                target="_blank" />
 
-                  <span class="flex items-center gap-1 text-xs">
-                    {{ !copied ? "Click @ to Copy" : "Copied!" }}
+              <UTooltip color="p0" side="top">
+                <UButton
+                  variant="ghost"
+                  color="neutral"
+                  icon="at"
+                  rounded
+                  :ui="{
+                    leadingIcon: 'text-nc size-6.5 shrink-0 **:stroke-[1.4]',
+                  }"
+                  @click="copy()" />
+                <template #content>
+                  <div class="flex flex-col gap-1 p-2">
+                    <span class="-mx-2 badge text-md italic badge-neutral">
+                      {{ contactInfo.contact?.to }}
+                    </span>
 
-                    <icon class="size-3.5! *:text-nc" name="copy" />
-                  </span>
-                </div>
-              </template>
-            </UTooltip>
-          </ul>
-        </div>
-      </UContainer>
+                    <span class="flex items-center gap-1 text-xs">
+                      {{ !copied ? "Click @ to Copy" : "Copied!" }}
+
+                      <icon class="size-3.5! *:text-nc" name="copy" />
+                    </span>
+                  </div>
+                </template>
+              </UTooltip>
+            </ul>
+          </div>
+        </template>
+      </UFooter>
     </template>
   </UFooter>
 </template>

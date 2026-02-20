@@ -33,7 +33,7 @@ const { class: className, item } = defineProps<{
           :class="cn(item.shortcut?.class)" />
         <span
           v-if="item.shortcut?.text"
-          class="badge max-w-40 truncate badge-neutral text-xs! badge-sm font-semibold! tracking-normal group-open/trig:badge-neutral group-hover/trig:badge-neutral">
+          class="badge max-w-40 truncate text-xs! badge-sm font-semibold! tracking-normal badge-neutral group-open/trig:badge-neutral group-hover/trig:badge-neutral">
           {{ item.shortcut?.text }}
         </span>
       </MenubarShortcut>

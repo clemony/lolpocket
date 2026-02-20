@@ -3,9 +3,9 @@ definePageMeta({
   title: "Spells",
   icon: "i-basil-book-solid",
 
-  description: "Bring the petricite!",
+  description: "Don't forget the petricite!",
   listClass: "**:stroke-[2.6]",
-  path: "/library/spells",
+  path: "/spells",
   searchKeys: [
     "summoner",
     "spell",
@@ -36,7 +36,7 @@ const selectedSpell = computed(
     <div class="flex w-full gap-[8%] px-3 py-24">
       <div class="flex w-114 flex-col gap-14">
         <div
-          class="grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-box border-p3/80 px-9 py-8 shadow-smooth">
+          class="shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-box border-p3/80 px-9 py-8">
           <div
             v-for="spell in spells"
             :key="spell.name"
@@ -84,7 +84,7 @@ const selectedSpell = computed(
         v-auto-animate
         class="flex w-160 flex-col gap-14 transition-all duration-300">
         <div
-          class="flex max-h-min w-full flex-col gap-6 rounded-xl border border-p3/80 px-9 pt-7 pb-8 shadow-smooth transition-all duration-300">
+          class="shadow-smooth flex max-h-min w-full flex-col gap-6 rounded-xl border border-p3/80 px-9 pt-7 pb-8 transition-all duration-300">
           <div class="i-c flex w-full gap-6">
             <img
               class="size-24 rounded-lg shadow-sm shadow-black/20"
@@ -92,9 +92,7 @@ const selectedSpell = computed(
               :src="`/img/spells/${selectedSpell.id}.webp`" />
 
             <div class="items-between grid h-full py-2">
-              <p class="font-medium">
-                Summoner
-              </p>
+              <p class="font-medium">Summoner</p>
 
               <h1 class="dst text-5xl tracking-tight">
                 {{ selectedSpell.name }}
@@ -108,21 +106,15 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.cd"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Cooldown:
-              </p>
+              <p class="font-semibold tracking-tight">Cooldown:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.cd }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.cd }} seconds</p>
             </li>
 
             <li
               v-if="selectedSpell.charges"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Charges:
-              </p>
+              <p class="font-semibold tracking-tight">Charges:</p>
 
               <p class="font-medium">
                 {{ selectedSpell.charges }}
@@ -132,18 +124,14 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.recharge"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Recharge Time:
-              </p>
+              <p class="font-semibold tracking-tight">Recharge Time:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.recharge }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.recharge }} seconds</p>
             </li>
           </ul>
         </div>
 
-        <div class="w-full rounded-xl bg-black/90 shadow-pretty">
+        <div class="shadow-pretty w-full rounded-xl bg-black/90">
           <video class="aspect-video h-auto w-90 rounded-xl">
             <source
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`" />

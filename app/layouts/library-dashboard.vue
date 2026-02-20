@@ -17,6 +17,23 @@ const toggleLeft = useToggle(collapsed)
     v-auto-animate
     class="z-auto flex w-screen flex-col overflow-y-auto"
     unit="px">
+    <UContainer>
+      <UPageHeader
+        :title="String($route.meta?.title || $route.name)"
+        headline="Library"
+        :ui="{
+          headline: 'text-xs font-semibold text-n5',
+          root: 'mt-(--ui-header-height) h-[calc(--ui-header-height*2])! flex flex-col gap-2 border-b-0',
+        }">
+        <template #description>
+          <p class="mt-2 text-sm text-n4 italic">
+            <slot name="quote" />
+          </p>
+        </template>
+      </UPageHeader>
+    </UContainer>
+
+    <Separator class="my-4" />
     <div class="flex flex-1">
       <UDashboardSidebar
         id="library-left"
@@ -68,23 +85,11 @@ const toggleLeft = useToggle(collapsed)
               'mx-auto justify-self-center': collapsed,
             })
           ">
-          <div class="flex flex-col gap-2 pt-(--ui-header-height)">
-            <div class="flex shrink-0 items-center gap-1">
-              <span class="text-xs font-semibold text-n5">Library</span>
-            </div>
-            <h1 class="dst">
-              {{ $route.meta?.title || $route.name }}
-            </h1>
-            <p class="mt-2 text-sm text-n4 italic">
-              <slot name="quote" />
-            </p>
-            <Separator class="my-4" />
-          </div>
           <slot :collapsed />
         </UMain>
       </UDashboardPanel>
     </div>
-    <UDashboardPanel class="w-screen">
+    <UDashboardPanel class="h-120 max-h-120 min-h-120 w-screen overflow-hidden">
       <SiteFooter />
     </UDashboardPanel>
   </UDashboardGroup>

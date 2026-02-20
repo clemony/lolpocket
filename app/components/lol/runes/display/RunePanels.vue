@@ -27,7 +27,7 @@ const tabListClass =
         <RunesBlurb :current-path="selectedPath" layout-id="path1" />
       </Transition>
 
-      <div class="relative h-18 w-120 rounded-xl shadow-smooth">
+      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
           :data-path="selectedPath" />

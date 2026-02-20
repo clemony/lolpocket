@@ -1,9 +1,11 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const userTheme = defineUiTheme({
   slots: {
     name: "font-semibold text-pc",
-    avatar: "shrink-0 **:text-pc/20 drop-shadow-sm shadow-sm",
+    avatar: "shrink-0 shadow-sm drop-shadow-sm **:text-pc/20",
     description: "text-n5",
-    root: "relative group/user",
+    root: "group/user relative",
     wrapper: "",
   },
   variants: {
@@ -17,8 +19,8 @@ export default {
     },
     size: {
       "2xl": {
-        name: "text-pc text-md",
-        description: "text-pc text-xs",
+        name: "text-md text-pc",
+        description: "text-xs text-pc",
         root: "gap-3",
       },
       "2xs": {
@@ -88,4 +90,6 @@ export default {
   defaultVariants: {
     size: "md",
   },
-}
+})
+
+export default userTheme

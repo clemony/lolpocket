@@ -19,12 +19,9 @@ definePageMeta({
   layout: "default",
   path: "/",
   search: "hidden",
-  meta: {
-    title: "lolpocket",
-    icon: "teenyicons:home-alt-outline",
-    parent: "/home",
-    searchKeys: ["home", "landing", "testimonials"],
-  },
+  title: "lolpocket",
+  icon: "teenyicons:home-alt-outline",
+  searchKeys: ["home", "landing", "testimonials"],
 })
 
 const homeWrapper = useTemplateRef<HTMLElement | null>("homeWrapper")

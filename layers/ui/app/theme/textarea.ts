@@ -1,8 +1,10 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const textareaTheme = defineUiTheme({
   slots: {
     root: "relative inline-flex items-center",
     base: [
-      "w-full rounded-md border-0 appearance-none placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "w-full appearance-none rounded-md border-0 placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
       "transition-colors",
     ],
     leading: "absolute start-0 flex items-start",
@@ -16,62 +18,62 @@ export default {
     fieldGroup: {
       horizontal: {
         root: "group has-focus-visible:z-[1]",
-        base: "group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none",
+        base: "group-not-last:group-not-first:rounded-none group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none",
       },
       vertical: {
         root: "group has-focus-visible:z-[1]",
-        base: "group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none",
+        base: "group-not-last:group-not-first:rounded-none group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none",
       },
     },
     size: {
       xs: {
-        base: "px-2 py-1 text-xs gap-1",
-        leading: "ps-2 inset-y-1",
-        trailing: "pe-2 inset-y-1",
+        base: "gap-1 px-2 py-1 text-xs",
+        leading: "inset-y-1 ps-2",
+        trailing: "inset-y-1 pe-2",
         leadingIcon: "size-4",
         leadingAvatarSize: "3xs",
         trailingIcon: "size-4",
       },
       sm: {
-        base: "px-2.5 py-1.5 text-xs gap-1.5",
-        leading: "ps-2.5 inset-y-1.5",
-        trailing: "pe-2.5 inset-y-1.5",
+        base: "gap-1.5 px-2.5 py-1.5 text-xs",
+        leading: "inset-y-1.5 ps-2.5",
+        trailing: "inset-y-1.5 pe-2.5",
         leadingIcon: "size-4",
         leadingAvatarSize: "3xs",
         trailingIcon: "size-4",
       },
       md: {
-        base: "px-2.5 py-1.5 text-sm gap-1.5",
-        leading: "ps-2.5 inset-y-1.5",
-        trailing: "pe-2.5 inset-y-1.5",
+        base: "gap-1.5 px-2.5 py-1.5 text-sm",
+        leading: "inset-y-1.5 ps-2.5",
+        trailing: "inset-y-1.5 pe-2.5",
         leadingIcon: "size-5",
         leadingAvatarSize: "2xs",
         trailingIcon: "size-5",
       },
       lg: {
-        base: "px-3 py-2 text-sm gap-2",
-        leading: "ps-3 inset-y-2",
-        trailing: "pe-3 inset-y-2",
+        base: "gap-2 px-3 py-2 text-sm",
+        leading: "inset-y-2 ps-3",
+        trailing: "inset-y-2 pe-3",
         leadingIcon: "size-5",
         leadingAvatarSize: "2xs",
         trailingIcon: "size-5",
       },
       xl: {
-        base: "px-3 py-2 text-base gap-2",
-        leading: "ps-3 inset-y-2",
-        trailing: "pe-3 inset-y-2",
+        base: "gap-2 px-3 py-2 text-base",
+        leading: "inset-y-2 ps-3",
+        trailing: "inset-y-2 pe-3",
         leadingIcon: "size-6",
         leadingAvatarSize: "xs",
         trailingIcon: "size-6",
       },
     },
     variant: {
-      outline: "text-highlighted bg-default ring ring-inset ring-accented",
-      soft: "text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50",
-      subtle: "text-highlighted bg-elevated ring ring-inset ring-accented",
+      outline: "bg-default text-highlighted ring ring-accented ring-inset",
+      soft: "bg-elevated/50 text-highlighted hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50",
+      subtle: "bg-elevated text-highlighted ring ring-accented ring-inset",
       ghost:
-        "text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent",
-      none: "text-highlighted bg-transparent",
+        "bg-transparent text-highlighted hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent",
+      none: "bg-transparent text-highlighted",
     },
     color: {
       primary: "",
@@ -108,23 +110,23 @@ export default {
       color: "primary",
       variant: ["outline", "subtle"],
       class:
-        "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary",
+        "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset",
     },
     {
       color: "primary",
       highlight: true,
-      class: "ring ring-inset ring-primary",
+      class: "ring ring-primary ring-inset",
     },
     {
       color: "neutral",
       variant: ["outline", "subtle"],
       class:
-        "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-inverted",
+        "focus-visible:ring-2 focus-visible:ring-inverted focus-visible:ring-inset",
     },
     {
       color: "neutral",
       highlight: true,
-      class: "ring ring-inset ring-inverted",
+      class: "ring ring-inverted ring-inset",
     },
     {
       leading: true,
@@ -197,4 +199,6 @@ export default {
     color: "primary",
     variant: "outline",
   },
-}
+})
+
+export default textareaTheme

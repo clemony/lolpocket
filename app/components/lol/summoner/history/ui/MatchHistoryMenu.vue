@@ -25,7 +25,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
     ">
     <Toggle
       v-model:model-value="open"
-      class="bg-transparent! fx-0 hover:fx-1 on:bg-transparent!"
+      class="fx-0 hover:fx-1 bg-transparent! on:bg-transparent!"
       on="inset"
       hover="inset"
       square
@@ -37,7 +37,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
 
     <UPopover>
       <UButton
-        class="bg-transparent! fx-0 hover:fx-1 aria-expanded:btn-active on:bg-transparent!"
+        class="fx-0 hover:fx-1 bg-transparent! aria-expanded:btn-active on:bg-transparent!"
         variant="ghost"
         on="inset"
         hover="inset"

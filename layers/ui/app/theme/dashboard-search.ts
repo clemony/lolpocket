@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardSearchTheme = defineUiTheme({
   slots: {
     modal: '',
     input: ''
@@ -6,7 +8,7 @@ export default {
   variants: {
     fullscreen: {
       false: {
-        modal: 'sm:max-w-3xl h-full sm:h-[28rem]'
+        modal: 'h-full sm:h-[28rem] sm:max-w-3xl'
       }
     },
     size: {
@@ -30,4 +32,6 @@ export default {
   defaultVariants: {
     size: 'md'
   }
-}
+})
+
+export default dashboardSearchTheme

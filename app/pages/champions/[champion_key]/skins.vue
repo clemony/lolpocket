@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import "@ui/css/plugins/embla.css"
+import "#layers/ui/app/assets/css/plugins/embla.css"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
 import { getSplash } from "~/domain/utils/img"
 import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
@@ -60,7 +60,7 @@ const skins = computed(() => skinIndex[champion.key])
       :plugins="[WheelGesturesPlugin()]"
       :orientation="carouselOrientation"
       @init-api="(val) => (emblaThumbnailApi = val)">
-      <CarouselContent class="-ml-6 scrollbar-hidden flex pt-22 pb-6">
+      <CarouselContent class="scrollbar-hidden -ml-6 flex pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
@@ -119,11 +119,11 @@ const skins = computed(() => skinIndex[champion.key])
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious
-        class="left-10 size-16 rounded-xl border-0 bg-transparent fx-0 **:text-white/70 [&_svg]:size-6"
+        class="fx-0 left-10 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6"
         variant="base"
         hover="neutral" />
       <CarouselNext
-        class="right-6 size-16 rounded-xl border-0 bg-transparent fx-0 **:text-white/70 [&_svg]:size-6"
+        class="fx-0 right-6 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6"
         variant="base"
         hover="neutral" />
     </Carousel>

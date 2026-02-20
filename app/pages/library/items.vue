@@ -66,12 +66,12 @@ watch(
         v-model:model-value="tabs"
         :orientation="collapsed ? 'vertical' : 'horizontal'"
         :items="Object.values(tabData)"
-        :size="collapsed ? 'md' : 'sm'"
+        :size="collapsed ? 'md' : 'md'"
         color="neutral"
         :ui="{
-          root: 'grow',
+          leadingIcon: '**:stroke-[1.8]',
         }"
-        :variant="collapsed ? 'outline' : 'pill'"
+        :variant="collapsed ? 'solid-sq' : 'solid'"
         :default-value="tabs" />
     </template>
     <template #sidebar-left-body>
@@ -82,7 +82,7 @@ watch(
     </template>
 
     <div
-      class="sticky top-15 z-2 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
+      class="sticky top-15 z-2 mb-0 -ml-[5px] grid h-fit w-[calc(100%+10px)] auto-rows-max place-items-center bg-p0 pt-4 pb-5">
       <UTabs
         v-model:model-value="is().filters.rank"
         :items="ranks"

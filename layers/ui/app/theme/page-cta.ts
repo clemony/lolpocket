@@ -1,11 +1,13 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const pageCtaTheme = defineUiTheme({
   slots: {
-    root: 'relative isolate rounded-xl overflow-hidden',
-    container: 'flex flex-col lg:grid px-6 py-12 sm:px-12 sm:py-24 lg:px-16 lg:py-24 gap-8 sm:gap-16',
+    root: 'relative isolate overflow-hidden rounded-xl',
+    container: 'flex flex-col gap-8 px-6 py-12 sm:gap-16 sm:px-12 sm:py-24 lg:grid lg:px-16 lg:py-24',
     wrapper: '',
     header: '',
-    title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted',
-    description: 'text-base sm:text-lg text-muted',
+    title: 'text-3xl font-bold tracking-tight text-pretty text-highlighted sm:text-4xl',
+    description: 'text-base text-muted sm:text-lg',
     body: 'mt-8',
     footer: 'mt-8',
     links: 'flex flex-wrap gap-x-6 gap-y-3'
@@ -59,4 +61,6 @@ export default {
   defaultVariants: {
     variant: 'outline'
   }
-}
+})
+
+export default pageCtaTheme

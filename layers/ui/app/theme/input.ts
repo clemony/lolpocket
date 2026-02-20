@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const inputTheme = defineUiTheme({
   slots: {
     leading: "absolute inset-y-0 start-0 flex items-center",
     leadingAvatar: "shrink-0",
@@ -8,8 +10,8 @@ export default {
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "w-full rounded-md border-0 appearance-none placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 peer",
-      "transition-colors input",
+      "peer w-full appearance-none rounded-md border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "input transition-colors",
     ],
   },
   variants: {
@@ -24,21 +26,21 @@ export default {
     },
     variant: {
       ghost:
-        "text-pc bg-transparent hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
-      none: "text-pc bg-transparent",
-      outline: "text-pc bg-default ring ring-inset ring-p3",
-      soft: "text-pc bg-p1/50 hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
-      subtle: "text-pc bg-p1 ring ring-inset ring-p3",
+        "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
+      none: "bg-transparent text-pc",
+      outline: "bg-default text-pc ring ring-p3 ring-inset",
+      soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
+      subtle: "bg-p1 text-pc ring ring-p3 ring-inset",
       "ghost-outline":
-        "text-pc bg-transparent hover:ring-inset ring ring-transparent hover:ring-pc/50 focus:bg-p2 disabled:bg-transparent dark:disabled:bg-transparent",
+        "bg-transparent text-pc ring ring-transparent hover:ring-pc/50 hover:ring-inset focus:bg-p2 disabled:bg-transparent dark:disabled:bg-transparent",
     },
     fieldGroup: {
       horizontal: {
-        base: "group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none",
+        base: "group-not-last:group-not-first:rounded-none group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none",
         root: "group has-focus-visible:z-[1]",
       },
       vertical: {
-        base: "group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none",
+        base: "group-not-last:group-not-first:rounded-none group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none",
         root: "group has-focus-visible:z-[1]",
       },
     },
@@ -53,7 +55,7 @@ export default {
     },
     size: {
       lg: {
-        base: "px-3 py-2 text-sm gap-2 h-12 input-lg",
+        base: "input-lg h-12 gap-2 px-3 py-2 text-sm",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4",
@@ -61,7 +63,7 @@ export default {
         trailingIcon: "size-5",
       },
       md: {
-        base: "px-2.5 py-0 text-sm gap-1.5 h-10 input-md",
+        base: "input-md h-10 gap-1.5 px-2.5 py-0 text-sm",
         leading: "ps-2.5",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4",
@@ -69,7 +71,7 @@ export default {
         trailingIcon: "size-5",
       },
       sm: {
-        base: "px-2.5 py-1.5 text-xs gap-1.5 h-8 input-sm",
+        base: "input-sm h-8 gap-1.5 px-2.5 py-1.5 text-xs",
         leading: "ps-2.5",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
@@ -77,7 +79,7 @@ export default {
         trailingIcon: "size-4",
       },
       xl: {
-        base: "px-3 py-0 text-base gap-2 h-14 input-xl",
+        base: "input-xl h-14 gap-2 px-3 py-0 text-base",
         leading: "ps-3",
         leadingAvatarSize: "xs",
         leadingIcon: "size-4",
@@ -85,7 +87,7 @@ export default {
         trailingIcon: "size-6",
       },
       xs: {
-        base: "px-2 py-0 text-xs gap-1 h-7 input-xs",
+        base: "input-xs h-7 gap-1 px-2 py-0 text-xs",
         leading: "ps-2",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
@@ -106,22 +108,22 @@ export default {
       color: "primary",
       variant: ["outline", "subtle"],
       class:
-        "focus-visible:ring focus-visible:ring-inset focus-visible:ring-n4",
+        "focus-visible:ring focus-visible:ring-n4 focus-visible:ring-inset",
     },
     {
       color: "primary",
-      class: "ring ring-inset ring-n4",
+      class: "ring ring-n4 ring-inset",
       highlight: true,
     },
     {
       color: "neutral",
       variant: ["outline", "subtle"],
       class:
-        "focus-visible:ring focus-visible:ring-inset focus-visible:ring-nc",
+        "focus-visible:ring focus-visible:ring-nc focus-visible:ring-inset",
     },
     {
       color: "neutral",
-      class: "ring ring-inset ring-nc",
+      class: "ring ring-nc ring-inset",
       highlight: true,
     },
     {
@@ -195,4 +197,6 @@ export default {
     variant: "outline",
     size: "md",
   },
-}
+})
+
+export default inputTheme

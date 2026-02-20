@@ -93,6 +93,7 @@
     "graphql",
     "astro",
     "svelte",
+    "tailwindcss",
     "css",
     "less",
     "scss",

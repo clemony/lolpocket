@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardSidebarCollapseTheme = defineUiTheme({
   base: 'hidden lg:flex',
   variants: {
     side: {
@@ -6,4 +8,6 @@ export default {
       right: ''
     }
   }
-}
+})
+
+export default dashboardSidebarCollapseTheme

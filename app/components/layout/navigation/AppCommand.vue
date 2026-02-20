@@ -41,13 +41,38 @@ const focus = ref<HTMLElement>()
     <Tooltip :text="`Search ${getDeviceKey()}K`">
       <UButton
         icon="search"
-        size="md"
-        square
+        label="search..."
+        size="sm"
         :ui="{
-          base: 'shrink-0 -ml-1 anchor',
-          leadingIcon: 'size-4.5 **:stroke-[2.3] opacity-80',
+          base: 'shrink-0 cursor-text  w-180! inset-shadow-xs  border border-p3 rounded-xl!',
+          label: 'grow text-center  text-n4   ',
+          leadingIcon:
+            'size-4.5 justify-self-start text-n5 **:stroke-[2.3] opacity-80 group-hover/btn:opacity-100',
         }"
-        variant="ghost" />
+        variant="ring">
+        <template #trailing>
+          <div class="flex items-center gap-0 self-center">
+            <UKbd
+              v-for="k in ['meta', 'K']"
+              :key="k"
+              square
+              class="text-sm text-n4"
+              size="sm"
+              variant="ghost"
+              :value="k" />
+          </div>
+        </template>
+      </UButton>
+      <template #content>
+        Search... &nbsp;
+        <UKbd
+          v-for="k in ['meta', 'K']"
+          :key="k"
+          square
+          size="sm"
+          color="neutral"
+          :value="k" />
+      </template>
     </Tooltip>
     <template #content>
       <UCommandPalette

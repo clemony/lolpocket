@@ -38,7 +38,7 @@ const {
         <BaseListboxItem
           v-for="resource in abilityResources"
           :key="resource.name"
-          class="bg-transparent fx-0"
+          class="fx-0 bg-transparent"
           :value="resource.name"
           as-child>
           <ResourceBadge as="label" :variant size="sm" :resource />

@@ -1,13 +1,15 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const radioGroupTheme = defineUiTheme({
   slots: {
     root: "relative",
     fieldset: "flex gap-x-2",
     legend: "mb-1 block font-medium text-default",
     item: "flex items-start",
     container: "flex items-center",
-    base: "rounded-full ring ring-inset ring-accented overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-2",
+    base: "overflow-hidden rounded-full ring ring-accented ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
     indicator:
-      "flex items-center justify-center size-full after:bg-default after:rounded-full",
+      "flex size-full items-center justify-center after:rounded-full after:bg-default",
     wrapper: "w-full",
     label: "block font-medium text-default",
     description: "text-muted",
@@ -28,7 +30,7 @@ export default {
         item: "",
       },
       card: {
-        item: "border border-muted rounded-lg",
+        item: "rounded-lg border border-muted",
       },
       table: {
         item: "border border-muted",
@@ -108,7 +110,7 @@ export default {
     },
     required: {
       true: {
-        legend: "after:content-['*'] after:ms-0.5 after:text-error",
+        legend: "after:ms-0.5 after:text-error after:content-['*']",
       },
     },
   },
@@ -120,4 +122,6 @@ export default {
     orientation: "vertical",
     indicator: "start",
   },
-}
+})
+
+export default radioGroupTheme

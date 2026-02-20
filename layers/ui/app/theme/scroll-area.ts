@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const scrollAreaTheme = defineUiTheme({
   slots: {
     root: 'relative',
     viewport: 'relative flex',
@@ -7,7 +9,7 @@ export default {
   variants: {
     orientation: {
       vertical: {
-        root: 'overflow-y-auto overflow-x-hidden',
+        root: 'overflow-x-hidden overflow-y-auto',
         viewport: 'flex-col',
         item: ''
       },
@@ -18,4 +20,6 @@ export default {
       }
     }
   }
-}
+})
+
+export default scrollAreaTheme

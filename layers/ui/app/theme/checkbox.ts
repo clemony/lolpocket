@@ -1,12 +1,13 @@
 import button from "./button"
+import { defineUiTheme } from "./defineUiTheme"
 
-export default {
+export const checkboxTheme = defineUiTheme({
   slots: {
-    root: "relative flex items-start group/x **:cursor-pointer",
+    root: "group/x relative flex items-start **:cursor-pointer",
     container: "flex items-center",
-    base: "rounded-sm ring-1 before:hidden overflow-visible! relative focus-visible:outline-0   focus-visible:focus-ring before:rounded-md!",
-    indicator: "flex items-center justify-center size-full rounded-[inherit] ",
-    icon: "shrink-0 **:stroke-[2.14] size-full",
+    base: "focus-visible:focus-ring relative overflow-visible! rounded-sm ring-1 before:hidden before:rounded-md! focus-visible:outline-0",
+    indicator: "flex size-full items-center justify-center rounded-[inherit]",
+    icon: "size-full shrink-0 **:stroke-[2.14]",
     wrapper: "w-full",
     label: "block font-medium text-pc group-hover/x:underline",
     description: "text-n4",
@@ -15,13 +16,13 @@ export default {
     color: {
       ...button.variants.color,
       primary: {
-        base: "bg-p1 ring-p4/60 on:ring-neutral not-on:focus-visible:ring-p4/60",
+        base: "bg-p1 ring-p4/60 not-on:focus-visible:ring-p4/60 on:ring-neutral",
         indicator: "bg-neutral",
         icon: "text-p1! **:text-p1",
       },
       neutral: {
-        base: "bg-neutral border-neutral",
-        indicator: " text-nc **:text-nc",
+        base: "border-neutral bg-neutral",
+        indicator: "text-nc **:text-nc",
       },
     },
     variant: {
@@ -30,7 +31,7 @@ export default {
         root: "",
       },
       card: {
-        root: "border border-muted rounded-lg",
+        root: "rounded-lg border border-muted",
       },
     },
     indicator: {
@@ -80,13 +81,13 @@ export default {
         wrapper: "text-sm",
       },
       "3xl": {
-        base: "size-7 ",
+        base: "size-7",
         container: "h-8",
         icon: "size-4",
         wrapper: "text-sm",
       },
       "4xl": {
-        base: " size-8  ",
+        base: "size-8",
         container: "h-9",
         icon: "size-4",
         wrapper: "text-sm",
@@ -106,7 +107,7 @@ export default {
     },
     required: {
       true: {
-        label: "after:content-['*'] after:ms-0.5 after:text-error",
+        label: "after:ms-0.5 after:text-error after:content-['*']",
       },
     },
     disabled: {
@@ -144,4 +145,6 @@ export default {
     variant: "list",
     indicator: "start",
   },
-}
+})
+
+export default checkboxTheme

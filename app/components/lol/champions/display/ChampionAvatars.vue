@@ -15,14 +15,14 @@ const group = computed(() =>
     <div
       v-for="champion in group"
       :key="champion"
-      class="z-1 size-22! rounded-full border-0 bg-p0 fx-0">
+      class="fx-0 z-1 size-22! rounded-full border-0 bg-p0">
       <Champion
         class="size-18! rounded-full"
         :k="champion" />
     </div>
     <Element
       v-if="l"
-      class="relative z-1 grid size-22! place-items-center rounded-full border-0 bg-p0 fx-0">
+      class="fx-0 relative z-1 grid size-22! place-items-center rounded-full border-0 bg-p0">
       <Element
         class="size-18! rounded-full *:transition-all *:duration-300">
         <icon

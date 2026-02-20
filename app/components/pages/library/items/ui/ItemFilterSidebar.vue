@@ -60,7 +60,7 @@ const closed = computed(() => {
         icon="i-search"
         floating
         :ui="{
-          root: 'w-full max-w-[86%] -translate-y-1',
+          root: 'w-full max-w-[88%] -translate-y-1',
           leadingIcon: '**:stroke-[1.8]',
         }"
         placeholder="Search items...">
@@ -164,6 +164,10 @@ const closed = computed(() => {
       <UButton
         color="neutral"
         icon="reset"
+        :ui="{
+          base: collapsed ? '' : 'w-full grow',
+          label: collapsed ? 'hidden' : '',
+        }"
         :block="!collapsed"
         :square="collapsed === true"
         label="Reset Filter"

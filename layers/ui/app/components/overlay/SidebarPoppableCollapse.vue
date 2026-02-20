@@ -2,10 +2,10 @@
 import { UCollapsible, UPopover } from "#components"
 import type { ButtonProps } from "@nuxt/ui"
 const {
-  closed,
+  closed: collapsed,
   label,
   icon,
-  variant = "ghost",
+  variant = "link",
   side = "left",
 } = defineProps<{
   closed: boolean
@@ -16,30 +16,11 @@ const {
 }>()
 
 const base = "group w-full justify-between"
-
-const buttonProps = computed<ButtonProps>(() =>
-  closed
-    ? {
-        icon,
-        variant: "ghost",
-        ui: {
-          base,
-          label: "hidden",
-        },
-      }
-    : {
-        label,
-        variant: "link",
-        ui: {
-          base,
-        },
-      }
-)
 </script>
 
 <template>
   <component
-    :is="closed ? UPopover : UCollapsible"
+    :is="collapsed ? UPopover : UCollapsible"
     :content="{
       side,
       align: 'start',
@@ -47,18 +28,23 @@ const buttonProps = computed<ButtonProps>(() =>
     :ui="{
       root: 'w-full',
       content: cn('max-h-90 overflow-scroll px-1.5', {
-        'w-54 px-1.5': closed,
+        'w-54 px-1.5': collapsed,
       }),
     }"
-    :default-open="!closed">
+    :default-open="!collapsed">
     <slot>
       <UButton
-        v-bind="buttonProps"
-        :size="closed ? 'md' : 'lg'"
-        :ui="{ base: closed ? 'size-10 ' : '' }"
-        :variant>
+        :square="collapsed"
+        :block="!collapsed"
+        :icon
+        :size="collapsed ? 'md' : 'lg'"
+        :variant="collapsed ? 'ghost' : variant"
+        :ui="{
+          base,
+          label: 'hidden',
+        }">
         <template #trailing>
-          <PlusMinusExpand v-if="!closed" />
+          <PlusMinusExpand v-if="!collapsed" />
         </template>
       </UButton>
     </slot>

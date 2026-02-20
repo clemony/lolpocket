@@ -1,6 +1,10 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const popoverTheme = defineUiTheme({
   slots: {
     content:
-      "group/popover bg-p0/90 shadow-lg backdrop-blur-md rounded-lg shadow-lg ring ring-p3 focus:outline-none  pointer-events-auto",
+      "group/popover pointer-events-auto rounded-lg bg-p0/90 shadow-lg ring ring-p3 backdrop-blur-md focus:outline-none",
   },
-}
+})
+
+export default popoverTheme

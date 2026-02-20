@@ -1,27 +1,29 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const selectTheme = defineUiTheme({
   slots: {
     root: "",
-    base: "relative group rounded-lg inline-flex items-center cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 on:focus-ring focus:ring-0 **:trail-icon:size-4.5 **:trail-icon:opacity-70 on:**:trail-icon:opacity-100",
-    value: "truncate pointer-events-none",
+    base: "group on:focus-ring relative inline-flex cursor-pointer items-center rounded-lg focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 **:trail-icon:size-4.5 **:trail-icon:opacity-70 on:**:trail-icon:opacity-100",
+    value: "pointer-events-none truncate",
     placeholder: "truncate text-n5",
     arrow: "fill-p0 text-p0",
     content:
-      "max-h-60 w-(--reka-select-trigger-width) bg-p0/94 backdrop-blur-md shadow-lg rounded-lg ring ring-p3/60 overflow-hidden  origin-(--reka-select-content-transform-origin) pointer-events-auto flex flex-col",
-    viewport: "relative divide-y divide-p3 scroll-py-1 overflow-y-auto flex-1",
-    group: "p-1 isolate",
+      "pointer-events-auto flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/94 shadow-lg ring ring-p3/60 backdrop-blur-md",
+    viewport: "relative flex-1 scroll-py-1 divide-y divide-p3 overflow-y-auto",
+    group: "isolate p-1",
     empty: "text-center text-n5",
     label: "font-semibold text-pc",
     separator: "-mx-1 my-1 h-px bg-p3",
-    item: "group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 text-pc data-highlighted:not-data-disabled:text-pc data-highlighted:not-data-disabled:before:bg-p3/80",
+    item: "group relative flex w-full items-start text-pc outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 data-highlighted:not-data-disabled:text-pc data-highlighted:not-data-disabled:before:bg-p3/80",
     itemLeadingIcon:
       "shrink-0 text-n5 group-data-highlighted:not-group-data-disabled:text-pc",
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
     itemLeadingChip: "shrink-0",
     itemLeadingChipSize: "",
-    itemTrailing: "ms-auto inline-flex gap-1.5 items-center",
-    itemTrailingIcon: "shrink-0 size-4",
-    itemWrapper: "flex-1 flex flex-col min-w-0",
+    itemTrailing: "ms-auto inline-flex items-center gap-1.5",
+    itemTrailingIcon: "size-4 shrink-0",
+    itemWrapper: "flex min-w-0 flex-1 flex-col",
     itemLabel: "truncate",
     itemDescription: "truncate text-n5",
   },
@@ -29,8 +31,8 @@ export default {
     size: {
       xs: {
         base: "h-7 rounded-md",
-        label: "p-1 text-[10px]/3 gap-1",
-        item: "py-1 px-2 text-xs gap-1",
+        label: "gap-1 p-1 text-[10px]/3",
+        item: "gap-1 px-2 py-1 text-xs",
         itemLeadingIcon: "size-4",
         itemLeadingAvatarSize: "3xs",
         itemLeadingChip: "size-4",
@@ -40,8 +42,8 @@ export default {
       },
       sm: {
         base: "h-8 rounded-md",
-        label: "p-1.5 text-[10px]/3 gap-1.5",
-        item: "p-1.5 text-xs gap-1.5",
+        label: "gap-1.5 p-1.5 text-[10px]/3",
+        item: "gap-1.5 p-1.5 text-xs",
         itemLeadingIcon: "size-4",
         itemLeadingAvatarSize: "3xs",
         itemLeadingChip: "size-4",
@@ -50,9 +52,9 @@ export default {
         empty: "p-1.5 text-xs",
       },
       md: {
-        base: "h-10 ",
-        label: "p-1.5 text-xs gap-1.5",
-        item: "p-1.5 text-sm gap-1.5",
+        base: "h-10",
+        label: "gap-1.5 p-1.5 text-xs",
+        item: "gap-1.5 p-1.5 text-sm",
         itemLeadingIcon: "size-5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
@@ -62,8 +64,8 @@ export default {
       },
       lg: {
         base: "h-12",
-        label: "p-2 text-xs gap-2",
-        item: "  p-2 text-sm gap-2",
+        label: "gap-2 p-2 text-xs",
+        item: "gap-2 p-2 text-sm",
         itemLeadingIcon: "size-5",
         itemLeadingAvatarSize: "2xs",
         itemLeadingChip: "size-5",
@@ -72,9 +74,9 @@ export default {
         empty: "p-2 text-sm",
       },
       xl: {
-        base: "h-14 ",
-        label: "p-2 text-sm gap-2",
-        item: "p-2 text-base gap-2",
+        base: "h-14",
+        label: "gap-2 p-2 text-sm",
+        item: "gap-2 p-2 text-base",
         itemLeadingIcon: "size-6",
         itemLeadingAvatarSize: "xs",
         itemLeadingChip: "size-6",
@@ -85,18 +87,20 @@ export default {
     },
     variant: {
       ghost:
-        "text-pc bg-transparent hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
-      none: "text-pc bg-transparent",
+        "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
+      none: "bg-transparent text-pc",
       outline:
-        "text-pc bg-p0  inset-shadow-xs ring-transparent  border border-p3 ",
-      soft: "text-pc bg-p1/50 hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
-      subtle: "text-pc bg-p1 border ring-0 border-p3/60",
+        "border border-p3 bg-p0 text-pc inset-shadow-xs ring-transparent",
+      soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
+      subtle: "border border-p3/60 bg-p1 text-pc ring-0",
       "ghost-outline":
-        "text-pc bg-transparent  disabled:bg-transparent dark:disabled:bg-transparent",
+        "bg-transparent text-pc disabled:bg-transparent dark:disabled:bg-transparent",
     },
   },
   defaultVariants: {
     size: "md",
     variant: "outline",
   },
-}
+})
+
+export default selectTheme

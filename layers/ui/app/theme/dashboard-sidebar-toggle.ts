@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dashboardSidebarToggleTheme = defineUiTheme({
   base: 'lg:hidden',
   variants: {
     side: {
@@ -6,4 +8,6 @@ export default {
       right: ''
     }
   }
-}
+})
+
+export default dashboardSidebarToggleTheme

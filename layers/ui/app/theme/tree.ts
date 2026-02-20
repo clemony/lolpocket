@@ -1,13 +1,15 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const treeTheme = defineUiTheme({
   slots: {
     root: "relative isolate",
     item: "w-full",
     listWithChildren: "border-s border-default",
-    itemWithChildren: "ps-1.5 -ms-px",
-    link: "relative group w-full flex items-center text-sm select-none before:absolute before:inset-y-px before:inset-x-0 before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2",
-    linkLeadingIcon: "shrink-0 relative",
+    itemWithChildren: "-ms-px ps-1.5",
+    link: "group relative flex w-full items-center text-sm select-none before:absolute before:inset-x-0 before:inset-y-px before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset",
+    linkLeadingIcon: "relative shrink-0",
     linkLabel: "truncate",
-    linkTrailing: "ms-auto inline-flex gap-1.5 items-center",
+    linkTrailing: "ms-auto inline-flex items-center gap-1.5",
     linkTrailingIcon:
       "shrink-0 transform transition-transform duration-200 group-data-expanded:rotate-180",
   },
@@ -21,31 +23,31 @@ export default {
     size: {
       xs: {
         listWithChildren: "ms-4",
-        link: "px-2 py-1 text-xs gap-1",
+        link: "gap-1 px-2 py-1 text-xs",
         linkLeadingIcon: "size-4",
         linkTrailingIcon: "size-4",
       },
       sm: {
         listWithChildren: "ms-4.5",
-        link: "px-2.5 py-1.5 text-xs gap-1.5",
+        link: "gap-1.5 px-2.5 py-1.5 text-xs",
         linkLeadingIcon: "size-4",
         linkTrailingIcon: "size-4",
       },
       md: {
         listWithChildren: "ms-5",
-        link: "px-2.5 py-1.5 text-sm gap-1.5",
+        link: "gap-1.5 px-2.5 py-1.5 text-sm",
         linkLeadingIcon: "size-5",
         linkTrailingIcon: "size-5",
       },
       lg: {
         listWithChildren: "ms-5.5",
-        link: "px-3 py-2 text-sm gap-2",
+        link: "gap-2 px-3 py-2 text-sm",
         linkLeadingIcon: "size-5",
         linkTrailingIcon: "size-5",
       },
       xl: {
         listWithChildren: "ms-6",
-        link: "px-3 py-2 text-base gap-2",
+        link: "gap-2 px-3 py-2 text-base",
         linkLeadingIcon: "size-6",
         linkTrailingIcon: "size-6",
       },
@@ -65,4 +67,6 @@ export default {
     color: "primary",
     size: "md",
   },
-}
+})
+
+export default treeTheme

@@ -69,7 +69,7 @@ const roleItemId = computed(() => {
           " />
         <!-- vision -->
         <Tooltip
-          class="absolute -top-0.5 -right-0.5 badge origin-left badge-neutral bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent backdrop-blur-sm *:rounded-full">
+          class="absolute -top-0.5 -right-0.5 badge origin-left bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent backdrop-blur-sm badge-neutral *:rounded-full">
           {{ player.stats?.visionScore ?? 0 }}
 
           <template #content>

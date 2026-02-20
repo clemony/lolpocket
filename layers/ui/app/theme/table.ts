@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const tableTheme = defineUiTheme({
   slots: {
     root: "relative overflow-auto",
     base: "min-w-full",
@@ -8,9 +10,9 @@ export default {
       "isolate [&>tr]:data-[selectable=true]:hover:bg-p2/50 [&>tr]:data-[selectable=true]:focus-visible:outline-pc/60",
     tfoot: "relative",
     tr: "data-[selected=true]:bg-p2/50",
-    th: "px-4 py-3.5 text-sm text-pc text-left rtl:text-right font-semibold [&:has([role=checkbox])]:pe-0",
-    td: "p-4 text-sm text-muted whitespace-nowrap [&:has([role=checkbox])]:pe-0",
-    separator: "absolute z-1 left-0 w-full h-px bg-p2",
+    th: "px-4 py-3.5 text-left text-sm font-semibold text-pc rtl:text-right [&:has([role=checkbox])]:pe-0",
+    td: "p-4 text-sm whitespace-nowrap text-muted [&:has([role=checkbox])]:pe-0",
+    separator: "absolute left-0 z-1 h-px w-full bg-p2",
     empty: "py-6 text-center text-sm text-muted",
     loading: "py-6 text-center",
   },
@@ -23,20 +25,20 @@ export default {
     },
     pinned: {
       true: {
-        th: "sticky bg-p0/75 z-1",
-        td: "sticky bg-p0/75 z-1",
+        th: "sticky z-1 bg-p0/75",
+        td: "sticky z-1 bg-p0/75",
       },
     },
     sticky: {
       true: {
-        thead: "sticky top-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
-        tfoot: "sticky bottom-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
+        thead: "sticky inset-x-0 top-0 z-1 bg-p0/75 backdrop-blur-sm",
+        tfoot: "sticky inset-x-0 bottom-0 z-1 bg-p0/75 backdrop-blur-sm",
       },
       header: {
-        thead: "sticky top-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
+        thead: "sticky inset-x-0 top-0 z-1 bg-p0/75 backdrop-blur-sm",
       },
       footer: {
-        tfoot: "sticky bottom-0 inset-x-0 bg-p0/75 backdrop-blur z-1",
+        tfoot: "sticky inset-x-0 bottom-0 z-1 bg-p0/75 backdrop-blur-sm",
       },
     },
     loading: {
@@ -94,4 +96,6 @@ export default {
     loadingColor: "pc/60",
     loadingAnimation: "carousel",
   },
-}
+})
+
+export default tableTheme

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import type { RouteLocationNormalized } from "vue-router"
+
 definePageMeta({
-  middleware: (to, from) => {
+  middleware: (to: RouteLocationNormalized, from: RouteLocationNormalized) => {
     if (!to.params.champion_key) return abortNavigation()
   },
   keepAlive: { max: 1 },

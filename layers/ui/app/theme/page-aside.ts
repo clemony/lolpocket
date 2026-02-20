@@ -1,10 +1,14 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const pageAsideTheme = defineUiTheme({
   slots: {
-    root: "hidden overflow-y-auto lg:block lg:max-h-[calc(100vh-var(--ui-header-height))] lg:sticky lg:top-(--ui-header-height) py-8 lg:ps-4 lg:-ms-4 lg:pe-6.5",
+    root: "hidden overflow-y-auto py-8 lg:sticky lg:top-(--ui-header-height) lg:-ms-4 lg:block lg:max-h-[calc(100vh-var(--ui-header-height))] lg:ps-4 lg:pe-6.5",
     container: "relative",
-    top: "sticky -top-8 -mt-8 pointer-events-none z-[1]",
-    topHeader: "h-8 bg-default -mx-4 px-4",
-    topBody: "bg-default relative pointer-events-auto flex flex-col -mx-4 px-4",
-    topFooter: "h-8 bg-gradient-to-b from-default -mx-4 px-4",
+    top: "pointer-events-none sticky -top-8 z-[1] -mt-8",
+    topHeader: "-mx-4 h-8 bg-default px-4",
+    topBody: "pointer-events-auto relative -mx-4 flex flex-col bg-default px-4",
+    topFooter: "-mx-4 h-8 bg-gradient-to-b from-default px-4",
   },
-}
+})
+
+export default pageAsideTheme

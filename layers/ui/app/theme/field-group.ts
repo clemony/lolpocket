@@ -1,3 +1,5 @@
+import { defineUiTheme } from "./defineUiTheme"
+
 export const fieldGroupVariant = {
   fieldGroup: {
     horizontal: 'not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]',
@@ -18,7 +20,7 @@ export const fieldGroupVariantWithRoot = {
   }
 }
 
-export default {
+export const fieldGroupTheme = defineUiTheme({
   base: 'relative',
   variants: {
     size: {
@@ -33,4 +35,6 @@ export default {
       vertical: 'flex flex-col -space-y-px'
     }
   }
-}
+})
+
+export default fieldGroupTheme

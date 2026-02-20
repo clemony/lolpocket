@@ -1,12 +1,14 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const drawerTheme = defineUiTheme({
   slots: {
     overlay: "fixed inset-0 bg-elevated/75",
-    content: "fixed bg-default ring ring-default flex focus:outline-none",
-    handle: ["shrink-0 !bg-accented"],
-    container: "w-full flex flex-col gap-4 p-4 overflow-y-auto",
+    content: "fixed flex bg-default ring ring-default focus:outline-none",
+    handle: ["shrink-0 bg-accented!"],
+    container: "flex w-full flex-col gap-4 overflow-y-auto p-4",
     header: "",
-    title: "text-highlighted font-semibold",
-    description: "mt-1 text-muted text-sm",
+    title: "font-semibold text-highlighted",
+    description: "mt-1 text-sm text-muted",
     body: "flex-1",
     footer: "flex flex-col gap-1.5",
   },
@@ -18,7 +20,7 @@ export default {
       },
       right: {
         content: "flex-row",
-        handle: "!ml-4",
+        handle: "ml-4!",
       },
       bottom: {
         content: "mt-24 flex-col",
@@ -26,13 +28,13 @@ export default {
       },
       left: {
         content: "flex-row-reverse",
-        handle: "!mr-4",
+        handle: "mr-4!",
       },
     },
     inset: {
       true: {
         content:
-          "rounded-lg after:hidden overflow-hidden [--initial-transform:calc(100%+1.5rem)]",
+          "overflow-hidden rounded-lg [--initial-transform:calc(100%+1.5rem)] after:hidden",
       },
     },
     snapPoints: {
@@ -44,7 +46,7 @@ export default {
       direction: ["top", "bottom"],
       class: {
         content: "h-auto max-h-[96%]",
-        handle: "!w-12 !h-1.5 mx-auto",
+        handle: "mx-auto h-1.5! w-12!",
       },
     },
     {
@@ -58,7 +60,7 @@ export default {
       direction: ["right", "left"],
       class: {
         content: "w-auto max-w-[calc(100%-2rem)]",
-        handle: "!h-12 !w-1.5 mt-auto mb-auto",
+        handle: "my-auto h-12! w-1.5!",
       },
     },
     {
@@ -125,4 +127,6 @@ export default {
       },
     },
   ],
-}
+})
+
+export default drawerTheme

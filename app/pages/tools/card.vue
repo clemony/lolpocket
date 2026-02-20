@@ -90,7 +90,7 @@ console.log("💠 - card.splash:", card.splash)
       :wheel-zoom-step="0.01">
       <div
         ref="pocketCardRef"
-        class="relative aspect-square size-300 rounded-box border border-p3/70 object-contain shadow-smooth inset-shadow-sm"
+        class="shadow-smooth relative aspect-square size-300 rounded-box border border-p3/70 object-contain inset-shadow-sm"
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
         }">

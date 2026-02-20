@@ -1,32 +1,34 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const dropdownMenuTheme = defineUiTheme({
   slots: {
     arrow: "fill-p0",
     content: [
-      "min-w-32 shadow-lg shadow-black/8 drop-shadow-sm drop-shadow-black/6 rounded-lg ring  overflow-hidden z-99  origin-(--reka-dropdown-menu-content-transform-origin) flex flex-col select-none    !  overflow-hidden  t",
+      "! t z-99 flex min-w-32 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-lg shadow-lg ring shadow-black/8 drop-shadow-sm drop-shadow-black/6 select-none",
     ],
-    group: "p-1 isolate",
-    item: "group relative w-full flex items-center select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    group: "isolate p-1",
+    item: "group relative flex w-full items-center outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemDescription: "truncate text-p1",
     itemLabel: "truncate font-medium",
-    itemLabelExternalIcon: "inline-block size-2.75 ml-px align-[2px] text-pc",
+    itemLabelExternalIcon: "ml-px inline-block size-2.75 align-[2px] text-pc",
     itemLeadingAvatar: "shrink-0",
     itemLeadingAvatarSize: "",
     itemLeadingIcon: "shrink-0",
-    itemTrailing: "ms-auto inline-flex gap-1.5 items-center",
+    itemTrailing: "ms-auto inline-flex items-center gap-1.5",
     itemTrailingIcon: "shrink-0",
     itemTrailingKbds:
-      "hidden lg:inline-flex text-xs items-center shrink-0 text-pc/50 font-mono",
+      "hidden shrink-0 items-center font-mono text-xs text-pc/50 lg:inline-flex",
     itemTrailingKbdsSize: "",
-    itemWrapper: "flex-1 flex flex-col text-start min-w-0",
-    label: "w-full flex items-center font-semibold text-xs opacity-50 ",
-    viewport: "divide-y scroll-py-1 overflow-y-auto flex-1  bg-p0",
+    itemWrapper: "flex min-w-0 flex-1 flex-col text-start",
+    label: "flex w-full items-center text-xs font-semibold opacity-50",
+    viewport: "flex-1 scroll-py-1 divide-y overflow-y-auto bg-p0",
   },
   variants: {
     color: {
       neutral: "",
       default: {
         arrow: "fill-p0",
-        content: " ring-p3/60",
+        content: "ring-p3/60",
         viewport: "divide-p2 bg-p0",
         label: "text-n5/80",
       },
@@ -34,7 +36,7 @@ export default {
     active: {
       false: {
         item: [
-          "text-pc data-pc:text-pc data-[state=open]:text-pc data-pc:before:bg-p2/50 data-[state=open]:before:bg-p2/50",
+          "text-pc data-pc:text-pc data-pc:before:bg-p2/50 data-[state=open]:text-pc data-[state=open]:before:bg-p2/50",
           "transition-colors before:transition-colors",
         ],
         itemLeadingIcon: [
@@ -54,49 +56,49 @@ export default {
     },
     size: {
       lg: {
-        item: "p-2 text-sm gap-2",
+        item: "gap-2 p-2 text-sm",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-5",
         itemTrailingIcon: "size-5",
         itemTrailingKbds: "gap-1",
         itemTrailingKbdsSize: "md",
-        label: "p-2 text-sm gap-2",
+        label: "gap-2 p-2 text-sm",
       },
       md: {
-        item: "p-1.5 text-sm gap-1.75",
+        item: "gap-1.75 p-1.5 text-sm",
         itemLeadingAvatarSize: "xs",
         itemLeadingIcon: "size-4.25",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "md",
-        label: "p-1.5 text-sm gap-1.5",
+        label: "gap-1.5 p-1.5 text-sm",
       },
       sm: {
-        item: "p-1.5 text-xs gap-1.5",
+        item: "gap-1.5 p-1.5 text-xs",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-4",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "sm",
-        label: "p-1.5 text-xs gap-1.5",
+        label: "gap-1.5 p-1.5 text-xs",
       },
       xl: {
-        item: "p-2 text-pc gap-2",
+        item: "gap-2 p-2 text-pc",
         itemLeadingAvatarSize: "xs",
         itemLeadingIcon: "size-6",
         itemTrailingIcon: "size-6",
         itemTrailingKbds: "gap-1",
         itemTrailingKbdsSize: "lg",
-        label: "p-2 text-pc gap-2",
+        label: "gap-2 p-2 text-pc",
       },
       xs: {
-        item: "p-1 text-xs gap-1",
+        item: "gap-1 p-1 text-xs",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-4",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "sm",
-        label: "p-1 text-xs gap-1",
+        label: "gap-1 p-1 text-xs",
       },
     },
   },
@@ -105,7 +107,7 @@ export default {
       color: "default",
       active: false,
       class: {
-        item: "text-pc/60 data-pc:text-pc data-pc:before:noise data-pc:before:bg-p3! data-[state=open]:before:bg-p3/60!",
+        item: "data-pc:before:noise text-pc/60 data-pc:text-pc data-pc:before:bg-p3! data-[state=open]:before:bg-p3/60!",
         itemLeadingIcon:
           "text-pc/60 group-data-pc:text-pc/60 group-data-[state=open]:text-pc",
       },
@@ -114,7 +116,7 @@ export default {
       color: "default",
       active: true,
       class: {
-        item: "text-pc before:noise before:bg-p3/80!",
+        item: "before:noise text-pc before:bg-p3/80!",
         itemLeadingIcon: "text-pc",
       },
     },
@@ -123,4 +125,6 @@ export default {
     color: "default",
     size: "md",
   },
-}
+})
+
+export default dropdownMenuTheme

@@ -6,34 +6,33 @@ const {
   variant = "ghost",
   color = "neutral",
   size = "md",
+  side = "bottom",
 } = defineProps<{
   class?: HTMLAttributes["class"]
   variant?: ButtonProps["variant"]
   color?: ButtonProps["color"]
   size?: ButtonProps["size"]
+  side?: Side
 }>()
 </script>
 
 <template>
-  <Tooltip side="bottom" text="Nexus" :side-offset="16">
+  <Tooltip :side text="Nexus" :side-offset="16">
     <UButton
-      :to="{ name: 'nexus' }"
+      to="/nexus"
       :ui="{
         base: cn('group/logo', className),
         label: cn(
-          'block font-bold transition-opacity duration-200 group-hover/logo:opacity-100',
+          'truncate-none ellipsis-none block overflow-visible font-bold',
           {
             'text-[1.4rem]': size === 'md',
           }
         ),
-        leadingIcon:
-          'opacity-0 absolute  group-hover/logo:opacity-0 transition-opacity duration-200',
       }"
       :color
       :variant
       :size
       label="LP"
-      icon="nexus"
       square
       tabindex="0">
     </UButton>

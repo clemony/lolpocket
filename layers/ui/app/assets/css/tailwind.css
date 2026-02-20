@@ -5,19 +5,21 @@
 @import "./components.css";
 @import "./custom-variants.css";
 @import "./utilities.css";
-@import "./classes.css";
+@import "./utils.css";
 @import "./animation.css";
 
 @layer base {
   :root {
-    font-size: 12px;
-    color: var(--color-pc);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  * {
-    @apply border-p3 decoration-from-font underline-offset-2 antialiased;
+    font-size: 12px;
+    color: var(--color-pc);
+    font-family: var(--font-sans);
+    * {
+      scrollbar-color: color-mix(in lch, var(--color-p4) 80%, transparent 20%)
+        transparent !important;
+      @apply border-p3 decoration-from-font underline-offset-2 antialiased;
+    }
   }
 
   img,
@@ -28,10 +30,7 @@
   html,
   body,
   #app {
-    scrollbar-color: --alpha(var(--color-p3) / 40%) transparent;
-    scrollbar-width: thin;
-    font-family: var(--font-sans);
-    @apply text-md text-[var(--color-pc)] selection:bg-neutral/80 selection:text-nc;
+    @apply text-md text-pc selection:bg-neutral/80 selection:text-nc;
   }
 
   input,
@@ -65,7 +64,7 @@
   }
 
   h6 {
-    @apply flex gap-3 text-sm font-semibold text-[var(--color-pc)]/50 antialiased select-none;
+    @apply flex gap-3 text-sm font-semibold text-pc/50 antialiased select-none;
   }
 
   h1,

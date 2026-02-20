@@ -85,7 +85,7 @@ const reference = computed(() => ({
       updatePositionStrategy: 'always',
     }">
     <div
-      :class="cn('', className)"
+      :class="cn('size-fit', className)"
       @pointerenter="onPointerEnter"
       @pointerleave="onPointerLeave"
       @pointermove="onPointerMove">

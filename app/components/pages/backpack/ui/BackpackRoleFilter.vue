@@ -30,7 +30,7 @@ const tags = ref<string[]>([])
         }">
         <input
           v-model="tags"
-          class="checkbox checkbox-xs rounded-full border-0 bg-p0 text-white fx-0 checked:bg-p0"
+          class="fx-0 checkbox rounded-full border-0 bg-p0 checkbox-xs text-white checked:bg-p0"
           name="position.label"
           type="checkbox"
           :value="position.label"

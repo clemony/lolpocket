@@ -1,7 +1,9 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const toasterTheme = defineUiTheme({
   slots: {
-    viewport: 'fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none',
-    base: 'pointer-events-auto absolute inset-x-0 z-(--index) transform-(--transform) data-[expanded=false]:data-[front=false]:h-(--front-height) data-[expanded=false]:data-[front=false]:*:opacity-0 data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 data-[state=closed]:animate-[toast-closed_200ms_ease-in-out] data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-[toast-collapsed-closed_200ms_ease-in-out] data-[swipe=move]:transition-none transition-[transform,translate,height] duration-200 ease-out'
+    viewport: 'fixed z-[100] flex w-[calc(100%-2rem)] flex-col focus:outline-none data-[expanded=true]:h-(--height) sm:w-96',
+    base: 'pointer-events-auto absolute inset-x-0 z-(--index) transform-(--transform) transition-[transform,translate,height] duration-200 ease-out data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 data-[expanded=false]:data-[front=false]:h-(--front-height) data-[expanded=false]:data-[front=false]:*:opacity-0 data-[state=closed]:animate-[toast-closed_200ms_ease-in-out] data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-[toast-collapsed-closed_200ms_ease-in-out] data-[swipe=move]:transition-none'
   },
   variants: {
     position: {
@@ -9,7 +11,7 @@ export default {
         viewport: 'left-4'
       },
       'top-center': {
-        viewport: 'left-1/2 transform -translate-x-1/2'
+        viewport: 'left-1/2 -translate-x-1/2 transform'
       },
       'top-right': {
         viewport: 'right-4'
@@ -18,7 +20,7 @@ export default {
         viewport: 'left-4'
       },
       'bottom-center': {
-        viewport: 'left-1/2 transform -translate-x-1/2'
+        viewport: 'left-1/2 -translate-x-1/2 transform'
       },
       'bottom-right': {
         viewport: 'right-4'
@@ -45,12 +47,14 @@ export default {
     }
   }, {
     swipeDirection: ['left', 'right'],
-    class: 'data-[swipe=move]:translate-x-(--reka-toast-swipe-move-x) data-[swipe=end]:translate-x-(--reka-toast-swipe-end-x) data-[swipe=cancel]:translate-x-0'
+    class: 'data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-(--reka-toast-swipe-end-x) data-[swipe=move]:translate-x-(--reka-toast-swipe-move-x)'
   }, {
     swipeDirection: ['up', 'down'],
-    class: 'data-[swipe=move]:translate-y-(--reka-toast-swipe-move-y) data-[swipe=end]:translate-y-(--reka-toast-swipe-end-y) data-[swipe=cancel]:translate-y-0'
+    class: 'data-[swipe=cancel]:translate-y-0 data-[swipe=end]:translate-y-(--reka-toast-swipe-end-y) data-[swipe=move]:translate-y-(--reka-toast-swipe-move-y)'
   }],
   defaultVariants: {
     position: 'bottom-right'
   }
-}
+})
+
+export default toasterTheme

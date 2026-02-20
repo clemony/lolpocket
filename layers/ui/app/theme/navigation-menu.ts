@@ -1,9 +1,11 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const navigationMenuTheme = defineUiTheme({
   slots: {
     childItem: "",
-    childLabel: "text-xs  text-pc",
+    childLabel: "text-xs text-pc",
     childLink:
-      "group relative size-full flex items-start text-start text-sm before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2",
+      "group relative flex size-full items-start text-start text-sm before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset dark:focus-visible:outline-none",
     childLinkDescription: "text-n3",
     childLinkIcon: "size-5 shrink-0",
     childLinkLabel: "truncate",
@@ -11,30 +13,30 @@ export default {
     childLinkWrapper: "min-w-0",
     childList: "isolate",
     content:
-      "z-60 bg-p0/50! supports-[backdrop-filter]:bg-p0/35! backdrop-blur-md! p-0!",
+      "z-60 bg-p0/50! p-0! backdrop-blur-md! supports-[backdrop-filter]:bg-p0/35!",
     indicator:
-      "absolute data-[state=visible]:animate-[fade-in_75ms_ease-out] data-[state=hidden]:animate-[fade-out_75ms_ease-in] data-[state=hidden]:opacity-0 bottom-0 z-[2] w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) flex h-2.5 items-end justify-center overflow-hidden transition-[translate,width] duration-100",
-    item: " group relative text-pc h-8   flex items-center  font-medium text-sm  ",
+      "absolute bottom-0 z-[2] flex h-2.5 w-(--reka-navigation-menu-indicator-size) translate-x-(--reka-navigation-menu-indicator-position) items-end justify-center overflow-hidden transition-[translate,width] duration-100 data-[state=hidden]:animate-[fade-out_75ms_ease-in] data-[state=hidden]:opacity-0 data-[state=visible]:animate-[fade-in_75ms_ease-out]",
+    item: "group relative flex h-8 items-center text-sm font-medium text-pc",
     label:
-      "h-8 w-full flex text-pc items-center gap-1.5 font-semibold text-sm/5   px-3.5 py-1.5",
-    link: "group relative text-pc h-8 w-full flex items-center gap-1.5  px-3.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2",
+      "flex h-8 w-full items-center gap-1.5 px-3.5 py-1.5 text-sm/5 font-semibold text-pc",
+    link: "group relative flex h-8 w-full items-center gap-1.5 px-3.5 text-sm font-medium text-pc before:absolute before:z-[-1] before:rounded-lg focus:outline-none focus-visible:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset dark:focus-visible:outline-none",
     linkLabel: "truncate text-pc",
     linkLabelExternalIcon: "inline-block size-3 align-top text-n5",
     linkLeadingAvatar: "shrink-0 transition-opacity duration-200",
     linkLeadingAvatarSize: "xs",
-    linkLeadingIcon: "shrink-0 size-5 text-pc **:text-pc",
-    linkTrailing: "group ms-auto inline-flex ml-0.5 gap-1.5 items-center",
+    linkLeadingIcon: "size-5 shrink-0 text-pc **:text-pc",
+    linkTrailing: "group ms-auto ml-0.5 inline-flex items-center gap-1.5",
     linkTrailingBadge: "shrink-0",
     linkTrailingBadgeSize: "sm",
     linkTrailingIcon:
-      "size-4 transform shrink-0 group-data-[state=open]:scale-y-100 transition-transform duration-150",
+      "size-4 shrink-0 transform transition-transform duration-150 group-data-[state=open]:scale-y-100",
     list: "isolate h-10 min-w-0 self-center",
-    root: "relative flex gap-1.5 [&>div]:min-w-0 ",
-    separator: "px-2 h-px bg-p3",
+    root: "relative flex gap-1.5 [&>div]:min-w-0",
+    separator: "h-px bg-p3 px-2",
     viewport:
-      "relative overflow-hidden bg-p0/70 p-0 w-(--reka-navigation-menu-viewport-width) shadow-lg rounded-lg ring ring-default h-(--reka-navigation-menu-viewport-height)   transition-[width,height,left] duration-200 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-[1]",
+      "relative z-[1] h-(--reka-navigation-menu-viewport-height) w-(--reka-navigation-menu-viewport-width) origin-[top_center] overflow-hidden rounded-lg bg-p0/70 p-0 shadow-lg ring ring-default transition-[width,height,left] duration-200 data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
     viewportWrapper:
-      "absolute top-full left-0 flex w-full  backdrop-blur-md **: backdrop-blur-md",
+      "**: absolute top-full left-0 flex w-full backdrop-blur-md",
   },
 
   variants: {
@@ -63,38 +65,38 @@ export default {
         item: "py-2",
         link: "px-2.5 py-1.5 before:inset-x-px before:inset-y-0",
         childList: "grid p-2",
-        childLink: "px-3 py-2 gap-2 before:inset-x-px before:inset-y-0",
+        childLink: "gap-2 px-3 py-2 before:inset-x-px before:inset-y-0",
         childLinkLabel: "font-medium",
         content:
-          "absolute top-0 left-0 w-full max-h-[70vh] overflow-y-auto bg-p0/50 supports-[backdrop-filter]:bg-p0/35 backdrop-blur-md",
+          "absolute top-0 left-0 max-h-[70vh] w-full overflow-y-auto bg-p0/50 backdrop-blur-md supports-[backdrop-filter]:bg-p0/35",
       },
       vertical: {
         root: "flex-col",
-        link: "flex-row px-2.5 py-1.5 before:inset-y-px before:inset-x-0",
+        link: "flex-row px-2.5 py-1.5 before:inset-x-0 before:inset-y-px",
         childLabel: "px-1.5 py-0.5",
-        childLink: "p-1.5 gap-1.5 before:inset-y-px before:inset-x-0",
+        childLink: "gap-1.5 p-1.5 before:inset-x-0 before:inset-y-px",
       },
     },
     contentOrientation: {
       horizontal: {
         viewportWrapper: "justify-center",
         content:
-          "data-[motion=from-start]:animate-[enter-from-left_200ms_ease] data-[motion=from-end]:animate-[enter-from-right_200ms_ease] data-[motion=to-start]:animate-[exit-to-left_200ms_ease] data-[motion=to-end]:animate-[exit-to-right_200ms_ease]",
+          "data-[motion=from-end]:animate-[enter-from-right_200ms_ease] data-[motion=from-start]:animate-[enter-from-left_200ms_ease] data-[motion=to-end]:animate-[exit-to-right_200ms_ease] data-[motion=to-start]:animate-[exit-to-left_200ms_ease]",
       },
       vertical: {
         viewport:
-          "sm:w-(--reka-navigation-menu-viewport-width) left-(--reka-navigation-menu-viewport-left)",
+          "left-(--reka-navigation-menu-viewport-left) sm:w-(--reka-navigation-menu-viewport-width)",
       },
     },
     active: {
       true: {
-        childLink: "before:bg-p0 text-pc",
+        childLink: "text-pc before:bg-p0",
         childLinkIcon: "text-pc",
       },
       false: {
         link: "text-muted",
         linkLeadingIcon: "text-dimmed",
-        childLink: ["hover:before:bg-p0/50 text-pc hover:text-pc"],
+        childLink: ["text-pc hover:text-pc hover:before:bg-p0/50"],
         childLinkIcon: ["text-n4 group-hover:text-pc"],
       },
     },
@@ -134,9 +136,9 @@ export default {
       collapsed: false,
       class: {
         childList: "ms-5 border-s border-p3/80",
-        childItem: "ps-1.5 -ms-px",
+        childItem: "-ms-px ps-1.5",
         content:
-          "data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] overflow-hidden",
+          "overflow-hidden data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=open]:animate-[collapsible-down_200ms_ease-out]",
       },
     },
     {
@@ -146,7 +148,7 @@ export default {
         link: "px-1.5",
         linkLabel: "hidden",
         linkTrailing: "hidden",
-        content: "shadow-sm rounded-sm min-h-6 p-1",
+        content: "min-h-6 rounded-sm p-1 shadow-sm",
       },
     },
     {
@@ -154,7 +156,7 @@ export default {
       highlight: true,
       class: {
         link: [
-          "after:absolute after:-bottom-2 after:inset-x-2.5 after:block after:h-px after:rounded-full",
+          "after:absolute after:inset-x-2.5 after:-bottom-2 after:block after:h-px after:rounded-full",
         ],
       },
     },
@@ -164,7 +166,7 @@ export default {
       level: true,
       class: {
         link: [
-          "after:absolute after:-start-1.5 after:inset-y-0.5 after:block after:w-px after:rounded-full",
+          "after:absolute after:inset-y-0.5 after:-start-1.5 after:block after:w-px after:rounded-full",
         ],
       },
     },
@@ -287,4 +289,6 @@ export default {
     highlightColor: "default",
     variant: "pill",
   },
-}
+})
+
+export default navigationMenuTheme

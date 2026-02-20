@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const formFieldTheme = defineUiTheme({
   slots: {
     root: '',
     wrapper: '',
@@ -20,7 +22,7 @@ export default {
     },
     required: {
       true: {
-        label: `after:content-['*'] after:ms-0.5 after:text-error`
+        label: `after:ms-0.5 after:text-error after:content-['*']`
       }
     },
     orientation: {
@@ -28,7 +30,7 @@ export default {
         container: 'mt-1'
       },
       horizontal: {
-        root: 'flex justify-between place-items-baseline gap-2'
+        root: 'flex place-items-baseline justify-between gap-2'
       }
     }
   },
@@ -36,4 +38,6 @@ export default {
     size: 'md',
     orientation: 'vertical'
   }
-}
+})
+
+export default formFieldTheme

@@ -67,7 +67,7 @@ const variants = {
           cn(
             'size-full min-w-0! text-pc shadow-sm',
 
-            'rounded-lg fx-0',
+            'fx-0 rounded-lg',
             indicatorClass,
           )
         " />

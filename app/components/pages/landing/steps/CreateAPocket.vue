@@ -100,14 +100,14 @@ const cardStyle = computed(() => ({
           </div>
 
           <div
-            class="absolute right-5 bottom-6 z-10 badge badge-neutral bg-neutral badge-md text-md shadow-pretty ring shadow-black/10 ring-p3">
+            class="shadow-pretty absolute right-5 bottom-6 z-10 badge bg-neutral badge-md text-md ring shadow-black/10 ring-p3 badge-neutral">
             Create
           </div>
         </div>
       </div>
 
       <div
-        class="align-end absolute top-23 left-9 flex h-10 w-54 items-center justify-between rounded-lg border border-p3 bg-p0 px-3 shadow-pretty shadow-p3/70 select-none"
+        class="align-end shadow-pretty absolute top-23 left-9 flex h-10 w-54 items-center justify-between rounded-lg border border-p3 bg-p0 px-3 shadow-p3/70 select-none"
         :style="layerBase">
         <span class="dst">Pocket Name</span>
 

@@ -36,7 +36,7 @@ const prio = computed(() => {
           name="left" />
         <Ability :ckey :akey="k">
           <span
-            class="absolute top-0 right-0 badge aspect-square size-6 rounded-t-none rounded-br-none badge-neutral bg-neutral/80 p-0 font-mono font-semibold shadow-sm ds-sm backdrop-blur-sm">
+            class="absolute top-0 right-0 badge aspect-square size-6 rounded-t-none rounded-br-none bg-neutral/80 p-0 font-mono font-semibold shadow-sm ds-sm backdrop-blur-sm badge-neutral">
             {{ k }}
           </span>
         </Ability>

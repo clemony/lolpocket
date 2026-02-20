@@ -58,7 +58,7 @@ const itemVariants = {
               theme: 'base',
               placement: 'left',
             }"
-            class="grid size-22! place-items-center border-0 bg-p0 fx-0"
+            class="fx-0 grid size-22! place-items-center border-0 bg-p0"
             shape="circle"
             :style="{
               zIndex: `-${i}`,
@@ -82,14 +82,14 @@ const itemVariants = {
             <div
               v-for="champion in groups"
               :key="champion"
-              class="z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
+              class="fx-0 z-1 grid size-22! place-items-center border-0 bg-p0"
               shape="circle">
               <Champion class="size-18! rounded-full" :k="champion" />
             </div>
           </template>
           <div
             v-if="l"
-            class="relative z-1 grid size-22! place-items-center border-0 bg-p0 fx-0"
+            class="fx-0 relative z-1 grid size-22! place-items-center border-0 bg-p0"
             shape="circle">
             <div
               class="size-18! *:transition-all *:duration-300"

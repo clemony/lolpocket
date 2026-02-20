@@ -1,4 +1,6 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const iconsTheme = defineUiTheme({
   arrowDown: "i-lucide-arrow-down",
   arrowLeft: "i-lucide-arrow-left",
   arrowRight: "i-lucide-arrow-right",
@@ -39,4 +41,6 @@ export default {
   tip: "i-lucide-lightbulb",
   upload: "i-lucide-upload",
   warning: "i-lucide-triangle-alert",
-}
+})
+
+export default iconsTheme

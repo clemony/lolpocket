@@ -1,3 +1,5 @@
+import type { Locale } from "@nuxt/ui"
+
 export type Extension<T, E> = T & E
 
 export type DeepPartial<T> = {
@@ -11,7 +13,10 @@ export interface ParseState {
 
 export type SortDirection = "asc" | "desc"
 
-export type LocaleOptions = "de" | "en" | "fr"
+export type LocaleCode = "en" | "zh_tw" | "de" | "fr" | "es"
+export interface LocaleType extends Locale<any> {
+  icon: string
+}
 
 export interface Label {
   name?: string

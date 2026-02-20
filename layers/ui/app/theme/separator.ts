@@ -1,12 +1,14 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const separatorTheme = defineUiTheme({
   slots: {
     avatar: "shrink-0",
     avatarSize: "2xs",
     border: "",
-    container: "font-medium text-default flex",
-    icon: "shrink-0 size-5",
+    container: "flex font-medium text-default",
+    icon: "size-5 shrink-0",
     label: "text-sm",
-    root: "flex items-center align-center rounded-md text-center",
+    root: "align-center flex items-center rounded-md text-center",
   },
   variants: {
     color: {
@@ -36,4 +38,6 @@ export default {
     color: "p2",
     size: "sm",
   },
-}
+})
+
+export default separatorTheme

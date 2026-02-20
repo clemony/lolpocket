@@ -1,18 +1,20 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const chipTheme = defineUiTheme({
   slots: {
-    base: "rounded-full ring-none status ds-2xs flex items-center shrink-0 justify-center text-n0 font-medium whitespace-nowrap",
-    root: "relative inline-flex items-center justify-center shrink-0",
+    base: "ring-none status flex shrink-0 items-center justify-center rounded-full font-medium whitespace-nowrap text-n0 ds-2xs",
+    root: "relative inline-flex shrink-0 items-center justify-center",
   },
   variants: {
     color: {
       error: "bg-error",
       info: "bg-info",
-      insp: "bg-insp ring-insp-content",
+      insp: "ring-insp-content bg-insp",
       neutral: "bg-n0",
       p0: "bg-p0",
       p1: "bg-p1",
       p2: "bg-p2",
-      p3: "bg-p3  ring-p2",
+      p3: "bg-p3 ring-p2",
       success: "bg-success",
       warning: "bg-warning",
     },
@@ -21,7 +23,7 @@ export default {
     },
     position: {
       "bottom-left": "bottom-0 left-0",
-      "bottom-right": "bottom-0 right-0",
+      "bottom-right": "right-0 bottom-0",
       "top-left": "top-0 left-0",
       "top-right": "top-0 right-0",
     },
@@ -43,22 +45,22 @@ export default {
   },
   compoundVariants: [
     {
-      class: "-translate-y-1/2 translate-x-1/2 transform",
+      class: "translate-x-1/2 -translate-y-1/2 transform",
       inset: false,
       position: "top-right",
     },
     {
-      class: "translate-y-1/2 translate-x-1/2 transform",
+      class: "translate-1/2 transform",
       inset: false,
       position: "bottom-right",
     },
     {
-      class: "-translate-y-1/2 -translate-x-1/2 transform",
+      class: "-translate-1/2 transform",
       inset: false,
       position: "top-left",
     },
     {
-      class: "translate-y-1/2 -translate-x-1/2 transform",
+      class: "-translate-x-1/2 translate-y-1/2 transform",
       inset: false,
       position: "bottom-left",
     },
@@ -68,4 +70,6 @@ export default {
     position: "top-right",
     size: "md",
   },
-}
+})
+
+export default chipTheme

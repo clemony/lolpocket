@@ -1,9 +1,11 @@
-export default {
+import { defineUiTheme } from "./defineUiTheme"
+
+export const pageTheme = defineUiTheme({
   slots: {
     root: "flex flex-col lg:grid lg:grid-cols-10 lg:gap-10",
     left: "lg:col-span-2",
     center: "lg:col-span-8",
-    right: "lg:col-span-2 order-first lg:order-last",
+    right: "order-first lg:order-last lg:col-span-2",
   },
   variants: {
     left: {
@@ -29,4 +31,6 @@ export default {
       },
     },
   ],
-}
+})
+
+export default pageTheme
