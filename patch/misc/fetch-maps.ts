@@ -1,8 +1,8 @@
-import type { MapIndex } from "./../../../../shared/types/types.league"
+import type { MapIndex } from "../../shared/types/types.league"
 /* eslint-disable antfu/no-top-level-await */
 import fs from "node:fs"
 import { $fetch } from "ofetch"
-import { markUpdate } from "../misc/markUpdate"
+import { markUpdate } from "./markUpdate"
 
 // FIXME maps and queue together thingy? where they're merged remember that ok
 const url =
@@ -14,10 +14,7 @@ const cleanedMapData: MapIndex[] = rawMapData
   .filter((map) => map.id !== 0) // skip the "Common" map
   .map(({ id, name, mapStringId }) => ({
     id,
-    name:
-      id === 12 ? "ARAM"
-      : id === 35 ? "Brawl"
-      : name,
+    name: id === 12 ? "ARAM" : id === 35 ? "Brawl" : name,
     mapStringId,
   }))
 

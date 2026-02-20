@@ -27,14 +27,14 @@ const nav = ref<Record<string, NavButtonProps>>({
   },
   library: {
     value: "library",
-    ui: { base },
+    ui: { base: cn(base, "pr-1.5!") },
     label: "Library",
     //to: "/library",
     open: false,
   },
   backpack: {
     label: "Backpack",
-    ui: { base: cn(base, "-ml-2 px-1.5!") },
+    ui: { base: cn(base, "-ml-1.5 px-1.5!") },
     value: "backpack",
     // to: "/backpack",
     open: false,

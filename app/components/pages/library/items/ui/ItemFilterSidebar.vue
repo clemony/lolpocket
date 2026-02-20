@@ -111,9 +111,9 @@ const closed = computed(() => {
         :ui="
           collapsed
             ? {
-                root: '-rotate-90',
-                label: 'hidden',
-              }
+              root: '-rotate-90',
+              label: 'hidden',
+            }
             : {}
         "
         :label="filters.purchasable ? 'Purchasable' : 'All Items'" />
@@ -129,23 +129,23 @@ const closed = computed(() => {
         :content="
           collapsed
             ? {
-                position: 'popper',
-                side: 'right',
-                align: 'start',
-              }
+              position: 'popper',
+              side: 'right',
+              align: 'start',
+            }
             : {}
         "
         :ui="
           collapsed
             ? {
-                base: 'aspect-square w-10! before:hidden max-w-10 overflow-hidden',
-                leading: 'max-w-10',
-                content: 'min-w-54 w-54',
-                label: 'hidden',
-                trailing: 'hidden',
-                placeholder: 'hidden',
-                value: 'hidden',
-              }
+              base: 'aspect-square w-10! before:hidden max-w-10 overflow-hidden',
+              leading: 'max-w-10',
+              content: 'min-w-54 w-54',
+              label: 'hidden',
+              trailing: 'hidden',
+              placeholder: 'hidden',
+              value: 'hidden',
+            }
             : {}
         "
         :icon="`i-map-${filters.map}`"

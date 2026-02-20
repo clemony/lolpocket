@@ -116,6 +116,6 @@ const range = computed(() => {
       <div class="stat-desc text-md" />
     </div>
 
-    <LineChart :data="data" :options="options" />
+    <!--     <LineChart :data="data" :options="options" /> -->
   </div>
 </template>
