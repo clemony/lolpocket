@@ -16,10 +16,12 @@ const resource = computed(() => {
   return abilityResources.find((r) => r.name === (p ?? "All"))
 }) /*
     :active="
-      resource.name === 'None' && (active || cs().filters.resource === 'None') ?
+      resource.name === 'None' && (active || filters.resource === 'None') ?
         'outline'
       : 'none'
     " */
+
+const { filters } = storeToRefs(champFilter())
 </script>
 
 <template>
@@ -34,13 +36,11 @@ const resource = computed(() => {
         {
           //
           'order-first hover:text-pc hover:**:text-pc':
-            active ||
-            (cs().filters.resource && cs().filters.resource === resource.name),
+            active || (filters.resource && filters.resource === resource.name),
           //
           'text-white **:text-white':
             (active ||
-              (cs().filters.resource &&
-                cs().filters.resource === resource.name)) &&
+              (filters.resource && filters.resource === resource.name)) &&
             resource.name !== 'None',
           //
           'pr-3': active && clear,
@@ -49,7 +49,7 @@ const resource = computed(() => {
       )
     "
     :style="{
-      backgroundColor: `${(cs().filters.resource && cs().filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
+      backgroundColor: `${(filters.resource && filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
     }">
     <!--    <Icon
       v-if="resource?.icon"

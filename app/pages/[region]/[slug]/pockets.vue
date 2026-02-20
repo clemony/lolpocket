@@ -32,12 +32,12 @@ watch(
   <div class="grid w-full justify-center">
     <div class="">
       <LazyBackpackBoxCard
-        v-for="pocket in ps().pockets.filter(
+        v-for="pocket in usePockets().pockets.filter(
           (p) =>
             !(
-              ps().pinned.includes(p.key) ||
-              ps().trash.includes(p.key) ||
-              ps().archive.includes(p.key)
+              usePockets().pinned.includes(p.key) ||
+              usePockets().trash.includes(p.key) ||
+              usePockets().archive.includes(p.key)
             )
         )"
         :key="pocket.key"

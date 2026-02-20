@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @utility noise-* {
   --noise: --value(number);
 }
@@ -13,7 +12,6 @@
   filter: drop-shadow(--value(--drop-shadow-*));
 }
 
-
 @utility sh-* {
   box-shadow: --value(--shadow-*);
 }
@@ -24,6 +22,14 @@
 
 @utility text-last-* {
   text-align-last: --value("start", "end", "center", "justify");
+}
+
+.scrollbar-none {
+  scrollbar-color: transparent transparent !important;
+  &::-webkit-scrollbar {
+    scrollbar-color: transparent transparent !important;
+    display: none !important;
+  }
 }
 
 /* @utility animate-gradient-* {

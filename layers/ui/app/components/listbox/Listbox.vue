@@ -18,7 +18,7 @@ const forwarded = useForwardPropsEmits(delegated, emit)
   <ListboxRoot
     v-bind="forwarded"
     :as="props.as"
-    :autofocus="false"
+    tab-index="-1"
     @entry-focus.prevent>
     <slot />
   </ListboxRoot>

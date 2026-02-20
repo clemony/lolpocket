@@ -24,7 +24,7 @@ export async function accountFetch() {
   progress.value = 50
   user().settings = (settings ?? getEmptySettings()) as Settings
   progress.value = 60
-  ps().pockets = pockets ?? []
+  usePockets().pockets = pockets ?? []
   progress.value = 70
 
   // Object.assign(user().account, account)

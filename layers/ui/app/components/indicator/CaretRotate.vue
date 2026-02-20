@@ -1,26 +1,26 @@
 <script lang="ts" setup>
-const { class: className, direction = 'left' } = defineProps<{
-  class?: HTMLAttributes['class']
-  direction?: Direction
+const { class: className, side = "right" } = defineProps<{
+  class?: HTMLAttributes["class"]
+  side?: Side
 }>()
 
-const directionClass = computed(() =>
-  direction === 'left'
-    ? ' group-data-[state=open]/collapse:-rotate-90 '
-    : direction === 'right'
-      ? ' group-data-[state=open]/collapse:rotate-90 '
-      : ''
+const sideClass = computed(() =>
+  side === "right"
+    ? " group-data-[state=open]/collapse:rotate-90"
+    : side === "left"
+      ? " group-data-[state=open]/collapse:-rotate-90 "
+      : ""
 )
 </script>
 
 <template>
-  <icon
-    :name="direction"
+  <Icon
+    :name="side"
     :class="
       cn(
-        'transition-rotate size-4.5 opacity-50! duration-150 group-hover/collapse:text-pc/100! group-hover/collapse:**:stroke-[2.5]',
-        directionClass,
-        className,
+        'transition-rotate size-4.5 rotate-180 stroke-[2.6] duration-150 **:text-pc/50 group-hover/collapse:text-pc',
+        sideClass,
+        className
       )
     " />
 </template>

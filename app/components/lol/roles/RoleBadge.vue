@@ -27,15 +27,17 @@ const role = computed(() => {
       cn(
         'w-fit pr-6 pl-4 text-sm! font-medium! text-pc/90 capitalize',
         {
-          'hover:**:text-pc hover:text-pc order-first text-white':
-            active || (cs().filters.role && cs().filters.role === role.name),
+          'order-first text-white hover:text-pc hover:**:text-pc':
+            active ||
+            (champFilter().filters.role &&
+              champFilter().filters.role === role.name),
           'pr-3': active && clear,
         },
         className
       )
     "
     :style="{
-      backgroundColor: `${(cs().filters.role && cs().filters.role === role.name) || active ? role.color : 'transparent'}`,
+      backgroundColor: `${(champFilter().filters.role && champFilter().filters.role === role.name) || active ? role.color : 'transparent'}`,
     }">
     <Element square size="sm">
       <component

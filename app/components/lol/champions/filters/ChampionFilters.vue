@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute()
 /* function handleHide(e) {
-  const columns = cs().championGridApi.getColumnDefs()
+  const columns = champFilter().championGridApi.getColumnDefs()
   const updatedCols = columns.map(col => {
     if (col.headerName === 'Base') {
       return {
@@ -11,7 +11,7 @@ const route = useRoute()
     }
     return col
   })
-  cs().championGridApi.setGridOption('columnDefs', updatedCols)
+  champFilter().championGridApi.setGridOption('columnDefs', updatedCols)
 } */
 const { filtered, filters, setFilter } = is() as any
 const query = ref<string | null>(null)
@@ -28,16 +28,14 @@ const query = ref<string | null>(null)
           <input v-model="filters.query" class="size-full" type="text" />
         </ExpandSearch>
 
-        <h1 class="mr-1 text-5xl! tracking-tight">
-          Champions
-        </h1>
+        <h1 class="mr-1 text-5xl! tracking-tight">Champions</h1>
 
         <ChampionQuote
           class="dst flex items-center px-2 pt-1 font-serif text-md tracking-wide text-nowrap"
           as="p" />
       </div>
 
-      <!--     <NumberField id="level" v-model:model-value="cs().championGridLevel" :min="1" :max="18">
+      <!--     <NumberField id="level" v-model:model-value="champFilter().championGridLevel" :min="1" :max="18">
       <Label class="text-sm">Champion Level</Label>
 
       <NumberPickerContent class="w-32">

@@ -7,7 +7,9 @@ definePageMeta({
 })
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 
 const el = useTemplateRef<HTMLElement>("el")
 useScrollProvider(el)

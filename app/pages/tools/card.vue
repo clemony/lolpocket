@@ -35,7 +35,7 @@ const isSettingsOpen = ref<boolean>(true)
 const pocketCardRef = ref<HTMLDivElement | null>(null)
 
 onMounted(() => {
-  ps().pocketCardRef = pocketCardRef.value
+  usePockets().pocketCardRef = pocketCardRef.value
 })
 // getSplash(card.splash) ||
 const img = useImage()
@@ -130,11 +130,11 @@ console.log("💠 - card.splash:", card.splash)
                 <template
                   v-if="
                     set &&
-                      set !== undefined &&
-                      card.items.length &&
-                      set !== null &&
-                      card.items[0] !== undefined &&
-                      card.items[0] !== null
+                    set !== undefined &&
+                    card.items.length &&
+                    set !== null &&
+                    card.items[0] !== undefined &&
+                    card.items[0] !== null
                   ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"

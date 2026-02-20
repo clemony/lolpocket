@@ -7,7 +7,9 @@ const { set: s } = defineProps<{
 
 const emit = defineEmits(["update:slide"])
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 
 const set = computed(() => s).value
 const pathList = pathIndex.map((p) => p.name)

@@ -20,6 +20,10 @@ definePageMeta({
 })
 
 const open = shallowRef<boolean>(true)
+const { summoner } = storeToRefs(sSession())
+onMounted(() => {
+  matchFilter().clearFilters()
+})
 </script>
 
 <template>
@@ -33,8 +37,9 @@ const open = shallowRef<boolean>(true)
     <template #left>
       <UPageAside
         :ui="{
-          root: 'scrollbar-hidden z-auto inset-y-0 top-0 bottom-0',
-          container: 'flex w-full origin-right flex-col items-center gap-y-6',
+          root: 'scrollbar-none z-auto inset-y-0 top-0 bottom-0',
+          container:
+            'scrollbar-none *:w-full flex w-full origin-right flex-col items-center gap-y-6',
         }"
         group
         :offset="{
@@ -42,7 +47,15 @@ const open = shallowRef<boolean>(true)
           leave: [0, '10%'],
         }">
         <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
-        <MatchHistoryAside v-if="open" />
+        <RankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
+        <RankCard title="Flex" :entry="summoner?.ranked?.flex" />
+        <QueueFilters />
+
+        <MatchChampionFilters />
+
+        <LazyMatchPositionFilter />
+
+        <LazyMatchAlliesFilter v-if="user().settings?.show_allies" />
       </UPageAside>
     </template>
     <UPageBody>

@@ -111,7 +111,7 @@ const range = computed(() => {
         {{ range }}
       </div>
 
-      <div class="text-xlfont-semibold dst" />
+      <div class="dst text-xl font-semibold" />
 
       <div class="stat-desc text-md" />
     </div>

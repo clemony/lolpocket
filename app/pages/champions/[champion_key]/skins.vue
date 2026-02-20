@@ -60,7 +60,7 @@ const skins = computed(() => skinIndex[champion.key])
       :plugins="[WheelGesturesPlugin()]"
       :orientation="carouselOrientation"
       @init-api="(val) => (emblaThumbnailApi = val)">
-      <CarouselContent class="scrollbar-hidden -ml-6 flex pt-22 pb-6">
+      <CarouselContent class="scrollbar-none -ml-6 flex pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"

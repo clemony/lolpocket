@@ -41,27 +41,14 @@ const tippy = computed(() => {
     <UButton
       :variant
       :size
-      :class="
-        cn(
-          {
-            'pointer-events-none btn-active cursor-not-allowed duration-0!':
-              cooldown,
-          },
-          'shrink-0 [&_svg]:size-4.25'
-        )
-      "
+      icon="refresh"
+      square
+      :ui="{
+        base: 'rounded-full',
+        leadingIcon: ' size-4.5 text-n4 group-hover/btn:text-pc',
+      }"
       @click="loadNew()">
       <div class="relative grid size-full place-items-center overflow-hidden">
-        <Icon
-          v-if="!cooldown"
-          name="reset"
-          :class="
-            cn(
-              'size-5 opacity-100 ds-2xs transition-all duration-200 **:stroke-[1.8] group-hover/load:opacity-100',
-              { 'animate-rotate': isLoading }
-            )
-          " />
-
         <div
           v-if="cooldown"
           class="radial-progress absolute place-self-center"

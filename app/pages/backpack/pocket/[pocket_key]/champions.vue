@@ -23,7 +23,9 @@ definePageMeta({
 })
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 
 const isDragging = ref(false)
 
@@ -33,7 +35,7 @@ function onStart() {
 
 const source = computed(() => {
   const champions = pocket.value?.champions ?? []
-  return cs()
+  return champFilter()
     .filtered.filter((r): r is string => Boolean(r))
     .filter((r) => !champions.includes(r))
 })
@@ -61,7 +63,7 @@ function onEnd(e: { newIndex?: number; oldIndex?: number }) {
   rendered.value.splice(newIndex, 0, moved)
 
   // update the real store order here:
-  cs().reorder(rendered.value)
+  champFilter().reorder(rendered.value)
 }
 
 watch(source, () => {
@@ -72,7 +74,7 @@ function onAdd(e: { oldIndex?: number }) {
   console.log("🌱 - onAdd - e:", e)
   if (e.oldIndex == null) return
   pocket.value?.champions?.splice(e.oldIndex, 1)
-  cs().reorder(rendered.value.sort())
+  champFilter().reorder(rendered.value.sort())
 }
 
 const { show } = useChampionContextMenu()
@@ -88,16 +90,14 @@ function showContextMenu(e: MouseEvent, champion: string) {
     <div
       class="sticky -top-56 z-2 w-full items-center space-y-6 bg-p0/98 pt-10 pb-6 backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
-        <h1 class="capitalize">
-          Champions
-        </h1>
+        <h1 class="capitalize">Champions</h1>
         <ChampionQuote
           v-once
           class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic" />
         <UInputGroupPopover
-          v-model:model-value="cs().filters.query"
+          v-model:model-value="champFilter().filters.query"
           class="max-w-140"
-          @clear-input="cs().filters.query = ''">
+          @clear-input="champFilter().filters.query = ''">
           <ChampFilterPopoverContent />
         </UInputGroupPopover>
       </div>

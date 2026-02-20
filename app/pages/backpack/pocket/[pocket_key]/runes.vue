@@ -26,7 +26,9 @@ definePageMeta({
 })
 
 const route = useRoute("pocket-runes")
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 console.log("🌱 - pocket:", pocket.value?.runes?.[0])
 
 const emblaMainApi = ref<CarouselApi>()

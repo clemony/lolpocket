@@ -1,7 +1,7 @@
 //
 import { defineStore } from "pinia"
 
-export const usePocketStore = defineStore(
+export const usePockets = defineStore(
   "pocketStore",
   () => {
     const pockets = ref<Pocket[]>([])

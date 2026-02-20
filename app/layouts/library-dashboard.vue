@@ -17,6 +17,7 @@ const toggleLeft = useToggle(collapsed)
     v-auto-animate
     class="z-auto flex w-screen flex-col overflow-y-auto"
     unit="px">
+    <Navbar />
     <UContainer>
       <UPageHeader
         :title="String($route.meta?.title || $route.name)"

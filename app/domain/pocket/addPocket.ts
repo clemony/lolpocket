@@ -16,7 +16,7 @@ export async function addPocket(randomize?: boolean) {
     })
 
     if (data) {
-      ps().pockets.push(p)
+      usePockets().pockets.push(p)
 
       toast.add({
         color: "neutral",

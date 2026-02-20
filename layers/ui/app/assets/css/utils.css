@@ -17,14 +17,6 @@
     }
   }
 
-  .scrollbar-hidden {
-    scrollbar-color: transparent transparent !important;
-    &::-webkit-scrollbar {
-      scrollbar-color: transparent transparent !important;
-      display: none !important;
-    }
-  }
-
   .w-inherit {
     width: inherit;
   }

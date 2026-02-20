@@ -1,14 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { filters } = storeToRefs(champFilter())
+</script>
 
 <template>
   <PopoverContent update-position-strategy="always" variant="outline">
     <UInput
-      v-model:model-value="cs().filters.query"
+      v-model:model-value="filters.query"
       icon="i-search"
       class="peer"
       placeholder="search">
       <template #trailing>
-        <InputClear @clear-input="cs().filters.query = ''" />
+        <InputClear @clear-input="filters.query = ''" />
       </template>
     </UInput>
     <div
@@ -19,11 +21,11 @@
           <Label class="popover-button-label">
             Champion Role
             <UButton
-              v-if="cs().filters.role"
+              v-if="filters.role"
               size="xs"
               class="size-6"
               variant="outline"
-              @click="cs().filters.role = null">
+              @click="filters.role = null">
               <icon class="size-4" name="x" />
             </UButton>
           </Label>
@@ -35,22 +37,22 @@
             <Label class="popover-button-label">
               Map Position
               <UButton
-                v-if="cs().filters.position !== 'all'"
+                v-if="filters.position !== 'all'"
                 size="xs"
                 class="size-6"
                 variant="outline"
-                @click="cs().filters.position">
+                @click="filters.position = 'all'">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
             <Label class="popover-button-label">
               Ability Resource
               <UButton
-                v-if="cs().filters.resource"
+                v-if="filters.resource"
                 size="xs"
                 class="size-6"
                 variant="outline"
-                @click="cs().filters.resource = null">
+                @click="filters.resource = null">
                 <icon class="size-4" name="x" />
               </UButton>
             </Label>
@@ -62,7 +64,7 @@
       <div
         class="sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l border-l-p3 py-3">
         <ToggleGroup
-          v-model:model-value="cs().filters.sort"
+          v-model:model-value="filters.sort"
           class="gap-0"
           type="single"
           as-child>
@@ -76,7 +78,10 @@
           </ToggleGroup>
         </ToggleGroup>
         <Grow class="max-w-14" />
-        <UButton color="neutral" size="sm" @click="cs().clearFilters()">
+        <UButton
+          color="neutral"
+          size="sm"
+          @click="champFilter().clearFilters()">
           <icon class="size-4" name="reset" />
         </UButton>
       </div>

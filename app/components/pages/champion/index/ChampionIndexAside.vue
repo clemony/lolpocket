@@ -10,11 +10,9 @@ const wrapperClass =
 
 <template>
   <aside
-    class="scrollbar-hidden sticky top-0 flex w-120 shrink-0 flex-col gap-10 overflow-y-auto px-1 py-22">
+    class="scrollbar-none sticky top-0 flex w-120 shrink-0 flex-col gap-10 overflow-y-auto px-1 py-22">
     <menu class="space-y-2">
-      <h3 class="dst mb-4">
-        Abilities
-      </h3>
+      <h3 class="dst mb-4">Abilities</h3>
       <UButton
         v-for="ability in champion.abilities"
         :key="ability.name"
@@ -22,7 +20,7 @@ const wrapperClass =
         size="xl"
         :class="
           cn('justify-start gap-4! rounded-xl', {
-            'btn-active bg-tint-p2/70! drop-shadow-sm drop-shadow-black/6':
+            'bg-tint-p2/70! btn-active drop-shadow-sm drop-shadow-black/6':
               route.hash === `#${ability.key}`,
           })
         "

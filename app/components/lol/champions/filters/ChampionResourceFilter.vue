@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
@@ -15,7 +15,9 @@ const {
 </script>
 
 <template>
-  <Listbox v-model:model-value="cs().filters.resource" :multiple="false">
+  <Listbox
+    v-model:model-value="champFilter().filters.resource"
+    :multiple="false">
     <ListboxContent as-child>
       <TransitionSlide
         group
@@ -26,12 +28,12 @@ const {
           )
         ">
         <UButton
-          v-if="cs().filters.resource && clear"
+          v-if="champFilter().filters.resource && clear"
           class="order-first hover:*:opacity-100"
           :variant
           square
           size="sm"
-          @click="cs().filters.resource = null">
+          @click="champFilter().filters.resource = null">
           <icon class="size-4" name="x" />
         </UButton>
 

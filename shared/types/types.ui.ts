@@ -20,6 +20,15 @@ export type TooltipSize = "sm" | "md" | "lg"
 export type DataOrientation = "vertical" | "horizontal"
 export type DataAlign = "top" | "middle" | "bottom"
 
+export type ClassKey =
+  | "root"
+  | "label"
+  | "leading"
+  | "trailing"
+  | "separator"
+  | "leadingIcon"
+  | "trailingIcon"
+
 export interface InboxBadge {
   class?: string
   icon?: IconObject

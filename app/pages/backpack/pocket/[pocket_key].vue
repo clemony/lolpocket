@@ -1,33 +1,35 @@
 <script lang="ts" setup>
 useSeoMeta({
-  title: '[title]',
-  description: '[description]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogTitle: '[og:title]',
-  ogUrl: '[og:url]',
-  twitterCard: 'summary',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]',
+  title: "[title]",
+  description: "[description]",
+  ogDescription: "[og:description]",
+  ogImage: "[og:image]",
+  ogTitle: "[og:title]",
+  ogUrl: "[og:url]",
+  twitterCard: "summary",
+  twitterDescription: "[twitter:description]",
+  twitterImage: "[twitter:image]",
+  twitterTitle: "[twitter:title]",
 })
 definePageMeta({
   layout: false,
   props: true,
-  search: 'hidden',
+  search: "hidden",
 })
 
-const route = useRoute('pocket')
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const route = useRoute("pocket")
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 
 const mainSet = computed(() => {
   const runes = pocket.value?.runes
   if (!runes || !pocket.value?._runes) return null
-  return runes.find(s => s.id === pocket.value?._runes) ?? null
+  return runes.find((s) => s.id === pocket.value?._runes) ?? null
 })
 
 const selectedSet = computed(() => {
-  const s = pocket.value?.spells?.find(s => s.id === pocket.value?._spells)
+  const s = pocket.value?.spells?.find((s) => s.id === pocket.value?._spells)
   if (!s) return null
   const { id, ...rest } = s
   return rest
@@ -40,12 +42,8 @@ const selectedSet = computed(() => {
     class="z-auto grid min-h-screen w-4/5 justify-self-center bg-p0 px-14"
     name="tab"
     :pocket>
-    <NuxtPage
-      v-if="pocket"
-      :pocket="pocket" />
+    <NuxtPage v-if="pocket" :pocket="pocket" />
   </NuxtLayout>
 
-  <NuxtPage
-    v-else
-    :pocket="pocket" />
+  <NuxtPage v-else :pocket="pocket" />
 </template>

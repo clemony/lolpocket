@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Runes",
   icon: "lol:runes",
-
+  path: "/runes",
   description: "Rune paths and the runes within them.",
   listClass: "size-5.5 !bg-transparent",
   navClass: "size-6",

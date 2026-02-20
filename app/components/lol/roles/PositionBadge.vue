@@ -34,14 +34,15 @@ const position = computed(() => {
         {
           'order-first text-white hover:text-pc hover:**:text-pc':
             active ||
-            (cs().filters.position && cs().filters.position === position.label),
+            (champFilter().filters.position &&
+              champFilter().filters.position === position.label),
           'pr-3': active && clear,
         },
         className
       )
     "
     :style="{
-      backgroundColor: `${(cs().filters.position && cs().filters.position === position.label) || active ? position.color : 'transparent'}`,
+      backgroundColor: `${(champFilter().filters.position && champFilter().filters.position === position.label) || active ? position.color : 'transparent'}`,
     }">
     <RoleIcon class="text-white" :position="position.label" />
     <slot>

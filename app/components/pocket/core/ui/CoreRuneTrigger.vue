@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 const mainSet = computed(() =>
-  pocket.value?.runes?.find(s => s.id === pocket.value?._runes)
+  pocket.value?.runes?.find((s) => s.id === pocket.value?._runes)
 )
 </script>
 
@@ -17,16 +17,12 @@ const mainSet = computed(() =>
       placement="left"
       variant="ghost"
       :class="
-        cn(`
-          group/btn fx-0 pointer-events-auto! z-10 size-20
-          cursor-pointer! rounded-full **:pointer-events-none hover:shadow-sm
-          hover:shadow-black/4
-        `)
+        cn(
+          `group/btn fx-0 pointer-events-auto! z-10 size-20 cursor-pointer! rounded-full **:pointer-events-none hover:shadow-sm hover:shadow-black/4`
+        )
       "
       :set="mainSet" />
 
-    <icon
-      class="absolute right-1.5 size-4"
-      name="up-down" />
+    <icon class="absolute right-1.5 size-4" name="up-down" />
   </VarSelectTrigger>
 </template>

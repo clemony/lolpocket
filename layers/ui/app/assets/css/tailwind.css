@@ -17,7 +17,7 @@
     font-family: var(--font-sans);
     * {
       scrollbar-color: color-mix(in lch, var(--color-p4) 80%, transparent 20%)
-        transparent !important;
+        transparent;
       @apply border-p3 decoration-from-font underline-offset-2 antialiased;
     }
   }

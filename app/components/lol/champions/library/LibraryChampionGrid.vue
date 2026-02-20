@@ -34,6 +34,7 @@ defineExpose({
 
 /* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
+const { filters } = storeToRefs(champFilter())
 const filteredChamps = ref([])
 // todo
 const gridApi = shallowRef<GridApi | null>(null)
@@ -62,24 +63,24 @@ const gridOptions: GridOptions<ChampionLite> = {
     mode: "multiRow",
   },
 }
-
+/*
 watch(
-  () => cs().championGridLevel,
+  () => filters.value.championGridLevel,
   (newVal) => {
     if (newVal && gridApi.value) gridApi.value.refreshCells()
   }
 )
 
 watch(
-  () => cs().championGridType,
+  () => filters.value.championGridType,
   (newVal) => {
     if (newVal && gridApi.value) gridApi.value.refreshCells()
   }
 )
 
 const { resolveStat } = useChampionStatGrowth(
-  computed(() => cs().championGridLevel ?? 1)
-)
+  computed(() => filters.value.championGridLevel ?? 1)
+) */
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
@@ -230,31 +231,6 @@ hide: true },
     valueGetter: (params) => params.data?.attributeRatings?.utility ?? 0,
   },
 ]
-const listener = (event: any) => {
-  void event
-  cs().dbChampionStatListKey++
-}
-
-async function onGridReady(params: GridReadyEvent) {
-  await params.api
-  gridApi.value = params.api
-  cs().championGridApi = gridApi.value
-
-  const columns = gridApi.value.getColumns()
-  columns?.forEach((col) => {
-    col.addEventListener("visibleChanged", listener as any)
-  })
-}
-
-function onGridPreDestroyed(params: GridPreDestroyedEvent) {
-  if (!gridApi.value) return
-  cs().dbChampionGridState = gridApi.value.getState()
-
-  const columns = gridApi.value.getColumns()
-  columns?.forEach((col) => {
-    col.removeEventListener("visibleChanged", listener as any)
-  })
-}
 
 watch(
   () => "",
@@ -283,7 +259,7 @@ ModuleRegistry.registerModules([
       v-if="filtered"
       class="!size-full stat-grid champion-grid mt-38 border-t border-t-p3/40 "
       :tooltip-show-delay="400"
-      :initial-state="cs().dbChampionGridState"
+      :initial-state="filters.value.dbChampionGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"

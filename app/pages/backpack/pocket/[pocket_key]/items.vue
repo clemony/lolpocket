@@ -4,44 +4,44 @@ const props = defineProps<{
 }>()
 
 useSeoMeta({
-  title: '[title]',
-  description: '[description]',
-  ogDescription: '[og:description]',
-  ogImage: '[og:image]',
-  ogTitle: '[og:title]',
-  ogUrl: '[og:url]',
-  twitterCard: 'summary',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterTitle: '[twitter:title]',
+  title: "[title]",
+  description: "[description]",
+  ogDescription: "[og:description]",
+  ogImage: "[og:image]",
+  ogTitle: "[og:title]",
+  ogUrl: "[og:url]",
+  twitterCard: "summary",
+  twitterDescription: "[twitter:description]",
+  twitterImage: "[twitter:image]",
+  twitterTitle: "[twitter:title]",
 })
 
 definePageMeta({
-  name: 'pocket-items',
-  title: 'items',
+  name: "pocket-items",
+  title: "items",
   order: 2,
-  path: '/pocket/:pocket_key/items',
-  search: 'hidden',
+  path: "/pocket/:pocket_key/items",
+  search: "hidden",
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 
-const tabs = ref('items')
+const tabs = ref("items")
 
 const tabValues = [
   {
-    name: 'items',
-    icon: 'bow',
-    value: 'items',
+    name: "items",
+    icon: "bow",
+    value: "items",
   },
 
   {
-    name: 'calculator',
-    icon: 'calc',
-    value: 'calculator',
+    name: "calculator",
+    icon: "calc",
+    value: "calculator",
   },
 ]
 </script>

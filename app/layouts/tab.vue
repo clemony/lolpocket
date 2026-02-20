@@ -29,6 +29,11 @@ const bg = computed(() =>
 
 <template>
   <div class="contents">
+    <Navbar>
+      <template #center-leading>
+        <slot name="center-leading" />
+      </template>
+    </Navbar>
     <!-- bg -->
     <div
       class="pointer-events-none relative z-0 -mt-15 grid h-95 w-screen overflow-hidden border-b border-p4/60">

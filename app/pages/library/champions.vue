@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "Champions",
+  path: "/champions",
   description: "A detailed record of champions and their stats.",
   icon: "lol:champ",
   listClass: "!size-5.5",

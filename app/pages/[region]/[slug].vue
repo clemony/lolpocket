@@ -4,7 +4,7 @@ import { extractIdentifierFromRoute } from "~/domain/summoner/utils/extractIdent
 
 definePageMeta({
   search: "hidden",
-  layout: "tab",
+  layout: false,
 })
 
 const route = useRoute()
@@ -74,5 +74,12 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <NuxtPage :champion-key />
+  <div class="w-screen">
+    <NuxtLayout name="tab">
+      <template #center-leading>
+        <UpdateSummoner variant="ghost" size="sm" />
+      </template>
+      <NuxtPage :champion-key />
+    </NuxtLayout>
+  </div>
 </template>

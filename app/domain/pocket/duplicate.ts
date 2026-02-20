@@ -13,13 +13,13 @@ export function duplicatePocket(original: Pocket): Pocket {
 
   newPocket.ouuid = user().account?.uuid ?? ""
 
-  ps().pockets.push(newPocket)
+  usePockets().pockets.push(newPocket)
   return newPocket
 }
 
 export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
   const newSet = deepCopy(original)
-  const pocket = <Pocket>ps().getPocket(target)
+  const pocket = <Pocket>usePockets().getPocket(target)
 
   newSet.id = crypto.randomUUID()
   if (pocket?.runes) pocket.runes.push(newSet)
@@ -28,7 +28,7 @@ export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
 
 export function duplicateItemSet(original: ItemSet, target: string): ItemSet {
   const newSet = deepCopy(original)
-  const pocket = <Pocket>ps().getPocket(target)
+  const pocket = <Pocket>usePockets().getPocket(target)
 
   newSet.name = `${original.name} (copy)`
   newSet.id = crypto.randomUUID()

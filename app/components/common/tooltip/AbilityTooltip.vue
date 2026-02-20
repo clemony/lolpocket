@@ -57,7 +57,7 @@ const champ = computed(() => {
       </div>
     </div>
     <div class="w-full overflow-y-scroll">
-      <Separator color="neutral" :size="3" />
+      <Separator color="neutral" size="xs" class="my-1.5" />
       <!--  -->
       <div class="w-full px-4">
         <AbilityStats
@@ -65,7 +65,7 @@ const champ = computed(() => {
           :ability="item" />
       </div>
 
-      <Separator color="neutral" :size="3" />
+      <Separator color="neutral" size="xs" class="my-1.5" />
       <div class="w-full space-y-3 px-4 pb-4 text-wrap">
         <AbilityDescription
           v-for="(effect, i) in item.effects"

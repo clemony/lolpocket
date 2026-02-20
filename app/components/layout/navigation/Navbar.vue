@@ -100,7 +100,10 @@ const logInOpen = shallowRef<boolean>(false)
       <LpLogo />
     </template>
 
-    <LazyAppCommand />
+    <div class="flex items-center gap-4">
+      <slot name="center-leading" />
+      <LazyAppCommand />
+    </div>
     <template #right>
       <UPopover
         v-for="[k, v] in Object.entries(nav)"

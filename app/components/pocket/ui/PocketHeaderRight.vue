@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 ).value
 const isOpen = shallowRef(false)
 

@@ -41,7 +41,7 @@ const variants = {
   },
 }
 const isDefaultFilters = computed(() => {
-  const f = cs().filters
+  const f = champFilter().filters
   return (
     !f.attackType?.length &&
     !f.position &&
@@ -53,7 +53,10 @@ const isDefaultFilters = computed(() => {
 })
 onBeforeMount(() => {
   if (isDefaultFilters.value) {
-    console.log("🌱 - cs().filters === defaultFilters:", isDefaultFilters.value)
+    console.log(
+      "🌱 - champFilter().filters === defaultFilters:",
+      isDefaultFilters.value
+    )
   }
   loaded.value = true
 })

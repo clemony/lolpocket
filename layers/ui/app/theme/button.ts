@@ -269,7 +269,7 @@ export const buttonTheme = defineUiTheme({
       size: "sm",
       square: true,
       class: {
-        base: "size-8",
+        base: "anchor size-8 gap-0",
       },
     },
     {

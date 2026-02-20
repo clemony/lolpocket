@@ -6,11 +6,7 @@ import { beasties } from "vite-plugin-beasties"
 export default defineNuxtConfig({
   imports: {
     global: true,
-    dirs: [
-      "#shared/schema",
-      "#layers/store/app/stores",
-      "#layers/patch/shared/constants",
-    ],
+    dirs: ["#shared/schema", "~/stores", "#layers/patch/shared/constants"],
   },
 
   dir: {
@@ -32,10 +28,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-charts",
   ],
-
-  nuxtCharts: {
-    autoImports: false,
-  },
 
   // app
   typescript: {
@@ -96,7 +88,7 @@ export default defineNuxtConfig({
       strict: true,
     },
   },
-  pinia: { storesDirs: ["#layers/store/app/stores"] },
+  pinia: { storesDirs: ["~/stores"] },
   router: {
     options: {
       scrollBehaviorType: "smooth",

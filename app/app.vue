@@ -32,7 +32,6 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
       position: 'top-right',
       class: 'translate-y-15 ',
     }">
-    <Navbar />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

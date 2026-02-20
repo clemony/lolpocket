@@ -78,7 +78,7 @@ useSortable(tree, items, {
 const isCollapsed = ref(false)
 const route = useRoute()
 const pinned = computed(() =>
-  ps().pockets.filter((p) => ps().pinned.includes(p.key))
+  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key))
 )
 </script>
 

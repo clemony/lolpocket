@@ -16,7 +16,7 @@ const {
 </script>
 
 <template>
-  <Listbox v-model:model-value="cs().filters.role" :multiple="false">
+  <Listbox v-model:model-value="champFilter().filters.role" :multiple="false">
     <ListboxContent as-child>
       <TransitionSlide
         group
@@ -27,11 +27,11 @@ const {
           )
         ">
         <UButton
-          v-if="cs().filters.role && clear"
+          v-if="champFilter().filters.role && clear"
           class="order-first hover:*:opacity-100"
           :variant
           size="sm"
-          @click="cs().filters.role = null">
+          @click="champFilter().filters.role = null">
           <icon class="size-4" name="x" />
         </UButton>
 

@@ -2,7 +2,9 @@
 import { getSplash } from "~/domain/utils/img"
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 const pocketChampions = computed(() => pocket.value?.champions ?? [])
 
 const searchQuery = ref<string>("")

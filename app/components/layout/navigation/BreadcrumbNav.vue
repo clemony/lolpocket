@@ -52,10 +52,12 @@ const chain = computed(() => getRouteChain(route.fullPath))
                   v-else
                   class="text-lg font-medium capitalize not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
                   {{
-                    link.name === "champion_key" ?
-                      champNameByKey(String(route.params.champion_key))
-                      : link.name === "pocket_key" ?
-                        ps().getPocket(String(route.params.pocket_key))?.name
+                    link.name === "champion_key"
+                      ? champNameByKey(String(route.params.champion_key))
+                      : link.name === "pocket_key"
+                        ? usePockets().getPocket(
+                            String(route.params.pocket_key)
+                          )?.name
                         : link.meta?.title || link.name
                   }}
                 </span>

@@ -12,14 +12,14 @@ const loaded = ref<boolean>(false)
 <template>
   <TransitionSlide
     v-if="championKeys"
-    class="scrollbar-hidden grid size-full justify-start gap-6 overflow-y-auto"
+    class="scrollbar-none grid size-full justify-start gap-6 overflow-y-auto"
     group
     :class="{
       'grid-cols-[1fr_420px]': selectedChampion,
       'grid-cols-[1fr_0px]': !selectedChampion,
     }">
     <TransitionSlide
-      class="scrollbar-hidden flex size-full flex-wrap justify-start overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8"
+      class="scrollbar-none flex size-full flex-wrap justify-start overflow-x-hidden overflow-y-auto scroll-smooth rounded-lg pb-8"
       group
       :class="{ '': loaded }">
       <label
@@ -50,9 +50,7 @@ const loaded = ref<boolean>(false)
         <button
           class="group/btn btn absolute top-3 left-3 z-2 btn-circle border-none btn-ghost"
           @click="selectedChampion = null">
-          <icon
-            class="text-white/70"
-            name="x-sm" />
+          <icon class="text-white/70" name="x-sm" />
         </button>
 
         <ChampionData :champion-key="selectedChampion" />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 const championKey = computed(() => pocket.value?._champion ?? null)
 const championTitle = computed(() =>
@@ -10,9 +10,7 @@ const championTitle = computed(() =>
 </script>
 
 <template>
-  <div
-    v-if="pocket"
-    class="inset-0 z-auto grid grid-cols-[1fr_2.5fr] gap-22">
+  <div v-if="pocket" class="inset-0 z-auto grid grid-cols-[1fr_2.5fr] gap-22">
     <div class="grid w-full grid-cols-[2.5fr_1fr] gap-4 pt-22">
       <div class="flex w-full flex-col gap-3">
         <div class="mb-2 h-16">
@@ -43,20 +41,15 @@ const championTitle = computed(() =>
         <MainRuneSelect :pocket>
           <CoreRuneTrigger :pocket />
         </MainRuneSelect>
-        <MainSpellSelect
-          class="size-14"
-          :pocket />
+        <MainSpellSelect class="size-14" :pocket />
       </div>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
-        <h2 class="dst leading-10 tracking-tight">
-          Pocket Stats
-        </h2>
+        <h2 class="dst leading-10 tracking-tight">Pocket Stats</h2>
         <div class="text-lg font-medium italic" />
       </div>
-      <div class="grid grid-cols-3 gap-8">
-      </div>
+      <div class="grid grid-cols-3 gap-8"></div>
     </div>
   </div>
 </template>

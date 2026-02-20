@@ -79,7 +79,12 @@ function close() {
     <div class="relative grid w-full auto-rows-auto overflow-y-auto pb-2">
       <!-- component OF -->
 
-      <Separator :size="4" label="ABILITIES" placement="end" color="neutral" />
+      <Separator
+        size="xs"
+        class="my-1.5"
+        label="ABILITIES"
+        placement="end"
+        color="neutral" />
     </div>
   </OnClickOutside>
 </template>

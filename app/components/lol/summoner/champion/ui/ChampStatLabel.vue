@@ -26,9 +26,11 @@ const isA = computed(
 )
 
 const labels = computed(() =>
-  type === "time" ? statLabelsWithTime
-  : type === "synergy" ? statLabelsWithSynergy
-  : statLabels
+  type === "time"
+    ? statLabelsWithTime
+    : type === "synergy"
+      ? statLabelsWithSynergy
+      : statLabels
 )
 
 const avgTimestampLabel = computed(() => {
@@ -50,8 +52,8 @@ const avgTimestampLabel = computed(() => {
       class="z-2 size-full flex-col items-start justify-between! gap-0 p-2!"
       variant="ghost"
       :data-type="
-        stat ?
-          `${stat?.winrate}% winrate
+        stat
+          ? `${stat?.winrate}% winrate
         ${stat?.games} games
         ${stat?.pickrate}% pickrate
         ${avgTimestampLabel}`
@@ -86,7 +88,6 @@ const avgTimestampLabel = computed(() => {
         <Separator
           v-if="separator"
           class="absolute top-0 w-full opacity-70"
-          :size="0"
           color="p3" />
 
         <!-- labels -->

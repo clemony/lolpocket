@@ -4,7 +4,7 @@ const { class: className } = defineProps<{
 }>()
 const route = useRoute()
 const pocket = ref<Pocket | undefined>(
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 </script>
 

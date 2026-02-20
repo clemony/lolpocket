@@ -18,7 +18,8 @@ const pocket = computed(() => p)
   <Label
     v-if="pocket"
     v-tippy="{
-      content: ps().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
+      content:
+        usePockets().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
       theme: 'neutral',
       placement: 'bottom',
     }"
@@ -33,7 +34,7 @@ const pocket = computed(() => p)
       )
     ">
     <!--     <input
-      v-model="ps().pinned"
+      v-model="usePockets().pinned"
       type="checkbox"
       class="peer hidden" /> -->
 

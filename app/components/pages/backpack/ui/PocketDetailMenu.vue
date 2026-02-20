@@ -8,11 +8,11 @@ const isDisabled = computed(() => pocketKey === null)
 const pocket = computed(() => {
   if (!pocketKey) return
 
-  return pocketKey ? ps().getPocket(pocketKey) : null
+  return pocketKey ? usePockets().getPocket(pocketKey) : null
 })
 
 const pocketKeySafe = computed(() => pocket.value?.key ?? "")
-const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
+const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
 </script>
 
 <template>
@@ -32,7 +32,7 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="ps().pinned"
+          v-model="usePockets().pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -45,7 +45,9 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
       <Label
         v-tippy="'Move to archive'"
         base="btn"
-        :variant="ps().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'"
+        :variant="
+          usePockets().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'
+        "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned,
@@ -53,7 +55,7 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
         ">
         <input
           v-if="pocket && pocket?.key"
-          v-model="ps().pinned"
+          v-model="usePockets().pinned"
           class="peer hidden"
           :value="pocket.key"
           type="checkbox" />
@@ -64,7 +66,9 @@ const pinned = computed(() => ps().pinned.includes(pocketKeySafe.value))
       <UButton
         v-tippy="'Move to trash'"
         base="btn"
-        :variant="ps().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'"
+        :variant="
+          usePockets().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'
+        "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
             'bg-p2/30': pinned,

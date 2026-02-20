@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = ref<Pocket | undefined>(
-  ps().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 </script>
 
@@ -17,13 +17,9 @@ const pocket = ref<Pocket | undefined>(
       :key="i"
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
-      <IndexIcon
-        class="size-6"
-        :item="(spells[set.d] ?? spells[0]) as Index" />
+      <IndexIcon class="size-6" :item="(spells[set.d] ?? spells[0]) as Index" />
 
-      <IndexIcon
-        class="size-6"
-        :item="(spells[set.f] ?? spells[0]) as Index" />
+      <IndexIcon class="size-6" :item="(spells[set.f] ?? spells[0]) as Index" />
       <Grow />
     </MenubarRadioItem>
   </MenubarRadioGroup>

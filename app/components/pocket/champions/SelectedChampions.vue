@@ -3,7 +3,9 @@ import type { DraggableEvent } from "vue-draggable-plus"
 import { vDraggable } from "vue-draggable-plus"
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
+const pocket = computed(() =>
+  usePockets().getPocket(String(route.params.pocket_key))
+)
 const champions = computed(() => pocket.value?.champions ?? [])
 
 function onSpill(e: DraggableEvent) {

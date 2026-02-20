@@ -11,7 +11,7 @@ export interface ChampionFilter {
   sort: string
 }
 
-export const useChampStore = defineStore("ChampStore", () => {
+export const champFilter = defineStore("ChampStore", () => {
   const championSplashDropdown = ref<HTMLElement | null>(null)
 
   const dbChampionGridState = shallowRef<GridState | null>(null)
@@ -103,9 +103,9 @@ export const useChampStore = defineStore("ChampStore", () => {
     if (order.value.length) {
       const orderMap = new Map(order.value.map((k, i) => [k, i]))
       array.sort((a, b) =>
-        filters.value.sort === "az" ?
-          (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
-        : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
+        filters.value.sort === "az"
+          ? (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
+          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
       )
     }
 
