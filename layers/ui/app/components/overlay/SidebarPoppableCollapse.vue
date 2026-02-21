@@ -41,7 +41,7 @@ const base = "group w-full justify-between"
         :variant="collapsed ? 'ghost' : variant"
         :ui="{
           base,
-          label: 'hidden',
+          label: collapsed ? 'hidden' : '',
         }">
         <template #trailing>
           <PlusMinusExpand v-if="!collapsed" />

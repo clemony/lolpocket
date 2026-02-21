@@ -86,13 +86,7 @@ const skillOrder = computed(() => [
       <div
         v-for="(row, index) in 4"
         :key="row"
-        class="grid h-7 w-fit grid-flow-col grid-cols-18 place-items-center gap-x-1.25 bg-p2/80 first:rounded-t-lg last:rounded-b-lg"
-        :class="
-          cn('', {
-            '': index === 0,
-            '': index === 3,
-          })
-        ">
+        class="grid h-7 w-fit grid-flow-col grid-cols-18 place-items-center gap-x-1.25 bg-p2/80 first:rounded-t-lg last:rounded-b-lg">
         <div
           v-for="(skill, i) in skillOrder"
           :key="i"

@@ -93,6 +93,21 @@
 }
 
 @layer utilities {
+  .btn {
+    --size: 0;
+    animation-duration: 0;
+    transition-duration: 0;
+  }
+  .btn-active.btn-ghost {
+    --btn-bg: var(--ui-p1);
+  }
+  .btn-active.btn-neutral {
+    --btn-bg: var(--ui-n1) !important;
+  }
+  .btn-neutral {
+    @apply bg-neutral;
+  }
+
   /* TABLE */
   .table {
     tr {
@@ -122,20 +137,6 @@
     .tab {
       @apply h-8.5 pt-0.75;
       --tab-radius-min: 0.64rem;
-    }
-  }
-
-  .btn {
-    --size: 0;
-    animation-duration: 0;
-    transition-duration: 0;
-
-    @apply rounded-lg;
-  }
-
-  .btn-active {
-    .btn-ghost {
-      --btn-bg: var(--ui-p1);
     }
   }
 

@@ -41,7 +41,7 @@ const right = computed(() =>
 <template>
   <UFooter
     :ui="{
-      root: ' bg-secondary before:z-2   grow flex flex-col  before:size-full  relative before:absolute z-0 *:not-before:z-3',
+      root: ' bg-secondary grow flex flex-col  before:size-full  relative  z-0',
       top: 'mx-auto grow  overflow-hidden',
       bottom:
         'h-20 bg-neutral text-nc max-h-20 min-h-20 border-t-neutral justify-between flex',

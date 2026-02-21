@@ -11,13 +11,13 @@ export const buttonTheme = defineUiTheme({
   },
   variants: {
     color: {
-      dom: {},
-      neutral: {},
-      p0: {},
-      p1: {},
-      p2: {},
-      p3: {},
-      transparent: {},
+      dom: "",
+      neutral: "",
+      p0: "",
+      p1: "",
+      p2: "",
+      p3: "",
+      transparent: "",
     },
     size: {
       custom: {},
@@ -77,31 +77,16 @@ export const buttonTheme = defineUiTheme({
         leadingAvatar: "absolute",
         label: "hidden",
       },
-      false: {
-        base: "justify-start",
-      },
+      false: "justify-start",
     },
     variant: {
-      solid: {
-        base: "btn shadow-sm hover:inset-shadow-xs",
-      },
-      ghost: {
-        base: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      },
-      outline: {
-        base: "btn btn-outline hover:inset-shadow-xs",
-      },
-
-      highlight: {
-        base: "btn btn-ghost",
-      },
-      ring: {
-        base: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      },
-      link: {
-        base: "group/link inline-flex text-pc hover:underline",
-        label: "text-start font-medium group-hover/link:underline",
-      },
+      solid: "btn shadow-sm hover:inset-shadow-xs",
+      ghost:
+        "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+      outline: "btn btn-outline hover:inset-shadow-xs",
+      highlight: "btn btn-ghost",
+      ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+      link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",
     },
     active: {
       false: {
@@ -195,11 +180,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "ghost",
       class: {
-        base: "btn not-on:not-hover:btn-ghost hover:btn-neutral active:btn-neutral on:btn-neutral",
-        leadingIcon:
-          "focus-group-visible/btn:**:text-nc group-hover/btn:**:**:text-nc group-active/btn:**:text-nc",
-        trailingIcon:
-          "focus-group-visible/btn:**:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc",
+        base: "btn text-pc btn-ghost hover:bg-neutral! hover:btn-neutral hover:**:text-nc! active:bg-neutral! active:btn-neutral active:**:text-nc! on:bg-neutral! on:btn-neutral",
       },
     },
     {
@@ -230,18 +211,14 @@ export const buttonTheme = defineUiTheme({
     // LINK
     {
       variant: "link",
-      class: {
-        base: "px-0",
-        label: "text-pc decoration-pc",
-      },
+      class:
+        "[&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc",
     },
     {
       color: "neutral",
       variant: "link",
-      class: {
-        base: "",
-        label: "text-nc decoration-nc",
-      },
+      class:
+        "[&>[data-slot=label]]:text-nc [&>[data-slot=label]]:decoration-nc",
     },
     /* SHAPE */
     {
@@ -302,10 +279,17 @@ export const buttonTheme = defineUiTheme({
     },
     {
       class: {
+        base: "rounded-md",
+      },
+      rounded: false,
+      size: ["xs"],
+    },
+    {
+      class: {
         base: "rounded-sm",
       },
       rounded: false,
-      size: ["3xs", "2xs", "xs"],
+      size: ["3xs", "2xs"],
     },
     {
       rounded: true,

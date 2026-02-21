@@ -2,7 +2,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const headerTheme = defineUiTheme({
   slots: {
-    root: "sticky top-0 flex h-(--ui-header-height) items-end justify-start border-0 border-p0/50 bg-p0/75 bg-blend-darken ring ring-p2 backdrop-blur-sm",
+    root: "sticky top-0 flex h-(--ui-header-height) shrink-0 items-end justify-start border-0 border-p0/50 bg-p0/75 px-8 bg-blend-darken ring ring-p2 backdrop-blur-sm",
     container:
       "mx-0! flex max-w-screen! items-center justify-between gap-3 rounded-xl",
     left: "flex items-center gap-1.5 lg:flex-1",

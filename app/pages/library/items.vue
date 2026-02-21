@@ -49,7 +49,7 @@ const tabData = [
   },
 ]
 
-const collapsed = useState("collapsed-state")
+const collapsed = useState<boolean>("collapsed-state")
 
 watch(
   () => collapsed.value,
@@ -82,7 +82,7 @@ watch(
     </template>
 
     <div
-      class="sticky top-15 z-2 mb-0 -ml-[5px] grid h-fit w-[calc(100%+10px)] auto-rows-max place-items-center bg-p0 pt-4 pb-5">
+      class="sticky top-15 z-2 mb-0 -ml-[5px] grid h-fit w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
       <UTabs
         v-model:model-value="is().filters.rank"
         :items="ranks"
@@ -90,7 +90,7 @@ watch(
         variant="ghost"
         color="neutral"
         :ui="{
-          root: 'w-max ',
+          root: 'w-max',
           indicator: 'duration-150',
           trigger: 'w-max px-5',
         }" />

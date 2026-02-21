@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-const collapsed = useState("collapsed-state", () => shallowRef<boolean>(false))
+const collapsed = useState<boolean>("collapsed-state", () => false)
+const toggleLeft = useToggle(collapsed)
 
 watch(
   () => collapsed.value,
@@ -7,8 +8,6 @@ watch(
     console.log("💠 - watch - newVal:", v)
   }
 )
-
-const toggleLeft = useToggle(collapsed)
 </script>
 
 <template>
@@ -18,23 +17,6 @@ const toggleLeft = useToggle(collapsed)
     class="z-auto flex w-screen flex-col overflow-y-auto"
     unit="px">
     <Navbar />
-    <UContainer>
-      <UPageHeader
-        :title="String($route.meta?.title || $route.name)"
-        headline="Library"
-        :ui="{
-          headline: 'text-xs font-semibold text-n5',
-          root: 'mt-(--ui-header-height) h-[calc(--ui-header-height*2])! flex flex-col gap-2 border-b-0',
-        }">
-        <template #description>
-          <p class="mt-2 text-sm text-n4 italic">
-            <slot name="quote" />
-          </p>
-        </template>
-      </UPageHeader>
-    </UContainer>
-
-    <Separator class="my-4" />
     <div class="flex flex-1">
       <UDashboardSidebar
         id="library-left"
@@ -42,7 +24,7 @@ const toggleLeft = useToggle(collapsed)
         clean
         class="h-max"
         :ui="{
-          root: 'mt-(--ui-header-height) pt-4 sticky top-0 h-fit!',
+          root: '  pt-4 sticky top-0 h-fit!',
           header: cn(
             'flex h-fit shrink-0 items-center justify-between gap-2 pl-4.5',
             {
@@ -56,20 +38,6 @@ const toggleLeft = useToggle(collapsed)
         :max-size="280">
         <template #header>
           <slot name="sidebar-left-header" :collapsed />
-          <UButton
-            :size="collapsed ? 'md' : 'sm'"
-            :active="collapsed"
-            square
-            active-color="neutral"
-            active-variant="solid"
-            variant="ghost"
-            color="neutral"
-            :ui="{
-              base: ' grid place-items-center p-0 gap-0',
-              leadingIcon: 'group-on/btn:**:text-nc! size-4 stroke-[2.4]  ',
-            }"
-            :leading-icon="collapsed ? 'i-right-line' : 'i-left-line'"
-            @click="toggleLeft()" />
         </template>
         <slot name="sidebar-left-body" :collapsed />
       </UDashboardSidebar>
@@ -77,7 +45,7 @@ const toggleLeft = useToggle(collapsed)
       <UDashboardPanel
         id="library-main-panel"
         :default-size="100"
-        class="flex w-full flex-1 grow px-3 py-5"
+        class="flex w-full flex-1 grow px-10 py-3"
         clean>
         <UMain
           v-auto-animate
@@ -86,6 +54,32 @@ const toggleLeft = useToggle(collapsed)
               'mx-auto justify-self-center': collapsed,
             })
           ">
+          <UPageHeader
+            :title="String($route.meta?.title || $route.name)"
+            headline="Library"
+            :ui="{
+              headline: ' mb-0 ',
+            }">
+            <template #headline>
+              <UButton
+                size="md"
+                :active="collapsed"
+                label="Library"
+                variant="link"
+                :ui="{
+                  base: '**:text-n5 w-54',
+                  label: 'font-semibold text-xs ',
+                  leadingIcon: 'size-4.5',
+                }"
+                :leading-icon="collapsed ? 'i-right-line' : 'i-left-line'"
+                @click="toggleLeft()" />
+            </template>
+            <template #description>
+              <p class="text-sm text-n4 italic">
+                <slot name="quote" />
+              </p>
+            </template>
+          </UPageHeader>
           <slot :collapsed />
         </UMain>
       </UDashboardPanel>

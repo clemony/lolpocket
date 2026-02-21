@@ -65,14 +65,7 @@ export default defineNuxtConfig({
   }, */
   nitro: {
     imports: {
-      dirs: [
-        "#shared/types",
-        "#shared/schema",
-        "#server/domain",
-        "#server/api/riot",
-        "#layers/lib/shared/utils",
-        "#layers/patch/shared/constants",
-      ],
+      dirs: ["#shared/schema", "#server/domain", "#server/api/riot"],
     },
     routeRules: {
       "./layers/store/server/api/**": {

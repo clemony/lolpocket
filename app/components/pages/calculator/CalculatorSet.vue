@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { vDraggable } from 'vue-draggable-plus'
+import { vDraggable } from "vue-draggable-plus"
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   num?: number
   split?: boolean
   set?: CalculatorSet
 }>()
 
-const emit = defineEmits(['update:set'])
+const emit = defineEmits(["update:set"])
 </script>
 
 <template>
@@ -16,20 +16,20 @@ const emit = defineEmits(['update:set'])
     v-draggable="[
       set,
       {
-        'group': {
+        group: {
           name: 'items',
           pull: true,
           put: 'items',
         },
-        'bubbleScroll': false,
-        'scroll': false,
-        'delay': 0,
-        'animation': 300,
+        bubbleScroll: false,
+        scroll: false,
+        delay: 0,
+        animation: 300,
         'force-fallback': true,
 
-        'removeOnSpill': true,
-        'fallbackTolerance': 0,
-        'fallbackOnBody': true,
+        removeOnSpill: true,
+        fallbackTolerance: 0,
+        fallbackOnBody: true,
       },
     ]"
     ghost-class="item-set-item-ghost"
@@ -38,8 +38,7 @@ const emit = defineEmits(['update:set'])
     :class="
       cn(
         'field-box group relative grid size-full w-150 grid-cols-6 items-center justify-center gap-4 place-self-center p-4',
-        { '': props.split, '': !props.split },
-        props.class,
+        props.class
       )
     ">
     <ItemCommand
