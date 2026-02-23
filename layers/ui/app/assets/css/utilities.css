@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@utility border-* {
+  border-style: --value("ridge", "groove", "inset", "outset");
+}
+
 @utility noise-* {
   --noise: --value(number);
 }

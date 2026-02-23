@@ -4,21 +4,25 @@ export const radioGroupTheme = defineUiTheme({
   slots: {
     root: "relative",
     fieldset: "flex gap-x-2",
-    legend: "mb-1 block font-medium text-default",
+    legend: "mb-1 block font-medium text-pc",
     item: "flex items-start",
     container: "flex items-center",
-    base: "overflow-hidden rounded-full ring ring-accented ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
+    base: "overflow-hidden rounded-full ring ring-p3 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2",
     indicator:
-      "flex size-full items-center justify-center after:rounded-full after:bg-default",
+      "flex size-full items-center justify-center after:rounded-sm after:bg-p0",
     wrapper: "w-full",
-    label: "block font-medium text-default",
-    description: "text-muted",
+    label: "block font-medium text-pc",
+    description: "text-n4",
   },
   variants: {
     color: {
       p0: {
         base: "focus-visible:outline-p3",
         indicator: "bg-p0",
+      },
+      p1: {
+        base: "focus-visible:outline-p3",
+        indicator: "bg-p1",
       },
       neutral: {
         base: "focus-visible:outline-inverted",
@@ -33,7 +37,7 @@ export const radioGroupTheme = defineUiTheme({
         item: "rounded-lg border border-muted",
       },
       table: {
-        item: "border border-muted",
+        item: "border border-p3/80",
       },
     },
     orientation: {
@@ -65,7 +69,7 @@ export const radioGroupTheme = defineUiTheme({
         base: "size-3",
         item: "text-xs",
         container: "h-4",
-        indicator: "after:size-1",
+        indicator: "rounded-sm after:size-1",
       },
       sm: {
         fieldset: "gap-y-0.5",

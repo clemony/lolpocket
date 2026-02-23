@@ -12,7 +12,9 @@ const wrapperClass =
   <aside
     class="scrollbar-none sticky top-0 flex w-120 shrink-0 flex-col gap-10 overflow-y-auto px-1 py-22">
     <menu class="space-y-2">
-      <h3 class="dst mb-4">Abilities</h3>
+      <h3 class="dst mb-4">
+        Abilities
+      </h3>
       <UButton
         v-for="ability in champion.abilities"
         :key="ability.name"

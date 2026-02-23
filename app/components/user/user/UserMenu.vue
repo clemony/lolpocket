@@ -86,7 +86,9 @@ const tag = ref(false)
 
         <Separator size="xs" class="my-1" />
         <div class="flex flex-col gap-1 px-1">
-          <UButton class="pl-7.5!"> View Profile </UButton>
+          <UButton class="pl-7.5!">
+            View Profile
+          </UButton>
           <UButton>
             <Icons class="size-4" name="heart" />
             Follow

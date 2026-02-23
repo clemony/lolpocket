@@ -57,7 +57,7 @@ const stats = computed<Record<string, BarStat>>(() => {
 </script>
 
 <template>
-  <Tooltip v-for="stat in stats" :key="stat.color" :text="stat.tip" arrow>
+  <Tooltip v-for="stat in stats" :key="stat.color" :label="stat.tip" arrow>
     <div
       :class="
         cn(
@@ -73,9 +73,10 @@ const stats = computed<Record<string, BarStat>>(() => {
           :class="cn('inline size-3.5 opacity-70', stat.icon?.class)" />
         <span>
           {{
-            stat?.value && roundDecimal(stat?.value / 1000) > 1 ?
-              `${roundDecimal(stat?.value / 1000)}k`
-              : stat?.value && stat?.value < 1000 ? stat?.value
+            stat?.value && roundDecimal(stat?.value / 1000) > 1
+              ? `${roundDecimal(stat?.value / 1000)}k`
+              : stat?.value && stat?.value < 1000
+                ? stat?.value
                 : 0
           }}
         </span>

@@ -37,7 +37,7 @@ const tippy = computed(() => {
 </script>
 
 <template>
-  <Tooltip :text="tippy ?? null">
+  <Tooltip :label="tippy ?? null">
     <UButton
       :variant
       :size

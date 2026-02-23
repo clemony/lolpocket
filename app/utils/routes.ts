@@ -44,36 +44,32 @@ export const libraryNav = [
   {
     label: "Champions",
     to: "/champions",
-    avatar: {
-      icon: "i-lol-champ",
-    },
+    icon: "i-lol-champ",
   },
   {
     label: "Items",
     to: "/items",
-    avatar: {
-      icon: "i-ability-melee",
-    },
+    icon: "i-ability-melee",
   },
   {
     label: "Runes",
     to: "/runes",
-    avatar: {
-      icon: "i-lol-runes",
-    },
+    icon: "i-lol-runes",
+
     ui: {
       icon: "scale-120",
+      leadingIcon: "scale-120",
     },
   },
   {
     label: "Spells",
     to: "/spells",
 
-    avatar: {
-      icon: "i-basil-book-solid",
-    },
+    icon: "i-basil-book-solid",
+
     ui: {
       icon: "scale-110",
+      leadingIcon: "scale-110",
     },
   },
 ]

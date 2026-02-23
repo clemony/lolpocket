@@ -4,14 +4,11 @@ import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
 
 definePageMeta({
   title: "Items",
-  layout: false,
   description: "A full list of items and stat details.",
   icon: "i-ability-melee",
   navClass: "size-5",
   path: "/items",
 })
-
-const quote = computed(() => getRandom(itemQuotes))
 
 const ranks = computed<ArrayOrNested<TabsItem>>(() => [
   {
@@ -33,49 +30,20 @@ const ranks = computed<ArrayOrNested<TabsItem>>(() => [
   })),
 ])
 
+const quote = computed(() => getRandom(itemQuotes))
 const tabModel = shallowRef<Component>(LibraryItemGrid)
 
-const tabs = shallowRef<number>(0)
-const tabData = [
-  {
-    value: 0,
-    icon: "i-lucide-layout-grid",
-    component: LibraryItemGrid,
-  },
-  {
-    value: 1,
-    icon: "i-lucide-table-2",
-    component: LibraryItemTable,
-  },
-]
-
-const collapsed = useState<boolean>("collapsed-state")
-
-watch(
-  () => collapsed.value,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  }
-)
+const collapsed = useState<boolean>("collapsed-state", () => false)
+const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
 </script>
 
 <template>
-  <NuxtLayout name="library-dashboard">
-    <template #sidebar-left-header>
-      <UTabs
-        v-model:model-value="tabs"
-        :orientation="collapsed ? 'vertical' : 'horizontal'"
-        :items="Object.values(tabData)"
-        :size="collapsed ? 'md' : 'md'"
-        color="neutral"
-        :ui="{
-          leadingIcon: '**:stroke-[1.8]',
-        }"
-        :variant="collapsed ? 'solid-sq' : 'solid'"
-        :default-value="tabs" />
+  <NuxtLayout name="collapse-aside">
+    <template #aside>
+      <ItemFilterSidebar :nav @update-tab="(e) => (tabModel = e)" />
     </template>
-    <template #sidebar-left-body>
-      <ItemFilterSidebar :collapsed />
+    <template #toolbar>
+      <ItemFilterToolbar :nav @update-tab="(e) => (tabModel = e)" />
     </template>
     <template #quote>
       {{ quote }}
@@ -86,22 +54,22 @@ watch(
       <UTabs
         v-model:model-value="is().filters.rank"
         :items="ranks"
-        size="sm"
+        size="md"
         variant="ghost"
         color="neutral"
         :ui="{
-          root: 'w-max',
-          indicator: 'duration-150',
-          trigger: 'w-max px-5',
+          root: 'w-max ',
+          indicator: 'duration-150 ',
+          trigger: 'w-max px-6',
         }" />
     </div>
-    <div v-auto-animate :class="cn('h-max w-full')">
+    <div v-auto-animate :class="cn('size-full grow')">
       <component :is="tabModel" v-if="is().filtered.length" />
-      <div v-else class="grid w-full place-items-center">
+      <div v-else v-auto-animate class="grid w-full place-items-center">
         <UEmpty
           size="sm"
           icon="i-lucide-package-x"
-          class="translate-y-1/2"
+          class="mb-40 translate-y-1/2"
           title="Sold out"
           description="Looks like we've found no items for these filters."
           :actions="[

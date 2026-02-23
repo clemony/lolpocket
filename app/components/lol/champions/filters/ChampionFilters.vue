@@ -28,7 +28,9 @@ const query = ref<string | null>(null)
           <input v-model="filters.query" class="size-full" type="text" />
         </ExpandSearch>
 
-        <h1 class="mr-1 text-5xl! tracking-tight">Champions</h1>
+        <h1 class="mr-1 text-5xl! tracking-tight">
+          Champions
+        </h1>
 
         <ChampionQuote
           class="dst flex items-center px-2 pt-1 font-serif text-md tracking-wide text-nowrap"

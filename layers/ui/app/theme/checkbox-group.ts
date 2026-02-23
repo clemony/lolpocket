@@ -3,9 +3,9 @@ import { defineUiTheme } from "./defineUiTheme"
 export const checkboxGroupTheme = defineUiTheme({
   slots: {
     root: "relative",
-    fieldset: "flex gap-x-2",
-    legend: "mb-1 block font-medium text-default",
-    item: "",
+    fieldset: "slot-fieldset flex gap-x-2",
+    legend: "mb-1 block font-semibold text-n5",
+    item: "slot-item cursor-pointer",
   },
   variants: {
     orientation: {
@@ -27,6 +27,9 @@ export const checkboxGroupTheme = defineUiTheme({
     },
     variant: {
       list: {},
+      select: {
+        item: "rounded-md",
+      },
       card: {},
       table: {
         item: "border border-muted",
@@ -64,6 +67,39 @@ export const checkboxGroupTheme = defineUiTheme({
     },
   },
   compoundVariants: [
+    /* SELECT */
+    {
+      size: "md",
+      variant: "select",
+      class: {
+        item: "rounded-lg px-3 py-1.5",
+        legend: "px-1",
+      },
+    },
+    {
+      size: "lg",
+      variant: "select",
+      class: {
+        item: "p-1",
+        legend: "px-1",
+        base: "rounded-sm",
+      },
+    },
+    {
+      color: "primary",
+      variant: "select",
+      class: {
+        item: "hover:noise has-data-[state=checked]:hover:noise hover:bg-p3 has-data-[state=checked]:z-[1] has-data-[state=checked]:bg-p2",
+      },
+    },
+    {
+      color: "neutral",
+      variant: "select",
+      class: {
+        item: "hover:noise has-data-[state=checked]:noise hover:bg-p2/80 has-data-[state=checked]:z-[1] has-data-[state=checked]:bg-neutral has-data-[state=checked]:shadow-sm has-data-[state=checked]:drop-shadow-xs has-data-[state=checked]:**:text-nc has-data-[state=checked]:hover:bg-n2",
+      },
+    },
+    /* TABLE */
     {
       size: "xs",
       variant: "table",
@@ -130,7 +166,7 @@ export const checkboxGroupTheme = defineUiTheme({
       },
     },
     {
-      variant: "table",
+      variant: ["table", "select"],
       disabled: true,
       class: {
         item: "cursor-not-allowed",

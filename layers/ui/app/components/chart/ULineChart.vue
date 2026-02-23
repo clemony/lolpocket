@@ -50,5 +50,5 @@ const options = {
 </script>
 
 <template>
-  <LineChart class="z-1" :data="data" :options="options" />
+  <!-- <LineChart class="z-1" :data="data" :options="options" /> -->d
 </template>

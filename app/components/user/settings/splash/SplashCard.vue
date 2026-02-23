@@ -84,9 +84,9 @@ function handlePointerLeave() {
     <UCard
       :class="
         cn(
-          'border-outset grid h-full origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden rounded-md border border-p3 transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
+          'grid h-full origin-center transform-[rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden rounded-md border border-outset border-p3 transition-transform delay-(--delay) duration-(--duration) ease-(--easing) will-change-transform group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
 
-          'group/photo grid aspect-7/8 h-auto w-full min-w-32 shrink-0 cursor-pointer grid-rows-[1fr_0.2fr] border-p3 bg-p0! p-2 inset-shadow-xxs'
+          'group/photo inset-shadow-xxs grid aspect-7/8 h-auto w-full min-w-32 shrink-0 cursor-pointer grid-rows-[1fr_0.2fr] border-p3 bg-p0! p-2'
         )
       ">
       <div

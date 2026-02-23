@@ -12,7 +12,7 @@ export const tabsTheme = defineUiTheme({
     trigger:
       "group text-2 relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center font-medium disabled:cursor-not-allowed disabled:opacity-30",
 
-    root: "flex items-center gap-0",
+    root: "flex items-center gap-0 ring-0",
     leadingIcon: "shrink-0",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
@@ -137,7 +137,7 @@ export const tabsTheme = defineUiTheme({
           "inset-shadow-b1/8 noise bg-neutral/90 inset-shadow-xs ring-n5/60",
         list: "noise-none bg-transparent",
         trigger:
-          "text-pc hover:text-n4 hover:underline active:text-nc active:**:text-nc active:hover:**:text-nc",
+          "text-pc hover:text-n4 not-active:hover:underline active:text-nc active:**:text-nc active:hover:**:text-nc",
       },
     },
     /* outline */
@@ -147,7 +147,7 @@ export const tabsTheme = defineUiTheme({
       class: {
         indicator:
           "noise bg-neutral/90 ring inset-shadow-xs ring-p4/80 inset-shadow-p1/10",
-        list: "rounded-lg ring inset-shadow-xs ring-p4/70",
+        list: "rounded-lg border border-p3",
         trigger:
           "text-pc hover:text-pc! active:text-nc active:**:text-nc active:hover:**:text-nc!",
       },

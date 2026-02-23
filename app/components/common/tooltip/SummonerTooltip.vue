@@ -19,7 +19,7 @@ const {
     :key="summoner?.puuid"
     :ui="{ trailingIcon: 'inline align-bottom leading-none' }"
     :disabled="!summoner"
-    :text="`${summoner?.name} #${summoner?.tag}`"
+    :label="`${summoner?.name} #${summoner?.tag}`"
     :img="getSummonerIcon(summoner?.icon)"
     trailing-icon="i-chain"
     :side

@@ -45,7 +45,7 @@ const { summoner } = storeToRefs(sSession())
       color="neutral"
       :size />
 
-    <Tooltip text="Report">
+    <Tooltip label="Report">
       <UButton
         v-if="warning"
         :size
@@ -57,7 +57,7 @@ const { summoner } = storeToRefs(sSession())
       </UButton>
     </Tooltip>
 
-    <Tooltip text="Block">
+    <Tooltip label="Block" trailing-icon="i-ban">
       <BlockButton
         v-if="summoner"
         :class="btnClass"
@@ -66,7 +66,7 @@ const { summoner } = storeToRefs(sSession())
         :summoner="summoner" />
     </Tooltip>
 
-    <Tooltip text="Message">
+    <Tooltip trailing-icon="i-chat-dots" label="Message">
       <MessageButton
         v-if="summoner"
         :class="btnClass"

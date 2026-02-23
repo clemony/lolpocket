@@ -6,12 +6,11 @@ const { params } = defineProps<{
 const progress = computed(() => {
   if (params.data.pointsUntilLevel <= 0) {
     return 100
-  }
-  else {
+  } else {
     return Math.round(
-      (params.data.pointsSinceLevel
-        / (params.data.pointsSinceLevel + params.data.pointsUntilLevel))
-      * 100
+      (params.data.pointsSinceLevel /
+        (params.data.pointsSinceLevel + params.data.pointsUntilLevel)) *
+        100
     )
   }
 })
@@ -19,7 +18,7 @@ const progress = computed(() => {
 
 <template>
   <div
-    :text="`Total:  ${params.data.totalPoints.toLocaleString()}
+    :label="`Total:  ${params.data.totalPoints.toLocaleString()}
     Since last level:  ${params.data.pointsSinceLevel.toLocaleString()}
     Next level in:  ${params.data.pointsUntilLevel.toLocaleString()}`"
     class="relative grid size-full place-items-center bg-transparent py-1">

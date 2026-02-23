@@ -67,7 +67,7 @@
   --border: 1px;
 
   /* effects */
-  --depth: 0.5;
+  --depth: 0.4;
   --noise: 0.2;
 }
 
@@ -92,6 +92,9 @@
   --tabcontent-radius-ee: var(--radius-xl);
 }
 
+@utility kbd {
+  border-color: var(--ui-p4);
+}
 @layer utilities {
   .btn {
     --size: 0;

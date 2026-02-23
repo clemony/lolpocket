@@ -46,7 +46,9 @@ const championTitle = computed(() =>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
-        <h2 class="dst leading-10 tracking-tight">Pocket Stats</h2>
+        <h2 class="dst leading-10 tracking-tight">
+          Pocket Stats
+        </h2>
         <div class="text-lg font-medium italic" />
       </div>
       <div class="grid grid-cols-3 gap-8"></div>

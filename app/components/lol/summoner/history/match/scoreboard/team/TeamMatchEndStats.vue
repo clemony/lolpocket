@@ -9,7 +9,7 @@ const { class: className, team } = defineProps<{
   <div
     :class="
       cn(
-        'to-tint-p2/40 relative z-1 mx-auto flex h-9 w-[99%] items-center justify-between gap-2 overflow-hidden rounded-xl border border-pc/10 bg-linear-to-r pr-2 pl-5 inset-shadow-xxs',
+        'to-tint-p2/40 inset-shadow-xxs relative z-1 mx-auto flex h-9 w-[99%] items-center justify-between gap-2 overflow-hidden rounded-xl border border-pc/10 bg-linear-to-r pr-2 pl-5',
         className
       )
     ">

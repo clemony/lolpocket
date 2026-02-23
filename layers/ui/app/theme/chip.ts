@@ -2,7 +2,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const chipTheme = defineUiTheme({
   slots: {
-    base: "ring-none status flex shrink-0 items-center justify-center rounded-full font-medium whitespace-nowrap text-n0 ds-2xs",
+    base: "ring-none status flex shrink-0 items-center justify-center rounded-full font-semibold whitespace-nowrap text-n0 ds-2xs",
     root: "relative inline-flex shrink-0 items-center justify-center",
   },
   variants: {
@@ -10,7 +10,7 @@ export const chipTheme = defineUiTheme({
       error: "bg-error",
       info: "bg-info",
       insp: "ring-insp-content bg-insp",
-      neutral: "bg-n0",
+      neutral: "bg-neutral text-nc ring-n3 drop-shadow-xs",
       p0: "bg-p0",
       p1: "bg-p1",
       p2: "bg-p2",
@@ -28,9 +28,9 @@ export const chipTheme = defineUiTheme({
       "top-right": "top-0 right-0",
     },
     size: {
-      "2xl": "h-[11px] min-w-[11px] text-[11px]",
+      "2xl": "h-[11px] min-w-[11px] text-[9px]! font-bold",
       "2xs": "h-[5px] min-w-[5px] text-[5px]",
-      "3xl": "h-[12px] min-w-[12px] text-[12px]",
+      "3xl": "h-[12px] min-w-[12px] text-[10px]",
       "3xs": "h-[4px] min-w-[4px] text-[4px]",
       dot: "size-[5px]",
       lg: "h-[9px] min-w-[9px] text-[9px]",
@@ -45,7 +45,8 @@ export const chipTheme = defineUiTheme({
   },
   compoundVariants: [
     {
-      class: "translate-x-1/2 -translate-y-1/2 transform",
+      class:
+        "translate-x-[calc(50%-2px)] -translate-y-[calc(50%-3px)] transform",
       inset: false,
       position: "top-right",
     },

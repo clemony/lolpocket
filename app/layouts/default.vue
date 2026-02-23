@@ -4,9 +4,7 @@
   <div class="contents">
     <Navbar />
     <UMain>
-      <UContainer class="relative">
-        <slot />
-      </UContainer>
+      <slot />
     </UMain>
     <SiteFooter />
   </div>

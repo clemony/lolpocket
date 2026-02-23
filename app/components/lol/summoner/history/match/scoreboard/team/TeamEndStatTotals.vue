@@ -9,7 +9,7 @@ const { class: className, team } = defineProps<{
   <div
     :class="
       cn(
-        'mb-1.25 w-full overflow-hidden rounded-xl border border-y-neutral/16! border-r-p3! border-l-neutral/16! bg-linear-to-r to-transparent px-3 shadow-warm-soft inset-shadow-xxs',
+        'inset-shadow-xxs mb-1.25 w-full overflow-hidden rounded-xl border border-y-neutral/16! border-r-p3! border-l-neutral/16! bg-linear-to-r to-transparent px-3 shadow-warm-soft',
         {
           'from-insp/60': team.teamId === 100,
           'from-dom/60': team.teamId === 200,

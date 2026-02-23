@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <Tooltip
     v-if="props.params.value"
-    :text="props.params.value.name"
+    :label="props.params.value.name"
     class="ti-container">
     <div class="ti-wrapper">
       <img

@@ -51,7 +51,7 @@ function reset() {
           title="Select a custom profile splash."
           desc="Personalize your profile with your favorite champion!" />
         <article
-          class="grid size-full auto-rows-auto grid-cols-[1fr_6fr] overflow-hidden rounded-lg inset-shadow-shade-sm inset-shadow-black/40">
+          class="inset-shadow-shade-sm grid size-full auto-rows-auto grid-cols-[1fr_6fr] overflow-hidden rounded-lg inset-shadow-black/40">
           <header
             class="bg-b4/40 col-span-full row-start-1 flex h-14.5 items-center gap-2 border-b border-b-p3/60 px-3 pt-1">
             <button
@@ -121,7 +121,7 @@ function reset() {
               <LazySplashCard
                 v-for="skin in skinIndex[selectedChampion]"
                 :key="skin.name"
-                :text="skin.name"
+                :label="skin.name"
                 :alt="skin.name"
                 :skin-url="getSplash(selectedChampion, 'tile', skin)"
                 @click="

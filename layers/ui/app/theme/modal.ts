@@ -3,22 +3,16 @@ import { defineUiTheme } from "./defineUiTheme"
 export const modalTheme = defineUiTheme({
   slots: {
     title: "text-bc font-semibold",
-    body: "flex-1 p-4 sm:p-6",
+    body: "bg-b1 flex-1 p-4 sm:p-6",
     close: "absolute end-4 top-4",
-    content: "flex flex-col divide-y backdrop-blur-md focus:outline-none",
-    description: "mt-1 text-sm",
+    content: "divide-b3 flex flex-col divide-y focus:outline-none",
+    description: "mt-1 text-sm text-n4",
     footer: "flex items-center gap-1.5 p-4 sm:px-6",
     header: "flex min-h-16 items-center gap-1.5 p-4 sm:px-6",
     overlay: "fixed inset-0",
     wrapper: "",
   },
   variants: {
-    color: {
-      p0: {
-        content: "bg-b1/90 divide-b3",
-        description: "text-n4",
-      },
-    },
     fullscreen: {
       false: {
         content:
@@ -30,7 +24,7 @@ export const modalTheme = defineUiTheme({
     },
     overlay: {
       true: {
-        overlay: "bg-black/70",
+        overlay: "bg-n2/76",
       },
     },
     scrollable: {

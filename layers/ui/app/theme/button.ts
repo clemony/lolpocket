@@ -21,6 +21,12 @@ export const buttonTheme = defineUiTheme({
     },
     size: {
       custom: {},
+      "4xs": {
+        base: "h-4! min-w-4! gap-1 px-1.5",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-3.25 **:stroke-[2.7]",
+        trailingIcon: "size-3.5",
+      },
       "3xs": {
         base: "h-5! min-w-5! gap-1 px-1.5",
         leadingAvatarSize: "3xs",
@@ -33,23 +39,32 @@ export const buttonTheme = defineUiTheme({
         leadingIcon: "size-3.5",
         trailingIcon: "size-3.5",
       },
-      lg: {
-        base: "h-12! gap-2 px-3",
-        leadingAvatarSize: "2xs",
-        leadingIcon: "size-5",
-        trailingIcon: "size-5",
-      },
-      md: {
-        base: "h-10! gap-1.5 px-2.5 text-sm",
-        leadingAvatarSize: "2xs",
-        leadingIcon: "size-4.5",
-        trailingIcon: "size-4 opacity-60 group-hover/btn:opacity-100",
+
+      xs: {
+        base: "h-7! min-w-7! gap-1 px-2 text-sm",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-4",
+        trailingIcon: "size-4",
       },
       sm: {
         base: "h-8! gap-1.5 px-2.5 text-sm",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4",
+      },
+
+      md: {
+        base: "h-10! gap-1.5 px-2.5 text-sm",
+        leadingAvatarSize: "2xs",
+        leadingIcon: "size-4.5",
+        trailingIcon: "size-4 opacity-60 group-hover/btn:opacity-100",
+      },
+
+      lg: {
+        base: "h-12! gap-2 px-3",
+        leadingAvatarSize: "2xs",
+        leadingIcon: "size-5",
+        trailingIcon: "size-5",
       },
       xl: {
         base: "h-14! gap-2 px-3",
@@ -62,12 +77,6 @@ export const buttonTheme = defineUiTheme({
         leadingAvatarSize: "xs",
         leadingIcon: "size-6",
         trailingIcon: "size-6",
-      },
-      xs: {
-        base: "h-7! min-w-7! gap-1 px-2 text-sm",
-        leadingAvatarSize: "3xs",
-        leadingIcon: "size-4",
-        trailingIcon: "size-4",
       },
     },
     square: {
@@ -154,7 +163,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class: {
-        base: "btn bg-neutral font-semibold btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral on:text-nc on:btn-neutral",
+        base: "btn bg-neutral font-semibold ring-0 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral on:text-nc on:btn-neutral",
         leadingIcon:
           "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:**:text-nc group-active/btn:**:text-nc",
         trailingIcon:
@@ -212,7 +221,7 @@ export const buttonTheme = defineUiTheme({
     {
       variant: "link",
       class:
-        "[&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc",
+        "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc",
     },
     {
       color: "neutral",
@@ -221,6 +230,13 @@ export const buttonTheme = defineUiTheme({
         "[&>[data-slot=label]]:text-nc [&>[data-slot=label]]:decoration-nc",
     },
     /* SHAPE */
+    {
+      size: "4xs",
+      square: true,
+      class: {
+        base: "size-4",
+      },
+    },
     {
       size: "3xs",
       square: true,
@@ -286,7 +302,7 @@ export const buttonTheme = defineUiTheme({
     },
     {
       class: {
-        base: "rounded-sm",
+        base: "rounded-md",
       },
       rounded: false,
       size: ["3xs", "2xs"],

@@ -17,7 +17,7 @@ const {
 </script>
 
 <template>
-  <Tooltip :side text="Nexus" :side-offset="16">
+  <Tooltip :side label="Nexus" :side-offset="16">
     <UButton
       to="/nexus"
       :ui="{

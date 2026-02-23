@@ -27,7 +27,7 @@ const inboxes: Record<string, InboxType> = {
           v-model:open="session().sidebarStates.inboxDropdown"
           class="z-0">
           <DropdownMenuTrigger
-            class="flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:**:text-pc disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:border-p3 data-[state=open]:bg-p3/50! data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs"
+            class="data-[state=open]:inset-shadow-xxs flex h-[35.5px] w-fit items-center justify-between px-2 disabled:opacity-100 disabled:**:text-pc disabled:hover:border-transparent disabled:hover:bg-transparent disabled:hover:shadow-none disabled:hover:drop-shadow-none data-[state=open]:border-p3 data-[state=open]:bg-p3/50! data-[state=open]:shadow-xs"
             :disabled="!dropdown"
             as-child>
             <SidebarMenuButton class="flex gap-2">

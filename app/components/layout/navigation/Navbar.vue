@@ -94,7 +94,8 @@ const route = useRoute()
 const logInOpen = shallowRef<boolean>(false)
 </script>
 
-<template>
+<template> 
+
   <UHeader title="lolpocket" :toggle="false" :ui="{ root: '' }">
     <template #left>
       <LpLogo />

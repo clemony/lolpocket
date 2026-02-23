@@ -21,15 +21,11 @@ const shardStat = (ix: number, id: number) => (shards as any)?.[ix]?.[id]
           :icon-class="{
             'opacity-50': !shardStat(ix as number, shard.id)?.games,
           }"
-          :data-placement="
-            i === 0 ? 'left'
-            : i === 2 ? 'right'
-              : 'top'
-          "
+          :data-placement="i === 0 ? 'left' : i === 2 ? 'right' : 'top'"
           :data-size="shardStat(ix as number, shard.id)?.games ? 'md' : 'sm'"
-          :data-text="
-            shardStat(ix as number, shard.id)?.games ?
-              `${shardStat(ix as number, shard.id)?.games} game${shardStat(ix as number, shard.id)?.games > 1 ? 's' : ''} - ${shardStat(ix as number, shard.id)?.winrate}% WR`
+          :data-label="
+            shardStat(ix as number, shard.id)?.games
+              ? `${shardStat(ix as number, shard.id)?.games} game${shardStat(ix as number, shard.id)?.games > 1 ? 's' : ''} - ${shardStat(ix as number, shard.id)?.winrate}% WR`
               : ''
           "
           :class="

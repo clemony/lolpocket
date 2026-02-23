@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { UDrawer, UModal } from "#components"
-import type { CommandPaletteItem } from "@nuxt/ui"
+import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
 
-const items: CommandPaletteItem[] = Array.from({ length: 1000 })
-  .fill(0)
-  .map((_, value) => ({
-    label: `item-${value}`,
-    value,
-  }))
+const items: CommandPaletteItem[] = itemIndex.map((i) => ({
+  label: i.name,
+  value: i.id,
+  avatar: { src: `/img/items/${i.id}.webp` },
+  suffix: "Item",
+}))
 
 const groups = [
   {
@@ -31,34 +31,43 @@ const focus = ref<HTMLElement>()
   pages: true,
 })
  */
+
+const badgeColor: Record<string, BadgeProps["color"]> = {
+  item: "dom",
+  champion: "pre",
+  rune: "sorc",
+  spell: "insp",
+  summoner: "p0",
+}
 </script>
 
 <template>
   <component
     :is="breakpoints.desktop ? UModal : UDrawer"
     aria-describedby="app-command-search"
+    :ui="{
+      content: ' max-w-180',
+    }"
     :handle="false">
-    <Tooltip :text="`Search ${getDeviceKey()}K`">
+    <Tooltip>
       <UButton
         icon="search"
         label="search..."
-        size="sm"
+        size="md"
         :ui="{
-          base: 'shrink-0 cursor-text  w-180! inset-shadow-xs  border border-p3 rounded-xl!',
+          base: 'shrink-0 cursor-text  w-180! inset-shadow-xs noise bg-p0/50 border border-p3 rounded-xl!',
           label: 'grow text-center  text-n4   ',
           leadingIcon:
             'size-4.5 justify-self-start text-n5 **:stroke-[2.3] opacity-80 group-hover/btn:opacity-100',
         }"
         variant="ring">
         <template #trailing>
-          <div class="flex items-center gap-0 self-center">
+          <div class="flex items-center">
             <UKbd
               v-for="k in ['meta', 'K']"
               :key="k"
-              square
-              class="text-sm text-n4"
-              size="sm"
               variant="ghost"
+              square
               :value="k" />
           </div>
         </template>
@@ -68,9 +77,8 @@ const focus = ref<HTMLElement>()
         <UKbd
           v-for="k in ['meta', 'K']"
           :key="k"
-          square
-          size="sm"
           color="neutral"
+          square
           :value="k" />
       </template>
     </Tooltip>
@@ -79,8 +87,19 @@ const focus = ref<HTMLElement>()
         virtualize
         :fuse="{ resultLimit: 1000 }"
         :groups="groups"
-        :ui="{ root: 'max-h-200' }"
+        :ui="{
+          root: 'max-h-200 max-w-180 *:first:[&_svg]:size-4.5!',
+          itemLabelSuffix: 'hidden',
+          itemLeadingAvatarSize: 'sm',
+          itemWrapper: 'justify-center',
+        }"
         class="h-80 flex-1">
+        <template #item-trailing="{ item }">
+          <UBadge
+            size="sm"
+            :color="badgeColor[String(item.suffix)]"
+            :label="item.suffix"></UBadge>
+        </template>
         <template #footer>
           <div class="flex h-7 items-center justify-between gap-2">
             <LpLogo class="ml-1 size-5 rounded-sm *:text-[9px]" />

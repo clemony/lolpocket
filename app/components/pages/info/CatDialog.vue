@@ -58,7 +58,7 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
               </CarouselItem>
             </CarouselContent>
             <Tooltip
-              :text="isFullscreen ? 'Exit fullscreen' : 'Fullscreen'"
+              :label="isFullscreen ? 'Exit fullscreen' : 'Fullscreen'"
               side="bottom">
               <UButton
                 class="absolute top-4 right-4 grid btn-square place-items-center"

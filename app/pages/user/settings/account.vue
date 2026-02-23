@@ -43,14 +43,14 @@ onMounted(() => {
       <UInput v-model:model-value="email" @blur="validateField(emailSchema)">
         <template #trailing>
           <InputClear @clear-input="is().filters.query = ''" />
-          <Tooltip v-if="!user().user?.email_confirmed_at" text="Verified!">
+          <Tooltip v-if="!user().user?.email_confirmed_at" label="Verified!">
             <UBadge icon="i-tick" size="xs" color="neutral">
               pending...
             </UBadge>
           </Tooltip>
           <Tooltip
             v-else
-            :text="`Check your inbox! Verification email sent at ${user().user?.email_change_sent_at}.`">
+            :label="`Check your inbox! Verification email sent at ${user().user?.email_change_sent_at}.`">
             <UBadge icon="i-refresh" size="xs" variant="outline">
               pending...
             </UBadge>

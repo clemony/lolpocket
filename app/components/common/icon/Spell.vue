@@ -36,7 +36,7 @@ function showToast() {
 
 <template>
   <Tooltip
-    :text="id ? spells[id]?.name : ''"
+    :label="id ? spells[id]?.name : ''"
     trailing-icon="i"
     :img="id ? `/img/spells/${id}.webp` : undefined"
     :side>

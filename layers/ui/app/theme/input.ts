@@ -1,5 +1,5 @@
 import { defineUiTheme } from "./defineUiTheme"
-
+// i-plug
 export const inputTheme = defineUiTheme({
   slots: {
     leading: "absolute inset-y-0 start-0 flex items-center",
@@ -10,7 +10,7 @@ export const inputTheme = defineUiTheme({
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "peer w-full appearance-none rounded-md border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "peer w-full appearance-none rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
       "input transition-colors",
     ],
   },
@@ -27,6 +27,7 @@ export const inputTheme = defineUiTheme({
     variant: {
       ghost:
         "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
+      solid: "",
       none: "bg-transparent text-pc",
       outline: "bg-default text-pc ring ring-p3 ring-inset",
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
@@ -58,7 +59,7 @@ export const inputTheme = defineUiTheme({
         base: "input-lg h-12 gap-2 px-3 py-2 text-sm",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
-        leadingIcon: "size-4",
+        leadingIcon: "size-4.5",
         trailing: "pe-3",
         trailingIcon: "size-5",
       },
@@ -66,7 +67,7 @@ export const inputTheme = defineUiTheme({
         base: "input-md h-10 gap-1.5 px-2.5 py-0 text-sm",
         leading: "ps-2.5",
         leadingAvatarSize: "2xs",
-        leadingIcon: "size-4",
+        leadingIcon: "size-4.5",
         trailing: "pe-2.5",
         trailingIcon: "size-5",
       },
@@ -74,7 +75,7 @@ export const inputTheme = defineUiTheme({
         base: "input-sm h-8 gap-1.5 px-2.5 py-1.5 text-xs",
         leading: "ps-2.5",
         leadingAvatarSize: "3xs",
-        leadingIcon: "size-4",
+        leadingIcon: "size-4.5",
         trailing: "pe-2.5",
         trailingIcon: "size-4",
       },
@@ -82,7 +83,7 @@ export const inputTheme = defineUiTheme({
         base: "input-xl h-14 gap-2 px-3 py-0 text-base",
         leading: "ps-3",
         leadingAvatarSize: "xs",
-        leadingIcon: "size-4",
+        leadingIcon: "size-4.5",
         trailing: "pe-3",
         trailingIcon: "size-6",
       },
@@ -125,6 +126,12 @@ export const inputTheme = defineUiTheme({
       color: "neutral",
       class: "ring ring-nc ring-inset",
       highlight: true,
+    },
+    {
+      color: "neutral",
+      variant: "solid",
+      class:
+        "bg-neutral/95 text-nc placeholder:text-nc/70 *:first:[&_svg]:text-nc",
     },
     {
       class: "ps-7",

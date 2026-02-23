@@ -78,7 +78,7 @@ const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
           data-type="rune"
           :data-interactive="true"
           data-size="lg"
-          :data-text="
+          :data-label="
             runes?.[rune.id]
               ? `${runes[rune.id]?.games} game${runes[rune.id]?.games > 1 ? 's' : ''} - ${runes[rune.id]?.winrate}% WR`
               : ''

@@ -4,7 +4,7 @@ export const tooltipTheme = defineUiTheme({
   slots: {
     arrow: "",
     content: [
-      "ease-none pointer-events-auto inline-flex h-6 origin-(--reka-tooltip-content-transform-origin) animate-none! cursor-default items-center gap-1 rounded-lg px-2.5 py-1 align-baseline text-xs shadow-md ring ring-default drop-shadow-sm transition-none! duration-0! select-none",
+      "ease-none pointer-events-auto inline-flex h-6 origin-(--reka-tooltip-content-transform-origin) animate-none! cursor-default items-center gap-1 rounded-lg px-2.5 py-1 align-baseline text-sm shadow-md ring ring-default drop-shadow-sm transition-none! duration-0! select-none",
     ],
     kbds: "hidden shrink-0 items-center gap-0.5 not-first-of-type:before:me-0.5 not-first-of-type:before:content-['·'] lg:inline-flex",
     kbdsSize: "sm",

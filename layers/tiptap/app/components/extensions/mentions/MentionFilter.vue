@@ -1,40 +1,40 @@
 <script setup lang="ts">
-import { exitSuggestion, SuggestionPluginKey } from '@tiptap/suggestion';
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
+import { exitSuggestion, SuggestionPluginKey } from "@tiptap/suggestion"
+import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
 
 const { command, editor, items } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   items: Index[]
   editor: any
   command: (payload: {
-    'data-id': number
-    'data-key': string
-    'data-name': string
+    "data-id": number
+    "data-key": string
+    "data-name": string
   }) => any
 }>()
 
 const selectedIndex = ref(0)
-const selectedItem = computed<Index | undefined>(() =>
-  items[selectedIndex.value]
+const selectedItem = computed<Index | undefined>(
+  () => items[selectedIndex.value]
 )
 
 function update() {
   if (!selectedItem.value) return
   command({
-    'data-id': selectedItem.value.id,
-    'data-key': String(selectedItem.value.key ?? ''),
-    'data-name': String(selectedItem.value.name ?? ''),
+    "data-id": selectedItem.value.id,
+    "data-key": String(selectedItem.value.key ?? ""),
+    "data-name": String(selectedItem.value.name ?? ""),
   })
-  exitSuggestion(editor.view, 'suggestion' as any)
+  exitSuggestion(editor.view, "suggestion" as any)
 }
 
 function onKeyDown({ event }: { event: KeyboardEvent }) {
   switch (event.key) {
-    case 'Enter':
+    case "Enter":
       update()
       event.preventDefault()
       return true
-    case 'Escape':
+    case "Escape":
       return false
   }
   return false
@@ -43,17 +43,17 @@ function onKeyDown({ event }: { event: KeyboardEvent }) {
 defineExpose({ onKeyDown })
 
 const { arrowdown, arrowup } = useMagicKeys()
-const activationKey = shallowRef<string>('.index-0')
-const target = useTemplateRef<HTMLDivElement>('target')
-
+const activationKey = shallowRef<string>(".index-0")
+const target = useTemplateRef<HTMLDivElement>("target")
+/*
 const { activate, deactivate, hasFocus } = useFocusTrap(target, {
   clickOutsideDeactivates: true,
   initialFocus: activationKey.value,
   isKeyBackward: e => e.key === 'ArrowUp',
   isKeyForward: e => e.key === 'ArrowDown',
-})
+}) */
 
-watch(() => arrowdown?.value ?? false, (v) => {
+/* watch(() => arrowdown?.value ?? false, (v) => {
   if (v && !hasFocus.value) {
     activationKey.value = '.index-0'
     nextTick(() => {
@@ -75,7 +75,7 @@ watch(() => arrowup?.value ?? false, (v) => {
 onClickOutside(target, (event) => {
   deactivate()
   exitSuggestion(editor.view, SuggestionPluginKey)
-})
+}) */
 </script>
 
 <template>
@@ -84,15 +84,13 @@ onClickOutside(target, (event) => {
     :class="
       cn(
         'tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden p-0!',
-        { 'max-h-50 min-w-44': items.length },
+        { 'max-h-50 min-w-44': items.length }
       )
     ">
     <SlideInTopOutBottom
       ref="target"
       class="tippy-content h-full overflow-y-auto p-1.5!">
-      <div
-        v-if="items.length"
-        class="flex h-max w-full flex-col">
+      <div v-if="items.length" class="flex h-max w-full flex-col">
         <UButton
           v-for="(item, index) in items"
           :id="index"
@@ -100,26 +98,17 @@ onClickOutside(target, (event) => {
           tabindex="0"
           :value="item"
           :class="
-            cn(
-              'pr-8 transition-discrete focus:bg-p2/60',
-              `
-                index-${index}
-              `,
-            )
+            cn('pr-8 transition-discrete focus:bg-p2/60', `index-${index}`)
           "
           @mousedown.prevent="
             selectedIndex = index
             update()
           ">
-          <IndexIcon
-            class="size-6 rounded-full!"
-            :item />
+          <IndexIcon class="size-6 rounded-full!" :item />
           {{ item.name }}
         </UButton>
       </div>
-      <div
-        v-else
-        class="eslf-center grid size-full place-items-center">
+      <div v-else class="eslf-center grid size-full place-items-center">
         <span
           class="inline-flex -translate-x-0.25 items-center gap-0.75 align-middle">
           <icon

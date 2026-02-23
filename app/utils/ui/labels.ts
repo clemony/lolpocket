@@ -1,5 +1,4 @@
-import type { BulletLegendItemInterface } from "vue-chrts"
-export const winLossLabels: Record<string, BulletLegendItemInterface> = {
+export const winLossLabels: Record<string, Record<string, string>> = {
   win: {
     name: "Win",
     color: "var(--color-insp)",

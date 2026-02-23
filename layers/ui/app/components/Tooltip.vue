@@ -1,19 +1,18 @@
 <script setup lang="ts">
 const {
   side = "top",
-  sideOffset = 16,
+  sideOffset = 20,
   arrow = true,
   class: className,
   icon,
   img,
-  text,
   trailingIcon,
+  title,
   ui,
   label,
   disabled,
 } = defineProps<{
   class?: HTMLAttributes["class"]
-  text?: string
   img?: string
   ui?: Record<string, string>
   icon?: string
@@ -23,6 +22,7 @@ const {
   trailingIcon?: string
   disabled?: boolean
   label?: string
+  title?: string
 }>()
 
 const open = ref(false)
@@ -37,6 +37,7 @@ function updateAnchor() {
 }
 
 function onPointerEnter(ev: PointerEvent) {
+  if (disabled) return
   nextX = ev.clientX
   nextY = ev.clientY
   anchor.value = { x: nextX, y: nextY }
@@ -48,6 +49,7 @@ function onPointerLeave() {
 }
 
 function onPointerMove(ev: PointerEvent) {
+  if (disabled) return
   nextX = ev.clientX
   nextY = ev.clientY
   if (!rafId) rafId = requestAnimationFrame(updateAnchor)
@@ -74,7 +76,7 @@ const reference = computed(() => ({
 <template>
   <UTooltip
     :disabled
-    :open="open"
+    :open="disabled ? false : open"
     :delay-duration="0"
     :disable-hoverable-content="true"
     :reference="reference"
@@ -82,6 +84,8 @@ const reference = computed(() => ({
     :content="{
       side,
       sideOffset,
+      align: ['left', 'right'].includes(side) ? 'start' : 'center',
+      alignOffset: ['left', 'right'].includes(side) ? 46 : 0,
       updatePositionStrategy: 'always',
     }">
     <div
@@ -90,7 +94,7 @@ const reference = computed(() => ({
       @pointerleave="onPointerLeave"
       @pointermove="onPointerMove">
       <slot>
-        <span class="hover:underline">{{ label }}</span>
+        <span class="hover:underline">{{ title }}</span>
       </slot>
     </div>
 
@@ -101,10 +105,10 @@ const reference = computed(() => ({
             v-if="img"
             loading-type="spinner"
             :src="img"
-            :alt="`${text}-icon`"
+            :alt="`${label}-icon`"
             class="size-4.5 rounded-full" />
           <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
-          {{ text }}
+          {{ label }}
 
           <Icon
             v-if="trailingIcon"

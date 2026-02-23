@@ -38,6 +38,7 @@
     "/layers/domain/records/items",
     "/layers/domain/records/runes"
   ],
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -59,6 +60,7 @@
     "source.fixAll.eslint": "always",
     "source.organizeImports": "never"
   },
+  "editor.codeActions.triggerOnFocusChange": true,
 
   // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
@@ -100,17 +102,10 @@
     "pcss",
     "postcss"
   ],
-
-  "editor.codeActions.triggerOnFocusChange": true,
   "iconify.inplace": true,
   "iconify.prefixes": ["i-"],
   "iconify.suffixes": [],
   "iconify.position": "before",
-  "docwriter.custom.author": "clem",
-  "docwriter.style": "JSDoc",
-  "docwriter.progress.trackFunctions": true,
-  "docwriter.progress.trackMethods": true,
-  "docwriter.progress.trackClasses": false,
-  "docwriter.progress.trackTypes": false,
-  "iconify.customAliasesJsonPaths": ["./.vscode/icon-alias.json"]
+  "iconify.customCollectionJsonPaths": [".vscode/.iconify/lol.json"],
+  "iconify.customAliasesJsonPaths": [".vscode/.iconify/icon-alias.json"]
 }

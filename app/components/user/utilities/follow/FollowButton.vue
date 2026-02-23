@@ -26,7 +26,7 @@ const isFavorited = computed(() =>
 
 <template>
   <ToggleGroup v-model:model-value="favorites">
-    <Tooltip :text="isFavorited ? 'Unfollow' : 'Follow'">
+    <Tooltip :label="isFavorited ? 'Unfollow' : 'Follow'">
       <ToggleGroupItem v-if="puuid" v-bind="forwarded" :value="puuid">
         <Icon
           :name="isFavorited ? 'heart-sm' : 'heart-sm-outline'"

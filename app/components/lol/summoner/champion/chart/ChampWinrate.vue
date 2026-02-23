@@ -43,7 +43,8 @@ const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
 </script>
 
 <template>
-  <DonutChart
+  h
+  <!--   <DonutChart
     v-if="data"
     :data
     :height="size"
@@ -63,5 +64,5 @@ const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
         {{ wr || 0 }}
       </span>
     </div>
-  </DonutChart>
+  </DonutChart> -->
 </template>

@@ -18,18 +18,19 @@
   }
 
   * {
-    scrollbar-color: color-mix(in lch, var(--color-p4) 80%, transparent 20%)
-      transparent;
     @apply border-p3 decoration-from-font underline-offset-2 antialiased;
   }
   img,
   div {
     @apply select-none;
   }
-
+  div {
+    scrollbar-color: var(--color-p1) transparent;
+  }
   html,
   body,
   #app {
+    scrollbar-color: var(--color-p1) transparent;
     @apply text-md text-pc selection:bg-neutral/80 selection:text-nc;
   }
 
@@ -64,7 +65,7 @@
   }
 
   h6 {
-    @apply flex gap-3 text-sm font-semibold text-pc/50 antialiased select-none;
+    @apply flex gap-3 text-sm font-semibold text-n5 antialiased select-none;
   }
 
   h1,

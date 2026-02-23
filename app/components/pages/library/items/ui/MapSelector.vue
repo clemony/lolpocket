@@ -1,0 +1,82 @@
+<script lang="ts" setup>
+const { collapsed } = defineProps<{
+  collapsed?: boolean
+}>()
+
+const mapOpen = shallowRef<boolean>(false)
+const { filters } = storeToRefs(is())
+
+const maps = computed(() =>
+  mapIndex.filter((m) => [11, 12, 30, 35].includes(m.id))
+)
+</script>
+
+<template>
+  <div>
+    <h6 v-if="!collapsed" class="text-sm">
+      Map
+    </h6>
+    <UPopover
+      v-model:open="mapOpen"
+      :content="{
+        side: collapsed ? 'right' : 'bottom',
+        align: 'start',
+      }"
+      :ui="{ content: 'w-(--reka-popover-trigger-width) min-w-54 p-1.5' }">
+      <Tooltip
+        :disabled="!collapsed || mapOpen"
+        label="Map"
+        side="right"
+        class="w-full">
+        <UButton
+          :block="!collapsed"
+          :square="collapsed === true"
+          :ui="{
+            base: collapsed ? '' : 'w-full grow',
+            label: collapsed ? 'hidden' : '',
+            trailingIcon: collapsed ? 'hidden' : '',
+            leadingIcon: collapsed ? 'size-5' : '',
+          }"
+          :label="mapNameById(filters.map)"
+          :leading-icon="`i-map-${filters.map}`"
+          trailing-icon="i-up-down"
+          :variant="collapsed ? 'ghost' : 'outline'" />
+      </Tooltip>
+      <template #content>
+        <h6 class="px-1.5 py-1 text-xs">
+          Select Map
+        </h6>
+        <URadioGroup
+          v-model:model-value="filters.map"
+          color="p1"
+          :items="
+            maps.map((m) => ({
+              value: m.id,
+              name: m.name,
+            }))
+          "
+          :ui="{
+            item: 'py-1 px-1.5 cursor-pointer **:cursor-pointer hover:bg-p2 rounded-md  group/item relative overflow-hidden',
+            label:
+              'flex-nowrap flex gap-1.5 items-center font-medium justify-between',
+          }"
+          variant="list"
+          indicator="hidden">
+          <template #label="{ item }">
+            <span
+              v-if="item.value === filters.map"
+              class="group-hover/item:noise absolute top-0 left-0 z-0 size-full bg-p1 group-hover/item:bg-p2" />
+            <div class="z-1 flex flex-nowrap items-center gap-1.5">
+              <Icon :name="`i-map-${item.value}`" class="size-5 shrink-0" />
+              {{ item.name }}
+            </div>
+            <Icon
+              v-if="item.value === filters.map"
+              name="tick"
+              class="z-1 mr-1 size-4 -translate-y-0.75" />
+          </template>
+        </URadioGroup>
+      </template>
+    </UPopover>
+  </div>
+</template>

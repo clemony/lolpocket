@@ -35,7 +35,7 @@ function handleSplash(e: string) {
         class="w-36"
         hover
         :skin-url="top()?.splash?.replace('uncentered', 'tile') ?? null"
-        :text="top()?.name ?? ''"
+        :label="top()?.name ?? ''"
         :alt="`${user().account?.name ?? null}'s Most Played`" />
       <div class="flex size-full flex-col gap-4 pt-3">
         <h4 class="dst text-xl font-semibold">
@@ -54,7 +54,7 @@ function handleSplash(e: string) {
       @dialog:close="isOpen = false">
       <SplashCard
         class="w-36"
-        :text="skinNameFromUrl(user().account?.splash ?? '') ?? ''"
+        :label="skinNameFromUrl(user().account?.splash ?? '') ?? ''"
         :skin-url="user().account?.splash ?? null"
         :alt="`${user().account?.name ?? null}'s splash`" />
       <div class="flex size-full flex-col gap-4 pt-3">

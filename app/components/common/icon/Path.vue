@@ -6,7 +6,7 @@ const {
   class: className,
   loadingType,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   id?: number | null
   name?: string
   loadingType?: LoadingStyle
@@ -20,12 +20,12 @@ const path = computed(() => name || (id ? pathNameById(id) : undefined))
 <template>
   <Tooltip
     :side
-    :text="path"
+    :label="path"
     :img="`/img/paths/${path}.webp`"
     :class="
       cn(
         'anchor size-5 h-full overflow-hidden rounded-full transition-all duration-300',
-        className,
+        className
       )
     ">
     <slot />
@@ -34,9 +34,7 @@ const path = computed(() => name || (id ? pathNameById(id) : undefined))
       :loading-type
       :alt="path"
       :src="`/img/paths/${path}.webp`"
-      :class="
-        cn('size-full rounded-full transition-all duration-300')
-      "
+      :class="cn('size-full rounded-full transition-all duration-300')"
       @click.stop
       @load="loaded = true" />
   </Tooltip>

@@ -45,7 +45,7 @@ const inactiveClass =
           class="w-36"
           hover
           :skin-url="top()?.splash?.replace('uncentered', 'tile') ?? null"
-          :text="top()?.name"
+          :label="top()?.name"
           :alt="`${user().account?.name ?? null}'s Most Played`" />
         <div class="flex h-full flex-col gap-4 pt-3">
           <h4 class="dst text-xl font-semibold">

@@ -11,7 +11,7 @@ import { libraryNav } from "~/utils/routes"
           base: 'justify-start text-start text-sm font-semibold ',
         }"
         :avatar="{
-          icon: item.avatar.icon,
+          icon: item.icon,
 
           ui: {
             root: 'bg-p2! ring ring-p3 noise shadow-xs dst **:text-pc text-pc size-5.5',

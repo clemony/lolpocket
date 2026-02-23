@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { OnClickOutside } from '@vueuse/components'
+import { OnClickOutside } from "@vueuse/components"
 
 const { id, class: className } = defineProps<{
   id: number
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const toast = useToast()
@@ -20,7 +20,7 @@ function close() {
     :class="
       cn(
         'relative flex size-full flex-col justify-center overflow-hidden',
-        className,
+        className
       )
     "
     @trigger="close()">
@@ -56,7 +56,7 @@ function close() {
           <Tooltip
             v-if="spell?.cd || spell?.recharge"
             class="badge-tooltip-hover"
-            :text="spell?.cd ? 'Cooldown' : 'Recharge'">
+            :label="spell?.cd ? 'Cooldown' : 'Recharge'">
             <Icon
               class="inline size-3.25 **:stroke-[2.6]"
               name="hugeicons:hourglass" />
@@ -64,17 +64,14 @@ function close() {
           </Tooltip>
           <Tooltip
             v-if="spell?.charges"
-            text="charges"
+            label="charges"
             class="badge-tooltip-hover">
             <Icon
               class="inline size-3.25 **:stroke-[2.2]"
               :name="`charge-${spell.charges}`" />
             {{ spell.charges }}
           </Tooltip>
-          <Tooltip
-            v-if="spell.range"
-            text="Range"
-            class="badge-tooltip-hover">
+          <Tooltip v-if="spell.range" label="Range" class="badge-tooltip-hover">
             <Icon
               class="inline size-3.75 translate-y-[0.45px] **:stroke-[2.2]"
               name="stat:rangeCenter" />
@@ -84,9 +81,7 @@ function close() {
       </div>
     </div>
 
-    <USeparator
-      class="my-2 w-full"
-      color="p3" />
+    <USeparator class="my-2 w-full" color="p3" />
 
     <div
       :key="spell.id"

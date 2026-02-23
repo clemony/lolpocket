@@ -47,13 +47,13 @@ function showToast() {
   <Tooltip
     trailing-icon="i"
     :side
-    :text="runeName ?? ''"
+    :label="runeName ?? ''"
     :img="id ? `/img/runes/${id}.webp` : undefined"
     :class="
       cn(
         'relative grid aspect-square size-17 h-full place-items-center overflow-hidden rounded-full border border-p2 bg-p2/30 p-0 transition-all duration-300',
         {
-          'border border-black/60 shadow-sm inset-shadow-sides shadow-black/20 inset-shadow-black/60 drop-shadow-sm':
+          'inset-shadow-sides border border-black/60 shadow-sm shadow-black/20 inset-shadow-black/60 drop-shadow-sm':
             loaded,
         },
         className

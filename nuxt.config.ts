@@ -1,5 +1,7 @@
 import tailwindcss from "@tailwindcss/vite"
+import { resolve } from "node:path"
 import process from "node:process"
+import { fileURLToPath } from "node:url"
 import { beasties } from "vite-plugin-beasties"
 
 // repo root
@@ -11,6 +13,10 @@ export default defineNuxtConfig({
 
   dir: {
     assets: "#layers/ui/app/assets",
+  },
+
+  alias: {
+    "@theme": fileURLToPath(new URL("./layers/ui/app/theme", import.meta.url)),
   },
 
   modules: [
@@ -26,7 +32,6 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "@formkit/auto-animate/nuxt",
     "@nuxtjs/i18n",
-    "nuxt-charts",
   ],
 
   // app

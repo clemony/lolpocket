@@ -52,7 +52,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
 
     <Tooltip
       class="size-fit"
-      :text="store.filterEmpty() ? 'No filters applied' : 'Clear filters'">
+      :label="store.filterEmpty() ? 'No filters applied' : 'Clear filters'">
       <UButton
         class="bg-transparent! duration-0! disabled:pointer-events-none"
         square

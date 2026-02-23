@@ -15,7 +15,7 @@ export const switchTheme = defineUiTheme({
   variants: {
     primary: {
       container: "group-hover:before:ring-pc/80",
-      base: "checked:bg-neutral focus-visible:outline-neutral data-[state=checked]:bg-neutral",
+      base: "focus-visible:outline-neutral data-[state=checked]:bg-neutral",
       icon: "group-data-[state=checked]:text-highlighted",
     },
     neutral: {

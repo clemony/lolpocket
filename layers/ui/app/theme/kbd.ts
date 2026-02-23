@@ -7,6 +7,7 @@ export const kbdTheme = defineUiTheme({
       neutral: "",
       p1: "",
       p2: "",
+      n3: "",
     },
     variant: {
       solid: "",
@@ -16,46 +17,54 @@ export const kbdTheme = defineUiTheme({
       ghost: "",
     },
     size: {
-      lg: "min-w-unset h-6 text-[12px]",
-      md: "min-w-unset h-5 text-[11px]",
-      sm: "min-w-unset h-4 text-[10px]",
-    },
-    square: {
-      false: "px-1",
-      true: "aspect-square gap-0 p-0",
+      lg: "h-6 w-fit min-w-[24px] text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
+      md: "h-5 w-fit min-w-[20px] text-sm [&[square]]:w-5 [&[square]]:min-w-5",
+      sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4",
     },
   },
-  base: "inline-flex items-center justify-center rounded-sm p-0 font-sans font-medium uppercase",
+  base: "inline-flex w-fit shrink items-center justify-center rounded-sm px-1 align-baseline font-sans font-medium uppercase [&[square]]:aspect-square [&[square]]:gap-0 [&[square]]:p-0",
   compoundVariants: [
     {
-      color: "p1",
+      color: "default",
       variant: "solid",
-      class: "bg-p1 text-n0",
+      class: "noise bg-p1 text-n3 inset-ring inset-ring-p4/80",
     },
     {
-      color: "p1",
+      color: "default",
       variant: "ghost",
-      class: "bg-transparent text-n4",
+      size: "sm",
+      class: "mx-px bg-transparent text-n4",
     },
     {
-      color: "p1",
+      color: "default",
+      variant: "ghost",
+      size: "md",
+      class: "gap-0 bg-transparent px-0 !text-n4/80",
+    },
+    {
+      color: "default",
       variant: "outline",
-      class: "text-p1 ring ring-p1/50 ring-inset",
+      class: "text-pc ring ring-p3 ring-inset",
     },
     {
-      color: "p1",
+      color: "default",
       variant: "soft",
       class: "bg-p1/10 text-p1",
     },
     {
-      color: "p1",
+      color: "default",
       variant: "subtle",
       class: "bg-p1/10 text-p1 ring ring-p1/25 ring-inset",
     },
     {
       color: "neutral",
       variant: "solid",
-      class: "bg-n0 text-n0",
+      class: "bg-n0 text-nc",
+    },
+    {
+      color: "neutral",
+      variant: "ghost",
+      class: "text-nc/70",
     },
     {
       color: "neutral",
@@ -73,27 +82,15 @@ export const kbdTheme = defineUiTheme({
       class: "bg-elevated text-default ring ring-accented ring-inset",
     },
     {
-      class:
-        "grid aspect-square size-4! max-h-4 min-h-4 max-w-4 min-w-4 shrink-0 place-items-center gap-0 overflow-hidden p-0",
-      size: "sm",
-      square: true,
-    },
-    {
-      class: "aspect-square size-5",
-      size: "md",
-      square: true,
-    },
-    {
-      class: "aspect-square size-6",
-      size: "lg",
-      square: true,
+      color: "n3",
+      variant: "solid",
+      class: "bg-n3 text-nc ring ring-n4 ring-inset",
     },
   ],
   defaultVariants: {
-    color: "p1",
+    color: "default",
     variant: "outline",
     size: "md",
-    square: "true",
   },
 })
 

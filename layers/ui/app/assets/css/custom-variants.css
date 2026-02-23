@@ -17,6 +17,7 @@
 @custom-variant active (&[data-state="active"]);
 @custom-variant selected (&[data-state="selected"]);
 
+@custom-variant checked (&[data-state="checked"]);
 @custom-variant collapsed (&[data-collapsed="true"]);
 @custom-variant expanded (&[data-collapsed="false"]);
 
@@ -45,4 +46,3 @@
       &[data-state="unchecked"],
       &[data-state="closed"]
    );
-

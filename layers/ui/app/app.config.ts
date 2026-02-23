@@ -1,4 +1,4 @@
-import { icon } from "./assets/icons/index.icons"
+import { icon } from "./assets/icons/icon-index"
 import * as ui from "./theme/index"
 export default defineAppConfig({
   icon,

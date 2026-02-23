@@ -1,45 +1,43 @@
 <script setup lang="ts">
-import ChampionTooltip from '#components'
+import ChampionTooltip from "#components"
 
 const {
   id,
-  side = 'top',
+  side = "top",
   class: className,
   k,
   loadingType,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   k?: string
   id?: number
   side?: Side
   loadingType?: LoadingStyle
 }>()
-const emit = defineEmits(['loaded'])
+const emit = defineEmits(["loaded"])
 
-const champId = computed(() =>
-  k ? champIdByKey(k) : id
-)
+const champId = computed(() => (k ? champIdByKey(k) : id))
 const champName = computed(() =>
-  champId.value ? champNameById(champId.value) : ''
+  champId.value ? champNameById(champId.value) : ""
 )
 
 const loaded = ref(false)
 
 function onLoad() {
   loaded.value = true
-  emit('loaded')
+  emit("loaded")
 }
 const toast = useToast()
 function showToast() {
   if (!champId.value) return
-  if (!toast.toasts.value.find(t => t.id === `champion-${id}`)) {
+  if (!toast.toasts.value.find((t) => t.id === `champion-${id}`)) {
     toast.add({
       id: `champion-${id}`,
       description: h(ChampionTooltip, { id: champId.value }),
       duration: 0,
       ui: {
-        root: 'p-0!'
-      }
+        root: "p-0!",
+      },
     })
   }
 }
@@ -48,7 +46,7 @@ function showToast() {
 <template>
   <Tooltip
     trailing-icon="i"
-    :text="champName"
+    :label="champName"
     :img="champId ? `/img/champions/${champId}.webp` : undefined"
     :side>
     <Img
@@ -57,7 +55,7 @@ function showToast() {
       :class="
         cn(
           'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
-          className,
+          className
         )
       "
       :alt="champName ? `${champName} icon` : 'champion icon'"

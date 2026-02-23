@@ -16,16 +16,16 @@ const { class: className, player } = defineProps<{
       "
       :ui="{ leadingIcon: 'scale-120 **:stroke-[1.8] ml-px' }"
       label="kda"
-      icon="proicons:infinity"
-      :color="'ad' as BadgeProps['color']"
+      icon="i-infinity"
+      color="ad"
       size="2xs"
       class="" />
 
-    <Tooltip v-else arrow text="KDA" class="badge-tooltip-hover">
+    <Tooltip v-else arrow label="KDA" class="badge-tooltip-hover">
       {{ player.stats.kda }}&VeryThinSpace;:&VeryThinSpace;1
     </Tooltip>
 
-    <Tooltip arrow text="Kill participation" class="badge-tooltip-hover">
+    <Tooltip arrow label="Kill participation" class="badge-tooltip-hover">
       {{ player.stats.kp }}%
     </Tooltip>
   </div>
