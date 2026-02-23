@@ -1,3 +1,4 @@
+import type { Index, Item, ItemLite } from "#shared/types"
 import fs from "node:fs"
 import { resolve } from "node:path"
 import stripTags from "striptags"
@@ -11,25 +12,19 @@ import {
 } from "../../utils"
 
 // server
-const itemLiteOutput = resolve(
-  `./layers/patch/server/items/raw/items-lite.json`
-)
-const tagsOutput = resolve(`./layers/patch/server/items/raw/unique-tags.json`)
-const ranksOutput = resolve(`./layers/patch/server/items/raw/unique-ranks.json`)
+const itemLiteOutput = resolve(`./patch/items/raw/items-lite.json`)
+const tagsOutput = resolve(`./patch/items/raw/unique-tags.json`)
+const ranksOutput = resolve(`./patch/items/raw/unique-ranks.json`)
 
 // shared
-const outputIndex = resolve(
-  "./layers/patch/shared/constants/items/itemIndex.ts"
-)
-const outputLitePath = resolve("./layers/patch/shared/records/itemLite.ts")
-const itemOutputDir = resolve("./layers/patch/shared/records/items/")
-const outputMergedPath = resolve(
-  "./layers/patch/server/items/raw/items-merged.json"
-)
+const outputIndex = resolve("./shared/constants/items/itemIndex.ts")
+const outputLitePath = resolve("./public/cdn/itemLite.json")
+const itemOutputDir = resolve("./public/cdn/items/")
+const outputMergedPath = resolve("./patch/items/raw/items-merged.json")
 
 // input
-const maPath = resolve(`./layers/patch/server/items/raw/items.json`)
-const ddPath = resolve(`./layers/patch/server/items/raw/dd-items.json`)
+const maPath = resolve(`./patch/items/raw/items.json`)
+const ddPath = resolve(`./patch/items/raw/dd-items.json`)
 const ddItems = JSON.parse(fs.readFileSync(ddPath, "utf-8"))
 const maItems = JSON.parse(fs.readFileSync(maPath, "utf-8"))
 const fullData = mergeItems(maItems, ddItems)
@@ -194,12 +189,8 @@ async function buildItems() {
     cleanItems[id] = cleanedItem
 
     fs.writeFileSync(
-      resolve(itemOutputDir, `${item.id}.ts`),
-      `// ${markUpdate()}
-      import type { Item } from "#shared/types"
-
-      const item: Item =  ${JSON.stringify(cleanedItem, null, 2)}
-export default item`
+      resolve(itemOutputDir, `${item.id}.json`),
+      JSON.stringify(cleanedItem, null, 2)
     )
   }
 
@@ -212,13 +203,7 @@ import type { Index } from "#shared/types"
 export const itemIndex: Index[] = ${JSON.stringify(Object.values(index), null, 2)}`
   )
 
-  fs.writeFileSync(
-    outputLitePath,
-    `// ${markUpdate()}
-import type { ItemLite } from "#shared/types"
-
-export const itemLite: Record<string, ItemLite> = ${JSON.stringify(simplified, null, 2)}`
-  )
+  fs.writeFileSync(outputLitePath, JSON.stringify(simplified, null, 2))
 
   fs.writeFileSync(itemLiteOutput, JSON.stringify(simplified, null, 2))
 

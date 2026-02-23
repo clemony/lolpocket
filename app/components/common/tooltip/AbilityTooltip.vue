@@ -5,18 +5,18 @@ const { id } = defineProps<{
   id: string
 }>()
 
-const item = ref<Ability | null>(null)
-watchEffect(async () => {
-  if (!id) return
+const idRef = computed(() => id ?? 0)
 
-  try {
-    const module = await import(`#shared/records/abilities/${id}.ts`)
-    item.value = module.default || null
-  } catch (err) {
-    console.error(`Failed to load ability for ${id}`, err)
-    item.value = null
+const { data: ability, status } = useFetch<Ability>(
+  () => `/cdn/abilities/${idRef.value}.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false,
+    key: () => `ability-${idRef.value}`,
+    watch: [idRef],
   }
-})
+)
 
 const champ = computed(() => {
   const ckey = id.slice(0, -1)
@@ -25,7 +25,7 @@ const champ = computed(() => {
 </script>
 
 <template>
-  <div v-if="item" class="flex w-full flex-col pt-4 pb-3">
+  <div class="flex w-full flex-col pt-4 pb-3">
     <div class="grid h-fit w-full grid-cols-[36px_1fr] grid-rows-1 gap-4 px-4">
       <!-- IMG -->
 
@@ -37,9 +37,9 @@ const champ = computed(() => {
           <a
             class="hover:*:first:underline"
             :href="`/champions/${id.length - 1}`">
-            <h3 class="text-xl! font-bold!">{{ item?.name }}</h3>
+            <h3 class="text-xl! font-bold!">{{ ability?.name }}</h3>
             <h5 class="leading-4 font-medium italic">
-              {{ champ }} - {{ item?.key }}
+              {{ champ }} - {{ ability?.key }}
             </h5>
           </a>
 
@@ -61,14 +61,15 @@ const champ = computed(() => {
       <!--  -->
       <div class="w-full px-4">
         <AbilityStats
+          v-if="ability"
           class="flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-2 *:w-max *:justify-start *:text-start *:leading-none **:cursor-default **:select-none *:hover:underline"
-          :ability="item" />
+          :ability />
       </div>
 
       <Separator color="neutral" size="xs" class="my-1.5" />
       <div class="w-full space-y-3 px-4 pb-4 text-wrap">
         <AbilityDescription
-          v-for="(effect, i) in item.effects"
+          v-for="(effect, i) in ability?.effects"
           :key="i"
           class="space-y-3"
           size="sm"

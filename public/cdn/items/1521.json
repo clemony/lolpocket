@@ -1,0 +1,17 @@
+{
+  "id": 1521,
+  "name": "Fortification",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    30,
+    35
+  ]
+}

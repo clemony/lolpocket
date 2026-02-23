@@ -1,0 +1,158 @@
+{
+  "key": "R",
+  "name": "Comeuppance",
+  "width": "120",
+  "affects": "Self, Enemies",
+  "blurb": "Active:  Akshan locks onto the target enemy champion and begins  channeling power into his gun to store bullets,  revealing them as well as  revealing himself. Comeuppance will recast after the channel, or can recast early.",
+  "castTime": "none",
+  "cooldown": "100 / 85 / 70",
+  "cost": "100",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan locks onto the target enemy champion and begins channeling for 2.5 seconds, revealing them as well as revealing himself. He gradually stores bullets into his weapon over the duration.</p>",
+      "leveling": [
+        {
+          "attribute": "Maximum Bullets Stored",
+          "modifiers": [
+            {
+              "values": "5 / 6 / 7"
+            }
+          ]
+        },
+        {
+          "attribute": "Bullet Storing Interval Time",
+          "modifiers": [
+            {
+              "unit": " seconds",
+              "values": "0.63 / 0.52 / 0.42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Comeuppance can be recast after 0.5 seconds during the channel, and does so automatically afterwards. Comeuppance is placed on a 5-second cooldown if the channel is cancelled."
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% - 200% (based on target's missing health). The shots can hit structures.</p>",
+      "leveling": [
+        {
+          "attribute": "Minimum Physical Damage per Bullet",
+          "modifiers": [
+            {
+              "unit": "[25 / 30 / 35 / 40 / 45 ] × [1",
+              "values": "0"
+            },
+            {
+              "unit": "0 : 0.5 ",
+              "values": "0"
+            },
+            {
+              "unit": "]",
+              "values": "0.15"
+            },
+            {
+              "unit": "% AD",
+              "values": "15"
+            },
+            {
+              "unit": "based on critical strike chance",
+              "values": "0"
+            }
+          ]
+        },
+        {
+          "attribute": "Maximum Physical Damage per Bullet",
+          "modifiers": [
+            {
+              "unit": "[75 / 90 / 105 / 120 / 135 ] × [1",
+              "values": "0"
+            },
+            {
+              "unit": "0 : 0.5 ",
+              "values": "0"
+            },
+            {
+              "unit": "]",
+              "values": "0.15"
+            },
+            {
+              "unit": "% AD",
+              "values": "45"
+            },
+            {
+              "unit": "based on critical strike chance",
+              "values": "0"
+            }
+          ]
+        },
+        {
+          "attribute": "Minimum Charged Physical Damage",
+          "modifiers": [
+            {
+              "unit": "[125 / 210 / 315 ] × [1",
+              "values": "0"
+            },
+            {
+              "unit": "0 : 0.5 ",
+              "values": "0"
+            },
+            {
+              "unit": "]",
+              "values": "0.15"
+            },
+            {
+              "unit": "% AD",
+              "values": "75 / 90 / 105"
+            },
+            {
+              "unit": "based on critical strike chance",
+              "values": "0"
+            }
+          ]
+        },
+        {
+          "attribute": "Damage to target on 67% missing hp",
+          "modifiers": [
+            {
+              "unit": "[375 / 630 / 945 ] × [1",
+              "values": "0"
+            },
+            {
+              "unit": "0 : 0.5 ",
+              "values": "0"
+            },
+            {
+              "unit": "]",
+              "values": "0.15"
+            },
+            {
+              "unit": "% AD",
+              "values": "225 / 270 / 315"
+            },
+            {
+              "unit": "based on critical strike chance",
+              "values": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Each bullet's damage applies life steal and executes minions."
+    },
+    {
+      "description": "Akshan can move while channeling Comeuppance."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/r",
+  "notes": "Comeuppance refreshes the duration of  Dirty Fighting stacks on the target every 0.25 seconds.\nA kill threshold will appear on the health bar of the target locked onto during the channel, which increases each time Akshan stores a bullet. If the target's current health falls below the threshold, their health bar will be framed in red.\nThe indicator factors the bonus damage applied by  Dirty Fighting as well as damage modifiers and the target's resistances.\nIt also factors the projected increase in the target's missing health, from which each consecutive bullet scales more.\nIt updates dynamically over the channel's duration, reacting to fluctuations of the target's health and damage mitigations.\nThe  reveal will linger for 2 seconds after the channel has ended.\n Spell shield will not prevent the lock-on and will only block a single bullet.\nComeuppance will not go on a reduced cooldown if Akshan  dies during the channel.\nComeuppance will cancel if the target becomes  untargetable or  dies during the channel.\nDamage to structures does scale with their missing health.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\nComeuppance is special cased to put  Neeko's  Inherent Glamour on cooldown when targeting Neeko and to break the disguise before damaging her.\nThe following table refers for interactions while Akshan is  channeling:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Avengerang and  Going Rogue are disabled.  Heroic Swing is usable.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "speed": "3200",
+  "spellEffects": "spell",
+  "spellshieldable": "special",
+  "targeting": "Unit",
+  "targetRange": "2500"
+}

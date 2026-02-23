@@ -1,0 +1,19 @@
+{
+  "name": "Juice of Haste",
+  "id": 2144,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "stats": {},
+  "description": "\n\nJuices do not stack with themselves, but you can have multiple different ones active.Active - Consume: Automatically activates on Combat Start. Drink to gain 20+ 15% Ability Haste for the next round.\n\nFor people who gotta go FAST. Made with lightning. REAL lightning!",
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 500,
+    "sell": 500
+  },
+  "maps": [
+    30
+  ]
+}

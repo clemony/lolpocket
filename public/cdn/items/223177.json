@@ -1,0 +1,14 @@
+{
+  "id": 223177,
+  "name": "Guardian's Blade",
+  "description": "25 Attack Damage\n250 Health\n15 Ability Haste\n\n",
+  "gold": {
+    "base": 500,
+    "purchasable": true,
+    "total": 500,
+    "sell": 250
+  },
+  "maps": [
+    30
+  ]
+}

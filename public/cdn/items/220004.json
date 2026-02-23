@@ -1,0 +1,19 @@
+{
+  "name": "Legendary Mage Item",
+  "id": 220004,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "stats": {},
+  "description": "Active - Consume: Automatically open a semi-random selection for a Legendary Mage item.",
+  "gold": {
+    "base": 2000,
+    "purchasable": true,
+    "total": 2000,
+    "sell": 2000
+  },
+  "maps": [
+    30
+  ]
+}

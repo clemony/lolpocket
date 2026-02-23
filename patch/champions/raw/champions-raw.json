@@ -453,10 +453,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2013-06-13",
     "resource": "Blood well",
     "roles": [
@@ -481,6 +477,10 @@
       "hpRegen": 0.5,
       "attackDamage": 5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ahri": {
@@ -849,10 +849,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-12-14",
     "resource": "Mana",
     "roles": [
@@ -881,6 +877,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Akali": {
@@ -1271,10 +1271,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-05-11",
     "resource": "Energy",
     "roles": [
@@ -1299,6 +1295,10 @@
       "hpRegen": 0.9,
       "attackDamage": 3.3,
       "attackSpeed": 3.2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Akshan": {
@@ -1770,10 +1770,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2021-07-22",
     "resource": "Mana",
     "roles": [
@@ -1801,6 +1797,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3,
       "attackSpeed": 4
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Alistar": {
@@ -2087,10 +2087,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -2119,6 +2115,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.8,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Ambessa": {
@@ -2594,10 +2594,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2024-11-06",
     "resource": "Energy",
     "roles": [
@@ -2625,6 +2621,10 @@
       "hpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Amumu": {
@@ -2930,10 +2930,6 @@
       "Jungle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-06-26",
     "resource": "Mana",
     "roles": [
@@ -2962,6 +2958,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3.8,
       "attackSpeed": 2.2
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Anivia": {
@@ -3377,10 +3377,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-07-10",
     "resource": "Mana",
     "roles": [
@@ -3409,6 +3405,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.2,
       "attackSpeed": 1.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Annie": {
@@ -3731,10 +3731,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -3763,6 +3759,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.7,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Aphelios": {
@@ -4434,10 +4434,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2019-12-11",
     "resource": "Mana",
     "roles": [
@@ -4464,6 +4460,10 @@
       "mpRegen": 0.4,
       "attackDamage": 2.3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ashe": {
@@ -4767,10 +4767,6 @@
       "Bottom",
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -4798,6 +4794,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.5,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "AurelionSol": {
@@ -5276,10 +5276,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2016-03-24",
     "resource": "Mana",
     "roles": [
@@ -5307,6 +5303,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.2,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Aurora": {
@@ -5696,10 +5696,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2024-07-17",
     "resource": "Mana",
     "roles": [
@@ -5728,6 +5724,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Azir": {
@@ -6088,10 +6088,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2014-09-16",
     "resource": "Mana",
     "roles": [
@@ -6120,6 +6116,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Bard": {
@@ -6425,10 +6425,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2015-03-12",
     "resource": "Mana",
     "roles": [
@@ -6457,6 +6453,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Belveth": {
@@ -6961,10 +6961,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2022-06-09",
     "resource": "None",
     "roles": [
@@ -6988,6 +6984,10 @@
       "magicResist": 2.1,
       "hpRegen": 0.6,
       "attackDamage": 1.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Blitzcrank": {
@@ -7278,10 +7278,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-09-02",
     "resource": "Mana",
     "roles": [
@@ -7310,6 +7306,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 1.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Brand": {
@@ -7655,10 +7655,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2011-04-12",
     "resource": "Mana",
     "roles": [
@@ -7687,6 +7683,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Braum": {
@@ -8045,10 +8045,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2014-05-12",
     "resource": "Mana",
     "roles": [
@@ -8077,6 +8073,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.2,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Briar": {
@@ -8601,10 +8601,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2023-09-14",
     "resource": "Frenzy",
     "roles": [
@@ -8627,6 +8623,10 @@
       "magicResist": 2.1,
       "attackDamage": 2.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Caitlyn": {
@@ -8960,10 +8960,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2011-01-04",
     "resource": "Mana",
     "roles": [
@@ -8990,6 +8986,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.8,
       "attackSpeed": 4
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Camille": {
@@ -9418,10 +9418,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2016-12-07",
     "resource": "Mana",
     "roles": [
@@ -9450,6 +9446,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.8,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Cassiopeia": {
@@ -9812,10 +9812,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2010-12-14",
     "resource": "Mana",
     "roles": [
@@ -9843,6 +9839,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Chogath": {
@@ -10245,10 +10245,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-06-26",
     "resource": "Mana",
     "roles": [
@@ -10277,6 +10273,10 @@
       "mpRegen": 0.5,
       "attackDamage": 4.2,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Corki": {
@@ -10636,10 +10636,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-09-19",
     "resource": "Mana",
     "roles": [
@@ -10667,6 +10663,10 @@
       "mpRegen": 0.7,
       "attackDamage": 2,
       "attackSpeed": 2.8
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Darius": {
@@ -11013,10 +11013,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2012-05-23",
     "resource": "Mana",
     "roles": [
@@ -11045,6 +11041,10 @@
       "mpRegen": 0.4,
       "attackDamage": 5,
       "attackSpeed": 1
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Diana": {
@@ -11419,10 +11419,6 @@
       "Jungle",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2012-08-07",
     "resource": "Mana",
     "roles": [
@@ -11451,6 +11447,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "DrMundo": {
@@ -11903,10 +11903,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-09-02",
     "resource": "Health",
     "roles": [
@@ -11931,6 +11927,10 @@
       "hpRegen": 0.5,
       "attackDamage": 2.5,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Draven": {
@@ -12291,10 +12291,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-06-06",
     "resource": "Mana",
     "roles": [
@@ -12321,6 +12317,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.6,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ekko": {
@@ -12685,10 +12685,6 @@
       "Jungle",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2015-05-29",
     "resource": "Mana",
     "roles": [
@@ -12716,6 +12712,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Elise": {
@@ -13197,10 +13197,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-10-26",
     "resource": "Mana",
     "roles": [
@@ -13229,6 +13225,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 1.8
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Evelynn": {
@@ -13725,10 +13725,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-05-01",
     "resource": "Mana",
     "roles": [
@@ -13756,6 +13752,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Ezreal": {
@@ -14084,10 +14084,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2010-03-16",
     "resource": "Mana",
     "roles": [
@@ -14115,6 +14111,10 @@
       "mpRegen": 1,
       "attackDamage": 3.3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Fiddlesticks": {
@@ -14602,10 +14602,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -14634,6 +14630,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.7,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Fiora": {
@@ -14987,10 +14987,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-02-29",
     "resource": "Mana",
     "roles": [
@@ -15019,6 +15015,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.3,
       "attackSpeed": 3.2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Fizz": {
@@ -15457,10 +15457,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2011-11-15",
     "resource": "Mana",
     "roles": [
@@ -15488,6 +15484,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 3.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Galio": {
@@ -15869,10 +15869,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-08-10",
     "resource": "Mana",
     "roles": [
@@ -15901,6 +15897,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.5,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Gangplank": {
@@ -16332,10 +16332,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-08-19",
     "resource": "Mana",
     "roles": [
@@ -16363,6 +16359,10 @@
       "mpRegen": 0.7,
       "attackDamage": 4.2,
       "attackSpeed": 3.2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Garen": {
@@ -16701,10 +16701,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2010-04-27",
     "resource": "None",
     "roles": [
@@ -16729,6 +16725,10 @@
       "hpRegen": 0.5,
       "attackDamage": 4.5,
       "attackSpeed": 3.7
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Gnar": {
@@ -17289,10 +17289,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2014-08-14",
     "resource": "Rage",
     "roles": [
@@ -17318,6 +17314,10 @@
       "hpRegen": 1.3,
       "attackDamage": 3.2,
       "attackSpeed": 6
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Gragas": {
@@ -17676,10 +17676,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-02-02",
     "resource": "Mana",
     "roles": [
@@ -17708,6 +17704,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Graves": {
@@ -18084,10 +18084,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-10-19",
     "resource": "Mana",
     "roles": [
@@ -18115,6 +18111,10 @@
       "mpRegen": 0.7,
       "attackDamage": 4,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Gwen": {
@@ -18627,10 +18627,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2021-04-15",
     "resource": "Mana",
     "roles": [
@@ -18659,6 +18655,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Hecarim": {
@@ -19010,10 +19010,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-04-18",
     "resource": "Mana",
     "roles": [
@@ -19042,6 +19038,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.7,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Heimerdinger": {
@@ -19610,10 +19610,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-10-10",
     "resource": "Mana",
     "roles": [
@@ -19642,6 +19638,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.7,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Hwei": {
@@ -20662,10 +20662,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2023-12-05",
     "resource": "Mana",
     "roles": [
@@ -20694,6 +20690,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Illaoi": {
@@ -21020,10 +21020,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2015-11-24",
     "resource": "Mana",
     "roles": [
@@ -21052,6 +21048,10 @@
       "mpRegen": 0.8,
       "attackDamage": 5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Irelia": {
@@ -21397,10 +21397,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-11-16",
     "resource": "Mana",
     "roles": [
@@ -21429,6 +21425,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Ivern": {
@@ -21783,10 +21783,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2016-10-05",
     "resource": "Mana",
     "roles": [
@@ -21815,6 +21811,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Janna": {
@@ -22193,10 +22193,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-09-02",
     "resource": "Mana",
     "roles": [
@@ -22225,6 +22221,10 @@
       "mpRegen": 0.4,
       "attackDamage": 2.5,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "JarvanIV": {
@@ -22552,10 +22552,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-03-01",
     "resource": "Mana",
     "roles": [
@@ -22584,6 +22580,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Jax": {
@@ -22970,10 +22970,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -23002,6 +22998,10 @@
       "mpRegen": 0.7,
       "attackDamage": 4.3,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Jayce": {
@@ -23578,10 +23578,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-07-07",
     "resource": "Mana",
     "roles": [
@@ -23610,6 +23606,10 @@
       "mpRegen": 0.8,
       "attackDamage": 4.3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Jhin": {
@@ -24047,10 +24047,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 1234,
-      "rp": 880
-    },
     "releaseDate": "2016-02-01",
     "resource": "Mana",
     "roles": [
@@ -24078,6 +24074,10 @@
       "hpRegen": 0.6,
       "mpRegen": 0.8,
       "attackDamage": 4.4
+    },
+    "price": {
+      "blueEssence": 1234,
+      "rp": 880
     }
   },
   "Jinx": {
@@ -24469,10 +24469,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2013-10-10",
     "resource": "Mana",
     "roles": [
@@ -24499,6 +24495,10 @@
       "mpRegen": 1,
       "attackDamage": 3.3,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "KSante": {
@@ -24914,10 +24914,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2022-11-02",
     "resource": "Mana",
     "roles": [
@@ -24947,6 +24943,10 @@
       "mpRegen": 1,
       "attackDamage": 3.5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Kaisa": {
@@ -25332,10 +25332,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2018-03-07",
     "resource": "Mana",
     "roles": [
@@ -25363,6 +25359,10 @@
       "mpRegen": 0.7,
       "attackDamage": 2.6,
       "attackSpeed": 1.8
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Kalista": {
@@ -25730,10 +25730,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2014-11-20",
     "resource": "Mana",
     "roles": [
@@ -25760,6 +25756,10 @@
       "mpRegen": 0.8,
       "attackDamage": 4.8,
       "attackSpeed": 4.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Karma": {
@@ -26315,10 +26315,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-02-01",
     "resource": "Mana",
     "roles": [
@@ -26348,6 +26344,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.3,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Karthus": {
@@ -26680,10 +26680,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-06-12",
     "resource": "Mana",
     "roles": [
@@ -26711,6 +26707,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Kassadin": {
@@ -27093,10 +27093,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-08-07",
     "resource": "Mana",
     "roles": [
@@ -27124,6 +27120,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.9,
       "attackSpeed": 3.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Katarina": {
@@ -27462,10 +27462,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-09-19",
     "resource": "None",
     "roles": [
@@ -27489,6 +27485,10 @@
       "hpRegen": 0.7,
       "attackDamage": 3.2,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Kayle": {
@@ -27850,10 +27850,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -27882,6 +27878,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.5,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 260
     }
   },
   "Kayn": {
@@ -28277,10 +28277,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2017-07-12",
     "resource": "Mana",
     "roles": [
@@ -28309,6 +28305,10 @@
       "mpRegen": 1,
       "attackDamage": 3.3,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Kennen": {
@@ -28679,10 +28679,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2010-04-08",
     "resource": "Energy",
     "roles": [
@@ -28709,6 +28705,10 @@
       "hpRegen": 0.7,
       "attackDamage": 3.8,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Khazix": {
@@ -29163,10 +29163,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-09-27",
     "resource": "Mana",
     "roles": [
@@ -29193,6 +29189,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3.1,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Kindred": {
@@ -29555,10 +29555,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2015-10-14",
     "resource": "Mana",
     "roles": [
@@ -29585,6 +29581,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3.3,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Kled": {
@@ -30243,10 +30243,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2016-08-10",
     "resource": "Courage",
     "roles": [
@@ -30272,6 +30268,10 @@
       "hpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "KogMaw": {
@@ -30618,10 +30618,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2010-06-24",
     "resource": "Mana",
     "roles": [
@@ -30649,6 +30645,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.1,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Leblanc": {
@@ -31072,10 +31072,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-11-02",
     "resource": "Mana",
     "roles": [
@@ -31104,6 +31100,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.2,
       "attackSpeed": 2.4
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "LeeSin": {
@@ -31574,10 +31574,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2011-04-01",
     "resource": "Energy",
     "roles": [
@@ -31604,6 +31600,10 @@
       "hpRegen": 0.7,
       "attackDamage": 3.7,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Leona": {
@@ -31925,10 +31925,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2011-07-13",
     "resource": "Mana",
     "roles": [
@@ -31957,6 +31953,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.9
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Lillia": {
@@ -32330,10 +32330,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2020-07-22",
     "resource": "Mana",
     "roles": [
@@ -32362,6 +32358,10 @@
       "mpRegen": 1,
       "attackDamage": 3.1,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Lissandra": {
@@ -32727,10 +32727,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2013-04-30",
     "resource": "Mana",
     "roles": [
@@ -32758,6 +32754,10 @@
       "mpRegen": 0.4,
       "attackDamage": 2.7,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Lucian": {
@@ -33165,10 +33165,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2013-08-22",
     "resource": "Mana",
     "roles": [
@@ -33196,6 +33192,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.9,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Lulu": {
@@ -33593,10 +33593,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-03-20",
     "resource": "Mana",
     "roles": [
@@ -33625,6 +33621,10 @@
       "mpRegen": 0.6,
       "attackDamage": 2.6,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Lux": {
@@ -33931,10 +33931,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2010-10-19",
     "resource": "Mana",
     "roles": [
@@ -33964,6 +33960,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Malphite": {
@@ -34318,10 +34318,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-09-02",
     "resource": "Mana",
     "roles": [
@@ -34350,6 +34346,10 @@
       "mpRegen": 0.6,
       "attackDamage": 4,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Malzahar": {
@@ -34748,10 +34748,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2010-06-01",
     "resource": "Mana",
     "roles": [
@@ -34780,6 +34776,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Maokai": {
@@ -35196,10 +35196,6 @@
       "Jungle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-02-16",
     "resource": "Mana",
     "roles": [
@@ -35228,6 +35224,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3.3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "MasterYi": {
@@ -35678,10 +35678,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -35710,6 +35706,10 @@
       "mpRegen": 0.5,
       "attackDamage": 2.5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Mel": {
@@ -36159,10 +36159,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2025-01-23",
     "resource": "Mana",
     "roles": [
@@ -36191,6 +36187,10 @@
       "mpRegen": 0.9,
       "attackDamage": 3.3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Milio": {
@@ -36536,10 +36536,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2023-03-23",
     "resource": "Mana",
     "roles": [
@@ -36568,6 +36564,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3.2,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "MissFortune": {
@@ -36905,10 +36905,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2010-09-08",
     "resource": "Mana",
     "roles": [
@@ -36936,6 +36932,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.4,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Mordekaiser": {
@@ -37239,10 +37239,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2010-02-24",
     "resource": "Shield",
     "roles": [
@@ -37268,6 +37264,10 @@
       "hpRegen": 0.8,
       "attackDamage": 4,
       "attackSpeed": 1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Morgana": {
@@ -37626,10 +37626,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -37658,6 +37654,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3.5,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Naafiri": {
@@ -38121,10 +38121,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2023-07-19",
     "resource": "Mana",
     "roles": [
@@ -38152,6 +38148,10 @@
       "mpRegen": 1,
       "attackDamage": 2,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Nami": {
@@ -38494,10 +38494,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2012-12-07",
     "resource": "Mana",
     "roles": [
@@ -38526,6 +38522,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3.1,
       "attackSpeed": 2.6
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Nasus": {
@@ -38907,10 +38907,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-10-01",
     "resource": "Mana",
     "roles": [
@@ -38939,6 +38935,10 @@
       "mpRegen": 0.5,
       "attackDamage": 4,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Nautilus": {
@@ -39345,10 +39345,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-02-14",
     "resource": "Mana",
     "roles": [
@@ -39377,6 +39373,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3.3,
       "attackSpeed": 1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Neeko": {
@@ -39766,10 +39766,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2018-12-05",
     "resource": "Mana",
     "roles": [
@@ -39799,6 +39795,10 @@
       "mpRegen": 0.7,
       "attackDamage": 2.5,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Nidalee": {
@@ -40393,10 +40393,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-12-17",
     "resource": "Mana",
     "roles": [
@@ -40425,6 +40421,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 3.2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Nilah": {
@@ -40776,10 +40776,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2022-07-13",
     "resource": "Mana",
     "roles": [
@@ -40808,6 +40804,10 @@
       "mpRegen": 0.7,
       "attackDamage": 2,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Nocturne": {
@@ -41153,10 +41153,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-03-15",
     "resource": "Mana",
     "roles": [
@@ -41184,6 +41180,10 @@
       "mpRegen": 0.5,
       "attackDamage": 2.6,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Nunu": {
@@ -41694,10 +41694,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -41726,6 +41722,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Olaf": {
@@ -42088,10 +42088,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-06-09",
     "resource": "Mana",
     "roles": [
@@ -42120,6 +42116,10 @@
       "mpRegen": 0.6,
       "attackDamage": 4.7,
       "attackSpeed": 2.7
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Orianna": {
@@ -42448,10 +42448,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-06-01",
     "resource": "Mana",
     "roles": [
@@ -42480,6 +42476,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.6,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ornn": {
@@ -42866,10 +42866,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2017-08-23",
     "resource": "Mana",
     "roles": [
@@ -42898,6 +42894,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Pantheon": {
@@ -43340,10 +43340,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2010-02-02",
     "resource": "Mana",
     "roles": [
@@ -43372,6 +43368,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3.3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Poppy": {
@@ -43773,10 +43773,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2010-01-13",
     "resource": "Mana",
     "roles": [
@@ -43805,6 +43801,10 @@
       "mpRegen": 0.7,
       "attackDamage": 4,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Pyke": {
@@ -44082,10 +44082,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2018-05-31",
     "resource": "Mana",
     "roles": [
@@ -44114,6 +44110,10 @@
       "mpRegen": 1,
       "attackDamage": 2,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Qiyana": {
@@ -44574,10 +44574,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2019-06-28",
     "resource": "Mana",
     "roles": [
@@ -44605,6 +44601,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.1,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Quinn": {
@@ -44963,10 +44963,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2013-03-01",
     "resource": "Mana",
     "roles": [
@@ -44995,6 +44991,10 @@
       "mpRegen": 0.4,
       "attackDamage": 2.7,
       "attackSpeed": 3.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Rakan": {
@@ -45305,10 +45305,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2017-04-19",
     "resource": "Mana",
     "roles": [
@@ -45336,6 +45332,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3.5,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Rammus": {
@@ -45671,10 +45671,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-07-10",
     "resource": "Mana",
     "roles": [
@@ -45703,6 +45699,10 @@
       "mpRegen": 0.5,
       "attackDamage": 2.8,
       "attackSpeed": 2.2
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "RekSai": {
@@ -46183,10 +46183,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2014-12-11",
     "resource": "Rage",
     "roles": [
@@ -46212,6 +46208,10 @@
       "hpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Rell": {
@@ -46609,10 +46609,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2020-12-10",
     "resource": "Mana",
     "roles": [
@@ -46641,6 +46637,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Renata": {
@@ -46982,10 +46982,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2022-02-17",
     "resource": "Mana",
     "roles": [
@@ -47014,6 +47010,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Renekton": {
@@ -47527,10 +47527,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-01-18",
     "resource": "Fury",
     "roles": [
@@ -47556,6 +47552,10 @@
       "hpRegen": 0.8,
       "attackDamage": 4.2,
       "attackSpeed": 2.8
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Rengar": {
@@ -47899,10 +47899,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-08-21",
     "resource": "Ferocity",
     "roles": [
@@ -47928,6 +47924,10 @@
       "hpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Riven": {
@@ -48283,10 +48283,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-09-14",
     "resource": "None",
     "roles": [
@@ -48311,6 +48307,10 @@
       "hpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Rumble": {
@@ -49068,10 +49068,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-04-26",
     "resource": "Heat",
     "roles": [
@@ -49097,6 +49093,10 @@
       "hpRegen": 0.6,
       "attackDamage": 3.2,
       "attackSpeed": 1.9
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ryze": {
@@ -49408,10 +49408,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -49440,6 +49436,10 @@
       "mpRegen": 1,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 260
     }
   },
   "Samira": {
@@ -49822,10 +49822,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2020-09-21",
     "resource": "Mana",
     "roles": [
@@ -49853,6 +49849,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Sejuani": {
@@ -50211,10 +50211,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2012-01-17",
     "resource": "Mana",
     "roles": [
@@ -50243,6 +50239,10 @@
       "mpRegen": 0.7,
       "attackDamage": 4,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Senna": {
@@ -50617,10 +50617,6 @@
       "Bottom",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2019-11-10",
     "resource": "Mana",
     "roles": [
@@ -50648,6 +50644,10 @@
       "hpRegen": 0.6,
       "mpRegen": 0.7,
       "attackSpeed": 2.6
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Seraphine": {
@@ -51001,10 +51001,6 @@
       "Bottom",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2020-10-29",
     "resource": "Mana",
     "roles": [
@@ -51034,6 +51030,10 @@
       "mpRegen": 1,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Sett": {
@@ -51376,10 +51376,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2020-01-14",
     "resource": "Grit",
     "roles": [
@@ -51404,6 +51400,10 @@
       "hpRegen": 0.5,
       "attackDamage": 4,
       "attackSpeed": 1.8
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Shaco": {
@@ -51875,10 +51875,6 @@
       "Jungle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-10-10",
     "resource": "Mana",
     "roles": [
@@ -51905,6 +51901,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Shen": {
@@ -52270,10 +52270,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-03-24",
     "resource": "Energy",
     "roles": [
@@ -52299,6 +52295,10 @@
       "hpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Shyvana": {
@@ -52718,10 +52718,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-11-01",
     "resource": "Fury",
     "roles": [
@@ -52747,6 +52743,10 @@
       "hpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Singed": {
@@ -53087,10 +53087,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 260
-    },
     "releaseDate": "2009-04-18",
     "resource": "Mana",
     "roles": [
@@ -53119,6 +53115,10 @@
       "mpRegen": 0.6,
       "attackDamage": 3.4,
       "attackSpeed": 1.9
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 260
     }
   },
   "Sion": {
@@ -53613,10 +53613,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -53645,6 +53641,10 @@
       "mpRegen": 0.6,
       "attackDamage": 4,
       "attackSpeed": 1.3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Sivir": {
@@ -54015,10 +54015,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -54045,6 +54041,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Skarner": {
@@ -54467,10 +54467,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-08-09",
     "resource": "Mana",
     "roles": [
@@ -54500,6 +54496,10 @@
       "mpRegen": 0.8,
       "attackDamage": 5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Smolder": {
@@ -54943,10 +54943,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2024-01-31",
     "resource": "Mana",
     "roles": [
@@ -54974,6 +54970,10 @@
       "mpRegen": 0.7,
       "attackDamage": 2.3,
       "attackSpeed": 4
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Sona": {
@@ -55306,10 +55306,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2010-09-21",
     "resource": "Mana",
     "roles": [
@@ -55338,6 +55334,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Soraka": {
@@ -55714,10 +55714,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -55746,6 +55742,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Swain": {
@@ -56179,10 +56179,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-10-05",
     "resource": "Mana",
     "roles": [
@@ -56211,6 +56207,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.7,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Sylas": {
@@ -56633,10 +56633,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2019-01-25",
     "resource": "Mana",
     "roles": [
@@ -56666,6 +56662,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Syndra": {
@@ -57044,10 +57044,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2012-09-13",
     "resource": "Mana",
     "roles": [
@@ -57075,6 +57071,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.9,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "TahmKench": {
@@ -57480,10 +57480,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2015-07-09",
     "resource": "Mana",
     "roles": [
@@ -57512,6 +57508,10 @@
       "mpRegen": 1,
       "attackDamage": 3.2,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Taliyah": {
@@ -57871,10 +57871,6 @@
       "Jungle",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2016-05-18",
     "resource": "Mana",
     "roles": [
@@ -57903,6 +57899,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.3,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Talon": {
@@ -58263,10 +58263,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-08-24",
     "resource": "Mana",
     "roles": [
@@ -58293,6 +58289,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.1,
       "attackSpeed": 2.9
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Taric": {
@@ -58567,10 +58567,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-08-19",
     "resource": "Mana",
     "roles": [
@@ -58600,6 +58596,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Teemo": {
@@ -59041,10 +59041,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -59073,6 +59069,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Thresh": {
@@ -59416,10 +59416,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2013-01-23",
     "resource": "Mana",
     "roles": [
@@ -59447,6 +59443,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.2,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Tristana": {
@@ -59825,10 +59825,6 @@
       "Bottom",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -59856,6 +59852,10 @@
       "mpRegen": 0.5,
       "attackDamage": 2.9,
       "attackSpeed": 1.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Trundle": {
@@ -60225,10 +60225,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-12-01",
     "resource": "Mana",
     "roles": [
@@ -60257,6 +60253,10 @@
       "mpRegen": 0.6,
       "attackDamage": 4,
       "attackSpeed": 2.9
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Tryndamere": {
@@ -60619,10 +60619,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-05-01",
     "resource": "Fury",
     "roles": [
@@ -60648,6 +60644,10 @@
       "hpRegen": 0.9,
       "attackDamage": 4,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "TwistedFate": {
@@ -61028,10 +61028,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 585
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -61060,6 +61056,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.5,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 585
     }
   },
   "Twitch": {
@@ -61404,10 +61404,6 @@
       "Bottom",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2009-05-01",
     "resource": "Mana",
     "roles": [
@@ -61435,6 +61431,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.1,
       "attackSpeed": 3.4
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Udyr": {
@@ -61910,10 +61910,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-12-02",
     "resource": "Mana",
     "roles": [
@@ -61942,6 +61938,10 @@
       "mpRegen": 0.5,
       "attackDamage": 4,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Urgot": {
@@ -62283,10 +62283,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-08-24",
     "resource": "Mana",
     "roles": [
@@ -62315,6 +62311,10 @@
       "mpRegen": 0.8,
       "attackDamage": 4,
       "attackSpeed": 3.8
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Varus": {
@@ -62753,10 +62753,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-05-08",
     "resource": "Mana",
     "roles": [
@@ -62785,6 +62781,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.4,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Vayne": {
@@ -63133,10 +63133,6 @@
       "Bottom",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-05-10",
     "resource": "Mana",
     "roles": [
@@ -63164,6 +63160,10 @@
       "mpRegen": 0.4,
       "attackDamage": 2.4,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Veigar": {
@@ -63459,10 +63459,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-07-24",
     "resource": "Mana",
     "roles": [
@@ -63490,6 +63486,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.7,
       "attackSpeed": 2.2
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Velkoz": {
@@ -63860,10 +63860,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 1618,
-      "rp": 880
-    },
     "releaseDate": "2014-02-27",
     "resource": "Mana",
     "roles": [
@@ -63892,6 +63888,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.1,
       "attackSpeed": 1.6
+    },
+    "price": {
+      "blueEssence": 1618,
+      "rp": 880
     }
   },
   "Vex": {
@@ -64235,10 +64235,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2021-09-23",
     "resource": "Mana",
     "roles": [
@@ -64266,6 +64262,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.8,
       "attackSpeed": 1
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Vi": {
@@ -64595,10 +64595,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2012-12-19",
     "resource": "Mana",
     "roles": [
@@ -64627,6 +64623,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Viego": {
@@ -64994,10 +64994,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2021-01-21",
     "resource": "None",
     "roles": [
@@ -65023,6 +65019,10 @@
       "hpRegen": 0.7,
       "attackDamage": 3.5,
       "attackSpeed": 2.3
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Viktor": {
@@ -65417,10 +65417,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2011-12-29",
     "resource": "Mana",
     "roles": [
@@ -65448,6 +65444,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Vladimir": {
@@ -65860,10 +65860,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2010-07-27",
     "resource": "Crimson rush",
     "roles": [
@@ -65889,6 +65885,10 @@
       "hpRegen": 0.6,
       "attackDamage": 3,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Volibear": {
@@ -66297,10 +66297,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2011-11-29",
     "resource": "Mana",
     "roles": [
@@ -66329,6 +66325,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Warwick": {
@@ -66691,10 +66691,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2009-02-21",
     "resource": "Mana",
     "roles": [
@@ -66723,6 +66719,10 @@
       "mpRegen": 0.6,
       "attackDamage": 2.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "MonkeyKing": {
@@ -67088,10 +67088,6 @@
       "Jungle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-07-26",
     "resource": "Mana",
     "roles": [
@@ -67120,6 +67116,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 3
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Xayah": {
@@ -67470,10 +67470,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2017-04-19",
     "resource": "Mana",
     "roles": [
@@ -67500,6 +67496,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.5,
       "attackSpeed": 3.9
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Xerath": {
@@ -67888,10 +67888,6 @@
       "Middle",
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2011-10-05",
     "resource": "Mana",
     "roles": [
@@ -67920,6 +67916,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 1.4
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "XinZhao": {
@@ -68304,10 +68304,6 @@
     "positions": [
       "Jungle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2010-07-13",
     "resource": "Mana",
     "roles": [
@@ -68336,6 +68332,10 @@
       "mpRegen": 0.5,
       "attackDamage": 3,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Yasuo": {
@@ -68707,10 +68707,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2013-12-13",
     "resource": "Flow",
     "roles": [
@@ -68736,6 +68732,10 @@
       "hpRegen": 0.9,
       "attackDamage": 2.5,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Yone": {
@@ -69097,10 +69097,6 @@
       "Middle",
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2020-08-06",
     "resource": "Flow",
     "roles": [
@@ -69126,6 +69122,10 @@
       "hpRegen": 0.8,
       "attackDamage": 2,
       "attackSpeed": 3.5
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Yorick": {
@@ -69530,10 +69530,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2011-06-22",
     "resource": "Mana",
     "roles": [
@@ -69562,6 +69558,10 @@
       "mpRegen": 0.8,
       "attackDamage": 5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   },
   "Yunara": {
@@ -70031,10 +70031,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2025-07-16",
     "resource": "Mana",
     "roles": [
@@ -70061,6 +70057,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2.5,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Yuumi": {
@@ -70540,10 +70540,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 225,
-      "rp": 260
-    },
     "releaseDate": "2019-05-14",
     "resource": "Mana",
     "roles": [
@@ -70572,6 +70568,10 @@
       "mpRegen": 0.4,
       "attackDamage": 3.1,
       "attackSpeed": 1
+    },
+    "price": {
+      "blueEssence": 225,
+      "rp": 260
     }
   },
   "Zaahen": {
@@ -70988,10 +70988,6 @@
     "positions": [
       "Top"
     ],
-    "price": {
-      "blueEssence": 3150,
-      "rp": 975
-    },
     "releaseDate": "2025-11-19",
     "resource": "Mana",
     "roles": [
@@ -71020,6 +71016,10 @@
       "mpRegen": 0.8,
       "attackDamage": 4,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 3150,
+      "rp": 975
     }
   },
   "Zac": {
@@ -71410,10 +71410,6 @@
       "Support",
       "Top"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2013-03-29",
     "resource": "Health",
     "roles": [
@@ -71438,6 +71434,10 @@
       "hpRegen": 0.5,
       "attackDamage": 3.4,
       "attackSpeed": 1.6
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Zed": {
@@ -71777,10 +71777,6 @@
       "Jungle",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2012-11-13",
     "resource": "Energy",
     "roles": [
@@ -71805,6 +71801,10 @@
       "hpRegen": 0.7,
       "attackDamage": 3.4,
       "attackSpeed": 3.3
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Zeri": {
@@ -72163,10 +72163,6 @@
     "positions": [
       "Bottom"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2022-01-20",
     "resource": "Mana",
     "roles": [
@@ -72193,6 +72189,10 @@
       "mpRegen": 0.8,
       "attackDamage": 2,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Ziggs": {
@@ -72550,10 +72550,6 @@
       "Bottom",
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2012-02-01",
     "resource": "Mana",
     "roles": [
@@ -72581,6 +72577,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.1,
       "attackSpeed": 2
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Zilean": {
@@ -72870,10 +72870,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 675,
-      "rp": 585
-    },
     "releaseDate": "2009-04-18",
     "resource": "Mana",
     "roles": [
@@ -72902,6 +72898,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 675,
+      "rp": 585
     }
   },
   "Zoe": {
@@ -73282,10 +73282,6 @@
     "positions": [
       "Middle"
     ],
-    "price": {
-      "blueEssence": 2400,
-      "rp": 880
-    },
     "releaseDate": "2017-11-21",
     "resource": "Mana",
     "roles": [
@@ -73314,6 +73310,10 @@
       "mpRegen": 0.7,
       "attackDamage": 3.3,
       "attackSpeed": 2.5
+    },
+    "price": {
+      "blueEssence": 2400,
+      "rp": 880
     }
   },
   "Zyra": {
@@ -73602,10 +73602,6 @@
     "positions": [
       "Support"
     ],
-    "price": {
-      "blueEssence": 1575,
-      "rp": 790
-    },
     "releaseDate": "2012-07-24",
     "resource": "Mana",
     "roles": [
@@ -73634,6 +73630,10 @@
       "mpRegen": 0.8,
       "attackDamage": 3.2,
       "attackSpeed": 2.1
+    },
+    "price": {
+      "blueEssence": 1575,
+      "rp": 790
     }
   }
 }

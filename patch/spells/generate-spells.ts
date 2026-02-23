@@ -1,17 +1,16 @@
-import fs from 'node:fs'
-import { resolve } from 'node:path'
-import { markUpdate } from '../misc/markUpdate'
-import { checkUpdate, stripEmpty } from '../utils'
+import type { Spell } from "#shared/types"
+import fs from "node:fs"
+import { resolve } from "node:path"
+import { markUpdate } from "../misc/markUpdate"
+import { checkUpdate, stripEmpty } from "../utils"
 
-const dataPath = resolve('./layers/patch/server/spells/raw/summoner-spells.json')
-const outputPath = resolve(
-  './layers/patch/shared/constants/misc/spells.ts'
-)
+const dataPath = resolve("./patch/spells/raw/summoner-spells.json")
+const outputPath = resolve("./shared/constants/misc/spells.ts")
 
 async function buildSpellIndex() {
-  const needsUpdate = await checkUpdate('spell')
+  const needsUpdate = await checkUpdate("spell")
   if (!needsUpdate) {
-    console.log('no update found locally; fetching...')
+    console.log("no update found locally; fetching...")
     // await fetchSpells() // call your handler
   }
   function n(num: string): number {
@@ -20,7 +19,7 @@ async function buildSpellIndex() {
   function i(num: string): number {
     return Number.parseInt(num)
   }
-  const raw: any[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+  const raw: any[] = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
   const spells: Record<number, Spell> = raw.reduce(
     (acc, spell) => {
       const charge = n(spell.maxAmmo) > 0
@@ -49,8 +48,8 @@ async function buildSpellIndex() {
       null,
       2
     )
-      .replace(/"(\d+)"/g, '$1')
-      .replace(/"(.+)":/g, '$1:')}`
+      .replace(/"(\d+)"/g, "$1")
+      .replace(/"(.+)":/g, "$1:")}`
   )
 }
 

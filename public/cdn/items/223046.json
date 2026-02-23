@@ -1,0 +1,14 @@
+{
+  "id": 223046,
+  "name": "Phantom Dancer",
+  "description": "60% Attack Speed\n8% Move Speed\n25% Critical Strike Chance\n\nSpectral Waltz\nBecome Ghosted.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
+  },
+  "maps": [
+    30
+  ]
+}

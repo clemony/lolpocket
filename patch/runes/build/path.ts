@@ -1,33 +1,28 @@
-import fs from 'node:fs'
-import { resolve } from 'node:path'
-import { markUpdate } from '../../misc/markUpdate'
-import { colorDict, transformDescription, transformShardDescription } from '../utils'
+import type { Rune } from "#shared/types"
+import fs from "node:fs"
+import { resolve } from "node:path"
+import { markUpdate } from "../../misc/markUpdate"
+import {
+  colorDict,
+  transformDescription,
+  transformShardDescription,
+} from "../utils"
 
-const rawRunes = resolve('./layers/patch/server/runes/raw/runes-raw.json')
-const rawPaths = resolve('./layers/patch/server/runes/raw/paths-raw.json')
+const rawRunes = resolve("./patch/runes/raw/runes-raw.json")
+const rawPaths = resolve("./patch/runes/raw/paths-raw.json")
 
-const pathData = JSON.parse(fs.readFileSync(rawPaths, 'utf-8'))
-const runeData = JSON.parse(fs.readFileSync(rawRunes, 'utf-8'))
+const pathData = JSON.parse(fs.readFileSync(rawPaths, "utf-8"))
+const runeData = JSON.parse(fs.readFileSync(rawRunes, "utf-8"))
 
-const outputRunes = resolve('./layers/patch/server/runes/raw/runes.json')
-const runesTSOutput = resolve('./layers/patch/shared/constants/runes/pathRecord.ts')
-const pathIdsTSOutput = resolve('./layers/patch/server/runes/raw/pathIds.ts')
-const outputPathIndex = resolve(
-  './layers/patch/shared/constants/runes/pathIndex.ts'
-)
-const outputRune = resolve(
-  './layers/patch/shared/constants/runes/runeIndex.ts'
-)
-const outputKeystone = resolve(
-  './layers/patch/shared/constants/runes/keystoneIndex.ts'
-)
-const runeIdToPathOutput = resolve(
-  './layers/patch/shared/constants/runes/runeToPath.ts'
-)
-const outputRawShards = resolve('./layers/patch/server/runes/raw/shards-raw.json')
-const shardOutput = resolve(
-  './layers/patch/shared/constants/runes/shards.ts'
-)
+const outputRunes = resolve("./patch/runes/raw/runes.json")
+const runesTSOutput = resolve("./shared/constants/runes/pathRecord.ts")
+const pathIdsTSOutput = resolve("./patch/runes/raw/pathIds.ts")
+const outputPathIndex = resolve("./shared/constants/runes/pathIndex.ts")
+const outputRune = resolve("./shared/constants/runes/runeIndex.ts")
+const outputKeystone = resolve("./shared/constants/runes/keystoneIndex.ts")
+const runeIdToPathOutput = resolve("./shared/constants/runes/runeToPath.ts")
+const outputRawShards = resolve("./patch/runes/raw/shards-raw.json")
+const shardOutput = resolve("./shared/constants/runes/shards.ts")
 // Create a lookup map for runes by ID for quick access
 const runesById = Object.fromEntries(
   runeData.map((rune: Rune) => [rune.id, rune])
@@ -38,8 +33,8 @@ const extraSlots: any[] = []
 // create object for pathName -> perk IDs
 const pathIdMap: Record<string, number[]> = {}
 const shardColorMap: Record<number, string> = {}
-const pathRegistry: { id: number, name: string, tooltip: string }[] = []
-const runeIndex: { id: number, name: string, key: string }[] = []
+const pathRegistry: { id: number; name: string; tooltip: string }[] = []
+const runeIndex: { id: number; name: string; key: string }[] = []
 const keystoneIndex: number[] = []
 
 const transformedPaths = Object.fromEntries(
@@ -56,7 +51,7 @@ const transformedPaths = Object.fromEntries(
     keystoneIndex.push(...slots.slice(0, 1).flatMap((s: any) => s.perks ?? []))
 
     const mappedSlots = mainSlots.map((slot: any, index: number) => ({
-      label: slot.slotLabel || (index === 0 ? 'Keystone' : ''),
+      label: slot.slotLabel || (index === 0 ? "Keystone" : ""),
       runes: (slot.perks ?? [])
         .map((perkId: number) => {
           const rune = runesById[perkId]
@@ -74,7 +69,7 @@ const transformedPaths = Object.fromEntries(
       for (const rune of slot.runes) {
         runeIndex.push({
           id: rune.id,
-          key: 'rune',
+          key: "rune",
           name: rune.name,
         })
       }
@@ -144,10 +139,13 @@ export const runeToPath: Record<number, string> = ${JSON.stringify(runeIdToPath,
 )
 
 // path index
-fs.writeFileSync(outputPathIndex, `// ${markUpdate()}
+fs.writeFileSync(
+  outputPathIndex,
+  `// ${markUpdate()}
 import type { Path } from '#shared/types'
 
-export const pathIndex: Path[] = ${JSON.stringify(pathRegistry, null, 2)}`)
+export const pathIndex: Path[] = ${JSON.stringify(pathRegistry, null, 2)}`
+)
 
 // path record
 fs.writeFileSync(
@@ -167,23 +165,32 @@ export const pathIds: Record<string, number[]> = ${JSON.stringify(pathIdMap, nul
 )
 
 // runes
-fs.writeFileSync(outputRune, `// ${markUpdate()}
+fs.writeFileSync(
+  outputRune,
+  `// ${markUpdate()}
 import type { Index } from "#shared/types"
 
-export const runeIndex: Index[] = ${JSON.stringify(runeIndex, null, 2)}`)
+export const runeIndex: Index[] = ${JSON.stringify(runeIndex, null, 2)}`
+)
 
 // keystones
-fs.writeFileSync(outputKeystone, `// ${markUpdate()}
+fs.writeFileSync(
+  outputKeystone,
+  `// ${markUpdate()}
 
-export const keystoneIndex: number[] = ${JSON.stringify(keystoneIndex, null, 2)}`)
+export const keystoneIndex: number[] = ${JSON.stringify(keystoneIndex, null, 2)}`
+)
 
 // Write shards
 fs.writeFileSync(outputRawShards, JSON.stringify(extraSlots, null, 2))
 
-fs.writeFileSync(shardOutput, `// ${markUpdate()}
+fs.writeFileSync(
+  shardOutput,
+  `// ${markUpdate()}
 import type { ShardRegistry } from "#shared/types"
 
-export const shardRegistry: ShardRegistry[] = ${JSON.stringify(extraSlots, null, 2)}`)
+export const shardRegistry: ShardRegistry[] = ${JSON.stringify(extraSlots, null, 2)}`
+)
 
 fs.writeFileSync(outputRunes, JSON.stringify(transformedPaths, null, 2))
 

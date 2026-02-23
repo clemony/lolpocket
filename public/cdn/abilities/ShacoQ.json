@@ -1,0 +1,55 @@
+{
+  "key": "Q",
+  "name": "Deceive",
+  "affects": "Self",
+  "blurb": "Active:  Shaco becomes  invisible for a short time and  blinks to the target location.",
+  "castTime": "none",
+  "cooldown": "13 / 12.5 / 12 / 11.5 / 11",
+  "cost": "40",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.</p>",
+      "leveling": [
+        {
+          "attribute": "Invisibility Duration",
+          "modifiers": [
+            {
+              "unit": " seconds",
+              "values": "2.5 / 2.75 / 3 / 3.25 / 3.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Deceive's invisibility breaks when Shaco uses a basic attack or casts Two-Shiv Poison, but not from casting Jack in the Box or Hallucinate."
+    },
+    {
+      "description": "After breaking the invisibility, Shaco empowers his next basic attack within 0.25 seconds to deal bonus physical damage, which is affected by critical strike modifiers.",
+      "leveling": [
+        {
+          "attribute": "Bonus Physical Damage",
+          "modifiers": [
+            {
+              "values": "25 / 35 / 45 / 55 / 65"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 30%) damage, increased to (175% + 30%) if a critical strike was rolled.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
+  "notes": "If the attack would have already  critically struck based on Shaco's critical strike chance, the base  Backstab critical damage modifier will be overridden by the default critical damage modifier.\nDeceive's bonus damage adds directly to the damage instance of the basic attack.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
+  "resource": "Mana",
+  "spellEffects": "basic",
+  "targeting": "Location",
+  "targetRange": "400"
+}

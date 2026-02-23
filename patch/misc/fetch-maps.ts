@@ -1,4 +1,4 @@
-import type { MapIndex } from "../../shared/types/types.league"
+import type { MapIndex } from "#shared/types"
 /* eslint-disable antfu/no-top-level-await */
 import fs from "node:fs"
 import { $fetch } from "ofetch"
@@ -19,7 +19,7 @@ const cleanedMapData: MapIndex[] = rawMapData
   }))
 
 fs.writeFileSync(
-  "./layers/patch/shared/constants/misc/map-index.ts",
+  "./shared/constants/misc/map-index.ts",
   `// ${markUpdate()}
 import type { MapIndex } from "#shared/types"
 

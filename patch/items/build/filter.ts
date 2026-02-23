@@ -1,36 +1,27 @@
+import type { Item } from "#shared/types"
 import fs from "node:fs"
 import { resolve } from "node:path"
 import { markUpdate } from "../../misc/markUpdate"
 import { normalizeArray } from "../../utils"
 
-const dataPath = resolve(`./layers/patch/server/items/raw/items-merged.json`)
+const dataPath = resolve(`./patch/items/raw/items-merged.json`)
 const raw = JSON.parse(fs.readFileSync(dataPath, "utf-8")) as Record<
   string,
   any
 >
 
-const outputTag = resolve("./layers/patch/shared/constants/items/tagToItem.ts")
-const outputMap = resolve("./layers/patch/shared/constants/items/mapToItem.ts")
-const outputPrice = resolve(
-  "./layers/patch/shared/constants/items/itemPrice.ts"
-)
-const outputRank = resolve(
-  "./layers/patch/shared/constants/items/rankToItem.ts"
-)
+const outputTag = resolve("./shared/constants/items/tagToItem.ts")
+const outputMap = resolve("./shared/constants/items/mapToItem.ts")
+const outputPrice = resolve("./shared/constants/items/itemPrice.ts")
+const outputRank = resolve("./shared/constants/items/rankToItem.ts")
 
-const outputItemRank = resolve(
-  "./layers/patch/shared/constants/items/itemRank.ts"
-)
-const outputStat = resolve(
-  "./layers/patch/shared/constants/items/statToItem.ts"
-)
+const outputItemRank = resolve("./shared/constants/items/itemRank.ts")
+const outputStat = resolve("./shared/constants/items/statToItem.ts")
 const outputUnpurchasable = resolve(
-  "./layers/patch/shared/constants/items/unpurchasableItems.ts"
+  "./shared/constants/items/unpurchasableItems.ts"
 )
-const outputRecipe = resolve(
-  "./layers/patch/shared/constants/items/itemRecipe.ts"
-)
-const outputAka = resolve("./layers/patch/shared/constants/items/itemAka.ts")
+const outputRecipe = resolve("./shared/constants/items/itemRecipe.ts")
+const outputAka = resolve("./shared/constants/items/itemAka.ts")
 
 const itemsById: Record<number, Item> = {}
 const itemRecipe = {} as Record<string, number[]>

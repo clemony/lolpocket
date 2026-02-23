@@ -1,0 +1,14 @@
+{
+  "id": 9301,
+  "name": "Shield Slam",
+  "description": "Leona slams her shield, dealing damage in a cone that scales with her armor.\n\nEvolve: Armor\n\nDamage, Ability Haste, Area Size, Crit Chance, Armor",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    33
+  ]
+}

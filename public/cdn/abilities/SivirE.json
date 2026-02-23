@@ -1,0 +1,32 @@
+{
+  "key": "E",
+  "name": "Spell Shield",
+  "affects": "Self",
+  "blurb": "Active:  Sivir briefly gains a  spell shield.",
+  "castTime": "none",
+  "cooldown": "24 / 22.5 / 21 / 19.5 / 18",
+  "cost": "0",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, she heals herself and activates Fleet of Foot after 0.25 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Heal",
+          "modifiers": [
+            {
+              "unit": "% AD",
+              "values": "60 / 65 / 70 / 75 / 80"
+            },
+            {
+              "unit": "% AP",
+              "values": "50"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/e",
+  "notes": "Spell Shield will heal and activate  Fleet of Foot if any effect is blocked. This includes effects such as champion abilities, item effects,  Dragon's basic attacks, as well as the abilities of  Baron Nashor and  Rift Herald.\nSpell Shield will still block abilities that have already been applied to Sivir if the delayed effects of that ability is area of effect (e.g.  Blaze's explosion,  Chum the Waters, and  Time Bomb).",
+  "targeting": "Auto"
+}

@@ -1,17 +1,20 @@
-import fs from 'node:fs'
-import { dirname, resolve } from 'node:path'
-import { normalize } from '../../utils'
+import type { Champion } from "#shared/types"
+import fs from "node:fs"
+import { dirname, resolve } from "node:path"
+import { normalize } from "../../utils"
 
-const inputPath = resolve(`./layers/patch/server/champions/raw/champions-raw.json`)
-const outputPath = resolve(`./layers/patch/server/champions/raw/unique-ability-resources.json`)
+const inputPath = resolve(`./patch/champions/raw/champions-raw.json`)
+const outputPath = resolve(
+  `./patch/champions/raw/unique-ability-resources.json`
+)
 
-const championsRaw = fs.readFileSync(inputPath, 'utf-8')
+const championsRaw = fs.readFileSync(inputPath, "utf-8")
 const champions = JSON.parse(championsRaw) as Champion[]
 
 const uniqueResources = new Set<string>()
 
 for (const champ of Object.values(champions)) {
-  if (!champ?.abilities || typeof champ.abilities !== 'object') continue
+  if (!champ?.abilities || typeof champ.abilities !== "object") continue
 
   for (const slot of Object.values(champ.abilities)) {
     if (!Array.isArray(slot)) continue

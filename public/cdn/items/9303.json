@@ -1,0 +1,14 @@
+{
+  "id": 9303,
+  "name": "Pillory Swipe",
+  "description": "Briar sweeps in front of her, dealing damage that scales with her Max Health.\n\nEvolve:  Max Health\n\nDamage, Ability Haste, Area Size, Crit Chance, Max Health ",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    33
+  ]
+}

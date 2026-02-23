@@ -1,0 +1,50 @@
+{
+  "key": "Q",
+  "name": "Steel Tempest",
+  "width": "80 /  180",
+  "affects": "Enemies",
+  "blurb": "Active:  Yasuo thrusts his sword in a line in the target direction that deals physical damage to enemies hit and applies  on-hit and  on-attack effects to the first enemy hit. This can  critically strike.",
+  "castTime": "0.35 : 0.175 (based on bonus attack speed) / 0.35 : 0.28 (based on bonus attack speed)",
+  "cooldown": "4",
+  "cost": "0",
+  "damageType": "Physical damage",
+  "effectRadius": "215",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo thrusts his sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Steel Tempest's damage based on its AD ratio can critically strike for (175% + 30%) damage.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "20 / 45 / 70 / 95 / 120"
+            },
+            {
+              "unit": "% AD",
+              "values": "105"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Steel Wind Rising:</span> If this hits at least one enemy, Yasuo generates a stack of Gathering Storm for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Steel Tempest cast consumes them all to become empowered with a new effect.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gathering Storm Bonus:</span> Yasuo unleashes a whirlwind in the target direction that applies and triggers the same effects and additionally knocks up enemies hit for 0.9 seconds.</p>"
+    },
+    {
+      "description": "Steel Tempest's thrust will fail to hit targets after the cast time if Yasuo was affected by disarming crowd control during it, but the cooldown of the ability is reset to 0.1 seconds."
+    },
+    {
+      "description": "If Steel Tempest is cast during Sweeping Blade, the cast is modified to cause Yasuo to slash around himself at the end of the dash, applying and triggering the same effects against nearby enemies. This slash can be empowered by Gathering Storm's bonus, causing it to additionally apply the knock up to enemies hit. Steel Tempest's cast time is not incurred when it is cast this way, but Yasuo will become unable to declare basic attacks for 0.5 seconds after the dash ends."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/q",
+  "notes": "This ability always employs Quick cast.\nCasting  Sweeping Blade when Steel Tempest's remaining cooldown is less than 0.5 seconds resets this remaining cooldown to allow casting it in combination, but adds the refunded time to Steel Tempest's cooldown.\nIf Yasuo  blinks during  Sweeping Blade after having buffered Steel Tempest during it, he will perform the slash at the blink location, applying Steel Tempest's effects to enemies in the area at the time.\nIf Yasuo becomes unable to cast abilities during  Sweeping Blade's dash after buffering Steel Tempest, Steel Tempest will not cast, but will still go on cooldown.(note)\nThe whirlwind from consuming stacks of Gathering Storm can strike targets whose center is behind Yasuo, unlike most  missiles.\nSteel Tempest applies  basic damage to the first (closest) enemy hit and  area damage to secondary enemies:\nSteel Tempest will apply  on-hit effects to the first target hit, but will not do so to the secondary ones.\nSteel Tempest will not apply  spell effects to the first target hit, but will do so to the secondary ones.\n Spell vamp will only grant  healing from the damage dealt to secondary targets, and healing is reduced to 33% effectiveness, accordingly.\n Life steal will heal based on the damage dealt to the first target hit.\nThe whirlwind is a missile and can therefore be  intercepted.\nSteel Tempest will only draw minion aggro if the first target is a champion.\nThis ability will cast from wherever the caster is at the end of the cast time.\nEach parry has different interactions with this ability, whether it's the first target of Steel Tempest or the secondary one. In either case Yasuo still gains a stack of Gathering Storm and his whirlwind knock-up cannot be negated by parries:\n Dodge: both first target and secondary target do not take damage.\n Block: first target does not take damage, secondary target does take damage.\n Blind: both first target and secondary target do take damage.\nSteel Tempest rolls its  critical strikes individually against each enemy hit.\nCasting  Last Breath during Steel Tempest will buffer it to cast after the cast time has completed.\nHowever, if  Last Breath is used on a target affected by an  airborne source that is not Yasuo, it is cast immediately due to Steel Tempest's cast time ending prematurely. Steel Tempest will still cast in this case.\n Spell shield does not prevent a stack of Gathering Storm from being gained.\nWhile at two stacks, a range indicator will be shown for the effective range of the whirlwind.",
+  "projectile": "SPECIAL",
+  "speed": "1200",
+  "spellEffects": "Special",
+  "spellshieldable": "true",
+  "targeting": "Direction / Auto"
+}

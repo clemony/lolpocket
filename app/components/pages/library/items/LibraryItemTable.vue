@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Tooltip, UUser } from "#components"
-import { itemLite } from "#layers/patch/shared/records/itemLite"
 import type { TableColumn } from "@nuxt/ui"
 
 definePageMeta({
@@ -10,9 +9,19 @@ definePageMeta({
 
 const { filtered } = storeToRefs(is())
 
+const { data: itemsLite, status } = useFetch<Record<number, ItemLite>>(
+  () => `/cdn/items-lite.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false,
+    key: () => `items-lite`,
+  }
+)
+
 const data = computed<ItemLite[]>(() =>
   filtered.value
-    .map((v: number) => itemLite[v])
+    .map((v: number) => itemsLite.value?.[v])
     .filter((item): item is ItemLite => Boolean(item))
 )
 
@@ -82,6 +91,5 @@ const columns: TableColumn<ItemLite>[] = [
 </script>
 
 <template>
-  <UTable :columns :data sticky>
-  </UTable>
+  <UTable :columns :data sticky> </UTable>
 </template>

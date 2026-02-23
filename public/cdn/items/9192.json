@@ -1,0 +1,13 @@
+{
+  "id": 9192,
+  "name": "Paw Print Poisoner",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    33
+  ]
+}

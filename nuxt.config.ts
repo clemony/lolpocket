@@ -8,7 +8,7 @@ import { beasties } from "vite-plugin-beasties"
 export default defineNuxtConfig({
   imports: {
     global: true,
-    dirs: ["#shared/schema", "~/stores", "#layers/patch/shared/constants"],
+    dirs: ["#shared/schema", "~/stores", "#shared/constants"],
   },
 
   dir: {
@@ -71,6 +71,9 @@ export default defineNuxtConfig({
   nitro: {
     imports: {
       dirs: ["#shared/schema", "#server/domain", "#server/api/riot"],
+    },
+    externals: {
+      external: ["sharp"],
     },
     routeRules: {
       "./layers/store/server/api/**": {

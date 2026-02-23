@@ -5,13 +5,21 @@ const { match, player, timeline } = defineProps<{
   player: Player
 }>()
 
-const championData = await import(
-  `#shared/records/champions/${champKeyById(player.championId)}.ts`
+const idRef = computed(() => player.championId ?? 0)
+
+const { data: champion, status } = useFetch<Champion>(
+  () => `/cdn/champions/${idRef.value}.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false,
+    key: () => `champion-${idRef.value}`,
+    watch: [idRef],
+  }
 )
-const champion = computed(() => championData.default)
 
 const abilities = computed(() =>
-  champion.value.abilities.filter((a: { key: string }) => a.key !== "P")
+  champion.value?.abilities.filter((a: { key: string }) => a.key !== "P")
 )
 
 const skillOrder = computed(() => [

@@ -1,0 +1,11 @@
+{
+  "id": 222022,
+  "name": "Glowing Mote",
+  "description": "5 Ability Haste\n\n",
+  "gold": {
+    "base": 250,
+    "purchasable": false,
+    "total": 250,
+    "sell": 175
+  }
+}

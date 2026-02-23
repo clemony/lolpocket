@@ -1,14 +1,12 @@
-import fs from 'node:fs'
-import { join, resolve } from 'node:path'
-import { markUpdate } from '../../misc/markUpdate'
+import fs from "node:fs"
+import { join, resolve } from "node:path"
+import { markUpdate } from "../../misc/markUpdate"
 
-const dataPath = resolve('layers/patch/server/runes/raw/runes.json')
-const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+const dataPath = resolve("./patch/runes/raw/runes.json")
+const raw = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
 
-const runeOutputDir = resolve('layers/patch/shared/records/runes')
-const outputTier = resolve(
-  'layers/patch/shared/constants/runes/runeToTier.ts'
-)
+const runeOutputDir = resolve("./public/cdn/runes")
+const outputTier = resolve("./shared/constants/runes/runeToTier.ts")
 
 const outputIndex: Record<string, any> = {}
 
@@ -28,7 +26,7 @@ for (const runePath of p) {
     slot.runes.map((rune: any, tierSlot: number) => {
       const enriched = {
         ...rune,
-        description: rune.description.replace(/\|\|/g, '/'),
+        description: rune.description.replace(/\|\|/g, "/"),
         path: runePath.name,
         pathId: runePath.id,
         tier: slot.tier,
@@ -52,7 +50,7 @@ export default rune`
       return enriched
     })
   )
-  console.log('🥸 - slots:', slots)
+  console.log("🥸 - slots:", slots)
 
   outputIndex[pathName] = slots
 
@@ -62,4 +60,4 @@ export const runeToTier: Record<number, number> = ${JSON.stringify(runeToTier, n
   fs.writeFileSync(outputTier, tierOutput)
 }
 
-console.log('✅ Split rune files generated per rune')
+console.log("✅ Split rune files generated per rune")

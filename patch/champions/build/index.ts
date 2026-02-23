@@ -1,19 +1,17 @@
-import fs from 'node:fs'
-import { resolve } from 'node:path'
-import { markUpdate } from '../../misc/markUpdate'
+import fs from "node:fs"
+import { resolve } from "node:path"
+import { markUpdate } from "../../misc/markUpdate"
 
-const outputFile = resolve(
-  './layers/patch/shared/constants/champions/championIndex.ts'
-)
+const outputFile = resolve("./shared/constants/champions/championIndex.ts")
 const outputRoles = resolve(
-  './layers/patch/shared/constants/champions/champKeyToRole.ts'
+  "./shared/constants/champions/champKeyToRole.ts"
 )
-const dataPath = resolve('./layers/patch/server/champions/raw/champions-raw.json')
+const dataPath = resolve("./patch/champions/raw/champions-raw.json")
 
-const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+const champs = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
 
 // Extract id, name, and path
-const index: { id: number, key: string, name: string }[] = []
+const index: { id: number; key: string; name: string }[] = []
 const roleIndex: Record<string, string> = {}
 for (const champ in champs) {
   const champion = champs[champ]

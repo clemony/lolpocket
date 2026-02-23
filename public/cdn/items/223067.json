@@ -1,0 +1,11 @@
+{
+  "id": 223067,
+  "name": "Kindlegem",
+  "description": "200 Health\n10 Ability Haste\n\n",
+  "gold": {
+    "base": 500,
+    "purchasable": false,
+    "total": 500,
+    "sell": 350
+  }
+}

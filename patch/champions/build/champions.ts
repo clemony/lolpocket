@@ -1,4 +1,5 @@
-import { roundDecimal } from "#layers/lib/shared/utils"
+import { roundDecimal } from "#layers/lib/shared/utils/math"
+import type { Ability, Champion, Skin } from "#shared/types"
 import fs from "node:fs"
 import path from "node:path"
 import process from "node:process"
@@ -24,21 +25,19 @@ const SCRIPT_KEY = "generate-champions"
 
 // ---------- File paths ----------
 const dataPathD = path.resolve(
-  `./layers/patch/server/champions/raw/champions-raw-data-dragon.json`
+  `./patch/champions/raw/champions-raw-data-dragon.json`
 )
-const outputDir = path.resolve("./layers/patch/shared/records/champions/")
-const outputMergedRaw = path.resolve(
-  `./layers/patch/server/champions/raw/champions-raw.json`
-)
+const outputDir = path.resolve("./public/cdn/champions/")
+const outputMergedRaw = path.resolve(`./patch/champions/raw/champions-raw.json`)
 const savepointPath = path.resolve(
-  `./layers/patch/server/champions/raw/.generate-champions-save.json`
+  `./patch/champions/raw/.generate-champions-save.json`
 )
-const outputAbilities = path.resolve("./layers/patch/shared/records/abilities/")
+const outputAbilities = path.resolve("./public/cdn/abilities/")
 const outputAbilityId = path.resolve(
-  "./layers/patch/shared/constants/champions/abilityIdToName.ts"
+  "./shared/constants/champions/abilityIdToName.ts"
 )
 const urlMA = fs.readFileSync(
-  path.resolve(`./layers/patch/server/champions/raw/champions.json`),
+  path.resolve(`./patch/champions/raw/champions.json`),
   "utf-8"
 )
 
@@ -147,19 +146,14 @@ for (const [key, champ] of Object.entries(merakiData)) {
     for (const ability of cleanedAbilities) {
       const abilityFile = path.join(
         outputAbilities,
-        `${champ.key}${ability.key}.ts`
+        `${champ.key}${ability.key}.json`
       )
 
       abilityIdToName[`${champ.id}${ability.key}`] = ability.name
 
       fs.writeFileSync(
         abilityFile,
-        `// ${markUpdate()}
-  import type { Ability } from "#shared/types"
-
-  const ability: Ability = ${JSON.stringify(stripEmpty(ability), null, 2)}
-  export default ability
-`
+        JSON.stringify(stripEmpty(ability), null, 2)
       )
     }
 
@@ -243,13 +237,10 @@ for (const [key, champ] of Object.entries(merakiData)) {
     )
 
     // ---------- Write individual champion file ----------
-    const outputTsPath = path.join(outputDir, `${key}.ts`)
+    const outputJsonPath = path.join(outputDir, `${key}.json`)
     fs.writeFileSync(
-      outputTsPath,
-      `// ${markUpdate()}
-  import type { Champion } from '#shared/types'
-
-  const champion: Champion = ${JSON.stringify(stripEmpty(champData), null, 2)}\nexport default champion`
+      outputJsonPath,
+      JSON.stringify(stripEmpty(champData), null, 2)
     )
 
     // ---------- Write individual champion file ----------

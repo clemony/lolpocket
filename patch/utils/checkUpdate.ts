@@ -1,11 +1,11 @@
-import { resolve } from 'node:path'
-import { spellsUpdated } from '../spells/raw/spells-updated'
+import { resolve } from "node:path"
+import { spellsUpdated } from "../spells/raw/spells-updated"
 
-export type UpdateType = 'champion' | 'item' | 'rune' | 'spell'
+export type UpdateType = "champion" | "item" | "rune" | "spell"
 
 export function checkUpdate(type: UpdateType): boolean {
-  const patch = resolve('./layers/patch/server/misc/fetch-patch.json')
+  const patch = resolve("./patch/misc/fetch-patch.json")
 
-  if (type === 'spell') return Number(patch[0]) === Number(spellsUpdated)
+  if (type === "spell") return Number(patch[0]) === Number(spellsUpdated)
   else return false
 }

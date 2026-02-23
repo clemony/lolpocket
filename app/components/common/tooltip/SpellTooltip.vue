@@ -1,29 +1,21 @@
 <script setup lang="ts">
-import { OnClickOutside } from "@vueuse/components"
-
 const { id, class: className } = defineProps<{
   id: number
   class?: HTMLAttributes["class"]
 }>()
 
-const toast = useToast()
 const spell = computed(() => spells[id])
-function close() {
-  toast.remove(`spell-${id}`)
-}
 </script>
 
 <template>
-  <OnClickOutside
+  <div
     v-if="spell"
-    :key="spell.id"
     :class="
       cn(
         'relative flex size-full flex-col justify-center overflow-hidden',
         className
       )
-    "
-    @trigger="close()">
+    ">
     <div class="= flex w-full items-center gap-4 **:select-none">
       <Spell
         :id="spell.id"
@@ -90,5 +82,5 @@ function close() {
         {{ spell.description }}
       </span>
     </div>
-  </OnClickOutside>
+  </div>
 </template>

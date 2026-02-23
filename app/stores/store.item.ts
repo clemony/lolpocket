@@ -12,6 +12,8 @@ export interface ItemFilter {
 }
 
 export const is = defineStore("itemStore", () => {
+  const cache = new Map<number, Item>()
+
   // --- FILTER STATE ---
   const filters = ref<ItemFilter>({
     map: 11,
@@ -119,6 +121,7 @@ export const is = defineStore("itemStore", () => {
   const calculatorSet2 = ref<CalculatorSet>([0, 0, 0, 0, 0, 0])
 
   return {
+    cache,
     calculatorSet,
     calculatorSet2,
     clearFilters,

@@ -7,31 +7,18 @@ const { id, class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const rune = shallowRef<Rune | null>(null)
-const status = shallowRef<"idle" | "loading" | "success" | "error">("idle")
+const idRef = computed(() => id ?? 0)
 
-watchEffect(async () => {
-  console.log("🥸 - id:", id)
-  if (!id) return
-
-  status.value = "loading"
-  try {
-    const module = await import(`#layers/patch/shared/records/runes/${id}.ts`)
-    rune.value = module.default || null
-    console.log("🥸 - mod:", module)
-
-    status.value = "success"
-  } catch (e) {
-    status.value = "error"
-    console.error(e)
+const { data: rune, status } = useFetch<Rune>(
+  () => `/cdn/runes/${idRef.value}.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false,
+    key: () => `rune-${idRef.value}`,
+    watch: [idRef],
   }
-})
-
-const toast = useToast()
-const spell = computed(() => spells[id])
-function close() {
-  toast.remove(`rune-${id}`)
-}
+)
 </script>
 
 <template>
@@ -42,8 +29,7 @@ function close() {
         'relative flex size-full cursor-default flex-col justify-center pb-3',
         className
       )
-    "
-    @trigger="close()">
+    ">
     <div class="flex size-full items-center gap-2 px-3 py-2 **:select-none">
       <Img
         v-if="rune"
@@ -77,8 +63,8 @@ function close() {
           :color="(rune.tier === 0 ? 'gold' : 'p2') as BadgeProps['color']"
           :trailing-icon="rune.tier === 0 ? 'lucide:key' : 'lucide:diamond'"
           :label="
-            rune.tier === 0 ?
-              'Keystone'
+            rune.tier === 0
+              ? 'Keystone'
               : `Slot ${rune.tier} - ${rune.tierLabel}`
           " />
 

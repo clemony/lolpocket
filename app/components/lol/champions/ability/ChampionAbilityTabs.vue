@@ -1,51 +1,47 @@
 <script setup lang="ts">
-import { onKeyDown, onKeyUp } from '@vueuse/core'
+import { onKeyDown, onKeyUp } from "@vueuse/core"
 
 const { abilities, k } = defineProps<{
   abilities?: Ability[]
   k?: string
 }>()
 
-const emit = defineEmits(['update:ability'])
-const champion = await import(`#shared/records/champions/${k}.ts`)
-const loaded = ref(false)
-const champAbilities = computed(() => {
-  console.log('🌱 - champion:', champion)
-  if (!champion) return null
+const emit = defineEmits(["update:ability"])
 
-  return champion.default.abilities
-})
-console.log('🌱 - champAbilities:', champAbilities)
-const selectedAbility = ref('P')
-/*
-watch(() => champAbilities.value.name, (newVal) => {
-  if (newVal)
-    loaded.value = false
-}) */
+const idRef = computed(() => champIdByKey(String(k)) ?? 0)
 
+const { data: champion, status } = useFetch<Champion>(
+  () => `/cdn/champions/${idRef.value}.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false,
+    key: () => `champion-${idRef.value}`,
+    watch: [idRef],
+  }
+)
+const selectedAbility = ref("P")
 const keyDown = ref(false)
 
-onKeyDown(['p', 'q', 'w', 'e', 'r'], (e) => {
+onKeyDown(["p", "q", "w", "e", "r"], (e) => {
   if (selectedAbility.value !== e.key.toUpperCase()) {
     selectedAbility.value = e.key.toUpperCase()
-    emit('update:ability', selectedAbility.value)
+    emit("update:ability", selectedAbility.value)
   }
   keyDown.value = true
 })
 
-onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
+onKeyUp(["p", "q", "w", "e", "r"], (e) => {
   keyDown.value = false
 })
 
-const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
+/* const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`) */
 </script>
 
 <template>
   <menu
-    :class="
-      cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)
-    ">
-    <Label
+    :class="cn('pointer-events-auto z-1 items-center justify-between gap-2')">
+    <!--     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
       class="group aspect-square h-auto w-full cursor-pointer! overflow-hidden border-0 p-0 transition-transform duration-300 **:pointer-events-none hover:scale-110"
@@ -62,7 +58,7 @@ const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
         :value="i"
         type="radio"
         name="selected-ability"
-        @change="emit('update:ability', selectedAbility)">
+        @change="emit('update:ability', selectedAbility)" />
 
       <Img
         class="pointer-events-none size-full opacity-70 contrast-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
@@ -74,6 +70,6 @@ const gridCols = computed(() => `grid grid-cols-${champAbilities.value.length}`)
           'animate-out fade-out-50 duration-500': loaded,
         }"
         @load="loaded = true" />
-    </Label>
+    </Label> -->
   </menu>
 </template>

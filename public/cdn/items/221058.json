@@ -1,0 +1,14 @@
+{
+  "id": 221058,
+  "name": "Needlessly Large Rod",
+  "description": "120 Ability Power\n\n",
+  "gold": {
+    "base": 500,
+    "purchasable": false,
+    "total": 500,
+    "sell": 0
+  },
+  "maps": [
+    30
+  ]
+}
