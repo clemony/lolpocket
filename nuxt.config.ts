@@ -70,16 +70,12 @@ export default defineNuxtConfig({
   }, */
   nitro: {
     imports: {
-      dirs: ["#shared/schema", "#server/domain", "#server/api/riot"],
+      dirs: ["#server/domain", "#server/api/riot"],
     },
     externals: {
       external: ["sharp"],
     },
     routeRules: {
-      "./layers/store/server/api/**": {
-        cors: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      },
       "/api/**": {
         cors: true,
         headers: { "Access-Control-Allow-Origin": "*" },
@@ -187,7 +183,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   experimental: {
     extractAsyncDataHandlers: true,
-    nitroAutoImports: true,
+    //nitroAutoImports: true,
     typescriptPlugin: true,
     //viteEnvironmentApi: true,
   },

@@ -4,6 +4,7 @@
 .nitro
 .cache
 dist
+.vscode
 .storage
 .history
 .scripts

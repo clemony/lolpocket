@@ -24,20 +24,6 @@
     "/shared/indexes",
     "/shared/schema"
   ],
-  "exportall.config.relExclusion": [
-    "/app/utils/config",
-    "/shared/data/records",
-    "/shared/data/records/champions",
-    "/shared/data/records/items",
-    "/shared/data/records/runes",
-    "/shared/records",
-    "/app/utils/tiptap",
-    "/app/composables/form",
-    "/layers/domain/records/abilities",
-    "/layers/domain/records/champions",
-    "/layers/domain/records/items",
-    "/layers/domain/records/runes"
-  ],
 
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
