@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { regionIndex } from "#shared/constants/misc/region-index"
+
 defineOptions({
   inheritAttrs: false,
 })

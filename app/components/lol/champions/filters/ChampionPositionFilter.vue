@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
+import { mapPositions } from "#shared/constants/misc/positions"
 
 const {
   variant = "ghost",

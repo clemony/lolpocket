@@ -1,3 +1,8 @@
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { spells } from "#shared/constants/misc/spells"
+import { runeIndex } from "#shared/constants/runes/runeIndex"
+
 export function getLeagueMentionData() {
   return {
     groups: [

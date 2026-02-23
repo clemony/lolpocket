@@ -1,3 +1,17 @@
+import { abilityIdToName } from "#shared/constants/champions/abilityIdToName"
+import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { mapIndex } from "#shared/constants/misc/map-index"
+import { spells } from "#shared/constants/misc/spells"
+import { patchIndex } from "#shared/constants/patch-index"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { itemRank } from "#shared/constants/items/itemRank"
+import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import { pathIndex } from "#shared/constants/runes/pathIndex"
+import { pathToColor } from "#shared/constants/runes/pathToColor"
+import { runeIndex } from "#shared/constants/runes/runeIndex"
+import { shardRegistry } from "#shared/constants/runes/shards"
+
 //
 // champions
 

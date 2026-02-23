@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import type { MapPosition } from "#shared/constants/misc/positions"
+import { mapPositions } from "#shared/constants/misc/positions"
 
 const {
   class: className,

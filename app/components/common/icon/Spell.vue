@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import SpellTooltip from "#components"
+import { spells } from "#shared/constants/misc/spells"
 
 const {
   id,

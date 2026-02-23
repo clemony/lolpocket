@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { pathIndex } from "#shared/constants/runes/pathIndex"
+import { runeIndex } from "#shared/constants/runes/runeIndex"
+
 const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']

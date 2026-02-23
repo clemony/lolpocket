@@ -1,6 +1,7 @@
 //
 import equal from "fast-deep-equal/es6"
 import { defineStore } from "pinia"
+import { patchIndex } from "#shared/constants/patch-index"
 
 export const matchFilter = defineStore("match-filter", () => {
   const { summoner: s } = storeToRefs(sSession())

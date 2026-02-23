@@ -5,6 +5,12 @@ import {
 } from "~/domain/pocket/addPocketModules"
 import { generateName } from "~/domain/pocket/generateStrings"
 import { getSplash } from "~/domain/utils/img"
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { skinIndex } from "#shared/constants/champions/skin-index"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { mapPositions } from "#shared/constants/misc/positions"
+import { spells } from "#shared/constants/misc/spells"
+import { pathRecord } from "#shared/constants/runes/pathRecord"
 
 //
 export function newRandomPocket(): Pocket {

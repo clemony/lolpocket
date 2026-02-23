@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { mapToItem } from "#shared/constants/items/mapToItem"
+import { itemPrice } from "#shared/constants/items/itemPrice"
+import { itemRank } from "#shared/constants/items/itemRank"
+import { itemRankColor } from "#shared/constants/items/itemRankColor"
+
 const { id, map } = defineProps<{
   id: number
   map?: number

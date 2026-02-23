@@ -1,5 +1,6 @@
 import { bgArt } from "~/domain/riot/media/bg-art"
 import { ckey, formatUrlChampKey } from "~/domain/utils/utils"
+import { skinIndex } from "#shared/constants/champions/skin-index"
 
 //
 export function getSplash(

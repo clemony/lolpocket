@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
 import { SelectTrigger } from "reka-ui"
+import { mapPositions } from "#shared/constants/misc/positions"
 
 const {
   side,

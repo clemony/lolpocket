@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { motion } from "motion-v"
+import { pathIndex } from "#shared/constants/runes/pathIndex"
 
 const emit = defineEmits(["update:paths"])
 

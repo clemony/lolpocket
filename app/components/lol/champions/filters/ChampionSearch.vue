@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Fuse from "fuse.js"
+import { championIndex } from "#shared/constants/champions/championIndex"
 
 const props = defineProps<{
   class?: HTMLAttributes["class"]

@@ -1,3 +1,6 @@
+import { runeIndex } from "#shared/constants/runes/runeIndex"
+import { runeToPath } from "#shared/constants/runes/runeToPath"
+
 //
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => runeIndex)

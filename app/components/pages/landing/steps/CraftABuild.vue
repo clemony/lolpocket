@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { itemIndex } from "#shared/constants/items/itemIndex"
+
 /* const shuffled = [...champions.sort(() => 0.5 - Math.random())]
 const selectedChamps = computed (() => {
   console.log('💠 - selectedChamps - champions:', champions)

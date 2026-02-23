@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { itemRankColor } from "#shared/constants/items/itemRankColor"
+
 const ranks = computed(() => Object.keys(itemRankColor))
 console.log('🌱 - ranks:', ranks)
 function onClick(rank: string): void {

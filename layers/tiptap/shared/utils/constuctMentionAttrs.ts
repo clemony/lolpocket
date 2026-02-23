@@ -1,4 +1,6 @@
-import { champKeyToRole, itemRank, runeToPath } from "#shared/constants"
+import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
+import { itemRank } from "#shared/constants/items/itemRank"
+import { runeToPath } from "#shared/constants/runes/runeToPath"
 
 export function constructMentionAttrs(rawAttrs: any) {
   const item = attrsToProps(rawAttrs)

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { spells } from "#shared/constants/misc/spells"
+
 const { id, class: className } = defineProps<{
   id: number
   class?: HTMLAttributes["class"]

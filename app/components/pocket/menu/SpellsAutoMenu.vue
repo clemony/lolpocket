@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { spells } from "#shared/constants/misc/spells"
+
 const route = useRoute()
 const pocket = ref<Pocket | undefined>(
   usePockets().getPocket(String(route.params.pocket_key))

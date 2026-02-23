@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championToTitle } from "#shared/constants/champions/championToTitle"
+
 const { id } = defineProps<{
   id: number
 }>()

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import type { ChampionRole } from "#shared/constants/misc/roles"
+import { championRoles } from "#shared/constants/misc/roles"
 
 const { class: className, role: rl } = defineProps<{
   class?: HTMLAttributes["class"]

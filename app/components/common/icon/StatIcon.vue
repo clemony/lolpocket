@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { statIndex } from "#shared/constants/common/stat-index"
+
 const { class: className, stat: s } = defineProps<{
   class?: HTMLAttributes['class']
   stat: StatIndex | string

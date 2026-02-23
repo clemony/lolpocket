@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { pathIndex } from "#shared/constants/runes/pathIndex"
+import { pathRecord } from "#shared/constants/runes/pathRecord"
+
 definePageMeta({
   title: "Runes",
   icon: "lol:runes",

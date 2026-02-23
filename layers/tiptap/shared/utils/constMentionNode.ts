@@ -1,4 +1,4 @@
-import { keystoneIndex } from "#shared/constants"
+import { keystoneIndex } from "#shared/constants/runes/keystoneIndex"
 
 export function computeKeystoneStyle(item: any) {
   const isRune = item["data-key"] === "rune"

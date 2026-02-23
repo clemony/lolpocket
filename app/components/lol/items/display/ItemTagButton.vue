@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@nuxt/ui';
 import type { AsTag } from 'reka-ui';
+import type { ItemTag } from "#shared/constants/items/itemTags"
+import { itemTags } from "#shared/constants/items/itemTags"
 
 const {
   active,

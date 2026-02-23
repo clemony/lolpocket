@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { pathRecord } from "#shared/constants/runes/pathRecord"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()

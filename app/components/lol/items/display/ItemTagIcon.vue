@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ItemTag } from "#shared/constants/items/itemTags"
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
   tag: ItemTag

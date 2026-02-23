@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { roleItems } from "#shared/constants/items/roleItemIndex"
+
 const {
   class: className,
   isSR,

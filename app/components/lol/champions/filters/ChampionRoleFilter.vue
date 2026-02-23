@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
+import { championRoles } from "#shared/constants/misc/roles"
 
 const {
   variant = "ghost",

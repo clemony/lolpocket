@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { shardRegistry } from "#shared/constants/runes/shards"
+
 const { class: className, shards } = defineProps<{
   shards: ShardStats
   class?: HTMLAttributes["class"]

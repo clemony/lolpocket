@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Tooltip, UUser } from "#components"
 import type { TableColumn } from "@nuxt/ui"
+import { statIndex } from "~~/shared/constants/common/stat-index"
 
 definePageMeta({
   name: "Item Stats",

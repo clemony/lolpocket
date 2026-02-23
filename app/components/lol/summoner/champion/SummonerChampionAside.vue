@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
+import { championToTitle } from "#shared/constants/champions/championToTitle"
 
 const { champion, stats } = storeToRefs(sChampion())
 const { summoner } = storeToRefs(sSession())

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useMatchRoles } from "~/domain/match/useMatchRoles"
+import { mapPositions } from "#shared/constants/misc/positions"
 
 const { class: className, orientation = "horizontal" } = defineProps<{
   class?: HTMLAttributes["class"]

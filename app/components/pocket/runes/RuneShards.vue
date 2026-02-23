@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { shardRegistry } from "#shared/constants/runes/shards"
+
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
   set: RuneSet

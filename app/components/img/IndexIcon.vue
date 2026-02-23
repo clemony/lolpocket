@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { keystoneIndex } from "#shared/constants/runes/keystoneIndex"
+
 const { class: className, item } = defineProps<{
   class?: HTMLAttributes['class']
   item: Index

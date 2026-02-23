@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
+import { statIndex } from "#shared/constants/common/stat-index"
 
 const {
   active,

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { statIndex } from "#shared/constants/common/stat-index"
+
 const { filtered, filters } = is() as any
 </script>
 

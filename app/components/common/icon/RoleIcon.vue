@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import type { MapPosition } from "#shared/constants/misc/positions"
+import { mapPositions } from "#shared/constants/misc/positions"
+
 const { class: className, position: pos } = defineProps<{
   class?: HTMLAttributes["class"]
   position: MapPosition | string | null

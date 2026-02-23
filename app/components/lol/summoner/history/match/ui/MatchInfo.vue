@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { queueIndex } from "#shared/constants/misc/queue-index"
+
 const { match, player } = defineProps<{
   match: MatchData
   player: Player

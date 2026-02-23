@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { spells } from "#shared/constants/misc/spells"
+
 const props = defineProps<{
   alignOffset?: number
   class?: HTMLAttributes['class']

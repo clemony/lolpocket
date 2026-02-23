@@ -8,7 +8,7 @@ import { beasties } from "vite-plugin-beasties"
 export default defineNuxtConfig({
   imports: {
     global: true,
-    dirs: ["#shared/schema", "~/stores", "#shared/constants"],
+    dirs: ["#shared/schema", "~/stores"],
   },
 
   dir: {

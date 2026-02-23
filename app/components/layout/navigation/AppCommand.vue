@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { UDrawer, UModal } from "#components"
 import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { regionIndex } from "#shared/constants/misc/region-index"
 
 const items: CommandPaletteItem[] = itemIndex.map((i) => ({
   label: i.name,

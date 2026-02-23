@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@nuxt/ui';
+import { itemRankColor } from "#shared/constants/items/itemRankColor"
 
 const {
   color = "primary",

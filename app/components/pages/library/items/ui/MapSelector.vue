@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { mapIndex } from "#shared/constants/misc/map-index"
+
 const { collapsed } = defineProps<{
   collapsed?: boolean
 }>()

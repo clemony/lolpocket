@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { mapPositions } from "#shared/constants/misc/positions"
+
 const tags = ref<string[]>([])
 </script>
 

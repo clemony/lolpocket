@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
+
 const { items, stats } = storeToRefs(sChampion())
 const route = useRoute()
 

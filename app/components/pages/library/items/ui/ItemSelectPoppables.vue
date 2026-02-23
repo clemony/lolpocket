@@ -1,8 +1,22 @@
 <script lang="ts" setup>
+import type { CheckboxGroupItem } from "@nuxt/ui"
+import { statIndex } from "#shared/constants/common/stat-index"
+import { itemTags } from "#shared/constants/items/itemTags"
+
 const { collapsed } = defineProps<{
   collapsed?: boolean
 }>()
 const { filters } = storeToRefs(is())
+
+const statItems = computed<CheckboxGroupItem[]>(() =>
+  Object.values(statIndex)
+    .filter((s) => s.group !== "champion")
+    .map((s) => ({ id: s.id, name: s.name }))
+)
+
+const tagItems = computed<CheckboxGroupItem[]>(() =>
+  itemTags.map((t) => ({ id: t.id, name: t.name }))
+)
 </script>
 
 <template>
@@ -23,7 +37,7 @@ const { filters } = storeToRefs(is())
         variant="select"
         label-key="name"
         value-key="id"
-        :items="Object.values(statIndex).filter((s) => s.group !== 'champion')"
+        :items="statItems"
         @entry-focus.prevent />
     </template>
   </SidebarPoppableCollapse>
@@ -46,7 +60,7 @@ const { filters } = storeToRefs(is())
         label-key="name"
         icon="i-check"
         value-key="id"
-        :items="itemTags"
+        :items="tagItems"
         @entry-focus.prevent />
     </template>
   </SidebarPoppableCollapse>

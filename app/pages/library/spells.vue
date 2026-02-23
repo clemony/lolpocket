@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { spells } from "#shared/constants/misc/spells"
+
 definePageMeta({
   title: "Spells",
   icon: "i-basil-book-solid",

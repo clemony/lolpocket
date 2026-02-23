@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championToTitle } from "#shared/constants/champions/championToTitle"
+
 const route = useRoute()
 const pocket = computed(() =>
   usePockets().getPocket(String(route.params.pocket_key))

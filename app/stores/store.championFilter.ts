@@ -1,4 +1,9 @@
 import { defineStore } from "pinia"
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { positionToChamp } from "#shared/constants/champions/positionToChamp"
+import { rangeToChamp } from "#shared/constants/champions/rangeToChamp"
+import { resourceToChamp } from "#shared/constants/champions/resourceToChamp"
+import { roleToChamp } from "#shared/constants/champions/roleToChamp"
 
 export interface ChampionFilter {
   attackType: string[]

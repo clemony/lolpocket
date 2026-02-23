@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
+import { itemStatRecord } from "#shared/constants/items/itemStatRecord"
+import { statIndex } from "#shared/constants/common/stat-index"
 
 const checkedStats = ref<StatIndex[]>([])
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import "#layers/ui/app/assets/css/plugins/embla.css"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
+import { skinIndex } from "#shared/constants/champions/skin-index"
 import { getSplash } from "~/domain/utils/img"
 import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
 import { setupTweenParallax } from "~~/layers/ui/app/config/embla-tween-parallax"

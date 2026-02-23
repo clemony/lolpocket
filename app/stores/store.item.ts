@@ -1,4 +1,10 @@
 import { defineStore } from "pinia"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { mapToItem } from "#shared/constants/items/mapToItem"
+import { rankToItem } from "#shared/constants/items/rankToItem"
+import { statToItem } from "#shared/constants/items/statToItem"
+import { tagToItem } from "#shared/constants/items/tagToItem"
+import { unpurchasableItems } from "#shared/constants/items/unpurchasableItems"
 
 export interface ItemFilter {
   map: number

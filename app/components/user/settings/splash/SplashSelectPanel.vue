@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { getSplash } from "~/domain/utils/img"
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { skinIndex } from "#shared/constants/champions/skin-index"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]

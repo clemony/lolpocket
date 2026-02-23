@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { fromAbsolute, getLocalTimeZone } from '@internationalized/date'
+import { patchIndex } from "#shared/constants/patch-index"
 
 const { params } = defineProps<{
   params: any

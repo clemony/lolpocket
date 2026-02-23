@@ -1,5 +1,7 @@
 //
 import { generate } from "random-words"
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { itemIndex } from "#shared/constants/items/itemIndex"
 
 const moreWords = [
   "😘",

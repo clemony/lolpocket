@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from "@nuxt/ui"
+import { abilityResources } from "#shared/constants/champions/abilityResources"
 
 const {
   variant = "ghost",

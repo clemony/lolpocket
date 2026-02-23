@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { deleteRuneSet, resetRunes } from "~/domain/pocket/modifyPocket"
+import { pathIndex } from "#shared/constants/runes/pathIndex"
+import { pathRecord } from "#shared/constants/runes/pathRecord"
 
 const { set: s } = defineProps<{
   set: RuneSet

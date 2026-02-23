@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
+import type { AbilityResource } from "#shared/constants/champions/abilityResources"
+import { abilityResources } from "#shared/constants/champions/abilityResources"
 
 const { class: className, resource: p } = defineProps<{
   class?: HTMLAttributes["class"]

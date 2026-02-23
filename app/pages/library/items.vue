@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { LibraryItemGrid, LibraryItemTable } from "#components"
 import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
+import { itemQuotes } from "#shared/constants/items/itemQuotes"
+import { rankToItem } from "#shared/constants/items/rankToItem"
 
 definePageMeta({
   title: "Items",
