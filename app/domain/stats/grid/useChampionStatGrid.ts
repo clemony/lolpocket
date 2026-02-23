@@ -1,18 +1,4 @@
-import type {
-  ColDef,
-  ColGroupDef,
-  ValueFormatterParams,
-  ValueGetterParams,
-} from "ag-grid-community"
-//
-import {
-  GridLastPlayed,
-  GridMasteryPoints,
-  MasteryBadge,
-  TableChampion,
-} from "#components"
-import { perGameFormatter, perGameGetter, statGetter } from "."
-
+/*
 export function useChampionStatGrid() {
   const killStats = [
     { bold: true, field: "kills", label: "Total", tooltip: "Kills" },
@@ -81,11 +67,6 @@ export function useChampionStatGrid() {
     headerTooltip: tooltip,
     valueGetter: statGetter(k),
   })
-
-  /*   @click="${handleNav(params.data.championId)}"
-  function handleNav(championId: number) {
-
-  } */
 
   const championIdColumn: ColDef<ChampionStatsAndMastery> = {
     cellClass: "*!px-0 items-center !flex ",
@@ -178,7 +159,6 @@ export function useChampionStatGrid() {
   return [
     spacerColumn,
     championIdColumn,
-    //   killGroup,
     averagedNumber("kills", "Kills", "Kills"),
     averagedNumber(
       "deaths",
@@ -199,3 +179,4 @@ export function useChampionStatGrid() {
     { ...spacerColumn, headerClass: "[&_.ag-header-cell-resize]:hidden!" },
   ]
 }
+ */

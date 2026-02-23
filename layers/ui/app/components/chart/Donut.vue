@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EChartsOption, PieSeriesOption } from "echarts"
+/* import type { EChartsOption, PieSeriesOption } from "echarts"
 import VChart from "vue-echarts"
 
 const {
@@ -34,7 +34,6 @@ const series = computed<PieSeriesOption>(() => ({
   radius: [cutout, "100%"],
   silent: tooltip === false,
 
-  // Avoid artifacts for full/empty rings
   padAngle:
     nonZeroCount.value <= 1 ? 0
     : overlap ? -4
@@ -55,17 +54,17 @@ const series = computed<PieSeriesOption>(() => ({
         itemStyle: { color: data.datasets[0]?.backgroundColor?.[i] },
       })),
 }))
-
-const option = computed<EChartsOption>(() => ({
+ */
+/* const option = computed<EChartsOption>(() => ({
   series: [series.value],
   tooltip: {
     formatter: "{b}: {c}",
     show: tooltip,
     trigger: "item",
   },
-}))
+})) */
 </script>
 
 <template>
-  <VChart :option="option" autoresize :class="cn(className)" />
+  <!--   <VChart :option="option" autoresize :class="cn(className)" /> -->hih
 </template>

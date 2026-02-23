@@ -32,29 +32,29 @@ watch(
     <div
       v-if="
         ability &&
-          (ability.resource ||
-            ability.cooldown?.length ||
-            ability.rechargeRate ||
-            ability.cost?.length ||
-            ability.effectRadius ||
-            ability.targetRange)
+        (ability.resource ||
+          ability.cooldown?.length ||
+          ability.rechargeRate ||
+          ability.cost?.length ||
+          ability.effectRadius ||
+          ability.targetRange)
       "
       class="flex w-full flex-wrap items-center gap-x-8 gap-y-4 px-9 pr-1 **:font-medium">
-      <div
+      <Tooltip
         v-if="ability.cooldown?.length"
-        v-tippy="'Cooldown'"
+        label="'Cooldown'"
         class="flex items-center gap-2">
         <i-stats-ah
           class="dst mt-px inline size-3.5 shrink-0 text-black"
           name="ph:hourglass" />
 
         <ValueFormatter :array="ability.cooldown" />
-      </div>
+      </Tooltip>
 
       <template v-if="ability.resource === 'Charge'">
-        <div
+        <Tooltip
           v-if="ability.resource"
-          v-tippy="'Max Charges'"
+          label="'Max Charges'"
           class="flex items-center gap-2">
           <component
             :is="`i-stats-charge-${ability.maxCharges}`"
@@ -63,23 +63,23 @@ watch(
           <span>
             {{ ability.maxCharges }}
           </span>
-        </div>
+        </Tooltip>
 
-        <div
+        <Tooltip
           v-if="ability.rechargeRate"
-          v-tippy="'Recharge Rate'"
+          label="'Recharge Rate'"
           class="flex items-center gap-2">
           <icon
             class="-mt-px size-7 text-pc/80 ds-2xs *:stroke-[1.3]"
             name="mynaui:battery-charging" />
 
           <ValueFormatter :array="ability.rechargeRate" />
-        </div>
+        </Tooltip>
       </template>
 
-      <div
+      <Tooltip
         v-else-if="ability.cost?.length"
-        v-tippy="`${ability.resource} Cost`"
+        :label="`${ability.resource} Cost`"
         class="flex items-center gap-2"
         :name="ability.resource">
         <ChampionDataIcon
@@ -88,28 +88,28 @@ watch(
           :name="ability.resource" />
 
         <ValueFormatter :array="ability.cost" />
-      </div>
+      </Tooltip>
 
-      <div
+      <Tooltip
         v-if="ability.effectRadius"
-        v-tippy="'Effect Radius'"
+        label="'Effect Radius'"
         class="flex items-center gap-2">
         <span class="relative size-3 justify-start">
           <i-stats-radius
             class="dst absolute -top-0.5 -left-1.5 size-4.5 text-pc/80" />
         </span>
         {{ ability.effectRadius }}
-      </div>
+      </Tooltip>
 
-      <div
+      <Tooltip
         v-if="ability.targetRange"
-        v-tippy="'Range'"
+        label="'Range'"
         class="flex items-center gap-2">
         <i-stats-range class="dst size-4 text-pc/80" />
         {{ ability.targetRange }}
-      </div>
+      </Tooltip>
 
-      <!--  <p v-if="ability.width" v-tippy="'Max Rank'"  class="flex gap-2 items-center items-center">
+      <!--  <p v-if="ability.width" label="'Max Rank'"  class="flex gap-2 items-center items-center">
         <span class="size-3 relative justify-start">
           <icon name="teenyicons:double-caret-up-small-solid" class="size-6.5 -left-1.5 -top-1.5 absolute text-pc dst" />
         </span>

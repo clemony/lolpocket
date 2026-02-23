@@ -33,16 +33,12 @@ const props = defineProps<{
 
       <div
         class="flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium ds-2xs **:text-pc/30">
-        <p class="capitalize">
-          Unranked
-        </p>
+        <p class="capitalize">Unranked</p>
 
-        <p class="text-lg font-semibold capitalize">
-          0 LP
-        </p>
+        <p class="text-lg font-semibold capitalize">0 LP</p>
 
         <p
-          v-tippy="`0 total`"
+          label="`0 total`"
           class="hover:border-b-bc flex items-center justify-end gap-1 border-b border-b-transparent text-end text-xs text-nowrap">
           <span>0W</span>
 

@@ -1,5 +1,3 @@
-//
-import type { GridApi, GridState } from "ag-grid-community"
 import { defineStore } from "pinia"
 
 export interface ChampionFilter {
@@ -13,12 +11,6 @@ export interface ChampionFilter {
 
 export const champFilter = defineStore("ChampStore", () => {
   const championSplashDropdown = ref<HTMLElement | null>(null)
-
-  const dbChampionGridState = shallowRef<GridState | null>(null)
-  const championGridApi = shallowRef<GridApi | null>(null)
-  const dbChampionStatListKey = ref(0)
-  const championGridLevel = ref(1)
-  const championGridType = ref<"calculated" | "base" | "growth">("calculated")
 
   // --- FILTER STATE ---
   const filters = ref<ChampionFilter>({
@@ -113,13 +105,8 @@ export const champFilter = defineStore("ChampStore", () => {
   })
 
   return {
-    championGridApi,
-    championGridLevel,
-    championGridType,
-    dbChampionGridState,
     championSplashDropdown,
     clearFilters,
-    dbChampionStatListKey,
     filtered,
     filters,
     reorder,

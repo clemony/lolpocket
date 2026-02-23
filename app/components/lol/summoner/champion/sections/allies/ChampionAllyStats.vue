@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-import { buildAllyBubbleData, getAllyColorMap } from "."
-
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
 const { allies, stats } = storeToRefs(sChampion())
 
-const points = computed(() => buildAllyBubbleData(allies.value ?? []))
-const colorMap = computed(() => getAllyColorMap(points.value))
+/* const points = computed(() => buildAllyBubbleData(allies.value ?? []))
+const colorMap = computed(() => getAllyColorMap(points.value)) */
 </script>
 
 <template>
   <UPageSection title="Allies" :class="cn('flex flex-col gap-8', className)">
-    <LazyAllyBubbleChart :points :color-map />
+    <!--  <LazyAllyBubbleChart :points :color-map /> -->
 
     <table class="table max-w-220 select-none">
       <!-- head -->
@@ -21,9 +19,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
       <thead>
         <tr>
           <th />
-          <th class="text-start!">
-            Ally
-          </th>
+          <th class="text-start!">Ally</th>
           <th>Matches</th>
           <th>Winrate</th>
           <th
@@ -35,7 +31,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
         </tr>
       </thead>
 
-      <Collapsible
+      <!--    <Collapsible
         v-for="v in allies"
         :key="v.puuid"
         class="group/collapse"
@@ -103,7 +99,7 @@ const colorMap = computed(() => getAllyColorMap(points.value))
           <td>{{ c?.delta }}</td>
           <td>{{ secondsToTime(c?.avgTimestamp ?? 0) }}</td>
         </CollapsibleContent>
-      </Collapsible>
+      </Collapsible> -->
     </table>
   </UPageSection>
 </template>

@@ -22,7 +22,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
     <div class="flex items-center gap-2">
       <!-- pin -->
       <Label
-        v-tippy="'Pin to sidebar'"
+        label="'Pin to sidebar'"
         base="btn"
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
@@ -43,7 +43,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
 
       <!-- archive -->
       <Label
-        v-tippy="'Move to archive'"
+        label="'Move to archive'"
         base="btn"
         :variant="
           usePockets().archive.includes(pocketKeySafe) ? 'outline' : 'ghost'
@@ -64,7 +64,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
 
       <!-- trash -->
       <UButton
-        v-tippy="'Move to trash'"
+        label="'Move to trash'"
         base="btn"
         :variant="
           usePockets().trash.includes(pocketKeySafe) ? 'outline' : 'ghost'
@@ -94,13 +94,13 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
 
     <div class="ml-auto flex items-center gap-2">
       <!-- share -->
-      <UButton v-tippy="'Share'" class="size-11" variant="ghost">
+      <UButton label="'Share'" class="size-11" variant="ghost">
         <icon name="send" />
       </UButton>
 
       <!-- export -->
       <UButton
-        v-tippy="'Export to LoL'"
+        label="'Export to LoL'"
         class="size-11"
         :disabled="!user().account?.puuid"
         variant="ghost">

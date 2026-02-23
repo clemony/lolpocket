@@ -26,7 +26,7 @@ function handleDelete() {
 <template>
   <div class="flex items-center gap-2">
     <!--     <button
-      v-tippy="'New Rune Set'"
+      label="'New Rune Set'"
       class="btn btn-md btn-square"
       @click="handleNewSet()">
       <icon
@@ -35,7 +35,7 @@ function handleDelete() {
     </button> -->
 
     <button
-      v-tippy="'Delete Current Set'"
+      label="'Delete Current Set'"
       class="p3/4 btn rounded-lg btn-ghost btn-sm *:ds-2xs hover:border hover:bg-p3/5"
       @click="handleDelete()">
       <icon class="size-5 shrink-0 text-nc opacity-70" name="trash" />

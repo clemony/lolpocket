@@ -15,14 +15,13 @@ const set = computed(() => s)
           v-for="shard in tier.shards"
           :id="shard.id"
           :key="shard.id"
-          v-tippy="{
+          label="{
             content: shard.description,
             theme: 'basic',
             arrow: false,
           }"
           :for="tier.label"
-          as="label"
-          label>
+          as="label">
           <input
             v-model="set.shards[tier.tier]"
             class="peer hidden"

@@ -1,5 +1,5 @@
 //
-import type { AllyDataPoint } from "."
+/* import type { AllyDataPoint } from "."
 
 export function getAllyColorMap(data: AllyDataPoint[]) {
   const palette = [
@@ -25,3 +25,4 @@ export function getAllyColorMap(data: AllyDataPoint[]) {
 
   return map
 }
+ */

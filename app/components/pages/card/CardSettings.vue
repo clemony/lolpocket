@@ -43,7 +43,7 @@ watch(
       :card />
 
     <label
-      v-tippy="'Background Color'"
+      label="'Background Color'"
       class="grid-place-items-center tldr-30 relative mx-2 aspect-square size-6.5 cursor-pointer overflow-hidden rounded-full border border-neutral/60 drop-shadow-xs hover:border-neutral hover:ring hover:ring-neutral">
       <input
         v-model="color"
@@ -53,7 +53,7 @@ watch(
     </label>
 
     <label
-      v-tippy="'Filter'"
+      label="'Filter'"
       class="group btn swap btn-square swap-rotate btn-ghost">
       <input
         v-model="filter"
@@ -73,7 +73,7 @@ watch(
 
     <UPopover>
       <UButton>
-        <button v-tippy="'Background Align'" class="btn btn-square btn-ghost">
+        <button label="'Background Align'" class="btn btn-square btn-ghost">
           <icon
             class="dst size-5.5 shrink-0"
             name="ph:arrows-out-line-horizontal" />
@@ -108,7 +108,7 @@ watch(
       :model="1"
       @update:model-value="(e: string) => (cardFont1.value = e)" /> -->
 
-    <button v-tippy="'Add Note'" class="btn btn-square btn-ghost">
+    <button label="'Add Note'" class="btn btn-square btn-ghost">
       <icon class="dst size-5.5" name="iconoir:text" />
     </button>
 
@@ -116,12 +116,12 @@ watch(
 
     <Separator class="mx-3 h-5/6 bg-p2" orientation="vertical" />
 
-    <button v-tippy="'Share'" class="btn btn-square btn-ghost">
+    <button label="'Share'" class="btn btn-square btn-ghost">
       <icon class="dst size-5.5" name="share" />
     </button>
 
     <button
-      v-tippy="'Download Image'"
+      label="'Download Image'"
       class="btn btn-square btn-ghost"
       @click="emit('download')">
       <icon class="dst size-5.5" name="iconoir:download" />

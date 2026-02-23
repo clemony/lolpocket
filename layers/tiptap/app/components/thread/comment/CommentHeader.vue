@@ -60,7 +60,7 @@ const {
         </span>
         <span
           v-if="comment?.updated"
-          v-tippy="{
+          label="{
             content: 'Edited',
             theme: 'base',
             placement: 'top-start',

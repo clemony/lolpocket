@@ -1,27 +1,5 @@
 <script lang="ts" setup>
 import ChampionGridIcon from "#components"
-import type {
-  ColDef,
-  ColGroupDef,
-  GridApi,
-  GridOptions,
-  GridPreDestroyedEvent,
-  GridReadyEvent,
-} from "ag-grid-community"
-import {
-  CellStyleModule,
-  ClientSideRowModelModule,
-  ColumnApiModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  GridStateModule,
-  ModuleRegistry,
-  RenderApiModule,
-  RowSelectionModule,
-  ValidationModule,
-} from "ag-grid-community"
-import { useChampionStatGrowth } from "~/domain/champions/useChampionStatGrowth"
-
 definePageMeta({
   name: "Champion Stats",
   icon: "bi:list-ul",
@@ -32,13 +10,7 @@ defineExpose({
   ChampionGridIcon,
 })
 
-/* const { filteredKeys, filtered } = useChampionFilter(filters) */
-
-const { filters } = storeToRefs(champFilter())
-const filteredChamps = ref([])
-// todo
-const gridApi = shallowRef<GridApi | null>(null)
-/* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
+/*
 
 const gridOptions: GridOptions<ChampionLite> = {
   columnHoverHighlight: true,
@@ -62,7 +34,7 @@ const gridOptions: GridOptions<ChampionLite> = {
     headerCheckbox: false,
     mode: "multiRow",
   },
-}
+} */
 /*
 watch(
   () => filters.value.championGridLevel,
@@ -82,14 +54,13 @@ const { resolveStat } = useChampionStatGrowth(
   computed(() => filters.value.championGridLevel ?? 1)
 ) */
 
-const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
+/* const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
     maxWidth: 64,
     minWidth: 64,
     width: 64,
     cellClass: "!py-1 !pr-1 !ml-0",
     cellRenderer: ChampionGridIcon,
-    headerName: "　 ",
     pinned: "left",
     sortable: false,
   },
@@ -106,8 +77,8 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
     headerName: "Champion",
     pinned: "left",
     sortable: false,
-  },
-  /*
+  }, */
+/*
   {
     headerName: 'Health',
     valueGetter: params => resolveStat(params.data.stats?.health),
@@ -149,7 +120,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
       })
     },
   }, */
-  /*    { headerName: 'Crit',
+/*    { headerName: 'Crit',
 cellClass: 'number-cell justify-end',
 groupId: 'crit',
 hide: true,
@@ -168,7 +139,7 @@ valueGetter: params => params.data.stats?.critperLevel,
 hide: true },
   ] }, */
 
-  /*  {
+/*  {
     flex: 1,
     headerName: 'Range',
     valueGetter: params => params.data.stats?.attackRange.flat,
@@ -176,7 +147,7 @@ hide: true },
   {
     headerName: 'Move Speed',
     valueGetter: params => params.data.stats?.movespeed.flat,
-  }, */
+  }, */ /*
   {
     minWidth: 90,
     colId: "resource",
@@ -237,20 +208,7 @@ watch(
   (newVal) => {
     if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", [])
   }
-)
-
-ModuleRegistry.registerModules([
-  ClientSideRowModelModule,
-  ValidationModule,
-  RowSelectionModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  ColumnHoverModule,
-  ColumnApiModule,
-  CellStyleModule,
-  GridStateModule,
-  RenderApiModule,
-])
+) */
 </script>
 
 <template>

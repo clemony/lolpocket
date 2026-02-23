@@ -26,7 +26,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/icon",
     "@vueuse/nuxt",
-    "@nuxt/eslint",
     "@nuxt/ui",
     "motion-v/nuxt",
     "@nuxt/devtools",
@@ -183,7 +182,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   experimental: {
     extractAsyncDataHandlers: true,
-    //nitroAutoImports: true,
+    nitroAutoImports: true,
     typescriptPlugin: true,
     //viteEnvironmentApi: true,
   },

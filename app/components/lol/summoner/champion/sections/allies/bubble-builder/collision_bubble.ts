@@ -1,11 +1,11 @@
 //
-import type { AllyDataPoint, PointKey } from ".."
+/* import type { AllyDataPoint, PointKey } from ".." */
 
 const EPS_X = 10 // winrate %
 const EPS_Y = 10 // delta units
 
 type CollisionKey = string
-type CollisionGroup = AllyDataPoint[]
+/* type CollisionGroup = AllyDataPoint[]
 
 export function buildCollisionGroups(
   points: AllyDataPoint[],
@@ -51,7 +51,7 @@ export function radiusFromGames(
 ) {
   const size = minSize + (games / maxGames) * (maxSize - minSize)
 
-  return size / 2 // radius, not diameter
+  return size / 2
 }
 export interface CollisionValue {
   id: string
@@ -86,3 +86,4 @@ export function buildCollisionIndexMap(
 
   return indexMap
 }
+ */

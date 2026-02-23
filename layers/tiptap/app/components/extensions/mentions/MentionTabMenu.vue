@@ -106,7 +106,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
             <IndexIcon
               v-for="item in groups[tab]?.items ?? []"
               :key="item.id"
-              v-tippy="{ content: item.name, theme: 'base', placement: 'top' }"
+              label="{ content: item.name, theme: 'base', placement: 'top' }"
               :item
               tabindex="-1"
               as="button"

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const riotDisclaimer
-  = 'Lolpocket isn\'t endorsed by Riot Games and doesn\'t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.'
+const riotDisclaimer =
+  "Lolpocket isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc."
 
-const classes = 'text-balanced pl-3 text-sm/6'
+const classes = "text-balanced pl-3 text-sm/6"
 </script>
 
 <template>
   <li :class="classes">
     &bull;&ensp;Names that are falsely indicative of an association with
     <strong
-      v-tippy="{
+      label="{
         content: h(
           'p',
           { class: 'text-pretty !w-54 !max-w-54' },

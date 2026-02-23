@@ -17,7 +17,7 @@ const pocket = computed(() => p)
 <template>
   <Label
     v-if="pocket"
-    v-tippy="{
+    label="{
       content:
         usePockets().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin',
       theme: 'neutral',

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { OnClickOutside } from "@vueuse/components"
-
 const { id } = defineProps<{
   id: number
 }>()

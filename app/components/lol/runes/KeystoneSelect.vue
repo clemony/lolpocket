@@ -46,7 +46,7 @@ watch(
       <!--   <Label
         v-for="rune in runes"
         :key="rune.id"
-        v-tippy="rune.name"
+        label="rune.name"
         :for="rune.id"
         class=" rounded-full opacity-75 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer tldr-30  grid place-items-center shrink-0 size-22 aspect-square"
         :class="cn(

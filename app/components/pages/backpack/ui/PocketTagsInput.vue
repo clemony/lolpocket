@@ -85,7 +85,7 @@ function deleteTag(tag: string) {
 
               <!-- delete tag -->
               <UButton
-                v-tippy="'Delete Tag'"
+                label="'Delete Tag'"
                 class="btn-square h-9 opacity-0 duration-0 not-hover:**:text-pc/60 group-hover/tag:opacity-100"
                 variant="ghost"
                 @click="deleteTag(item)">

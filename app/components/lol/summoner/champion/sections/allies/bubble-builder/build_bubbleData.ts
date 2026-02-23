@@ -1,6 +1,3 @@
-import type { AllyDataPoint, CollisionValue } from '..'
-import { radiusFromGames } from '..'
-
 export type PointKey = string
 
 function edgeFalloff(value: number, min: number, max: number) {
@@ -16,11 +13,11 @@ function edgeBias(value: number, min: number, max: number) {
   return value
 }
 
-export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
-  const out: AllyDataPoint[] = []
+/* export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
+  const out: AllyDataPoint[] = [] */
 
-  for (const ally of allies) {
-  /*   for (const champ of Object.values(ally.champions) as [
+/*   for (const ally of allies) { */
+/*   for (const champ of Object.values(ally.champions) as [
       string,
       AllyStatDetail,
     ]) {
@@ -38,7 +35,7 @@ export function buildAllyBubbleData(allies: AllyStatDetail[]): AllyDataPoint[] {
         winrate: champ.winrate,
       } as AllyStatDetail)
     } */
-  }
+/*  }
 
   return out
 }
@@ -79,3 +76,4 @@ export function separateValue(
   const falloff = edgeFalloff(base, min, max)
   return edgeBias(base + offset * falloff, min, max)
 }
+ */

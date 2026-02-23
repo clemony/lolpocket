@@ -1,35 +1,8 @@
 <script lang="ts" setup>
-import type {
-  ColDef,
-  ColGroupDef,
-  GridApi,
-  GridOptions,
-  GridReadyEvent,
-} from "ag-grid-community"
-import {
-  CellStyleModule,
-  ClientSideRowModelApiModule,
-  ClientSideRowModelModule,
-  ColumnApiModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  GridStateModule,
-  ModuleRegistry,
-  RenderApiModule,
-  RowSelectionModule,
-  RowStyleModule,
-  TooltipModule,
-  ValidationModule,
-} from "ag-grid-community"
-import { AgGridVue } from "ag-grid-vue3"
-import { useStatGrid } from "~/domain/stats/grid"
-import { globalGridOptions } from "~~/layers/ui/app/config/gridOptions.global"
-import { masteryGridTheme } from "~~/layers/ui/app/config/masteryTheme"
-
 const { champions } = defineProps<{
   champions: ChampionStatsAndMastery[]
 }>()
-
+/*
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
@@ -107,27 +80,11 @@ function onGridReady(params: GridReadyEvent) {
   gridApi.value = params.api
   prevRows.value = champions
   params.api.applyTransaction({ add: champions })
-}
-
-ModuleRegistry.registerModules([
-  ClientSideRowModelModule,
-  RowStyleModule,
-  ClientSideRowModelApiModule,
-  ValidationModule,
-  RowSelectionModule,
-  ColumnAutoSizeModule,
-  ColumnHoverModule,
-  ColumnHoverModule,
-  ColumnApiModule,
-  TooltipModule,
-  CellStyleModule,
-  GridStateModule,
-  RenderApiModule,
-])
+} */
 </script>
 
 <template>
-  <AgGridVue
+  <!--   <AgGridVue
     v-if="champions"
     class="mx-auto min-h-screen w-full self-start"
     data-theme="neutral line"
@@ -136,5 +93,5 @@ ModuleRegistry.registerModules([
     :theme="theme"
     dom-layout="autoHeight"
     :column-defs="colDefs"
-    @grid-ready="onGridReady" />
+    @grid-ready="onGridReady" /> -->ss
 </template>

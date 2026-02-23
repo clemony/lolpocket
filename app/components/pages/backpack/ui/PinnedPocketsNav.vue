@@ -45,7 +45,7 @@ const { isCollapsed, pinned } = defineProps<{
           </UButton>
           <Label
             v-show="!isCollapsed"
-            v-tippy="'Unpin'"
+            label="'Unpin'"
             class="relative grid size-10 cursor-pointer place-items-center *:transition-opacity *:duration-200 hover:*:first:opacity-0 hover:*:last:opacity-100"
             for="toggle-pin"
             variant="ghost"

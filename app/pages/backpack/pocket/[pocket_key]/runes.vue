@@ -109,7 +109,7 @@ function handleAdd() {
               )
             ">
             <UCard
-              v-tippy="{
+              label="{
                 content:
                   (pocket?.runes?.length ?? 0) >= 10
                     ? 'Max amount of sets reached'

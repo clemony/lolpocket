@@ -65,13 +65,13 @@ const data = computed(() => {
         {{ entry?.lp ?? 0 }} LP
       </span>
 
-      <span
-        v-tippy="`${entry ? entry?.win + entry?.loss : 0} total`"
+      <Tooltip
+        label="`${entry ? entry?.win + entry?.loss : 0} total`"
         class="flex items-center justify-end gap-1 text-end text-xs text-nowrap decoration-dotted underline-offset-2 hover:underline">
         <span>{{ entry ? entry.win : 0 }}W</span>
 
         <span>{{ entry ? entry.loss : 0 }}L</span>
-      </span>
+      </Tooltip>
     </div>
   </UCard>
 </template>

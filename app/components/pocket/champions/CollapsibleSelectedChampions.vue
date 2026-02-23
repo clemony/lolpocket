@@ -55,7 +55,7 @@ const itemVariants = {
           <UButton
             v-for="(champion, i) in champions"
             :key="champion"
-            v-tippy="{
+            label="{
               content: champNameByKey(champion),
               theme: 'base',
               placement: 'left',

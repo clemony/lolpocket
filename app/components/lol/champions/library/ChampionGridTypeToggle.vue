@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <ToggleGroup
+  <!--   <ToggleGroup
     v-model:model-value="champFilter().championGridType"
     type="single">
     <ToggleGroupItem value="calculated">
@@ -15,5 +15,5 @@
     <ToggleGroupItem value="growth">
       Growth
     </ToggleGroupItem>
-  </ToggleGroup>
+  </ToggleGroup> -->sds
 </template>

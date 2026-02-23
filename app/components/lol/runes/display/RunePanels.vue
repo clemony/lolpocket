@@ -36,7 +36,7 @@ const tabListClass =
           <label
             v-for="path in pathList"
             :key="path"
-            v-tippy="path"
+            label="path"
             class="grid aspect-square size-14 place-items-center rounded-full"
             :class="{
               'bg-p0/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':

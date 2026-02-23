@@ -1,5 +1,5 @@
 //
-export function useChampionStatGrowth(level: Ref<number>) {
+/* export function useChampionStatGrowth(level: Ref<number>) {
   function calcStat(
     base?: number,
     growth?: number,
@@ -75,17 +75,18 @@ export function useChampionStatGrowth(level: Ref<number>) {
         max: round(fn(18)),
         min: round(fn(1)),
       }
-    }
+    } */
 
-    /*   const val = champFilter().championGridType === 'base' ? (flat ?? null) : (perLevel ?? null)
+/*   const val = champFilter().championGridType === 'base' ? (flat ?? null) : (perLevel ?? null)
     return {
       current: round(val),
       max: round(val),
       min: round(val),
     } */
-  }
+/*   }
 
   return {
     resolveStat,
   }
 }
+ */

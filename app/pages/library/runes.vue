@@ -47,7 +47,7 @@ const selectedRune = ref<number | null>(null)
           <PathTabTrigger
             v-for="path in pathIndex"
             :key="path.id"
-            v-tippy="path"
+            label="path"
             :value="path.name" />
 
           <TabIndicator round />

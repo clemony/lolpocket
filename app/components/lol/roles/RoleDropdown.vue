@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { roles } from "./handleRoles";
+import { roles } from "./handleRoles"
 
 const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = toRef(props, 'pocket')
+const pocket = toRef(props, "pocket")
 const pocketRoles = computed<string[]>({
   get: () => pocket.value.roles ?? [],
   set: (value) => {
@@ -24,7 +24,7 @@ const pocketRoles = computed<string[]>({
           :is="`i-roles-${pocketRoles}`"
           v-if="pocketRoles.length"
           :key="pocketRoles.join('-')"
-          v-tippy="pocketRoles"
+          label="pocketRoles"
           class="drop-shadow-text size-6.5 shrink-0 text-md! text-white/70 focus:outline-0" />
 
         <i-roles-all-lanes v-else class="dst size-6 shrink-0 text-white/80" />

@@ -77,13 +77,13 @@ onMounted(async () => {
     <div class="absolute top-5 flex h-16 gap-4">
       <div
         v-if="champModel && champComplete"
-        v-tippy="champNameById(champModel)"
+        label="champNameById(champModel)"
         class="animate-in slide-in-from-bottom-10 size-16 rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 hover:scale-110 hover:ring-1 hover:ring-neutral hover:ring-offset-2 hover:ring-offset-p2">
         <Champion :id="champModel" class="size-16 overflow-hidden rounded-lg" />
       </div>
       <!--
       <template v-for="(item, i) in itemModel">
-        <div v-if="itemModel[i].item && itemModel[i].complete.value === true" :key="i" v-tippy="itemModel[i].item.value.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-p2">
+        <div v-if="itemModel[i].item && itemModel[i].complete.value === true" :key="i" label="itemModel[i].item.value.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-p2">
           <div class="overflow-hidden size-16 rounded-lg">
             <img :src="`/img/champion/${itemModel[i].item.value.id}.webp`" class="size-full scale-115" />
           </div>
@@ -93,9 +93,7 @@ onMounted(async () => {
 
     <template v-if="isChampVisible">
       <Transition name="puff">
-        <p v-if="!champModel" class="f-sb f-tt text-lg">
-          Select a Champion...
-        </p>
+        <p v-if="!champModel" class="f-sb f-tt text-lg">Select a Champion...</p>
       </Transition>
 
       <transition-slide
@@ -104,7 +102,7 @@ onMounted(async () => {
         :offset="[8, 0]"
         :duration="1000">
         <!--  <template v-for="champion in selectedChamps" :key="champion.name">
-          <Champion v-if="champModel ? champion === champModel : selectedChamps.includes(champion)" :id="champion.id" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-200 hover:ring-offset-2 hover:ring-offset-p2" :class="{ hidden: champModel !== null && champion !== champModel }">
+          <Champion v-if="champModel ? champion === champModel : selectedChamps.includes(champion)" :id="champion.id" label="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-200 hover:ring-offset-2 hover:ring-offset-p2" :class="{ hidden: champModel !== null && champion !== champModel }">
             <input v-model="champModel" name="champion" type="radio" class="peer hidden" :value="champion" @change="setTimer('champ')" />
           </ChampionIcon>
 
@@ -136,7 +134,7 @@ onMounted(async () => {
                 ? item.id === itemModel
                 : currentItems.includes(item)
             "
-            v-tippy="item.name"
+            label="item.name"
             class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-300 hover:ring-offset-2 hover:ring-offset-p2"
             :class="{
               hidden:

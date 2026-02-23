@@ -40,7 +40,7 @@ const selectedSpell = computed(
           <div
             v-for="spell in spells"
             :key="spell.name"
-            v-tippy="{ content: spell.name, theme: 'neutral' }"
+            label="{ content: spell.name, theme: 'neutral' }"
             class="size-fit">
             <label
               class="btn size-27 cursor-pointer! px-2.5 py-2 btn-ghost hover:border-p3 hover:bg-p2 has-checked:border-p3 has-checked:bg-p3/70 has-checked:shadow-sm">
@@ -92,9 +92,7 @@ const selectedSpell = computed(
               :src="`/img/spells/${selectedSpell.id}.webp`" />
 
             <div class="items-between grid h-full py-2">
-              <p class="font-medium">
-                Summoner
-              </p>
+              <p class="font-medium">Summoner</p>
 
               <h1 class="dst text-5xl tracking-tight">
                 {{ selectedSpell.name }}
@@ -108,21 +106,15 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.cd"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Cooldown:
-              </p>
+              <p class="font-semibold tracking-tight">Cooldown:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.cd }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.cd }} seconds</p>
             </li>
 
             <li
               v-if="selectedSpell.charges"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Charges:
-              </p>
+              <p class="font-semibold tracking-tight">Charges:</p>
 
               <p class="font-medium">
                 {{ selectedSpell.charges }}
@@ -132,13 +124,9 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.recharge"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Recharge Time:
-              </p>
+              <p class="font-semibold tracking-tight">Recharge Time:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.recharge }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.recharge }} seconds</p>
             </li>
           </ul>
         </div>

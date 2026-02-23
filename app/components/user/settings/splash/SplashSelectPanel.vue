@@ -55,13 +55,13 @@ function reset() {
           <header
             class="bg-b4/40 col-span-full row-start-1 flex h-14.5 items-center gap-2 border-b border-b-p3/60 px-3 pt-1">
             <button
-              v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
+              label="{ content: 'Reset to Automatic', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
               <icon class="dst absolute size-3.75" name="refresh" />
             </button>
 
             <button
-              v-tippy="{ content: 'Randomize', placement: 'top' }"
+              label="{ content: 'Randomize', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
               <icon class="dst size-3.5 stroke-[1.5]" name="shuffle" />
             </button>
@@ -71,7 +71,7 @@ function reset() {
               class="-mt-px h-11"
               icon="search" />
             <UButton
-              v-tippy="{ content: 'Close', placement: 'top' }"
+              label="{ content: 'Close', placement: 'top' }"
               variant="ghost"
               shape="square">
               <icon class="dst absolute size-4 shrink-0" name="x" />

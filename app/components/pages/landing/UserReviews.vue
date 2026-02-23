@@ -51,9 +51,7 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class="dst font-serif leading-9 font-black">
-              “{{ r.title }}”
-            </h1>
+            <h1 class="dst font-serif leading-9 font-black">“{{ r.title }}”</h1>
 
             <div class="flex items-start justify-start gap-8">
               <Champion
@@ -70,7 +68,7 @@ watchOnce(api, (api) => {
                   class="mt-2 flex items-center gap-2 justify-self-end text-right italic">
                   - {{ r.location }}
                   <icon
-                    v-tippy="`${r.tip}`"
+                    label="`${r.tip}`"
                     class="size-4.5 stroke-2"
                     name="carbon:information" />
                 </p>

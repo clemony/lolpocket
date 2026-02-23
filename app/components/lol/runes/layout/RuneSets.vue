@@ -4,7 +4,7 @@ const props = defineProps<{
   selected: RuneSet
 }>()
 
-const emit = defineEmits(['update:selected'])
+const emit = defineEmits(["update:selected"])
 
 const pocket = ref(props.pocket)
 
@@ -75,13 +75,13 @@ const primaryColor = computedAsync(() => {})
 
             <Grow />
 
-            <button v-tippy="'Delete Set'" class="btn btn-sm btn-ghost px-2 -mr-3" @click.stop>
+            <button label="'Delete Set'" class="btn btn-sm btn-ghost px-2 -mr-3" @click.stop>
               <span class="size-3.5 relative">
                 <icon name="x-sm" class="opacity-70 -top-0.75 -left-0.75 absolute shrink-0 mb-0.5 size-5" />
               </span>
             </button>
 
-            <button v-tippy="set===pocket.runes.default ? 'Default Set' : 'Set as default'" class="btn btn-ghost btn-sm px-2 -mr-1" @click.stop="set===pocket.runes.default">
+            <button label="set===pocket.runes.default ? 'Default Set' : 'Set as default'" class="btn btn-ghost btn-sm px-2 -mr-1" @click.stop="set===pocket.runes.default">
 
               <icon v-if="set===pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
               <icon v-else name="star" class="opacity-70 shrink-0 mb-0.5 size-3.5" />

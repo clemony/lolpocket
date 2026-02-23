@@ -26,7 +26,7 @@ const { pocket } = defineProps<{
       </Placeholder> -->
     </div>
 
-    <!-- <button v-tippy="'Add Item Set'" class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0" @click="newItemSet(pocket.key)">
+    <!-- <button label="'Add Item Set'" class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0" @click="newItemSet(pocket.key)">
       <div class="group-hover:bg-p2/80 size-6 rounded-lg grid place-items-center border border-transparent group-hover:border-p3/60">
         <icon name="add" class="text-pc/60 group-hover:text-pc" />
       </div>

@@ -20,7 +20,7 @@ const menu = shallowRef(RunePanelMenu)
 const route = useRoute()
 
 onMounted(async () => {}) /*
-    v-tippy="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
+    label="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
 /*
 const bgStyle = computed (() => {
   if (set !== pocket.runes[rs.selectedRuneSet] || route.name !== 'pocket runes')

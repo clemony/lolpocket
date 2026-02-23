@@ -1,4 +1,4 @@
-import type { EChartsOption, HeatmapSeriesOption } from 'echarts'
+/* import type { EChartsOption, HeatmapSeriesOption } from 'echarts'
 import type { AllyDataPoint } from '.'
 
 const WINRATE_BIN = 5 // %
@@ -79,10 +79,10 @@ export const allyHeatMapOptions: EChartsOption = {
     data: Array.from({ length: 11 }, (_, i) => i),
     type: 'category',
     axisLabel: {
-      // showMinLabel: false
     },
     axisTick: {
       show: true,
     },
   },
 }
+ */

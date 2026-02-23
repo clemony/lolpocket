@@ -11,7 +11,7 @@ const selected = ref<Pocket | null>(null)
 
 <template>
   <!--     <LazyBackpackBoxCard
-            <UButton v-tippy="'Add Pocket'" class="h-38 w-full" variant="ghost">
+            <UButton label="'Add Pocket'" class="h-38 w-full" variant="ghost">
               <icon class="size-7 **:stroke-[1.5]" name="add" />
   <PocketDetailMenu :pocket-key="selected?.key ?? null" />
             </UButton>  -->

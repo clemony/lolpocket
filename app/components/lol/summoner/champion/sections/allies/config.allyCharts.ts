@@ -1,4 +1,4 @@
-import type { EChartsOption } from "echarts"
+/* import type { EChartsOption } from "echarts"
 import { buildAllyBubbleOptions, buildAllyBubbleSeries } from "."
 
 export interface AllyDataPoint {
@@ -9,7 +9,6 @@ export interface AllyDataPoint {
   championId: number
   championName: string
   delta: number
-  // color: string
   games: number
   winrate: number
 }
@@ -93,7 +92,6 @@ export function buildAllyChart(
         top: 0,
         feature: {
           dataView: {
-            // optionToContent: '',
           },
           dataZoom: { show: false },
           restore: {
@@ -125,3 +123,4 @@ export function buildAllyChart(
     option,
   }
 }
+ */

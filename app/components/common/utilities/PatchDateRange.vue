@@ -59,7 +59,7 @@ const open = shallowRef<boolean>(false) */
               :date="weekDate"
             >
               <RangeCalendarCellTrigger
-                v-tippy="{
+                label="{
                   content:
                     isPatchDay(weekDate as CalendarDate)
                       ? `Patch ${getPatchForDate(weekDate)}`

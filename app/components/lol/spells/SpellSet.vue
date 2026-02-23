@@ -30,13 +30,11 @@ function handleSpells(e: number, i: number) {
 
     <Grow />
 
-    <button
-      v-tippy="'Remove Set'"
-      class="trash-button group/btn btn btn-square btn-ghost btn-xs"
+    <UButton
+      label="'Remove Set'"
+      size="xs"
+      icon="i-trash"
       @click="removeSpellSet(pocket, props.set)">
-      <icon
-        class="size-5 shrink-0 text-pc/50 ds-2xs group-hover/btn:text-pc/100"
-        name="trash" />
-    </button>
+    </UButton>
   </div>
 </template>

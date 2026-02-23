@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { BadgeProps, SeparatorProps } from "@nuxt/ui"
-import { OnClickOutside } from "@vueuse/components"
 
 const { id, class: className } = defineProps<{
   id: number

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useChampionStatGrowth } from "~/domain/champions/useChampionStatGrowth"
+/* import { useChampionStatGrowth } from "~/domain/champions/useChampionStatGrowth" */
 
 const { champion } = defineProps<{
   champion: Champion
@@ -47,10 +47,10 @@ const defaultStats = [
 ]
 const open = ref(false)
 const level = ref([1])
-
+/*
 const { resolveStat } = useChampionStatGrowth(
   computed(() => level.value[0] ?? 1)
-)
+) */
 /*
 const scalingStats = computed(() =>
   Object.entries(champion.stats).filter(
@@ -138,7 +138,8 @@ const filteredStats = computed(() => {
 </script>
 
 <template>
-  <Collapsible
+  cc
+  <!--   <Collapsible
     v-model:open="session().collapseStates.championInfo[0]"
     class="group/cl flex flex-col gap-6 px-0 open:h-auto open:overflow-visible!">
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
@@ -200,8 +201,8 @@ const filteredStats = computed(() => {
           </div>
         </div>
       </div>
-    </CollapsibleTrigger>
-    <CollapsibleContent
+    </CollapsibleTrigger> -->
+  <!--     <CollapsibleContent
       class="z-1 flex h-fit w-full flex-col gap-2 pb-2 open:overflow-visible!">
       <div
         :class="
@@ -209,19 +210,19 @@ const filteredStats = computed(() => {
             'field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100 *:w-full',
             { 'invisible hidden max-h-0 opacity-0': open }
           )
-        ">
-        <!--  <ChampionStat
+        "> -->
+  <!--  <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
           :key="stat.name"
           :i
           :length="scalingStats.length"
           :stat
         /> -->
-      </div>
+  <!--       </div>
 
       <Collapsible v-model:open="open" class="w-full">
-        <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
-          <!--  <div
+        <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1"> -->
+  <!--  <div
             v-for="(group, ix) in filteredStats.more"
             :key="ix"
             class="field-box pt-3"
@@ -247,11 +248,11 @@ const filteredStats = computed(() => {
               />
             </div>
           </div> -->
-        </CollapsibleContent>
+  <!--         </CollapsibleContent>
         <CollapsibleTrigger class="w-full">
           <LessOrMore class="w-[98%] justify-self-center" :open />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>
-  </Collapsible>
+  </Collapsible> -->
 </template>

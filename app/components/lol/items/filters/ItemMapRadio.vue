@@ -1,28 +1,24 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Tabs
-    v-model:model-value="is().filters.map"
-    orientation="vertical">
+  <Tabs v-model:model-value="is().filters.map" orientation="vertical">
     <TabsList
       class="w-11! grid-rows-4 gap-4! p-1"
       variant="none"
       orientation="vertical"
       contrast>
       <TabsTrigger
-        v-tippy="{ content: 'All', theme: 'neutral', placement: 'left' }"
+        label="{ content: 'All', theme: 'neutral', placement: 'left' }"
         class="**:opacity-90 on:**:text-nc on:**:opacity-100"
         :value="0">
         <span class="relative grid size-5 place-items-center">
-          <icon
-            class="absolute mt-0.25 size-6"
-            name="stash:infinity-solid" />
+          <icon class="absolute mt-0.25 size-6" name="stash:infinity-solid" />
         </span>
       </TabsTrigger>
       <TabsTrigger
         v-for="map in [11, 12, 30]"
         :key="map"
-        v-tippy="{
+        label="{
           content: mapNameById(map),
           theme: 'neutral',
           placement: 'left',
