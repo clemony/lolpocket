@@ -2,8 +2,7 @@ import tailwindcss from "@tailwindcss/vite"
 import { resolve } from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
-import { beasties } from "vite-plugin-beasties"
-
+const isCF = process.env.CF_PAGES === "1"
 // repo root
 export default defineNuxtConfig({
   imports: {
@@ -28,7 +27,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/ui",
     "motion-v/nuxt",
-    "@nuxt/devtools",
+    ...(process.env.NODE_ENV === "development" ? ["@nuxt/devtools"] : []),
     "@formkit/auto-animate/nuxt",
     "@nuxtjs/i18n",
   ],
@@ -36,7 +35,7 @@ export default defineNuxtConfig({
   // app
   typescript: {
     strict: true,
-    typeCheck: true,
+    typeCheck: !isCF,
   },
 
   components: [
@@ -158,14 +157,6 @@ export default defineNuxtConfig({
     plugins: [
       // @ts-expect-error until plugin updates
       tailwindcss(),
-      // @ts-expect-error until plugin updates
-      beasties({
-        options: {
-          preload: "swap",
-          pruneSource: true,
-          inlineThreshold: 4000,
-        },
-      }),
     ],
     clearScreen: false,
     build: {
