@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { CheckboxGroupItem } from "@nuxt/ui"
 import { statIndex } from "#shared/constants/common/stat-index"
 import { itemTags } from "#shared/constants/items/itemTags"
+import type { CheckboxGroupItem } from "@nuxt/ui"
 
 const { collapsed } = defineProps<{
   collapsed?: boolean
@@ -54,7 +54,7 @@ const tagItems = computed<CheckboxGroupItem[]>(() =>
         v-model:model-value="filters.tags"
         :collapsed
         indicator="end"
-        color="neutral"
+        color="primary"
         variant="select"
         :multiple="true"
         label-key="name"

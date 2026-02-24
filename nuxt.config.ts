@@ -173,7 +173,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   experimental: {
     // extractAsyncDataHandlers: true,
-    nitroAutoImports: true,
+    // nitroAutoImports: true,
     typescriptPlugin: !isCF,
     //viteEnvironmentApi: true,
   },
