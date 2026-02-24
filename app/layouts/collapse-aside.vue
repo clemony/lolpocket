@@ -40,7 +40,7 @@ const toggleLeft = useToggle(collapsed)
             label: 'font-semibold text-xs ',
             leadingIcon: 'size-4.5',
           }"
-          :leading-icon="collapsed ? 'i-right-line' : 'i-left-line'"
+          :leading-icon="collapsed ? 'i-right-to-line' : 'i-left-to-line'"
           @click="toggleLeft()" />
       </template>
       <template #description>

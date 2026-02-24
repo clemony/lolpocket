@@ -39,8 +39,8 @@ const pinned = shallowRef<boolean>(false)
     :avatar="id ? `/img/items/${id}.webp` : undefined"
     :label="id ? itemNameById(id) : ''"
     :ui="{
-      content: cn('h-fit! max-h-80! w-full max-w-80 px-1', {
-        'rounded-xl ': pinned,
+      content: cn('h-fit! max-h-80! w-full max-w-80', {
+        'rounded-xl  px-1': pinned,
       }),
     }"
     :side
@@ -50,7 +50,7 @@ const pinned = shallowRef<boolean>(false)
       role="button"
       :class="
         cn(
-          'size-full overflow-hidden rounded-lg p-0',
+          'size-full rounded-lg p-0',
           {
             'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
           },

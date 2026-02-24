@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     customCollections,
     size: "18px",
     serverBundle: {
+      externalizeIconsJson: true,
       collections: ["lucide"],
     },
   },

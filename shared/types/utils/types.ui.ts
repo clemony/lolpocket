@@ -3,8 +3,10 @@ import type {
   ButtonProps,
   CardProps,
   DropdownMenuItem,
+  EmitsToProps,
   NavigationMenuItem,
   TabsItem,
+  TooltipProps,
 } from "@nuxt/ui"
 
 export type Side = "top" | "right" | "bottom" | "left"
@@ -40,6 +42,10 @@ export interface IconObject {
 }
 
 export type ChartMode = "scatter" | "heatmap" | "bubble" | "donut"
+
+export type TooltipUi = TooltipProps["ui"] & {
+  trailingIcon?: string
+}
 
 export interface NavButtonProps extends ButtonProps {
   value?: string

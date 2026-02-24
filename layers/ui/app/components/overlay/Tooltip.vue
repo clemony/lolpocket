@@ -4,8 +4,8 @@ import type { TooltipContentEmits, TooltipContentProps } from "reka-ui"
 
 const {
   side = "top",
-  sideOffset = 20,
-  arrow = true,
+  sideOffset = 16,
+  arrow = false,
   class: className,
   icon,
   avatar,
@@ -15,11 +15,12 @@ const {
   label,
   disabled,
   followPointer = true,
+  inertia = true,
   interactive = false,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   avatar?: string
-  ui?: Record<string, string>
+  ui?: TooltipUi
   icon?: string
   arrow?: boolean
   side?: Side
@@ -27,6 +28,7 @@ const {
   trailingIcon?: string
   disabled?: boolean
   followPointer?: boolean
+  inertia?: boolean | number
   interactive?: boolean
   label?: string
   title?: string
@@ -42,10 +44,51 @@ const contentRef = ref<HTMLElement | null>(null)
 let rafId = 0
 let nextX = 0
 let nextY = 0
+let currentX = 0
+let currentY = 0
+
+function getInertiaFactor() {
+  if (typeof inertia === "number") {
+    return Math.min(Math.max(inertia, 0), 0.95)
+  }
+
+  return inertia ? 0.22 : 0
+}
+
+function scheduleAnchorUpdate() {
+  if (!rafId) rafId = requestAnimationFrame(updateAnchor)
+}
 
 function updateAnchor() {
-  anchor.value = { x: nextX, y: nextY }
   rafId = 0
+
+  if (!open.value || pinned.value || !followPointer || disabled) return
+
+  const factor = getInertiaFactor()
+
+  if (!factor) {
+    currentX = nextX
+    currentY = nextY
+    anchor.value = { x: nextX, y: nextY }
+    return
+  }
+
+  const dx = nextX - currentX
+  const dy = nextY - currentY
+  const settle = 0.25
+
+  if (Math.abs(dx) <= settle && Math.abs(dy) <= settle) {
+    currentX = nextX
+    currentY = nextY
+    anchor.value = { x: nextX, y: nextY }
+    return
+  }
+
+  currentX += dx * factor
+  currentY += dy * factor
+  anchor.value = { x: currentX, y: currentY }
+
+  scheduleAnchorUpdate()
 }
 
 function onPointerEnter(ev: PointerEvent) {
@@ -53,12 +96,18 @@ function onPointerEnter(ev: PointerEvent) {
   if (pinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
+  currentX = nextX
+  currentY = nextY
   anchor.value = { x: nextX, y: nextY }
   open.value = true
 }
 
 function onPointerLeave() {
   if (pinned.value) return
+  if (rafId) {
+    cancelAnimationFrame(rafId)
+    rafId = 0
+  }
   open.value = false
 }
 
@@ -66,7 +115,7 @@ function onPointerMove(ev: PointerEvent) {
   if (disabled || !followPointer || pinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
-  if (!rafId) rafId = requestAnimationFrame(updateAnchor)
+  scheduleAnchorUpdate()
 }
 
 function onContextMenu(ev: MouseEvent) {
@@ -79,6 +128,8 @@ function onContextMenu(ev: MouseEvent) {
     cancelAnimationFrame(rafId)
     rafId = 0
   }
+  currentX = nextX
+  currentY = nextY
   anchor.value = { x: nextX, y: nextY }
   pinned.value = true
   open.value = true
@@ -131,10 +182,10 @@ const reference = computed(() => ({
       ...anchor.value,
     }) as DOMRect,
 }))
-type TooltipProps = Omit<TooltipContentProps, "as" | "asChild"> &
+type ContentProps = Omit<TooltipContentProps, "as" | "asChild"> &
   Partial<EmitsToProps<TooltipContentEmits>>
 
-const contentProps = computed<TooltipProps>(() => ({
+const contentProps = computed<ContentProps>(() => ({
   side,
   sideOffset,
   align: ["left", "right"].includes(side) ? "start" : "center",
@@ -146,11 +197,12 @@ const contentProps = computed<TooltipProps>(() => ({
 <template>
   <UTooltip
     :disabled
+    :arrow="arrow"
     :open="disabled ? false : open"
     :delay-duration="0"
     :disable-hoverable-content="!interactive"
     :reference="reference"
-    :ui="{ content: cn('z-50 overflow-hidden px-0', ui?.content) }"
+    :ui="{ content: cn('z-50', ui?.content), arrow: ui?.arrow }"
     :content="contentProps">
     <div
       ref="triggerRef"
@@ -167,7 +219,7 @@ const contentProps = computed<TooltipProps>(() => ({
     <template #content>
       <div ref="contentRef">
         <slot name="content">
-          <div class="inline-flex gap-1.5 px-2.5 align-baseline">
+          <div class="inline-flex gap-1.5 align-baseline">
             <Img
               v-if="avatar"
               loading-type="spinner"

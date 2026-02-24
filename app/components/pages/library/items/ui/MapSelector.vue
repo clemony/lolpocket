@@ -11,9 +11,15 @@ const { filters } = storeToRefs(is())
 const maps = computed(() => [
   {
     id: 0,
+    value: 0,
     name: "All",
   },
-  ...mapIndex.filter((m) => [11, 12, 30, 35].includes(m.id)),
+  ...mapIndex
+    .filter((m) => [11, 12, 30, 35].includes(m.id))
+    .map((m) => ({
+      value: m.id,
+      name: m.name,
+    })),
 ])
 </script>
 
@@ -51,12 +57,7 @@ const maps = computed(() => [
         <URadioGroup
           v-model:model-value="filters.map"
           color="p1"
-          :items="
-            maps.map((m) => ({
-              value: m.id,
-              name: m.name,
-            }))
-          "
+          :items="maps"
           :ui="{
             item: 'py-1 px-1.5 cursor-pointer **:cursor-pointer hover:bg-p2 rounded-md  group/item relative overflow-hidden',
             label:

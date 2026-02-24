@@ -13,11 +13,11 @@ definePageMeta({
 const userProviders = await computedAsync(() =>
   Object.values(user().user?.app_metadata?.providers ?? {})
 )
-const email = shallowRef<string | null>(null)
-const username = shallowRef<string | null>(null)
+const email = shallowRef<string | undefined>("")
+const username = shallowRef<string | undefined>("")
 onMounted(() => {
-  email.value = user().user?.email ?? null
-  username.value = user().account?.username ?? null
+  email.value = user().user?.email
+  username.value = user().account?.username
 })
 </script>
 
@@ -109,9 +109,7 @@ onMounted(() => {
     <UFormField title="" description=""></UFormField>
     <fieldset id="blocked-users" class="space-y-6">
       <div class="leading-4">
-        <h4 class="mb-2 text-xl font-semibold" as="legend">
-          Blocked Users
-        </h4>
+        <h4 class="mb-2 text-xl font-semibold" as="legend">Blocked Users</h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in

@@ -8,7 +8,7 @@
       v-for="item in is().filtered"
       :key="item"
       class="flex size-17 grow items-center justify-center">
-      <Item :id="item" class="size-17 grow" />
+      <Item :id="item" class="size-17 grow hover:ring-2 hover:ring-pc/60" />
     </div>
   </div>
 </template>

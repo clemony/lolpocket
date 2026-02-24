@@ -175,7 +175,7 @@ const styles = computed(() =>
 </script>
 
 <template>
-  <div :class="cn(styles.root({ class: [props.ui?.root, props.class] }))">
+  <div :class="cn(styles.root({ class: [props.ui?.root] }), props.class)">
     <span :class="styles.separator({ class: props.ui?.separator })" />
 
     <Icon

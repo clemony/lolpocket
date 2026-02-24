@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
 import { championToTitle } from "#shared/constants/champions/championToTitle"
+import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
 
 const { champion, stats } = storeToRefs(sChampion())
 const { summoner } = storeToRefs(sSession())
@@ -8,7 +8,6 @@ const { champions } = storeToRefs(sData())
 const { mastery } = storeToRefs(sChampion())
 
 const param = useRouteParams("champion_key")
-console.log("🥸 - param:", param)
 const filter = shallowRef<string>("")
 
 const sorted = computed(() =>

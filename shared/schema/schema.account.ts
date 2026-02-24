@@ -4,9 +4,10 @@ import * as v from "valibot"
 import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
 
 // username
-export const usernameSchema = v.nullable(
-  v.pipe(v.string(), v.trim(), v.maxLength(16, "Max length of 16 characters."))
-)
+export const usernameSchema = v.union([
+  v.undefined(),
+  v.pipe(v.string(), v.trim(), v.maxLength(16, "Max length of 16 characters.")),
+])
 
 // title
 export const titleSchema = v.nullable(

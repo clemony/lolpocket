@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { UDrawer, UModal } from "#components"
-import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
 import { itemIndex } from "#shared/constants/items/itemIndex"
+import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
+// eslint-disable-next-line ts/consistent-type-imports
 import { regionIndex } from "#shared/constants/misc/region-index"
 
 const items: CommandPaletteItem[] = itemIndex.map((i) => ({
@@ -48,10 +49,12 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
     :is="breakpoints.desktop ? UModal : UDrawer"
     aria-describedby="app-command-search"
     :ui="{
-      content: ' max-w-180',
+      content: ' max-w-180  ',
     }"
     :handle="false">
-    <Tooltip>
+    <Tooltip
+      align="start"
+      :ui="{ content: 'translate-x-8', arrow: 'translate-x-8' }">
       <UButton
         icon="search"
         label="search..."
@@ -75,13 +78,16 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
         </template>
       </UButton>
       <template #content>
-        Search... &nbsp;
-        <UKbd
-          v-for="k in ['meta', 'K']"
-          :key="k"
-          color="neutral"
-          square
-          :value="k" />
+        <div class="flex items-center gap-1">
+          Search... &nbsp;
+          <UKbd
+            v-for="k in ['meta', 'K']"
+            :key="k"
+            size="sm"
+            color="neutral"
+            square
+            :value="k" />
+        </div>
       </template>
     </Tooltip>
     <template #content>
