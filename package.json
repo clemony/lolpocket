@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.9.0",
-    "@iconify/json": "^2.2.442",
     "@internationalized/date": "^3.11.0",
     "@nuxt/icon": "2.2.1",
     "@nuxt/image": "^2.0.0",

@@ -15,9 +15,6 @@ importers:
       '@formkit/auto-animate':
         specifier: ^0.9.0
         version: 0.9.0
-      '@iconify/json':
-        specifier: ^2.2.442
-        version: 2.2.442
       '@internationalized/date':
         specifier: ^3.11.0
         version: 3.11.0
@@ -999,9 +996,6 @@ packages:
 
   '@iconify/collections@1.0.653':
     resolution: {integrity: sha512-XT+u9JpO+o8dB2qrcI2FrNAZlDH0+flUqcOye4HkYnB+nPLjBXjFbJJTfODOCJzonSw/5axd5w/8fyY1g52d/w==}
-
-  '@iconify/json@2.2.442':
-    resolution: {integrity: sha512-JvAEHLuOu9aS1Ch0kLCs6hlltRUFrs7JVD0Ic6Xfxj/JOkJCCwW0dRCHILEwkWFXrKTmDAP5XTUsCItsfYxdkg==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -7577,11 +7571,6 @@ snapshots:
   '@iconify/collections@1.0.653':
     dependencies:
       '@iconify/types': 2.0.0
-
-  '@iconify/json@2.2.442':
-    dependencies:
-      '@iconify/types': 2.0.0
-      pathe: 2.0.3
 
   '@iconify/types@2.0.0': {}
 
