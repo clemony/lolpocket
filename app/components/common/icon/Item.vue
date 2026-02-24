@@ -32,37 +32,42 @@ function handleClose() {
 }
 
 const child = useTemplateRef<HTMLElement>("child")
-onClickOutside(child, (e: Event) => handleClose())
+const component = ref<HTMLElement | null>(null)
+
+function onClick(e: Event) {
+  console.log("🥸 - onClick - e:", e)
+}
+
+const img = useImage()
 </script>
 
 <template>
-  <Tooltip
-    :disabled="disabled || !outerTt"
+  <component
+    :is="component"
     :label="id ? itemNameById(id) : ''"
     trailing-icon="i-right-click"
-    :img="id ? `/img/items/${id}.webp` : undefined"
+    :avatar="id ? `/img/items/${id}.webp` : undefined"
     :side>
-    <UTooltip v-model:open="innerOpen" :disabled="disabled || !innerTt" :side>
-      <Img
-        role="button"
-        :class="
-          cn(
-            'overflow-hidden rounded-lg',
-            {
-              'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm':
-                id && loaded,
-            },
-            className
-          )
-        "
-        :src="id ? `/img/items/${id}.webp` : undefined"
-        :alt="id ? itemNameById(id) : 'item icon'"
-        :loading-type
-        @click.right.prevent="handleSwap()"
-        @load="loaded = true" />
-      <template v-if="innerTt" #content>
-        <ItemTooltip v-if="id" :id ref="child" />
-      </template>
-    </UTooltip>
-  </Tooltip>
+    <UButton
+      variant="custom"
+      color="transparent"
+      size="custom"
+      :class="
+        cn(
+          'overflow-hidden rounded-lg',
+          {
+            'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
+          },
+          className
+        )
+      "
+      :src="id ? `/img/items/${id}.webp` : undefined"
+      :alt="id ? itemNameById(id) : 'item icon'"
+      :loading-type
+      @click.right.prevent="handleSwap()"
+      @load="loaded = true" />
+    <template v-if="innerTt" #content>
+      <ItemTooltip v-if="id" :id ref="child" :map />
+    </template>
+  </component>
 </template>

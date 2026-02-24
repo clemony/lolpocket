@@ -47,7 +47,7 @@ function showToast() {
   <Tooltip
     trailing-icon="i"
     :label="champName"
-    :img="champId ? `/img/champions/${champId}.webp` : undefined"
+    :avatar="champId ? `/img/champions/${champId}.webp` : undefined"
     :side>
     <Img
       role="button"

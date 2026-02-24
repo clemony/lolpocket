@@ -89,6 +89,8 @@ export const buttonTheme = defineUiTheme({
       false: "justify-start",
     },
     variant: {
+      custom:
+        "fx-0 height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
       solid: "btn shadow-sm hover:inset-shadow-xs",
       ghost:
         "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
@@ -128,7 +130,7 @@ export const buttonTheme = defineUiTheme({
       color: "transparent",
       variant: "solid",
       class: {
-        base: "ring-none border-transparent bg-transparent hover:border-transparent",
+        base: "ring-none border-0 bg-transparent hover:border-0",
       },
     },
     {

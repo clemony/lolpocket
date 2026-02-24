@@ -48,7 +48,7 @@ function showToast() {
     trailing-icon="i"
     :side
     :label="runeName ?? ''"
-    :img="id ? `/img/runes/${id}.webp` : undefined"
+    :avatar="id ? `/img/runes/${id}.webp` : undefined"
     :class="
       cn(
         'relative grid aspect-square size-17 h-full place-items-center overflow-hidden rounded-full border border-p2 bg-p2/30 p-0 transition-all duration-300',

@@ -36,7 +36,7 @@ function showToast() {
     trailing-icon="i"
     :side
     :label="id ? runeNameById(id) : ''"
-    :img="id ? `/img/runes/${id}.webp` : undefined">
+    :avatar="id ? `/img/runes/${id}.webp` : undefined">
     <Img
       v-if="id"
       :key="id"

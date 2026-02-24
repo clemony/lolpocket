@@ -20,7 +20,7 @@ const {
     :ui="{ trailingIcon: 'inline align-bottom leading-none' }"
     :disabled="!summoner"
     :label="`${summoner?.name} #${summoner?.tag}`"
-    :img="getSummonerIcon(summoner?.icon)"
+    :avatar="getSummonerIcon(summoner?.icon)"
     trailing-icon="i-chain"
     :side
     :side-offset="['right', 'left'].includes(side) ? 28 : 14">

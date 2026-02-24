@@ -21,7 +21,7 @@ const path = computed(() => name || (id ? pathNameById(id) : undefined))
   <Tooltip
     :side
     :label="path"
-    :img="`/img/paths/${path}.webp`"
+    :avatar="`/img/paths/${path}.webp`"
     :class="
       cn(
         'anchor size-5 h-full overflow-hidden rounded-full transition-all duration-300',

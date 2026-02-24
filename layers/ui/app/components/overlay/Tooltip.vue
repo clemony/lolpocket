@@ -5,7 +5,7 @@ const {
   arrow = true,
   class: className,
   icon,
-  img,
+  avatar,
   trailingIcon,
   title,
   ui,
@@ -13,7 +13,7 @@ const {
   disabled,
 } = defineProps<{
   class?: HTMLAttributes["class"]
-  img?: string
+  avatar?: string
   ui?: Record<string, string>
   icon?: string
   arrow?: boolean
@@ -102,9 +102,9 @@ const reference = computed(() => ({
       <slot name="content">
         <div class="inline-flex gap-1.5 align-baseline">
           <Img
-            v-if="img"
+            v-if="avatar"
             loading-type="spinner"
-            :src="img"
+            :src="avatar"
             :alt="`${label}-icon`"
             class="size-4.5 rounded-full" />
           <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
