@@ -7,10 +7,10 @@ const toggleLeft = useToggle(collapsed)
   <UPage
     v-auto-animate
     :ui="{
-      root: 'pl-18 pb-20 flex w-screen h-[calc(100vh-var(--ui-header-height))] flex-row lg:flex lg:gap-0 ',
-      left: 'w-106 min-w-90 pt-10',
+      root: 'pl-18 pb-20 flex w-screen min-h-max h-[calc(100vh-var(--ui-header-height))] flex-row lg:flex lg:gap-0 ',
+      left: 'w-106 min-h-max  min-w-90 pt-10',
       center: cn(
-        'mx-auto max-w-(--ui-container) justify-self-center lg:w-full',
+        'mx-auto min-h-max max-w-(--ui-container) justify-self-center lg:w-full',
         collapsed ? 'px-10' : 'pl-8 pr-16'
       ),
     }">

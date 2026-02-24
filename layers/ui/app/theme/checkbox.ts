@@ -117,9 +117,9 @@ export const checkboxTheme = defineUiTheme({
       color: "primary",
       variant: "select",
       class: {
-        base: "ring-0! ring-transparent!",
+        base: "bg-transparent! ring-0! ring-transparent!",
         indicator: "bg-transparent!",
-        icon: "text-pc",
+        icon: "text-pc **:text-pc",
       },
     },
     {

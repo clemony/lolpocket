@@ -12,7 +12,7 @@
     " eslint-config": "pnpm exec eslint-config-inspector",
     " eslint-debug": "pnpm eslint --debug eslint.config.mjs",
     "gen-sb-types": "pnpm dlx supabase gen types --lang=typescript --project-id zsxuzlzfwovsbzzrpcbc > ./shared/types/database.types.ts",
-    "build": "nuxi build",
+    "build": "pnpm dlx nuxi build",
     " prepare": "pnpm exec nuxt prepare",
     "nuxt-upgrade": "rm -rf node_modules .nuxt .output pnpm-lock.yaml && pnpm install && pnpm up nuxt @nuxt/kit --latest && pnpm exec nuxi prepare",
     "debug": "DEBUG=vite:* npx nuxt dev",
