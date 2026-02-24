@@ -8,6 +8,7 @@ const props = withDefaults(defineProps<SeparatorProps>(), {
   underline: false,
   labelPlacement: "start",
 })
+console.log("🥸 - props:", props)
 
 const separatorVariants = tv({
   slots: {
@@ -25,7 +26,7 @@ const separatorVariants = tv({
         separator: "bg-n5/20",
       },
       neutral: {
-        label: "text-nc/50 group-hover/collapse:text-nc!",
+        label: "text-nc/50 group-hover/collapse:text-nc",
         separator: "bg-nc/10",
       },
       p2: {
@@ -43,9 +44,9 @@ const separatorVariants = tv({
     },
     underline: {
       true: {
-        label: "text-pc/60! group-hover/btn:text-pc! group-hover/btn:underline",
+        label: "text-pc/60 group-hover/btn:text-pc group-hover/btn:underline",
         separator: "group-hover/collapse:brightness-86",
-        leading: "**:text-pc/60! group-hover/btn:**:text-pc!",
+        leading: "**:text-pc/60 group-hover/btn:**:text-pc",
       },
     },
     labelVisible: {
@@ -185,8 +186,7 @@ const styles = computed(() =>
     <div
       v-if="props.label"
       :class="styles.wrapper({ class: props.ui?.wrapper })">
-      <span
-        :class="styles.label({ class: [props.ui?.label, props.labelClass] })">
+      <span :class="cn(styles.label(), props.ui?.label)">
         {{ props.label }}
       </span>
     </div>

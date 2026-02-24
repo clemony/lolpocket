@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { mapToItem } from "#shared/constants/items/mapToItem"
 import { itemPrice } from "#shared/constants/items/itemPrice"
 import { itemRank } from "#shared/constants/items/itemRank"
 import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import { mapToItem } from "#shared/constants/items/mapToItem"
 
 const { id, map } = defineProps<{
   id: number
@@ -16,14 +16,28 @@ const rank = computed(
 
 const idRef = computed(() => id ?? 0)
 
-const { data: item, status } = useFetch<Item>(
-  () => `/cdn/items/${idRef.value}.json`,
-  {
-    server: false,
-    lazy: true,
-    immediate: false,
-    key: () => `item-${idRef.value}`,
-    watch: [idRef],
+const {
+  data: item,
+  status,
+  execute,
+} = useFetch<Item>(() => `/cdn/items/${idRef.value}.json`, {
+  server: false,
+  lazy: true,
+  immediate: false,
+  key: () => `item-${idRef.value}`,
+  watch: [idRef],
+})
+console.log("🥸 - status:", status)
+watch(
+  () => item.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
+  }
+)
+watch(
+  () => status.value,
+  (v) => {
+    console.log("💠 - watch - newVal:", v)
   }
 )
 const filteredFrom = computed(() => {
@@ -50,13 +64,16 @@ const has = computed(() => {
   if (item.value?.buildsInto) a.push("buildsInto")
   return a
 })
+
+onMounted(() => {
+  execute()
+})
 </script>
 
 <template>
-  <div class="grid h-max w-full">
+  <div class="grid h-max w-full overflow-hidden">
     <template v-if="status === 'success'">
-      <div
-        class="flex max-h-88 w-full flex-col gap-4 overflow-hidden pt-5 pb-1.5 pl-3">
+      <div class="flex max-h-88 w-full flex-col gap-4 px-2 pt-2">
         <div class="flex shrink-0 items-center gap-4 overflow-hidden">
           <!-- IMG -->
 
@@ -69,12 +86,13 @@ const has = computed(() => {
             :alt="`${name} Image`" />
           <!-- NAME / LINK -->
 
-          <div class="grow pr-12">
-            <h4 class="mt-2 text-lg! leading-5 font-semibold! text-nowrap">
+          <div class="grow">
+            <h4 class="text-lg! leading-5 font-semibold! text-nowrap">
               {{ name }}
             </h4>
 
-            <span class="inline-flex w-full shrink-0 justify-between text-sm">
+            <span
+              class="mt-1 inline-flex w-full shrink-0 justify-between gap-14 text-sm">
               <!-- RANK -->
               <span
                 class="text-2xs font-medium text-n5 italic opacity-90"
@@ -84,7 +102,8 @@ const has = computed(() => {
                 {{ itemRank[id] }}
               </span>
               <!-- PRICE -->
-              <figure class="inline-flex gap-1.5 text-xs font-medium">
+              <figure
+                class="inline-flex -translate-y-0.5 gap-1.5 pr-1 text-xs font-medium">
                 <Icon
                   class="inline size-3.5 self-center opacity-80 **:text-g!"
                   name="lol:gold"
@@ -95,19 +114,6 @@ const has = computed(() => {
               </figure>
             </span>
           </div>
-        </div>
-
-        <div class="flex size-full shrink flex-col">
-          <!-- separator -->
-          <Separator
-            v-if="item?.stats && Object.entries(item?.stats).length"
-            class="mb-2 w-full"
-            color="neutral" />
-          <!-- STATS -->
-
-          <LazyItemStats
-            v-if="item?.stats && Object.entries(item?.stats).length"
-            :stats="item?.stats" />
         </div>
 
         <!--
@@ -123,9 +129,11 @@ const has = computed(() => {
             class="" />
         </a> -->
       </div>
-      <div v-if="has?.length" class="max-h-64 w-full overflow-y-auto text-xs">
+      <div
+        v-if="has?.length"
+        class="scrollbar-none max-h-64 w-full shrink-0 overflow-y-auto text-xs">
         <div
-          class="relative col-start-2 flex w-full flex-col overflow-x-hidden overflow-y-scroll p-3">
+          class="relative col-start-2 flex w-full shrink-0 flex-col overflow-x-hidden overflow-y-scroll px-2 pt-2.5 pb-0 *:last:mb-3">
           <span
             v-if="!item?.stats"
             class="whitespace-pre-line"
@@ -138,9 +146,21 @@ const has = computed(() => {
             </i>
           </div>
 
+          <!-- separator -->
+          <Separator
+            v-if="item?.stats && Object.entries(item?.stats).length"
+            class="mt-1 mb-2.5 w-full"
+            color="neutral" />
+          <!-- STATS -->
+
+          <LazyItemStats
+            v-if="item?.stats && Object.entries(item?.stats).length"
+            :stats="item?.stats" />
           <!-- EFFECTS -->
           <template v-if="item?.passives?.length && !item?.noEffects">
-            <Separator class="my-2 first:hidden" color="neutral" />
+            <Separator
+              class="mt-2.5 opacity-0 **:bg-transparent! first:hidden"
+              color="neutral" />
             <LazyItemEffect
               v-for="(passive, i) in item.passives"
               :key="i"
@@ -158,33 +178,28 @@ const has = computed(() => {
           <!-- RECIPE -->
 
           <template v-if="item?.buildsFrom">
-            <Separator class="my-3.5 h-px" label="RECIPE" color="neutral" />
-            <div
-              :class="
-                cn('flex gap-1', {
-                  'flex-col gap-3': item.buildsFrom.length > 2,
-                })
-              ">
-              <div class="flex items-center gap-1">
-                <template v-for="(fromItem, i) in filteredFrom" :key="i">
-                  <Img
-                    :src="`/img/items/${fromItem.id}.webp`"
-                    :alt="fromItem.name"
-                    loading-type="spinner"
-                    :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
-                    class="size-8 rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80" />
+            <Separator
+              :ui="{ root: ' my-5! h-px' }"
+              size="xs"
+              label="RECIPE"
+              color="neutral" />
+            <div class="flex items-center gap-1">
+              <template v-for="(fromItem, i) in filteredFrom" :key="i">
+                <Img
+                  :src="`/img/items/${fromItem.id}.webp`"
+                  :alt="fromItem.name"
+                  loading-type="spinner"
+                  :title="`${fromItem.name} ‑ ${fromItem.gold}g`"
+                  class="size-8 rounded-md hover:ring-1 hover:ring-nc/60 hover:ring-offset-2 hover:ring-offset-neutral/80" />
 
-                  <Icon
-                    v-if="i !== item.buildsFrom.length - 1"
-                    class="size-3.5"
-                    name="add" />
-                </template>
-              </div>
-              <div v-if="item?.gold?.total" class="flex items-center gap-1">
-                <Icon class="size-3.5" name="add" />
-                <Icon class="size-3.5 text-g/90" name="lol:gold" alt="coin" />
-                {{ item.gold?.base }}
-              </div>
+                <Icon
+                  v-if="i !== item.buildsFrom.length - 1"
+                  class="size-3.5 text-nc"
+                  name="add" />
+              </template>
+              <Icon class="mx-1 size-3.5 text-nc" name="add" />
+              <Icon class="size-3.5 text-g/90" name="lol:gold" alt="coin" />
+              {{ item.gold?.base }}
             </div>
           </template>
 
@@ -192,9 +207,10 @@ const has = computed(() => {
 
           <template v-if="item && item?.buildsInto">
             <Separator
-              class="mt-3.5 mb-3.75 h-px"
+              class="my-5 h-px"
+              size="xs"
               label="BUILDS INTO"
-              color="n5" />
+              color="neutral" />
 
             <div
               :class="
@@ -221,13 +237,13 @@ const has = computed(() => {
     <!-- i-streamline-ultimate-work-from-home-user-pet-cat
      i-arcticons-emoji-cat -->
     <UEmpty
-      v-else
+      v-if="status === 'error'"
       variant="naked"
       icon="i-streamline-freehand-work-from-home-user-pet-cat"
       size="xs"
       title="Item not found.">
       <template #description>
-        It seems <Ulink class="inline" unerline> clem </Ulink> may have moved
+        It seems <ULink class="inline" underline> clem </ULink> may have moved
         this from it's previous location. Try refreshing to see if we've found
         it.
       </template>

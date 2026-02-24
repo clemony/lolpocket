@@ -13,14 +13,14 @@ const {
 <template>
   <div
     :class="
-      cn('w w-full gap-x-1 align-middle leading-normal text-pretty', className)
+      cn('w-full gap-x-1 align-middle leading-normal text-pretty', className)
     ">
-    <span v-if="data.unique" class="tracking-tight text-sorc! italic">
+    <span v-if="data.unique" class="tracking-tight text-pre/90! italic">
       Unique {{ type }}
       <template v-if="!data.name">:&nbsp;</template>
     </span>
 
-    <span v-if="data.name" class="tracking-tight text-sorc! italic">
+    <span v-if="data.name" class="tracking-tight text-pre/90! italic">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 

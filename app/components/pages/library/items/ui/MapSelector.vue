@@ -8,16 +8,18 @@ const { collapsed } = defineProps<{
 const mapOpen = shallowRef<boolean>(false)
 const { filters } = storeToRefs(is())
 
-const maps = computed(() =>
-  mapIndex.filter((m) => [11, 12, 30, 35].includes(m.id))
-)
+const maps = computed(() => [
+  {
+    id: 0,
+    name: "All",
+  },
+  ...mapIndex.filter((m) => [11, 12, 30, 35].includes(m.id)),
+])
 </script>
 
 <template>
   <div>
-    <h6 v-if="!collapsed" class="text-sm">
-      Map
-    </h6>
+    <h6 v-if="!collapsed" class="text-sm">Map</h6>
     <UPopover
       v-model:open="mapOpen"
       :content="{
@@ -39,15 +41,13 @@ const maps = computed(() =>
             trailingIcon: collapsed ? 'hidden' : '',
             leadingIcon: collapsed ? 'size-5' : '',
           }"
-          :label="mapNameById(filters.map)"
+          :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
           :leading-icon="`i-map-${filters.map}`"
           trailing-icon="i-up-down"
           :variant="collapsed ? 'ghost' : 'outline'" />
       </Tooltip>
       <template #content>
-        <h6 class="px-1.5 py-1 text-xs">
-          Select Map
-        </h6>
+        <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
         <URadioGroup
           v-model:model-value="filters.map"
           color="p1"

@@ -1,34 +1,35 @@
 <script lang="ts" setup>
-import type { ImgHTMLAttributes } from 'vue'
+import type { ImgHTMLAttributes } from "vue"
 
 const props = withDefaults(
   defineProps<{
-    alt: ImgHTMLAttributes['alt']
+    alt: ImgHTMLAttributes["alt"]
     ratio?: number
-    src: ImgHTMLAttributes['src']
-    class?: HTMLAttributes['class']
+    src: ImgHTMLAttributes["src"]
+    class?: HTMLAttributes["class"]
     format?: string
-    loading?: ImgHTMLAttributes['loading']
-    decoding?: ImgHTMLAttributes['decoding']
+    loading?: ImgHTMLAttributes["loading"]
+    decoding?: ImgHTMLAttributes["decoding"]
     loadingType?: LoadingStyle
   }>(),
   {
-    decoding: 'async',
-    format: 'webp',
-    loading: 'lazy',
+    decoding: "async",
+    format: "webp",
+    loading: "lazy",
     ratio: 1,
   }
 )
 
-const emit = defineEmits(['load'])
+const emit = defineEmits(["load"])
 </script>
 
 <template>
   <div
-    :class=" cn(
-      'relative grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
-      props.class,
-    )
+    :class="
+      cn(
+        'pointer-events-none relative grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
+        props.class
+      )
     ">
     <NuxtImg
       v-slot="{ src: source, isLoaded, imgAttrs }"
@@ -48,10 +49,10 @@ const emit = defineEmits(['load'])
             {
               'animate-in fade-in translate-z-0 opacity-100 transition-all duration-400':
                 isLoaded,
-            },
+            }
           )
         "
-        @load="emit('load')">
+        @load="emit('load')" />
       <div
         v-else
         :class="
@@ -60,7 +61,7 @@ const emit = defineEmits(['load'])
             {
               'animate-out fade-out opacity-0 transition-all duration-500':
                 isLoaded,
-            },
+            }
           )
         "
         alt="placeholder">
@@ -70,9 +71,7 @@ const emit = defineEmits(['load'])
           <Spinner />
         </span>
 
-        <USkeleton
-          v-else
-          class="inset-0 size-full grow" />
+        <USkeleton v-else class="inset-0 size-full grow" />
       </div>
     </NuxtImg>
     <slot />

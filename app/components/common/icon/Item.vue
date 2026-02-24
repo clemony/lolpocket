@@ -15,6 +15,7 @@ const {
   disabled?: boolean
 }>()
 
+const emit = defineEmits(["clicked"])
 const loaded = shallowRef<boolean>(false)
 const outerTt = shallowRef<boolean>(true)
 const innerTt = shallowRef<boolean>(false)
@@ -25,36 +26,31 @@ function handleSwap() {
   innerOpen.value = true
 }
 
-function handleClose() {
-  outerTt.value = true
-  innerTt.value = false
-  innerOpen.value = false
-}
-
-const child = useTemplateRef<HTMLElement>("child")
-const component = ref<HTMLElement | null>(null)
-
-function onClick(e: Event) {
-  console.log("🥸 - onClick - e:", e)
-}
+function handlePin() {}
 
 const img = useImage()
+
+const pinned = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <component
-    :is="component"
-    :label="id ? itemNameById(id) : ''"
-    trailing-icon="i-right-click"
+  <Tooltip
+    interactive
     :avatar="id ? `/img/items/${id}.webp` : undefined"
-    :side>
-    <UButton
-      variant="custom"
-      color="transparent"
-      size="custom"
+    :label="id ? itemNameById(id) : ''"
+    :ui="{
+      content: cn('h-fit! max-h-80! w-full max-w-80 px-1', {
+        'rounded-xl ': pinned,
+      }),
+    }"
+    :side
+    @pinned="pinned = true"
+    @unpinned="pinned = false">
+    <Img
+      role="button"
       :class="
         cn(
-          'overflow-hidden rounded-lg',
+          'size-full overflow-hidden rounded-lg p-0',
           {
             'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
           },
@@ -64,10 +60,10 @@ const img = useImage()
       :src="id ? `/img/items/${id}.webp` : undefined"
       :alt="id ? itemNameById(id) : 'item icon'"
       :loading-type
-      @click.right.prevent="handleSwap()"
       @load="loaded = true" />
-    <template v-if="innerTt" #content>
-      <ItemTooltip v-if="id" :id ref="child" :map />
+
+    <template v-if="pinned" #content>
+      <ItemTooltip v-if="id" :id />
     </template>
-  </component>
+  </Tooltip>
 </template>
