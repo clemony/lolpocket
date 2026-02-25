@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url"
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
 
-/* const iconsRoot = fileURLToPath(
+const iconsRoot = fileURLToPath(
   new URL("./layers/ui/app/assets/icons", import.meta.url)
 )
 
@@ -18,7 +18,7 @@ const customCollections = fs
     dir: path.join(iconsRoot, d.name),
     normalizeIconName: false,
     prefix: d.name,
-  })) */
+  }))
 
 export default defineNuxtConfig({
   imports: {
@@ -66,9 +66,8 @@ export default defineNuxtConfig({
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
-    provider: "ipx",
+    provider: "none",
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
-    format: ["webp"],
   },
   colorMode: {
     componentName: "ColorScheme",
@@ -77,47 +76,17 @@ export default defineNuxtConfig({
     globalName: "__NUXT_COLOR_MODE__",
     preference: "system",
   },
-  /*   icon: {
+  icon: {
     provider: "server",
     customCollections,
     size: "18px",
     serverBundle: {
-      externalizeIconsJson: true,
       collections: ["lucide"],
     },
-  }, */
+  },
   ui: {
     fonts: false,
   },
-  /*   fonts: {
-    families: [
-      {
-        name: "Inter",
-        provider: "fontsource",
-        styles: ["italic", "normal"],
-        weights: [300, 400, 500, 600, 700, 800],
-      },
-      {
-        name: "Noto Serif KR",
-        provider: "fontsource",
-
-        styles: ["italic", "normal"],
-        weights: [300, 400, 600, 700],
-      },
-      {
-        name: "Geist Mono",
-        provider: "fontsource",
-        styles: ["normal"],
-        weights: [300, 400, 500],
-      },
-      {
-        name: "DM Serif Display",
-        provider: "fontsource",
-        styles: ["normal", "italic"],
-        weights: [400],
-      },
-    ],
-  }, */
 
   ssr: true,
   nitro: {
@@ -155,7 +124,7 @@ export default defineNuxtConfig({
     "/champions/**": { ssr: false },
     "/faq": { ssr: false },
     "/faq/**": { ssr: false },
-    "/library": { ssr: true },
+    "/library": { ssr: false },
     "/:region": { ssr: false },
     "/:region/**": { ssr: false },
     "/library/**": { ssr: false },
@@ -210,6 +179,10 @@ export default defineNuxtConfig({
   },
   sitemap: {
     enabled: isProduction,
+    zeroRuntime: true,
+  },
+  ogImage: {
+    zeroRuntime: true,
   },
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
