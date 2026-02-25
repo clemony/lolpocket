@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
+const { summoner } = storeToRefs(sSession())
+
+useHead({
+  // or as a function
+  titleTemplate: () => {
+    if (summoner.value?.name)
+      return `${summoner.value.name} - Match History | lolpocket`
+    else return "lolpocket"
+  },
 })
+
 definePageMeta({
   title: "Match History",
   description: "Browse through your matches with deep search tools.",
@@ -20,10 +19,6 @@ definePageMeta({
 })
 
 const open = shallowRef<boolean>(true)
-const { summoner } = storeToRefs(sSession())
-onMounted(() => {
-  matchFilter().clearFilters()
-})
 </script>
 
 <template>

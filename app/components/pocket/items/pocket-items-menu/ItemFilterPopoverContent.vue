@@ -13,7 +13,7 @@ onMounted(() => UScrollArea.value?.scrollTo({ top: 0 }))
       placeholder="search">
       <template #trailing>
         <UButton size="xs" square icon="filter" />
-        <InputClear @clear-input="is().filters.query = ''" />
+        <LazyInputClear @clear-input="is().filters.query = ''" />
       </template>
     </UInput>
     <div

@@ -1,5 +1,9 @@
 # Codex Rules
 
+### Project structure
+
+- Nuxt UI theme files live in `layers/ui/app/theme`
+
 ## Context7 Auto-Use (Global)
 
 When a user asks a code-related question, automatically use Context7 for library/API docs, setup, or configuration.
@@ -10,6 +14,7 @@ If a known library is detected, use its libraryId directly (skip resolve-library
 - Vue Router 4 -> /vuejs/router
 - Tailwind CSS 4 -> /websites/tailwindcss
 - Nuxt UI 4 -> /websites/ui4_nuxt
+- Nuxt SEO -> /websites/nuxtseo/llms.txt
 - Supabase -> /supabase/supabase
 - Cloudflare D1 -> /llmstxt/developers_cloudflare_d1_llms-full_txt
 - Pinia -> /vuejs/pinia

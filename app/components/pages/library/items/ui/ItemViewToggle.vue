@@ -1,89 +1,27 @@
 <script lang="ts" setup>
-import { LibraryItemGrid, LibraryItemTable } from "#components"
-const { collapsed } = defineProps<{
-  collapsed?: boolean
-}>()
+import type { TabValue } from "~/components/pages/library/items/ui/viewMode"
+import { tabData } from "~/components/pages/library/items/ui/viewMode"
 
-const emit = defineEmits(["updateTab"])
+const tab = defineModel<TabValue>("tabModel", { default: 0 })
 
-type TabValue = 0 | 1
-const tabs = shallowRef<TabValue>(0)
-const tabData = [
-  {
-    value: 0 as TabValue,
-    icon: "i-mingcute-layout-grid-fill",
-    label: "Grid",
-    component: LibraryItemGrid,
-  },
-  {
-    value: 1 as TabValue,
-    icon: "i-lucide-list",
-    label: "Table",
-    component: LibraryItemTable,
-  },
-]
-
-const activeTab = computed(
-  () => tabData.find((v) => v.value === tabs.value) ?? tabData[0]
-)
-
-const collapsedToggle = computed<boolean>({
-  get: () => tabs.value === 1,
-  set: (isTable) => {
-    tabs.value = isTable ? 1 : 0
-    emit("updateTab", isTable ? LibraryItemTable : LibraryItemGrid)
-  },
-})
-
-function onTabChange(value: number | string | undefined) {
-  tabs.value = Number(value) === 1 ? 1 : 0
-  emit("updateTab", activeTab.value?.component)
-}
+const tabValue = computed(() => tab.value === 0)
 </script>
 
 <template>
-  <div
-    v-if="!collapsed"
-    class="-my-2 inline-flex flex-nowrap items-center gap-3 pl-1">
-    <span class="align-bottom text-sm leading-6 font-medium">View:</span>
-    <UTabs
-      :model-value="tabs"
-      :items="Object.values(tabData)"
-      size="sm"
-      :ui="{
-        root: 'w-fit!  inline align-middle grow-0 ',
-        list: 'w-fit p-0 gap-1',
-        trigger: 'w-fit self-center px-3',
-        indicator:
-          'rounded-[0.45rem] border-b border-p2 ring ring-p3 shadow-none! drop-shadow-none! ',
-        leadingIcon: 'hidden',
-      }"
-      variant="ghost"
-      :default-value="tabs"
-      @update:model-value="onTabChange">
-      <template #default="{ item }">
-        <span
-          :class="cn('font-normal', { 'font-semibold': item.value === tabs })"
-          >{{ item.label }}</span
-        >
-      </template>
-    </UTabs>
-  </div>
-  <UTabs
-    v-else
-    :model-value="tabs"
+  <!--   <UTabs
+    v-model:model-value="tab"
+    orientation="vertical"
     :items="Object.values(tabData)"
     :ui="{
       root: 'w-fit!  inline align-middle grow-0 ',
-      list: 'w-fit p-0 gap-2',
+      list: 'w-fit flex-col-reverse p-0 gap-2',
       trigger: 'size-10 self-center px-3',
-      indicator: 'size-10!   ring-0',
+      indicator: 'size-10! rounded-full  ring-0',
       label: 'hidden',
     }"
     variant="ghost"
     color="neutral"
-    :default-value="tabs"
-    @update:model-value="onTabChange">
+    @update:model-value="(e) => (tab = e as TabValue)">
     <template #leading="{ item }">
       <Tooltip
         :label="item.label"
@@ -91,19 +29,22 @@ function onTabChange(value: number | string | undefined) {
         <Icon :name="item.icon" class="absolute size-5 **:stroke-[2.2]" />
       </Tooltip>
     </template>
-  </UTabs>
-  <!--
-  <Tooltip
-    v-else
+  </UTabs> -->
+  <LazyTooltip
     class="grid place-items-center"
-    :label="`Active view - ${activeTab?.label}`"
+    :label="`Active view - ${tabData[tab]?.label}`"
     side="right">
     <Toggle
-      v-model:model-value="collapsedToggle"
-      :ui="{ leadingIcon: 'size-5 **:stroke-[1.8]' }"
+      :ui="{
+        leadingIcon: 'size-5 **:stroke-[1.8]',
+        base: 'rounded-full drop-shadow-black/4 drop-shadow-md ',
+      }"
       square
-      :leading-icon="activeTab?.icon"
-      variant="ghost"
-      indicator="hidden" />
-  </Tooltip> -->
+      size="lg"
+      :leading-icon="tabData[tab]?.icon"
+      color="p0"
+      indicator="hidden"
+      :default-value="tabValue"
+      @update:model-value="(e) => tab === (e === true ? 0 : 1)" />
+  </LazyTooltip>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { regionIndex } from "#shared/constants/misc/region-index"
+import type { regionIndex } from "#shared/constants/misc/region-index"
 
 defineOptions({
   inheritAttrs: false,
@@ -77,7 +77,7 @@ watch([query, tag, selectedRegion], runSearch) */
     "
     @update:model-value="(e) => (query = e)">
     <template #trailing>
-      <InputClear @clear-input="clear()" />
+      <LazyInputClear @clear-input="clear()" />
       <SearchTagInput
         :tag
         @focus-return="focused = true"

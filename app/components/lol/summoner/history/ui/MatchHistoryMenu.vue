@@ -25,7 +25,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
     ">
     <Toggle
       v-model:model-value="open"
-      class="fx-0 hover:fx-1 bg-transparent! on:bg-transparent!"
+      class="bg-transparent! fx-0 hover:fx-1 on:bg-transparent!"
       on="inset"
       hover="inset"
       square
@@ -37,7 +37,7 @@ const asideRef = useTemplateRef<HTMLElement>("asideRef")
 
     <UPopover>
       <UButton
-        class="fx-0 hover:fx-1 bg-transparent! aria-expanded:btn-active on:bg-transparent!"
+        class="bg-transparent! fx-0 hover:fx-1 aria-expanded:btn-active on:bg-transparent!"
         variant="ghost"
         on="inset"
         hover="inset"
@@ -86,7 +86,8 @@ size="lg"
       class="peer"
       placeholder="Search match history...">
       <template #trailing>
-        <InputClear @update:model-value="(e: string) => (store.query = e)" />
+        <LazyInputClear
+          @update:model-value="(e: string) => (store.query = e)" />
       </template>
     </UInput>
     />

@@ -34,7 +34,7 @@ function toggle(value: boolean | "indeterminate") {
 
 <template>
   <Element
-    class="hover:fx-1 w-full border border-transparent py-2 hover:border-p3/50! hover:bg-p2/40"
+    class="w-full border border-transparent py-2 hover:border-p3/50! hover:bg-p2/40 hover:fx-1"
     base="btn"
     hover="outline"
     variant="ghost">

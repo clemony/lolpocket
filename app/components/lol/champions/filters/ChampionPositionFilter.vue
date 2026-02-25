@@ -39,7 +39,7 @@ const {
         <BaseListboxItem
           v-for="position in mapPositions.filter((p) => p.label !== 'All')"
           :key="position.label"
-          class="fx-0 bg-transparent"
+          class="bg-transparent fx-0"
           :value="position.label"
           as-child>
           <PositionBadge :variant size="sm" :position />

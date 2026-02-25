@@ -10,7 +10,7 @@ const { filters } = storeToRefs(champFilter())
       class="peer"
       placeholder="search">
       <template #trailing>
-        <InputClear @clear-input="filters.query = ''" />
+        <LazyInputClear @clear-input="filters.query = ''" />
       </template>
     </UInput>
     <div

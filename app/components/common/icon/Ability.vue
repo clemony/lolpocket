@@ -5,10 +5,10 @@ const {
   ckey,
   id,
   class: className,
-  dataSize = 'lg',
+  dataSize = "lg",
   noTip = false,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   ckey?: string
   id?: string
   cid?: number
@@ -35,17 +35,15 @@ const ability = computed(() => id || `${champ.value}${akey}`)
       cn(
         'relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
         { 'shadow-sm shadow-black/30 drop-shadow-sm': loaded },
-        className,
+        className
       )
     ">
-    <Spinner
-      v-if="!loaded"
-      class="absolute z-0" />
+    <LazySpinner v-if="!loaded" class="absolute z-0" />
     <img
       class="size-full shrink-0"
       :alt="ability"
       :src="`/img/abilities/${ability}.webp`"
-      @load="loaded = true">
+      @load="loaded = true" />
     <slot />
   </label>
 </template>

@@ -92,6 +92,15 @@
   --tabcontent-radius-ee: var(--radius-xl);
 }
 
+@utility fx-0 {
+  --noise: 0;
+  --depth: 0;
+}
+
+@utility fx-1 {
+  --noise: 0.2;
+  --depth: 0.5;
+}
 @utility kbd {
   border-color: var(--ui-p4);
 }
@@ -141,16 +150,6 @@
       @apply h-8.5 pt-0.75;
       --tab-radius-min: 0.64rem;
     }
-  }
-
-  .fx-0 {
-    --noise: 0;
-    --depth: 0;
-  }
-
-  .fx-1 {
-    --noise: 0.2;
-    --depth: 0.5;
   }
 
   /* tooltip */

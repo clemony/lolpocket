@@ -39,7 +39,7 @@ const {
         <BaseListboxItem
           v-for="role in championRoles"
           :key="role.name"
-          class="fx-0 bg-transparent"
+          class="bg-transparent fx-0"
           :value="role.name"
           as-child>
           <RoleBadge as="label" :variant size="sm" :role />

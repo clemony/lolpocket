@@ -236,17 +236,19 @@ onMounted(() => {
 
     <!-- i-streamline-ultimate-work-from-home-user-pet-cat
      i-arcticons-emoji-cat -->
-    <UEmpty
+    <LazyUEmpty
       v-if="status === 'error'"
       variant="naked"
       icon="i-streamline-freehand-work-from-home-user-pet-cat"
       size="xs"
       title="Item not found.">
       <template #description>
-        It seems <ULink class="inline" underline> clem </ULink> may have moved
+        It seems <ULink class="inline" underline>
+          clem
+        </ULink> may have moved
         this from it's previous location. Try refreshing to see if we've found
         it.
       </template>
-    </UEmpty>
+    </LazyUEmpty>
   </div>
 </template>

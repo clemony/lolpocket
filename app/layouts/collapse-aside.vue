@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const collapsed = useState<boolean>("collapsed-state", () => false)
 const toggleLeft = useToggle(collapsed)
+const toolbarOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
@@ -52,12 +53,39 @@ const toggleLeft = useToggle(collapsed)
     <!-- PAGE SLOT -->
     <UPageBody v-auto-animate class="relative flex min-h-full flex-1 flex-col">
       <slot :collapsed />
-      <div
-        v-if="collapsed || smallerThanLg"
-        v-auto-animate
-        class="mt-full sticky bottom-6 mx-auto mb-15 flex w-full max-w-[calc(var(--ui-container)-10rem)] items-center gap-4 rounded-xl border border-p3/60 bg-p0/94 px-5 py-2 drop-shadow-sm drop-shadow-black/4 backdrop-blur-md">
-        <slot name="toolbar" />
-      </div>
     </UPageBody>
+    <div
+      class="y-0 pointer-events-none absolute inset-y-0 right-[4%] bottom-0 flex h-full items-end overflow-visible py-[4%]">
+      <!--    v-if="collapsed || smallerThanLg" -->
+      <UPopover
+        v-model:open="toolbarOpen"
+        :ui="{
+          content:
+            ' flex flex-col-reverse  items-center gap-4 bg-unset ring-0 backdrop-blur-none shadow-none drop-shadow-none pb-5 ',
+        }"
+        :content="{ side: 'top' }">
+        <UButton
+          size="xl"
+          :active="toolbarOpen"
+          square
+          color="p0"
+          active-color="neutral"
+          :ui="{
+            base: 'pointer-events-auto drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 shrink-0 fx-0  rounded-full sticky bottom-[4%] ',
+            leadingIcon: cn('group-open/btn:**:text-nc'),
+          }"
+          :icon="toolbarOpen ? 'i-up' : 'i-filter'" />
+
+        <template #content>
+          <slot name="toolbar" />
+          <div class="absolute -translate-x-20 translate-y-22">
+            <slot name="toolbar-left" />
+          </div>
+          <div class="absolute -translate-x-16 translate-y-6">
+            <slot name="toolbar-center" />
+          </div>
+        </template>
+      </UPopover>
+    </div>
   </UPage>
 </template>

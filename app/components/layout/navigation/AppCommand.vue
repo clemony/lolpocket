@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { UDrawer, UModal } from "#components"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
 // eslint-disable-next-line ts/consistent-type-imports
@@ -42,11 +41,22 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
   spell: "insp",
   summoner: "p0",
 }
+
+const component = shallowRef(
+  defineAsyncComponent(
+    () =>
+      import(
+        breakpoints.desktop
+          ? "@nuxt/ui/components/Modal.vue"
+          : "@nuxt/ui/components/Drawer.vue"
+      )
+  )
+)
 </script>
 
 <template>
   <component
-    :is="breakpoints.desktop ? UModal : UDrawer"
+    :is="component"
     aria-describedby="app-command-search"
     :ui="{
       content: ' max-w-180  ',
@@ -54,14 +64,16 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
     :handle="false">
     <Tooltip
       align="start"
-      :ui="{ content: 'translate-x-8', arrow: 'translate-x-8' }">
+      arrow
+      color="primary"
+      :ui="{ content: 'translate-x-6', arrow: 'translate-x-6' }">
       <UButton
         icon="search"
         label="search..."
         size="md"
         :ui="{
-          base: 'shrink-0 cursor-text  w-180! inset-shadow-xs noise bg-p0/50 border border-p3 rounded-xl!',
-          label: 'grow text-center  text-n4   ',
+          base: 'shrink-0 cursor-text  fx-1 w-180! inset-shadow-xs  bg-p0/50 border border-p3 rounded-xl!',
+          label: 'grow text-center  text-n5   ',
           leadingIcon:
             'size-4.5 justify-self-start text-n5 **:stroke-[2.3] opacity-80 group-hover/btn:opacity-100',
         }"
@@ -91,7 +103,7 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
       </template>
     </Tooltip>
     <template #content>
-      <UCommandPalette
+      <LazyUCommandPalette
         virtualize
         :fuse="{ resultLimit: 1000 }"
         :groups="groups"
@@ -103,14 +115,14 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
         }"
         class="h-80 flex-1">
         <template #item-trailing="{ item }">
-          <UBadge
+          <LazyUBadge
             size="sm"
             :color="badgeColor[String(item.suffix)]"
-            :label="item.suffix"></UBadge>
+            :label="item.suffix"></LazyUBadge>
         </template>
         <template #footer>
           <div class="flex h-7 items-center justify-between gap-2">
-            <LpLogo class="ml-1 size-5 rounded-sm *:text-[9px]" />
+            <LazyLpLogo class="ml-1 size-5 rounded-sm *:text-[9px]" />
             <div class="flex items-center gap-1">
               <UButton
                 color="neutral"
@@ -122,7 +134,7 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
                   <UKbd value="enter" />
                 </template>
               </UButton>
-              <USeparator orientation="vertical" class="h-4" />
+              <LazyUSeparator orientation="vertical" class="h-4" />
               <UButton
                 color="neutral"
                 variant="ghost"
@@ -137,7 +149,7 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
             </div>
           </div>
         </template>
-      </UCommandPalette>
+      </LazyUCommandPalette>
     </template>
   </component>
 </template>

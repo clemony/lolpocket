@@ -97,7 +97,7 @@ export const badgeTheme = defineUiTheme({
     {
       color: "transparent",
       variant: "ghost",
-      class: "ring-none fx-0 border-none text-pc shadow-none",
+      class: "ring-none border-none text-pc shadow-none fx-0",
     },
 
     // neutral

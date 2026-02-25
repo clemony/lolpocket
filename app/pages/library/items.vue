@@ -1,8 +1,10 @@
 <script lang="ts" setup>
-import { LibraryItemGrid, LibraryItemTable } from "#components"
-import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
+import { LibraryItemGrid } from "#components"
 import { itemQuotes } from "#shared/constants/items/itemQuotes"
 import { rankToItem } from "#shared/constants/items/rankToItem"
+import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
+import type { TabValue } from "~/components/pages/library/items/ui/viewMode"
+import { tabData } from "~/components/pages/library/items/ui/viewMode"
 
 definePageMeta({
   title: "Items",
@@ -33,19 +35,41 @@ const ranks = computed<ArrayOrNested<TabsItem>>(() => [
 ])
 
 const quote = computed(() => getRandom(itemQuotes))
-const tabModel = shallowRef<Component>(LibraryItemGrid)
+const tabModel = shallowRef<TabValue>(0)
+const component = computed(() =>
+  tabModel.value === 0
+    ? defineAsyncComponent(
+        () => import("~/components/pages/library/items/LibraryItemGrid.vue")
+      )
+    : defineAsyncComponent(
+        () => import("~/components/pages/library/items/LibraryItemTable.vue")
+      )
+)
 
-const collapsed = useState<boolean>("collapsed-state", () => false)
 const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
 </script>
 
 <template>
   <NuxtLayout name="collapse-aside">
     <template #aside>
-      <ItemFilterSidebar :nav @update-tab="(e) => (tabModel = e)" />
+      <ItemFilterSidebar
+        v-model:tab-model="tabModel"
+        :nav
+        @update-tab="(e) => (tabModel = e)" />
     </template>
     <template #toolbar>
-      <ItemFilterToolbar :nav @update-tab="(e) => (tabModel = e)" />
+      <LazyItemFilterToolbar v-model:tab-model="tabModel" :nav />
+    </template>
+    <template #toolbar-left>
+      <ItemFloatingSearch />
+    </template>
+
+    <template #toolbar-center>
+      <!-- view -->
+      <ItemViewToggle
+        collapsed
+        size="xl"
+        @update:tab-model="(e: TabValue) => (tabModel = e)" />
     </template>
     <template #quote>
       {{ quote }}
@@ -66,9 +90,9 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
         }" />
     </div>
     <div v-auto-animate :class="cn('size-full grow')">
-      <component :is="tabModel" v-if="is().filtered.length" />
+      <component :is="component" v-if="is().filtered.length" />
       <div v-else v-auto-animate class="grid w-full place-items-center">
-        <UEmpty
+        <LazyUEmpty
           size="sm"
           icon="i-lucide-package-x"
           class="mb-40 translate-y-1/2"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EmitsToProps } from "@nuxt/ui"
+import type { EmitsToProps, TooltipProps } from "@nuxt/ui"
 import type { TooltipContentEmits, TooltipContentProps } from "reka-ui"
 
 const {
@@ -11,7 +11,8 @@ const {
   avatar,
   trailingIcon,
   title,
-  ui,
+  ui: uiProps,
+  kbds,
   label,
   disabled,
   followPointer = true,
@@ -21,6 +22,7 @@ const {
   class?: HTMLAttributes["class"]
   avatar?: string
   ui?: TooltipUi
+  kbds?: TooltipProps["kbds"]
   icon?: string
   arrow?: boolean
   side?: Side
@@ -202,7 +204,7 @@ const contentProps = computed<ContentProps>(() => ({
     :delay-duration="0"
     :disable-hoverable-content="!interactive"
     :reference="reference"
-    :ui="{ content: cn('z-50', ui?.content), arrow: ui?.arrow }"
+    :ui="{ content: cn('z-50', uiProps?.content), arrow: uiProps?.arrow }"
     :content="contentProps">
     <div
       ref="triggerRef"
@@ -220,7 +222,7 @@ const contentProps = computed<ContentProps>(() => ({
       <div ref="contentRef">
         <slot name="content">
           <div class="inline-flex gap-1.5 align-baseline">
-            <Img
+            <LazyImg
               v-if="avatar"
               loading-type="spinner"
               :src="avatar"
@@ -233,11 +235,7 @@ const contentProps = computed<ContentProps>(() => ({
               v-if="trailingIcon"
               :name="trailingIcon"
               :class="
-                cn(
-                  'ml-2 inline size-3.5 translate-y-0.75 text-nc',
-                  { 'scale-120': trailingIcon === 'i' },
-                  ui?.trailingIcon
-                )
+                cn('', { 'scale-120': trailingIcon === 'i' }, ui?.trailingIcon)
               " />
           </div>
         </slot>

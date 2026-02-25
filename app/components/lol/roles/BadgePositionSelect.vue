@@ -45,7 +45,7 @@ onMounted(() => {
     <SelectTrigger
       :class="
         cn(
-          `group/s fx-0 relative w-44 justify-start inset-shadow-xs transition-all duration-200 hover:ring hover:ring-pc/50`,
+          `group/s relative w-44 justify-start inset-shadow-xs transition-all duration-200 fx-0 hover:ring hover:ring-pc/50`,
           className
         )
       "

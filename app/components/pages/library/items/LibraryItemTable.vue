@@ -3,22 +3,18 @@ import { Tooltip, UUser } from "#components"
 import type { TableColumn } from "@nuxt/ui"
 import { statIndex } from "~~/shared/constants/common/stat-index"
 
-definePageMeta({
-  name: "Item Stats",
-  icon: "bi:list-ul",
-})
-
 const { filtered } = storeToRefs(is())
 
-const { data: itemsLite, status } = useFetch<Record<number, ItemLite>>(
-  () => `/cdn/items-lite.json`,
-  {
-    server: false,
-    lazy: true,
-    immediate: false,
-    key: () => `items-lite`,
-  }
-)
+const {
+  data: itemsLite,
+  status,
+  execute,
+} = useFetch<Record<number, ItemLite>>(() => `/cdn/items-lite.json`, {
+  server: false,
+  lazy: true,
+  immediate: false,
+  key: () => `items-lite`,
+})
 
 const data = computed<ItemLite[]>(() =>
   filtered.value
@@ -32,10 +28,7 @@ const statValue = (row: ItemLite, key: keyof NonNullable<ItemLite["stats"]>) =>
 const columns: TableColumn<ItemLite>[] = [
   {
     accessorKey: "id",
-    header: "ID",
-  },
-  {
-    accessorKey: "id",
+    enablePinning: true,
     header: "Item",
     cell: ({ row }) => {
       return h("div", { class: "flex items-center gap-3" }, [
@@ -88,9 +81,17 @@ const columns: TableColumn<ItemLite>[] = [
     accessorKey: "cost",
     header: "Shop Price",
   },*/
+  {
+    accessorKey: "id",
+    header: "ID",
+  },
 ]
+
+onMounted(() => {
+  execute()
+})
 </script>
 
 <template>
-  <UTable :columns :data sticky> </UTable>
+  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky> </UTable>
 </template>

@@ -7,7 +7,7 @@ const { class: className, simple } = defineProps<{
 
 <template>
   <ChampStatRowWrapper class="items-center justify-center" :simple>
-    <span class="fx-0 text-xs font-medium text-pc/70" base="btn" size="xs">
+    <span class="text-xs font-medium text-pc/70 fx-0" base="btn" size="xs">
       No data
     </span>
   </ChampStatRowWrapper>

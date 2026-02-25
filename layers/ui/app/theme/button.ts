@@ -69,8 +69,8 @@ export const buttonTheme = defineUiTheme({
       xl: {
         base: "h-14! gap-2 px-3",
         leadingAvatarSize: "xs",
-        leadingIcon: "size-6",
-        trailingIcon: "size-6",
+        leadingIcon: "size-5.5",
+        trailingIcon: "size-5.5",
       },
       "2xl": {
         base: "h-16! gap-2 px-3",
@@ -90,7 +90,7 @@ export const buttonTheme = defineUiTheme({
     },
     variant: {
       custom:
-        "fx-0 height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
+        "height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none fx-0 disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
       solid: "btn shadow-sm hover:inset-shadow-xs",
       ghost:
         "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
@@ -137,7 +137,7 @@ export const buttonTheme = defineUiTheme({
       color: "p0",
       variant: "solid",
       class: {
-        base: "btn border-p2 bg-p0 text-pc ring-default",
+        base: "btn border-p2 bg-p0 text-pc ring-default fx-0 open:fx-1 hover:inset-shadow-xs hover:fx-1 data-[state=active]:bg-p1 data-[state=open]:bg-p1",
       },
     },
     {
@@ -167,7 +167,7 @@ export const buttonTheme = defineUiTheme({
       class: {
         base: "btn bg-neutral font-semibold ring-0 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral on:text-nc on:btn-neutral",
         leadingIcon:
-          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:**:text-nc group-active/btn:**:text-nc",
+          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc group-data-[state=open]/btn:**:text-nc group-on/btn:**:text-nc",
         trailingIcon:
           "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc",
       },
@@ -177,14 +177,14 @@ export const buttonTheme = defineUiTheme({
       color: "p0",
       variant: "ghost",
       class: {
-        base: "on:fx-1 active:noise on:noise btn border-3 border-transparent bg-clip-padding text-pc btn-ghost on:btn-active on:bg-p0/40! on:ring on:ring-p0 on:backdrop-blur-sm",
+        base: "active:noise on:noise btn border-3 border-transparent bg-clip-padding text-pc btn-ghost on:btn-active on:bg-p0/40! on:ring on:ring-p0 on:backdrop-blur-sm on:fx-1",
       },
     },
     {
       color: ["p1", "p2", "p3"],
       variant: "ghost",
       class: {
-        base: "on:fx-1 on:noise btn bg-clip-padding text-pc btn-ghost on:border-p3 on:bg-p1 on:backdrop-blur-sm",
+        base: "on:noise btn bg-clip-padding text-pc btn-ghost on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1",
       },
     },
     {
@@ -216,7 +216,7 @@ export const buttonTheme = defineUiTheme({
       color: ["p0", "p1", "p2", "p3"],
       variant: "ring",
       class: {
-        base: "on:fx-1 on:noise btn bg-clip-padding text-pc not-on:btn-ghost on:btn-active on:border-p3 on:bg-p1 on:ring on:ring-pc/50 on:backdrop-blur-sm",
+        base: "on:noise btn bg-clip-padding text-pc not-on:btn-ghost on:btn-active on:border-p3 on:bg-p1 on:ring on:ring-pc/50 on:backdrop-blur-sm on:fx-1",
       },
     },
     // LINK

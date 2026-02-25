@@ -23,17 +23,17 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
           :to="link.to"
           :ui="{
             leadingIcon: cn('size-5', link?.ui?.leadingIcon),
-            base: 'flex-col grow justify-center w-full h-21!',
+            base: 'flex-col grow justify-center w-full  h-21!',
             label: 'font-semibold text-xs',
           }" />
       </div>
     </div>
 
     <!-- search -->
-    <SidebarCollapseInput :store="is()" />
+    <ItemSearchInput class="-mt-1" />
 
     <!-- view -->
-    <ItemViewToggle @update-tab="(e) => emit('updateTab', e)" />
+    <ItemViewTabs @update:tab-model="(e) => emit('updateTab', e)" />
 
     <!-- select menus -->
     <ItemSelectPoppables />

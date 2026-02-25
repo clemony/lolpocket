@@ -19,7 +19,9 @@ const colorMap = computed(() => getAllyColorMap(points.value)) */
       <thead>
         <tr>
           <th />
-          <th class="text-start!">Ally</th>
+          <th class="text-start!">
+            Ally
+          </th>
           <th>Matches</th>
           <th>Winrate</th>
           <th

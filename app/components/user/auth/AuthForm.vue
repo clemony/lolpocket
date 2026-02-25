@@ -86,7 +86,7 @@ const formType: Record<string, AuthFormType> = {
           :ui="{ root: 'w-full' }"
           type="password">
           <template #trailing>
-            <InputClear />
+            <LazyInputClear />
           </template>
         </UInput>
       </UFormField>

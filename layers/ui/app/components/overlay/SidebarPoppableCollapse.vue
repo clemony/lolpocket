@@ -6,60 +6,64 @@ const {
   label,
   active,
   legend,
+  arrow,
   icon,
   value,
-  variant = "link",
-  side = "top",
+  align,
+  ui,
+  color = "p0",
+  variant,
+  side = "left",
 } = defineProps<{
   collapsed?: boolean
-  label: string
-  icon: string
-  legend: string
+  arrow?: boolean
+  label?: string
+  icon?: string
+  legend?: string
+  align?: Align
   active?: boolean
+  ui?: ButtonProps["ui"]
   value?: number
   side?: Side
+  color?: ButtonProps["color"]
+  size?: ButtonProps["size"]
   variant?: ButtonProps["variant"]
 }>()
 
-watch(
-  () => active,
-  (v) => {
-    console.log("💠 - watch - newVal:", v)
-  }
-)
+const triggerVariant = computed(() => (variant || collapsed ? "solid" : "link"))
 
-const base = "group w-full justify-between"
 const popOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <UPopover
+  <LazyUPopover
     v-if="collapsed"
     v-model:open="popOpen"
+    :arrow
     :ui="{
       content: 'border-y-transparent  w-60 max-h-80 overflow-hidden relative',
     }"
     :content="{
       side,
+      align,
     }">
-    <Tooltip :label="label" :disabled="popOpen" side="top" class="size-10">
-      <UChip :text="value" :show="!!value" size="2xl" color="neutral">
-        <UButton
-          square
-          :icon
-          active-variant="solid"
-          :ui="{
-            base: !!value ? 'border border-p4' : '',
-            leadingIcon:
-              label === 'Statistics' ? '**:stroke-[2.8] ' : '**:stroke-[2.4]',
-          }"
-          :active="popOpen"
-          variant="ghost" />
-      </UChip>
-    </Tooltip>
+    <!--   <LazyTooltip :label="label" :disabled="popOpen" :side>
+     <LazyUChip :text="value" :show="!!value" size="2xl" color="neutral"> -->
+    <UButton
+      square
+      :icon
+      :size
+      :color
+      :ui="{
+        base: cn(!!value ? 'border border-p4 fx-0  ' : '', ui?.base),
+        leadingIcon: ui?.leadingIcon,
+      }"
+      :active="popOpen" />
+    <!-- </LazyUChip>
+    </LazyTooltip> -->
 
     <template #content>
-      <ScrollAreaButtons
+      <LazyScrollAreaButtons
         class="z-auto w-full [&_.slot-fieldset]:gap-px"
         scroll-area-class="max-h-70"
         content-class="pb-2.5">
@@ -73,9 +77,9 @@ const popOpen = shallowRef<boolean>(false)
             <slot name="content" />
           </div>
         </template>
-      </ScrollAreaButtons>
+      </LazyScrollAreaButtons>
     </template>
-  </UPopover>
+  </LazyUPopover>
 
   <UCollapsible
     v-else
@@ -84,14 +88,18 @@ const popOpen = shallowRef<boolean>(false)
       content: 'max-h-90 overflow-scroll ',
     }"
     :default-open="!collapsed">
-    <UButton variant="link" block>
-      <Separator size="md" :label>
-        <template #leading>
-          <Icon
-            name="right"
-            class="group-hover/btn:**:text-80 size-4.5 text-pc/40 **:stroke-[2.8] open:rotate-90" />
-        </template>
-      </Separator>
+    <UButton :size :variant="triggerVariant" block>
+      <Separator
+        size="md"
+        :label
+        label-placement="end"
+        leading-icon="right"
+        :ui="{
+          separator: 'group-hover/btn:bg-p4',
+          label: 'group-hover/btn:underline',
+          leadingIcon:
+            'group-hover/btn:**:text-80 size-4.5 text-pc/40 **:stroke-[2.8] group-open/collapse:rotate-90 transition-rotate duration-200',
+        }" />
     </UButton>
     <template #content>
       <slot name="content" />

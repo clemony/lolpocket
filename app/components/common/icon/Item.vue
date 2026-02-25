@@ -63,7 +63,7 @@ const pinned = shallowRef<boolean>(false)
       @load="loaded = true" />
 
     <template v-if="pinned" #content>
-      <ItemTooltip v-if="id" :id />
+      <LazyItemTooltip v-if="id" :id />
     </template>
   </Tooltip>
 </template>

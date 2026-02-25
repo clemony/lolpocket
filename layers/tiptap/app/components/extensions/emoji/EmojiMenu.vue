@@ -169,7 +169,7 @@ watch(
           class="bg-brightness-104 h-11 w-full rounded-xl border-p3/80 bg-p0/74! bg-blend-screen shadow-xs shadow-black/4 backdrop-blur-sm">
           <UInputGroupSearch />
           <UInputGroupInput v-model:model-value="query" />
-          <InputClear
+          <LazyInputClear
             @clear-input="
               () => {
                 query = ''
@@ -184,7 +184,7 @@ watch(
           class="peer"
           placeholder="search">
           <template #trailing>
-            <InputClear @clear-input="is().filters.query = ''" />
+            <LazyInputClear @clear-input="is().filters.query = ''" />
           </template>
         </UInput>
       </div>

@@ -51,7 +51,9 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class="dst font-serif leading-9 font-black">“{{ r.title }}”</h1>
+            <h1 class="dst font-serif leading-9 font-black">
+              “{{ r.title }}”
+            </h1>
 
             <div class="flex items-start justify-start gap-8">
               <Champion

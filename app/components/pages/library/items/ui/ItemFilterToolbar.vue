@@ -3,39 +3,18 @@ import type { ButtonProps } from "@nuxt/ui"
 const { nav } = defineProps<{
   nav: ButtonProps[]
 }>()
-const emit = defineEmits(["updateTab"])
 const { filters } = storeToRefs(is())
 </script>
 
 <template>
-  <Tooltip
-    v-for="(link, i) in nav"
-    :key="i"
-    side="top"
-    class="size-10"
-    :label="link.label">
-    <UButton
-      square
-      variant="ghost"
-      :icon="link.icon"
-      :to="link.to"
-      :ui="{
-        leadingIcon: cn('size-5', link?.ui?.leadingIcon),
-      }" />
-  </Tooltip>
-
-  <span class="mx-1 h-6 w-1 border-l border-p0 bg-p4" />
-  <!-- view -->
-  <ItemViewToggle collapsed @update-tab="(e) => emit('updateTab', e)" />
-
-  <!-- search -->
-  <SidebarCollapseInput :store="is()" />
-
   <!-- select menus -->
-  <ItemSelectPoppables collapsed />
+  <ItemSelectPoppables collapsed size="lg" />
 
   <!-- map -->
-  <MapSelector collapsed />
+  <MapSelector
+    size="lg"
+    :ui="{ base: 'rounded-full drop-shadow-black/4 drop-shadow-md ' }"
+    collapsed />
 
   <!-- shop -->
   <Tooltip
@@ -45,12 +24,13 @@ const { filters } = storeToRefs(is())
     side="top">
     <Toggle
       v-model:model-value="filters.purchasable"
-      active-color="p2"
+      active-color="p1"
+      size="lg"
       active-variant="solid"
       :ui="{
         base: cn(
           filters.purchasable
-            ? 'inset-shadow-xs border-p4/60'
+            ? 'inset-shadow-xs  rounded-full drop-shadow-md drop-shadow-black/4'
             : ''
         ),
         leadingIcon: 'size-4.5 -translate-y-px **:stroke-[1.4]',
@@ -64,8 +44,10 @@ const { filters } = storeToRefs(is())
   <!-- reset -->
   <Tooltip label="Reset Filter" class="h-full">
     <UButton
+      size="lg"
       color="neutral"
       icon="i-reset"
+      :ui="{ base: 'rounded-full  drop-shadow-md ' }"
       square
       @click="is().clearFilters()" />
   </Tooltip>

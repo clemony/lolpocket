@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import { mapIndex } from "#shared/constants/misc/map-index"
+import type { ButtonProps } from "@nuxt/ui"
 
-const { collapsed } = defineProps<{
+const { collapsed, ui, size } = defineProps<{
   collapsed?: boolean
+  ui?: ButtonProps["ui"]
+  size?: ButtonProps["size"]
 }>()
 
 const mapOpen = shallowRef<boolean>(false)
@@ -25,12 +28,14 @@ const maps = computed(() => [
 
 <template>
   <div>
-    <h6 v-if="!collapsed" class="text-sm">Map</h6>
+    <h6 v-if="!collapsed" class="text-sm">
+      Map
+    </h6>
     <UPopover
       v-model:open="mapOpen"
+      :arrow="collapsed"
       :content="{
         side: collapsed ? 'right' : 'bottom',
-        align: 'start',
       }"
       :ui="{ content: 'w-(--reka-popover-trigger-width) min-w-54 p-1.5' }">
       <Tooltip
@@ -39,10 +44,13 @@ const maps = computed(() => [
         side="right"
         class="w-full">
         <UButton
+          :size
+          :active="mapOpen"
           :block="!collapsed"
+          active-color="p1"
           :square="collapsed === true"
           :ui="{
-            base: collapsed ? '' : 'w-full grow',
+            base: cn(collapsed ? '' : 'w-full grow', ui?.base),
             label: collapsed ? 'hidden' : '',
             trailingIcon: collapsed ? 'hidden' : '',
             leadingIcon: collapsed ? 'size-5' : '',
@@ -50,11 +58,14 @@ const maps = computed(() => [
           :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
           :leading-icon="`i-map-${filters.map}`"
           trailing-icon="i-up-down"
-          :variant="collapsed ? 'ghost' : 'outline'" />
+          :color="collapsed ? 'p0' : 'p1'"
+          :variant="collapsed ? 'solid' : 'outline'" />
       </Tooltip>
       <template #content>
-        <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
-        <URadioGroup
+        <h6 class="px-1.5 py-1 text-xs">
+          Select Map
+        </h6>
+        <LazyURadioGroup
           v-model:model-value="filters.map"
           color="p1"
           :items="maps"
@@ -78,7 +89,7 @@ const maps = computed(() => [
               name="tick"
               class="z-1 mr-1 size-4 -translate-y-0.75" />
           </template>
-        </URadioGroup>
+        </LazyURadioGroup>
       </template>
     </UPopover>
   </div>

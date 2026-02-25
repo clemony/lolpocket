@@ -89,7 +89,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
           v-model:model-value="message"
           placeholder="Please describe briefly..." >
           <template #trailing>
-            <InputClear type="button" @clear-input="" />
+            <LazyInputClear type="button" @clear-input="" />
           </template>
         </UInput>
 </template>

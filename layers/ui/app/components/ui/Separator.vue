@@ -97,7 +97,7 @@ const separatorVariants = tv({
       placement: "start",
       labelPlacement: "end",
       class: {
-        wrapper: "order-last",
+        wrapper: "order-last ml-2",
         separator: "order-1",
         leading: "order-first",
       },

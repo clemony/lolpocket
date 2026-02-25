@@ -1,9 +1,23 @@
 import tailwindcss from "@tailwindcss/vite"
-import { resolve } from "node:path"
+import fs from "node:fs"
+import path from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
+
 const isCF = process.env.CF_PAGES === "1"
-// repo root
+const isProduction = process.env.NODE_ENV === "production"
+
+/* const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
+
+const customCollections = fs
+  .readdirSync(iconsRoot, { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => ({
+    dir: path.join(iconsRoot, d.name),
+    normalizeIconName: false,
+    prefix: d.name,
+  }))
+ */
 export default defineNuxtConfig({
   imports: {
     global: true,
@@ -27,9 +41,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/ui",
     "motion-v/nuxt",
-    ...(process.env.NODE_ENV === "development" ? ["@nuxt/devtools"] : []),
     "@formkit/auto-animate/nuxt",
+    "@nuxtjs/seo",
     "@nuxtjs/i18n",
+    ...(process.env.NODE_ENV === "development"
+      ? ["@nuxt/devtools", "@nuxt/hints"]
+      : []),
   ],
 
   // app
@@ -44,14 +61,12 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
     provider: "ipx",
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
     format: ["webp"],
   },
-
   colorMode: {
     componentName: "ColorScheme",
     dataValue: "theme",
@@ -59,13 +74,17 @@ export default defineNuxtConfig({
     globalName: "__NUXT_COLOR_MODE__",
     preference: "system",
   },
-  ssr: true,
-  /*   eslint: {
-    config: {
-      autoInit: false,
-      standalone: false,
+  icon: {
+    provider: "server",
+    //customCollections,
+    size: "18px",
+    serverBundle: {
+      externalizeIconsJson: true,
+      collections: ["lucide"],
     },
-  }, */
+  },
+
+  ssr: true,
   nitro: {
     imports: {
       dirs: ["#server/domain", "#server/api/riot"],
@@ -101,7 +120,7 @@ export default defineNuxtConfig({
     "/champions/**": { ssr: false },
     "/faq": { ssr: false },
     "/faq/**": { ssr: false },
-    "/library": { ssr: false },
+    "/library": { ssr: true },
     "/:region": { ssr: false },
     "/:region/**": { ssr: false },
     "/library/**": { ssr: false },
@@ -131,6 +150,31 @@ export default defineNuxtConfig({
       supabaseKey: "",
       supabaseUrl: "",
     },
+  },
+
+  site: {
+    url: process.env.NUXT_SITE_URL,
+    name: "lolpocket",
+    description: "Is that lp in your pocket?",
+    defaultLocale: "en",
+  },
+  seo: {
+    fallbackTitle: true,
+    meta: {
+      applicationName: "lolpocket",
+      author: "lolpocket",
+      ogType: "website",
+    },
+  },
+  robots: {
+    credits: false,
+    metaTag: true,
+    disallow: isProduction
+      ? ["/api/", "/auth/", "/account/", "/settings/"]
+      : ["/"],
+  },
+  sitemap: {
+    enabled: isProduction,
   },
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
@@ -170,7 +214,13 @@ export default defineNuxtConfig({
     https: false,
     port: 8080,
   },
-  devtools: { enabled: false },
+  devtools: {
+    enabled: false,
+    componentInspector: true,
+    vueDevTools: true,
+    viteInspect: true,
+    viteDevTools: false,
+  },
   experimental: {
     // extractAsyncDataHandlers: true,
     nitroAutoImports: true,

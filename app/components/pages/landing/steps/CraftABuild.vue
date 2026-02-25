@@ -95,7 +95,9 @@ onMounted(async () => {
 
     <template v-if="isChampVisible">
       <Transition name="puff">
-        <p v-if="!champModel" class="f-sb f-tt text-lg">Select a Champion...</p>
+        <p v-if="!champModel" class="f-sb f-tt text-lg">
+          Select a Champion...
+        </p>
       </Transition>
 
       <transition-slide

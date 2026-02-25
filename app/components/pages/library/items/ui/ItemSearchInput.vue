@@ -1,10 +1,18 @@
 <script lang="ts" setup>
-const { store } = defineProps<{
+import type { InputProps } from "@nuxt/ui"
+
+const {
+  variant = "solid",
+  color = "neutral",
+  class: className,
+} = defineProps<{
   source?: Index[]
-  store: ReturnType<typeof is | typeof champFilter>
+  color?: InputProps["color"]
+  class?: HTMLAttributes["class"]
+  variant?: InputProps["variant"]
 }>()
 
-const { filters } = storeToRefs(store)
+const { filters } = storeToRefs(is())
 </script>
 
 <template>
@@ -12,17 +20,17 @@ const { filters } = storeToRefs(store)
     v-model:model-value="filters.query"
     icon="i-search"
     floating
-    variant="solid"
-    color="neutral"
+    :variant
+    :color
     :ui="{
       root: 'w-full  grow',
-      base: 'text-sm  grow w-full',
+      base: cn('w-full grow rounded-xl text-sm', className),
       leadingIcon: '**:stroke-[1.8]',
       trailing: '',
     }"
     placeholder="Search items...">
     <template #trailing>
-      <InputClear
+      <LazyInputClear
         v-if="filters.query"
         variant="solid"
         color="p0"

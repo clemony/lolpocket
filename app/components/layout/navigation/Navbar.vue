@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import BackpackNav from "~/components/layout/navigation/content/BackpackNav.vue"
-import LibraryNav from "~/components/layout/navigation/content/LibraryNav.vue"
-import UserNav from "~/components/layout/navigation/content/UserNav.vue"
 import { getSummonerIcon } from "~/domain/utils/img"
 
 const emit = defineEmits(["openLogIn"])
@@ -12,9 +9,15 @@ const { account } = storeToRefs(user())
 const base = "w-fit fx-0 hover:underline px-2! "
 
 const content = shallowRef<Record<string, Component>>({
-  backpack: BackpackNav,
-  library: LibraryNav,
-  account: UserNav,
+  backpack: defineAsyncComponent(
+    () => import("~/components/layout/navigation/content/BackpackNav.vue")
+  ),
+  library: defineAsyncComponent(
+    () => import("~/components/layout/navigation/content/LibraryNav.vue")
+  ),
+  account: defineAsyncComponent(
+    () => import("~/components/layout/navigation/content/UserNav.vue")
+  ),
 })
 const nav = ref<Record<string, NavButtonProps>>({
   // sSession().currentSummonerNav,
@@ -94,8 +97,7 @@ const route = useRoute()
 const logInOpen = shallowRef<boolean>(false)
 </script>
 
-<template> 
-
+<template>
   <UHeader title="lolpocket" :toggle="false" :ui="{ root: '' }">
     <template #left>
       <LpLogo />
@@ -106,7 +108,7 @@ const logInOpen = shallowRef<boolean>(false)
       <LazyAppCommand />
     </div>
     <template #right>
-      <UPopover
+      <LazyUPopover
         v-for="[k, v] in Object.entries(nav)"
         :key="v.value"
         mode="hover"
@@ -130,10 +132,10 @@ const logInOpen = shallowRef<boolean>(false)
             @open-sub="onSubOpenChange"
             @open-log-in="emit('openLogIn')" />
         </template>
-      </UPopover>
+      </LazyUPopover>
     </template>
 
-    <UModal
+    <LazyUModal
       v-model:open="logInOpen"
       title="Log in"
       :ui="{
@@ -145,10 +147,12 @@ const logInOpen = shallowRef<boolean>(false)
         <div class="flex w-full justify-center">
           <LpLogo />
         </div>
-        <h3 class="dst mt-2 mb-10 w-full text-center">Log in</h3>
+        <h3 class="dst mt-2 mb-10 w-full text-center">
+          Log in
+        </h3>
 
-        <AuthForm type="logIn" />
+        <LazyAuthForm type="logIn" />
       </template>
-    </UModal>
+    </LazyUModal>
   </UHeader>
 </template>

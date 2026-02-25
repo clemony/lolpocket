@@ -9,7 +9,7 @@ export const tooltipTheme = defineUiTheme({
     kbds: "hidden shrink-0 items-center gap-0.5 not-first-of-type:before:me-0.5 not-first-of-type:before:content-['·'] lg:inline-flex",
     kbdsSize: "sm",
     text: "truncate",
-    trailingIcon: "",
+    trailingIcon: "ml-2 inline size-3.5 translate-y-0.75 text-nc",
   },
   variants: {
     color: {

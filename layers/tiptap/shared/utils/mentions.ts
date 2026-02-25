@@ -1,13 +1,13 @@
-import { mergeAttributes } from '@tiptap/core'
-import Mention from '@tiptap/extension-mention'
+import { mergeAttributes } from "@tiptap/core"
+//import Mention from '@tiptap/extension-mention'
 import {
   computeImageSrc,
   computeKeystoneStyle,
   computeRuneStyle,
-} from './constMentionNode'
-import { constructMentionAttrs } from './constuctMentionAttrs.js'
+} from "./constMentionNode"
+import { constructMentionAttrs } from "./constuctMentionAttrs.js"
 
-export const BadgeMentions = Mention.extend({
+export const BadgeMentions = 0 /* Mention.extend({
   name: 'mentions',
 
   addAttributes() {
@@ -58,3 +58,4 @@ export const BadgeMentions = Mention.extend({
     ]
   },
 })
+ */

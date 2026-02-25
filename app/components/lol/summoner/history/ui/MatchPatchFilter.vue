@@ -16,7 +16,7 @@ const p = computed(() => {
   -30]" :delay="0" :duration="100" theme="base clean popover"
   :interactive="true" :arrow="false" >
   <UButton
-    class="hover:fx-0 w-full justify-between bg-p0! text-sm hover:bg-p0! hover:ring hover:ring-pc/60"
+    class="w-full justify-between bg-p0! text-sm hover:bg-p0! hover:ring hover:ring-pc/60 hover:fx-0"
     variant="outline">
     {{ store.filter?.patch ?? "Select Patch" }}
 

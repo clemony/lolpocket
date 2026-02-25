@@ -67,7 +67,7 @@ const nav = computed(() => [
       <div class="relative w-full">
         <UInput leading-icon="i-search" variant="outline" size="sm">
           <template #trailing>
-            <InputClear
+            <LazyInputClear
               v-if="filter?.length"
               size="xs"
               @clear-input="filter = ''" />

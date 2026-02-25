@@ -33,9 +33,13 @@ const props = defineProps<{
 
       <div
         class="flex flex-col items-end justify-center gap-2.75 overflow-hidden py-3 text-end font-medium ds-2xs **:text-pc/30">
-        <p class="capitalize">Unranked</p>
+        <p class="capitalize">
+          Unranked
+        </p>
 
-        <p class="text-lg font-semibold capitalize">0 LP</p>
+        <p class="text-lg font-semibold capitalize">
+          0 LP
+        </p>
 
         <p
           label="`0 total`"

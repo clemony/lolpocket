@@ -2,8 +2,6 @@
 import antfu from "@antfu/eslint-config"
 import css from "@eslint/css"
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss"
-import pluginJsonc from "eslint-plugin-jsonc"
-import * as jsoncParser from "jsonc-eslint-parser"
 import { tailwind4 } from "tailwind-csstree"
 import eslintParserVue from "vue-eslint-parser"
 
@@ -43,7 +41,6 @@ export default antfu(
       "./dist",
       "./node_modules",
       "./schema",
-      "./.vscode",
       "./.nuxt",
       "./.notes",
       "./supabase",
@@ -56,9 +53,6 @@ export default antfu(
     /* ---------- JSONC ---------- */
 
     jsonc: {
-      languageOptions: {
-        parser: jsoncParser,
-      },
       overrides: {
         "jsonc/sort-keys": [
           "error",
@@ -76,7 +70,6 @@ export default antfu(
           },
         ],
       },
-      plugins: { pluginJsonc },
     },
 
     /* ---------- VUE ---------- */
@@ -108,6 +101,13 @@ export default antfu(
     },
   },
 
+  /* ---------- SORT - SETTINGS.JSON ---------- */
+  {
+    files: [".vscode/settings.json"],
+    rules: {
+      "jsonc/sort-keys": ["error", { pathPattern: "^$", order: { type: "asc" } }],
+    },
+  },
   /* ---------- CSS & TAILWIND ---------- */
   {
     files: ["**/*.css"],

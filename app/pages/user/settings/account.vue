@@ -42,7 +42,7 @@ onMounted(() => {
       icon="mail">
       <UInput v-model:model-value="email" @blur="validateField(emailSchema)">
         <template #trailing>
-          <InputClear @clear-input="is().filters.query = ''" />
+          <LazyInputClear @clear-input="is().filters.query = ''" />
           <Tooltip v-if="!user().user?.email_confirmed_at" label="Verified!">
             <UBadge icon="i-tick" size="xs" color="neutral">
               pending...
@@ -109,7 +109,9 @@ onMounted(() => {
     <UFormField title="" description=""></UFormField>
     <fieldset id="blocked-users" class="space-y-6">
       <div class="leading-4">
-        <h4 class="mb-2 text-xl font-semibold" as="legend">Blocked Users</h4>
+        <h4 class="mb-2 text-xl font-semibold" as="legend">
+          Blocked Users
+        </h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in

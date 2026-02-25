@@ -68,7 +68,7 @@ const emit = defineEmits(["load"])
         <span
           v-if="props.loadingType === 'spinner'"
           class="grid size-full shrink-0 place-items-center">
-          <Spinner />
+          <LazySpinner />
         </span>
 
         <USkeleton v-else class="inset-0 size-full grow" />

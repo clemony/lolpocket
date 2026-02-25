@@ -120,11 +120,11 @@ const skins = computed(() => skinIndex[champion.key])
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious
-        class="fx-0 left-10 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6"
+        class="left-10 size-16 rounded-xl border-0 bg-transparent fx-0 **:text-white/70 [&_svg]:size-6"
         variant="base"
         hover="neutral" />
       <CarouselNext
-        class="fx-0 right-6 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6"
+        class="right-6 size-16 rounded-xl border-0 bg-transparent fx-0 **:text-white/70 [&_svg]:size-6"
         variant="base"
         hover="neutral" />
     </Carousel>

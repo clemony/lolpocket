@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Presence } from "reka-ui";
-import { regionIndex } from "#shared/constants/misc/region-index"
+import type { regionIndex } from "#shared/constants/misc/region-index"
 
 const {
   class: className,

@@ -70,7 +70,7 @@ function onOpen() {
             icon="i-search"
             placeholder="Set name...">
             <template #trailing>
-              <InputClear @clear-input="is().filters.query = ''" />
+              <LazyInputClear @clear-input="is().filters.query = ''" />
               <UButton
                 size="2xs"
                 icon="i-shuffle"

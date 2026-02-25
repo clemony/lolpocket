@@ -12,7 +12,7 @@ const modelValue = computed(() => mv)
   <UPopover>
     <UButton :class="cn('w-full cursor-text', className)">
       <UInput>
-        <InputClear class="mr-6" @clear-input="emit('clearInput')" />
+        <LazyInputClear class="mr-6" @clear-input="emit('clearInput')" />
         <UButton size="2xs" icon="i-filter" />
       </UInput>
     </UButton>

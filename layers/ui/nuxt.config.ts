@@ -1,29 +1,7 @@
-import fs from "node:fs"
 import path, { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 const _dir = dirname(fileURLToPath(import.meta.url))
-
-const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
-
-const customCollections = fs
-  .readdirSync(iconsRoot, { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => ({
-    dir: path.join(iconsRoot, d.name),
-    normalizeIconName: false,
-    prefix: d.name,
-  }))
-
 export default defineNuxtConfig({
-  icon: {
-    provider: "server",
-    customCollections,
-    size: "18px",
-    serverBundle: {
-      externalizeIconsJson: true,
-      collections: ["lucide"],
-    },
-  },
   $meta: { name: "ui" },
   modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/icon"],
 
