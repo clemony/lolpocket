@@ -10,7 +10,7 @@ export const inputTheme = defineUiTheme({
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "peer w-full appearance-none rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "peer flex w-full shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
       "transition-colors",
     ],
   },
@@ -56,7 +56,7 @@ export const inputTheme = defineUiTheme({
     },
     size: {
       lg: {
-        base: "input-lg h-12 gap-2 px-3 py-2 text-sm",
+        base: "h-12 gap-2 px-3 py-2 text-sm",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",
@@ -64,7 +64,8 @@ export const inputTheme = defineUiTheme({
         trailingIcon: "size-5",
       },
       md: {
-        base: "input-md h-10 gap-1.5 px-2.5 py-0 text-sm",
+        root: "h-10",
+        base: "flex h-full grow items-center gap-1.5 px-2.5 py-0 text-sm *:flex *:h-full *:items-center",
         leading: "ps-2.5",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",

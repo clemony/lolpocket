@@ -7,7 +7,9 @@ import { fileURLToPath } from "node:url"
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
 
-/* const iconsRoot = fileURLToPath(new URL("./app/assets/icons", import.meta.url))
+/* const iconsRoot = fileURLToPath(
+  new URL("./layers/ui/app/assets/icons", import.meta.url)
+)
 
 const customCollections = fs
   .readdirSync(iconsRoot, { withFileTypes: true })
@@ -16,8 +18,8 @@ const customCollections = fs
     dir: path.join(iconsRoot, d.name),
     normalizeIconName: false,
     prefix: d.name,
-  }))
- */
+  })) */
+
 export default defineNuxtConfig({
   imports: {
     global: true,
@@ -76,7 +78,7 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: "server",
-    //customCollections,
+    // customCollections,
     size: "18px",
     serverBundle: {
       externalizeIconsJson: true,
