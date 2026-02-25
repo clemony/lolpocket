@@ -1,9 +1,9 @@
-import path, { dirname, join } from "node:path"
+import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 const _dir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
   $meta: { name: "ui" },
-  modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/icon"],
+  modules: ["@nuxt/ui"],
 
   typescript: {
     strict: true,
@@ -17,38 +17,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-
-  // UI
-  fonts: {
-    families: [
-      {
-        name: "Inter",
-        provider: "fontsource",
-        styles: ["italic", "normal"],
-        weights: [300, 400, 500, 600, 700, 800],
-      },
-      {
-        name: "Noto Serif KR",
-        provider: "fontsource",
-
-        styles: ["italic", "normal"],
-        weights: [300, 400, 600, 700],
-      },
-      {
-        name: "Geist Mono",
-        provider: "fontsource",
-        styles: ["normal"],
-        weights: [300, 400, 500],
-      },
-      {
-        name: "DM Serif Display",
-        provider: "fontsource",
-        styles: ["normal", "italic"],
-        weights: [400],
-      },
-    ],
-  },
-
   ui: {
     experimental: {
       componentDetection: true,

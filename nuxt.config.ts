@@ -57,6 +57,7 @@ export default defineNuxtConfig({
     typeCheck: !isCF,
   },
 
+  // UI
   components: [
     {
       path: "~/components",
@@ -76,15 +77,47 @@ export default defineNuxtConfig({
     globalName: "__NUXT_COLOR_MODE__",
     preference: "system",
   },
-  icon: {
+  /*   icon: {
     provider: "server",
-    // customCollections,
+    customCollections,
     size: "18px",
     serverBundle: {
       externalizeIconsJson: true,
       collections: ["lucide"],
     },
+  }, */
+  ui: {
+    fonts: false,
   },
+  /*   fonts: {
+    families: [
+      {
+        name: "Inter",
+        provider: "fontsource",
+        styles: ["italic", "normal"],
+        weights: [300, 400, 500, 600, 700, 800],
+      },
+      {
+        name: "Noto Serif KR",
+        provider: "fontsource",
+
+        styles: ["italic", "normal"],
+        weights: [300, 400, 600, 700],
+      },
+      {
+        name: "Geist Mono",
+        provider: "fontsource",
+        styles: ["normal"],
+        weights: [300, 400, 500],
+      },
+      {
+        name: "DM Serif Display",
+        provider: "fontsource",
+        styles: ["normal", "italic"],
+        weights: [400],
+      },
+    ],
+  }, */
 
   ssr: true,
   nitro: {
