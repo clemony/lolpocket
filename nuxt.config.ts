@@ -6,6 +6,9 @@ import { fileURLToPath } from "node:url"
 
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
+// Cloudflare build-only memory pressure toggle.
+// Set `NUXT_CF_LEAN_BUILD=1` in Cloudflare to temporarily skip heavier modules while diagnosing Nitro bundle OOMs.
+const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
 
 const iconsRoot = fileURLToPath(
   new URL("./layers/ui/app/assets/icons", import.meta.url)
@@ -39,11 +42,19 @@ export default defineNuxtConfig({
     "pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/supabase",
     "@nuxt/image",
-    "@nuxt/icon",
+    ...(isCFLeanBuild
+      ? [
+          // "@nuxt/icon", // OOM test toggle: comment-in to skip @nuxt/icon on Cloudflare lean builds
+        ]
+      : ["@nuxt/icon"]),
     "@vueuse/nuxt",
     "@nuxt/ui",
-    "motion-v/nuxt",
-    "@formkit/auto-animate/nuxt",
+    ...(isCFLeanBuild
+      ? [
+          // "motion-v/nuxt", // OOM test toggle: comment-in to skip motion-v on Cloudflare lean builds
+          // "@formkit/auto-animate/nuxt", // OOM test toggle: comment-in to skip auto-animate on Cloudflare lean builds
+        ]
+      : ["motion-v/nuxt", "@formkit/auto-animate/nuxt"]),
     // "@nuxtjs/seo",
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
@@ -90,6 +101,9 @@ export default defineNuxtConfig({
 
   ssr: true,
   nitro: {
+    // Reduce Cloudflare Nitro bundle build memory usage while debugging OOMs.
+    minify: !isCFLeanBuild,
+    sourceMap: false,
     imports: {
       dirs: ["#server/domain", "#server/api/riot"],
     },
@@ -105,6 +119,11 @@ export default defineNuxtConfig({
     typescript: {
       strict: true,
     },
+  },
+  // Disable sourcemaps for both client and server builds to reduce CI memory pressure.
+  sourcemap: {
+    client: false,
+    server: false,
   },
   pinia: { storesDirs: ["~/stores"] },
   router: {
