@@ -26,9 +26,7 @@ const tab = defineModel<TabValue>("tabModel", { default: 0 })
         <span
           :class="
             cn('font-normal', { 'font-semibold': item.value === tabModel })
-          "
-          >{{ item.label }}</span
-        >
+          ">{{ item.label }}</span>
       </template>
     </UTabs>
   </div>

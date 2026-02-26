@@ -12,7 +12,9 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
 <template>
   <div class="mt-0.5 grid auto-rows-max items-center gap-6">
     <div class="w-full">
-      <h6 class="mb-3">Resources</h6>
+      <h6 class="mb-3">
+        Resources
+      </h6>
       <div class="grid w-full grid-cols-3 gap-2">
         <UButton
           v-for="(link, i) in nav"

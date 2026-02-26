@@ -71,7 +71,7 @@ const toolbarOpen = shallowRef<boolean>(false)
           color="p0"
           active-color="neutral"
           :ui="{
-            base: 'pointer-events-auto drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 shrink-0 fx-0  rounded-full sticky bottom-[4%] ',
+            base: 'pointer-events-auto drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 shrink-0 fx-0 backdrop-blur-md  rounded-full sticky bottom-[4%] ',
             leadingIcon: cn('group-open/btn:**:text-nc'),
           }"
           :icon="toolbarOpen ? 'i-up' : 'i-filter'" />

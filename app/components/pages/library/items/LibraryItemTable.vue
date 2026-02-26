@@ -93,5 +93,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky> </UTable>
+  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky>
+  </UTable>
 </template>

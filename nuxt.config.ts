@@ -40,21 +40,19 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
-    "@nuxtjs/supabase",
-    "@nuxt/image",
     ...(isCFLeanBuild
       ? [
           // "@nuxt/icon", // OOM test toggle: comment-in to skip @nuxt/icon on Cloudflare lean builds
         ]
-      : ["@nuxt/icon"]),
+      : [
+          "@nuxt/icon",
+          "@nuxtjs/supabase",
+          "@nuxt/image",
+          "motion-v/nuxt",
+          "@formkit/auto-animate/nuxt",
+        ]),
     "@vueuse/nuxt",
     "@nuxt/ui",
-    ...(isCFLeanBuild
-      ? [
-          // "motion-v/nuxt", // OOM test toggle: comment-in to skip motion-v on Cloudflare lean builds
-          // "@formkit/auto-animate/nuxt", // OOM test toggle: comment-in to skip auto-animate on Cloudflare lean builds
-        ]
-      : ["motion-v/nuxt", "@formkit/auto-animate/nuxt"]),
     // "@nuxtjs/seo",
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
@@ -104,9 +102,6 @@ export default defineNuxtConfig({
     // Reduce Cloudflare Nitro bundle build memory usage while debugging OOMs.
     minify: !isCFLeanBuild,
     sourceMap: false,
-    imports: {
-      dirs: ["#server/domain", "#server/api/riot"],
-    },
     externals: {
       external: ["sharp"],
     },

@@ -58,7 +58,7 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
         @update-tab="(e) => (tabModel = e)" />
     </template>
     <template #toolbar>
-      <LazyItemFilterToolbar v-model:tab-model="tabModel" :nav />
+      <LazyItemFilterToolbar :nav />
     </template>
     <template #toolbar-left>
       <LazyItemFloatingSearch />

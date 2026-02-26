@@ -27,7 +27,7 @@ const open = shallowRef<boolean>(false)
       <h1
         :class="
           cn(
-            'overflow-y-visible font-display text-[36px]/15 font-normal! text-pc/94',
+            'font-display overflow-y-visible text-[36px]/15 font-normal! text-pc/94',
             { 'opacity-40': !summoner?.name }
           )
         "
