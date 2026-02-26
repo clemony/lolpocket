@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { locale, setLocale } = useI18n()
+/* const { locale, setLocale } = useI18n() */
 </script>
 
 <template>
-  <USelect
+  <!--   <USelect
     v-model:model-value="locale"
     size="sm"
     :content="{
@@ -30,5 +30,5 @@ const { locale, setLocale } = useI18n()
           " />
       </span>
     </template>
-  </USelect>
+  </USelect> -->f
 </template>

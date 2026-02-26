@@ -21,58 +21,6 @@ const customCollections = fs
   }))
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      link: [
-        { rel: "preconnect", href: "https://cdn.jsdelivr.net", crossorigin: "" },
-
-        // Inter (latin + latin-ext, 300-800, normal + italic)
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700-italic.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800-italic.css" },
-
-        // Noto Serif KR (normal only; italic not provided in this source)
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-600.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-700.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-600.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-700.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-600.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-700.css" },
-
-        // Geist Mono (normal)
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-300.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-400.css" },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-500.css" },
-      ],
-    },
-  },
   imports: {
     global: true,
     dirs: ["#shared/schema", "~/stores"],
@@ -96,8 +44,8 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "motion-v/nuxt",
     "@formkit/auto-animate/nuxt",
-    "@nuxtjs/seo",
-    "@nuxtjs/i18n",
+    // "@nuxtjs/seo",
+    //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
       ? ["@nuxt/devtools", "@nuxt/hints"]
       : []),
@@ -229,13 +177,14 @@ export default defineNuxtConfig({
       ? ["/api/", "/auth/", "/account/", "/settings/"]
       : ["/"],
   },
-  sitemap: {
+  /*   sitemap: {
     enabled: isProduction,
     zeroRuntime: true,
   },
   ogImage: {
     zeroRuntime: true,
-  },
+    enabled: false,
+  }, */
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
@@ -291,7 +240,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 5,
   },
 
-  i18n: {
+  /*   i18n: {
     strategy: "prefix_except_default",
     differentDomains: true,
     defaultLocale: "en",
@@ -326,5 +275,179 @@ export default defineNuxtConfig({
         domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
       },
     ],
+  }, */
+
+  app: {
+    head: {
+      link: [
+        {
+          rel: "preconnect",
+          href: "https://cdn.jsdelivr.net",
+          crossorigin: "",
+        },
+
+        // Inter (latin + latin-ext, 300-800, normal + italic)
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700-italic.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800-italic.css",
+        },
+
+        // Noto Serif KR (normal only; italic not provided in this source)
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-600.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-700.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-600.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-700.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-600.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-700.css",
+        },
+
+        // Geist Mono (normal)
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-300.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-400.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-500.css",
+        },
+      ],
+    },
   },
 })

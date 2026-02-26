@@ -17,8 +17,7 @@
     "nuxt:upgrade": "rm -rf node_modules .nuxt .output pnpm-lock.yaml && pnpm install && pnpm up nuxt @nuxt/kit --latest && pnpm exec nuxi prepare",
     "debug": "DEBUG=vite:* npx nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "✅ update:patch": "tsx  scripts/updatePatchData.ts"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.9.0",

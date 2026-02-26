@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale"
 
-const { locale } = useI18n()
+/* const { locale } = useI18n()
 
 const lang = computed(() => locales[locale.value].code)
-const dir = computed(() => locales[locale.value].dir)
+const dir = computed(() => locales[locale.value].dir) */
 
 useHead({
-  htmlAttrs: {
+  /*   htmlAttrs: {
     lang,
     dir,
-  },
+  }, */
   link: [
     {
       href: "/img/favicon.png",
@@ -19,14 +19,14 @@ useHead({
     },
   ],
 })
-
+/*
+    :locale="locales[locale]" */
 const reportComment = computed(() => threads().reportComment ?? undefined)
 </script>
 
 <template>
   <UApp
     id="app"
-    :locale="locales[locale]"
     :ui="{ base: ' overflow-hidden' }"
     :toaster="{
       position: 'top-right',
