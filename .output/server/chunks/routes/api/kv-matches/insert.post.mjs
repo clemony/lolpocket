@@ -1,0 +1,1 @@
+import{d as s,r as t,c as o}from"../../../nitro/nitro.mjs";import"node:buffer";import"node:events";import"node:process";import"cloudflare:workers";import"node:timers";const r=s(async s=>{var r;const e=await t(s);if(!e.puuid||!(null==(r=e.matchIds)?void 0:r.length))throw o({statusCode:400,statusMessage:"Missing data"});return{success:!0}});export{r as default};

@@ -10,7 +10,7 @@ const { modelValue: selectedMap } = defineProps<{
       <slot>
         <span class="relative grid size-5 place-items-center">
           <component
-            :is="`i-lol-${selectedMap}`"
+            :is="`i-lp-${selectedMap}`"
             class="dst absolute shrink-0 opacity-80"
             :class="{
               'size-5!': selectedMap === 12 || selectedMap === 11,
@@ -31,9 +31,7 @@ const { modelValue: selectedMap } = defineProps<{
           <span class="opacity-50">Select a Map...</span>
         </SelectLabel>
         <SelectGroup class="size-full space-y-1 p-0.5">
-          <SelectItem
-            class="mt-1 rounded-md py-2"
-            :value="0">
+          <SelectItem class="mt-1 rounded-md py-2" :value="0">
             <div class="flex items-center gap-3 font-medium">
               <span class="relative grid size-5 place-items-center">
                 <icon
@@ -51,7 +49,7 @@ const { modelValue: selectedMap } = defineProps<{
             <div class="flex items-center gap-3 font-medium">
               <span class="relative grid size-5 place-items-center">
                 <component
-                  :is="`i-lol-${map}`"
+                  :is="`i-lp-${map}`"
                   class="dst absolute shrink-0 opacity-80"
                   :class="{
                     'size-5!': map === 12 || map === 11,

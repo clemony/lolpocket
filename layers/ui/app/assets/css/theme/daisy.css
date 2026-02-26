@@ -8,14 +8,11 @@
     dark;
   styled: true;
   exclude:
-    rootcolor,
-    navbar,
-    link,
-    toast,
-    skeleton,
-    steps drawersidebar,
-    hero,
+    rootcolor, navbar, link, toast, skeleton, steps, drawersidebar, hero,
     fileinput;
+  include:
+    progress, badge, status, timeline, tabs, radialprogress, button, code,
+    hover3dcard, checkbox, input;
 }
 
 @plugin "daisyui/theme" {

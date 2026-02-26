@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import { mapPositions } from "#shared/constants/misc/positions"
 import type { ButtonProps } from "@nuxt/ui"
 import { SelectTrigger } from "reka-ui"
-import { mapPositions } from "#shared/constants/misc/positions"
 
 const {
   side,
@@ -51,7 +51,7 @@ onMounted(() => {
       "
       :position="currentValue">
       <component
-        :is="`i-lol-${currentValue}`"
+        :is="`i-lp-${currentValue}`"
         :class="cn('size-4.5! shrink-0 text-pc! ds-2xs')" />
 
       <SelectValue placeholder="all" />

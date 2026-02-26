@@ -1,0 +1,1 @@
+function buildSummonerRootPath(o){const e=o?.region?.toLowerCase(),t=o?.name?.toLowerCase(),r=o?.tag?.toLowerCase();return e&&t&&r?`/${e}/${t}_${r}`:o?.puuid?`/_r/summoner/${o.puuid}`:"/"}export{buildSummonerRootPath as b};

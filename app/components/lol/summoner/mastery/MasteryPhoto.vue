@@ -52,7 +52,7 @@ const level = computed(() =>
         <p class="absolute flex items-center gap-1 text-xs font-medium">
           <span
             class="dst relative size-4 overflow-hidden rounded-full shadow-sm">
-            <i-lol-cm-mastery-token
+            <i-lp-cm-mastery-token
               class="absolute grid size-full scale-105 place-items-center object-center" />
           </span>
           {{ champion?.totalPoints?.toLocaleString() ?? 0 }}

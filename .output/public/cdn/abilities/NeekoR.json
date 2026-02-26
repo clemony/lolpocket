@@ -1,0 +1,41 @@
+{
+  "key": "R",
+  "name": "Pop Blossom",
+  "affects": "Enemies, Self",
+  "castTime": "0.6",
+  "cooldown": "120 / 105 / 90",
+  "cost": "100",
+  "damageType": "Magic damage",
+  "effectRadius": "590 /  600",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p>"
+    },
+    {
+      "description": "After winding up, the cast time begins and Neeko leaps upward, knocking up nearby enemies for 0.6 seconds."
+    },
+    {
+      "description": "When the cast time ends, she lands to emit a burst of energy that deals magic damage to nearby enemies and stuns them for 0.75 seconds.",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "150 / 350 / 550"
+            },
+            {
+              "unit": "% AP",
+              "values": "120"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/r",
+  "notes": "Ability details:\n\nThe wind up uses a special bar similar to cast bars to represent when Pop Blossom's cast time will start.\nThe wind up has no special interactions.\nThe highlighted area is fixed around Neeko.\nNeeko's most recent  Shapesplitter clone disappears when Pop Blossom's cast time starts.\nEditor's Note: This may be a remnant of when it would spawn multiple clones during the development of her V13.9 gameplay update, intended to reduce visual clutter.[2]\nThis ability will cast from wherever the caster is at the end of the cast time.\nInteractions:\n\nOn-cast effects are applied on activation.\nPop Blossom can start its cast time during  stasis.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+  "resource": "Mana",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "True",
+  "targeting": "Auto"
+}

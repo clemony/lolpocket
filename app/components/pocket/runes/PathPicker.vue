@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { motion } from "motion-v"
 import { pathIndex } from "#shared/constants/runes/pathIndex"
+import { motion } from "motion-v"
 
 const emit = defineEmits(["update:paths"])
 
@@ -147,7 +147,7 @@ const pathHovered = ref("")
         @hover-end="pathHovered = ''">
         <Icon
           class="z-2 size-20! text-white/30!"
-          :name="`i-path-${path.name.toLowerCase()}`" />
+          :name="`i-rune-${path.name.toLowerCase()}`" />
       </motion.button>
     </motion.div>
   </div>

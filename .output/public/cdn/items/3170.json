@@ -1,0 +1,45 @@
+{
+  "name": "Swiftmarch",
+  "id": 3170,
+  "rank": "Boots",
+  "buildsFrom": [
+    {
+      "id": 3009,
+      "name": "Boots of Swiftness",
+      "gold": 1000
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "boots"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Fleetfooted",
+      "effects": "Gain 40% slow resist."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Noxian Fervor",
+      "effects": "Gain <img src=\"/img/icons/adaptive-force.webp\" class=\"tip-icon \" />adaptive force equal to 5% of your <b>total</b> movement speed."
+    }
+  ],
+  "stats": {
+    "flatMovespeed": 65
+  },
+  "description": "65 Move Speed\n\nFleetfooted\nReduce the effectiveness of Slows by 40%.\n\nNoxian Fervor\nGain 5% of your Move Speed as Adaptive Force.",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 1000,
+    "sell": 700
+  },
+  "maps": [
+    11
+  ]
+}

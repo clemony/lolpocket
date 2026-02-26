@@ -1,0 +1,38 @@
+{
+  "key": "E",
+  "name": "The Weirding",
+  "width": "175",
+  "affects": "Enemies",
+  "blurb": "Active:  Aurora blasts energy and  recoils backward. The blast deals magic damage to enemies hit and  slows them for a moment.",
+  "castTime": "0.35",
+  "cooldown": "15 / 14 / 13 / 12 / 11",
+  "cost": "80",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurora blasts energy in a line in the target direction and recoils 250 units in the opposite direction. The blast deals magic damage to enemies hit and slows them by 80% for 1 second decaying after the first 0.15 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "70 / 110 / 150 / 190 / 230"
+            },
+            {
+              "unit": "% AP",
+              "values": "70"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/e",
+  "notes": "Aurora is locked out of using all abilities, summoner spells, and item actives during the dash.\nWhile  grounded or  rooted, The Weirding can be cast but Aurora will not  dash.\nSimilarly, if Aurora is affected by ground or root during the cast time, she will not dash afterwards.\nThis only applies to ground and root.  Immobilizing effects will not prevent the dash afterwards.(note)\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "projectile": "FALSE",
+  "resource": "Mana",
+  "speed": "150 + 200% movement speed",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "true",
+  "targeting": "Direction"
+}

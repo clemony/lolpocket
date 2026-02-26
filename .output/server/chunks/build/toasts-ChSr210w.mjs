@@ -1,0 +1,1 @@
+import{L as r}from"./server.mjs";function sendErrorToast(o){r().add({color:"dom",title:"Error!",description:"Hang on, we're herding the greebles. If this continues, let us know.",icon:"x"})}export{sendErrorToast as s};

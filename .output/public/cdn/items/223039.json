@@ -1,0 +1,33 @@
+{
+  "name": "Atma's Reckoning",
+  "id": 223039,
+  "rank": "Legendary",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "wreckoning"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Big Hands",
+      "effects": "Gain <img src=\"/img/icons/critical-strike-chance.webp\" class=\"tip-icon\" />critical strike chance critical strike chance."
+    }
+  ],
+  "stats": {
+    "criticalStrikeChance": 20,
+    "health": 700
+  },
+  "description": "700 Health\n20% Critical Strike Chance\n\nBig Hands\nGain 0-30% Critical Strike Chance, scaling with your bonus Health.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
+  },
+  "maps": [
+    30
+  ]
+}

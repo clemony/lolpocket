@@ -1,0 +1,1 @@
+const o=["riot","google","discord"],e=[{name:"riot",class:"*:!size-5.25 *:-ml-px *:!text-white !bg-neutral/90",icon:"riot"},{name:"discord",class:" *:!text-white  bg-[#747abf]",icon:"logos:discord-icon"},{name:"google",class:"",icon:"devicon:google"}];export{o as a,e as p};

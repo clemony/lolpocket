@@ -127,7 +127,7 @@ const statsSafe = computed(() => {
         data-type="Heals or shields that saved an ally from the brink of death"
         title="Lives Saved"
         subtitle="Perfect heals & shields."
-        :icon="['ability:revive', 'size-6.5 ']">
+        :icon="['i-stat-revive', 'size-6.5 ']">
         <span class="flex flex-nowrap items-center">
           {{ statsSafe.allySavesAvg }}
         </span>

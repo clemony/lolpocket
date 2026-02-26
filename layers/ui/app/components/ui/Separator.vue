@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui"
-import { Primitive, useForwardProps } from "reka-ui"
 import { tv } from "tailwind-variants"
 
 const props = withDefaults(defineProps<SeparatorProps>(), {
@@ -97,9 +95,9 @@ const separatorVariants = tv({
       placement: "start",
       labelPlacement: "end",
       class: {
-        wrapper: "order-last ml-2",
+        wrapper: "order-last ml-3",
         separator: "order-1",
-        leading: "order-first",
+        leading: "order-first mr-1",
       },
     },
     {

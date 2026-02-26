@@ -9,7 +9,7 @@ import { tabData } from "~/components/pages/library/items/ui/viewMode"
 definePageMeta({
   title: "Items",
   description: "A full list of items and stat details.",
-  icon: "i-ability-melee",
+  icon: "i-stat-melee",
   navClass: "size-5",
   path: "/items",
 })

@@ -1,0 +1,103 @@
+{
+  "key": "Q",
+  "name": "Cultivation of Spirit",
+  "affects": "Self, Enemies",
+  "blurb": "Passive:  Yunara's  basic attacks deal bonus magic damage  on-hit and generate  stacks of Unleash  on-attack, stacking up to a cap upon which she can cast Cultivation of Spirit.",
+  "castTime": "none",
+  "cooldown": "0",
+  "cost": "30",
+  "damageType": "Other damage",
+  "effectRadius": "300",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Yunara's basic attacks deal bonus magic damage on-hit. While this ability is inactive, her basic attacks on-attack generate a stack of Unleash for 6 seconds, increased to 2 stacks against champions. The stacks refresh on subsequent attacks, stack up to 8 times, and expire one by one every 0.5 seconds after the duration.</p>",
+      "leveling": [
+        {
+          "attribute": "Passive Bonus Magic Damage",
+          "modifiers": [
+            {
+              "values": "5 / 10 / 15 / 20 / 25"
+            },
+            {
+              "unit": "% AP",
+              "values": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara unleashes for 5 seconds: gaining bonus attack speed, dealing additional bonus magic damage on-hit, and augmenting her basic attacks to have increased missile speed, a 40% lower windup time, and an uncancellable windup. Her basic attacks are also empowered to spread to each enemy near the target, dealing 30% AD physical damage.Each spread attack applies life steal and on-hit effects, with on-hit damage reduced to 30% effectiveness, and will critically strike if the triggering attack does. Spread attacks deal 250% damage against minions below 30% maximum health.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Attack Speed",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "25 / 35 / 45 / 55 / 65"
+            }
+          ]
+        },
+        {
+          "attribute": "Active Bonus Magic Damage",
+          "modifiers": [
+            {
+              "values": "5 / 10 / 15 / 20 / 25"
+            },
+            {
+              "unit": "% AP",
+              "values": "20"
+            }
+          ]
+        },
+        {
+          "attribute": "Combined Bonus Magic Damage",
+          "modifiers": [
+            {
+              "values": "10 / 20 / 30 / 40 / 50"
+            },
+            {
+              "unit": "% AP",
+              "values": "40"
+            }
+          ]
+        },
+        {
+          "attribute": "Active Increased Minion Damage",
+          "modifiers": [
+            {
+              "values": "12.5 / 25 / 37.5 / 50 / 62.5"
+            },
+            {
+              "unit": "% AP",
+              "values": "50"
+            }
+          ]
+        },
+        {
+          "attribute": "Combined Increased Minion Damage",
+          "modifiers": [
+            {
+              "values": "25 / 50 / 75 / 100 / 125"
+            },
+            {
+              "unit": "% AP",
+              "values": "100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Cultivation of Spirit resets Yunara's basic attack timer. Targets do not have to be visible to be hit by the spread attacks."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/q",
+  "notes": "Cultivation of Spirit's damage classifications:\n Proc damage for the passive and active on-hit damage.\n Basic damage for the spread attack damage.\nSpread attacks will still deal damage even if Yunara misses her basic attack due to  blind.\nPENDING FOR TEST: Spread attack interaction with parrying effects ( dodge,  block)\nThere is no limit to the number of enemies the empowered attacks can spread to.\nYunara's secondary resource bar gives various context for Cultivation of Spirit. It is visible to the player only.\nWhile Cultivation of Spirit is not active, the bar shows her current Unleash stacks. It is colored white while below maximum stacks and yellow while at maximum stacks.\nAfter Cultivation of Spirit is cast, the bar counts down the buff's duration.\nThis is also true during  Transcend One's Self, which means that the bar effectively also counts down the duration of her Transcendent State.\nIf Yunara begins an attack windup toward the end of the active effects' duration and its launch would take place after it, the effects' duration is extended equal to the attack's windup time, once at most.\nSince the buff ends right after launching Cultivation of Spirit's attack and its effects have already been determined, this allows it to both spread to nearby enemies and generate a stack of Unleash.\nEach bolt from  Runaan's Hurricane's Wind's Fury may trigger its own spread attack (despite the spread attacks not being an on-hit effect).",
+  "projectile": "TRUE",
+  "resource": "Other",
+  "speed": "10000 / 2000",
+  "spellEffects": "special",
+  "spellshieldable": "false",
+  "targeting": "Auto"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "W",
+  "name": "Distortion",
+  "affects": "Enemies",
+  "blurb": "Active:  LeBlanc  dashes to the target location, dealing magic damage to nearby enemies upon arrival. She leaves behind a return pad at her original location that lasts a few seconds, during which she can recast.",
+  "castTime": "none",
+  "cooldown": "15 / 13.75 / 12.5 / 11.25 / 10",
+  "cost": "60 / 70 / 80 / 90 / 100",
+  "damageType": "Magic damage",
+  "effectRadius": "240",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> LeBlanc dashes to the target location, dealing magic damage to all nearby enemies upon arrival and leaving a return pad at the cast location for 4 seconds. Distortion can be recast after 0.2 seconds of the dash ending for the pad's duration.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "75 / 115 / 155 / 195 / 235"
+            },
+            {
+              "unit": "% AP",
+              "values": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> LeBlanc blinks to Distortion's return pad, regardless of range.</p>"
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/w",
+  "notes": "Distortion will be buffered and cast as soon as the cooldown ends if the player attempts to cast it within 0.5 seconds of the cooldown ending.\nThe recast will be buffered and cast as soon as it becomes available if the player attempts to cast it within 0.3 seconds of it becoming available to cast.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability does not.\n Mimic: Distortion has the same properties.\nDistortion and  Mimic: Distortion have independent return pads and LeBlanc can travel to both while they are active.\nDistortion's pad duration starts once the dash ends.",
+  "resource": "Mana",
+  "speed": "1450",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "True",
+  "targeting": "Location / Auto",
+  "targetRange": "600 / Global"
+}

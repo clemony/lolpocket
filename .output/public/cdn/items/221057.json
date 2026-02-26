@@ -1,0 +1,11 @@
+{
+  "id": 221057,
+  "name": "Negatron Cloak",
+  "description": "30 Magic Resist\n\n",
+  "gold": {
+    "base": 450,
+    "purchasable": false,
+    "total": 450,
+    "sell": 315
+  }
+}

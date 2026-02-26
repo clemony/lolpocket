@@ -37,13 +37,14 @@ const tags = ref<string[]>([])
           type="checkbox"
           :value="position.label"
           :style="{
-            backgroundColor:
-              tags.includes(position.label) ? 'transparent' : 'var(--color-p0)',
+            backgroundColor: tags.includes(position.label)
+              ? 'transparent'
+              : 'var(--color-p0)',
             borderColor: position.color,
           }" />
 
         <component
-          :is="`i-lol-${position.label}`"
+          :is="`i-lp-${position.label}`"
           :class="cn('ml-1 size-3.5 text-white ds-2xs')" />
 
         <span class="text-white">

@@ -1,0 +1,25 @@
+{
+  "name": "Health Potion",
+  "id": 2003,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "consumable",
+    "red"
+  ],
+  "stats": {},
+  "description": "Consume\nRestores 120 Health over 15 seconds.",
+  "gold": {
+    "base": 50,
+    "purchasable": true,
+    "total": 50,
+    "sell": 20
+  },
+  "maps": [
+    11,
+    12,
+    21
+  ]
+}

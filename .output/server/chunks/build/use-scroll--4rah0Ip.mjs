@@ -1,0 +1,1 @@
+import{v as o}from"./server.mjs";import{a as s}from"./index-DVGmTdaC.mjs";function useMotionValueEvent(o,s,r){return o.on(s,r)}function useScroll(r={}){const e={scrollX:s(0),scrollY:s(0),scrollXProgress:s(0),scrollYProgress:s(0)};return o.watchEffect(o=>{},{flush:"post"}),e}export{useMotionValueEvent as a,useScroll as u};

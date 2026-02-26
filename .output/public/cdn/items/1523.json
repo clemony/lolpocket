@@ -1,0 +1,15 @@
+{
+  "id": 1523,
+  "name": "Overcharged",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  },
+  "maps": [
+    11,
+    12,
+    21
+  ]
+}

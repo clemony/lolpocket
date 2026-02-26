@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
 import type { ChampionRole } from "#shared/constants/misc/roles"
 import { championRoles } from "#shared/constants/misc/roles"
+import type { ButtonProps } from "@nuxt/ui"
 
 const { class: className, role: rl } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -43,7 +43,7 @@ const role = computed(() => {
     }">
     <Element square size="sm">
       <component
-        :is="`i-lol-${role?.name.toLowerCase()}`"
+        :is="`i-lp-${role?.name.toLowerCase()}`"
         :class="cn('absolute size-4.25! shrink-0 ds-2xs', role?.class)" />
     </Element>
     {{ role.name }}

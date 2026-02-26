@@ -1,0 +1,19 @@
+{
+  "name": "Prismatic Item",
+  "id": 220007,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "stats": {},
+  "description": "Active - Consume: Automatically open a semi-random selection for a Prismatic item.",
+  "gold": {
+    "base": 4000,
+    "purchasable": true,
+    "total": 4000,
+    "sell": 4000
+  },
+  "maps": [
+    30
+  ]
+}

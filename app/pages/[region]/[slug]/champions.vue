@@ -15,7 +15,7 @@ useSeoMeta({
 definePageMeta({
   title: "Champions",
   description: "Discover in depth champion data for every one played.",
-  icon: "i-lol-champ",
+  icon: "i-lp-champ",
   iconStyle: "scale-90 -mb-0.25",
   keepalive: true,
   order: 1,
@@ -41,9 +41,7 @@ const championData = computed(() =>
 <template>
   <UPage class="relative pb-32">
     <UPageHeader class="px-20">
-      <h1 class="dst self-start font-bold">
-        Champion Stats
-      </h1>
+      <h1 class="dst self-start font-bold">Champion Stats</h1>
 
       <QueueFilters />
       <LazyMatchPositionFilter orientation="vertical" />

@@ -1,0 +1,57 @@
+{
+  "key": "Q",
+  "name": "Ranger's Focus",
+  "affects": "Self",
+  "blurb": "Passive:  Ashe's basic attacks generate  stacks of Focus, up to a cap. Once the stacks reach the cap, she can cast Ranger's Focus.",
+  "castTime": "none",
+  "cooldown": "0",
+  "cost": "30",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ranger's Focus is inactive, Ashe's basic attacks on-attack generate a stack of Focus for 4 seconds, refreshing on subsequent attacks and stacking up to 4 times. Stacks expire one by one every second when the duration ends.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> For 6 seconds, Ashe gains bonus attack speed and empowers her basic attacks to fire a flurry of five arrows that deal modified physical damage. The flurries apply life steal and Frost Shot per arrow, but apply on-hit effects only once.</p>",
+      "leveling": [
+        {
+          "attribute": "Bonus Attack Speed",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "20 / 30 / 40 / 50 / 60"
+            }
+          ]
+        },
+        {
+          "attribute": "Physical Damage Per Arrow",
+          "modifiers": [
+            {
+              "unit": "% AD",
+              "values": "22 / 23.5 / 25 / 26.5 / 28"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Damage Per Flurry",
+          "modifiers": [
+            {
+              "unit": "% AD",
+              "values": "110 / 117.5 / 125 / 132.5 / 140"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ranger's Focus resets Ashe's basic attack timer."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/q",
+  "notes": "The flurries deal 1 instance of  basic damage followed by 4 instances of a non-reactive type of damage (either  default or  proc).\nThe flurries are classified as a basic attack on a script level, but are considered an ability for other effects (e.g.  Maokai's  Sap Magic).(bug)\nThe first flurry of a Ranger's Focus cast fires[ one additional arrow, dealing 20% increased total damage. ][ six arrows, dealing a total of 132 / 141 / 150 / 159 / 168% attack damage. ]\nRanger's Focus works against  structures.\nFlat damage reductions (e.g.  Amumu's  Tantrum,  Fizz's  Nimble Fighter, or  Leona's  Eclipse) apply per arrow, resulting in extremely increased effectiveness against Ranger's Focus.\nThe sole exception is  Warden's Mail's Rock Solid, as that applies per cast instance rather than per damage instance.\nA flurry can apply 5 stacks of  Black Cleaver's Carve to a single target as it deals 5 instances of physical damage.\nRanger's Focus also empowers  Runaan's Hurricane's Wind's Fury bolts to become a flurry of 5 bolts each as well.\nThe empowered bolts use Ashe's attack projectile, including her missile speed (2500 compared to their default 2000).\nThe bolts are evenly distributed among the targets, but a single target cannot be hit by more than 5 bolts.\nThese flurries also apply  on-hit effects only once to each target hit.\nBecause Focus stacks are generated  on-attack,  Runaan's Hurricane's Wind's Fury's bolts will not generate any.",
+  "projectile": "TRUE",
+  "resource": "Mana",
+  "spellEffects": "special",
+  "spellshieldable": "false",
+  "targeting": "Auto"
+}

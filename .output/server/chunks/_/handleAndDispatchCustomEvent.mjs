@@ -1,0 +1,1 @@
+function handleAndDispatchCustomEvent(t,e,n){const a=n.originalEvent.target,s=new CustomEvent(t,{bubbles:!1,cancelable:!0,detail:n});e&&a.addEventListener(t,e,{once:!0}),a.dispatchEvent(s)}export{handleAndDispatchCustomEvent as h};

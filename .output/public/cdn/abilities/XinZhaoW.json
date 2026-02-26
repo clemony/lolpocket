@@ -1,0 +1,90 @@
+{
+  "key": "W",
+  "name": "Wind Becomes Lightning",
+  "width": "80",
+  "affects": "Enemies",
+  "angle": "160°",
+  "blurb": "Active:  Xin Zhao slashes in an arc, then thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit and heals Xin Zhao based on his  life steal.",
+  "castTime": "0.5",
+  "cooldown": "12 / 11 / 10 / 9 / 8",
+  "cost": "60 / 55 / 50 / 45 / 40",
+  "damageType": "Physical damage",
+  "effectRadius": "275 /  125",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xin Zhao unleashes 4 slashes in an arc over the first 0.15 seconds of the cast time, each dealing physical damage to enemies within. After the remaining cast time, he then thrusts his spear in a line in the target direction, dealing physical damage to enemies hit, increased by 0% - 33.3% (based on critical strike chance), and slowing them by 50% for 1.5 seconds. Wind Becomes Lightning deals 50% - 100% (based on level) damage to minions.The farthest champion or large monster hit within the thrust's area is also marked as Challenged and is revealed for 3 seconds.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage per Slash",
+          "modifiers": [
+            {
+              "values": "7.5 / 10 / 12.5 / 15 / 17.5"
+            },
+            {
+              "unit": "% AD",
+              "values": "7.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Slash Total Physical Damage",
+          "modifiers": [
+            {
+              "values": "30 / 40 / 50 / 60 / 70"
+            },
+            {
+              "unit": "% AD",
+              "values": "30"
+            }
+          ]
+        },
+        {
+          "attribute": "Thrust Physical Damage",
+          "modifiers": [
+            {
+              "values": "50 / 85 / 120 / 155 / 190"
+            },
+            {
+              "unit": "% AD",
+              "values": "90"
+            },
+            {
+              "unit": "% AP",
+              "values": "65"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Physical Damage",
+          "modifiers": [
+            {
+              "values": "80 / 125 / 170 / 215 / 260"
+            },
+            {
+              "unit": "% AD",
+              "values": "120"
+            },
+            {
+              "unit": "% AP",
+              "values": "65"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Wind Becomes Lightning's damage heals Xin Zhao for 33.3% of his life steal."
+    },
+    {
+      "description": "The durations of Three Talon Strike and Audacious Charge's bonus attack speed are delayed relative to Wind Becomes Lightning's cast time. Xin Zhao reveals himself during the cast if there is an enemy champion nearby."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/w",
+  "notes": "PENDING FOR TEST: The self-reveal has not been fully tested for complete confirmation. Is the ability invisible when hitting minions and there is no enemy champion nearby? Is the tip of the ability enough to reveal him? Whether it can hit a minion or not? Just if he's around the exit of the fog of war, and even if he points towards the inside of the fog of war? [2]\n Spell shield will block both the slashes and the thrust.\nIf the spell shield blocks the first, or sometimes the second slash, it will block the rest of the ability, including the thrust. If it is activated after the first slash, it will only block up to 2 slashes and will not block the trust.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe thrust will occur from wherever Xin Zhao is at the end of the cast time.\nThe slashes will occur from wherever Xin Zhao is at the time during the first 0.15 seconds.\nWind Becomes Lightning's end point will not move in relation to Xin Zhao if he moves during the cast time.\nThe direction of the slashes will also not move during the cast time.\nThe first strike's hitbox includes a  275 radius 160° cone in front of Xin Zhao and an additional  125 radius around him.\nThe second strike's hitbox includes the same  125 radius around Xin Zhao, a missile with  1000 range and  80 total width, and a  -60 radius area check upon the end of the missile.\nThe 125 radius check does not hit champion summoned units.(note)\nBecause Wind Becomes Lightning uses an older type of 'healing based on life steal' and not applies life steal,  Spirit Visage will amplify the life gain twice (+25% life steal and +25% healing), for a total of +56.25%.\nEach of Wind Becomes Lightning's slashes are applied in a separate damage instance from each other.\nThis causes effects like  Bone Plating to be applied twice and  Black Cleaver's Carve to be applied multiple times.",
+  "projectile": "FALSE",
+  "resource": "Mana",
+  "speed": "6250",
+  "spellEffects": "Area of effect",
+  "spellshieldable": "true",
+  "targeting": "Direction"
+}

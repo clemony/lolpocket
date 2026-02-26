@@ -1,0 +1,59 @@
+{
+  "key": "R",
+  "name": "Supreme Display of Talent",
+  "width": "280 / 120",
+  "affects": "Enemies, Terrain",
+  "blurb": "Active:  Qiyana sweeps a windblast in the target direction that  knocks back enemies hit and stops upon hitting Terrain.",
+  "castTime": "0.25",
+  "cooldown": "120",
+  "cost": "100",
+  "damageType": "Physical damage",
+  "effectRadius": "11000",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit by 375 units, though not through terrain, and stops upon hitting Terrain.</p>"
+    },
+    {
+      "description": "The windblast creates a cascading shockwave across any River or Brush it passes through, as well as around the borders of Terrain it reaches, dealing physical damage to enemies hit, stunning them for 0.5 - 1 (based on proximity) seconds, and briefly granting sight of the area along its path. The damage based on the target's health ratio is capped against monsters.",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "100 / 200 / 300"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "125"
+            },
+            {
+              "unit": "% of target's maximum health",
+              "values": "10"
+            }
+          ]
+        },
+        {
+          "attribute": "Capped Monster Health Damage",
+          "modifiers": [
+            {
+              "values": "500 / 750 / 1000"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "125"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/r",
+  "notes": "The windblast needs only to reach near terrain to trigger the terrain shockwave.\nThe shockwave grants sight along each part of its path for 0.75 seconds.\nArtificial terrain (e.g,  Anivia's  Crystallize,  Taliyah's  Weaver's Wall,  Trundle's  Pillar of Ice) touching map terrain will be treated as a single piece of terrain, even when bridging two pieces of map terrain together; the shockwave will wrap around all connecting terrain. The shockwave's path is determined once it initially spreads; any expired terrain will be treated as if it were still there.\n Projectile-intercepting effects will block the windblast but not the shockwave.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "projectile": "SPECIAL",
+  "resource": "Mana",
+  "speed": "2000 / 2840",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "True",
+  "targeting": "Direction",
+  "targetRange": "875"
+}

@@ -1,0 +1,396 @@
+:where(.btn) {
+  @layer ui.l1.l2.l3 {
+    width: unset;
+  }
+}
+
+.prose
+  :where(a.btn:not(.btn-link)):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  ) {
+  @apply no-underline;
+}
+
+.btn {
+  @layer ui.l1.l2.l3 {
+    @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
+    padding-inline: var(--btn-p);
+    color: var(--btn-fg);
+    --tw-prose-links: var(--btn-fg);
+    height: var(--size);
+    font-size: var(--fontsize, 0.875rem);
+    font-weight: 600;
+    outline-color: var(--btn-color, var(--ui-pc));
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 0.2s;
+    border-start-start-radius: var(--join-ss, var(--radius-lg));
+    border-start-end-radius: var(--join-se, var(--radius-lg));
+    border-end-start-radius: var(--join-es, var(--radius-lg));
+    border-end-end-radius: var(--join-ee, var(--radius-lg));
+    background-color: var(--btn-bg);
+    background-size: auto, calc(var(--noise) * 100%);
+    background-image: none, var(--btn-noise);
+    border-width: var(--border);
+    border-style: solid;
+    border-color: var(--btn-border);
+    text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
+    touch-action: manipulation;
+    box-shadow:
+      0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%)) inset,
+      var(--btn-shadow);
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    --btn-bg: var(--btn-color, var(--ui-p2));
+    --btn-fg: var(--ui-pc);
+    --btn-p: 1rem;
+    --btn-border: color-mix(
+      in oklab,
+      var(--btn-bg),
+      #000 calc(var(--depth) * 5%)
+    );
+    --btn-shadow:
+      0 3px 2px -2px
+        color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+      0 4px 3px -2px
+        color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
+    --btn-noise: var(--fx-noise);
+    @media (hover: hover) {
+      &:hover {
+        --btn-bg: color-mix(in oklab, var(--btn-color, var(--ui-p2)), #000 7%);
+      }
+    }
+
+    &:focus-visible,
+    &:has(:focus-visible) {
+      outline-width: 2px;
+      outline-style: solid;
+      isolation: isolate;
+    }
+
+    &:active:not(.btn-active) {
+      translate: 0 0.5px;
+      --btn-bg: color-mix(in oklab, var(--btn-color, var(--ui-p2)), #000 5%);
+      --btn-border: color-mix(
+        in oklab,
+        var(--btn-color, var(--ui-p2)),
+        #000 7%
+      );
+      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+    }
+
+    &:is(input[type="checkbox"], input[type="radio"]) {
+      @apply appearance-none;
+
+      /* &:not(.btn-square, .btn-circle) {
+        @apply w-auto;
+      } */
+
+      &[aria-label]::after {
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
+      }
+    }
+    &:where(input:checked:not(.filter .btn)) {
+      --btn-color: var(--ui-n0);
+      --btn-fg: var(--ui-pc);
+      isolation: isolate;
+    }
+  }
+}
+
+.btn-disabled,
+.btn:disabled,
+.btn[disabled] {
+  @layer ui.l1.l2 {
+    &:not(.btn-link, .btn-ghost) {
+      @apply bg-base-content/10;
+      box-shadow: none;
+    }
+
+    @apply pointer-events-none;
+    --btn-border: #0000;
+    --btn-noise: none;
+    --btn-fg: color-mix(in oklch, var(--ui-pc) 20%, #0000);
+  }
+}
+
+.btn-active {
+  @layer ui.l1.l2 {
+    --btn-bg: color-mix(in oklab, var(--btn-color, var(--ui-p2)), #000 7%);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+    isolation: isolate;
+  }
+}
+
+.btn-primary {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-n0);
+    --btn-fg: var(--ui-pc);
+  }
+}
+
+.btn-secondary {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-p1);
+    --btn-fg: var(--ui-pc);
+  }
+}
+
+.btn-accent {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-p3);
+    --btn-fg: var(--ui-pc);
+  }
+}
+
+.btn-neutral {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-n0);
+    --btn-fg: var(--ui-nc);
+  }
+}
+
+.btn-info {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-sorc);
+    --btn-fg: var(--ui-sorc-content);
+  }
+}
+
+.btn-success {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-res);
+    --btn-fg: var(--ui-res-content);
+  }
+}
+
+.btn-warning {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-pre);
+    --btn-fg: var(--ui-pre-content);
+  }
+}
+
+.btn-error {
+  @layer ui.l1.l2.l3 {
+    --btn-color: var(--ui-dom);
+    --btn-fg: var(--ui-dom-content);
+  }
+}
+
+.btn-ghost {
+  @layer ui.l1 {
+    &:not(
+      .btn-active,
+      :hover,
+      :active:focus,
+      :focus-visible,
+      input:checked:not(.filter .btn)
+    ) {
+      --btn-shadow: "";
+      --btn-bg: #0000;
+      --btn-border: #0000;
+      --btn-noise: none;
+      &:not(:disabled, [disabled], .btn-disabled) {
+        @apply outline-current;
+        --btn-fg: var(--btn-color, currentColor);
+      }
+    }
+
+    @media (hover: none) {
+      &:not(
+          .btn-active,
+          :active,
+          :focus-visible,
+          input:checked:not(.filter .btn)
+        ):hover {
+        @apply outline-current;
+        --btn-shadow: "";
+        --btn-bg: #0000;
+        --btn-fg: var(--btn-color, currentColor);
+        --btn-border: #0000;
+        --btn-noise: none;
+      }
+    }
+  }
+}
+
+.btn-link {
+  @layer ui.l1 {
+    @apply underline outline-current;
+    --btn-border: #0000;
+    --btn-bg: #0000;
+    --btn-noise: none;
+    --btn-shadow: "";
+
+    &:not(.btn-disabled, .btn:disabled, .btn[disabled]) {
+      --btn-fg: var(--btn-color, var(--ui-n0));
+    }
+
+    &:is(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-border: #0000;
+      --btn-bg: #0000;
+    }
+  }
+}
+
+.btn-outline,
+.btn-dash {
+  @layer ui.l1 {
+    &:not(
+      .btn-active,
+      :hover,
+      :active:focus,
+      :focus-visible,
+      input:checked:not(.filter .btn),
+      :disabled,
+      [disabled],
+      .btn-disabled
+    ) {
+      --btn-shadow: "";
+      --btn-bg: #0000;
+      --btn-fg: var(--btn-color);
+      --btn-border: var(--btn-color);
+      --btn-noise: none;
+    }
+
+    @media (hover: none) {
+      &:not(
+          .btn-active,
+          :active,
+          :focus-visible,
+          input:checked:not(.filter .btn)
+        ):hover {
+        --btn-shadow: "";
+        --btn-bg: #0000;
+        --btn-fg: var(--btn-color);
+        --btn-border: var(--btn-color);
+        --btn-noise: none;
+      }
+    }
+  }
+}
+
+.btn-dash {
+  border-style: dashed;
+}
+
+.btn-soft {
+  @layer ui.l1 {
+    &:not(
+      .btn-active,
+      :hover,
+      :active:focus,
+      :focus-visible,
+      input:checked:not(.filter .btn),
+      :disabled,
+      [disabled],
+      .btn-disabled
+    ) {
+      --btn-shadow: "";
+      --btn-fg: var(--btn-color, var(--ui-pc));
+      --btn-bg: color-mix(
+        in oklab,
+        var(--btn-color, var(--ui-pc)) 8%,
+        var(--ui-p0)
+      );
+      --btn-border: color-mix(
+        in oklab,
+        var(--btn-color, var(--ui-pc)) 10%,
+        var(--ui-p0)
+      );
+      --btn-noise: none;
+    }
+
+    @media (hover: none) {
+      &:not(
+          .btn-active,
+          :active,
+          :focus-visible,
+          input:checked:not(.filter .btn)
+        ):hover {
+        --btn-shadow: "";
+        --btn-fg: var(--btn-color, var(--ui-pc));
+        --btn-bg: color-mix(
+          in oklab,
+          var(--btn-color, var(--ui-pc)) 8%,
+          var(--ui-p0)
+        );
+        --btn-border: color-mix(
+          in oklab,
+          var(--btn-color, var(--ui-pc)) 10%,
+          var(--ui-p0)
+        );
+        --btn-noise: none;
+      }
+    }
+  }
+}
+
+.btn-xs {
+  @layer ui.l1.l2 {
+    --fontsize: 0.6875rem;
+    --btn-p: 0.5rem;
+    --size: calc(var(--size-field, 0.25rem) * 6);
+  }
+}
+
+.btn-sm {
+  @layer ui.l1.l2 {
+    --fontsize: 0.75rem;
+    --btn-p: 0.75rem;
+    --size: calc(var(--size-field, 0.25rem) * 8);
+  }
+}
+
+.btn-md {
+  @layer ui.l1.l2 {
+    --fontsize: 0.875rem;
+    --btn-p: 1rem;
+    --size: calc(var(--size-field, 0.25rem) * 10);
+  }
+}
+
+.btn-lg {
+  @layer ui.l1.l2 {
+    --fontsize: 1.125rem;
+    --btn-p: 1.25rem;
+    --size: calc(var(--size-field, 0.25rem) * 12);
+  }
+}
+
+.btn-xl {
+  @layer ui.l1.l2 {
+    --fontsize: 1.375rem;
+    --btn-p: 1.5rem;
+    --size: calc(var(--size-field, 0.25rem) * 14);
+  }
+}
+
+.btn-square {
+  @layer ui.l1.l2 {
+    @apply px-0;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.btn-circle {
+  @layer ui.l1.l2 {
+    @apply rounded-full px-0;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.btn-wide {
+  @layer ui.l1.l2 {
+    @apply w-full max-w-64;
+  }
+}
+
+.btn-block {
+  @layer ui.l1.l2 {
+    @apply w-full;
+  }
+}

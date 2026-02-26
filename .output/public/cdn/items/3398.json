@@ -1,0 +1,11 @@
+{
+  "id": 3398,
+  "name": "Small Party Favor",
+  "description": "Obtained from a Cat Shaco Box. Click to Consume: Gain gold.\n",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  }
+}

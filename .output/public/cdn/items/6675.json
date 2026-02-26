@@ -1,0 +1,54 @@
+{
+  "name": "Navori Flickerblade",
+  "id": 6675,
+  "rank": "Legendary",
+  "buildsFrom": [
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    },
+    {
+      "id": 3086,
+      "name": "Zeal",
+      "gold": 1200
+    },
+    {
+      "id": 1042,
+      "name": "Dagger",
+      "gold": 250
+    }
+  ],
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "nicknames": [
+    "crit shojin"
+  ],
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Transcendence",
+      "effects": "Basic attacks on-attack reduce the <b>remaining</b> cooldowns of your basic abilities by 15%."
+    }
+  ],
+  "stats": {
+    "attackSpeed": 40,
+    "criticalStrikeChance": 25,
+    "percentMovespeed": 4
+  },
+  "description": "40% Attack Speed\n25% Critical Strike Chance\n4% Move Speed\n\nTranscendence\nAttacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
+  "gold": {
+    "base": 950,
+    "purchasable": true,
+    "total": 2650,
+    "sell": 1855
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
+}

@@ -14,7 +14,7 @@ const {
 
 <template>
   <Icon
-    :name="`shard:${id}`"
+    :name="`i-rune-${id}`"
     :class="
       cn(
         'drop-shadow-black/30 ds-xs',

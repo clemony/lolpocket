@@ -44,17 +44,17 @@ export const libraryNav = [
   {
     label: "Champions",
     to: "/champions",
-    icon: "i-lol-champ",
+    icon: "i-lp-champ",
   },
   {
     label: "Items",
     to: "/items",
-    icon: "i-ability-melee",
+    icon: "i-stat-melee",
   },
   {
     label: "Runes",
     to: "/runes",
-    icon: "i-lol-runes",
+    icon: "i-lp-runes",
 
     ui: {
       icon: "scale-120",

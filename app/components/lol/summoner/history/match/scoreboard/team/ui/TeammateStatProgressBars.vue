@@ -24,7 +24,7 @@ const stats = computed<Record<string, BarStat>>(() => {
       tip: "Total Damage Dealt to Champions",
       value: player.stats?.totalDamage ?? 0,
       icon: {
-        name: "i-lol-scoreboard-sword",
+        name: "i-lp-scoreboard-sword",
         class: "-translate-y-px scale-108 opacity-100",
       },
     },

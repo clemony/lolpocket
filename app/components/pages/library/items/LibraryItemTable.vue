@@ -35,7 +35,7 @@ const columns: TableColumn<ItemLite>[] = [
         h(UUser, {
           avatar: {
             src: `/img/items/${row.original.id}.webp`,
-            icon: "i-lol-regen",
+            icon: "i-lp-regen",
             ui: {
               icon: "size-4.5",
             },

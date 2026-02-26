@@ -1,0 +1,71 @@
+{
+  "key": "Q",
+  "name": "End of the Line",
+  "width": "80 / 500 / 200",
+  "affects": "Enemies",
+  "blurb": "Active:  Graves fires an explosive shell that deals physical damage to enemies it passes through.",
+  "castTime": "0.25",
+  "cooldown": "13 / 11.25 / 9.5 / 7.75 / 6",
+  "cost": "80",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves fires a round in the target direction that deals physical damage to enemies it passes through and leaves behind a powder trail.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "50 / 75 / 100 / 125 / 150"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "65"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "After 2 seconds, or 0.231 seconds upon colliding with terrain, the round detonates to deal physical damage to enemies within a wide perpendicular area and in a reverse wave along the powder trail.",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "80 / 125 / 170 / 215 / 260"
+            },
+            {
+              "tooltip": "Scaling per rank:\n55 / 70 / 85 / 100 / 115% bonus AD",
+              "unit": "% bonus AD",
+              "values": "55 - 115"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Physical Damage",
+          "modifiers": [
+            {
+              "values": "130 / 200 / 270 / 340 / 410"
+            },
+            {
+              "tooltip": "Scaling per rank:\n120 / 135 / 150 / 165 / 180% bonus AD",
+              "unit": "% bonus AD",
+              "values": "120 - 180"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enemies can only be hit once per pass."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/q",
+  "notes": "Spell shields can only block one instance of the ability's damage.\n Wind Wall will destroy the projectile entirely and mitigate all effects, including the trail on the ground.\n Unbreakable is considered to be terrain for the purposes of the projectile, triggering its second effect.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "projectile": "SPECIAL",
+  "resource": "Mana",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "Special",
+  "targeting": "Direction"
+}

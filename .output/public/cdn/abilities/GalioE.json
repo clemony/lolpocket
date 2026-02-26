@@ -1,0 +1,51 @@
+{
+  "key": "E",
+  "name": "Justice Punch",
+  "width": "400",
+  "affects": "Enemies",
+  "castTime": "0.4",
+  "cooldown": "11 / 10 / 9 / 8 / 7",
+  "cost": "50",
+  "damageType": "Magic damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Galio steps back in the opposite direction over the cast time, then dashes to the target location until he hits an enemy champion or terrain.</p>"
+    },
+    {
+      "description": "Galio deals magic damage to enemies he passes through, reduced to 80% against non-champions, and knocks them up for 0.75 seconds as well as reveals them for the same duration.",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "90 / 130 / 170 / 210 / 250"
+            },
+            {
+              "unit": "% AP",
+              "values": "90"
+            }
+          ]
+        },
+        {
+          "attribute": "Non-Champion Damage",
+          "modifiers": [
+            {
+              "values": "72 / 104 / 136 / 168 / 200"
+            },
+            {
+              "unit": "% AP",
+              "values": "72"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/e",
+  "notes": "Galio will initiate the  dash even if his step backwards is  knocked down.\nGalio's second dash will always dash the distance of the target direction. Having the step backwards cut short has no effect on the total distance gained.\nThe following table refers for interactions during Justice Punch's cast time and  dash:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Recall\n\n\nDisabled\n\n Flash  Teleport  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+  "resource": "Mana",
+  "speed": "2300",
+  "spellEffects": "spellaoe",
+  "targeting": "Location",
+  "targetRange": "250 / 650"
+}

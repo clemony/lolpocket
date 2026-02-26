@@ -1,0 +1,50 @@
+{
+  "key": "R",
+  "name": "Magnet Storm",
+  "affects": "Enemies",
+  "blurb": "Active:  Rell erupts in magnetic fury,  pulling nearby enemies inward. She then emits a  Kinematic field that continually deals magic damage over a short time.",
+  "castTime": "0.25",
+  "cooldown": "120 / 100 / 80",
+  "cost": "100",
+  "damageType": "Magic damage",
+  "effectRadius": "450 /  375",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward and creating a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage Per Tick",
+          "modifiers": [
+            {
+              "values": "15 / 25 / 35"
+            },
+            {
+              "unit": "% AP",
+              "values": "13.75"
+            }
+          ]
+        },
+        {
+          "attribute": "Total Magic Damage",
+          "modifiers": [
+            {
+              "values": "120 / 200 / 280"
+            },
+            {
+              "unit": "% AP",
+              "values": "110"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/r",
+  "innerRadius": "225",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nMagnet Storm will not drag units that are:\n Dashing.\nBeing displaced (e.g. by  airborne effects)\n Attached.\n Displacement immune.\n Immune to crowd control.\n Spell shield will block the initial  pull but not the dragging effect.\nMagnet Storm cannot be cast again while it is active.",
+  "resource": "Mana",
+  "speed": "300",
+  "spellEffects": "aoedot",
+  "spellshieldable": "special",
+  "targeting": "Auto"
+}

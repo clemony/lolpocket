@@ -27,7 +27,7 @@
         :value="map">
         <span class="relative grid size-5 place-items-center px-3">
           <component
-            :is="`i-lol-${map}`"
+            :is="`i-lp-${map}`"
             class="dst absolute shrink-0"
             :class="{
               'size-4!': map === 12 || map === 11,

@@ -1,0 +1,17 @@
+diff --git a/dist/module.mjs b/dist/module.mjs
+index 90a3a7aa3..3813a0ee3 100644
+--- a/dist/module.mjs
++++ b/dist/module.mjs
+@@ -48,9 +48,9 @@ const module$1 = defineNuxtModule({
+         nuxt.options[key] = defu(nuxt.options[key], options2);
+       }
+     }
+-    await registerModule("@nuxt/icon", "icon", {
+-      cssLayer: "base"
+-    });
++    // Temporary patch for Cloudflare Workers compatibility debugging:
++    // skip Nuxt UI's automatic @nuxt/icon registration.
++    // @nuxt/icon is still available if registered manually by the app.
+     if (options.fonts) {
+       await registerModule("@nuxt/fonts", "fonts", {
+         defaults: {

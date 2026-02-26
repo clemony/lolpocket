@@ -1,0 +1,10 @@
+{
+  "id": 1504,
+  "name": "Vanguard",
+  "gold": {
+    "base": 0,
+    "purchasable": false,
+    "total": 0,
+    "sell": 0
+  }
+}

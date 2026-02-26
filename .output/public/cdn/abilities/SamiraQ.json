@@ -1,0 +1,49 @@
+{
+  "key": "Q",
+  "name": "Flair",
+  "width": "120 / 130",
+  "affects": "Self, Enemies",
+  "angle": "100°",
+  "blurb": "Active:  Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
+  "castTime": "0.25",
+  "cooldown": "6 / 5 / 4 / 3 / 2",
+  "cost": "30",
+  "damageType": "Physical damage",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira fires a shot in the target direction that deals physical damage to the first enemy hit.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "0 / 5 / 10 / 15 / 20"
+            },
+            {
+              "unit": "% AD",
+              "values": "110"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "If a targetable enemy is in front of Samira at the time of cast, she will instead slash with her blade in a cone, dealing the same damage to enemies hit."
+    },
+    {
+      "description": "If Flair is cast during Wild Rush, Samira deploys explosives in her wake that detonate upon the end of the dash, dealing the same damage to enemies hit."
+    },
+    {
+      "description": "Flair can critically strike for (150% + 15%) damage and will apply life steal at 80% effectiveness."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/q",
+  "notes": "Applies  spell damage on the shot and  area damage on the slash and explosives.\nFlair's shot against an enemy champion will aggro nearby enemy minions.\nFlair can be cast during  Wild Rush even if  Blade Whirl or  Inferno Trigger are active.\nThe slash and explosives roll their  critical strike against each target individually.\nThe shot and the slash do not count as different abilities for stacking  Style.\nSamira's next attack after using Flair will occasionally come out faster.(note)\nSamira can use  Wild Rush during Flair's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nFlair will fire or slash from wherever Samira is at the end of the cast time.\nSamira will always slash in her facing direction, and she will turn to face the target direction only once at the start of the cast time.\nOnly the shot will be destroyed by  projectile-intercepting effects.\nThe explosive placement is illustrated in  Wild Rush regardless of whether Flair is available.\nThe VFX always covers the the full dash's distance even if  Wild Rush is interrupted mid-dash.",
+  "projectile": "SPECIAL",
+  "resource": "Mana",
+  "speed": "2600",
+  "spellEffects": "special",
+  "spellshieldable": "true",
+  "targeting": "Direction",
+  "targetRange": "340"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Cappa Juice",
+  "id": 2141,
+  "rank": "Consumable",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "stats": {},
+  "description": "Helps you get on a head.Active - Consume: This juice does nothing.\n",
+  "gold": {
+    "base": 300,
+    "purchasable": false,
+    "total": 300,
+    "sell": 300
+  },
+  "maps": [
+    11,
+    12
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": 221038,
+  "name": "B. F. Sword",
+  "description": "40 Attack Damage\n\n",
+  "gold": {
+    "base": 1300,
+    "purchasable": true,
+    "total": 1300,
+    "sell": 910
+  }
+}

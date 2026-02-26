@@ -1,0 +1,14 @@
+{
+  "id": 223075,
+  "name": "Thornmail",
+  "description": "300 Health\n60 Armor\n\nThorns:\nWhen struck by an Attack, deal damage to the attacker and apply 40% Grievous Wounds if they are a champion.\n\nGrievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+  "gold": {
+    "base": 2500,
+    "purchasable": true,
+    "total": 2500,
+    "sell": 1250
+  },
+  "maps": [
+    30
+  ]
+}

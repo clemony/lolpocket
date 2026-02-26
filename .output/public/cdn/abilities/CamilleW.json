@@ -1,0 +1,89 @@
+{
+  "key": "W",
+  "name": "Tactical Sweep",
+  "affects": "Self, Enemies",
+  "angle": "70°",
+  "blurb": "Active:  Camille briefly becomes  ghosted and sweeps her leg after a delay, dealing physical damage to enemies hit in a cone. Enemies in the outer half are slowed and take increased damage, while also  healing her.",
+  "castTime": "none",
+  "cooldown": "15 / 14 / 13 / 12 / 11",
+  "cost": "50 / 55 / 60 / 65 / 70",
+  "damageType": "Physical damage",
+  "effectRadius": "325 / 650",
+  "effects": [
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.</p>",
+      "leveling": [
+        {
+          "attribute": "Physical Damage",
+          "modifiers": [
+            {
+              "values": "60 / 85 / 110 / 135 / 160"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enemies hit by the outer half of the cone take additional physical damage, capped at 300 against monsters, and are slowed by 80% decaying over 2 seconds. Camille is healed for 100% of this additional damage post-mitigation against enemy champions in the outer half.",
+      "leveling": [
+        {
+          "attribute": "Outer Cone Additional Damage",
+          "modifiers": [
+            {
+              "unit": "%  of target's maximum health",
+              "values": "6 / 6.5 / 7 / 7.5 / 8"
+            },
+            {
+              "unit": "% per 100 bonus AD",
+              "values": "2.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Non-epic monsters take 50% damage from Tactical Sweep.",
+      "leveling": [
+        {
+          "attribute": "Non-Epic Monster Damage",
+          "modifiers": [
+            {
+              "values": "30 / 42.5 / 55 / 67.5 / 80"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "30"
+            }
+          ]
+        },
+        {
+          "attribute": "Bonus Non-Epic Monster Damage",
+          "modifiers": [
+            {
+              "unit": "%  of target's maximum health",
+              "values": "3 / 3.25 / 3.5 / 3.75 / 4"
+            },
+            {
+              "unit": "% per 100 bonus AD",
+              "values": "1.25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Other abilities can be cast during the animation without cancelling it."
+    }
+  ],
+  "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/w",
+  "notes": "Camille can move during the delay, but the hitbox and Camille's visuals are fixed to the initial target direction.\nCamille's facing-direction, for effects such as  Petrifying Gaze, is the direction she is moving, and not the direction the model is facing.\nThe damage modifier against non-epic monsters applies after the cap.\nBecause the increased damage in the outer range of the cone is dealt as an additional instance of damage (as opposed to bonus damage to the original instance), it will trigger effects twice such as being reduced by  Bone Plating an extra time.(note)\nIt still belongs to the same cast instance, therefore it does not trigger additional stacks of  Conqueror or  Electrocute.",
+  "projectile": "FALSE",
+  "resource": "Mana",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "true",
+  "targeting": "Direction"
+}

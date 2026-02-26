@@ -1,5 +1,4 @@
 import tailwindcss from "@tailwindcss/vite"
-import fs from "node:fs"
 import path from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
@@ -9,19 +8,6 @@ const isProduction = process.env.NODE_ENV === "production"
 // Cloudflare build-only memory pressure toggle.
 // Set `NUXT_CF_LEAN_BUILD=1` in Cloudflare to temporarily skip heavier modules while diagnosing Nitro bundle OOMs.
 const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
-
-const iconsRoot = fileURLToPath(
-  new URL("./layers/ui/app/assets/icons", import.meta.url)
-)
-
-const customCollections = fs
-  .readdirSync(iconsRoot, { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => ({
-    dir: path.join(iconsRoot, d.name),
-    normalizeIconName: false,
-    prefix: d.name,
-  }))
 
 export default defineNuxtConfig({
   imports: {
@@ -45,15 +31,16 @@ export default defineNuxtConfig({
           // "@nuxt/icon", // OOM test toggle: comment-in to skip @nuxt/icon on Cloudflare lean builds
         ]
       : [
-          "@nuxt/icon",
-          "@nuxtjs/supabase",
-          "@nuxt/image",
-          "motion-v/nuxt",
-          "@formkit/auto-animate/nuxt",
+          //
         ]),
+    "@nuxtjs/supabase",
+    "@nuxt/image",
+    "motion-v/nuxt",
+    "@formkit/auto-animate/nuxt",
     "@vueuse/nuxt",
     "@nuxt/ui",
-    // "@nuxtjs/seo",
+    "@nuxt/icon",
+    "@nuxtjs/seo",
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
       ? ["@nuxt/devtools", "@nuxt/hints"]
@@ -86,22 +73,55 @@ export default defineNuxtConfig({
     preference: "system",
   },
   icon: {
-    provider: "server",
-    customCollections,
+    provider: "iconify",
+    serverBundle: false, // <- important
+    fallbackToApi: "client-only",
     size: "18px",
-    serverBundle: {
-      collections: ["lucide"],
+    customCollections: [
+      {
+        dir: "./layers/ui/app/assets/icons/lp",
+        prefix: "lp",
+        normalizeIconName: false,
+      },
+      {
+        dir: "./layers/ui/app/assets/icons/rune",
+        prefix: "rune",
+        normalizeIconName: false,
+      },
+      {
+        dir: "./layers/ui/app/assets/icons/ui",
+        prefix: "ui",
+        normalizeIconName: false,
+      },
+      {
+        dir: "./layers/ui/app/assets/icons/i18n",
+        prefix: "i18n",
+        normalizeIconName: false,
+      },
+    ],
+    clientBundle: {
+      includeCustomCollections: true,
     },
   },
   ui: {
     fonts: false,
+    experimental: {
+      componentDetection: true,
+    },
   },
 
   ssr: true,
+
   nitro: {
     // Reduce Cloudflare Nitro bundle build memory usage while debugging OOMs.
     minify: !isCFLeanBuild,
     sourceMap: false,
+    compatibilityDate: "2025-07-18",
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
     externals: {
       external: ["sharp"],
     },
@@ -131,7 +151,7 @@ export default defineNuxtConfig({
     "/": { ssr: false },
     "/account/**": { ssr: false },
     // Auth folder — keep SSR enabled
-    "/auth/**": { ssr: true },
+    "/auth/**": { ssr: false },
     "/backpack": { ssr: false },
     "/backpack/**": { ssr: false },
     "/champions": { ssr: false },
@@ -253,8 +273,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 5,
   },
-
-  /*   i18n: {
+  /*
+  i18n: {
     strategy: "prefix_except_default",
     differentDomains: true,
     defaultLocale: "en",
@@ -289,8 +309,8 @@ export default defineNuxtConfig({
         domain: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
       },
     ],
-  }, */
-
+  },
+ */
   app: {
     head: {
       link: [

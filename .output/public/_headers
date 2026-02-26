@@ -1,0 +1,17 @@
+/_nuxt/builds/meta/*
+  cache-control: public, max-age=31536000, immutable
+/__sitemap__/style.xsl
+  Content-Type: application/xslt+xml
+/_nuxt/builds/*
+  cache-control: public, max-age=1, immutable
+/api/*
+  access-control-allow-origin: *
+  access-control-allow-methods: *
+  access-control-allow-headers: *
+  access-control-max-age: 0
+  Access-Control-Allow-Origin: *
+/_nuxt
+  X-Robots-Tag: noindex
+/_nuxt/*
+  cache-control: public, max-age=31536000, immutable
+  X-Robots-Tag: noindex
