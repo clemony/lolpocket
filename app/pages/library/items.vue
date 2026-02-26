@@ -61,12 +61,12 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
       <LazyItemFilterToolbar v-model:tab-model="tabModel" :nav />
     </template>
     <template #toolbar-left>
-      <ItemFloatingSearch />
+      <LazyItemFloatingSearch />
     </template>
 
     <template #toolbar-center>
       <!-- view -->
-      <ItemViewToggle
+      <LazyItemViewToggle
         collapsed
         size="xl"
         @update:tab-model="(e: TabValue) => (tabModel = e)" />
