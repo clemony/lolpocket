@@ -1,1 +1,0 @@
-const e=["top","jungle","middle","bottom","support"];function normalizeRole(e){switch(e.toLowerCase()){case"top":return"top";case"jungle":return"jungle";case"middle":case"mid":return"middle";case"bottom":case"bot":return"bottom";default:return"support"}}function getRoleStat(e,t){return e[t]||(e[t]={games:0,win:0}),e[t]}export{getRoleStat as g,normalizeRole as n,e as r};

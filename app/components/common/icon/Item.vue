@@ -46,17 +46,17 @@ const pinned = shallowRef<boolean>(false)
     :side
     @pinned="pinned = true"
     @unpinned="pinned = false">
-    <Img
+    <UAvatar
       role="button"
-      :class="
-        cn(
+      :ui="{
+        root: cn(
           'size-full rounded-lg p-0',
           {
             'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
           },
           className
-        )
-      "
+        ),
+      }"
       :src="id ? `/img/items/${id}.webp` : undefined"
       :alt="id ? itemNameById(id) : 'item icon'"
       :loading-type

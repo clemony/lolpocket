@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ChampionTooltip from "#components"
-
 const {
   id,
   side = "top",
@@ -27,20 +25,6 @@ function onLoad() {
   loaded.value = true
   emit("loaded")
 }
-const toast = useToast()
-function showToast() {
-  if (!champId.value) return
-  if (!toast.toasts.value.find((t) => t.id === `champion-${id}`)) {
-    toast.add({
-      id: `champion-${id}`,
-      description: h(ChampionTooltip, { id: champId.value }),
-      duration: 0,
-      ui: {
-        root: "p-0!",
-      },
-    })
-  }
-}
 </script>
 
 <template>
@@ -49,22 +33,18 @@ function showToast() {
     :label="champName"
     :avatar="champId ? `/img/champions/${champId}.webp` : undefined"
     :side>
-    <Img
+    <UAvatar
+      icon="lol:champ"
       role="button"
       :src="champId ? `/img/champions/${champId}.webp` : undefined"
-      :class="
-        cn(
+      :ui="{
+        root: cn(
           'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
           className
-        )
-      "
+        ),
+        icon: 'opacity-60 size-5 ',
+      }"
       :alt="champName ? `${champName} icon` : 'champion icon'"
-      @click.stop="showToast()"
-      @loaded="onLoad">
-      <Icon
-        v-if="!champId"
-        class="absolute size-5 place-self-center opacity-60"
-        name="lol:champ" />
-    </Img>
+      @loaded="onLoad" />
   </Tooltip>
 </template>

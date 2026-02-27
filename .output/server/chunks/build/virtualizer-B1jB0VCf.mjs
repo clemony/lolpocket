@@ -1,1 +1,0 @@
-import{a5 as t}from"./server.mjs";function getSize(t,e){return e?{xs:44,sm:48,md:52,lg:56,xl:60}[t]:{xs:24,sm:28,md:32,lg:36,xl:40}[t]}function getEstimateSize(e,n,r,i){const s=getSize(n,!0),o=getSize(n,!1);return i?()=>s:r?n=>function(e,n){if("object"!=typeof e||null===e)return!1;const r=t(e,n);return null!=r&&""!==r}(e[n],r)?s:o:()=>o}export{getEstimateSize as g};

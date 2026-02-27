@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from "#shared/constants/common/stat-index"
+import { statIndex } from "#shared/constants/common/stat-index";
 
 const { filtered, filters } = is() as any
 </script>
@@ -33,7 +33,7 @@ const { filtered, filters } = is() as any
             <span class="grow">{{ stat.name }}</span>
 
             <div
-              class="badge rounded-field border-accent bg-p0/90 text-xs! tracking-wide">
+              class="badge rounded-lg border-accent bg-p0/90 text-xs! tracking-wide">
               <span class="dst text-pc">{{ stat.abbr?.[0] ?? "" }}</span>
             </div>
           </label>

@@ -1,1 +1,0 @@
-import{r as o}from"../../fetch.mjs";import"../../../../../nitro/nitro.mjs";import"node:buffer";import"node:events";import"node:process";import"cloudflare:workers";import"node:timers";async function fetchAccountByPuuid(t){return o(`accounts:${t}`,`https://americas.api.riotgames.com/riot/account/v1/accounts/by-puuid/${t}`)}export{fetchAccountByPuuid};

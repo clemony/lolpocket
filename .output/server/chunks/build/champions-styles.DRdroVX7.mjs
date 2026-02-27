@@ -1,1 +1,0 @@
-const t=[".champion-icon-ghost-class{aspect-ratio:1;flex-grow:1;height:100%;padding:0;width:100%}"];export{t as default};

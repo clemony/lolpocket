@@ -51,12 +51,7 @@ const data = [
       </div>
 
       <div class="wp-82% grid h-full grow items-center justify-start py-22">
-        <motion.div
-          v-for="(item, i) in data"
-          :key="item.title"
-          :ref="`item${i}`"
-          class=""
-          :variants="itemVariants"
+        <!--
           initial="hidden"
           while-in-view="visible"
           :transition="{
@@ -66,7 +61,13 @@ const data = [
           }"
           :in-view-options="{
             amount: 0.8,
-          }">
+          }" -->
+        <motion.div
+          v-for="(item, i) in data"
+          :key="item.title"
+          :ref="`item${i}`"
+          class=""
+          :variants="itemVariants">
           <div class="mb-5 flex w-full items-center gap-5">
             <icon
               v-if="item.icon"

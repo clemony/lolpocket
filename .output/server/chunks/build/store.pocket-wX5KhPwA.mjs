@@ -1,1 +1,0 @@
-import{S as e,T as r,v as t,U as o}from"./server.mjs";const a=e("pocketStore",()=>{const e=t.ref([]),r=t.ref([]),a=o(!1,1e3),s=t.ref(null),c=t.ref([]);return{archive:t.ref([]),downloadCard:a,pinned:t.ref([]),pocketCardRef:s,pockets:e,tags:r,trash:c,getPocket:r=>e.value.find(e=>e.key===r)}},{persist:{key:"pocketStore",storage:r.localStorage()}});export{a as u};

@@ -94,7 +94,7 @@ export const buttonTheme = defineUiTheme({
       solid: "btn shadow-sm hover:inset-shadow-xs",
       ghost:
         "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      outline: "btn btn-outline hover:inset-shadow-xs",
+      outline: "btn ring ring-p3 hover:inset-shadow-xs",
       highlight: "btn btn-ghost",
       ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",

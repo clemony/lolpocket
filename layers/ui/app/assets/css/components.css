@@ -62,12 +62,12 @@
   }
 
   .border-shadow {
-    @apply rounded-box border border-p3/60 shadow-warm-2 shadow-[#000]/5;
+    @apply rounded-xl border border-p3/60 shadow-warm-2 shadow-[#000]/5;
   }
 
   .border-shadow-sm {
     @apply
-      rounded-box border border-p3/60 shadow-md shadow-[#000]/4 drop-shadow-sm
+      rounded-xl border border-p3/60 shadow-md shadow-[#000]/4 drop-shadow-sm
     ;
   }
 

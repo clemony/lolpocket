@@ -18,7 +18,9 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
     :model-value="set.keystone ?? undefined"
     class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden"
     as="div"
-    @update:model-value="(v) => (set.keystone = v == null ? null : Number(v))">
+    @update:model-value="
+      (v: Event) => (set.keystone = v == null ? null : Number(v))
+    ">
     <TabsList
       v-if="runes"
       mode="in-out"
@@ -27,7 +29,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
       :class="
         cn(
           'relative size-full max-w-114 min-w-114 flex-nowrap overflow-hidden **:select-none',
-          gridCols,
+          gridCols
         )
       ">
       <TabsTrigger
@@ -38,7 +40,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :class="
           cn(
             'group/r tldr-30 relative grid aspect-square size-22 shrink-0 cursor-pointer place-items-center place-self-center rounded-full border-transparent opacity-75 hover:opacity-100 hover:grayscale-0',
-            { 'opacity-100 grayscale-0': set.keystone === rune.id },
+            { 'opacity-100 grayscale-0': set.keystone === rune.id }
           )
         ">
         <Img
@@ -54,14 +56,10 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
           :class="{ 'opacity-0': set.keystone === rune.id }" />
       </TabsTrigger>
 
-      <TabIndicator
-        class="mt-1 *:to-p0/40"
-        round />
+      <TabIndicator class="mt-1 *:to-p0/40" round />
     </TabsList>
 
-    <div
-      v-else
-      class="grid size-full grid-cols-3 py-4">
+    <div v-else class="grid size-full grid-cols-3 py-4">
       <Placeholder
         v-for="i in 3"
         :key="i"

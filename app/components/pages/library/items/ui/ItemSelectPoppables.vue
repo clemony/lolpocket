@@ -7,6 +7,9 @@ import type {
   CheckboxGroupProps,
 } from "@nuxt/ui"
 
+defineOptions({
+  inheritAttrs: false,
+})
 const props = withDefaults(
   defineProps<{
     collapsed?: boolean
@@ -18,6 +21,7 @@ const props = withDefaults(
   {
     side: "left",
     align: "center",
+    size: "xl",
     arrow: true,
   }
 )

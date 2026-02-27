@@ -7,15 +7,6 @@ const { filters } = storeToRefs(is())
 </script>
 
 <template>
-  <!-- select menus -->
-  <ItemSelectPoppables collapsed size="lg" />
-
-  <!-- map -->
-  <MapSelector
-    size="lg"
-    :ui="{ base: 'rounded-full drop-shadow-black/4 drop-shadow-md ' }"
-    collapsed />
-
   <!-- shop -->
   <Tooltip
     class="grid place-items-center"
@@ -24,30 +15,41 @@ const { filters } = storeToRefs(is())
     side="top">
     <Toggle
       v-model:model-value="filters.purchasable"
-      active-color="p1"
-      size="lg"
+      active-color="neutral"
+      size="xl"
       active-variant="solid"
       :ui="{
         base: cn(
           filters.purchasable
-            ? 'inset-shadow-xs  rounded-full drop-shadow-md drop-shadow-black/4'
+            ? 'inset-shadow-xs  rounded-full drop-shadow-md drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 '
             : ''
         ),
-        leadingIcon: 'size-4.5 -translate-y-px **:stroke-[1.4]',
+        leadingIcon:
+          'size-4.5 group-on/btn:text-nc -translate-y-px **:stroke-[1.4]',
       }"
       square
       leading-icon="i-streamline-shopping-store-signage-3-street-sandwich-shops-shop-stores-board-sign-store"
       :active="filters.purchasable"
       variant="ghost" />
   </Tooltip>
+  <!-- select menus -->
+  <ItemSelectPoppables collapsed size="xl" />
+
+  <!-- map -->
+  <MapSelector
+    size="xl"
+    :ui="{ base: 'rounded-full drop-shadow-black/4 drop-shadow-md ' }"
+    collapsed />
 
   <!-- reset -->
   <Tooltip label="Reset Filter" class="h-full">
     <UButton
-      size="lg"
+      size="xl"
       color="neutral"
       icon="i-reset"
-      :ui="{ base: 'rounded-full  drop-shadow-md ' }"
+      :ui="{
+        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18  drop-shadow-md ',
+      }"
       square
       @click="is().clearFilters()" />
   </Tooltip>

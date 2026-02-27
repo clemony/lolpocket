@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells"
+import { spells } from "#shared/constants/misc/spells";
 
 definePageMeta({
   title: "Spells",
@@ -38,7 +38,7 @@ const selectedSpell = computed(
     <div class="flex w-full gap-[8%] px-3 py-24">
       <div class="flex w-114 flex-col gap-14">
         <div
-          class="shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-box border-p3/80 px-9 py-8">
+          class="shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-xl border-p3/80 px-9 py-8">
           <div
             v-for="spell in spells"
             :key="spell.name"

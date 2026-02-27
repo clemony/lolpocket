@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VueZoomable from "vue-zoomable"
-import "vue-zoomable/dist/style.css"
+import VueZoomable from "vue-zoomable";
+import "vue-zoomable/dist/style.css";
 
 const { card } = defineProps<{
   card: any
@@ -90,7 +90,7 @@ console.log("💠 - card.splash:", card.splash)
       :wheel-zoom-step="0.01">
       <div
         ref="pocketCardRef"
-        class="shadow-smooth relative aspect-square size-300 rounded-box border border-p3/70 object-contain inset-shadow-sm"
+        class="shadow-smooth relative aspect-square size-300 rounded-xl border border-p3/70 object-contain inset-shadow-sm"
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
         }">

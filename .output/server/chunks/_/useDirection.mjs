@@ -1,1 +1,0 @@
-import{a2 as r}from"../build/server.mjs";import{p as i,A as t}from"../nitro/nitro.mjs";function useDirection(o){const e=r({dir:i("ltr")});return t(()=>o?.value||e.dir?.value||"ltr")}export{useDirection as u};

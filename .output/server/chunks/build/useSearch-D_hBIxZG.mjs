@@ -1,1 +1,0 @@
-import{F as e}from"../_/fuse.mjs";import{v as r}from"./server.mjs";function useSearch(s,a,t){const u=r.ref(null);r.watch(()=>r.unref(s),r=>{u.value=new e(r,{keys:t?.keys,...t?.options,threshold:.3})},{deep:!0,immediate:!0});return r.computed(()=>(u.value?.search(a.value)??[]).map(e=>e.item))}export{useSearch as u};

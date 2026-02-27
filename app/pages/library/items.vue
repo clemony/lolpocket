@@ -60,23 +60,31 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
     <template #toolbar>
       <LazyItemFilterToolbar :nav />
     </template>
-    <template #toolbar-left>
-      <LazyItemFloatingSearch />
+    <template #toolbar-left> </template>
+
+    <template #toolbar-center> </template>
+
+    <template #links>
+      <div class="relative items-center justify-end">
+        <div class="absolute right-0 flex w-90 max-w-90 shrink-0 translate-y-2">
+          <LazyItemSearchInput
+            variant="outline"
+            color="default"
+            :ui="{
+              root: 'w-full justify-self-end ',
+              trailing: 'opacity-60 *:-mx-[0.25px]',
+              base: 'w-full',
+            }" />
+        </div>
+      </div>
     </template>
 
-    <template #toolbar-center>
-      <!-- view -->
-      <LazyItemViewToggle
-        collapsed
-        size="xl"
-        @update:tab-model="(e: TabValue) => (tabModel = e)" />
-    </template>
     <template #quote>
       {{ quote }}
     </template>
 
     <div
-      class="sticky top-15 z-2 mb-0 -ml-[5px] grid h-fit w-[calc(100%+10px)] bg-p0 pt-4 pb-5">
+      class="sticky top-15 z-2 -mt-6 mb-0 -ml-[5px] flex h-18 w-[calc(100%+10px)] items-center justify-between bg-p0 pr-2">
       <UTabs
         v-model:model-value="is().filters.rank"
         :items="ranks"
@@ -84,11 +92,18 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
         variant="ghost"
         color="neutral"
         :ui="{
-          root: 'w-max ',
-          indicator: 'duration-150 ',
-          trigger: 'w-max px-6',
+          root: 'w-fit translate-y-px',
+          indicator: 'duration-150  ring-0 ',
+          trigger: 'w-min px-2',
         }" />
+      <Grow />
+      <!-- view -->
+      <LazyItemViewToggle
+        collapsed
+        size="md"
+        @update:tab-model="(e: TabValue) => (tabModel = e)" />
     </div>
+
     <div v-auto-animate :class="cn('size-full grow')">
       <component :is="component" v-if="is().filtered.length" />
       <div v-else v-auto-animate class="grid w-full place-items-center">

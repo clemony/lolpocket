@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useChampionWinrateTimeline } from "~/domain/summoner/champions/useChampionWinrateTimeline"
+import { useChampionWinrateTimeline } from "~/domain/summoner/champions/useChampionWinrateTimeline";
 
 const {
   championName,
@@ -105,7 +105,7 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats relative h-54 w-full rounded-box border border-p3 bg-p0 px-5 shadow-warm-soft">
+    class="stats relative h-54 w-full rounded-xl border border-p3 bg-p0 px-5 shadow-warm-soft">
     <div class="pointer-events-none absolute top-6 left-6 z-0 text-pc">
       <div class="stat-desc mb-1 text-xs font-medium">
         {{ range }}

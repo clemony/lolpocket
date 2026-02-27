@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 @import "./color/index.css";
 @import "./theme/index.css";
-@import "./components.css";
+/* @import "./components/index.css"; */
 @import "./custom-variants.css";
 @import "./utilities.css";
 @import "./utils.css";

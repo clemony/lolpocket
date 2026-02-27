@@ -3,18 +3,18 @@ import { motion } from "motion-v"
 import { heroDisplays } from "~/domain/riot/media/video"
 
 const { progress: p, visible } = defineProps<{
-  progress: any
-  visible: boolean
+  progress?: any
+  visible?: boolean
 }>()
 
 const video = heroDisplays[0] ?? { url: "", class: "" }
 const prog = ref(0)
 
-useMotionValueEvent(p, "change", (latest) => {
+/* useMotionValueEvent(p, "change", (latest) => {
   let a = Number(latest) * 80
   a = Math.round(a * 100) / 100
   prog.value = a
-})
+}) */
 
 const welcome = useTemplateRef<HTMLElement>("welcome")
 
@@ -23,26 +23,28 @@ const { x, y } = useMouse()
 </script>
 
 <template>
-  <div class="h-screen w-screen">
+  <UPageSection class="h-screen w-screen">
     <motion.div
       :style="{ transform: `translate(0, -${prog}%)` }"
       class="top-0 z-0 grid h-screen w-screen items-start justify-start overflow-hidden">
-      <div class="relative h-screen w-screen">
-        <video
-          :style="{
-            display: 'block',
-            height: '100vh',
-          }"
-          :class="
-            cn('absolute block h-screen opacity-50 grayscale', video.class)
-          "
-          loop
-          playsinline
-          disablepictureinpicture
-          autoplay
-          muted>
-          <source :src="video.url" type="video/mp4" />
-        </video>
+      <div class="relative h-screen">
+        <ClientOnly>
+          <video
+            :style="{
+              display: 'block',
+              height: '100vh',
+            }"
+            :class="
+              cn('absolute block h-screen opacity-50 grayscale', video.class)
+            "
+            loop
+            playsinline
+            disablepictureinpicture
+            autoplay
+            muted>
+            <source :src="video.url" type="video/mp4" />
+          </video>
+        </ClientOnly>
       </div>
     </motion.div>
     <UPageHero class="relative" :class="{ sticky: visible }">
@@ -79,5 +81,5 @@ const { x, y } = useMouse()
           @restart-timer="start()" /> -->
       </div>
     </UPageHero>
-  </div>
+  </UPageSection>
 </template>

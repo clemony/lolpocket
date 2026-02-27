@@ -3,24 +3,24 @@ import type { MotionValue } from "motion-v"
 import { Motion, motion } from "motion-v"
 
 const { scrollProg, scrollRef } = defineProps<{
-  scrollRef: HTMLElement
-  scrollProg: MotionValue<number>
+  scrollRef?: HTMLElement
+  scrollProg?: MotionValue<number>
 }>()
 
 const progressRef = scrollProg
 const { greaterOrEqual, lessThan } = useBreakpoint("x1024")
-const progress = [
+/* const progress = [
   useTransform(progressRef, [0.1, 0.3], ["0%", "110%"]),
   useTransform(progressRef, [0.3, 0.5], ["0%", "110%"]),
   useTransform(progressRef, [0.5, 0.7], ["0%", "110%"]),
 ] as const
 
-const isShown = [
-  ref(false),
-  ref(false),
-  ref(false),
-  ref(false),
-] as [Ref<boolean>, Ref<boolean>, Ref<boolean>, Ref<boolean>]
+const isShown = [ref(false), ref(false), ref(false), ref(false)] as [
+  Ref<boolean>,
+  Ref<boolean>,
+  Ref<boolean>,
+  Ref<boolean>,
+]
 
 useMotionValueEvent(progress[0], "change", (latest) => {
   isShown[0].value = latest !== "0%"
@@ -37,7 +37,7 @@ useMotionValueEvent(progress[2], "change", (latest) => {
 useMotionValueEvent(progress[2], "change", (latest) => {
   isShown[3].value = latest === "110%"
 })
-
+ */
 const steps = [
   {
     title: "Create a Pocket",
@@ -79,10 +79,14 @@ const steps = [
         :class="cn('', { '-left-20! grid-cols-1! justify-start!': lessThan })">
         <div
           class="z-2 timeline-middle scale-110 rounded-full drop-shadow-sm"
-          :class="{ 'bg-p2': isShown[i]?.value }">
+          :class="{
+            /*  'bg-p2': isShown[i]?.value  */
+          }">
           <Motion
             as-child
-            :animate="{ scale: isShown[i]?.value ? 0 : 1.1 }"
+            :animate="{
+              /* scale: isShown[i]?.value ? 0 : 1.1  */
+            }"
             :transition="{
               type: 'spring',
               bounce: 0.5,
@@ -90,14 +94,13 @@ const steps = [
             <icon class="size-5 text-pc/80" name="check-fill" />
           </Motion>
         </div>
-
-        <motion.div
+        <!--
           :initial="{
             opacity: 0,
             transform:
-              isEven(i) && greaterOrEqual ? 'translateX(-30%)' : (
-                'translateX(30%)'
-              ),
+              isEven(i) && greaterOrEqual
+                ? 'translateX(-30%)'
+                : 'translateX(30%)',
           }"
           :while-in-view="{
             opacity: [0.4, 1],
@@ -112,18 +115,17 @@ const steps = [
             type: 'spring',
             visualDuration: 0.5,
             bounce: 0.2,
-          }"
+          }" -->
+        <motion.div
           :class="
             cn(
               'relative mb-10 grid w-full max-w-160 justify-start pb-44 will-change-[transform,opacity] group-last:ml-16',
-              isEven(i) && greaterOrEqual ?
-                'timeline-start md:text-end'
+              isEven(i) && greaterOrEqual
+                ? 'timeline-start md:text-end'
                 : 'timeline-end'
             )
           ">
-          <p class="dst py-2 font-mono text-lg italic">
-            Step {{ i }}
-          </p>
+          <p class="dst py-2 font-mono text-lg italic">Step {{ i }}</p>
 
           <h2 class="dst pt-1">
             {{ step.title }}
@@ -142,11 +144,11 @@ const steps = [
         <motion.hr
           v-if="scrollProg"
           class="bg/p2! relative mt-2! grid w-0.75! items-start overflow-hidden rounded-full! group-last:hidden">
+          <!--    v-if="isShown[i]?.value" -->
           <motion.hr
-            v-if="isShown[i]?.value"
             class="absolute -top-1.5 -left-16 size-full origin-top overflow-hidden! rounded-full! bg-neutral/70! group-last:hidden starting:scale-y-0"
             :style="{
-              scaleY: progress[i] || 0,
+              /*    scaleY: progress[i] || 0, */
             }" />
         </motion.hr>
       </li>

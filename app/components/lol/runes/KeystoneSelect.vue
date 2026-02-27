@@ -28,7 +28,7 @@ watch(
     class="relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm"
     title="Keystone">
     <div
-      class="absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26">
+      class="absolute top-0 left-0 size-full overflow-hidden rounded-xl opacity-26">
       <div
         class="gradient absolute top-0 left-0 size-full mask-bottom-right"
         :data-path="pathName" />

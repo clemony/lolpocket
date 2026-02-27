@@ -8,20 +8,19 @@ const tabValue = computed(() => tab.value === 0)
 </script>
 
 <template>
-  <!--   <UTabs
+  <LazyUTabs
     v-model:model-value="tab"
-    orientation="vertical"
     :items="Object.values(tabData)"
     :ui="{
       root: 'w-fit!  inline align-middle grow-0 ',
-      list: 'w-fit flex-col-reverse p-0 gap-2',
+      list: 'w-fit  p-0 gap-2',
       trigger: 'size-10 self-center px-3',
-      indicator: 'size-10! rounded-full  ring-0',
+      indicator: 'size-10!   ring-0',
       label: 'hidden',
     }"
     variant="ghost"
     color="neutral"
-    @update:model-value="(e) => (tab = e as TabValue)">
+    @update:model-value="(e: TabValue) => (tab = e)">
     <template #leading="{ item }">
       <Tooltip
         :label="item.label"
@@ -29,8 +28,8 @@ const tabValue = computed(() => tab.value === 0)
         <Icon :name="item.icon" class="absolute size-5 **:stroke-[2.2]" />
       </Tooltip>
     </template>
-  </UTabs> -->
-  <LazyTooltip
+  </LazyUTabs>
+  <!--   <LazyTooltip
     class="grid place-items-center"
     :label="`Active view - ${tabData[tab]?.label}`"
     side="right">
@@ -46,5 +45,5 @@ const tabValue = computed(() => tab.value === 0)
       indicator="hidden"
       :default-value="tabValue"
       @update:model-value="(e) => tab === (e === true ? 0 : 1)" />
-  </LazyTooltip>
+  </LazyTooltip> -->
 </template>

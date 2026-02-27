@@ -39,9 +39,9 @@ const selectedRune = ref<number | null>(null)
 
       <Tabs v-model:model-value="selectedPath">
         <TabsList
-          class="field-box h-19 w-full grid-cols-5 items-center justify-evenly rounded-box! bg-p2/40 shadow-warm">
+          class="field-box h-19 w-full grid-cols-5 items-center justify-evenly rounded-xl! bg-p2/40 shadow-warm">
           <div
-            class="absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-28">
+            class="absolute top-0 left-0 size-full overflow-hidden rounded-xl opacity-28">
             <div
               class="gradient absolute top-0 left-0 size-full mask-bottom-right"
               :data-path="selectedPath" />

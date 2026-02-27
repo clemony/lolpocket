@@ -5,8 +5,6 @@ export const kbdTheme = defineUiTheme({
     color: {
       default: "",
       neutral: "",
-      p1: "",
-      p2: "",
       n3: "",
     },
     variant: {

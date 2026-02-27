@@ -10,7 +10,7 @@ export const inputTheme = defineUiTheme({
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "peer flex w-full shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "peer input flex w-full shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
       "transition-colors",
     ],
   },
@@ -19,10 +19,7 @@ export const inputTheme = defineUiTheme({
       error: "",
       info: "",
       neutral: "",
-      primary: "",
-      secondary: "",
-      success: "",
-      warning: "",
+      default: "",
     },
     variant: {
       ghost:
@@ -107,13 +104,13 @@ export const inputTheme = defineUiTheme({
   },
   compoundVariants: [
     {
-      color: "primary",
+      color: "default",
       variant: ["outline", "subtle"],
       class:
         "focus-visible:ring focus-visible:ring-n4 focus-visible:ring-inset",
     },
     {
-      color: "primary",
+      color: "default",
       class: "ring ring-n4 ring-inset",
       highlight: true,
     },
@@ -207,7 +204,7 @@ export const inputTheme = defineUiTheme({
     },
   ],
   defaultVariants: {
-    color: "primary",
+    color: "default",
     variant: "outline",
     size: "md",
   },

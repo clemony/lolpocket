@@ -4,11 +4,12 @@ import type { InputProps } from "@nuxt/ui"
 const {
   variant = "solid",
   color = "neutral",
-  class: className,
+  ui,
+  source,
 } = defineProps<{
   source?: Index[]
   color?: InputProps["color"]
-  class?: HTMLAttributes["class"]
+  ui?: InputProps["ui"]
   variant?: InputProps["variant"]
 }>()
 
@@ -23,10 +24,10 @@ const { filters } = storeToRefs(is())
     :variant
     :color
     :ui="{
-      root: 'w-full  grow',
-      base: cn('w-full grow rounded-xl text-sm', className),
-      leadingIcon: '**:stroke-[1.8]',
-      trailing: '',
+      root: cn('w-full grow', ui?.root),
+      base: cn('w-full grow rounded-lg text-sm', ui?.base),
+      leadingIcon: cn('**:stroke-[1.8]', ui?.leadingIcon),
+      trailing: ui?.trailing,
     }"
     placeholder="Search items...">
     <template #trailing>
@@ -41,7 +42,7 @@ const { filters } = storeToRefs(is())
         v-else
         :key="k"
         square
-        color="neutral"
+        :color
         variant="ghost"
         size="sm"
         :value="k" />

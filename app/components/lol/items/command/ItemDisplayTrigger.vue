@@ -16,7 +16,7 @@ const props = defineProps<{
         v-if="itemId"
         :id="props.itemId"
         :key="String(props.itemId)"
-        class="pointer-events-none! shrink-0 overflow-hidden rounded-field **:pointer-events-none"
+        class="pointer-events-none! shrink-0 overflow-hidden rounded-lg **:pointer-events-none"
         :alt="itemId ? itemNameById(itemId) : 'item'"
         basic />
 

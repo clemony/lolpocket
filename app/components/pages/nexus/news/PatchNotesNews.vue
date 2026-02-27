@@ -20,7 +20,7 @@ const img = useImage()
 <!--
 <template>
   <div
-    class="rounded-box relative flex h-60 w-100 flex-col justify-end overflow-hidden bg-cover bg-center p-4 shadow-sm inset-shadow-sm inset-shadow-black/50 drop-shadow-sm before:absolute before:top-0 before:left-0 before:z-1 before:size-full before:-bg-linear-155 before:from-transparent before:from-20% before:to-black"
+    class="rounded-xl relative flex h-60 w-100 flex-col justify-end overflow-hidden bg-cover bg-center p-4 shadow-sm inset-shadow-sm inset-shadow-black/50 drop-shadow-sm before:absolute before:top-0 before:left-0 before:z-1 before:size-full before:-bg-linear-155 before:from-transparent before:from-20% before:to-black"
     :style="backgroundStyles"
   >
     <div class="z-2 w-full text-white text-shadow-md">

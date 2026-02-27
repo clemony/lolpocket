@@ -1,1 +1,0 @@
-import{aT as o}from"../build/server.mjs";import"../nitro/nitro.mjs";import"node:buffer";import"node:events";import"node:process";import"cloudflare:workers";import"node:timers";import"./index2.mjs";import"../virtual/_commonjsHelpers.mjs";import"./schema.account.mjs";import"./index.mjs";const r=o({defaults:{"@type":"PostalAddress"}});export{r as addressResolver};

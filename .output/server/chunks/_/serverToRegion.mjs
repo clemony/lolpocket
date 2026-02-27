@@ -1,1 +1,0 @@
-const e={br1:"americas",eun1:"europe",euw1:"europe",jp1:"asia",kr:"asia",la1:"americas",la2:"americas",me1:"europe",na1:"americas",oc1:"sea",ru:"europe",sg2:"sea",tr1:"europe",tw2:"sea",vn2:"sea"};function serverToRegion(a){var r;const s=a.toLowerCase();return`https://${null!=(r=e[s])?r:"americas"}.api.riotgames.com`}export{serverToRegion as s};

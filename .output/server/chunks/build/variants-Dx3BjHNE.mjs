@@ -1,1 +1,0 @@
-const a={hidden:{opacity:0,transform:"translateY(-40px)"},visible:{transform:"translateY(0)",opacity:[.4,1]}},t={hidden:{opacity:0,transform:"translateY(30%)"},visible:{opacity:1,transform:"translateY(0)"}};export{a as i,t as r};

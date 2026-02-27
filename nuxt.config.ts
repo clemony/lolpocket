@@ -148,7 +148,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/settings/**": { ssr: false },
-    "/": { ssr: false },
+    "/": { ssr: true },
     "/account/**": { ssr: false },
     // Auth folder — keep SSR enabled
     "/auth/**": { ssr: false },

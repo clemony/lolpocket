@@ -1,1 +1,0 @@
-function getRandom(t){return t[Math.floor(Math.random()*t.length)]}function sortMapBy(t,r,n="desc",e){const o="asc"===n?1:-1;return Array.from(t.values()).sort((t,n)=>{const a=t[r],s=n[r];return"number"==typeof a&&"number"==typeof s?(a-s)*o:String(a).localeCompare(String(s),e,{numeric:!0,sensitivity:"base"})*o})}export{getRandom as g,sortMapBy as s};

@@ -27,7 +27,7 @@ const toolbarOpen = shallowRef<boolean>(false)
       :title="String($route.meta?.title || $route.name)"
       headline="Library"
       :ui="{
-        root: ' grow',
+        root: ' max-w-(--ui-container) overflow-hidden',
         headline: 'mb-0',
       }">
       <template #headline>
@@ -49,6 +49,9 @@ const toolbarOpen = shallowRef<boolean>(false)
           <slot name="quote" />
         </p>
       </template>
+      <template #links>
+        <slot name="links" />
+      </template>
     </UPageHeader>
     <!-- PAGE SLOT -->
     <UPageBody v-auto-animate class="relative flex min-h-full flex-1 flex-col">
@@ -61,7 +64,7 @@ const toolbarOpen = shallowRef<boolean>(false)
         v-model:open="toolbarOpen"
         :ui="{
           content:
-            ' flex flex-col-reverse  items-center gap-4 bg-unset ring-0 backdrop-blur-none shadow-none drop-shadow-none pb-5 ',
+            ' flex flex-col  items-center gap-4 bg-unset ring-0 backdrop-blur-none shadow-none drop-shadow-none pb-0 ',
         }"
         :content="{ side: 'top' }">
         <UButton

@@ -1,1 +1,0 @@
-import{aT as e,aU as a}from"../build/server.mjs";const t=e({cast:e=>"number"==typeof e?{value:e}:e,defaults:{"@type":"QuantitativeValue"}}),u=e({defaults:{"@type":"MonetaryAmount"},resolve:(e,u)=>("number"!=typeof e.value&&(e.value=a(e.value,u,t)),e)});export{u as m,t as q};

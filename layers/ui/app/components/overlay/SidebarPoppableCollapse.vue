@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { UCollapsible, UPopover } from "#components"
 import type { ButtonProps } from "@nuxt/ui"
+defineOptions({
+  inheritAttrs: false,
+})
+
 const {
   collapsed,
   label,
@@ -36,12 +40,39 @@ const popOpen = shallowRef<boolean>(false)
 </script>
 
 <template>
+  <UCollapsible
+    v-if="!collapsed"
+    :ui="{
+      root: 'w-full',
+      content: 'max-h-90 overflow-scroll ',
+    }"
+    :default-open="!collapsed">
+    <UButton :size :variant="triggerVariant" block>
+      <Separator
+        size="md"
+        :label
+        label-placement="end"
+        leading-icon="right"
+        :ui="{
+          separator: 'group-hover/btn:bg-p4',
+          label: 'group-hover/btn:underline',
+          leadingIcon:
+            'group-hover/btn:**:text-80 size-4.5 text-pc/40 **:stroke-[2.8] group-open/collapse:rotate-90 transition-rotate duration-200',
+        }" />
+    </UButton>
+    <template #content>
+      <slot name="content" />
+    </template>
+  </UCollapsible>
+
   <LazyUPopover
-    v-if="collapsed"
+    v-else
     v-model:open="popOpen"
+    :class="ui?.base"
+    as="div"
     :arrow
     :ui="{
-      content: 'border-y-transparent  w-60 max-h-80 overflow-hidden relative',
+      content: 'max-h-80 w-60 overflow-hidden border-y-transparent',
     }"
     :content="{
       side,
@@ -55,7 +86,7 @@ const popOpen = shallowRef<boolean>(false)
       :size
       :color
       :ui="{
-        base: cn(!!value ? 'border border-p4 fx-0  ' : '', ui?.base),
+        base: cn(!!value ? 'border border-p4 fx-0  ' : ''),
         leadingIcon: ui?.leadingIcon,
       }"
       :active="popOpen" />
@@ -80,29 +111,4 @@ const popOpen = shallowRef<boolean>(false)
       </LazyScrollAreaButtons>
     </template>
   </LazyUPopover>
-
-  <UCollapsible
-    v-else
-    :ui="{
-      root: 'w-full',
-      content: 'max-h-90 overflow-scroll ',
-    }"
-    :default-open="!collapsed">
-    <UButton :size :variant="triggerVariant" block>
-      <Separator
-        size="md"
-        :label
-        label-placement="end"
-        leading-icon="right"
-        :ui="{
-          separator: 'group-hover/btn:bg-p4',
-          label: 'group-hover/btn:underline',
-          leadingIcon:
-            'group-hover/btn:**:text-80 size-4.5 text-pc/40 **:stroke-[2.8] group-open/collapse:rotate-90 transition-rotate duration-200',
-        }" />
-    </UButton>
-    <template #content>
-      <slot name="content" />
-    </template>
-  </UCollapsible>
 </template>
