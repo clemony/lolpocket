@@ -2,6 +2,7 @@
 definePageMeta({
   title: "About",
   icon: "lucide:message-circle-question-mark",
+  path: "/about",
 })
 
 const icons = [
@@ -100,9 +101,7 @@ const faq = [
 
             <div>},</div>
 
-            <div class="opacity-0">
-              .
-            </div>
+            <div class="opacity-0">.</div>
 
             <div>'Nell': {</div>
 
@@ -126,9 +125,7 @@ const faq = [
             </div>
           </div>
           <div>&rbrace;</div>
-          <div class="opacity-0">
-            .
-          </div>
+          <div class="opacity-0">.</div>
         </div>
 
         <NuxtLink

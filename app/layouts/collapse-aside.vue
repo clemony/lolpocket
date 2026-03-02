@@ -8,8 +8,8 @@ const toolbarOpen = shallowRef<boolean>(false)
   <UPage
     v-auto-animate
     :ui="{
-      root: 'pl-18 pb-20 flex w-screen min-h-max h-[calc(100vh-var(--ui-header-height))] flex-row lg:flex lg:gap-0 ',
-      left: 'w-106 min-h-max  min-w-90 pt-10',
+      root: 'flex h-[calc(100vh-var(--ui-header-height))] min-h-max w-screen flex-row pb-20 pl-18 lg:flex lg:gap-0',
+      left: 'min-h-max w-106 min-w-90 pt-10',
       center: cn(
         'mx-auto min-h-max max-w-(--ui-container) justify-self-center lg:w-full',
         collapsed ? 'px-10' : 'pl-8 pr-16'
@@ -27,7 +27,7 @@ const toolbarOpen = shallowRef<boolean>(false)
       :title="String($route.meta?.title || $route.name)"
       headline="Library"
       :ui="{
-        root: ' max-w-(--ui-container) overflow-hidden',
+        root: 'max-w-(--ui-container) overflow-hidden',
         headline: 'mb-0',
       }">
       <template #headline>
@@ -37,8 +37,8 @@ const toolbarOpen = shallowRef<boolean>(false)
           label="Library"
           variant="link"
           :ui="{
-            base: '**:text-n5 w-54',
-            label: 'font-semibold text-xs ',
+            base: 'w-54 **:text-n5',
+            label: 'text-xs font-semibold',
             leadingIcon: 'size-4.5',
           }"
           :leading-icon="collapsed ? 'i-right-to-line' : 'i-left-to-line'"
@@ -64,7 +64,7 @@ const toolbarOpen = shallowRef<boolean>(false)
         v-model:open="toolbarOpen"
         :ui="{
           content:
-            ' flex flex-col  items-center gap-4 bg-unset ring-0 backdrop-blur-none shadow-none drop-shadow-none pb-0 ',
+            'bg-unset flex flex-col items-center gap-4 pb-0 shadow-none ring-0 drop-shadow-none backdrop-blur-none',
         }"
         :content="{ side: 'top' }">
         <UButton
@@ -74,7 +74,7 @@ const toolbarOpen = shallowRef<boolean>(false)
           color="p0"
           active-color="neutral"
           :ui="{
-            base: 'pointer-events-auto drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 shrink-0 fx-0 backdrop-blur-md  rounded-full sticky bottom-[4%] ',
+            base: 'pointer-events-auto sticky bottom-[4%] shrink-0 rounded-full drop-shadow-md backdrop-blur-md fx-0 not-open:drop-shadow-black/4 open:drop-shadow-black/18',
             leadingIcon: cn('group-open/btn:**:text-nc'),
           }"
           :icon="toolbarOpen ? 'i-up' : 'i-filter'" />

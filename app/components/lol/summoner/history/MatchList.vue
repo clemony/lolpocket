@@ -3,12 +3,8 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 
-const emit = defineEmits(["scroll-top"])
-
 const store = matchFilter()
 const { filteredMatches } = storeToRefs(store)
-console.log("🥸 - filteredMatches:", filteredMatches)
-
 const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 
 const hasMatches = computed(() => filteredMatches.value?.length > 0)
@@ -20,7 +16,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     :class="
       cn(
         '@container flex h-max w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2',
-        className
+        className,
       )
     ">
     <LazyUAlert
@@ -32,7 +28,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
 
     <!-- loading skeleton -->
     <div v-if="loading" class="flex w-full flex-col gap-8">
-      <Skeleton
+      <LazyUSkeleton
         v-for="i in 12"
         :key="i"
         class="field-box h-40 w-full min-w-full grow" />
@@ -57,8 +53,8 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
       }"
       :start-margin="220"
       :ui="{
-        viewport: 'w-full h-max',
-        root: 'w-full h-max',
+        viewport: 'h-max w-full',
+        root: 'h-max w-full',
       }">
       <MatchCard :key="item.matchId" :match="item" />
     </UScrollArea>

@@ -16,6 +16,11 @@
       "width": 16,
       "height": 16
     },
+    "calc": {
+      "body": "<path\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.6\"\n    transform=\"scale(0.87)\"\n    d=\"M4 4.5h7m-7 4h1m2 0h1m2 0h1m-7 3h1m2 0h1m2 0h1m-8.5 3h10a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z\" />",
+      "width": 15,
+      "height": 15
+    },
     "crescent-moon": {
       "body": "<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->\r\n\r\n<g>\r\n\t<g id=\"c150_moon\">\r\n\t\t<path style=\"fill:currentColor;\" d=\"M29.033,16.006c0.049-0.479,0.074-0.963,0.074-1.454l0,0l0,0C29.107,6.562,22.549,0,14.555,0l0,0\r\n\t\t\tl0,0C7.26,0,1.187,5.459,0.169,12.482c-0.029,0.195-0.072,0.389-0.091,0.591c0,0.007,0,0.016-0.002,0.027\r\n\t\t\tc-0.05,0.475-0.075,0.962-0.075,1.452l0,0l0,0c0,7.99,6.554,14.555,14.554,14.555l0,0l0,0c7.235,0,13.273-5.376,14.36-12.322\r\n\t\t\tc0.04-0.249,0.092-0.499,0.118-0.752C29.033,16.023,29.033,16.016,29.033,16.006z M2.08,14.552\r\n\t\t\tc0-6.599,5.156-12.005,11.652-12.432c4.77,2.126,9.139,6.876,9.139,12.432c0,5.557-4.369,10.312-9.139,12.433\r\n\t\t\tC7.236,26.56,2.08,21.151,2.08,14.552z\"/>\r\n\t</g>\r\n</g>",
       "width": 29.107,
@@ -85,11 +90,6 @@
       "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m24 16.17l-9.24 5.33l-9.24 5.34V5.5l9.24 5.33zm0 0l9.24-5.34l9.24-5.33v21.34l-9.24-5.34z\" stroke-width=\"3\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M42.48 26.84L24 42.5V16.17l9.24 5.33zm-36.96 0l9.24-5.34L24 16.17V42.5z\" stroke-width=\"3\"/>",
       "width": 48,
       "height": 48
-    },
-    "wiki": {
-      "body": "<style>\n\t\t.s0 { opacity: .98;fill: currentColor}\n\t</style>\n\t<path id=\"Path 0\" fill-rule=\"evenodd\" class=\"s0\" d=\"m0 24l5-12 18-12h210l18 12 5 12v208l-5 12-18 12h-210l-11-5-8-8-4-11zm22 34v4l8 4 4 14 6 2 2 21 6 3 2 21 6 3 2 21 6 3 2 21 6 3 2 20 4 1 26-1v-5l7-9 1-15 6-2 2-22 7-2 2-6h5l4 23 5 1 3 23 5 1 2 14h29l4-22 5-2 3-22 5-2 3-22 5-2 3-22 5-2 3-22h4l4-15 9-4v-4l-5-2-45 2 1 6 6 1-1 22-6 3v13l-2 8-6 3-1 14-7 1-2-8-6-1-3-24-5-1-2-8-1-16 3-13-47-2-2 7 6 3 3 7v25l-3 12h-4l-1 3-1 14-7 2-8-2-2-20-6-4-2-8v-13l-6-4v-12l5-1 1-8-53-1z\"/>",
-      "width": 256,
-      "height": 256
     }
   }
 }

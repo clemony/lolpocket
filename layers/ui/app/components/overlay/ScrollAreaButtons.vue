@@ -113,8 +113,8 @@ defineExpose({
           icon="i-up"
           variant="ghost"
           :ui="{
-            base: 'w-full! h-full! border-x-none! border-t-none! border-b border-b-p2/80 rounded-none bg-p0',
-            leadingIcon: '**:stroke-[2.4] text-n5/80 group-hover/btn:text-pc',
+            base: 'border-x-none! border-t-none! size-full! rounded-none border-b border-b-p2/80 bg-p0',
+            leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc',
           }"
           @click="scrollUp" />
       </div>
@@ -124,7 +124,7 @@ defineExpose({
         ref="scrollAreaRef"
         :class="cn('max-h-full', props.scrollAreaClass)"
         :ui="{
-          root: 'overflow-y-auto overflow-x-hidden',
+          root: 'overflow-x-hidden overflow-y-auto',
           viewport: 'flex-col',
         }">
         <div
@@ -146,8 +146,8 @@ defineExpose({
           icon="i-down"
           variant="ghost"
           :ui="{
-            leadingIcon: '**:stroke-[2.4] text-n5/80 group-hover/btn:text-pc',
-            base: 'w-full! h-full!   rounded-none bg-p0 border-x-none! border-b-none! border-t border-t-p2/80 ',
+            leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc',
+            base: 'border-x-none! border-b-none! h-full! rounded-none border-t border-t-p2/80 bg-p0',
           }"
           @click="scrollDown" />
       </div>

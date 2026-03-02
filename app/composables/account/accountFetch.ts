@@ -35,9 +35,14 @@ export async function accountFetch() {
     summonerAccounts().accounts
   )
 
-  const summoner = account?.puuid
-    ? await sSummoner().ensureSummoner({ puuid: account.puuid })
-    : null
+  let summoner: Summoner | null = null
+  if (account?.puuid) {
+    try {
+      summoner = await sSummoner().ensureSummoner({ puuid: account.puuid })
+    } catch (err) {
+      console.warn("Failed to resolve summoner during account fetch", err)
+    }
+  }
 
   if (summoner) {
     Object.assign(user().account as AccountData, summoner)

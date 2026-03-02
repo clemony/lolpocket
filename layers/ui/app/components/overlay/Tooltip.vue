@@ -11,6 +11,7 @@ const {
   avatar,
   trailingIcon,
   title,
+  disableClosingTrigger = false,
   ui: uiProps,
   kbds,
   label,
@@ -18,23 +19,22 @@ const {
   followPointer = true,
   inertia = true,
   interactive = false,
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  avatar?: string
-  ui?: TooltipUi
-  kbds?: TooltipProps["kbds"]
-  icon?: string
-  arrow?: boolean
-  side?: Side
-  sideOffset?: number
-  trailingIcon?: string
-  disabled?: boolean
-  followPointer?: boolean
-  inertia?: boolean | number
-  interactive?: boolean
-  label?: string
-  title?: string
-}>()
+} = defineProps<
+  TooltipProps & {
+    avatar?: string
+    ui?: TooltipUi
+    icon?: string
+    side?: Side
+    sideOffset?: number
+    trailingIcon?: string
+    disabled?: boolean
+    followPointer?: boolean
+    inertia?: boolean | number
+    interactive?: boolean
+    label?: string
+    title?: string
+  }
+>()
 
 const emit = defineEmits(["pinned", "unpinned"])
 
@@ -198,6 +198,7 @@ const contentProps = computed<ContentProps>(() => ({
 
 <template>
   <UTooltip
+    :disable-closing-trigger
     :disabled
     :arrow="arrow"
     :open="disabled ? false : open"
@@ -219,11 +220,19 @@ const contentProps = computed<ContentProps>(() => ({
     </div>
 
     <template #content>
-      <div ref="contentRef">
+      <div
+        ref="contentRef"
+        :class="
+          cn(
+            'inline-flex items-center gap-1.5 align-baseline',
+            uiProps?.content,
+          )
+        ">
         <slot name="content">
           <div class="inline-flex gap-1.5 align-baseline">
-            <LazyImg
+            <LazyUAvatar
               v-if="avatar"
+              icon="i-image-circle"
               loading-type="spinner"
               :src="avatar"
               :alt="`${label}-icon`"
@@ -235,7 +244,11 @@ const contentProps = computed<ContentProps>(() => ({
               v-if="trailingIcon"
               :name="trailingIcon"
               :class="
-                cn('', { 'scale-120': trailingIcon === 'i' }, ui?.trailingIcon)
+                cn(
+                  'ml-1 inline size-3.75 self-center align-middle text-nc',
+                  { 'scale-120': trailingIcon === 'i' },
+                  ui?.trailingIcon,
+                )
               " />
           </div>
         </slot>

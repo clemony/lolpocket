@@ -45,6 +45,7 @@ export type ChartMode = "scatter" | "heatmap" | "bubble" | "donut"
 
 export type TooltipUi = TooltipProps["ui"] & {
   trailingIcon?: string
+  label?: string
 }
 
 export interface NavButtonProps extends ButtonProps {

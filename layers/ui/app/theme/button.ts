@@ -2,12 +2,12 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const buttonTheme = defineUiTheme({
   slots: {
-    label: "truncate text-start",
+    label: "grow truncate text-start text-sm font-medium",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
     leadingIcon: "shrink-0",
     trailingIcon: "shrink-0",
-    base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden text-sm font-medium duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75",
+    base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75",
   },
   variants: {
     color: {
@@ -69,14 +69,14 @@ export const buttonTheme = defineUiTheme({
       xl: {
         base: "h-14! gap-2 px-3",
         leadingAvatarSize: "xs",
-        leadingIcon: "size-5.5",
-        trailingIcon: "size-5.5",
+        leadingIcon: "size-5",
+        trailingIcon: "size-5",
       },
       "2xl": {
         base: "h-16! gap-2 px-3",
         leadingAvatarSize: "xs",
-        leadingIcon: "size-6",
-        trailingIcon: "size-6",
+        leadingIcon: "size-5",
+        trailingIcon: "size-5",
       },
     },
     square: {
@@ -94,7 +94,8 @@ export const buttonTheme = defineUiTheme({
       solid: "btn shadow-sm hover:inset-shadow-xs",
       ghost:
         "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      outline: "btn ring ring-p3 hover:inset-shadow-xs",
+      outline:
+        "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
       highlight: "btn btn-ghost",
       ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",
@@ -165,7 +166,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class: {
-        base: "btn bg-neutral font-semibold ring-0 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral on:text-nc on:btn-neutral",
+        base: "btn bg-neutral font-semibold ring-0 inset-shadow-black/4 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-p1 disabled:shadow-none disabled:ring disabled:inset-shadow-xs disabled:ring-p3/80 on:text-nc on:btn-neutral",
         leadingIcon:
           "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc group-data-[state=open]/btn:**:text-nc group-on/btn:**:text-nc",
         trailingIcon:

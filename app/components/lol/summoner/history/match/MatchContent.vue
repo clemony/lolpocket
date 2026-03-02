@@ -1,5 +1,9 @@
 <script lang="ts" setup>
+import { TabsRoot } from "reka-ui"
 import { useTimeline } from "~/domain/match/useTimeline"
+import MatchScoreboard from "./scoreboard/MatchScoreboard.vue"
+import MatchDataTable from "./stats/MatchDataTable.vue"
+import MatchBuild from "./timeline/MatchBuild.vue"
 
 defineOptions({
   inheritAttrs: false,
@@ -8,9 +12,6 @@ const { match, player } = defineProps<{
   player: Player
   match: MatchData
 }>()
-const MatchBuild = resolveComponent("MatchBuild")
-const MatchDataTable = resolveComponent("MatchDataTable")
-const MatchScoreboard = resolveComponent("MatchScoreboard")
 
 const tabs = {
   Scoreboard: {
@@ -36,14 +37,13 @@ const { getTimeline } = useTimeline()
 const timeline: PlayerTimeline | null = await getTimeline(
   match.matchId,
   match.regionId,
-  player.puuid
+  player.puuid,
 )
 </script>
 
 <template>
-  <LazyCollapsibleContent
-    class="relative h-205 w-full p-0 text-sm **:select-none">
-    <Tabs
+  <div class="relative h-205 w-full p-0 text-sm **:select-none">
+    <TabsRoot
       v-model:model-value="modelValue"
       class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-p3)_70%,transparent_30%)]">
       <FileTabsList class="relative h-9 w-[98%] gap-x-1 overflow-x-hidden">
@@ -64,7 +64,7 @@ const timeline: PlayerTimeline | null = await getTimeline(
         :class="
           cn(
             'tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! bg-p0 p-0 inset-shadow-none',
-            { 'rounded-tl-none': modelValue === 'Scoreboard' }
+            { 'rounded-tl-none': modelValue === 'Scoreboard' },
           )
         ">
         <component
@@ -74,6 +74,6 @@ const timeline: PlayerTimeline | null = await getTimeline(
           :player
           :timeline />
       </div>
-    </Tabs>
-  </LazyCollapsibleContent>
+    </TabsRoot>
+  </div>
 </template>

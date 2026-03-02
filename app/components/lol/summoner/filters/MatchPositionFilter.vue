@@ -36,7 +36,7 @@ const roleModel = computed({
     v-model:model-value="roleModel"
     size="sm"
     :ui="{
-      root: ' w-full',
+      root: 'w-full',
       label: 'hidden',
       leadingIcon: 'size-4.5',
     }"

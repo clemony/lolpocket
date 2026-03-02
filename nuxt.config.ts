@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url"
 
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
+const nuxtChartsDeps = ["vue-chrts", "@unovis/ts", "@unovis/vue"] as const
 // Cloudflare build-only memory pressure toggle.
 // Set `NUXT_CF_LEAN_BUILD=1` in Cloudflare to temporarily skip heavier modules while diagnosing Nitro bundle OOMs.
 const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
@@ -26,13 +27,6 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
-    ...(isCFLeanBuild
-      ? [
-          // "@nuxt/icon", // OOM test toggle: comment-in to skip @nuxt/icon on Cloudflare lean builds
-        ]
-      : [
-          //
-        ]),
     "@nuxtjs/supabase",
     "@nuxt/image",
     "motion-v/nuxt",
@@ -41,9 +35,50 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/icon",
     "@nuxtjs/seo",
+    "nuxt-charts",
+    function nuxtChartsViteOptimizeFix(_, nuxt) {
+      nuxt.hook("vite:extendConfig", (viteConfig, { isClient }) => {
+        if (!isClient) return
+
+        const isNuxtChartsDep = (dep: unknown): dep is string =>
+          typeof dep === "string" && nuxtChartsDeps.includes(dep as any)
+
+        // `nuxt-charts` adds deps to root optimize include. In Nuxt 4/Vite 7 this can
+        // collide with client-environment excludes and trigger:
+        // "entry point <dep> cannot be marked as external"
+        viteConfig.optimizeDeps ??= {}
+
+        if (Array.isArray(viteConfig.optimizeDeps.include)) {
+          viteConfig.optimizeDeps.include = viteConfig.optimizeDeps.include
+            .filter(dep => !isNuxtChartsDep(dep))
+        }
+
+        if (Array.isArray(viteConfig.optimizeDeps.exclude)) {
+          viteConfig.optimizeDeps.exclude = viteConfig.optimizeDeps.exclude
+            .filter(dep => !isNuxtChartsDep(dep))
+        }
+
+        viteConfig.environments ??= {}
+        viteConfig.environments.client ??= {}
+        viteConfig.environments.client.optimizeDeps ??= {}
+        const clientOptimize = viteConfig.environments.client.optimizeDeps
+
+        clientOptimize.include ??= []
+        for (const dep of nuxtChartsDeps) {
+          if (!clientOptimize.include.includes(dep)) {
+            clientOptimize.include.push(dep)
+          }
+        }
+
+        if (Array.isArray(clientOptimize.exclude)) {
+          clientOptimize.exclude = clientOptimize.exclude
+            .filter(dep => !isNuxtChartsDep(dep))
+        }
+      })
+    },
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
-      ? ["@nuxt/devtools", "@nuxt/hints"]
+      ? ["@nuxt/devtools", "@nuxt/hints", "@nuxt/test-utils/module"]
       : []),
   ],
 
@@ -58,6 +93,7 @@ export default defineNuxtConfig({
     {
       path: "~/components",
       pathPrefix: false,
+      extensions: ["vue"],
     },
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
@@ -140,7 +176,7 @@ export default defineNuxtConfig({
     client: false,
     server: false,
   },
-  pinia: { storesDirs: ["~/stores"] },
+  pinia: { storesDirs: ["~~/app/stores"] },
   router: {
     options: {
       scrollBehaviorType: "smooth",
@@ -148,7 +184,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/settings/**": { ssr: false },
-    "/": { ssr: true },
+    "/": { ssr: false },
     "/account/**": { ssr: false },
     // Auth folder — keep SSR enabled
     "/auth/**": { ssr: false },
@@ -222,7 +258,7 @@ export default defineNuxtConfig({
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
-    // types: "#layers/store/shared/types/database.types.ts",
+    types: "~~/shared/types/database.types.ts",
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: true,
     redirectOptions: {

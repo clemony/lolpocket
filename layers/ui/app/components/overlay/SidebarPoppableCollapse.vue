@@ -44,7 +44,7 @@ const popOpen = shallowRef<boolean>(false)
     v-if="!collapsed"
     :ui="{
       root: 'w-full',
-      content: 'max-h-90 overflow-scroll ',
+      content: 'max-h-90 overflow-scroll',
     }"
     :default-open="!collapsed">
     <UButton :size :variant="triggerVariant" block>
@@ -57,7 +57,7 @@ const popOpen = shallowRef<boolean>(false)
           separator: 'group-hover/btn:bg-p4',
           label: 'group-hover/btn:underline',
           leadingIcon:
-            'group-hover/btn:**:text-80 size-4.5 text-pc/40 **:stroke-[2.8] group-open/collapse:rotate-90 transition-rotate duration-200',
+            'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/40 duration-200 **:stroke-[2.8] group-open/collapse:rotate-90',
         }" />
     </UButton>
     <template #content>

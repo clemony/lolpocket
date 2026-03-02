@@ -11,10 +11,10 @@ console.log("🥸 - props:", props)
 const separatorVariants = tv({
   slots: {
     root: "relative flex w-full shrink-0 items-center",
-    wrapper: "flex flex-nowrap items-center gap-1",
     leading: "order-first",
-    trailing: "",
-    label: "pointer-events-none font-medium whitespace-nowrap select-none",
+    trailingIcon: "size-4",
+    label:
+      "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
     separator: "pointer-events-none flex-1 shrink-0 grow bg-current",
   },
   variants: {
@@ -66,12 +66,12 @@ const separatorVariants = tv({
     orientation: {
       vertical: {
         root: "flex-col justify-center",
-        wrapper: "flex flex-col items-center",
+        label: "flex flex-col items-center",
         separator: "h-full w-px",
       },
       horizontal: {
         root: "flex items-center",
-        wrapper: "flex items-center",
+        label: "flex items-center",
         separator: "h-px w-full",
       },
     },
@@ -95,7 +95,7 @@ const separatorVariants = tv({
       placement: "start",
       labelPlacement: "end",
       class: {
-        wrapper: "order-last ml-3",
+        label: "order-last ml-3",
         separator: "order-1",
         leading: "order-first mr-1",
       },
@@ -104,16 +104,17 @@ const separatorVariants = tv({
       placement: "start",
       labelPlacement: "start",
       class: {
-        wrapper: "order-1 mr-2",
+        label: "order-1 mr-2",
         leading: "order-first",
-        separator: "order-last",
+        separator: "order-2",
+        trailingIcon: "order-3 ml-2",
       },
     },
     {
       placement: "start",
       labelPlacement: "center",
       class: {
-        wrapper: "order-2 mx-2",
+        label: "order-2 mx-2",
         separator: "order-1",
         leading: "order-first",
       },
@@ -122,6 +123,7 @@ const separatorVariants = tv({
   defaultVariants: {
     color: "p3",
     placement: "start",
+    labelPlacement: "start",
     size: "md",
     orientation: "horizontal",
   },
@@ -145,10 +147,8 @@ interface SeparatorProps {
   ui?: Partial<
     Record<
       | "root"
-      | "wrapper"
-      | "leading"
-      | "trailing"
       | "label"
+      | "leading"
       | "separator"
       | "leadingIcon"
       | "trailingIcon",
@@ -168,7 +168,7 @@ const styles = computed(() =>
     underline: props.underline,
     labelVisible: Boolean(props.label),
     labelPlacement: props.labelPlacement,
-  })
+  }),
 )
 </script>
 
@@ -181,13 +181,9 @@ const styles = computed(() =>
       :name="props.leadingIcon"
       :class="styles.leading({ class: props.ui?.leadingIcon })" />
 
-    <div
-      v-if="props.label"
-      :class="styles.wrapper({ class: props.ui?.wrapper })">
-      <span :class="cn(styles.label(), props.ui?.label)">
-        {{ props.label }}
-      </span>
-    </div>
+    <span v-if="props.label" :class="cn(styles.label(), props.ui?.label)">
+      {{ props.label }}
+    </span>
 
     <span
       v-if="props.placement === 'center'"
@@ -196,6 +192,6 @@ const styles = computed(() =>
     <Icon
       v-if="props.trailingIcon"
       :name="props.trailingIcon"
-      :class="styles.trailing({ class: props.ui?.trailing })" />
+      :class="styles.trailingIcon({ class: props.ui?.trailingIcon })" />
   </div>
 </template>

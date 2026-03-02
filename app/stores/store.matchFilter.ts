@@ -150,7 +150,7 @@ export const matchFilter = defineStore("match-filter", () => {
 export function matchFilters(
   puuid: string,
   match: MatchData,
-  options: MatchFilter
+  filterOptions: MatchFilter
 ) {
   const {
     ally,
@@ -160,7 +160,7 @@ export function matchFilters(
     patch,
     queue,
     role,
-  } = options
+  } = filterOptions
 
   const player = match.participants.find((p) => p.puuid === puuid)
   if (!player) return false

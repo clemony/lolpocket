@@ -14,8 +14,8 @@ const spell = computed(() => spells[id])
     v-if="spell"
     :class="
       cn(
-        'relative flex size-full flex-col justify-center overflow-hidden',
-        className
+        'relative flex size-full flex-col justify-center overflow-hidden px-2 py-3',
+        className,
       )
     ">
     <div class="= flex w-full items-center gap-4 **:select-none">
@@ -75,7 +75,7 @@ const spell = computed(() => spells[id])
       </div>
     </div>
 
-    <USeparator class="my-2 w-full" color="p3" />
+    <USeparator class="my-2 w-full" color="n3" />
 
     <div
       :key="spell.id"

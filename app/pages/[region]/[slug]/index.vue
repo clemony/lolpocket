@@ -2,7 +2,6 @@
 const { summoner } = storeToRefs(sSession())
 
 useHead({
-  // or as a function
   titleTemplate: () => {
     if (summoner.value?.name)
       return `${summoner.value.name} - Match History | lolpocket`
@@ -24,17 +23,17 @@ const open = shallowRef<boolean>(true)
 <template>
   <UPage
     :ui="{
-      root: 'relative z-auto w-full pl-23 flex flex-row pt-8 mb-44',
+      root: 'relative z-auto mb-44 flex w-full flex-row pt-8 pl-23',
       left: 'lg:col-span-3',
-      right: 'hidden ',
-      center: 'lg:col-span-7 lg:col-start-4  ',
+      right: 'hidden',
+      center: 'lg:col-span-7 lg:col-start-4',
     }">
     <template #left>
       <UPageAside
         :ui="{
-          root: 'scrollbar-none z-auto inset-y-0 top-0 bottom-0',
+          root: 'scrollbar-none inset-y-0 top-0 bottom-0 z-auto',
           container:
-            'scrollbar-none *:w-full flex w-full origin-right flex-col items-center gap-y-6',
+            'scrollbar-none flex w-full origin-right flex-col items-center gap-y-6 *:w-full',
         }"
         group
         :offset="{

@@ -27,7 +27,7 @@ const mode = computed(() => {
   <URadioGroup
     v-model:model-value="m.preference"
     :ui="{
-      label: 'capitalize flex gap-2',
+      label: 'flex gap-2 capitalize',
     }"
     indicator="end"
     variant="card"

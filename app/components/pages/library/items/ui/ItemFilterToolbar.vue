@@ -25,7 +25,7 @@ const { filters } = storeToRefs(is())
             : ''
         ),
         leadingIcon:
-          'size-4.5 group-on/btn:text-nc -translate-y-px **:stroke-[1.4]',
+          'size-4.5 -translate-y-px **:stroke-[1.4] group-on/btn:text-nc',
       }"
       square
       leading-icon="i-streamline-shopping-store-signage-3-street-sandwich-shops-shop-stores-board-sign-store"
@@ -38,7 +38,7 @@ const { filters } = storeToRefs(is())
   <!-- map -->
   <MapSelector
     size="xl"
-    :ui="{ base: 'rounded-full drop-shadow-black/4 drop-shadow-md ' }"
+    :ui="{ base: 'rounded-full drop-shadow-md drop-shadow-black/4' }"
     collapsed />
 
   <!-- reset -->
@@ -48,7 +48,7 @@ const { filters } = storeToRefs(is())
       color="neutral"
       icon="i-reset"
       :ui="{
-        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18  drop-shadow-md ',
+        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18',
       }"
       square
       @click="is().clearFilters()" />

@@ -4,7 +4,7 @@ export const switchTheme = defineUiTheme({
   slots: {
     root: "group relative flex cursor-pointer items-start",
     base: "hover:focus-ring focus-visible:focus-ring inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent data-[state=unchecked]:bg-accented",
-    container: "flex cursor-pointer items-center sh-sm",
+    container: "flex cursor-pointer items-center shadow-sm",
     thumb:
       "group pointer-events-none flex items-center justify-center rounded-full bg-p0 shadow-lg ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0",
     icon: "absolute size-10/12 shrink-0 opacity-0 group-data-[state=unchecked]:text-dimmed",

@@ -24,7 +24,10 @@ const {
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 
-    <span v-if="data.effects" v-html="data.effects" />
+    <span
+      v-if="data.effects"
+      class="inline whitespace-pre-line *:mr-1 *:inline *:size-4 *:rounded-sm"
+      v-html="data.effects" />
 
     <div
       v-if="data.cooldown"

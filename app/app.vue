@@ -26,7 +26,7 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
 <template>
   <UApp
     id="app"
-    :ui="{ base: ' overflow-hidden' }"
+    :ui="{ base: 'overflow-hidden' }"
     :toaster="{
       position: 'top-right',
       class: 'translate-y-15 ',

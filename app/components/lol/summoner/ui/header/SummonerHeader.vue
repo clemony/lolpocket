@@ -27,8 +27,8 @@ const open = shallowRef<boolean>(false)
       <h1
         :class="
           cn(
-            'font-display overflow-y-visible text-[36px]/15 font-normal! text-pc/94',
-            { 'opacity-40': !summoner?.name }
+            'overflow-y-visible font-serif text-[36px]/15 font-black! text-pc/94',
+            { 'opacity-40': !summoner?.name },
           )
         "
         as="h1">

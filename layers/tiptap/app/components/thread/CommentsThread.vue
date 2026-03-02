@@ -17,9 +17,7 @@ onMounted(() => {
 <template>
   <div class="h-max w-full max-w-210">
     <div class="flex w-full flex-col items-start justify-center space-y-6 pr-1">
-      <h1 class="select-none">
-        Comments
-      </h1>
+      <h1 class="select-none">Comments</h1>
       <CommentEditor
         v-slot="{ editor }"
         v-model="newComment"
@@ -32,8 +30,8 @@ onMounted(() => {
             () => {
               if (!newComment) return
               postComment(newComment, threadId)
-              editor.commands.clearContent()
-              editor.commands.blur()
+              editor?.commands.clearContent()
+              editor?.commands.blur()
             }
           " />
       </CommentEditor>

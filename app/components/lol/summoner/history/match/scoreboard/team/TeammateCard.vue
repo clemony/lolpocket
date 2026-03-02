@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import KDA from "~/components/lol/summoner/history/ui/KDA.vue"
 import type { BarStat } from "./types"
 
 const { match, player } = defineProps<{
@@ -11,7 +12,7 @@ const { match, player } = defineProps<{
   <UCard
     v-if="player"
     :ui="{
-      root: 'w-full py-2.25 dark:border-p3/70 dark:bg-p2/60 light:border-transparent! light:bg-p0/80! light:shadow-none! light:drop-shadow-none! px-3 ',
+      root: 'w-full px-3 py-2.25 dark:border-p3/70 dark:bg-p2/60 light:border-transparent! light:bg-p0/80! light:shadow-none! light:drop-shadow-none!',
       body: cn(
         'relative flex w-full max-w-full items-center justify-between overflow-hidden **:select-none'
       ),

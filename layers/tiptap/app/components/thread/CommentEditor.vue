@@ -48,7 +48,7 @@ onMounted(() => {
     :class="
       cn(
         'group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border border-p3/80 p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200 focus-within:ring-pc/60',
-        props.class
+        props.class,
       )
     "
     @dblclick="editor?.commands.selectAll()">
@@ -85,7 +85,10 @@ onMounted(() => {
     <div class="flex items-center justify-between">
       <div class="flex items-end gap-1 self-end">
         <EmojiMenu v-if="editor" :editor />
-        <MentionTabMenu v-if="editor" :mention-data :editor />
+        <MentionTabMenu
+          v-if="editor"
+          :mention-data="mentionData || ({} as MentionData)"
+          :editor />
         <EditorExtrasMenu v-if="editor" :editor />
         <Separator
           class="mr-1 ml-0.75 h-4 self-center"

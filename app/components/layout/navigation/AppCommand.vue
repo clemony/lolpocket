@@ -49,8 +49,8 @@ const component = shallowRef(
         breakpoints.desktop
           ? "@nuxt/ui/components/Modal.vue"
           : "@nuxt/ui/components/Drawer.vue"
-      )
-  )
+      ),
+  ),
 )
 </script>
 
@@ -59,7 +59,7 @@ const component = shallowRef(
     :is="component"
     aria-describedby="app-command-search"
     :ui="{
-      content: ' max-w-180  ',
+      content: 'max-w-180',
     }"
     :handle="false">
     <Tooltip
@@ -72,10 +72,10 @@ const component = shallowRef(
         label="search..."
         size="md"
         :ui="{
-          base: 'shrink-0 cursor-text  fx-1 w-180! inset-shadow-xs  bg-p0/50 border border-p3 rounded-xl!',
-          label: 'grow text-center  text-n5   ',
+          base: 'w-180! shrink-0 cursor-text rounded-xl! border border-p4/60 bg-p0/50 inset-shadow-xs fx-1',
+          label: 'grow text-center text-n5',
           leadingIcon:
-            'size-4.5 justify-self-start text-n5 **:stroke-[2.3] opacity-80 group-hover/btn:opacity-100',
+            'size-4.5 justify-self-start text-n5 opacity-80 **:stroke-[2.3] group-hover/btn:opacity-100',
         }"
         variant="ring">
         <template #trailing>

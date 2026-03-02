@@ -8,6 +8,7 @@ definePageMeta({
   icon: "lucide:scale",
   iconClass: "!**:stroke-1.1",
   listClass: "**:!stroke-[1.6] scale-130",
+  path: "/tos",
 })
 </script>
 

@@ -1,4 +1,4 @@
-import type { AvatarProps, Locale } from "@nuxt/ui"
+import type { AvatarProps, ButtonProps, Locale } from "@nuxt/ui"
 import { de, en, es, fr, zh_tw } from "@nuxt/ui/locale"
 import {
   externalResources,
@@ -19,7 +19,7 @@ const ui = {
 export const userNav = computed(() => {
   const { account } = storeToRefs(user())
 
-  const slugRoot = buildSummonerRootPath({ puuid: account.value?.puuid })
+  const slugRoot = buildSummonerRootPath(account.value)
 
   return [
     /* -------------- PROFILE LINKS -------------- */
@@ -39,58 +39,40 @@ export const userNav = computed(() => {
     },
   ]
 })
-
+export const nexusNav = [
+  {
+    label: "Nexus",
+    to: "/nexus",
+    icon: "i-nexus",
+  },
+]
 export const libraryNav = [
   {
     label: "Champions",
     to: "/champions",
-    icon: "i-lp-champ",
+    icon: "i-streamline-flex-user-queen-crown",
   },
   {
     label: "Items",
     to: "/items",
-    icon: "i-stat-melee",
+    icon: "i-lucide-sword",
   },
   {
     label: "Runes",
     to: "/runes",
     icon: "i-lp-runes",
-
-    ui: {
-      icon: "scale-120",
-      leadingIcon: "scale-120",
-    },
   },
   {
     label: "Spells",
     to: "/spells",
 
-    icon: "i-basil-book-solid",
-
-    ui: {
-      icon: "scale-110",
-      leadingIcon: "scale-110",
-    },
+    icon: "i-lucide-book-marked",
   },
 ]
 
-export const backpackNav = [
-  {
-    label: "New Pocket",
-    icon: "i-lucide-plus",
-    color: "neutral",
-    kbds: ["meta", "P"],
-    ui: {
-      base: "py-0 mb-1 ",
-      leadingIcon: "**:stroke-[2.5] scale-90 **:text-nc! translate-y-px",
-      label: "font-semibold grow text-nc translate-y-px",
-    },
-
-    onClick: () => newPocket(),
-  },
+export const backpackNav: NavButtonProps[] = [
   {
     label: "Pockets",
-    size: "sm",
     to: "/backpack",
     ui: {
       label: "font-semibold",
@@ -99,12 +81,8 @@ export const backpackNav = [
     icon: "i-folders",
     variant: "highlight",
   },
-]
-
-export const backpackSubNav = [
   {
     label: "Archive",
-    size: "sm",
     to: "/backpack/archive",
     ui: {
       base: " ",
@@ -114,7 +92,6 @@ export const backpackSubNav = [
   },
   {
     label: "Trash",
-    size: "sm",
     to: "/backpack/trash",
     ui: {
       base: "",
@@ -128,10 +105,7 @@ export const toolsNav: NavButtonProps[] = [
   {
     label: "Item Calculator",
     to: "/tools/calculator",
-    icon: "i-calc",
-    ui: {
-      leadingIcon: "**:stroke-[1.6] scale-87 ",
-    },
+    icon: "i-ui-calc",
     description: "Min-max your builds with stat analysis.",
   },
   {
@@ -158,16 +132,20 @@ const shared = {
 export const resourceNav = [
   {
     label: "Official",
+    size: "xs",
     ui: {
-      label: "label text-xs",
+      item: "pointer-events-none items-end pb-0",
+      itemLabel: "label text-xs opacity-50",
     },
   },
   ...officialResources.map((i) => Object_assign(i, shared)),
 
   {
     label: "External",
+    size: "xs",
     ui: {
-      label: "label text-xs",
+      item: "pointer-events-none items-end pb-0",
+      itemLabel: "label text-xs opacity-50",
     },
   },
   ...externalResources.map((i) => Object_assign(i, shared)),
@@ -176,8 +154,10 @@ export const resourceNav = [
 export const helpNav = [
   {
     label: "Help & Support",
+    size: "xs",
     ui: {
-      label: "label text-xs",
+      item: "pointer-events-none items-end pb-0",
+      itemLabel: "label text-xs opacity-50",
     },
   },
 
@@ -193,8 +173,10 @@ export const helpNav = [
   },
   {
     label: "Legal",
+    size: "xs",
     ui: {
-      label: "label text-xs",
+      item: "pointer-events-none items-end pb-0",
+      itemLabel: "label text-xs opacity-50",
     },
   },
   {

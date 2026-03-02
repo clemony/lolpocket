@@ -2,6 +2,7 @@
 definePageMeta({
   title: "Docs",
   icon: "lucide:square-terminal",
+  path: "/docs",
 })
 </script>
 

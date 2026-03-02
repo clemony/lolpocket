@@ -1,4 +1,4 @@
-shamefullyHoist: true
+shamefully-hoist: true
 shellEmulator: true
 
 trustPolicy: no-downgrade
@@ -20,3 +20,4 @@ onlyBuiltDependencies:
   - unrs-resolver
   - vue-demi
   - workerd
+  - vue-chrts

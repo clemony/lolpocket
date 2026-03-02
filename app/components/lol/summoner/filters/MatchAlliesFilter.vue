@@ -14,14 +14,22 @@ const model = computed({
 })
 const { allies } = storeToRefs(sData())
 const alliesList = computed(() =>
-  (allies.value ?? []).sort((a, b) => b.games - a.games)
+  (allies.value ?? []).sort((a, b) => b.games - a.games),
 )
 </script>
 
 <template>
-  <UCollapsible :default-open="true" class="w-full">
+  <UCollapsible :default-open="true" class="w-full space-y-2">
     <UButton variant="link" block>
-      <Separator size="md" label="Allies" underline :ui="{ label: '' }">
+      <Separator
+        trailing-icon="i-up"
+        size="md"
+        label="Allies"
+        :ui="{
+          root: '',
+          trailingIcon:
+            'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/30 duration-200 **:stroke-[2.8] group-open/collapse:-rotate-180',
+        }">
         <template #leading>
           <Icon
             name="right"
@@ -33,7 +41,7 @@ const alliesList = computed(() =>
     <template #content>
       <Listbox v-model:model-value="model" :multiple="false">
         <ListboxContent
-          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto border-b px-1.5 py-1">
+          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border-b px-1.5 py-1 inset-shadow-morphism-2">
           <template v-if="!sMatches().loading && sMatches.length">
             <ListboxItem
               v-for="item in alliesList"
@@ -47,7 +55,7 @@ const alliesList = computed(() =>
                     'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden px-2',
                     {
                       'opacity-74 grayscale': model && item.puuid !== model,
-                    }
+                    },
                   ),
                 }"
                 size="xl">
@@ -56,8 +64,8 @@ const alliesList = computed(() =>
                   :name="item.name"
                   :description="`#${item.tag}`"
                   :ui="{
-                    root: 'grow ',
-                    wrapper: 'text-start items-center',
+                    root: 'grow',
+                    wrapper: 'items-center text-start',
                   }"
                   :avatar="{
                     src: getSummonerIcon(item.icon),
@@ -84,13 +92,13 @@ const alliesList = computed(() =>
               v-for="i in 5"
               :key="i"
               class="pointer-events-none ml-3 grid w-[94%] grid-cols-[22px_1fr] items-center gap-4 self-center py-1.5 opacity-60 btn-ghost">
-              <Skeleton class="size-8.5 rounded-full" />
+              <LazyUSkeleton class="size-8.5 rounded-full" />
 
-              <Skeleton class="h-9 w-full" />
+              <LazyUSkeleton class="h-9 w-full" />
             </div>
           </template>
 
-          <LilKrug v-else />
+          <LazyLilKrug v-else />
 
           <!--              <Icon
                   v-if="

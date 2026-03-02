@@ -48,12 +48,14 @@ export const userTheme = defineUiTheme({
       md: {
         name: "text-sm",
         description: "text-xs",
+        avatar: "size-12",
         root: "gap-2",
         wrapper: "*:leading-4.5",
       },
       sm: {
-        name: "text-xs",
+        name: "text-sm",
         description: "text-xs",
+        avatar: "size-10",
         root: "gap-2",
       },
       xl: {

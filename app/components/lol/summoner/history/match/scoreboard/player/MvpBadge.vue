@@ -7,7 +7,7 @@ const { match, player } = defineProps<{
 
 <template>
   <div class="flex w-10 items-center">
-    <UBadge
+    <LazyUBadge
       v-if="player.lpScore.score === 1 || player.lpScore.ace"
       :class="
         cn(
@@ -16,11 +16,11 @@ const { match, player } = defineProps<{
             'dark:border-pre/60 dark:bg-pre light:border-g/40 light:bg-as':
               player.lpScore.mvp,
             'border-shade-domination/3 bg-dom': player.lpScore.ace,
-          }
+          },
         )
       ">
       {{ player.lpScore.mvp ? "MVP" : "ACE" }}
-    </UBadge>
+    </LazyUBadge>
 
     <div v-else class="text-xs! leading-0 font-normal">
       {{ player.lpScore.score }}{{ formatNumberPosition(player.lpScore.rank) }}

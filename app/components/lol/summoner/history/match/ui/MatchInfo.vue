@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { queueIndex } from "#shared/constants/misc/queue-index"
+import MatchOutcome from "~/components/lol/summoner/history/match/ui/MatchOutcome.vue"
 
 const { match, player } = defineProps<{
   match: MatchData

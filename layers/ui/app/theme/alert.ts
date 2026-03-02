@@ -2,7 +2,7 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const alertTheme = defineUiTheme({
   slots: {
-    root: "relative flex w-full gap-2.5 overflow-hidden rounded-lg p-4",
+    root: "relative flex w-full gap-2.5 overflow-hidden rounded-xl p-4",
     wrapper: "flex min-w-0 flex-1 flex-col",
     title: "text-sm font-medium",
     description: "text-sm opacity-90",
@@ -35,9 +35,20 @@ export const alertTheme = defineUiTheme({
       },
     },
   },
-  compoundVariants: [],
+  compoundVariants: [
+    {
+      color: "neutral",
+      variant: "solid",
+      class: {
+        root: "border-r border-b! border-dom bg-n1 text-nc shadow-sm inset-shadow-sm inset-shadow-nc/5",
+        icon: "text-nc **:text-nc",
+        close: "text-nc **:text-nc",
+        description: "text-nc",
+      },
+    },
+  ],
   defaultVariants: {
-    color: "primary",
+    color: "neutral",
     variant: "solid",
   },
 })

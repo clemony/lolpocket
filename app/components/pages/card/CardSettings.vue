@@ -54,7 +54,7 @@ watch(
 
     <label
       label="'Filter'"
-      class="group btn swap btn-square swap-rotate btn-ghost">
+      class="group swap swap-rotate btn btn-square btn-ghost">
       <input
         v-model="filter"
         class="peer"

@@ -69,6 +69,7 @@ export default antfu(
             order: { type: "asc" },
           },
         ],
+        "jsonc/comma-dangle": ["error", "never"],
       },
     },
 
@@ -105,7 +106,10 @@ export default antfu(
   {
     files: [".vscode/settings.json"],
     rules: {
-      "jsonc/sort-keys": ["error", { pathPattern: "^$", order: { type: "asc" } }],
+      "jsonc/sort-keys": [
+        "error",
+        { pathPattern: "^$", order: { type: "asc" } },
+      ],
     },
   },
   /* ---------- CSS & TAILWIND ---------- */
@@ -148,7 +152,7 @@ export default antfu(
         attributes: [
           "class",
           "className",
-          ["ui", [{ match: "objectValues" }]],
+          ["v-bind:ui", [{ match: "objectValues" }]],
           "content",
           "variant",
           "base",

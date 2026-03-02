@@ -16,7 +16,7 @@ const emit = defineEmits(["loaded"])
 
 const champId = computed(() => (k ? champIdByKey(k) : id))
 const champName = computed(() =>
-  champId.value ? champNameById(champId.value) : ""
+  champId.value ? champNameById(champId.value) : "",
 )
 
 const loaded = ref(false)
@@ -40,9 +40,9 @@ function onLoad() {
       :ui="{
         root: cn(
           'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
-          className
+          className,
         ),
-        icon: 'opacity-60 size-5 ',
+        icon: 'size-5 opacity-60',
       }"
       :alt="champName ? `${champName} icon` : 'champion icon'"
       @loaded="onLoad" />

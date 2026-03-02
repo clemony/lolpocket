@@ -13,11 +13,11 @@ const tab = defineModel<TabValue>("tabModel", { default: 0 })
       :items="Object.values(tabData)"
       size="sm"
       :ui="{
-        root: 'w-fit!  inline align-middle grow-0 ',
-        list: 'w-fit p-0 gap-1',
+        root: 'inline w-fit! grow-0 align-middle',
+        list: 'w-fit gap-1 p-0',
         trigger: 'w-fit self-center px-3',
         indicator:
-          'rounded-[0.45rem] border-b border-p2 ring ring-p3 shadow-none! drop-shadow-none! ',
+          'rounded-[0.45rem] border-b border-p2 shadow-none! ring ring-p3 drop-shadow-none!',
         leadingIcon: 'hidden',
       }"
       variant="ghost"

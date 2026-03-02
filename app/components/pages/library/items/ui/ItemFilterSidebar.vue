@@ -12,7 +12,9 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
 <template>
   <div class="mt-0.5 grid auto-rows-max items-center gap-6">
     <div class="w-full">
-      <h6 class="mb-3">Resources</h6>
+      <h6 class="mb-3">
+        Resources
+      </h6>
       <div class="grid w-full grid-cols-3 gap-2">
         <UButton
           v-for="(link, i) in nav"
@@ -23,8 +25,8 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
           :to="link.to"
           :ui="{
             leadingIcon: cn('size-5', link?.ui?.leadingIcon),
-            base: 'flex-col grow justify-center w-full  h-21!',
-            label: 'font-semibold text-xs',
+            base: 'h-21! w-full grow flex-col justify-center',
+            label: 'text-xs font-semibold',
           }" />
       </div>
     </div>

@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import RuneTooltip from "#components"
-import { wikiLink } from "~/domain/utils/utils"
-
 const {
   id,
   side,
@@ -15,32 +12,6 @@ const {
 }>()
 const loaded = ref(false)
 const runeName = computed(() => (id ? runeNameById(id) : undefined))
-
-const toast = useToast()
-function showToast() {
-  if (!id) return
-  if (!toast.toasts.value.find((t) => t.id === `rune-${id}`)) {
-    toast.add({
-      id: `rune-${id}`,
-      description: h(RuneTooltip, { id }),
-      duration: 0,
-      actions: [
-        {
-          variant: "link",
-          external: true,
-          label: "wiki",
-          size: "sm",
-          target: "_blank",
-          to: runeName.value ? wikiLink(runeName.value) : "",
-          trailingIcon: "link",
-        },
-      ],
-      ui: {
-        root: "p-0!",
-      },
-    })
-  }
-}
 </script>
 
 <template>
@@ -56,13 +27,14 @@ function showToast() {
           'inset-shadow-sides border border-black/60 shadow-sm shadow-black/20 inset-shadow-black/60 drop-shadow-sm':
             loaded,
         },
-        className
+        className,
       )
     ">
     <slot />
-    <Img
+    <UAvatar
       v-if="id"
       :key="id"
+      icon="i-ui-none"
       role="button"
       :src="`/img/runes/${id}.webp`"
       :loading-type
@@ -72,7 +44,6 @@ function showToast() {
           'scale-108': loaded,
         })
       "
-      @click.stop="showToast()"
       @load="loaded = true" />
   </Tooltip>
 </template>

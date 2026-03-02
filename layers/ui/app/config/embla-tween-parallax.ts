@@ -1,5 +1,5 @@
-//
-import type { EmblaCarouselType } from "embla-carousel"
+/*
+import type { EmblaCarouselType } from "@nuxt/ui/utils/index"
 
 export function setupTweenParallax(
   emblaApi: EmblaCarouselType,
@@ -24,9 +24,8 @@ export function setupTweenParallax(
       const tweenNode = tweenNodes[index]
       if (!tweenNode) return
 
-      tweenNode.style.transform =
-        isVertical.value ?
-          `translateY(${translate}%)`
+      tweenNode.style.transform = isVertical.value
+        ? `translateY(${translate}%)`
         : `translateX(${translate}%)`
     })
   }
@@ -40,3 +39,4 @@ export function setupTweenParallax(
     emblaApi.off("reInit", applyTween)
   }
 }
+ */

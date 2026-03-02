@@ -50,7 +50,7 @@ export interface MatchPlayerData {
   timeline: PlayerTimeline
 }
 
-export interface MatchStat {
+export interface MatchStatValue {
   name: string
   group?: string
   unit?: string
@@ -80,4 +80,55 @@ export interface Participant {
   summoner2Id: number
   teamPosition: string
   win: boolean
+}
+
+export const matchTeams = {
+  100: {
+    color: "var(--color-insp)",
+    name: "blue",
+  },
+  200: {
+    color: "var(--color-domination)",
+    name: "red",
+  },
+}
+
+export const teamStatRegistry: Record<string, MatchStatValue> = {
+  /*   horde: {
+    name: "kills",
+  },
+  riftHerald: {
+    name: "",
+  },
+  dragon: {
+    name: "assists",
+  },
+  elder: {
+    name: "",
+  },
+  baron: {
+    name: "",
+  },
+  tower: {
+    name: "",
+  },
+  inhibitor: {
+    name: "",
+  }, */
+  bans: {
+    name: "Bans",
+  },
+  gold: {
+    name: "gold earned",
+  },
+  kda: {
+    name: "kda",
+  },
+  teamId: {
+    name: "Map Designation",
+    group: "basic",
+  },
+  win: {
+    name: "Match outcome",
+  },
 }

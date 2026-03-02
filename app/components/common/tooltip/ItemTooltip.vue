@@ -179,7 +179,7 @@ onMounted(() => {
 
           <template v-if="item?.buildsFrom">
             <Separator
-              :ui="{ root: ' my-5! h-px' }"
+              :ui="{ root: 'my-5! h-px' }"
               size="xs"
               label="RECIPE"
               color="neutral" />

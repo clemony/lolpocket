@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import "#layers/ui/app/assets/css/plugins/embla.css"
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
 import { skinIndex } from "#shared/constants/champions/skin-index"
 import { getSplash } from "~/domain/utils/img"
-import type { CarouselApi } from "~~/layers/ui/app/components/carousel/interface"
-import { setupTweenParallax } from "~~/layers/ui/app/config/embla-tween-parallax"
+//import { setupTweenParallax } from "~~/layers/ui/app/config/embla-tween-parallax"
 
 const { champion } = defineProps<{
   champion: Champion
@@ -18,37 +16,8 @@ definePageMeta({
   path: "/champions/:champion_key/skins",
 })
 
-const emblaMainApi = ref<CarouselApi>()
-const emblaThumbnailApi = ref<CarouselApi>()
 const carouselOrientation = ref<"horizontal" | "vertical">("horizontal")
 const selectedIndex = ref(0)
-
-function onSelect() {
-  if (!emblaMainApi.value || !emblaThumbnailApi.value) return
-  selectedIndex.value = emblaMainApi.value.selectedScrollSnap()
-  emblaThumbnailApi.value.scrollTo(emblaMainApi.value.selectedScrollSnap())
-}
-
-function onThumbClick(index: number) {
-  if (!emblaMainApi.value || !emblaThumbnailApi.value) return
-  selectedIndex.value = index
-  emblaMainApi.value.scrollTo(index)
-}
-
-watchOnce(emblaMainApi, (emblaApi) => {
-  if (!emblaApi) return
-
-  onSelect()
-
-  const teardown = setupTweenParallax(emblaApi, {
-    axisRef: carouselOrientation,
-    factor: 3.5, // tweak this freely
-  })
-
-  onBeforeUnmount(() => {
-    teardown()
-  })
-})
 
 const img = useImage()
 const skins = computed(() => skinIndex[champion.key])
@@ -56,17 +25,21 @@ const skins = computed(() => skinIndex[champion.key])
 
 <template>
   <div class="-ml-10 size-full gap-14 overflow-hidden pr-22">
-    <Carousel
+    <UCarousel
+      v-slot="{ item }"
       class="relative -ml-6 w-full overflow-auto mask-x-from-transparent mask-x-from-0% mask-x-to-black mask-x-to-6% pl-6"
-      :plugins="[WheelGesturesPlugin()]"
+      wheel-gestures
       :orientation="carouselOrientation"
-      @init-api="(val) => (emblaThumbnailApi = val)">
+      prev-icon="i-right"
+      next-icon="i-left"
+      :opts="{
+        loop: true,
+      }">
       <CarouselContent class="scrollbar-none -ml-6 flex pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
-          class="pl-46h-38 basis-1/6! cursor-pointer"
-          @click="onThumbClick(index)">
+          class="pl-46h-38 basis-1/6! cursor-pointer">
           <div
             :class="
               cn(
@@ -88,13 +61,18 @@ const skins = computed(() => skinIndex[champion.key])
           </div>
         </CarouselItem>
       </CarouselContent>
-    </Carousel>
+    </UCarousel>
 
     <Carousel
       class="relative size-full"
-      :opts="{ loop: true }"
-      :plugins="[WheelGesturesPlugin()]"
-      @init-api="(val) => (emblaMainApi = val)">
+      wheel-gestures
+      prev-icon="i-right"
+      dots
+      :slides-to-scroll="3"
+      next-icon="i-left"
+      :opts="{
+        loop: true,
+      }">
       <CarouselContent class="embla__container pt-2 pb-20">
         <CarouselItem
           v-for="(skin, index) in skins"

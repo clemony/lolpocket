@@ -71,7 +71,7 @@ const { data: rune, status } = useFetch<Rune>(
           size="sm"
           :color="rune.path.toLowerCase() as BadgeProps['color']"
           :label="rune.path"
-          :ui="{ trailingIcon: 'scale-110 translate-x-0.5 text-white' }"
+          :ui="{ trailingIcon: 'translate-x-0.5 scale-110 text-white' }"
           :trailing-icon="`path:${rune.path}`" />
       </div>
 

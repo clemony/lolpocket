@@ -4,209 +4,210 @@ export const icon = {
   size: "16px",
 
   aliases: {
-    // arrows
-    "arrow-curve-right": "lucide:corner-down-right",
-    "arrow-left": "lucide:arrow-left",
-    link: "lucide:arrow-up-right",
-    "arrow-right": "lucide:arrow-right",
-    "arrow-up": "lucide:arrow-up",
-    "caret-down": "tabler:caret-down-filled",
-    "caret-up": "tabler:caret-up-filled",
-    up: "lucide:chevron-up",
-    down: "lucide:chevron-down",
-    left: "lucide:chevron-left",
-    right: "lucide:chevron-right",
-    "left-pipe": "tabler:chevron-left-pipe",
-    "right-pipe": "tabler:chevron-right-pipe",
-    "left-to-line": "lucide:arrow-left-to-line",
-    "right-to-line": "lucide:arrow-right-to-line",
-    "left-from-line": "lucide:arrow-left-from-line",
-    "right-from-line": "lucide:arrow-right-from-line",
-    "up-down": "lucide:chevrons-up-down",
-    "up-to-line": "lucide:arrow-up-to-line",
-    "up-up": "lucide:chevrons-up",
-    shuffle: "lucide:shuffle",
-    swap: "lucide:arrow-right-left",
-    refresh: "lucide:refresh-ccw",
-    reset: "lucide:rotate-ccw",
-    download: "lucide:download",
-    export: "lucide:upload",
-    share: "lucide:share",
-    "log-in": "lucide:log-in",
-    "log-out": "lucide:log-out",
-    open: "radix-icons:open-in-new-window",
-    external: "lucide:external-link",
-    tab: "lucide:arrow-right-to-line",
-    shift: "lucide:arrow-big-up-dash",
-    chain: "hugeicons:link-02",
-    "chain-horizontal": "lucide:link-2",
-    collapse: "lucide:panel-left-close",
-    expand: "lucide:panel-left-open",
+    //arrows
+    "arrow-curve-right": "lucide:corner-down-right", //'i-arrow-curve-right'
+    "arrow-left": "lucide:arrow-left", //'i-arrow-left'
+    link: "lucide:arrow-up-right", //'i-link'
+    "arrow-right": "lucide:arrow-right", //'i-arrow-right'
+    "arrow-up": "lucide:arrow-up", //'i-arrow-up'
+    "caret-down": "tabler:caret-down-filled", //'i-caret-down'
+    "caret-up": "tabler:caret-up-filled", //'i-caret-up'
+    up: "lucide:chevron-up", //'i-up'
+    down: "lucide:chevron-down", //'i-down'
+    left: "lucide:chevron-left", //'i-left'
+    right: "lucide:chevron-right", //'i-right'
+    "left-pipe": "tabler:chevron-left-pipe", //'i-left-pipe'
+    "right-pipe": "tabler:chevron-right-pipe", //'i-right-pipe'
+    "left-to-line": "lucide:arrow-left-to-line", //'i-left-to-line'
+    "right-to-line": "lucide:arrow-right-to-line", //'i-right-to-line'
+    "left-from-line": "lucide:arrow-left-from-line", //'i-left-from-line'
+    "right-from-line": "lucide:arrow-right-from-line", //'i-right-from-line'
+    "up-down": "lucide:chevrons-up-down", //'i-up-down'
+    "up-to-line": "lucide:arrow-up-to-line", //'i-up-to-line'
+    "up-up": "lucide:chevrons-up", //'i-up-up'
+    shuffle: "lucide:shuffle", //'i-shuffle'
+    swap: "lucide:arrow-right-left", //'i-swap'
+    refresh: "lucide:refresh-ccw", //'i-refresh'
+    reset: "lucide:rotate-ccw", //'i-reset'
+    download: "lucide:download", //'i-download'
+    export: "lucide:upload", //'i-export'
+    share: "lucide:share", //'i-share'
+    "log-in": "lucide:log-in", //'i-log-in'
+    "log-out": "lucide:log-out", //'i-log-out'
+    open: "radix-icons:open-in-new-window", //'i-open'
+    external: "lucide:external-link", //'i-external'
+    tab: "lucide:arrow-right-to-line", //'i-tab'
+    shift: "lucide:arrow-big-up-dash", //'i-shift'
+    chain: "hugeicons:link-02", //'i-chain'
+    "chain-horizontal": "lucide:link-2", //'i-chain-horizontal'
+    collapse: "lucide:panel-left-close", //'i-collapse'
+    expand: "lucide:panel-left-open", //'i-expand'
 
-    copy: "lucide:copy",
-    filter: "lucide:list-filter",
-    search: "lucide:search",
-    lock: "gg:lock",
-    tag: "lucide:tag",
-    tags: "lucide:tags",
-    toggle: "gg:toggle-off",
-    unlock: "gg:lock-unlock",
-    pin: "iconoir:pin",
-    unpin: "iconoir:pin-slash",
+    copy: "lucide:copy", //'i-copy'
+    filter: "lucide:list-filter", //'i-filter'
+    search: "lucide:search", //'i-search'
+    lock: "gg:lock", //'i-lock'
+    tag: "lucide:tag", //'i-tag'
+    tags: "lucide:tags", //'i-tags'
+    toggle: "gg:toggle-off", //'i-toggle'
+    unlock: "gg:lock-unlock", //'i-unlock'
+    pin: "iconoir:pin", //'i-pin:"iconoir'
+    unpin: "iconoir:pin-slash", //'i-unpin:"iconoir'
 
-    "check-fill": "bi:check-circle-fill",
-    tick: "lucide:check",
-    check: "lucide:check",
-    "tick-sm": "teenyicons:tick-small-outline",
-    gallery: "lucide:gallery-vertical-end",
-    gear: "solar:settings-linear",
-    handle: "radix-icons:button",
-    lines: "teenyicons:align-text-justify-outline",
-    menu: "lucide:menu",
-    more: "i-rmore:line",
-    "more-vertical": "i-rmore:2-line",
-    radio: "formkit:radio",
-    settings: "lucide:settings-2",
+    "check-fill": "bi:check-circle-fill", //'i-check-fill'
+    tick: "lucide:check", //'i-tick'
+    check: "lucide:check", //'i-check'
+    "tick-sm": "teenyicons:tick-small-outline", //'i-tick-sm'
+    gallery: "lucide:gallery-vertical-end", //'i-gallery'
+    gear: "solar:settings-linear", //'i-gear'
+    handle: "radix-icons:button", //'i-handle:"radix-icons'
+    lines: "teenyicons:align-text-justify-outline", //'i-lines'
+    menu: "lucide:menu", //'i-menu'
+    more: "i-rmore:line", //'i-more:"i-rmore'
+    "more-vertical": "i-rmore:2-line", //'i-more-vertical'
+    radio: "formkit:radio", //'i-radio:"formkit'
+    settings: "lucide:settings-2", //'i-settings'
 
-    archive: "lucide:archive",
-    bold: "lucide:bold",
-    clear: "tabler:circle-half-vertical",
-    edit: "material:symbols-light:edit-square-outline",
-    "edit-line": "lucide:pen-line",
-    erase: "lucide:eraser",
-    h1: "lucide:heading-1",
-    h2: "lucide:heading-2",
-    italic: "lucide:italic",
-    "letter-text": "lucide:letter-text",
-    paperclip: "lucide:paperclip",
-    pencil: "lucide:pencil",
-    save: "lucide:save",
-    strikethrough: "lucide:strikethrough",
-    trash: "lucide:trash-2",
+    archive: "lucide:archive", //'i-archive'
+    bold: "lucide:bold", //'i-bold'
+    clear: "tabler:circle-half-vertical", //'i-clear'
+    edit: "material:symbols-light:edit-square-outline", //'i-edit:"material:symbols-light'
+    "edit-line": "lucide:pen-line", //'i-edit-line'
+    erase: "lucide:eraser", //'i-erase'
+    h1: "lucide:heading-1", //'i-h1'
+    h2: "lucide:heading-2", //'i-h2'
+    italic: "lucide:italic", //'i-italic'
+    "letter-text": "lucide:letter-text", //'i-letter-text'
+    paperclip: "lucide:paperclip", //'i-paperclip'
+    pencil: "lucide:pencil", //'i-pencil'
+    save: "lucide:save", //'i-save'
+    strikethrough: "lucide:strikethrough", //'i-strikethrough'
+    trash: "lucide:trash-2", //'i-trash'
 
-    folder: "lucide:folder",
-    "folder-add": "lucide:folder-plus",
-    "folder-delete": "lucide:folder-x",
-    "folder-documents": "formkit:folder",
-    "folder-open": "lucide:folder-closed",
-    folders: "lucide:folders",
+    folder: "lucide:folder", //'i-folder'
+    "folder-add": "lucide:folder-plus", //'i-folder-add'
+    "folder-delete": "lucide:folder-x", //'i-folder-delete'
+    "folder-documents": "formkit:folder", //'i-folder-documents'
+    "folder-open": "lucide:folder-closed", //'i-folder-open'
+    folders: "lucide:folders", //'i-folders'
 
-    "win-key": "streamline:logos:microsoft-windows-logo-3-solid",
-    "x-solid": "teenyicons:x-circle-solid",
-    and: "lucide:ampersand",
-    backspace: "cil:backspace",
-    command: "lucide:command",
-    i: "ion:information-sharp",
-    info: "ri:information-2-line",
-    slash: "heroicons:slash",
-    x: "lucide:x",
-    alert: "lucide:circle-alert",
-    ban: "lucide:ban",
-    error: "tabler:alert-circle",
-    warning: "lucide:triangle-alert",
-    hash: "lucide:hash",
+    "win-key": "streamline:logos:microsoft-windows-logo-3-solid", //'i-win-key'
+    "x-solid": "teenyicons:x-circle-solid", //'i-x-solid'
+    and: "lucide:ampersand", //'i-and'
+    backspace: "cil:backspace", //'i-backspace'
+    command: "lucide:command", //'i-command'
+    i: "ion:information-sharp", //'i-i'
+    info: "ri:information-2-line", //'i-info'
+    slash: "heroicons:slash", //'i-slash'
+    x: "lucide:x", //'i-x'
+    alert: "lucide:circle-alert", //'i-alert'
+    ban: "lucide:ban", //'i-ban'
+    error: "tabler:alert-circle", //'i-error'
+    warning: "lucide:triangle-alert", //'i-warning'
+    hash: "lucide:hash", //'i-hash'
 
-    at: "lucide:at-sign",
-    attach: "meteor:icons:paperclip",
-    chat: "lucide:message-square",
-    "chat-dot": "lucide:message-square-dot",
-    "chat-dots": "lucide:message-square-more",
-    "chat-off": "lucide:message-square-off",
-    "chat-text": "lucide:message-square-text",
-    chats: "lucide:messages-square",
-    mail: "lucide:mail",
-    "mail-all": "lucide:mails",
-    "mail-fill": "fluent:mail-32-filled",
-    "mail-open": "lucide:mail-open",
-    send: "lucide:send",
-    wifi: "lucide:wifi",
+    at: "lucide:at-sign", //'i-at'
+    attach: "meteor-icons:paperclip", //'i-attach'
+    chat: "lucide:message-square", //'i-chat'
+    "chat-dot": "lucide:message-square-dot", //'i-chat-dot'
+    "chat-dots": "lucide:message-square-more", //'i-chat-dots'
+    "chat-off": "lucide:message-square-off", //'i-chat-off'
+    "chat-text": "lucide:message-square-text", //'i-chat-text'
+    chats: "lucide:messages-square", //'i-chats'
+    mail: "lucide:mail", //'i-mail'
+    "mail-all": "lucide:mails", //'i-mail-all'
+    "mail-fill": "fluent:mail-32-filled", //'i-mail-fill'
+    "mail-open": "lucide:mail-open", //'i-mail-open'
+    send: "lucide:send", //'i-send'
+    wifi: "lucide:wifi", //'i-wifi'
 
-    "right-click": "ph:mouse-right-click-fill",
+    "right-click": "ph:mouse-right-click-fill", //'i-right-click'
 
-    "calc-solid": "streamline:calculator-1-solid",
-    absolute: "hugeicons:absolute",
-    add: "lucide:plus",
-    calc: "teenyicons:calculator-outline",
-    minus: "lucide:minus",
-    "sq-minus": "lucide:square-minus",
-    "sq-plus": "lucide:square-plus",
-    weighted: "tabler:math-integral-x",
+    "calc-solid": "streamline:calculator-1-solid", //'i-calc-solid'
+    absolute: "hugeicons:absolute", //'i-absolute'
+    add: "lucide:plus", //'i-add'
+    calc: "teenyicons:calculator-outline", //'i-calc'
+    minus: "lucide:minus", //'i-minus'
+    "sq-minus": "lucide:square-minus", //'i-sq-minus'
+    "sq-plus": "lucide:square-plus", //'i-sq-plus'
+    weighted: "tabler:math-integral-x", //'i-weighted'
 
-    dark: "lucide:moon",
-    dim: "lucide:sun-moon",
-    light: "lucide:sun-medium",
-    system: "lucide:power",
+    dark: "lucide:moon", //'i-dark'
+    dim: "lucide:sun-moon", //'i-dim'
+    light: "lucide:sun-medium", //'i-light'
+    system: "lucide:power", //'i-system'
 
-    discord: "simple:icons-discord",
-    github: "ph:github-logo",
-    google: "lineicons:google",
-    riot: "simple:icons-riotgames",
+    discord: "bi:discord", //'i-discord'
+    github: "ph:github-logo", //'i-github'
+    google: "fe:google", //'i-google'
+    riot: "streamline-logos:riot-games-logo-solid", //'i-riot'
 
-    "exit-fullscreen": "lucide:scan-line",
-    "fast-forward": "material:symbols-light-fast-forward-outline-rounded",
-    fullscreen: "lucide:maximize",
-    image: "lucide:image",
-    images: "entypo:images",
-    next: "teenyicons:next-solid",
-    pause: "teenyicons:pause-solid",
-    play: "teenyicons:play-solid",
+    "exit-fullscreen": "lucide:scan-line", //'i-exit-fullscreen'
+    "fast-forward": "material:symbols-light-fast-forward-outline-rounded", //'i-fast-forward'
+    fullscreen: "lucide:maximize", //'i-fullscreen'
+    image: "lucide:image", //'i-image'
+    images: "entypo:images", //'i-images'
+    next: "teenyicons:next-solid", //'i-next'
+    pause: "teenyicons:pause-solid", //'i-pause'
+    play: "teenyicons:play-solid", //'i-play'
 
-    "circle-big-dot": "clarity:dot-circle-line",
-    "circle-dot": "lucide:circle-dot",
-    dot: "lucide:dot",
-    heart: "gg:heart",
-    "heart-fill": "teenyicons:heart-solid",
-    "heart-sm": "teenyicons:heart-small-solid",
-    "heart-sm-outline": "teenyicons:heart-small-outline",
-    infinity: "gg:infinity",
-    round: "mynaui:circle-solid",
-    shield: "teenyicons:shield-tick-outline",
-    square: "lucide:square",
-    star: "ph:star",
-    "star-fill": "ph:star-fill",
+    "circle-big-dot": "clarity:dot-circle-line", //'i-circle-big-dot'
+    "circle-dot": "lucide:circle-dot", //'i-circle-dot'
+    dot: "lucide:dot", //'i-dot'
+    heart: "gg:heart", //'i-heart'
+    "heart-fill": "teenyicons:heart-solid", //'i-heart-fill'
+    "heart-sm": "teenyicons:heart-small-solid", //'i-heart-sm'
+    "heart-sm-outline": "teenyicons:heart-small-outline", //'i-heart-sm-outline'
+    infinity: "gg:infinity", //'i-infinity'
+    round: "mynaui:circle-solid", //'i-round'
+    shield: "teenyicons:shield-tick-outline", //'i-shield'
+    square: "lucide:square", //'i-square'
+    star: "ph:star", //'i-star'
+    "star-fill": "ph:star-fill", //'i-star-fill'
 
-    key: "lucide:key-round",
-    "pin-solid": "iconoir:pin-solid",
-    backpack: "tabler:briefcase",
-    "bar-chart": "lucide:chart-no-axes-column",
-    "bell-ring": "lucide:bell-ring",
-    book: "tabler:notebook",
-    bot: "lucide:bot",
-    "bot-chat": "lucide:bot-message-square",
-    bow: "mdi:bow-arrow",
-    calendar: "lucide:calendar",
-    cat: "solar:cat-outline",
-    chart: "lucide:bar-chart-3",
-    clock: "lucide:clock",
-    compass: "lucide:compass",
-    crown: "gg:crown",
-    favorite: "f7:square-favorites-alt",
-    history: "lucide:history",
-    nexus: "lucide:orbit", //"majesticons:atom-2",
-    "open-book": "hugeicons:book-open-02",
-    "paint-bucket": "lucide:paint-bucket",
-    paintbrush: "lucide:paintbrush-vertical",
-    "panel-dash": "lucide:panel-top-dashed",
+    key: "lucide:key-round", //'i-key'
+    "pin-solid": "iconoir:pin-solid", //'i-pin-solid'
+    backpack: "tabler:briefcase", //'i-backpack'
+    "bar-chart": "lucide:chart-no-axes-column", //'i-bar-chart'
+    "bell-ring": "lucide:bell-ring", //'i-bell-ring'
+    book: "tabler:notebook", //'i-book'
+    bot: "lucide:bot", //'i-bot'
+    "bot-chat": "lucide:bot-message-square", //'i-bot-chat'
+    bow: "mdi:bow-arrow", //'i-bow'
+    calendar: "lucide:calendar", //'i-calendar'
+    cat: "solar:cat-outline", //'i-cat'
+    chart: "lucide:bar-chart-3", //'i-chart'
+    clock: "lucide:clock", //'i-clock'
+    compass: "lucide:compass", //'i-compass'
+    crown: "gg:crown", //'i-crown'
+    favorite: "f7:square-favorites-alt", //'i-favorite'
+    history: "lucide:history", //'i-history'
+    nexus: "lucide:orbit", //"i-majesticons:atom-2",//'i-nexus:"lucide:orbit"
+    "open-book": "hugeicons:book-open-02", //'i-open-book'
+    "paint-bucket": "lucide:paint-bucket", //'i-paint-bucket'
+    paintbrush: "lucide:paintbrush-vertical", //'i-paintbrush'
+    "panel-dash": "lucide:panel-top-dashed", //'i-panel-dash'
 
-    party: "lucide:party-popper",
-    plug: "tabler:plug",
-    "shopping-bag": "lucide:shopping-bag",
-    smile: "lucide:smile",
-    swatch: "lucide:swatch-book",
-    todo: "lucide:list-todo",
-    "up-face": "iconoir:emojlook:up",
-    user: "lucide:user",
-    "user-cog": "lucide:user-cog",
-    "user-square": "lucide:square-user",
+    party: "lucide:party-popper", //'i-party'
+    plug: "tabler:plug", //'i-plug-tabler'
+    "shopping-bag": "lucide:shopping-bag", //'i-shopping-bag'
+    smile: "lucide:smile", //'i-smile'
+    swatch: "lucide:swatch-book", //'i-swatch'
+    todo: "lucide:list-todo", //'i-todo'
+    "image-circle": "li-solar-gallery-circle-bold-duotone", //'i-image-round'
+    "up-face": "iconoir-emoj:look-up", //'i-up-face'
+    user: "lucide:user", //'i-user'
+    "user-cog": "lucide:user-cog", //'i-user-cog'
+    "user-square": "lucide:square-user", //'i-user-square'
 
-    "attack-range": "hugeicons:target-02",
-    "charge-1": "hugeicons:battery-low",
-    "charge-2": "hugeicons:battery-medium-01",
-    "charge-3": "hugeicons:battery-medium-02",
-    "charge-4": "hugeicons:battery-full",
-    energy: "hugeicons:zap",
-    fury: "hugeicons:fire-02",
-    pathing: "hugeicons:cursor-circle-selection-02",
-    range: "hugeicons:target-03",
+    "attack-range": "hugeicons:target-02", //'i-attack-range'
+    "charge-1": "hugeicons:battery-low", //'i-charge-1'
+    "charge-2": "hugeicons:battery-medium-01", //'i-charge-2'
+    "charge-3": "hugeicons:battery-medium-02", //'i-charge-3'
+    "charge-4": "hugeicons:battery-full", //'i-charge-4'
+    energy: "hugeicons:zap", //'i-energy'
+    fury: "hugeicons:fire-02", //'i-fury'
+    pathing: "hugeicons:cursor-circle-selection-02", //'i-pathing'
+    range: "hugeicons:target-03", //'i-range'
   },
 }

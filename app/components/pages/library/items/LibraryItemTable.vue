@@ -94,6 +94,7 @@ onMounted(() => {
 
 <template>
   <UButton>TESST</UButton><UButton>TESST</UButton><br />
-  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky> </UTable>
+  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky>
+  </UTable>
   <UButton>TESST</UButton><UButton>TESST</UButton><br />
 </template>

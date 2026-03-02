@@ -22,7 +22,7 @@ const ranks = computed<ArrayOrNested<TabsItem>>(() => [
     slot: "all" as const,
     ui: {
       trigger:
-        "not-active:bg-p1  not-active:sh-xs active:w-max active:px-5  border-neutral border hover:not-active:border-p4/60 hover:not-active:bg-p2 transition-colors duration-50 hover:not-active:iss-xs not-active:noise not-active:border-p3/80  mr-2 not-active:ring not-active:anchor group/t",
+        "not-active:bg-p1  not-active:shadow-xs active:w-max active:px-5  border-neutral border hover:not-active:border-p4/60 hover:not-active:bg-p2 transition-colors duration-50 hover:not-active:inset-shadow-xs not-active:noise not-active:border-p3/80  mr-2 not-active:ring not-active:anchor group/t",
       label: "",
       leadingIcon:
         "size-3.5 **:stroke-[2.6] text-pc opacity-60 transition-all duration-50 group-hover/t:opacity-100",
@@ -60,9 +60,11 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
     <template #toolbar>
       <LazyItemFilterToolbar :nav />
     </template>
-    <template #toolbar-left> </template>
+    <template #toolbar-left>
+    </template>
 
-    <template #toolbar-center> </template>
+    <template #toolbar-center>
+    </template>
 
     <template #links>
       <div class="relative items-center justify-end">
@@ -71,7 +73,7 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
             variant="outline"
             color="default"
             :ui="{
-              root: 'w-full justify-self-end ',
+              root: 'w-full justify-self-end',
               trailing: 'opacity-60 *:-mx-[0.25px]',
               base: 'w-full',
             }" />
@@ -93,7 +95,7 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
         color="neutral"
         :ui="{
           root: 'w-fit translate-y-px',
-          indicator: 'duration-150  ring-0 ',
+          indicator: 'ring-0 duration-150',
           trigger: 'w-min px-2',
         }" />
       <Grow />

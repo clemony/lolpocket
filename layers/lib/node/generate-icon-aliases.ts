@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 // Adjust this if script location changes
 const root = resolve(__dirname, "../../..")
 
-const sourcePath = resolve(root, "layers/ui/app/assets/icons/icon-index.ts")
+const sourcePath = resolve(root, "layers/ui/app/icon-index.ts")
 
 const outputPath = resolve(root, ".vscode/.iconify/icon-alias.json")
 

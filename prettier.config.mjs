@@ -13,7 +13,13 @@ const config = {
   tailwindPreserveDuplicates: false,
   tailwindPreserveWhitespace: false,
   tailwindStylesheet: "./layers/ui/app/assets/css/tailwind.css",
-  trailingComma: "es5",
+  trailingComma: "all",
+  overrides: [
+    {
+      files: ["*.json", "*.jsonc", "*.json5"],
+      options: { trailingComma: "none" },
+    },
+  ],
   plugins: [
     "@prettier/plugin-xml",
     "@svgr/plugin-prettier",

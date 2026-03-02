@@ -8,6 +8,8 @@ export const user = defineStore(
     const account = ref<AccountData>()
     const settings = ref<Settings>()
     const inbox = ref<Inbox>()
+    const matchStatus = shallowRef<boolean>(true)
+    function refreshMatchStatus() {}
 
     const { cache } = storeToRefs(sSummoner())
 
@@ -25,7 +27,7 @@ export const user = defineStore(
         ) {
           Object.assign(account.value, update)
         }
-      }
+      },
     )
 
     function clearAccount() {
@@ -39,6 +41,9 @@ export const user = defineStore(
       inbox,
       sb,
       user,
+
+      matchStatus,
+      refreshMatchStatus,
     }
   },
   {
@@ -46,5 +51,5 @@ export const user = defineStore(
       key: "accountStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
-  }
+  },
 )

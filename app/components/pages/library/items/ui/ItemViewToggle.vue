@@ -12,10 +12,10 @@ const tabValue = computed(() => tab.value === 0)
     v-model:model-value="tab"
     :items="Object.values(tabData)"
     :ui="{
-      root: 'w-fit!  inline align-middle grow-0 ',
-      list: 'w-fit  p-0 gap-2',
+      root: 'inline w-fit! grow-0 align-middle',
+      list: 'w-fit gap-2 p-0',
       trigger: 'size-10 self-center px-3',
-      indicator: 'size-10!   ring-0',
+      indicator: 'size-10! ring-0',
       label: 'hidden',
     }"
     variant="ghost"

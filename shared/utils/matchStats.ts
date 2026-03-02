@@ -1,6 +1,4 @@
-import type { MatchStat, MatchStatGroup } from "#shared/types"
-
-export const matchStatGroups: MatchStatGroup[] = [
+export const matchStatGroups: import("#shared/types").MatchStatGroup[] = [
   {
     color: "color-mix(in lch, var(--color-b3) 80%, black 20%)",
     name: "stats",
@@ -35,7 +33,10 @@ export const matchStatGroups: MatchStatGroup[] = [
   },
 ]
 
-export const matchStatRegistry: Record<string, MatchStat> = {
+export const matchStatRegistry: Record<
+  string,
+  import("#shared/types").MatchStatValue
+> = {
   assists: {
     name: "assists",
     group: "stats",

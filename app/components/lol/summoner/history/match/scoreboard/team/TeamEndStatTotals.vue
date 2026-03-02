@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import KDA from "~/components/lol/summoner/history/ui/KDA.vue"
+
 const { class: className, team } = defineProps<{
   team: MatchTeam
   class?: HTMLAttributes["class"]

@@ -13,7 +13,7 @@ const route = useRoute()
 const scrollRef = useState<HTMLElement>("scrollRef")
 const { scrollToHash, scrollY } = useScrollProvider(scrollRef, { offset: -100 })
 const isSummonerRoute = computed(() =>
-  Boolean(route.params.region && route.params.slug)
+  Boolean(route.params.region && route.params.slug),
 )
 
 const bg = computed(() =>
@@ -23,7 +23,7 @@ const bg = computed(() =>
       ? pocket.icon
       : champion
         ? getSplash(champion.key, "uncentered")
-        : getRandomBg()
+        : getRandomBg(),
 )
 </script>
 
@@ -37,19 +37,23 @@ const bg = computed(() =>
     <!-- bg -->
     <div
       class="pointer-events-none relative z-0 -mt-15 grid h-95 w-screen overflow-hidden border-b border-p4/60">
-      <BgSplash class="" :src="bg" />
+      <ClientOnly> <LazyBgSplash class="" :src="bg" /></ClientOnly>
       <UContainer class="z-0 grid items-center py-16">
-        <SummonerHeader v-if="isSummonerRoute" />
-        <PocketHeader v-else-if="pocket" :pocket />
-        <ChampionHeader v-else-if="champion" :champion />
+        <ClientOnly>
+          <LazySummonerHeader v-if="isSummonerRoute" />
+          <LazyPocketHeader v-else-if="pocket" :pocket />
+          <LazyChampionHeader v-else-if="champion" :champion />
+        </ClientOnly>
       </UContainer>
     </div>
     <!-- Sticky Tabs  -->
     <div
       class="pointer-events-none sticky top-0 z-11 -mt-15 flex h-15 w-screen items-end justify-start gap-4 overflow-hidden pl-20">
       <UContainer>
-        <SummonerChampionNavTabs v-if="isSummonerRoute" />
-        <NavFileTabs v-else />
+        <ClientOnly>
+          <LazySummonerChampionNavTabs v-if="isSummonerRoute" />
+          <LazyNavFileTabs v-else />
+        </ClientOnly>
       </UContainer>
     </div>
     <UMain class="z-0 bg-p0">
@@ -58,7 +62,7 @@ const bg = computed(() =>
         <slot />
       </UContainer>
       <div class="fixed right-24 bottom-24 z-4 grid gap-4">
-        <FloatingSummonerUtilities v-if="isSummonerRoute" />
+        <!--    <LazyFloatingSummonerUtilities v-if="isSummonerRoute" /> -->
         <ToTop />
       </div>
     </UMain>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ProviderType } from "~/domain/lp/external/authProviders"
 import { providers } from "~/domain/lp/external/authProviders"
 
 definePageMeta({
@@ -11,7 +12,7 @@ definePageMeta({
 })
 
 const userProviders = await computedAsync(() =>
-  Object.values(user().user?.app_metadata?.providers ?? {})
+  Object.values(user().user?.app_metadata?.providers ?? {}),
 )
 const email = shallowRef<string | undefined>("")
 const username = shallowRef<string | undefined>("")
@@ -77,15 +78,16 @@ onMounted(() => {
           <UCard>
             <UUser
               size="md"
-              :name="provider.name"
+              :name="provider.label"
               :icon="String(provider.icon)">
               <template #avatar>
                 <Icon
                   :name="String(provider.icon)"
                   :class="
                     cn('size-10.5 ds-2xs', {
-                      'text-dom': provider.name === 'riot',
-                      'scale-90': provider.name === 'google',
+                      'text-dom':
+                        provider.label === ('riot' as ProviderType['label']),
+                      'scale-90': provider.label === 'google',
                     })
                   " />
               </template>
@@ -94,12 +96,12 @@ onMounted(() => {
             <USwitch
               :ui="{ label: 'order-first' }"
               :label="
-                userProviders?.includes(provider.name)
+                userProviders?.includes(provider.label)
                   ? 'Connected'
                   : 'Not Connected'
               "
               class="switch -mt-0.25 scale-90 ds-2xs data-[state=checked]:ring data-[state=checked]:ring-white/60"
-              :model-value="userProviders?.includes(provider.name)" />
+              :model-value="userProviders?.includes(provider.label)" />
           </UCard>
         </Label>
       </FieldGroup>
@@ -109,9 +111,7 @@ onMounted(() => {
     <UFormField title="" description=""></UFormField>
     <fieldset id="blocked-users" class="space-y-6">
       <div class="leading-4">
-        <h4 class="mb-2 text-xl font-semibold" as="legend">
-          Blocked Users
-        </h4>
+        <h4 class="mb-2 text-xl font-semibold" as="legend">Blocked Users</h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in

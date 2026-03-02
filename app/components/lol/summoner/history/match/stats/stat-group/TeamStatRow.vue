@@ -1,16 +1,19 @@
 <script lang="ts" setup>
+import KDA from "~/components/lol/summoner/history/ui/KDA.vue"
+import MatchOutcome from "~/components/lol/summoner/history/match/ui/MatchOutcome.vue"
+import type { MatchStatValue } from "#shared/types"
 const { k, teams, v } = defineProps<{
   teams: MatchTeam[]
   k: string
-  v: MatchStat
+  v: MatchStatValue
 }>()
 
 const highest = computed(() => 0)
 
 const bans = computedOnce(() => {
-  return teams.flatMap(t => t.bans)
+  return teams.flatMap((t) => t.bans)
 })
-console.log('🥸 - bans:', bans)
+console.log("🥸 - bans:", bans)
 
 const teamValue = (team: MatchTeam, key: string) =>
   (team as unknown as Record<string, number | string | undefined>)[key]
@@ -44,10 +47,7 @@ const teamValue = (team: MatchTeam, key: string) =>
     </div>
 
     <template v-if="k === 'bans'">
-      <ChampionBan
-        v-for="champion in bans"
-        :id="champion"
-        :key="champion" />
+      <ChampionBan v-for="champion in bans" :id="champion" :key="champion" />
     </template>
     <template v-else>
       <div
@@ -57,16 +57,17 @@ const teamValue = (team: MatchTeam, key: string) =>
           cn(
             'match-cell z-0 size-full items-center last-of-type:border-0! hover:z-3 hover:bg-p3/30',
             teamValue(team, k) === 0 ? 'match-null' : '',
-            i === 0 && k === 'bans' ? 'col-span-5 col-start-2'
-            : k === 'bans' ? 'col-span-5 col-start-7'
-              : i === 0 ? 'col-start-4'
-                : 'col-start-9',
+            i === 0 && k === 'bans'
+              ? 'col-span-5 col-start-2'
+              : k === 'bans'
+                ? 'col-span-5 col-start-7'
+                : i === 0
+                  ? 'col-start-4'
+                  : 'col-start-9',
             {},
           )
         ">
-        <div
-          v-if="k === 'teamId'"
-          class="font-semibold capitalize">
+        <div v-if="k === 'teamId'" class="font-semibold capitalize">
           {{ matchTeams[team.teamId as 100 | 200]?.name }} team
         </div>
         <MatchOutcome

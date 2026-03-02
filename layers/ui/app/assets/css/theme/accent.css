@@ -73,11 +73,11 @@
   --ui-dom-content: var(--color-dom-50);
   --ui-pre-content: var(--color-pre-50);
 
-  --ui-insp-offset: var(--color-insp-700);
-  --ui-res-offset: var(--color-res-700);
-  --ui-sorc-offset: var(--color-sorc-700);
-  --ui-dom-offset: var(--color-dom-700);
-  --ui-pre-offset: var(--color-pre-800);
+  --ui-insp-offset: var(--color-insp-500);
+  --ui-res-offset: var(--color-res-500);
+  --ui-sorc-offset: var(--color-sorc-500);
+  --ui-dom-offset: var(--color-dom-500);
+  --ui-pre-offset: var(--color-pre-600);
 
   .dim,
   .dark {
@@ -88,4 +88,24 @@
     --ui-pre: var(--color-pre-500);
     --ui-legendary: var(--color-pre-400);
   }
+}
+
+@theme {
+  --color-legendary: var(--ui-legendary);
+  --color-info: var(--ui-sorc);
+  --color-success: var(--ui-res);
+  --color-warning: var(--ui-pre);
+  --color-error: var(--ui-dom);
+
+  --color-pre: var(--ui-pre);
+  --color-dom: var(--ui-dom);
+  --color-sorc: var(--ui-sorc);
+  --color-res: var(--ui-res);
+  --color-insp: var(--ui-insp);
+
+  --color-insp-offset: var(--ui-insp-offset);
+  --color-res-offset: var(--ui-res-offset);
+  --color-sorc-offset: var(--ui-sorc-offset);
+  --color-dom-offset: var(--ui-dom-offset);
+  --color-pre-offset: var(--ui-pre-offset);
 }

@@ -1,3 +1,3 @@
-export function riotFetch<T>(path: string, options?: any) {
-  return $fetch<T>(`/api/riot/${path}`, options)
+export function riotFetch<T>(path: string, fetchOptions?: any) {
+  return $fetch<T>(`/api/riot/${path}`, fetchOptions)
 }

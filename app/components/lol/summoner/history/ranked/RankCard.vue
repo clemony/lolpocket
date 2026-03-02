@@ -20,7 +20,7 @@ const data = computed(() => {
     legend
     :ui="{
       root: cn('relative h-36 overflow-visible', className),
-      body: ' place-items-center  h-36 grid grid-cols-[1.1fr_1fr_1fr]  w-full',
+      body: 'grid h-36 w-full grid-cols-[1.1fr_1fr_1fr] place-items-center',
     }">
     <span
       class="field-legend absolute translate-x-3 -translate-y-2.5 place-self-start text-sm font-medium">

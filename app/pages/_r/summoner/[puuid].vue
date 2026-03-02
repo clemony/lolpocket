@@ -3,60 +3,40 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 
 definePageMeta({
   name: "summoner",
-  layout: "default",
+  layout: false,
 })
 
 const route = useRoute()
-const { finish, progress, start } = useLoadingIndicator()
+const puuid = String(route.params.puuid ?? "")
 
-onBeforeMount(async () => {
-  start()
+if (!puuid) {
+  await navigateTo("/", { replace: true })
+}
 
-  try {
-    const puuid = String(route.params.puuid ?? "")
-    if (!puuid) {
-      await navigateTo("/", { replace: true })
-      return
-    }
+try {
+  const store = sSummoner()
+  let summoner = store.resolveByPuuid(puuid)
 
-    const store = sSummoner()
-    let summoner = store.resolveByPuuid(puuid)
-
-    // If cached identity is incomplete, force-refresh before redirecting.
-    if (!summoner?.region || !summoner?.name || !summoner?.tag) {
-      summoner = await store.ensureSummoner({ puuid, force: true })
-    }
-
-    if (!summoner) {
-      await navigateTo("/", { replace: true })
-      return
-    }
-
-    const target = buildSummonerRootPath(summoner)
-    if (target === route.path) {
-      await navigateTo("/", { replace: true })
-      return
-    }
-
-    await navigateTo(target, { replace: true })
-  } catch {
-    await navigateTo("/", { replace: true })
-  } finally {
-    finish()
+  // If cached identity is incomplete, force-refresh before redirecting.
+  if (!summoner?.region || !summoner?.name || !summoner?.tag) {
+    summoner = await store.ensureSummoner({ puuid, force: true })
   }
-})
+
+  if (!summoner) {
+    await navigateTo("/", { replace: true })
+  } else {
+    const target = buildSummonerRootPath(summoner)
+    if (target !== route.path) {
+      await navigateTo(target, { replace: true })
+    }
+  }
+} catch {
+  await navigateTo("/", { replace: true })
+}
 </script>
 
 <template>
-  <UPage>
-    <UPageBody icon="search" class="grid place-items-center">
-      <UPageCard
-        title="Loading..."
-        description="Resolving summoner identity and redirecting.">
-        <template #body>
-          <UProgress v-model:model-value="progress" />
-        </template>
-      </UPageCard>
-    </UPageBody>
-  </UPage>
+  <div class="grid min-h-screen place-items-center p-6 text-sm text-muted">
+    Resolving summoner and redirecting...
+  </div>
 </template>

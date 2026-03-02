@@ -1,18 +1,17 @@
 <script lang="ts" setup>
+import type { MatchStatValue } from "#shared/types"
 const { group, k, match, v } = defineProps<{
   match: MatchData
   group: MatchStatGroup
   k: string
-  v: MatchStat
+  v: MatchStatValue
 }>()
 
 const open = shallowRef<boolean>(false)
 </script>
 
 <template>
-  <Collapsible
-    v-model:open="open"
-    class="col-span-full h-fit w-full">
+  <Collapsible v-model:open="open" class="col-span-full h-fit w-full">
     <!-- trigger -->
     <CollapsibleTrigger as-child>
       <MatchPlayerStatRow

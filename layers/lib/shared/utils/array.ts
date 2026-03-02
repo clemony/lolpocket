@@ -1,8 +1,19 @@
-type SortDirection = 'asc' | 'desc'
+type SortDirection = "asc" | "desc"
 
 export function getRandom(thing: any[]) {
-  const i = Math.floor(Math.random() * thing.length)
+  const i = globalThis.Math.floor(globalThis.Math.random() * thing.length)
   return thing[i]
+}
+
+export const chunkArray = (
+  array: readonly any[],
+  chunkSize: number
+): readonly any[][] => {
+  const chunks = Array.from(
+    { length: globalThis.Math.ceil(array.length / chunkSize) },
+    (_, i) => array.slice(i * chunkSize, (i + 1) * chunkSize)
+  )
+  return chunks.map((chunk) => [...chunk])
 }
 
 export function getByIndex<T extends Record<string, any>>(
@@ -10,7 +21,7 @@ export function getByIndex<T extends Record<string, any>>(
   inputKey: keyof T,
   value: T[keyof T]
 ): T | undefined {
-  return dataset.find(i => i[inputKey] === value)
+  return dataset.find((i) => i[inputKey] === value)
 }
 
 export function findInIndex<T extends Record<string, any>>(
@@ -19,7 +30,7 @@ export function findInIndex<T extends Record<string, any>>(
   value: T[keyof T],
   outputKey: keyof T
 ): T[keyof T] | undefined {
-  return dataset.find(i => i[inputKey] === value)?.[outputKey]
+  return dataset.find((i) => i[inputKey] === value)?.[outputKey]
 }
 
 export const safeArray = <T>(v?: T[] | null): T[] => (Array.isArray(v) ? v : [])
@@ -27,23 +38,23 @@ export const safeArray = <T>(v?: T[] | null): T[] => (Array.isArray(v) ? v : [])
 export function sortMapBy<K, T, P extends keyof T>(
   map: Map<K, T>,
   prop: P,
-  direction: SortDirection = 'desc',
+  direction: SortDirection = "desc",
   locale?: string
 ): T[] {
-  const dir = direction === 'asc' ? 1 : -1
+  const dir = direction === "asc" ? 1 : -1
 
   return Array.from(map.values()).sort((a, b) => {
     const av = a[prop]
     const bv = b[prop]
 
-    if (typeof av === 'number' && typeof bv === 'number') {
+    if (typeof av === "number" && typeof bv === "number") {
       return (av - bv) * dir
     }
 
     return (
       String(av).localeCompare(String(bv), locale, {
         numeric: true,
-        sensitivity: 'base',
+        sensitivity: "base",
       }) * dir
     )
   })

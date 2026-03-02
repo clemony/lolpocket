@@ -3,65 +3,44 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 
 definePageMeta({
   name: "summoner-resolver-subroute",
-  layout: "default",
+  layout: false,
 })
 
 const route = useRoute()
-const { finish, progress, start } = useLoadingIndicator()
+const puuid = String(route.params.puuid ?? "")
+const rest = Array.isArray(route.params.rest)
+  ? route.params.rest.join("/")
+  : String(route.params.rest ?? "")
 
-onBeforeMount(async () => {
-  start()
+if (!puuid) {
+  await navigateTo("/", { replace: true })
+}
 
-  try {
-    const puuid = String(route.params.puuid ?? "")
-    if (!puuid) {
-      await navigateTo("/", { replace: true })
-      return
-    }
+try {
+  const store = sSummoner()
+  let summoner = store.resolveByPuuid(puuid)
 
-    const rest = Array.isArray(route.params.rest)
-      ? route.params.rest.join("/")
-      : String(route.params.rest ?? "")
+  if (!summoner?.region || !summoner?.name || !summoner?.tag) {
+    summoner = await store.ensureSummoner({ puuid, force: true })
+  }
 
-    const store = sSummoner()
-    let summoner = store.resolveByPuuid(puuid)
-
-    if (!summoner?.region || !summoner?.name || !summoner?.tag) {
-      summoner = await store.ensureSummoner({ puuid, force: true })
-    }
-
-    if (!summoner) {
-      await navigateTo("/", { replace: true })
-      return
-    }
-
+  if (!summoner) {
+    await navigateTo("/", { replace: true })
+  } else {
     const root = buildSummonerRootPath(summoner)
     const target = rest ? `${root}/${rest}` : root
 
-    if (target === route.path) {
-      await navigateTo("/", { replace: true })
-      return
+    if (target !== route.path) {
+      await navigateTo(target, { replace: true })
     }
-
-    await navigateTo(target, { replace: true })
-  } catch {
-    await navigateTo("/", { replace: true })
-  } finally {
-    finish()
   }
-})
+} catch {
+  await navigateTo("/", { replace: true })
+}
 </script>
 
 <template>
-  <UPage>
-    <UPageBody icon="search" class="grid place-items-center">
-      <UPageCard
-        title="Loading..."
-        description="Resolving summoner identity and redirecting.">
-        <template #body>
-          <UProgress v-model:model-value="progress" />
-        </template>
-      </UPageCard>
-    </UPageBody>
-  </UPage>
+  <div class="grid min-h-screen place-items-center p-6 text-sm text-muted">
+    Resolving summoner and redirecting...
+  </div>
 </template>

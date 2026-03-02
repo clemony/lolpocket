@@ -41,7 +41,9 @@ const championData = computed(() =>
 <template>
   <UPage class="relative pb-32">
     <UPageHeader class="px-20">
-      <h1 class="dst self-start font-bold">Champion Stats</h1>
+      <h1 class="dst self-start font-bold">
+        Champion Stats
+      </h1>
 
       <QueueFilters />
       <LazyMatchPositionFilter orientation="vertical" />

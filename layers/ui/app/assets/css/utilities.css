@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+@utility inset-shadow-morphism-* {
+  box-shadow:
+    inset calc(--value(integer) * 1px) calc(--value(integer) * 1px) 9px
+      rgb(0 0 0 / 0.18),
+    inset calc(--value(integer) * -1px) calc(--value(integer) * -1px) 9px
+      var(--color-p0);
+
+  /* modifier  */
+  box-shadow:
+    inset calc(--value(integer) * 1px) calc(--value(integer) * 1px) 9px
+      rgb(0 0 0 / calc(--modifier(integer) / 100)),
+    inset calc(--value(integer) * -1px) calc(--value(integer) * -1px) 9px
+      var(--color-p0);
+}
+
+@utility shadow-morphism-* {
+  box-shadow:
+    calc(--value(integer) * 1px) calc(--value(integer) * 1px) 10px
+      rgb(0 0 0 / 0.2),
+    calc(--value(integer) * -1px) calc(--value(integer) * -1px) 10px
+      var(--color-p0);
+
+  /* modifier  */
+  box-shadow:
+    calc(--value(integer) * 1px) calc(--value(integer) * 1px) 10px
+      rgb(0 0 0 / calc(--modifier(integer) / 100)),
+    calc(--value(integer) * -1px) calc(--value(integer) * -1px) 10px
+      var(--color-p0);
+}
+
 @utility border-* {
   border-style: --value("ridge", "groove", "inset", "outset");
 }
@@ -14,14 +44,6 @@
 
 @utility ds-* {
   filter: drop-shadow(--value(--drop-shadow-*));
-}
-
-@utility sh-* {
-  box-shadow: --value(--shadow-*);
-}
-
-@utility iss-* {
-  box-shadow: --value(--inset-shadow-*);
 }
 
 @utility text-last-* {

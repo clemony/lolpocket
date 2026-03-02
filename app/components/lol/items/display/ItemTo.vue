@@ -10,7 +10,7 @@ const filtered = computed(() => to.filter((to) => to.id < 9999))
 <template>
   <div v-if="to && filtered" class="mt-1.5">
     <div
-      class="divider my-2 divider-start text-2xs! after:h-px after:bg-white after:opacity-10">
+      class="divider divider-start my-2 text-2xs! after:h-px after:bg-white after:opacity-10">
       BUILDS INTO
     </div>
 

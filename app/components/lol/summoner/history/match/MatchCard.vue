@@ -14,7 +14,7 @@ const isOpen = ref(false)
 <template>
   <UCard
     :ui="{
-      body: 'p-0! flex grow w-full ',
+      body: 'flex w-full grow p-0!',
     }"
     as-child>
     <UCollapsible
@@ -28,7 +28,7 @@ const isOpen = ref(false)
             ? 'from-p3 before:border-p3'
             : player?.win === true
               ? 'from-insp/80 before:border-insp'
-              : 'from-dom/80 before:border-dom'
+              : 'from-dom/80 before:border-dom',
         ),
       }">
       <UButton
@@ -49,7 +49,7 @@ const isOpen = ref(false)
         </div>
       </UButton>
 
-      <LazyMatchContent :match :player />
+      <!--       <MatchContent :match :player /> -->
     </UCollapsible>
   </UCard>
 </template>

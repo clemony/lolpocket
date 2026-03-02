@@ -3,11 +3,11 @@ export function isEven(n: number) {
 }
 
 export function isOdd(n: number) {
-  return Math.abs(n % 2) === 1
+  return globalThis.Math.abs(n % 2) === 1
 }
 
 export function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value))
+  return globalThis.Math.min(max, globalThis.Math.max(min, value))
 }
 
 export function lerp(min: number, max: number, t: number) {
@@ -48,22 +48,25 @@ export function safeDivide(a: number, b: number, fallback = 0) {
   return b === 0 ? fallback : a / b
 }
 
-export const clamp01 = (v: number) => Math.min(1, Math.max(0, v))
+export const clamp01 = (v: number) =>
+  globalThis.Math.min(1, globalThis.Math.max(0, v))
 
 export function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max)
+  return globalThis.Math.floor(globalThis.Math.random() * max)
 }
 
 export function roundDecimalToPercent(v: number, total: number) {
-  return v ? Math.round((v / total) * 1000) / 10 : 0
+  return v ? globalThis.Math.round((v / total) * 1000) / 10 : 0
 }
 
 export function roundDecimal(v: number, dec = 1) {
-  return v ? Math.round(v * (10 * dec)) / (10 * dec) : 0
+  return v ? globalThis.Math.round(v * (10 * dec)) / (10 * dec) : 0
 }
 
 export function roundInt(v: number, total: number, decimals = 1) {
-  return v ? Math.round((v / total) * 10 ** decimals) / 10 ** decimals : 0
+  return v
+    ? globalThis.Math.round((v / total) * 10 ** decimals) / 10 ** decimals
+    : 0
 }
 
 // wilson score lower bound for winrate confidence
@@ -75,7 +78,7 @@ export function wilsonLowerBound(wins: number, games: number, z = 1.96) {
   const num
     = p
       + (z * z) / (2 * games)
-      - z * Math.sqrt((p * (1 - p) + (z * z) / (4 * games)) / games)
+      - z * globalThis.Math.sqrt((p * (1 - p) + (z * z) / (4 * games)) / games)
 
   return num / denom
 }

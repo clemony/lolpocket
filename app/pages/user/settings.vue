@@ -41,7 +41,7 @@ const settingsRoutes = computed(
           <UPageHeader class="border-b-0" title="Settings" />
         </template>
         <UPageLinks
-          :ui="{ link: 'capitalize pl-1 py-2 font-medium hover:underline' }"
+          :ui="{ link: 'py-2 pl-1 font-medium capitalize hover:underline' }"
           :links="settingsRoutes"
           size="xl" />
       </UPageAside>

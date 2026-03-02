@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const emit = defineEmits(["error"])
+
 definePageMeta({
   name: "Sign up",
   alias: "/sign-up",

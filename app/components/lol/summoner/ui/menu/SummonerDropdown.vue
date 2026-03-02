@@ -33,7 +33,7 @@ function handleBlock() {
       color="p1"
       variant="ghost"
       :ui="{
-        base: 'w-74 rounded-lg px-4 justify-between hover:bg-p0/70',
+        base: 'w-74 justify-between rounded-lg px-4 hover:bg-p0/70',
       }">
       <span class="inline-flex items-center gap-2 align-baseline">
         <h1 class="truncate text-xl font-bold">

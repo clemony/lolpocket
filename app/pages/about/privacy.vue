@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { privacyPolicy } from '~/domain/lp/policies/privacy-policy'
+import { privacyPolicy } from "~/domain/lp/policies/privacy-policy"
 
 definePageMeta({
-  title: 'Privacy Policy',
-  description: 'Information regarding how your data is used.',
-  icon: 'lucide:shield-check',
-  listClass: 'scale-105',
+  title: "Privacy Policy",
+  description: "Information regarding how your data is used.",
+  icon: "lucide:shield-check",
+  listClass: "scale-105",
+  path: "/privacy",
 })
 </script>
 
@@ -28,9 +29,7 @@ definePageMeta({
           {{ policy?.title }}
         </h3>
         <template v-if="policy.description">
-          <p
-            v-for="(item, b) in policy.description"
-            :key="b">
+          <p v-for="(item, b) in policy.description" :key="b">
             {{ item }}
           </p>
         </template>
@@ -39,14 +38,10 @@ definePageMeta({
             v-for="(section, b) in policy.sections"
             :key="b"
             class="grid auto-rows-max gap-4">
-            <span
-              class="align-middle text-md/7"
-              v-html="section.title" />
+            <span class="align-middle text-md/7" v-html="section.title" />
             <ol
               class="grid list-outside list-[upper-roman] gap-6 pl-6 leading-5 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
-              <li
-                v-for="(item, c) in section.description"
-                :key="c">
+              <li v-for="(item, c) in section.description" :key="c">
                 {{ item }}
               </li>
             </ol>

@@ -56,7 +56,7 @@ export const dropdownMenuTheme = defineUiTheme({
     },
     size: {
       lg: {
-        item: "gap-2 p-2 text-sm",
+        item: "h-12 gap-2 p-2 text-sm",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-5",
         itemTrailingIcon: "size-5",
@@ -65,16 +65,17 @@ export const dropdownMenuTheme = defineUiTheme({
         label: "gap-2 p-2 text-sm",
       },
       md: {
-        item: "gap-1.75 p-1.5 text-sm",
-        itemLeadingAvatarSize: "xs",
+        item: "h-10 gap-1.75 px-3 text-sm",
+        itemLeadingAvatarSize: "sm",
         itemLeadingIcon: "size-4.25",
         itemTrailingIcon: "size-4",
-        itemTrailingKbds: "gap-0.5",
+        itemTrailingKbds:
+          "gap-1 *:aspect-square *:size-5 *:opacity-100 *:ring *:ring-p3",
         itemTrailingKbdsSize: "md",
         label: "gap-1.5 p-1.5 text-sm",
       },
       sm: {
-        item: "gap-1.5 p-1.5 text-xs",
+        item: "h-8 gap-1.5 p-1.5 text-xs",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-4",
         itemTrailingIcon: "size-4",
@@ -92,7 +93,7 @@ export const dropdownMenuTheme = defineUiTheme({
         label: "gap-2 p-2 text-pc",
       },
       xs: {
-        item: "gap-1 p-1 text-xs",
+        item: "h-7 gap-1 p-1 text-xs",
         itemLeadingAvatarSize: "2xs",
         itemLeadingIcon: "size-4",
         itemTrailingIcon: "size-4",

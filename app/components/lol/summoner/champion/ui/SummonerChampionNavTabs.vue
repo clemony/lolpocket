@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { motion } from "motion-v"
-
 const { scrollY } = useScrollInject()
 
 // const tt = await tabTransform()
@@ -27,7 +25,7 @@ function isActive(path: string) {
 </script>
 
 <template>
-  <motion.nav
+  <nav
     :class="
       cn(
         'relative z-3 flex h-15 w-fit translate-x-10 items-end transition-none *:select-none **:text-sm'
@@ -44,5 +42,5 @@ function isActive(path: string) {
         name="left" />
       {{ item.title }}
     </ChampionNavTab>
-  </motion.nav>
+  </nav>
 </template>

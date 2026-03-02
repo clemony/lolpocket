@@ -27,6 +27,9 @@ export const separatorTheme = defineUiTheme({
       p3: {
         border: "border-p3/80",
       },
+      n3: {
+        border: "border-n3/70",
+      },
     },
     size: {
       lg: "border-3",

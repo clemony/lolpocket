@@ -1,25 +1,26 @@
 <script lang="ts" setup>
+import type { MatchStatValue } from "#shared/types"
 const {
   color,
   class: className,
   match,
   stat,
 } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   match: MatchData
-  stat: [string, MatchStat]
+  stat: [string, MatchStatValue]
   color?: string
 }>()
 
 const statKey = computed(() => stat[0] as keyof PlayerStats)
 const statNumber = (value: PlayerStats[keyof PlayerStats] | undefined) => {
-  if (typeof value === 'number') return value
+  if (typeof value === "number") return value
   return value ? 1 : 0
 }
 const highest = computed(() => {
   const key = statKey.value
   return match.participants
-    .map(p => statNumber(p.stats?.[key]))
+    .map((p) => statNumber(p.stats?.[key]))
     .sort((a, b) => b - a)[0]
 })
 </script>
@@ -64,15 +65,17 @@ const highest = computed(() => {
         }"
         :class="
           cn({
-            'text-pc/0! badge absolute origin-center place-self-center border-0! drop-shadow-none saturate-120 transition-all duration-300 group-hover/stat:scale-500':
+            'absolute badge origin-center place-self-center border-0! text-pc/0! drop-shadow-none saturate-120 transition-all duration-300 group-hover/stat:scale-500':
               statNumber(player.stats?.[statKey]) === highest && highest > 0,
           })
         ">
-        {{ statNumber(player.stats?.[statKey])?.toLocaleString() }}{{ stat[1]?.unit }}
+        {{ statNumber(player.stats?.[statKey])?.toLocaleString()
+        }}{{ stat[1]?.unit }}
       </div>
 
       <span class="absolute place-self-center">
-        {{ statNumber(player.stats?.[statKey])?.toLocaleString() }}{{ stat[1]?.unit }}
+        {{ statNumber(player.stats?.[statKey])?.toLocaleString()
+        }}{{ stat[1]?.unit }}
       </span>
     </div>
   </div>

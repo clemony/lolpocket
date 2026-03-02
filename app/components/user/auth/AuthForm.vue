@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from "@nuxt/ui"
 import * as v from "valibot"
+import { formType } from "./formType"
 
 const { type } = defineProps<{
   type: "logIn" | "signUp"
 }>()
+
+const emit = defineEmits(["error"])
 
 const schema = v.object({
   email: v.pipe(v.string(), v.email("Invalid email")),
@@ -13,65 +16,59 @@ const schema = v.object({
 
 type Schema = v.InferOutput<typeof schema>
 
+const form = useTemplateRef<HTMLFormElement>("form")
+
+const show = shallowRef<boolean>(false)
+
 const state = reactive({
   email: "",
   password: "",
 })
 
+watch(
+  () => state.email,
+  (v) => {
+    state.email = v.trim().toLowerCase()
+  },
+)
+
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
+  if (type === "logIn") {
+    const error = await useSignInWithEmail(state.email, state.password)
+    if (error) {
+      emit("error", error)
+    }
+  }
   toast.add({ title: "Success", description: "The form has been submitted." })
   console.log(event.data)
-}
-interface AuthLink {
-  label: string
-  to: string
-}
-
-interface AuthFormType {
-  submit: {
-    label?: string
-  }
-  swap?: AuthLink[]
-}
-
-const formType: Record<string, AuthFormType> = {
-  logIn: {
-    submit: {
-      label: "Login",
-    },
-    swap: [
-      {
-        label: "Signing up?",
-        to: "/sign-up",
-      },
-    ],
-  },
-  signUp: {
-    submit: {
-      label: "Sign up with Email",
-    },
-    swap: [
-      {
-        label: "Signing up?",
-        to: "/login",
-      },
-      {
-        label: "Forgot Password?",
-        to: "/password-reset",
-      },
-    ],
-  },
 }
 </script>
 
 <template>
   <div class="flex h-fit w-full flex-col justify-center gap-4 self-start">
     <AuthProviderGrid />
-    <USeparator color="p2" label="or" class="my-3" />
-    <UForm :schema="schema" :state="state" class="space-y-6" @submit="onSubmit">
-      <UFormField label="Email" name="email" class="">
-        <UInput v-model="state.email" size="lg" :ui="{ root: 'w-full' }" />
+    <USeparator color="p2" label="or" class="mt-4.5 mb-3.5" />
+    <UForm
+      ref="form"
+      :schema="schema"
+      :state="state"
+      class="space-y-10"
+      @submit="onSubmit">
+      <UFormField label="Email" name="email">
+        <UInput
+          v-model="state.email"
+          inputmode="email"
+          autocomplete="email"
+          autocapitalize="none"
+          size="lg"
+          :ui="{ root: 'w-full' }">
+          <template #trailing>
+            <LazyInputClear
+              v-if="state.email"
+              @clear-input="state.email = ''" />
+          </template>
+        </UInput>
       </UFormField>
 
       <UFormField label="Password" name="password">
@@ -80,24 +77,38 @@ const formType: Record<string, AuthFormType> = {
             Forgot your password?
           </NuxtLink>
         </template>
+
         <UInput
           v-model="state.password"
           size="lg"
+          :autocomplete="formType?.[type]?.autocomplete"
           :ui="{ root: 'w-full' }"
-          type="password">
+          :type="show ? 'text' : 'password'">
           <template #trailing>
-            <LazyInputClear />
+            <UButton
+              color="transparent"
+              :ui="{ leadingIcon: 'text-pc/50 group-hover/btn:text-pc' }"
+              variant="link"
+              size="sm"
+              :icon="show ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+              :aria-label="show ? 'Hide password' : 'Show password'"
+              :aria-pressed="show"
+              aria-controls="password"
+              @click="show = !show" />
+            <LazyInputClear
+              v-if="state.password"
+              @clear-input="state.password = ''" />
           </template>
         </UInput>
       </UFormField>
 
       <UButton
-        class="mt-6 w-full font-semibold"
+        :ui="{ base: 'w-full justify-center font-semibold' }"
         color="neutral"
         size="md"
-        type="submit">
-        {{ formType?.[type]?.submit.label }}
-      </UButton>
+        :disabled="!state.email || !state.password || !form?.errors?.length"
+        :label="formType?.[type]?.submit.label"
+        type="submit" />
     </UForm>
     <div class="flex w-full items-center justify-center gap-3">
       <ULink
@@ -111,3 +122,10 @@ const formType: Record<string, AuthFormType> = {
     </div>
   </div>
 </template>
+
+<style>
+/* Hide the password reveal button in Edge */
+::-ms-reveal {
+  display: none;
+}
+</style>

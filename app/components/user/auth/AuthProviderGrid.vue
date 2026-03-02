@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { authProviders } from "~/domain/lp/external/authProviders"
+import { providers } from "~/domain/lp/external/authProviders"
 </script>
 
 <template>
   <div class="grid grid-cols-3 gap-4">
     <UButton
-      v-for="provider in authProviders"
-      :key="provider"
+      v-for="provider in providers"
+      :key="provider.label"
       size="lg"
       variant="outline"
-      color="p3"
+      color="transparent"
       :ui="{
         base: 'w-full',
-        leadingIcon: 'opacity-80 absolute mx-auto size-5.5 place-self-center',
+        leadingIcon: 'absolute mx-auto size-5.5 place-self-center opacity-80',
       }"
-      :icon="provider"
-      @click="useSignIn(provider)" />
+      :icon="provider.icon"
+      @click="useSignIn(provider.label)" />
   </div>
 </template>

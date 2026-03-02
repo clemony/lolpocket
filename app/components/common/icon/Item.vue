@@ -15,20 +15,7 @@ const {
   disabled?: boolean
 }>()
 
-const emit = defineEmits(["clicked"])
-const loaded = shallowRef<boolean>(false)
-const outerTt = shallowRef<boolean>(true)
-const innerTt = shallowRef<boolean>(false)
-const innerOpen = shallowRef<boolean>(false)
-function handleSwap() {
-  outerTt.value = false
-  innerTt.value = true
-  innerOpen.value = true
-}
-
-function handlePin() {}
-
-const img = useImage()
+const loaded = ref<boolean>(false)
 
 const pinned = shallowRef<boolean>(false)
 </script>
@@ -36,6 +23,8 @@ const pinned = shallowRef<boolean>(false)
 <template>
   <Tooltip
     interactive
+    arrow
+    :side
     :avatar="id ? `/img/items/${id}.webp` : undefined"
     :label="id ? itemNameById(id) : ''"
     :ui="{
@@ -43,7 +32,6 @@ const pinned = shallowRef<boolean>(false)
         'rounded-xl  px-1': pinned,
       }),
     }"
-    :side
     @pinned="pinned = true"
     @unpinned="pinned = false">
     <UAvatar
@@ -54,11 +42,12 @@ const pinned = shallowRef<boolean>(false)
           {
             'opacity-98 shadow-sm shadow-black/30 drop-shadow-sm': id && loaded,
           },
-          className
+          className,
         ),
       }"
       :src="id ? `/img/items/${id}.webp` : undefined"
       :alt="id ? itemNameById(id) : 'item icon'"
+      icon="i-ui-none"
       :loading-type
       @load="loaded = true" />
 

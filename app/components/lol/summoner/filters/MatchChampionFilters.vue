@@ -8,14 +8,21 @@ const model = computed({
   set: (val) => store.setFilter("champion", val),
 })
 const championList = computed(() =>
-  Array.from(champions.value?.values?.() ?? [])
+  Array.from(champions.value?.values?.() ?? []),
 )
 </script>
 
 <template>
-  <UCollapsible :default-open="true" class="w-full">
-    <UButton variant="link" block>
-      <Separator size="md" label="Champions" underline :ui="{ label: '' }">
+  <UCollapsible :default-open="true" class="w-full space-y-2">
+    <UButton variant="link" block :ui="{ base: '' }">
+      <Separator
+        trailing-icon="i-up"
+        size="md"
+        label="Champions"
+        :ui="{
+          trailingIcon:
+            'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/30 duration-200 **:stroke-[2.8] group-open/collapse:-rotate-180',
+        }">
         <template #leading>
           <Icon
             name="right"
@@ -27,7 +34,7 @@ const championList = computed(() =>
     <template #content>
       <Listbox v-model:model-value="model" :multiple="false">
         <ListboxContent
-          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto border-b px-1.5 py-1">
+          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border-b px-1.5 py-2 inset-shadow-morphism-2">
           <template v-if="!sMatches().loading && sMatches.length">
             <ListboxItem
               v-for="item in championList"
@@ -42,7 +49,7 @@ const championList = computed(() =>
                     {
                       'opacity-74 grayscale':
                         model && item.championId !== model,
-                    }
+                    },
                   ), // not-on:rounded-none not-on:border-b-p3/60
                 }"
                 size="xl">
@@ -52,7 +59,7 @@ const championList = computed(() =>
                   :description="item.games ? `${item.kda} kda` : ''"
                   :ui="{
                     root: 'grow',
-                    wrapper: 'text-start items-center',
+                    wrapper: 'items-center text-start',
                   }"
                   :avatar="{
                     src: `/img/champions/${item.championId}.webp`,
@@ -72,7 +79,7 @@ const championList = computed(() =>
               </UButton>
             </ListboxItem>
           </template>
-          <LilKrug v-else />
+          <LazyLilKrug v-else />
         </ListboxContent>
       </Listbox>
     </template>

@@ -18,7 +18,7 @@ const { filters } = storeToRefs(is())
 <template>
   <!-- search -->
   <UPopover
-    :ui="{ content: 'backdrop-blur-unset rounded-xl bg-unset ring-unset' }"
+    :ui="{ content: 'backdrop-blur-unset bg-unset ring-unset rounded-xl' }"
     :content="{ side: 'left' }">
     <template #default="{ open }">
       <UButton

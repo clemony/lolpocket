@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { pathIndex } from "#shared/constants/runes/pathIndex"
 import { runeIndex } from "#shared/constants/runes/runeIndex"
+import Path from "~/components/common/icon/Path.vue"
 
 const { class: className, player } = defineProps<{
   player: Player

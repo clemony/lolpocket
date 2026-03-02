@@ -53,7 +53,7 @@ function handleReset() {
     champions, or in place of them.
   </p>
 
-  <transition-slide class="filter gap-2" tag="form" group>
+  <transition-slide class="gap-2 filter" tag="form" group>
     <input
       class="filter-reset peer btn bg-p0 text-3xl font-normal! text-pc"
       type="checkbox"

@@ -1,69 +1,20 @@
 <script setup lang="ts">
-import { useScroll } from "motion-v"
-
 definePageMeta({
   name: "home",
   layout: "default",
   path: "/",
   search: "hidden",
   title: "lolpocket",
-  icon: "teenyicons:home-alt-outline",
+  icon: "i-lucide-house",
   searchKeys: ["home", "landing", "testimonials"],
 })
-
-const homeWrapper = useTemplateRef<HTMLElement | null>("homeWrapper")
-const home = useTemplateRef<HTMLElement | null>("home")
-const steps = useTemplateRef<HTMLElement | null>("steps")
-const hero = useTemplateRef<HTMLElement | null>("hero")
-
-/* const { scrollYProgress: stepProgress } = useScroll({
-  container: homeWrapper,
-  target: steps,
-  offset: ["start end", "end start"],
-})
-
-const { scrollYProgress } = useScroll({
-  container: homeWrapper,
-  target: home,
-  offset: ["start end", "end start"],
-}) */
-
-const progressY = ref(0)
-
-/* useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  const x = latest * 80
-  progressY.value = Math.round(x * 100) / 100
-}) */
-
-const heroVisible = shallowRef(false)
-
-/* const { stop } = useIntersectionObserver(hero, ([entry], observerElement) => {
-  heroVisible.value = entry?.isIntersecting || false
-}) */
 </script>
 
 <template>
-  <UPage
-    ref="homeWrapper"
-    class="home-wrapper relative size-full w-full overflow-x-hidden overflow-y-scroll">
-    <Hero :visible="heroVisible" />
-    <!-- :progress="stepProgress" -->
-    <div
-      ref="hero"
-      class="pointer-events-none absolute left-0 size-px overflow-hidden bg-transparent" />
-
-    <div ref="steps">
-      <LazyHomeSteps v-if="homeWrapper" :scroll-ref="homeWrapper" />
-    </div>
-    <!--
-        :scroll-prog="stepProgress" -->
-
-    <div ref="home">
-      <LazyHomeAdditional :progress-y="progressY" />
-    </div>
-
-    <LazyUserReviews />
-
-    <SiteFooter />
+  <UPage ref="homeWrapper" class="w-full overflow-x-hidden">
+    <LpHero />
+    <LazyLpSteps />
+    <LazyLpFeatures />
+    <LazyLpReviews />
   </UPage>
 </template>

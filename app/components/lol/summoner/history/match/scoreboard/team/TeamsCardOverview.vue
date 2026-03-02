@@ -23,7 +23,7 @@ const route = useRoute()
         }"
         :ui="{
           label: 'text-pc normal-case',
-          base: 'w-full ',
+          base: 'w-full',
           leadingAvatar: 'ds-2xs',
         }"
         :to="buildSummonerRootPath(player)"

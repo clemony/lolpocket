@@ -9,12 +9,12 @@ const { class: className, player } = defineProps<{
 
 <template>
   <div :class="cn('flex items-center gap-1', className)">
-    <UBadge
+    <LazyUBadge
       v-if="
         player.stats.kills + player.stats.assists / player.stats.deaths ===
-          Infinity
+        Infinity
       "
-      :ui="{ leadingIcon: 'scale-120 **:stroke-[1.8] ml-px' }"
+      :ui="{ leadingIcon: 'ml-px scale-120 **:stroke-[1.8]' }"
       label="kda"
       icon="i-infinity"
       color="ad"

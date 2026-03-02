@@ -50,18 +50,6 @@
   --color-n0: var(--ui-n0);
   --color-neutral: var(--ui-neutral);
   --color-nc: var(--ui-nc);
-
-  --color-legendary: var(--ui-legendary);
-  --color-info: var(--ui-sorc);
-  --color-success: var(--ui-res);
-  --color-warning: var(--ui-pre);
-  --color-error: var(--ui-dom);
-
-  --color-pre: var(--ui-pre);
-  --color-dom: var(--ui-dom);
-  --color-sorc: var(--ui-sorc);
-  --color-res: var(--ui-res);
-  --color-insp: var(--ui-insp);
 }
 
 @theme {

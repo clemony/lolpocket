@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const emit = defineEmits(["error"])
+
 definePageMeta({
   name: "login",
   title: "Welcome back!",
@@ -7,11 +9,10 @@ definePageMeta({
   icon: "plug",
   path: "/auth/login",
   search: "!user",
+  layout: "form",
 })
 </script>
 
 <template>
-  <NuxtLayout layout="card">
-    <AuthForm type="logIn" />
-  </NuxtLayout>
+  <AuthForm type="logIn" @error="(e) => emit('error', e)" />
 </template>

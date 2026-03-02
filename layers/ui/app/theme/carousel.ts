@@ -8,8 +8,8 @@ export const carouselTheme = defineUiTheme({
     item: "min-w-0 shrink-0 basis-full",
     controls: "",
     arrows: "",
-    prev: "absolute rounded-full",
-    next: "absolute rounded-full",
+    prev: "absolute rounded-full border-0 ring-p3/80 fx-0",
+    next: "absolute rounded-full border-0 ring-p3/80 fx-0",
     dots: "absolute inset-x-0 -bottom-7 flex flex-wrap items-center justify-center gap-3",
     dot: [
       "size-3 cursor-pointer rounded-full bg-accented focus:outline-none focus-visible:ring-2 focus-visible:ring-primary",

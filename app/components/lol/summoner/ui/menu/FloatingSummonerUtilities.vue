@@ -61,23 +61,23 @@ const isSummoner = computed(() => {
               <form class="w-full space-y-12" @submit.prevent>
                 <fieldset class="mb-10 w-full space-y-6">
                   <div class="leading-4">
-                    <Label class="mb-2 text-xl font-semibold" as="legend">
+                    <LazyLabel class="mb-2 text-xl font-semibold" as="legend">
                       Summoner Splash
-                    </Label>
+                    </LazyLabel>
 
                     <p class="label text-wrap">
                       Automatically display your top played champion in recent
                       games, or choose a custom splash.
                     </p>
                   </div>
-                  <ProfileSplashOptions />
+                  <LazyProfileSplashOptions />
                 </fieldset>
 
                 <fieldset class="space-y-6">
                   <div class="leading-4">
-                    <Label class="mb-2 text-xl font-semibold" as="legend">
+                    <LazyLabel class="mb-2 text-xl font-semibold" as="legend">
                       Title
-                    </Label>
+                    </LazyLabel>
                     <p class="label text-wrap">
                       Display a title from an earned Badge.
                     </p>

@@ -17,7 +17,7 @@ const props = withDefaults(
     format: "webp",
     loading: "lazy",
     ratio: 1,
-  }
+  },
 )
 
 const emit = defineEmits(["load"])
@@ -28,7 +28,7 @@ const emit = defineEmits(["load"])
     :class="
       cn(
         'pointer-events-none relative grid shrink-0 cursor-default place-items-center overflow-hidden border-0 p-0 select-none',
-        props.class
+        props.class,
       )
     ">
     <NuxtImg
@@ -49,7 +49,7 @@ const emit = defineEmits(["load"])
             {
               'animate-in fade-in translate-z-0 opacity-100 transition-all duration-400':
                 isLoaded,
-            }
+            },
           )
         "
         @load="emit('load')" />
@@ -61,7 +61,7 @@ const emit = defineEmits(["load"])
             {
               'animate-out fade-out opacity-0 transition-all duration-500':
                 isLoaded,
-            }
+            },
           )
         "
         alt="placeholder">
@@ -71,7 +71,7 @@ const emit = defineEmits(["load"])
           <LazySpinner />
         </span>
 
-        <USkeleton v-else class="inset-0 size-full grow" />
+        <LazyUSkeleton v-else class="inset-0 size-full grow" />
       </div>
     </NuxtImg>
     <slot />

@@ -45,7 +45,7 @@ const tippy = computed(() => {
       square
       :ui="{
         base: 'rounded-full',
-        leadingIcon: ' size-4.5 text-n4 group-hover/btn:text-pc',
+        leadingIcon: 'size-4.5 text-n4 group-hover/btn:text-pc',
       }"
       @click="loadNew()">
       <div class="relative grid size-full place-items-center overflow-hidden">
