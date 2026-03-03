@@ -44,7 +44,7 @@ const data = computed(() => {
 
     <Icon
       v-if="roles?.mostPlayed"
-      class="dst absolute aspect-square size-full max-h-12 min-h-4"
+      class="absolute aspect-square size-full max-h-12 min-h-4 drop-shadow-2xs"
       :name="`role:${roles?.mostPlayed}`"
       :style="{ color: `var(--color-${roles?.mostPlayed})` }" />
   </div>

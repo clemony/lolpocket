@@ -2,8 +2,6 @@
 import { TabsRoot } from "reka-ui"
 import { useTimeline } from "~/domain/match/useTimeline"
 import MatchScoreboard from "./scoreboard/MatchScoreboard.vue"
-import MatchDataTable from "./stats/MatchDataTable.vue"
-import MatchBuild from "./timeline/MatchBuild.vue"
 
 defineOptions({
   inheritAttrs: false,
@@ -20,13 +18,19 @@ const tabs = {
   },
   Statistics: {
     name: "Statistics",
-    component: MatchDataTable,
+    component: defineAsyncComponent(
+      () =>
+        import("~/components/lol/summoner/history/match/stats/MatchDataTable.vue"),
+    ),
   },
 
   //
   Build: {
     name: "Build",
-    component: MatchBuild,
+    component: defineAsyncComponent(
+      () =>
+        import("~/components/lol/summoner/history/match/timeline/MatchBuild.vue"),
+    ),
   },
 } as const
 

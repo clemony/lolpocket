@@ -15,7 +15,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     v-auto-animate
     :class="
       cn(
-        '@container flex h-max w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible px-1 pt-2',
+        '@container flex h-max w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible overflow-x-visible! px-1 pt-2',
         className,
       )
     ">
@@ -53,8 +53,9 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
       }"
       :start-margin="220"
       :ui="{
-        viewport: 'h-max w-full',
-        root: 'h-max w-full',
+        viewport: 'h-max w-full overflow-x-visible!',
+        root: 'h-max w-full overflow-x-visible! pr-1 pb-2',
+        item: 'overflow-x-visible!',
       }">
       <MatchCard :key="item.matchId" :match="item" />
     </UScrollArea>

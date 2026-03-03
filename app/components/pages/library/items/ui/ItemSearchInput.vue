@@ -20,7 +20,6 @@ const { filters } = storeToRefs(is())
   <UInput
     v-model:model-value="filters.query"
     icon="i-search"
-    floating
     :variant
     :color
     :ui="{

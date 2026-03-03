@@ -37,13 +37,11 @@ const bg = computed(() =>
     <!-- bg -->
     <div
       class="pointer-events-none relative z-0 -mt-15 grid h-95 w-screen overflow-hidden border-b border-p4/60">
-      <ClientOnly> <LazyBgSplash class="" :src="bg" /></ClientOnly>
+      <LazyBgSplash :src="bg" />
       <UContainer class="z-0 grid items-center py-16">
-        <ClientOnly>
-          <LazySummonerHeader v-if="isSummonerRoute" />
-          <LazyPocketHeader v-else-if="pocket" :pocket />
-          <LazyChampionHeader v-else-if="champion" :champion />
-        </ClientOnly>
+        <LazySummonerHeader v-if="isSummonerRoute" />
+        <LazyPocketHeader v-else-if="pocket" :pocket />
+        <LazyChampionHeader v-else-if="champion" :champion />
       </UContainer>
     </div>
     <!-- Sticky Tabs  -->

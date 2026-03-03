@@ -28,8 +28,11 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
     id="app"
     :ui="{ base: 'overflow-hidden' }"
     :toaster="{
-      position: 'top-right',
-      class: 'translate-y-15 ',
+      position: 'top-banner',
+      class: '',
+      progress: false,
+      duration: 9000,
+      expand: true,
     }">
     <NuxtLayout>
       <NuxtPage />

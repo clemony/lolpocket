@@ -1,6 +1,12 @@
 <script lang="ts" setup>
-const { class: className } = defineProps<{
+const {
+  class: className,
+  title,
+  description,
+} = defineProps<{
   class?: HTMLAttributes["class"]
+  title?: string
+  description?: string
 }>()
 const route = useRoute()
 const error = shallowRef<string>("")
@@ -38,7 +44,7 @@ const error = shallowRef<string>("")
             error =
               'There was an error logging you in. Please try again later and maybe get a new internet because this one is not the best one. It is bad.'
           ">
-          <h2 class="dst">lolpocket</h2>
+          <h2 class="drop-shadow-2xs">lolpocket</h2>
         </NuxtLink>
       </div>
       <!--  to="/" -->
@@ -53,10 +59,10 @@ const error = shallowRef<string>("")
         }">
         <template #header>
           <h2 class="text-2xl">
-            {{ route.meta?.title || route.name }}
+            {{ title || route.meta?.title || route.name }}
           </h2>
           <p v-if="route.meta?.description" class="mt-2">
-            {{ route.meta?.description }}
+            {{ description || route.meta?.description }}
           </p>
         </template>
         <slot @error="(e: string) => (error = e)" />

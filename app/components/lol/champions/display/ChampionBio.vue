@@ -2,17 +2,17 @@
 const { champion } = defineProps<{
   champion: Champion
 }>()
-console.log('💠 - champion.positions[0]:', champion.positions[0])
+console.log("💠 - champion.positions[0]:", champion.positions[0])
 </script>
 
 <template>
   <div class="flex flex-col gap-6 px-6 pt-7 pb-3">
     <div class="flex items-end justify-between gap-4">
-      <h1 class="dst font-serif">
+      <h1 class="font-serif drop-shadow-2xs">
         {{ champion.fullName || champion.name }}
       </h1>
 
-      <p class="dst grow text-lg text-wrap uppercase">
+      <p class="grow text-lg text-wrap uppercase drop-shadow-2xs">
         {{ champion.title }}
       </p>
     </div>
@@ -24,9 +24,7 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
     <Separator class="mb-0 bg-p3 shadow-none" />
 
     <div class="flex flex-nowrap items-center justify-between gap-6">
-      <ValueFormatter
-        class="text-sm font-medium"
-        :array="champion.roles" />
+      <ValueFormatter class="text-sm font-medium" :array="champion.roles" />
 
       <ValueFormatter
         class="role-bg border-b4/30 mb-1 badge w-fit shrink-0 badge-lg"

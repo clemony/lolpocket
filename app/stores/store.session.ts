@@ -50,5 +50,5 @@ export const session = defineStore(
       storage: piniaPluginPersistedstate.sessionStorage(),
       pick: ["collapseStates", "sidebarStates", "openChampionTab"],
     },
-  }
+  },
 )

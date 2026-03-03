@@ -27,7 +27,9 @@ const pocketRoles = computed<string[]>({
           label="pocketRoles"
           class="drop-shadow-text size-6.5 shrink-0 text-md! text-white/70 focus:outline-0" />
 
-        <i-roles-all-lanes v-else class="dst size-6 shrink-0 text-white/80" />
+        <i-roles-all-lanes
+          v-else
+          class="size-6 shrink-0 text-white/80 drop-shadow-2xs" />
       </UButton>
     </DropdownMenuTrigger>
 

@@ -4,7 +4,7 @@ import type { TooltipContentEmits, TooltipContentProps } from "reka-ui"
 
 const {
   side = "top",
-  sideOffset = 16,
+  sideOffset = 20,
   arrow = false,
   class: className,
   icon,
@@ -214,9 +214,7 @@ const contentProps = computed<ContentProps>(() => ({
       @pointerenter="onPointerEnter"
       @pointerleave="onPointerLeave"
       @pointermove="onPointerMove">
-      <slot>
-        <span class="hover:underline">{{ title }}</span>
-      </slot>
+      <slot />
     </div>
 
     <template #content>

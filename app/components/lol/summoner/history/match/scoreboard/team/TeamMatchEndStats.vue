@@ -10,11 +10,11 @@ const { class: className, team } = defineProps<{
     :class="
       cn(
         'to-tint-p2/40 inset-shadow-xxs relative z-1 mx-auto flex h-9 w-[99%] items-center justify-between gap-2 overflow-hidden rounded-xl border border-pc/10 bg-linear-to-r pr-2 pl-5',
-        className
+        className,
       )
     ">
     <h3
-      class="dst text-start text-xl font-bold text-nowrap text-white/86 uppercase">
+      class="text-start text-xl font-bold text-nowrap text-white/86 uppercase drop-shadow-2xs">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
@@ -24,7 +24,7 @@ const { class: className, team } = defineProps<{
           {
             'text-insp': team.teamId === 100,
             'text-dom': team.teamId === 200,
-          }
+          },
         )
       ">
       {{ team.teamId === 100 ? "Blue" : "Red" }}

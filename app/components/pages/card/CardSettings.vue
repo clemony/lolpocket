@@ -29,7 +29,7 @@ watch(
   (newVal) => {
     // card.align = newVal
     emit("update:align", newVal)
-  }
+  },
 )
 </script>
 
@@ -75,7 +75,7 @@ watch(
       <UButton>
         <button label="'Background Align'" class="btn btn-square btn-ghost">
           <icon
-            class="dst size-5.5 shrink-0"
+            class="size-5.5 shrink-0 drop-shadow-2xs"
             name="ph:arrows-out-line-horizontal" />
         </button>
       </UButton>
@@ -109,7 +109,7 @@ watch(
       @update:model-value="(e: string) => (cardFont1.value = e)" /> -->
 
     <button label="'Add Note'" class="btn btn-square btn-ghost">
-      <icon class="dst size-5.5" name="iconoir:text" />
+      <icon class="size-5.5 drop-shadow-2xs" name="iconoir:text" />
     </button>
 
     <Grow />
@@ -117,28 +117,28 @@ watch(
     <Separator class="mx-3 h-5/6 bg-p2" orientation="vertical" />
 
     <button label="'Share'" class="btn btn-square btn-ghost">
-      <icon class="dst size-5.5" name="share" />
+      <icon class="size-5.5 drop-shadow-2xs" name="share" />
     </button>
 
     <button
       label="'Download Image'"
       class="btn btn-square btn-ghost"
       @click="emit('download')">
-      <icon class="dst size-5.5" name="iconoir:download" />
+      <icon class="size-5.5 drop-shadow-2xs" name="iconoir:download" />
     </button>
 
     <Separator class="mx-3 h-5/6 bg-p2" orientation="vertical" />
 
     <button class="control-btn btn btn-square btn-ghost">
-      <icon class="dst size-5.5" name="ph:arrows-in-simple-light" />
+      <icon class="size-5.5 drop-shadow-2xs" name="ph:arrows-in-simple-light" />
     </button>
 
     <button class="btn btn-square btn-ghost">
-      <icon class="dst size-5.5" name="iconoir:zoom-in" />
+      <icon class="size-5.5 drop-shadow-2xs" name="iconoir:zoom-in" />
     </button>
 
     <button class="btn btn-square btn-ghost">
-      <icon class="dst size-5.5" name="iconoir:zoom-out" />
+      <icon class="size-5.5 drop-shadow-2xs" name="iconoir:zoom-out" />
     </button>
   </div>
 </template>

@@ -66,38 +66,40 @@ const itemsLength = computed(() => {
         `${championsLength ? championsLength : 'no'} pocket pick${championsLength === 1 ? '' : 's'}`
       "
       class="flex items-center gap-1.5">
-      <i-no-champ class="dst size-8.5 opacity-80" />
+      <i-no-champ class="size-8.5 opacity-80 drop-shadow-2xs" />
 
-      <span class="dst font-medium">{{ championsLength }}</span>
+      <span class="font-medium drop-shadow-2xs">{{ championsLength }}</span>
     </div>
 
     <div
       label="`${rolesLength ? rolesLength : 'no'} selected roles`"
       class="flex items-center gap-3">
-      <i-roles-all class="dst size-5 opacity-80" />
+      <i-roles-all class="size-5 opacity-80 drop-shadow-2xs" />
 
-      <span class="dst font-medium">{{ rolesLength }}</span>
+      <span class="font-medium drop-shadow-2xs">{{ rolesLength }}</span>
     </div>
 
     <div
       label="`${spellsLength ? spellsLength : 'no'} spells`"
       class="flex items-center gap-2">
-      <icon class="dst size-6 opacity-70" name="game-icons:fire-spell-cast" />
+      <icon
+        class="size-6 opacity-70 drop-shadow-2xs"
+        name="game-icons:fire-spell-cast" />
 
-      <span class="dst font-medium">{{ spellsLength }}</span>
+      <span class="font-medium drop-shadow-2xs">{{ spellsLength }}</span>
     </div>
     <!--
     <div label="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
-      <i-rune-icon class="size-7 dst" />
+      <i-rune-icon class="size-7 drop-shadow-2xs" />
       <span class="ds-2xs  font-medium">{{ runeSetsLength }}</span>
     </div> -->
 
     <div
       label="`${itemsLength ? itemsLength : 'no'} item sets`"
       class="flex items-center gap-2.5">
-      <icon class="dst size-6" name="bow" />
+      <icon class="size-6 drop-shadow-2xs" name="bow" />
 
-      <span class="dst font-medium">{{ itemsLength }}</span>
+      <span class="font-medium drop-shadow-2xs">{{ itemsLength }}</span>
     </div>
   </div>
 </template>

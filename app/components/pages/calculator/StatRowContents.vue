@@ -26,16 +26,16 @@ const compare = computed(() => {
   ) {
     return
   }
-  return (
-    statValue.value === statValue2.value ? 0
-    : statValue.value > statValue2.value ? 1
-    : 2
-  )
+  return statValue.value === statValue2.value
+    ? 0
+    : statValue.value > statValue2.value
+      ? 1
+      : 2
 })
 
 const amount = computed(() => {
-  return compare.value === 1 ?
-      statValue.value - statValue2.value
+  return compare.value === 1
+    ? statValue.value - statValue2.value
     : statValue2.value - statValue.value
 })
 </script>
@@ -44,7 +44,7 @@ const amount = computed(() => {
   <div class="ability-icon col-start-1 ml-5 text-sm!">
     <component
       :is="`i-stats-${stat.icon}`"
-      class="dst size-4 shrink-0 text-pc opacity-70"
+      class="size-4 shrink-0 text-pc opacity-70 drop-shadow-2xs"
       filled
       :class="{
         'size-4.5':

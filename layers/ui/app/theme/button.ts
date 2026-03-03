@@ -1,5 +1,5 @@
+import { colors } from "./colors"
 import { defineUiTheme } from "./defineUiTheme"
-
 export const buttonTheme = defineUiTheme({
   slots: {
     label: "grow truncate text-start text-sm font-medium",
@@ -10,15 +10,9 @@ export const buttonTheme = defineUiTheme({
     base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75",
   },
   variants: {
-    color: {
-      dom: "",
-      neutral: "",
-      p0: "",
-      p1: "",
-      p2: "",
-      p3: "",
-      transparent: "",
-    },
+    color: Object.fromEntries(
+      colors.map((color) => [color, { [color]: `bg-${color}` }]),
+    ),
     size: {
       custom: {},
       "4xs": {
@@ -99,6 +93,9 @@ export const buttonTheme = defineUiTheme({
       highlight: "btn btn-ghost",
       ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",
+      soft: "shadow-morphic hover:inset-shadow-morphic border border-p4/80 transition-all duration-200 hover:shadow-none",
+      "ghost-soft":
+        "data-[state=active]:shadow-morphic hover:inset-shadow-morphic-sm hover:shadow-unset border border-transparent hover:border-p4/80 hover:fx-1 data-[state=active]:border-p4/80 data-[state=active]:transition-all data-[state=active]:duration-200 data-[state=active]:hover:shadow-none",
     },
     active: {
       false: {
@@ -231,6 +228,13 @@ export const buttonTheme = defineUiTheme({
       variant: "link",
       class:
         "[&>[data-slot=label]]:text-nc [&>[data-slot=label]]:decoration-nc",
+    },
+    {
+      variant: ["soft", "ghost-soft"],
+      color: ["p0", "p1", "p2", "p3"],
+      class: {
+        base: "bg-p0 hover:bg-p1",
+      },
     },
     /* SHAPE */
     {

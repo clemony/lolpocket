@@ -1,4 +1,4 @@
-export const winLossLabels: Record<string, Record<string, string>> = {
+export const winLossLabels = {
   win: {
     name: "Win",
     color: "var(--color-insp)",
@@ -7,4 +7,4 @@ export const winLossLabels: Record<string, Record<string, string>> = {
     name: "Loss",
     color: "var(--color-p3)",
   },
-}
+} as const

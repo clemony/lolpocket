@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VueZoomable from "vue-zoomable";
-import "vue-zoomable/dist/style.css";
+import VueZoomable from "vue-zoomable"
+import "vue-zoomable/dist/style.css"
 
 const { card } = defineProps<{
   card: any
@@ -41,7 +41,7 @@ onMounted(() => {
 const img = useImage()
 const splash = computed(
   () =>
-    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg"
+    "https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg",
 )
 console.log("💠 - card.splash:", card.splash)
 </script>
@@ -51,11 +51,11 @@ console.log("💠 - card.splash:", card.splash)
     class="relative grid size-full items-center justify-center overflow-hidden">
     <!--
 
-      <div class="px-1 dst">
+      <div class="px-1 drop-shadow-2xs">
         A simple, customizable build card for your  Easily download, share, and reference a basic overview of your loadout.
       </div>
       <Field :title="props.champions.children.length !== 1 ? 'Champions' : 'Champion'">
-        <p class=" dst">
+        <p class=" drop-shadow-2xs">
           Select a main champion and splash art to display for this
         </p>
         <div group class="grid grid-flow-row auto-cols-auto select-none h-fit pt-1  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center place-items-center  gap-4 mx-auto w-full">
@@ -66,7 +66,7 @@ console.log("💠 - card.splash:", card.splash)
           </template>
 
           <Placeholder v-else class="size-21 bg-p3/70 p-2.5">
-            <i-no-champ class="opacity-10  dst" />
+            <i-no-champ class="opacity-10  drop-shadow-2xs" />
           </Placeholder>
         </div>
       </Field>
@@ -130,11 +130,11 @@ console.log("💠 - card.splash:", card.splash)
                 <template
                   v-if="
                     set &&
-                      set !== undefined &&
-                      card.items.length &&
-                      set !== null &&
-                      card.items[0] !== undefined &&
-                      card.items[0] !== null
+                    set !== undefined &&
+                    card.items.length &&
+                    set !== null &&
+                    card.items[0] !== undefined &&
+                    card.items[0] !== null
                   ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"

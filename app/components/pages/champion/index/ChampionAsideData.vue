@@ -9,12 +9,12 @@ const { champion, wrapperClass } = defineProps<{
 
 const resource = computed(() =>
   abilityResources.find(
-    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase()
-  )
+    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase(),
+  ),
 )
 
 const damageType = computed(() =>
-  damageTypes.find((d) => d.type === champion.adaptiveType)
+  damageTypes.find((d) => d.type === champion.adaptiveType),
 )
 </script>
 
@@ -76,7 +76,7 @@ const damageType = computed(() =>
       <p class="flex items-center gap-2 font-medium">
         <Icon
           v-if="resource?.icon"
-          class="dst inline size-3.5! shrink-0 opacity-90"
+          class="inline size-3.5! shrink-0 opacity-90 drop-shadow-2xs"
           :name="resource?.icon" />
         {{ champion.resource }}
       </p>
@@ -88,7 +88,7 @@ const damageType = computed(() =>
         class="flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1 *:text-md">
         <div class="font-medium">
           <Icon
-            class="dst mr-0.5 size-4.25! shrink-0! text-platinum"
+            class="mr-0.5 size-4.25! shrink-0! text-platinum drop-shadow-2xs"
             name="lp:be" />
           <p>
             {{ champion.price.blueEssence }}
@@ -96,7 +96,9 @@ const damageType = computed(() =>
           </p>
         </div>
         <div>
-          <Icon class="dst mr-1 size-4.5! shrink-0! text-gold" name="lp:rp" />
+          <Icon
+            class="mr-1 size-4.5! shrink-0! text-gold drop-shadow-2xs"
+            name="lp:rp" />
           <p class="font-medium">
             {{ champion.price.rp }}
             <span class="pr-0.5 text-xs font-medium">RP</span>
@@ -126,9 +128,7 @@ const damageType = computed(() =>
     </div>
 
     <div class="flex h-12 w-full items-center justify-between">
-      <p class="opacity-50">
-        Release Date
-      </p>
+      <p class="opacity-50">Release Date</p>
       <p class="font-medium">
         {{ useDateFormat(champion.releaseDate, "MMMM D, YYYY") }}
       </p>

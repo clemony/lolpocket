@@ -42,7 +42,7 @@ const { stats } = defineProps<{
             size="sq-4"
             :name="`role:${r}`"
             :color="stats?.role[r]?.games ? `var(--color-${r})` : 'var(--color-p3)'"
-            class="size-6 self-center dst" />
+            class="size-6 self-center drop-shadow-2xs" />
           <Progress
             class="h-3 transition-all duration-200 group-hover/bar:ring group-hover/bar:ring-pc/20"
             :color="`var(--color-${r})`"

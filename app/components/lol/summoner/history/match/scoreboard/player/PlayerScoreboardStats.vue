@@ -16,7 +16,9 @@ const heal = computed(() => {
       class="flex items-center gap-2 truncate text-nowrap hover:underline"
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="dst absolute size-3.25 text-dom" name="el:fire" />
+        <icon
+          class="absolute size-3.25 text-dom drop-shadow-2xs"
+          name="el:fire" />
       </span>
       {{ player.stats.totalDamage.toLocaleString() }}
     </tippy>
@@ -25,7 +27,7 @@ const heal = computed(() => {
       class="mt-2.25 flex items-center gap-2 truncate text-nowrap hover:underline"
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="dst size-2.75 text-insp" name="oi:plus" />
+        <icon class="size-2.75 text-insp drop-shadow-2xs" name="oi:plus" />
       </span>
       {{ Math.round(heal).toLocaleString() }}
 
@@ -51,7 +53,9 @@ const heal = computed(() => {
       class="mt-2 flex items-center gap-2.25 truncate text-nowrap hover:underline"
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-sm">
       <span class="relative grid size-3 justify-center">
-        <icon class="dst size-3.25 text-[#C2A76E]!" name="ph:shield-fill" />
+        <icon
+          class="size-3.25 text-[#C2A76E]! drop-shadow-2xs"
+          name="ph:shield-fill" />
       </span>
       {{ Math.round(player.stats.totalDamageTaken).toLocaleString() }}
     </div>

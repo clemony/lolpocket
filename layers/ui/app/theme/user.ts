@@ -18,6 +18,39 @@ export const userTheme = defineUiTheme({
       },
     },
     size: {
+      xs: {
+        name: "text-xs",
+        description: "text-xs",
+        root: "gap-1.5",
+        wrapper: "flex items-center gap-1.5",
+      },
+      //
+      sm: {
+        name: "text-sm",
+        description: "text-xs",
+        avatar: "size-10",
+        root: "gap-2",
+      },
+      //
+      md: {
+        name: "text-sm",
+        description: "text-xs",
+        avatar: "size-12",
+        root: "gap-2",
+        wrapper: "*:leading-4.5",
+      },
+      ///
+      lg: {
+        name: "text-sm",
+        description: "text-xs",
+        root: "gap-2.5",
+      },
+      xl: {
+        name: "text-pc",
+        description: "text-xs",
+        root: "gap-2.5",
+      },
+      //
       "2xl": {
         name: "text-md text-pc",
         description: "text-xs text-pc",
@@ -40,34 +73,12 @@ export const userTheme = defineUiTheme({
         root: "gap-1",
         wrapper: "flex items-center gap-1",
       },
-      lg: {
-        name: "text-sm",
-        description: "text-xs",
-        root: "gap-2.5",
-      },
-      md: {
-        name: "text-sm",
-        description: "text-xs",
-        avatar: "size-12",
-        root: "gap-2",
-        wrapper: "*:leading-4.5",
-      },
-      sm: {
-        name: "text-sm",
-        description: "text-xs",
-        avatar: "size-10",
-        root: "gap-2",
-      },
-      xl: {
-        name: "text-pc",
-        description: "text-xs",
-        root: "gap-2.5",
-      },
-      xs: {
-        name: "text-xs",
-        description: "text-xs",
-        root: "gap-1.5",
-        wrapper: "flex items-center gap-1.5",
+      header: {
+        name: "overflow-y-visible font-serif text-[36px]/15 font-bold! text-pc/94 drop-shadow-sm",
+        description:
+          "inline-flex items-center gap-4 px-0.5 align-baseline font-medium text-pc",
+        root: "gap-4",
+        avatar: "size-20 translate-y-1",
       },
     },
     to: {

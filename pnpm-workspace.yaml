@@ -1,4 +1,4 @@
-shamefully-hoist: true
+shamefullyHoist: false
 shellEmulator: true
 
 trustPolicy: no-downgrade
@@ -7,9 +7,6 @@ overrides:
   chokidar: 3.5.3
   semver: 7.5.4
 
-patchedDependencies:
-  "@nuxt/icon@2.2.1": patches/@nuxt__icon@2.2.1.patch
-  "@nuxt/ui@4.5.0": patches/@nuxt__ui@4.5.0.patch
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@tailwindcss/oxide"

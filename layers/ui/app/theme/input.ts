@@ -10,7 +10,7 @@ export const inputTheme = defineUiTheme({
     trailing: "absolute inset-y-0 end-0 flex items-center",
     trailingIcon: "shrink-0 text-p5",
     base: [
-      "peer input flex w-full shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-p5 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
+      "peer input flex w-full shrink-0 appearance-none items-center rounded-lg border-0 placeholder:text-pc/40 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75",
       "transition-colors",
     ],
   },
@@ -129,7 +129,7 @@ export const inputTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class:
-        "bg-neutral/90 text-nc placeholder:text-nc/70 *:first:[&_svg]:text-nc",
+        "bg-neutral/96 text-nc placeholder:text-nc/70 *:first:[&_svg]:text-nc",
     },
 
     {

@@ -5,7 +5,7 @@ const props = withDefaults(
     comment: CommentData
     author: AccountData | null
   }>(),
-  {}
+  {},
 )
 
 const forward = reactiveOmit(props, "class")
@@ -17,8 +17,8 @@ const splash = computed(() =>
   img(
     props.author?.splash
       ? props.author.splash.replace("centered", "uncentered")
-      : ""
-  )
+      : "",
+  ),
 )
 const tag = ref(false)
 </script>
@@ -69,7 +69,7 @@ const tag = ref(false)
         <div class="flex items-center gap-3 px-2 pb-2">
           <div
             class="inline flex-wrap justify-between space-x-2 pl-22 align-middle">
-            <h2 class="dst inline font-serif text-xl! leading-3">
+            <h2 class="inline font-serif text-xl! leading-3 drop-shadow-2xs">
               {{
                 props.author?.name || author?.username || "Mysterious Summoner"
               }}
@@ -86,9 +86,7 @@ const tag = ref(false)
 
         <Separator size="xs" class="my-1" />
         <div class="flex flex-col gap-1 px-1">
-          <UButton class="pl-7.5!">
-            View Profile
-          </UButton>
+          <UButton class="pl-7.5!"> View Profile </UButton>
           <UButton>
             <Icons class="size-4" name="heart" />
             Follow

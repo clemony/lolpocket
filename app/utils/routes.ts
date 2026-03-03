@@ -50,7 +50,7 @@ export const libraryNav = [
   {
     label: "Champions",
     to: "/champions",
-    icon: "i-streamline-flex-user-queen-crown",
+    icon: "i-lp-champ",
   },
   {
     label: "Items",

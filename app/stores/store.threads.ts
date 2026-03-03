@@ -15,7 +15,7 @@ export const threads = defineStore(
     function insertChild(
       threadId: string,
       parentId: string,
-      commentId: string
+      commentId: string,
     ) {
       if (!children.value[threadId]) children.value[threadId] = {}
       const list = children.value[threadId]?.[parentId] ?? []
@@ -86,7 +86,7 @@ export const threads = defineStore(
       } else if (sortBy === "new") {
         items.sort(
           (a, b) =>
-            new Date(b.created).getTime() - new Date(a.created).getTime()
+            new Date(b.created).getTime() - new Date(a.created).getTime(),
         )
       }
 
@@ -111,5 +111,5 @@ export const threads = defineStore(
       key: "threadStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
-  }
+  },
 )

@@ -21,7 +21,7 @@ If a known library is detected, use its libraryId directly (skip resolve-library
 - Motion for Vue -> /websites/motion_dev_vue
 - ESLint -> /websites/eslint
 - Vite 7 -> /vitejs/vite
-- Pinia Persistedstate -> /websites/codeberg_praz_pinia-plugin-persistedstate_src_branch_main
+- Pinia Persistedrop-shadow-2xsate -> /websites/codeberg_praz_pinia-plugin-persistedState_src_branch_main
 - Tiptap 3 -> /ueberdosis/tiptap-docs
 - VueUse 14 -> /websites/vueuse
 - Dexie -> /websites/dexie

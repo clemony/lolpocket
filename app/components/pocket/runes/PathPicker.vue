@@ -95,7 +95,7 @@ const pathHovered = ref("")
       <div v-else class="absolute size-full items-center justify-between gap-3">
         <h1
           key="default"
-          class="dst"
+          class="drop-shadow-2xs"
           :class="
             cn('ds-2xs duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
@@ -140,7 +140,7 @@ const pathHovered = ref("")
         @click="
           handleSet(
             path.name,
-            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name
+            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name,
           )
         "
         @hover-start="pathHovered = path.name"

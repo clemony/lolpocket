@@ -16,14 +16,15 @@ const { class: className, team } = defineProps<{
           'from-insp/60': team.teamId === 100,
           'from-dom/60': team.teamId === 200,
         },
-        className
+        className,
       )
     ">
     <div
       class="inline-flex h-8 w-full items-center justify-between gap-8 align-baseline">
       <!-- WIN / LOSS -->
       <div :class="cn('flex items-center gap-4')">
-        <h3 class="dst text-xl leading-none font-bold text-white/86">
+        <h3
+          class="text-xl leading-none font-bold text-white/86 drop-shadow-2xs">
           {{ team.win ? "WIN" : "LOSS" }}
         </h3>
 
@@ -36,7 +37,7 @@ const { class: className, team } = defineProps<{
                 'dark:text-tint-insp/50 light:text-insp': team.teamId === 100,
                 'dark:text-tint-domination/50 light:text-dom':
                   team.teamId === 200,
-              }
+              },
             )
           ">
           {{ team.teamId === 100 ? "Blue" : "Red" }}
@@ -52,7 +53,7 @@ const { class: className, team } = defineProps<{
         v-if="team.gold"
         :class="
           cn(
-            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold'
+            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold',
           )
         ">
         <Icon

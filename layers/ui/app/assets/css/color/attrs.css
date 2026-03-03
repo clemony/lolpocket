@@ -3,104 +3,54 @@
 &[data-color="lethality"],
 &[data-color="attackDamage"],
 &[data-color="armorPenetration"] {
-  @apply
-    text-ad!
-    **:text-ad!
-  ;
+  @apply text-ad! **:text-ad!;
 }
 
 &[data-color="armor"],
 &[data-color="attackSpeed"],
 &[data-color="goldPer10"] {
-  @apply
-    text-(--color-pre)!
-    **:text-(--color-pre)!
-  ;
+  @apply text-(--color-pre)! **:text-(--color-pre)!;
 }
 
 &[data-color="criticalStrikeChance"],
 &[data-color="criticalStrikeDamage"],
 &[data-color="lifesteal"] {
-  @apply
-    text-(--color-dom)!
-    **:text-(--color-dom)!
-  ;
+  @apply text-(--color-dom)! **:text-(--color-dom)!;
 }
 
 &[data-color="abilityPower"],
 &[data-color="percentMagicPenetration"],
 &[data-color="flatMagicPenetration"] {
-  @apply
-    text-(--color-sorc)!
-    **:text-(--color-sorc)!
-  ;
+  @apply text-(--color-sorc)! **:text-(--color-sorc)!;
 }
 
 &[data-color="healAndShieldPower"],
 &[data-color="abilityHaste"] {
-  @apply
-    text-hsp!
-    **:text-hsp!
-  ;
+  @apply text-hsp! **:text-hsp!;
 }
 
 &[data-color="health"],
 &[data-color="healthRegen"] {
-  @apply
-    text-hp!
-    **:text-hp!
-  ;
+  @apply text-hp! **:text-hp!;
 }
 
 &[data-color="mana"],
 &[data-color="manaRegen"] {
-  @apply
-    text-mana!
-    **:text-mana!
-  ;
+  @apply text-mana! **:text-mana!;
 }
 
 &[data-color="magicResistance"] {
-  @apply
-    text-mr!
-    **:text-mr!
-  ;
+  @apply text-mr! **:text-mr!;
 }
 
 &[data-color="flatMovespeed"],
 &[data-color="percentMovespeed"],
 &[data-color="tenacity"] {
-  @apply
-    text-silver!
-    **:text-silver!
-  ;
+  @apply text-silver! **:text-silver!;
 }
 
 &[data-color="omnivamp"] {
-  @apply
-    text-vamp!
-    **:text-vamp!
-  ;
-}
-
-:root {
-  [data-sonner-toaster] {
-    --offset: 6px !important;
-
-    & [data-expanded="true"] {
-      height: var(--initial-height) !important;
-      transform: none;
-    }
-  }
-
-  [data-close-button] {
-    --toast-close-button-start: 93% !important;
-    --toast-close-button-end: 15px !important;
-    top: 12px;
-    outline: 0;
-    border: 0;
-    box-shadow: unset;
-  }
+  @apply text-vamp! **:text-vamp!;
 }
 
 [data-role="support"] {

@@ -11,7 +11,7 @@ const { modelValue: selectedMap } = defineProps<{
         <span class="relative grid size-5 place-items-center">
           <component
             :is="`i-lp-${selectedMap}`"
-            class="dst absolute shrink-0 opacity-80"
+            class="absolute shrink-0 opacity-80 drop-shadow-2xs"
             :class="{
               'size-5!': selectedMap === 12 || selectedMap === 11,
               'size-6!': selectedMap === 30,
@@ -50,7 +50,7 @@ const { modelValue: selectedMap } = defineProps<{
               <span class="relative grid size-5 place-items-center">
                 <component
                   :is="`i-lp-${map}`"
-                  class="dst absolute shrink-0 opacity-80"
+                  class="absolute shrink-0 opacity-80 drop-shadow-2xs"
                   :class="{
                     'size-5!': map === 12 || map === 11,
                     'size-6!': map === 30,

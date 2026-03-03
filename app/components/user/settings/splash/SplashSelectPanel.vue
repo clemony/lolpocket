@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { getSplash } from "~/domain/utils/img"
 import { championIndex } from "#shared/constants/champions/championIndex"
 import { skinIndex } from "#shared/constants/champions/skin-index"
+import { getSplash } from "~/domain/utils/img"
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -15,7 +15,7 @@ const selectedChampion = ref<string | null>(null)
 const searchQuery = ref<string>("")
 const search = useSearch(
   championIndex, // array or ref
-  searchQuery
+  searchQuery,
 )
 
 const result = computed(() => {
@@ -41,7 +41,7 @@ function reset() {
       :class="
         cn(
           'group/icon hover:ring-b4 pointer-events-auto relative z-0 grid aspect-square size-fit shrink-0 cursor-pointer place-items-center self-center overflow-hidden rounded-full shadow-xs ring ring-transparent ring-offset-3 ring-offset-transparent drop-shadow-sm transition-colors duration-300 hover:ring-offset-neutral',
-          className
+          className,
         )
       ">
       <slot />
@@ -59,13 +59,15 @@ function reset() {
             <button
               label="{ content: 'Reset to Automatic', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
-              <icon class="dst absolute size-3.75" name="refresh" />
+              <icon class="absolute size-3.75 drop-shadow-2xs" name="refresh" />
             </button>
 
             <button
               label="{ content: 'Randomize', placement: 'top' }"
               class="btn grid btn-square place-items-center btn-ghost">
-              <icon class="dst size-3.5 stroke-[1.5]" name="shuffle" />
+              <icon
+                class="size-3.5 stroke-[1.5] drop-shadow-2xs"
+                name="shuffle" />
             </button>
 
             <UInput
@@ -76,7 +78,7 @@ function reset() {
               label="{ content: 'Close', placement: 'top' }"
               variant="ghost"
               shape="square">
-              <icon class="dst absolute size-4 shrink-0" name="x" />
+              <icon class="absolute size-4 shrink-0 drop-shadow-2xs" name="x" />
             </UButton>
           </header>
 
@@ -129,7 +131,7 @@ function reset() {
                 @click="
                   emit(
                     'update:splash',
-                    getSplash(selectedChampion, 'centered', skin)
+                    getSplash(selectedChampion, 'centered', skin),
                   )
                 " />
             </transition-slide>

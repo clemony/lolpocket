@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getSummonerIcon } from "~/domain/utils/img"
+
 defineOptions({
   inheritAttrs: false,
 })
@@ -8,42 +10,22 @@ const { class: className } = defineProps<{
 }>()
 const { summoner } = storeToRefs(sSession())
 
-const open = shallowRef<boolean>(false)
+const safeSum = computed(() => safeObject(summoner.value))
 </script>
 
 <template>
-  <IconHeader>
-    <template #icon>
-      <SummonerIcon
-        class="pointer-events-none size-20 rounded-full transition-all duration-500 ease-in-out group-open/icon:brightness-40 group-hover/icon:brightness-40"
-        :summoner="summoner ?? undefined" />
-
-      <icon
-        class="pointer-events-none absolute z-2 size-6 text-nc! opacity-0 transition-all duration-500 ease-in-out group-open/icon:opacity-100 group-hover/icon:opacity-80"
-        name="images" />
+  <UUser
+    size="header"
+    :avatar="{ src: getSummonerIcon(safeSum.icon) }"
+    :ui="{
+      name: cn({ 'opacity-40': !summoner?.name }),
+    }"
+    :description="`#${safeSum.tag} @${safeSum.region} lv. ${safeSum.level}`"
+    :name="safeSum.name">
+    <template #description>
+      <SummonerId :summoner="safeSum" type="tag" />
+      <SummonerId :summoner="safeSum" type="region" />
+      <SummonerId :summoner="safeSum" type="level" />
     </template>
-    <!-- header name -->
-    <template #title>
-      <h1
-        :class="
-          cn(
-            'overflow-y-visible font-serif text-[36px]/15 font-black! text-pc/94',
-            { 'opacity-40': !summoner?.name },
-          )
-        "
-        as="h1">
-        {{ summoner?.name ?? "summoner" }}
-      </h1>
-    </template>
-
-    <!-- header sub-text -->
-
-    <template #subheader>
-      <div class="flex items-center gap-4 px-0.5">
-        <SummonerId :summoner="summoner ?? undefined" type="tag" />
-        <SummonerId :summoner="summoner ?? undefined" type="region" />
-        <SummonerId :summoner="summoner ?? undefined" type="level" />
-      </div>
-    </template>
-  </IconHeader>
+  </UUser>
 </template>

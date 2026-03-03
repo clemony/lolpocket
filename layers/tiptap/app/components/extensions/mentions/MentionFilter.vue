@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { exitSuggestion, SuggestionPluginKey } from "@tiptap/suggestion"
-import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
 
 const { command, editor, items } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -15,7 +14,7 @@ const { command, editor, items } = defineProps<{
 
 const selectedIndex = ref(0)
 const selectedItem = computed<Index | undefined>(
-  () => items[selectedIndex.value]
+  () => items[selectedIndex.value],
 )
 
 function update() {
@@ -84,7 +83,7 @@ onClickOutside(target, (event) => {
     :class="
       cn(
         'tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden p-0!',
-        { 'max-h-50 min-w-44': items.length }
+        { 'max-h-50 min-w-44': items.length },
       )
     ">
     <SlideInTopOutBottom

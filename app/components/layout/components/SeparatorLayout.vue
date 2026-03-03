@@ -6,7 +6,7 @@ const {
 } = defineProps<{
   title?: string
   description?: string
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 /* ? alsdjlsajd */
 const route = useRoute()
@@ -18,7 +18,7 @@ const route = useRoute()
       <div
         class="sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-p0 pt-12">
         <slot name="header">
-          <h1 class="dst text-5xl font-bold">
+          <h1 class="text-5xl font-bold drop-shadow-2xs">
             {{ title || route.meta?.title || route.name }}
           </h1>
         </slot>

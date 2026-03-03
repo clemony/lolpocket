@@ -10,18 +10,23 @@
       size="xl" />
 
     <div
-      class="dst flex flex-col justify-center gap-2 py-px font-medium opacity-60">
+      class="flex flex-col justify-center gap-2 py-px font-medium opacity-60 drop-shadow-2xs">
       <Placeholder class="h-3 w-26" color="p2" base="btn" />
 
       <Placeholder class="h-3 w-18" color="p2" base="btn" />
     </div>
 
     <div class="flex grow flex-col items-end justify-center px-3 text-sm">
-      <Placeholder class="dst items-center font-medium text-nowrap" />
+      <Placeholder
+        class="items-center font-medium text-nowrap drop-shadow-2xs" />
 
-      <Placeholder class="dst items-center font-medium text-nowrap" />
+      <Placeholder
+        class="items-center font-medium text-nowrap drop-shadow-2xs" />
     </div>
 
-    <DonutSkeleton class="dst size-14 opacity-50" thickness="4px" label="" />
+    <DonutSkeleton
+      class="size-14 opacity-50 drop-shadow-2xs"
+      thickness="4px"
+      label="" />
   </div>
 </template>

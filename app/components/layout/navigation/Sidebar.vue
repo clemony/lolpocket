@@ -12,13 +12,16 @@ const { account } = storeToRefs(user())
       class="sticky top-0 w-full space-y-4 bg-p0/90 px-3 pt-4 pb-2 backdrop-blur-sm">
       <!-- header -->
       <div class="flex items-center justify-between gap-4">
-        <ULink class="grow hover:underline" to="/">
+        <ULink class="grow cursor-pointer" to="/">
           <h3>lolpocket</h3>
         </ULink>
         <UButton
           icon="x"
           size="sm"
-          :ui="{ base: 'cursor-text', leadingIcon: '**:stroke-[2.4]' }"
+          :ui="{
+            base: 'cursor-text',
+            leadingIcon: '**:stroke-[2.4]',
+          }"
           variant="ghost"
           @click="emit('openSearch', true)" />
       </div>
@@ -28,9 +31,13 @@ const { account } = storeToRefs(user())
         variant="outline"
         label="Search"
         icon="i-search"
-        :ui="{ base: 'w-full', label: 'grow' }">
+        :ui="{
+          base: 'w-full inset-shadow-sm ring-p3/80',
+          label: 'grow text-pc/40',
+          leadingIcon: 'text-pc/50 drop-shadow-2xs **:stroke-[2.2]',
+        }">
         <template #trailing>
-          <div class="mr-1 flex items-center gap-2">
+          <div class="mr-1 flex items-center gap-1">
             <UKbd
               v-for="k in ['meta', 'K']"
               :key="k"

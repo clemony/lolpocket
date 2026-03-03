@@ -14,12 +14,13 @@ const isOpen = ref(false)
 <template>
   <UCard
     :ui="{
-      body: 'flex w-full grow p-0!',
+      body: 'flex w-full grow p-0! ring-pc/8',
     }"
     as-child>
     <UCollapsible
       v-if="player"
       v-model:open="isOpen"
+      :default-open="false"
       :ui="{
         root: cn(
           'relative size-full min-w-134 cursor-pointer rounded-xl border-p3/70 bg-linear-to-r to-transparent to-40% bg-cover bg-clip-padding text-sm **:select-none',
@@ -27,8 +28,8 @@ const isOpen = ref(false)
           player?.win === 'remake'
             ? 'from-p3 before:border-p3'
             : player?.win === true
-              ? 'from-insp/80 before:border-insp'
-              : 'from-dom/80 before:border-dom',
+              ? 'from-insp/80 before:border-insp-offset'
+              : 'from-dom/80 before:border-dom-offset',
         ),
       }">
       <UButton
@@ -49,7 +50,7 @@ const isOpen = ref(false)
         </div>
       </UButton>
 
-      <!--       <MatchContent :match :player /> -->
+      <MatchContent :match :player />
     </UCollapsible>
   </UCard>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells";
+import { spells } from "#shared/constants/misc/spells"
 
 definePageMeta({
   title: "Spells",
@@ -25,7 +25,7 @@ definePageMeta({
 
 const selectedSpellId = ref(1)
 const selectedSpell = computed(
-  () => spells[selectedSpellId.value] ?? spells[0]!
+  () => spells[selectedSpellId.value] ?? spells[0]!,
 )
 </script>
 
@@ -64,7 +64,7 @@ const selectedSpell = computed(
           v-if="selectedSpell.description"
           :key="selectedSpell.name"
           class="pr-3 pl-4.5">
-          <p class="dst font-serif text-lg leading-9">
+          <p class="font-serif text-lg leading-9 drop-shadow-2xs">
             {{ selectedSpell.description }}
           </p>
 
@@ -94,11 +94,9 @@ const selectedSpell = computed(
               :src="`/img/spells/${selectedSpell.id}.webp`" />
 
             <div class="items-between grid h-full py-2">
-              <p class="font-medium">
-                Summoner
-              </p>
+              <p class="font-medium">Summoner</p>
 
-              <h1 class="dst text-5xl tracking-tight">
+              <h1 class="text-5xl tracking-tight drop-shadow-2xs">
                 {{ selectedSpell.name }}
               </h1>
             </div>
@@ -110,21 +108,15 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.cd"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Cooldown:
-              </p>
+              <p class="font-semibold tracking-tight">Cooldown:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.cd }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.cd }} seconds</p>
             </li>
 
             <li
               v-if="selectedSpell.charges"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Charges:
-              </p>
+              <p class="font-semibold tracking-tight">Charges:</p>
 
               <p class="font-medium">
                 {{ selectedSpell.charges }}
@@ -134,13 +126,9 @@ const selectedSpell = computed(
             <li
               v-if="selectedSpell.recharge"
               class="grid grid-cols-2 items-end gap-3">
-              <p class="font-semibold tracking-tight">
-                Recharge Time:
-              </p>
+              <p class="font-semibold tracking-tight">Recharge Time:</p>
 
-              <p class="font-medium">
-                {{ selectedSpell.recharge }} seconds
-              </p>
+              <p class="font-medium">{{ selectedSpell.recharge }} seconds</p>
             </li>
           </ul>
         </div>

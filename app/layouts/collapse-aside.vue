@@ -12,7 +12,7 @@ const toolbarOpen = shallowRef<boolean>(false)
       left: 'min-h-max w-106 min-w-90 pt-10',
       center: cn(
         'mx-auto min-h-max max-w-(--ui-container) justify-self-center lg:w-full',
-        collapsed ? 'px-10' : 'pl-8 pr-16'
+        collapsed ? 'px-10' : 'pl-8 pr-16',
       ),
     }">
     <template v-if="!collapsed" #left>
@@ -58,8 +58,9 @@ const toolbarOpen = shallowRef<boolean>(false)
       <slot :collapsed />
     </UPageBody>
     <div
+      v-if="collapsed || smallerThanLg"
       class="y-0 pointer-events-none absolute inset-y-0 right-[4%] bottom-0 flex h-full items-end overflow-visible py-[4%]">
-      <!--    v-if="collapsed || smallerThanLg" -->
+      <!--  -->
       <UPopover
         v-model:open="toolbarOpen"
         :ui="{

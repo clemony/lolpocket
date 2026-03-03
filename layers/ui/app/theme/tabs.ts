@@ -34,6 +34,10 @@ export const tabsTheme = defineUiTheme({
       ghost: {
         indicator: "shadow-sm shadow-black/6",
       },
+      neumorphic: {
+        indicator: "inset-shadow-morphic rounded-[0.56rem]! border ring-0",
+        list: "border px-2! shadow-sm ring-0 shadow-black/5 drop-shadow-sm drop-shadow-black/5",
+      },
       link: {
         list: "border-b-0 border-b-transparent",
         indicator:
@@ -114,6 +118,15 @@ export const tabsTheme = defineUiTheme({
         list: "noise bg-p1 ring inset-shadow-xs ring-p3/80 inset-shadow-black/4",
         trigger:
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-p1 data-[state=active]:text-pc",
+      },
+    },
+    {
+      color: "default",
+      variant: "neumorphic",
+      class: {
+        indicator: "border-p4/70",
+        list: "border-p3/80 border-r-p4/80 border-b-p4/80 bg-p0",
+        trigger: "",
       },
     },
     {
@@ -233,6 +246,22 @@ export const tabsTheme = defineUiTheme({
       size: "md",
       class: {
         indicator: "rounded-lg",
+      },
+    },
+    {
+      size: "md",
+      variant: "neumorphic",
+      orientation: "horizontal",
+      class: {
+        indicator: "h-7.5! max-h-7.5!",
+      },
+    },
+    {
+      size: "lg",
+      variant: "neumorphic",
+      orientation: "horizontal",
+      class: {
+        indicator: "h-9! max-h-9!",
       },
     },
     {

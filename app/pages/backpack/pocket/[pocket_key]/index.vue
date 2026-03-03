@@ -8,7 +8,7 @@ definePageMeta({
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 
 const el = useTemplateRef<HTMLElement>("el")
@@ -21,7 +21,7 @@ watch(
   () => summonerAccounts().accounts,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
-  }
+  },
 )
 </script>
 
@@ -41,13 +41,13 @@ watch(
     <div
       :class="
         cn(
-          'pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden'
+          'pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden',
         )
       ">
       <div
         class="w-40% z-1 flex size-full grow flex-col items-start justify-center pt-16 pl-68 *:z-1">
         <BlurReveal>
-          <h1 class="dst text-[3.4rem]!">
+          <h1 class="text-[3.4rem]! drop-shadow-2xs">
             {{ pocket?.name }}
           </h1>
         </BlurReveal>
@@ -60,7 +60,7 @@ watch(
       :class="
         cn(
           'absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto pt-[70vh]',
-          {}
+          {},
         )
       ">
       <!-- Sticky Tabs (now ABOVE parent header) -->

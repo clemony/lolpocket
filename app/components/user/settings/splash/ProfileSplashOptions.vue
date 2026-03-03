@@ -38,9 +38,7 @@ function handleSplash(e: string) {
         :label="top()?.name ?? ''"
         :alt="`${user().account?.name ?? null}'s Most Played`" />
       <div class="flex size-full flex-col gap-4 pt-3">
-        <h4 class="dst text-xl font-semibold">
-          Automatic
-        </h4>
+        <h4 class="text-xl font-semibold drop-shadow-2xs">Automatic</h4>
         <p>Displays your most played champion in recent games.</p>
 
         <ActiveTick v-if="!currentSplash" class="mt-2 h-6" />
@@ -58,9 +56,7 @@ function handleSplash(e: string) {
         :skin-url="user().account?.splash ?? null"
         :alt="`${user().account?.name ?? null}'s splash`" />
       <div class="flex size-full flex-col gap-4 pt-3">
-        <h4 class="dst text-xl font-semibold">
-          Custom
-        </h4>
+        <h4 class="text-xl font-semibold drop-shadow-2xs">Custom</h4>
         <p class="w-full min-w-56">
           <span class="italic">Never played a champ?</span>
           <br />

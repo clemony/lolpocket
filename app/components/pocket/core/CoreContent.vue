@@ -3,11 +3,11 @@ import { championToTitle } from "#shared/constants/champions/championToTitle"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 const championKey = computed(() => pocket.value?._champion ?? null)
 const championTitle = computed(() =>
-  championKey.value ? championToTitle[championKey.value] : undefined
+  championKey.value ? championToTitle[championKey.value] : undefined,
 )
 </script>
 
@@ -16,7 +16,7 @@ const championTitle = computed(() =>
     <div class="grid w-full grid-cols-[2.5fr_1fr] gap-4 pt-22">
       <div class="flex w-full flex-col gap-3">
         <div class="mb-2 h-16">
-          <h1 class="dst leading-10 tracking-tight">
+          <h1 class="leading-10 tracking-tight drop-shadow-2xs">
             {{ championKey }}
           </h1>
           <div class="text-lg font-medium italic">
@@ -48,9 +48,7 @@ const championTitle = computed(() =>
     </div>
     <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
-        <h2 class="dst leading-10 tracking-tight">
-          Pocket Stats
-        </h2>
+        <h2 class="leading-10 tracking-tight drop-shadow-2xs">Pocket Stats</h2>
         <div class="text-lg font-medium italic" />
       </div>
       <div class="grid grid-cols-3 gap-8"></div>

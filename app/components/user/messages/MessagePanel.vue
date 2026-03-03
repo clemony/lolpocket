@@ -5,7 +5,7 @@ defineOptions({
   meta: {
     name: "Inbox",
     badge: computed(
-      () => (user().inbox?.messages ?? []).filter((m) => !m.read).length
+      () => (user().inbox?.messages ?? []).filter((m) => !m.read).length,
     ).value,
     class: "**:stroke-1.5",
     icon: "lucide:mail",
@@ -44,7 +44,7 @@ defineOptions({
                 'bg-p0/80': !message.read,
                 'hover:bg-sidebar-accent bg-transparent opacity-70':
                   message.read,
-              }
+              },
             )
           ">
           <Dialog>
@@ -88,7 +88,7 @@ defineOptions({
       </template>
 
       <div v-else class="grid h-44 w-full place-items-center">
-        <span class="dst overflow-hidden text-sm text-nowrap">
+        <span class="overflow-hidden text-sm text-nowrap drop-shadow-2xs">
           {{ `No mail right now!` }}
         </span>
       </div>

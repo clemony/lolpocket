@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-import { itemStatRecord } from "#shared/constants/items/itemStatRecord"
 import { statIndex } from "#shared/constants/common/stat-index"
+import { itemStatRecord } from "#shared/constants/items/itemStatRecord"
+import { motion } from "motion-v"
 
 const checkedStats = ref<StatIndex[]>([])
 
@@ -53,17 +53,15 @@ const set2 = computed(() => is().calculatorSet2)
     <!-- head -->
     <div
       class="btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center py-2 *:text-sm">
-      <div class="dst col-start-2 font-medium">
-        STAT
-      </div>
+      <div class="col-start-2 font-medium drop-shadow-2xs">STAT</div>
 
-      <div class="dst justify-center font-medium">
+      <div class="justify-center font-medium drop-shadow-2xs">
         {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="dst justify-center font-medium">
+        class="justify-center font-medium drop-shadow-2xs">
         2
       </div>
     </div>
@@ -91,9 +89,7 @@ const set2 = computed(() => is().calculatorSet2)
           />
         </motion.label> -->
 
-        <template
-          v-for="stat in statIndex"
-          :key="stat.id">
+        <template v-for="stat in statIndex" :key="stat.id">
           <motion.label
             v-if="!checkedStats.includes(stat)"
             class="grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b border-b-p3/40 py-3.5 first:border-t first:border-t-p3 hover:bg-p2/60 has-checked:hidden"
@@ -102,7 +98,7 @@ const set2 = computed(() => is().calculatorSet2)
               v-model="checkedStats"
               class="peer absolute hidden"
               type="checkbox"
-              :value="stat">
+              :value="stat" />
 
             <StatRowContents
               :stat="stat"
@@ -119,17 +115,15 @@ const set2 = computed(() => is().calculatorSet2)
         <i-ui-gold class="size-6 text-pc/80" />
       </div>
 
-      <div class="dst col-start-2 font-medium">
-        TOTAL GOLD
-      </div>
+      <div class="col-start-2 font-medium drop-shadow-2xs">TOTAL GOLD</div>
 
-      <div class="dst justify-center font-medium">
+      <div class="justify-center font-medium drop-shadow-2xs">
         {{ totalCost }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="dst justify-center font-medium">
+        class="justify-center font-medium drop-shadow-2xs">
         {{ totalCost2 }}
       </div>
     </div>

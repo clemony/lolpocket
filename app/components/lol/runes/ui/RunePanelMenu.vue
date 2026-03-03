@@ -31,7 +31,7 @@ function handleDelete() {
       @click="handleNewSet()">
       <icon
         name="add"
-        class=" size-6 shrink-0 dst" />
+        class=" size-6 shrink-0 drop-shadow-2xs" />
     </button> -->
 
     <button

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @layer utilities {
+  .top-banner-toast-viewport [data-slot="base"][data-expanded="true"] {
+    --translate: calc(var(--offset) * 1px - var(--before) * 16px) !important;
+  }
+
   .anchor {
     @apply relative grid! aspect-square place-items-center gap-0! p-0! *:absolute;
   }

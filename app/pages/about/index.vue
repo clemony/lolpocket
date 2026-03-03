@@ -149,7 +149,9 @@ const faq = [
             content-tag="div">
             <template #default>
               <a :href="icon.link" :target="icon.link ? '_blank' : ''">
-                <icon class="dst size-6 shrink-0" :name="icon.icon" />
+                <icon
+                  class="size-6 shrink-0 drop-shadow-2xs"
+                  :name="icon.icon" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
@@ -168,7 +170,8 @@ const faq = [
         </div>
       </div>
 
-      <div class="dst mt-6 flex flex-col items-center px-4 tracking-tight">
+      <div
+        class="mt-6 flex flex-col items-center px-4 tracking-tight drop-shadow-2xs">
         <p class="text-center">
           <i>Lolpockets</i>
 

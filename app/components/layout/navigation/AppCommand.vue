@@ -72,7 +72,7 @@ const component = shallowRef(
         label="search..."
         size="md"
         :ui="{
-          base: 'w-180! shrink-0 cursor-text rounded-xl! border border-p4/60 bg-p0/50 inset-shadow-xs fx-1',
+          base: 'w-180! shrink-0 cursor-text rounded-xl! border border-p3 bg-p0/50 inset-shadow-sm fx-1',
           label: 'grow text-center text-n5',
           leadingIcon:
             'size-4.5 justify-self-start text-n5 opacity-80 **:stroke-[2.3] group-hover/btn:opacity-100',

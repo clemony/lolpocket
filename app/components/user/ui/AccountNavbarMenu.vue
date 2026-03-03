@@ -38,7 +38,7 @@ const themeModel = computed({
           <SummonerIcon class="size-11 rounded-lg" />
           <div class="flex flex-col">
             <h1
-              class="dst truncate pl-1 text-xxl! leading-none font-semibold text-pc/90">
+              class="truncate pl-1 text-xxl! leading-none font-semibold text-pc/90 drop-shadow-2xs">
               {{ summoner?.name }}
             </h1>
             <SummonerId
@@ -100,6 +100,6 @@ const themeModel = computed({
         <icon name="log-in" />
         Log in
       </UButton>
-    </div>
-  </UPopover>>
+    </div> </UPopover
+  >>
 </template>

@@ -1,7 +1,7 @@
 //
-import { generate } from "random-words"
 import { championIndex } from "#shared/constants/champions/championIndex"
 import { itemIndex } from "#shared/constants/items/itemIndex"
+import { generate } from "random-words"
 
 const moreWords = [
   "😘",
@@ -54,7 +54,7 @@ const moreWords = [
   "GOATED",
   "Gold Funnel",
   "HAM",
-  "Hardstuck",
+  "Hardrop-shadow-2xsuck",
   "Hypercarry",
   "Inting",
   "Inting Sion",

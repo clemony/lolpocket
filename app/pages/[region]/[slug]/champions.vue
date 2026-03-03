@@ -34,16 +34,14 @@ const championData = computed(() =>
         pointsUntilLevel: 0,
       }),
     }
-  })
+  }),
 )
 </script>
 
 <template>
   <UPage class="relative pb-32">
     <UPageHeader class="px-20">
-      <h1 class="dst self-start font-bold">
-        Champion Stats
-      </h1>
+      <h1 class="self-start font-bold drop-shadow-2xs">Champion Stats</h1>
 
       <QueueFilters />
       <LazyMatchPositionFilter orientation="vertical" />

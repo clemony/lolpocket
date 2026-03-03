@@ -27,13 +27,13 @@ const hasOneRune = computed (() => {
  -->
       <!-- no keystone -->
 
-      <!-- <i-rune-icon v-else class="size-10 text-pc/60 dst" /> -->
+      <!-- <i-rune-icon v-else class="size-10 text-pc/60 drop-shadow-2xs" /> -->
     </div>
 
     <!-- secondary -->
     <!--   <div v-if="secondary.path && hasOneRune.length" class="shadow-outline shadow-black/15 absolute -right-4 -bottom-1  grid aspect-square size-10 place-items-center  rounded-full  transition-all duration-500 bg-gradient-to-br from-p2 to-p3 ring-1 ring-p2">
       <div class="from-p0/90 to-p0/40 grid size-full place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
-        <img :src="`/img/runes/${secondary.path}.webp`" class=" shrink-0 h-6.5 w-auto object-contain transition-all duration-200 dst" />
+        <img :src="`/img/runes/${secondary.path}.webp`" class=" shrink-0 h-6.5 w-auto object-contain transition-all duration-200 drop-shadow-2xs" />
       </div>
     </div> -->
   </div>

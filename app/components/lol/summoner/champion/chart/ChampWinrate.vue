@@ -5,11 +5,13 @@ const {
   champion,
   class: className,
   entry,
+  arcWidth = 3,
   size = 32,
 } = defineProps<{
   champion?: ChampionStats
   ally?: AllyStatDetail
   entry?: RankedEntry
+  arcWidth?: number
   class?: HTMLAttributes["class"]
   hideZero?: boolean
   size?: number
@@ -40,6 +42,19 @@ const wr = computed(() => {
 })
 
 const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
+
+const labels = {
+  win: {
+    name: "Win",
+    color:
+      cssVar(`--color-${entry?.tier?.toLowerCase() || "insp"}`) ||
+      "var(--color-insp)",
+  },
+  loss: {
+    name: "Loss",
+    color: "var(--color-p3)",
+  },
+} as const
 </script>
 
 <template>
@@ -49,15 +64,16 @@ const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
       :data
       :height="size"
       :radius="80"
+      :class="cn('', className)"
       :pad-angle="-0.1"
-      :arc-width="3"
-      :categories="winLossLabels"
+      :arc-width
+      :categories="labels"
       :hide-tooltip="true"
       :hide-legend="true">
       <div class="text-center">
         <span
           :class="
-            cn('text-3xs! font-medium text-pc ds-2xs', {
+            cn('text-3xs font-medium text-pc ds-2xs', {
               'opacity-0': hideZero && (!wr || wr === 0),
             })
           ">

@@ -12,7 +12,7 @@ const props = withDefaults(
   }>(),
   {
     placeholder: "Search Items...",
-  }
+  },
 )
 
 const emit = defineEmits(["update:query"])
@@ -107,7 +107,7 @@ watchEffect(() => {
     :class="
       cn(
         'bgneutral/84 btn relative flex btn-circle items-center rounded-full border text-nc btn-neutral',
-        props.class
+        props.class,
       )
     "
     :variants="variants"
@@ -135,12 +135,12 @@ watchEffect(() => {
       @click="clearFilters">
       <icon
         v-if="searchQuery"
-        class="dst absolute size-5.5 shrink-0 text-pc/70"
+        class="absolute size-5.5 shrink-0 text-pc/70 drop-shadow-2xs"
         name="x-sm" />
 
       <icon
         v-else
-        class="dst absolute size-4.75 shrink-0 text-pc/70"
+        class="absolute size-4.75 shrink-0 text-pc/70 drop-shadow-2xs"
         name="search" />
     </button>
   </motion.div>

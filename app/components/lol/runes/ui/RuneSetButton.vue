@@ -50,7 +50,7 @@ const bgStyle = computed (() => {
       <div class="p-1.5 size-full grid place-items-center">
         <i-rune-icon
           v-if="!set.keystone || !set[0].path"
-          class="size-6.5 opacity-40 dst" />
+          class="size-6.5 opacity-40 drop-shadow-2xs" />
 
         <NuxtImg
           v-else
@@ -66,7 +66,7 @@ const bgStyle = computed (() => {
       <div class=" grid size-full place-items-center rounded-full ">
         <img
           :src="!set[1].path ? '/img/runes/blankRune.webp' : `/img/runes/${set[1].path}.webp`"
-          class=" shrink-0 h-6 w-auto object-contain drop-shadow-sm  transition-all duration-200 dst" />
+          class=" shrink-0 h-6 w-auto object-contain drop-shadow-sm  transition-all duration-200 drop-shadow-2xs" />
       </div>
     </div>
   </div> -->

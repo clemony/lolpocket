@@ -43,25 +43,44 @@ export default defineNuxtConfig({
         const isNuxtChartsDep = (dep: unknown): dep is string =>
           typeof dep === "string" && nuxtChartsDeps.includes(dep as any)
 
+        const mutableConfig = viteConfig as {
+          optimizeDeps?: {
+            include?: string[]
+            exclude?: string[]
+          }
+          environments?: {
+            client?: {
+              optimizeDeps?: {
+                include?: string[]
+                exclude?: string[]
+              }
+            }
+          }
+        }
+
         // `nuxt-charts` adds deps to root optimize include. In Nuxt 4/Vite 7 this can
         // collide with client-environment excludes and trigger:
         // "entry point <dep> cannot be marked as external"
-        viteConfig.optimizeDeps ??= {}
+        mutableConfig.optimizeDeps ??= {}
 
-        if (Array.isArray(viteConfig.optimizeDeps.include)) {
-          viteConfig.optimizeDeps.include = viteConfig.optimizeDeps.include
-            .filter(dep => !isNuxtChartsDep(dep))
+        if (Array.isArray(mutableConfig.optimizeDeps.include)) {
+          mutableConfig.optimizeDeps.include =
+            mutableConfig.optimizeDeps.include.filter(
+              (dep) => !isNuxtChartsDep(dep),
+            )
         }
 
-        if (Array.isArray(viteConfig.optimizeDeps.exclude)) {
-          viteConfig.optimizeDeps.exclude = viteConfig.optimizeDeps.exclude
-            .filter(dep => !isNuxtChartsDep(dep))
+        if (Array.isArray(mutableConfig.optimizeDeps.exclude)) {
+          mutableConfig.optimizeDeps.exclude =
+            mutableConfig.optimizeDeps.exclude.filter(
+              (dep) => !isNuxtChartsDep(dep),
+            )
         }
 
-        viteConfig.environments ??= {}
-        viteConfig.environments.client ??= {}
-        viteConfig.environments.client.optimizeDeps ??= {}
-        const clientOptimize = viteConfig.environments.client.optimizeDeps
+        mutableConfig.environments ??= {}
+        mutableConfig.environments.client ??= {}
+        mutableConfig.environments.client.optimizeDeps ??= {}
+        const clientOptimize = mutableConfig.environments.client.optimizeDeps
 
         clientOptimize.include ??= []
         for (const dep of nuxtChartsDeps) {
@@ -71,8 +90,9 @@ export default defineNuxtConfig({
         }
 
         if (Array.isArray(clientOptimize.exclude)) {
-          clientOptimize.exclude = clientOptimize.exclude
-            .filter(dep => !isNuxtChartsDep(dep))
+          clientOptimize.exclude = clientOptimize.exclude.filter(
+            (dep) => !isNuxtChartsDep(dep),
+          )
         }
       })
     },
@@ -93,7 +113,6 @@ export default defineNuxtConfig({
     {
       path: "~/components",
       pathPrefix: false,
-      extensions: ["vue"],
     },
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
@@ -269,14 +288,14 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    server: {
+    /*     server: {
       strictPort: true,
       hmr: {
         protocol: "ws",
         host: "localhost",
         clientPort: 8080,
       },
-    },
+    }, */
     plugins: [
       // @ts-expect-error until plugin updates
       tailwindcss(),
@@ -356,152 +375,24 @@ export default defineNuxtConfig({
           crossorigin: "",
         },
 
-        // Inter (latin + latin-ext, 300-800, normal + italic)
+        // Inter Variable (all weights via axis, normal + italic)
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300.css",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght.css",
         },
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-300-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-400-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-500-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-600-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-700-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-800-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-300-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-400-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-500-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-600-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-700-italic.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.2.8/latin-ext-800-italic.css",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght-italic.css",
         },
 
-        // Noto Serif KR (normal only; italic not provided in this source)
+        // Gelasio
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-300.css",
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-italic.woff2",
         },
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-600.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-700.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-300.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-600.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/latin-ext-700.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-300.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-600.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/korean-700.css",
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-normal.woff2",
         },
 
         // Geist Mono (normal)

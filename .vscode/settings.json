@@ -5,7 +5,7 @@
   "editor.formatOnPaste": true, // optional
   "editor.formatOnSave": true, // optional
   "editor.formatOnSaveMode": "file", // required to format on save
-  "files.autoSave": "onFocusChange", // optional but recommended
+  "files.autoSave": "off", // optional but recommended
 
   "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/nuxt/lolpocket/layers/ui/app/assets/css/tailwind.css",
   "files.associations": {
@@ -35,7 +35,7 @@
     "source.fixAll.eslint": "always",
     "source.organizeImports": "never"
   },
-  "editor.codeActions.triggerOnFocusChange": true,
+  "editor.codeActions.triggerOnFocusChange": false,
 
   // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
@@ -77,7 +77,7 @@
     "pcss",
     "postcss"
   ],
-  "iconify.inplace": true,
+  "iconify.inplace": false,
   "iconify.prefixes": ["i-"],
   "iconify.suffixes": [],
   "iconify.position": "before",

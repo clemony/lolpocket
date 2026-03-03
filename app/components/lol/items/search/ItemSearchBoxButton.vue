@@ -14,13 +14,11 @@ const props = defineProps<{
       'border-p3/70 bg-p0/60 text-pc/50': !props.contrast,
     }">
     <icon
-      class="dst z-1 size-5 shrink-0 text-pc opacity-60"
+      class="z-1 size-5 shrink-0 text-pc opacity-60 drop-shadow-2xs"
       name="search"
       :class="{ 'text-nc opacity-90': props.contrast }" />
 
-    <div class="dst z-0 grow pt-0.5 text-left">
-      Search Items...
-    </div>
+    <div class="z-0 grow pt-0.5 text-left drop-shadow-2xs">Search Items...</div>
 
     <slot />
   </UButton>

@@ -2,9 +2,9 @@
 import { itemRankColor } from "#shared/constants/items/itemRankColor"
 
 const ranks = computed(() => Object.keys(itemRankColor))
-console.log('🌱 - ranks:', ranks)
+console.log("🌱 - ranks:", ranks)
 function onClick(rank: string): void {
-  if (rank === is().filters.rank) is().filters.rank = ''
+  if (rank === is().filters.rank) is().filters.rank = ""
 }
 </script>
 
@@ -22,7 +22,7 @@ function onClick(rank: string): void {
         type="radio"
         name="item-rank"
         :value="rank"
-        @click="onClick(rank)">
+        @click="onClick(rank)" />
 
       <span class="grow">
         {{ rank }}
@@ -39,7 +39,7 @@ function onClick(rank: string): void {
       </span> -->
       <icon
         v-if="is().filters.rank === rank"
-        class="dst size-6"
+        class="size-6 drop-shadow-2xs"
         name="tick-sm" />
     </Label>
   </div>

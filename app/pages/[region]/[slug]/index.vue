@@ -26,7 +26,7 @@ const open = shallowRef<boolean>(true)
       root: 'relative z-auto mb-44 flex w-full flex-row pt-8 pl-23',
       left: 'lg:col-span-3',
       right: 'hidden',
-      center: 'lg:col-span-7 lg:col-start-4',
+      center: 'overflow-visible! lg:col-span-7 lg:col-start-4',
     }">
     <template #left>
       <UPageAside
@@ -41,13 +41,13 @@ const open = shallowRef<boolean>(true)
           leave: [0, '10%'],
         }">
         <!--       <MatchHistoryMenu v-if="api" :api @open="e => open = e" /> -->
-        <RankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
-        <RankCard title="Flex" :entry="summoner?.ranked?.flex" />
-        <QueueFilters />
+        <LazyRankCard title="Solo/Duo" :entry="summoner?.ranked?.solo" />
+        <LazyRankCard title="Flex" :entry="summoner?.ranked?.flex" />
+        <QueueFilters class="mt-1 -mb-1" />
 
         <MatchChampionFilters />
 
-        <LazyMatchPositionFilter />
+        <LazyMatchPositionFilter class="mt-1 -mb-1" />
 
         <LazyMatchAlliesFilter v-if="user().settings?.show_allies" />
       </UPageAside>

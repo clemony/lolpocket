@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import { LibraryItemGrid } from "#components"
 import { itemQuotes } from "#shared/constants/items/itemQuotes"
 import { rankToItem } from "#shared/constants/items/rankToItem"
 import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
 import type { TabValue } from "~/components/pages/library/items/ui/viewMode"
-import { tabData } from "~/components/pages/library/items/ui/viewMode"
 
 definePageMeta({
   title: "Items",
@@ -39,14 +37,15 @@ const tabModel = shallowRef<TabValue>(0)
 const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
-        () => import("~/components/pages/library/items/LibraryItemGrid.vue")
+        () => import("~/components/pages/library/items/LibraryItemGrid.vue"),
       )
     : defineAsyncComponent(
-        () => import("~/components/pages/library/items/LibraryItemTable.vue")
-      )
+        () => import("~/components/pages/library/items/LibraryItemTable.vue"),
+      ),
 )
 
 const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
+const collapsed = useState<boolean>("collapsed-state", () => false)
 </script>
 
 <template>
@@ -57,13 +56,8 @@ const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
         :nav
         @update-tab="(e) => (tabModel = e)" />
     </template>
-    <template #toolbar>
+    <template v-if="collapsed || smallerThanLg" #toolbar>
       <LazyItemFilterToolbar :nav />
-    </template>
-    <template #toolbar-left>
-    </template>
-
-    <template #toolbar-center>
     </template>
 
     <template #links>

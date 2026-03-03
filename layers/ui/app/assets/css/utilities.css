@@ -3,31 +3,59 @@
 @utility inset-shadow-morphism-* {
   box-shadow:
     inset calc(--value(integer) * 1px) calc(--value(integer) * 1px) 9px
-      rgb(0 0 0 / 0.18),
+      rgb(0 0 0 / 0.14),
     inset calc(--value(integer) * -1px) calc(--value(integer) * -1px) 9px
       var(--color-p0);
 
   /* modifier  */
   box-shadow:
-    inset calc(--value(integer) * 1px) calc(--value(integer) * 1px) 9px
+    inset calc(--value(integer) * 1px) calc(--value(integer) * 1px)
+      calc(--modifier(integer) * 1px) rgb(0 0 0 / 0.14),
+    inset calc(--value(integer) * -1px) calc(--value(integer) * -1px)
+      calc(--modifier(integer) * 1px) var(--color-p0);
+}
+
+@utility inset-shadow-morphic-* {
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.14),
+    inset -5px -5px 10px var(--color-p0);
+  box-shadow:
+    inset 2px 2px calc(--value(integer) * 1px) rgba(0, 0, 0, 0.14),
+    inset -5px -5px 10px var(--color-p0);
+  box-shadow:
+    inset 2px 2px 5px rgb(0 0 0 / calc(--modifier(integer) / 100)),
+    inset -5px -5px 10px var(--color-p0);
+  box-shadow:
+    inset 2px 2px calc(--value(integer) * 1px)
       rgb(0 0 0 / calc(--modifier(integer) / 100)),
-    inset calc(--value(integer) * -1px) calc(--value(integer) * -1px) 9px
-      var(--color-p0);
+    inset -5px -5px 10px var(--color-p0);
 }
 
 @utility shadow-morphism-* {
   box-shadow:
-    calc(--value(integer) * 1px) calc(--value(integer) * 1px) 10px
-      rgb(0 0 0 / 0.2),
-    calc(--value(integer) * -1px) calc(--value(integer) * -1px) 10px
+    calc(--value(integer) * 1px) calc(--value(integer) * 1px) 7px
+      rgb(0 0 0 / 0.12),
+    calc(--value(integer) * -1px) calc(--value(integer) * -1px) 7px
       var(--color-p0);
 
   /* modifier  */
   box-shadow:
-    calc(--value(integer) * 1px) calc(--value(integer) * 1px) 10px
-      rgb(0 0 0 / calc(--modifier(integer) / 100)),
-    calc(--value(integer) * -1px) calc(--value(integer) * -1px) 10px
-      var(--color-p0);
+    calc(--value(integer) * 1px) calc(--value(integer) * 1px)
+      calc(--modifier(integer) * 1px) rgb(0 0 0 / 0.12),
+    calc(--value(integer) * -1px) calc(--value(integer) * -1px)
+      calc(--modifier(integer) * 1px) var(--color-p0);
+}
+
+@utility bg-concave {
+  background: linear-gradient(
+    145deg,
+    --alpha(var(--color-p1) / 60%),
+    var(--color-p0)
+  );
+}
+
+@utility bg-convex {
+  background: linear-gradient(145deg, var(--color-p0) 30%, var(--color-p1));
 }
 
 @utility border-* {

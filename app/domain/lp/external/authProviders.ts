@@ -1,4 +1,5 @@
-import type { Provider } from "@supabase/supabase-js"
+export type Provider = "google" | "discord"
+export type LpProvider = Provider | "riot"
 
 export const authProviders: Provider[] = [
   "riot" as Provider,

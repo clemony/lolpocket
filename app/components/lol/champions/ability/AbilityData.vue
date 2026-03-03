@@ -16,7 +16,7 @@ watch(
   () => ability.value,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
-  }
+  },
 )
 </script>
 
@@ -32,12 +32,12 @@ watch(
     <div
       v-if="
         ability &&
-          (ability.resource ||
-            ability.cooldown?.length ||
-            ability.rechargeRate ||
-            ability.cost?.length ||
-            ability.effectRadius ||
-            ability.targetRange)
+        (ability.resource ||
+          ability.cooldown?.length ||
+          ability.rechargeRate ||
+          ability.cost?.length ||
+          ability.effectRadius ||
+          ability.targetRange)
       "
       class="flex w-full flex-wrap items-center gap-x-8 gap-y-4 px-9 pr-1 **:font-medium">
       <Tooltip
@@ -45,7 +45,7 @@ watch(
         label="'Cooldown'"
         class="flex items-center gap-2">
         <i-stats-ah
-          class="dst mt-px inline size-3.5 shrink-0 text-black"
+          class="mt-px inline size-3.5 shrink-0 text-black drop-shadow-2xs"
           name="ph:hourglass" />
 
         <ValueFormatter :array="ability.cooldown" />
@@ -84,7 +84,7 @@ watch(
         :name="ability.resource">
         <ChampionDataIcon
           v-if="ability.resource"
-          class="dst size-4 text-pc/80"
+          class="size-4 text-pc/80 drop-shadow-2xs"
           :name="ability.resource" />
 
         <ValueFormatter :array="ability.cost" />
@@ -96,7 +96,7 @@ watch(
         class="flex items-center gap-2">
         <span class="relative size-3 justify-start">
           <i-stats-radius
-            class="dst absolute -top-0.5 -left-1.5 size-4.5 text-pc/80" />
+            class="absolute -top-0.5 -left-1.5 size-4.5 text-pc/80 drop-shadow-2xs" />
         </span>
         {{ ability.effectRadius }}
       </Tooltip>
@@ -105,13 +105,13 @@ watch(
         v-if="ability.targetRange"
         label="'Range'"
         class="flex items-center gap-2">
-        <i-stats-range class="dst size-4 text-pc/80" />
+        <i-stats-range class="size-4 text-pc/80 drop-shadow-2xs" />
         {{ ability.targetRange }}
       </Tooltip>
 
       <!--  <p v-if="ability.width" label="'Max Rank'"  class="flex gap-2 items-center items-center">
         <span class="size-3 relative justify-start">
-          <icon name="teenyicons:double-caret-up-small-solid" class="size-6.5 -left-1.5 -top-1.5 absolute text-pc dst" />
+          <icon name="teenyicons:double-caret-up-small-solid" class="size-6.5 -left-1.5 -top-1.5 absolute text-pc drop-shadow-2xs" />
         </span>
         {{ ability.maxrank }}
       </p>

@@ -19,29 +19,24 @@ const alliesList = computed(() =>
 </script>
 
 <template>
-  <UCollapsible :default-open="true" class="w-full space-y-2">
-    <UButton variant="link" block>
-      <Separator
-        trailing-icon="i-up"
-        size="md"
-        label="Allies"
-        :ui="{
-          root: '',
-          trailingIcon:
-            'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/30 duration-200 **:stroke-[2.8] group-open/collapse:-rotate-180',
-        }">
-        <template #leading>
-          <Icon
-            name="right"
-            class="group-hover/btn:**:text-80 size-4 text-pc/40 **:stroke-[2.6] open:rotate-90" />
-        </template>
-      </Separator>
-    </UButton>
+  <UCollapsible :default-open="true" class="w-full">
+    <UButton
+      trailing-icon="i-up"
+      label="Allies"
+      variant="custom"
+      block
+      :ui="{
+        base: 'mb-1 justify-between px-0.5',
+        label:
+          'grow-0 bg-p0 font-semibold! text-n3! drop-shadow-2xs group-hover/btn:text-pc',
+        trailingIcon:
+          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc',
+      }" />
 
     <template #content>
       <Listbox v-model:model-value="model" :multiple="false">
         <ListboxContent
-          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border-b px-1.5 py-1 inset-shadow-morphism-2">
+          class="h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-morphic">
           <template v-if="!sMatches().loading && sMatches.length">
             <ListboxItem
               v-for="item in alliesList"
@@ -50,12 +45,10 @@ const alliesList = computed(() =>
               :value="item.puuid ?? ''">
               <UButton
                 variant="ghost"
+                :active="item.puuid === model"
                 :ui="{
                   base: cn(
-                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden px-2',
-                    {
-                      'opacity-74 grayscale': model && item.puuid !== model,
-                    },
+                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
                   ),
                 }"
                 size="xl">
@@ -69,7 +62,13 @@ const alliesList = computed(() =>
                   }"
                   :avatar="{
                     src: getSummonerIcon(item.icon),
-                    icon: 'lol:champ',
+                    size: 'xl',
+                    class: cn(
+                      'shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 on:duration-800',
+                      model && item.puuid !== model
+                        ? 'grayscale opacity-90'
+                        : '',
+                    ),
                   }" />
                 <template v-if="item.games">
                   <div
@@ -79,8 +78,15 @@ const alliesList = computed(() =>
                       {{ Number(item.games) - Number(item.win) }} loss
                     </span>
                   </div>
-                  <div class="size-12">
-                    <ChampWinrate v-if="item.games" :ally="item" :size="32" />
+                </template>
+
+                <template v-if="item.games" #trailing>
+                  <div class="relative grid size-12 place-items-center">
+                    <ChampWinrate
+                      v-if="item.games"
+                      :ally="item"
+                      :size="32"
+                      class="absolute drop-shadow-xs" />
                   </div>
                 </template>
               </UButton>

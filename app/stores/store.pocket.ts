@@ -36,5 +36,5 @@ export const usePockets = defineStore(
       key: "pocketStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
-  }
+  },
 )

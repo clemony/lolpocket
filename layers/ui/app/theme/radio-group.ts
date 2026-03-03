@@ -16,7 +16,7 @@ export const radioGroupTheme = defineUiTheme({
   },
   variants: {
     color: {
-      p0: {
+      default: {
         base: "focus-visible:outline-p3",
         indicator: "bg-p0",
       },
@@ -25,8 +25,8 @@ export const radioGroupTheme = defineUiTheme({
         indicator: "bg-p1",
       },
       neutral: {
-        base: "focus-visible:outline-inverted",
-        indicator: "bg-inverted",
+        base: "focus-visible:outline-nc",
+        indicator: "bg-n0",
       },
     },
     variant: {
@@ -34,7 +34,12 @@ export const radioGroupTheme = defineUiTheme({
         item: "",
       },
       card: {
-        item: "rounded-lg border border-muted",
+        item: "rounded-lg border border-p3/80",
+      },
+      soft: {
+        root: "items-center",
+        fieldset: "items-center gap-4",
+        item: "hover:inset-shadow-morphic has-data-[state=checked]:shadow-morphic flex items-center justify-center rounded-lg border border-transparent has-data-[state=checked]:pointer-events-none",
       },
       table: {
         item: "border border-p3/80",
@@ -118,10 +123,34 @@ export const radioGroupTheme = defineUiTheme({
       },
     },
   },
-  compoundVariants: [],
+  compoundVariants: [
+    {
+      color: "default",
+      variant: "soft",
+      class: {
+        item: "hover:border-p3 has-data-[state=checked]:border-p3",
+      },
+    },
+    {
+      orientation: "horizontal",
+      variant: "soft",
+      class: {
+        root: "w-full",
+        item: "grow",
+      },
+    },
+    {
+      orientation: "horizontal",
+      variant: "soft",
+      class: {
+        root: "w-full",
+        item: "h-10 grow",
+      },
+    },
+  ],
   defaultVariants: {
     size: "md",
-    color: "primary",
+    color: "default",
     variant: "list",
     orientation: "vertical",
     indicator: "start",

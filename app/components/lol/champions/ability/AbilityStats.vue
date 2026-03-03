@@ -9,12 +9,12 @@ const { ability, class: className } = defineProps<{
   <div
     v-if="
       ability &&
-        (ability.resource ||
-          ability.cooldown?.length ||
-          ability.rechargeRate ||
-          ability.cost?.length ||
-          ability.effectRadius ||
-          ability.targetRange)
+      (ability.resource ||
+        ability.cooldown?.length ||
+        ability.rechargeRate ||
+        ability.cost?.length ||
+        ability.effectRadius ||
+        ability.targetRange)
     "
     :class="cn('', className)">
     <div
@@ -22,7 +22,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2"
       title="Cooldown">
       <Icon
-        class="dst mt-px inline size-3 shrink-0 text-black"
+        class="mt-px inline size-3 shrink-0 text-black drop-shadow-2xs"
         name="stat:abilityHaste" />
       {{ ability.cooldown }}
     </div>
@@ -67,7 +67,7 @@ const { ability, class: className } = defineProps<{
       title="Effect Radius">
       <span class="relative size-3 justify-start">
         <Icon
-          class="dst absolute -top-0.5 size-3.25"
+          class="absolute -top-0.5 size-3.25 drop-shadow-2xs"
           name="stat:gameplayRadius" />
       </span>
       {{ ability.effectRadius }}
@@ -77,7 +77,7 @@ const { ability, class: className } = defineProps<{
       v-if="ability.targetRange"
       class="flex items-center gap-2"
       title="Range">
-      <Icon class="dst size-4" name="stat:rangeCenter" />
+      <Icon class="size-4 drop-shadow-2xs" name="stat:rangeCenter" />
       {{ ability.targetRange }}
     </div>
   </div>

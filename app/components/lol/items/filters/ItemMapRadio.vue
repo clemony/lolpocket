@@ -28,7 +28,7 @@
         <span class="relative grid size-5 place-items-center px-3">
           <component
             :is="`i-lp-${map}`"
-            class="dst absolute shrink-0"
+            class="absolute shrink-0 drop-shadow-2xs"
             :class="{
               'size-4!': map === 12 || map === 11,
               'size-5.5!': map === 30,

@@ -53,8 +53,8 @@ onMounted(() => {
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
     :class="cn('', props.class)">
-    <article class="dst container mx-auto max-w-250 min-w-190 p-6">
-      <header class="dst mb-6 text-start tracking-tight">
+    <article class="container mx-auto max-w-250 min-w-190 p-6 drop-shadow-2xs">
+      <header class="mb-6 text-start tracking-tight drop-shadow-2xs">
         <span class="text-md">
           404 |
           <span class="">This page looks afk</span>
@@ -69,7 +69,7 @@ onMounted(() => {
       <section
         class="relative flex w-full max-w-180 items-start gap-4 pt-20 pb-28 **:text-pretty">
         <div class="flex flex-col gap-3">
-          <p class="dst mt-1">
+          <p class="mt-1 drop-shadow-2xs">
             {{ catFact.num }}
             <span class="text-[5rem] font-bold tracking-tight">
               {{ catFact.title }}
@@ -84,15 +84,11 @@ onMounted(() => {
       <footer
         class="flex items-center gap-1 text-end text-sm italic *:flex *:items-end *:gap-2">
         <icon class="size-5" name="la:flag-usa" />
-        <p class="text-xs text-pc/70">
-          Brought to you by
-        </p>
+        <p class="text-xs text-pc/70">Brought to you by</p>
         <p class="font-semibold italic antialiased opacity-70">
           Paws for Progress, 2028.
         </p>
-        <p class="text-xss text-pc/70">
-          Refresh in peace.
-        </p>
+        <p class="text-xss text-pc/70">Refresh in peace.</p>
       </footer>
     </article>
   </main>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from "#shared/constants/common/stat-index";
+import { statIndex } from "#shared/constants/common/stat-index"
 
 const { filtered, filters } = is() as any
 </script>
@@ -34,7 +34,9 @@ const { filtered, filters } = is() as any
 
             <div
               class="badge rounded-lg border-accent bg-p0/90 text-xs! tracking-wide">
-              <span class="dst text-pc">{{ stat.abbr?.[0] ?? "" }}</span>
+              <span class="text-pc drop-shadow-2xs">{{
+                stat.abbr?.[0] ?? ""
+              }}</span>
             </div>
           </label>
         </Motion>

@@ -13,44 +13,47 @@ const championList = computed(() =>
 </script>
 
 <template>
-  <UCollapsible :default-open="true" class="w-full space-y-2">
-    <UButton variant="link" block :ui="{ base: '' }">
-      <Separator
-        trailing-icon="i-up"
-        size="md"
-        label="Champions"
-        :ui="{
-          trailingIcon:
-            'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/30 duration-200 **:stroke-[2.8] group-open/collapse:-rotate-180',
-        }">
-        <template #leading>
-          <Icon
-            name="right"
-            class="group-hover/btn:**:text-80 size-4 text-pc/40 **:stroke-[2.6] open:rotate-90" />
-        </template>
-      </Separator>
-    </UButton>
+  <UCollapsible
+    :default-open="true"
+    :ui="{
+      root: 'relative w-full',
+      content: 'relative w-full overflow-hidden',
+    }">
+    <UButton
+      trailing-icon="i-up"
+      label="Champions"
+      variant="custom"
+      block
+      :ui="{
+        base: 'mb-1 justify-between px-0.5',
+        label:
+          'grow-0 bg-p0 font-semibold! text-n3! drop-shadow-2xs group-hover/btn:text-pc',
+        trailingIcon:
+          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc',
+      }" />
 
     <template #content>
       <Listbox v-model:model-value="model" :multiple="false">
         <ListboxContent
-          class="border-b-b3 h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border-b px-1.5 py-2 inset-shadow-morphism-2">
+          :class="
+            cn(
+              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-morphic',
+            )
+          ">
           <template v-if="!sMatches().loading && sMatches.length">
             <ListboxItem
               v-for="item in championList"
               :key="item.championId"
               as-child
+              :class="cn('', { 'sticky top-0 z-2': item.championId === model })"
               :value="item.championId">
               <UButton
                 variant="ghost"
+                :active="item.championId === model"
                 :ui="{
                   base: cn(
-                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden px-2',
-                    {
-                      'opacity-74 grayscale':
-                        model && item.championId !== model,
-                    },
-                  ), // not-on:rounded-none not-on:border-b-p3/60
+                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
+                  ),
                 }"
                 size="xl">
                 <UUser
@@ -64,6 +67,13 @@ const championList = computed(() =>
                   :avatar="{
                     src: `/img/champions/${item.championId}.webp`,
                     icon: 'lol:champ',
+                    size: 'xl',
+                    class: cn(
+                      'shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 on:duration-800',
+                      model && item.championId !== model
+                        ? 'grayscale opacity-90'
+                        : '',
+                    ),
                   }" />
 
                 <template v-if="item.games">
@@ -72,8 +82,12 @@ const championList = computed(() =>
                     <span> {{ item.win }} win </span>
                     <span> {{ item.loss }} loss </span>
                   </div>
-                  <div class="size-12">
-                    <ChampWinrate :champion="item" />
+                </template>
+                <template v-if="item.games" #trailing>
+                  <div class="relative grid size-12 place-items-center">
+                    <ChampWinrate
+                      :champion="item"
+                      class="absolute drop-shadow-xs" />
                   </div>
                 </template>
               </UButton>

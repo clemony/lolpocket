@@ -99,7 +99,7 @@ export const sSummoner = defineStore(
       console.log("🥸 - ensureSummoner - existing:", existing)
 
       const hasFullIdentity = Boolean(
-        existing?.puuid && existing?.region && existing?.name && existing?.tag
+        existing?.puuid && existing?.region && existing?.name && existing?.tag,
       )
       if (existing && hasFullIdentity && !force && !isStale(existing.puuid))
         return existing
@@ -112,7 +112,7 @@ export const sSummoner = defineStore(
       try {
         ranked = await $fetch<{ ranked: Summoner["ranked"] }>(
           "/api/riot/v4/league/entries/puuid",
-          { params: { puuid: base.puuid, region: base.region } }
+          { params: { puuid: base.puuid, region: base.region } },
         )
       } catch (err) {
         console.warn("Failed ranked lookup, continuing with base summoner", err)
@@ -138,7 +138,7 @@ export const sSummoner = defineStore(
 
     const mergeRanked = (
       puuid: Summoner["puuid"],
-      ranked: Summoner["ranked"]
+      ranked: Summoner["ranked"],
     ) => {
       const s = cache.value[puuid]
       if (!s) return
@@ -188,5 +188,5 @@ export const sSummoner = defineStore(
       },
       storage: piniaPluginPersistedstate.localStorage(),
     },
-  }
+  },
 )

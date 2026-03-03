@@ -7,7 +7,7 @@ const isOpen = shallowRef(false)
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 
 async function testSaveAllPockets() {
@@ -56,13 +56,13 @@ async function testSaveAllPockets() {
       </UButton>
 
       <UButton class="h-9! rounded-md" variant="ghost" size="sm">
-        <icon class="dst" name="hugeicons:image-download" />
+        <icon class="drop-shadow-2xs" name="hugeicons:image-download" />
         Download Pocket Card
       </UButton>
 
       <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
       <Label class="mb-1 px-3 py-2" variant="label">
-        <icon class="dst size-4.5" name="export" />
+        <icon class="size-4.5 drop-shadow-2xs" name="export" />
         Export to League Client
       </Label>
       <UButton class="h-9! rounded-md pl-10.75!" variant="ghost" size="sm">
@@ -76,7 +76,7 @@ async function testSaveAllPockets() {
       <Separator class="-mx-2 my-2 justify-self-center bg-p3" />
       <UButton class="h-9! rounded-md" variant="ghost" size="sm" as-child>
         <DeletePocketDialog :pocket="pocket">
-          <icon class="dst size-4.5" name="trash" />
+          <icon class="size-4.5 drop-shadow-2xs" name="trash" />
           Delete Pocket
         </DeletePocketDialog>
       </UButton>
