@@ -4,13 +4,17 @@
 .nitro
 .cache
 dist
+test
 .vscode
 .storage
 .history
 .scripts
+.agents/skills
 .agents
 gitignore
 .nuxtrc
+*.cpuprofile
+*.code-workspace
 
 # Node dependencies
 node_modules

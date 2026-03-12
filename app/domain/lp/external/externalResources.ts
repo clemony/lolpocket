@@ -31,6 +31,20 @@ export const externalResources = [
     },
   },
   {
+    label: "Probuilds",
+    to: "https://www.probuilds.net/",
+    avatar: {
+      src: "/img/logos/lolalytics2.webp",
+    },
+  },
+  {
+    label: "Onetricks.gg",
+    to: "https://www.onetricks.gg",
+    avatar: {
+      src: "/img/logos/lolalytics3.webp",
+    },
+  },
+  {
     label: "OP.GG",
     to: "https://www.op.gg",
     avatar: {
