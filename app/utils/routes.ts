@@ -49,22 +49,22 @@ export const nexusNav = [
 export const libraryNav = [
   {
     label: "Champions",
-    to: "/champions",
+    to: "/library/champions",
     icon: "i-lp-champ",
   },
   {
     label: "Items",
-    to: "/items",
+    to: "/library/items",
     icon: "i-lucide-sword",
   },
   {
     label: "Runes",
-    to: "/runes",
+    to: "/library/runes",
     icon: "i-lp-runes",
   },
   {
     label: "Spells",
-    to: "/spells",
+    to: "/library/spells",
 
     icon: "i-lucide-book-marked",
   },
@@ -134,7 +134,7 @@ export const resourceNav = [
     label: "Official",
     size: "xs",
     ui: {
-      item: "pointer-events-none items-end pb-0",
+      item: "pointer-events-none max-h-6 ",
       itemLabel: "label text-xs opacity-50",
     },
   },
@@ -144,7 +144,7 @@ export const resourceNav = [
     label: "External",
     size: "xs",
     ui: {
-      item: "pointer-events-none items-end pb-0",
+      item: "pointer-events-none  max-h-6 ",
       itemLabel: "label text-xs opacity-50",
     },
   },

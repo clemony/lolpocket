@@ -4,8 +4,6 @@
 @plugin "daisyui" {
   themes:
     light --default,
-    dim,
-    dark;
   styled: true;
   exclude:
     rootcolor, navbar, link, toast, skeleton, steps, drawersidebar, hero,
@@ -19,7 +17,6 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: "true";
-  prefersdark: false;
   color-scheme: light;
 
   --color-base-100: var(--ui-p0);
@@ -29,7 +26,7 @@
   --color-primary: var(--ui-n0);
   --color-primary-content: var(--ui-nc);
 
-  --color-secondary: var(--ui-p1);
+  --color-secondary: var(--color-p1);
   --color-secondary-content: var(--ui-pc);
 
   --color-accent: var(--ui-p3);
@@ -64,6 +61,10 @@
   /* effects */
   --depth: 0.4;
   --noise: 0.2;
+}
+
+:root {
+  --color-secondary: var(--color-p1);
 }
 
 @utility tab {

@@ -1,17 +1,4 @@
 <script lang="ts" setup>
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
-})
-
 definePageMeta({
   title: "Champions",
   description: "Discover in depth champion data for every one played.",
@@ -19,6 +6,8 @@ definePageMeta({
   iconStyle: "scale-90 -mb-0.25",
   keepalive: true,
   order: 1,
+  search: false,
+  prefix: "summoner",
 })
 const { summoner } = storeToRefs(sSession())
 

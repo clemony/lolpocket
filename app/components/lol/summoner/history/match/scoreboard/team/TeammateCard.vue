@@ -9,14 +9,9 @@ const { match, player } = defineProps<{
 </script>
 
 <template>
-  <UCard
+  <div
     v-if="player"
-    :ui="{
-      root: 'w-full px-3 py-2.25 dark:border-p3/70 dark:bg-p2/60 light:border-transparent! light:bg-p0/80! light:shadow-none! light:drop-shadow-none!',
-      body: cn(
-        'relative flex w-full max-w-full items-center justify-between overflow-hidden **:select-none'
-      ),
-    }">
+    class="relative flex w-full max-w-full items-center justify-between overflow-hidden px-3 py-2.25 **:select-none">
     <!-- champion -->
 
     <div class="flex w-18 items-center">
@@ -70,7 +65,7 @@ const { match, player } = defineProps<{
 
     <ScoreboardCardItems class="" :player :is-s-r="match?.mapId === 11" />
 
-    <div class="@min-700:w-16 flex h-fit w-5 flex-col items-end gap-1">
+    <div class="@min-700:w-16 @max-700:w-5 flex h-fit flex-col items-end gap-1">
       <!-- minions -->
       <PlayerCS :player />
       <!-- gold -->
@@ -92,5 +87,5 @@ const { match, player } = defineProps<{
           " />
       </div>
     </div>
-  </UCard>
+  </div>
 </template>

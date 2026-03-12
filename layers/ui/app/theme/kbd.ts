@@ -6,6 +6,7 @@ export const kbdTheme = defineUiTheme({
       default: "",
       neutral: "",
       n3: "",
+      p4: "",
     },
     variant: {
       solid: "",
@@ -42,7 +43,13 @@ export const kbdTheme = defineUiTheme({
     {
       color: "default",
       variant: "outline",
-      class: "text-pc ring ring-p3 ring-inset",
+      class:
+        "border-r border-b border-r-p3/60 border-b-p3/80 text-pc ring ring-p3",
+    },
+    {
+      color: "p4",
+      variant: "outline",
+      class: "text-pc ring ring-p4",
     },
     {
       color: "default",
@@ -67,7 +74,8 @@ export const kbdTheme = defineUiTheme({
     {
       color: "neutral",
       variant: "outline",
-      class: "bg-n0 text-nc ring ring-p5 ring-inset",
+      class:
+        "border-r border-b border-nc border-r-n5 border-b-n4 bg-transparent text-nc ring ring-p4 ring-inset",
     },
     {
       color: "neutral",

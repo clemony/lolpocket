@@ -1,5 +1,5 @@
-import type { RouteRecordRaw } from 'vue-router'
-import { useRoute, useRouter } from 'vue-router'
+import type { RouteRecordRaw } from "vue-router"
+import { useRoute, useRouter } from "vue-router"
 
 export function useRouteNavigation() {
   const route = useRoute()
@@ -13,7 +13,7 @@ export function useRouteNavigation() {
 
   const buildTargets = () => {
     parent.value = route.matched.at(-2) || null
-    childRoutes.value = parent.value?.children ?? []
+    childRoutes.value = /* parent.value?.children ?? */ []
 
     targetRoutes.value = {}
 
@@ -32,7 +32,7 @@ export function useRouteNavigation() {
 
     // sync active index
     const currentKey = orderedKeys.value.findIndex(
-      k => targetRoutes.value[k] === route.fullPath
+      (k) => targetRoutes.value[k] === route.fullPath,
     )
     activeIndex.value = currentKey >= 0 ? currentKey : 0
   }

@@ -2,9 +2,10 @@ import { defineUiTheme } from "./defineUiTheme"
 
 export const tooltipTheme = defineUiTheme({
   slots: {
-    arrow: "",
+    arrow:
+      "fill-neutral/85 stroke-n5/60 stroke-1 group-data-[side=bottom]/tt:group-data-[align=start]/tt:-translate-x-4",
     content: [
-      "ease-none pointer-events-auto inline-flex h-6 origin-(--reka-tooltip-content-transform-origin) animate-none! cursor-default items-center gap-1 rounded-lg px-2.5 py-1 align-baseline text-sm shadow-md ring ring-default drop-shadow-sm transition-none! duration-0! select-none",
+      "ease-none group/tt pointer-events-auto inline-flex h-7 min-h-7 origin-(--reka-tooltip-content-transform-origin) animate-none! cursor-default items-center gap-1 rounded-lg px-3 py-1.5 align-baseline text-sm shadow-md drop-shadow-sm transition-none! duration-0! select-none",
     ],
     kbds: "hidden shrink-0 items-center gap-0.5 not-first-of-type:before:me-0.5 not-first-of-type:before:content-['·'] lg:inline-flex",
     kbdsSize: "sm",
@@ -14,9 +15,9 @@ export const tooltipTheme = defineUiTheme({
   variants: {
     color: {
       neutral: {
-        arrow: "fill-neutral/85",
+        arrow: "",
         content:
-          "border-tint-neutral/30 bg-neutral/86 font-medium text-nc ring-neutral inset-shadow-white/10 backdrop-blur-md",
+          "border-n1 bg-neutral/86 font-medium text-nc ring-n5/60 inset-shadow-white/10 backdrop-blur-md",
       },
       primary: {
         arrow: "fill-p0/90",

@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { class: className } = defineProps<{
   class?: HTMLAttributes["class"]
 }>()
 </script>
 
 <template>
-  <TransitionFade
+  <Video
+    v-auto-animate
     :class="
       cn(
-        'pointer-events-none absolute top-0 left-0 z-3 size-full object-cover transition-all duration-500',
-        props.class
+        'pointer-events-none absolute inset-0 aspect-square size-full scale-110 object-cover',
+        className,
       )
-    ">
-    <!--     <video-background
-      class="pointer-events-none aspect-square size-full scale-110 object-cover"
-      src="/video/prismatic-shine.webm" /> -->
-  </TransitionFade>
+    "
+    src="/video/prismatic-shine.webm" />
 </template>

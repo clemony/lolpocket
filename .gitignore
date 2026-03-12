@@ -1,5 +1,5 @@
 # Nuxt dev/build outputs
-
+.output
 .nuxt
 .nitro
 .cache
@@ -8,6 +8,9 @@ dist
 .storage
 .history
 .scripts
+.agents
+gitignore
+.nuxtrc
 
 # Node dependencies
 node_modules
@@ -20,14 +23,14 @@ patch
 AGENTS.md
 lolpocket.code-workspace
 
-
 #notes
 .notes
 notes
 **/📌*
 
 ^prettier.config.js
-
+vitest.config.ts
+pnpmconfig.json
 
 # Misc
 .DS_Store
@@ -50,7 +53,6 @@ d1
 *.env
 .env.*
 !.env.example
-
 
 # js and js maps
 *.js

@@ -43,7 +43,7 @@ const variants = {
 const isDefaultFilters = computed(() => {
   const f = champFilter().filters
   return (
-    !f.attackType?.length &&
+    !f.attackType &&
     !f.position &&
     f.query === "" &&
     !f.resource &&
@@ -55,7 +55,7 @@ onBeforeMount(() => {
   if (isDefaultFilters.value) {
     console.log(
       "🌱 - champFilter().filters === defaultFilters:",
-      isDefaultFilters.value
+      isDefaultFilters.value,
     )
   }
   loaded.value = true
@@ -76,7 +76,7 @@ onBeforeMount(() => {
         :class="
           cn(
             'target group relative grid aspect-square size-full cursor-context-menu! rounded-lg ring-pc/50 ring-offset-p0 transition-all duration-300 **:cursor-context-menu open:ring open:ring-offset-3 hover:ring-2 focus:ring focus:ring-offset-3',
-            className
+            className,
           )
         "
         tabindex="0">

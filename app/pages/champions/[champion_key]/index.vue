@@ -1,16 +1,19 @@
 <script setup lang="ts">
+import { useScrollToHash } from "~~/layers/lib/app/composables/navigation/useScrollToHash"
+
 const { champion } = defineProps<{
   champion: Champion
 }>()
 
 definePageMeta({
-  name: 'champion_overview',
-  title: 'Overview',
+  name: "champion_overview",
+  title: "Overview",
   order: 1,
+  search: false,
 })
 
 const route = useRoute()
-const { scrollToHash } = useScrollToHash('#container', -26)
+const { scrollToHash } = useScrollToHash("#container", -26)
 
 onMounted(() => {
   if (route.hash) scrollToHash({ instant: true })
@@ -20,14 +23,12 @@ watch(
   () => route.hash,
   () => {
     scrollToHash()
-  }
+  },
 )
 </script>
 
 <template>
-  <main
-    id="container"
-    class="z-auto mx-auto flex gap-28">
+  <main id="container" class="z-auto mx-auto flex gap-28">
     <ChampionIndexAside :champion />
     <article class="z-auto flex h-max w-full grow flex-col gap-10 py-22 pb-16">
       <ChampionAbility

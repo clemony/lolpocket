@@ -1,7 +1,7 @@
-// Updated Patch 16.1 - 01/27/2026 01:51:02 PM CST
+// Updated Patch 16.5 - 03/10/2026 03:45:05 PM CDT
 
 export const rangeToChamp: Record<string, number[]> = {
-  Melee: [
+  "Melee": [
     266,
     84,
     12,
@@ -92,7 +92,7 @@ export const rangeToChamp: Record<string, number[]> = {
     154,
     238
   ],
-  Ranged: [
+  "Ranged": [
     103,
     166,
     34,

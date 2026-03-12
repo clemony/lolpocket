@@ -1,29 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  width="24px"
+  height="24px"
+  viewBox="0 0 24 24"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>runes</title>
     <defs>
-        <path d="M11.9,1.53 L12,6.545 C12,6.545 6.2,12.325 6,13.005 C8.1,13.6 10.1,14.45 11.9,15.64 C12.8,14.875 13.5,13.94 13.9,13.005 L11.9,11.39 C11.1,11.9 10.5,12.495 10,13.175 C9.6,12.92 9.1,12.665 8.6,12.58 C9.4,11.22 10.5,9.945 11.8,8.84 C13.1,10.37 14.5,11.815 16.2,13.09 C14.9,14.62 13.4,15.98 11.9,17.34 C11.9,17.34 10.2,15.81 2.6,13.175 C2.6,13.175 9.7,7.82 11.9,1.53 Z" id="path-1"></path>
-        <filter x="-0.8%" y="-0.5%" width="101.7%" height="101.3%" filterUnits="objectBoundingBox" id="filter-2">
-            <feMorphology radius="0.05" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        <path
+      d="M11.9,1.53 L12,6.545 C12,6.545 6.2,12.325 6,13.005 C8.1,13.6 10.1,14.45 11.9,15.64 C12.8,14.875 13.5,13.94 13.9,13.005 L11.9,11.39 C11.1,11.9 10.5,12.495 10,13.175 C9.6,12.92 9.1,12.665 8.6,12.58 C9.4,11.22 10.5,9.945 11.8,8.84 C13.1,10.37 14.5,11.815 16.2,13.09 C14.9,14.62 13.4,15.98 11.9,17.34 C11.9,17.34 10.2,15.81 2.6,13.175 C2.6,13.175 9.7,7.82 11.9,1.53 Z"
+      id="path-1" />
+        <filter
+      x="-0.8%"
+      y="-0.5%"
+      width="101.7%"
+      height="101.3%"
+      filterUnits="objectBoundingBox"
+      id="filter-2">
+            <feMorphology
+        radius="0.05"
+        operator="dilate"
+        in="SourceAlpha"
+        result="shadowSpreadOuter1" />
+            <feOffset
+        dx="0"
+        dy="0"
+        in="shadowSpreadOuter1"
+        result="shadowOffsetOuter1" />
+            <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0"
+        type="matrix"
+        in="shadowOffsetOuter1" />
         </filter>
-        <path d="M13,7.14 C14.4,9.35 16.3,11.39 18.6,13.09 C18.6,13.09 14.4,17.595 11.8,19.38 L11.8,24.055 C11.8,24.055 14.1,18.7 21.4,13.09 C21.4,13.005 18.1,11.05 13,7.14 Z" id="path-3"></path>
-        <filter x="-1.6%" y="-0.8%" width="103.1%" height="101.3%" filterUnits="objectBoundingBox" id="filter-4">
-            <feMorphology radius="0.05" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        <path
+      d="M13,7.14 C14.4,9.35 16.3,11.39 18.6,13.09 C18.6,13.09 14.4,17.595 11.8,19.38 L11.8,24.055 C11.8,24.055 14.1,18.7 21.4,13.09 C21.4,13.005 18.1,11.05 13,7.14 Z"
+      id="path-3" />
+        <filter
+      x="-1.6%"
+      y="-0.8%"
+      width="103.1%"
+      height="101.3%"
+      filterUnits="objectBoundingBox"
+      id="filter-4">
+            <feMorphology
+        radius="0.05"
+        operator="dilate"
+        in="SourceAlpha"
+        result="shadowSpreadOuter1" />
+            <feOffset
+        dx="0"
+        dy="0"
+        in="shadowSpreadOuter1"
+        result="shadowOffsetOuter1" />
+            <feColorMatrix
+        values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0"
+        type="matrix"
+        in="shadowOffsetOuter1" />
         </filter>
     </defs>
-    <g id="runes" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+    <g
+    id="runes"
+    stroke="none"
+    fill="none"
+    fill-rule="evenodd"
+    stroke-width="1">
         <g id="Group" transform="translate(0, -1)">
             <g id="Path">
-                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use
+          fill="currentColor"
+          fill-opacity="1"
+          filter="url(#filter-2)"
+          xlink:href="#path-1" />
+                <use
+          fill="currentColor"
+          fill-rule="evenodd"
+          xlink:href="#path-1" />
             </g>
             <g id="Path">
-                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use
+          fill="currentColor"
+          fill-opacity="1"
+          filter="url(#filter-4)"
+          xlink:href="#path-3" />
+                <use
+          fill="currentColor"
+          fill-rule="evenodd"
+          xlink:href="#path-3" />
             </g>
         </g>
     </g>

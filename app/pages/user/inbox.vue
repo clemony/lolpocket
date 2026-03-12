@@ -3,7 +3,10 @@ const isCollapsed = ref(false)
 const route = useRoute()
 definePageMeta({
   name: "Inbox",
-  icon: "mail",
+  icon: "i-mail",
+  class: "**:stroke-[1.8!]",
+  auth: true,
+  path: "/inbox",
 })
 /*
 const selectedMail = ref<string | undefined>(props.mails[0].id)
@@ -84,7 +87,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
         :is-collapsed
         :links="
           (route.matched[0]?.children ?? []).sort(
-            (a, b) => Number(a.meta?.order) - Number(b.meta?.order)
+            (a, b) => Number(a.meta?.order) - Number(b.meta?.order),
           )
         " />
 

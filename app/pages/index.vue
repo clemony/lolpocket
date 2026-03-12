@@ -1,12 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  name: "home",
   layout: "default",
-  path: "/",
-  search: "hidden",
-  title: "lolpocket",
+  title: "Home",
   icon: "i-lucide-house",
-  searchKeys: ["home", "landing", "testimonials"],
+  keys: ["home", "landing", "testimonials"],
+  search: false,
 })
 </script>
 

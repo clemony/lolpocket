@@ -14,7 +14,7 @@ const {
 const stats = computed<Record<string, BarStat>>(() => {
   return {
     dmg: {
-      color: "domination",
+      color: "dom",
       class:
         "hover:bg-dom-200! hover:text-pc! hover:ring-offset-domination-200!  hover:ring-domination-300!",
       max:
@@ -29,7 +29,7 @@ const stats = computed<Record<string, BarStat>>(() => {
       },
     },
     def: {
-      color: "precision",
+      color: "pre",
       class:
         "hover:bg-pre-200! hover:text-pc! hover:ring-offset-pre-200!  hover:ring-pre-400!",
       max:
@@ -41,9 +41,9 @@ const stats = computed<Record<string, BarStat>>(() => {
       icon: { name: "i-stat-armor" },
     },
     heal: {
-      color: "resolve",
+      color: "heal",
       class:
-        "hover:bg-res-100! bg-blend-hue hover:text-pc! hover:ring-offset-res-100! hover:ring-res-200!",
+        "hover:bg-[color-mix(in_oklab,var(--ui-insp)_30%,var(--color-res)_10%)] bg-blend-hue hover:text-pc! hover:ring-offset-insp-100! hover:ring-insp-200!",
       max:
         match.participants
           .map((p) => p.stats?.effectiveHealingAndShielding ?? 0)
@@ -57,13 +57,17 @@ const stats = computed<Record<string, BarStat>>(() => {
 </script>
 
 <template>
-  <Tooltip v-for="stat in stats" :key="stat.color" :label="stat.tip" arrow>
+  <Tooltip
+    v-for="stat in stats"
+    :key="stat.color"
+    :label="stat.tip"
+    class="size-full">
     <div
       :class="
         cn(
-          'relative flex grow basis-1/3 flex-col justify-center gap-1 px-1',
+          'relative flex size-full grow flex-col justify-center gap-1 rounded-lg p-1',
           stat.class,
-          className
+          className,
         )
       ">
       <div
@@ -81,7 +85,7 @@ const stats = computed<Record<string, BarStat>>(() => {
           }}
         </span>
       </div>
-      <Progress
+      <UProgress
         class="h-1.25 w-full bg-p3"
         :color="stat?.color"
         :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />

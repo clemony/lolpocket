@@ -4,7 +4,7 @@ definePageMeta({
   description: "Welcome to lolpocket!",
   icon: "gear",
   path: "/auth/new-user",
-  search: "hidden",
+  search: false,
 })
 </script>
 

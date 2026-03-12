@@ -1,9 +1,14 @@
 <script lang="ts" setup>
 import { statIndex } from "#shared/constants/common/stat-index"
 
-const { class: className, stats } = defineProps<{
+const {
+  class: className,
+  stats,
+  layout,
+} = defineProps<{
   stats: Record<string, number>
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
+  layout?: string
 }>()
 </script>
 
@@ -12,14 +17,21 @@ const { class: className, stats } = defineProps<{
     <li
       v-for="[k, v] in Object.entries(stats)"
       :key="k"
-      class="inline-flex gap-1 text-xs/4.5! font-medium text-wrap"
+      :class="
+        cn('inline-flex gap-1 text-xs leading-4.5 text-wrap', {
+          'text-sm': layout === 'command',
+        })
+      "
       :data-color="k">
-      <span class="">
-        {{ `${v}${statIndex[k]?.unit ?? ""}` }}
-      </span>
-      <span>
+      <span class="font-medium">{{ v ?? "" }}</span>
+      <Icon
+        v-if="statIndex[k]?.unit === '%'"
+        name="i-lucide-percent"
+        class="-ml-1 inline size-3.5 self-center align-baseline" />
+      <span v-else>{{ statIndex[k]?.unit ?? "" }}</span>
+      <span class="font-medium">
         {{
-          ["HSP", "APEN", "MPEN"].includes(statIndex[k]?.key ?? '')
+          ["HSP", "APEN", "MPEN"].includes(statIndex[k]?.key ?? "")
             ? statIndex[k]?.abbr
             : statIndex[k]?.name
         }}

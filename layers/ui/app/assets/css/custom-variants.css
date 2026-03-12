@@ -1,13 +1,8 @@
 @import "tailwindcss";
 
-@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
-@custom-variant dim (
-  &:where:(.dim),
-  &:where:(.dim > *),
-  &:where([data-theme=dim],
-  [data-theme=dim] *
-  ));
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant light (&:where(.light, .light *, [data-theme="light"], [data-theme="light"] *));
+@custom-variant dim   (&:where(.dim, .dim *, [data-theme="dim"], [data-theme="dim"] *));
+@custom-variant dark  (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 /* Element-level data states */
 @custom-variant open (&[data-state="open"]);

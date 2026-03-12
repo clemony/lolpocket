@@ -7,7 +7,7 @@ import { initFromSchema } from "~/domain/stats/stats/initFromSchema"
 export function useChampionStats(
   matches: Ref<MatchData[]>,
   filteredMatches: Ref<MatchData[]>,
-  puuid: string
+  puuid: string,
 ) {
   return computed<ChampionStats[]>(() => {
     const allChampionIds = new Set<number>()
@@ -47,7 +47,7 @@ export function useChampionStats(
           (((acc.kills as StatAverage).total +
             (acc.assists as StatAverage).total) /
             Math.max(1, (acc.deaths as StatAverage).total)) *
-            100
+            100,
         ) / 100
 
       for (const key of Object.keys(AGGREGATED_STAT_SCHEMA) as Array<

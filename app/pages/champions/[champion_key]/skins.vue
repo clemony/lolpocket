@@ -14,6 +14,7 @@ definePageMeta({
   level: 4,
   order: 3,
   path: "/champions/:champion_key/skins",
+  search: false,
 })
 
 const carouselOrientation = ref<"horizontal" | "vertical">("horizontal")
@@ -46,7 +47,7 @@ const skins = computed(() => skinIndex[champion.key])
                 'hover:ring-b4 cursor-pointer rounded-xl transition-all duration-300 **:pointer-events-none hover:opacity-100 hover:ring',
                 index === selectedIndex
                   ? 'pointer-events-none opacity-100 ring ring-pc/40 ring-offset-5 ring-offset-p0'
-                  : 'opacity-80'
+                  : 'opacity-80',
               )
             ">
             <UCard

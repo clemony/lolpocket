@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui"
 import { championRoles } from "#shared/constants/misc/roles"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
@@ -24,7 +24,7 @@ const {
         :class="
           cn(
             'relative z-1 flex max-h-64 w-9/10 flex-col flex-wrap items-center gap-2 gap-y-3 py-0',
-            className
+            className,
           )
         ">
         <UButton
@@ -32,7 +32,7 @@ const {
           class="order-first hover:*:opacity-100"
           :variant
           size="sm"
-          @click="champFilter().filters.role = null">
+          @click="champFilter().filters.role = []">
           <icon class="size-4" name="x" />
         </UButton>
 

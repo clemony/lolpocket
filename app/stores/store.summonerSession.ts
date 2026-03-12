@@ -25,28 +25,29 @@ export const sSession = defineStore("summonerSession", () => {
     slot: "summoner" as const,
     children: [
       {
-        description: "Fully styled and customizable components for Nuxt.",
-        icon: "history",
+        icon: "i-history",
         label: "Match History",
         to: buildSummonerRootPath(summoner.value),
       },
       {
-        description: "Fully styled and customizable components for Nuxt.",
-        icon: "lol:champ",
+        icon: "i-lp-champ",
         label: "Champions",
-        to: buildSummonerRootPath(summoner.value),
+        slot: "champions" as const,
+        to: `${buildSummonerRootPath(summoner.value)}/champions`,
       },
       {
-        description: "Fully styled and customizable components for Nuxt.",
-        icon: "ui:pocket",
+        icon: "i-folder",
         label: "Pockets",
-        to: buildSummonerRootPath(summoner.value),
+        to: `${buildSummonerRootPath(summoner.value)}/pockets`,
       },
       {
-        description: "Fully styled and customizable components for Nuxt.",
-        icon: "live",
+        icon: "i-lucide-rss",
         label: "Live Match",
-        to: buildSummonerRootPath(summoner.value),
+        slot: "live" as const,
+        to: `${buildSummonerRootPath(summoner.value)}/live`,
+        ui: {
+          trailingIcon: "scale-92 -translate-y-[0.5px]",
+        },
       },
     ],
     ui: {

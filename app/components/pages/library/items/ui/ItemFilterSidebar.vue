@@ -1,12 +1,35 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
+import type {
+  ButtonProps,
+  CheckboxGroupItem,
+  CheckboxGroupProps,
+} from "@nuxt/ui"
 
+import { statIndex } from "#shared/constants/common/stat-index"
+import { itemTags } from "#shared/constants/items/itemTags"
 const { nav } = defineProps<{
   nav: ButtonProps[]
 }>()
 const emit = defineEmits(["updateTab"])
 const { filters } = storeToRefs(is())
 const collapsed = useState<boolean>("collapsed-state", () => false)
+
+const statItems = computed<CheckboxGroupItem[]>(() =>
+  Object.values(statIndex)
+    .filter((s) => s.group !== "champion")
+    .map((s) => ({ id: s.id, name: s.name })),
+)
+
+const tagItems = computed<CheckboxGroupItem[]>(() =>
+  itemTags.map((t) => ({ id: t.id, name: t.name })),
+)
+const shared = {
+  indicator: "end",
+  color: "default",
+  variant: "select",
+  labelKey: "name",
+  valueKey: "id" as CheckboxGroupProps["valueKey"],
+} satisfies CheckboxGroupProps
 </script>
 
 <template>
@@ -25,7 +48,7 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
             leadingIcon: cn(
               'size-5',
               link.label?.toLowerCase() === 'spells'
-                ? '**:stroke-[1.8] opacity-90 scale-94'
+                ? '**:stroke-[1.5] opacity-90 scale-94'
                 : '',
               link?.ui?.leadingIcon,
             ),
@@ -36,13 +59,72 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
     </div>
 
     <!-- search -->
-    <ItemSearchInput class="-mt-1" />
+    <LazyLibrarySearch class="-mt-1" />
 
     <!-- view -->
-    <ItemViewTabs @update:tab-model="(e) => emit('updateTab', e)" />
+    <ViewToggle
+      variant="label"
+      @update:tab-model="(e) => emit('updateTab', e)" />
 
     <!-- select menus -->
-    <ItemSelectPoppables />
+
+    <UCollapsible
+      v-if="!collapsed"
+      :ui="{
+        root: 'w-full',
+        content: 'max-h-90 overflow-scroll',
+      }"
+      :default-open="!collapsed">
+      <UButton size="xl" variant="link" block>
+        <Separator
+          size="md"
+          label="Stats"
+          label-placement="end"
+          leading-icon="right"
+          :ui="{
+            separator: 'group-hover/btn:bg-p4',
+            label: 'group-hover/btn:underline',
+            leadingIcon:
+              'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/40 duration-200 **:stroke-[2.8] group-open/collapse:rotate-90',
+          }" />
+      </UButton>
+      <template #content>
+        <UCheckboxGroup
+          v-model:model-value="filters.stats"
+          v-bind="shared"
+          :items="statItems"
+          @entry-focus.prevent />
+      </template>
+    </UCollapsible>
+
+    <UCollapsible
+      v-if="!collapsed"
+      :ui="{
+        root: 'w-full',
+        content: 'max-h-90 overflow-scroll',
+      }"
+      :default-open="!collapsed">
+      <UButton size="xl" variant="link" block>
+        <Separator
+          size="md"
+          label="Categories"
+          label-placement="end"
+          leading-icon="right"
+          :ui="{
+            separator: 'group-hover/btn:bg-p4',
+            label: 'group-hover/btn:underline',
+            leadingIcon:
+              'group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/40 duration-200 **:stroke-[2.8] group-open/collapse:rotate-90',
+          }" />
+      </UButton>
+      <template #content>
+        <UCheckboxGroup
+          v-bind="shared"
+          v-model:model-value="filters.tags"
+          :items="tagItems"
+          @entry-focus.prevent />
+      </template>
+    </UCollapsible>
 
     <!-- map -->
     <MapSelector />

@@ -1,9 +1,46 @@
 <script lang="ts" setup>
+import { LazyLogin } from "#components"
 import { userMenu } from "~/components/layout/navigation/content/nav-user-menu"
 import { getSummonerIcon } from "~/domain/utils/img"
-const emit = defineEmits(["openSearch", "openLogIn"])
+const emit = defineEmits(["openSearch", "closeSidebar"])
 
 const { account } = storeToRefs(user())
+
+const items = [
+  {
+    icon: "i-external",
+    label: "Resources",
+    ui: {
+      content: "w-54",
+      leadingIcon: "scale-100",
+    },
+  },
+  {
+    label: "Support",
+    icon: "i-lucide-circle-question-mark",
+    children: helpNav.filter((i) => i !== undefined),
+    ui: {
+      content: "w-54",
+    },
+  },
+]
+
+const toast = useToast()
+
+function toasting() {
+  toast.add({
+    title: "Event added to calendar",
+    orientation: "horizontal",
+    icon: "i-lucide-calendar-days",
+  })
+}
+const overlay = useOverlay()
+
+const login = overlay.create(LazyLogin)
+async function openLogin() {
+  emit("closeSidebar", true)
+  return login.open()
+}
 </script>
 
 <template>
@@ -15,27 +52,38 @@ const { account } = storeToRefs(user())
         <ULink class="grow cursor-pointer" to="/">
           <h3>lolpocket</h3>
         </ULink>
+
+        <UPopover>
+          <UButton icon="i-more" variant="ghost" />
+          <template #content>
+            <ul>
+              <UButton as="li" @click="toasting()"> toast </UButton>
+
+              <UButton as="li" @click="openLogin()"> open log i </UButton>
+            </ul>
+          </template>
+        </UPopover>
         <UButton
           icon="x"
           size="sm"
           :ui="{
-            base: 'cursor-text',
+            base: '',
             leadingIcon: '**:stroke-[2.4]',
           }"
-          variant="ghost"
-          @click="emit('openSearch', true)" />
+          variant="ghost" />
       </div>
 
       <!-- search -->
       <UButton
-        variant="outline"
+        variant="ring"
         label="Search"
         icon="i-search"
         :ui="{
-          base: 'w-full inset-shadow-sm ring-p3/80',
+          base: 'w-full cursor-text border border-p4/60 inset-shadow-sm hover:bg-p0! hover:noise-0',
           label: 'grow text-pc/40',
           leadingIcon: 'text-pc/50 drop-shadow-2xs **:stroke-[2.2]',
-        }">
+        }"
+        @click="emit('openSearch', true)">
         <template #trailing>
           <div class="mr-1 flex items-center gap-1">
             <UKbd
@@ -135,9 +183,6 @@ const { account } = storeToRefs(user())
           </ul>
         </template>
       </UCollapsible>
-      <li>
-        <button @click="emit('openLogIn')">open log in</button>
-      </li>
     </ul>
 
     <!-- Library -->
@@ -168,6 +213,31 @@ const { account } = storeToRefs(user())
       </template>
     </UCollapsible>
 
+    <UDropdownMenu
+      :items="resourceNav"
+      :content="{
+        side: 'left',
+        align: 'start',
+        sideOffset: 0,
+        alignOffset: -2,
+      }"
+      :ui="{ content: 'w-64 pt-1' }">
+      <template #default="{ open }">
+        <UButton
+          variant="ghost"
+          size="xl"
+          trailing-icon="right"
+          :ui="{
+            trailingIcon: cn(
+              'transition-rotate duration-200',
+              open ? 'rotate-180' : '',
+            ),
+          }"
+          leading-icon="i-external"
+          label="Resources" />
+      </template>
+    </UDropdownMenu>
+
     <Grow />
     <!-- user -->
     <UDropdownMenu
@@ -190,20 +260,18 @@ const { account } = storeToRefs(user())
         }"
         variant="outline">
         <template #leading>
-          <ClientOnly>
-            <LazyUChip
-              size="md"
-              square
-              position="bottom-right"
-              :ui="{ root: 'align-center' }"
-              :color="user().matchStatus ? 'p4' : 'p3'"
-              inset>
-              <UAvatar
-                :src="getSummonerIcon(account?.icon) ?? null"
-                icon="i-plug"
-                size="2xl" />
-            </LazyUChip>
-          </ClientOnly>
+          <LazyUChip
+            size="md"
+            square
+            position="bottom-right"
+            :ui="{ root: 'align-center' }"
+            :color="user().matchStatus ? 'p4' : 'p3'"
+            inset>
+            <UAvatar
+              :src="getSummonerIcon(account?.icon) ?? null"
+              icon="i-plug"
+              size="2xl" />
+          </LazyUChip>
         </template>
         <div class="flex grow flex-col items-start gap-0">
           <span class="truncate text-md! font-bold">{{

@@ -5,8 +5,9 @@ import { useSortable } from "@vueuse/integrations/useSortable"
 definePageMeta({
   title: "Backpack",
   icon: "backpack",
+  class: "scale-108 **:stroke-[2]",
   layout: false,
-  order: 4,
+  order: 2,
 })
 
 const items = shallowRef<TreeItem[]>([
@@ -37,7 +38,7 @@ const items = shallowRef<TreeItem[]>([
 
 function flatten(
   items: TreeItem[],
-  parent = items
+  parent = items,
 ): { item: TreeItem; parent: TreeItem[]; index: number }[] {
   return items.flatMap((item, index) => [
     { item, parent, index },
@@ -78,7 +79,7 @@ useSortable(tree, items, {
 const isCollapsed = ref(false)
 const route = useRoute()
 const pinned = computed(() =>
-  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key))
+  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key)),
 )
 </script>
 

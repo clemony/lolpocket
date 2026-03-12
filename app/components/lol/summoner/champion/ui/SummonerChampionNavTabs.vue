@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useScrollInject } from "~~/layers/lib/app/composables/navigation/useElementScroll"
+
 const { scrollY } = useScrollInject()
 
 // const tt = await tabTransform()
@@ -28,7 +30,7 @@ function isActive(path: string) {
   <nav
     :class="
       cn(
-        'relative z-3 flex h-15 w-fit translate-x-10 items-end transition-none *:select-none **:text-sm'
+        'relative z-3 flex h-15 w-fit translate-x-10 items-end transition-none *:select-none **:text-sm',
       )
     ">
     <ChampionNavTab

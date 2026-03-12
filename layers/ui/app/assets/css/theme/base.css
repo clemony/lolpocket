@@ -69,6 +69,8 @@
   --ui-neutral: var(--primary-950);
   --ui-nc: var(--primary-300);
 
+  --ui-epic: var(--nord-500);
+
   .dark {
     --ui-bg: var(--primary-900);
     --ui-bg-muted: var(--primary-800);
@@ -144,4 +146,8 @@
     --ui-neutral: var(--nord-50);
     --ui-nc: var(--nord-800);
   }
+}
+
+@theme inline {
+  --color-epic: var(--ui-epic);
 }

@@ -1,4 +1,4 @@
-// Updated Patch 16.4 - 02/23/2026 02:05:12 PM CST
+// Updated Patch 16.5 - 03/10/2026 03:44:05 PM CDT
 
 export const abilityIdToName: Record<string, string> = {
   "266P": "Deathbringer Stance",

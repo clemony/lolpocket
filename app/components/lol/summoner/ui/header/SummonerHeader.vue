@@ -23,9 +23,9 @@ const safeSum = computed(() => safeObject(summoner.value))
     :description="`#${safeSum.tag} @${safeSum.region} lv. ${safeSum.level}`"
     :name="safeSum.name">
     <template #description>
-      <SummonerId :summoner="safeSum" type="tag" />
-      <SummonerId :summoner="safeSum" type="region" />
-      <SummonerId :summoner="safeSum" type="level" />
+      <LazySummonerId :summoner="safeSum" type="tag" />
+      <LazySummonerId :summoner="safeSum" type="region" />
+      <LazySummonerId :summoner="safeSum" type="level" />
     </template>
   </UUser>
 </template>

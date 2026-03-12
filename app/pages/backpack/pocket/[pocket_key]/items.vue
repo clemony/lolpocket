@@ -3,30 +3,17 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
-})
-
 definePageMeta({
   name: "pocket-items",
   title: "items",
   order: 2,
   path: "/pocket/:pocket_key/items",
-  search: "hidden",
+  search: false,
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 
 const tabs = ref("items")

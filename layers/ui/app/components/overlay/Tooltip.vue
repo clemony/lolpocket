@@ -1,47 +1,51 @@
 <script setup lang="ts">
 import type { EmitsToProps, TooltipProps } from "@nuxt/ui"
-import type { TooltipContentEmits, TooltipContentProps } from "reka-ui"
+import type {
+  PrimitiveProps,
+  TooltipContentEmits,
+  TooltipContentProps,
+} from "reka-ui"
+import { Primitive } from "reka-ui"
 
-const {
-  side = "top",
-  sideOffset = 20,
-  arrow = false,
-  class: className,
-  icon,
-  avatar,
-  trailingIcon,
-  title,
-  disableClosingTrigger = false,
-  ui: uiProps,
-  kbds,
-  label,
-  disabled,
-  followPointer = true,
-  inertia = true,
-  interactive = false,
-} = defineProps<
-  TooltipProps & {
-    avatar?: string
-    ui?: TooltipUi
-    icon?: string
-    side?: Side
-    sideOffset?: number
-    trailingIcon?: string
-    disabled?: boolean
-    followPointer?: boolean
-    inertia?: boolean | number
-    interactive?: boolean
-    label?: string
-    title?: string
-  }
->()
+const props = withDefaults(
+  defineProps<
+    TooltipProps &
+      PrimitiveProps & {
+        avatar?: string
+        as?: string
+        ui?: TooltipUi
+        icon?: string
+        side?: Side
+        align?: Align
+        alignOffset?: number
+        sideOffset?: number
+        trailingIcon?: string
+        disabled?: boolean
+        followPointer?: boolean
+        inertia?: boolean | number
+        interactive?: boolean
+        label?: string
+        title?: string
+      }
+  >(),
+  {
+    side: "bottom",
+    sideOffset: 20,
+    as: "div",
+    arrow: false,
+    disableClosingTrigger: false,
+    followPointer: true,
+    inertia: true,
+    interactive: false,
+  },
+)
 
 const emit = defineEmits(["pinned", "unpinned"])
 
 const open = ref(false)
 const pinned = ref(false)
 const anchor = ref({ x: 0, y: 0 })
-const triggerRef = ref<HTMLElement | null>(null)
+const triggerRef = ref<unknown>(null)
 const contentRef = ref<HTMLElement | null>(null)
 let rafId = 0
 let nextX = 0
@@ -49,12 +53,20 @@ let nextY = 0
 let currentX = 0
 let currentY = 0
 
+function resolveElement(target: unknown): Element | null {
+  if (target instanceof Element) return target
+  if (!target || typeof target !== "object") return null
+
+  const candidate = (target as { $el?: unknown }).$el
+  return candidate instanceof Element ? candidate : null
+}
+
 function getInertiaFactor() {
-  if (typeof inertia === "number") {
-    return Math.min(Math.max(inertia, 0), 0.95)
+  if (typeof props?.inertia === "number") {
+    return Math.min(Math.max(props?.inertia, 0), 0.95)
   }
 
-  return inertia ? 0.22 : 0
+  return props?.inertia ? 0.22 : 0
 }
 
 function scheduleAnchorUpdate() {
@@ -64,7 +76,8 @@ function scheduleAnchorUpdate() {
 function updateAnchor() {
   rafId = 0
 
-  if (!open.value || pinned.value || !followPointer || disabled) return
+  if (!open.value || pinned.value || !props?.followPointer || props?.disabled)
+    return
 
   const factor = getInertiaFactor()
 
@@ -94,7 +107,7 @@ function updateAnchor() {
 }
 
 function onPointerEnter(ev: PointerEvent) {
-  if (disabled) return
+  if (props?.disabled) return
   if (pinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
@@ -114,14 +127,14 @@ function onPointerLeave() {
 }
 
 function onPointerMove(ev: PointerEvent) {
-  if (disabled || !followPointer || pinned.value) return
+  if (props?.disabled || !props?.followPointer || pinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
   scheduleAnchorUpdate()
 }
 
-function onContextMenu(ev: MouseEvent) {
-  if (disabled || !interactive) return
+function onClick(ev: MouseEvent) {
+  if (props?.disabled || !props?.interactive) return
   emit("pinned")
   ev.preventDefault()
   nextX = ev.clientX
@@ -149,8 +162,11 @@ function onDocumentPointerDown(ev: PointerEvent) {
   const target = ev.target as Node | null
   if (!target) return
 
-  if (triggerRef.value?.contains(target)) return
-  if (contentRef.value?.contains(target)) return
+  const triggerEl = resolveElement(triggerRef.value)
+  const contentEl = resolveElement(contentRef.value)
+
+  if (triggerEl?.contains(target)) return
+  if (contentEl?.contains(target)) return
 
   closePinned()
 }
@@ -188,12 +204,17 @@ type ContentProps = Omit<TooltipContentProps, "as" | "asChild"> &
   Partial<EmitsToProps<TooltipContentEmits>>
 
 const contentProps = computed<ContentProps>(() => ({
-  side,
-  sideOffset,
-  align: ["left", "right"].includes(side) ? "start" : "center",
-  alignOffset: ["left", "right"].includes(side) ? 46 : 0,
-  updatePositionStrategy: followPointer ? "always" : "optimized",
+  side: props?.side,
+  sideOffset: props?.sideOffset,
+  align:
+    props?.align || ["left", "right"].includes(props?.side) ? "start" : "start",
+  alignOffset:
+    props?.alignOffset || ["left", "right"].includes(props?.side) ? 46 : -4,
+  updatePositionStrategy: props?.followPointer ? "always" : "optimized",
+  arrowPadding: 3,
 }))
+
+defineExpose({ pinned, isOpen: open })
 </script>
 
 <template>
@@ -205,17 +226,18 @@ const contentProps = computed<ContentProps>(() => ({
     :delay-duration="0"
     :disable-hoverable-content="!interactive"
     :reference="reference"
-    :ui="{ content: cn('z-50', uiProps?.content), arrow: uiProps?.arrow }"
+    :ui="{ content: cn('z-50', props?.ui?.content), arrow: props?.ui?.arrow }"
     :content="contentProps">
-    <div
+    <Primitive
       ref="triggerRef"
-      :class="cn('size-fit', className)"
-      @contextmenu.prevent="onContextMenu"
+      :as="props?.as"
+      :class="cn('size-fit', props?.class)"
+      @click.prevent="onClick"
       @pointerenter="onPointerEnter"
       @pointerleave="onPointerLeave"
       @pointermove="onPointerMove">
-      <slot />
-    </div>
+      <slot :pinned />
+    </Primitive>
 
     <template #content>
       <div
@@ -223,18 +245,19 @@ const contentProps = computed<ContentProps>(() => ({
         :class="
           cn(
             'inline-flex items-center gap-1.5 align-baseline',
-            uiProps?.content,
+            props?.ui?.content,
           )
         ">
         <slot name="content">
-          <div class="inline-flex gap-1.5 align-baseline">
-            <LazyUAvatar
+          <div class="inline-flex gap-2 align-baseline">
+            <LazyAvatarLoading
               v-if="avatar"
               icon="i-image-circle"
-              loading-type="spinner"
+              spinner
+              size="2xs"
               :src="avatar"
               :alt="`${label}-icon`"
-              class="size-4.5 rounded-full" />
+              :ui="{ root: 'bg-transparent' }" />
             <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
             {{ label }}
 

@@ -36,7 +36,11 @@ const alliesList = computed(() =>
     <template #content>
       <Listbox v-model:model-value="model" :multiple="false">
         <ListboxContent
-          class="h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-morphic">
+          :class="
+            cn(
+              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-sm inset-shadow-black/9',
+            )
+          ">
           <template v-if="!sMatches().loading && sMatches.length">
             <ListboxItem
               v-for="item in alliesList"
@@ -48,7 +52,7 @@ const alliesList = computed(() =>
                 :active="item.puuid === model"
                 :ui="{
                   base: cn(
-                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
+                    'pointer-events-none w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
                   ),
                 }"
                 size="xl">
@@ -85,7 +89,7 @@ const alliesList = computed(() =>
                     <ChampWinrate
                       v-if="item.games"
                       :ally="item"
-                      :size="32"
+                      :size="10"
                       class="absolute drop-shadow-xs" />
                   </div>
                 </template>

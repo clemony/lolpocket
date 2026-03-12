@@ -3,8 +3,13 @@ import { resolveSummoner } from "~/domain/summoner/resolveSummoner"
 import { extractIdentifierFromRoute } from "~/domain/summoner/utils/extractIdentifierFromRoute"
 
 definePageMeta({
-  search: "hidden",
+  search: false,
   layout: false,
+  name: "summoner-profile",
+  command: defineAsyncComponent(
+    () =>
+      import("~/components/layout/navigation/command/route/SummonerCommand.vue"),
+  ),
 })
 
 const route = useRoute()
@@ -14,6 +19,7 @@ const session = sSession()
 const lastResolvedKey = ref<string>("")
 
 function extractIdentifierFromPath(path: string): Identifier | null {
+  // eslint-disable-next-line e18e/prefer-static-regex
   const matched = path.match(/^\/([^/]+)\/([^/]+)(?:\/|$)/)
   if (!matched) return null
 
@@ -65,7 +71,7 @@ watch(
   async () => {
     await resolveFromRoute()
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 onBeforeMount(async () => {
@@ -76,9 +82,16 @@ onBeforeMount(async () => {
 <template>
   <div class="w-screen">
     <NuxtLayout name="tab">
-      <template #center-leading>
-        <UpdateSummoner variant="ghost" size="sm" />
-      </template>
+      <!--       <template #center-leading>
+        <UpdateSummoner
+          variant="ghost"
+          size="sm"
+          :ui="{
+            base: 'rounded-full',
+            leadingIcon: 'size-4.5 text-n4 group-hover/btn:text-pc',
+          }"
+          square />
+      </template> -->
       <NuxtPage :champion-key />
     </NuxtLayout>
   </div>

@@ -53,7 +53,7 @@ export const inputTheme = defineUiTheme({
     },
     size: {
       lg: {
-        base: "h-12 gap-2 px-3 py-2 text-sm",
+        base: "h-12 gap-2 px-3 py-0 text-sm",
         leading: "ps-3",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",
@@ -70,7 +70,7 @@ export const inputTheme = defineUiTheme({
         trailingIcon: "size-5",
       },
       sm: {
-        base: "input-sm h-8 gap-1.5 px-2.5 py-1.5 text-xs",
+        base: "input-sm h-8 gap-1.5 px-2.5 py-0 text-xs",
         leading: "ps-2.5",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4.5",

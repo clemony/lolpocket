@@ -15,6 +15,8 @@ definePageMeta({
   icon: "history",
   listClass: "**:stroke-[1.6]",
   order: 0,
+  search: false,
+  prefix: "summoner",
 })
 
 const open = shallowRef<boolean>(true)

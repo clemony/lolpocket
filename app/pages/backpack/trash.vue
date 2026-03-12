@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Trash",
   icon: "trash",
-  listClass: "**:stroke-[1.8] size-5.25",
+  prefix: "Backpack",
   order: 3,
   path: "/backpack/trash",
 })

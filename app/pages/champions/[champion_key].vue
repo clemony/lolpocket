@@ -3,12 +3,12 @@ definePageMeta({
   name: "champion_key",
   path: "/champions/:champion_key",
   props: true,
-  search: "hidden",
+  search: false,
 })
 const route = useRoute()
 
 const idRef = computed(
-  () => champIdByKey(String(route.params.champion_key)) ?? 0
+  () => champIdByKey(String(route.params.champion_key)) ?? 0,
 )
 
 const { data: champion, status } = useFetch<Champion>(
@@ -19,7 +19,7 @@ const { data: champion, status } = useFetch<Champion>(
     immediate: false,
     key: () => `champion-${idRef.value}`,
     watch: [idRef],
-  }
+  },
 )
 </script>
 

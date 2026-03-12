@@ -16,16 +16,20 @@ const teamRed = computed(() => match.teams?.[1])
 <template>
   <div class="grid w-full gap-3 px-3 pt-4">
     <!-- Blue Stats -->
-    <div class="grid w-full auto-rows-max place-items-center gap-y-2">
-      <TeamEndStatTotals v-if="teamBlue" :team="teamBlue" />
-      <!--   teammate -->
+    <TeamEndStatTotals v-if="teamBlue" :team="teamBlue" />
+    <!--   teammate -->
 
+    <UCard
+      :ui="{
+        root: 'w-full border-0 bg-p0/60 shadow-md ring ring-p0/60 ring-offset-1 ring-offset-p0 backdrop-blur-md',
+        body: 'grid w-full auto-rows-max place-items-center gap-y-2 p-0',
+      }">
       <TeammateCard
         v-for="(player, i) in teams.blue"
         :key="i"
         :match
         :player="player" />
-    </div>
+    </UCard>
     <!-- red Stats -->
 
     <div class="grid w-full auto-rows-max place-items-center gap-y-1.75">

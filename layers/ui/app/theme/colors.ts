@@ -14,6 +14,9 @@ export const colors: string[] = [
   "pre",
   "custom",
   "sorc",
+  "challenger",
+  "legendary",
   "transparent",
   "default",
+  "win",
 ]

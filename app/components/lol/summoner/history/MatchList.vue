@@ -8,6 +8,15 @@ const { filteredMatches } = storeToRefs(store)
 const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 
 const hasMatches = computed(() => filteredMatches.value?.length > 0)
+const virtualize = computed(() => ({
+  estimateSize: 156,
+  overscan: 8,
+  gap: 12,
+  paddingStart: 4,
+  paddingEnd: 8,
+  isScrollingResetDelay: 120,
+  getItemKey: (index: number) => filteredMatches.value?.[index]?.matchId ?? index,
+}))
 </script>
 
 <template>
@@ -15,7 +24,7 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     v-auto-animate
     :class="
       cn(
-        '@container flex h-max w-full max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-visible overflow-x-visible! px-1 pt-2',
+        '@container flex size-full min-h-0 max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-hidden overflow-x-visible! px-1 pt-2',
         className,
       )
     ">
@@ -45,16 +54,11 @@ const hasMatches = computed(() => filteredMatches.value?.length > 0)
     <UScrollArea
       v-else
       v-slot="{ item }"
-      v-auto-animate
       :items="toValue(filteredMatches)"
-      :virtualize="{
-        estimateSize: 108,
-        gap: 12,
-      }"
-      :start-margin="220"
+      :virtualize="virtualize"
       :ui="{
-        viewport: 'h-max w-full overflow-x-visible!',
-        root: 'h-max w-full overflow-x-visible! pr-1 pb-2',
+        viewport: 'w-full overflow-x-visible!',
+        root: 'min-h-0 w-full flex-1 overflow-x-visible! pr-1 pb-2',
         item: 'overflow-x-visible!',
       }">
       <MatchCard :key="item.matchId" :match="item" />

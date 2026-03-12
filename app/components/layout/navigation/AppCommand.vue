@@ -1,155 +1,101 @@
 <script lang="ts" setup>
-import { itemIndex } from "#shared/constants/items/itemIndex"
-import type { BadgeProps, CommandPaletteItem } from "@nuxt/ui"
-// eslint-disable-next-line ts/consistent-type-imports
-import { regionIndex } from "#shared/constants/misc/region-index"
+import type { ReferenceElement } from "reka-ui"
+import { focusTrigger, onContentInteractOutside } from "./command/useCommand"
+import { useCommandFocusNavigation } from "./command/useCommandFocusNavigation"
 
-const items: CommandPaletteItem[] = itemIndex.map((i) => ({
-  label: i.name,
-  value: i.id,
-  avatar: { src: `/img/items/${i.id}.webp` },
-  suffix: "Item",
-}))
-
-const groups = [
-  {
-    id: "items",
-    items,
-  },
-]
-const query = ref<string>("")
-const tag = ref<string>("")
-const region = shallowRef<keyof typeof regionIndex>("na1")
-const queryName = useTemplateRef<HTMLElement>("queryName")
-
-const { focused } = useFocus(queryName)
-const router = useRouter()
 const route = useRoute()
-const user = useSupabaseUser()
 
-const focus = ref<HTMLElement>()
+const selected = ref<string | null>(null)
+const inSubmenu = ref<boolean>(false)
+const open = ref<boolean>(false)
+const query = shallowRef<string>("")
+const panelMeasure = useTemplateRef<HTMLElement>("panelMeasure")
+const panelRoot = useTemplateRef<HTMLElement>("panelRoot")
+const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
+  "commandInput",
+)
+const reference = computed(() => commandInput.value?.inputRef ?? undefined)
+const { height: panelHeight } = useElementSize(panelMeasure)
+const panelStyle = computed(() => {
+  const height = Math.ceil(panelHeight.value)
 
-/* const { champions, clear, pages, pockets } = await useSearch(query, tag, {
-  pages: true,
+  if (!open.value || height <= 0) {
+    return undefined
+  }
+
+  return { height: `${height}px` }
 })
- */
 
-const badgeColor: Record<string, BadgeProps["color"]> = {
-  item: "dom",
-  champion: "pre",
-  rune: "sorc",
-  spell: "insp",
-  summoner: "p0",
+const content = {
+  align: "center" as const,
+  sideOffset: 4,
+  onInteractOutside: (e: Event) => onContentInteractOutside(e, reference.value),
 }
 
-const component = shallowRef(
-  defineAsyncComponent(
-    () =>
-      import(
-        breakpoints.desktop
-          ? "@nuxt/ui/components/Modal.vue"
-          : "@nuxt/ui/components/Drawer.vue"
-      ),
-  ),
+useCommandFocusNavigation({
+  open,
+  panel: panelRoot,
+  trigger: reference,
+})
+
+defineShortcuts({
+  meta_k: {
+    usingInput: true,
+    handler: () => focusTrigger(open, reference.value),
+  },
+})
+
+watch(selected, (next, previous) => {
+  if (next == null || next === previous) {
+    return
+  }
+  open.value = false
+})
+
+watch(
+  () => route.fullPath,
+  () => {
+    open.value = false
+    selected.value = null
+    inSubmenu.value = false
+  },
 )
 </script>
 
 <template>
-  <component
-    :is="component"
-    aria-describedby="app-command-search"
-    :ui="{
-      content: 'max-w-180',
-    }"
-    :handle="false">
-    <Tooltip
-      align="start"
-      arrow
-      color="primary"
-      :ui="{ content: 'translate-x-6', arrow: 'translate-x-6' }">
-      <UButton
-        icon="search"
-        label="search..."
-        size="md"
-        :ui="{
-          base: 'w-180! shrink-0 cursor-text rounded-xl! border border-p3 bg-p0/50 inset-shadow-sm fx-1',
-          label: 'grow text-center text-n5',
-          leadingIcon:
-            'size-4.5 justify-self-start text-n5 opacity-80 **:stroke-[2.3] group-hover/btn:opacity-100',
-        }"
-        variant="ring">
-        <template #trailing>
-          <div class="flex items-center">
-            <UKbd
-              v-for="k in ['meta', 'K']"
-              :key="k"
-              variant="ghost"
-              square
-              :value="k" />
-          </div>
-        </template>
-      </UButton>
+  <div class="relative">
+    <CommandInput
+      ref="commandInput"
+      v-model:open="open"
+      @update:model-value="(value: string) => (query = value)" />
+
+    <UPopover
+      v-model:open="open"
+      :reference="reference"
+      :content="content"
+      :ui="{
+        content: 'overflow-hidden rounded-xl bg-p0/94 p-0!',
+      }"
+      @update:open="(nextOpen) => (!nextOpen ? (selected = null) : undefined)">
       <template #content>
-        <div class="flex items-center gap-1">
-          Search... &nbsp;
-          <UKbd
-            v-for="k in ['meta', 'K']"
-            :key="k"
-            size="sm"
-            color="neutral"
-            square
-            :value="k" />
+        <div
+          ref="panelRoot"
+          class="w-179 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
+          :style="panelStyle">
+          <div ref="panelMeasure" class="w-179">
+            <LazyCommandMenu
+              v-if="!query"
+              :reference="panelMeasure"
+              @update:open="(e: Event) => (open = false)" />
+            <LazyCommandPalette
+              v-else
+              v-model="selected"
+              v-model:in-submenu="inSubmenu"
+              :reference="panelMeasure"
+              :query="query" />
+          </div>
         </div>
       </template>
-    </Tooltip>
-    <template #content>
-      <LazyUCommandPalette
-        virtualize
-        :fuse="{ resultLimit: 1000 }"
-        :groups="groups"
-        :ui="{
-          root: 'max-h-200 max-w-180 *:first:[&_svg]:size-4.5!',
-          itemLabelSuffix: 'hidden',
-          itemLeadingAvatarSize: 'sm',
-          itemWrapper: 'justify-center',
-        }"
-        class="h-80 flex-1">
-        <template #item-trailing="{ item }">
-          <LazyUBadge
-            size="sm"
-            :color="badgeColor[String(item.suffix)]"
-            :label="item.suffix"></LazyUBadge>
-        </template>
-        <template #footer>
-          <div class="flex h-7 items-center justify-between gap-2">
-            <LazyLpLogo class="ml-1 size-5 rounded-sm *:text-[9px]" />
-            <div class="flex items-center gap-1">
-              <UButton
-                color="neutral"
-                variant="ghost"
-                label="Open Command"
-                class="text-dimmed"
-                size="xs">
-                <template #trailing>
-                  <UKbd value="enter" />
-                </template>
-              </UButton>
-              <LazyUSeparator orientation="vertical" class="h-4" />
-              <UButton
-                color="neutral"
-                variant="ghost"
-                label="Actions"
-                class="text-dimmed"
-                size="xs">
-                <template #trailing>
-                  <UKbd square size="sm" value="meta" />
-                  <UKbd square size="sm" value="k" />
-                </template>
-              </UButton>
-            </div>
-          </div>
-        </template>
-      </LazyUCommandPalette>
-    </template>
-  </component>
+    </UPopover>
+  </div>
 </template>

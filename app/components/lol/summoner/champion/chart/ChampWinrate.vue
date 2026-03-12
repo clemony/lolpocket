@@ -5,16 +5,20 @@ const {
   champion,
   class: className,
   entry,
-  arcWidth = 3,
+  ui,
+  thickness = 3,
+  color,
   size = 32,
 } = defineProps<{
   champion?: ChampionStats
   ally?: AllyStatDetail
   entry?: RankedEntry
-  arcWidth?: number
+  thickness?: number
   class?: HTMLAttributes["class"]
   hideZero?: boolean
   size?: number
+  color?: string
+  ui?: Record<string, HTMLAttributes["class"]>
 }>()
 
 const obj = computed(() => {
@@ -41,45 +45,44 @@ const wr = computed(() => {
   return 0
 })
 
-const data = computed(() => [obj.value?.win ?? 0, obj.value?.loss ?? 0])
-
-const labels = {
-  win: {
-    name: "Win",
-    color:
-      cssVar(`--color-${entry?.tier?.toLowerCase() || "insp"}`) ||
-      "var(--color-insp)",
-  },
-  loss: {
-    name: "Loss",
-    color: "var(--color-p3)",
-  },
-} as const
+const sizing = `calc(var(--spacing) * ${size})`
 </script>
 
 <template>
-  <ClientOnly>
-    <DonutChart
-      v-if="data"
-      :data
-      :height="size"
-      :radius="80"
-      :class="cn('', className)"
-      :pad-angle="-0.1"
-      :arc-width
-      :categories="labels"
-      :hide-tooltip="true"
-      :hide-legend="true">
-      <div class="text-center">
-        <span
-          :class="
-            cn('text-3xs font-medium text-pc ds-2xs', {
+  <div :class="cn('relative aspect-square rounded-full bg-p0', ui?.root)">
+    <Icon
+      name="lucide:circle"
+      :style="{
+        width: sizing,
+        height: sizing,
+      }"
+      :class="cn('absolute scale-107 text-p3 **:stroke-[2.4]')" />
+    <div
+      :class="cn('radial-progress', ui?.progress)"
+      :style="{
+        '--value': wr || 0,
+        '--size': sizing,
+        '--thickness': `calc(${thickness} * 1px)`,
+        color: color
+          ? `var(--color-${color})`
+          : wr
+            ? `var(--color-${winrateColor(wr)})`
+            : 'var(--color-p3)',
+      }"
+      :aria-valuenow="wr || 0"
+      role="progressbar">
+      <span
+        :class="
+          cn(
+            'text-3xs font-medium text-pc ds-2xs',
+            {
               'opacity-0': hideZero && (!wr || wr === 0),
-            })
-          ">
-          {{ wr || 0 }}
-        </span>
-      </div>
-    </DonutChart>
-  </ClientOnly>
+            },
+            ui?.label,
+          )
+        ">
+        {{ wr || 0 }}
+      </span>
+    </div>
+  </div>
 </template>

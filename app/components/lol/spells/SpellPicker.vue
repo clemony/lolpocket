@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 const props = defineProps<{
   alignOffset?: number
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   currentValue?: number
 }>()
-const emit = defineEmits(['update:spell'])
+const emit = defineEmits(["update:spell"])
 
 const selected = ref<number | null>(null)
 
@@ -46,7 +46,7 @@ onMounted(() => {
       align="center">
       <div class="grid grid-cols-3 place-content-evenly gap-3">
         <label
-          v-for="ss in spells"
+          v-for="ss in spellIndex"
           :key="ss.id"
           class="size-16 cursor-pointer! rounded-lg shadow-sm transition-[colors,opacity] duration-400 hover:ring-2 hover:ring-pc/60 disabled:opacity-70 disabled:inset-shadow-sm disabled:grayscale"
           as="label"
@@ -59,7 +59,7 @@ onMounted(() => {
             type="radio"
             :value="ss.id"
             :disabled="selected === ss.id"
-            @change="emit('update:spell', ss.id)">
+            @change="emit('update:spell', ss.id)" />
 
           <Img
             class="size-full rounded-lg"

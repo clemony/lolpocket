@@ -15,13 +15,19 @@ export const chipTheme = defineUiTheme({
       p1: "bg-p1",
       p2: "bg-p2",
       p3: "bg-p3 ring-p2",
-      p4: "status bg-p5 ring-p0",
+      p4: "status bg-p5",
       success: "bg-success",
       warning: "bg-warning",
+      legendary: "bg-legendary",
+      dom: "status bg-dom",
+      win: "status bg-win",
     },
     inset: {
       false: {
         base: "ring-0",
+      },
+      true: {
+        base: "ring-1 ring-p0",
       },
     },
     position: {

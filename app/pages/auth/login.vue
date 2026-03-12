@@ -8,8 +8,8 @@ definePageMeta({
   description: "Login with your Riot, Google, or Discord account",
   icon: "plug",
   path: "/auth/login",
-  search: "!user",
   layout: "form",
+  search: false,
 })
 </script>
 

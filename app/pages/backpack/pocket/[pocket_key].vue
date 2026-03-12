@@ -1,25 +1,13 @@
 <script lang="ts" setup>
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
-})
 definePageMeta({
   layout: false,
   props: true,
-  search: "hidden",
+  search: false,
 })
 
 const route = useRoute("pocket")
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 
 const mainSet = computed(() => {

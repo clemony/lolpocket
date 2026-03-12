@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url"
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
 const nuxtChartsDeps = ["vue-chrts", "@unovis/ts", "@unovis/vue"] as const
+const redditFeedRefreshCron = "*/30 * * * *"
 // Cloudflare build-only memory pressure toggle.
 // Set `NUXT_CF_LEAN_BUILD=1` in Cloudflare to temporarily skip heavier modules while diagnosing Nitro bundle OOMs.
 const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
@@ -117,7 +118,7 @@ export default defineNuxtConfig({
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
-    provider: "none",
+    provider: isCF ? "cloudflare" : "ipx",
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
   },
   colorMode: {
@@ -136,6 +137,11 @@ export default defineNuxtConfig({
       {
         dir: "./layers/ui/app/assets/icons/lp",
         prefix: "lp",
+        normalizeIconName: false,
+      },
+      {
+        dir: "./layers/ui/app/assets/icons/stat",
+        prefix: "stat",
         normalizeIconName: false,
       },
       {
@@ -171,11 +177,22 @@ export default defineNuxtConfig({
     // Reduce Cloudflare Nitro bundle build memory usage while debugging OOMs.
     minify: !isCFLeanBuild,
     sourceMap: false,
+    experimental: {
+      tasks: true,
+    },
+    scheduledTasks: {
+      [redditFeedRefreshCron]: ["feed:reddit-refresh"],
+    },
     compatibilityDate: "2025-07-18",
     preset: "cloudflare_module",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
+      wrangler: {
+        triggers: {
+          crons: [redditFeedRefreshCron],
+        },
+      },
     },
     externals: {
       external: ["sharp"],
@@ -225,6 +242,13 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     RIOT_API_KEY: process.env.NUXT_RIOT_API,
+    FEED_REFRESH_SECRET: process.env.FEED_REFRESH_SECRET,
+    REDDIT_CLIENT_ID: process.env.REDDIT_CLIENT_ID,
+    REDDIT_CLIENT_SECRET: process.env.REDDIT_CLIENT_SECRET,
+    REDDIT_USER_AGENT:
+      process.env.REDDIT_USER_AGENT ??
+      "web:lolpocket:v1.0.0 (by /u/lolpocket-dev)",
+    SUPABASE_SECRET_KEY: process.env.SUPABASE_SECRET_KEY,
     supabasePooler: process.env.SUPABASE_POOLER,
     i18n: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
@@ -288,18 +312,28 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    /*     server: {
-      strictPort: true,
-      hmr: {
-        protocol: "ws",
-        host: "localhost",
-        clientPort: 8080,
+    server: {
+      watch: {
+        // Coalesce noisy editor/extension write bursts to reduce duplicate HMR triggers.
+        awaitWriteFinish: {
+          stabilityThreshold: 180,
+          pollInterval: 30,
+        },
+        ignored: ["**/.vscode/.iconify/**", "**/.DS_Store"],
       },
-    }, */
-    plugins: [
-      // @ts-expect-error until plugin updates
-      tailwindcss(),
-    ],
+    },
+    optimizeDeps: {
+      include: [
+        "valibot",
+        "dexie",
+        "clsx",
+        "tailwind-merge",
+        "tailwind-variants",
+        "random-words",
+        "reka-ui",
+      ],
+    },
+    plugins: [tailwindcss()],
     clearScreen: false,
     build: {
       sourcemap: false,
@@ -313,10 +347,10 @@ export default defineNuxtConfig({
     port: 8080,
   },
   devtools: {
-    enabled: false,
-    componentInspector: true,
-    vueDevTools: true,
-    viteInspect: true,
+    enabled: true,
+    componentInspector: false,
+    vueDevTools: false,
+    viteInspect: false,
     viteDevTools: false,
   },
   experimental: {
@@ -368,6 +402,44 @@ export default defineNuxtConfig({
  */
   app: {
     head: {
+      /*    script: [
+        {
+          key: "reset-nuxt-devtools-state",
+          innerHTML: `
+            try {
+              const devtoolsKeys = [
+                "nuxt-devtools-color-mode",
+                "nuxt-devtools-first-visit",
+                "nuxt-devtools-frame-state",
+                "nuxt-devtools-panels-state",
+                "nuxt-devtools-split-screen",
+                "nuxt-devtools-split-screen-view",
+                "nuxt-link-checker:show-inspections",
+              ]
+
+              for (const key of devtoolsKeys) {
+                window.localStorage.removeItem(key)
+              }
+
+              window.localStorage.setItem(
+                "nuxt-devtools-frame-state",
+                JSON.stringify({
+                  width: 80,
+                  height: 60,
+                  top: 0,
+                  left: 50,
+                  open: false,
+                  route: "/",
+                  position: "bottom",
+                  closeOnOutsideClick: false,
+                  minimizePanelInactive: 5000,
+                }),
+              )
+            }
+            catch {}
+          `,
+        },
+      ], */
       link: [
         {
           rel: "preconnect",
@@ -395,18 +467,10 @@ export default defineNuxtConfig({
           href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-normal.woff2",
         },
 
-        // Geist Mono (normal)
+        // Roboto Mono (variable)
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-300.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-400.css",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.6/latin-500.css",
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/roboto-mono:vf@latest/latin-wght-normal.woff2",
         },
       ],
     },

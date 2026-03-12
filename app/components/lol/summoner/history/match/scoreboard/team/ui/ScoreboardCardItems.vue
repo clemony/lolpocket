@@ -8,14 +8,14 @@ const {
 } = defineProps<{
   player: Player
   isSR: boolean
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 
 const roleItemId = computed(() => {
   if (!isSR) return null
   const role = player.role as keyof typeof roleItems
   const item = roleItems[role]
-  return Array.isArray(item) ? item[0] ?? null : item ?? null
+  return Array.isArray(item) ? (item[0] ?? null) : (item ?? null)
 })
 </script>
 
@@ -35,11 +35,12 @@ const roleItemId = computed(() => {
         }">
         <Item
           :id="item"
-          :class="
-            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full inset-shadow-xs dark:bg-p0!', {
+          :ui="{
+            root: 'size-7.5 rounded-full',
+            image: cn('img-active rounded-full bg-p1 inset-shadow-xs', {
               'no-img': !item,
-            })
-          " />
+            }),
+          }" />
       </div>
     </div>
 
@@ -47,32 +48,39 @@ const roleItemId = computed(() => {
       <div
         class="z-0 grid size-9.5 shrink-0 place-items-center rounded-full bg-p0">
         <Item
-          :id="
-            player.items?.role ? player.items.role
-            : roleItemId
-          "
-          :class="
-            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full dark:bg-p0!', {
+          :id="player.items?.role ? player.items.role : roleItemId"
+          :ui="{
+            root: 'size-7.5 rounded-full',
+            image: cn('img-active bg-p1', {
               'no-img': !player.items?.role && !isSR,
               'pointer-events-none brightness-115 contrast-102':
                 !player.items?.role,
               'brightness-150': player.role === 'support',
-            })
-          " />
+            }),
+          }" />
       </div>
       <div
         class="relative z-1 grid size-9.5 shrink-0 place-items-center rounded-full bg-p0">
         <Item
           :id="player.items?.trinket"
-          :class="
-            cn('img-active light:bg-tint-p2/40! size-7.5 rounded-full dark:bg-p0!', {
+          :ui="{
+            root: 'size-7.5 rounded-full',
+            image: cn('img-active bg-p1', {
               'no-img': !player.items?.trinket,
-            })
-          " />
+            }),
+          }" />
         <!-- vision -->
         <Tooltip
-          class="absolute -top-0.5 -right-0.5 badge origin-left bg-neutral/80 px-0.75 badge-xs text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent backdrop-blur-sm badge-neutral *:rounded-full">
-          {{ player.stats?.visionScore ?? 0 }}
+          class="absolute -top-0.5 -right-0.5"
+          :ui="{ content: 'h-max!' }">
+          <UBadge
+            color="neutral"
+            size="2xs"
+            :ui="{
+              base: 'origin-left rounded-full bg-neutral/80 px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent! backdrop-blur-sm',
+            }">
+            {{ player.stats?.visionScore ?? 0 }}
+          </UBadge>
 
           <template #content>
             <ul>

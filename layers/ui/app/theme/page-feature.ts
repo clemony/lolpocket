@@ -6,8 +6,8 @@ export const pageFeatureTheme = defineUiTheme({
     wrapper: "",
     leading: "inline-flex items-center justify-center",
     leadingIcon: "size-5 shrink-0 text-primary",
-    title: "text-base font-semibold text-pretty text-highlighted",
-    description: "text-[15px] text-pretty text-muted",
+    title: "text-lg font-semibold text-pretty text-highlighted",
+    description: "text-sm leading-5 text-pretty text-n5",
   },
   variants: {
     orientation: {
@@ -31,3 +31,5 @@ export const pageFeatureTheme = defineUiTheme({
     },
   },
 })
+
+export default pageFeatureTheme

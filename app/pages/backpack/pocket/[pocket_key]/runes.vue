@@ -1,31 +1,18 @@
 <script setup lang="ts">
 import { addRuneSet } from "~/domain/pocket/addPocketModules"
 
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
-})
-
 definePageMeta({
   name: "pocket-runes",
   title: "runes",
   order: 3,
   path: "/pocket/:pocket_key/runes",
   props: true,
-  search: "hidden",
+  search: false,
 })
 
 const route = useRoute("pocket-runes")
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 function handleAdd() {
   const runes = pocket.value?.runes
@@ -59,7 +46,7 @@ function handleAdd() {
           :class="
             cn(
               'grow basis-1 cursor-pointer p-1',
-              index === 0 ? '' : 'opacity-50'
+              index === 0 ? '' : 'opacity-50',
             )
           ">
           <UCard class="h-22 w-40" as-child>
@@ -72,7 +59,7 @@ function handleAdd() {
         <CarouselItem
           :class="
             cn(
-              'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100'
+              'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100',
             )
           ">
           <UCard

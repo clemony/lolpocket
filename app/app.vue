@@ -6,10 +6,11 @@ const { locale } = useI18n()
 const lang = computed(() => locales[locale.value].code)
 const dir = computed(() => locales[locale.value].dir)
 
+    :locale="locales[locale]" */
 useHead({
   htmlAttrs: {
-    lang,
-    dir,
+    lang: "en",
+    dir: "auto",
   },
   link: [
     {
@@ -19,7 +20,11 @@ useHead({
     },
   ],
 })
-    :locale="locales[locale]" */
+
+const route = useRoute()
+useHead({
+  title: () => String(route.meta.title || route.name),
+})
 const reportComment = computed(() => threads().reportComment ?? undefined)
 </script>
 

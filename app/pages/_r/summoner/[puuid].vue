@@ -4,6 +4,7 @@ import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 definePageMeta({
   name: "summoner",
   layout: false,
+  search: false,
 })
 
 const route = useRoute()

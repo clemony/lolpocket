@@ -1,0 +1,205 @@
+<script lang="ts" setup>
+/*
+
+const gridOptions: GridOptions<ChampionLite> = {
+  columnHoverHighlight: true,
+  rowData: filteredChamps.value,
+  defaultColDef: {
+    initialHide: false,
+    minWidth: 66,
+    autoHeaderHeight: true,
+    flex: 1,
+    wrapHeaderText: true,
+    cellClass: ["champion-grid-cell", "!text-right", "!justify-end", "!px-4"],
+    headerClass: ["champion-grid-header", "h-full", "items-end"],
+    sortingOrder: ["desc", "asc", null],
+  },
+  defaultColGroupDef: {
+    suppressStickyLabel: true,
+  },
+  rowSelection: {
+    checkboxes: false,
+    enableClickSelection: true,
+    headerCheckbox: false,
+    mode: "multiRow",
+  },
+} */
+/*
+watch(
+  () => filters.value.championGridLevel,
+  (newVal) => {
+    if (newVal && gridApi.value) gridApi.value.refreshCells()
+  }
+)
+
+watch(
+  () => filters.value.championGridType,
+  (newVal) => {
+    if (newVal && gridApi.value) gridApi.value.refreshCells()
+  }
+)
+
+const { resolveStat } = useChampionStatGrowth(
+  computed(() => filters.value.championGridLevel ?? 1)
+) */
+
+/* const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
+  {
+    maxWidth: 64,
+    minWidth: 64,
+    width: 64,
+    cellClass: "!py-1 !pr-1 !ml-0",
+    cellRenderer: ChampionGridIcon,
+    pinned: "left",
+    sortable: false,
+  },
+
+  {
+    maxWidth: 100,
+    minWidth: 80,
+    cellClass: "font-medium  text-left",
+    cellDataType: "text",
+    colId: "champion",
+    field: "name",
+    flex: 1.5,
+    headerClass: "",
+    headerName: "Champion",
+    pinned: "left",
+    sortable: false,
+  }, */
+/*
+  {
+    headerName: 'Health',
+    valueGetter: params => resolveStat(params.data.stats?.health),
+  },
+  {
+    headerName: 'Health Regen',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.healthRegen, { roundTo: 2 }),
+  },
+  {
+    headerName: 'Mana',
+    valueGetter: params => resolveStat(params.data.stats?.mana),
+  },
+  {
+    headerName: 'Mana Regen',
+    valueGetter: params =>
+      resolveStat(params.data.stats?.manaRegen, { roundTo: 2 }),
+  },
+  {
+    headerName: 'Armor',
+    valueGetter: params => resolveStat(params.data.stats?.armor),
+  },
+  {
+    headerName: 'Magic Resist',
+    valueGetter: params => resolveStat(params.data.stats?.magicResistance),
+  },
+  {
+    headerName: 'Attack Damage',
+    valueGetter: params => resolveStat(params.data.stats?.attackDamage),
+  },
+  {
+    headerName: 'Attack Speed',
+    valueGetter: (params) => {
+      const { attackSpeed, attackSpeedRatio } = params.data.stats
+      return resolveStat(attackSpeed, {
+        ratio: attackSpeedRatio.flat,
+        roundTo: 3,
+        type: 'attackSpeed',
+      })
+    },
+  }, */
+/*    { headerName: 'Crit',
+cellClass: 'number-cell justify-end',
+groupId: 'crit',
+hide: true,
+children: [
+    { hide: true,
+headerName: 'Base',
+valueGetter: (params) => {
+      return (params.data.stats?.crit + params.data.stats?.critperLevel)) * 100 / 100
+    } },
+    { columnGroupShow: 'open',
+cellClass: 'hidden-cell bg-p2/40 number-cell justify-end',
+maxWidth: 60,
+headerName: '🡱',
+headerClass: 'bg-p2/40',
+valueGetter: params => params.data.stats?.critperLevel,
+hide: true },
+  ] }, */
+
+/*  {
+    flex: 1,
+    headerName: 'Range',
+    valueGetter: params => params.data.stats?.attackRange.flat,
+  },
+  {
+    headerName: 'Move Speed',
+    valueGetter: params => params.data.stats?.movespeed.flat,
+  }, */ /*
+  {
+    minWidth: 90,
+    colId: "resource",
+    field: "resource",
+    flex: 1.5,
+    headerName: "Resource",
+  },
+
+  {
+    minWidth: 90,
+    flex: 1.5,
+    headerName: "Position",
+    valueGetter: (params) => params.data?.positions?.[0] ?? "",
+  },
+  {
+    minWidth: 90,
+    flex: 1.5,
+    headerName: "Role",
+    valueGetter: (params) => params.data?.roles?.[0] ?? "",
+  },
+  {
+    headerName: "Ability Reliance",
+    valueGetter: (params) =>
+      params.data?.attributeRatings?.abilityReliance ?? 0,
+  },
+
+  {
+    headerName: "Control",
+    valueGetter: (params) => params.data?.attributeRatings?.control ?? 0,
+  },
+  {
+    headerName: "Damage",
+    valueGetter: (params) => params.data?.attributeRatings?.damage ?? 0,
+  },
+
+  {
+    headerName: "Difficulty",
+    valueGetter: (params) => params.data?.attributeRatings?.difficulty ?? 0,
+  },
+
+  {
+    headerName: "Mobility",
+    valueGetter: (params) => params.data?.attributeRatings?.mobility ?? 0,
+  },
+
+  {
+    headerName: "Tough- ness",
+    valueGetter: (params) => params.data?.attributeRatings?.toughness ?? 0,
+  },
+  {
+    headerName: "Utility",
+    valueGetter: (params) => params.data?.attributeRatings?.utility ?? 0,
+  },
+]
+
+watch(
+  () => "",
+  (newVal) => {
+    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", [])
+  }
+) */
+</script>
+
+<template>
+  <div></div>
+</template>

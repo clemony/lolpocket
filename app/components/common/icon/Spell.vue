@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { spells } from "#shared/constants/misc/spells"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 const {
   id,
@@ -23,7 +23,7 @@ const pinned = shallowRef<boolean>(false)
     :side
     arrow
     :avatar="id ? `/img/spells/${id}.webp` : undefined"
-    :label="id ? spells[id]?.name : ''"
+    :label="id ? spellIndex[id]?.name : ''"
     trailing-icon="i-right-click"
     :ui="{
       content: cn('h-fit! max-h-80! w-full max-w-80', {
@@ -46,7 +46,7 @@ const pinned = shallowRef<boolean>(false)
       "
       :loading-type
       icon="i-ui-none"
-      :alt="spells[id]?.name || 'spell icon'"
+      :alt="spellIndex[id]?.name || 'spell icon'"
       :src="`/img/spells/${id}.webp`"
       @load="loaded = true" />
     <template v-if="pinned" #content>

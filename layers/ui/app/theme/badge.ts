@@ -24,6 +24,7 @@ export const badgeTheme = defineUiTheme({
       solid: "",
       outline: "",
       soft: "",
+      ghost: "",
     },
     size: {
       lg: {
@@ -57,7 +58,7 @@ export const badgeTheme = defineUiTheme({
         trailingIcon: "size-3.5 **:stroke-[2.4]",
       },
       "2xs": {
-        base: "gap-1 rounded-md px-1 py-0 text-[10px]/3",
+        base: "gap-1 rounded-md px-0.5 py-0 text-[10px]/3",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]",
@@ -97,7 +98,7 @@ export const badgeTheme = defineUiTheme({
     {
       color: "transparent",
       variant: "ghost",
-      class: "ring-none border-none text-pc shadow-none fx-0",
+      class: "ring-none border-n0 text-pc shadow-none fx-0",
     },
 
     // neutral
@@ -105,7 +106,14 @@ export const badgeTheme = defineUiTheme({
     {
       color: "neutral",
       variant: "solid",
-      class: "noise border border-n2 bg-n0/85 font-semibold text-nc ring-n3",
+      class:
+        "noise border border-n1 bg-n0/85 font-semibold text-nc ring-n3 **:text-nc",
+    },
+    {
+      color: "neutral",
+      variant: "ghost",
+      class:
+        "hover:noise border border-transparent hover:border-n2 hover:bg-n0/85 hover:text-nc hover:ring-n3 hover:**:text-nc",
     },
 
     // dom

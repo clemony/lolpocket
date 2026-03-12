@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useScrollProvider } from "~~/layers/lib/app/composables/navigation/useElementScroll"
+
 definePageMeta({
   name: "pocket-core",
   title: "core",
   order: 0,
-  search: "hidden",
+  search: false,
 })
 
 const route = useRoute()

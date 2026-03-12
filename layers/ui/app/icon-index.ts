@@ -3,6 +3,8 @@ export const icon = {
   mode: "svg",
   size: "16px",
 
+  cssLayer: "base",
+
   aliases: {
     //arrows
     "arrow-curve-right": "lucide:corner-down-right", //'i-arrow-curve-right'
@@ -63,8 +65,8 @@ export const icon = {
     handle: "radix-icons:button", //'i-handle:"radix-icons'
     lines: "teenyicons:align-text-justify-outline", //'i-lines'
     menu: "lucide:menu", //'i-menu'
-    more: "i-rmore:line", //'i-more:"i-rmore'
-    "more-vertical": "i-rmore:2-line", //'i-more-vertical'
+    more: "ri:more-line", //'i-ri-more-line'
+    "more-vertical": "ri:more-line-vertical", //'i-ri-more-line-vertical'
     radio: "formkit:radio", //'i-radio:"formkit'
     settings: "lucide:settings-2", //'i-settings'
 
@@ -91,6 +93,7 @@ export const icon = {
     "folder-open": "lucide:folder-closed", //'i-folder-open'
     folders: "lucide:folders", //'i-folders'
 
+    question: "i-uil-question", //'i-question'
     "win-key": "streamline:logos:microsoft-windows-logo-3-solid", //'i-win-key'
     "x-solid": "teenyicons:x-circle-solid", //'i-x-solid'
     and: "lucide:ampersand", //'i-and'
@@ -118,10 +121,13 @@ export const icon = {
     "mail-all": "lucide:mails", //'i-mail-all'
     "mail-fill": "fluent:mail-32-filled", //'i-mail-fill'
     "mail-open": "lucide:mail-open", //'i-mail-open'
+    inbox: "lucide:inbox",
     send: "lucide:send", //'i-send'
     wifi: "lucide:wifi", //'i-wifi'
 
     "right-click": "ph:mouse-right-click-fill", //'i-right-click'
+    click: "i-mingcute-cursor-3-fill", //'i-click'
+    cursor: "i-mingcute-cursor-2-fill", //'i-cursor'
 
     "calc-solid": "streamline:calculator-1-solid", //'i-calc-solid'
     absolute: "hugeicons:absolute", //'i-absolute'
@@ -170,7 +176,7 @@ export const icon = {
     backpack: "tabler:briefcase", //'i-backpack'
     "bar-chart": "lucide:chart-no-axes-column", //'i-bar-chart'
     "bell-ring": "lucide:bell-ring", //'i-bell-ring'
-    book: "tabler:notebook", //'i-book'
+    book: "i-tdesign-address-book", //'i-book'
     bot: "lucide:bot", //'i-bot'
     "bot-chat": "lucide:bot-message-square", //'i-bot-chat'
     bow: "mdi:bow-arrow", //'i-bow'
@@ -188,6 +194,7 @@ export const icon = {
     paintbrush: "lucide:paintbrush-vertical", //'i-paintbrush'
     "panel-dash": "lucide:panel-top-dashed", //'i-panel-dash'
 
+    loading: "mingcute:loading-fill", //'i-loading'
     party: "lucide:party-popper", //'i-party'
     plug: "tabler:plug", //'i-plug-tabler'
     "shopping-bag": "lucide:shopping-bag", //'i-shopping-bag'

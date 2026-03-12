@@ -7,7 +7,7 @@ const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4])
 
 console.log(
   "🥸 - findSummoner - summonerAccounts():",
-  summonerAccounts().accounts
+  summonerAccounts().accounts,
 )
 const headerHeight = 400
 
@@ -24,14 +24,15 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
     icon: "x",
   })
 }
+//Home base for news, personal data, friends, and more
 definePageMeta({
   id: "8e12p21b-2f27-43b0-b7e7-77c49bbe972d",
   title: "Nexus",
   layout: "default",
-  icon: "nexus",
-  listClass: "!size-5.75 **:stroke-[1.6]",
-  order: 1,
-  path: "/nexus",
+  class: "scale-96",
+  icon: "i-nexus",
+  description: "",
+  order: 0,
 })
 </script>
 
@@ -49,16 +50,12 @@ definePageMeta({
         <icon name="add" />
         toast
       </UButton>
-      <UButton @click="accountFetch()">
-        fetch user datasss
-      </UButton>
+      <UButton @click="accountFetch()"> fetch user datasss </UButton>
       <UButton @click="console.log('summoner:', sSummoner().cache)">
         resolve the slug
       </UButton>
 
-      <UButton @click="useSignOut()">
-        sign out
-      </UButton>
+      <UButton @click="useSignOut()"> sign out </UButton>
 
       <!--       <UButton
         @click="() => {

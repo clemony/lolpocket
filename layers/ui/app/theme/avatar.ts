@@ -3,8 +3,8 @@ import { defineUiTheme } from "./defineUiTheme"
 export const avatarTheme = defineUiTheme({
   slots: {
     root: "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-elevated align-middle select-none",
-    image: "size-full object-cover",
-    fallback: "truncate leading-none font-medium text-muted",
+    image: "size-full shrink-0 object-cover",
+    fallback: "shrink-0 truncate leading-none font-medium text-muted",
     icon: "shrink-0 text-muted",
   },
   variants: {
@@ -40,6 +40,7 @@ export const avatarTheme = defineUiTheme({
     },
   },
   defaultVariants: {
+    color: "default",
     size: "default",
   },
 })

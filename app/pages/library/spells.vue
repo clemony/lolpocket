@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 definePageMeta({
   title: "Spells",
-  icon: "i-basil-book-solid",
-
+  icon: "i-book",
+  order: 3,
+  prefix: "Library",
   description: "Don't forget the petricite!",
-  listClass: "**:stroke-[2.6]",
-  path: "/spells",
-  searchKeys: [
+  class: "**:stroke-[1.8]!",
+  keys: [
     "summoner",
     "spell",
     "heal",
@@ -25,7 +25,7 @@ definePageMeta({
 
 const selectedSpellId = ref(1)
 const selectedSpell = computed(
-  () => spells[selectedSpellId.value] ?? spells[0]!,
+  () => spellIndex[selectedSpellId.value] ?? spellIndex[0]!,
 )
 </script>
 
@@ -40,7 +40,7 @@ const selectedSpell = computed(
         <div
           class="shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-xl border-p3/80 px-9 py-8">
           <div
-            v-for="spell in spells"
+            v-for="spell in spellIndex"
             :key="spell.name"
             label="{ content: spell.name, theme: 'neutral' }"
             class="size-fit">

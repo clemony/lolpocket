@@ -103,7 +103,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </UFormField>
 
       <UButton
-        :ui="{ base: 'w-full justify-center font-semibold' }"
+        :ui="{
+          base: 'w-full justify-center font-semibold',
+          label: 'grow-0 text-center',
+        }"
         color="neutral"
         size="md"
         :disabled="!state.email || !state.password || !form?.errors?.length"

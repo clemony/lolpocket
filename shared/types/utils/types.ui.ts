@@ -15,7 +15,7 @@ export type Align = "start" | "center" | "end"
 export type Size = "3xs" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl"
 export type Shape = "square" | "circle"
 export type UOrientation = "vertical" | "horizontal" | "responsive"
-export type LoadingStyle = "none" | "spinner" | null
+export type LoadingStyle = "none" | "default" | "spinner" | null
 export type TooltipSize = "sm" | "md" | "lg"
 export type DataOrientation = "vertical" | "horizontal"
 export type DataAlign = "top" | "middle" | "bottom"
@@ -46,6 +46,25 @@ export type ChartMode = "scatter" | "heatmap" | "bubble" | "donut"
 export type TooltipUi = TooltipProps["ui"] & {
   trailingIcon?: string
   label?: string
+}
+
+export interface TipProps {
+  avatar?: string
+  ui?: TooltipUi
+  icon?: string
+  side?: Side
+  sideOffset?: number
+  trailingIcon?: string
+  followPointer?: boolean
+  inertia?: boolean | number
+  interactive?: boolean
+  label?: string
+  title?: string
+}
+
+export interface TooltipExpose {
+  pinned: boolean
+  isOpen: boolean
 }
 
 export interface NavButtonProps extends ButtonProps {

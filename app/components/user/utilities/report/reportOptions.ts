@@ -11,7 +11,7 @@ export type ReportOption = CheckboxGroupItem & {
 export const reportOptions: ReportOption[] = [
   {
     id: "abuse",
-    label: "Chat Abuse",
+    label: "Abusive Language",
     description:
       "Harassment, offensive language, threats, and other negative and disruptive communication.",
   },

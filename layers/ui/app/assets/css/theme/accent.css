@@ -60,6 +60,28 @@
   --color-pre-950: oklch(0.428 0.092 71.01);
 }
 
+@theme {
+  --ui-win: oklch(71% 24% 200deg);
+
+  --color-legendary: var(--ui-legendary);
+  --color-info: var(--ui-sorc);
+  --color-success: var(--ui-res);
+  --color-warning: var(--ui-pre);
+  --color-error: var(--ui-dom);
+
+  --color-pre: var(--ui-pre);
+  --color-dom: var(--ui-dom);
+  --color-sorc: var(--ui-sorc);
+  --color-res: var(--ui-res);
+  --color-insp: var(--ui-insp);
+
+  --color-insp-offset: var(--ui-insp-offset);
+  --color-res-offset: var(--ui-res-offset);
+  --color-sorc-offset: var(--ui-sorc-offset);
+  --color-dom-offset: var(--ui-dom-offset);
+  --color-pre-offset: var(--ui-pre-offset);
+}
+
 :root {
   --ui-insp: var(--color-insp-400);
   --ui-res: var(--color-res-400);
@@ -90,22 +112,7 @@
   }
 }
 
-@theme {
-  --color-legendary: var(--ui-legendary);
-  --color-info: var(--ui-sorc);
-  --color-success: var(--ui-res);
-  --color-warning: var(--ui-pre);
-  --color-error: var(--ui-dom);
+@theme inline {
+  --color-win: var(--ui-win);
 
-  --color-pre: var(--ui-pre);
-  --color-dom: var(--ui-dom);
-  --color-sorc: var(--ui-sorc);
-  --color-res: var(--ui-res);
-  --color-insp: var(--ui-insp);
-
-  --color-insp-offset: var(--ui-insp-offset);
-  --color-res-offset: var(--ui-res-offset);
-  --color-sorc-offset: var(--ui-sorc-offset);
-  --color-dom-offset: var(--ui-dom-offset);
-  --color-pre-offset: var(--ui-pre-offset);
 }

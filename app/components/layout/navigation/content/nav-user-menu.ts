@@ -34,25 +34,6 @@ export const userMenu = computed(() => {
     ],
     [
       {
-        icon: "i-external",
-        label: "Resources",
-        ui: {
-          content: "w-54",
-          leadingIcon: "scale-100",
-        },
-        children: resourceNav,
-      },
-      {
-        label: "Support",
-        icon: "i-lucide-circle-question-mark",
-        children: helpNav.filter((i) => i !== undefined),
-        ui: {
-          content: "w-54",
-        },
-      },
-    ],
-    [
-      {
         label: cMode.value || "System",
         icon: cMode.preference,
         ui: {

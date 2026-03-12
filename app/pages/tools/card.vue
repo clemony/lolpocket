@@ -9,8 +9,9 @@ const { card } = defineProps<{
 definePageMeta({
   name: "card",
   title: "Card Builder",
+
+  prefix: "Tools",
   icon: "lucide:square-pen",
-  path: "/tools/card",
 })
 
 // todo nuxt bg here

@@ -6,7 +6,7 @@ definePageMeta({
   alias: "/sign-up",
   description: "Login with your Riot, Google, or Discord account.",
   icon: "gear",
-  search: "!user",
+  search: false,
 })
 
 const client = useSupabaseClient()

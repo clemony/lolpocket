@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { RuneTooltip } from "#components"
-
 const {
   id,
   side,
@@ -14,26 +12,11 @@ const {
   side?: Side
 }>()
 const loaded = ref(false)
-
-const toast = useToast()
-function showToast() {
-  if (!id) return
-  if (!toast.toasts.value.find((t) => t.id === `rune-${id}`)) {
-    toast.add({
-      id: `rune-${id}`,
-      description: h(RuneTooltip, { id }),
-      duration: 0,
-      ui: {
-        root: "p-0!",
-      },
-    })
-  }
-}
 </script>
 
 <template>
   <Tooltip
-    trailing-icon="i"
+    trailing-icon="i-click"
     :side
     :label="id ? runeNameById(id) : ''"
     :avatar="id ? `/img/runes/${id}.webp` : undefined">
@@ -50,10 +33,9 @@ function showToast() {
           {
             'scale-105 drop-shadow-sm drop-shadow-black/40': loaded,
           },
-          className
+          className,
         )
       "
-      @click.stop="showToast()"
       @load="loaded = true">
       <slot />
     </Img>

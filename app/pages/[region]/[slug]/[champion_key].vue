@@ -6,6 +6,8 @@ definePageMeta({
     if (!to.params.champion_key) return abortNavigation()
   },
   keepAlive: { max: 1 },
+  search: false,
+  prefix: "summoner",
 })
 </script>
 

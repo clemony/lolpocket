@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useRouteHash } from "@vueuse/router"
-import type { ShallowRef } from "vue"
-import { summonerSections } from "~/components/lol/summoner/champion/summonerSections"
+import { useScrollSectionsInject } from "~~/layers/lib/app/composables/navigation/useScrollSections"
 
 const section = useRouteHash()
 const { activeId, activeIndex } = useScrollSectionsInject()
@@ -9,7 +8,7 @@ watch(
   () => activeIndex.value,
   (v) => {
     console.log("💠 - watch - newVal:", v)
-  }
+  },
 )
 
 /* const next = computed(() => {

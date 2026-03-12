@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useScrollProvider } from "#layers/lib/app/composables/navigation/useElementScroll"
 import type { NavigationMenuItem } from "@nuxt/ui"
 import { getRandomBg, getSplash } from "~/domain/utils/img"
 
@@ -37,8 +38,8 @@ const bg = computed(() =>
     <!-- bg -->
     <div
       class="pointer-events-none relative z-0 -mt-15 grid h-95 w-screen overflow-hidden border-b border-p4/60">
-      <LazyBgSplash :src="bg" />
-      <UContainer class="z-0 grid items-center py-16">
+      <BgSplash :src="bg" />
+      <UContainer class="z-0 grid items-center px-25! py-16">
         <LazySummonerHeader v-if="isSummonerRoute" />
         <LazyPocketHeader v-else-if="pocket" :pocket />
         <LazyChampionHeader v-else-if="champion" :champion />

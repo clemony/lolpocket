@@ -32,14 +32,14 @@ const role = computed(() => {
           'order-first text-white hover:text-pc hover:**:text-pc':
             active ||
             (champFilter().filters.role &&
-              champFilter().filters.role === role.name),
+              champFilter().filters.role.push(role.name)),
           'pr-3': active && clear,
         },
-        className
+        className,
       )
     "
     :style="{
-      backgroundColor: `${(champFilter().filters.role && champFilter().filters.role === role.name) || active ? role.color : 'transparent'}`,
+      backgroundColor: `${(champFilter().filters.role && champFilter().filters.role.push(role.name)) || active ? role.color : 'transparent'}`,
     }">
     <Element square size="sm">
       <component

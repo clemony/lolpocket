@@ -5,9 +5,9 @@
   "editor.formatOnPaste": true, // optional
   "editor.formatOnSave": true, // optional
   "editor.formatOnSaveMode": "file", // required to format on save
-  "files.autoSave": "off", // optional but recommended
+  "files.autoSave": "onFocusChange", // optional but recommended
 
-  "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/nuxt/lolpocket/layers/ui/app/assets/css/tailwind.css",
+  "tailwindCSS.experimental.configFile": "File:///Users/caitlin/dev/workspaces/lolpocket/layers/ui/app/assets/css/tailwind.css",
   "files.associations": {
     "*.css": "tailwindcss"
   },

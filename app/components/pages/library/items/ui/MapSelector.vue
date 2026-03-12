@@ -28,9 +28,7 @@ const maps = computed(() => [
 
 <template>
   <div>
-    <h6 v-if="!collapsed" class="text-sm">
-      Map
-    </h6>
+    <h6 v-if="!collapsed" class="text-sm">Map</h6>
     <UPopover
       v-model:open="mapOpen"
       :arrow="collapsed"
@@ -56,15 +54,13 @@ const maps = computed(() => [
             leadingIcon: collapsed ? 'size-5' : '',
           }"
           :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
-          :leading-icon="`i-lp-${filters.map}`"
+          :icon="`i-lp-${filters.map}`"
           trailing-icon="i-up-down"
           :color="collapsed ? 'p0' : 'p1'"
           :variant="collapsed ? 'solid' : 'outline'" />
       </Tooltip>
       <template #content>
-        <h6 class="px-1.5 py-1 text-xs">
-          Select Map
-        </h6>
+        <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
         <LazyURadioGroup
           v-model:model-value="filters.map"
           color="p1"
@@ -81,7 +77,7 @@ const maps = computed(() => [
               v-if="item.value === filters.map"
               class="group-hover/item:noise absolute top-0 left-0 z-0 size-full bg-p1 group-hover/item:bg-p2" />
             <div class="z-1 flex flex-nowrap items-center gap-1.5">
-              <Icon :name="`i-map-${item.value}`" class="size-5 shrink-0" />
+              <Icon :name="`i-lp-${item.value}`" class="size-5 shrink-0" />
               {{ item.name }}
             </div>
             <Icon

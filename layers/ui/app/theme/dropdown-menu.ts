@@ -4,10 +4,10 @@ export const dropdownMenuTheme = defineUiTheme({
   slots: {
     arrow: "fill-p0",
     content: [
-      "! t z-99 flex min-w-32 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-lg shadow-lg ring shadow-black/8 drop-shadow-sm drop-shadow-black/6 select-none",
+      "z-99 flex min-w-32 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl shadow-lg ring shadow-black/8 drop-shadow-sm drop-shadow-black/6 select-none",
     ],
     group: "isolate p-1",
-    item: "group relative flex w-full items-center outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemDescription: "truncate text-p1",
     itemLabel: "truncate font-medium",
     itemLabelExternalIcon: "ml-px inline-block size-2.75 align-[2px] text-pc",

@@ -2,7 +2,7 @@
 definePageMeta({
   layout: false,
   order: 0,
-  search: 'hidden',
+  search: false,
 })
 </script>
 

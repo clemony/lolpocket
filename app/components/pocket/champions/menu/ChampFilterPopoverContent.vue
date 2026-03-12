@@ -25,7 +25,7 @@ const { filters } = storeToRefs(champFilter())
               size="xs"
               class="size-6"
               variant="outline"
-              @click="filters.role = null">
+              @click="filters.role = []">
               <icon class="size-4" name="x" />
             </UButton>
           </Label>

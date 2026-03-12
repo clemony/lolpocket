@@ -60,7 +60,7 @@
     "Merriweather Variable", Charter, "Bitstream Charter", "Sitka Text",
     Cambria, serif;
   --font-mono:
-    "Geist Mono", SFMono-Regular, ui-monospace, "Liberation Mono",
+    "Roboto Mono Variable", SFMono-Regular, ui-monospace, "Liberation Mono",
     "Courier New", Consolas, Menlo, Monaco, monospace;
 
   /* radius */
@@ -91,7 +91,7 @@
   --shadow-warm-soft: rgba(0, 0, 0, 0.03) 0px 2px 5px;
 
   --inset-shadow-morphic:
-    inset 2px 2px 5px rgba(0, 0, 0, 0.14), inset -1px -1px 4px var(--color-p0);
+    inset 2px 2px 5px rgba(0, 0, 0, 0.13), inset -1px -1px 4px var(--color-p0);
   --inset-shadow-morphic-sm:
     inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -1px -1px 4px var(--color-p0);
 

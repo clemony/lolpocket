@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 const { id, class: className } = defineProps<{
   id: number
   class?: HTMLAttributes["class"]
 }>()
 
-const spell = computed(() => spells[id])
+const spell = computed(() => spellIndex[id])
 </script>
 
 <template>

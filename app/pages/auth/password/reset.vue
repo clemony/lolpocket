@@ -7,6 +7,7 @@ definePageMeta({
   alias: "/auth/password-reset",
   description: "It's ok. They're free. We'll get you a new one.",
   icon: "key",
+  search: false,
 })
 
 const password = ref("")

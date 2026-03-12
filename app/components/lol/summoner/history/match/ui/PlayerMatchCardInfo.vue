@@ -11,7 +11,7 @@ const { match, player } = defineProps<{
       <!-- champ image -->
       <Champion
         :id="player?.championId"
-        class="transition-scale size-15 duration-300 hover:scale-105" />
+        class="transition-scale size-15 rounded-full duration-300 hover:scale-105" />
       <!--  spells -->
       <PlayerSpells class="ml-2 shrink-0" :player="player" />
 
@@ -36,29 +36,31 @@ const { match, player } = defineProps<{
         :map="match.mapId"
         side="bottom"
         :disabled="!item || item === 0"
-        :class="
-          cn('size-9 ring-neutral/60 transition-all duration-300 hover:ring', {
+        :ui="{
+          root: 'size-9 rounded-full',
+          image: cn('ring-neutral/60 transition-all duration-300 hover:ring', {
             'pointer-events-none border border-pc/10 bg-blend-screen shadow-xs inset-shadow-none saturate-40 after:absolute after:size-full after:rounded-md after:border':
               !item,
             'bg-dom/16! after:border-dom/20 after:mix-blend-hue': !player.win,
             'opacity-90': !player.win && !item,
             'bg-insp/16! after:border-insp/20': player.win,
-          })
-        " />
+          }),
+        }" />
 
       <Item
         v-if="match.mapId === 11"
         :id="player.items.role"
         :map="match.mapId"
         side="bottom"
-        :class="
-          cn('img-active ml-2 size-9 rounded-full', {
+        :ui="{
+          root: 'ml-2 size-9 rounded-full',
+          image: cn('img-active', {
             'no-img': !player.items.role,
             'img-loss': !player.win,
             'opacity-90': !player.win && !player.items.role,
             'img-win': player.win,
-          })
-        " />
+          }),
+        }" />
     </div>
   </div>
 </template>

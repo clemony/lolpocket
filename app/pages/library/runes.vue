@@ -4,11 +4,11 @@ import { pathRecord } from "#shared/constants/runes/pathRecord"
 
 definePageMeta({
   title: "Runes",
-  icon: "lol:runes",
-  path: "/runes",
+  icon: "i-lp-runes",
   description: "Rune paths and the runes within them.",
-  listClass: "size-5.5 !bg-transparent",
-  navClass: "size-6",
+  class: "scale-110",
+  prefix: "Library",
+  order: 2,
 })
 
 const selectedPath = ref<number>(830)

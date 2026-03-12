@@ -3,28 +3,17 @@ import { LayoutGroup } from "motion-v"
 import { VueDraggable } from "vue-draggable-plus"
 import { useChampionContextMenu } from "~/domain/champions/useChampionContextMenu"
 
-useSeoMeta({
-  title: "[title]",
-  description: "[description]",
-  ogDescription: "[og:description]",
-  ogImage: "[og:image]",
-  ogTitle: "[og:title]",
-  ogUrl: "[og:url]",
-  twitterCard: "summary",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterTitle: "[twitter:title]",
-})
-
 definePageMeta({
   name: "pocket-champions",
   title: "champions",
+
+  search: false,
   order: 1,
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 
 const isDragging = ref(false)
@@ -90,9 +79,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
     <div
       class="sticky -top-56 z-2 w-full items-center space-y-6 bg-p0/98 pt-10 pb-6 backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
-        <h1 class="capitalize">
-          Champions
-        </h1>
+        <h1 class="capitalize">Champions</h1>
         <ChampionQuote
           v-once
           class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic" />

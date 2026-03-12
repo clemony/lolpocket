@@ -4,7 +4,7 @@ definePageMeta({
   icon: "chart",
   order: 5,
   path: "/tools/analysis",
-  search: "hidden",
+  search: false,
 })
 </script>
 

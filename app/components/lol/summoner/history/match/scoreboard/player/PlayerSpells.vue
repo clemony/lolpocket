@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { class: className, player } = defineProps<{
   player: Player
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -13,6 +13,6 @@ const { class: className, player } = defineProps<{
       v-for="spell in player?.spells"
       :id="spell"
       :key="spell"
-      class="size-6.5 rounded-md ring-pc/60 transition-all duration-300 hover:scale-105 hover:ring" />
+      class="size-6.5 rounded-full ring-pc/60 transition-all duration-300 hover:scale-105 hover:ring" />
   </div>
 </template>

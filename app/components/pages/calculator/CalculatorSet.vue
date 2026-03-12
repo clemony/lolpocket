@@ -38,16 +38,7 @@ const emit = defineEmits(["update:set"])
     :class="
       cn(
         'field-box group relative grid size-full w-150 grid-cols-6 items-center justify-center gap-4 place-self-center p-4',
-        props.class
+        props.class,
       )
-    ">
-    <ItemCommand
-      v-for="(itemId, i) in set"
-      :key="itemId"
-      :set-number="props.num"
-      :set-index="Number(i)"
-      :item-id="itemId"
-      type="image"
-      @update:set="(e) => emit('update:set', e)" />
-  </div>
+    "></div>
 </template>

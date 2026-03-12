@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { motion } from "motion-v"
+import { useScrollInject } from "~~/layers/lib/app/composables/navigation/useElementScroll"
 
 const { class: className, textWrapper } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -16,7 +17,7 @@ const opacity = useTransform(scrollY, [0, 198], [1, 0])
     :class="
       cn(
         'absolute flex h-20 w-fit max-w-220 flex-nowrap items-center gap-6 pl-20 select-none',
-        className
+        className,
       )
     "
     :style="{

@@ -28,8 +28,18 @@ export const progressTheme = defineUiTheme({
           "bg-[color-mix(in_oklab,var(--ui-insp)_50%,var(--color-challenger)_50%)]",
         steps: "text-pc",
       },
+
+      heal: {
+        indicator:
+          "bg-[color-mix(in_oklab,var(--ui-insp)_80%,var(--color-res)_20%)]",
+        steps: "text-pc",
+      },
       dom: {
         indicator: "bg-dom",
+        steps: "text-pc",
+      },
+      pre: {
+        indicator: "bg-pre",
         steps: "text-pc",
       },
       neutral: {

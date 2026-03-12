@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { spells } from "#shared/constants/misc/spells"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 const route = useRoute()
 const pocket = ref<Pocket | undefined>(
-  usePockets().getPocket(String(route.params.pocket_key))
+  usePockets().getPocket(String(route.params.pocket_key)),
 )
 </script>
 
@@ -19,9 +19,13 @@ const pocket = ref<Pocket | undefined>(
       :key="i"
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
-      <IndexIcon class="size-6" :item="(spells[set.d] ?? spells[0]) as Index" />
+      <IndexIcon
+        class="size-6"
+        :item="(spellIndex[set.d] ?? spellIndex[0]) as Index" />
 
-      <IndexIcon class="size-6" :item="(spells[set.f] ?? spells[0]) as Index" />
+      <IndexIcon
+        class="size-6"
+        :item="(spellIndex[set.f] ?? spellIndex[0]) as Index" />
       <Grow />
     </MenubarRadioItem>
   </MenubarRadioGroup>

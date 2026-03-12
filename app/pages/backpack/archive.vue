@@ -1,10 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Archive',
-  icon: 'lucide:archive',
-  listClass: '**:stroke-[1.8]',
+  title: "Archive",
+  icon: "lucide:archive",
+  prefix: "Backpack",
   order: 2,
-  path: '/backpack/archive'
+  path: "/backpack/archive",
 })
 </script>
 

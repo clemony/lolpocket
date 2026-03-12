@@ -14,7 +14,10 @@ export const checkboxTheme = defineUiTheme({
   },
   variants: {
     color: {
-      primary: {
+      ghost: {
+        base: "bg-transparent",
+      },
+      default: {
         base: "bg-p1 ring-p4/60 not-on:focus-visible:ring-p4/60 on:ring-neutral",
         indicator: "bg-neutral",
         icon: "text-p1! **:text-p1",
@@ -52,6 +55,7 @@ export const checkboxTheme = defineUiTheme({
       hidden: {
         base: "sr-only",
         wrapper: "text-center",
+        indicator: "hidden",
       },
     },
     size: {
@@ -114,10 +118,10 @@ export const checkboxTheme = defineUiTheme({
       },
     },
     {
-      color: "primary",
+      color: "default",
       variant: "select",
       class: {
-        base: "bg-transparent! ring-0! ring-transparent!",
+        base: "border-0 bg-transparent! ring-0! ring-transparent! not-on:ring-0! on:ring-0!",
         indicator: "bg-transparent!",
         icon: "text-pc **:text-pc",
       },
@@ -132,7 +136,7 @@ export const checkboxTheme = defineUiTheme({
   ],
   defaultVariants: {
     size: "md",
-    color: "primary",
+    color: "default",
     variant: "list",
     indicator: "start",
   },

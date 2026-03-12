@@ -1,29 +1,38 @@
-import { defineStore } from "pinia"
 import { championIndex } from "#shared/constants/champions/championIndex"
 import { positionToChamp } from "#shared/constants/champions/positionToChamp"
 import { rangeToChamp } from "#shared/constants/champions/rangeToChamp"
 import { resourceToChamp } from "#shared/constants/champions/resourceToChamp"
 import { roleToChamp } from "#shared/constants/champions/roleToChamp"
+import { defineStore } from "pinia"
+import type { AcceptableValue } from "reka-ui"
+import type { K } from "vue-router/dist/index-DFCq6eJK.js"
 
+export type AttackType = "All" | "Melee" | "Ranged"
+export type AttackKey = 0 | 1 | 2
 export interface ChampionFilter {
-  attackType: string[]
+  attackType: number
   position: string
   query: string
   resource: string | null
-  role: string | null
+  role: string[]
   sort: string
 }
 
-export const champFilter = defineStore("ChampStore", () => {
+export const champFilter = defineStore("champ-filter", () => {
   const championSplashDropdown = ref<HTMLElement | null>(null)
 
+  const attackType: Record<AttackKey, AttackType> = {
+    0: "All",
+    1: "Melee",
+    2: "Ranged",
+  }
   // --- FILTER STATE ---
   const filters = ref<ChampionFilter>({
-    attackType: [],
+    attackType: 0,
     position: "all",
     query: "",
     resource: null,
-    role: null,
+    role: [],
     sort: "az",
   })
 
@@ -31,11 +40,11 @@ export const champFilter = defineStore("ChampStore", () => {
 
   function clearFilters() {
     filters.value = {
-      attackType: [],
+      attackType: 0,
       position: "all",
       query: "",
       resource: null,
-      role: null,
+      role: [],
       sort: "az",
     }
   }
@@ -55,16 +64,17 @@ export const champFilter = defineStore("ChampStore", () => {
     const all = championIndex.map((i) => i.id)
     let matched: Set<number> = new Set(all)
 
-    if (filters.value.attackType.length > 0) {
-      for (const stat of filters.value.attackType) {
-        const ids = rangeToChamp[stat] ?? []
-        matched = new Set(ids.filter((id) => matched.has(id)))
-      }
+    if (filters.value.attackType > 0) {
+      const ids =
+        rangeToChamp[attackType[filters.value.attackType as AttackKey]] ?? []
+      matched = new Set(ids.filter((id) => matched.has(id)))
     }
 
-    if (filters.value.role && filters.value.role !== "all") {
-      const rolesIds = roleToChamp[filters.value.role] ?? []
-      matched = new Set(rolesIds.filter((id) => matched.has(id)))
+    if (filters.value.role) {
+      for (const v of filters.value.role) {
+        const rolesIds = roleToChamp[v] ?? []
+        matched = new Set(rolesIds.filter((id) => matched.has(id)))
+      }
     }
 
     if (filters.value.position && filters.value.position !== "all") {
@@ -85,13 +95,14 @@ export const champFilter = defineStore("ChampStore", () => {
 
           const name = champion.name.toLowerCase()
           return name.includes(query)
-        })
+        }),
       )
     }
 
-    const array = Array.from(matched)
-      .map((id) => championIndex.find((c) => c.id === id)?.key)
-      .filter((key): key is string => Boolean(key))
+    const array = Array.from(
+      matched,
+      (id) => championIndex.find((c) => c.id === id)?.key,
+    ).filter((key): key is string => Boolean(key))
 
     if (filters.value.sort) {
       filters.value.sort === "az" ? array.sort() : array.sort().reverse()
@@ -102,7 +113,7 @@ export const champFilter = defineStore("ChampStore", () => {
       array.sort((a, b) =>
         filters.value.sort === "az"
           ? (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
-          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
+          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity),
       )
     }
 
@@ -110,6 +121,7 @@ export const champFilter = defineStore("ChampStore", () => {
   })
 
   return {
+    attackType,
     championSplashDropdown,
     clearFilters,
     filtered,

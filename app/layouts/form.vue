@@ -13,7 +13,10 @@ const error = shallowRef<string>("")
 </script>
 
 <template>
-  <UMain class="my-auto grid size-full place-items-center bg-p1">
+  <UMain class="relative my-auto grid size-full place-items-center bg-p1">
+    <div class="absolute top-3 right-3">
+      <slot name="close" />
+    </div>
     <div
       class="relative flex w-full max-w-140 flex-col items-center justify-center gap-4">
       <div

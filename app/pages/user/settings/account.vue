@@ -7,7 +7,9 @@ definePageMeta({
   description: "Manage your account settings and login settings.",
   icon: "at",
   path: "/settings/account",
-  search: "user",
+  auth: true,
+  order: 1,
+  prefix: "Settings",
   /*   middleware: 'confirm-auth', */
 })
 

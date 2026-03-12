@@ -24,6 +24,7 @@ const config = {
     "@prettier/plugin-xml",
     "@svgr/plugin-prettier",
     "prettier-plugin-tailwindcss",
+    "prettier-plugin-sh",
   ],
   tailwindFunctions: ["clsx", "tw", "tv", "cn", "cva"],
 }

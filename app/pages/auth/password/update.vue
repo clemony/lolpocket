@@ -6,7 +6,7 @@ definePageMeta({
   alias: "/auth/password-update",
   description: "Let's try a password manager this time, shall we?",
   icon: "key",
-  search: "user",
+  search: false,
 })
 const toast = useToast()
 

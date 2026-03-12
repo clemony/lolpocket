@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { TabsRoot } from "reka-ui"
 import { useTimeline } from "~/domain/match/useTimeline"
-import MatchScoreboard from "./scoreboard/MatchScoreboard.vue"
+import LazyMatchScoreboard from "./scoreboard/MatchScoreboard.vue"
 
 defineOptions({
   inheritAttrs: false,
@@ -11,30 +10,28 @@ const { match, player } = defineProps<{
   match: MatchData
 }>()
 
-const tabs = {
-  Scoreboard: {
-    name: "Scoreboard",
-    component: MatchScoreboard,
+const tabs = [
+  {
+    label: "Scoreboard",
+    component: LazyMatchScoreboard,
   },
-  Statistics: {
-    name: "Statistics",
+  {
+    label: "Statistics",
     component: defineAsyncComponent(
       () =>
         import("~/components/lol/summoner/history/match/stats/MatchDataTable.vue"),
     ),
   },
-
-  //
-  Build: {
-    name: "Build",
+  {
+    label: "Build",
     component: defineAsyncComponent(
       () =>
         import("~/components/lol/summoner/history/match/timeline/MatchBuild.vue"),
     ),
   },
-} as const
+]
 
-const modelValue = ref<keyof typeof tabs>("Scoreboard")
+const modelValue = ref<string>("Scoreboard")
 
 const { getTimeline } = useTimeline()
 
@@ -47,7 +44,7 @@ const timeline: PlayerTimeline | null = await getTimeline(
 
 <template>
   <div class="relative h-205 w-full p-0 text-sm **:select-none">
-    <TabsRoot
+    <!--    <TabsRoot
       v-model:model-value="modelValue"
       class="p-0 drop-shadow-[1px_-1px_0_color-mix(in_lch,var(--color-p3)_70%,transparent_30%)]">
       <FileTabsList class="relative h-9 w-[98%] gap-x-1 overflow-x-hidden">
@@ -59,25 +56,44 @@ const timeline: PlayerTimeline | null = await getTimeline(
           </FileTabTrigger>
         </template>
         <FakeTab />
-      </FileTabsList>
+      </FileTabsList> -->
 
-      <div
-        v-if="tabs[modelValue]?.name === 'Statistics'"
-        class="from-p2-light to-p2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b" />
-      <div
-        :class="
-          cn(
-            'tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0! bg-p0 p-0 inset-shadow-none',
-            { 'rounded-tl-none': modelValue === 'Scoreboard' },
-          )
-        ">
-        <component
-          :is="tabs[modelValue].component"
-          v-if="tabs[modelValue].component"
-          :match="match"
-          :player
-          :timeline />
-      </div>
-    </TabsRoot>
+    <UTabs
+      v-model:model-value="modelValue"
+      value-key="label"
+      size="md"
+      :ui="{
+        list: 'h-12! shrink-0 border-2 border-p0 bg-p0/80 shadow-none ring-0 inset-shadow-none backdrop-blur-sm',
+        root: 'mt-2 h-12! shrink-0! inset-shadow-none',
+        indicator: 'border-1 border-p0 bg-p0/20 ring ring-p0',
+      }"
+      :items="tabs">
+      <template #content="{ item }">
+        <div
+          v-if="item?.label === 'Statistics'"
+          class="from-p2-light to-p2-light/90 absolute top-9 left-2 z-8 h-7 w-30 bg-linear-to-b" />
+        <div
+          :class="
+            cn(
+              'relative size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0!',
+              { 'rounded-tl-none': item.label === 'Scoreboard' },
+            )
+          ">
+          <component
+            :is="item.component"
+            v-if="item.component"
+            :match="match"
+            :player
+            :timeline />
+        </div>
+      </template>
+    </UTabs>
+    <!--    </TabsRoot>       <div
+          :class="
+            cn(
+              'tabs-content relative m-0! size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0!  p-0 inset-shadow-none',
+              { 'rounded-tl-none': item.label === 'Scoreboard' },
+            )
+          "> -->
   </div>
 </template>

@@ -23,25 +23,25 @@ const props = withDefaults(
     align: "center",
     size: "xl",
     arrow: true,
-  }
+  },
 )
 const { filters } = storeToRefs(is())
 
 const statItems = computed<CheckboxGroupItem[]>(() =>
   Object.values(statIndex)
     .filter((s) => s.group !== "champion")
-    .map((s) => ({ id: s.id, name: s.name }))
+    .map((s) => ({ id: s.id, name: s.name })),
 )
 
 const tagItems = computed<CheckboxGroupItem[]>(() =>
-  itemTags.map((t) => ({ id: t.id, name: t.name }))
+  itemTags.map((t) => ({ id: t.id, name: t.name })),
 )
 
 const ui = props.collapsed ? { base: "rounded-full" } : {}
 
 const shared = {
   indicator: "end",
-  color: "primary",
+  color: "default",
   variant: "select",
   labelKey: "name",
   valueKey: "id" as CheckboxGroupProps["valueKey"],
@@ -50,7 +50,7 @@ const shared = {
 
 <template>
   <!-- stats -->
-  <SidebarPoppableCollapse
+  <SidebarPopover
     label="Statistics"
     v-bind="props"
     :ui
@@ -64,10 +64,10 @@ const shared = {
         :items="statItems"
         @entry-focus.prevent />
     </template>
-  </SidebarPoppableCollapse>
+  </SidebarPopover>
 
   <!-- categories -->
-  <SidebarPoppableCollapse
+  <SidebarPopover
     v-bind="props"
     label="Categories"
     :ui
@@ -81,5 +81,5 @@ const shared = {
         :items="tagItems"
         @entry-focus.prevent />
     </template>
-  </SidebarPoppableCollapse>
+  </SidebarPopover>
 </template>

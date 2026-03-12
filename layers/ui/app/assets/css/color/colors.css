@@ -3,7 +3,7 @@
 @theme {
   --color-discord: oklch(58% 52 274);
   --color-all-roles: oklch(37% 0 0);
-  --color-win: oklch(80% 19% 214);
+
 
   /* rank */
   --color-iron: oklch(49.16% 0.0168 35.72);
@@ -16,6 +16,7 @@
   --color-master: oklch(75.18% 0.1157 325.26);
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
+
 
   /* position */
   --color-top: var(--color-domination);
@@ -56,7 +57,7 @@
 }
 
 @theme inline {
-  --mana: var(--color-mana);
+
   --platinum: var(--color-platinum);
   --win: var(--color-win);
   --mp5: var(--color-mp5);

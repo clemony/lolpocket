@@ -2,22 +2,25 @@
 import type { ButtonProps } from "@nuxt/ui"
 
 const props = withDefaults(
-  defineProps<{
-    placement?: Side
-    variant?: ButtonProps["variant"]
-    size?: ButtonProps["size"]
-  }>(),
+  defineProps<
+    ButtonProps & {
+      placement?: Side
+      class?: HTMLAttributes["class"]
+    }
+  >(),
   {
     hover: "neutral",
     placement: "bottom",
-  }
+    icon: "i-refresh",
+  },
 )
+const delegated = reactiveOmit(props, "class", "placement")
 const { summoner } = storeToRefs(sSession())
 const throttle = throttleFunction(
   () => sMatches().loadNewer(),
   120_000,
   summoner?.value?.puuid ?? "",
-  "match-refresh"
+  "match-refresh",
 )
 const cooldown = computed(() => throttle?.cooldown?.value ?? null)
 const isLoading = computed(() => throttle?.isLoading?.value ?? false)
@@ -37,34 +40,27 @@ const tippy = computed(() => {
 </script>
 
 <template>
-  <Tooltip :label="tippy ?? null">
-    <UButton
-      :variant
-      :size
-      icon="refresh"
-      square
-      :ui="{
-        base: 'rounded-full',
-        leadingIcon: 'size-4.5 text-n4 group-hover/btn:text-pc',
-      }"
-      @click="loadNew()">
-      <div class="relative grid size-full place-items-center overflow-hidden">
-        <div
-          v-if="cooldown"
-          class="radial-progress absolute place-self-center"
-          :aria-valuemax="120"
-          :style="{
-            '--value': cooldown?.seconds,
-            '--size': '3rem',
-            '--thickness': '4px',
-          }"
-          :aria-valuenow="cooldown?.percent"
-          role="progressbar">
-          <span class="absolute place-self-center text-xs font-semibold">
-            {{ cooldown?.seconds }}
-          </span>
+  <Tooltip :label="tippy ?? null" :class="cn('', props.class)">
+    <slot />
+    <UButton v-bind="delegated" @click="loadNew()">
+      <template v-if="cooldown" #leading>
+        <div class="relative grid size-full place-items-center overflow-hidden">
+          <div
+            class="radial-progress absolute place-self-center"
+            :aria-valuemax="120"
+            :style="{
+              '--value': cooldown?.seconds,
+              '--size': '3rem',
+              '--thickness': '4px',
+            }"
+            :aria-valuenow="cooldown?.percent"
+            role="progressbar">
+            <span class="absolute place-self-center text-xs font-semibold">
+              {{ cooldown?.seconds }}
+            </span>
+          </div>
         </div>
-      </div>
+      </template>
     </UButton>
   </Tooltip>
 </template>

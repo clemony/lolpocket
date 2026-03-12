@@ -1,49 +1,10 @@
-// Updated Patch 16.1 - 01/27/2026 01:51:02 PM CST
+// Updated Patch 16.5 - 03/10/2026 03:45:05 PM CDT
 
 export const resourceToChamp: Record<string, number[]> = {
-  'Blood well': [
+  "Blood well": [
     266
   ],
-  'Courage': [
-    240
-  ],
-  'Crimson rush': [
-    8
-  ],
-  'Energy': [
-    84,
-    799,
-    85,
-    64,
-    98,
-    238
-  ],
-  'Ferocity': [
-    107
-  ],
-  'Flow': [
-    157,
-    777
-  ],
-  'Frenzy': [
-    233
-  ],
-  'Fury': [
-    58,
-    102,
-    23
-  ],
-  'Grit': [
-    875
-  ],
-  'Health': [
-    36,
-    154
-  ],
-  'Heat': [
-    68
-  ],
-  'Mana': [
+  "Mana": [
     103,
     166,
     12,
@@ -189,18 +150,57 @@ export const resourceToChamp: Record<string, number[]> = {
     142,
     143
   ],
-  'None': [
+  "Energy": [
+    84,
+    799,
+    85,
+    64,
+    98,
+    238
+  ],
+  "None": [
     200,
     86,
     55,
     92,
     234
   ],
-  'Rage': [
+  "Frenzy": [
+    233
+  ],
+  "Health": [
+    36,
+    154
+  ],
+  "Rage": [
     150,
     421
   ],
-  'Shield': [
+  "Courage": [
+    240
+  ],
+  "Shield": [
     82
+  ],
+  "Fury": [
+    58,
+    102,
+    23
+  ],
+  "Ferocity": [
+    107
+  ],
+  "Heat": [
+    68
+  ],
+  "Grit": [
+    875
+  ],
+  "Crimson rush": [
+    8
+  ],
+  "Flow": [
+    157,
+    777
   ]
 }

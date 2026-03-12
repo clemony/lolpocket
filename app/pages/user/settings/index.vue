@@ -2,8 +2,11 @@
 definePageMeta({
   title: "App",
   description: "Manage general app utilities and settings.",
-  icon: "lucide:monitor-cog",
-  alias: "/settings/app",
+  icon: "i-mingcute-settings-2-line",
+  path: "/settings/app",
+  class: "scale-115",
+  prefix: "Settings",
+  order: 0,
 })
 
 const settingsData = [
@@ -55,9 +58,7 @@ const username = computed({
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral">
-        Update account
-      </UButton>
+      <UButton color="neutral"> Update account </UButton>
     </div>
   </form>
 </template>

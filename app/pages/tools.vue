@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'Tools',
-  icon: 'lucide:wrench',
-  search: 'children',
+  title: "Tools",
+  icon: "lucide:wrench",
+  order: 4,
 })
 </script>
 

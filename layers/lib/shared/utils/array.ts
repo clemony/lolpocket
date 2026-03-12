@@ -7,11 +7,11 @@ export function getRandom(thing: any[]) {
 
 export const chunkArray = (
   array: readonly any[],
-  chunkSize: number
+  chunkSize: number,
 ): readonly any[][] => {
   const chunks = Array.from(
     { length: globalThis.Math.ceil(array.length / chunkSize) },
-    (_, i) => array.slice(i * chunkSize, (i + 1) * chunkSize)
+    (_, i) => array.slice(i * chunkSize, (i + 1) * chunkSize),
   )
   return chunks.map((chunk) => [...chunk])
 }
@@ -19,7 +19,7 @@ export const chunkArray = (
 export function getByIndex<T extends Record<string, any>>(
   dataset: T[],
   inputKey: keyof T,
-  value: T[keyof T]
+  value: T[keyof T],
 ): T | undefined {
   return dataset.find((i) => i[inputKey] === value)
 }
@@ -28,7 +28,7 @@ export function findInIndex<T extends Record<string, any>>(
   dataset: T[],
   inputKey: keyof T,
   value: T[keyof T],
-  outputKey: keyof T
+  outputKey: keyof T,
 ): T[keyof T] | undefined {
   return dataset.find((i) => i[inputKey] === value)?.[outputKey]
 }
@@ -39,10 +39,11 @@ export function sortMapBy<K, T, P extends keyof T>(
   map: Map<K, T>,
   prop: P,
   direction: SortDirection = "desc",
-  locale?: string
+  locale?: string,
 ): T[] {
   const dir = direction === "asc" ? 1 : -1
 
+  // eslint-disable-next-line e18e/prefer-spread-syntax
   return Array.from(map.values()).sort((a, b) => {
     const av = a[prop]
     const bv = b[prop]

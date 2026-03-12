@@ -5,7 +5,7 @@ const { class: className, src } = defineProps<{
   slice?: boolean
 }>()
 
-const fallbackSrc = "/img/art/prestige-requiem-sona.jpeg"
+const fallbackSrc = "/img/art/prestige-requiem-sona.webp"
 const splashSrc = computed(() => fallbackSrc || src || fallbackSrc)
 </script>
 
@@ -22,31 +22,19 @@ const splashSrc = computed(() => fallbackSrc || src || fallbackSrc)
       <NuxtImg
         :src="splashSrc"
         alt=""
-        aria-hidden="true"
-        width="1215"
-        height="717"
-        sizes="sm:26vw md:30vw lg:36vw"
-        format="webp"
-        quality="76"
-        loading="lazy"
-        decoding="async"
-        class="z-0 h-full w-[36%] -translate-x-[30%] -scale-x-100 object-cover blur-sm duration-100" />
-      <NuxtImg
-        :src="splashSrc"
-        alt=""
+        fetch-priority="high"
         aria-hidden="true"
         width="1215"
         height="717"
         sizes="100vw sm:94vw md:86vw lg:74vw"
         format="webp"
-        quality="82"
+        quality="72"
         preload
         loading="eager"
-        fetch-priority="high"
         decoding="async"
-        class="absolute right-0 z-0 h-full w-[74%] mask-l-from-98% object-cover object-right contrast-110 grayscale-10 duration-100" />
+        class="fixed right-0 z-0 h-full w-[80%] translate-y-[23%] mask-l-from-98% object-contain object-right contrast-110 grayscale-0 duration-100" />
       <div
-        class="absolute top-0 left-0 z-1 size-full scale-x-104 scale-y-230 bg-radial-[at_80%_50%] from-transparent from-24% via-p2/60 via-42% to-p2 to-60%" />
+        class="fixed top-0 left-0 z-1 size-full scale-x-104 scale-y-230 bg-radial-[at_80%_50%] from-transparent from-24% via-p2/60 via-42% to-p2 to-60%" />
     </div>
   </div>
 </template>

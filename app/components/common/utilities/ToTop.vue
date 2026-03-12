@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useScrollInject } from "~~/layers/lib/app/composables/navigation/useElementScroll"
+
 const { class: className, placement = "left" } = defineProps<{
   class?: HTMLAttributes["class"]
   placement?: Side

@@ -19,7 +19,7 @@ type ToggleButtonProps = ToggleProps & {
     trailingIcon?: string
   }
   label?: string
-  leadingIcon?: string
+  icon?: string
   trailingIcon?: string
   color?: ButtonColor
   activeColor?: ButtonColor
@@ -45,7 +45,7 @@ const delegatedProps = reactiveOmit(
   "inactiveClass",
   "ui",
   "label",
-  "leadingIcon",
+  "icon",
   "trailingIcon",
   "color",
   "activeColor",
@@ -53,7 +53,7 @@ const delegatedProps = reactiveOmit(
   "activeVariant",
   "size",
   "square",
-  "rounded"
+  "rounded",
 )
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
@@ -72,7 +72,7 @@ const styles = computed(() =>
     size: props.size,
     square: props.square ?? undefined,
     rounded: props.rounded ?? undefined,
-  })
+  }),
 )
 </script>
 
@@ -91,13 +91,15 @@ const styles = computed(() =>
         ...(modelValue && props.activeVariant
           ? { variant: props.activeVariant }
           : {}),
-        ...(modelValue && props.activeColor ? { color: props.activeColor } : {}),
+        ...(modelValue && props.activeColor
+          ? { color: props.activeColor }
+          : {}),
       })
     ">
     <Icon
-      v-if="props.leadingIcon"
+      v-if="props.icon"
       data-slot="leadingIcon"
-      :name="props.leadingIcon"
+      :name="props.icon"
       :class="
         styles?.leadingIcon?.({
           class: props.ui?.leadingIcon,

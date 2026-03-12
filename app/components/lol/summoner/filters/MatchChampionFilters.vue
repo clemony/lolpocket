@@ -7,9 +7,7 @@ const model = computed({
   get: () => filter?.value.champion,
   set: (val) => store.setFilter("champion", val),
 })
-const championList = computed(() =>
-  Array.from(champions.value?.values?.() ?? []),
-)
+const championList = computed(() => [...(champions.value?.values?.() ?? [])])
 </script>
 
 <template>
@@ -37,7 +35,7 @@ const championList = computed(() =>
         <ListboxContent
           :class="
             cn(
-              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-morphic',
+              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-sm inset-shadow-black/9',
             )
           ">
           <template v-if="!sMatches().loading && sMatches.length">
@@ -87,6 +85,7 @@ const championList = computed(() =>
                   <div class="relative grid size-12 place-items-center">
                     <ChampWinrate
                       :champion="item"
+                      :size="10"
                       class="absolute drop-shadow-xs" />
                   </div>
                 </template>

@@ -1,16 +1,16 @@
 import { abilityIdToName } from "#shared/constants/champions/abilityIdToName"
 import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
 import { championIndex } from "#shared/constants/champions/championIndex"
-import { mapIndex } from "#shared/constants/misc/map-index"
-import { spells } from "#shared/constants/misc/spells"
-import { patchIndex } from "#shared/constants/patch-index"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 import { itemRank } from "#shared/constants/items/itemRank"
 import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import { mapIndex } from "#shared/constants/misc/map-index"
+import { patchIndex } from "#shared/constants/patch-index"
 import { pathIndex } from "#shared/constants/runes/pathIndex"
 import { pathToColor } from "#shared/constants/runes/pathToColor"
 import { runeIndex } from "#shared/constants/runes/runeIndex"
 import { shardRegistry } from "#shared/constants/runes/shards"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 //
 // champions
@@ -97,7 +97,7 @@ export function pathIdByName(name: string) {
 
 // misc
 
-export const spellNameById = (id: number) => spells[id]?.name
+export const spellNameById = (id: number) => spellIndex[id]?.name
 
 export function currentPatch(): string {
   return patchIndex[0] ?? ""

@@ -1,50 +1,36 @@
 <script setup lang="ts">
+import type { AvatarProps, TooltipProps } from "@nuxt/ui"
+
 const {
   id,
-  side = "top",
+  side,
   class: className,
   k,
-  loadingType,
+  loadingIcon,
 } = defineProps<{
   class?: HTMLAttributes["class"]
   k?: string
   id?: number
   side?: Side
-  loadingType?: LoadingStyle
+  ui?: Record<string, HTMLAttributes["class"]>
+  loadingIcon?: LoadingStyle
 }>()
+
 const emit = defineEmits(["loaded"])
 
 const champId = computed(() => (k ? champIdByKey(k) : id))
 const champName = computed(() =>
   champId.value ? champNameById(champId.value) : "",
 )
-
-const loaded = ref(false)
-
-function onLoad() {
-  loaded.value = true
-  emit("loaded")
-}
 </script>
 
 <template>
-  <Tooltip
-    trailing-icon="i"
+  <Avatar
+    v-if="champId"
+    :id="champId"
+    :ui
+    :loading-icon
+    :class="className"
     :label="champName"
-    :avatar="champId ? `/img/champions/${champId}.webp` : undefined"
-    :side>
-    <UAvatar
-      icon="lol:champ"
-      role="button"
-      :src="champId ? `/img/champions/${champId}.webp` : undefined"
-      :ui="{
-        root: cn(
-          'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
-          className,
-        ),
-        icon: 'size-5 opacity-60',
-      }"
-      :alt="champName ? `${champName} icon` : 'champion icon'"
-      @loaded="onLoad" />
-  </Tooltip>
+    :src="champId ? `/img/champions/${champId}.webp` : undefined" />
 </template>

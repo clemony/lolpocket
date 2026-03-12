@@ -4,8 +4,9 @@ definePageMeta({
   title: "Theme",
   description: "Choose your app interface colors.",
   icon: "swatch",
-  listClass: "**:stroke-[1.5] !size-4.75 -mr-0.25",
+  order: 4,
   path: "/settings/theme",
+  prefix: "Settings",
 })
 
 const mode = useColorMode()
@@ -15,11 +16,13 @@ function handleChange(theme: string) {
 
   mode.preference = theme
 }
+
+const items = computed(() => colorModes.map((c) => ({ ui: { item: c } })))
 </script>
 
 <template>
   <URadioGroup
-    class="z-0 w-full py-4"
+    :ui="{ fieldset: 'grid grid-cols-2 gap-2' }"
     :multiple="false"
     selection-behavior="replace"
     :items="colorModes"

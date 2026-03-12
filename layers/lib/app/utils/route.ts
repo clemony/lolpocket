@@ -2,7 +2,7 @@ export function useTypedRouteParam(name: string) {
   const route = useRoute()
   return computed(() => {
     const v = route.params[name]
-    return typeof v === 'string' ? v : v?.[0]
+    return typeof v === "string" ? v : v?.[0]
   })
 }
 
@@ -15,4 +15,8 @@ export const getDirectParentRoute = computed(() => {
 export function getParentRoute() {
   const route = useRoute()
   return route.matched[route.matched.length - 2]
+}
+
+export function pathDepth(path: string) {
+  return path.split("/").filter(Boolean).length
 }

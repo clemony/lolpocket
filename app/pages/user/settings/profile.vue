@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 definePageMeta({
   title: "Profile",
+  order: 2,
   description:
     "Set your public profile display settings and hide your annoyances.",
-  icon: "user-cog",
+  icon: "i-lucide-user-circle",
   path: "/settings/profile",
-  search: "user",
+
+  prefix: "Settings",
   /* middleware: 'confirm-auth', */
 })
 
@@ -36,9 +38,7 @@ const settings = computed(() => user().settings)
     <fieldset class="space-y-6">
       <div class="leading-4">
         <Label class="mb-2 text-xl font-semibold" as="legend">Title</Label>
-        <p class="label text-wrap">
-          Display a title from an earned Badge.
-        </p>
+        <p class="label text-wrap">Display a title from an earned Badge.</p>
       </div>
     </fieldset>
 
@@ -103,9 +103,7 @@ const settings = computed(() => user().settings)
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral">
-        Update account
-      </UButton>
+      <UButton color="neutral"> Update account </UButton>
     </div>
   </form>
 </template>

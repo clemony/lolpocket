@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
   path: "/auth/redirect",
-  search: "hidden",
+  search: false,
 })
 
 const loadingText = [

@@ -1,3 +1,8 @@
+import { championIndex } from "#shared/constants/champions/championIndex"
+import { skinIndex } from "#shared/constants/champions/skin-index"
+import { itemIndex } from "#shared/constants/items/itemIndex"
+import { mapPositions } from "#shared/constants/misc/positions"
+import { pathRecord } from "#shared/constants/runes/pathRecord"
 import {
   newItemSet,
   newRuneSet,
@@ -5,12 +10,7 @@ import {
 } from "~/domain/pocket/addPocketModules"
 import { generateName } from "~/domain/pocket/generateStrings"
 import { getSplash } from "~/domain/utils/img"
-import { championIndex } from "#shared/constants/champions/championIndex"
-import { skinIndex } from "#shared/constants/champions/skin-index"
-import { itemIndex } from "#shared/constants/items/itemIndex"
-import { mapPositions } from "#shared/constants/misc/positions"
-import { spells } from "#shared/constants/misc/spells"
-import { pathRecord } from "#shared/constants/runes/pathRecord"
+import { spellIndex } from "~~/shared/constants/misc/spell-index"
 
 //
 export function newRandomPocket(): Pocket {
@@ -54,10 +54,10 @@ export function newRandomPocket(): Pocket {
     if (s0 == null || s1 == null) return a
     a.secondary.runes = [
       getRandom(
-        path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? []
+        path2.slots?.[s0]?.runes.map((k: { id: number }) => k.id) ?? [],
       ),
       getRandom(
-        path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? []
+        path2.slots?.[s1]?.runes.map((k: { id: number }) => k.id) ?? [],
       ),
     ]
     return a
@@ -66,12 +66,12 @@ export function newRandomPocket(): Pocket {
   const champion = getRandom(championIndex.map((c) => c.key))
   const spellSet = computed(() => {
     const a = newSpellSet()
-    const b = getRandom(Object.values(spells).map((s) => s.id))
+    const b = getRandom(Object.values(spellIndex).map((s) => s.id))
     a.d = b
     a.f = getRandom(
-      Object.values(spells)
+      Object.values(spellIndex)
         .map((s) => s.id)
-        .filter((s) => s !== b)
+        .filter((s) => s !== b),
     )
     return a
   }).value

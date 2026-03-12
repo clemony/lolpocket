@@ -1,11 +1,11 @@
 //
+import { skinIndex } from "#shared/constants/champions/skin-index"
 import { defineStore } from "pinia"
 import { useTimeline } from "~/domain/match/useTimeline"
 import { aggregateAllies } from "~/domain/stats/aggregateAllies"
 import { useChampionStats } from "~/domain/stats/useChampionStats"
 import { getOrFetchAllMastery } from "~/domain/summoner/mastery/getOrFetchMastery"
 import { getSplash } from "~/domain/utils/img"
-import { skinIndex } from "#shared/constants/champions/skin-index"
 
 export const sData = defineStore("summonerData", () => {
   const { summoner } = storeToRefs(sSession())
@@ -60,6 +60,7 @@ export const sData = defineStore("summonerData", () => {
 
   return {
     account,
+    matches,
     allies,
     champions,
     mastery,

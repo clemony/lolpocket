@@ -9,6 +9,8 @@ const { button, comment } = defineProps<{
   button?: boolean
 }>()
 
+const emit = defineEmits<{ close: [boolean] }>()
+
 const form = useTemplateRef<HTMLFormElement>("form")
 
 const state = reactive({
@@ -29,7 +31,7 @@ const options = computed<ReportOption[]>(() => reportOptions.filter(Boolean))
 
 const formErrors = computed(
   () =>
-    (form.value?.errors?.value ?? []) as { path?: string; message?: string }[]
+    (form.value?.errors?.value ?? []) as { path?: string; message?: string }[],
 )
 
 async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
@@ -56,17 +58,16 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
 </script>
 
 <template>
-  <UModal
+  <LazyUModal
     v-model:open="threads().reportOpen"
+    :close="{ onClick: () => emit('close', false) }"
     title="Report Card"
     description="Report offensive, negative, or disruptive content. Please fill out the form to clarify and give additional context."
     :modal="true"
     @update:open="!threads().reportOpen ? form?.clear() : null">
     <slot v-if="button" :report="threads().report()">
       <UButton as-child>
-        <button class="text-xs hover:underline">
-          Report
-        </button>
+        <button class="text-xs hover:underline">Report</button>
       </UButton>
     </slot>
 
@@ -122,7 +123,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
                 name="error" />
               <span
                 v-for="(reason, i) in formErrors.filter(
-                  (e) => e.path === 'options'
+                  (e) => e.path === 'options',
                 )"
                 :key="i">
                 {{ reason.message }}
@@ -136,5 +137,5 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
         </UForm>
       </div>
     </template>
-  </UModal>
+  </LazyUModal>
 </template>

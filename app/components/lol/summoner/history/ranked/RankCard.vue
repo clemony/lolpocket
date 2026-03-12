@@ -55,18 +55,21 @@ const data = computed(() => {
     </div>
 
     <div class="relative grid size-full place-items-center">
-      <div
-        class="relative grid size-[60px] place-items-center rounded-full bg-p0 shadow-md drop-shadow-black/5 after:absolute after:size-[49px] after:rounded-full after:ring after:ring-pc/8">
+      <!--     <div
+        class="relative grid place-items-center rounded-full bg-p0 shadow-md drop-shadow-black/5 after:absolute after:size-[49px] after:rounded-full after:ring after:ring-pc/8">
         <div
-          class="absolute size-[83%] rounded-full bg-p0 shadow-sm inset-shadow-morphic"></div>
-        <ChampWinrate
-          v-if="entry"
-          :arc-width="5"
-          :entry
-          :size="60"
-          class="absolute size-[60px] rounded-full ring ring-pc/8 **:text-md! **:font-medium **:text-pc!" />
-        <LazyDonutSkeleton v-else class="absolute size-22" />
-      </div>
+          class="absolute size-[83%] rounded-full bg-p0 shadow-sm inset-shadow-morphic"></div> -->
+      <ChampWinrate
+        v-if="entry"
+        :thickness="6"
+        :entry
+        :color="entry?.tier?.toLowerCase()"
+        :size="20"
+        :ui="{
+          label: 'text-md! font-medium text-pc!',
+          root: 'drop-shadow-sm',
+        }" />
+      <!--   </div> -->
     </div>
 
     <div

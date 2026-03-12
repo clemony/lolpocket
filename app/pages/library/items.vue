@@ -2,14 +2,15 @@
 import { itemQuotes } from "#shared/constants/items/itemQuotes"
 import { rankToItem } from "#shared/constants/items/rankToItem"
 import type { ArrayOrNested, TabsItem } from "@nuxt/ui"
-import type { TabValue } from "~/components/pages/library/items/ui/viewMode"
+import type { TabValue } from "~/components/pages/library/viewMode"
 
 definePageMeta({
   title: "Items",
   description: "A full list of items and stat details.",
-  icon: "i-stat-melee",
-  navClass: "size-5",
-  path: "/items",
+  icon: "i-lucide-sword",
+  prefix: "Library",
+  class: "scale-110 **:stroke-[1.9]!",
+  order: 1,
 })
 
 const ranks = computed<ArrayOrNested<TabsItem>>(() => [
@@ -60,10 +61,10 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
       <LazyItemFilterToolbar :nav />
     </template>
 
-    <template #links>
+    <template v-if="collapsed || smallerThanLg" #links>
       <div class="relative items-center justify-end">
         <div class="absolute right-0 flex w-90 max-w-90 shrink-0 translate-y-2">
-          <LazyItemSearchInput
+          <LazyLibrarySearch
             variant="outline"
             color="default"
             :ui="{
@@ -94,7 +95,8 @@ const collapsed = useState<boolean>("collapsed-state", () => false)
         }" />
       <Grow />
       <!-- view -->
-      <LazyItemViewToggle
+      <LazyViewToggle
+        v-if="collapsed || smallerThanLg"
         collapsed
         size="md"
         @update:tab-model="(e: TabValue) => (tabModel = e)" />
