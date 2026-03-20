@@ -1,4 +1,4 @@
-// Updated Patch 16.5 - 03/10/2026 03:44:05 PM CDT
+// Updated Patch 16.6 - 03/19/2026 12:00:00 AM CDT
 
 export const abilityIdToName: Record<string, string> = {
   "266P": "Deathbringer Stance",
@@ -601,10 +601,10 @@ export const abilityIdToName: Record<string, string> = {
   "98W": "Spirit's Refuge",
   "98E": "Shadow Dash",
   "98R": "Stand United",
-  "102P": "Fury of the Dragonborn",
-  "102Q": "Twin Bite",
-  "102W": "Burnout",
-  "102E": "Flame Breath",
+  "102P": "Scalemail",
+  "102Q": "Emberstrike",
+  "102W": "Inferno Aegis",
+  "102E": "Molten Burst",
   "102R": "Dragon's Descent",
   "27P": "Noxious Slipstream",
   "27Q": "Poison Trail",

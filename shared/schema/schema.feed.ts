@@ -17,6 +17,7 @@ export const feedLinkMetadataSchema = v.object({
 
 export const feedLinkSchema = v.object({
   author: v.nullable(v.string()),
+  excerpt: v.nullable(v.string()),
   fetched_at: v.pipe(v.string(), v.isoTimestamp()),
   flair: v.nullable(v.string()),
   id: v.optional(v.string()),
@@ -39,7 +40,9 @@ export const feedLinkSchema = v.object({
 export const feedListQuerySchema = v.object({
   keyword: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1))),
   keywords: v.optional(v.array(feedKeywordSchema)),
-  limit: v.optional(v.pipe(v.number(), v.minValue(1), v.maxValue(100))),
+  limit: v.optional(v.pipe(v.number(), v.minValue(1), v.maxValue(25))),
   offset: v.optional(v.pipe(v.number(), v.minValue(0))),
   subreddit: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1))),
 })
+
+export type RedditPost = v.InferOutput<typeof feedLinkSchema>

@@ -6,7 +6,7 @@ const {
   size = "md",
   ui,
   as,
-  variant = "ghost",
+  variant = "ghost"
 } = defineProps<{
   ui?: Record<string, HTMLAttributes["class"]>
   size?: ButtonProps["size"]
@@ -35,7 +35,7 @@ const {
           : item.label === 'Runes'
             ? 'scale-110'
             : '',
-        ui?.leadingIcon,
-      ),
+        ui?.leadingIcon
+      )
     }" />
 </template>

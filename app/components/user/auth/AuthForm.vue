@@ -2,6 +2,7 @@
 import type { FormSubmitEvent } from "@nuxt/ui"
 import * as v from "valibot"
 import { formType } from "./formType"
+import { useSignInWithEmail } from "./useAuth"
 
 const { type } = defineProps<{
   type: "logIn" | "signUp"
@@ -11,7 +12,7 @@ const emit = defineEmits(["error"])
 
 const schema = v.object({
   email: v.pipe(v.string(), v.email("Invalid email")),
-  password: v.pipe(v.string(), v.minLength(8, "Must be at least 8 characters")),
+  password: v.pipe(v.string(), v.minLength(8, "Must be at least 8 characters"))
 })
 
 type Schema = v.InferOutput<typeof schema>
@@ -22,14 +23,14 @@ const show = shallowRef<boolean>(false)
 
 const state = reactive({
   email: "",
-  password: "",
+  password: ""
 })
 
 watch(
   () => state.email,
   (v) => {
     state.email = v.trim().toLowerCase()
-  },
+  }
 )
 
 const toast = useToast()
@@ -105,7 +106,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UButton
         :ui="{
           base: 'w-full justify-center font-semibold',
-          label: 'grow-0 text-center',
+          label: 'grow-0 text-center'
         }"
         color="neutral"
         size="md"

@@ -9,7 +9,7 @@ definePageMeta({
   icon: "i-lp-champ",
   prefix: "Library",
   order: 0,
-  class: "",
+  class: ""
 })
 
 const tabModel = shallowRef<TabValue>(0)
@@ -17,24 +17,36 @@ const component = computed(() =>
   tabModel.value === 0
     ? defineAsyncComponent(
         () =>
-          import("~/components/pages/library/champions/LibraryChampionGrid.vue"),
+          import("~/components/pages/library/champions/LibraryChampionGrid.vue")
       )
     : defineAsyncComponent(
         () =>
-          import("~/components/pages/library/champions/LibraryChampionTable.vue"),
-      ),
+          import("~/components/pages/library/champions/LibraryChampionTable.vue")
+      )
 )
 
-const nav = computed(() => libraryNav.filter((l) => l.to !== useRoute().path))
 const collapsed = useState<boolean>("collapsed-state", () => false)
 
 const positions = computed<TabsItem[]>(() =>
-  Object.keys(positionToChamp).map((p) => ({ value: p, label: p })),
+  Object.keys(positionToChamp).map((p) => ({ value: p, label: p }))
 )
 
 const roles = computed<CheckboxGroupItem[]>(() =>
-  Object.keys(roleToChamp).map((p) => ({ value: p, label: p })),
+  Object.keys(roleToChamp).map((r) => ({ value: r, label: r }))
 )
+
+const { data, status, execute } = useFetch<Item>(
+  () => `/cdn/winrates/champions.json`,
+  {
+    server: false,
+    lazy: true,
+    immediate: false
+  }
+)
+
+onMounted(() => {
+  execute()
+})
 </script>
 
 <template>
@@ -42,12 +54,11 @@ const roles = computed<CheckboxGroupItem[]>(() =>
     <template #aside>
       <ChampionFilterSidebar
         v-model:tab-model="tabModel"
-        :nav
         :roles
         @update-tab="(e) => (tabModel = e)" />
     </template>
     <template v-if="collapsed || smallerThanLg" #toolbar>
-      <LazyChampionFilterToolbar :nav :roles />
+      <LazyChampionFilterToolbar :roles />
     </template>
 
     <template v-if="collapsed || smallerThanLg" #links>
@@ -59,7 +70,7 @@ const roles = computed<CheckboxGroupItem[]>(() =>
             :ui="{
               root: 'w-full justify-self-end',
               trailing: 'opacity-60 *:-mx-[0.25px]',
-              base: 'w-full',
+              base: 'w-full'
             }" />
         </div>
       </div>
@@ -80,7 +91,7 @@ const roles = computed<CheckboxGroupItem[]>(() =>
         :ui="{
           root: 'w-fit translate-y-px',
           indicator: 'ring-0 duration-150',
-          trigger: 'w-min px-2',
+          trigger: 'w-min px-2'
         }" />
       <Grow />
       <!-- view -->
@@ -92,7 +103,7 @@ const roles = computed<CheckboxGroupItem[]>(() =>
     </div>
 
     <div v-auto-animate :class="cn('size-full grow')">
-      <component :is="component" v-if="is().filtered.length" />
+      <component :is="component" v-if="is().filtered.length" :winrates="data" />
       <div v-else v-auto-animate class="grid w-full place-items-center">
         <LazyUEmpty
           size="sm"
@@ -104,8 +115,8 @@ const roles = computed<CheckboxGroupItem[]>(() =>
             {
               icon: 'i-lucide-refresh-cw',
               label: 'Reset',
-              color: 'neutral',
-            },
+              color: 'neutral'
+            }
           ]"
           @click="is().clearFilters()" />
       </div>

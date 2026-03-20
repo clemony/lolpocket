@@ -25,7 +25,7 @@ const props = withDefaults(
     topIcon: "up",
     bottomIcon: "down",
     buttonVariant: "ghost",
-    buttonSize: "xs",
+    buttonSize: "xs"
   }
 )
 
@@ -96,7 +96,7 @@ defineExpose({
   },
   updateScrollState,
   scrollUp,
-  scrollDown,
+  scrollDown
 })
 </script>
 
@@ -113,8 +113,8 @@ defineExpose({
           icon="i-up"
           variant="ghost"
           :ui="{
-            base: 'border-x-none! border-t-none! size-full! rounded-none border-b border-b-p2/80 bg-p0',
-            leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc',
+            base: 'border-x-none! border-t-none! size-full! rounded-none border-b border-b-p2/80 bg-p0/90',
+            leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc'
           }"
           @click="scrollUp" />
       </div>
@@ -125,7 +125,7 @@ defineExpose({
         :class="cn('max-h-full', props.scrollAreaClass)"
         :ui="{
           root: 'overflow-x-hidden overflow-y-auto',
-          viewport: 'flex-col',
+          viewport: 'flex-col'
         }">
         <div
           ref="contentRef"
@@ -141,13 +141,15 @@ defineExpose({
       :can-scroll-up="canScrollUp"
       :can-scroll-down="canScrollDown"
       :scroll-down="scrollDown">
-      <div v-auto-animate class="absolute -bottom-px left-0 z-[4] h-7! w-full">
+      <div
+        v-auto-animate
+        class="absolute -bottom-px left-0 z-[4] flex h-7! w-full items-center">
         <UButton
           icon="i-down"
           variant="ghost"
           :ui="{
             leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc',
-            base: 'border-x-none! border-b-none! h-full! rounded-none border-t border-t-p2/80 bg-p0',
+            base: 'border-x-none! border-b-none! h-full! w-full grow rounded-none border-t border-t-p2/80 bg-p0/90'
           }"
           @click="scrollDown" />
       </div>

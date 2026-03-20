@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { BarStat } from "../types"
+import type { BarStat } from "../team.types"
 
 const {
   match,
   player,
-  class: className,
+  class: className
 } = defineProps<{
   class?: HTMLAttributes["class"]
   player: Player
@@ -25,8 +25,8 @@ const stats = computed<Record<string, BarStat>>(() => {
       value: player.stats?.totalDamage ?? 0,
       icon: {
         name: "i-lp-scoreboard-sword",
-        class: "-translate-y-px scale-108 opacity-100",
-      },
+        class: "-translate-y-px scale-108 opacity-100"
+      }
     },
     def: {
       color: "pre",
@@ -38,7 +38,7 @@ const stats = computed<Record<string, BarStat>>(() => {
           .sort((a, b) => b - a)[0] ?? 0,
       tip: "Total Damage Taken by Champions",
       value: player.stats?.totalDamageTaken ?? 0,
-      icon: { name: "i-stat-armor" },
+      icon: { name: "i-stat-armor" }
     },
     heal: {
       color: "heal",
@@ -50,8 +50,8 @@ const stats = computed<Record<string, BarStat>>(() => {
           .sort((a, b) => b - a)[0] ?? 0,
       tip: "Effective Healing & Shielding",
       value: player.stats?.effectiveHealingAndShielding ?? 0,
-      icon: { name: "i-stat-health" },
-    },
+      icon: { name: "i-stat-health" }
+    }
   }
 })
 </script>
@@ -67,7 +67,7 @@ const stats = computed<Record<string, BarStat>>(() => {
         cn(
           'relative flex size-full grow flex-col justify-center gap-1 rounded-lg p-1',
           stat.class,
-          className,
+          className
         )
       ">
       <div

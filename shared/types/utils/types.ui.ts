@@ -6,7 +6,7 @@ import type {
   EmitsToProps,
   NavigationMenuItem,
   TabsItem,
-  TooltipProps,
+  TooltipProps
 } from "@nuxt/ui"
 
 export type Side = "top" | "right" | "bottom" | "left"
@@ -74,4 +74,13 @@ export interface NavButtonProps extends ButtonProps {
   kbds?: string[]
   as?: "card" | "button" | "separator"
   description?: string
+}
+
+export interface BaseItem {
+  to?: string
+  label?: string
+  icon?: string
+  trailingIcon?: string
+  suffix?: string
+  prefix?: string
 }

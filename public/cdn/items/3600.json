@@ -2,6 +2,7 @@
   "id": 3600,
   "name": "Kalista's Black Spear",
   "description": "Active - Consume: Bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.\n\nRequired to use Kalista's Ultimate Ability.",
+  "requiredChampion": "Sylas",
   "gold": {
     "base": 0,
     "purchasable": true,
@@ -14,5 +15,8 @@
     21,
     30,
     35
+  ],
+  "tags": [
+    "Special"
   ]
 }

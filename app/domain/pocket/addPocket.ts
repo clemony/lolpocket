@@ -1,6 +1,7 @@
 //
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { newRandomPocket } from "~/domain/pocket/newRandomPocket"
+import { sendErrorToast } from "~/utils/ui/toasts"
 import { newPocket } from "./newPocket"
 
 export async function addPocket(randomize?: boolean) {
@@ -12,7 +13,7 @@ export async function addPocket(randomize?: boolean) {
     const data = await $fetch("/api/supabase/update/pocket", {
       body: p,
       headers: useRequestHeaders(["cookie"]),
-      method: "POST",
+      method: "POST"
     })
 
     if (data) {
@@ -24,7 +25,7 @@ export async function addPocket(randomize?: boolean) {
         description: `${getRandom(heyGoodJob)}, ${
           user().account?.username || user().account?.name || "Summoner"
         }`,
-        icon: "tick",
+        icon: "tick"
       })
     } else {
       sendErrorToast()

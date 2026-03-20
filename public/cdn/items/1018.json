@@ -9,14 +9,14 @@
       "gold": 1300
     },
     {
-      "id": 3097,
-      "name": "Stormrazor",
-      "gold": 3200
-    },
-    {
       "id": 123430,
       "name": "Rite of Ruin",
       "gold": 3000
+    },
+    {
+      "id": 3097,
+      "name": "Stormrazor",
+      "gold": 3200
     },
     {
       "id": 3086,
@@ -25,7 +25,7 @@
     },
     {
       "id": 3095,
-      "name": "Stormrazor",
+      "name": "Deprecated item",
       "gold": 3000
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": 3508,
       "name": "Essence Reaver",
-      "gold": 2900
+      "gold": 3050
     },
     {
       "id": 667666,
@@ -77,5 +77,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Marksman"
   ]
 }

@@ -15,5 +15,9 @@
   },
   "maps": [
     30
+  ],
+  "tags": [
+    "Attack damage",
+    "Ability power"
   ]
 }

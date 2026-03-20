@@ -1466,6 +1466,26 @@
       11,
       12,
       21
+    ],
+    "rank": "Special",
+    "stats": {}
+  },
+  "2001": {
+    "id": 2001,
+    "key": "item",
+    "name": "Recall",
+    "gold": {
+      "base": 60,
+      "purchasable": false,
+      "total": 60,
+      "sell": 42
+    },
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
     ]
   },
   "2002": {
@@ -1501,6 +1521,24 @@
     "stats": {},
     "tags": [
       "Health and reg"
+    ]
+  },
+  "2007": {
+    "id": 2007,
+    "key": "item",
+    "name": "Disabled Recall",
+    "gold": {
+      "base": 60,
+      "purchasable": false,
+      "total": 60,
+      "sell": 42
+    },
+    "maps": [
+      11,
+      12,
+      21,
+      30,
+      35
     ]
   },
   "2010": {
@@ -1849,6 +1887,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 322065,
     "rank": "Legendary",
     "recipe": [
       3113,
@@ -2397,7 +2436,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2409,7 +2449,7 @@
     "stats": {
       "abilityPower": 70,
       "attackSpeed": 25,
-      "health": 300,
+      "health": 350,
       "abilityHaste": 20
     },
     "tags": [
@@ -2428,7 +2468,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2436,7 +2477,7 @@
       3144
     ],
     "stats": {
-      "attackSpeed": 40,
+      "attackSpeed": 45,
       "criticalStrikeChance": 25,
       "percentMovespeed": 4
     },
@@ -2450,22 +2491,24 @@
     "key": "item",
     "name": "Endless Hunger",
     "gold": {
-      "base": 1075,
-      "total": 3000,
-      "sell": 2100
+      "base": 825,
+      "total": 3100,
+      "sell": 2170
     },
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
       3133,
-      1037
+      1037,
+      1036
     ],
     "stats": {
-      "attackDamage": 60,
+      "attackDamage": 65,
       "omnivamp": 5,
       "tenacity": 20
     },
@@ -2487,7 +2530,6 @@
     },
     "maps": [
       11,
-      12,
       21
     ],
     "rank": "Legendary",
@@ -2509,14 +2551,15 @@
     "key": "item",
     "name": "Actualizer",
     "gold": {
-      "base": 1050,
-      "total": 3100,
-      "sell": 2170
+      "base": 750,
+      "total": 2800,
+      "sell": 1960
     },
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2544,7 +2587,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2553,7 +2597,7 @@
       1036
     ],
     "stats": {
-      "attackDamage": 50,
+      "attackDamage": 55,
       "criticalStrikeChance": 25
     },
     "tags": [
@@ -2565,14 +2609,15 @@
     "key": "item",
     "name": "Bandlepipes",
     "gold": {
-      "base": 500,
-      "total": 2000,
-      "sell": 1400
+      "base": 800,
+      "total": 2300,
+      "sell": 1610
     },
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2602,7 +2647,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -2611,7 +2657,7 @@
     ],
     "stats": {
       "health": 600,
-      "abilityHaste": 15
+      "abilityHaste": 20
     },
     "tags": [
       "Tank"
@@ -2632,8 +2678,10 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
+    "ornnUpgrade": 322526,
     "rank": "Legendary",
     "recipe": [
       3114,
@@ -2663,8 +2711,10 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
+    "ornnUpgrade": 322530,
     "rank": "Legendary",
     "recipe": [
       2526
@@ -2702,6 +2752,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323002,
     "rank": "Legendary",
     "recipe": [
       3066,
@@ -2737,6 +2788,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323003,
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -2771,6 +2823,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323004,
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -3213,6 +3266,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323040,
     "rank": "Legendary",
     "recipe": [
       3003
@@ -3267,6 +3321,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323042,
     "rank": "Legendary",
     "recipe": [
       3004
@@ -3396,6 +3451,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323050,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -3625,7 +3681,7 @@
       "sunfire"
     ],
     "gold": {
-      "base": 1000,
+      "base": 600,
       "total": 2700,
       "sell": 1890
     },
@@ -3638,7 +3694,8 @@
     "rank": "Legendary",
     "recipe": [
       6660,
-      1031
+      1031,
+      1028
     ],
     "stats": {
       "armor": 50,
@@ -3672,6 +3729,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323070,
     "rank": "Starter",
     "stats": {
       "mana": 240
@@ -3833,6 +3891,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323075,
     "rank": "Legendary",
     "recipe": [
       3076,
@@ -4234,15 +4293,12 @@
   "3095": {
     "id": 3095,
     "key": "item",
-    "name": "Stormrazor",
+    "name": "Deprecated item",
     "gold": {
       "base": 500,
       "total": 3000,
       "sell": 2100
-    },
-    "maps": [
-      12
-    ]
+    }
   },
   "3097": {
     "id": 3097,
@@ -4260,7 +4316,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
     "rank": "Legendary",
     "recipe": [
@@ -4376,6 +4433,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323107,
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -4440,6 +4498,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323109,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -4475,6 +4534,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323110,
     "rank": "Legendary",
     "recipe": [
       3082,
@@ -4740,6 +4800,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323119,
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -4771,6 +4832,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323121,
     "rank": "Legendary",
     "recipe": [
       3119
@@ -5200,8 +5262,10 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ],
+    "ornnUpgrade": 663146,
     "rank": "Legendary",
     "recipe": [
       1053,
@@ -5815,6 +5879,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323190,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -5897,6 +5962,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323222,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -5970,7 +6036,11 @@
       35
     ],
     "rank": "Trinket",
-    "stats": {}
+    "requiredChampion": "FiddleSticks",
+    "stats": {},
+    "tags": [
+      "Special"
+    ]
   },
   "3340": {
     "id": 3340,
@@ -6149,6 +6219,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 323504,
     "rank": "Legendary",
     "recipe": [
       3113,
@@ -6174,9 +6245,9 @@
       "Spellblade"
     ],
     "gold": {
-      "base": 350,
-      "total": 2900,
-      "sell": 2030
+      "base": 500,
+      "total": 3050,
+      "sell": 2135
     },
     "maps": [
       11,
@@ -6237,7 +6308,11 @@
       35
     ],
     "rank": "Starter",
-    "stats": {}
+    "requiredChampion": "Kalista",
+    "stats": {},
+    "tags": [
+      "Special"
+    ]
   },
   "3600": {
     "id": 3600,
@@ -6254,6 +6329,10 @@
       21,
       30,
       35
+    ],
+    "requiredChampion": "Sylas",
+    "tags": [
+      "Special"
     ]
   },
   "3742": {
@@ -6824,7 +6903,11 @@
       30,
       35
     ],
-    "stats": {}
+    "requiredChampion": "Gangplank",
+    "stats": {},
+    "tags": [
+      "Special"
+    ]
   },
   "3902": {
     "id": 3902,
@@ -6843,7 +6926,11 @@
       30,
       35
     ],
-    "stats": {}
+    "requiredChampion": "Gangplank",
+    "stats": {},
+    "tags": [
+      "Special"
+    ]
   },
   "3903": {
     "id": 3903,
@@ -6862,7 +6949,11 @@
       30,
       35
     ],
-    "stats": {}
+    "requiredChampion": "Gangplank",
+    "stats": {},
+    "tags": [
+      "Special"
+    ]
   },
   "3916": {
     "id": 3916,
@@ -6960,6 +7051,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 324005,
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -7596,9 +7688,9 @@
       "grievous wounds"
     ],
     "gold": {
-      "base": 350,
-      "total": 3100,
-      "sell": 2170
+      "base": 250,
+      "total": 3000,
+      "sell": 2100
     },
     "maps": [
       11,
@@ -7670,6 +7762,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 326616,
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -7703,6 +7796,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 326617,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -7736,6 +7830,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 326620,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -7769,6 +7864,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 326621,
     "rank": "Legendary",
     "recipe": [
       1026,
@@ -7932,6 +8028,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 326657,
     "rank": "Legendary",
     "recipe": [
       1026,
@@ -8248,6 +8345,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 667666,
     "rank": "Legendary",
     "recipe": [
       1037,
@@ -8463,9 +8561,9 @@
       "lethality"
     ],
     "gold": {
-      "base": 950,
-      "total": 3000,
-      "sell": 2100
+      "base": 750,
+      "total": 2800,
+      "sell": 1960
     },
     "maps": [
       11,
@@ -8624,6 +8722,10 @@
       21,
       30,
       35
+    ],
+    "requiredChampion": "Gangplank",
+    "tags": [
+      "Special"
     ]
   },
   "8001": {
@@ -8687,6 +8789,7 @@
       21,
       35
     ],
+    "ornnUpgrade": 328020,
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -9640,6 +9743,7 @@
       "sell": 0
     },
     "maps": [
+      12,
       30
     ]
   },
@@ -10317,6 +10421,30 @@
     },
     "maps": [
       30
+    ]
+  },
+  "223069": {
+    "id": 223069,
+    "key": "item",
+    "name": "Void Immolation",
+    "gold": {
+      "base": 6000,
+      "total": 6000,
+      "sell": 4200
+    },
+    "maps": [
+      12
+    ],
+    "rank": "Special",
+    "stats": {
+      "armor": 100,
+      "health": 1000,
+      "healthRegen": 200,
+      "magicResistance": 80,
+      "abilityHaste": 25
+    },
+    "tags": [
+      "Tank"
     ]
   },
   "223071": {
@@ -11820,7 +11948,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "322526": {
     "id": 322526,
@@ -11833,7 +11962,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "322530": {
     "id": 322530,
@@ -11847,7 +11977,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323002": {
     "id": 323002,
@@ -11860,7 +11991,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323003": {
     "id": 323003,
@@ -11873,7 +12005,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323004": {
     "id": 323004,
@@ -11886,7 +12019,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323040": {
     "id": 323040,
@@ -11900,7 +12034,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323042": {
     "id": 323042,
@@ -11914,7 +12049,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323050": {
     "id": 323050,
@@ -11927,7 +12063,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323070": {
     "id": 323070,
@@ -11940,7 +12077,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323075": {
     "id": 323075,
@@ -11953,7 +12091,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323107": {
     "id": 323107,
@@ -11966,7 +12105,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323109": {
     "id": 323109,
@@ -11979,7 +12119,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323110": {
     "id": 323110,
@@ -11992,7 +12133,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323119": {
     "id": 323119,
@@ -12005,7 +12147,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323121": {
     "id": 323121,
@@ -12019,7 +12162,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323190": {
     "id": 323190,
@@ -12032,7 +12176,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323222": {
     "id": 323222,
@@ -12045,7 +12190,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "323504": {
     "id": 323504,
@@ -12058,7 +12204,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "324005": {
     "id": 324005,
@@ -12071,7 +12218,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "326616": {
     "id": 326616,
@@ -12084,7 +12232,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "326617": {
     "id": 326617,
@@ -12097,7 +12246,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "326620": {
     "id": 326620,
@@ -12110,7 +12260,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "326621": {
     "id": 326621,
@@ -12123,7 +12274,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "326657": {
     "id": 326657,
@@ -12136,7 +12288,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "328020": {
     "id": 328020,
@@ -12149,7 +12302,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "443054": {
     "id": 443054,
@@ -13456,7 +13610,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "663172": {
     "id": 663172,
@@ -13574,7 +13729,8 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "ornnItem": true
   },
   "994403": {
     "id": 994403,

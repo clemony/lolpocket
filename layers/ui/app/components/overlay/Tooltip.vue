@@ -3,7 +3,7 @@ import type { EmitsToProps, TooltipProps } from "@nuxt/ui"
 import type {
   PrimitiveProps,
   TooltipContentEmits,
-  TooltipContentProps,
+  TooltipContentProps
 } from "reka-ui"
 import { Primitive } from "reka-ui"
 
@@ -29,15 +29,14 @@ const props = withDefaults(
       }
   >(),
   {
-    side: "bottom",
-    sideOffset: 20,
+    sideOffset: 4,
     as: "div",
     arrow: false,
     disableClosingTrigger: false,
     followPointer: true,
     inertia: true,
-    interactive: false,
-  },
+    interactive: false
+  }
 )
 
 const emit = defineEmits(["pinned", "unpinned"])
@@ -45,13 +44,20 @@ const emit = defineEmits(["pinned", "unpinned"])
 const open = ref(false)
 const pinned = ref(false)
 const anchor = ref({ x: 0, y: 0 })
+const placement = ref<{ side: Side; alignOffset: number }>({
+  side: "bottom",
+  alignOffset: 0
+})
+const flipOffset = ref({ x: 0, y: 0 })
 const triggerRef = ref<unknown>(null)
 const contentRef = ref<HTMLElement | null>(null)
 let rafId = 0
+let flipRafId = 0
 let nextX = 0
 let nextY = 0
 let currentX = 0
 let currentY = 0
+const sideSwitchHysteresis = 20
 
 function resolveElement(target: unknown): Element | null {
   if (target instanceof Element) return target
@@ -69,6 +75,78 @@ function getInertiaFactor() {
   return props?.inertia ? 0.22 : 0
 }
 
+function getFlipOffset(side: Side) {
+  const distance = 5
+
+  switch (side) {
+    case "top":
+      return { x: 0, y: distance }
+    case "right":
+      return { x: -distance, y: 0 }
+    case "bottom":
+      return { x: 0, y: -distance }
+    case "left":
+      return { x: distance, y: 0 }
+  }
+}
+
+function playFlipSlide(side: Side) {
+  if (flipRafId) cancelAnimationFrame(flipRafId)
+
+  flipOffset.value = getFlipOffset(side)
+
+  flipRafId = requestAnimationFrame(() => {
+    flipRafId = requestAnimationFrame(() => {
+      flipOffset.value = { x: 0, y: 0 }
+      flipRafId = 0
+    })
+  })
+}
+
+function setAnchorFromPointer(x: number, y: number) {
+  anchor.value = { x, y }
+
+  const triggerEl = resolveElement(triggerRef.value)
+  if (!triggerEl) {
+    placement.value = {
+      side: props?.side ?? "bottom",
+      alignOffset: props?.alignOffset ?? 0
+    }
+    return
+  }
+
+  const rect = triggerEl.getBoundingClientRect()
+  const clampedX = Math.min(Math.max(x, rect.left), rect.right)
+  const clampedY = Math.min(Math.max(y, rect.top), rect.bottom)
+  const distances: Record<Side, number> = {
+    top: clampedY - rect.top,
+    right: rect.right - clampedX,
+    bottom: rect.bottom - clampedY,
+    left: clampedX - rect.left
+  }
+  const nextSide = (Object.entries(distances).sort(
+    (a, b) => a[1] - b[1]
+  )[0]?.[0] ?? "bottom") as Side
+  const side =
+    distances[placement.value.side] <=
+    distances[nextSide] + sideSwitchHysteresis
+      ? placement.value.side
+      : nextSide
+
+  if (side === "top" || side === "bottom") {
+    placement.value = {
+      side,
+      alignOffset: clampedX - rect.left
+    }
+    return
+  }
+
+  placement.value = {
+    side,
+    alignOffset: clampedY - rect.top
+  }
+}
+
 function scheduleAnchorUpdate() {
   if (!rafId) rafId = requestAnimationFrame(updateAnchor)
 }
@@ -84,7 +162,7 @@ function updateAnchor() {
   if (!factor) {
     currentX = nextX
     currentY = nextY
-    anchor.value = { x: nextX, y: nextY }
+    setAnchorFromPointer(nextX, nextY)
     return
   }
 
@@ -95,13 +173,13 @@ function updateAnchor() {
   if (Math.abs(dx) <= settle && Math.abs(dy) <= settle) {
     currentX = nextX
     currentY = nextY
-    anchor.value = { x: nextX, y: nextY }
+    setAnchorFromPointer(nextX, nextY)
     return
   }
 
   currentX += dx * factor
   currentY += dy * factor
-  anchor.value = { x: currentX, y: currentY }
+  setAnchorFromPointer(currentX, currentY)
 
   scheduleAnchorUpdate()
 }
@@ -113,7 +191,7 @@ function onPointerEnter(ev: PointerEvent) {
   nextY = ev.clientY
   currentX = nextX
   currentY = nextY
-  anchor.value = { x: nextX, y: nextY }
+  setAnchorFromPointer(nextX, nextY)
   open.value = true
 }
 
@@ -145,7 +223,7 @@ function onClick(ev: MouseEvent) {
   }
   currentX = nextX
   currentY = nextY
-  anchor.value = { x: nextX, y: nextY }
+  setAnchorFromPointer(nextX, nextY)
   pinned.value = true
   open.value = true
 }
@@ -179,6 +257,7 @@ function onDocumentKeydown(ev: KeyboardEvent) {
 
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
+  if (flipRafId) cancelAnimationFrame(flipRafId)
   document.removeEventListener("pointerdown", onDocumentPointerDown, true)
   document.removeEventListener("keydown", onDocumentKeydown, true)
 })
@@ -188,31 +267,45 @@ onMounted(() => {
   document.addEventListener("keydown", onDocumentKeydown, true)
 })
 
-const reference = computed(() => ({
-  getBoundingClientRect: () =>
-    ({
-      width: 0,
-      bottom: anchor.value.y,
-      height: 0,
-      left: anchor.value.x,
-      right: anchor.value.x,
-      top: anchor.value.y,
-      ...anchor.value,
-    }) as DOMRect,
-}))
+const reference = computed(
+  () =>
+    resolveElement(triggerRef.value) ?? {
+      getBoundingClientRect: () =>
+        ({
+          width: 0,
+          bottom: anchor.value.y,
+          height: 0,
+          left: anchor.value.x,
+          right: anchor.value.x,
+          top: anchor.value.y,
+          ...anchor.value
+        }) as DOMRect
+    }
+)
 type ContentProps = Omit<TooltipContentProps, "as" | "asChild"> &
   Partial<EmitsToProps<TooltipContentEmits>>
 
 const contentProps = computed<ContentProps>(() => ({
-  side: props?.side,
+  side: props?.followPointer ? placement.value.side : props?.side,
   sideOffset: props?.sideOffset,
-  align:
-    props?.align || ["left", "right"].includes(props?.side) ? "start" : "start",
-  alignOffset:
-    props?.alignOffset || ["left", "right"].includes(props?.side) ? 46 : -4,
+  align: props?.followPointer ? "start" : (props?.align ?? "center"),
+  alignOffset: props?.followPointer
+    ? placement.value.alignOffset
+    : props?.alignOffset,
   updatePositionStrategy: props?.followPointer ? "always" : "optimized",
-  arrowPadding: 3,
+  arrowPadding: 3
 }))
+
+const resolvedSide = computed(
+  () => contentProps.value.side ?? props?.side ?? "bottom"
+)
+
+watch(resolvedSide, (side, previousSide) => {
+  if (!open.value) return
+  if (!previousSide || side === previousSide) return
+
+  playFlipSlide(side)
+})
 
 defineExpose({ pinned, isOpen: open })
 </script>
@@ -223,7 +316,7 @@ defineExpose({ pinned, isOpen: open })
     :disabled
     :arrow="arrow"
     :open="disabled ? false : open"
-    :delay-duration="0"
+    :delay-duration="700"
     :disable-hoverable-content="!interactive"
     :reference="reference"
     :ui="{ content: cn('z-50', props?.ui?.content), arrow: props?.ui?.arrow }"
@@ -231,7 +324,8 @@ defineExpose({ pinned, isOpen: open })
     <Primitive
       ref="triggerRef"
       :as="props?.as"
-      :class="cn('size-fit', props?.class)"
+      :as-child="props?.asChild"
+      :class="cn(props?.asChild ? '' : 'size-fit', props?.class)"
       @click.prevent="onClick"
       @pointerenter="onPointerEnter"
       @pointerleave="onPointerLeave"
@@ -242,22 +336,29 @@ defineExpose({ pinned, isOpen: open })
     <template #content>
       <div
         ref="contentRef"
+        :style="{
+          transform: `translate3d(${flipOffset.x}px, ${flipOffset.y}px, 0)`
+        }"
         :class="
           cn(
-            'inline-flex items-center gap-1.5 align-baseline',
-            props?.ui?.content,
+            'inline-flex items-center gap-1.5 align-baseline transition-transform duration-150 ease-out will-change-transform motion-reduce:transition-none',
+            props?.ui?.content
           )
         ">
         <slot name="content">
           <div class="inline-flex gap-2 align-baseline">
-            <LazyAvatarLoading
+            <LazyUAvatar
               v-if="avatar"
+              hydrate-on-visible
               icon="i-image-circle"
               spinner
+              decoding="async"
+              loading="lazy"
+              :quality="30"
               size="2xs"
               :src="avatar"
               :alt="`${label}-icon`"
-              :ui="{ root: 'bg-transparent' }" />
+              :ui="{ root: 'overflow-hidden bg-transparent' }" />
             <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
             {{ label }}
 
@@ -268,7 +369,7 @@ defineExpose({ pinned, isOpen: open })
                 cn(
                   'ml-1 inline size-3.75 self-center align-middle text-nc',
                   { 'scale-120': trailingIcon === 'i' },
-                  ui?.trailingIcon,
+                  ui?.trailingIcon
                 )
               " />
           </div>

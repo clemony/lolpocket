@@ -4,10 +4,10 @@ definePageMeta({
   order: 2,
   description:
     "Set your public profile display settings and hide your annoyances.",
-  icon: "i-lucide-user-circle",
+  icon: "i-lucide-circle-user-round",
   path: "/settings/profile",
-
-  prefix: "Settings",
+  auth: true,
+  prefix: "Settings"
   /* middleware: 'confirm-auth', */
 })
 

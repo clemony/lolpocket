@@ -1,24 +1,25 @@
 @import "tailwindcss";
 @import "./base.css";
+@import "./accent.css";
 
 @plugin "daisyui" {
-  themes:
-    light --default,
+  themes: false;
   styled: true;
+
   exclude:
-    rootcolor, navbar, link, toast, skeleton, steps, drawersidebar, hero,
-    fileinput, join, glass, typography, breadcrumbs, collapse, countdown, diff,
-    divider, dock, drawer, dropdown, modal, list, swap, textrotate, toast,
-    loading, stack, stat, toggle, table, kbd, label, mask, navbar, hovergallery,
-    fab, menu, fieldset, indicator, mockup, progress, chat, filter, footer,
-    select, radio, avatar, range, calendar, card, validator, carousel;
+    navbar, link, toast, skeleton, steps, drawersidebar, hero, fileinput, join,
+    glass, typography, breadcrumbs, collapse, countdown, diff, divider, dock,
+    drawer, dropdown, modal, list, swap, textrotate, toast, loading, stack,
+    stat, toggle, table, kbd, label, mask, navbar, hovergallery, fab, menu,
+    fieldset, indicator, mockup, progress, chat, filter, footer, select, radio,
+    avatar, range, calendar, card, validator, carousel;
 }
 
-@plugin "daisyui/theme" {
+@plugin "../../../../../../node_modules/daisyui/theme/index.js" {
   name: "light";
-  default: "true";
+  default: light;
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: light;
-
   --color-base-100: var(--ui-p0);
   --color-base-200: var(--ui-p2);
   --color-base-300: var(--ui-p3);
@@ -55,7 +56,6 @@
   --color-accent: var(--ui-insp);
   --color-accent-content: var(--ui-insp-content);
 
-  /* border size */
   --border: 1px;
 
   /* effects */
@@ -165,12 +165,11 @@
     }
   }
   .tooltip {
-    @apply cursor-default select-none hover:underline;
     &::before {
-      @apply z-50 max-w-66 px-3 py-1.5 text-start text-sm/5.5 text-pretty whitespace-pre-wrap text-nc drop-shadow-sm transition-all duration-300;
-      &::after {
-        @apply transition-all delay-200 duration-200;
-      }
+      @apply z-50 max-w-66 bg-neutral/90 px-3 py-1 text-start text-sm/5.5 text-pretty whitespace-pre-wrap text-nc drop-shadow-sm backdrop-blur-sm transition-all duration-200;
+    }
+    &::after {
+      @apply invisible! hidden! size-0! opacity-0!;
     }
   }
 

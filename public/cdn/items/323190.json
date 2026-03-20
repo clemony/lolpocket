@@ -1,7 +1,7 @@
 {
   "id": 323190,
   "name": "Locket of the Iron Solari",
-  "description": "250 Health\n30 Armor\n30 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 200 - 360 Shield that decays over 2.5 seconds.",
+  "description": "250 Health\n30 Armor\n30 Magic Resist\n10 Ability Haste\n\nDevotion\nGrant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -10,5 +10,7 @@
   },
   "maps": [
     11
-  ]
+  ],
+  "ornnItem": true,
+  "tags": []
 }

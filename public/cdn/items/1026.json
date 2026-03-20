@@ -9,11 +9,6 @@
       "gold": 2900
     },
     {
-      "id": 3135,
-      "name": "Void Staff",
-      "gold": 3000
-    },
-    {
       "id": 326657,
       "name": "Rod of Ages",
       "gold": 2600
@@ -36,12 +31,17 @@
     {
       "id": 2522,
       "name": "Actualizer",
-      "gold": 3100
+      "gold": 2800
     },
     {
       "id": 3116,
       "name": "Rylai's Crystal Scepter",
       "gold": 2600
+    },
+    {
+      "id": 3135,
+      "name": "Void Staff",
+      "gold": 3000
     },
     {
       "id": 3165,
@@ -87,5 +87,9 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Mage",
+    "Support"
   ]
 }

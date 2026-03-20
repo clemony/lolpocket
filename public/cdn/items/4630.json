@@ -11,13 +11,13 @@
   ],
   "buildsInto": [
     {
-      "id": 3135,
-      "name": "Void Staff",
+      "id": 3137,
+      "name": "Cryptbloom",
       "gold": 3000
     },
     {
-      "id": 3137,
-      "name": "Cryptbloom",
+      "id": 3135,
+      "name": "Void Staff",
       "gold": 3000
     }
   ],
@@ -44,5 +44,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Mage"
   ]
 }

@@ -13,6 +13,7 @@ export interface FeedLinkMetadata {
 
 export interface FeedLink {
   author: string | null
+  excerpt: string | null
   fetched_at: string
   flair: string | null
   id?: string

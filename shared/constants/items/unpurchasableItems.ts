@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 02/12/2026 04:58:10 AM CST
+// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
 
 export const unpurchasableItems: number[] = [
   1035,
@@ -40,7 +40,9 @@ export const unpurchasableItems: number[] = [
   1522,
   1523,
   1524,
+  2001,
   2002,
+  2007,
   2010,
   2015,
   2033,

@@ -22,7 +22,7 @@
       "unique": true,
       "mythic": false,
       "name": "Cinderbloom",
-      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health."
+      "effects": "Your magic damage and true damage damage will <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon \" />critically strike for 120% critical damage damage against enemies below 40% <b>maximum</b> health."
     }
   ],
   "stats": {
@@ -41,5 +41,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Mage"
   ]
 }

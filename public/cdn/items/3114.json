@@ -16,6 +16,11 @@
       "gold": 2800
     },
     {
+      "id": 223011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    {
       "id": 323222,
       "name": "Mikael's Blessing",
       "gold": 2800
@@ -24,11 +29,6 @@
       "id": 124011,
       "name": "Sword of Blossoming Dawn",
       "gold": 2350
-    },
-    {
-      "id": 223011,
-      "name": "Chemtech Putrifier",
-      "gold": 1900
     },
     {
       "id": 2526,
@@ -105,5 +105,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Support"
   ]
 }

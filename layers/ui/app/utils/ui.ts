@@ -2,11 +2,6 @@
 export const tooltipPlacements = ["top", "bottom", "left", "right"]
 export const tooltipSizes = ["default", "md", "lg"]
 
-export function closeAndNav(link: string) {
-  session().sidebarOpen = false
-  navigateTo(link)
-}
-
 export function getIcon(
   icon: IconObject | ComputedRef<IconObject> | undefined
 ) {
@@ -54,7 +49,7 @@ export function useBreakpoint(breakpoint: BreakpointKey) {
     x0: 0, // optional
     x640: 640,
     x1024: 1024,
-    x1280: 1280,
+    x1280: 1280
   })
 
   // Can be 'mobile' or 'tablet' or 'laptop' or 'desktop'
@@ -70,7 +65,7 @@ export function useBreakpoint(breakpoint: BreakpointKey) {
     greaterOrEqual,
     greaterThan,
     lessOrEqual,
-    lessThan,
+    lessThan
   }
 }
 

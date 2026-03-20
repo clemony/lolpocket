@@ -61,9 +61,11 @@
 }
 
 @theme {
-  --ui-win: oklch(71% 24% 200deg);
+  --ui-lp:  oklch(85% 51% 123deg);
 
-  --color-legendary: var(--ui-legendary);
+  --ui-win: oklch(71% 24% 200deg);
+--color-legendary: var(--ui-legendary);
+
   --color-info: var(--ui-sorc);
   --color-success: var(--ui-res);
   --color-warning: var(--ui-pre);
@@ -114,5 +116,5 @@
 
 @theme inline {
   --color-win: var(--ui-win);
-
+--color-lp: var(--ui-lp);
 }

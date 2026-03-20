@@ -37,5 +37,13 @@
     11,
     12,
     21
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Mage",
+    "Tank",
+    "Onhit effects"
   ]
 }

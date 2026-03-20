@@ -4,6 +4,7 @@ import { spellIndex } from "~~/shared/constants/misc/spell-index"
 definePageMeta({
   title: "Spells",
   icon: "i-book",
+  iconFill: "i-tdesign-book-filled",
   order: 3,
   prefix: "Library",
   description: "Don't forget the petricite!",
@@ -19,13 +20,13 @@ definePageMeta({
     "smite",
     "teleport",
     "cleanse",
-    "exhaust",
-  ],
+    "exhaust"
+  ]
 })
 
 const selectedSpellId = ref(1)
 const selectedSpell = computed(
-  () => spellIndex[selectedSpellId.value] ?? spellIndex[0]!,
+  () => spellIndex[selectedSpellId.value] ?? spellIndex[0]!
 )
 </script>
 

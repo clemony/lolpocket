@@ -11,7 +11,7 @@ const route = useRoute()
 const modelValue = defineModel<string>({ default: "" })
 
 const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
-  "commandInput",
+  "commandInput"
 )
 
 const inputRef = computed(() => commandInput.value?.inputRef ?? undefined)
@@ -49,22 +49,29 @@ function handleClear() {
     :autofocus="false"
     aria-describedby="app-command-search"
     :ui="{
+      root: 'group/i',
       base: cn(
-        'h-10 w-180 rounded-xl! bg-p0/50 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 placeholder:lowercase hover:ring-n0/60 focus-visible:ring-1 focus-visible:ring-p3/80!',
-        { 'placeholder:italic placeholder:text-pc/40': open },
+        '3 h-10 w-180 rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 placeholder:lowercase hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
+        {
+          '': open
+        }
       ),
       leadingIcon:
-        'ml-1 size-4.5 justify-self-start text-n5 opacity-80 **:stroke-[2.3] group-hover/btn:opacity-100',
+        'ml-1 size-4.75 justify-self-start text-n5/80 **:stroke-[2.4] group-hover/i:text-n4'
     }"
     @focus="emit('update:open', true)"
     @keydown.esc.stop.prevent="emit('update:open', false)">
     <template #trailing>
-      <div v-if="!modelValue" v-auto-animate class="flex items-center">
+      <div
+        v-if="!modelValue"
+        v-auto-animate
+        class="flex items-center -space-x-px">
         <UKbd
           v-for="k in ['meta', 'K']"
           :key="k"
-          class="text-n5"
+          class="text-md! text-n5 group-hover/i:text-n1!"
           variant="ghost"
+          size="lg"
           square
           :value="k" />
       </div>
@@ -73,7 +80,7 @@ function handleClear() {
           size="2xs"
           variant="ghost"
           :ui="{
-            base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs hover:[&_svg]:opacity-60',
+            base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs hover:[&_svg]:opacity-60'
           }"
           color="transparent"
           @clear-input="handleClear()" />

@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Scarlet Allegiance",
-      "effects": "If your <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal and <img src=\"/img/icons/omnivamp.webp\" class=\"tip-icon\" />omnivamp sum to at least 30%, gain 500 <b>bonus</b> health and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself equal to 10% of the damage that enemy champions in a 525 units radius around you take from all sources."
+      "effects": "If your <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal and <img src=\"/img/icons/omnivamp.webp\" class=\"tip-icon\" />omnivamp sum to at least 30%, gain 500 <b>bonus</b> health and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself equal to 10% of the damage that enemy champions within 525 units of you take from all sources."
     }
   ],
   "stats": {
@@ -30,5 +30,8 @@
   },
   "maps": [
     30
+  ],
+  "tags": [
+    "Fighter"
   ]
 }

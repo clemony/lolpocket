@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { LayoutGroup } from "motion-v"
 import { VueDraggable } from "vue-draggable-plus"
-import { useChampionContextMenu } from "~/domain/champions/useChampionContextMenu"
 
 definePageMeta({
   name: "pocket-champions",
   title: "champions",
 
   search: false,
-  order: 1,
+  order: 1
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 
 const isDragging = ref(false)
@@ -65,13 +63,6 @@ function onAdd(e: { oldIndex?: number }) {
   pocket.value?.champions?.splice(e.oldIndex, 1)
   champFilter().reorder(rendered.value.sort())
 }
-
-const { show } = useChampionContextMenu()
-
-function showContextMenu(e: MouseEvent, champion: string) {
-  if (!pocket.value) return
-  show(e, champion, pocket.value)
-}
 </script>
 
 <template>
@@ -100,7 +91,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
         :group="{
           name: 'champions',
           pull: 'clone',
-          put: true,
+          put: true
         }"
         :sort="false"
         :animation="150"
@@ -113,15 +104,13 @@ function showContextMenu(e: MouseEvent, champion: string) {
         @start="onStart()"
         @end="onEnd($event)"
         @add="onAdd($event)">
-        <LayoutGroup>
-          <AnimatePresence v-if="pocket" mode="sync">
-            <PocketChampion
-              v-for="champion in rendered"
-              :key="champion"
-              :k="champion"
-              :pocket="pocket" />
-          </AnimatePresence>
-        </LayoutGroup>
+        <AnimatePresence v-if="pocket" mode="sync">
+          <Champion
+            v-for="champion in rendered"
+            :key="champion"
+            :k="champion"
+            :pocket="pocket" />
+        </AnimatePresence>
       </VueDraggable>
     </div>
   </div>

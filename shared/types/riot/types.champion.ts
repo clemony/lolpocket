@@ -74,7 +74,7 @@ export interface Modifier {
 
 export type ChampionRecord = Record<string, Champion>
 export type ChampionLiteRecord = Record<string, ChampionLite>
-export type SplashType = 'tile' | 'centered' | 'load' | 'uncentered'
+export type SplashType = "tile" | "centered" | "load" | "uncentered"
 export type SkinRecord = Record<string, Skin>
 
 export interface ChampionLite {
@@ -95,4 +95,22 @@ export interface Skin {
   key: string
   name: string
   load: string
+}
+
+export interface ChampionWinrate {
+  role: string
+  champion: string
+  is_rip: string
+  play: number
+  win: number
+  kill: number
+  win_rate: number
+  pick_rate: number
+  role_rate: number
+  ban_rate: number
+  kda: number
+  tier: number
+  rank: number
+  rank_prev: number
+  rank_prev_patch: number
 }

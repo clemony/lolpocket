@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 02/12/2026 04:58:10 AM CST
+// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
 
 export const rankToItem: Record<string, number[]> = {
   "Boots": [
@@ -114,12 +114,14 @@ export const rankToItem: Record<string, number[]> = {
     1511,
     1512,
     1515,
+    1524,
     2010,
     2052,
     2145,
     2146,
     2422,
     3400,
+    223069,
     224403,
     226630,
     228002,

@@ -21,7 +21,7 @@
     {
       "unique": true,
       "name": "Mana Made Real",
-      "effects": "For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing, and <img src=\"/img/icons/shielding.webp\" class=\"tip-icon \" />shielding; and your basic ability cooldowns progress 30% faster."
+      "effects": "For 8 seconds, your mana is <i>Empowered</i>. While <i>Empowered</i>: your abilities cost 100% more mana; you gain 15% (+0.5% per 100 <b>bonus</b> mana) increased ability damage, <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing, and <img src=\"/img/icons/shielding.webp\" class=\"tip-icon \" />shielding; and your basic abilities' cooldowns progress 30% faster."
     }
   ],
   "stats": {
@@ -31,14 +31,18 @@
   },
   "description": "90 Ability Power\n300 Mana\n10 Ability Haste\n\nMana Made Real (0s)\nFor 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gain  increased Ability damage, Shielding, and Healing, and your basic ability cooldowns progress 30% faster.",
   "gold": {
-    "base": 1050,
+    "base": 750,
     "purchasable": true,
-    "total": 3100,
-    "sell": 2170
+    "total": 2800,
+    "sell": 1960
   },
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Mage"
   ]
 }

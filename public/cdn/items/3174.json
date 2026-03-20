@@ -26,7 +26,7 @@
       "unique": true,
       "mythic": false,
       "name": "Noxian Endurance",
-      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs 10 – 120 (based on level) (+10% <b>maximum</b> health) physical damage for 5 seconds.",
+      "effects": "Taking physical damage from champions grants you a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield that absorbs 100 – 200 (based on level) (+8% <b>bonus</b> health) physical damage for 5 seconds.",
       "cooldown": "15"
     }
   ],
@@ -43,5 +43,6 @@
   },
   "maps": [
     11
-  ]
+  ],
+  "tags": []
 }

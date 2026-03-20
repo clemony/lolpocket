@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 02/12/2026 04:58:10 AM CST
+// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
 
 export const tagToItem: Record<string, number[]> = {
   "Mage": [
@@ -182,6 +182,7 @@ export const tagToItem: Record<string, number[]> = {
     6664,
     6665,
     8020,
+    223069,
     228001,
     443054,
     443058,
@@ -483,6 +484,15 @@ export const tagToItem: Record<string, number[]> = {
   ],
   "Magic pen": [
     3302
+  ],
+  "Special": [
+    3330,
+    3599,
+    3600,
+    3901,
+    3902,
+    3903,
+    7050
   ],
   "Attack speed": [
     3504

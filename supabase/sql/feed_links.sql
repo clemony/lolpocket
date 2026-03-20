@@ -9,6 +9,7 @@ create table if not exists public.feed_links (
   url text not null,
   permalink text not null,
   author text,
+  excerpt text,
   flair text,
   score integer not null default 0,
   num_comments integer not null default 0,
@@ -22,6 +23,9 @@ create table if not exists public.feed_links (
   updated_at timestamptz not null default timezone('utc', now()),
   unique (source, source_id)
 );
+
+alter table public.feed_links
+  add column if not exists excerpt text;
 
 create index if not exists feed_links_source_created_at_idx
   on public.feed_links (source_created_at desc);

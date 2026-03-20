@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { LazyLogin } from "#components"
 import { userMenu } from "~/components/layout/navigation/content/nav-user-menu"
 import { getSummonerIcon } from "~/domain/utils/img"
 const emit = defineEmits(["openSearch", "closeSidebar"])
@@ -12,35 +11,18 @@ const items = [
     label: "Resources",
     ui: {
       content: "w-54",
-      leadingIcon: "scale-100",
-    },
+      leadingIcon: "scale-100"
+    }
   },
   {
     label: "Support",
     icon: "i-lucide-circle-question-mark",
     children: helpNav.filter((i) => i !== undefined),
     ui: {
-      content: "w-54",
-    },
-  },
+      content: "w-54"
+    }
+  }
 ]
-
-const toast = useToast()
-
-function toasting() {
-  toast.add({
-    title: "Event added to calendar",
-    orientation: "horizontal",
-    icon: "i-lucide-calendar-days",
-  })
-}
-const overlay = useOverlay()
-
-const login = overlay.create(LazyLogin)
-async function openLogin() {
-  emit("closeSidebar", true)
-  return login.open()
-}
 </script>
 
 <template>
@@ -53,22 +35,12 @@ async function openLogin() {
           <h3>lolpocket</h3>
         </ULink>
 
-        <UPopover>
-          <UButton icon="i-more" variant="ghost" />
-          <template #content>
-            <ul>
-              <UButton as="li" @click="toasting()"> toast </UButton>
-
-              <UButton as="li" @click="openLogin()"> open log i </UButton>
-            </ul>
-          </template>
-        </UPopover>
         <UButton
           icon="x"
           size="sm"
           :ui="{
             base: '',
-            leadingIcon: '**:stroke-[2.4]',
+            leadingIcon: '**:stroke-[2.4]'
           }"
           variant="ghost" />
       </div>
@@ -81,7 +53,7 @@ async function openLogin() {
         :ui="{
           base: 'w-full cursor-text border border-p4/60 inset-shadow-sm hover:bg-p0! hover:noise-0',
           label: 'grow text-pc/40',
-          leadingIcon: 'text-pc/50 drop-shadow-2xs **:stroke-[2.2]',
+          leadingIcon: 'text-pc/50 drop-shadow-2xs **:stroke-[2.2]'
         }"
         @click="emit('openSearch', true)">
         <template #trailing>
@@ -116,7 +88,7 @@ async function openLogin() {
         :kbd="{
           ui: { wrapper: 'mr-1' },
           size: 'md',
-          color: 'neutral',
+          color: 'neutral'
         }"
         :ui="{ base: 'pl-4.5', label: 'text-md font-semibold' }"
         as="li"
@@ -135,8 +107,8 @@ async function openLogin() {
               label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
               trailingIcon: cn(
                 'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-                open ? 'rotate-180' : '',
-              ),
+                open ? 'rotate-180' : ''
+              )
             }" />
         </template>
 
@@ -147,7 +119,7 @@ async function openLogin() {
               size="lg"
               :ui="{
                 label: 'text-md font-semibold',
-                trailingIcon: 'size-4',
+                trailingIcon: 'size-4'
               }" />
           </ul>
         </template>
@@ -166,8 +138,8 @@ async function openLogin() {
               label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
               trailingIcon: cn(
                 'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-                open ? 'rotate-180' : '',
-              ),
+                open ? 'rotate-180' : ''
+              )
             }" />
         </template>
 
@@ -178,7 +150,7 @@ async function openLogin() {
               :ui="{
                 base: 'px-3.5',
                 leadingIcon: 'size-5',
-                label: '*:first:text-md *:first:leading-7 *:last:text-sm',
+                label: '*:first:text-md *:first:leading-7 *:last:text-sm'
               }" />
           </ul>
         </template>
@@ -198,8 +170,8 @@ async function openLogin() {
             label: 'font-semibold opacity-50 group-hover/btn:opacity-100',
             trailingIcon: cn(
               'size-4.5 opacity-50 **:stroke-[2.4] group-hover/btn:opacity-100',
-              open ? 'rotate-180' : '',
-            ),
+              open ? 'rotate-180' : ''
+            )
           }" />
       </template>
 
@@ -219,7 +191,7 @@ async function openLogin() {
         side: 'left',
         align: 'start',
         sideOffset: 0,
-        alignOffset: -2,
+        alignOffset: -2
       }"
       :ui="{ content: 'w-64 pt-1' }">
       <template #default="{ open }">
@@ -230,14 +202,14 @@ async function openLogin() {
           :ui="{
             trailingIcon: cn(
               'transition-rotate duration-200',
-              open ? 'rotate-180' : '',
-            ),
+              open ? 'rotate-180' : ''
+            )
           }"
           leading-icon="i-external"
           label="Resources" />
       </template>
     </UDropdownMenu>
-
+    <TestingMenu />
     <Grow />
     <!-- user -->
     <UDropdownMenu
@@ -249,38 +221,37 @@ async function openLogin() {
         itemLeadingAvatar: '-ml-1.5',
         content: 'w-(--reka-dropdown-menu-trigger-width)',
         itemLeadingIcon: 'size-4.5',
-        itemTrailingIcon: 'opacity-70 group-hover:opacity-100',
+        itemTrailingIcon: 'opacity-70 group-hover:opacity-100'
       }">
       <UButton
         size="custom"
-        trailing-icon="up-down"
         :ui="{
           base: 'sticky bottom-0 h-20 w-full gap-3 rounded-none border-x-0 border-b-0',
-          trailingIcon: 'size-4 opacity-50 group-hover/btn:opacity-100',
+          trailingIcon: 'size-4 opacity-50 group-hover/btn:opacity-100'
         }"
         variant="outline">
-        <template #leading>
-          <LazyUChip
-            size="md"
-            square
-            position="bottom-right"
-            :ui="{ root: 'align-center' }"
-            :color="user().matchStatus ? 'p4' : 'p3'"
-            inset>
-            <UAvatar
-              :src="getSummonerIcon(account?.icon) ?? null"
-              icon="i-plug"
-              size="2xl" />
-          </LazyUChip>
-        </template>
+        <UUser
+          :avatar="{
+            src: getSummonerIcon(account?.icon) ?? null,
+            size: '11',
+            chip: {
+              inset: true,
+              size: 'md',
+              color: user().matchStatus ? 'p4' : 'p3',
+
+              position: 'bottom-right'
+            },
+            icon: 'i-plug'
+          }"
+          trailing-icon="up-down"
+          :description="user().matchStatus ? 'In Game' : 'afk'"
+          :name="account?.name ?? account?.username ?? 'Not Connected'" />
         <div class="flex grow flex-col items-start gap-0">
-          <span class="truncate text-md! font-bold">{{
-            account?.name ?? account?.username ?? "Not Connected"
-          }}</span>
+          <span class="truncate text-md! font-bold">{{}}</span>
           <span
             class="align-center inline-flex items-center gap-2 justify-self-start text-xs opacity-50">
-            {{ user().matchStatus ? "In Game" : "afk" }}</span
-          >
+            {{
+          }}</span>
         </div>
       </UButton>
 

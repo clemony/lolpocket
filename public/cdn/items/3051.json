@@ -58,5 +58,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Movement",
+    "Onhit effects"
   ]
 }

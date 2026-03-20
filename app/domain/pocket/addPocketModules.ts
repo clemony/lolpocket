@@ -37,7 +37,7 @@ export function newRuneSet(): RuneSet {
 
 export function resetRuneSet(set: RuneSet): RuneSet {
   const id = set.id
-  const a = getDeepDefaults(RuneSetSchema)
+  const a = getDeepDefaults(runeSetSchema)
   a.id = id
   return a
 }
@@ -47,7 +47,7 @@ export function addSpellSet(pocket: Pocket | string) {
   const p = pType(pocket)
   if (!p?.spells) return
   set = p.spells
-  const a = getDeepDefaults(SpellSetSchema)
+  const a = getDeepDefaults(spellSetSchema)
   a.id = crypto.randomUUID()
   set.push(a)
 }

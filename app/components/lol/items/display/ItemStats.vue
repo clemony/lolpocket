@@ -4,24 +4,20 @@ import { statIndex } from "#shared/constants/common/stat-index"
 const {
   class: className,
   stats,
-  layout,
+  layout
 } = defineProps<{
-  stats: Record<string, number>
+  stats: Record<string, number> | undefined
   class?: HTMLAttributes["class"]
   layout?: string
 }>()
 </script>
 
 <template>
-  <ul :class="cn('grid w-full items-center gap-y-1', className)">
+  <ul v-if="stats" :class="cn('grid w-full items-center gap-y-1', className)">
     <li
       v-for="[k, v] in Object.entries(stats)"
       :key="k"
-      :class="
-        cn('inline-flex gap-1 text-xs leading-4.5 text-wrap', {
-          'text-sm': layout === 'command',
-        })
-      "
+      :class="cn('inline-flex gap-1 text-sm leading-5 text-wrap')"
       :data-color="k">
       <span class="font-medium">{{ v ?? "" }}</span>
       <Icon

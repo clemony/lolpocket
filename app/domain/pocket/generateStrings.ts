@@ -3,6 +3,7 @@ import { championIndex } from "#shared/constants/champions/championIndex"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 import { generate } from "random-words"
 
+const articles = ["a", "my", "this", "the", "an"]
 const moreWords = [
   "😘",
   "👏",
@@ -54,7 +55,6 @@ const moreWords = [
   "GOATED",
   "Gold Funnel",
   "HAM",
-  "Hardrop-shadow-2xsuck",
   "Hypercarry",
   "Inting",
   "Inting Sion",
@@ -96,7 +96,7 @@ const moreWords = [
   "Vision Score",
   "Ward Hop",
   "xD",
-  "Zoning Ult",
+  "Zoning Ult"
 ].sort()
 
 // Pick a random element from an array

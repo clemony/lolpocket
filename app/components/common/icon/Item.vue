@@ -1,33 +1,51 @@
 <script setup lang="ts">
 import type { AvatarProps } from "@nuxt/ui"
 
-const {
-  id,
-  class: className,
-  loadingIcon = "default",
-  map,
-  disabled,
-  ui,
-} = defineProps<{
-  id: number | null
-  class?: HTMLAttributes["class"]
-  loadingIcon?: LoadingStyle
-  map?: number
-  side?: Side
-  disabled?: boolean
-  ui?: AvatarProps["ui"]
-}>()
+const props = withDefaults(
+  defineProps<
+    AvatarProps & {
+      id: number | null
+      class?: HTMLAttributes["class"]
+      loadingIcon?: LoadingStyle
+      map?: number
+      side?: Side
+      disabled?: boolean
+      ui?: AvatarProps["ui"]
+      effects?: boolean
+    }
+  >(),
+  {
+    effects: true
+  }
+)
+
+const delegated = reactiveOmit(props, "class")
 </script>
 
 <template>
   <Avatar
-    v-if="id"
-    :id
-    class="size-17"
+    v-bind="delegated"
+    :ui="{
+      ...props.ui,
+      image: 'shadow-sm drop-shadow-sm drop-shadow-black/10',
+      root: cn(
+        { 'hover-3d': props.effects !== false },
+        props.ui?.root,
+        props?.class
+      )
+    }"
     :src="id ? `/img/items/${id}.webp` : undefined"
-    :label="id ? itemNameById(id) : ''"
-    :loading-icon
-    :disabled>
+    :label="id ? itemNameById(id) : ''">
+    <template v-if="props.effects !== false">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </template>
     <template #content>
       <LazyItemTooltip v-if="id" :id :map />
     </template>

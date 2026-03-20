@@ -1,0 +1,19 @@
+{
+  "id": 2001,
+  "name": "Recall",
+  "description": "Teleports your champion to the Summoning Platform after 8 seconds. Any damage taken will cancel the teleport.",
+  "gold": {
+    "base": 60,
+    "purchasable": false,
+    "total": 60,
+    "sell": 42
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    30,
+    35
+  ],
+  "tags": []
+}

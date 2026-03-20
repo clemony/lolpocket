@@ -1,0 +1,29 @@
+export type SeparatorColor = "n5" | "neutral" | "p2" | "p3" | "p4"
+export type SeparatorPlacement = "start" | "center" | "end"
+export type SeparatorOrientation = "horizontal" | "vertical"
+export type SeparatorSize = "xs" | "sm" | "md" | "lg"
+
+export interface SeparatorProps {
+  class?: HTMLAttributes["class"]
+  labelClass?: HTMLAttributes["class"]
+  label?: string
+  color?: SeparatorColor
+  placement?: SeparatorPlacement
+  size?: SeparatorSize
+  orientation?: SeparatorOrientation
+  underline?: boolean
+  labelPlacement?: SeparatorPlacement
+  ui?: Partial<
+    Record<
+      | "root"
+      | "label"
+      | "leading"
+      | "separator"
+      | "leadingIcon"
+      | "trailingIcon",
+      string
+    >
+  >
+  trailingIcon?: string
+  leadingIcon?: string
+}

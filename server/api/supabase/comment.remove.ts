@@ -1,4 +1,5 @@
 import { createSupabaseClient } from "~~/server/api/client.supabase"
+import { extractReadableText } from "~~/shared/utils/tiptap/extractReadableText"
 
 export default defineEventHandler(async (event) => {
   const { client, user } = await createSupabaseClient(event)
@@ -9,7 +10,7 @@ export default defineEventHandler(async (event) => {
   if (!body) {
     throw createError({
       statusCode: 404,
-      statusMessage: "Missing body context",
+      statusMessage: "Missing body context"
     })
   }
 
@@ -21,7 +22,7 @@ export default defineEventHandler(async (event) => {
       p_content: null,
       p_html: "<p>Comment deleted by user.</p>",
       p_removed: "user",
-      p_removed_content: content,
+      p_removed_content: content
     })
     console.log("📎 - data:", data)
     if (error) {
@@ -35,7 +36,7 @@ export default defineEventHandler(async (event) => {
     const { data, error } = await client.rpc("update_comment", {
       p_comment_id: body.comment_id,
       p_content: null,
-      p_html: "<p>Comment removed by moderator.</p>",
+      p_html: "<p>Comment removed by moderator.</p>"
     })
     if (error) {
       console.error("Insert RPC error", error)

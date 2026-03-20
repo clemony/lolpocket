@@ -12,8 +12,8 @@ const toolbarOpen = shallowRef<boolean>(false)
       left: 'min-h-max w-106 min-w-90 pt-10',
       center: cn(
         'mx-auto min-h-max max-w-(--ui-container) justify-self-center lg:w-full',
-        collapsed ? 'px-10' : 'pl-8 pr-16',
-      ),
+        collapsed ? 'px-10' : 'pl-8 pr-16'
+      )
     }">
     <template v-if="!collapsed" #left>
       <UPageAside v-auto-animate>
@@ -28,7 +28,7 @@ const toolbarOpen = shallowRef<boolean>(false)
       headline="Library"
       :ui="{
         root: 'max-w-(--ui-container) overflow-hidden',
-        headline: 'mb-0',
+        headline: 'mb-0'
       }">
       <template #headline>
         <UButton
@@ -39,7 +39,7 @@ const toolbarOpen = shallowRef<boolean>(false)
           :ui="{
             base: 'w-54 **:text-n5',
             label: 'text-xs font-semibold',
-            leadingIcon: 'size-4.5',
+            leadingIcon: 'size-4.5'
           }"
           :leading-icon="collapsed ? 'i-right-to-line' : 'i-left-to-line'"
           @click="toggleLeft()" />
@@ -65,7 +65,7 @@ const toolbarOpen = shallowRef<boolean>(false)
         v-model:open="toolbarOpen"
         :ui="{
           content:
-            'bg-unset flex flex-col items-center gap-4 pb-0 shadow-none ring-0 drop-shadow-none backdrop-blur-none',
+            'bg-unset flex flex-col items-center gap-4 pb-0 shadow-none ring-0 drop-shadow-none backdrop-blur-none'
         }"
         :content="{ side: 'top' }">
         <UButton
@@ -76,7 +76,7 @@ const toolbarOpen = shallowRef<boolean>(false)
           active-color="neutral"
           :ui="{
             base: 'pointer-events-auto sticky bottom-[4%] shrink-0 rounded-full drop-shadow-md backdrop-blur-md fx-0 not-open:drop-shadow-black/4 open:drop-shadow-black/18',
-            leadingIcon: cn('group-open/btn:**:text-nc'),
+            leadingIcon: cn('group-open/btn:**:text-nc')
           }"
           :icon="toolbarOpen ? 'i-up' : 'i-filter'" />
 

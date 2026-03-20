@@ -21,19 +21,34 @@ const keywordMatchers: Array<[string, RegExp]> = [
   ["swarm", /\bswarm\b/i],
 ]
 
-function slugifyKeyword(value: string) {
+const NON_ALPHANUMERIC_RE = /[^a-z0-9]+/g
+const TRIM_DASHES_RE = /^-+|-+$/g
+const SPLIT_RE = /\s+/g
+
+function slugifyKeyword(value: string): string {
   return value
     .toLowerCase()
     .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
+    .replace(NON_ALPHANUMERIC_RE, "-")
+    .replace(TRIM_DASHES_RE, "")
+}
+
+export function extractKeywords(input: string): string[] {
+  const keywords = new Set(
+    input
+      .split(SPLIT_RE)
+      .map(slugifyKeyword)
+      .filter(Boolean),
+  )
+
+  return [...keywords].sort((a, b) => a.localeCompare(b))
 }
 
 export function deriveFeedKeywords(input: {
   flair?: string | null
   subreddit: string
   title: string
-}) {
+}): string[] {
   const tags = new Set<string>(["reddit", slugifyKeyword(input.subreddit)])
   const haystack = `${input.title} ${input.flair ?? ""}`
 
@@ -46,5 +61,5 @@ export function deriveFeedKeywords(input: {
     if (pattern.test(haystack)) tags.add(keyword)
   }
 
-  return [...tags].sort()
+  return [...tags].sort((a, b) => a.localeCompare(b))
 }

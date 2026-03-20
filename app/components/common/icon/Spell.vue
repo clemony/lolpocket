@@ -5,7 +5,7 @@ const {
   id,
   side = "top",
   class: className,
-  loadingType,
+  loadingType
 } = defineProps<{
   class?: HTMLAttributes["class"]
   id: number | undefined
@@ -27,8 +27,8 @@ const pinned = shallowRef<boolean>(false)
     trailing-icon="i-right-click"
     :ui="{
       content: cn('h-fit! max-h-80! w-full max-w-80', {
-        'rounded-xl  px-1': pinned,
-      }),
+        'rounded-xl  px-1': pinned
+      })
     }"
     @pinned="pinned = true"
     @unpinned="pinned = false">
@@ -38,10 +38,9 @@ const pinned = shallowRef<boolean>(false)
       :class="
         cn(
           {
-            'size-14 rounded-lg shadow-sm shadow-black/30 drop-shadow-sm':
-              loaded,
+            'rounded-lg shadow-sm shadow-black/30 drop-shadow-sm': loaded
           },
-          className,
+          className
         )
       "
       :loading-type

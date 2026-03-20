@@ -4,14 +4,13 @@ const { class: className } = defineProps<{
 }>()
 
 const { allies, stats } = storeToRefs(sChampion())
-
-/* const points = computed(() => buildAllyBubbleData(allies.value ?? []))
-const colorMap = computed(() => getAllyColorMap(points.value)) */
 </script>
 
 <template>
   <UPageSection title="Allies" :class="cn('flex flex-col gap-8', className)">
-    <!--  <LazyAllyBubbleChart :points :color-map /> -->
+    <LazyAllyBubbleChart
+      v-if="allies?.length"
+      :allies="allies" />
 
     <table class="table max-w-220 select-none">
       <!-- head -->

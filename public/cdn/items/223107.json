@@ -1,7 +1,7 @@
 {
   "id": 223107,
   "name": "Redemption",
-  "description": "0 Health\n15 Ability Haste\n100% Base Mana Regen\n16% Heal and Shield Power\n\nACTIVE (0s)\nIntervention\nTarget an area within. After 2.5 seconds, call down a beam of light to restore Health to allies and damage enemy champions.",
+  "description": "30 Ability Power\n15 Ability Haste\n100% Base Mana Regen\n16% Heal and Shield Power\n\nACTIVE (0s)\nIntervention\nTarget an area within. After 2.5 seconds, call down a beam of light to restore Health to allies and damage enemy champions.",
   "gold": {
     "base": 2500,
     "purchasable": true,
@@ -10,5 +10,6 @@
   },
   "maps": [
     30
-  ]
+  ],
+  "tags": []
 }

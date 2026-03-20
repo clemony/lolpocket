@@ -9,11 +9,19 @@
     {
       "unique": true,
       "mythic": false,
-      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage."
+      "name": "Reinforced",
+      "effects": "While no enemy <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions or <img src=\"/img/icons/rift-herald-mercenary.webp\" class=\"tip-icon\" />Rift Herald Mercenary are within range, turrets gain 80% damage reduction (including against true damage)."
     },
     {
       "unique": true,
       "mythic": false,
+      "name": "Melee Weakness",
+      "effects": "Turrets take 20% increased damage from <img src=\"/img/icons/melee.webp\" class=\"tip-icon \" />melee champions."
+    },
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Regeneration",
       "effects": "Base turrets have health regeneration, but cannot regenerate past their current segment."
     }
   ],
@@ -31,5 +39,6 @@
     21,
     30,
     35
-  ]
+  ],
+  "tags": []
 }

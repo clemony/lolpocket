@@ -1,11 +1,23 @@
-export function useCooldown(puuid: string, action: string, wait: number) {
+import type { MaybeRefOrGetter } from "vue"
+
+export function useCooldown(
+  puuid: MaybeRefOrGetter<string>,
+  action: string,
+  wait: number
+) {
   const now = ref(Date.now())
 
   useIntervalFn(() => {
     now.value = Date.now()
   }, 1000)
 
-  const entry = computed(() => cds().get(puuid, action))
+  const entry = computed(() => {
+    const key = toValue(puuid)
+    if (!key)
+      return null
+
+    return cds().get(key, action)
+  })
 
   const timeRemaining = computed(() => {
     if (!entry.value) return 0

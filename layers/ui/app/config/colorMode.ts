@@ -6,7 +6,7 @@ export const colorModeIconClass: Record<string, string> = {
   dark: "**:stroke-[2.3]",
   dim: "scale-120",
   light: "scale-120",
-  system: "scale-90 **:stroke-[2.6]",
+  system: "scale-90 **:stroke-[2.6]"
 }
 export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
   const mode = useColorMode()
@@ -20,8 +20,8 @@ export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
       },
       slot: "theme" as const,
       ui: {
-        itemLeadingIcon: "scale-90  **:stroke-[2.6]",
-      },
+        itemLeadingIcon: "scale-90  **:stroke-[2.6]"
+      }
     },
     {
       checked: mode.value === "light",
@@ -32,8 +32,8 @@ export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
       },
       slot: "theme" as const,
       ui: {
-        itemLeadingIcon: "scale-130 translate-y-0.25",
-      },
+        itemLeadingIcon: "scale-130 translate-y-0.25"
+      }
     },
     {
       checked: mode.value === "dim",
@@ -44,8 +44,8 @@ export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
       },
       slot: "theme" as const,
       ui: {
-        itemLeadingIcon: "scale-120  **:stroke-[1.84]",
-      },
+        itemLeadingIcon: "scale-120  **:stroke-[1.84]"
+      }
     },
     {
       checked: mode.value === "dark",
@@ -55,39 +55,44 @@ export const colorModeTabs = computed<DropdownMenuItem[]>(() => {
       onUpdateChecked(checked: boolean) {
         mode.value = "dark"
       },
-      slot: "theme" as const,
-    },
+      slot: "theme" as const
+    }
   ]
 })
 
 export interface QuoteData {
   quote: string
   source: string
+  lpQuote?: string
 }
 
 export const modeQuote: Record<string, QuoteData> = {
   system: {
     quote: "I do not care at all.",
-    source: "Orrn",
+    lpQuote: "There are two pockets within you.",
+    source: "Orrn"
   },
   light: {
     quote: "If you can smile, you can be the light.",
-    source: "Lux",
+    lpQuote: "Please, keep it in your pocket.",
+    source: "Lux"
   },
   dawn: {
     quote: "The dawn has arrived. The day is upon us.",
-    source: "Leona",
+    source: "Leona"
   },
   dim: {
     quote: "Dusk approaches. Embrace the night.",
-    source: "Diana",
+    lpQuote: "Always Salty.",
+    source: "Diana"
   },
   dark: {
     quote: "The truth lies in darkness.",
-    source: "Zed",
+    lpQuote: "The lolpocat comes at night.",
+    source: "Zed"
   },
   frost: {
     quote: "Sometimes icy heart just needs warm smile.",
-    source: "Braum",
-  },
+    source: "Braum"
+  }
 }

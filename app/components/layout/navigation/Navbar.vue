@@ -9,9 +9,9 @@ const sidebarOpen = shallowRef<boolean>(false)
     title="LP"
     :ui="{
       root: 'z-101',
-      content: 'max-h-screen overflow-hidden',
+      content: 'max-h-screen w-120 overflow-hidden',
       title:
-        'hover:noise rounded-lg py-1.5 text-2xl font-black! hover:bg-neutral hover:text-nc hover:shadow-sm',
+        'hover:noise rounded-lg py-1.5 text-2xl font-black! hover:bg-neutral hover:text-nc hover:shadow-sm'
     }">
     <div class="flex items-center gap-4">
       <slot name="center-leading" />

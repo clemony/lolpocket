@@ -1,4 +1,5 @@
 import { createSupabaseClient } from "~~/server/api/client.supabase"
+import { renderStaticHTML } from "~~/shared/utils/tiptap/renderStaticHTML"
 
 export default defineEventHandler(async (event) => {
   const { client, user } = await createSupabaseClient(event)
@@ -8,7 +9,7 @@ export default defineEventHandler(async (event) => {
   if (!body) {
     throw createError({
       statusCode: 404,
-      statusMessage: "Missing body context",
+      statusMessage: "Missing body context"
     })
   }
 
@@ -17,7 +18,7 @@ export default defineEventHandler(async (event) => {
     p_parent_id: body.parent_id || null,
     p_thread_id: body.thread_id,
     p_content: body.content, // stored JSON
-    p_html: renderStaticHTML(body.content), // server-generated HTML
+    p_html: renderStaticHTML(body.content) // server-generated HTML
   })
 
   if (error) {

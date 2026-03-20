@@ -36,7 +36,7 @@
     {
       "id": 2524,
       "name": "Bandlepipes",
-      "gold": 2000
+      "gold": 2300
     },
     {
       "id": 2421,
@@ -102,5 +102,13 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Mage",
+    "Tank",
+    "Support"
   ]
 }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { FormSubmitEvent } from "@nuxt/ui"
 import { parse } from "valibot"
+import { extractReadableText } from "~~/shared/utils/tiptap/extractReadableText"
 import type { ReportOption } from "./reportOptions"
 import { reportOptions } from "./reportOptions"
 
@@ -23,15 +24,15 @@ const state = reactive({
     comment_id: comment.id,
     reporter_id: user().account?.puuid ?? "",
     content_text: undefined as string | undefined,
-    created: comment.created,
-  },
+    created: comment.created
+  }
 })
 
 const options = computed<ReportOption[]>(() => reportOptions.filter(Boolean))
 
 const formErrors = computed(
   () =>
-    (form.value?.errors?.value ?? []) as { path?: string; message?: string }[],
+    (form.value?.errors?.value ?? []) as { path?: string; message?: string }[]
 )
 
 async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
@@ -43,8 +44,8 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     ...event.data,
     comment: {
       ...event.data.comment,
-      content_text,
-    },
+      content_text
+    }
   }
 
   parse(reportSchema, payload)
@@ -52,7 +53,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
   const toast = useToast()
   toast.add({
     title: "You submitted the following values:",
-    description: "",
+    description: ""
   })
 }
 </script>
@@ -123,7 +124,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
                 name="error" />
               <span
                 v-for="(reason, i) in formErrors.filter(
-                  (e) => e.path === 'options',
+                  (e) => e.path === 'options'
                 )"
                 :key="i">
                 {{ reason.message }}

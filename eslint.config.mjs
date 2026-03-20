@@ -69,7 +69,7 @@ export default antfu(
             order: { type: "asc" },
           },
         ],
-        "jsonc/comma-dangle": ["error", "never"],
+        "jsonc/comma-dangle": "off",
       },
     },
 
@@ -218,7 +218,7 @@ export default antfu(
       "better-tailwindcss/no-duplicate-classes": "warn",
     },
     files: ["layers/ui/app/theme/**/*.ts"],
-  }
+  },
 )
   .override(
     "antfu/perfectionist/setup",
@@ -255,10 +255,11 @@ export default antfu(
           },
         ],
       },
-    }
+    },
   )
   .overrideRules({
     "antfu/if-newline": "off",
+    "e18e/prefer-array-to-sorted": "off",
     "no-console": "off",
     "no-irregular-whitespace": "off",
     "no-undef": "off",
@@ -283,5 +284,5 @@ export default antfu(
       rules: {
         "regexp/no-legacy-features": "off",
       },
-    }
+    },
   )

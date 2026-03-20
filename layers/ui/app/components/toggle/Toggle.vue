@@ -1,39 +1,14 @@
 <script setup lang="ts">
-import type { ToggleEmits, ToggleProps } from "reka-ui"
+import type { ToggleEmits } from "reka-ui"
 import { Toggle, useForwardPropsEmits } from "reka-ui"
 import { tv } from "tailwind-variants"
+import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
 import buttonTheme from "../../theme/button"
-
-type ButtonColor = keyof typeof buttonTheme.variants.color
-type ButtonVariant = keyof typeof buttonTheme.variants.variant
-type ButtonSize = keyof typeof buttonTheme.variants.size
-
-type ToggleButtonProps = ToggleProps & {
-  class?: HTMLAttributes["class"]
-  activeClass?: string
-  inactiveClass?: string
-  ui?: {
-    base?: string
-    label?: string
-    leadingIcon?: string
-    trailingIcon?: string
-  }
-  label?: string
-  icon?: string
-  trailingIcon?: string
-  color?: ButtonColor
-  activeColor?: ButtonColor
-  variant?: ButtonVariant
-  activeVariant?: ButtonVariant
-  size?: ButtonSize
-  square?: boolean
-  rounded?: boolean
-}
 
 const props = withDefaults(defineProps<ToggleButtonProps>(), {
   color: "p1",
   variant: "solid",
-  size: "md",
+  size: "md"
 })
 
 const emits = defineEmits<ToggleEmits>()
@@ -53,7 +28,7 @@ const delegatedProps = reactiveOmit(
   "activeVariant",
   "size",
   "square",
-  "rounded",
+  "rounded"
 )
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
@@ -71,8 +46,8 @@ const styles = computed(() =>
     variant: props.variant,
     size: props.size,
     square: props.square ?? undefined,
-    rounded: props.rounded ?? undefined,
-  }),
+    rounded: props.rounded ?? undefined
+  })
 )
 </script>
 
@@ -85,15 +60,13 @@ const styles = computed(() =>
         class: [
           getActiveBaseClasses(modelValue === true),
           props.ui?.base,
-          props.class,
+          props.class
         ],
         active: modelValue === true,
         ...(modelValue && props.activeVariant
           ? { variant: props.activeVariant }
           : {}),
-        ...(modelValue && props.activeColor
-          ? { color: props.activeColor }
-          : {}),
+        ...(modelValue && props.activeColor ? { color: props.activeColor } : {})
       })
     ">
     <Icon
@@ -103,7 +76,7 @@ const styles = computed(() =>
       :class="
         styles?.leadingIcon?.({
           class: props.ui?.leadingIcon,
-          active: modelValue === true,
+          active: modelValue === true
         })
       " />
 
@@ -113,7 +86,7 @@ const styles = computed(() =>
       :class="
         styles?.label?.({
           class: props.ui?.label,
-          active: modelValue === true,
+          active: modelValue === true
         })
       ">
       {{ props.label }}
@@ -126,7 +99,7 @@ const styles = computed(() =>
       :class="
         styles?.trailingIcon?.({
           class: props.ui?.trailingIcon,
-          active: modelValue === true,
+          active: modelValue === true
         })
       " />
 

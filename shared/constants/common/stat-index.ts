@@ -4,7 +4,7 @@ export const statTotalGold = {
   id: "goldPer10",
   name: "Total Gold Cost",
   abbr: "Total",
-  description: "",
+  description: ""
 }
 
 export const statIndex: Record<string, StatIndex> = {
@@ -12,202 +12,202 @@ export const statIndex: Record<string, StatIndex> = {
 
   //
   abilityHaste: {
-    color: "var(--color-ah)",
+    color: "insp",
     id: "abilityHaste",
     key: "AH",
     name: "Ability Haste",
     description: "",
-    group: "spells",
+    group: "spells"
   },
   abilityPower: {
-    color: "var(--color-sorc)",
+    color: "sorc",
     id: "abilityPower",
     key: "AP",
     name: "Ability Power",
     description: "",
-    group: "spells",
+    group: "spells"
   },
   //
   healAndShieldPower: {
     id: "healAndShieldPower",
     name: "Heal & Shield Power",
 
-    color: "var(--color-enchanter)",
+    color: "insp",
     key: "HSP",
     abbr: "Heal & Shield +",
     description: "",
     group: "spells",
-    unit: "%",
+    unit: "%"
   },
   percentMagicPenetration: {
-    color: "var(--color-mpen)",
+    color: "sorc",
     id: "percentMagicPenetration",
     key: "MPEN",
     name: "Magic Penetration",
     abbr: "Magic Pen",
     description: "",
     group: "spells",
-    unit: "%",
+    unit: "%"
   },
 
   // physical
 
   //
   armorPenetration: {
-    color: "var(--color-apen)",
+    color: "dom",
     id: "armorPenetration",
     key: "APEN",
     name: "Armor Penetration",
     abbr: "Armor Pen",
     description: "",
-    group: "physical",
+    group: "physical"
   },
   attackDamage: {
-    color: "var(--color-ad)",
+    color: "pre",
     id: "attackDamage",
     key: "AD",
     name: "Attack Damage",
     description: "",
-    group: "physical",
+    group: "physical"
   },
   attackSpeed: {
-    color: "var(--color-as)",
+    color: "pre",
     id: "attackSpeed",
     key: "AS",
     name: "Attack Speed",
     abbr: "Bonus AS",
     description: "",
     group: "physical",
-    unit: "%",
+    unit: "%"
   },
   criticalStrikeChance: {
-    color: "var(--color-domination)",
+    color: "pre",
     id: "criticalStrikeChance",
     key: "Crit",
     name: "Critical Chance",
     abbr: "Crit Chance",
     description: "",
     group: "physical",
-    unit: "%",
+    unit: "%"
   },
   criticalStrikeDamage: {
-    color: "var(--color-fighter)",
+    color: "dom",
     id: "criticalStrikeDamage",
     name: "Critical Damage",
     abbr: "Crit Dmg",
     description: "",
-    group: "physical",
+    group: "physical"
   },
   lethality: {
-    color: "var(--color-apen)",
+    color: "dom",
     id: "lethality",
     key: "LTY",
     name: "Lethality",
     abbr: "Lethality",
     description: "",
-    group: "physical",
+    group: "physical"
   },
   lifesteal: {
-    color: "var(--color-domination)",
+    color: "dom",
     id: "lifesteal",
     key: "LS",
     name: "Lifesteal",
     abbr: "Lifesteal",
     description: "",
-    group: "physical",
+    group: "physical"
   },
 
   // basic
 
   health: {
-    color: "var(--color-res)",
+    color: "res",
     id: "health",
     key: "HP",
     name: "Health",
     description: "",
-    group: "basic",
+    group: "basic"
   },
   healthRegen: {
-    color: "var(--color-res)",
+    color: "res",
     id: "healthRegen",
     key: "HP/5",
     name: "Health Regen",
     description: "",
     group: "basic",
-    unit: "%",
+    unit: "%"
   },
   mana: {
-    color: "var(--color-insp)",
+    color: "insp",
     id: "mana",
     key: "MP",
     name: "Mana",
     description: "",
-    group: "basic",
+    group: "basic"
   },
   manaRegen: {
-    color: "var(--color-insp)",
+    color: "insp",
     id: "manaRegen",
     key: "MP/5",
     name: "Mana Regen",
     description: "",
     group: "basic",
-    unit: "%",
+    unit: "%"
   },
 
   // defense
 
   armor: {
-    color: "var(--color-iron)",
+    color: "pre",
     id: "armor",
     name: "Armor",
     description: "",
-    group: "defense",
+    group: "defense"
   },
   magicResistance: {
-    color: "var(--color-mr)",
+    color: "sorc",
     id: "magicResistance",
     key: "MR",
     name: "Magic Resist",
     description: "",
-    group: "defense",
+    group: "defense"
   },
 
   // utility
 
   //
   goldPer10: {
-    color: "var(--color-g)",
+    color: "pre",
     id: "goldPer10",
     key: "GP/10",
     name: "Gold / 10",
     description: "",
-    group: "utility",
+    group: "utility"
   },
   //
   omnivamp: {
-    color: "var(--color-vamp)",
+    color: "dom",
     id: "omnivamp",
     key: "Vamp",
     name: "Omnivamp",
     abbr: "Omnivamp",
     description: "",
-    unit: "%",
+    unit: "%"
   },
   percentMovespeed: {
-    color: "var(--color-white-70)",
+    color: "var(--color-p1",
     id: "percentMovespeed",
     key: "MS",
     name: "Movespeed",
     description: "",
     group: "utility",
-    unit: "%",
+    unit: "%"
   },
   tenacity: {
-    color: "var(--color-platinum)",
+    color: "p1",
     id: "tenacity",
     name: "Tenacity",
     description: "",
-    group: "utility",
+    group: "utility"
   },
 
   // champion
@@ -219,42 +219,42 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Acqusition",
     description:
       "The range at which a unit acquires basic attack targets when a target unit is not specified by the player.",
-    group: "champion",
+    group: "champion"
   },
   attackCastTime: {
     id: "attackCastTime",
     name: "Attack Cast Time",
     abbr: "Cast Time",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   attackDelayOffset: {
     id: "attackDelayOffset",
     name: "Attack Delay Offset",
     abbr: "Delay Offset",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   attackRange: {
-    color: "var(--color-white-70)",
+    color: "white-70",
     id: "attackRange",
     name: "Range",
     description: "Range of the champion's basic attack.",
-    group: "champion",
+    group: "champion"
   },
   attackSpeedRatio: {
     id: "attackSpeedRatio",
     name: "Attack Speed Ratio",
     abbr: "AS Ratio",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   attackTotalTime: {
     id: "attackTotalTime",
     name: "Attack Total Time",
     abbr: "Total Time",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   criticalStrikeDamageModifier: {
     id: "criticalStrikeDamageModifier",
@@ -262,31 +262,31 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Crit Modifier",
     description: "",
     group: "champion",
-    unit: "%",
+    unit: "%"
   },
   flatMagicPenetration: {
-    color: "var(--color-mpen)",
+    color: "sorc",
     id: "flatMagicPenetration",
     key: "MPEN",
     name: "Flat Magic Penetration",
     abbr: "Magic Pen",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   flatMovespeed: {
-    color: "var(--color-white-70)",
+    color: "p1",
     id: "flatMovespeed",
     key: "MS",
     name: "Base MS",
     description: "",
-    group: "champion",
+    group: "champion"
   },
   gameplayRadius: {
     id: "gameplayRadius",
     name: "Gameplay Radius",
     abbr: "Gameplay",
     description: "Determines reach of both incoming and outgoing effects.",
-    group: "champion",
+    group: "champion"
   },
   pathingRadius: {
     id: "pathingRadius",
@@ -294,13 +294,13 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: "Pathing",
     description:
       "The gameplay area a unit occupies for unit-collision and pathfinding logic.",
-    group: "champion",
+    group: "champion"
   },
   selectionRadius: {
     id: "selectionRadius",
     name: "Selection Radius",
     abbr: "Selection",
     description: "The farthest selectable point from the unit's center point.",
-    group: "champion",
-  },
+    group: "champion"
+  }
 }

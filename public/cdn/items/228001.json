@@ -41,5 +41,9 @@
   },
   "maps": [
     30
+  ],
+  "tags": [
+    "Tank",
+    "Support"
   ]
 }

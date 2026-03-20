@@ -1,0 +1,18 @@
+{
+  "id": 2007,
+  "name": "Disabled Recall",
+  "gold": {
+    "base": 60,
+    "purchasable": false,
+    "total": 60,
+    "sell": 42
+  },
+  "maps": [
+    11,
+    12,
+    21,
+    30,
+    35
+  ],
+  "tags": []
+}

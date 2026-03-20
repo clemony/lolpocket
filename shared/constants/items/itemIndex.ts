@@ -1,4 +1,4 @@
-// Updated Patch 16.4 - 03/06/2026 05:15:53 PM CST
+// Updated Patch 16.6 - 03/19/2026 09:52:50 AM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -383,6 +383,11 @@ export const itemIndex: Index[] = [
     "name": "Overgrowth"
   },
   {
+    "id": 2001,
+    "key": "item",
+    "name": "Recall"
+  },
+  {
     "id": 2002,
     "key": "item",
     "name": "Enhanced Recall"
@@ -391,6 +396,11 @@ export const itemIndex: Index[] = [
     "id": 2003,
     "key": "item",
     "name": "Health Potion"
+  },
+  {
+    "id": 2007,
+    "key": "item",
+    "name": "Disabled Recall"
   },
   {
     "id": 2010,
@@ -905,7 +915,7 @@ export const itemIndex: Index[] = [
   {
     "id": 3095,
     "key": "item",
-    "name": "Stormrazor"
+    "name": "Deprecated item"
   },
   {
     "id": 3097,
@@ -1198,11 +1208,6 @@ export const itemIndex: Index[] = [
     "name": "Terminus"
   },
   {
-    "id": 3330,
-    "key": "item",
-    "name": "Scarecrow Effigy"
-  },
-  {
     "id": 3340,
     "key": "item",
     "name": "Stealth Ward"
@@ -1261,16 +1266,6 @@ export const itemIndex: Index[] = [
     "id": 3513,
     "key": "item",
     "name": "Eye of the Herald"
-  },
-  {
-    "id": 3599,
-    "key": "item",
-    "name": "Kalista's Black Spear"
-  },
-  {
-    "id": 3600,
-    "key": "item",
-    "name": "Kalista's Black Spear"
   },
   {
     "id": 3742,
@@ -1401,21 +1396,6 @@ export const itemIndex: Index[] = [
     "id": 3877,
     "key": "item",
     "name": "Bloodsong"
-  },
-  {
-    "id": 3901,
-    "key": "item",
-    "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>"
-  },
-  {
-    "id": 3902,
-    "key": "item",
-    "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>"
-  },
-  {
-    "id": 3903,
-    "key": "item",
-    "name": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>"
   },
   {
     "id": 3916,
@@ -1776,11 +1756,6 @@ export const itemIndex: Index[] = [
     "id": 6702,
     "key": "item",
     "name": "Scouting Ahead"
-  },
-  {
-    "id": 7050,
-    "key": "item",
-    "name": "Gangplank Placeholder"
   },
   {
     "id": 8001,
@@ -2413,6 +2388,11 @@ export const itemIndex: Index[] = [
     "name": "Sunfire Aegis"
   },
   {
+    "id": 223069,
+    "key": "item",
+    "name": "Void Immolation"
+  },
+  {
     "id": 223071,
     "key": "item",
     "name": "Black Cleaver"
@@ -2958,136 +2938,6 @@ export const itemIndex: Index[] = [
     "name": "Abyssal Mask"
   },
   {
-    "id": 322065,
-    "key": "item",
-    "name": "Shurelya's Battlesong"
-  },
-  {
-    "id": 322526,
-    "key": "item",
-    "name": "Whispering Circlet"
-  },
-  {
-    "id": 322530,
-    "key": "item",
-    "name": "Diadem of Songs"
-  },
-  {
-    "id": 323002,
-    "key": "item",
-    "name": "Trailblazer"
-  },
-  {
-    "id": 323003,
-    "key": "item",
-    "name": "Archangel's Staff"
-  },
-  {
-    "id": 323004,
-    "key": "item",
-    "name": "Manamune"
-  },
-  {
-    "id": 323040,
-    "key": "item",
-    "name": "Seraph's Embrace"
-  },
-  {
-    "id": 323042,
-    "key": "item",
-    "name": "Muramana"
-  },
-  {
-    "id": 323050,
-    "key": "item",
-    "name": "Zeke's Convergence"
-  },
-  {
-    "id": 323070,
-    "key": "item",
-    "name": "Tear of the Goddess"
-  },
-  {
-    "id": 323075,
-    "key": "item",
-    "name": "Thornmail"
-  },
-  {
-    "id": 323107,
-    "key": "item",
-    "name": "Redemption"
-  },
-  {
-    "id": 323109,
-    "key": "item",
-    "name": "Knight's Vow"
-  },
-  {
-    "id": 323110,
-    "key": "item",
-    "name": "Frozen Heart"
-  },
-  {
-    "id": 323119,
-    "key": "item",
-    "name": "Winter's Approach"
-  },
-  {
-    "id": 323121,
-    "key": "item",
-    "name": "Fimbulwinter"
-  },
-  {
-    "id": 323190,
-    "key": "item",
-    "name": "Locket of the Iron Solari"
-  },
-  {
-    "id": 323222,
-    "key": "item",
-    "name": "Mikael's Blessing"
-  },
-  {
-    "id": 323504,
-    "key": "item",
-    "name": "Ardent Censer"
-  },
-  {
-    "id": 324005,
-    "key": "item",
-    "name": "Imperial Mandate"
-  },
-  {
-    "id": 326616,
-    "key": "item",
-    "name": "Staff of Flowing Water"
-  },
-  {
-    "id": 326617,
-    "key": "item",
-    "name": "Moonstone Renewer"
-  },
-  {
-    "id": 326620,
-    "key": "item",
-    "name": "Echoes of Helia"
-  },
-  {
-    "id": 326621,
-    "key": "item",
-    "name": "Dawncore"
-  },
-  {
-    "id": 326657,
-    "key": "item",
-    "name": "Rod of Ages"
-  },
-  {
-    "id": 328020,
-    "key": "item",
-    "name": "Abyssal Mask"
-  },
-  {
     "id": 443054,
     "key": "item",
     "name": "Darksteel Talons"
@@ -3363,11 +3213,6 @@ export const itemIndex: Index[] = [
     "name": "Veigar's Talisman of Ascension"
   },
   {
-    "id": 663146,
-    "key": "item",
-    "name": "Hextech Gunblade"
-  },
-  {
     "id": 663172,
     "key": "item",
     "name": "Zephyr"
@@ -3406,11 +3251,6 @@ export const itemIndex: Index[] = [
     "id": 667112,
     "key": "item",
     "name": "Flesheater"
-  },
-  {
-    "id": 667666,
-    "key": "item",
-    "name": "The Collector"
   },
   {
     "id": 994403,

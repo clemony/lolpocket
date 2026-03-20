@@ -29,7 +29,7 @@
     {
       "unique": true,
       "mythic": false,
-      "name": "Cryocumbustion",
+      "name": "Cryocombustion",
       "effects": "Gain 15 ultimate haste."
     },
     {
@@ -57,5 +57,10 @@
     12,
     21,
     35
+  ],
+  "ornnUpgrade": 323050,
+  "tags": [
+    "Tank",
+    "Support"
   ]
 }

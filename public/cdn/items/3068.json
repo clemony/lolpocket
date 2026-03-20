@@ -12,6 +12,11 @@
       "id": 1031,
       "name": "Chain Vest",
       "gold": 800
+    },
+    {
+      "id": 1028,
+      "name": "Ruby Crystal",
+      "gold": 400
     }
   ],
   "specialRecipe": 0,
@@ -37,7 +42,7 @@
   },
   "description": "350 Health\n50 Armor\n10 Ability Haste\n\nImmolate\nAfter taking or dealing damage, deal magic damage per second to nearby enemies for 3 seconds. ",
   "gold": {
-    "base": 1000,
+    "base": 600,
     "purchasable": true,
     "total": 2700,
     "sell": 1890
@@ -47,5 +52,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Tank"
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "name": "Void Immolation",
+  "id": 223069,
+  "rank": "Special",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "active": [
+    {
+      "unique": true,
+      "name": "Immolate",
+      "effects": "Taking or dealing damage activates this passive for 5 seconds. Deal 20 true damage (+1.5% of your <b>maximum</b> health) true damage every second to enemies within 325 (+100% <b>bonus</b> size) units, with the damage being increased to 150% against <img src=\"/img/icons/minions.webp\" class=\"tip-icon light:invert\" />minions."
+    }
+  ],
+  "stats": {
+    "armor": 100,
+    "health": 1000,
+    "healthRegen": 200,
+    "magicResistance": 80,
+    "abilityHaste": 25
+  },
+  "description": "1000 Health\n100 Armor\n80 Magic Resist\n25 Ability Haste\n200% Base Health Regen\n\nImmolate\nAfter taking or dealing damage, deal  magic damage per second to nearby enemies for 5 seconds. ",
+  "gold": {
+    "base": 6000,
+    "purchasable": true,
+    "total": 6000,
+    "sell": 4200
+  },
+  "maps": [
+    12
+  ],
+  "tags": [
+    "Tank"
+  ]
+}

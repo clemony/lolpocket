@@ -69,5 +69,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Tank",
+    "Onhit effects"
   ]
 }

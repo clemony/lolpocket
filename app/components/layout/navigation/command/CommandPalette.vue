@@ -1,100 +1,101 @@
 <script lang="ts" setup>
-import type { ReferenceElement } from "reka-ui"
-import { internalInputProps } from "./useCommand"
-import { useCommandGroups } from "./useCommandGroups"
+import type { CommandItem } from "./build/useCommandGroups"
+import { useCommandGroups } from "./build/useCommandGroups"
+import ChampionCommand from "./reference-cards/ChampionCommand.vue"
+import ItemCommand from "./reference-cards/ItemCommand.vue"
+import RuneCommand from "./reference-cards/RuneCommand.vue"
+import SpellCommand from "./reference-cards/SpellCommand.vue"
 
 const props = defineProps<{
   query?: string
   reference: HTMLElement | null
 }>()
 
-const emit = defineEmits(["update:open"])
+const emit = defineEmits<{
+  close: []
+}>()
 
-const hotkeysOpen = shallowRef<boolean>(false)
-const menuLevel = shallowRef<number>(0)
-const inSubmenu = defineModel<boolean>("inSubmenu", { default: false })
-const { resultGroups } = useCommandGroups(menuLevel)
+const hotkeysOpen = shallowRef(false)
+const { resultGroups } = useCommandGroups({
+  onNavigate: () => emit("close")
+})
 
-function onBackClick(_event: MouseEvent): void {
-  inSubmenu.value = false
-  menuLevel.value = menuLevel.value - 1
+function asCommandItem(item: unknown) {
+  return item as CommandItem
 }
 </script>
 
 <template>
-  <LazyUCommandPalette
-    ref="commandPalette"
+  <UCommandPalette
     :search-term="props.query"
+    :input="false"
     value-key="value"
     :autofocus="false"
-    :input="internalInputProps"
-    :back="{
-      onClick: onBackClick,
-    }"
     size="lg"
     :multiple="false"
     :highlight-on-hover="false"
-    :highlight="false"
     selection-behavior="replace"
     :fuse="{
       fuseOptions: {
-        keys: ['keys', 'label', 'suffix', 'prefix'],
+        ignoreLocation: false,
+        keys: ['keys', 'label', 'suffix', 'prefix']
       },
       resultLimit: 50,
-      ignoreLocation: false,
-      matchAllWhenSearchEmpty: false,
+      matchAllWhenSearchEmpty: false
     }"
     :virtualize="{ estimateSize: 30 }"
+    :back="{
+      size: '2xs',
+      variant: 'solid',
+      color: 'neutral'
+    }"
     :groups="resultGroups"
     :ui="{
-      root: 'max-h-180 max-w-179 [&_svg]:size-4.25 [&_svg]:**:stroke-[2.4]',
+      root: 'max-h-180 w-full',
+      back: 'm-2 mb-0 rounded-full p-0 pl-px opacity-60 hover:opacity-100 [&_svg]:box-content [&_svg]:size-4 [&_svg]:rounded-full [&_svg]:border [&_svg]:border-transparent [&_svg]:ring [&_svg]:ring-transparent [&_svg]:**:stroke-[2.4] hover:[&_svg]:border-neutral hover:[&_svg]:bg-neutral hover:[&_svg]:text-nc hover:[&_svg]:shadow-xs hover:[&_svg]:ring-neutral',
       empty: 'p-0!',
-      back: '-translate-x-1 rounded-full p-0 pl-px opacity-50 hover:opacity-90 [&_svg]:box-content [&_svg]:size-4 [&_svg]:rounded-full [&_svg]:border [&_svg]:border-transparent [&_svg]:ring [&_svg]:ring-transparent [&_svg]:**:stroke-[2.4] hover:[&_svg]:border-neutral hover:[&_svg]:bg-neutral hover:[&_svg]:text-nc hover:[&_svg]:shadow-xs hover:[&_svg]:ring-neutral',
-      input: cn(
-        'z-2 h-0 border-0 p-0 ring-0! [&_button]:w-full! [&_input]:opacity-0 [&_span]:h-11 [&_span]:w-full [&_span]:px-4 [&_svg]:hidden!',
-        {
-          hidden: !inSubmenu || !query,
-        },
-      ),
-      viewport: cn('max-w-179! p-0!', {
-        'gap-2': !inSubmenu && !query,
-      }),
-      group: cn('max-w-179 px-3', {
-        'border-0': !inSubmenu && !query,
-      }),
+      viewport: 'max-w-179! p-0! *:overflow-y-auto',
+      group: 'max-w-179 px-3',
       content:
-        'h-max w-full max-w-179 flex-1 divide-y divide-p3 overflow-x-hidden p-0',
+        'h-max w-full max-w-179 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto p-0'
     }"
     @entry-focus.prevent>
-    <!-- empty -->
     <template #empty>
       <span v-if="props.query" class="p-2 text-n5">No commands found</span>
     </template>
-    <!-- trailing -->
 
     <template #item-trailing="{ item }">
       <Icon
-        v-if="item?.trailingIcon"
-        :name="item?.trailingIcon"
+        v-if="asCommandItem(item)?.trailingIcon"
+        :name="asCommandItem(item).trailingIcon ?? 'i-link'"
         :class="
           cn(
             'opacity-50 group-hover/item:opacity-100',
-            item?.ui?.itemTrailingIcon,
+            asCommandItem(item)?.ui?.itemTrailingIcon
           )
         " />
     </template>
 
-    <!-- item-command -->
-    <template #item-command="{ item }">
-      <LazyItemCommand :id="item.id" />
+    <template #champion-command="{ item }">
+      <ChampionCommand :id="Number(asCommandItem(item).id)" />
     </template>
 
-    <!-- footer -->
+    <template #item-command="{ item }">
+      <ItemCommand :id="Number(asCommandItem(item).id)" />
+    </template>
+
+    <template #rune-command="{ item }">
+      <RuneCommand :id="Number(asCommandItem(item).id)" />
+    </template>
+
+    <template #spell-command="{ item }">
+      <SpellCommand :id="Number(asCommandItem(item).id)" />
+    </template>
 
     <template #footer>
       <CommandFooter
         :reference="reference"
-        @update:open-hotkeys="(e) => (hotkeysOpen = e)" />
+        @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
     </template>
-  </LazyUCommandPalette>
+  </UCommandPalette>
 </template>

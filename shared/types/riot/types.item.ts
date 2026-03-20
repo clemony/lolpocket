@@ -19,6 +19,8 @@ export interface Item {
   specialRecipe?: string | number
   stats?: Record<string, number>
   tags?: string[]
+  ornnUpgrade?: number
+  ornnItem?: boolean
 }
 
 export interface Effect {

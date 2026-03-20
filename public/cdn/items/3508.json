@@ -31,7 +31,7 @@
       "unique": true,
       "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+50% critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal to 50% of that amount(1.5 second cooldown, starts after using the empowered attack)."
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 125% <b>base</b> AD (+0 – 50 (based on level) based on critical strike chance) <b>bonus</b> physical damage on-hit and restores mana equal to 50% of that amount(1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
@@ -39,17 +39,22 @@
     "criticalStrikeChance": 25,
     "abilityHaste": 20
   },
-  "description": "55 Attack Damage\n20 Ability Haste\n25% Critical Strike Chance\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage and grants Mana On-Hit.",
+  "description": "50 Attack Damage\n20 Ability Haste\n25% Critical Strike Chance\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage and grants Mana On-Hit.",
   "gold": {
-    "base": 350,
+    "base": 500,
     "purchasable": true,
-    "total": 2900,
-    "sell": 2030
+    "total": 3050,
+    "sell": 2135
   },
   "maps": [
     11,
     12,
     21,
     35
+  ],
+  "tags": [
+    "Marksman",
+    "Mana and reg",
+    "Onhit effects"
   ]
 }

@@ -1,6 +1,19 @@
 {
-  "id": 1524,
   "name": "Overgrowth",
+  "id": 1524,
+  "rank": "Special",
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "passives": [
+    {
+      "unique": true,
+      "mythic": false,
+      "name": "Buildup",
+      "effects": "After 90 seconds, turrets gain <i>Overgrowth</i>. Champions can attack a turret with <i>Overgrowth</i> to consume the effect and deal <b>bonus</b> true damage based on how long the <i>Overgrowth</i> has built up, capped at 300 seconds of growth time."
+    }
+  ],
+  "stats": {},
   "gold": {
     "base": 0,
     "purchasable": false,
@@ -11,5 +24,6 @@
     11,
     12,
     21
-  ]
+  ],
+  "tags": []
 }

@@ -84,6 +84,11 @@
       "gold": 1300
     },
     {
+      "id": 3068,
+      "name": "Sunfire Aegis",
+      "gold": 2700
+    },
+    {
       "id": 2502,
       "name": "Unending Despair",
       "gold": 2800
@@ -170,5 +175,13 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Mage",
+    "Tank",
+    "Support"
   ]
 }

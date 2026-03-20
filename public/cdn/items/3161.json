@@ -33,7 +33,7 @@
       "unique": true,
       "mythic": false,
       "name": "Focused Will",
-      "effects": "Dealing ability damage with a non-innate ability generates a stack for 6 seconds, stacking up to 4 times and up to once per cast instance per second and every second for damage over time abilities. For each stack, your non-<img src=\"/img/icons/basic-damage.webp\" class=\"tip-icon \" />basic damage dealt by non-items gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks."
+      "effects": "Dealing ability damage or <img src=\"/img/icons/pet-damage.webp\" class=\"tip-icon \" />pet damage, sourced from a non-innate <img src=\"/img/icons/ability.webp\" class=\"tip-icon \" />ability, generates a stack for 6 seconds, stacking up to 4 times. For each stack, your ability damage, <img src=\"/img/icons/pet-damage.webp\" class=\"tip-icon \" />pet damage and <img src=\"/img/icons/proc-damage.webp\" class=\"tip-icon \" />proc damage, sourced from a non-item, gain 3% increased damage, for a total increase of 12% at <b>maximum</b> stacks."
     }
   ],
   "stats": {
@@ -52,5 +52,9 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Ability haste"
   ]
 }

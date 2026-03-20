@@ -1,11 +1,12 @@
 {
   "id": 1208,
   "name": "Support Quest",
-  "description": "Rewards\n• A new slot for control wards\n• Discounted control wards",
+  "description": "Rewards\n• Upgraded support item\n• Discounted control wards",
   "gold": {
     "base": 0,
     "purchasable": false,
     "total": 0,
     "sell": 0
-  }
+  },
+  "tags": []
 }

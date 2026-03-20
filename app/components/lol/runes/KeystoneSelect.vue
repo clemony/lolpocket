@@ -70,9 +70,5 @@ watch(
           :class="{ 'opacity-0': selectedRune===rune.id }" />
       </Label> -->
     </URadioGroup>
-    <!--
-      <div  class="size-full grid grid-cols-3 py-4">
-        <Placeholder v-for="i in 3" :key="i" class="size-18 rounded-full place-self-center" />
-      </div> -->
   </div>
 </template>

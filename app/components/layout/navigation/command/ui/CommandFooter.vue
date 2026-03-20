@@ -8,22 +8,23 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
 </script>
 
 <template>
-  <div class="flex h-7 items-center justify-between gap-2">
+  <div
+    class="flex h-8 items-center justify-between gap-2 border-t border-p3 px-3">
     <div class="inline-flex items-center">
       <span class="px-2 text-lg font-[800] text-pc">LP</span>
       <UPopover
         :content="{
           side: 'top',
           align: 'start',
-          alignOffset: -35,
-          sideOffset: 4,
+          alignOffset: -28,
+          sideOffset: 4
         }"
         :ui="{ content: 'shadow-sm drop-shadow-sm' }">
         <UButton size="xs" variant="ghost">
           {{ patchIndex[0] }}
         </UButton>
         <template #content>
-          <PatchPost :patch="patchIndex[0]" />
+          <PatchPost :patch="patchIndex[0]" class="max-w-100" />
         </template>
       </UPopover>
     </div>
@@ -33,7 +34,7 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         variant="ghost"
         label="Open Command"
         :ui="{
-          base: 'gap-3',
+          base: 'gap-3'
         }"
         size="xs">
         <template #trailing>
@@ -45,7 +46,7 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         v-model:open="hotkeysOpen"
         :ui="{
           content:
-            'z-1 h-170 w-179 rounded-b-none border-0 shadow-none ring-0 drop-shadow-none',
+            'z-1 rounded-b-none border-0 shadow-none ring-0 drop-shadow-none'
         }"
         :content="{
           side: 'top',
@@ -53,13 +54,13 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
           sideOffset: 4,
           collisionBoundary: reference,
           collisionPadding: 0,
-          sideFlip: false,
+          sideFlip: false
         }">
         <UButton
           variant="ghost"
           label="Hotkeys"
           :ui="{
-            base: 'gap-3',
+            base: 'gap-3'
           }"
           size="xs">
           <template #trailing>

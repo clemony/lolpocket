@@ -4,8 +4,6 @@ import { rangeToChamp } from "#shared/constants/champions/rangeToChamp"
 import { resourceToChamp } from "#shared/constants/champions/resourceToChamp"
 import { roleToChamp } from "#shared/constants/champions/roleToChamp"
 import { defineStore } from "pinia"
-import type { AcceptableValue } from "reka-ui"
-import type { K } from "vue-router/dist/index-DFCq6eJK.js"
 
 export type AttackType = "All" | "Melee" | "Ranged"
 export type AttackKey = 0 | 1 | 2
@@ -24,7 +22,7 @@ export const champFilter = defineStore("champ-filter", () => {
   const attackType: Record<AttackKey, AttackType> = {
     0: "All",
     1: "Melee",
-    2: "Ranged",
+    2: "Ranged"
   }
   // --- FILTER STATE ---
   const filters = ref<ChampionFilter>({
@@ -33,7 +31,7 @@ export const champFilter = defineStore("champ-filter", () => {
     query: "",
     resource: null,
     role: [],
-    sort: "az",
+    sort: "az"
   })
 
   // --- HELPERS ---
@@ -45,7 +43,7 @@ export const champFilter = defineStore("champ-filter", () => {
       query: "",
       resource: null,
       role: [],
-      sort: "az",
+      sort: "az"
     }
   }
 
@@ -95,13 +93,13 @@ export const champFilter = defineStore("champ-filter", () => {
 
           const name = champion.name.toLowerCase()
           return name.includes(query)
-        }),
+        })
       )
     }
 
     const array = Array.from(
       matched,
-      (id) => championIndex.find((c) => c.id === id)?.key,
+      (id) => championIndex.find((c) => c.id === id)?.key
     ).filter((key): key is string => Boolean(key))
 
     if (filters.value.sort) {
@@ -113,7 +111,7 @@ export const champFilter = defineStore("champ-filter", () => {
       array.sort((a, b) =>
         filters.value.sort === "az"
           ? (orderMap.get(a) ?? Infinity) - (orderMap.get(b) ?? Infinity)
-          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity),
+          : (orderMap.get(b) ?? Infinity) - (orderMap.get(a) ?? Infinity)
       )
     }
 
@@ -126,6 +124,6 @@ export const champFilter = defineStore("champ-filter", () => {
     clearFilters,
     filtered,
     filters,
-    reorder,
+    reorder
   }
 })

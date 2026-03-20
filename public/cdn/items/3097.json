@@ -45,7 +45,7 @@
     "attackSpeed": 20,
     "criticalStrikeChance": 25
   },
-  "description": "50 Attack Damage\n20% Attack Speed\n25% Critical Strike Chance\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nBolt\nYour Energized Attack applies  bonus magic damage and grants 45% Move Speed for 1.5s.\n",
+  "description": "50 Attack Damage\n20% Attack Speed\n25% Critical Strike Chance\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nBolt\nYour Energized Attack applies  bonus magic damage and grants 45% Movement Speed for 1.5 seconds.\n",
   "gold": {
     "base": 700,
     "purchasable": true,
@@ -55,6 +55,11 @@
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Marksman",
+    "Onhit effects"
   ]
 }

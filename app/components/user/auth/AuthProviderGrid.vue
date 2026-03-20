@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { providers } from "~/domain/lp/external/authProviders"
+import { useSignIn } from "./useAuth"
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import { providers } from "~/domain/lp/external/authProviders"
       color="transparent"
       :ui="{
         base: 'w-full',
-        leadingIcon: 'absolute mx-auto size-5.5 place-self-center opacity-80',
+        leadingIcon: 'absolute mx-auto size-5.5 place-self-center opacity-80'
       }"
       :icon="provider.icon"
       @click="useSignIn(provider.label)" />

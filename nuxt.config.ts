@@ -14,15 +14,15 @@ const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
 export default defineNuxtConfig({
   imports: {
     global: true,
-    dirs: ["#shared/schema", "~/stores"],
+    dirs: ["#shared/schema", "~/stores"]
   },
 
   dir: {
-    assets: "#layers/ui/app/assets",
+    assets: "#layers/ui/app/assets"
   },
 
   alias: {
-    "@theme": fileURLToPath(new URL("./layers/ui/app/theme", import.meta.url)),
+    "@theme": fileURLToPath(new URL("./layers/ui/app/theme", import.meta.url))
   },
 
   modules: [
@@ -36,97 +36,38 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/icon",
     "@nuxtjs/seo",
-    "nuxt-charts",
-    function nuxtChartsViteOptimizeFix(_, nuxt) {
-      nuxt.hook("vite:extendConfig", (viteConfig, { isClient }) => {
-        if (!isClient) return
+    "@nuxt/scripts",
 
-        const isNuxtChartsDep = (dep: unknown): dep is string =>
-          typeof dep === "string" && nuxtChartsDeps.includes(dep as any)
-
-        const mutableConfig = viteConfig as {
-          optimizeDeps?: {
-            include?: string[]
-            exclude?: string[]
-          }
-          environments?: {
-            client?: {
-              optimizeDeps?: {
-                include?: string[]
-                exclude?: string[]
-              }
-            }
-          }
-        }
-
-        // `nuxt-charts` adds deps to root optimize include. In Nuxt 4/Vite 7 this can
-        // collide with client-environment excludes and trigger:
-        // "entry point <dep> cannot be marked as external"
-        mutableConfig.optimizeDeps ??= {}
-
-        if (Array.isArray(mutableConfig.optimizeDeps.include)) {
-          mutableConfig.optimizeDeps.include =
-            mutableConfig.optimizeDeps.include.filter(
-              (dep) => !isNuxtChartsDep(dep),
-            )
-        }
-
-        if (Array.isArray(mutableConfig.optimizeDeps.exclude)) {
-          mutableConfig.optimizeDeps.exclude =
-            mutableConfig.optimizeDeps.exclude.filter(
-              (dep) => !isNuxtChartsDep(dep),
-            )
-        }
-
-        mutableConfig.environments ??= {}
-        mutableConfig.environments.client ??= {}
-        mutableConfig.environments.client.optimizeDeps ??= {}
-        const clientOptimize = mutableConfig.environments.client.optimizeDeps
-
-        clientOptimize.include ??= []
-        for (const dep of nuxtChartsDeps) {
-          if (!clientOptimize.include.includes(dep)) {
-            clientOptimize.include.push(dep)
-          }
-        }
-
-        if (Array.isArray(clientOptimize.exclude)) {
-          clientOptimize.exclude = clientOptimize.exclude.filter(
-            (dep) => !isNuxtChartsDep(dep),
-          )
-        }
-      })
-    },
     //"@nuxtjs/i18n",
     ...(process.env.NODE_ENV === "development"
       ? ["@nuxt/devtools", "@nuxt/hints", "@nuxt/test-utils/module"]
-      : []),
+      : [])
   ],
 
   // app
   typescript: {
     strict: true,
-    typeCheck: !isCF,
+    typeCheck: !isCF
   },
 
   // UI
   components: [
     {
       path: "~/components",
-      pathPrefix: false,
-    },
+      pathPrefix: false
+    }
   ],
   css: ["#layers/ui/app/assets/css/tailwind.css"],
   image: {
     provider: isCF ? "cloudflare" : "ipx",
-    domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
+    domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"]
   },
   colorMode: {
     componentName: "ColorScheme",
     dataValue: "theme",
     fallback: "light",
     globalName: "__NUXT_COLOR_MODE__",
-    preference: "system",
+    preference: "system"
   },
   icon: {
     provider: "iconify",
@@ -137,38 +78,38 @@ export default defineNuxtConfig({
       {
         dir: "./layers/ui/app/assets/icons/lp",
         prefix: "lp",
-        normalizeIconName: false,
+        normalizeIconName: false
       },
       {
         dir: "./layers/ui/app/assets/icons/stat",
         prefix: "stat",
-        normalizeIconName: false,
+        normalizeIconName: false
       },
       {
         dir: "./layers/ui/app/assets/icons/rune",
         prefix: "rune",
-        normalizeIconName: false,
+        normalizeIconName: false
       },
       {
         dir: "./layers/ui/app/assets/icons/ui",
         prefix: "ui",
-        normalizeIconName: false,
+        normalizeIconName: false
       },
       {
         dir: "./layers/ui/app/assets/icons/i18n",
         prefix: "i18n",
-        normalizeIconName: false,
-      },
+        normalizeIconName: false
+      }
     ],
     clientBundle: {
-      includeCustomCollections: true,
-    },
+      includeCustomCollections: true
+    }
   },
   ui: {
     fonts: false,
     experimental: {
-      componentDetection: true,
-    },
+      componentDetection: true
+    }
   },
 
   ssr: true,
@@ -178,10 +119,10 @@ export default defineNuxtConfig({
     minify: !isCFLeanBuild,
     sourceMap: false,
     experimental: {
-      tasks: true,
+      tasks: true
     },
     scheduledTasks: {
-      [redditFeedRefreshCron]: ["feed:reddit-refresh"],
+      [redditFeedRefreshCron]: ["reddit-refresh"]
     },
     compatibilityDate: "2025-07-18",
     preset: "cloudflare_module",
@@ -190,33 +131,33 @@ export default defineNuxtConfig({
       nodeCompat: true,
       wrangler: {
         triggers: {
-          crons: [redditFeedRefreshCron],
-        },
-      },
+          crons: [redditFeedRefreshCron]
+        }
+      }
     },
     externals: {
-      external: ["sharp"],
+      external: ["sharp"]
     },
     routeRules: {
       "/api/**": {
         cors: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      },
+        headers: { "Access-Control-Allow-Origin": "*" }
+      }
     },
     typescript: {
-      strict: true,
-    },
+      strict: true
+    }
   },
   // Disable sourcemaps for both client and server builds to reduce CI memory pressure.
   sourcemap: {
     client: false,
-    server: false,
+    server: false
   },
   pinia: { storesDirs: ["~~/app/stores"] },
   router: {
     options: {
-      scrollBehaviorType: "smooth",
-    },
+      scrollBehaviorType: "smooth"
+    }
   },
   routeRules: {
     "/settings/**": { ssr: false },
@@ -238,7 +179,7 @@ export default defineNuxtConfig({
     "/pocket": { ssr: false },
     "/pocket/**": { ssr: false },
     "/tools": { ssr: false },
-    "/tools/**": { ssr: false },
+    "/tools/**": { ssr: false }
   },
   runtimeConfig: {
     RIOT_API_KEY: process.env.NUXT_RIOT_API,
@@ -257,47 +198,46 @@ export default defineNuxtConfig({
         zh_tw: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ZH_TW_DOMAIN,
         es: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_ES_DOMAIN,
         de: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_DE_DOMAIN,
-        fr: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN,
-      },
+        fr: process.env.NUXT_PUBLIC_I18N_DOMAIN_LOCALES_FR_DOMAIN
+      }
     },
     public: {
       authRedirect: "",
       baseUrl: "",
       newUserRedirect: "",
       supabaseKey: "",
-      supabaseUrl: "",
-    },
+      supabaseUrl: ""
+    }
   },
 
   site: {
     url: process.env.NUXT_SITE_URL,
     name: "lolpocket",
     description: "Is that lp in your pocket?",
-    defaultLocale: "en",
+    defaultLocale: "en"
   },
   seo: {
     fallbackTitle: true,
     meta: {
       applicationName: "lolpocket",
       author: "lolpocket",
-      ogType: "website",
-    },
+      ogType: "website"
+    }
   },
   robots: {
     credits: false,
     metaTag: true,
     disallow: isProduction
       ? ["/api/", "/auth/", "/account/", "/settings/"]
-      : ["/"],
+      : ["/"]
   },
   /*   sitemap: {
     enabled: isProduction,
     zeroRuntime: true,
-  },
+  },  */
   ogImage: {
-    zeroRuntime: true,
-    enabled: false,
-  }, */
+    zeroRuntime: true
+  },
   supabase: {
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
@@ -308,8 +248,8 @@ export default defineNuxtConfig({
       callback: "/auth/redirect",
       login: "/auth/login",
       saveRedirectToCookie: true,
-      exclude: ["*"],
-    },
+      exclude: ["*"]
+    }
   },
   vite: {
     server: {
@@ -317,10 +257,10 @@ export default defineNuxtConfig({
         // Coalesce noisy editor/extension write bursts to reduce duplicate HMR triggers.
         awaitWriteFinish: {
           stabilityThreshold: 180,
-          pollInterval: 30,
+          pollInterval: 30
         },
-        ignored: ["**/.vscode/.iconify/**", "**/.DS_Store"],
-      },
+        ignored: ["**/.vscode/.iconify/**", "**/.DS_Store"]
+      }
     },
     optimizeDeps: {
       include: [
@@ -331,36 +271,45 @@ export default defineNuxtConfig({
         "tailwind-variants",
         "random-words",
         "reka-ui",
-      ],
+        "valibot",
+        "dexie",
+        "tailwind-merge",
+        "tailwind-variants",
+        "random-words",
+        "reka-ui",
+        "fast-deep-equal/es6", // CJS
+        "@internationalized/date",
+        "fuse.js"
+      ]
     },
     plugins: [tailwindcss()],
     clearScreen: false,
     build: {
-      sourcemap: false,
-    },
+      sourcemap: false
+    }
   },
 
   compatibilityDate: "2025-07-18",
   devServer: {
     host: "localhost",
     https: false,
-    port: 8080,
+    port: 8080
   },
   devtools: {
     enabled: true,
     componentInspector: false,
     vueDevTools: false,
-    viteInspect: false,
-    viteDevTools: false,
+    viteInspect: true,
+    viteDevTools: false
   },
   experimental: {
     // extractAsyncDataHandlers: true,
     nitroAutoImports: true,
-    typescriptPlugin: !isCF,
+    typescriptPlugin: !isCF
     //viteEnvironmentApi: true,
   },
   future: {
-    compatibilityVersion: 5,
+    compatibilityVersion: 5
   },
   /*
   i18n: {
@@ -444,35 +393,35 @@ export default defineNuxtConfig({
         {
           rel: "preconnect",
           href: "https://cdn.jsdelivr.net",
-          crossorigin: "",
+          crossorigin: ""
         },
 
         // Inter Variable (all weights via axis, normal + italic)
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght.css",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght.css"
         },
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght-italic.css",
+          href: "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.6/wght-italic.css"
         },
 
         // Gelasio
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-italic.woff2",
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-italic.woff2"
         },
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-normal.woff2",
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/merriweather:vf@latest/latin-wght-normal.woff2"
         },
 
         // Roboto Mono (variable)
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/fontsource/fonts/roboto-mono:vf@latest/latin-wght-normal.woff2",
-        },
-      ],
-    },
-  },
+          href: "https://cdn.jsdelivr.net/fontsource/fonts/roboto-mono:vf@latest/latin-wght-normal.woff2"
+        }
+      ]
+    }
+  }
 })

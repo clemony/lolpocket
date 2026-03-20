@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { LazyReport } from "#components"
-import type { ButtonProps, DropdownMenuItem } from "@nuxt/ui"
+import type { DropdownMenuItem } from "@nuxt/ui"
 import { getSummonerIcon } from "~/domain/utils/img"
+import { descriptionLabel } from "../build/styles"
 
 const emit = defineEmits(["update:open"])
 const { summoner } = storeToRefs(sSession())
@@ -11,7 +12,7 @@ const route = useRoute()
 const overlay = useOverlay()
 
 const report = overlay.create(LazyReport, {
-  props: {},
+  props: {}
 })
 async function openReport(): Promise<void> {
   emit("update:open", false)
@@ -19,146 +20,158 @@ async function openReport(): Promise<void> {
 }
 
 const toolbar = computed<DropdownMenuItem[]>(() => [
-  {
-    label: "Block",
-    icon: "i-ban",
-  },
-  {
-    label: "Report",
-    icon: "i-warning",
-    onClick: () => openReport(),
-  },
+  [
+    {
+      label: "Message",
+      icon: "i-chat"
+    }
+  ],
+  [
+    {
+      label: "Block",
+      icon: "i-ban"
+    },
+    {
+      label: "Report",
+      icon: "i-warning",
+      onClick: () => openReport()
+    }
+  ]
 ])
 
 const { settings } = storeToRefs(user())
 
 const isFavorite = computed(() =>
-  settings.value?.favorite_summoners.includes(String(s.value?.puuid)),
+  settings.value?.favorite_summoners.includes(String(s.value?.puuid))
 )
-
-const { champions } = storeToRefs(sData())
-const { matches } = storeToRefs(sMatches())
-console.log("🥸 - matches:", matches)
 </script>
 
 <template>
-  <div class="grid w-full grid-cols-[1fr_2fr] gap-2 self-start py-1">
-    <UCard
-      :content="{
-        body: {
-          as: 'label',
-          for: 'update-summoner',
-        },
-      }"
-      :ui="{
-        footer:
-          'grid w-full grid-cols-4 items-center overflow-hidden p-0.75! *:size-full',
-        body: 'grow py-5!',
-        root: 'flex -translate-x-2 flex-col gap-0 space-y-0! divide-y overflow-hidden bg-p0/60 p-0!',
-      }">
-      <UpdateSummoner
-        id="update-summoner"
-        size="xs"
-        side="bottom"
-        color="neutral"
-        class="group/label relative inset-0 z-0 grid size-full! w-min cursor-pointer place-items-center justify-center"
-        :ui="{
-          base: 'absolute z-2 translate-x-8.5 place-items-center rounded-full transition-all duration-200 ease-spring-bouncy group-hover/label:scale-110',
-          leadingIcon:
-            'transition-rotate duration-600 ease-out group-hover/label:rotate-360',
-        }">
-        <UUser
-          orientation="vertical"
-          :name="s?.name"
-          :description="`#&hairsp;${s?.tag}`"
-          size="header"
-          :ui="{
-            root: 'mx-auto grid w-fit place-items-center before:absolute before:top-13 before:-right-3 before:z-1 before:size-8.5 before:rounded-full before:bg-p0',
-            avatar: '',
-            wrapper: 'text-center',
-            description: 'normal-case!',
-            name: 'font-serif text-2xl font-bold normal-case!',
-          }"
-          :avatar="{ src: getSummonerIcon(s?.icon) }" />
-      </UpdateSummoner>
+  <div class="grid w-full grid-cols-[1fr_2fr] gap-x-5 self-start py-2">
+    <UpdateSummonerCard />
+    <div class="flex flex-col gap-y-1">
+      <div
+        :class="
+          cn(descriptionLabel.itemLabel, 'w-full justify-start pt-2 pb-1')
+        ">
+        <div
+          class="justify-betaween pointer-events-none relative flex w-full grow items-center pr-2 text-start">
+          <h6 :class="cn(descriptionLabel.itemLabelBase, 'text-md font-bold')">
+            {{ s?.name }}
+          </h6>
 
-      <template #footer>
-        <UDropdownMenu
-          :content="{
-            side: 'top',
-            align: 'start',
-            sideOffset: 4,
-            alignOffset: -2,
-          }"
-          size="xs"
-          :items="toolbar"
-          :ui="{
-            item: 'gap-2',
-            content: 'rounded-lg shadow-sm drop-shadow-sm',
-          }">
-          <UButton
-            size="xs"
-            :ui="{
-              base: 'size-full justify-center rounded-bl-xl',
-              leadingIcon: 'size-4!',
-            }"
-            icon="i-more"
-            variant="ghost" />
-        </UDropdownMenu>
-        <span />
-        <Tooltip label="Message" side="bottom">
-          <UButton
-            size="xs"
-            :ui="{ base: 'size-full', leadingIcon: 'size-4! opacity-90' }"
-            icon="i-chat"
-            variant="ghost" />
-        </Tooltip>
-        <Tooltip
-          v-if="s?.puuid && settings?.favorite_summoners"
-          side="bottom"
-          :label="
-            s?.puuid === user().account?.puuid
-              ? 'This you. You like yourself.'
-              : isFavorite
-                ? 'Remove from faves'
-                : 'Add to faves'
-          ">
-          <ToggleGroup v-model:model-value="settings.favorite_summoners">
-            <ToggleGroupItem class="w-full!" :value="s.puuid" as-child>
+          <span
+            class="-ml-1.5 inline-flex items-center gap-0 align-baseline text-sm">
+            <Icon
+              name="i-hash"
+              class="inline size-3.5! align-baseline text-n5" />
+            {{ s?.tag }}
+          </span>
+
+          <Grow />
+          <div
+            class="inline-flex shrink-0 items-center gap-1 justify-self-end align-baseline">
+            <Tooltip
+              v-if="s?.puuid && settings?.favorite_summoners"
+              side="bottom"
+              class="pointer-events-auto"
+              as-child
+              :label="
+                s?.puuid === user().account?.puuid
+                  ? 'Is you.'
+                  : isFavorite
+                    ? 'Remove from faves'
+                    : 'Add to faves'
+              ">
+              <!--
+                  :disabled="s?.puuid === user().account?.puuid" -->
+              <ToggleGroup v-model:model-value="settings.favorite_summoners">
+                <ToggleGroupItem class="w-full!" :value="s.puuid" as-child>
+                  <UButton
+                    variant="ghost"
+                    size="sm"
+                    square
+                    :ui="{
+                      base: 'gap-0',
+                      label: 'group-hover/btn:underline'
+                    }">
+                    <Icon
+                      :name="
+                        isFavorite //|| s?.puuid === user().account?.puuid
+                          ? 'i-streamline-heart-solid'
+                          : 'i-streamline-heart'
+                      "
+                      :class="
+                        cn(
+                          'absolute size-3.75! scale-100 **:stroke-[1.6]!',
+                          isFavorite //|| s?.puuid === user().account?.puuid
+                            ? 'animate-heartbeat text-dom-400/90!'
+                            : 'text-n5'
+                        )
+                      " />
+                  </UButton>
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </Tooltip>
+            <UpdateSummoner
+              id="update-summoner"
+              v-slot="{ disabled, isLoading }"
+              class="pointer-events-auto"
+              size="sm"
+              variant="ghost"
+              as-child
+              :ui="{
+                base: 'grid cursor-pointer place-items-center rounded-md',
+                leadingIcon: '**:stroke-[2.3]'
+              }">
               <UButton
-                :disabled="s?.puuid === user().account?.puuid"
-                :icon="
-                  isFavorite || s?.puuid === user().account?.puuid
-                    ? 'i-heart-sm'
-                    : 'i-teenyicons-heart-small-outline'
-                "
-                variant="ghost"
-                size="xs"
+                size="sm"
+                :variant="disabled ? 'solid' : 'ghost'"
                 :ui="{
-                  base: 'size-full justify-center rounded-br-xl',
-                  leadingIcon: cn(
-                    '-translate-y-px scale-200 **:stroke-[0.7]!',
-                    isFavorite || s?.puuid === user().account?.puuid
-                      ? 'text-dom! animate-heartbeat'
-                      : 'text-pc',
-                  ),
-                }" />
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </Tooltip>
-      </template>
-    </UCard>
-    <div class="flex w-[calc(100%+var(--spacing)*3)] flex-col gap-y-1 pt-1">
-      <div class="flex flex-col px-2.5 text-start">
-        <h6 class="text-sm text-pc">Navigation</h6>
+                  base: disabled ? 'shadow-none inset-shadow-xs' : '',
+                  leadingIcon: disabled
+                    ? 'opacity-30'
+                    : isLoading
+                      ? 'animate-rotate repeat-infinite'
+                      : 'transition-rotate size-3.5! opacity-60 duration-600 ease-out group-hover/btn:opacity-100 group-hover/label:rotate-360'
+                }"
+                :icon="disabled ? 'i-lucide-refresh-cw-off' : 'i-refresh'" />
+            </UpdateSummoner>
+            <UDropdownMenu
+              :content="{
+                side: 'top',
+                align: 'end',
+                sideOffset: 3,
+                alignOffset: -14
+              }"
+              size="sm"
+              class="pointer-events-auto"
+              :items="toolbar"
+              :ui="{
+                item: 'gap-2',
+                content: 'min-w-44 rounded-lg shadow-sm drop-shadow-sm',
+                itemLeadingIcon: 'size-4 **:stroke-[2.6]'
+              }">
+              <UButton
+                square
+                size="sm"
+                :ui="{
+                  base: '',
+                  leadingIcon: 'size-4!'
+                }"
+                icon="i-more"
+                variant="ghost" />
+            </UDropdownMenu>
+          </div>
+        </div>
 
-        <p class="text-n4">
-          Deep dive into data analysis, pick {{ s?.name }}'s pockets, or see
-          what they're up to right now.
+        <p :class="descriptionLabel.itemLabelSuffix">
+          Deep dive into data analysis, pick {{ s?.name }}'s pockets, or view
+          their current match status.
         </p>
       </div>
 
-      <menu class="flex flex-col gap-y-1 pt-px">
+      <menu class="flex flex-col pt-px">
         <UButton
           v-for="link in sSession().currentSummonerNav.children"
           :key="link.label"
@@ -172,11 +185,11 @@ console.log("🥸 - matches:", matches)
           :to="link.to"
           :ui="{
             base: cn(
-              'group/link h-8.5! w-full gap-2.5 px-3.5 text-sm font-medium',
-              link.to === route.path ? '' : '',
+              'group/link h-8.5! w-full gap-2.5 px-2 text-sm font-medium',
+              link.to === route.path ? '' : ''
             ),
             // label: 'active:text-nc! active:**:text-nc',
-            leadingIcon: cn('size-4.5', link.ui?.trailingIcon),
+            leadingIcon: cn('size-4.5', link.ui?.leadingIcon)
           }">
           {{ link.label }}
 
@@ -187,25 +200,23 @@ console.log("🥸 - matches:", matches)
                   'ms-auto grid size-4.5 -translate-x-0.5 place-items-center rounded-full',
                   link.to === route.path
                     ? '-translate-x-px bg-neutral/90 shadow-xs drop-shadow-sm'
-                    : '',
+                    : ''
                 )
               ">
               <Icon
                 :name="link.to === route.path ? 'i-tick-sm' : 'i-link'"
                 :class="
                   cn(
-                    'inline size-3.5! align-text-top group-hover/link:opacity-100',
+                    'inline size-4! align-text-top group-hover/link:opacity-100',
                     link.to === route.path
                       ? 'scale-120 opacity-100 **:stroke-[1.6]! **:text-nc'
-                      : 'opacity-50',
+                      : 'opacity-50'
                   )
                 " />
             </div>
           </template>
         </UButton>
       </menu>
-
-      <!--       <Separator size="xs" class="my-1" /> -->
     </div>
   </div>
 </template>

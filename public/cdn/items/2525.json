@@ -22,14 +22,15 @@
       "unique": true,
       "mythic": false,
       "name": "Lifeline",
-      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, gain 200 <b>bonus</b> health for 5 seconds and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself for 200 – 400 (based on level) (+250% <b>bonus</b> armor) (+250% <b>bonus</b> magic resistance) over the same duration, during which you also gain 15% increased size, 10% <b>bonus</b> movement speed, and 25% <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon light:invert\" />tenacity."
+      "effects": "If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain <b>bonus</b> health for 5 seconds and <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal yourself for (+175% <b>bonus</b> armor) (+175% <b>bonus</b> magic resistance) over the same duration, during which you also gain 15% increased size, 10% <b>bonus</b> movement speed, and 25% <img src=\"/img/icons/tenacity.webp\" class=\"tip-icon light:invert\" />tenacity.",
+      "cooldown": 90
     }
   ],
   "stats": {
     "health": 600,
-    "abilityHaste": 15
+    "abilityHaste": 20
   },
-  "description": "600 Health\n15 Ability Haste\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% causes you to gain  maximum Health for 5 seconds, then heal  Health over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
+  "description": "600 Health\n20 Ability Haste\n\nLifeline (0s)\nTaking damage that would reduce your Health below 30% causes you to gain  maximum Health for 5 seconds, then heal  Health over the duration. While regenerating Health, you gain 15% increased Size, 10% Move Speed, and 25% Tenacity. ",
   "gold": {
     "base": 800,
     "purchasable": true,
@@ -39,6 +40,10 @@
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Tank"
   ]
 }

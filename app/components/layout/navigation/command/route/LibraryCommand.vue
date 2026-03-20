@@ -18,14 +18,16 @@ const route = useRoute()
         :to="link.to"
         :ui="{
           leadingIcon: cn(
-            'size-6!',
-            link.label?.toLowerCase() === 'spells'
+            'size-5!',
+            link.label === 'Spells'
               ? '**:stroke-[1.5] opacity-90 scale-94'
-              : '',
-            route.path === link.to ? '**:text-nc!' : '',
+              : link.label === 'Runes'
+                ? '**:stroke-[0.3]!'
+                : '',
+            route.path === link.to ? '**:text-nc!' : ''
           ),
           base: 'flex w-full items-center justify-center gap-2',
-          label: 'grow-0 font-semibold',
+          label: 'grow-0 font-semibold'
         }" />
     </div>
   </div>

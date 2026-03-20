@@ -27,15 +27,20 @@ export const user = defineStore(
         ) {
           Object.assign(account.value, update)
         }
-      },
+      }
     )
 
     function clearAccount() {
       account.value = getEmptyAccount() as unknown as AccountData
     }
 
+    const keybinds = ref<Record<string, string[]>>({
+      subSearch: ["meta", "shift", "K"]
+    })
+
     return {
       settings,
+      keybinds,
       account,
       clearAccount,
       inbox,
@@ -43,13 +48,13 @@ export const user = defineStore(
       user,
 
       matchStatus,
-      refreshMatchStatus,
+      refreshMatchStatus
     }
   },
   {
     persist: {
       key: "accountStore",
-      storage: piniaPluginPersistedstate.localStorage(),
-    },
-  },
+      storage: piniaPluginPersistedstate.localStorage()
+    }
+  }
 )

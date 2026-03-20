@@ -1,56 +1,119 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
-const { nav } = defineProps<{
-  nav: ButtonProps[]
-}>()
+import type { ButtonProps, CheckboxGroupItem } from "@nuxt/ui"
+import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
+import { statIndex } from "~~/shared/constants/common/stat-index"
+import { itemTags } from "~~/shared/constants/items/itemTags"
+
 const { filters } = storeToRefs(is())
+
+const statItems = computed<CheckboxGroupItem[]>(() =>
+  Object.values(statIndex)
+    .filter((s) => s.group !== "champion")
+    .map((s) => ({ value: s.id, label: s.name }))
+)
+
+const tagItems = computed<CheckboxGroupItem[]>(() =>
+  itemTags.map((t) => ({ value: t.id, label: t.name }))
+)
+
+const btnProps: ButtonProps & ToggleButtonProps = {
+  size: "xl",
+  color: "p0",
+  variant: "solid",
+  square: true,
+  activeColor: "neutral",
+  ui: {
+    base: "rounded-full"
+  }
+}
 </script>
 
 <template>
   <!-- shop -->
-  <Tooltip
-    class="grid place-items-center"
-    :trailing-icon="filters.purchasable ? '' : 'i-infinity'"
-    :label="filters.purchasable ? 'Purchasable Items' : 'All Items'"
-    side="left">
+  <span
+    :data-tip="filters.purchasable ? 'Purchasable Items' : 'All Items'"
+    class="tooltip tooltip-left">
     <Toggle
       v-model:model-value="filters.purchasable"
-      active-color="neutral"
+      tabindex="-1"
+      v-bind="btnProps"
       :active="filters.purchasable"
-      size="xl"
-      active-variant="solid"
       :ui="{
         base: cn(
+          'rounded-full',
           filters.purchasable
-            ? 'inset-shadow-xs  rounded-full drop-shadow-md drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 '
-            : '',
+            ? ' hover:bg-neutral/90 text-nc  drop-shadow-md drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 '
+            : ''
         ),
-        leadingIcon:
-          'size-4.5 -translate-y-px **:stroke-[1.4] group-on/btn:text-nc',
+        leadingIcon: cn(
+          'size-4.5 -translate-y-px **:stroke-[1.4]',
+          filters.purchasable ? 'text-nc size-5' : 'hover:text-pc'
+        )
       }"
-      square
-      icon="i-streamline-shopping-store-signage-3-street-sandwich-shops-shop-stores-board-sign-store"
-      variant="ghost" />
-  </Tooltip>
-  <!-- select menus -->
-  <ItemSelectPoppables collapsed size="xl" />
-
+      :icon="
+        filters.purchasable
+          ? 'i-infinity'
+          : 'i-streamline-shopping-store-signage-3-street-sandwich-shops-shop-stores-board-sign-store'
+      " />
+  </span>
   <!-- map -->
-  <MapSelector
-    size="xl"
-    :ui="{ base: 'rounded-full drop-shadow-md drop-shadow-black/4' }"
-    collapsed />
+  <MapSelector size="xl" :ui="{ base: 'rounded-full' }" collapsed />
+
+  <!-- tier -->
+  <LibraryItemTierSelect collapsed />
+
+  <!-- stats -->
+  <SelectPopover
+    label="Statistics"
+    :content="{ side: 'left', align: 'center' }"
+    legend="Statistics"
+    :value="filters?.stats.length">
+    <template #default="{ open }">
+      <div
+        data-tip="Item Stats"
+        :class="cn(open ? '' : 'tooltip tooltip-left')">
+        <UButton icon="i-bar-chart" v-bind="btnProps" />
+      </div>
+    </template>
+    <template #content>
+      <UCheckboxGroup
+        v-model:model-value="filters.stats"
+        :items="statItems"
+        @entry-focus.prevent />
+    </template>
+  </SelectPopover>
+
+  <!-- categories -->
+  <SelectPopover
+    :content="{ side: 'left', align: 'center' }"
+    legend="Categories"
+    :value="filters?.tags.length">
+    <template #default="{ open }">
+      <div
+        data-tip="Item Categories"
+        :class="cn(open ? '' : 'tooltip tooltip-left')">
+        <UButton icon="i-tag" v-bind="btnProps" />
+      </div>
+    </template>
+    <template #content>
+      <UCheckboxGroup
+        v-model:model-value="filters.tags"
+        :items="tagItems"
+        @entry-focus.prevent />
+    </template>
+  </SelectPopover>
 
   <!-- reset -->
-  <Tooltip label="Reset Filter" side="left">
+
+  <div data-tip="Reset Filter" class="tooltip tooltip-left">
     <UButton
       size="xl"
-      color="neutral"
+      color="p0"
       icon="i-reset"
       :ui="{
-        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18',
+        base: 'rounded-full'
       }"
       square
       @click="is().clearFilters()" />
-  </Tooltip>
+  </div>
 </template>

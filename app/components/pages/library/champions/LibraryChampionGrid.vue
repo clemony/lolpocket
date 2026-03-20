@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-definePageMeta({
-  title: "Champions",
-  icon: "bi:list-ul",
-})
+const { winrates: wr } = defineProps<{
+  winrates?: ChampionWinrate[]
+}>()
+
+const winrates = computed(() => wr)
 </script>
 
 <template>
@@ -12,8 +13,17 @@ definePageMeta({
     <div
       v-for="item in champFilter().filtered"
       :key="item"
-      class="flex size-22 grow items-center justify-center">
-      <Champion :k="item" class="size-22" />
+      class="flex size-20 grow items-center justify-center">
+      <Champion :k="item" :ui="{ root: 'size-20' }">
+        <template v-if="winrates" #content>
+          <LazyChampionWinrateTooltip
+            hydrate-on-interaction
+            :k="item"
+            :winrates="
+              winrates?.filter((w) => w.champion === champNameByKey(item))
+            " />
+        </template>
+      </Champion>
     </div>
   </div>
 </template>

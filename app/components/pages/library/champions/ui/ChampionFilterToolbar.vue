@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps } from "@nuxt/ui"
-const { nav } = defineProps<{
-  nav: ButtonProps[]
-}>()
+
 const { filters } = storeToRefs(is())
 </script>
 
@@ -23,10 +21,10 @@ const { filters } = storeToRefs(is())
         base: cn(
           filters.purchasable
             ? 'inset-shadow-xs  rounded-full drop-shadow-md drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18 '
-            : '',
+            : ''
         ),
         leadingIcon:
-          'size-4.5 -translate-y-px **:stroke-[1.4] group-on/btn:text-nc',
+          'size-4.5 -translate-y-px **:stroke-[1.4] group-on/btn:text-nc'
       }"
       square
       icon="i-streamline-shopping-store-signage-3-street-sandwich-shops-shop-stores-board-sign-store"
@@ -48,7 +46,7 @@ const { filters } = storeToRefs(is())
       color="neutral"
       icon="i-reset"
       :ui="{
-        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18',
+        base: 'rounded-full drop-shadow-md not-open:drop-shadow-black/4 open:drop-shadow-black/18'
       }"
       square
       @click="is().clearFilters()" />

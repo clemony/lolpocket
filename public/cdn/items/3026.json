@@ -41,5 +41,10 @@
   },
   "maps": [
     11
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin"
   ]
 }

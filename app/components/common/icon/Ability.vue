@@ -4,7 +4,7 @@ const {
   cid,
   ckey,
   id,
-  class: className,
+  class: className
 } = defineProps<{
   class?: HTMLAttributes["class"]
   ckey?: string
@@ -35,19 +35,20 @@ const pinned = shallowRef<boolean>(false)
     trailing-icon="i-right-click"
     :ui="{
       content: cn('h-fit! max-h-80! w-full max-w-80', {
-        'rounded-xl  px-1': pinned,
-      }),
+        'rounded-xl  px-1': pinned
+      })
     }"
     @pinned="pinned = true"
     @unpinned="pinned = false">
     <LazySpinner v-if="!loaded" class="absolute z-0" />
     <UAvatar
+      size="15"
       :ui="{
         root: cn(
-          'relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
+          'relative grid aspect-square place-items-center overflow-hidden rounded-md',
           { 'shadow-sm shadow-black/30 drop-shadow-sm': loaded },
-          className,
-        ),
+          className
+        )
       }"
       icon="i-ui-none"
       class="size-full shrink-0"

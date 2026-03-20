@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Consonance",
-      "effects": "While you or any allied champion you granted a <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield to in the last 3 seconds is in combat with champions, each second, you heal the most wounded and nearest allied champion for 0.8% of your <b>bonus</b> mana."
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal the most wounded allied champion you have healed or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielded in the last 3 seconds who is in combat with champions within 900 units for 0.8% of your <b>maximum</b> mana (1 second cooldown)."
     }
   ],
   "stats": {
@@ -35,6 +35,9 @@
   "maps": [
     11,
     12,
-    21
-  ]
+    21,
+    35
+  ],
+  "ornnUpgrade": 322530,
+  "tags": []
 }

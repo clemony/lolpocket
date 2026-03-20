@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { statIndex } from "#shared/constants/common/stat-index"
 import { itemStatRecord } from "#shared/constants/items/itemStatRecord"
-import { motion } from "motion-v"
 
 const checkedStats = ref<StatIndex[]>([])
 
@@ -90,7 +89,7 @@ const set2 = computed(() => is().calculatorSet2)
         </motion.label> -->
 
         <template v-for="stat in statIndex" :key="stat.id">
-          <motion.label
+          <label
             v-if="!checkedStats.includes(stat)"
             class="grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b border-b-p3/40 py-3.5 first:border-t first:border-t-p3 hover:bg-p2/60 has-checked:hidden"
             :layout="true">
@@ -104,7 +103,7 @@ const set2 = computed(() => is().calculatorSet2)
               :stat="stat"
               :item-stats="stats"
               :item-stats2="stats2" />
-          </motion.label>
+          </label>
         </template>
       </LayoutGroup>
     </div>

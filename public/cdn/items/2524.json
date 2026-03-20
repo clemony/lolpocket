@@ -38,14 +38,18 @@
   },
   "description": "200 Health\n15 Ability Haste\n20 Armor\n20 Magic Resist\n\nFanfare\nSlowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you 20 Move Speed. While you have Fanfare, nearby allies, including yourself, gain  Attack Speed.",
   "gold": {
-    "base": 500,
+    "base": 800,
     "purchasable": true,
-    "total": 2000,
-    "sell": 1400
+    "total": 2300,
+    "sell": 1610
   },
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Tank"
   ]
 }

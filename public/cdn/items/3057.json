@@ -28,7 +28,7 @@
     {
       "id": 3508,
       "name": "Essence Reaver",
-      "gold": 2900
+      "gold": 3050
     },
     {
       "id": 3078,
@@ -70,5 +70,11 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Mage",
+    "Onhit effects"
   ]
 }

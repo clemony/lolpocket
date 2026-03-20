@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { themes } from "~/domain/lp/ui/theme"
+import { useSignOut } from "../auth/useAuth"
 
 const summoner = computed(() => user().account)
 
@@ -19,7 +20,7 @@ const themeModel = computed({
   set: (value) => {
     const settings = user().settings
     if (settings) settings.theme = value
-  },
+  }
 })
 </script>
 

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import KDA from "~/components/lol/summoner/history/ui/KDA.vue"
-import type { BarStat } from "./types"
+import type { BarStat } from "./team.types"
 
 const { match, player } = defineProps<{
   player: Player
@@ -78,7 +78,7 @@ const { match, player } = defineProps<{
         :key="spell"
         class="round-wrapper size-6"
         :style="{
-          zIndex: i,
+          zIndex: i
         }">
         <Spell
           :id="spell"

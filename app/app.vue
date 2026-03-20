@@ -10,20 +10,20 @@ const dir = computed(() => locales[locale.value].dir)
 useHead({
   htmlAttrs: {
     lang: "en",
-    dir: "auto",
+    dir: "auto"
   },
   link: [
     {
       href: "/img/favicon.png",
       rel: "icon",
-      type: "image/png",
-    },
-  ],
+      type: "image/png"
+    }
+  ]
 })
 
 const route = useRoute()
 useHead({
-  title: () => String(route.meta.title || route.name),
+  title: () => String(route.meta.title || route.name)
 })
 const reportComment = computed(() => threads().reportComment ?? undefined)
 </script>
@@ -31,13 +31,16 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
 <template>
   <UApp
     id="app"
+    :tooltip="{
+      delayDuration: 500
+    }"
     :ui="{ base: 'overflow-hidden' }"
     :toaster="{
       position: 'top-banner',
       class: '',
       progress: false,
       duration: 9000,
-      expand: true,
+      expand: true
     }">
     <NuxtLayout>
       <NuxtPage />

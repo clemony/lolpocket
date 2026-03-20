@@ -37,5 +37,13 @@
   "maps": [
     11,
     21
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Mage",
+    "Tank",
+    "Lifesteal vamp"
   ]
 }

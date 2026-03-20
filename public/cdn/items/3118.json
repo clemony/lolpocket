@@ -31,7 +31,7 @@
       "unique": true,
       "mythic": false,
       "name": "Hatefog",
-      "effects": "Dealing ability damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation)."
+      "effects": "Dealing non-<img src=\"/img/icons/proc-damage.webp\" class=\"tip-icon \" />proc damage or <img src=\"/img/icons/pet-damage.webp\" class=\"tip-icon \" />pet damage to enemy champions with your ultimate ability creates a 251 – 550 (based on ultimate's damage instance) radius scorched zone beneath them for 3 seconds, applying a <i>Curse</i> to enemies within that deals 15 magic damage (+1.25% AP) magic damage every 0.25 seconds and reduces their magic resistance by 10 (3 second cooldown per target, starts on zone creation)."
     }
   ],
   "stats": {
@@ -51,5 +51,9 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Mage",
+    "Ability haste"
   ]
 }

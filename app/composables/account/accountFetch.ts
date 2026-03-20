@@ -1,6 +1,7 @@
 import type { AccountData, Settings } from "#shared/types"
 //
 import { getEmptyAccount, getEmptySettings } from "#shared/schema"
+import { sendErrorToast } from "~/utils/ui/toasts"
 
 export async function accountFetch() {
   const progress = ref<number>(0)
@@ -8,7 +9,7 @@ export async function accountFetch() {
   const { settings, account, pockets } = await $fetch<UserProfileResponse>(
     "/api/supabase/fetch/account",
     {
-      headers: useRequestHeaders(["cookie"]),
+      headers: useRequestHeaders(["cookie"])
     }
   )
 
@@ -55,7 +56,7 @@ export async function accountFetch() {
     description: `Great to see you, ${
       user().account?.name ?? user().account?.username ?? "Summoner"
     }!`,
-    icon: "party",
+    icon: "party"
   })
 
   return { progress }

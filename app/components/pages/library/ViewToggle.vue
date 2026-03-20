@@ -8,34 +8,24 @@ const tab = defineModel<TabValue>("tabModel", { default: 0 })
 </script>
 
 <template>
-  <div
-    v-if="variant === 'label'"
-    class="-my-2 inline-flex flex-nowrap items-center gap-3 pl-1">
-    <span class="align-bottom text-sm leading-6 font-medium">View:</span>
+  <template v-if="variant === 'label'">
     <UTabs
       v-model:model-value="tab"
       :items="Object.values(tabData)"
       size="sm"
       :ui="{
-        root: 'inline w-fit! grow-0 align-middle',
-        list: 'w-fit gap-1 p-0',
-        trigger: 'w-fit self-center px-3',
-        indicator:
-          'rounded-[0.45rem] border-b border-p2 shadow-none! ring ring-p3 drop-shadow-none!',
-        leadingIcon: 'hidden',
+        root: 'mt-0.75 inline grow p-0! align-middle',
+        list: 'h-7 gap-1 p-0!',
+        trigger: 'h-7 self-center px-5 active:text-pc',
+        indicator: 'h-7! bg-p0 shadow-none! ring ring-p3 drop-shadow-none!',
+        leadingIcon: 'hidden'
       }"
-      variant="ghost"
       @update:model-value="(e) => (tab = e as TabValue)">
-      <template #default="{ item }">
-        <span
-          :class="
-            cn('font-normal', { 'font-semibold': item.value === tabModel })
-          "
-          >{{ item.label }}</span
-        >
+      <template #leading="{ item }">
+        <Icon :name="item.icon" class="size-3.5" />
       </template>
     </UTabs>
-  </div>
+  </template>
 
   <LazyUTabs
     v-else
@@ -46,7 +36,7 @@ const tab = defineModel<TabValue>("tabModel", { default: 0 })
       list: 'w-fit gap-2 p-0',
       trigger: 'size-10 self-center px-3',
       indicator: 'size-10! ring-0',
-      label: 'hidden',
+      label: 'hidden'
     }"
     variant="ghost"
     color="neutral"

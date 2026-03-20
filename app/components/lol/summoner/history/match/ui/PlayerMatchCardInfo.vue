@@ -9,9 +9,7 @@ const { match, player } = defineProps<{
   <div class="mr-1 flex h-max w-69 shrink-0 flex-col gap-2">
     <div class="flex max-h-15 w-full items-start">
       <!-- champ image -->
-      <Champion
-        :id="player?.championId"
-        class="transition-scale size-15 rounded-full duration-300 hover:scale-105" />
+      <Champion :id="player?.championId" size="15" />
       <!--  spells -->
       <PlayerSpells class="ml-2 shrink-0" :player="player" />
 
@@ -43,8 +41,8 @@ const { match, player } = defineProps<{
               !item,
             'bg-dom/16! after:border-dom/20 after:mix-blend-hue': !player.win,
             'opacity-90': !player.win && !item,
-            'bg-insp/16! after:border-insp/20': player.win,
-          }),
+            'bg-insp/16! after:border-insp/20': player.win
+          })
         }" />
 
       <Item
@@ -58,8 +56,8 @@ const { match, player } = defineProps<{
             'no-img': !player.items.role,
             'img-loss': !player.win,
             'opacity-90': !player.win && !player.items.role,
-            'img-win': player.win,
-          }),
+            'img-win': player.win
+          })
         }" />
     </div>
   </div>

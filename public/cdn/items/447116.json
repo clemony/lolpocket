@@ -26,5 +26,10 @@
   },
   "maps": [
     30
+  ],
+  "tags": [
+    "Assassin",
+    "Fighter",
+    "Mage"
   ]
 }

@@ -10,7 +10,7 @@
       "unique": true,
       "mythic": false,
       "name": "Support Quest",
-      "effects": "Earn <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />800 through <i>Shared Riches</i> to automatically upgrade to <img src=\"/img/icons/bounty-of-worlds.webp\" class=\"tip-icon\" />Bounty of Worlds, increasing the <i>Ward</i> active to instead have 4 wards in stock."
+      "effects": "Earn <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />800 through <i>Shared Riches</i> and this item's <img src=\"/img/icons/gold-generation.webp\" class=\"tip-icon\" />gold generation stat to automatically upgrade to <img src=\"/img/icons/bounty-of-worlds.webp\" class=\"tip-icon\" />Bounty of Worlds, increasing the <i>Ward</i> active to instead have 4 wards in stock."
     },
     {
       "unique": true,
@@ -47,5 +47,8 @@
   },
   "maps": [
     11
+  ],
+  "tags": [
+    "Support"
   ]
 }

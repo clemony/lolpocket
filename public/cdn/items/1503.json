@@ -10,7 +10,7 @@
       "unique": true,
       "mythic": false,
       "name": "True Sight",
-      "effects": "Can see <img src=\"/img/icons/camouflage.webp\" class=\"tip-icon \" />camouflaged and <img src=\"/img/icons/invisible.webp\" class=\"tip-icon \" />invisible units within 1100 units."
+      "effects": "Turrets can see and will <img src=\"/img/icons/true-sight.webp\" class=\"tip-icon \" />reveal <img src=\"/img/icons/camouflage.webp\" class=\"tip-icon \" />camouflaged and <img src=\"/img/icons/invisible.webp\" class=\"tip-icon \" />invisible units within 1100 units."
     }
   ],
   "stats": {},
@@ -26,5 +26,6 @@
     21,
     30,
     35
-  ]
+  ],
+  "tags": []
 }

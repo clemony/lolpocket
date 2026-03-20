@@ -31,7 +31,7 @@
       "unique": true,
       "mythic": false,
       "name": "Ichorshield",
-      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for up to 165 – 315 (based on level), which lasts until destroyed."
+      "effects": "Convert the <img src=\"/img/icons/healing.webp\" class=\"tip-icon \" />healing received from <img src=\"/img/icons/life-steal.webp\" class=\"tip-icon\" />life steal in excess of <b>maximum</b> health into a <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield for up to , which lasts until destroyed."
     }
   ],
   "stats": {
@@ -50,5 +50,8 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Marksman"
   ]
 }

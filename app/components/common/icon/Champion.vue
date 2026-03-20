@@ -1,26 +1,23 @@
 <script setup lang="ts">
-import type { AvatarProps, TooltipProps } from "@nuxt/ui"
+import type { AvatarProps } from "@nuxt/ui"
 
-const {
-  id,
-  side,
-  class: className,
-  k,
-  loadingIcon,
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  k?: string
-  id?: number
-  side?: Side
-  ui?: Record<string, HTMLAttributes["class"]>
-  loadingIcon?: LoadingStyle
-}>()
+const props = defineProps<
+  AvatarProps & {
+    k?: string
+    id?: number | null
+    class?: HTMLAttributes["class"]
+    map?: number
+    side?: Side
+    disabled?: boolean
+    ui?: AvatarProps["ui"]
+  }
+>()
 
-const emit = defineEmits(["loaded"])
+const delegated = reactiveOmit(props, "k", "id")
 
-const champId = computed(() => (k ? champIdByKey(k) : id))
+const champId = computed(() => (props.k ? champIdByKey(props.k) : props.id))
 const champName = computed(() =>
-  champId.value ? champNameById(champId.value) : "",
+  champId.value ? champNameById(champId.value) : ""
 )
 </script>
 
@@ -28,9 +25,24 @@ const champName = computed(() =>
   <Avatar
     v-if="champId"
     :id="champId"
-    :ui
-    :loading-icon
-    :class="className"
+    v-bind="delegated"
+    :ui="{
+      ...props.ui,
+      image: 'shadow-sm drop-shadow-sm drop-shadow-black/10',
+      root: cn('hover-3d', props.ui?.root, props?.class)
+    }"
     :label="champName"
-    :src="champId ? `/img/champions/${champId}.webp` : undefined" />
+    :src="champId ? `/img/champions/${champId}.webp` : undefined">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <template #content>
+      <slot name="content" />
+    </template>
+  </Avatar>
 </template>

@@ -26,6 +26,11 @@
       "gold": 2850
     },
     {
+      "id": 126697,
+      "name": "Hubris",
+      "gold": 2950
+    },
+    {
       "id": 3004,
       "name": "Manamune",
       "gold": 2900
@@ -34,11 +39,6 @@
       "id": 6694,
       "name": "Serylda's Grudge",
       "gold": 3000
-    },
-    {
-      "id": 126697,
-      "name": "Hubris",
-      "gold": 2950
     },
     {
       "id": 3156,
@@ -53,7 +53,7 @@
     {
       "id": 2517,
       "name": "Endless Hunger",
-      "gold": 3000
+      "gold": 3100
     },
     {
       "id": 6692,
@@ -78,7 +78,7 @@
     {
       "id": 6697,
       "name": "Hubris",
-      "gold": 3000
+      "gold": 2800
     },
     {
       "id": 4402,
@@ -88,7 +88,7 @@
     {
       "id": 3508,
       "name": "Essence Reaver",
-      "gold": 2900
+      "gold": 3050
     },
     {
       "id": 3179,
@@ -103,7 +103,7 @@
     {
       "id": 6609,
       "name": "Chempunk Chainsword",
-      "gold": 3100
+      "gold": 3000
     },
     {
       "id": 6610,
@@ -135,5 +135,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin"
   ]
 }

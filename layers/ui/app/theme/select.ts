@@ -3,7 +3,7 @@ import { defineUiTheme } from "./defineUiTheme"
 export const selectTheme = defineUiTheme({
   slots: {
     root: "",
-    base: "group on:focus-ring relative inline-flex cursor-pointer items-center rounded-lg focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 **:trail-icon:size-4.5 **:trail-icon:opacity-70 on:**:trail-icon:opacity-100",
+    base: "group on:focus-ring relative inline-flex cursor-pointer items-center rounded-lg duration-0 focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 **:trail-icon:size-4.5 **:trail-icon:opacity-70 on:**:trail-icon:opacity-100",
     value: "pointer-events-none truncate",
     placeholder: "truncate text-n5",
     arrow: "fill-p0 text-p0",
@@ -25,7 +25,7 @@ export const selectTheme = defineUiTheme({
     itemTrailingIcon: "size-4 shrink-0",
     itemWrapper: "flex min-w-0 flex-1 flex-col",
     itemLabel: "truncate",
-    itemDescription: "truncate text-n5",
+    itemDescription: "truncate text-n5"
   },
   variants: {
     size: {
@@ -38,7 +38,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingChip: "size-4",
         itemLeadingChipSize: "sm",
         itemTrailingIcon: "size-4",
-        empty: "p-1 text-xs",
+        empty: "p-1 text-xs"
       },
       sm: {
         base: "h-8 rounded-md",
@@ -49,7 +49,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingChip: "size-4",
         itemLeadingChipSize: "sm",
         itemTrailingIcon: "size-4",
-        empty: "p-1.5 text-xs",
+        empty: "p-1.5 text-xs"
       },
       md: {
         base: "h-10",
@@ -60,7 +60,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingChip: "size-5",
         itemLeadingChipSize: "md",
         itemTrailingIcon: "size-5",
-        empty: "p-1.5 text-sm",
+        empty: "p-1.5 text-sm"
       },
       lg: {
         base: "h-12",
@@ -71,7 +71,7 @@ export const selectTheme = defineUiTheme({
         itemLeadingChip: "size-5",
         itemLeadingChipSize: "md",
         itemTrailingIcon: "size-5",
-        empty: "p-2 text-sm",
+        empty: "p-2 text-sm"
       },
       xl: {
         base: "h-14",
@@ -82,25 +82,25 @@ export const selectTheme = defineUiTheme({
         itemLeadingChip: "size-6",
         itemLeadingChipSize: "lg",
         itemTrailingIcon: "size-6",
-        empty: "p-2 text-base",
-      },
+        empty: "p-2 text-base"
+      }
     },
     variant: {
       ghost:
         "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
-      none: "bg-transparent text-pc",
+      none: "bg-transparent text-pc shadow-none ring-0 inset-shadow-none focus-visible:ring-0 on:ring-0",
       outline:
         "border border-p3 bg-p0 text-pc inset-shadow-xs ring-transparent",
       soft: "bg-p1/50 text-pc hover:bg-p1 focus:bg-p1 disabled:bg-p1/50",
       subtle: "border border-p3/60 bg-p1 text-pc ring-0",
       "ghost-outline":
-        "bg-transparent text-pc disabled:bg-transparent dark:disabled:bg-transparent",
-    },
+        "bg-transparent text-pc disabled:bg-transparent dark:disabled:bg-transparent"
+    }
   },
   defaultVariants: {
     size: "md",
-    variant: "outline",
-  },
+    variant: "outline"
+  }
 })
 
 export default selectTheme

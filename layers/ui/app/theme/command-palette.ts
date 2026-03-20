@@ -20,7 +20,7 @@ export const commandPaletteTheme = defineUiTheme({
     itemLeadingAvatarSize: "sm",
     itemLeadingChip: "shrink-0",
     itemLeadingChipSize: "",
-    itemLeadingIcon: "shrink-0 **:stroke-[2.4]",
+    itemLeadingIcon: "shrink-0",
     itemTrailing: "ms-auto inline-flex items-center",
     itemTrailingIcon: "shrink-0",
     itemTrailingKbds: "hidden shrink-0 items-center lg:inline-flex",
@@ -32,27 +32,27 @@ export const commandPaletteTheme = defineUiTheme({
       "z-0 mb-2 translate-x-8 text-start align-bottom font-semibold text-pc after:absolute after:-bottom-0.5 after:-left-7 after:h-px after:w-[98.5%] after:bg-p3",
     root: "flex min-h-0 min-w-0 flex-col divide-y divide-p3/80",
     viewport:
-      "relative h-max w-full flex-1 scroll-py-1 overflow-y-auto p-0 focus:outline-none",
+      "relative h-max w-full flex-1 scroll-py-1 overflow-y-auto p-0 focus:outline-none"
   },
   variants: {
     active: {
       false: {
         item: [
-          "text-pc duration-0! data-highlighted:not-data-disabled:text-pc data-highlighted:not-data-disabled:before:bg-transparent",
+          "text-pc duration-0! data-highlighted:not-data-disabled:text-pc data-highlighted:not-data-disabled:before:bg-transparent"
         ],
         itemLeadingIcon: [
-          "text-pc group-data-highlighted:not-group-data-disabled:text-pc",
-        ],
+          "text-pc group-data-highlighted:not-group-data-disabled:text-pc"
+        ]
       },
       true: {
         item: "text-pc before:bg-transparent",
-        itemLeadingIcon: "text-pc",
-      },
+        itemLeadingIcon: "text-pc"
+      }
     },
     loading: {
       true: {
-        itemLeadingIcon: "animate-spin",
-      },
+        itemLeadingIcon: "animate-spin"
+      }
     },
     size: {
       lg: {
@@ -68,7 +68,7 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "md",
         itemTrailingpcIcon: "size-4.5",
-        label: "gap-2 text-xs",
+        label: "gap-2 text-xs"
       },
       md: {
         empty: "py-6 text-sm",
@@ -84,7 +84,7 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbdsSize: "md",
         itemTrailingpcIcon: "size-5",
         label: "gap-1.5 px-1.5 pt-2 pb-1 text-xs",
-        root: "[&_svg]:text-unset! [&_svg]:size-4!",
+        root: "[&_svg]:text-unset!"
       },
       sm: {
         empty: "py-4 text-xs",
@@ -99,7 +99,7 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "sm",
         itemTrailingpcIcon: "size-4",
-        label: "gap-1.5 p-1.5 text-[10px]/3",
+        label: "gap-1.5 p-1.5 text-[10px]/3"
       },
       xl: {
         empty: "py-8 text-base",
@@ -114,7 +114,7 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "lg",
         itemTrailingpcIcon: "size-6",
-        label: "gap-2 p-2 text-sm",
+        label: "gap-2 p-2 text-sm"
       },
       xs: {
         empty: "py-3 text-xs",
@@ -129,21 +129,21 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbds: "gap-0.5",
         itemTrailingKbdsSize: "sm",
         itemTrailingpcIcon: "size-4",
-        label: "gap-1 p-1 text-[10px]/3",
-      },
+        label: "gap-1 p-1 text-[10px]/3"
+      }
     },
     virtualize: {
       false: {
-        viewport: "divide-y divide-p3",
+        viewport: "divide-y divide-p3"
       },
       true: {
-        viewport: "isolate p-1",
-      },
-    },
+        viewport: "isolate p-1"
+      }
+    }
   },
   defaultVariants: {
-    size: "md",
-  },
+    size: "md"
+  }
 })
 
 export default commandPaletteTheme

@@ -6,7 +6,8 @@ type UiProps = AvatarProps["ui"] &
     wrapper?: string
     base?: string
   }
-interface Props extends Omit<AvatarProps, "ui">, Omit<TooltipProps, "ui"> {
+interface Props
+  extends Omit<AvatarProps, "ui" | "icon">, Omit<TooltipProps, "ui"> {
   ui?: UiProps
 }
 
@@ -18,78 +19,106 @@ const props = withDefaults(
       label?: string
       side?: Side
       ui?: Props["ui"]
-      loadingIcon?: LoadingStyle
+      spinner?: boolean
+      effects?: boolean
     }
   >(),
-  {},
+  {
+    spinner: false,
+    icon: "i-question",
+    effects: false
+  }
 )
-
+//i-eos-icons-hourglass
 const emit = defineEmits(["loaded"])
 
 const loaded = ref(false)
-
-function onLoad() {
-  loaded.value = true
-  emit("loaded")
-}
+const resolvedSrc = shallowRef<string | undefined>(undefined)
+let preloadToken = 0
 
 const tooltip = useTemplateRef<TooltipExpose>("tooltip")
+
+const delegated = reactiveOmit(props, "class", "spinner")
+
+watch(
+  () => props.src,
+  (src) => {
+    preloadToken += 1
+    const currentToken = preloadToken
+
+    loaded.value = false
+    resolvedSrc.value = undefined
+
+    if (!src) return
+    if (!import.meta.client) return
+
+    const image = new window.Image()
+    image.decoding = "async"
+    image.src = src
+
+    image.onload = () => {
+      if (currentToken !== preloadToken) return
+      resolvedSrc.value = src
+      loaded.value = true
+      emit("loaded")
+    }
+
+    image.onerror = () => {
+      if (currentToken !== preloadToken) return
+      resolvedSrc.value = undefined
+      loaded.value = false
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
   <Tooltip
     ref="tooltip"
+    as-child
     interactive
     :label
     :align="tooltip?.pinned ? 'center' : 'end'"
     :align-offset="tooltip?.pinned ? 0 : undefined"
-    :class="cn('size-max', props?.ui)"
-    :avatar="src || undefined"
+    :avatar="resolvedSrc || undefined"
     :ui="{
-      content: cn('h-fit! max-h-80! w-full max-w-80', {
-        ' px-1': tooltip?.pinned,
-      }),
+      content: cn('group/avatar h-fit! max-h-110! w-full max-w-100', {
+        ' px-2 rounded-[0.7rem]': tooltip?.pinned
+      })
     }"
-    :side="side || tooltip?.pinned ? 'top' : 'bottom'">
-    <button class="hover-3d size-max rounded-lg hover-3d-shine">
-      <div
-        :class="
-          cn(
-            'size-14 overflow-hidden rounded-lg shadow-sm drop-shadow-sm',
-            props?.class,
-            props?.ui?.wrapper,
-          )
-        ">
-        <UAvatar
-          icon="i-question"
-          role="button"
-          :quality="100"
-          :src="src || undefined"
-          :ui="{
-            root: cn('relative size-full rounded-lg', ui?.root),
-            image: 'z-1',
-            icon: 'size-5 opacity-60',
-          }"
-          :alt="props?.label ? `${props?.label} icon` : 'an icon'"
-          @loaded="onLoad" />
-
-        <Icon
-          v-if="!loaded && loadingIcon === 'spinner'"
-          name="i-lucide-loader-circle"
-          class="pointer-events-none absolute size-4 animate-spin place-self-center!" />
-        <USkeleton
-          v-if="!loaded"
-          :class="cn('pointer-events-none absolute size-full', loading)" />
-      </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </button>
+    :side="props.side || tooltip?.pinned ? 'top' : 'bottom'">
+    <UAvatar
+      :icon="props.spinner ? 'i-lucide-loader-circle' : 'i-question'"
+      role="button"
+      v-bind="delegated"
+      :quality="100"
+      :src="resolvedSrc"
+      :ui="{
+        root: cn('relative rounded-lg', { '': loaded }, props.ui?.root),
+        image: cn(
+          'z-1',
+          {
+            'scale-105  outline outline-n0/70  ring ring-offset-3 ring-n0/90 ring-offset-p2':
+              tooltip?.pinned && props.effects !== false
+          },
+          props.ui?.image
+        ),
+        icon: cn(
+          'size-5 opacity-60',
+          {
+            'pointer-events-none absolute size-4 animate-spin place-self-center! text-nc':
+              props.spinner
+          },
+          props.ui?.icon
+        ),
+        fallback: props.ui?.fallback
+      }"
+      :alt="props?.label ? `${props?.label} icon` : 'an icon'">
+      <USkeleton
+        v-if="!props.spinner && !loaded"
+        class="pointer-events-none block size-full rounded-[inherit]" />
+    </UAvatar>
     <template v-if="tooltip?.pinned" #content>
       <slot name="content" />
     </template>

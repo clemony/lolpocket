@@ -1,7 +1,7 @@
 {
   "id": 222524,
   "name": "Bandlepipes",
-  "description": "200 Health\n10 Ability Haste\n25 Armor\n25 Magic Resist\n\nFanfare\nSlowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you 20 Move Speed. While you have Fanfare, nearby allies, including yourself, gain  Attack Speed.",
+  "description": "200 Health\n10 Ability Haste\n25 Armor\n25 Magic Resist\n\nFanfare\nSlowing or Immobilizing an enemy champion grants Fanfare for  seconds. Fanfare grants you 35 Move Speed. While you have Fanfare, nearby allies, including yourself, gain  Attack Speed.",
   "gold": {
     "base": 2500,
     "purchasable": true,
@@ -10,5 +10,6 @@
   },
   "maps": [
     30
-  ]
+  ],
+  "tags": []
 }

@@ -176,7 +176,7 @@ export const icon = {
     backpack: "tabler:briefcase", //'i-backpack'
     "bar-chart": "lucide:chart-no-axes-column", //'i-bar-chart'
     "bell-ring": "lucide:bell-ring", //'i-bell-ring'
-    book: "i-tdesign-address-book", //'i-book'
+    book: "i-tdesign-book", //'i-book'
     bot: "lucide:bot", //'i-bot'
     "bot-chat": "lucide:bot-message-square", //'i-bot-chat'
     bow: "mdi:bow-arrow", //'i-bow'
@@ -215,6 +215,6 @@ export const icon = {
     energy: "hugeicons:zap", //'i-energy'
     fury: "hugeicons:fire-02", //'i-fury'
     pathing: "hugeicons:cursor-circle-selection-02", //'i-pathing'
-    range: "hugeicons:target-03", //'i-range'
-  },
+    range: "hugeicons:target-03" //'i-range'
+  }
 }

@@ -1,10 +1,10 @@
-import { defineStore } from "pinia"
 import { itemIndex } from "#shared/constants/items/itemIndex"
 import { mapToItem } from "#shared/constants/items/mapToItem"
 import { rankToItem } from "#shared/constants/items/rankToItem"
 import { statToItem } from "#shared/constants/items/statToItem"
 import { tagToItem } from "#shared/constants/items/tagToItem"
 import { unpurchasableItems } from "#shared/constants/items/unpurchasableItems"
+import { defineStore } from "pinia"
 
 export interface ItemFilter {
   map: number
@@ -18,6 +18,8 @@ export interface ItemFilter {
 export const is = defineStore("itemStore", () => {
   const cache = new Map<number, Item>()
 
+  const disableAll = ref<boolean>(false)
+
   // --- FILTER STATE ---
   const filters = ref<ItemFilter>({
     map: 11,
@@ -25,7 +27,7 @@ export const is = defineStore("itemStore", () => {
     query: "",
     rank: "",
     stats: [],
-    tags: [],
+    tags: []
   })
 
   const defaultFilterLength = computed<number>(
@@ -56,15 +58,24 @@ export const is = defineStore("itemStore", () => {
     const allIds = itemIndex.map((i) => i.id)
     let matchedIds: Set<number> = new Set(allIds)
 
+    watch(
+      () => filters.value.rank,
+      (v) => {
+        if (v === "Special") {
+          clearFilters()
+          filters.value.rank = v
+        }
+      }
+    )
     // alias map: stats that should be treated as equivalent
     const statAliases: Record<string, string[]> = {
       flatMagicPenetration: ["flatMagicPenetration", "percentMagicPenetration"],
       flatMovespeed: ["flatMovespeed", "percentMovespeed"],
       percentMagicPenetration: [
         "flatMagicPenetration",
-        "percentMagicPenetration",
+        "percentMagicPenetration"
       ],
-      percentMovespeed: ["flatMovespeed", "percentMovespeed"],
+      percentMovespeed: ["flatMovespeed", "percentMovespeed"]
     }
 
     if (filters.value.stats.length > 0) {
@@ -132,6 +143,6 @@ export const is = defineStore("itemStore", () => {
     defaultFilterLength,
     filtered,
     filters,
-    isComparing,
+    isComparing
   }
 })

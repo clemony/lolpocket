@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { tv } from "tailwind-variants"
+import type { SeparatorProps } from "~~/layers/ui/app/variants/separator"
 
 const props = withDefaults(defineProps<SeparatorProps>(), {
   placement: "start",
   underline: false,
-  labelPlacement: "start",
+  labelPlacement: "start"
 })
-console.log("🥸 - props:", props)
 
 const separatorVariants = tv({
   slots: {
@@ -15,80 +15,80 @@ const separatorVariants = tv({
     trailingIcon: "size-4",
     label:
       "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
-    separator: "pointer-events-none flex-1 shrink-0 grow bg-current",
+    separator: "pointer-events-none flex-1 shrink-0 grow bg-current"
   },
   variants: {
     color: {
       n5: {
         label: "text-n5/60",
-        separator: "bg-n5/20",
+        separator: "bg-n5/20"
       },
       neutral: {
         label: "text-nc/50 group-hover/collapse:text-nc",
-        separator: "bg-nc/10",
+        separator: "bg-nc/10"
       },
       p2: {
         label: "text-pc",
-        separator: "bg-p2",
+        separator: "bg-p2"
       },
       p3: {
         label: "text-pc",
-        separator: "bg-p3/80",
+        separator: "bg-p3/80"
       },
       p4: {
         label: "text-pc",
-        separator: "bg-p4",
-      },
+        separator: "bg-p4"
+      }
     },
     underline: {
       true: {
         label: "text-pc/60 group-hover/btn:text-pc group-hover/btn:underline",
         separator: "group-hover/collapse:brightness-86",
-        leading: "**:text-pc/60 group-hover/btn:**:text-pc",
-      },
+        leading: "**:text-pc/60 group-hover/btn:**:text-pc"
+      }
     },
     labelVisible: {
       true: {},
       false: {
-        label: "hidden",
-      },
+        label: "hidden"
+      }
     },
     placement: {
       center: {},
       end: {},
-      start: {},
+      start: {}
     },
     labelPlacement: {
       center: {},
       end: {},
-      start: {},
+      start: {}
     },
     orientation: {
       vertical: {
         root: "flex-col justify-center",
         label: "flex flex-col items-center",
-        separator: "h-full w-px",
+        separator: "h-full w-px"
       },
       horizontal: {
         root: "flex items-center",
         label: "flex items-center",
-        separator: "h-px w-full",
-      },
+        separator: "h-px w-full"
+      }
     },
     size: {
       xs: {
-        label: "text-2xs font-medium",
+        label: "text-2xs font-medium"
       },
       sm: {
-        label: "text-xs font-medium",
+        label: "text-xs font-medium"
       },
       md: {
-        label: "text-sm font-medium",
+        label: "text-sm font-medium"
       },
       lg: {
-        label: "text-md font-medium",
-      },
-    },
+        label: "text-md font-medium"
+      }
+    }
   },
   compoundVariants: [
     {
@@ -97,8 +97,8 @@ const separatorVariants = tv({
       class: {
         label: "order-last ml-3",
         separator: "order-1",
-        leading: "order-first mr-1",
-      },
+        leading: "order-first mr-1"
+      }
     },
     {
       placement: "start",
@@ -107,8 +107,8 @@ const separatorVariants = tv({
         label: "order-1 mr-2",
         leading: "order-first",
         separator: "order-2",
-        trailingIcon: "order-3 ml-2",
-      },
+        trailingIcon: "order-3 ml-2"
+      }
     },
     {
       placement: "start",
@@ -116,48 +116,18 @@ const separatorVariants = tv({
       class: {
         label: "order-2 mx-2",
         separator: "order-1",
-        leading: "order-first",
-      },
-    },
+        leading: "order-first"
+      }
+    }
   ],
   defaultVariants: {
     color: "p3",
     placement: "start",
     labelPlacement: "start",
     size: "md",
-    orientation: "horizontal",
-  },
+    orientation: "horizontal"
+  }
 })
-
-type SeparatorColor = "n5" | "neutral" | "p2" | "p3" | "p4"
-type SeparatorPlacement = "start" | "center" | "end"
-type SeparatorOrientation = "horizontal" | "vertical"
-type SeparatorSize = "xs" | "sm" | "md" | "lg"
-
-interface SeparatorProps {
-  class?: HTMLAttributes["class"]
-  labelClass?: HTMLAttributes["class"]
-  label?: string
-  color?: SeparatorColor
-  placement?: SeparatorPlacement
-  size?: SeparatorSize
-  orientation?: SeparatorOrientation
-  underline?: boolean
-  labelPlacement?: SeparatorPlacement
-  ui?: Partial<
-    Record<
-      | "root"
-      | "label"
-      | "leading"
-      | "separator"
-      | "leadingIcon"
-      | "trailingIcon",
-      string
-    >
-  >
-  trailingIcon?: string
-  leadingIcon?: string
-}
 
 const styles = computed(() =>
   separatorVariants({
@@ -167,8 +137,8 @@ const styles = computed(() =>
     orientation: props.orientation,
     underline: props.underline,
     labelVisible: Boolean(props.label),
-    labelPlacement: props.labelPlacement,
-  }),
+    labelPlacement: props.labelPlacement
+  })
 )
 </script>
 

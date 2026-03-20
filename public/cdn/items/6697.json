@@ -35,13 +35,16 @@
   },
   "description": "60 Attack Damage\n18 Lethality\n10 Ability Haste\n\nEminence\nWhen a champion that you damaged within 3 seconds dies, gain 15 Attack Damage plus 2 per champion killed for 90 seconds.",
   "gold": {
-    "base": 950,
+    "base": 750,
     "purchasable": true,
-    "total": 3000,
-    "sell": 2100
+    "total": 2800,
+    "sell": 1960
   },
   "maps": [
     11,
     21
+  ],
+  "tags": [
+    "Assassin"
   ]
 }

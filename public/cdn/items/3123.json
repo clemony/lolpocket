@@ -18,7 +18,7 @@
     {
       "id": 6609,
       "name": "Chempunk Chainsword",
-      "gold": 3100
+      "gold": 3000
     }
   ],
   "specialRecipe": 0,
@@ -51,5 +51,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin"
   ]
 }

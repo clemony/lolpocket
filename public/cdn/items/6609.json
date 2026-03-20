@@ -41,15 +41,19 @@
   },
   "description": "45 Attack Damage\n450 Health\n15 Ability Haste\n\nHackshorn\nDealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
   "gold": {
-    "base": 350,
+    "base": 250,
     "purchasable": true,
-    "total": 3100,
-    "sell": 2170
+    "total": 3000,
+    "sell": 2100
   },
   "maps": [
     11,
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Assassin"
   ]
 }

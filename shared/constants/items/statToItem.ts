@@ -1,4 +1,4 @@
-// Updated Patch 16.1 - 02/12/2026 04:58:10 AM CST
+// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
 
 export const statToItem: Record<string, number[]> = {
   "flatMovespeed": [
@@ -65,6 +65,7 @@ export const statToItem: Record<string, number[]> = {
     3876,
     3877,
     6664,
+    223069,
     224403
   ],
   "health": [
@@ -147,6 +148,7 @@ export const statToItem: Record<string, number[]> = {
     8010,
     8020,
     223039,
+    223069,
     224403,
     226630,
     228001,
@@ -325,6 +327,7 @@ export const statToItem: Record<string, number[]> = {
     6333,
     6662,
     6665,
+    223069,
     224403,
     228002,
     443054,
@@ -359,6 +362,7 @@ export const statToItem: Record<string, number[]> = {
     6664,
     6665,
     8020,
+    223069,
     224403,
     443059,
     443063,
@@ -594,6 +598,7 @@ export const statToItem: Record<string, number[]> = {
     6699,
     8010,
     8020,
+    223069,
     223185,
     224403,
     226630,

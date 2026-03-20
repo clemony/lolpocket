@@ -6,61 +6,61 @@ const props = withDefaults(
     ButtonProps & {
       placement?: Side
       class?: HTMLAttributes["class"]
+      as?: string
     }
   >(),
   {
     hover: "neutral",
     placement: "bottom",
-    icon: "i-refresh",
-  },
+    as: "button",
+    icon: "i-refresh"
+  }
 )
 const delegated = reactiveOmit(props, "class", "placement")
 const { summoner } = storeToRefs(sSession())
-const throttle = throttleFunction(
-  () => sMatches().loadNewer(),
-  120_000,
-  summoner?.value?.puuid ?? "",
-  "match-refresh",
+const cooldownMs = 120_000
+const action = "match-refresh"
+const puuid = computed(() => summoner.value?.puuid ?? "")
+const { loading } = storeToRefs(sMatches())
+const { cooldown, timeRemaining } = useCooldown(puuid, action, cooldownMs)
+const isDisabled = computed(
+  () => props.disabled || loading.value || timeRemaining.value > 0
 )
-const cooldown = computed(() => throttle?.cooldown?.value ?? null)
-const isLoading = computed(() => throttle?.isLoading?.value ?? false)
-const update = throttle?.throttled ?? (() => {})
 
 async function loadNew() {
-  const message = await sMatches().loadNewer()
-  console.log("🥸 - message - message:", message)
+  if (!puuid.value || isDisabled.value) return
+
+  try {
+    await sMatches().loadNewer()
+    cds().set(puuid.value, action, cooldownMs)
+  } finally {
+    console.log("🥸 - loadNewer - done")
+  }
 }
-const tippy = computed(() => {
+
+const tip = computed(() => {
   return !cooldown.value?.seconds
     ? summoner?.value?.lastMatchUpdate
       ? `Last updated ${formatTimeAgo(summoner?.value?.lastMatchUpdate)}`
       : "Not updated yet"
-    : `${cooldown.value?.seconds} cd`
+    : loading.value
+      ? "Loading..."
+      : `${cooldown.value?.seconds} cd`
 })
 </script>
 
 <template>
-  <Tooltip :label="tippy ?? null" :class="cn('', props.class)">
-    <slot />
-    <UButton v-bind="delegated" @click="loadNew()">
-      <template v-if="cooldown" #leading>
-        <div class="relative grid size-full place-items-center overflow-hidden">
-          <div
-            class="radial-progress absolute place-self-center"
-            :aria-valuemax="120"
-            :style="{
-              '--value': cooldown?.seconds,
-              '--size': '3rem',
-              '--thickness': '4px',
-            }"
-            :aria-valuenow="cooldown?.percent"
-            role="progressbar">
-            <span class="absolute place-self-center text-xs font-semibold">
-              {{ cooldown?.seconds }}
-            </span>
-          </div>
-        </div>
-      </template>
-    </UButton>
+  <Tooltip
+    :as="props.as"
+    :label="tip ?? null"
+    :class="cn('', props.class)"
+    @click="loadNew()">
+    <slot
+      :is-loading="loading"
+      :cooldown="cooldown"
+      :cooldown-ms="cooldownMs"
+      :disabled="isDisabled"
+      :time-remaining="timeRemaining">
+    </slot>
   </Tooltip>
 </template>

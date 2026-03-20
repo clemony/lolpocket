@@ -27,7 +27,7 @@ const { class: className, pathClass } = defineProps<{
       <Icon
         v-else
         class="absolute size-9! shrink-0 text-pc/30 opacity-60"
-        name="lp:runes" />
+        name="i-lp-rune" />
 
       <div
         v-memo="[set.secondary.path]"
@@ -48,13 +48,13 @@ const { class: className, pathClass } = defineProps<{
         <Icon
           v-else
           class="size-5.5! shrink-0 text-pc/30 group-hover/btn:opacity-0"
-          name="lp:runes" />
+          name="i-lp-rune" />
 
         <icon
           name="up-down"
           :class="
             cn('absolute z-2 size-4 opacity-0 group-hover/btn:opacity-60', {
-              'text-white': set.secondary,
+              'text-white': set.secondary
             })
           " />
       </div>

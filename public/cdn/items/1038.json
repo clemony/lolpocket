@@ -25,7 +25,7 @@
     },
     {
       "id": 3095,
-      "name": "Stormrazor",
+      "name": "Deprecated item",
       "gold": 3000
     },
     {
@@ -65,5 +65,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin"
   ]
 }

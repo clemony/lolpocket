@@ -35,16 +35,16 @@
       "unique": true,
       "mythic": false,
       "name": "Spellblade",
-      "effects": "After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD (+10% AP) <b>bonus</b> magic damage on-hit and applies on-hit effects twice (1.5 second cooldown, starts after using the empowered attack)."
+      "effects": "After using an ability, your next basic attack within 10 seconds deals 75% <b>base</b> AD (+10% AP) <b>bonus</b> magic damage on-hit and applies <img src=\"/img/icons/on-hit.webp\" class=\"tip-icon \" />on-hit effects to the target again after a 0.2-second delay (1.5 second cooldown, starts after using the empowered attack)."
     }
   ],
   "stats": {
     "abilityPower": 70,
     "attackSpeed": 25,
-    "health": 300,
+    "health": 350,
     "abilityHaste": 20
   },
-  "description": "300 Health\n70 Ability Power\n20 Ability Haste\n25% Attack Speed\n\nSpellblade (0s)\nAfter using an Ability, your next Attack deals  bonus magic damage On-Hit and applies On-Hit effects an additional time.",
+  "description": "350 Health\n70 Ability Power\n20 Ability Haste\n25% Attack Speed\n\nSpellblade (0s)\nAfter using an Ability, your next Attack deals  bonus magic damage On-Hit and applies On-Hit effects an additional time.",
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -54,6 +54,10 @@
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Onhit effects"
   ]
 }

@@ -44,6 +44,11 @@
       "gold": 1150
     },
     {
+      "id": 2517,
+      "name": "Endless Hunger",
+      "gold": 3100
+    },
+    {
       "id": 6692,
       "name": "Eclipse",
       "gold": 2900
@@ -142,5 +147,10 @@
     12,
     21,
     35
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin"
   ]
 }

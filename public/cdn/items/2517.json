@@ -12,6 +12,11 @@
       "id": 1037,
       "name": "Pickaxe",
       "gold": 875
+    },
+    {
+      "id": 1036,
+      "name": "Long Sword",
+      "gold": 350
     }
   ],
   "specialRecipe": 0,
@@ -32,20 +37,24 @@
     }
   ],
   "stats": {
-    "attackDamage": 60,
+    "attackDamage": 65,
     "omnivamp": 5,
     "tenacity": 20
   },
-  "description": "60 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain  Ability Haste.\n\nFeast\nWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
+  "description": "65 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain  Ability Haste.\n\nFeast\nWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
   "gold": {
-    "base": 1075,
+    "base": 825,
     "purchasable": true,
-    "total": 3000,
-    "sell": 2100
+    "total": 3100,
+    "sell": 2170
   },
   "maps": [
     11,
     12,
-    21
+    21,
+    35
+  ],
+  "tags": [
+    "Fighter"
   ]
 }

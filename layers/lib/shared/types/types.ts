@@ -16,7 +16,16 @@ export type DeepMerge<T, U> = T extends AnyObj
 
 export type DeepMergeMany<
   T extends readonly unknown[],
-  Acc = AnyObj,
+  Acc = AnyObj
 > = T extends readonly [infer H, ...infer R]
   ? DeepMergeMany<R, DeepMerge<Acc, H>>
   : Acc
+
+export interface RootProps {
+  label: string
+  to: string
+  icon: string
+  fillIcon: string
+  class: string
+  order: number
+}

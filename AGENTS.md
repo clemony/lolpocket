@@ -4,6 +4,12 @@
 
 - Nuxt UI theme files live in `layers/ui/app/theme`
 
+## Tooling
+
+- Package manager: `pnpm`
+- TypeScript runner: `tsx`
+- Lint command: `pnpm lint`
+
 ## Context7 Auto-Use (Global)
 
 When a user asks a code-related question, automatically use Context7 for library/API docs, setup, or configuration.

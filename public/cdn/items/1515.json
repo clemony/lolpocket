@@ -9,7 +9,8 @@
     {
       "unique": true,
       "mythic": false,
-      "effects": "Provides extra defensive measures. Attackers are rewarded for destroying portions of the plating."
+      "name": "Turret Plating",
+      "effects": "Turrets have plating which provide them extra defensive measures against enemies. Attackers are rewarded for destroying portions of the plating."
     }
   ],
   "stats": {},
@@ -25,5 +26,6 @@
     21,
     30,
     35
-  ]
+  ],
+  "tags": []
 }

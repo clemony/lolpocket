@@ -1,7 +1,7 @@
 {
   "id": 3039,
   "name": "Atma's Reckoning",
-  "description": "700 Health\n20% Critical Strike Chance\n\nBig Hands\nGain 0-30% Critical Strike Chance, scaling with your bonus Health.",
+  "description": "700 Health\n20% Critical Strike Chance\n10 Ability Haste\n\nBig Hands\nGain 0-30% Critical Strike Chance, scaling with your bonus Health.",
   "gold": {
     "base": 500,
     "purchasable": true,
@@ -11,5 +11,6 @@
   "maps": [
     12,
     21
-  ]
+  ],
+  "tags": []
 }

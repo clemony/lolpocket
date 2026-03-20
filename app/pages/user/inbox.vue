@@ -6,7 +6,8 @@ definePageMeta({
   icon: "i-mail",
   class: "**:stroke-[1.8!]",
   auth: true,
-  path: "/inbox",
+  order: 1,
+  path: "/inbox"
 })
 /*
 const selectedMail = ref<string | undefined>(props.mails[0].id)
@@ -57,14 +58,14 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               :class="
                 cn('', {
                   'w-full': !isCollapsed,
-                  'h-full self-center rounded-full': isCollapsed,
+                  'h-full self-center rounded-full': isCollapsed
                 })
               ">
               <SummonerIcon
                 :class="
                   cn('size-full rounded-full', {
                     'size-7': !isCollapsed,
-                    'size-10': isCollapsed,
+                    'size-10': isCollapsed
                   })
                 " />
               <span
@@ -87,7 +88,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
         :is-collapsed
         :links="
           (route.matched[0]?.children ?? []).sort(
-            (a, b) => Number(a.meta?.order) - Number(b.meta?.order),
+            (a, b) => Number(a.meta?.order) - Number(b.meta?.order)
           )
         " />
 

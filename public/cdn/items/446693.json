@@ -27,5 +27,8 @@
     "purchasable": true,
     "total": 1000,
     "sell": 400
-  }
+  },
+  "tags": [
+    "Assassin"
+  ]
 }

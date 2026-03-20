@@ -1,16 +1,8 @@
-shamefullyHoist: false
-shellEmulator: true
-
-trustPolicy: no-downgrade
-
-overrides:
-  chokidar: 3.5.3
-  semver: 7.5.4
-
 onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - "@tailwindcss/oxide"
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
   - esbuild
+  - maplibre-gl
   - re2
   - sharp
   - supabase
@@ -18,3 +10,13 @@ onlyBuiltDependencies:
   - vue-demi
   - workerd
   - vue-chrts
+
+overrides:
+  chokidar: 3.5.3
+  semver: 7.5.4
+
+shamefullyHoist: false
+
+shellEmulator: true
+
+trustPolicy: no-downgrade

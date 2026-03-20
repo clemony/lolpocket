@@ -15,32 +15,29 @@ const maps = computed(() => [
   {
     id: 0,
     value: 0,
-    name: "All",
+    name: "All"
   },
   ...mapIndex
     .filter((m) => [11, 12, 30, 35].includes(m.id))
     .map((m) => ({
       value: m.id,
-      name: m.name,
-    })),
+      name: m.name
+    }))
 ])
 </script>
 
 <template>
   <div>
-    <h6 v-if="!collapsed" class="text-sm">Map</h6>
+    <h6 v-if="!collapsed" class="mb-2 px-px text-sm">Map</h6>
     <UPopover
       v-model:open="mapOpen"
-      :arrow="collapsed"
       :content="{
-        side: collapsed ? 'right' : 'bottom',
+        side: collapsed ? 'right' : 'bottom'
       }"
       :ui="{ content: 'w-(--reka-popover-trigger-width) min-w-54 p-1.5' }">
-      <Tooltip
-        :disabled="!collapsed || mapOpen"
-        label="Map"
-        side="right"
-        class="w-full">
+      <div
+        data-tip="Map"
+        :class="cn(!collapsed || mapOpen ? '' : 'tooltip tooltip-left')">
         <UButton
           :size
           :active="mapOpen"
@@ -48,17 +45,21 @@ const maps = computed(() => [
           active-color="p1"
           :square="collapsed === true"
           :ui="{
-            base: cn(collapsed ? '' : 'w-full grow', ui?.base),
+            base: cn(
+              collapsed ? '' : 'w-full grow',
+
+              ui?.base
+            ),
             label: collapsed ? 'hidden' : '',
             trailingIcon: collapsed ? 'hidden' : '',
-            leadingIcon: collapsed ? 'size-5' : '',
+            leadingIcon: collapsed ? 'size-5' : ''
           }"
           :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
           :icon="`i-lp-${filters.map}`"
           trailing-icon="i-up-down"
           :color="collapsed ? 'p0' : 'p1'"
           :variant="collapsed ? 'solid' : 'outline'" />
-      </Tooltip>
+      </div>
       <template #content>
         <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
         <LazyURadioGroup
@@ -68,7 +69,7 @@ const maps = computed(() => [
           :ui="{
             item: 'group/item relative cursor-pointer overflow-hidden rounded-md px-1.5 py-1 **:cursor-pointer hover:bg-p2',
             label:
-              'flex flex-nowrap items-center justify-between gap-1.5 font-medium',
+              'flex flex-nowrap items-center justify-between gap-1.5 font-medium'
           }"
           variant="list"
           indicator="hidden">

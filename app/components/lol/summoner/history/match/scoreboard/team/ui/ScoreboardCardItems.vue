@@ -4,7 +4,7 @@ import { roleItems } from "#shared/constants/items/roleItemIndex"
 const {
   class: className,
   isSR,
-  player,
+  player
 } = defineProps<{
   player: Player
   isSR: boolean
@@ -25,23 +25,14 @@ const roleItemId = computed(() => {
     :class="
       cn('@min-700:gap-4 @min-700:px-4 flex w-fit gap-1 px-2', className)
     ">
-    <div :class="cn('flex shrink-0 items-center -space-x-2 self-center')">
-      <div
+    <div :class="cn('flex shrink-0 items-center self-center')">
+      <Item
         v-for="(item, i) in player.items?.slots ?? []"
+        :id="item"
         :key="item"
-        class="grid size-9.5 place-items-center rounded-full bg-p0"
-        :style="{
-          zIndex: i,
-        }">
-        <Item
-          :id="item"
-          :ui="{
-            root: 'size-7.5 rounded-full',
-            image: cn('img-active rounded-full bg-p1 inset-shadow-xs', {
-              'no-img': !item,
-            }),
-          }" />
-      </div>
+        :ui="{
+          root: 'z-2 size-7.5'
+        }" />
     </div>
 
     <div class="flex w-full max-w-16 items-center -space-x-2">
@@ -55,8 +46,8 @@ const roleItemId = computed(() => {
               'no-img': !player.items?.role && !isSR,
               'pointer-events-none brightness-115 contrast-102':
                 !player.items?.role,
-              'brightness-150': player.role === 'support',
-            }),
+              'brightness-150': player.role === 'support'
+            })
           }" />
       </div>
       <div
@@ -64,10 +55,7 @@ const roleItemId = computed(() => {
         <Item
           :id="player.items?.trinket"
           :ui="{
-            root: 'size-7.5 rounded-full',
-            image: cn('img-active bg-p1', {
-              'no-img': !player.items?.trinket,
-            }),
+            root: 'size-7.5 rounded-full bg-p1!'
           }" />
         <!-- vision -->
         <Tooltip
@@ -77,7 +65,7 @@ const roleItemId = computed(() => {
             color="neutral"
             size="2xs"
             :ui="{
-              base: 'origin-left rounded-full bg-neutral/80 px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent! backdrop-blur-sm',
+              base: 'origin-left rounded-full bg-neutral/80 px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent! backdrop-blur-sm'
             }">
             {{ player.stats?.visionScore ?? 0 }}
           </UBadge>

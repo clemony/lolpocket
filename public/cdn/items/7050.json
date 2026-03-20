@@ -1,6 +1,7 @@
 {
   "id": 7050,
   "name": "Gangplank Placeholder",
+  "requiredChampion": "Gangplank",
   "gold": {
     "base": 0,
     "purchasable": false,
@@ -13,5 +14,8 @@
     21,
     30,
     35
+  ],
+  "tags": [
+    "Special"
   ]
 }

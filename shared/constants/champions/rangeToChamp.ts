@@ -1,4 +1,4 @@
-// Updated Patch 16.5 - 03/10/2026 03:45:05 PM CDT
+// Updated Patch 16.6 - 03/19/2026 12:00:01 AM CDT
 
 export const rangeToChamp: Record<string, number[]> = {
   "Melee": [

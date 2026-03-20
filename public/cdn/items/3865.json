@@ -13,7 +13,7 @@
       "unique": true,
       "mythic": false,
       "name": "Support Quest",
-      "effects": "Earn <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />400 through <i>Shared Riches</i> to automatically upgrade to <img src=\"/img/icons/runic-compass.webp\" class=\"tip-icon\" />Runic Compass, gaining the <i>Ward</i> active with 3 wards in stock."
+      "effects": "Earn <img src=\"/img/icons/gold-coin.webp\" class=\"inline-icon\" />400 through <i>Shared Riches</i> and this item's <img src=\"/img/icons/gold-generation.webp\" class=\"tip-icon\" />gold generation stat to automatically upgrade to <img src=\"/img/icons/runic-compass.webp\" class=\"tip-icon\" />Runic Compass, gaining the <i>Ward</i> active with 3 wards in stock."
     },
     {
       "unique": true,
@@ -25,11 +25,6 @@
       "unique": true,
       "mythic": false,
       "effects": "Receives diminishing gold from excessive minion kills."
-    },
-    {
-      "unique": true,
-      "mythic": false,
-      "effects": "Receives <img src=\"/img/icons/lane-swap-detector.webp\" class=\"tip-icon\" />Lane Swap Detector penalties if detected within the top or middle lanes early in the game."
     }
   ],
   "stats": {
@@ -46,5 +41,9 @@
   },
   "maps": [
     11
+  ],
+  "tags": [
+    "Support",
+    "Mage"
   ]
 }

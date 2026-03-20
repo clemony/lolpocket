@@ -37,7 +37,7 @@
     {
       "unique": true,
       "name": "Pledge",
-      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon \" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b>.",
+      "effects": "Designate the target allied champion as being <i>Worthy</i>, forming a <img src=\"/img/icons/tether.webp\" class=\"tip-icon \" />tether between you and them. Champions can only be designated as <i>Worthy</i> by one <b>Knight's Vow</b> at a time. You cannot be designated as <i>Worthy</i> by an ally's <b>Knight's Vow</b> once you've formed a tether.",
       "range": 0
     }
   ],
@@ -59,5 +59,10 @@
     12,
     21,
     35
+  ],
+  "ornnUpgrade": 323109,
+  "tags": [
+    "Tank",
+    "Support"
   ]
 }

@@ -11,17 +11,22 @@
 
     <div
       class="flex flex-col justify-center gap-2 py-px font-medium opacity-60 drop-shadow-2xs">
-      <Placeholder class="h-3 w-26" color="p2" base="btn" />
+      <UButton as="span" :ui="{ base: 'h-3 w-26' }" color="p2" />
 
-      <Placeholder class="h-3 w-18" color="p2" base="btn" />
+      <UButton as="span" :ui="{ base: 'h-3 w-18' }" color="p2" />
     </div>
 
     <div class="flex grow flex-col items-end justify-center px-3 text-sm">
-      <Placeholder
-        class="items-center font-medium text-nowrap drop-shadow-2xs" />
+      <UButton
+        as="span"
+        :ui="{ base: 'items-center font-medium text-nowrap drop-shadow-2xs' }"
+        color="p2" />
+      <Placeholder class="" />
 
-      <Placeholder
-        class="items-center font-medium text-nowrap drop-shadow-2xs" />
+      <UButton
+        as="span"
+        :ui="{ base: 'items-center font-medium text-nowrap drop-shadow-2xs' }"
+        color="p2" />
     </div>
 
     <DonutSkeleton

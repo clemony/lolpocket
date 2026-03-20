@@ -4,10 +4,10 @@ import { useSortable } from "@vueuse/integrations/useSortable"
 
 definePageMeta({
   title: "Backpack",
-  icon: "backpack",
-  class: "scale-108 **:stroke-[2]",
+  icon: "i-ui-pack",
+  class: "**:stroke-[0.4]! scale-94",
   layout: false,
-  order: 2,
+  order: 2
 })
 
 const items = shallowRef<TreeItem[]>([
@@ -19,32 +19,32 @@ const items = shallowRef<TreeItem[]>([
         label: "composables/",
         children: [
           { label: "useAuth.ts", icon: "i-vscode-icons-file-type-typescript" },
-          { label: "useUser.ts", icon: "i-vscode-icons-file-type-typescript" },
-        ],
+          { label: "useUser.ts", icon: "i-vscode-icons-file-type-typescript" }
+        ]
       },
       {
         label: "components/",
         defaultExpanded: true,
         children: [
           { label: "Card.vue", icon: "i-vscode-icons-file-type-vue" },
-          { label: "Button.vue", icon: "i-vscode-icons-file-type-vue" },
-        ],
-      },
-    ],
+          { label: "Button.vue", icon: "i-vscode-icons-file-type-vue" }
+        ]
+      }
+    ]
   },
   { label: "app.vue", icon: "i-vscode-icons-file-type-vue" },
-  { label: "nuxt.config.ts", icon: "i-vscode-icons-file-type-nuxt" },
+  { label: "nuxt.config.ts", icon: "i-vscode-icons-file-type-nuxt" }
 ])
 
 function flatten(
   items: TreeItem[],
-  parent = items,
+  parent = items
 ): { item: TreeItem; parent: TreeItem[]; index: number }[] {
   return items.flatMap((item, index) => [
     { item, parent, index },
     ...(item.children?.length && item.defaultExpanded
       ? flatten(item.children, item.children)
-      : []),
+      : [])
   ])
 }
 
@@ -74,12 +74,12 @@ const tree = useTemplateRef<HTMLElement>("tree")
 useSortable(tree, items, {
   animation: 150,
   ghostClass: "opacity-50",
-  onUpdate: (e: any) => moveItem(e.oldIndex, e.newIndex),
+  onUpdate: (e: any) => moveItem(e.oldIndex, e.newIndex)
 })
 const isCollapsed = ref(false)
 const route = useRoute()
 const pinned = computed(() =>
-  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key)),
+  usePockets().pockets.filter((p) => usePockets().pinned.includes(p.key))
 )
 </script>
 

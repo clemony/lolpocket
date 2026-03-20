@@ -62,5 +62,12 @@
     12,
     21,
     35
+  ],
+  "ornnUpgrade": 323004,
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Onhit effects"
   ]
 }

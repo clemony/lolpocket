@@ -28,5 +28,12 @@
   },
   "maps": [
     11
+  ],
+  "tags": [
+    "Fighter",
+    "Marksman",
+    "Assassin",
+    "Lifesteal vamp",
+    "Onhit effects"
   ]
 }

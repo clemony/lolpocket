@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const { set } = defineProps<{
   set: RuneSet
-  kClass?: HTMLAttributes['class']
-  pClass?: HTMLAttributes['class']
-  xClass?: HTMLAttributes['class']
+  kClass?: HTMLAttributes["class"]
+  pClass?: HTMLAttributes["class"]
+  xClass?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -19,27 +19,29 @@ const { set } = defineProps<{
         :class="
           cn(
             'absolute -right-2 w-14! shrink-0 justify-self-end! drop-shadow-sm',
-            kClass,
+            kClass
           )
-        ">
-
-      <Placeholder
-        v-else
-        class=""
-        :class="
-          cn('size-11 shrink-0 justify-end rounded-full bg-p2/80', xClass)
         " />
+
+      <UButton
+        v-else
+        as="span"
+        :ui="{
+          base: cn('size-11 shrink-0 justify-end rounded-full bg-p2/80', xClass)
+        }" />
     </span>
     <img
       v-if="set?.secondary?.path"
       :title="set?.secondary?.path"
       :alt="set?.secondary?.path"
       :src="`/img/paths/${set?.secondary?.path}.webp`"
-      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)">
-    <Placeholder
+      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
+
+    <UButton
       v-else
-      :class="
-        cn('size-11 shrink-0 justify-start rounded-full bg-p2/80', xClass)
-      " />
+      as="span"
+      :ui="{
+        base: cn('size-11 shrink-0 justify-end rounded-full bg-p2/80', xClass)
+      }" />
   </div>
 </template>
