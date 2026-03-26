@@ -20,10 +20,10 @@ const tabs = computed<TabsItem[]>(() => [
     slot: "all" as const,
     ui: {
       trigger:
-        "not-active:bg-p1  not-active:shadow-xs active:w-max active:px-5  border-neutral border hover:not-active:border-p4/60 hover:not-active:bg-p2 transition-colors duration-50 hover:not-active:inset-shadow-xs not-active:noise not-active:border-p3/80  mr-2 not-active:ring not-active:anchor group/t",
+        "not-active:bg-p1    not-active:ring-transparent not-active:size-9 duration-0! not-active:delay-50 active:bg-neutral  not-active:px-0 not-active:shadow-xs active:w-max   hover:not-active:border-p4/60 hover:not-active:bg-p2 transition-colors duration-50 hover:not-active:inset-shadow-xs not-active:noise not-active:ring-p3 not-active:ring-inset mr-2 not-active:ring not-active:anchor group/t",
       label: "",
       leadingIcon:
-        "size-3.5 **:stroke-[2.6] text-pc opacity-60 transition-all duration-50 group-hover/t:opacity-100"
+        "size-3.5 **:stroke-[2.6] text-pc opacity-80  transition-opacity duration-50 group-hover/t:opacity-100"
     }
   },
   ...ranks.value
@@ -36,9 +36,10 @@ const { filters } = storeToRefs(is())
 </script>
 
 <template>
-  <SelectPopover
+  <LazySelectPopover
     v-if="collapsed || smallerThanLg"
     v-model:model-value="is().filters.rank"
+    legend="Item Quality"
     :content="{
       side: 'left',
       align: 'center'
@@ -46,7 +47,7 @@ const { filters } = storeToRefs(is())
     <template #default="{ open }">
       <div
         :class="cn('rounded-full', open ? '' : 'tooltip tooltip-left')"
-        data-tip="Item Tier">
+        data-tip="Item Quality">
         <UButton
           size="xl"
           color="p0"
@@ -59,13 +60,39 @@ const { filters } = storeToRefs(is())
     </template>
 
     <template #content>
-      <URadioGroup
+      <LazyListbox
         v-model:model-value="filters.rank"
+        :multiple="false"
         value-key="value"
         :items="radio"
-        @entry-focus.prevent />
+        icon="i-circle-dot">
+        <ListboxContent class="space-y-0.5 px-0">
+          <ListboxItem
+            v-for="item in ranks"
+            :key="item?.value"
+            as-child
+            :value="item.value ?? 0">
+            <UButton
+              :label="item.label"
+              size="sm"
+              active-variant="solid"
+              :ui="{
+                base: cn(
+                  'h-7.5 max-h-7.5 gap-2 px-2',
+                  filters.rank === item.value
+                    ? 'bg-p1/60 shadow-none rounded-md border-0'
+                    : ''
+                ),
+                trailingIcon: cn('size-4.5')
+              }"
+              :trailing-icon="filters.rank === item.value ? 'i-tick' : ''"
+              variant="highlight"
+              :active="filters.rank === item.value" />
+          </ListboxItem>
+        </ListboxContent>
+      </LazyListbox>
     </template>
-  </SelectPopover>
+  </LazySelectPopover>
   <UTabs
     v-else
     v-model:model-value="filters.rank"
@@ -74,8 +101,9 @@ const { filters } = storeToRefs(is())
     variant="ghost"
     color="neutral"
     :ui="{
-      root: 'w-fit translate-y-px',
-      indicator: 'ring-0 duration-150',
-      trigger: 'w-min px-2'
+      root: '-ml-px flex! grow-0! justify-self-start',
+      indicator: 'rounded-lg ring-0 duration-150',
+      list: 'w-fit gap-0 justify-self-start',
+      trigger: 'w-fit shrink rounded-xl px-6 not-active:hover:text-pc!'
     }" />
 </template>

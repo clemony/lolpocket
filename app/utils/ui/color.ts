@@ -40,17 +40,43 @@ export const tierBg: Record<string, string> = {
   D: "bg-bronze"
 }
 
+const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
+const categories = [
+  "text",
+  "bg",
+  "border",
+  "outline",
+  "shadow",
+  "ring",
+  "ring-offset"
+]
+const colors = [
+  "p0",
+  "p1",
+  "p2",
+  "p3",
+  "p4",
+  "primary",
+  "insp",
+  "sorc",
+  "pre",
+  "res",
+  "dom",
+  "onhit"
+]
 export const twText: Record<string, string> = {
   p0: "text-p0",
   p1: "text-p1",
   p2: "text-p4",
   p3: "text-p3",
   p4: "text-p4",
-  insp: "text-insp",
-  sorc: "text-sorc",
-  pre: "text-pre",
-  res: "text-res",
-  dom: "text-dom"
+  insp: "text-insp-500",
+  sorc: "text-sorc-500",
+  pre: "text-pre-500",
+  res: "text-res-500",
+  dom: "text-dom",
+  onhit: "text-onhit",
+  primary: "text-n5"
 }
 
 export const twBg: Record<string, string> = {
@@ -59,9 +85,78 @@ export const twBg: Record<string, string> = {
   p2: "bg-p4",
   p3: "bg-p3",
   p4: "bg-p4",
+  primary: "bg-p5",
   insp: "bg-insp",
   sorc: "bg-sorc",
   pre: "bg-pre",
   res: "bg-res",
   dom: "bg-dom"
+}
+
+export const twBorder: Record<string, string> = {
+  p0: "border-p0",
+  p1: "border-p1",
+  p2: "border-p4",
+  p3: "border-p3",
+  p4: "border-p4",
+  primary: "border-p5",
+  insp: "border-insp",
+  sorc: "border-sorc",
+  pre: "border-pre",
+  res: "border-res",
+  dom: "border-dom"
+}
+
+export const twRing: Record<string, string> = {
+  p0: "ring-p0",
+  p1: "ring-p1",
+  p2: "ring-p4",
+  p3: "ring-p3",
+  p4: "ring-p4",
+  insp: "ring-insp",
+  sorc: "ring-sorc",
+  pre: "ring-pre",
+  res: "ring-res",
+  dom: "ring-dom",
+  primary: "ring-",
+  "primary-500": "ring-n5",
+  "insp-500": "ring-insp-500",
+  "sorc-500": "ring-sorc-500",
+  "pre-500": "ring-pre-500",
+  "res-500": "ring-res-500",
+  "dom-500": "ring-dom-500",
+  "primary-200": "ring-np",
+  "insp-200": "ring-insp-200",
+  "sorc-200": "ring-sorc-200",
+  "pre-200": "ring-pre-200",
+  "res-200": "ring-res-200",
+  "dom-200": "ring-dom-200"
+}
+
+export const twRingOffset: Record<string, string> = {
+  p0: "ring-offset-p0",
+  p1: "ring-offset-p1",
+  p2: "ring-offset-p4",
+  p3: "ring-offset-p3",
+  p4: "ring-offset-p4",
+  primary: "ring-offset-p5",
+  insp: "ring-offset-insp",
+  sorc: "ring-offset-sorc",
+  pre: "ring-offset-pre",
+  res: "ring-offset-res",
+  dom: "ring-offset-dom",
+  "primary-50": "ring-offset-p1",
+  "insp-50": "ring-offset-insp-50",
+  "sorc-50": "ring-offset-sorc-50",
+  "pre-50": "ring-offset-pre-50",
+  "res-50": "ring-offset-res-50",
+  "dom-50": "ring-offset-dom-50"
+}
+
+export const twDropShadow: Record<string, string> = {
+  insp: "drop-shadow-(--color-insp-700)",
+  sorc: "drop-shadow-(--color-sorc-700)",
+  pre: "drop-shadow-(--color-pre-700)",
+  res: "drop-shadow-(--color-res-700)",
+  dom: "drop-shadow-(--color-dom-700)"
 }

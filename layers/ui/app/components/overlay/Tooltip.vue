@@ -90,6 +90,25 @@ function getFlipOffset(side: Side) {
   }
 }
 
+function getOppositeSide(side: Side): Side {
+  switch (side) {
+    case "top":
+      return "bottom"
+    case "right":
+      return "left"
+    case "bottom":
+      return "top"
+    case "left":
+      return "right"
+  }
+}
+
+function getAxisSides(side: Side): [Side, Side] {
+  if (side === "top" || side === "bottom") return ["top", "bottom"]
+
+  return ["left", "right"]
+}
+
 function playFlipSlide(side: Side) {
   if (flipRafId) cancelAnimationFrame(flipRafId)
 
@@ -124,14 +143,20 @@ function setAnchorFromPointer(x: number, y: number) {
     bottom: rect.bottom - clampedY,
     left: clampedX - rect.left
   }
-  const nextSide = (Object.entries(distances).sort(
-    (a, b) => a[1] - b[1]
-  )[0]?.[0] ?? "bottom") as Side
-  const side =
-    distances[placement.value.side] <=
-    distances[nextSide] + sideSwitchHysteresis
-      ? placement.value.side
-      : nextSide
+  const baseSide = props?.side
+  const candidateCursorSides = baseSide
+    ? getAxisSides(baseSide)
+    : (["top", "right", "bottom", "left"] as Side[])
+  const nextCursorSide = candidateCursorSides.sort(
+    (left, right) => distances[left] - distances[right]
+  )[0] ?? "bottom"
+  const currentCursorSide = getOppositeSide(placement.value.side)
+  const cursorSide =
+    distances[currentCursorSide] <=
+    distances[nextCursorSide] + sideSwitchHysteresis
+      ? currentCursorSide
+      : nextCursorSide
+  const side = getOppositeSide(cursorSide)
 
   if (side === "top" || side === "bottom") {
     placement.value = {

@@ -85,7 +85,8 @@ watch(
           class="w-179 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
           <div ref="panelMeasure" class="w-179">
-            <div class="flex h-10 items-center border-b border-p3 px-3">
+            <div
+              class="/80 flex h-10 w-full items-center justify-between border-b border-p3 pr-3.5 pl-3">
               <UUser
                 size="2xs"
                 :ui="{
@@ -107,6 +108,24 @@ watch(
                   }}
                 </template>
               </UUser>
+              <div class="flex items-center">
+                <LazyUButton
+                  size="2xs"
+                  square
+                  to="/settings"
+                  icon="i-history"
+                  color="p2"
+                  :ui="{ leadingIcon: 'size-4.5 opacity-70' }"
+                  variant="ghost" />
+                <UButton
+                  size="2xs"
+                  square
+                  to="/settings"
+                  icon="i-gear"
+                  color="p2"
+                  :ui="{ leadingIcon: 'size-4.5 opacity-70' }"
+                  variant="ghost" />
+              </div>
             </div>
             <LazyCommandMenu
               v-if="!hasQuery"

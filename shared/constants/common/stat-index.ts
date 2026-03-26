@@ -194,7 +194,7 @@ export const statIndex: Record<string, StatIndex> = {
     unit: "%"
   },
   percentMovespeed: {
-    color: "var(--color-p1",
+    color: "primary",
     id: "percentMovespeed",
     key: "MS",
     name: "Movespeed",
@@ -203,7 +203,7 @@ export const statIndex: Record<string, StatIndex> = {
     unit: "%"
   },
   tenacity: {
-    color: "p1",
+    color: "p3",
     id: "tenacity",
     name: "Tenacity",
     description: "",

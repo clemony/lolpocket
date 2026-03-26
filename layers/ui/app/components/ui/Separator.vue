@@ -10,9 +10,10 @@ const props = withDefaults(defineProps<SeparatorProps>(), {
 
 const separatorVariants = tv({
   slots: {
-    root: "relative flex w-full shrink-0 items-center",
+    root: "relative flex w-full max-w-full shrink-0 items-center",
     leading: "order-first",
     trailingIcon: "size-4",
+    trailing: "grid size-4 shrink-0 place-items-center",
     label:
       "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
     separator: "pointer-events-none flex-1 shrink-0 grow bg-current"
@@ -72,7 +73,7 @@ const separatorVariants = tv({
       horizontal: {
         root: "flex items-center",
         label: "flex items-center",
-        separator: "h-px w-full"
+        separator: "h-px max-h-px w-full"
       }
     },
     size: {
@@ -107,7 +108,7 @@ const separatorVariants = tv({
         label: "order-1 mr-2",
         leading: "order-first",
         separator: "order-2",
-        trailingIcon: "order-3 ml-2"
+        trailing: "order-3 ml-2"
       }
     },
     {
@@ -152,16 +153,20 @@ const styles = computed(() =>
       :class="styles.leading({ class: props.ui?.leadingIcon })" />
 
     <span v-if="props.label" :class="cn(styles.label(), props.ui?.label)">
-      {{ props.label }}
+      <span>{{ props.label }}</span>
     </span>
 
     <span
       v-if="props.placement === 'center'"
       :class="styles.separator({ class: props.ui?.separator })" />
 
-    <Icon
+    <span
       v-if="props.trailingIcon"
-      :name="props.trailingIcon"
-      :class="styles.trailingIcon({ class: props.ui?.trailingIcon })" />
+      :class="styles.trailing({ class: props.ui?.trailing })">
+      <Icon
+        v-if="props.trailingIcon"
+        :name="props.trailingIcon"
+        :class="styles.trailingIcon({ class: props.ui?.trailingIcon })" />
+    </span>
   </div>
 </template>

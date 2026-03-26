@@ -7,9 +7,6 @@ const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
 const nuxtChartsDeps = ["vue-chrts", "@unovis/ts", "@unovis/vue"] as const
 const redditFeedRefreshCron = "*/30 * * * *"
-// Cloudflare build-only memory pressure toggle.
-// Set `NUXT_CF_LEAN_BUILD=1` in Cloudflare to temporarily skip heavier modules while diagnosing Nitro bundle OOMs.
-const isCFLeanBuild = isCF && process.env.NUXT_CF_LEAN_BUILD === "1"
 
 export default defineNuxtConfig({
   imports: {
@@ -115,8 +112,6 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    // Reduce Cloudflare Nitro bundle build memory usage while debugging OOMs.
-    minify: !isCFLeanBuild,
     sourceMap: false,
     experimental: {
       tasks: true
@@ -277,9 +272,9 @@ export default defineNuxtConfig({
         "tailwind-variants",
         "random-words",
         "reka-ui",
-        "fast-deep-equal/es6", // CJS
         "@internationalized/date",
-        "fuse.js"
+        "fuse.js",
+        "fast-deep-equal/es6"
       ]
     },
     plugins: [tailwindcss()],
@@ -297,7 +292,7 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true,
-    componentInspector: false,
+    componentInspector: true,
     vueDevTools: false,
     viteInspect: true,
     viteDevTools: false

@@ -14,7 +14,7 @@ useHead({
   },
   link: [
     {
-      href: "/img/favicon.png",
+     // href: "/img/favicon.png",
       rel: "icon",
       type: "image/png"
     }
@@ -32,7 +32,7 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
   <UApp
     id="app"
     :tooltip="{
-      delayDuration: 500
+      delayDuration: 300
     }"
     :ui="{ base: 'overflow-hidden' }"
     :toaster="{

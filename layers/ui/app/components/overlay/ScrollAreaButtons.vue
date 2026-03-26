@@ -113,7 +113,7 @@ defineExpose({
           icon="i-up"
           variant="ghost"
           :ui="{
-            base: 'border-x-none! border-t-none! size-full! rounded-none border-b border-b-p2/80 bg-p0/90',
+            base: 'border-x-none! border-t-none! size-full! rounded-none border-b border-t-p0/96 bg-p0/90 bg-blend-darken backdrop-blur-sm',
             leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc'
           }"
           @click="scrollUp" />
@@ -149,7 +149,7 @@ defineExpose({
           variant="ghost"
           :ui="{
             leadingIcon: 'text-n5/80 **:stroke-[2.4] group-hover/btn:text-pc',
-            base: 'border-x-none! border-b-none! h-full! w-full grow rounded-none border-t border-t-p2/80 bg-p0/90'
+            base: 'border-x-none! border-b-none! h-full! w-full grow rounded-none border-t border-t-p0/96 bg-p0/90 bg-blend-darken backdrop-blur-sm'
           }"
           @click="scrollDown" />
       </div>

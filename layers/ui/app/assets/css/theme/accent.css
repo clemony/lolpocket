@@ -61,10 +61,10 @@
 }
 
 @theme {
-  --ui-lp:  oklch(85% 51% 123deg);
+  --ui-lp: oklch(85% 51% 123deg);
 
   --ui-win: oklch(71% 24% 200deg);
---color-legendary: var(--ui-legendary);
+  --color-legendary: var(--ui-legendary);
 
   --color-info: var(--ui-sorc);
   --color-success: var(--ui-res);
@@ -116,5 +116,60 @@
 
 @theme inline {
   --color-win: var(--ui-win);
---color-lp: var(--ui-lp);
+  --color-lp: var(--ui-lp);
+
+  --dom-100: var(--color-dom-100);
+  --dom-200: var(--color-dom-200);
+  --dom-300: var(--color-dom-300);
+  --dom-400: var(--color-dom-400);
+  --dom-500: var(--color-dom-500);
+  --dom-600: var(--color-dom-600);
+  --dom-700: var(--color-dom-700);
+  --dom-800: var(--color-dom-800);
+  --dom-900: var(--color-dom-900);
+  --dom-950: var(--color-dom-950);
+
+  --insp-100: var(--color-insp-100);
+  --insp-200: var(--color-insp-200);
+  --insp-300: var(--color-insp-300);
+  --insp-400: var(--color-insp-400);
+  --insp-500: var(--color-insp-500);
+  --insp-600: var(--color-insp-600);
+  --insp-700: var(--color-insp-700);
+  --insp-800: var(--color-insp-800);
+  --insp-900: var(--color-insp-900);
+  --insp-950: var(--color-insp-950);
+
+  --pre-100: var(--color-pre-100);
+  --pre-200: var(--color-pre-200);
+  --pre-300: var(--color-pre-300);
+  --pre-400: var(--color-pre-400);
+  --pre-500: var(--color-pre-500);
+  --pre-600: var(--color-pre-600);
+  --pre-700: var(--color-pre-700);
+  --pre-800: var(--color-pre-800);
+  --pre-900: var(--color-pre-900);
+  --pre-950: var(--color-pre-950);
+
+  --res-100: var(--color-res-100);
+  --res-200: var(--color-res-200);
+  --res-300: var(--color-res-300);
+  --res-400: var(--color-res-400);
+  --res-500: var(--color-res-500);
+  --res-600: var(--color-res-600);
+  --res-700: var(--color-res-700);
+  --res-800: var(--color-res-800);
+  --res-900: var(--color-res-900);
+  --res-950: var(--color-res-950);
+
+  --sorc-100: var(--color-sorc-100);
+  --sorc-200: var(--color-sorc-200);
+  --sorc-300: var(--color-sorc-300);
+  --sorc-400: var(--color-sorc-400);
+  --sorc-500: var(--color-sorc-500);
+  --sorc-600: var(--color-sorc-600);
+  --sorc-700: var(--color-sorc-700);
+  --sorc-800: var(--color-sorc-800);
+  --sorc-900: var(--color-sorc-900);
+  --sorc-950: var(--color-sorc-950);
 }

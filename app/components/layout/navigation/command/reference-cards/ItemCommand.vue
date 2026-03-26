@@ -169,9 +169,7 @@ onMounted(() => {
             v-html="item?.description" />
           <!-- REQ CHAMP -->
           <div v-if="item?.requiredChampion">
-            <i
-              >Unique to <b>{{ item.requiredChampion }}.</b></i
-            >
+            <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
           </div>
 
           <!-- EFFECTS -->
@@ -287,7 +285,9 @@ onMounted(() => {
       title="Item not found.">
       <template #description>
         It seems
-        <ULink class="inline" underline> clem </ULink>
+        <ULink class="inline" underline>
+          clem
+        </ULink>
         may have moved this from it's previous location. Try refreshing to see
         if we've found it.
       </template>

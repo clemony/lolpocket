@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
+// Updated Patch 16.6 - 03/25/2026 03:29:20 PM CDT
 
 export const unpurchasableItems: number[] = [
   1035,

@@ -85,9 +85,9 @@ export const buttonTheme = defineUiTheme({
     variant: {
       custom:
         "height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none fx-0 disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      solid: "btn shadow-sm",
+      solid: "btn shadow-xs",
       ghost:
-        "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+        "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       outline:
         "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
       highlight: "btn btn-ghost",
@@ -135,7 +135,7 @@ export const buttonTheme = defineUiTheme({
       color: "p0",
       variant: "solid",
       class: {
-        base: "btn border-p2 bg-p0 text-pc ring-default fx-0 open:fx-1 hover:fx-1 data-[state=active]:bg-p1 data-[state=open]:bg-p1"
+        base: "btn border-p2 bg-p0 text-pc fx-0 open:fx-1 hover:fx-1 data-[state=active]:bg-p1 data-[state=open]:bg-p1"
       }
     },
     {
@@ -182,14 +182,14 @@ export const buttonTheme = defineUiTheme({
       color: "p1",
       variant: "ghost",
       class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1 on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1"
+        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1 hover:ring-p3/40! on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1"
       }
     },
     {
       color: "p2",
       variant: "ghost",
       class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p2 on:border-p3 on:bg-p2 on:backdrop-blur-sm on:fx-1"
+        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1! on:border-p3 on:bg-p2 on:backdrop-blur-sm on:fx-1"
       }
     },
     {
@@ -211,6 +211,15 @@ export const buttonTheme = defineUiTheme({
       variant: "outline",
       class: {
         base: "btn border-none bg-transparent text-pc ring-p3 btn-outline"
+      }
+    },
+    {
+      color: "neutral",
+      variant: "outline",
+      class: {
+        base: "btn border-none bg-transparent text-nc ring-nc/80 btn-outline hover:text-pc",
+        leadingIcon: "text-nc group-hover/btn:**:text-pc",
+        trailingIcon: "text-nc group-hover/btn:**:text-pc"
       }
     },
     // highlight
@@ -334,13 +343,13 @@ export const buttonTheme = defineUiTheme({
         base: "rounded-full!"
       }
     },
-    {
+    /*     {
       size: ["3xs", "2xs", "xs", "sm"],
       variant: ["solid"],
       class: {
         base: "hover:inset-shadow-xs"
       }
-    },
+    }, */
     {
       size: "2xs",
       square: true,

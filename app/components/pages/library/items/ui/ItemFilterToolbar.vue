@@ -1,21 +1,18 @@
 <script lang="ts" setup>
-import type { ButtonProps, CheckboxGroupItem } from "@nuxt/ui"
+import type {
+  ButtonProps,
+  CheckboxGroupProps,
+  RadioGroupProps
+} from "@nuxt/ui"
 import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
-import { statIndex } from "~~/shared/constants/common/stat-index"
-import { itemTags } from "~~/shared/constants/items/itemTags"
 
+defineOptions({
+  inheritAttrs: false
+})
+const { items } = defineProps<{
+  items: Record<string, CheckboxItem[]>
+}>()
 const { filters } = storeToRefs(is())
-
-const statItems = computed<CheckboxGroupItem[]>(() =>
-  Object.values(statIndex)
-    .filter((s) => s.group !== "champion")
-    .map((s) => ({ value: s.id, label: s.name }))
-)
-
-const tagItems = computed<CheckboxGroupItem[]>(() =>
-  itemTags.map((t) => ({ value: t.id, label: t.name }))
-)
-
 const btnProps: ButtonProps & ToggleButtonProps = {
   size: "xl",
   color: "p0",
@@ -26,6 +23,30 @@ const btnProps: ButtonProps & ToggleButtonProps = {
     base: "rounded-full"
   }
 }
+
+const groupUi = {
+  fieldset: "space-y-0.5 py-1",
+  item: "px-2 items-center flex hover:bg-p2/60! has-checked:bg-p2 rounded-md h-7.5",
+  label: "group-hover/x:no-underline"
+}
+
+const checkboxProps = {
+  indicator: "end",
+  color: "default",
+  variant: "select",
+  icon: "i-tick",
+  ui: {
+    ...groupUi,
+    icon: "**:stroke-[2.4]"
+  }
+} satisfies CheckboxGroupProps
+
+const radioProps = {
+  indicator: "end",
+  color: "default",
+  valueKey: "label",
+  ui: groupUi
+} satisfies RadioGroupProps<CheckboxItem[], "label">
 </script>
 
 <template>
@@ -36,6 +57,7 @@ const btnProps: ButtonProps & ToggleButtonProps = {
     <Toggle
       v-model:model-value="filters.purchasable"
       tabindex="-1"
+      size="lg"
       v-bind="btnProps"
       :active="filters.purchasable"
       :ui="{
@@ -78,7 +100,8 @@ const btnProps: ButtonProps & ToggleButtonProps = {
     <template #content>
       <UCheckboxGroup
         v-model:model-value="filters.stats"
-        :items="statItems"
+        :items="items.stats"
+        v-bind="checkboxProps"
         @entry-focus.prevent />
     </template>
   </SelectPopover>
@@ -86,8 +109,7 @@ const btnProps: ButtonProps & ToggleButtonProps = {
   <!-- categories -->
   <SelectPopover
     :content="{ side: 'left', align: 'center' }"
-    legend="Categories"
-    :value="filters?.tags.length">
+    legend="Categories">
     <template #default="{ open }">
       <div
         data-tip="Item Categories"
@@ -96,9 +118,10 @@ const btnProps: ButtonProps & ToggleButtonProps = {
       </div>
     </template>
     <template #content>
-      <UCheckboxGroup
+      <URadioGroup
         v-model:model-value="filters.tags"
-        :items="tagItems"
+        :items="items.tags"
+        v-bind="radioProps"
         @entry-focus.prevent />
     </template>
   </SelectPopover>

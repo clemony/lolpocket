@@ -75,6 +75,12 @@ const { filters } = storeToRefs(champFilter())
             <ToggleGroupItem size="sq-9" value="za">
               <icon class="size-5" name="qlementine-icons:sort-alpha-desc-16" />
             </ToggleGroupItem>
+            <ToggleGroupItem size="sq-9" value="release-newest">
+              <span class="text-[10px] font-semibold uppercase">New</span>
+            </ToggleGroupItem>
+            <ToggleGroupItem size="sq-9" value="release-oldest">
+              <span class="text-[10px] font-semibold uppercase">Old</span>
+            </ToggleGroupItem>
           </ToggleGroup>
         </ToggleGroup>
         <Grow class="max-w-14" />

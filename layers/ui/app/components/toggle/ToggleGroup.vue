@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
-import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
-import { computed, provide } from 'vue'
+import type { ToggleGroupRootEmits, ToggleGroupRootProps } from "reka-ui"
+import { ToggleGroupRoot, useForwardPropsEmits } from "reka-ui"
+import { computed, provide } from "vue"
 
 const props = defineProps<
   ToggleGroupRootProps & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"]
   }
 >()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
-provide('toggleGroup', {
-})
+provide("toggleGroup", {})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -25,6 +24,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ToggleGroupRoot
     v-bind="forwarded"
     :class="cn('flex items-center justify-center gap-1', props.class)">
-    <slot />
+    <slot :model-value="forwarded.modelValue" />
   </ToggleGroupRoot>
 </template>

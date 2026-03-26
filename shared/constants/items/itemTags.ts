@@ -4,59 +4,77 @@ export interface ItemTag {
   name: string
   icon: string
 }
-export const itemTags = [
-  {
-    color: "var(--color-fighter)",
+export const itemTags: Record<string, ItemTag> = {
+  fighter: {
+    color: "dom",
     id: "Fighter",
     name: "Fighter",
     icon: "i-lp-fighter"
   },
-  {
-    color: "var(--color-pre)",
+  marksman: {
+    color: "pre",
     id: "Marksman",
     name: "Marksman",
     icon: "i-lp-marksman"
   },
-  {
-    color: "var(--color-domination)",
+  assassin: {
+    color: "dom",
     id: "Assassin",
     name: "Assassin",
     icon: "i-lp-assassin"
   },
-  {
-    color: "var(--color-sorc)",
+  mage: {
+    color: "sorc",
     id: "Mage",
     name: "Mage",
     icon: "i-lp-mage"
   },
-  {
-    color: "var(--color-res)",
+  tank: {
+    color: "res",
     id: "Tank",
     name: "Tank",
     icon: "i-lp-tank"
   },
-  {
-    color: "var(--color-insp)",
+  support: {
+    color: "insp",
     id: "Support",
     name: "Support",
     icon: "i-lp-support"
   },
-  {
-    color: "var(--color-onhit)",
+  consumable: {
+    color: "insp",
+    id: "Consumable",
+    name: "Consumable",
+    icon: "i-lp-regen"
+  },
+  trinket: {
+    color: "pre",
+    id: "Trinket",
+    name: "Trinket",
+    icon: "i-gg-radio-checked"
+  },
+  /*   onhit: {
+    color: "dom",
     id: "Onhit_effects",
     name: "On-Hit Effects",
     icon: "i-stat-on-hit"
-  },
-  {
-    color: "var(--color-p4)",
+  }, */
+  movement: {
+    color: "p3",
     id: "Movement",
     name: "Movement",
     icon: "i-stat-movespeed"
-  },
-  {
-    color: "var(--color-vamp)",
+  }
+  /*   lifesteal: {
+    color: "dom",
     id: "Lifesteal_vamp",
     name: "Lifesteal & Omnivamp",
     icon: "i-stat-omnivamp"
-  }
-]
+  } */
+  /*special: {
+    color: "special",
+    id: "special",
+    name: "Special",
+    icon: "i-star-solid"
+  } */
+}

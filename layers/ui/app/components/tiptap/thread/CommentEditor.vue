@@ -23,7 +23,7 @@ const editor = useEditor({
     /* BadgeMentions.configure({
     suggestions: mentionSuggestions,
     }), */
-  ],
+  ]
 })
 
 /*    TextAlign.configure({
@@ -48,7 +48,7 @@ onMounted(() => {
     :class="
       cn(
         'group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border border-p3/80 p-2 text-start ring inset-shadow-xs ring-transparent transition-all duration-200 focus-within:ring-pc/60',
-        props.class,
+        props.class
       )
     "
     @dblclick="editor?.commands.selectAll()">
@@ -57,25 +57,25 @@ onMounted(() => {
       :starter-kit="{
         blockquote: false,
         heading: {
-          levels: [1, 2, 3, 4],
+          levels: [1, 2, 3, 4]
         },
         dropcursor: {
           color: 'var(--ui-primary)',
-          width: 2,
+          width: 2
         },
         link: {
-          openOnClick: false,
-        },
+          openOnClick: false
+        }
       }"
       :extensions="[
-        CharacterCount.configure({ limit: 2000 }),
+        /*         CharacterCount.configure({ limit: 2000 }),
         Emoji.configure({
           emojis,
           enableEmoticons: true,
           HTMLAttributes: {
             class: 'emoji',
           },
-        }),
+        }), */
       ]"
       class="mr-12 w-full grow border-0 p-2 pr-12 text-md outline-0!"
       :editor="editor">

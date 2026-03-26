@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { mapIndex } from "#shared/constants/misc/map-index"
-import type { ButtonProps } from "@nuxt/ui"
+import type { ButtonProps, CheckboxGroupProps } from "@nuxt/ui"
 
 const { collapsed, ui, size } = defineProps<{
   collapsed?: boolean
@@ -15,79 +15,115 @@ const maps = computed(() => [
   {
     id: 0,
     value: 0,
-    name: "All"
+    label: "All",
+    icon: "i-lp-0"
   },
   ...mapIndex
     .filter((m) => [11, 12, 30, 35].includes(m.id))
     .map((m) => ({
       value: m.id,
-      name: m.name
+      label: m.name,
+      icon: `i-lp-${m.id}`
     }))
 ])
 </script>
 
 <template>
-  <div>
-    <h6 v-if="!collapsed" class="mb-2 px-px text-sm">Map</h6>
-    <UPopover
-      v-model:open="mapOpen"
-      :content="{
-        side: collapsed ? 'right' : 'bottom'
+  <div v-if="!collapsed" class="space-y-2">
+    <div class="text-sm font-medium opacity-60">Map</div>
+    <UTabs
+      v-model:model-value="filters.map"
+      variant="solid"
+      size="sm"
+      color="neutral"
+      :ui="{
+        root: '',
+        leadingIcon: 'hidden',
+        label: 'grid size-full place-items-center gap-0',
+        list: 'gap-2 border-p4 inset-shadow-xs',
+        indicator: '',
+        trigger: 'relative h-full gap-0 p-0'
       }"
-      :ui="{ content: 'w-(--reka-popover-trigger-width) min-w-54 p-1.5' }">
-      <div
-        data-tip="Map"
-        :class="cn(!collapsed || mapOpen ? '' : 'tooltip tooltip-left')">
-        <UButton
-          :size
-          :active="mapOpen"
-          :block="!collapsed"
-          active-color="p1"
-          :square="collapsed === true"
-          :ui="{
-            base: cn(
-              collapsed ? '' : 'w-full grow',
-
-              ui?.base
-            ),
-            label: collapsed ? 'hidden' : '',
-            trailingIcon: collapsed ? 'hidden' : '',
-            leadingIcon: collapsed ? 'size-5' : ''
-          }"
-          :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
-          :icon="`i-lp-${filters.map}`"
-          trailing-icon="i-up-down"
-          :color="collapsed ? 'p0' : 'p1'"
-          :variant="collapsed ? 'solid' : 'outline'" />
-      </div>
-      <template #content>
-        <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
-        <LazyURadioGroup
-          v-model:model-value="filters.map"
-          color="p1"
-          :items="maps"
-          :ui="{
-            item: 'group/item relative cursor-pointer overflow-hidden rounded-md px-1.5 py-1 **:cursor-pointer hover:bg-p2',
-            label:
-              'flex flex-nowrap items-center justify-between gap-1.5 font-medium'
-          }"
-          variant="list"
-          indicator="hidden">
-          <template #label="{ item }">
-            <span
-              v-if="item.value === filters.map"
-              class="group-hover/item:noise absolute top-0 left-0 z-0 size-full bg-p1 group-hover/item:bg-p2" />
-            <div class="z-1 flex flex-nowrap items-center gap-1.5">
-              <Icon :name="`i-lp-${item.value}`" class="size-5 shrink-0" />
-              {{ item.name }}
-            </div>
-            <Icon
-              v-if="item.value === filters.map"
-              name="tick"
-              class="z-1 mr-1 size-4 -translate-y-0.75" />
-          </template>
-        </LazyURadioGroup>
+      :items="maps">
+      <template #default="{ item }">
+        <Tooltip
+          :label="item.label"
+          class="pointer-events-auto absolute grid size-full place-items-center">
+          <Icon :name="item.icon" class="size-4.5" />
+        </Tooltip>
       </template>
-    </UPopover>
+    </UTabs>
   </div>
+
+  <UPopover
+    v-else
+    v-model:open="mapOpen"
+    :content="{
+      side: collapsed ? 'right' : 'bottom'
+    }"
+    :ui="{ content: 'w-(--reka-popover-trigger-width) min-w-54 p-1.5' }">
+    <div
+      data-tip="Map"
+      :class="cn(!collapsed || mapOpen ? '' : 'tooltip tooltip-left')">
+      <UButton
+        :size
+        :active="mapOpen"
+        :block="!collapsed"
+        active-color="p1"
+        :square="collapsed === true"
+        :ui="{
+          base: cn(
+            collapsed ? '' : 'w-full grow',
+
+            ui?.base
+          ),
+          label: collapsed ? 'hidden' : '',
+          trailingIcon: collapsed ? 'hidden' : '',
+          leadingIcon: collapsed ? 'size-5' : ''
+        }"
+        :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
+        :icon="`i-lp-${filters.map}`"
+        trailing-icon="i-up-down"
+        :color="collapsed ? 'p0' : 'p1'"
+        :variant="collapsed ? 'solid' : 'outline'" />
+    </div>
+    <template #content>
+      <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
+      <LazyListbox
+        v-model:model-value="filters.map"
+        :ui="{
+          item: 'group/item relative cursor-pointer overflow-hidden rounded-md px-1.5 py-1 **:cursor-pointer hover:bg-p2',
+          label:
+            'flex flex-nowrap items-center justify-between gap-1.5 font-medium'
+        }"
+        variant="list"
+        indicator="hidden">
+        <ListboxItem
+          v-for="item in maps"
+          :key="item.value"
+          as-child
+          :value="item.value">
+          <ListboxContent class="space-y-0.5 py-1">
+            <UButton
+              :label="item.label"
+              :icon="`i-lp-${item.value}`"
+              size="sm"
+              active-variant="solid"
+              :ui="{
+                base: cn(
+                  'h-7.5 max-h-7.5 w-full gap-2 px-2',
+                  filters.map === item.value
+                    ? 'bg-p1/60 shadow-none rounded-md border-0'
+                    : ''
+                ),
+                trailingIcon: cn('size-4.5')
+              }"
+              :trailing-icon="filters.map === item.value ? 'i-tick' : ''"
+              variant="highlight"
+              :active="item.value === filters.map" />
+          </ListboxContent>
+        </ListboxItem>
+      </LazyListbox>
+    </template>
+  </UPopover>
 </template>

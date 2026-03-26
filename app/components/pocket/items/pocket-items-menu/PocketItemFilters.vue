@@ -45,8 +45,7 @@ const pocket = computed(() =>
           :key="tag"
           clear
           :active="true"
-          :tag
-          @click="is().filters.tags.splice(i, 1)" />
+          :tag />
       </template>
       <template v-if="is().filters.stats.length">
         <ItemStatButton

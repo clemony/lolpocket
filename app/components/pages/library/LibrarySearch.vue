@@ -1,19 +1,21 @@
 <script lang="ts" setup>
-import type { InputProps } from "@nuxt/ui"
-
+import type { ButtonProps, InputProps } from "@nuxt/ui"
 const {
   variant = "solid",
   color = "neutral",
+  autofocus = false,
   ui,
-  source
+  clearVariant = "outline",
+  clearColor = "neutral"
 } = defineProps<{
-  source?: Index[]
   color?: InputProps["color"]
-  ui?: InputProps["ui"]
+  ui?: InputClearUi
+  autofocus?: boolean
   variant?: InputProps["variant"]
+  clearVariant?: ButtonProps["variant"]
+  clearColor?: ButtonProps["color"]
 }>()
-
-const { filters } = storeToRefs(is())
+const modelValue = defineModel<string>("modelValue", { default: "" })
 
 const input = ref<{ inputRef: HTMLInputElement | null } | null>(null)
 const innerInput = computed(() => input.value?.inputRef ?? null)
@@ -32,34 +34,44 @@ defineShortcuts(extractShortcuts(keybindItems))
 <template>
   <UInput
     ref="input"
-    v-model:model-value="filters.query"
+    v-model:model-value="modelValue"
     icon="i-search"
     :variant
+    :autofocus="autofocus"
     :color
     :ui="{
-      root: cn('w-full grow', ui?.root),
+      root: cn('group/input w-full grow', ui?.root),
       base: cn(
-        'h-11 w-full grow rounded-[0.58rem] text-sm focus-within:ring focus-within:ring-pc/80 focus-within:ring-offset-2 focus-within:ring-offset-p0 focus-within:placeholder:opacity-0',
+        'w-full grow rounded-[0.58rem] text-sm focus-within:placeholder:opacity-0',
         ui?.base
       ),
-      leadingIcon: cn('text-nc/80 **:stroke-[1.8]', ui?.leadingIcon),
+      leadingIcon: cn(
+        '**:stroke-[1.8]',
+        color === 'neutral' ? 'text-nc/80' : '',
+        ui?.leadingIcon
+      ),
       trailing: ui?.trailing
     }"
     placeholder="Search items...">
     <template #trailing>
       <LazyInputClear
-        v-if="filters.query"
-        variant="outline"
-        :color
-        class="mr-2"
-        @clear-input="filters.query = ''" />
+        v-if="modelValue"
+        :variant="clearVariant"
+        :color="clearColor"
+        :ui="ui?.clear"
+        @clear-input="modelValue = ''" />
       <UKbd
         v-for="k in user().keybinds?.subSearch"
         v-else
         :key="k"
         square
         :color
-        class="opacity-100"
+        :class="
+          cn(
+            'pointer-events-none mx-px text-xs group-focus-within/input:absolute group-focus-within/input:opacity-0',
+            color === 'neutral' ? 'opacity-100' : 'opacity-80'
+          )
+        "
         variant="ghost"
         size="sm"
         :value="k" />

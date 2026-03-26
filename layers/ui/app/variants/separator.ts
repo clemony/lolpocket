@@ -19,6 +19,7 @@ export interface SeparatorProps {
       | "label"
       | "leading"
       | "separator"
+      | "trailing"
       | "leadingIcon"
       | "trailingIcon",
       string

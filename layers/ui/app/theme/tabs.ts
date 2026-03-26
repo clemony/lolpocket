@@ -8,7 +8,7 @@ export const tabsTheme = defineUiTheme({
   slots: {
     indicator:
       "absolute shrink-0 grow transform-gpu transition-transform duration-200 will-change-transform",
-    list: "group relative flex p-1 ring-0 group-active:ring-0",
+    list: "group relative flex p-1 ring-0 inset-shadow-black/3 group-active:ring-0",
     trigger:
       "group text-2 relative inline-flex min-w-0 shrink-0 grow cursor-pointer items-center font-medium disabled:cursor-not-allowed disabled:opacity-30",
 
@@ -134,7 +134,7 @@ export const tabsTheme = defineUiTheme({
       variant: ["solid", "solid-sq"],
       class: {
         indicator:
-          "noise bg-neutral/90 shadow-xs ring inset-shadow-xs ring-p4/80 inset-shadow-p1/10",
+          "noise bg-neutral/90 shadow-xs ring inset-shadow-xs ring-n4 inset-shadow-p1/10",
         list: "noise bg-p2/70 ring ring-p3/60",
         trigger:
           "text-pc hover:text-pc! focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-p1 active:hover:**:text-nc data-[state=active]:text-nc data-[state=active]:**:text-nc"

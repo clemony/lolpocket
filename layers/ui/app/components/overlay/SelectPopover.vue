@@ -61,12 +61,12 @@ const shared = {
         scroll-area-class="max-h-70"
         content-class="pb-2.5">
         <template #default>
-          <div class="px-3 pt-2.5 pb-1">
+          <div v-if="legend" class="px-3 pt-2.5 pb-1">
             <h6 class="text-sm">
               {{ legend }}
             </h6>
           </div>
-          <div class="w-full px-1.5">
+          <div class="w-full px-1">
             <slot name="content" />
           </div>
         </template>

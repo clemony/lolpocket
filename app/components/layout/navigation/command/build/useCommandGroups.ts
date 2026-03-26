@@ -1,14 +1,16 @@
 import type { CommandPaletteGroup, CommandPaletteItem } from "@nuxt/ui"
 import type { RouteRecordNormalized } from "vue-router"
+import { externalResources } from "~/domain/lp/external/externalResources"
 import ChampionCommand from "../reference-cards/ChampionCommand.vue"
 import ItemCommand from "../reference-cards/ItemCommand.vue"
 import RuneCommand from "../reference-cards/RuneCommand.vue"
 import SpellCommand from "../reference-cards/SpellCommand.vue"
 import { referenceItems } from "./lolCommands"
+import { descriptionLabel } from "./styles"
 
 interface CommandReturn {
-  pageItems: CommandItem[]
-  resultGroups: ComputedRef<CommandGroup[]>
+  groups: ComputedRef<CommandPaletteGroup<CommandItem>[]>
+  resultGroups: ComputedRef<CommandPaletteGroup<CommandItem>[]>
 }
 
 export interface CommandItem extends Omit<CommandPaletteItem, "children"> {
@@ -25,7 +27,7 @@ export interface CommandItem extends Omit<CommandPaletteItem, "children"> {
 
 export interface CommandGroup extends Omit<
   CommandPaletteGroup<CommandItem>,
-  "items"
+  "items" | "label"
 > {
   order?: number
   label?: string
@@ -47,7 +49,7 @@ export interface AppCommandInject {
   close?: () => void
   back?: () => void
 }
-
+const libraryPath = /\/library/
 export const pageCommands = (
   options: PageCommandsOptions = {}
 ): CommandItem[] => {
@@ -85,10 +87,8 @@ export const pageCommands = (
       value: record.path,
       icon: asString(record.meta?.icon),
       iconFill: asString(record.meta?.iconFill) || undefined,
-      prefix: asString(record.meta?.prefix),
-      suffix: record.meta?.description
-        ? `- ${asString(record.meta?.description)}`
-        : "",
+      // prefix: asString(record.meta?.prefix),
+      // suffix: record.meta?.description  ? `- ${asString(record.meta?.description)}`  : "",
       to: hasChildren ? undefined : record.path,
       onSelect: hasChildren ? undefined : options.onNavigate,
       trailingIcon: hasChildren ? "i-right" : "i-link",
@@ -123,8 +123,99 @@ export function buildCommandGroups(
   options: CommandGroupOptions = {}
 ): CommandReturn {
   const pageItems = pageCommands({ onNavigate: options.onNavigate })
+  const route = useRoute()
+  const groups = computed(() => [
+    {
+      id: "pages",
+      value: "pages-command",
+      label: "",
+      description: "",
+      items: [
+        {
+          label: "Nexus",
+          value: "pages-label",
+          trailingIcon: route.path === "/nexus" ? "i-tick" : "i-link",
+          to: "/nexus",
+          ui: {
+            base: "px-px! flex h-max! w-full relative  gap-1 ring-p3 border-0  overflow-visible before:scale-x-102 relative before:rounded-lg before:size-full before:border-p3 before:z-0 *:z-1 hover:before:border hover:before:bg-p2 hover:before:noise before:absolute ",
+            itemWrapper: "py-2",
+            itemLabel: "flex flex-col gap-1",
+            itemLabelBase:
+              'after:content-[""] text-pc font-semibold text-sm leading-none',
+            itemLabelSuffix:
+              "text-wrap normal-case! text-xs text-n5 text-start leading-6 font-normal! ",
+            itemTrailingIcon:
+              "top-2.5 right-2 size-4.5! absolute opacity-40 **:stroke-[2.3]!"
+          },
+          suffix: "Home base for League news, pockets, personal data, and more."
+        },
+        ...pageItems?.filter(
+          (r) =>
+            !["/docs", "/settings", "/library", "/nexus"].includes(
+              String(r.value)
+            )
+        )
+      ]
+    },
+    {
+      id: "library",
+      value: "Library",
+      label: "Library",
+      description: "Browse and filter complete data.",
 
-  const resultGroups = computed<CommandGroup[]>(() => [
+      items: [
+        ...Object.values(
+          pageItems
+            ?.find((r) => r.id === "/library")
+            ?.children?.sort(
+              (a, b) => Number(a?.order ?? 0) - Number(b?.order ?? 0)
+            ) as CommandItem[]
+        )
+      ]
+    },
+    {
+      id: "reference",
+      value: "reference-label",
+      label: "Reference",
+      description: "Quick view detailed information cards.",
+
+      items: referenceItems?.value
+    },
+    {
+      value: "help-label",
+      id: "help",
+      label: "Help and Resources",
+      description:
+        "Find answers, research external data, and customize your lolpocket.",
+      items: [
+        ...pageItems?.filter((i) =>
+          ["/docs", "/settings"].includes(String(i?.value))
+        ),
+        {
+          value: "External Resources",
+          id: "External Resources",
+          label: "Resources",
+          description: "Other external tools worthy of your backpack.",
+          class: "before:hidden pb-2",
+          trailingIcon: "i-right",
+          icon: "i-external",
+          children: [
+            ...externalResources.map((r) => ({
+              ...r,
+              value: r?.label,
+              target: "_blank",
+              external: true,
+              onSelect: options.onNavigate,
+              itemTrailingIcon: "i-external",
+              slot: "link"
+            }))
+          ]
+        }
+      ]
+    }
+  ])
+
+  const resultGroups = computed(() => [
     {
       id: "results",
       label: "Search Results",
@@ -135,7 +226,7 @@ export function buildCommandGroups(
     }
   ])
 
-  return { pageItems, resultGroups }
+  return { groups, resultGroups }
 }
 
 const EXTERNAL_URL_RE = /^https?:\/\//

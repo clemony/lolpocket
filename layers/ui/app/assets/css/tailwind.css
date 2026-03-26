@@ -65,7 +65,7 @@
   }
 
   h6 {
-    @apply flex gap-3 text-sm font-semibold text-n5 antialiased select-none;
+    @apply flex gap-3 text-sm font-semibold antialiased select-none;
   }
 
   h1,

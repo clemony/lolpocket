@@ -2,7 +2,7 @@ import { championIndex } from "~~/shared/constants/champions/championIndex"
 import { itemIndex } from "~~/shared/constants/items/itemIndex"
 import { spellIndex } from "~~/shared/constants/misc/spell-index"
 import { runeIndex } from "~~/shared/constants/runes/runeIndex"
-import { componentClass, descriptionLabel } from "../build/styles"
+import { componentClass } from "./styles"
 import type { CommandItem } from "./useCommandGroups"
 
 export const referenceItems = computed(() => {
@@ -14,7 +14,6 @@ export const referenceItems = computed(() => {
     label: entry.name,
     id: entry.id,
     value: entry.id,
-    as: "div",
     avatar: {
       src: `/img/items/${entry.id}.webp`,
       size: "sm",
@@ -39,7 +38,6 @@ export const referenceItems = computed(() => {
       label: entry.name,
       id: entry.id,
       value: entry.id,
-      as: "div",
       avatar: {
         size: "sm",
         src: `/img/champions/${entry.id}.webp`,
@@ -65,7 +63,6 @@ export const referenceItems = computed(() => {
       label: entry.name,
       id: entry.id,
       value: entry.id,
-      as: "div",
       avatar: {
         size: "sm",
         src: `/img/runes/${entry.id}.webp`,
@@ -91,7 +88,6 @@ export const referenceItems = computed(() => {
       label: entry.name,
       id: entry.id,
       value: entry.id,
-      as: "div",
       avatar: {
         size: "sm",
         src: `/img/spells/${entry.id}.webp`,
@@ -125,7 +121,7 @@ export const referenceItems = computed(() => {
       slot: "ref-icon",
       value: "item-list",
       id: "items",
-      icon: "i-lucide-sword",
+      icon: "i-lp-sword-fill",
       ui: {
         itemLeadingIcon: "**stroke-[1.8]!"
       },
@@ -147,7 +143,8 @@ export const referenceItems = computed(() => {
       id: "spells",
       slot: "ref-icon",
       value: "spell-list",
-      icon: "i-book",
+      icon: "i-book-fill",
+      suffix: "Don't forget the petricite!",
       ui: {
         itemLeadingIcon: "**:stroke-[2.2]!"
       },

@@ -2,12 +2,12 @@
 import type { CommandGroup, CommandItem } from "./build/useCommandGroups"
 import {
   getItems,
+  isActive,
   isExternal,
   itemKey,
   itemSuffix,
   itemTarget,
   itemTrailingIcon,
-  pageCommands,
   resolveDetailComponent,
   useCommandGroups
 } from "./build/useCommandGroups"
@@ -19,19 +19,30 @@ const props = defineProps<{
 const emit = defineEmits<{
   close: []
 }>()
-const { pageItems } = useCommandGroups()
+
+const { groups } = useCommandGroups()
 const route = useRoute()
 const routeComponent = computed(() => route.matched[0]?.meta?.command ?? null)
-
 const hotkeysOpen = shallowRef(false)
 
+const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
+  Object.fromEntries(groups.value.map((group) => [group.id, group]))
+)
+
+const pagesGroup = computed(() => groupMap.value.pages)
+const helpGroup = computed(() => groupMap.value.help)
+const referenceGroup = computed(() => ({
+  library: groupMap.value.library,
+  reference: groupMap.value.reference
+}))
+
 const stack = shallowRef<Array<{ title: string; items: CommandItem[] }>>([])
+const activePrefix = computed(() => stack.value.at(-2)?.title ?? null)
 const activeState = computed(() => stack.value.at(-1) ?? null)
 const activeItems = computed(() => activeState.value?.items ?? [])
 const activeLead = computed(
   () => activeItems.value.find((item) => item.slot === "label") ?? null
 )
-
 const activeListItems = computed(() =>
   activeItems.value.filter((item) => item.slot !== "label")
 )
@@ -41,6 +52,7 @@ const detailEntry = computed(() => {
   if (!entry || activeListItems.value.length !== 1) {
     return null
   }
+
   return resolveDetailComponent(entry.slot) ? entry : null
 })
 
@@ -70,6 +82,7 @@ function openItem(item: CommandItem) {
     ]
     return
   }
+
   closeMenu()
 }
 
@@ -81,40 +94,55 @@ function goBack() {
 <template>
   <div class="flex max-h-180 min-h-0 flex-col">
     <template v-if="!activeState">
-      <div v-if="routeComponent" class="border-b border-p3 px-3 py-2">
-        <component :is="routeComponent" @update:open="closeMenu" />
-      </div>
-
-      <div class="grid min-h-0 flex-1 divide-y divide-p3">
-        <div class="min-h-0 overflow-y-auto p-3">
-          <ReferenceCommand
-            :pages="pageItems"
-            @update:open="(e) => openItem(e)" />
-          <HelpCommand :pages="pageItems" @update:open="(e) => openItem(e)" />
+      <div
+        class="grid min-h-0 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto">
+        <div v-if="routeComponent" class="border-b border-p3 py-2">
+          <component :is="routeComponent" @update:open="closeMenu" />
         </div>
+        <CommandGroup
+          v-if="pagesGroup"
+          :items="pagesGroup"
+          @update:open="(item) => openItem(item)" />
+
+        <ReferenceCommand
+          v-if="referenceGroup.library || referenceGroup.reference"
+          :groups="referenceGroup"
+          @update:open="(item) => openItem(item)" />
+
+        <CommandGroup
+          v-if="helpGroup"
+          :items="helpGroup"
+          @update:open="(item) => openItem(item)" />
       </div>
     </template>
 
     <template v-else>
-      <div class="flex h-11 items-center gap-2 border-b border-p3 px-3">
-        <UButton
-          data-command-menu-item="true"
-          icon="i-arrow-left"
-          size="2xs"
-          variant="solid"
-          color="neutral"
-          class="rounded-full"
-          @click="goBack" />
+      <UButton
+        variant="link"
+        data-command-menu-item="true"
+        class="flex h-10 shrink-0 items-center gap-2 border-b border-p3 px-3"
+        @click="goBack">
+        <span
+          class="grid size-6 place-items-center rounded-md group-hover/btn:bg-neutral group-hover/btn:**:text-nc">
+          <Icon name="i-arrow-left" size="2xs" class="size-4" />
+        </span>
 
-        <div class="min-w-0">
-          <p class="truncate text-sm font-semibold text-pc">
+        <div
+          class="inline-flex min-w-0 items-center gap-1.5 align-baseline *:align-baseline">
+          <span v-if="activePrefix" class="truncate text-sm font-medium text-n5"
+            >{{ activePrefix }}
+            <Icon
+              name="i-right"
+              class="ml-0.5 inline size-3 translate-y-[0.5px] align-baseline text-n5" />
+          </span>
+          <span class="truncate text-sm font-medium text-pc">
             {{ activeState.title }}
-          </p>
-          <p v-if="activeLead?.suffix" class="truncate text-xs text-n4">
+          </span>
+          <span v-if="activeLead?.suffix" class="truncate text-xs text-n4">
             {{ itemSuffix(activeLead) }}
-          </p>
+          </span>
         </div>
-      </div>
+      </UButton>
 
       <div class="min-h-0 flex-1 overflow-y-auto p-3">
         <component
@@ -123,46 +151,11 @@ function goBack() {
           :id="Number(detailEntry.id)" />
 
         <div v-else class="space-y-1">
-          <UButton
+          <CommandButton
             v-for="item in activeListItems"
             :key="itemKey(item)"
-            data-command-menu-item="true"
-            :to="item.to"
-            :target="itemTarget(item)"
-            :external="isExternal(item) || undefined"
-            :variant="isReactive(item) ? 'soft' : 'ghost'"
-            color="neutral"
-            class="flex w-full items-center justify-start rounded-lg px-2.5 py-2 text-left"
-            @click="openItem(item)">
-            <template #leading>
-              <UAvatar
-                v-if="item.avatar?.src"
-                :src="item.avatar.src"
-                size="2xs"
-                class="shrink-0" />
-              <Icon
-                v-else-if="item.icon"
-                :name="item.icon"
-                :class="
-                  cn('size-4.5 shrink-0 text-n4', item.ui?.itemLeadingIcon)
-                " />
-            </template>
-
-            <div class="min-w-0 grow">
-              <p class="truncate text-sm font-medium text-pc">
-                {{ item.label }}
-              </p>
-              <p v-if="item.suffix" class="mt-0.5 line-clamp-2 text-xs text-n4">
-                {{ itemSuffix(item) }}
-              </p>
-            </div>
-
-            <template #trailing>
-              <Icon
-                :name="itemTrailingIcon(item)"
-                class="size-4 shrink-0 opacity-45" />
-            </template>
-          </UButton>
+            :item
+            @update:open="(item) => openItem(item)" />
         </div>
       </div>
     </template>

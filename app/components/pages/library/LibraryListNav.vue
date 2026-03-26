@@ -5,26 +5,23 @@ const nav = computed(() =>
 </script>
 
 <template>
-  <div class="w-full items-center justify-between gap-2 pr-2 pl-1">
-    <h6 class="mb-2.5 text-sm opacity-80">Other References</h6>
-    <UButton
-      v-for="(link, i) in nav"
-      :key="i"
-      variant="link"
-      :label="link.label"
-      :icon="link.icon"
-      :to="link.to"
-      :ui="{
-        leadingIcon: cn('size-4', link?.class),
-        base: 'w-full',
-        label: 'grow-0 font-semibold'
-      }">
-      <span class="underline-offset-2 group-hover/btn:underline">
-        {{ link.label }}</span
-      >
-      <Icon
-        name="i-link"
-        class="size-3.5 opacity-50 group-hover/btn:opacity-100" />
-    </UButton>
+  <div class="w-full items-center justify-between gap-2 pr-2">
+    <div class="mb-2 text-sm font-medium opacity-60">Collections</div>
+    <div class="w-full pl-1">
+      <UButton
+        v-for="(link, i) in nav"
+        :key="i"
+        variant="link"
+        trailing-icon="i-link"
+        :label="link.label"
+        :icon="link.icon"
+        :to="link.to"
+        :ui="{
+          leadingIcon: cn('size-4', link?.class),
+          base: 'w-full',
+          label: 'font-semibold underline-offset-2 group-hover/btn:underline',
+          trailingIcon: 'size-3.5 opacity-50 group-hover/btn:opacity-100'
+        }" />
+    </div>
   </div>
 </template>

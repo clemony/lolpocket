@@ -17,7 +17,7 @@ const commandInput = useTemplateRef<{ inputRef: HTMLInputElement | null }>(
 const inputRef = computed(() => commandInput.value?.inputRef ?? undefined)
 
 const routeTitle = computed(() => {
-  if (open) return "search LP..."
+  if (open) return "search lp..."
   else if (route.meta?.prefix === "summoner") {
     const { summoner } = storeToRefs(sSession())
     return `${summoner.value?.name ?? "Summoner"} - ${route.meta?.title}`
@@ -51,7 +51,7 @@ function handleClear() {
     :ui="{
       root: 'group/i',
       base: cn(
-        '3 h-10 w-180 rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 placeholder:lowercase hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
+        '3 h-10 w-180 rounded-xl! bg-p0/70 px-4 pr-16 text-center ring inset-shadow-sm ring-p3/80 placeholder:text-pc/60 hover:ring-n0/50 focus-visible:ring-1 focus-visible:ring-p3/80! focus-visible:placeholder:opacity-0!',
         {
           '': open
         }

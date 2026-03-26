@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
+// Updated Patch 16.6 - 03/25/2026 03:29:20 PM CDT
 
 export const itemPrice: Record<number, number> = {
   "1001": 300,
@@ -38,9 +38,6 @@ export const itemPrice: Record<number, number> = {
   "1102": 450,
   "1103": 450,
   "1104": 0,
-  "1105": 450,
-  "1106": 450,
-  "1107": 450,
   "1111": 300,
   "1200": 0,
   "1201": 0,

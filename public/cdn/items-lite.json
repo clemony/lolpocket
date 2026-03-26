@@ -17,7 +17,10 @@
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 25
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "1004": {
     "id": 1004,
@@ -852,45 +855,6 @@
       "sell": 0
     }
   },
-  "1105": {
-    "id": 1105,
-    "key": "item",
-    "name": "Mosstomper Seedling",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
-    },
-    "maps": [
-      11
-    ]
-  },
-  "1106": {
-    "id": 1106,
-    "key": "item",
-    "name": "Gustwalker Hatchling",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
-    },
-    "maps": [
-      11
-    ]
-  },
-  "1107": {
-    "id": 1107,
-    "key": "item",
-    "name": "Scorchclaw Pup",
-    "gold": {
-      "base": 450,
-      "total": 450,
-      "sell": 180
-    },
-    "maps": [
-      11
-    ]
-  },
   "1111": {
     "id": 1111,
     "key": "item",
@@ -1520,7 +1484,8 @@
     "rank": "Consumable",
     "stats": {},
     "tags": [
-      "Health and reg"
+      "Health and reg",
+      "Consumable"
     ]
   },
   "2007": {
@@ -1722,7 +1687,8 @@
     "rank": "Consumable",
     "stats": {},
     "tags": [
-      "Health and reg"
+      "Health and reg",
+      "Consumable"
     ]
   },
   "2033": {
@@ -1855,7 +1821,10 @@
       11
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2056": {
     "id": 2056,
@@ -1927,7 +1896,8 @@
     "stats": {},
     "tags": [
       "Health and reg",
-      "Movement"
+      "Movement",
+      "Consumable"
     ]
   },
   "2139": {
@@ -1953,7 +1923,8 @@
     "tags": [
       "Ability power",
       "Mana and reg",
-      "Onhit effects"
+      "Onhit effects",
+      "Consumable"
     ]
   },
   "2140": {
@@ -1978,7 +1949,8 @@
     "stats": {},
     "tags": [
       "Attack damage",
-      "Lifesteal vamp"
+      "Lifesteal vamp",
+      "Consumable"
     ]
   },
   "2141": {
@@ -1995,7 +1967,10 @@
       12
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2142": {
     "id": 2142,
@@ -2013,7 +1988,8 @@
     "stats": {},
     "tags": [
       "Attack damage",
-      "Ability power"
+      "Ability power",
+      "Consumable"
     ]
   },
   "2143": {
@@ -2031,7 +2007,8 @@
     "rank": "Consumable",
     "stats": {},
     "tags": [
-      "Health and reg"
+      "Health and reg",
+      "Consumable"
     ]
   },
   "2144": {
@@ -2047,7 +2024,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2145": {
     "id": 2145,
@@ -2098,7 +2078,10 @@
       35
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2151": {
     "id": 2151,
@@ -2117,7 +2100,10 @@
       35
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2152": {
     "id": 2152,
@@ -2136,7 +2122,10 @@
       35
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "2161": {
     "id": 2161,
@@ -2883,7 +2872,10 @@
     "stats": {
       "attackSpeed": 25,
       "flatMovespeed": 45
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3009": {
     "id": 3009,
@@ -2909,7 +2901,10 @@
     ],
     "stats": {
       "flatMovespeed": 55
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3010": {
     "id": 3010,
@@ -2995,7 +2990,10 @@
     "stats": {
       "flatMagicPenetration": 12,
       "flatMovespeed": 45
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3023": {
     "id": 3023,
@@ -3431,7 +3429,10 @@
     "stats": {
       "armor": 25,
       "flatMovespeed": 45
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3050": {
     "id": 3050,
@@ -4578,7 +4579,10 @@
       "magicResistance": 20,
       "flatMovespeed": 45,
       "tenacity": 30
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3112": {
     "id": 3112,
@@ -5505,7 +5509,10 @@
     "stats": {
       "flatMovespeed": 45,
       "abilityHaste": 10
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3161": {
     "id": 3161,
@@ -5596,7 +5603,10 @@
     ],
     "stats": {
       "flatMovespeed": 65
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3171": {
     "id": 3171,
@@ -5620,7 +5630,10 @@
     "stats": {
       "flatMovespeed": 45,
       "abilityHaste": 20
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3172": {
     "id": 3172,
@@ -5674,7 +5687,10 @@
       "magicResistance": 30,
       "flatMovespeed": 45,
       "tenacity": 30
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3174": {
     "id": 3174,
@@ -5698,7 +5714,10 @@
     "stats": {
       "armor": 35,
       "flatMovespeed": 45
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3175": {
     "id": 3175,
@@ -5722,7 +5741,10 @@
     "stats": {
       "flatMagicPenetration": 18,
       "flatMovespeed": 45
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "3176": {
     "id": 3176,
@@ -6039,6 +6061,7 @@
     "requiredChampion": "FiddleSticks",
     "stats": {},
     "tags": [
+      "Trinket",
       "Special"
     ]
   },
@@ -6062,7 +6085,10 @@
       21
     ],
     "rank": "Trinket",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Trinket"
+    ]
   },
   "3348": {
     "id": 3348,
@@ -6078,7 +6104,10 @@
       30
     ],
     "rank": "Trinket",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Trinket"
+    ]
   },
   "3349": {
     "id": 3349,
@@ -6111,7 +6140,10 @@
       21
     ],
     "rank": "Trinket",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Trinket"
+    ]
   },
   "3364": {
     "id": 3364,
@@ -6135,7 +6167,10 @@
       21
     ],
     "rank": "Trinket",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Trinket"
+    ]
   },
   "3398": {
     "id": 3398,
@@ -6286,7 +6321,10 @@
       "sell": 0
     },
     "rank": "Trinket",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Trinket"
+    ]
   },
   "3599": {
     "id": 3599,
@@ -9625,7 +9663,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220001": {
     "id": 220001,
@@ -9640,7 +9681,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220002": {
     "id": 220002,
@@ -9655,7 +9699,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220003": {
     "id": 220003,
@@ -9670,7 +9717,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220004": {
     "id": 220004,
@@ -9685,7 +9735,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220005": {
     "id": 220005,
@@ -9700,7 +9753,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220006": {
     "id": 220006,
@@ -9715,7 +9771,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220007": {
     "id": 220007,
@@ -9730,7 +9789,10 @@
       30
     ],
     "rank": "Consumable",
-    "stats": {}
+    "stats": {},
+    "tags": [
+      "Consumable"
+    ]
   },
   "220008": {
     "id": 220008,
@@ -10151,7 +10213,10 @@
     "rank": "Boots",
     "stats": {
       "flatMovespeed": 70
-    }
+    },
+    "tags": [
+      "Movement"
+    ]
   },
   "223006": {
     "id": 223006,

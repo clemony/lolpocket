@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/19/2026 09:52:50 AM CDT
+// Updated Patch 16.6 - 03/25/2026 03:29:18 PM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -186,21 +186,6 @@ export const itemIndex: Index[] = [
     "id": 1104,
     "key": "item",
     "name": "Eye of the Herald"
-  },
-  {
-    "id": 1105,
-    "key": "item",
-    "name": "Mosstomper Seedling"
-  },
-  {
-    "id": 1106,
-    "key": "item",
-    "name": "Gustwalker Hatchling"
-  },
-  {
-    "id": 1107,
-    "key": "item",
-    "name": "Scorchclaw Pup"
   },
   {
     "id": 1111,
@@ -3181,80 +3166,5 @@ export const itemIndex: Index[] = [
     "id": 447123,
     "key": "item",
     "name": "Puppeteer"
-  },
-  {
-    "id": 663039,
-    "key": "item",
-    "name": "Atma's Reckoning"
-  },
-  {
-    "id": 663056,
-    "key": "item",
-    "name": "Demon King's Crown"
-  },
-  {
-    "id": 663058,
-    "key": "item",
-    "name": "Shield of Molten Stone"
-  },
-  {
-    "id": 663059,
-    "key": "item",
-    "name": "Cloak of Starry Night"
-  },
-  {
-    "id": 663060,
-    "key": "item",
-    "name": "Sword of the Divine"
-  },
-  {
-    "id": 663064,
-    "key": "item",
-    "name": "Veigar's Talisman of Ascension"
-  },
-  {
-    "id": 663172,
-    "key": "item",
-    "name": "Zephyr"
-  },
-  {
-    "id": 663193,
-    "key": "item",
-    "name": "Gargoyle Stoneplate"
-  },
-  {
-    "id": 664011,
-    "key": "item",
-    "name": "Sword of Blossoming Dawn"
-  },
-  {
-    "id": 664403,
-    "key": "item",
-    "name": "The Golden Spatula"
-  },
-  {
-    "id": 664644,
-    "key": "item",
-    "name": "Crown of the Shattered Queen"
-  },
-  {
-    "id": 667101,
-    "key": "item",
-    "name": "Gambler's Blade"
-  },
-  {
-    "id": 667109,
-    "key": "item",
-    "name": "Cruelty"
-  },
-  {
-    "id": 667112,
-    "key": "item",
-    "name": "Flesheater"
-  },
-  {
-    "id": 994403,
-    "key": "item",
-    "name": "Golden Spatula"
   }
 ]

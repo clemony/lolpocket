@@ -2,8 +2,11 @@ import type {
   AvatarProps,
   ButtonProps,
   CardProps,
+  CheckboxGroupItem,
+  CheckboxProps,
   DropdownMenuItem,
   EmitsToProps,
+  InputProps,
   NavigationMenuItem,
   TabsItem,
   TooltipProps
@@ -75,7 +78,9 @@ export interface NavButtonProps extends ButtonProps {
   as?: "card" | "button" | "separator"
   description?: string
 }
-
+export type InputClearUi = Partial<
+  InputProps["ui"] & Record<"clear", ButtonProps["ui"]>
+>
 export interface BaseItem {
   to?: string
   label?: string
@@ -83,4 +88,16 @@ export interface BaseItem {
   trailingIcon?: string
   suffix?: string
   prefix?: string
+}
+
+export type CheckboxItem = CheckboxGroupItem & {
+  icon: string
+  label: string
+  color?: string
+}
+
+export interface CustomClass {
+  class?: string
+  not?: string[]
+  is?: string[]
 }

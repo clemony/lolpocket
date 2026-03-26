@@ -9,9 +9,9 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
 
 <template>
   <div
-    class="flex h-8 items-center justify-between gap-2 border-t border-p3 px-3">
+    class="min-h-8,5 flex h-8.5 items-center justify-between gap-2 border-t border-p3 px-2 pt-0.5">
     <div class="inline-flex items-center">
-      <span class="px-2 text-lg font-[800] text-pc">LP</span>
+      <span class="px-3 text-lg font-[800] text-pc">LP</span>
       <UPopover
         :content="{
           side: 'top',

@@ -5,7 +5,7 @@ const { editor } = defineProps<{
   editor: Editor | null
 }>()
 
-const menu = [
+/* const menu = [
   {
     action: () => editor?.commands.toggleBold(),
     icon: "bold",
@@ -33,12 +33,12 @@ const menu = [
     action: () => editor?.commands.toggleHeading({ level: 2 }),
     icon: "h2",
   },
-]
+] */
 </script>
 
 <template>
   <div class="z-66! flex w-max flex-nowrap items-center gap-1 px-1 py-1.5">
-    <template v-for="(item, i) in menu" :key="i">
+    <!--     <template v-for="(item, i) in menu" :key="i">
       <UButton
         v-if="!item.name"
         variant="ghost"
@@ -61,6 +61,6 @@ const menu = [
         v-if="item.name === 'separator'"
         class="h-[11px] bg-p3"
         orientation="vertical" />
-    </template>
+    </template> -->
   </div>
 </template>

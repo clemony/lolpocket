@@ -4,7 +4,9 @@ const route = useRoute()
 
 <template>
   <div class="w-full py-1.5">
-    <h6 class="mb-3 text-pc">Library</h6>
+    <h6 class="mb-3 text-pc">
+      Library
+    </h6>
     <div class="grid w-full grid-cols-4 gap-2">
       <UButton
         v-for="(link, i) in libraryNav"

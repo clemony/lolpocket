@@ -1,157 +1,150 @@
 <script lang="ts" setup>
-import { statIndex } from "#shared/constants/common/stat-index"
-import { itemTags } from "#shared/constants/items/itemTags"
-import type { CheckboxGroupItem, CheckboxGroupProps } from "@nuxt/ui"
-import type { SeparatorProps } from "~~/layers/ui/app/variants/separator"
+import {
+  checkboxIcon,
+  checkboxProps
+} from "#layers/ui/app/components/inputs/checkboxProps"
+import { btnProps, collapseProps, separatorProps } from "../../libraryProps"
 
+const { items } = defineProps<{
+  items: Record<string, CheckboxItem[]>
+}>()
 const emit = defineEmits(["updateTab"])
-const { filters } = storeToRefs(is())
+const { filters, filtered, availableWithoutPurchasableCount } =
+  storeToRefs(is())
 const collapsed = useState<boolean>("collapsed-state", () => false)
 
-const statItems = computed<
-  CheckboxGroupItem & { icon: string; label: string }[]
->(() =>
-  Object.values(statIndex)
-    .filter((s) => s.group !== "champion")
-    .map((s) => ({
-      value: s.id,
-      label: s.name,
-      icon: `i-stat-${s.id}`
-    }))
+const purchasableBadgeLabel = computed(() =>
+  filters.value.purchasable
+    ? `${filtered.value.length}/${availableWithoutPurchasableCount.value}`
+    : `${availableWithoutPurchasableCount.value}`
 )
 
-const tagItems = computed<
-  CheckboxGroupItem & { icon: string; label: string }[]
->(() => itemTags.map((t) => ({ value: t.id, label: t.name, icon: t.icon })))
-
-const shared = {
-  indicator: "hidden",
-  color: "default",
-  variant: "select",
-  ui: {
-    fieldset: "gap-0",
-    item: "px-0",
-    wrapper: "w-full justify-start",
-    label:
-      "group-has-checked/x:noise flex h-full w-fit items-center gap-2 rounded-lg px-2 py-1 text-start group-has-checked/x:bg-neutral group-has-checked/x:text-nc group-has-checked/x:shadow-sm group-has-checked/x:drop-shadow-sm group-has-checked/x:**:text-nc group-hover/x:group-has-checked/x:bg-neutral/90 group-has-checked/x:hover:no-underline"
-  }
-} satisfies CheckboxGroupProps
-
-const separatorProps: SeparatorProps = {
-  size: "md",
-  labelPlacement: "start",
-  trailingIcon: "i-up",
-  ui: {
-    separator: "group-hover/btn:bg-p4",
-    label: "font-semibold opacity-50 group-hover/btn:opacity-100",
-    trailingIcon:
-      "group-hover/btn:**:text-80 transition-rotate size-4.5 text-pc/40 duration-200 **:stroke-[2.8] group-open/collapse:-rotate-180"
-  }
-}
+const categoriesOpen = shallowRef<boolean>(true)
 </script>
 
 <template>
-  <div class="mt-0.5 grid auto-rows-max items-center gap-4">
-    <div class="mb-1 flex flex-nowrap items-center gap-4 pr-1">
-      <!-- view -->
-      <ViewToggle
-        variant="label"
-        @update:tab-model="(e) => emit('updateTab', e)" />
-
-      <!--    <span class="mx-1 h-5 w-px bg-p3" /> -->
-      <!-- reset -->
-      <UButton
-        variant="outline"
-        trailing-icon="i-reset"
-        size="xs"
-        :ui="{
-          label: 'text-xs font-semibold',
-          trailingIcon: 'size-3.5',
-          base: 'relative w-26 gap-2.5 px-5'
-        }"
-        label="Clear"
-        @click="is().clearFilters()" />
-    </div>
+  <div class="grid auto-rows-max items-center gap-3">
     <!-- search -->
-    <LazyLibrarySearch />
+    <LazyLibrarySearch
+      variant="outline"
+      color="default"
+      clear-variant="ghost"
+      clear-color="p2"
+      @update:model-value="(e: string) => (filters.query = e)" />
 
-    <!-- select menus -->
+    <div class="flex items-center justify-between gap-6">
+      <ItemSortSelect />
+      <!-- reset -->
 
-    <UCollapsible
-      v-if="!collapsed"
-      :ui="{
-        root: 'w-full',
-        content: 'max-h-90 overflow-scroll'
-      }"
-      :default-open="!collapsed">
-      <UButton size="xl" variant="link" block>
-        <Separator v-bind="separatorProps" label="Stats" />
-      </UButton>
-      <template #content>
-        <UCheckboxGroup
-          v-model:model-value="filters.stats"
-          v-bind="shared"
-          :items="statItems"
-          @entry-focus.prevent>
-          <template #label="{ item }">
-            <Icon :name="item.icon ?? ''" class="size-4" />
+      <ItemFilterClearMenu />
+    </div>
+    <div class="mb-1 w-full">
+      <!-- select menus -->
 
-            {{ item.label }}
-          </template>
-        </UCheckboxGroup>
-      </template>
-    </UCollapsible>
+      <UCollapsible
+        v-if="!collapsed"
+        v-bind="collapseProps"
+        :ui="{
+          ...collapseProps.ui,
+          content: cn(
+            collapseProps.ui?.content,
+            categoriesOpen ? '' : 'border-b-transparent'
+          )
+        }"
+        :default-open="!collapsed">
+        <UButton v-bind="btnProps">
+          <Separator v-bind="separatorProps" label="Stats" />
+        </UButton>
+        <template #content>
+          <CheckboxGroup
+            v-model:model-value="filters.stats"
+            :ui="{
+              icon: 'size-3.75 scale-90'
+            }"
+            :items="items.stats" />
+        </template>
+      </UCollapsible>
 
-    <UCollapsible
-      v-if="!collapsed"
-      :ui="{
-        root: 'mb-3 w-full',
-        content: 'max-h-90 overflow-scroll'
-      }"
-      :default-open="!collapsed">
-      <UButton size="xl" variant="link" block>
-        <Separator label="Categories" v-bind="separatorProps" />
-      </UButton>
-      <template #content>
-        <UCheckboxGroup
-          v-bind="shared"
-          v-model:model-value="filters.tags"
-          :items="tagItems"
-          @entry-focus.prevent>
-          <template #label="{ item }">
-            <Icon
-              :name="item.icon ?? ''"
-              :class="
-                cn(
-                  'size-4',
-                  [
-                    'Movement',
-                    'On-Hit Effects',
-                    'Lifesteal & Omnivamp'
-                  ].includes(item.label)
-                    ? ''
-                    : 'scale-115'
-                )
-              " />
+      <!-- categories -->
 
-            {{ item.label }}
-          </template>
-        </UCheckboxGroup>
-      </template>
-    </UCollapsible>
+      <UCollapsible
+        v-if="!collapsed"
+        v-model:open="categoriesOpen"
+        v-bind="collapseProps"
+        :default-open="!collapsed">
+        <UButton v-bind="btnProps">
+          <Separator v-bind="separatorProps" label="Categories" />
+        </UButton>
+        <template #content>
+          <Listbox
+            v-model:model-value="filters.tags"
+            :multiple="false"
+            @entry-focus.prevent>
+            <ListboxContent :class="checkboxProps.ui?.fieldset">
+              <ListboxItem
+                v-for="item in items.tags"
+                :key="item.label"
+                as-child
+                ;active
+                :value="item.label">
+                <UButton
+                  :label="item.label"
+                  size="custom"
+                  :active="filters.tags === item.label"
+                  variant="highlight"
+                  active-variant="solid"
+                  :ui="{
+                    base: checkboxProps.ui?.item,
+                    label: checkboxProps.ui?.label
+                  }">
+                  <template #leading>
+                    <span :class="checkboxIcon.wrapper">
+                      <Icon
+                        :name="item.icon"
+                        :class="
+                          cn(
+                            checkboxIcon.icon,
+                            ['Consumable', 'Trinket', 'Movement'].includes(
+                              item.label
+                            )
+                              ? 'scale-90'
+                              : 'scale-112'
+                          )
+                        "
+                    /></span>
+                  </template>
+                </UButton>
+              </ListboxItem>
+            </ListboxContent>
+          </Listbox>
+        </template>
+      </UCollapsible>
+    </div>
 
     <!-- map -->
     <MapSelector />
 
     <!-- shop -->
 
-    <USwitch
-      v-model:model-value="filters.purchasable"
-      :ui="{ label: 'font-medium', root: 'mt-5 gap-2 px-1' }"
-      :label="filters.purchasable ? 'Purchasable' : 'All Items'" />
-
-    <Separator class="mt-6 mb-2.5" />
-
+    <div class="mt-3 flex w-full grow items-center gap-3">
+      <span class="grow text-sm font-medium opacity-60">
+        {{ filters.purchasable ? "Purchasable" : "All Items" }}
+      </span>
+      <UBadge
+        :color="filters.purchasable ? 'neutral' : 'transparent'"
+        size="xs"
+        :ui="{
+          label: cn(
+            'font-mono text-2xs font-semibold',
+            !filters.purchasable ? 'opacity-50' : ''
+          )
+        }"
+        :label="purchasableBadgeLabel" />
+      <USwitch
+        v-model:model-value="filters.purchasable"
+        :ui="{ container: 'rounded-full' }" />
+    </div>
+    <Separator class="mt-2" />
     <LibraryListNav />
   </div>
 </template>

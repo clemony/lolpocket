@@ -1,4 +1,7 @@
 import { championIndex } from "#shared/constants/champions/championIndex"
+import { champIdToRelease } from "#shared/constants/champions/champIdToRelease"
+import { championToTitle } from "#shared/constants/champions/championToTitle"
+import { champKeyToRole } from "#shared/constants/champions/champKeyToRole"
 import { positionToChamp } from "#shared/constants/champions/positionToChamp"
 import { rangeToChamp } from "#shared/constants/champions/rangeToChamp"
 import { resourceToChamp } from "#shared/constants/champions/resourceToChamp"
@@ -16,8 +19,27 @@ export interface ChampionFilter {
   sort: string
 }
 
+function collectLabelsById(source: Record<string, number[]>) {
+  const map = new Map<number, string[]>()
+
+  for (const [label, ids] of Object.entries(source)) {
+    for (const id of ids) {
+      const labels = map.get(id) ?? []
+      labels.push(label)
+      map.set(id, labels)
+    }
+  }
+
+  return map
+}
+
 export const champFilter = defineStore("champ-filter", () => {
   const championSplashDropdown = ref<HTMLElement | null>(null)
+  const championMap = new Map(championIndex.map((champion) => [champion.id, champion]))
+  const rolesById = collectLabelsById(roleToChamp)
+  const positionsById = collectLabelsById(positionToChamp)
+  const rangesById = collectLabelsById(rangeToChamp)
+  const resourcesById = collectLabelsById(resourceToChamp)
 
   const attackType: Record<AttackKey, AttackType> = {
     0: "All",
@@ -56,9 +78,7 @@ export const champFilter = defineStore("champ-filter", () => {
     order.value = [...newOrder]
   }
 
-  const filtered = computed(() => {
-    const query = debouncedQuery.value.toLowerCase()
-
+  const baseMatchedIds = computed<number[]>(() => {
     const all = championIndex.map((i) => i.id)
     let matched: Set<number> = new Set(all)
 
@@ -68,7 +88,7 @@ export const champFilter = defineStore("champ-filter", () => {
       matched = new Set(ids.filter((id) => matched.has(id)))
     }
 
-    if (filters.value.role) {
+    if (filters.value.role.length) {
       for (const v of filters.value.role) {
         const rolesIds = roleToChamp[v] ?? []
         matched = new Set(rolesIds.filter((id) => matched.has(id)))
@@ -85,25 +105,74 @@ export const champFilter = defineStore("champ-filter", () => {
       matched = new Set(resourceIds.filter((id) => matched.has(id)))
     }
 
-    if (query) {
-      matched = new Set(
-        [...matched].filter((id) => {
-          const champion = championById(id)
-          if (!champion) return false
+    return [...matched]
+  })
 
-          const name = champion.name.toLowerCase()
-          return name.includes(query)
-        })
-      )
-    }
+  const searchIndex = computed(() =>
+    baseMatchedIds.value.map((id) => {
+      const champion = championMap.get(id)
+      const key = champion?.key ?? ""
 
-    const array = Array.from(
-      matched,
-      (id) => championIndex.find((c) => c.id === id)?.key
-    ).filter((key): key is string => Boolean(key))
+      return {
+        id,
+        key,
+        name: champion?.name ?? "",
+        releaseDate: champIdToRelease[String(id)] ?? "",
+        title: championToTitle[key] ?? "",
+        primaryRole: champKeyToRole[key] ?? "",
+        roles: rolesById.get(id) ?? [],
+        positions: positionsById.get(id) ?? [],
+        attackTypes: rangesById.get(id) ?? [],
+        resources: resourcesById.get(id) ?? []
+      }
+    })
+  )
+
+  const searchedChampions = useSearch(searchIndex, debouncedQuery, {
+    keys: [
+      "name",
+      "key",
+      "title",
+      "primaryRole",
+      "roles",
+      "positions",
+      "attackTypes",
+      "resources"
+    ]
+  })
+
+  const filtered = computed(() => {
+    const query = debouncedQuery.value.trim()
+    const champions = [...(query ? searchedChampions.value : searchIndex.value)]
+
+    champions.sort((a, b) => {
+      switch (filters.value.sort) {
+        case "release-newest":
+          return (
+            b.releaseDate.localeCompare(a.releaseDate)
+            || a.name.localeCompare(b.name)
+          )
+        case "release-oldest":
+          return (
+            a.releaseDate.localeCompare(b.releaseDate)
+            || a.name.localeCompare(b.name)
+          )
+        case "alpha-desc":
+        case "za":
+          return b.name.localeCompare(a.name)
+        case "alpha-asc":
+        case "az":
+        default:
+          return a.name.localeCompare(b.name)
+      }
+    })
+
+    const array = champions
+      .map((champion) => champion.key)
+      .filter((key): key is string => Boolean(key))
 
     if (filters.value.sort) {
-      filters.value.sort === "az" ? array.sort() : array.sort().reverse()
+      // Sorting happens above while champion metadata is still available.
     }
 
     if (order.value.length) {

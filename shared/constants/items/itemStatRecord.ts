@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/19/2026 09:52:52 AM CDT
+// Updated Patch 16.6 - 03/24/2026 03:47:46 PM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;

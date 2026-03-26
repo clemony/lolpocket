@@ -4,7 +4,7 @@ import { spellIndex } from "~~/shared/constants/misc/spell-index"
 definePageMeta({
   title: "Spells",
   icon: "i-book",
-  iconFill: "i-tdesign-book-filled",
+  iconFill: "i-book-fill",
   order: 3,
   prefix: "Library",
   description: "Don't forget the petricite!",

@@ -5,7 +5,7 @@ import { useSortable } from "@vueuse/integrations/useSortable"
 definePageMeta({
   title: "Backpack",
   icon: "i-ui-pack",
-  class: "**:stroke-[0.4]! scale-94",
+  class: " scale-94",
   layout: false,
   order: 2
 })
