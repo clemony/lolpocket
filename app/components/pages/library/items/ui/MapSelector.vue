@@ -30,7 +30,9 @@ const maps = computed(() => [
 
 <template>
   <div v-if="!collapsed" class="space-y-2">
-    <div class="text-sm font-medium opacity-60">Map</div>
+    <div class="text-sm font-medium opacity-60">
+      Map
+    </div>
     <UTabs
       v-model:model-value="filters.map"
       variant="solid"
@@ -88,7 +90,9 @@ const maps = computed(() => [
         :variant="collapsed ? 'solid' : 'outline'" />
     </div>
     <template #content>
-      <h6 class="px-1.5 py-1 text-xs">Select Map</h6>
+      <h6 class="px-1.5 py-1 text-xs">
+        Select Map
+      </h6>
       <LazyListbox
         v-model:model-value="filters.map"
         :ui="{

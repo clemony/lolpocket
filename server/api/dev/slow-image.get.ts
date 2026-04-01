@@ -10,7 +10,9 @@ export default defineEventHandler(async (event) => {
     : 1500
 
   const requestedTarget = typeof query.to === "string" ? query.to : ""
-  const to = requestedTarget.startsWith("/") ? requestedTarget : "/img/items/1001.webp"
+  const to = requestedTarget.startsWith("/")
+    ? requestedTarget
+    : "/img/item/1001.webp"
 
   await new Promise((resolve) => setTimeout(resolve, delayMs))
 

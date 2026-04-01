@@ -21,32 +21,44 @@ const roles = computed(() => {
     return {
       ...p,
       icon: `i-lp-${p.label.toLowerCase()}`,
-      disabled: p.label === "all" ? false : !find?.games,
+      disabled: p.label === "all" ? false : !find?.games
     }
   })
 })
 
 const roleModel = computed({
   get: () => filter?.value.role ?? "all",
-  set: (val) => store.setFilter("role", val ?? "all"),
+  set: (val) => store.setFilter("role", val ?? "all")
 })
 </script>
 
 <template>
-  <!--   <UTabs
+  <UTabs
     v-model:model-value="roleModel"
-    size="lg"
-    variant="neumorphic"
+    size="md"
     :ui="{
       root: 'w-full',
       label: 'hidden',
-      leadingIcon: 'size-5',
+      trigger: 'relative gap-0 p-0',
+      leadingIcon: 'size-5'
     }"
     :items="roles"
     value-key="label"
-    default-value="all" /> -->
+    default-value="all">
+    <template #leading="{ item }">
+      <UTooltip
+        :text="item.label"
+        as="div"
+        :ui="{ content: 'capitalize' }"
+        :content="{ side: item.disabled ? 'top' : 'bottom' }">
+        <div class="absolute inset-0 grid size-full place-items-center">
+          <Icon :name="item.icon" class="size-5!" />
+        </div>
+      </UTooltip>
+    </template>
+  </UTabs>
 
-  <URadioGroup
+  <!--   <URadioGroup
     v-model:model-value="roleModel"
     :ui="{
       root: String(className),
@@ -78,5 +90,5 @@ const roleModel = computed({
         <Icon :name="item.icon" :class="{ 'opacity-20': item.disabled }" />
       </Tooltip>
     </template>
-  </URadioGroup>
+  </URadioGroup> -->
 </template>

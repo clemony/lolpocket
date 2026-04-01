@@ -2,8 +2,14 @@
 import type { CommandGroup, CommandItem } from "../build/useCommandGroups"
 import { itemKey } from "../build/useCommandGroups"
 
-const { items } = defineProps<{
+const {
+  items,
+  ui,
+  class: className
+} = defineProps<{
   items: CommandGroup
+  ui?: CommandItem["ui"]
+  class?: HTMLAttributes["class"]
 }>()
 
 const emit = defineEmits<{
@@ -12,7 +18,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div v-if="items" class="w-full p-3">
+  <div v-if="items" :class="cn('w-full p-3', className)">
     <slot>
       <UUser
         size="xl"
@@ -24,6 +30,7 @@ const emit = defineEmits<{
       <CommandButton
         v-for="item in items.items"
         :key="itemKey(item)"
+        :ui
         :item="item"
         @update:open="emit('update:open', item)" />
     </div>

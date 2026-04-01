@@ -101,6 +101,6 @@ const themeModel = computed({
         <icon name="log-in" />
         Log in
       </UButton>
-    </div> </UPopover
-  >>
+    </div>
+  </UPopover>>
 </template>

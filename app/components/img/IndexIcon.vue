@@ -2,21 +2,21 @@
 import { keystoneIndex } from "#shared/constants/runes/keystoneIndex"
 
 const { class: className, item } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   item: Index
 }>()
 
 const keystoneStyle = computed(() => {
-  if (item?.key === 'rune' || keystoneIndex?.includes(item.id))
-    return 'scale-110 object-contain'
+  if (item?.key === "rune" || keystoneIndex?.includes(item.id))
+    return "scale-110 object-contain"
   return null
 })
 const runeStyle = computed(() => {
-  if (item?.key === 'rune' && !keystoneIndex?.includes(item.id))
-    return '!rounded-full inset-ring inset-ring-black/80'
+  if (item?.key === "rune" && !keystoneIndex?.includes(item.id))
+    return "!rounded-full inset-ring inset-ring-black/80"
   return null
 })
-const iconType = computed(() => item?.key ?? '')
+const iconType = computed(() => item?.key ?? "")
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const iconType = computed(() => item?.key ?? '')
       cn(
         'grid size-6 shrink-0 place-items-center overflow-hidden rounded-lg drop-shadow-sm',
         runeStyle,
-        className,
+        className
       )
     ">
     <Img
@@ -34,7 +34,7 @@ const iconType = computed(() => item?.key ?? '')
       :src="
         ['item', 'rune', 'spell'].includes(iconType)
           ? `/img/${item.key}s/${item.id}.webp`
-          : `/img/champions/${item.id}.webp`
+          : `/img/champion/${item.id}.webp`
       "
       :alt="item.name"
       :class="cn('size-full', keystoneStyle)" />

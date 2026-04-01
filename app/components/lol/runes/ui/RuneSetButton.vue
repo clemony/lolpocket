@@ -6,7 +6,7 @@ const {
   class: pathClass,
   pocket,
   set,
-  setKey,
+  setKey
 } = defineProps<{
   set?: RuneSet
   pocket?: Pocket
@@ -54,7 +54,7 @@ const bgStyle = computed (() => {
 
         <NuxtImg
           v-else
-          :src="`/img/runes/${set[0].path}/${set.keystone}.webp`"
+          :src="`/img/rune/${set[0].path}/${set.keystone}.webp`"
 
           class="h-14 transition-all duration-200 drop-shadow-sm drop-shadow-black/30" />
       </div>
@@ -65,7 +65,7 @@ const bgStyle = computed (() => {
       :class="cn('absolute  right-0.5 top-0.5  grid aspect-square size-7 place-items-center   rounded-full', pathClass)">
       <div class=" grid size-full place-items-center rounded-full ">
         <img
-          :src="!set[1].path ? '/img/runes/blankRune.webp' : `/img/runes/${set[1].path}.webp`"
+          :src="!set[1].path ? '/img/rune/blankRune.webp' : `/img/rune/${set[1].path}.webp`"
           class=" shrink-0 h-6 w-auto object-contain drop-shadow-sm  transition-all duration-200 drop-shadow-2xs" />
       </div>
     </div>

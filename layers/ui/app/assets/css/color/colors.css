@@ -4,7 +4,6 @@
   --color-discord: oklch(58% 52 274);
   --color-all-roles: oklch(37% 0 0);
 
-
   /* rank */
   --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
@@ -16,7 +15,6 @@
   --color-master: oklch(75.18% 0.1157 325.26);
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
-
 
   /* position */
   --color-top: var(--color-domination);
@@ -57,7 +55,6 @@
 }
 
 @theme inline {
-
   --platinum: var(--color-platinum);
   --win: var(--color-win);
   --mp5: var(--color-mp5);
@@ -110,5 +107,4 @@
   --color-toughness: var(--color-res);
   --color-control: var(--color-sorc);
   --color-damage: var(--color-domination);
-
 }

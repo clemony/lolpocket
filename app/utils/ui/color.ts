@@ -90,7 +90,17 @@ export const twBg: Record<string, string> = {
   sorc: "bg-sorc",
   pre: "bg-pre",
   res: "bg-res",
-  dom: "bg-dom"
+  dom: "bg-dom",
+  shadow: "bg-n2",
+  encore: "bg-encore",
+  contaminate: "bg-contaminate",
+  diminuendo: "bg-diminuendo",
+  spark: "bg-spark",
+  flow: "bg-flow",
+  whimsy: "bg-whimsy",
+  cask: "bg-cask",
+  onslaught: "bg-onslaught",
+  legends: "bg-legends"
 }
 
 export const twBorder: Record<string, string> = {

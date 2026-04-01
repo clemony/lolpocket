@@ -30,7 +30,7 @@ const set = computed(() => {
               <img
                 class="inset-shadow-rounded shadow-rounded aspect-square size-full bg-p3 shadow-black inset-shadow-black"
                 :alt="itemNameById(item)"
-                :src="`/img/items/${item}.webp`" />
+                :src="`/img/item/${item}.webp`" />
             </div>
           </div>
         </template>

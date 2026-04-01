@@ -9,13 +9,9 @@ const { class: className, stats } = defineProps<{
   <h3
     :class="
       cn('text-start font-bold text-nowrap uppercase ds-2xs', className, {
-        'text-pc/30': stats?.win === 'remake',
+        'text-pc/30': stats?.win === 'remake'
       })
     ">
-    {{
-      stats?.win === "remake" ? "Remake"
-      : stats.win ? "Victory"
-        : "Defeat"
-    }}
+    {{ stats?.win === "remake" ? "Remake" : stats.win ? "Win" : "Loss" }}
   </h3>
 </template>

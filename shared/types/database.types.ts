@@ -16,42 +16,39 @@ export interface Database {
     Tables: {
       account: {
         Row: {
-          icon: string | null
-          level: number | null
-          name: string | null
+          color: string | null
+          created: string | null
+          locale: string | null
           peer_messages: boolean
+          public_pockets: string[] | null
           puuid: string | null
-          region: string | null
           splash: string | null
-          tag: string | null
           title: string | null
           updated: string | null
           username: string | null
           uuid: string
         }
         Insert: {
-          icon?: string | null
-          level?: number | null
-          name?: string | null
+          color?: string | null
+          created?: string | null
+          locale?: string | null
           peer_messages?: boolean
+          public_pockets?: string[] | null
           puuid?: string | null
-          region?: string | null
           splash?: string | null
-          tag?: string | null
           title?: string | null
           updated?: string | null
           username?: string | null
           uuid: string
         }
         Update: {
-          icon?: string | null
-          level?: number | null
-          name?: string | null
+          color?: string | null
+          created?: string | null
+          locale?: string | null
           peer_messages?: boolean
+          public_pockets?: string[] | null
           puuid?: string | null
-          region?: string | null
           splash?: string | null
-          tag?: string | null
           title?: string | null
           updated?: string | null
           username?: string | null
@@ -63,55 +60,87 @@ export interface Database {
             columns: ["uuid"]
             isOneToOne: true
             referencedRelation: "internal_users"
-            referencedColumns: ["internal_id"]
+            referencedColumns: ["uuid"]
+          }
+        ]
+      }
+      comment_votes: {
+        Row: {
+          comment_id: string
+          created_at: string | null
+          uuid: string
+          vote: Database["public"]["Enums"]["vote"] | null
+        }
+        Insert: {
+          comment_id: string
+          created_at?: string | null
+          uuid: string
+          vote?: Database["public"]["Enums"]["vote"] | null
+        }
+        Update: {
+          comment_id?: string
+          created_at?: string | null
+          uuid?: string
+          vote?: Database["public"]["Enums"]["vote"] | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comment_votes_comment_id_fkey"
+            columns: ["comment_id"]
+            isOneToOne: false
+            referencedRelation: "comments"
+            referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "comment_votes_uuid_fkey"
+            columns: ["uuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          }
         ]
       }
       comments: {
         Row: {
-          author_uid: string | null
-          content: Json
+          content: Json | null
           created: string | null
-          downvotes: string[] | null
-          edited: string | null
+          html: string | null
           id: string
           parent_id: string | null
           removed: string | null
+          removed_content: string | null
+          score: number
           thread_id: string | null
-          upvotes: string[] | null
+          updated: string | null
+          uuid: string | null
         }
         Insert: {
-          author_uid?: string | null
-          content: Json
+          content?: Json | null
           created?: string | null
-          downvotes?: string[] | null
-          edited?: string | null
+          html?: string | null
           id?: string
           parent_id?: string | null
           removed?: string | null
+          removed_content?: string | null
+          score?: number
           thread_id?: string | null
-          upvotes?: string[] | null
+          updated?: string | null
+          uuid?: string | null
         }
         Update: {
-          author_uid?: string | null
-          content?: Json
+          content?: Json | null
           created?: string | null
-          downvotes?: string[] | null
-          edited?: string | null
+          html?: string | null
           id?: string
           parent_id?: string | null
           removed?: string | null
+          removed_content?: string | null
+          score?: number
           thread_id?: string | null
-          upvotes?: string[] | null
+          updated?: string | null
+          uuid?: string | null
         }
         Relationships: [
-          {
-            foreignKeyName: "comments_author_uid_fkey"
-            columns: ["author_uid"]
-            isOneToOne: false
-            referencedRelation: "internal_users"
-            referencedColumns: ["internal_id"]
-          },
           {
             foreignKeyName: "comments_parent_id_fkey"
             columns: ["parent_id"]
@@ -120,95 +149,192 @@ export interface Database {
             referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "comments_thread_id_fkey"
-            columns: ["thread_id"]
+            foreignKeyName: "comments_uuid_fkey"
+            columns: ["uuid"]
             isOneToOne: false
-            referencedRelation: "threads"
-            referencedColumns: ["id"]
-          },
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          }
         ]
+      }
+      feed_links: {
+        Row: {
+          author: string | null
+          created_at: string
+          excerpt: string | null
+          fetched_at: string
+          flair: string | null
+          id: string
+          keywords: string[]
+          metadata: Json
+          num_comments: number
+          permalink: string
+          preview_image_url: string | null
+          score: number
+          source: string
+          source_created_at: string
+          source_id: string
+          subreddit: string
+          thumbnail_url: string | null
+          title: string
+          updated_at: string
+          url: string
+        }
+        Insert: {
+          author?: string | null
+          created_at?: string
+          excerpt?: string | null
+          fetched_at?: string
+          flair?: string | null
+          id?: string
+          keywords?: string[]
+          metadata?: Json
+          num_comments?: number
+          permalink: string
+          preview_image_url?: string | null
+          score?: number
+          source: string
+          source_created_at: string
+          source_id: string
+          subreddit: string
+          thumbnail_url?: string | null
+          title: string
+          updated_at?: string
+          url: string
+        }
+        Update: {
+          author?: string | null
+          created_at?: string
+          excerpt?: string | null
+          fetched_at?: string
+          flair?: string | null
+          id?: string
+          keywords?: string[]
+          metadata?: Json
+          num_comments?: number
+          permalink?: string
+          preview_image_url?: string | null
+          score?: number
+          source?: string
+          source_created_at?: string
+          source_id?: string
+          subreddit?: string
+          thumbnail_url?: string | null
+          title?: string
+          updated_at?: string
+          url?: string
+        }
+        Relationships: []
       }
       internal_users: {
         Row: {
           auth_uid: string
-          created_at: string
-          internal_id: string
+          created_at: string | null
           metadata: Json | null
+          uuid: string
         }
         Insert: {
           auth_uid: string
-          created_at?: string
-          internal_id?: string
+          created_at?: string | null
           metadata?: Json | null
+          uuid?: string
         }
         Update: {
           auth_uid?: string
-          created_at?: string
-          internal_id?: string
+          created_at?: string | null
           metadata?: Json | null
+          uuid?: string
         }
         Relationships: []
       }
       pockets: {
         Row: {
+          _champion: string | null
+          _items: string | null
+          _role: string | null
+          _runes: string | null
+          _spells: string | null
           champions: string[] | null
           comments: boolean
           created: string
+          guide: Json | null
           icon: string | null
           items: Json | null
-          key: string | null
+          key: string
           likes: number | null
-          pockets: Json | null
+          name: string | null
+          ouuid: string | null
           public: boolean
           roles: string[] | null
           runes: Json | null
           spells: Json | null
-          thread: string | null
+          tags: string[] | null
           updated: string
           uuid: string
         }
         Insert: {
+          _champion?: string | null
+          _items?: string | null
+          _role?: string | null
+          _runes?: string | null
+          _spells?: string | null
           champions?: string[] | null
           comments?: boolean
           created?: string
+          guide?: Json | null
           icon?: string | null
           items?: Json | null
-          key?: string | null
+          key?: string
           likes?: number | null
-          pockets?: Json | null
+          name?: string | null
+          ouuid?: string | null
           public?: boolean
           roles?: string[] | null
           runes?: Json | null
           spells?: Json | null
-          thread?: string | null
+          tags?: string[] | null
           updated?: string
           uuid: string
         }
         Update: {
+          _champion?: string | null
+          _items?: string | null
+          _role?: string | null
+          _runes?: string | null
+          _spells?: string | null
           champions?: string[] | null
           comments?: boolean
           created?: string
+          guide?: Json | null
           icon?: string | null
           items?: Json | null
-          key?: string | null
+          key?: string
           likes?: number | null
-          pockets?: Json | null
+          name?: string | null
+          ouuid?: string | null
           public?: boolean
           roles?: string[] | null
           runes?: Json | null
           spells?: Json | null
-          thread?: string | null
+          tags?: string[] | null
           updated?: string
           uuid?: string
         }
         Relationships: [
           {
+            foreignKeyName: "pockets_ouuid_fkey"
+            columns: ["ouuid"]
+            isOneToOne: false
+            referencedRelation: "internal_users"
+            referencedColumns: ["uuid"]
+          },
+          {
             foreignKeyName: "pockets_uuid_fkey"
             columns: ["uuid"]
-            isOneToOne: true
+            isOneToOne: false
             referencedRelation: "internal_users"
-            referencedColumns: ["internal_id"]
-          },
+            referencedColumns: ["uuid"]
+          }
         ]
       }
       settings: {
@@ -216,7 +342,7 @@ export interface Database {
           favorite_pockets: string[] | null
           favorite_summoners: string[] | null
           instant_trash: boolean | null
-          language: string | null
+          locale: string | null
           motion: boolean | null
           once: unknown
           pin_sidebar: boolean | null
@@ -233,7 +359,7 @@ export interface Database {
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
           instant_trash?: boolean | null
-          language?: string | null
+          locale?: string | null
           motion?: boolean | null
           once?: unknown
           pin_sidebar?: boolean | null
@@ -250,7 +376,7 @@ export interface Database {
           favorite_pockets?: string[] | null
           favorite_summoners?: string[] | null
           instant_trash?: boolean | null
-          language?: string | null
+          locale?: string | null
           motion?: boolean | null
           once?: unknown
           pin_sidebar?: boolean | null
@@ -269,24 +395,9 @@ export interface Database {
             columns: ["uuid"]
             isOneToOne: true
             referencedRelation: "internal_users"
-            referencedColumns: ["internal_id"]
-          },
+            referencedColumns: ["uuid"]
+          }
         ]
-      }
-      threads: {
-        Row: {
-          created_at: string | null
-          id: string
-        }
-        Insert: {
-          created_at?: string | null
-          id?: string
-        }
-        Update: {
-          created_at?: string | null
-          id?: string
-        }
-        Relationships: []
       }
     }
     Views: {
@@ -294,18 +405,111 @@ export interface Database {
     }
     Functions: {
       get_internal_id: { Args: never; Returns: string }
-      get_user_profile: {
+      get_thread: { Args: { p_thread_id: string }; Returns: Json }
+      "get_thread-old": { Args: { p_thread_id: string }; Returns: Json }
+      get_user_account: {
         Args: { p_uuid?: string }
         Returns: {
           account: Json
+          pockets: Json
           settings: Json
-          user_pockets: Json
         }[]
+      }
+      insert_comment: {
+        Args: {
+          p_comment_id?: string
+          p_content: Json
+          p_html?: string
+          p_parent_id?: string
+          p_thread_id?: string
+        }
+        Returns: Json
+      }
+      remove_comment: {
+        Args: {
+          p_comment_id: string
+          p_content: Json
+          p_html: string
+          p_removed: string
+          p_removed_content: string
+        }
+        Returns: {
+          content: Json | null
+          created: string | null
+          html: string | null
+          id: string
+          parent_id: string | null
+          removed: string | null
+          removed_content: string | null
+          score: number
+          thread_id: string | null
+          updated: string | null
+          uuid: string | null
+        }
+        SetofOptions: {
+          from: "*"
+          to: "comments"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      update_account: {
+        Args: {
+          p_locale: string
+          p_peer_messages: boolean
+          p_public_pockets: boolean
+          p_puuid: string
+          p_splash: string
+          p_username: string
+        }
+        Returns: {
+          color: string | null
+          created: string | null
+          locale: string | null
+          peer_messages: boolean
+          public_pockets: string[] | null
+          puuid: string | null
+          splash: string | null
+          title: string | null
+          updated: string | null
+          username: string | null
+          uuid: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "account"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
+      update_comment: {
+        Args: { p_comment_id: string; p_content: Json; p_html?: string }
+        Returns: {
+          content: Json | null
+          created: string | null
+          html: string | null
+          id: string
+          parent_id: string | null
+          removed: string | null
+          removed_content: string | null
+          score: number
+          thread_id: string | null
+          updated: string | null
+          uuid: string | null
+        }
+        SetofOptions: {
+          from: "*"
+          to: "comments"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
     }
     Enums: {
-      permission: "admin.dashboard" | "summoner.dashboard"
+      permission: "admin" | "mod"
+      removal_type: "mod" | "user"
       user_role: "admin" | "summoner"
+      vote: "-1" | "0" | "1"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -317,7 +521,7 @@ type DatabaseWithoutInternals = Omit<Database, "__InternalSupabase">
 
 type DefaultSchema = DatabaseWithoutInternals[Extract<keyof Database, "public">]
 
-type Tables<
+export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
@@ -326,7 +530,7 @@ type Tables<
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never = never
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -346,7 +550,7 @@ type Tables<
       : never
     : never
 
-type TablesInsert<
+export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
@@ -354,7 +558,7 @@ type TablesInsert<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = never
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -371,7 +575,7 @@ type TablesInsert<
       : never
     : never
 
-type TablesUpdate<
+export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
@@ -379,7 +583,7 @@ type TablesUpdate<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never = never
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -396,7 +600,7 @@ type TablesUpdate<
       : never
     : never
 
-type Enums<
+export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
@@ -404,7 +608,7 @@ type Enums<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never = never
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -413,7 +617,7 @@ type Enums<
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
     : never
 
-type CompositeTypes<
+export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
@@ -421,7 +625,7 @@ type CompositeTypes<
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never = never
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -430,11 +634,13 @@ type CompositeTypes<
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
-const Constants = {
+export const Constants = {
   public: {
     Enums: {
-      permission: ["admin.dashboard", "summoner.dashboard"],
+      permission: ["admin", "mod"],
+      removal_type: ["mod", "user"],
       user_role: ["admin", "summoner"],
-    },
-  },
+      vote: ["-1", "0", "1"]
+    }
+  }
 } as const

@@ -6,6 +6,7 @@ const CDRAGON_ASSET_BASE =
   "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/"
 const CDRAGON_ICON_BASE =
   "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/"
+const CDRAGON_ASSET_PATH_MARKER = "/assets/characters/"
 const SKIN_TYPE_PLACEHOLDER = "<type>"
 const SKIN_ID_DOT_SUFFIX_RE = /(\d+)\..*/
 const SPLASH_FILE_PREFIX_RE = /^[a-z]+_splash_[a-z]+_/
@@ -24,6 +25,10 @@ function skinIdToFolderId(championKey: string, skinId: string): string {
   return normalized.length === 1 && championKey !== "Hwei"
     ? `0${normalized}`
     : normalized
+}
+
+function normalizeSkinId(id: string): string {
+  return id.replace(SKIN_ID_DOT_SUFFIX_RE, "$1")
 }
 
 function getSkinNameMap(championKey: string): Map<string, string> {
@@ -73,7 +78,10 @@ export function getSkinName(
 }
 
 export function skinNameFromUrl(url: string): string | undefined {
-  const path = url.replace(CDRAGON_ASSET_BASE, "")
+  const assetIndex = url.indexOf(CDRAGON_ASSET_PATH_MARKER)
+  if (assetIndex === -1) return undefined
+
+  const path = url.slice(assetIndex + CDRAGON_ASSET_PATH_MARKER.length)
   const parts = path.split("/")
   const championPath = parts[0]
   const file = parts.at(-1)
@@ -82,7 +90,9 @@ export function skinNameFromUrl(url: string): string | undefined {
   const championKey = championPathToKeyMap.get(championPath)
   if (!championKey) return undefined
 
-  const id = file.replace(SPLASH_FILE_PREFIX_RE, "").replace(IMAGE_EXT_RE, "")
+  const id = normalizeSkinId(
+    file.replace(SPLASH_FILE_PREFIX_RE, "").replace(IMAGE_EXT_RE, "")
+  )
   if (!id) return undefined
 
   const skinName = getSkinNameMap(championKey).get(id)

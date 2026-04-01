@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { userMenu } from "~/components/layout/navigation/content/nav-user-menu"
-import { getSummonerIcon } from "~/domain/utils/img"
+import { userMenuItems } from "../../user/ui/userMenuItems"
 const emit = defineEmits(["openSearch", "closeSidebar"])
 
 const { account } = storeToRefs(user())
@@ -213,7 +212,7 @@ const items = [
     <Grow />
     <!-- user -->
     <UDropdownMenu
-      :items="userMenu"
+      :items="userMenuItems"
       size="md"
       :content="{ side: 'top', collisionPadding: 0, sideOffset: 0 }"
       :ui="{
@@ -230,22 +229,7 @@ const items = [
           trailingIcon: 'size-4 opacity-50 group-hover/btn:opacity-100'
         }"
         variant="outline">
-        <UUser
-          :avatar="{
-            src: getSummonerIcon(account?.icon) ?? null,
-            size: '11',
-            chip: {
-              inset: true,
-              size: 'md',
-              color: user().matchStatus ? 'p4' : 'p3',
-
-              position: 'bottom-right'
-            },
-            icon: 'i-plug'
-          }"
-          trailing-icon="up-down"
-          :description="user().matchStatus ? 'In Game' : 'afk'"
-          :name="account?.name ?? account?.username ?? 'Not Connected'" />
+        <MatchStatus variant="user" :summoner="user().account" />
         <div class="flex grow flex-col items-start gap-0">
           <span class="truncate text-md! font-bold">{{}}</span>
           <span

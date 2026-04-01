@@ -41,6 +41,7 @@ const filterItems = computed<DropdownMenuItem & { trailingIcon?: string }[]>(
         value: v,
         onSelect: () => is().clearFilter(k as keyof ItemFilter),
         trailingIcon: "i-x",
+        id: String(k),
         ui
       }))
       .filter(
@@ -49,7 +50,7 @@ const filterItems = computed<DropdownMenuItem & { trailingIcon?: string }[]>(
             is().emptyFilter[i.label as keyof ItemFilter] && i.label !== "stats"
       ),
 
-    is().filters.stats.length
+    is().filters.stats.length > 0
       ? {
           label: "Stats",
           ui: {
@@ -64,13 +65,13 @@ const filterItems = computed<DropdownMenuItem & { trailingIcon?: string }[]>(
     ...Object.values(is().filters.stats).map((v, i) => ({
       label: statIndex[String(v)]?.name,
       value: i,
+      id: String(v),
       onSelect: () => is().filters.stats.splice(i, 1),
       ui,
       trailingIcon: "i-x"
     }))
   ]
 )
-console.log("🥸 - filterItems:", filterItems)
 </script>
 
 <template>
@@ -94,11 +95,13 @@ console.log("🥸 - filterItems:", filterItems)
       :content="{ align: 'end', sideOffset: 4 }"
       :ui="{
         arrow: 'scale-160',
-        content: 'z-30 w-max min-w-40 rounded-xl px-2 py-2.5',
+        content: 'z-30 w-max min-w-40 rounded-xl px-2 pt-2 pb-2.5',
         group: 'space-y-2',
         label: 'text-pc opacity-60'
       }"
-      :items="filterItems.filter((v) => (v as DropdownMenuItem).label)">
+      :items="
+        filterItems.filter((v) => (v as DropdownMenuItem).label !== undefined)
+      ">
       <Tooltip
         :label="!is().filtersEnabled ? 'No filters' : 'Clear by filter'"
         as-child>
@@ -106,7 +109,7 @@ console.log("🥸 - filterItems:", filterItems)
           v-bind="clearProps"
           :label="
             filterItems
-              .filter((i) => (i as DropdownMenuItem)?.type !== 'label')
+              .filter((i) => (i as DropdownMenuItem).id !== undefined)
               .length.toString()
           "
           :ui="{
@@ -122,7 +125,7 @@ console.log("🥸 - filterItems:", filterItems)
           :active-color="clearOpen ? 'p0' : 'neutral'" />
       </Tooltip>
       <template #content-top>
-        <h6 class="mb-1 w-full border-b border-p3 pb-1 text-xs opacity-50">
+        <h6 class="mb-2 w-full border-b border-p3 pb-1 text-xs opacity-50">
           Active filters
         </h6>
       </template>

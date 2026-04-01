@@ -9,12 +9,12 @@ const { ability, class: className } = defineProps<{
   <div
     v-if="
       ability &&
-      (ability.resource ||
-        ability.cooldown?.length ||
-        ability.rechargeRate ||
-        ability.cost?.length ||
-        ability.effectRadius ||
-        ability.targetRange)
+        (ability.resource ||
+          ability.cooldown?.length ||
+          ability.rechargeRate ||
+          ability.cost?.length ||
+          ability.effectRadius ||
+          ability.targetRange)
     "
     :class="cn('', className)">
     <div

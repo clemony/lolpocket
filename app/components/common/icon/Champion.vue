@@ -1,17 +1,27 @@
 <script setup lang="ts">
 import type { AvatarProps } from "@nuxt/ui"
 
-const props = defineProps<
-  AvatarProps & {
-    k?: string
-    id?: number | null
-    class?: HTMLAttributes["class"]
-    map?: number
-    side?: Side
-    disabled?: boolean
-    ui?: AvatarProps["ui"]
+const props = withDefaults(
+  defineProps<
+    AvatarProps & {
+      id?: number | null
+      k?: string
+      class?: HTMLAttributes["class"]
+      loadingIcon?: LoadingStyle
+      map?: number
+      side?: Side
+      disabled?: boolean
+      pin?: boolean
+      ui?: AvatarProps["ui"]
+      effects?: boolean
+    }
+  >(),
+  {
+    effects: true,
+    pin: true,
+    interactive: true
   }
->()
+)
 
 const delegated = reactiveOmit(props, "k", "id")
 
@@ -32,7 +42,7 @@ const champName = computed(() =>
       root: cn('hover-3d', props.ui?.root, props?.class)
     }"
     :label="champName"
-    :src="champId ? `/img/champions/${champId}.webp` : undefined">
+    :src="champId ? `/img/champion/${champId}.webp` : undefined">
     <div></div>
     <div></div>
     <div></div>

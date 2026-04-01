@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import Path from "~/components/common/icon/Path.vue"
 
-const { player } = defineProps<{
+const { player, classes } = defineProps<{
   player: Player
+  classes?: HTMLAttributes["class"]
 }>()
 </script>
 
@@ -13,7 +14,10 @@ const { player } = defineProps<{
     <!-- keystone -->
     <Keystone
       :id="player?.runes?.keystone"
-      class="transition-scale size-4.5 rounded-full bg-neutral duration-300 *:scale-110 hover:scale-130" />
+      :ui="{
+        root: cn('rounded-full bg-neutral', classes)
+      }"
+      class="size-4.5" />
 
     <!-- path -->
 

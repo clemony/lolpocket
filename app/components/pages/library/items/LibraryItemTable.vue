@@ -8,12 +8,12 @@ const { filtered } = storeToRefs(is())
 const {
   data: itemsLite,
   status,
-  execute,
+  execute
 } = useFetch<Record<number, ItemLite>>(() => `/cdn/items-lite.json`, {
   server: false,
   lazy: true,
   immediate: false,
-  key: () => `items-lite`,
+  key: () => `items-lite`
 })
 
 const data = computed<ItemLite[]>(() =>
@@ -34,24 +34,24 @@ const columns: TableColumn<ItemLite>[] = [
       return h("div", { class: "flex items-center gap-3" }, [
         h(UUser, {
           avatar: {
-            src: `/img/items/${row.original.id}.webp`,
+            src: `/img/item/${row.original.id}.webp`,
             icon: "i-lp-regen",
             ui: {
-              icon: "size-4.5",
-            },
+              icon: "size-4.5"
+            }
           },
           name: row.original.name,
-          size: "lg",
-        }),
+          size: "lg"
+        })
       ])
-    },
+    }
   },
   ...Object.values(statIndex)
     .filter((v) => v.group !== "champion")
     .map((v) => ({
       id: v.id,
       accessorFn: (row: ItemLite) => statValue(row, v.id),
-      header: v.key, //h(Tooltip, { icon: `i-stat-${v.id}`, text: v.name }),
+      header: v.key //h(Tooltip, { icon: `i-stat-${v.id}`, text: v.name }),
     })),
 
   /*  {
@@ -83,8 +83,8 @@ const columns: TableColumn<ItemLite>[] = [
   },*/
   {
     accessorKey: "id",
-    header: "ID",
-  },
+    header: "ID"
+  }
 ]
 
 onMounted(() => {
@@ -93,8 +93,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <UButton>TESST</UButton><UButton>TESST</UButton><br />
-  <UTable :virtualize="{ estimateSize: 51 }" :columns :data sticky>
-  </UTable>
-  <UButton>TESST</UButton><UButton>TESST</UButton><br />
+  <UTable
+    :virtualize="{ estimateSize: 51 }"
+    :columns
+    :data
+    sticky
+    :ui="{ th: 'opacity-60', base: 'border-t border-p3' }" />
 </template>

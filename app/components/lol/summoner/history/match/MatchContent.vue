@@ -3,7 +3,7 @@ import { useTimeline } from "~/domain/match/useTimeline"
 import LazyMatchScoreboard from "./scoreboard/MatchScoreboard.vue"
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 const { match, player } = defineProps<{
   player: Player
@@ -13,22 +13,22 @@ const { match, player } = defineProps<{
 const tabs = [
   {
     label: "Scoreboard",
-    component: LazyMatchScoreboard,
+    component: LazyMatchScoreboard
   },
   {
     label: "Statistics",
     component: defineAsyncComponent(
       () =>
-        import("~/components/lol/summoner/history/match/stats/MatchDataTable.vue"),
-    ),
+        import("~/components/lol/summoner/history/match/stats/MatchDataTable.vue")
+    )
   },
   {
     label: "Build",
     component: defineAsyncComponent(
       () =>
-        import("~/components/lol/summoner/history/match/timeline/MatchBuild.vue"),
-    ),
-  },
+        import("~/components/lol/summoner/history/match/timeline/MatchBuild.vue")
+    )
+  }
 ]
 
 const modelValue = ref<string>("Scoreboard")
@@ -38,7 +38,7 @@ const { getTimeline } = useTimeline()
 const timeline: PlayerTimeline | null = await getTimeline(
   match.matchId,
   match.regionId,
-  player.puuid,
+  player.puuid
 )
 </script>
 
@@ -61,11 +61,11 @@ const timeline: PlayerTimeline | null = await getTimeline(
     <UTabs
       v-model:model-value="modelValue"
       value-key="label"
-      size="md"
+      size="sm"
       :ui="{
-        list: 'h-12! shrink-0 border-2 border-p0 bg-p0/80 shadow-none ring-0 inset-shadow-none backdrop-blur-sm',
-        root: 'mt-2 h-12! shrink-0! inset-shadow-none',
-        indicator: 'border-1 border-p0 bg-p0/20 ring ring-p0',
+        list: 'h-10! shrink-0 border-2 border-p0 bg-p0/80 shadow-none ring-0 inset-shadow-none backdrop-blur-sm',
+        root: 'mt-2 h-10! shrink-0! px-3 inset-shadow-none',
+        indicator: 'border-1 border-p0 bg-p0/20 ring ring-p0'
       }"
       :items="tabs">
       <template #content="{ item }">
@@ -76,7 +76,7 @@ const timeline: PlayerTimeline | null = await getTimeline(
           :class="
             cn(
               'relative size-full h-196 max-h-196 min-h-full cursor-default overflow-x-hidden overflow-y-auto overscroll-auto rounded-tr-xl rounded-b-xl border-t-0!',
-              { 'rounded-tl-none': item.label === 'Scoreboard' },
+              { 'rounded-tl-none': item.label === 'Scoreboard' }
             )
           ">
           <component

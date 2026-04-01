@@ -1,10 +1,10 @@
 export function fetchNewerMatches(
   puuid: string,
-  cursor: number,
+  since: number,
   region: string,
 ) {
   return riotFetch<MatchReturn>(`v5/match/newer`, {
-    query: { puuid, cursor, region },
+    query: { puuid, since, region },
   })
 }
 

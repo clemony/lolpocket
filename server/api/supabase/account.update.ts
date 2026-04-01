@@ -12,6 +12,7 @@ export default defineEventHandler(
       })
     }
     const update = {
+      p_color: body.color,
       p_puuid: body.puuid,
       p_title: body.title,
       p_username: body.username,

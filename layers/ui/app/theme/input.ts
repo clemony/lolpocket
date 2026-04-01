@@ -54,13 +54,21 @@ export const inputTheme = defineUiTheme({
       true: ""
     },
     size: {
-      lg: {
-        base: "h-12 gap-2 px-3 py-0 text-sm",
-        leading: "ps-3",
-        leadingAvatarSize: "2xs",
+      xs: {
+        base: "input-xs h-7 gap-1 px-2 py-0 text-xs",
+        leading: "ps-2",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-4",
+        trailing: "pe-2",
+        trailingIcon: "size-4"
+      },
+      sm: {
+        base: "input-sm h-8 gap-1.5 px-2.5 py-0 text-xs",
+        leading: "ps-2.5",
+        leadingAvatarSize: "3xs",
         leadingIcon: "size-4.5",
-        trailing: "pe-3",
-        trailingIcon: "size-5"
+        trailing: "pe-2.5",
+        trailingIcon: "size-4"
       },
       md: {
         root: "h-10",
@@ -71,13 +79,13 @@ export const inputTheme = defineUiTheme({
         trailing: "pe-2.5",
         trailingIcon: "size-5"
       },
-      sm: {
-        base: "input-sm h-8 gap-1.5 px-2.5 py-0 text-xs",
-        leading: "ps-2.5",
-        leadingAvatarSize: "3xs",
+      lg: {
+        base: "h-12 gap-2 px-3 py-0 text-sm",
+        leading: "ps-3",
+        leadingAvatarSize: "2xs",
         leadingIcon: "size-4.5",
-        trailing: "pe-2.5",
-        trailingIcon: "size-4"
+        trailing: "pe-3",
+        trailingIcon: "size-5"
       },
       xl: {
         base: "input-xl h-14 gap-2 px-3 py-0 text-base",
@@ -86,14 +94,6 @@ export const inputTheme = defineUiTheme({
         leadingIcon: "size-4.5",
         trailing: "pe-3",
         trailingIcon: "size-6"
-      },
-      xs: {
-        base: "input-xs h-7 gap-1 px-2 py-0 text-xs",
-        leading: "ps-2",
-        leadingAvatarSize: "3xs",
-        leadingIcon: "size-4",
-        trailing: "pe-2",
-        trailingIcon: "size-4"
       }
     },
     trailing: {

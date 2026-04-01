@@ -1,20 +1,20 @@
 <script lang="ts" setup>
 const patchModel = shallowRef<number | undefined>(undefined)
 const store = matchFilter()
-
+const patch = /(\d\d?\.\d\d?)\..+/
 const p = computed(() => {
   return new Set(
     store.filteredMatches.map((m) =>
-      m.gamePatch.toString().replace(/(\d\d?\.\d\d?)\..+/, "$1")
+      m.gamePatch.toString().replace(patch, "$1")
     )
   ).values()
 })
 </script>
 
 <template>
-  class="w-full" placement="bottom-start" trigger="click focusin" :offset="[0,
+  <!--   class="w-full" placement="bottom-start" trigger="click focusin" :offset="[0,
   -30]" :delay="0" :duration="100" theme="base clean popover"
-  :interactive="true" :arrow="false" >
+  :interactive="true" :arrow="false" > -->
   <UButton
     class="w-full justify-between bg-p0! text-sm hover:bg-p0! hover:ring hover:ring-pc/60 hover:fx-0"
     variant="outline">

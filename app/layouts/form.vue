@@ -2,7 +2,7 @@
 const {
   class: className,
   title,
-  description,
+  description
 } = defineProps<{
   class?: HTMLAttributes["class"]
   title?: string
@@ -14,7 +14,7 @@ const error = shallowRef<string>("")
 
 <template>
   <UMain class="relative my-auto grid size-full place-items-center bg-p1">
-    <div class="absolute top-3 right-3">
+    <div class="absolute top-4 right-4">
       <slot name="close" />
     </div>
     <div
@@ -28,10 +28,10 @@ const error = shallowRef<string>("")
               'absolute w-full py-3 transition-[opacity,transform] transition-discrete duration-400',
               {
                 'translate-y-0 opacity-100': error,
-                ' -translate-y-1/2 opacity-0': !error,
-              },
+                ' -translate-y-1/2 opacity-0': !error
+              }
             ),
-            close: '-top-2.5 -right-3',
+            close: '-top-2.5 -right-3'
           }"
           :description="error"
           icon="i-ri-information-2-fill"
@@ -58,7 +58,7 @@ const error = shallowRef<string>("")
           root: 'w-full! px-18 py-16',
           header: 'mt-2 mb-12 text-center',
           footer:
-            'text-center text-xs text-balance text-pc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-pc',
+            'text-center text-xs text-balance text-pc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-pc'
         }">
         <template #header>
           <h2 class="text-2xl">

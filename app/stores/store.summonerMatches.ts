@@ -57,7 +57,7 @@ export const sMatches = defineStore("summonerMatches", () => {
 
     loading.value = true
     try {
-      const res = await fetchNewerMatches(puuid, cursor.value, regionId)
+      const res = await fetchNewerMatches(puuid, newestTs.value ?? 0, regionId)
       if (res.matches.length) {
         await putMatchData(res.matches)
         matches.value.unshift(...res.matches)
@@ -65,11 +65,6 @@ export const sMatches = defineStore("summonerMatches", () => {
         loadMessage.value = `Loaded ${res.matches.length} new matches!`
       } else {
         loadMessage.value = "No new matches found!"
-      }
-
-      if (res.cursor != null) {
-        cursor.value = res.cursor
-        await setCursor(puuid, cursor.value)
       }
 
       sSummoner().patchSummoner(puuid, { lastMatchUpdate: Date.now() })

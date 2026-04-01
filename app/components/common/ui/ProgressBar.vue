@@ -15,7 +15,7 @@ const color = computed(() =>
     :size="props.size"
     :ui="{
       indicator: 'shadow-morphic-bar',
-      base: 'rounded-full border-l-1 border-l-p0 bg-transparent shadow-morphic-border ring ring-p4',
+      base: 'shadow-morphic-border rounded-full border-l-1 border-l-p0 bg-transparent ring ring-p4',
       root: 'shrink-0',
     }" />
 </template>

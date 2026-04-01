@@ -83,6 +83,6 @@ const src = computed(() =>
     :image="src"
     :description="
       decode(data.metadata.description) ??
-      'It seems we lost the wiki link. We\'ll attempt to turn the router off and on.'
+        'It seems we lost the wiki link. We\'ll attempt to turn the router off and on.'
     " />
 </template>

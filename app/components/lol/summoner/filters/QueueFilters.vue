@@ -7,41 +7,40 @@ const { filter } = storeToRefs(store)
 
 const queueModel = computed({
   get: () => filter?.value.queue,
-  set: (val) => store.setFilter("queue", val),
+  set: (val) => store.setFilter("queue", val)
 })
 const queues = [
   {
     label: "All",
-    value: 0,
+    value: 0
   },
   {
     label: "Solo",
-    value: 420,
+    value: 420
   },
   {
     label: "Flex",
-    value: 440,
+    value: 440
   },
   {
     label: "Normal",
-    value: 400,
-  },
+    value: 400
+  }
 ]
 </script>
 
 <template>
-  <!--   <UTabs
+  <UTabs
     v-model:model-value="queueModel"
-    size="lg"
+    size="md"
     :ui="{
-      trigger: 'text-pc! opacity-100',
+      trigger: 'text-pc! opacity-100'
     }"
-    variant="neumorphic"
     class="w-full"
     :default-value="0"
-    :items="queues" /> -->
+    :items="queues" />
 
-  <URadioGroup
+  <!--   <URadioGroup
     v-model:model-value="queueModel"
     :ui="{
       root: String(className),
@@ -61,5 +60,5 @@ const queues = [
     indicator="hidden"
     class="w-full"
     :default-value="0"
-    :items="queues" />
+  :items="queues" />-->
 </template>

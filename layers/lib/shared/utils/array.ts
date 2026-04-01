@@ -43,7 +43,7 @@ export function sortMapBy<K, T, P extends keyof T>(
 ): T[] {
   const dir = direction === "asc" ? 1 : -1
 
-  // eslint-disable-next-line e18e/prefer-spread-syntax
+   
   return Array.from(map.values()).sort((a, b) => {
     const av = a[prop]
     const bv = b[prop]

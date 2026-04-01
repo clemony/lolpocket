@@ -8,7 +8,7 @@ const { class: className, player } = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('flex items-center gap-2', className)">
+  <div :class="cn('flex h-5 items-center gap-2', className)">
     <LazyUBadge
       v-if="
         player.stats.kills + player.stats.assists / player.stats.deaths ===
@@ -22,13 +22,15 @@ const { class: className, player } = defineProps<{
       class="" />
 
     <Tooltip v-else label="KDA" class="badge-tooltip-hover">
-      <span class="text-2xs! font-semibold"
+      <span class="text-2xs! leading-none font-semibold"
         >{{ player.stats.kda }}&VeryThinSpace;:&VeryThinSpace;1</span
       >
     </Tooltip>
 
     <Tooltip arrow label="Kill participation" class="badge-tooltip-hover">
-      <span class="text-2xs! font-semibold">{{ player.stats.kp }}%</span>
+      <span class="text-2xs! leading-none font-semibold"
+        >{{ player.stats.kp }}%</span
+      >
     </Tooltip>
   </div>
 </template>

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
+import { modalXlClass } from "~~/layers/ui/app/variants/modal"
+
 const emit = defineEmits<{ close: [boolean] }>()
 </script>
 
 <template>
-  <LazyUModal
+  <UModal
     :close="{ onClick: () => emit('close', false) }"
     title="Log in"
     fullscreen
-    :ui="{
-      content: '',
-    }"
+    :ui="modalXlClass"
     description="Use a connected account or log in with email and password.">
     <template #content>
       <NuxtLayout
@@ -26,5 +26,5 @@ const emit = defineEmits<{ close: [boolean] }>()
         <LazyAuthForm type="logIn" />
       </NuxtLayout>
     </template>
-  </LazyUModal>
+  </UModal>
 </template>

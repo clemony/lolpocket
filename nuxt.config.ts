@@ -284,6 +284,10 @@ export default defineNuxtConfig({
     }
   },
 
+  motionV: {
+    directives: true
+  },
+
   compatibilityDate: "2025-07-18",
   devServer: {
     host: "localhost",

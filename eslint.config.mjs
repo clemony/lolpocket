@@ -34,6 +34,49 @@ const customGroups = [
   },
 ]
 
+const semanticSizeGroups = [
+  {
+    groupName: "size-custom",
+    elementNamePattern: "^(?:custom|default)$",
+  },
+  {
+    groupName: "size-prefixed-xs",
+    elementNamePattern: "^\\d+xs$",
+    order: "desc",
+    type: "natural",
+  },
+  {
+    groupName: "size-xs",
+    elementNamePattern: "^xs$",
+  },
+  {
+    groupName: "size-sm",
+    elementNamePattern: "^sm$",
+  },
+  {
+    groupName: "size-md",
+    elementNamePattern: "^md$",
+  },
+  {
+    groupName: "size-lg",
+    elementNamePattern: "^lg$",
+  },
+  {
+    groupName: "size-xl",
+    elementNamePattern: "^xl$",
+  },
+  {
+    groupName: "size-prefixed-xl",
+    elementNamePattern: "^\\d+xl$",
+    order: "asc",
+    type: "natural",
+  },
+  {
+    groupName: "size-header",
+    elementNamePattern: "^header$",
+  },
+]
+
 export default antfu(
   {
     stylistic: false,
@@ -218,6 +261,40 @@ export default antfu(
       "better-tailwindcss/no-duplicate-classes": "warn",
     },
     files: ["layers/ui/app/theme/**/*.ts"],
+  },
+  {
+    files: ["layers/ui/app/theme/**/*.ts"],
+    rules: {
+      "perfectionist/sort-objects": [
+        "warn",
+        {
+          useConfigurationIf: {
+            allNamesMatchPattern:
+              "^(?:(?:\\d+)?xs|sm|md|lg|(?:\\d+)?xl|custom|default|header)$",
+            declarationMatchesPattern: "^size$",
+            objectType: "non-destructured",
+          },
+          customGroups: semanticSizeGroups,
+          order: "asc",
+          partitionByNewLine: false,
+          type: "natural",
+          fallbackSort: { order: "asc", type: "natural" },
+          groups: [
+            "size-custom",
+            { group: "size-prefixed-xs", order: "desc", type: "natural" },
+            "size-xs",
+            "size-sm",
+            "size-md",
+            "size-lg",
+            "size-xl",
+            { group: "size-prefixed-xl", order: "asc", type: "natural" },
+            "size-header",
+            "unknown",
+          ],
+        },
+        { type: "unsorted" },
+      ],
+    },
   },
 )
   .override(

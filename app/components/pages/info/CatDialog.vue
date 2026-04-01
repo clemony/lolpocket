@@ -1,21 +1,23 @@
 <script lang="ts" setup>
+import { modalXlClass } from "~~/layers/ui/app/variants/modal"
+
 const clem = [
   {
     class: "object-cover",
-    url: "/img/cat/clem1.webp",
+    url: "/img/cat/clem1.webp"
   },
   {
     class: "object-contain",
-    url: "/img/cat/clem0.webp",
+    url: "/img/cat/clem0.webp"
   },
   {
     class: "object-cover",
-    url: "/img/cat/clem2.webp",
+    url: "/img/cat/clem2.webp"
   },
   {
     class: "object-cover",
-    url: "/img/cat/clem3.webp",
-  },
+    url: "/img/cat/clem3.webp"
+  }
 ]
 
 const showClem = ref("/img/cat/clem1.webp")
@@ -25,7 +27,10 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
 </script>
 
 <template>
-  <UModal title="Clem" description="Clementine Breakfast Cat">
+  <UModal
+    :ui="modalXlClass"
+    title="Clem"
+    description="Clementine Breakfast Cat">
     <UButton
       class="flex cursor-pointer underline-offset-2 hover:bg-p2/35 hover:underline">
       <slot />

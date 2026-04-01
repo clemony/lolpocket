@@ -57,7 +57,7 @@ let nextX = 0
 let nextY = 0
 let currentX = 0
 let currentY = 0
-const sideSwitchHysteresis = 20
+const sideSwitchHysteresis = 30
 
 function resolveElement(target: unknown): Element | null {
   if (target instanceof Element) return target
@@ -103,12 +103,6 @@ function getOppositeSide(side: Side): Side {
   }
 }
 
-function getAxisSides(side: Side): [Side, Side] {
-  if (side === "top" || side === "bottom") return ["top", "bottom"]
-
-  return ["left", "right"]
-}
-
 function playFlipSlide(side: Side) {
   if (flipRafId) cancelAnimationFrame(flipRafId)
 
@@ -143,13 +137,9 @@ function setAnchorFromPointer(x: number, y: number) {
     bottom: rect.bottom - clampedY,
     left: clampedX - rect.left
   }
-  const baseSide = props?.side
-  const candidateCursorSides = baseSide
-    ? getAxisSides(baseSide)
-    : (["top", "right", "bottom", "left"] as Side[])
-  const nextCursorSide = candidateCursorSides.sort(
-    (left, right) => distances[left] - distances[right]
-  )[0] ?? "bottom"
+  const nextCursorSide = (Object.entries(distances).sort(
+    (a, b) => a[1] - b[1]
+  )[0]?.[0] ?? "bottom") as Side
   const currentCursorSide = getOppositeSide(placement.value.side)
   const cursorSide =
     distances[currentCursorSide] <=
@@ -259,6 +249,15 @@ function closePinned() {
   emit("unpinned")
 }
 
+function onTooltipOpenChange(value: boolean) {
+  open.value = value
+
+  if (!value && pinned.value) {
+    pinned.value = false
+    emit("unpinned")
+  }
+}
+
 function onDocumentPointerDown(ev: PointerEvent) {
   if (!pinned.value) return
 
@@ -341,6 +340,7 @@ defineExpose({ pinned, isOpen: open })
     :disabled
     :arrow="arrow"
     :open="disabled ? false : open"
+    @update:open="onTooltipOpenChange"
     :delay-duration="700"
     :disable-hoverable-content="!interactive"
     :reference="reference"

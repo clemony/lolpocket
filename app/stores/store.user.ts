@@ -8,8 +8,6 @@ export const user = defineStore(
     const account = ref<AccountData>()
     const settings = ref<Settings>()
     const inbox = ref<Inbox>()
-    const matchStatus = shallowRef<boolean>(true)
-    function refreshMatchStatus() {}
 
     const { cache } = storeToRefs(sSummoner())
 
@@ -30,6 +28,15 @@ export const user = defineStore(
       }
     )
 
+    const hotkeys = {
+      search: ["meta", "k"],
+      subSearch: ["meta", "shift", "k"],
+      logIn: ["shift", "meta", "s"],
+      logOut: ["shift", "meta", "q"],
+      open: ["meta", "o"],
+      close: ["meta", "x"]
+    }
+
     function clearAccount() {
       account.value = getEmptyAccount() as unknown as AccountData
     }
@@ -46,9 +53,7 @@ export const user = defineStore(
       inbox,
       sb,
       user,
-
-      matchStatus,
-      refreshMatchStatus
+      hotkeys
     }
   },
   {

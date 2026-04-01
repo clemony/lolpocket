@@ -5,7 +5,7 @@ const { summoner } = defineProps<{
 </script>
 
 <template>
-  <UModal
+  <Modal
     v-model:open="session().blockDialog"
     :title="`Block ${summoner.name}?`">
     <UButton as-child>
@@ -42,5 +42,5 @@ const { summoner } = defineProps<{
         </UButton>
       </div>
     </template>
-  </UModal>
+  </Modal>
 </template>

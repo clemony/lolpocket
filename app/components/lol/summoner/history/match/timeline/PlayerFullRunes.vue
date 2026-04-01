@@ -37,7 +37,7 @@ const { match, player } = defineProps<{
         :id="shard"
         class="absolute shrink-0 justify-self-center"
         size="xs"
-        :src="`/img/shards/${shard}.webp`"
+        :src="`/img/shard/${shard}.webp`"
         alt="icon" />
     </Element>
   </UCard>

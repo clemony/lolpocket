@@ -11,12 +11,12 @@ const { class: className, team } = defineProps<{
   <div
     :class="
       cn(
-        'inset-shadow-xxs mb-1.25 w-full overflow-hidden rounded-xl border border-y-neutral/16! border-r-p3! border-l-neutral/16! bg-linear-to-r to-transparent px-3 shadow-warm-soft',
+        'inset-shadow-xxs w-full overflow-hidden rounded-xl border border-y-neutral/16! border-r-p3! border-l-neutral/16! bg-linear-to-r to-transparent px-3 shadow-warm-soft',
         {
           'from-insp/60': team.teamId === 100,
-          'from-dom/60': team.teamId === 200,
+          'from-dom/60': team.teamId === 200
         },
-        className,
+        className
       )
     ">
     <div
@@ -36,8 +36,8 @@ const { class: className, team } = defineProps<{
               {
                 'dark:text-tint-insp/50 light:text-insp': team.teamId === 100,
                 'dark:text-tint-domination/50 light:text-dom':
-                  team.teamId === 200,
-              },
+                  team.teamId === 200
+              }
             )
           ">
           {{ team.teamId === 100 ? "Blue" : "Red" }}
@@ -53,7 +53,7 @@ const { class: className, team } = defineProps<{
         v-if="team.gold"
         :class="
           cn(
-            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold',
+            'inline-flex items-center gap-1 align-baseline text-sm leading-none font-semibold'
           )
         ">
         <Icon
@@ -61,7 +61,7 @@ const { class: className, team } = defineProps<{
           :class="
             cn('inline size-4 ds-2xs', {
               'text-insp! brightness-80 saturate-125': team.teamId === 100,
-              'text-dom! brightness-90': team.teamId === 200,
+              'text-dom! brightness-90': team.teamId === 200
             })
           " />
         {{ roundDecimal(team.gold / 1000) }}K

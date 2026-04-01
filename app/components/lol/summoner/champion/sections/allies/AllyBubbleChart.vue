@@ -21,7 +21,7 @@ interface BubblePoint {
 const {
   allies,
   height = 560,
-  width = 1080,
+  width = 1080
 } = defineProps<{
   allies: AllyStatDetail[]
   height?: number
@@ -36,24 +36,24 @@ const palette = [
   "#b596d7",
   "#82b9c6",
   "#d3977e",
-  "#a7c48a",
+  "#a7c48a"
 ]
 
 const margin = {
   bottom: 52,
   left: 56,
   right: 24,
-  top: 24,
+  top: 24
 }
 
 const xDomain = {
   max: 100,
-  min: 0,
+  min: 0
 }
 
 const yDomain = {
   max: 100,
-  min: -100,
+  min: -100
 }
 
 const xTicks = [0, 20, 40, 60, 80, 100]
@@ -105,7 +105,11 @@ function nudgeOverlaps(points: BubblePoint[]) {
       const current = points[index]
       if (!current) continue
 
-      for (let otherIndex = index + 1; otherIndex < points.length; otherIndex++) {
+      for (
+        let otherIndex = index + 1;
+        otherIndex < points.length;
+        otherIndex++
+      ) {
         const other = points[otherIndex]
         if (!other) continue
 
@@ -158,12 +162,12 @@ const chartPoints = computed<BubblePoint[]>(() => {
         delta: champion.delta,
         games: champion.games,
         id: `${allyPuuid}-${champion.championId}`,
-        imageHref: `/img/champions/circle/${champion.championId}.webp`,
+        imageHref: `/img/champion/circle/${champion.championId}.webp`,
         r: radius,
         stroke: palette[allyIndex % palette.length] ?? palette[0] ?? "#8fa9d8",
         winrate: champion.winrate ?? 0,
         x: scaleX(champion.winrate ?? 0),
-        y: scaleY(champion.delta),
+        y: scaleY(champion.delta)
       }
     })
   )
@@ -179,11 +183,10 @@ const zeroLineY = computed(() => scaleY(0))
 <template>
   <UCard class="w-full overflow-hidden p-0">
     <div class="border-b border-p3/70 px-5 py-4">
-      <h4 class="text-lg font-semibold text-pc">
-        Ally Delta by Winrate
-      </h4>
+      <h4 class="text-lg font-semibold text-pc">Ally Delta by Winrate</h4>
       <p class="mt-1 text-sm text-n5">
-        Bubble size represents games played. Bubbles are nudged to reduce overlap while preserving their chart position.
+        Bubble size represents games played. Bubbles are nudged to reduce
+        overlap while preserving their chart position.
       </p>
     </div>
 
@@ -193,9 +196,7 @@ const zeroLineY = computed(() => scaleY(0))
       No ally champion data available.
     </div>
 
-    <div
-      v-else
-      class="w-full overflow-x-auto px-3 py-4">
+    <div v-else class="w-full overflow-x-auto px-3 py-4">
       <svg
         :viewBox="`0 0 ${width} ${height}`"
         class="h-auto w-full min-w-220"
@@ -254,9 +255,7 @@ const zeroLineY = computed(() => scaleY(0))
         </g>
 
         <g aria-hidden="true">
-          <g
-            v-for="tick in xTicks"
-            :key="`x-tick-${tick}`">
+          <g v-for="tick in xTicks" :key="`x-tick-${tick}`">
             <line
               :x1="scaleX(tick)"
               :x2="scaleX(tick)"
@@ -274,9 +273,7 @@ const zeroLineY = computed(() => scaleY(0))
             </text>
           </g>
 
-          <g
-            v-for="tick in yTicks"
-            :key="`y-tick-${tick}`">
+          <g v-for="tick in yTicks" :key="`y-tick-${tick}`">
             <line
               :x1="yAxisX - 6"
               :x2="yAxisX"
@@ -321,10 +318,7 @@ const zeroLineY = computed(() => scaleY(0))
               v-for="point in chartPoints"
               :id="`ally-bubble-clip-${point.id}`"
               :key="`clip-${point.id}`">
-              <circle
-                :cx="point.x"
-                :cy="point.y"
-                :r="point.r" />
+              <circle :cx="point.x" :cy="point.y" :r="point.r" />
             </clipPath>
           </defs>
 
@@ -333,7 +327,9 @@ const zeroLineY = computed(() => scaleY(0))
             :key="point.id"
             class="transition-transform duration-150 ease-out hover:scale-102">
             <title>
-              {{ `${point.allyName} #${point.allyTag} · ${point.championName} · ${point.games} games · ${point.winrate}% winrate · ${point.delta} delta` }}
+              {{
+                `${point.allyName} #${point.allyTag} · ${point.championName} · ${point.games} games · ${point.winrate}% winrate · ${point.delta} delta`
+              }}
             </title>
 
             <circle

@@ -4,10 +4,10 @@ export const dropdownMenuTheme = defineUiTheme({
   slots: {
     arrow: "fill-p0",
     content: [
-      "z-99 flex min-w-32 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl shadow-lg ring shadow-black/8 drop-shadow-sm drop-shadow-black/6 select-none"
+      "z-[120] flex min-w-32 origin-(--reka-dropdown-menu-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/96 shadow-lg ring shadow-black/8 drop-shadow-none backdrop-blur-sm select-none"
     ],
     group: "isolate p-0.5",
-    item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:inset-px before:z-[-1] before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
+    item: "group relative flex w-full cursor-pointer items-center outline-none select-none before:absolute before:z-[-1] before:hidden before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75",
     itemDescription: "truncate text-p1",
     itemLabel: "truncate font-medium",
     itemLabelExternalIcon: "ml-px inline-block size-2.75 align-[2px] text-pc",
@@ -20,23 +20,24 @@ export const dropdownMenuTheme = defineUiTheme({
       "hidden shrink-0 items-center font-mono text-xs text-pc/50 lg:inline-flex",
     itemTrailingKbdsSize: "",
     itemWrapper: "flex min-w-0 flex-1 flex-col text-start",
-    label: "flex w-full items-center text-xs font-semibold opacity-50",
-    viewport: "flex-1 scroll-py-1 divide-y overflow-y-auto bg-p0"
+    label: "flex w-full items-center text-xs font-semibold",
+    viewport: "flex-1 scroll-py-1 divide-y overflow-y-auto"
   },
   variants: {
     color: {
       neutral: "",
       default: {
         arrow: "fill-p0",
-        content: "ring-p3/60",
-        viewport: "divide-p2 bg-p0",
-        label: "text-n5/80"
+        content: "",
+        item: "open:bg-p2/80 hover:bg-p2 hover:fx-1",
+        viewport: "divide-p2 ring ring-p3/60 ring-offset-1 ring-offset-p0",
+        label: ""
       }
     },
     active: {
       false: {
         item: [
-          "text-pc data-pc:text-pc data-pc:before:bg-p2/50 data-[state=open]:text-pc data-[state=open]:before:bg-p2/50",
+          "data-[state=open]:before:trasnparent text-pc data-pc:text-pc data-pc:before:bg-transparent data-[state=open]:text-pc",
           "transition-colors before:transition-colors"
         ],
         itemLeadingIcon: [
@@ -55,6 +56,35 @@ export const dropdownMenuTheme = defineUiTheme({
       }
     },
     size: {
+      xs: {
+        item: "h-7 gap-1 rounded-md p-1 text-xs",
+        itemLeadingAvatarSize: "2xs",
+        itemLeadingIcon: "size-4",
+        itemTrailingIcon: "size-4",
+        itemTrailingKbds: "gap-0.5",
+        itemTrailingKbdsSize: "sm",
+        label: "gap-1 p-1 text-xs"
+      },
+      sm: {
+        item: "h-8 gap-1.5 rounded-md p-1.5 text-xs",
+        itemLeadingAvatarSize: "2xs",
+        itemLeadingIcon: "size-4",
+        itemTrailingIcon: "size-4",
+        itemTrailingKbds: "gap-0.5",
+        itemTrailingKbdsSize: "sm",
+        label: "gap-1.5 p-1.5 text-xs"
+      },
+      md: {
+        item: "h-10 gap-1.5 rounded-md px-2 text-sm",
+        itemLeadingAvatarSize: "xs",
+        itemLeadingIcon: "size-4 **:stroke-[2.2]",
+        itemTrailingIcon: "size-4",
+        group: "p-1",
+        itemTrailingKbds:
+          "gap-1 *:aspect-square *:size-5 *:opacity-100 *:ring *:ring-p3",
+        itemTrailingKbdsSize: "md",
+        label: "gap-1.5 p-1.5 text-xs"
+      },
       lg: {
         item: "h-12 gap-2 p-2 text-sm",
         itemLeadingAvatarSize: "2xs",
@@ -64,25 +94,6 @@ export const dropdownMenuTheme = defineUiTheme({
         itemTrailingKbdsSize: "md",
         label: "gap-2 p-2 text-sm"
       },
-      md: {
-        item: "h-10 gap-1.75 px-3 text-sm",
-        itemLeadingAvatarSize: "sm",
-        itemLeadingIcon: "size-4.25",
-        itemTrailingIcon: "size-4",
-        itemTrailingKbds:
-          "gap-1 *:aspect-square *:size-5 *:opacity-100 *:ring *:ring-p3",
-        itemTrailingKbdsSize: "md",
-        label: "gap-1.5 p-1.5 text-sm"
-      },
-      sm: {
-        item: "h-8 gap-1.5 p-1.5 text-xs",
-        itemLeadingAvatarSize: "2xs",
-        itemLeadingIcon: "size-4",
-        itemTrailingIcon: "size-4",
-        itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
-        label: "gap-1.5 p-1.5 text-xs"
-      },
       xl: {
         item: "gap-2 p-2 text-pc",
         itemLeadingAvatarSize: "xs",
@@ -91,15 +102,6 @@ export const dropdownMenuTheme = defineUiTheme({
         itemTrailingKbds: "gap-1",
         itemTrailingKbdsSize: "lg",
         label: "gap-2 p-2 text-pc"
-      },
-      xs: {
-        item: "h-7 gap-1 p-1 text-xs",
-        itemLeadingAvatarSize: "2xs",
-        itemLeadingIcon: "size-4",
-        itemTrailingIcon: "size-4",
-        itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
-        label: "gap-1 p-1 text-xs"
       }
     }
   },

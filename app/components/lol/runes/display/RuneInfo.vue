@@ -32,7 +32,7 @@ const rune = computed(() => {
           <div v-if="rune">
             <img
               class="h-5 object-contain"
-              :src="`/img/runes/${rune.path}.webp`" />
+              :src="`/img/rune/${rune.path}.webp`" />
           </div>
         </h2>
       </label>

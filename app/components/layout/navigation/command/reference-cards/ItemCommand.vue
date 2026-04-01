@@ -98,7 +98,7 @@ onMounted(() => {
               <LazyAvatar
                 v-if="idRef"
                 size="12"
-                :src="`/img/items/${idRef}.webp`"
+                :src="`/img/item/${idRef}.webp`"
                 :alt="`${name} Image`" />
               <!-- NAME / LINK -->
 
@@ -169,7 +169,9 @@ onMounted(() => {
             v-html="item?.description" />
           <!-- REQ CHAMP -->
           <div v-if="item?.requiredChampion">
-            <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
+            <i
+              >Unique to <b>{{ item.requiredChampion }}.</b></i
+            >
           </div>
 
           <!-- EFFECTS -->
@@ -214,7 +216,7 @@ onMounted(() => {
               <template v-for="(fromItem, i) in filteredFrom" :key="i">
                 <button @click="updateItem(fromItem.id)">
                   <LazyAvatar
-                    :src="`/img/items/${fromItem.id}.webp`"
+                    :src="`/img/item/${fromItem.id}.webp`"
                     :alt="fromItem.name"
                     size="lg"
                     as="button"
@@ -261,7 +263,7 @@ onMounted(() => {
                   as="button"
                   size="lg"
                   :label="`${buildItem.name} ‑ ${buildItem.gold}g`"
-                  :src="`/img/items/${buildItem.id}.webp`"
+                  :src="`/img/item/${buildItem.id}.webp`"
                   :alt="buildItem.name"
                   :ui="{
                     root: 'hover:ring-1 hover:ring-pc/60 hover:ring-offset-2 hover:ring-offset-p0'
@@ -285,9 +287,7 @@ onMounted(() => {
       title="Item not found.">
       <template #description>
         It seems
-        <ULink class="inline" underline>
-          clem
-        </ULink>
+        <ULink class="inline" underline> clem </ULink>
         may have moved this from it's previous location. Try refreshing to see
         if we've found it.
       </template>

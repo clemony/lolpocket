@@ -128,7 +128,9 @@ const damageType = computed(() =>
     </div>
 
     <div class="flex h-12 w-full items-center justify-between">
-      <p class="opacity-50">Release Date</p>
+      <p class="opacity-50">
+        Release Date
+      </p>
       <p class="font-medium">
         {{ useDateFormat(champion.releaseDate, "MMMM D, YYYY") }}
       </p>

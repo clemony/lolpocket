@@ -15,8 +15,8 @@ const { data: rune, status } = useFetch<Rune>(
     lazy: true,
     immediate: false,
     key: () => `rune-${idRef.value}`,
-    watch: [idRef],
-  },
+    watch: [idRef]
+  }
 )
 </script>
 
@@ -26,7 +26,7 @@ const { data: rune, status } = useFetch<Rune>(
     :class="
       cn(
         'relative flex size-full cursor-default flex-col justify-center pb-3',
-        className,
+        className
       )
     ">
     <div class="flex size-full items-center gap-2 px-3 py-2 **:select-none">
@@ -34,15 +34,15 @@ const { data: rune, status } = useFetch<Rune>(
         v-if="rune"
         :key="rune.name"
         loading-type="spinner"
-        :src="`/img/runes/${rune.id}.webp`"
+        :src="`/img/rune/${rune.id}.webp`"
         :alt="`${rune.name} Image`"
         :class="
           cn(
             'size-12 shrink-0 rounded-full shadow-sm drop-shadow-sm *:scale-110 *:object-contain',
             {
               '[&_img]:size-14 [&_img]:-translate-y-1': rune.tier === 0,
-              '[&_img]:size-12': rune.tier !== 0,
-            },
+              '[&_img]:size-12': rune.tier !== 0
+            }
           )
         " />
 

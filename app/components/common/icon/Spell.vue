@@ -22,7 +22,7 @@ const pinned = shallowRef<boolean>(false)
     interactive
     :side
     arrow
-    :avatar="id ? `/img/spells/${id}.webp` : undefined"
+    :avatar="id ? `/img/spell/${id}.webp` : undefined"
     :label="id ? spellIndex[id]?.name : ''"
     trailing-icon="i-right-click"
     :ui="{
@@ -46,7 +46,7 @@ const pinned = shallowRef<boolean>(false)
       :loading-type
       icon="i-ui-none"
       :alt="spellIndex[id]?.name || 'spell icon'"
-      :src="`/img/spells/${id}.webp`"
+      :src="`/img/spell/${id}.webp`"
       @load="loaded = true" />
     <template v-if="pinned" #content>
       <LazySpellTooltip v-if="id" :id />

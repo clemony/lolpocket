@@ -5,7 +5,7 @@ const { filter } = storeToRefs(store)
 
 const model = computed({
   get: () => filter?.value.champion,
-  set: (val) => store.setFilter("champion", val),
+  set: (val) => store.setFilter("champion", val)
 })
 const championList = computed(() => [...(champions.value?.values?.() ?? [])])
 </script>
@@ -15,19 +15,19 @@ const championList = computed(() => [...(champions.value?.values?.() ?? [])])
     :default-open="true"
     :ui="{
       root: 'relative w-full',
-      content: 'relative w-full overflow-hidden',
+      content: 'relative w-full overflow-hidden open:border-b'
     }">
     <UButton
       trailing-icon="i-up"
       label="Champions"
-      variant="custom"
+      variant="ghost"
+      size="md"
       block
       :ui="{
-        base: 'mb-1 justify-between px-0.5',
-        label:
-          'grow-0 bg-p0 font-semibold! text-n3! drop-shadow-2xs group-hover/btn:text-pc',
+        base: 'justify-between border-0 open:rounded-b-none open:border-b open:border-b-p3/80 open:bg-transparent! open:fx-0!',
+        label: 'grow-0 font-semibold! text-pc/50 group-hover/btn:text-pc',
         trailingIcon:
-          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc',
+          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc'
       }" />
 
     <template #content>
@@ -35,7 +35,7 @@ const championList = computed(() => [...(champions.value?.values?.() ?? [])])
         <ListboxContent
           :class="
             cn(
-              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-sm inset-shadow-black/9',
+              'i9 z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl px-1.5 py-3'
             )
           ">
           <template v-if="!sMatches().loading && sMatches.length">
@@ -50,43 +50,50 @@ const championList = computed(() => [...(champions.value?.values?.() ?? [])])
                 :active="item.championId === model"
                 :ui="{
                   base: cn(
-                    'w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
-                  ),
+                    'grid! w-full max-w-full shrink-0 grid-flow-col grid-cols-[30px_0.8fr_1fr_0.6fr]! justify-start gap-3 overflow-hidden rounded-xl px-3'
+                  )
                 }"
                 size="xl">
-                <UUser
-                  size="lg"
-                  :name="item.championName"
-                  :description="item.games ? `${item.kda} kda` : ''"
+                <UAvatar
+                  size="xl"
+                  :src="`/img/champion/${item.championId}.webp`"
+                  icon="i-lol-champ"
                   :ui="{
-                    root: 'grow',
-                    wrapper: 'items-center text-start',
-                  }"
-                  :avatar="{
-                    src: `/img/champions/${item.championId}.webp`,
-                    icon: 'lol:champ',
-                    size: 'xl',
-                    class: cn(
-                      'shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 on:duration-800',
+                    root: 'col-start-1',
+                    image: cn(
+                      'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
                       model && item.championId !== model
                         ? 'grayscale opacity-90'
-                        : '',
-                    ),
+                        : ''
+                    )
                   }" />
+                <div class="grid justify-start text-start">
+                  <span class="font-semibold text-pc">
+                    {{ item.championName }}
+                  </span>
+                  <span class="text-xs! text-n5">
+                    {{ item.kp?.average ?? 0 }}% kp
+                  </span>
+                </div>
+
+                <div class="grid justify-start text-start">
+                  <span class="font-semibold"> {{ item.kda }} kda </span>
+                  <span class="text-xs! text-n5">
+                    {{ item.kills?.average ?? 0 }} /
+                    {{ item.deaths?.average ?? 0 }} /
+                    {{ item.assists?.average ?? 0 }}
+                  </span>
+                </div>
 
                 <template v-if="item.games">
                   <div
-                    class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
-                    <span> {{ item.win }} win </span>
-                    <span> {{ item.loss }} loss </span>
-                  </div>
-                </template>
-                <template v-if="item.games" #trailing>
-                  <div class="relative grid size-12 place-items-center">
-                    <ChampWinrate
-                      :champion="item"
-                      :size="10"
-                      class="absolute drop-shadow-xs" />
+                    class="grid justify-end justify-self-end text-end text-xs!">
+                    <span class="font-bold">
+                      {{ roundDecimalToPercent(item.win, item.games) }}%
+                    </span>
+                    <span class="text-xs! text-n5">
+                      {{ item.games }} games
+                    </span>
                   </div>
                 </template>
               </UButton>

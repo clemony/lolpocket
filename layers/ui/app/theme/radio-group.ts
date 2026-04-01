@@ -39,7 +39,7 @@ export const radioGroupTheme = defineUiTheme({
       soft: {
         root: "items-center",
         fieldset: "items-center gap-4",
-        item: "hover:inset-shadow-morphic has-data-[state=checked]:shadow-morphic flex items-center justify-center rounded-lg border border-transparent has-data-[state=checked]:pointer-events-none",
+        item: "flex items-center justify-center rounded-lg border border-transparent hover:inset-shadow-morphic has-data-[state=checked]:pointer-events-none has-data-[state=checked]:shadow-morphic",
       },
       table: {
         item: "border border-p3/80",

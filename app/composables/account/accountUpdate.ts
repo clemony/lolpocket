@@ -3,7 +3,12 @@ import type { AccountData } from "#shared/types"
 import { getEmptyAccount } from "#shared/schema"
 import { sendErrorToast } from "~/utils/ui/toasts"
 
-export async function accountUpdate(account: Partial<AccountData>) {
+export async function accountUpdate(
+  account: Partial<AccountData>,
+  options: {
+    silent?: boolean
+  } = {}
+) {
   const data = await $fetch("/api/supabase/update/account", {
     body: account,
     headers: useRequestHeaders(["cookie"]),
@@ -21,13 +26,15 @@ export async function accountUpdate(account: Partial<AccountData>) {
       data as AccountData
     )
     user().account = next
-    toast.add({
-      color: "neutral",
-      title: "Welcome back!",
-      description: `Great to see you, ${
-        user().account?.name ?? user().account?.username ?? "Summoner"
-      }!`,
-      icon: "tick"
-    })
+    if (!options.silent) {
+      toast.add({
+        color: "neutral",
+        title: "Welcome back!",
+        description: `Great to see you, ${
+          user().account?.name ?? user().account?.username ?? "Summoner"
+        }!`,
+        icon: "tick"
+      })
+    }
   }
 }

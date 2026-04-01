@@ -13,7 +13,7 @@ const props = defineProps<{
       <img
         class="size-full"
         :alt="props.params.value.name"
-        :src="`/img/items/${props.params.value.id}.webp`" />
+        :src="`/img/item/${props.params.value.id}.webp`" />
     </div>
   </Tooltip>
 </template>

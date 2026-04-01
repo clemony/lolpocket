@@ -4,7 +4,7 @@
         background: modelValue === set.primary.path && path === set.primary.path ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : modelValue === set.secondary.path && path === set.secondary.path ? `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))` : '' }" */
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const { class: className, value } = defineProps<{
@@ -23,7 +23,7 @@ const emit = defineEmits(["update:path"])
     <div class="relative grid size-full place-items-center">
       <img
         class="absolute z-10 h-9 w-auto shrink-0 brightness-90 grayscale ds-2xs transition-all duration-300 group-data-[state=active]:brightness-100 group-data-[state=active]:grayscale-0"
-        :src="`/img/paths/${value}.webp`"
+        :src="`/img/path/${value}.webp`"
         :alt="`${value} icon`" />
     </div>
 

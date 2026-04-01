@@ -8,7 +8,7 @@ const {
   ui,
   thickness = 3,
   color,
-  size = 32,
+  size = 32
 } = defineProps<{
   champion?: ChampionStats
   ally?: AllyStatDetail
@@ -29,7 +29,7 @@ const obj = computed(() => {
       win: 0,
       loss: 0,
       wr: 0,
-      games: 0,
+      games: 0
     }
   )
 })
@@ -49,12 +49,12 @@ const sizing = `calc(var(--spacing) * ${size})`
 </script>
 
 <template>
-  <div :class="cn('relative aspect-square rounded-full bg-p0', ui?.root)">
+  <div :class="cn('relative aspect-square rounded-full', ui?.root)">
     <Icon
       name="lucide:circle"
       :style="{
         width: sizing,
-        height: sizing,
+        height: sizing
       }"
       :class="cn('absolute scale-107 text-p3 **:stroke-[2.4]')" />
     <div
@@ -67,7 +67,7 @@ const sizing = `calc(var(--spacing) * ${size})`
           ? `var(--color-${color})`
           : wr
             ? `var(--color-${winrateColor(wr)})`
-            : 'var(--color-p3)',
+            : 'var(--color-p3)'
       }"
       :aria-valuenow="wr || 0"
       role="progressbar">
@@ -76,9 +76,9 @@ const sizing = `calc(var(--spacing) * ${size})`
           cn(
             'text-3xs font-medium text-pc ds-2xs',
             {
-              'opacity-0': hideZero && (!wr || wr === 0),
+              'opacity-0': hideZero && (!wr || wr === 0)
             },
-            ui?.label,
+            ui?.label
           )
         ">
         {{ wr || 0 }}

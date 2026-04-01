@@ -76,10 +76,9 @@ export const pageCommands = (
 
     return {
       id: record.path,
-      label:
-        record.meta?.title === "Nexus"
+      label: /*  record.meta?.title === "Nexus"
           ? "Nexus Dashboard"
-          : String(record.meta?.title || record.name),
+          :  */ String(record.meta?.title || record.name),
       slot:
         record.meta?.title === "Nexus"
           ? "link"
@@ -131,7 +130,7 @@ export function buildCommandGroups(
       label: "",
       description: "",
       items: [
-        {
+        /*         {
           label: "Nexus",
           value: "pages-label",
           trailingIcon: route.path === "/nexus" ? "i-tick" : "i-link",
@@ -148,12 +147,9 @@ export function buildCommandGroups(
               "top-2.5 right-2 size-4.5! absolute opacity-40 **:stroke-[2.3]!"
           },
           suffix: "Home base for League news, pockets, personal data, and more."
-        },
-        ...pageItems?.filter(
-          (r) =>
-            !["/docs", "/settings", "/library", "/nexus"].includes(
-              String(r.value)
-            )
+        }, */
+        ...pageItems?.filter((r) =>
+          ["/tools", "/backpack", "/nexus"].includes(String(r.value))
         )
       ]
     },

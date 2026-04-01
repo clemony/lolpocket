@@ -99,7 +99,7 @@ const options = {
 const range = computed(() => {
   const spans = timeline.value?.map((p) => p.span) ?? []
   if (!spans.length) return ""
-  return `Weeks ${spans[0]} - ${spans[spans.length - 1]}`
+  return `Weeks ${spans[0]} - ${spans.at(-1)}`
 })
 </script>
 

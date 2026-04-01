@@ -10,27 +10,45 @@ const { filter } = storeToRefs(store)
 
 const model = computed({
   get: () => filter?.value.ally,
-  set: (val) => store.setFilter("ally", val),
+  set: (val) => store.setFilter("ally", val)
 })
 const { allies } = storeToRefs(sData())
 const alliesList = computed(() =>
-  (allies.value ?? []).sort((a, b) => b.games - a.games),
+  (allies.value ?? [])
+    .sort((a, b) => b.games - a.games)
+    .map((a) => {
+      const n = sortRecordBy(a.champions, "synergy", "desc")[0]?.synergy
+      const v = Object.values(a.champions).filter((v) => v.synergy === n)
+      const bestPair = v.filter(
+        (x) => x.games === v.sort((a, b) => b.games - a.games)[0]?.games
+      )
+
+      return {
+        ...a,
+        bestPair
+      }
+    })
 )
+console.log("🥸 - alliesList:", alliesList)
 </script>
 
 <template>
-  <UCollapsible :default-open="true" class="w-full">
+  <UCollapsible
+    :default-open="true"
+    :ui="{
+      root: 'relative w-full',
+      content: 'relative w-full overflow-hidden open:border-b'
+    }">
     <UButton
       trailing-icon="i-up"
       label="Allies"
       variant="custom"
       block
       :ui="{
-        base: 'mb-1 justify-between px-0.5',
-        label:
-          'grow-0 bg-p0 font-semibold! text-n3! drop-shadow-2xs group-hover/btn:text-pc',
+        base: 'justify-between border-0 open:rounded-b-none open:border-b open:border-p3/80 open:bg-transparent! open:fx-0!',
+        label: 'grow-0 font-semibold! text-pc/50 group-hover/btn:text-pc',
         trailingIcon:
-          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc',
+          'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc'
       }" />
 
     <template #content>
@@ -38,7 +56,7 @@ const alliesList = computed(() =>
         <ListboxContent
           :class="
             cn(
-              'z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl border border-p3/90 px-1.5 py-3 inset-shadow-sm inset-shadow-black/9',
+              'i9 z-auto h-100 max-h-100 w-full space-y-1 overflow-y-auto rounded-xl px-1.5 py-3'
             )
           ">
           <template v-if="!sMatches().loading && sMatches.length">
@@ -52,45 +70,74 @@ const alliesList = computed(() =>
                 :active="item.puuid === model"
                 :ui="{
                   base: cn(
-                    'pointer-events-none w-full max-w-full shrink-0 justify-start gap-3 overflow-hidden rounded-xl px-3',
-                  ),
+                    'grid! w-full max-w-full shrink-0 grid-flow-col grid-cols-[30px_1fr_0.3fr]! justify-start gap-3 overflow-hidden rounded-xl px-3'
+                  )
                 }"
                 size="xl">
-                <UUser
-                  size="lg"
-                  :name="item.name"
-                  :description="`#${item.tag}`"
-                  :ui="{
-                    root: 'grow',
-                    wrapper: 'items-center text-start',
-                  }"
-                  :avatar="{
-                    src: getSummonerIcon(item.icon),
-                    size: 'xl',
-                    class: cn(
-                      'shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 on:duration-800',
-                      model && item.puuid !== model
-                        ? 'grayscale opacity-90'
-                        : '',
-                    ),
-                  }" />
-                <template v-if="item.games">
-                  <div
-                    class="col-start-2 grid justify-end justify-self-end text-end text-xs! text-pc">
-                    <span> {{ item.win }} win </span>
-                    <span>
-                      {{ Number(item.games) - Number(item.win) }} loss
+                <div class="relative">
+                  <UAvatar
+                    size="xl"
+                    :src="getSummonerIcon(item.icon)"
+                    icon="i-lol-champ"
+                    :ui="{
+                      root: 'z-0',
+                      image: cn(
+                        'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                        model && item.puuid !== model
+                          ? 'grayscale opacity-90'
+                          : ''
+                      )
+                    }" />
+
+                  <UAvatar
+                    size="xs"
+                    :src="`/img/champion/${item.bestPair?.[0]?.championId}.webp`"
+                    icon="i-lol-champ"
+                    :ui="{
+                      root: 'absolute -right-2 -bottom-0.75 z-1 border-2! border-p0',
+                      image: cn(
+                        'shadow-xs shadow-black/10 drop-shadow-xs drop-shadow-black/30 on:duration-800',
+                        model && item.puuid !== model
+                          ? 'grayscale opacity-90'
+                          : ''
+                      )
+                    }" />
+                </div>
+                <div class="grid items-center justify-start text-start">
+                  <div class="inline-flex gap-1 align-baseline">
+                    <span class="truncate font-semibold text-pc">
+                      {{ item.name }}
+                    </span>
+                    <span class="inline-flex gap-0 text-xs! text-n5">
+                      <Icon name="i-hash" class="mt-0.75 size-3.25 text-n5" />
+                      {{ item.tag }}
                     </span>
                   </div>
-                </template>
+                  <LazyUTooltip
+                    :disable-hoverable-content="true"
+                    side="bottom"
+                    :ui="{ content: 'h-max! w-84' }"
+                    class="inline-flex gap-1 align-baseline">
+                    <span
+                      class="text-xs! font-semibold text-n5 hover:underline">
+                      {{ item.bestPair?.[0]?.championName }}
+                    </span>
 
-                <template v-if="item.games" #trailing>
-                  <div class="relative grid size-12 place-items-center">
-                    <ChampWinrate
-                      v-if="item.games"
-                      :ally="item"
-                      :size="10"
-                      class="absolute drop-shadow-xs" />
+                    <template #content>
+                      <LazyAllyPairTooltip :item />
+                    </template>
+                  </LazyUTooltip>
+                </div>
+
+                <template v-if="item.games">
+                  <div
+                    class="grid justify-end justify-self-end text-end text-xs!">
+                    <span class="font-bold">
+                      {{ roundDecimalToPercent(Number(item.win), item.games) }}%
+                    </span>
+                    <span class="text-xs! text-n5">
+                      {{ item.games }} games
+                    </span>
                   </div>
                 </template>
               </UButton>

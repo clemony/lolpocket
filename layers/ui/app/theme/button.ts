@@ -5,9 +5,9 @@ export const buttonTheme = defineUiTheme({
     label: "grow truncate text-start text-sm font-medium",
     leadingAvatar: "shrink-0",
     leadingAvatarSize: "",
-    leadingIcon: "shrink-0 group-hover/btn:opacity-100",
-    trailingIcon: "shrink-0",
-    base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
+    leadingIcon: "pointer-events-none shrink-0 group-hover/btn:opacity-100",
+    trailingIcon: "pointer-events-none shrink-0",
+    base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
   },
   variants: {
     color: Object.fromEntries(
@@ -87,7 +87,7 @@ export const buttonTheme = defineUiTheme({
         "height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none fx-0 disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
       solid: "btn shadow-xs",
       ghost:
-        "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+        "hover:inset-ring disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       outline:
         "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
       highlight: "btn btn-ghost",
@@ -135,14 +135,14 @@ export const buttonTheme = defineUiTheme({
       color: "p0",
       variant: "solid",
       class: {
-        base: "btn border-p2 bg-p0 text-pc fx-0 open:fx-1 hover:fx-1 data-[state=active]:bg-p1 data-[state=open]:bg-p1"
+        base: "btn bg-p0 text-pc shadow-sm inset-ring shadow-black/5 inset-ring-p3/80 fx-0 depth-3 open:shadow-none open:inset-shadow-sm open:fx-1 hover:bg-p1 hover:fx-1 data-[state=active]:bg-p1"
       }
     },
     {
       color: "p1",
       variant: "solid",
       class: {
-        base: "btn border-p3/60 bg-p1 text-pc ring-0! depth-3 hover:border-b-p3 hover:shadow-xs hover:inset-shadow-xs"
+        base: "btn border-p3/60 bg-p1 text-pc ring-0! inset-ring inset-ring-p3/80 depth-3 open:shadow-none hover:bg-p2 hover:shadow-xs hover:inset-shadow-xs"
       }
     },
     {
@@ -182,7 +182,7 @@ export const buttonTheme = defineUiTheme({
       color: "p1",
       variant: "ghost",
       class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1 hover:ring-p3/40! on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1"
+        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1 hover:inset-ring-p3/40! on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1"
       }
     },
     {

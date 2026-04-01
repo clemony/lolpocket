@@ -18,6 +18,18 @@ export const userTheme = defineUiTheme({
       }
     },
     size: {
+      "3xs": {
+        name: "text-xs",
+        description: "text-xs",
+        root: "gap-1",
+        wrapper: "flex items-center gap-1"
+      },
+      "2xs": {
+        name: "text-xs",
+        description: "text-xs",
+        root: "gap-1.5",
+        wrapper: "flex items-center gap-1.5"
+      },
       xs: {
         name: "text-xs",
         description: "text-xs",
@@ -56,22 +68,10 @@ export const userTheme = defineUiTheme({
         description: "text-xs text-pc",
         root: "gap-3"
       },
-      "2xs": {
-        name: "text-xs",
-        description: "text-xs",
-        root: "gap-1.5",
-        wrapper: "flex items-center gap-1.5"
-      },
       "3xl": {
         name: "text-lg",
         description: "text-pc",
         root: "gap-3"
-      },
-      "3xs": {
-        name: "text-xs",
-        description: "text-xs",
-        root: "gap-1",
-        wrapper: "flex items-center gap-1"
       },
       header: {
         name: "overflow-y-visible font-serif text-[36px]/15 font-bold! text-pc/94 drop-shadow-sm",

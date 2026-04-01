@@ -19,7 +19,7 @@ const wr = computed(() =>
         :name="champNameByKey(k)"
         :description="champKeyToRole[k]"
         :avatar="{
-          src: `/img/champions/${champIdByKey(k)}.webp`
+          src: `/img/champion/${champIdByKey(k)}.webp`
         }"
         :ui="{
           name: 'text-md font-bold text-nc/90',

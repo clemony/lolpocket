@@ -59,7 +59,7 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
 </script>
 
 <template>
-  <LazyUModal
+  <LazyModal
     v-model:open="threads().reportOpen"
     :close="{ onClick: () => emit('close', false) }"
     title="Report Card"
@@ -138,5 +138,5 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
         </UForm>
       </div>
     </template>
-  </LazyUModal>
+  </LazyModal>
 </template>

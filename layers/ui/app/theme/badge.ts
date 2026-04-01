@@ -28,17 +28,18 @@ export const badgeTheme = defineUiTheme({
       ghost: ""
     },
     size: {
-      lg: {
-        base: "gap-1.5 rounded-lg px-2 py-1 text-sm",
-        leadingAvatarSize: "2xs",
-        leadingIcon: "size-5",
-        trailingIcon: "size-5"
-      },
-      md: {
-        base: "gap-1 rounded-lg px-2 py-1 text-xs",
+      "2xs": {
+        base: "gap-1 rounded-md px-0.5 py-0 text-[10px]/3",
         leadingAvatarSize: "3xs",
-        leadingIcon: "size-4",
-        trailingIcon: "size-4"
+        leadingIcon: "size-3.5 **:stroke-[2.4]",
+        trailingIcon: "size-3.5 **:stroke-[2.4]"
+      },
+      xs: {
+        base: "gap-1.5 rounded-lg px-1.5 py-0.5 align-middle text-2xs/3.5",
+        leadingAvatarSize: "3xs",
+        label: "align-middle",
+        leadingIcon: "size-3.5 align-middle **:stroke-[2.4]",
+        trailingIcon: "size-3.5 align-middle **:stroke-[2.4]"
       },
       sm: {
         base: "gap-1.5 rounded-lg px-2 py-0.75 text-xs/4",
@@ -46,24 +47,23 @@ export const badgeTheme = defineUiTheme({
         leadingIcon: "size-3.5 **:stroke-[2.4]",
         trailingIcon: "size-3.5 **:stroke-[2.4]"
       },
+      md: {
+        base: "gap-1 rounded-lg px-2 py-1 text-xs",
+        leadingAvatarSize: "3xs",
+        leadingIcon: "size-4",
+        trailingIcon: "size-4"
+      },
+      lg: {
+        base: "gap-1.5 rounded-lg px-2 py-1 text-sm",
+        leadingAvatarSize: "2xs",
+        leadingIcon: "size-5",
+        trailingIcon: "size-5"
+      },
       xl: {
         base: "gap-1.5 rounded-lg px-2.5 py-1 text-pc",
         leadingAvatarSize: "2xs",
         leadingIcon: "size-6",
         trailingIcon: "size-6"
-      },
-      xs: {
-        base: "gap-1.5 rounded-lg px-1.5 py-0.5 align-middle text-[10px]/3.5",
-        leadingAvatarSize: "3xs",
-        label: "align-middle",
-        leadingIcon: "size-3.5 align-middle **:stroke-[2.4]",
-        trailingIcon: "size-3.5 align-middle **:stroke-[2.4]"
-      },
-      "2xs": {
-        base: "gap-1 rounded-md px-0.5 py-0 text-[10px]/3",
-        leadingAvatarSize: "3xs",
-        leadingIcon: "size-3.5 **:stroke-[2.4]",
-        trailingIcon: "size-3.5 **:stroke-[2.4]"
       }
     },
     square: {
@@ -80,12 +80,12 @@ export const badgeTheme = defineUiTheme({
     {
       color: "p0",
       variant: "solid",
-      class: "border border-p3 bg-p0 font-medium text-pc ring-p2"
+      class: "border border-p3 bg-p0 text-pc ring-p2"
     },
     {
       color: "p1",
       variant: "solid",
-      class: "border border-p3 bg-p1 font-medium text-pc ring-p2"
+      class: "bg-p1text-pc border border-p3 ring-p2"
     },
     {
       color: "p2",
@@ -95,7 +95,7 @@ export const badgeTheme = defineUiTheme({
     {
       color: "p3",
       variant: "outline",
-      class: "border-p3 font-medium text-pc"
+      class: "border-p3text-pc"
     },
     {
       color: "transparent",
@@ -115,7 +115,7 @@ export const badgeTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class:
-        "noise border border-n1 bg-n0/85 font-semibold text-nc ring-n3 **:text-nc"
+        "noise border border-n1 bg-n0/85 text-nc ring-n3 backdrop-blur-sm **:text-nc"
     },
     {
       color: "neutral",
@@ -195,12 +195,12 @@ export const badgeTheme = defineUiTheme({
     {
       color: "res",
       variant: "soft",
-      class: "border-res/50 bg-res/40 font-medium text-pc/70"
+      class: "border-res/50 bg-res/40 text-pc/70"
     },
     {
       color: "res",
       variant: "solid",
-      class: "border-res bg-res font-medium text-white"
+      class: "border-res bg-res text-white"
     }
   ],
   defaultVariants: {

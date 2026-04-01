@@ -21,7 +21,6 @@
         as="span"
         :ui="{ base: 'items-center font-medium text-nowrap drop-shadow-2xs' }"
         color="p2" />
-      <Placeholder class="" />
 
       <UButton
         as="span"
@@ -29,9 +28,6 @@
         color="p2" />
     </div>
 
-    <DonutSkeleton
-      class="size-14 opacity-50 drop-shadow-2xs"
-      thickness="4px"
-      label="" />
+    <Icon name="i-lucide-circle" class="size-14 opacity-50 drop-shadow-2xs" />
   </div>
 </template>

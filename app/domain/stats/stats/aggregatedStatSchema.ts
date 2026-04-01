@@ -1,7 +1,7 @@
 export function STAT_AVERAGE(): StatAverage {
   return {
     average: 0,
-    total: 0,
+    total: 0
   }
 }
 
@@ -18,28 +18,28 @@ export const AGGREGATED_STAT_SCHEMA = {
   assists: { init: STAT_AVERAGE },
   deaths: { init: STAT_AVERAGE },
   kills: { init: STAT_AVERAGE },
-  kp: { decimals: 1, init: STAT_AVERAGE, scale: 100 },
+  kp: { decimals: 1, init: STAT_AVERAGE, scale: 1 },
 
   damagePercentage: {
     decimals: 2,
     init: STAT_AVERAGE,
-    scale: 100,
+    scale: 100
   },
   // damage
   totalDamage: {
     decimals: 0,
-    init: STAT_AVERAGE,
+    init: STAT_AVERAGE
   },
   totalDamageTaken: {
     decimals: 0,
-    init: STAT_AVERAGE,
+    init: STAT_AVERAGE
   },
 
   // defense
   damageTakenPercentage: {
     decimals: 2,
     init: STAT_AVERAGE,
-    scale: 100,
+    scale: 100
   },
 
   allySaves: { init: STAT_AVERAGE },
@@ -47,11 +47,11 @@ export const AGGREGATED_STAT_SCHEMA = {
   ccDuration: { init: STAT_AVERAGE },
   totalAllyHealing: {
     decimals: 0,
-    init: STAT_AVERAGE,
+    init: STAT_AVERAGE
   },
   totalAllyShielding: {
     decimals: 0,
-    init: STAT_AVERAGE,
+    init: STAT_AVERAGE
   },
 
   // farming
@@ -79,6 +79,6 @@ export const AGGREGATED_STAT_SCHEMA = {
 
   gameTime: {
     decimals: 2,
-    init: STAT_AVERAGE,
-  },
+    init: STAT_AVERAGE
+  }
 } as const satisfies Record<string, StatSchemaEntry>

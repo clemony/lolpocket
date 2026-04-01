@@ -21,8 +21,8 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
         <div
           class="inline-flex items-center gap-1 text-xs font-medium"
           :data-type="
-            runes.usedFallback ?
-              `*Based on limited data (${runes.best.games} games)`
+            runes.usedFallback
+              ? `*Based on limited data (${runes.best.games} games)`
               : null
           ">
           Highest performing rune set
@@ -53,7 +53,7 @@ const gridClass = "grid w-full grid-cols-5 gap-2 place-items-center  "
           class=""
           variant="outline">
           <img
-            :src="`/img/paths/${path.name}.webp`"
+            :src="`/img/path/${path.name}.webp`"
             :alt="`path:${path.name}`"
             :class="cn('size-4 object-contain opacity-40 contrast-0 grayscale', {
               ' opacity-100! grayscale-0 contrast-100 brightness-100!': used.includes(path.name),

@@ -38,7 +38,9 @@ const settings = computed(() => user().settings)
     <fieldset class="space-y-6">
       <div class="leading-4">
         <Label class="mb-2 text-xl font-semibold" as="legend">Title</Label>
-        <p class="label text-wrap">Display a title from an earned Badge.</p>
+        <p class="label text-wrap">
+          Display a title from an earned Badge.
+        </p>
       </div>
     </fieldset>
 
@@ -103,7 +105,9 @@ const settings = computed(() => user().settings)
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral"> Update account </UButton>
+      <UButton color="neutral">
+        Update account
+      </UButton>
     </div>
   </form>
 </template>

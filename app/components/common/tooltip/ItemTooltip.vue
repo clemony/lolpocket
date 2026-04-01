@@ -77,7 +77,7 @@ const orrnUpgrade = computed(() => {
           v-if="id"
           size="xl"
           :ui="{ root: 'bg-n3/70' }"
-          :src="`/img/items/${id}.webp`"
+          :src="`/img/item/${id}.webp`"
           :alt="`${name} Image`" />
         <!-- NAME / LINK -->
 
@@ -169,7 +169,7 @@ const orrnUpgrade = computed(() => {
             <div class="flex items-center gap-1 px-1">
               <template v-for="(fromItem, i) in filteredFrom" :key="i">
                 <LazyAvatar
-                  :src="`/img/items/${fromItem.id}.webp`"
+                  :src="`/img/item/${fromItem.id}.webp`"
                   :alt="fromItem.name"
                   size="md"
                   spinner
@@ -206,7 +206,7 @@ const orrnUpgrade = computed(() => {
                 :key="i"
                 size="md"
                 :label="`${buildItem.name} ‑ ${buildItem.gold}g`"
-                :src="`/img/items/${buildItem.id}.webp`"
+                :src="`/img/item/${buildItem.id}.webp`"
                 :alt="buildItem.name"
                 :ui="{
                   root: 'bg-n3/70 ring-nc ring-offset-n1 hover:ring-1 hover:ring-offset-2'

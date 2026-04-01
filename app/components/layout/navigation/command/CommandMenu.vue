@@ -99,10 +99,7 @@ function goBack() {
         <div v-if="routeComponent" class="border-b border-p3 py-2">
           <component :is="routeComponent" @update:open="closeMenu" />
         </div>
-        <CommandGroup
-          v-if="pagesGroup"
-          :items="pagesGroup"
-          @update:open="(item) => openItem(item)" />
+        <UtilsCommand v-if="pagesGroup?.items" :items="pagesGroup.items" />
 
         <ReferenceCommand
           v-if="referenceGroup.library || referenceGroup.reference"

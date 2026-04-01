@@ -16,7 +16,7 @@ export const regionKeys = [
   "th2",
   "tr1",
   "tw2",
-  "vn2",
+  "vn2"
 ] as const
 
 export type Region = (typeof regionKeys)[number]
@@ -37,6 +37,7 @@ export interface Identity {
 }
 
 export interface Summoner {
+  color: string
   name: string
   puuid: string
   icon: string

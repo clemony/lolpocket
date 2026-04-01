@@ -74,8 +74,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
       [...championStats.values()].reduce((sum, s) => sum + s.wins, 0) /
         totalGames || 0
 
-    bayesianChampions.value = [...championStats.entries()]
-      .map(([championId, stats]) => {
+    bayesianChampions.value = Array.from(championStats.entries(), ([championId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
         const bayesianWinrate =

@@ -50,7 +50,7 @@ const selectedSpell = computed(
               <img
                 class="peer-checked:borderneutral/90 size-22 rounded-lg border border-p3 shadow-sm inset-shadow-sm shadow-black/20"
                 :alt="selectedSpell.name.toString()"
-                :src="`/img/spells/${spell.id}.webp`" />
+                :src="`/img/spell/${spell.id}.webp`" />
 
               <input
                 v-model="selectedSpellId"
@@ -92,7 +92,7 @@ const selectedSpell = computed(
             <img
               class="size-24 rounded-lg shadow-sm shadow-black/20"
               :alt="selectedSpell.name.toString()"
-              :src="`/img/spells/${selectedSpell.id}.webp`" />
+              :src="`/img/spell/${selectedSpell.id}.webp`" />
 
             <div class="items-between grid h-full py-2">
               <p class="font-medium">Summoner</p>

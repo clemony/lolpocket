@@ -55,20 +55,35 @@ export const commandPaletteTheme = defineUiTheme({
       }
     },
     size: {
-      lg: {
-        empty: "pt-4 pb-2 text-sm",
-        input: "inline-flex items-center py-0 [&>input]:h-12",
-        item: "gap-2 px-3 py-2 text-sm",
-        itemLeadingAvatarSize: "2xs",
-        itemLeadingChip: "size-5",
-        itemLeadingChipSize: "md",
-        itemLeadingIcon: "size-4.5",
-        itemTrailing: "gap-2",
+      xs: {
+        empty: "py-3 text-xs",
+        input: "[&>input]:h-10",
+        item: "gap-1 p-1 text-xs",
+        itemLeadingAvatarSize: "3xs",
+        itemLeadingChip: "size-4",
+        itemLeadingChipSize: "sm",
+        itemLeadingIcon: "size-4",
+        itemTrailing: "gap-1",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "md",
-        itemTrailingpcIcon: "size-4.5",
-        label: "gap-2 text-xs"
+        itemTrailingKbdsSize: "sm",
+        itemTrailingpcIcon: "size-4",
+        label: "gap-1 p-1 text-[10px]/3"
+      },
+      sm: {
+        empty: "py-4 text-xs",
+        input: "[&>input]:h-11",
+        item: "gap-1.5 p-1.5 text-xs",
+        itemLeadingAvatarSize: "3xs",
+        itemLeadingChip: "size-4",
+        itemLeadingChipSize: "sm",
+        itemLeadingIcon: "size-4",
+        itemTrailing: "gap-1.5",
+        itemTrailingIcon: "size-4",
+        itemTrailingKbds: "gap-0.5",
+        itemTrailingKbdsSize: "sm",
+        itemTrailingpcIcon: "size-4",
+        label: "gap-1.5 p-1.5 text-[10px]/3"
       },
       md: {
         empty: "py-6 text-sm",
@@ -86,20 +101,20 @@ export const commandPaletteTheme = defineUiTheme({
         label: "gap-1.5 px-1.5 pt-2 pb-1 text-xs",
         root: "[&_svg]:text-unset!"
       },
-      sm: {
-        empty: "py-4 text-xs",
-        input: "[&>input]:h-11",
-        item: "gap-1.5 p-1.5 text-xs",
-        itemLeadingAvatarSize: "3xs",
-        itemLeadingChip: "size-4",
-        itemLeadingChipSize: "sm",
-        itemLeadingIcon: "size-4",
-        itemTrailing: "gap-1.5",
+      lg: {
+        empty: "pt-4 pb-2 text-sm",
+        input: "inline-flex items-center py-0 [&>input]:h-12",
+        item: "gap-2 px-3 py-2 text-sm",
+        itemLeadingAvatarSize: "2xs",
+        itemLeadingChip: "size-5",
+        itemLeadingChipSize: "md",
+        itemLeadingIcon: "size-4.5",
+        itemTrailing: "gap-2",
         itemTrailingIcon: "size-4",
         itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
-        itemTrailingpcIcon: "size-4",
-        label: "gap-1.5 p-1.5 text-[10px]/3"
+        itemTrailingKbdsSize: "md",
+        itemTrailingpcIcon: "size-4.5",
+        label: "gap-2 text-xs"
       },
       xl: {
         empty: "py-8 text-base",
@@ -115,21 +130,6 @@ export const commandPaletteTheme = defineUiTheme({
         itemTrailingKbdsSize: "lg",
         itemTrailingpcIcon: "size-6",
         label: "gap-2 p-2 text-sm"
-      },
-      xs: {
-        empty: "py-3 text-xs",
-        input: "[&>input]:h-10",
-        item: "gap-1 p-1 text-xs",
-        itemLeadingAvatarSize: "3xs",
-        itemLeadingChip: "size-4",
-        itemLeadingChipSize: "sm",
-        itemLeadingIcon: "size-4",
-        itemTrailing: "gap-1",
-        itemTrailingIcon: "size-4",
-        itemTrailingKbds: "gap-0.5",
-        itemTrailingKbdsSize: "sm",
-        itemTrailingpcIcon: "size-4",
-        label: "gap-1 p-1 text-[10px]/3"
       }
     },
     virtualize: {

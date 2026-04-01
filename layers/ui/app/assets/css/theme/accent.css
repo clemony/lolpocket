@@ -47,17 +47,49 @@
   --color-dom-900: oklch(0.353 0.069 15.91);
   --color-dom-950: oklch(0.327 0.066 15.74);
 
-  --color-pre-50: oklch(0.975 0.013 60.6);
-  --color-pre-100: oklch(0.959 0.022 67.56);
-  --color-pre-200: oklch(0.924 0.042 71.89);
-  --color-pre-300: oklch(0.889 0.068 79.11);
-  --color-pre-400: oklch(0.855 0.089 84.08);
-  --color-pre-500: oklch(0.779 0.097 81.75);
-  --color-pre-600: oklch(62% 29% 73);
-  --color-pre-700: oklch(0.624 0.095 76.17);
-  --color-pre-800: oklch(0.539 0.091 75.16);
-  --color-pre-900: oklch(0.46 0.088 71.86);
-  --color-pre-950: oklch(0.428 0.092 71.01);
+  --color-pre-50: oklch(0.975 0.011 54.56);
+  --color-pre-100: oklch(0.949 0.023 61.24);
+  --color-pre-200: oklch(0.89 0.054 63.37);
+  --color-pre-300: oklch(0.84 0.089 67.24);
+  --color-pre-400: oklch(0.789 0.114 70.26);
+  --color-pre-500: oklch(0.735 0.107 70.28);
+  --color-pre-600: oklch(0.669 0.098 70.39);
+  --color-pre-700: oklch(0.59 0.086 70.18);
+  --color-pre-800: oklch(0.52 0.075 69.76);
+  --color-pre-900: oklch(0.451 0.065 69.9);
+  --color-pre-950: oklch(0.416 0.061 70.36);
+}
+
+@theme inline {
+  --color-shadow: var(--color-n2);
+  --color-shadow-contrast: var(--color-n5);
+
+  --color-diminuendo: var(--ui-insp);
+  --color-diminuendo-contrast: var(--color-insp-200);
+
+  --color-flow: var(--color-hsp);
+  --color-flow-contrast: var(--color-enchanter);
+
+  --color-contaminate: var(--color-res-300);
+  --color-contaminate-contrast: var(--color-hp);
+
+  --color-whimsy: var(--ui-sorc);
+  --color-whimsy-contrast: var(--color-sorc-300);
+
+  --color-cask: var(--color-fighter);
+  --color-cask-contrast: var(--color-apen);
+
+  --color-onslaught: var(--ui-dom);
+  --color-onslaught-contrast: var(--color-dom-300);
+
+  --color-spark: var(--ui-pre);
+  --color-spark-contrast: var(--color-pre-200);
+
+  --color-encore: var(--color-onhit);
+  --color-encore-contrast: var(--color-burst);
+
+  --color-legends: var(--color-warden);
+  --color-legends-contrast: var(--color-pre-300);
 }
 
 @theme {
@@ -82,9 +114,15 @@
   --color-sorc-offset: var(--ui-sorc-offset);
   --color-dom-offset: var(--ui-dom-offset);
   --color-pre-offset: var(--ui-pre-offset);
+
+  --color-accent: var(--ui-accent);
+  --color-accent-content: var(--ui-accent-content);
 }
 
-:root {
+:root,
+.light,
+.light-mode,
+[data-theme="light"] {
   --ui-insp: var(--color-insp-400);
   --ui-res: var(--color-res-400);
   --ui-sorc: var(--color-sorc-400);
@@ -103,15 +141,60 @@
   --ui-dom-offset: var(--color-dom-500);
   --ui-pre-offset: var(--color-pre-600);
 
-  .dim,
-  .dark {
-    --ui-insp: var(--color-insp-500);
-    --ui-res: var(--color-res-500);
-    --ui-sorc: var(--color-sorc-500);
-    --ui-dom: var(--color-dom-500);
-    --ui-pre: var(--color-pre-500);
-    --ui-legendary: var(--color-pre-400);
-  }
+  --ui-accent: var(--color-insp);
+  --ui-accent-content: var(--color-insp-200);
+}
+
+.dim,
+.dim-mode,
+.dark,
+.dark-mode,
+[data-theme="dim"],
+[data-theme="dark"] {
+  --ui-insp: var(--color-insp-500);
+  --ui-res: var(--color-res-500);
+  --ui-sorc: var(--color-sorc-500);
+  --ui-dom: var(--color-dom-500);
+  --ui-pre: var(--color-pre-500);
+  --ui-legendary: var(--color-pre-400);
+
+  --ui-accent: var(--color-insp);
+  --ui-accent-content: var(--color-insp-200);
+}
+
+[data-accent="diminuendo"] {
+  --ui-accent: var(--color-diminuendo);
+  --ui-accent-content: var(--ui-insp-content);
+}
+
+[data-accent="flow"] {
+  --ui-accent: var(--color-res);
+  --ui-accent-content: var(--ui-insp);
+}
+
+[data-accent="contaminate"] {
+  --ui-accent: var(--color-res);
+  --ui-accent-content: var(--color-hp);
+}
+
+[data-accent="whimsy"] {
+  --ui-accent: var(--color-ap);
+  --ui-accent-content: var(--ui-master);
+}
+
+[data-accent="onslaught"] {
+  --ui-accent: var(--color-fighter);
+  --ui-accent-content: var(--color-apen);
+}
+
+[data-accent="spark"] {
+  --ui-accent: var(--color-pre);
+  --ui-accent-content: var(--ui-pre-200);
+}
+
+[data-accent="encore"] {
+  --ui-accent: var(--color-onhit);
+  --ui-accent-content: var(--color-burst);
 }
 
 @theme inline {

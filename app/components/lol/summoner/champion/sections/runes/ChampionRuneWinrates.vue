@@ -2,7 +2,7 @@
 const {
   class: className,
   path,
-  runes,
+  runes
 } = defineProps<{
   runes: Record<number, StatDetail>
   keystones?: Record<number, StatDetail>
@@ -48,7 +48,7 @@ const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
               'flex size-12 justify-center opacity-50 contrast-130 grayscale transition duration-200 *:origin-center hover:scale-110 hover:opacity-100 hover:contrast-100 hover:grayscale-0 [&_img]:scale-116',
               {
                 'opacity-100 grayscale-0': keystones?.[keystone.id],
-                'scale-90': !keystones?.[keystone.id],
+                'scale-90': !keystones?.[keystone.id]
               },
               keystoneCount === 4 ? 'basis-1/4' : 'basis-1/3'
             )
@@ -98,7 +98,7 @@ const tierSlots = computed(() => (path.slots ?? []).filter((s) => s.tier !== 0))
           >
             <img
               class="size-full scale-108"
-              :src="`/img/runes/${runeToPath[rune.id]}/${rune.id}.webp`"
+              :src="`/img/rune/${runeToPath[rune.id]}/${rune.id}.webp`"
               :alt="ix().runeNameById(rune.id)"
             >
           </span>

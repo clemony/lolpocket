@@ -9,8 +9,8 @@ const options: ReportOption[] = [
   {
     id: "salty",
     ui: { item: "order-3" },
-    label: "Unskilled Player",
-  },
+    label: "Unskilled Player"
+  }
 ]
 </script>
 

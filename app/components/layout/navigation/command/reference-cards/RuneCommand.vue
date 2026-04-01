@@ -41,7 +41,7 @@ const tierLabel = computed(() => {
             <LazyAvatar
               v-if="rune"
               size="12"
-              :src="`/img/runes/${rune.id}.webp`"
+              :src="`/img/rune/${rune.id}.webp`"
               :alt="`${rune.name} Image`" />
 
             <div class="text-center">

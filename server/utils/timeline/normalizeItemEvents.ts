@@ -98,7 +98,7 @@ export function normalizeItemEvents(
   //
   const windows: ItemEventGroup[] = []
   for (const ev of rawOut) {
-    const last = windows[windows.length - 1]
+    const last = windows.at(-1)
     if (last && ev.timestamp! - last.timestamp <= SHOP_WINDOW)
       last.events.push(stripTs(ev))
     else windows.push({ timestamp: ev.timestamp!, events: [stripTs(ev)] })

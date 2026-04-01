@@ -7,22 +7,31 @@ const lang = computed(() => locales[locale.value].code)
 const dir = computed(() => locales[locale.value].dir)
 
     :locale="locales[locale]" */
-useHead({
+const colorMode = useColorMode()
+const themeAccent = useThemeAccentPreference()
+
+watch(
+  () => user().settings?.theme,
+  (theme) => {
+    const preference = normalizeThemePreference(theme ?? colorMode.preference)
+    if (preference !== colorMode.preference)
+      colorMode.preference = preference
+  },
+  {
+    immediate: true
+  }
+)
+
+useHead(() => ({
   htmlAttrs: {
     lang: "en",
-    dir: "auto"
-  },
-  link: [
-    {
-     // href: "/img/favicon.png",
-      rel: "icon",
-      type: "image/png"
-    }
-  ]
-})
+    dir: "auto",
+    "data-accent": themeAccent.value
+  }
+}))
 
 const route = useRoute()
-useHead({
+useSeoMeta({
   title: () => String(route.meta.title || route.name)
 })
 const reportComment = computed(() => threads().reportComment ?? undefined)

@@ -32,12 +32,12 @@ watch(
     <div
       v-if="
         ability &&
-        (ability.resource ||
-          ability.cooldown?.length ||
-          ability.rechargeRate ||
-          ability.cost?.length ||
-          ability.effectRadius ||
-          ability.targetRange)
+          (ability.resource ||
+            ability.cooldown?.length ||
+            ability.rechargeRate ||
+            ability.cost?.length ||
+            ability.effectRadius ||
+            ability.targetRange)
       "
       class="flex w-full flex-wrap items-center gap-x-8 gap-y-4 px-9 pr-1 **:font-medium">
       <Tooltip

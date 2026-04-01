@@ -25,8 +25,9 @@ const isOpen = ref(false)
 
 <template>
   <UCard
+    variant="muted"
     :ui="{
-      body: 'flex w-full grow p-0! ring-pc/8',
+      body: 'flex w-full grow p-0! ring-pc/8'
     }"
     as-child>
     <UCollapsible v-if="player" v-model:open="isOpen">
@@ -34,7 +35,7 @@ const isOpen = ref(false)
         color="transparent"
         size="custom"
         :ui="{
-          base: 'pointer-events-auto relative z-2 h-36 w-full cursor-pointer overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!',
+          base: 'pointer-events-auto relative z-2 h-36 w-full cursor-pointer overflow-hidden pr-4 pl-5 shadow-none ring-0! fx-0 open:rounded-b-none hover:ring-0 data-[state=open]:border-b-0!'
         }">
         <div
           class="flex w-full items-center justify-between gap-6 text-sm text-pc">

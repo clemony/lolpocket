@@ -7,28 +7,28 @@ const emit = defineEmits(["update:paths"])
 const variants = {
   hidden: {
     opacity: 0,
-    transform: "rotateX(80deg)",
+    transform: "rotateX(80deg)"
   },
   visible: {
     opacity: 1,
-    transform: "rotateX(0deg)",
-  },
+    transform: "rotateX(0deg)"
+  }
 }
 const headerVariants = {
   hidden: {
-    opacity: 0,
+    opacity: 0
   },
   exit: {
-    opacity: 0,
+    opacity: 0
   },
   transition: {
     delay: 0.2,
     duration: 0.8,
-    ease: [0.215, 0.61, 0.355, 1.0],
+    ease: [0.215, 0.61, 0.355, 1.0]
   },
   visible: {
-    opacity: 1,
-  },
+    opacity: 1
+  }
 }
 
 const titleVariants = {
@@ -37,21 +37,21 @@ const titleVariants = {
     opacity: 0,
     transition: {
       duration: 0.8,
-      ease: [0.55, 0.085, 0.68, 0.53],
-    },
+      ease: [0.55, 0.085, 0.68, 0.53]
+    }
   },
   initial: {
     letterSpacing: "1em",
-    opacity: 0,
+    opacity: 0
   },
   visible: {
     letterSpacing: "normal",
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.215, 0.61, 0.355, 1.0],
-    },
-  },
+      ease: [0.215, 0.61, 0.355, 1.0]
+    }
+  }
 }
 
 const tooltipVariants = {}
@@ -75,7 +75,7 @@ const pathHovered = ref("")
           :class="
             cn('ds-2xs duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': pathHovered,
-              'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered,
+              'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered
             })
           ">
           {{ pathHovered }}
@@ -86,7 +86,7 @@ const pathHovered = ref("")
           :class="
             cn('pt-1 pr-2 text-end font-medium ds-2xs duration-600', {
               'animate-in fade-in': pathHovered,
-              'animate-out fade-out': !pathHovered,
+              'animate-out fade-out': !pathHovered
             })
           ">
           {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
@@ -99,7 +99,7 @@ const pathHovered = ref("")
           :class="
             cn('ds-2xs duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
-              'animate-out fade-out blur-out-50 zoom-out-120': pathHovered,
+              'animate-out fade-out blur-out-50 zoom-out-120': pathHovered
             })
           ">
           Runes
@@ -108,7 +108,7 @@ const pathHovered = ref("")
           :class="
             cn('pt-1 pr-2 text-end font-medium ds-2xs duration-600', {
               'animate-in fade-in': !pathHovered,
-              'animate-out fade-out': pathHovered,
+              'animate-out fade-out': pathHovered
             })
           ">
           Select your path.
@@ -118,7 +118,7 @@ const pathHovered = ref("")
     <motion.div
       class="flex max-h-160 items-center justify-center gap-1.5"
       :transition="{
-        delayChildren: 0.2,
+        delayChildren: 0.2
       }">
       <motion.button
         v-for="(path, i) in pathIndex"
@@ -129,18 +129,18 @@ const pathHovered = ref("")
         while-in-view="visible"
         :transition="{
           duration: 0.5,
-          ease: [0.25, 0.46, 0.45, 0.94],
+          ease: [0.25, 0.46, 0.45, 0.94]
         }"
         :style="{
-          background: `url('/img/paths/cards/${path.name.toLowerCase()}.webp')`,
+          background: `url('/img/path/cards/${path.name.toLowerCase()}.webp')`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '50% 50%',
-          backgroundSize: 'cover',
+          backgroundSize: 'cover'
         }"
         @click="
           handleSet(
             path.name,
-            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name,
+            pathIndex[i === 4 ? 0 : i + 1]?.name ?? path.name
           )
         "
         @hover-start="pathHovered = path.name"

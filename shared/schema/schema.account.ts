@@ -6,7 +6,7 @@ import { pocketTitleIndex } from "~/domain/lp/content/pocket-title-index"
 // username
 export const usernameSchema = v.union([
   v.undefined(),
-  v.pipe(v.string(), v.trim(), v.maxLength(16, "Max length of 16 characters.")),
+  v.pipe(v.string(), v.trim(), v.maxLength(16, "Max length of 16 characters."))
 ])
 
 // title
@@ -35,9 +35,10 @@ export const accountSchema = v.object({
   public_pockets: v.nullable(v.array(v.pipe(v.string(), v.uuid()))),
   splash: v.nullable(v.string()),
   locale: v.nullable(v.string()),
+  color: v.fallback(v.string(), "insp"),
   updated: v.nullable(
     v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
-  ),
+  )
 })
 
 // email
@@ -62,8 +63,8 @@ export const settingsSchema = v.object({
   show_allies: v.fallback(v.boolean(), true),
   show_flex: v.fallback(v.boolean(), true),
   show_solo: v.fallback(v.boolean(), true),
-  theme: v.fallback(v.string(), "daylight"),
-  updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
+  theme: v.fallback(v.string(), "system"),
+  updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
 })
 
 export const getEmptyAccount = () => v.getDefaults(accountSchema)

@@ -22,7 +22,7 @@ const { class: className, pathClass } = defineProps<{
         v-memo="[set.keystone]"
         class="absolute h-auto! w-full! shrink-0 place-self-center opacity-97 drop-shadow-md drop-shadow-black/30"
         :alt="set.keystone.toString()"
-        :src="`/img/runes/${set.primary.path}/${set.keystone}.webp`" />
+        :src="`/img/rune/${set.primary.path}/${set.keystone}.webp`" />
 
       <Icon
         v-else
@@ -43,7 +43,7 @@ const { class: className, pathClass } = defineProps<{
           class="absolute h-max! w-4.5! shrink-0"
           :title="set.secondary.path"
           :alt="set.secondary.path"
-          :src="`/img/paths/${set.secondary.path}.webp`" />
+          :src="`/img/path/${set.secondary.path}.webp`" />
 
         <Icon
           v-else

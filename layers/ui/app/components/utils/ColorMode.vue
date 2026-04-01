@@ -7,6 +7,7 @@ import {
 const emit = defineEmits(["updateMode"])
 
 const m = useColorMode()
+const systemTheme = useSystemThemeValue()
 
 const mode = computed(() => {
   return colorModes.map((c) => ({
@@ -16,7 +17,7 @@ const mode = computed(() => {
     ui: {
       item: cn(
         "group/mode noise btn relative h-11 bg-p0 py-3 pl-3 text-pc **:text-pc",
-        m.preference === "system" ? m.value : c
+        c === "system" ? systemTheme.value : c
       ),
     },
   }))

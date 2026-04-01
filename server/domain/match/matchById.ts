@@ -1,3 +1,4 @@
+import { riotFetch } from '#server/api/riot/fetch'
 import { serverToRegion } from '#server/domain'
 
 export async function matchById(id: string, region: string) {

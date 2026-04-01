@@ -1,32 +1,51 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
+import type { ButtonProps, TooltipProps } from "@nuxt/ui"
 
 const props = withDefaults(
   defineProps<
-    ButtonProps & {
-      placement?: Side
+    TooltipProps & {
+      side?: Side
       class?: HTMLAttributes["class"]
       as?: string
+      align?: Align
+      alignOffset?: number
+      sideOffset?: number
     }
   >(),
   {
-    hover: "neutral",
-    placement: "bottom",
-    as: "button",
-    icon: "i-refresh"
+    align: "end",
+    alignOffset: -14,
+    side: "bottom"
   }
 )
-const delegated = reactiveOmit(props, "class", "placement")
+
+const emit = defineEmits(["update:open"])
+
+const delegated = reactiveOmit(props, "class", "side")
+
 const { summoner } = storeToRefs(sSession())
 const cooldownMs = 120_000
 const action = "match-refresh"
+
 const puuid = computed(() => summoner.value?.puuid ?? "")
-const { loading } = storeToRefs(sMatches())
+
+const { loading, loadMessage } = storeToRefs(sMatches())
+
 const { cooldown, timeRemaining } = useCooldown(puuid, action, cooldownMs)
+
 const isDisabled = computed(
   () => props.disabled || loading.value || timeRemaining.value > 0
 )
 
+const toast = useToast()
+function toasty() {
+  toast.add({
+    color: "neutral",
+    orientation: "horizontal",
+    title: loadMessage.value ?? "Error loading matches!",
+    icon: "x"
+  })
+}
 async function loadNew() {
   if (!puuid.value || isDisabled.value) return
 
@@ -34,7 +53,8 @@ async function loadNew() {
     await sMatches().loadNewer()
     cds().set(puuid.value, action, cooldownMs)
   } finally {
-    console.log("🥸 - loadNewer - done")
+    toasty()
+    emit("update:open", false)
   }
 }
 
@@ -50,17 +70,21 @@ const tip = computed(() => {
 </script>
 
 <template>
-  <Tooltip
-    :as="props.as"
-    :label="tip ?? null"
-    :class="cn('', props.class)"
-    @click="loadNew()">
+  <button @click="loadNew()">
     <slot
+      v-bind="props"
+      :text="tip ?? null"
+      :content="{
+        side: props.side,
+        align: props.align,
+        alignOffset: props.alignOffset,
+        sideOffset: props.sideOffset
+      }"
       :is-loading="loading"
       :cooldown="cooldown"
       :cooldown-ms="cooldownMs"
       :disabled="isDisabled"
       :time-remaining="timeRemaining">
     </slot>
-  </Tooltip>
+  </button>
 </template>

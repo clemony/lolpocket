@@ -8,8 +8,9 @@ import {
   itemTrailingIcon
 } from "../build/useCommandGroups"
 
-const { item } = defineProps<{
+const { item, ui } = defineProps<{
   item: CommandItem
+  ui?: CommandItem["ui"]
 }>()
 
 const emit = defineEmits<{
@@ -33,33 +34,40 @@ const emit = defineEmits<{
       base: cn(
         'flex h-9 w-full items-center justify-start gap-2 rounded-lg px-2 text-left',
         item.ui?.base,
-        item.ui?.item
+        item.ui?.item,
+        ui?.base,
+        ui?.item
       ),
       leadingIcon: cn(
         'size-4.5 shrink-0',
         item.ui?.leadingIcon,
-        item.ui?.itemLeadingIcon
+        item.ui?.itemLeadingIcon,
+        ui?.leadingIcon,
+        ui?.itemLeadingIcon
       ),
       label: 'hidden',
       trailingIcon: cn(
         'size-4 shrink-0 opacity-60 group-hover/btn:opacity-100',
         item.ui?.trailingIcon,
-        item.ui?.itemTrailingIcon
+        item.ui?.itemTrailingIcon,
+        ui?.trailingIcon,
+        ui?.itemTrailingIcon
       )
     }"
     @click="emit('update:open', item)">
-    <div class="min-w-0 grow">
+    <div :class="cn('min-w-0 grow', item.ui?.label, ui?.itemLabel)">
       <div class="inline-flex min-w-0 items-center gap-1.5">
         <span
           v-if="item.prefix"
-          :class="cn('text-xs text-n5', item.ui?.prefix)">
+          :class="
+            cn('text-xs text-n5', item.ui?.prefix, ui?.itemPrefix, ui?.prefix)
+          ">
           {{ item.prefix }}
         </span>
         <span
           :class="
             cn(
               'truncate text-sm font-medium capitalize',
-              item.ui?.label,
               item.ui?.itemLabelBase
             )
           ">

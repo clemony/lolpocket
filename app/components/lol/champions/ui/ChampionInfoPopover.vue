@@ -2,7 +2,7 @@
 const {
   championKey,
   class: className,
-  splash,
+  splash
 } = defineProps<{
   championKey: string
   splash?: string
@@ -12,7 +12,7 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <UModal v-model:open="isOpen">
+  <Modal v-model:open="isOpen">
     <UButton class="size-full" @click.right.prevent>
       <LibraryChampionCard
         v-if="championKey"
@@ -22,5 +22,5 @@ const isOpen = ref(false)
         :class="cn('min-h-64', className)"
         object-position="50% -1.5rem" />
     </UButton>
-  </UModal>
+  </Modal>
 </template>

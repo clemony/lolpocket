@@ -1,3 +1,5 @@
+import { riotFetch } from '#server/api/riot/fetch'
+
 export default defineEventHandler(async (event) => {
   const { puuid } = getQuery(event)
   if (!puuid)

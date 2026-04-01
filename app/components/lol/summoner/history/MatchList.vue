@@ -15,7 +15,8 @@ const virtualize = computed(() => ({
   paddingStart: 4,
   paddingEnd: 8,
   isScrollingResetDelay: 120,
-  getItemKey: (index: number) => filteredMatches.value?.[index]?.matchId ?? index,
+  getItemKey: (index: number) =>
+    filteredMatches.value?.[index]?.matchId ?? index
 }))
 </script>
 
@@ -25,16 +26,16 @@ const virtualize = computed(() => ({
     :class="
       cn(
         '@container flex size-full min-h-0 max-w-250 min-w-220 grow flex-col items-center gap-8 overflow-hidden overflow-x-visible! px-1 pt-2',
-        className,
+        className
       )
     ">
-    <LazyUAlert
+    <!--     <LazyUAlert
       v-if="loadMessage"
       icon="reset"
       class="w-full"
       :title="loadMessage"
       @click="loadMessage = ''" />
-
+ -->
     <!-- loading skeleton -->
     <div v-if="loading" class="flex w-full flex-col gap-8">
       <LazyUSkeleton
@@ -59,7 +60,7 @@ const virtualize = computed(() => ({
       :ui="{
         viewport: 'w-full overflow-x-visible!',
         root: 'min-h-0 w-full flex-1 overflow-x-visible! pr-1 pb-2',
-        item: 'overflow-x-visible!',
+        item: 'overflow-x-visible!'
       }">
       <MatchCard :key="item.matchId" :match="item" />
     </UScrollArea>

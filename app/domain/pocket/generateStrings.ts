@@ -103,14 +103,16 @@ const moreWords = [
 function getRandomElement<T>(array: T[]): T {
   return (array[Math.floor(Math.random() * array.length)] ?? array[0]) as T
 }
-
+const theOf = /\b(the|of)\b/gi
+const dot = /\./g
+const space = /\s+/
 // Strip unwanted words/characters and split into clean words
 function cleanName(name: string): string[] {
   return name
-    .replace(/\b(the|of)\b/gi, "")
-    .replace(/\./g, "")
+    .replace(theOf, "")
+    .replace(dot, "")
     .trim()
-    .split(/\s+/)
+    .split(space)
     .filter(Boolean)
 }
 

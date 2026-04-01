@@ -18,7 +18,9 @@ const props = defineProps<{
       name="search"
       :class="{ 'text-nc opacity-90': props.contrast }" />
 
-    <div class="z-0 grow pt-0.5 text-left drop-shadow-2xs">Search Items...</div>
+    <div class="z-0 grow pt-0.5 text-left drop-shadow-2xs">
+      Search Items...
+    </div>
 
     <slot />
   </UButton>

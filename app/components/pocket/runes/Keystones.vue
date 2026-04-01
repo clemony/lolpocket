@@ -2,7 +2,7 @@
 const {
   pocket,
   runes,
-  set: s,
+  set: s
 } = defineProps<{
   runes: RuneMin[]
   set: RuneSet
@@ -45,13 +45,13 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         ">
         <Img
           class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-0 drop-shadow-sm drop-shadow-black/40 transition-all duration-400 group-hover/r:opacity-90"
-          :src="`/img/runes/${set.primary.path}/${rune.id}.webp`"
+          :src="`/img/rune/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
           :class="{ 'opacity-100': set.keystone === rune.id }" />
 
         <Img
           class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-100 brightness-90 contrast-150 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-0"
-          :src="`/img/runes/grayscale/${rune.id}.webp`"
+          :src="`/img/rune/grayscale/${rune.id}.webp`"
           :alt="rune.name"
           :class="{ 'opacity-0': set.keystone === rune.id }" />
       </TabsTrigger>

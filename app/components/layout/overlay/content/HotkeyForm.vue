@@ -85,8 +85,12 @@ const hotkeyRegistry = {
         <!-- label -->
 
         <template #header>
-          <div class="col-span-2">Action</div>
-          <div class="pl-2">Key</div>
+          <div class="col-span-2">
+            Action
+          </div>
+          <div class="pl-2">
+            Key
+          </div>
           <div></div>
         </template>
         <template v-for="(key, index) in item.keys" :key="index">

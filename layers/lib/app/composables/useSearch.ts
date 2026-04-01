@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 
 export type FuseLogicalOperator = '$and' | '$or'
 export function useSearch<T>(
-  source: T[] | Ref<T[]>,
+  source: T[] | Ref<T[] | null | undefined>,
   query: Ref<string>,
   opt?: {
     options?: IFuseOptions<T>
@@ -15,7 +15,8 @@ export function useSearch<T>(
   watch(
     () => unref(source),
     (val) => {
-      fuse.value = new Fuse(val, {
+      const collection = Array.isArray(val) ? val : []
+      fuse.value = new Fuse(collection, {
         keys: opt?.keys,
         ...opt?.options,
         threshold: 0.3,
@@ -34,7 +35,7 @@ export function useSearch<T>(
 }
 
 export function useMatchedSearch<T>(
-  source: T[] | Ref<T[]>,
+  source: T[] | Ref<T[] | null | undefined>,
   query: Ref<string>,
   opt?: {
     options?: IFuseOptions<T>
@@ -46,7 +47,8 @@ export function useMatchedSearch<T>(
   watch(
     () => unref(source),
     (val) => {
-      fuse.value = new Fuse(val, {
+      const collection = Array.isArray(val) ? val : []
+      fuse.value = new Fuse(collection, {
         keys: opt?.keys,
         ...opt?.options,
 
@@ -68,7 +70,7 @@ export function useMatchedSearch<T>(
 }
 
 export function useLogicalSearch<T>(
-  source: T[] | Ref<T[]>,
+  source: T[] | Ref<T[] | null | undefined>,
   query: Ref<string>,
   opt?: {
     options?: IFuseOptions<T>
@@ -80,7 +82,8 @@ export function useLogicalSearch<T>(
   watch(
     () => unref(source),
     (val) => {
-      fuse.value = new Fuse(val, {
+      const collection = Array.isArray(val) ? val : []
+      fuse.value = new Fuse(collection, {
         keys: opt?.keys,
         ...opt?.options,
         threshold: 0.3,

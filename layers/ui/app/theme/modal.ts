@@ -10,68 +10,63 @@ export const modalTheme = defineUiTheme({
     footer: "flex items-center gap-1.5 p-4 sm:px-6",
     header: "flex min-h-16 items-center gap-1.5 p-4 sm:px-6",
     overlay: "fixed inset-0",
-    wrapper: "",
+    wrapper: ""
   },
   variants: {
     fullscreen: {
       false: {
         content:
-          "w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-p3",
+          "w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-p3"
       },
       true: {
-        content: "inset-0",
-      },
+        content: "inset-0"
+      }
     },
     overlay: {
       true: {
-        overlay: "bg-n2/76",
-      },
+        overlay: "bg-n0/70"
+      }
     },
     scrollable: {
       false: {
         body: "overflow-y-auto",
-        content: "fixed",
+        content: "fixed"
       },
       true: {
         content: "relative",
-        overlay: "overflow-y-auto",
-      },
+        overlay: "overflow-y-auto"
+      }
     },
     transition: {
       true: {
         content:
           "data-[state=closed]:animate-[scale-out_200ms_ease-in] data-[state=open]:animate-[scale-in_200ms_ease-out]",
         overlay:
-          "data-[state=closed]:animate-[fade-out_200ms_ease-in] data-[state=open]:animate-[fade-in_200ms_ease-out]",
-      },
-    },
-    form: {
-      true: {
-        content: "h-max justify-start px-8",
-      },
-    },
+          "data-[state=closed]:animate-[fade-out_200ms_ease-in] data-[state=open]:animate-[fade-in_200ms_ease-out]"
+      }
+    }
   },
   compoundVariants: [
     {
       fullscreen: false,
       scrollable: true,
       class: {
-        overlay: "grid place-items-center p-4 sm:py-8",
-      },
+        overlay: "grid place-items-center p-4 sm:py-8"
+      }
     },
     {
       fullscreen: false,
       scrollable: false,
       class: {
         content:
-          "top-1/2 left-1/2 max-h-[calc(100dvh-2rem)] -translate-1/2 overflow-hidden sm:max-h-[calc(100dvh-4rem)]",
-      },
-    },
+          "top-1/2 left-1/2 max-h-[calc(100dvh-2rem)] -translate-1/2 overflow-hidden sm:max-h-[calc(100dvh-4rem)]"
+      }
+    }
   ],
   defaultVariants: {
     overlay: true,
-    transition: true,
-  },
+    transition: true
+  }
 })
 
 export default modalTheme

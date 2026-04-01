@@ -40,7 +40,7 @@ const tabListClass =
             class="grid aspect-square size-14 place-items-center rounded-full"
             :class="{
               'bg-p0/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500':
-                path === selectedPath,
+                path === selectedPath
             }">
             <input
               v-model="selectedPath"
@@ -51,10 +51,10 @@ const tabListClass =
 
             <Img
               class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
-              :src="`/img/runes/${path}.webp`"
+              :src="`/img/rune/${path}.webp`"
               :alt="`${path} icon`"
               :class="{
-                'brightness-100 grayscale-0': path === selectedPath,
+                'brightness-100 grayscale-0': path === selectedPath
               }" />
           </label>
         </div>

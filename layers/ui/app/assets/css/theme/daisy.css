@@ -30,8 +30,8 @@
   --color-secondary: var(--color-p1);
   --color-secondary-content: var(--ui-pc);
 
-  --color-accent: var(--ui-p3);
-  --color-accent-content: var(--ui-pc);
+  --color-accent: var(--ui-accent);
+  --color-accent-content: var(--ui-accent-content);
 
   --color-neutral: var(--ui-n0);
   --color-neutral-content: var(--ui-nc);
@@ -53,8 +53,8 @@
   --tab-border-color: var(--ui-p3);
   --tab-border-colors: var(--ui-p3);
 
-  --color-accent: var(--ui-insp);
-  --color-accent-content: var(--ui-insp-content);
+  --color-accent: var(--ui-accent);
+  --color-accent-content: var(--ui-accent-content);
 
   --border: 1px;
 

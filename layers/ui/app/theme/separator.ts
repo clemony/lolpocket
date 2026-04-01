@@ -32,9 +32,9 @@ export const separatorTheme = defineUiTheme({
       }
     },
     size: {
-      lg: "border-3",
+      sm: "border-1",
       md: "border-2",
-      sm: "border-1"
+      lg: "border-3"
     }
   },
   defaultVariants: {

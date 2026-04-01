@@ -4,13 +4,13 @@ const props = defineProps<{
   isOpen?: boolean
 }>()
 
-const emit = defineEmits(['update:selected'])
+const emit = defineEmits(["update:selected"])
 
-const pocket = toRef(props, 'pocket')
+const pocket = toRef(props, "pocket")
 const primarySet = computed(() => pocket.value?.spells?.[0])
 const spellIds = computed(() => [
   primarySet.value?.d ?? null,
-  primarySet.value?.f ?? null,
+  primarySet.value?.f ?? null
 ])
 
 function update(event: number, i: number) {
@@ -20,14 +20,14 @@ function update(event: number, i: number) {
 }
 
 const imgArr = [
-  '/img/spells/heal.webp',
-  '/img/spells/ignite.webp',
-  '/img/spells/barrier.webp',
-  '/img/spells/ghost.webp',
-  '/img/spells/exhaust.webp',
-  '/img/spells/smite.webp',
-  '/img/spells/flash.webp',
-  '/img/spells/teleport.webp',
+  "/img/spell/heal.webp",
+  "/img/spell/ignite.webp",
+  "/img/spell/barrier.webp",
+  "/img/spell/ghost.webp",
+  "/img/spell/exhaust.webp",
+  "/img/spell/smite.webp",
+  "/img/spell/flash.webp",
+  "/img/spell/teleport.webp"
 ]
 </script>
 
@@ -43,7 +43,7 @@ const imgArr = [
 
       <img
         v-else-if="pocket.spells[0]"
-        :src="`/img/spells/pocket/${pocket.spells[0].name}.webp`"
+        :src="`/img/spell/pocket/${pocket.spells[0].name}.webp`"
  -->
         class=" rounded-full overflow-hidden grayscale-0 transition-all
         duration-500" />
@@ -64,7 +64,7 @@ const imgArr = [
 
       <img
         v-else-if="pocket.spells[1]"
-        :src="`/img/spells/pocket/${pocket.spells[1].name}.webp`"
+        :src="`/img/spell/pocket/${pocket.spells[1].name}.webp`"
 
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
       /> -->

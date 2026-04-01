@@ -76,6 +76,6 @@ const src = computed(() =>
     :image="src"
     :description="
       data.metadata.description ??
-      'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'
+        'It seems we lost the patch data. We\'ll attempt to turn the router off and on.'
     " />
 </template>

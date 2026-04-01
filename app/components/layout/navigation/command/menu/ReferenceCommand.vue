@@ -1,11 +1,6 @@
 <script lang="ts" setup>
 import type { CommandGroup, CommandItem } from "../build/useCommandGroups"
-import {
-  isExternal,
-  itemKey,
-  itemTarget,
-  itemTrailingIcon
-} from "../build/useCommandGroups"
+import { itemKey } from "../build/useCommandGroups"
 
 const { groups } = defineProps<{
   groups: Record<string, CommandGroup | undefined>
@@ -17,9 +12,13 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="grid w-full max-w-168 grid-cols-[0.8fr_1fr]">
+  <div class="grid w-full max-w-full grid-cols-[0.8fr_1fr]">
     <CommandGroup
       v-if="groups.library"
+      class="w-full"
+      :ui="{
+        itemTrailingIcon: 'size-3.25! -translate-y-px **:stroke-[2.4]'
+      }"
       :items="groups.library"
       @update:open="(item) => emit('update:open', item)" />
     <div v-if="groups.reference" class="h-full py-3 pl-5">
@@ -29,7 +28,7 @@ const emit = defineEmits<{
         :description="groups.reference.description"
         :name="groups.reference.label" />
 
-      <div class="grid w-full grid-cols-2 gap-x-0.5 gap-y-2">
+      <div class="grid w-full max-w-86 grid-cols-2 gap-x-0.5 gap-y-2">
         <UButton
           v-for="item in groups.reference.items"
           :key="itemKey(item)"
@@ -40,12 +39,12 @@ const emit = defineEmits<{
           trailing-icon="i-right"
           :ui="{
             base: cn(
-              'noise relative flex size-full h-17.5 w-full items-end justify-start gap-0! overflow-hidden border-0 bg-neutral p-2.5! text-nc shadow-sm drop-shadow-sm **:text-nc! even:ml-1 hover:bg-neutral/80'
+              'noise relative flex size-full h-17.5 w-full items-end justify-start gap-0! overflow-hidden rounded-xl border-0 bg-neutral p-2.5! text-nc shadow-sm drop-shadow-sm **:text-nc! even:ml-1 hover:bg-neutral/80'
             ),
             label:
               'flex size-full items-end px-0 pb-0.25 text-xl leading-none font-bold',
             trailingIcon:
-              'absolute right-3.5 bottom-3 size-5! opacity-80 **:stroke-[2] group-hover/btn:opacity-100',
+              'absolute right-2.5 bottom-3 size-4! opacity-80 **:stroke-[3.1] group-hover/btn:opacity-100',
             leadingIcon: cn(
               'absolute top-2.5 left-2.5 size-4.5! text-nc! **:text-nc'
             )

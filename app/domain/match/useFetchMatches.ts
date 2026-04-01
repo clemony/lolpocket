@@ -2,7 +2,8 @@ export async function useFetchMatches(summoner: Summoner) {
   if (!summoner.puuid) throw new Error("puuid is null")
   if (!summoner.region) throw new Error("region is null")
 
-  const { getAllMatchIdsForPuuid, getMatchesForSummoner } = useIndexedDB()
+  const { getAllMatchIdsForPuuid, getMatchesForSummoner, putMatchData } =
+    useIndexedDB()
 
   // Get all matches already stored for this summoner
   const existingIds = await getAllMatchIdsForPuuid(summoner.puuid)
@@ -12,13 +13,13 @@ export async function useFetchMatches(summoner: Summoner) {
   const { matches: newMatches } = await $fetch<MatchReturn>(
     "/api/riot/v5/match/newer",
     {
-      params: { puuid: summoner.puuid, region: summoner.region, since: 0 },
+      params: { puuid: summoner.puuid, region: summoner.region, since: 0 }
     }
   )
 
   // Store new matches
   if (newMatches.length) {
-    // await useAddMatches(newMatches)
+    await putMatchData(newMatches)
 
     // ranked update if ranked matches are present
     const hasRanked = newMatches.some(
@@ -30,7 +31,7 @@ export async function useFetchMatches(summoner: Summoner) {
           const res = await $fetch<{ ranked: Summoner["ranked"] }>(
             "/api/riot/v4/league/entries/puuid",
             {
-              params: { puuid: summoner.puuid, region: summoner.region },
+              params: { puuid: summoner.puuid, region: summoner.region }
             }
           )
 

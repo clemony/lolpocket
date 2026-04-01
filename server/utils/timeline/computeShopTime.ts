@@ -72,7 +72,7 @@ export function computeShopTime(
 
     if (itemEvents.length) {
       const first = itemEvents[0].timestamp
-      const last = itemEvents[itemEvents.length - 1].timestamp
+      const last = itemEvents.at(-1).timestamp
 
       // Hard clamp to avoid inflating time
       const estimated = Math.min(last - first + 1500, 12000)

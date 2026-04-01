@@ -15,7 +15,7 @@ const { set } = defineProps<{
         c
         :title="String(runeNameById(set?.keystone))"
         :alt="set?.keystone.toString()"
-        :src="`/img/runes/${set?.primary?.path}/${set?.keystone}.webp`"
+        :src="`/img/rune/${set?.primary?.path}/${set?.keystone}.webp`"
         :class="
           cn(
             'absolute -right-2 w-14! shrink-0 justify-self-end! drop-shadow-sm',
@@ -34,7 +34,7 @@ const { set } = defineProps<{
       v-if="set?.secondary?.path"
       :title="set?.secondary?.path"
       :alt="set?.secondary?.path"
-      :src="`/img/paths/${set?.secondary?.path}.webp`"
+      :src="`/img/path/${set?.secondary?.path}.webp`"
       :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
 
     <UButton

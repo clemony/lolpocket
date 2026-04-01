@@ -1,4 +1,4 @@
-@keyframes mastery-sheen {
+@keyframes sheen {
   from {
     background-position: -100% 0;
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes mastery-gradient-drift {
+@keyframes gradient-drift {
   0% {
     background-position: 0% 50%;
     filter: hue-rotate(0deg);
@@ -22,7 +22,7 @@
   }
 }
 
-@keyframes mastery-luma-breathe {
+@keyframes luma-breathe {
   0%,
   100% {
     filter: brightness(1) saturate(1.05);
@@ -32,7 +32,7 @@
   }
 }
 
-@keyframes mastery-edge-prism {
+@keyframes edge-prism {
   0%,
   100% {
     filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.35))
@@ -65,7 +65,7 @@
 }
  */
 
-@keyframes mastery-outline-pulse {
+@keyframes outline-pulse {
   0%,
   100% {
     box-shadow:
@@ -79,13 +79,13 @@
   }
 }
 
-.mastery-gradient {
-  --animate-prism: mastery-edge-prism 8s ease-in-out infinite;
-  --animate-sheen: mastery-sheen 3.5s linear infinite;
-  --animate-luma: mastery-luma-breathe 6s ease-in-out infinite;
-  --animate-progress-gradient: mastery-gradient-drift 12s ease-in-out infinite;
+.gradient {
+  --animate-prism: edge-prism 8s ease-in-out infinite;
+  --animate-sheen: sheen 3.5s linear infinite;
+  --animate-luma: luma-breathe 6s ease-in-out infinite;
+  --animate-progress-gradient: gradient-drift 12s ease-in-out infinite;
 
-  .mastery-bar-sheen {
+  .bar-sheen {
     background: linear-gradient(
       110deg,
       transparent 35%,
@@ -125,15 +125,15 @@
     opacity: 0.95;
   }
 
-  .mastery-bar-outline-glow {
+  .bar-outline-glow {
     filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.35))
       drop-shadow(0 0 12px rgba(255, 180, 220, 0.25));
     animation:
-      mastery-outline-pulse 4s ease-in-out infinite,
-      mastery-edge-prism 8s ease-in-out infinite;
+      outline-pulse 4s ease-in-out infinite,
+      edge-prism 8s ease-in-out infinite;
   }
 
-  .mastery-gradient-progress {
+  .gradient-progress {
     will-change: transform;
     animation: var(--animate-progress-gradient), var(--animate-luma);
     &.ring {
@@ -146,11 +146,11 @@
       mask-composite: intersect;
     }
 
-    &[data-mastery="0"],
-    &[data-mastery="1"],
-    &[data-mastery="2"],
-    &[data-mastery="3"],
-    &[data-mastery="4"] {
+    &[data-level="0"],
+    &[data-level="1"],
+    &[data-level="2"],
+    &[data-level="3"],
+    &[data-level="4"] {
       background-size: 300% 300%;
       background-color: hsla(23, 63%, 80%, 1);
       background-image:
@@ -175,7 +175,7 @@
         radial-gradient(at 0% 0%, hsla(28, 100%, 76%, 1) 0px, transparent 50%);
     }
 
-    &[data-mastery="6"] {
+    &[data-level="6"] {
       background-size: 300% 300%;
       background-color: hsla(119, 77%, 83%, 1);
       background-image:
@@ -207,7 +207,7 @@
       background-blend-mode: normal, normal, normal, normal, normal;
     }
 
-    &[data-mastery="7"] {
+    &[data-level="7"] {
       background-size: 300% 300%;
       background-color: hsla(181, 100%, 50%, 1);
       background-image:
@@ -240,7 +240,7 @@
         radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
     }
 
-    &[data-mastery="8"] {
+    &[data-level="8"] {
       background-size: 300% 300%;
       background-color: hsla(315, 63%, 80%, 1);
       background-image:
@@ -277,7 +277,7 @@
         radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
     }
 
-    &[data-mastery="9"] {
+    &[data-level="9"] {
       background-size: 300% 300%;
       background-color: hsla(0, 100%, 50%, 1);
       background-image:
@@ -316,7 +316,7 @@
         overlay, normal, normal, normal, normal, normal, normal;
     }
 
-    &[data-mastery="10"] {
+    &[data-level="10"] {
       background-color: #ffffff;
       background:
         radial-gradient(80.99% 100% at 50% 0%, #00f5a8 0%, #2f0a88 100%),
@@ -330,5 +330,23 @@
         screen, screen, lighten, overlay, lighten, difference, normal;
       background-size: 200% 200%;
     }
+  }
+}
+
+.animated-opal {
+  background: linear-gradient(315deg, #ffcde2, #fdffcd, #b1f5ff, #d2ffb0);
+  background-size: 200% 200%;
+  animation: gradient-shift 14s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 25% 50%;
   }
 }

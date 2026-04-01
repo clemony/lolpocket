@@ -3,45 +3,43 @@ const { match } = defineProps<{
   match: MatchData
 }>()
 
-const teams = computed(() => {
-  return {
-    blue: match.participants.filter((p) => p.teamId === 100),
-    red: match.participants.filter((p) => p.teamId === 200),
-  }
-})
-const teamBlue = computed(() => match.teams?.[0])
-const teamRed = computed(() => match.teams?.[1])
+const blue = computed<{ players: Player[]; stats: MatchTeam }>(() =>
+  safeObject({
+    players: match.participants.filter((p) => p.teamId === 100),
+    stats: (match.teams?.[0] as MatchTeam) ?? ({} as MatchTeam)
+  })
+)
+const red = computed(() => ({
+  players: match.participants.filter((p) => p.teamId === 200),
+  stats: (match.teams?.[1] as MatchTeam) ?? ({} as MatchTeam)
+}))
 </script>
 
 <template>
-  <div class="grid w-full gap-3 px-3 pt-4">
-    <!-- Blue Stats -->
-    <TeamEndStatTotals v-if="teamBlue" :team="teamBlue" />
+  <div class="grid w-full gap-4 pt-3">
     <!--   teammate -->
 
     <UCard
+      v-for="(t, i) in [blue, red]"
+      :key="i"
       :ui="{
-        root: 'w-full border-0 bg-p0/60 shadow-md ring ring-p0/60 ring-offset-1 ring-offset-p0 backdrop-blur-md',
-        body: 'grid w-full auto-rows-max place-items-center gap-y-2 p-0',
+        header: 'p-2!',
+        root: cn(
+          '-mt-1 w-full border-0 bg-p0/60 shadow-md ring ring-p0/60 ring-offset-1 ring-offset-p0 backdrop-blur-md',
+          {}
+        ),
+        body: 'relative grid w-full max-w-full auto-cols-max auto-rows-max place-items-center items-center gap-x-3 gap-y-4 overflow-hidden px-3! py-2.25! **:select-none'
       }">
+      <template #header>
+        <!-- Blue Stats -->
+        <TeamEndStatTotals v-if="t" :team="t.stats" />
+      </template>
       <TeammateCard
-        v-for="(player, i) in teams.blue"
-        :key="i"
+        v-for="player in t.players"
+        :key="player.puuid"
         :match
         :player="player" />
     </UCard>
-    <!-- red Stats -->
-
-    <div class="grid w-full auto-rows-max place-items-center gap-y-1.75">
-      <TeamEndStatTotals v-if="teamRed" :team="teamRed" />
-      <!--   teammate -->
-
-      <TeammateCard
-        v-for="(player, i) in teams.red"
-        :key="i"
-        :match
-        :player="player" />
-    </div>
   </div>
   <!--
    <div class="flex w-full flex-col gap-2 overflow-visible pb-1">

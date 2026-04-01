@@ -58,7 +58,9 @@ const username = computed({
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral"> Update account </UButton>
+      <UButton color="neutral">
+        Update account
+      </UButton>
     </div>
   </form>
 </template>

@@ -3,9 +3,9 @@ import type { DropdownMenuItem } from "@nuxt/ui"
 export const colorModes: string[] = ["system", "light", "dim", "dark"]
 
 export const colorModeIconClass: Record<string, string> = {
-  dark: "**:stroke-[2.3]",
-  dim: "scale-120",
-  light: "scale-120",
+  dark: "scale-90 **:stroke-[2.3]",
+  dim: "scale-120 **:stroke-[1.8]",
+  light: "scale-120 **:stroke-[1.9]",
   system: "scale-90 **:stroke-[2.6]"
 }
 export const colorModeTabs = computed<DropdownMenuItem[]>(() => {

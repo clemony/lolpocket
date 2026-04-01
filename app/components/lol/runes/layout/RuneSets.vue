@@ -29,7 +29,7 @@ const primaryColor = computedAsync(() => {})
           <div class="from-p0/90 to-p0/40 grid place-items-center rounded-full bg-gradient-to-br size-full backdrop-blur-md overflow-hidden">
             <div class="p-2 ">
               <img
-                :src="selectedSet.primary.runes[0].name==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
+                :src="selectedSet.primary.runes[0].name==='empty' ? '/img/rune/blankRune.webp' : `/img/rune/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
 
                 class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm" />
             </div>
@@ -40,7 +40,7 @@ const primaryColor = computedAsync(() => {})
             background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.secondary.path.toLowerCase()}))` }">
           <div class="from-p0/90 to-p0/40 grid size-19 place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
             <img
-              :src="selectedSet.secondary.path==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.secondary.path}.webp`"
+              :src="selectedSet.secondary.path==='empty' ? '/img/rune/blankRune.webp' : `/img/rune/${selectedSet.secondary.path}.webp`"
               class="drop-shadow-softer shrink-0 h-10 w-auto object-contain transition-all duration-200 hover:drop-shadow-sm" />
           </div>
         </div>
@@ -65,10 +65,10 @@ const primaryColor = computedAsync(() => {})
 
             <div
               class="[&_#blank]:peer-checked:ringneutral/15  grid grid-cols-2 w-22 gap-3 place-items-center justify-self-center   transition-all duration-300 peer-checked:opacity-100  [&_#blank]:peer-checked:opacity-80 ">
-              <img :src="set.primary.runes[0].name==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{ '!h-8.5': set.primary.runes[0].name==='empty' }" />
+              <img :src="set.primary.runes[0].name==='empty' ? '/img/rune/blankRune.webp' : `/img/rune/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{ '!h-8.5': set.primary.runes[0].name==='empty' }" />
 
               <img
-                :src="`/img/runes/${set.secondary.path}.webp`"
+                :src="`/img/rune/${set.secondary.path}.webp`"
                 class="drop-shadow-softer h-10 w-auto p-1.5"
                 :class="{ '!h-9': set.secondary.path==='empty' }" />
             </div>

@@ -5,6 +5,7 @@ const props = withDefaults(
   defineProps<
     AvatarProps & {
       id: number | null
+      pin?: boolean
       class?: HTMLAttributes["class"]
       loadingIcon?: LoadingStyle
       map?: number
@@ -15,7 +16,9 @@ const props = withDefaults(
     }
   >(),
   {
-    effects: true
+    effects: true,
+    pin: true,
+    interactive: true
   }
 )
 
@@ -34,7 +37,7 @@ const delegated = reactiveOmit(props, "class")
         props?.class
       )
     }"
-    :src="id ? `/img/items/${id}.webp` : undefined"
+    :src="id ? `/img/item/${id}.webp` : ''"
     :label="id ? itemNameById(id) : ''">
     <template v-if="props.effects !== false">
       <div></div>

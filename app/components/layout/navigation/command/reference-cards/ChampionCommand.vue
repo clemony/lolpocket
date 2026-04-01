@@ -7,7 +7,9 @@ const { id } = defineProps<{
   id: number
 }>()
 
-const champion = computed(() => championIndex.find((entry) => entry.id === id) ?? null)
+const champion = computed(
+  () => championIndex.find((entry) => entry.id === id) ?? null
+)
 const championKey = computed(() => champion.value?.key ?? "")
 const championTitle = computed(() =>
   championKey.value ? championToTitle[championKey.value] : undefined
@@ -33,7 +35,7 @@ const championRole = computed(() =>
             <LazyAvatar
               v-if="champion"
               size="12"
-              :src="`/img/champions/${champion.id}.webp`"
+              :src="`/img/champion/${champion.id}.webp`"
               :alt="`${champion.name} Image`" />
 
             <div class="text-center">

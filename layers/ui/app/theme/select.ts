@@ -8,7 +8,7 @@ export const selectTheme = defineUiTheme({
     placeholder: "truncate text-n5",
     arrow: "fill-p0 text-p0",
     content:
-      "pointer-events-auto flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/94 shadow-lg ring ring-p3/60 backdrop-blur-md",
+      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-select-trigger-width) origin-(--reka-select-content-transform-origin) flex-col overflow-hidden rounded-lg bg-p0/96 shadow-lg ring shadow-black/8 ring-p3/60 drop-shadow-none backdrop-blur-sm",
     viewport: "relative flex-1 scroll-py-1 divide-y divide-p3 overflow-y-auto",
     group: "isolate p-1",
     empty: "text-center text-n5",

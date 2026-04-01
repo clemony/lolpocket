@@ -64,8 +64,7 @@ export function useMatchItems(puuid: string, filteredMatches: MatchData[]) {
       [...itemStats.values()].reduce((sum, s) => sum + s.wins, 0) /
         totalGames || 0
 
-    bayesianItems.value = [...itemStats.entries()]
-      .map(([itemId, stats]) => {
+    bayesianItems.value = Array.from(itemStats.entries(), ([itemId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
         const bayesianWinrate =

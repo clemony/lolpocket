@@ -11,9 +11,7 @@ async function clear() {
     as="div"
     button="Clear Matches"
     @click="clear()">
-    <template #title>
-      Clear Local Match Data
-    </template>
+    <template #title> Clear Local Match Data </template>
     <template #text>
       Remove
       <tippy
@@ -35,7 +33,7 @@ async function clear() {
       </tippy>
       from your browser's cache. If you're having issues updating matches, try
       this button ↘︎ or
-      <UModal>
+      <Modal>
         <UButton
           class="relative inline-flex h-4! w-24 origin-center items-center justify-center self-center overflow-visible! align-baseline">
           <span
@@ -43,7 +41,7 @@ async function clear() {
             contact me.
           </span>
         </UButton>
-      </UModal>
+      </Modal>
     </template>
   </ActionCard>
 </template>

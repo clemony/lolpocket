@@ -2,11 +2,11 @@
 const {
   class: className,
   imgClass,
-  player,
+  player
 } = defineProps<{
   player: Player
-  class?: HTMLAttributes['class']
-  imgClass?: HTMLAttributes['class'][]
+  class?: HTMLAttributes["class"]
+  imgClass?: HTMLAttributes["class"][]
 }>()
 </script>
 
@@ -21,8 +21,8 @@ const {
       data-type="spell">
       <img
         :alt="String(spell)"
-        :src="`/img/spells/${spell}.webp`"
-        :class="cn('shadow-sm drop-shadow-sm', imgClass)">
+        :src="`/img/spell/${spell}.webp`"
+        :class="cn('shadow-sm drop-shadow-sm', imgClass)" />
     </button>
   </div>
 </template>

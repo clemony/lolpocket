@@ -35,7 +35,7 @@ export const sSession = defineStore("summonerSession", () => {
         slot: "champions" as const,
         to: `${buildSummonerRootPath(summoner.value)}/champions`,
         ui: {
-          leadingIcon: "scale-105 opacity-80"
+          leadingIcon: "scale-105 **:stroke-[1.2] opacity-80"
         }
       },
       {

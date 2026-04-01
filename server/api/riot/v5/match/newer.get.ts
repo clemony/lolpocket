@@ -18,7 +18,7 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
     count: batchSize,
     queue: normalizedQueue,
     region,
-    start: 0,
+    start: 0
   })
 
   const limit = pLimit(5)
@@ -37,12 +37,12 @@ export default defineEventHandler(async (event): Promise<MatchReturn> => {
     .filter((m) => m.gameEndTimestamp > since)
 
   matches.sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
+  console.log("🥸 - matches:", matches)
 
   return {
-    cursor: ids.length,
     done: true,
     matches,
-    newestTimestamp: matches[0]?.gameEndTimestamp ?? since,
+    newestTimestamp: matches[0]?.gameEndTimestamp ?? since
   }
 
   // return null

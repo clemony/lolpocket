@@ -5,6 +5,11 @@ const { mode, class: className } = defineProps<{
   mode: string
   class?: HTMLAttributes["class"]
 }>()
+const emit = defineEmits<{
+  select: [mode: string]
+}>()
+const systemTheme = useSystemThemeValue()
+const themeAccent = useThemeAccentPreference()
 
 const colorChip =
   "aspect-square inset-shadow-sm drop-shadow-xs size-9 flex items-center justify-center rounded-md shadow-sm"
@@ -17,12 +22,18 @@ const chips = [
   "bg-neutral text-nc"
 ]
 const quote = computed(() => modeQuote[mode])
+const previewTheme = computed(() =>
+  mode === "system" ? systemTheme.value : mode
+)
 </script>
 
 <template>
   <UCard
     :value="mode"
+    :data-theme="previewTheme"
+    :data-accent="themeAccent"
     :data-quote="mode"
+    tabindex="0"
     :ui="{
       header: 'h-32 w-full pt-3 pr-2 pl-1',
       root: cn(
@@ -31,15 +42,19 @@ const quote = computed(() => modeQuote[mode])
           'border-pc group-hover/label:ring group-hover/label:ring-offset-1':
             mode === $colorMode.preference
         },
-        className,
-        mode
+        className
       )
-    }">
+    }"
+    @click="emit('select', mode)"
+    @keydown.enter.prevent="emit('select', mode)"
+    @keydown.space.prevent="emit('select', mode)">
     <template #header>
       <h4 class="leading-8 font-bold capitalize">
         {{ mode }}
       </h4>
-      <p class="h-9 leading-5 text-pretty italic">'{{ quote?.quote }}'</p>
+      <p class="h-9 leading-5 text-pretty italic">
+        '{{ quote?.quote }}'
+      </p>
       <p class="pr-4 text-end text-sm/4 text-pretty italic opacity-80">
         —{{ quote?.source }}
       </p>

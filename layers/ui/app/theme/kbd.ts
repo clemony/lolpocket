@@ -16,10 +16,10 @@ export const kbdTheme = defineUiTheme({
       ghost: ""
     },
     size: {
-      xl: "h-7 w-fit min-w-6 text-[12px] [&[square]]:w-7 [&[square]]:min-w-6",
-      lg: "h-6 w-fit min-w-[24px] rounded-[4px] text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
+      sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4",
       md: "h-5 w-fit min-w-[20px] text-sm [&[square]]:w-5 [&[square]]:min-w-5",
-      sm: "h-4 min-w-[16px] text-[11px] [&[square]]:w-4 [&[square]]:min-w-4"
+      lg: "h-6 w-fit min-w-[24px] rounded-[4px] text-[12px] [&[square]]:w-6 [&[square]]:min-w-6",
+      xl: "h-7 w-fit min-w-6 text-[12px] [&[square]]:w-7 [&[square]]:min-w-6"
     }
   },
   base: "inline-flex w-fit shrink items-center justify-center rounded-sm px-1 align-baseline font-sans font-medium uppercase [&[square]]:aspect-square [&[square]]:gap-0 [&[square]]:p-0",

@@ -34,12 +34,6 @@
     background-blend-mode: hue, hue, hue, overlay;
   }
   &.container-style {
-    --m-x: v-bind(`${state.glare.x}%`);
-    --m-y: v-bind(`${state.glare.y}%`);
-    --r-x: v-bind(`${state.rotate.x}deg`);
-    --r-y: v-bind(`${state.rotate.y}deg`);
-    --bg-x: v-bind(`${state.background.x}%`);
-    --bg-y: v-bind(`${state.background.y}%`);
     --duration: 300ms;
     --foil-size: 100%;
     --opacity: 0;

@@ -105,7 +105,7 @@ export function buildAllyChart(
       <ul class="**:text-sm! flex flex-col gap-0 rounded-lg overflow-hidden w-40 max-w-40 bg-neutral/80 backdrop-blur-md text-nc/90 py-2 *:w-full *:px-2 **:not-first:font-medium [&_.stat]:flex [&_.stat]:items-center overflow-hidden [&_.stat]:justify-between [&_.stat]:*:first:font-semibold [&_.stat]:flex-nowrap [&_.stat]:py-0  ">
         <li class="font-bold max-w-full w-full flex"><span class="truncate">${data.allyName}</span><span class="w-fit"> #${data.allyTag}</span></li>
         <li class="flex gap-2 my-px">
-        <img src="/img/champions/circle/${data.championId}.webp" alt="${data.championname}" class="size-5" />
+        <img src="/img/champion/circle/${data.championId}.webp" alt="${data.championname}" class="size-5" />
         ${data?.championName}</li>
         <li class="stat mt-1"><span>Winrate:</span> <span>${data?.winrate}</span></li>
         <li class="stat"><span>Synergy:</span> ${data?.synergy}</li>

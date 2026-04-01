@@ -34,7 +34,7 @@ onMounted(() => {
           v-else
           class="size-16"
           :alt="String(selected)"
-          :src="`/img/spells/${selected}.webp`" />
+          :src="`/img/spell/${selected}.webp`" />
       </UButton>
     </UButton>
 
@@ -63,7 +63,7 @@ onMounted(() => {
 
           <Img
             class="size-full rounded-lg"
-            :src="`/img/spells/${ss.id}.webp`"
+            :src="`/img/spell/${ss.id}.webp`"
             :alt="ss.name.toString()" />
         </label>
       </div>

@@ -48,7 +48,7 @@ export function buildAllyBubbleSeries(
         data: items.map((d) => {
           const group = collisionMap.get(`${d.allyPuuid}-${d.championId}`)!
           return {
-            symbol: `image:///img/champions/circle/${d.championId}.webp`,
+            symbol: `image:///img/champion/circle/${d.championId}.webp`,
             symbolKeepAspect: true,
 
             value: [

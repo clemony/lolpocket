@@ -17,5 +17,5 @@ export function computeRuneStyle(item: any) {
 export function computeImageSrc(item: any) {
   if (["item", "rune", "spell"].includes(item["data-key"]))
     return `/img/${item["data-key"]}s/${item["data-id"]}.webp`
-  return `/img/champions/${item["data-id"]}.webp`
+  return `/img/champion/${item["data-id"]}.webp`
 }

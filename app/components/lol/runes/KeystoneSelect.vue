@@ -58,13 +58,13 @@ watch(
           class="hidden peer" />
 
         <Img
-          :src="`/img/runes/${rune.path}/${rune.id}.webp`"
+          :src="`/img/rune/${rune.path}/${rune.id}.webp`"
           :alt="rune.name"
           class="absolute drop-shadow-sm pointer-events-none drop-shadow-black/40   opacity-0 group-hover/r:opacity-90 duration-400  transition-all shrink-0   h-19 w-auto "
           :class="{ 'opacity-100': selectedRune===rune.id }" />
 
         <Img
-          :src="`/img/runes/${rune.path}/${rune.id}_grayscale.webp`"
+          :src="`/img/rune/${rune.path}/${rune.id}_grayscale.webp`"
           :alt="rune.name"
           class="h-19 w-auto  drop-shadow-sm  pointer-events-none  shrink-0 absolute contrast-150 brightness-90 opacity-100  group-hover/r:opacity-0 duration-400 transition-all "
           :class="{ 'opacity-0': selectedRune===rune.id }" />

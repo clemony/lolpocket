@@ -2,7 +2,7 @@
 const {
   class: className,
   icon = true,
-  player,
+  player
 } = defineProps<{
   class?: HTMLAttributes["class"]
   player: Player
@@ -11,12 +11,14 @@ const {
 </script>
 
 <template>
-  <Tooltip :ui="{ content: 'h-fit!' }" class="justify-self-end">
+  <Tooltip
+    :ui="{ content: 'h-fit!' }"
+    class="flex items-start self-start justify-self-end">
     <UBadge
       icon="i-lp-gold"
       :ui="{
         label: '@min-700:block @max-700:hidden font-semibold',
-        leadingIcon: 'text-vanguard/90!',
+        leadingIcon: 'text-vanguard/90!'
       }"
       :label="`${roundDecimal(player.stats.goldEarned / 1000)}k`"
       color="neutral"
@@ -26,7 +28,7 @@ const {
     <template #content>
       <ul>
         <li>
-          <Icon name="lol:gold" class="mr-1 inline size-3.5 text-nc" />
+          <Icon name="i-lp-gold" class="mr-1 inline size-3.5 text-nc" />
           {{ player.stats.goldEarned.toLocaleString() }} g
         </li>
         <li>

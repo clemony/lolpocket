@@ -70,7 +70,9 @@ function onAdd(e: { oldIndex?: number }) {
     <div
       class="sticky -top-56 z-2 w-full items-center space-y-6 bg-p0/98 pt-10 pb-6 backdrop-blur-sm">
       <div class="flex items-center gap-8 px-1">
-        <h1 class="capitalize">Champions</h1>
+        <h1 class="capitalize">
+          Champions
+        </h1>
         <ChampionQuote
           v-once
           class="grow text-end text-sm font-normal text-nowrap whitespace-nowrap italic" />

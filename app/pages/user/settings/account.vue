@@ -113,7 +113,9 @@ onMounted(() => {
     <UFormField title="" description=""></UFormField>
     <fieldset id="blocked-users" class="space-y-6">
       <div class="leading-4">
-        <h4 class="mb-2 text-xl font-semibold" as="legend">Blocked Users</h4>
+        <h4 class="mb-2 text-xl font-semibold" as="legend">
+          Blocked Users
+        </h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in

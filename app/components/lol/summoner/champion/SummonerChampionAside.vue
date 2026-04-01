@@ -29,12 +29,12 @@ const routeRoot = computed(() => `/${route.params.region}/${route.params.slug}`)
 const nav = computed(() => [
   {
     label: summoner.value?.name,
-    to: routeRoot.value,
+    to: routeRoot.value
   },
   {
     label: "Champions",
-    to: `${routeRoot.value}/champions`,
-  },
+    to: `${routeRoot.value}/champions`
+  }
 ])
 </script>
 
@@ -42,7 +42,7 @@ const nav = computed(() => [
   <div class="relative w-full space-y-5">
     <UBreadcrumb :items="nav" separator-icon="i-slash" />
     <UUser
-      :avatar="{ src: `/img/champions/${champion?.id}.webp` }"
+      :avatar="{ src: `/img/champion/${champion?.id}.webp` }"
       :name="champion?.name"
       :description="champTitle" />
   </div>
@@ -89,11 +89,11 @@ const nav = computed(() => [
                 size="xs"
                 :ui="{
                   base: 'w-fit justify-start',
-                  label: 'group-hover/btn:underline on:no-underline',
+                  label: 'group-hover/btn:underline on:no-underline'
                 }"
                 :avatar="{
-                  src: `/img/champions/${k.championId}.webp`,
-                  size: '2xs',
+                  src: `/img/champion/${k.championId}.webp`,
+                  size: '2xs'
                 }">
                 {{ k.championName }}
               </UButton>

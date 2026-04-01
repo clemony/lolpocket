@@ -3,7 +3,7 @@ import { defineProvider } from "@nuxt/image/runtime"
 
 const {
   title,
-  class: className,
+  class: className
   //entry,
 } = defineProps<{
   entry: RankedEntry | undefined
@@ -18,7 +18,7 @@ const entry = {
   lp: 82,
   queue: "420",
   tier: "Emerald",
-  win: 100,
+  win: 100
 }
 const data = computed(() => {
   if (!entry) return
@@ -28,12 +28,10 @@ const data = computed(() => {
 
 <template>
   <UCard
+    variant="outline"
     :ui="{
-      root: cn(
-        'relative h-36 overflow-visible drop-shadow-sm drop-shadow-black/5',
-        className,
-      ),
-      body: 'grid h-36 w-full grid-cols-3 place-items-center',
+      root: cn('relative h-36 overflow-visible', className),
+      body: 'grid h-36 w-full grid-cols-3 place-items-center'
     }">
     <span
       class="field-legend absolute translate-x-3 -translate-y-2.5 place-self-start text-sm font-semibold tracking-tight text-n3 drop-shadow-2xs">
@@ -67,7 +65,7 @@ const data = computed(() => {
         :size="20"
         :ui="{
           label: 'text-md! font-medium text-pc!',
-          root: 'drop-shadow-sm',
+          root: 'drop-shadow-sm'
         }" />
       <!--   </div> -->
     </div>
@@ -76,7 +74,7 @@ const data = computed(() => {
       :class="
         cn(
           'flex flex-col justify-between overflow-hidden py-3 text-end font-medium',
-          { 'opacity-40': !entry },
+          { 'opacity-40': !entry }
         )
       ">
       <span class="capitalize">

@@ -26,10 +26,6 @@ const categoriesOpen = shallowRef<boolean>(true)
   <div class="grid auto-rows-max items-center gap-3">
     <!-- search -->
     <LazyLibrarySearch
-      variant="outline"
-      color="default"
-      clear-variant="ghost"
-      clear-color="p2"
       @update:model-value="(e: string) => (filters.query = e)" />
 
     <div class="flex items-center justify-between gap-6">
@@ -110,8 +106,7 @@ const categoriesOpen = shallowRef<boolean>(true)
                               ? 'scale-90'
                               : 'scale-112'
                           )
-                        "
-                    /></span>
+                        " /></span>
                   </template>
                 </UButton>
               </ListboxItem>

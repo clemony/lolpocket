@@ -1,41 +1,58 @@
 <script lang="ts" setup>
-const {
-  id,
-  name,
-  side,
-  class: className,
-  loadingType,
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  id?: number | null
-  name?: string
-  loadingType?: LoadingStyle
-  side?: Side
-}>()
-const loaded = ref(false)
+import type { AvatarProps } from "@nuxt/ui"
 
-const path = computed(() => name || (id ? pathNameById(id) : undefined))
+const props = withDefaults(
+  defineProps<
+    AvatarProps & {
+      id: number | null
+      name?: string
+      class?: HTMLAttributes["class"]
+      loadingIcon?: LoadingStyle
+      map?: number
+      side?: Side
+      disabled?: boolean
+      pin?: boolean
+      ui?: AvatarProps["ui"]
+      effects?: boolean
+    }
+  >(),
+  {
+    effects: true,
+    pin: false,
+    interactive: true
+  }
+)
+
+const delegated = reactiveOmit(props, "class")
+
+const path = computed(
+  () => props.name || (props.id ? pathNameById(props.id) : undefined)
+)
 </script>
 
 <template>
-  <Tooltip
-    :side
-    :label="path"
-    :avatar="`/img/paths/${path}.webp`"
-    :class="
-      cn(
-        'anchor size-5 h-full overflow-hidden rounded-full transition-all duration-300',
-        className
+  <Avatar
+    v-bind="delegated"
+    :ui="{
+      ...props.ui,
+      image: 'shadow-sm drop-shadow-sm drop-shadow-black/10',
+      root: cn(
+        { 'hover-3d': props.effects !== false },
+        props.ui?.root,
+        props?.class
       )
-    ">
-    <slot />
-    <Img
-      v-if="path"
-      :loading-type
-      :alt="path"
-      :src="`/img/paths/${path}.webp`"
-      :class="cn('size-full rounded-full transition-all duration-300')"
-      @click.stop
-      @load="loaded = true" />
-  </Tooltip>
+    }"
+    :src="id ? `/img/path/${path}.webp` : ''"
+    :label="id ? path : ''">
+    <template v-if="props.effects !== false">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </template>
+  </Avatar>
 </template>

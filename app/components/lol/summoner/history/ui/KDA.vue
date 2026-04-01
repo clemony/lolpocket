@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { class: className, stats } = defineProps<{
-  class?: HTMLAttributes['class']
+  class?: HTMLAttributes["class"]
   stats: Record<string, number> | MatchTeam | PlayerStats
 }>()
 </script>
@@ -9,8 +9,8 @@ const { class: className, stats } = defineProps<{
   <span
     :class="
       cn(
-        'inline align-middle text-sm leading-0 font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight',
-        className,
+        'inline justify-self-end align-middle text-sm leading-none font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight',
+        className
       )
     ">
     {{ stats.kills }}

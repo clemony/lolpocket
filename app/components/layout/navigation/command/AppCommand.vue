@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import type { PopoverProps } from "@nuxt/ui"
-import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
-import { getSummonerIcon } from "~/domain/utils/img"
 import { focusTrigger, onContentInteractOutside } from "./build/helpers"
 import { useCommandFocusNavigation } from "./build/useCommandFocusNavigation"
 
@@ -62,6 +60,8 @@ watch(
     closeCommand()
   }
 )
+
+provide("command", { close: () => closeCommand() })
 </script>
 
 <template>
@@ -76,7 +76,8 @@ watch(
       :reference="reference"
       :content="content"
       :ui="{
-        content: 'overflow-hidden rounded-xl bg-p0/94 p-0!'
+        content:
+          'z-[120] overflow-hidden rounded-xl bg-p0/96 p-0! shadow-lg shadow-black/8 drop-shadow-none backdrop-blur-sm'
       }"
       @update:open="(nextOpen) => (!nextOpen ? closeCommand() : undefined)">
       <template #content>
@@ -85,48 +86,7 @@ watch(
           class="w-179 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
           <div ref="panelMeasure" class="w-179">
-            <div
-              class="/80 flex h-10 w-full items-center justify-between border-b border-p3 pr-3.5 pl-3">
-              <UUser
-                size="2xs"
-                :ui="{
-                  root: 'gap-1',
-                  name: 'text-lg font-bold text-n2',
-                  wrapper: 'inline-flex items-center gap-1 align-baseline',
-                  description:
-                    'ml-0.5 inline-flex items-center align-baseline text-sm font-medium text-n4'
-                }"
-                :name="user().account?.name || user().account?.name || 'Hello.'"
-                :to="buildSummonerRootPath(user().account)"
-                :avatar="{
-                  src: getSummonerIcon(user().account?.icon),
-                  icon: 'i-plug'
-                }">
-                <template #description>
-                  <Icon name="i-hash" class="inline size-3.25 text-n4" />{{
-                    user().account?.tag
-                  }}
-                </template>
-              </UUser>
-              <div class="flex items-center">
-                <LazyUButton
-                  size="2xs"
-                  square
-                  to="/settings"
-                  icon="i-history"
-                  color="p2"
-                  :ui="{ leadingIcon: 'size-4.5 opacity-70' }"
-                  variant="ghost" />
-                <UButton
-                  size="2xs"
-                  square
-                  to="/settings"
-                  icon="i-gear"
-                  color="p2"
-                  :ui="{ leadingIcon: 'size-4.5 opacity-70' }"
-                  variant="ghost" />
-              </div>
-            </div>
+            <LazyCommandHeader />
             <LazyCommandMenu
               v-if="!hasQuery"
               :reference="panelMeasure"

@@ -9,7 +9,9 @@ const pocket = computed(() =>
 const pocketChampions = computed(() => pocket.value?.champions ?? [])
 
 const searchQuery = ref<string>("")
-const search = useSearch(championIndex, searchQuery)
+const search = useSearch(championIndex, searchQuery, {
+  keys: ["name", "key"]
+})
 const results = computed(() =>
   search.value.length ? search.value : championIndex
 )

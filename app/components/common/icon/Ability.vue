@@ -30,7 +30,7 @@ const pinned = shallowRef<boolean>(false)
     interactive
     arrow
     :side
-    :avatar="id ? `/img/abilities/${ability}.webp` : undefined"
+    :avatar="id ? `/img/ability/${ability}.webp` : undefined"
     :label="akey || id || ckey || ''"
     trailing-icon="i-right-click"
     :ui="{
@@ -53,7 +53,7 @@ const pinned = shallowRef<boolean>(false)
       icon="i-ui-none"
       class="size-full shrink-0"
       :alt="ability"
-      :src="`/img/abilities/${ability}.webp`"
+      :src="`/img/ability/${ability}.webp`"
       @load="loaded = true" />
     <template v-if="pinned" #content>
       <LazyAbilityTooltip v-if="id" :id />

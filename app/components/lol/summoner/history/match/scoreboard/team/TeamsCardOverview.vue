@@ -19,12 +19,12 @@ const route = useRoute()
       <UButton
         :label="player.name"
         :avatar="{
-          src: `/img/champions/${player?.championId}.webp`,
+          src: `/img/champion/${player?.championId}.webp`
         }"
         :ui="{
           label: 'text-pc normal-case',
           base: 'w-full',
-          leadingAvatar: 'ds-2xs',
+          leadingAvatar: 'ds-2xs'
         }"
         :to="buildSummonerRootPath(player)"
         size="3xs"

@@ -25,7 +25,7 @@ const stats = computed<Record<string, BarStat>>(() => {
       value: player.stats?.totalDamage ?? 0,
       icon: {
         name: "i-lp-scoreboard-sword",
-        class: "-translate-y-px scale-108 opacity-100"
+        class: " scale-116 rotate-180 opacity-100"
       }
     },
     def: {
@@ -41,16 +41,16 @@ const stats = computed<Record<string, BarStat>>(() => {
       icon: { name: "i-stat-armor" }
     },
     heal: {
-      color: "heal",
+      color: "insp",
       class:
-        "hover:bg-[color-mix(in_oklab,var(--ui-insp)_30%,var(--color-res)_10%)] bg-blend-hue hover:text-pc! hover:ring-offset-insp-100! hover:ring-insp-200!",
+        "hover:bg-insp-100  hover:backdrop-saturate-90  hover:text-pc! hover:ring-offset-insp-100! hover:ring-insp-200!",
       max:
         match.participants
           .map((p) => p.stats?.effectiveHealingAndShielding ?? 0)
           .sort((a, b) => b - a)[0] ?? 0,
       tip: "Effective Healing & Shielding",
       value: player.stats?.effectiveHealingAndShielding ?? 0,
-      icon: { name: "i-stat-health" }
+      icon: { name: "i-mage-shield-plus", class: "**:stroke-[3.4] " }
     }
   }
 })
@@ -65,17 +65,18 @@ const stats = computed<Record<string, BarStat>>(() => {
     <div
       :class="
         cn(
-          'relative flex size-full grow flex-col justify-center gap-1 rounded-lg p-1',
+          'relative flex size-full grow flex-col items-center justify-end gap-1 rounded-lg px-1 pt-1 pb-2',
           stat.class,
           className
         )
       ">
       <div
-        class="flex w-full shrink-0 items-center gap-1 text-xs leading-4 font-bold *:shrink-0">
+        class="inline-flex w-full shrink-0 items-center justify-end gap-0.5 pr-2 text-end align-middle">
         <Icon
           :name="stat.icon?.name ?? ''"
-          :class="cn('inline size-3.5 opacity-70', stat.icon?.class)" />
-        <span>
+          :class="cn('inline size-3 leading-4 opacity-70', stat.icon?.class)" />
+        <span
+          class="shrink-0 text-end align-middle text-2xs! leading-4 font-bold">
           {{
             stat?.value && roundDecimal(stat?.value / 1000) > 1
               ? `${roundDecimal(stat?.value / 1000)}k`
@@ -86,7 +87,8 @@ const stats = computed<Record<string, BarStat>>(() => {
         </span>
       </div>
       <UProgress
-        class="h-1.25 w-full bg-p3"
+        class="h-1.25 w-full max-w-12 shrink-0"
+        :ui="{ base: 'bg-p3', root: 'px-0!' }"
         :color="stat?.color"
         :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />
     </div>

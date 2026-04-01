@@ -5,8 +5,8 @@ const { class: className, src } = defineProps<{
   slice?: boolean
 }>()
 
-const fallbackSrc = "/img/art/prestige-requiem-sona.webp"
-const splashSrc = computed(() => fallbackSrc || src || fallbackSrc)
+const fallbackSrc = ""
+const splashSrc = computed(() => src || fallbackSrc)
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const splashSrc = computed(() => fallbackSrc || src || fallbackSrc)
     :class="
       cn(
         'noise absolute inset-0 top-0 left-0 flex h-full w-screen items-center justify-end overflow-hidden bg-p1',
-        className,
+        className
       )
     ">
     <div

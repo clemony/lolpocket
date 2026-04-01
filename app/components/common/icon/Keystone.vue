@@ -1,43 +1,56 @@
 <script lang="ts" setup>
-const {
-  id,
-  side,
-  class: className,
-  loadingType,
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  id: number | null
-  loadedClass?: HTMLAttributes["class"]
-  loadingType?: LoadingStyle
-  side?: Side
-}>()
-const loaded = ref(false)
+import type { AvatarProps } from "@nuxt/ui"
+
+const props = withDefaults(
+  defineProps<
+    AvatarProps & {
+      id: number | null
+      class?: HTMLAttributes["class"]
+      loadingIcon?: LoadingStyle
+      map?: number
+      side?: Side
+      disabled?: boolean
+      pin?: boolean
+      ui?: AvatarProps["ui"]
+      effects?: boolean
+    }
+  >(),
+  {
+    effects: true,
+    pin: true,
+    interactive: true
+  }
+)
+
+const delegated = reactiveOmit(props, "class")
 </script>
 
 <template>
-  <Tooltip
-    trailing-icon="i-click"
-    :side
-    :label="id ? runeNameById(id) : ''"
-    :avatar="id ? `/img/runes/${id}.webp` : undefined">
-    <Img
-      v-if="id"
-      :key="id"
-      role="button"
-      :loading-type
-      :src="`/img/runes/${id}.webp`"
-      :alt="runeNameById(id)"
-      :class="
-        cn(
-          'aspect-square size-full shrink-0 object-contain',
-          {
-            'scale-105 drop-shadow-sm drop-shadow-black/40': loaded,
-          },
-          className,
-        )
-      "
-      @load="loaded = true">
-      <slot />
-    </Img>
-  </Tooltip>
+  <Avatar
+    v-bind="delegated"
+    :ui="{
+      ...props.ui,
+      image: 'shadow-sm drop-shadow-sm drop-shadow-black/10',
+      root: cn(
+        { 'hover-3d': props.effects !== false },
+        props.ui?.root,
+        props?.class
+      )
+    }"
+    :src="id ? `/img/rune/${id}.webp` : ''"
+    :label="id ? runeNameById(id) : ''">
+    <template v-if="props.effects !== false">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </template>
+    <template #content>
+      <LazyRuneTooltip v-if="id" :id />
+    </template>
+  </Avatar>
 </template>

@@ -15,7 +15,7 @@ export const referenceItems = computed(() => {
     id: entry.id,
     value: entry.id,
     avatar: {
-      src: `/img/items/${entry.id}.webp`,
+      src: `/img/item/${entry.id}.webp`,
       size: "sm",
       icon: "i-lucide-sword",
       ui: {
@@ -40,7 +40,7 @@ export const referenceItems = computed(() => {
       value: entry.id,
       avatar: {
         size: "sm",
-        src: `/img/champions/${entry.id}.webp`,
+        src: `/img/champion/${entry.id}.webp`,
         icon: "i-lp-champ",
         ui: {
           icon: "size-4.5"
@@ -65,7 +65,7 @@ export const referenceItems = computed(() => {
       value: entry.id,
       avatar: {
         size: "sm",
-        src: `/img/runes/${entry.id}.webp`,
+        src: `/img/rune/${entry.id}.webp`,
         icon: "i-lp-rune",
         ui: {
           icon: "size-4.5"
@@ -90,7 +90,7 @@ export const referenceItems = computed(() => {
       value: entry.id,
       avatar: {
         size: "sm",
-        src: `/img/spells/${entry.id}.webp`,
+        src: `/img/spell/${entry.id}.webp`,
         icon: "i-fire",
         ui: {
           icon: "size-4.5"

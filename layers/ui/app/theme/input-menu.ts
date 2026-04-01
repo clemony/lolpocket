@@ -9,7 +9,7 @@ export const footerColumnsTheme = defineUiTheme({
     base: "",
     arrow: "fill-p0",
     content:
-      "pointer-events-auto flex max-h-60 w-(--reka-combobox-trigger-width) origin-(--reka-combobox-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/96 shadow-lg ring ring-p3 backdrop-blur-md data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
+      "pointer-events-auto z-[120] flex max-h-60 w-(--reka-combobox-trigger-width) origin-(--reka-combobox-content-transform-origin) flex-col overflow-hidden rounded-xl bg-p0/96 shadow-lg ring shadow-black/8 ring-p3 drop-shadow-none backdrop-blur-sm data-[state=closed]:animate-[scale-out_100ms_ease-in] data-[state=open]:animate-[scale-in_100ms_ease-out]",
     viewport: "relative flex-1 scroll-py-1 overflow-y-auto",
     group: "isolate p-1",
     empty: "text-center text-n5",

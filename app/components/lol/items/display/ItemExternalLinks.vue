@@ -40,9 +40,7 @@ const { item } = defineProps<{
             'italic opacity-90 group-hover/btn:underline group-hover/btn:opacity-100',
             item.rank ? itemQualityText[item.rank ?? ''] : 'text-nc/80'
           )
-        "
-        >{{ item.name }}</span
-      >
+        ">{{ item.name }}</span>
       -
       <span class="font-medium">Lol Wiki</span>
     </UButton>

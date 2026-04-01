@@ -30,7 +30,7 @@ const gridClass = "grid grid-cols-4 font-medium *:even:font-mono"
             <LazyAvatar
               v-if="id"
               size="12"
-              :src="`/img/spells/${id}.webp`"
+              :src="`/img/spell/${id}.webp`"
               :alt="`${spell?.name} Image`" />
             <!-- NAME / LINK -->
 
@@ -61,13 +61,9 @@ const gridClass = "grid grid-cols-4 font-medium *:even:font-mono"
           <span>{{ spell?.recharge }}</span>
         </div>
 
-        <p v-else :class="gridClass">
-          <span>Cooldown:</span>{{ spell?.cd }}
-        </p>
+        <p v-else :class="gridClass"><span>Cooldown:</span>{{ spell?.cd }}</p>
 
-        <p :class="gridClass">
-          <span>Range:</span> {{ spell?.range }}
-        </p>
+        <p :class="gridClass"><span>Range:</span> {{ spell?.range }}</p>
       </div>
     </div>
   </div>
