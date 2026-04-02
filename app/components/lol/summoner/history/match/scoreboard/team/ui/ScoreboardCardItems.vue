@@ -24,15 +24,10 @@ const roleItemId = computed(() => {
 <template>
   <!-- items -->
   <div
-    :class="
-      cn(
-        '@min-700:gap-4 @min-700:px-4 flex w-max items-center gap-2 px-2',
-        className
-      )
-    ">
+    :class="cn('@min-700:px-4 flex w-max items-center gap-4 px-2', className)">
     <div :class="cn('flex shrink-0 items-center gap-1 self-center')">
       <template v-for="(item, i) in player.items?.slots ?? []" :key="item">
-        <template v-if="player.role === 'bottom' ? i < 7 : i < 6">
+        <template v-if="i < 6">
           <Item
             :id="item"
             :ui="{

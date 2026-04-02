@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { MotionProps } from "motion-v"
-import type { PrimitiveProps } from "reka-ui"
-import { Primitive } from "reka-ui"
 import type { CSSProperties } from "vue"
 import { skinNameFromUrl } from "~/domain/utils/img"
 
@@ -19,7 +16,7 @@ interface CardProps {
   syncPerspective?: boolean
 }
 
-const props = withDefaults(defineProps<CardProps & Omit<MotionProps, "as">>(), {
+const props = withDefaults(defineProps<CardProps>(), {
   alt: String((src: string) => skinNameFromUrl(src ?? "") ?? "Champion splash"),
   as: "div"
 })
@@ -106,7 +103,7 @@ function handlePointerLeave() {
 </script>
 
 <template>
-  <Motion
+  <div
     ref="refElement"
     v-bind="delegated"
     :style="foilStyle"
@@ -161,7 +158,7 @@ function handlePointerLeave() {
       </div>
     </div>
     <slot />
-  </Motion>
+  </div>
 </template>
 
 <style scoped>

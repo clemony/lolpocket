@@ -9,7 +9,7 @@ const { class: className, stats } = defineProps<{
   <span
     :class="
       cn(
-        'inline justify-self-end align-middle text-sm leading-none font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight',
+        'inline align-middle text-sm leading-none font-bold tracking-tight text-nowrap whitespace-nowrap **:tracking-tight',
         className
       )
     ">

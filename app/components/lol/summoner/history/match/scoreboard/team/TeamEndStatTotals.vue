@@ -22,7 +22,7 @@ const { class: className, team } = defineProps<{
     <div
       class="inline-flex h-8 w-full items-center justify-between gap-8 align-baseline">
       <!-- WIN / LOSS -->
-      <div :class="cn('flex items-center gap-4')">
+      <div :class="cn('flex w-48 items-center gap-4')">
         <h3
           class="text-xl leading-none font-bold text-white/86 drop-shadow-2xs">
           {{ team.win ? "WIN" : "LOSS" }}
@@ -44,7 +44,11 @@ const { class: className, team } = defineProps<{
         </span>
       </div>
 
-      <div class="flex w-full items-center justify-between px-2">
+      <!-- KDA -->
+      <KDA
+        class="w-28 text-center align-baseline text-md opacity-90"
+        :stats="team" />
+      <div class="flex grow basis-1/3 items-center justify-center px-2">
         <TeamObjectives :team="team" />
       </div>
 
@@ -66,11 +70,6 @@ const { class: className, team } = defineProps<{
           " />
         {{ roundDecimal(team.gold / 1000) }}K
       </span>
-
-      <!-- KDA -->
-      <KDA
-        class="align-baseline text-md leading-none opacity-90"
-        :stats="team" />
     </div>
   </div>
 </template>

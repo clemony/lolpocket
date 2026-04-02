@@ -8,6 +8,14 @@ const REDDIT_FEED_MIN_COMMENTS = 30
 const REDDIT_FEED_MIN_SCORE = 100
 const REDDIT_EXCERPT_MAX_LENGTH = 400
 const REDDIT_URL_RE = /^https?:\/\//
+const YOUTUBE_HOSTS = new Set([
+  "youtu.be",
+  "youtube.com",
+  "www.youtube.com",
+  "m.youtube.com",
+  "youtube-nocookie.com",
+  "www.youtube-nocookie.com"
+])
 const MARKDOWN_LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g
 const MARKDOWN_IMAGE_RE = /!\[([^\]]*)\]\(([^)]+)\)/g
 const LEADING_FORMATTING_RE = /^[>#\s-]+/gm
@@ -118,6 +126,43 @@ function createRedditExcerpt(selftext?: string | null) {
   return truncateText(text, REDDIT_EXCERPT_MAX_LENGTH)
 }
 
+function extractYouTubeVideo(url?: string | null) {
+  if (!url) return { videoId: null, videoProvider: null }
+
+  let parsedUrl: URL
+
+  try {
+    parsedUrl = new URL(url)
+  } catch {
+    return { videoId: null, videoProvider: null }
+  }
+
+  if (!YOUTUBE_HOSTS.has(parsedUrl.hostname)) {
+    return { videoId: null, videoProvider: null }
+  }
+
+  if (parsedUrl.hostname === "youtu.be") {
+    const videoId = parsedUrl.pathname.slice(1) || null
+    return { videoId, videoProvider: videoId ? "youtube" : null }
+  }
+
+  if (parsedUrl.pathname === "/watch") {
+    const videoId = parsedUrl.searchParams.get("v")
+    return { videoId, videoProvider: videoId ? "youtube" : null }
+  }
+
+  const pathParts = parsedUrl.pathname.split("/").filter(Boolean)
+  const embeddedVideoId
+    = ["embed", "shorts"].includes(pathParts[0] ?? "") && pathParts[1]
+      ? pathParts[1]
+      : null
+
+  return {
+    videoId: embeddedVideoId,
+    videoProvider: embeddedVideoId ? "youtube" : null
+  }
+}
+
 function shouldPersistRedditPost(item: FeedLink) {
   return (
     item.score >= REDDIT_FEED_MIN_SCORE &&
@@ -202,6 +247,9 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
 
   if (!permalink || !url) return null
 
+  const resolvedUrl = post.is_self ? permalink : url
+  const { videoId, videoProvider } = extractYouTubeVideo(resolvedUrl)
+
   return {
     author: post.author || null,
     excerpt: post.is_self ? createRedditExcerpt(post.selftext) : null,
@@ -232,7 +280,9 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
     subreddit: post.subreddit,
     thumbnail_url: thumbnail,
     title: post.title,
-    url: post.is_self ? permalink : url
+    url: resolvedUrl,
+    video_id: videoId,
+    video_provider: videoProvider
   }
 }
 

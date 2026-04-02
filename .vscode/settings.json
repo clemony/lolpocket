@@ -12,6 +12,14 @@
     "*.css": "tailwindcss"
   },
 
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true
+  },
+
   "typescript.tsdk": "node_modules/typescript/lib",
 
   "[typescript]": {

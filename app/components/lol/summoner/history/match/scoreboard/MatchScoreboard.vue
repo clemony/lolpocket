@@ -31,41 +31,14 @@ const red = computed(() => ({
         body: 'relative grid w-full max-w-full auto-cols-max auto-rows-max place-items-center items-center gap-x-3 gap-y-4 overflow-hidden px-3! py-2.25! **:select-none'
       }">
       <template #header>
-        <!-- Blue Stats -->
         <TeamEndStatTotals v-if="t" :team="t.stats" />
       </template>
-      <TeammateCard
+      <LazyTeammateCard
         v-for="player in t.players"
         :key="player.puuid"
+        hydrate-on-visible
         :match
         :player="player" />
     </UCard>
   </div>
-  <!--
-   <div class="flex w-full flex-col gap-2 overflow-visible pb-1">
-
-    <TeamMatchEndStats
-      :team="match.teams[0]"
-      class="mt-3 from-insp/60 shadow-warm-soft" />
-
-    <div class="size-full">
-      <MatchTeammate
-        v-for="(player, i) in teams.blue"
-        :key="i"
-        :match
-        :player="player" />
-    </div>
-
-    <TeamMatchEndStats
-      :team="match.teams[1]"
-      class="from-dom/60 shadow-warm-soft" />
-
-    <div class="size-full">
-      <MatchTeammate
-        v-for="(player, i) in teams.red"
-        :key="i"
-        :player="player"
-        :match />
-    </div>
-  </div> -->
 </template>

@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import { pathIndex } from "#shared/constants/runes/pathIndex"
 import { runeIndex } from "#shared/constants/runes/runeIndex"
-import Path from "~/components/common/icon/Path.vue"
 
 const { class: className, player } = defineProps<{
   player: Player
@@ -12,28 +10,22 @@ const s = computed(() => player?.runes?.secondary.path)
 const keystone = computed(() =>
   runeIndex.find((r) => r.id === player.runes?.keystone)
 )
-console.log(
-  "🥸 - player?.runes?.secondary.path:",
-  player?.runes?.secondary.path
-)
 </script>
 
 <template>
   <div
     :class="
       cn(
-        'mx-2 -mt-px flex size-full w-max shrink-0 flex-col place-items-center gap-1',
+        'mx-2 -mt-0.75 flex size-full w-max shrink-0 flex-col place-items-center gap-0.75',
         className
       )
     ">
-    <Keystone
-      :id="keystone?.id ?? null"
-      class="size-7.5 transition-all duration-300 hover:scale-120" />
+    <HoverIcon :id="keystone?.id ?? null" size="md" type="keystone" />
 
     <HoverIcon
       v-if="player?.runes?.secondary.path"
       :id="s"
-      type="path"
-      class="size-6 transition-all duration-300 hover:scale-120" />
+      size="xs"
+      type="path" />
   </div>
 </template>

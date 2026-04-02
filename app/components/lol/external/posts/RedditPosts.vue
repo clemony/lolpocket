@@ -10,7 +10,6 @@ const { data: feed } = await useFetch<FeedListResponse>("/api/feed/reddit", {
   <UCarousel
     :items="feed?.items"
     dots
-    loop
     :slides-to-scroll="1"
     wheel-gestures
     next-icon="i-right"

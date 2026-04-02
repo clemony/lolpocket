@@ -56,14 +56,13 @@ const classes =
   </div>
 
   <!-- kda -->
-  <div class="col-start-3 flex h-fit w-28 flex-col items-center gap-0.5">
+  <div class="col-start-3 flex h-fit w-26 flex-col items-center gap-0.5">
     <KDA :stats="player.stats" />
 
     <ScoreboardStatPanel class="" :player />
   </div>
   <!-- PROGRESS STAT ROW -->
-  <div
-    class="col-start-4 grid w-full max-w-52 grid-cols-3 items-center -space-y-1">
+  <div class="col-start-4 grid w-full max-w-52 grid-cols-3 items-center">
     <TeammateStatProgressBars :match :player />
   </div>
 

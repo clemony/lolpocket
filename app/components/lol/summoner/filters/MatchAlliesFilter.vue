@@ -29,7 +29,6 @@ const alliesList = computed(() =>
       }
     })
 )
-console.log("🥸 - alliesList:", alliesList)
 </script>
 
 <template>

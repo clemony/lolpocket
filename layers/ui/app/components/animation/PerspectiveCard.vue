@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Primitive } from "reka-ui"
 import type { CSSProperties } from "vue"
 
 interface Props {
@@ -82,7 +81,7 @@ function handlePointerLeave() {
 </script>
 
 <template>
-  <Motion
+  <div
     ref="root"
     v-bind="props"
     :style="rootStyle"
@@ -99,5 +98,5 @@ function handlePointerLeave() {
       ">
       <slot />
     </div>
-  </Motion>
+  </div>
 </template>

@@ -179,6 +179,8 @@ export interface Database {
           title: string
           updated_at: string
           url: string
+          video_id: string | null
+          video_provider: string | null
         }
         Insert: {
           author?: string | null
@@ -201,6 +203,8 @@ export interface Database {
           title: string
           updated_at?: string
           url: string
+          video_id?: string | null
+          video_provider?: string | null
         }
         Update: {
           author?: string | null
@@ -223,6 +227,8 @@ export interface Database {
           title?: string
           updated_at?: string
           url?: string
+          video_id?: string | null
+          video_provider?: string | null
         }
         Relationships: []
       }

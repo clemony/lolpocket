@@ -35,6 +35,8 @@ export const feedLinkSchema = v.object({
   title: v.pipe(v.string(), v.minLength(1)),
   updated_at: v.optional(v.string()),
   url: v.pipe(v.string(), v.url()),
+  video_id: v.optional(v.nullable(v.string())),
+  video_provider: v.optional(v.nullable(v.string())),
 })
 
 export const feedListQuerySchema = v.object({

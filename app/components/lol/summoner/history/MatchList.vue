@@ -10,7 +10,7 @@ const { loading, loadingOlder, loadMessage, matches } = storeToRefs(sMatches())
 const hasMatches = computed(() => filteredMatches.value?.length > 0)
 const virtualize = computed(() => ({
   estimateSize: 156,
-  overscan: 8,
+  overscan: 2,
   gap: 12,
   paddingStart: 4,
   paddingEnd: 8,
@@ -62,7 +62,7 @@ const virtualize = computed(() => ({
         root: 'min-h-0 w-full flex-1 overflow-x-visible! pr-1 pb-2',
         item: 'overflow-x-visible!'
       }">
-      <MatchCard :key="item.matchId" :match="item" />
+      <LazyMatchCard :key="item.matchId" :match="item" />
     </UScrollArea>
 
     <div v-if="matches?.length" class="grid h-32 place-items-center">

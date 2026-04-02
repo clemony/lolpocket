@@ -35,15 +35,7 @@
   }
   /* images */
 
-  .img-active {
-    @apply
-      bg-p3/60 ring-pc/60 transition-all duration-200
-      hover:ring
-    ;
-  }
-  .no-img {
-    @apply pointer-events-none border border-p3;
-  }
+
 
   .icon-grid-style {
     @apply

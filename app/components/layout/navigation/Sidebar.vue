@@ -208,7 +208,6 @@ const items = [
           label="Resources" />
       </template>
     </UDropdownMenu>
-    <TestingMenu />
     <Grow />
     <!-- user -->
     <UDropdownMenu

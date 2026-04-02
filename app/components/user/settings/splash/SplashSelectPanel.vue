@@ -13,7 +13,6 @@ const { class: className } = defineProps<
 
 const emit = defineEmits<{ close: [boolean]; updateSplash: [string | ""] }>()
 
-const champQuery = ref<string | null>("")
 const isOpen = ref(false)
 const selectedChampion = ref<string | null>(null)
 const searchQuery = ref<string>("")
@@ -33,7 +32,6 @@ const result = computed(() => {
 })
 
 function reset() {
-  champQuery.value = ""
   searchQuery.value = ""
   selectedChampion.value = null
 }
@@ -44,92 +42,156 @@ watch(isOpen, (open) => {
   if (!open) reset()
 })
 
-const btnProps: ButtonProps = {
-  color: "p0",
-  size: "md",
-  ui: {
-    base: " bg-p1/70 disabled:opacity-50  inset-ring-p3/60 backdrop-blur-sm rounded-full"
-  }
+const btnProps: ButtonProps & { tabindex?: string } = {
+  color: "neutral",
+  variant: "soft",
+  size: "xs",
+  tabindex: "-1",
+  square: true
 }
 
+const toast = useToast()
 function update(skin: Skin) {
+  console.log("🥸 - update - skin:", skin)
   emit(
     "updateSplash",
     skin && selectedChampion.value
       ? getSplash(String(selectedChampion.value), "centered", skin)
       : ""
   )
-  emit("close", true)
+  isOpen.value = false
+  toast.add({
+    title: "Profile splash successfully updated!",
+    color: "neutral",
+    orientation: "horizontal",
+    icon: "check-solid"
+  })
 }
+
+const utils = [
+  {
+    label: "Reset",
+    icon: "i-refresh",
+    onClick: () => {
+      emit("updateSplash", "")
+      emit("close", true)
+    }
+  },
+  {
+    label: "Random",
+    icon: "i-shuffle",
+    onClick: () => getRandomSplash()
+  },
+  {
+    label: "Close",
+    icon: "i-x",
+    ui: {
+      leadingIcon: "**:stroke[2.2]"
+    },
+    onClick: () => emit("close", true)
+  }
+]
 </script>
 
 <template>
   <UModal
+    v-model:open="isOpen"
     :close="{ onClick: () => emit('close', false) }"
     :ui="{
-      body: 'rounded-3xl bg-p0/90 px-8! pt-7! shadow-sm shadow-black/16 ring-p3/60 backdrop-blur-sm',
-      header:
-        'flex h-(--ui-header-height) w-full shrink-0 items-center gap-3 border-0 px-1!',
+      body: 'rounded-[1.6rem]! bg-p1/90 px-8! pt-7! shadow-sm shadow-black/16 ring-p3/60 backdrop-blur-sm',
+      header: 'flex h-24 w-full shrink-0 items-center gap-3 border-0 px-1!',
       content:
-        '@container size-full max-h-[60vh]! max-w-300 gap-3! rounded-[1.8rem]! bg-neutral/30 p-2 ring-n5/50 backdrop-blur-md',
+        '@container size-full max-h-[60vh]! max-w-300 gap-3! rounded-[1.8rem]! bg-neutral/30 px-2.5 py-2 ring-n5/50 backdrop-blur-md',
       close: 'fixed top-5 right-5 -z-1'
     }">
     <slot />
     <template #header>
-      <UTooltip text="Close" :content="offsetTooltipContent">
-        <UButton v-bind="btnProps" icon="i-x" @click="emit('close', true)" />
-      </UTooltip>
-      <UTooltip
-        class="ml-5"
-        text="Back"
-        as-child
-        :content="offsetTooltipContent">
-        <UButton
-          :disabled="!selectedChampion"
-          v-bind="btnProps"
-          icon="i-arrow-left"
-          @click="selectedChampion = null" />
-      </UTooltip>
-      <UInput
-        v-model:model-value="searchQuery"
-        placeholder="Search Champions..."
-        :ui="{
-          leadingIcon: 'ml-1 size-5 text-n5/80',
-          root: 'mr-5 grow',
-          base: 'w-full rounded-3xl! border-0 bg-n2/30 pl-11! inset-ring! inset-ring-n4/60 backdrop-blur-sm placeholder:text-n5 focus-visible:inset-ring-n5'
-        }"
-        size="lg"
-        icon="search">
-        <template #trailing>
-          <InputClear v-if="searchQuery" @clear-input="searchQuery = ''" />
-          <div v-else class="flex">
-            <UKbd
-              v-for="(k, i) in user().hotkeys?.search"
-              :key="i"
+      <div class="w-full space-y-3">
+        <div class="flex w-full items-center justify-end gap-1.5 pr-1">
+          <!-- UTILS -->
+          <UTooltip
+            v-for="v in utils"
+            :key="v.label"
+            :text="v.label"
+            :content="offsetTooltipContent">
+            <UButton
+              v-bind="btnProps"
+              :ui="{
+                base: 'rounded-full p-0!',
+                leadingIcon: cn('opacity-40', v?.ui?.leadingIcon)
+              }"
+              :icon="v.icon"
+              @click="v.onClick" />
+          </UTooltip>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="flex w-full max-w-full items-center gap-3 overflow-hidden">
+          <UTooltip
+            class=""
+            text="Back"
+            as-child
+            :content="offsetTooltipContent">
+            <!-- BACK -->
+            <UButton
+              :disabled="!selectedChampion"
+              color="neutral"
+              tabindex="-1"
               square
-              variant="ghost"
-              :value="k"
-              class="text-n5! **:text-n5!" />
+              :ui="{
+                base: 'min-h-10.5! min-w-10.5! shrink-0 rounded-full ring inset-ring-0 ring-n5/30'
+              }"
+              :variant="selectedChampion ? 'soft' : 'ghost'"
+              icon="i-arrow-left"
+              @click="selectedChampion = null" />
+          </UTooltip>
+
+          <!-- BOX -->
+          <div
+            v-auto-animate
+            class="flex min-h-11 w-full max-w-28 items-center gap-2 overflow-hidden rounded-3xl! bg-n2/30 pr-1 pl-3 inset-ring! inset-ring-n4/60 backdrop-blur-sm placeholder:text-n5 focus-visible:inset-ring-n5">
+            <Icon
+              name="i-search"
+              class="pointer-events-none ml-1 size-5 text-n5/80" />
+            <UButton
+              v-if="selectedChampion"
+              size="sm"
+              trailing-icon="i-x"
+              color="neutral"
+              :ui="{
+                base: 'bg-n2/80! hover:bg-n0/60! hover:inset-shadow-xs',
+                trailingIcon: 'size-3'
+              }"
+              variant="soft"
+              :label="champNameByKey(selectedChampion)"
+              @click="reset()" />
+            <UInput
+              v-model:model-value="searchQuery"
+              v-auto-animate
+              variant="none"
+              placeholder="Search Champions..."
+              :ui="{
+                leading: 'relative ml-1 flex items-center gap-1.5',
+                root: 'grow',
+                base: 'w-full border-0 bg-transparent ring-0 outline-0 focus-visible:ring-0 focus-visible:outline-0'
+              }"
+              size="lg">
+              <template #trailing>
+                <InputClear v-if="searchQuery" @clear-input="reset()" />
+                <div v-else class="flex">
+                  <UKbd
+                    v-for="(k, i) in user().hotkeys?.search"
+                    :key="i"
+                    square
+                    variant="ghost"
+                    :value="k"
+                    class="text-n5! **:text-n5!" />
+                </div>
+              </template>
+            </UInput>
           </div>
-        </template>
-      </UInput>
-      <UTooltip text="Reset to Automatic" :content="offsetTooltipContent">
-        <UButton
-          v-bind="btnProps"
-          icon="i-refresh"
-          @click="
-            () => {
-              emit('updateSplash', '')
-              emit('close', true)
-            }
-          " />
-      </UTooltip>
-      <UTooltip text="Randomize" :content="offsetTooltipContent">
-        <UButton
-          v-bind="btnProps"
-          icon="i-shuffle"
-          @click="getRandomSplash()" />
-      </UTooltip>
+        </div>
+      </div>
     </template>
     <template #body>
       <Listbox
@@ -158,7 +220,7 @@ function update(skin: Skin) {
       <SplashSelectPicker
         v-else
         :selected-champion="selectedChampion"
-        @update="update" />
+        @update="(e: Skin) => update(e)" />
       <VisuallyHidden>
         <DialogTitle>Select a custom profile splash.</DialogTitle>
       </VisuallyHidden>

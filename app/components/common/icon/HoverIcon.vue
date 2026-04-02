@@ -80,14 +80,29 @@ const types = {
     v-bind="delegated"
     :ui="{
       ...props.ui,
-      image: 'shadow-sm drop-shadow-sm drop-shadow-black/10',
+      image: cn('shadow-sm drop-shadow-sm drop-shadow-black/10', {
+        'bg-transparent shadow-none inset-shadow-none ring-0 noise-0': [
+          'path',
+          'keystone'
+        ].includes(props.type)
+      }),
       root: cn(
-        { 'hover-3d': props.effects !== false },
+        {
+          'hover-3d': props.effects !== false,
+          'bg-transparent shadow-none inset-shadow-none ring-0 noise-0': [
+            'path',
+            'keystone'
+          ].includes(props.type)
+        },
         props.ui?.root,
         props?.class
       )
     }"
-    :src="props.id ? `/img/${props.type}/${props.id}.webp` : ''"
+    :src="
+      props.id
+        ? `/img/${props.type === 'keystone' ? 'rune' : props.type}/${props.id}.webp`
+        : ''
+    "
     :label="props.id ? types[props.type]?.label(props.id) : ''">
     <template v-if="props.effects !== false">
       <div></div>
@@ -103,7 +118,8 @@ const types = {
       <component
         :is="types[props.type]?.component"
         v-if="props.id"
-        :id="props.id" />
+        :id="props.id"
+        :map="props?.map" />
     </template>
   </Avatar>
 </template>

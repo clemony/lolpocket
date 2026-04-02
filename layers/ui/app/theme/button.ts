@@ -1,3 +1,4 @@
+import { cn } from "~~/layers/lib/app/utils/tw"
 import { colors } from "./colors"
 import { defineUiTheme } from "./defineUiTheme"
 export const buttonTheme = defineUiTheme({
@@ -7,7 +8,7 @@ export const buttonTheme = defineUiTheme({
     leadingAvatarSize: "",
     leadingIcon: "pointer-events-none shrink-0 group-hover/btn:opacity-100",
     trailingIcon: "pointer-events-none shrink-0",
-    base: "group/btn inline-flex shrink-0 cursor-pointer items-center overflow-hidden border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
+    base: "group/btn ring-unset inline-flex shrink-0 cursor-pointer items-center overflow-hidden border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
   },
   variants: {
     color: Object.fromEntries(
@@ -93,7 +94,7 @@ export const buttonTheme = defineUiTheme({
       highlight: "btn btn-ghost",
       ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
       link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",
-      soft: "border border-p4/80 shadow-morphic transition-all duration-200 hover:shadow-none hover:inset-shadow-morphic",
+      soft: "btn border-0 shadow-sm ring-0",
       "ghost-soft":
         "hover:shadow-unset border border-transparent hover:border-p4/80 hover:inset-shadow-morphic-sm hover:fx-1 data-[state=active]:border-p4/80 data-[state=active]:shadow-morphic data-[state=active]:transition-all data-[state=active]:duration-200 data-[state=active]:hover:shadow-none"
     },
@@ -123,6 +124,64 @@ export const buttonTheme = defineUiTheme({
     }
   },
   compoundVariants: [
+    /* NEUTRAL */
+    {
+      color: "neutral",
+      variant: "solid",
+      class: {
+        base: "bg-neutral font-semibold inset-shadow-black/4 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-p1 disabled:shadow-none disabled:ring disabled:inset-shadow-xs disabled:ring-p3/80 on:text-nc on:btn-neutral",
+        leadingIcon:
+          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc group-data-[state=open]/btn:**:text-nc group-on/btn:**:text-nc",
+        trailingIcon:
+          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc"
+      }
+    },
+    {
+      color: "neutral",
+      variant: "soft",
+      class: {
+        base: cn(
+          "bg-n0/60! font-semibold inset-ring inset-ring-n5/30 backdrop-blur-sm btn-neutral",
+          "hover:bg-n1/40! focus-visible:bg-n3/20 focus-visible:inset-ring-n5/80",
+          "active:bg-n3/40 active:btn-neutral",
+          "disabled:bg-n3/60! disabled:shadow-none disabled:inset-shadow-xs disabled:inset-ring-n5/30 on:text-nc on:btn-neutral"
+        ),
+        leadingIcon: cn(
+          "focus-group-visible/btn:**:text-nc",
+          "**:text-nc/80 group-hover/btn:**:text-nc",
+          "group-data-[state=open]/btn:**:text-nc",
+          "group-active/btn:**:text-nc",
+          "text-nc/80 group-on/btn:**:text-nc",
+          "group-disabled/btn:**:text-nc/40"
+        ),
+        label: "text-nc/80",
+        trailingIcon:
+          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc"
+      }
+    },
+    {
+      color: "neutral",
+      variant: "ghost",
+      class: {
+        base: "btn text-pc btn-ghost hover:bg-neutral! hover:btn-neutral hover:**:text-nc! active:bg-neutral! active:btn-neutral active:**:text-nc! on:bg-neutral! on:btn-neutral",
+        leadingIcon:
+          "text-nc group-hover/btn:**:text-nc group-disabled/btn:text-nc/40"
+      }
+    },
+    {
+      color: "neutral",
+      variant: "link",
+      class: "[&>[data-slot=label]]:text-nc [&>[data-slot=label]]:decoration-nc"
+    },
+    {
+      color: "neutral",
+      variant: "outline",
+      class: {
+        base: "btn border-none bg-transparent text-nc ring-nc/80 btn-outline hover:text-pc",
+        leadingIcon: "text-nc group-hover/btn:**:text-pc",
+        trailingIcon: "text-nc group-hover/btn:**:text-pc"
+      }
+    },
     /* SOLID */
     {
       color: "transparent",
@@ -159,17 +218,6 @@ export const buttonTheme = defineUiTheme({
         base: "btn border-p4 bg-p3 text-pc ring-p3"
       }
     },
-    {
-      color: "neutral",
-      variant: "solid",
-      class: {
-        base: "btn bg-neutral font-semibold ring-0 inset-shadow-black/4 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-p1 disabled:shadow-none disabled:ring disabled:inset-shadow-xs disabled:ring-p3/80 on:text-nc on:btn-neutral",
-        leadingIcon:
-          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc group-data-[state=open]/btn:**:text-nc group-on/btn:**:text-nc",
-        trailingIcon:
-          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc"
-      }
-    },
     /* GHOST */
     {
       color: "p0",
@@ -200,26 +248,10 @@ export const buttonTheme = defineUiTheme({
       }
     },
     {
-      color: "neutral",
-      variant: "ghost",
-      class: {
-        base: "btn text-pc btn-ghost hover:bg-neutral! hover:btn-neutral hover:**:text-nc! active:bg-neutral! active:btn-neutral active:**:text-nc! on:bg-neutral! on:btn-neutral"
-      }
-    },
-    {
       color: ["p1", "p2", "p3"],
       variant: "outline",
       class: {
         base: "btn border-none bg-transparent text-pc ring-p3 btn-outline"
-      }
-    },
-    {
-      color: "neutral",
-      variant: "outline",
-      class: {
-        base: "btn border-none bg-transparent text-nc ring-nc/80 btn-outline hover:text-pc",
-        leadingIcon: "text-nc group-hover/btn:**:text-pc",
-        trailingIcon: "text-nc group-hover/btn:**:text-pc"
       }
     },
     // highlight
@@ -245,11 +277,6 @@ export const buttonTheme = defineUiTheme({
       variant: "link",
       class:
         "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc"
-    },
-    {
-      color: "neutral",
-      variant: "link",
-      class: "[&>[data-slot=label]]:text-nc [&>[data-slot=label]]:decoration-nc"
     },
     {
       variant: ["soft", "ghost-soft"],
@@ -284,7 +311,8 @@ export const buttonTheme = defineUiTheme({
       size: "xs",
       square: true,
       class: {
-        base: "size-7"
+        base: "size-7",
+        leadingIcon: "size-3.5"
       }
     },
     {
@@ -313,34 +341,6 @@ export const buttonTheme = defineUiTheme({
       square: true,
       class: {
         base: "size-14"
-      }
-    },
-    {
-      class: {
-        base: "rounded-lg"
-      },
-      rounded: false,
-      size: ["sm", "md", "lg", "xl", "2xl"]
-    },
-    {
-      class: {
-        base: "rounded-md"
-      },
-      rounded: false,
-      size: ["xs"]
-    },
-    {
-      class: {
-        base: "rounded-md"
-      },
-      rounded: false,
-      size: ["3xs", "2xs"]
-    },
-    {
-      rounded: true,
-      size: ["3xs", "2xs", "xs", "sm", "md", "lg", "xl"],
-      class: {
-        base: "rounded-full!"
       }
     },
     /*     {

@@ -13,6 +13,28 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
   Gameplay: "insp",
   News: "dom"
 }
+const WWW = /^www\./
+function getYouTubeVideoId(url?: string | null) {
+  if (!url) return null
+
+  const parsed = new URL(url)
+  const host = parsed.hostname.replace(WWW, "")
+
+  if (host === "youtu.be") return parsed.pathname.slice(1) || null
+
+  if (["youtube.com", "m.youtube.com"].includes(host)) {
+    if (parsed.pathname === "/watch") return parsed.searchParams.get("v")
+    if (parsed.pathname.startsWith("/shorts/"))
+      return parsed.pathname.split("/")[2] || null
+    if (parsed.pathname.startsWith("/embed/"))
+      return parsed.pathname.split("/")[2] || null
+  }
+
+  return null
+}
+
+const youtubeVideoId = computed(() => getYouTubeVideoId(post.url))
+console.log("🥸 - youtubeVideoId:", youtubeVideoId)
 </script>
 
 <template>
@@ -30,8 +52,9 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
             ? 'text-[1.6rem] line-clamp-none'
             : 'line-clamp-2'
       ),
+      header: 'pointer-events-auto! z-3!',
       body: cn(
-        'flex min-h-0 flex-1 grow flex-col overflow-hidden pb-2!',
+        'z-0! flex min-h-0 flex-1 grow flex-col overflow-hidden pb-2!',
         !post.preview_image_url && !post.thumbnail_url ? 'px-0!' : 'px-2!'
       ),
       authors: 'mt-full justify-self-end',
@@ -65,5 +88,31 @@ const badgeColor: Record<string, BadgeProps["color"]> = {
         size: 'xs'
       }
     ]"
-    :image="post.preview_image_url || post.thumbnail_url || undefined" />
+    :image="post.preview_image_url || post.thumbnail_url || undefined">
+    <template v-if="youtubeVideoId" #header>
+      <VideoModal :post :video-id="youtubeVideoId">
+        <UCard
+          as="button"
+          :ui="{
+            root: 'group/card grid size-full cursor-pointer overflow-hidden bg-neutral/90 p-0',
+            body: 'grid size-full place-items-center overflow-hidden'
+          }">
+          <NuxtImg
+            :src="(post.preview_image_url || post.thumbnail_url) ?? ''"
+            :alt="post.title"
+            :width="400"
+            :height="300"
+            :quality="50"
+            format="webp"
+            class="transition-scale pointer-events-none z-0 size-full object-cover duration-200 group-hover/card:scale-120" />
+
+          <PlayIcon />
+
+          <Icon
+            name="i-open"
+            class="pointer-events-none absolute top-3 right-3 z-1 size-5.5 text-nc/80" />
+        </UCard>
+      </VideoModal>
+    </template>
+  </UBlogPost>
 </template>

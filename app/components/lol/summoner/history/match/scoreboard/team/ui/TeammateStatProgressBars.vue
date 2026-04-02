@@ -57,21 +57,17 @@ const stats = computed<Record<string, BarStat>>(() => {
 </script>
 
 <template>
-  <Tooltip
-    v-for="stat in stats"
-    :key="stat.color"
-    :label="stat.tip"
-    class="size-full">
+  <Tooltip v-for="stat in stats" :key="stat.color" :label="stat.tip" as-child>
     <div
       :class="
         cn(
-          'relative flex size-full grow flex-col items-center justify-end gap-1 rounded-lg px-1 pt-1 pb-2',
+          'relative grid w-full max-w-16 min-w-16 items-center justify-end gap-px rounded-lg p-2',
           stat.class,
           className
         )
       ">
       <div
-        class="inline-flex w-full shrink-0 items-center justify-end gap-0.5 pr-2 text-end align-middle">
+        class="inline-flex w-full shrink-0 grow items-center justify-end gap-0.5 text-end align-middle">
         <Icon
           :name="stat.icon?.name ?? ''"
           :class="cn('inline size-3 leading-4 opacity-70', stat.icon?.class)" />
@@ -87,8 +83,10 @@ const stats = computed<Record<string, BarStat>>(() => {
         </span>
       </div>
       <UProgress
-        class="h-1.25 w-full max-w-12 shrink-0"
-        :ui="{ base: 'bg-p3', root: 'px-0!' }"
+        :ui="{
+          base: 'h-1.25 w-full grow bg-p3',
+          root: 'w-full shrink-0 grow'
+        }"
         :color="stat?.color"
         :model-value="roundDecimalToPercent(stat?.value, stat?.max)" />
     </div>

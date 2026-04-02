@@ -27,22 +27,22 @@ const emit = defineEmits(["updateSplash"])
       <UTooltip
         v-for="skin in skinIndex[selectedChampion]"
         :key="skin.name"
+        as-child
         :content="{ side: 'top', sideOffset: 4 }"
         :text="`${skin.name} ${selectedChampion}`">
         <button
-          v-motion
-          layout
           :class="
             cn(
-              'group/card flex grow cursor-pointer',
+              'group/card cursor-pointer',
               'basis-[calc(100%/var(--cols)-var(--gap)/var(--cols)*(var(--cols)-1))]'
             )
           "
           @click="emit('updateSplash', skin)">
           <PerspectiveCard
             :ui="{
+              root: 'pb-1',
               container:
-                'relative flex grow overflow-hidden rounded-xl bg-p1/90 p-3 shadow-sm inset-ring inset-ring-p3/80 backdrop-blur-sm transition-all duration-300 group-hover/card:gap-[calc(((var(--spacing)*3)*2)+var(--gap))]'
+                'relative flex size-full items-center overflow-visible rounded-xl bg-p1/90 p-3 shadow-sm inset-ring inset-ring-p3 backdrop-blur-sm'
             }">
             <LazySplashCard
               sync-perspective

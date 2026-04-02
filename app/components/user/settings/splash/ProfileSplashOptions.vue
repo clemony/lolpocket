@@ -17,8 +17,6 @@ const card = {
   avatar: "size-36 rounded-lg"
 }
 
-const isOpen = ref(false)
-
 const currentSplash = computed(
   () => user().account?.splash?.replace("uncentered", "tile") ?? ""
 )
@@ -37,7 +35,6 @@ const { top } = useChampions({ puuid: accountPuuid.value, matches: matchData })
 function handleSplash(e: string) {
   const account = user().account
   if (account) account.splash = e
-  isOpen.value = false
 }
 </script>
 
@@ -80,7 +77,7 @@ function handleSplash(e: string) {
         </div>
       </div>
     </UButton>
-    <SplashSelectPanel>
+    <SplashSelectPanel @update-splash="(e) => handleSplash(e)">
       <UButton
         :active="currentSplash !== null"
         :avatar="{

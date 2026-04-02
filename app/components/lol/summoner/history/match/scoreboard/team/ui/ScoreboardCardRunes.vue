@@ -9,20 +9,25 @@ const { player, classes } = defineProps<{
 
 <template>
   <!-- runes -->
-  <div
-    class="pointer-events-none z-1 flex h-full translate-x-1.25 flex-col items-center gap-px *:pointer-events-auto">
+  <UAvatarGroup
+    :ui="{
+      root: 'pointer-events-none z-1 flex h-full translate-x-1.25 flex-col justify-center *:pointer-events-auto'
+    }">
     <!-- keystone -->
-    <Keystone
+    <HoverIcon
       :id="player?.runes?.keystone"
+      type="keystone"
+      size="2xs"
       :ui="{
-        root: cn('rounded-full bg-neutral', classes)
-      }"
-      class="size-4.5" />
+        root: cn('bg-neutral', classes)
+      }" />
 
     <!-- path -->
 
-    <Path
+    <HoverIcon
       :id="player?.runes?.secondary?.path"
-      class="transition-scale size-4.5 rounded-full bg-neutral duration-300 *:size-4 hover:scale-130" />
-  </div>
+      type="path"
+      size="2xs"
+      class="bg-neutral" />
+  </UAvatarGroup>
 </template>

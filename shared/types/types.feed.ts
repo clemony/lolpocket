@@ -1,4 +1,5 @@
 export type FeedSource = "reddit"
+export type FeedVideoProvider = "youtube"
 
 export interface FeedLinkMetadata {
   authorIsBlocked?: boolean
@@ -31,6 +32,8 @@ export interface FeedLink {
   title: string
   updated_at?: string
   url: string
+  video_id?: string | null
+  video_provider?: FeedVideoProvider | null
 }
 
 export interface FeedListQuery {
