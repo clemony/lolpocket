@@ -16,7 +16,7 @@
       "description": "Upon finishing marking, Master Yi reappears 75 units in the targeted direction, or in front of the target otherwise, and then becomes able to act again[ after 0.165 seconds. ][ 1.087 seconds total after the start of the cast with 4 bounces. ]If the primary target dies or is too far away during the delay, Master Yi will reappear at the initial cast location instead."
     },
     {
-      "description": "Master Yi then detonates the marks to deal physical damage and apply on-hit effects, with on-hit damage reduced to 65% effectiveness. Marks after the first on the same target instead detonate instantly upon application to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 16.25% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
+      "description": "Master Yi then detonates the marks to deal physical damage and apply on-hit effects, with on-hit damage reduced to 75% effectiveness. Marks after the first on the same target instead detonate instantly upon application to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 18.75% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
       "leveling": [
         {
           "attribute": "Primary Physical Damage",
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "description": "Alpha Strike's primary and lesser damage can critically strike for[ (175% + 30%) and (43.75% + 7.5%) damage respectively. ][ 100% + 100% of bonus critical damage, reduced to 25% for the lesser damage. ]"
+      "description": "Alpha Strike's primary and lesser damage can critically strike for[ (200% + 30%) damage. ][ 100% + 100% of bonus critical damage. ]"
     },
     {
       "description": "Basic attacks on-hit reduce Alpha Strike's current cooldown by 1 second, affected by ability haste."

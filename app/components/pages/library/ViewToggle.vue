@@ -27,7 +27,7 @@ watch(
     <UTabs
       v-model:model-value="tab"
       :items="Object.values(tabData)"
-      variant="outline"
+      variant="pill"
       size="sm"
       color="neutral"
       :ui="{
@@ -81,8 +81,8 @@ watch(
     <Toggle
       v-model:model-value="tabToggle"
       square
-      color="p0"
-      active-color="p2"
+      color="base"
+      active-color="secondary"
       :ui="{
         base: 'rounded-full'
       }"

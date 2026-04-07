@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "200 / 300 / 400"
+              "values": "150 / 250 / 350"
             },
             {
               "unit": "% bonus AD",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overcharged:</span> Zeri gains 10% bonus movement speed and 30% bonus attack speed that is allowed to exceed her attack speed cap by the amount gained. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed and chain to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 40% AD physical damage. This damage is affected by critical strike modifiers.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overcharged:</span> Zeri gains 10% bonus movement speed and 30% bonus attack speed and an increased attack speed cap of 1.6875. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed. The first round to hit an enemy per cast instance chains electricity to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 40% AD physical damage. This damage can critically strike for (40% + 12%) AD bonus physical damage.</p>"
     },
     {
       "description": "During Overcharged, Zeri can generate stacks of Hypercharged from enemy champions that last 1.5 seconds. She generates 1 stack for each one she hits with an ability or charged attack, increased to 3 on abilities that critically strike. Subsequent hits refresh the duration of Hypercharged. Burst Fire grants stacks only against the first target hit."
@@ -44,7 +44,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/r",
-  "notes": "Lightning Crash does not interrupt Zeri's previous orders.\nZeri can stack Hypercharged up to 100,000 times.\nApplies  area damage for the nova and  proc damage for the chain lightning.\n Spell shield blocks Lightning Crash's initial nova but does not prevent Zeri from becoming Overcharged.\nIt does not block  Burst Fire's electricity chain.\n Clones count for granting Overcharge.\nLightning Crash's and  Spark Surge's empowerments to  Burst Fire can combine together.\n Burst Fire electricity chain will not chain across structures.\nEntering  resurrection causes Zeri to lose all stacks of Hypercharged.\nOvercharged is not removed, however.(note)\nZeri will not be able to gain stacks of Hypercharged again after reviving while Overcharged is active.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "Lightning Crash does not interrupt Zeri's previous orders.\nZeri can stack Hypercharged up to 100,000 times.\nApplies  area damage for the nova and  proc damage for the chain lightning.\n Spell shield blocks Lightning Crash's initial nova but does not prevent Zeri from becoming Overcharged.\nIt does not block  Burst Fire electricity chain.\n Clones count for granting Overcharge.\nLightning Crash's and  Spark Surge's empowerments to  Burst Fire can combine together.\n Burst Fire electricity chain will not trigger if the first target hit is a  ward or  trap, even if it is stealthed. [2] (bug)\n Burst Fire electricity chain will not chain across  structures.\nEntering  resurrection causes Zeri to lose all stacks of Hypercharged.\nOvercharged is not removed, however.(unexpected)\nZeri will not be able to gain stacks of Hypercharged again after reviving while Overcharged is active.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "special",

@@ -6,7 +6,7 @@ definePageMeta({
   path: "/settings/messaging",
   auth: true,
   order: 3,
-  prefix: "Settings",
+  prefix: "Settings"
 })
 </script>
 

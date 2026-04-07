@@ -11,50 +11,41 @@
       "blurb": "Innate:  Tryndamere generates  Fury on his  basic attacks,  critical strikes, and enemy kills. His Fury begins to decay after a period without dealing or taking damage.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tryndamere generates 5 Fury on his basic attacks on-hit, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p>"
         },
         {
           "description": "Tryndamere gains 0% - 50% (based on Fury) critical strike chance."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/p",
-      "notes": "Fury generation stacks additively: if the given action triggers multiple ways of generating Fury, all of them apply.\nKilling an enemy with a basic attack  basic attack generates 15 Fury (5 Fury from the  basic attack + 10 Fury from the kill).\nKilling an enemy with a  critical strike generates 20 Fury (10 Fury from the  critical strike + 10 Fury from the kill).\nThe Fury gain for killing an enemy also stacks with  Spinning Slash's Fury generation per enemy hit.\nAttacks against  structures will not grant bonus Fury, but will still reset the timer on Fury decay.\nAttacks against  wards behave like attacks on normal enemies, generating 5 Fury and resetting the decay timer. Attacks against wards can  critically strike, generating 10 Fury.\nAttacks against jungle plants will generate 5 Fury and reset the decay timer. Attacks can also  critically strike, generating 10 Fury. Additionally,  Honeyfruit drops restore 5 Fury for each pod collected and reset the decay timer.\nAttacking an  Honeyfruit and collecting the pods generates 30 Fury, or 35 Fury if the plant was hit by a  critical strike.\nFury is only granted if the  basic attack hits and will not be granted if Tryndamere cancels his attack windup.\nTryndamere will not generate Fury if the attack is  dodged.\nPENDING FOR TEST: Fury generation with parrying effects ( block,  blind)\nBattle Fury's bonus is worth  0 : 2000 (based on Fury).",
+      "notes": "Fury generation stacks additively: if the given action triggers multiple ways of generating Fury, all of them apply.\nKilling an enemy with a basic attack  basic attack generates 15 Fury (5 Fury from the  basic attack + 10 Fury from the kill).\nKilling an enemy with a  critical strike generates 20 Fury (10 Fury from the  critical strike + 10 Fury from the kill).\nThe Fury gain for killing an enemy also stacks with  Spinning Slash's Fury generation per enemy hit.\nAttacks against  structures will not grant bonus Fury, but will still reset the timer on Fury decay.\nAttacks against  wards behave like attacks on normal enemies, generating 5 Fury and resetting the decay timer. Attacks against wards can  critically strike, generating 10 Fury.\nAttacks against jungle plants will generate 5 Fury and reset the decay timer. Attacks can also  critically strike, generating 10 Fury. Additionally,  Honeyfruit drops restore 5 Fury for each pod collected and reset the decay timer.\nAttacking an  Honeyfruit and collecting the pods generates 30 Fury, or 35 Fury if the plant was hit by a  critical strike.\nFury is only granted if the  basic attack hits and will not be granted if Tryndamere cancels his attack windup.\nTryndamere will not generate Fury if the attack is  dodged or misses due to  blind.\nPENDING FOR TEST: Fury generation with parrying effects ( block)\n Sundered Sky's Lightshield Strike will generate 10 Fury.\nEffects that apply on-hit effects twice (e.g.  Dusk and Dawn's Spellblade and  Guinsoo's Rageblade's Phantom Hit) will always generate the same amount of Fury as their triggering attack.\nIf the triggering attack critically strikes, then the additional on-hit will also generate 10 Fury, if it doesn't, then the additional on-hit will generate 5 Fury.\nBattle Fury's bonus is worth  0 : 2000 (based on Fury).",
       "targeting": "Passive"
     },
     {
       "key": "Q",
       "name": "Bloodlust",
       "affects": "Self",
-      "blurb": "Passive:  Tryndamere gains  bonus attack damage, increased based on his missing health.",
+      "blurb": "Passive:  Tryndamere gains  bonus attack damage based on his missing health.",
       "castTime": "none",
       "cooldown": "12",
       "cost": "0",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tryndamere gains bonus attack damage based on his missing health, up to a maximum amount at 90% missing health.</p>",
           "leveling": [
             {
-              "attribute": "Bonus Attack Damage",
-              "modifiers": [
-                {
-                  "values": "5 / 10 / 15 / 20 / 25"
-                }
-              ]
-            },
-            {
-              "attribute": "Additional Bonus AD",
-              "modifiers": [
-                {
-                  "unit": " per 1% missing health",
-                  "values": "0.15 / 0.25 / 0.35 / 0.45 / 0.55"
-                }
-              ]
-            },
-            {
-              "attribute": "Maximum Total Bonus AD",
+              "attribute": "Maximum Bonus Attack Damage",
               "modifiers": [
                 {
                   "values": "20 / 35 / 50 / 65 / 80"
+                }
+              ]
+            },
+            {
+              "attribute": "Bonus Attack Damage per 1% missing health",
+              "modifiers": [
+                {
+                  "values": "0.22 / 0.39 / 0.56 / 0.72 / 0.89"
                 }
               ]
             }
@@ -103,7 +94,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/q",
-      "notes": "Bloodlust can still be activated even if Tryndamere does not have any Fury.\nBloodlust can be activated at any point of Tryndamere's  basic attack.\nNote that if an  basic attack will  critically strike is determined when the attack windup starts.\nThis means that if  Bloodlust is cast during Tryndamere's attack windup windup, the attack will use the  critical strike chance given by the Fury before the  Bloodlust cast.\nFurthermore, the Fury for that  basic attack will be given once the windup completes. This lets Tryndamere start building Fury immediately.\nBloodlust's  attack damage  gold value:\nAt a baseline, at minimum missing health, it is worth  175 / 350 / 525 / 700 / 875.\nAt maximum missing health, it is worth  700 / 1225 / 1750 / 2275 / 2800.\nThe bonus is worth  5.25 / 8.75 / 12.25 / 15.75 / 19.25 more per 1% missing health.",
+      "notes": "Bloodlust can still be activated even if Tryndamere does not have any Fury.\nBloodlust can be activated at any point of Tryndamere's  basic attack.\nNote that if an  basic attack will  critically strike is determined when the attack windup starts.\nThis means that if  Bloodlust is cast during Tryndamere's attack windup windup, the attack will use the  critical strike chance given by the Fury before the  Bloodlust cast.\nFurthermore, the Fury for that  basic attack will be given once the windup completes. This lets Tryndamere start building Fury immediately.\nBloodlust's  attack damage  gold value:\nAt 90% missing health, it is worth  700 / 1225 / 1750 / 2275 / 2800.\nThe bonus is worth  7.78 / 13.6125 / 19.445 / 25.2775 / 31.11 more per 1% missing health.",
       "resource": "Fury",
       "targeting": "Auto"
     },
@@ -131,14 +122,14 @@
           ]
         },
         {
-          "description": "Targets facing in the opposite direction of Tryndamere are also slowed for the duration.",
+          "description": "Tryndamere also applies a curse to all nearby enemy champions for 3.25 seconds. While accursed, they become slowed while facing in the opposite direction of Tryndamere.",
           "leveling": [
             {
               "attribute": "Slow",
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "30 / 37.5 / 45 / 52.5 / 60"
+                  "values": "30 / 35 / 40 / 45 / 50"
                 }
               ]
             }
@@ -171,11 +162,11 @@
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "75 / 105 / 135 / 165 / 195"
+                  "values": "80 / 120 / 160 / 200 / 240"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "130"
+                  "values": "100"
                 },
                 {
                   "unit": "% AP",
@@ -193,7 +184,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e",
-      "notes": "Spinning Slash's  Fury generation stacks additively with  Battle Fury's Fury generation on kill.\nKilling an minion with Spinning Slash grants 12 Fury (2 Fury from enemy hit + 10 Fury from the kill).\nKilling an champion with Spinning Slash grants 15 Fury (5 Fury from champion hit + 10 Fury from the kill).\nThere is no cooldown on Fury generation on kill with Spinning Slash.\nSpinning Slash has no minimum dash range.\n Flash will interrupt the  dash but Spinning Slash will deal damage to enemies at the new location instantly.\nEnemies already hit by Spinning Slash cannot be damaged more than once.\nTo ensure Spinning Slash deals damage when dashing away from an enemy champion, Tryndamere needs to move r-35 units towards the enemy beyond the distance he can basic attack at, where r represents the enemy's radius and 35 is the distance in units beyond Tryndamere's basic attack range that Spinning Slash can reach.\nThe cooldown reduction upon  critically striking triggers on  wards and jungle plants.\nThe cooldown reduction upon  critically striking triggers even if the attack is  blocked.\nPENDING FOR TEST:: Cooldown reduction on  critical strike interaction with parrying effects ( dodge,  blind).",
+      "notes": "Spinning Slash's  Fury generation stacks additively with  Battle Fury's Fury generation on kill.\nKilling an minion with Spinning Slash grants 12 Fury (2 Fury from enemy hit + 10 Fury from the kill).\nKilling an champion with Spinning Slash grants 15 Fury (5 Fury from champion hit + 10 Fury from the kill).\nThere is no cooldown on Fury generation on kill with Spinning Slash.\nSpinning Slash has no minimum dash range.\n Flash will interrupt the  dash but Spinning Slash will deal damage to enemies at the new location instantly.\nEnemies already hit by Spinning Slash cannot be damaged more than once.\nTo ensure Spinning Slash deals damage when dashing away from an enemy champion, Tryndamere needs to move r-35 units towards the enemy beyond the distance he can basic attack at, where r represents the enemy's radius and 35 is the distance in units beyond Tryndamere's basic attack range that Spinning Slash can reach.\nThe cooldown reduction upon  critically striking triggers on  wards and jungle plants and even if the attack is  blocked, but not if it misses due to  blind.\nPENDING FOR TEST:: Cooldown reduction on  critical strike interaction with parrying effects ( dodge).",
       "spellEffects": "aoe",
       "spellshieldable": "True",
       "targeting": "Location",
@@ -249,7 +240,8 @@
     "abilityReliance": 10,
     "difficulty": 1
   },
-  "patchLastChanged": "14.20",
+  "lore": "Fueled by unbridled fury and rage, Tryndamere once carved his way through the Freljord, openly challenging the greatest warriors of the north to prepare himself for even darker days ahead. The wrathful barbarian has long sought revenge for the annihilation of his clan, though more recently he has found companionship with Ashe, the Avarosan warmother, and a home with her people. His almost inhuman strength and fortitude is legendary, and has delivered him and his new allies countless victories against the greatest of odds.",
+  "patchLastChanged": "26.06",
   "positions": [
     "Top"
   ],
@@ -276,7 +268,6 @@
     "armor": 4.8,
     "magicResist": 2.1,
     "hpRegen": 0.9,
-    "attackDamage": 4,
     "attackSpeed": 3.4
   },
   "price": {

@@ -1,0 +1,11 @@
+{
+  "id": 550005,
+  "name": "Healthbar Cleanup: Reset Color",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "tags": []
+}

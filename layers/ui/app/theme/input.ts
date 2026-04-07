@@ -24,7 +24,6 @@ export const inputTheme = defineUiTheme({
     variant: {
       ghost:
         "bg-transparent text-pc hover:bg-p1 focus:bg-p1 disabled:bg-transparent dark:disabled:bg-transparent",
-      solid: "",
       none: "bg-transparent text-pc",
       outline:
         "focus-visible:ring-unset border border-p3 bg-default text-pc ring-0! inset-shadow-xs delay-0 hover:ring-0 focus-visible:border-pc/60! focus-visible:ring-0! focus-visible:ring-offset-0! focus-visible:outline-1!",
@@ -128,15 +127,8 @@ export const inputTheme = defineUiTheme({
     },
     {
       color: "neutral",
-      variant: "solid",
-      class:
-        "bg-neutral/96 text-nc placeholder:text-nc/70 *:first:[&_svg]:text-nc"
-    },
-
-    {
-      color: "neutral",
       variant: "soft",
-      class: "bg-n3/95 text-nc placeholder:text-nc/70 *:first:[&_svg]:text-nc"
+       class: "bg-neutral/96 text-nc ring ring-nc ring-inset placeholder:text-nc/70 hover:bg-neutral/96 focus:bg-neutral/96 disabled:bg-neutral/86 *:first:[&_svg]:text-nc"
     },
     {
       class: "ps-7",

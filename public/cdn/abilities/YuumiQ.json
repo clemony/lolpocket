@@ -55,7 +55,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Prowling Projectile always applies its enhanced slow against champions and hitting a champion grants her Best Friend bonus magic damage on-hit for 5 seconds, increased by 0% - 75% (based on Anchor's critical strike chance).</p>",
       "leveling": [
         {
-          "attribute": "Bonus Magic Damage On-Hit",
+          "attribute": "Minimum Bonus Magic Damage On-Hit",
           "modifiers": [
             {
               "values": "10 / 12 / 14 / 16 / 18 / 20"
@@ -65,12 +65,24 @@
               "values": "5"
             }
           ]
+        },
+        {
+          "attribute": "Maximum Bonus Magic Damage On-Hit",
+          "modifiers": [
+            {
+              "values": "17.5 / 21 / 24.5 / 28 / 31.5 / 35"
+            },
+            {
+              "unit": "% AP",
+              "values": "8.75"
+            }
+          ]
         }
       ]
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/q",
-  "notes": "Prowling Projectile is able to turn clockwise or counter-clockwise at a rate of 90° per 0.5 seconds. The missile can turn a maximum of 243° in both directions combined before accelerating.\nProwling Projectile can be buffered 0.5 seconds before it comes off cooldown.\nProwling Projectile is slower when  attached (before the acceleration). If Yuumi unattaches after using it, the missile will go back to its normal speed, without losing the acceleration later. This results in the fastest and longest ranged version of this ability.\nThe  Best Friend's empowerment respects  enchantment redirection.\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nN/A\n\n\nAbilities\n\n Detaching and  Final Chapter interrupt.  Zoomies is usable.\n\n\nMovement\n\nN/A\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+  "notes": "Prowling Projectile is able to turn clockwise or counter-clockwise at a rate of 90° per 0.5 seconds. The missile can turn a maximum of 243° in both directions combined before accelerating.\nProwling Projectile can be buffered 0.5 seconds before it comes off cooldown.\nThe  Best Friend's empowerment respects  enchantment redirection.\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nN/A\n\n\nAbilities\n\n Detaching and  Final Chapter interrupt.  Zoomies is usable.\n\n\nMovement\n\nN/A\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nAll summoner spells are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "950 / 850 / 1650",

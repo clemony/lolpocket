@@ -2,6 +2,10 @@
   "id": 223111,
   "name": "Mercury's Treads",
   "description": "30 Magic Resist\n30 Move Speed\n30% Tenacity\n\n",
+  "stats": {
+    "magicResistance": 30,
+    "flatMovespeed": 30
+  },
   "gold": {
     "base": 500,
     "purchasable": true,

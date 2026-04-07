@@ -2,6 +2,11 @@
   "id": 3095,
   "name": "Deprecated item",
   "description": "50 Attack Damage\n20% Attack Speed\n25% Critical Strike Chance\n\nEnergized\nMoving and Attacking generates an Energized Attack.\n\nBolt\nYour Energized Attack applies  bonus magic damage and grants 45% Movement Speed for 1.5 seconds.\n",
+  "stats": {
+    "criticalStrikeChance": 25,
+    "attackDamage": 50,
+    "attackSpeed": 20
+  },
   "gold": {
     "base": 500,
     "purchasable": true,

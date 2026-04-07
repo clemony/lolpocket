@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui"
 import { abilityResources } from "#shared/constants/champions/abilityResources"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
   class: className,
   clear = false,
-  size = ["sq-8", "8"],
+  size = ["sq-8", "8"]
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean

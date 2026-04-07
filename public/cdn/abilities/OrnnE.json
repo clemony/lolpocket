@@ -36,11 +36,11 @@
       "description": "The shockwave destroys the pillar formed by Volcanic Rupture and partially destroys terrain created by enemy champions."
     },
     {
-      "description": "Ornn cannot basic attack nor cast abilities for 0.5 seconds after the dash ends."
+      "description": "Ornn is unable to act for 0.5 seconds after the dash ends."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/e",
-  "notes": "Spell shields may only block one instance of damage.\nThe area in which enemies will be knocked up is indicated at Ornn's impact location.\nThe indicator is not shown for player-generated terrain.\n Brittle enemies without  Tenacity of their own will be  stunned for a total of 1.625 seconds.\nSearing Charge can interact with player-generated terrain.\nOrnn will not  dash after the cast time if he is  airborne or  resurrecting.\n Displacement immunity will also resist the application of the  stun.\nThe following table refers for interactions while Ornn is in cast time:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+  "notes": "Spell shields may only block one instance of damage.\nThe area in which enemies will be knocked up is indicated at Ornn's impact location.\nThe indicator is not shown for player-generated terrain.\n Brittle enemies without  Tenacity of their own will be  stunned for a total of 1.625 seconds.\nSearing Charge can interact with player-generated terrain.\nOrnn will not  dash after the cast time if he is  airborne or  resurrecting.\n Displacement immunity will also resist the application of the  stun.\nThe following table refers for interactions while Ornn is in cast time and dashing:\nThe lockout lingers briefly after the dash ends.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
   "resource": "Mana",
   "speed": "1600",
   "spellEffects": "Area of effect",

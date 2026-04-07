@@ -2,7 +2,7 @@
   "key": "P",
   "name": "Love Tap",
   "affects": "Enemies",
-  "blurb": "Innate:  Miss Fortune's basic attacks apply a mark that expires when attacking a new enemy. If the enemy was unmarked, this also deals bonus physical damage.",
+  "blurb": "Innate:  Miss Fortune's  basic attacks apply a mark that expires when attacking a new enemy. If the enemy was unmarked, this also deals bonus physical damage.",
   "damageType": "Physical damage",
   "effects": [
     {

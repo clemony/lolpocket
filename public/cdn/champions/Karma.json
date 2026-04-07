@@ -8,7 +8,7 @@
       "key": "P",
       "name": "Gathering Fire",
       "affects": "Self",
-      "blurb": "Innate:  Mantra's current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma's damaging abilities.",
+      "blurb": "Innate:  Mantra's current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma's damaging  abilities.",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Mantra's current cooldown is reduced by 4 seconds for each enemy champion hit by Karma's damaging abilities.</p>"
@@ -211,7 +211,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/w",
-      "notes": "Spell shield will block the tether's application and damage but not the aftereffects of one already applied.\nIf Karma is  tethered to multiple targets, the visual effects of all tethers will disappear at the end of the first tether's duration, but the other targets will remain tethered.(bug)\nIf the target becomes  untargetable,  dies, or is no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nIf they move too far away during the cast time, however, the ability will cancel as normal but still go on cooldown and pay its cost.(bug)\n Summon Aery will still count as the target being damaged this way.(note)",
+      "notes": "Spell shield will block the tether's application and damage but not the aftereffects of one already applied.\nIf Karma is  tethered to multiple targets, the visual effects of all tethers will disappear at the end of the first tether's duration, but the other targets will remain tethered.(bug)\nIf the target becomes  untargetable,  dies, or is no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nIf they move too far away during the cast time, however, the ability will cancel as normal but still go on cooldown and pay its cost.(bug)\n Summon Aery will still count as the target being damaged this way.(unexpected)",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spell",
@@ -261,7 +261,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/w",
-      "notes": "Spell shield will block the tether's application and damage but not the aftereffects of one already applied.\nIf Karma is  tethered to multiple targets, the visual effects of all tethers will disappear at the end of the first tether's duration, but the other targets will remain tethered.(bug)\nOn cast, Renewal is treated as 2 abilities for  Conqueror,  Electrocute and  Phase Rush, instead of 1.(bug)\nIf the target becomes  untargetable,  dies, or is no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nIf they move too far away during the cast time, however, the ability will cancel as normal but still go on cooldown and pay its cost.(bug)\nKarma is still healed on-cast.\n Summon Aery will still count as the target being damaged this way.(note)",
+      "notes": "Spell shield will block the tether's application and damage but not the aftereffects of one already applied.\nIf Karma is  tethered to multiple targets, the visual effects of all tethers will disappear at the end of the first tether's duration, but the other targets will remain tethered.(bug)\nOn cast, Renewal is treated as 2 abilities for  Conqueror,  Electrocute and  Phase Rush, instead of 1.(bug)\nIf the target becomes  untargetable,  dies, or is no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost.\nIf they move too far away during the cast time, however, the ability will cancel as normal but still go on cooldown and pay its cost.(bug)\nKarma is still healed on-cast.\n Summon Aery will still count as the target being damaged this way.(unexpected)",
       "projectile": "FALSE",
       "spellEffects": "spell",
       "spellshieldable": "Special",
@@ -317,7 +317,7 @@
               "attribute": "Bonus Primary Target Shield",
               "modifiers": [
                 {
-                  "values": "50 / 100 / 150 / 200"
+                  "values": "45 / 85 / 125 / 165"
                 },
                 {
                   "unit": "% AP",
@@ -332,7 +332,7 @@
                   "values": "80 / 130 / 180 / 230 / 280"
                 },
                 {
-                  "values": "50 / 100 / 150 / 200"
+                  "values": "45 / 85 / 125 / 165"
                 },
                 {
                   "unit": "% AP",
@@ -344,7 +344,7 @@
               "attribute": "Secondary Target Shield",
               "modifiers": [
                 {
-                  "values": "50 / 100 / 150 / 200"
+                  "values": "45 / 85 / 125 / 165"
                 },
                 {
                   "unit": "% AP",
@@ -395,7 +395,8 @@
     "difficulty": 1
   },
   "fullName": "Darha",
-  "patchLastChanged": "25.24",
+  "lore": "No mortal exemplifies the spiritual traditions of Ionia more than Karma. She is the living embodiment of an ancient soul reincarnated countless times, carrying all her accumulated memories into each new life, and blessed with power that few can comprehend. She has done her best to guide her people in recent times of crisis, though she knows that peace and harmony may come only at a considerable cost—both to her, and to the land she holds most dear.",
+  "patchLastChanged": "26.07",
   "positions": [
     "Middle",
     "Support",
@@ -428,7 +429,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3.3,
     "attackSpeed": 2.3
   },
   "price": {

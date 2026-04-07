@@ -6,7 +6,7 @@ const {
   variant = "ghost",
   color = "neutral",
   size = "md",
-  side = "bottom",
+  side = "bottom"
 } = defineProps<{
   class?: HTMLAttributes["class"]
   variant?: ButtonProps["variant"]
@@ -25,9 +25,9 @@ const {
         label: cn(
           'truncate-none ellipsis-none block overflow-visible font-bold',
           {
-            'text-[1.4rem]': size === 'md',
+            'text-[1.4rem]': size === 'md'
           }
-        ),
+        )
       }"
       :color
       :variant

@@ -122,7 +122,7 @@ const filterItems = computed<DropdownMenuItem & { trailingIcon?: string }[]>(
               'px-2.5!'
             )
           }"
-          :active-color="clearOpen ? 'p0' : 'neutral'" />
+          :active-color="clearOpen ? 'base' : 'neutral'" />
       </Tooltip>
       <template #content-top>
         <h6 class="mb-2 w-full border-b border-p3 pb-1 text-xs opacity-50">

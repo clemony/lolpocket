@@ -32,7 +32,7 @@
     {
       "unique": true,
       "name": "Heretical Cleave",
-      "effects": "Deal 80% AD physical damage to enemies in a 450 radius."
+      "effects": "Deal 80% AD physical damage to enemies in a 450 radius in front of you."
     }
   ],
   "stats": {

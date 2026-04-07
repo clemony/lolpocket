@@ -10,7 +10,7 @@ const props = defineProps<{
       class="group/b hover:ringneutral/40 data-[state=open]:ringneutral/40 pointer-events-none! size-full rounded-lg open:ring open:inset-shadow-sm hover:ring hover:inset-shadow-sm"
       :class="{
         'border border-black/60 shadow-sm inset-shadow-sm shadow-black/20':
-          itemId,
+          itemId
       }">
       <LazyItem
         v-if="itemId"

@@ -14,6 +14,7 @@
       "difficulty": 3
     },
     "positions": [
+      "Jungle",
       "Top"
     ],
     "resource": "Blood well",
@@ -137,6 +138,7 @@
       "difficulty": 3
     },
     "positions": [
+      "Jungle",
       "Top"
     ],
     "resource": "Energy",
@@ -308,7 +310,7 @@
       "mobility": 3,
       "utility": 1,
       "abilityReliance": 100,
-      "difficulty": 2
+      "difficulty": 3
     },
     "positions": [
       "Middle",
@@ -611,6 +613,7 @@
       "difficulty": 2
     },
     "positions": [
+      "Bottom",
       "Middle"
     ],
     "resource": "Mana",
@@ -686,6 +689,7 @@
       "difficulty": 1
     },
     "positions": [
+      "Jungle",
       "Top"
     ],
     "resource": "Health",
@@ -1678,7 +1682,7 @@
       "mobility": 2,
       "utility": 1,
       "abilityReliance": 30,
-      "difficulty": 3
+      "difficulty": 2
     },
     "positions": [
       "Top"

@@ -10,7 +10,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p>"
     },
     {
-      "description": "Quinn's basic attacks against Vulnerable targets are empowered to consume the mark to deal 10 - 95 (based on level) (+ 16% - 50% (based on level) AD) bonus physical damage."
+      "description": "Quinn's basic attacks on-hit against Vulnerable targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
     },
     {
       "description": "While Behind Enemy Lines is active, Harrier is disabled and all Vulnerable marks are removed."

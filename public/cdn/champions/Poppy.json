@@ -12,14 +12,14 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Poppy's next basic attack is empowered to throw her buckler, gaining 350 bonus range and dealing 20 - 180 (based on level) bonus magic damage. After it hits, the buckler then falls to a location near the target over 1 second, landing and remaining there for up to 4 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Poppy's next basic attack on-attack is empowered to throw her buckler, gaining 350 bonus range and dealing 20 - 198.82 (based on level) bonus magic damage. After it hits, the buckler then falls to a location near the target over 1 second, landing and remaining there for up to 4 seconds.</p>"
         },
         {
-          "description": "Poppy can move over the buckler to retrieve it, gaining a shield for 11% - 20% (based on level) of her maximum health for 3 seconds. If the buckler kills the target, or if the target is already dead when the buckler hits it, the buckler will bounce back to Poppy instead of falling. Enemy champions can move over the buckler to destroy it."
+          "description": "Poppy can move over the buckler to retrieve it, gaining a shield for 11% - 21.06% (based on level) of her maximum health for 3 seconds. If the buckler kills the target, or if the target is already dead when the buckler hits it, the buckler will bounce back to Poppy instead of falling. Enemy champions can move over the buckler to destroy it."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/p",
-      "notes": "Iron Ambassador's buckler attack counts as  melee.",
+      "notes": "Poppy will not throw the buckler if she begins her attack windup before Iron Ambassador's cooldown has elapsed.(unexpected)\nIron Ambassador's buckler attack counts as  melee.",
       "projectile": "TRUE",
       "speed": "1600",
       "spellEffects": "Proc",
@@ -287,7 +287,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Poppy/ability-icon/r",
-      "notes": "The erupting hammer of the charged cast that sends out a missile will be centered on the first champion struck, not at the location the missile collided with them.\nEnemies within the enemy team's fountain (at least 400 units away from the center of the fountain) that are hit by a Keeper's Verdict that would knock them back are instead  knocked up for 0.75 seconds and not rendered  untargetable, like the uncharged effect. They still receive the full damage.\nKeeper's Verdict does not destroy in-flight  projectiles for enemies hit if they are rendered  untargetable.\nThe  knock back will only displace enemies as far as they can go (e.g. to the furthest current spot available of  Realm of Death's and  The Hextech Ultimatum's borders and to the corner of the fountain).\nThe displacement's duration will remain unchanged regardless of if the knock back cannot achieve its full distance due to the affected target being restricted by boundaries they are unable to cross. In order for this to be possible, the speed of the knock back is decreased (based on where the actual landing point is) to match the amount of distance covered to time spent displaced.\nKeeper's Verdict's  airborne debuff is non-dispellable and thus cannot be removed by  cleansing effects.\nThe debuff will remove itself automatically when the forced movement ends.\nThe following table refers for interactions while Poppy is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+      "notes": "The erupting hammer of the charged cast that sends out a missile will be centered on the first champion struck, not at the location the missile collided with them.\nEnemies within the enemy team's fountain (at least 400 units away from the center of the fountain) that are hit by a Keeper's Verdict that would knock them back are instead  knocked up for 0.75 seconds and not rendered  untargetable, like the uncharged effect. They still receive the full damage.\nKeeper's Verdict does not destroy in-flight  projectiles for enemies hit if they are rendered  untargetable.\nThe  knock back will only displace enemies as far as they can go (e.g. to the furthest current spot available of  Realm of Death's and  The Hextech Ultimatum's borders and to the corner of the fountain).\nThe displacement's duration will remain unchanged regardless of if the knock back cannot achieve its full distance due to the affected target being restricted by boundaries they are unable to cross. In order for this to be possible, the speed of the knock back is decreased (based on where the actual landing point is) to match the amount of distance covered to time spent displaced.\nKeeper's Verdict's  airborne debuff is non-dispellable and thus cannot be removed by  cleansing effects.\nThe debuff will remove itself automatically when the forced movement ends.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest activate after 0.2 seconds into the cast time of Keeper's Verdict's recast. They do not activate if the first cast's channel is interrupted or times out.\nThe following table refers for interactions while Poppy is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Teleport  Recall  Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2500",
@@ -307,6 +307,7 @@
     "abilityReliance": 75,
     "difficulty": 2
   },
+  "lore": "Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing the legendary hammer of Orlon, a weapon twice her size, this determined yordle has spent untold years searching in secret for the fabled “Hero of Demacia,” said to be its rightful wielder. Until then, she dutifully charges into battle, pushing back the kingdom's enemies with every whirling strike.",
   "patchLastChanged": "25.19",
   "positions": [
     "Jungle",
@@ -338,7 +339,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.7,
-    "attackDamage": 4,
     "attackSpeed": 2.5
   },
   "price": {

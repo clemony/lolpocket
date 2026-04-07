@@ -10,7 +10,7 @@
   "effectRadius": "370 /  1300",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - Stance:</span> Udyr enters Storm Stance, empowering his next two basic attacks to deal 10 - 40 (based on level) (+ 35% AP) magic damage to nearby enemies.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active - Stance:</span> Udyr enters Storm Stance, empowering his next two basic attacks on-hit to deal 10 - 43.53 (based on level) (+ 35% AP) magic damage to nearby enemies.</p>"
     },
     {
       "description": "Additionally, Udyr summons a blizzard around himself for 4 seconds that deals magic damage every 0.5 seconds to nearby enemies and slows them while they remain within. Minions take 50% / 60% / 70% / 80% (based on level) damage.",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr ends the blizzard if it is active and unleashes a glacial storm for 4 seconds that is able to move on its own, as well as causes the empowered attacks to instead deal their damage to enemies within that storm. The storm applies the same effects as the blizzard but deals bonus magic damage equal to[ 1% - 1.75% (based on level) (+ 0.4375% per 100 AP) of the target's maximum health per tick ][ 8% - 14% (based on level) (+ 3.5% per 100 AP) of the target's maximum health over the duration ]and slows by an additional 5%. Against monsters, the[ storm's per-tick damage deals a minimum of 5 - 35 (based on level) and is capped at 10 - 50 (based on level). ][ storm deals a minimum total damage of 40 - 280 (based on level) and is capped at 80 - 400 (based on level) total damage. ]</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Awaken:</span> Udyr ends the blizzard if it is active and unleashes a glacial storm for 4 seconds that is able to move on its own, as well as causes the empowered attacks to instead deal their damage to enemies within that storm. The storm applies the same effects as the blizzard but deals bonus magic damage equal to[ 1% - 1.84% (based on level) (+ 0.4375% per 100 AP) of the target's maximum health per tick ][ 8% - 14.71% (based on level) (+ 3.5% per 100 AP) of the target's maximum health over the duration ]and slows by an additional 5%. Against monsters, the[ storm's per-tick damage deals a minimum of 5 - 38.53 (based on level) and is capped at 10 - 54.71 (based on level). ][ storm deals a minimum total damage of 40 - 308.24 (based on level) and is capped at 80 - 437.65 (based on level) total damage. ]</p>",
       "leveling": [
         {
           "attribute": "Increased Slow",

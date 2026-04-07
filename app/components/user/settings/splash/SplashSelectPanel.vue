@@ -183,7 +183,7 @@ const utils = [
                     v-for="(k, i) in user().hotkeys?.search"
                     :key="i"
                     square
-                    variant="ghost"
+                    variant="subtle"
                     :value="k"
                     class="text-n5! **:text-n5!" />
                 </div>

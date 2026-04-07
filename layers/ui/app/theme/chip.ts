@@ -22,7 +22,17 @@ export const chipTheme = defineUiTheme({
       legendary: "bg-legendary",
       dom: "status bg-dom",
       win: "status bg-win",
-      illuminate: "animateed-opal"
+      illuminate: "animateed-opal",
+
+      diminuendo: "bg-diminuendo",
+      flow: "bg-flow",
+      contaminate: "bg-contaminate",
+      whimsy: "bg-whimsy",
+      cask: "bg-cask",
+      onslaught: "bg-onslaught",
+      spark: "bg-spark",
+      encore: "bg-encore",
+      legends: "bg-legends"
     },
     inset: {
       false: {

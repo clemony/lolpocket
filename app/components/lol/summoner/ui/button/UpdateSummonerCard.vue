@@ -13,8 +13,7 @@ const s = safeObject(summoner)
     :ui="{
       body: 'grid grow! place-items-center pt-5! pb-3!',
       root: 'noise grid size-full cursor-pointer place-items-center gap-0 space-y-0! overflow-hidden bg-p0/40 p-0! shadow-none drop-shadow-none',
-      footer:
-        'mb-1 grid max-h-10! min-h-10 w-full grid-cols-2 items-center! gap-2 px-3! pt-0!'
+      footer: 'grid max-h-10! min-h-10 w-full items-center! gap-2 px-3! pt-0!'
     }">
     <UpdateSummoner
       v-slot="{ cooldown, disabled, timeRemaining, isLoading, text }"
@@ -22,10 +21,9 @@ const s = safeObject(summoner)
       @update:open="emit('update:open', $event)">
       <UTooltip :text :content="{ side: 'bottom' }">
         <UButton
-          size="custom"
           :ui="{
             base: cn(
-              'group/label relative grid size-21 place-items-center overflow-visible! rounded-full ring-offset-p3 transition-all duration-200 ease-spring-soft hover:ring-1! hover:ring-pc/40! hover:ring-offset-3',
+              'btn-custom group/label relative grid size-21 place-items-center overflow-visible! rounded-full ring-offset-p3 transition-all duration-200 ease-spring-soft hover:ring-1! hover:ring-pc/40! hover:ring-offset-3',
               {
                 'pointer-events-none': disabled
               }
@@ -98,6 +96,10 @@ const s = safeObject(summoner)
       </div>
       <!-- live -->
       <MatchStatus v-if="s?.puuid" :summoner="s" />
-    </div> </UCard
-  ><!--    :disabled="s?.puuid === user().account?.puuid"  -->
+    </div>
+
+    <template #footer>
+      <SummonerCommunicationMenu />
+    </template>
+  </UCard><!--    :disabled="s?.puuid === user().account?.puuid"  -->
 </template>

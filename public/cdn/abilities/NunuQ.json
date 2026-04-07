@@ -4,7 +4,7 @@
   "affects": "Enemies, Self",
   "blurb": "Active:  Willump takes a bite out of the target enemy, dealing damage and  healing himself. The heal is increased when he is below half health.",
   "castTime": "0.3",
-  "cooldown": "12 / 11 / 10 / 9 / 8",
+  "cooldown": "13 / 12 / 11 / 10 / 9",
   "cost": "60",
   "damageType": "Other damage",
   "effects": [

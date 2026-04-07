@@ -3,7 +3,7 @@ const { src } = defineProps<{
   src: string
 }>()
 
-const videoRef = useTemplateRef<HTMLMediaElement>('videoRef')
+const videoRef = useTemplateRef<HTMLMediaElement>("videoRef")
 
 function canPlay() {
   if (!videoRef.value) return
@@ -27,12 +27,11 @@ function reload() {
     loop
     disablepictureinpicture
     disableremoteplayback
+    crossorigin="anonymous"
     controlslist=" nodownload "
     playsinline
     @canplay="canPlay()"
     @error="reload()">
-    <source
-      :src="src"
-      type="video/webm">
+    <source :src="src" type="video/webm" />
   </video>
 </template>

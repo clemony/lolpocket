@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { Presence } from "reka-ui";
 import type { regionIndex } from "#shared/constants/misc/region-index"
+import { Presence } from "reka-ui"
 
 const {
   class: className,
   present,
-  region: r,
+  region: r
 } = defineProps<{
   region: keyof typeof regionIndex
   class?: HTMLAttributes["class"]

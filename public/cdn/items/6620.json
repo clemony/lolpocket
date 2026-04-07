@@ -47,7 +47,16 @@
     21,
     35
   ],
-  "ornnUpgrade": 326620,
+  "masterwork": {
+    "upgradeId": 326620,
+    "stats": {
+      "health": 250,
+      "abilityPower": 35
+    },
+    "bonusStats": {
+      "health": 50
+    }
+  },
   "tags": [
     "Support"
   ]

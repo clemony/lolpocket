@@ -2,6 +2,10 @@
   "id": 228020,
   "name": "Abyssal Mask",
   "description": "350 Health\n50 Magic Resist\n15 Ability Haste\n\nUnmake\nNearby enemy champions take 12% more magic damage.",
+  "stats": {
+    "magicResistance": 50,
+    "health": 350
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

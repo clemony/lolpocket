@@ -11,7 +11,7 @@
       "blurb": "Innate:  Olaf gains  bonus attack speed and  life steal based on his missing health.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 107.84% (based on level) bonus attack speed and 8% - 27.67% (based on level) life steal at 70% missing health.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",
@@ -31,13 +31,13 @@
       "effectRadius": "100 / 250 / 300",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1 - 3 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "60 / 110 / 160 / 210 / 260"
+                  "values": "70 / 120 / 170 / 220 / 270"
                 },
                 {
                   "unit": "% bonus AD",
@@ -50,7 +50,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "25 / 30 / 35 / 40 / 45"
+                  "values": "30 / 35 / 40 / 45 / 50"
                 }
               ]
             }
@@ -63,7 +63,7 @@
               "attribute": "Monster Bonus Physical Damage",
               "modifiers": [
                 {
-                  "values": "10 / 25 / 40 / 55 / 70"
+                  "values": "20 / 35 / 50 / 65 / 80"
                 }
               ]
             },
@@ -71,7 +71,7 @@
               "attribute": "Total Monster Damage",
               "modifiers": [
                 {
-                  "values": "70 / 135 / 200 / 265 / 330"
+                  "values": "90 / 155 / 220 / 285 / 350"
                 },
                 {
                   "unit": "% bonus AD",
@@ -139,11 +139,11 @@
           ]
         },
         {
-          "description": "Tough It Out resets Olaf's basic attack timer if it was not already active."
+          "description": "Tough It Out resets Olaf's basic attack timer."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/w",
-      "notes": "Olaf's attack timer will only reset from casting Tough It Out if the attack speed buff was not already active on him. Refreshing the buff will not grant an attack reset.(bug)",
+      "notes": "Tough It Out's bonus attack speed value is updated when it is cast, even if it was already active.",
       "resource": "Mana",
       "targeting": "Auto"
     },
@@ -182,7 +182,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/e",
-      "notes": "The health cost is equal to 30% of the total damage dealt by Reckless Swing.\nReckless Swing can be cast even if Olaf doesn't have the sufficient amount of health to pay for the health cost.\nAs with all abilities with health costs, Reckless Swing will not reduce Olaf's health below 1.\nReckless Swing's health refund is considered a  heal therefore it is affected by healing modifiers.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nOlaf will also not receive the benefits from killing an enemy if this canceling takes place very shortly before the attack hits the invalidated target, but Reckless Swing's effect will be consumed.(bug)",
+      "notes": "The health cost is equal to 40% of Reckless Swing's true damage value.\nReckless Swing can be cast even if Olaf doesn't have the sufficient amount of health to pay for the health cost.\nAs with all abilities with health costs, Reckless Swing will not reduce Olaf's health below 1.\nReckless Swing's health refund is considered a  heal therefore it is affected by healing modifiers.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nOlaf will also not receive the benefits from killing an enemy if this canceling takes place very shortly before the attack hits the invalidated target, but Reckless Swing's effect will be consumed.(bug)",
       "resource": "Health",
       "spellEffects": "spell",
       "spellshieldable": "True",
@@ -258,7 +258,8 @@
     "abilityReliance": 30,
     "difficulty": 2
   },
-  "patchLastChanged": "25.15",
+  "lore": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great insult among his people. Seeking death, and fueled by rage, he rampaged across the land, slaughtering scores of great warriors and legendary beasts in search of any opponent who could stop him. Now a brutal enforcer for the Winter's Claw, he seeks his end in the great wars to come.",
+  "patchLastChanged": "26.06",
   "positions": [
     "Top"
   ],
@@ -288,7 +289,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.6,
     "mpRegen": 0.6,
-    "attackDamage": 4.7,
     "attackSpeed": 2.7
   },
   "price": {

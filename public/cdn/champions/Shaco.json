@@ -12,7 +12,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 25% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 31.18 (based on level) (+ 20% bonus AD) bonus physical damage when hitting an enemy from behind. This damage is affected by critical strike modifiers.</p>"
         },
         {
           "description": "Deceive and Two-Shiv Poison have additional effects when they hit an enemy from behind."
@@ -69,11 +69,11 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 30%) damage, increased to (175% + 30%) if a critical strike was rolled.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (160% + 18%) damage, increased to (200% + 30%) if a critical strike was rolled.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
-      "notes": "If the attack would have already  critically struck based on Shaco's critical strike chance, the base  Backstab critical damage modifier will be overridden by the default critical damage modifier.\nDeceive's bonus damage adds directly to the damage instance of the basic attack.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
+      "notes": "If the attack would have already  critically struck based on Shaco's  critical strike chance, the base  Backstab critical damage modifier will be overridden by the default critical damage modifier.\n Sundered Sky's Lightshield Strike will not interact with this(unexpected), but will be triggered as usual.\nDeceive's bonus damage adds directly to the damage instance of the basic attack.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
       "resource": "Mana",
       "spellEffects": "basic",
       "targeting": "Location",
@@ -190,7 +190,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/w",
-      "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.1 seconds of the root. They can be forced to move by the fear during this time.\nStatic movement speed cannot be modified (e.g. with  slow resist or  bonus movement speed).\nThis effect can be negated if the target is  slow-immune.\nThe box is  untargetable and  invulnerable so long as it is in  stealth. Effects that reveal  stealthed traps will render the box targetable and vulnerable while it can be seen.",
+      "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.1 seconds of the root. They can be forced to move by the fear during this time.\nThe static movement speed modifier overrides the target's base movement speed value to the modified amount, and their bonus movement speed value to 0.\nThe modifier is not applied if the target is  slow-immune.\nThe box is  untargetable and  invulnerable so long as it is in  stealth. Effects that reveal  stealthed traps will render the box targetable and vulnerable while it can be seen.",
       "resource": "Mana",
       "spellEffects": "aoe",
       "spellshieldable": "true",
@@ -268,7 +268,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 54.12 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 81.18 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/e",
@@ -367,7 +367,8 @@
     "abilityReliance": 45,
     "difficulty": 3
   },
-  "patchLastChanged": "25.16",
+  "lore": "Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in murder and mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls he torments. He uses toys and simple tricks to deadly effect, finding the results of his bloody “games” hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have marked them as his next plaything.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Jungle",
     "Support"
@@ -396,7 +397,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.6,
     "mpRegen": 0.4,
-    "attackDamage": 3,
     "attackSpeed": 3
   },
   "price": {

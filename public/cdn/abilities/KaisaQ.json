@@ -67,7 +67,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 49 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
       "leveling": [
         {
           "attribute": "Total Evolved Single-Target Damage",

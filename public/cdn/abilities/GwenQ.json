@@ -14,13 +14,13 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 80% damage against minions, and executes them on the first damage instance if they are below 20% health.</p>",
       "leveling": [
         {
           "attribute": "Damage per Snip",
           "modifiers": [
             {
-              "values": "10 / 15 / 20 / 25 / 30"
+              "values": "10 / 13.5 / 17 / 20.5 / 24"
             },
             {
               "unit": "% AP",
@@ -32,7 +32,7 @@
           "attribute": "Center Damage per Snip",
           "modifiers": [
             {
-              "values": "10 / 15 / 20 / 25 / 30"
+              "values": "10 / 13.5 / 17 / 20.5 / 24"
             },
             {
               "unit": "% AP",
@@ -81,7 +81,7 @@
           "attribute": "Minimum Damage",
           "modifiers": [
             {
-              "values": "70 / 100 / 130 / 160 / 190"
+              "values": "70 / 98.5 / 127 / 155.5 / 184"
             },
             {
               "unit": "% AP",
@@ -93,7 +93,7 @@
           "attribute": "Minimum Center Damage",
           "modifiers": [
             {
-              "values": "70 / 100 / 130 / 160 / 190"
+              "values": "70 / 98.5 / 127 / 155.5 / 184"
             },
             {
               "unit": "% AP",
@@ -109,7 +109,7 @@
           "attribute": "Maximum Damage",
           "modifiers": [
             {
-              "values": "110 / 160 / 210 / 260 / 310"
+              "values": "110 / 152.5 / 195 / 237.5 / 280"
             },
             {
               "unit": "% AP",
@@ -121,7 +121,7 @@
           "attribute": "Maximum Center Damage",
           "modifiers": [
             {
-              "values": "110 / 160 / 210 / 260 / 310"
+              "values": "110 / 152.5 / 195 / 237.5 / 280"
             },
             {
               "unit": "% AP",

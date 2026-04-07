@@ -39,9 +39,7 @@ defineExpose({ onKeyDown }) */
         :class="
           cn(
             'rounded-md text-xxl focus:bg-p2/80 focus:ring focus:ring-p3',
-            `
-              index-${index}
-            `
+            `index-${index}`
           )
         "
         @click="command(item)">

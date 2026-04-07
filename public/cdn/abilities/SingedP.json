@@ -16,7 +16,6 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/p",
-  "notes": "No additional details.",
   "onTargetCdStatic": "8",
   "targeting": "Passive"
 }

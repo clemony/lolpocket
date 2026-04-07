@@ -2,6 +2,9 @@
   "id": 223137,
   "name": "Cryptbloom",
   "description": "60 Ability Power\n30% Magic Penetration\n15 Ability Haste\n\nLife from Death\nWhen a champion that you damaged within 3 seconds dies, a nova spreads from their corpse that heals.",
+  "stats": {
+    "abilityPower": 60
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

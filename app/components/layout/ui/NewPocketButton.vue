@@ -9,7 +9,7 @@ const {
   size = "md",
   ui,
   as = "button",
-  kbd = { color: "neutral", size: "sm", ui: {} },
+  kbd = { color: "neutral", size: "sm", ui: {} }
 } = defineProps<{
   ui?: Record<string, HTMLAttributes["class"]>
   size?: ButtonProps["size"]
@@ -25,9 +25,9 @@ const {
       base: cn('mb-1 w-full py-0', ui?.base),
       leadingIcon: cn(
         'translate-y-px scale-90 **:stroke-[2.5] **:text-nc!',
-        ui?.leadingIcon,
+        ui?.leadingIcon
       ),
-      label: cn('grow translate-y-px font-semibold text-nc', ui?.label),
+      label: cn('grow translate-y-px font-semibold text-nc', ui?.label)
     }"
     :size
     label="New Pocket"

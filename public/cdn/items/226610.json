@@ -2,6 +2,10 @@
   "id": 226610,
   "name": "Sundered Sky",
   "description": "40 Attack Damage\n350 Health\n10 Ability Haste\n\nLightshield Strike\nYour first Attack against a champion Critically Strikes and restores Health.",
+  "stats": {
+    "health": 350,
+    "attackDamage": 40
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

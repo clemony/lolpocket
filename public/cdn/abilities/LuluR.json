@@ -36,7 +36,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r",
-  "notes": "Wild Growth's size increase scales additively with other size increases.",
+  "notes": "Wild Growth's size increase scales additively with other size increases.\nEnemies are also knocked back over 275 units during the knock up.",
   "resource": "Mana",
   "spellshieldable": "True",
   "targeting": "Unit",

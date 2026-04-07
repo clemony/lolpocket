@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui"
 import { mapPositions } from "#shared/constants/misc/positions"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   variant = "ghost",
   class: className,
-  clear = false,
+  clear = false
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean

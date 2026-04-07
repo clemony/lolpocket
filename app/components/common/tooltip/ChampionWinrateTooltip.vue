@@ -39,9 +39,7 @@ const wr = computed(() =>
         <span
           v-for="i in ['Role', 'Pick', 'Win', 'Tier']"
           :key="i"
-          class="text-xs font-semibold text-nc/80 capitalize"
-          >{{ i }}</span
-        >
+          class="text-xs font-semibold text-nc/80 capitalize">{{ i }}</span>
       </div>
       <div
         v-for="winrate in wr"

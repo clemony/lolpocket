@@ -10,7 +10,7 @@
   "effectRadius": "250",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus channels for up to 6 seconds to roll into a ball, gaining 25% - 39.17% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 235% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus rolls into an accelerating ball, channeling for up to 6 seconds to gain 25% - 40.83% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 245% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl.</p>"
     },
     {
       "description": "Rammus stops rolling upon colliding with an enemy, dealing magic damage to all nearby enemies and knocking them back 125 units, though not through terrain. Enemies hit are then stunned and revealed for 0.4 seconds, as well as slowed for 1 second.",

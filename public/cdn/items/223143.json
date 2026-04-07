@@ -2,6 +2,10 @@
   "id": 223143,
   "name": "Randuin's Omen",
   "description": "300 Health\n75 Armor\n\nResilience\nCritical Strikes deal 30% less damage to you.\n\nHumility\nSlow nearby enemies.\n\nACTIVE (0s)\nHumility\nBriefly Slow nearby enemies by 70% for 2 seconds.",
+  "stats": {
+    "health": 300,
+    "armor": 75
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

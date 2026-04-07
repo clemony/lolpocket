@@ -52,14 +52,14 @@ const { data: rune, status } = useFetch<Rune>(
       </h2>
     </div>
 
-    <USeparator class="mb-3" :color="'p3' as SeparatorProps['color']" />
+    <USeparator class="mb-3" :color="'tertiary' as SeparatorProps['color']" />
     <div
       :key="rune.id"
       class="flex size-full max-h-full w-full max-w-full flex-col gap-3 overflow-y-scroll px-4">
       <div class="flex items-center gap-2">
         <UBadge
-          size="sm"
-          :color="(rune.tier === 0 ? 'gold' : 'p2') as BadgeProps['color']"
+          size="md"
+          :color="(rune.tier === 0 ? 'gold' : 'secondary') as BadgeProps['color']"
           :trailing-icon="rune.tier === 0 ? 'lucide:key' : 'lucide:diamond'"
           :label="
             rune.tier === 0
@@ -68,7 +68,7 @@ const { data: rune, status } = useFetch<Rune>(
           " />
 
         <UBadge
-          size="sm"
+          size="md"
           :color="rune.path.toLowerCase() as BadgeProps['color']"
           :label="rune.path"
           :ui="{ trailingIcon: 'translate-x-0.5 scale-110 text-white' }"

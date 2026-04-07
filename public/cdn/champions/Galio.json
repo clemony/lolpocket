@@ -13,17 +13,17 @@
       "effectRadius": "250",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 115 (based on level) (+ 100% AD) (+ 40% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 126.76 (based on level) (+ 100% AD) (+ 40% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them.</p>"
         },
         {
           "description": "Whenever Galio hits at least one enemy champion or epic monster with an ability, Colossal Smash's current cooldown is reduced by 3 seconds. This may occur only once per cast."
         },
         {
-          "description": "Colossal Smash's damage based on its AD ratio can critically strike for (175% + 30%) damage to all targets hit."
+          "description": "Colossal Smash's damage based on its AD ratio can critically strike for (200% + 30%) damage to all targets hit."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/p",
-      "notes": "Colossal Smash deals  basic damage to the primary target but also triggers spell effects by also being tagged as  spell damage, while dealing  proc damage also tagged as area of effect to secondary targets.\n Spellblade does not get converted to magic damage and it will deal its damage only to the primary target.\nColossal Smash applies  on-hit effects to its primary target twice.(bug)\nThe empowered attack will not trigger against  wards and plants.\nGalio gains attack speed even on non-empowered attacks as long as the ability is not on cooldown.\nPENDING FOR TEST: Does Colossal Smash trigger against allies?\nEven if the ability hit is  spell shielded Colossal Smash's cooldown will still be reduced.",
+      "notes": "Colossal Smash deals  basic damage to the primary target but also triggers spell effects by also being tagged as  spell damage, while dealing  proc damage also tagged as  area of effect to secondary targets.\n Spellblade does not get converted to magic damage and it will deal its damage only to the primary target.\nColossal Smash applies  on-hit effects to its primary target twice.(bug)\nThe empowered attack will not trigger against  wards and plants.\nGalio gains attack speed even on non-empowered attacks as long as the ability is not on cooldown.\nPENDING FOR TEST: Does Colossal Smash trigger against allies?\nEven if the ability hit is  spell shielded Colossal Smash's cooldown will still be reduced.",
       "spellEffects": "special",
       "spellshieldable": "False",
       "targeting": "Passive"
@@ -179,7 +179,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/w",
-      "notes": "Galio may still buffer his actions during the recast lockout.\nStatic movement speed cannot be modified by  bonus movement speed or  slow resist.\nThis effect is negated only if the target is  slow-immune.\nThe ability key does not need to be held down when buffered in other abilities except  Winds of War.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Hexflash\n\n\nInterrupted by\n\n Recall\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "notes": "The static movement speed modifier overrides the target's base movement speed value to the modified amount, and their bonus movement speed value to 0.\nThe modifier is not applied if the target is  slow-immune.\nGalio may still buffer his actions during the recast lockout.\nThe ability key does not need to be held down when buffered in other abilities except  Winds of War.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Hexflash\n\n\nInterrupted by\n\n Recall\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
@@ -268,7 +268,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/r",
-      "notes": "Hero's Entrance does not resist allied  crowd control.\nHero's Entrance has a  forgiveness radius of 175 units.\nGalio cannot cast Hero's Entrance on allies he cannot  see while  nearsighted.\nGalio will still cause an impact to occur at the destination even if he is unable to travel the full distance with the dash (e.g. by  The Hextech Ultimatum's and  Realm of Death's borders and terrain). Galio will dash as far as he can go, and thus, does not end the dash prematurely.\nGalio will always dash 100 units minimum, and dash over his target's location if they are less than 100 units away from him.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nHero's Entrance's channel can only be  interrupted by  crowd control in the first 1.25 seconds.",
+      "notes": "Hero's Entrance does not resist allied  crowd control.\nHero's Entrance has a  forgiveness radius of 175 units.\nGalio cannot cast Hero's Entrance on allies he cannot  see while  nearsighted.\nGalio will still cause an impact to occur at the destination even if he is unable to travel the full distance with the dash (e.g. by  The Hextech Ultimatum's and  Realm of Death's borders and terrain). Galio will dash as far as he can go, and thus, does not end the dash prematurely.\nGalio will always dash 100 units minimum, and dash over his target's location if they are less than 100 units away from him.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate at the end of Hero's Entrance's  channel.\nThe following table refers for interactions while Galio is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nHero's Entrance's channel can only be  interrupted by  crowd control in the first 1.25 seconds.",
       "resource": "Mana",
       "spellEffects": "Area of Effect",
       "spellshieldable": "True",
@@ -287,6 +287,7 @@
     "abilityReliance": 100,
     "difficulty": 2
   },
+  "lore": "Outside the gleaming city of Demacia, the stone colossus Galio keeps vigilant watch. Built as a bulwark against enemy mages, he often stands motionless for decades until the presence of powerful magic stirs him to life. Once activated, Galio makes the most of his time, savoring the thrill of a fight and the rare honor of defending his countrymen. But his triumphs are always bittersweet, for the magic he destroys is also his source of reanimation, and each victory leaves him dormant once again.",
   "patchLastChanged": "25.18",
   "positions": [
     "Middle",
@@ -318,7 +319,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.7,
-    "attackDamage": 3.5,
     "attackSpeed": 1.5
   },
   "price": {

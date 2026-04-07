@@ -15,10 +15,10 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Braum's basic attacks and Winter's Bite each apply a stack of Concussive Blows to their target for 4 seconds, refreshing on subsequent applications and stacking up to 4 times. Once the first stack has been applied, any allied champion's basic attack applies an additional stack to the target on-hit.</p>"
         },
         {
-          "description": "The fourth stack against a target consumes them all to deal 26 - 196 (based on his level) magic damage and stun them for 1.25 - 1.75 (based on his level) seconds."
+          "description": "The fourth stack against a target consumes them all to deal 26 - 216 (based on his level) magic damage and stun them for 1.25 - 1.75 (based on his level) seconds."
         },
         {
-          "description": "This effect cannot apply to the same target more than once every few seconds. During this immunity period, affected targets take[ bonus magic damage equal to 40% of the trigger damage ][ 10.4 - 78.4 (based on level) bonus magic damage ]from Braum's basic attacks."
+          "description": "This effect cannot apply to the same target more than once every few seconds. During this immunity period, affected targets take[ bonus magic damage equal to 40% of the trigger damage ][ 10.4 - 86.4 (based on level) bonus magic damage ]from Braum's basic attacks."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Braum/ability-icon/p",
@@ -46,7 +46,7 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "75 / 125 / 175 / 225 / 275"
+                  "values": "75 / 120 / 165 / 210 / 255"
                 },
                 {
                   "unit": "% of Braum's maximum health",
@@ -191,7 +191,7 @@
       "width": "230 /  170",
       "affects": "Enemies",
       "castTime": "0.5",
-      "cooldown": "120 / 100 / 80",
+      "cooldown": "130 / 115 / 100",
       "cost": "100",
       "damageType": "Magic damage",
       "effectRadius": "300 /  60 × 10",
@@ -203,7 +203,7 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "150 / 300 / 450"
+                  "values": "150 / 250 / 350"
                 },
                 {
                   "unit": "% AP",
@@ -263,7 +263,8 @@
     "abilityReliance": 90,
     "difficulty": 2
   },
-  "patchLastChanged": "25.24",
+  "lore": "Blessed with massive biceps and an even bigger heart, Braum is a beloved hero of the Freljord. Every mead hall north of Frostheld toasts his legendary strength, said to have felled a forest of oaks in a single night, and punched an entire mountain into rubble. Bearing an enchanted vault door as his shield, Braum roams the frozen north sporting a mustachioed smile as big as his muscles—a true friend to all those in need.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Support"
   ],
@@ -275,7 +276,7 @@
     "Warden"
   ],
   "stats": {
-    "hp": 630,
+    "hp": 610,
     "mp": 311,
     "movespeed": 335,
     "armor": 35,
@@ -293,7 +294,6 @@
     "magicResist": 2.1,
     "hpRegen": 1,
     "mpRegen": 0.8,
-    "attackDamage": 3.2,
     "attackSpeed": 3.5
   },
   "price": {

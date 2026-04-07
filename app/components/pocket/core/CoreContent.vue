@@ -3,11 +3,11 @@ import { championToTitle } from "#shared/constants/champions/championToTitle"
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 const championKey = computed(() => pocket.value?._champion ?? null)
 const championTitle = computed(() =>
-  championKey.value ? championToTitle[championKey.value] : undefined,
+  championKey.value ? championToTitle[championKey.value] : undefined
 )
 </script>
 

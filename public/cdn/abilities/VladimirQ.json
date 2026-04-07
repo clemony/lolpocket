@@ -41,7 +41,7 @@
       "description": "At 2 points of Crimson Rush, Vladimir surges, gaining 10% / 20% / 30% / 40% (based on level) bonus movement speed decaying over 0.5 seconds while the Crimson Rush depletes over 2.5 seconds. Crimson Rush depletes 75% slower during Sanguine Pool, Tides of Blood, or stasis."
     },
     {
-      "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The additional healing is reduced to[ 35% ][ 10.5 - 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
+      "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 220 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The additional healing is reduced to[ 35% ][ 10.5 - 77 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
       "leveling": [
         {
           "attribute": "Increased Damage",

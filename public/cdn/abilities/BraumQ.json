@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "75 / 125 / 175 / 225 / 275"
+              "values": "75 / 120 / 165 / 210 / 255"
             },
             {
               "unit": "% of Braum's maximum health",

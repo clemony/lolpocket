@@ -10,7 +10,7 @@
       "unique": true,
       "mythic": false,
       "name": "Safeguard",
-      "effects": "Become <i>Safeguarded</i> to reduce incoming champion damage by 50%, lingering for 3 seconds after taking damage from a champion (30 second cooldown, timer restarts upon taking damage from champions)."
+      "effects": "Become <i>Safeguarded</i> to reduce incoming champion damage by 90%, lingering for 1.25 seconds after taking damage from a champion (30 second cooldown, timer restarts upon taking damage from champions)."
     }
   ],
   "stats": {

@@ -179,8 +179,14 @@ export interface Database {
           title: string
           updated_at: string
           url: string
+          video_dash_url: string | null
+          video_duration: number | null
+          video_height: number | null
+          video_hls_url: string | null
           video_id: string | null
           video_provider: string | null
+          video_url: string | null
+          video_width: number | null
         }
         Insert: {
           author?: string | null
@@ -203,8 +209,14 @@ export interface Database {
           title: string
           updated_at?: string
           url: string
+          video_dash_url?: string | null
+          video_duration?: number | null
+          video_height?: number | null
+          video_hls_url?: string | null
           video_id?: string | null
           video_provider?: string | null
+          video_url?: string | null
+          video_width?: number | null
         }
         Update: {
           author?: string | null
@@ -227,8 +239,14 @@ export interface Database {
           title?: string
           updated_at?: string
           url?: string
+          video_dash_url?: string | null
+          video_duration?: number | null
+          video_height?: number | null
+          video_hls_url?: string | null
           video_id?: string | null
           video_provider?: string | null
+          video_url?: string | null
+          video_width?: number | null
         }
         Relationships: []
       }

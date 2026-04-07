@@ -6,7 +6,6 @@ import ItemCommand from "../reference-cards/ItemCommand.vue"
 import RuneCommand from "../reference-cards/RuneCommand.vue"
 import SpellCommand from "../reference-cards/SpellCommand.vue"
 import { referenceItems } from "./lolCommands"
-import { descriptionLabel } from "./styles"
 
 interface CommandReturn {
   groups: ComputedRef<CommandPaletteGroup<CommandItem>[]>
@@ -37,6 +36,7 @@ export interface CommandGroup extends Omit<
   keys?: string[]
   highlight?: boolean
   items?: CommandItem[]
+  action?: CommandItem
   ui?: Record<string, unknown>
 }
 
@@ -79,10 +79,7 @@ export const pageCommands = (
       label: /*  record.meta?.title === "Nexus"
           ? "Nexus Dashboard"
           :  */ String(record.meta?.title || record.name),
-      slot:
-        record.meta?.title === "Nexus"
-          ? "link"
-          : String(record.meta?.title || record.name).toLowerCase(),
+      slot: String(record.meta?.title || record.name).toLowerCase(),
       value: record.path,
       icon: asString(record.meta?.icon),
       iconFill: asString(record.meta?.iconFill) || undefined,
@@ -95,11 +92,11 @@ export const pageCommands = (
       order:
         typeof record.meta?.order === "number" ? record.meta.order : undefined,
       ui: {
-        itemLeadingIcon: asString(record.meta?.class),
+        leadingIcon: asString(record.meta?.class),
         item: "h-9",
-        itemLabelBase: "font-medium text-sm capitalize ",
-        itemLabelPrefix: "after:pl-1.5 after:pr-1 after:content-['›']",
-        itemTrailingIcon: hasChildren ? "" : "size-3.5! inline align-top"
+        label: "font-medium text-sm capitalize ",
+        prefix: "after:pl-1.5 after:pr-1 after:content-['›']",
+        trailingIcon: hasChildren ? "" : "size-3.5! inline align-top"
       },
       children: hasChildren ? children : undefined
     }
@@ -122,36 +119,33 @@ export function buildCommandGroups(
   options: CommandGroupOptions = {}
 ): CommandReturn {
   const pageItems = pageCommands({ onNavigate: options.onNavigate })
-  const route = useRoute()
   const groups = computed(() => [
     {
-      id: "pages",
-      value: "pages-command",
-      label: "",
-      description: "",
-      items: [
-        /*         {
-          label: "Nexus",
-          value: "pages-label",
-          trailingIcon: route.path === "/nexus" ? "i-tick" : "i-link",
-          to: "/nexus",
-          ui: {
-            base: "px-px! flex h-max! w-full relative  gap-1 ring-p3 border-0  overflow-visible before:scale-x-102 relative before:rounded-lg before:size-full before:border-p3 before:z-0 *:z-1 hover:before:border hover:before:bg-p2 hover:before:noise before:absolute ",
-            itemWrapper: "py-2",
-            itemLabel: "flex flex-col gap-1",
-            itemLabelBase:
-              'after:content-[""] text-pc font-semibold text-sm leading-none',
-            itemLabelSuffix:
-              "text-wrap normal-case! text-xs text-n5 text-start leading-6 font-normal! ",
-            itemTrailingIcon:
-              "top-2.5 right-2 size-4.5! absolute opacity-40 **:stroke-[2.3]!"
-          },
-          suffix: "Home base for League news, pockets, personal data, and more."
-        }, */
-        ...pageItems?.filter((r) =>
-          ["/tools", "/backpack", "/nexus"].includes(String(r.value))
-        )
-      ]
+      id: "nexus",
+      value: "nexus-command",
+      label: "Nexus",
+      description:
+        "A one stop shop for the latest League news and your own data highlights",
+      items: pageItems
+        ?.find((r) => String(r.id) === "/nexus")
+        ?.flatMap((r: CommandItem) => r.children) as CommandItem[]
+    },
+    {
+      id: "tools",
+      value: "tools-command",
+      label: "Tools",
+      description:
+        "Lolpocket utilities great to have handy. Share a pocket card or theorycraft.",
+      items: pageItems
+        ?.find((r) => String(r.id) === "/tools")
+        ?.flatMap((r: CommandItem) => r.children) as CommandItem[]
+    },
+    {
+      id: "backpack",
+      value: "Backpack",
+      label: "Backpack",
+      description: "Hold your pockets.",
+      items: pageItems?.find((r) => String(r.id) === "/backpack")?.children
     },
     {
       id: "library",
@@ -173,7 +167,7 @@ export function buildCommandGroups(
       id: "reference",
       value: "reference-label",
       label: "Reference",
-      description: "Quick view detailed information cards.",
+      description: "Quick, detailed, information cards right in your navbar.",
 
       items: referenceItems?.value
     },
@@ -191,6 +185,7 @@ export function buildCommandGroups(
           value: "External Resources",
           id: "External Resources",
           label: "Resources",
+          slot: "external",
           description: "Other external tools worthy of your backpack.",
           class: "before:hidden pb-2",
           trailingIcon: "i-right",

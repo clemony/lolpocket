@@ -179,7 +179,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/w",
-      "notes": "The initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability does not.\nThe first card shown is random but the order always remains the same ( Blue Card,  Red Card,  Gold Card, repeat).\nUpon activation, an indicator visible to allies and enemies appears above Twisted Fate to show him shuffling his deck of cards while remaining in the same order, the card he can choose at every moment glows over the others. The selected card is specified for the duration of the enhanced attack.\nPENDING FOR TEST: The interval until the next card is hovered is 0.528 seconds every time, instead of some times 0.528 and other times 0.495.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will trigger against structures and buildings but not wards and plants.",
+      "notes": "The initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability does not.\nThe first card shown is random but the order always remains the same ( Blue Card,  Red Card,  Gold Card, repeat).\nUpon activation, an indicator visible to allies and enemies appears above Twisted Fate to show him shuffling his deck of cards while remaining in the same order, the card he can choose at every moment glows over the others. The selected card is specified for the duration of the enhanced attack.\nPENDING FOR TEST: The interval until the next card is hovered is 0.528 seconds every time, instead of some times 0.528 and other times 0.495.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will trigger against structures and buildings but not wards and plants.\nThe empowered attack is special cased to not trigger a stack of  Fiendhunter Bolts' Opening Barrage.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1500",
@@ -281,7 +281,8 @@
     "difficulty": 2
   },
   "fullName": "Tobias Felix",
-  "patchLastChanged": "25.14",
+  "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve.",
+  "patchLastChanged": "26.07",
   "positions": [
     "Bottom",
     "Middle",
@@ -313,7 +314,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 2.5,
     "attackSpeed": 2.5
   },
   "price": {

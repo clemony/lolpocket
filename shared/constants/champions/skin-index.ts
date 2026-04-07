@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/30/2026 12:54:59 PM CDT
+// Updated Patch 16.7 - 04/03/2026 09:49:38 AM CDT
 import type { Skin } from "#shared/types"
 
 type CompactSkin = readonly [
@@ -291,6 +291,7 @@ const compactSkinIndex = {
     ["24", "Sugar Rush"],
     ["33", "Pool Party"],
     ["42", "Grill Master", "braum_splash_<type>_42.skins_braum_skin42", "braumloadscreen_42.skins_braum_skin42"],
+    ["51", "Victorious", "braum_splash_<type>_51.skins_braum_skin51", "braumloadscreen_51.skins_braum_skin51"],
   ],
   Briar: [
     ["0", "Original", undefined, "briarloadscreen_0"],
@@ -1219,6 +1220,7 @@ const compactSkinIndex = {
     ["89", "Inkshadow"],
     ["96", "Heavenscale"],
     ["106", "Victorious", "masteryi_splash_<type>_106.skins_masteryi_skin106", "masteryiloadscreen_106.skins_masteryi_skin106"],
+    ["116", "PROJECT Command Line Yi", "masteryi_splash_<type>_116.skins_masteryi_skin116", "masteryiloadscreen_116.skins_masteryi_skin116"],
   ],
   Mel: [
     ["0", "Original", "mel_splash_<type>_0.mel", "melloadscreen_0.mel"],
@@ -1799,6 +1801,7 @@ const compactSkinIndex = {
     ["51", "Prestige Mythmaker"],
     ["61", "Primal Ambush"],
     ["70", "Ann-Sivir-sary", "sivir_splash_<type>_70.skins_sivir_skin70", "sivirloadscreen_70.skins_sivir_skin70"],
+    ["72", "PROJECT", "sivir_splash_<type>_72.skins_sivir_skin72", "sivirloadscreen_72.skins_sivir_skin72"],
   ],
   Skarner: [
     ["0", "Original", undefined, "skarnerloadscreen_0"],
@@ -2201,6 +2204,7 @@ const compactSkinIndex = {
     ["30", "Cafe Cuties"],
     ["39", "Broken Covenant"],
     ["48", "Masque of the Black Rose", "vladimir_splash_<type>_48.skins_vladimir_care_skin48", "vladimirloadscreen_48.skins_vladimir_care_skin48"],
+    ["49", "PsyOps", "vladimir_splash_<type>_49.skins_vladimir_skin49", "vladimirloadscreen_49.skins_vladimir_skin49"],
   ],
   Volibear: [
     ["0", "Original"],
@@ -2363,6 +2367,7 @@ const compactSkinIndex = {
     ["7", "Battlecast"],
     ["14", "Empyrean"],
     ["24", "Zesty Dip"],
+    ["33", "Space Groove", "zac_splash_<type>_33.skins_zac_skin33", "zacloadscreen_33.skins_zac_skin33"],
   ],
   Zed: [
     ["0", "Original"],

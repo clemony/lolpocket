@@ -50,6 +50,9 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Swain reveals himself during the cast if there is an enemy champion nearby."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/q",

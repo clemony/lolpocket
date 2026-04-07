@@ -16,7 +16,7 @@
           "attribute": "Magic Damage Per Tick",
           "modifiers": [
             {
-              "values": "15 / 25 / 35"
+              "values": "18.75 / 31.25 / 43.75"
             },
             {
               "unit": "% AP",
@@ -28,7 +28,7 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "120 / 200 / 280"
+              "values": "150 / 250 / 350"
             },
             {
               "unit": "% AP",

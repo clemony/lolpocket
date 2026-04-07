@@ -9,7 +9,10 @@ const { match, player } = defineProps<{
   <div class="mr-1 flex h-max w-69 shrink-0 flex-col gap-2">
     <div class="flex max-h-15 w-full items-start">
       <!-- champ image -->
-      <Champion :id="player?.championId" size="15" />
+      <HoverIcon
+        :id="player?.championId"
+        type="champion"
+        :ui="{ root: 'size-15' }" />
       <!--  spells -->
       <PlayerSpells class="ml-2 shrink-0" :player="player" />
 
@@ -27,24 +30,26 @@ const { match, player } = defineProps<{
     <div
       v-if="player"
       class="player-items flex size-full shrink-0 items-center gap-1">
-      <Item
+      <HoverIcon
         v-for="(item, i) in player.items.slots"
         :id="item"
         :key="`${item}${i}`"
+        type="item"
         :map="match.mapId"
         size="lg"
-        side="bottom"
-        :disabled="!item || item === 0" />
+        :disabled="!item || item === 0"
+        @click.stop />
 
-      <Item
+      <HoverIcon
         v-if="match.mapId === 11"
         :id="player.items.role"
+        type="item"
         :map="match.mapId"
-        side="bottom"
         size="lg"
         :ui="{
           root: 'ml-2 rounded-full'
-        }" />
+        }"
+        @click.stop />
     </div>
   </div>
 </template>

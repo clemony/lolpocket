@@ -27,11 +27,11 @@
       ]
     },
     {
-      "description": "Caitlyn will not dash backwards if she is immobilized or grounded during the cast time. She can cast any of her abilities during the dash."
+      "description": "Caitlyn will not recoil after the cast time if she was immobilized or grounded during it. She can cast any of her abilities during the recoil dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
-  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net's cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability's cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net's missile will fail to fire if Caitlyn is  suppressed during the cast time.(note)",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nThe recoil can be used to pass through terrain.\nIf Caitlyn buffers  Piltover Peacemaker during 90 Caliber Net's cast time,  Piltover Peacemaker will start after the cast time.\nIf Caitlyn buffers an ability or basic attack during this ability's cast time, the buffered ability or basic attack will instead start after the dash ends.\nOther abilities can be cast while  dashing if they are input after the cast time.\n90 Caliber Net's missile will fail to fire if Caitlyn is  suppressed during the cast time.(unexpected)",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "1600 / 1000",

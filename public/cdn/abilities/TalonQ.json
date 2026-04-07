@@ -38,7 +38,7 @@
       ]
     },
     {
-      "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 55 (based on level) and the ability's cooldown is reduced by 50%."
+      "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 60.41 (based on level) and the ability's cooldown is reduced by 50%."
     },
     {
       "description": "Noxian Diplomacy resets Talon's basic attack timer. Shadow Assault can be cast during the dash."

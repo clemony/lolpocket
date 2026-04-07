@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import { vDraggable } from 'vue-draggable-plus'
+import { motion } from "motion-v"
+import { vDraggable } from "vue-draggable-plus"
 
 const a = computed(() => is().filtered.length < is().defaultFilterLength)
 
 watch(
   () => a.value,
   (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+    console.log("💠 - watch - newVal:", newVal)
   }
 )
 </script>
@@ -23,14 +23,14 @@ watch(
             name: 'items',
             put: false,
             pull: 'clone',
-            revertClone: true,
+            revertClone: true
           },
           sort: false,
           forceFallback: false,
           ghostClass: 'item-icon-ghost',
           dragClass: 'item-icon-ghost',
-          chosenClass: 'item-icon-ghost',
-        },
+          chosenClass: 'item-icon-ghost'
+        }
       ]"
       class="grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-between gap-4 pt-6 select-none"
       layout="position">
@@ -39,12 +39,10 @@ watch(
           v-for="item in is().filtered"
           :key="item"
           :transition="{
-            duration: 0.2,
+            duration: 0.2
           }"
           layout="position">
-          <LazyItemTooltip
-            :id="item"
-            class="aspect-square size-20" />
+          <LazyItemTooltip :id="item" class="aspect-square size-20" />
         </motion.div>
       </AnimatePresence>
     </motion.div>
@@ -59,9 +57,7 @@ watch(
         <span>
           {{ !is().filtered.length ? "sold out" : "reset" }}
         </span>
-        <icon
-          class="size-3.5"
-          name="reset" />
+        <icon class="size-3.5" name="reset" />
       </UButton>
     </TransitionScalePop>
   </div>

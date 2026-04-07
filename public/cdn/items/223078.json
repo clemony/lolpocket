@@ -2,6 +2,11 @@
   "id": 223078,
   "name": "Trinity Force",
   "description": "35 Attack Damage\n25% Attack Speed\n333 Health\n20 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack is enhanced with  additional physical damage.\n\nQuicken\nBasic attacks grant Move Speed.\n\n",
+  "stats": {
+    "health": 333,
+    "attackDamage": 35,
+    "attackSpeed": 25
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -6,6 +6,7 @@ const props = withDefaults(
     AvatarProps & {
       id: number | null
       name?: string
+      interactive?: boolean
       class?: HTMLAttributes["class"]
       loadingIcon?: LoadingStyle
       map?: number

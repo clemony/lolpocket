@@ -5,7 +5,7 @@ const props = withDefaults(
     comment: CommentData
     author: AccountData | null
   }>(),
-  {},
+  {}
 )
 
 const forward = reactiveOmit(props, "class")
@@ -17,8 +17,8 @@ const splash = computed(() =>
   img(
     props.author?.splash
       ? props.author.splash.replace("centered", "uncentered")
-      : "",
-  ),
+      : ""
+  )
 )
 const tag = ref(false)
 </script>
@@ -52,7 +52,7 @@ const tag = ref(false)
             background: `url(${splash})`,
             backgroundSize: '114%',
             backgroundPositionY: '10%',
-            backgroundRepeat: 'no-repeat',
+            backgroundRepeat: 'no-repeat'
           }"
           :alt="`${author?.name}'s Splash`">
           <UBadge

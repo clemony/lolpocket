@@ -1,32 +1,34 @@
-export const contactInfo: Record<string, NavInfo> = {
+import type { ButtonProps } from "@nuxt/ui"
+
+export const contactInfo: Record<string, ButtonProps> = {
   contact: {
-    label: 'contact',
-    to: 'contact@lolpocket.com',
+    label: "contact",
+    to: "contact@lolpocket.com"
   },
   discord: {
     external: true,
-    icon: 'prime:discord',
-    label: 'Discord',
-    to: 'https://discord.gg/Jzuu7bYTZY',
+    icon: "prime:discord",
+    label: "Discord",
+    to: "https://discord.gg/Jzuu7bYTZY",
     ui: {
-      leadingIcon: 'size-8'
-    },
+      leadingIcon: "size-8"
+    }
   },
   github: {
     external: true,
-    icon: 'prime:github',
-    label: 'Github',
-    to: 'https://github.com/clemony/lolpocket',
+    icon: "prime:github",
+    label: "Github",
+    to: "https://github.com/clemony/lolpocket",
     ui: {
-      leadingIcon: 'size-9'
-    },
+      leadingIcon: "size-9"
+    }
   },
   privacy: {
-    label: 'privacy',
-    to: 'support@lolpocket.com',
+    label: "privacy",
+    to: "support@lolpocket.com"
   },
   support: {
-    label: 'support',
-    to: 'support@lolpocket.com',
-  },
+    label: "support",
+    to: "support@lolpocket.com"
+  }
 }

@@ -2,6 +2,10 @@
   "id": 323004,
   "name": "Manamune",
   "description": "35 Attack Damage\n500 Mana\n15 Ability Haste\n\nAwe\nGain  bonus Attack Damage.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grants 6.5 max Mana (doubled vs. champions).\nTransforms into Muramana at 360 max Mana.",
+  "stats": {
+    "mana": 500,
+    "attackDamage": 35
+  },
   "gold": {
     "base": 1100,
     "purchasable": true,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

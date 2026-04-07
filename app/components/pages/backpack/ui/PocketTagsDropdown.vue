@@ -11,7 +11,7 @@ const pocketTags = computed<string[]>({
   get: () => pocket.value?.tags ?? [],
   set: (value) => {
     if (pocket.value) pocket.value.tags = value
-  },
+  }
 })
 
 function ensurePocketTags() {

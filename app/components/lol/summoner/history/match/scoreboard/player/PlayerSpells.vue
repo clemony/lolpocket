@@ -6,13 +6,23 @@ const { class: className, player } = defineProps<{
 </script>
 
 <template>
-  <div
+  <UAvatarGroup
     class=""
-    :class="cn('items-between flex shrink-0 flex-col gap-1.5', className)">
-    <Spell
-      v-for="spell in player?.spells"
+    :ui="{
+      root: cn('shrink-0 flex-col -space-y-0.25', className)
+    }">
+    <HoverIcon
+      v-for="spell in player?.spells.toReversed()"
       :id="spell"
       :key="spell"
-      class="size-6.5 rounded-full ring-pc/60 transition-all duration-300 hover:scale-105 hover:ring" />
-  </div>
+      size="sm"
+      round
+      :avatar="{
+        ui: {
+          image:
+            'ring ring-transparent ring-offset-3 ring-offset-p1 drop-shadow-none'
+        }
+      }"
+      type="spell" />
+  </UAvatarGroup>
 </template>

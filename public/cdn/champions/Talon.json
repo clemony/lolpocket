@@ -15,7 +15,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
         },
         {
-          "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 280 (based on level) (+ 210% bonus AD) total physical damage over 2 seconds ][ 5 - 17.5 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds over 2 seconds ]. The target cannot gain Wound stacks during this time."
+          "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 303.53 (based on level) (+ 210% bonus AD) total physical damage ][ 5 - 18.97 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds ]over 2 seconds. The target cannot gain Wound stacks during this time."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/p",
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 55 (based on level) and the ability's cooldown is reduced by 50%."
+          "description": "If Noxian Diplomacy kills the target, Talon heals for 9 - 60.41 (based on level) and the ability's cooldown is reduced by 50%."
         },
         {
           "description": "Noxian Diplomacy resets Talon's basic attack timer. Shadow Assault can be cast during the dash."
@@ -265,6 +265,7 @@
     "difficulty": 2
   },
   "fullName": "Talon Du Couteau",
+  "lore": "Talon is the knife in the darkness, a merciless killer able to strike without warning and escape before any alarm is raised. He carved out a dangerous reputation on the brutal streets of Noxus, where he was forced to fight, kill, and steal to survive. Adopted by the notorious Du Couteau family, he now plies his deadly trade at the empire's command, assassinating enemy leaders, captains, and heroes… as well as any Noxian foolish enough to earn the scorn of their masters.",
   "patchLastChanged": "25.22",
   "positions": [
     "Jungle"
@@ -293,7 +294,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.8,
-    "attackDamage": 3.1,
     "attackSpeed": 2.9
   },
   "price": {

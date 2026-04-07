@@ -46,7 +46,16 @@
     21,
     35
   ],
-  "ornnUpgrade": 323110,
+  "masterwork": {
+    "upgradeId": 323110,
+    "stats": {
+      "mana": 500,
+      "armor": 75
+    },
+    "bonusStats": {
+      "mana": 100
+    }
+  },
   "tags": [
     "Tank",
     "Support"

@@ -59,7 +59,13 @@
     21,
     35
   ],
-  "ornnUpgrade": 667666,
+  "masterwork": {
+    "upgradeId": 667666,
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50
+    }
+  },
   "tags": [
     "Marksman",
     "Assassin"

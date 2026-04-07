@@ -194,6 +194,7 @@
     "abilityReliance": 90,
     "difficulty": 1
   },
+  "lore": "Blitzcrank is an enormous, near-indestructible automaton from Zaun, originally built to dispose of hazardous waste. However, he found this primary purpose too restricting, and modified his own form to better serve the fragile people of the Sump. Blitzcrank selflessly uses his strength and durability to protect others, extending a helpful metal fist or burst of energy to subdue any troublemakers.",
   "patchLastChanged": "25.22",
   "positions": [
     "Support"
@@ -224,7 +225,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 1.1
   },
   "price": {

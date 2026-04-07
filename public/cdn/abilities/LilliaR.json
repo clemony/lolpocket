@@ -4,7 +4,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Lillia casts a magical lullaby over all enemy  champions affected by  Dream Dust, making them  drowsy before falling  asleep for a few seconds.",
   "castTime": "0.4",
-  "cooldown": "140 / 120 / 100",
+  "cooldown": "150 / 130 / 110",
   "cost": "50",
   "damageType": "Magic damage",
   "effects": [
@@ -18,11 +18,11 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "150 / 200 / 250"
+              "values": "100 / 150 / 200"
             },
             {
               "unit": "% AP",
-              "values": "45"
+              "values": "40"
             }
           ]
         }

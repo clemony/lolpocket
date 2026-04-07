@@ -12,17 +12,17 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6% / 8% / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks on-hit against targets below 50% maximum health are empowered to deal 6% / 8% / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
         },
         {
-          "description": "Against monsters, Contempt for the Weak deals 180% damage, capped at 300."
+          "description": "Against monsters, Contempt for the Weak deals 75% damage and is capped at 175."
         },
         {
           "description": "Contempt for the Weak cannot occur on the same champion more than once every few seconds."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
-      "notes": "The enhanced attack applies other on-hit effects and can  critically strike as normal (the bonus damage cannot).\nContempt for the Weak is not consumed when  dodged or  missed, but it is consumed when  blocked.\nContempt for the Weak considers the target's health upon landing the attack, not when it's declared.\nIf the target falls below the threshold while Zed is winding up the attack, Contempt for the Weak applies, and vice versa.\nThe empowered attack will not trigger against structures.",
+      "notes": "The enhanced attack applies other  on-hit effects and can  critically strike as normal (the bonus damage cannot).\nContempt for the Weak is not consumed when  dodged or  missed, but it is consumed when  blocked.\nContempt for the Weak considers the target's health upon landing the attack, not when it's declared.\nIf the target falls below the threshold while Zed is winding up the attack, Contempt for the Weak applies, and vice versa.\nThe empowered attack will not trigger against  structures.",
       "onTargetCdStatic": "10",
       "spellEffects": "proc",
       "spellshieldable": "False",
@@ -113,7 +113,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
-      "notes": "Zed gains a buff for 5.25 seconds that indicates and determines the duration in which he may recast Living Shadow.\nThe buff is granted briefly after Living Shadow is cast.\nIf cast at minimum distance, the buff and the Shadow's individual durations will effectively start at the same time.\nIf cast at greater than the minimum distance, then the buff's duration will start before the Shadow's duration.\nThe passive is available while the ability has not been learned. It will grant the  energy refund strength at rank 1.\nThe  energy refund is not granted if the mimicked ability is blocked by a  spell shield.\nLiving Shadow's recast can be queued to cast while the Shadow is dashing; the recast will occur once it has been placed.\nLiving Shadow cannot be recast while  grounded or  rooted.\nIf Living Shadow is recast during  Razor Shuriken's cast, Zed will instantly release the shuriken from the cast location of  Razor Shuriken while still remaining in cast time. Once he has swapped places, he will then throw the shuriken that the  Shadow would have thrown instead.\nZed will cast  Razor Shuriken as he normally would from the new location, but over the remaining cast time and towards the same point of cast.\nThe  Shadow will not throw a shuriken from its new location, but will continue to play the cast animation for  Razor Shuriken.\nThis special interaction does not occur with the swap recast of  Death Mark; the recast will be buffered if used during  Razor Shuriken's cast.\nZed will swap places with the  Shadow by all means if he buffers Living Shadow's recast during its dash.(note)\nLiving Shadow cannot be recast while Zed is marking his target with  Death Mark, but may still be recast if it was buffered.(bug)\nIf Zed casts Living Shadow while a non- Death Mark Shadow is already present, the previous Shadow will instantly disappear.\nIf a  Shadow expires while in the cast time of  Razor Shuriken, the mimicked cast will be cancelled.\n Shadows will cast  Shadow Slash independently of being in  Razor Shuriken's cast time or not.(note)\n Shadows spawned from Living Shadow may sometimes last for up to an additional 0.25 seconds.(bug)\n Shadows will not disappear when Zed dies.(bug)",
+      "notes": "Zed gains a buff for 5.25 seconds that indicates and determines the duration in which he may recast Living Shadow.\nThe buff is granted briefly after Living Shadow is cast.\nIf cast at minimum distance, the buff and the Shadow's individual durations will effectively start at the same time.\nIf cast at greater than the minimum distance, then the buff's duration will start before the Shadow's duration.\nThe passive is available while the ability has not been learned. It will grant the  energy refund strength at rank 1.\nThe  energy refund is not granted if the mimicked ability is blocked by a  spell shield.\nLiving Shadow's recast can be queued to cast while the Shadow is dashing; the recast will occur once it has been placed.\nLiving Shadow cannot be recast while  grounded or  rooted.\nIf Living Shadow is recast during  Razor Shuriken's cast, Zed will instantly release the shuriken from the cast location of  Razor Shuriken while still remaining in cast time. Once he has swapped places, he will then throw the shuriken that the  Shadow would have thrown instead.\nZed will cast  Razor Shuriken as he normally would from the new location, but over the remaining cast time and towards the same point of cast.\nThe  Shadow will not throw a shuriken from its new location, but will continue to play the cast animation for  Razor Shuriken.\nThis special interaction does not occur with the swap recast of  Death Mark; the recast will be buffered if used during  Razor Shuriken's cast.\nZed will swap places with the  Shadow by all means if he buffers Living Shadow's recast during its dash.(unexpected)\nLiving Shadow cannot be recast while Zed is marking his target with  Death Mark, but may still be recast if it was buffered.(bug)\nIf Zed casts Living Shadow while a non- Death Mark Shadow is already present, the previous Shadow will instantly disappear.\nIf a  Shadow expires while in the cast time of  Razor Shuriken, the mimicked cast will be cancelled.\n Shadows will cast  Shadow Slash independently of being in  Razor Shuriken's cast time or not.(unexpected)\n Shadows spawned from Living Shadow may sometimes last for up to an additional 0.25 seconds.(bug)\n Shadows will not disappear when Zed dies.(bug)",
       "resource": "Energy",
       "speed": "2500",
       "targeting": "Location / Auto",
@@ -243,7 +243,8 @@
     "abilityReliance": 55,
     "difficulty": 3
   },
-  "patchLastChanged": "25.24",
+  "lore": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock the secret shadow form—a malevolent spirit magic as dangerous and corrupting as it is powerful. Zed has mastered all of these forbidden techniques to destroy anything he sees as a threat to his nation, or his new order.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle",
     "Middle"
@@ -270,7 +271,6 @@
     "armor": 4.7,
     "magicResist": 2.1,
     "hpRegen": 0.7,
-    "attackDamage": 3.4,
     "attackSpeed": 3.3
   },
   "price": {

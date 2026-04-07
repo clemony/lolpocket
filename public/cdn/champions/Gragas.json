@@ -8,7 +8,7 @@
       "key": "P",
       "name": "Happy Hour",
       "affects": "Self",
-      "blurb": "Innate: Every few seconds,  Gragas will  heal a portion of his maximum health upon casting an ability.",
+      "blurb": "Innate: Every few seconds,  Gragas will  heal a portion of his maximum health upon casting an  ability.",
       "effects": [
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, after casting an ability, Gragas heals himself for 5.5% of his maximum health.</p>"
@@ -265,6 +265,7 @@
     "abilityReliance": 90,
     "difficulty": 2
   },
+  "lore": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster who's always on the lookout for new ways to raise everyone's spirits. Hailing from parts unknown, he searches for ingredients among the unblemished wastes of the Freljord to help him perfect his latest concoction. He is impulsive, headstrong, and renowned for the brawls he starts, which often end in all-night parties and widespread property damage. Any appearance from Gragas must surely foreshadow merriment and destruction—in that order.",
   "patchLastChanged": "25.09",
   "positions": [
     "Jungle",
@@ -297,7 +298,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.5,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 2.1
   },
   "price": {

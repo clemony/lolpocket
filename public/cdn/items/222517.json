@@ -2,6 +2,9 @@
   "id": 222517,
   "name": "Endless Hunger",
   "description": "60 Attack Damage\n5% Omnivamp\n20% Tenacity\n\nFamine\nGain  Ability Haste.\n\nFeast\nWhen a champion that you damaged within 3 seconds dies, gain 15% Omnivamp for 8 seconds. ",
+  "stats": {
+    "attackDamage": 60
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

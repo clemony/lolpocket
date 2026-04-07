@@ -2,6 +2,10 @@
   "id": 322530,
   "name": "Diadem of Songs",
   "description": "200 Health\n8% Heal and Shield Power\n1000 Mana\n100% Base Mana Regen\n\nHarmony\nGain % Heal and Shield Power.\n\nConsonance\nWhile you or any ally you've healed or shielded in the last 3 seconds is in combat with champions, each second, heal the lowest health nearby ally champion.",
+  "stats": {
+    "mana": 1000,
+    "health": 200
+  },
   "gold": {
     "base": 2250,
     "purchasable": false,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

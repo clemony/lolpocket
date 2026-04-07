@@ -1,24 +1,32 @@
 {
   "key": "Q",
-  "name": "Twin Bite",
+  "name": "Emberstrike",
   "affects": "Enemies",
-  "angle": "180°",
-  "blurb": "Active:  Shyvana's next  basic attack within a few seconds will cause her to quickly strike again, dealing bonus physical damage.",
+  "blurb": "Passive: Shyvana's  basic attacks  on-hit will reduce Emberstrike's  current cooldown, and deal bonus magic damage based on the target's maximum health.",
   "castTime": "none",
-  "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
+  "cooldown": "10 / 9 / 8 / 7 / 6",
   "cost": "0",
-  "damageType": "Physical damage",
-  "effectRadius": "325 /  250",
+  "damageType": "Other damage",
+  "effectRadius": "275",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana empowers her next basic attack within 6 seconds to gain 25 bonus range, deal 100% AD (+ 50% AP) physical damage, and cause her to strike again after 0.25 seconds to deal bonus physical damage.The second strike applies on-hit effects, triggers on-attack effects, and can critically strike for (175% + 30%) damage if the triggering attack does.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shyvana's basic attacks on-hit will reduce Emberstrike's current cooldown by 1 second, and deal bonus magic damage equal to 1% (+ 1.1% per 100 bonus AD) (+ 1.1% per 100 AP) of the target's maximum health. Against non-champions, this effect deals a minimum of 10 and is capped at 200.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Emberstrike can be cast twice in Human Form and thrice in Dragon Form. Each cast empowers Shyvana's next basic attack within 6 seconds to have an uncancellable windup and trigger an additional exclusive effect. After 1.5 seconds of using an Emberstrike attack, or immediately following a basic attack, the ability can be recast within and up to the next 4 seconds each time, before it incurs its cooldown. Shyvana gains 50 bonus range on all of her basic attacks while Emberstrike is active. The attacks deal 10 bonus physical damage against monsters.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Shyvana's slashes her claws, blasting a cone in the target's direction that deals modified physical damage to enemies hit. The damage to the primary target is affected by critical strike modifiers.</p>",
       "leveling": [
         {
-          "attribute": "Bonus Physical Damage",
+          "attribute": "Area Physical Damage",
           "modifiers": [
             {
+              "values": "10 / 15 / 20 / 25 / 30"
+            },
+            {
               "unit": "% AD",
-              "values": "20 / 40 / 60 / 80 / 100"
+              "values": "110"
             },
             {
               "unit": "% AP",
@@ -29,32 +37,36 @@
       ]
     },
     {
-      "description": "After consuming the empowered attack, her next two basic attacks within 5 seconds gain bonus attack speed.",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Second Cast:</span> Shyvana slams her tail, dealing the same damage to the target and surrounding enemies.</p>"
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus — Third Cast:</span> Shyvana takes a bite out of the target, dealing modified true damage. This damage is not affected by critical strike modifiers.</p>",
       "leveling": [
         {
-          "attribute": "Bonus Attack Speed",
+          "attribute": "True Damage",
           "modifiers": [
             {
-              "unit": "%",
-              "values": "50 / 55 / 60 / 65 / 70"
+              "values": "15 / 22.5 / 30 / 37.5 / 45"
+            },
+            {
+              "unit": "% AD",
+              "values": "165"
+            },
+            {
+              "unit": "% AP",
+              "values": "37.5"
             }
           ]
         }
       ]
     },
     {
-      "description": "Basic attacks reduce Twin Bite's current cooldown by 0.5 seconds on-hit."
-    },
-    {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> Twin Bite damages all enemies in a cone in front of Shyvana and additionally applies the second strike after 0.25 seconds to enemies near the primary target, with the same effects to all targets hit, but with the exception of the second strike not triggering on-attack effects for secondary targets struck. Additionally, Twin Bite's empowered attack has an uncancellable windup.</p>"
-    },
-    {
-      "description": "Twin Bite resets Shyvana's basic attack timer."
+      "description": "All casts reset Shyvana's basic attack timer."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/q",
-  "notes": "Applies  spell damage and procs  basic damage required effects.\nPENDING FOR TEST: Dragon Form's Twin Bite can attack  stealthed units in the area.\nDragon Form's Twin Bite only applies the attack to enemies that would be hit by the second strike.\nIn Dragon Form, both strikes belong to the same cast instance. In Human Form, they belong in separate ones.\nSince the second strike applies after the ability goes on cooldown, it will reduce its own cooldown.\nUnlike most  on-hit effects, the one reducing the cooldown of Twin Bite also triggers against  structures.\nIn Dragon Form, Twin Bite consumes an additional stack of  Hail of Blades. (bug)\nIn Dragon Form, Twin Bite's area of effect can target units that are normally  untargetable to abilities, such as  wards, jungle plants.\nThis allows Dragon Form Twin Bite to instantly destroy  Yorick's  Dark Procession.(note)\nThe initial empowered attack rolls a  critical strike once for both strikes; either both will critically strike, or none will. If  Sundered Sky's Lightshield Strike is ready, bothq strikes will critically strike.",
+  "notes": "Applies  spell damage to the primary target (attack target) and  area damage to secondary targets. The passive on-hit damage applies  proc damage.\n Spell shield will not block any damage nor be consumed by the strikes.\nThe true damage is always equal to 150% of the pre-mitigation physical damage.\n Blind will negate the damage to the primary target, but not to any secondary targets.\nPENDING FOR TEST: Interaction with parrying effects ( dodge,  block).\nOnly the last cast of Emberstrike puts Shyvana's basic attack on cooldown.\nIn Human Form, only Q2 will put it on cooldown; in  Dragon Form, only Q3 will.\nThis results in the same functionality as  Leona's  Shield of Daybreak and  Volibear's  Thundering Smash, effectively being a triple/quintuple attack reset.",
   "spellEffects": "special",
-  "spellshieldable": "True",
+  "spellshieldable": "False",
   "targeting": "Auto"
 }

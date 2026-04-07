@@ -48,7 +48,7 @@
       "description": "Supercharge's current cooldown is reduced by 0.5 seconds on-attack."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 65% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e",

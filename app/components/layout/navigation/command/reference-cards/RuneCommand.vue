@@ -40,7 +40,7 @@ const tierLabel = computed(() => {
           <template #header>
             <LazyAvatar
               v-if="rune"
-              size="12"
+              size="3xl"
               :src="`/img/rune/${rune.id}.webp`"
               :alt="`${rune.name} Image`" />
 

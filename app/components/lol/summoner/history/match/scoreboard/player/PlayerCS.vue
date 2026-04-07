@@ -20,8 +20,7 @@ const {
       }"
       :label="player.stats.totalCs"
       color="neutral"
-      variant="ghost"
-      size="2xs" />
+      variant="subtle" />
 
     <template #content>
       <div class="grid gap-3 p-0.5 *:leading-5.5">

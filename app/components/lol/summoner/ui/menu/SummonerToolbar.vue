@@ -7,7 +7,7 @@ const {
   size = "md",
   tooltipPlacement = "bottom",
   update,
-  warning,
+  warning
 } = defineProps<{
   class?: HTMLAttributes["class"]
   sidebar?: boolean
@@ -23,7 +23,7 @@ const menu = {
   placement: tooltipPlacement,
   theme: "mini-tip base",
   delay: [0, 0],
-  offset: [0, 16],
+  offset: [0, 16]
 }
 // todo finish scripts block and report
 

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { inboxUnreadFilter } from "./inbox-management"
-import { testMessage } from "./test-message"
+import { createTestMessage } from "./test-message"
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import { testMessage } from "./test-message"
   <div class="px-2 pt-1 text-sm font-semibold opacity-50">
     Tools
   </div>
-  <UButton @click="user().inbox?.messages?.push(testMessage)">
+  <UButton @click="user().addInboxMessage(createTestMessage())">
     <icon class="size-4.5" name="hugeicons:test-tube-01" />
     Send Test Message
   </UButton>

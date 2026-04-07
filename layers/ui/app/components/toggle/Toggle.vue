@@ -6,7 +6,7 @@ import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
 import buttonTheme from "../../theme/button"
 
 const props = withDefaults(defineProps<ToggleButtonProps>(), {
-  color: "p1",
+  color: "primary",
   variant: "solid",
   size: "md"
 })
@@ -32,7 +32,18 @@ const delegatedProps = reactiveOmit(
 )
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-const appConfig = useAppConfig()
+const appConfig = useAppConfig() as {
+  ui?: {
+    button?: {
+      variants?: {
+        active?: {
+          true?: { base?: string | string[] }
+          false?: { base?: string | string[] }
+        }
+      }
+    }
+  }
+}
 
 function getActiveBaseClasses(active: boolean) {
   return active

@@ -19,7 +19,7 @@
           "attribute": "Magic Damage per Tick",
           "modifiers": [
             {
-              "values": "35 / 52.5 / 70"
+              "values": "30 / 50 / 70"
             },
             {
               "unit": "% AP",
@@ -31,7 +31,7 @@
           "attribute": "Magic Damage per Second",
           "modifiers": [
             {
-              "values": "140 / 210 / 280"
+              "values": "120 / 200 / 280"
             },
             {
               "unit": "% AP",
@@ -43,7 +43,7 @@
           "attribute": "Maximum Magic Damage",
           "modifiers": [
             {
-              "values": "700 / 1050 / 1400"
+              "values": "600 / 1000 / 1400"
             },
             {
               "unit": "% AP",

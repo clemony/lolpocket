@@ -22,7 +22,6 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/p",
-      "notes": "No additional details.",
       "onTargetCdStatic": "8",
       "targeting": "Passive"
     },
@@ -117,7 +116,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/w",
-      "notes": "The goo missile is VFX only, to convey which location Singed threw the adhesive at. It has a fixed travel time but is independent from when the zone is established. It is not destructible by effects such as  Wind Wall.\nMega Adhesive's  slow and  ground debuffs are each marked as non-dispellable, so they are not removed by most  cleanses. Each is however allowed to be removed by cleanses that also grant immunity to the debuff type, such as  Olaf's  Ragnarok.",
+      "notes": "The goo missile is a projectile. It has a fixed travel time but is independent from when the zone is established. It is destructible by effects such as  Wind Wall and will destroy item spell shields if the goo missile is thrown past an enemy champion.\nMega Adhesive's  slow and  ground debuffs are each marked as non-dispellable, so they are not removed by most  cleanses. Each is however allowed to be removed by cleanses that also grant immunity to the debuff type, such as  Olaf's  Ragnarok.",
       "projectile": "TRUE",
       "resource": "Mana",
       "spellshieldable": "false",
@@ -194,7 +193,7 @@
               "attribute": "Bonus Stats",
               "modifiers": [
                 {
-                  "values": "25 / 60 / 95"
+                  "values": "25 / 55 / 85"
                 }
               ]
             },
@@ -202,15 +201,15 @@
               "attribute": "HP/Mana Regenerated per 0.5 Seconds",
               "modifiers": [
                 {
-                  "values": "2.5 / 6 / 9.5"
+                  "values": "2.5 / 5.5 / 8.5"
                 }
               ]
             },
             {
-              "attribute": "Total HP/Mana Regeneration (per 5 Seconds)",
+              "attribute": "Total HP/Mana Regeneration (per 25 Seconds)",
               "modifiers": [
                 {
-                  "values": "125 / 300 / 475"
+                  "values": "125 / 275 / 425"
                 }
               ]
             }
@@ -238,7 +237,8 @@
     "difficulty": 3
   },
   "fullName": "Corin Reveck",
-  "patchLastChanged": "25.17",
+  "lore": "Singed is a brilliant alchemist of dubious morality, whose experiments would turn the stomach of even the most cutthroat criminal. Selling his skills to the highest bidder, he cares little for how his noxious concoctions are used, with the ensuing chaos an experiment in itself. His most infamous work is “shimmer”, which enabled the chembarons to turn Zaun into their personal playground—but fueled by madness, Singed is always working on something new, with each endeavor more depraved than the last...",
+  "patchLastChanged": "26.07",
   "positions": [
     "Top"
   ],
@@ -268,7 +268,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.6,
     "mpRegen": 0.6,
-    "attackDamage": 3.4,
     "attackSpeed": 1.9
   },
   "price": {

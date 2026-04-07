@@ -12,7 +12,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 93 (based on level) (+ 15% bonus armor) bonus magic damage on-attack, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p>\nseconds."
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 101 (based on level) (+ 15% bonus armor) bonus magic damage on-attack, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p>\nseconds."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/p",
@@ -95,7 +95,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/w",
-      "notes": "The mimicked abilities will still complete even if Taric dies or leaves range.\nAbilities are not mimicked to the bound ally if they are  vanished via  Alpha Strike,  Hallucinate,  Rappel, or  Void Rush.\nMimicked abilities will also cancel if they vanish as above.\nBastion has a  forgiveness radius of 175 units.",
+      "notes": "The mimicked abilities will still complete even if Taric dies or leaves range.\nAbilities are not mimicked to the bound ally if they are  vanished via  Alpha Strike,  Hallucinate,  Rappel, or  Void Rush.\nMimicked abilities will also cancel if they vanish as above.\nBastion effects will be temporarily disabled while the bound ally is in a different realm than Taric ( Death Realm). The tether will not break.\nBastion has a  forgiveness radius of 175 units.",
       "resource": "Mana",
       "targeting": "Unit",
       "targetRange": "800",
@@ -176,6 +176,7 @@
     "abilityReliance": 75,
     "difficulty": 2
   },
+  "lore": "Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount Targon to find redemption, only to discover a higher calling among the stars. Imbued with the might of ancient Targon, the Shield of Valoran now stands ever vigilant against the insidious corruption of the Void.",
   "patchLastChanged": "25.15",
   "positions": [
     "Middle",
@@ -208,7 +209,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.5,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 2
   },
   "price": {

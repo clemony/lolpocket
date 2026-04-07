@@ -67,7 +67,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/q",
-      "notes": "This ability will cast from wherever the caster is at the start of the cast time.\nThe damage amplification is based on the distance from Nidalee's location at the end of the cast time to the struck target's center at the time of collision.\nThe damage increase is very slightly higher than the spear's travel distance due to edge range behaviour of collisions and the distance being measured as the radius from the picked \"origin\" location at the end of the cast time, rather than just along the vector of the cast.\nThe damage increase does not have distinct thresholds based on the distance the spear travelled.\nPicking Nidalee's location at the end of the cast time as the \"origin\" for the damage calculation may be unintended.(note)",
+      "notes": "This ability will cast from wherever the caster is at the start of the cast time.\nThe damage amplification is based on the distance from Nidalee's location at the end of the cast time to the struck target's center at the time of collision.\nThe damage increase is very slightly higher than the spear's travel distance due to edge range behaviour of collisions and the distance being measured as the radius from the picked \"origin\" location at the end of the cast time, rather than just along the vector of the cast.\nThe damage increase does not have distinct thresholds based on the distance the spear travelled.\nPicking Nidalee's location at the end of the cast time as the \"origin\" for the damage calculation may be unintended.(unexpected)",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1300",
@@ -86,7 +86,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (75% + 30%) AD bonus magic damage.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (100% + 30%) AD bonus magic damage.</p>",
           "leveling": [
             {
               "attribute": "Minimum Magic Damage",
@@ -436,7 +436,8 @@
     "abilityReliance": 75,
     "difficulty": 3
   },
-  "patchLastChanged": "25.24",
+  "lore": "Raised in the deepest jungle, Nidalee is a master tracker who can shapeshift into a ferocious cougar at will. Neither wholly woman nor beast, she viciously defends her territory from any and all trespassers, with carefully placed traps and deft spear throws. She cripples her quarry before pouncing on them in feline form—the lucky few who survive tell tales of a wild woman with razor-sharp instincts, and even sharper claws...",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -466,7 +467,6 @@
     "magicResist": 1.5,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 3.2
   },
   "price": {

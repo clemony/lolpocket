@@ -2,6 +2,9 @@
   "id": 4641,
   "name": "Stirring Wardstone",
   "description": "80 Health\n25% Base Mana Regen\n\n\nArcane Cache: This item can store up to 2 purchased Control Wards.\n\n",
+  "stats": {
+    "health": 80
+  },
   "gold": {
     "base": 350,
     "purchasable": false,

@@ -11,7 +11,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Urgot's six legs each conceal a shotgun that covers an arc, together forming a full circle of cover around him. Each shotgun can fire once before incurring a unique cooldown.</p>"
     },
     {
-      "description": "Urgot's next basic attack on-hit within the arc of a shotgun will cause it to fire in a cone, dealing 40% - 100% (based on level) AD (+ 2% - 6% (based on level) of target's maximum health) physical damage to enemies hit, capped at 100 - 360 (based on level) against monsters."
+      "description": "Urgot's next basic attack on-hit within the arc of a shotgun will cause it to fire in a cone, dealing 40% - 100% (based on level) AD (+ 2% - 6% (based on level) of target's maximum health) physical damage to enemies hit, capped at 100 - 390.59 (based on level) against monsters."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Urgot/ability-icon/p",

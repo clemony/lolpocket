@@ -16,7 +16,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/p",
-  "notes": "Spell shield will not block the mark's application.\nPENDING FOR TEST:: Interaction with mark consumption\nThe mark's consumption by an ally respects  enchantment redirection.",
+  "notes": "Spell shield will not block the mark's application.\nPENDING FOR TEST:: Interaction with mark consumption\nThe mark's consumption by an ally respects  enchantment redirection.\nLeverage's mark will be applied even if the attack misses due to  blind.\nPENDING FOR TEST: Interaction between mark application and consumption and parry effects ( block,  dodge,  blind*).",
   "spellEffects": "proc",
   "spellshieldable": "special",
   "targeting": "Passive"

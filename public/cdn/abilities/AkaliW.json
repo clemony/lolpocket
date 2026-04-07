@@ -35,7 +35,7 @@
       "description": "Entering the shroud renders Akali invisible, unless she is dashing."
     },
     {
-      "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it for 1 - 0.625 (based on minutes) seconds, refreshing on subsequent attacks and casts."
+      "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it again for 1 - 0.625 (based on level) seconds, refreshing on subsequent attacks and casts."
     },
     {
       "description": "The marked section of Twilight Shroud will linger for the mark's duration, even after the shroud ends."

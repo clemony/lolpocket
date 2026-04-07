@@ -70,7 +70,13 @@
     21,
     35
   ],
-  "ornnUpgrade": 322526,
+  "masterwork": {
+    "upgradeId": 322526,
+    "stats": {
+      "mana": 300,
+      "health": 200
+    }
+  },
   "tags": [
     "Mage"
   ]

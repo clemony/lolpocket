@@ -10,21 +10,20 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Nilah gains 0% - 33% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% - 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Nilah gains 0% - 30% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% - 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% - 100% (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% - 70% (+ 0% - 21%) (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.</p>",
       "leveling": [
         {
           "attribute": "Minimum Physical Damage",
           "modifiers": [
             {
-              "values": "5 / 10 / 15 / 20 / 25"
+              "values": "0 / 10 / 20 / 30 / 40"
             },
             {
-              "tooltip": "Scaling per rank:\n90 / 95 / 100 / 105 / 110% AD",
               "unit": "% AD",
-              "values": "90 - 110"
+              "values": "100"
             }
           ]
         },
@@ -32,12 +31,11 @@
           "attribute": "Maximum Physical Damage",
           "modifiers": [
             {
-              "values": "10 / 20 / 30 / 40 / 50"
+              "values": "0 / 19.1 / 38.2 / 57.3 / 76.4"
             },
             {
-              "tooltip": "Scaling per rank:\n180 / 190 / 200 / 210 / 220% AD",
               "unit": "% AD",
-              "values": "180 - 220"
+              "values": "191"
             }
           ]
         }

@@ -36,7 +36,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> K'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Ntofo Strikes' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Ntofo Strikes' cooldown is reduced by 33%. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out.</p>"
     },
     {
       "description": "Ntofo Strikes resets K'Sante's basic attack timer."

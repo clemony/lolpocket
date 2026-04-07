@@ -2,6 +2,10 @@
   "id": 223115,
   "name": "Nashor's Tooth",
   "description": "70 Ability Power\n45% Attack Speed\n10 Ability Haste\n\nIcathian Bite\nAttacks apply magic damage On-Hit.",
+  "stats": {
+    "abilityPower": 70,
+    "attackSpeed": 45
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -1,0 +1,15 @@
+{
+  "id": 5002,
+  "name": "Kage's Lucky Pick",
+  "description": "25 Ability Power\n5 Gold Per 10 Seconds\n\n",
+  "stats": {
+    "abilityPower": 25
+  },
+  "gold": {
+    "base": 400,
+    "purchasable": true,
+    "total": 800,
+    "sell": 560
+  },
+  "tags": []
+}

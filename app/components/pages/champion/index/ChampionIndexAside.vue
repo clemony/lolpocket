@@ -23,7 +23,7 @@ const wrapperClass =
         :class="
           cn('justify-start gap-4! rounded-xl', {
             'bg-tint-p2/70! btn-active drop-shadow-sm drop-shadow-black/6':
-              route.hash === `#${ability.key}`,
+              route.hash === `#${ability.key}`
           })
         "
         :to="{ path: route.path, hash: `#${ability.key}` }"

@@ -13,7 +13,8 @@ const error = shallowRef<string>("")
 </script>
 
 <template>
-  <UMain class="relative my-auto grid size-full place-items-center bg-p1">
+  <UMain
+    class="relative my-auto grid size-full place-items-center bg-p1 backdrop-blur-md">
     <div class="absolute top-4 right-4">
       <slot name="close" />
     </div>
@@ -47,7 +48,9 @@ const error = shallowRef<string>("")
             error =
               'There was an error logging you in. Please try again later and maybe get a new internet because this one is not the best one. It is bad.'
           ">
-          <h2 class="drop-shadow-2xs">lolpocket</h2>
+          <h2 class="drop-shadow-2xs">
+            lolpocket
+          </h2>
         </NuxtLink>
       </div>
       <!--  to="/" -->

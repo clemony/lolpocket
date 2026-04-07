@@ -23,13 +23,13 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Fiora's target.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiora challenges the target enemy champion for 8 seconds, highlighting all four of their Vitals after a 0.5-second delay. While in effect, Duelist's Dance does not identify new Vitals on Grand Challenge's target, and unlike Duelist's Dance, Grand Challenge's Vitals will linger regardless of range.</p>"
     },
     {
       "description": "While near the target, Fiora gains Duelist's Dance's bonus movement speed."
     },
     {
-      "description": "If Fiora triggers at least one Vital before the target dies, or triggers all four, she creates a Victory Zone at their location for 5 seconds, which heals Fiora and all allies within the area every 0.25 seconds.",
+      "description": "If Fiora triggers at least one Vital before the target dies, or triggers all four otherwise, a Victory Zone is created on their death location for 5 seconds, which heals Fiora and all allies within the area every 0.25 seconds.",
       "leveling": [
         {
           "attribute": "Heal per Tick",
@@ -68,13 +68,10 @@
           ]
         }
       ]
-    },
-    {
-      "description": "Unlike Duelist's Dance, the Vitals will continue to linger even if Fiora is not nearby."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/r",
-  "notes": "Grand Challenge is dispelled instantly if targeting a decoy.\nGrand Challenge can't be cast on  Sion's  Glory in Death.\nThe damage of this ability scales with  Duelist's Dance.\nEven if Fiora dies, the  Victory Zone will trigger so long as she hit at least one Vital and they die before the Vitals wear off.\n Resurrection effects will not prevent the activation of the  Victory Zone.\nThe  Victory Zone will not heal  untargetable units.\nFiora will automatically attack the target upon casting if the target was selected while they weren't in range of the ability.",
+  "notes": "Grand Challenge is dispelled instantly if targeting a decoy.\nGrand Challenge cannot be cast on  Sion's  Glory in Death.\nThe damage of this ability scales with  Duelist's Dance.\nEven if Fiora dies, the  Victory Zone will trigger so long as she hit at least one Vital and they die before the Vitals wear off.\n Resurrection effects will not prevent the activation of the  Victory Zone.\nThe  Victory Zone will not heal  untargetable units.\nFiora will automatically attack the target upon casting if the target was selected while they were not in range of the ability.\nAttempting to cast Grand Challenge on a target already affected by it will incur a 1-second cooldown and a text saying that the ability cannot be stacked will pop out of the target.",
   "resource": "Mana",
   "spellshieldable": "false",
   "targeting": "Unit",

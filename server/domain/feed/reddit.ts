@@ -1,4 +1,4 @@
-import type { FeedLink, FeedRefreshResponse } from "#shared/types"
+import type { FeedLink, FeedRefreshResponse, FeedVideoProvider } from "#shared/types"
 import { Buffer } from "node:buffer"
 import { decode } from "html-entities"
 import { supabaseAdminRequest } from "~~/server/utils/supabase/admin"
@@ -40,6 +40,15 @@ interface RedditListingResponse {
   }
 }
 
+interface RedditHostedVideo {
+  dash_url?: string
+  duration?: number
+  fallback_url?: string
+  hls_url?: string
+  height?: number
+  width?: number
+}
+
 interface RedditPost {
   author: string
   author_is_blocked?: boolean
@@ -49,6 +58,9 @@ interface RedditPost {
   is_self: boolean
   is_video: boolean
   link_flair_text: string | null
+  media?: {
+    reddit_video?: RedditHostedVideo
+  }
   num_comments: number
   over_18: boolean
   permalink: string
@@ -59,8 +71,12 @@ interface RedditPost {
         url?: string
       }
     }>
+    reddit_video_preview?: RedditHostedVideo
   }
   score: number
+  secure_media?: {
+    reddit_video?: RedditHostedVideo
+  }
   selftext?: string
   stickied: boolean
   subreddit: string
@@ -126,7 +142,10 @@ function createRedditExcerpt(selftext?: string | null) {
   return truncateText(text, REDDIT_EXCERPT_MAX_LENGTH)
 }
 
-function extractYouTubeVideo(url?: string | null) {
+function extractYouTubeVideo(url?: string | null): {
+  videoId: string | null
+  videoProvider: FeedVideoProvider | null
+} {
   if (!url) return { videoId: null, videoProvider: null }
 
   let parsedUrl: URL
@@ -160,6 +179,40 @@ function extractYouTubeVideo(url?: string | null) {
   return {
     videoId: embeddedVideoId,
     videoProvider: embeddedVideoId ? "youtube" : null
+  }
+}
+
+function extractRedditVideo(post: RedditPost): {
+  videoDashUrl: string | null
+  videoDuration: number | null
+  videoHeight: number | null
+  videoHlsUrl: string | null
+  videoUrl: string | null
+  videoWidth: number | null
+} {
+  const redditVideo
+    = post.secure_media?.reddit_video
+      ?? post.media?.reddit_video
+      ?? post.preview?.reddit_video_preview
+
+  if (!redditVideo) {
+    return {
+      videoDashUrl: null,
+      videoDuration: null,
+      videoHeight: null,
+      videoHlsUrl: null,
+      videoUrl: null,
+      videoWidth: null
+    }
+  }
+
+  return {
+    videoDashUrl: decodeRedditUrl(redditVideo.dash_url),
+    videoDuration: redditVideo.duration ?? null,
+    videoHeight: redditVideo.height ?? null,
+    videoHlsUrl: decodeRedditUrl(redditVideo.hls_url),
+    videoUrl: decodeRedditUrl(redditVideo.fallback_url),
+    videoWidth: redditVideo.width ?? null
   }
 }
 
@@ -249,6 +302,16 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
 
   const resolvedUrl = post.is_self ? permalink : url
   const { videoId, videoProvider } = extractYouTubeVideo(resolvedUrl)
+  const {
+    videoDashUrl,
+    videoDuration,
+    videoHeight,
+    videoHlsUrl,
+    videoUrl,
+    videoWidth
+  } = extractRedditVideo(post)
+  const resolvedVideoProvider: FeedVideoProvider | null
+    = videoProvider ?? (videoUrl || videoHlsUrl || videoDashUrl ? "reddit" : null)
 
   return {
     author: post.author || null,
@@ -281,8 +344,14 @@ function normalizeRedditPost(post: RedditPost): FeedLink | null {
     thumbnail_url: thumbnail,
     title: post.title,
     url: resolvedUrl,
+    video_dash_url: videoDashUrl,
+    video_duration: videoDuration,
+    video_height: videoHeight,
+    video_hls_url: videoHlsUrl,
     video_id: videoId,
-    video_provider: videoProvider
+    video_provider: resolvedVideoProvider,
+    video_url: videoUrl,
+    video_width: videoWidth
   }
 }
 

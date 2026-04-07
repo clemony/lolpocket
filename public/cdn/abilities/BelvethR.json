@@ -16,7 +16,7 @@
           "attribute": "Bonus True Damage",
           "modifiers": [
             {
-              "values": "6 / 8 / 10"
+              "values": "6 / 10 / 14"
             },
             {
               "unit": "% bonus AD",
@@ -28,7 +28,7 @@
           "attribute": "Maximum Monster Damage",
           "modifiers": [
             {
-              "values": "30 / 40 / 50"
+              "values": "30 / 50 / 70"
             },
             {
               "unit": "% bonus AD",

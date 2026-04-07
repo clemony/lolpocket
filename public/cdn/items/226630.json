@@ -12,7 +12,7 @@
     {
       "unique": true,
       "name": "Thirsting Slash",
-      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal for 20% AD (+8% of your <b>missing</b> health) for each enemy champion hit."
+      "effects": "Deal 175% <b>base</b> AD physical damage to enemies in a 450 radius centered around you. <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal for 35% AD (+18% of your <b>missing</b> health) for each enemy champion hit."
     }
   ],
   "stats": {

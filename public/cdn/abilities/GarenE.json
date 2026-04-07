@@ -19,9 +19,35 @@
               "values": "4 / 7 / 10 / 13 / 16"
             },
             {
-              "tooltip": "Scaling per rank:\n38 / 41 / 44 / 47 / 50% AD",
+              "tooltip": "Scaling per rank:\n40 / 43 / 46 / 49 / 52% AD",
               "unit": "% AD",
-              "values": "38 - 50"
+              "values": "40 - 52"
+            }
+          ]
+        },
+        {
+          "attribute": "Critical Strike Damage Per Spin",
+          "modifiers": [
+            {
+              "values": "5.2 / 9.1 / 13 / 16.9 / 20.8"
+            },
+            {
+              "tooltip": "Scaling per rank:\n52 / 55.9 / 59.8 / 63.7 / 67.6% AD",
+              "unit": "% AD",
+              "values": "52 - 67.6"
+            }
+          ]
+        },
+        {
+          "attribute": "IE Damage Per Spin",
+          "modifiers": [
+            {
+              "values": "6.4 / 11.2 / 16 / 20.8 / 25.6"
+            },
+            {
+              "tooltip": "Scaling per rank:\n64 / 68.8 / 73.6 / 78.4 / 83.2% AD",
+              "unit": "% AD",
+              "values": "64 - 83.2"
             }
           ]
         }
@@ -40,9 +66,35 @@
               "values": "5 / 8.75 / 12.5 / 16.25 / 20"
             },
             {
-              "tooltip": "Scaling per rank:\n47.5 / 51.25 / 55 / 58.75 / 62.5% AD",
+              "tooltip": "Scaling per rank:\n50 / 53.75 / 57.5 / 61.25 / 65% AD",
               "unit": "% AD",
-              "values": "47.5 - 62.5"
+              "values": "50 - 65"
+            }
+          ]
+        },
+        {
+          "attribute": "Increased Critical Strike Damage Per Spin",
+          "modifiers": [
+            {
+              "values": "6.5 / 11.38 / 16.25 / 21.13 / 26"
+            },
+            {
+              "tooltip": "Scaling per rank:\n65 / 69.88 / 74.75 / 79.63 / 84.5% AD",
+              "unit": "% AD",
+              "values": "65 - 84.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Increased IE Damage Per Spin",
+          "modifiers": [
+            {
+              "values": "8 / 14 / 20 / 26 / 32"
+            },
+            {
+              "tooltip": "Scaling per rank:\n80 / 86 / 92 / 98 / 104% AD",
+              "unit": "% AD",
+              "values": "80 - 104"
             }
           ]
         }
@@ -52,11 +104,11 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Garen ends Judgment.</p>"
     },
     {
-      "description": "Judgment can critically strike for[ (140% + 24%) damage. ][ 80% total critical damage. ]"
+      "description": "Judgment can critically strike for[ (130% + 9%) damage. ][ 30% bonus critical damage. ]"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/e",
-  "notes": "Deactivating the ability manually does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach spin triggers a stack of  Conqueror.\nFor the purpose of moving closer to an enemy when right clicking them, Judgment also reduces Garen's  attack range [ to 100 ][ by 75 ] for the duration.\nJudgment only scales with bonus attack speed from items and growth (per level).\nJudgment cancels Garen's last movement command upon ending.\nEach spin deals damage simultaneously to all enemies within its range when the spin is completed.\nThe spin animation is capped at once per 0.2 seconds, but the amount of ticks will keep on scaling.\nThe armor reduction stacks multiplicatively with other percentage armor penetration effects.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Decisive Strike and  Courage are usable.  Demacian Justice interrupts.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+  "notes": "At level 20, Garen will spin a minimum of 9 times.\nDeactivating the ability manually does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach spin triggers a stack of  Conqueror.\nFor the purpose of moving closer to an enemy when right clicking them, Judgment also reduces Garen's  attack range [ to 100 ][ by 75 ] for the duration.\nJudgment only scales with bonus attack speed from items and growth (per level).\nJudgment cancels Garen's last movement command upon ending.\nEach spin deals damage simultaneously to all enemies within its range when the spin is completed.\nThe spin animation is capped at 200% bonus attack speed, but the amount of ticks will keep on scaling.\nThe armor reduction stacks multiplicatively with other percentage armor penetration effects.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Decisive Strike and  Courage are usable.  Demacian Justice interrupts.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
   "spellEffects": "aoedot",
   "targeting": "Auto"
 }

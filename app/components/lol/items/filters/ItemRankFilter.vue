@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui';
 import { itemRankColor } from "#shared/constants/items/itemRankColor"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   color = "primary",
   class: className,
   clear = true,
 
-  size = ["sq-12", "12"],
+  size = ["sq-12", "12"]
 } = defineProps<{
   class?: HTMLAttributes["class"]
   size?: ButtonProps["size"][]
@@ -51,7 +51,7 @@ function handleUpdate() {
       :color="is().filters.rank === rank ? 'neutral' : color"
       :class="
         cn('order-2 px-5 text-sm font-medium! shadow-none hover:text-pc', {
-          'order-1': is().filters.rank === rank,
+          'order-1': is().filters.rank === rank
         })
       "
       @click="is().filters.rank === rank ? (is().filters.rank = '') : null">

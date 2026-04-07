@@ -8,7 +8,7 @@
       "key": "P",
       "name": "Assassin's Mark",
       "affects": "Self, Enemies",
-      "blurb": "Innate:  Akali's damage with abilities against a champion create a ring around them for a few seconds, and she gains  move speed while moving away from the ring.",
+      "blurb": "Innate:  Akali's damaging  abilities against a champion create a ring around them for a few seconds, and she gains  move speed while moving away from the ring.",
       "damageType": "Magic damage",
       "effectRadius": "500",
       "effects": [
@@ -19,11 +19,11 @@
           "description": "When Akali exits the ring, for 2 seconds, she regains the bonus movement speed while facing nearby enemy champions and becomes empowered with Swinging Kama for 4 seconds, during which she cannot create another ring."
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Swinging Kama:</span> Akali's next basic attack is empowered to have its range doubled and deal 35 - 182 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Swinging Kama:</span> Akali's next basic attack is empowered to have its range doubled and deal 35 - 212 (based on level) (+ 60% bonus AD) (+ 55% AP) bonus magic damage.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/p",
-      "notes": "Enemies cannot see the ring, but can see the empower effect.\nSwinging Kama gives a static bonus range which doesn't change if Akali's range changes during it (i.e  Rapid Firecannon):\nIf Rapid Firecannon fully charges within Swinging Kama's duration, Akali's total range increases to 337.5.\nIf Rapid Firecannon fully charges before gaining Swinging Kama, Akali's total range is increased to 395.\nThe ring will be created around the last target hit by  Five Point Strike.\nThe ring's center is offset 120 units away from the enemy's center, towards Akali.\nThe empowered attack can be  dodged and  blocked, and will be mitigated by  blinds.\nThe empowered attack will trigger but not be consumed nor apply its effects against structures and wards.\nThis ability's damage is calculated based on the caster's stats at the time of its application.",
+      "notes": "Enemies cannot see the ring, but can see the empower effect.\nSwinging Kama gives a static bonus range which doesn't change if Akali's range changes during it (i.e  Rapid Firecannon):\nIf Rapid Firecannon fully charges within Swinging Kama's duration, Akali's total range increases to 337.5.\nIf Rapid Firecannon fully charges before gaining Swinging Kama, Akali's total range is increased to 395.\nThe ring will be created around the last target hit by  Five Point Strike.\nThe ring's center is offset 120 units away from the enemy's center, towards Akali.\nThe empowered attack can be  dodged and  blocked, and will be mitigated by  blinds.\nThe empowered attack will trigger but not be consumed nor apply its effects against  structures and  wards.\nThis ability's damage is calculated based on the caster's stats at the time of its application.",
       "spellEffects": "spell",
       "spellshieldable": "false",
       "targeting": "Passive"
@@ -108,7 +108,7 @@
           "description": "Entering the shroud renders Akali invisible, unless she is dashing."
         },
         {
-          "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it for 1 - 0.625 (based on minutes) seconds, refreshing on subsequent attacks and casts."
+          "description": "Declaring a basic attack or casting an ability will break the invisibility and prevent Akali from entering it again for 1 - 0.625 (based on level) seconds, refreshing on subsequent attacks and casts."
         },
         {
           "description": "The marked section of Twilight Shroud will linger for the mark's duration, even after the shroud ends."
@@ -128,14 +128,14 @@
       "width": "120",
       "affects": "Enemies, Self",
       "blurb": "Active:  Akali  dashes backward and throws a shuriken forward that deals magic damage and marks the first enemy or  smoke cloud hit for a short time.",
-      "castTime": "0.4 / 0.25",
+      "castTime": "0.25 / 0.1",
       "cooldown": "16 / 14.5 / 13 / 11.5 / 10",
       "cost": "30",
       "damageType": "Magic damage",
       "effectRadius": "Global",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akali flips backward after 0.15 seconds into the cast time, and after the cast time throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "description": "Akali will not flip backwards if she is immobilized or grounded during the cast time. Twilight Shroud and Perfect Execution can be cast during the recast's dash."
+          "description": "Akali will not flip backwards if she is immobilized or grounded in the first 0.15 seconds of the cast time. Twilight Shroud and Perfect Execution can be cast during the recast's dash."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/e",
@@ -295,7 +295,8 @@
     "difficulty": 3
   },
   "fullName": "Akali Jhomen Tethi",
-  "patchLastChanged": "25.12",
+  "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Middle",
     "Top"
@@ -322,7 +323,6 @@
     "armor": 4.7,
     "magicResist": 2.1,
     "hpRegen": 0.9,
-    "attackDamage": 3.3,
     "attackSpeed": 3.2
   },
   "price": {

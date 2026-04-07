@@ -9,13 +9,13 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 32 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 8 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 160 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 40 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 250% damage against monsters.</p>"
     },
     {
       "description": "When Darius kills a champion with Noxian Guillotine, or applies 5 stacks on an enemy champion, he becomes empowered with Noxian Might for 5 seconds."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 280 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/p",

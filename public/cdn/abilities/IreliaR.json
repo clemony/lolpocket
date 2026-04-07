@@ -34,7 +34,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/r",
-  "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.",
+  "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.\nIf this spell is casted while there are blades from a previous Vanguard's Edge still active, the previous blades will disappear.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "2000",

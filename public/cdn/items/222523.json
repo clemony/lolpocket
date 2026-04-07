@@ -2,6 +2,10 @@
   "id": 222523,
   "name": "Hexoptics C44",
   "description": "50 Attack Damage\n25% Critical Strike Chance\n\nMagnification\nDeal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 range).\n\nArcane Aim\nWhen a champion that you damaged within 3 seconds dies, gain 150 additional attack range for 10 seconds. ",
+  "stats": {
+    "criticalStrikeChance": 25,
+    "attackDamage": 50
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -29,7 +29,7 @@
           "attribute": "Magic Damage per Sphere",
           "modifiers": [
             {
-              "values": "90 / 130 / 170"
+              "values": "80 / 120 / 160"
             },
             {
               "unit": "% AP",
@@ -41,7 +41,7 @@
           "attribute": "Minimum Magic Damage",
           "modifiers": [
             {
-              "values": "270 / 390 / 510"
+              "values": "240 / 360 / 480"
             },
             {
               "unit": "% AP",
@@ -53,7 +53,7 @@
           "attribute": "Maximum Magic Damage",
           "modifiers": [
             {
-              "values": "630 / 910 / 1190"
+              "values": "560 / 840 / 1120"
             },
             {
               "unit": "% AP",

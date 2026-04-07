@@ -10,7 +10,7 @@ function navigatePocket(target: "champions" | "items" | "runes") {
 
   navigateTo({
     name: `pocket-pocketKey-${target}`,
-    params: { pocketKey: route.params.pocket_key },
+    params: { pocketKey: route.params.pocket_key }
   })
 }
 
@@ -19,7 +19,7 @@ function getRouteChain(path: string) {
   return resolved.matched.map((r) => ({
     name: r.name,
     meta: r.meta,
-    path: r.path,
+    path: r.path
   }))
 }
 

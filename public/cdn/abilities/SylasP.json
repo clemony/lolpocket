@@ -20,7 +20,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/p",
-  "notes": "Spellblade damage does not get converted to magic damage, and will deal its damage only to the primary target.\nApplies  proc damage to the primary target and  area damage to secondary targets.\nPetricite Burst's damage cannot critically strike against secondary targets.\nPetricite Burst only applies  on-hit effects to the primary target.\nPetricite Burst attacks benefit from  life steal.\nPetricite Burst can be  dodged,  blocked, or missed while Sylas is  blinded as the primary target but not as a secondary target.",
+  "notes": "Spellblade damage does not get converted to magic damage, and will deal its damage only to the primary target.\nApplies  basic damage to the primary target and  area damage to secondary targets.\nUnshackled stacks are granted at the end of the abilities' cast time.\nPetricite Burst's damage cannot critically strike against secondary targets.\nPetricite Burst only applies  on-hit effects to the primary target.\nPetricite Burst attacks benefit from  life steal.\nPetricite Burst can be  dodged,  blocked, or missed while Sylas is  blinded as the primary target but not as a secondary target.\nPetricite Burst's damage incorrectly critically strikes for (175% +  30%) damage rather than (200% +  30%).(bug)",
   "spellEffects": "special",
   "spellshieldable": "False",
   "targeting": "Passive"

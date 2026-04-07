@@ -5,7 +5,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Lissandra throws a spear of ice in the target direction that  slows the first target hit and deals magic damage to all enemies it passes through.",
   "castTime": "0.25",
-  "cooldown": "8 / 7 / 6 / 5 / 4",
+  "cooldown": "7 / 6 / 5 / 4 / 3",
   "cost": "55 / 60 / 65 / 70 / 75",
   "damageType": "Magic damage",
   "effects": [

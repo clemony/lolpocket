@@ -4,6 +4,11 @@
   --color-discord: oklch(58% 52 274);
   --color-all-roles: oklch(37% 0 0);
 
+  --color-mustard: oklch(75% 21% 88);
+
+  --ui-lp: oklch(85% 51% 123deg);
+
+  --ui-win: oklch(71% 24% 200deg);
   /* rank */
   --color-iron: oklch(49.16% 0.0168 35.72);
   --color-bronze: oklch(57.31% 0.0484 39.76);
@@ -92,6 +97,8 @@
   --challenger: var(--color-challenger);
 
   --vanguard: var(--color-vanguard);
+  --mustard: var(--color-mustard);
+
   --warden: var(--color-warden);
 
   /* position */

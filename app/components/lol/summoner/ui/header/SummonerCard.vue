@@ -33,7 +33,7 @@ console.log("🥸 - top:", top)
       :alt="`${summoner?.name}'s Splash`">
       <UBadge
         class="absolute top-2 right-2 gap-0 rounded-lg border-none bg-p0/50 pl-1.5 text-2xs! font-semibold! text-pc/70 backdrop-blur-lg"
-        size="xs">
+        size="sm">
         <span class="relative grid size-3 place-items-center">
           <Icon
             class="absolute size-4.25! shrink-0 -translate-y-0.5 **:stroke-[3.8] **:text-pc/70!"

@@ -35,30 +35,17 @@
       "description": "Comeuppance can be recast after 0.5 seconds during the channel, and does so automatically afterwards. Comeuppance is placed on a 5-second cooldown if the channel is cancelled."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% - 200% (based on target's missing health). The shots can hit structures.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 0% - 30% (+ 0% - 9%) (based on critical strike chance), as well as by 0% - 200% (based on target's missing health). The shots can hit structures.</p>",
       "leveling": [
         {
           "attribute": "Minimum Physical Damage per Bullet",
           "modifiers": [
             {
-              "unit": "[25 / 30 / 35 / 40 / 45 ] × [1",
-              "values": "0"
-            },
-            {
-              "unit": "0 : 0.5 ",
-              "values": "0"
-            },
-            {
-              "unit": "]",
-              "values": "0.15"
+              "values": "25 / 35 / 45"
             },
             {
               "unit": "% AD",
               "values": "15"
-            },
-            {
-              "unit": "based on critical strike chance",
-              "values": "0"
             }
           ]
         },
@@ -66,24 +53,11 @@
           "attribute": "Maximum Physical Damage per Bullet",
           "modifiers": [
             {
-              "unit": "[75 / 90 / 105 / 120 / 135 ] × [1",
-              "values": "0"
-            },
-            {
-              "unit": "0 : 0.5 ",
-              "values": "0"
-            },
-            {
-              "unit": "]",
-              "values": "0.15"
+              "values": "75 / 105 / 135"
             },
             {
               "unit": "% AD",
               "values": "45"
-            },
-            {
-              "unit": "based on critical strike chance",
-              "values": "0"
             }
           ]
         },
@@ -91,24 +65,12 @@
           "attribute": "Minimum Charged Physical Damage",
           "modifiers": [
             {
-              "unit": "[125 / 210 / 315 ] × [1",
-              "values": "0"
+              "values": "125 / 210 / 315"
             },
             {
-              "unit": "0 : 0.5 ",
-              "values": "0"
-            },
-            {
-              "unit": "]",
-              "values": "0.15"
-            },
-            {
+              "tooltip": "Scaling per rank:\n75 / 90 / 105% AD",
               "unit": "% AD",
-              "values": "75 / 90 / 105"
-            },
-            {
-              "unit": "based on critical strike chance",
-              "values": "0"
+              "values": "75 - 105"
             }
           ]
         },
@@ -116,24 +78,12 @@
           "attribute": "Damage to target on 67% missing hp",
           "modifiers": [
             {
-              "unit": "[375 / 630 / 945 ] × [1",
-              "values": "0"
+              "values": "375 / 630 / 945"
             },
             {
-              "unit": "0 : 0.5 ",
-              "values": "0"
-            },
-            {
-              "unit": "]",
-              "values": "0.15"
-            },
-            {
+              "tooltip": "Scaling per rank:\n225 / 270 / 315% AD",
               "unit": "% AD",
-              "values": "225 / 270 / 315"
-            },
-            {
-              "unit": "based on critical strike chance",
-              "values": "0"
+              "values": "225 - 315"
             }
           ]
         }

@@ -5,7 +5,7 @@
   "blurb": "Active:  Malphite slams the ground beneath him, dealing magic damage to nearby enemies and  crippling them for a short time.",
   "castTime": "0.2419",
   "cooldown": "7",
-  "cost": "50",
+  "cost": "50 / 55 / 60 / 65 / 70",
   "damageType": "Magic damage",
   "effectRadius": "400",
   "effects": [
@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "80 / 120 / 160 / 200 / 240"
+              "values": "60 / 95 / 130 / 165 / 200"
             },
             {
               "unit": "% AP",

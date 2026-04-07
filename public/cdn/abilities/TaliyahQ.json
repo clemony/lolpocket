@@ -17,7 +17,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "55 / 72.5 / 90 / 107.5 / 125"
+              "values": "50 / 67.5 / 85 / 102.5 / 120"
             },
             {
               "unit": "% AP",
@@ -29,7 +29,7 @@
           "attribute": "Reduced Damage",
           "modifiers": [
             {
-              "values": "22 / 29 / 36 / 43 / 50"
+              "values": "20 / 27 / 34 / 41 / 48"
             },
             {
               "unit": "% AP",
@@ -41,7 +41,7 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "143 / 188.5 / 234 / 279.5 / 325"
+              "values": "130 / 175.5 / 221 / 266.5 / 312"
             },
             {
               "unit": "% AP",
@@ -55,7 +55,7 @@
       "description": "Taliyah can move and cast other abilities while launching Stone Shards, and is unable to basic attack until she launches the third Stone Shard."
     },
     {
-      "description": "Casting Threaded Volley creates an area of Worked Ground at Taliyah's cast location that has a radius of 400 units and lasts 30 seconds. While on Worked Ground, Threaded Volley's cast consumes the area to become empowered with a new effect, costing 10 mana and having 50% reduced cooldown, though not below 0.75 seconds."
+      "description": "Casting Threaded Volley creates an area of Worked Ground at Taliyah's cast location that has a radius of 400 units and lasts 30 seconds. While Taliyah is within an area of Worked Ground, Threaded Volley's cast consumes the area to become empowered with a new effect, costing 10 mana and having 50% reduced cooldown, though not below 0.75 seconds."
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 180% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.</p>",
@@ -64,11 +64,23 @@
           "attribute": "Empowered Damage",
           "modifiers": [
             {
-              "values": "99 / 130.5 / 162 / 193.5 / 225"
+              "values": "90 / 121.5 / 153 / 184.5 / 216"
             },
             {
               "unit": "% AP",
               "values": "90"
+            }
+          ]
+        },
+        {
+          "attribute": "Secondary Target Damage",
+          "modifiers": [
+            {
+              "values": "50 / 67.5 / 85 / 102.5 / 120"
+            },
+            {
+              "unit": "% AP",
+              "values": "50"
             }
           ]
         },
@@ -84,7 +96,25 @@
       ]
     },
     {
-      "description": "Against monsters, Threaded Volley deals 20 bonus magic damage per Stone Shard, and the Boulder deals 36 bonus magic damage against the primary target. This bonus damage is unaffected by the damage modifier from subsequent hits."
+      "description": "Against monsters, Threaded Volley deals bonus magic damage per Stone Shard, and the Boulder from the empowered cast deals 80% bonus damage against the primary target. This bonus damage is unaffected by the damage modifier from subsequent hits.",
+      "leveling": [
+        {
+          "attribute": "Bonus Monster Damage",
+          "modifiers": [
+            {
+              "values": "23 / 28 / 33 / 38 / 43"
+            }
+          ]
+        },
+        {
+          "attribute": "Boulder Bonus Monster Damage",
+          "modifiers": [
+            {
+              "values": "41.4 / 50.4 / 59.4 / 68.4 / 77.4"
+            }
+          ]
+        }
+      ]
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/q",

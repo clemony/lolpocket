@@ -2,6 +2,10 @@
   "id": 222502,
   "name": "Unending Despair",
   "description": "350 Health\n50 Armor\n10 Ability Haste\n\nAnguish\nEvery 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of the damage dealt.",
+  "stats": {
+    "health": 350,
+    "armor": 50
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

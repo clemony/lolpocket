@@ -6,7 +6,7 @@
   "damageType": "Other damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers. Additionally, spell blade effects provide extra triggers.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/p",

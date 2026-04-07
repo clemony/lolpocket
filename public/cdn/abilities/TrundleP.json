@@ -6,7 +6,7 @@
   "effectRadius": "1400",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.5% (based on level) of their maximum health.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.94% (based on level) of their maximum health.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/p",

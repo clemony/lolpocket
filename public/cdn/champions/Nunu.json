@@ -34,7 +34,7 @@
       "affects": "Enemies, Self",
       "blurb": "Active:  Willump takes a bite out of the target enemy, dealing damage and  healing himself. The heal is increased when he is below half health.",
       "castTime": "0.3",
-      "cooldown": "12 / 11 / 10 / 9 / 8",
+      "cooldown": "13 / 12 / 11 / 10 / 9",
       "cost": "60",
       "damageType": "Other damage",
       "effects": [
@@ -226,7 +226,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/w",
-      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe movement speed reduction the duo receive from initially casting Biggest Snowball Ever! is not considered a  slow, thus it will not be resisted by their  slow immunity.\nThe time threshold to begin gaining bonus movement speed may be bugged, as Flat Bonus MS increases the time while % Bonus MS decreases the time.\nThe formula appears to be (X ÷ 100) - Y, where:\nX = Total Flat MS after caps\nY = 0.1 per 1% %MS\nThe delay is not modified from its initially calculated value on-cast, even if additional movement speed is gained.\nNunu and Willump keep all increases in movement speed at time of cast for the duration of the charge.\nNunu and Willump's movement speed always increases in increments of ~14, reaching the greater value between [ Total MS + 85 : 255 (based on level) ][ Total Uncapped Flat MS + 85 : 255 (based on level) ]\nThis takes 6 increments to reach the Total MS + 85, but may take more to reach the Uncapped Flat + 85. Due to flat bonuses increasing the time threshold, it is possible for the ability's effects to end before reaching the total uncapped movement speed.\nThe bonus movement speed ignores the movement speed cap.\nIf Nunu turns continuously he will create a 600 unit circle, increased with bonus movement speed, striking the same point up to 3 times, for a maximum of 180 / 225 / 270 / 315 / 360 (+ 300% AP) magic damage. The damage can be further increased by detonating the snowball, for a total of 360 / 450 / 540 / 630 / 720 (+450% AP) magic damage.\n Ryze's  Realm Warp will only teleport Nunu and Willump, leaving the  snowball behind.\nHovering the cursor on the HUD (e.g mini map / champion portraits) does not affect the cast and steering of Biggest Snowball Ever!.\nNunu gains a slightly larger field of view during Biggest Snowball Ever!.\n Projectile-interception effects will destroy the snowball only after it has been released.\nBiggest Snowball Ever! is disabled for the first 15 seconds of the game.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
+      "notes": "The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as  Spellblade and  Force Pulse.\nThe movement speed reduction the duo receive from initially casting Biggest Snowball Ever! is not considered a  slow, thus it will not be resisted by their  slow immunity.\nThe time threshold to begin gaining bonus movement speed may be bugged, as Flat Bonus MS increases the time while % Bonus MS decreases the time.\nThe formula appears to be (X ÷ 100) - Y, where:\nX = Total Flat MS after caps\nY = 0.1 per 1% %MS\nThe delay is not modified from its initially calculated value on-cast, even if additional movement speed is gained.\nNunu and Willump keep all increases in movement speed at time of cast for the duration of the charge.\nNunu and Willump's movement speed always increases in increments of ~14, reaching the greater value between [ Total MS + 85 : 255 (based on level) ][ Total Uncapped Flat MS + 85 : 255 (based on level) ]\nThis takes 6 increments to reach the Total MS + 85, but may take more to reach the Uncapped Flat + 85. Due to flat bonuses increasing the time threshold, it is possible for the ability's effects to end before reaching the total uncapped movement speed.\nThe bonus movement speed ignores the movement speed cap.\nIf Nunu turns continuously he will create a 600 unit circle, increased with bonus movement speed, striking the same point up to 3 times, for a maximum of 150 / 195 / 240 / 285 / 330 (+ 150% AP) magic damage. The damage can be further increased by detonating the snowball, for a total of 300 / 390 / 480 / 570 / 660 (+ 300% AP) magic damage.\n Ryze's  Realm Warp will only teleport Nunu and Willump, leaving the  snowball behind.\nHovering the cursor on the HUD (e.g mini map / champion portraits) does not affect the cast and steering of Biggest Snowball Ever!.\nNunu gains a slightly larger field of view during Biggest Snowball Ever!.\n Projectile-interception effects will destroy the snowball only after it has been released.\nBiggest Snowball Ever! is disabled for the first 15 seconds of the game.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Nunu & Willump are  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed, but cannot input movement commands.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
       "projectile": "SPECIAL",
       "resource": "Mana",
       "speed": "425 / 435 : 594 / 595",
@@ -253,11 +253,11 @@
               "attribute": "Magic Damage Per Hit",
               "modifiers": [
                 {
-                  "values": "16 / 24 / 32 / 40 / 48"
+                  "values": "15 / 22.5 / 30 / 37.5 / 45"
                 },
                 {
                   "unit": "% AP",
-                  "values": "15"
+                  "values": "12"
                 }
               ]
             },
@@ -265,11 +265,11 @@
               "attribute": "Total Magic Damage",
               "modifiers": [
                 {
-                  "values": "48 / 72 / 96 / 120 / 144"
+                  "values": "45 / 67.5 / 90 / 112.5 / 135"
                 },
                 {
                   "unit": "% AP",
-                  "values": "45"
+                  "values": "36"
                 }
               ]
             }
@@ -296,7 +296,7 @@
               "attribute": "Maximum Total Magic Damage",
               "modifiers": [
                 {
-                  "values": "144 / 216 / 288 / 360 / 432"
+                  "values": "135 / 202.5 / 270 / 337.5 / 405"
                 },
                 {
                   "unit": "% AP",
@@ -307,7 +307,7 @@
           ]
         },
         {
-          "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.5 (based on level) seconds.",
+          "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.62 (based on level) seconds.",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -325,7 +325,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e",
-      "notes": "Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump's position at any given moment.",
+      "notes": "Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump's position at any given moment.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2000",
@@ -407,7 +407,8 @@
     "difficulty": 1
   },
   "fullName": "Nunu & Willump",
-  "patchLastChanged": "25.09",
+  "lore": "Once upon a time, there was a boy who wanted to prove he was a hero by slaying a fearsome monster—only to discover that the beast, a lonely and magical yeti, merely needed a friend. Bound together by ancient power and a shared love of snowballs, Nunu and Willump now ramble wildly across the Freljord, breathing life into imagined adventures. They hope that somewhere out there, they will find Nunu's mother. If they can save her, maybe they will be heroes after all…",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -437,7 +438,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 2.3
   },
   "price": {

@@ -2,6 +2,10 @@
   "id": 326620,
   "name": "Echoes of Helia",
   "description": "35 Ability Power\n250 Health\n20 Ability Haste\n150% Base Mana Regen\n\nSoul Siphon\nGain 35% of pre-mitigation damage dealt to champions as Soul Charges. Healing or Shielding an ally consumes all Soul Charges to restore Health.",
+  "stats": {
+    "health": 250,
+    "abilityPower": 35
+  },
   "gold": {
     "base": 900,
     "purchasable": true,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

@@ -2,6 +2,9 @@
   "id": 126697,
   "name": "Hubris",
   "description": "60 Attack Damage\n18 Lethality\n15 Ability Haste\n\nEminence\nGain temporary AD based on champion kills on kill.",
+  "stats": {
+    "attackDamage": 60
+  },
   "gold": {
     "base": 900,
     "purchasable": true,

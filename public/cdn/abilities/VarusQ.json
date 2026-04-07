@@ -24,9 +24,8 @@
               "values": "53.33 / 100 / 146.67 / 193.33 / 240"
             },
             {
-              "tooltip": "Scaling per rank:\n86.67 / 93.33 / 100 / 106.67 / 113.33% bonus AD",
               "unit": "% bonus AD",
-              "values": "86.67 - 113.33"
+              "values": "100"
             }
           ]
         },
@@ -37,9 +36,8 @@
               "values": "80 / 150 / 220 / 290 / 360"
             },
             {
-              "tooltip": "Scaling per rank:\n130 / 140 / 150 / 160 / 170% bonus AD",
               "unit": "% bonus AD",
-              "values": "130 - 170"
+              "values": "150"
             }
           ]
         },
@@ -50,9 +48,8 @@
               "values": "17.6 / 33 / 48.4 / 63.8 / 79.2"
             },
             {
-              "tooltip": "Scaling per rank:\n28.6 / 30.8 / 33 / 35.2 / 37.4% bonus AD",
               "unit": "% bonus AD",
-              "values": "28.6 - 37.4"
+              "values": "33"
             }
           ]
         },
@@ -63,9 +60,8 @@
               "values": "26.4 / 49.5 / 72.6 / 95.7 / 118.8"
             },
             {
-              "tooltip": "Scaling per rank:\n42.9 / 46.2 / 49.5 / 52.8 / 56.1% bonus AD",
               "unit": "% bonus AD",
-              "values": "42.9 - 56.1"
+              "values": "49.5"
             }
           ]
         }

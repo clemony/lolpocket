@@ -16,8 +16,8 @@ function insertMention(item: Index) {
       attrs: {
         "data-id": item.id,
         "data-key": item.key,
-        "data-name": item.name,
-      },
+        "data-name": item.name
+      }
     })
     .insertContent(" ")
     .run()
@@ -96,7 +96,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
                 :item
                 :class="
                   cn('icon-grid-style', {
-                    'rounded-full': item?.key === 'rune',
+                    'rounded-full': item?.key === 'rune'
                   })
                 "
                 @click="insertMention(item)" />
@@ -142,7 +142,7 @@ const { groups, invert, query, results, tab } = useMentionTabMenu(mentionData)
                     'size-4.5!': i !== 0,
                     'size-6.25! ds-2xs': i === 3,
                     'translate-y-px': [1, 3].includes(i),
-                    'size-5!': i === 4,
+                    'size-5!': i === 4
                   })
                 " />
             </TabsTrigger>

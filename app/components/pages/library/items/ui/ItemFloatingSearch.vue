@@ -4,7 +4,7 @@ import type { InputProps } from "@nuxt/ui"
 const {
   variant = "solid",
   color = "neutral",
-  class: className,
+  class: className
 } = defineProps<{
   source?: Index[]
   color?: InputProps["color"]
@@ -22,7 +22,7 @@ const { filters } = storeToRefs(is())
     :content="{ side: 'left' }">
     <template #default="{ open }">
       <UButton
-        color="p0"
+        color="base"
         active-color="neutral"
         :active="open"
         icon="i-search"

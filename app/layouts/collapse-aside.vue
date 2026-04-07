@@ -97,7 +97,7 @@ const searchOpen = shallowRef<boolean>(false)
               size="xl"
               :active="searchOpen"
               square
-              color="p0"
+              color="base"
               active-color="neutral"
               :ui="{
                 base: 'pointer-events-auto shrink-0 rounded-full drop-shadow-md backdrop-blur-md fx-0 not-open:drop-shadow-black/4 group-open/btn:**:text-nc! open:drop-shadow-black/18',
@@ -131,7 +131,7 @@ const searchOpen = shallowRef<boolean>(false)
               size="xl"
               :active="toolbarOpen"
               square
-              color="p0"
+              color="base"
               active-color="neutral"
               :ui="{
                 base: 'pointer-events-auto shrink-0 rounded-full drop-shadow-md backdrop-blur-md fx-0 not-open:drop-shadow-black/4 group-open/btn:**:text-nc! open:drop-shadow-black/18',

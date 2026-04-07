@@ -13,7 +13,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 43 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 129 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p>"
         },
         {
           "description": "Casting Help, Pix! on an ally champion transfers Pix's help to them, causing him to fire the bolts dependent on their basic attacks."
@@ -23,7 +23,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/p",
-      "notes": "Pix's bolts do not fire alongside abilities that apply  on-hit effects (e.g.  Runaan's Hurricane).\nPix does not fire if the target dies.\nPix fires from his own location and not from the unit he is following.\nWhen on an ally champion, Pix's damage respects  enchantment redirection.\nThe empowered attack does not trigger against structures nor wards.\nNeither of them will intercept Pix's bolts.",
+      "notes": "Pix's bolts do not fire alongside abilities that apply  on-hit effects (e.g.  Runaan's Hurricane).\nPix does not fire if the target dies.\nPix fires from his own location and not from the unit he is following.\nWhen on an ally champion, Pix's damage respects  enchantment redirection.\nThe empowered attack does not trigger against  structures nor  wards.\nNeither of them will intercept Pix's bolts.",
       "projectile": "TRUE",
       "speed": "900 - 2600",
       "spellEffects": "default",
@@ -145,7 +145,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Whimsy on herself or a champion.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their movement speed is reduced by 60, and disarms them for the same duration.</p>",
           "leveling": [
             {
               "attribute": "Disable Duration",
@@ -183,7 +183,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w",
-      "notes": "Whimsy's movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.",
+      "notes": "Whimsy's movement speed reduction will apply to the target's bonus movement speed.\nIf their bonus movement speed would be reduced below 0, their base movement speed is reduced instead equal to the remaining reduction, or by the full amount if the target has no bonus movement speed.\nWhimsy's movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2250",
@@ -286,7 +286,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r",
-      "notes": "Wild Growth's size increase scales additively with other size increases.",
+      "notes": "Wild Growth's size increase scales additively with other size increases.\nEnemies are also knocked back over 275 units during the knock up.",
       "resource": "Mana",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -304,6 +304,7 @@
     "abilityReliance": 80,
     "difficulty": 2
   },
+  "lore": "The yordle mage Lulu is known for conjuring dreamlike illusions and fanciful creatures as she roams Runeterra with her fairy companion Pix. Lulu shapes reality on a whim, warping the fabric of the world, and what she views as the constraints of this mundane, physical realm. While others might consider her magic at best unnatural, and at worst dangerous, she believes everyone could use a touch of enchantment.",
   "patchLastChanged": "25.16",
   "positions": [
     "Support"
@@ -334,7 +335,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.6,
-    "attackDamage": 2.6,
     "attackSpeed": 2.3
   },
   "price": {

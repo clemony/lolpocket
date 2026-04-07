@@ -19,7 +19,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
-      "notes": "Martial Cadence's damage is based on the current health of the target before any damage of the attack has been dealt.\nMartial Cadence's damage is dealt after the main attack damage.\nIf the target dies to the main attack damage, the additional damage will not be dealt.\nThe empowered attack will not trigger against structures.",
+      "notes": "Martial Cadence's damage is based on the current health of the target before any damage of the attack has been dealt.\nMartial Cadence's damage is dealt after the main attack damage.\nIf the target dies to the main attack damage, the additional damage will not be dealt.\nThe empowered attack will not trigger against  structures.",
       "onTargetCdStatic": "6 / 5 / 4 / 3 (based on level)",
       "spellEffects": "Proc",
       "spellshieldable": "False",
@@ -71,7 +71,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
-      "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.",
+      "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.\nIf Dragon Strike finds multiple Demacian Standards in the range, it will pull Jarvan IV to the one furthest from his position.",
       "resource": "Mana",
       "spellEffects": "Aoe",
       "spellshieldable": "True",
@@ -236,6 +236,7 @@
     "difficulty": 1
   },
   "fullName": "Jarvan Lightshield IV",
+  "lore": "Prince Jarvan, scion of the Lightshield dynasty, is heir apparent to the throne of Demacia. Raised to be a paragon of his nation's greatest virtues, he is forced to balance the heavy expectations placed upon him with his own desire to fight on the front lines. Jarvan inspires his troops with his fearsome courage and selfless determination, raising his family's colors high and revealing his true strength as a future leader of his people.",
   "patchLastChanged": "25.19",
   "positions": [
     "Jungle"
@@ -266,7 +267,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 2.5
   },
   "price": {

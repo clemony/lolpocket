@@ -15,14 +15,14 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Irelia generates a stack of Ionian Fervor for each enemy champion hit by her abilities, or if she hits at least one non-champion, lasting for 6 seconds, refreshing on basic attacks and ability hits against enemy champions, large monsters, and structures, and stacking up to 4 times.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ionian Fervor:</span> For each stack, Irelia gains 10% - 25% (based on level) bonus attack speed, up to a maximum of 40% - 100% (based on level). At maximum stacks, Irelia's basic attacks are empowered to deal 10 - 61 (based on level) (+ 20% bonus AD) bonus magic damage on-hit, reduced to[ 50% ][ 5 - 30.5 (based on level) (+ 10% bonus AD) ]against structures.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ionian Fervor:</span> For each stack, Irelia gains 10% - 26.76% (based on level) bonus attack speed, up to a maximum of 40% - 107.06% (based on level). At maximum stacks, Irelia's basic attacks are empowered to deal 10 - 67 (based on level) (+ 20% bonus AD) bonus magic damage on-hit, reduced to[ 50% ][ 5 - 33.5 (based on level) (+ 10% bonus AD) ]against structures.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Unsteady:</span> Enemy champions and large monsters hit by Flawless Duet or Vanguard's Edge's initial barrage are marked as Unsteady for 5 seconds. The mark can be consumed by Bladesurge.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/p",
-      "notes": "PENDING FOR TEST:: Parry interactions ( block,  dodge, and  blind).\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
+      "notes": "PENDING FOR TEST:: Parry interactions ( block and  dodge).\nIonian Fervor will not deal damage if the attack misses due to  blind, but its duration will be refreshed.\n Blade Surge cannot be missed while Irelia is  blinded, applying Ionian Fervor from the ability will not be prevented from that parry effect.\nIonian Fervor stacks are represented by a counter under Irelia's health bar. It is highlighted while the ability is at its maximum effect.",
       "spellEffects": "Proc",
       "targeting": "Passive"
     },
@@ -229,7 +229,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Irelia/ability-icon/r",
-      "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.",
+      "notes": "Enemies that cross the perimeter are not marked Unsteady.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn addition to its  projectile, Vanguard's Edge will check for enemy champions within a  90-unit radius area from the projectile's origin point.\nThe projectile interacts with projectile-blocking effects but the area check doesn't.\nThe blades will still expand if the champion hit by the blades is protected by a  spell shield.\nThe  sight is granted in a 1350 unit radius at the location of the enemy champion at the time of being hit and can be blocked by terrain.\nIf this spell is casted while there are blades from a previous Vanguard's Edge still active, the previous blades will disappear.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2000",
@@ -251,6 +251,7 @@
     "difficulty": 3
   },
   "fullName": "Xan Irelia",
+  "lore": "The Noxian occupation of Ionia produced many heroes, none more unlikely than young Irelia of Navori. Trained in the ancient dances of her province, she adapted her art for war, using the graceful and carefully practised movements to levitate a host of deadly blades. After proving herself as a fighter, she was thrust into the role of resistance leader and figurehead, and to this day remains dedicated to the preservation of her homeland.",
   "patchLastChanged": "25.17",
   "positions": [
     "Middle",
@@ -282,7 +283,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.9,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 2.5
   },
   "price": {

@@ -56,7 +56,7 @@ function onOpen() {
               :class="
                 cn('', {
                   'pointer-events-none opacity-0': !name,
-                  'pointer-events-auto opacity-100': name,
+                  'pointer-events-auto opacity-100': name
                 })
               "
               variant="ghost"
@@ -72,9 +72,8 @@ function onOpen() {
             <template #trailing>
               <LazyInputClear @clear-input="is().filters.query = ''" />
               <UButton
-                size="2xs"
                 icon="i-shuffle"
-                :ui="{ leadingIcon: 'size-3.5' }" />
+                :ui="{ base: 'btn-2xs', leadingIcon: 'size-3.5' }" />
             </template>
           </UInput>
         </div>
@@ -100,7 +99,7 @@ function onOpen() {
             name: 'items',
             pull: true,
             put: true,
-            revertClone: false,
+            revertClone: false
           },
           delay: 0,
           animation: 100,
@@ -108,8 +107,8 @@ function onOpen() {
           removeOnSpill: true,
           emptyInsertThreshold: 24,
           swapThreshold: 24,
-          filter: 'no-drag',
-        },
+          filter: 'no-drag'
+        }
       ]"
       class="group flex h-fit min-h-23 flex-wrap justify-start gap-3 px-4 py-2 **:select-none"
       @end="onEnd"

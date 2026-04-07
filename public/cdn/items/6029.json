@@ -2,6 +2,9 @@
   "id": 6029,
   "name": "Ironspike Whip",
   "description": "30 Attack Damage\n\nActive - Crescent: Deal damage to nearby enemies.",
+  "stats": {
+    "attackDamage": 30
+  },
   "gold": {
     "base": 225,
     "purchasable": false,

@@ -61,7 +61,7 @@
           "description": "At 2 points of Crimson Rush, Vladimir surges, gaining 10% / 20% / 30% / 40% (based on level) bonus movement speed decaying over 0.5 seconds while the Crimson Rush depletes over 2.5 seconds. Crimson Rush depletes 75% slower during Sanguine Pool, Tides of Blood, or stasis."
         },
         {
-          "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 200 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The additional healing is reduced to[ 35% ][ 10.5 - 70 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
+          "description": "Casting Transfusion during the surge consumes all Crimson Rush to deal 85% increased damage and heal Vladimir for an additional 30 - 220 (based on level) (+ 5% (+ 4% per 100 AP) of his missing health). The additional healing is reduced to[ 35% ][ 10.5 - 77 (based on level) (+ 1.75% (+ 1.4% per 100 AP) of his missing health) ]against minions.",
           "leveling": [
             {
               "attribute": "Increased Damage",
@@ -289,7 +289,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
-      "notes": "Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague's effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague's modifier to incoming damage stacks additively with  Alistar's  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(note)\n Spell shield does not negate the detonation.",
+      "notes": "Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague's effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague's modifier to incoming damage stacks additively with  Alistar's  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(unexpected)\n Spell shield does not negate the detonation.",
       "projectile": "FALSE",
       "spellEffects": "Area of effect",
       "spellshieldable": "special",
@@ -308,6 +308,7 @@
     "abilityReliance": 100,
     "difficulty": 2
   },
+  "lore": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.",
   "patchLastChanged": "25.23",
   "positions": [
     "Middle",
@@ -336,7 +337,6 @@
     "armor": 4.5,
     "magicResist": 1.3,
     "hpRegen": 0.6,
-    "attackDamage": 3,
     "attackSpeed": 2
   },
   "price": {

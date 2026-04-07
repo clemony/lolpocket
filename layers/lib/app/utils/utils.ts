@@ -8,3 +8,8 @@ export function computedOnce<T>(fn: () => T) {
 export function assertNever(x: never): never {
   throw new Error(`Unexpected value: ${x}`)
 }
+
+export function closeFn(inject: any, fn?: () => void) {
+  if (inject && inject.close) inject.close()
+  if (fn) fn()
+}

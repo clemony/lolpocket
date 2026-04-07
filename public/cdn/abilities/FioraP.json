@@ -11,7 +11,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Fiora identifies the Vitals of nearby visible enemy champions, marked as an arc around them in North-, East-, South- or Westward direction. Vitals take 1.75 seconds to become targetable and linger for 13.25 seconds afterwards while Fiora remains near the target, otherwise the Vital will disappear. After a Vital ends, Fiora identifies a new one on her target.</p>"
     },
     {
-      "description": "Dealing damage in the direction of a Vital will trigger it to deal bonus true damage equal to 3% (+ 4% per 100 bonus AD) of target's maximum health, heal Fiora for 35 - 100 (based on level), and grant her 20% / 30% / 40% / 50% (based on Grand Challenge's Rank) bonus movement speed that decays over 1.85 seconds."
+      "description": "Dealing damage in the direction of a Vital will trigger it to deal bonus true damage equal to 3% (+ 4% per 100 bonus AD) of target's maximum health, heal Fiora for 35 - 107.65 (based on level), and grant her 20% / 30% / 40% / 50% (based on Grand Challenge's Rank) bonus movement speed that decays over 1.85 seconds."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Fiora/ability-icon/p",

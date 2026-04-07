@@ -10,7 +10,7 @@
   "effectRadius": "240",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, granting sight of the area during the delay and afterwards dealing magic damage to enemies hit.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -32,7 +32,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/w",
-  "notes": "The delay starts at the beginning of the cast time.\nIf Veigar dies during the cast time, Dark Matter will still successfully fall from the sky.\nDark Matter grants  sight of the area during the delay.",
+  "notes": "The delay starts at the beginning of the cast time.\nIf Veigar dies during the cast time, Dark Matter will still successfully fall from the sky.",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",

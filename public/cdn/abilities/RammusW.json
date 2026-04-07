@@ -28,7 +28,7 @@
           "attribute": "Bonus Magic Resistance",
           "modifiers": [
             {
-              "values": "27 / 32 / 37 / 42 / 47"
+              "values": "20 / 25 / 30 / 35 / 40"
             },
             {
               "tooltip": "Scaling per rank:\n30 / 37.5 / 45 / 52.5 / 60% total magic resistance",

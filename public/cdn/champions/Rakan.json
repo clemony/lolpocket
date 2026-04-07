@@ -11,7 +11,7 @@
       "blurb": "Innate: Periodically,  Rakan generates a  shield that regenerates out of combat if not broken.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 247.94 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p>"
         },
         {
           "description": "Rakan's basic attacks and ability hits reduce Fey Feathers' cooldown by 1 second for each enemy champion hit."
@@ -21,7 +21,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
-      "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.",
+      "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.\nThe cooldown reduction is granted even if the attack misses due to  blind.\nPENDING FOR TEST: Cooldown reduction interaction with parries ( block and  dodge.",
       "targeting": "Passive"
     },
     {
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 - 210 (based on level) (+ 55% AP)."
+          "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 - 230 (based on level) (+ 55% AP)."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/q",
@@ -213,6 +213,7 @@
     "abilityReliance": 90,
     "difficulty": 2
   },
+  "lore": "As mercurial as he is charming, Rakan is an infamous vastayan troublemaker and the greatest battle-dancer in Lhotlan tribal history. To the humans of the Ionian highlands, his name has long been synonymous with wild festivals, uncontrollable parties, and anarchic music. Few would suspect this energetic, traveling showman is also partner to the rebel Xayah, and is dedicated to her cause.",
   "patchLastChanged": "25.19",
   "positions": [
     "Support"
@@ -242,7 +243,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.5,
     "mpRegen": 0.5,
-    "attackDamage": 3.5,
     "attackSpeed": 3
   },
   "price": {

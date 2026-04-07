@@ -96,7 +96,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/r",
-  "notes": "The on-hit deals  proc damage. The swing deals  area damage.\nThe bonus resistances are represented by a glowing aura around Jax that grows with each enemy champion hit beyond the first.\nThe additional magic damage can be  dodged and  blocked but it cannot  miss.\n Spell shield will only block the additional damage from the third attack if it is  empowered.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards.\nStacks will still be generated when attacking them.\nThe empowered attack is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(note)\n\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "The on-hit deals  proc damage. The swing deals  area damage.\nThe bonus resistances are represented by a glowing aura around Jax that grows with each enemy champion hit beyond the first.\nThe additional magic damage can be  dodged and  blocked but it cannot  miss.\n Spell shield will only block the additional damage from the third attack if it is  empowered.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards.\nStacks will still be generated when attacking them.\nThe empowered attack is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(unexpected)\n\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "resource": "Mana",
   "spellEffects": "special",
   "spellshieldable": "special",

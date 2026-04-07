@@ -49,7 +49,7 @@
       ]
     },
     {
-      "description": "Against monsters, Sundering Slam deals 150 bonus physical damage and the damage based on their health ratio is capped at 100 - 300 (based on level)."
+      "description": "Against monsters, Sundering Slam deals 150 bonus physical damage and the damage based on their health ratio is capped at 100 - 323.53 (based on level)."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ambessa/ability-icon/q",

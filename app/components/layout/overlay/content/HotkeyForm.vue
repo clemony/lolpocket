@@ -6,19 +6,19 @@ const hotkeyRegistry = {
       search: {
         k: "Search",
         icon: "i-search",
-        v: ["meta", "k"],
+        v: ["meta", "k"]
       },
       logIn: {
         k: "Log in",
         icon: "i-log-in",
-        v: ["shift", "meta", "s"],
+        v: ["shift", "meta", "s"]
       },
       logOut: {
         k: "Log out",
         icon: "i-log-out",
-        v: ["shift", "meta", "q"],
-      },
-    },
+        v: ["shift", "meta", "q"]
+      }
+    }
   },
   navigation: {
     label: "Navigation",
@@ -26,25 +26,25 @@ const hotkeyRegistry = {
       open: {
         k: "Open",
         icon: "i-open",
-        v: ["meta", "o"],
+        v: ["meta", "o"]
       },
       close: {
         k: "Close",
         icon: "i-x",
-        v: ["meta", "x"],
-      },
-    },
-  },
+        v: ["meta", "x"]
+      }
+    }
+  }
 }
 </script>
 
 <template>
   <UCard
-    variant="ghost"
+    color="transparent"
     :ui="{
       root: 'w-full divide-y divide-p3/80',
       header: 'relative px-4! py-3!',
-      body: 'px-11! py-2!',
+      body: 'px-11! py-2!'
     }">
     <template #header>
       <UPageFeature
@@ -55,7 +55,7 @@ const hotkeyRegistry = {
           wrapper: 'w-full',
           description: 'mt-0.5',
           title: 'text-md',
-          leadingIcon: 'mt-0.75 size-3.5! **:stroke-[2.3]',
+          leadingIcon: 'mt-0.75 size-3.5! **:stroke-[2.3]'
         }"
         description="Configure app hotkeys." />
       <Tooltip label="Exit" side="bottom" class="absolute top-2 right-3">
@@ -64,7 +64,7 @@ const hotkeyRegistry = {
           icon="i-x"
           :ui="{
             base: '',
-            leadingIcon: 'size-4! opacity-60',
+            leadingIcon: 'size-4! opacity-60'
           }"
           variant="ghost" />
       </Tooltip>
@@ -80,7 +80,7 @@ const hotkeyRegistry = {
           root: 'mb-2 w-full divide-y divide-p3/80 bg-transparent text-sm shadow-none',
           header:
             'grid w-full grid-cols-[16px_0.7fr_1.5fr_1fr] items-center gap-x-2 px-4! pt-2! pb-1! font-medium text-n4',
-          body: 'grid auto-rows-max grid-cols-[16px_0.7fr_1.5fr_1fr] items-center gap-x-2 px-4! *:py-0.75',
+          body: 'grid auto-rows-max grid-cols-[16px_0.7fr_1.5fr_1fr] items-center gap-x-2 px-4! *:py-0.75'
         }">
         <!-- label -->
 
@@ -106,7 +106,7 @@ const hotkeyRegistry = {
               v-for="k in key.v"
               :key="k"
               class="text-n3!"
-              variant="ghost"
+              variant="subtle"
               square
               :value="k" />
             <template #edit>
@@ -119,7 +119,7 @@ const hotkeyRegistry = {
               <Tooltip label="Reset to default">
                 <UButton
                   :ui="{
-                    leadingIcon: 'size-3.5! opacity-70',
+                    leadingIcon: 'size-3.5! opacity-70'
                   }"
                   size="sm"
                   variant="ghost"

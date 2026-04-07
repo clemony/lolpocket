@@ -160,7 +160,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Amumu/ability-icon/e",
-      "notes": "A  basic attack's  basic damage and each on-hit effect are all separate damage instances, and may be reduced each if they deal physical damage.\nTantrum's cooldown reduction will trigger multiple times for effects such as  Double Strike and  Guinsoo's Rageblade's Phantom Hit.\nThe cooldown will be reduced, even if the incoming attack is  blocked.\nThe cooldown will not be reduced, if the incoming attack misses due to the enemy being  blinded.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+      "notes": "A  basic attack's  basic damage and each  on-hit effect are all separate damage instances, and may be reduced each if they deal physical damage.\nTantrum's cooldown reduction will trigger multiple times for effects such as  Double Strike and  Guinsoo's Rageblade's Phantom Hit.\nThe cooldown will be reduced, even if the incoming attack is  blocked.\nThe cooldown will not be reduced, if the incoming attack misses due to the enemy being  blinded.\nThis ability will cast from wherever the caster is at the end of the cast time.",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
@@ -214,6 +214,7 @@
     "abilityReliance": 90,
     "difficulty": 1
   },
+  "lore": "Legend claims that Amumu is a lonely and melancholy soul from ancient Shurima, roaming the world in search of a friend. Doomed by an ancient curse to remain alone forever, his touch is death, his affection ruin. Those who claim to have seen him describe a living cadaver, small in stature and wrapped in creeping bandages. Amumu has inspired myths, songs, and folklore told and retold for generations—such that it is impossible to separate truth from fiction.",
   "patchLastChanged": "25.18",
   "positions": [
     "Jungle",
@@ -245,7 +246,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.9,
     "mpRegen": 0.6,
-    "attackDamage": 3.8,
     "attackSpeed": 2.2
   },
   "price": {

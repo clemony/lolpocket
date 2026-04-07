@@ -67,7 +67,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
-  "notes": "Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague's effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague's modifier to incoming damage stacks additively with  Alistar's  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(note)\n Spell shield does not negate the detonation.",
+  "notes": "Hemoplague will amplify almost all sources and types of damage, even including damage from neutral monsters.\n True damage will however not be amplified.(bug)\nHemoplague's effect  stacks multiplicatively with other damage modifiers.\nHemoplague amplifies itself for an actual damage of 165 / 220 / 275 / 330 / 385 (+ 77% AP).\nHemoplague's modifier to incoming damage stacks additively with  Alistar's  Unbreakable Will for a total damage reduction of 45 / 55 / 65%.(unexpected)\n Spell shield does not negate the detonation.",
   "projectile": "FALSE",
   "spellEffects": "Area of effect",
   "spellshieldable": "special",

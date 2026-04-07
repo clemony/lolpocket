@@ -6,7 +6,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 150 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/p",

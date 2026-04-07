@@ -6,20 +6,20 @@ const emit = defineEmits([
   "download",
   "update:align",
   "update:color",
-  "update:filter",
+  "update:filter"
 ])
 const card = computed<Card | null>(() => c ?? null)
 const cardFont0 = computed({
   get: () => card.value?.font?.[0] ?? "",
   set: (value: string) => {
     if (card.value) card.value.font[0] = value
-  },
+  }
 })
 const cardFont1 = computed({
   get: () => card.value?.font?.[1] ?? "",
   set: (value: string) => {
     if (card.value) card.value.font[1] = value
-  },
+  }
 })
 const align = ref("0")
 const color = ref<string>()
@@ -29,7 +29,7 @@ watch(
   (newVal) => {
     // card.align = newVal
     emit("update:align", newVal)
-  },
+  }
 )
 </script>
 

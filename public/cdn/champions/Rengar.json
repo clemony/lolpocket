@@ -11,20 +11,20 @@
       "blurb": "Innate:  Rengar generates Ferocity when he casts a basic ability or uses  Savagery's empowered attack, which expires after a period out of combat. At max Ferocity, his next basic ability consumes them to become empowered with an additional effect, gain an extra cast, and briefly grant him  bonus movement speed.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rengar generates 1 Ferocity upon casting a basic ability or using Savagery's first attack. At 4 Ferocity, his next basic ability consumes them all to become empowered with an additional effect and grant him an additional cast along with 30% / 40% / 50% (based on level) bonus movement speed for 1.5 seconds. All Ferocity is lost after 10 seconds of not dealing or taking damage, excluding damage dealt by persistent or proc effects.Reaching 4 Ferocity with Savagery or Bola Strike locks the empowered version of the ability from being cast for 0.1 seconds. Similarly, consuming all Ferocity with an empowered ability locks the unempowered version of the ability from being cast for 0.1 seconds if it is not already on cooldown, increased to 0.25 seconds for Battle Roar.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Upon casting a basic ability or using Savagery's first attack, Rengar generates a stack of Ferocity for 1.5 seconds, refreshing on subsequent triggers and stacking up 4 times. At maximum stacks, his next basic ability consumes them all to become empowered with an additional effect and grant him an additional cast along with 30% / 40% / 50% (based on level) bonus movement speed for 1.5 seconds. Generated Ferocity is prevented from expiring for 10 seconds after entering champion combat.Reaching 4 Ferocity with Savagery or Bola Strike locks the empowered version of the ability from being cast for 0.1 seconds. Similarly, consuming all Ferocity with an empowered ability locks the unempowered version of the ability from being cast for 0.1 seconds if it is not already on cooldown, increased to 0.25 seconds for Battle Roar.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> While in brush, Rengar gains Unseen Predator, which lingers for 0.35 seconds upon exiting brush. Unseen Predator is lost immediately if Rengar exits the brush using Flash or Hexflash.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Unseen Predator:</span> Rengar's basic attacks have massively increased range and cause him to leap to the target's location, attacking the target upon arrival and landing closer than his normal melee range. At the start of the leap, Unseen Predator will generate 1 Ferocity if none of his current Ferocity was generated this way.Rengar can cast any of his abilities during the dash.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Unseen Predator:</span> Rengar's basic attacks have massively increased range and cause him to leap to the target's location if they are beyond his normal basic attack range, triggering on-attack effects, and attacking the target upon arrival and landing closer than his normal melee range. Unseen Predator will generate 1 Ferocity if none of his current Ferocity was generated this way.Rengar can cast any of his abilities during the dash.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Bonetooth Necklace:</span> Scoring a takedown against an enemy champion within 3 seconds of damaging them grants Rengar a Trophy, once per unique champion and up to 5. An additional Trophy is made available through the event The Hunt is On! with the Head of Kha'Zix. Trophies grant bonus attack damage equal to 1% - 36% (based on Trophies) bonus AD.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/p",
-      "notes": "Rengar will not leap to targets already in his normal  basic attack range.\nWhile  grounded or  rooted, Rengar loses the enhanced  attack range from Unseen Predator.\nRengar will only leap to a target if his basic attack timer has been refreshed (if not so he will not automatically attempt to path towards his target, despite them being within leap range).\nOnly  Flash and  Hexflash instantly end Unseen Predator. Other effects (i.e  Teleport) will still cause the buff to linger upon leaving  brush.\nRengar can freely use any  abilities, summoner spells, or item actives while leaping.\nUsing a  dash or  blink ability will interrupt the leap.\nThe attack from the leap will:\nNot go off if the dash was interrupted.\nGo off at the end of the dash even if its normal destination is obstructed by boundaries he cannot cross (e.g. terrain,  The Hextech Ultimatum).\nGo off regardless of distance the enemy travels away from Rengar's original location.\nGo off even if Rengar loses  sight of the target.\nGo off but have no effect if the target dies or becomes  untargetable.\nWhen the attack goes off,  Savagery's empowered attack is consumed.\n Rapid Firecannon's and  Savagery's bonus ranges are lost after 0.25 seconds upon gaining Unseen Predator, and are re-gained after 0.25 seconds upon losing Unseen Predator.\nRengar has a secondary resource bar that indicates how much Ferocity he currently has as pips.\nFerocity generated by Unseen Predator has a purple color.\nFerocity generated by his other abilities has a white color.\nBonetooth Necklace uses different icons corresponding to the number of stacks acquired:\n1 Stack: \n2 Stacks: \n3 Stacks: \n4 Stacks: \n5 Stacks: \n6th Stack:  Head of Kha'Zix",
+      "notes": "The start of the leap is considered to be the end of Rengar's attack windup, triggering attack effects (i.e.  Navori Flickerblade,  Lethal Tempo) and generating the Ferocity.\nWhile  grounded or  rooted, Rengar loses the enhanced  attack range from Unseen Predator.\nRengar will only leap to a target if his basic attack timer has been refreshed (if not so he will not automatically attempt to path towards his target, despite them being within leap range).\nOnly  Flash and  Hexflash instantly end Unseen Predator. Other effects (i.e  Teleport) will still cause the buff to linger upon leaving  brush.\nRengar can freely use any  abilities, summoner spells, or item actives while leaping.\nUsing a  dash or  blink ability will interrupt the leap.\nThe attack from the leap will:\nNot go off if the dash was interrupted.\nGo off at the end of the dash even if its normal destination is obstructed by boundaries he cannot cross (e.g. terrain,  The Hextech Ultimatum).\nGo off regardless of distance the enemy travels away from Rengar's original location.\nGo off even if Rengar loses  sight of the target.\nGo off but have no effect if the target dies or becomes  untargetable.\nWhen the attack goes off,  Savagery's empowered attack is consumed.\nThe attack deals  basic damage but is considered  ability damage for  Spear of Shojin.\n Rapid Firecannon's and  Savagery's bonus ranges are lost after 0.25 seconds upon gaining Unseen Predator, and are re-gained after 0.25 seconds upon losing Unseen Predator.\nRengar has a secondary resource bar that indicates how much Ferocity he currently has as pips.\nFerocity generated by Unseen Predator has a purple color.\nFerocity generated by his other abilities has a white color.\nBonetooth Necklace uses different icons corresponding to the number of stacks acquired:\n1 Stack: \n2 Stacks: \n3 Stacks: \n4 Stacks: \n5 Stacks: \n6th Stack:  Head of Kha'Zix",
       "speed": "1450",
       "targeting": "Passive",
       "targetRange": "50"
@@ -40,32 +40,34 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar empowers his next two basic attacks within 3 seconds to gain 40% bonus attack speed. His first attack has an uncancellable windup, gains 25 bonus range, and deals bonus physical damage. The attack will critically strike for ((31.25% + 22.5%) critical strike chance + 30%) AD bonus physical damage. Against structures, Savagery's damage is reduced by 40% and can also critically strike.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar gains 40% bonus attack speed on his next two basic attacks within 3 seconds.</p>"
+        },
+        {
+          "description": "His first attack is empowered to stab the target, having an uncancellable windup, gaining 25 bonus range, and dealing bonus physical damage. The attack can critically strike for (100% + 30%) AD bonus physical damage.",
           "leveling": [
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
                 {
-                  "values": "30 / 60 / 90 / 120 / 150"
+                  "values": "20 / 55 / 90 / 125 / 160"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n0 / 3.75 / 7.5 / 11.25 / 15% AD",
                   "unit": "% AD",
-                  "values": "0 - 15"
+                  "values": "5"
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Savagery's damage is modified to deal 30 - 235 (based on level) (+ 30% AD) bonus physical damage. Rengar gains 50% - 101% (based on level) bonus attack speed for 5 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Savagery's damage is modified to deal 35 - 260 (based on level) (+ 20% AD) bonus physical damage. Rengar instead gains 50% - 107% (based on level) bonus attack speed for 5 seconds.</p>"
         },
         {
           "description": "Savagery resets Rengar's basic attack timer."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/q",
-      "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThe  critical strike modifier scales up to 75% of the  critical damage champions usually have, based on Rengar's  critical strike chance.\nSavagery's empowered attack is not consumed against jungle plants.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal (the bonus damage cannot).\nCasting Savagery does not  break stealth.\nAgainst structures, the damage is calculated differently when the user has sources of  bonus critical damage. If the Basic attack damage against structures is:\nPhysical and  Infinity Edge is not equipped: Basic attack + Savagery bonus * 0.6.\nPhysical and  Infinity Edge is equipped: Basic attack + (Savagery bonus -  0.4 * AD) * 0.6. Infinity Edge's bonus is subtracted from the calculations.\nMagic and  Infinity Edge is not equipped: (Basic attack + Savagery bonus * 0.6) * 1.75. The damage is increased by the total critical damage modifier.\nMagic and  Infinity Edge is equipped: (Basic attack + (Savagery bonus -  0.4 * AD) * 0.6) * (1.75 +  0.4). Infinity Edge's bonus is subtracted from the calculations and the damage is increased by the total critical damage modifier.",
+      "notes": "Savagery deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nSavagery's empowered attack is consumed against jungle plants.\nThe bonus attack speed from the unempowered and empowered casts can stack with each other, if both are cast shortly one after another.\nThe enhanced attack applies other  on-hit effects as well as  life steal as normal.\nCasting Savagery does not  break stealth.",
       "spellEffects": "Special",
       "spellshieldable": "True",
       "targeting": "Auto"
@@ -85,7 +87,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Rengar stores 50% of the post-mitigation damage he has taken in the last 1.5 seconds as grey health on his health bar, increased to 100% of damage taken from monsters.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar roars, dealing magic damage to nearby enemies and 65 - 130 (based on level) bonus magic damage to monsters, and consuming his grey health to heal for the same amount.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rengar roars, dealing magic damage to nearby enemies and 65 - 137.65 (based on level) bonus magic damage to monsters, and consuming his grey health to heal for the same amount.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -102,7 +104,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Battle Roar's damage is modified to deal 50 - 220 (based on level) (+ 80% AP) magic damage. Rengar cleanses himself from all crowd control.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Battle Roar's damage is modified to deal 50 - 240 (based on level) (+ 80% AP) magic damage. Rengar cleanses himself from all crowd control.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/w",
@@ -149,7 +151,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Bola Strike's damage is modified to deal 50 - 305 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Bola Strike's damage is modified to deal 50 - 335 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/e",
@@ -239,7 +241,8 @@
     "abilityReliance": 30,
     "difficulty": 3
   },
-  "patchLastChanged": "25.23",
+  "lore": "Rengar is a ferocious vastayan trophy hunter who lives for the thrill of tracking down and killing dangerous creatures. He scours the world for the most fearsome beasts he can find, especially seeking any trace of Kha'Zix, the void creature who scratched out his eye. Rengar stalks his prey neither for food nor glory, but for the sheer beauty of the pursuit.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Jungle",
     "Top"
@@ -267,7 +270,6 @@
     "armor": 4.2,
     "magicResist": 2.1,
     "hpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 3
   },
   "price": {

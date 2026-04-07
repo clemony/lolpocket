@@ -10,7 +10,7 @@
   "effectRadius": "580",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, each wave in a cluster hitting 0.25 seconds after the other, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage Per Wave",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</span></p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">While within the shop area, Gangplank can purchase upgrades for his ship at the cost of 500 Silver Serpents each, which improve Cannon Barrage with new effects:</span></p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Death's Daughter:</span> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.</p>",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Fire at Will:</span> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Fire at Will:</span> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ]over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.</p>",
       "leveling": [
         {
           "attribute": "Total Magic Damage with Fire at Will",
@@ -117,7 +117,7 @@
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/r",
   "innerRadius": "170",
-  "notes": "Gangplank's upgrades for Cannon Barrage are offered through the shop and additionally from a special menu in the HUD which is only visible while inside the shop's area. Within the special menu, the player can purchase an upgrade by  clicking on its portrait or via the Champion Specific Interaction hotkeys (default: Shift+F1:F3).\nPurchased upgrades have a trim around their portrait. Upgrades that he does not have enough currency to purchase are greyed out.\nCannon Barrage's slow lingers for 0.25 seconds after affected enemies leave the target area.\nIf an Attack order is issued and is being cycled through casting Cannon Barrage, and no other order is issued after casting it, Gangplank's next basic attack is delayed by 1 second.",
+  "notes": "Gangplank's upgrades for Cannon Barrage are offered through a special menu in the HUD which is only visible while inside the area eligible for accessing the shop. Within the special menu, the player can purchase an upgrade by  clicking on its portrait or via the Champion Specific Interaction hotkeys (default: Shift+F1:F3).\nPurchased upgrades have a trim around their portrait. Upgrades that he does not have enough currency to purchase are greyed out.\nCannon Barrage's slow lingers for 0.25 seconds after affected enemies leave the target area.\nIf an Attack order is issued and is being cycled through casting Cannon Barrage, and no other order is issued after casting it, Gangplank's next basic attack is delayed by 1 second.\nUpgrade menu HUD. Located above the inventory.",
   "resource": "Mana",
   "spellEffects": "AOE",
   "spellshieldable": "True",

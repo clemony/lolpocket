@@ -15,7 +15,7 @@ const { class: className } = defineProps<{
     tabindex="0"
     :class="
       cn(
-        'group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-42 origin-bottom cursor-pointer items-start self-end border-b-0! border-b-transparent tabs-lg transition-none *:pointer-events-none'
+        'tabs-lg group/tab pointer-events-auto tabs-lift relative tabs flex w-max min-w-42 origin-bottom cursor-pointer items-start self-end border-b-0! border-b-transparent transition-none *:pointer-events-none'
       )
     ">
     <FakeTab />

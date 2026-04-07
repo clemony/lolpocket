@@ -4,7 +4,7 @@ import type { EmojiItem } from "@tiptap/extension-emoji"
 const {
   class: className,
   index,
-  item,
+  item
 } = defineProps<{
   class?: HTMLAttributes["class"]
   item: EmojiItem
@@ -19,14 +19,7 @@ const {
     variant="ghost"
     hover="inset"
     tabindex="0"
-    :class="
-      cn(
-        'text-4xl',
-        `
-          index-${index}
-        `
-      )
-    ">
+    :class="cn('text-4xl', `index-${index}`)">
     <span v-if="item.emoji" class="drop-shadow-black/10 ds-2xs">
       {{ item.emoji }}
     </span>

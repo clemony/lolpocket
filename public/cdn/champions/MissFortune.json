@@ -8,7 +8,7 @@
       "key": "P",
       "name": "Love Tap",
       "affects": "Enemies",
-      "blurb": "Innate:  Miss Fortune's basic attacks apply a mark that expires when attacking a new enemy. If the enemy was unmarked, this also deals bonus physical damage.",
+      "blurb": "Innate:  Miss Fortune's  basic attacks apply a mark that expires when attacking a new enemy. If the enemy was unmarked, this also deals bonus physical damage.",
       "damageType": "Physical damage",
       "effects": [
         {
@@ -33,7 +33,7 @@
       "effectRadius": "500",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Miss Fortune fires a shot at the target enemy that deals physical damage and bounces to hit another enemy behind them, applying on-attack effects to the primary target and on-hit effects to both enemies hit.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -54,14 +54,14 @@
           ]
         },
         {
-          "description": "Double Up's bounce is affected by critical strike modifiers. If Double Up kills the primary target, the bounce will critically strike."
+          "description": "Double Up's bounce can critically strike for[ (150% + 15%) damage. ][ 50% bonus critical damage. ]If Double Up kills the primary target, the bounce will critically strike."
         },
         {
           "description": "The bounce prioritizes units directly behind the primary target. A target does not have to be visible to be hit by the bounce."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/q",
-      "notes": "Double Up deals  basic damage to both targets, but also triggers spell effects by also being tagged as  spell damage.\n Spell shields can be used by either target. If it is on the primary target, the spell shield will not prevent the shot from bouncing.\nNeutral units count as valid targets to bounce.\nThe bounce follows a priority order on targets behind in a certain angle:\n500 units in 20°.\n500 units in 40°.\n500 units in 110°.\n150 units in 160°.\nDouble Up's cast range adjusts based on Miss Fortune's  attack range, which can be increased by items such as  Rapid Firecannon.\nThe damage of a  critically striking shot is 35 / 70 / 105 / 140 / 175 (+ 175% AD) (+ 61.25% AP) physical damage, increased to 42 / 84 / 126 / 168 / 210 (+ 210% AD) (+ 73.5% AP) physical damage by  Infinity Edge's bonus critical damage.\nIf there is no secondary target, the shot will not bounce and the dud will instead fall to the ground.\nThe dud lands on the ground 176 units behind the primary target and has a missile speed of 400 on its way there.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+      "notes": "Double Up deals  basic damage to both targets, but also triggers spell effects by also being tagged as  spell damage.\n Spell shields can be used by either target. If it is on the primary target, the spell shield will not prevent the shot from bouncing.\nNeutral units count as valid targets to bounce.\nThe bounce follows a priority order on targets behind in a certain angle:\n500 units in 20°.\n500 units in 40°.\n500 units in 110°.\n150 units in 160°.\nDouble Up's cast range adjusts based on Miss Fortune's  attack range, which can be increased by items such as  Rapid Firecannon.\nThe damage of a  critically striking shot is 30 / 67.5 / 105 / 142.5 / 180 (+ 150% AD) (+ 52.5% AP) physical damage, increased to 33 / 74.25 / 115.5 / 156.75 / 198 (+ 165% AD) (+ 57.75% AP) physical damage by  Infinity Edge's bonus critical damage.\nIf there is no secondary target, the shot will not bounce and the dud will instead fall to the ground.\nThe dud lands on the ground 176 units behind the primary target and has a missile speed of 400 on its way there.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1400",
@@ -185,8 +185,24 @@
       "effectRadius": "1450",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 80% AD (+ 25% AP) physical damage to enemies hit.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals physical damage to enemies hit.</p>",
           "leveling": [
+            {
+              "attribute": "Physical Damage per Wave",
+              "modifiers": [
+                {
+                  "values": "20 / 30 / 40"
+                },
+                {
+                  "unit": "% AD",
+                  "values": "60"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "25"
+                }
+              ]
+            },
             {
               "attribute": "Total Waves",
               "modifiers": [
@@ -199,8 +215,11 @@
               "attribute": "Maximum Total Physical Damage",
               "modifiers": [
                 {
+                  "values": "280 / 500 / 720"
+                },
+                {
                   "unit": "% AD",
-                  "values": "1120 / 1280 / 1440"
+                  "values": "840 / 960 / 1080"
                 },
                 {
                   "tooltip": "Scaling per rank:\n350 / 400 / 450% AP",
@@ -221,11 +240,11 @@
           ]
         },
         {
-          "description": "Each of the waves can critically strike for (120% + 6%) damage."
+          "description": "Each of the waves can critically strike for (130% + 9%) damage."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/r",
-      "notes": "The damage dealt by each wave of Bullet Time is calculated when the wave reaches the target.\nMiss Fortune  reveals herself for 4.5 seconds if there is an enemy champion within the area.\nTargets cannot be damaged by more than one projectile per wave.\nThe bullet streams that each fire 1 projectile per wave are spead by 6° between one another, aiming towards the angles +-3/9/15° from Miss Fortune's facing direction.\nBullet time picks 6 locations on the ground 500 units from Miss Fortune (with the aforementioned angles) and fires a bullet stream towards each.\nIf Miss Fortune is moved to a new location, these locations will update (since patch V13.3); the cone will fire towards her new facing direction.\nBullet time fires the first wave at 0.066 seconds, and the last at 2.904 seconds. Times between waves are equally spread between these values.\nMiss Fortune may cancel the last ~0.1 seconds of channel time at no loss of effect.\nThe following table refers for interactions while Miss Fortune is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "notes": "The damage dealt by each wave of Bullet Time is calculated when the wave reaches the target.\nMiss Fortune  reveals herself for 4.5 seconds if there is an enemy champion within the area.\nTargets cannot be damaged by more than one projectile per wave.\nThe bullet streams that each fire 1 projectile per wave are spead by 6° between one another, aiming towards the angles +-3/9/15° from Miss Fortune's facing direction.\nBullet Time picks 6 locations on the ground 500 units from Miss Fortune (with the aforementioned angles) and fires a bullet stream towards each.\nIf Miss Fortune is moved to a new location, these locations will update (since patch V13.3); the cone will fire towards her new facing direction.\nBullet Time fires the first wave at 0.066 seconds, and the last at 2.904 seconds. Times between waves are equally spread between these values.\nMiss Fortune may cancel the last ~0.1 seconds of channel time at no loss of effect.\nThe following table refers for interactions while Miss Fortune is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2000",
@@ -246,7 +265,8 @@
     "difficulty": 1
   },
   "fullName": "Sarah Fortune",
-  "patchLastChanged": "25.24",
+  "lore": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally avenged years later, blowing up his flagship while he was still aboard. Those who underestimate her will face a beguiling and unpredictable opponent… and, likely, a bullet or two in their guts.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Bottom"
   ],
@@ -257,7 +277,7 @@
     "Marksman"
   ],
   "stats": {
-    "hp": 640,
+    "hp": 625,
     "mp": 300,
     "movespeed": 325,
     "armor": 25,
@@ -269,13 +289,12 @@
     "attackSpeed": 0.7
   },
   "statsPerLevel": {
-    "hp": 103,
+    "hp": 100,
     "mp": 40,
     "armor": 4,
     "magicResist": 1.3,
     "hpRegen": 0.7,
     "mpRegen": 0.8,
-    "attackDamage": 2.4,
     "attackSpeed": 3
   },
   "price": {

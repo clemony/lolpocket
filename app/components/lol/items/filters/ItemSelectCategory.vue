@@ -10,7 +10,7 @@ import { itemTags } from "#shared/constants/items/itemTags"
       shape="square">
       <UChip
         v-if="is().filters.tags.length"
-        color="p2"
+        color="secondary"
         :class="
           cn('absolute transition-opacity', {
             'animate-in fade-in zoom-in': is().filters.tags.length,

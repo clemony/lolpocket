@@ -89,8 +89,8 @@ console.log("🥸 - youtubeVideoId:", youtubeVideoId)
       }
     ]"
     :image="post.preview_image_url || post.thumbnail_url || undefined">
-    <template v-if="youtubeVideoId" #header>
-      <VideoModal :post :video-id="youtubeVideoId">
+    <template v-if="post.video_provider" #header>
+      <LazyVideoModal :post>
         <UCard
           as="button"
           :ui="{
@@ -102,17 +102,19 @@ console.log("🥸 - youtubeVideoId:", youtubeVideoId)
             :alt="post.title"
             :width="400"
             :height="300"
+            loading="eager"
             :quality="50"
+            :preload="{ fetchPriority: 'high' }"
             format="webp"
             class="transition-scale pointer-events-none z-0 size-full object-cover duration-200 group-hover/card:scale-120" />
 
-          <PlayIcon />
+          <LazyPlayIcon />
 
-          <Icon
+          <LazyIcon
             name="i-open"
             class="pointer-events-none absolute top-3 right-3 z-1 size-5.5 text-nc/80" />
         </UCard>
-      </VideoModal>
+      </LazyVideoModal>
     </template>
   </UBlogPost>
 </template>

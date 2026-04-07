@@ -2,6 +2,9 @@
   "id": 223067,
   "name": "Kindlegem",
   "description": "200 Health\n10 Ability Haste\n\n",
+  "stats": {
+    "health": 200
+  },
   "gold": {
     "base": 500,
     "purchasable": false,

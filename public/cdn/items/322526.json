@@ -2,6 +2,10 @@
   "id": 322526,
   "name": "Whispering Circlet",
   "description": "200 Health\n8% Heal and Shield Power\n75% Base Mana Regen\n300 Mana\n\nHarmony\nGain % Heal and Shield Power.\n\nManaflow (8s, max 5 charges)\nLanding Abilities grants 4 max Mana (doubled vs. champions).\nTransforms into Diadem of Songs at 360 max Mana.",
+  "stats": {
+    "mana": 300,
+    "health": 200
+  },
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

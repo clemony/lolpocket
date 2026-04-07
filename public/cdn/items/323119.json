@@ -2,6 +2,10 @@
   "id": 323119,
   "name": "Winter's Approach",
   "description": "550 Health\n500 Mana\n15 Ability Haste\n\nAwe\nGain  Health.\n\nManaflow (8s, max 4 charges)\nLanding Attacks and Abilities grant 6.5 max Mana (doubled vs. champions).\nTransforms into Fimbulwinter at 360 max Mana.",
+  "stats": {
+    "mana": 500,
+    "health": 550
+  },
   "gold": {
     "base": 300,
     "purchasable": true,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

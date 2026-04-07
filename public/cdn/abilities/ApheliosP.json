@@ -16,9 +16,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/p",
-  "notes": "Accumulated Chakrams accompany Crescendum whenever Aphelios performs a basic attack. This is merely a visual representation of the increased damage, and the separate blades are not considered separate damage sources nor  projectiles.\nAll Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nDue to the return time, at high attack speeds Crescendum will increase Aphelios' effective time to cast attacks, even when right next to his target.",
-  "projectile": "TRUE",
+  "notes": "All Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nDue to the return time, at high attack speeds Crescendum will increase Aphelios' effective time to cast attacks, even when right next to his target.",
+  "projectile": "FALSE",
   "resource": "Other",
-  "spellEffects": "attack",
+  "spellEffects": "default",
   "targeting": "Passive"
 }

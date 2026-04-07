@@ -1,12 +1,12 @@
-import * as v from 'valibot'
+import * as v from "valibot"
 
 // InboxItem
 export const InboxItemSchema = v.object({
   id: v.string(),
-  date: v.pipe(v.string(), v.isoTimestamp('incorrect date format')),
+  date: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
   read: v.optional(v.boolean()), // optional default = undefined
   template: v.string(),
-  vars: v.record(v.string(), v.string()),
+  vars: v.record(v.string(), v.string())
 })
 
 // InboxMessage (extends InboxItem)
@@ -18,12 +18,11 @@ export const InboxMessageSchema = v.object({
   from: v.object({
     id: v.string(),
     name: v.string(),
-    icon: v.string(),
+    username: v.nullable(v.string()),
+    icon: v.string()
   }),
   to: v.optional(v.string()),
-  trash: v.optional(
-    v.pipe(v.string(), v.isoTimestamp('incorrect date format'))
-  ),
+  trash: v.optional(v.pipe(v.string(), v.isoTimestamp("incorrect date format")))
 })
 
 // Inbox
@@ -31,7 +30,7 @@ export const InboxMessageSchema = v.object({
 export const InboxSchema = v.fallback(
   v.object({
     messages: v.fallback(v.array(InboxMessageSchema), []),
-    notifications: v.fallback(v.array(InboxItemSchema), []),
+    notifications: v.fallback(v.array(InboxItemSchema), [])
   }),
   { messages: [], notifications: [] }
 )

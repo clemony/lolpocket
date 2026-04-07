@@ -56,6 +56,8 @@ const src = computed(() =>
     :date="data.metadata.date ?? ''"
     :to="data.url"
     external
+    :preload="{ fetchPriority: 'high' }"
+    loading="eager"
     target="_blank"
     :authors="[
       {

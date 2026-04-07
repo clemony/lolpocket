@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from "vue-router"
 import { useFilter } from "reka-ui"
+import type { RouteRecordRaw } from "vue-router"
 
 const { class: className, query } = defineProps<{
   query: string
@@ -35,7 +35,7 @@ const groups = computed(() => {
       g.value.push({
         name: String(parent.meta?.title || parent.name),
         items: parent.children,
-        order: parent.meta?.order as number | undefined,
+        order: parent.meta?.order as number | undefined
       })
     })
   return g.value.sort((a, b) => (a.order ?? 0) - (b.order ?? 0))

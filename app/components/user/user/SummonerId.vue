@@ -2,7 +2,7 @@
 const {
   class: className,
   summoner,
-  type: t,
+  type: t
 } = defineProps<{
   class?: HTMLAttributes["class"]
   summoner?: Summoner | Partial<Summoner>
@@ -21,16 +21,16 @@ interface Label {
 const types: Record<string, Label> = {
   tag: {
     icon: "i-hash",
-    placeholder: "unknown",
+    placeholder: "unknown"
   },
   region: {
     icon: "i-at",
-    placeholder: "runeterra",
+    placeholder: "runeterra"
   },
   level: {
     label: "lv.",
-    placeholder: "0",
-  },
+    placeholder: "0"
+  }
 }
 
 const id = computed(() => {
@@ -43,7 +43,7 @@ const id = computed(() => {
   <span
     :class="
       cn(
-        'inline-flex items-center leading-none antialiased',
+        'inline-flex items-center align-baseline leading-none antialiased',
         { 'opacity-50': !id },
         className
       )
@@ -51,13 +51,15 @@ const id = computed(() => {
     <Icon
       v-if="types[t]?.icon"
       :class="
-        cn('whitespace-[collapse] inline size-3.5 align-bottom', {
+        cn('whitespace-[collapse] inline size-3.25 align-bottom', {
           'mr-px': type !== 'tag',
+          'text-n5': type === 'tag'
         })
       "
       :name="types[t]?.icon" />
     <template v-else-if="types[t]?.label">
-      {{ types[t]?.label }}&#x202F;</template><template v-if="summoner?.tag">
+      {{ types[t]?.label }}&#x202F;</template
+    ><template v-if="summoner?.tag">
       {{ id }}
     </template>
     <template v-else>{{ types[t]?.placeholder }}</template>

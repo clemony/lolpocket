@@ -16,7 +16,7 @@
           "attribute": "Primary Magic Damage",
           "modifiers": [
             {
-              "values": "140 / 210 / 280"
+              "values": "120 / 190 / 260"
             },
             {
               "unit": "% AP",
@@ -28,7 +28,7 @@
           "attribute": "Reduced Magic Damage",
           "modifiers": [
             {
-              "values": "70 / 105 / 140"
+              "values": "60 / 95 / 130"
             },
             {
               "unit": "% AP",
@@ -40,7 +40,7 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "350 / 525 / 700"
+              "values": "300 / 475 / 650"
             },
             {
               "unit": "% AP",

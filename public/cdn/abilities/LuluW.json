@@ -11,7 +11,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Whimsy on herself or a champion.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their movement speed is reduced by 60, and disarms them for the same duration.</p>",
       "leveling": [
         {
           "attribute": "Disable Duration",
@@ -49,7 +49,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w",
-  "notes": "Whimsy's movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.",
+  "notes": "Whimsy's movement speed reduction will apply to the target's bonus movement speed.\nIf their bonus movement speed would be reduced below 0, their base movement speed is reduced instead equal to the remaining reduction, or by the full amount if the target has no bonus movement speed.\nWhimsy's movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "2250",

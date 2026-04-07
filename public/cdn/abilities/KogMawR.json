@@ -56,7 +56,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/r",
-  "notes": "Living Artillery will not reveal  stealthed champions.",
+  "notes": "Living Artillery will not reveal  stealthed champions.\nPinging Living Artillery will additionally display the remaining time duration of its stacks.",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",

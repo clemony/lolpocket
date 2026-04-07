@@ -17,16 +17,16 @@ const config = {
   overrides: [
     {
       files: ["*.json", "*.jsonc", "*.json5"],
-      options: { trailingComma: "none" },
-    },
+      options: { trailingComma: "none" }
+    }
   ],
   plugins: [
     "@prettier/plugin-xml",
     "@svgr/plugin-prettier",
     "prettier-plugin-tailwindcss",
-    "prettier-plugin-sh",
+    "prettier-plugin-sh"
   ],
-  tailwindFunctions: ["clsx", "tw", "tv", "cn", "cva"],
+  tailwindFunctions: ["clsx", "tw", "tv", "cn", "cva"]
 }
 
 export default config

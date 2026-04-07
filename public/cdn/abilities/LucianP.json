@@ -16,7 +16,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/p",
-  "notes": "Lightslinger is triggered and consumed by the first attack, even if no target can be found upon firing the second attack.\nThe second attack, if the initial target was killed, will prioritize enemy champions regardless of having  sight of them or not and enemy  minions with  low health.\nLucian can perform actions freely while firing Lightslinger's second attack.\nThe second attack has special movement animations depending on the direction Lucian is moving while firing.\nThe second attack counts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nThe second attack separately rolls a  critical strike.\nThe second attack does not trigger  Sundered Sky's Lightshield Strike.(note)\nThe empowered shots will apply against structures.",
+  "notes": "Lightslinger is triggered and consumed by the first attack, even if no target can be found upon firing the second attack.\nThe second attack, if the initial target was killed, will prioritize enemy champions regardless of having  sight of them or not and enemy  minions with  low health.\nLucian can perform actions freely while firing Lightslinger's second attack.\nThe second attack has special movement animations depending on the direction Lucian is moving while firing.\nThe second attack counts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nThe second attack separately rolls a  critical strike.\nThe second attack does not trigger  Sundered Sky's Lightshield Strike.(unexpected)\nThe empowered shots will apply against structures.",
   "spellEffects": "attack",
   "targeting": "Passive"
 }

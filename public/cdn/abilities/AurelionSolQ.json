@@ -112,7 +112,7 @@
       "description": "At rank 5, Breath of Light's channel duration is increased to 160 seconds."
     },
     {
-      "description": "Breath of Light cannot be cast for 1 second if the channel is cancelled within the first 0.25 seconds."
+      "description": "If the channel is cancelled within the first 0.25 seconds, Breath of Light is placed on a 1-second lockout but does not go on cooldown."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/q",

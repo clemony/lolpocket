@@ -62,7 +62,7 @@ export const libraryNav = computed(() => {
     .sort((a, b) => Number(a.order ?? 0) - Number(b.order ?? 0)) as RootProps[]
 })
 
-export const backpackNav: NavButtonProps[] = [
+export const backpackNav: ButtonProps[] = [
   {
     label: "Pockets",
     to: "/backpack",
@@ -71,7 +71,7 @@ export const backpackNav: NavButtonProps[] = [
     },
     trailingIcon: "link",
     icon: "i-folders",
-    variant: "highlight"
+    variant: "soft"
   },
   {
     label: "Archive",
@@ -80,7 +80,7 @@ export const backpackNav: NavButtonProps[] = [
       base: " "
     },
     icon: "i-archive",
-    variant: "highlight"
+    variant: "soft"
   },
   {
     label: "Trash",
@@ -89,11 +89,11 @@ export const backpackNav: NavButtonProps[] = [
       base: ""
     },
     icon: "i-trash",
-    variant: "highlight"
+    variant: "soft"
   }
 ]
 
-export const toolsNav: NavButtonProps[] = [
+export const toolsNav: BaseItem[] = [
   {
     label: "Item Calculator",
     to: "/tools/calculator",

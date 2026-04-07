@@ -11,7 +11,7 @@ const video = heroDisplays[0] ?? { url: "", class: "" }
         <Video
           :style="{
             display: 'block',
-            height: '100vh',
+            height: '100vh'
           }"
           :src="video.url"
           :class="
@@ -35,7 +35,7 @@ const video = heroDisplays[0] ?? { url: "", class: "" }
               label="log in"
               :class="
                 cn(
-                  'pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-p3 text-sm shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc',
+                  'pointer-events-auto relative mt-3 w-28 place-self-end overflow-hidden border-p3 text-sm shadow-xs transition-all duration-200 hover:bg-neutral hover:text-nc'
                 )
               "
               to="/login">

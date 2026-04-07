@@ -3,7 +3,7 @@ const {
   variant = "shadow",
   class: className,
   size = "md",
-  summoner,
+  summoner
 } = defineProps<{
   class?: HTMLAttributes["class"]
   summoner: MaybeRef<Summoner>

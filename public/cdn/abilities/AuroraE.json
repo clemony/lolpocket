@@ -28,7 +28,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/e",
-  "notes": "Aurora is locked out of using all abilities, summoner spells, and item actives during the dash.\nWhile  grounded or  rooted, The Weirding can be cast but Aurora will not  dash.\nSimilarly, if Aurora is affected by ground or root during the cast time, she will not dash afterwards.\nThis only applies to ground and root.  Immobilizing effects will not prevent the dash afterwards.(note)\nThis ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "Aurora is locked out of using all abilities, summoner spells, and item actives during the dash.\nWhile  grounded or  rooted, The Weirding can be cast but Aurora will not  dash.\nSimilarly, if Aurora is affected by ground or root during the cast time, she will not dash afterwards.\nThis only applies to ground and root.  Immobilizing effects will not prevent the dash afterwards.(unexpected)\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "FALSE",
   "resource": "Mana",
   "speed": "150 + 200% movement speed",

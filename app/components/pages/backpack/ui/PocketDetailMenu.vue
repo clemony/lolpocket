@@ -27,7 +27,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-p2/30': pinned,
+            'bg-p2/30': pinned
           })
         ">
         <input
@@ -50,7 +50,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-p2/30': pinned,
+            'bg-p2/30': pinned
           })
         ">
         <input
@@ -71,7 +71,7 @@ const pinned = computed(() => usePockets().pinned.includes(pocketKeySafe.value))
         "
         :class="
           cn('relative grid size-11 place-items-center *:absolute', {
-            'bg-p2/30': pinned,
+            'bg-p2/30': pinned
           })
         ">
         <icon name="trash" />

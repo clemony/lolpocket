@@ -2,6 +2,11 @@
   "id": 224629,
   "name": "Cosmic Drive",
   "description": "65 Ability Power\n350 Health\n35 Ability Haste\n4% Move Speed\n\nSpelldance\nDealing magic or true damage to champions grants  Move Speed for 4 seconds.",
+  "stats": {
+    "health": 350,
+    "abilityPower": 65,
+    "percentMovespeed": 4
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

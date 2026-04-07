@@ -2,6 +2,10 @@
   "id": 224636,
   "name": "Night Harvester",
   "description": "90 Ability Power\n300 Health\n25 Ability Haste\n\nSoulrend\nDamaging a champion with Attacks or Abilities deals an additional  magic damage and grants you 25% Move Speed for 1.5 seconds (30(0s) per champion).\n\nDamaging a new champion will extend the duration of the Move Speed bonus.",
+  "stats": {
+    "health": 300,
+    "abilityPower": 90
+  },
   "gold": {
     "base": 2500,
     "purchasable": false,

@@ -15,7 +15,7 @@
           "attribute": "Movement Speed Duration",
           "modifiers": [
             {
-              "values": "1 / 1.65 / 2.3 / 2.95 / 3.6"
+              "values": "1.4 / 1.95 / 2.5 / 3.05 / 3.6"
             }
           ]
         }
@@ -43,7 +43,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/q",
-  "notes": "The enhanced attack will apply other  on-hit effects and can  critically strike as normal (the bonus damage does not).\nThe bonus damage will also apply  life steal.\nThe bonus damage is applied to  structures.\nDecisive Strike locks Garen out of using basic attacks for a short period of time. This is shortened with  attack speed.\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\nDecisive Strike will not prevent the reapplication of  slows (e.g. the persistent slow from  Pillar of Ice will be immediately reapplied after removal if Garen is still within its area of effect).\n Spell shield will only negate the  silence.\nDecisive Strike's  lunge can pass very thin terrain and will otherwise not be able to. In any case, Garen will still hit his target.",
+  "notes": "The enhanced attack will apply other  on-hit effects and can  critically strike as normal (the bonus damage does not).\nThe bonus damage will also apply  life steal.\nThe bonus damage is applied to  structures.\nDecisive Strike locks Garen out of using basic attacks for a short period of time. This is shortened with  attack speed.\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\nDecisive Strike will not prevent the reapplication of  slows (e.g. the persistent slow from  Pillar of Ice will be immediately reapplied after removal if Garen is still within its area of effect).\n Spell shield will only negate the  silence.\nDecisive Strike's  lunge can pass very thin terrain and will otherwise not be able to. In any case, Garen will still hit his target.[2]",
   "spellEffects": "spell",
   "spellshieldable": "Special",
   "targeting": "Auto"

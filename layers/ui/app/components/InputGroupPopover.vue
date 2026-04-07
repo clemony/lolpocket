@@ -13,7 +13,7 @@ const modelValue = computed(() => mv)
     <UButton :class="cn('w-full cursor-text', className)">
       <UInput>
         <LazyInputClear class="mr-6" @clear-input="emit('clearInput')" />
-        <UButton size="2xs" icon="i-filter" />
+        <UButton icon="i-filter" :ui="{ base: 'btn-2xs' }" />
       </UInput>
     </UButton>
     <slot />

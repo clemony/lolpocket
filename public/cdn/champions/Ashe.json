@@ -12,17 +12,18 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ashe's basic attacks deal bonus physical damage equal to (75% + 30%) critical strike chance. Critical strikes do not deal any additional damage.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ashe's basic attacks deal bonus physical damage equal to 0% - 100% (+ 0% - 30%) (based on critical strike chance) of the attack's damage. Critical strikes do not deal any additional damage.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Shot:</span> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 30% (based on level) for the duration.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Shot:</span> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 31.18% (based on level) for the duration.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Critical Slow:</span> Ashe's critical strikes double Frost's slow strength to 40% - 60% (based on level), decaying over the first second of the duration to its normal strength.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Critical Slow:</span> Ashe's critical strikes double Frost's slow strength to 40% - 62.35% (based on level), decaying over the first second of the duration to its normal strength.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/p",
-      "notes": "Ashe's critical strikes are still considered critical strike damage and thus will be reduced by  Randuin's Omen's Resilience.\n Runaan's Hurricane's will not deal additional damage on  critical strikes.\n Cheap Shot will trigger on a subsequent basic attack even when the target is no longer slowed.(note)",
+      "notes": "Ashe's critical strikes are still considered critical strike damage and thus will be reduced by  Randuin's Omen's Resilience.\n Runaan's Hurricane's will not deal additional damage on  critical strikes.\n Cheap Shot will trigger on a subsequent basic attack even when the target is no longer slowed.(unexpected)",
+      "spellEffects": "Basic",
       "spellshieldable": "True",
       "targeting": "Passive"
     },
@@ -115,7 +116,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "110"
+                  "values": "100"
                 }
               ]
             }
@@ -215,7 +216,8 @@
     "abilityReliance": 20,
     "difficulty": 1
   },
-  "patchLastChanged": "25.24",
+  "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Bottom",
     "Support"
@@ -245,8 +247,7 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.7,
-    "attackDamage": 3.5,
-    "attackSpeed": 3.3
+    "attackSpeed": 3
   },
   "price": {
     "blueEssence": 225,

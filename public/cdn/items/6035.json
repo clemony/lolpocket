@@ -2,6 +2,11 @@
   "id": 6035,
   "name": "Silvermere Dawn",
   "description": "40 Attack Damage\n300 Health\n40 Magic Resist\n\nActive - Quicksilver: Remove all crowd control debuffs and gain Tenacity and Slow Resistance.",
+  "stats": {
+    "magicResistance": 40,
+    "health": 300,
+    "attackDamage": 40
+  },
   "gold": {
     "base": 425,
     "purchasable": false,

@@ -17,11 +17,11 @@
           "attribute": "Physical Damage",
           "modifiers": [
             {
-              "values": "5 / 25 / 45 / 65 / 85"
+              "values": "45 / 75 / 105 / 135 / 165"
             },
             {
-              "unit": "% AD",
-              "values": "80"
+              "unit": "% bonus AD",
+              "values": "70"
             }
           ]
         }
@@ -34,11 +34,11 @@
           "attribute": "Total Physical Damage",
           "modifiers": [
             {
-              "values": "10 / 50 / 90 / 130 / 170"
+              "values": "90 / 150 / 210 / 270 / 330"
             },
             {
-              "unit": "% AD",
-              "values": "160"
+              "unit": "% bonus AD",
+              "values": "140"
             }
           ]
         }

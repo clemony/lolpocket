@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { AccordionItem, NavigationMenuItem } from "@nuxt/ui"
 import type { CommandGroup, CommandItem } from "./build/useCommandGroups"
 import {
   getItems,
@@ -14,22 +15,18 @@ import {
 
 const props = defineProps<{
   reference: HTMLElement | null
+  groups: Record<string, CommandGroup | undefined>
 }>()
 
 const emit = defineEmits<{
   close: []
 }>()
-
-const { groups } = useCommandGroups()
+const groupMap = computed(() => safeObject(props.groups))
 const route = useRoute()
 const routeComponent = computed(() => route.matched[0]?.meta?.command ?? null)
-const hotkeysOpen = shallowRef(false)
 
-const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
-  Object.fromEntries(groups.value.map((group) => [group.id, group]))
-)
-
-const pagesGroup = computed(() => groupMap.value.pages)
+const nexusGroup = computed(() => groupMap.value.nexus)
+const toolsGroup = computed(() => groupMap.value.tools)
 const helpGroup = computed(() => groupMap.value.help)
 const referenceGroup = computed(() => ({
   library: groupMap.value.library,
@@ -92,24 +89,60 @@ function goBack() {
 </script>
 
 <template>
-  <div class="flex max-h-180 min-h-0 flex-col">
+  <div class="flex max-h-180 min-h-0 grow flex-col">
     <template v-if="!activeState">
       <div
-        class="grid min-h-0 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto">
+        class="grid min-h-0 flex-1 divide-y divide-p3 overflow-x-hidden overflow-y-auto overscroll-contain">
         <div v-if="routeComponent" class="border-b border-p3 py-2">
           <component :is="routeComponent" @update:open="closeMenu" />
         </div>
-        <UtilsCommand v-if="pagesGroup?.items" :items="pagesGroup.items" />
 
+        <CommandGroup v-if="nexusGroup?.items" :items="nexusGroup" />
+
+        <CommandGroup v-if="toolsGroup?.items" :items="toolsGroup" />
         <ReferenceCommand
           v-if="referenceGroup.library || referenceGroup.reference"
           :groups="referenceGroup"
           @update:open="(item) => openItem(item)" />
 
-        <CommandGroup
-          v-if="helpGroup"
-          :items="helpGroup"
-          @update:open="(item) => openItem(item)" />
+        <div class="w-full space-y-1 py-3 pr-2 pl-3.5">
+          <UUser
+            size="xl"
+            :ui="{
+              root: cn('ml-1.25 py-2', helpGroup?.description ? 'mb-1' : ''),
+              name: 'mb-1',
+              wrapper: 'pr-6'
+            }"
+            :name="helpGroup?.label"
+            :description="helpGroup?.description ?? undefined" />
+          <UCollapsible
+            v-for="(item, i) in helpGroup?.items"
+            :key="i"
+            :ui="{
+              root: 'h-max w-full origin-bottom',
+              content:
+                'relative ml-4 max-w-full origin-bottom! overflow-x-hidden py-1 pr-8 pl-3 before:absolute before:left-0 before:my-auto before:h-[calc(100%-10px)] before:w-px before:border-l before:border-l-p3'
+            }">
+            <template #default="{ open }">
+              <CommandButton
+                :key="itemKey(item)"
+                :variant="open ? 'solid' : 'ghost'"
+                :color="open ? 'neutral' : 'primary'"
+                :ui="{
+                  trailingIcon:
+                    'transition-rotate -scale-x-100 duration-200 **:stroke-[2.4] group-open/collapse:-rotate-90'
+                }"
+                block
+                :item="item" />
+            </template>
+            <template #content>
+              <CommandButton
+                v-for="link in item.children"
+                :key="itemKey(link)"
+                :item="link" />
+            </template>
+          </UCollapsible>
+        </div>
       </div>
     </template>
 
@@ -126,8 +159,10 @@ function goBack() {
 
         <div
           class="inline-flex min-w-0 items-center gap-1.5 align-baseline *:align-baseline">
-          <span v-if="activePrefix" class="truncate text-sm font-medium text-n5"
-            >{{ activePrefix }}
+          <span
+            v-if="activePrefix"
+            class="truncate text-sm font-medium text-n5">
+            {{ activePrefix }}
             <Icon
               name="i-right"
               class="ml-0.5 inline size-3 translate-y-[0.5px] align-baseline text-n5" />
@@ -156,9 +191,5 @@ function goBack() {
         </div>
       </div>
     </template>
-
-    <CommandFooter
-      :reference="props.reference"
-      @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
   </div>
 </template>

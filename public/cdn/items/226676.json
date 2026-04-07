@@ -2,6 +2,10 @@
   "id": 226676,
   "name": "The Collector",
   "description": "45 Attack Damage\n12 Lethality\n25% Critical Strike Chance\n\nDeath\nYour damage executes champions that are below 5% Health.\n\nTaxes\nChampion kills grant 125 bonus gold.",
+  "stats": {
+    "criticalStrikeChance": 25,
+    "attackDamage": 45
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

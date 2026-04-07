@@ -31,7 +31,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Pantheon empowers his next basic attack within 4 seconds to have a 0.375-second cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Pantheon empowers his next basic attack within 4 seconds to have a 0.375-second cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 170.29% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p>"
     },
     {
       "description": "Empowered Shield Vault resets Pantheon's basic attack timer. Pantheon will attempt to basic attack the target at the end of the leap."

@@ -8,12 +8,12 @@ export const blogPostTheme = defineUiTheme({
     footer: "",
     image: "size-full object-cover object-top",
     title: "text-xl font-semibold text-pretty text-highlighted",
-    description: "mt-1 text-base text-pretty",
+    description: "mt-1 text-pretty text-base",
     authors: "mt-auto flex flex-wrap gap-x-3 gap-y-1.5 pt-4",
     avatar: "",
     meta: "mb-2 flex items-center gap-2",
     date: "text-xs",
-    badge: ""
+    badge: "rounded-lg px-2"
   },
   variants: {
     orientation: {

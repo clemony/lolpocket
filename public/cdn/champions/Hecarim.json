@@ -15,7 +15,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/p",
-      "notes": "Warpath's bonus attack damage will adjust itself to any temporary movement speed buffs and debuffs Hecarim is affected by.\nSince this only affects bonus values Hecarim will not dip below his regular attack damage if he is  slowed below his base movement speed.\nThe amount of movement speed scaling to bonus attack damage is refreshed every 0.25 seconds.",
+      "notes": "Warpath's bonus attack damage will adjust itself to any temporary movement speed  buffs and  debuffs Hecarim is affected by.\nSince this only affects bonus values Hecarim will not dip below his regular attack damage if he is  slowed below his base movement speed.\nThe amount of movement speed scaling to bonus attack damage is refreshed every 0.25 seconds.",
       "targeting": "Passive"
     },
     {
@@ -36,7 +36,7 @@
               "attribute": "Physical Damage",
               "modifiers": [
                 {
-                  "values": "60 / 85 / 110 / 135 / 160"
+                  "values": "60 / 90 / 120 / 150 / 180"
                 },
                 {
                   "unit": "% bonus AD",
@@ -48,7 +48,7 @@
               "attribute": "Minion damage",
               "modifiers": [
                 {
-                  "values": "36 / 51 / 66 / 81 / 96"
+                  "values": "36 / 54 / 72 / 90 / 108"
                 },
                 {
                   "unit": "% bonus AD",
@@ -59,7 +59,7 @@
           ]
         },
         {
-          "description": "If this damages an enemy, Hecarim gains a stack of Rampage for 8 seconds, refreshing on subsequent damage and stacking up to 3 times. Each stack increases Rampage's damage by 3% (+ 4% per 100 bonus AD) and reduces its base cooldown by 0.75 seconds, up to a 9% (+ 12% per 100 bonus AD) damage increase and a 2.25-second reduction of the base cooldown at maximum stacks. Stacks expire one by one every 1 second when the duration ends."
+          "description": "If this damages an enemy, Hecarim gains a stack of Rampage for 8 seconds, refreshing on subsequent damage and stacking up to 3 times. Each stack increases Rampage's damage by 3% (+ 3% per 100 bonus AD) and reduces its base cooldown by 0.75 seconds, up to a 9% (+ 9% per 100 bonus AD) damage increase and a 2.25-second reduction of the base cooldown at maximum stacks. Stacks expire one by one every 1 second when the duration ends."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/q",
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "description": "Devastating Charge can critically strike for (75% + 30%) AD bonus physical damage."
+          "description": "Devastating Charge can critically strike for (100% + 30%) AD bonus physical damage."
         },
         {
           "description": "Devastating Charge resets Hecarim's basic attack timer. Hecarim can cast any of his abilities during the dash. Devastating Charge's duration is paused during Onslaught of Shadows."
@@ -250,7 +250,8 @@
     "abilityReliance": 65,
     "difficulty": 2
   },
-  "patchLastChanged": "14.24",
+  "lore": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his cavalry and their mounts. Now, whenever the Black Mist reaches out across Runeterra, he leads their devastating charge, reveling in the slaughter and crushing the foe beneath his armored hooves.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -280,7 +281,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.8,
-    "attackDamage": 3.7,
     "attackSpeed": 2.5
   },
   "price": {

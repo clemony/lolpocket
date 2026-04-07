@@ -28,7 +28,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Shadow Assassin Bonus:</span> Blade's Reach's radius is extended by 200 units. Kayn conjures an untargetable shadow at the casting position to perform Blade's Reach's sweep over 0.55 seconds in his stead, removing the ability's cast time.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Darkin Bonus:</span> Blade's Reach knocks up enemies hit for 1 second.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Darkin Slayer Bonus:</span> Blade's Reach knocks up enemies hit for 1 second.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/w",

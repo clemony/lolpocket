@@ -5,7 +5,7 @@
   "affects": "Allies",
   "blurb": "Active:  Lux throws her wand in the target direction that homes back to her after reaching maximum range.",
   "castTime": "0.25",
-  "cooldown": "14 / 13 / 12 / 11 / 10",
+  "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
   "cost": "60 / 65 / 70 / 75 / 80",
   "effectRadius": "110",
   "effects": [

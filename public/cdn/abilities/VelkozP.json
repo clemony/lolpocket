@@ -6,14 +6,14 @@
   "damageType": "True damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks on-hit and subsequent applications and stacking up to 3 times.</p>"
     },
     {
-      "description": "The third stack consumes them all to deal 35 - 180 (based on level) (+ 60% AP) bonus true damage."
+      "description": "The third stack consumes them all to deal 35 - 197.06 (based on level) (+ 60% AP) bonus true damage."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/p",
-  "notes": "No additional notes.",
+  "notes": "The stack duration will not be refreshed if the attack misses due to  blind.\nPENDING FOR TEST: Interaction between duration refresh on basic attacks and parry effects ( dodge and  block).",
   "spellEffects": "Proc",
   "spellshieldable": "True",
   "targeting": "Passive"

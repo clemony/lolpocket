@@ -19,7 +19,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p>"
         },
         {
-          "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
+          "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 27.47 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
@@ -97,7 +97,7 @@
       "effectRadius": "800",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants other allies 8% (+ 0.8% per 100 AP) bonus movement speed.</p>",
           "leveling": [
             {
               "attribute": "Shield Strength",
@@ -132,7 +132,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/w",
-      "notes": "Surround Sound uses a modified icon for the  second and  third stack of  Stage Presence.\nSurround Sound's effects are gained at the start of the cast time.\nSeraphine can move during the cast time.\nCasting Surround Sound again during the pulse's delay refreshes the delay.\nThe heal will be canceled and the indicator will disappear upon Seraphine dying.\nOnce the pulse delay ends, the heal occurs instantly on Seraphine and all nearby allied champions.\nThere is a missile that flows through all allied champions which can be blocked by  Wind Wall, without affecting the heal however.\nSurround Sound will affect  untargetable allies.",
+      "notes": "Surround Sound uses a modified icon for the  second and  third stack of  Stage Presence.\nSurround Sound's effects are gained at the start of the cast time.\nSeraphine can move during the cast time.\nCasting Surround Sound again during the pulse's delay refreshes the delay.\nThe heal will be canceled and the indicator will disappear upon Seraphine dying.\nOnce the pulse delay ends, the heal occurs instantly on Seraphine and all nearby allied champions.\nThere is a missile that flows through all allied champions which can be blocked by  Wind Wall, without affecting the heal however.\nSurround Sound will affect  untargetable allies.\nSeraphine's decaying bonus movement speed decays by 50% of its maximum value over the first 1.25 seconds, then stays at half value for the remainder of the duration.",
       "projectile": "SPECIAL",
       "resource": "Mana",
       "targeting": "Auto"
@@ -252,7 +252,7 @@
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
       "targeting": "Direction",
-      "targetRange": "1200"
+      "targetRange": "1300"
     }
   ],
   "adaptiveType": "Magic damage",
@@ -266,7 +266,8 @@
     "abilityReliance": 100,
     "difficulty": 1
   },
-  "patchLastChanged": "25.20",
+  "lore": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs for the sister cities to remind their citizens that they're not alone, that they're stronger together, and that, in her eyes, their potential is limitless.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Bottom",
     "Support"
@@ -298,7 +299,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 1,
-    "attackDamage": 3,
     "attackSpeed": 2
   },
   "price": {

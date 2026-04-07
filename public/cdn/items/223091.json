@@ -2,6 +2,10 @@
   "id": 223091,
   "name": "Wit's End",
   "description": "50% Attack Speed\n40 Magic Resist\n20% Tenacity\n\n\nFray: Attacks apply magic damage On-Hit and grant Move Speed.",
+  "stats": {
+    "magicResistance": 40,
+    "attackSpeed": 50
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

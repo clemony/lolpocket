@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nami unleashes a stream of water onto the target champion or herself, which then bounces to nearby unaffected champions up to twice, alternating between enemies and allies and Nami.</p>"
     },
     {
-      "description": "Ebb and Flow heals allies and deals magic damage to enemies, with each bounce modifying the effectiveness of the next by -10% (+ 10% per 100 AP).",
+      "description": "Ebb and Flow heals allies and deals magic damage to enemies, with each bounce modifying the effectiveness of the next by -20% (+ 15% per 100 AP).",
       "leveling": [
         {
           "attribute": "Heal",
@@ -31,11 +31,11 @@
           "attribute": "Minimum Heal",
           "modifiers": [
             {
-              "values": "44 / 64 / 84 / 104 / 124"
+              "values": "33 / 48 / 63 / 78 / 93"
             },
             {
               "unit": "% AP",
-              "values": "32"
+              "values": "24"
             }
           ]
         },
@@ -55,11 +55,11 @@
           "attribute": "Minimum Damage",
           "modifiers": [
             {
-              "values": "48 / 76 / 104 / 132 / 160"
+              "values": "36 / 57 / 78 / 99 / 120"
             },
             {
               "unit": "% AP",
-              "values": "40"
+              "values": "30"
             }
           ]
         }

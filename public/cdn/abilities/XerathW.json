@@ -54,7 +54,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/w",
-  "notes": "Xerath's location gets  revealed to the enemy (400 radius for 4.5 seconds) if Eye of Destruction's cast location is within 100 units of a valid enemy at the start of the cast time due to something related to targeting types.(bug)\nEye of Destruction's targeting indicator appears on the player's minimap, despite the ability not having the longer range of others with this quality.\nEye of Destruction will not fire and deal damage if Xerath dies during the 0.25s cast time.(note)",
+  "notes": "Xerath's location gets  revealed to the enemy (400 radius for 4.5 seconds) if Eye of Destruction's cast location is within 100 units of a valid enemy at the start of the cast time due to something related to targeting types.(bug)\nEye of Destruction's targeting indicator appears on the player's minimap, despite the ability not having the longer range of others with this quality.\nEye of Destruction will not fire and deal damage if Xerath dies during the 0.25s cast time.(unexpected)",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",

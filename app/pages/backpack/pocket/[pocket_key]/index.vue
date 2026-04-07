@@ -5,12 +5,12 @@ definePageMeta({
   name: "pocket-core",
   title: "core",
   order: 0,
-  search: false,
+  search: false
 })
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 
 const el = useTemplateRef<HTMLElement>("el")
@@ -23,7 +23,7 @@ watch(
   () => summonerAccounts().accounts,
   (newVal) => {
     console.log("💠 - watch - newVal:", newVal)
-  },
+  }
 )
 </script>
 
@@ -43,7 +43,7 @@ watch(
     <div
       :class="
         cn(
-          'pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden',
+          'pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh] min-h-[70vh] grid-cols-2 overflow-hidden'
         )
       ">
       <div
@@ -62,7 +62,7 @@ watch(
       :class="
         cn(
           'absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto pt-[70vh]',
-          {},
+          {}
         )
       ">
       <!-- Sticky Tabs (now ABOVE parent header) -->

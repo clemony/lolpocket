@@ -2,6 +2,10 @@
   "id": 3023,
   "name": "Lifewell Pendant",
   "description": "150 Health\n25 Armor\n5 Ability Haste\n\n'Fashionable and functional.'",
+  "stats": {
+    "health": 150,
+    "armor": 25
+  },
   "gold": {
     "base": 350,
     "purchasable": false,

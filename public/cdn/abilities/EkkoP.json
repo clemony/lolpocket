@@ -6,7 +6,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Resonance:</span> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 140 (based on level) (+ 90% AP) bonus magic damage. Z-Drive Resonance deals 300% damage against monsters.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Resonance:</span> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 150 (based on level) (+ 80% AP) bonus magic damage. Z-Drive Resonance deals 270% damage against monsters.</p>"
     },
     {
       "description": "Resonance cannot affect the same target more than once every few seconds."

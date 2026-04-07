@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
 import type { AbilityResource } from "#shared/constants/champions/abilityResources"
 import { abilityResources } from "#shared/constants/champions/abilityResources"
+import type { ButtonProps } from "@nuxt/ui"
 
 const { class: className, resource: p } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -45,13 +45,13 @@ const { filters } = storeToRefs(champFilter())
               (filters.resource && filters.resource === resource.name)) &&
             resource.name !== 'None',
           //
-          'pr-3': active && clear,
+          'pr-3': active && clear
         },
         className
       )
     "
     :style="{
-      backgroundColor: `${(filters.resource && filters.resource === resource.name) || active ? resource.color : 'transparent'}`,
+      backgroundColor: `${(filters.resource && filters.resource === resource.name) || active ? resource.color : 'transparent'}`
     }">
     <!--    <Icon
       v-if="resource?.icon"

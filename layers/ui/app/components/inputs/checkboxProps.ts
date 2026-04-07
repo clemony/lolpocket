@@ -2,8 +2,8 @@ import type { CheckboxGroupProps } from "@nuxt/ui"
 
 export const checkboxProps = {
   indicator: "hidden",
-  color: "default",
-  variant: "select",
+  color: "base",
+  variant: "list",
   ui: {
     fieldset: cn("flex flex-col gap-y-0.5 pt-0 pb-2"),
     item: "py-0! hover:bg-p1! px-3 h-9.5! items-center gap-2.5 has-checked:bg-p2/80 checked:bg-p2/80 checked:px-3 shadow-none drop-shadow-none checked:gap-2.5 checked:border-0! border-0 ring-0 noise-0!  group/item",

@@ -59,14 +59,14 @@
       "gold": 3000
     },
     {
-      "id": 6621,
-      "name": "Dawncore",
-      "gold": 2500
-    },
-    {
       "id": 6657,
       "name": "Rod of Ages",
       "gold": 2600
+    },
+    {
+      "id": 6621,
+      "name": "Dawncore",
+      "gold": 2500
     }
   ],
   "specialRecipe": 0,

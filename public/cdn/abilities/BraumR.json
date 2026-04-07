@@ -4,7 +4,7 @@
   "width": "230 /  170",
   "affects": "Enemies",
   "castTime": "0.5",
-  "cooldown": "120 / 100 / 80",
+  "cooldown": "130 / 115 / 100",
   "cost": "100",
   "damageType": "Magic damage",
   "effectRadius": "300 /  60 × 10",
@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "150 / 300 / 450"
+              "values": "150 / 250 / 350"
             },
             {
               "unit": "% AP",

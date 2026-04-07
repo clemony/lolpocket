@@ -25,10 +25,13 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Rell will not lunge forward after the cast time if she was immobilized, grounded, or silenced during it. She is also unable to act for 0.35 seconds after the cast time."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/q",
-  "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nRell is  locked out of moving, attacking, and casting any other ability for 0.35 seconds after Shattering Strike is cast.",
+  "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "spellaoe",

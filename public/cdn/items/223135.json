@@ -2,6 +2,9 @@
   "id": 223135,
   "name": "Void Staff",
   "description": "65 Ability Power\n40% Magic Penetration\n\n",
+  "stats": {
+    "abilityPower": 65
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

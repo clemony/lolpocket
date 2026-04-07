@@ -5,7 +5,7 @@
   "blurb": "Active:  Nilah whirls her whip-blade for a brief moment, continually dealing physical damage to nearby enemies. She then bursts to deal physical damage and  pull in nearby enemies. Each hit will also  slow enemies for a short time.",
   "castTime": "None",
   "cooldown": "110 / 95 / 80",
-  "cost": "80",
+  "cost": "100",
   "damageType": "Physical damage",
   "effectRadius": "450 / 1500",
   "effects": [

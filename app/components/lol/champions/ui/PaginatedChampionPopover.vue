@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { getSplash } from "~/domain/utils/img"
 import { championIndex } from "#shared/constants/champions/championIndex"
+import { getSplash } from "~/domain/utils/img"
 
 const route = useRoute()
 const pocket = computed(() =>

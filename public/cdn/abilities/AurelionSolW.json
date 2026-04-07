@@ -34,7 +34,7 @@
       "description": "Scoring a champion takedown within 3 seconds of damaging them reduces Astral Flight's current cooldown by 90% of its total cooldown."
     },
     {
-      "description": "Aurelion Sol will not dash if he is immobilized or grounded during the cast time. He can cast any of his abilities during the dash. Breath of Light's channel will be interrupted if Astral Flight ends or Singularity or Falling Star / The Skies Descend is cast during the flight, but the ability will automatically be cast afterwards."
+      "description": "Aurelion Sol will not dash after the cast time if he was immobilized or grounded during it. He can cast any of his abilities during the dash. Breath of Light's channel will be interrupted if Astral Flight ends or Singularity or Falling Star / The Skies Descend is cast during the flight, but the ability will automatically be cast afterwards."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/w",

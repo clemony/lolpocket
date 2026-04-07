@@ -111,7 +111,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/w",
-      "notes": "Wither interrupts the target's attack windup when it is first applied. (bug)\nIf Wither's duration is affected by  Tenacity the effects will apply slower (negative tenacity percentage) or faster (positive tenacity percentage) so the maximum values are still reached when the modified duration ends.\nWither's cripple effectiveness calculates from its slow's base values, thus  slow resist will not interact with the attack speed modifier indirectly.\nBoth  slow and  cripple from Wither are considered to be a single debuff. (note)\nTherefore,  slow immunity will prevent both, even without technical  cripple immunity.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+      "notes": "Wither interrupts the target's attack windup when it is first applied. (bug)\nIf Wither's duration is affected by  Tenacity the effects will apply slower (negative tenacity percentage) or faster (positive tenacity percentage) so the maximum values are still reached when the modified duration ends.\nWither's cripple effectiveness calculates from its slow's base values, thus  slow resist will not interact with the attack speed modifier indirectly.\nBoth  slow and  cripple from Wither are considered to be a single  debuff. (unexpected)\nTherefore,  slow immunity will prevent both, even without technical  cripple immunity.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "resource": "Mana",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -283,6 +283,7 @@
     "abilityReliance": 20,
     "difficulty": 1
   },
+  "lore": "Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and peerless strategist whose wisdom guided the ancient empire of Shurima to greatness for many centuries. After the fall of the empire, he went into self-imposed exile, becoming little more than a legend. Now that the ancient city of Shurima has risen once more, he has returned, determined to ensure it never falls again.",
   "patchLastChanged": "25.24",
   "positions": [
     "Top"
@@ -313,7 +314,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.9,
     "mpRegen": 0.5,
-    "attackDamage": 4,
     "attackSpeed": 3.5
   },
   "price": {

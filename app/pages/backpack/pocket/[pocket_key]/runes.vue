@@ -7,12 +7,12 @@ definePageMeta({
   order: 3,
   path: "/pocket/:pocket_key/runes",
   props: true,
-  search: false,
+  search: false
 })
 
 const route = useRoute("pocket-runes")
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 function handleAdd() {
   const runes = pocket.value?.runes
@@ -35,7 +35,7 @@ function handleAdd() {
       :slides-to-scroll="3"
       next-icon="i-left"
       :opts="{
-        loop: true,
+        loop: true
       }">
       <CarouselContent
         class="scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto scroll-smooth"
@@ -46,7 +46,7 @@ function handleAdd() {
           :class="
             cn(
               'grow basis-1 cursor-pointer p-1',
-              index === 0 ? '' : 'opacity-50',
+              index === 0 ? '' : 'opacity-50'
             )
           ">
           <UCard class="h-22 w-40" as-child>
@@ -59,7 +59,7 @@ function handleAdd() {
         <CarouselItem
           :class="
             cn(
-              'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100',
+              'w-min grow basis-1 cursor-pointer p-1 opacity-60 has-disabled:cursor-not-allowed has-disabled:opacity-40 has-[not-disabled]:opacity-100'
             )
           ">
           <UCard
@@ -93,7 +93,7 @@ function handleAdd() {
       :slides-to-scroll="3"
       next-icon="i-left"
       :opts="{
-        loop: true,
+        loop: true
       }">
       <CarouselItem
         v-for="(set, index) in pocket?.runes ?? []"

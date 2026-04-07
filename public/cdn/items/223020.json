@@ -2,6 +2,9 @@
   "id": 223020,
   "name": "Sorcerer's Shoes",
   "description": "20 Magic Penetration\n55 Move Speed\n\n",
+  "stats": {
+    "flatMovespeed": 55
+  },
   "gold": {
     "base": 500,
     "purchasable": true,

@@ -65,7 +65,12 @@
     21,
     35
   ],
-  "ornnUpgrade": 323070,
+  "masterwork": {
+    "upgradeId": 323070,
+    "stats": {
+      "mana": 240
+    }
+  },
   "tags": [
     "Marksman",
     "Mage"

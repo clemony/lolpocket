@@ -1,7 +1,7 @@
 {
   "key": "E",
   "name": "Weapon Queue System",
-  "blurb": "The icon of this ability reflects the next weapon that is the next in  Aphelios' weapon queue.",
+  "blurb": "The icon of this ability reflects the next weapon that is in reserve.",
   "cooldown": "0",
   "cost": "0",
   "effects": [

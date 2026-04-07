@@ -15,13 +15,13 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 32 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 8 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 160 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 40 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 250% damage against monsters.</p>"
         },
         {
           "description": "When Darius kills a champion with Noxian Guillotine, or applies 5 stacks on an enemy champion, he becomes empowered with Noxian Might for 5 seconds."
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 280 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/p",
@@ -224,7 +224,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/r",
-      "notes": "Noxian Guillotine's cooldown after the recast or recast window is calculated by taking the values at the end, and using this formula: (Noxian Guillotine's Cooldown - time since first cast) × 100 ÷ (100 +  AH).\nNoxian Guillotine applies  Hemorrhage after the damage.\nDarius will only leap towards the target if it is at range, or leap backwards if it is very close.\nThis leap can pass very thin terrain and will otherwise not be able to. In any case, Darius will still hit the target.\nThe ability is disabled while  grounded or  rooted even if Darius is in the range in which he does not leap.\nNoxian Guillotine will not reset nor trigger  Noxian Might if used to kill a  clone or a target protected by  resurrection.\nNoxian Guillotine will reset but not trigger  Noxian Might if it finishes off a target that is in a  zombie state.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+      "notes": "Noxian Guillotine's cooldown after the recast or recast window is calculated by taking the values at the end, and using this formula: (Noxian Guillotine's Cooldown - time since first cast) × 100 ÷ (100 +  AH).\nNoxian Guillotine applies  Hemorrhage after the damage.\nDarius will only leap towards the target if it is at range, or leap backwards if it is very close.\nThis leap can pass very thin terrain and will otherwise not be able to. In any case, Darius will still hit the target.[2]\nThe ability is disabled while  grounded or  rooted even if Darius is in the range in which he does not leap.\nNoxian Guillotine will not reset nor trigger  Noxian Might if used to kill a  clone or a target protected by  resurrection.\nNoxian Guillotine will reset but not trigger  Noxian Might if it finishes off a target that is in a  zombie state.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "resource": "Mana",
       "spellEffects": "spell",
       "spellshieldable": "True",
@@ -243,7 +243,8 @@
     "abilityReliance": 55,
     "difficulty": 2
   },
-  "patchLastChanged": "25.14",
+  "lore": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened commander. Rising from humble origins to become the Hand of Noxus, he cleaves through the empire's enemies—many of them Noxians themselves. Knowing that he never doubts his cause is just, and never hesitates once his axe is raised, those who stand against the leader of the Trifarian Legion can expect no mercy.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Top"
   ],
@@ -273,7 +274,6 @@
     "magicResist": 2.1,
     "hpRegen": 1,
     "mpRegen": 0.4,
-    "attackDamage": 5,
     "attackSpeed": 1
   },
   "price": {

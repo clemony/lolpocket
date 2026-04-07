@@ -43,7 +43,16 @@
     21,
     35
   ],
-  "ornnUpgrade": 328020,
+  "masterwork": {
+    "upgradeId": 328020,
+    "stats": {
+      "magicResistance": 50,
+      "health": 350
+    },
+    "bonusStats": {
+      "magicResistance": 5
+    }
+  },
   "tags": [
     "Tank",
     "Support"

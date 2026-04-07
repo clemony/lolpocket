@@ -2,6 +2,9 @@
   "id": 3013,
   "name": "Synchronized Souls",
   "description": "45 Move Speed\n\nVoidborn\nGain Empowered Recall.\n\nSynchrony\nGain 45 Move Speed when out of combat.",
+  "stats": {
+    "flatMovespeed": 45
+  },
   "gold": {
     "base": 0,
     "purchasable": false,

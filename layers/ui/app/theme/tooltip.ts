@@ -5,7 +5,7 @@ export const tooltipTheme = defineUiTheme({
     arrow:
       "fill-neutral/85 stroke-n5/60 stroke-1 group-data-[side=bottom]/tt:group-data-[align=start]/tt:-translate-x-4",
     content: [
-      "group/tt pointer-events-auto z-[120] inline-flex h-7.5 min-h-7.5 origin-(--reka-tooltip-content-transform-origin) cursor-default items-center gap-1 rounded-lg px-3 py-1.5 align-baseline text-sm shadow-md drop-shadow-none transition-[transform,opacity] duration-150 ease-out will-change-[transform,opacity] select-none data-[side=bottom]:translate-y-0.5 data-[side=left]:-translate-x-0.5 data-[side=right]:translate-x-0.5 data-[side=top]:-translate-y-0.5 data-[state=closed]:scale-98 data-[state=closed]:opacity-0 motion-reduce:transition-none"
+      "group/tt pointer-events-auto isolate z-[677] inline-flex h-7.5 min-h-7.5 origin-(--reka-tooltip-content-transform-origin) cursor-default items-center gap-1 rounded-lg px-3 py-1.5 align-baseline text-sm shadow-md drop-shadow-none transition-[transform,opacity] duration-110 data-[state=closed]:duration-60 ease-out will-change-[transform,opacity] select-none data-[side=bottom]:translate-y-0.5 data-[side=left]:-translate-x-0.5 data-[side=right]:translate-x-0.5 data-[side=top]:-translate-y-0.5 data-[state=closed]:scale-100 data-[state=closed]:opacity-0 motion-reduce:transition-none"
     ],
     kbds: "hidden shrink-0 items-center gap-0.5 not-first-of-type:before:me-0.5 not-first-of-type:before:content-['·'] lg:inline-flex",
     kbdsSize: "sm",

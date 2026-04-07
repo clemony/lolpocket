@@ -27,11 +27,11 @@
       ]
     },
     {
-      "description": "If Pierce kills the target, the spear continues onward to transfer all of the target's Rend stacks to the next enemy it hits. This can repeat indefinitely until the spear reaches its maximum range."
+      "description": "If Pierce kills the target, the spear continues onward to transfer all of the target's Rend stacks to the next enemy it hits."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/q",
-  "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
+  "notes": "If Pierce kills multiple targets, only the last target killed will have their  Rend stacks transferred to the next enemy hit that survives.(bug)\nPierce cannot be cast during the dash of  Martial Poise unless animation cancelled with a movement command.\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "2400",

@@ -27,7 +27,7 @@
       ]
     },
     {
-      "description": "Enemies hit by the outer edge are dealt 150% increased physical damage and bonus magic damage, with the latter capped at 400 against monsters.",
+      "description": "Enemies hit by the outer edge are dealt 50% increased physical damage and bonus magic damage, with the latter capped at 400 against monsters.",
       "leveling": [
         {
           "attribute": "Increased Physical Damage",
@@ -57,7 +57,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zaahen/ability-icon/e",
-  "notes": "The dash does not have a minimum cast distance.\nIf the dash is interrupted, Zaahen will fail to deal damage.\nZaahen will, however, deal damage if the dash is interrupted at the very end, shortly before the damage would occur.(bug)[2]\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)\nThe following table refers for interactions while Zaahen is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n The Darkin Glaive and its  recast are usable.  Dreaded Return and  Grim Deliverance are disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Hextech Rocketbelt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Teleport  Recall  Mark  Dash\n\n\nDisabled\n\n Hexflash\n\n\nInterrupted by\n\n Flash\n\n\nInterrupted by\n\nDeath",
+  "notes": "The dash does not have a minimum cast distance.\nIf the dash is interrupted, Zaahen will fail to deal damage.\nZaahen will, however, deal damage if the dash is interrupted at the very end, shortly before the damage would occur. [2] (bug)\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)\nThe following table refers for interactions while Zaahen is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n The Darkin Glaive and its  recast are usable.  Dreaded Return and  Grim Deliverance are disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Hextech Rocketbelt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Teleport  Recall  Mark  Dash\n\n\nDisabled\n\n Hexflash\n\n\nInterrupted by\n\n Flash\n\n\nInterrupted by\n\nDeath",
   "resource": "Mana",
   "speed": "900",
   "spellEffects": "spellaoe",

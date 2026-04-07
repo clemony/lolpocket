@@ -2,6 +2,9 @@
   "id": 221026,
   "name": "Blasting Wand",
   "description": "45 Ability Power\n\n",
+  "stats": {
+    "abilityPower": 45
+  },
   "gold": {
     "base": 500,
     "purchasable": false,

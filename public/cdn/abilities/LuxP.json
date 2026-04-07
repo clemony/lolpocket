@@ -6,11 +6,11 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lux's abilities apply a mark to enemies hit for 6 seconds, refreshing on subsequent hits. Lux's basic attacks and Final Spark consume the mark to deal 30 - 200 (based on level) (+ 35% AP) bonus magic damage.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lux's abilities apply a mark to enemies hit for 6 seconds, refreshing on subsequent hits. Lux's basic attacks on-hit and Final Spark consume the mark to deal 30 - 220 (based on level) (+ 35% AP) bonus magic damage.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/p",
-  "notes": "Starting an attack windup against a target with a mark that is about to expire refreshes its duration to 0.25 seconds. Casting  Final Spark refreshes the marks of all marked enemies to 1.25 seconds if they are within 5000 units of the ability's casting position and have a mark with a remaining duration of less than 1 second.\n Spell shield prevents  Final Spark from consuming the mark.\nThe on-hit damage from Illumination via basic attack cannot be blocked by spell shield.\nIllumination's trigger from a basic attack can be  blocked (bonus damage is negated and the mark will still be consumed).\nPENDING FOR TEST:: Parry interactions ( dodge,  blind).",
+  "notes": "Starting an attack windup against a target with a mark that is about to expire refreshes its duration to 0.25 seconds. Casting  Final Spark refreshes the marks of all marked enemies to 1.25 seconds if they are within 5000 units of the ability's casting position and have a mark with a remaining duration of less than 1 second.\n Spell shield prevents  Final Spark from consuming the mark.\nThe on-hit damage from Illumination via basic attack cannot be blocked by spell shield.\nIllumination will be consumed but not deal any damage if the basic attack is  blocked.\nIllumination will not be consumed if the basic attack misses due to  blind.\nPENDING FOR TEST:: Parry interactions ( dodge).",
   "spellEffects": "Proc",
   "spellshieldable": "special",
   "targeting": "Passive"

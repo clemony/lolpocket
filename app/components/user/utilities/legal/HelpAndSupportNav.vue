@@ -24,7 +24,7 @@ const nav = computed<RouteRecordRaw[]>(
     <CollapsibleContent
       class="relative mt-1 flex flex-col justify-items-center gap-1 pl-px after:top-3"
       menu>
-      <SidebarUButton
+      <SidebarButton
         v-for="route in nav"
         :key="route.name"
         :to="route"

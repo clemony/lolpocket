@@ -66,7 +66,7 @@ onMounted(() => {
         <div class="absolute right-0 flex w-90 max-w-90 shrink-0 translate-y-2">
           <LazyLibrarySearch
             variant="outline"
-            color="default"
+            color="base"
             :ui="{
               root: 'w-full justify-self-end',
               trailing: 'opacity-60 *:-mx-[0.25px]',

@@ -19,20 +19,20 @@ const groups = computed(() =>
 
 const variants = {
   closed: {},
-  open: {},
+  open: {}
 }
 
 const itemVariants = {
   closed: {
     opacity: 0,
     scale: 0.4,
-    transform: "translateY(100%)",
+    transform: "translateY(100%)"
   },
   open: {
     opacity: 1,
     scale: 1,
-    transform: "translateY(0)",
-  },
+    transform: "translateY(0)"
+  }
 }
 </script>
 
@@ -50,7 +50,7 @@ const itemVariants = {
             bounce: 0.15,
             delayChildren: 0.2,
             staggerChildren: 0.1,
-            type: 'spring',
+            type: 'spring'
           }">
           <UButton
             v-for="(champion, i) in champions"
@@ -63,14 +63,14 @@ const itemVariants = {
             class="grid size-22! place-items-center border-0 bg-p0 fx-0"
             shape="circle"
             :style="{
-              zIndex: `-${i}`,
+              zIndex: `-${i}`
             }"
             as-child>
             <motion.div
               :variants="itemVariants"
               :transition="{
                 bounce: 0.15,
-                type: 'spring',
+                type: 'spring'
               }">
               <Champion class="size-18! rounded-full" :k="champion" />
             </motion.div>

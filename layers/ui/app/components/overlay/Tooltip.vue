@@ -24,17 +24,23 @@ const props = withDefaults(
         followPointer?: boolean
         inertia?: boolean | number
         interactive?: boolean
+        pinned?: boolean
+        pin?: boolean
+        closeDelay?: number
         label?: string
         title?: string
       }
   >(),
   {
-    sideOffset: 4,
+    sideOffset: 6,
     as: "div",
+    pin: true,
     arrow: false,
     disableClosingTrigger: false,
     followPointer: true,
-    inertia: true,
+    inertia: false,
+    delayDuration: 90,
+    closeDelay: 0,
     interactive: false
   }
 )
@@ -58,6 +64,12 @@ let nextY = 0
 let currentX = 0
 let currentY = 0
 const sideSwitchHysteresis = 30
+let openTimeoutId: ReturnType<typeof setTimeout> | undefined
+let closeTimeoutId: ReturnType<typeof setTimeout> | undefined
+const isPinned = computed(() => props?.pinned ?? pinned.value)
+const isTooltipOpen = computed(() =>
+  props?.disabled ? false : props?.pinned ? true : open.value
+)
 
 function resolveElement(target: unknown): Element | null {
   if (target instanceof Element) return target
@@ -72,11 +84,11 @@ function getInertiaFactor() {
     return Math.min(Math.max(props?.inertia, 0), 0.95)
   }
 
-  return props?.inertia ? 0.22 : 0
+  return props?.inertia ? 0.1 : 0
 }
 
 function getFlipOffset(side: Side) {
-  const distance = 5
+  const distance = 3
 
   switch (side) {
     case "top":
@@ -114,6 +126,52 @@ function playFlipSlide(side: Side) {
       flipRafId = 0
     })
   })
+}
+
+function clearOpenTimer() {
+  if (!openTimeoutId) return
+  clearTimeout(openTimeoutId)
+  openTimeoutId = undefined
+}
+
+function clearCloseTimer() {
+  if (!closeTimeoutId) return
+  clearTimeout(closeTimeoutId)
+  closeTimeoutId = undefined
+}
+
+function scheduleOpen() {
+  clearCloseTimer()
+
+  if (open.value) return
+
+  const delay = Math.max(props?.delayDuration ?? 0, 0)
+  if (!delay) {
+    open.value = true
+    return
+  }
+
+  clearOpenTimer()
+  openTimeoutId = setTimeout(() => {
+    open.value = true
+    openTimeoutId = undefined
+  }, delay)
+}
+
+function scheduleClose() {
+  clearOpenTimer()
+
+  const delay = Math.max(props?.closeDelay ?? 0, 0)
+  if (!delay) {
+    open.value = false
+    return
+  }
+
+  clearCloseTimer()
+  closeTimeoutId = setTimeout(() => {
+    open.value = false
+    closeTimeoutId = undefined
+  }, delay)
 }
 
 function setAnchorFromPointer(x: number, y: number) {
@@ -169,7 +227,7 @@ function scheduleAnchorUpdate() {
 function updateAnchor() {
   rafId = 0
 
-  if (!open.value || pinned.value || !props?.followPointer || props?.disabled)
+  if (!open.value || isPinned.value || !props?.followPointer || props?.disabled)
     return
 
   const factor = getInertiaFactor()
@@ -201,33 +259,33 @@ function updateAnchor() {
 
 function onPointerEnter(ev: PointerEvent) {
   if (props?.disabled) return
-  if (pinned.value) return
+  if (isPinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
   currentX = nextX
   currentY = nextY
   setAnchorFromPointer(nextX, nextY)
-  open.value = true
+  scheduleOpen()
 }
 
 function onPointerLeave() {
-  if (pinned.value) return
+  if (isPinned.value) return
   if (rafId) {
     cancelAnimationFrame(rafId)
     rafId = 0
   }
-  open.value = false
+  scheduleClose()
 }
 
 function onPointerMove(ev: PointerEvent) {
-  if (props?.disabled || !props?.followPointer || pinned.value) return
+  if (props?.disabled || !props?.followPointer || isPinned.value) return
   nextX = ev.clientX
   nextY = ev.clientY
   scheduleAnchorUpdate()
 }
 
 function onClick(ev: MouseEvent) {
-  if (props?.disabled || !props?.interactive) return
+  if (props?.disabled || props?.pin === false) return
   emit("pinned")
   ev.preventDefault()
   nextX = ev.clientX
@@ -236,6 +294,8 @@ function onClick(ev: MouseEvent) {
     cancelAnimationFrame(rafId)
     rafId = 0
   }
+  clearOpenTimer()
+  clearCloseTimer()
   currentX = nextX
   currentY = nextY
   setAnchorFromPointer(nextX, nextY)
@@ -244,22 +304,23 @@ function onClick(ev: MouseEvent) {
 }
 
 function closePinned() {
+  clearOpenTimer()
+  clearCloseTimer()
   pinned.value = false
   open.value = false
   emit("unpinned")
 }
 
 function onTooltipOpenChange(value: boolean) {
-  open.value = value
+  if (isPinned.value && !value) return
 
-  if (!value && pinned.value) {
-    pinned.value = false
-    emit("unpinned")
-  }
+  if (value) clearCloseTimer()
+  else clearOpenTimer()
+  open.value = value
 }
 
 function onDocumentPointerDown(ev: PointerEvent) {
-  if (!pinned.value) return
+  if (!isPinned.value) return
 
   const target = ev.target as Node | null
   if (!target) return
@@ -282,6 +343,8 @@ function onDocumentKeydown(ev: KeyboardEvent) {
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
   if (flipRafId) cancelAnimationFrame(flipRafId)
+  clearOpenTimer()
+  clearCloseTimer()
   document.removeEventListener("pointerdown", onDocumentPointerDown, true)
   document.removeEventListener("keydown", onDocumentKeydown, true)
 })
@@ -324,6 +387,10 @@ const resolvedSide = computed(
   () => contentProps.value.side ?? props?.side ?? "bottom"
 )
 
+const disableClosingTrigger = computed(
+  () => props?.disableClosingTrigger || props?.interactive
+)
+
 watch(resolvedSide, (side, previousSide) => {
   if (!open.value) return
   if (!previousSide || side === previousSide) return
@@ -336,22 +403,22 @@ defineExpose({ pinned, isOpen: open })
 
 <template>
   <UTooltip
-    :disable-closing-trigger
+    :disable-closing-trigger="true"
     :disabled
     :arrow="arrow"
-    :open="disabled ? false : open"
-    @update:open="onTooltipOpenChange"
-    :delay-duration="700"
+    :open="isTooltipOpen"
+    :delay-duration="0"
     :disable-hoverable-content="!interactive"
     :reference="reference"
-    :ui="{ content: cn('z-50', props?.ui?.content), arrow: props?.ui?.arrow }"
-    :content="contentProps">
+    :ui="{ content: cn('z-200', props?.ui?.content), arrow: props?.ui?.arrow }"
+    :content="contentProps"
+    @update:open="onTooltipOpenChange">
     <Primitive
       ref="triggerRef"
       :as="props?.as"
-      :as-child="props?.asChild"
+      as-child
       :class="cn(props?.asChild ? '' : 'size-fit', props?.class)"
-      @click.prevent="onClick"
+      @click="onClick"
       @pointerenter="onPointerEnter"
       @pointerleave="onPointerLeave"
       @pointermove="onPointerMove">
@@ -372,18 +439,22 @@ defineExpose({ pinned, isOpen: open })
         ">
         <slot name="content">
           <div class="inline-flex gap-2 align-baseline">
-            <LazyUAvatar
-              v-if="avatar"
-              hydrate-on-visible
-              icon="i-image-circle"
-              spinner
-              decoding="async"
-              loading="lazy"
-              :quality="30"
-              size="2xs"
-              :src="avatar"
-              :alt="`${label}-icon`"
-              :ui="{ root: 'overflow-hidden bg-transparent' }" />
+            <div v-if="avatar" class="size-3.5">
+              <LazyUAvatar
+                v-if="avatar"
+                hydrate-on-visible
+                icon="i-image-circle"
+                spinner
+                decoding="async"
+                loading="lazy"
+                :quality="30"
+                size="2xs"
+                :src="avatar"
+                :alt="`${label}-icon`"
+                :ui="{
+                  root: cn('-ml-1 overflow-hidden bg-transparent')
+                }" />
+            </div>
             <Icon v-if="icon" :name="icon" class="size-3.5 text-nc" />
             {{ label }}
 

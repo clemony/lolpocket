@@ -11,7 +11,7 @@
       "blurb": "Innate: Periodically,  Maokai's next basic attack will  heal him for a portion of his maximum health.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 14.1% (based on level) maximum health after a 0.25-second delay.</p>"
         },
         {
           "description": "Each time Maokai casts an ability, hits at least one enemy champion or epic monster with Sapling Toss, or is struck by an enemy's ability, Sap Magic's cooldown is reduced by 4 seconds, modified to 1.5 if he is hit by a large monster's basic attack or ability."
@@ -21,7 +21,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/p",
-      "notes": "Sap Magic does not occur if the attack is  dodged and/or missed if Maokai is  blinded. It will occur if it is  blocked.\nThe striking ability has to trigger spell effects such as  spell damage or  area damage for the cooldown to be reduced.\nIf Maokai possesses a  spell shield and it consumes an enemy ability, he will still receive the cooldown reduction.\nThe empowered attack will not trigger against structures nor wards.",
+      "notes": "Sap Magic does not occur if Maokai begins his attack windup before its cooldown has elapsed.(unexpected)\nSap Magic does not occur if the attack is  dodged and/or missed if Maokai is  blinded. It will occur if it is  blocked.\nThe striking ability has to trigger  spell effects such as  spell damage or  area damage for the cooldown to be reduced.\nPENDING FOR TEST: Does it trigger only from ability spell effects or any spell effects (such as  Hextech Rocketbelt's Super Sonic or  Redemption's Intervention)?\nIf Maokai possesses a  spell shield and it consumes an enemy ability, he will still receive the cooldown reduction.\nThe empowered attack will not trigger against  structures nor  wards.",
       "targeting": "Passive"
     },
     {
@@ -42,7 +42,7 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "65 / 110 / 155 / 200 / 245"
+                  "values": "75 / 120 / 165 / 210 / 255"
                 },
                 {
                   "unit": "% of the target's maximum health",
@@ -58,7 +58,7 @@
               "attribute": "Bonus Monster Damage",
               "modifiers": [
                 {
-                  "values": "120 / 130 / 140 / 150 / 160"
+                  "values": "140 / 150 / 160 / 170 / 180"
                 }
               ]
             },
@@ -66,7 +66,7 @@
               "attribute": "Total Monster Damage",
               "modifiers": [
                 {
-                  "values": "185 / 240 / 295 / 350 / 405"
+                  "values": "215 / 270 / 325 / 380 / 435"
                 },
                 {
                   "unit": "% of the target's maximum health",
@@ -323,7 +323,8 @@
     "abilityReliance": 75,
     "difficulty": 1
   },
-  "patchLastChanged": "14.22",
+  "lore": "Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical cataclysm destroyed his home, surviving undeath only through the Waters of Life infused within his heartwood. Once a peaceful nature spirit, Maokai now furiously battles to banish the scourge of unlife from the Shadow Isles and restore his home to its former beauty.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Jungle",
     "Support"
@@ -354,7 +355,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.6,
-    "attackDamage": 3.3,
     "attackSpeed": 2.1
   },
   "price": {

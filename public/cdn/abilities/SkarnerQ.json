@@ -6,7 +6,7 @@
   "blurb": "Active: Skarner ends Shattered Earth by throwing his boulder, which explodes upon colliding with the first enemy hit, mimicking the final attack's damage and effects.",
   "castTime": "0.25 / none",
   "cooldown": "8 / 6.75 / 5.5 / 4.25 / 3",
-  "cost": "45",
+  "cost": "30",
   "damageType": "Physical damage",
   "effectRadius": "300",
   "effects": [
@@ -29,7 +29,7 @@
             },
             {
               "unit": "% of target's maximum health",
-              "values": "9"
+              "values": "11"
             }
           ]
         },

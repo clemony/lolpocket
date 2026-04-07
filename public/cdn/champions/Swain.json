@@ -73,6 +73,9 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Swain reveals himself during the cast if there is an enemy champion nearby."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/q",
@@ -95,7 +98,7 @@
       "effectRadius": "325",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them by 50% for 1.5 seconds.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -118,15 +121,6 @@
                 {
                   "unit": "% AP",
                   "values": "30"
-                }
-              ]
-            },
-            {
-              "attribute": "Slow",
-              "modifiers": [
-                {
-                  "unit": "%",
-                  "values": "50 / 55 / 60 / 65 / 70"
                 }
               ]
             }
@@ -181,7 +175,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/e",
-      "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shield will block either the detonation on the first cast or the pull from the recast.\nIf the recast is blocked, the target will also prevent a Soul Fragment being collected from them.\nIf the root is not applied to or is removed from all champions, the recast does not become available.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.",
+      "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shield will block either the detonation on the first cast or the pull from the recast.\nIf the recast is blocked, the target will also prevent a Soul Fragment being collected from them.\nIf the root is not applied to, removed or its targets  blink or  dash, the recast becomes unavailable.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1125 : 1800 (based on seconds in flight) / 2000 : 2800 (based on seconds in flight)",
@@ -215,7 +209,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "2.5"
+                  "values": "2"
                 }
               ]
             },
@@ -284,7 +278,7 @@
       "effectRadius": "675",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 50%, decaying over 1.5 seconds.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -294,7 +288,7 @@
                 },
                 {
                   "unit": "% AP",
-                  "values": "50"
+                  "values": "40"
                 }
               ]
             }
@@ -305,7 +299,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
-      "notes": "Swain can move during Demonflare's cast time.\nDemonflare counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDemonflare passes through champions. Effects like  Yasuo's  Wind Wall and  Braum's  Unbreakable will block the portion of the nova they intercept.\nDemonflare will fire from wherever Swain is at the end of the cast time.\nDemonflare will fire twice if cast moments before the end of Demonic Ascension.(bug)[2]",
+      "notes": "Swain can move during Demonflare's cast time.\nDemonflare counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDemonflare passes through champions. Effects like  Yasuo's  Wind Wall and  Braum's  Unbreakable will block the portion of the nova they intercept.\nDemonflare will fire from wherever Swain is at the end of the cast time.\nDemonflare will fire twice if cast moments before the end of Demonic Ascension. [2] (bug)",
       "projectile": "TRUE",
       "speed": "3000",
       "spellEffects": "spellaoe",
@@ -325,7 +319,8 @@
     "difficulty": 2
   },
   "fullName": "Jericho Swain",
-  "patchLastChanged": "25.24",
+  "lore": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination… and a new, demonic hand. Now, Swain commands from the front lines, marching against a coming darkness that only he can see—in glimpses gathered by shadowy ravens from the corpses all around him. In a swirl of sacrifice and secrets, the greatest secret of all is that the true enemy lies within.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Bottom",
     "Middle",
@@ -357,7 +352,6 @@
     "magicResist": 1.6,
     "hpRegen": 0.5,
     "mpRegen": 0.8,
-    "attackDamage": 2.7,
     "attackSpeed": 2.1
   },
   "price": {

@@ -6,7 +6,7 @@ definePageMeta({
   alias: "/auth/password-update",
   description: "Let's try a password manager this time, shall we?",
   icon: "key",
-  search: false,
+  search: false
 })
 const toast = useToast()
 
@@ -18,8 +18,8 @@ const requestResetPassword = async () => {
   const { data, error } = await supabase.auth.resetPasswordForEmail(
     email.value,
     {
-      redirectTo: "https://example.com/password/update",
-    },
+      redirectTo: "https://example.com/password/update"
+    }
   )
   if (error) console.log(error)
 }
@@ -27,7 +27,7 @@ function handleReset() {
   toast.add({
     title: "Password reset link sent!",
     description:
-      "Check your email for a message from the customer support lolpocat.",
+      "Check your email for a message from the customer support lolpocat."
   })
 }
 </script>

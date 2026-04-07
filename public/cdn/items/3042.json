@@ -37,7 +37,13 @@
     21,
     35
   ],
-  "ornnUpgrade": 323042,
+  "masterwork": {
+    "upgradeId": 323042,
+    "stats": {
+      "mana": 1000,
+      "attackDamage": 35
+    }
+  },
   "tags": [
     "Fighter",
     "Marksman",

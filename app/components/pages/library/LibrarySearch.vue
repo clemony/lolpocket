@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps, InputProps } from "@nuxt/ui"
 const {
-  variant = "solid",
+  variant = "soft",
   color = "neutral",
   autofocus = false,
   ui,
@@ -72,7 +72,7 @@ defineShortcuts(extractShortcuts(keybindItems))
             color === 'neutral' ? 'opacity-100' : 'opacity-80'
           )
         "
-        variant="ghost"
+        variant="subtle"
         size="sm"
         :value="k" />
     </template>

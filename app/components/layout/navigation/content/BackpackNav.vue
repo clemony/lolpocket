@@ -5,7 +5,7 @@ import { backpackNav } from "~/utils/routes"
 const {
   size = "md",
   ui,
-  as,
+  as
 } = defineProps<{
   ui?: Record<string, HTMLAttributes["class"]>
   size?: ButtonProps["size"]
@@ -25,6 +25,6 @@ const {
       base: cn('w-full', ui?.base),
       label: cn('grow', ui?.label),
       leadingIcon: cn('', ui?.leadingIcon),
-      trailingIcon: cn('', ui?.trailingIcon),
+      trailingIcon: cn('', ui?.trailingIcon)
     }" />
 </template>

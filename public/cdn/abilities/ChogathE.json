@@ -89,7 +89,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/e",
-  "notes": "The missiles are launched from an offset 25 units in front of Cho'Gath and towards the target's location on-attack-complete.\nWhen attacking enemies within 25 units center-to-center of Cho'Gath, the missile will fire in the opposite direction.\nCho'Gath's size factors into the wideness of the hitbox Vorpal Spikes has. External size modifiers ( Wild Growth) contribute to this.\nAt certain size thresholds, the missile gets replaced by a different one with a different width. At each step, the width grows by 30, except for the 3rd missile, where it only grows by 10.(note)\nSome of the size thresholds are placed very weird.(note)\nThe missile range is unchanged.\nThe empowered attack will trigger but not apply its effects against structures.",
+  "notes": "The missiles are launched from an offset 25 units in front of Cho'Gath and towards the target's location on-attack-complete.\nWhen attacking enemies within 25 units center-to-center of Cho'Gath, the missile will fire in the opposite direction.\nCho'Gath's size factors into the wideness of the hitbox Vorpal Spikes has. External size modifiers ( Wild Growth) contribute to this.\nAt certain size thresholds, the missile gets replaced by a different one with a different width. At each step, the width grows by 30, except for the 3rd missile, where it only grows by 10.(unexpected)\nSome of the size thresholds are placed very weird.(unexpected)\nThe missile range is unchanged.\nThe empowered attack will trigger but not apply its effects against structures.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "1475",

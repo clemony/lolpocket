@@ -1,0 +1,17 @@
+{
+  "id": 5000,
+  "name": "Lucky Urf Statue",
+  "description": "25 Attack Damage\n40 Ability Power\n350 Health\n200% Base Health Regen\n200% Base Mana Regen\n20 Gold Per 10 Seconds\n\nGolden Fortune\nYou are Shiny and periodically find Gold Coins! For every 1000 unspent gold you have: Deal 2% increased damage Take 2% reduced damage Gain 3% Heal and Shield power",
+  "stats": {
+    "health": 350,
+    "abilityPower": 40,
+    "attackDamage": 25
+  },
+  "gold": {
+    "base": 420,
+    "purchasable": true,
+    "total": 3620,
+    "sell": 2534
+  },
+  "tags": []
+}

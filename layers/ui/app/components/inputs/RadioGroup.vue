@@ -19,7 +19,7 @@ watch(
 
 const shared = {
   indicator: "hidden",
-  color: "default",
+  color: "base",
   ui: {
     fieldset: cn("gap-y-0.5 pt-0 pb-2", ui?.fieldset),
     item: "p-0! hover:bg-p1 h-9.5 items-center has-checked:bg-p2/80 has-checked:noise group/item",

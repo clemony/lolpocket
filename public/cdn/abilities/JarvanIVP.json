@@ -13,7 +13,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
-  "notes": "Martial Cadence's damage is based on the current health of the target before any damage of the attack has been dealt.\nMartial Cadence's damage is dealt after the main attack damage.\nIf the target dies to the main attack damage, the additional damage will not be dealt.\nThe empowered attack will not trigger against structures.",
+  "notes": "Martial Cadence's damage is based on the current health of the target before any damage of the attack has been dealt.\nMartial Cadence's damage is dealt after the main attack damage.\nIf the target dies to the main attack damage, the additional damage will not be dealt.\nThe empowered attack will not trigger against  structures.",
   "onTargetCdStatic": "6 / 5 / 4 / 3 (based on level)",
   "spellEffects": "Proc",
   "spellshieldable": "False",

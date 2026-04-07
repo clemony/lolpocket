@@ -12,17 +12,17 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zeri dashes in the target direction. She will dash farther across terrain if Spark Surge was cast within 50 units of any, gaining unobstructed vision of the surrounding 800 units and revealing herself while there are enemy champions within 1500 units of her.</p>"
     },
     {
-      "description": "Afterwards, she gains Lightning Rounds for 5 seconds, empowering Burst Fire to deal bonus magic damage to the first enemy hit, increased by 0% - 85% (based on critical strike chance), and pierce through enemies. Targets after the first take modified damage which does not apply on-hit effects or life steal nor trigger on-attack effects, but is affected by critical strike modifiers.",
+      "description": "Afterwards, she gains Lightning Rounds for 5 seconds, empowering Burst Fire to deal bonus magic damage to the first enemy hit, increased by 0% - 100% (+ 0% - 30%) (based on critical strike chance), and pierce through enemies. Targets after the first take modified damage which does not apply on-hit effects or life steal nor trigger on-attack effects, but is affected by critical strike modifiers.",
       "leveling": [
         {
           "attribute": "Burst Fire Bonus Magic Damage",
           "modifiers": [
             {
-              "values": "20 / 22 / 24 / 26 / 28"
+              "values": "17 / 19 / 21 / 23 / 25"
             },
             {
               "unit": "% bonus AD",
-              "values": "12"
+              "values": "10"
             },
             {
               "unit": "% AP",

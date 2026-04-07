@@ -16,7 +16,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p>"
         },
         {
-          "description": "Quinn's basic attacks against Vulnerable targets are empowered to consume the mark to deal 10 - 95 (based on level) (+ 16% - 50% (based on level) AD) bonus physical damage."
+          "description": "Quinn's basic attacks on-hit against Vulnerable targets are empowered to consume the mark to deal 15 - 132.35 (based on level) (+ 40% bonus AD) bonus physical damage."
         },
         {
           "description": "While Behind Enemy Lines is active, Harrier is disabled and all Vulnerable marks are removed."
@@ -149,7 +149,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/e",
-      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked as  Vulnerable.\nThe basic attack reset does not count as one for  Hail of Blades.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(note)",
+      "notes": "Quinn will track the target if they change locations.\nShe will dash to the target's previous location without applying Vault's effects if the target is too far away or moves beyond 1200 units.\nVault  resets Quinn's remaining attack cooldown a short delay after the first dash ends (even if interrupted).\nThis delay is a fuzzy 0.25 to 0.5 seconds and this matches up with the moment the target of Vault is marked as  Vulnerable.\nThe basic attack reset does not count as one for  Hail of Blades.\nQuinn will automatically attempt to attack the target once she completes Vault.\nThe target will turn to face the opposite direction after being  knocked back.\nUnlike its constant cast range Vault's bounce's can vary to allow Quinn to close or to make a gap between herself and the target (depending on casting position) or even to jump through a wall (if there is enough landing room on the other side).\nVault's  knock back also interrupts the windup of basic attacks with  uncancellable windups.(unexpected)",
       "resource": "Mana",
       "speed": "2500 / 850",
       "spellEffects": "Spell",
@@ -190,7 +190,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/r",
-      "notes": "Taking damage from non- minions removes the bonus movement speed buff temporarily by suppressing it with the status effect of a  slow.\nThis slow is not affected by  slow resist or  slow immunity, but it can be  cleansed.\nBehind Enemy Lines does not refund its  mana cost if the channel was canceled via recast.\nThe only exception is if Quinn's mana falls below the mana cost, in which case she is granted enough mana back (the equal amount needed) to be able to cast Behind Enemy Lines again.\nRespawning or returning to the summoning platform will not spawn  Valor if Behind Enemy Lines is on cooldown.\nIf  Valor is spawned by respawning or returning to the summoning platform,  Skystrike will be disabled from being manually cast for 2.5 seconds upon uniting. However, it will still automatically activate upon declaring a  basic attack or casting  Blinding Assault or  Vault.\nBehind Enemy Lines ends immediately without  Skystrike being cast if she enters or is inside the enemy fountain. The ability will go on full  cooldown.\nQuinn will also spawn  Valor when entering the enemy fountain.(bug)\nSelf or allied applied  immobilizations such as  Blast Cone,  Tempered Fate, and  Zhonya's Hourglass also count for ending Behind Enemy Lines.\nThe following table refers for interactions while Quinn is  channeling:\nBehind Enemy Lines is not a movement channel, and so will not be  interrupted by  root and  ground.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "notes": "Taking damage from non- minions removes the bonus movement speed buff temporarily by suppressing it with the status effect of a  slow.\nThis slow is not affected by  slow resist or  slow immunity, but it can be  cleansed.\nWhile the slow is in effect, Behind Enemy Lines is not considered to grant increased movement speed for the purpose of  Celerity.\nBehind Enemy Lines does not refund its  mana cost if the channel was canceled via recast.\nThe only exception is if Quinn's mana falls below the mana cost, in which case she is granted enough mana back (the equal amount needed) to be able to cast Behind Enemy Lines again.\nRespawning or returning to the summoning platform will not spawn  Valor if Behind Enemy Lines is on cooldown.\nIf  Valor is spawned by respawning or returning to the summoning platform,  Skystrike will be disabled from being manually cast for 2.5 seconds upon uniting. However, it will still automatically activate upon declaring a  basic attack or casting  Blinding Assault or  Vault.\nBehind Enemy Lines ends immediately without  Skystrike being cast if she enters or is inside the enemy fountain. The ability will go on full  cooldown.\nQuinn will also spawn  Valor when entering the enemy fountain.(bug)\nSelf or allied applied  immobilizations such as  Blast Cone,  Tempered Fate, and  Zhonya's Hourglass also count for ending Behind Enemy Lines.\nThe following table refers for interactions while Quinn is  channeling:\nBehind Enemy Lines is not a movement channel, and so will not be  interrupted by  root and  ground.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "resource": "Mana",
       "targeting": "Auto"
     },
@@ -245,7 +245,8 @@
     "difficulty": 2
   },
   "fullName": "Quinn and Valor",
-  "patchLastChanged": "25.21",
+  "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Top"
   ],
@@ -275,7 +276,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.4,
-    "attackDamage": 2.7,
     "attackSpeed": 3.1
   },
   "price": {

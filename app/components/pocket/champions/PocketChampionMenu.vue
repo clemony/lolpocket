@@ -13,7 +13,7 @@ const pocketChampions = computed({
   get: () => pocket.value.champions ?? [],
   set: (v: string[]) => {
     pocket.value.champions = v
-  },
+  }
 })
 const name = computed(() => champNameByKey(k))
 </script>
@@ -53,7 +53,7 @@ const name = computed(() => champNameByKey(k))
         name="star"
         :class="
           cn('ml-px size-4! ds-2xs **:stroke-[2.8]', {
-            'fill-pre': pocket._champion === k,
+            'fill-pre': pocket._champion === k
           })
         " />
       <input

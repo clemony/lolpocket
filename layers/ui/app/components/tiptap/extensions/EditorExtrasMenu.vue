@@ -8,16 +8,16 @@ const { editor } = defineProps<{
 const shortcuts = [
   {
     key: "at",
-    description: "Mention or tag other lolpocket users.",
+    description: "Mention or tag other lolpocket users."
   },
   {
     key: "picon:colon",
-    description: "Search and insert emoji.",
+    description: "Search and insert emoji."
   },
   {
     key: "hash",
-    description: "Search and insert champion or item badges.",
-  },
+    description: "Search and insert champion or item badges."
+  }
 ]
 </script>
 

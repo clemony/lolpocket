@@ -6,7 +6,7 @@
   "blurb": "Active:  Xayah barrages out two Feathers that each deal physical damage to enemies hit.",
   "castTime": "0.25 : 0.1 (based on bonus attack speed)",
   "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-  "cost": "50",
+  "cost": "35",
   "damageType": "Physical damage",
   "effects": [
     {

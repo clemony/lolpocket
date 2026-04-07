@@ -2,6 +2,10 @@
   "id": 3105,
   "name": "Aegis of the Legion",
   "description": "25 Armor\n25 Magic Resist\n10 Ability Haste\n\n",
+  "stats": {
+    "magicResistance": 25,
+    "armor": 25
+  },
   "gold": {
     "base": 400,
     "purchasable": true,

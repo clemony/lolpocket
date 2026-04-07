@@ -6,7 +6,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 25% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 31.18 (based on level) (+ 20% bonus AD) bonus physical damage when hitting an enemy from behind. This damage is affected by critical strike modifiers.</p>"
     },
     {
       "description": "Deceive and Two-Shiv Poison have additional effects when they hit an enemy from behind."

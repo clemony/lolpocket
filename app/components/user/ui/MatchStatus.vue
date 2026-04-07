@@ -1,20 +1,36 @@
 <script lang="ts" setup>
-import type { ChipProps } from "@nuxt/ui"
+import type { AvatarProps, UserProps } from "@nuxt/ui"
 import { buildSummonerRootPath } from "~/domain/summoner/utils/route"
 import { getSummonerIcon } from "~/domain/utils/img"
 const {
   class: className,
   summoner,
-  variant = "default"
-} = defineProps<{
-  class?: HTMLAttributes["class"]
-  puuid?: string
-  summoner?: Summoner
-  variant?: "default" | "user"
-}>()
-
+  variant = "default",
+  avatarSize = "lg",
+  ui
+} = defineProps<
+  UserProps &
+    Omit<UserProps, "size"> & {
+      class?: HTMLAttributes["class"]
+      puuid?: string
+      summoner?: Summoner
+      variant?: "default" | "user" | "button"
+      avatarSize?: AvatarProps["size"]
+    }
+>()
+// todo match status hook this up this is a good comment
 const matchStatus = shallowRef<boolean>(true)
 function refreshMatchStatus() {}
+
+const userUi = computed<NonNullable<UserProps["ui"]>>(
+  () =>
+    mergeUi<NonNullable<UserProps["ui"]>>(
+      {
+        name: "text-start"
+      },
+      ui
+    ) as NonNullable<UserProps["ui"]>
+)
 </script>
 
 <template>
@@ -22,28 +38,27 @@ function refreshMatchStatus() {}
 
   <UUser
     v-if="summoner && variant === 'user'"
-    :avatar="{
-      src: getSummonerIcon(summoner?.icon) ?? null,
-      size: '11',
-      chip: {
-        inset: true,
-        size: 'md',
-        color: (matchStatus
-          ? summoner?.color
-            ? summoner.color
-            : 'insp'
-          : 'p3') as ChipProps['color'],
-
-        position: 'bottom-right'
-      },
-      icon: 'i-plug'
-    }"
     trailing-icon="up-down"
+    :size
+    :ui="userUi"
     :description="matchStatus ? 'In Game' : 'afk'"
-    :name="summoner?.name ?? 'Not Connected'" />
+    :name="summoner?.name ?? 'Not Connected'">
+    <template #avatar>
+      <div class="relative">
+        <UAvatar
+          :size="avatarSize"
+          :src="getSummonerIcon(summoner?.icon) ?? null"
+          icon="i-plug" />
+        <Ping
+          inset
+          :color="summoner?.color ?? 'diminuendo'"
+          class="right-0.5 bottom-1" />
+      </div>
+    </template>
+  </UUser>
 
   <LazyUTooltip
-    v-else-if="summoner?.puuid"
+    v-else-if="summoner?.puuid && variant === 'button'"
     :content="{ side: 'bottom', align: 'start', alignOffset: 14 }"
     :text="
       matchStatus ? 'Live match details &nbsp;🡭' : 'No in-progress match found.'
@@ -58,23 +73,15 @@ function refreshMatchStatus() {}
       }"
       :label="matchStatus ? 'In Game' : 'afk'">
       <template #leading>
-        <div class="inline-grid *:[grid-area:1/1]">
-          <div
-            :class="
-              cn(
-                'status status-md animate-ping saturate-110',
-                twBg[summoner?.color ?? 'diminuendo']
-              )
-            " />
-          <div
-            :class="
-              cn(
-                'status status-md saturate-110',
-                twBg[summoner?.color ?? 'diminuendo']
-              )
-            " />
-        </div>
+        <Ping :color="summoner?.color ?? 'diminuendo'" />
       </template>
     </UButton>
   </LazyUTooltip>
+
+  <span
+    v-else
+    class="inline-flex items-center gap-2 align-baseline text-xs font-medium">
+    <Ping :color="summoner?.color ?? 'diminuendo'" class="relative!" />
+    {{ matchStatus ? "In Game" : "afk" }}
+  </span>
 </template>

@@ -27,14 +27,14 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara unleashes for 5 seconds: gaining bonus attack speed, dealing additional bonus magic damage on-hit, and augmenting her basic attacks to have increased missile speed, a 40% lower windup time, and an uncancellable windup. Her basic attacks are also empowered to spread to each enemy near the target, dealing 30% AD physical damage.Each spread attack applies life steal and on-hit effects, with on-hit damage reduced to 30% effectiveness, and will critically strike if the triggering attack does. Spread attacks deal 250% damage against minions below 30% maximum health.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara unleashes for 5 seconds: gaining bonus attack speed, dealing additional bonus magic damage on-hit, and augmenting her basic attacks to have increased missile speed, a 40% lower windup time, and an uncancellable windup. Her basic attacks are also empowered to spread to each enemy near the target, dealing 30% AD physical damage.Each spread attack applies life steal and on-hit effects, with on-hit damage reduced to 30% effectiveness, and will critically strike for (200% + 30%) damage if the triggering attack does. Spread attacks deal 250% damage against minions below 30% maximum health.</p>",
       "leveling": [
         {
           "attribute": "Bonus Attack Speed",
           "modifiers": [
             {
               "unit": "%",
-              "values": "25 / 35 / 45 / 55 / 65"
+              "values": "20 / 30 / 40 / 50 / 60"
             }
           ]
         },

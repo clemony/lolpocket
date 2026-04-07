@@ -34,7 +34,7 @@ export const statIndex: Record<string, StatIndex> = {
 
     color: "insp",
     key: "HSP",
-    abbr: "Heal & Shield +",
+    abbr: "Heal & Shield 🡹", //+
     description: "",
     group: "spells",
     unit: "%"

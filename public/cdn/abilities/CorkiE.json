@@ -57,7 +57,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/e",
-  "notes": "The maximum resistances reduction is applied after 4 ticks (1 second).\nThe direction of the gun firing changes depending on where Corki is facing.\nCorki will turn to face in the direction of the cursor upon casting Gatling Gun. He will also instantly turn when issuing an Attack order on enemies while Gatling Gun is active.\nIssuing an Attack Move order at a location will not cause Corki to instantly turn.(note)\nGatling Gun's area of effect can hit close by enemies next to and behind him, due to registering  enemies' edge.",
+  "notes": "The maximum resistances reduction is applied after 4 ticks (1 second).\nThe direction of the gun firing changes depending on where Corki is facing.\nCorki will turn to face in the direction of the cursor upon casting Gatling Gun. He will also instantly turn when issuing an Attack order on enemies while Gatling Gun is active.\nIssuing an Attack Move order at a location will not cause Corki to instantly turn.(unexpected)\nGatling Gun's area of effect can hit close by enemies next to and behind him, due to registering  enemies' edge.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "aoedot",

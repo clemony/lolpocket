@@ -12,6 +12,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/p",
-  "notes": "Denting Blows will not activate Blast Shield.",
+  "notes": "Vault Breaker will trigger Blast Shield even if it's blocked by a  spell shield.(bug)\n Cease and Desist will not.\n Denting Blows will not activate Blast Shield.",
+  "spellshieldable": "False",
   "targeting": "Passive"
 }

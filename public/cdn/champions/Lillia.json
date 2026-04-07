@@ -15,7 +15,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 against monsters. ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick against monsters. ]</p>"
         },
         {
-          "description": "Lillia heals herself for[ 39 (+ 15% AP) against large monsters and 6 - 90 (based on level) (+ 30% AP) against champions ][ 6.5 (+ 2.5% AP) against large monsters and 1 - 15 (based on level) (+ 5% AP) against champions every 0.5 seconds ]over the duration of Dream Dust, reduced to 15% effectiveness for each target afflicted beyond the first. She may only heal against 1 monster at a time."
+          "description": "Lillia heals herself for[ 39 (+ 15% AP) against large monsters and 6 - 103.17 (based on level) (+ 30% AP) against champions ][ 6.5 (+ 2.5% AP) against large monsters and 1 - 17.19 (based on level) (+ 5% AP) against champions every 0.5 seconds ]over the duration of Dream Dust, reduced to 15% effectiveness for each target afflicted beyond the first. She may only heal against 1 monster at a time."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/p",
@@ -233,7 +233,7 @@
       "affects": "Enemies",
       "blurb": "Active:  Lillia casts a magical lullaby over all enemy  champions affected by  Dream Dust, making them  drowsy before falling  asleep for a few seconds.",
       "castTime": "0.4",
-      "cooldown": "140 / 120 / 100",
+      "cooldown": "150 / 130 / 110",
       "cost": "50",
       "damageType": "Magic damage",
       "effects": [
@@ -247,11 +247,11 @@
               "attribute": "Magic Damage",
               "modifiers": [
                 {
-                  "values": "150 / 200 / 250"
+                  "values": "100 / 150 / 200"
                 },
                 {
                   "unit": "% AP",
-                  "values": "45"
+                  "values": "40"
                 }
               ]
             }
@@ -282,7 +282,8 @@
     "abilityReliance": 80,
     "difficulty": 2
   },
-  "patchLastChanged": "25.23",
+  "lore": "Intensely shy, the fae fawn Lillia skittishly wanders Ionia's forests. Hiding just out of sight of mortals—whose mysterious natures have long captivated, but intimidated, her—Lillia hopes to discover why their dreams no longer reach the ancient Dreaming Tree. She now travels Ionia with a magical branch in hand, in an effort to find people's unrealized dreams. Only then can Lillia herself bloom and help others untangle their fears to find the sparkle within. Eep!",
+  "patchLastChanged": "26.05",
   "positions": [
     "Jungle"
   ],
@@ -312,7 +313,6 @@
     "magicResist": 1.6,
     "hpRegen": 0.6,
     "mpRegen": 1,
-    "attackDamage": 3.1,
     "attackSpeed": 2.7
   },
   "price": {

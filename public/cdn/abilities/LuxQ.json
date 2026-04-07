@@ -5,7 +5,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Lux shoots a sphere of light in the target direction that deals magic damage to the first two enemies hit and  roots them for a short time.",
   "castTime": "0.25",
-  "cooldown": "11 / 10.5 / 10 / 9.5 / 9",
+  "cooldown": "10",
   "cost": "50",
   "damageType": "Magic damage",
   "effects": [

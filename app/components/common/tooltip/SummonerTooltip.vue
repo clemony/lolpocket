@@ -5,7 +5,7 @@ const {
   side = "right",
   class: className,
   link,
-  summoner,
+  summoner
 } = defineProps<{
   summoner: Summoner | Player
   class?: HTMLAttributes["class"]
@@ -21,7 +21,6 @@ const {
     :disabled="!summoner"
     :label="`${summoner?.name} #${summoner?.tag}`"
     :avatar="getSummonerIcon(summoner?.icon)"
-    trailing-icon="i-chain"
     :side
     :side-offset="['right', 'left'].includes(side) ? 28 : 14">
     <slot />

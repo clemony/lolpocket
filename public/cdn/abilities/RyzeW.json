@@ -19,11 +19,11 @@
             },
             {
               "unit": "% AP",
-              "values": "70"
+              "values": "60"
             },
             {
               "unit": "% bonus mana",
-              "values": "4"
+              "values": "3"
             }
           ]
         }

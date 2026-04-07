@@ -2,6 +2,8 @@
 import type { PopoverProps } from "@nuxt/ui"
 import { focusTrigger, onContentInteractOutside } from "./build/helpers"
 import { useCommandFocusNavigation } from "./build/useCommandFocusNavigation"
+import type { CommandGroup } from "./build/useCommandGroups"
+import { useCommandGroups } from "./build/useCommandGroups"
 
 const route = useRoute()
 
@@ -60,8 +62,16 @@ watch(
     closeCommand()
   }
 )
+const { groups } = useCommandGroups()
+const groupMap = computed<Record<string, CommandGroup | undefined>>(() =>
+  Object.fromEntries(groups.value.map((group) => [group.id, group]))
+)
+
+const backpack = computed(() => safeObject(groupMap.value.backpack))
 
 provide("command", { close: () => closeCommand() })
+
+const hotkeysOpen = shallowRef(false)
 </script>
 
 <template>
@@ -86,16 +96,27 @@ provide("command", { close: () => closeCommand() })
           class="w-179 overflow-hidden transition-[height] duration-120 ease-out motion-reduce:transition-none"
           :style="panelStyle">
           <div ref="panelMeasure" class="w-179">
-            <LazyCommandHeader />
-            <LazyCommandMenu
-              v-if="!hasQuery"
-              :reference="panelMeasure"
-              @close="closeCommand()" />
-            <LazyCommandPalette
-              v-else
-              :reference="panelMeasure"
-              :query="searchQuery"
-              @close="closeCommand()" />
+            <LazyCommandHeader :backpack />
+            <div class="relative flex max-h-180 w-full">
+              <div class="relative max-h-[inherit] w-64 border-r border-p3/80">
+                <LazyCommandSidebar :backpack />
+              </div>
+
+              <LazyCommandMenu
+                v-if="!hasQuery"
+                :groups="groupMap"
+                :reference="panelMeasure"
+                @close="closeCommand()" />
+              <LazyCommandPalette
+                v-else
+                :reference="panelMeasure"
+                :query="searchQuery"
+                @close="closeCommand()" />
+            </div>
+            <CommandFooter
+              v-if="reference"
+              :reference
+              @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
           </div>
         </div>
       </template>

@@ -2,7 +2,7 @@
 import {
   statLabels,
   statLabelsWithSynergy,
-  statLabelsWithTime,
+  statLabelsWithTime
 } from "./stat-labels"
 
 const {
@@ -11,7 +11,7 @@ const {
   icon,
   separator,
   stat,
-  type,
+  type
 } = defineProps<{
   stat?: StatDetail | StatDetail | undefined
   class?: HTMLAttributes["class"]
@@ -66,7 +66,7 @@ const avgTimestampLabel = computed(() => {
         :class="
           cn('leading-5.5 font-bold ds-2xs', {
             'pt-1': !isA,
-            'pt-1 text-4xl!': typeof title === 'number',
+            'pt-1 text-4xl!': typeof title === 'number'
           })
         ">
         <template v-if="!isA">
@@ -88,7 +88,7 @@ const avgTimestampLabel = computed(() => {
         <Separator
           v-if="separator"
           class="absolute top-0 w-full opacity-70"
-          color="p3" />
+          color="tertiary" />
 
         <!-- labels -->
         <div class="grid h-fit items-start justify-end gap-0.75">

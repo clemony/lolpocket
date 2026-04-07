@@ -16,7 +16,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/p",
-  "notes": "If Alistar is at 7 stacks when Triumphant Roar comes off cooldown, he will roar as soon as it elapses.\nAlistar does not gain stacks for unsuccessfully trying to apply  crowd control, for instance against a  crowd control immune target.\nAlistar will still gain a stack for unsuccessfully trying to knock back a champion protected by a  spell shield with  Headbutt.(bug)\nHealing occurs simultaneously for Alistar and his allies.\nThere is a VFX projectile (700 missile speed) that cannot be destroyed by  Wind Wall and is unrelated to the actual heal.\nAlistar loses all Triumph stacks upon dying.",
+  "notes": "If Alistar is at 7 stacks when Triumphant Roar comes off cooldown, he will roar as soon as it elapses.\nAlistar does not gain stacks for unsuccessfully trying to apply  crowd control, for instance against a  crowd control immune target.\nHealing occurs simultaneously for Alistar and his allies.\nThere is a VFX projectile (700 missile speed) that cannot be destroyed by  Wind Wall and is unrelated to the actual heal.\nAlistar loses all Triumph stacks upon dying.",
   "projectile": "SPECIAL",
   "targeting": "Passive"
 }

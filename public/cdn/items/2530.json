@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Consonance",
-      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal the most wounded allied champion you have healed or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielded in the last 3 seconds who is in combat with champions within 900 units for 0.8% of your <b>maximum</b> mana (1 second cooldown)."
+      "effects": "<img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />Heal the nearest and most wounded allied champion within 900 units for 0.8% of your <b>maximum</b> mana if you or any allied champion you have healed or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shielded in the last 3 seconds is in combat with enemy champions (1 second cooldown for triggering the heal)."
     }
   ],
   "stats": {
@@ -38,6 +38,12 @@
     21,
     35
   ],
-  "ornnUpgrade": 322530,
+  "masterwork": {
+    "upgradeId": 322530,
+    "stats": {
+      "mana": 1000,
+      "health": 200
+    }
+  },
   "tags": []
 }

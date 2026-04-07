@@ -39,11 +39,11 @@
       ]
     },
     {
-      "description": "Tough It Out resets Olaf's basic attack timer if it was not already active."
+      "description": "Tough It Out resets Olaf's basic attack timer."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/w",
-  "notes": "Olaf's attack timer will only reset from casting Tough It Out if the attack speed buff was not already active on him. Refreshing the buff will not grant an attack reset.(bug)",
+  "notes": "Tough It Out's bonus attack speed value is updated when it is cast, even if it was already active.",
   "resource": "Mana",
   "targeting": "Auto"
 }

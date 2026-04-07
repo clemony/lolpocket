@@ -9,7 +9,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Headshot:</span> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60% / 80% / 100% (based on level) (+ (148.75% + 25.5%) critical strike chance) AD bonus physical damage, increased to 110% (+ (148.75% + 25.5%) critical strike chance) AD against non-champions.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Headshot:</span> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60% / 80% / 100% (based on level) (+ 0% - 100% (+ 0% - 30%) (based on critical strike chance)) AD bonus physical damage, increased to 110% (+ 0% - 100% (+ 0% - 30%) (based on critical strike chance)) AD against non-champions.</p>"
     },
     {
       "description": "Enemies that step over a Yordle Snap Trap or are hit by 90 Caliber Net can grant an additional Headshot against them at 1300 range within 1.8 seconds, without consuming stacks. Each method grants only one Headshot at a time."

@@ -16,7 +16,7 @@
           "attribute": "Magic Damage per Needle",
           "modifiers": [
             {
-              "values": "35 / 65 / 95"
+              "values": "30 / 50 / 70"
             },
             {
               "unit": "% AP",
@@ -28,7 +28,7 @@
           "attribute": "Damage with A Thousand Cuts",
           "modifiers": [
             {
-              "values": "35 / 65 / 95"
+              "values": "30 / 50 / 70"
             },
             {
               "unit": "% AP",
@@ -72,7 +72,7 @@
           "attribute": "Second Cast Total Damage",
           "modifiers": [
             {
-              "values": "105 / 195 / 285"
+              "values": "90 / 150 / 210"
             },
             {
               "unit": "% AP",
@@ -88,7 +88,7 @@
           "attribute": "Third Cast Total Damage",
           "modifiers": [
             {
-              "values": "175 / 325 / 475"
+              "values": "150 / 250 / 350"
             },
             {
               "unit": "% AP",
@@ -104,7 +104,7 @@
           "attribute": "Maximum Total Damage",
           "modifiers": [
             {
-              "values": "315 / 585 / 855"
+              "values": "270 / 450 / 630"
             },
             {
               "unit": "% AP",

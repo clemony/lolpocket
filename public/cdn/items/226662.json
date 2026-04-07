@@ -2,6 +2,10 @@
   "id": 226662,
   "name": "Iceborn Gauntlet",
   "description": "300 Health\n45 Armor\n10 Ability Haste\n\nSpellblade\nAfter using an Ability, your next Attack deals bonus physical damage On-Hit and creates a frost field for 2s that Slows.",
+  "stats": {
+    "health": 300,
+    "armor": 45
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

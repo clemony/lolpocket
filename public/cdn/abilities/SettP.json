@@ -6,13 +6,13 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Heart of the Half-Beast:</span> Sett regenerates[ an additional 0.075 / 0.25 / 0.5 / 1 (based on level) health every 0.5 seconds per 5% of his missing health. ][ up-to an additional 1.425 / 4.75 / 9.5 / 19 (based on level) health per 0.5 seconds, with the maximum reached at the threshold of 95% missing health. ]</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Heart of the Half-Beast:</span> Sett regenerates[ an additional 0.075 / 0.25 / 0.5 / 1 / 1.025 / 1.05 (based on level) health every 0.5 seconds per 5% of his missing health. ][ up-to an additional 1.425 / 4.75 / 9.5 / 19 / 19.475 / 19.95 (based on level) health per 0.5 seconds, with the maximum reached at the threshold of 95% missing health. ]</p>"
     },
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Heavy Hands:</span> Sett's basic attacks alternate between his Left Punch and a Right Punch on-attack. Sett begins attacking with his Left Punch, and will reset back to it after 2 seconds of not performing a Right Punch.</p>"
     },
     {
-      "description": "Sett's Right Punch is empowered to gain 50 bonus range (unless Knuckle Down is active), attack at 8 times the Left Punch's attack speed, and deal 5 - 90 (based on level) (+ 55% bonus AD) bonus physical damage."
+      "description": "Sett's Right Punch is empowered to gain 50 bonus range (unless Knuckle Down is active), attack at 8 times the Left Punch's attack speed, and deal 5 - 100 (based on level) (+ 55% bonus AD) bonus physical damage."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sett/ability-icon/p",

@@ -6,7 +6,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 93 (based on level) (+ 15% bonus armor) bonus magic damage on-attack, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p>\nseconds."
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 101 (based on level) (+ 15% bonus armor) bonus magic damage on-attack, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p>\nseconds."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/p",

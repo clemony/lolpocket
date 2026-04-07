@@ -30,7 +30,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/w",
-  "notes": "Empower is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(note)",
+  "notes": "Empower is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(unexpected)",
   "resource": "Mana",
   "spellEffects": "spell",
   "spellshieldable": "true",

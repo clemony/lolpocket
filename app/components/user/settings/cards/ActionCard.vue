@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const {
@@ -9,7 +9,7 @@ const {
   button,
   class: className,
   hover,
-  text,
+  text
 } = defineProps<{
   title?: string
   text?: string
@@ -29,7 +29,7 @@ const {
       cn(
         'grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2 rounded-xl pt-8 pb-6 *:px-7 **:text-start',
         { 'hover-ring hover:bg-p2/60!': hover },
-        className,
+        className
       )
     ">
     <template #header>

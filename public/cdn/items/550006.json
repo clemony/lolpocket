@@ -1,0 +1,11 @@
+{
+  "id": 550006,
+  "name": "Healthbar Splash: Rainbow",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "tags": []
+}

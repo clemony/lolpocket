@@ -6,7 +6,7 @@ const {
   cancellable,
   change,
   icon: i,
-  save,
+  save
 } = defineProps<{
   save?: boolean
   change?: boolean
@@ -18,11 +18,11 @@ const {
 const chosenIcon = computed(() => {
   if (i) return i
 
-  return (
-    !change && (cancellable || save) ? "x"
-    : save && change ? "tick"
-    : "send"
-  )
+  return !change && (cancellable || save)
+    ? "x"
+    : save && change
+      ? "tick"
+      : "send"
 })
 </script>
 
@@ -30,12 +30,14 @@ const chosenIcon = computed(() => {
   <UButton
     :ui="{
       leadingIcon: cn('size-4', { 'scale-110': save }),
-      base: 'pr-6 pl-5 font-semibold',
+      base: 'pr-6 pl-5 font-semibold'
     }"
     :label="
-      !change && (cancellable || save) ? 'Cancel'
-      : save && change ? 'Save'
-        : 'Post'
+      !change && (cancellable || save)
+        ? 'Cancel'
+        : save && change
+          ? 'Save'
+          : 'Post'
     "
     :color
     :icon="chosenIcon"

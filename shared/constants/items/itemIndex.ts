@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/25/2026 03:29:18 PM CDT
+// Updated Patch 16.7 - 04/03/2026 04:30:45 PM CDT
 import type { Index } from "#shared/types"
 
 export const itemIndex: Index[] = [
@@ -1531,6 +1531,41 @@ export const itemIndex: Index[] = [
     "id": 4646,
     "key": "item",
     "name": "Stormsurge"
+  },
+  {
+    "id": 5000,
+    "key": "item",
+    "name": "Lucky Urf Statue"
+  },
+  {
+    "id": 5001,
+    "key": "item",
+    "name": "Heart Of Gold"
+  },
+  {
+    "id": 5002,
+    "key": "item",
+    "name": "Kage's Lucky Pick"
+  },
+  {
+    "id": 5003,
+    "key": "item",
+    "name": "Avarice Blade"
+  },
+  {
+    "id": 5004,
+    "key": "item",
+    "name": "Philosopher's Stone"
+  },
+  {
+    "id": 5005,
+    "key": "item",
+    "name": "<font color='#C21807'>Pot</font><font color='#FFBF00'>ion</font> <font color='#00A86B'>Of</font> <font color='#40E0D0'>Col</font><font color='#8F00FF'>ors</font>"
+  },
+  {
+    "id": 5006,
+    "key": "item",
+    "name": "Potion? of Greed"
   },
   {
     "id": 6029,
@@ -3166,5 +3201,40 @@ export const itemIndex: Index[] = [
     "id": 447123,
     "key": "item",
     "name": "Puppeteer"
+  },
+  {
+    "id": 550001,
+    "key": "item",
+    "name": "Healthbar Splash: Blue"
+  },
+  {
+    "id": 550002,
+    "key": "item",
+    "name": "Healthbar Splash: Orange"
+  },
+  {
+    "id": 550003,
+    "key": "item",
+    "name": "Healthbar Splash: Green"
+  },
+  {
+    "id": 550004,
+    "key": "item",
+    "name": "Healthbar Splash: Pink"
+  },
+  {
+    "id": 550005,
+    "key": "item",
+    "name": "Healthbar Cleanup: Reset Color"
+  },
+  {
+    "id": 550006,
+    "key": "item",
+    "name": "Healthbar Splash: Rainbow"
+  },
+  {
+    "id": 550007,
+    "key": "item",
+    "name": "Party Favor"
   }
 ]

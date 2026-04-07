@@ -8,7 +8,7 @@
       size="lg">
       <UChip
         v-if="is().filters.stats.length"
-        color="p3"
+        color="tertiary"
         :class="
           cn('absolute transition-opacity', {
             'animate-in fade-in zoom-in': is().filters.stats.length,

@@ -41,7 +41,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
-  "notes": "Skip 'n Slash has no minimum dash range.\nThe basic attack reset is not considered one for  Hail of Blades.(note)",
+  "notes": "Skip 'n Slash has no minimum dash range.\nThe basic attack reset is not considered one for  Hail of Blades.(unexpected)",
   "resource": "Mana",
   "spellEffects": "proc",
   "targeting": "Location",

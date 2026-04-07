@@ -2,6 +2,10 @@
   "id": 223152,
   "name": "Hextech Rocketbelt",
   "description": "95 Ability Power\n400 Health\n20 Ability Haste\n\nActive - Supersonic: Dash in target direction, unleashing an arc of magic missiles that deal damage.",
+  "stats": {
+    "health": 400,
+    "abilityPower": 95
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

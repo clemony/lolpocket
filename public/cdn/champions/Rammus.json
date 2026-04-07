@@ -30,7 +30,7 @@
       "effectRadius": "250",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus channels for up to 6 seconds to roll into a ball, gaining 25% - 39.17% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 235% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus rolls into an accelerating ball, channeling for up to 6 seconds to gain 25% - 40.83% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 245% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl.</p>"
         },
         {
           "description": "Rammus stops rolling upon colliding with an enemy, dealing magic damage to all nearby enemies and knocking them back 125 units, though not through terrain. Enemies hit are then stunned and revealed for 0.4 seconds, as well as slowed for 1 second.",
@@ -99,7 +99,7 @@
               "attribute": "Bonus Magic Resistance",
               "modifiers": [
                 {
-                  "values": "27 / 32 / 37 / 42 / 47"
+                  "values": "20 / 25 / 30 / 35 / 40"
                 },
                 {
                   "tooltip": "Scaling per rank:\n30 / 37.5 / 45 / 52.5 / 60% total magic resistance",
@@ -235,7 +235,8 @@
     "abilityReliance": 65,
     "difficulty": 1
   },
-  "patchLastChanged": "25.13",
+  "lore": "Idolized by many, dismissed by some, mystifying to all, the curious being Rammus is an enigma. Protected by a spiked shell, he inspires increasingly disparate theories on his origin wherever he goes—from demigod, to sacred oracle, to a mere beast transformed by magic. Whatever the truth may be, Rammus keeps his own counsel and stops for no one as he roams the Shuriman desert.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Jungle"
   ],
@@ -247,7 +248,7 @@
     "Vanguard"
   ],
   "stats": {
-    "hp": 675,
+    "hp": 645,
     "mp": 310,
     "movespeed": 335,
     "armor": 35,
@@ -265,7 +266,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.6,
     "mpRegen": 0.5,
-    "attackDamage": 2.8,
     "attackSpeed": 2.2
   },
   "price": {

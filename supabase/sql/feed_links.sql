@@ -13,6 +13,12 @@ create table if not exists public.feed_links (
   flair text,
   video_provider text,
   video_id text,
+  video_url text,
+  video_hls_url text,
+  video_dash_url text,
+  video_duration integer,
+  video_width integer,
+  video_height integer,
   score integer not null default 0,
   num_comments integer not null default 0,
   thumbnail_url text,
@@ -34,6 +40,24 @@ alter table public.feed_links
 
 alter table public.feed_links
   add column if not exists video_id text;
+
+alter table public.feed_links
+  add column if not exists video_url text;
+
+alter table public.feed_links
+  add column if not exists video_hls_url text;
+
+alter table public.feed_links
+  add column if not exists video_dash_url text;
+
+alter table public.feed_links
+  add column if not exists video_duration integer;
+
+alter table public.feed_links
+  add column if not exists video_width integer;
+
+alter table public.feed_links
+  add column if not exists video_height integer;
 
 create index if not exists feed_links_source_created_at_idx
   on public.feed_links (source_created_at desc);

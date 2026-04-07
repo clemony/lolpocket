@@ -22,8 +22,7 @@ const {
       }"
       :label="`${roundDecimal(player.stats.goldEarned / 1000)}k`"
       color="neutral"
-      variant="ghost"
-      size="2xs" />
+      variant="subtle" />
 
     <template #content>
       <ul>

@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "65 / 110 / 155 / 200 / 245"
+              "values": "75 / 120 / 165 / 210 / 255"
             },
             {
               "unit": "% of the target's maximum health",
@@ -32,7 +32,7 @@
           "attribute": "Bonus Monster Damage",
           "modifiers": [
             {
-              "values": "120 / 130 / 140 / 150 / 160"
+              "values": "140 / 150 / 160 / 170 / 180"
             }
           ]
         },
@@ -40,7 +40,7 @@
           "attribute": "Total Monster Damage",
           "modifiers": [
             {
-              "values": "185 / 240 / 295 / 350 / 405"
+              "values": "215 / 270 / 325 / 380 / 435"
             },
             {
               "unit": "% of the target's maximum health",

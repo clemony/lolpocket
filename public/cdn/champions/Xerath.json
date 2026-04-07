@@ -11,7 +11,7 @@
       "blurb": "Innate: Periodically,  Xerath's next basic attack restores  mana, doubled against an enemy  champion.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Xerath empowers his next basic attack to restore 30 - 195 (based on level) mana, doubled to 60 - 390 (based on level) against enemy champions.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Xerath empowers his next basic attack on-hit to restore 30 - 225 (based on level) mana, doubled to 60 - 450 (based on level) against enemy champions.</p>"
         },
         {
           "description": "Mana Surge's cooldown is reduced by 3.5 seconds whenever Xerath kills an enemy."
@@ -21,7 +21,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/p",
-      "notes": "Mana Surge will trigger even if the attack is  blocked.\nThe empowered attack will trigger against structures.\nPENDING FOR TEST:: Mana Surge's  interactions with  dodging, and  blinding effects.",
+      "notes": "Mana Surge will trigger even if the attack is  blocked, but not if it misses due to  blind.\nThe empowered attack will trigger against  structures.\nPENDING FOR TEST:: Mana Surge's  interactions with  dodging effects.",
       "targeting": "Passive"
     },
     {
@@ -132,7 +132,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/w",
-      "notes": "Xerath's location gets  revealed to the enemy (400 radius for 4.5 seconds) if Eye of Destruction's cast location is within 100 units of a valid enemy at the start of the cast time due to something related to targeting types.(bug)\nEye of Destruction's targeting indicator appears on the player's minimap, despite the ability not having the longer range of others with this quality.\nEye of Destruction will not fire and deal damage if Xerath dies during the 0.25s cast time.(note)",
+      "notes": "Xerath's location gets  revealed to the enemy (400 radius for 4.5 seconds) if Eye of Destruction's cast location is within 100 units of a valid enemy at the start of the cast time due to something related to targeting types.(bug)\nEye of Destruction's targeting indicator appears on the player's minimap, despite the ability not having the longer range of others with this quality.\nEye of Destruction will not fire and deal damage if Xerath dies during the 0.25s cast time.(unexpected)",
       "resource": "Mana",
       "spellEffects": "Area of effect",
       "spellshieldable": "True",
@@ -201,7 +201,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Arcane Barrage:</span> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.5 seconds. After catapulting the first missile, Xerath will reveal himself while there are enemy champions within Rite of the Arcane's range.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Arcane Barrage:</span> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.627 seconds. After catapulting the first missile, Xerath will reveal himself while there are enemy champions within Rite of the Arcane's range.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -270,7 +270,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/r",
-      "notes": "Rite of the Arcane cannot be canceled via movement commands during the first second of its channel.\nEach cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nArcane Barrage will not apply its increased damage per stack to the cast that granted the stack.\nOnly successive casts of the ability will benefit from the damage increase.\nA circular indicator will be displayed at the target location to signify that the area will be blasted.\nThe circle indicating the ability's range expands rapidly from near Xerath up to the maximum range over 1 second during the channel.\nThe maximum-range indicator is visible to both allies and enemies and is color coded for friendly (blue) or hostile (red).\nRite of the Arcane uses a barrage system so that it can be recast multiple times within a given period at no additional cost.\nXerath will turn to face toward the direction of the target location after using a recast.\nXerath gains a wider field of view during Rite of the Arcane.\nXerath can use  Dark Passage while channeling.\nThe following table refers for interactions while Xerath is  channeling:\n Teleport and  Recall are disabled for the first 1.25 seconds and otherwise interrupt the channel if they are used.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled for the first 1.25 seconds, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Hexflash\n\n\nInterrupted by\n\n Teleport  Recall\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nArcane Barrage will not apply its increased damage per stack to the cast that granted the stack.\nOnly successive casts of the ability will benefit from the damage increase.\nA circular indicator will be displayed at the target location to signify that the area will be blasted.\nThe circle indicating the ability's range expands rapidly from near Xerath up to the maximum range over 1 second during the channel.\nThe maximum-range indicator is visible to both allies and enemies and is color coded for friendly (blue) or hostile (red).\nRite of the Arcane uses a barrage system so that it can be recast multiple times within a given period at no additional cost.\nXerath will turn to face toward the direction of the target location after using a recast.\nXerath gains a wider field of view during Rite of the Arcane.\nXerath can use  Dark Passage while channeling.\nThe following table refers for interactions while Xerath is  channeling:\n Teleport and  Recall are disabled for the first 1.25 seconds and otherwise interrupt the channel if they are used.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled for the first 1.25 seconds, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Hexflash\n\n\nInterrupted by\n\n Teleport  Recall\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -290,6 +290,7 @@
     "abilityReliance": 90,
     "difficulty": 1
   },
+  "lore": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven insane with power, he now seeks to take what he believes is rightfully his and replace the upstart civilizations of the world with one fashioned in his image.",
   "patchLastChanged": "25.08",
   "positions": [
     "Middle",
@@ -321,7 +322,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3,
     "attackSpeed": 1.4
   },
   "price": {

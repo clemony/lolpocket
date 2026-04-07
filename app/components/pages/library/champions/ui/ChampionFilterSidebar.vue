@@ -22,8 +22,8 @@ const statItems = computed<CheckboxGroupItem[]>(() =>
 
 const shared = {
   indicator: "end",
-  color: "default",
-  variant: "select"
+  color: "base",
+  variant: "list"
 } satisfies CheckboxGroupProps
 
 const attackStep = ref<StepperItem[]>([

@@ -15,7 +15,7 @@
           "attribute": "Physical Damage",
           "modifiers": [
             {
-              "values": "75 / 100 / 125 / 150 / 175"
+              "values": "75 / 105 / 135 / 165 / 195"
             },
             {
               "unit": "% bonus AD",
@@ -27,7 +27,7 @@
           "attribute": "Total Physical Damage",
           "modifiers": [
             {
-              "values": "150 / 200 / 250 / 300 / 350"
+              "values": "150 / 210 / 270 / 330 / 390"
             },
             {
               "unit": "% bonus AD",
@@ -44,7 +44,7 @@
           "attribute": "Non-Champion Damage",
           "modifiers": [
             {
-              "values": "115 / 140 / 165 / 190 / 215"
+              "values": "115 / 145 / 175 / 205 / 235"
             },
             {
               "unit": "% bonus AD",
@@ -56,7 +56,7 @@
           "attribute": "Total Non-Champion Damage",
           "modifiers": [
             {
-              "values": "230 / 280 / 330 / 380 / 430"
+              "values": "230 / 290 / 350 / 410 / 470"
             },
             {
               "unit": "% bonus AD",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Darkin Bonus:</span> Reaping Slash's damage is modified to deal 65% AD (+ 6% (+ 3.5% per 100 bonus AD) of the target's maximum health) physical damage with each hit, for a total of 130% AD (+ 12% (+ 7% per 100 bonus AD) of the target's maximum health). This damage has a cap against monsters that does not include the bonus damage.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Darkin Slayer Bonus:</span> Reaping Slash's damage is modified to deal 65% AD (+ 6% (+ 3.5% per 100 bonus AD) of the target's maximum health) physical damage with each hit, for a total of 130% AD (+ 12% (+ 7% per 100 bonus AD) of the target's maximum health). This damage has a cap against monsters that does not include the bonus damage.</p>",
       "leveling": [
         {
           "attribute": "Capped Monster Damage per Hit",

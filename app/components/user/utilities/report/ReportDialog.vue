@@ -68,7 +68,9 @@ async function onSubmit(event: FormSubmitEvent<ReportSchema>) {
     @update:open="!threads().reportOpen ? form?.clear() : null">
     <slot v-if="button" :report="threads().report()">
       <UButton as-child>
-        <button class="text-xs hover:underline">Report</button>
+        <button class="text-xs hover:underline">
+          Report
+        </button>
       </UButton>
     </slot>
 

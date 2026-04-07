@@ -19,11 +19,11 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Plasma:</span> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 12% AP) bonus magic damage plus 1 - 6 (based on level) (+ 3% AP) additional magic damage per Plasma stack before application, up to a total of 8 - 48 (based on level) (+ 24% AP) bonus magic damage at 4 Plasma stacks before application. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 26.35 (based on level) (+ 12% AP) bonus magic damage plus 1 - 6.59 (based on level) (+ 3% AP) additional magic damage per Plasma stack before application, up to a total of 8 - 52.71 (based on level) (+ 24% AP) bonus magic damage at 4 Plasma stacks before application. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p",
-      "notes": "Adaptive force from items does not count toward evolutions.\nKai'Sa may receive an evolution even if she dies during its  lockout.\nKai'Sa can evolve an ability even if she hasn't learned it yet.\nKai'Sa can avoid the cast time of evolving by initiating  Recall immediately upon starting to evolve an ability.(bug)\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker's damage if triggered by it, but before a triggering basic attack's is.\nThis effectively increases the \"flat\" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target's MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.",
+      "notes": "Adaptive force from items does not count toward evolutions.\nKai'Sa may receive an evolution even if she dies during its  lockout.\nKai'Sa can evolve an ability even if she hasn't learned it yet.\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker's damage if triggered by it, but before a triggering basic attack's is.\nThis effectively increases the \"flat\" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target's MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.",
       "spellEffects": "Proc",
       "spellshieldable": "special",
       "targeting": "Passive"
@@ -97,7 +97,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 49 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
           "leveling": [
             {
               "attribute": "Total Evolved Single-Target Damage",
@@ -226,7 +226,7 @@
           "description": "Supercharge's current cooldown is reduced by 0.5 seconds on-attack."
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 65% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e",
@@ -272,6 +272,7 @@
       "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r",
       "notes": "Kai'Sa will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. Kai'Sa will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by Plasma.\nIf the targeted location is not valid, the range indicator will glow.\nThe enemy champion recently affected by Plasma must be in range of Kai'Sa for the targeted location to be valid, and not the targeted location itself.\nThe basic attack reset is not considered one for  Hail of Blades.",
       "resource": "Mana",
+      "speed": "3800",
       "targeting": "Location",
       "targetRange": "2000 / 2250 / 2500 / 2750 / 3000"
     }
@@ -287,6 +288,7 @@
     "abilityReliance": 10,
     "difficulty": 2
   },
+  "lore": "Claimed by the Void when she was only a child, Kai'Sa managed to survive through sheer tenacity and strength of will. Her experiences have made her a deadly hunter and, to some, the harbinger of a future they would rather not live to see. Having entered into an uneasy symbiosis with a living Void carapace, the time will soon come when she must decide whether to forgive those mortals who would call her a monster, and defeat the coming darkness together… or simply to forget, as the Void consumes the world that left her behind.",
   "patchLastChanged": "25.23",
   "positions": [
     "Bottom"
@@ -316,7 +318,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.7,
-    "attackDamage": 2.6,
     "attackSpeed": 1.8
   },
   "price": {

@@ -40,30 +40,6 @@ export const tierBg: Record<string, string> = {
   D: "bg-bronze"
 }
 
-const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
-const categories = [
-  "text",
-  "bg",
-  "border",
-  "outline",
-  "shadow",
-  "ring",
-  "ring-offset"
-]
-const colors = [
-  "p0",
-  "p1",
-  "p2",
-  "p3",
-  "p4",
-  "primary",
-  "insp",
-  "sorc",
-  "pre",
-  "res",
-  "dom",
-  "onhit"
-]
 export const twText: Record<string, string> = {
   p0: "text-p0",
   p1: "text-p1",
@@ -94,7 +70,7 @@ export const twBg: Record<string, string> = {
   shadow: "bg-n2",
   encore: "bg-encore",
   contaminate: "bg-contaminate",
-  diminuendo: "bg-diminuendo",
+  diminuendo: "bg-(--color-insp)!",
   spark: "bg-spark",
   flow: "bg-flow",
   whimsy: "bg-whimsy",

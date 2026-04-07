@@ -18,7 +18,8 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/p",
-      "notes": "Denting Blows will not activate Blast Shield.",
+      "notes": "Vault Breaker will trigger Blast Shield even if it's blocked by a  spell shield.(bug)\n Cease and Desist will not.\n Denting Blows will not activate Blast Shield.",
+      "spellshieldable": "False",
       "targeting": "Passive"
     },
     {
@@ -74,7 +75,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/q",
-      "notes": "Vault Breaker's dash range extends up to 50 units when going through a wall.\nTargets will be hit as soon as they come into contact with Vi.\nThe knockback direction will be toward Vi's facing direction regardless of where she hit the target.\nCasting  Flash during the dash will cause enemies at the destination to be hit by Vault Breaker.\nAs  Flash updates Vi's facing direction, affected champions will be knocked back in the direction the summoner spell was cast in.\nVi may cast spells that change her facing direction during the dash, including certain item actives and her own  Cease and Desist, to knock champions she collides with in a different direction.(note)\nItems that also initiate their own  dash immediately without delay can only redirect targets struck at Vault Breaker's maximum range. These items include:\n Hextech Rocketbelt\nStuck targets (including those that block Vault Breaker with a  spell shield) are briefly immune to being affected again by Vault Breaker from this player, for about 1.25 seconds.\nThe following table refers for interactions while Vi is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets.\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
+      "notes": "Vault Breaker's dash range extends up to 50 units when going through a wall.\nTargets will be hit as soon as they come into contact with Vi.\nThe knockback direction will be toward Vi's facing direction regardless of where she hit the target.\nCasting  Flash during the dash will cause enemies at the destination to be hit by Vault Breaker.\nAs  Flash updates Vi's facing direction, affected champions will be knocked back in the direction the summoner spell was cast in.\nVi may cast spells that change her facing direction during the dash, including certain item actives and her own  Cease and Desist, to knock champions she collides with in a different direction.(unexpected)\nItems that also initiate their own  dash immediately without delay can only redirect targets struck at Vault Breaker's maximum range. These items include:\n Hextech Rocketbelt\nStuck targets (including those that block Vault Breaker with a  spell shield) are briefly immune to being affected again by Vault Breaker from this player, for about 1.25 seconds.\nThe following table refers for interactions while Vi is  channeling:\n\n\nType\n\nCharge channel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled, but can still use trinkets.\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\n Hexflash (Recasts)\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
       "resource": "Mana",
       "speed": "1450 : 1540 (based on channel time)",
       "spellEffects": "aoe",
@@ -142,7 +143,7 @@
       "effectRadius": "600",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (75% + 30%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (100% + 30%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -170,11 +171,11 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/e",
-      "notes": "Applies  spell damage to the primary target, applies  basic damage required effects on the primary target, and applies  area damage to secondary targets.\nThe empowered attack has the same windup time as Vi's basic attacks.\nRelentless Force will only apply a stack of  Denting Blows to the primary target.\nIf the Relentless Force buff is about to run out as Vi starts the attack windup, the duration will be updated and extended to allow Vi to still sucessfully attack.",
+      "notes": "Applies  spell damage to the primary target, applies  basic damage required effects on the primary target, and applies  area damage to secondary targets.\nThe empowered attack has the same windup time as Vi's basic attacks.\n Spell shield will block damage to secondary targets, but not to the primary target.\nRelentless Force will only apply a stack of  Denting Blows to the primary target.\nIf the Relentless Force buff is about to run out as Vi starts the attack windup, the duration will be updated and extended to allow Vi to still sucessfully attack.",
       "rechargeRate": "12 / 11 / 10 / 9 / 8",
       "resource": "Mana",
       "spellEffects": "special",
-      "spellshieldable": "true",
+      "spellshieldable": "special",
       "targeting": "Auto"
     },
     {
@@ -209,7 +210,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/r",
-      "notes": "Vi will track the target if they change locations.\nShe will stop dashing if the target is too far away or moves beyond 1500 units.\nVi will land to the opposite side of the target from the dash after the grab ends.\nShe will not dash through the target if she would not be able to land to the opposite side of them, such as by terrain.\nSecondary targets will be affected as soon as they come into contact with Vi, and cannot be affected by this again for ~4 seconds.\nThe  airborne debuff cannot be overridden.\nThe dash will not be overridden if Vi  blinks during it.\nVi's  displacement immunity and the target's  reveal both last until the grab ends.\nIf the dash ends from entering resurrection or the target being too far away, the displacement immunity will remain for 7 seconds, and will otherwise be lost.(bug)\nThe dash speed increases with time travelled.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis will also occur for when Vi enters  resurrection during the cast time.\nIf the target becomes untargetable during the dash, Vi ends the dash prematurely and moves towards the target briefly, ignoring any movement commands. If Vi enters grabbing range, she will apply the  airborne effect but not deal any damage.\nCease and Desist will cancel and go on full cooldown if Vi is affected by  Fear Beyond Death's recast during the cast time.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Vi is  dashing and has grabbed the target:\n Flash cannot be used during the grab.\nThis lockout is removed as soon as the grab ends, after which the the target's remaining  airborne time will be 0.25 seconds.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Relentless Force is usable.  Vault Breaker is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Hexflash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+      "notes": "Vi will track the target if they change locations.\nShe will stop dashing if the target is too far away or moves beyond 1500 units.\nVi will land to the opposite side of the target from the dash after the grab ends.\nShe will not dash through the target if she would not be able to land to the opposite side of them, such as by terrain.\nSecondary targets will be affected as soon as they come into contact with Vi, and cannot be affected by this again for ~4 seconds.\nThe  airborne debuff cannot be overridden.\nThe dash will not be overridden if Vi  blinks during it.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate after 0.5 seconds of grabbing the target, or at the end of the dash if Cease and Desist is canceled, whichever comes first.\nVi's  displacement immunity and the target's  reveal both last until the grab ends.\nIf the dash ends from entering resurrection or the target being too far away, the displacement immunity will remain for 7 seconds, and will otherwise be lost.(bug)\nThe dash speed increases with time travelled.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis will also occur for when Vi enters  resurrection during the cast time.\nIf the target becomes untargetable during the dash, Vi ends the dash prematurely and moves towards the target briefly, ignoring any movement commands. If Vi enters grabbing range, she will apply the  airborne effect but not deal any damage.\nCease and Desist will cancel and go on full cooldown if Vi is affected by  Fear Beyond Death's recast during the cast time.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Vi is  dashing and has grabbed the target:\n Flash cannot be used during the grab.\nThis lockout is removed as soon as the grab ends, after which the the target's remaining  airborne time will be 0.25 seconds.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Relentless Force is usable.  Vault Breaker is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Hexflash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "resource": "Mana",
       "speed": "800",
       "spellEffects": "spell",
@@ -230,7 +231,8 @@
     "difficulty": 1
   },
   "fullName": "Violet",
-  "patchLastChanged": "25.13",
+  "lore": "Raised on the mean streets of Zaun, Vi is a hotheaded, impulsive, and fearsome woman with very little respect for authority. She has always been a shrewd survivor, both from her youthful troublemaking topside and an unfairly long stint in Stillwater Hold. Now working with the Piltover Enforcers to keep the peace instead of breaking it, she wields mighty hextech gauntlets that can punch through walls—and criminals—with equal ease.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -254,13 +256,12 @@
     "attackSpeed": 0.6
   },
   "statsPerLevel": {
-    "hp": 99,
+    "hp": 105,
     "mp": 65,
     "armor": 4.7,
     "magicResist": 2.1,
     "hpRegen": 1,
     "mpRegen": 0.7,
-    "attackDamage": 3,
     "attackSpeed": 2
   },
   "price": {

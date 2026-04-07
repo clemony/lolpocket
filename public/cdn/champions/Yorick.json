@@ -57,7 +57,7 @@
               "attribute": "Heal",
               "modifiers": [
                 {
-                  "values": "10 / 13.41 / 16.82 / 20.24 / 23.65 / 27.06 / 30.47 / 33.88 / 37.29 / 40.71 / 44.12 / 47.53 / 50.94 / 54.35 / 57.76 / 61.18 / 64.59 / 68"
+                  "values": "10 / 14 / 18 / 22 / 26 / 30 / 34 / 38 / 42 / 46 / 50 / 54 / 58 / 62 / 66 / 70 / 74 / 78"
                 },
                 {
                   "tooltip": "Scaling per rank:\n6 / 7 / 8 / 9 / 10% of his missing health",
@@ -70,7 +70,7 @@
               "attribute": "Non-Champion Heal",
               "modifiers": [
                 {
-                  "values": "5 / 6.71 / 8.41 / 10.12 / 11.82 / 13.53 / 15.24 / 16.94 / 18.65 / 20.35 / 22.06 / 23.76 / 25.47 / 27.18 / 28.88 / 30.59 / 32.29 / 34"
+                  "values": "5 / 7 / 9 / 11 / 13 / 15 / 17 / 19 / 21 / 23 / 25 / 27 / 29 / 31 / 33 / 35 / 37 / 39"
                 },
                 {
                   "tooltip": "Scaling per rank:\n3 / 3.5 / 4 / 4.5 / 5% of his missing health",
@@ -280,7 +280,8 @@
     "difficulty": 2
   },
   "fullName": "Yorick Mori",
-  "patchLastChanged": "25.19",
+  "lore": "The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking wraiths that he gathers to him. Yorick's monstrous actions belie his noble purpose: to free his home from the curse of the Ruination.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Top"
   ],
@@ -310,7 +311,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.8,
-    "attackDamage": 5,
     "attackSpeed": 2
   },
   "price": {

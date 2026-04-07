@@ -12,7 +12,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning's first slash hit and thrust on at least one enemy hit each generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15% / 30% / 45% / 60% (based on level) AD bonus physical damage and heal Xin Zhao for 3% / 3.5% / 4% (based on level) of his maximum health (+ 65% AP).</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning's first slash hit and thrust on at least one enemy hit each generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15% / 30% / 45% / 60% (based on level) AD bonus physical damage and heal Xin Zhao for 3% / 4% / 5% (based on level) of his maximum health (+ 65% AP).</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Challenge:</span> Wind Becomes Lightning and, if Crescent Guard has been learned, Xin Zhao's basic attacks and Audacious Charge, apply a Challenged mark to certain enemies hit for 3 seconds. Only one enemy can be marked as Challenged at a time; applying the mark to a new target removes it from the previous one. Audacious Charge and Crescent Guard have interactions against Challenged targets.</p>"
@@ -74,7 +74,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/q",
-      "notes": "Spell shield will only block the knock up.\nThe enhanced attacks present input buffering during their wind-up animation (Xin Zhao cannot be issued any commands until after it ends).",
+      "notes": "Spell shield will only block the knock up.\nThe enhanced attacks present input buffering during their wind-up animation (Xin Zhao cannot be issued any commands until after it ends).\nThe attack counter displayed on Xin Zhao's status bar is incremented on-hit.(bug)",
       "resource": "Mana",
       "spellEffects": "spell",
       "spellshieldable": "Special",
@@ -162,7 +162,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/w",
-      "notes": "PENDING FOR TEST: The self-reveal has not been fully tested for complete confirmation. Is the ability invisible when hitting minions and there is no enemy champion nearby? Is the tip of the ability enough to reveal him? Whether it can hit a minion or not? Just if he's around the exit of the fog of war, and even if he points towards the inside of the fog of war? [2]\n Spell shield will block both the slashes and the thrust.\nIf the spell shield blocks the first, or sometimes the second slash, it will block the rest of the ability, including the thrust. If it is activated after the first slash, it will only block up to 2 slashes and will not block the trust.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe thrust will occur from wherever Xin Zhao is at the end of the cast time.\nThe slashes will occur from wherever Xin Zhao is at the time during the first 0.15 seconds.\nWind Becomes Lightning's end point will not move in relation to Xin Zhao if he moves during the cast time.\nThe direction of the slashes will also not move during the cast time.\nThe first strike's hitbox includes a  275 radius 160° cone in front of Xin Zhao and an additional  125 radius around him.\nThe second strike's hitbox includes the same  125 radius around Xin Zhao, a missile with  1000 range and  80 total width, and a  -60 radius area check upon the end of the missile.\nThe 125 radius check does not hit champion summoned units.(note)\nBecause Wind Becomes Lightning uses an older type of 'healing based on life steal' and not applies life steal,  Spirit Visage will amplify the life gain twice (+25% life steal and +25% healing), for a total of +56.25%.\nEach of Wind Becomes Lightning's slashes are applied in a separate damage instance from each other.\nThis causes effects like  Bone Plating to be applied twice and  Black Cleaver's Carve to be applied multiple times.",
+      "notes": "PENDING FOR TEST: The self-reveal has not been fully tested for complete confirmation. Is the ability invisible when hitting minions and there is no enemy champion nearby? Is the tip of the ability enough to reveal him? Whether it can hit a minion or not? Just if he's around the exit of the fog of war, and even if he points towards the inside of the fog of war? [2]\n Spell shield will block both the slashes and the thrust.\nIf the spell shield blocks the first, or sometimes the second slash, it will block the rest of the ability, including the thrust. If it is activated after the first slash, it will only block up to 2 slashes and will not block the trust.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe thrust will occur from wherever Xin Zhao is at the end of the cast time.\nThe slashes will occur from wherever Xin Zhao is at the time during the first 0.15 seconds.\nWind Becomes Lightning's end point will not move in relation to Xin Zhao if he moves during the cast time.\nThe direction of the slashes will also not move during the cast time.\nThe first strike's hitbox includes a  275 radius 160° cone in front of Xin Zhao and an additional  125 radius around him.\nThe second strike's hitbox includes the same  125 radius around Xin Zhao, a missile with  1000 range and  80 total width, and a  -60 radius area check upon the end of the missile.\nThe 125 radius check does not hit champion summoned units.(unexpected)\nBecause Wind Becomes Lightning uses an older type of 'healing based on life steal' and not applies life steal,  Spirit Visage will amplify the life gain twice (+25% life steal and +25% healing), for a total of +56.25%.\nEach of Wind Becomes Lightning's slashes are applied in a separate damage instance from each other.\nThis causes effects like  Bone Plating to be applied twice and  Black Cleaver's Carve to be applied multiple times.",
       "projectile": "FALSE",
       "resource": "Mana",
       "speed": "6250",
@@ -206,7 +206,7 @@
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "40 / 45 / 50 / 55 / 60"
+                  "values": "40 / 50 / 60 / 70 / 80"
                 }
               ]
             }
@@ -289,7 +289,8 @@
     "difficulty": 1
   },
   "fullName": "Xin Zhao",
-  "patchLastChanged": "25.21",
+  "lore": "Xin Zhao is a resolute warrior loyal to the ruling Lightshield dynasty. Once condemned to the fighting pits of Noxus, he survived countless gladiatorial bouts, but after being freed by Demacian forces, he swore his life and allegiance to these brave liberators. Armed with his favored three-talon spear, Xin Zhao now fights for his adopted kingdom, audaciously challenging any foe, no matter the odds.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -319,7 +320,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 3.5
   },
   "price": {

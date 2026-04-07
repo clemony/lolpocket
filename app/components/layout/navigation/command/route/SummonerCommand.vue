@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 const emit = defineEmits(["update:open"])
-const { summoner, currentSummonerNav } = storeToRefs(sSession())
+const { summoner: sum, currentSummonerNav } = storeToRefs(sSession())
 
+const summoner = computed(() => safeObject(sum.value))
 const nav = computed(() => ({
   id: "summoner",
   items: currentSummonerNav.value.children.map((item) => ({
@@ -16,37 +17,47 @@ const nav = computed(() => ({
 </script>
 
 <template>
-  <div class="grid w-full grid-cols-[0.64fr_1fr] gap-x-3 self-start py-2 pl-4">
-    <div class="flex size-full max-h-full flex-col gap-2 overflow-hidden">
+  <div class="flex w-full flex-col px-3 py-2">
+    <!--     <div class="flex size-full max-h-full flex-col gap-2 overflow-hidden">
       <UpdateSummonerCard @update:open="emit('update:open', $event)" />
-
-      <SummonerCommunicationMenu
-        variant="solid"
-        color="p0"
-        :ui="{ base: 'w-full! grow! shadow-xs drop-shadow-none' }" />
-    </div>
-    <div class="grid w-full auto-rows-auto justify-start gap-2 pt-1 pr-2">
-      <div
-        class="relative grid w-full grid-cols-[auto_30px] items-center overflow-hidden px-4.5">
-        <div class="grow text-start">
-          <div class="mb-1 inline-flex grow items-center gap-1 align-baseline">
-            <span class="text-md font-bold">{{ summoner?.name }}</span>
-            <span class="inline-flex flex-wrap items-center text-xs text-n4">
-              <Icon
-                name="i-hash"
-                class="inline size-3 align-baseline text-n5" />
-              {{ summoner?.tag }}
-            </span>
+    </div> -->
+    <div class="w-full justify-start pt-1">
+      <div class="flex w-full gap-3 pr-1.5 pl-1">
+        <div class="relative grid w-14 justify-center self-center">
+          <HoverIcon
+            type="status"
+            :avatar="{
+              ui: { root: 'size-14 rounded-full' },
+              status: { class: '-translate-y-2' }
+            }"
+            :summoner />
+        </div>
+        <div class="grow pr-6 text-start">
+          <div class="mb-px inline-flex w-full gap-4">
+            <div class="inline-flex">
+              <span class="text-xl font-bold">{{ summoner.name }}</span>
+              <SummonerId
+                type="tag"
+                class="ml-1 w-full text-xs text-n4"
+                :summoner />
+            </div>
+            <UBadge
+              size="xs"
+              :label="`lv. ${summoner.level}`"
+              color="neutral"
+              :ui="{
+                base: 'translate-y-0.5 font-medium'
+              }" />
           </div>
           <div class="text-xs text-n5">
-            Deep dive into data analysis, pick {{ summoner?.name }}'s pockets,
-            or view their current match status.
+            Deep dive into data analysis, pick {{ summoner.name }}'s pockets, or
+            view their current match status.
           </div>
         </div>
       </div>
       <div class="relative grid h-max items-center">
         <CommandGroup
-          class="py-0 pt-0 pr-1"
+          class="py-0!"
           :ui="{ itemLeadingIcon: 'size-4' }"
           :items="nav" />
       </div>

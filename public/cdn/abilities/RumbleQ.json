@@ -151,7 +151,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.Flamespitter's total damage based on the target's health is capped at 65 - 300 (based on level) against monsters.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.Flamespitter's total damage based on the target's health is capped at 65 - 336.84 (based on level) against monsters.</p>",
       "leveling": [
         {
           "attribute": "Minimum Enhanced Damage",
@@ -293,7 +293,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/q",
-  "notes": "Flamespitter will deal an additional tick of damage to a minion if it would die to its per-tick damage. This is intended.\nRumble will instantly turn to face the cursor if he is not moving when Flamespitter is cast. He will also instantly turn when issuing an Attack order on an enemy while Flamespitter is active.\nIssuing an Attack Move order at a location will not cause Rumble to instantly turn.(note)\nIf Rumble does not path to a location after an Attack or Attack Move order, and the player issues a Stop or Hold order immediately afterwards, Rumble will not visually turn completely to face the new direction,(bug) but the area will turn to have the correct direction as intended.\nWhen Flamespitter's debuff is applied instead of refreshed, the target is dealt one additional instance of the debuff at the same time as the application. This is done by delaying the actual debuff by 0.1 seconds.\nIf the target is already affected by the debuff, its duration is refreshed to the maximum (0.6 seconds).",
+  "notes": "Flamespitter will deal an additional tick of damage to a minion if it would die to its per-tick damage. This is intended.\nRumble will instantly turn to face the cursor if he is not moving when Flamespitter is cast. He will also instantly turn when issuing an Attack order on an enemy while Flamespitter is active.\nIssuing an Attack Move order at a location will not cause Rumble to instantly turn.(unexpected)\nIf Rumble does not path to a location after an Attack or Attack Move order, and the player issues a Stop or Hold order immediately afterwards, Rumble will not visually turn completely to face the new direction,(bug) but the area will turn to have the correct direction as intended.\nWhen Flamespitter's debuff is applied instead of refreshed, the target is dealt one additional instance of the debuff at the same time as the application. This is done by delaying the actual debuff by 0.1 seconds.\nIf the target is already affected by the debuff, its duration is refreshed to the maximum (0.6 seconds).",
   "projectile": "FALSE",
   "spellEffects": "AoeDoT",
   "spellshieldable": "false",

@@ -1,0 +1,60 @@
+@layer components {
+  /* semantic marker for fully component-defined button sizing */
+  [data-slot="base"].btn-custom {
+  }
+
+  /* 4xs */
+  [data-slot="base"].btn-4xs {
+    @apply h-4! min-w-4 gap-1 px-1.5;
+
+    [data-slot="leadingIcon"],
+    [data-slot="trailingIcon"] {
+      @apply size-3.5;
+    }
+    [data-slot="leadingAvatar"] [data-slot="root"] {
+      @apply size-3;
+    }
+  }
+
+  /* 3xs */
+  [data-slot="base"].btn-3xs {
+    @apply h-5! min-w-5 gap-1 px-1.5;
+
+    [data-slot="label"] {
+      @apply text-xs;
+    }
+    [data-slot="leadingIcon"],
+    [data-slot="trailingIcon"] {
+      @apply size-3.25 **:stroke-[2.7];
+    }
+    [data-slot="leadingAvatar"] [data-slot="root"] {
+      @apply size-3;
+    }
+  }
+
+  /* 2xs */
+  [data-slot="base"].btn-2xs {
+    @apply h-6! gap-2 px-2;
+
+    [data-slot="leadingIcon"],
+    [data-slot="trailingIcon"] {
+      @apply size-3.5;
+    }
+    [data-slot="leadingAvatar"] [data-slot="root"] {
+      @apply size-3;
+    }
+  }
+
+  /* 2xl */
+  [data-slot="base"].btn-2xl {
+    @apply h-16! gap-2 px-3;
+
+    [data-slot="leadingIcon"],
+    [data-slot="trailingIcon"] {
+      @apply size-5;
+    }
+    [data-slot="leadingAvatar"] [data-slot="root"] {
+      @apply size-12;
+    }
+  }
+}

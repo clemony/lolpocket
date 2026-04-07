@@ -139,7 +139,7 @@
           "description": "If the charge is interrupted or completes without reactivation, Comet Spear is cancelled and the ability is put on full cooldown but refunds half the mana cost."
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Comet Spear deals 20 - 240 (based on level) (+ 115% bonus AD) bonus physical damage, affected by the previous damage reductions. Consumes the stacks upon recasting.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Comet Spear deals 20 - 265.88 (based on level) (+ 115% bonus AD) bonus physical damage, affected by the previous damage reductions. Consumes the stacks upon recasting.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/q",
@@ -184,7 +184,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Pantheon empowers his next basic attack within 4 seconds to have a 0.375-second cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 165% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Pantheon empowers his next basic attack within 4 seconds to have a 0.375-second cast time and strike the target 3 times over a brief period, dealing 40% - 55% (based on level) AD physical damage per hit, up to 120% - 170.29% (based on level) AD. Each hit is affected by critical strike modifiers and applies on-hit effects.</p>"
         },
         {
           "description": "Empowered Shield Vault resets Pantheon's basic attack timer. Pantheon will attempt to basic attack the target at the end of the leap."
@@ -233,17 +233,17 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> After recasting, Pantheon gains 5 - 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> After recasting, Pantheon gains 5 - 32.94 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p>"
         },
         {
           "description": "Pantheon can move during the cast time of Aegis Assault's recast."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/e",
-      "notes": "The initial cast count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability manually is not.\nPantheon retains his  invulnerability during the recast's cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nPantheon will slam from wherever he was at the start of the recast's' cast time.\n Spell shield will only block the slam's damage.\nThe following table refers for interactions while Pantheon is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+      "notes": "Deals  persistent area damage for the continuous strikes and  area damage with the slam.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability manually does not.\nPantheon retains his  invulnerability during the recast's cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nPantheon will slam from wherever he was at the start of the recast's' cast time.\n Spell shield will only block the slam's damage.\nThe following table refers for interactions while Pantheon is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
       "projectile": "FALSE",
       "resource": "Mana",
-      "spellEffects": "aoe",
+      "spellEffects": "special",
       "spellshieldable": "special",
       "targeting": "Direction"
     },
@@ -312,7 +312,7 @@
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/r",
       "innerRadius": "225 / 450",
-      "notes": "Grand Starfall's first channel can be interrupted by  cast-inhibiting crowd control, but its second channel cannot because Pantheon gains crowd control immunity during it.\nThe spear's damage is not empowered by  Mortal Will, nor increased against enemies below 20% of their maximum health.\nDuring the second channel, Pantheon gains a  minimum health threshold of 1.\nPantheon will instantly die upon reappearing if he reaches this threshold.\nAbilities that target Pantheon will redirect to the last location.\nPinging the ability will inform allies in chat which  visible enemy champions are in range of Grand Starfall.\nPantheon is considered to be in his original casting position even after leaping, but he will  blink to the target location the moment the second channel completes.\nUsing Grand Starfall will inform allies with a ping.\nIf Pantheon leaves the  Death Realm during Grand Starfall's shockwave, its hitbox will become invisible but it will still deal damage.(bug)\nThe following table refers for interactions while Pantheon is  channeling (first channel):\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nThe cast time and second channel have the same interactions except they can only be interrupted by  death.\nGrand Starfall's first channel will also be interrupted if he enters or leaves the  Death Realm.",
+      "notes": "Grand Starfall's first channel can be interrupted by  cast-inhibiting crowd control, but its second channel cannot because Pantheon gains crowd control immunity during it.\nThe spear's damage is not empowered by  Mortal Will, nor increased against enemies below 20% of their maximum health.\nDuring the second channel, Pantheon gains a  minimum health threshold of 1.\nPantheon will instantly die upon reappearing if he reaches this threshold.\nAbilities that target Pantheon will redirect to the last location.\nPinging the ability will inform allies in chat which  visible enemy champions are in range of Grand Starfall.\nPantheon is considered to be in his original casting position even after leaping, but he will  blink to the target location the moment the second channel completes.\nUsing Grand Starfall will inform allies with a ping.\nIf Pantheon leaves the  Death Realm during Grand Starfall's shockwave, its hitbox will become invisible but it will still deal damage.(bug)\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest activate at the end of Grand Starfall's second  channel, or at the end of the initial channel if it was interrupted.\nThe following table refers for interactions while Pantheon is  channeling (first channel):\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nThe cast time and second channel have the same interactions except they can only be interrupted by  death.\nGrand Starfall's first channel will also be interrupted if he enters or leaves the  Death Realm.",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -333,6 +333,7 @@
     "difficulty": 1
   },
   "fullName": "Atreus",
+  "lore": "Once an unwilling host to the Aspect of War, Atreus survived when the celestial power within him was slain, refusing to succumb to a blow that tore stars from the heavens. In time, he learned to embrace the power of his own mortality, and the stubborn resilience that goes along with it. Atreus now opposes the divine as Pantheon reborn, his unbreakable will fueling the fallen Aspect's weapons on the field of battle.",
   "patchLastChanged": "25.20",
   "positions": [
     "Jungle",
@@ -366,7 +367,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.5,
-    "attackDamage": 3.3,
     "attackSpeed": 3
   },
   "price": {

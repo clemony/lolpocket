@@ -39,7 +39,7 @@
       ]
     },
     {
-      "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 275 (based on level) bonus magic damage and stun the target for 1 second."
+      "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 305 (based on level) bonus magic damage and stun the target for 1 second."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/e",

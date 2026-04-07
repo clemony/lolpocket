@@ -21,7 +21,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/p",
-      "notes": "Spider Form's effects do not apply to structures.\nIf an ability hits while Elise is already in Spider Form, a Spiderling will spawn near her rather than being stored.\nThe Spiderlings have a leash range.\nSpider Form's basic attacks will apply other on-hit effects and can  critically strike as normal (the bonus damage does not).\nSpider Form's bonus damage and healing can be  blocked,  dodge and are not applied if Elise is  blind.\nApplies  proc damage on the bonus magic damage on-hit in Spider Form.\nThe Spiderlings apply  area damage.",
+      "notes": "Spider Form's effects do not apply to  structures.\nIf an ability hits while Elise is already in Spider Form, a Spiderling will spawn near her rather than being stored.\nThe Spiderlings have a leash range.\nSpider Form's basic attacks will apply other  on-hit effects and can  critically strike as normal (the bonus damage does not).\nSpider Form's bonus damage and healing can be  blocked,  dodge and are not applied if Elise is  blind.\nApplies  proc damage on the bonus magic damage on-hit in Spider Form.\nThe Spiderlings apply  area damage.",
       "spellEffects": "Special",
       "targeting": "Passive"
     },
@@ -54,7 +54,11 @@
               "attribute": "Capped Monster Damage",
               "modifiers": [
                 {
-                  "values": "75 / 100 / 125 / 150 / 175"
+                  "values": "65 / 85 / 105 / 125 / 145"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "90"
                 }
               ]
             }
@@ -62,7 +66,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/q",
-      "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nWith the exceptions of Elise's Death Blossom, Victorious, Blood Moon, and Super Galaxy skins; Neurotoxin's VFX size will scale uncapped based off the total damage it does. (note)",
+      "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nWith the exceptions of Elise's Death Blossom, Victorious, Blood Moon, and Super Galaxy skins; Neurotoxin's VFX size will scale uncapped based off the total damage it does. (unexpected)",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "2200",
@@ -100,7 +104,11 @@
               "attribute": "Capped Monster Damage",
               "modifiers": [
                 {
-                  "values": "75 / 100 / 125 / 150 / 175"
+                  "values": "65 / 85 / 105 / 125 / 145"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "90"
                 }
               ]
             }
@@ -111,7 +119,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/q",
-      "notes": "Elise will not dash if the target is within basic attack range.\nThis ability is disabled while  grounded or  rooted even if Elise is in the range in which she does not dash.\nIf Elise is allowed to dash, Venomous Bite can be used to cross sufficiently thin terrain.\n Spiderlings can cross walls and terrain to reach Venomous Bite's target and will attack provided Elise stays within their leash range.\nThere is a maximum range in which Spiderlings or Volatile Spiderlings can dash to the target.\n Spiderlings will dash even if they are  crowd controlled.\nVenomous Bite will always apply its effects after the cast time, even if the dash is interrupted.\nVenomous Bite's  reveal is a small area around the target, making it possible for them to exit the reveal radius and lose vision.\nVenomous Bite will still deal its damage but not apply on-hit effects if it is  blocked or  dodged. It cannot be missed while Elise is  blinded.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nWith the exceptions of Elise's Death Blossom, Victorious, Blood Moon, and Super Galaxy skins; Venomous Bite's VFX size will scale uncapped based off the total damage it does. (note)",
+      "notes": "Elise will not dash if the target is within basic attack range.\nThis ability is disabled while  grounded or  rooted even if Elise is in the range in which she does not dash.\nIf Elise is allowed to dash, Venomous Bite can be used to cross sufficiently thin terrain.\n Spiderlings can cross walls and terrain to reach Venomous Bite's target and will attack provided Elise stays within their leash range.\nThere is a maximum range in which Spiderlings or Volatile Spiderlings can dash to the target.\n Spiderlings will dash even if they are  crowd controlled.\nVenomous Bite will always apply its effects after the cast time, even if the dash is interrupted.\nVenomous Bite's  reveal is a small area around the target, making it possible for them to exit the reveal radius and lose vision.\nVenomous Bite will still deal its damage but not apply on-hit effects if it is  blocked or  dodged. It cannot be missed while Elise is  blinded.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nWith the exceptions of Elise's Death Blossom, Victorious, Blood Moon, and Super Galaxy skins; Venomous Bite's VFX size will scale uncapped based off the total damage it does. (unexpected)",
       "speed": "1150",
       "spellEffects": "spell",
       "spellshieldable": "True",
@@ -324,7 +332,8 @@
     "difficulty": 3
   },
   "fullName": "Elise Kythera Zaavan",
-  "patchLastChanged": "25.15",
+  "lore": "Elise is a deadly predator who dwells in a shuttered, lightless palace, deep within the oldest city of Noxus. Once mortal, she was the mistress of a powerful house, but the bite of a vile demigod transformed her into something beautiful, yet utterly inhuman—a spider-like creature, drawing unsuspecting prey into her web. To maintain her eternal youth, Elise now prefers to feed upon the naive and the faithless, and there are few who can resist her seductions.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Jungle"
   ],
@@ -354,7 +363,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3,
     "attackSpeed": 1.8
   },
   "price": {

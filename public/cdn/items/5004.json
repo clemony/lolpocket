@@ -1,0 +1,12 @@
+{
+  "id": 5004,
+  "name": "Philosopher's Stone",
+  "description": "150% Base Health Regen\n150% Base Mana Regen\n5 Gold Per 10 Seconds\n\n",
+  "gold": {
+    "base": 300,
+    "purchasable": true,
+    "total": 800,
+    "sell": 560
+  },
+  "tags": []
+}

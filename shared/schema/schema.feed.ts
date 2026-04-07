@@ -1,6 +1,7 @@
 import * as v from "valibot"
 
 export const feedSourceSchema = v.picklist(["reddit"])
+export const feedVideoProviderSchema = v.picklist(["reddit", "youtube"])
 
 export const feedKeywordSchema = v.pipe(v.string(), v.trim(), v.minLength(1))
 
@@ -35,8 +36,14 @@ export const feedLinkSchema = v.object({
   title: v.pipe(v.string(), v.minLength(1)),
   updated_at: v.optional(v.string()),
   url: v.pipe(v.string(), v.url()),
+  video_dash_url: v.optional(v.nullable(v.string())),
+  video_duration: v.optional(v.nullable(v.number())),
+  video_height: v.optional(v.nullable(v.number())),
+  video_hls_url: v.optional(v.nullable(v.string())),
   video_id: v.optional(v.nullable(v.string())),
-  video_provider: v.optional(v.nullable(v.string())),
+  video_provider: v.optional(v.nullable(feedVideoProviderSchema)),
+  video_url: v.optional(v.nullable(v.string())),
+  video_width: v.optional(v.nullable(v.number())),
 })
 
 export const feedListQuerySchema = v.object({

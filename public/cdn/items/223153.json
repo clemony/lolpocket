@@ -2,6 +2,11 @@
   "id": 223153,
   "name": "Blade of The Ruined King",
   "description": "30 Attack Damage\n20% Attack Speed\n10% Life Steal\n\nMist's Edge\nAttacks apply an additional enemy current Health physical damage On-Hit.\n\nClawing Shadows (0s)\nAttacking a champion 3 times Slows them.",
+  "stats": {
+    "attackDamage": 30,
+    "attackSpeed": 20,
+    "lifesteal": 10
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

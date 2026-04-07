@@ -5,7 +5,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Orianna commands  The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival.",
   "castTime": "None",
-  "cooldown": "6 / 5.25 / 4.5 / 3.75 / 3",
+  "cooldown": "7 / 6 / 5 / 4 / 3",
   "cost": "35",
   "damageType": "Magic damage",
   "effectRadius": "175",

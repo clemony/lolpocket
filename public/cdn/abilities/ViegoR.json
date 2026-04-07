@@ -2,7 +2,7 @@
   "key": "R",
   "name": "Heartbreaker",
   "affects": "Self, Enemies",
-  "blurb": "Active:  Viego  blinks with  displacement immunity to the target location and attacks the most wounded enemy champion nearby, which briefly  slows them, applies  on-hit effects, and deals bonus physical damage by a portion of their missing health.",
+  "blurb": "Active:  Viego  blinks with  displacement immunity to the target location, dealing physical damage based on his  critical strike chance to all nearby enemies upon arrival.",
   "castTime": "0.5",
   "cooldown": "120 / 100 / 80",
   "cost": "0",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "All targets hit are dealt 120% - 240% (based on critical strike chance) AD physical damage."
+      "description": "All targets hit are dealt 120% AD physical damage, increased by 0% - 70% (+ 0% - 21%) (based on critical strike chance)."
     },
     {
       "description": "If a Possession is discarded, Heartbreaker will be placed on a 1.5-second cooldown if it is not already on cooldown."

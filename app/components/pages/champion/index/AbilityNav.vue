@@ -21,7 +21,7 @@ const abilityCount = computed(() => `grid-cols-${champion.abilities.length}`)
           cn(
             'size-20! overflow-hidden rounded-full border-0 p-0 shadow-sm shadow-black/10 drop-shadow-sm drop-shadow-black/30 *:pointer-events-none',
             {
-              'bg-tint-p2/70! btn-active': route.hash === `#${ability.key}`,
+              'bg-tint-p2/70! btn-active': route.hash === `#${ability.key}`
             }
           )
         "

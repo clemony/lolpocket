@@ -36,7 +36,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Bola Strike's damage is modified to deal 50 - 305 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferocity Bonus:</span> Bola Strike's damage is modified to deal 50 - 335 (based on level) (+ 80% bonus AD) physical damage. The target is rooted instead of slowed.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rengar/ability-icon/e",

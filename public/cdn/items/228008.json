@@ -2,6 +2,15 @@
   "id": 228008,
   "name": "Runeglaive",
   "description": "65 Attack Damage\n85 Ability Power\n30% Attack Speed\n25 Ability Haste\n600 Health\n50 Armor\n10% Move Speed\n20% Critical Strike Chance\n\n",
+  "stats": {
+    "health": 600,
+    "abilityPower": 85,
+    "armor": 50,
+    "criticalStrikeChance": 20,
+    "attackDamage": 65,
+    "attackSpeed": 30,
+    "percentMovespeed": 10
+  },
   "gold": {
     "base": 9000,
     "purchasable": false,

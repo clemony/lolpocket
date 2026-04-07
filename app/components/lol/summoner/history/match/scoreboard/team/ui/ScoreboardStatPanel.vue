@@ -12,25 +12,21 @@ const { class: className, player } = defineProps<{
     <LazyUBadge
       v-if="
         player.stats.kills + player.stats.assists / player.stats.deaths ===
-        Infinity
+          Infinity
       "
       :ui="{ leadingIcon: 'ml-px scale-120 **:stroke-[1.8]' }"
       label="kda"
       icon="i-infinity"
       color="ad"
-      size="2xs"
+      size="xs"
       class="" />
 
     <Tooltip v-else label="KDA" class="badge-tooltip-hover">
-      <span class="text-2xs! leading-none font-semibold"
-        >{{ player.stats.kda }}&VeryThinSpace;:&VeryThinSpace;1</span
-      >
+      <span class="text-2xs! leading-none font-semibold">{{ player.stats.kda }}&VeryThinSpace;:&VeryThinSpace;1</span>
     </Tooltip>
 
     <Tooltip arrow label="Kill participation" class="badge-tooltip-hover">
-      <span class="text-2xs! leading-none font-semibold"
-        >{{ player.stats.kp }}%</span
-      >
+      <span class="text-2xs! leading-none font-semibold">{{ player.stats.kp }}%</span>
     </Tooltip>
   </div>
 </template>

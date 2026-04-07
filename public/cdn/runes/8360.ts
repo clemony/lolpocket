@@ -1,4 +1,4 @@
-// Updated Patch 16.4 - 02/23/2026 02:15:22 PM CST
+// Updated Patch 16.7 - 04/03/2026 09:49:38 AM CDT
 import type { Rune } from '#shared/types'
 
 const rune: Rune = {

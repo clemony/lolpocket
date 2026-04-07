@@ -7,7 +7,7 @@ const {
   class: className,
   clear = false,
 
-  size = ["sq-8", "8"],
+  size = ["sq-8", "8"]
 } = defineProps<{
   class?: HTMLAttributes["class"]
   clear?: boolean
@@ -24,7 +24,7 @@ const {
         :class="
           cn(
             'relative z-1 flex max-h-64 w-9/10 flex-col flex-wrap items-center gap-2 gap-y-3 py-0',
-            className,
+            className
           )
         ">
         <UButton

@@ -2,6 +2,10 @@
   "id": 226617,
   "name": "Moonstone Renewer",
   "description": "35 Ability Power\n200 Health\n30 Ability Haste\n125% Base Mana Regen\n\nStarlit Grace\nHealing or shielding yourself or an ally chains to the other champion, healing 20% or shielding 25% of the original amount.",
+  "stats": {
+    "health": 200,
+    "abilityPower": 35
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

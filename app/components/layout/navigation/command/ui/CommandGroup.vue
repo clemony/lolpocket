@@ -18,13 +18,17 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div v-if="items" :class="cn('w-full p-3', className)">
+  <div v-if="items" :class="cn('w-full py-2', className)">
     <slot>
       <UUser
         size="xl"
-        :ui="{ root: 'mb-2 ml-1', name: 'mb-1', wrapper: 'pr-6' }"
+        :ui="{
+          root: cn('ml-1.25 py-2', items.description ? 'mb-1' : ''),
+          name: 'mb-1',
+          wrapper: 'pr-6'
+        }"
         :name="items.label"
-        :description="items.description" />
+        :description="items.description ?? undefined" />
     </slot>
     <div class="flex flex-col gap-1">
       <CommandButton

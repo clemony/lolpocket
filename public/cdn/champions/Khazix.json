@@ -12,7 +12,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 150 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/p",
@@ -46,7 +46,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "110"
+                  "values": "105"
                 }
               ]
             },
@@ -58,7 +58,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "231"
+                  "values": "220.5"
                 }
               ]
             }
@@ -87,7 +87,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
-      "notes": "No additional details.",
+      "notes": "A team's allies are  champions,  pets,  minions and outer  turrets.\n Monsters are considered allies for other monsters.\n Wards do not prevent Isolation.\nA number of targetable champion summoned units are specifically tagged to not be a valid ally of a potentially Isolated target. These units are:\n Gangplank's  Powder Keg\n Illaoi's  Prophet of an Elder God\n Jhin's  Captive Audience\n Nidalee's  Bushwhack\n Rek'Sai's  Tunnel\n Senna's  Absolution's Mist Wraiths\n Teemo's  Noxious Trap\n Viego's  Sovereign's Domination's Mist Wraiths\n Yorick's  Dark Procession\nIsolation effects are registered at the following timings for each ability:\nFor  Evolved Reaper Claws, the start of cast.\nFor  Evolved Spike Racks, when the enemy is hit.\nFor Taste Their Fear, the end of cast.(bug) This means that if the target is no longer Isolated when the ability hits them, Taste Their Fear will not apply the respective bonuses.\nIsolated targets are marked by an  indicator, shown to Kha'Zix, when visible and within 2500 units of him. This indicator is independent of the actual effects and its timing may not be fully accurate.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
       "spellEffects": "Single target",
       "spellshieldable": "True",
       "targeting": "Unit",
@@ -256,7 +256,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/r",
-      "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nKha'Zix receives the evolution even if he dies while in cast time.\nEvery time Void Assault is ranked, a secondary menu will pop up for Kha'Zix to select an ability to evolve, this can only be done once per ability.\nThe only way for Kha'Zix to evolve all of his abilities is to gain the fourth evolution point by being victorious in The Hunt is On! (by scoring a  takedown on  Rengar).\nUsing a  basic attack  breaks stealth at the end of the attack windup.(note)",
+      "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nKha'Zix receives the evolution even if he dies while in cast time.\nEvery time Void Assault is ranked, a secondary menu will pop up for Kha'Zix to select an ability to evolve, this can only be done once per ability.\nThe only way for Kha'Zix to evolve all of his abilities is to gain the fourth evolution point by being victorious in The Hunt is On! (by scoring a  takedown on  Rengar).\nUsing a  basic attack  breaks stealth at the end of the attack windup.(unexpected)",
       "resource": "Mana",
       "targeting": "Auto"
     },
@@ -288,7 +288,8 @@
     "abilityReliance": 55,
     "difficulty": 2
   },
-  "patchLastChanged": "25.24",
+  "lore": "The Void grows, and the Void adapts—in none of its myriad spawn are these truths more apparent than Kha'Zix. Evolution drives the core of this mutating horror, born to survive and to slay the strong. Where it struggles to do so, it grows new, more effective ways to counter and kill its prey. Initially a mindless beast, Kha'Zix's intelligence has developed as much as its form. Now, the creature plans out its hunts, and even utilizes the visceral terror it engenders in its victims.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Jungle"
   ],
@@ -300,7 +301,7 @@
   "stats": {
     "hp": 643,
     "mp": 327,
-    "movespeed": 350,
+    "movespeed": 345,
     "armor": 32,
     "magicResist": 32,
     "attackRange": 125,
@@ -316,7 +317,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.5,
-    "attackDamage": 3.1,
     "attackSpeed": 2.7
   },
   "price": {

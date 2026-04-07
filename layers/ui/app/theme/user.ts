@@ -73,13 +73,7 @@ export const userTheme = defineUiTheme({
         description: "text-pc",
         root: "gap-3"
       },
-      header: {
-        name: "overflow-y-visible font-serif text-[36px]/15 font-bold! text-pc/94 drop-shadow-sm",
-        description:
-          "inline-flex items-center gap-4 px-0.5 align-baseline font-medium text-pc",
-        root: "gap-4",
-        avatar: "size-20 translate-y-1"
-      }
+
     },
     to: {
       false: {

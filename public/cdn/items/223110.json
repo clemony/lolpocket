@@ -2,6 +2,10 @@
   "id": 223110,
   "name": "Frozen Heart",
   "description": "90 Armor\n450 Mana\n15 Ability Haste\n\nWinter's Caress\nReduces the Attack Speed of nearby enemies.",
+  "stats": {
+    "mana": 450,
+    "armor": 90
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

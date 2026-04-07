@@ -7,7 +7,7 @@ export async function accountFetch() {
   const progress = ref<number>(0)
   const toast = useToast()
   const { settings, account, pockets } = await $fetch<UserProfileResponse>(
-    "/api/supabase/fetch/account",
+    "/api/supabase/account.fetch",
     {
       headers: useRequestHeaders(["cookie"])
     }
@@ -52,6 +52,7 @@ export async function accountFetch() {
   progress.value = 100
 
   toast.add({
+    orientation: "horizontal",
     title: "Welcome back!",
     description: `Great to see you, ${
       user().account?.name ?? user().account?.username ?? "Summoner"

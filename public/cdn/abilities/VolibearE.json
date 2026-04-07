@@ -4,8 +4,8 @@
   "affects": "Enemies, Self",
   "blurb": "Active:  Volibear conjures a lightning bolt to strike the target location, dealing magic damage to enemies hit based on their maximum health and  slowing them for a short time.",
   "castTime": "none",
-  "cooldown": "14",
-  "cost": "60",
+  "cooldown": "16",
+  "cost": "50",
   "damageType": "Magic damage",
   "effectRadius": "325 / 425",
   "effects": [
@@ -36,7 +36,7 @@
           "attribute": "Non-Champion Capped Damage",
           "modifiers": [
             {
-              "values": "190 / 305 / 420 / 535 / 650"
+              "values": "150 / 265 / 380 / 495 / 610"
             },
             {
               "unit": "% AP",

@@ -50,7 +50,7 @@ const { filters } = storeToRefs(is())
         data-tip="Item Quality">
         <UButton
           size="xl"
-          color="p0"
+          color="base"
           icon="i-lucide-list-ordered"
           :ui="{
             base: 'tooltip tooltip-left rounded-full'
@@ -86,7 +86,7 @@ const { filters } = storeToRefs(is())
                 trailingIcon: cn('size-4.5')
               }"
               :trailing-icon="filters.rank === item.value ? 'i-tick' : ''"
-              variant="highlight"
+              variant="soft"
               :active="filters.rank === item.value" />
           </ListboxItem>
         </ListboxContent>
@@ -98,7 +98,7 @@ const { filters } = storeToRefs(is())
     v-model:model-value="filters.rank"
     :items="tabs"
     size="md"
-    variant="ghost"
+    variant="pill"
     color="neutral"
     :ui="{
       root: '-ml-px flex! grow-0! justify-self-start',

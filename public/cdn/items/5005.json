@@ -1,0 +1,12 @@
+{
+  "id": 5005,
+  "name": "<font color='#C21807'>Pot</font><font color='#FFBF00'>ion</font> <font color='#00A86B'>Of</font> <font color='#40E0D0'>Col</font><font color='#8F00FF'>ors</font>",
+  "description": "Party Time\nFor the next 5 minutes, your healthbar periodically changes color!\n\nThis is for your eyes only! :)",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "tags": []
+}

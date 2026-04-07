@@ -9,12 +9,12 @@ const { champion, wrapperClass } = defineProps<{
 
 const resource = computed(() =>
   abilityResources.find(
-    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase(),
-  ),
+    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase()
+  )
 )
 
 const damageType = computed(() =>
-  damageTypes.find((d) => d.type === champion.adaptiveType),
+  damageTypes.find((d) => d.type === champion.adaptiveType)
 )
 </script>
 
@@ -63,7 +63,7 @@ const damageType = computed(() =>
             :name="damageType?.icon"
             :class="
               cn('absolute size-3.5! shrink-0 ds-2xs', {
-                'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage',
+                'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage'
               })
             " />
           {{ champion.adaptiveType?.replace("damage", "") }}

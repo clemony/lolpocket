@@ -24,7 +24,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/w",
-  "notes": "The goo missile is VFX only, to convey which location Singed threw the adhesive at. It has a fixed travel time but is independent from when the zone is established. It is not destructible by effects such as  Wind Wall.\nMega Adhesive's  slow and  ground debuffs are each marked as non-dispellable, so they are not removed by most  cleanses. Each is however allowed to be removed by cleanses that also grant immunity to the debuff type, such as  Olaf's  Ragnarok.",
+  "notes": "The goo missile is a projectile. It has a fixed travel time but is independent from when the zone is established. It is destructible by effects such as  Wind Wall and will destroy item spell shields if the goo missile is thrown past an enemy champion.\nMega Adhesive's  slow and  ground debuffs are each marked as non-dispellable, so they are not removed by most  cleanses. Each is however allowed to be removed by cleanses that also grant immunity to the debuff type, such as  Olaf's  Ragnarok.",
   "projectile": "TRUE",
   "resource": "Mana",
   "spellshieldable": "false",

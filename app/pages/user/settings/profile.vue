@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import { settingsUpdate } from "~/composables/account/settingsUpdate"
+
 definePageMeta({
   title: "Profile",
   order: 2,
   description:
     "Set your public profile display settings and hide your annoyances.",
-  icon: "i-lucide-circle-user-round",
+  icon: "i-mingcute-badge-line",
+  class: "scale-110 ",
   path: "/settings/profile",
   auth: true,
   prefix: "Settings"
@@ -15,10 +18,42 @@ const labelClass =
   "w-full h-16 border-b flex justify-between items-center pr-1 !border-b-p2 [&_h5]:font-semibold [&_h5]:text-pc/70"
 
 const settings = computed(() => user().settings)
+const isSaving = ref(false)
+
+async function saveProfile() {
+  isSaving.value = true
+
+  try {
+    await accountUpdate(
+      {
+        splash: user().account?.splash ?? null,
+        title: user().account?.title ?? null
+      },
+      { silent: true }
+    )
+    await settingsUpdate({
+      show_allies: settings.value?.show_allies,
+      show_flex: settings.value?.show_flex,
+      show_solo: settings.value?.show_solo
+    })
+
+    useToast().add({
+      color: "neutral",
+      title: "Profile updated",
+      description: "Your profile changes have been saved.",
+      icon: "tick"
+    })
+  } catch (error) {
+    console.error("Failed to save profile", error)
+    sendErrorToast()
+  } finally {
+    isSaving.value = false
+  }
+}
 </script>
 
 <template>
-  <form v-if="settings" class="w-full space-y-12" @submit.prevent>
+  <form v-if="settings" class="w-full space-y-12" @submit.prevent="saveProfile">
     <UFormField title="" description=""></UFormField>
     <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
@@ -38,9 +73,7 @@ const settings = computed(() => user().settings)
     <fieldset class="space-y-6">
       <div class="leading-4">
         <Label class="mb-2 text-xl font-semibold" as="legend">Title</Label>
-        <p class="label text-wrap">
-          Display a title from an earned Badge.
-        </p>
+        <p class="label text-wrap">Display a title from an earned Badge.</p>
       </div>
     </fieldset>
 
@@ -105,7 +138,7 @@ const settings = computed(() => user().settings)
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral">
+      <UButton color="neutral" type="submit" :loading="isSaving">
         Update account
       </UButton>
     </div>

@@ -6,6 +6,7 @@ const props = withDefaults(
     AvatarProps & {
       id: number | null
       pin?: boolean
+      interactive?: boolean
       class?: HTMLAttributes["class"]
       loadingIcon?: LoadingStyle
       map?: number
@@ -40,14 +41,7 @@ const delegated = reactiveOmit(props, "class")
     :src="id ? `/img/item/${id}.webp` : ''"
     :label="id ? itemNameById(id) : ''">
     <template v-if="props.effects !== false">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div v-for="i in 8" :key="i"></div>
     </template>
     <template #content>
       <LazyItemTooltip v-if="id" :id :map />

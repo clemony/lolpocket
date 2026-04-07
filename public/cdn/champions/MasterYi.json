@@ -26,7 +26,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/p",
-      "notes": "The second strike separately rolls a  critical strike.\nIf the stacks expire during the empowered attack's first strike animation, the attack cancels and the normal basic attack windup starts. (bug)\nDouble Strike does not cause Master Yi to attack twice. Effects that trigger on completing the attack windup will only trigger once and thus do not interact with Double Strike. (e.g.  Hail of Blades).\nSince Double Strike resets the counter with the first strike, and the second strike applies on-hit effects, the second strike is able to add a stack for the next Double Strike activation.\nIf Double Strike's target becomes  untargetable shortly after the triggering attack, it will still occur and deal its effects as usual.\nBasic attacks that are  dodged,  blocked, or missed while Master Yi is  blinded will not generate any stacks of Double Strike nor refresh the duration of active stacks.\nDouble Strike's interaction with parry effects at 3 stacks (the damage of the strikes is negated in all cases):\nIf the triggering basic attack is  dodged, Master Yi will not perform the second strike nor consume the stacks.\nIf the triggering basic attack is  blocked, Master Yi will perform the second strike but not consume the stacks.\nIf the triggering basic attack misses while Master Yi is  blinded, he will consume the stacks.\nThe second strike will fail to hit the target at all if the triggering attack misses.  On-attack effects do not occur, despite the attack animation playing.(bug)",
+      "notes": "The second strike separately rolls a  critical strike.\nPENDING FOR TEST: Does it trigger  Sundered Sky's Lightshield Strike?\nIf the stacks expire during the empowered attack's first strike animation, the attack cancels and the normal basic attack windup starts. (bug)\nDouble Strike does not cause Master Yi to attack twice. Effects that trigger on completing the attack windup will only trigger once and thus do not interact with Double Strike. (e.g.  Hail of Blades).\nSince Double Strike resets the counter with the first strike, and the second strike applies on-hit effects, the second strike is able to add a stack for the next Double Strike activation.\nIf Double Strike's target becomes  untargetable shortly after the triggering attack, it will still occur and deal its effects as usual.\nBasic attacks that are  dodged,  blocked, or missed while Master Yi is  blinded will not generate any stacks of Double Strike nor refresh the duration of active stacks.\nDouble Strike's interaction with parry effects at 3 stacks (the damage of the strikes is negated in all cases):\nIf the triggering basic attack is  dodged, Master Yi will not perform the second strike nor consume the stacks.\nIf the triggering basic attack is  blocked, Master Yi will perform the second strike but not consume the stacks.\nIf the triggering basic attack misses while Master Yi is  blinded, he will consume the stacks.\nThe second strike will fail to hit the target at all if the triggering attack misses.  On-attack effects do not occur, despite the attack animation playing.(bug)",
       "spellEffects": "attack",
       "targeting": "Passive"
     },
@@ -48,7 +48,7 @@
           "description": "Upon finishing marking, Master Yi reappears 75 units in the targeted direction, or in front of the target otherwise, and then becomes able to act again[ after 0.165 seconds. ][ 1.087 seconds total after the start of the cast with 4 bounces. ]If the primary target dies or is too far away during the delay, Master Yi will reappear at the initial cast location instead."
         },
         {
-          "description": "Master Yi then detonates the marks to deal physical damage and apply on-hit effects, with on-hit damage reduced to 65% effectiveness. Marks after the first on the same target instead detonate instantly upon application to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 16.25% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
+          "description": "Master Yi then detonates the marks to deal physical damage and apply on-hit effects, with on-hit damage reduced to 75% effectiveness. Marks after the first on the same target instead detonate instantly upon application to deal 25% damage and apply on-hit effects, with on-hit damage reduced to 18.75% effectiveness. Alpha Strike deals bonus physical damage to monsters per hit.",
           "leveling": [
             {
               "attribute": "Primary Physical Damage",
@@ -133,7 +133,7 @@
           ]
         },
         {
-          "description": "Alpha Strike's primary and lesser damage can critically strike for[ (175% + 30%) and (43.75% + 7.5%) damage respectively. ][ 100% + 100% of bonus critical damage, reduced to 25% for the lesser damage. ]"
+          "description": "Alpha Strike's primary and lesser damage can critically strike for[ (200% + 30%) damage. ][ 100% + 100% of bonus critical damage. ]"
         },
         {
           "description": "Basic attacks on-hit reduce Alpha Strike's current cooldown by 1 second, affected by ability haste."
@@ -316,7 +316,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/r",
-      "notes": "Highlander can be cast during  Alpha Strike.\nThere are two situations that can happen if Master Yi uses Highlander while Highlander's buff is active.\nIf the buff's duration is under 7 seconds, the buff refreshes to 7 seconds.\nIf the buff's duration is above 7 seconds, nothing happens.",
+      "notes": "Highlander can be cast during  Alpha Strike.",
       "resource": "Mana",
       "targeting": "Auto"
     }
@@ -332,7 +332,8 @@
     "abilityReliance": 10,
     "difficulty": 1
   },
-  "patchLastChanged": "25.24",
+  "lore": "Master Yi has tempered his body and sharpened his mind, so that thought and action have become almost as one. Though he chooses to enter into violence only as a last resort, the grace and speed of his blade ensures resolution is always swift. As one of the last living practitioners of the Ionian art of Wuju, Yi has devoted his life to continuing the legacy of his people—scrutinizing potential new disciples with the Seven Lenses of Insight to identify the most worthy among them.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Jungle"
   ],
@@ -358,11 +359,10 @@
   "statsPerLevel": {
     "hp": 105,
     "mp": 42,
-    "armor": 4.2,
+    "armor": 4.5,
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.5,
-    "attackDamage": 2.5,
     "attackSpeed": 2.5
   },
   "price": {

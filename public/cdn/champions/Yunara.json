@@ -16,6 +16,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/p",
+      "notes": "PENDING FOR TEST: Interaction with parry effects ( dodge,  block and  blind.",
       "spellEffects": "proc",
       "targeting": "Passive"
     },
@@ -48,14 +49,14 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara unleashes for 5 seconds: gaining bonus attack speed, dealing additional bonus magic damage on-hit, and augmenting her basic attacks to have increased missile speed, a 40% lower windup time, and an uncancellable windup. Her basic attacks are also empowered to spread to each enemy near the target, dealing 30% AD physical damage.Each spread attack applies life steal and on-hit effects, with on-hit damage reduced to 30% effectiveness, and will critically strike if the triggering attack does. Spread attacks deal 250% damage against minions below 30% maximum health.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara unleashes for 5 seconds: gaining bonus attack speed, dealing additional bonus magic damage on-hit, and augmenting her basic attacks to have increased missile speed, a 40% lower windup time, and an uncancellable windup. Her basic attacks are also empowered to spread to each enemy near the target, dealing 30% AD physical damage.Each spread attack applies life steal and on-hit effects, with on-hit damage reduced to 30% effectiveness, and will critically strike for (200% + 30%) damage if the triggering attack does. Spread attacks deal 250% damage against minions below 30% maximum health.</p>",
           "leveling": [
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
                 {
                   "unit": "%",
-                  "values": "25 / 35 / 45 / 55 / 65"
+                  "values": "20 / 30 / 40 / 50 / 60"
                 }
               ]
             },
@@ -212,14 +213,14 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara fires a beam of spirit magic in the target direction that deals 175 / 350 / 525 (based on Transcend One's Self's Rank) (+ 150% bonus AD) (+ 75% AP) magic damage to enemies hit and slows them by 99% decaying over 1 second, as well as granting sight of the surrounding area.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara fires a beam of spirit magic in the target direction that deals 160 / 320 / 480 (based on Transcend One's Self's Rank) (+ 120% bonus AD) (+ 75% AP) magic damage to enemies hit and slows them by 99% decaying over 1 second, as well as granting sight of the surrounding area.</p>"
         },
         {
           "description": "This ability benefits from ultimate ability effects and is the upgraded version of Arc of Judgment during Transcendent State."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/w",
-      "notes": "Arc of Ruin grants  sight of its surroundings during the cast time and for 0.3 seconds afterwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Ruin does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed. This is intended.",
+      "notes": "Arc of Ruin grants  sight of its surroundings during the cast time and for 0.3 seconds afterwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Ruin does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed.\nDeveloper's Note: This is intended.",
       "projectile": "FALSE",
       "spellEffects": "spellaoe",
       "spellshieldable": "true",
@@ -298,7 +299,7 @@
               "attribute": "Arc of Ruin Base Damage",
               "modifiers": [
                 {
-                  "values": "175 / 350 / 525"
+                  "values": "160 / 320 / 480"
                 }
               ]
             },
@@ -333,7 +334,8 @@
     "abilityReliance": 35,
     "difficulty": 2
   },
-  "patchLastChanged": "25.24",
+  "lore": "Unwavering in her devotion to Ionia, Yunara has spent centuries cloistered away in the spirit realm honing her skills with the Aion Er'na, a legendary Kinkou relic. Despite all she has sacrificed, Yunara's vow to rid the land of disharmony and strife remains unbroken, as does her faith. But the world that now awaits her—and the shadow of an ancient threat risen once more—will test every ounce of her resolve.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Bottom"
   ],
@@ -361,7 +363,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 2.5,
     "attackSpeed": 2
   },
   "price": {

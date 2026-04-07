@@ -33,13 +33,13 @@ const role = computed(() => {
             active ||
             (champFilter().filters.role &&
               champFilter().filters.role.push(role.name)),
-          'pr-3': active && clear,
+          'pr-3': active && clear
         },
-        className,
+        className
       )
     "
     :style="{
-      backgroundColor: `${(champFilter().filters.role && champFilter().filters.role.push(role.name)) || active ? role.color : 'transparent'}`,
+      backgroundColor: `${(champFilter().filters.role && champFilter().filters.role.push(role.name)) || active ? role.color : 'transparent'}`
     }">
     <Element square size="sm">
       <component

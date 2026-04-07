@@ -7,7 +7,7 @@
   "effectRadius": "1350 /  450",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 580 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/p",

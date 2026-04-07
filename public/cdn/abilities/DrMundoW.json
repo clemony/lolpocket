@@ -10,7 +10,7 @@
   "effectRadius": "325",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 96.76% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage per Tick",

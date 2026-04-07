@@ -60,9 +60,11 @@ onMounted(() => {
   execute()
 })
 
-const orrnUpgrade = computed(() => {
-  if (!item.value || !item.value?.ornnUpgrade) return null
-  return item.value?.ornnUpgrade
+const masterworkUpgradeId = computed(() => {
+  if (!item.value || !item.value.masterwork || item.value.masterwork === true)
+    return null
+
+  return item.value.masterwork.upgradeId
 })
 </script>
 
@@ -199,7 +201,7 @@ const orrnUpgrade = computed(() => {
               color="neutral" />
 
             <div
-              class="group grid w-full max-w-full grid-cols-[repeat(auto-fill,minmax(32px,1fr))] grid-rows-[repeat(auto-fill,minmax(32px,1fr))] items-center justify-start gap-1 overflow-hidden px-1">
+              class="group grid w-full max-w-full grid-cols-[repeat(auto-fill,minmax(32px,1fr))] grid-rows-[repeat(auto-fill,minmax(32px,1fr))] items-center justify-start gap-1 overflow-hidden p-1">
               <LazyAvatar
                 v-for="(buildItem, i) in filteredInto"
                 :id="buildItem.id"

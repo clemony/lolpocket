@@ -15,6 +15,9 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Intent:</span> Yone's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]</p>"
         },
         {
+          "description": "Yone's critical strikes deal only[ (180% + 27%) AD physical damage. ][ 90% of the critical damage champions usually have. ]"
+        },
+        {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Steel and Spirit:</span> Yone's basic attacks alternate between his Steel Sword and Azakana Sword on-attack. Yone begins attacking with Steel Sword, and basic attacks with Azakana Sword deal 50% AD physical damage and 50% AD magic damage.</p>"
         }
       ],
@@ -36,7 +39,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Mortal Steel's damage based on its AD ratio can critically strike for (175% + 30%) damage.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit and applies on-hit and on-attack effects to the first enemy hit. Mortal Steel's damage based on its AD ratio can critically strike for (180% + 27%) damage.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -46,7 +49,23 @@
                 },
                 {
                   "unit": "% AD",
-                  "values": "105"
+                  "values": "110"
+                }
+              ]
+            },
+            {
+              "attribute": "Critical Strike Damage",
+              "modifiers": [
+                {
+                  "values": "25 / 50 / 75 / 100 / 125"
+                },
+                {
+                  "unit": "(198%",
+                  "values": "0"
+                },
+                {
+                  "unit": "%) AD",
+                  "values": "29.7"
                 }
               ]
             }
@@ -63,7 +82,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/q",
-      "notes": "This ability always employs Quick cast.\nMortal Steel applies  basic damage for the first (closest) enemy hit and  area damage for secondary enemies:\nMortal Steel will apply  on-hit effects to the first target hit, but will not do so to the secondary ones.\nMortal Steel will not apply  spell effects to the first target hit, but will do so to the secondary ones.\n Spell vamp will only grant  healing from the damage dealt to secondary targets, and healing is reduced to 33% effectiveness, accordingly.\n Life steal will heal based on the damage dealt to the first target hit.\nMortal Steel will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\nAll three of the thrust, whirlwind and dash roll for a critical strike on each individual target hit.\n Blinking during Mortal Steel's cast with two stacks of Gathering Storm (after the cast time) will end the dash prematurely but enemies in range of Yone at the new location are affected. The whirlwind's trajectory cannot be changed once it has already been unleashed.\nOnly the whirlwind can be  intercepted.\nEach parry has different interactions with this ability, whether it's the first target of Mortal Steel or the secondary one. In either case Yone still gains a stack of Gathering Storm and his whirlwind  knock up cannot be negated by parries:\n Dodge and  Block: first target does not take damage, secondary target does take damage.\n Blind: both first target and secondary target take damage.\n Spell shield does not prevent Yone from receiving a stack.\nMortal Steel is disabled while  grounded or  rooted if Yone has two stacks of Gathering Storm.\nWhile at two stacks, a range indicator will be shown for the effective range of the whirlwind.\nThe  dash can cross terrain.\nIf Yone gets knocked back during the 3rd cast, the dash will only damage and knockup around Yone's current position then will stop colliding, making Yone play Mortal Steel's dash winddown animation while still visually dashing.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nYone will always cast Mortal Steel in his facing direction, and he will turn to face the target direction at the start of the cast time. While at two stacks, Yone will always cast it in the target direction.",
+      "notes": "This ability always employs Quick cast.\nMortal Steel applies  basic damage for the first (closest) enemy hit and  area damage for secondary enemies:\nMortal Steel will not apply  spell effects to the first target hit, but will do so to the secondary ones.\n Spell vamp will only grant  healing from the damage dealt to secondary targets, and healing is reduced to 33% effectiveness, accordingly.\n Life steal will heal based on the damage dealt to the first target hit.\nMortal Steel will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\nAll three of the thrust, whirlwind and dash roll for a critical strike on each individual target hit.\n Blinking during Mortal Steel's cast with two stacks of Gathering Storm (after the cast time) will end the dash prematurely but enemies in range of Yone at the new location are affected. The whirlwind's trajectory cannot be changed once it has already been unleashed.\nOnly the whirlwind can be  intercepted.\nEach parry has different interactions with this ability, whether it's the first target of Mortal Steel or the secondary one. In either case Yone still gains a stack of Gathering Storm and his whirlwind  knock up cannot be negated by parries:\n Dodge and  Block: first target does not take damage, secondary target does take damage.\n Blind: both first target and secondary target take damage.\n Spell shield does not prevent Yone from receiving a stack.\nMortal Steel is disabled while  grounded or  rooted if Yone has two stacks of Gathering Storm.\nWhile at two stacks, a range indicator will be shown for the effective range of the whirlwind.\nThe  dash can cross terrain.\nIf Yone gets knocked back during the 3rd cast, the dash will only damage and knockup around Yone's current position then will stop colliding, making Yone play Mortal Steel's dash winddown animation while still visually dashing.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nYone will always cast Mortal Steel in his facing direction, and he will turn to face the target direction at the start of the cast time. While at two stacks, Yone will always cast it in the target direction.",
       "projectile": "SPECIAL",
       "speed": "1500",
       "spellEffects": "special",
@@ -83,7 +102,7 @@
       "effectRadius": "600",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 490 (based on level) against minions and a maximum threshold of 150 - 340 (based on level) against monsters.</p>",
           "leveling": [
             {
               "attribute": "Total Mixed Damage",
@@ -127,11 +146,11 @@
           ]
         },
         {
-          "description": "If this hits an enemy, Yone grants himself a shield for 40 - 90 (based on level) (+ 65% bonus AD) for 1.5 seconds, increased by 100% if it hits a champion and by 50% for each subsequent champion hit."
+          "description": "If this hits an enemy, Yone grants himself a shield for 40 - 95.88 (based on level) (+ 65% bonus AD) for 1.5 seconds, increased by 100% if it hits a champion and by 50% for each subsequent champion hit."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/w",
-      "notes": "This ability always employs Quick cast.\nDespite Spirit Cleave generally hitting targets'  edge range, it cannot hit targets whose center is behind him.\nThis behaviour is common with missiles, however some cone spells such as this one also do it.\nSpirit Cleave will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\n Spell shield does not prevent Yone from receiving and/or increasing the  shield.\nThe shield's amount will also increase for each  clone hit.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSpirit Cleave will not preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will cast in the caster's new facing direction at the end of the cast time.\nWhile casting Spirit Cleave, Yone's facing direction cannot be shifted by displacements (eg.  Vault,  Last Breath).\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)",
+      "notes": "This ability always employs Quick cast.\nDespite Spirit Cleave generally hitting targets'  edge range, it cannot hit targets whose center is behind him.\nThis behaviour is common with  missiles, however some cone spells such as this one also do it.\nSpirit Cleave will not benefit from the bonus attack speed gained by  Hail of Blades.(bug)\n Spell shield does not prevent Yone from receiving and/or increasing the  shield.\nThe shield's amount will also increase for each  clone hit.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSpirit Cleave will not preserve the caster's initial facing direction when using  Flash and similar effects.\nIt will cast in the caster's new facing direction at the end of the cast time.\nWhile casting Spirit Cleave, Yone's facing direction cannot be shifted by displacements (eg.  Vault,  Last Breath).\nThe mixed damage is applied in two instances, and the physical damage will be dealt first within the same game tick.\nIf the physical damage finishes off the unit, the magic damage will not be dealt against it.(bug)",
       "projectile": "FALSE",
       "spellEffects": "aoe",
       "spellshieldable": "true",
@@ -176,7 +195,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/e",
-      "notes": "The marks store  physical damage,  magic damage, and  true damage.\nSoul Unbound stays on cooldown for the first 15 seconds of the game.\n Recall and  Teleport are disabled during Soul Unbound.\nOnly Yone's initial dash can be  interrupted.\nYone is  displacement immune during the recast's cast time.\nYone uses  Flow as his resource to indicate the remaining amount of time in centiseconds (100 centiseconds = 1 second) that Soul Unbound can be active for before the ability automatically recasts.\nWith 1 second remaining before the recast occurs automatically, a soft, dark vignette will pulse over the screen, accompanied by a distinct audio cue. This warning is only visible and audible to Yone.\nYone's body unit cannot be interacted with by any means. It will despawn as soon as Yone's dash back ends.\nSoul Unbound's recast, even when cast automatically, counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSoul Unbound's recast does not interrupt Yone's last movement or attack order.\nYone will place himself onto the ground and interrupt  displacements affecting him upon recasting.\nSome examples of effects that can delay Soul Unbound's automatic recast:\nAttack windup\nCast time\n Channels (excluding  Hexflash)\n Lockouts\n Dashes\n Immobilizes,  Silence,  Ground, and  Stasis\n Devour\n Fate's Call\nYone instantly appears at his body's location the moment this effect ends.\n Realm Warp\nSoul Unbound's recast is disabled (cannot be manually nor automatically cast) while Yone is in the  Realm of Death or  The Hextech Ultimatum. The recast will be deferred until those effects end.\n The Hextech Ultimatum will specifically end if Yone recasts Soul Unbound.\nIf Yone uses  Mortal Steel at two Gathering Storm stacks to delay Soul Unbound's automatic recast, he will be able to basic attack once in a short time period before the automatic recast triggers.\nIf Yone  dies or enters  resurrection with Spirit Form, he will immediately initiate the recast and dash back to his body while dead or resurrecting.\nIf he dies during the recast, the dash back is not interrupted.\nHis death animation will play upon arriving to his body.\nThe marks do not store damage from items, runes and summoner spells.\nThe mark also automatically detonates without Yone having to recast when the marked champion dies or enters  resurrection.\nThe detonation damage cannot be dodged by becoming  untargetable.\nThe marks will not store damage dealt to  shields.\nIf the mark's damage is higher than the target's current health, the mark indicator will have a slightly different appearance.\nThis does not take into account effects that would amplify the damage of the mark, such as  Coup de Grace.\nThe following table refers for interactions while Yone is in cast time and dashing back to his body:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A",
+      "notes": "The marks store  physical damage,  magic damage, and  true damage.\nSoul Unbound stays on cooldown for the first 15 seconds of the game.\n Recall and  Teleport are disabled during Soul Unbound.\nOnly Yone's initial dash can be  interrupted.\nYone is  displacement immune during the recast's cast time.\nYone uses  Flow as his resource to indicate the remaining amount of time in centiseconds (100 centiseconds = 1 second) that Soul Unbound can be active for before the ability automatically recasts.\nWith 1 second remaining before the recast occurs automatically, a soft, dark vignette will pulse over the screen, accompanied by a distinct audio cue. This warning is only visible and audible to Yone.\nYone's body unit cannot be interacted with by any means. It will despawn as soon as Yone's dash back ends.\nSoul Unbound's recast, even when cast automatically, counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSoul Unbound's recast does not interrupt Yone's last movement or attack order.\nYone will place himself onto the ground and interrupt  displacements affecting him upon recasting.\nSome examples of effects that can delay Soul Unbound's automatic recast:\nAttack windup\nCast time\n Channels (excluding  Hexflash)\n Lockouts\n Dashes\n Immobilizes,  Silence,  Ground, and  Stasis\n Devour\n Fate's Call\nYone instantly appears at his body's location the moment this effect ends.\n Realm Warp\nSoul Unbound's recast is disabled (cannot be manually nor automatically cast) while Yone is in the  Death Realm or  The Hextech Ultimatum. The recast will be deferred until those effects end.\n The Hextech Ultimatum will specifically end if Yone recasts Soul Unbound.\nIf Yone uses  Mortal Steel at two Gathering Storm stacks to delay Soul Unbound's automatic recast, he will be able to basic attack once in a short time period before the automatic recast triggers.\nIf Yone  dies or enters  resurrection with Spirit Form, he will immediately initiate the recast and dash back to his body while dead or resurrecting.\nIf he dies during the recast, the dash back is not interrupted.\nHis death animation will play upon arriving to his body.\nThe marks do not store damage from items, runes and summoner spells.\nThe mark also automatically detonates without Yone having to recast when the marked champion dies or enters  resurrection.\nThe detonation damage cannot be dodged by becoming  untargetable.\nThe marks will not store damage dealt to  shields.\nIf the mark's damage is higher than the target's current health, the mark indicator will have a slightly different appearance.\nThis does not take into account effects that would amplify the damage of the mark, such as  Coup de Grace.\nThe following table refers for interactions while Yone is in cast time and dashing back to his body:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nN/A",
       "speed": "1200",
       "spellEffects": "aoe",
       "spellshieldable": "false",
@@ -260,7 +279,8 @@
     "abilityReliance": 45,
     "difficulty": 3
   },
-  "patchLastChanged": "25.22",
+  "lore": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own sword. Now, cursed to wear its demonic mask upon his face, Yone tirelessly hunts all such creatures in order to understand what he has become.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Middle",
     "Top"
@@ -288,7 +308,6 @@
     "armor": 4.6,
     "magicResist": 2.1,
     "hpRegen": 0.8,
-    "attackDamage": 2,
     "attackSpeed": 3.5
   },
   "price": {

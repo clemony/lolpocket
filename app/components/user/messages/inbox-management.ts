@@ -38,14 +38,13 @@ export function matchMsg(msgId: string): InboxMessage | undefined {
 }
 
 export function markRead(msgId: string) {
-  const msg = matchMsg(msgId)
-  if (msg) msg.read = true
+  user().markInboxMessageRead(msgId, true)
 }
 
 export function toggleRead(msgId: string) {
   const msg = matchMsg(msgId)
 
-  if (msg) msg.read = !msg.read
+  if (msg) user().markInboxMessageRead(msgId, !msg.read)
 }
 
 export function trashMsg(msgId: string) {

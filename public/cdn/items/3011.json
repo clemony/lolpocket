@@ -2,6 +2,9 @@
   "id": 3011,
   "name": "Chemtech Putrifier",
   "description": "35 Ability Power\n10% Heal and Shield Power\n75% Base Mana Regen\n15 Ability Haste\n\n\nPuffcap Toxin: Dealing damage applies 40% Grievous Wounds to champions for 3 seconds.\n\nGrievous Wounds reduces the effectiveness of Healing and Regeneration effects.",
+  "stats": {
+    "abilityPower": 35
+  },
   "gold": {
     "base": 500,
     "purchasable": false,

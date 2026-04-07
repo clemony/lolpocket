@@ -37,7 +37,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/q",
-  "notes": "Spell shield will prevent Call of the Void's refresh on  Malefic Visions.\n Malefic Visions' debuff will also be removed.(note)",
+  "notes": "Spell shield will prevent Call of the Void's refresh on  Malefic Visions.\n Malefic Visions' debuff will also be removed.(unexpected)",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",

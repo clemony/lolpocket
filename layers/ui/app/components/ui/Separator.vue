@@ -2,43 +2,51 @@
 import { tv } from "tailwind-variants"
 import type { SeparatorProps } from "~~/layers/ui/app/variants/separator"
 
-const props = withDefaults(defineProps<SeparatorProps>(), {
-  placement: "start",
-  underline: false,
-  labelPlacement: "start"
-})
+const props = withDefaults(
+  defineProps<
+    SeparatorProps & {
+      trailing?: string
+    }
+  >(),
+  {
+    placement: "start",
+    underline: false,
+    labelPlacement: "start"
+  }
+)
 
 const separatorVariants = tv({
   slots: {
     root: "relative flex w-full max-w-full shrink-0 items-center",
     leading: "order-first",
-    trailingIcon: "size-4",
-    trailing: "grid size-4 shrink-0 place-items-center",
+    trailingIcon: "grid size-4 shrink-0 self-center justify-self-center",
+    trailing:
+      "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
     label:
       "pointer-events-none flex flex-nowrap items-center gap-1 font-medium whitespace-nowrap select-none",
     separator: "pointer-events-none flex-1 shrink-0 grow bg-current"
   },
   variants: {
     color: {
-      n5: {
-        label: "text-n5/60",
-        separator: "bg-n5/20"
+      base: {
+        label: "text-pc",
+        trailing: "text-pc",
+        separator: "bg-p1"
       },
       neutral: {
         label: "text-nc/50 group-hover/collapse:text-nc",
-        separator: "bg-nc/10"
+        separator: "bg-nc/10",
+        trailing: "text-nc/50 group-hover/collapse:text-nc"
       },
-      p2: {
+      secondary: {
         label: "text-pc",
+        trailing: "text-pc",
         separator: "bg-p2"
       },
-      p3: {
+      tertiary: {
         label: "text-pc",
+        trailing: "text-pc",
         separator: "bg-p3/80"
-      },
-      p4: {
-        label: "text-pc",
-        separator: "bg-p4"
       }
     },
     underline: {
@@ -122,7 +130,7 @@ const separatorVariants = tv({
     }
   ],
   defaultVariants: {
-    color: "p3",
+    color: "tertiary",
     placement: "start",
     labelPlacement: "start",
     size: "md",
@@ -161,8 +169,9 @@ const styles = computed(() =>
       :class="styles.separator({ class: props.ui?.separator })" />
 
     <span
-      v-if="props.trailingIcon"
+      v-if="props.trailingIcon || props.trailing"
       :class="styles.trailing({ class: props.ui?.trailing })">
+      <span v-if="props.trailing">{{ props.trailing }}</span>
       <Icon
         v-if="props.trailingIcon"
         :name="props.trailingIcon"

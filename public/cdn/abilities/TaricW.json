@@ -40,7 +40,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/w",
-  "notes": "The mimicked abilities will still complete even if Taric dies or leaves range.\nAbilities are not mimicked to the bound ally if they are  vanished via  Alpha Strike,  Hallucinate,  Rappel, or  Void Rush.\nMimicked abilities will also cancel if they vanish as above.\nBastion has a  forgiveness radius of 175 units.",
+  "notes": "The mimicked abilities will still complete even if Taric dies or leaves range.\nAbilities are not mimicked to the bound ally if they are  vanished via  Alpha Strike,  Hallucinate,  Rappel, or  Void Rush.\nMimicked abilities will also cancel if they vanish as above.\nBastion effects will be temporarily disabled while the bound ally is in a different realm than Taric ( Death Realm). The tether will not break.\nBastion has a  forgiveness radius of 175 units.",
   "resource": "Mana",
   "targeting": "Unit",
   "targetRange": "800",

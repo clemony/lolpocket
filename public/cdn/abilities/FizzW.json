@@ -72,14 +72,14 @@
       ]
     },
     {
-      "description": "Seastone Trident's active damage can be applied against structures at 50% effectiveness. Active and on-hit damage deal an additional 60 bonus magic damage against monsters."
+      "description": "Seastone Trident's active damage can be applied against structures at 50% effectiveness. Active and on-hit damage deal an additional 90 bonus magic damage against monsters."
     },
     {
       "description": "Seastone Trident resets Fizz's basic attack timer."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/w",
-  "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against structures.",
+  "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against  structures.",
   "resource": "Mana",
   "spellEffects": "special",
   "spellshieldable": "True",

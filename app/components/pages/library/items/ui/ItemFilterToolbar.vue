@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-import type {
-  ButtonProps,
-  CheckboxGroupProps,
-  RadioGroupProps
-} from "@nuxt/ui"
+import type { ButtonProps, CheckboxGroupProps, RadioGroupProps } from "@nuxt/ui"
 import type { ToggleButtonProps } from "~~/layers/ui/app/variants/toggle"
 
 defineOptions({
@@ -15,7 +11,7 @@ const { items } = defineProps<{
 const { filters } = storeToRefs(is())
 const btnProps: ButtonProps & ToggleButtonProps = {
   size: "xl",
-  color: "p0",
+  color: "base",
   variant: "solid",
   square: true,
   activeColor: "neutral",
@@ -32,8 +28,8 @@ const groupUi = {
 
 const checkboxProps = {
   indicator: "end",
-  color: "default",
-  variant: "select",
+  color: "base",
+  variant: "list",
   icon: "i-tick",
   ui: {
     ...groupUi,
@@ -43,7 +39,7 @@ const checkboxProps = {
 
 const radioProps = {
   indicator: "end",
-  color: "default",
+  color: "base",
   valueKey: "label",
   ui: groupUi
 } satisfies RadioGroupProps<CheckboxItem[], "label">
@@ -131,7 +127,7 @@ const radioProps = {
   <div data-tip="Reset Filter" class="tooltip tooltip-left">
     <UButton
       size="xl"
-      color="p0"
+      color="base"
       icon="i-reset"
       :ui="{
         base: 'rounded-full'

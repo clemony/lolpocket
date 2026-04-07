@@ -1,7 +1,6 @@
 {
   "1001": {
     "id": 1001,
-    "key": "item",
     "name": "Boots",
     "gold": {
       "base": 300,
@@ -24,7 +23,6 @@
   },
   "1004": {
     "id": 1004,
-    "key": "item",
     "name": "Faerie Charm",
     "gold": {
       "base": 200,
@@ -48,7 +46,6 @@
   },
   "1006": {
     "id": 1006,
-    "key": "item",
     "name": "Rejuvenation Bead",
     "gold": {
       "base": 300,
@@ -71,7 +68,6 @@
   },
   "1011": {
     "id": 1011,
-    "key": "item",
     "name": "Giant's Belt",
     "gold": {
       "base": 500,
@@ -99,7 +95,6 @@
   },
   "1018": {
     "id": 1018,
-    "key": "item",
     "name": "Cloak of Agility",
     "gold": {
       "base": 600,
@@ -122,7 +117,6 @@
   },
   "1026": {
     "id": 1026,
-    "key": "item",
     "name": "Blasting Wand",
     "gold": {
       "base": 850,
@@ -146,7 +140,6 @@
   },
   "1027": {
     "id": 1027,
-    "key": "item",
     "name": "Sapphire Crystal",
     "aka": [
       "blue"
@@ -173,7 +166,6 @@
   },
   "1028": {
     "id": 1028,
-    "key": "item",
     "name": "Ruby Crystal",
     "aka": [
       "red"
@@ -204,7 +196,6 @@
   },
   "1029": {
     "id": 1029,
-    "key": "item",
     "name": "Cloth Armor",
     "gold": {
       "base": 300,
@@ -232,7 +223,6 @@
   },
   "1031": {
     "id": 1031,
-    "key": "item",
     "name": "Chain Vest",
     "gold": {
       "base": 500,
@@ -261,7 +251,6 @@
   },
   "1033": {
     "id": 1033,
-    "key": "item",
     "name": "Null-Magic Mantle",
     "gold": {
       "base": 400,
@@ -289,7 +278,6 @@
   },
   "1035": {
     "id": 1035,
-    "key": "item",
     "name": "Emberknife",
     "gold": {
       "base": 350,
@@ -300,7 +288,6 @@
   },
   "1036": {
     "id": 1036,
-    "key": "item",
     "name": "Long Sword",
     "gold": {
       "base": 350,
@@ -325,7 +312,6 @@
   },
   "1037": {
     "id": 1037,
-    "key": "item",
     "name": "Pickaxe",
     "gold": {
       "base": 875,
@@ -350,7 +336,6 @@
   },
   "1038": {
     "id": 1038,
-    "key": "item",
     "name": "B. F. Sword",
     "aka": [
       "bf"
@@ -378,7 +363,6 @@
   },
   "1039": {
     "id": 1039,
-    "key": "item",
     "name": "Hailblade",
     "gold": {
       "base": 350,
@@ -389,7 +373,6 @@
   },
   "1040": {
     "id": 1040,
-    "key": "item",
     "name": "Obsidian Edge",
     "gold": {
       "base": 350,
@@ -399,7 +382,6 @@
   },
   "1042": {
     "id": 1042,
-    "key": "item",
     "name": "Dagger",
     "gold": {
       "base": 250,
@@ -424,7 +406,6 @@
   },
   "1043": {
     "id": 1043,
-    "key": "item",
     "name": "Recurve Bow",
     "gold": {
       "base": 450,
@@ -452,7 +433,6 @@
   },
   "1052": {
     "id": 1052,
-    "key": "item",
     "name": "Amplifying Tome",
     "aka": [
       "amptome",
@@ -480,7 +460,6 @@
   },
   "1053": {
     "id": 1053,
-    "key": "item",
     "name": "Vampiric Scepter",
     "gold": {
       "base": 550,
@@ -509,7 +488,6 @@
   },
   "1054": {
     "id": 1054,
-    "key": "item",
     "name": "Doran's Shield",
     "aka": [
       "dshield"
@@ -540,7 +518,6 @@
   },
   "1055": {
     "id": 1055,
-    "key": "item",
     "name": "Doran's Blade",
     "aka": [
       "dblade"
@@ -570,7 +547,6 @@
   },
   "1056": {
     "id": 1056,
-    "key": "item",
     "name": "Doran's Ring",
     "aka": [
       "dring"
@@ -598,7 +574,6 @@
   },
   "1057": {
     "id": 1057,
-    "key": "item",
     "name": "Negatron Cloak",
     "gold": {
       "base": 450,
@@ -626,7 +601,6 @@
   },
   "1058": {
     "id": 1058,
-    "key": "item",
     "name": "Needlessly Large Rod",
     "aka": [
       "nlr"
@@ -652,7 +626,6 @@
   },
   "1082": {
     "id": 1082,
-    "key": "item",
     "name": "Dark Seal",
     "aka": [
       "Noxian"
@@ -676,7 +649,6 @@
   },
   "1083": {
     "id": 1083,
-    "key": "item",
     "name": "Cull",
     "aka": [
       "dblade"
@@ -703,7 +675,6 @@
   },
   "1090": {
     "id": 1090,
-    "key": "item",
     "name": "Quest: Top",
     "gold": {
       "base": 0,
@@ -713,7 +684,6 @@
   },
   "1091": {
     "id": 1091,
-    "key": "item",
     "name": "Quest: Mid",
     "gold": {
       "base": 0,
@@ -723,7 +693,6 @@
   },
   "1092": {
     "id": 1092,
-    "key": "item",
     "name": "Quest: Bot",
     "gold": {
       "base": 0,
@@ -733,7 +702,6 @@
   },
   "1093": {
     "id": 1093,
-    "key": "item",
     "name": "Quest: Support",
     "gold": {
       "base": 0,
@@ -743,7 +711,6 @@
   },
   "1094": {
     "id": 1094,
-    "key": "item",
     "name": "Quest: Jungle",
     "gold": {
       "base": 0,
@@ -753,7 +720,6 @@
   },
   "1101": {
     "id": 1101,
-    "key": "item",
     "name": "Scorchclaw Pup",
     "aka": [
       "jungle",
@@ -784,7 +750,6 @@
   },
   "1102": {
     "id": 1102,
-    "key": "item",
     "name": "Gustwalker Hatchling",
     "aka": [
       "jungle",
@@ -815,7 +780,6 @@
   },
   "1103": {
     "id": 1103,
-    "key": "item",
     "name": "Mosstomper Seedling",
     "aka": [
       "jungle",
@@ -846,7 +810,6 @@
   },
   "1104": {
     "id": 1104,
-    "key": "item",
     "name": "Eye of the Herald",
     "gold": {
       "base": 0,
@@ -857,7 +820,6 @@
   },
   "1111": {
     "id": 1111,
-    "key": "item",
     "name": "Jarvan I's",
     "gold": {
       "base": 300,
@@ -881,7 +843,6 @@
   },
   "1200": {
     "id": 1200,
-    "key": "item",
     "name": "Top Lane Quest",
     "gold": {
       "base": 0,
@@ -892,7 +853,6 @@
   },
   "1201": {
     "id": 1201,
-    "key": "item",
     "name": "Mid Lane Quest",
     "gold": {
       "base": 0,
@@ -903,7 +863,6 @@
   },
   "1202": {
     "id": 1202,
-    "key": "item",
     "name": "Bot Lane Quest",
     "gold": {
       "base": 0,
@@ -914,7 +873,6 @@
   },
   "1203": {
     "id": 1203,
-    "key": "item",
     "name": "Support Quest",
     "gold": {
       "base": 0,
@@ -925,7 +883,6 @@
   },
   "1204": {
     "id": 1204,
-    "key": "item",
     "name": "Jungle Quest",
     "gold": {
       "base": 0,
@@ -936,7 +893,6 @@
   },
   "1206": {
     "id": 1206,
-    "key": "item",
     "name": "Mid Lane Quest",
     "gold": {
       "base": 0,
@@ -947,7 +903,6 @@
   },
   "1207": {
     "id": 1207,
-    "key": "item",
     "name": "Bot Lane Quest",
     "gold": {
       "base": 0,
@@ -958,7 +913,6 @@
   },
   "1208": {
     "id": 1208,
-    "key": "item",
     "name": "Support Quest",
     "gold": {
       "base": 0,
@@ -969,7 +923,6 @@
   },
   "1209": {
     "id": 1209,
-    "key": "item",
     "name": "Jungle Quest",
     "gold": {
       "base": 0,
@@ -980,7 +933,6 @@
   },
   "1220": {
     "id": 1220,
-    "key": "item",
     "name": "Unleashed Teleport",
     "gold": {
       "base": 0,
@@ -991,7 +943,6 @@
   },
   "1221": {
     "id": 1221,
-    "key": "item",
     "name": "Top Lane Quest",
     "gold": {
       "base": 0,
@@ -1002,7 +953,6 @@
   },
   "1222": {
     "id": 1222,
-    "key": "item",
     "name": "Top Lane Quest",
     "gold": {
       "base": 0,
@@ -1013,7 +963,6 @@
   },
   "1500": {
     "id": 1500,
-    "key": "item",
     "name": "Penetrating Bullets",
     "gold": {
       "base": 0,
@@ -1035,7 +984,6 @@
   },
   "1501": {
     "id": 1501,
-    "key": "item",
     "name": "Fortification",
     "gold": {
       "base": 0,
@@ -1053,7 +1001,6 @@
   },
   "1502": {
     "id": 1502,
-    "key": "item",
     "name": "Reinforced Armor",
     "gold": {
       "base": 0,
@@ -1073,7 +1020,6 @@
   },
   "1503": {
     "id": 1503,
-    "key": "item",
     "name": "Warden's Eye",
     "gold": {
       "base": 0,
@@ -1093,7 +1039,6 @@
   },
   "1504": {
     "id": 1504,
-    "key": "item",
     "name": "Vanguard",
     "gold": {
       "base": 0,
@@ -1104,7 +1049,6 @@
   },
   "1505": {
     "id": 1505,
-    "key": "item",
     "name": "Reinforced Armor",
     "gold": {
       "base": 0,
@@ -1120,7 +1064,6 @@
   },
   "1506": {
     "id": 1506,
-    "key": "item",
     "name": "Reinforced Armor",
     "gold": {
       "base": 0,
@@ -1140,7 +1083,6 @@
   },
   "1507": {
     "id": 1507,
-    "key": "item",
     "name": "Overcharged",
     "gold": {
       "base": 0,
@@ -1160,7 +1102,6 @@
   },
   "1508": {
     "id": 1508,
-    "key": "item",
     "name": "Anti-tower Socks",
     "gold": {
       "base": 0,
@@ -1180,7 +1121,6 @@
   },
   "1509": {
     "id": 1509,
-    "key": "item",
     "name": "Gusto",
     "gold": {
       "base": 0,
@@ -1200,7 +1140,6 @@
   },
   "1510": {
     "id": 1510,
-    "key": "item",
     "name": "Phreakish Gusto",
     "gold": {
       "base": 0,
@@ -1220,7 +1159,6 @@
   },
   "1511": {
     "id": 1511,
-    "key": "item",
     "name": "Super Mech Armor",
     "gold": {
       "base": 0,
@@ -1240,7 +1178,6 @@
   },
   "1512": {
     "id": 1512,
-    "key": "item",
     "name": "Super Mech Power Field",
     "gold": {
       "base": 0,
@@ -1260,7 +1197,6 @@
   },
   "1515": {
     "id": 1515,
-    "key": "item",
     "name": "Turret Plating",
     "gold": {
       "base": 0,
@@ -1280,7 +1216,6 @@
   },
   "1516": {
     "id": 1516,
-    "key": "item",
     "name": "Structure Bounty",
     "gold": {
       "base": 0,
@@ -1297,7 +1232,6 @@
   },
   "1517": {
     "id": 1517,
-    "key": "item",
     "name": "Structure Bounty",
     "gold": {
       "base": 0,
@@ -1314,7 +1248,6 @@
   },
   "1518": {
     "id": 1518,
-    "key": "item",
     "name": "Structure Bounty",
     "gold": {
       "base": 0,
@@ -1331,7 +1264,6 @@
   },
   "1519": {
     "id": 1519,
-    "key": "item",
     "name": "Structure Bounty",
     "gold": {
       "base": 0,
@@ -1348,7 +1280,6 @@
   },
   "1520": {
     "id": 1520,
-    "key": "item",
     "name": "OvererchargedHA",
     "gold": {
       "base": 0,
@@ -1366,7 +1297,6 @@
   },
   "1521": {
     "id": 1521,
-    "key": "item",
     "name": "Fortification",
     "gold": {
       "base": 0,
@@ -1384,7 +1314,6 @@
   },
   "1522": {
     "id": 1522,
-    "key": "item",
     "name": "Tower Power-Up",
     "gold": {
       "base": 0,
@@ -1402,7 +1331,6 @@
   },
   "1523": {
     "id": 1523,
-    "key": "item",
     "name": "Overcharged",
     "gold": {
       "base": 0,
@@ -1418,7 +1346,6 @@
   },
   "1524": {
     "id": 1524,
-    "key": "item",
     "name": "Overgrowth",
     "gold": {
       "base": 0,
@@ -1436,7 +1363,6 @@
   },
   "2001": {
     "id": 2001,
-    "key": "item",
     "name": "Recall",
     "gold": {
       "base": 60,
@@ -1454,7 +1380,6 @@
   },
   "2002": {
     "id": 2002,
-    "key": "item",
     "name": "Enhanced Recall",
     "gold": {
       "base": 60,
@@ -1465,7 +1390,6 @@
   },
   "2003": {
     "id": 2003,
-    "key": "item",
     "name": "Health Potion",
     "aka": [
       "consumable",
@@ -1490,7 +1414,6 @@
   },
   "2007": {
     "id": 2007,
-    "key": "item",
     "name": "Disabled Recall",
     "gold": {
       "base": 60,
@@ -1508,7 +1431,6 @@
   },
   "2010": {
     "id": 2010,
-    "key": "item",
     "name": "Total Biscuit of Everlasting Will",
     "aka": [
       "kleptomancy"
@@ -1531,18 +1453,19 @@
   },
   "2015": {
     "id": 2015,
-    "key": "item",
     "name": "Kircheis Shard",
     "gold": {
       "base": 350,
       "purchasable": false,
       "total": 700,
       "sell": 490
+    },
+    "stats": {
+      "attackDamage": 15
     }
   },
   "2019": {
     "id": 2019,
-    "key": "item",
     "name": "Steel Sigil",
     "aka": [
       "Bloodstone"
@@ -1574,7 +1497,6 @@
   },
   "2020": {
     "id": 2020,
-    "key": "item",
     "name": "The Brutalizer",
     "aka": [
       "Bloodstone"
@@ -1606,7 +1528,6 @@
   },
   "2021": {
     "id": 2021,
-    "key": "item",
     "name": "Tunneler",
     "aka": [
       "drill"
@@ -1637,7 +1558,6 @@
   },
   "2022": {
     "id": 2022,
-    "key": "item",
     "name": "Glowing Mote",
     "aka": [
       "haste"
@@ -1668,7 +1588,6 @@
   },
   "2031": {
     "id": 2031,
-    "key": "item",
     "name": "Refillable Potion",
     "aka": [
       "consumable",
@@ -1693,7 +1612,6 @@
   },
   "2033": {
     "id": 2033,
-    "key": "item",
     "name": "Corrupting Potion",
     "gold": {
       "base": 350,
@@ -1708,7 +1626,6 @@
   },
   "2049": {
     "id": 2049,
-    "key": "item",
     "name": "Guardian's Amulet",
     "gold": {
       "base": 500,
@@ -1730,7 +1647,6 @@
   },
   "2050": {
     "id": 2050,
-    "key": "item",
     "name": "Guardian's Shroud",
     "gold": {
       "base": 500,
@@ -1753,7 +1669,6 @@
   },
   "2051": {
     "id": 2051,
-    "key": "item",
     "name": "Guardian's Horn",
     "aka": [
       "Golden Arm of Kobe",
@@ -1785,7 +1700,6 @@
   },
   "2052": {
     "id": 2052,
-    "key": "item",
     "name": "Poro-Snax",
     "gold": {
       "base": 0,
@@ -1805,7 +1719,6 @@
   },
   "2055": {
     "id": 2055,
-    "key": "item",
     "name": "Control Ward",
     "aka": [
       "consumable",
@@ -1828,7 +1741,6 @@
   },
   "2056": {
     "id": 2056,
-    "key": "item",
     "name": "Stealth Ward",
     "gold": {
       "base": 40,
@@ -1839,7 +1751,6 @@
   },
   "2065": {
     "id": 2065,
-    "key": "item",
     "name": "Shurelya's Battlesong",
     "aka": [
       "shurelya",
@@ -1856,7 +1767,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 322065,
+    "masterwork": {
+      "upgradeId": 322065,
+      "stats": {
+        "abilityPower": 65,
+        "percentMovespeed": 6
+      },
+      "bonusStats": {
+        "abilityPower": 15,
+        "percentMovespeed": 2
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3113,
@@ -1875,7 +1796,6 @@
   },
   "2138": {
     "id": 2138,
-    "key": "item",
     "name": "Elixir of Iron",
     "aka": [
       "consumable",
@@ -1902,7 +1822,6 @@
   },
   "2139": {
     "id": 2139,
-    "key": "item",
     "name": "Elixir of Sorcery",
     "aka": [
       "consumable",
@@ -1929,7 +1848,6 @@
   },
   "2140": {
     "id": 2140,
-    "key": "item",
     "name": "Elixir of Wrath",
     "aka": [
       "consumable",
@@ -1955,7 +1873,6 @@
   },
   "2141": {
     "id": 2141,
-    "key": "item",
     "name": "Cappa Juice",
     "gold": {
       "base": 300,
@@ -1974,7 +1891,6 @@
   },
   "2142": {
     "id": 2142,
-    "key": "item",
     "name": "Juice of Power",
     "gold": {
       "base": 500,
@@ -1994,7 +1910,6 @@
   },
   "2143": {
     "id": 2143,
-    "key": "item",
     "name": "Juice of Vitality",
     "gold": {
       "base": 500,
@@ -2013,7 +1928,6 @@
   },
   "2144": {
     "id": 2144,
-    "key": "item",
     "name": "Juice of Haste",
     "gold": {
       "base": 500,
@@ -2031,7 +1945,6 @@
   },
   "2145": {
     "id": 2145,
-    "key": "item",
     "name": "Lucky Dice",
     "gold": {
       "base": 0,
@@ -2047,7 +1960,6 @@
   },
   "2146": {
     "id": 2146,
-    "key": "item",
     "name": "Enhanced Lucky Dice",
     "gold": {
       "base": 0,
@@ -2063,7 +1975,6 @@
   },
   "2150": {
     "id": 2150,
-    "key": "item",
     "name": "Elixir of Skill",
     "gold": {
       "base": 0,
@@ -2085,7 +1996,6 @@
   },
   "2151": {
     "id": 2151,
-    "key": "item",
     "name": "Elixir of Avarice",
     "gold": {
       "base": 50,
@@ -2107,7 +2017,6 @@
   },
   "2152": {
     "id": 2152,
-    "key": "item",
     "name": "Elixir of Force",
     "gold": {
       "base": 50,
@@ -2129,7 +2038,6 @@
   },
   "2161": {
     "id": 2161,
-    "key": "item",
     "name": "Bandle Juice of Power",
     "gold": {
       "base": 1000,
@@ -2142,7 +2050,6 @@
   },
   "2162": {
     "id": 2162,
-    "key": "item",
     "name": "Bandle Juice of Vitality",
     "gold": {
       "base": 1000,
@@ -2155,7 +2062,6 @@
   },
   "2163": {
     "id": 2163,
-    "key": "item",
     "name": "Bandle Juice of Haste",
     "gold": {
       "base": 1000,
@@ -2168,7 +2074,6 @@
   },
   "2403": {
     "id": 2403,
-    "key": "item",
     "name": "Minion Dematerializer",
     "gold": {
       "base": 0,
@@ -2185,7 +2090,6 @@
   },
   "2420": {
     "id": 2420,
-    "key": "item",
     "name": "Seeker's Armguard",
     "aka": [
       "zhg",
@@ -2219,7 +2123,6 @@
   },
   "2421": {
     "id": 2421,
-    "key": "item",
     "name": "Shattered Armguard",
     "gold": {
       "base": 500,
@@ -2245,7 +2148,6 @@
   },
   "2422": {
     "id": 2422,
-    "key": "item",
     "name": "Slightly Magical Footwear",
     "gold": {
       "base": 300,
@@ -2266,7 +2168,6 @@
   },
   "2501": {
     "id": 2501,
-    "key": "item",
     "name": "Overlord's Bloodmail",
     "gold": {
       "base": 1000,
@@ -2295,7 +2196,6 @@
   },
   "2502": {
     "id": 2502,
-    "key": "item",
     "name": "Unending Despair",
     "gold": {
       "base": 800,
@@ -2325,7 +2225,6 @@
   },
   "2503": {
     "id": 2503,
-    "key": "item",
     "name": "Blackfire Torch",
     "aka": [
       "bft"
@@ -2357,7 +2256,6 @@
   },
   "2504": {
     "id": 2504,
-    "key": "item",
     "name": "Kaenic Rookern",
     "gold": {
       "base": 800,
@@ -2386,7 +2284,6 @@
   },
   "2508": {
     "id": 2508,
-    "key": "item",
     "name": "Fated Ashes",
     "gold": {
       "base": 500,
@@ -2412,7 +2309,6 @@
   },
   "2510": {
     "id": 2510,
-    "key": "item",
     "name": "Dusk and Dawn",
     "aka": [
       "Spellblade"
@@ -2447,7 +2343,6 @@
   },
   "2512": {
     "id": 2512,
-    "key": "item",
     "name": "Fiendhunter Bolts",
     "gold": {
       "base": 850,
@@ -2477,7 +2372,6 @@
   },
   "2517": {
     "id": 2517,
-    "key": "item",
     "name": "Endless Hunger",
     "gold": {
       "base": 825,
@@ -2507,7 +2401,6 @@
   },
   "2520": {
     "id": 2520,
-    "key": "item",
     "name": "Bastionbreaker",
     "aka": [
       "lethality"
@@ -2537,7 +2430,6 @@
   },
   "2522": {
     "id": 2522,
-    "key": "item",
     "name": "Actualizer",
     "gold": {
       "base": 750,
@@ -2566,7 +2458,6 @@
   },
   "2523": {
     "id": 2523,
-    "key": "item",
     "name": "Hexoptics C44",
     "gold": {
       "base": 275,
@@ -2595,7 +2486,6 @@
   },
   "2524": {
     "id": 2524,
-    "key": "item",
     "name": "Bandlepipes",
     "gold": {
       "base": 800,
@@ -2626,7 +2516,6 @@
   },
   "2525": {
     "id": 2525,
-    "key": "item",
     "name": "Protoplasm Harness",
     "gold": {
       "base": 800,
@@ -2654,7 +2543,6 @@
   },
   "2526": {
     "id": 2526,
-    "key": "item",
     "name": "Whispering Circlet",
     "aka": [
       "tear"
@@ -2670,7 +2558,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 322526,
+    "masterwork": {
+      "upgradeId": 322526,
+      "stats": {
+        "mana": 300,
+        "health": 200
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3114,
@@ -2689,7 +2583,6 @@
   },
   "2530": {
     "id": 2530,
-    "key": "item",
     "name": "Diadem of Songs",
     "gold": {
       "base": 2250,
@@ -2703,7 +2596,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 322530,
+    "masterwork": {
+      "upgradeId": 322530,
+      "stats": {
+        "mana": 1000,
+        "health": 200
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       2526
@@ -2717,18 +2616,21 @@
   },
   "3001": {
     "id": 3001,
-    "key": "item",
     "name": "Evenshroud",
     "gold": {
       "base": 850,
       "purchasable": false,
       "total": 2300,
       "sell": 1610
+    },
+    "stats": {
+      "magicResistance": 30,
+      "health": 200,
+      "armor": 30
     }
   },
   "3002": {
     "id": 3002,
-    "key": "item",
     "name": "Trailblazer",
     "gold": {
       "base": 800,
@@ -2741,7 +2643,19 @@
       21,
       35
     ],
-    "ornnUpgrade": 323002,
+    "masterwork": {
+      "upgradeId": 323002,
+      "stats": {
+        "health": 300,
+        "armor": 45,
+        "percentMovespeed": 6
+      },
+      "bonusStats": {
+        "health": 50,
+        "armor": 5,
+        "percentMovespeed": 2
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3066,
@@ -2759,7 +2673,6 @@
   },
   "3003": {
     "id": 3003,
-    "key": "item",
     "name": "Archangel's Staff",
     "aka": [
       "aa",
@@ -2777,7 +2690,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323003,
+    "masterwork": {
+      "upgradeId": 323003,
+      "stats": {
+        "mana": 600,
+        "abilityPower": 70
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -2795,7 +2714,6 @@
   },
   "3004": {
     "id": 3004,
-    "key": "item",
     "name": "Manamune",
     "aka": [
       "Muramana",
@@ -2812,7 +2730,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323004,
+    "masterwork": {
+      "upgradeId": 323004,
+      "stats": {
+        "mana": 500,
+        "attackDamage": 35
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -2833,7 +2757,6 @@
   },
   "3005": {
     "id": 3005,
-    "key": "item",
     "name": "Ghostcrawlers",
     "gold": {
       "base": 700,
@@ -2842,11 +2765,13 @@
     },
     "maps": [
       21
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "3006": {
     "id": 3006,
-    "key": "item",
     "name": "Berserker's Greaves",
     "aka": [
       "boots",
@@ -2879,7 +2804,6 @@
   },
   "3009": {
     "id": 3009,
-    "key": "item",
     "name": "Boots of Swiftness",
     "aka": [
       "swifties"
@@ -2908,7 +2832,6 @@
   },
   "3010": {
     "id": 3010,
-    "key": "item",
     "name": "Symbiotic Soles",
     "gold": {
       "base": 600,
@@ -2919,11 +2842,13 @@
     "maps": [
       11,
       21
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 40
+    }
   },
   "3011": {
     "id": 3011,
-    "key": "item",
     "name": "Chemtech Putrifier",
     "gold": {
       "base": 500,
@@ -2936,22 +2861,26 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "abilityPower": 35
+    }
   },
   "3012": {
     "id": 3012,
-    "key": "item",
     "name": "Chalice of Blessing",
     "gold": {
       "base": 300,
       "purchasable": false,
       "total": 900,
       "sell": 630
+    },
+    "stats": {
+      "health": 200
     }
   },
   "3013": {
     "id": 3013,
-    "key": "item",
     "name": "Synchronized Souls",
     "gold": {
       "base": 0,
@@ -2962,11 +2891,13 @@
     "maps": [
       11,
       21
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "3020": {
     "id": 3020,
-    "key": "item",
     "name": "Sorcerer's Shoes",
     "aka": [
       "boots",
@@ -2997,18 +2928,20 @@
   },
   "3023": {
     "id": 3023,
-    "key": "item",
     "name": "Lifewell Pendant",
     "gold": {
       "base": 350,
       "purchasable": false,
       "total": 1050,
       "sell": 735
+    },
+    "stats": {
+      "health": 150,
+      "armor": 25
     }
   },
   "3024": {
     "id": 3024,
-    "key": "item",
     "name": "Glacial Buckler",
     "gold": {
       "base": 50,
@@ -3039,7 +2972,6 @@
   },
   "3026": {
     "id": 3026,
-    "key": "item",
     "name": "Guardian Angel",
     "aka": [
       "ga"
@@ -3069,7 +3001,6 @@
   },
   "3031": {
     "id": 3031,
-    "key": "item",
     "name": "Infinity Edge",
     "aka": [
       "ie"
@@ -3102,7 +3033,6 @@
   },
   "3032": {
     "id": 3032,
-    "key": "item",
     "name": "Yun Tal Wildarrows",
     "aka": [
       "arrow",
@@ -3135,7 +3065,6 @@
   },
   "3033": {
     "id": 3033,
-    "key": "item",
     "name": "Mortal Reminder",
     "aka": [
       "grievous",
@@ -3169,7 +3098,6 @@
   },
   "3035": {
     "id": 3035,
-    "key": "item",
     "name": "Last Whisper",
     "aka": [
       "lw"
@@ -3202,7 +3130,6 @@
   },
   "3036": {
     "id": 3036,
-    "key": "item",
     "name": "Lord Dominik's Regards",
     "aka": [
       "lw",
@@ -3236,7 +3163,6 @@
   },
   "3039": {
     "id": 3039,
-    "key": "item",
     "name": "Atma's Reckoning",
     "gold": {
       "base": 500,
@@ -3246,11 +3172,14 @@
     "maps": [
       12,
       21
-    ]
+    ],
+    "stats": {
+      "health": 700,
+      "criticalStrikeChance": 20
+    }
   },
   "3040": {
     "id": 3040,
-    "key": "item",
     "name": "Seraph's Embrace",
     "gold": {
       "base": 2900,
@@ -3264,7 +3193,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323040,
+    "masterwork": {
+      "upgradeId": 323040,
+      "stats": {
+        "mana": 1000,
+        "abilityPower": 70
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3003
@@ -3277,7 +3212,6 @@
   },
   "3041": {
     "id": 3041,
-    "key": "item",
     "name": "Mejai's Soulstealer",
     "aka": [
       "book"
@@ -3305,7 +3239,6 @@
   },
   "3042": {
     "id": 3042,
-    "key": "item",
     "name": "Muramana",
     "gold": {
       "base": 2900,
@@ -3319,7 +3252,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323042,
+    "masterwork": {
+      "upgradeId": 323042,
+      "stats": {
+        "mana": 1000,
+        "attackDamage": 35
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3004
@@ -3338,7 +3277,6 @@
   },
   "3044": {
     "id": 3044,
-    "key": "item",
     "name": "Phage",
     "aka": [
       "mallet"
@@ -3370,7 +3308,6 @@
   },
   "3046": {
     "id": 3046,
-    "key": "item",
     "name": "Phantom Dancer",
     "aka": [
       "pd"
@@ -3404,7 +3341,6 @@
   },
   "3047": {
     "id": 3047,
-    "key": "item",
     "name": "Plated Steelcaps",
     "aka": [
       "boots",
@@ -3436,7 +3372,6 @@
   },
   "3050": {
     "id": 3050,
-    "key": "item",
     "name": "Zeke's Convergence",
     "aka": [
       "haroldandkumar"
@@ -3452,7 +3387,19 @@
       21,
       35
     ],
-    "ornnUpgrade": 323050,
+    "masterwork": {
+      "upgradeId": 323050,
+      "stats": {
+        "magicResistance": 30,
+        "health": 350,
+        "armor": 30
+      },
+      "bonusStats": {
+        "magicResistance": 5,
+        "health": 50,
+        "armor": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -3472,7 +3419,6 @@
   },
   "3051": {
     "id": 3051,
-    "key": "item",
     "name": "Hearthbound Axe",
     "aka": [
       "blue arrow"
@@ -3506,7 +3452,6 @@
   },
   "3053": {
     "id": 3053,
-    "key": "item",
     "name": "Sterak's Gage",
     "aka": [
       "juggernaut",
@@ -3542,7 +3487,6 @@
   },
   "3057": {
     "id": 3057,
-    "key": "item",
     "name": "Sheen",
     "aka": [
       "Jimmy Neutron"
@@ -3574,7 +3518,6 @@
   },
   "3065": {
     "id": 3065,
-    "key": "item",
     "name": "Spirit Visage",
     "aka": [
       "sv"
@@ -3607,7 +3550,6 @@
   },
   "3066": {
     "id": 3066,
-    "key": "item",
     "name": "Winged Moonplate",
     "aka": [
       "chaps",
@@ -3641,7 +3583,6 @@
   },
   "3067": {
     "id": 3067,
-    "key": "item",
     "name": "Kindlegem",
     "gold": {
       "base": 150,
@@ -3674,7 +3615,6 @@
   },
   "3068": {
     "id": 3068,
-    "key": "item",
     "name": "Sunfire Aegis",
     "aka": [
       "burn",
@@ -3709,7 +3649,6 @@
   },
   "3070": {
     "id": 3070,
-    "key": "item",
     "name": "Tear of the Goddess",
     "aka": [
       "archangel's staff",
@@ -3730,7 +3669,12 @@
       21,
       35
     ],
-    "ornnUpgrade": 323070,
+    "masterwork": {
+      "upgradeId": 323070,
+      "stats": {
+        "mana": 240
+      }
+    },
     "rank": "Starter",
     "stats": {
       "mana": 240
@@ -3742,7 +3686,6 @@
   },
   "3071": {
     "id": 3071,
-    "key": "item",
     "name": "Black Cleaver",
     "aka": [
       "bc"
@@ -3778,7 +3721,6 @@
   },
   "3072": {
     "id": 3072,
-    "key": "item",
     "name": "Bloodthirster",
     "aka": [
       "bt",
@@ -3811,7 +3753,6 @@
   },
   "3073": {
     "id": 3073,
-    "key": "item",
     "name": "Experimental Hexplate",
     "gold": {
       "base": 500,
@@ -3843,7 +3784,6 @@
   },
   "3074": {
     "id": 3074,
-    "key": "item",
     "name": "Ravenous Hydra",
     "aka": [
       "rav hydra"
@@ -3876,7 +3816,6 @@
   },
   "3075": {
     "id": 3075,
-    "key": "item",
     "name": "Thornmail",
     "aka": [
       "grievous wounds"
@@ -3892,7 +3831,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 323075,
+    "masterwork": {
+      "upgradeId": 323075,
+      "stats": {
+        "health": 200,
+        "armor": 85
+      },
+      "bonusStats": {
+        "health": 50,
+        "armor": 10
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3076,
@@ -3909,7 +3858,6 @@
   },
   "3076": {
     "id": 3076,
-    "key": "item",
     "name": "Bramble Vest",
     "aka": [
       "grievous wounds"
@@ -3939,7 +3887,6 @@
   },
   "3077": {
     "id": 3077,
-    "key": "item",
     "name": "Tiamat",
     "gold": {
       "base": 500,
@@ -3968,7 +3915,6 @@
   },
   "3078": {
     "id": 3078,
-    "key": "item",
     "name": "Trinity Force",
     "aka": [
       "Spellblade",
@@ -4007,7 +3953,6 @@
   },
   "3082": {
     "id": 3082,
-    "key": "item",
     "name": "Warden's Mail",
     "gold": {
       "base": 400,
@@ -4034,7 +3979,6 @@
   },
   "3083": {
     "id": 3083,
-    "key": "item",
     "name": "Warmog's Armor",
     "gold": {
       "base": 500,
@@ -4063,7 +4007,6 @@
   },
   "3084": {
     "id": 3084,
-    "key": "item",
     "name": "Heartsteel",
     "aka": [
       "Quest",
@@ -4098,7 +4041,6 @@
   },
   "3085": {
     "id": 3085,
-    "key": "item",
     "name": "Runaan's Hurricane",
     "gold": {
       "base": 850,
@@ -4129,7 +4071,6 @@
   },
   "3086": {
     "id": 3086,
-    "key": "item",
     "name": "Zeal",
     "gold": {
       "base": 350,
@@ -4159,7 +4100,6 @@
   },
   "3087": {
     "id": 3087,
-    "key": "item",
     "name": "Statikk Shiv",
     "gold": {
       "base": 450,
@@ -4190,7 +4130,6 @@
   },
   "3089": {
     "id": 3089,
-    "key": "item",
     "name": "Rabadon's Deathcap",
     "aka": [
       "banksys",
@@ -4225,7 +4164,6 @@
   },
   "3091": {
     "id": 3091,
-    "key": "item",
     "name": "Wit's End",
     "gold": {
       "base": 550,
@@ -4257,7 +4195,6 @@
   },
   "3094": {
     "id": 3094,
-    "key": "item",
     "name": "Rapid Firecannon",
     "aka": [
       "canon",
@@ -4293,17 +4230,20 @@
   },
   "3095": {
     "id": 3095,
-    "key": "item",
     "name": "Deprecated item",
     "gold": {
       "base": 500,
       "total": 3000,
       "sell": 2100
+    },
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50,
+      "attackSpeed": 20
     }
   },
   "3097": {
     "id": 3097,
-    "key": "item",
     "name": "Stormrazor",
     "aka": [
       "energize",
@@ -4338,7 +4278,6 @@
   },
   "3100": {
     "id": 3100,
-    "key": "item",
     "name": "Lich Bane",
     "aka": [
       "Spellblade"
@@ -4372,7 +4311,6 @@
   },
   "3102": {
     "id": 3102,
-    "key": "item",
     "name": "Banshee's Veil",
     "aka": [
       "bv",
@@ -4405,7 +4343,6 @@
   },
   "3105": {
     "id": 3105,
-    "key": "item",
     "name": "Aegis of the Legion",
     "gold": {
       "base": 400,
@@ -4414,11 +4351,14 @@
     },
     "maps": [
       35
-    ]
+    ],
+    "stats": {
+      "magicResistance": 25,
+      "armor": 25
+    }
   },
   "3107": {
     "id": 3107,
-    "key": "item",
     "name": "Redemption",
     "aka": [
       "burn"
@@ -4434,7 +4374,16 @@
       21,
       35
     ],
-    "ornnUpgrade": 323107,
+    "masterwork": {
+      "upgradeId": 323107,
+      "stats": {
+        "health": 400,
+        "abilityPower": 30
+      },
+      "bonusStats": {
+        "health": 400
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -4452,7 +4401,6 @@
   },
   "3108": {
     "id": 3108,
-    "key": "item",
     "name": "Fiendish Codex",
     "aka": [
       "book"
@@ -4483,7 +4431,6 @@
   },
   "3109": {
     "id": 3109,
-    "key": "item",
     "name": "Knight's Vow",
     "aka": [
       "kv"
@@ -4499,7 +4446,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 323109,
+    "masterwork": {
+      "upgradeId": 323109,
+      "stats": {
+        "health": 300,
+        "armor": 50
+      },
+      "bonusStats": {
+        "health": 100,
+        "armor": 10
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -4519,7 +4476,6 @@
   },
   "3110": {
     "id": 3110,
-    "key": "item",
     "name": "Frozen Heart",
     "aka": [
       "fh"
@@ -4535,7 +4491,16 @@
       21,
       35
     ],
-    "ornnUpgrade": 323110,
+    "masterwork": {
+      "upgradeId": 323110,
+      "stats": {
+        "mana": 500,
+        "armor": 75
+      },
+      "bonusStats": {
+        "mana": 100
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3082,
@@ -4553,7 +4518,6 @@
   },
   "3111": {
     "id": 3111,
-    "key": "item",
     "name": "Mercury's Treads",
     "aka": [
       "boots",
@@ -4586,7 +4550,6 @@
   },
   "3112": {
     "id": 3112,
-    "key": "item",
     "name": "Guardian's Orb",
     "gold": {
       "base": 950,
@@ -4612,7 +4575,6 @@
   },
   "3113": {
     "id": 3113,
-    "key": "item",
     "name": "Aether Wisp",
     "aka": [
       "spooky ghost"
@@ -4643,7 +4605,6 @@
   },
   "3114": {
     "id": 3114,
-    "key": "item",
     "name": "Forbidden Idol",
     "gold": {
       "base": 400,
@@ -4670,7 +4631,6 @@
   },
   "3115": {
     "id": 3115,
-    "key": "item",
     "name": "Nashor's Tooth",
     "aka": [
       "nashors"
@@ -4705,7 +4665,6 @@
   },
   "3116": {
     "id": 3116,
-    "key": "item",
     "name": "Rylai's Crystal Scepter",
     "aka": [
       "rylais"
@@ -4737,7 +4696,6 @@
   },
   "3117": {
     "id": 3117,
-    "key": "item",
     "name": "Mobility Boots",
     "gold": {
       "base": 700,
@@ -4750,11 +4708,13 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "3118": {
     "id": 3118,
-    "key": "item",
     "name": "Malignance",
     "aka": [
       "burn"
@@ -4787,7 +4747,6 @@
   },
   "3119": {
     "id": 3119,
-    "key": "item",
     "name": "Winter's Approach",
     "aka": [
       "Fimbulwinter",
@@ -4804,7 +4763,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323119,
+    "masterwork": {
+      "upgradeId": 323119,
+      "stats": {
+        "mana": 500,
+        "health": 550
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3070,
@@ -4822,7 +4787,6 @@
   },
   "3121": {
     "id": 3121,
-    "key": "item",
     "name": "Fimbulwinter",
     "gold": {
       "base": 2400,
@@ -4836,7 +4800,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 323121,
+    "masterwork": {
+      "upgradeId": 323121,
+      "stats": {
+        "mana": 1000,
+        "health": 550
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3119
@@ -4852,7 +4822,6 @@
   },
   "3123": {
     "id": 3123,
-    "key": "item",
     "name": "Executioner's Calling",
     "aka": [
       "grievous",
@@ -4884,7 +4853,6 @@
   },
   "3124": {
     "id": 3124,
-    "key": "item",
     "name": "Guinsoo's Rageblade",
     "gold": {
       "base": 1025,
@@ -4916,7 +4884,6 @@
   },
   "3128": {
     "id": 3128,
-    "key": "item",
     "name": "Deathfire Grasp",
     "gold": {
       "base": 850,
@@ -4925,11 +4892,13 @@
     },
     "maps": [
       21
-    ]
+    ],
+    "stats": {
+      "abilityPower": 120
+    }
   },
   "3131": {
     "id": 3131,
-    "key": "item",
     "name": "Sword of the Divine",
     "gold": {
       "base": 800,
@@ -4938,11 +4907,14 @@
     },
     "maps": [
       21
-    ]
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 25
+    }
   },
   "3133": {
     "id": 3133,
-    "key": "item",
     "name": "Caulfield's Warhammer",
     "gold": {
       "base": 100,
@@ -4973,7 +4945,6 @@
   },
   "3134": {
     "id": 3134,
-    "key": "item",
     "name": "Serrated Dirk",
     "aka": [
       "lethality"
@@ -5005,7 +4976,6 @@
   },
   "3135": {
     "id": 3135,
-    "key": "item",
     "name": "Void Staff",
     "gold": {
       "base": 1050,
@@ -5033,7 +5003,6 @@
   },
   "3137": {
     "id": 3137,
-    "key": "item",
     "name": "Cryptbloom",
     "gold": {
       "base": 200,
@@ -5063,7 +5032,6 @@
   },
   "3139": {
     "id": 3139,
-    "key": "item",
     "name": "Mercurial Scimitar",
     "aka": [
       "merc scim",
@@ -5101,7 +5069,6 @@
   },
   "3140": {
     "id": 3140,
-    "key": "item",
     "name": "Quicksilver Sash",
     "aka": [
       "qss",
@@ -5134,7 +5101,6 @@
   },
   "3142": {
     "id": 3142,
-    "key": "item",
     "name": "Youmuu's Ghostblade",
     "aka": [
       "lethality",
@@ -5169,7 +5135,6 @@
   },
   "3143": {
     "id": 3143,
-    "key": "item",
     "name": "Randuin's Omen",
     "gold": {
       "base": 800,
@@ -5197,7 +5162,6 @@
   },
   "3144": {
     "id": 3144,
-    "key": "item",
     "name": "Scout's Slingshot",
     "gold": {
       "base": 100,
@@ -5225,7 +5189,6 @@
   },
   "3145": {
     "id": 3145,
-    "key": "item",
     "name": "Hextech Alternator",
     "aka": [
       "revolver",
@@ -5256,7 +5219,6 @@
   },
   "3146": {
     "id": 3146,
-    "key": "item",
     "name": "Hextech Gunblade",
     "gold": {
       "base": 600,
@@ -5269,7 +5231,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 663146,
+    "masterwork": {
+      "upgradeId": 663146,
+      "stats": {
+        "abilityPower": 90,
+        "attackDamage": 45
+      },
+      "bonusStats": {
+        "abilityPower": 10,
+        "attackDamage": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       1053,
@@ -5287,7 +5259,6 @@
   },
   "3147": {
     "id": 3147,
-    "key": "item",
     "name": "Haunting Guise",
     "aka": [
       "mask"
@@ -5318,7 +5289,6 @@
   },
   "3152": {
     "id": 3152,
-    "key": "item",
     "name": "Hextech Rocketbelt",
     "aka": [
       "protobelt",
@@ -5353,7 +5323,6 @@
   },
   "3153": {
     "id": 3153,
-    "key": "item",
     "name": "Blade of The Ruined King",
     "aka": [
       "brk",
@@ -5391,7 +5360,6 @@
   },
   "3155": {
     "id": 3155,
-    "key": "item",
     "name": "Hexdrinker",
     "gold": {
       "base": 200,
@@ -5422,7 +5390,6 @@
   },
   "3156": {
     "id": 3156,
-    "key": "item",
     "name": "Maw of Malmortius",
     "gold": {
       "base": 750,
@@ -5453,7 +5420,6 @@
   },
   "3157": {
     "id": 3157,
-    "key": "item",
     "name": "Zhonya's Hourglass",
     "aka": [
       "zhg",
@@ -5488,7 +5454,6 @@
   },
   "3158": {
     "id": 3158,
-    "key": "item",
     "name": "Ionian Boots of Lucidity",
     "gold": {
       "base": 350,
@@ -5516,7 +5481,6 @@
   },
   "3161": {
     "id": 3161,
-    "key": "item",
     "name": "Spear of Shojin",
     "gold": {
       "base": 675,
@@ -5546,7 +5510,6 @@
   },
   "3165": {
     "id": 3165,
-    "key": "item",
     "name": "Morellonomicon",
     "aka": [
       "forbidden book",
@@ -5584,7 +5547,6 @@
   },
   "3170": {
     "id": 3170,
-    "key": "item",
     "name": "Swiftmarch",
     "aka": [
       "boots"
@@ -5610,7 +5572,6 @@
   },
   "3171": {
     "id": 3171,
-    "key": "item",
     "name": "Crimson Lucidity",
     "aka": [
       "boots"
@@ -5637,7 +5598,6 @@
   },
   "3172": {
     "id": 3172,
-    "key": "item",
     "name": "Gunmetal Greaves",
     "gold": {
       "base": 0,
@@ -5666,7 +5626,6 @@
   },
   "3173": {
     "id": 3173,
-    "key": "item",
     "name": "Chainlaced Crushers",
     "aka": [
       "boots"
@@ -5694,7 +5653,6 @@
   },
   "3174": {
     "id": 3174,
-    "key": "item",
     "name": "Armored Advance",
     "aka": [
       "boots"
@@ -5721,7 +5679,6 @@
   },
   "3175": {
     "id": 3175,
-    "key": "item",
     "name": "Spellslinger's Shoes",
     "aka": [
       "boots"
@@ -5748,7 +5705,6 @@
   },
   "3176": {
     "id": 3176,
-    "key": "item",
     "name": "Forever Forward",
     "gold": {
       "base": 0,
@@ -5758,11 +5714,13 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 55
+    }
   },
   "3177": {
     "id": 3177,
-    "key": "item",
     "name": "Guardian's Blade",
     "aka": [
       "dblade"
@@ -5792,7 +5750,6 @@
   },
   "3179": {
     "id": 3179,
-    "key": "item",
     "name": "Umbral Glaive",
     "aka": [
       "lethality"
@@ -5824,7 +5781,6 @@
   },
   "3181": {
     "id": 3181,
-    "key": "item",
     "name": "Hullbreaker",
     "aka": [
       "ahoy",
@@ -5859,7 +5815,6 @@
   },
   "3184": {
     "id": 3184,
-    "key": "item",
     "name": "Guardian's Hammer",
     "aka": [
       "dblade"
@@ -5888,7 +5843,6 @@
   },
   "3190": {
     "id": 3190,
-    "key": "item",
     "name": "Locket of the Iron Solari",
     "gold": {
       "base": 700,
@@ -5901,7 +5855,19 @@
       21,
       35
     ],
-    "ornnUpgrade": 323190,
+    "masterwork": {
+      "upgradeId": 323190,
+      "stats": {
+        "magicResistance": 30,
+        "health": 250,
+        "armor": 30
+      },
+      "bonusStats": {
+        "magicResistance": 5,
+        "health": 50,
+        "armor": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -5921,18 +5887,20 @@
   },
   "3193": {
     "id": 3193,
-    "key": "item",
     "name": "Gargoyle Stoneplate",
     "gold": {
       "base": 1350,
       "purchasable": false,
       "total": 3150,
       "sell": 2205
+    },
+    "stats": {
+      "magicResistance": 60,
+      "armor": 60
     }
   },
   "3211": {
     "id": 3211,
-    "key": "item",
     "name": "Spectre's Cowl",
     "aka": [
       "hat",
@@ -5966,7 +5934,6 @@
   },
   "3222": {
     "id": 3222,
-    "key": "item",
     "name": "Mikael's Blessing",
     "aka": [
       "crucible",
@@ -5984,7 +5951,15 @@
       21,
       35
     ],
-    "ornnUpgrade": 323222,
+    "masterwork": {
+      "upgradeId": 323222,
+      "stats": {
+        "health": 400
+      },
+      "bonusStats": {
+        "health": 150
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -6002,7 +5977,6 @@
   },
   "3302": {
     "id": 3302,
-    "key": "item",
     "name": "Terminus",
     "aka": [
       "bow",
@@ -6038,7 +6012,6 @@
   },
   "3330": {
     "id": 3330,
-    "key": "item",
     "name": "Scarecrow Effigy",
     "aka": [
       "yellow",
@@ -6067,7 +6040,6 @@
   },
   "3340": {
     "id": 3340,
-    "key": "item",
     "name": "Stealth Ward",
     "aka": [
       "yellow",
@@ -6092,7 +6064,6 @@
   },
   "3348": {
     "id": 3348,
-    "key": "item",
     "name": "Arcane Sweeper",
     "gold": {
       "base": 0,
@@ -6111,7 +6082,6 @@
   },
   "3349": {
     "id": 3349,
-    "key": "item",
     "name": "Lucent Singularity",
     "gold": {
       "base": 0,
@@ -6122,7 +6092,6 @@
   },
   "3363": {
     "id": 3363,
-    "key": "item",
     "name": "Farsight Alteration",
     "aka": [
       "blue",
@@ -6147,7 +6116,6 @@
   },
   "3364": {
     "id": 3364,
-    "key": "item",
     "name": "Oracle Lens",
     "aka": [
       "red",
@@ -6174,7 +6142,6 @@
   },
   "3398": {
     "id": 3398,
-    "key": "item",
     "name": "Small Party Favor",
     "gold": {
       "base": 0,
@@ -6185,7 +6152,6 @@
   },
   "3399": {
     "id": 3399,
-    "key": "item",
     "name": "Party Favor",
     "gold": {
       "base": 0,
@@ -6196,7 +6162,6 @@
   },
   "3400": {
     "id": 3400,
-    "key": "item",
     "name": "Your Cut",
     "gold": {
       "base": 0,
@@ -6216,7 +6181,6 @@
   },
   "3430": {
     "id": 3430,
-    "key": "item",
     "name": "Rite Of Ruin",
     "gold": {
       "base": 2500,
@@ -6238,7 +6202,6 @@
   },
   "3504": {
     "id": 3504,
-    "key": "item",
     "name": "Ardent Censer",
     "aka": [
       "censer"
@@ -6254,7 +6217,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 323504,
+    "masterwork": {
+      "upgradeId": 323504,
+      "stats": {
+        "abilityPower": 55,
+        "percentMovespeed": 6
+      },
+      "bonusStats": {
+        "abilityPower": 10,
+        "percentMovespeed": 2
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3113,
@@ -6273,7 +6246,6 @@
   },
   "3508": {
     "id": 3508,
-    "key": "item",
     "name": "Essence Reaver",
     "aka": [
       "er",
@@ -6309,7 +6281,6 @@
   },
   "3513": {
     "id": 3513,
-    "key": "item",
     "name": "Eye of the Herald",
     "aka": [
       "Herald's Eye"
@@ -6328,7 +6299,6 @@
   },
   "3599": {
     "id": 3599,
-    "key": "item",
     "name": "Kalista's Black Spear",
     "aka": [
       "spear"
@@ -6354,7 +6324,6 @@
   },
   "3600": {
     "id": 3600,
-    "key": "item",
     "name": "Kalista's Black Spear",
     "gold": {
       "base": 0,
@@ -6375,7 +6344,6 @@
   },
   "3742": {
     "id": 3742,
-    "key": "item",
     "name": "Dead Man's Plate",
     "aka": [
       "dmp",
@@ -6412,7 +6380,6 @@
   },
   "3748": {
     "id": 3748,
-    "key": "item",
     "name": "Titanic Hydra",
     "aka": [
       "beefer",
@@ -6447,7 +6414,6 @@
   },
   "3801": {
     "id": 3801,
-    "key": "item",
     "name": "Crystalline Bracer",
     "gold": {
       "base": 100,
@@ -6476,7 +6442,6 @@
   },
   "3802": {
     "id": 3802,
-    "key": "item",
     "name": "Lost Chapter",
     "aka": [
       "mana book"
@@ -6509,7 +6474,6 @@
   },
   "3803": {
     "id": 3803,
-    "key": "item",
     "name": "Catalyst of Aeons",
     "aka": [
       "protector"
@@ -6541,7 +6505,6 @@
   },
   "3814": {
     "id": 3814,
-    "key": "item",
     "name": "Edge of Night",
     "aka": [
       "eon",
@@ -6576,139 +6539,174 @@
   },
   "3850": {
     "id": 3850,
-    "key": "item",
     "name": "Spellthief's Edge",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 25,
+      "abilityPower": 10
     }
   },
   "3851": {
     "id": 3851,
-    "key": "item",
     "name": "Frostfang",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 70,
+      "abilityPower": 15
     }
   },
   "3853": {
     "id": 3853,
-    "key": "item",
     "name": "Shard of True Ice",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 75,
+      "abilityPower": 40
     }
   },
   "3854": {
     "id": 3854,
-    "key": "item",
     "name": "Steel Shoulderguards",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 50,
+      "attackDamage": 4
     }
   },
   "3855": {
     "id": 3855,
-    "key": "item",
     "name": "Runesteel Spaulders",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 100,
+      "attackDamage": 6
     }
   },
   "3857": {
     "id": 3857,
-    "key": "item",
     "name": "Pauldrons of Whiterock",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 250,
+      "attackDamage": 15
     }
   },
   "3858": {
     "id": 3858,
-    "key": "item",
     "name": "Relic Shield",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 50,
+      "abilityPower": 7
     }
   },
   "3859": {
     "id": 3859,
-    "key": "item",
     "name": "Targon's Buckler",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 100,
+      "abilityPower": 10
     }
   },
   "3860": {
     "id": 3860,
-    "key": "item",
     "name": "Bulwark of the Mountain",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 250,
+      "abilityPower": 20
     }
   },
   "3862": {
     "id": 3862,
-    "key": "item",
     "name": "Spectral Sickle",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 25,
+      "attackDamage": 6
     }
   },
   "3863": {
     "id": 3863,
-    "key": "item",
     "name": "Harrowing Crescent",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 60,
+      "attackDamage": 10
     }
   },
   "3864": {
     "id": 3864,
-    "key": "item",
     "name": "Black Mist Scythe",
     "gold": {
       "base": 400,
       "purchasable": false,
       "total": 400,
       "sell": 160
+    },
+    "stats": {
+      "health": 75,
+      "attackDamage": 20
     }
   },
   "3865": {
     "id": 3865,
-    "key": "item",
     "name": "World Atlas",
     "aka": [
       "Map"
@@ -6735,7 +6733,6 @@
   },
   "3866": {
     "id": 3866,
-    "key": "item",
     "name": "Runic Compass",
     "gold": {
       "base": 400,
@@ -6762,7 +6759,6 @@
   },
   "3867": {
     "id": 3867,
-    "key": "item",
     "name": "Bounty of Worlds",
     "gold": {
       "base": 400,
@@ -6789,7 +6785,6 @@
   },
   "3869": {
     "id": 3869,
-    "key": "item",
     "name": "Celestial Opposition",
     "gold": {
       "base": 0,
@@ -6815,7 +6810,6 @@
   },
   "3870": {
     "id": 3870,
-    "key": "item",
     "name": "Dream Maker",
     "aka": [
       "Plushie",
@@ -6845,7 +6839,6 @@
   },
   "3871": {
     "id": 3871,
-    "key": "item",
     "name": "Zaz'Zak's Realmspike",
     "gold": {
       "base": 0,
@@ -6871,7 +6864,6 @@
   },
   "3876": {
     "id": 3876,
-    "key": "item",
     "name": "Solstice Sleigh",
     "gold": {
       "base": 0,
@@ -6897,7 +6889,6 @@
   },
   "3877": {
     "id": 3877,
-    "key": "item",
     "name": "Bloodsong",
     "aka": [
       "Spellblade"
@@ -6926,7 +6917,6 @@
   },
   "3901": {
     "id": 3901,
-    "key": "item",
     "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "gold": {
       "base": 0,
@@ -6949,7 +6939,6 @@
   },
   "3902": {
     "id": 3902,
-    "key": "item",
     "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "gold": {
       "base": 0,
@@ -6972,7 +6961,6 @@
   },
   "3903": {
     "id": 3903,
-    "key": "item",
     "name": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "gold": {
       "base": 0,
@@ -6995,7 +6983,6 @@
   },
   "3916": {
     "id": 3916,
-    "key": "item",
     "name": "Oblivion Orb",
     "aka": [
       "grievous",
@@ -7026,7 +7013,6 @@
   },
   "4003": {
     "id": 4003,
-    "key": "item",
     "name": "Lifeline",
     "aka": [
       "lethality"
@@ -7057,7 +7043,6 @@
   },
   "4004": {
     "id": 4004,
-    "key": "item",
     "name": "Spectral Cutlass",
     "gold": {
       "base": 200,
@@ -7068,11 +7053,14 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50,
+      "percentMovespeed": 4
+    }
   },
   "4005": {
     "id": 4005,
-    "key": "item",
     "name": "Imperial Mandate",
     "aka": [
       "banner of command",
@@ -7089,7 +7077,15 @@
       21,
       35
     ],
-    "ornnUpgrade": 324005,
+    "masterwork": {
+      "upgradeId": 324005,
+      "stats": {
+        "abilityPower": 65
+      },
+      "bonusStats": {
+        "abilityPower": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -7106,7 +7102,6 @@
   },
   "4010": {
     "id": 4010,
-    "key": "item",
     "name": "Bloodletter's Curse",
     "gold": {
       "base": 2500,
@@ -7115,11 +7110,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    }
   },
   "4011": {
     "id": 4011,
-    "key": "item",
     "name": "Sword of Blossoming Dawn",
     "gold": {
       "base": 2500,
@@ -7142,38 +7140,48 @@
   },
   "4012": {
     "id": 4012,
-    "key": "item",
     "name": "Sin Eater",
     "gold": {
       "base": 3000,
       "total": 3000,
       "sell": 2100
+    },
+    "stats": {
+      "magicResistance": 45,
+      "health": 300,
+      "armor": 45
     }
   },
   "4013": {
     "id": 4013,
-    "key": "item",
     "name": "Lightning Braid",
     "gold": {
       "base": 3000,
       "total": 3000,
       "sell": 2100
+    },
+    "stats": {
+      "magicResistance": 30,
+      "abilityPower": 70,
+      "armor": 30
     }
   },
   "4014": {
     "id": 4014,
-    "key": "item",
     "name": "Frozen Mallet",
     "gold": {
       "base": 3000,
       "purchasable": false,
       "total": 3000,
       "sell": 2100
+    },
+    "stats": {
+      "health": 600,
+      "attackSpeed": 60
     }
   },
   "4015": {
     "id": 4015,
-    "key": "item",
     "name": "Perplexity",
     "gold": {
       "base": 2500,
@@ -7196,7 +7204,6 @@
   },
   "4016": {
     "id": 4016,
-    "key": "item",
     "name": "Wordless Promise",
     "gold": {
       "base": 2500,
@@ -7218,7 +7225,6 @@
   },
   "4017": {
     "id": 4017,
-    "key": "item",
     "name": "Hellfire Hatchet",
     "aka": [
       "burn"
@@ -7242,7 +7248,6 @@
   },
   "4401": {
     "id": 4401,
-    "key": "item",
     "name": "Force of Nature",
     "aka": [
       "fon"
@@ -7275,7 +7280,6 @@
   },
   "4402": {
     "id": 4402,
-    "key": "item",
     "name": "Innervating Locket",
     "gold": {
       "base": 600,
@@ -7284,11 +7288,15 @@
     },
     "maps": [
       21
-    ]
+    ],
+    "stats": {
+      "mana": 300,
+      "health": 400,
+      "attackDamage": 30
+    }
   },
   "4403": {
     "id": 4403,
-    "key": "item",
     "name": "The Golden Spatula",
     "gold": {
       "base": 687,
@@ -7297,11 +7305,22 @@
     },
     "maps": [
       21
-    ]
+    ],
+    "stats": {
+      "magicResistance": 30,
+      "mana": 250,
+      "health": 250,
+      "abilityPower": 120,
+      "armor": 30,
+      "criticalStrikeChance": 30,
+      "attackDamage": 70,
+      "attackSpeed": 50,
+      "lifesteal": 10,
+      "percentMovespeed": 10
+    }
   },
   "4628": {
     "id": 4628,
-    "key": "item",
     "name": "Horizon Focus",
     "aka": [
       "lock on",
@@ -7334,7 +7353,6 @@
   },
   "4629": {
     "id": 4629,
-    "key": "item",
     "name": "Cosmic Drive",
     "aka": [
       "cooldown hat"
@@ -7369,7 +7387,6 @@
   },
   "4630": {
     "id": 4630,
-    "key": "item",
     "name": "Blighting Jewel",
     "aka": [
       "pen",
@@ -7400,7 +7417,6 @@
   },
   "4632": {
     "id": 4632,
-    "key": "item",
     "name": "Verdant Barrier",
     "aka": [
       "necklace"
@@ -7432,7 +7448,6 @@
   },
   "4633": {
     "id": 4633,
-    "key": "item",
     "name": "Riftmaker",
     "aka": [
       "velkoz"
@@ -7465,7 +7480,6 @@
   },
   "4635": {
     "id": 4635,
-    "key": "item",
     "name": "Leeching Leer",
     "gold": {
       "base": 465,
@@ -7478,11 +7492,14 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "health": 250,
+      "abilityPower": 20
+    }
   },
   "4636": {
     "id": 4636,
-    "key": "item",
     "name": "Night Harvester",
     "gold": {
       "base": 815,
@@ -7495,11 +7512,14 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "abilityPower": 90
+    }
   },
   "4637": {
     "id": 4637,
-    "key": "item",
     "name": "Demonic Embrace",
     "gold": {
       "base": 850,
@@ -7512,21 +7532,28 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "abilityPower": 75
+    }
   },
   "4638": {
     "id": 4638,
-    "key": "item",
     "name": "Watchful Wardstone",
     "gold": {
       "base": 1100,
       "total": 1100,
       "sell": 770
+    },
+    "stats": {
+      "magicResistance": 15,
+      "health": 150,
+      "armor": 10
     }
   },
   "4641": {
     "id": 4641,
-    "key": "item",
     "name": "Stirring Wardstone",
     "gold": {
       "base": 350,
@@ -7536,11 +7563,13 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "health": 80
+    }
   },
   "4642": {
     "id": 4642,
-    "key": "item",
     "name": "Bandleglass Mirror",
     "aka": [
       "yordle"
@@ -7573,28 +7602,35 @@
   },
   "4643": {
     "id": 4643,
-    "key": "item",
     "name": "Vigilant Wardstone",
     "gold": {
       "base": 1200,
       "total": 2300,
       "sell": 1610
+    },
+    "stats": {
+      "magicResistance": 30,
+      "health": 250,
+      "armor": 25
     }
   },
   "4644": {
     "id": 4644,
-    "key": "item",
     "name": "Crown of the Shattered Queen",
     "gold": {
       "base": 465,
       "purchasable": false,
       "total": 2865,
       "sell": 2006
+    },
+    "stats": {
+      "mana": 600,
+      "health": 250,
+      "abilityPower": 85
     }
   },
   "4645": {
     "id": 4645,
-    "key": "item",
     "name": "Shadowflame",
     "gold": {
       "base": 900,
@@ -7622,7 +7658,6 @@
   },
   "4646": {
     "id": 4646,
-    "key": "item",
     "name": "Stormsurge",
     "gold": {
       "base": 800,
@@ -7649,20 +7684,98 @@
       "Mage"
     ]
   },
+  "5000": {
+    "id": 5000,
+    "name": "Lucky Urf Statue",
+    "gold": {
+      "base": 420,
+      "total": 3620,
+      "sell": 2534
+    },
+    "stats": {
+      "health": 350,
+      "abilityPower": 40,
+      "attackDamage": 25
+    }
+  },
+  "5001": {
+    "id": 5001,
+    "name": "Heart Of Gold",
+    "gold": {
+      "base": 400,
+      "total": 800,
+      "sell": 560
+    },
+    "stats": {
+      "health": 200
+    }
+  },
+  "5002": {
+    "id": 5002,
+    "name": "Kage's Lucky Pick",
+    "gold": {
+      "base": 400,
+      "total": 800,
+      "sell": 560
+    },
+    "stats": {
+      "abilityPower": 25
+    }
+  },
+  "5003": {
+    "id": 5003,
+    "name": "Avarice Blade",
+    "gold": {
+      "base": 450,
+      "total": 800,
+      "sell": 560
+    },
+    "stats": {
+      "attackDamage": 15
+    }
+  },
+  "5004": {
+    "id": 5004,
+    "name": "Philosopher's Stone",
+    "gold": {
+      "base": 300,
+      "total": 800,
+      "sell": 560
+    }
+  },
+  "5005": {
+    "id": 5005,
+    "name": "<font color='#C21807'>Pot</font><font color='#FFBF00'>ion</font> <font color='#00A86B'>Of</font> <font color='#40E0D0'>Col</font><font color='#8F00FF'>ors</font>",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "5006": {
+    "id": 5006,
+    "name": "Potion? of Greed",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
   "6029": {
     "id": 6029,
-    "key": "item",
     "name": "Ironspike Whip",
     "gold": {
       "base": 225,
       "purchasable": false,
       "total": 1100,
       "sell": 770
+    },
+    "stats": {
+      "attackDamage": 30
     }
   },
   "6032": {
     "id": 6032,
-    "key": "item",
     "name": "Stat Bonus",
     "gold": {
       "base": 750,
@@ -7675,18 +7788,21 @@
   },
   "6035": {
     "id": 6035,
-    "key": "item",
     "name": "Silvermere Dawn",
     "gold": {
       "base": 425,
       "purchasable": false,
       "total": 3000,
       "sell": 2100
+    },
+    "stats": {
+      "magicResistance": 40,
+      "health": 300,
+      "attackDamage": 40
     }
   },
   "6333": {
     "id": 6333,
-    "key": "item",
     "name": "Death's Dance",
     "aka": [
       "dd"
@@ -7719,7 +7835,6 @@
   },
   "6609": {
     "id": 6609,
-    "key": "item",
     "name": "Chempunk Chainsword",
     "aka": [
       "grievous",
@@ -7754,7 +7869,6 @@
   },
   "6610": {
     "id": 6610,
-    "key": "item",
     "name": "Sundered Sky",
     "gold": {
       "base": 500,
@@ -7784,7 +7898,6 @@
   },
   "6616": {
     "id": 6616,
-    "key": "item",
     "name": "Staff of Flowing Water",
     "aka": [
       "nami"
@@ -7800,7 +7913,15 @@
       21,
       35
     ],
-    "ornnUpgrade": 326616,
+    "masterwork": {
+      "upgradeId": 326616,
+      "stats": {
+        "abilityPower": 45
+      },
+      "bonusStats": {
+        "abilityPower": 10
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3108,
@@ -7818,7 +7939,6 @@
   },
   "6617": {
     "id": 6617,
-    "key": "item",
     "name": "Moonstone Renewer",
     "aka": [
       "yuumi"
@@ -7834,7 +7954,17 @@
       21,
       35
     ],
-    "ornnUpgrade": 326617,
+    "masterwork": {
+      "upgradeId": 326617,
+      "stats": {
+        "health": 400,
+        "abilityPower": 35
+      },
+      "bonusStats": {
+        "health": 200,
+        "abilityPower": 10
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -7852,7 +7982,6 @@
   },
   "6620": {
     "id": 6620,
-    "key": "item",
     "name": "Echoes of Helia",
     "aka": [
       "spooky cup"
@@ -7868,7 +7997,16 @@
       21,
       35
     ],
-    "ornnUpgrade": 326620,
+    "masterwork": {
+      "upgradeId": 326620,
+      "stats": {
+        "health": 250,
+        "abilityPower": 35
+      },
+      "bonusStats": {
+        "health": 50
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -7886,7 +8024,6 @@
   },
   "6621": {
     "id": 6621,
-    "key": "item",
     "name": "Dawncore",
     "aka": [
       "dawncore"
@@ -7902,7 +8039,15 @@
       21,
       35
     ],
-    "ornnUpgrade": 326621,
+    "masterwork": {
+      "upgradeId": 326621,
+      "stats": {
+        "abilityPower": 50
+      },
+      "bonusStats": {
+        "abilityPower": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       1026,
@@ -7920,18 +8065,20 @@
   },
   "6630": {
     "id": 6630,
-    "key": "item",
     "name": "Goredrinker",
     "gold": {
       "base": 200,
       "purchasable": false,
       "total": 3200,
       "sell": 2240
+    },
+    "stats": {
+      "health": 400,
+      "attackDamage": 55
     }
   },
   "6631": {
     "id": 6631,
-    "key": "item",
     "name": "Stridebreaker",
     "aka": [
       "kneecapper",
@@ -7966,18 +8113,20 @@
   },
   "6632": {
     "id": 6632,
-    "key": "item",
     "name": "Divine Sunderer",
     "gold": {
       "base": 700,
       "purchasable": false,
       "total": 3450,
       "sell": 2415
+    },
+    "stats": {
+      "health": 300,
+      "attackDamage": 40
     }
   },
   "6653": {
     "id": 6653,
-    "key": "item",
     "name": "Liandry's Torment",
     "aka": [
       "last shadow",
@@ -8010,7 +8159,6 @@
   },
   "6655": {
     "id": 6655,
-    "key": "item",
     "name": "Luden's Echo",
     "gold": {
       "base": 450,
@@ -8039,18 +8187,21 @@
   },
   "6656": {
     "id": 6656,
-    "key": "item",
     "name": "Everfrost",
     "gold": {
       "base": 465,
       "purchasable": false,
       "total": 2865,
       "sell": 2006
+    },
+    "stats": {
+      "mana": 600,
+      "health": 250,
+      "abilityPower": 70
     }
   },
   "6657": {
     "id": 6657,
-    "key": "item",
     "name": "Rod of Ages",
     "aka": [
       "RoA"
@@ -8066,7 +8217,14 @@
       21,
       35
     ],
-    "ornnUpgrade": 326657,
+    "masterwork": {
+      "upgradeId": 326657,
+      "stats": {
+        "mana": 500,
+        "health": 350,
+        "abilityPower": 45
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       1026,
@@ -8083,7 +8241,6 @@
   },
   "6660": {
     "id": 6660,
-    "key": "item",
     "name": "Bami's Cinder",
     "aka": [
       "fire"
@@ -8114,7 +8271,6 @@
   },
   "6662": {
     "id": 6662,
-    "key": "item",
     "name": "Iceborn Gauntlet",
     "aka": [
       "Spellblade",
@@ -8153,7 +8309,6 @@
   },
   "6664": {
     "id": 6664,
-    "key": "item",
     "name": "Hollow Radiance",
     "aka": [
       "catastrophe"
@@ -8186,7 +8341,6 @@
   },
   "6665": {
     "id": 6665,
-    "key": "item",
     "name": "Jak'Sho, The Protean",
     "aka": [
       "Jak'Sho, The Protean"
@@ -8219,18 +8373,21 @@
   },
   "6667": {
     "id": 6667,
-    "key": "item",
     "name": "Radiant Virtue",
     "gold": {
       "base": 600,
       "purchasable": false,
       "total": 2600,
       "sell": 1820
+    },
+    "stats": {
+      "magicResistance": 30,
+      "health": 350,
+      "armor": 30
     }
   },
   "6670": {
     "id": 6670,
-    "key": "item",
     "name": "Noonquiver",
     "gold": {
       "base": 350,
@@ -8259,18 +8416,22 @@
   },
   "6671": {
     "id": 6671,
-    "key": "item",
     "name": "Galeforce",
     "gold": {
       "base": 650,
       "purchasable": false,
       "total": 3500,
       "sell": 2450
+    },
+    "stats": {
+      "criticalStrikeChance": 20,
+      "attackDamage": 50,
+      "attackSpeed": 15,
+      "percentMovespeed": 7
     }
   },
   "6672": {
     "id": 6672,
-    "key": "item",
     "name": "Kraken Slayer",
     "aka": [
       "Kraken Slayer"
@@ -8303,7 +8464,6 @@
   },
   "6673": {
     "id": 6673,
-    "key": "item",
     "name": "Immortal Shieldbow",
     "gold": {
       "base": 825,
@@ -8332,7 +8492,6 @@
   },
   "6675": {
     "id": 6675,
-    "key": "item",
     "name": "Navori Flickerblade",
     "aka": [
       "crit shojin"
@@ -8365,7 +8524,6 @@
   },
   "6676": {
     "id": 6676,
-    "key": "item",
     "name": "The Collector",
     "aka": [
       "deathblade",
@@ -8383,7 +8541,13 @@
       21,
       35
     ],
-    "ornnUpgrade": 667666,
+    "masterwork": {
+      "upgradeId": 667666,
+      "stats": {
+        "criticalStrikeChance": 25,
+        "attackDamage": 50
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       1037,
@@ -8402,18 +8566,19 @@
   },
   "6677": {
     "id": 6677,
-    "key": "item",
     "name": "Rageknife",
     "gold": {
       "base": 600,
       "purchasable": false,
       "total": 1100,
       "sell": 770
+    },
+    "stats": {
+      "attackSpeed": 25
     }
   },
   "6690": {
     "id": 6690,
-    "key": "item",
     "name": "Rectrix",
     "gold": {
       "base": 425,
@@ -8441,18 +8606,19 @@
   },
   "6691": {
     "id": 6691,
-    "key": "item",
     "name": "Duskblade of Draktharr",
     "gold": {
       "base": 900,
       "purchasable": false,
       "total": 2950,
       "sell": 2065
+    },
+    "stats": {
+      "attackDamage": 60
     }
   },
   "6692": {
     "id": 6692,
-    "key": "item",
     "name": "Eclipse",
     "aka": [
       "lethality"
@@ -8484,7 +8650,6 @@
   },
   "6693": {
     "id": 6693,
-    "key": "item",
     "name": "Prowler's Claw",
     "gold": {
       "base": 800,
@@ -8497,11 +8662,13 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "attackDamage": 55
+    }
   },
   "6694": {
     "id": 6694,
-    "key": "item",
     "name": "Serylda's Grudge",
     "aka": [
       "slow"
@@ -8533,7 +8700,6 @@
   },
   "6695": {
     "id": 6695,
-    "key": "item",
     "name": "Serpent's Fang",
     "aka": [
       "lethality"
@@ -8564,7 +8730,6 @@
   },
   "6696": {
     "id": 6696,
-    "key": "item",
     "name": "Axiom Arc",
     "gold": {
       "base": 363,
@@ -8593,7 +8758,6 @@
   },
   "6697": {
     "id": 6697,
-    "key": "item",
     "name": "Hubris",
     "aka": [
       "lethality"
@@ -8623,7 +8787,6 @@
   },
   "6698": {
     "id": 6698,
-    "key": "item",
     "name": "Profane Hydra",
     "aka": [
       "lethality"
@@ -8655,7 +8818,6 @@
   },
   "6699": {
     "id": 6699,
-    "key": "item",
     "name": "Voltaic Cyclosword",
     "aka": [
       "lethality"
@@ -8688,18 +8850,21 @@
   },
   "6700": {
     "id": 6700,
-    "key": "item",
     "name": "Shield of the Rakkor",
     "gold": {
       "base": 800,
       "purchasable": false,
       "total": 2675,
       "sell": 1873
+    },
+    "stats": {
+      "armor": 30,
+      "attackDamage": 50,
+      "percentMovespeed": 5
     }
   },
   "6701": {
     "id": 6701,
-    "key": "item",
     "name": "Opportunity",
     "aka": [
       "lethality"
@@ -8732,7 +8897,6 @@
   },
   "6702": {
     "id": 6702,
-    "key": "item",
     "name": "Scouting Ahead",
     "gold": {
       "base": 0,
@@ -8746,7 +8910,6 @@
   },
   "7050": {
     "id": 7050,
-    "key": "item",
     "name": "Gangplank Placeholder",
     "gold": {
       "base": 0,
@@ -8768,7 +8931,6 @@
   },
   "8001": {
     "id": 8001,
-    "key": "item",
     "name": "Anathema's Chains",
     "gold": {
       "base": 800,
@@ -8781,11 +8943,13 @@
       12,
       21,
       35
-    ]
+    ],
+    "stats": {
+      "health": 650
+    }
   },
   "8010": {
     "id": 8010,
-    "key": "item",
     "name": "Bloodletter's Curse",
     "gold": {
       "base": 750,
@@ -8814,7 +8978,6 @@
   },
   "8020": {
     "id": 8020,
-    "key": "item",
     "name": "Abyssal Mask",
     "gold": {
       "base": 1000,
@@ -8827,7 +8990,16 @@
       21,
       35
     ],
-    "ornnUpgrade": 328020,
+    "masterwork": {
+      "upgradeId": 328020,
+      "stats": {
+        "magicResistance": 50,
+        "health": 350
+      },
+      "bonusStats": {
+        "magicResistance": 5
+      }
+    },
     "rank": "Legendary",
     "recipe": [
       3067,
@@ -8845,7 +9017,6 @@
   },
   "9168": {
     "id": 9168,
-    "key": "item",
     "name": "Locked Weapon Slot",
     "gold": {
       "base": 0,
@@ -8858,7 +9029,6 @@
   },
   "9171": {
     "id": 9171,
-    "key": "item",
     "name": "Cyclonic Slicers",
     "gold": {
       "base": 0,
@@ -8871,7 +9041,6 @@
   },
   "9172": {
     "id": 9172,
-    "key": "item",
     "name": "YuumiBot",
     "gold": {
       "base": 0,
@@ -8884,7 +9053,6 @@
   },
   "9173": {
     "id": 9173,
-    "key": "item",
     "name": "Radiant Field",
     "gold": {
       "base": 0,
@@ -8897,7 +9065,6 @@
   },
   "9174": {
     "id": 9174,
-    "key": "item",
     "name": "Statikk Sword",
     "gold": {
       "base": 0,
@@ -8910,7 +9077,6 @@
   },
   "9175": {
     "id": 9175,
-    "key": "item",
     "name": "Lioness's Lament",
     "gold": {
       "base": 0,
@@ -8923,7 +9089,6 @@
   },
   "9176": {
     "id": 9176,
-    "key": "item",
     "name": "Gatling Bunny-Guns",
     "gold": {
       "base": 0,
@@ -8936,7 +9101,6 @@
   },
   "9177": {
     "id": 9177,
-    "key": "item",
     "name": "Searing Shortbow",
     "gold": {
       "base": 0,
@@ -8949,7 +9113,6 @@
   },
   "9178": {
     "id": 9178,
-    "key": "item",
     "name": "The Annihilator",
     "gold": {
       "base": 0,
@@ -8962,7 +9125,6 @@
   },
   "9179": {
     "id": 9179,
-    "key": "item",
     "name": "Battle Bunny Crossbow",
     "gold": {
       "base": 0,
@@ -8975,7 +9137,6 @@
   },
   "9180": {
     "id": 9180,
-    "key": "item",
     "name": "UwU Blaster",
     "gold": {
       "base": 0,
@@ -8988,7 +9149,6 @@
   },
   "9181": {
     "id": 9181,
-    "key": "item",
     "name": "Vortex Glove",
     "gold": {
       "base": 0,
@@ -9001,7 +9161,6 @@
   },
   "9183": {
     "id": 9183,
-    "key": "item",
     "name": "Blade-o-rang",
     "gold": {
       "base": 0,
@@ -9014,7 +9173,6 @@
   },
   "9184": {
     "id": 9184,
-    "key": "item",
     "name": "Bunny Mega-Blast",
     "gold": {
       "base": 0,
@@ -9027,7 +9185,6 @@
   },
   "9185": {
     "id": 9185,
-    "key": "item",
     "name": "Anti-Shark Sea Mine",
     "gold": {
       "base": 0,
@@ -9040,7 +9197,6 @@
   },
   "9187": {
     "id": 9187,
-    "key": "item",
     "name": "T.I.B.B.E.R.S",
     "gold": {
       "base": 0,
@@ -9053,7 +9209,6 @@
   },
   "9188": {
     "id": 9188,
-    "key": "item",
     "name": "Ani-Mines",
     "gold": {
       "base": 0,
@@ -9066,7 +9221,6 @@
   },
   "9189": {
     "id": 9189,
-    "key": "item",
     "name": "Final City Transit",
     "gold": {
       "base": 0,
@@ -9079,7 +9233,6 @@
   },
   "9190": {
     "id": 9190,
-    "key": "item",
     "name": "Echoing Batblades",
     "gold": {
       "base": 0,
@@ -9092,7 +9245,6 @@
   },
   "9192": {
     "id": 9192,
-    "key": "item",
     "name": "Paw Print Poisoner",
     "gold": {
       "base": 0,
@@ -9105,7 +9257,6 @@
   },
   "9193": {
     "id": 9193,
-    "key": "item",
     "name": "Iceblast Armor",
     "gold": {
       "base": 0,
@@ -9118,7 +9269,6 @@
   },
   "9271": {
     "id": 9271,
-    "key": "item",
     "name": "Unceasing Cyclone",
     "gold": {
       "base": 0,
@@ -9131,7 +9281,6 @@
   },
   "9272": {
     "id": 9272,
-    "key": "item",
     "name": "YuumiBot_Final_FINAL",
     "gold": {
       "base": 0,
@@ -9144,7 +9293,6 @@
   },
   "9273": {
     "id": 9273,
-    "key": "item",
     "name": "Explosive Embrace",
     "gold": {
       "base": 0,
@@ -9157,7 +9305,6 @@
   },
   "9274": {
     "id": 9274,
-    "key": "item",
     "name": "Prumbis's Electrocarver",
     "gold": {
       "base": 0,
@@ -9170,7 +9317,6 @@
   },
   "9275": {
     "id": 9275,
-    "key": "item",
     "name": "Enveloping Light",
     "gold": {
       "base": 0,
@@ -9183,7 +9329,6 @@
   },
   "9276": {
     "id": 9276,
-    "key": "item",
     "name": "Double Bun-Bun Barrage",
     "gold": {
       "base": 0,
@@ -9196,7 +9341,6 @@
   },
   "9277": {
     "id": 9277,
-    "key": "item",
     "name": "Evolved Embershot",
     "gold": {
       "base": 0,
@@ -9209,7 +9353,6 @@
   },
   "9278": {
     "id": 9278,
-    "key": "item",
     "name": "Animapocalypse",
     "gold": {
       "base": 0,
@@ -9222,7 +9365,6 @@
   },
   "9279": {
     "id": 9279,
-    "key": "item",
     "name": "Bunny Prime Ballista",
     "gold": {
       "base": 0,
@@ -9235,7 +9377,6 @@
   },
   "9280": {
     "id": 9280,
-    "key": "item",
     "name": "OwO Blaster",
     "gold": {
       "base": 0,
@@ -9248,7 +9389,6 @@
   },
   "9281": {
     "id": 9281,
-    "key": "item",
     "name": "Tempest's Gauntlet",
     "gold": {
       "base": 0,
@@ -9261,7 +9401,6 @@
   },
   "9283": {
     "id": 9283,
-    "key": "item",
     "name": "Quad-o-rang",
     "gold": {
       "base": 0,
@@ -9274,7 +9413,6 @@
   },
   "9284": {
     "id": 9284,
-    "key": "item",
     "name": "Rapid Rabbit Raindown",
     "gold": {
       "base": 0,
@@ -9287,7 +9425,6 @@
   },
   "9285": {
     "id": 9285,
-    "key": "item",
     "name": "Neverending Mobstomper",
     "gold": {
       "base": 0,
@@ -9300,7 +9437,6 @@
   },
   "9287": {
     "id": 9287,
-    "key": "item",
     "name": "T.I.B.B.E.R.S (B.E.E.G Edition)",
     "gold": {
       "base": 0,
@@ -9313,7 +9449,6 @@
   },
   "9288": {
     "id": 9288,
-    "key": "item",
     "name": "Jinx's Tri-Namite",
     "gold": {
       "base": 0,
@@ -9326,7 +9461,6 @@
   },
   "9289": {
     "id": 9289,
-    "key": "item",
     "name": "FC Limited Express",
     "gold": {
       "base": 0,
@@ -9339,7 +9473,6 @@
   },
   "9290": {
     "id": 9290,
-    "key": "item",
     "name": "Vayne's Chromablades",
     "gold": {
       "base": 0,
@@ -9352,7 +9485,6 @@
   },
   "9292": {
     "id": 9292,
-    "key": "item",
     "name": "Bearfoot Chem-Dispenser",
     "gold": {
       "base": 0,
@@ -9365,7 +9497,6 @@
   },
   "9293": {
     "id": 9293,
-    "key": "item",
     "name": "Deep Freeze",
     "gold": {
       "base": 0,
@@ -9378,7 +9509,6 @@
   },
   "9300": {
     "id": 9300,
-    "key": "item",
     "name": "Meow Meow",
     "gold": {
       "base": 0,
@@ -9391,7 +9521,6 @@
   },
   "9301": {
     "id": 9301,
-    "key": "item",
     "name": "Shield Slam",
     "gold": {
       "base": 0,
@@ -9404,7 +9533,6 @@
   },
   "9302": {
     "id": 9302,
-    "key": "item",
     "name": "Sound Wave",
     "gold": {
       "base": 0,
@@ -9417,7 +9545,6 @@
   },
   "9303": {
     "id": 9303,
-    "key": "item",
     "name": "Pillory Swipe",
     "gold": {
       "base": 0,
@@ -9430,7 +9557,6 @@
   },
   "9304": {
     "id": 9304,
-    "key": "item",
     "name": "Steel Tempest",
     "gold": {
       "base": 0,
@@ -9443,7 +9569,6 @@
   },
   "9305": {
     "id": 9305,
-    "key": "item",
     "name": "Tentacle Slam",
     "gold": {
       "base": 0,
@@ -9456,7 +9581,6 @@
   },
   "9306": {
     "id": 9306,
-    "key": "item",
     "name": "Winged Dagger",
     "gold": {
       "base": 0,
@@ -9469,7 +9593,6 @@
   },
   "9307": {
     "id": 9307,
-    "key": "item",
     "name": "Guiding Hex",
     "gold": {
       "base": 0,
@@ -9482,7 +9605,6 @@
   },
   "9308": {
     "id": 9308,
-    "key": "item",
     "name": "Bunny Hop",
     "gold": {
       "base": 0,
@@ -9495,7 +9617,6 @@
   },
   "9400": {
     "id": 9400,
-    "key": "item",
     "name": "Battle Cat Barrage",
     "gold": {
       "base": 0,
@@ -9508,7 +9629,6 @@
   },
   "9401": {
     "id": 9401,
-    "key": "item",
     "name": "Light of the Lion",
     "gold": {
       "base": 0,
@@ -9521,7 +9641,6 @@
   },
   "9402": {
     "id": 9402,
-    "key": "item",
     "name": "Anima Echo",
     "gold": {
       "base": 0,
@@ -9534,7 +9653,6 @@
   },
   "9403": {
     "id": 9403,
-    "key": "item",
     "name": "Savage Slice",
     "gold": {
       "base": 0,
@@ -9547,7 +9665,6 @@
   },
   "9404": {
     "id": 9404,
-    "key": "item",
     "name": "Wandering Storms",
     "gold": {
       "base": 0,
@@ -9560,7 +9677,6 @@
   },
   "9405": {
     "id": 9405,
-    "key": "item",
     "name": "Grizzly Smash",
     "gold": {
       "base": 0,
@@ -9573,7 +9689,6 @@
   },
   "9406": {
     "id": 9406,
-    "key": "item",
     "name": "Lover's Ricochet",
     "gold": {
       "base": 0,
@@ -9586,7 +9701,6 @@
   },
   "9407": {
     "id": 9407,
-    "key": "item",
     "name": "Hopped-Up Hex",
     "gold": {
       "base": 0,
@@ -9599,7 +9713,6 @@
   },
   "9408": {
     "id": 9408,
-    "key": "item",
     "name": "Carrot Crash",
     "gold": {
       "base": 0,
@@ -9612,7 +9725,6 @@
   },
   "123430": {
     "id": 123430,
-    "key": "item",
     "name": "Rite of Ruin",
     "gold": {
       "base": 650,
@@ -9621,11 +9733,15 @@
     },
     "maps": [
       12
-    ]
+    ],
+    "stats": {
+      "abilityPower": 55,
+      "criticalStrikeChance": 25,
+      "percentMovespeed": 4
+    }
   },
   "124011": {
     "id": 124011,
-    "key": "item",
     "name": "Sword of Blossoming Dawn",
     "gold": {
       "base": 550,
@@ -9634,11 +9750,14 @@
     },
     "maps": [
       12
-    ]
+    ],
+    "stats": {
+      "health": 200,
+      "abilityPower": 45
+    }
   },
   "126697": {
     "id": 126697,
-    "key": "item",
     "name": "Hubris",
     "gold": {
       "base": 900,
@@ -9648,11 +9767,13 @@
     "maps": [
       12,
       35
-    ]
+    ],
+    "stats": {
+      "attackDamage": 60
+    }
   },
   "220000": {
     "id": 220000,
-    "key": "item",
     "name": "Stat Bonus",
     "gold": {
       "base": 750,
@@ -9670,7 +9791,6 @@
   },
   "220001": {
     "id": 220001,
-    "key": "item",
     "name": "Legendary Fighter Item",
     "gold": {
       "base": 2000,
@@ -9688,7 +9808,6 @@
   },
   "220002": {
     "id": 220002,
-    "key": "item",
     "name": "Legendary Marksman Item",
     "gold": {
       "base": 2000,
@@ -9706,7 +9825,6 @@
   },
   "220003": {
     "id": 220003,
-    "key": "item",
     "name": "Legendary Assassin Item",
     "gold": {
       "base": 2000,
@@ -9724,7 +9842,6 @@
   },
   "220004": {
     "id": 220004,
-    "key": "item",
     "name": "Legendary Mage Item",
     "gold": {
       "base": 2000,
@@ -9742,7 +9859,6 @@
   },
   "220005": {
     "id": 220005,
-    "key": "item",
     "name": "Legendary Tank Item",
     "gold": {
       "base": 2000,
@@ -9760,7 +9876,6 @@
   },
   "220006": {
     "id": 220006,
-    "key": "item",
     "name": "Legendary Support Item",
     "gold": {
       "base": 2000,
@@ -9778,7 +9893,6 @@
   },
   "220007": {
     "id": 220007,
-    "key": "item",
     "name": "Prismatic Item",
     "gold": {
       "base": 4000,
@@ -9796,7 +9910,6 @@
   },
   "220008": {
     "id": 220008,
-    "key": "item",
     "name": "Anvil Voucher",
     "gold": {
       "base": 750,
@@ -9811,7 +9924,6 @@
   },
   "220009": {
     "id": 220009,
-    "key": "item",
     "name": "Gold Stat Anvil Voucher",
     "gold": {
       "base": 750,
@@ -9825,7 +9937,6 @@
   },
   "220010": {
     "id": 220010,
-    "key": "item",
     "name": "Prismatic Stat Voucher",
     "gold": {
       "base": 750,
@@ -9839,7 +9950,6 @@
   },
   "220011": {
     "id": 220011,
-    "key": "item",
     "name": "Bravery Voucher",
     "gold": {
       "base": 750,
@@ -9853,18 +9963,19 @@
   },
   "221011": {
     "id": 221011,
-    "key": "item",
     "name": "Giant's Belt",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "health": 300
     }
   },
   "221026": {
     "id": 221026,
-    "key": "item",
     "name": "Blasting Wand",
     "gold": {
       "base": 500,
@@ -9874,65 +9985,78 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 45
+    }
   },
   "221031": {
     "id": 221031,
-    "key": "item",
     "name": "Chain Vest",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "armor": 40
     }
   },
   "221038": {
     "id": 221038,
-    "key": "item",
     "name": "B. F. Sword",
     "gold": {
       "base": 1300,
       "total": 1300,
       "sell": 910
+    },
+    "stats": {
+      "attackDamage": 40
     }
   },
   "221043": {
     "id": 221043,
-    "key": "item",
     "name": "Recurve Bow",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "attackSpeed": 15
     }
   },
   "221053": {
     "id": 221053,
-    "key": "item",
     "name": "Vampiric Scepter",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "attackDamage": 15,
+      "lifesteal": 7
     }
   },
   "221057": {
     "id": 221057,
-    "key": "item",
     "name": "Negatron Cloak",
     "gold": {
       "base": 450,
       "purchasable": false,
       "total": 450,
       "sell": 315
+    },
+    "stats": {
+      "magicResistance": 30
     }
   },
   "221058": {
     "id": 221058,
-    "key": "item",
     "name": "Needlessly Large Rod",
     "gold": {
       "base": 500,
@@ -9942,11 +10066,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 120
+    }
   },
   "222022": {
     "id": 222022,
-    "key": "item",
     "name": "Glowing Mote",
     "gold": {
       "base": 250,
@@ -9957,7 +10083,6 @@
   },
   "222051": {
     "id": 222051,
-    "key": "item",
     "name": "Guardian's Horn",
     "gold": {
       "base": 500,
@@ -9966,11 +10091,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "healthRegen": 4
+    }
   },
   "222065": {
     "id": 222065,
-    "key": "item",
     "name": "Shurelya's Battlesong",
     "gold": {
       "base": 2500,
@@ -9979,11 +10107,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 55,
+      "percentMovespeed": 6
+    }
   },
   "222141": {
     "id": 222141,
-    "key": "item",
     "name": "Cappa Juice",
     "gold": {
       "base": 500,
@@ -9996,7 +10127,6 @@
   },
   "222502": {
     "id": 222502,
-    "key": "item",
     "name": "Unending Despair",
     "gold": {
       "base": 2500,
@@ -10005,11 +10135,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "armor": 50
+    }
   },
   "222503": {
     "id": 222503,
-    "key": "item",
     "name": "Blackfire Torch",
     "gold": {
       "base": 2500,
@@ -10018,11 +10151,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "abilityPower": 60
+    }
   },
   "222504": {
     "id": 222504,
-    "key": "item",
     "name": "Kaenic Rookern",
     "gold": {
       "base": 2500,
@@ -10031,11 +10167,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 80,
+      "health": 350
+    }
   },
   "222510": {
     "id": 222510,
-    "key": "item",
     "name": "Dusk and Dawn",
     "gold": {
       "base": 2500,
@@ -10044,11 +10183,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "abilityPower": 70,
+      "attackSpeed": 25
+    }
   },
   "222512": {
     "id": 222512,
-    "key": "item",
     "name": "Fiendhunter Bolts",
     "gold": {
       "base": 2500,
@@ -10057,11 +10200,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 40,
+      "percentMovespeed": 4
+    }
   },
   "222517": {
     "id": 222517,
-    "key": "item",
     "name": "Endless Hunger",
     "gold": {
       "base": 2500,
@@ -10070,11 +10217,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 60
+    }
   },
   "222522": {
     "id": 222522,
-    "key": "item",
     "name": "Actualizer",
     "gold": {
       "base": 2500,
@@ -10083,11 +10232,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 300,
+      "abilityPower": 90
+    }
   },
   "222523": {
     "id": 222523,
-    "key": "item",
     "name": "Hexoptics C44",
     "gold": {
       "base": 2500,
@@ -10096,11 +10248,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50
+    }
   },
   "222524": {
     "id": 222524,
-    "key": "item",
     "name": "Bandlepipes",
     "gold": {
       "base": 2500,
@@ -10109,11 +10264,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 25,
+      "health": 200,
+      "armor": 25
+    }
   },
   "222525": {
     "id": 222525,
-    "key": "item",
     "name": "Protoplasm Harness",
     "gold": {
       "base": 2500,
@@ -10122,11 +10281,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 600
+    }
   },
   "222526": {
     "id": 222526,
-    "key": "item",
     "name": "Whispering Circlet",
     "gold": {
       "base": 2500,
@@ -10135,11 +10296,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 300,
+      "health": 200
+    }
   },
   "222530": {
     "id": 222530,
-    "key": "item",
     "name": "Diadem of Songs",
     "gold": {
       "base": 2500,
@@ -10149,32 +10313,43 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 1000,
+      "health": 200
+    }
   },
   "223001": {
     "id": 223001,
-    "key": "item",
     "name": "Evenshroud",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "magicResistance": 30,
+      "health": 200,
+      "armor": 30
     }
   },
   "223002": {
     "id": 223002,
-    "key": "item",
     "name": "Trailblazer",
     "gold": {
       "base": 2500,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "health": 300,
+      "armor": 45,
+      "percentMovespeed": 6
     }
   },
   "223003": {
     "id": 223003,
-    "key": "item",
     "name": "Archangel's Staff",
     "gold": {
       "base": 2500,
@@ -10183,11 +10358,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "abilityPower": 55
+    }
   },
   "223004": {
     "id": 223004,
-    "key": "item",
     "name": "Manamune",
     "gold": {
       "base": 2500,
@@ -10196,11 +10374,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "attackDamage": 40
+    }
   },
   "223005": {
     "id": 223005,
-    "key": "item",
     "name": "Ghostcrawlers",
     "gold": {
       "base": 500,
@@ -10220,7 +10401,6 @@
   },
   "223006": {
     "id": 223006,
-    "key": "item",
     "name": "Berserker's Greaves",
     "gold": {
       "base": 500,
@@ -10229,11 +10409,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 55,
+      "attackSpeed": 35
+    }
   },
   "223009": {
     "id": 223009,
-    "key": "item",
     "name": "Boots of Swiftness",
     "gold": {
       "base": 500,
@@ -10242,11 +10425,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 70
+    }
   },
   "223011": {
     "id": 223011,
-    "key": "item",
     "name": "Chemtech Putrifier",
     "gold": {
       "base": 500,
@@ -10256,11 +10441,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 35
+    }
   },
   "223020": {
     "id": 223020,
-    "key": "item",
     "name": "Sorcerer's Shoes",
     "gold": {
       "base": 500,
@@ -10269,11 +10456,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 55
+    }
   },
   "223026": {
     "id": 223026,
-    "key": "item",
     "name": "Guardian Angel",
     "gold": {
       "base": 2500,
@@ -10282,11 +10471,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "armor": 45,
+      "attackDamage": 55
+    }
   },
   "223031": {
     "id": 223031,
-    "key": "item",
     "name": "Infinity Edge",
     "gold": {
       "base": 2500,
@@ -10295,11 +10487,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 55
+    }
   },
   "223032": {
     "id": 223032,
-    "key": "item",
     "name": "Yun Tal Wildarrows",
     "gold": {
       "base": 2500,
@@ -10308,11 +10503,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 40
+    }
   },
   "223033": {
     "id": 223033,
-    "key": "item",
     "name": "Mortal Reminder",
     "gold": {
       "base": 2500,
@@ -10321,11 +10519,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 30
+    }
   },
   "223036": {
     "id": 223036,
-    "key": "item",
     "name": "Lord Dominik's Regards",
     "gold": {
       "base": 2500,
@@ -10334,11 +10535,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 30
+    }
   },
   "223039": {
     "id": 223039,
-    "key": "item",
     "name": "Atma's Reckoning",
     "aka": [
       "wreckoning"
@@ -10362,7 +10566,6 @@
   },
   "223040": {
     "id": 223040,
-    "key": "item",
     "name": "Seraph's Embrace",
     "gold": {
       "base": 2500,
@@ -10372,11 +10575,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 1200,
+      "abilityPower": 60
+    }
   },
   "223042": {
     "id": 223042,
-    "key": "item",
     "name": "Muramana",
     "gold": {
       "base": 2500,
@@ -10386,11 +10592,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 1000,
+      "attackDamage": 40
+    }
   },
   "223046": {
     "id": 223046,
-    "key": "item",
     "name": "Phantom Dancer",
     "gold": {
       "base": 2500,
@@ -10399,11 +10608,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 60,
+      "percentMovespeed": 8
+    }
   },
   "223047": {
     "id": 223047,
-    "key": "item",
     "name": "Plated Steelcaps",
     "gold": {
       "base": 500,
@@ -10412,11 +10625,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 30,
+      "armor": 25
+    }
   },
   "223050": {
     "id": 223050,
-    "key": "item",
     "name": "Zeke's Convergence",
     "gold": {
       "base": 2500,
@@ -10425,11 +10641,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 30,
+      "health": 300,
+      "armor": 25
+    }
   },
   "223053": {
     "id": 223053,
-    "key": "item",
     "name": "Sterak's Gage",
     "gold": {
       "base": 2500,
@@ -10438,11 +10658,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300
+    }
   },
   "223057": {
     "id": 223057,
-    "key": "item",
     "name": "Sheen",
     "gold": {
       "base": 2500,
@@ -10453,7 +10675,6 @@
   },
   "223065": {
     "id": 223065,
-    "key": "item",
     "name": "Spirit Visage",
     "gold": {
       "base": 2500,
@@ -10462,22 +10683,27 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "health": 300
+    }
   },
   "223067": {
     "id": 223067,
-    "key": "item",
     "name": "Kindlegem",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "health": 200
     }
   },
   "223068": {
     "id": 223068,
-    "key": "item",
     "name": "Sunfire Aegis",
     "gold": {
       "base": 2500,
@@ -10486,11 +10712,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "armor": 40
+    }
   },
   "223069": {
     "id": 223069,
-    "key": "item",
     "name": "Void Immolation",
     "gold": {
       "base": 6000,
@@ -10514,7 +10743,6 @@
   },
   "223071": {
     "id": 223071,
-    "key": "item",
     "name": "Black Cleaver",
     "gold": {
       "base": 2500,
@@ -10523,11 +10751,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    }
   },
   "223072": {
     "id": 223072,
-    "key": "item",
     "name": "Bloodthirster",
     "gold": {
       "base": 2500,
@@ -10536,11 +10767,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 70,
+      "lifesteal": 18
+    }
   },
   "223073": {
     "id": 223073,
-    "key": "item",
     "name": "Experimental Hexplate",
     "gold": {
       "base": 2500,
@@ -10549,11 +10783,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 450,
+      "attackDamage": 40,
+      "attackSpeed": 30
+    }
   },
   "223074": {
     "id": 223074,
-    "key": "item",
     "name": "Ravenous Hydra",
     "gold": {
       "base": 2500,
@@ -10562,11 +10800,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 70,
+      "lifesteal": 15
+    }
   },
   "223075": {
     "id": 223075,
-    "key": "item",
     "name": "Thornmail",
     "gold": {
       "base": 2500,
@@ -10575,11 +10816,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 60
+    }
   },
   "223078": {
     "id": 223078,
-    "key": "item",
     "name": "Trinity Force",
     "gold": {
       "base": 2500,
@@ -10588,11 +10832,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 333,
+      "attackDamage": 35,
+      "attackSpeed": 25
+    }
   },
   "223084": {
     "id": 223084,
-    "key": "item",
     "name": "Heartsteel",
     "gold": {
       "base": 2500,
@@ -10601,11 +10849,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 700
+    }
   },
   "223085": {
     "id": 223085,
-    "key": "item",
     "name": "Runaan's Hurricane",
     "gold": {
       "base": 2500,
@@ -10614,11 +10864,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 45,
+      "percentMovespeed": 4
+    }
   },
   "223087": {
     "id": 223087,
-    "key": "item",
     "name": "Statikk Shiv",
     "gold": {
       "base": 2500,
@@ -10627,11 +10881,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 45,
+      "attackSpeed": 40,
+      "percentMovespeed": 4
+    }
   },
   "223089": {
     "id": 223089,
-    "key": "item",
     "name": "Rabadon's Deathcap",
     "gold": {
       "base": 2500,
@@ -10640,11 +10898,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 65
+    }
   },
   "223091": {
     "id": 223091,
-    "key": "item",
     "name": "Wit's End",
     "gold": {
       "base": 2500,
@@ -10653,11 +10913,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "attackSpeed": 50
+    }
   },
   "223094": {
     "id": 223094,
-    "key": "item",
     "name": "Rapid Firecannon",
     "gold": {
       "base": 2500,
@@ -10666,11 +10929,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 30,
+      "percentMovespeed": 4
+    }
   },
   "223095": {
     "id": 223095,
-    "key": "item",
     "name": "Stormrazor",
     "gold": {
       "base": 2500,
@@ -10679,11 +10946,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50,
+      "attackSpeed": 20
+    }
   },
   "223100": {
     "id": 223100,
-    "key": "item",
     "name": "Lich Bane",
     "gold": {
       "base": 2500,
@@ -10692,11 +10963,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "percentMovespeed": 10
+    }
   },
   "223102": {
     "id": 223102,
-    "key": "item",
     "name": "Banshee's Veil",
     "gold": {
       "base": 2500,
@@ -10705,22 +10979,28 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "abilityPower": 80
+    }
   },
   "223105": {
     "id": 223105,
-    "key": "item",
     "name": "Aegis of the Legion",
     "gold": {
       "base": 500,
       "purchasable": false,
       "total": 500,
       "sell": 350
+    },
+    "stats": {
+      "magicResistance": 30,
+      "armor": 30
     }
   },
   "223107": {
     "id": 223107,
-    "key": "item",
     "name": "Redemption",
     "gold": {
       "base": 2500,
@@ -10729,11 +11009,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 30
+    }
   },
   "223109": {
     "id": 223109,
-    "key": "item",
     "name": "Knight's Vow",
     "gold": {
       "base": 2500,
@@ -10742,11 +11024,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 400,
+      "armor": 50
+    }
   },
   "223110": {
     "id": 223110,
-    "key": "item",
     "name": "Frozen Heart",
     "gold": {
       "base": 2500,
@@ -10755,11 +11040,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 450,
+      "armor": 90
+    }
   },
   "223111": {
     "id": 223111,
-    "key": "item",
     "name": "Mercury's Treads",
     "gold": {
       "base": 500,
@@ -10768,11 +11056,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 30,
+      "flatMovespeed": 30
+    }
   },
   "223112": {
     "id": 223112,
-    "key": "item",
     "name": "Guardian's Orb",
     "gold": {
       "base": 500,
@@ -10781,11 +11072,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 55
+    }
   },
   "223115": {
     "id": 223115,
-    "key": "item",
     "name": "Nashor's Tooth",
     "gold": {
       "base": 2500,
@@ -10794,11 +11087,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 70,
+      "attackSpeed": 45
+    }
   },
   "223116": {
     "id": 223116,
-    "key": "item",
     "name": "Rylai's Crystal Scepter",
     "gold": {
       "base": 2500,
@@ -10807,11 +11103,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    }
   },
   "223118": {
     "id": 223118,
-    "key": "item",
     "name": "Malignance",
     "gold": {
       "base": 2500,
@@ -10820,11 +11119,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "abilityPower": 70
+    }
   },
   "223119": {
     "id": 223119,
-    "key": "item",
     "name": "Winter's Approach",
     "gold": {
       "base": 2500,
@@ -10833,11 +11135,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "health": 400
+    }
   },
   "223121": {
     "id": 223121,
-    "key": "item",
     "name": "Fimbulwinter",
     "gold": {
       "base": 2500,
@@ -10847,11 +11152,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 1000,
+      "health": 400
+    }
   },
   "223124": {
     "id": 223124,
-    "key": "item",
     "name": "Guinsoo's Rageblade",
     "gold": {
       "base": 2500,
@@ -10860,11 +11168,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 25,
+      "attackDamage": 20,
+      "attackSpeed": 25
+    }
   },
   "223135": {
     "id": 223135,
-    "key": "item",
     "name": "Void Staff",
     "gold": {
       "base": 2500,
@@ -10873,11 +11185,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 65
+    }
   },
   "223137": {
     "id": 223137,
-    "key": "item",
     "name": "Cryptbloom",
     "gold": {
       "base": 2500,
@@ -10886,11 +11200,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 60
+    }
   },
   "223139": {
     "id": 223139,
-    "key": "item",
     "name": "Mercurial Scimitar",
     "gold": {
       "base": 2500,
@@ -10899,11 +11215,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "attackDamage": 45,
+      "lifesteal": 10
+    }
   },
   "223142": {
     "id": 223142,
-    "key": "item",
     "name": "Youmuu's Ghostblade",
     "gold": {
       "base": 2500,
@@ -10912,11 +11232,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 55,
+      "percentMovespeed": 4
+    }
   },
   "223143": {
     "id": 223143,
-    "key": "item",
     "name": "Randuin's Omen",
     "gold": {
       "base": 2500,
@@ -10925,11 +11248,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 75
+    }
   },
   "223146": {
     "id": 223146,
-    "key": "item",
     "name": "Hextech Gunblade",
     "gold": {
       "base": 2500,
@@ -10938,11 +11264,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "attackDamage": 45
+    }
   },
   "223152": {
     "id": 223152,
-    "key": "item",
     "name": "Hextech Rocketbelt",
     "gold": {
       "base": 2500,
@@ -10951,11 +11280,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 400,
+      "abilityPower": 95
+    }
   },
   "223153": {
     "id": 223153,
-    "key": "item",
     "name": "Blade of The Ruined King",
     "gold": {
       "base": 2500,
@@ -10964,11 +11296,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 20,
+      "lifesteal": 10
+    }
   },
   "223156": {
     "id": 223156,
-    "key": "item",
     "name": "Maw of Malmortius",
     "gold": {
       "base": 2500,
@@ -10977,11 +11313,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "attackDamage": 50
+    }
   },
   "223157": {
     "id": 223157,
-    "key": "item",
     "name": "Zhonya's Hourglass",
     "gold": {
       "base": 2500,
@@ -10990,11 +11329,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 80,
+      "armor": 50
+    }
   },
   "223158": {
     "id": 223158,
-    "key": "item",
     "name": "Ionian Boots of Lucidity",
     "gold": {
       "base": 500,
@@ -11003,11 +11345,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "flatMovespeed": 45
+    }
   },
   "223161": {
     "id": 223161,
-    "key": "item",
     "name": "Spear of Shojin",
     "gold": {
       "base": 2500,
@@ -11016,11 +11360,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    }
   },
   "223165": {
     "id": 223165,
-    "key": "item",
     "name": "Morellonomicon",
     "gold": {
       "base": 2500,
@@ -11029,11 +11376,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 250,
+      "abilityPower": 90
+    }
   },
   "223172": {
     "id": 223172,
-    "key": "item",
     "name": "Zephyr",
     "gold": {
       "base": 2500,
@@ -11042,11 +11392,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackSpeed": 50,
+      "percentMovespeed": 10
+    }
   },
   "223177": {
     "id": 223177,
-    "key": "item",
     "name": "Guardian's Blade",
     "gold": {
       "base": 500,
@@ -11055,11 +11408,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 250,
+      "attackDamage": 25
+    }
   },
   "223181": {
     "id": 223181,
-    "key": "item",
     "name": "Hullbreaker",
     "gold": {
       "base": 2500,
@@ -11068,11 +11424,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 500,
+      "attackDamage": 40,
+      "percentMovespeed": 4
+    }
   },
   "223184": {
     "id": 223184,
-    "key": "item",
     "name": "Guardian's Hammer",
     "gold": {
       "base": 500,
@@ -11081,11 +11441,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 25,
+      "attackSpeed": 35,
+      "lifesteal": 5
+    }
   },
   "223185": {
     "id": 223185,
-    "key": "item",
     "name": "Guardian's Dirk",
     "gold": {
       "base": 500,
@@ -11108,7 +11472,6 @@
   },
   "223190": {
     "id": 223190,
-    "key": "item",
     "name": "Locket of the Iron Solari",
     "gold": {
       "base": 2500,
@@ -11117,22 +11480,29 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 35,
+      "health": 400,
+      "armor": 25
+    }
   },
   "223193": {
     "id": 223193,
-    "key": "item",
     "name": "Gargoyle Stoneplate",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "magicResistance": 60,
+      "armor": 60
     }
   },
   "223222": {
     "id": 223222,
-    "key": "item",
     "name": "Mikael's Blessing",
     "gold": {
       "base": 2500,
@@ -11141,11 +11511,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 400
+    }
   },
   "223302": {
     "id": 223302,
-    "key": "item",
     "name": "Terminus",
     "gold": {
       "base": 2500,
@@ -11154,11 +11526,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 30,
+      "attackSpeed": 25
+    }
   },
   "223504": {
     "id": 223504,
-    "key": "item",
     "name": "Ardent Censer",
     "gold": {
       "base": 2500,
@@ -11167,11 +11542,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 40,
+      "percentMovespeed": 6
+    }
   },
   "223508": {
     "id": 223508,
-    "key": "item",
     "name": "Essence Reaver",
     "gold": {
       "base": 2500,
@@ -11180,11 +11558,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50
+    }
   },
   "223742": {
     "id": 223742,
-    "key": "item",
     "name": "Dead Man's Plate",
     "gold": {
       "base": 2500,
@@ -11193,11 +11574,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 40,
+      "percentMovespeed": 7
+    }
   },
   "223748": {
     "id": 223748,
-    "key": "item",
     "name": "Titanic Hydra",
     "gold": {
       "base": 2500,
@@ -11206,11 +11591,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 400,
+      "attackDamage": 40
+    }
   },
   "223814": {
     "id": 223814,
-    "key": "item",
     "name": "Edge of Night",
     "gold": {
       "base": 2500,
@@ -11219,11 +11607,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 375,
+      "attackDamage": 45
+    }
   },
   "224004": {
     "id": 224004,
-    "key": "item",
     "name": "Spectral Cutlass",
     "gold": {
       "base": 2500,
@@ -11245,7 +11636,6 @@
   },
   "224005": {
     "id": 224005,
-    "key": "item",
     "name": "Imperial Mandate",
     "gold": {
       "base": 2500,
@@ -11254,11 +11644,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 60
+    }
   },
   "224401": {
     "id": 224401,
-    "key": "item",
     "name": "Force of Nature",
     "gold": {
       "base": 2500,
@@ -11267,11 +11659,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 50,
+      "health": 400,
+      "percentMovespeed": 4
+    }
   },
   "224403": {
     "id": 224403,
-    "key": "item",
     "name": "The Golden Spatula",
     "aka": [
       "spatch",
@@ -11308,7 +11704,6 @@
   },
   "224628": {
     "id": 224628,
-    "key": "item",
     "name": "Horizon Focus",
     "gold": {
       "base": 2500,
@@ -11317,11 +11712,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 90
+    }
   },
   "224629": {
     "id": 224629,
-    "key": "item",
     "name": "Cosmic Drive",
     "gold": {
       "base": 2500,
@@ -11330,11 +11727,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "abilityPower": 65,
+      "percentMovespeed": 4
+    }
   },
   "224633": {
     "id": 224633,
-    "key": "item",
     "name": "Riftmaker",
     "gold": {
       "base": 2500,
@@ -11343,44 +11744,57 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "abilityPower": 60
+    }
   },
   "224636": {
     "id": 224636,
-    "key": "item",
     "name": "Night Harvester",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "health": 300,
+      "abilityPower": 90
     }
   },
   "224637": {
     "id": 224637,
-    "key": "item",
     "name": "Demonic Embrace",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "health": 350,
+      "abilityPower": 75
     }
   },
   "224644": {
     "id": 224644,
-    "key": "item",
     "name": "Crown of the Shattered Queen",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "mana": 600,
+      "health": 250,
+      "abilityPower": 85
     }
   },
   "224645": {
     "id": 224645,
-    "key": "item",
     "name": "Shadowflame",
     "gold": {
       "base": 2500,
@@ -11389,11 +11803,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 90
+    }
   },
   "224646": {
     "id": 224646,
-    "key": "item",
     "name": "Stormsurge",
     "gold": {
       "base": 2500,
@@ -11402,22 +11818,29 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 90,
+      "percentMovespeed": 4
+    }
   },
   "226035": {
     "id": 226035,
-    "key": "item",
     "name": "Silvermere Dawn",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "magicResistance": 40,
+      "health": 300,
+      "attackDamage": 40
     }
   },
   "226333": {
     "id": 226333,
-    "key": "item",
     "name": "Death's Dance",
     "gold": {
       "base": 2500,
@@ -11426,11 +11849,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "armor": 45,
+      "attackDamage": 60
+    }
   },
   "226609": {
     "id": 226609,
-    "key": "item",
     "name": "Chempunk Chainsword",
     "gold": {
       "base": 2500,
@@ -11439,11 +11865,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 450,
+      "attackDamage": 45
+    }
   },
   "226610": {
     "id": 226610,
-    "key": "item",
     "name": "Sundered Sky",
     "gold": {
       "base": 2500,
@@ -11452,11 +11881,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 350,
+      "attackDamage": 40
+    }
   },
   "226616": {
     "id": 226616,
-    "key": "item",
     "name": "Staff of Flowing Water",
     "gold": {
       "base": 2500,
@@ -11465,11 +11897,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 65
+    }
   },
   "226617": {
     "id": 226617,
-    "key": "item",
     "name": "Moonstone Renewer",
     "gold": {
       "base": 2500,
@@ -11478,11 +11912,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 200,
+      "abilityPower": 35
+    }
   },
   "226620": {
     "id": 226620,
-    "key": "item",
     "name": "Echoes of Helia",
     "gold": {
       "base": 2500,
@@ -11491,11 +11928,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "abilityPower": 40
+    }
   },
   "226621": {
     "id": 226621,
-    "key": "item",
     "name": "Dawncore",
     "gold": {
       "base": 2500,
@@ -11504,11 +11944,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "abilityPower": 45
+    }
   },
   "226630": {
     "id": 226630,
-    "key": "item",
     "name": "Goredrinker",
     "aka": [
       "slurp"
@@ -11537,7 +11979,6 @@
   },
   "226631": {
     "id": 226631,
-    "key": "item",
     "name": "Stridebreaker",
     "gold": {
       "base": 2500,
@@ -11546,22 +11987,29 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 375,
+      "attackDamage": 40,
+      "attackSpeed": 15
+    }
   },
   "226632": {
     "id": 226632,
-    "key": "item",
     "name": "Divine Sunderer",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "health": 300,
+      "attackDamage": 40
     }
   },
   "226653": {
     "id": 226653,
-    "key": "item",
     "name": "Liandry's Anguish",
     "gold": {
       "base": 2500,
@@ -11570,11 +12018,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 250,
+      "abilityPower": 50
+    }
   },
   "226655": {
     "id": 226655,
-    "key": "item",
     "name": "Luden's Echo",
     "gold": {
       "base": 2500,
@@ -11583,22 +12034,29 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "abilityPower": 85
+    }
   },
   "226656": {
     "id": 226656,
-    "key": "item",
     "name": "Everfrost",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "mana": 600,
+      "health": 250,
+      "abilityPower": 70
     }
   },
   "226657": {
     "id": 226657,
-    "key": "item",
     "name": "Rod of Ages",
     "gold": {
       "base": 2500,
@@ -11607,11 +12065,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "mana": 300,
+      "health": 350,
+      "abilityPower": 60
+    }
   },
   "226662": {
     "id": 226662,
-    "key": "item",
     "name": "Iceborn Gauntlet",
     "gold": {
       "base": 2500,
@@ -11620,11 +12082,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 300,
+      "armor": 45
+    }
   },
   "226664": {
     "id": 226664,
-    "key": "item",
     "name": "Hollow Radiance",
     "gold": {
       "base": 2500,
@@ -11633,11 +12098,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 40,
+      "health": 450
+    }
   },
   "226665": {
     "id": 226665,
-    "key": "item",
     "name": "Jak'Sho, The Protean",
     "gold": {
       "base": 2500,
@@ -11646,33 +12114,46 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 35,
+      "health": 350,
+      "armor": 35
+    }
   },
   "226667": {
     "id": 226667,
-    "key": "item",
     "name": "Radiant Virtue",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "magicResistance": 30,
+      "health": 350,
+      "armor": 30
     }
   },
   "226671": {
     "id": 226671,
-    "key": "item",
     "name": "Galeforce",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "criticalStrikeChance": 20,
+      "attackDamage": 50,
+      "attackSpeed": 15,
+      "percentMovespeed": 7
     }
   },
   "226672": {
     "id": 226672,
-    "key": "item",
     "name": "Kraken Slayer",
     "gold": {
       "base": 2500,
@@ -11681,11 +12162,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 40,
+      "attackSpeed": 35,
+      "percentMovespeed": 7
+    }
   },
   "226673": {
     "id": 226673,
-    "key": "item",
     "name": "Immortal Shieldbow",
     "gold": {
       "base": 2500,
@@ -11694,11 +12179,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 55
+    }
   },
   "226675": {
     "id": 226675,
-    "key": "item",
     "name": "Navori Flickerblades",
     "gold": {
       "base": 2500,
@@ -11707,11 +12195,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackSpeed": 35,
+      "percentMovespeed": 4
+    }
   },
   "226676": {
     "id": 226676,
-    "key": "item",
     "name": "The Collector",
     "gold": {
       "base": 2500,
@@ -11720,22 +12212,27 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 45
+    }
   },
   "226691": {
     "id": 226691,
-    "key": "item",
     "name": "Duskblade of Draktharr",
     "gold": {
       "base": 2500,
       "purchasable": false,
       "total": 2500,
       "sell": 1750
+    },
+    "stats": {
+      "attackDamage": 60
     }
   },
   "226692": {
     "id": 226692,
-    "key": "item",
     "name": "Eclipse",
     "gold": {
       "base": 2500,
@@ -11744,11 +12241,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50
+    }
   },
   "226693": {
     "id": 226693,
-    "key": "item",
     "name": "Prowler's Claw",
     "gold": {
       "base": 1000,
@@ -11757,11 +12256,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 55
+    }
   },
   "226694": {
     "id": 226694,
-    "key": "item",
     "name": "Serylda's Grudge",
     "gold": {
       "base": 2500,
@@ -11770,11 +12271,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 40
+    }
   },
   "226695": {
     "id": 226695,
-    "key": "item",
     "name": "Serpent's Fang",
     "gold": {
       "base": 2500,
@@ -11783,11 +12286,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 55
+    }
   },
   "226696": {
     "id": 226696,
-    "key": "item",
     "name": "Axiom Arc",
     "gold": {
       "base": 2500,
@@ -11796,11 +12301,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 45
+    }
   },
   "226697": {
     "id": 226697,
-    "key": "item",
     "name": "Hubris",
     "gold": {
       "base": 2500,
@@ -11809,11 +12316,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50
+    }
   },
   "226698": {
     "id": 226698,
-    "key": "item",
     "name": "Profane Hydra",
     "gold": {
       "base": 2500,
@@ -11822,11 +12331,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50
+    }
   },
   "226699": {
     "id": 226699,
-    "key": "item",
     "name": "Voltaic Cyclosword",
     "gold": {
       "base": 2500,
@@ -11835,11 +12346,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50
+    }
   },
   "226701": {
     "id": 226701,
-    "key": "item",
     "name": "Opportunity",
     "gold": {
       "base": 2500,
@@ -11848,11 +12361,13 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 50
+    }
   },
   "228001": {
     "id": 228001,
-    "key": "item",
     "name": "Anathema's Chains",
     "aka": [
       "Helia",
@@ -11881,7 +12396,6 @@
   },
   "228002": {
     "id": 228002,
-    "key": "item",
     "name": "Wooglet's Witchcap",
     "aka": [
       "Quest",
@@ -11908,7 +12422,6 @@
   },
   "228003": {
     "id": 228003,
-    "key": "item",
     "name": "Deathblade",
     "gold": {
       "base": 9000,
@@ -11918,11 +12431,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 20,
+      "attackDamage": 150
+    }
   },
   "228004": {
     "id": 228004,
-    "key": "item",
     "name": "Adaptive Helm",
     "gold": {
       "base": 6000,
@@ -11932,11 +12448,16 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 100,
+      "health": 800,
+      "armor": 50,
+      "percentMovespeed": 5
+    }
   },
   "228005": {
     "id": 228005,
-    "key": "item",
     "name": "Obsidian Cleaver",
     "gold": {
       "base": 3000,
@@ -11946,11 +12467,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 700,
+      "attackDamage": 70
+    }
   },
   "228006": {
     "id": 228006,
-    "key": "item",
     "name": "Sanguine Blade",
     "gold": {
       "base": 3000,
@@ -11960,11 +12484,15 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "attackDamage": 130,
+      "attackSpeed": 40,
+      "lifesteal": 30
+    }
   },
   "228008": {
     "id": 228008,
-    "key": "item",
     "name": "Runeglaive",
     "gold": {
       "base": 9000,
@@ -11974,11 +12502,19 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 600,
+      "abilityPower": 85,
+      "armor": 50,
+      "criticalStrikeChance": 20,
+      "attackDamage": 65,
+      "attackSpeed": 30,
+      "percentMovespeed": 10
+    }
   },
   "228009": {
     "id": 228009,
-    "key": "item",
     "name": "Multitool",
     "gold": {
       "base": 2500,
@@ -11991,7 +12527,6 @@
   },
   "228020": {
     "id": 228020,
-    "key": "item",
     "name": "Abyssal Mask",
     "gold": {
       "base": 2500,
@@ -12000,11 +12535,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "magicResistance": 50,
+      "health": 350
+    }
   },
   "322065": {
     "id": 322065,
-    "key": "item",
     "name": "Shurelya's Battlesong",
     "gold": {
       "base": 800,
@@ -12014,11 +12552,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 65,
+      "percentMovespeed": 6
+    }
   },
   "322526": {
     "id": 322526,
-    "key": "item",
     "name": "Whispering Circlet",
     "gold": {
       "base": 850,
@@ -12028,11 +12569,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 300,
+      "health": 200
+    }
   },
   "322530": {
     "id": 322530,
-    "key": "item",
     "name": "Diadem of Songs",
     "gold": {
       "base": 2250,
@@ -12043,11 +12587,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 1000,
+      "health": 200
+    }
   },
   "323002": {
     "id": 323002,
-    "key": "item",
     "name": "Trailblazer",
     "gold": {
       "base": 1000,
@@ -12057,11 +12604,15 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 300,
+      "armor": 45,
+      "percentMovespeed": 6
+    }
   },
   "323003": {
     "id": 323003,
-    "key": "item",
     "name": "Archangel's Staff",
     "gold": {
       "base": 450,
@@ -12071,11 +12622,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 600,
+      "abilityPower": 70
+    }
   },
   "323004": {
     "id": 323004,
-    "key": "item",
     "name": "Manamune",
     "gold": {
       "base": 1100,
@@ -12085,11 +12639,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 500,
+      "attackDamage": 35
+    }
   },
   "323040": {
     "id": 323040,
-    "key": "item",
     "name": "Seraph's Embrace",
     "gold": {
       "base": 2900,
@@ -12100,11 +12657,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 1000,
+      "abilityPower": 70
+    }
   },
   "323042": {
     "id": 323042,
-    "key": "item",
     "name": "Muramana",
     "gold": {
       "base": 2900,
@@ -12115,11 +12675,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 1000,
+      "attackDamage": 35
+    }
   },
   "323050": {
     "id": 323050,
-    "key": "item",
     "name": "Zeke's Convergence",
     "gold": {
       "base": 800,
@@ -12129,11 +12692,15 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "magicResistance": 30,
+      "health": 350,
+      "armor": 30
+    }
   },
   "323070": {
     "id": 323070,
-    "key": "item",
     "name": "Tear of the Goddess",
     "gold": {
       "base": 400,
@@ -12143,11 +12710,13 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 240
+    }
   },
   "323075": {
     "id": 323075,
-    "key": "item",
     "name": "Thornmail",
     "gold": {
       "base": 650,
@@ -12157,11 +12726,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 200,
+      "armor": 85
+    }
   },
   "323107": {
     "id": 323107,
-    "key": "item",
     "name": "Redemption",
     "gold": {
       "base": 1000,
@@ -12171,11 +12743,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 400,
+      "abilityPower": 30
+    }
   },
   "323109": {
     "id": 323109,
-    "key": "item",
     "name": "Knight's Vow",
     "gold": {
       "base": 1000,
@@ -12185,11 +12760,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 300,
+      "armor": 50
+    }
   },
   "323110": {
     "id": 323110,
-    "key": "item",
     "name": "Frozen Heart",
     "gold": {
       "base": 800,
@@ -12199,11 +12777,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 500,
+      "armor": 75
+    }
   },
   "323119": {
     "id": 323119,
-    "key": "item",
     "name": "Winter's Approach",
     "gold": {
       "base": 300,
@@ -12213,11 +12794,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 500,
+      "health": 550
+    }
   },
   "323121": {
     "id": 323121,
-    "key": "item",
     "name": "Fimbulwinter",
     "gold": {
       "base": 2400,
@@ -12228,11 +12812,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 1000,
+      "health": 550
+    }
   },
   "323190": {
     "id": 323190,
-    "key": "item",
     "name": "Locket of the Iron Solari",
     "gold": {
       "base": 1100,
@@ -12242,11 +12829,15 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "magicResistance": 30,
+      "health": 250,
+      "armor": 30
+    }
   },
   "323222": {
     "id": 323222,
-    "key": "item",
     "name": "Mikael's Blessing",
     "gold": {
       "base": 1000,
@@ -12256,11 +12847,13 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 400
+    }
   },
   "323504": {
     "id": 323504,
-    "key": "item",
     "name": "Ardent Censer",
     "gold": {
       "base": 700,
@@ -12270,11 +12863,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 55,
+      "percentMovespeed": 6
+    }
   },
   "324005": {
     "id": 324005,
-    "key": "item",
     "name": "Imperial Mandate",
     "gold": {
       "base": 600,
@@ -12284,11 +12880,13 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 65
+    }
   },
   "326616": {
     "id": 326616,
-    "key": "item",
     "name": "Staff of Flowing Water",
     "gold": {
       "base": 750,
@@ -12298,11 +12896,13 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 45
+    }
   },
   "326617": {
     "id": 326617,
-    "key": "item",
     "name": "Moonstone Renewer",
     "gold": {
       "base": 800,
@@ -12312,11 +12912,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 400,
+      "abilityPower": 35
+    }
   },
   "326620": {
     "id": 326620,
-    "key": "item",
     "name": "Echoes of Helia",
     "gold": {
       "base": 900,
@@ -12326,11 +12929,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "health": 250,
+      "abilityPower": 35
+    }
   },
   "326621": {
     "id": 326621,
-    "key": "item",
     "name": "Dawncore",
     "gold": {
       "base": 850,
@@ -12340,11 +12946,13 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 50
+    }
   },
   "326657": {
     "id": 326657,
-    "key": "item",
     "name": "Rod of Ages",
     "gold": {
       "base": 450,
@@ -12354,11 +12962,15 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "mana": 500,
+      "health": 350,
+      "abilityPower": 45
+    }
   },
   "328020": {
     "id": 328020,
-    "key": "item",
     "name": "Abyssal Mask",
     "gold": {
       "base": 1200,
@@ -12368,11 +12980,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "magicResistance": 50,
+      "health": 350
+    }
   },
   "443054": {
     "id": 443054,
-    "key": "item",
     "name": "Darksteel Talons",
     "aka": [
       "bloodrazor",
@@ -12401,7 +13016,6 @@
   },
   "443055": {
     "id": 443055,
-    "key": "item",
     "name": "Fulmination",
     "aka": [
       "energize"
@@ -12429,7 +13043,6 @@
   },
   "443056": {
     "id": 443056,
-    "key": "item",
     "name": "Demon King's Crown",
     "gold": {
       "base": 1000,
@@ -12447,7 +13060,6 @@
   },
   "443058": {
     "id": 443058,
-    "key": "item",
     "name": "Shield of Molten Stone",
     "gold": {
       "base": 1000,
@@ -12471,7 +13083,6 @@
   },
   "443059": {
     "id": 443059,
-    "key": "item",
     "name": "Cloak of Starry Night",
     "gold": {
       "base": 1000,
@@ -12495,7 +13106,6 @@
   },
   "443060": {
     "id": 443060,
-    "key": "item",
     "name": "Sword of the Divine",
     "aka": [
       "sotd"
@@ -12521,7 +13131,6 @@
   },
   "443061": {
     "id": 443061,
-    "key": "item",
     "name": "Force Of Entropy",
     "gold": {
       "base": 1000,
@@ -12546,7 +13155,6 @@
   },
   "443062": {
     "id": 443062,
-    "key": "item",
     "name": "Sanguine Gift",
     "gold": {
       "base": 1000,
@@ -12571,7 +13179,6 @@
   },
   "443063": {
     "id": 443063,
-    "key": "item",
     "name": "Eleisa's Miracle",
     "gold": {
       "base": 1000,
@@ -12596,7 +13203,6 @@
   },
   "443064": {
     "id": 443064,
-    "key": "item",
     "name": "Talisman Of Ascension",
     "aka": [
       "Support",
@@ -12619,7 +13225,6 @@
   },
   "443069": {
     "id": 443069,
-    "key": "item",
     "name": "Hamstringer",
     "aka": [
       "bleed"
@@ -12647,7 +13252,6 @@
   },
   "443079": {
     "id": 443079,
-    "key": "item",
     "name": "Turbo Chemtank",
     "aka": [
       "catastrophe"
@@ -12673,7 +13277,6 @@
   },
   "443080": {
     "id": 443080,
-    "key": "item",
     "name": "Twin Mask",
     "gold": {
       "base": 1000,
@@ -12691,7 +13294,6 @@
   },
   "443081": {
     "id": 443081,
-    "key": "item",
     "name": "Hexbolt Companion",
     "gold": {
       "base": 1000,
@@ -12715,7 +13317,6 @@
   },
   "443083": {
     "id": 443083,
-    "key": "item",
     "name": "Warmog's Armor",
     "gold": {
       "base": 1000,
@@ -12724,11 +13325,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 1100,
+      "percentMovespeed": 4
+    }
   },
   "443090": {
     "id": 443090,
-    "key": "item",
     "name": "Reaper's Toll",
     "gold": {
       "base": 1000,
@@ -12752,7 +13356,6 @@
   },
   "443193": {
     "id": 443193,
-    "key": "item",
     "name": "Gargoyle Stoneplate",
     "gold": {
       "base": 1000,
@@ -12778,7 +13381,6 @@
   },
   "444636": {
     "id": 444636,
-    "key": "item",
     "name": "Night Harvester",
     "aka": [
       "dark",
@@ -12807,7 +13409,6 @@
   },
   "444637": {
     "id": 444637,
-    "key": "item",
     "name": "Demonic Embrace",
     "aka": [
       "helmet"
@@ -12834,7 +13435,6 @@
   },
   "444644": {
     "id": 444644,
-    "key": "item",
     "name": "Crown of the Shattered Queen",
     "gold": {
       "base": 1000,
@@ -12860,7 +13460,6 @@
   },
   "446632": {
     "id": 446632,
-    "key": "item",
     "name": "Divine Sunderer",
     "aka": [
       "Spellblade",
@@ -12889,7 +13488,6 @@
   },
   "446656": {
     "id": 446656,
-    "key": "item",
     "name": "Everfrost",
     "aka": [
       "GLP",
@@ -12920,7 +13518,6 @@
   },
   "446667": {
     "id": 446667,
-    "key": "item",
     "name": "Radiant Virtue",
     "aka": [
       "rv"
@@ -12949,7 +13546,6 @@
   },
   "446671": {
     "id": 446671,
-    "key": "item",
     "name": "Galeforce",
     "aka": [
       "squallrider"
@@ -12978,7 +13574,6 @@
   },
   "446691": {
     "id": 446691,
-    "key": "item",
     "name": "Duskblade of Draktharr",
     "aka": [
       "lethality"
@@ -13006,7 +13601,6 @@
   },
   "446693": {
     "id": 446693,
-    "key": "item",
     "name": "Prowler's Claw",
     "aka": [
       "lethality"
@@ -13031,7 +13625,6 @@
   },
   "447100": {
     "id": 447100,
-    "key": "item",
     "name": "Mirage Blade",
     "gold": {
       "base": 1000,
@@ -13052,7 +13645,6 @@
   },
   "447101": {
     "id": 447101,
-    "key": "item",
     "name": "Gambler's Blade",
     "gold": {
       "base": 1000,
@@ -13074,7 +13666,6 @@
   },
   "447102": {
     "id": 447102,
-    "key": "item",
     "name": "Reality Fracture",
     "aka": [
       "Kevins"
@@ -13102,7 +13693,6 @@
   },
   "447103": {
     "id": 447103,
-    "key": "item",
     "name": "Hemomancer's Helm",
     "aka": [
       "Omnivamp"
@@ -13130,7 +13720,6 @@
   },
   "447104": {
     "id": 447104,
-    "key": "item",
     "name": "Innervating Locket",
     "gold": {
       "base": 1000,
@@ -13155,7 +13744,6 @@
   },
   "447105": {
     "id": 447105,
-    "key": "item",
     "name": "Empyrean Promise",
     "gold": {
       "base": 1000,
@@ -13181,7 +13769,6 @@
   },
   "447106": {
     "id": 447106,
-    "key": "item",
     "name": "Dragonheart",
     "gold": {
       "base": 1000,
@@ -13199,7 +13786,6 @@
   },
   "447107": {
     "id": 447107,
-    "key": "item",
     "name": "Decapitator",
     "gold": {
       "base": 1000,
@@ -13220,7 +13806,6 @@
   },
   "447108": {
     "id": 447108,
-    "key": "item",
     "name": "Runecarver",
     "aka": [
       "energize"
@@ -13248,7 +13833,6 @@
   },
   "447109": {
     "id": 447109,
-    "key": "item",
     "name": "Cruelty",
     "gold": {
       "base": 1000,
@@ -13273,7 +13857,6 @@
   },
   "447110": {
     "id": 447110,
-    "key": "item",
     "name": "Moonflair Spellblade",
     "gold": {
       "base": 1000,
@@ -13298,7 +13881,6 @@
   },
   "447111": {
     "id": 447111,
-    "key": "item",
     "name": "Overlord's Bloodmail",
     "gold": {
       "base": 2500,
@@ -13307,11 +13889,14 @@
     },
     "maps": [
       30
-    ]
+    ],
+    "stats": {
+      "health": 400,
+      "attackDamage": 40
+    }
   },
   "447112": {
     "id": 447112,
-    "key": "item",
     "name": "Flesheater",
     "gold": {
       "base": 1000,
@@ -13332,7 +13917,6 @@
   },
   "447113": {
     "id": 447113,
-    "key": "item",
     "name": "Detonation Orb",
     "gold": {
       "base": 1000,
@@ -13358,7 +13942,6 @@
   },
   "447114": {
     "id": 447114,
-    "key": "item",
     "name": "Reverberation",
     "gold": {
       "base": 1000,
@@ -13383,7 +13966,6 @@
   },
   "447115": {
     "id": 447115,
-    "key": "item",
     "name": "Regicide",
     "gold": {
       "base": 1000,
@@ -13408,7 +13990,6 @@
   },
   "447116": {
     "id": 447116,
-    "key": "item",
     "name": "Kinkou Jitte",
     "gold": {
       "base": 1000,
@@ -13434,7 +14015,6 @@
   },
   "447118": {
     "id": 447118,
-    "key": "item",
     "name": "Pyromancer's Cloak",
     "aka": [
       "burn"
@@ -13463,7 +14043,6 @@
   },
   "447119": {
     "id": 447119,
-    "key": "item",
     "name": "Lightning Rod",
     "gold": {
       "base": 1000,
@@ -13489,7 +14068,6 @@
   },
   "447120": {
     "id": 447120,
-    "key": "item",
     "name": "Diamond-Tipped Spear",
     "gold": {
       "base": 1000,
@@ -13513,7 +14091,6 @@
   },
   "447121": {
     "id": 447121,
-    "key": "item",
     "name": "Twilight's Edge",
     "gold": {
       "base": 1000,
@@ -13538,7 +14115,6 @@
   },
   "447122": {
     "id": 447122,
-    "key": "item",
     "name": "Black Hole Gauntlet",
     "gold": {
       "base": 1000,
@@ -13562,7 +14138,6 @@
   },
   "447123": {
     "id": 447123,
-    "key": "item",
     "name": "Puppeteer",
     "gold": {
       "base": 1000,
@@ -13586,9 +14161,71 @@
       "Support"
     ]
   },
+  "550001": {
+    "id": 550001,
+    "name": "Healthbar Splash: Blue",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550002": {
+    "id": 550002,
+    "name": "Healthbar Splash: Orange",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550003": {
+    "id": 550003,
+    "name": "Healthbar Splash: Green",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550004": {
+    "id": 550004,
+    "name": "Healthbar Splash: Pink",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550005": {
+    "id": 550005,
+    "name": "Healthbar Cleanup: Reset Color",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550006": {
+    "id": 550006,
+    "name": "Healthbar Splash: Rainbow",
+    "gold": {
+      "base": 0,
+      "total": 0,
+      "sell": 0
+    }
+  },
+  "550007": {
+    "id": 550007,
+    "name": "Party Favor",
+    "gold": {
+      "base": 10,
+      "total": 10,
+      "sell": 0
+    }
+  },
   "663039": {
     "id": 663039,
-    "key": "item",
     "name": "Atma's Reckoning",
     "gold": {
       "base": 2500,
@@ -13597,11 +14234,14 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "health": 500,
+      "criticalStrikeChance": 20
+    }
   },
   "663056": {
     "id": 663056,
-    "key": "item",
     "name": "Demon King's Crown",
     "gold": {
       "base": 2500,
@@ -13614,7 +14254,6 @@
   },
   "663058": {
     "id": 663058,
-    "key": "item",
     "name": "Shield of Molten Stone",
     "gold": {
       "base": 2500,
@@ -13623,11 +14262,14 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "health": 250,
+      "armor": 80
+    }
   },
   "663059": {
     "id": 663059,
-    "key": "item",
     "name": "Cloak of Starry Night",
     "gold": {
       "base": 2500,
@@ -13636,11 +14278,14 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "magicResistance": 60,
+      "health": 250
+    }
   },
   "663060": {
     "id": 663060,
-    "key": "item",
     "name": "Sword of the Divine",
     "gold": {
       "base": 2500,
@@ -13649,11 +14294,13 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "criticalStrikeChance": 50
+    }
   },
   "663064": {
     "id": 663064,
-    "key": "item",
     "name": "Veigar's Talisman of Ascension",
     "gold": {
       "base": 900,
@@ -13666,7 +14313,6 @@
   },
   "663146": {
     "id": 663146,
-    "key": "item",
     "name": "Hextech Gunblade",
     "gold": {
       "base": 2500,
@@ -13676,11 +14322,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "abilityPower": 90,
+      "attackDamage": 45
+    }
   },
   "663172": {
     "id": 663172,
-    "key": "item",
     "name": "Zephyr",
     "gold": {
       "base": 2500,
@@ -13689,11 +14338,14 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "attackSpeed": 40,
+      "percentMovespeed": 8
+    }
   },
   "663193": {
     "id": 663193,
-    "key": "item",
     "name": "Gargoyle Stoneplate",
     "gold": {
       "base": 2500,
@@ -13702,11 +14354,15 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "magicResistance": 55,
+      "armor": 55,
+      "percentMovespeed": 8
+    }
   },
   "664011": {
     "id": 664011,
-    "key": "item",
     "name": "Sword of Blossoming Dawn",
     "gold": {
       "base": 2500,
@@ -13715,11 +14371,14 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "health": 150,
+      "abilityPower": 35
+    }
   },
   "664403": {
     "id": 664403,
-    "key": "item",
     "name": "The Golden Spatula",
     "gold": {
       "base": 2500,
@@ -13729,11 +14388,21 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "magicResistance": 10,
+      "mana": 250,
+      "health": 250,
+      "abilityPower": 125,
+      "armor": 10,
+      "criticalStrikeChance": 25,
+      "attackDamage": 90,
+      "attackSpeed": 30,
+      "lifesteal": 10
+    }
   },
   "664644": {
     "id": 664644,
-    "key": "item",
     "name": "Crown of the Shattered Queen",
     "gold": {
       "base": 2500,
@@ -13742,11 +14411,15 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "mana": 600,
+      "health": 250,
+      "abilityPower": 65
+    }
   },
   "667101": {
     "id": 667101,
-    "key": "item",
     "name": "Gambler's Blade",
     "gold": {
       "base": 2500,
@@ -13755,11 +14428,13 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "percentMovespeed": 15
+    }
   },
   "667109": {
     "id": 667109,
-    "key": "item",
     "name": "Cruelty",
     "gold": {
       "base": 2500,
@@ -13768,11 +14443,15 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "magicResistance": 25,
+      "abilityPower": 60,
+      "armor": 25
+    }
   },
   "667112": {
     "id": 667112,
-    "key": "item",
     "name": "Flesheater",
     "gold": {
       "base": 2500,
@@ -13781,11 +14460,13 @@
     },
     "maps": [
       11
-    ]
+    ],
+    "stats": {
+      "health": 500
+    }
   },
   "667666": {
     "id": 667666,
-    "key": "item",
     "name": "The Collector",
     "gold": {
       "base": 525,
@@ -13795,11 +14476,14 @@
     "maps": [
       11
     ],
-    "ornnItem": true
+    "masterwork": true,
+    "stats": {
+      "criticalStrikeChance": 25,
+      "attackDamage": 50
+    }
   },
   "994403": {
     "id": 994403,
-    "key": "item",
     "name": "Golden Spatula",
     "gold": {
       "base": 2500,
@@ -13808,6 +14492,18 @@
     },
     "maps": [
       12
-    ]
+    ],
+    "stats": {
+      "magicResistance": 20,
+      "mana": 200,
+      "health": 200,
+      "abilityPower": 110,
+      "armor": 20,
+      "criticalStrikeChance": 15,
+      "attackDamage": 90,
+      "attackSpeed": 40,
+      "lifesteal": 10,
+      "percentMovespeed": 10
+    }
   }
 }

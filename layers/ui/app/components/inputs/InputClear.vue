@@ -3,9 +3,9 @@ import type { ButtonProps } from "@nuxt/ui"
 
 const {
   class: className,
-  size = "2xs",
+  size,
   ui,
-  variant = "custom",
+  variant,
   color = "transparent"
 } = defineProps<{
   class?: HTMLAttributes["class"]
@@ -41,7 +41,7 @@ const id = crypto.randomUUID()
             ? '**:stroke-[2.6]'
             : 'opacity-50 group-hover/btn:opacity-100'
         ),
-        base: cn('pointer-events-auto shrink-0', ui?.base)
+        base: cn('btn-2xs pointer-events-auto shrink-0', ui?.base)
       }"
       square
       @click.stop="emit('clearInput')" />

@@ -10,7 +10,7 @@
   "effectRadius": "130",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds. After dashing, Camillle gains bonus attack speed for 5 seconds.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",
@@ -23,12 +23,7 @@
               "values": "75"
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "Camille stops prematurely upon colliding with an enemy champion, knocking back all nearby enemy champions, though not through terrain, as well as stunning them for 0.75 seconds, while also gaining bonus attack speed for 5 seconds.",
-      "leveling": [
+        },
         {
           "attribute": "Bonus Attack Speed",
           "modifiers": [
@@ -39,6 +34,9 @@
           ]
         }
       ]
+    },
+    {
+      "description": "Camille stops prematurely upon colliding with an enemy champion, knocking back all nearby enemy champions, though not through terrain, as well as stunning them for 0.75 seconds."
     },
     {
       "description": "Wall Dive may be also cast with movement or attack commands. Other abilities besides The Hextech Ultimatum can be cast while grappled or during the dash."

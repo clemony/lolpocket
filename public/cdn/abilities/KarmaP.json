@@ -2,7 +2,7 @@
   "key": "P",
   "name": "Gathering Fire",
   "affects": "Self",
-  "blurb": "Innate:  Mantra's current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma's damaging abilities.",
+  "blurb": "Innate:  Mantra's current cooldown is  reduced by a few seconds for each enemy champion hit by  Karma's damaging  abilities.",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Mantra's current cooldown is reduced by 4 seconds for each enemy champion hit by Karma's damaging abilities.</p>"

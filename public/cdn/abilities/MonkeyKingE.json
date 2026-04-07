@@ -45,7 +45,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/e",
-  "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (note)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute /  Phase Rush even if the target is  untargetable.",
+  "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (unexpected)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute /  Phase Rush even if the target is  untargetable.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "spellaoe",

@@ -1,0 +1,15 @@
+{
+  "id": 5003,
+  "name": "Avarice Blade",
+  "description": "15 Attack Damage\n5 Gold Per 10 Seconds\n\n",
+  "stats": {
+    "attackDamage": 15
+  },
+  "gold": {
+    "base": 450,
+    "purchasable": true,
+    "total": 800,
+    "sell": 560
+  },
+  "tags": []
+}

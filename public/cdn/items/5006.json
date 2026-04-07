@@ -1,0 +1,12 @@
+{
+  "id": 5006,
+  "name": "Potion? of Greed",
+  "description": "Blind Greed\nFor the next 5 minutes: While in champion combat, prevent yourself from seeing your own Healthbar and Central HUD Gain 10% increased Gold and Experience",
+  "gold": {
+    "base": 0,
+    "purchasable": true,
+    "total": 0,
+    "sell": 0
+  },
+  "tags": []
+}

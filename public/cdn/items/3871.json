@@ -19,11 +19,6 @@
       "name": "Void Explosion",
       "effects": "Dealing ability damage to an enemy champion creates an explosion at their location after a 0.5-second delay, dealing 10 magic damage (+15% AP) (+3% of each target's <b>maximum</b> health) magic damage to enemies within the area, capped at 300 against <img src=\"/img/icons/monsters.webp\" class=\"tip-icon light:invert\" />monsters.",
       "cooldown": "10"
-    },
-    {
-      "unique": true,
-      "mythic": false,
-      "effects": "Receives diminishing gold from excessive minion kills."
     }
   ],
   "active": [

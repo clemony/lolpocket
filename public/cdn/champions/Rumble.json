@@ -8,7 +8,7 @@
       "key": "P",
       "name": "Junkyard Titan",
       "affects": "Self",
-      "blurb": "Innate:  Rumble's basic ability casts generate  Heat, which gradually expires after a few seconds without generating Heat. Rumble enters the Danger Zone while he has at least  50 Heat, and becomes Overheated at  Max Heat.",
+      "blurb": "Innate:  Rumble's  basic ability casts generate  Heat, which gradually expires after a few seconds without generating Heat. Rumble enters the Danger Zone while he has at least  50 Heat, and becomes Overheated at  Max Heat.",
       "damageType": "Magic damage",
       "effects": [
         {
@@ -18,11 +18,11 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone:</span> Rumble's mech enters the Danger Zone, empowering his basic abilities.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overheated:</span> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 40 (based on level) (+ 25% AP) (+ 4% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 150 (based on level) against monsters.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overheated:</span> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 142.54% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 44.12 (based on level) (+ 25% AP) (+ 4% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 163.32 (based on level) against monsters.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/p",
-      "notes": "While Rumble is overheating, a  Silenced icon will appear above him to signify he cannot cast abilities. This is visible to all units.\nThe attacks do not deal the bonus damage against structures.",
+      "notes": "While Rumble is overheating, a  Silenced icon will appear above him to signify he cannot cast  abilities. This is visible to all units.\nThe attacks do not deal the bonus damage against  structures.",
       "spellEffects": "Proc",
       "targeting": "Passive"
     },
@@ -179,7 +179,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.Flamespitter's total damage based on the target's health is capped at 65 - 300 (based on level) against monsters.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.Flamespitter's total damage based on the target's health is capped at 65 - 336.84 (based on level) against monsters.</p>",
           "leveling": [
             {
               "attribute": "Minimum Enhanced Damage",
@@ -321,7 +321,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/q",
-      "notes": "Flamespitter will deal an additional tick of damage to a minion if it would die to its per-tick damage. This is intended.\nRumble will instantly turn to face the cursor if he is not moving when Flamespitter is cast. He will also instantly turn when issuing an Attack order on an enemy while Flamespitter is active.\nIssuing an Attack Move order at a location will not cause Rumble to instantly turn.(note)\nIf Rumble does not path to a location after an Attack or Attack Move order, and the player issues a Stop or Hold order immediately afterwards, Rumble will not visually turn completely to face the new direction,(bug) but the area will turn to have the correct direction as intended.\nWhen Flamespitter's debuff is applied instead of refreshed, the target is dealt one additional instance of the debuff at the same time as the application. This is done by delaying the actual debuff by 0.1 seconds.\nIf the target is already affected by the debuff, its duration is refreshed to the maximum (0.6 seconds).",
+      "notes": "Flamespitter will deal an additional tick of damage to a minion if it would die to its per-tick damage. This is intended.\nRumble will instantly turn to face the cursor if he is not moving when Flamespitter is cast. He will also instantly turn when issuing an Attack order on an enemy while Flamespitter is active.\nIssuing an Attack Move order at a location will not cause Rumble to instantly turn.(unexpected)\nIf Rumble does not path to a location after an Attack or Attack Move order, and the player issues a Stop or Hold order immediately afterwards, Rumble will not visually turn completely to face the new direction,(bug) but the area will turn to have the correct direction as intended.\nWhen Flamespitter's debuff is applied instead of refreshed, the target is dealt one additional instance of the debuff at the same time as the application. This is done by delaying the actual debuff by 0.1 seconds.\nIf the target is already affected by the debuff, its duration is refreshed to the maximum (0.6 seconds).",
       "projectile": "FALSE",
       "spellEffects": "AoeDoT",
       "spellshieldable": "false",
@@ -555,7 +555,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/e",
-      "notes": "If Electro Harpoon is empowered with  Danger Zone's bonus and hits a target that is afflicted with the non-enhanced slow and shred applied by previous, non-empowered Electro Harpoon casts, the effectiveness of both debuffs on the target are increased to their enhanced values for all stacks of each debuff.\nThis also applies vice versa; a non-empowered Electro Harpoon cast will reduce the enhanced slow and shred applied by previous, empowered Electro Harpoon casts back to the non-enhanced values, for all stacks.\nA buff with the magic resistance reduction tooltip is applied to  minions and  pets, but their magic resistance is unaffected by Electro Harpoon.(bug)\nEach Electro Harpoon cast triggers  Spellblade and reduces  Force Pulse's cooldown.\nElectro Harpoon's missile will fail to fire if Rumble is  suppressed during the cast time.(note)\nThis ability will cast from wherever the caster is at the end of the cast time.\nRumble stocks an Electro Harpoon charge before the ability is even learned.",
+      "notes": "If Electro Harpoon is empowered with  Danger Zone's bonus and hits a target that is afflicted with the non-enhanced slow and shred applied by previous, non-empowered Electro Harpoon casts, the effectiveness of both debuffs on the target are increased to their enhanced values for all stacks of each debuff.\nThis also applies vice versa; a non-empowered Electro Harpoon cast will reduce the enhanced slow and shred applied by previous, empowered Electro Harpoon casts back to the non-enhanced values, for all stacks.\nA buff with the magic resistance reduction tooltip is applied to  minions and  pets, but their magic resistance is unaffected by Electro Harpoon.(bug)\nEach Electro Harpoon cast triggers  Spellblade and reduces  Force Pulse's cooldown.\nElectro Harpoon's missile will fail to fire if Rumble is  suppressed during the cast time.(unexpected)\nThis ability will cast from wherever the caster is at the end of the cast time.\nRumble stocks an Electro Harpoon charge before the ability is even learned.",
       "projectile": "TRUE",
       "rechargeRate": "6 / 6 / 6 / 6 / 6",
       "speed": "2000",
@@ -584,7 +584,7 @@
               "attribute": "Magic Damage per Tick",
               "modifiers": [
                 {
-                  "values": "35 / 52.5 / 70"
+                  "values": "30 / 50 / 70"
                 },
                 {
                   "unit": "% AP",
@@ -596,7 +596,7 @@
               "attribute": "Magic Damage per Second",
               "modifiers": [
                 {
-                  "values": "140 / 210 / 280"
+                  "values": "120 / 200 / 280"
                 },
                 {
                   "unit": "% AP",
@@ -608,7 +608,7 @@
               "attribute": "Maximum Magic Damage",
               "modifiers": [
                 {
-                  "values": "700 / 1050 / 1400"
+                  "values": "600 / 1000 / 1400"
                 },
                 {
                   "unit": "% AP",
@@ -640,7 +640,8 @@
     "abilityReliance": 90,
     "difficulty": 3
   },
-  "patchLastChanged": "25.17",
+  "lore": "Rumble is a young inventor with a temper. Using nothing more than his own two hands and a heap of scrap, the feisty yordle constructed a colossal mech suit outfitted with an arsenal of electrified harpoons and incendiary rockets. Though others may scoff and sneer at his junkyard creations, Rumble doesn't mind—after all, he's the one with the flamespitter.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Middle",
     "Top"
@@ -653,7 +654,7 @@
     "Mage"
   ],
   "stats": {
-    "hp": 655,
+    "hp": 640,
     "mp": 150,
     "movespeed": 345,
     "armor": 36,
@@ -668,7 +669,6 @@
     "armor": 4.7,
     "magicResist": 1.6,
     "hpRegen": 0.6,
-    "attackDamage": 3.2,
     "attackSpeed": 1.9
   },
   "price": {

@@ -33,7 +33,6 @@ watch(
   }
 )
 
-const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   if (type === "logIn") {
     const error = await useSignInWithEmail(state.email, state.password)
@@ -41,7 +40,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       emit("error", error)
     }
   }
-  toast.add({ title: "Success", description: "The form has been submitted." })
   console.log(event.data)
 }
 </script>
@@ -49,7 +47,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <div class="flex h-fit w-full flex-col justify-center gap-4 self-start">
     <AuthProviderGrid />
-    <USeparator color="p2" label="or" class="mt-4.5 mb-3.5" />
+    <USeparator color="secondary" label="or" class="mt-4.5 mb-3.5" />
     <UForm
       ref="form"
       :schema="schema"

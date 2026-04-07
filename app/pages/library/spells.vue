@@ -8,7 +8,7 @@ definePageMeta({
   order: 3,
   prefix: "Library",
   description: "Don't forget the petricite!",
-  class: "**:stroke-[1.8]!",
+  class: "**:stroke-[2.1]!",
   keys: [
     "summoner",
     "spell",

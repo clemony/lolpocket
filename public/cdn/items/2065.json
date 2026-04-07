@@ -47,7 +47,17 @@
     21,
     35
   ],
-  "ornnUpgrade": 322065,
+  "masterwork": {
+    "upgradeId": 322065,
+    "stats": {
+      "abilityPower": 65,
+      "percentMovespeed": 6
+    },
+    "bonusStats": {
+      "abilityPower": 15,
+      "percentMovespeed": 2
+    }
+  },
   "tags": [
     "Support",
     "Movement"

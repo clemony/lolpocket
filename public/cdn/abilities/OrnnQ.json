@@ -27,10 +27,10 @@
       ]
     },
     {
-      "description": "The fissure stops at maximum range or 200 units behind the first enemy champion struck. After a 1.125-second delay, a magma pillar then erupts to knock aside enemies, though not through terrain, and linger as impassible terrain for 4 seconds."
+      "description": "The fissure stops at maximum range or 200 units behind the first enemy champion struck. After a 1.125-second delay, a magma pillar then erupts at the location to knock aside enemies, though not through terrain, and linger as impassible terrain for 4 seconds."
     },
     {
-      "description": "The pillar will not expire while Ornn is charging."
+      "description": "The pillar will not expire during Searing Charge's dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/q",

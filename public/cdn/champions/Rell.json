@@ -15,17 +15,17 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rell's basic attacks deal bonus magic damage on-hit equal to the sum of 5% of her total armor and 5% of her total magic resistance.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rell's basic attacks and abilities against non- minions apply a stack of Break The Mold for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Each stack reduces the target's armor and magic resistance by 3% for a maximum of 15% reduction.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rell's basic attacks on-hit and abilities against non- minions apply a stack of Break The Mold for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Each stack reduces the target's armor and magic resistance by 3% for a maximum of 15% reduction.</p>"
         },
         {
           "description": "Rell gains bonus armor and bonus magic resistance equal to the sum resistances reduced from all afflicted enemies."
         },
         {
-          "description": "Break the Mold will reduce the target's armor and magic resistance by a minimum of 1.5 - 3 (based on level)."
+          "description": "Break the Mold will reduce the target's armor and magic resistance by a minimum of 1.5 - 3.18 (based on level)."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/p",
-      "notes": "The attacks do not affect structures.\nThe first stack of Break The Mold that is applied to a target will snapshot the targets current  armor and  magic resistance. All subsequent stacks will reduce the targets resistances based on the snapshotted amount, even if the target's total resistances change. This snapshot lasts until the debuff expires.\nFor example, applying a stack of Break The Mold to a champion with 100  armor and  magic resistance will reduce their resistance by 3 and grant Rell the lost stats. If their resistances are then boosted to 500 before another stack is applied, the subsequent stack will only reduce their resistance by a further 3 despite 3% of 500 being 15.",
+      "notes": "The attacks do not affect structures.\nThe first stack of Break the Mold that is applied to a target will snapshot the targets current  armor and  magic resistance. All subsequent stacks will reduce the targets resistances based on the snapshotted amount, even if the target's total resistances change. This snapshot lasts until the debuff expires.\nFor example, applying a stack of Break the Mold to a champion with 100  armor and  magic resistance will reduce their resistance by 3 and grant Rell the lost stats. If their resistances are then boosted to 500 before another stack is applied, the subsequent stack will only reduce their resistance by a further 3 despite 3% of 500 being 15.\nAnother example, when a target has temporarily gained increased resistances before Rell applies the first stack of Break the Mold then the snapshot of the target's stats will be of the increased amount. This can result in targets losing significantly more resistances after the duration of the increase ends, for as long as the stacks don't fall off.\nIf a target has 100 base resistances, and they are increased to 500 temporarily before Break the Mold is applied, then the target will lose a total of 15 resistances, up to a total of 75 resistances at 5 stacks, and when the target's resistance buff ends they would only have 25 remaining.",
       "spellEffects": "proc",
       "spellshieldable": "false",
       "targeting": "Passive"
@@ -57,10 +57,13 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Rell will not lunge forward after the cast time if she was immobilized, grounded, or silenced during it. She is also unable to act for 0.35 seconds after the cast time."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/q",
-      "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nRell is  locked out of moving, attacking, and casting any other ability for 0.35 seconds after Shattering Strike is cast.",
+      "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -191,10 +194,10 @@
       "effectRadius": "300 / 2200 / 1600",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed, increased to 25% while facing the empowered ally or a visible enemy champion.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 15% bonus movement speed, increased to 30% while facing the empowered ally or a visible enemy champion.</p>"
         },
         {
-          "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage. The damage based on the target's health is capped at 150 - 300 (based on level) against monsters and structures.",
+          "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage, capped at 150 - 317.65 (based on level) against monsters and structures.",
           "leveling": [
             {
               "attribute": "Bonus Magic Damage",
@@ -241,7 +244,7 @@
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
                 {
-                  "values": "15 / 25 / 35"
+                  "values": "18.75 / 31.25 / 43.75"
                 },
                 {
                   "unit": "% AP",
@@ -253,7 +256,7 @@
               "attribute": "Total Magic Damage",
               "modifiers": [
                 {
-                  "values": "120 / 200 / 280"
+                  "values": "150 / 250 / 350"
                 },
                 {
                   "unit": "% AP",
@@ -286,7 +289,8 @@
     "difficulty": 2
   },
   "fullName": "Rell Canwell",
-  "patchLastChanged": "25.17",
+  "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old “academy,” defending the meek while delivering violent death to her former overseers.",
+  "patchLastChanged": "26.07",
   "positions": [
     "Support"
   ],
@@ -316,7 +320,6 @@
     "magicResist": 1.8,
     "hpRegen": 0.9,
     "mpRegen": 0.7,
-    "attackDamage": 3,
     "attackSpeed": 2
   },
   "price": {

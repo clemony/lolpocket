@@ -1,0 +1,11 @@
+{
+  "id": 550007,
+  "name": "Party Favor",
+  "gold": {
+    "base": 10,
+    "purchasable": true,
+    "total": 10,
+    "sell": 0
+  },
+  "tags": []
+}

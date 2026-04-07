@@ -15,7 +15,7 @@ const { scrollTop } = useScrollInject()
     <UButton
       icon="arrow-up"
       size="xl"
-      color="p0"
+      color="base"
       rounded
       variant="solid"
       :ui="{ base: cn('bg-p0/60 backdrop-blur-md', className) }"

@@ -4,7 +4,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Ahri gains a burst of  move speed and conjures three fox-fires that orbit her for a short time. Fox-fires home onto nearby enemies, dealing magic damage.",
   "castTime": "none",
-  "cooldown": "10 / 9 / 8 / 7 / 6",
+  "cooldown": "9 / 8 / 7 / 6 / 5",
   "cost": "30",
   "damageType": "Magic damage",
   "effectRadius": "150 / 550 / 725",

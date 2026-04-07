@@ -7,13 +7,13 @@ const isOpen = shallowRef(false)
 
 const route = useRoute()
 const pocket = computed(() =>
-  usePockets().getPocket(String(route.params.pocket_key)),
+  usePockets().getPocket(String(route.params.pocket_key))
 )
 
 async function testSaveAllPockets() {
   await $fetch("/supabase/updatePockets", {
     method: "POST",
-    body: { pockets: usePockets().pockets },
+    body: { pockets: usePockets().pockets }
   })
 
   console.log("🌱 - all pockets sent!")

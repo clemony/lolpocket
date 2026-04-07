@@ -4,7 +4,7 @@ definePageMeta({
   icon: "lucide:folder",
   prefix: "Backpack",
   order: 1,
-  path: "/backpack/pockets",
+  path: "/backpack/pockets"
 })
 
 const selected = ref<Pocket | null>(null)

@@ -7,11 +7,11 @@ const {
   items,
   label,
   ui,
-  component,
+  component
 } = defineProps<{
   class?: HTMLAttributes["class"]
   icon?: string
-  items?: NavButtonProps[]
+  items?: BaseItem[]
   label?: string
   ui?: ButtonProps
   component?: Component
@@ -31,16 +31,10 @@ const emit = defineEmits<{
       side: 'right',
       sideOffset: -2,
       sideFlip: true,
-      align: 'start',
+      align: 'start'
     }"
     @update:open="(e) => emit('update:open', e)">
-    <UButton
-      variant="highlight"
-      :ui
-      :icon
-      size="sm"
-      trailing-icon="right"
-      :label>
+    <UButton variant="soft" :ui :icon size="sm" trailing-icon="right" :label>
       <slot />
       <template #trailing>
         <slot name="trailing" />
@@ -56,7 +50,7 @@ const emit = defineEmits<{
           <UButton
             v-for="item in items"
             :key="item?.label || item.id"
-            variant="highlight"
+            variant="soft"
             v-bind="item"
             size="sm">
             <template #trailing>

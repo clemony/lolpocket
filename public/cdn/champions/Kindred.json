@@ -17,7 +17,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lamb:</span> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Wolf:</span> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">0 :</span> Rift Scuttler</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Wolf:</span> Starting at 2 - 53, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">0 :</span> Rift Scuttler</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/p",
@@ -93,7 +93,7 @@
       "effectRadius": "800",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Lamb generates 1 stack of Hunter's Vigor for every 27 units she travels by any means and 5 stacks on-attack, up to a maximum of 100 stacks. At maximum stacks, her next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 81 (based on level). The heal is not triggered if Kindred is at full health.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Lamb generates 1 stack of Hunter's Vigor for every 27 units she travels by any means and 5 stacks on-attack, up to a maximum of 100 stacks. At maximum stacks, her next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 85 (based on level). The heal is not triggered if Kindred is at full health.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wolf dashes to the target location, then claims the surrounding area as his territory for the next 8.5 seconds, separating from Lamb. He automatically attacks the closest nearby visible enemy within the area, prioritizing the last enemy Lamb has attacked, then enemy champions, then non-champions.</p>"
@@ -148,7 +148,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/w",
-      "notes": "Hunter's Vigor's heal is not triggered on attacks against structures and wards.\nWolf is  untargetable and  ghosted but he cannot move through terrain other than the initial dash on activation.\nWolf is not able to re-target  Rift Scuttler if he loses  sight of her while he's attacking it.\nWolf grants the same  vision as a  champion.\nWolf's Frenzy does not end if Lamb enters  resurrection.\nWolf's Frenzy applies ability haste to its cooldown post-effect.\nGiven a base cooldown of 14 seconds at rank 5 with 100 ability haste, casting the ability and then ending it after 4 seconds will result in a remaining cooldown of (14−4)×0.5=5 seconds, where 0.5 is derived from ability haste.\nBecause of this, there will always be some cooldown time remaining post-effect regardless of the amount of ability haste, unlike certain other abilities with cooldowns that start on-cast.\nPENDING FOR TEST:: Interaction with enemy vision and spectator mode.",
+      "notes": "Hunter's Vigor's heal is not triggered on attacks against  structures and  wards.\nWolf is  untargetable and  ghosted but he cannot move through terrain other than the initial dash on activation.\nWolf is not able to re-target  Rift Scuttler if he loses  sight of her while he's attacking it.\nWolf grants the same  vision as a  champion.\nWolf's Frenzy does not end if Lamb enters  resurrection.\nWolf's Frenzy applies ability haste to its cooldown post-effect.\nGiven a base cooldown of 14 seconds at rank 5 with 100 ability haste, casting the ability and then ending it after 4 seconds will result in a remaining cooldown of (14−4)×0.5=5 seconds, where 0.5 is derived from ability haste.\nBecause of this, there will always be some cooldown time remaining post-effect regardless of the amount of ability haste, unlike certain other abilities with cooldowns that start on-cast.\nPENDING FOR TEST:: Interaction with enemy vision and spectator mode.",
       "projectile": "FALSE",
       "resource": "Mana",
       "speed": "1400",
@@ -171,7 +171,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times.</p>"
         },
         {
-          "description": "The third stack directs Wolf to pounce on the target, consuming all stacks to deal additional physical damage, capped at 300 against monsters.",
+          "description": "The third stack directs Wolf to pounce on the target, consuming all stacks to deal additional physical damage, increased by 0% - 50% (+ 0% - 15%) (based on critical strike chance).",
           "leveling": [
             {
               "attribute": "Additional Physical Damage",
@@ -188,27 +188,11 @@
                   "values": "5"
                 }
               ]
-            },
-            {
-              "attribute": "Enhanced damage below threshold",
-              "modifiers": [
-                {
-                  "values": "80 / 110 / 140 / 170 / 200"
-                },
-                {
-                  "unit": "% bonus AD",
-                  "values": "100"
-                },
-                {
-                  "unit": "% (+ 2%) (+ 0.75% (+ 0.2%) per Mark) of target's missing health",
-                  "values": "7.5"
-                }
-              ]
             }
           ]
         },
         {
-          "description": "The missing health portion of the additional damage will critically strike for (150% + 30%) damage if the target is below 25% - 75% (based on critical strike chance) of their maximum health and cannot critically strike otherwise. The base damage of the pounce can independently critically strike for (175% + 30%) damage."
+          "description": "The damage based on the missing health ratio is capped at 200 against monsters."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/e",
@@ -265,7 +249,8 @@
     "difficulty": 3
   },
   "fullName": "Lamb and Wolf",
-  "patchLastChanged": "25.22",
+  "lore": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his crushing jaws. Though interpretations of Kindred's nature vary across Runeterra, every mortal must choose the true face of their death.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Jungle"
   ],
@@ -293,7 +278,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.4,
-    "attackDamage": 3.3,
     "attackSpeed": 3.5
   },
   "price": {

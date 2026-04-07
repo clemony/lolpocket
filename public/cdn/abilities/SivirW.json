@@ -10,7 +10,7 @@
   "effectRadius": "500",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing physical damage to them. If the triggering attack critically strikes, the bounces will do so as well for (175% + 30%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing physical damage to them. If the triggering attack critically strikes, the bounces will do so as well for (200% + 30%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
       "leveling": [
         {
           "attribute": "Bonus Attack Speed",
@@ -35,7 +35,7 @@
           "modifiers": [
             {
               "unit": "% AD",
-              "values": "70 / 74.38 / 78.75 / 83.13 / 87.5"
+              "values": "80 / 85 / 90 / 95 / 100"
             }
           ]
         },
@@ -53,7 +53,7 @@
           "modifiers": [
             {
               "unit": "% AD",
-              "values": "45.5 / 48.34 / 51.19 / 54.03 / 56.88"
+              "values": "52 / 55.25 / 58.5 / 61.75 / 65"
             }
           ]
         }

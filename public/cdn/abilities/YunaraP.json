@@ -10,6 +10,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/p",
+  "notes": "PENDING FOR TEST: Interaction with parry effects ( dodge,  block and  blind.",
   "spellEffects": "proc",
   "targeting": "Passive"
 }

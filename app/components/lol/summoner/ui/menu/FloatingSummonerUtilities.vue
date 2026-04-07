@@ -42,7 +42,7 @@ const isSummoner = computed(() => {
           duration: 0.2,
           type: 'spring',
           stiffness: 280,
-          damping: 32,
+          damping: 32
         }">
         <motion.div
           id="sidebar"

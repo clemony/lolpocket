@@ -85,12 +85,11 @@ const categoriesOpen = shallowRef<boolean>(true)
                 :value="item.label">
                 <UButton
                   :label="item.label"
-                  size="custom"
                   :active="filters.tags === item.label"
-                  variant="highlight"
+                  variant="soft"
                   active-variant="solid"
                   :ui="{
-                    base: checkboxProps.ui?.item,
+                    base: cn('btn-custom', checkboxProps.ui?.item),
                     label: checkboxProps.ui?.label
                   }">
                   <template #leading>
@@ -127,7 +126,7 @@ const categoriesOpen = shallowRef<boolean>(true)
       </span>
       <UBadge
         :color="filters.purchasable ? 'neutral' : 'transparent'"
-        size="xs"
+        size="sm"
         :ui="{
           label: cn(
             'font-mono text-2xs font-semibold',

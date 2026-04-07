@@ -1,7 +1,8 @@
-import { LazyLogin } from "#components"
+import { LazyAuthModal } from "#components"
 import { heyGoodJob } from "~/domain/lp/ui/good-job"
 import { useSignOut } from "../../user/auth/useAuth"
-export const testingMenu = computed(() => {
+import { createTestMessage } from "../messages/test-message"
+export const testingMenu = (command?: Record<string, () => void>) => {
   console.log(
     "🥸 - findSummoner - summonerAccounts():",
     summonerAccounts().accounts
@@ -22,14 +23,11 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
     })
   }
 
-  const command = inject<Record<string, () => void>>("command")
-
-  function close() {
-    if (command && command.close) command.close()
-  }
-
   const overlay = useOverlay()
-  const login = overlay.create(LazyLogin)
+  const login = overlay.create(LazyAuthModal, {
+    destroyOnClose: true,
+    props: { type: "logIn" }
+  })
 
   return {
     label: "Testing",
@@ -42,7 +40,10 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
       {
         label: "Fetch User Data",
         icon: "i-lucide-helicopter",
-        onSelect: () => accountFetch()
+        onSelect: () => {
+          if (command && command.close) command.close()
+          accountFetch()
+        }
       },
       {
         icon: "i-lucide-box",
@@ -53,7 +54,7 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Sign Out",
         icon: "i-log-out",
         onSelect: () => {
-          close()
+          if (command && command.close) close()
           useSignOut()
         }
       },
@@ -61,18 +62,26 @@ In 1950, Canadian Dr Wilder Penfield was working on a treatment for cerebral sei
         label: "Open Login",
         icon: "i-log-in",
         onSelect: () => {
-          close()
+          if (command && command.close) close()
           return login.open()
+        }
+      },
+      {
+        label: "Send test message",
+        icon: "i-log-in",
+        onSelect: () => {
+          if (command && command.close) close()
+          user().addInboxMessage(createTestMessage())
         }
       },
       {
         icon: "i-tabler-bread",
         label: "Toast",
         onSelect: () => {
-          close()
-          toasty()
+          if (command && command.close) close()
+          getToast("With breads")
         }
       }
     ]
   }
-})
+}

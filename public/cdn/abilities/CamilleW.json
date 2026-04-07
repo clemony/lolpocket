@@ -80,7 +80,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/w",
-  "notes": "Camille can move during the delay, but the hitbox and Camille's visuals are fixed to the initial target direction.\nCamille's facing-direction, for effects such as  Petrifying Gaze, is the direction she is moving, and not the direction the model is facing.\nThe damage modifier against non-epic monsters applies after the cap.\nBecause the increased damage in the outer range of the cone is dealt as an additional instance of damage (as opposed to bonus damage to the original instance), it will trigger effects twice such as being reduced by  Bone Plating an extra time.(note)\nIt still belongs to the same cast instance, therefore it does not trigger additional stacks of  Conqueror or  Electrocute.",
+  "notes": "Camille can move during the delay, but the hitbox and Camille's visuals are fixed to the initial target direction.\nCamille's facing-direction, for effects such as  Petrifying Gaze, is the direction she is moving, and not the direction the model is facing.\nThe damage modifier against non-epic monsters applies after the cap.\nBecause the increased damage in the outer range of the cone is dealt as an additional instance of damage (as opposed to bonus damage to the original instance), it will trigger effects twice such as being reduced by  Bone Plating an extra time.(unexpected)\nIt still belongs to the same cast instance, therefore it does not trigger additional stacks of  Conqueror or  Electrocute.",
   "projectile": "FALSE",
   "resource": "Mana",
   "spellEffects": "spellaoe",

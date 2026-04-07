@@ -62,7 +62,7 @@ const virtualize = computed(() => ({
         root: 'min-h-0 w-full flex-1 overflow-x-visible! pr-1 pb-2',
         item: 'overflow-x-visible!'
       }">
-      <LazyMatchCard :key="item.matchId" :match="item" />
+      <MatchCard :key="item.matchId" :match="item" />
     </UScrollArea>
 
     <div v-if="matches?.length" class="grid h-32 place-items-center">

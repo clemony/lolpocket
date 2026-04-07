@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 - 210 (based on level) (+ 55% AP)."
+      "description": "If the target was an enemy champion or epic monster, a radius is marked around Rakan. After 3 seconds or if an allied champion enters the radius, Rakan heals himself and nearby allied champions for 40 - 230 (based on level) (+ 55% AP)."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/q",

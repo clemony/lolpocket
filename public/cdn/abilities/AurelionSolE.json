@@ -52,5 +52,5 @@
   "spellEffects": "aoedot",
   "spellshieldable": "special",
   "targeting": "Location",
-  "targetRange": "750 : 920 (based on level)"
+  "targetRange": "750 : 940 (based on level)"
 }

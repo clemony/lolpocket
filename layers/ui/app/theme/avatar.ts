@@ -9,52 +9,46 @@ export const avatarTheme = defineUiTheme({
   },
   variants: {
     size: {
-      "4": {
-        root: "size-4 rounded-full text-[8px]"
+      custom: {},
+      "3xs": {
+        root: "size-4 text-[8px]"
       },
-      "5": {
-        root: "size-5 rounded-full text-[10px]"
+      "2xs": {
+        root: "size-5 text-[10px]"
       },
-      "6": {
-        root: "size-6 rounded-full text-xs"
+      xs: {
+        root: "size-6 text-xs"
       },
-      "7": {
-        root: "size-7 rounded-full text-sm"
+      sm: {
+        root: "size-7 text-sm"
       },
-      "8": {
-        root: "size-8 rounded-full text-base"
+      md: {
+        root: "size-8 text-base"
       },
-      "9": {
-        root: "size-9 rounded-full text-lg"
+      lg: {
+        root: "size-9 text-lg"
       },
-      "10": {
-        root: "size-10 rounded-full text-xl"
+      xl: {
+        root: "size-10 text-xl"
       },
-      "11": {
-        root: "size-11 rounded-full text-[22px]",
-        image: "shadow-sm drop-shadow-xs drop-shadow-black/5"
+      "2xl": {
+        root: "size-11 text-[22px]"
       },
-      "12": {
-        root: "size-12 rounded-full text-2xl",
-        image: "shadow-sm drop-shadow-sm drop-shadow-black/5"
+      "3xl": {
+        root: "size-12 text-2xl"
       },
-      "13": {
-        root: "size-13 rounded-full text-2xl",
-        image: "shadow-sm drop-shadow-sm drop-shadow-black/5"
+      "4xl": {
+        root: "size-13 text-2xl"
       },
-      "14": {
-        root: "size-14 rounded-full text-2xl",
-        image: "shadow-sm drop-shadow-sm drop-shadow-black/5"
+      "5xl": {
+        root: "size-14 text-2xl"
       },
-      "15": {
-        root: "size-15 rounded-full text-2xl",
-        image: "shadow-sm drop-shadow-sm drop-shadow-black/5"
+      "6xl": {
+        root: "size-15 text-2xl"
       },
-      "16": {
-        root: "size-16 rounded-full text-2xl",
-        image: "shadow-sm drop-shadow-sm drop-shadow-black/5"
-      },
-      default: {}
+      "7xl": {
+        root: "size-16 text-2xl"
+      }
     }
   },
   defaultVariants: {

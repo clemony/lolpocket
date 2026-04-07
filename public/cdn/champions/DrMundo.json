@@ -11,7 +11,7 @@
       "blurb": "Innate:  Dr. Mundo  regenerates an additional portion of his maximum health.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Dr. Mundo regenerates an additional[ 0.4% - 2.3% (based on level) of his maximum health every 5 seconds. ][ 0.04% - 0.23% (based on level) of his maximum health every 0.5 seconds. ]</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Dr. Mundo regenerates an additional[ 0.4% - 2.7% (based on level) of his maximum health every 5 seconds. ][ 0.04% - 0.23% (based on level) of his maximum health every 0.5 seconds. ]</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Periodically, Dr. Mundo gains immunity to the next hostile immobilizing effect to affect him. Upon resisting one, Dr. Mundo pays a health cost equal to 4% of his current health and propels a canister that lands 525 units in the general direction of the immobilization source, remaining on the ground for 7 seconds.</p>"
@@ -24,7 +24,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/p",
-      "notes": "Upon being triggered by a hostile  immobilizing effect, Goes Where He Pleases will also grant Dr. Mundo immunity to additional immobilizing effects from the same cast instance.\nAbilities where non-immobilizing effects and damage are nested into immobilizing ones will have them also prevented. Non-immobilizing effects and damage applied separately (the vast majority of cases) are not prevented.\n Spell shield and  Black Shield take priority over Goes Where He Pleases.\nThe canister, whether in flight and on the ground, will transition in and out of  Mordekaiser's  Death Realm alongside Dr. Mundo.(note)\nThe canister cannot be interacted with while  untargetable.",
+      "notes": "Upon being triggered by a hostile  immobilizing effect, Goes Where He Pleases will also grant Dr. Mundo immunity to additional immobilizing effects from the same cast instance.\nAbilities where non-immobilizing effects and damage are nested into immobilizing ones will have them also prevented. Non-immobilizing effects and damage applied separately (the vast majority of cases) are not prevented.\n Spell shield and  Black Shield take priority over Goes Where He Pleases.\nThe canister, whether in flight and on the ground, will transition in and out of  Mordekaiser's  Death Realm alongside Dr. Mundo.(unexpected)\nThe canister cannot be interacted with while  untargetable.",
       "projectile": "FALSE",
       "targeting": "Passive"
     },
@@ -100,7 +100,7 @@
       "effectRadius": "325",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 96.76% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage per Tick",
@@ -345,8 +345,10 @@
     "difficulty": 1
   },
   "fullName": "'Doctor' Mundo",
+  "lore": "Utterly mad, tragically homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. Now a self-proclaimed physician, he was once a patient of Zaun's most infamous asylum. After \"curing\" the entire staff, Dr. Mundo established his practice in the empty wards that once treated him and began mimicking the highly unethical procedures he had so often experienced himself. With a full cabinet of medicines and zero medical knowledge, he now makes himself more monstrous with each injection and terrifies the hapless \"patients\" who wander near his office.",
   "patchLastChanged": "25.24",
   "positions": [
+    "Jungle",
     "Top"
   ],
   "releaseDate": "2009-09-02",
@@ -371,7 +373,6 @@
     "armor": 4.5,
     "magicResist": 2.3,
     "hpRegen": 0.5,
-    "attackDamage": 2.5,
     "attackSpeed": 3.3
   },
   "price": {

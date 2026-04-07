@@ -11,17 +11,14 @@
       "blurb": "Innate: When  Varus kills an enemy, he gains  bonus attack speed,  bonus attack damage, and  ability power for a few seconds. The amount is based on his other sources of  bonus attack speed, and is increased on an enemy  champion  takedown.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10% / 15% / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10% / 15% / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% of his total bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds, refreshing on subsequent unit kills.</p>"
         },
         {
-          "description": "This is increased to 50% bonus attack speed and bonus attack damage and ability power equal to 25% bonus attack speed upon scoring a champion takedown."
-        },
-        {
-          "description": "While Living Vengeance's bonus is active, Varus' attack speed cap is increased to 3.33."
+          "description": "Varus also gains Living Vengeance's bonuses upon scoring a champion takedown, which empowers it for the same duration to grant him 50% bonus attack speed, bonus attack damage and ability power equal to 25% of his total bonus attack speed, and an increased attack speed cap of 3.33. Living Vengeance's empowerment may only be refreshed by subsequent champion takedowns."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/p",
-      "notes": "Living Vengeance's buff can be refreshed and is triggered when Varus kills any unit.\nThe increased bonus gained from taking down an enemy champion takes priority over the lesser bonus. That bonus can only be refreshed by scoring another takedown.",
+      "notes": "Varus cannot gain the standard bonuses while Living Vengeance is empowered. If the buff was active at the time of the empowerment (from scoring a champion takedown), the duration is refreshed while overriding the standard bonuses with the empowered ones.\nIf Varus kills an enemy unit (non-champion) during the empowerment, he is special cased to gain the buff again after the empowerment expires with the standard bonuses. The re-granted buff lasts for 5 / 7 / 9 / 11 (based on level) seconds minus the remaining duration of the empowered version at the time of the last non-champion unit he killed.",
       "targeting": "Passive"
     },
     {
@@ -50,9 +47,8 @@
                   "values": "53.33 / 100 / 146.67 / 193.33 / 240"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n86.67 / 93.33 / 100 / 106.67 / 113.33% bonus AD",
                   "unit": "% bonus AD",
-                  "values": "86.67 - 113.33"
+                  "values": "100"
                 }
               ]
             },
@@ -63,9 +59,8 @@
                   "values": "80 / 150 / 220 / 290 / 360"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n130 / 140 / 150 / 160 / 170% bonus AD",
                   "unit": "% bonus AD",
-                  "values": "130 - 170"
+                  "values": "150"
                 }
               ]
             },
@@ -76,9 +71,8 @@
                   "values": "17.6 / 33 / 48.4 / 63.8 / 79.2"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n28.6 / 30.8 / 33 / 35.2 / 37.4% bonus AD",
                   "unit": "% bonus AD",
-                  "values": "28.6 - 37.4"
+                  "values": "33"
                 }
               ]
             },
@@ -89,9 +83,8 @@
                   "values": "26.4 / 49.5 / 72.6 / 95.7 / 118.8"
                 },
                 {
-                  "tooltip": "Scaling per rank:\n42.9 / 46.2 / 49.5 / 52.8 / 56.1% bonus AD",
                   "unit": "% bonus AD",
-                  "values": "42.9 - 56.1"
+                  "values": "49.5"
                 }
               ]
             }
@@ -118,17 +111,21 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on affected enemies hit.</p>",
           "leveling": [
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
                 {
-                  "values": "6 / 14 / 22 / 30 / 38"
+                  "values": "8 / 17 / 26 / 35 / 44"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "15"
                 },
                 {
                   "unit": "% AP",
-                  "values": "35"
+                  "values": "25"
                 }
               ]
             }
@@ -146,7 +143,7 @@
                 },
                 {
                   "unit": "% per 100 AP",
-                  "values": "1.5"
+                  "values": "1.3"
                 }
               ]
             },
@@ -159,7 +156,7 @@
                 },
                 {
                   "unit": "% per 100 AP",
-                  "values": "4.5"
+                  "values": "3.9"
                 }
               ]
             },
@@ -172,7 +169,7 @@
                 },
                 {
                   "unit": "% per 100 AP",
-                  "values": "2.25"
+                  "values": "1.95"
                 }
               ]
             },
@@ -185,7 +182,7 @@
                 },
                 {
                   "unit": "% per 100 AP",
-                  "values": "6.75"
+                  "values": "5.85"
                 }
               ]
             }
@@ -294,7 +291,7 @@
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.75 seconds of the root, they are also inflicted with maximum stacks of Blight.</p>",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -311,14 +308,14 @@
           ]
         },
         {
-          "description": "Upon impact, the tendril roots into the ground from which it seeks out nearby enemy champions. If a target does not leave the area within 2 seconds, they subsequently become infected as well, taking the same damage and effects. A new tendril is then spread out from the infected target that is closest to a nearby uninfected enemy champion. The infection can spread repeatedly until there are no new targets."
+          "description": "Upon impact, the tendril roots into the ground from where the target was hit, seeking out nearby enemy champions that are in the immediate area. If a target does not leave the area within 2 seconds, they subsequently become infected as well, taking the same damage and effects. A new tendril is then spread out from the infected target that is closest to a nearby uninfected enemy champion. The infection can spread repeatedly until there are no new targets."
         },
         {
           "description": "The target does not have to be visible to be caught by the tendril."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/r",
-      "notes": "The tendril seeks and registers valid targets every 0.264 seconds.\nEnemy champions can be targeted again by the corruption's tether if they were not infected the previous time, even if they were targeted and exited its range.\nA tendril that roots into the ground will only seek nearby enemy champions that were already in the area.\nChain of Corruption will not infect  crowd control immune targets or those protected by  spell shields (but will still seek them).\nVarus will turn to face the target direction at the start of the cast.\nThe tendril cannot seek enemy champions that are  untargetable, and will also stop seeking a target if it becomes untargetable (fails to apply its effects if they remain in the area).\nThis ability will cast from wherever the caster is at the end of the cast time.\nChain of Corruption can generate  Blight stacks for Varus to detonate with any ability, even if Blighted Quiver has not been learned. The base detonation damage per Blight stack scales with Blighted Quiver's rank, which has a value at rank 0 of 2.5% of the target's maximum health per stack detonated.",
+      "notes": "The first  Blight stack is applied after ~0.65 seconds into the  root duration, while the remaining ones are applied in 0.55-second intervals thereafter.\nSecond and third stacks are applied after ~1.2 seconds and ~1.75 seconds into the root duration, respectively.\nIf the root's duration is reduced by the target's  tenacity, the stacks are applied depending upon if their time application interval is met.\nFor example, if the root lasts for 1 second, only the first stack is applied since the second and third stacks did not meet their time intervals.\nIf the root lasts for less than the first stack application time (<0.65 seconds), the first stack will instead be applied at the end of the root duration.\nIf the target  cleanses the root immediately after it is applied, no stacks will be applied.\nIn cases where the cleanse is activated later into the root duration, stack application is dependent upon their time application interval being met. If removal occurs before an interval after one having been passed, remaining stacks are not applied.\nIf the  root is not applied, such as by the target negating its application with  crowd control immunity or a  spell shield, the target will not be inflicted with  Blight stacks and the tendril will not root into the ground at their location (thus preventing it from seeking). This applies to both the primary target and secondary targets that were caught by the tendril.\nThe tendril seeks and registers valid targets every 0.264 seconds.\nEnemy champions can be targeted again by the corruption's tether if they were not infected the previous time, even if they were targeted and exited its range.\nThe tendril cannot seek enemy champions that are  untargetable, and will also stop seeking a target if it becomes untargetable (fails to apply its effects even if they remain in the area).\nVarus will turn to face the target direction at the start of the cast.\nThis ability will cast from wherever the caster is at the end of the cast time.\nChain of Corruption can generate  Blight stacks for Varus to detonate with any ability, even if Blighted Quiver has not been learned. The base detonation damage per Blight stack scales with Blighted Quiver's rank, which has a value at rank 0 of 2.5% of the target's maximum health per stack detonated.",
       "projectile": "TRUE",
       "resource": "Mana",
       "speed": "1500",
@@ -339,7 +336,8 @@
     "abilityReliance": 20,
     "difficulty": 2
   },
-  "patchLastChanged": "25.16",
+  "lore": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Bottom"
   ],
@@ -365,11 +363,10 @@
   "statsPerLevel": {
     "hp": 105,
     "mp": 40,
-    "armor": 4.6,
+    "armor": 4,
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3.4,
     "attackSpeed": 3.5
   },
   "price": {

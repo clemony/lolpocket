@@ -22,7 +22,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/p",
-      "notes": "If Alistar is at 7 stacks when Triumphant Roar comes off cooldown, he will roar as soon as it elapses.\nAlistar does not gain stacks for unsuccessfully trying to apply  crowd control, for instance against a  crowd control immune target.\nAlistar will still gain a stack for unsuccessfully trying to knock back a champion protected by a  spell shield with  Headbutt.(bug)\nHealing occurs simultaneously for Alistar and his allies.\nThere is a VFX projectile (700 missile speed) that cannot be destroyed by  Wind Wall and is unrelated to the actual heal.\nAlistar loses all Triumph stacks upon dying.",
+      "notes": "If Alistar is at 7 stacks when Triumphant Roar comes off cooldown, he will roar as soon as it elapses.\nAlistar does not gain stacks for unsuccessfully trying to apply  crowd control, for instance against a  crowd control immune target.\nHealing occurs simultaneously for Alistar and his allies.\nThere is a VFX projectile (700 missile speed) that cannot be destroyed by  Wind Wall and is unrelated to the actual heal.\nAlistar loses all Triumph stacks upon dying.",
       "projectile": "SPECIAL",
       "targeting": "Passive"
     },
@@ -140,7 +140,7 @@
           ]
         },
         {
-          "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 275 (based on level) bonus magic damage and stun the target for 1 second."
+          "description": "At 5 stacks, Alistar's next basic attack on-hit against a champion within 6 seconds ends Trample's effects to deal 20 - 305 (based on level) bonus magic damage and stun the target for 1 second."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/e",
@@ -175,7 +175,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/r",
-      "notes": "True damage cannot be reduced by any means and will deal full damage to Alistar during Unbreakable Will.\nUnbreakable Will's modifier to incoming damage stacks additively with  Vladimir's  Hemoplague for a total reduction of 45/55/65%.(note)",
+      "notes": "True damage cannot be reduced by any means and will deal full damage to Alistar during Unbreakable Will.\nUnbreakable Will's modifier to incoming damage stacks additively with  Vladimir's  Hemoplague for a total reduction of 45/55/65%.(unexpected)",
       "resource": "Mana",
       "targeting": "Auto"
     }
@@ -191,6 +191,7 @@
     "abilityReliance": 65,
     "difficulty": 1
   },
+  "lore": "Always a mighty warrior with a fearsome reputation, Alistar seeks revenge for the death of his clan at the hands of the Noxian empire. Though he was enslaved and forced into the life of a gladiator, his unbreakable will was what kept him from truly becoming a beast. Now, free of the chains of his former masters, he fights in the name of the downtrodden and the disadvantaged, his rage as much a weapon as his horns, hooves and fists.",
   "patchLastChanged": "25.15",
   "positions": [
     "Support"
@@ -221,7 +222,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.9,
     "mpRegen": 0.8,
-    "attackDamage": 3.8,
     "attackSpeed": 2.1
   },
   "price": {

@@ -16,7 +16,7 @@
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45"
+              "values": "0 / 3.24 / 6.47 / 9.71 / 12.94 / 16.18 / 19.41 / 22.65 / 25.88 / 29.12 / 32.35 / 35.59 / 38.82 / 42.06 / 45.29 / 48.53 / 51.76 / 55"
             },
             {
               "values": "80 / 115 / 150 / 185 / 220"
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "attribute": "Damage Increase",
+          "attribute": "Isolated Damage Increase",
           "modifiers": [
             {
               "unit": "%",
@@ -44,7 +44,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Mordekaiser/ability-icon/q",
-  "notes": "This ability always employs Quick cast.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe ability will cast to wherever the caster's cursor was at the start of cast time.\nIf Mordekaiser's location changes during the cast time, the visual effects of Obliterate will be divided into three sections: one forming toward the caster's cursor at the start of the cast, one forming toward the original cast direction, and one following Mordekaiser's facing direction. Only the first will portray the spell's effect accurately.(bug)[2]\nApplies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate's damage against isolated enemies at:\nRank 1: 104 : 162.5 (based on level) (+ 156% bonus AD) (+ 91% AP)\nRank 2: 155.25 : 216 (based on level) (+ 162% bonus AD) (+ 94.5% AP)\nRank 3: 210 : 273 (based on level) (+ 168% bonus AD) (+ 98% AP)\nRank 4: 268.25 : 333.5 (based on level) (+ 174% bonus AD) (+ 101.5% AP)\nRank 5: 330 : 397.5 (based on level) (+ 180% bonus AD) (+ 105% AP)",
+  "notes": "This ability always employs Quick cast.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe ability will cast to wherever the caster's cursor was at the start of the cast time.\nIf Mordekaiser's location changes during the cast time, the visual effects of Obliterate will be divided into three sections: one forming toward the caster's cursor at the start of the cast, one forming toward the original cast direction, and one following Mordekaiser's facing direction. Only the first will portray the spell's effect accurately.(bug)[2]\nApplies  spell damage if it hits one target and  area damage to multiple targets.\nObliterate's damage against isolated enemies at:\nRank 1: 104 : 175.5 (based on level) (+ 156% bonus AD) (+ 91% AP)\nRank 2: 155.25 : 229.5 (based on level) (+ 162% bonus AD) (+ 94.5% AP)\nRank 3: 210 : 287 (based on level) (+ 168% bonus AD) (+ 98% AP)\nRank 4: 268.25 : 348 (based on level) (+ 174% bonus AD) (+ 101.5% AP)\nRank 5: 330 : 412.5 (based on level) (+ 180% bonus AD) (+ 105% AP)",
   "projectile": "FALSE",
   "spellEffects": "special",
   "spellshieldable": "True",

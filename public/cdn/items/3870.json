@@ -22,11 +22,6 @@
       "mythic": false,
       "name": "Dream Maker",
       "effects": "Every 8 seconds, you gain a <i>Blue Dream Bubble</i> and a <i>Purple Dream Bubble</i>. Granting a <img src=\"/img/icons/heal.webp\" class=\"tip-icon light:invert\" />heal or <img src=\"/img/icons/shield.webp\" class=\"tip-icon light:invert\" />shield to an allied champion <i>(excluding yourself)</i> causes you to grant both of your <i>Dream Bubbles</i> to them, empowering them for 3 seconds. The <i>Blue Bubble</i> reduces the next instance of non-<img src=\"/img/icons/minion.webp\" class=\"tip-icon light:invert\" />minion damage they take by 75 – 255 (based on your level) and the <i>Purple Bubble</i> grants them 50 – 170 (based on your level) <b>bonus</b> magic damage on-hit on their next basic attack."
-    },
-    {
-      "unique": true,
-      "mythic": false,
-      "effects": "Receives diminishing gold from excessive minion kills."
     }
   ],
   "active": [

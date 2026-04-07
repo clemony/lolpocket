@@ -4,7 +4,7 @@ import type { ButtonProps } from "@nuxt/ui"
 const {
   as,
   ui,
-  variant = "highlight",
+  variant = "soft"
 } = defineProps<{
   as?: ButtonProps["as"]
   variant?: ButtonProps["variant"]
@@ -18,13 +18,12 @@ const {
     :key="item.label"
     :as
     :icon="item.icon"
-    size="custom"
     :ui="{
       base: cn(
-        'h-fit! w-full items-start justify-start gap-2 px-3 py-2 text-start',
-        ui?.base,
+        'btn-custom h-fit! w-full items-start justify-start gap-2 px-3 py-2 text-start',
+        ui?.base
       ),
-      leadingIcon: cn('mt-1.5 size-4.5', ui?.leadingIcon),
+      leadingIcon: cn('mt-1.5 size-4.5', ui?.leadingIcon)
     }"
     :variant>
     <div :class="cn('flex flex-col', ui?.label)">

@@ -28,7 +28,7 @@ const tags = ref<string[]>([])
         for="position.label"
         :style="{
           backgroundColor: position.color,
-          borderColor: position.color,
+          borderColor: position.color
         }">
         <input
           v-model="tags"
@@ -40,7 +40,7 @@ const tags = ref<string[]>([])
             backgroundColor: tags.includes(position.label)
               ? 'transparent'
               : 'var(--color-p0)',
-            borderColor: position.color,
+            borderColor: position.color
           }" />
 
         <component

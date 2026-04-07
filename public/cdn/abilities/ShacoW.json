@@ -109,7 +109,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/w",
-  "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.1 seconds of the root. They can be forced to move by the fear during this time.\nStatic movement speed cannot be modified (e.g. with  slow resist or  bonus movement speed).\nThis effect can be negated if the target is  slow-immune.\nThe box is  untargetable and  invulnerable so long as it is in  stealth. Effects that reveal  stealthed traps will render the box targetable and vulnerable while it can be seen.",
+  "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.1 seconds of the root. They can be forced to move by the fear during this time.\nThe static movement speed modifier overrides the target's base movement speed value to the modified amount, and their bonus movement speed value to 0.\nThe modifier is not applied if the target is  slow-immune.\nThe box is  untargetable and  invulnerable so long as it is in  stealth. Effects that reveal  stealthed traps will render the box targetable and vulnerable while it can be seen.",
   "resource": "Mana",
   "spellEffects": "aoe",
   "spellshieldable": "true",

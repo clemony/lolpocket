@@ -6,11 +6,11 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 130 (based on level) (+ 20% AP) bonus magic damage.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 150 (based on level) (+ 20% AP) bonus magic damage.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/p",
-  "notes": "The empowered attack will trigger but not be consumed against wards.",
+  "notes": "The empowered attack will trigger but not be consumed against  wards.",
   "projectile": "FALSE",
   "spellEffects": "Proc",
   "spellshieldable": "False",

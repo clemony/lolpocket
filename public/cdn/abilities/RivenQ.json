@@ -22,9 +22,9 @@
               "values": "45 / 75 / 105 / 135 / 165"
             },
             {
-              "tooltip": "Scaling per rank:\n65 / 70 / 75 / 80 / 85% bonus AD",
+              "tooltip": "Scaling per rank:\n60 / 65 / 70 / 75 / 80% bonus AD",
               "unit": "% bonus AD",
-              "values": "65 - 85"
+              "values": "60 - 80"
             }
           ]
         },
@@ -35,9 +35,9 @@
               "values": "135 / 225 / 315 / 405 / 495"
             },
             {
-              "tooltip": "Scaling per rank:\n195 / 210 / 225 / 240 / 255% bonus AD",
+              "tooltip": "Scaling per rank:\n180 / 195 / 210 / 225 / 240% bonus AD",
               "unit": "% bonus AD",
-              "values": "195 - 255"
+              "values": "180 - 240"
             }
           ]
         }

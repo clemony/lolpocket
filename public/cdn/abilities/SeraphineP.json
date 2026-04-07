@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p>"
     },
     {
-      "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
+      "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 27.47 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",

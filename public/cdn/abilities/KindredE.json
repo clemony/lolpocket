@@ -12,7 +12,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times.</p>"
     },
     {
-      "description": "The third stack directs Wolf to pounce on the target, consuming all stacks to deal additional physical damage, capped at 300 against monsters.",
+      "description": "The third stack directs Wolf to pounce on the target, consuming all stacks to deal additional physical damage, increased by 0% - 50% (+ 0% - 15%) (based on critical strike chance).",
       "leveling": [
         {
           "attribute": "Additional Physical Damage",
@@ -29,27 +29,11 @@
               "values": "5"
             }
           ]
-        },
-        {
-          "attribute": "Enhanced damage below threshold",
-          "modifiers": [
-            {
-              "values": "80 / 110 / 140 / 170 / 200"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "100"
-            },
-            {
-              "unit": "% (+ 2%) (+ 0.75% (+ 0.2%) per Mark) of target's missing health",
-              "values": "7.5"
-            }
-          ]
         }
       ]
     },
     {
-      "description": "The missing health portion of the additional damage will critically strike for (150% + 30%) damage if the target is below 25% - 75% (based on critical strike chance) of their maximum health and cannot critically strike otherwise. The base damage of the pounce can independently critically strike for (175% + 30%) damage."
+      "description": "The damage based on the missing health ratio is capped at 200 against monsters."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/e",

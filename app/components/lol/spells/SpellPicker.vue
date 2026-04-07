@@ -22,7 +22,7 @@ onMounted(() => {
       @click.stop.prevent>
       <UButton
         class="hover:ring-b4 relative grid size-16 place-items-center overflow-hidden p-0 hover:ring"
-        color="p2"
+        color="secondary"
         :class="{ 'shadow-sm drop-shadow-sm': selected !== null }">
         <icon
           v-if="selected == null"

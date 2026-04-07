@@ -9,7 +9,7 @@ const motion = computed({
   set: (v: boolean) => {
     const settings = user().settings
     if (settings) settings.motion = v
-  },
+  }
 })
 </script>
 
@@ -18,11 +18,11 @@ const motion = computed({
     class="pointer-events-auto z-2 flex size-full items-end justify-end gap-3 pr-5 pb-5 opacity-0 transition-opacity duration-500"
     :class="{ 'opacity-100': isVisible, 'opacity-0': !isVisible }">
     <div class="flex items-center gap-2">
-      <HoverUButtonSm :tip="isPlaying ? 'Pause' : 'Play'">
+      <HoverButtonSm :tip="isPlaying ? 'Pause' : 'Play'">
         <icon v-if="isPlaying" class="shrink-0 opacity-60" name="pause" />
 
         <icon v-else class="size-4 shrink-0 opacity-60" name="play" />
-      </HoverUButtonSm>
+      </HoverButtonSm>
 
       <div class="grid w-26 items-center">
         <label
@@ -38,9 +38,9 @@ const motion = computed({
 
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
-          <HoverUButtonSm tip="Options">
+          <HoverButtonSm tip="Options">
             <icon class="size-4 shrink-0 opacity-50" name="gear-solid" />
-          </HoverUButtonSm>
+          </HoverButtonSm>
         </DropdownMenuTrigger>
 
         <ContrastDropdownContent

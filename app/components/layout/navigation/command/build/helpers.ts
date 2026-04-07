@@ -1,4 +1,9 @@
 import type { ShallowRef } from "vue"
+import type { CommandItem } from "./useCommandGroups"
+
+export function asCommandItem(item: unknown) {
+  return item as CommandItem
+}
 
 export function pathDepth(path: string) {
   return path.split("/").filter(Boolean).length

@@ -4,14 +4,14 @@
   "width": "120",
   "affects": "Enemies, Self",
   "blurb": "Active:  Akali  dashes backward and throws a shuriken forward that deals magic damage and marks the first enemy or  smoke cloud hit for a short time.",
-  "castTime": "0.4 / 0.25",
+  "castTime": "0.25 / 0.1",
   "cooldown": "16 / 14.5 / 13 / 11.5 / 10",
   "cost": "30",
   "damageType": "Magic damage",
   "effectRadius": "Global",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akali flips backward and, after the cast time, throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akali flips backward after 0.15 seconds into the cast time, and after the cast time throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "description": "Akali will not flip backwards if she is immobilized or grounded during the cast time. Twilight Shroud and Perfect Execution can be cast during the recast's dash."
+      "description": "Akali will not flip backwards if she is immobilized or grounded in the first 0.15 seconds of the cast time. Twilight Shroud and Perfect Execution can be cast during the recast's dash."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Akali/ability-icon/e",

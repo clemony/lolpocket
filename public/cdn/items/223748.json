@@ -2,6 +2,10 @@
   "id": 223748,
   "name": "Titanic Hydra",
   "description": "40 Attack Damage\n400 Health\n\n\nColossus: Gain bonus Attack Damage based off of bonus Health.Cleave: Attacks apply additional damage On-Hit, creating a shockwave that deals damage to enemies behind the target.Titanic Crescent\nEmpower your next Cleave to deal bonus physical damage On-Hit and deal bonus physical damage to enemies behind the target.",
+  "stats": {
+    "health": 400,
+    "attackDamage": 40
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

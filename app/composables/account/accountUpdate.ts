@@ -9,17 +9,17 @@ export async function accountUpdate(
     silent?: boolean
   } = {}
 ) {
-  const data = await $fetch("/api/supabase/update/account", {
-    body: account,
-    headers: useRequestHeaders(["cookie"]),
-    method: "POST"
-  })
   const toast = useToast()
-  console.log("📎 - accountUpdate - data:", data)
+  try {
+    const data = await $fetch<Account | null>("/api/supabase/account.update", {
+      body: account,
+      headers: useRequestHeaders(["cookie"]),
+      method: "POST"
+    })
+    console.log("📎 - accountUpdate - data:", data)
 
-  if (!data) {
-    sendErrorToast()
-  } else {
+    if (!data) return user().account
+
     user().account ??= getEmptyAccount() as unknown as AccountData
     const next = Object.assign(
       user().account as AccountData,
@@ -29,12 +29,18 @@ export async function accountUpdate(
     if (!options.silent) {
       toast.add({
         color: "neutral",
-        title: "Welcome back!",
-        description: `Great to see you, ${
+        title: "Account updated",
+        description: `Saved changes for ${
           user().account?.name ?? user().account?.username ?? "Summoner"
-        }!`,
+        }.`,
         icon: "tick"
       })
     }
+
+    return next
+  } catch (error) {
+    console.error("Failed to update account", error)
+    sendErrorToast()
+    throw error
   }
 }

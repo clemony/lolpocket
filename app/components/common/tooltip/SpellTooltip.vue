@@ -75,7 +75,7 @@ const spell = computed(() => spellIndex[id])
       </div>
     </div>
 
-    <USeparator class="my-2 w-full" color="n3" />
+    <Separator class="my-2 w-full opacity-20" color="tertiary" />
 
     <div
       :key="spell.id"

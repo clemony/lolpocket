@@ -2,6 +2,10 @@
   "id": 323075,
   "name": "Thornmail",
   "description": "200 Health\n85 Armor\n\nThorns\nWhen struck by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
+  "stats": {
+    "health": 200,
+    "armor": 85
+  },
   "gold": {
     "base": 650,
     "purchasable": true,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

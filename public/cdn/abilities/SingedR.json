@@ -14,7 +14,7 @@
           "attribute": "Bonus Stats",
           "modifiers": [
             {
-              "values": "25 / 60 / 95"
+              "values": "25 / 55 / 85"
             }
           ]
         },
@@ -22,15 +22,15 @@
           "attribute": "HP/Mana Regenerated per 0.5 Seconds",
           "modifiers": [
             {
-              "values": "2.5 / 6 / 9.5"
+              "values": "2.5 / 5.5 / 8.5"
             }
           ]
         },
         {
-          "attribute": "Total HP/Mana Regeneration (per 5 Seconds)",
+          "attribute": "Total HP/Mana Regeneration (per 25 Seconds)",
           "modifiers": [
             {
-              "values": "125 / 300 / 475"
+              "values": "125 / 275 / 425"
             }
           ]
         }

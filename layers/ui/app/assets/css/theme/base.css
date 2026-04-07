@@ -57,6 +57,11 @@
   --ui-border-accented: var(--primary-300);
   --ui-border-inverted: var(--primary-900);
 
+  --ui-base: var(--primary-0);
+  --ui-primary: var(--primary-50);
+  --ui-secondary: var(--primary-100);
+  --ui-tertiary: var(--primary-200);
+
   --ui-p0: var(--primary-0);
   --ui-p1: var(--primary-50);
   --ui-p2: var(--primary-100);
@@ -160,4 +165,22 @@
 
 @theme inline {
   --color-epic: var(--ui-epic);
+  --color-base: var(--ui-base);
+
+  --color-p0: var(--ui-p0);
+  --color-p1: var(--ui-p1);
+  --color-p2: var(--ui-p2);
+  ---p3: var(--ui-p3);
+  --color-p4: var(--ui-p4);
+  --color-p5: var(--ui-p5);
+  --color-pc: var(--ui-pc);
+
+  --color-n5: var(--ui-n5);
+  --color-n4: var(--ui-n4);
+  --color-n3: var(--ui-n3);
+  --color-n2: var(--ui-n2);
+  --color-n1: var(--ui-n1);
+  --color-n0: var(--ui-n0);
+  --color-neutral: var(--ui-neutral);
+  --color-nc: var(--ui-nc);
 }

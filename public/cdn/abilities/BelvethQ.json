@@ -10,7 +10,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (175% + 30%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (200% + 30%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",
@@ -68,7 +68,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/q",
-  "notes": "Applies  area damage and procs  basic damage required effects.\nThe icon partially darkens based on the combination of dashes available. When all dashes are expended, the cooldown indicates the next available dash.\nWhile in  True Form, Void Surge's dash distance is extended up to 225 units when targeted across terrain.\nThe basic attack reset is not considered one for  Hail of Blades.\nVoid Surge can be  dodged and  blocked only as the first enemy hit.",
+  "notes": "Void Surge applies  basic damage, additionally tagged as  spell damage to the first (closest) enemy hit and  area damage to secondary enemies:\nVoid Surge will apply  spell effects to all targets hit.\n Spell vamp will grant  healing from the damage dealt to all targets, but healing from damage to secondary targets is reduced to 33% effectiveness.\n Life steal will heal based on the damage dealt to the first target hit.\nVoid Surge's on-hit damage modifier will reduce the damage dealt by on-hit effects even if they aren't meant to be affected by on-hit modifiers (eg.  Statikk Shiv).(bug)\nThe icon partially darkens based on the combination of dashes available. When all dashes are expended, the cooldown indicates the next available dash.\nWhile in  True Form, Void Surge's dash distance is extended up to 225 units when targeted across terrain.\nThe basic attack reset is not considered one for  Hail of Blades.\nVoid Surge can be  dodged and  blocked only as the first enemy hit.",
   "speed": "800 / 850 / 900 / 950 / 1000 + 100% movement speed",
   "spellEffects": "Special",
   "spellshieldable": "true",

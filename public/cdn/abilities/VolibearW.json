@@ -5,7 +5,7 @@
   "blurb": "Active:  Volibear strikes the target enemy to deal physical damage based on his bonus health, apply  on-hit and  on-attack effects, and mark them Wounded for a period.",
   "castTime": "0.25",
   "cooldown": "5",
-  "cost": "30 / 35 / 40 / 45 / 50",
+  "cost": "20 / 25 / 30 / 35 / 40",
   "damageType": "Physical damage",
   "effects": [
     {
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Wounded Bonus:</span> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 15% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Wounded Bonus:</span> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 25% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p>",
       "leveling": [
         {
           "attribute": "Heal",

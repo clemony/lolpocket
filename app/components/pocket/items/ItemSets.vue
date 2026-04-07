@@ -43,7 +43,7 @@ watch(items, (newItemSets) => {
         pocket.items,
         {
           group: {
-            name: 'sets',
+            name: 'sets'
           },
           sort: true,
           bubbleScroll: false,
@@ -57,8 +57,8 @@ watch(items, (newItemSets) => {
           ghostClass: 'item-set-ghost',
           chosenClass: 'item-set-chosen',
           dragClass: 'item-set-drag',
-          filter: '.item',
-        },
+          filter: '.item'
+        }
       ]"
       class="z-0 flex w-full flex-col gap-8 pt-6"
       group>

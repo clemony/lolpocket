@@ -16,10 +16,10 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         :content="{
           side: 'top',
           align: 'start',
-          alignOffset: -28,
+          alignOffset: -38,
           sideOffset: 4
         }"
-        :ui="{ content: 'shadow-sm drop-shadow-sm' }">
+        :ui="{ content: 'px-1 pt-1 shadow-sm drop-shadow-sm' }">
         <UButton size="xs" variant="ghost">
           {{ patchIndex[0] }}
         </UButton>
@@ -38,7 +38,7 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
         }"
         size="xs">
         <template #trailing>
-          <UKbd value="enter" />
+          <UKbd value="enter" color="base" variant="outline" class="pt-px" />
         </template>
       </UButton>
       <LazyUSeparator orientation="vertical" class="h-4 border-p4/60!" />
@@ -65,7 +65,13 @@ const hotkeysOpen = defineModel<boolean>("openHotkeys", { default: false })
           size="xs">
           <template #trailing>
             <div class="flex items-center gap-1.25">
-              <UKbd v-for="v in ['meta', 'K']" :key="v" square :value="v" />
+              <UKbd
+                v-for="v in ['meta', 'K']"
+                :key="v"
+                square
+                :value="v"
+                color="base"
+                variant="outline" />
             </div>
           </template>
         </UButton>

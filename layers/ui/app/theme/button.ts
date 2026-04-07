@@ -8,35 +8,13 @@ export const buttonTheme = defineUiTheme({
     leadingAvatarSize: "",
     leadingIcon: "pointer-events-none shrink-0 group-hover/btn:opacity-100",
     trailingIcon: "pointer-events-none shrink-0",
-    base: "group/btn ring-unset inline-flex shrink-0 cursor-pointer items-center overflow-hidden border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
+    base: "group/btn ring-unset inline-flex shrink-0 cursor-pointer items-center overflow-hidden rounded-lg border-0 duration-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
   },
   variants: {
-    color: Object.fromEntries(
-      colors.map((color) => [color, { [color]: `bg-${color}` }])
-    ),
+    color: Object.fromEntries(colors.map((color) => [color, { [color]: `` }])),
     size: {
-      custom: {},
-      "4xs": {
-        base: "h-4! min-w-4! gap-1 px-1.5",
-        leadingAvatarSize: "3xs",
-        leadingIcon: "size-3.25 **:stroke-[2.7]",
-        trailingIcon: "size-3.5"
-      },
-      "3xs": {
-        base: "h-5! min-w-5! gap-1 px-1.5",
-        leadingAvatarSize: "3xs",
-        leadingIcon: "size-3.25 **:stroke-[2.7]",
-        trailingIcon: "size-3.5"
-      },
-      "2xs": {
-        base: "h-6! gap-2 px-2",
-        leadingAvatarSize: "2xs",
-        leadingIcon: "size-3.5",
-        trailingIcon: "size-3.5"
-      },
-
       xs: {
-        base: "h-7! min-w-7! gap-1 px-2 text-sm",
+        base: "h-7! min-w-7! gap-1 px-2 text-xs",
         leadingAvatarSize: "3xs",
         leadingIcon: "size-4",
         trailingIcon: "size-4"
@@ -66,12 +44,6 @@ export const buttonTheme = defineUiTheme({
         leadingAvatarSize: "xs",
         leadingIcon: "size-5",
         trailingIcon: "size-5"
-      },
-      "2xl": {
-        base: "h-16! gap-2 px-3",
-        leadingAvatarSize: "xs",
-        leadingIcon: "size-5",
-        trailingIcon: "size-5"
       }
     },
     square: {
@@ -82,21 +54,6 @@ export const buttonTheme = defineUiTheme({
         label: "hidden"
       },
       false: "justify-start"
-    },
-    variant: {
-      custom:
-        "height-unset width-unset border-0 shadow-none ring-0 inset-shadow-none fx-0 disabled:bg-transparent aria-disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      solid: "btn shadow-xs",
-      ghost:
-        "hover:inset-ring disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      outline:
-        "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
-      highlight: "btn btn-ghost",
-      ring: "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
-      link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-current hover:[&>[data-slot=label]]:underline",
-      soft: "btn border-0 shadow-sm ring-0",
-      "ghost-soft":
-        "hover:shadow-unset border border-transparent hover:border-p4/80 hover:inset-shadow-morphic-sm hover:fx-1 data-[state=active]:border-p4/80 data-[state=active]:shadow-morphic data-[state=active]:transition-all data-[state=active]:duration-200 data-[state=active]:hover:shadow-none"
     },
     active: {
       false: {
@@ -114,13 +71,19 @@ export const buttonTheme = defineUiTheme({
         base: "not-last:not-first:rounded-none not-only:first:rounded-b-none not-only:last:rounded-t-none focus-visible:z-[1]"
       }
     },
-    rounded: {
-      true: {
-        base: "rounded-full"
-      },
-      false: {
-        base: "rounded-lg"
-      }
+    variant: {
+      solid: "btn shadow-xs",
+      ghost: [
+        "disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+        "btn border-0 text-pc btn-ghost",
+        "hover:inset-ring on:inset-ring"
+      ],
+      outline:
+        "btn border-0 ring ring-p3 btn-outline hover:bg-p1 hover:inset-shadow-xs",
+      subtle:
+        "hover:inset-shadow-xs disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+      link: "inline-flex px-0 text-pc [&>[data-slot=label]]:text-start [&>[data-slot=label]]:font-medium [&>[data-slot=label]]:decoration-[inherit] hover:[&>[data-slot=label]]:underline",
+      soft: "btn border-0 shadow-sm ring-0"
     }
   },
   compoundVariants: [
@@ -129,11 +92,9 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "solid",
       class: {
-        base: "bg-neutral font-semibold inset-shadow-black/4 btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-p1 disabled:shadow-none disabled:ring disabled:inset-shadow-xs disabled:ring-p3/80 on:text-nc on:btn-neutral",
-        leadingIcon:
-          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc group-data-[state=open]/btn:**:text-nc group-on/btn:**:text-nc",
-        trailingIcon:
-          "focus-group-visible/btn:**:text-nc text-nc **:text-nc group-hover/btn:**:text-nc group-active/btn:**:text-nc"
+        base: "bg-neutral font-semibold btn-neutral focus-visible:bg-neutral active:bg-neutral active:btn-neutral disabled:bg-n1 disabled:shadow-none on:text-nc on:btn-neutral",
+        leadingIcon: "text-nc!",
+        trailingIcon: "text-nc!"
       }
     },
     {
@@ -163,7 +124,7 @@ export const buttonTheme = defineUiTheme({
       color: "neutral",
       variant: "ghost",
       class: {
-        base: "btn text-pc btn-ghost hover:bg-neutral! hover:btn-neutral hover:**:text-nc! active:bg-neutral! active:btn-neutral active:**:text-nc! on:bg-neutral! on:btn-neutral",
+        base: "hover:bg-neutral! hover:btn-neutral hover:**:text-nc! active:bg-neutral! active:btn-neutral active:**:text-nc! on:bg-neutral! on:btn-neutral",
         leadingIcon:
           "text-nc group-hover/btn:**:text-nc group-disabled/btn:text-nc/40"
       }
@@ -182,7 +143,27 @@ export const buttonTheme = defineUiTheme({
         trailingIcon: "text-nc group-hover/btn:**:text-pc"
       }
     },
-    /* SOLID */
+    /* BASE */
+    {
+      color: "base",
+      variant: "link",
+      class: {}
+    },
+    {
+      color: "base",
+      variant: "solid",
+      class: {
+        base: "btn bg-base text-pc shadow-sm inset-ring shadow-black/5 inset-ring-p3/80 fx-0 depth-3 open:shadow-none open:inset-shadow-sm open:fx-1 hover:bg-p1 hover:fx-1 data-[state=active]:bg-p1"
+      }
+    },
+    {
+      color: "base",
+      variant: "ghost",
+      class: {
+        base: "on:btn-active on:bg-p0/40! on:ring on:ring-p0"
+      }
+    },
+    /* TRANSPARENT */
     {
       color: "transparent",
       variant: "solid",
@@ -190,84 +171,73 @@ export const buttonTheme = defineUiTheme({
         base: "ring-none border-0 bg-transparent hover:border-0"
       }
     },
+    /* PRIMARY */
     {
-      color: "p0",
-      variant: "solid",
-      class: {
-        base: "btn bg-p0 text-pc shadow-sm inset-ring shadow-black/5 inset-ring-p3/80 fx-0 depth-3 open:shadow-none open:inset-shadow-sm open:fx-1 hover:bg-p1 hover:fx-1 data-[state=active]:bg-p1"
-      }
-    },
-    {
-      color: "p1",
+      color: "primary",
       variant: "solid",
       class: {
         base: "btn border-p3/60 bg-p1 text-pc ring-0! inset-ring inset-ring-p3/80 depth-3 open:shadow-none hover:bg-p2 hover:shadow-xs hover:inset-shadow-xs"
       }
     },
     {
-      color: "p2",
+      color: "primary",
+      variant: "ghost",
+      class: {
+        base: "hover:bg-p1 hover:inset-ring-p3/40! on:bg-p1"
+      }
+    },
+    /* SECONDARY */
+    {
+      color: "secondary",
       variant: "solid",
       class: {
-        base: "btn border-p3 bg-p2 text-pc ring-p2"
+        base: "bg-p2 text-pc ring-p2"
       }
     },
     {
-      color: "p3",
+      color: "secondary",
+      variant: "ghost",
+      class: {
+        base: "hover:bg-p2! on:bg-p2! on:inset-ring-p3"
+      }
+    },
+    /* TERTIARY */
+    {
+      color: "tertiary",
       variant: "solid",
       class: {
-        base: "btn border-p4 bg-p3 text-pc ring-p3"
+        base: "bg-p3 ring-p3"
       }
     },
-    /* GHOST */
     {
-      color: "p0",
+      color: "tertiary",
       variant: "ghost",
       class: {
-        base: "active:noise on:noise btn border-3 border-transparent bg-clip-padding text-pc btn-ghost on:btn-active on:bg-p0/40! on:ring on:ring-p0 on:backdrop-blur-sm on:fx-1"
+        base: "hover:bg-p3! on:bg-p3! on:inset-ring-p4/60"
       }
     },
+    /* OUTLINE */
     {
-      color: "p1",
-      variant: "ghost",
-      class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1 hover:inset-ring-p3/40! on:border-p3 on:bg-p1 on:backdrop-blur-sm on:fx-1"
-      }
-    },
-    {
-      color: "p2",
-      variant: "ghost",
-      class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p1! on:border-p3 on:bg-p2 on:backdrop-blur-sm on:fx-1"
-      }
-    },
-    {
-      color: "p3",
-      variant: "ghost",
-      class: {
-        base: "on:noise btn bg-clip-padding text-pc btn-ghost hover:bg-p3 on:border-p4 on:bg-p3 on:backdrop-blur-sm on:fx-1"
-      }
-    },
-    {
-      color: ["p1", "p2", "p3"],
+      color: ["base", "primary", "secondary", "tertiary"],
       variant: "outline",
       class: {
-        base: "btn border-none bg-transparent text-pc ring-p3 btn-outline"
+        base: "btn border-0 bg-transparent text-pc shadow-xs ring-0 inset-ring inset-ring-p3 ring-offset-0"
       }
     },
-    // highlight
+    // soft
     {
-      variant: "highlight",
+      variant: "soft",
       class: {
         base: "justify-start rounded-md! border-0 hover:bg-p1 active:bg-p1!",
         label: "grow",
         leadingIcon: "text-pc **:text-pc"
       }
     },
-    // RING
+    // subtle
 
     {
-      color: ["p0", "p1", "p2", "p3"],
-      variant: "ring",
+      color: ["base", "primary", "secondary", "tertiary"],
+      variant: "subtle",
       class: {
         base: "on:noise btn bg-clip-padding text-pc not-on:btn-ghost on:btn-active on:border-p3 on:bg-p1 on:ring on:ring-pc/50 on:backdrop-blur-sm on:fx-1"
       }
@@ -276,35 +246,13 @@ export const buttonTheme = defineUiTheme({
     {
       variant: "link",
       class:
-        "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc"
+        "text-pc [&>[data-slot=label]]:text-pc [&>[data-slot=label]]:decoration-pc group-hover/btn:**:[&>[data-slot=label]]:underline"
     },
     {
-      variant: ["soft", "ghost-soft"],
-      color: ["p0", "p1", "p2", "p3"],
+      variant: ["soft"],
+      color: ["base", "primary", "secondary", "tertiary"],
       class: {
         base: "bg-p0 hover:bg-p1"
-      }
-    },
-    /* SHAPE */
-    {
-      size: "4xs",
-      square: true,
-      class: {
-        base: "size-4"
-      }
-    },
-    {
-      size: "3xs",
-      square: true,
-      class: {
-        base: "size-5"
-      }
-    },
-    {
-      size: "2xs",
-      square: true,
-      class: {
-        base: "size-6"
       }
     },
     {
@@ -312,7 +260,8 @@ export const buttonTheme = defineUiTheme({
       square: true,
       class: {
         base: "size-7",
-        leadingIcon: "size-3.5"
+        leadingIcon: "size-3.5",
+        label: "text-xs"
       }
     },
     {
@@ -342,24 +291,10 @@ export const buttonTheme = defineUiTheme({
       class: {
         base: "size-14"
       }
-    },
-    /*     {
-      size: ["3xs", "2xs", "xs", "sm"],
-      variant: ["solid"],
-      class: {
-        base: "hover:inset-shadow-xs"
-      }
-    }, */
-    {
-      size: "2xs",
-      square: true,
-      class: {
-        base: "anchor size-6!"
-      }
     }
   ],
   defaultVariants: {
-    color: "p1",
+    color: "primary",
     variant: "solid",
     size: "md"
   }

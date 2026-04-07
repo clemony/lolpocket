@@ -16,16 +16,25 @@ const keystone = computed(() =>
   <div
     :class="
       cn(
-        'mx-2 -mt-0.75 flex size-full w-max shrink-0 flex-col place-items-center gap-0.75',
+        'mx-2 flex size-full w-max shrink-0 flex-col items-center gap-0.75',
         className
       )
     ">
-    <HoverIcon :id="keystone?.id ?? null" size="md" type="keystone" />
+    <HoverIcon
+      :id="keystone?.id ?? null"
+      size="sm"
+      type="keystone"
+      :avatar="{
+        ui: { image: 'size-9' }
+      }" />
 
     <HoverIcon
       v-if="player?.runes?.secondary.path"
       :id="s"
       size="xs"
+      :avatar="{
+        ui: { root: 'translate-x-px ' }
+      }"
       type="path" />
   </div>
 </template>

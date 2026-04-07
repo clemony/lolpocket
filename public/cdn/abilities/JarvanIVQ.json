@@ -44,7 +44,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
-  "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.",
+  "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.\nIf Dragon Strike finds multiple Demacian Standards in the range, it will pull Jarvan IV to the one furthest from his position.",
   "resource": "Mana",
   "spellEffects": "Aoe",
   "spellshieldable": "True",

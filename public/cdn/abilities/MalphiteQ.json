@@ -9,7 +9,7 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds upon impact.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -39,7 +39,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/q",
-  "notes": "The rock spawns 100 units in front of Malphite.\nMalphite will gain the bonus movement speed for the full duration as long as Seismic Shard impacts the target.\nBoth a buff shown in the hotbar and duration bar above the ability icon will indicate the remaining duration.\nSeismic Shard's movement speed gain is entirely based off the target's current, and loss of, movement speed.\nTargets that are already  slowed by another effect will grant Malphite diminished movement speed.\n Slow-resistant and  slow-immune targets will reduce or nullify Malphite's gain.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+  "notes": "The rock spawns  100 units in front of Malphite.\nMalphite will gain the bonus movement speed for the full duration as long as Seismic Shard impacts the target.\nBoth a buff shown in the hotbar and duration bar above the ability icon will indicate the remaining duration.\nSeismic Shard's movement speed gain is based off the target's movement speed raw total movement speed lost at the time of impact.\nFor example, targets that were already  slowed by another effect will grant Malphite diminished movement speed, while targets that are  slowed by another effect after being impacted by Seismic Shard will not.\n Slow-resistant and  slow-immune targets will reduce or nullify Malphite's gain.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "1200",

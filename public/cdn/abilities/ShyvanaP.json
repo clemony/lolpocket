@@ -1,17 +1,17 @@
 {
   "key": "P",
-  "name": "Fury of the Dragonborn",
+  "name": "Scalemail",
   "affects": "Self",
-  "blurb": "Innate:  Shyvana gains  bonus armor and  bonus magic resist, which is permanently increased for every  elemental drake and  Elder Dragon her team slays.",
+  "blurb": "Innate: Shyvana generates Scalemail  stacks from scoring  takedowns against certain enemies. Large  monsters and large  minions grant a stack, while enemy  champions and epic  monsters grant more.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shyvana gains 5 bonus armor and 5 bonus magic resistance, which are each increased by 5 for every elemental drake and Elder Dragon her team slays.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shyvana generates Scalemail stacks from scoring takedowns against certain enemies. Large monsters and large minions grant 1 stack, while enemy champions and epic monsters grant 3.</p>"
     },
     {
-      "description": "Additionally, Shyvana deals 20% increased damage to Dragons."
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Scalemail:</span> For each stack, Shyvana gains 0.3 bonus armor and 0.3 bonus magic resistance.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/p",
-  "notes": "Fury of the Dragonborn's increased damage modifier to  Dragons does not affect true damage.",
+  "notes": "Each Scalemail stack is worth  12.\n 0.3 armor is worth  6.\n 0.3 magic resistance is worth  6.",
   "targeting": "Passive"
 }

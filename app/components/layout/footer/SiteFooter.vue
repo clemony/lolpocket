@@ -5,7 +5,7 @@ import { riotDisclaimer } from "~/domain/riot/riot-disclaimer"
 import { backpackNav, libraryNav } from "~/utils/routes"
 
 const { copied, copy, isSupported, text } = useClipboard({
-  source: contactInfo.support?.to ?? "",
+  source: String(contactInfo.support?.to )?? ""
 })
 
 const copyMsg = computed(() => {
@@ -14,13 +14,13 @@ const copyMsg = computed(() => {
 
 const router = useRouter()
 const links = computed(() =>
-  router.getRoutes().filter((r) => r.name === "docs"),
+  router.getRoutes().filter((r) => r.name === "docs")
 )
 
 const contactLinks = computed(() =>
   [contactInfo.github, contactInfo.discord].filter(
-    (link): link is NonNullable<typeof link> => Boolean(link),
-  ),
+    (link): link is NonNullable<typeof link> => Boolean(link)
+  )
 )
 
 /* const right = computed(() =>
@@ -33,8 +33,8 @@ const contactLinks = computed(() =>
 const right = computed(() =>
   ["champions", "items", "runes", "spells"].map((p) => ({
     label: p,
-    to: `/${p}`,
-  })),
+    to: `/${p}`
+  }))
 )
 </script>
 
@@ -44,7 +44,7 @@ const right = computed(() =>
       root: 'relative z-0 flex grow flex-col bg-secondary before:size-full',
       top: 'mx-auto h-130 grow overflow-hidden',
       bottom:
-        'flex h-20 items-center gap-4 border-t-neutral bg-neutral px-16 text-neutral',
+        'flex h-20 items-center gap-4 border-t-neutral bg-neutral px-16 text-neutral'
     }">
     <template #top>
       <UFooterColumns
@@ -105,7 +105,7 @@ const right = computed(() =>
             :ui="{
               base: 'hover:border-nc',
               leadingIcon:
-                'pointer-events-none size-6.5 shrink-0 text-nc **:stroke-[1.4]',
+                'pointer-events-none size-6.5 shrink-0 text-nc **:stroke-[1.4]'
             }"
             @click="copy()" />
           <template #content>

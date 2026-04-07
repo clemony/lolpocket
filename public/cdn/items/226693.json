@@ -2,6 +2,9 @@
   "id": 226693,
   "name": "Prowler's Claw",
   "description": "55 Attack Damage\n22 Lethality\n15 Ability Haste\n\nSandswipe\nDash through target enemy, dealing a part of the target's maximum Health as bonus Physical Damage. For the next 3 seconds, you deal increased damage to the target.",
+  "stats": {
+    "attackDamage": 55
+  },
   "gold": {
     "base": 1000,
     "purchasable": true,

@@ -3,7 +3,7 @@ import { duplicateItemSet } from "~/domain/pocket/duplicate"
 import {
   copyItemSetToPocket,
   deleteItemSet,
-  resetItems,
+  resetItems
 } from "~/domain/pocket/handleItems"
 
 const props = defineProps<{

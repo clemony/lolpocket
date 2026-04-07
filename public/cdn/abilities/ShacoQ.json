@@ -43,11 +43,11 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 30%) damage, increased to (175% + 30%) if a critical strike was rolled.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (160% + 18%) damage, increased to (200% + 30%) if a critical strike was rolled.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
-  "notes": "If the attack would have already  critically struck based on Shaco's critical strike chance, the base  Backstab critical damage modifier will be overridden by the default critical damage modifier.\nDeceive's bonus damage adds directly to the damage instance of the basic attack.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
+  "notes": "If the attack would have already  critically struck based on Shaco's  critical strike chance, the base  Backstab critical damage modifier will be overridden by the default critical damage modifier.\n Sundered Sky's Lightshield Strike will not interact with this(unexpected), but will be triggered as usual.\nDeceive's bonus damage adds directly to the damage instance of the basic attack.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
   "resource": "Mana",
   "spellEffects": "basic",
   "targeting": "Location",

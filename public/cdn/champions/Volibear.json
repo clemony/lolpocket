@@ -19,7 +19,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">The Relentless Storm:</span> For each stack, Volibear gains 5% (+ 3% per 100 AP) bonus attack speed, up to 25% (+ 15% per 100 AP).</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Lightning Claws:</span> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 60 (based on level) (+ 45% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Lightning Claws:</span> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 68 (based on level) (+ 45% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/p",
@@ -64,17 +64,17 @@
           ]
         },
         {
-          "description": "During this time, Volibear's next basic attack is empowered to have an uncancellable windup, gain 25 bonus range, and pounce on the target, dealing bonus physical damage and stunning them for 1 second. This damage applies life steal.",
+          "description": "During this time, Volibear's next basic attack has a modified windup time and is empowered to have an uncancellable windup, gain 25 bonus range, and pounce on the target, dealing bonus physical damage and stunning them for 1 second. This damage applies life steal.",
           "leveling": [
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
                 {
-                  "values": "10 / 30 / 50 / 70 / 90"
+                  "values": "10 / 20 / 30 / 40 / 50"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "120"
+                  "values": "160"
                 }
               ]
             }
@@ -88,7 +88,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/q",
-      "notes": "Thundering Smash's bonus damage cannot  critically strike; the base damage of the attack can, however.\nDespite this,  Randuin's Omen's Resilience reduces Thundering Smash's total damage.(bug)\nThundering Smash deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThundering Smash will still apply its effects to the target even if the  dash is  interrupted, but not if he goes into  resurrection.\nThundering Smash's attack triggers against  structures and  wards, consuming the effect but dealing its bonus damage, if applicable.\nThe windup for the attack completes even if the target becomes  untargetable but the  stun and damage do not apply.\nThe player's screen will flash red briefly and cue a sound effect when Volibear becomes  immobilized while Thundering Smash is active.\nThundering Smash's attack does not put Volibear's basic attack on cooldown.\nThis results in the same functionality as  Leona's  Shield of Daybreak, effectively being a double attack reset.\nIf Thundering Smash's buff appears as the first on the buff bar, the empowered attack will fail against  structures.(bug)",
+      "notes": "Thundering Smash's bonus damage cannot  critically strike; the base damage of the attack can, however.\nDespite this,  Randuin's Omen's Resilience reduces Thundering Smash's total damage.(bug)\nThundering Smash deals  basic damage, but also triggers spell effects by also being tagged as  spell damage.\nThundering Smash will still apply its effects to the target even if the  dash is  interrupted, but not if he goes into  resurrection.\nThundering Smash's dash cannot pass through natural terrain, but not through player-generated terrain.(unexpected)\nThundering Smash's attack triggers against  structures and  wards, consuming the effect but dealing its bonus damage, if applicable.\nThe windup for the attack completes even if the target becomes  untargetable but the  stun and damage do not apply.\nThe player's screen will flash red briefly and cue a sound effect when Volibear becomes  immobilized while Thundering Smash is active.\nThundering Smash's attack does not put Volibear's basic attack on cooldown.\nThis results in the same functionality as  Leona's  Shield of Daybreak and  Shyvana's  Emberstrike, effectively being a double attack reset.\nIf Thundering Smash's buff appears as the first on the buff bar, the empowered attack will fail against  structures.(bug)",
       "resource": "Mana",
       "spellEffects": "Special",
       "spellshieldable": "true",
@@ -101,7 +101,7 @@
       "blurb": "Active:  Volibear strikes the target enemy to deal physical damage based on his bonus health, apply  on-hit and  on-attack effects, and mark them Wounded for a period.",
       "castTime": "0.25",
       "cooldown": "5",
-      "cost": "30 / 35 / 40 / 45 / 50",
+      "cost": "20 / 25 / 30 / 35 / 40",
       "damageType": "Physical damage",
       "effects": [
         {
@@ -126,7 +126,7 @@
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Wounded Bonus:</span> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 15% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Wounded Bonus:</span> If the target is already Wounded, Volibear takes a bite out of them instead, dealing 50% (+ 25% per 100 bonus AD) increased damage and healing himself. The heal is halved against minions.</p>",
           "leveling": [
             {
               "attribute": "Heal",
@@ -174,8 +174,8 @@
       "affects": "Enemies, Self",
       "blurb": "Active:  Volibear conjures a lightning bolt to strike the target location, dealing magic damage to enemies hit based on their maximum health and  slowing them for a short time.",
       "castTime": "none",
-      "cooldown": "14",
-      "cost": "60",
+      "cooldown": "16",
+      "cost": "50",
       "damageType": "Magic damage",
       "effectRadius": "325 / 425",
       "effects": [
@@ -206,7 +206,7 @@
               "attribute": "Non-Champion Capped Damage",
               "modifiers": [
                 {
-                  "values": "190 / 305 / 420 / 535 / 650"
+                  "values": "150 / 265 / 380 / 495 / 610"
                 },
                 {
                   "unit": "% AP",
@@ -312,7 +312,8 @@
     "abilityReliance": 30,
     "difficulty": 1
   },
-  "patchLastChanged": "25.24",
+  "lore": "To those who still revere him, the Volibear is the storm made manifest. Destructive, wild, and stubbornly resolute, he existed before mortals walked the Freljord's tundra, and is fiercely protective of the lands that he and his demi-god kin created. Cultivating a deep hatred of civilization and the weakness it brought with it, he now fights to return to the old ways—when the land was untamed, and blood spilled freely—and eagerly battles all who oppose him, with tooth, claw, and thundering domination.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Jungle",
     "Top"
@@ -343,7 +344,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.5,
-    "attackDamage": 3.5,
     "attackSpeed": 2
   },
   "price": {

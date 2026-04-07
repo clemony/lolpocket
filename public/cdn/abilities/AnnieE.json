@@ -4,12 +4,12 @@
   "affects": "Self, Enemies",
   "blurb": "Active:  Annie grants herself or an allied champion—and  Tibbers—a  shield with a burst of  move speed.",
   "castTime": "none",
-  "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
+  "cooldown": "10",
   "cost": "60 / 65 / 70 / 75 / 80",
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 50% (based on level) bonus movement speed that decays over 1.5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 53.53% (based on level) bonus movement speed that decays over 1.5 seconds.</p>",
       "leveling": [
         {
           "attribute": "Shield Strength",

@@ -25,7 +25,7 @@
           ]
         },
         {
-          "attribute": "Enhanced Damage",
+          "attribute": "Isolated Enhanced Damage",
           "modifiers": [
             {
               "values": "80 / 118 / 156 / 194 / 232"

@@ -38,6 +38,12 @@
     21,
     35
   ],
-  "ornnUpgrade": 323040,
+  "masterwork": {
+    "upgradeId": 323040,
+    "stats": {
+      "mana": 1000,
+      "abilityPower": 70
+    }
+  },
   "tags": []
 }

@@ -10,7 +10,7 @@
   "effectRadius": "325",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them by 50% for 1.5 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -33,15 +33,6 @@
             {
               "unit": "% AP",
               "values": "30"
-            }
-          ]
-        },
-        {
-          "attribute": "Slow",
-          "modifiers": [
-            {
-              "unit": "%",
-              "values": "50 / 55 / 60 / 65 / 70"
             }
           ]
         }

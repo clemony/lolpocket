@@ -33,11 +33,11 @@
           "attribute": "Minimum Physical Damage",
           "modifiers": [
             {
-              "values": "60 / 70 / 80 / 90 / 100"
+              "values": "60 / 85 / 110 / 135 / 160"
             },
             {
               "unit": "% bonus AD",
-              "values": "100 / 110 / 120 / 130 / 140"
+              "values": "80"
             },
             {
               "unit": "% AP",
@@ -48,17 +48,17 @@
       ]
     },
     {
-      "description": "Tristana's basic attacks on-hit and abilities against the target increase Explosive Charge's damage by 25%, stacking up to 4 times for a maximum 100% increase, upon which the charge also detonates instantly. The charge's total damage is additionally increased by 0% - 75% (based on critical strike chance) (+ 0% - 40% (based on critical strike chance).",
+      "description": "Tristana's basic attacks on-hit and abilities against the target increase Explosive Charge's damage by 25%, stacking up to 4 times for a maximum 100% increase, upon which the charge also detonates instantly. The charge's total damage is additionally increased by 0% - 40% (+ 0% - 12%) (based on critical strike chance).",
       "leveling": [
         {
           "attribute": "Bonus Damage Per Stack",
           "modifiers": [
             {
-              "values": "15 / 17.5 / 20 / 22.5 / 25"
+              "values": "15 / 21.25 / 27.5 / 33.75 / 40"
             },
             {
               "unit": "% bonus AD",
-              "values": "25 / 27.5 / 30 / 32.5 / 35"
+              "values": "20"
             },
             {
               "unit": "% AP",
@@ -70,11 +70,11 @@
           "attribute": "Full Stack Bonus Damage",
           "modifiers": [
             {
-              "values": "60 / 70 / 80 / 90 / 100"
+              "values": "60 / 85 / 110 / 135 / 160"
             },
             {
               "unit": "% bonus AD",
-              "values": "100 / 110 / 120 / 130 / 140"
+              "values": "80"
             },
             {
               "unit": "% AP",
@@ -86,11 +86,11 @@
           "attribute": "Full Stack Physical Damage",
           "modifiers": [
             {
-              "values": "120 / 140 / 160 / 180 / 200"
+              "values": "120 / 170 / 220 / 270 / 320"
             },
             {
               "unit": "% bonus AD",
-              "values": "200 / 220 / 240 / 260 / 280"
+              "values": "160"
             },
             {
               "unit": "% AP",

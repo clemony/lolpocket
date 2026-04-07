@@ -2,6 +2,11 @@
   "id": 226631,
   "name": "Stridebreaker",
   "description": "40 Attack Damage\n15% Attack Speed\n375 Health\n\nCleave\nAttacks deal physical damage to nearby enemies.\nBreaking Shockwave\nDeal physical damage and Slow nearby enemies by 40%.\nGain 40% decaying Move Speed per champion hit for 3 seconds.",
+  "stats": {
+    "health": 375,
+    "attackDamage": 40,
+    "attackSpeed": 15
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

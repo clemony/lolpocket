@@ -69,7 +69,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 54.12 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 81.18 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/e",

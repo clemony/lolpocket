@@ -10,7 +10,7 @@
   "effectRadius": "600",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (up to 10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 80% effectiveness.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (up to 10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 100% effectiveness.</p>",
       "leveling": [
         {
           "attribute": "Physical Damage Per Shot",

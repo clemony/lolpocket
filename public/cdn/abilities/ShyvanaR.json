@@ -8,20 +8,28 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Fury:</span> Dragon's Descent requires 100 Fury to be cast. Shyvana generates Fury per second while alive and in Human form and 2 Fury per basic attack on-hit in either form. Shyvana gains 100 Fury upon learning Dragon's Descent.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Fury:</span> Shyvana generates Dragon Fury every 0.5 seconds while in Human Form. Her basic attacks and abilities also generate 1.25 Dragon Fury for each enemy damaged, up to once per enemy per cast instance and increased[ by 200% ][ to 3.75 ]during Dragon Form. Against non-champions damaged by abilities, the generated amount is reduced to[ 25%. ][ 0.3125 and 0.9375 Dragon Fury during Human Form and Dragon Form, respectively. ]Shyvana gains 1% bonus Dragon Fury generation from all sources per 1 ultimate haste. Shyvana gains 100 Dragon Fury upon learning Dragon's Descent.</p>",
       "leveling": [
         {
-          "attribute": "Fury Generation per Second",
+          "attribute": "Dragon Fury Generation per 0.5 Seconds",
           "modifiers": [
             {
-              "values": "1 / 1.5 / 2"
+              "values": "0.25 / 0.38 / 0.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Dragon Fury Generation per Second",
+          "modifiers": [
+            {
+              "values": "0.5 / 0.75 / 1"
             }
           ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and dashes with displacement immunity to the target location, dealing magic damage to enemies she passes through and carrying them alongside her.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and flies with displacement immunity in the target direction, breathing fire in a cone along the way that deals magic damage to enemies hit and fears them for 0.75 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -38,7 +46,7 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form:</span> Shyvana gains bonus health, bonus attack range, and increased size. Her abilities are also empowered to apply an additional effect. She maintains Dragon Form at a recurring cost of Fury, returning to Human Form once all Fury has been depleted.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form:</span> Shyvana gains bonus health, bonus attack range, and increased size. Her basic abilities are empowered to apply an additional effect. She maintains Dragon Form at a recurring cost of Dragon Fury, returning to Human Form once all Dragon Fury has been depleted.</p>",
       "leveling": [
         {
           "attribute": "Bonus Health",
@@ -52,7 +60,7 @@
           "attribute": "Bonus Range",
           "modifiers": [
             {
-              "values": "50 / 65 / 80"
+              "values": "25 / 50 / 75"
             }
           ]
         },
@@ -61,18 +69,21 @@
           "modifiers": [
             {
               "unit": "%",
-              "values": "0 / 8.5 / 16"
+              "values": "5 / 12.5 / 20"
             }
           ]
         }
       ]
+    },
+    {
+      "description": "100 Dragon Fury is required to cast this ability."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/r",
-  "notes": "Dragon Descent's  displacement immunity begins from the start of the cast time.\nDragon's Descent has a 100 / 80 / 66.67 / 57.14 / 50 seconds effective cooldown when not attacking and not dead.\nPENDING FOR TEST: Fury generation with parrying effects ( blind,  dodge,  block)\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
-  "resource": "Fury",
+  "notes": "Dragon's Descent's  displacement immunity begins from the start of the cast time.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+  "resource": "Other",
   "spellEffects": "aoe",
   "spellshieldable": "True",
   "targeting": "Location",
-  "targetRange": "850"
+  "targetRange": "400 / 1050"
 }

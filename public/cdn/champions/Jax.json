@@ -14,14 +14,14 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Jax's basic attacks generate a stack of Relentless Assault on-attack for 2.5 seconds, refreshing on subsequent attacks and stacking up to 8 times. Stacks expire one by one every 0.25 seconds when the duration ends.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Relentless Assault:</span> For each stack, Jax gains 5% - 12.5% (based on level) bonus attack speed, up to a maximum of 40% - 100% (based on level).</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Relentless Assault:</span> For each stack, Jax gains 5% - 14% (based on level) bonus attack speed, up to a maximum of 40% - 112% (based on level).</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Grandmaster at Angling:</span> While out-of-combat with champions and idle in the river for 10 seconds, Jax will occasionally catch a fish, granting him 1 and 1 ability power for 5 seconds. He catches a fish at an average rate of one every 15 seconds. He also has a 5% chance to catch a rare fish that grants 10 and 10 ability power for 5 seconds.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/p",
-      "notes": "Jax will start fishing while idle in the river if he is in-combat with only monsters (e.g. any of the three Epic monsters).(bug)\nJax catching a fish is a random event and will play a special animation.\nThe total number of fish caught during the game is displayed when fishing as  Grandmaster at Angling passive.",
+      "notes": "Jax will start fishing while idle in the river if he is in-combat with only monsters (e.g. Epic monsters).(bug)\nJax catching a fish is a random event and will play a special animation.\nThe total number of fish caught during the game is displayed when fishing as  Grandmaster at Angling passive.\nRelentless Assault uses its  old icon in the Death Recap.",
       "targeting": "Passive"
     },
     {
@@ -98,7 +98,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/w",
-      "notes": "Empower is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(note)",
+      "notes": "Empower is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(unexpected)",
       "resource": "Mana",
       "spellEffects": "spell",
       "spellshieldable": "true",
@@ -261,7 +261,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/r",
-      "notes": "The on-hit deals  proc damage. The swing deals  area damage.\nThe bonus resistances are represented by a glowing aura around Jax that grows with each enemy champion hit beyond the first.\nThe additional magic damage can be  dodged and  blocked but it cannot  miss.\n Spell shield will only block the additional damage from the third attack if it is  empowered.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards.\nStacks will still be generated when attacking them.\nThe empowered attack is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(note)\n\nThis ability will cast from wherever the caster is at the end of the cast time.",
+      "notes": "The on-hit deals  proc damage. The swing deals  area damage.\nThe bonus resistances are represented by a glowing aura around Jax that grows with each enemy champion hit beyond the first.\nThe additional magic damage can be  dodged and  blocked but it cannot  miss.\n Spell shield will only block the additional damage from the third attack if it is  empowered.\nThe empowered attack will trigger but not be consumed nor apply its effects against  wards.\nStacks will still be generated when attacking them.\nThe empowered attack is applied in a separate damage instance from Jax's basic attacks.\nThis causes effects like  Bone Plating to be applied twice.(unexpected)\n\nThis ability will cast from wherever the caster is at the end of the cast time.",
       "resource": "Mana",
       "spellEffects": "special",
       "spellshieldable": "special",
@@ -280,7 +280,8 @@
     "difficulty": 2
   },
   "fullName": "Saijax Cail-Rynx Kohari Icath’un",
-  "patchLastChanged": "25.22",
+  "lore": "Unmatched in both his skill with unique armaments and his biting sarcasm, Jax is the last known weapons master of Icathia. After his homeland was laid low by its own hubris in unleashing the Void, Jax and his kind vowed to protect what little remained. As magic now rises in the world, this slumbering threat stirs once more, and Jax roams Valoran, wielding the last light of Icathia and testing all warriors he meets to see if any are strong enough to stand beside him...",
+  "patchLastChanged": "26.01",
   "positions": [
     "Jungle",
     "Top"
@@ -311,7 +312,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.6,
     "mpRegen": 0.7,
-    "attackDamage": 4.3,
     "attackSpeed": 3.4
   },
   "price": {

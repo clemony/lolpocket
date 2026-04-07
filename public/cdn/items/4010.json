@@ -2,6 +2,10 @@
   "id": 4010,
   "name": "Bloodletter's Curse",
   "description": "60 Ability Power\n350 Health\n15 Ability Haste\n\nVile Decay\nDealing magic damage with abilities or passives to champions reduces their Magic Resist by 7.5% for 6 seconds, up to 30%.",
+  "stats": {
+    "health": 350,
+    "abilityPower": 60
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

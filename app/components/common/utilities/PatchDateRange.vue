@@ -4,7 +4,7 @@ import {
   fromAbsolute,
   getLocalTimeZone,
   isToday,
-  today,
+  today
 } from "@internationalized/date"
 import type { DateRange } from "reka-ui"
 

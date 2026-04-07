@@ -11,11 +11,12 @@
       "blurb": "Innate:  Sivir's basic attacks and damaging abilities against enemy  champions briefly grant her a burst of  move speed.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Sivir's basic attacks and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Sivir's basic attacks on-attack and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/p",
-      "notes": "No additional details.",
+      "notes": "Fleet of Foot will trigger even if the attack is  dodged,  blocked or misses due to  blind or if the ability is negated by a  spell shield.",
+      "spellshieldable": "False",
       "targeting": "Passive"
     },
     {
@@ -30,7 +31,7 @@
       "damageType": "Physical damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 40% (+ 0% - 12%) (based on critical strike chance).</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -40,7 +41,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "85"
+                  "values": "70"
                 },
                 {
                   "unit": "% AP",
@@ -61,7 +62,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "34"
+                  "values": "28"
                 },
                 {
                   "unit": "% AP",
@@ -77,7 +78,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "170"
+                  "values": "140"
                 },
                 {
                   "unit": "% AP",
@@ -113,7 +114,7 @@
       "effectRadius": "500",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing physical damage to them. If the triggering attack critically strikes, the bounces will do so as well for (175% + 30%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing physical damage to them. If the triggering attack critically strikes, the bounces will do so as well for (200% + 30%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
           "leveling": [
             {
               "attribute": "Bonus Attack Speed",
@@ -138,7 +139,7 @@
               "modifiers": [
                 {
                   "unit": "% AD",
-                  "values": "70 / 74.38 / 78.75 / 83.13 / 87.5"
+                  "values": "80 / 85 / 90 / 95 / 100"
                 }
               ]
             },
@@ -156,7 +157,7 @@
               "modifiers": [
                 {
                   "unit": "% AD",
-                  "values": "45.5 / 48.34 / 51.19 / 54.03 / 56.88"
+                  "values": "52 / 55.25 / 58.5 / 61.75 / 65"
                 }
               ]
             }
@@ -272,7 +273,8 @@
     "abilityReliance": 10,
     "difficulty": 2
   },
-  "patchLastChanged": "25.19",
+  "lore": "Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won countless battles for those who can afford her exorbitant price. Known for her fearless resolve and endless ambition, she prides herself on recovering buried treasures from the perilous tombs of Shurima—for a generous bounty. With ancient forces stirring the very bones of Shurima, Sivir finds herself torn between conflicting destinies.",
+  "patchLastChanged": "26.02",
   "positions": [
     "Bottom"
   ],
@@ -296,12 +298,11 @@
   "statsPerLevel": {
     "hp": 104,
     "mp": 45,
-    "armor": 4.5,
+    "armor": 4,
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 2.5,
-    "attackSpeed": 2
+    "attackSpeed": 1.6
   },
   "price": {
     "blueEssence": 225,

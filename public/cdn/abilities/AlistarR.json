@@ -23,7 +23,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Alistar/ability-icon/r",
-  "notes": "True damage cannot be reduced by any means and will deal full damage to Alistar during Unbreakable Will.\nUnbreakable Will's modifier to incoming damage stacks additively with  Vladimir's  Hemoplague for a total reduction of 45/55/65%.(note)",
+  "notes": "True damage cannot be reduced by any means and will deal full damage to Alistar during Unbreakable Will.\nUnbreakable Will's modifier to incoming damage stacks additively with  Vladimir's  Hemoplague for a total reduction of 45/55/65%.(unexpected)",
   "resource": "Mana",
   "targeting": "Auto"
 }

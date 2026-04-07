@@ -22,6 +22,8 @@ const items = [
     }
   }
 ]
+
+const command = inject<Record<string, () => void>>("command")
 </script>
 
 <template>
@@ -46,7 +48,7 @@ const items = [
 
       <!-- search -->
       <UButton
-        variant="ring"
+        variant="subtle"
         label="Search"
         icon="i-search"
         :ui="{
@@ -211,7 +213,7 @@ const items = [
     <Grow />
     <!-- user -->
     <UDropdownMenu
-      :items="userMenuItems"
+      :items="userMenuItems(command)"
       size="md"
       :content="{ side: 'top', collisionPadding: 0, sideOffset: 0 }"
       :ui="{
@@ -222,9 +224,8 @@ const items = [
         itemTrailingIcon: 'opacity-70 group-hover:opacity-100'
       }">
       <UButton
-        size="custom"
         :ui="{
-          base: 'sticky bottom-0 h-20 w-full gap-3 rounded-none border-x-0 border-b-0',
+          base: 'btn-custom sticky bottom-0 h-20 w-full gap-3 rounded-none border-x-0 border-b-0',
           trailingIcon: 'size-4 opacity-50 group-hover/btn:opacity-100'
         }"
         variant="outline">
@@ -239,7 +240,7 @@ const items = [
       </UButton>
 
       <template #inbox-trailing>
-        <LazyUBadge size="sm" variant="outline">
+        <LazyUBadge size="md" variant="outline">
           {{ user().inbox?.messages.length ?? 0 }}
         </LazyUBadge>
       </template>

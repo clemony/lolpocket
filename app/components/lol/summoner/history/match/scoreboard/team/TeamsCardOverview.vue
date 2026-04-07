@@ -23,11 +23,10 @@ const route = useRoute()
         }"
         :ui="{
           label: 'text-pc normal-case',
-          base: 'w-full',
-          leadingAvatar: 'ds-2xs'
+          base: 'btn-3xs w-full',
+          leadingAvatar: 'size-4'
         }"
         :to="buildSummonerRootPath(player)"
-        size="3xs"
         variant="link"
         @click.stop />
     </SummonerTooltip>

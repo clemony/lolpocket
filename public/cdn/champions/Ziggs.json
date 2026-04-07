@@ -8,18 +8,18 @@
       "key": "P",
       "name": "Short Fuse",
       "affects": "Enemies",
-      "blurb": "Innate: Periodically,  Ziggs' next basic attack will deal bonus magic damage, increased against structures.",
+      "blurb": "Innate: Periodically,  Ziggs' next basic attack will deal bonus magic damage, increased against  structures.",
       "damageType": "Magic damage",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Ziggs empowers his next basic attack on-attack to deal 20 - 184 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 322 (based on level) (+ 87.5% AP) against structures. ]</p>"
         },
         {
           "description": "Short Fuse's cooldown is reduced by 4 / 5 / 6 (based on level) seconds whenever Ziggs casts an ability."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/p",
-      "notes": "The empowered attack will not trigger against wards.\nPENDING FOR TEST:: Short Fuse's interactions with  dodging,  blocking, and  blinding effects.",
+      "notes": "The empowered attack will not trigger against  wards.\nThe cooldown reduction is granted at the start of the abilities' cast time.\nShort Fuse will go on cooldown but not deal any damage if the attack misses due to  blind.\nPENDING FOR TEST:: Short Fuse's interactions with  dodging and  blocking effects.",
       "speed": "1500",
       "spellEffects": "Proc",
       "spellshieldable": "False",
@@ -274,7 +274,8 @@
     "difficulty": 1
   },
   "fullName": "Zigmund",
-  "patchLastChanged": "25.15",
+  "lore": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Bottom",
     "Middle"
@@ -304,7 +305,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.8,
-    "attackDamage": 3.1,
     "attackSpeed": 2
   },
   "price": {

@@ -2,6 +2,11 @@
   "id": 4012,
   "name": "Sin Eater",
   "description": "300 Health\n45 Armor\n45 Magic Resist\n30% Tenacity\n\n\nThe Feast: Whenever a nearby ally champion becomes affected by an immobilizing crowd control effect, instead you are stunned for that duration. (20(0s)).",
+  "stats": {
+    "magicResistance": 45,
+    "health": 300,
+    "armor": 45
+  },
   "gold": {
     "base": 3000,
     "purchasable": true,

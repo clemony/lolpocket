@@ -14,11 +14,11 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rek'Sai basic attacks generate 25 Fury on-hit, reduced to 4 per hit against minions, and to 5 per hit against wards, and plants. Rek'Sai's abilities other than Queen's Wrath generate 25 Fury upon hitting at least one unit. Prey Seeker does not generate Fury against non- champions. After 8 seconds of being out of combat, she loses 20 Fury per second.</p>"
         },
         {
-          "description": "When Rek'Sai becomes Burrowed, she consumes her current Fury over 3 seconds to heal for up to 9% - 20% (based on level) maximum health at 100 Fury, stopping once fully consumed or she reaches full health. If she starts generating Fury while Burrowed, the consumption occurs after 5 seconds."
+          "description": "When Rek'Sai becomes Burrowed, she consumes her current Fury over 3 seconds to heal for 0% - 100% (based on Fury) of 9% - 21.29% (based on level) maximum health, stopping once fully consumed or she reaches full health. If she starts generating Fury while Burrowed, the consumption occurs after 5 seconds."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/p",
-      "notes": "Fury bar changes from Yellow to Red when full.\nWhen Rek'Sai automatically consumes Fury while Burrowed (no transformation), the healing buff will refresh every second while she has/maintains over 25 Fury.(note) This causes the healing to last 6 seconds at 100 Fury.\nPENDING FOR TEST: Fury generation with parrying effects ( blind,  dodge,  block)",
+      "notes": "Fury bar changes from Yellow to Red when full.\nWhen Rek'Sai automatically consumes Fury while Burrowed (no transformation), the healing buff will refresh every second while she has/maintains over 25 Fury.(unexpected) This causes the healing to last 6 seconds at 100 Fury.\nPENDING FOR TEST: Fury generation with parrying effects ( blind,  dodge,  block)",
       "targeting": "Passive"
     },
     {
@@ -33,7 +33,7 @@
       "effectRadius": "325",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack on-hit within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.</p>",
           "leveling": [
             {
               "attribute": "Bonus Physical Damage",
@@ -191,7 +191,7 @@
       "key": "E",
       "name": "Furious Bite",
       "affects": "Enemies",
-      "blurb": "Active:  Rek'Sai bites the target enemy, dealing physical damage. At maximum  Fury, Furious Bite's deals true damage.",
+      "blurb": "Active:  Rek'Sai bites the target enemy, dealing physical damage. At maximum  Fury, Furious Bite's damage is increased and converted into true damage.",
       "castTime": "0.25",
       "cooldown": "6",
       "cost": "0",
@@ -280,7 +280,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Rek'Sai applies Marked as Prey to enemy champions she damages, lasting for 5 seconds.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 2 seconds. After 0.9 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 1.5 seconds. After 0.9 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -306,7 +306,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/r",
-      "notes": "Rek'Sai will track the target if they change locations while dashing to them. Once she has started to dash through the target however, she will no longer track them.\nShe will dash through the target's previous location without dealing damage if the target moves beyond 1750 units.\nIf the target moves 1000 or more units away right before being struck, they will not be dealt the damage.\nIn this case, the target is displaced in the moment when Rek'Sai starts to dash through and prepares to strike them.\nVoid Rush will be cancelled and placed on a  5-second cooldown if the target dies or moves too far away during the cast time or while Rek'Sai is vanished, or if they are no longer in  sight during the cast time.\nIf the ability is cancelled while Rek'Sai is vanished, she will reappear and emerge from the ground without performing the dash once the 0.9-second delay has elapsed.\nIf the ability is cancelled from losing sight of the target, Rek'Sai will not vanish into the ground after the cast time (but still becoming untargetable) and will remain in place while unable to act for 0.5 seconds.(note)\nThe ability will not be cancelled if the target becomes  untargetable during the cast time or while Rek'Sai is vanished.\nShe will still dash to the target even if they are untargetable.\nAll sources of damage by Rek'Sai count for applying the mark.\nRek'Sai gains the  displacement immunity from the start of the cast time, and loses it once her dash ends.\nRek'Sai can activate Void Rush either while  Burrowed or  Unburrowed.\nShe will always emerge as Unburrowed.\nIf Rek'Sai enters  resurrection during the cast time, Void Rush is canceled and goes on a 5 second cooldown.\nIf the resurrection occurs while  vanished, she will emerge and pounce the target immediately.\nVoid Rush will not deal damage if the target is  untargetable by the time Rek'Sai reaches them.\nAfter vanishing and then emerging, Rek'Sai will leave behind a temporary, cosmetic  Tunnel. She cannot interact with this Tunnel, and each entrance is destroyed 2.25 seconds after being spawned from when she vanished or emerged.\nA screeching noise made by Rek'Sai can be heard globally after Void Rush is cast (will be heard by enemies even if they don't have  sight of Rek'Sai and/or her destination).\nThe following table refers for interactions while Rek'Sai is performing Void Rush:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+      "notes": "Rek'Sai will track the target if they change locations while dashing to them. Once she has started to dash through the target however, she will no longer track them.\nShe will dash through the target's previous location without dealing damage if the target moves beyond 1750 units.\nIf the target moves 1000 or more units away right before being struck, they will not be dealt the damage.\nIn this case, the target is displaced in the moment when Rek'Sai starts to dash through and prepares to strike them.\nVoid Rush will be cancelled and placed on a  5-second cooldown if the target dies or moves too far away during the cast time or while Rek'Sai is vanished, or if they are no longer in  sight during the cast time.\nIf the ability is cancelled while Rek'Sai is vanished, she will reappear and emerge from the ground without performing the dash once the 0.9-second delay has elapsed.\nIf the ability is cancelled from losing sight of the target, Rek'Sai will not vanish into the ground after the cast time (but still becoming untargetable) and will remain in place while unable to act for 0.5 seconds.(unexpected)\nThe ability will not be cancelled if the target becomes  untargetable during the cast time or while Rek'Sai is vanished.\nShe will still dash to the target even if they are untargetable.\nAll sources of damage by Rek'Sai count for applying the mark.\nRek'Sai gains the  displacement immunity from the start of the cast time, and loses it once her dash ends.\nRek'Sai can activate Void Rush either while  Burrowed or  Unburrowed.\nShe will always emerge as Unburrowed.\n Burrow will be placed on a 1-second cooldown after Void Rush's cast even if it is not on cooldown, and will also be set to 1 second even if the remaining cooldown is below that.(bug)\nIf Rek'Sai enters  resurrection during the cast time, Void Rush is canceled and goes on a 5 second cooldown.\nIf the resurrection occurs while  vanished, she will emerge and pounce the target immediately.\nVoid Rush will not deal damage if the target is  untargetable by the time Rek'Sai reaches them.\nAfter vanishing and then emerging, Rek'Sai will leave behind a temporary, cosmetic  Tunnel. She cannot interact with this Tunnel, and each entrance is destroyed 2.25 seconds after being spawned from when she vanished or emerged.\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest activate upon Rek'Sai's emergence from the ground.\nA screeching noise made by Rek'Sai can be heard globally after Void Rush is cast (will be heard by enemies even if they don't have  sight of Rek'Sai and/or her destination).\nThe following table refers for interactions while Rek'Sai is performing Void Rush:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
       "speed": "1400",
       "spellEffects": "spell",
       "spellshieldable": "True",
@@ -325,7 +325,8 @@
     "abilityReliance": 30,
     "difficulty": 3
   },
-  "patchLastChanged": "25.23",
+  "lore": "An apex predator, Rek'Sai is a merciless Void-spawn that tunnels beneath the ground to ambush and devour unsuspecting prey. Her insatiable hunger has laid waste to entire regions of the once-great empire of Shurima—merchants, traders, even armed caravans, will go hundreds of miles out of their way to avoid her and her offspring's hunting grounds. All know that once Rek'Sai is seen on the horizon, death from below is all but guaranteed.",
+  "patchLastChanged": "26.05",
   "positions": [
     "Jungle"
   ],
@@ -352,7 +353,6 @@
     "armor": 4.5,
     "magicResist": 2.1,
     "hpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 2
   },
   "price": {

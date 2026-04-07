@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const { champion, pocket: p } = defineProps<{
@@ -12,7 +12,7 @@ const pocketChampions = computed({
   get: () => pocket.value.champions ?? [],
   set: (v: string[]) => {
     pocket.value.champions = v
-  },
+  }
 })
 const open = ref<boolean>(false)
 

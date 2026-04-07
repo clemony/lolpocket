@@ -16,7 +16,7 @@
       "unique": true,
       "mythic": false,
       "name": "Sweet Spot",
-      "effects": "Basic attacks deal 0% – 30% (based on distance) increased damage and abilities deal 0% – 40% (based on distance) increased damage. The distance is calculated from your current position to the target's position at the time the triggering attack or ability hits them."
+      "effects": "Basic attacks deal 0% – 30% (based on distance) increased damage and abilities deal 0% – 50% (based on distance) increased damage. The distance is calculated from your current position to the target's position at the time the triggering attack or ability hits them."
     }
   ],
   "stats": {

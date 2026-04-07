@@ -116,7 +116,7 @@
       "description": "If the charge is interrupted or completes without reactivation, Comet Spear is cancelled and the ability is put on full cooldown but refunds half the mana cost."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Comet Spear deals 20 - 240 (based on level) (+ 115% bonus AD) bonus physical damage, affected by the previous damage reductions. Consumes the stacks upon recasting.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Comet Spear deals 20 - 265.88 (based on level) (+ 115% bonus AD) bonus physical damage, affected by the previous damage reductions. Consumes the stacks upon recasting.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/q",

@@ -5,7 +5,7 @@
   "blurb": "Innate:  Garen continually  regenerates a portion of his  maximum health.",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Garen regenerates an additional[ 1.5% - 10.1% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.01% (based on level) of his maximum health every 0.5 seconds. ]</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Garen regenerates an additional[ 1.5% - 10.9% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.09% (based on level) of his maximum health every 0.5 seconds. ]</p>"
     },
     {
       "description": "Perseverance is lost for 8 seconds if Garen takes damage from champions, epic monsters, or turrets, or if he is hit by an enemy ability or affected by an enemy summoner spell, refreshing on subsequent damage and hits taken from them."

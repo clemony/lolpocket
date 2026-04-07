@@ -3,6 +3,11 @@
 ### Project structure
 
 - Nuxt UI theme files live in `layers/ui/app/theme`
+- Generic, reusable components live in `layers/ui/app/components`
+- Project domain specific components live in `app/components`
+- External static data pipeline files live in sibling workspaces:
+  - Node / TS -> `../pocket-api`
+  - Python -> `../meraki`
 
 ## Tooling
 

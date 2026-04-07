@@ -14,7 +14,7 @@
           "attribute": "Arc of Ruin Base Damage",
           "modifiers": [
             {
-              "values": "175 / 350 / 525"
+              "values": "160 / 320 / 480"
             }
           ]
         },

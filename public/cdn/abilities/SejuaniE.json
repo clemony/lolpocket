@@ -34,7 +34,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/e",
-  "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\n Master Yi's  Alpha Strike does not interact with Permafrost.(note)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
+  "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\n Master Yi's  Alpha Strike does not interact with Permafrost.(unexpected)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
   "projectile": "TRUE",
   "resource": "Mana",
   "spellEffects": "Single target",

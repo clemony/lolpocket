@@ -18,7 +18,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/p",
-      "notes": "Element of Surprise's buff does not  stack with itself, only refreshes on subsequent triggers within the duration.\nAll  forced action effects will break Guerilla Warfare's  stealth while Teemo is standing outside of  brush. While he is inside brush, all of them will also break the stealth if he is forced to move outside brush.\n Berserk and  taunt can additionally break the stealth if Teemo is forced to use a basic attack, which is an action that breaks stealth by default.\nGuerilla Warfare's stealth is special-cased to be interrupted whenever Teemo moves from his location by any means (Move order,  dash, or  blink), thus, performing actions that do not normally  break stealth which also involve movement will cause the stealth to break. If Teemo is in a  brush, however, the stealth is not broken by the above effects so long as his destination location is still inside brush.\nDue to the unique implementation of Guerilla Warfare's stealth:\nSome area-of-effect (AoE)  knockups, may not be able to break Teemo's stealth.(bug)\nWhile Teemo is  airborne without his stealth broken, other area-of-effect spells (mostly older ones) are able to break Teemo's stealth, such as  Randuin's Omen's Humility.(bug)\nA highly technical explanation can be found here.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
+      "notes": "Element of Surprise's buff does not  stack with itself, only refreshes on subsequent triggers within the duration.\nAll  forced action effects will break Guerilla Warfare's  stealth while Teemo is standing outside of  brush. While he is inside brush, all of them will also break the stealth if he is forced to move outside brush.\n Berserk and  taunt can additionally break the stealth if Teemo is forced to use a basic attack, which is an action that breaks stealth by default.\nGuerilla Warfare's stealth is special-cased to be interrupted whenever Teemo moves from his location by any means (Move order,  dash, or  blink), thus, performing actions that do not normally  break stealth which also involve movement will cause the stealth to break. If Teemo is in a  brush, however, the stealth is not broken by the above effects so long as his destination location is still inside brush.\nDue to the unique implementation of Guerilla Warfare's stealth:\nSome area-of-effect (AoE)  knockups, may not be able to break Teemo's stealth. (bug)\nWhile Teemo is  airborne without his stealth broken, other area-of-effect spells (mostly older ones) are able to break Teemo's stealth, such as  Randuin's Omen's Humility. (bug)\nA highly technical explanation can be found here.\nUsing a basic attack breaks the stealth at the end of the attack windup.",
       "targeting": "Passive"
     },
     {
@@ -179,17 +179,17 @@
           ]
         },
         {
-          "description": "Toxic Shot deals 145% damage against monsters.",
+          "description": "Toxic Shot deals 160% damage against monsters.",
           "leveling": [
             {
               "attribute": "Monster Damage On-Hit",
               "modifiers": [
                 {
-                  "values": "13.05 / 33.35 / 53.65 / 73.95 / 94.25"
+                  "values": "14.4 / 36.8 / 59.2 / 81.6 / 104"
                 },
                 {
                   "unit": "% AP",
-                  "values": "43.5"
+                  "values": "48"
                 }
               ]
             },
@@ -197,11 +197,11 @@
               "attribute": "Monster Damage per Tick",
               "modifiers": [
                 {
-                  "values": "8.7 / 17.4 / 26.1 / 34.8 / 43.5"
+                  "values": "9.6 / 19.2 / 28.8 / 38.4 / 48"
                 },
                 {
                   "unit": "% AP",
-                  "values": "14.5"
+                  "values": "16"
                 }
               ]
             },
@@ -209,11 +209,11 @@
               "attribute": "Total Monster Poison Damage",
               "modifiers": [
                 {
-                  "values": "34.8 / 69.6 / 104.4 / 139.2 / 174"
+                  "values": "38.4 / 76.8 / 115.2 / 153.6 / 192"
                 },
                 {
                   "unit": "% AP",
-                  "values": "58"
+                  "values": "64"
                 }
               ]
             }
@@ -336,7 +336,8 @@
     "abilityReliance": 30,
     "difficulty": 1
   },
-  "patchLastChanged": "25.18",
+  "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Jungle",
     "Support",
@@ -368,7 +369,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.7,
     "mpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 3.4
   },
   "price": {

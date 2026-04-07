@@ -25,7 +25,7 @@
       ]
     },
     {
-      "description": "Once it arrives, Shen empowers his next 3 basic attacks within 8 seconds to gain 75 bonus range and deal bonus magic damage. Against structures, only the flat damage portion is applied.",
+      "description": "Once it arrives, Shen empowers his next 3 basic attacks within 8 seconds to gain 75 bonus range and deal bonus magic damage on-hit. Against structures, only the flat damage portion is applied.",
       "leveling": [
         {
           "attribute": "Bonus Magic Damage",
@@ -93,7 +93,7 @@
           "attribute": "Maximum Monster Damage",
           "modifiers": [
             {
-              "values": "120 / 140 / 160 / 180 / 200"
+              "values": "100 / 125 / 150 / 175 / 200"
             }
           ]
         }

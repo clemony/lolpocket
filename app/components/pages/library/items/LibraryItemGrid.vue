@@ -7,11 +7,13 @@
     <div
       v-for="item in is().filtered"
       :key="item"
-      class="flex size-19 grow items-center justify-center">
-      <Item
+      class="flex size-19 items-center justify-center">
+      <HoverIcon
         :id="item"
+        type="item"
         :ui="{
-          root: 'size-19 cursor-pointer'
+          root: 'size-19! max-h-19! cursor-pointer',
+          image: 'size-19!'
         }"
         :map="is().filters.map" />
     </div>

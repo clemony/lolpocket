@@ -1,4 +1,4 @@
-// Updated Patch 16.6 - 03/23/2026 08:52:51 AM CDT
+// Updated Patch 16.7 - 04/03/2026 09:49:38 AM CDT
 
 export const resourceToChamp: Record<string, number[]> = {
   "Blood well": [

@@ -31,7 +31,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/w",
-  "notes": "Venom Cask can apply a maximum of 4  Deadly Venom stacks per enemy per cast.\nVenom Cask's missile will fail to fire if Twitch is  suppressed during the cast time.(note)",
+  "notes": "Venom Cask can apply a maximum of 4  Deadly Venom stacks per enemy per cast.\nVenom Cask's missile will fail to fire if Twitch is  suppressed during the cast time.(unexpected)",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "1400",

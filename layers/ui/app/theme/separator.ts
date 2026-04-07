@@ -15,16 +15,16 @@ export const separatorTheme = defineUiTheme({
       neutral: {
         border: "border-neutral"
       },
-      p0: {
+      base: {
         border: "bg-p0"
       },
-      p1: {
+      primary: {
         border: "border-p1"
       },
-      p2: {
+      secondary: {
         border: "border-p2"
       },
-      p3: {
+      tertiary: {
         border: "bg-p3/80"
       },
       n3: {
@@ -38,7 +38,7 @@ export const separatorTheme = defineUiTheme({
     }
   },
   defaultVariants: {
-    color: "p2",
+    color: "secondary",
     size: "sm"
   }
 })

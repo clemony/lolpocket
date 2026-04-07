@@ -60,65 +60,6 @@
   --color-pre-950: oklch(0.416 0.061 70.36);
 }
 
-@theme inline {
-  --color-shadow: var(--color-n2);
-  --color-shadow-contrast: var(--color-n5);
-
-  --color-diminuendo: var(--ui-insp);
-  --color-diminuendo-contrast: var(--color-insp-200);
-
-  --color-flow: var(--color-hsp);
-  --color-flow-contrast: var(--color-enchanter);
-
-  --color-contaminate: var(--color-res-300);
-  --color-contaminate-contrast: var(--color-hp);
-
-  --color-whimsy: var(--ui-sorc);
-  --color-whimsy-contrast: var(--color-sorc-300);
-
-  --color-cask: var(--color-fighter);
-  --color-cask-contrast: var(--color-apen);
-
-  --color-onslaught: var(--ui-dom);
-  --color-onslaught-contrast: var(--color-dom-300);
-
-  --color-spark: var(--ui-pre);
-  --color-spark-contrast: var(--color-pre-200);
-
-  --color-encore: var(--color-onhit);
-  --color-encore-contrast: var(--color-burst);
-
-  --color-legends: var(--color-warden);
-  --color-legends-contrast: var(--color-pre-300);
-}
-
-@theme {
-  --ui-lp: oklch(85% 51% 123deg);
-
-  --ui-win: oklch(71% 24% 200deg);
-  --color-legendary: var(--ui-legendary);
-
-  --color-info: var(--ui-sorc);
-  --color-success: var(--ui-res);
-  --color-warning: var(--ui-pre);
-  --color-error: var(--ui-dom);
-
-  --color-pre: var(--ui-pre);
-  --color-dom: var(--ui-dom);
-  --color-sorc: var(--ui-sorc);
-  --color-res: var(--ui-res);
-  --color-insp: var(--ui-insp);
-
-  --color-insp-offset: var(--ui-insp-offset);
-  --color-res-offset: var(--ui-res-offset);
-  --color-sorc-offset: var(--ui-sorc-offset);
-  --color-dom-offset: var(--ui-dom-offset);
-  --color-pre-offset: var(--ui-pre-offset);
-
-  --color-accent: var(--ui-accent);
-  --color-accent-content: var(--ui-accent-content);
-}
-
 :root,
 .light,
 .light-mode,
@@ -143,6 +84,33 @@
 
   --ui-accent: var(--color-insp);
   --ui-accent-content: var(--color-insp-200);
+
+  --ui-diminuendo: var(--ui-insp);
+  --ui-diminuendo-contrast: var(--color-insp-200);
+
+  --ui-flow: var(--color-hsp);
+  --ui-flow-contrast: var(--color-enchanter);
+
+  --ui-contaminate: var(--color-res-300);
+  --ui-contaminate-contrast: var(--color-hp);
+
+  --ui-whimsy: var(--ui-sorc);
+  --ui-whimsy-contrast: var(--color-sorc-300);
+
+  --ui-cask: var(--color-fighter);
+  --ui-cask-contrast: var(--color-apen);
+
+  --ui-onslaught: var(--ui-dom);
+  --ui-onslaught-contrast: var(--color-dom-300);
+
+  --ui-spark: var(--ui-pre);
+  --ui-spark-contrast: var(--color-pre-200);
+
+  --ui-encore: var(--color-onhit);
+  --ui-encore-contrast: var(--color-burst);
+
+  --ui-legends: var(--color-warden);
+  --ui-legends-contrast: var(--color-pre-300);
 }
 
 .dim,
@@ -198,6 +166,58 @@
 }
 
 @theme inline {
+  --color-shadow: var(--color-n2);
+  --color-shadow-contrast: var(--color-n5);
+
+  --color-diminuendo: var(--ui-insp);
+  --color-diminuendo-contrast: var(--color-insp-200);
+
+  --color-flow: var(--color-hsp);
+  --color-flow-contrast: var(--color-enchanter);
+
+  --color-contaminate: var(--color-res-300);
+  --color-contaminate-contrast: var(--color-hp);
+
+  --color-whimsy: var(--ui-sorc);
+  --color-whimsy-contrast: var(--color-sorc-300);
+
+  --color-cask: var(--color-fighter);
+  --color-cask-contrast: var(--color-apen);
+
+  --color-onslaught: var(--ui-dom);
+  --color-onslaught-contrast: var(--color-dom-300);
+
+  --color-spark: var(--ui-pre);
+  --color-spark-contrast: var(--color-pre-200);
+
+  --color-encore: var(--color-onhit);
+  --color-encore-contrast: var(--color-burst);
+
+  --color-legends: var(--color-warden);
+  --color-legends-contrast: var(--color-pre-300);
+
+  --color-legendary: var(--ui-legendary);
+
+  --color-info: var(--ui-sorc);
+  --color-success: var(--ui-res);
+  --color-warning: var(--ui-pre);
+  --color-error: var(--ui-dom);
+
+  --color-pre: var(--ui-pre);
+  --color-dom: var(--ui-dom);
+  --color-sorc: var(--ui-sorc);
+  --color-res: var(--ui-res);
+  --color-insp: var(--ui-insp);
+
+  --color-insp-offset: var(--ui-insp-offset);
+  --color-res-offset: var(--ui-res-offset);
+  --color-sorc-offset: var(--ui-sorc-offset);
+  --color-dom-offset: var(--ui-dom-offset);
+  --color-pre-offset: var(--ui-pre-offset);
+
+  --color-accent: var(--ui-accent);
+  --color-accent-content: var(--ui-accent-content);
+
   --color-win: var(--ui-win);
   --color-lp: var(--ui-lp);
 

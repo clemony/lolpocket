@@ -2,6 +2,11 @@
   "id": 226656,
   "name": "Everfrost",
   "description": "70 Ability Power\n250 Health\n600 Mana\n20 Ability Haste\n\nACTIVE (0s)\nGlaciate\n Deal damage in a cone, Slowing enemies hit. Enemies at the center of the cone are Rooted instead.",
+  "stats": {
+    "mana": 600,
+    "health": 250,
+    "abilityPower": 70
+  },
   "gold": {
     "base": 2500,
     "purchasable": false,

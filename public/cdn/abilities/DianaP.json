@@ -7,10 +7,10 @@
   "effectRadius": "175",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Diana gains 15% - 35% (based on level) bonus attack speed. After casting an ability, this bonus is tripled to 45% - 105% (based on level) for 5 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Diana gains 15% - 37.35% (based on level) bonus attack speed. After casting an ability, this bonus is tripled to 45% - 112.06% (based on level) for 5 seconds.</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Moonsilver Blade:</span> Diana's basic attacks generate a stack of Moonsilver Blade for 5 seconds, refreshing on subsequent attacks and stacking up to 2 times. At 2 stacks, Diana empowers her next basic attack to consume the stacks on-hit to additionally cleave nearby enemies, dealing them 20 - 220 (based on level) (+ 50% AP) magic damage. Moonsilver Blade deals 280% damage against monsters.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Moonsilver Blade:</span> Diana's basic attacks on-hit generate a stack of Moonsilver Blade for 5 seconds, refreshing on subsequent attacks and stacking up to 2 times. At 2 stacks, Diana empowers her next basic attack to consume the stacks on-hit to additionally cleave nearby enemies, dealing them 20 - 270 (based on level) (+ 50% AP) magic damage. Moonsilver Blade deals 230% damage against monsters.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Diana/ability-icon/p",

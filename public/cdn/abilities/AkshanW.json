@@ -14,7 +14,7 @@
       "description": "When Akshan claims a Scoundrel's bounty he removes the marks of all other enemies. Scoundrels refresh their mark duration on subsequent kills, and will have their mark removed when they die by any means. Akshan cannot mark enemies as Scoundrels while they are dead. Allies are resurrected at their summoning platform."
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time. he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time, he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.</p>",
       "leveling": [
         {
           "attribute": "Bonus Movement Speed",

@@ -4,7 +4,7 @@
   "affects": "Enemies",
   "blurb": "Active:  Kennen summons a storm that strikes at nearby enemy champions, dealing magic damage. Enemies take increased damage from each subsequent strike.",
   "castTime": "0.25",
-  "cooldown": "120 / 100 / 80",
+  "cooldown": "120",
   "cost": "0",
   "damageType": "Magic damage",
   "effectRadius": "550",

@@ -10,7 +10,7 @@ import { useSignIn } from "./useAuth"
       :key="provider.label"
       size="lg"
       variant="outline"
-      color="transparent"
+      color="primary"
       :ui="{
         base: 'w-full',
         leadingIcon: 'absolute mx-auto size-5.5 place-self-center opacity-80'

@@ -38,7 +38,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/r",
-  "notes": "Highlander can be cast during  Alpha Strike.\nThere are two situations that can happen if Master Yi uses Highlander while Highlander's buff is active.\nIf the buff's duration is under 7 seconds, the buff refreshes to 7 seconds.\nIf the buff's duration is above 7 seconds, nothing happens.",
+  "notes": "Highlander can be cast during  Alpha Strike.",
   "resource": "Mana",
   "targeting": "Auto"
 }

@@ -9,6 +9,6 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/p",
-  "notes": "Warpath's bonus attack damage will adjust itself to any temporary movement speed buffs and debuffs Hecarim is affected by.\nSince this only affects bonus values Hecarim will not dip below his regular attack damage if he is  slowed below his base movement speed.\nThe amount of movement speed scaling to bonus attack damage is refreshed every 0.25 seconds.",
+  "notes": "Warpath's bonus attack damage will adjust itself to any temporary movement speed  buffs and  debuffs Hecarim is affected by.\nSince this only affects bonus values Hecarim will not dip below his regular attack damage if he is  slowed below his base movement speed.\nThe amount of movement speed scaling to bonus attack damage is refreshed every 0.25 seconds.",
   "targeting": "Passive"
 }

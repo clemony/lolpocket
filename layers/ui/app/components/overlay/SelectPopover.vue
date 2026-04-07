@@ -14,7 +14,7 @@ const {
   value,
   align,
   ui,
-  color = "p0",
+  color = "primary",
   variant,
   side = "left"
 } = defineProps<{
@@ -36,8 +36,8 @@ const {
 const popOpen = shallowRef<boolean>(false)
 
 const shared = {
-  color: "default",
-  variant: "select"
+  color: "base",
+  variant: "list"
 } satisfies CheckboxGroupProps
 </script>
 

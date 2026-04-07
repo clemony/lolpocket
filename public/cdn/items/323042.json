@@ -2,6 +2,10 @@
   "id": 323042,
   "name": "Muramana",
   "description": "35 Attack Damage\n1000 Mana\n15 Ability Haste\n\nAwe\nGain 2% max Mana as bonus Attack Damage.\n\nShock\nAttacks against champions deal 1.2% max Mana as bonus physical damage On-Hit. \nDamaging Abilities against champions deal 3% - 4% max Mana as bonus physical damage.",
+  "stats": {
+    "mana": 1000,
+    "attackDamage": 35
+  },
   "gold": {
     "base": 2900,
     "purchasable": false,
@@ -11,6 +15,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

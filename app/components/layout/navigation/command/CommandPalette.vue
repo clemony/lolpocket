@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { asCommandItem } from "./build/helpers"
 import type { CommandItem } from "./build/useCommandGroups"
 import { useCommandGroups } from "./build/useCommandGroups"
 import ChampionCommand from "./reference-cards/ChampionCommand.vue"
@@ -19,10 +20,6 @@ const hotkeysOpen = shallowRef(false)
 const { resultGroups } = useCommandGroups({
   onNavigate: () => emit("close")
 })
-
-function asCommandItem(item: unknown) {
-  return item as CommandItem
-}
 </script>
 
 <template>
@@ -45,9 +42,11 @@ function asCommandItem(item: unknown) {
     }"
     :virtualize="{ estimateSize: 30 }"
     :back="{
-      size: '2xs',
       variant: 'solid',
-      color: 'neutral'
+      color: 'neutral',
+      ui: {
+        base: 'btn-2xs'
+      }
     }"
     :groups="resultGroups"
     :ui="{
@@ -90,12 +89,6 @@ function asCommandItem(item: unknown) {
 
     <template #spell-command="{ item }">
       <SpellCommand :id="Number(asCommandItem(item).id)" />
-    </template>
-
-    <template #footer>
-      <CommandFooter
-        :reference="reference"
-        @update:open-hotkeys="(value) => (hotkeysOpen = value)" />
     </template>
   </UCommandPalette>
 </template>

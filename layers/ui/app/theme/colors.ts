@@ -1,13 +1,10 @@
-export const colors: string[] = [
-  "p0",
-  "p1",
-  "p2",
-  "p3",
-  "p4",
-  "n0",
+export const colors = [
+  "base",
+  "primary",
+  "secondary",
+  "tertiary",
   "ad",
   "neutral",
-  "nc",
   "insp",
   "res",
   "dom",
@@ -17,6 +14,14 @@ export const colors: string[] = [
   "challenger",
   "legendary",
   "transparent",
-  "default",
   "win",
-]
+  "diminuendo",
+  "flow",
+  "contaminate",
+  "whimsy",
+  "cask",
+  "onslaught",
+  "spark",
+  "encore",
+  "legends"
+] as const

@@ -17,7 +17,7 @@
           "attribute": "Damage Per Pass",
           "modifiers": [
             {
-              "values": "40 / 65 / 90 / 115 / 140"
+              "values": "35 / 60 / 85 / 110 / 135"
             },
             {
               "unit": "% AP",
@@ -29,7 +29,7 @@
           "attribute": "Total Mixed Damage",
           "modifiers": [
             {
-              "values": "80 / 130 / 180 / 230 / 280"
+              "values": "70 / 120 / 170 / 220 / 270"
             },
             {
               "unit": "% AP",

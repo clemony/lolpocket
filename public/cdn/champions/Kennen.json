@@ -199,7 +199,7 @@
       "affects": "Enemies",
       "blurb": "Active:  Kennen summons a storm that strikes at nearby enemy champions, dealing magic damage. Enemies take increased damage from each subsequent strike.",
       "castTime": "0.25",
-      "cooldown": "120 / 100 / 80",
+      "cooldown": "120",
       "cost": "0",
       "damageType": "Magic damage",
       "effectRadius": "550",
@@ -272,7 +272,8 @@
     "abilityReliance": 65,
     "difficulty": 2
   },
-  "patchLastChanged": "25.14",
+  "lore": "More than just the lightning-quick enforcer of Ionian balance, Kennen is the only yordle member of the Kinkou. Despite his small, furry stature, he is eager to take on any threat with a whirling storm of shuriken and boundless enthusiasm. Alongside his master Shen, Kennen patrols the spirit realm, employing devastating electrical energy to strike down his enemies.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Top"
   ],
@@ -300,7 +301,6 @@
     "armor": 5,
     "magicResist": 1.3,
     "hpRegen": 0.7,
-    "attackDamage": 3.8,
     "attackSpeed": 3.4
   },
   "price": {

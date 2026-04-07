@@ -29,7 +29,7 @@ const { greaterOrEqual, lessThan } = useBreakpoint("x1024")
           <template #body>
             <div class="hover-3d">
               <UCard
-                variant="muted"
+                color="primary"
                 class="relative mt-5 h-90 shadow-warm-2 shadow-black/4 drop-shadow-sm">
                 <component :is="step.component" />
               </UCard>

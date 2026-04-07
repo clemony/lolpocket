@@ -11,7 +11,7 @@
       "blurb": "Innate: Based on level,  Tristana gains  bonus range on her  basic attacks,  Explosive Charge and  Buster Shot.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tristana's basic attacks, Explosive Charge and Buster Shot gain 0 - 150 (based on level) bonus range, for a total of 550 - 700 (based on level).</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tristana's basic attacks, Explosive Charge and Buster Shot gain 0 - 167.65 (based on level) bonus range, for a total of 550 - 717.65 (based on level).</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Tristana/ability-icon/p",
@@ -130,11 +130,11 @@
               "attribute": "Minimum Physical Damage",
               "modifiers": [
                 {
-                  "values": "60 / 70 / 80 / 90 / 100"
+                  "values": "60 / 85 / 110 / 135 / 160"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "100 / 110 / 120 / 130 / 140"
+                  "values": "80"
                 },
                 {
                   "unit": "% AP",
@@ -145,17 +145,17 @@
           ]
         },
         {
-          "description": "Tristana's basic attacks on-hit and abilities against the target increase Explosive Charge's damage by 25%, stacking up to 4 times for a maximum 100% increase, upon which the charge also detonates instantly. The charge's total damage is additionally increased by 0% - 75% (based on critical strike chance) (+ 0% - 40% (based on critical strike chance).",
+          "description": "Tristana's basic attacks on-hit and abilities against the target increase Explosive Charge's damage by 25%, stacking up to 4 times for a maximum 100% increase, upon which the charge also detonates instantly. The charge's total damage is additionally increased by 0% - 40% (+ 0% - 12%) (based on critical strike chance).",
           "leveling": [
             {
               "attribute": "Bonus Damage Per Stack",
               "modifiers": [
                 {
-                  "values": "15 / 17.5 / 20 / 22.5 / 25"
+                  "values": "15 / 21.25 / 27.5 / 33.75 / 40"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "25 / 27.5 / 30 / 32.5 / 35"
+                  "values": "20"
                 },
                 {
                   "unit": "% AP",
@@ -167,11 +167,11 @@
               "attribute": "Full Stack Bonus Damage",
               "modifiers": [
                 {
-                  "values": "60 / 70 / 80 / 90 / 100"
+                  "values": "60 / 85 / 110 / 135 / 160"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "100 / 110 / 120 / 130 / 140"
+                  "values": "80"
                 },
                 {
                   "unit": "% AP",
@@ -183,11 +183,11 @@
               "attribute": "Full Stack Physical Damage",
               "modifiers": [
                 {
-                  "values": "120 / 140 / 160 / 180 / 200"
+                  "values": "120 / 170 / 220 / 270 / 320"
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "200 / 220 / 240 / 260 / 280"
+                  "values": "160"
                 },
                 {
                   "unit": "% AP",
@@ -283,7 +283,8 @@
     "abilityReliance": 20,
     "difficulty": 1
   },
-  "patchLastChanged": "25.23",
+  "lore": "While many other yordles channel their energy into discovery, invention, or just plain mischief-making, Tristana was always inspired by the adventures of great warriors. She had heard much about Runeterra, its factions, and its wars, and believed her kind could become worthy of legend too. Setting foot in the world for the first time, she took up her trusty cannon Boomer, and now leaps into battle with steadfast courage and optimism.",
+  "patchLastChanged": "26.01",
   "positions": [
     "Bottom",
     "Middle"
@@ -313,7 +314,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.5,
     "mpRegen": 0.5,
-    "attackDamage": 2.9,
     "attackSpeed": 1.5
   },
   "price": {

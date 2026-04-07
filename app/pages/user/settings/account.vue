@@ -9,23 +9,64 @@ definePageMeta({
   path: "/settings/account",
   auth: true,
   order: 1,
-  prefix: "Settings",
+  prefix: "Settings"
   /*   middleware: 'confirm-auth', */
 })
 
 const userProviders = await computedAsync(() =>
-  Object.values(user().user?.app_metadata?.providers ?? {}),
+  Object.values(user().user?.app_metadata?.providers ?? {})
 )
 const email = shallowRef<string | undefined>("")
 const username = shallowRef<string | undefined>("")
+const isSaving = ref(false)
+
 onMounted(() => {
   email.value = user().user?.email
   username.value = user().account?.username
 })
+
+async function saveAccount() {
+  const client = useSupabaseClient()
+  const nextUsername = username.value?.trim()
+  const nextEmail = email.value?.trim()
+  const currentUsername = user().account?.username ?? undefined
+  const currentEmail = user().user?.email ?? undefined
+
+  isSaving.value = true
+
+  try {
+    if (nextEmail && nextEmail !== currentEmail) {
+      const { error } = await client.auth.updateUser({ email: nextEmail })
+      if (error) throw error
+    }
+
+    if (nextUsername !== currentUsername) {
+      await accountUpdate(
+        { username: nextUsername || undefined },
+        { silent: true }
+      )
+    }
+
+    username.value = user().account?.username
+    email.value = user().user?.email ?? nextEmail
+
+    useToast().add({
+      color: "neutral",
+      title: "Account updated",
+      description: "Your account changes have been saved.",
+      icon: "tick"
+    })
+  } catch (error) {
+    console.error("Failed to save account settings", error)
+    sendErrorToast()
+  } finally {
+    isSaving.value = false
+  }
+}
 </script>
 
 <template>
-  <UForm class="flex w-full flex-col gap-6">
+  <UForm class="flex w-full flex-col gap-6" @submit.prevent="saveAccount">
     <!-- username -->
     <UFormField
       title="Username"
@@ -47,14 +88,14 @@ onMounted(() => {
         <template #trailing>
           <LazyInputClear @clear-input="is().filters.query = ''" />
           <Tooltip v-if="!user().user?.email_confirmed_at" label="Verified!">
-            <UBadge icon="i-tick" size="xs" color="neutral">
+            <UBadge icon="i-tick" size="sm" color="neutral">
               pending...
             </UBadge>
           </Tooltip>
           <Tooltip
             v-else
             :label="`Check your inbox! Verification email sent at ${user().user?.email_change_sent_at}.`">
-            <UBadge icon="i-refresh" size="xs" variant="outline">
+            <UBadge icon="i-refresh" size="sm" variant="outline">
               pending...
             </UBadge>
           </Tooltip>
@@ -89,7 +130,7 @@ onMounted(() => {
                     cn('size-10.5 ds-2xs', {
                       'text-dom':
                         provider.label === ('riot' as ProviderType['label']),
-                      'scale-90': provider.label === 'google',
+                      'scale-90': provider.label === 'google'
                     })
                   " />
               </template>
@@ -126,7 +167,7 @@ onMounted(() => {
     </fieldset>
 
     <div class="flex justify-start">
-      <UButton color="neutral" @click.prevent @click="accountUpdate({})">
+      <UButton color="neutral" type="submit" :loading="isSaving">
         Update account
       </UButton>
     </div>

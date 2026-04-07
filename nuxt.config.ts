@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite"
 import path from "node:path"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
+import { colors as uiThemeColors } from "./layers/ui/app/theme/colors"
 
 const isCF = process.env.CF_PAGES === "1"
 const isProduction = process.env.NODE_ENV === "production"
@@ -106,6 +107,9 @@ export default defineNuxtConfig({
     fonts: false,
     experimental: {
       componentDetection: true
+    },
+    theme: {
+      colors: [...uiThemeColors]
     }
   },
 
@@ -265,13 +269,6 @@ export default defineNuxtConfig({
         "tailwind-merge",
         "tailwind-variants",
         "random-words",
-        "reka-ui",
-        "valibot",
-        "dexie",
-        "tailwind-merge",
-        "tailwind-variants",
-        "random-words",
-        "reka-ui",
         "@internationalized/date",
         "fuse.js",
         "fast-deep-equal/es6"

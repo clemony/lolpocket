@@ -38,7 +38,7 @@
     {
       "unique": true,
       "name": "Breaking Shockwave",
-      "effects": "Deal 80% AD physical damage to enemies in a 450 radius centered around you and <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting."
+      "effects": "Deal 80% AD physical damage to enemies within a 450 radius in front of you and <img src=\"/img/icons/slow.webp\" class=\"tip-icon \" />slow them by 35% for 3 seconds. For each champion hit, gain 35% <b>bonus</b> movement speed decaying over 3 seconds. Can move while casting."
     }
   ],
   "stats": {

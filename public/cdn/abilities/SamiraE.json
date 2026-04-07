@@ -43,7 +43,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/e",
-  "notes": "Samira gains the attack speed buff at the start of the dash.\nWild Rush does not deal its damage to turrets.\nWild Rush prioritizes targeting champions over turrets.\n Inferno Trigger will be buffered to cast at the end of the dash if  Flair was cast during the dash.\nCasting  Flash during Wild Rush will interrupt the dash but deal damage to nearby enemies at the location.\nIf  Flair was cast during this time, an explosive will also be placed at that location.\nWild Rush will also reset if Samira kills or gets assist credit on a  clone that dies (to hostiles).(note)",
+  "notes": "Samira gains the attack speed buff at the start of the dash.\nWild Rush does not deal its damage to turrets.\nWild Rush prioritizes targeting champions over turrets.\n Inferno Trigger will be buffered to cast at the end of the dash if  Flair was cast during the dash.\nCasting  Flash during Wild Rush will interrupt the dash but deal damage to nearby enemies at the location.\nIf  Flair was cast during this time, an explosive will also be placed at that location.\nWild Rush will also reset if Samira kills or gets assist credit on a  clone that dies (to hostiles).(unexpected)",
   "resource": "Mana",
   "speed": "1600",
   "spellEffects": "aoe",

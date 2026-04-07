@@ -33,17 +33,17 @@
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> After recasting, Pantheon gains 5 - 30 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> After recasting, Pantheon gains 5 - 32.94 (based on level) (+ 2.5% bonus health) bonus armor and bonus magic resistance for 4 seconds as well as 60% bonus movement speed for 1.5 seconds.</p>"
     },
     {
       "description": "Pantheon can move during the cast time of Aegis Assault's recast."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Pantheon/ability-icon/e",
-  "notes": "The initial cast count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability manually is not.\nPantheon retains his  invulnerability during the recast's cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nPantheon will slam from wherever he was at the start of the recast's' cast time.\n Spell shield will only block the slam's damage.\nThe following table refers for interactions while Pantheon is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+  "notes": "Deals  persistent area damage for the continuous strikes and  area damage with the slam.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nRecasting the ability manually does not.\nPantheon retains his  invulnerability during the recast's cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nPantheon will slam from wherever he was at the start of the recast's' cast time.\n Spell shield will only block the slam's damage.\nThe following table refers for interactions while Pantheon is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
   "projectile": "FALSE",
   "resource": "Mana",
-  "spellEffects": "aoe",
+  "spellEffects": "special",
   "spellshieldable": "special",
   "targeting": "Direction"
 }

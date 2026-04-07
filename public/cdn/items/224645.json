@@ -2,6 +2,9 @@
   "id": 224645,
   "name": "Shadowflame",
   "description": "90 Ability Power\n10 Magic Penetration\n\nCinderbloom\nMagic and true damage Critically Strikes enemies below 40% Health, dealing 15% increased damage. ",
+  "stats": {
+    "abilityPower": 90
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

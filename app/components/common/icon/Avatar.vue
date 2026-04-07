@@ -1,53 +1,39 @@
 <script setup lang="ts">
-import type { AvatarProps, TooltipProps } from "@nuxt/ui"
+import type { Align, Side, TooltipPropsExt } from "#shared/types"
+import type { AvatarProps } from "@nuxt/ui"
 
-type UiProps = AvatarProps["ui"] &
-  TooltipProps["ui"] & {
-    wrapper?: string
-    base?: string
-  }
-interface Props
-  extends Omit<AvatarProps, "ui" | "icon">, Omit<TooltipProps, "ui"> {
-  ui?: UiProps
+type AvatarWrapperProps = AvatarProps & {
+  effects?: boolean
+  spinner?: boolean
+  round?: boolean
+  class?: HTMLAttributes["class"]
+  tooltip?: TooltipPropsExt
 }
 
-const props = withDefaults(
-  defineProps<
-    Props & {
-      class?: HTMLAttributes["class"]
-      src?: string
-      icon?: AvatarProps["icon"]
-      label?: string
-      side?: Side
-      ui?: Props["ui"]
-      spinner?: boolean
-      effects?: boolean
-      interactive?: boolean
-      pin?: boolean
-    }
-  >(),
-  {
-    spinner: false,
-    icon: "i-question",
-    effects: false,
+const props = withDefaults(defineProps<AvatarWrapperProps>(), {
+  effects: true,
+  spinner: false,
+  tooltip: () => ({
     pin: true,
-    interactive: false
-  }
-)
+    interactive: true,
+    effects: true,
+    map: 0
+  })
+})
 //i-eos-icons-hourglass
 const emit = defineEmits(["loaded"])
+const tt = computed(() => safeObject(props.tooltip))
+const ava = computed(() => props)
 
 const loaded = ref(false)
 const resolvedSrc = shallowRef<string | undefined>(undefined)
 let preloadToken = 0
 
-const tooltip = useTemplateRef<TooltipExpose>("tooltip")
-
-const delegated = reactiveOmit(props, "class", "spinner")
-const hasSrc = computed(() => Boolean(props.src?.trim()))
+const delegated = reactiveOmit(props, "class", "tooltip", "effects", "spinner")
+const hasSrc = computed(() => Boolean(ava.value.src?.trim()))
 
 watch(
-  () => props.src,
+  () => ava.value.src,
   (src) => {
     preloadToken += 1
     const currentToken = preloadToken
@@ -77,55 +63,97 @@ watch(
   },
   { immediate: true }
 )
+
+const isPinned = shallowRef(false)
+
+const tooltipAlign = computed<Align>(() => (isPinned.value ? "center" : "end"))
+const tooltipAlignOffset = computed(() => (isPinned.value ? 0 : undefined))
+const tooltipSide = computed<Side>(
+  () => tt.value.side ?? (isPinned.value ? "top" : "bottom")
+)
+
+function handlePinClick() {
+  if (!tt.value.pin || !tt.value.interactive) return
+  isPinned.value = true
+}
+
+onBeforeUnmount(() => {
+  isPinned.value = false
+})
+
+const ui = computed<NonNullable<AvatarProps["ui"]>>(
+  () =>
+    mergeUi<NonNullable<AvatarProps["ui"]>>(
+      {
+        root: cn(
+          "group/icon relative",
+          ava.value.round ? "rounded-full" : "rounded-lg",
+          ava.value.ui?.root,
+          { "z-5! hover:z-5!": isPinned.value }
+        ),
+
+        image: cn(
+          "z-1 size-[inherit] rounded-[inherit] shadow-sm drop-shadow-sm drop-shadow-black/10",
+          {
+            "scale-105 ring ring-n0/60! ring-offset-p1":
+              isPinned.value && ava.value.effects !== false,
+            "ring-offset-3!":
+              isPinned.value &&
+              ava.value.effects !== false &&
+              ["md", "lg", "xl"].includes(String(ava.value.size)),
+            "hover:scale-115": ["xs", "sm", "2xs"].includes(
+              String(ava.value.size)
+            ),
+            "repeat-1 scale-115 animate-heartbeat-sm ring-offset-2! not-hover:duration-500!":
+              ["xs", "sm", "2xs"].includes(String(ava.value.size)) &&
+              isPinned.value &&
+              ava.value.effects !== false
+          }
+        ),
+        icon: cn("size-5 opacity-60", {
+          "pointer-events-none absolute size-4 animate-spin place-self-center! text-nc":
+            ava.value.spinner
+        })
+      },
+      ava.value?.ui
+    ) as NonNullable<AvatarProps["ui"]>
+)
 </script>
 
 <template>
   <Tooltip
-    ref="tooltip"
     as-child
-    :interactive
-    :label
-    :align="tooltip?.pinned ? 'center' : 'end'"
-    :align-offset="tooltip?.pinned ? 0 : undefined"
+    :interactive="isPinned && tt.interactive ? true : false"
+    :pin="tt.pin"
+    :pinned="isPinned"
+    :label="tt.label"
+    :align="tooltipAlign"
+    :align-offset="tooltipAlignOffset"
     :avatar="hasSrc ? resolvedSrc || '' : undefined"
     :ui="{
       content: cn('group/avatar h-fit! max-h-110! w-full max-w-100', {
-        ' px-2 rounded-[0.7rem]': tooltip?.pinned
+        ' px-2 rounded-[0.7rem]': isPinned
       })
     }"
-    :side="props.side || tooltip?.pinned ? 'top' : 'bottom'">
-    <UAvatar
-      role="button"
-      v-bind="delegated"
-      :quality="100"
-      :src="hasSrc ? resolvedSrc || '' : undefined"
-      :ui="{
-        root: cn('relative rounded-lg', { '': loaded }, props.ui?.root),
-        image: cn(
-          'z-1',
-          {
-            'scale-105  outline outline-n0/70  ring ring-offset-3 ring-n0/90 ring-offset-p2':
-              tooltip?.pinned && props.effects !== false
-          },
-          props.ui?.image
-        ),
-        icon: cn(
-          'size-5 opacity-60',
-          {
-            'pointer-events-none absolute size-4 animate-spin place-self-center! text-nc':
-              props.spinner
-          },
-          props.ui?.icon
-        ),
-        fallback: props.ui?.fallback
-      }"
-      icon="i-ui-none"
-      :alt="props?.label ? `${props?.label} icon` : 'an icon'">
-      <USkeleton
-        v-if="hasSrc && !props.spinner && !loaded"
+    :side="tooltipSide"
+    @pinned="tt.pin ? (isPinned = true) : undefined"
+    @unpinned="isPinned = false">
+    <div class="relative">
+      <UAvatar
+        role="button"
+        v-bind="delegated"
+        :quality="100"
+        :src="hasSrc ? resolvedSrc || '' : undefined"
+        icon="i-ui-none"
+        :ui
+        :alt="tt.label ?? props.alt ?? 'an icon'"
+        @click="handlePinClick" />
+      <LazyUSkeleton
+        v-if="hasSrc && !ava.spinner && !loaded"
         class="pointer-events-none block size-full rounded-[inherit]" />
-    </UAvatar>
-    <template v-if="tooltip?.pinned && !props.disabled" #content>
+      <slot />
+    </div>
+    <template v-if="isPinned" #content>
       <slot name="content" />
     </template>
   </Tooltip>

@@ -22,7 +22,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Renata/ability-icon/p",
-      "notes": "Spell shield will not block the mark's application.\nPENDING FOR TEST:: Interaction with mark consumption\nThe mark's consumption by an ally respects  enchantment redirection.",
+      "notes": "Spell shield will not block the mark's application.\nPENDING FOR TEST:: Interaction with mark consumption\nThe mark's consumption by an ally respects  enchantment redirection.\nLeverage's mark will be applied even if the attack misses due to  blind.\nPENDING FOR TEST: Interaction between mark application and consumption and parry effects ( block,  dodge,  blind*).",
       "spellEffects": "proc",
       "spellshieldable": "special",
       "targeting": "Passive"
@@ -253,6 +253,7 @@
     "abilityReliance": 80,
     "difficulty": 2
   },
+  "lore": "Renata Glasc rose from the ashes of her childhood home with nothing but her name and her parents' alchemical research. In the decades since, she has become Zaun's wealthiest chem-baron, a business magnate who built her power by tying everyone's interests to her own. Work with her, and be rewarded beyond measure. Work against her, and live to regret it. But everyone comes to her side, eventually.",
   "patchLastChanged": "25.14",
   "positions": [
     "Support"
@@ -283,7 +284,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.5,
-    "attackDamage": 3,
     "attackSpeed": 2.1
   },
   "price": {

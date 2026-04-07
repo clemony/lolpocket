@@ -2,6 +2,11 @@
   "id": 223184,
   "name": "Guardian's Hammer",
   "description": "25 Attack Damage\n35% Attack Speed\n5% Life Steal\n\n",
+  "stats": {
+    "attackDamage": 25,
+    "attackSpeed": 35,
+    "lifesteal": 5
+  },
   "gold": {
     "base": 500,
     "purchasable": true,

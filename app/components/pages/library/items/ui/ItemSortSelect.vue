@@ -75,7 +75,7 @@ function cycleToggle(toggle: SortToggle) {
       <UButton
         :active="item.state > 0"
         active-color="neutral"
-        color="p0"
+        color="base"
         size="sm"
         :ui="{
           base: cn(

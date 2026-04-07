@@ -97,7 +97,7 @@ onMounted(() => {
 
               <LazyAvatar
                 v-if="idRef"
-                size="12"
+                size="3xl"
                 :src="`/img/item/${idRef}.webp`"
                 :alt="`${name} Image`" />
               <!-- NAME / LINK -->
@@ -122,7 +122,7 @@ onMounted(() => {
             <template
               v-if="item?.stats && Object.entries(item?.stats).length"
               #default>
-              <LazyItemStats layout="command" :stats="item.stats" />
+              <LazyItemStats :item :stats="item.stats" />
             </template>
 
             <template #footer>
@@ -169,16 +169,14 @@ onMounted(() => {
             v-html="item?.description" />
           <!-- REQ CHAMP -->
           <div v-if="item?.requiredChampion">
-            <i
-              >Unique to <b>{{ item.requiredChampion }}.</b></i
-            >
+            <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
           </div>
 
           <!-- EFFECTS -->
           <template v-if="item?.passives?.length && !item?.noEffects">
             <Separator
               class="my-0 opacity-0 **:bg-transparent! first:hidden"
-              color="p3" />
+              color="tertiary" />
             <LazyItemEffect
               v-for="(passive, i) in item.passives"
               :key="i"
@@ -191,7 +189,7 @@ onMounted(() => {
 
           <!-- ACTIVES -->
           <template v-if="item?.active?.[0] && item?.noEffects !== true">
-            <Separator class="first:hidden" color="p3" />
+            <Separator class="first:hidden" color="tertiary" />
             <LazyItemEffect
               layout="command"
               :class="cn('font-medium **:text-sm')"
@@ -211,7 +209,7 @@ onMounted(() => {
               }"
               size="xs"
               label="RECIPE"
-              color="p3" />
+              color="tertiary" />
             <div class="flex items-center gap-1 px-0.5 pt-px pb-1 font-medium">
               <template v-for="(fromItem, i) in filteredFrom" :key="i">
                 <button @click="updateItem(fromItem.id)">
@@ -250,7 +248,7 @@ onMounted(() => {
               }"
               size="xs"
               label="BUILDS INTO"
-              color="p3" />
+              color="tertiary" />
 
             <div
               class="group grid w-full max-w-full grid-cols-[repeat(auto-fill,minmax(32px,1fr))] grid-rows-[repeat(auto-fill,minmax(32px,1fr))] items-center justify-start gap-1 overflow-hidden px-1 pt-px pb-1">
@@ -287,7 +285,9 @@ onMounted(() => {
       title="Item not found.">
       <template #description>
         It seems
-        <ULink class="inline" underline> clem </ULink>
+        <ULink class="inline" underline>
+          clem
+        </ULink>
         may have moved this from it's previous location. Try refreshing to see
         if we've found it.
       </template>

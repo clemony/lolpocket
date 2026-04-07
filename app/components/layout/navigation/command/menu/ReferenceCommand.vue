@@ -12,45 +12,42 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="grid w-full max-w-full grid-cols-[0.8fr_1fr]">
+  <div class="w-full max-w-full px-3">
+    <div v-if="groups.reference" class="py-2 pl-1">
+      <UUser
+        size="xl"
+        :ui="{ root: 'mb-2 py-2', name: 'mb-1', wrapper: 'pr-6' }"
+        :description="groups.reference.description"
+        :name="groups.reference.label" />
+
+      <div class="grid w-full grid-cols-2 gap-x-1.5 gap-y-2 pr-7 pl-1">
+        <UButton
+          v-for="item in groups.reference.items"
+          :key="itemKey(item)"
+          color="neutral"
+          data-command-menu-item="true"
+          :label="item.label"
+          :icon="item.icon"
+          trailing-icon="i-right"
+          :ui="{
+            base: cn(
+              'noise relative flex size-full h-11! w-full justify-start gap-2.5! overflow-hidden rounded-xl border-0 bg-neutral p-3! text-nc shadow-sm **:text-nc! hover:bg-neutral/80'
+            ),
+            label: 'flex text-lg leading-none font-bold',
+            trailingIcon:
+              'right-2.5 bottom-3 size-4! opacity-80 **:stroke-[3.1] group-hover/btn:opacity-100',
+            leadingIcon: cn('size-4.5!')
+          }"
+          @click="emit('update:open', item)" />
+      </div>
+    </div>
     <CommandGroup
       v-if="groups.library"
-      class="w-full"
+      class="w-full items-start"
       :ui="{
         itemTrailingIcon: 'size-3.25! -translate-y-px **:stroke-[2.4]'
       }"
       :items="groups.library"
       @update:open="(item) => emit('update:open', item)" />
-    <div v-if="groups.reference" class="h-full py-3 pl-5">
-      <UUser
-        size="xl"
-        :ui="{ root: 'mb-3', name: 'mb-1' }"
-        :description="groups.reference.description"
-        :name="groups.reference.label" />
-
-      <div class="grid w-full max-w-86 grid-cols-2 gap-x-0.5 gap-y-2">
-        <UButton
-          v-for="item in groups.reference.items"
-          :key="itemKey(item)"
-          data-command-menu-item="true"
-          :label="item.label"
-          :icon="item.icon"
-          size="custom"
-          trailing-icon="i-right"
-          :ui="{
-            base: cn(
-              'noise relative flex size-full h-17.5 w-full items-end justify-start gap-0! overflow-hidden rounded-xl border-0 bg-neutral p-2.5! text-nc shadow-sm drop-shadow-sm **:text-nc! even:ml-1 hover:bg-neutral/80'
-            ),
-            label:
-              'flex size-full items-end px-0 pb-0.25 text-xl leading-none font-bold',
-            trailingIcon:
-              'absolute right-2.5 bottom-3 size-4! opacity-80 **:stroke-[3.1] group-hover/btn:opacity-100',
-            leadingIcon: cn(
-              'absolute top-2.5 left-2.5 size-4.5! text-nc! **:text-nc'
-            )
-          }"
-          @click="emit('update:open', item)" />
-      </div>
-    </div>
   </div>
 </template>

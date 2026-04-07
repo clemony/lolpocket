@@ -8,7 +8,7 @@
   "cost": "70 / 75 / 80 / 85 / 90",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds from the start of the cast time.</p>",
       "leveling": [
         {
           "attribute": "Heal",

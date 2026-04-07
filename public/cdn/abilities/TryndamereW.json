@@ -22,14 +22,14 @@
       ]
     },
     {
-      "description": "Targets facing in the opposite direction of Tryndamere are also slowed for the duration.",
+      "description": "Tryndamere also applies a curse to all nearby enemy champions for 3.25 seconds. While accursed, they become slowed while facing in the opposite direction of Tryndamere.",
       "leveling": [
         {
           "attribute": "Slow",
           "modifiers": [
             {
               "unit": "%",
-              "values": "30 / 37.5 / 45 / 52.5 / 60"
+              "values": "30 / 35 / 40 / 45 / 50"
             }
           ]
         }

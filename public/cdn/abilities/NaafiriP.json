@@ -2,7 +2,7 @@
   "key": "P",
   "name": "We Are More",
   "affects": "Self, Enemies",
-  "blurb": "Innate:  Naafiri periodically summons a Packmate that attacks the target of her attacks and abilities.",
+  "blurb": "Innate:  Naafiri periodically summons a Packmate that attacks the target of her attacks and  abilities.",
   "effects": [
     {
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.</p>"

@@ -20,7 +20,7 @@
           "attribute": "Magic Damage Per Tick",
           "modifiers": [
             {
-              "values": "40 / 55 / 70 / 85 / 100"
+              "values": "30 / 45 / 60 / 75 / 90"
             },
             {
               "unit": "% bonus AD",
@@ -36,7 +36,7 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "200 / 275 / 350 / 425 / 500"
+              "values": "150 / 225 / 300 / 375 / 450"
             },
             {
               "unit": "% bonus AD",

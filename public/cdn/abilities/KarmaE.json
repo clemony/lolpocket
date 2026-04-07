@@ -15,7 +15,7 @@
           "attribute": "Bonus Primary Target Shield",
           "modifiers": [
             {
-              "values": "50 / 100 / 150 / 200"
+              "values": "45 / 85 / 125 / 165"
             },
             {
               "unit": "% AP",
@@ -30,7 +30,7 @@
               "values": "80 / 130 / 180 / 230 / 280"
             },
             {
-              "values": "50 / 100 / 150 / 200"
+              "values": "45 / 85 / 125 / 165"
             },
             {
               "unit": "% AP",
@@ -42,7 +42,7 @@
           "attribute": "Secondary Target Shield",
           "modifiers": [
             {
-              "values": "50 / 100 / 150 / 200"
+              "values": "45 / 85 / 125 / 165"
             },
             {
               "unit": "% AP",

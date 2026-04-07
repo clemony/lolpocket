@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+import { modalXlClass } from "~~/layers/ui/app/variants/modal"
+
+const { type } = defineProps<{
+  type: "logIn" | "signUp"
+}>()
+const emit = defineEmits<{ close: [boolean] }>()
+
+const types = {
+  logIn: {
+    title: "Log in",
+    description: "Use a connected account or log in with email and password."
+  }
+}
+</script>
+
+<template>
+  <UModal
+    :close="{ onClick: () => emit('close', false) }"
+    title=""
+    fullscreen
+    :ui="modalXlClass"
+    description="Use a connected account or log in with email and password.">
+    <slot />
+    <template #content>
+      <NuxtLayout
+        name="form"
+        title="Log in"
+        description="Use a connected account or log in with email.">
+        <template #close>
+          <UButton
+            icon="i-x"
+            :ui="{ leadingIcon: 'size-6 **:stroke-[1.7]' }"
+            variant="ghost"
+            @click="emit('close', false)" />
+        </template>
+        <LazyAuthForm type="logIn" />
+      </NuxtLayout>
+    </template>
+  </UModal>
+</template>

@@ -32,7 +32,7 @@ const matchData = accountPuuid.value
   : []
 const { top } = useChampions({ puuid: accountPuuid.value, matches: matchData })
 
-function handleSplash(e: string) {
+function handleSplash(e: string | null) {
   const account = user().account
   if (account) account.splash = e
 }
@@ -54,10 +54,13 @@ function handleSplash(e: string) {
           'ring-1! inset-shadow-sm! ring-pc/50! ring-offset-1! ring-offset-p4 drop-shadow-sm':
             !currentSplash
         })
-      ">
+      "
+      @click="handleSplash(null)">
       <div :class="card.wrapper">
         <div :class="card.header">
-          <h4 :class="card.title">Automatic</h4>
+          <h4 :class="card.title">
+            Automatic
+          </h4>
         </div>
         <p :class="card.description">
           Displays your most played champion in recent games.
@@ -66,12 +69,12 @@ function handleSplash(e: string) {
           <UBadge
             :class="card.name"
             :label="top()?.name ?? ''"
-            :color="currentSplash !== null ? 'p1' : 'neutral'"
+            :color="currentSplash !== null ? 'base' : 'neutral'"
             :variant="currentSplash !== null ? 'outline' : 'solid'" />
           <UBadge
             v-if="!currentSplash"
-            color="p0"
-            size="sm"
+            color="base"
+            size="md"
             icon="i-tick"
             class="" />
         </div>
@@ -95,9 +98,13 @@ function handleSplash(e: string) {
         ">
         <div :class="card.wrapper">
           <div :class="card.header">
-            <h4 :class="card.title">Custom</h4>
+            <h4 :class="card.title">
+              Custom
+            </h4>
           </div>
-          <p :class="card.description">Pick your favorite. No more Yuumi.</p>
+          <p :class="card.description">
+            Pick your favorite. No more Yuumi.
+          </p>
           <div :class="card.footer">
             <UBadge
               :color="currentSplash === null ? 'transparent' : 'neutral'"
@@ -106,8 +113,8 @@ function handleSplash(e: string) {
               :label="chosenLabel" />
             <UBadge
               v-if="currentSplash"
-              color="p0"
-              size="sm"
+              color="base"
+              size="md"
               icon="i-tick"
               :ui="{
                 base: card.indicator.base,

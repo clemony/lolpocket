@@ -48,7 +48,17 @@
     21,
     35
   ],
-  "ornnUpgrade": 663146,
+  "masterwork": {
+    "upgradeId": 663146,
+    "stats": {
+      "abilityPower": 90,
+      "attackDamage": 45
+    },
+    "bonusStats": {
+      "abilityPower": 10,
+      "attackDamage": 5
+    }
+  },
   "tags": [
     "Mage"
   ]

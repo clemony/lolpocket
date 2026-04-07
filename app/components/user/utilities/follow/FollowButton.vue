@@ -31,7 +31,8 @@ const favoriteSummoners = computed({
   }
 })
 const isSelf = computed(
-  () => !!summoner.value?.puuid && summoner.value.puuid === user().account?.puuid
+  () =>
+    !!summoner.value?.puuid && summoner.value.puuid === user().account?.puuid
 )
 const isFavorite = computed(() =>
   summoner.value?.puuid

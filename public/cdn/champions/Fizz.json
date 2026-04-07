@@ -131,14 +131,14 @@
           ]
         },
         {
-          "description": "Seastone Trident's active damage can be applied against structures at 50% effectiveness. Active and on-hit damage deal an additional 60 bonus magic damage against monsters."
+          "description": "Seastone Trident's active damage can be applied against structures at 50% effectiveness. Active and on-hit damage deal an additional 90 bonus magic damage against monsters."
         },
         {
           "description": "Seastone Trident resets Fizz's basic attack timer."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/w",
-      "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against structures.",
+      "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against  structures.",
       "resource": "Mana",
       "spellEffects": "special",
       "spellshieldable": "True",
@@ -159,7 +159,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz dashes to the target location while becoming untargetable, balancing on his trident for 0.75 seconds, during which he can cast Trickster after 0.15 seconds into the duration.</p>"
         },
         {
-          "description": "He then begins to hop off of his trident over 0.5 seconds, afterwards becoming targetable and landing to create a splash that deals magic damage to nearby enemies and slows them for 2 seconds.",
+          "description": "He then begins to hop off of his trident over 0.5 seconds, during which he gains 50% bonus movement speed, and afterwards becoming targetable and landing to create a splash that deals magic damage to nearby enemies and slows them for 2 seconds.",
           "leveling": [
             {
               "attribute": "Magic Damage",
@@ -189,7 +189,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
-      "notes": "This ability always employs Quick cast.\nPlayful counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability early for  Trickster does not.\nPlayful cannot be used for approximately 0.5 seconds after using  Urchin Strike.\n Flash can be used while hopping off the trident, but not while balanced on it.\nFizz can receive aggro while hopping off the trident, but not while balanced on it\nIf the first dash is interrupted, Fizz initiates the hop immediately, and if the second one is, the splash will not occur.\nIn either cases, Fizz loses the untargetability. [2]\nIf Playful is cast while under the effect of a move block, Fizz will not become untargetable and will initiate the hop instantly.(bug)\nIf  Trickster is cast, the splash will not occur.(bug)\nThere is a minimum dash distance of 25 units for Playful.\nIf Fizz casts Playful on top of himself after being teleported (e.g.  Flash,  Recall), the minimum dash distance will not apply.(bug)\nThe distance covered during Playful's directed splash is equal to half of Fizz's movement speed.\nIf Fizz enters  stasis during either Playful or  Trickster, the splash occurs after the stasis ends.",
+      "notes": "This ability always employs Quick cast.\nPlayful counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDetonating the ability early for  Trickster does not.\nThe distance covered during Playful's directed splash is equal to half of Fizz's movement speed.\nPlayful cannot be used for approximately 0.5 seconds after using  Urchin Strike.\n Flash can be used while hopping off the trident, but not while balanced on it.\nFizz can receive aggro while hopping off the trident, but not while balanced on it\nIf the first dash is interrupted, Fizz initiates the hop immediately, and if the second one is, the splash will not occur.\nIn either cases, Fizz loses the untargetability. [2]\nIf Playful is cast while under the effect of a move block, Fizz will not become untargetable and will initiate the hop instantly.(bug)\nIf  Trickster is cast, the splash will not occur.(bug)\nThere is a minimum dash distance of 25 units for Playful.\nIf Fizz casts Playful on top of himself after being teleported (e.g.  Flash,  Recall), the minimum dash distance will not apply.(bug)\nIf Fizz enters  stasis during either Playful or  Trickster, the splash occurs after the stasis ends.",
       "resource": "Mana",
       "spellEffects": "spellaoe",
       "spellshieldable": "True",
@@ -321,7 +321,8 @@
     "abilityReliance": 90,
     "difficulty": 2
   },
-  "patchLastChanged": "25.23",
+  "lore": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Middle"
   ],
@@ -350,7 +351,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.8,
-    "attackDamage": 3,
     "attackSpeed": 3.1
   },
   "price": {

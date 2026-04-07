@@ -13,7 +13,7 @@
       "effectRadius": "1350 /  450",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 580 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/p",
@@ -29,7 +29,7 @@
       "affects": "Enemies",
       "blurb": "Active:  Lissandra throws a spear of ice in the target direction that  slows the first target hit and deals magic damage to all enemies it passes through.",
       "castTime": "0.25",
-      "cooldown": "8 / 7 / 6 / 5 / 4",
+      "cooldown": "7 / 6 / 5 / 4 / 3",
       "cost": "55 / 60 / 65 / 70 / 75",
       "damageType": "Magic damage",
       "effects": [
@@ -275,7 +275,8 @@
     "abilityReliance": 100,
     "difficulty": 2
   },
-  "patchLastChanged": "25.06",
+  "lore": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world.",
+  "patchLastChanged": "26.06",
   "positions": [
     "Middle"
   ],
@@ -300,11 +301,10 @@
   "statsPerLevel": {
     "hp": 110,
     "mp": 30,
-    "armor": 4.9,
+    "armor": 4.2,
     "magicResist": 1.3,
     "hpRegen": 0.6,
     "mpRegen": 0.4,
-    "attackDamage": 2.7,
     "attackSpeed": 1.5
   },
   "price": {

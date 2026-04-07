@@ -43,7 +43,19 @@
     21,
     35
   ],
-  "ornnUpgrade": 323002,
+  "masterwork": {
+    "upgradeId": 323002,
+    "stats": {
+      "health": 300,
+      "armor": 45,
+      "percentMovespeed": 6
+    },
+    "bonusStats": {
+      "health": 50,
+      "armor": 5,
+      "percentMovespeed": 2
+    }
+  },
   "tags": [
     "Support",
     "Tank"

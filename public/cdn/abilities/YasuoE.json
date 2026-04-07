@@ -93,7 +93,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/e",
-  "notes": "If  Steel Tempest has been buffered,  Wind Wall may also be cast during the dash.(note)\nSweeping Blade will generate 7.5  Flow stacks per cast that travels the maximum distance.\nYasuo can use Sweeping Blade's fixed dash distance to cross walls both before and after hitting his target (provided his proximity to the wall and/or target allows it).\nAfter Sweeping Blade, Yasuo becomes  ghosted for a moment to prevent situations where he would face extreme cases of body block.\n Sleep does not count for knocking the dash down.(bug)",
+  "notes": "If  Steel Tempest has been buffered,  Wind Wall may also be cast during the dash.(unexpected)\nSweeping Blade will generate 7.5  Flow stacks per cast that travels the maximum distance.\nYasuo can use Sweeping Blade's fixed dash distance to cross walls both before and after hitting his target (provided his proximity to the wall and/or target allows it).\nAfter Sweeping Blade, Yasuo becomes  ghosted for a moment to prevent situations where he would face extreme cases of body block.\n Sleep does not count for knocking the dash down.(bug)",
   "onTargetCdStatic": "10 / 9 / 8 / 7 / 6",
   "speed": "750 + 60% movement speed",
   "spellEffects": "Single target",

@@ -7,7 +7,7 @@ export const user = defineStore(
     const sb = ref<Account>()
     const account = ref<AccountData>()
     const settings = ref<Settings>()
-    const inbox = ref<Inbox>()
+    const inbox = ref<Inbox>({ messages: [], notifications: [] })
 
     const { cache } = storeToRefs(sSummoner())
 
@@ -41,6 +41,42 @@ export const user = defineStore(
       account.value = getEmptyAccount() as unknown as AccountData
     }
 
+    function createEmptyInbox(): Inbox {
+      return { messages: [], notifications: [] }
+    }
+
+    function setInbox(nextInbox?: Partial<Inbox> | null) {
+      inbox.value = {
+        ...createEmptyInbox(),
+        ...(nextInbox ?? {}),
+        messages: [...(nextInbox?.messages ?? [])],
+        notifications: [...(nextInbox?.notifications ?? [])]
+      }
+    }
+
+    function addInboxMessage(message: InboxMessage) {
+      inbox.value ??= createEmptyInbox()
+      inbox.value.messages = [...inbox.value.messages, message]
+    }
+
+    function markInboxMessageRead(id: string, read = true) {
+      inbox.value ??= createEmptyInbox()
+      inbox.value.messages = inbox.value.messages.map((message) =>
+        message.id === id ? { ...message, read } : message
+      )
+    }
+
+    /**
+     * Deletes a message from the inbox object by its id
+     * @param id the id of the message to delete
+     */
+    function deleteInboxMessage(id: string) {
+      inbox.value ??= createEmptyInbox()
+      inbox.value.messages = inbox.value.messages.filter(
+        (message) => message.id !== id
+      )
+    }
+
     const keybinds = ref<Record<string, string[]>>({
       subSearch: ["meta", "shift", "K"]
     })
@@ -51,6 +87,10 @@ export const user = defineStore(
       account,
       clearAccount,
       inbox,
+      setInbox,
+      addInboxMessage,
+      markInboxMessageRead,
+      deleteInboxMessage,
       sb,
       user,
       hotkeys

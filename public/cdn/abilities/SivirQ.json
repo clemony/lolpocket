@@ -10,7 +10,7 @@
   "damageType": "Physical damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 40% (+ 0% - 12%) (based on critical strike chance).</p>",
       "leveling": [
         {
           "attribute": "Physical Damage",
@@ -20,7 +20,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "85"
+              "values": "70"
             },
             {
               "unit": "% AP",
@@ -41,7 +41,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "34"
+              "values": "28"
             },
             {
               "unit": "% AP",
@@ -57,7 +57,7 @@
             },
             {
               "unit": "% bonus AD",
-              "values": "170"
+              "values": "140"
             },
             {
               "unit": "% AP",

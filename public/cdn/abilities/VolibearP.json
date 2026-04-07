@@ -13,7 +13,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">The Relentless Storm:</span> For each stack, Volibear gains 5% (+ 3% per 100 AP) bonus attack speed, up to 25% (+ 15% per 100 AP).</p>"
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Lightning Claws:</span> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 60 (based on level) (+ 45% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Lightning Claws:</span> Volibear's claws ignite with lightning, empowering his basic attacks on-hit to deal 11 - 68 (based on level) (+ 45% AP) bonus magic damage to the target and the nearest visible enemy within 450 units of the target, chaining up to 4 subsequent targets.</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Volibear/ability-icon/p",

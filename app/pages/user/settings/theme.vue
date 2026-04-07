@@ -35,7 +35,8 @@ function handleChange(theme: string) {
           Accent
         </h3>
         <p class="text-sm text-n4">
-          Pick the accent family used by badges, Daisy accent utilities, and appearance previews.
+          Pick the accent family used by badges, Daisy accent utilities, and
+          appearance previews.
         </p>
       </div>
 

@@ -1,77 +1,73 @@
 {
   "key": "W",
-  "name": "Burnout",
+  "name": "Inferno Aegis",
   "affects": "Enemies",
-  "blurb": "Active:  Shyvana creates a flame aura, gaining a burst of  movement speed and continually dealing magic damage to nearby enemies.",
+  "blurb": "Active: Shyvana  shields herself for a short time, with the shield strength increased for every nearby enemy champion. While it holds, she gains  bonus move speed, increased while facing enemy champions. Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken.",
   "castTime": "none",
-  "cooldown": "12",
+  "cooldown": "14 / 13.5 / 13 / 12.5 / 12",
   "cost": "0",
   "damageType": "Magic damage",
-  "effectRadius": "162.5 / 350 / 365 / 380",
+  "effectRadius": "350",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana surrounds herself in flames for 3 seconds, gaining decaying bonus movement speed and dealing magic damage every 0.5 seconds to nearby enemies.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana shields herself for 2.5 seconds, with the shield strength increased by 30% for every nearby enemy champion. While it holds, she gains 25% bonus movement speed, increased to 43.75% while facing visible enemy champions.</p>",
       "leveling": [
         {
-          "attribute": "Bonus Movement Speed",
+          "attribute": "Shield Strength",
           "modifiers": [
             {
-              "unit": "%",
-              "values": "30 / 35 / 40 / 45 / 50"
+              "values": "60 / 80 / 100 / 120 / 140"
             },
             {
-              "unit": "% per 100 AP",
-              "values": "10"
-            }
-          ]
-        },
-        {
-          "attribute": "Bonus Movement Speed Decay",
-          "modifiers": [
-            {
-              "unit": "%",
-              "values": "4.5 / 5.25 / 6 / 6.75 / 7.5"
-            }
-          ]
-        },
-        {
-          "attribute": "Magic Damage Per Tick",
-          "modifiers": [
-            {
-              "values": "10 / 15 / 20 / 25 / 30"
-            },
-            {
-              "unit": "% bonus AD",
-              "values": "10"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "During this time, Shyvana's basic attacks deal bonus magic damage on-hit to surrounding enemies and extend the duration of Burnout by 1 second, which can occur up to 4 times for a total of 4 additional seconds.",
-      "leveling": [
-        {
-          "attribute": "Bonus Magic Damage",
-          "modifiers": [
-            {
-              "values": "5 / 7 / 9 / 11 / 13"
-            },
-            {
-              "unit": "% bonus AD",
+              "unit": "% maximum health",
               "values": "5"
             }
           ]
+        },
+        {
+          "attribute": "Increased shield per champion",
+          "modifiers": [
+            {
+              "values": "18 / 24 / 30 / 36 / 42"
+            },
+            {
+              "unit": "% maximum health",
+              "values": "1.5"
+            }
+          ]
         }
       ]
     },
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> Burnout's radius increases, scaling with Dragon's Descent's rank.</p>"
+      "description": "After 1 second, Inferno Aegis can be recast while the shield holds and does so automatically after it expires or is broken."
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Shyvana consumes the shield to explode, dealing magic damage to nearby enemies.</p>",
+      "leveling": [
+        {
+          "attribute": "Magic Damage",
+          "modifiers": [
+            {
+              "values": "80 / 100 / 120 / 140 / 160"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "40"
+            },
+            {
+              "unit": "% AP",
+              "values": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> If the explosion hits an enemy champion, Shyvana heals herself for 75 - 214.71 (based on level) (+ 10% bonus AD) (+ 5% AP), increased by 0% - 100% (based on her missing health) for a maximum heal of 150 - 429.41 (based on level) (+ 20% bonus AD) (+ 10% AP).</p>"
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/w",
-  "notes": "Magic damage on-hit can be dodged with  dodging effects.\nPENDING FOR TEST:: Magic damage on-hit's interactions with  blocking and  blinding effects.",
-  "spellEffects": "aoedot",
-  "spellshieldable": "False",
+  "spellEffects": "spellaoe",
+  "spellshieldable": "True",
   "targeting": "Auto"
 }

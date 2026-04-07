@@ -44,7 +44,7 @@ function handleClear() {
   <UInput
     ref="commandInput"
     v-model:model-value="modelValue"
-    :placeholder="routeTitle"
+    placeholder="search..."
     icon="i-search"
     :autofocus="false"
     aria-describedby="app-command-search"
@@ -70,14 +70,13 @@ function handleClear() {
           v-for="k in ['meta', 'K']"
           :key="k"
           class="text-md! text-n5 group-hover/i:text-n1!"
-          variant="ghost"
+          variant="subtle"
           size="lg"
           square
           :value="k" />
       </div>
       <div v-else v-auto-animate class="flex items-center">
         <LazyInputClear
-          size="2xs"
           variant="ghost"
           :ui="{
             base: 'rounded-lg border border-transparent hover:border-p5 hover:shadow-xs hover:[&_svg]:opacity-60'

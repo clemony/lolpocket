@@ -2,6 +2,9 @@
   "id": 326621,
   "name": "Dawncore",
   "description": "50 Ability Power\n20% Heal and Shield Power\n150% Base Mana Regen\n\nFirst Light\nGain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
+  "stats": {
+    "abilityPower": 50
+  },
   "gold": {
     "base": 850,
     "purchasable": true,
@@ -11,6 +14,6 @@
   "maps": [
     11
   ],
-  "ornnItem": true,
+  "masterwork": true,
   "tags": []
 }

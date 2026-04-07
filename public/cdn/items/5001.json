@@ -1,0 +1,15 @@
+{
+  "id": 5001,
+  "name": "Heart Of Gold",
+  "description": "200 Health\n5 Gold Per 10 Seconds\n\n",
+  "stats": {
+    "health": 200
+  },
+  "gold": {
+    "base": 400,
+    "purchasable": true,
+    "total": 800,
+    "sell": 560
+  },
+  "tags": []
+}

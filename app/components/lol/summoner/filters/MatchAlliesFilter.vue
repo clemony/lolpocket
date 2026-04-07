@@ -41,10 +41,9 @@ const alliesList = computed(() =>
     <UButton
       trailing-icon="i-up"
       label="Allies"
-      variant="custom"
       block
       :ui="{
-        base: 'justify-between border-0 open:rounded-b-none open:border-b open:border-p3/80 open:bg-transparent! open:fx-0!',
+        base: 'justify-between unset-style border-0 open:rounded-b-none open:border-b open:border-p3/80 open:bg-transparent! open:fx-0!',
         label: 'grow-0 font-semibold! text-pc/50 group-hover/btn:text-pc',
         trailingIcon:
           'transition-rotate size-4.5 text-pc/70 duration-200 **:stroke-[2.2] group-open/collapse:-rotate-180 group-hover/btn:**:text-pc'

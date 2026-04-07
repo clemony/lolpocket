@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "@nuxt/ui"
 import type { MapPosition } from "#shared/constants/misc/positions"
 import { mapPositions } from "#shared/constants/misc/positions"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   class: className,
   position: pos,
-  size = "xs",
+  size = "xs"
 } = defineProps<{
   class?: HTMLAttributes["class"]
   position: MapPosition | string | null
@@ -38,13 +38,13 @@ const position = computed(() => {
             active ||
             (champFilter().filters.position &&
               champFilter().filters.position === position.label),
-          'pr-3': active && clear,
+          'pr-3': active && clear
         },
         className
       )
     "
     :style="{
-      backgroundColor: `${(champFilter().filters.position && champFilter().filters.position === position.label) || active ? position.color : 'transparent'}`,
+      backgroundColor: `${(champFilter().filters.position && champFilter().filters.position === position.label) || active ? position.color : 'transparent'}`
     }">
     <RoleIcon class="text-white" :position="position.label" />
     <slot>

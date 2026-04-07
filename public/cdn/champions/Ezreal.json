@@ -139,7 +139,7 @@
                 },
                 {
                   "unit": "% bonus AD",
-                  "values": "50"
+                  "values": "60"
                 },
                 {
                   "unit": "% AP",
@@ -242,7 +242,8 @@
     "abilityReliance": 45,
     "difficulty": 3
   },
-  "patchLastChanged": "25.21",
+  "lore": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way out of any situation, relying partially on his wits, but mostly on his mystical Shuriman gauntlet, which he uses to unleash devastating arcane blasts. One thing is for sure—whenever Ezreal is around, trouble isn't too far behind. Or ahead. Probably everywhere.",
+  "patchLastChanged": "26.03",
   "positions": [
     "Bottom"
   ],
@@ -271,7 +272,6 @@
     "magicResist": 1.3,
     "hpRegen": 0.7,
     "mpRegen": 1,
-    "attackDamage": 3.3,
     "attackSpeed": 2.5
   },
   "price": {

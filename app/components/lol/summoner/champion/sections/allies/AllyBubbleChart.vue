@@ -183,7 +183,9 @@ const zeroLineY = computed(() => scaleY(0))
 <template>
   <UCard class="w-full overflow-hidden p-0">
     <div class="border-b border-p3/70 px-5 py-4">
-      <h4 class="text-lg font-semibold text-pc">Ally Delta by Winrate</h4>
+      <h4 class="text-lg font-semibold text-pc">
+        Ally Delta by Winrate
+      </h4>
       <p class="mt-1 text-sm text-n5">
         Bubble size represents games played. Bubbles are nudged to reduce
         overlap while preserving their chart position.

@@ -15,7 +15,7 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.6% per 100 AP) of the target's maximum health.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">A Thousand Cuts is modified based on the target:</span></p>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters."
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">A Thousand Cuts is modified based on the target:</span></p>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 26.76 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 32.59 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 3 (+ 5% AP) magic damage against monsters."
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/p",
@@ -39,13 +39,13 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 80% damage against minions, and executes them on the first damage instance if they are below 20% health.</p>",
           "leveling": [
             {
               "attribute": "Damage per Snip",
               "modifiers": [
                 {
-                  "values": "10 / 15 / 20 / 25 / 30"
+                  "values": "10 / 13.5 / 17 / 20.5 / 24"
                 },
                 {
                   "unit": "% AP",
@@ -57,7 +57,7 @@
               "attribute": "Center Damage per Snip",
               "modifiers": [
                 {
-                  "values": "10 / 15 / 20 / 25 / 30"
+                  "values": "10 / 13.5 / 17 / 20.5 / 24"
                 },
                 {
                   "unit": "% AP",
@@ -106,7 +106,7 @@
               "attribute": "Minimum Damage",
               "modifiers": [
                 {
-                  "values": "70 / 100 / 130 / 160 / 190"
+                  "values": "70 / 98.5 / 127 / 155.5 / 184"
                 },
                 {
                   "unit": "% AP",
@@ -118,7 +118,7 @@
               "attribute": "Minimum Center Damage",
               "modifiers": [
                 {
-                  "values": "70 / 100 / 130 / 160 / 190"
+                  "values": "70 / 98.5 / 127 / 155.5 / 184"
                 },
                 {
                   "unit": "% AP",
@@ -134,7 +134,7 @@
               "attribute": "Maximum Damage",
               "modifiers": [
                 {
-                  "values": "110 / 160 / 210 / 260 / 310"
+                  "values": "110 / 152.5 / 195 / 237.5 / 280"
                 },
                 {
                   "unit": "% AP",
@@ -146,7 +146,7 @@
               "attribute": "Maximum Center Damage",
               "modifiers": [
                 {
-                  "values": "110 / 160 / 210 / 260 / 310"
+                  "values": "110 / 152.5 / 195 / 237.5 / 280"
                 },
                 {
                   "unit": "% AP",
@@ -254,7 +254,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
-      "notes": "Skip 'n Slash has no minimum dash range.\nThe basic attack reset is not considered one for  Hail of Blades.(note)",
+      "notes": "Skip 'n Slash has no minimum dash range.\nThe basic attack reset is not considered one for  Hail of Blades.(unexpected)",
       "resource": "Mana",
       "spellEffects": "proc",
       "targeting": "Location",
@@ -278,7 +278,7 @@
               "attribute": "Magic Damage per Needle",
               "modifiers": [
                 {
-                  "values": "35 / 65 / 95"
+                  "values": "30 / 50 / 70"
                 },
                 {
                   "unit": "% AP",
@@ -290,7 +290,7 @@
               "attribute": "Damage with A Thousand Cuts",
               "modifiers": [
                 {
-                  "values": "35 / 65 / 95"
+                  "values": "30 / 50 / 70"
                 },
                 {
                   "unit": "% AP",
@@ -334,7 +334,7 @@
               "attribute": "Second Cast Total Damage",
               "modifiers": [
                 {
-                  "values": "105 / 195 / 285"
+                  "values": "90 / 150 / 210"
                 },
                 {
                   "unit": "% AP",
@@ -350,7 +350,7 @@
               "attribute": "Third Cast Total Damage",
               "modifiers": [
                 {
-                  "values": "175 / 325 / 475"
+                  "values": "150 / 250 / 350"
                 },
                 {
                   "unit": "% AP",
@@ -366,7 +366,7 @@
               "attribute": "Maximum Total Damage",
               "modifiers": [
                 {
-                  "values": "315 / 585 / 855"
+                  "values": "270 / 450 / 630"
                 },
                 {
                   "unit": "% AP",
@@ -405,7 +405,8 @@
     "abilityReliance": 50,
     "difficulty": 2
   },
-  "patchLastChanged": "25.24",
+  "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Jungle",
     "Top"
@@ -436,7 +437,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.9,
     "mpRegen": 0.7,
-    "attackDamage": 3,
     "attackSpeed": 2.3
   },
   "price": {

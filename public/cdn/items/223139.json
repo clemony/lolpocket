@@ -2,6 +2,11 @@
   "id": 223139,
   "name": "Mercurial Scimitar",
   "description": "45 Attack Damage\n40 Magic Resist\n10% Life Steal\n\nActive - Quicksilver: Remove all crowd control debuffs and gain Move Speed.",
+  "stats": {
+    "magicResistance": 40,
+    "attackDamage": 45,
+    "lifesteal": 10
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

@@ -45,7 +45,7 @@ const reportComment = computed(() => threads().reportComment ?? undefined)
     }"
     :ui="{ base: 'overflow-hidden' }"
     :toaster="{
-      position: 'top-banner',
+      position: 'top-center',
       class: '',
       progress: false,
       duration: 9000,

@@ -1,13 +1,14 @@
+import type { Account } from "#shared/types"
 import { readBody } from 'h3'
 import { requireUser } from '../client.supabase' // assuming you export it
 
 export default defineEventHandler(
-  async (event): Promise<{ data: unknown | null; error: unknown | null }> => {
+  async (event): Promise<Account | null> => {
     const { client, user } = await requireUser(event)
-    const body = await readBody(event)
+    const body = await readBody<Partial<Account>>(event)
     if (!body) {
       throw createError({
-        statusCode: 404,
+        statusCode: 400,
         statusMessage: 'Missing body context',
       })
     }
@@ -23,11 +24,11 @@ export default defineEventHandler(
 
     // strip null/undefined keys
     const patch = Object.fromEntries(
-      Object.entries(update).filter(([_, v]) => v != null)
+      Object.entries(update).filter(([_, v]) => v !== undefined)
     )
 
     // nothing to update
-    if (!Object.keys(patch).length) return { data: null, error: null }
+    if (!Object.keys(patch).length) return null
 
     const { data, error } = await client.rpc('update_account', {
       ...patch,
@@ -39,6 +40,6 @@ export default defineEventHandler(
       throw createError({ statusCode: 500, statusMessage: error.message })
     }
 
-    return { data: data ?? null, error: null }
+    return (data ?? null) as Account | null
   }
 )

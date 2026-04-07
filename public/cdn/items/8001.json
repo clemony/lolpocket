@@ -2,6 +2,9 @@
   "id": 8001,
   "name": "Anathema's Chains",
   "description": "650 Health\n20 Ability Haste\n\nVendetta\nYou gain Vendetta stacks over time Each stack of Vendetta grants you 1% reduced damage from your Nemesis.\n\nVengeance\nAt maximum stacks, your Nemesis has reduced Tenacity while near you.\n\nACTIVE (0s)\nVow\nChoose a Nemesis.",
+  "stats": {
+    "health": 650
+  },
   "gold": {
     "base": 800,
     "purchasable": false,

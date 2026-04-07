@@ -17,7 +17,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
     :disabled="editing"
     :ui="{
       content:
-        'inline-flex h-max! items-center gap-2 py-px align-baseline leading-5 *:leading-5',
+        'inline-flex h-max! items-center gap-2 py-px align-baseline leading-5 *:leading-5'
     }">
     <button
       v-if="!editing"
@@ -26,7 +26,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
       :class="
         cn(
           'flex w-full grow cursor-pointer items-center gap-1 rounded-lg border border-transparent px-1.5 hover:border-pc/60',
-          className,
+          className
         )
       "
       @click="edit()">
@@ -63,7 +63,7 @@ onClickOutside(triggerRef, () => (editing.value = false))
             variant="ghost"
             color="neutral"
             :ui="{
-              leadingIcon: 'scale-98 opacity-70 **:stroke-[1.8]',
+              leadingIcon: 'scale-98 opacity-70 **:stroke-[1.8]'
             }"
             icon="i-ci-save"
             @click="editing = false" />

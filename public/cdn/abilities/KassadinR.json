@@ -85,7 +85,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/r",
-  "notes": "Flash can be used during the cast time, allowing Kassadin to blink further away.",
+  "notes": "Flash can be used during the cast time, allowing Kassadin to blink further away.\nPinging Riftwalk will additionally display the remaining duration of its stacks.",
   "resource": "Mana",
   "spellEffects": "Area of effect",
   "spellshieldable": "True",

@@ -16,7 +16,7 @@
           "attribute": "Physical Damage",
           "modifiers": [
             {
-              "values": "60 / 85 / 110 / 135 / 160"
+              "values": "60 / 90 / 120 / 150 / 180"
             },
             {
               "unit": "% bonus AD",
@@ -28,7 +28,7 @@
           "attribute": "Minion damage",
           "modifiers": [
             {
-              "values": "36 / 51 / 66 / 81 / 96"
+              "values": "36 / 54 / 72 / 90 / 108"
             },
             {
               "unit": "% bonus AD",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "description": "If this damages an enemy, Hecarim gains a stack of Rampage for 8 seconds, refreshing on subsequent damage and stacking up to 3 times. Each stack increases Rampage's damage by 3% (+ 4% per 100 bonus AD) and reduces its base cooldown by 0.75 seconds, up to a 9% (+ 12% per 100 bonus AD) damage increase and a 2.25-second reduction of the base cooldown at maximum stacks. Stacks expire one by one every 1 second when the duration ends."
+      "description": "If this damages an enemy, Hecarim gains a stack of Rampage for 8 seconds, refreshing on subsequent damage and stacking up to 3 times. Each stack increases Rampage's damage by 3% (+ 3% per 100 bonus AD) and reduces its base cooldown by 0.75 seconds, up to a 9% (+ 9% per 100 bonus AD) damage increase and a 2.25-second reduction of the base cooldown at maximum stacks. Stacks expire one by one every 1 second when the duration ends."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/q",

@@ -34,7 +34,7 @@ const championRole = computed(() =>
           <template #header>
             <LazyAvatar
               v-if="champion"
-              size="12"
+              size="3xl"
               :src="`/img/champion/${champion.id}.webp`"
               :alt="`${champion.name} Image`" />
 

@@ -59,7 +59,7 @@ const roleItemId = computed(() => {
         <Tooltip as-child :ui="{ content: 'h-max!' }" :side-offset="16">
           <UBadge
             color="neutral"
-            size="2xs"
+            size="xs"
             :ui="{
               base: 'transition-scale hover: absolute -top-0.5 -right-1.5 z-2 origin-left gap-0 overflow-visible! rounded-full border-0 bg-neutral px-0.75 py-px text-[0.76rem]! font-bold shadow-sm ring-4 ring-transparent! duration-200 group-hover/ward:scale-120 hover:scale-120 hover:ring-2 hover:ring-p0! hover:ring-offset-1 hover:ring-offset-pc'
             }">

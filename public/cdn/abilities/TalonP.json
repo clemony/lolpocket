@@ -9,7 +9,7 @@
       "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
     },
     {
-      "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 280 (based on level) (+ 210% bonus AD) total physical damage over 2 seconds ][ 5 - 17.5 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds over 2 seconds ]. The target cannot gain Wound stacks during this time."
+      "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 303.53 (based on level) (+ 210% bonus AD) total physical damage ][ 5 - 18.97 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds ]over 2 seconds. The target cannot gain Wound stacks during this time."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/p",

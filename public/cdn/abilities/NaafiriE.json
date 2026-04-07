@@ -6,7 +6,7 @@
   "castTime": "none",
   "collisionRadius": "50",
   "cooldown": "11 / 10 / 9 / 8 / 7",
-  "cost": "35",
+  "cost": "40",
   "damageType": "Physical damage",
   "effectRadius": "230",
   "effects": [

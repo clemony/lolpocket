@@ -2,6 +2,9 @@
   "id": 221038,
   "name": "B. F. Sword",
   "description": "40 Attack Damage\n\n",
+  "stats": {
+    "attackDamage": 40
+  },
   "gold": {
     "base": 1300,
     "purchasable": true,

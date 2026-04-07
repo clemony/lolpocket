@@ -38,9 +38,9 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/r",
-  "notes": "Roots do not  interrupt the ability despite being a movement channel.\nFiddlesticks will always  blink to its intended location even if its position changes during the  channel without being interrupted (e.g. by  Realm Warp).\n -  Surprise Party Fiddlesticks has a special icon for this ability.\nThe following table refers for interactions while Fiddlesticks is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Cast-inhibiting effects",
+  "notes": "Roots do not  interrupt the ability despite being a movement channel.\nFiddlesticks will always  blink to its intended location even if its position changes during the  channel without being interrupted (e.g. by  Realm Warp).\n Experimental Hexplate's Overdrive,  Fiendhunter Bolts' Opening Barrage, and  Zeke's Convergence's Frostfire Tempest will activate at the end of Crowstorm's  channel.\n -  Surprise Party Fiddlesticks has a special icon for this ability.\nThe following table refers for interactions while Fiddlesticks is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Cast-inhibiting effects",
   "resource": "Mana",
-  "spellEffects": "aoe",
+  "spellEffects": "aoedot",
   "targeting": "Location",
   "targetRange": "800"
 }

@@ -2,16 +2,16 @@
   "key": "W",
   "name": "Iron Will",
   "affects": "Self",
-  "blurb": "Active:  Lee Sin gains  life steal and  spell vamp for a few seconds.",
+  "blurb": "Active:  Lee Sin gains  omnivamp for a few seconds.",
   "castTime": "none",
   "cooldown": "12",
   "cost": "50",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin gains life steal and spell vamp for 4 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin gains omnivamp for 4 seconds.</p>",
       "leveling": [
         {
-          "attribute": "Life steal and spell vamp",
+          "attribute": "Omnivamp",
           "modifiers": [
             {
               "unit": "%",

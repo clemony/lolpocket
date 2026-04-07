@@ -4,7 +4,7 @@ const {
   data,
   type,
   unique,
-  layout,
+  layout
 } = defineProps<{
   data: Effect
   type: string
@@ -21,14 +21,14 @@ const {
     ">
     <span
       v-if="data.unique"
-      :class="cn('tracking-tight italic', unique ? unique : 'text-pre/90!')">
+      :class="cn('tracking-tight italic', unique ? unique : 'text-gold/80!')">
       Unique {{ type }}
       <template v-if="!data.name">:&nbsp;</template>
     </span>
 
     <span
       v-if="data.name"
-      :class="cn('tracking-tight italic', unique ? unique : 'text-pre/90!')">
+      :class="cn('tracking-tight italic', unique ? unique : 'text-gold/80!')">
       -&nbsp;{{ data.name }}:&nbsp;
     </span>
 

@@ -11,7 +11,7 @@
   "effectRadius": "225",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.5 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",

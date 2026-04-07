@@ -10,14 +10,14 @@
   "damageType": "Magic damage",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara fires a beam of spirit magic in the target direction that deals 175 / 350 / 525 (based on Transcend One's Self's Rank) (+ 150% bonus AD) (+ 75% AP) magic damage to enemies hit and slows them by 99% decaying over 1 second, as well as granting sight of the surrounding area.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yunara fires a beam of spirit magic in the target direction that deals 160 / 320 / 480 (based on Transcend One's Self's Rank) (+ 120% bonus AD) (+ 75% AP) magic damage to enemies hit and slows them by 99% decaying over 1 second, as well as granting sight of the surrounding area.</p>"
     },
     {
       "description": "This ability benefits from ultimate ability effects and is the upgraded version of Arc of Judgment during Transcendent State."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Yunara/ability-icon/w",
-  "notes": "Arc of Ruin grants  sight of its surroundings during the cast time and for 0.3 seconds afterwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Ruin does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed. This is intended.",
+  "notes": "Arc of Ruin grants  sight of its surroundings during the cast time and for 0.3 seconds afterwards.\nThis ability will cast from wherever the caster is at the end of the cast time.\nArc of Ruin does not trigger ultimate cast effects, such as  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest and  Cloud Dragon Soul's increased movement speed.\nDeveloper's Note: This is intended.",
   "projectile": "FALSE",
   "spellEffects": "spellaoe",
   "spellshieldable": "true",

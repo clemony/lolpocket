@@ -37,7 +37,13 @@
     21,
     35
   ],
-  "ornnUpgrade": 323121,
+  "masterwork": {
+    "upgradeId": 323121,
+    "stats": {
+      "mana": 1000,
+      "health": 550
+    }
+  },
   "tags": [
     "Tank"
   ]

@@ -10,7 +10,7 @@ const pocketRoles = computed<string[]>({
   get: () => pocket.value.roles ?? [],
   set: (value) => {
     pocket.value.roles = value
-  },
+  }
 })
 </script>
 

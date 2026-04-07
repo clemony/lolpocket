@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui"
 import { statIndex } from "#shared/constants/common/stat-index"
+import type { ButtonProps } from "@nuxt/ui"
 
 const {
   active,
   class: className,
   clear,
   size = "sm",
-  stat,
+  stat
 } = defineProps<{
   class?: HTMLAttributes["class"]
   stat: StatIndex | string
@@ -30,7 +30,7 @@ const statValue = computed<StatIndex | undefined>(() => {
     :size
     hover="btn"
     :style="{
-      backgroundColor: active ? statValue?.color : '',
+      backgroundColor: active ? statValue?.color : ''
     }"
     :class="
       cn(

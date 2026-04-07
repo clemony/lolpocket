@@ -2,6 +2,9 @@
   "id": 223084,
   "name": "Heartsteel",
   "description": "700 Health\n\nColossal Consumption (0s) per target\nCharge up a powerful attack against a champion over time while near them. The charged attack deals bonus physical damage and grants permanent max Health.\n\nGoliath\nGain increased size based on Total Health. ",
+  "stats": {
+    "health": 700
+  },
   "gold": {
     "base": 2500,
     "purchasable": true,

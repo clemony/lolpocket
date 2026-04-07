@@ -11,13 +11,15 @@
       "blurb": "Innate:  Wukong gains  bonus armor based on level and  health regeneration equal to a portion of his maximum health.",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Wukong gains 6 - 10 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire one by one every second when the duration ends.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Wukong gains 6 - 10.47 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster with his basic attacks or abilities, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire one by one every second when the duration ends.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Strength of Stone:</span> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 60 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Strength of Stone:</span> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 62.82 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/p",
+      "notes": "Stacks of Strength of Stone are also granted  on-hit, but will specifically not be if the target is  invulnerable.",
+      "spellshieldable": "True",
       "targeting": "Passive"
     },
     {
@@ -169,7 +171,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/e",
-      "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (note)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute /  Phase Rush even if the target is  untargetable.",
+      "notes": "The clones can block non-targeted attacks or abilities for 0.25 seconds after hitting their targets. [2] (unexpected)\nCasting Nimbus Strike interrupts the attack windup of enemies targeting Wukong.(bug)\nNimbus Strike has an offset distance of 75 units from the target dashed to.\nThe ability applies a stack of  Electrocute /  Phase Rush even if the target is  untargetable.",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -266,6 +268,7 @@
     "abilityReliance": 55,
     "difficulty": 1
   },
+  "lore": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin.",
   "patchLastChanged": "25.20",
   "positions": [
     "Jungle",
@@ -297,7 +300,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.7,
     "mpRegen": 0.8,
-    "attackDamage": 3.5,
     "attackSpeed": 3
   },
   "price": {

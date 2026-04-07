@@ -15,14 +15,14 @@
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Icebreaker:</span> Enemies stunned by Sejuani are marked Frozen for the disable's duration. Sejuani's next basic attack or ability against a Frozen enemy will consume the mark to deal bonus magic damage equal to 10% of their maximum health, capped at 250 against epic monsters.</p>"
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Armor:</span> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 6 (based on level) seconds without taking damage from them.</p>"
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Armor:</span> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 5.29 (based on level) seconds without taking damage from them.</p>"
         },
         {
           "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Frost Armor:</span> Sejuani gains slow immunity, cripple immunity, 10 (+ 75% bonus armor) bonus armor, and 10 (+ 75% bonus magic resistance) bonus magic resistance.</p>"
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/p",
-      "notes": "Gaining Frost Armor does not remove any pre-existing  slows or  cripples.\nIcebreaker will not trigger if the basic attack is  blocked.\nPENDING FOR TEST:: Icebreaker's  interactions with  dodging and  blinding effects via basic attack.\nPENDING FOR TEST::  Spell shield interaction with Icebreaker.",
+      "notes": "Gaining Frost Armor does not remove any pre-existing  slows or  cripples.\nIcebreaker will not trigger if the basic attack is  blocked or misses due to  blind.\nPENDING FOR TEST:: Icebreaker's  interactions with  dodging effects via basic attack.\nPENDING FOR TEST::  Spell shield interaction with Icebreaker.",
       "spellEffects": "proc",
       "spellshieldable": "unknown",
       "targeting": "Passive"
@@ -187,7 +187,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/e",
-      "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\n Master Yi's  Alpha Strike does not interact with Permafrost.(note)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
+      "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\n Master Yi's  Alpha Strike does not interact with Permafrost.(unexpected)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
       "projectile": "TRUE",
       "resource": "Mana",
       "spellEffects": "Single target",
@@ -270,6 +270,7 @@
     "abilityReliance": 75,
     "difficulty": 2
   },
+  "lore": "Sejuani is the brutal, unforgiving Iceborn warmother of the Winter's Claw, one of the most feared tribes of the Freljord. Her people's survival is a constant, desperate battle against the elements, forcing them to raid Noxians, Demacians, and Avarosans alike to survive the harsh winters. Sejuani herself spearheads the most dangerous of these attacks from the saddle of her drüvask boar Bristle, using her True Ice flail to freeze and shatter her enemies.",
   "patchLastChanged": "25.24",
   "positions": [
     "Jungle"
@@ -300,7 +301,6 @@
     "magicResist": 2.1,
     "hpRegen": 1,
     "mpRegen": 0.7,
-    "attackDamage": 4,
     "attackSpeed": 3.5
   },
   "price": {

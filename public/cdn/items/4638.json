@@ -2,6 +2,11 @@
   "id": 4638,
   "name": "Watchful Wardstone",
   "description": "150 Health\n10 Ability Haste\n10 Armor\n15 Magic Resist\n\nArcane Cache\nThis item can store up to 3 purchased Control Wards.",
+  "stats": {
+    "magicResistance": 15,
+    "health": 150,
+    "armor": 10
+  },
   "gold": {
     "base": 1100,
     "purchasable": true,

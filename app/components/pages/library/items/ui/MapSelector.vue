@@ -35,7 +35,7 @@ const maps = computed(() => [
     </div>
     <UTabs
       v-model:model-value="filters.map"
-      variant="solid"
+      variant="pill"
       size="sm"
       color="neutral"
       :ui="{
@@ -51,7 +51,7 @@ const maps = computed(() => [
         <Tooltip
           :label="item.label"
           class="pointer-events-auto absolute grid size-full place-items-center">
-          <Icon :name="item.icon" class="size-4.5" />
+          <Icon :name="item.icon" class="size-4.5!" />
         </Tooltip>
       </template>
     </UTabs>
@@ -71,7 +71,7 @@ const maps = computed(() => [
         :size
         :active="mapOpen"
         :block="!collapsed"
-        active-color="p1"
+        active-color="base"
         :square="collapsed === true"
         :ui="{
           base: cn(
@@ -86,7 +86,7 @@ const maps = computed(() => [
         :label="filters.map === 0 ? 'All' : mapNameById(filters.map)"
         :icon="`i-lp-${filters.map}`"
         trailing-icon="i-up-down"
-        :color="collapsed ? 'p0' : 'p1'"
+        color="base"
         :variant="collapsed ? 'solid' : 'outline'" />
     </div>
     <template #content>
@@ -123,7 +123,7 @@ const maps = computed(() => [
                 trailingIcon: cn('size-4.5')
               }"
               :trailing-icon="filters.map === item.value ? 'i-tick' : ''"
-              variant="highlight"
+              variant="soft"
               :active="item.value === filters.map" />
           </ListboxContent>
         </ListboxItem>

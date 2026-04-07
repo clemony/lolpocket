@@ -10,10 +10,10 @@
   "effectRadius": "300 / 2200 / 1600",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed, increased to 25% while facing the empowered ally or a visible enemy champion.</p>"
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 15% bonus movement speed, increased to 30% while facing the empowered ally or a visible enemy champion.</p>"
     },
     {
-      "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage. The damage based on the target's health is capped at 150 - 300 (based on level) against monsters and structures.",
+      "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion around the target that deals bonus magic damage, capped at 150 - 317.65 (based on level) against monsters and structures.",
       "leveling": [
         {
           "attribute": "Bonus Magic Damage",

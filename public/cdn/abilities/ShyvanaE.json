@@ -1,58 +1,77 @@
 {
   "key": "E",
-  "name": "Flame Breath",
-  "width": "120",
+  "name": "Molten Burst",
+  "width": "120 / 100",
   "affects": "Enemies",
-  "blurb": "Active:  Shyvana unleashes a fireball in the target direction that stops upon hitting an enemy  champion. The fireball deals magic damage to enemies hit and marks them for a few seconds.",
+  "blurb": "Active: Shyvana launches a fireball that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and  slowing them for a moment.",
   "castTime": "0.25 / 0.3333",
-  "cooldown": "12 / 11 / 10 / 9 / 8",
+  "cooldown": "12 / 11.5 / 11 / 10.5 / 10",
   "cost": "0",
   "damageType": "Magic damage",
-  "effectRadius": "345",
+  "effectRadius": "150 / 300",
   "effects": [
     {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana unleashes a fireball in the target direction that stops upon hitting an enemy champion, dealing magic damage to all enemies hit and marking them for 5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana launches a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to enemies hit and slowing them for 2 seconds.</p>",
       "leveling": [
         {
           "attribute": "Magic Damage",
           "modifiers": [
             {
-              "values": "85 / 125 / 165 / 205 / 245"
+              "values": "80 / 110 / 140 / 170 / 200"
             },
             {
               "unit": "% bonus AD",
-              "values": "50"
+              "values": "35"
             },
             {
               "unit": "% AP",
               "values": "70"
             }
           ]
+        },
+        {
+          "attribute": "Slow Strength",
+          "modifiers": [
+            {
+              "unit": "%",
+              "values": "20 / 25 / 30 / 35 / 40"
+            }
+          ]
         }
       ]
     },
     {
-      "description": "Shyvana's basic attacks against marked enemies are empowered to deal bonus magic damage on-hit equal to 3% (+ 1% per 100 bonus AD) of the target's maximum health, capped at 150 against monsters."
-    },
-    {
-      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball explodes upon hitting an enemy champion or reaching the target location, dealing increased magic damage and creating a scorched field for 4 seconds. Enemies within the field are marked once and dealt 20 - 50 (based on level) (+ 7.5% bonus AD) (+ 10% AP) magic damage every 0.5 seconds.</p>",
+      "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball is wider, can pass through enemies, and deals 25% increased damage. Upon hitting an enemy champion or large monster, and after reaching maximum range, the fireball sets an explosion upon the targets struck and at the location that applies the same effects. Molten Burst will also scorch the ground it touches beneath for 2 seconds. Enemies within a scorched field are dealt 3.75 / 5 / 6.25 (based on level) (+ 1.25% AP) magic damage every 0.25 seconds, for a total maximum damage of 30 / 40 / 50 (based on level) (+ 10% AP).Enemies may be damaged by only one scorched field at a time. Subsequent explosions against the same target deal 50% damage.</p>",
       "leveling": [
         {
-          "attribute": "Increased Damage",
+          "attribute": "Increased/Explosion Magic Damage",
           "modifiers": [
             {
-              "values": "75 / 78.53 / 82.06 / 85.59 / 89.12 / 92.65 / 96.18 / 99.71 / 103.24 / 106.76 / 110.29 / 113.82 / 117.35 / 120.88 / 124.41 / 127.94 / 131.47 / 135"
-            },
-            {
-              "values": "85 / 125 / 165 / 205 / 245"
+              "values": "100 / 137.5 / 175 / 212.5 / 250"
             },
             {
               "unit": "% bonus AD",
-              "values": "100"
+              "values": "43.75"
             },
             {
               "unit": "% AP",
-              "values": "90"
+              "values": "87.5"
+            }
+          ]
+        },
+        {
+          "attribute": "Subsequent Explosion Damage",
+          "modifiers": [
+            {
+              "values": "50 / 68.75 / 87.5 / 106.25 / 125"
+            },
+            {
+              "unit": "% bonus AD",
+              "values": "21.88"
+            },
+            {
+              "unit": "% AP",
+              "values": "43.75"
             }
           ]
         }
@@ -60,11 +79,10 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/e",
-  "notes": "The fireball applies  area damage and the on-hit effect against marked targets deals  proc damage.\nIn Dragon Form, the fiery explosion applies  area damage and the burning scorch deals  persistent area damage to all enemies within the area of effect.\nIn Dragon Form, both areas of effect will be centered on the first champion struck, not at the location the missile collided with them.\nThis ability will cast from wherever the caster is at the end of the cast time.\nIn Dragon Form, the visual mark will not be applied to non-champions, but the debuff will still be applied for gameplay purposes.(bug)\nMagic damage on-hit can be dodged by  dodging effects.\nPENDING FOR TEST:: Magic damage on-hit's interactions with  blocking and  blinding effects.",
+  "notes": "The fireball applies  area damage. In  Dragon Form, the explosion applies  area damage and the scorched field deals  persistent area damage.\nIn Dragon Form, both areas of effect will be centered on the first champion struck, not at the location the missile collided with them.\nMolten Burst will fail to go on cooldown if its cast time starts in  Dragon Form and ends in Human Form.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.",
   "projectile": "TRUE",
   "speed": "1600 / 1575",
   "spellEffects": "special",
   "spellshieldable": "True",
-  "targeting": "Direction / Location",
-  "targetRange": "925"
+  "targeting": "Direction / Location"
 }

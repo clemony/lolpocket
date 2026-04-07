@@ -15,7 +15,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/p",
-      "notes": "Adaptive Defenses goes on cooldown after the shield expires or is destroyed.\nThe shield-typing is determined based on the total damage the target has dealt to champions that game (as a percentage) versus Camille's current  armor and  magic resistance.\nFor example, with little bonus resistances Camille would likely gain the most obvious shield-typing - i.e. physical shield versus champions primarily dealing physical damage and magic shield versus champions primarily dealing magic damage. However, if she has a sufficient amount of armor against a champion dealing both alternates of physical damage and magic damage, she will receive a magic shield as the physical damage threat is already being mitigated by her armor, and vice versa.\nThe type of shield that will be granted to Camille when she attacks any one enemy champion is shown as an icon beneath their health bar: orange for physical shield and blue for magic shield.\nAdaptive Defenses takes priority over all other  shields except  Black Shield.\nAdaptive Defenses Will not grant Camille the shield if the attack is  dodged,  blocked, or if she is  blinded\nThe effect will also not go on cooldown.",
+      "notes": "Adaptive Defenses goes on cooldown after the shield expires or is destroyed.\nThe shield-typing is determined based on the total damage the target has dealt to champions that game (as a percentage) versus Camille's current  armor and  magic resistance.\nFor example, with little bonus resistances Camille would likely gain the most obvious shield-typing - i.e. physical shield versus champions primarily dealing physical damage and magic shield versus champions primarily dealing magic damage. However, if she has a sufficient amount of armor against a champion dealing both alternates of physical damage and magic damage, she will receive a magic shield as the physical damage threat is already being mitigated by her armor, and vice versa.\nThe type of shield that will be granted to Camille when she attacks any one enemy champion is shown as an icon beneath their health bar: orange for physical shield and blue for magic shield.\nAdaptive Defenses takes priority over all other  shields except  Black Shield.\nAdaptive Defenses will not trigger or go on cooldown if the attack is  dodged,  blocked, or if Camille is  blinded.",
       "targeting": "Passive"
     },
     {
@@ -73,7 +73,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/q",
-      "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nBoth enhanced attacks cannot  critically strike.\nThe 1.5-second delay is \"fuzzy\", meaning it may take up to another 0.25 seconds to ready the window for the empowered attack.\nThis syncs up perfectly with  Sheen's cooldown between casts at 0 item haste, which is also \"fuzzy\".\nThe second attack will also become empowered if it simply starts after the 1.5-second delay, even if the recast was consumed earlier.\nThe empowered recast's  true damage:\nHas a special case to factor  Spellblade into the true damage conversion of part of her attack's damage.\nOther on-hit effects do not interact with the true damage conversion.\nRandomly dependent on buff order, if (e.g.  Plated Steelcaps' Plating,  Path Maker) applies first before the conversion, then the resulting damage will be reduced, otherwise if the conversion happens first, then the damage will not be successfully reduced (both effects are pre-mitigation on-take-damage events).(bug)\nIs dealt just prior to the physical damage portion of the attack.\nPrecision Protocol applies to structures but the recast does not convert to true damage.\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\n Warden's Mail's flat damage reduction is reduced on the second cast, reducing the physical damage but not the true damage.(note)",
+      "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nBoth enhanced attacks cannot  critically strike.\nThe 1.5-second delay is \"fuzzy\", meaning it may take up to another 0.25 seconds to ready the window for the empowered attack.\nThis syncs up perfectly with  Sheen's cooldown between casts at 0 item haste, which is also \"fuzzy\".\nThe second attack will also become empowered if it simply starts after the 1.5-second delay, even if the recast was consumed earlier.\nThe empowered recast's  true damage:\nHas a special case to factor  Spellblade into the true damage conversion of part of her attack's damage.\nOther on-hit effects do not interact with the true damage conversion.\nRandomly dependent on buff order, if (e.g.  Plated Steelcaps' Plating,  Path Maker) applies first before the conversion, then the resulting damage will be reduced, otherwise if the conversion happens first, then the damage will not be successfully reduced (both effects are pre-mitigation on-take-damage events).(bug)\nIs dealt just prior to the physical damage portion of the attack.\nPrecision Protocol applies to structures but the recast does not convert to true damage.\nThe enhanced attack will still complete and hit the target even if they become  untargetable during the attack's windup.\n Warden's Mail's flat damage reduction is reduced on the second cast, reducing the physical damage but not the true damage.(unexpected)",
       "resource": "Mana",
       "spellEffects": "spell",
       "spellshieldable": "false",
@@ -161,7 +161,7 @@
         }
       ],
       "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/w",
-      "notes": "Camille can move during the delay, but the hitbox and Camille's visuals are fixed to the initial target direction.\nCamille's facing-direction, for effects such as  Petrifying Gaze, is the direction she is moving, and not the direction the model is facing.\nThe damage modifier against non-epic monsters applies after the cap.\nBecause the increased damage in the outer range of the cone is dealt as an additional instance of damage (as opposed to bonus damage to the original instance), it will trigger effects twice such as being reduced by  Bone Plating an extra time.(note)\nIt still belongs to the same cast instance, therefore it does not trigger additional stacks of  Conqueror or  Electrocute.",
+      "notes": "Camille can move during the delay, but the hitbox and Camille's visuals are fixed to the initial target direction.\nCamille's facing-direction, for effects such as  Petrifying Gaze, is the direction she is moving, and not the direction the model is facing.\nThe damage modifier against non-epic monsters applies after the cap.\nBecause the increased damage in the outer range of the cone is dealt as an additional instance of damage (as opposed to bonus damage to the original instance), it will trigger effects twice such as being reduced by  Bone Plating an extra time.(unexpected)\nIt still belongs to the same cast instance, therefore it does not trigger additional stacks of  Conqueror or  Electrocute.",
       "projectile": "FALSE",
       "resource": "Mana",
       "spellEffects": "spellaoe",
@@ -208,7 +208,7 @@
       "effectRadius": "130",
       "effects": [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.</p>",
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds. After dashing, Camillle gains bonus attack speed for 5 seconds.</p>",
           "leveling": [
             {
               "attribute": "Physical Damage",
@@ -221,12 +221,7 @@
                   "values": "75"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "description": "Camille stops prematurely upon colliding with an enemy champion, knocking back all nearby enemy champions, though not through terrain, as well as stunning them for 0.75 seconds, while also gaining bonus attack speed for 5 seconds.",
-          "leveling": [
+            },
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
@@ -237,6 +232,9 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Camille stops prematurely upon colliding with an enemy champion, knocking back all nearby enemy champions, though not through terrain, as well as stunning them for 0.75 seconds."
         },
         {
           "description": "Wall Dive may be also cast with movement or attack commands. Other abilities besides The Hextech Ultimatum can be cast while grappled or during the dash."
@@ -317,7 +315,8 @@
     "difficulty": 2
   },
   "fullName": "Camille Ferros",
-  "patchLastChanged": "25.20",
+  "lore": "Weaponized to operate outside the boundaries of the law, Camille is the Principal Intelligencer of Clan Ferros—an elegant and elite agent who ensures the Piltover machine and its Zaunite underbelly runs smoothly. Adaptable and precise, she views sloppy technique as an embarrassment that must be put to order. With a mind as sharp as the blades she bears, Camille's pursuit of superiority through hextech body augmentation has left many to wonder if she is now more machine than woman.",
+  "patchLastChanged": "26.04",
   "positions": [
     "Support",
     "Top"
@@ -348,7 +347,6 @@
     "magicResist": 2.1,
     "hpRegen": 0.8,
     "mpRegen": 0.8,
-    "attackDamage": 3.8,
     "attackSpeed": 2.5
   },
   "price": {

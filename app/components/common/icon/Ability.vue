@@ -42,10 +42,9 @@ const pinned = shallowRef<boolean>(false)
     @unpinned="pinned = false">
     <LazySpinner v-if="!loaded" class="absolute z-0" />
     <UAvatar
-      size="15"
       :ui="{
         root: cn(
-          'relative grid aspect-square place-items-center overflow-hidden rounded-md',
+          'relative grid aspect-square size-15 place-items-center overflow-hidden rounded-md',
           { 'shadow-sm shadow-black/30 drop-shadow-sm': loaded },
           className
         )

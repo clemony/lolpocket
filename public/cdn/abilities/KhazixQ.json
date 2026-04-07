@@ -12,7 +12,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
-  "notes": "No additional details.",
+  "notes": "A team's allies are  champions,  pets,  minions and outer  turrets.\n Monsters are considered allies for other monsters.\n Wards do not prevent Isolation.\nA number of targetable champion summoned units are specifically tagged to not be a valid ally of a potentially Isolated target. These units are:\n Gangplank's  Powder Keg\n Illaoi's  Prophet of an Elder God\n Jhin's  Captive Audience\n Nidalee's  Bushwhack\n Rek'Sai's  Tunnel\n Senna's  Absolution's Mist Wraiths\n Teemo's  Noxious Trap\n Viego's  Sovereign's Domination's Mist Wraiths\n Yorick's  Dark Procession\nIsolation effects are registered at the following timings for each ability:\nFor  Evolved Reaper Claws, the start of cast.\nFor  Evolved Spike Racks, when the enemy is hit.\nFor Taste Their Fear, the end of cast.(bug) This means that if the target is no longer Isolated when the ability hits them, Taste Their Fear will not apply the respective bonuses.\nIsolated targets are marked by an  indicator, shown to Kha'Zix, when visible and within 2500 units of him. This indicator is independent of the actual effects and its timing may not be fully accurate.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
   "spellEffects": "Single target",
   "spellshieldable": "True",
   "targeting": "Unit",

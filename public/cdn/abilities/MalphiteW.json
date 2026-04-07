@@ -74,14 +74,14 @@
       ]
     },
     {
-      "description": "Thunderclap deals 200% damage against monsters."
+      "description": "Thunderclap deals 180% damage against monsters."
     },
     {
       "description": "Thunderclap resets Malphite's basic attack timer."
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/w",
-  "notes": "The main target is dealt  basic damage, while the cone deals  area non- proc damage without applying  spell effects.\nThe cone will trigger  Jax's  Counter Strike damage reduction,  Cheap Shot,  Conqueror,  Dark Harvest,  Scorchclaw's Slash,  Summon Aery and  Ocean Dragon Soul.\nIt is also special cased to trigger  Tear of the Goddess.\nThe passive will amplify negative armor, too, if Malphite's armor is dropped that low.\nThe passive's bonus armor stacks with an instance of recursion.\nThe empowered attack:\nBenefits from Thunderclap's cone effect.\nPrevents Malphite from casting  Seismic Shard and  Ground Slam during its windup.\nCannot have its windup canceled by new movement or attack commands, or casting  Unstoppable Force.\nCan have its windup canceled by casting  Hextech Rocketbelt.\nThe cone starts from Malphite's location.\nUnlike similar spells, it does not deal its damage separately to the primary target of the attack(s); if the target is outside the area of effect when struck, it will not take the bonus damage.",
+  "notes": "The main target is dealt  basic damage, though without applying life steal, while the cone deals  area non- proc damage without applying  spell effects.\nThe cone will trigger  Jax's  Counter Strike damage reduction,  Cheap Shot,  Conqueror,  Dark Harvest,  Summon Aery and  Ocean Dragon Soul.\nIt is also special cased to trigger  Tear of the Goddess.\nThe passive will amplify negative armor, too, if Malphite's armor is dropped that low.\nThe passive's bonus armor stacks with an instance of recursion.\nThe empowered attack:\nBenefits from Thunderclap's cone effect.\nPrevents Malphite from casting  Seismic Shard and  Ground Slam during its windup.\nCannot have its windup canceled by new movement or attack commands, or casting  Unstoppable Force.\nCan have its windup canceled by casting  Hextech Rocketbelt.\nThe cone starts from Malphite's location.\nUnlike similar spells, it does not deal its damage separately to the primary target of the attack(s); if the target is outside the area of effect when struck, it will not take the bonus damage.",
   "resource": "Mana",
   "spellEffects": "special",
   "spellshieldable": "False",

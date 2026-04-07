@@ -48,7 +48,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/q",
-  "notes": "Spell shield will only block the knock up.\nThe enhanced attacks present input buffering during their wind-up animation (Xin Zhao cannot be issued any commands until after it ends).",
+  "notes": "Spell shield will only block the knock up.\nThe enhanced attacks present input buffering during their wind-up animation (Xin Zhao cannot be issued any commands until after it ends).\nThe attack counter displayed on Xin Zhao's status bar is incremented on-hit.(bug)",
   "resource": "Mana",
   "spellEffects": "spell",
   "spellshieldable": "Special",

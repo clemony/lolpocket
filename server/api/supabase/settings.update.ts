@@ -1,23 +1,36 @@
-import { settingsSchema } from '#shared/schema'
-import { serverSupabaseClient } from '#supabase/server'
+import type { Settings } from '#shared/types'
+import { getEmptySettings, settingsSchema } from '#shared/schema'
 import * as v from 'valibot'
+import { requireUser } from '../client.supabase'
 
-export default defineEventHandler(async (event) => {
-  const client = await serverSupabaseClient(event)
+export default defineEventHandler(async (event): Promise<Settings> => {
+  const { client, user } = await requireUser(event)
 
-  const body = await readBody<{ uuid: string, settings?: Partial<Settings> }>(
+  const body = await readBody<{ settings?: Partial<Settings> }>(
     event
   )
-  const parsed = v.safeParse(settingsSchema, body.settings ?? {})
+  const parsed = v.safeParse(settingsSchema, {
+    ...getEmptySettings(),
+    ...(body.settings ?? {}),
+    updated: new Date().toISOString(),
+  })
 
-  const validatedSettings = parsed.success ? parsed.output : settingsSchema
+  if (!parsed.success) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Invalid settings payload',
+      data: parsed.issues,
+    })
+  }
+
+  const validatedSettings = parsed.output
 
   const { error } = await client
-    .from('user_settings')
-    .upsert({ uuid: body.uuid, ...validatedSettings }, { onConflict: 'uuid' })
+    .from('settings')
+    .upsert({ uuid: user.id, ...validatedSettings }, { onConflict: 'uuid' })
 
   if (error)
     throw createError({ statusCode: 500, statusMessage: error.message })
 
-  return { success: true }
+  return validatedSettings as Settings
 })

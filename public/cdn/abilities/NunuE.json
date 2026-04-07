@@ -16,11 +16,11 @@
           "attribute": "Magic Damage Per Hit",
           "modifiers": [
             {
-              "values": "16 / 24 / 32 / 40 / 48"
+              "values": "15 / 22.5 / 30 / 37.5 / 45"
             },
             {
               "unit": "% AP",
-              "values": "15"
+              "values": "12"
             }
           ]
         },
@@ -28,11 +28,11 @@
           "attribute": "Total Magic Damage",
           "modifiers": [
             {
-              "values": "48 / 72 / 96 / 120 / 144"
+              "values": "45 / 67.5 / 90 / 112.5 / 135"
             },
             {
               "unit": "% AP",
-              "values": "45"
+              "values": "36"
             }
           ]
         }
@@ -59,7 +59,7 @@
           "attribute": "Maximum Total Magic Damage",
           "modifiers": [
             {
-              "values": "144 / 216 / 288 / 360 / 432"
+              "values": "135 / 202.5 / 270 / 337.5 / 405"
             },
             {
               "unit": "% AP",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.5 (based on level) seconds.",
+      "description": "After 3 seconds from the first cast, Snowbound enemies near Willump take magic damage and are rooted for 0.5 - 1.62 (based on level) seconds.",
       "leveling": [
         {
           "attribute": "Magic Damage",
@@ -88,7 +88,7 @@
     }
   ],
   "icon": "https://cdn.communitydragon.org/latest/champion/Nunu/ability-icon/e",
-  "notes": "Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump's position at any given moment.",
+  "notes": "Each cast volley of snowballs counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach volley of snowballs is also a separate cast instance, allowing Snowball Barrage to trigger  Phase Rush on its own or trigger 6 stacks of  Conqueror.\nSnowbound consumption does not trigger on-cast effects, neither does it count as a separate cast instance (e.g. for the purposes of  Conqueror).\nThe three snowballs are thrown independently from one another over the 0.4 seconds and their direction is determined from Nunu & Willump's position at any given moment.",
   "projectile": "TRUE",
   "resource": "Mana",
   "speed": "2000",
